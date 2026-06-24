@@ -5,7 +5,7 @@ var a = l(64700),
     r = l(20439),
     o = l(347135),
     s = l(190107);
-let u = () => {
+let u = function () {
     let e = (0, r.A)(n.M.VIRTUAL_CURRENCY_ONBOARDING_ANNOUNCEMENT_MODAL),
         t = (0, r.A)(n.M.VIRTUAL_CURRENCY_DISCOVERY_ONBOARDING_COACHMARK),
         l = (0, r.A)(n.M.VIRTUAL_CURRENCY_SHOP_ONBOARDING_COACHMARK),

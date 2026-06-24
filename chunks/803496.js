@@ -33,7 +33,7 @@ function l(e) {
                     _.current = o;
                 }),
                 i.useEffect(() => {
-                    (async () => {
+                    !(async function () {
                         let { current: e } = _;
                         try {
                             e.length > 0 && (await (0, s.c_)(r, e));

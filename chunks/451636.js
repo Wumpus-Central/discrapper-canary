@@ -6,7 +6,7 @@ var i = n(627968),
     a = n(457287),
     o = n(375708),
     l = n(97803);
-let u = (e) => {
+function u(e) {
     let { className: t, currencies: n, onChange: r, selectedCurrency: u, ...c } = e;
     return (0, i.jsx)(a.f, {
         currencies: n,
@@ -19,4 +19,4 @@ let u = (e) => {
             ...c,
         }),
     });
-};
+}

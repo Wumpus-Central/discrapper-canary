@@ -19,39 +19,39 @@ function u(e, t) {
             throw Error("Unexpected interval");
     }
 }
-let c = (e) => {
-        let {
-            subscriptionPlan: t,
-            userLocale: n,
-            discountOffer: r,
-            yearlyPercentSavings: s,
-            shouldHideYearlySavingsBadge: u,
-        } = e;
-        if (null != s && t.interval === a.WT.YEAR && !u)
-            return l.intl.formatToPlainString(o.default.nsG1jw, { savingsText: (0, i.l9)(n, s / 100) });
-        let c = null != r ? r.discount.amount : null;
-        return null != r && r.discount.planIds.includes(t.id) && null != c
-            ? l.intl.formatToPlainString(o.default.MSB4E4, { amountOrPercentOffText: (0, i.l9)(n, parseInt(c) / 100) })
-            : null;
-    },
-    d = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeTaxLineItem: !0 },
-            { manualLineItems: n, includeTaxLineItem: i } = t,
-            s = [];
-        return (
-            (s =
-                null != n
-                    ? [...n]
-                    : e.invoiceItems.map((e) => ({
-                          id: e.id,
-                          label: (0, r.Mn)(e.subscriptionPlanId),
-                          amount: e.amount * e.quantity,
-                      }))),
-            !1 !== i && s.push({ id: "tax", label: l.intl.string(l.t.jiRvC7), amount: e.tax }),
-            s
-        );
-    },
-    _ = (e) => {
-        let { subscriptionInvoiceRecord: t } = e;
-        return (0, s.$g)(t.total, t.currency);
-    };
+function c(e) {
+    let {
+        subscriptionPlan: t,
+        userLocale: n,
+        discountOffer: r,
+        yearlyPercentSavings: s,
+        shouldHideYearlySavingsBadge: u,
+    } = e;
+    if (null != s && t.interval === a.WT.YEAR && !u)
+        return l.intl.formatToPlainString(o.default.nsG1jw, { savingsText: (0, i.l9)(n, s / 100) });
+    let c = null != r ? r.discount.amount : null;
+    return null != r && r.discount.planIds.includes(t.id) && null != c
+        ? l.intl.formatToPlainString(o.default.MSB4E4, { amountOrPercentOffText: (0, i.l9)(n, parseInt(c) / 100) })
+        : null;
+}
+function d(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { includeTaxLineItem: !0 },
+        { manualLineItems: n, includeTaxLineItem: i } = t,
+        s = [];
+    return (
+        (s =
+            null != n
+                ? [...n]
+                : e.invoiceItems.map((e) => ({
+                      id: e.id,
+                      label: (0, r.Mn)(e.subscriptionPlanId),
+                      amount: e.amount * e.quantity,
+                  }))),
+        !1 !== i && s.push({ id: "tax", label: l.intl.string(l.t.jiRvC7), amount: e.tax }),
+        s
+    );
+}
+function _(e) {
+    let { subscriptionInvoiceRecord: t } = e;
+    return (0, s.$g)(t.total, t.currency);
+}

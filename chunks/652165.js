@@ -1,53 +1,53 @@
-t.d(o, { B4: () => p, o6: () => d });
-var a = t(192308),
-    n = t(228366),
+t.d(o, { B4: () => d, o6: () => u });
+var n = t(192308),
+    a = t(228366),
     i = t(529427);
 let c = "orb-checkout-payment-modal-key",
-    d = () => (0, a.useHasModalOpen)(c),
-    p = (e) => {
-        let {
-                skuId: o,
-                onComplete: t,
-                analyticsLocations: a = [],
-                analyticsSourceLocation: n,
-                discoverySessionId: i,
-                applicationId: c,
-                onCloseCallback: d,
-            } = e,
-            p = !1;
-        return r({
-            discoverySessionId: i,
+    u = () => (0, n.useHasModalOpen)(c);
+function d(e) {
+    let {
             skuId: o,
-            onComplete: (e) => {
-                p || t(e), (p = !0);
-            },
+            onComplete: t,
+            analyticsLocations: n = [],
+            analyticsSourceLocation: a,
+            discoverySessionId: i,
             applicationId: c,
-            analyticsLocations: a,
-            analyticsSourceLocation: n,
-            onCloseCallback: d,
-        });
-    },
-    r = (e) => {
-        let {
-            discoverySessionId: o,
-            skuId: t,
-            onComplete: a,
-            analyticsLocations: d = [],
-            analyticsSourceLocation: p,
-            applicationId: r,
             onCloseCallback: u,
-        } = e;
-        return (
-            n.h.wait(() => {
-                n.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
-            }),
-            i.UnifiedCheckoutFlowManagerSingletons[i.CL.ORB_CHECKOUT]
-                .get()
-                .openCheckoutModal({
-                    checkoutConfiguration: { discoverySessionId: o, skuId: t, applicationId: r },
-                    unifiedCheckoutProviderProps: { analyticsLocations: d, analyticsSourceLocation: p },
-                    checkoutHandlers: { onComplete: a },
-                    modalAPIOptions: { onCloseCallback: u, modalKey: c },
-                })
-        );
-    };
+        } = e,
+        d = !1;
+    return p({
+        discoverySessionId: i,
+        skuId: o,
+        onComplete: (e) => {
+            d || t(e), (d = !0);
+        },
+        applicationId: c,
+        analyticsLocations: n,
+        analyticsSourceLocation: a,
+        onCloseCallback: u,
+    });
+}
+let p = (e) => {
+    let {
+        discoverySessionId: o,
+        skuId: t,
+        onComplete: n,
+        analyticsLocations: u = [],
+        analyticsSourceLocation: d,
+        applicationId: p,
+        onCloseCallback: r,
+    } = e;
+    return (
+        a.h.wait(() => {
+            a.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
+        }),
+        i.UnifiedCheckoutFlowManagerSingletons[i.CL.ORB_CHECKOUT]
+            .get()
+            .openCheckoutModal({
+                checkoutConfiguration: { discoverySessionId: o, skuId: t, applicationId: p },
+                unifiedCheckoutProviderProps: { analyticsLocations: u, analyticsSourceLocation: d },
+                checkoutHandlers: { onComplete: n },
+                modalAPIOptions: { onCloseCallback: r, modalKey: c },
+            })
+    );
+};

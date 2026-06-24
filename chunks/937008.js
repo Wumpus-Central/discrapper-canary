@@ -112,22 +112,22 @@ function C(e) {
     );
 }
 let N = {
-        isGift: !1,
-        setGiftRecipient: E.tEg,
-        setGiftRecipientError: E.tEg,
-        setValidatingGiftRecipient: E.tEg,
-        selectedGiftStyle: void 0,
-        setSelectedGiftStyle: E.tEg,
-        giftCode: null,
-        sendGiftMessage: E.tEg,
-        hasSentMessage: !1,
-        isSendingMessage: !1,
-        giftMessageError: void 0,
-        claimableRewards: void 0,
-        setSelectedGiftingPromotionReward: E.tEg,
-        openGiftingBadgePostPurchaseModal: E.tEg,
-    },
-    v = (e) => {
-        let { children: t } = e;
-        return (0, i.jsx)(T.Provider, { value: N, children: t });
-    };
+    isGift: !1,
+    setGiftRecipient: E.tEg,
+    setGiftRecipientError: E.tEg,
+    setValidatingGiftRecipient: E.tEg,
+    selectedGiftStyle: void 0,
+    setSelectedGiftStyle: E.tEg,
+    giftCode: null,
+    sendGiftMessage: E.tEg,
+    hasSentMessage: !1,
+    isSendingMessage: !1,
+    giftMessageError: void 0,
+    claimableRewards: void 0,
+    setSelectedGiftingPromotionReward: E.tEg,
+    openGiftingBadgePostPurchaseModal: E.tEg,
+};
+function v(e) {
+    let { children: t } = e;
+    return (0, i.jsx)(T.Provider, { value: N, children: t });
+}

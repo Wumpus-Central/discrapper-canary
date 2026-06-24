@@ -3,8 +3,8 @@ var i = n(627968),
     l = n(64700),
     u = n(976634),
     s = n(702841),
-    r = n(568602),
-    o = n(228366),
+    o = n(568602),
+    r = n(228366),
     a = n(158032),
     d = n(830382),
     c = n(964486),
@@ -52,23 +52,23 @@ function Z(e) {
             paymentSourceId: e.paymentSourceId,
         })),
         s = (0, I.S3)(),
-        r = (0, j.bB)(),
-        { checkoutPaymentSources: o, storeCountry: a } = (0, B.t)(),
+        o = (0, j.bB)(),
+        { checkoutPaymentSources: r, storeCountry: a } = (0, B.t)(),
         d = l.useMemo(() => {
             if (null == u) return null;
-            let e = o.find((e) => e.id === u);
+            let e = r.find((e) => e.id === u);
             return null == e ? null : (e.relocationCountry ?? null);
-        }, [o, u]),
+        }, [r, u]),
         c = l.useMemo(
             () =>
                 (0, K.uO)({
-                    step: r ?? void 0,
+                    step: o ?? void 0,
                     skuId: n ?? (null != s ? s.id : null),
                     storeCountryFromCheckoutContext: a,
                     relocationCountry: d,
                     ...t,
                 }),
-            [r, s, n, a, d, t],
+            [o, s, n, a, d, t],
         );
     return (0, i.jsx)(h.s3, { ...c });
 }
@@ -82,8 +82,8 @@ function q() {
             isPremiumDiscountAppliedToCheckoutInvoice: e.get("isPremiumDiscountAppliedToCheckoutInvoice"),
             selectedPlanId: e.selectedPlanId,
         })),
-        { isPremiumGroupPurchase: u, isEligibleForTrial: s, isEligibleForDiscount: r } = (0, z.i)(),
-        o = (0, V.G)(t ?? "") && !s,
+        { isPremiumGroupPurchase: u, isEligibleForTrial: s, isEligibleForDiscount: o } = (0, z.i)(),
+        r = (0, V.G)(t ?? "") && !s,
         a = l.useMemo(() => {
             let t, i;
             return (
@@ -91,11 +91,11 @@ function q() {
                     ? (i = "beta")
                     : s
                       ? (i = "trial")
-                      : (r || o) &&
+                      : (o || r) &&
                         (n && null != e && (t = J.intl.formatToPlainString(J.t.iiLbvu, { percent: e })), (i = "promo")),
                 null != t ? { customHeaderBadgeText: t } : { headerBadgePreset: i }
             );
-        }, [u, s, r, o, e, n]);
+        }, [u, s, o, r, e, n]);
     return (0, i.jsx)(Z, { headerBadgeConfig: a });
 }
 let Q = { [W.C.PREMIUM_CHECKOUT]: () => (0, i.jsx)(q, {}) };
@@ -109,8 +109,8 @@ function X(e) {
 function $(e) {
     let { renderHeader: t, handleClose: n, skipUnifiedHeaderForSteps: u } = e,
         s = (0, j.bB)(),
-        r = (0, P.t4)((e) => e.unifiedCheckoutFlow),
-        { shouldRenderCoreUnifiedHeader: o, renderCoreUnifiedHeader: a } = l.useMemo(
+        o = (0, P.t4)((e) => e.unifiedCheckoutFlow),
+        { shouldRenderCoreUnifiedHeader: r, renderCoreUnifiedHeader: a } = l.useMemo(
             () => ({
                 shouldRenderCoreUnifiedHeader: (function (e) {
                     let { step: t, skipUnifiedHeaderForSteps: n } = e;
@@ -119,13 +119,13 @@ function $(e) {
                     let i = null != n && n.includes(t);
                     return K.MU.includes(t) && !i;
                 })({ step: s, skipUnifiedHeaderForSteps: u }),
-                renderCoreUnifiedHeader: null != r && r in Q ? Q[r] : null,
+                renderCoreUnifiedHeader: null != o && o in Q ? Q[o] : null,
             }),
-            [s, u, r],
+            [s, u, o],
         );
     return l.useMemo(
-        () => (o ? (null != a ? a() : (0, i.jsx)(Z, {})) : (0, i.jsx)(X, { renderHeader: t, handleClose: n })),
-        [o, a, t, n],
+        () => (r ? (null != a ? a() : (0, i.jsx)(Z, {})) : (0, i.jsx)(X, { renderHeader: t, handleClose: n })),
+        [r, a, t, n],
     );
 }
 var ee = n(482132);
@@ -133,39 +133,39 @@ n(322076);
 var et = n(652215),
     en = n(788868),
     ei = n(106451);
-let el = { [w.pn.GIFT_CUSTOMIZATION]: "xl", [w.pn.REVIEW]: "md", [w.pn.ADD_PAYMENT_STEPS]: "md" },
-    eu = (e) => {
-        let {
-                step: t,
-                transitionState: n,
-                handleClose: l,
-                isGift: u,
-                giftRecipient: s,
-                manaModalSize: r,
-                modalSizeGetter: o,
-                returnRef: a,
-                children: d,
-            } = e,
-            c = (0, v.FY)({ isGift: u }),
-            _ =
-                null != o
-                    ? o({ canCurrentlyPurchasePremiumGroup: c, isGift: u, giftRecipient: s })
-                    : ((e, t) => {
-                          let { manaModalSizeFromProps: n } = t,
-                              i = n ?? "md";
-                          return null == e ? i : e in el ? el[e] : i;
-                      })(t, { manaModalSizeFromProps: r });
-        return (0, i.jsx)(h.Jg, {
+let el = { [w.pn.GIFT_CUSTOMIZATION]: "xl", [w.pn.REVIEW]: "md", [w.pn.ADD_PAYMENT_STEPS]: "md" };
+function eu(e) {
+    let {
+            step: t,
             transitionState: n,
-            size: _,
+            handleClose: l,
+            isGift: u,
+            giftRecipient: s,
+            manaModalSize: o,
+            modalSizeGetter: r,
             returnRef: a,
-            "aria-label": J.intl.string(J.t.q9EGps),
-            onClose: async () => {
-                await l();
-            },
             children: d,
-        });
-    };
+        } = e,
+        c = (0, v.FY)({ isGift: u }),
+        _ =
+            null != r
+                ? r({ canCurrentlyPurchasePremiumGroup: c, isGift: u, giftRecipient: s })
+                : (function (e, t) {
+                      let { manaModalSizeFromProps: n } = t,
+                          i = n ?? "md";
+                      return null == e ? i : e in el ? el[e] : i;
+                  })(t, { manaModalSizeFromProps: o });
+    return (0, i.jsx)(h.Jg, {
+        transitionState: n,
+        size: _,
+        returnRef: a,
+        "aria-label": J.intl.string(J.t.q9EGps),
+        onClose: async () => {
+            await l();
+        },
+        children: d,
+    });
+}
 function es(e) {
     let {
             analyticsDataOverride: t,
@@ -183,8 +183,8 @@ function es(e) {
             reviewWarningMessage: X,
             planGroup: el = en.LE,
             openInvoiceId: es,
-            onSubscriptionConfirmation: er,
-            renderPurchaseConfirmation: eo,
+            onSubscriptionConfirmation: eo,
+            renderPurchaseConfirmation: er,
             postSuccessGuild: ea,
             followupSKUInfo: ed,
             renderHeader: ec,
@@ -332,19 +332,19 @@ function es(e) {
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: l, emitPaymentFlowLoadedEvent: u } = t,
                     s = Date.now();
                 if (e === w.pn.CONFIRM && (ti(), z?.(l), eP)) return void tl();
-                e6(e), ef?.(e), eU(null), e === w.pn.ADD_PAYMENT_STEPS && (o.h.wait(a.ET), o.h.wait(d.T3));
-                let r = null != n ? n : e0;
-                null === r || u
+                e6(e), ef?.(e), eU(null), e === w.pn.ADD_PAYMENT_STEPS && (r.h.wait(a.ET), r.h.wait(d.T3));
+                let o = null != n ? n : e0;
+                null === o || u
                     ? x.default.track(et.HAw.PAYMENT_FLOW_LOADED, {
                           ...e8,
-                          initial_step: r ?? e,
+                          initial_step: o ?? e,
                           continue_session_initial_step: eC,
                           has_saved_payment_source: ey,
                       })
                     : x.default.track(et.HAw.PAYMENT_FLOW_STEP, {
                           ...e8,
                           ...i,
-                          from_step: r,
+                          from_step: o,
                           to_step: e === w.pn.ADD_PAYMENT_STEPS ? w.pn.PAYMENT_TYPE : e,
                           step_duration_ms: s - tu,
                           flow_duration_ms: s - ew.startTime,
@@ -364,7 +364,7 @@ function es(e) {
         (0, k.A)(tl),
         (0, U.s)(ex, () => q(!1), eJ, !ep),
         (0, N.QR)(eW),
-        (0, i.jsx)(r.b, {
+        (0, i.jsx)(o.b, {
             className: ei.Xn,
             isShaking: eA && eb === Y.h.PURCHASING,
             intensity: 2,
@@ -391,8 +391,8 @@ function es(e) {
                         planGroup: el,
                         openInvoiceId: es,
                         analyticsLocation: h,
-                        onSubscriptionConfirmation: er,
-                        renderPurchaseConfirmation: eo,
+                        onSubscriptionConfirmation: eo,
+                        renderPurchaseConfirmation: er,
                         postSuccessGuild: ea,
                         followupSKUInfo: ed,
                         skipConfirm: eP,

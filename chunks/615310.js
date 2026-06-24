@@ -38,8 +38,12 @@ function c(e) {
     let t = r.useContext(l);
     return a()(null != t, "useSteps must be used inside StepContext"), t(e);
 }
-let d = (e) => e.step,
-    _ = (e) => e.setStep;
+function d(e) {
+    return e.step;
+}
+function _(e) {
+    return e.setStep;
+}
 function h() {
     let { step: e, stepConfigs: t } = c();
     return t.find((t) => t.key === e) ?? null;

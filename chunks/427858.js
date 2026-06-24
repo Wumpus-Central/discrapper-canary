@@ -26,7 +26,7 @@ var i = n(627968),
     v = n(793574),
     R = n(688810),
     O = n(473617),
-    b = n(848584),
+    b = n(270537),
     D = n(888751),
     L = n(458785),
     w = n(788868),
@@ -36,19 +36,21 @@ function x(e) {
     let { children: t, containerNode: n } = e;
     return null == n ? null : C.createPortal(t, n);
 }
-let k = () => (0, i.jsx)(N.y, {}),
-    U = (e, t) => {
-        let { noticeCopy: n } = t;
-        r.useEffect(() => {
-            null != n ? e(n) : e(null);
-        }, [e, n]);
-    },
-    G = (e, t) => {
-        let { overrideRenewalDate: n } = t;
-        r.useEffect(() => {
-            e(n);
-        }, [e, n]);
-    };
+function k() {
+    return (0, i.jsx)(N.y, {});
+}
+function U(e, t) {
+    let { noticeCopy: n } = t;
+    r.useEffect(() => {
+        null != n ? e(n) : e(null);
+    }, [e, n]);
+}
+function G(e, t) {
+    let { overrideRenewalDate: n } = t;
+    r.useEffect(() => {
+        e(n);
+    }, [e, n]);
+}
 function F(e) {
     let {
             premiumSubscription: t,
@@ -100,7 +102,7 @@ function V(e) {
             proratedInvoicePreview: E,
             renewalInvoicePreview: g,
             primaryInvoiceError: A,
-        } = ((e) => {
+        } = (function (e) {
             let { premiumSubscription: t, newItems: n, priceOptions: i, preventFetch: s, analyticsLocations: a } = e,
                 o = r.useMemo(
                     () => ({
@@ -324,7 +326,7 @@ var H = n(38785),
     K = n(755880),
     $ = n(134638),
     z = n(906234);
-let q = (e) => {
+function q(e) {
     let {
             disabled: t,
             showFractionalPremiumBanner: n,
@@ -403,7 +405,7 @@ let q = (e) => {
         invoiceTotalDueValue: null != c ? (0, L.U5)(c) : void 0,
         promotionalNoticeContent: k,
     });
-};
+}
 var Z = n(207715);
 function X(e) {
     let {

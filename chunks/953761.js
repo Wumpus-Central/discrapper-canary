@@ -38,7 +38,7 @@ var p = n(788868),
     U = n(222707),
     G = n(559778),
     F = n(376843);
-let V = (e) => {
+function V(e) {
     let {
             handlePaymentSourceAdd: t,
             isTrial: n,
@@ -71,7 +71,7 @@ let V = (e) => {
         location: h,
         hideCurrencySelect: s,
     });
-};
+}
 var B = n(340034),
     j = n(622631),
     H = n(755880),
@@ -79,7 +79,7 @@ var B = n(340034),
     W = n(888751),
     K = n(906234),
     $ = n(327105);
-let z = (e) => {
+function z(e) {
     let {
             reviewWarningMessage: t,
             selectedPlanId: n,
@@ -89,7 +89,7 @@ let z = (e) => {
             isDiscount: Z,
             metadata: X,
         } = e,
-        Q = ((e) => {
+        Q = (function (e) {
             let { selectedPlanId: t, paymentSources: n, trialId: i, metadata: s, isTrial: a = !1 } = e,
                 {
                     selectedSkuId: l,
@@ -377,4 +377,4 @@ let z = (e) => {
         invoiceTotalDueValue: eJ,
         invoiceTotalDueLabel: el ? m.intl.string($.default.Zxav97) : m.intl.string($.default.R0cZsM),
     });
-};
+}

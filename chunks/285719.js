@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(427262),
     d = n(375708),
     _ = n(81902);
-let h = (e) => {
+function h(e) {
     let { className: t, giftRecipient: n } = e;
     return null == n
         ? null
@@ -28,4 +28,4 @@ let h = (e) => {
                   }),
               }),
           });
-};
+}

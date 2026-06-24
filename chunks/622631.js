@@ -23,7 +23,7 @@ var i = n(627968),
     y = n(375708),
     C = n(327105),
     N = n(556208);
-let v = (e) => {
+function v(e) {
     let {
             selectedPlanId: t,
             priceOptions: n,
@@ -70,7 +70,7 @@ let v = (e) => {
             },
             [Z],
         ),
-        Q = ((e, t) => {
+        Q = (function (e, t) {
             let {
                     disabled: n,
                     planPricesLoading: i,
@@ -123,7 +123,7 @@ let v = (e) => {
                                 shouldShowSavingsPercent: U,
                                 isEligibleForTrial: c,
                             }),
-                            B = ((e, t) => {
+                            B = (function (e, t) {
                                 let { isEligibleForTrial: n } = t;
                                 return n
                                     ? y.intl.formatToPlainString(y.t.hXcaLT, {
@@ -171,7 +171,7 @@ let v = (e) => {
                             let e = (0, f.cg)(D, b, o);
                             null != e && (t = e);
                         }
-                        let Y = ((e) => {
+                        let Y = (function (e) {
                             let { promoTextOverride: t, overrideBadgeText: n, defaultValue: i } = e;
                             return t ?? n ?? i;
                         })({
@@ -235,4 +235,4 @@ let v = (e) => {
                       : null,
               ],
           });
-};
+}

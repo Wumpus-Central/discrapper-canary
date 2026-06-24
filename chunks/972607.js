@@ -172,7 +172,7 @@ function F(e) {
               ],
           });
 }
-let V = (e) => {
+function V(e) {
     let { giftCode: t, onClose: n } = e;
     r.useEffect(() => {
         A.A.fetchRelationships(), (0, C.u)();
@@ -239,4 +239,4 @@ let V = (e) => {
             }),
         ],
     });
-};
+}

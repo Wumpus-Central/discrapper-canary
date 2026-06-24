@@ -232,7 +232,7 @@ function x(e) {
         N = (0, a.bG)([l.Ay], () => l.Ay.useReducedMotion);
     return E && (0, c.Ik)(m) && t !== u.pn.CONFIRM
         ? (0, i.jsx)(o.rQ, {
-              title: (() => {
+              title: (function () {
                   switch (t) {
                       case u.pn.PLAN_SELECT:
                           return d === y.PremiumTypes.TIER_0 ? C.intl.string(C.t.rk4Uu8) : C.intl.string(C.t["7YWj6+"]);

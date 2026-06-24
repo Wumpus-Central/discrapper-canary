@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(305866),
     d = n(939249),
     _ = n(460905),
-    h = n(267889),
+    h = n(334295),
     f = n(652215),
     p = n(307731),
     E = n(375708),
@@ -21,25 +21,26 @@ function I(e) {
     let { setEmojiConfetti: t, emojiConfetti: n } = e,
         [s, f] = r.useState(!1),
         p = r.useRef(null),
-        I = a()(m.Qq, m.Ow),
-        T = (e) =>
-            (0, i.jsxs)("div", {
-                className: m.ZC,
-                children: [
-                    (0, i.jsxs)("div", {
-                        className: m.Ry,
-                        children: [
-                            (0, i.jsx)(l.E, { variant: "text-md/bold", children: E.intl.string(E.t.Hl2Ige) }),
-                            (0, i.jsx)(l.E, { variant: "text-sm/normal", children: E.intl.string(E.t.stGFA3) }),
-                        ],
-                    }),
-                    e,
-                ],
-            }),
-        S = (e) => {
-            let { emoji: n } = e;
-            null != t && (t(n), f(!1));
-        };
+        I = a()(m.Qq, m.Ow);
+    function T(e) {
+        return (0, i.jsxs)("div", {
+            className: m.ZC,
+            children: [
+                (0, i.jsxs)("div", {
+                    className: m.Ry,
+                    children: [
+                        (0, i.jsx)(l.E, { variant: "text-md/bold", children: E.intl.string(E.t.Hl2Ige) }),
+                        (0, i.jsx)(l.E, { variant: "text-sm/normal", children: E.intl.string(E.t.stGFA3) }),
+                    ],
+                }),
+                e,
+            ],
+        });
+    }
+    let S = (e) => {
+        let { emoji: n } = e;
+        null != t && (t(n), f(!1));
+    };
     return (0, i.jsx)(u.Y, {
         targetElementRef: p,
         shouldShow: s,

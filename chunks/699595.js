@@ -5,7 +5,7 @@ var i = n(64700),
     s = n(410516),
     a = n(211159),
     o = n(463376);
-let l = (e) => {
+function l(e) {
     let t,
         { priceOptions: n, trialId: l, metadata: u, discountInvoicePreview: c } = e,
         { isEligibleForDiscount: d, discountOffer: _ } = (0, o.i)(),
@@ -48,4 +48,4 @@ let l = (e) => {
         ),
         A
     );
-};
+}

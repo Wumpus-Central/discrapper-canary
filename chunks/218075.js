@@ -11,14 +11,14 @@ var s = n(323384),
         (((i = {}).SELECT_PAYMENT_METHOD = "SELECT_PAYMENT_METHOD"),
         (i.ADD_NEW_PAYMENT_METHOD = "ADD_NEW_PAYMENT_METHOD"),
         i);
-let c = (e) => {
+function c(e) {
     switch (e) {
         case "SELECT_PAYMENT_METHOD":
             return o.intl.string(o.t.Tdb5qb);
         case "ADD_NEW_PAYMENT_METHOD":
             return o.intl.string(o.t["6d44F5"]);
     }
-};
+}
 function d(e) {
     let { paymentRestrictionBannerType: t } = e;
     if (null == t) return null;

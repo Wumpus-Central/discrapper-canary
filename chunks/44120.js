@@ -1,21 +1,21 @@
-o.d(t, { A: () => c });
-var n = o(627968);
-o(64700);
-var a = o(192308),
-    l = o(228366),
-    r = o(391048),
-    s = o(636099),
-    i = o(529427),
-    d = o(564064),
-    p = o(287809),
-    C = o(166532);
-let u = new Set([C.pn.REVIEW, C.pn.CONFIRM, C.pn.GIFT_CUSTOMIZATION]);
+n.d(o, { A: () => c });
+var t = n(627968);
+n(64700);
+var a = n(192308),
+    l = n(228366),
+    i = n(391048),
+    s = n(636099),
+    r = n(529427),
+    d = n(662388),
+    p = n(287809),
+    u = n(166532);
+let C = new Set([u.pn.REVIEW, u.pn.CONFIRM, u.pn.GIFT_CUSTOMIZATION]);
 function c(e) {
-    let t,
+    let o,
         {
-            discoverySessionId: i,
-            skuId: C,
-            analyticsLocations: c,
+            discoverySessionId: u,
+            skuId: c,
+            analyticsLocations: h,
             analyticsObject: f,
             isGift: k = !1,
             giftMessage: g,
@@ -30,13 +30,40 @@ function c(e) {
         ? (l.h.wait(() => {
               l.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
           }),
-          h({
-              discoverySessionId: i,
-              skuId: C,
-              analyticsLocations: c,
+          (function (e) {
+              let {
+                  discoverySessionId: o,
+                  skuId: n,
+                  analyticsLocations: t,
+                  analyticsObject: a,
+                  onStepChange: l,
+                  modalKey: i,
+                  isGift: s = !1,
+                  giftMessage: d,
+                  giftingOrigin: p,
+                  giftRecipient: u,
+                  onClose: C,
+                  onCloseCallback: c,
+                  onCloseRequest: h,
+                  onComplete: f,
+              } = e;
+              r.UnifiedCheckoutFlowManagerSingletons[r.CL.COLLECTIBLES_CHECKOUT]
+                  .get()
+                  .openCheckoutModal({
+                      unifiedCheckoutProviderProps: { analyticsLocations: t },
+                      checkoutConfiguration: { skuId: n, discoverySessionId: o },
+                      giftContextProps: { isGift: s, giftMessage: d, giftingOrigin: p, giftRecipient: u },
+                      checkoutHandlers: { onClose: C, onComplete: f },
+                      forwardedPaymentModalProps: { onStepChange: l, analyticsObject: a },
+                      modalAPIOptions: { modalKey: i, onCloseCallback: c, onCloseRequest: h },
+                  });
+          })({
+              discoverySessionId: u,
+              skuId: c,
+              analyticsLocations: h,
               analyticsObject: f,
-              onStepChange: (e) => {
-                  t = e;
+              onStepChange: function (e) {
+                  o = e;
               },
               modalKey: O,
               isGift: k,
@@ -44,56 +71,28 @@ function c(e) {
               giftingOrigin: m,
               giftRecipient: M,
               onClose: P,
-              onCloseCallback: (e) => {
-                  (0, r.ET)(), (0, s.z)(), e && (0, d.gB)();
+              onCloseCallback: function (e) {
+                  (0, i.ET)(), (0, s.z)(), e && (0, d.gB)();
               },
               onCloseRequest: () => {
-                  null != t && u.has(t) && (0, a.closeModal)(O);
+                  null != o && C.has(o) && (0, a.closeModal)(O);
               },
               onComplete: () => {
                   null != E && E();
               },
           }))
         : (0, a.openModalLazy)(async () => {
-              let { default: e } = await Promise.all([o.e("87181"), o.e("74913"), o.e("12206"), o.e("90406")]).then(
-                  o.bind(o, 661925),
+              let { default: e } = await Promise.all([n.e("54681"), n.e("74913"), n.e("12206"), n.e("90406")]).then(
+                  n.bind(n, 661925),
               );
-              return (t) => {
-                  let { onClose: o, ...a } = t;
-                  return (0, n.jsx)(e, {
+              return (o) => {
+                  let { onClose: n, ...a } = o;
+                  return (0, t.jsx)(e, {
                       ...a,
                       onClose: () => {
-                          o(), P?.(!1);
+                          n(), P?.(!1);
                       },
                   });
               };
           });
 }
-let h = (e) => {
-    let {
-        discoverySessionId: t,
-        skuId: o,
-        analyticsLocations: n,
-        analyticsObject: a,
-        onStepChange: l,
-        modalKey: r,
-        isGift: s = !1,
-        giftMessage: d,
-        giftingOrigin: p,
-        giftRecipient: C,
-        onClose: u,
-        onCloseCallback: c,
-        onCloseRequest: h,
-        onComplete: f,
-    } = e;
-    return i.UnifiedCheckoutFlowManagerSingletons[i.CL.COLLECTIBLES_CHECKOUT]
-        .get()
-        .openCheckoutModal({
-            unifiedCheckoutProviderProps: { analyticsLocations: n },
-            checkoutConfiguration: { skuId: o, discoverySessionId: t },
-            giftContextProps: { isGift: s, giftMessage: d, giftingOrigin: p, giftRecipient: C },
-            checkoutHandlers: { onClose: u, onComplete: f },
-            forwardedPaymentModalProps: { onStepChange: l, analyticsObject: a },
-            modalAPIOptions: { modalKey: r, onCloseCallback: c, onCloseRequest: h },
-        });
-};

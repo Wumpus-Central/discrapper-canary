@@ -22,8 +22,10 @@ var _ = n(573582),
 let m = new Set([p.C.COLLECTIBLES_CHECKOUT, p.C.SLAYER_STOREFRONT_CHECKOUT]);
 var g = n(169797),
     A = n(375708);
-let I = r.createContext(null),
-    T = () => r.useContext(I);
+let I = r.createContext(null);
+function T() {
+    return r.useContext(I);
+}
 function S(e) {
     let { renderModalProps: t, children: n } = e,
         r = (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(o.rQ, {}), (0, i.jsx)(s.c, { children: n })] });

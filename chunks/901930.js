@@ -16,7 +16,7 @@ var i = n(627968),
     E = n(166532),
     m = n(652215),
     g = n(375708);
-let A = (e) => {
+function A(e) {
     let { planError: t } = e,
         { paymentError: n } = (0, d.o)(),
         { dropdownCurrencies: o } = (0, _.Jn)(),
@@ -54,7 +54,7 @@ let A = (e) => {
         N = (0, i.jsxs)(i.Fragment, { children: [g.intl.string(g.t["yVIm/G"]), " ", e] });
     }
     return { error: T, errorMessage: N };
-};
+}
 function I(e) {
     let { planError: t, purchaseErrorBlockRef: n, className: r } = e,
         { error: s, errorMessage: a } = A({ planError: t });

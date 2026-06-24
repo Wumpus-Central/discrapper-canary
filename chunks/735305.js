@@ -67,11 +67,11 @@ function T(e) {
         },
         j =
             S ??
-            (() => {
+            function () {
                 T(Object.values(C).length < 1 && null == n ? E.pn.PLAN_SELECT : E.pn.REVIEW, {
                     trackedFromStep: x ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
                 });
-            });
+            };
     r()(G, "Step should be set here");
     let H = (0, s.A)(() => Date.now(), [G]),
         Y = (0, s.A)(

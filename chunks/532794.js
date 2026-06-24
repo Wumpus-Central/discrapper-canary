@@ -8,7 +8,7 @@ var i = n(296489),
     l = n(158032),
     u = n(636099),
     c = n(120700),
-    d = n(564064),
+    d = n(662388),
     _ = n(590180),
     h = n(61750),
     f = n(573359),
@@ -50,21 +50,23 @@ function S(e) {
         W = (0, m.mH)(P),
         K = D || W !== (0, m.mH)(T.pe.TIER_2) ? null : p.A.getMarketingMomentPromotion(),
         $ = K?.rewardSkuIds[0] ?? null,
-        z = !1,
-        q = () => {
-            z ||
-                ((z = !0),
-                E._.dispatch(A.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
-                f.A.isDisplayingWowMomentConfirmation && f.A.isAnimated
-                    ? setTimeout(() => {
-                          (0, s.closeModal)(Y);
-                      }, g.K)
-                    : (0, s.closeModal)(Y));
-        },
-        Z = (e) => {
-            (0, l.ET)(), (0, o.ET)(), (0, u.z)(), e && null != C && C();
-        },
-        X = () => (0, s.closeModal)(Y);
+        z = !1;
+    function q() {
+        z ||
+            ((z = !0),
+            E._.dispatch(A.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+            f.A.isDisplayingWowMomentConfirmation && f.A.isAnimated
+                ? setTimeout(() => {
+                      (0, s.closeModal)(Y);
+                  }, g.K)
+                : (0, s.closeModal)(Y));
+    }
+    let Z = (e) => {
+        (0, l.ET)(), (0, o.ET)(), (0, u.z)(), e && null != C && C();
+    };
+    function X() {
+        return (0, s.closeModal)(Y);
+    }
     return Promise.all([
         n.e("33087"),
         n.e("74414"),

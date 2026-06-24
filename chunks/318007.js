@@ -12,7 +12,7 @@ var r = n(503698),
     d = n(165191),
     _ = n(238017),
     h = n(92814);
-let f = (e) => {
+function f(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
@@ -63,4 +63,4 @@ let f = (e) => {
             (0, i.jsx)("div", { className: h.__invalid_selectPlanDivider }),
         ],
     });
-};
+}

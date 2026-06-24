@@ -11,7 +11,7 @@ var i = n(627968),
     d = n(426398),
     _ = n(558620),
     h = n(427675),
-    f = n(480642),
+    f = n(169797),
     p = n(211159),
     E = n(380619),
     m = n(155984),
@@ -137,7 +137,7 @@ async function D(e) {
 var L = n(166532),
     w = n(566980),
     M = n(216641);
-let P = (e) => {
+function P(e) {
     let { showBackButton: t, onBackClick: n } = e,
         { premiumSubscription: s, isGift: a, planGroup: o, isPrepaid: l } = e,
         {
@@ -165,7 +165,7 @@ let P = (e) => {
             [e, u, c, d, _, h, p, E, m],
         );
     return (0, i.jsx)(f.lo, { onBackClick: t ? n : void 0, primaryButtonProps: g });
-};
+}
 function x(e) {
     let {
             premiumSubscription: t,
@@ -309,37 +309,37 @@ function x(e) {
                     j(H, { fulfillment: { subscription: i, entitlements: t } });
             },
             [j, H, ei, et, en],
-        ),
-        ex = async () => {
-            await D({
-                onPurchaseAttempt: eD,
-                onPurchaseError: eL,
-                onPurchaseComplete: ew,
-                onPurchaseFinalize: eM,
-                hasRedirectURL: eC,
-                isGift: eo,
-                analyticsLocation: x,
-                analyticsLocations: eg,
-                subscriptionPlan: es,
-                planGroup: b,
-                trialId: R,
-                priceOptions: Q,
-                paymentSource: eA,
-                isPrepaidPaymentPastDue: eO,
-                openInvoiceId: k,
-                premiumSubscription: t,
-                onNext: eP,
-                metadata: U,
-                sku: eb,
-                purchaseType: J,
-                referralCode: ee,
-                loadId: z.loadId,
-                giftInfoOptions: eE,
-                invoicePreview: W,
-                order: X,
-            });
-        },
-        ek = null != k || (J === O.VVm.ONE_TIME && !eo);
+        );
+    async function ex() {
+        await D({
+            onPurchaseAttempt: eD,
+            onPurchaseError: eL,
+            onPurchaseComplete: ew,
+            onPurchaseFinalize: eM,
+            hasRedirectURL: eC,
+            isGift: eo,
+            analyticsLocation: x,
+            analyticsLocations: eg,
+            subscriptionPlan: es,
+            planGroup: b,
+            trialId: R,
+            priceOptions: Q,
+            paymentSource: eA,
+            isPrepaidPaymentPastDue: eO,
+            openInvoiceId: k,
+            premiumSubscription: t,
+            onNext: eP,
+            metadata: U,
+            sku: eb,
+            purchaseType: J,
+            referralCode: ee,
+            loadId: z.loadId,
+            giftInfoOptions: eE,
+            invoicePreview: W,
+            order: X,
+        });
+    }
+    let ek = null != k || (J === O.VVm.ONE_TIME && !eo);
     return (0, i.jsx)(P, {
         legalTermsNodeRef: s,
         invoiceError: A,

@@ -11,7 +11,7 @@ var s = n(683071),
     c = n(375708),
     d = n(637650),
     _ = (((i = {}).TRIAL = "trial"), (i.DEFAULT = "default"), (i.REVERSE_TRIAL = "reverse_trial"), i);
-let h = (e) => {
+function h(e) {
     let { fractionalPremiumInfo: t, variant: n = "default", trialPeriod: i, trialEnd: r } = e,
         s = t.fractionalState === u.xc.FP_SUB_PAUSED,
         a = (function (e) {
@@ -55,7 +55,7 @@ let h = (e) => {
                 : a.hours > 0 && (o = c.intl.format(d.default.hours, { hours: a.hours })),
         o
     );
-};
+}
 function f(e) {
     let {
             fractionalPremiumInfo: t,

@@ -6,7 +6,7 @@ var i = n(64700),
     a = n(295405),
     o = n(67480),
     l = n(211159);
-let u = (e) => {
+function u(e) {
     let {
         isGift: t,
         activeSubscription: n,
@@ -24,7 +24,7 @@ let u = (e) => {
         return null;
     }
     return i;
-};
+}
 function c() {
     let {
             defaultPaymentSourceId: e,
@@ -71,11 +71,11 @@ function d(e) {
         hasPaymentSources: f,
     };
 }
-let _ = () => {
+function _() {
     let e = (0, l.t4)((e) => e.checkoutInvoicePreview);
     return i.useMemo(() => {
         if (null == e) return [];
         let t = e.checkoutContext;
         return null == t || null == t.payment_sources ? [] : t.payment_sources.map(s.A.createFromCheckoutContext);
     }, [e]);
-};
+}

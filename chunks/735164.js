@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Sd: () => p, Xd: () => _, Yx: () => d, oR: () => h, pK: () => f });
+n.d(t, { Sd: () => E, Xd: () => h, Yx: () => _, oR: () => f, pK: () => p });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -9,16 +9,19 @@ var i = n(627968),
 n(580630), n(375708);
 var u = n(690073);
 let c = r.createContext({ isPremiumRebrand: !1 });
-function d(e) {
+function d() {
+    return r.useContext(c).isPremiumRebrand;
+}
+function _(e) {
     let { children: t, className: n, isPremiumRebrand: r = !1 } = e;
     return (0, i.jsx)(c.Provider, {
         value: { isPremiumRebrand: r },
         children: (0, i.jsx)("div", { className: a()(u.tp, { [u.u0]: r }, n), children: t }),
     });
 }
-function _(e) {
+function h(e) {
     let { children: t } = e;
-    return r.useContext(c).isPremiumRebrand
+    return d()
         ? (0, i.jsx)(o.D, {
               variant: "heading-md/semibold",
               color: "text-strong",
@@ -27,29 +30,29 @@ function _(e) {
           })
         : (0, i.jsx)("div", { className: u.wx, children: t });
 }
-function h(e) {
-    let { label: t, value: n, className: s } = e;
-    return r.useContext(c).isPremiumRebrand
+function f(e) {
+    let { label: t, value: n, className: r } = e;
+    return d()
         ? (0, i.jsxs)("div", {
-              className: a()(u.nM, s),
+              className: a()(u.nM, r),
               children: [
                   (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "currentColor", children: t }),
                   (0, i.jsx)(l.E, { variant: "text-sm/medium", color: "currentColor", className: u.Uu, children: n }),
               ],
           })
         : (0, i.jsxs)("div", {
-              className: a()(u.nM, s),
+              className: a()(u.nM, r),
               children: [
                   (0, i.jsx)("div", { className: u.xZ, children: t }),
                   (0, i.jsx)("div", { className: u.X6, children: n }),
               ],
           });
 }
-function f(e) {
+function p(e) {
     let { extended: t = !1, negativeMarginTop: n = !1, negativeMarginBottom: r = !1, invisible: s = !1 } = e;
     return (0, i.jsx)("div", { className: a()(u.yF, { [u.hF]: t, [u.P_]: n, [u.vy]: r, [u.Bw]: s }) });
 }
-function p(e) {
+function E(e) {
     let { label: t, value: n, className: r } = e;
     return (0, i.jsxs)("div", {
         className: a()(u.V$, r),

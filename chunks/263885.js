@@ -38,7 +38,7 @@ let _ = (e) => {
     );
 };
 var h = n(531260);
-let f = () => {
+function f() {
     let {
         activeSubscription: e,
         captureStartingPremiumSubscriptionPlanId: t,
@@ -58,12 +58,12 @@ let f = () => {
         }, [i, n]),
         null
     );
-};
+}
 var p = n(17928),
     E = n(800342),
     m = n(328968),
     g = n(788868);
-let A = () => {
+function A() {
     let e = (0, d.t4)((e) => e.skuIds),
         t = r.useMemo(() => e.filter((e) => !g.oz.includes(e)), [e]),
         n = (0, p.bG)([m.A], () => t.filter((e) => null == m.A.getForSKU(e) && !m.A.isFetchingForSKU(e)), [t]);
@@ -73,14 +73,14 @@ let A = () => {
         }, [n]),
         null
     );
-};
+}
 var I = n(566980),
     T = n(120992),
     S = n(830382),
     y = n(543767),
     C = n(570221),
     N = n(666646);
-let v = () => {
+function v() {
     var e;
     let t,
         n,
@@ -148,102 +148,100 @@ let v = () => {
         }, [m, f]),
         null
     );
-};
+}
 var R = n(166532),
     O = n(615310);
-let b = (e) => {
-        let { fetchParams: t, refetchKey: n } = e,
-            [i, s] = (0, y.YV)(t, n),
-            { setCheckoutInvoicePreview: a } = (0, d.t4)((e) => ({
-                setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
-            }));
-        return (
-            r.useEffect(() => {
-                a(i, s);
-            }, [i, s, a]),
-            null
-        );
-    },
-    D = (e) => {
-        let { fetchParams: t, refetchKey: n } = e,
-            [i, s] = (0, y.C8)(t, n),
-            { setCheckoutInvoicePreview: a } = (0, d.t4)((e) => ({
-                setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
-            }));
-        return (
-            r.useEffect(() => {
-                a(i, s);
-            }, [i, s, a]),
-            null
-        );
-    },
-    L = (e) => {
-        let { fetchParams: t, refetchKey: n } = e,
-            [i, s] = (0, y.QQ)(t, n),
-            { setCheckoutInvoicePreview: a } = (0, d.t4)((e) => ({
-                setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
-            }));
-        return (
-            r.useEffect(() => {
-                a(i, s);
-            }, [i, s, a]),
-            null
-        );
-    },
-    w = (e) => {
-        let { fetchParams: t, refetchKey: n } = e,
-            [i, s] = (0, y.YV)(t, n),
-            { setRenewalInvoicePreview: a } = (0, d.t4)((e) => ({
-                setRenewalInvoicePreview: e.setRenewalInvoicePreview,
-            }));
-        return (
-            r.useEffect(() => {
-                a(i, s);
-            }, [i, s, a]),
-            null
-        );
-    },
-    M = () => {
-        let e = (0, O.Ay)((e) => e.step),
-            t = r.useRef(e),
-            {
-                fetchCheckoutInvoicePreviewRequest: n,
-                fetchRenewalInvoicePreviewRequest: s,
-                setFetchCheckoutInvoicePreviewRequest: a,
-                setFetchRenewalInvoicePreviewRequest: o,
-            } = (0, d.t4)((e) => ({
-                setFetchCheckoutInvoicePreviewRequest: e.setFetchCheckoutInvoicePreviewRequest,
-                setFetchRenewalInvoicePreviewRequest: e.setFetchRenewalInvoicePreviewRequest,
-                fetchCheckoutInvoicePreviewRequest: e.fetchCheckoutInvoicePreviewRequest,
-                fetchRenewalInvoicePreviewRequest: e.fetchRenewalInvoicePreviewRequest,
-            }));
-        return (r.useEffect(() => {
-            let n = t.current;
-            (t.current = e), n === R.pn.REVIEW && e !== R.pn.REVIEW && (a(null), o(null));
-        }, [e, a, o]),
-        null == n && null == s)
-            ? null
-            : (null != s && s.type,
-              (0, i.jsxs)(i.Fragment, {
-                  children: [
-                      null != n && "premium_checkout_invoice" === n.type && (0, i.jsx)(b, { fetchParams: n.params }),
-                      null != n &&
-                          "premium_checkout_invoice_get_request" === n.type &&
-                          (0, i.jsx)(D, { fetchParams: n.params }),
-                      null != n &&
-                          "premium_one_time_gift_purchase_invoice" === n.type &&
-                          (0, i.jsx)(L, { fetchParams: n.params }),
-                      null != s && (0, i.jsx)(w, { fetchParams: s.params }),
-                  ],
-              }));
-    };
+function b(e) {
+    let { fetchParams: t, refetchKey: n } = e,
+        [i, s] = (0, y.YV)(t, n),
+        { setCheckoutInvoicePreview: a } = (0, d.t4)((e) => ({
+            setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
+        }));
+    return (
+        r.useEffect(() => {
+            a(i, s);
+        }, [i, s, a]),
+        null
+    );
+}
+function D(e) {
+    let { fetchParams: t, refetchKey: n } = e,
+        [i, s] = (0, y.C8)(t, n),
+        { setCheckoutInvoicePreview: a } = (0, d.t4)((e) => ({
+            setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
+        }));
+    return (
+        r.useEffect(() => {
+            a(i, s);
+        }, [i, s, a]),
+        null
+    );
+}
+function L(e) {
+    let { fetchParams: t, refetchKey: n } = e,
+        [i, s] = (0, y.QQ)(t, n),
+        { setCheckoutInvoicePreview: a } = (0, d.t4)((e) => ({
+            setCheckoutInvoicePreview: e.setCheckoutInvoicePreview,
+        }));
+    return (
+        r.useEffect(() => {
+            a(i, s);
+        }, [i, s, a]),
+        null
+    );
+}
+function w(e) {
+    let { fetchParams: t, refetchKey: n } = e,
+        [i, s] = (0, y.YV)(t, n),
+        { setRenewalInvoicePreview: a } = (0, d.t4)((e) => ({ setRenewalInvoicePreview: e.setRenewalInvoicePreview }));
+    return (
+        r.useEffect(() => {
+            a(i, s);
+        }, [i, s, a]),
+        null
+    );
+}
+function M() {
+    let e = (0, O.Ay)((e) => e.step),
+        t = r.useRef(e),
+        {
+            fetchCheckoutInvoicePreviewRequest: n,
+            fetchRenewalInvoicePreviewRequest: s,
+            setFetchCheckoutInvoicePreviewRequest: a,
+            setFetchRenewalInvoicePreviewRequest: o,
+        } = (0, d.t4)((e) => ({
+            setFetchCheckoutInvoicePreviewRequest: e.setFetchCheckoutInvoicePreviewRequest,
+            setFetchRenewalInvoicePreviewRequest: e.setFetchRenewalInvoicePreviewRequest,
+            fetchCheckoutInvoicePreviewRequest: e.fetchCheckoutInvoicePreviewRequest,
+            fetchRenewalInvoicePreviewRequest: e.fetchRenewalInvoicePreviewRequest,
+        }));
+    return (r.useEffect(() => {
+        let n = t.current;
+        (t.current = e), n === R.pn.REVIEW && e !== R.pn.REVIEW && (a(null), o(null));
+    }, [e, a, o]),
+    null == n && null == s)
+        ? null
+        : (null != s && s.type,
+          (0, i.jsxs)(i.Fragment, {
+              children: [
+                  null != n && "premium_checkout_invoice" === n.type && (0, i.jsx)(b, { fetchParams: n.params }),
+                  null != n &&
+                      "premium_checkout_invoice_get_request" === n.type &&
+                      (0, i.jsx)(D, { fetchParams: n.params }),
+                  null != n &&
+                      "premium_one_time_gift_purchase_invoice" === n.type &&
+                      (0, i.jsx)(L, { fetchParams: n.params }),
+                  null != s && (0, i.jsx)(w, { fetchParams: s.params }),
+              ],
+          }));
+}
 var P = n(10716),
     x = n(795816),
     k = n(627363),
     U = n(20015),
     G = n(885386),
     F = n(652215);
-let V = () => {
+function V() {
     let e = (0, d.t4)((e) => e.applicationId),
         { data: t } = (0, k.YY)(e),
         n = G.Q_.useSetting(),
@@ -254,11 +252,11 @@ let V = () => {
         }, [t, n, i]),
         null
     );
-};
+}
 var B = n(624210),
     j = n(573582),
     H = n(818348);
-let Y = () => {
+function Y() {
     let {
         paymentSourceId: e,
         paymentGateway: t,
@@ -285,10 +283,10 @@ let Y = () => {
         })(r.useMemo(() => ({ paymentSourceId: e, paymentGateway: t, loadId: n.loadId }), [e, t, n.loadId])),
         null
     );
-};
+}
 var W = n(83617),
     K = n(655857);
-let $ = () => {
+function $() {
     let {
             setCheckoutPriceOptions: e,
             paymentSourceId: t,
@@ -315,7 +313,7 @@ let $ = () => {
             c.current = a;
         }),
         r.useEffect(() => {
-            (async () => {
+            !(async function () {
                 let { current: n } = c;
                 try {
                     n.length > 0 && !s && (await (0, W.c_)(t, n));
@@ -327,7 +325,7 @@ let $ = () => {
         }, [t, u, s, e, o, l, i]),
         null
     );
-};
+}
 var z = n(741923),
     q = n(504275);
 function Z() {

@@ -13,7 +13,7 @@ var i = n(627968),
     h = n(659746),
     f = n(375708),
     p = n(521916);
-let E = (e) => {
+let E = function (e) {
     let { type: t, text: n, buttonText: r, buttonLoading: E, hideClose: m, onClose: g } = e,
         A = (0, a.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
@@ -22,7 +22,7 @@ let E = (e) => {
         I = (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/239903eff27463f888314f6f702385c58dc4f6ef0e8e1a999e0c1051d86f2f11.mov"
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
-        T = ((e) => {
+        T = (function (e) {
             switch (e) {
                 case h.Or.PREMIUM_UPDATED:
                     return f.intl.string(f.t["75Wt0E"]);

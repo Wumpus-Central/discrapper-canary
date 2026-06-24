@@ -764,86 +764,82 @@ let eW = new eY(E.h, {
 var eK = n(788868),
     e$ = n(647926);
 let ez = (e) => {
-        let t,
-            { step: n, onPurchaseComplete: i, onHandoffFailure: r } = e,
-            {
-                setSelectedSkuId: o,
-                setSelectedPlanId: l,
-                contextMetadata: u,
-            } = (0, eC.t4)((e) => ({
-                setSelectedSkuId: e.setSelectedSkuId,
-                setSelectedPlanId: e.setSelectedPlanId,
-                contextMetadata: e.contextMetadata,
-            })),
-            {
-                browserCheckoutState: d,
-                browserCheckoutStateLoadId: _,
-                browserCheckoutStateSkuId: h,
-                browserCheckoutStatePlanId: f,
-            } = (0, c.cf)([eW], () => ({
-                browserCheckoutState: eW.browserCheckoutState,
-                browserCheckoutStateLoadId: eW.loadId,
-                browserCheckoutStateSkuId: eW.skuId,
-                browserCheckoutStatePlanId: eW.planId,
-            })),
-            p = (0, ex.A)(),
-            { isGift: E } = (0, eG.Pv)(),
-            [m, A] = a.useState(!1);
-        switch (n) {
-            case eR.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
-                t = y.do8.GOOGLE_PAY;
-                break;
-            case eR.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
-                t = y.do8.APPLE_PAY;
-        }
-        return (
-            a.useEffect(() => {
-                let e = setTimeout(() => {
-                    m ||
-                        (A(!0),
-                        (0, g.Ze)(u.loadId),
-                        (0, eU.my)(
-                            {
-                                planId: p?.id ?? eK.gD.PREMIUM_MONTH_TIER_2,
-                                isGift: E,
-                                loadId: u.loadId,
-                                paymentMethodType: t,
-                            },
-                            r,
-                        ));
-                }, 1e3);
-                return () => clearTimeout(e);
-            }, [p, E, u, r, A, m, t]),
-            a.useEffect(() => {
-                null !== h && (eK.oz.includes(h) && ((0, eP.ur)(h), (0, g.hP)()), o(h)),
-                    null !== f && l(f),
-                    _ === u.loadId && d === eF.DONE && i();
-            }, [o, l, d, _, h, f, u, i]),
-            (0, s.jsxs)("div", {
-                className: e$.rf,
-                children: [
-                    (0, s.jsx)(k.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.C4HYfy) }),
-                    (0, s.jsx)(U.E, {
-                        variant: "text-md/normal",
-                        className: e$.h_,
-                        children: M.intl.string(M.t.xfG7Jp),
-                    }),
-                ],
-            })
-        );
-    },
-    eq = (e) => {
-        let { onPrimaryClick: t, onBackClick: n } = e;
-        return (0, s.jsx)(eM.j, {
-            children: (0, s.jsxs)("div", {
-                className: e$.kL,
-                children: [
-                    (0, s.jsx)(ek.A, { onClick: n }),
-                    (0, s.jsx)(ek.F, { onClick: t, children: M.intl.string(M.t["4Qvmmj"]) }),
-                ],
-            }),
-        });
-    };
+    let t,
+        { step: n, onPurchaseComplete: i, onHandoffFailure: r } = e,
+        {
+            setSelectedSkuId: o,
+            setSelectedPlanId: l,
+            contextMetadata: u,
+        } = (0, eC.t4)((e) => ({
+            setSelectedSkuId: e.setSelectedSkuId,
+            setSelectedPlanId: e.setSelectedPlanId,
+            contextMetadata: e.contextMetadata,
+        })),
+        {
+            browserCheckoutState: d,
+            browserCheckoutStateLoadId: _,
+            browserCheckoutStateSkuId: h,
+            browserCheckoutStatePlanId: f,
+        } = (0, c.cf)([eW], () => ({
+            browserCheckoutState: eW.browserCheckoutState,
+            browserCheckoutStateLoadId: eW.loadId,
+            browserCheckoutStateSkuId: eW.skuId,
+            browserCheckoutStatePlanId: eW.planId,
+        })),
+        p = (0, ex.A)(),
+        { isGift: E } = (0, eG.Pv)(),
+        [m, A] = a.useState(!1);
+    switch (n) {
+        case eR.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY:
+            t = y.do8.GOOGLE_PAY;
+            break;
+        case eR.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY:
+            t = y.do8.APPLE_PAY;
+    }
+    return (
+        a.useEffect(() => {
+            let e = setTimeout(() => {
+                m ||
+                    (A(!0),
+                    (0, g.Ze)(u.loadId),
+                    (0, eU.my)(
+                        {
+                            planId: p?.id ?? eK.gD.PREMIUM_MONTH_TIER_2,
+                            isGift: E,
+                            loadId: u.loadId,
+                            paymentMethodType: t,
+                        },
+                        r,
+                    ));
+            }, 1e3);
+            return () => clearTimeout(e);
+        }, [p, E, u, r, A, m, t]),
+        a.useEffect(() => {
+            null !== h && (eK.oz.includes(h) && ((0, eP.ur)(h), (0, g.hP)()), o(h)),
+                null !== f && l(f),
+                _ === u.loadId && d === eF.DONE && i();
+        }, [o, l, d, _, h, f, u, i]),
+        (0, s.jsxs)("div", {
+            className: e$.rf,
+            children: [
+                (0, s.jsx)(k.D, { variant: "heading-xl/bold", children: M.intl.string(M.t.C4HYfy) }),
+                (0, s.jsx)(U.E, { variant: "text-md/normal", className: e$.h_, children: M.intl.string(M.t.xfG7Jp) }),
+            ],
+        })
+    );
+};
+function eq(e) {
+    let { onPrimaryClick: t, onBackClick: n } = e;
+    return (0, s.jsx)(eM.j, {
+        children: (0, s.jsxs)("div", {
+            className: e$.kL,
+            children: [
+                (0, s.jsx)(ek.A, { onClick: n }),
+                (0, s.jsx)(ek.F, { onClick: t, children: M.intl.string(M.t["4Qvmmj"]) }),
+            ],
+        }),
+    });
+}
 var eZ = n(615405),
     eX = n(153084),
     eQ = n(295405),
@@ -1048,137 +1044,137 @@ function tR(e) {
         ],
     });
 }
-let tO = (e) => {
-        let {
-                prependSteps: t,
-                appendSteps: n,
-                analyticsLocation: i,
-                isEligibleForTrial: r,
-                allowDesktopRedirectPurchase: a,
-                onPaymentRequestSourceFailed: o,
-                paymentModalArgs: l,
-                handleStepChange: u,
-                setPaymentMethodSteps: c,
-                setPaymentRequestPaymentMethod: d,
-                currentStep: _,
-                setInfoNotice: h,
-                completeSteps: f,
-                paymentSourceTypeRestrictions: p,
-                CREDIT_CARD_STEPS: E,
-                PAYPAL_STEPS: m,
-                VENMO_STEPS: A,
-                PAYMENT_REQUEST_STEPS: I,
-                PRZELEWY24_STEPS: T,
-                EPS_STEPS: y,
-                IDEAL_STEPS: C,
-                CASH_APP_STEPS: N,
-                setConnectorPaymentRequestReady: v,
-                connectorPaymentRequestRef: R,
-            } = e,
-            { activitySessionId: O } = (0, eS.V)(),
-            D = (0, eC.t4)((e) => e.contextMetadata),
-            { setBillingAddressState: L } = l,
-            P = (e, i) => {
-                switch (e) {
-                    case em.he.CARD:
-                        a ? u(eR.pn.AWAITING_BROWSER_CHECKOUT) : (c(E), u(eR.pn.CREDIT_CARD_INFORMATION));
-                        break;
-                    case em.he.PAYPAL:
-                        c(m), u(eR.pn.PAYPAL_INFORMATION);
-                        break;
-                    case em.he.VENMO:
-                        c(A), u(eR.pn.VENMO_INFORMATION);
-                        break;
-                    case em.he.PAYMENT_REQUEST:
-                        a && "googlePay" === i
-                            ? u(eR.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY)
-                            : a && "applePay" === i
-                              ? u(eR.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY)
-                              : (c(I), u(eR.pn.PAYMENT_REQUEST_INFORMATION));
-                        break;
-                    case em.he.PRZELEWY24:
-                        c(T), u(eR.pn.PRZELEWY24_INFORMATION);
-                        break;
-                    case em.he.EPS:
-                        c(y), u(eR.pn.EPS_INFORMATION);
-                        break;
-                    case em.he.IDEAL:
-                        c(C), u(eR.pn.IDEAL_INFORMATION);
-                        break;
-                    case em.he.CASH_APP:
-                        c(N), u(eR.pn.CASH_APP_INFORMATION);
-                        break;
-                    case em.he.GIROPAY:
-                    case em.he.PAYSAFE_CARD:
-                    case em.he.GCASH:
-                    case em.he.GRABPAY_MY:
-                    case em.he.MOMO_WALLET:
-                    case em.he.KAKAOPAY:
-                    case em.he.GOPAY_WALLET:
-                    case em.he.BANCONTACT:
-                        c({ steps: [...t, ...tT, ...n], methodType: e }), u(eR.pn.ADDRESS);
-                }
-                null != w.A.error && (0, b.ET)();
-            },
-            x = async (e, t) => {
-                if (((0, b.mf)(e), null == e)) return void o();
-                d(e);
-                let { billingAddressInfo: n } = (0, td.uK)(e),
-                    r = (0, tu.Qd)(n);
-                if (((null == n.name || "" === n.name) && null != t && (n.name = t), L({ isValid: r, info: n }), !r))
-                    return void u(eR.pn.ADDRESS);
-                try {
-                    var s;
-                    (s = await (0, g.Tv)(e, n, i)), L((e) => ({ ...e, info: n })), c(I), f(s);
-                } catch (e) {
-                    o();
-                }
-            };
-        if (_ === eR.pn.ATTEMPT_GOOGLE_PAY || _ === eR.pn.ATTEMPT_APPLE_PAY) {
-            let e = M.intl.string(_ === eR.pn.ATTEMPT_APPLE_PAY ? M.t.czhXDv : M.t.Zj2xQ0);
-            return (0, s.jsx)(tc.V, {
-                onChooseType: P,
-                paymentRequestWallet: _ === eR.pn.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
-                onStripePaymentMethodReceived: x,
-                onPaymentRequestFailure: () => {
-                    P(em.he.CARD), h(e);
-                },
-                onValidPaymentRequest: () => v(!0),
-                paymentRequestRef: R,
-            });
-        }
-        let k = !(0, S.isDesktop)() || a;
-        return (0, s.jsx)(tR, {
-            onChooseType: P,
-            onStripePaymentMethodReceived: x,
-            paymentRequestWallets: k ? ["googlePay", "applePay"] : [],
+function tO(e) {
+    let {
+            prependSteps: t,
+            appendSteps: n,
+            analyticsLocation: i,
             isEligibleForTrial: r,
-            paymentRequestPaymentContext: { contextMetadata: D, activitySessionId: O },
+            allowDesktopRedirectPurchase: a,
+            onPaymentRequestSourceFailed: o,
+            paymentModalArgs: l,
+            handleStepChange: u,
+            setPaymentMethodSteps: c,
+            setPaymentRequestPaymentMethod: d,
+            currentStep: _,
+            setInfoNotice: h,
+            completeSteps: f,
             paymentSourceTypeRestrictions: p,
-        });
-    },
-    tb = (e) => {
-        let {
-            onReturn: t,
-            shouldUseManaModal: n,
-            handleStepChange: i,
-            currentStep: r,
-            connectorPaymentRequestReady: a,
-            showConnectorPaymentRequest: o,
-        } = e;
-        if (r === eR.pn.ATTEMPT_GOOGLE_PAY || r === eR.pn.ATTEMPT_APPLE_PAY) {
-            let e = M.intl.string(r === eR.pn.ATTEMPT_APPLE_PAY ? M.t.WoXvJL : M.t.wnVVr0);
-            return (0, s.jsx)(tv, {
-                onBack: () => i(eR.pn.PAYMENT_TYPE),
-                primaryCTA: eD.Ay.CTAType.CONTINUE,
-                primaryText: e,
-                onPrimary: () => o(),
-                primaryDisabled: !a,
-                shouldUseManaModal: n,
-            });
+            CREDIT_CARD_STEPS: E,
+            PAYPAL_STEPS: m,
+            VENMO_STEPS: A,
+            PAYMENT_REQUEST_STEPS: I,
+            PRZELEWY24_STEPS: T,
+            EPS_STEPS: y,
+            IDEAL_STEPS: C,
+            CASH_APP_STEPS: N,
+            setConnectorPaymentRequestReady: v,
+            connectorPaymentRequestRef: R,
+        } = e,
+        { activitySessionId: O } = (0, eS.V)(),
+        D = (0, eC.t4)((e) => e.contextMetadata),
+        { setBillingAddressState: L } = l;
+    function P(e, i) {
+        switch (e) {
+            case em.he.CARD:
+                a ? u(eR.pn.AWAITING_BROWSER_CHECKOUT) : (c(E), u(eR.pn.CREDIT_CARD_INFORMATION));
+                break;
+            case em.he.PAYPAL:
+                c(m), u(eR.pn.PAYPAL_INFORMATION);
+                break;
+            case em.he.VENMO:
+                c(A), u(eR.pn.VENMO_INFORMATION);
+                break;
+            case em.he.PAYMENT_REQUEST:
+                a && "googlePay" === i
+                    ? u(eR.pn.AWAITING_BROWSER_CHECKOUT_GOOGLE_PAY)
+                    : a && "applePay" === i
+                      ? u(eR.pn.AWAITING_BROWSER_CHECKOUT_APPLE_PAY)
+                      : (c(I), u(eR.pn.PAYMENT_REQUEST_INFORMATION));
+                break;
+            case em.he.PRZELEWY24:
+                c(T), u(eR.pn.PRZELEWY24_INFORMATION);
+                break;
+            case em.he.EPS:
+                c(y), u(eR.pn.EPS_INFORMATION);
+                break;
+            case em.he.IDEAL:
+                c(C), u(eR.pn.IDEAL_INFORMATION);
+                break;
+            case em.he.CASH_APP:
+                c(N), u(eR.pn.CASH_APP_INFORMATION);
+                break;
+            case em.he.GIROPAY:
+            case em.he.PAYSAFE_CARD:
+            case em.he.GCASH:
+            case em.he.GRABPAY_MY:
+            case em.he.MOMO_WALLET:
+            case em.he.KAKAOPAY:
+            case em.he.GOPAY_WALLET:
+            case em.he.BANCONTACT:
+                c({ steps: [...t, ...tT, ...n], methodType: e }), u(eR.pn.ADDRESS);
         }
-        return (0, s.jsx)(tv, { onBack: t, shouldUseManaModal: n });
-    };
+        null != w.A.error && (0, b.ET)();
+    }
+    async function x(e, t) {
+        if (((0, b.mf)(e), null == e)) return void o();
+        d(e);
+        let { billingAddressInfo: n } = (0, td.uK)(e),
+            r = (0, tu.Qd)(n);
+        if (((null == n.name || "" === n.name) && null != t && (n.name = t), L({ isValid: r, info: n }), !r))
+            return void u(eR.pn.ADDRESS);
+        try {
+            var s;
+            (s = await (0, g.Tv)(e, n, i)), L((e) => ({ ...e, info: n })), c(I), f(s);
+        } catch (e) {
+            o();
+        }
+    }
+    if (_ === eR.pn.ATTEMPT_GOOGLE_PAY || _ === eR.pn.ATTEMPT_APPLE_PAY) {
+        let e = M.intl.string(_ === eR.pn.ATTEMPT_APPLE_PAY ? M.t.czhXDv : M.t.Zj2xQ0);
+        return (0, s.jsx)(tc.V, {
+            onChooseType: P,
+            paymentRequestWallet: _ === eR.pn.ATTEMPT_APPLE_PAY ? "applePay" : "googlePay",
+            onStripePaymentMethodReceived: x,
+            onPaymentRequestFailure: () => {
+                P(em.he.CARD), h(e);
+            },
+            onValidPaymentRequest: () => v(!0),
+            paymentRequestRef: R,
+        });
+    }
+    let k = !(0, S.isDesktop)() || a;
+    return (0, s.jsx)(tR, {
+        onChooseType: P,
+        onStripePaymentMethodReceived: x,
+        paymentRequestWallets: k ? ["googlePay", "applePay"] : [],
+        isEligibleForTrial: r,
+        paymentRequestPaymentContext: { contextMetadata: D, activitySessionId: O },
+        paymentSourceTypeRestrictions: p,
+    });
+}
+function tb(e) {
+    let {
+        onReturn: t,
+        shouldUseManaModal: n,
+        handleStepChange: i,
+        currentStep: r,
+        connectorPaymentRequestReady: a,
+        showConnectorPaymentRequest: o,
+    } = e;
+    if (r === eR.pn.ATTEMPT_GOOGLE_PAY || r === eR.pn.ATTEMPT_APPLE_PAY) {
+        let e = M.intl.string(r === eR.pn.ATTEMPT_APPLE_PAY ? M.t.WoXvJL : M.t.wnVVr0);
+        return (0, s.jsx)(tv, {
+            onBack: () => i(eR.pn.PAYMENT_TYPE),
+            primaryCTA: eD.Ay.CTAType.CONTINUE,
+            primaryText: e,
+            onPrimary: () => o(),
+            primaryDisabled: !a,
+            shouldUseManaModal: n,
+        });
+    }
+    return (0, s.jsx)(tv, { onBack: t, shouldUseManaModal: n });
+}
 var tD = n(198970),
     tL = n(116673),
     tw = n(773669);
@@ -1232,52 +1228,52 @@ let tM = (e) => {
 };
 var tP = n(930767),
     tx = n(655857);
-let tk = async (e, t) => {
-        let {
-            stripe: n,
-            stripeElements: i,
-            billingAddressState: r,
-            lastConfirmedSetupIntentRef: s,
-            analyticsLocation: a,
-            currency: o,
-        } = e;
-        return {
-            paymentSource: await (0, g.im)(
-                n,
-                i,
-                { billingAddress: r.info, paymentSourceType: t, lastConfirmedSetupIntentRef: s, currency: o },
-                a,
-            ),
-            responseType: "payment-source",
-        };
-    },
-    tU = async (e, t) => {
-        let { stripe: n, billingAddressState: i, analyticsLocation: r } = e;
-        return { paymentSource: await (0, g.bw)(n, i.info, t, r), responseType: "payment-source" };
-    },
-    tG = async (e) => {
-        let { braintreeNonce: t, billingAddressState: n, analyticsLocation: i } = e;
-        return (
-            u()(null != t, "Missing braintreeNonce"),
-            { paymentSource: await (0, g.u1)(t, n.info, i), responseType: "payment-source" }
-        );
-    },
-    tF = async (e, t, n) => {
-        let { adyenPaymentData: i, billingAddressState: r, analyticsLocation: s } = e;
-        if (null != n && n.requireAdyenPaymentData && null == i)
-            throw new tP.v({
-                message: "Missing adyenPaymentData",
-                extraSentryInformation: { paymentSourceType: t, analyticsLocation: s },
-            });
-        let a = null != n ? n.overwriteSubscriptionPaymentSource : void 0,
-            { redirectConfirmation: o, paymentSource: l } = await (0, g.$M)(r.info, t, s, i ?? void 0, a);
-        return { hasRedirectURL: o, paymentSource: l };
-    },
-    tV = async (e, t) => {
-        let { billingAddressState: n, analyticsLocation: i } = e;
-        return { paymentSource: await (0, g.A8)(n.info, t, i), responseType: "payment-source" };
-    },
-    tB = {
+async function tk(e, t) {
+    let {
+        stripe: n,
+        stripeElements: i,
+        billingAddressState: r,
+        lastConfirmedSetupIntentRef: s,
+        analyticsLocation: a,
+        currency: o,
+    } = e;
+    return {
+        paymentSource: await (0, g.im)(
+            n,
+            i,
+            { billingAddress: r.info, paymentSourceType: t, lastConfirmedSetupIntentRef: s, currency: o },
+            a,
+        ),
+        responseType: "payment-source",
+    };
+}
+async function tU(e, t) {
+    let { stripe: n, billingAddressState: i, analyticsLocation: r } = e;
+    return { paymentSource: await (0, g.bw)(n, i.info, t, r), responseType: "payment-source" };
+}
+async function tG(e) {
+    let { braintreeNonce: t, billingAddressState: n, analyticsLocation: i } = e;
+    return (
+        u()(null != t, "Missing braintreeNonce"),
+        { paymentSource: await (0, g.u1)(t, n.info, i), responseType: "payment-source" }
+    );
+}
+async function tF(e, t, n) {
+    let { adyenPaymentData: i, billingAddressState: r, analyticsLocation: s } = e;
+    if (null != n && n.requireAdyenPaymentData && null == i)
+        throw new tP.v({
+            message: "Missing adyenPaymentData",
+            extraSentryInformation: { paymentSourceType: t, analyticsLocation: s },
+        });
+    let a = null != n ? n.overwriteSubscriptionPaymentSource : void 0,
+        { redirectConfirmation: o, paymentSource: l } = await (0, g.$M)(r.info, t, s, i ?? void 0, a);
+    return { hasRedirectURL: o, paymentSource: l };
+}
+async function tV(e, t) {
+    let { billingAddressState: n, analyticsLocation: i } = e;
+    return { paymentSource: await (0, g.A8)(n.info, t, i), responseType: "payment-source" };
+}
+let tB = {
         [em.he.CARD]: {
             submitAddressStep: async (e) =>
                 e.shouldUsePaymentElement
@@ -1428,40 +1424,40 @@ function tW(e) {
             hasRedirectURL: T,
             setHasRedirectURL: S,
             isAuthenticating: y,
-        } = t,
-        C = async () => {
-            I(!0);
-            let e = p ? d : c.methodType,
-                n = h.current,
-                s = null != e && e in tB ? tB[e] : null;
-            if (null == s)
-                throw new tP.v({
-                    message: "unknown Add Payment step not handled",
-                    extraSentryInformation: { paymentSourceType: e, analyticsLocation: i },
-                });
-            let a = s.submitAddressStep;
-            try {
-                let e = await a({
-                    ...t,
-                    analyticsLocation: i,
-                    stripe: E,
-                    shouldUsePaymentElement: p,
-                    stripeElements: n,
-                    lastConfirmedSetupIntentRef: f,
-                    currency: m,
-                    onPaymentRequestSourceFailed: o,
-                    paymentRequestPaymentMethod: l,
-                    overwriteSubscriptionPaymentSource: r,
-                });
-                "redirect-url" === e.responseType ? S(e.hasRedirectURL) : u(e.paymentSource), T || I(!1);
-            } catch (e) {
-                I(!1), tj.warn(`Error confirming submitting Address Step for Payment Source Type: ${N}`, e);
-            }
-        },
-        N = c.methodType,
+        } = t;
+    async function C() {
+        I(!0);
+        let e = p ? d : c.methodType,
+            n = h.current,
+            s = null != e && e in tB ? tB[e] : null;
+        if (null == s)
+            throw new tP.v({
+                message: "unknown Add Payment step not handled",
+                extraSentryInformation: { paymentSourceType: e, analyticsLocation: i },
+            });
+        let a = s.submitAddressStep;
+        try {
+            let e = await a({
+                ...t,
+                analyticsLocation: i,
+                stripe: E,
+                shouldUsePaymentElement: p,
+                stripeElements: n,
+                lastConfirmedSetupIntentRef: f,
+                currency: m,
+                onPaymentRequestSourceFailed: o,
+                paymentRequestPaymentMethod: l,
+                overwriteSubscriptionPaymentSource: r,
+            });
+            "redirect-url" === e.responseType ? S(e.hasRedirectURL) : u(e.paymentSource), T || I(!1);
+        } catch (e) {
+            I(!1), tj.warn(`Error confirming submitting Address Step for Payment Source Type: ${N}`, e);
+        }
+    }
+    let N = c.methodType,
         { backStep: v } = p
             ? { backStep: eR.pn.PAYMENT_ELEMENT }
-            : ((e) => {
+            : (function (e) {
                   switch (e) {
                       case em.he.CARD:
                           return { backStep: eR.pn.CREDIT_CARD_INFORMATION };
@@ -1501,58 +1497,58 @@ function tW(e) {
         shouldUseManaModal: n,
     });
 }
-let tK = new ev.A("PaymentElementStepFooter.tsx"),
-    t$ = (e) => {
-        let t = (0, eN.S)(),
-            {
-                shouldUseManaModal: n,
-                paymentModalArgs: i,
-                handleStepChange: r,
-                setPaymentMethodSteps: o,
-                onBack: l,
-                primarySubmitting: u,
-                primaryDisabled: c,
-                PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: d,
-            } = e,
-            { setIsSubmittingCurrentStep: _, setBillingAddressState: h } = i,
-            { paymentElementSelectedType: f, combinedStripeElementsRef: p, remountAddressElement: E } = e,
-            m = a.useCallback(async () => {
-                _(!0);
-                try {
-                    if (null == f || !(0, ed.PE)(f)) throw (0, g.ne)("Valid Payment Element source type not found", !0);
-                    let { steps: e, methodType: n } = d[f];
-                    o({ steps: e, methodType: n === em.he.UNKNOWN ? f : n });
-                    let i = tB[f];
-                    if (null != i && null != i.submitPaymentElementStepHandler) {
-                        await i.submitPaymentElementStepHandler({
-                            stripe: t,
-                            stripeElements: p.current,
-                            remountAddressElement: E,
-                            setBillingAddressState: h,
-                        }),
-                            r(i.stepAfterPaymentElement ?? eR.pn.ADDRESS);
-                        return;
-                    }
-                    let s = (0, ed.eI)(f);
-                    if (null != s) return void r(s);
-                    r(eR.pn.ADDRESS);
-                } catch (e) {
-                    tK.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
-                } finally {
-                    _(!1);
-                }
-            }, [f, d, p, E, r, t, o, _, h]);
-        return (0, s.jsx)(tv, {
+let tK = new ev.A("PaymentElementStepFooter.tsx");
+function t$(e) {
+    let t = (0, eN.S)(),
+        {
+            shouldUseManaModal: n,
+            paymentModalArgs: i,
+            handleStepChange: r,
+            setPaymentMethodSteps: o,
             onBack: l,
-            primaryCTA: eD.Ay.CTAType.CONTINUE,
-            primaryType: "submit",
-            primaryText: M.intl.string(M.t.PDTjLN),
             primarySubmitting: u,
             primaryDisabled: c,
-            onPrimary: m,
-            shouldUseManaModal: n,
-        });
-    };
+            PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: d,
+        } = e,
+        { setIsSubmittingCurrentStep: _, setBillingAddressState: h } = i,
+        { paymentElementSelectedType: f, combinedStripeElementsRef: p, remountAddressElement: E } = e,
+        m = a.useCallback(async () => {
+            _(!0);
+            try {
+                if (null == f || !(0, ed.PE)(f)) throw (0, g.ne)("Valid Payment Element source type not found", !0);
+                let { steps: e, methodType: n } = d[f];
+                o({ steps: e, methodType: n === em.he.UNKNOWN ? f : n });
+                let i = tB[f];
+                if (null != i && null != i.submitPaymentElementStepHandler) {
+                    await i.submitPaymentElementStepHandler({
+                        stripe: t,
+                        stripeElements: p.current,
+                        remountAddressElement: E,
+                        setBillingAddressState: h,
+                    }),
+                        r(i.stepAfterPaymentElement ?? eR.pn.ADDRESS);
+                    return;
+                }
+                let s = (0, ed.eI)(f);
+                if (null != s) return void r(s);
+                r(eR.pn.ADDRESS);
+            } catch (e) {
+                tK.error("Error on submitting Payment Element step: ", e.message ?? JSON.stringify(e));
+            } finally {
+                _(!1);
+            }
+        }, [f, d, p, E, r, t, o, _, h]);
+    return (0, s.jsx)(tv, {
+        onBack: l,
+        primaryCTA: eD.Ay.CTAType.CONTINUE,
+        primaryType: "submit",
+        primaryText: M.intl.string(M.t.PDTjLN),
+        primarySubmitting: u,
+        primaryDisabled: c,
+        onPrimary: m,
+        shouldUseManaModal: n,
+    });
+}
 var tz = n(691189);
 let tq = new ev.A("AddPaymentStep.tsx"),
     tZ = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
@@ -1625,11 +1621,11 @@ function t6(e) {
             EPS_STEPS: ee,
             CASH_APP_STEPS: et,
             PAYMENT_ELEMENT_STEPS_BY_PAYMENT_SOURCE_MAP: en,
-        } = ((e) => {
+        } = (function (e) {
             let { prependSteps: t, appendSteps: n, paymentElementsEnabled: i } = e,
                 [r, s, o, l, u, c, d, _, h, f] = (0, a.useMemo)(
                     () =>
-                        ((e, t) => {
+                        (function (e, t) {
                             let { prependSteps: n, appendSteps: i, paymentElementsEnabled: r } = t;
                             return e.map((e) => {
                                 let { sharedStepsKey: t, methodType: s } = e;
@@ -1800,10 +1796,10 @@ function t6(e) {
     function tt(e) {
         eU(e.id), eP(e);
     }
-    let tn = () => {
-            el(Q), eE(eR.pn.PAYMENT_TYPE);
-        },
-        ti = (0, eI.wD)({
+    function tn() {
+        el(Q), eE(eR.pn.PAYMENT_TYPE);
+    }
+    let ti = (0, eI.wD)({
             step: ei,
             continueSessionToInitialStep: U,
             paymentElementsEnabled: j,
@@ -1836,14 +1832,14 @@ function t6(e) {
             [j, to, tl, eE],
         ),
         tm = L ? (0, s.jsx)(eb.A, { className: tC._8 }) : null,
-        tg = (() => {
+        tg = (function () {
             let [e, t] = a.useState(!1),
                 n = a.useRef(null);
             return {
                 connectorPaymentRequestReady: e,
                 setConnectorPaymentRequestReady: t,
                 connectorPaymentRequestRef: n,
-                showConnectorPaymentRequest: () => {
+                showConnectorPaymentRequest: function () {
                     null != n.current && n.current.show();
                 },
             };
@@ -2205,10 +2201,10 @@ function t4(e) {
         ]),
         [k, U] = (0, c.yK)([eX.A], () => [eX.A.error, eX.A.isAwaitingAuthentication]);
     a.useEffect(() => {
-        let e = (e) => {
+        function e(e) {
             let { billingAddress: t } = e;
             f({ info: t, isValid: t.country.length > 0 });
-        };
+        }
         return (
             E.h.subscribe("BRAINTREE_TOKENIZE_PAYPAL_SUCCESS", e),
             () => {

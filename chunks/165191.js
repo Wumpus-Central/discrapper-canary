@@ -355,12 +355,12 @@ function d(e) {
         null == _ && E(d);
     }, [_, d]);
     let C = {
-            applyAnimation: () => {
+            applyAnimation: function () {
                 (m.current = c(h, p)), y((e) => e + 1);
             },
             idleAnimationState: _,
             isChanging: I,
-            resetAnimation: () => {
+            resetAnimation: function () {
                 A(!1), T(!0), y(-1), E(d);
             },
             versionKey: S,

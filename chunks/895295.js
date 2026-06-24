@@ -7,10 +7,10 @@ var i = n(627968),
     o = n(785007),
     l = n(834730),
     u = n(318626);
-let c = (e) => {
+function c(e) {
     let { text: t } = e;
     return (0, i.jsx)(l.E, { tag: "span", variant: "eyebrow", color: "always-white", className: u.Fi, children: t });
-};
+}
 function d(e) {
     let { headingComponent: t, headingSubText: n, value: s, planRadioOptions: d, ..._ } = e,
         h = r.useMemo(

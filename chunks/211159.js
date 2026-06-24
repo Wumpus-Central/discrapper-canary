@@ -149,22 +149,23 @@ var _ = n(566980),
     p = n(786300),
     E = n(428262),
     m = n(788868);
-let g = (e) =>
-    null == e
+function g(e) {
+    return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
         : { isPremiumPurchase: (0, E.ys)(e), isPremiumGroupPurchase: e === m.gD.PREMIUM_GROUP_MONTH };
+}
 var A = n(504275);
 let [I, T] = (0, p.A)();
 function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return T()(e, t);
 }
-let y = (e, t) => {
+function y(e, t) {
     if (null == e) return null;
     if ("premium_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
-};
+}
 function C(e) {
     let {
         checkoutInitParameters: t,

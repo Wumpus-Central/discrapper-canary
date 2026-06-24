@@ -19,48 +19,43 @@ var r = n(683071),
     g = n(652215),
     A = n(375708),
     I = n(327105);
-let T = (e) => {
-        let {
-                invoiceSummaryTypeWithPreview: t,
-                subscriptionPlan: n,
-                subscriptionTrial: r,
-                isPrepaidPaymentSource: a,
-                isCustomGift: o,
-            } = e,
-            { invoicePreview: l } = t,
-            u = [];
-        u =
-            t.type === E.N$.PREMIUM_GIFT
-                ? (0, m.fk)(l, { isCustomGift: o, isPrepaidPaymentSource: a, subscriptionPlan: n })
-                : (0, m.IY)(l, {
-                      isPrepaidPaymentSource: a,
-                      invoiceSummaryType: t.type,
-                      subscriptionPlan: n,
-                      subscriptionTrial: r,
-                  }).lineItems;
-        let d = (0, s.lp)(l, { manualLineItems: u, includeTaxLineItem: !0 });
-        return (0, i.jsx)(c.Vm, { label: A.intl.string(I.default.eoXh7B), lineItems: d, currency: l.currency });
-    },
-    S = (e) => {
-        let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: s, subscriptionPeriodEnd: a } = e,
-            { fractionalPremiumBannerMessage: o } = ((e) => {
-                let {
-                        fractionalPremiumInfo: t,
-                        isEligibleForTrial: n,
-                        trialPeriodCopy: i,
-                        subscriptionPeriodEnd: r,
-                    } = e,
-                    s = (0, _.ds)(),
-                    a = {};
-                return (
-                    s
-                        ? (a = { variant: h.uA.REVERSE_TRIAL })
-                        : n && (a = { variant: h.uA.TRIAL, trialPeriod: i, trialEnd: r }),
-                    { fractionalPremiumBannerMessage: (0, h.NQ)({ fractionalPremiumInfo: t, ...a }) }
-                );
-            })({ fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: s, subscriptionPeriodEnd: a });
-        return null != o && "" !== o ? (0, i.jsx)(r.w, { type: "info", children: o }) : null;
-    };
+function T(e) {
+    let {
+            invoiceSummaryTypeWithPreview: t,
+            subscriptionPlan: n,
+            subscriptionTrial: r,
+            isPrepaidPaymentSource: a,
+            isCustomGift: o,
+        } = e,
+        { invoicePreview: l } = t,
+        u = [];
+    u =
+        t.type === E.N$.PREMIUM_GIFT
+            ? (0, m.fk)(l, { isCustomGift: o, isPrepaidPaymentSource: a, subscriptionPlan: n })
+            : (0, m.IY)(l, {
+                  isPrepaidPaymentSource: a,
+                  invoiceSummaryType: t.type,
+                  subscriptionPlan: n,
+                  subscriptionTrial: r,
+              }).lineItems;
+    let d = (0, s.lp)(l, { manualLineItems: u, includeTaxLineItem: !0 });
+    return (0, i.jsx)(c.Vm, { label: A.intl.string(I.default.eoXh7B), lineItems: d, currency: l.currency });
+}
+function S(e) {
+    let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: s, subscriptionPeriodEnd: a } = e,
+        { fractionalPremiumBannerMessage: o } = (function (e) {
+            let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: i, subscriptionPeriodEnd: r } = e,
+                s = (0, _.ds)(),
+                a = {};
+            return (
+                s
+                    ? (a = { variant: h.uA.REVERSE_TRIAL })
+                    : n && (a = { variant: h.uA.TRIAL, trialPeriod: i, trialEnd: r }),
+                { fractionalPremiumBannerMessage: (0, h.NQ)({ fractionalPremiumInfo: t, ...a }) }
+            );
+        })({ fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: s, subscriptionPeriodEnd: a });
+    return null != o && "" !== o ? (0, i.jsx)(r.w, { type: "info", children: o }) : null;
+}
 function y(e) {
     let {
             planGroup: t,

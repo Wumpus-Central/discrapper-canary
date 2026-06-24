@@ -59,13 +59,13 @@ function d(e) {
                 (0, o.J$)({
                     skuId: e,
                     loadId: t,
-                    onRedeemStart: () => {
+                    onRedeemStart: function () {
                         E(!0), f(null);
                     },
-                    onRedeemSucceed: (e) => {
+                    onRedeemSucceed: function (e) {
                         _(e), E(!1), n?.(e);
                     },
-                    onRedeemFail: (e) => {
+                    onRedeemFail: function (e) {
                         f(e), E(!1);
                     },
                 }),

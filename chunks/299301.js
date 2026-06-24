@@ -8,22 +8,21 @@ var i,
         (i.PREMIUM_SWITCH_PLAN = "PREMIUM_SWITCH_PLAN"),
         (i.LOADING = "LOADING"),
         i);
-let s = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]),
-    a = (e) => {
-        let {
-            error: t,
-            isGift: n,
-            oneTimePurchaseNitroGiftInvoicePreview: i,
-            trialInvoicePreview: r,
-            proratedInvoicePreview: s,
-            renewalInvoicePreview: a,
-            planSwitchLoading: o,
-        } = e;
-        if (null != t) return null;
-        if (o);
-        else if (n && null != i) return { type: "PREMIUM_GIFT", invoicePreview: i };
-        else if (null != r) return { type: "PREMIUM_WITH_TRIAL", invoicePreview: r, renewalInvoicePreview: a };
-        else if (null != s && null != a)
-            return { type: "PREMIUM_DEFAULT", invoicePreview: s, renewalInvoicePreview: a };
-        return { type: "LOADING", invoicePreview: null };
-    };
+let s = new Set(["PREMIUM_DEFAULT", "PREMIUM_SWITCH_PLAN"]);
+function a(e) {
+    let {
+        error: t,
+        isGift: n,
+        oneTimePurchaseNitroGiftInvoicePreview: i,
+        trialInvoicePreview: r,
+        proratedInvoicePreview: s,
+        renewalInvoicePreview: a,
+        planSwitchLoading: o,
+    } = e;
+    if (null != t) return null;
+    if (o);
+    else if (n && null != i) return { type: "PREMIUM_GIFT", invoicePreview: i };
+    else if (null != r) return { type: "PREMIUM_WITH_TRIAL", invoicePreview: r, renewalInvoicePreview: a };
+    else if (null != s && null != a) return { type: "PREMIUM_DEFAULT", invoicePreview: s, renewalInvoicePreview: a };
+    return { type: "LOADING", invoicePreview: null };
+}

@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(607470);
 let l =
         "https://cdn.discordapp.com/assets/content/615334270467aa3d5adc86cc67efee89f8380a87b945a96e89ec2eb37c27993d.png",
-    u = (e) => {
+    u = function (e) {
         let { className: t, animationState: n = "on" } = e,
             u = (0, s.bG)([a.Ay], () => a.Ay.useReducedMotion),
             [c, d] = (0, r.useState)(!1),

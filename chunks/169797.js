@@ -84,13 +84,13 @@ function y(e) {
         ],
     });
 }
-let C = (e) => {
+function C(e) {
     let { className: t } = e;
     return (0, i.jsx)("div", {
         className: a()(I.g4, t),
         children: (0, i.jsx)(_.y, { type: _.y.Type.PULSING_ELLIPSIS, itemClassName: I.Je }),
     });
-};
+}
 function N(e) {
     let { children: t, size: n = "md", maxHeight: r = "viewport", isModalContentLoading: s, ...a } = e;
     return (0, i.jsx)(g.e0, {

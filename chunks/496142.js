@@ -17,7 +17,7 @@ var i = n(627968),
     m = n(800471),
     g = n(953761),
     A = n(788868);
-let I = (e) => {
+function I(e) {
     let {
             openInvoiceId: t,
             effectivePlanGroup: n,
@@ -78,7 +78,7 @@ let I = (e) => {
         };
         return (0, i.jsx)(h.A, { ...e });
     }
-};
+}
 function T(e) {
     let {
             selectedSkuId: t,
@@ -96,7 +96,7 @@ function T(e) {
         { isEligibleForTrial: h, isPremiumGroupPurchase: g, userTrialOffer: T } = (0, l.i)(),
         { verifiedTrialId: S } = r.useMemo(
             () =>
-                ((e) => {
+                (function (e) {
                     let { trialId: t, referralTrialOfferId: n, isPremium: i, selectedSkuId: r } = e,
                         s = t ?? n ?? null;
                     return { verifiedTrialId: null != s && (!i || A.TP[s].skus.includes(r)) ? s : null };

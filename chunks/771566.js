@@ -175,13 +175,8 @@ function V(e) {
         j = (0, l.bG)([g.A], () => (null != f ? g.A.get(f.id) : null)),
         H = (0, T.b2)(v),
         Y = O === P.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
-    s.useEffect(() => {
-        if (null == f || null != j) return;
-        let { applicationId: e, id: t } = f;
-        (0, d.EX)(e, t).catch(M.FXj);
-    }, [f, j]);
-    let W = (e) =>
-        V
+    function W(e) {
+        return V
             ? k.intl.formatToPlainString(x.default.pDiwHe, { premiumGroupProductName: (0, w.DP)(), totalSeats: w.LM })
             : e.skuId === L.pe.TIER_0
               ? M.NcF.has(N ?? M.hes.UNKNOWN)
@@ -194,7 +189,15 @@ function V(e) {
                 : M.NcF.has(N ?? M.hes.UNKNOWN)
                   ? k.intl.format(k.t.A4THYt, {})
                   : k.intl.string(k.t.aTUr3Z);
-    if ("deeplink_to_desktop_app" === R || O === P.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
+    }
+    if (
+        (s.useEffect(() => {
+            if (null == f || null != j) return;
+            let { applicationId: e, id: t } = f;
+            (0, d.EX)(e, t).catch(M.FXj);
+        }, [f, j]),
+        "deeplink_to_desktop_app" === R || O === P.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
+    )
         t = (0, r.jsx)("div", {
             className: U.Qq,
             children: (0, r.jsxs)("p", { children: [k.intl.string(k.t.bIVRSQ), " ", k.intl.string(k.t["0UJqOy"])] }),
@@ -251,7 +254,14 @@ function V(e) {
         q = s.useCallback(() => {
             null != _ && (_(), O === P.uH.MOBILE_WEB_REDIRECT_CHECKOUT && z(!0));
         }, [_, O]);
-    n = V
+    function Z() {
+        return M.NcF.has(N ?? M.hes.UNKNOWN)
+            ? C.Ay.Types.PREMIUM_PAYMENT_STARTED
+            : null != a
+              ? C.Ay.Types.PREMIUM_UPDATED
+              : C.Ay.Types.PREMIUM_ACTIVATED;
+    }
+    return ((n = V
         ? k.intl.string(x.default.clIveA)
         : "deeplink_to_desktop_app" === R || O === P.uH.MOBILE_WEB_REDIRECT_CHECKOUT
           ? k.intl.string(k.t.sRApon)
@@ -261,14 +271,8 @@ function V(e) {
               ? k.intl.string(k.t.QJ9EyM)
               : null != y
                 ? k.intl.string(k.t.ta3cXY)
-                : k.intl.string(k.t.TkTvBz);
-    let Z = () =>
-        M.NcF.has(N ?? M.hes.UNKNOWN)
-            ? C.Ay.Types.PREMIUM_PAYMENT_STARTED
-            : null != a
-              ? C.Ay.Types.PREMIUM_UPDATED
-              : C.Ay.Types.PREMIUM_ACTIVATED;
-    return F
+                : k.intl.string(k.t.TkTvBz)),
+    F)
         ? (0, r.jsx)(D.A, { type: Z(), text: t, buttonText: n, hideClose: E || Y, onClose: q, buttonLoading: $ })
         : (0, r.jsxs)("div", {
               className: U.EL,
