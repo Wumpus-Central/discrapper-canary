@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     kL: "container_e95ba0",
     Nr: "card_e95ba0",
     u1: "spinner_e95ba0",
@@ -9,4 +9,5 @@ a.exports = {
     ye: "iconAsset_e95ba0",
     of: "strikethrough_e95ba0",
     pt: "orbsEarnedContainer_e95ba0",
+    fN: "orbIconAligned_e95ba0",
 };
