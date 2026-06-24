@@ -18,7 +18,7 @@ var l,
     j = n(460890),
     y = n(939249),
     A = n(252316);
-function p(e) {
+function N(e) {
     let { steps: t, stepIndex: n, onClick: l } = e,
         { i18n: r } = (0, j.G9)();
     return (0, i.jsx)("div", {
@@ -50,7 +50,7 @@ function p(e) {
         }),
     });
 }
-var N = n(915089),
+var p = n(915089),
     C = n(808728),
     b = n(71393),
     I = n(735547),
@@ -59,23 +59,23 @@ var N = n(915089),
     G = n(496092),
     _ = n(485394);
 n(321073);
-var k = n(931991);
+var R = n(931991);
 n(446600);
-var D = n(576705);
-function L(e, t) {
+var k = n(576705);
+function D(e, t) {
     let [n] = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [C.Ay];
     if (null == t) return [];
     let l = n.getChannels(e)[C.vM],
         i = [];
     for (let { channel: e } of l) {
-        let { canCreateGuildEvent: n, canManageAllEvents: l } = (0, k.ie)(e),
+        let { canCreateGuildEvent: n, canManageAllEvents: l } = (0, R.ie)(e),
             r = n || l;
         e.type === t && (e.isGuildVoice() && r ? i.push(e) : e.isGuildStageVoice() && r && i.push(e));
     }
     return i;
 }
-function R(e, t) {
-    return (0, a.yK)([C.Ay], () => L(e, t, [C.Ay]), [e, t]);
+function L(e, t) {
+    return (0, a.yK)([C.Ay], () => D(e, t, [C.Ay]), [e, t]);
 }
 n(219935);
 var M = n(794782),
@@ -101,7 +101,7 @@ var M = n(794782),
     et = n(738188),
     en = n(404778),
     el = n(975807),
-    ei = n(139716),
+    ei = n(379257),
     er = n(847599),
     es = n(36149),
     ea = n(975571),
@@ -180,8 +180,8 @@ var em = n(734057),
     ej = n(232246),
     ey = n(530209),
     eA = n(825484),
-    ep = n(450510),
-    eN = n(421838),
+    eN = n(450510),
+    ep = n(421838),
     eC = n(419836);
 function eb() {
     return (0, i.jsxs)(i.Fragment, {
@@ -215,7 +215,7 @@ function eb() {
 }
 function eI(e) {
     let { onClick: t } = e;
-    return (0, a.bG)([ep.HP], () => !ep.HP.hasHotspot(ep._2.STAGE_CHANNEL_UPSELL))
+    return (0, a.bG)([eN.HP], () => !eN.HP.hasHotspot(eN._2.STAGE_CHANNEL_UPSELL))
         ? null
         : (0, i.jsxs)("div", {
               className: eC.kL,
@@ -267,7 +267,7 @@ function eI(e) {
                                   className: eC.zt,
                                   children: (0, i.jsx)(c.Q, {
                                       onClick: function () {
-                                          eN.sF(ep._2.STAGE_CHANNEL_UPSELL);
+                                          ep.sF(eN._2.STAGE_CHANNEL_UPSELL);
                                       },
                                       variant: "secondary",
                                       textVariant: "text-sm/medium",
@@ -289,7 +289,7 @@ function e_(e) {
     let { guildId: t, channelType: n, channel: l, onSelectChannel: r, disabled: s, entityType: a } = e,
         d = n === eu.rbe.GUILD_STAGE_VOICE,
         u = (0, ey.D)(l, a),
-        c = R(t, n);
+        c = L(t, n);
     return (0, i.jsx)(q.Z, {
         selectionMode: "single",
         label: d ? ec.intl.string(ec.t.S7GjDz) : ec.intl.string(ec.t["7RYWCP"]),
@@ -316,13 +316,13 @@ function e_(e) {
         disabled: s,
     });
 }
-function ek(e, t) {
+function eR(e, t) {
     return (n) => {
         let l = { entityType: n, scheduledEndTime: void 0 };
         eG(n) && (l.scheduledEndTime = (F()(t.scheduledStartTime) ?? F()()).add(2, "hour").toISOString()), e(l);
     };
 }
-function eD(e) {
+function ek(e) {
     let { guildId: t, guildEvent: n, onChange: l, isFocusReady: s } = e,
         { entityType: d, channelId: u } = n,
         c = (0, a.bG)([em.A], () => em.A.getChannel(u), [u]),
@@ -363,17 +363,17 @@ function eD(e) {
                   disabled: v,
               });
 }
-function eL(e) {
+function eD(e) {
     let { guildId: t, guildEvent: n, onChange: l } = e,
         s = (0, a.bG)([b.A], () => b.A.getGuild(t), [t]),
         d = (0, ef.A)(t, void 0),
         u = (0, ef.A)(t, eu.rbe.GUILD_VOICE),
         c = (0, ef.A)(t, eu.rbe.GUILD_STAGE_VOICE),
-        o = R(t, eu.rbe.GUILD_VOICE),
+        o = L(t, eu.rbe.GUILD_VOICE),
         x = (0, ej.A)(s),
         g = s?.features.has(eu.GuildFeatures.COMMUNITY),
         h = (0, T.Fd)(n),
-        m = ek(l, n),
+        m = eR(l, n),
         v = r.useMemo(() => {
             let e = !u || 0 === o.length,
                 t = u ? ec.intl.string(ec.t["DkY+cO"]) : ec.intl.string(ec.t.HeF1kV),
@@ -417,14 +417,14 @@ function eL(e) {
         helperText: h ? ec.intl.string(ec.t.yutP5U) : void 0,
     });
 }
-function eR(e) {
+function eL(e) {
     let { guildId: t, guildEvent: l, validationErrorMessage: r, onChange: s, isSlideReady: d = !1 } = e,
         { entityType: u } = l,
         c = (0, a.bG)([b.A], () => b.A.getGuild(t), [t]),
         o = (0, ej.A)(c),
-        h = (0, a.bG)([D.A], () => D.A.can(eu.xBc.MANAGE_CHANNELS, c)),
+        h = (0, a.bG)([k.A], () => k.A.can(eu.xBc.MANAGE_CHANNELS, c)),
         m = c?.features.has(eu.GuildFeatures.COMMUNITY),
-        v = ek(s, l),
+        v = eR(s, l),
         E = m && !eG(u) && 0 === o.length && h && null != u;
     return (0, i.jsxs)("div", {
         className: eT.kL,
@@ -440,8 +440,8 @@ function eR(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(eL, { guildId: t, guildEvent: l, onChange: s }),
-            (0, i.jsx)(eD, { guildId: t, guildEvent: l, isFocusReady: d, onChange: s }),
+            (0, i.jsx)(eD, { guildId: t, guildEvent: l, onChange: s }),
+            (0, i.jsx)(ek, { guildId: t, guildEvent: l, isFocusReady: d, onChange: s }),
             E
                 ? (0, i.jsx)(eI, {
                       onClick: function () {
@@ -495,11 +495,11 @@ function eF(e) {
         ),
         y = (0, a.bG)([eP.A], () => eP.A.isLurking(n), [n]),
         A = (0, $.Ay)(v),
-        p = r.useRef(null);
+        N = r.useRef(null);
     r.useEffect(() => {
-        u && null != p.current && ((p.current.tabIndex = -1), p.current.focus());
+        u && null != N.current && ((N.current.tabIndex = -1), N.current.focus());
     }, [u]);
-    let N = (0, eM.gU)(v, E);
+    let p = (0, eM.gU)(v, E);
     return (0, i.jsxs)("div", {
         className: ez.Qs,
         children: [
@@ -526,7 +526,7 @@ function eF(e) {
             (0, i.jsxs)("div", {
                 className: ez.FS,
                 children: [
-                    (0, i.jsx)(K.D, { ref: p, variant: "heading-xl/semibold", children: ec.intl.string(ec.t.yBsFE3) }),
+                    (0, i.jsx)(K.D, { ref: N, variant: "heading-xl/semibold", children: ec.intl.string(ec.t.yBsFE3) }),
                     (0, i.jsx)(g.E, {
                         color: "text-subtle",
                         variant: "text-md/normal",
@@ -540,8 +540,8 @@ function eF(e) {
                                           (0, i.jsxs)("div", {
                                               className: ez.HA,
                                               children: [
-                                                  null != N
-                                                      ? (0, i.jsx)(N, {
+                                                  null != p
+                                                      ? (0, i.jsx)(p, {
                                                             size: "custom",
                                                             color: "currentColor",
                                                             width: 20,
@@ -602,20 +602,21 @@ function eK(e) {
             recurrenceRule: y,
         } = t,
         A = (0, eq.D3)(h),
-        p = (0, eq.Xk)(h),
-        N = null != t && (0, T.Fd)(t),
+        N = (0, eq.Xk)(h),
+        p = null != t && (0, T.Fd)(t),
         C = r.useMemo(() => {
             let e = (0, V.N5)(t);
             return null != e ? e : { startDate: F()(j) };
         }, [t, j]),
         [b, I] = r.useState(() => (0, V.z7)(F()(j), y)),
-        S = r.useRef(null);
-    function G(e) {
+        S = r.useRef(null),
+        G = r.useRef(null);
+    function _(e) {
         u({ image: e });
     }
-    function _(e, t) {
+    function R(e, t) {
         null == e || void 0 === t
-            ? G(null)
+            ? _(null)
             : (0, x.openModalLazy)(async () => {
                   let { default: l } = await Promise.all([
                       n.e("91752"),
@@ -643,9 +644,10 @@ function eK(e) {
                           file: t,
                           onCrop: (e) => {
                               let { imageUri: t } = e;
-                              return G(t);
+                              return _(t);
                           },
                           uploadType: eQ.HL.SCHEDULED_EVENT_IMAGE,
+                          returnRef: G,
                           ...n,
                       });
               });
@@ -660,7 +662,7 @@ function eK(e) {
         children: [
             (0, i.jsx)("div", {
                 className: eW.GU,
-                children: null != h && !N && (A > 0 || p > 0) && (0, i.jsx)(eX.Bw, { channelId: h }),
+                children: null != h && !p && (A > 0 || N > 0) && (0, i.jsx)(eX.Bw, { channelId: h }),
             }),
             (0, i.jsx)("div", {
                 className: eW.Zd,
@@ -700,7 +702,7 @@ function eK(e) {
                             recurrenceRule: y,
                             showEndDate: g === eS.Ps.EXTERNAL,
                             requireEndDate: g === eS.Ps.EXTERNAL,
-                            disableStartDateTime: N,
+                            disableStartDateTime: p,
                             guildId: s,
                         }),
                         (0, i.jsx)(e$, { error: d }),
@@ -718,39 +720,44 @@ function eK(e) {
                         (0, i.jsx)(ew.D, {
                             label: ec.intl.string(ec.t.Ly121e),
                             description: ec.intl.string(ec.t.B9C9be),
-                            children:
-                                null != E
-                                    ? (0, i.jsxs)(i.Fragment, {
-                                          children: [
-                                              (0, i.jsx)(eB.A, {
-                                                  className: eW.km,
-                                                  iconWrapperClassName: eW.WR,
-                                                  image: E,
-                                                  makeURL: (e) =>
-                                                      null == e
-                                                          ? null
-                                                          : null != s
-                                                            ? ((0, eV.A)((0, M.hQ)(t, s, l)) ?? null)
-                                                            : void 0,
-                                                  onChange: _,
-                                                  hint: ec.intl.string(ec.t.G44Xml),
-                                                  showRemoveButton: !1,
-                                                  enabled: !0,
-                                              }),
-                                              (0, i.jsx)(o.$, {
-                                                  variant: "primary",
-                                                  size: "sm",
-                                                  text: ec.intl.string(ec.t.gmUvO1),
-                                                  onClick: () => G(null),
-                                              }),
-                                          ],
-                                      })
-                                    : (0, i.jsx)(eH.A, {
-                                          size: "sm",
-                                          variant: "primary",
-                                          onChange: _,
-                                          text: ec.intl.string(ec.t.vKCGYb),
-                                      }),
+                            children: (0, i.jsx)("div", {
+                                ref: G,
+                                tabIndex: -1,
+                                className: eW.aN,
+                                children:
+                                    null != E
+                                        ? (0, i.jsxs)(i.Fragment, {
+                                              children: [
+                                                  (0, i.jsx)(eB.A, {
+                                                      className: eW.km,
+                                                      iconWrapperClassName: eW.WR,
+                                                      image: E,
+                                                      makeURL: (e) =>
+                                                          null == e
+                                                              ? null
+                                                              : null != s
+                                                                ? ((0, eV.A)((0, M.hQ)(t, s, l)) ?? null)
+                                                                : void 0,
+                                                      onChange: R,
+                                                      hint: ec.intl.string(ec.t.G44Xml),
+                                                      showRemoveButton: !1,
+                                                      enabled: !0,
+                                                  }),
+                                                  (0, i.jsx)(o.$, {
+                                                      variant: "primary",
+                                                      size: "sm",
+                                                      text: ec.intl.string(ec.t.gmUvO1),
+                                                      onClick: () => _(null),
+                                                  }),
+                                              ],
+                                          })
+                                        : (0, i.jsx)(eH.A, {
+                                              size: "sm",
+                                              variant: "primary",
+                                              onChange: R,
+                                              text: ec.intl.string(ec.t.vKCGYb),
+                                          }),
+                            }),
                         }),
                     ],
                 }),
@@ -943,7 +950,7 @@ function td(e) {
             onClose: y,
             createdEvent: A,
         } = e,
-        C = (0, N.GV)(),
+        C = (0, p.GV)(),
         b = r.useRef(n),
         I = !(0, s.isEqual)(b.current, n),
         S = r.useMemo(
@@ -966,32 +973,32 @@ function td(e) {
         ),
         G = Object.keys(ts).length,
         _ = (0, T.Fd)(n);
-    function k(e) {
+    function R(e) {
         return Math.max(0, Math.min(e, G - 1));
     }
-    let [D, L] = r.useState(+!!_),
-        [R, M] = r.useState(!1),
+    let [k, D] = r.useState(+!!_),
+        [L, M] = r.useState(!1),
         P = r.useMemo(
             () =>
-                S.slice(0, D + 1)
+                S.slice(0, k + 1)
                     .map((e) => e.valid)
                     .every(Boolean),
-            [S, D],
+            [S, k],
         ),
-        V = D >= S.length ? 3 : S[k(D)].slideId,
+        V = k >= S.length ? 3 : S[R(k)].slideId,
         z = 3 === V;
     (0, U.N)((e) => e.onUpdateCanCloseModal)(z);
     let F = (0, a.bG)([m.Ay], () => m.Ay.useReducedMotion),
         O = r.useRef(null);
     function w(e) {
-        M(!1), L(k(e));
+        M(!1), D(R(e));
     }
     let B = r.useRef(w);
     function H() {
-        P && (2 === V ? j() : z ? y() : w(D + 1));
+        P && (2 === V ? j() : z ? y() : w(k + 1));
     }
     function q() {
-        w(D - 1);
+        w(k - 1);
     }
     r.useEffect(() => {
         B.current = w;
@@ -1016,11 +1023,11 @@ function td(e) {
                     "data-migration-pending": !0,
                     children: [
                         !z &&
-                            (0, i.jsx)(p, {
-                                steps: S.map((e, t) => ({ label: e.label, disabled: t > D && !P })),
-                                stepIndex: D,
+                            (0, i.jsx)(N, {
+                                steps: S.map((e, t) => ({ label: e.label, disabled: t > k && !P })),
+                                stepIndex: k,
                                 onClick: function (e) {
-                                    e < D ? q() : e > D && H();
+                                    e < k ? q() : e > k && H();
                                 },
                             }),
                         (0, i.jsxs)(u.t, {
@@ -1032,11 +1039,11 @@ function td(e) {
                             children: [
                                 (0, i.jsx)(u.q, {
                                     id: 0,
-                                    children: (0, i.jsx)(eR, {
+                                    children: (0, i.jsx)(eL, {
                                         guildId: t,
                                         guildEvent: n,
                                         validationErrorMessage: g.entity,
-                                        isSlideReady: R,
+                                        isSlideReady: L,
                                         onChange: f,
                                     }),
                                 }),
@@ -1049,7 +1056,7 @@ function td(e) {
                                         onChange: f,
                                         error: E,
                                         validationErrorMessage: g.schedule,
-                                        isSlideReady: R,
+                                        isSlideReady: L,
                                     }),
                                 }),
                                 (0, i.jsx)(u.q, {
@@ -1059,7 +1066,7 @@ function td(e) {
                                         guildEvent: n,
                                         guildEventId: l,
                                         error: E,
-                                        isSlideReady: R,
+                                        isSlideReady: L,
                                     }),
                                 }),
                                 (0, i.jsx)(u.q, { id: 3, children: (0, i.jsx)(tn, { onClose: y, event: A }) }),
@@ -1118,7 +1125,7 @@ function tu(e) {
         [m, v] = r.useState(o),
         [E] = r.useState((0, M.lc)(u)),
         [f, j] = r.useState(null),
-        [y, { loading: A, error: p }] = (0, S.A)(async () => {
+        [y, { loading: A, error: N }] = (0, S.A)(async () => {
             var e;
             let n, i;
             if (null != f) return;
@@ -1133,7 +1140,7 @@ function tu(e) {
                 r
             );
         }),
-        N = r.useMemo(
+        p = r.useMemo(
             () => ({
                 entity: (function (e) {
                     let { entityType: t, channelId: n } = e,
@@ -1171,13 +1178,13 @@ function tu(e) {
         guildEvent: m,
         guildEventId: l,
         isEdit: E,
-        formErrors: N,
+        formErrors: p,
         transitionState: s,
         loading: A,
-        error: p,
+        error: N,
         onChange: function (e) {
             if (null != e.entityType) {
-                let [n] = L(t, (0, P.dy)(e.entityType));
+                let [n] = D(t, (0, P.dy)(e.entityType));
                 (e.channelId = n?.id ?? null),
                     e.entityType !== eS.Ps.EXTERNAL && m.entityType === eS.Ps.EXTERNAL && (e.entityMetadata = null);
             }

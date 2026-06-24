@@ -23,8 +23,17 @@
 }
 
 .addImageHint__97cfe,
-.imagePreview__97cfe,
 .warning__97cfe {
+    margin-bottom: 8px
+}
+
+.imageField__97cfe {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.imagePreview__97cfe {
     margin-bottom: 8px
 }
 

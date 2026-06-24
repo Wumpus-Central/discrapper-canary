@@ -1,17 +1,18 @@
-l.d(a, { A: () => p });
-var o = l(231723),
-    d = l(192308),
-    s = l(267102),
-    t = l(70456),
-    n = l(652215);
-let c = "guild-event-modal",
+t.d(a, { A: () => p });
+var l = t(231723),
+    o = t(192308),
+    s = t(267102),
+    d = t(70456),
+    c = t(652215);
+let n = "guild-event-modal",
     p = () => {
-        let e = (0, s.Us)() === n.BRT.POPOUT ? o.KX : o.SY;
+        let e = (0, s.Us)() === c.BRT.POPOUT ? l.KX : l.SY;
         return {
-            modalKey: c,
+            modalKey: n,
             contextKey: e,
+            stackNextByDefault: !0,
             onCloseRequest: () => {
-                t.N.getState().canCloseModal && (0, d.closeModal)(c, e);
+                d.N.getState().canCloseModal && (0, o.closeModal)(n, e);
             },
         };
     };
