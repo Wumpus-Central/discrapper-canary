@@ -802,6 +802,11 @@
     gap: var(--space-4)
 }
 
+.hoverArea__6d3d8 {
+    flex-shrink: 0;
+    position: relative
+}
+
 .container__6d3d8 {
     --custom-quest-hover-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     aspect-ratio: 395/258;
