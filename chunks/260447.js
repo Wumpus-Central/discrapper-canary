@@ -40,7 +40,7 @@ class d extends i.PureComponent {
                 extra: { ...r, ...(n ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
             };
         return (
-            o.A.captureException(e, s),
+            (e instanceof l.v && e.skipReportingToSentry) || o.A.captureException(e, s),
             c.error("Revenue error occurred:", { error: e, additionalErrorContext: r }),
             { sentryErrorOptions: s }
         );
