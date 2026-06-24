@@ -937,7 +937,7 @@ class B extends o.A {
     }
     canScheduleClipCandidate(e) {
         let t = p.Ay.getCurrentClipsSession();
-        if (null == t) return !1;
+        if (null == t || c.Ay.getVisibleGame()?.isLauncher === !0) return !1;
         if (null != h.A.getVoiceChannelId()) return !0;
         let n = f.default.getCurrentUser(),
             i = n?.isStaff() === !0 || n?.isStaffPersonal() === !0,

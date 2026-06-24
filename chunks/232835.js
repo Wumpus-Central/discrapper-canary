@@ -75,8 +75,8 @@ function j(e) {
     if (null == t) return;
     let n = u.A.get(t);
     if (null == n) return;
-    let i = n.findNewest((t) => t.messageReference?.message_id === e.id);
-    null != i && ((n = n.remove(i.id)), u.A.commit(n));
+    let i = e.mediaMention?.message_id;
+    null != i && ((n = n.remove(i)), u.A.commit(n));
 }
 function H() {
     u.A.forEach((e) => {
@@ -348,7 +348,12 @@ let z = new $(o.h, {
                                       channel_id: t,
                                       type: x.lAJ.MEDIA_MENTION_MESSAGE,
                                       id: e.media_mention.message_id,
-                                      message_reference: void 0,
+                                      message_reference: {
+                                          channel_id: e.channel_id,
+                                          message_id: e.media_mention.message_id,
+                                          type: x.SH7.DEFAULT,
+                                          guild_id: N.A.getChannel(e.channel_id)?.guild_id,
+                                      },
                                   };
                               (n = n.receiveMessage(i, !1)), u.A.commit(n);
                           }
