@@ -131,16 +131,17 @@ class f extends a.A {
                         socialLayer: (function (e) {
                             if (null != e)
                                 return {
-                                    carouselItems: e.carousel_items.map((e) => ({
-                                        thumbnailAssetId: e.thumbnail_asset_id,
-                                        assetId: e.asset_id,
-                                        backgroundAssetId: e.background_asset_id,
-                                        youtubeVideoId: e.youtube_video_id,
-                                        label: e.label,
-                                        labelIconAssetId: e.label_icon_asset_id,
-                                        title: e.title,
-                                        description: e.description,
-                                    })),
+                                    carouselItems:
+                                        e.carousel_items?.map((e) => ({
+                                            thumbnailAssetId: e.thumbnail_asset_id,
+                                            assetId: e.asset_id,
+                                            backgroundAssetId: e.background_asset_id,
+                                            youtubeVideoId: e.youtube_video_id,
+                                            label: e.label,
+                                            labelIconAssetId: e.label_icon_asset_id,
+                                            title: e.title,
+                                            description: e.description,
+                                        })) ?? [],
                                     expiresAt: null != e.expires_at ? new Date(e.expires_at) : void 0,
                                     cardImageAssetId: e.card_image_asset_id,
                                     cardBackgroundImageAssetId: e.card_background_image_asset_id,
