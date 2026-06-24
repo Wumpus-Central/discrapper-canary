@@ -1134,74 +1134,75 @@ let eW = i.memo(function (e) {
 var eK = s(688755),
     eV = s(831368),
     e$ = s(355620);
-function eB(e) {
-    return `quest-tile-${e}`;
+function eB(e, t) {
+    return null == t ? `quest-tile-${e}` : `quest-tile-${e}-${t}`;
 }
 function eG(e) {
     let {
             quest: t,
             className: s,
-            isInFeaturedSection: a,
-            questContent: r,
-            contentPosition: o,
-            rowIndex: c,
-            eagerLoadAssets: d,
-            impressionRef: m,
-            sourceQuestContent: C,
+            sectionIdentifier: a,
+            isInFeaturedSection: r,
+            questContent: o,
+            contentPosition: c,
+            rowIndex: d,
+            eagerLoadAssets: m,
+            impressionRef: C,
+            sourceQuestContent: h,
         } = e,
-        h = i.useId(),
-        [E, j] = i.useState(!1),
-        [f, v] = i.useState([]),
-        N = (0, u.aC)(t),
+        E = i.useId(),
+        [j, f] = i.useState(!1),
+        [v, N] = i.useState([]),
+        g = (0, u.aC)(t),
         {
-            handleHoverStart: g,
-            handleHoverEnd: O,
-            isEventWithinParent: A,
-        } = (0, eK.B)({ quest: t, questContent: r, contentPosition: o, rowIndex: c, sourceQuestContent: C }),
-        p = i.useContext(x.X),
-        { visibilityElementRef: y, almostVisibleInViewport: T } = (0, eV.I)(
-            p?.current?.getScrollerNode() ?? null,
-            d ?? !1,
+            handleHoverStart: O,
+            handleHoverEnd: A,
+            isEventWithinParent: p,
+        } = (0, eK.B)({ quest: t, questContent: o, contentPosition: c, rowIndex: d, sourceQuestContent: h }),
+        y = i.useContext(x.X),
+        { visibilityElementRef: T, almostVisibleInViewport: I } = (0, eV.I)(
+            y?.current?.getScrollerNode() ?? null,
+            m ?? !1,
         );
     return (0, n.jsxs)("article", {
-        id: eB(t.id),
+        id: eB(t.id, a),
         ref: (e) => {
-            (m.current = e), (y.current = e);
+            (C.current = e), (T.current = e);
         },
-        "aria-labelledby": h,
+        "aria-labelledby": E,
         className: l()(e$.k, s),
         onMouseEnter: () => {
-            j(!0), g();
+            f(!0), O();
         },
         onMouseLeave: () => {
-            j(!1), O();
+            f(!1), A();
         },
         onFocus: (e) => {
-            A(e) || (j(!0), g());
+            p(e) || (f(!0), O());
         },
         onBlur: (e) => {
-            A(e) || (j(!1), O());
+            p(e) || (f(!1), A());
         },
         children: [
             (0, n.jsx)(G, {
                 quest: t,
-                isInFeaturedSection: a,
-                isHovering: E,
-                errorHints: f,
-                warningHints: N,
-                isVisibleInViewport: T,
-                sourceQuestContent: C,
+                isInFeaturedSection: r,
+                isHovering: j,
+                errorHints: v,
+                warningHints: g,
+                isVisibleInViewport: I,
+                sourceQuestContent: h,
             }),
             (0, n.jsx)(eF, {
                 quest: t,
-                questContent: r,
-                isHovering: E,
-                contentPosition: o,
-                rowIndex: c,
-                onReceiveErrorHints: v,
-                isVisibleInViewport: T,
-                sourceQuestContent: C,
-                questNameHeadingId: h,
+                questContent: o,
+                isHovering: j,
+                contentPosition: c,
+                rowIndex: d,
+                onReceiveErrorHints: N,
+                isVisibleInViewport: I,
+                sourceQuestContent: h,
+                questNameHeadingId: E,
             }),
         ],
     });

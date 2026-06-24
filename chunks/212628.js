@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 567840, Version Hash: 23c07640a03bf370c62744ae351d37d080f30fdc`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 567859, Version Hash: beb1603771862bc743e66b5c0f0b1df97bd7f512`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -18056,7 +18056,7 @@ let Sl = "isHideDevBanner",
                     className: t6()(So.Wz, So.mr),
                     children: [
                         (0, F.jsx)(Sa, { className: So.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "567840" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "567859" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -22036,8 +22036,8 @@ let C7 = (0, nO.Fe)({
                 n.e("30003"),
                 n.e("33546"),
                 n.e("5468"),
-            ]).then(n.bind(n, 57715)),
-        webpackId: 57715,
+            ]).then(n.bind(n, 445889)),
+        webpackId: 445889,
         name: "QuestHomePage",
         renderLoader: iq.g4,
     }),
