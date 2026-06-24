@@ -1,12 +1,12 @@
-r.r(t), r.d(t, { default: () => T });
+r.r(t), r.d(t, { default: () => O });
 var s = r(627968),
-    l = r(64700),
-    n = r(979186);
+    n = r(64700),
+    l = r(979186);
 r(321073);
 var a = r(17928),
     i = r(229659),
-    o = r(287809),
-    c = r(723702),
+    c = r(287809),
+    o = r(723702),
     u = r(321034),
     d = r(832213);
 r(134528), r(947204);
@@ -18,25 +18,25 @@ r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
 var x = r(938800);
 let w = 1e3 / 30;
 function M(e) {
-    let t = l.useRef(null),
+    let t = n.useRef(null),
         r = (0, f.r)(m.A.colors.BACKGROUND_BASE_LOW).hsl(),
-        n = (0, f.r)(m.A.colors.BACKGROUND_MOD_MUTED).hsl(),
+        l = (0, f.r)(m.A.colors.BACKGROUND_MOD_MUTED).hsl(),
         a = (0, f.r)(m.A.colors.TEXT_DEFAULT).hsl(),
-        i = l.useRef(e);
-    l.useEffect(() => {
+        i = n.useRef(e);
+    n.useEffect(() => {
         i.current = e;
     });
-    let o = l.useRef(new Float64Array(0)),
-        c = l.useRef(0),
+    let c = n.useRef(new Float64Array(0)),
+        o = n.useRef(0),
         u = window.devicePixelRatio ?? 1,
         d = Math.round(e.width * u),
         h = Math.round(e.height * u);
     return (
-        l.useEffect(() => {
+        n.useEffect(() => {
             let e = 0,
                 s = 0,
-                l = (u) => {
-                    if (((e = requestAnimationFrame(l)), u - s < w)) return;
+                n = (u) => {
+                    if (((e = requestAnimationFrame(n)), u - s < w)) return;
                     s = u;
                     let d = t.current;
                     if (null == d) return;
@@ -45,31 +45,31 @@ function M(e) {
                     let { series: m, windowMs: f, yFloor: p, formatMax: x } = i.current,
                         M = window.devicePixelRatio ?? 1,
                         g = d.width,
-                        v = d.height;
-                    h.setTransform(1, 0, 0, 1, 0, 0), (h.fillStyle = r), h.fillRect(0, 0, g, v);
-                    let j = m.slice().sort((e, t) => e.stackOrder - t.stackOrder),
-                        y = j.length,
-                        A = Date.now(),
-                        N = Math.max(1, Math.round(f / 1e3)),
-                        b = A - 1e3 * N,
-                        _ = y * N;
-                    o.current.length < _ && (o.current = new Float64Array(_));
-                    let k = o.current;
+                        j = d.height;
+                    h.setTransform(1, 0, 0, 1, 0, 0), (h.fillStyle = r), h.fillRect(0, 0, g, j);
+                    let v = m.slice().sort((e, t) => e.stackOrder - t.stackOrder),
+                        A = v.length,
+                        N = Date.now(),
+                        y = Math.max(1, Math.round(f / 1e3)),
+                        b = N - 1e3 * y,
+                        _ = A * y;
+                    c.current.length < _ && (c.current = new Float64Array(_));
+                    let k = c.current;
                     k.fill(0, 0, _);
                     let D = 0;
-                    for (let e = 0; e < y; e++) {
-                        let t = j[e].buffer,
+                    for (let e = 0; e < A; e++) {
+                        let t = v[e].buffer,
                             r = t.length;
                         for (let s = 0; s < r; s++) {
                             let r = t.at(s);
                             if (null == r) continue;
-                            let l = Math.floor((r.time - b) / 1e3);
-                            l < 0 || l >= N || (k[e * N + l] = r.value);
+                            let n = Math.floor((r.time - b) / 1e3);
+                            n < 0 || n >= y || (k[e * y + n] = r.value);
                         }
                     }
-                    for (let e = 0; e < N; e++) {
+                    for (let e = 0; e < y; e++) {
                         let t = 0;
-                        for (let r = 0; r < y; r++) t += k[r * N + e];
+                        for (let r = 0; r < A; r++) t += k[r * y + e];
                         t > D && (D = t);
                     }
                     let S = Math.max(
@@ -82,26 +82,26 @@ function M(e) {
                             })(D),
                             1,
                         ),
-                        R = c.current;
-                    (R = R <= 0 ? S : R + (S - R) * 0.2) < Math.max(p, 1) && (R = Math.max(p, 1)), (c.current = R);
-                    let C = Math.ceil(11 * M) + Math.round(4 * M),
-                        E = Math.max(1, v - C),
-                        F = Math.max(1, Math.ceil(g / N));
-                    for (let e = 0; e < N; e++) {
-                        let t = Math.floor((e / N) * g),
-                            r = v;
-                        for (let s = 0; s < y; s++) {
-                            let l = k[s * N + e];
-                            if (l <= 0) continue;
-                            let n = (l / R) * E;
-                            (h.fillStyle = j[s].color), h.fillRect(t, r - n, F, n), (r -= n);
+                        R = o.current;
+                    (R = R <= 0 ? S : R + (S - R) * 0.2) < Math.max(p, 1) && (R = Math.max(p, 1)), (o.current = R);
+                    let F = Math.ceil(11 * M) + Math.round(4 * M),
+                        C = Math.max(1, j - F),
+                        E = Math.max(1, Math.ceil(g / y));
+                    for (let e = 0; e < y; e++) {
+                        let t = Math.floor((e / y) * g),
+                            r = j;
+                        for (let s = 0; s < A; s++) {
+                            let n = k[s * y + e];
+                            if (n <= 0) continue;
+                            let l = (n / R) * C;
+                            (h.fillStyle = v[s].color), h.fillRect(t, r - l, E, l), (r -= l);
                         }
                     }
-                    (h.strokeStyle = n),
+                    (h.strokeStyle = l),
                         (h.lineWidth = M),
                         h.beginPath(),
-                        h.moveTo(0, C),
-                        h.lineTo(g, C),
+                        h.moveTo(0, F),
+                        h.lineTo(g, F),
                         h.stroke(),
                         (h.fillStyle = a),
                         (h.font = `${11 * M}px gg sans`),
@@ -109,8 +109,8 @@ function M(e) {
                         (h.textBaseline = "top"),
                         h.fillText(x(R), g - Math.round(4 * M), Math.round(2 * M));
                 };
-            return (e = requestAnimationFrame(l)), () => cancelAnimationFrame(e);
-        }, [r, n, a]),
+            return (e = requestAnimationFrame(n)), () => cancelAnimationFrame(e);
+        }, [r, l, a]),
         (0, s.jsx)("canvas", {
             ref: t,
             width: d,
@@ -121,20 +121,20 @@ function M(e) {
     );
 }
 function g(e) {
-    let { title: t, value: r, points: n, children: a } = e,
-        o = l.useRef(null),
-        [c, u] = l.useState(320);
+    let { title: t, value: r, points: l, children: a } = e,
+        c = n.useRef(null),
+        [o, u] = n.useState(320);
     return (
-        l.useEffect(() => {
-            let e = o.current;
+        n.useEffect(() => {
+            let e = c.current;
             if (null == e) return;
             let t = null,
                 r = 0,
                 s = new ResizeObserver((e) => {
                     let [s] = e,
-                        l = Math.max(80, Math.min(4096, Math.floor(s.contentRect.width)));
-                    l === r ||
-                        ((r = l),
+                        n = Math.max(80, Math.min(4096, Math.floor(s.contentRect.width)));
+                    n === r ||
+                        ((r = n),
                         null == t &&
                             (t = requestAnimationFrame(() => {
                                 (t = null), u(r);
@@ -148,7 +148,7 @@ function g(e) {
             );
         }, []),
         (0, s.jsxs)("div", {
-            ref: o,
+            ref: c,
             className: x.uW,
             children: [
                 (0, s.jsxs)("div", {
@@ -158,19 +158,19 @@ function g(e) {
                         (0, s.jsx)("span", { className: x.Uq, children: r }),
                     ],
                 }),
-                (0, s.jsx)(i.A, { dataPoints: n, width: c, height: 80, windowMs: 12e4 }),
+                (0, s.jsx)(i.A, { dataPoints: l, width: o, height: 80, windowMs: 12e4 }),
                 a,
             ],
         })
     );
 }
-function v(e) {
+function j(e) {
     return `${e.toFixed(1)}%`;
 }
-var j = r(952818),
-    y = r(760751),
-    A = r(290805),
-    N = r(19575);
+var v = r(952818),
+    A = r(760751),
+    N = r(290805),
+    y = r(19575);
 class b {
     storage;
     head = 0;
@@ -198,7 +198,7 @@ let _ =
         ptb: "DiscordPTB.exe",
         canary: "DiscordCanary.exe",
         development: "DiscordDevelopment.exe",
-    }[A.y] ?? "Discord.exe";
+    }[N.y] ?? "Discord.exe";
 function k(e) {
     return e.at(e.length - 1)?.value ?? 0;
 }
@@ -206,20 +206,20 @@ function D(e) {
     return `${Math.round(e)} MB`;
 }
 function S(e) {
-    let { title: t, value: r, series: n, yFloor: a, formatMax: i } = e,
-        o = l.useRef(null),
-        [c, u] = l.useState(320);
+    let { title: t, value: r, series: l, yFloor: a, formatMax: i } = e,
+        c = n.useRef(null),
+        [o, u] = n.useState(320);
     return (
-        l.useEffect(() => {
-            let e = o.current;
+        n.useEffect(() => {
+            let e = c.current;
             if (null == e) return;
             let t = null,
                 r = 0,
                 s = new ResizeObserver((e) => {
                     let [s] = e,
-                        l = Math.max(80, Math.min(4096, Math.floor(s.contentRect.width)));
-                    l === r ||
-                        ((r = l),
+                        n = Math.max(80, Math.min(4096, Math.floor(s.contentRect.width)));
+                    n === r ||
+                        ((r = n),
                         null == t &&
                             (t = requestAnimationFrame(() => {
                                 (t = null), u(r);
@@ -233,7 +233,7 @@ function S(e) {
             );
         }, []),
         (0, s.jsxs)("div", {
-            ref: o,
+            ref: c,
             className: x.uW,
             children: [
                 (0, s.jsxs)("div", {
@@ -243,116 +243,116 @@ function S(e) {
                         (0, s.jsx)("span", { className: x.Uq, children: r }),
                     ],
                 }),
-                (0, s.jsx)(M, { series: n, width: c, height: 80, windowMs: 3e5, yFloor: a, formatMax: i }),
+                (0, s.jsx)(M, { series: l, width: o, height: 80, windowMs: 3e5, yFloor: a, formatMax: i }),
             ],
         })
     );
 }
 function R(e) {
     let { view: t, colorFor: r } = e,
-        { adapterName: l, entries: n } = t,
-        a = n.map((e) => ({
+        { adapterName: n, entries: l } = t,
+        a = l.map((e) => ({
             key: e.process.pid,
             buffer: e.gpu,
             color: r(e.process),
             stackOrder: e.process.stackOrder,
         })),
-        i = n.map((e) => ({
+        i = l.map((e) => ({
             key: e.process.pid,
             buffer: e.vram,
             color: r(e.process),
             stackOrder: e.process.stackOrder,
         })),
-        o = 0,
-        c = 0;
-    for (let e of n) (o += k(e.gpu)), (c += k(e.vram));
-    let u = n.slice().sort((e, t) => {
+        c = 0,
+        o = 0;
+    for (let e of l) (c += k(e.gpu)), (o += k(e.vram));
+    let u = l.slice().sort((e, t) => {
         let r = t.process.lastSampleAt - e.process.lastSampleAt;
         return 0 !== r ? r : e.process.stackOrder - t.process.stackOrder;
     });
     return (0, s.jsxs)("div", {
         className: x.yT,
         children: [
-            (0, s.jsx)("span", { className: x.Xk, children: l }),
+            (0, s.jsx)("span", { className: x.Xk, children: n }),
             (0, s.jsxs)("div", {
                 className: x.Ss,
                 children: [
                     (0, s.jsx)(S, {
                         title: "Utilization",
-                        value: v(o),
+                        value: j(c),
                         series: a,
                         yFloor: 100,
                         formatMax: (e) => `${Math.round(e)}%`,
                     }),
-                    (0, s.jsx)(S, { title: "VRAM", value: D(c), series: i, yFloor: 0, formatMax: D }),
+                    (0, s.jsx)(S, { title: "VRAM", value: D(o), series: i, yFloor: 0, formatMax: D }),
                 ],
             }),
             (0, s.jsx)("div", {
                 className: x.o1,
-                children: u.map((e) => (0, s.jsx)(C, { entry: e, color: r(e.process) }, e.process.pid)),
+                children: u.map((e) => (0, s.jsx)(F, { entry: e, color: r(e.process) }, e.process.pid)),
             }),
         ],
     });
 }
-function C(e) {
+function F(e) {
     let { entry: t, color: r } = e,
-        { process: l } = t;
+        { process: n } = t;
     return (0, s.jsxs)("div", {
         className: x.eI,
         children: [
             (0, s.jsx)("div", { className: x.A9, style: { background: r } }),
-            l.isDiscord
+            n.isDiscord
                 ? (0, s.jsx)(h.p, { size: "sm", className: x.Gt })
                 : (0, s.jsx)(p.A, {
-                      game: l.detectableGame,
+                      game: n.detectableGame,
                       size: p.M.SMALL,
                       allowUnknownGameIcon: !0,
                       className: x.Gt,
                   }),
-            (0, s.jsx)("span", { className: x.V1, children: l.name }),
-            (0, s.jsxs)("span", { className: x.rz, children: [v(k(t.gpu)), " \xb7 ", D(k(t.vram))] }),
+            (0, s.jsx)("span", { className: x.V1, children: n.name }),
+            (0, s.jsxs)("span", { className: x.rz, children: [j(k(t.gpu)), " \xb7 ", D(k(t.vram))] }),
         ],
     });
 }
-function E(e) {
+function C(e) {
     let { enabled: t } = e,
         r = (function (e) {
-            let [t, r] = l.useState([]),
-                s = l.useRef(new Map()),
-                n = l.useRef(new Map()),
-                a = l.useRef(0);
+            let [t, r] = n.useState([]),
+                s = n.useRef(new Map()),
+                l = n.useRef(new Map()),
+                a = n.useRef(0);
             return (
-                l.useEffect(() => {
+                n.useEffect(() => {
                     let t;
                     if (!e) return;
-                    let l = !1;
+                    let n = !1;
                     return (
                         !(function e() {
                             let i;
-                            if (l) return;
-                            let o = null == (i = window.DiscordNative?.process?.pid) || isNaN(i) ? null : i,
-                                c = [];
-                            for (let e of (null != o && c.push({ pid: o, isDiscord: !0 }),
-                            j.Ay.getVisibleRunningGames()))
-                                c.push({ pid: e.pid, isDiscord: !1, game: e });
+                            if (n) return;
+                            let c = null == (i = window.DiscordNative?.process?.pid) || isNaN(i) ? null : i,
+                                o = [];
+                            for (let e of (null != c && o.push({ pid: c, isDiscord: !0 }),
+                            v.Ay.getVisibleRunningGames()))
+                                o.push({ pid: e.pid, isDiscord: !1, game: e });
                             Promise.all(
-                                c.map((e) =>
-                                    N.Ay.GetSystemGpuStats(e.pid)
+                                o.map((e) =>
+                                    y.Ay.GetSystemGpuStats(e.pid)
                                         .catch(() => [])
                                         .then((t) => ({ target: e, adapters: t })),
                                 ),
                             )
                                 .then((e) => {
-                                    if (l) return;
+                                    if (n) return;
                                     let t = Date.now(),
-                                        i = new Set(c.map((e) => e.pid)),
-                                        o = new Map(s.current);
+                                        i = new Set(o.map((e) => e.pid)),
+                                        c = new Map(s.current);
                                     for (let { target: r, adapters: s } of e) {
                                         let e = r.pid,
-                                            l = o.get(e);
-                                        if (null != l) o.set(e, { ...l, lastSampleAt: t });
+                                            n = c.get(e);
+                                        if (null != n) c.set(e, { ...n, lastSampleAt: t });
                                         else if (r.isDiscord)
-                                            o.set(e, {
+                                            c.set(e, {
                                                 pid: e,
                                                 isDiscord: !0,
                                                 name: _,
@@ -363,14 +363,14 @@ function E(e) {
                                             });
                                         else {
                                             let s = r.game,
-                                                l = a.current++;
-                                            o.set(e, {
+                                                n = a.current++;
+                                            c.set(e, {
                                                 pid: e,
                                                 isDiscord: !1,
                                                 name: s.gameName ?? s.name ?? s.processName ?? `pid ${e}`,
-                                                detectableGame: y.A.findGame(s) ?? null,
-                                                colorIndex: ((l % 6) + 6) % 6,
-                                                stackOrder: l,
+                                                detectableGame: A.A.findGame(s) ?? null,
+                                                colorIndex: ((n % 6) + 6) % 6,
+                                                stackOrder: n,
                                                 lastSampleAt: t,
                                             });
                                         }
@@ -392,31 +392,31 @@ function E(e) {
                                             return t;
                                         })(s);
                                         if (0 === i.size) continue;
-                                        let c = n.current.get(e);
-                                        for (let [r, s] of (null == c && ((c = new Map()), n.current.set(e, c)), i)) {
-                                            let e = c.get(r);
-                                            null == e && ((e = { gpu: new b(300), vram: new b(300) }), c.set(r, e)),
+                                        let o = l.current.get(e);
+                                        for (let [r, s] of (null == o && ((o = new Map()), l.current.set(e, o)), i)) {
+                                            let e = o.get(r);
+                                            null == e && ((e = { gpu: new b(300), vram: new b(300) }), o.set(r, e)),
                                                 e.gpu.push(s.utilization_percent, t),
                                                 e.vram.push(s.memory_bytes / 1048576, t);
                                         }
                                     }
-                                    for (let [e, r] of o)
+                                    for (let [e, r] of c)
                                         r.isDiscord ||
                                             i.has(e) ||
                                             !(t - r.lastSampleAt > 3e5) ||
-                                            (o.delete(e), n.current.delete(e));
-                                    for (let e of n.current.keys()) i.has(e) || o.has(e) || n.current.delete(e);
-                                    (s.current = o),
+                                            (c.delete(e), l.current.delete(e));
+                                    for (let e of l.current.keys()) i.has(e) || c.has(e) || l.current.delete(e);
+                                    (s.current = c),
                                         r(
                                             (function (e, t) {
                                                 let r = new Map();
                                                 for (let s of e.values()) {
                                                     let e = t.get(s.pid);
                                                     if (null != e)
-                                                        for (let [t, l] of e) {
+                                                        for (let [t, n] of e) {
                                                             let e = r.get(t);
                                                             null == e && ((e = []), r.set(t, e)),
-                                                                e.push({ process: s, gpu: l.gpu, vram: l.vram });
+                                                                e.push({ process: s, gpu: n.gpu, vram: n.vram });
                                                         }
                                                 }
                                                 return Array.from(r.entries())
@@ -429,21 +429,21 @@ function E(e) {
                                                         let [t, r] = e;
                                                         return { adapterName: t, entries: r };
                                                     });
-                                            })(o, n.current),
+                                            })(c, l.current),
                                         );
                                 })
                                 .catch(() => {}),
                                 (t = setTimeout(e, 1e3));
                         })(),
                         () => {
-                            (l = !0), null != t && clearTimeout(t);
+                            (n = !0), null != t && clearTimeout(t);
                         }
                     );
                 }, [e]),
                 t
             );
         })(t),
-        n = (0, f.r)(m.A.unsafe_rawColors.BRAND_500).hsl(),
+        l = (0, f.r)(m.A.unsafe_rawColors.BRAND_500).hsl(),
         a = [
             (0, f.r)(m.A.unsafe_rawColors.RED_400).hsl(),
             (0, f.r)(m.A.unsafe_rawColors.ORANGE_400).hsl(),
@@ -453,40 +453,43 @@ function E(e) {
             (0, f.r)(m.A.unsafe_rawColors.BLUE_400).hsl(),
         ];
     function i(e) {
-        return e.isDiscord || e.colorIndex < 0 ? n : a[e.colorIndex % a.length];
+        return e.isDiscord || e.colorIndex < 0 ? l : a[e.colorIndex % a.length];
     }
     return t && 0 !== r.length
         ? (0, s.jsx)(s.Fragment, { children: r.map((e) => (0, s.jsx)(R, { view: e, colorFor: i }, e.adapterName)) })
         : null;
 }
-let F = [d.M.Renderer, d.M.Main, d.M.GPU, d.M.Utility, d.M.Crashpad, d.M.Unknown];
+let E = [d.M.Renderer, d.M.Main, d.M.GPU, d.M.Utility, d.M.Crashpad, d.M.Unknown];
 function U(e) {
     return (e.wss_priv_kb ?? e.wss_kb ?? 0) / 1024;
 }
-function O() {
-    let e = (0, a.bG)([o.default], () => o.default.getCurrentUser()?.isStaff() ?? !1),
-        [t, r] = l.useState(null),
-        [n, d] = l.useState(null),
-        [h, m] = l.useState([]),
-        [f, p] = l.useState(() => new Set()),
-        w = l.useRef(null),
-        [M, j] = l.useState(320),
-        [y] = l.useState(() => new b(120)),
-        [A] = l.useState(() => new Map());
+function T() {
+    let e = (0, a.bG)([c.default], () => c.default.getCurrentUser()?.isStaff() ?? !1),
+        [t, r] = n.useState(null),
+        [l, d] = n.useState(null),
+        [h, m] = n.useState([]),
+        [f, p] = n.useState(() => new Set()),
+        w = n.useRef(null),
+        [M, v] = n.useState(320),
+        [A] = n.useState(() => new b(120)),
+        [N] = n.useState(() => new Map()),
+        [y] = n.useState(() => new b(120)),
+        [_, k] = n.useState(null),
+        D = n.useRef(0);
     if (
-        (l.useEffect(() => {
+        (n.useEffect(() => {
             let e = w.current;
             if (null == e) return;
             let t = null,
                 r = 0,
                 s = new ResizeObserver((e) => {
                     let [s] = e,
-                        l = Math.max(320, Math.min(4096, Math.floor(s.contentRect.width)));
-                    l === r ||
-                        ((r = l),
+                        n = Math.max(320, Math.min(4096, Math.floor(s.contentRect.width)));
+                    n === r ||
+                        ((r = n),
                         null == t &&
                             (t = requestAnimationFrame(() => {
-                                (t = null), j(r);
+                                (t = null), v(r);
                             })));
                 });
             return (
@@ -496,48 +499,62 @@ function O() {
                 }
             );
         }, []),
-        l.useEffect(() => {
+        n.useEffect(() => {
+            let e = requestAnimationFrame(function t() {
+                (D.current += 1), (e = requestAnimationFrame(t));
+            });
+            return () => cancelAnimationFrame(e);
+        }, []),
+        n.useEffect(() => {
             let e = !1,
-                t = window.DiscordNative?.gcEvents?.addGCListener?.((t) => {
+                t = performance.now(),
+                s = !1,
+                n = window.DiscordNative?.gcEvents?.addGCListener?.((t) => {
                     let { timestamp: r, kind: s } = t;
                     e || m((e) => [...e.filter((e) => e.time > r - 12e4), { time: r, kind: s }]);
                 });
             return (
-                !(function t() {
+                !(function n() {
                     if (e) return;
-                    let s = Date.now(),
-                        l = performance.now(),
-                        n = u.A.getCurrentCPUUsagePercent() ?? 0;
-                    r(performance.now() - l);
-                    let a = performance.now(),
-                        i = u.A.getMemoryUsageElectronProcessTypeDetails();
-                    if ((d(performance.now() - a), y.push(n, s), null != i))
-                        for (let e of Object.keys(i)) {
-                            let t = i[e];
+                    let l = Date.now(),
+                        a = performance.now(),
+                        i = u.A.getCurrentCPUUsagePercent() ?? 0;
+                    r(performance.now() - a);
+                    let c = performance.now(),
+                        o = u.A.getMemoryUsageElectronProcessTypeDetails();
+                    if ((d(performance.now() - c), A.push(i, l), null != o))
+                        for (let e of Object.keys(o)) {
+                            let t = o[e];
                             if (null == t) continue;
-                            let r = A.get(e);
-                            null == r && ((r = new b(120)), A.set(e, r)), r.push(U(t), s);
+                            let r = N.get(e);
+                            null == r && ((r = new b(120)), N.set(e, r)), r.push(U(t), l);
                         }
-                    setTimeout(t, 1e3);
+                    let h = performance.now(),
+                        m = (h - t) / 1e3;
+                    if (s && m > 0) {
+                        let e = D.current / m;
+                        k(e), y.push(e, l);
+                    }
+                    (D.current = 0), (t = h), (s = !0), setTimeout(n, 1e3);
                 })(),
                 () => {
-                    (e = !0), t?.();
+                    (e = !0), n?.();
                 }
             );
-        }, [y, A]),
+        }, [A, N, y]),
         !e)
     )
         return null;
-    let N = u.A.getCurrentCPUUsagePercent() ?? 0,
-        _ = u.A.getMemoryUsageElectronProcessTypeDetails() ?? {},
-        k = F.reduce((e, t) => {
-            let r = _[t];
+    let S = u.A.getCurrentCPUUsagePercent() ?? 0,
+        R = u.A.getMemoryUsageElectronProcessTypeDetails() ?? {},
+        F = E.reduce((e, t) => {
+            let r = R[t];
             return null != r ? e + U(r) : e;
         }, 0);
-    function D(e) {
+    function T(e) {
         return null != e ? `${e.toFixed(1)}ms` : "";
     }
-    function S(e) {
+    function O(e) {
         return 2 === e
             ? "rgba(237, 66, 69, 0.9)"
             : 4 === e
@@ -546,13 +563,13 @@ function O() {
                 ? "rgba(150, 150, 150, 0.6)"
                 : "rgba(250, 168, 26, 0.75)";
     }
-    let R = h.filter((e) => !f.has(e.kind)).map((e) => ({ time: e.time, color: S(e.kind) })),
-        C = (0, c.isWindows)() && c.isPlatformEmbedded;
+    let G = h.filter((e) => !f.has(e.kind)).map((e) => ({ time: e.time, color: O(e.kind) })),
+        P = (0, o.isWindows)() && o.isPlatformEmbedded;
     return (0, s.jsxs)("div", {
         className: x.kL,
         children: [
             (0, s.jsx)("h1", { className: x.W, children: "Performance" }),
-            (0, s.jsx)(E, { enabled: C }),
+            (0, s.jsx)(C, { enabled: P }),
             (0, s.jsxs)("div", {
                 ref: w,
                 className: x.yT,
@@ -561,7 +578,7 @@ function O() {
                         className: x.x_,
                         children: [
                             (0, s.jsx)("span", { className: x.AM, children: "CPU" }),
-                            (0, s.jsx)("span", { className: x.rh, children: D(t) }),
+                            (0, s.jsx)("span", { className: x.rh, children: T(t) }),
                         ],
                     }),
                     (0, s.jsxs)("div", {
@@ -571,10 +588,10 @@ function O() {
                                 className: x.wx,
                                 children: [
                                     (0, s.jsx)("span", { className: x.DD, children: "Utilization" }),
-                                    (0, s.jsx)("span", { className: x.Uq, children: v(N) }),
+                                    (0, s.jsx)("span", { className: x.Uq, children: j(S) }),
                                 ],
                             }),
-                            (0, s.jsx)(i.A, { dataPoints: y, width: M, height: 80, windowMs: 12e4, markers: R }),
+                            (0, s.jsx)(i.A, { dataPoints: A, width: M, height: 80, windowMs: 12e4, markers: G }),
                             (0, s.jsx)("div", {
                                 className: x.KP,
                                 children: [
@@ -584,14 +601,14 @@ function O() {
                                     { kind: 8, label: "Weak-cb" },
                                 ].map((e) => {
                                     let { kind: t, label: r } = e,
-                                        l = !f.has(t);
+                                        n = !f.has(t);
                                     return (0, s.jsxs)(
                                         "button",
                                         {
                                             type: "button",
                                             className: x.$d,
-                                            "aria-pressed": l,
-                                            title: `${l ? "Hide" : "Show"} ${r} markers`,
+                                            "aria-pressed": n,
+                                            title: `${n ? "Hide" : "Show"} ${r} markers`,
                                             onClick: () => {
                                                 p((e) => {
                                                     let r = new Set(e);
@@ -599,7 +616,7 @@ function O() {
                                                 });
                                             },
                                             children: [
-                                                (0, s.jsx)("div", { className: x.AW, style: { background: S(t) } }),
+                                                (0, s.jsx)("div", { className: x.AW, style: { background: O(t) } }),
                                                 (0, s.jsx)("span", { className: x.IF, children: r }),
                                             ],
                                         },
@@ -618,37 +635,51 @@ function O() {
                         className: x.x_,
                         children: [
                             (0, s.jsx)("span", { className: x.AM, children: "Memory" }),
-                            (0, s.jsx)("span", { className: x.rh, children: D(n) }),
+                            (0, s.jsx)("span", { className: x.rh, children: T(l) }),
                         ],
                     }),
                     (0, s.jsxs)("div", {
                         className: x.V$,
                         children: [
                             (0, s.jsx)("span", { className: x.j5, children: "Total" }),
-                            (0, s.jsx)("span", { className: x.om, children: `${k.toFixed(0)} MB` }),
+                            (0, s.jsx)("span", { className: x.om, children: `${F.toFixed(0)} MB` }),
                         ],
                     }),
                     (0, s.jsx)("div", {
                         className: x.kK,
-                        children: F.map((e) => {
-                            let t = A.get(e);
+                        children: E.map((e) => {
+                            let t = N.get(e);
                             if (null == t || 0 === t.length) return null;
-                            let r = _[e],
-                                l = null != r ? U(r) : 0,
-                                n = r?.wss_priv_kb != null;
+                            let r = R[e],
+                                n = null != r ? U(r) : 0,
+                                l = r?.wss_priv_kb != null;
                             return (0, s.jsx)(
                                 g,
-                                { title: `${e}${n ? " (private)" : ""}`, value: `${l.toFixed(0)} MB`, points: t },
+                                { title: `${e}${l ? " (private)" : ""}`, value: `${n.toFixed(0)} MB`, points: t },
                                 e,
                             );
                         }),
                     }),
                 ],
             }),
+            (0, s.jsxs)("div", {
+                className: x.yT,
+                children: [
+                    (0, s.jsx)("div", {
+                        className: x.x_,
+                        children: (0, s.jsx)("span", { className: x.AM, children: "Frame Rate" }),
+                    }),
+                    (0, s.jsx)(g, {
+                        title: "Discord (main window)",
+                        value: null != _ ? `${Math.round(_)} FPS` : "",
+                        points: y,
+                    }),
+                ],
+            }),
         ],
     });
 }
-function T(e) {
+function O(e) {
     let { windowKey: t } = e;
-    return (0, s.jsx)(n.A, { withTitleBar: !0, windowKey: t, title: "Discord Stats", children: (0, s.jsx)(O, {}) });
+    return (0, s.jsx)(l.A, { withTitleBar: !0, windowKey: t, title: "Discord Stats", children: (0, s.jsx)(T, {}) });
 }

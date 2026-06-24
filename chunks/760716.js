@@ -7,4 +7,9 @@ let i = (0, n(353640).v)()((e) => ({
     setShowSelfActivity: (t) => e({ showSelfActivity: t }),
     recommendationApplicationIds: null,
     setRecommendationApplicationIds: (t) => e({ recommendationApplicationIds: null != t ? t.split(",") : null }),
+    overrideNitroEligibilityForSocialLayerStorefront: !1,
+    setOverrideNitroEligibilityForSocialLayerStorefront: (t) =>
+        e({ overrideNitroEligibilityForSocialLayerStorefront: t }),
+    isNitroEligibleForSocialLayerStorefront: !1,
+    setIsNitroEligibleForSocialLayerStorefront: (t) => e({ isNitroEligibleForSocialLayerStorefront: t }),
 }));

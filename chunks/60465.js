@@ -342,6 +342,7 @@ let u = {
                         n.e("28095"),
                         n.e("1555"),
                         n.e("32823"),
+                        n.e("29233"),
                         n.e("50117"),
                         n.e("79049"),
                         n.e("37977"),
@@ -383,10 +384,10 @@ let u = {
                         n.e("21041"),
                         n.e("37937"),
                         n.e("38672"),
-                        n.e("36611"),
+                        n.e("50782"),
                         n.e("86454"),
                         n.e("85330"),
-                    ]).then(n.bind(n, 252046));
+                    ]).then(n.bind(n, 483629));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: o, sourceUserId: l, ...n, appContext: u });
                 },
                 { contextKey: null != u ? (0, a.modalContextFromAppContext)(u) : void 0 },
@@ -717,6 +718,7 @@ let u = {
                     n.e("28095"),
                     n.e("1555"),
                     n.e("32823"),
+                    n.e("29233"),
                     n.e("50117"),
                     n.e("79049"),
                     n.e("37977"),
@@ -758,10 +760,10 @@ let u = {
                     n.e("21041"),
                     n.e("37937"),
                     n.e("38672"),
-                    n.e("36611"),
+                    n.e("50782"),
                     n.e("86454"),
                     n.e("85330"),
-                ]).then(n.bind(n, 252046));
+                ]).then(n.bind(n, 483629));
                 return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: s, ...n });
             });
     },
