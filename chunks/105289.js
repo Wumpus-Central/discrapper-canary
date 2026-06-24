@@ -179,16 +179,12 @@ function P() {
                                     }),
                             }),
                             (0, r.jsx)(m.$, {
-                                text: "Yelling",
-                                onClick: () => N.Ts({ type: S.Gy.YELLING, userId: "123" }),
+                                text: "Shouting",
+                                onClick: () => N.Ts({ type: S.Gy.SHOUTING, userId: "123", confidence: 1 }),
                             }),
                             (0, r.jsx)(m.$, {
                                 text: "Laughter",
-                                onClick: () => N.Ts({ type: S.Gy.LAUGHTER, label: "laughter", confidence: 1 }),
-                            }),
-                            (0, r.jsx)(m.$, {
-                                text: "Shouting",
-                                onClick: () => N.Ts({ type: S.Gy.LAUGHTER, label: "shouting", confidence: 1 }),
+                                onClick: () => N.Ts({ type: S.Gy.LAUGHTER, userId: "123", confidence: 1 }),
                             }),
                         ],
                     }),
@@ -3417,7 +3413,7 @@ function ns() {
         );
     return 0 === s.length ? null : (0, r.jsx)(t$, { className: tB.nd, columns: d, rowClassName: nn.nM, data: i });
 }
-var ni = a(139716),
+var ni = a(379257),
     nr = a(847599),
     no = a(282621);
 function nd() {

@@ -9,7 +9,7 @@ var i,
     u =
         (((i = {}).MANUAL = "manual"),
         (i.DISTRIBUTED = "distributed"),
-        (i.YELLING = "yelling"),
+        (i.SHOUTING = "shouting"),
         (i.LAUGHTER = "laughter"),
         (i.GAME_EVENT = "game_event"),
         (i.SPEAKING = "speaking"),

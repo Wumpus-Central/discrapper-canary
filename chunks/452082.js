@@ -331,10 +331,10 @@ function U(e, t, n, i) {
             noiseFloorPercentile: 10,
             requireAttribution: !0,
             rmsScale: 4,
-            laughEventThreshold: 0.5,
-            shoutEventThreshold: 0.35,
-            laughWeight: 1,
-            shoutWeight: 0.7,
+            laughterEventThreshold: 0.5,
+            shoutingEventThreshold: 0.35,
+            laughterWeight: 1,
+            shoutingWeight: 0.7,
             eventChainGapChunks: 2,
             lagPreChunks: 1,
             lagPostChunks: 3,
@@ -475,25 +475,25 @@ function U(e, t, n, i) {
             (s = e.gameEventData.map((e) => Math.max(0, Math.min(v - 1, Math.round((e.timestamp_ms - N) / 1e3)))));
         let R = (function (e, t) {
                 let n,
-                    { pLaugh: i, pShout: r, rms: s, main: a, gameEventChunks: o } = e,
+                    { pLaughter: i, pShouting: r, rms: s, main: a, gameEventChunks: o } = e,
                     l = e.participantCount ?? i.length;
                 if (0 === i.length)
                     return {
                         audioScore: 0,
                         components: { mainEventScore: 0, reactionScore: 0, coOccurrenceScore: 0 },
                         debug: {
-                            pGatedLaugh: [],
-                            pGatedShout: [],
-                            intensityLaugh: [],
-                            intensityShout: [],
+                            pGatedLaughter: [],
+                            pGatedShouting: [],
+                            intensityLaughter: [],
+                            intensityShouting: [],
                             rmsWeighted: [],
                             mainEvents: [],
                             reactionAnchors: [],
                             coContribPerChunk: [],
                         },
                     };
-                let u = b(i, t, t.laughEventThreshold),
-                    c = b(r, t, t.shoutEventThreshold),
+                let u = b(i, t, t.laughterEventThreshold),
+                    c = b(r, t, t.shoutingEventThreshold),
                     d = t.requireAttribution ? D(s, t) : void 0,
                     _ = null != d ? L(u, d) : u,
                     h = null != d ? L(c, d) : c,
@@ -508,66 +508,75 @@ function U(e, t, n, i) {
                         anchors: g,
                         events: A,
                     } = (function (e, t, n, i) {
-                        if (n < 0 || n >= e.laugh.length) return { mainEventScore: 0, anchors: [], events: [] };
+                        if (n < 0 || n >= e.laughter.length) return { mainEventScore: 0, anchors: [], events: [] };
                         let r = [],
                             s = [],
                             a = [
                                 {
-                                    emotion: "laugh",
-                                    gated: e.laugh[n],
-                                    intensity: t.laugh[n],
-                                    threshold: i.laughEventThreshold,
-                                    weight: i.laughWeight,
+                                    emotion: "laughter",
+                                    gated: e.laughter[n],
+                                    intensity: t.laughter[n],
+                                    threshold: i.laughterEventThreshold,
+                                    weight: i.laughterWeight,
                                 },
                                 {
-                                    emotion: "shout",
-                                    gated: e.shout[n],
-                                    intensity: t.shout[n],
-                                    threshold: i.shoutEventThreshold,
-                                    weight: i.shoutWeight,
+                                    emotion: "shouting",
+                                    gated: e.shouting[n],
+                                    intensity: t.shouting[n],
+                                    threshold: i.shoutingEventThreshold,
+                                    weight: i.shoutingWeight,
                                 },
                             ],
                             o = 0;
                         for (let { emotion: e, gated: t, intensity: n, threshold: l, weight: u } of a) {
                             let a;
                             if (0 === t.length) continue;
-                            let c = M(
-                                (function (e, t) {
-                                    let n = [],
-                                        i = -1;
-                                    for (let r = 0; r <= e.length; r++) {
-                                        let s = r < e.length && e[r] >= t;
-                                        s && -1 === i && (i = r),
-                                            s || -1 === i || (n.push({ tStart: i, tEnd: r - 1 }), (i = -1));
-                                    }
-                                    return n;
-                                })(t, l),
-                                i.eventChainGapChunks,
-                            );
+                            let c = (function (e, t, n) {
+                                return M(
+                                    (function (e, t) {
+                                        let n = [],
+                                            i = -1;
+                                        for (let r = 0; r <= e.length; r++) {
+                                            let s = r < e.length && e[r] >= t;
+                                            s && -1 === i && (i = r),
+                                                s || -1 === i || (n.push({ tStart: i, tEnd: r - 1 }), (i = -1));
+                                        }
+                                        return n;
+                                    })(e, t),
+                                    n.eventChainGapChunks,
+                                ).map((t) => {
+                                    let { tStart: n, tEnd: i } = t;
+                                    return {
+                                        tStart: n,
+                                        tEnd: i,
+                                        peakT: (function (e, t, n) {
+                                            let i = t;
+                                            for (let r = t + 1; r <= n; r++) e[r] > e[i] && (i = r);
+                                            return i;
+                                        })(e, n, i),
+                                        peakV: P(e, n, i),
+                                    };
+                                });
+                            })(t, l, i);
                             if (0 === c.length) continue;
-                            for (let e of (s.push(...c), c)) {
+                            for (let e of (s.push(
+                                ...c.map((e) => {
+                                    let { tStart: t, tEnd: n } = e;
+                                    return { tStart: t, tEnd: n };
+                                }),
+                            ),
+                            c)) {
                                 let t = e.tEnd - e.tStart + 1,
                                     i = P(n, e.tStart, e.tEnd) * Math.log1p(t);
-                                (null == a || i > a.mag) && (a = { mag: i, chain: e });
+                                (null == a || i > a.mag) && (a = { mag: i, window: e });
                             }
                             if (null == a) continue;
                             o += u * a.mag;
-                            let { tStart: d, tEnd: _ } = a.chain;
-                            r.push({
-                                emotion: e,
-                                peakT: (function (e, t, n) {
-                                    let i = t;
-                                    for (let r = t + 1; r <= n; r++) e[r] > e[i] && (i = r);
-                                    return i;
-                                })(t, d, _),
-                                peakV: P(t, d, _),
-                                sustain: _ - d + 1,
-                                tStart: d,
-                                tEnd: _,
-                            });
+                            let { tStart: d, tEnd: _, peakT: h, peakV: f } = a.window;
+                            r.push({ emotion: e, peakT: h, peakV: f, sustain: _ - d + 1, tStart: d, tEnd: _ });
                         }
                         return { mainEventScore: o, anchors: M(s, i.eventChainGapChunks), events: r };
-                    })({ laugh: _, shout: h }, { laugh: p, shout: E }, a, t),
+                    })({ laughter: _, shouting: h }, { laughter: p, shouting: E }, a, t),
                     I = M(
                         [
                             ...g,
@@ -611,7 +620,7 @@ function U(e, t, n, i) {
                         for (let o = 0; o < r; o++) {
                             let r = 0;
                             for (let s = 0; s < i; s++)
-                                (e[s][o] >= n.laughEventThreshold || t[s][o] >= n.shoutEventThreshold) && r++;
+                                (e[s][o] >= n.laughterEventThreshold || t[s][o] >= n.shoutingEventThreshold) && r++;
                             let l = Math.max(0, r - 1);
                             (s[o] = l), (a += l);
                         }
@@ -633,17 +642,17 @@ function U(e, t, n, i) {
                         ? { mainEventScore: v, reactionScore: R, coOccurrenceScore: n }
                         : { mainEventScore: m, reactionScore: T, coOccurrenceScore: C },
                     debug: {
-                        pGatedLaugh: _,
-                        pGatedShout: h,
-                        intensityLaugh: p,
-                        intensityShout: E,
+                        pGatedLaughter: _,
+                        pGatedShouting: h,
+                        intensityLaughter: p,
+                        intensityShouting: E,
                         rmsWeighted: f,
                         mainEvents: A,
                         reactionAnchors: I,
                         coContribPerChunk: N,
                     },
                 };
-            })({ pLaugh: E, pShout: T, rms: S, main: y, gameEventChunks: s, participantCount: _ }, c),
+            })({ pLaughter: E, pShouting: T, rms: S, main: y, gameEventChunks: s, participantCount: _ }, c),
             x = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
@@ -668,8 +677,8 @@ function U(e, t, n, i) {
                 ...R.debug,
                 userIds: p,
                 tsSec: Array.from({ length: v }, (t, n) => e + n),
-                pLaugh: E,
-                pShout: T,
+                pLaughter: E,
+                pShouting: T,
                 rms: S,
             };
         }
@@ -756,12 +765,16 @@ class B extends o.A {
                     ? (e.laughterData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence }),
                       n.confidence > 0.5 &&
                           this.process(
-                              { type: m.Gy.LAUGHTER, label: n.label, confidence: n.confidence },
+                              { type: m.Gy.LAUGHTER, userId: t.user_id, confidence: n.confidence },
                               n.timestamp_ms,
                           ))
                     : "shouting" === n.label
                       ? (e.shoutingData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence }),
-                        n.confidence > 0.35 && this.process({ type: m.Gy.YELLING, userId: t.user_id }, n.timestamp_ms))
+                        n.confidence > 0.35 &&
+                            this.process(
+                                { type: m.Gy.SHOUTING, userId: t.user_id, confidence: n.confidence },
+                                n.timestamp_ms,
+                            ))
                       : "rms" === n.label && e.rmsData.push({ timestamp_ms: n.timestamp_ms, value: n.confidence });
         }
     }
@@ -861,7 +874,7 @@ class B extends o.A {
             case m.Gy.DISTRIBUTED:
                 this.scheduleClip(e);
                 break;
-            case m.Gy.YELLING:
+            case m.Gy.SHOUTING:
             case m.Gy.LAUGHTER:
             case m.Gy.GAME_EVENT: {
                 let n = 0;
@@ -883,7 +896,7 @@ class B extends o.A {
                         (e) =>
                             (e.signal.type === m.Gy.GAME_EVENT ||
                                 e.signal.type === m.Gy.LAUGHTER ||
-                                e.signal.type === m.Gy.YELLING) &&
+                                e.signal.type === m.Gy.SHOUTING) &&
                             t >= e.request.trimStartMs &&
                             t <= e.request.trimEndMs,
                     )

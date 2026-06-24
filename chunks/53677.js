@@ -15,7 +15,7 @@ function d(e) {
         case u.Gy.DISTRIBUTED:
             return "distributed";
         case u.Gy.LAUGHTER:
-        case u.Gy.YELLING:
+        case u.Gy.SHOUTING:
         case u.Gy.GAME_EVENT:
             return "auto_ml";
         default:
@@ -46,7 +46,7 @@ function f(e) {
             case u.Gy.LAUGHTER:
                 t.push("laughter");
                 break;
-            case u.Gy.YELLING:
+            case u.Gy.SHOUTING:
                 t.push("shouting");
                 break;
             case u.Gy.GAME_EVENT:

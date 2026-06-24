@@ -1,4 +1,4 @@
-i.r(e), i.d(e, { default: () => e_ }), i(321073), i(667532);
+i.r(e), i.d(e, { default: () => eS }), i(321073), i(667532);
 var n = i(284009),
     l = i.n(n),
     a = i(835245),
@@ -16,9 +16,9 @@ var n = i(284009),
     g = i(616356),
     I = i(495544),
     E = i(734057),
-    _ = i(232835),
-    N = i(803224),
-    S = i(783592),
+    S = i(232835),
+    _ = i(803224),
+    N = i(783592),
     C = i(290863),
     h = i(763827),
     T = i(994500),
@@ -93,9 +93,9 @@ var tu = i(387755),
     tg = i(769015),
     tI = i(562153),
     tE = i(41984),
-    t_ = i(222506),
-    tN = i(145567),
-    tS = i(774610),
+    tS = i(222506),
+    t_ = i(145567),
+    tN = i(774610),
     tC = i(308368),
     th = i(334738),
     tT = i(481484),
@@ -303,7 +303,7 @@ function em(t, e) {
 }
 function eg() {
     if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return !1;
-    let t = S.A.usersPlaying,
+    let t = N.A.usersPlaying,
         e = new Set(),
         i = (function () {
             let t = [];
@@ -320,9 +320,9 @@ function eg() {
                 let a = e.gameId;
                 if (null == a) return !1;
                 let r = (function (t) {
-                    let e = S.A.getUserGame(t);
+                    let e = N.A.getUserGame(t);
                     if (null == e) return null;
-                    let i = S.A.getNowPlaying(e.gameId)[t]?.activity;
+                    let i = N.A.getNowPlaying(e.gameId)[t]?.activity;
                     return null == i || i.type !== z.$pd.PLAYING ? null : i;
                 })(t);
                 if (
@@ -358,10 +358,10 @@ function eg() {
                                       d = (0, tI.mG)(a?.guild_id, a?.id, n);
                                   if (null == c || 0 === c.trim().length) return null;
                                   let f = (0, $.jsxs)("div", {
-                                          className: tS.Ql,
+                                          className: tN.Ql,
                                           children: [
                                               (0, $.jsx)("div", {
-                                                  className: tS.bf,
+                                                  className: tN.bf,
                                                   children: (0, $.jsx)(tm.A, {
                                                       user: n,
                                                       "aria-hidden": !0,
@@ -369,11 +369,11 @@ function eg() {
                                                   }),
                                               }),
                                               (0, $.jsx)("div", {
-                                                  className: tS.rf,
+                                                  className: tN.rf,
                                                   children: (0, $.jsx)(ty.E, {
                                                       variant: "text-sm/medium",
                                                       color: "interactive-text-default",
-                                                      className: tS.G3,
+                                                      className: tN.G3,
                                                       children: J.intl.format(J.t["q7/rgv"], {
                                                           username: d ?? n.username,
                                                           gameName: c,
@@ -383,7 +383,7 @@ function eg() {
                                                                         game: r,
                                                                         pid: s?.pid,
                                                                         size: tg.M.XSMALL,
-                                                                        className: tS.Gt,
+                                                                        className: tN.Gt,
                                                                     })
                                                                   : null,
                                                       }),
@@ -400,10 +400,10 @@ function eg() {
                                       { hasChat: m } = (0, V.NI)("nowPlayingNotification");
                                   return {
                                       body: f,
-                                      className: tS.dn,
-                                      wrapperClassName: tS.P6,
-                                      animationWrapperClassName: tS.VG,
-                                      clickZoneClassName: tS.EO,
+                                      className: tN.dn,
+                                      wrapperClassName: tN.P6,
+                                      animationWrapperClassName: tN.VG,
+                                      clickZoneClassName: tN.EO,
                                       maxBodyLines: 1,
                                       disableClickableRegions: !m,
                                       onNotificationShow: () => {
@@ -413,9 +413,9 @@ function eg() {
                                           m &&
                                               (async () => {
                                                   try {
-                                                      await (0, tN.D$)({
+                                                      await (0, t_.D$)({
                                                           target: {
-                                                              kind: tN.bB.DM_USER,
+                                                              kind: t_.bB.DM_USER,
                                                               userId: n.id,
                                                               messageId: null,
                                                           },
@@ -423,7 +423,7 @@ function eg() {
                                                           widgetType: z.uss.NOTIFICATIONS,
                                                       });
                                                       let t = w.A.getTargetPID();
-                                                      t_.A.isInputLocked(t)
+                                                      tS.A.isInputLocked(t)
                                                           ? (y("unlock"), o.A.setInputLocked(!1, t))
                                                           : y("jump"),
                                                           o.A.updateNotificationStatus(e, z.yFH.DISMISSED);
@@ -538,9 +538,9 @@ class eE extends r.Ay.Store {
             E.A,
             d.Ay,
             D.A,
+            S.A,
             _.A,
             N.A,
-            S.A,
             j.default,
             P.A,
             w.A,
@@ -554,7 +554,7 @@ class eE extends r.Ay.Store {
             L.default,
             x.A,
         ),
-            this.syncWith([S.A], eg);
+            this.syncWith([N.A], eg);
     }
     getNotifications() {
         return el;
@@ -570,7 +570,7 @@ class eE extends r.Ay.Store {
         return el.filter((i) => i.channelId === t && i.type === e);
     }
 }
-let e_ = new eE(s.h, {
+let eS = new eE(s.h, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (t) {
         let { notificationId: e, status: i } = t;
         ep(e, i);
@@ -887,7 +887,7 @@ let e_ = new eE(s.h, {
             if (!1 !== t) return t;
         }
         if (P.A.isNotificationDisabled(H.KS.TextChat) || b.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
-        let r = !N.A.isSoundDisabled(R.cH),
+        let r = !_.A.isSoundDisabled(R.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, V.NI)("textChatNotification");
                 if (P.A.isNotificationDisabled(H.KS.TextChat)) return tq(!0), null;
@@ -937,9 +937,9 @@ let e_ = new eE(s.h, {
                             ),
                             l)
                         ) {
-                            (0, tN.D$)({
+                            (0, t_.D$)({
                                 target: {
-                                    kind: tN.bB.CHANNEL,
+                                    kind: t_.bB.CHANNEL,
                                     channelId: t.id,
                                     guildId: t.guild_id ?? null,
                                     messageId: e.id,
@@ -947,14 +947,14 @@ let e_ = new eE(s.h, {
                                 source: tE.B9.NOTIFICATION_CLICK,
                                 widgetType: z.uss.TEXT_CHAT_V3,
                             }),
-                                t_.A.isInputLocked(a) ? (c("unlock"), o.A.setInputLocked(!1, a)) : c("jump"),
+                                tS.A.isInputLocked(a) ? (c("unlock"), o.A.setInputLocked(!1, a)) : c("jump"),
                                 requestAnimationFrame(() => {
                                     tM._.dispatchToLastSubscribed(z.jej.TEXTAREA_FOCUS, { channelId: t.id });
                                 }),
                                 o.A.updateNotificationStatus(n, z.yFH.DISMISSED);
                             return;
                         }
-                        t_.A.isInputLocked(a)
+                        tS.A.isInputLocked(a)
                             ? (c("unlock"), o.A.setInputLocked(!1, a))
                             : (c("jump"),
                               (0, tk.pX)(z.BVt.CHANNEL(t.guild_id, t.id, e.id)),
@@ -964,7 +964,7 @@ let e_ = new eE(s.h, {
                         c("dismiss");
                     },
                 };
-            })(n, _.A.getMessage(e, i.id) ?? (0, f.rh)(i), a, r);
+            })(n, S.A.getMessage(e, i.id) ?? (0, f.rh)(i), a, r);
         if (null == s) return !1;
         em(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), eA();
     },
@@ -1046,10 +1046,10 @@ let e_ = new eE(s.h, {
                                 switch (t.type) {
                                     case q.Gy.MANUAL:
                                         return "Manual";
-                                    case q.Gy.YELLING:
-                                        return "Yelling detected";
+                                    case q.Gy.SHOUTING:
+                                        return `Shouting detected (${t.confidence.toFixed(2)})`;
                                     case q.Gy.LAUGHTER:
-                                        return `Laughter detected (${t.label}, ${t.confidence.toFixed(2)})`;
+                                        return `Laughter detected (${t.confidence.toFixed(2)})`;
                                     case q.Gy.GAME_EVENT:
                                         return `Game event: ${t.title ?? t.eventType}`;
                                     case q.Gy.DISTRIBUTED:

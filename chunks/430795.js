@@ -45,7 +45,7 @@ var i = n(636537),
     h = n(616356),
     f = n(495544),
     p = n(734057),
-    E = n(394459),
+    E = n(472444),
     m = n(763827),
     g = n(174459),
     A = n(723702),
@@ -86,97 +86,98 @@ let P = [
     ],
     x = null;
 async function k(e) {
-    let t = (await n.e("34188").then(n.t.bind(n, 88137, 23))).default,
-        i =
+    var t;
+    let i = (await n.e("34188").then(n.t.bind(n, 88137, 23))).default,
+        r =
             null != x
                 ? x
-                : (x = t
+                : (x = i
                       .object({
-                          id: t.string().required(),
-                          version: t.number().positive().integer().min(0).max(M.kd).optional(),
-                          name: t.string().when("version", { is: t.number().less(3), then: t.string().allow("") }),
-                          gameName: t
+                          id: i.string().required(),
+                          version: i.number().positive().integer().min(0).max(M.kd).optional(),
+                          name: i.string().when("version", { is: i.number().less(3), then: i.string().allow("") }),
+                          gameName: i
                               .string()
                               .when("version", {
-                                  is: t.number().greater(0).required(),
-                                  then: t.forbidden(),
-                                  otherwise: t.required(),
+                                  is: i.number().greater(0).required(),
+                                  then: i.forbidden(),
+                                  otherwise: i.required(),
                               }),
-                          applicationName: t
+                          applicationName: i
                               .string()
                               .when("version", {
-                                  is: t.number().greater(0).required(),
-                                  then: t.required().allow(""),
-                                  otherwise: t.forbidden(),
+                                  is: i.number().greater(0).required(),
+                                  then: i.required().allow(""),
+                                  otherwise: i.forbidden(),
                               }),
-                          applicationId: t.string(),
-                          activity: t
+                          applicationId: i.string(),
+                          activity: i
                               .object()
                               .keys({
-                                  state: t.string(),
-                                  details: t.string(),
-                                  timestamps: t.object().keys({ start: t.number(), end: t.number() }),
-                                  party: t.object().keys({ id: t.string(), size: t.array().items(t.number()) }),
+                                  state: i.string(),
+                                  details: i.string(),
+                                  timestamps: i.object().keys({ start: i.number(), end: i.number() }),
+                                  party: i.object().keys({ id: i.string(), size: i.array().items(i.number()) }),
                               }),
-                          users: t.array().items(t.string()).required(),
-                          filepath: t.string().required(),
-                          length: t.number().required(),
-                          thumbnail: t.string().required().allow(""),
-                          editMetadata: t
+                          users: i.array().items(i.string()).required(),
+                          filepath: i.string().required(),
+                          length: i.number().required(),
+                          thumbnail: i.string().required().allow(""),
+                          editMetadata: i
                               .object()
                               .keys({
-                                  start: t.number(),
-                                  end: t.number(),
-                                  applicationAudio: t.boolean(),
-                                  voiceAudio: t.boolean(),
-                                  soundboardAudio: t.boolean(),
-                                  crop: t.object().keys({ preset: t.string().allow("original", "9:16", "16:9") }),
+                                  start: i.number(),
+                                  end: i.number(),
+                                  applicationAudio: i.boolean(),
+                                  voiceAudio: i.boolean(),
+                                  soundboardAudio: i.boolean(),
+                                  crop: i.object().keys({ preset: i.string().allow("original", "9:16", "16:9") }),
                               }),
-                          createdAt: t
+                          createdAt: i
                               .number()
-                              .when("version", { is: t.number().greater(4).required(), then: t.required() }),
-                          type: t
+                              .when("version", { is: i.number().greater(4).required(), then: i.required() }),
+                          type: i
                               .string()
                               .allow(C.nQ.CLIP, C.nQ.SCREENSHOT, C.nQ.VOICE_CLIP)
                               .when("version", {
-                                  is: t.number().greater(3).required(),
-                                  then: t.required(),
-                                  otherwise: t.forbidden(),
+                                  is: i.number().greater(3).required(),
+                                  then: i.required(),
+                                  otherwise: i.forbidden(),
                               }),
-                          clipMethod: t.string().allow("auto", "manual").required(),
-                          guildId: t.string(),
-                          channelId: t.string(),
-                          isFavorite: t.boolean(),
-                          isTemporary: t.boolean(),
-                          isCandidate: t.boolean(),
-                          remoteClipId: t.string(),
-                          gameSessionId: t.string(),
-                          decision: t
+                          clipMethod: i.string().allow("auto", "manual").required(),
+                          guildId: i.string(),
+                          channelId: i.string(),
+                          isFavorite: i.boolean(),
+                          isTemporary: i.boolean(),
+                          isCandidate: i.boolean(),
+                          remoteClipId: i.string(),
+                          gameSessionId: i.string(),
+                          decision: i
                               .object()
                               .keys({
-                                  reason: t.string(),
-                                  clippingPressure: t.number(),
-                                  currentThreshold: t.number(),
-                                  effectivePressure: t.number(),
-                                  timestamp: t.number(),
-                                  signal: t.object().required(),
+                                  reason: i.string(),
+                                  clippingPressure: i.number(),
+                                  currentThreshold: i.number(),
+                                  effectivePressure: i.number(),
+                                  timestamp: i.number(),
+                                  signal: i.object().required(),
                               }),
-                          timeline: t
+                          timeline: i
                               .array()
                               .items(
-                                  t
+                                  i
                                       .object()
-                                      .keys({ signal: t.object().required(), timestamp: t.number().required() })
+                                      .keys({ signal: i.object().required(), timestamp: i.number().required() })
                                       .unknown(),
                               )
                               .when("version", {
-                                  is: t.number().greater(3).required(),
-                                  then: t.required(),
-                                  otherwise: t.forbidden(),
+                                  is: i.number().greater(3).required(),
+                                  then: i.required(),
+                                  otherwise: i.forbidden(),
                               }),
-                          originalStartMs: t.number(),
-                          originalEndMs: t.number(),
-                          sizeBytes: t.number(),
+                          originalStartMs: i.number(),
+                          originalEndMs: i.number(),
+                          sizeBytes: i.number(),
                       })
                       .required());
     try {
@@ -186,7 +187,9 @@ async function k(e) {
             delete e.autoclipData,
             delete e.emotionHistory,
             null != e.decision && delete e.decision.emotionHistory,
-            t.assert(e, i),
+            (t = e?.decision?.signal),
+            t?.type === "yelling" && (t.type = C.Gy.SHOUTING),
+            i.assert(e, r),
             null == e.version && (e.version = 0),
             P.slice(e.version).reduce((e, t) => t(e), e)
         );
