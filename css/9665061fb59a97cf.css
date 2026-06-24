@@ -402,3 +402,7 @@
     display: flex;
     gap: var(--space-4)
 }
+
+.nitroExclusiveButton__38ccf {
+    cursor: pointer
+}
