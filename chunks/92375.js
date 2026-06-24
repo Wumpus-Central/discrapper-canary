@@ -2,81 +2,82 @@ t.d(s, { Premium3PRewardsModalEntry: () => M });
 var i = t(627968);
 t(64700);
 var r = t(17928),
+    n = t(531260),
     a = t(31502),
-    n = t(287809),
-    l = t(264779),
-    d = t(289873),
-    c = t(189213),
-    o = t(975571),
-    u = t(792656),
+    l = t(166403),
+    d = t(264779),
+    c = t(289873),
+    o = t(189213),
+    u = t(975571),
+    m = t(792656),
     h = t(962644),
-    m = t(35587),
-    x = t(194261),
-    b = t(534514),
-    f = t(144165),
-    j = t(375708),
-    p = t(237146),
-    v = t(75662);
-function N() {
+    b = t(35587),
+    p = t(194261),
+    x = t(534514),
+    j = t(144165),
+    f = t(375708),
+    v = t(237146),
+    N = t(75662);
+function g() {
     return (0, i.jsx)("div", {
-        className: v.lA,
+        className: N.lA,
         children: (0, i.jsxs)("div", {
-            className: v.LV,
+            className: N.LV,
             children: [
                 (0, i.jsxs)("div", {
-                    className: v.JN,
+                    className: N.JN,
                     children: [
-                        (0, i.jsx)("div", { className: v.MC, children: (0, i.jsx)(x.X, { size: "refresh_sm" }) }),
+                        (0, i.jsx)("div", { className: N.MC, children: (0, i.jsx)(p.X, { size: "refresh_sm" }) }),
                         (0, i.jsxs)("div", {
-                            className: v.yO,
+                            className: N.yO,
                             children: [
-                                (0, i.jsx)(b.D, {
+                                (0, i.jsx)(x.D, {
                                     variant: "heading-lg/semibold",
                                     color: "text-strong",
-                                    children: j.intl.string(p.default.oDfh3O),
+                                    children: f.intl.string(v.default.oDfh3O),
                                 }),
-                                (0, i.jsx)(b.D, {
+                                (0, i.jsx)(x.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-subtle",
-                                    children: j.intl.string(p.default.nDEuO1),
+                                    children: f.intl.string(v.default.nDEuO1),
                                 }),
                             ],
                         }),
                     ],
                 }),
                 (0, i.jsx)("div", {
-                    className: v.R4,
-                    children: (0, i.jsx)(f._, {
+                    className: N.R4,
+                    children: (0, i.jsx)(j._, {
                         src: "https://cdn.discordapp.com/assets/content/7ce3849519c8d8cd4657b08bd2c689ea934bb60f53b959a04eb3b1db5d2f002a.png",
-                        className: v.Ys,
+                        className: N.Ys,
                         width: 100,
                         height: 100,
                         zoomable: !1,
-                        imageClassName: v.EM,
+                        imageClassName: N.EM,
                     }),
                 }),
             ],
         }),
     });
 }
-var g = t(593687),
+var w = t(593687),
     C = t(294219),
-    w = t(788868),
-    _ = t(652215);
+    _ = t(788868),
+    A = t(652215);
 function R(e) {
     let { transitionState: s, onClose: t, partnerIds: r } = e,
         n = (0, C.G)(r, { isLockedCardView: !0 }),
-        { promotionsLoaded: l } = (0, m.y7)(),
-        x = (0, a.l)("Premium3PRewardsLockedModal");
-    if (!1 === l) return (0, i.jsx)(d.y, {});
-    let b = o.A.getArticleURL(_.MVz.NITRO_2_POINT_0),
-        f = x ? N : null;
-    return (0, i.jsxs)(c.Modal, {
-        title: j.intl.string(j.t.NG1e6l),
-        subtitle: j.intl.format(p.default.zS4GBR, { termsLink: b }),
+        { promotionsLoaded: l } = (0, b.y7)(),
+        d = (0, a.l)("Premium3PRewardsLockedModal");
+    if (!1 === l) return (0, i.jsx)(c.y, {});
+    let p = u.A.getArticleURL(A.MVz.NITRO_2_POINT_0),
+        x = d ? g : null;
+    return (0, i.jsxs)(o.Modal, {
+        title: f.intl.string(f.t.NG1e6l),
+        subtitle: f.intl.format(v.default.zS4GBR, { termsLink: p }),
         actions: [],
-        preview: (0, i.jsx)(u.A, {
-            subscriptionTier: w.pe.TIER_2,
+        preview: (0, i.jsx)(m.A, {
+            subscriptionTier: _.pe.TIER_2,
             fullWidth: !0,
             onClick: () => {
                 t();
@@ -87,15 +88,16 @@ function R(e) {
         }),
         transitionState: s,
         onClose: t,
-        children: [null != f && (0, i.jsx)(f, {}), (0, i.jsx)(g._, { partnerIds: n })],
+        children: [null != x && (0, i.jsx)(x, {}), (0, i.jsx)(w._, { partnerIds: n })],
     });
 }
 var k = t(382259);
 function M(e) {
-    let { transitionState: s, onClose: t, partnerIds: d } = e,
-        c = (0, a.l)("NitroRewards3PRewardsModalEntry"),
-        o = (0, r.bG)([n.default], () => n.default.getCurrentUser());
-    return (0, l.$_)(o) && c
-        ? (0, i.jsx)(R, { transitionState: s, onClose: t, partnerIds: d })
-        : (0, i.jsx)(k.w, { transitionState: s, onClose: t, partnerIds: d });
+    let { transitionState: s, onClose: t, partnerIds: c } = e,
+        o = (0, a.l)("NitroRewards3PRewardsModalEntry"),
+        u = (0, r.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+        { fractionalState: m } = (0, n.A)();
+    return (0, d.$_)(u, m) && o
+        ? (0, i.jsx)(R, { transitionState: s, onClose: t, partnerIds: c })
+        : (0, i.jsx)(k.w, { transitionState: s, onClose: t, partnerIds: c });
 }

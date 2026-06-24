@@ -264,6 +264,7 @@ function e_() {
                           termsUrl: er.A.getArticleURL(W.MVz.LOGITECH_PROMOTION),
                       }),
                       subscriptionRequired: !0,
+                      isThirdPartyPerk: !0,
                       progress: l.getDate() / u,
                       ctaText: z.intl.string(z.t.w7s5Qr),
                       onCtaClick: () => (0, el.P)({ partnerId: eu.XY, analyticsLocations: e }),
@@ -295,6 +296,7 @@ function e_() {
                                 })
                               : void 0,
                       subscriptionRequired: !0,
+                      isThirdPartyPerk: !0,
                       pillText: a,
                       caption: (0, s.jsx)("img", { src: "/assets/aae9b13becd816cf.svg", alt: "SteelSeries" }),
                       backgroundAssetUrl:

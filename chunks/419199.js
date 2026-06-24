@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568140, Version Hash: 2b524707df4378ddfc02ce0fb0fab8b39485d291`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 568150, Version Hash: 84d42aaaff9fcaf656a99d60595a7f21c0ab4280`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -16721,26 +16721,28 @@ function I4(e) {
     let { targetElementRef: t, dismissPopover: n, children: i } = e,
         { analyticsLocations: r } = (0, aH.Ay)(io.A.HOME_PAGE_PREMIUM_TAB),
         s = (0, e5.bG)([ty.default], () => ty.default.getCurrentUser()),
-        a = (0, I3.$_)(s),
-        o = Ii.Ay.isPremiumExactly(s, uB.PremiumTypes.TIER_2),
-        l = (0, IL.YS)({ location: "SSLogitechReheatPopover" }).functionalityEnabled,
-        u = !0 === a ? nl.intl.string(nl.t.YfTxzY) : nl.intl.string(nl.t.K0dyhm),
-        c = te.useCallback(() => {
+        a = (0, e5.bG)([In.A], () => In.A.getPremiumTypeSubscription()),
+        { fractionalState: o } = (0, A2.A)(),
+        l = (0, I3.$_)(a, o),
+        u = Ii.Ay.isPremiumExactly(s, uB.PremiumTypes.TIER_2),
+        c = (0, IL.YS)({ location: "SSLogitechReheatPopover" }).functionalityEnabled,
+        d = !0 === l ? nl.intl.string(nl.t.YfTxzY) : nl.intl.string(nl.t.K0dyhm),
+        _ = te.useCallback(() => {
             n(i4.i.TAKE_ACTION),
                 (0, I1.A)(eM.BVt.NITRO_HOME, { search: (0, nR.stringify)({ [Ik.x6]: I2.NI.THREE_P_PROMOTIONS }) }),
                 (0, I6.u)({ analyticsLocations: r });
         }, [n, r]),
-        d = te.useCallback(() => {
+        h = te.useCallback(() => {
             n(i4.i.TAKE_ACTION),
                 (0, I1.A)(eM.BVt.NITRO_HOME, {
                     search: (0, nR.stringify)({
-                        [Ik.WU]: l ? Ix.LOGITECH_3PP_CARD_ID : Ix.RECURRING_3P_PROMOTIONS_CARD_ID,
+                        [Ik.WU]: c ? Ix.LOGITECH_3PP_CARD_ID : Ix.RECURRING_3P_PROMOTIONS_CARD_ID,
                     }),
                 });
-        }, [n, l]),
-        _ = o
-            ? { text: nl.intl.string(nl.t["CDdYB/"]), onClick: d }
-            : { text: nl.intl.string(nl.t["CDdYB/"]), onClick: c };
+        }, [n, c]),
+        f = u
+            ? { text: nl.intl.string(nl.t["CDdYB/"]), onClick: h }
+            : { text: nl.intl.string(nl.t["CDdYB/"]), onClick: _ };
     return (0, F.jsxs)(F.Fragment, {
         children: [
             (0, F.jsx)("div", { children: i }),
@@ -16748,7 +16750,7 @@ function I4(e) {
                 shouldShow: !0,
                 targetElementRef: t,
                 title: nl.intl.string(nl.t.nt2xCC),
-                body: u,
+                body: d,
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/c70d0bb22b44b2c433ed2f725e31545da26e57881eb528f59ddccd75e8a16cec.png",
@@ -16758,7 +16760,7 @@ function I4(e) {
                 align: "top",
                 position: "right",
                 caretConfig: { align: "start" },
-                actions: [_],
+                actions: [f],
                 onRequestClose: () => n(i4.i.USER_DISMISS),
             }),
         ],
@@ -18075,7 +18077,7 @@ let Sl = "isHideDevBanner",
                     className: t6()(So.Wz, So.mr),
                     children: [
                         (0, F.jsx)(Sa, { className: So.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568140" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "568150" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
