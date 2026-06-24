@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { DJ: () => d, uf: () => l });
+n.d(t, { DJ: () => _, Zo: () => d, uf: () => l });
 var i = n(636537),
     r = n(228366),
     s = n(393033),
@@ -23,7 +23,10 @@ async function c(e) {
         })
     ).body;
 }
-async function d() {
+async function d(e) {
+    await i.Bo.post({ url: o.Rsh.REGISTER_INCODE_INTERVIEW, body: { interview_id: e }, rejectWithError: !0 });
+}
+async function _() {
     let e, t;
     return (
         r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_LOAD_START" }),

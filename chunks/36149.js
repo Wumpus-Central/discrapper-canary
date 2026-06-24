@@ -36,7 +36,7 @@ var i,
     f = n(495544),
     p = n(232835),
     E = n(287809),
-    m = n(139716),
+    m = n(379257),
     g = n(847599),
     A = n(787301),
     I = n(295972),
@@ -137,17 +137,19 @@ function K(e) {
                 u(!0);
                 try {
                     l.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
-                    let s = await (0, I.uf)({ method: e, classificationId: r ?? void 0 });
-                    m.A.showAgeVerification({
-                        webviewUrl: s.verification_webview_url,
-                        verificationRequestId: s.verification_request_id,
-                        verificationVendorName: s.verification_vendor_name,
-                        onComplete: t,
-                        onClose: _,
-                        onCancel: _,
-                        entryPoint: n,
-                        shouldShowExpressiveModal: i,
-                    });
+                    let s = await (0, I.uf)({ method: e, classificationId: r ?? void 0 }),
+                        a = m.A.showAgeVerification({
+                            webviewUrl: s.verification_webview_url,
+                            verificationRequestId: s.verification_request_id,
+                            verificationVendorName: s.verification_vendor_name,
+                            incodeParameters: s.incode_parameters,
+                            onComplete: t,
+                            onClose: _,
+                            onCancel: _,
+                            entryPoint: n,
+                            shouldShowExpressiveModal: i,
+                        });
+                    !1 === a && (h.A.showFailedToast(N.OB.TIGGER_PAWTECT_ERROR), _());
                 } catch (e) {
                     h.A.showFailedToast(N.OB.TIGGER_PAWTECT_ERROR), _();
                 } finally {

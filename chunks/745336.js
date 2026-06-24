@@ -1,81 +1,44 @@
-n.d(a, { default: () => f });
-var s = n(627968),
-    i = n(64700),
-    t = n(503698),
-    r = n.n(t),
-    l = n(192308),
-    c = n(935462),
-    d = n(825484),
-    o = n(123292),
-    p = n(393033),
-    m = n(36149),
-    u = n(40449),
-    h = n(375708),
-    g = n(971469);
-let f = function (e) {
-    let { onClose: a, onComplete: n, onCancel: t, transitionState: f, webviewUrl: j } = e,
-        x = (0, p.W$)(),
-        C = i.useCallback(() => {
-            n(), a();
-        }, [n, a]),
-        k = i.useCallback(() => {
-            (0, l.hasModalOpen)(u.SW) && C();
-        }, [C]);
-    (0, m.dZ)(k);
-    let v = i.useCallback(
+t.d(a, { default: () => p });
+var n = t(627968),
+    s = t(64700),
+    i = t(192308),
+    o = t(393033),
+    r = t(36149),
+    c = t(793163),
+    l = t(40449),
+    d = t(788920);
+let p = function (e) {
+    let { onClose: a, onComplete: t, onCancel: p, transitionState: u, webviewUrl: m } = e,
+        f = (0, o.W$)(),
+        h = s.useCallback(() => {
+            t(), a();
+        }, [t, a]),
+        k = s.useCallback(() => {
+            (0, i.hasModalOpen)(l.SW) && h();
+        }, [h]);
+    (0, r.dZ)(k);
+    let C = s.useCallback(
         (e) => {
-            x && "" !== j && e?.data?.eventType === "Verification.Result" && C();
+            f && "" !== m && e?.data?.eventType === "Verification.Result" && h();
         },
-        [j, C, x],
+        [m, h, f],
     );
     return (
-        i.useEffect(
+        s.useEffect(
             () => (
-                window.addEventListener("message", v),
+                window.addEventListener("message", C),
                 () => {
-                    window.removeEventListener("message", v);
+                    window.removeEventListener("message", C);
                 }
             ),
-            [v],
+            [C],
         ),
-        (0, s.jsxs)(c.EO, {
-            "data-migration-pending": !0,
-            transitionState: f,
-            className: r()(g.zr, g.rh),
+        (0, n.jsx)(c.A, {
             parentComponent: "AgeVerificationModal",
-            size: c.rI.MEDIUM,
-            children: [
-                (0, s.jsx)(c.$m, {
-                    "data-migration-pending": !0,
-                    className: r()(g.Qs, g.WM),
-                    scrollbarType: "none",
-                    children: (0, s.jsx)("iframe", {
-                        id: "frame",
-                        src: j,
-                        className: g.pU,
-                        allow: "camera; microphone",
-                    }),
-                }),
-                (0, s.jsx)(c.jl, {
-                    "data-migration-pending": !0,
-                    children: (0, s.jsx)("div", {
-                        className: g.qr,
-                        children: (0, s.jsxs)(d.e, {
-                            justify: "space-between",
-                            fullWidthContainer: !0,
-                            children: [
-                                (0, s.jsx)(o.Q, { variant: "secondary", text: h.intl.string(h.t.fjKFae), onClick: a }),
-                                null != t &&
-                                    (0, s.jsx)(o.Q, {
-                                        variant: "secondary",
-                                        text: h.intl.string(h.t["4gTnU0"]),
-                                        onClick: t,
-                                    }),
-                            ],
-                        }),
-                    }),
-                }),
-            ],
+            transitionState: u,
+            onBackToStart: a,
+            onCancel: p,
+            children: (0, n.jsx)("iframe", { id: "frame", src: m, className: d.pU, allow: "camera; microphone" }),
         })
     );
 };

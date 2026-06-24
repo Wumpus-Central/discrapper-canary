@@ -51,4 +51,5 @@ var i,
         (i.BADGE_DIRECTORY_MODAL_OPEN = "badge_directory_modal_open"),
         (i.BADGE_DIRECTORY_CATALOG_FETCH = "badge_directory_catalog_fetch"),
         (i.BADGE_DIRECTORY_ERROR_STATE_VIEWED = "badge_directory_error_state_viewed"),
+        (i.INCODE_VERIFICATION_FAILED = "incode_verification_failed"),
         i);
