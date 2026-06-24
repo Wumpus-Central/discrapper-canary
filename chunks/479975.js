@@ -138,6 +138,10 @@ let W = {};
 if (l.A?.features.supports("notifications")) {
     try {
         O.Ay.on("NOTIFICATIONS_RECEIVED_RESPONSE", (e, t, n, i, r) => {
+            if ("failed" === t) {
+                x("failed", "native_ipc_error", "native"), delete W[n];
+                return;
+            }
             if ("dismiss" === t) return void delete W[n];
             {
                 let e = W[n];
