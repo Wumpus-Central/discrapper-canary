@@ -17,5 +17,5 @@ function c(e, t) {
     let { enabled: n } = s.A.getConfig({ location: t });
     if (!n) return null;
     let i = (0, o.C7)(e);
-    return null == i || (u(i), a.A.didFetchFail(i)) ? null : (a.A.getClosestResults(i) ?? []);
+    return null == i || (u(i), a.A.didFetchFail(i)) ? null : (a.A.getClosestResults(i) ?? []).filter(o.qS);
 }
