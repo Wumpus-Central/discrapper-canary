@@ -1,4 +1,4 @@
-s.d(e, { default: () => M });
+s.d(e, { default: () => k });
 var l = s(627968),
     a = s(64700),
     n = s(17928),
@@ -8,14 +8,14 @@ var l = s(627968),
     o = s(228366),
     d = s(356645),
     u = s(636537),
-    p = s(568004),
-    c = s(652215);
-async function A(t, e, s, l) {
-    if (p.A.needsToFetchBuildSize(s)) {
+    c = s(568004),
+    p = s(652215);
+async function m(t, e, s, l) {
+    if (c.A.needsToFetchBuildSize(s)) {
         o.h.dispatch({ type: "APPLICATION_BUILD_SIZE_FETCH_START", buildId: s });
         try {
             let a = await u.Bo.post({
-                url: c.Rsh.APPLICATION_BUILD_SIZE(t, e, s),
+                url: p.Rsh.APPLICATION_BUILD_SIZE(t, e, s),
                 body: { manifest_ids: l },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -26,23 +26,24 @@ async function A(t, e, s, l) {
         }
     }
 }
-var I = s(92077),
-    g = s(953689),
-    m = s(587895),
+var A = s(92077),
+    I = s(953689),
+    g = s(587895),
     P = s(235986),
-    C = s(137177),
+    C = s(769015),
     f = s(976860),
-    S = s(293066),
-    E = s(775228),
+    E = s(293066),
+    S = s(775228),
     b = s(255438);
 s(321073);
-var T = s(691885),
+var T = s(834730),
+    x = s(691885),
     _ = s(466472),
     j = s(19575),
     v = s(375708),
-    x = s(139189);
-let y = "select";
-class L extends a.PureComponent {
+    y = s(245109);
+let L = "select";
+class B extends a.PureComponent {
     state = { newInstallationPath: null };
     fetchedMetadataPaths = new Set();
     fetchAllDirectoryMetadata() {
@@ -76,7 +77,7 @@ class L extends a.PureComponent {
             });
         return (
             null != e && s.push({ id: e, value: e, label: this.renderLabel(e) }),
-            s.push({ id: y, value: y, label: v.intl.string(v.t["cL/rrq"]) }),
+            s.push({ id: L, value: L, label: v.intl.string(v.t["cL/rrq"]) }),
             s
         );
     }
@@ -91,7 +92,7 @@ class L extends a.PureComponent {
         s(t, l || !this.hasEnoughDiskSpace(t));
     }
     handleChange = (t) => {
-        t === y
+        t === L
             ? j.Ay.showOpenDialog(["openDirectory"]).then((t) => {
                   if (null != t && t.length > 0) {
                       let e = t[0];
@@ -113,10 +114,20 @@ class L extends a.PureComponent {
     renderError() {
         let { value: t, installationPathsMetadata: e } = this.props;
         return null != e[t] && !1 === e[t].hasPermission
-            ? (0, l.jsx)("div", { className: x.z, children: v.intl.string(v.t.cEUT8B) })
+            ? (0, l.jsx)(T.E, {
+                  variant: "text-sm/medium",
+                  color: "text-feedback-critical",
+                  className: y.z,
+                  children: v.intl.string(v.t.cEUT8B),
+              })
             : this.hasEnoughDiskSpace(t)
               ? null
-              : (0, l.jsx)("div", { className: x.z, children: v.intl.string(v.t["duXbE/"]) });
+              : (0, l.jsx)(T.E, {
+                    variant: "text-sm/medium",
+                    color: "text-feedback-critical",
+                    className: y.z,
+                    children: v.intl.string(v.t["duXbE/"]),
+                });
     }
     renderLabel(t, e) {
         let { installationPathsMetadata: s } = this.props,
@@ -133,7 +144,7 @@ class L extends a.PureComponent {
         return (0, l.jsxs)("div", {
             className: e,
             children: [
-                (0, l.jsx)(T.l, {
+                (0, l.jsx)(x.l, {
                     label: v.intl.string(v.t.WTJuNr),
                     autoFocus: s,
                     options: this.getOptions(),
@@ -147,12 +158,12 @@ class L extends a.PureComponent {
         });
     }
 }
-let B = n.Ay.connectStores([E.A], () => ({
-    installationPaths: E.A.installationPaths,
-    installationPathsMetadata: E.A.installationPathsMetadata,
-}))(L);
-var D = s(442348);
-class N extends a.Component {
+let D = n.Ay.connectStores([S.A], () => ({
+    installationPaths: S.A.installationPaths,
+    installationPathsMetadata: S.A.installationPathsMetadata,
+}))(B);
+var N = s(548268);
+class M extends a.Component {
     state = {
         selectedInstallationPath: this.props.defaultInstallationPath,
         hasError: !1,
@@ -166,7 +177,7 @@ class N extends a.Component {
             null != l &&
             null == a &&
             o.h.wait(() => {
-                A(t, e, s, l);
+                m(t, e, s, l);
             });
     }
     componentDidMount() {
@@ -185,7 +196,7 @@ class N extends a.Component {
     install = (t, e) => {
         let { application: s, branchId: l, analyticsLocation: a } = this.props;
         if (null == s) return null;
-        (0, I.oc)({
+        (0, A.oc)({
             application: s,
             branchId: l,
             buildId: t,
@@ -193,7 +204,7 @@ class N extends a.Component {
             installationPath: this.state.selectedInstallationPath,
             analyticsLocation: a,
         }),
-            (0, f.pX)(c.BVt.APPLICATION_LIBRARY),
+            (0, f.pX)(p.BVt.APPLICATION_LIBRARY),
             this.close();
     };
     handleInstall = () => {
@@ -233,7 +244,7 @@ class N extends a.Component {
             "aria-label": v.intl.string(v.t.PphjtJ),
             parentComponent: "ApplicationInstallationModal",
             children: [
-                null != i ? (0, l.jsx)("div", { className: D.Yi, style: { backgroundImage: `url(${i})` } }) : null,
+                null != i ? (0, l.jsx)("div", { className: N.Yi, style: { backgroundImage: `url(${i})` } }) : null,
                 (0, l.jsxs)(r.rQ, {
                     justify: P.A.Justify.BETWEEN,
                     children: [
@@ -252,30 +263,30 @@ class N extends a.Component {
                         (0, l.jsxs)(P.A, {
                             align: P.A.Align.CENTER,
                             children: [
-                                (0, l.jsx)(C.A, { game: t, size: C.M.MEDIUM, className: D.Gt }),
-                                (0, l.jsx)("div", { className: D.mO, children: null != t && t.name }),
+                                (0, l.jsx)(C.A, { game: t, size: C.M.MEDIUM, className: N.Gt }),
+                                (0, l.jsx)("div", { className: N.mO, children: null != t && t.name }),
                                 null != e
                                     ? (0, l.jsx)("div", {
-                                          className: D.hc,
+                                          className: N.hc,
                                           children: (0, b.Xq)(e, { useKibibytes: !0 }),
                                       })
                                     : null,
                             ],
                         }),
-                        (0, l.jsx)("div", { className: D.yF }),
-                        (0, l.jsx)(B, {
+                        (0, l.jsx)("div", { className: N.yF }),
+                        (0, l.jsx)(D, {
                             autoFocus: !0,
-                            className: D.gD,
+                            className: N.gD,
                             value: a,
                             requiredDiskKB: e,
                             onChange: this.handleChangePath,
                         }),
-                        (0, l.jsx)(g.A, {
+                        (0, l.jsx)(I.A, {
                             eulaId: t.eulaId,
                             applicationName: t.name,
                             disabled: n,
                             onChange: this.handlePurchaseTermsChange,
-                            className: D.a_,
+                            className: N.a_,
                         }),
                     ],
                 }),
@@ -284,15 +295,15 @@ class N extends a.Component {
         });
     }
 }
-let M = n.Ay.connectStores([p.A, E.A, S.A, m.A], (t) => {
+let k = n.Ay.connectStores([c.A, S.A, E.A, g.A], (t) => {
     let { applicationId: e, branchId: s } = t,
-        l = p.A.getTargetBuildId(e, s);
+        l = c.A.getTargetBuildId(e, s);
     return {
-        application: m.A.getApplication(e),
-        defaultInstallationPath: E.A.defaultInstallationPath,
+        application: g.A.getApplication(e),
+        defaultInstallationPath: S.A.defaultInstallationPath,
         buildId: l,
-        manifestIds: p.A.getTargetManifests(e, s),
-        buildSizeKB: null != l ? p.A.getBuildSize(l) : null,
-        hasPreviouslyAcceptedStoreTerms: S.A.hasAcceptedStoreTerms,
+        manifestIds: c.A.getTargetManifests(e, s),
+        buildSizeKB: null != l ? c.A.getBuildSize(l) : null,
+        hasPreviouslyAcceptedStoreTerms: E.A.hasAcceptedStoreTerms,
     };
-})(N);
+})(M);

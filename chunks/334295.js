@@ -618,7 +618,9 @@ var t_ = n(49999),
     th = n(127396);
 let tf = function (e) {
     let { markAsDismissed: t } = e;
-    return (0, s.jsxs)("div", {
+    return (0, s.jsxs)(K.E, {
+        variant: "text-xs/medium",
+        color: "text-default",
         className: th.iE,
         children: [
             (0, s.jsx)(eW.C, { size: "md", color: "currentColor", className: th.Kk }),
@@ -2004,7 +2006,9 @@ let nq = "premiumRetentionEmojiPickerNotice",
                 : tI.Ay.getPremiumType(o.planId) === eR.PremiumTypes.TIER_1
                   ? nY.k0.PREMIUM_TIER_1
                   : nY.k0.PREMIUM_TIER_2;
-        return (0, s.jsxs)("div", {
+        return (0, s.jsxs)(K.E, {
+            variant: "text-xs/medium",
+            color: "text-default",
             className: nz.g$,
             children: [
                 (0, s.jsx)(eI.t, { size: "md", className: nz.lu, color: d }),

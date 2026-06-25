@@ -632,7 +632,16 @@ function ty(e) {
 function tC(e) {
     let { channel: t, children: n } = e,
         i = (0, t_.Ay)(t),
-        a = s.useMemo(() => (0, r.jsx)("div", { className: eO.A_, children: (0, r.jsx)(ty, { channel: t }) }), [t]);
+        a = s.useMemo(
+            () =>
+                (0, r.jsx)(eE.E, {
+                    variant: "text-md/semibold",
+                    color: "text-default",
+                    className: eO.A_,
+                    children: (0, r.jsx)(ty, { channel: t }),
+                }),
+            [t],
+        );
     return (0, r.jsx)(eh.m, {
         __unsupportedReactNodeAsText: a,
         hideOnClick: !0,
@@ -904,7 +913,18 @@ function tM(e) {
             forceOpen: c,
             selected: d = !1,
         } = e,
-        _ = s.useMemo(() => (null == n || a ? null : (0, r.jsx)("div", { className: eO.A_, children: n })), [n, a]),
+        _ = s.useMemo(
+            () =>
+                null == n || a
+                    ? null
+                    : (0, r.jsx)(eE.E, {
+                          variant: "text-md/semibold",
+                          color: "text-default",
+                          className: eO.A_,
+                          children: n,
+                      }),
+            [n, a],
+        ),
         h = i ? t : (0, r.jsx)("div", { className: o()(tw.p, { [tw.w]: d }), children: t });
     return (0, r.jsx)(eh.m, {
         __unsupportedReactNodeAsText: _,
@@ -2257,7 +2277,15 @@ function iH(e) {
 function iY(e) {
     let { guild: t, disabled: n = !1, "aria-label": i = !1, children: a } = e,
         o = s.useMemo(
-            () => (n ? null : (0, r.jsx)("div", { className: eO.A_, children: (0, r.jsx)(iH, { guild: t }) })),
+            () =>
+                n
+                    ? null
+                    : (0, r.jsx)(eE.E, {
+                          variant: "text-md/semibold",
+                          color: "text-default",
+                          className: eO.A_,
+                          children: (0, r.jsx)(iH, { guild: t }),
+                      }),
             [n, t],
         );
     return (0, r.jsx)(eh.m, {

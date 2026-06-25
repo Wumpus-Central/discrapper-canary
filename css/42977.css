@@ -152,10 +152,7 @@
 .wrapper_ac2cfb {
     background-color: var(--background-base-lowest);
     border-radius: 4px;
-    color: var(--text-default);
     display: flex;
-    font-size: 12px;
-    font-weight: var(--font-weight-medium);
     margin: 8px 8px 0;
     padding: 10px 8px 8px
 }

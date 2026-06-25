@@ -699,25 +699,26 @@ var tS = n(735438),
     tw = n(661531),
     t_ = n(462887),
     tv = n(5373),
-    tL = n(248530),
-    tE = n(782134),
-    tb = n(113494),
-    tD = n(872351),
-    tM = n(789645),
-    tB = n(92077),
-    tO = n(707606),
-    tU = n(456412),
-    tk = n(587895),
-    tV = n(363195),
-    tG = n(189081),
-    tH = n(340829),
-    tK = n(966846),
-    tF = n(531685),
-    tX = n(255438),
-    tz = n(505806),
-    tW = n(998304),
-    tY = n(112145);
-class tJ extends l.PureComponent {
+    tL = n(834730),
+    tE = n(248530),
+    tb = n(782134),
+    tD = n(113494),
+    tM = n(872351),
+    tB = n(789645),
+    tO = n(92077),
+    tU = n(707606),
+    tk = n(456412),
+    tV = n(587895),
+    tG = n(363195),
+    tH = n(189081),
+    tK = n(340829),
+    tF = n(966846),
+    tX = n(531685),
+    tz = n(255438),
+    tW = n(505806),
+    tY = n(998304),
+    tJ = n(112145);
+class tQ extends l.PureComponent {
     dataChangedAt;
     fillColor;
     maxValue;
@@ -731,7 +732,7 @@ class tJ extends l.PureComponent {
             (s && ((this.dataChangedAt = performance.now()), (this.maxValue = null != n ? n : Math.max(...i))),
             s || null == t || (!t.animate && l) || t.color !== this.props.color)
         ) {
-            let t = tW.E2(this.props.color);
+            let t = tY.E2(this.props.color);
             (this.fillColor = `rgba(${t.r}, ${t.g}, ${t.b}, 0.5)`),
                 window.cancelAnimationFrame(this.animationFrameRequestId),
                 (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation));
@@ -769,7 +770,7 @@ class tJ extends l.PureComponent {
             m = u.createLinearGradient(0, 0, 0, A);
         if (null != d) m.addColorStop(0, d);
         else {
-            let { r: t, g: e, b: n } = tW.E2(r);
+            let { r: t, g: e, b: n } = tY.E2(r);
             m.addColorStop(0, `rgba(${t}, ${e}, ${n}, 0)`);
         }
         m.addColorStop(1, this.fillColor), (u.fillStyle = m);
@@ -797,29 +798,29 @@ class tJ extends l.PureComponent {
         let { className: t, pixelWidth: e, pixelHeight: n } = this.props;
         return (0, i.jsx)("div", {
             className: t,
-            children: (0, i.jsx)("canvas", { ref: this.canvas, className: tY.J, width: e, height: n }),
+            children: (0, i.jsx)("canvas", { ref: this.canvas, className: tJ.J, width: e, height: n }),
         });
     }
 }
-var tQ = n(447187);
-let tq = function (t) {
+var tq = n(447187);
+let t$ = function (t) {
     let { title: e, className: n, color: l, animate: s, getHistoricalTotalBytes: r } = t;
-    return (0, i.jsx)(tz.A, {
+    return (0, i.jsx)(tW.A, {
         getHistoricalTotalBytes: r,
         children: function (t, r, a) {
             var o;
             return (0, i.jsx)("div", {
-                className: h()(tQ.dm, n),
+                className: h()(tq.dm, n),
                 children: (0, i.jsxs)(q.A, {
                     align: q.A.Align.CENTER,
                     children: [
                         (0, i.jsxs)(q.A, {
-                            className: tQ.Qq,
+                            className: tq.Qq,
                             direction: q.A.Direction.VERTICAL,
                             children: [
-                                (0, i.jsx)("div", { className: tQ.DD, children: e }),
+                                (0, i.jsx)("div", { className: tq.DD, children: e }),
                                 (0, i.jsx)("div", {
-                                    className: tQ.TS,
+                                    className: tq.TS,
                                     children:
                                         (o = (t[t.length - 1] / r) * 1e3) > 1e3
                                             ? v.intl.formatToPlainString(v.t["WU+gTX"], { size: Math.round(o / 1e3) })
@@ -828,11 +829,11 @@ let tq = function (t) {
                             ],
                         }),
                         (0, i.jsx)("div", {
-                            className: tQ.MQ,
-                            children: (0, i.jsx)(tJ, {
+                            className: tq.MQ,
+                            children: (0, i.jsx)(tQ, {
                                 data: t,
                                 maxValue: Math.max(Math.max.apply(null, t), 1e3),
-                                className: tQ.CD,
+                                className: tq.CD,
                                 updateInterval: r,
                                 color: l,
                                 numUpdatesToShow: a,
@@ -848,20 +849,20 @@ let tq = function (t) {
         },
     });
 };
-var t$ = n(990579);
-function tZ(t) {
+var tZ = n(990579);
+function t0(t) {
     let { className: e, children: n, onContextMenu: l, item: s } = t;
     return (0, i.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: n });
 }
-let t0 = [tw.A.unsafe_rawColors.BLUE_345.css, tw.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
-    t1 = (t) => {
+let t1 = [tw.A.unsafe_rawColors.BLUE_345.css, tw.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
+    t4 = (t) => {
         let { tooltip: e, onClick: n, icon: l } = t;
         return (0, i.jsx)(F.m, {
             text: e,
             children: (0, i.jsx)(tj.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
         });
     };
-function t4(t, e) {
+function t5(t, e) {
     switch (e) {
         case w.OQC.POST_INSTALL_SCRIPTS:
         case w.OQC.PLANNING:
@@ -869,10 +870,10 @@ function t4(t, e) {
         case w.OQC.ALLOCATING_DISK:
             return `${t}`;
         default:
-            return (0, tX.Xq)(t, { useKibibytes: !0 });
+            return (0, tz.Xq)(t, { useKibibytes: !0 });
     }
 }
-let t5 = {
+let t6 = {
     [w.WTw.INSTALLING]: {
         [tt.pJ.NONE]: (t, e, n, i) => v.intl.formatToPlainString(v.t.JfJt9d, { percent: t, progress: e, total: n }),
         [tt.pJ.SECONDS]: (t, e, n, i) =>
@@ -901,8 +902,8 @@ let t5 = {
             v.intl.formatToPlainString(v.t["3VG9s1"], { percent: t, progress: e, total: n, timeRemaining: i }),
     },
 };
-function t6(t, e, n, i, l) {
-    let s = t5[e],
+function t2(t, e, n, i, l) {
+    let s = t6[e],
         r = null != s ? Object.keys(s) : [],
         { unit: a, time: o } = (0, tt.$l)(null != t ? t / 60 : null, r);
     if (null != s && null != a) {
@@ -911,10 +912,10 @@ function t6(t, e, n, i, l) {
     }
     return null;
 }
-function t2(t) {
+function t3(t) {
     let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: r } = t,
-        a = t4(s, n),
-        o = t4(l, n);
+        a = t5(s, n),
+        o = t5(l, n);
     switch (n) {
         case w.OQC.QUEUED:
             if (0 === l) return v.intl.string(v.t.RpfBqd);
@@ -924,7 +925,7 @@ function t2(t) {
         case w.OQC.ALLOCATING_DISK:
             return v.intl.formatToPlainString(v.t.XigoJ9, { percent: i });
         case w.OQC.PATCHING:
-            return t6(r, e, i, o, a);
+            return t2(r, e, i, o, a);
         case w.OQC.FINALIZING:
             return v.intl.formatToPlainString(v.t["6PHDUN"], { percent: i });
         case w.OQC.PAUSING:
@@ -934,12 +935,12 @@ function t2(t) {
         case w.OQC.POST_INSTALL_SCRIPTS:
             return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: a });
         case w.OQC.REPAIRING:
-            if (e === w.WTw.REPAIRING) return t6(r, e, i, o, a);
+            if (e === w.WTw.REPAIRING) return t2(r, e, i, o, a);
             return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: a });
     }
     throw Error("Invalid Dispatch stage");
 }
-class t3 extends l.PureComponent {
+class t7 extends l.PureComponent {
     get isFocused() {
         let { cellProps: t } = this.props;
         return null != t && t.isFocused;
@@ -956,7 +957,12 @@ class t3 extends l.PureComponent {
                     foregroundGradientColor: null != l ? [l[0], l[1]] : void 0,
                     animate: this.isFocused,
                 }),
-                (0, i.jsx)("div", { className: t$.NO, children: null != s ? s : "" }),
+                (0, i.jsx)(tL.E, {
+                    variant: "text-xs/medium",
+                    color: "text-muted",
+                    className: tZ.NO,
+                    children: null != s ? s : "",
+                }),
             ],
         });
     }
@@ -965,20 +971,25 @@ class t3 extends l.PureComponent {
         return (0, i.jsxs)(q.A, {
             direction: q.A.Direction.VERTICAL,
             children: [
-                (0, i.jsx)(tL.L, {
+                (0, i.jsx)(tE.L, {
                     percents: e,
-                    size: tL.L.Sizes.SMALL,
-                    foregroundColors: t0,
+                    size: tE.L.Sizes.SMALL,
+                    foregroundColors: t1,
                     animate: this.isFocused,
                 }),
-                (0, i.jsx)("div", { className: t$.NO, children: null != n ? n : "" }),
+                (0, i.jsx)(tL.E, {
+                    variant: "text-xs/medium",
+                    color: "text-muted",
+                    className: tZ.NO,
+                    children: null != n ? n : "",
+                }),
             ],
         });
     }
     renderFinished() {
         let { item: t } = this.props;
         return this.renderBody({
-            message: v.intl.format(v.t.z1oxGO, { remove: () => tB.Vt(t.applicationId, t.branchId) }),
+            message: v.intl.format(v.t.z1oxGO, { remove: () => tO.Vt(t.applicationId, t.branchId) }),
             foregroundColor: (0, t_.q)(t.theme)
                 ? tw.A.unsafe_rawColors.PRIMARY_300.css
                 : tw.A.unsafe_rawColors.PRIMARY_500.css,
@@ -994,8 +1005,8 @@ class t3 extends l.PureComponent {
         if (null != n) {
             let { progress: i, total: l, stage: s } = n;
             if (null != i && null != l) {
-                let n = t4(l, s),
-                    r = t4(i, s),
+                let n = t5(l, s),
+                    r = t5(i, s),
                     a = Math.floor((e = te.uA(i, l)));
                 t =
                     s === w.OQC.PAUSING
@@ -1028,8 +1039,8 @@ class t3 extends l.PureComponent {
                     ? v.intl.string(v.t["+pfsFX"])
                     : v.intl.formatToPlainString(v.t["+feX8S"], {
                           percent: s,
-                          progress: (0, tX.Xq)(n),
-                          total: (0, tX.Xq)(i),
+                          progress: (0, tz.Xq)(n),
+                          total: (0, tz.Xq)(i),
                       });
         return this.renderBody({
             message: r,
@@ -1050,7 +1061,7 @@ class t3 extends l.PureComponent {
             c = te.uA(a ?? 0, s),
             d = (t[t.length - 1] / e) * 1e3,
             h = s - l,
-            u = t2({
+            u = t3({
                 type: r,
                 stage: i,
                 percent: Math.floor(o),
@@ -1061,8 +1072,8 @@ class t3 extends l.PureComponent {
         return this.renderStackedProgress({ percents: [o, c], message: u });
     };
     renderProgressPatching() {
-        return (0, i.jsx)(tz.A, {
-            getHistoricalTotalBytes: tH.A.getHistoricalTotalBytesWritten,
+        return (0, i.jsx)(tW.A, {
+            getHistoricalTotalBytes: tK.A.getHistoricalTotalBytesWritten,
             updateInterval: 5e3,
             children: this.renderProgressPatchingBody,
         });
@@ -1076,7 +1087,7 @@ class t3 extends l.PureComponent {
             r = Math.floor(s);
         return this.renderBody({
             percent: s,
-            message: t2({ type: l, stage: i, percent: r, progress: n, total: e }),
+            message: t3({ type: l, stage: i, percent: r, progress: n, total: e }),
             foregroundColor: tw.A.unsafe_rawColors.BLUE_345.css,
         });
     }
@@ -1103,51 +1114,51 @@ class t3 extends l.PureComponent {
         return null;
     }
 }
-function t7() {
-    return (0, i.jsx)(t1, { icon: tE.u, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tB.U() });
-}
 function t9() {
-    return (0, i.jsx)(t1, { icon: tb.E, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tB.v7() });
+    return (0, i.jsx)(t4, { icon: tb.u, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tO.U() });
 }
-let t8 = (t) => {
+function t8() {
+    return (0, i.jsx)(t4, { icon: tD.E, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
+}
+let et = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)(t1, {
-            icon: tD.z,
+        return (0, i.jsx)(t4, {
+            icon: tM.z,
             tooltip: v.intl.string(v.t["Eqb+LN"]),
-            onClick: () => tB.BO(e.applicationId, e.branchId),
+            onClick: () => tO.BO(e.applicationId, e.branchId),
         });
     },
-    et = (t) => {
+    ee = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)(t1, {
-            icon: tM.P,
+        return (0, i.jsx)(t4, {
+            icon: tB.P,
             tooltip: v.intl.string(v.t["0lFmC9"]),
-            onClick: () => tB.ZT(e.applicationId, e.branchId),
+            onClick: () => tO.ZT(e.applicationId, e.branchId),
         });
     },
-    ee = [
+    en = [
         {
             key: "name",
-            cellClassName: t$.UQ,
+            cellClassName: tZ.UQ,
             render: (t) =>
                 (0, i.jsxs)(q.A, {
                     align: q.A.Align.CENTER,
                     children: [
-                        (0, i.jsx)(Z.A, { game: t.application, className: t$.__invalid_gameIcon, size: Z.M.SMALL }),
-                        (0, i.jsx)("div", { className: t$.TF, children: t.application.name }),
+                        (0, i.jsx)(Z.A, { game: t.application, className: tZ.__invalid_gameIcon, size: Z.M.SMALL }),
+                        (0, i.jsx)("div", { className: tZ.TF, children: t.application.name }),
                     ],
                 }),
         },
         {
             key: "progress",
-            cellClassName: t$.Ay,
-            headerCellClassName: t$.VD,
-            bodyCellClassName: t$.so,
-            render: (t, e) => (0, i.jsx)(t3, { item: t, cellProps: e }),
+            cellClassName: tZ.Ay,
+            headerCellClassName: tZ.VD,
+            bodyCellClassName: tZ.so,
+            render: (t, e) => (0, i.jsx)(t7, { item: t, cellProps: e }),
         },
         {
             key: "actions",
-            cellClassName: t$.AT,
+            cellClassName: tZ.AT,
             render(t, e) {
                 let n, l;
                 return (
@@ -1164,18 +1175,18 @@ let t8 = (t) => {
                           ? t.state.type !== w.WTw.UP_TO_DATE &&
                             ((n =
                                 t.index > 0
-                                    ? (0, i.jsx)(t8, { item: t })
+                                    ? (0, i.jsx)(et, { item: t })
                                     : null != e && e.paused
-                                      ? (0, i.jsx)(t7, {})
-                                      : (0, i.jsx)(t9, { item: t })),
-                            (l = (0, i.jsx)(et, { item: t })))
-                          : (l = (0, i.jsx)(et, { item: t })),
-                    (0, i.jsxs)("div", { className: t$.sG, children: [n, l] })
+                                      ? (0, i.jsx)(t9, {})
+                                      : (0, i.jsx)(t8, { item: t })),
+                            (l = (0, i.jsx)(ee, { item: t })))
+                          : (l = (0, i.jsx)(ee, { item: t })),
+                    (0, i.jsxs)("div", { className: tZ.sG, children: [n, l] })
                 );
             },
         },
     ];
-class en extends l.PureComponent {
+class ei extends l.PureComponent {
     isUnmounted = !1;
     isTallerThanHalfViewport = !1;
     componentDidMount() {
@@ -1189,7 +1200,7 @@ class en extends l.PureComponent {
         t.forEach((t) => {
             t.finished &&
                 p.h.wait(() => {
-                    tB.Vt(t.applicationId, t.branchId);
+                    tO.Vt(t.applicationId, t.branchId);
                 });
         }),
             window.removeEventListener("resize", this.throttledUpdateHeight),
@@ -1206,22 +1217,22 @@ class en extends l.PureComponent {
         return 0 === t.length
             ? null
             : (0, i.jsxs)("div", {
-                  className: t$.xP,
+                  className: tZ.xP,
                   children: [
                       (0, i.jsxs)("div", {
-                          className: t$.U1,
+                          className: tZ.U1,
                           children: [
-                              (0, i.jsx)(tq, {
-                                  className: h()(t$.e4, t$.Eg),
+                              (0, i.jsx)(t$, {
+                                  className: h()(tZ.e4, tZ.Eg),
                                   title: v.intl.string(v.t.ytoXKr),
-                                  getHistoricalTotalBytes: tH.A.getHistoricalTotalBytesDownloaded,
+                                  getHistoricalTotalBytes: tK.A.getHistoricalTotalBytesDownloaded,
                                   color: tw.A.unsafe_rawColors.GREEN_360.resolve({ saturation: 1 }).hex(),
                                   animate: l,
                               }),
-                              (0, i.jsx)(tq, {
-                                  className: h()(t$.e4, t$.pn),
+                              (0, i.jsx)(t$, {
+                                  className: h()(tZ.e4, tZ.pn),
                                   title: v.intl.string(v.t.SjohhI),
-                                  getHistoricalTotalBytes: tH.A.getHistoricalTotalBytesWritten,
+                                  getHistoricalTotalBytes: tK.A.getHistoricalTotalBytesWritten,
                                   color: tw.A.unsafe_rawColors.BLUE_345.resolve({ saturation: 1 }).hex(),
                                   animate: l,
                               }),
@@ -1229,11 +1240,11 @@ class en extends l.PureComponent {
                       }),
                       (0, i.jsx)($.A, {
                           hasHeader: !1,
-                          columns: ee,
+                          columns: en,
                           data: t,
-                          className: t$.tp,
-                          rowClassName: t$.nM,
-                          rowComponent: tZ,
+                          className: tZ.tp,
+                          rowClassName: tZ.nM,
+                          rowComponent: t0,
                           cellProps: { paused: e, isFocused: l, theme: s },
                           rowProps: {
                               onContextMenu: (t, e) => {
@@ -1251,13 +1262,13 @@ class en extends l.PureComponent {
                                   });
                               },
                           },
-                          bodyCellClassName: t$.Hn,
+                          bodyCellClassName: tZ.Hn,
                       }),
                   ],
               });
     }
 }
-function ei(t, e, n, i) {
+function el(t, e, n, i) {
     return t.reduce((t, l, s) => {
         let { applicationId: r, branchId: a } = l,
             o = n.getApplication(r),
@@ -1270,7 +1281,7 @@ function ei(t, e, n, i) {
                     branchId: a,
                     state: c,
                     application: o,
-                    libraryApplication: tG.A.getLibraryApplication(r, a),
+                    libraryApplication: tH.A.getLibraryApplication(r, a),
                     finished: e,
                     index: s,
                 }),
@@ -1278,24 +1289,24 @@ function ei(t, e, n, i) {
         );
     }, []);
 }
-let el = (0, tU.A)(
-    y.Ay.connectStores([tk.A, tH.A, tK.A, tV.A, tF.A], () => ({
-        applications: [...ei(tK.A.activeItems, !1, tk.A, tH.A), ...ei(tK.A.finishedItems, !0, tk.A, tH.A)],
-        paused: tK.A.paused,
-        isFocused: tF.A.isFocused(),
-        theme: tV.A.theme,
-    }))((0, tO.A)(en)),
+let es = (0, tk.A)(
+    y.Ay.connectStores([tV.A, tK.A, tF.A, tG.A, tX.A], () => ({
+        applications: [...el(tF.A.activeItems, !1, tV.A, tK.A), ...el(tF.A.finishedItems, !0, tV.A, tK.A)],
+        paused: tF.A.paused,
+        isFocused: tX.A.isFocused(),
+        theme: tG.A.theme,
+    }))((0, tU.A)(ei)),
 );
-var es = n(613057),
-    er = n(318742);
-class ea extends l.PureComponent {
+var er = n(613057),
+    ea = n(318742);
+class eo extends l.PureComponent {
     _scrollerRef = l.createRef();
     _scrollToOnMount;
     _scrollToPadding = 0;
     state = { includeUpdatesInScroller: !1 };
     componentDidMount() {
         A.I(w.BVt.APPLICATION_LIBRARY),
-            (0, x.h)(es.XK.LIBRARY),
+            (0, x.h)(er.XK.LIBRARY),
             p.h.wait(() => (0, m.r)()),
             (0, g.X)(),
             null != this._scrollToOnMount &&
@@ -1319,7 +1330,7 @@ class ea extends l.PureComponent {
             e = (0, i.jsx)("div", {
                 children: (0, i.jsx)(r.A, {
                     section: w.JJy.LIBRARY_INSTALL_MODULE,
-                    children: (0, i.jsx)(el, {
+                    children: (0, i.jsx)(es, {
                         onHeightTallerThanHalfViewportChange: this.handleHeightTallerThanHalfViewportChange,
                     }),
                 }),
@@ -1329,7 +1340,7 @@ class ea extends l.PureComponent {
                 (0, i.jsx)(H, { currentRoute: w.BVt.APPLICATION_LIBRARY, renderToolbar: this.renderToolbar }),
                 t ? null : e,
                 (0, i.jsxs)(u.Gt, {
-                    className: h()(er.k, er.X),
+                    className: h()(ea.k, ea.X),
                     ref: this._scrollerRef,
                     children: [
                         t ? e : null,
@@ -1343,17 +1354,16 @@ class ea extends l.PureComponent {
         });
     }
 }
-var eo = n(665260),
-    ec = n(939249),
-    ed = n(534514),
-    eh = n(331322),
-    eu = n(243721),
-    ep = n(404778),
-    eA = n(364522),
-    em = n(59636),
-    eg = n(885386),
-    ex = n(314116),
-    ef = n(834730),
+var ec = n(665260),
+    ed = n(939249),
+    eh = n(534514),
+    eu = n(331322),
+    ep = n(243721),
+    eA = n(404778),
+    em = n(364522),
+    eg = n(59636),
+    ex = n(885386),
+    ef = n(314116),
     ey = n(821609),
     eI = n(993077),
     eN = n(292666),
@@ -1420,7 +1430,7 @@ class eM extends l.PureComponent {
         t(null), this.setState({ label: void 0, isDefault: null });
     };
     handleRemoveLocation = () => {
-        (0, ex.A)({
+        (0, ef.A)({
             title: v.intl.string(v.t.iBUzS5),
             subtitle: v.intl.string(v.t["1XqeW2"]),
             confirmText: v.intl.string(v.t.iBUzS5),
@@ -1454,8 +1464,8 @@ class eM extends l.PureComponent {
             { path: n, label: l, editingPath: s, isDefault: r, metadata: a } = this.props;
         return (
             null != a &&
-                ((t = null != a.availableKB ? (0, tX.Xq)(a.availableKB, { useKibibytes: !0 }) : null),
-                (e = null != a.totalKB ? (0, tX.Xq)(a.totalKB, { useKibibytes: !0 }) : null)),
+                ((t = null != a.availableKB ? (0, tz.Xq)(a.availableKB, { useKibibytes: !0 }) : null),
+                (e = null != a.totalKB ? (0, tz.Xq)(a.totalKB, { useKibibytes: !0 }) : null)),
             (0, i.jsxs)(q.A, {
                 className: eb.ce,
                 align: q.A.Align.CENTER,
@@ -1468,7 +1478,7 @@ class eM extends l.PureComponent {
                             (0, i.jsxs)(q.A, {
                                 align: q.A.Align.CENTER,
                                 children: [
-                                    (0, i.jsx)(ed.D, {
+                                    (0, i.jsx)(eh.D, {
                                         className: eb.nM,
                                         variant: "heading-md/semibold",
                                         children: null != l ? l : ev.A.getLabelFromPath(n),
@@ -1484,7 +1494,7 @@ class eM extends l.PureComponent {
                                       hoverText: v.intl.formatToPlainString(v.t["Fxo9e+"], { available: t, total: e }),
                                       children: n,
                                   })
-                                : (0, i.jsx)(ef.E, { className: eb.fw, variant: "text-xs/normal", children: n }),
+                                : (0, i.jsx)(tL.E, { className: eb.fw, variant: "text-xs/normal", children: n }),
                         ],
                     }),
                     (0, i.jsx)(ey.$, {
@@ -1532,7 +1542,7 @@ class eM extends l.PureComponent {
                                     label: v.intl.string(v.t.Z2MWuH),
                                 }),
                             }),
-                            (0, i.jsx)(ep.c, { className: eb.me }),
+                            (0, i.jsx)(eA.c, { className: eb.me }),
                             (0, i.jsxs)(q.A, {
                                 children: [
                                     (0, i.jsx)(ey.$, {
@@ -1661,10 +1671,10 @@ function ek(t) {
                             null != e ? (0, i.jsx)("div", { className: eU.ME, children: w.gG4[e] }) : null,
                         ],
                     }),
-                    (0, i.jsx)(ec.D, {
+                    (0, i.jsx)(ed.D, {
                         className: eU.P5,
                         onClick: () => n(t.libraryApplication),
-                        children: (0, i.jsx)(tM.P, { size: "md", color: "currentColor", className: eU.q_ }),
+                        children: (0, i.jsx)(tB.P, { size: "md", color: "currentColor", className: eU.q_ }),
                     }),
                 ],
             },
@@ -1674,7 +1684,7 @@ function ek(t) {
     return (0, i.jsxs)("div", {
         className: eU.z0,
         children: [
-            (0, i.jsx)(ed.D, {
+            (0, i.jsx)(eh.D, {
                 variant: "heading-md/semibold",
                 className: eU.Z9,
                 children: v.intl.string(v.t["5PJtrH"]),
@@ -1685,17 +1695,17 @@ function ek(t) {
 }
 class eV extends l.PureComponent {
     handleToggleShortcutDesktop(t) {
-        eg.uB.updateSetting(t);
+        ex.uB.updateSetting(t);
     }
     handleToggleShortcutStartMenu(t) {
-        eg.Pf.updateSetting(t);
+        ex.Pf.updateSetting(t);
     }
     trackRestoreApplication(t, e) {
         U.default.track(w.HAw.APPLICATION_SETTINGS_UPDATED, { hidden_enabled: e, ...t.getAnalyticsData() });
     }
     handleRestoreHiddenLibraryApplication = (t) => {
-        let e = eo.PQ(t.getFlags(), w.hM6.HIDDEN);
-        em.V(t.id, t.branchId, e), this.trackRestoreApplication(t, eo.Lt(e, w.hM6.HIDDEN));
+        let e = ec.PQ(t.getFlags(), w.hM6.HIDDEN);
+        eg.V(t.id, t.branchId, e), this.trackRestoreApplication(t, ec.Lt(e, w.hM6.HIDDEN));
     };
     renderBody() {
         let {
@@ -1707,23 +1717,23 @@ class eV extends l.PureComponent {
             className: eU.rf,
             children: [
                 (0, k.S)()
-                    ? (0, i.jsxs)(eh.B, {
+                    ? (0, i.jsxs)(eu.B, {
                           gap: 16,
                           children: [
-                              (0, i.jsx)(eu.d, {
+                              (0, i.jsx)(ep.d, {
                                   label: v.intl.string(v.t["9ID+Kh"]),
                                   description: v.intl.string(v.t.vT61N0),
                                   checked: e,
                                   onChange: this.handleToggleShortcutDesktop,
                               }),
-                              (0, i.jsx)(ep.c, {}),
-                              (0, i.jsx)(eu.d, {
+                              (0, i.jsx)(eA.c, {}),
+                              (0, i.jsx)(ep.d, {
                                   label: v.intl.string(v.t.vNpUMz),
                                   description: v.intl.string(v.t.cpYp0H),
                                   checked: n,
                                   onChange: this.handleToggleShortcutStartMenu,
                               }),
-                              (0, i.jsx)(ep.c, {}),
+                              (0, i.jsx)(eA.c, {}),
                               (0, i.jsx)(eO, {}),
                           ],
                       })
@@ -1739,15 +1749,15 @@ class eV extends l.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(H, { currentRoute: w.BVt.APPLICATION_LIBRARY_SETTINGS }),
-                (0, i.jsx)(eA.Ar, { className: eU.XG, children: this.renderBody() }),
+                (0, i.jsx)(em.Ar, { className: eU.XG, children: this.renderBody() }),
             ],
         });
     }
 }
 function eG() {
     let t = {
-        installShortcutDesktop: eg.uB.useSetting(),
-        installShortcutStartMenu: eg.Pf.useSetting(),
+        installShortcutDesktop: ex.uB.useSetting(),
+        installShortcutStartMenu: ex.Pf.useSetting(),
         hiddenLibraryApplicationViewItems: (0, y.bG)([S.A], () => S.A.hiddenLibraryApplicationViewItems),
     };
     return (0, i.jsx)(eV, { ...t });
@@ -1770,7 +1780,7 @@ function eK() {
                 children: (0, i.jsxs)(r.A, {
                     page: w.liQ.LIBRARY,
                     root: !0,
-                    children: [(0, i.jsx)(o.HI, { subsection: v.intl.string(v.t.p7ARTB) }), (0, i.jsx)(ea, {})],
+                    children: [(0, i.jsx)(o.HI, { subsection: v.intl.string(v.t.p7ARTB) }), (0, i.jsx)(eo, {})],
                 }),
             }),
         ],

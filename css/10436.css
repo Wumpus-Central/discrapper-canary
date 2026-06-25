@@ -94,13 +94,6 @@
     margin: 16px 0
 }
 
-.planSelectorSubtotal__945b8 {
-    color: var(--interactive-text-active);
-    font-size: 16px;
-    font-weight: var(--font-weight-semibold);
-    line-height: 20px
-}
-
 .invoiceTableBottom__945b8,
 .paymentSourceWrapper__945b8 {
     margin: 16px 0
@@ -129,10 +122,6 @@
 }
 
 .confirmationText__945b8 {
-    color: var(--interactive-text-default);
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    line-height: 20px;
     text-align: center
 }
 

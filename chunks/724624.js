@@ -10,8 +10,8 @@ var n = l(627968),
     u = l(820739),
     m = l(43594),
     x = l(859241),
-    h = l(71393),
-    g = l(178368),
+    g = l(71393),
+    h = l(178368),
     C = l(174459),
     j = l(473145);
 l(321073);
@@ -19,8 +19,8 @@ var f = l(503698),
     p = l.n(f),
     v = l(683071),
     S = l(224640),
-    N = l(20742),
-    E = l(430993),
+    E = l(20742),
+    N = l(430993),
     b = l(696208),
     A = l(868285),
     y = l(871682),
@@ -193,8 +193,8 @@ let J = (t) => {
             isTransfer: u = !1,
             fromGuilds: m,
             toGuild: x,
-            confirmation: h,
-            confirmationLabel: g,
+            confirmation: g,
+            confirmationLabel: h,
             isModifyingSubscription: C,
             onConfirm: j,
             onCancel: f,
@@ -202,7 +202,7 @@ let J = (t) => {
         } = t,
         v = [
             { variant: "secondary", text: K.intl.string(K.t["ETE/oC"]), onClick: f, disabled: C },
-            { variant: "primary", text: h, onClick: j, loading: C, "aria-label": g },
+            { variant: "primary", text: g, onClick: j, loading: C, "aria-label": h },
         ];
     return (0, n.jsxs)(S.d, {
         transitionState: e,
@@ -210,8 +210,8 @@ let J = (t) => {
         size: "sm",
         "aria-label": i,
         children: [
-            (0, n.jsx)(N.rQ, { title: i }),
-            (0, n.jsx)(E.c, {
+            (0, n.jsx)(E.rQ, { title: i }),
+            (0, n.jsx)(N.c, {
                 children:
                     u && null != x
                         ? (0, n.jsx)(H, {
@@ -321,7 +321,12 @@ function ti(t) {
                 (0, n.jsxs)("div", {
                     className: tt.CR,
                     children: [
-                        (0, n.jsx)("div", { className: tt.J5, children: e.name }),
+                        (0, n.jsx)(d.E, {
+                            variant: "text-md/bold",
+                            color: "text-strong",
+                            className: tt.J5,
+                            children: e.name,
+                        }),
                         (0, n.jsxs)("div", {
                             className: tt.jp,
                             children: [
@@ -400,17 +405,17 @@ function tx(t) {
             onClose: m,
         } = t,
         x = s.length,
-        h = i.useMemo(
+        g = i.useMemo(
             () => s.reduce((t, e) => (t.hasOwnProperty(e.id) || (t[e.id] = []), t[e.id].push(e), t), {}),
             [s],
         ),
-        g = [{ variant: "primary", text: K.intl.string(K.t["PR0n//"]), onClick: u, loading: o, disabled: o }];
+        h = [{ variant: "primary", text: K.intl.string(K.t["PR0n//"]), onClick: u, loading: o, disabled: o }];
     return (0, n.jsxs)(X.k, {
         transitionState: e,
         onClose: m,
         graphic: tm,
         title: K.intl.string(K.t["PR0n//"]),
-        actions: g,
+        actions: h,
         children: [
             (0, n.jsx)(d.E, {
                 variant: "text-md/normal",
@@ -421,11 +426,11 @@ function tx(t) {
                 className: tu.bV,
                 children: K.intl.format(K.t["5zQYEz"], { guildCount: x ?? 0 }),
             }),
-            null != h
+            null != g
                 ? B.default
-                      .keys(h)
+                      .keys(g)
                       .map((t) =>
-                          (0, n.jsx)(ti, { className: tu.A, guild: h[t][0], subscriptionChange: -1 * h[t].length }, t),
+                          (0, n.jsx)(ti, { className: tu.A, guild: g[t][0], subscriptionChange: -1 * g[t].length }, t),
                       )
                 : null,
             (0, n.jsx)(d.E, {
@@ -443,39 +448,39 @@ function tx(t) {
         ],
     });
 }
-var th = l(285753),
-    tg = l(568065),
+var tg = l(285753),
+    th = l(568065),
     tC = l(700971);
 let tj = function (t) {
     let { guildBoostSlots: e, selectedGuild: l, locationSection: s, intent: f, transitionState: p, onClose: v } = t,
         S = (0, m.D)("ApplyGuildBoostModal"),
-        N = (0, j.D$)(g.A.boostSlots);
+        E = (0, j.D$)(h.A.boostSlots);
     r()(null != e || null != l, "Must either provide slots or an initial selected guild"),
         r()(!e?.some((t) => t.isOnCooldown()), "If slots are provided, they must not be on cooldown");
-    let E = [
+    let N = [
             null == e ? "UNUSED_QUANTITY_SELECT" : null,
             null == l ? "GUILD_SELECT" : null,
             "CONFIRM",
             "SUCCESS",
         ].filter((t) => null != t),
         [b, A] = (0, o.yK)([x.A], () => [x.A.isModifyingAppliedBoost, x.A.applyBoostError]),
-        [y, P] = i.useState(E[0]),
+        [y, P] = i.useState(N[0]),
         [T, M] = i.useState(!1),
         [w, I] = i.useState(l),
-        [U, k] = i.useState(e ?? N.slice(0, 1)),
+        [U, k] = i.useState(e ?? E.slice(0, 1)),
         _ = i.useMemo(
             () =>
                 null == U
                     ? []
                     : U.map((t) => {
                           let { premiumGuildSubscription: e } = t;
-                          return h.A.getGuild(e?.guildId);
+                          return g.A.getGuild(e?.guildId);
                       }).filter((t) => null != t),
             [U],
         ),
         R = i.useMemo(() => U?.[0]?.premiumGuildSubscription != null, [U]),
         G = "control" !== S && ("CONFIRM" === y || "SUCCESS" === y),
-        L = (0, th.A)(G);
+        L = (0, tg.A)(G);
     function F() {
         return (
             v("SUCCESS" === y),
@@ -491,7 +496,7 @@ let tj = function (t) {
     }, [s]);
     let D = {
         UNUSED_QUANTITY_SELECT: () => (
-            r()(null != e || 0 !== N.length, "Cannot provide no slots if there are no other available slots"),
+            r()(null != e || 0 !== E.length, "Cannot provide no slots if there are no other available slots"),
             (0, n.jsx)(a.Modal, {
                 transitionState: p,
                 onClose: F,
@@ -514,9 +519,9 @@ let tj = function (t) {
                             children: [
                                 (0, n.jsx)(c.l, {
                                     value: U.length,
-                                    onChange: (t) => k(N.slice(0, t)),
+                                    onChange: (t) => k(E.slice(0, t)),
                                     minValue: 1,
-                                    maxValue: N.length,
+                                    maxValue: E.length,
                                 }),
                                 (0, n.jsx)(d.E, {
                                     className: tC.v$,
@@ -544,7 +549,7 @@ let tj = function (t) {
             let t = U.filter((t) => (0, j.I5)(t)).length,
                 e = U.length,
                 l = _.length,
-                i = "CONFIRM" === E[0] ? F : () => P(E[E.indexOf(y) - 1]),
+                i = "CONFIRM" === N[0] ? F : () => P(N[N.indexOf(y) - 1]),
                 s = async () => {
                     if ((M(!1), null != w && U?.length !== 0)) {
                         r()(
@@ -564,7 +569,7 @@ let tj = function (t) {
                                         let { id: e } = t;
                                         return e;
                                     }),
-                                    f === tg.Pn.PERK,
+                                    f === th.Pn.PERK,
                                 ),
                                 P("SUCCESS");
                         } catch (t) {

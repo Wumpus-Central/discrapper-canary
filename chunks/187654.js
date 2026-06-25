@@ -228,47 +228,54 @@ function Y(e) {
         } = e,
         m = y.gs.useSetting(),
         E = (0, k.IL)(t),
-        x = s.useCallback((e) => {
+        A = s.useCallback((e) => {
             if (e === O.A.getChannelId()) return;
             let t = M.A.getChannel(e);
             null == t || ((U.A.can(q.xBc.VIEW_CHANNEL, t) || t.isPrivate()) && (0, P.iN)(t.id));
         }, []),
-        A = null != t ? (0, _.m1)(t, L.default, X.A, !1) : "???",
-        T = t?.parent_id != null ? M.A.getChannel(t.parent_id) : null,
-        N = null != T ? (0, _.m1)(T, L.default, X.A) : null,
-        S = (0, v.gU)(t) ?? C.N,
-        j = U.A.can(q.xBc.MANAGE_MESSAGES, t),
-        { content: R } = (0, D.Ay)({ content: A, embeds: [] }, { postProcessor: r }),
-        w = s.useRef(null),
-        [F, G] = s.useState(!1);
+        T = null != t ? (0, _.m1)(t, L.default, X.A, !1) : "???",
+        N = t?.parent_id != null ? M.A.getChannel(t.parent_id) : null,
+        S = null != N ? (0, _.m1)(N, L.default, X.A) : null,
+        j = (0, v.gU)(t) ?? C.N,
+        R = U.A.can(q.xBc.MANAGE_MESSAGES, t),
+        { content: w } = (0, D.Ay)({ content: T, embeds: [] }, { postProcessor: r }),
+        F = s.useRef(null),
+        [G, V] = s.useState(!1);
     s.useEffect(() => {
-        let e = w.current;
-        null != e && null != e.offsetWidth && null != e.scrollWidth && G(e.offsetWidth < e.scrollWidth);
+        let e = F.current;
+        null != e && null != e.offsetWidth && null != e.scrollWidth && V(e.offsetWidth < e.scrollWidth);
     }, []);
-    let V = [A, N].filter((e) => null != e).join(", ");
+    let $ = [T, S].filter((e) => null != e).join(", ");
     return (0, l.jsx)(b.Bs.Provider, {
-        value: (0, I.A)(m, j),
+        value: (0, I.A)(m, R),
         children: (0, l.jsxs)("ul", {
             role: "group",
             className: Q.JT,
-            "aria-label": V,
+            "aria-label": $,
             children: [
                 (0, l.jsx)(p.D, {
-                    onClick: () => x(t.id),
+                    onClick: () => A(t.id),
                     children: (0, l.jsxs)("div", {
                         className: Q.aT,
                         children: [
-                            (0, l.jsx)(S, { className: Q.er, size: "xs", color: "currentColor" }),
+                            (0, l.jsx)(j, { className: Q.er, size: "xs", color: "currentColor" }),
                             (0, l.jsx)("div", {
                                 className: Q.rm,
                                 children: (0, l.jsx)(g.m, {
                                     asContainer: !0,
-                                    text: A,
-                                    shouldShow: F,
-                                    children: (0, l.jsx)("span", { ref: w, className: Q.Kw, children: R }),
+                                    text: T,
+                                    shouldShow: G,
+                                    children: (0, l.jsx)(x.E, {
+                                        variant: "text-md/medium",
+                                        color: "text-strong",
+                                        tag: "span",
+                                        ref: F,
+                                        className: Q.Kw,
+                                        children: w,
+                                    }),
                                 }),
                             }),
-                            (0, l.jsx)(Z, { parentChannel: T, onSelectChannel: x }),
+                            (0, l.jsx)(Z, { parentChannel: N, onSelectChannel: A }),
                         ],
                     }),
                 }),

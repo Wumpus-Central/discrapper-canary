@@ -51,10 +51,7 @@
 }
 
 .value__3c20e {
-    color: var(--text-strong);
-    font-size: 14px;
-    font-variant-numeric: tabular-nums;
-    font-weight: 600
+    font-variant-numeric: tabular-nums
 }
 
 .canvas__3c20e {
@@ -224,9 +221,6 @@
 }
 
 .adapterName__3c20e {
-    color: var(--text-muted);
-    font-size: 10px;
-    font-weight: 600;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

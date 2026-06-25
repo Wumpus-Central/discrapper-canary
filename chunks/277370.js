@@ -181,7 +181,7 @@ var er = n(279208),
     eP = n(548118),
     ex = n(640708),
     ek = n(290863),
-    eU = n(973081);
+    eU = n(271385);
 function eG(e) {
     let {
             user: t,
@@ -299,7 +299,7 @@ function eB(e) {
     });
 }
 var ej = n(650583),
-    eH = n(426057);
+    eH = n(203785);
 let eY = (0, $.Ld)(),
     eW = { ADD_FRIENDS_TO_DM: "Add Friends to DM", NEW_GROUP_DM: "New Group DM", MEMBER_LIST: "Member List" };
 function eK(e) {
@@ -335,7 +335,13 @@ function eZ(e) {
             className: eH.us,
             children: [
                 (0, i.jsx)(E.eu, { src: (0, W.Y)(t), size: m._3.SIZE_24, "aria-label": r }),
-                (0, i.jsx)("span", { className: eH.J2, children: r }),
+                (0, i.jsx)(g.E, {
+                    variant: "text-sm/medium",
+                    color: "text-strong",
+                    tag: "span",
+                    className: eH.J2,
+                    children: r,
+                }),
                 (0, i.jsx)("span", { className: eH.Pd, children: o()(eS.default.extractTimestamp(s)).fromNow() }),
             ],
         }),

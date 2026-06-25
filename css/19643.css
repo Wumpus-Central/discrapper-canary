@@ -3,12 +3,9 @@
     border-bottom-color: var(--border-subtle);
     border-bottom: 1px solid var(--border-muted);
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
-    color: var(--text-strong);
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    font-size: 14px;
-    font-weight: var(--font-weight-medium);
     gap: 12px;
     margin: 0;
     padding: calc(var(--custom-guild-list-padding) - var(--custom-panels-spacing) + 4px)

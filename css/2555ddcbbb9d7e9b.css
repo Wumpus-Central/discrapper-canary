@@ -253,11 +253,7 @@
 }
 
 .guildName__7bc6f {
-    color: var(--text-strong);
     flex: 1;
-    font-size: 16px;
-    font-weight: var(--font-weight-bold);
-    line-height: 20px;
     margin-bottom: 8px
 }
 

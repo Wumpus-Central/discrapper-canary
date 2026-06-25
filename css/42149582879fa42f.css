@@ -27,10 +27,6 @@
 }
 
 .guildName_e7c728 {
-    color: var(--text-strong);
-    font-size: 16px;
-    font-weight: var(--font-weight-semibold);
-    line-height: 20px;
     margin-inline-end: 4px;
     overflow: hidden;
     text-overflow: ellipsis;

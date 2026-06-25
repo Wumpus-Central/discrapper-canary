@@ -347,9 +347,6 @@
 
 .header__24091 {
     background-color: var(--background-base-lower);
-    color: var(--text-default);
-    font-size: 14px;
-    font-weight: var(--font-weight-semibold);
     padding: 12px;
     text-align: center;
     text-transform: uppercase

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { d5: () => G, Ay: () => F, uG: () => k });
+n.d(t, { d5: () => F, Ay: () => V, uG: () => U });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -27,44 +27,45 @@ class u {
 var c = n(803805),
     d = n(661531),
     _ = n(939249),
-    h = n(825484),
-    f = n(821609),
-    p = n(27232),
-    E = n(364522),
-    m = n(92008),
-    g = n(497685),
-    A = n(25277),
-    I = n(537652),
-    T = n(267102),
-    S = n(202803),
-    y = n(439401),
-    C = n(998218),
-    N = n(327143),
-    v = n(652215),
-    R = n(375708),
-    O = n(52510);
-let b = [d.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
-    D = Array.from({ length: 16 }).map((e, t) => ({ id: `${t}`, height: Math.floor(100 * Math.random()) + 120 }));
-function L(e) {
+    h = n(834730),
+    f = n(825484),
+    p = n(821609),
+    E = n(27232),
+    m = n(364522),
+    g = n(92008),
+    A = n(497685),
+    I = n(25277),
+    T = n(537652),
+    S = n(267102),
+    y = n(202803),
+    C = n(439401),
+    N = n(998218),
+    v = n(327143),
+    R = n(652215),
+    O = n(375708),
+    b = n(52510);
+let D = [d.A.unsafe_rawColors.PREMIUM_TIER_1_PURPLE.css, d.A.unsafe_rawColors.PREMIUM_TIER_1_BLUE.css, "#929AFA"],
+    L = Array.from({ length: 16 }).map((e, t) => ({ id: `${t}`, height: Math.floor(100 * Math.random()) + 120 }));
+function w(e) {
     return e.id ?? e.src;
 }
-function w(e, t) {
-    let n = D[t];
+function M(e, t) {
+    let n = L[t];
     return null == n ? 0 : n.height;
 }
-function M(e, t, n, r) {
+function P(e, t, n, r) {
     if (!(e > 0))
-        return null == D[t]
+        return null == L[t]
             ? null
-            : (0, i.jsx)("div", { className: O.qf, style: { animationDelay: `${75 * t}ms`, ...n } }, r);
+            : (0, i.jsx)("div", { className: b.qf, style: { animationDelay: `${75 * t}ms`, ...n } }, r);
 }
-function P(e, t) {
-    return e > 0 ? "" : (D[t]?.id ?? "");
+function x(e, t) {
+    return e > 0 ? "" : (L[t]?.id ?? "");
 }
-function x(e) {
+function k(e) {
     return e === c.TL.VIDEO;
 }
-class k extends r.PureComponent {
+class U extends r.PureComponent {
     ref = null;
     _video = null;
     _image = null;
@@ -72,8 +73,8 @@ class k extends r.PureComponent {
     constructor(e) {
         super(e);
         const { format: t, color: n, imagePool: i } = this.props;
-        (this.state = { color: null == n ? l().sample(b) : n, loaded: !1 }),
-            x(t) ||
+        (this.state = { color: null == n ? l().sample(D) : n, loaded: !1 }),
+            k(t) ||
                 ((this._image = i.getElement()),
                 (this._image.onload = () => this.setState({ loaded: !0 })),
                 (this._image.src = e.src));
@@ -128,11 +129,11 @@ class k extends r.PureComponent {
             ? (0, i.jsx)("img", {
                   src:
                       ((t =
-                          null != (e = C.A.toURLSafe(n)) &&
-                          ((0, S.BX)(e) || (0, S.fr)(e)) &&
+                          null != (e = N.A.toURLSafe(n)) &&
+                          ((0, y.BX)(e) || (0, y.fr)(e)) &&
                           e.pathname.toLowerCase().endsWith(".gif")),
                       null != e &&
-                      ((((0, S.BX)(e) || (0, S.fr)(e)) &&
+                      ((((0, y.BX)(e) || (0, y.fr)(e)) &&
                           (e.pathname.toLowerCase().endsWith(".webp") || e.pathname.toLowerCase().endsWith(".avif"))) ||
                           t)
                           ? (t && e.searchParams.set("format", "webp"),
@@ -141,7 +142,7 @@ class k extends r.PureComponent {
                           : n),
                   width: r,
                   height: s,
-                  className: O.nX,
+                  className: b.nX,
                   alt: "",
               })
             : null;
@@ -155,22 +156,22 @@ class k extends r.PureComponent {
             innerRef: (e) => {
                 this.ref = e;
             },
-            className: O.Ke,
+            className: b.Ke,
             "data-focused": s,
             "data-selected": a,
             onClick: this.handleClick,
             style: { backgroundColor: u ? void 0 : l, ...r },
-            children: [x(n) ? null : this.renderGIF(), null != t ? t(e) : null],
+            children: [k(n) ? null : this.renderGIF(), null != t ? t(e) : null],
         });
     }
 }
-class U extends r.PureComponent {
+class G extends r.PureComponent {
     _masonryRef = r.createRef();
     prevResultQuery = null;
     state = { focusedId: null };
     componentDidMount() {
         let { resultType: e, data: t } = this.props;
-        e === v.dD.FAVORITES && ((0, g.Qh)(v.dD.FAVORITES), (0, g.H9)(t, v.dD.FAVORITES, { limit: null }));
+        e === R.dD.FAVORITES && ((0, A.Qh)(R.dD.FAVORITES), (0, A.H9)(t, R.dD.FAVORITES, { limit: null }));
     }
     handleFocus = (e) => {
         let { current: t } = this._masonryRef;
@@ -182,7 +183,7 @@ class U extends r.PureComponent {
     selectItem(e, t) {
         let { onSelectGIF: n, resultType: i, data: r, resultQuery: s } = this.props;
         null != n && n(e),
-            (0, g.g4)({
+            (0, A.g4)({
                 type: i,
                 index: t,
                 offset: this.props.searchOffset,
@@ -196,7 +197,7 @@ class U extends r.PureComponent {
     handleSelect = (e) => {
         let t,
             { data: n } = this.props,
-            i = n.findIndex((t) => L(t) === e);
+            i = n.findIndex((t) => w(t) === e);
         -1 !== i && (t = n[i]), null != t && this.selectItem(t, i);
     };
     handleClickItem = (e, t) => {
@@ -207,7 +208,7 @@ class U extends r.PureComponent {
             { current: t } = this._masonryRef;
         if (null == t) return;
         let { scrollTop: n, scrollHeight: i } = t.getScrollerState();
-        i - n <= 1220 && (e !== this.prevResultQuery && (0, g._E)(e), (this.prevResultQuery = e));
+        i - n <= 1220 && (e !== this.prevResultQuery && (0, A._E)(e), (this.prevResultQuery = e));
     };
     renderItem = (e, t, n, r) => {
         var s;
@@ -217,9 +218,9 @@ class U extends r.PureComponent {
             { selectedGIF: u } = this.props,
             c = this.props.data[t];
         if (null == c) return null;
-        let d = null != u && L(u) === L(c);
+        let d = null != u && w(u) === w(c);
         return (0, i.jsx)(
-            k,
+            U,
             {
                 item: c,
                 index: t,
@@ -227,8 +228,8 @@ class U extends r.PureComponent {
                 src: c.src,
                 coords: n,
                 onClick: this.handleClickItem,
-                renderExtras: () => (0, i.jsx)(y.A, { className: O.uJ, ...c }),
-                focused: L(c) === l,
+                renderExtras: () => (0, i.jsx)(C.A, { className: b.uJ, ...c }),
+                focused: w(c) === l,
                 imagePool: this.props.imagePool,
                 videoPool: this.props.videoPool,
                 selected: d,
@@ -241,7 +242,7 @@ class U extends r.PureComponent {
                     (o.length >= 8 && /^[0-9a-f]+$/i.test(o)) ||
                     (o.length > 12 && !/[-_ ]/.test(o) && /\d/.test(o)) ||
                     /^(giphy|tenor|\d+[wh]?|xs|sm|md|lg|xl)$/i.test(o)
-                        ? R.intl.formatToPlainString(R.t["5iIGZI"], { index: t + 1 })
+                        ? O.intl.formatToPlainString(O.t["5iIGZI"], { index: t + 1 })
                         : o),
             },
             r,
@@ -266,19 +267,24 @@ class U extends r.PureComponent {
             ? (0, i.jsx)(
                   "div",
                   {
-                      className: O.jZ,
+                      className: b.jZ,
                       style: t,
                       children:
                           a.length > 0
                               ? (0, i.jsxs)(r.Fragment, {
                                     children: [
-                                        (0, i.jsx)("div", { className: O.Z4, children: R.intl.string(R.t["3JGJo2"]) }),
-                                        (0, i.jsx)(h.e, {
+                                        (0, i.jsx)(h.E, {
+                                            variant: "text-md/medium",
+                                            color: "text-feedback-warning",
+                                            className: b.Z4,
+                                            children: O.intl.string(O.t["3JGJo2"]),
+                                        }),
+                                        (0, i.jsx)(f.e, {
                                             size: "sm",
-                                            className: O.yB,
+                                            className: b.yB,
                                             children: a.map((e) =>
                                                 (0, i.jsx)(
-                                                    f.$,
+                                                    p.$,
                                                     {
                                                         variant: "secondary",
                                                         onClick: () => {
@@ -301,66 +307,66 @@ class U extends r.PureComponent {
     renderEmptyFavorite(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         return (0, i.jsx)("div", {
-            className: O.LA,
+            className: b.LA,
             children:
                 null != e
                     ? (0, i.jsxs)("div", {
-                          className: O.BA,
+                          className: b.BA,
                           children: [
-                              t ? (0, i.jsx)(p.G, { size: "xs", color: "currentColor", className: O.$2 }) : null,
-                              (0, i.jsx)("div", { className: O.i6, children: e }),
+                              t ? (0, i.jsx)(E.G, { size: "xs", color: "currentColor", className: b.$2 }) : null,
+                              (0, i.jsx)("div", { className: b.i6, children: e }),
                           ],
                       })
-                    : (0, i.jsx)("div", { className: O.Hc }),
+                    : (0, i.jsx)("div", { className: b.Hc }),
         });
     }
     renderEmptyFavorites() {
-        return (0, i.jsx)(E.Ip, {
-            className: O.Xv,
+        return (0, i.jsx)(m.Ip, {
+            className: b.Xv,
             fade: !0,
             children: (0, i.jsxs)("div", {
-                className: O.Ep,
+                className: b.Ep,
                 children: [
-                    this.renderEmptyFavorite(R.intl.string(R.t["3gyw4Z"]), !0),
-                    this.renderEmptyFavorite(R.intl.string(R.t.yThUi4)),
-                    this.renderEmptyFavorite(R.intl.string(R.t.MeP0SF)),
+                    this.renderEmptyFavorite(O.intl.string(O.t["3gyw4Z"]), !0),
+                    this.renderEmptyFavorite(O.intl.string(O.t.yThUi4)),
+                    this.renderEmptyFavorite(O.intl.string(O.t.MeP0SF)),
                     Array.from({ length: 15 }).map((e, t) =>
                         (0, i.jsx)(r.Fragment, { children: this.renderEmptyFavorite() }, t),
                     ),
-                    this.renderEmptyFavorite(R.intl.string(R.t["5u99Xb"])),
+                    this.renderEmptyFavorite(O.intl.string(O.t["5u99Xb"])),
                     Array.from({ length: 16 }).map((e, t) =>
                         (0, i.jsx)(r.Fragment, { children: this.renderEmptyFavorite() }, t),
                     ),
-                    this.renderEmptyFavorite(R.intl.string(R.t.o6CLL4)),
+                    this.renderEmptyFavorite(O.intl.string(O.t.o6CLL4)),
                 ],
             }),
         });
     }
     renderContent = (e, t, n) => {
         let { className: r, data: s, resultQuery: o, query: l, resultType: u } = this.props;
-        return 0 === s.length && (o !== l || u === v.dD.TRENDING_GIFS)
+        return 0 === s.length && (o !== l || u === R.dD.TRENDING_GIFS)
             ? (0, i.jsx)(
-                  m.f,
+                  g.f,
                   {
                       fade: !0,
-                      className: a()(O.Xv, r),
-                      sections: [D.length],
+                      className: a()(b.Xv, r),
+                      sections: [L.length],
                       columns: e,
                       itemGutter: 12,
-                      getItemKey: P,
-                      getItemHeight: w,
-                      renderItem: M,
+                      getItemKey: x,
+                      getItemHeight: M,
+                      renderItem: P,
                       chunkSize: 128,
                   },
                   o,
               )
             : (0, i.jsx)(
-                  m.f,
+                  g.f,
                   {
                       ref: this._masonryRef,
                       fade: !0,
                       itemGutter: 12,
-                      className: a()(O.Xv, r),
+                      className: a()(b.Xv, r),
                       columns: e,
                       sections: [s.length, 0],
                       getItemKey: this.getItemKey,
@@ -384,25 +390,25 @@ class U extends r.PureComponent {
     };
     render() {
         let { data: e, resultQuery: t, query: n, resultType: r } = this.props;
-        return 0 === e.length && t === n && r !== v.dD.TRENDING_GIFS
-            ? r === v.dD.FAVORITES
+        return 0 === e.length && t === n && r !== R.dD.TRENDING_GIFS
+            ? r === R.dD.FAVORITES
                 ? this.renderEmptyFavorites()
-                : (0, i.jsx)(I.A, { message: R.intl.string(R.t["5dX4UM"]), className: O.wV })
+                : (0, i.jsx)(T.A, { message: O.intl.string(O.t["5dX4UM"]), className: b.wV })
             : (0, i.jsx)(
-                  A.A,
+                  I.A,
                   {
                       getItemGrid: this.getItemGrid,
                       getCoordsMap: this.getCoordsMap,
                       onFocus: this.handleFocus,
                       onSelect: this.handleSelect,
-                      children: (0, i.jsx)(N.A, { desiredItemWidth: 200, maxColumns: 8, children: this.renderContent }),
+                      children: (0, i.jsx)(v.A, { desiredItemWidth: 200, maxColumns: 8, children: this.renderContent }),
                   },
                   t,
               );
     }
 }
-function G() {
-    let { renderWindow: e } = r.useContext(T.Ay),
+function F() {
+    let { renderWindow: e } = r.useContext(S.Ay),
         t = e.document,
         [n] = r.useState(
             () =>
@@ -419,7 +425,7 @@ function G() {
                     () => {
                         let e = t.createElement("video");
                         return (
-                            (e.className = O.nX),
+                            (e.className = b.nX),
                             (e.autoplay = !0),
                             (e.loop = !0),
                             (e.muted = !0),
@@ -437,7 +443,7 @@ function G() {
         );
     return { imagePool: n, videoPool: i };
 }
-let F = function (e) {
-    let t = G();
-    return (0, i.jsx)(U, { ...e, ...t });
+let V = function (e) {
+    let t = F();
+    return (0, i.jsx)(G, { ...e, ...t });
 };

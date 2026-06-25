@@ -297,17 +297,14 @@
     padding: 8px
 }
 
-.confirmChannelName_cba592 {
-    color: var(--text-strong);
-    font-size: 14px;
-    font-weight: var(--font-weight-medium);
+.confirmChannelName_cba592,
+.lastActiveTimestamp_cba592 {
     margin-inline-start: 8px
 }
 
 .lastActiveTimestamp_cba592 {
     color: var(--text-muted);
     font-size: 12px;
-    margin-inline-start: 8px;
     margin-top: 2px
 }
 

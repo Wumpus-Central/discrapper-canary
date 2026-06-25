@@ -19066,7 +19066,13 @@ function hY(e) {
         className: hz.b6,
         children: [
             (0, p.jsx)(hb.R, { className: hz.m4, color: t, colors: null }),
-            (0, p.jsx)("span", { className: hz.yj, children: n }),
+            (0, p.jsx)(G.E, {
+                variant: "text-sm/semibold",
+                color: "interactive-text-active",
+                tag: "span",
+                className: hz.yj,
+                children: n,
+            }),
         ],
     });
 }

@@ -108,11 +108,7 @@
 }
 
 .channelNameText_a7e67f {
-    color: var(--text-strong);
     display: block;
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    line-height: 20px;
     min-width: 0;
     overflow: hidden;
     text-overflow: ellipsis;

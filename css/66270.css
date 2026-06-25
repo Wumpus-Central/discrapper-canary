@@ -24,10 +24,6 @@
 }
 
 .refreshDescription__390b6 {
-    color: var(--text-subtle);
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    line-height: 20px;
     margin-bottom: var(--space-24)
 }
 
@@ -203,13 +199,6 @@
     width: 24px
 }
 
-.perkDescription_c609c8 {
-    color: var(--interactive-text-active);
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    line-height: 20px
-}
-
 .closeButton__2d726 {
     inset-inline-end: 4px;
     position: absolute;
@@ -233,13 +222,6 @@
     position: absolute;
     top: 20px;
     transform: translateX(-50%)
-}
-
-.bodyText__2d726 {
-    color: var(--interactive-text-default);
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    line-height: 20px
 }
 
 .perksList__2d726 {

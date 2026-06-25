@@ -397,11 +397,7 @@
 .premiumRetentionNotice_a606ef {
     background-color: var(--background-base-lowest);
     border-radius: 4px;
-    color: var(--text-default);
     display: flex;
-    font-size: 12px;
-    font-weight: var(--font-weight-medium);
-    line-height: 16px;
     margin: 8px 8px 0;
     padding: 8px
 }

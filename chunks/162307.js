@@ -746,7 +746,11 @@ function tI(e) {
             (0, r.jsxs)("div", {
                 className: tl.mP,
                 children: [
-                    (0, r.jsx)("div", { className: tl.xp, children: el.intl.string(el.t.RtA7nR) }),
+                    (0, r.jsx)(eL.E, {
+                        variant: "text-md/semibold",
+                        color: "interactive-text-active",
+                        children: el.intl.string(el.t.RtA7nR),
+                    }),
                     (0, r.jsx)("div", {
                         className: eN()(tl.__invalid_planSelectorSubtotalPrice, { [tl.S]: t }),
                         children: l,
@@ -975,7 +979,12 @@ function ty(e) {
                 Y =
                     U && null != l
                         ? (0, r.jsx)(td, { text: tc(l.currentPeriodEnd), className: tl.jk })
-                        : (0, r.jsx)("div", { className: tp._X, children: el.intl.string(el.t.jNY1FO) }),
+                        : (0, r.jsx)(eL.E, {
+                              variant: "text-md/medium",
+                              color: "text-subtle",
+                              className: tp._X,
+                              children: el.intl.string(el.t.jNY1FO),
+                          }),
                 W = G.showExistingSlotNotice
                     ? (0, r.jsx)(tS, { existingAvailableSlots: c, canceledCount: F, premiumSubscription: l })
                     : null,
@@ -1276,8 +1285,9 @@ function tG(e) {
                     children: [
                         A && (0, r.jsx)(tP.Vq, { className: tk.Fg }),
                         (0, r.jsx)("div", { className: eN()(tk.Tn, { [tk.NH]: A }) }),
-                        (0, r.jsx)("div", {
-                            className: tk.G3,
+                        (0, r.jsx)(eL.E, {
+                            variant: "text-md/medium",
+                            color: "interactive-text-default",
                             children:
                                 null != g
                                     ? el.intl.string(el.t.AoSzEr)

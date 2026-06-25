@@ -6,7 +6,6 @@ e.exports = {
     $0: "planSelectorLabel__945b8",
     QK: "planSelectorPreviewPrice__945b8",
     J3: "planSelectDivider__945b8",
-    xp: "planSelectorSubtotal__945b8",
     RP: "confirmationContainer__945b8",
     ud: "confirmationAnimation__945b8",
     xR: "confirmationText__945b8",

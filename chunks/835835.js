@@ -2,9 +2,9 @@ n.d(l, { Ay: () => R, Y9: () => B, u9: () => D }), n(321073);
 var s = n(627968),
     t = n(64700),
     i = n(503698),
-    r = n.n(i),
-    a = n(735438),
-    c = n.n(a),
+    a = n.n(i),
+    r = n(735438),
+    c = n.n(r),
     u = n(837381),
     o = n(17928),
     d = n(661531),
@@ -12,11 +12,11 @@ var s = n(627968),
     m = n(821609),
     j = n(408278),
     p = n(789645),
-    g = n(289873),
-    x = n(707554),
+    x = n(289873),
+    g = n(707554),
     C = n(689175),
-    N = n(493336),
-    f = n(928039),
+    f = n(493336),
+    N = n(928039),
     A = n(12351),
     v = n(976860),
     b = n(734057),
@@ -30,14 +30,14 @@ var s = n(627968),
     L = n(636922),
     G = n(652215),
     w = n(375708),
-    M = n(251066);
+    M = n(357050);
 function O(e) {
     e.stopPropagation();
 }
 function B(e) {
     let { title: l, icon: n, children: t, className: i } = e;
     return (0, s.jsxs)("div", {
-        className: r()(i, M.wx),
+        className: a()(i, M.wx),
         children: [
             (0, s.jsxs)("div", {
                 className: M.gn,
@@ -62,7 +62,7 @@ function D(e) {
         className: M.zC,
         children: [
             (0, s.jsx)("div", { className: M.Sl, style: { backgroundImage: `url(${n})` } }),
-            (0, s.jsx)("div", { className: M.rf, children: l }),
+            (0, s.jsx)(h.E, { variant: "text-md/medium", color: "text-default", className: M.rf, children: l }),
         ],
     });
 }
@@ -122,18 +122,18 @@ function H(e) {
             analyticsName: l,
             items: n,
             hasMore: i,
-            loading: a,
+            loading: r,
             loadMore: d,
             renderHeader: h,
             renderEmptyState: j,
             renderItem: p,
-            getProTip: N,
+            getProTip: f,
             scrollerClassName: v,
             className: b,
             listName: P,
         } = e,
         k = t.useRef(null),
-        T = (0, f.A)(P, k),
+        T = (0, N.A)(P, k),
         L = (0, o.bG)([_.Ay], () => _.Ay.hasNotice()),
         B = (0, o.bG)([E.A], () => E.A.windowSize());
     t.useEffect(() => {
@@ -156,12 +156,12 @@ function H(e) {
         }, []);
     let D = t.useCallback(() => {
             let e = k.current?.getScrollerState();
-            null != e && e.scrollHeight - e.scrollTop - e.offsetHeight < 250 && i && !a && d?.();
-        }, [i, d, a]),
+            null != e && e.scrollHeight - e.scrollTop - e.offsetHeight < 250 && i && !r && d?.();
+        }, [i, d, r]),
         I = [],
         U = !0;
-    null == n || (a && 0 === n.length)
-        ? (I = [(0, s.jsx)("div", { className: r()(M.zC, M.k$), children: (0, s.jsx)(g.y, {}) }, "spinner")])
+    null == n || (r && 0 === n.length)
+        ? (I = [(0, s.jsx)("div", { className: a()(M.zC, M.k$), children: (0, s.jsx)(x.y, {}) }, "spinner")])
         : 0 === n.length
           ? I.push((0, s.jsx)(t.Fragment, { children: j() }, "empty-state"))
           : ((U = !1),
@@ -173,8 +173,8 @@ function H(e) {
     null != n &&
         n.length > 0 &&
         null != d &&
-        (H = a
-            ? (0, s.jsx)("div", { className: M.sw, children: (0, s.jsx)(g.y, {}) }, "loading-more-after")
+        (H = r
+            ? (0, s.jsx)("div", { className: M.sw, children: (0, s.jsx)(x.y, {}) }, "loading-more-after")
             : i
               ? (0, s.jsx)("div", {
                     className: M.u9,
@@ -187,7 +187,7 @@ function H(e) {
                     }),
                 })
               : (0, s.jsx)("div", { className: M.lJ, children: j() }));
-    let R = N?.(),
+    let R = f?.(),
         z =
             U && null != R
                 ? (0, s.jsx)("div", {
@@ -202,12 +202,12 @@ function H(e) {
     L && (J.maxHeight -= 40);
     let W = null != d && i;
     return (0, s.jsx)("div", {
-        className: r()(M.KQ, b ?? M.G6),
+        className: a()(M.KQ, b ?? M.G6),
         style: J,
         onClick: O,
         onDoubleClick: O,
         "aria-label": e["aria-label"],
-        children: (0, s.jsxs)(x.F, {
+        children: (0, s.jsxs)(g.F, {
             component: h(),
             children: [
                 (0, s.jsxs)(C.Ch, {
@@ -237,8 +237,8 @@ function R(e) {
             analyticsName: l,
             onFetch: n,
             channel: i,
-            messages: r,
-            hasMore: a,
+            messages: a,
+            hasMore: r,
             loading: c,
             loadMore: u,
             onJump: d,
@@ -246,10 +246,10 @@ function R(e) {
             renderHeader: m,
             renderEmptyState: j,
             renderMessage: p,
-            getProTip: g,
-            scrollerClassName: x,
+            getProTip: x,
+            scrollerClassName: g,
             className: C,
-            onCloseMessage: f,
+            onCloseMessage: N,
             listName: A,
             closeAriaLabel: k,
         } = e,
@@ -261,25 +261,25 @@ function R(e) {
         function s() {
             let { id: s, channel_id: t } = e,
                 i = b.A.getChannel(t);
-            null != i && (N.A.trackJump(t, s, l), (0, v.pX)(G.BVt.CHANNEL(i.getGuildId(), t, s))), d?.(n);
+            null != i && (f.A.trackJump(t, s, l), (0, v.pX)(G.BVt.CHANNEL(i.getGuildId(), t, s))), d?.(n);
         }
         (0, T.A)(e, s) && !_ && s();
     }
     t.useEffect(() => {
         n(i);
     }, [i, n]);
-    let y = t.useMemo(() => r?.map((e) => ({ message: e, channel: i })), [r, i]);
+    let y = t.useMemo(() => a?.map((e) => ({ message: e, channel: i })), [a, i]);
     return (0, s.jsx)(H, {
         className: C,
-        scrollerClassName: x,
+        scrollerClassName: g,
         items: y,
         loading: c,
         analyticsName: l,
         renderEmptyState: j,
         renderHeader: m,
-        hasMore: a,
+        hasMore: r,
         loadMore: u,
-        getProTip: g,
+        getProTip: x,
         renderItem: function (e) {
             let { message: l, channel: n } = e;
             if (null == l) return [];
@@ -300,7 +300,7 @@ function R(e) {
                                       jumping: _,
                                       canCloseAllMessages: h,
                                       jumpTo: E,
-                                      onCloseMessage: f,
+                                      onCloseMessage: N,
                                       closeAriaLabel: k,
                                   }),
                               ],

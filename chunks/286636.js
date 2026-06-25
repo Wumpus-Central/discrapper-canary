@@ -3,7 +3,6 @@ e.exports = {
     Tn: "upsellImage__2d726",
     NH: "upsellImageWithTrialOffer__2d726",
     Fg: "premiumTrialBadge__2d726",
-    G3: "bodyText__2d726",
     mH: "perksList__2d726",
     pl: "perkIconGuild__2d726",
     $z: "perkIconUpload__2d726",

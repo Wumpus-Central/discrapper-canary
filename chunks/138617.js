@@ -799,7 +799,12 @@ function tm(e) {
             (0, i.jsxs)("div", {
                 className: tE.iz,
                 children: [
-                    (0, i.jsx)("span", { className: tE.UU, children: t }),
+                    (0, i.jsx)(e0.E, {
+                        variant: "text-md/semibold",
+                        color: "interactive-text-active",
+                        tag: "span",
+                        children: t,
+                    }),
                     null != o
                         ? (0, i.jsx)("span", { className: tE.z3, children: o })
                         : (0, i.jsx)("span", { className: tE.h_, children: s }),

@@ -2865,7 +2865,13 @@ function l$(e) {
                             className: lX.kq,
                             children: [
                                 (0, s.jsx)(lD.A, { children: J.intl.string(J.t["7Xm5QI"]) }),
-                                (0, s.jsx)("span", { className: lX.UU, children: m }),
+                                (0, s.jsx)(p.E, {
+                                    variant: "text-sm/semibold",
+                                    color: "text-strong",
+                                    tag: "span",
+                                    className: lX.UU,
+                                    children: m,
+                                }),
                                 (0, s.jsx)("span", {
                                     className: lX.lO,
                                     "aria-hidden": !A,

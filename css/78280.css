@@ -254,12 +254,8 @@
 }
 
 .guildTooltipWrapper_b1f768 {
-    font-size: 16px;
-    font-weight: var(--font-weight-semibold);
-    line-height: 20px;
     max-width: 196px;
     word-wrap: break-word;
-    color: var(--text-default);
     pointer-events: none;
     text-align: start
 }

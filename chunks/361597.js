@@ -28,13 +28,13 @@ var i = n(627968),
     A = n(398590),
     I = n(793574),
     T = n(688810),
-    S = n(85829),
+    S = n(63152),
     y = n(663066),
     C = n(976860),
     N = n(662388),
     v = n(652215),
     R = n(375708),
-    O = n(456508);
+    O = n(199996);
 let b = function (e) {
     let { onClose: t } = e,
         { analyticsLocations: n } = (0, T.Ay)();
@@ -84,7 +84,7 @@ var D = n(937008),
     Z = n(788868);
 n(26279);
 var X = n(818348),
-    Q = n(345138);
+    Q = n(521906);
 function J(e, t) {
     let { isEligibleForBOGOPromotion: n } = t;
     return null != e && !n;
@@ -524,7 +524,14 @@ function ec(e) {
                     trialPeriod: T ? j : void 0,
                     trialEnd: T ? o : void 0,
                 }),
-            ei && !q && (0, i.jsx)("div", { className: Q.G3, children: ee(m, h) }),
+            ei &&
+                !q &&
+                (0, i.jsx)(d.E, {
+                    variant: "text-md/medium",
+                    color: "interactive-text-default",
+                    className: Q.G3,
+                    children: ee(m, h),
+                }),
             et &&
                 ((e, t, r) => {
                     if (!w)

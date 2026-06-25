@@ -643,13 +643,9 @@
 }
 
 .bodyText_d947e6 {
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
-    line-height: 20px;
     margin-bottom: 16px
 }
 
-.bodyText_d947e6,
 .interactiveColor_d947e6 {
     color: var(--interactive-text-default)
 }
