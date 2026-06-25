@@ -13,7 +13,7 @@ var i = n(627968),
 function h(e) {
     let { application: t, analyticsLocations: n, onAction: h, onClose: f } = e,
         { themeType: p } = (0, u.E)(),
-        E = (0, o.A)({ application: t, analyticsLocations: n });
+        E = (0, o.Ay)({ application: t, analyticsLocations: n });
     return ((0, l.A)(
         { name: r.ImpressionNames.CLOUD_PLAY_CTA, type: r.ImpressionTypes.VIEW, properties: { location_stack: n } },
         { disableTrack: null == E },

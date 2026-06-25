@@ -293,7 +293,7 @@ function eU(e) {
     let { user: t, activity: n, onAction: r, onClose: s, application: a, containerClassName: o } = e,
         { themeType: l } = (0, L.E)(),
         u = (0, M.bG)([K.default], () => K.default.getId() === t.id),
-        c = (0, V.J)(a),
+        c = (0, V.JC)(a),
         d = (0, J.o)(n?.application_id ?? a?.id) || (0, P.A)(n, eT.jUm.SUPPORTS_JOIN_URL),
         { analyticsLocations: h } = (0, E.Ay)(p.A.USER_PROFILE_ACTIVITY_BUTTONS),
         m = (0, F.A)(n?.application_id),

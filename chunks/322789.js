@@ -39,7 +39,7 @@ let v = [A.iq, A.Zc, A.Xy, A.$X, A.tR, A.K7, A.fg, A.sp, A.MK],
                 trackingSource: "memberlist_gaming_content_row",
             }),
             { data: L } = (0, _.YY)(t.extra.application_id),
-            w = (0, d.J)(L) && O,
+            w = (0, d.JC)(L) && O,
             M = w ? [a.M.CLOUD_PLAY_NEW_BADGE] : [],
             [P] = (0, h.kn)(M);
         return (0, i.jsxs)(I.Zp, {

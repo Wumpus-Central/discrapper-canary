@@ -21,7 +21,7 @@ function I(e) {
     let { applicationId: t, onAction: n, onClose: I, activity: T } = e,
         { analyticsLocations: S } = (0, c.Ay)(u.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
         { data: y } = (0, d.YY)(t),
-        C = (0, l.J)(y),
+        C = (0, l.JC)(y),
         { themeType: N } = (0, p.E)(),
         v = N === m.d.MODAL || N === m.d.MODAL_V2,
         R = (0, h.o)(T?.application_id ?? t),
