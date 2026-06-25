@@ -136,6 +136,10 @@
     min-height: var(--space-32)
 }
 
+.captionLiveRegion__011b7 {
+    display: contents
+}
+
 .buttonSizer__011b7 {
     position: absolute;
     visibility: hidden

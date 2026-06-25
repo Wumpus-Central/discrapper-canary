@@ -90,7 +90,7 @@ function R(e) {
         ],
     });
 }
-var O = n(941327),
+var O = n(472444),
     b = n(763827),
     D = n(174459),
     L = n(652215),
@@ -175,11 +175,16 @@ class P extends s.PureComponent {
             { isMicTesting: n, isDetectingInput: i } = this.state;
         return null == e && null == t
             ? null
-            : (0, r.jsx)(f.E, {
-                  variant: "text-xs/normal",
-                  color: "text-subtle",
-                  className: M.Qe,
-                  children: n ? (i ? e : t) : void 0,
+            : (0, r.jsx)("span", {
+                  "aria-live": "polite",
+                  "aria-atomic": "true",
+                  className: M.b_,
+                  children: (0, r.jsx)(f.E, {
+                      variant: "text-xs/normal",
+                      color: "text-subtle",
+                      className: M.Qe,
+                      children: n ? (i ? e : t) : void 0,
+                  }),
               });
     }
     render() {

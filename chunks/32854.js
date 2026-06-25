@@ -4,5 +4,6 @@ e.exports = {
     EX: "small__011b7",
     mi: "meterOnly__011b7",
     Qe: "micTestCaption__011b7",
+    b_: "captionLiveRegion__011b7",
     km: "buttonSizer__011b7",
 };
