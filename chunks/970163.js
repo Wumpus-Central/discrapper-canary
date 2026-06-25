@@ -28,23 +28,22 @@ function h(e) {
 }
 let f = new Map();
 function p(e, t, n) {
-    if (
-        (o.default.track(_.HAw.INVITE_OPENED, { invite_code: e, invite_instance_id: n?.inviteInstanceId ?? null }),
-        f.has(e))
-    )
+    let { baseCode: c, targetChannelId: d, targetMessageId: p, guildScheduledEventId: E } = (0, u.y$)(e);
+    if ((o.default.track(_.HAw.INVITE_OPENED, { invite_code: c, invite_instance_id: n?.inviteInstanceId }), f.has(e)))
         return f.get(e);
-    let c = (0, u.y$)(e),
-        d = {
+    let m = {
             inputValue: n?.inputValue,
             with_counts: !0,
             with_expiration: !0,
-            guild_scheduled_event_id: c.guildScheduledEventId,
+            guild_scheduled_event_id: E,
+            target_channel_id: d,
+            target_message_id: p,
             with_permissions: !0,
             with_games: !!n?.withGames || void 0,
         },
-        p = l.A.get({
-            url: _.Rsh.INVITE(c.baseCode),
-            query: d,
+        g = l.A.get({
+            url: _.Rsh.INVITE(c),
+            query: m,
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.INVITE_RESOLVE,
@@ -57,7 +56,7 @@ function p(e, t, n) {
                         channel_id: i?.channel?.id,
                         channel_type: i?.channel?.type,
                         inviter_id: i?.inviter?.id,
-                        code: c.baseCode,
+                        code: c,
                         input_value: n?.inputValue,
                         location: t,
                         authenticated: s.default.isAuthenticated(),
@@ -85,7 +84,7 @@ function p(e, t, n) {
                                     channel_id: null != r.channel ? r.channel.id : null,
                                     channel_type: null != r.channel ? r.channel.type : null,
                                     inviter_id: r.inviter ? r.inviter.id : null,
-                                    code: c.baseCode,
+                                    code: c,
                                     input_value: n?.inputValue,
                                     location: t,
                                     authenticated: s.default.isAuthenticated(),
@@ -109,7 +108,7 @@ function p(e, t, n) {
                                 _.HAw.INVITE_RESOLVED,
                                 {
                                     resolved: !1,
-                                    code: c.baseCode,
+                                    code: c,
                                     input_value: n?.inputValue,
                                     location: t,
                                     authenticated: s.default.isAuthenticated(),
@@ -126,5 +125,5 @@ function p(e, t, n) {
             .finally(() => {
                 f.delete(e);
             });
-    return f.set(e, p), p;
+    return f.set(e, g), g;
 }

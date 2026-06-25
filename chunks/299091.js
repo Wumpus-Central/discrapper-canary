@@ -63,7 +63,9 @@ let f = new h(r.h, {
                 (t.flags = e.invite.flags),
                 (t.is_nickname_changeable = e.invite.is_nickname_changeable),
                 (t.profile = e.invite.profile),
-                (t.roles = e.invite.roles);
+                (t.roles = e.invite.roles),
+                (t.target_channel_id = e.invite.target_channel_id),
+                (t.target_message_id = e.invite.target_message_id);
         });
     },
     INVITE_RESOLVE_FAILURE: _,

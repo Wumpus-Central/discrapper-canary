@@ -50,26 +50,27 @@ async function j(e, t, n) {
     await s.h.dispatch({ type: "INVITE_MODAL_OPEN", invite: e, code: t, context: B.BRT.APP, invite_instance_id: n });
 }
 async function H(e, t) {
-    let n = (0, S._U)(e.code, t),
-        i = P.A.getInvite(e.code);
-    if (null == i) {
-        let { invite: t } = await l.Ay.resolveInvite(e.code, "Markdown Link", { inviteInstanceId: n });
-        i = t;
+    let n = e.code,
+        i = (0, S._U)(n, t),
+        r = P.A.getInvite(n);
+    if (null == r) {
+        let { invite: e } = await l.Ay.resolveInvite(n, "Markdown Link", { inviteInstanceId: i });
+        r = e ?? void 0;
     }
-    if (null == i) return;
-    if (i.state === B.elq.EXPIRED || i.state === B.elq.BANNED || i.state === B.elq.ERROR)
-        return void (await j(i, e.code, n));
-    let r = U.Ay.getFlattenedGuildIds(),
-        s = i?.guild?.id,
-        a = null != s && r.includes(s),
-        o = !1;
-    if (a && null != i.roles && i.roles.length > 0) {
+    if (null == r) return;
+    if (r.state === B.elq.EXPIRED || r.state === B.elq.BANNED || r.state === B.elq.ERROR)
+        return void (await j(r, n, i));
+    let s = U.Ay.getFlattenedGuildIds(),
+        a = r?.guild?.id,
+        o = null != a && s.includes(a),
+        u = !1;
+    if (o && null != r.roles && r.roles.length > 0) {
         let e = L.default.getId(),
-            t = w.Ay.getMember(s, e),
+            t = w.Ay.getMember(a, e),
             n = new Set(t?.roles ?? []);
-        o = i.roles.some((e) => !n.has(e.id));
+        u = r.roles.some((e) => !n.has(e.id));
     }
-    a && !o ? l.Ay.transitionToInviteSync(i) : await j(i, e.code, n);
+    o && !u ? l.Ay.transitionToInviteSync(r) : await j(r, n, i);
 }
 async function Y(e, t) {
     function i() {

@@ -1,42 +1,45 @@
 n.r(l), n.d(l, { default: () => p });
 var t = n(627968);
 n(64700);
-var u = n(492462),
-    i = n(873263),
+var i = n(492462),
+    u = n(873263),
     a = n(17928),
-    r = n(730852),
-    d = n(976860),
-    c = n(734057),
-    s = n(650048),
+    d = n(730852),
+    r = n(976860),
+    s = n(734057),
+    c = n(650048),
     h = n(19575),
     o = n(652215);
 a.Ay.initialize();
 let p = function (e) {
-    let { location: l } = e;
-    return (0, t.jsx)(i.rd, {
+    let { match: l, location: n } = e,
+        a = l.params.channelId,
+        p = (0, i.parse)(n.search).messageId;
+    return (0, t.jsx)(u.rd, {
         to:
-            (function e(l) {
-                let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    t = c.A.getChannel(l);
-                if (null != t) {
+            (function e(l, n) {
+                let t = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+                    i = s.A.getChannel(l);
+                if (null != i) {
                     h.Ay.focus();
-                    let e = t.guild_id,
-                        l = t.id;
+                    let e = i.guild_id,
+                        l = i.id,
+                        t = n;
                     return (
-                        t.type === o.rbe.GUILD_VOICE &&
-                            (null != t.getGuildId() && r.default.selectVoiceChannel(t.id), (l = e)),
-                        null != l && null != e ? o.BVt.CHANNEL(e, l) : null
+                        i.type === o.rbe.GUILD_VOICE &&
+                            (null != i.getGuildId() && d.default.selectVoiceChannel(i.id), (l = e), (t = void 0)),
+                        null != l && null != e ? o.BVt.CHANNEL(e, l, t) : null
                     );
                 }
                 return (
-                    n &&
-                        c.A.addChangeListener(function n() {
-                            c.A.removeChangeListener(n);
-                            let t = e(l, !1);
-                            null != t && (0, d.pX)(t);
+                    t &&
+                        s.A.addChangeListener(function t() {
+                            s.A.removeChangeListener(t);
+                            let i = e(l, n, !1);
+                            null != i && (0, r.pX)(i);
                         }),
                     null
                 );
-            })((0, u.parse)(l.search).channelId) ?? s.A.fallbackRoute,
+            })(a, p) ?? c.A.fallbackRoute,
     });
 };

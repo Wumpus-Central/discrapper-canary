@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(228366),
     r = n(376728),
     s = n(159001),
@@ -8,15 +8,17 @@ var i = n(228366),
     l = n(174459),
     u = n(4274),
     c = n(115063),
-    d = n(652215);
-let _ = {
+    d = n(539895),
+    _ = n(652215);
+let h = {
     acceptInvite(e, t) {
         let n = r.Ay.getInviteContext("Desktop Invite Modal", e),
             l = (0, a.tJ)(),
-            d = (0, a.Z1)(),
-            _ = (0, a.N9)();
+            _ = (0, a.Z1)(),
+            h = (0, a.N9)(),
+            f = d.A.getInviteKey() ?? e.code;
         r.Ay.acceptInvite({
-            inviteKey: e.code,
+            inviteKey: f,
             context: { ...n, ...(null != t ? { invite_instance_id: t } : {}) },
             callback: (e) => {
                 null == e || null == e.guild || null == e.channel || __OVERLAY__ || r.Ay.transitionToInviteSync(e);
@@ -24,7 +26,7 @@ let _ = {
         }).then(
             () => {
                 if (null != e.guild) {
-                    if (d) {
+                    if (_) {
                         if (o.$s.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, c.Tb)());
                             t.delete(e.guild.id), o.$s.updateSetting(Array.from(t));
@@ -33,7 +35,7 @@ let _ = {
                         let t = new Set((0, c.Tb)());
                         t.add(e.guild?.id), o.$s.updateSetting(Array.from(t));
                     }
-                    if (_) {
+                    if (h) {
                         if (o.JG.getSetting().includes(e.guild.id)) {
                             let t = new Set((0, c.Kk)());
                             t.delete(e.guild.id), o.JG.updateSetting(Array.from(t));
@@ -59,7 +61,7 @@ let _ = {
                 i = (0, a.Z1)(),
                 r = (0, a.N9)(),
                 s = (0, a.qO)();
-            l.default.track(d.HAw.INVITE_ACCEPT_JOIN_SETTINGS_SET, {
+            l.default.track(_.HAw.INVITE_ACCEPT_JOIN_SETTINGS_SET, {
                 invite_code: t,
                 guild_id: n,
                 nickname_present: null != e && e.length > 0,
