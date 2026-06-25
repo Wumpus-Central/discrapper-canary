@@ -47,15 +47,10 @@ function _(e, t) {
 }
 function h(e, t) {
     let n = c.getState();
-    null == n.activeView
-        ? d(n.lastActiveView ?? l.kx.EMOJI, e, t)
-        : n.activeViewType !== e || n.activeChannelId !== t
-          ? d(n.activeView, e, t)
-          : _();
+    null == n.activeView ? d(n.lastActiveView ?? l.kx.EMOJI, e, t) : _();
 }
 function f(e, t, n) {
-    let i = c.getState();
-    i.activeView === e && i.activeViewType === t && i.activeChannelId === n ? _() : d(e, t, n);
+    c.getState().activeView === e ? _() : d(e, t, n);
 }
 function p(e) {
     (0, o.r)(() => c.setState({ activeView: e, lastActiveView: c.getState().activeView }));
