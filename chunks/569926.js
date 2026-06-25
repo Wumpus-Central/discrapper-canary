@@ -11,13 +11,7 @@ var i = n(64700),
     d = n(652215);
 async function _(e) {
     try {
-        let t = (
-            await o.Bo.get({
-                url: d.Rsh.GAMES,
-                query: { game_ids: e, with_supplemental_data: !0 },
-                rejectWithError: !0,
-            })
-        ).body;
+        let t = (await o.Bo.get({ url: d.Rsh.GAMES, query: { game_ids: e }, rejectWithError: !0 })).body;
         u.h.dispatch({ type: "GAME_FETCH_SUCCESS", gameIds: e, games: t });
     } catch {
         u.h.dispatch({ type: "GAME_FETCH_FAILURE", gameIds: e });
