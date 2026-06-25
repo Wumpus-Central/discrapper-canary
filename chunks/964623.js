@@ -27,8 +27,6 @@ f.exports = {
     iO: "linkedLobby_f75fb0",
     NB: "linkedLobbyApplicationIcon_f75fb0",
     lE: "linkedLobbyEducationTooltip_f75fb0",
-    Q1: "linkedLobbyEducationTooltipCloseClickContainer_f75fb0",
-    U0: "linkedLobbyEducationTooltipCloseIcon_f75fb0",
     y$: "akaPopoverContent_f75fb0",
     qc: "akaPopoverHeader_f75fb0",
     rX: "akaPopoverUsername_f75fb0",
