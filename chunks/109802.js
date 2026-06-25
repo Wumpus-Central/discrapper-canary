@@ -105,7 +105,6 @@ class E extends r.PureComponent {
         });
     }
     handleButtonClick = () => {
-        this.select();
         let { onCopy: e, value: t } = this.props;
         e(t);
     };

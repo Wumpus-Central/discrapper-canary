@@ -113,9 +113,63 @@ function c(e) {
                                 n.restore();
                         }
                     }
+                    let c = a.hoverSource?.time;
+                    if (null != c && null != u && null != t.current) {
+                        let e = t.current,
+                            n = e.getContext("2d");
+                        if (null == n) return;
+                        let i = Date.now() - c;
+                        if (i >= 0 && i <= u) {
+                            let t = window.devicePixelRatio ?? 1,
+                                r = Math.round(e.width * (1 - i / u)),
+                                s = e.height - Math.ceil(11 * t) - 4;
+                            n.save(),
+                                (n.strokeStyle = a.crosshairColor ?? _),
+                                (n.lineWidth = t),
+                                n.beginPath(),
+                                n.moveTo(r, 0),
+                                n.lineTo(r, s),
+                                n.stroke(),
+                                n.restore();
+                        }
+                    }
                 };
             return (e = requestAnimationFrame(r)), () => cancelAnimationFrame(e);
-        }, [n]);
-    let m = { width: e.width, height: e.height };
-    return (0, i.jsx)("canvas", { style: m, width: e.width, height: e.height, ref: t }, "canvas");
+        }, [n, _]);
+    let m = { width: e.width, height: e.height },
+        { onHoverTime: g, onHoverClick: A } = e,
+        I = (e) => {
+            if (null == p) return null;
+            let t = e.currentTarget.getBoundingClientRect();
+            if (t.width <= 0) return null;
+            let n = Math.max(0, Math.min(1, (e.clientX - t.left) / t.width));
+            return Date.now() - (1 - n) * p;
+        },
+        T =
+            null != g && null != p
+                ? (e) => {
+                      let t = I(e);
+                      null != t && g(t);
+                  }
+                : void 0,
+        S =
+            null != A && null != p
+                ? (e) => {
+                      let t = I(e);
+                      null != t && A(t);
+                  }
+                : void 0;
+    return (0, i.jsx)(
+        "canvas",
+        {
+            style: m,
+            width: e.width,
+            height: e.height,
+            ref: t,
+            onPointerMove: T,
+            onPointerLeave: null != g ? () => g(null) : void 0,
+            onPointerDown: S,
+        },
+        "canvas",
+    );
 }
