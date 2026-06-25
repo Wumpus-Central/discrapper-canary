@@ -39,30 +39,30 @@ function E(e) {
 function m(e) {
     let { text: t, endDatetime: n, ...s } = e,
         [a, o] = r.useState(() => (0, h.u)(n));
-    return (
-        (0, _.A)(() => {
-            o((0, h.u)(n));
-        }, 1e3),
-        (0, i.jsx)(E, {
-            ...s,
-            children: (0, i.jsxs)("div", {
-                className: p.Yu,
-                children: [
-                    (0, i.jsx)(l.E, {
-                        variant: "text-xs/semibold",
-                        color: "currentColor",
-                        children: "string" == typeof t ? (0, f.U)(t) : t,
-                    }),
-                    null != a
-                        ? (0, i.jsx)(l.E, {
-                              className: p.cR,
-                              variant: "text-xs/medium",
-                              color: "currentColor",
-                              children: a,
-                          })
-                        : null,
-                ],
-            }),
-        })
-    );
+    return ((0, _.A)(() => {
+        o((0, h.u)(n));
+    }, 1e3),
+    null != n && null == a)
+        ? null
+        : (0, i.jsx)(E, {
+              ...s,
+              children: (0, i.jsxs)("div", {
+                  className: p.Yu,
+                  children: [
+                      (0, i.jsx)(l.E, {
+                          variant: "text-xs/semibold",
+                          color: "currentColor",
+                          children: "string" == typeof t ? (0, f.U)(t) : t,
+                      }),
+                      null != a
+                          ? (0, i.jsx)(l.E, {
+                                className: p.cR,
+                                variant: "text-xs/medium",
+                                color: "currentColor",
+                                children: a,
+                            })
+                          : null,
+                  ],
+              }),
+          });
 }
