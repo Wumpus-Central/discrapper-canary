@@ -8436,14 +8436,7 @@ let { Themes: c } = u.zv,
                         return 8;
                     },
                 },
-                MESSAGES_HEADER_BUTTON_LAYOUT: {
-                    resolve(e) {
-                        let { enabledExperiments: t } = e;
-                        if (0 === t.length) return "row";
-                        for (let e of t) if ("mobile-visual-refresh" === e) return "row-reverse";
-                        return "row";
-                    },
-                },
+                MESSAGES_HEADER_BUTTON_LAYOUT: { resolve: () => "row" },
                 MESSAGES_HEADER_PADDING_BOTTOM: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
