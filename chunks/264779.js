@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
     $_: () => M,
-    Cp: () => N,
+    Cp: () => v,
     HB: () => w,
     Ng: () => S,
-    OP: () => O,
-    S0: () => b,
-    So: () => v,
+    OP: () => b,
+    P9: () => N,
+    So: () => R,
     WD: () => T,
     Wl: () => L,
-    dG: () => R,
+    dG: () => O,
     eN: () => D,
     kc: () => C,
     kd: () => y,
@@ -67,10 +67,14 @@ function C(e, t) {
         ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e))
         : (t.outboundRedemptionPageLink ?? "");
 }
-function N() {
+function N(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    return (e?.trialId != null || n) && !t.isRedeemableByTrialUsers();
+}
+function v() {
     let e = E.A.outboundPromotions,
         t = E.A.consumedInboundPromotionId,
-        n = e.filter((e) => e.id !== t && !(0, i.Lt)(e.flags, g.$3.SUPPRESS_NOTIFICATION) && !R(e)),
+        n = e.filter((e) => e.id !== t && !(0, i.Lt)(e.flags, g.$3.SUPPRESS_NOTIFICATION) && !O(e)),
         r =
             l.A.settings.userContent?.recurringDismissibleContentStates[s.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR]
                 ?.lastDismissedObjectId,
@@ -82,23 +86,19 @@ function N() {
                       return 1 === f.default.compare(t, r);
                   }),
         o = c.A.getPremiumTypeSubscription(),
-        u = !!o?.hasActiveTrial,
-        _ = d.A.hasAnyUnexpiredOffer(),
-        h = u || _ ? a.filter((e) => e.isRedeemableByTrialUsers()) : a;
-    return 0 === h.length ? null : h.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
+        u = d.A.hasAnyUnexpiredOffer(),
+        _ = a.filter((e) => !N(o, e, u));
+    return 0 === _.length ? null : _.sort((e, t) => (new Date(e.startDate) < new Date(t.startDate) ? -1 : 1))[0].id;
 }
-function v() {
-    let e = N();
+function R() {
+    let e = v();
     return null != e && !(0, o.j6)(s.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR, e, { cooldownDurationMs: 2592e5 });
 }
-function R(e) {
+function O(e) {
     return e.partnerId === m.XY;
 }
-function O(e) {
+function b(e) {
     return !(0, h.isIOS)() || !e.hasFlag(g.$3.IS_BLOCKED_IOS);
-}
-function b(e, t) {
-    return null != t[e.id] || e.isRedeemableByTrialUsers();
 }
 function D(e) {
     let t = {};
@@ -114,7 +114,7 @@ function L(e, t) {
     );
     return e.filter((e) => {
         let { promotion: t } = e;
-        return !n.has(t.id) && !w(t) && !R(t) && O(t);
+        return !n.has(t.id) && !w(t) && !O(t) && b(t);
     });
 }
 function w(e) {

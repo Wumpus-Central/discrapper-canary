@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ij: () => l });
+n.d(t, { ij: () => l, wA: () => u });
 var i = n(428262),
     r = n(852218),
     s = n(788868);
@@ -13,4 +13,7 @@ function l(e, t, n) {
         s.hd[l.planId]?.premiumType === s.PremiumTypes.TIER_2 &&
         !(null != e.trialId && (n?.partnerId === r.NC ? !a.has(e.trialId) : o.has(e.trialId)))
     );
+}
+function u(e, t, n) {
+    return !!l(e, t, n) && (e?.trialId == null || !!n.hasFlag(s.$3.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS));
 }
