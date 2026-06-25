@@ -3878,7 +3878,7 @@ function rK(e) {
 var r$ = n(304072),
     rz = n(427858),
     rq = n(166926),
-    rZ = n(953761);
+    rZ = n(424517);
 let rX = {
     CHECKOUT_FLOW: S.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
     CustomCheckoutPredicateStep: function (e) {
@@ -3954,35 +3954,31 @@ let rX = {
                     purchaseState: l,
                     contextMetadata: c,
                     purchaseError: d,
-                    setCurrency: _,
-                    activeSubscription: h,
+                    activeSubscription: _,
                 } = (0, R.t4)((e) => ({
                     purchaseState: e.purchaseState,
                     contextMetadata: e.contextMetadata,
                     purchaseError: e.purchaseError,
-                    setCurrency: e.setCheckoutCurrency,
                     activeSubscription: e.activeSubscription,
                 })),
-                { paymentSources: f } = (0, il.jm)(),
-                { dropdownCurrencies: p } = (0, Y.Jn)(),
-                { subscriptionMetadataRequest: E, showBenefitsFirst: m } = rk(),
-                g = m ? u.pn.BENEFITS : void 0,
-                A = (0, C.A)(),
-                I = (0, nf.S3)();
-            if (null == A)
+                { subscriptionMetadataRequest: h, showBenefitsFirst: f } = rk(),
+                p = f ? u.pn.BENEFITS : void 0,
+                E = (0, C.A)(),
+                m = (0, nf.S3)();
+            if (null == E)
                 throw new io.v({
                     message: "Expected plan to be selected",
-                    extraSentryInformation: { selectedPlan: A },
+                    extraSentryInformation: { selectedPlan: E },
                 });
-            let T = s.useRef(null),
-                [S, y] = (0, r$.A)(!1, 500),
-                N = (0, ej.mx)(),
-                v = (0, rF.bg)(I?.flags ?? 0);
+            let g = s.useRef(null),
+                [A, I] = (0, r$.A)(!1, 500),
+                T = (0, ej.mx)(),
+                S = (0, rF.bg)(m?.flags ?? 0);
             s.useEffect(() => {
-                null != d && null != T.current && T.current.scrollIntoView({ behavior: "smooth" });
+                null != d && null != g.current && g.current.scrollIntoView({ behavior: "smooth" });
             }, [d]);
-            let O = s.useRef(null),
-                b = s.useCallback(() => {
+            let y = s.useRef(null),
+                N = s.useCallback(() => {
                     t(u.pn.ADD_PAYMENT_STEPS);
                 }, [t]);
             return l === D.h.PURCHASING
@@ -3991,44 +3987,42 @@ let rX = {
                       children: [
                           (0, r.jsx)(ed.dZ, {
                               children:
-                                  null == h
+                                  null == _
                                       ? (0, r.jsx)(rZ._, {
-                                            selectedPlanId: A.id,
+                                            selectedPlan: E,
+                                            verifiedPlanId: E.id,
                                             planGroup: n,
-                                            paymentSources: f,
-                                            handlePaymentSourceAdd: b,
-                                            metadata: v ? void 0 : E,
+                                            handlePaymentSourceAdd: N,
+                                            metadata: S ? void 0 : h,
                                         })
                                       : (0, r.jsx)(rz.A, {
-                                            premiumSubscription: h,
-                                            paymentSources: f,
-                                            handlePaymentSourceAdd: b,
-                                            planId: A.id,
+                                            selectedPlan: E,
+                                            verifiedPlanId: E.id,
+                                            premiumSubscription: _,
+                                            handlePaymentSourceAdd: N,
                                             planGroup: n,
-                                            currencies: p,
-                                            onCurrencyChange: (e) => _(e),
                                             hasOpenInvoice: null != i,
                                             purchaseState: l,
                                         }),
                           }),
                           (0, r.jsx)(ed.UX, {
                               children: (0, r.jsx)(rq.U, {
-                                  premiumSubscription: h ?? null,
-                                  onBack: () => null != g && t(g),
+                                  premiumSubscription: _ ?? null,
+                                  onBack: () => null != p && t(p),
                                   handleStepChange: t,
                                   postPurchaseStep: u.pn.CONFIRM,
-                                  legalTermsNodeRef: O,
-                                  flashLegalTerms: () => y(!0),
+                                  legalTermsNodeRef: y,
+                                  flashLegalTerms: () => I(!0),
                                   analyticsLocation: o,
                                   baseAnalyticsData: a,
                                   flowStartTime: c.startTime,
                                   planGroup: n,
                                   openInvoiceId: i,
-                                  metadata: v ? void 0 : E,
-                                  backButtonEligible: !!m || void 0,
-                                  invoiceError: N,
-                                  disablePurchase: E?.guild_id == null && !v,
-                                  onPaymentSourceAdd: b,
+                                  metadata: S ? void 0 : h,
+                                  backButtonEligible: !!f || void 0,
+                                  invoiceError: T,
+                                  disablePurchase: h?.guild_id == null && !S,
+                                  onPaymentSourceAdd: N,
                               }),
                           }),
                       ],

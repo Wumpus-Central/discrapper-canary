@@ -160,7 +160,6 @@ function p(e) {
         proratedInvoicePreview: k,
         renewalInvoicePreview: S,
         purchaseDisabled: O,
-        subscriptionPlan: R,
         invoiceError: G,
         subscriptionPeriodEnd: F,
     };
