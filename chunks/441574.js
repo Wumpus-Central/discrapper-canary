@@ -2108,10 +2108,11 @@ class eR extends S.G {
             { no: 14, name: "perks", kind: "message", T: () => eQ },
             { no: 15, name: "badges", kind: "message", T: () => ev },
             { no: 16, name: "country_data", kind: "message", T: () => e0 },
+            { no: 17, name: "is_pending_required_action", kind: "scalar", T: 8 },
         ]);
     }
     create(e) {
-        let t = { linkedUsers: {}, safetyFeatureLimits: {}, safetyFlags: {} };
+        let t = { linkedUsers: {}, safetyFeatureLimits: {}, safetyFlags: {}, isPendingRequiredAction: !1 };
         return (
             globalThis.Object.defineProperty(t, T.$, { enumerable: !1, value: this }),
             void 0 !== e && (0, I.x)(this, t, e),
@@ -2171,6 +2172,9 @@ class eR extends S.G {
                     break;
                 case 16:
                     r.countryData = e0.internalBinaryRead(e, e.uint32(), n, r.countryData);
+                    break;
+                case 17:
+                    r.isPendingRequiredAction = e.bool();
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -2280,7 +2284,8 @@ class eR extends S.G {
                 eb.internalBinaryWrite(e.ageAssuranceData, t.tag(13, A.O0.LengthDelimited).fork(), n).join(),
             e.perks && eQ.internalBinaryWrite(e.perks, t.tag(14, A.O0.LengthDelimited).fork(), n).join(),
             e.badges && ev.internalBinaryWrite(e.badges, t.tag(15, A.O0.LengthDelimited).fork(), n).join(),
-            e.countryData && e0.internalBinaryWrite(e.countryData, t.tag(16, A.O0.LengthDelimited).fork(), n).join();
+            e.countryData && e0.internalBinaryWrite(e.countryData, t.tag(16, A.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.isPendingRequiredAction && t.tag(17, A.O0.Varint).bool(e.isPendingRequiredAction);
         let i = n.writeUnknownFields;
         return !1 !== i && (!0 == i ? A.f$.onWrite : i)(this.typeName, e, t), t;
     }
