@@ -1576,7 +1576,7 @@ let nW = r.memo(function (e) {
         p = m === T.M.GAME_SHOP_NEW_BADGE && null != g,
         C = (0, tC.nY)(t.id),
         E = (0, ny.F)("storefront_badge", { applicationId: C }),
-        x = (0, nj.A)({ applicationId: C }),
+        x = (0, nj.A)({ applicationId: C, location: "game_shop_channel_row" }),
         _ = null;
     p ? (_ = z.intl.string(z.t.y2b7CA)) : x && (_ = z.intl.string(nF.default.hriMCc)), null != E && (_ = E.text);
     let [S, I] = (0, el.x_)(T.M.GAME_SHOP_NEW_DROP_POPOVER, t.id, g?.id ?? ""),

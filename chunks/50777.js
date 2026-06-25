@@ -34,7 +34,7 @@ var t = n(627968),
     G = n(328100),
     L = n(533772),
     U = n(375708),
-    B = n(918374);
+    B = n(613798);
 function y(l) {
     let { sku: i, normalPrice: n, discountedPrice: a, discountPercent: r, orbsGate: c, orbPriceAmount: o } = l,
         d = (0, R.F)("card", { applicationId: i.applicationId, skuId: i.id }),
@@ -106,7 +106,11 @@ function H(l) {
         { normalPrice: V, discountedPrice: X, discountPercent: Z, userPrice: ll } = (0, j.CD)({ sku: M }),
         li = (0, j.JL)({ sku: M }),
         ln = li?.amount,
-        lt = (0, k.o)({ orbPriceAmount: ln, location: "social_layer_storefront_product_details_embed" });
+        lt = (0, k.o)({
+            orbPriceAmount: ln,
+            applicationId: K,
+            location: "social_layer_storefront_product_details_embed",
+        });
     e.useEffect(() => {
         null == K || null == n || f.A.isFetchingForSKU(n) || (0, v.Pp)(K, n);
     }, [K, n]);

@@ -1,24 +1,24 @@
-e.d(t, { A: () => d });
-var n = e(17928),
-    o = e(561573),
-    i = e(117218),
-    u = e(871123),
-    l = e(832163),
-    c = e(681064),
-    s = e(652215),
-    a = e(818348);
-function d(r) {
-    let { applicationId: t } = r,
-        e = (0, c.R)({ location: "game_shop_channel_row" }),
-        d = (0, n.bG)([l.A], () => (null != t ? l.A.getStorefrontDataForApplicationId(t) : void 0)),
-        p = (0, n.bG)([o.A], () => {
-            if (!e) return !1;
-            let r = d?.storefront != null ? (0, u.jd)(d.storefront) : [];
-            if (0 === r.length) return !1;
-            let t = r[0],
-                n = o.A.getPricesForSkuId(t),
-                l = (0, i.rW)(s.lid.DEFAULT);
-            return n?.[l]?.userPrice?.find((r) => r.currency === a.Yr.DISCORD_ORB) != null;
-        }, [e, d]);
-    return e && p;
+n.d(r, { A: () => c });
+var t = n(17928),
+    a = n(561573),
+    i = n(117218),
+    l = n(871123),
+    o = n(832163),
+    d = n(681064),
+    u = n(652215),
+    s = n(818348);
+function c(e) {
+    let { applicationId: r, location: n } = e,
+        c = (0, d.R)({ location: n }),
+        f = (0, t.bG)([o.A], () => (null != r ? o.A.getStorefrontDataForApplicationId(r) : void 0)),
+        b = (0, t.bG)([a.A], () => {
+            if (!c || Date.now() > d.V.getTime()) return !1;
+            let e = f?.storefront != null ? (0, l.jd)(f.storefront) : [];
+            if (0 === e.length) return !1;
+            let r = e[0],
+                n = a.A.getPricesForSkuId(r),
+                t = (0, i.rW)(u.lid.DEFAULT);
+            return n?.[t]?.userPrice?.find((e) => e.currency === s.Yr.DISCORD_ORB) != null;
+        }, [c, f]);
+    return c && b;
 }

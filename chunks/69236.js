@@ -2,7 +2,7 @@ i.d(e, { W: () => a, o: () => l });
 var r = i(17928),
     n = i(309954),
     u = i(287809),
-    o = i(681064),
+    o = i(801158),
     _ = i(760716);
 function a() {
     let t = (0, _.i)((t) =>
@@ -13,9 +13,9 @@ function a() {
     return null != t ? t : e || i;
 }
 function l(t) {
-    let { orbPriceAmount: e, location: i } = t,
-        r = (0, o.R)({ location: i }),
-        u = a(),
-        { balance: _ } = (0, n.W)({ disableFetch: !r || null == e || !u });
-    return r && null != e ? (u ? (null == _ || _ < e ? "NOT_ENOUGH_ORBS" : "CAN_CHECKOUT") : "NEEDS_NITRO") : "HIDDEN";
+    let { orbPriceAmount: e, applicationId: i, location: r } = t,
+        u = (0, o.A)({ applicationId: i, location: r }),
+        _ = a(),
+        { balance: l } = (0, n.W)({ disableFetch: !u || null == e || !_ });
+    return u && null != e ? (_ ? (null == l || l < e ? "NOT_ENOUGH_ORBS" : "CAN_CHECKOUT") : "NEEDS_NITRO") : "HIDDEN";
 }

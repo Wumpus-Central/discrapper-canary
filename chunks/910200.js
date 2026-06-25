@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { O: () => m });
+n.d(t, { A: () => E, O: () => m });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -19,22 +19,42 @@ function E(e) {
             Icon: n = o.g,
             iconSize: r,
             customGraphic: s,
-            gradientColor: l = "green",
-            tooltip: _,
-            ...h
+            gradientColor: _ = "green",
+            tooltip: h,
+            text: E,
+            trailingText: m,
+            ...g
         } = e,
-        f = () =>
+        A = () =>
             (0, i.jsx)(d.A, {
                 className: a()(p.Xx, t),
-                gradientColor: l,
+                gradientColor: _,
                 ...(null != s ? { customGraphic: s } : { Icon: n, iconSize: r }),
-                ...h,
+                ...g,
+                children: (0, i.jsxs)("div", {
+                    className: p.Yu,
+                    children: [
+                        (0, i.jsx)(l.E, {
+                            variant: "text-xs/semibold",
+                            color: "currentColor",
+                            children: "string" == typeof E ? (0, f.U)(E) : E,
+                        }),
+                        null != m
+                            ? (0, i.jsx)(l.E, {
+                                  className: p.a9,
+                                  variant: "text-xs/medium",
+                                  color: "currentColor",
+                                  children: "string" == typeof m ? (0, f.U)(m) : m,
+                              })
+                            : null,
+                    ],
+                }),
             });
-    return null != _ && "object" == typeof _
-        ? (0, i.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ..._, children: f() })
-        : null != _ && "string" == typeof _
-          ? (0, i.jsx)(c.m, { text: _, asContainer: !0, tag: "div", children: f() })
-          : f();
+    return null != h && "object" == typeof h
+        ? (0, i.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ...h, children: A() })
+        : null != h && "string" == typeof h
+          ? (0, i.jsx)(c.m, { text: h, asContainer: !0, tag: "div", children: A() })
+          : A();
 }
 function m(e) {
     let { text: t, endDatetime: n, ...s } = e,
@@ -44,25 +64,5 @@ function m(e) {
     }, 1e3),
     null != n && null == a)
         ? null
-        : (0, i.jsx)(E, {
-              ...s,
-              children: (0, i.jsxs)("div", {
-                  className: p.Yu,
-                  children: [
-                      (0, i.jsx)(l.E, {
-                          variant: "text-xs/semibold",
-                          color: "currentColor",
-                          children: "string" == typeof t ? (0, f.U)(t) : t,
-                      }),
-                      null != a
-                          ? (0, i.jsx)(l.E, {
-                                className: p.cR,
-                                variant: "text-xs/medium",
-                                color: "currentColor",
-                                children: a,
-                            })
-                          : null,
-                  ],
-              }),
-          });
+        : (0, i.jsx)(E, { text: t, trailingText: null != a ? a : void 0, ...s });
 }

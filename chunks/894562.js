@@ -32,5 +32,5 @@ c.exports = {
     Jb: "originalPrice__38ccf",
     Fi: "discountBadge__38ccf",
     aX: "orbsPriceDisplay__38ccf",
-    Lf: "nitroExclusiveButton__38ccf",
+    dQ: "orbsPriceDisplayMuted__38ccf",
 };
