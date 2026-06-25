@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(834730),
     d = n(939249),
     _ = n(150934),
-    h = n(211159),
+    h = n(46332),
     f = n(937008),
     p = n(773669),
     E = n(97352),
@@ -23,7 +23,7 @@ var i = n(627968),
     y = n(186223),
     C = n(788868),
     N = n(375708),
-    v = n(672305);
+    v = n(899441);
 function R(e, t) {
     let n = e.interval === C.WT.YEAR ? N.t.ECT4A5 : N.t.v9QeON;
     return N.intl.format(n, { price: (0, I.$g)(t.amount, t.currency) });

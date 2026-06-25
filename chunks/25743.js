@@ -1,192 +1,192 @@
 "use strict";
-n.d(t, { A: () => U });
-var l = n(627968);
+n.d(t, { A: () => G });
+var i = n(627968);
 n(64700);
-var i = n(503698),
-    s = n.n(i),
-    r = n(17928),
-    a = n(534514),
-    o = n(315629),
+var r = n(503698),
+    s = n.n(r),
+    a = n(17928),
+    o = n(534514),
+    l = n(315629),
     u = n(935462),
     c = n(508770),
     d = n(584160),
-    m = n(211159),
+    _ = n(46332),
     h = n(166532),
-    p = n(615310),
-    f = n(800471),
-    g = n(834730),
-    E = n(147925),
-    A = n(375708),
-    C = n(276900);
-function x(e) {
-    let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: i, separatorClassName: r } = e;
-    return (0, l.jsxs)(
+    f = n(615310),
+    p = n(800471),
+    E = n(834730),
+    m = n(147925),
+    g = n(375708),
+    A = n(276900);
+function I(e) {
+    let { breadcrumb: t, isActiveBreadcrumb: n, isFinalBreadcrumb: r, separatorClassName: a } = e;
+    return (0, i.jsxs)(
         "div",
         {
             "aria-current": n ? "step" : void 0,
-            className: s()(C.hj, { [C.jQ]: i }),
+            className: s()(A.hj, { [A.jQ]: r }),
             children: [
-                (0, l.jsx)(g.E, {
+                (0, i.jsx)(E.E, {
                     variant: "text-sm/medium",
                     color: n ? "text-strong" : "text-muted",
                     children: t.label,
                 }),
-                i
+                r
                     ? null
-                    : (0, l.jsx)(E.A, { "aria-hidden": !0, className: s()(C.LJ, r), direction: E.A.Directions.RIGHT }),
+                    : (0, i.jsx)(m.A, { "aria-hidden": !0, className: s()(A.LJ, a), direction: m.A.Directions.RIGHT }),
             ],
         },
         t.id,
     );
 }
-let I = function (e) {
-    let { breadcrumbs: t, activeId: n, className: i, separatorClassName: r } = e;
-    return (0, l.jsx)("nav", {
-        "aria-label": A.intl.string(A.t.TfxqUO),
-        className: s()(C.jD, i),
-        children: t.map((e, i) =>
-            (0, l.jsx)(
-                x,
+let T = function (e) {
+    let { breadcrumbs: t, activeId: n, className: r, separatorClassName: a } = e;
+    return (0, i.jsx)("nav", {
+        "aria-label": g.intl.string(g.t.TfxqUO),
+        className: s()(A.jD, r),
+        children: t.map((e, r) =>
+            (0, i.jsx)(
+                I,
                 {
                     breadcrumb: e,
                     isActiveBreadcrumb: e.id === n,
-                    isFinalBreadcrumb: i === t.length - 1,
-                    separatorClassName: r,
+                    isFinalBreadcrumb: r === t.length - 1,
+                    separatorClassName: a,
                 },
                 e.id,
             ),
         ),
     });
 };
-var _ = n(573359),
-    S = n(422936),
-    y = n(234419),
-    v = n(795269),
-    T = n(788868),
-    N = n(800134);
-let b = function (e) {
+var S = n(573359),
+    y = n(422936),
+    C = n(234419),
+    N = n(795269),
+    v = n(788868),
+    R = n(800134);
+let O = function (e) {
     let { discountAmount: t } = e,
-        n = (0, y.V)(),
-        i = null != n && n.trial_id === T.Dw,
-        s = A.intl.string(A.t.IBYG5U);
+        n = (0, C.V)(),
+        r = null != n && n.trial_id === v.Dw,
+        s = g.intl.string(g.t.IBYG5U);
     return (
         void 0 !== t
-            ? (s = A.intl.formatToPlainString(A.t.iiLbvu, { percent: t }))
-            : i && (s = A.intl.string(A.t.gtNqJQ)),
-        (0, l.jsx)("div", { className: N.f, children: (0, l.jsx)(v.R, { text: s }) })
+            ? (s = g.intl.formatToPlainString(g.t.iiLbvu, { percent: t }))
+            : r && (s = g.intl.string(g.t.gtNqJQ)),
+        (0, i.jsx)("div", { className: R.f, children: (0, i.jsx)(N.R, { text: s }) })
     );
 };
-var j = n(88001),
-    R = n(212364),
-    P = n(268800),
-    L = n(232266),
+var b = n(88001),
+    D = n(212364),
+    L = n(268800),
+    w = n(232266),
     M = n(243002),
-    O = n(303930),
-    w = n(241988);
+    P = n(303930),
+    x = n(241988);
 function k(e) {
-    let { isOneStepCheckout: t, headerText: n, step: i, filteredBreadcrumbs: s } = e;
+    let { isOneStepCheckout: t, headerText: n, step: r, filteredBreadcrumbs: s } = e;
     if (t)
-        return (0, l.jsx)("div", {
-            className: R.r9,
-            children: (0, l.jsx)(a.D, { variant: "heading-md/bold", children: n }),
+        return (0, i.jsx)("div", {
+            className: D.r9,
+            children: (0, i.jsx)(o.D, { variant: "heading-md/bold", children: n }),
         });
-    let r = s.length > 1;
-    return (0, l.jsxs)("div", {
-        className: R.go,
+    let a = s.length > 1;
+    return (0, i.jsxs)("div", {
+        className: D.go,
         children: [
-            (0, l.jsx)(a.D, { variant: "text-lg/semibold", children: n }),
-            r && (0, l.jsx)(I, { activeId: i, breadcrumbs: s }),
+            (0, i.jsx)(o.D, { variant: "text-lg/semibold", children: n }),
+            a && (0, i.jsx)(T, { activeId: r, breadcrumbs: s }),
         ],
     });
 }
-function D(e) {
+function U(e) {
     let { isTier2: t } = e,
         n = t ? M : "/assets/947416a0e8a7172a.svg";
-    return (0, l.jsxs)(l.Fragment, {
+    return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, l.jsx)("img", { src: t ? L : "/assets/792ab98da2b21b02.svg", alt: "", className: R.mR }),
-            (0, l.jsx)("img", { src: n, alt: "", className: R.dz }),
-            (0, l.jsx)("img", { src: n, alt: "", className: R.lM }),
+            (0, i.jsx)("img", { src: t ? w : "/assets/792ab98da2b21b02.svg", alt: "", className: D.mR }),
+            (0, i.jsx)("img", { src: n, alt: "", className: D.dz }),
+            (0, i.jsx)("img", { src: n, alt: "", className: D.lM }),
         ],
     });
 }
-let U = function (e) {
+let G = function (e) {
     let {
             hideCloseButton: t = !1,
             hideCloseOnFullScreen: n,
-            onClose: i,
-            upgradeToPremiumType: g,
-            isEligibleForTrial: E = !1,
-            showTrialBadge: C = !1,
-            showDiscountBadge: x = !1,
-            isPremiumGroupPurchase: I = !1,
-            forceBrandRefreshHeader: y = !1,
+            onClose: r,
+            upgradeToPremiumType: E,
+            isEligibleForTrial: m = !1,
+            showTrialBadge: A = !1,
+            showDiscountBadge: I = !1,
+            isPremiumGroupPurchase: T = !1,
+            forceBrandRefreshHeader: C = !1,
         } = e,
-        v = g === T.PremiumTypes.TIER_2,
-        N = (0, f.lp)(E),
-        L = (0, S.O)(),
-        M = L?.discount?.amount,
-        U = (0, m.t4)((e) => e.startedPaymentFlowWithPaymentSources),
-        G = (0, r.bG)([_.A], () => _.A.isDisplayingWowMomentConfirmation),
-        { step: F, breadcrumbsData: V } = (0, p.Ay)();
-    if (!y && (null == V || 0 === V.length)) return null;
-    let B = (V ?? []).flatMap((e) => {
-        let t = e.useBreadcrumbLabel(E),
+        N = E === v.PremiumTypes.TIER_2,
+        R = (0, p.lp)(m),
+        w = (0, y.O)(),
+        M = w?.discount?.amount,
+        G = (0, _.t4)((e) => e.startedPaymentFlowWithPaymentSources),
+        F = (0, a.bG)([S.A], () => S.A.isDisplayingWowMomentConfirmation),
+        { step: V, breadcrumbsData: B } = (0, f.Ay)();
+    if (!C && (null == B || 0 === B.length)) return null;
+    let j = (B ?? []).flatMap((e) => {
+        let t = e.useBreadcrumbLabel(m),
             n = e.sectionHeaderText;
         return null != t ? { id: e.id, label: t, sectionHeaderText: n } : [];
     });
-    if (!y && 0 === B.length) return null;
-    let H = (B = B.filter((e) => {
-            if (I && e.id === h.pn.PLAN_SELECT) return !1;
+    if (!C && 0 === j.length) return null;
+    let H = (j = j.filter((e) => {
+            if (T && e.id === h.pn.PLAN_SELECT) return !1;
             let t = e.id !== h.pn.ADD_PAYMENT_STEPS,
-                n = e.id === h.pn.ADD_PAYMENT_STEPS && !U;
-            return !E || t || n;
-        })).find((e) => e.id === F),
-        W = H?.sectionHeaderText?.() ?? H?.label,
-        K = !(null != F && d.MU.includes(F)) && null != W && null != F,
-        Y = N && K && F === h.pn.REVIEW,
-        z = v ? "nitro-pink" : "nitro-green",
-        Z = I ? (0, j.DP)() : v ? A.intl.string(A.t.lG6a5x) : A.intl.string(A.t["t9uG/o"]),
-        q = R.kL,
-        $ = s()(R.N1, P.headerGradient);
-    return G
-        ? (0, l.jsx)("div", { className: q, children: (0, l.jsx)(o.h, { color: z, className: $ }) })
-        : (0, l.jsxs)("div", {
+                n = e.id === h.pn.ADD_PAYMENT_STEPS && !G;
+            return !m || t || n;
+        })).find((e) => e.id === V),
+        Y = H?.sectionHeaderText?.() ?? H?.label,
+        W = !(null != V && d.MU.includes(V)) && null != Y && null != V,
+        K = R && W && V === h.pn.REVIEW,
+        $ = N ? "nitro-pink" : "nitro-green",
+        z = T ? (0, b.DP)() : N ? g.intl.string(g.t.lG6a5x) : g.intl.string(g.t["t9uG/o"]),
+        q = D.kL,
+        Z = s()(D.N1, L.headerGradient);
+    return F
+        ? (0, i.jsx)("div", { className: q, children: (0, i.jsx)(l.h, { color: $, className: Z }) })
+        : (0, i.jsxs)("div", {
               className: q,
               children: [
-                  (0, l.jsxs)(o.h, {
-                      color: z,
-                      className: s()($, { [R.s1]: !K }),
+                  (0, i.jsxs)(l.h, {
+                      color: $,
+                      className: s()(Z, { [D.s1]: !W }),
                       children: [
-                          (0, l.jsx)(D, { isTier2: v }),
+                          (0, i.jsx)(U, { isTier2: N }),
                           !t &&
-                              (0, l.jsx)(u.s_, {
+                              (0, i.jsx)(u.s_, {
                                   "data-migration-pending": !0,
                                   hideOnFullscreen: n,
-                                  onClick: i,
-                                  className: R.Ep,
+                                  onClick: r,
+                                  className: D.Ep,
                               }),
-                          (0, l.jsx)("img", { src: v ? w : O, alt: "", className: Y ? R.i_ : R.kX }),
-                          (0, l.jsxs)("div", {
-                              className: R.FS,
+                          (0, i.jsx)("img", { src: N ? x : P, alt: "", className: K ? D.i_ : D.kX }),
+                          (0, i.jsxs)("div", {
+                              className: D.FS,
                               children: [
-                                  I &&
-                                      (0, l.jsx)("div", {
-                                          className: R.$N,
-                                          children: (0, l.jsx)(c.E, { type: "beta", variant: "expressive" }),
+                                  T &&
+                                      (0, i.jsx)("div", {
+                                          className: D.$N,
+                                          children: (0, i.jsx)(c.E, { type: "beta", variant: "expressive" }),
                                       }),
-                                  (0, l.jsx)(a.D, {
+                                  (0, i.jsx)(o.D, {
                                       variant: "display-md",
                                       color: "text-strong",
-                                      className: R.cf,
-                                      children: Z,
+                                      className: D.cf,
+                                      children: z,
                                   }),
                               ],
                           }),
                       ],
                   }),
-                  (C || x) && (0, l.jsx)(b, { discountAmount: M }),
-                  K && (0, l.jsx)(k, { isOneStepCheckout: N, headerText: W, step: F, filteredBreadcrumbs: B }),
+                  (A || I) && (0, i.jsx)(O, { discountAmount: M }),
+                  W && (0, i.jsx)(k, { isOneStepCheckout: R, headerText: Y, step: V, filteredBreadcrumbs: j }),
               ],
           });
 };
