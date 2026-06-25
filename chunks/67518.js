@@ -1,37 +1,36 @@
-"use strict";
-n.d(t, { n: () => c });
-var i = n(627968),
-    r = n(64700),
-    s = n(192308),
-    a = n(477782),
-    o = n(695366),
-    l = n(409626),
-    u = n(375708);
-function c(e, t) {
-    let c = r.useCallback(() => {
+a.d(n, { n: () => r });
+var i = a(627968),
+    t = a(64700),
+    l = a(192308),
+    c = a(477782),
+    s = a(695366),
+    d = a(409626),
+    o = a(375708);
+function r(e, n) {
+    let r = t.useCallback(() => {
         null != e &&
-            (t?.(l.Ws.Feedback),
-            (0, s.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([
-                    n.e("79877"),
-                    n.e("1216"),
-                    n.e("57656"),
-                    n.e("8891"),
-                    n.e("33771"),
-                    n.e("46039"),
-                    n.e("55266"),
-                    n.e("27495"),
-                ]).then(n.bind(n, 651930));
-                return (n) => (0, i.jsx)(t, { ...n, detectedActivity: { application_id: e, name: "" } });
+            (n?.(d.Ws.Feedback),
+            (0, l.openModalLazy)(async () => {
+                let { default: n } = await Promise.all([
+                    a.e("79877"),
+                    a.e("1216"),
+                    a.e("57656"),
+                    a.e("8891"),
+                    a.e("33771"),
+                    a.e("46039"),
+                    a.e("55266"),
+                    a.e("27495"),
+                ]).then(a.bind(a, 651930));
+                return (a) => (0, i.jsx)(n, { ...a, detectedActivity: { application_id: e, name: "" } });
             }));
-    }, [e, t]);
+    }, [e, n]);
     return null == e
         ? null
-        : (0, i.jsx)(a.Dr, {
+        : (0, i.jsx)(c.Dr, {
               id: "game-profile-something-wrong",
-              label: u.intl.string(u.t.qP2cXd),
-              action: c,
+              label: o.intl.string(o.t.qP2cXd),
+              action: r,
               color: "danger",
-              leadingAccessory: { type: "icon", icon: o.E },
+              leadingAccessory: { type: "icon", icon: s.E },
           });
 }
