@@ -15,12 +15,12 @@ var n = t(627968),
     C = t(27620),
     x = t(45837),
     j = t(888697),
-    y = t(26741),
-    b = t(636537),
+    b = t(26741),
+    y = t(636537),
     E = t(844045),
     I = t(375708);
 function p(e) {
-    if (!(e instanceof b.oh)) return I.intl.string(E.default.CqBvCr);
+    if (!(e instanceof y.oh)) return I.intl.string(E.default.CqBvCr);
     if (429 === e.status) return I.intl.string(E.default.yHHcCH);
     if (403 === e.status) return I.intl.string(E.default["Dfnp+b"]);
     switch (e.body?.code) {
@@ -120,6 +120,7 @@ function K(e) {
                               focused: u.name === i,
                               imagePool: t,
                               videoPool: r,
+                              "aria-label": u.name,
                           },
                           a,
                       );
@@ -207,13 +208,13 @@ function X(e) {
             },
             [f],
         ),
-        y = s.useCallback(
+        b = s.useCallback(
             (e) => {
                 (h.current = null), T.Se(), f(e, W.dD.SEARCH_SUGGESTION, !0);
             },
             [f],
         ),
-        b = s.useCallback(
+        y = s.useCallback(
             (e) => {
                 let { name: l, type: t } = e;
                 (h.current = t), r?.(t), f(l, W.dD.TRENDING_CATEGORY, !0), m.current?.focus();
@@ -256,7 +257,7 @@ function X(e) {
                 className: q.Qs,
                 children:
                     null == o
-                        ? (0, n.jsx)(K, { onSelectCategory: b })
+                        ? (0, n.jsx)(K, { onSelectCategory: y })
                         : (0, n.jsx)(F.Ay, {
                               data: u,
                               onSelectGIF: C,
@@ -267,7 +268,7 @@ function X(e) {
                               searchLimit: null,
                               searchTotalResults: u.length,
                               suggestions: d,
-                              onSelectSuggestion: y,
+                              onSelectSuggestion: b,
                           }),
             }),
         ],
@@ -303,7 +304,7 @@ function en(e) {
                     if (null == e) return void r(!1);
                     let l = !1;
                     return (
-                        b.Bo.get({
+                        y.Bo.get({
                             url: W.Rsh.SEARCH_GUILD(e),
                             query: J.stringify(Z),
                             oldFormErrors: !0,
@@ -397,7 +398,7 @@ let es = (0, t(839214).D)((e, l) => ({
             n.cancelPendingFetch();
             let s = new AbortController();
             e({ isLoading: !0, guildId: t, abortController: s, imageHashes: [] }),
-                b.Bo.get({
+                y.Bo.get({
                     url: W.Rsh.GUILD_VOICE_HANGOUT_RECENT_IMAGES(t),
                     oldFormErrors: !0,
                     rejectWithError: !1,
@@ -541,20 +542,20 @@ function eo(e) {
         c,
         { transitionState: d, onClose: o, channel: g } = e,
         [f, x] = s.useState("HOME"),
-        [b, N] = s.useState(null),
+        [y, N] = s.useState(null),
         { recentImageHashes: S, isLoading: v } =
             ((l = g.guild_id),
             (t = es.useField("isLoading")),
             (c = es.useField("imageHashes")),
             s.useEffect(() => (null != l && es.getField("fetch")(l), () => es.getField("cancelPendingFetch")()), [l]),
             { recentImageHashes: c, isLoading: t });
-    (0, y.$s)({ guildId: g.guild_id, channelId: g.id, contentExists: (0, k.lr)(g) });
+    (0, b.$s)({ guildId: g.guild_id, channelId: g.id, contentExists: (0, k.lr)(g) });
     let _ = s.useCallback(
             async (e, l, t) => {
                 N(null);
                 try {
                     await (0, j.Hd)(g.id, e),
-                        (0, y.z6)({ guildId: g.guild_id, channelId: g.id, contentType: l, gifCategoryType: t }),
+                        (0, b.z6)({ guildId: g.guild_id, channelId: g.id, contentType: l, gifCategoryType: t }),
                         (0, C.hs)(r.w.HANGOUT_WINDOW_SET),
                         o();
                 } catch (e) {
@@ -568,7 +569,7 @@ function eo(e) {
                 N(null);
                 try {
                     await (0, j.B$)(g.id, e),
-                        (0, y.z6)({ guildId: g.guild_id, channelId: g.id, contentType: y.cM.RECENT_IMAGE }),
+                        (0, b.z6)({ guildId: g.guild_id, channelId: g.id, contentType: b.cM.RECENT_IMAGE }),
                         (0, C.hs)(r.w.HANGOUT_WINDOW_SET),
                         o();
                 } catch (e) {
@@ -581,20 +582,20 @@ function eo(e) {
             (e, l) => {
                 let t = e.gifSrc ?? e.src ?? e.url;
                 null != t &&
-                    ("category" === l.source ? _(t, y.cM.GIF_CATEGORY, l.categoryType) : _(t, y.cM.GIF_CUSTOM_SEARCH));
+                    ("category" === l.source ? _(t, b.cM.GIF_CATEGORY, l.categoryType) : _(t, b.cM.GIF_CUSTOM_SEARCH));
             },
             [_],
         ),
         G = s.useCallback(
             (e) => {
-                (0, y.pZ)({ guildId: g.guild_id, channelId: g.id, categoryType: e });
+                (0, b.pZ)({ guildId: g.guild_id, channelId: g.id, categoryType: e });
             },
             [g.guild_id, g.id],
         ),
-        T = s.useCallback((e) => _(e, y.cM.RECENT_IMAGE), [_]),
-        H = s.useCallback((e) => _(e, y.cM.PRESET_GIF), [_]),
+        T = s.useCallback((e) => _(e, b.cM.RECENT_IMAGE), [_]),
+        H = s.useCallback((e) => _(e, b.cM.PRESET_GIF), [_]),
         D = s.useCallback(() => (N(null), x("HOME"), Promise.resolve()), []),
-        F = null != b ? (0, n.jsx)(m.w, { type: "critical", children: b }) : null;
+        F = null != y ? (0, n.jsx)(m.w, { type: "critical", children: y }) : null;
     if ("RECENT_UPLOADS" === f) {
         let e = I.intl.string(E.default.aBnIyR);
         return (0, n.jsxs)(a.d, {
@@ -639,7 +640,7 @@ function eo(e) {
         size: "md",
         title: I.intl.string(E.default.yyPbqI),
         subtitle: I.intl.string(E.default["+y6KsI"]),
-        notice: null != b ? { message: b, type: "critical" } : void 0,
+        notice: null != y ? { message: y, type: "critical" } : void 0,
         actions: [],
         children: (0, n.jsxs)("div", {
             className: el.jE,

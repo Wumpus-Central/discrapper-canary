@@ -572,8 +572,8 @@ function eF(e) {
         ],
     });
 }
-var eO = n(260598),
-    ew = n(452027),
+var eO = n(707554),
+    ew = n(260598),
     eB = n(664007),
     eH = n(405810),
     eq = n(366098),
@@ -592,31 +592,31 @@ function eK(e) {
             canSetFocus: c = !1,
         } = e,
         {
-            entityType: g,
-            channelId: h,
-            description: m,
-            name: v,
-            image: E,
-            scheduledEndTime: f,
-            scheduledStartTime: j,
-            recurrenceRule: y,
+            entityType: h,
+            channelId: m,
+            description: v,
+            name: E,
+            image: f,
+            scheduledEndTime: j,
+            scheduledStartTime: y,
+            recurrenceRule: A,
         } = t,
-        A = (0, eq.D3)(h),
-        N = (0, eq.Xk)(h),
-        p = null != t && (0, T.Fd)(t),
-        C = r.useMemo(() => {
+        N = (0, eq.D3)(m),
+        p = (0, eq.Xk)(m),
+        C = null != t && (0, T.Fd)(t),
+        b = r.useMemo(() => {
             let e = (0, V.N5)(t);
-            return null != e ? e : { startDate: F()(j) };
-        }, [t, j]),
-        [b, I] = r.useState(() => (0, V.z7)(F()(j), y)),
-        S = r.useRef(null),
-        G = r.useRef(null);
-    function _(e) {
+            return null != e ? e : { startDate: F()(y) };
+        }, [t, y]),
+        [I, S] = r.useState(() => (0, V.z7)(F()(y), A)),
+        G = r.useRef(null),
+        _ = r.useRef(null);
+    function R(e) {
         u({ image: e });
     }
-    function R(e, t) {
+    function k(e, t) {
         null == e || void 0 === t
-            ? _(null)
+            ? R(null)
             : (0, x.openModalLazy)(async () => {
                   let { default: l } = await Promise.all([
                       n.e("91752"),
@@ -644,25 +644,25 @@ function eK(e) {
                           file: t,
                           onCrop: (e) => {
                               let { imageUri: t } = e;
-                              return _(t);
+                              return R(t);
                           },
                           uploadType: eQ.HL.SCHEDULED_EVENT_IMAGE,
-                          returnRef: G,
+                          returnRef: _,
                           ...n,
                       });
               });
     }
     r.useEffect(() => {
-        c && S.current?.focus();
+        c && G.current?.focus();
     }, [c]);
-    let k = a?.getFirstFieldErrorMessage("name"),
-        D = a?.getFirstFieldErrorMessage("description"),
-        L = null == k && null == D ? a?.getAnyErrorMessage() : null;
+    let D = a?.getFirstFieldErrorMessage("name"),
+        L = a?.getFirstFieldErrorMessage("description"),
+        P = null == D && null == L ? a?.getAnyErrorMessage() : null;
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", {
                 className: eW.GU,
-                children: null != h && !p && (A > 0 || N > 0) && (0, i.jsx)(eX.Bw, { channelId: h }),
+                children: null != m && !C && (N > 0 || p > 0) && (0, i.jsx)(eX.Bw, { channelId: m }),
             }),
             (0, i.jsx)("div", {
                 className: eW.Zd,
@@ -672,15 +672,15 @@ function eK(e) {
                         (0, i.jsx)(X.k, {
                             label: ec.intl.string(ec.t["0HbEQ6"]),
                             required: !0,
-                            error: k ?? L,
+                            error: D ?? P,
                             onChange: function (e) {
                                 u({ name: e });
                             },
                             placeholder: ec.intl.string(ec.t["6/yars"]),
                             maxLength: eS.t_,
-                            value: v,
+                            value: E,
                             autoComplete: "off",
-                            inputRef: S,
+                            inputRef: G,
                         }),
                         (0, i.jsx)(eY.A, {
                             className: eW.kz,
@@ -688,76 +688,83 @@ function eK(e) {
                                 let { startDate: t, endDate: n } = e,
                                     l = { scheduledStartTime: t?.toISOString(), scheduledEndTime: n?.toISOString() };
                                 null != t &&
-                                    null != f &&
+                                    null != j &&
                                     n?.isBefore(t) &&
                                     (l.scheduledEndTime = t.add(1, "hour").toISOString()),
-                                    null != t && null != b && (l.recurrenceRule = (0, V.nG)(b, t)),
+                                    null != t && null != I && (l.recurrenceRule = (0, V.nG)(I, t)),
                                     u(l);
                             },
                             onRecurrenceChange: function (e) {
-                                let t = C.startDate;
-                                null == t || (u({ recurrenceRule: (0, V.nG)(e, t) }), I(e));
+                                let t = b.startDate;
+                                null == t || (u({ recurrenceRule: (0, V.nG)(e, t) }), S(e));
                             },
-                            schedule: C,
-                            recurrenceRule: y,
-                            showEndDate: g === eS.Ps.EXTERNAL,
-                            requireEndDate: g === eS.Ps.EXTERNAL,
-                            disableStartDateTime: p,
+                            schedule: b,
+                            recurrenceRule: A,
+                            showEndDate: h === eS.Ps.EXTERNAL,
+                            requireEndDate: h === eS.Ps.EXTERNAL,
+                            disableStartDateTime: C,
                             guildId: s,
                         }),
                         (0, i.jsx)(e$, { error: d }),
-                        (0, i.jsx)(eO.f, {
+                        (0, i.jsx)(ew.f, {
                             label: ec.intl.string(ec.t["+gRCC7"]),
-                            error: D,
+                            error: L,
                             placeholder: ec.intl.string(ec.t["kWO/E8"]),
-                            value: m,
+                            value: v,
                             onChange: function (e) {
                                 u({ description: e });
                             },
                             maxLength: eS.IJ,
                             autosize: !0,
                         }),
-                        (0, i.jsx)(ew.D, {
-                            label: ec.intl.string(ec.t.Ly121e),
-                            description: ec.intl.string(ec.t.B9C9be),
-                            children: (0, i.jsx)("div", {
-                                ref: G,
-                                tabIndex: -1,
-                                className: eW.aN,
-                                children:
-                                    null != E
-                                        ? (0, i.jsxs)(i.Fragment, {
-                                              children: [
-                                                  (0, i.jsx)(eB.A, {
-                                                      className: eW.km,
-                                                      iconWrapperClassName: eW.WR,
-                                                      image: E,
-                                                      makeURL: (e) =>
-                                                          null == e
-                                                              ? null
-                                                              : null != s
-                                                                ? ((0, eV.A)((0, M.hQ)(t, s, l)) ?? null)
-                                                                : void 0,
-                                                      onChange: R,
-                                                      hint: ec.intl.string(ec.t.G44Xml),
-                                                      showRemoveButton: !1,
-                                                      enabled: !0,
-                                                  }),
-                                                  (0, i.jsx)(o.$, {
-                                                      variant: "primary",
-                                                      size: "sm",
-                                                      text: ec.intl.string(ec.t.gmUvO1),
-                                                      onClick: () => _(null),
-                                                  }),
-                                              ],
-                                          })
-                                        : (0, i.jsx)(eH.A, {
-                                              size: "sm",
-                                              variant: "primary",
-                                              onChange: R,
-                                              text: ec.intl.string(ec.t.vKCGYb),
-                                          }),
-                            }),
+                        (0, i.jsxs)(W.B, {
+                            gap: 4,
+                            children: [
+                                (0, i.jsx)(K.D, { variant: "text-md/medium", children: ec.intl.string(ec.t.Ly121e) }),
+                                (0, i.jsx)(g.E, {
+                                    color: "text-subtle",
+                                    variant: "text-sm/normal",
+                                    children: ec.intl.string(ec.t.B9C9be),
+                                }),
+                                (0, i.jsx)("div", {
+                                    ref: _,
+                                    tabIndex: -1,
+                                    className: eW.aN,
+                                    children:
+                                        null != f
+                                            ? (0, i.jsxs)(i.Fragment, {
+                                                  children: [
+                                                      (0, i.jsx)(eB.A, {
+                                                          className: eW.km,
+                                                          iconWrapperClassName: eW.WR,
+                                                          image: f,
+                                                          makeURL: (e) =>
+                                                              null == e
+                                                                  ? null
+                                                                  : null != s
+                                                                    ? ((0, eV.A)((0, M.hQ)(t, s, l)) ?? null)
+                                                                    : void 0,
+                                                          onChange: k,
+                                                          hint: ec.intl.string(ec.t.G44Xml),
+                                                          showRemoveButton: !1,
+                                                          enabled: !0,
+                                                      }),
+                                                      (0, i.jsx)(o.$, {
+                                                          variant: "primary",
+                                                          size: "sm",
+                                                          text: ec.intl.string(ec.t.gmUvO1),
+                                                          onClick: () => R(null),
+                                                      }),
+                                                  ],
+                                              })
+                                            : (0, i.jsx)(eH.A, {
+                                                  size: "sm",
+                                                  variant: "primary",
+                                                  onChange: k,
+                                                  text: ec.intl.string(ec.t.vKCGYb),
+                                              }),
+                                }),
+                            ],
                         }),
                     ],
                 }),
@@ -796,7 +803,7 @@ function eJ(e) {
                     ],
                 }),
             }),
-            (0, i.jsx)(eK, { ...n, canSetFocus: t }),
+            (0, i.jsx)(eO.F, { children: (0, i.jsx)(eK, { ...n, canSetFocus: t }) }),
         ],
     });
 }
@@ -805,8 +812,8 @@ var e0 = n(789645),
     e7 = n(842241),
     e8 = n(279208),
     e9 = n(747007),
-    e3 = n(710358),
-    e4 = n(958590),
+    e4 = n(710358),
+    e3 = n(958590),
     e5 = n(174459),
     e2 = n(957565),
     e6 = n(118888);
@@ -817,9 +824,9 @@ function tn(e) {
         r = (0, a.bG)([C.Ay], () => (null != l ? C.Ay.getDefaultChannel(l)?.id : null), [l]),
         s = (0, a.bG)([b.A], () => b.A.getGuild(l), [l]),
         { channel_id: d, id: u } = n ?? {},
-        c = (0, a.bG)([e4.A], () => {
+        c = (0, a.bG)([e3.A], () => {
             let e = d ?? r;
-            return null == e ? null : e4.A.getInvite(e);
+            return null == e ? null : e3.A.getInvite(e);
         }, [d, r]);
     if (null == n) return t(), null;
     let o = s?.vanityURLCode ?? c?.code,
@@ -837,7 +844,7 @@ function tn(e) {
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
-            (0, i.jsx)(e3.A, {
+            (0, i.jsx)(e4.A, {
                 children: (0, i.jsx)("div", {
                     className: e6.zc,
                     children: (0, i.jsx)(e1.C, {

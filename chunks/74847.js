@@ -8,5 +8,3 @@ function r(e) {
         r = t?.isForumChannel();
     return a || (n.A.can(i.xBc.ATTACH_FILES, t) && n.A.can(i.xBc.SEND_MESSAGES, t) && !r);
 }
-SAGES, t;
-)&&!a}

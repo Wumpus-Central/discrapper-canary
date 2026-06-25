@@ -188,6 +188,7 @@ class j extends r.PureComponent {
                 focused: s.name === u,
                 imagePool: o,
                 videoPool: l,
+                "aria-label": s.name,
             },
             r,
         );

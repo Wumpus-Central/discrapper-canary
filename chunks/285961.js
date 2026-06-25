@@ -147,10 +147,11 @@ class k extends r.PureComponent {
             : null;
     }
     render() {
-        let { item: e, renderExtras: t, format: n, coords: r, focused: s, selected: a } = this.props,
-            { color: o, loaded: l } = this.state;
+        let { item: e, renderExtras: t, format: n, coords: r, focused: s, selected: a, "aria-label": o } = this.props,
+            { color: l, loaded: u } = this.state;
         return (0, i.jsxs)(_.D, {
             tabIndex: -1,
+            "aria-label": o,
             innerRef: (e) => {
                 this.ref = e;
             },
@@ -158,7 +159,7 @@ class k extends r.PureComponent {
             "data-focused": s,
             "data-selected": a,
             onClick: this.handleClick,
-            style: { backgroundColor: l ? void 0 : o, ...r },
+            style: { backgroundColor: u ? void 0 : l, ...r },
             children: [x(n) ? null : this.renderGIF(), null != t ? t(e) : null],
         });
     }
@@ -209,26 +210,39 @@ class U extends r.PureComponent {
         i - n <= 1220 && (e !== this.prevResultQuery && (0, g._E)(e), (this.prevResultQuery = e));
     };
     renderItem = (e, t, n, r) => {
+        var s;
+        let a, o;
         if (e > 0) return null;
-        let { focusedId: s } = this.state,
-            { selectedGIF: a } = this.props,
-            o = this.props.data[t];
-        if (null == o) return null;
-        let l = null != a && L(a) === L(o);
+        let { focusedId: l } = this.state,
+            { selectedGIF: u } = this.props,
+            c = this.props.data[t];
+        if (null == c) return null;
+        let d = null != u && L(u) === L(c);
         return (0, i.jsx)(
             k,
             {
-                item: o,
+                item: c,
                 index: t,
-                format: o.format,
-                src: o.src,
+                format: c.format,
+                src: c.src,
                 coords: n,
                 onClick: this.handleClickItem,
-                renderExtras: () => (0, i.jsx)(y.A, { className: O.uJ, ...o }),
-                focused: L(o) === s,
+                renderExtras: () => (0, i.jsx)(y.A, { className: O.uJ, ...c }),
+                focused: L(c) === l,
                 imagePool: this.props.imagePool,
                 videoPool: this.props.videoPool,
-                selected: l,
+                selected: d,
+                "aria-label":
+                    ((s = c.src),
+                    (a = s.split("/").pop()),
+                    null == (o = a?.split(".")[0]) ||
+                    "" === o ||
+                    o.length < 4 ||
+                    (o.length >= 8 && /^[0-9a-f]+$/i.test(o)) ||
+                    (o.length > 12 && !/[-_ ]/.test(o) && /\d/.test(o)) ||
+                    /^(giphy|tenor|\d+[wh]?|xs|sm|md|lg|xl)$/i.test(o)
+                        ? R.intl.formatToPlainString(R.t["5iIGZI"], { index: t + 1 })
+                        : o),
             },
             r,
         );

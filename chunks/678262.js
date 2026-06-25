@@ -174,10 +174,10 @@ function R(e) {
         [t, n, o, e],
     );
 }
-function h(e) {
+function v(e) {
     return null == e ? "" : "" !== e.darkUrl ? e.darkUrl : e.lightUrl;
 }
-let v = "__default__";
+let h = "__default__";
 var P = n(375708),
     U = n(669746);
 function M(e) {
@@ -217,7 +217,7 @@ function L(e) {
             return (
                 (e = new Set(d)),
                 [
-                    { label: "Default (en-US)", value: v },
+                    { label: "Default (en-US)", value: h },
                     ...p
                         .filter((e) => "en-US" !== e.value)
                         .map((t) => ({ label: t.label, value: t.value, disabled: !e.has(t.value) })),
@@ -227,7 +227,7 @@ function L(e) {
         m = (a?.get(n)?.length ?? 0) > 0;
     if (null == o || !m) return null;
     let b = s.length >= 1,
-        f = [{ label: "Default", value: v }, ...s.map((e) => ({ label: e.label, value: e.id }))];
+        f = [{ label: "Default", value: h }, ...s.map((e) => ({ label: e.label, value: e.id }))];
     return (0, u.jsx)("div", {
         className: U.k,
         children: (0, u.jsxs)(_.B, {
@@ -236,12 +236,12 @@ function L(e) {
                 b &&
                     (0, u.jsx)(A.l, {
                         label: "User State",
-                        value: l.get(n) ?? v,
+                        value: l.get(n) ?? h,
                         onSelectionChange: (e) => {
                             var t;
                             let o;
                             return (
-                                (t = e === v ? null : e),
+                                (t = e === h ? null : e),
                                 (o = new Map(O.getState().userStateByType)),
                                 void (null == t ? o.delete(n) : o.set(n, t), O.setState({ userStateByType: o }))
                             );
@@ -253,10 +253,10 @@ function L(e) {
                     }),
                 (0, u.jsx)(A.l, {
                     label: "Locale",
-                    value: r ?? v,
+                    value: r ?? h,
                     onSelectionChange: (e) => {
                         var t;
-                        return (t = e === v ? null : e), void O.setState({ localeOverride: t });
+                        return (t = e === h ? null : e), void O.setState({ localeOverride: t });
                     },
                     options: c,
                     formatOption: M,
@@ -276,7 +276,7 @@ function D(e, t, n, o) {
     return { id: e, component_type: t, promotion_id: n, properties: (0, x.C)(G.m.toBinary(o)) };
 }
 function k(e, t) {
-    return e === h(t) ? t : "" !== e ? { lightUrl: e, darkUrl: e, lightStaticUrl: e, darkStaticUrl: e } : void 0;
+    return e === v(t) ? t : "" !== e ? { lightUrl: e, darkUrl: e, lightStaticUrl: e, darkStaticUrl: e } : void 0;
 }
 var F = n(553706);
 let V = "playground-announcement-modal",
@@ -313,10 +313,11 @@ let V = "playground-announcement-modal",
                                                 ? e.buttonAction
                                                 : (o?.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL),
                                         deeplinkSection: o?.button?.deeplinkSection ?? "",
-                                        navigableStorefrontApplicationId: o?.button
-                                            ?.navigableStorefrontApplicationId ?? {
-                                            value: e.navigableStorefrontApplicationId,
-                                        },
+                                        navigableStorefrontApplicationId:
+                                            o?.button?.navigableStorefrontApplicationId ??
+                                            ("" !== e.navigableStorefrontApplicationId
+                                                ? { value: e.navigableStorefrontApplicationId }
+                                                : void 0),
                                     },
                                 }),
                                 B(V, {
@@ -752,9 +753,11 @@ let eN = {
                                   ? e.buttonAction
                                   : (a?.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL),
                           deeplinkSection: a?.button?.deeplinkSection ?? "",
-                          navigableStorefrontApplicationId: a?.button?.navigableStorefrontApplicationId ?? {
-                              value: e.navigableStorefrontApplicationId,
-                          },
+                          navigableStorefrontApplicationId:
+                              a?.button?.navigableStorefrontApplicationId ??
+                              ("" !== e.navigableStorefrontApplicationId
+                                  ? { value: e.navigableStorefrontApplicationId }
+                                  : void 0),
                       }
                     : void 0),
                 (n = { assetUrl: e.assetUrl, header: e.header, body: e.body, button: t }),
@@ -825,8 +828,8 @@ var eS = n(834730);
 let eC = "playground-payment-modal-banner";
 var eO = n(964661),
     eR = n(503698),
-    eh = n.n(eR),
-    ev = n(403581),
+    ev = n.n(eR),
+    eh = n(403581),
     eP = n(214947),
     eU = n(34188),
     eM = n(577473),
@@ -837,7 +840,7 @@ let eG = i.forwardRef(function (e, t) {
     return (0, u.jsxs)("button", {
         ref: t,
         type: "button",
-        className: eh()(eL.pc, { [eL.EV]: a }),
+        className: ev()(eL.pc, { [eL.EV]: a }),
         onClick: ex,
         children: [
             (0, u.jsx)(n, { size: "md", color: "currentColor" }),
@@ -848,7 +851,7 @@ let eG = i.forwardRef(function (e, t) {
 });
 function eB(e) {
     let { tabLabel: t = "Nitro", selected: n = !1, decoration: o, nitroRowRef: a, wrapNitroRow: l } = e,
-        r = (0, u.jsx)(eG, { ref: a, icon: ev.t, label: t, selected: n, decoration: o });
+        r = (0, u.jsx)(eG, { ref: a, icon: eh.t, label: t, selected: n, decoration: o });
     return (0, u.jsxs)("nav", {
         className: eL.C$,
         children: [
@@ -898,9 +901,11 @@ let eF = "playground-premium-tab-popover",
                                 ? t.buttonAction
                                 : (f?.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL),
                         deeplinkSection: f?.button?.deeplinkSection ?? "",
-                        navigableStorefrontApplicationId: f?.button?.navigableStorefrontApplicationId ?? {
-                            value: t.navigableStorefrontApplicationId,
-                        },
+                        navigableStorefrontApplicationId:
+                            f?.button?.navigableStorefrontApplicationId ??
+                            ("" !== t.navigableStorefrontApplicationId
+                                ? { value: t.navigableStorefrontApplicationId }
+                                : void 0),
                     },
                     asset: k(t.assetUrl, f?.asset),
                 }),
@@ -929,7 +934,7 @@ let eF = "playground-premium-tab-popover",
                       buttonCopy: t.button?.copy ?? "",
                       buttonAction: t.button?.buttonAction ?? c.dz.UNSPECIFIED,
                       navigableStorefrontApplicationId: t.button?.navigableStorefrontApplicationId?.value ?? "",
-                      assetUrl: h(t.asset),
+                      assetUrl: v(t.asset),
                   };
         },
         controls: {
@@ -1223,7 +1228,7 @@ let eQ = {
                     useDefaultOverrides: () => {
                         let e = R(p.C.PREMIUM_TAB_TOOLTIP),
                             t = e?.properties.oneofKind === "premiumTabTooltip" ? e.properties.premiumTabTooltip : null;
-                        return null == t ? null : { header: t.header, body: t.body, assetUrl: h(t.asset) };
+                        return null == t ? null : { header: t.header, body: t.body, assetUrl: v(t.asset) };
                     },
                     controls: {
                         header: { label: "Header", type: "text", defaultValue: "Get Nitro" },
@@ -1285,8 +1290,8 @@ let eQ = {
                             header: t.header,
                             body: t.body,
                             additionalTerms: t.additionalTerms,
-                            assetUrl: h(t.asset),
-                            backgroundAssetUrl: h(t.backgroundAsset),
+                            assetUrl: v(t.asset),
+                            backgroundAssetUrl: v(t.backgroundAsset),
                             gradientStartColor: n[0] ?? "",
                             gradientEndColor: n[1] ?? "",
                             gradientAngle: t.gradient?.angle ?? 0,
@@ -1408,8 +1413,8 @@ let eQ = {
                         if (null == t) return null;
                         let n = t.gradient?.colors ?? [];
                         return {
-                            assetUrl: h(t.asset),
-                            backgroundAssetUrl: h(t.backgroundAsset),
+                            assetUrl: v(t.asset),
+                            backgroundAssetUrl: v(t.backgroundAsset),
                             gradientStartColor: n[0] ?? "",
                             gradientEndColor: n[1] ?? "",
                             gradientAngle: t.gradient?.angle ?? 0,
@@ -1527,7 +1532,7 @@ let eQ = {
                     useDefaultOverrides: () => {
                         let e = R(p.C.GIFT_ICON_COACHMARK),
                             t = e?.properties.oneofKind === "giftIconCoachmark" ? e.properties.giftIconCoachmark : null;
-                        return null == t ? null : { header: t.header, body: t.body, assetUrl: h(t.asset) };
+                        return null == t ? null : { header: t.header, body: t.body, assetUrl: v(t.asset) };
                     },
                     controls: {
                         header: { label: "Header", type: "text", defaultValue: "Gift Nitro" },
@@ -1628,8 +1633,8 @@ let eQ = {
                         if (null == t) return null;
                         let n = t.gradient?.colors ?? [];
                         return {
-                            avatarUrl: h(t.avatarAsset),
-                            bannerUrl: h(t.bannerAsset),
+                            avatarUrl: v(t.avatarAsset),
+                            bannerUrl: v(t.bannerAsset),
                             gradientStartColor: n[0] ?? "",
                             gradientEndColor: n[1] ?? "",
                             gradientAngle: t.gradient?.angle ?? 0,

@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(922139),
+    o = n(308186),
     l = n(717421),
     u = n(834730),
     c = n(398025),
@@ -29,7 +29,7 @@ let f = r.forwardRef((e, t) => {
         C = r.useMemo(() => ({ strokeDasharray: `${S} ${S}`, strokeDashoffset: y }), [S, y]),
         { progressTextAnimation: N } = (0, l.z)({ progressTextAnimation: +(null != p && 1 !== n), config: d.N }),
         v = Math.round(100 * n),
-        R = r.useMemo(() => (g ? "rgba(123, 194, 112, 1)" : "rgba(98, 196, 101, 1)"), [g]),
+        R = r.useMemo(() => (g ? "rgba(123, 194, 112, 1)" : "var(--status-positive)"), [g]),
         O = r.useMemo(() => (g ? "rgba(108, 111, 124, 0.24)" : "var(--background-mod-strong)"), [g]);
     return (0, i.jsxs)("div", {
         className: h.A7,
