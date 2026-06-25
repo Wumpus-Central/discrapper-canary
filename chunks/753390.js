@@ -156,6 +156,7 @@ async function R(e, t, n, i) {
                     },
                     billing_address_token: i.billingAddressToken,
                     bank: i.bank,
+                    pix: null != i.pix ? { tax_id: i.pix.taxId } : void 0,
                     return_url: i.returnUrl,
                     default: r,
                 },
@@ -288,39 +289,44 @@ async function V(e, t) {
     let { paymentMethod: n, error: i } = await F(e, t);
     return { paymentMethod: n, error: i };
 }
-let B = new Set([b.he.CARD, b.he.PAYMENT_REQUEST, b.he.PIX]);
+let B = new Set([b.he.CARD, b.he.PAYMENT_REQUEST]);
 async function j() {
-    for (var e, t = arguments.length, n = Array(t), i = 0; i < t; i++) n[i] = arguments[i];
-    let [r, s, { billingAddress: o, paymentSourceType: l, lastConfirmedSetupIntentRef: u, currency: c }, d] = n;
-    if (null == r) throw w("Stripe not loaded", !0);
-    if (null == s) throw w("Stripe Elements not loaded", !0);
+    let e;
+    for (var t, n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
+    let [s, o, { billingAddress: l, paymentSourceType: u, lastConfirmedSetupIntentRef: c, currency: d }, _] = i;
+    if (null == s) throw w("Stripe not loaded", !0);
+    if (null == o) throw w("Stripe Elements not loaded", !0);
     a.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
-    let _ = await C(o);
-    l !== b.he.PAYMENT_REQUEST && (await G(s));
-    let h = null;
-    if (B.has(l)) {
-        let t = u.current ?? void 0,
+    let h = await C(l);
+    u !== b.he.PAYMENT_REQUEST && (await G(o));
+    let f = null;
+    if (B.has(u)) {
+        let e = c.current ?? void 0,
             n =
-                null != t && l === b.he.PAYMENT_REQUEST
-                    ? { setupIntent: t ?? void 0, error: void 0 }
-                    : await r.confirmSetup({ redirect: "if_required", elements: s });
+                null != e && u === b.he.PAYMENT_REQUEST
+                    ? { setupIntent: e ?? void 0, error: void 0 }
+                    : await s.confirmSetup({ redirect: "if_required", elements: o });
         if (
-            null != (e = n.error) &&
-            "setup_intent_unexpected_state" === e.code &&
-            null != e.setup_intent &&
-            ("succeeded" === e.setup_intent.status || "canceled" === e.setup_intent.status) &&
-            l !== b.he.PAYMENT_REQUEST
+            null != (t = n.error) &&
+            "setup_intent_unexpected_state" === t.code &&
+            null != t.setup_intent &&
+            ("succeeded" === t.setup_intent.status || "canceled" === t.setup_intent.status) &&
+            u !== b.he.PAYMENT_REQUEST
         ) {
-            let { client_secret: e } = await (0, O.w)(null != c ? { body: { currency: c } } : {});
-            await G(s), (n = await r.confirmSetup({ redirect: "if_required", clientSecret: e, elements: s }));
+            let { client_secret: e } = await (0, O.w)(null != d ? { body: { currency: d } } : {});
+            await G(o), (n = await s.confirmSetup({ redirect: "if_required", clientSecret: e, elements: o }));
         }
         let { setupIntent: i } = U(n.setupIntent, n.error, (e) => w(e, !0));
-        (u.current = i), (h = i.payment_method);
+        (c.current = i), (f = i.payment_method);
     } else {
-        let { paymentMethod: e } = await F(r, s);
-        h = e.id;
+        let { paymentMethod: t } = await F(s, o);
+        if (((f = t.id), u === b.he.PIX)) {
+            let n = t.billing_details;
+            if (n?.tax_id == null || "" === n.tax_id) throw w("Missing PIX tax_id from Payment Element", !0);
+            e = { taxId: n.tax_id };
+        }
     }
-    return R(S.kM_.STRIPE, h, o, { billingAddressToken: _, analyticsLocation: d });
+    return R(S.kM_.STRIPE, f, l, { billingAddressToken: h, analyticsLocation: _, pix: e });
 }
 async function H(e, t, n, i) {
     if (null == e || null == t) throw N("Stripe or token not loaded");
@@ -430,6 +436,9 @@ async function q(e) {
         case b.he.EPS:
             if (null == e.bank) throw new o.Ey("EPS missing bank information", o.Ey.ErrorCodes.UNKNOWN_PAYMENT_SOURCE);
             (d.type = "eps"), (d.eps = { bank: e.bank });
+            break;
+        case b.he.PIX:
+            (d.type = "pix"), (d.billing_details.email = e.email), (d.billing_details.tax_id = e.pixMetadata?.taxId);
     }
     g()(null != d.type, "unsupported payment method type");
     let { paymentMethod: _, error: h } = await t.createPaymentMethod(d);
@@ -457,6 +466,11 @@ async function Q(e, t) {
     if (null == t) throw N("Payment source cannot be null on a redirect.");
     let { clientSecret: i, paymentMethodId: r } = await L(e);
     if (null == n) throw N("Stripe cannot be null on a redirect.");
+    if (t.type === b.he.PIX) {
+        let { error: e } = await n.confirmPixPayment(i, { payment_method: r });
+        if (null != e) throw N(e);
+        return { redirectConfirmation: !0 };
+    }
     if (S.CmT.has(t.type)) {
         let e = await v(t.type);
         return J(await et({ stripe: n, paymentSource: t, clientSecret: i, state: e })), { redirectConfirmation: !0 };

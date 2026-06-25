@@ -19,5 +19,3 @@ class o extends l.PureComponent {
     }
 }
 let u = o;
-)]})}}
-let u = l;

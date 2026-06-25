@@ -39,6 +39,7 @@ class o extends r.A {
     brand;
     bank;
     username;
+    pixMetadata;
     static createFromServer(e) {
         let t = e.billing_address ?? {},
             n = {
@@ -58,6 +59,7 @@ class o extends r.A {
                 },
                 country: e.country,
                 flags: e.flags,
+                pixMetadata: null != e.pix ? { taxId: e.pix.tax_id } : void 0,
             };
         switch (e.type) {
             case a.hes.CARD:
@@ -102,7 +104,7 @@ class o extends r.A {
             case a.hes.TDS_WALLET:
                 return new N({ ...n });
             case a.hes.PIX:
-                return new v({ ...n });
+                return new v({ ...n, email: e.email });
             default:
                 (0, s.xb)(e);
         }
@@ -161,7 +163,8 @@ class o extends r.A {
             (this.billingAddress = e.billingAddress ?? {}),
             (this.isDefault = e.isDefault),
             (this.flags = e.flags ?? 0),
-            (this.country = e.country ?? "");
+            (this.country = e.country ?? ""),
+            (this.pixMetadata = e.pixMetadata);
     }
     hasFlag(e) {
         return (0, i.Lt)(this.flags, e);
@@ -320,5 +323,6 @@ class v extends o {
     constructor(e) {
         if ((super(e), e.type !== a.hes.PIX))
             throw Error(`Cannot instantiate PixSourceRecord with type: ${e.type}, must be ${a.hes.PIX}`);
+        this.email = e.email;
     }
 }
