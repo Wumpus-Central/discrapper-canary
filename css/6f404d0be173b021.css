@@ -19,6 +19,12 @@
     margin-bottom: var(--space-8)
 }
 
+.tileGrid_a1294d {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(var(--custom-dns-tile-columns), 1fr)
+}
+
 .effectPreview_caa50c {
     display: flex;
     justify-content: center;
@@ -45,10 +51,11 @@
     border-radius: var(--radius-sm);
     cursor: pointer;
     display: flex;
-    height: 60px;
+    height: 56px;
     justify-content: center;
-    min-width: 94px;
-    overflow: hidden
+    min-width: 0;
+    overflow: hidden;
+    width: 100%
 }
 
 .effectContainer_caa50c.selected_caa50c {
@@ -68,10 +75,11 @@
     box-shadow: 0 1px 4px 0 var(--shadow-low);
     cursor: pointer;
     display: flex;
-    height: 68px;
+    height: 56px;
     justify-content: center;
+    min-width: 0;
     overflow: hidden;
-    width: 68px
+    width: 100%
 }
 
 .fontButton_fc7677.selected_fc7677 {

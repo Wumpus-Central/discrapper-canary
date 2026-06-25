@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { R: () => d });
-var i = n(64700),
-    r = n(172218),
-    s = n(323889),
-    a = n(17928),
-    o = n(475743),
-    l = n(531685),
-    u = n(954243),
-    c = n(971649);
-n(23766);
-let d = i.memo(function (e) {
+r.d(t, { R: () => o });
+var s = r(64700),
+    i = r(172218),
+    a = r(323889),
+    n = r(17928),
+    d = r(475743),
+    u = r(531685),
+    c = r(954243),
+    p = r(971649);
+r(23766);
+let o = s.memo(function (e) {
     let t,
-        n,
-        d,
-        { focused: _, focusedChanged: h } =
-            ((t = (0, a.bG)([l.A], () => l.A.isFocused())),
-            (n = (0, o.A)(t)),
-            (d = t !== n),
-            { focused: t, focusedChanged: d }),
+        r,
+        o,
+        { focused: C, focusedChanged: k } =
+            ((t = (0, n.bG)([u.A], () => u.A.isFocused())),
+            (r = (0, d.A)(t)),
+            (o = t !== r),
+            { focused: t, focusedChanged: o }),
         {
-            visible: f,
-            visibleChanged: p,
-            reference: E,
+            visible: l,
+            visibleChanged: y,
+            reference: h,
         } = (function (e) {
-            let [t, n] = i.useState(!1),
-                s = e ?? t,
-                a = s !== (0, o.A)(s);
-            return { visible: s, visibleChanged: a, reference: (0, r.K)((e) => n(e), 0.5) };
+            let [t, r] = s.useState(!1),
+                a = e ?? t,
+                n = a !== (0, d.A)(a);
+            return { visible: a, visibleChanged: n, reference: (0, i.K)((e) => r(e), 0.5) };
         })(e.overrideVisibility),
-        { key: m, adContentIds: g } = (0, c.RC)(e),
-        A = { ...e, focused: _, focusedChanged: h, visible: f, visibleChanged: p, reference: E };
+        { key: v, adContentIds: b } = (0, p.RC)(e),
+        m = { ...e, focused: C, focusedChanged: k, visible: l, visibleChanged: y, reference: h };
     return "questOrQuests" in e
-        ? (0, i.createElement)(u.xs, { ...A, key: m, adContentIds: g, adCreativeType: s.p.QUEST })
-        : (0, i.createElement)(u.xs, { ...A, key: m, adContentIds: g, adCreativeType: e.adCreativeType });
+        ? (0, s.createElement)(c.xs, { ...m, key: v, adContentIds: b, adCreativeType: a.p.QUEST })
+        : (0, s.createElement)(c.xs, { ...m, key: v, adContentIds: b, adCreativeType: e.adCreativeType });
 });

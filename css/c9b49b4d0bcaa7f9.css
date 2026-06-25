@@ -141,12 +141,22 @@
     width: 800px
 }
 
+.modalRoot__39813.extendedWidth__39813 {
+    max-width: 100%;
+    width: 834px
+}
+
 .modalContent__39813.modalContent__39813 {
     background-color: var(--background-surface-high);
     border-radius: var(--radius-md) var(--radius-md) 0 0;
     display: grid;
     grid-template-columns: 352px 1fr;
+    overflow: hidden auto;
     padding: 0
+}
+
+.modalContent__39813.modalContent__39813.extendedWidth__39813 {
+    grid-template-columns: 424px 1fr
 }
 
 .selectionSection__39813 {
