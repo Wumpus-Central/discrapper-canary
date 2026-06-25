@@ -28,8 +28,8 @@ var I = n(485845),
     S = n(361926),
     b = n(751765),
     L = n(113854),
-    k = n(207371),
-    R = n(205184),
+    R = n(207371),
+    k = n(205184),
     P = n(773669),
     M = n(495544),
     D = n(734057),
@@ -72,12 +72,12 @@ function ei(e) {
         { staticBannerSrc: p, videoBannerSrc: A, bannerAspectRatio: I } = (0, Q.f)(t),
         C = (0, u.bG)([M.default], () => l ?? M.default.getId(), [l]),
         { analyticsLocations: v } = (0, f.Ay)(x.A.APP_MESSAGE_EMBED),
-        { currentChannelId: _, instanceId: j, isCurrentlyInInstance: b, canLaunchInChannel: R } = (0, V.w)(t.id),
+        { currentChannelId: _, instanceId: j, isCurrentlyInInstance: b, canLaunchInChannel: k } = (0, V.w)(t.id),
         P = (0, T.A)(),
         O = (0, S.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: c?.id }),
         U = null != m && h && O,
-        G = R && h,
-        B = (0, k.x)(t),
+        G = k && h,
+        B = (0, R.x)(t),
         F = (0, ee.F)(t),
         Y = (0, ee.t)(t),
         z = r.useMemo(() => {
@@ -192,7 +192,7 @@ function es(e) {
     let { app: t } = e,
         { tags: n, maxParticipants: i = 0 } = t,
         l = (0, u.bG)([U.A], () => U.A.getGuildId() ?? void 0, []),
-        a = (0, R.s)(t.id),
+        a = (0, k.s)(t.id),
         o = (0, u.yK)([G.default, O.A], () => {
             let e = [];
             for (let [t, n] of a.entries()) {
@@ -261,7 +261,7 @@ function em(e) {
         v = null != p && A?.compositeInstanceId === p,
         _ = null != n ? n : i.customId,
         j = [];
-    (0, k.x)(t)
+    (0, R.x)(t)
         ? j.push({
               label: J.intl.string(J.t.RscU7I),
               trackingArea: Z.kY.PLAY,
@@ -367,8 +367,8 @@ var eE = n(284009),
     eS = n(97483),
     eb = n(939249),
     eL = n(996759),
-    ek = n(800342),
-    eR = n(163437),
+    eR = n(800342),
+    ek = n(163437),
     eP = n(185438),
     eM = n(97352),
     eD = n(652676),
@@ -393,14 +393,14 @@ let eK = (0, u.UT)([eO.A, eU.A, eM.A], {
             return { sku: t, storeListing: n, subscriptionPlan: null != i ? i[0] : void 0 };
         },
         load: async (e) => {
-            eI()(null != e, "skuId is null"), await (0, ek.QB)(e);
+            eI()(null != e, "skuId is null"), await (0, eR.QB)(e);
         },
     }),
     eW = (0, u.UT)([eO.A], {
         getQueryId: W.fic.__DO_NOT_USE__STOREFRONT_MESSAGE_EMBED_PARENT_SKU,
         get: (e) => (null == e ? null : (eO.A.getParentSKU(e) ?? null)),
         load: async (e, t) => {
-            eI()(null != e && null != t, "appId is null"), await (0, ek.JI)(t);
+            eI()(null != e && null != t, "appId is null"), await (0, eR.JI)(t);
         },
     });
 function eJ(e) {
@@ -492,7 +492,7 @@ function eq(e) {
         { openModal: p, subscriptionPurchaseButtonState: A } = (0, eP.A)({ skuId: i, initialSubscribeForGuild: m });
     if (!g || null == o) return null;
     let x = o.type === W.Puh.SUBSCRIPTION,
-        f = !!x && (0, eR.bg)(o.flags);
+        f = !!x && (0, ek.bg)(o.flags);
     function E() {
         (0, eC.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
@@ -894,7 +894,7 @@ var tg = n(175671),
 function tL(e) {
     return e.map((e) => `#${e}`);
 }
-function tk(e) {
+function tR(e) {
     let { message: t } = e,
         { sharedClientTheme: n } = t,
         { setAll: i } = (0, tN.ko)();
@@ -903,7 +903,7 @@ function tk(e) {
         : (0, s.jsxs)("div", {
               className: tb.kL,
               children: [
-                  (0, s.jsx)(tR, { message: t }),
+                  (0, s.jsx)(tk, { message: t }),
                   (0, s.jsx)(eg.$, {
                       text: J.intl.string(J.t.SKNnqq),
                       fullWidth: !0,
@@ -922,7 +922,7 @@ function tk(e) {
               ],
           });
 }
-function tR(e) {
+function tk(e) {
     var t, n, i;
     let { message: l } = e,
         { sharedClientTheme: a } = l,
@@ -1353,7 +1353,7 @@ var nv = n(643612),
     nS = n(993748),
     nb = n(212534),
     nL = n(64493);
-function nk(e) {
+function nR(e) {
     let { code: t, message: n } = e,
         [i, l, a] = (0, nN.yK)(
             [nb.A],
@@ -1421,7 +1421,7 @@ function nk(e) {
             })
           : (0, s.jsx)(ei, { app: ny.Ay.createFromServer(i), linkType: et.J.APP_DISCOVERY, onView: h, message: n });
 }
-var nR = n(229527),
+var nk = n(229527),
     nP = n(870136),
     nM = n(330075),
     nD = n(412728);
@@ -1676,10 +1676,10 @@ function ig(e) {
         L = r.useCallback(() => {
             A(!0);
         }, [A]),
-        k = r.useCallback(() => {
+        R = r.useCallback(() => {
             A(!1);
         }, [A]),
-        R = r.useCallback(async () => {
+        k = r.useCallback(async () => {
             null != d &&
                 ((0, tG.zV)(W.HAw.MEDIA_POST_PREVIEW_EMBED_CLICKED, {
                     media_post_id: d.threadId,
@@ -1707,7 +1707,7 @@ function ig(e) {
             (0, s.jsxs)("div", {
                 className: ih.iT,
                 onMouseEnter: L,
-                onMouseLeave: k,
+                onMouseLeave: R,
                 children: [
                     !f &&
                         (!0 === d.shouldShowBlurredThumbnailImage
@@ -1730,7 +1730,7 @@ function ig(e) {
                               })),
                     null != d.coverImageOverlayText &&
                         (0, s.jsx)(eb.D, {
-                            onClick: R,
+                            onClick: k,
                             children: (0, s.jsx)("div", {
                                 className: ih.nx,
                                 children: (0, s.jsxs)("div", {
@@ -1810,7 +1810,7 @@ function ig(e) {
                                                     className: ih.Xg,
                                                 }),
                                             (0, s.jsx)(eb.D, {
-                                                onClick: R,
+                                                onClick: k,
                                                 className: ih.HA,
                                                 children: (0, s.jsx)(e8.D, {
                                                     variant: "heading-md/semibold",
@@ -1863,8 +1863,8 @@ function ig(e) {
                                 ],
                             }),
                             d.canAccess
-                                ? (0, s.jsx)(eg.$, { variant: "primary", onClick: R, text: d.ctaText })
-                                : (0, s.jsx)(eg.$, { onClick: R, variant: "primary", text: d.ctaText }),
+                                ? (0, s.jsx)(eg.$, { variant: "primary", onClick: k, text: d.ctaText })
+                                : (0, s.jsx)(eg.$, { onClick: k, variant: "primary", text: d.ctaText }),
                         ],
                     }),
                 ],
@@ -1887,8 +1887,8 @@ var ip = n(492230),
     iS = n(761640),
     ib = n(989349),
     iL = n.n(ib),
-    ik = n(606049),
-    iR = n(943815),
+    iR = n(606049),
+    ik = n(943815),
     iP = n(447215),
     iM = n(221314),
     iD = n(237507),
@@ -1897,7 +1897,7 @@ var ip = n(492230),
 let iG = (e) => {
     let { reportingUserId: t, guildId: n, compact: i, channel: l, messageId: a, reportedTimestamp: d } = e,
         c = G.default.getUser(t),
-        u = r.useMemo(() => (i ? (0, iR.A)((0, na.i$)(iL()(), "LT")) : null), [i]),
+        u = r.useMemo(() => (i ? (0, ik.A)((0, na.i$)(iL()(), "LT")) : null), [i]),
         m = (0, iP.P)({ user: c, channelId: l.id, guildId: n, messageId: a })((0, t_.m2)(c, l)),
         h = null != c ? c.getAvatarURL(n, (0, tI.FT)(tI._3.SIZE_16)) : iU,
         g =
@@ -1914,7 +1914,7 @@ let iG = (e) => {
                 color: "text-subtle",
                 children: [
                     (0, s.jsx)("span", { className: iD.Ek, children: "\u2022" }),
-                    (0, s.jsx)(ik.A, { timestamp: d, className: iD.vE }),
+                    (0, s.jsx)(iR.A, { timestamp: d, className: iD.vE }),
                 ],
             }),
         ],
@@ -2479,7 +2479,7 @@ let lT = (e) => {
                       },
                   })),
                   (L = "Custom Sticker Popout (Soft Upsell)"));
-        let k = !b && !f && S && A;
+        let R = !b && !f && S && A;
         if (
             (r.useEffect(() => {
                 let { refreshPositionKey: e } = T.current;
@@ -2519,7 +2519,7 @@ let lT = (e) => {
                                     postSuccessGuild: f || null == d ? void 0 : d,
                                     premiumModalAnalyticsLocation: _,
                                 }),
-                            k &&
+                            R &&
                                 (0, s.jsx)("div", {
                                     "data-button-hoisted-classname-wrapper": !0,
                                     className: l_.lI,
@@ -2553,7 +2553,7 @@ let lT = (e) => {
                                     (0, s.jsx)(lh.G7, {
                                         expressionSourceGuild: t,
                                         hasJoinedExpressionSourceGuild: f,
-                                        isDisplayingJoinGuildButtonInPopout: k,
+                                        isDisplayingJoinGuildButtonInPopout: R,
                                     }),
                                     !f &&
                                         (0, s.jsxs)(s.Fragment, {
@@ -2656,8 +2656,8 @@ let lb = function (e) {
             : (0, s.jsx)(lt.Y0, {});
 };
 var lL = n(76513);
-let lk = (0, ln.xI)(i7.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
-    lR = (e) => {
+let lR = (0, ln.xI)(i7.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
+    lk = (e) => {
         let { renderableSticker: t, channel: n, isInteracting: i } = e,
             l = r.useRef(null),
             [a, o] = r.useState(!0),
@@ -2712,7 +2712,7 @@ let lk = (0, ln.xI)(i7.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
                                     o(!a), n(e);
                                 },
                                 tag: "span",
-                                children: (0, s.jsx)(ls.A, { isInteracting: i, size: lk, sticker: u ?? t }),
+                                children: (0, s.jsx)(ls.A, { isInteracting: i, size: lR, sticker: u ?? t }),
                             }),
                         });
                     },
@@ -3154,7 +3154,7 @@ let sy = r.memo(function (e) {
         })({ embeddedActivity: A, joinability: T, currentEmbeddedActivity: E, channel: m }),
         b = r.useId(),
         L = null != I && I.isLaunching && I.componentId === b,
-        k = async () => {
+        R = async () => {
             eG.default.track(W.HAw.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: n.id,
                 channel_id: i,
@@ -3179,7 +3179,7 @@ let sy = r.memo(function (e) {
                           componentId: b,
                       });
         },
-        R = S.disabled ? J.intl.string(J.t.JBnc7N) : J.intl.string(J.t.cX9uLZ),
+        k = S.disabled ? J.intl.string(J.t.JBnc7N) : J.intl.string(J.t.cX9uLZ),
         P = (0, ee.F)(N, () => {
             eG.default.track(W.HAw.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: n.id,
@@ -3207,7 +3207,7 @@ let sy = r.memo(function (e) {
             {
                 label: S.text,
                 trackingArea: Z.kY.PLAY,
-                onClick: k,
+                onClick: R,
                 disabled: S.disabled,
                 disabledReason: t,
                 submitting: L,
@@ -3220,7 +3220,7 @@ let sy = r.memo(function (e) {
         info: (0, s.jsx)("div", {
             className: sN.QR,
             children: y
-                ? (0, s.jsx)(p.E, { variant: "text-xs/medium", color: "none", children: R })
+                ? (0, s.jsx)(p.E, { variant: "text-xs/medium", color: "none", children: k })
                 : (0, s.jsxs)(s.Fragment, {
                       children: [
                           null != j &&
@@ -3280,8 +3280,8 @@ let sy = r.memo(function (e) {
 var sS = n(164664),
     sb = n(439401),
     sL = n(657044),
-    sk = n(863574),
-    sR = n(707606),
+    sR = n(863574),
+    sk = n(707606),
     sP = n(456412),
     sM = n(429913),
     sD = n(993408),
@@ -3908,7 +3908,7 @@ class ry extends r.PureComponent {
                 renderCustomMedia: a,
                 isEmbed: o,
             } = this.props,
-            d = o ? sk.ug : rN.A;
+            d = o ? sR.ug : rN.A;
         return (0, s.jsx)(d, {
             className: i,
             renderMedia: null != a ? a : this.renderMedia,
@@ -3933,7 +3933,7 @@ class rL extends r.Component {
     }
     componentDidMount() {
         let { sku: e, skuId: t, storeListing: n } = this.props;
-        (null == e || null == n) && (0, ek.QB)(t);
+        (null == e || null == n) && (0, eR.QB)(t);
     }
     handleToggleMute = () => {
         this.setState({ muted: !this.state.muted });
@@ -3967,7 +3967,7 @@ class rL extends r.Component {
     renderApplicationTile = (e, t) => {
         let { inLibrary: n, width: i, renderCustomTitle: l, renderCustomTagline: r, renderCustomMedia: a } = this.props,
             { playing: o, muted: d } = this.state,
-            c = i > sk.Tm;
+            c = i > sR.Tm;
         return (0, s.jsx)(ry, {
             sku: e,
             storeListing: t,
@@ -4008,11 +4008,11 @@ class rL extends r.Component {
     };
     render() {
         let { sku: e, storeListing: t, width: n, fetchFailed: i, renderFallback: l } = this.props,
-            r = n > sk.Tm;
+            r = n > sR.Tm;
         return null == e || null == t
             ? i
                 ? l()
-                : (0, s.jsx)(sk.Wb, { isHorizontal: r })
+                : (0, s.jsx)(sR.Wb, { isHorizontal: r })
             : e.productLine === W.EZt.COLLECTIBLES
               ? (0, s.jsx)(sQ.A, { section: W.JJy.APPLICATION_EMBED, children: this.renderApplicationTile(e, t) })
               : (0, s.jsx)(sQ.A, {
@@ -4027,8 +4027,8 @@ class rL extends r.Component {
                 });
     }
 }
-let rk = [eO.A, sK.A, eU.A];
-function rR(e) {
+let rR = [eO.A, sK.A, eU.A];
+function rk(e) {
     let { skuId: t } = e,
         n = eO.A.get(t),
         i = null != n ? rS.A.getApplication(n.applicationId) : null;
@@ -4041,9 +4041,9 @@ function rR(e) {
         libraryApplication: null != n ? sK.A.getLibraryApplication(n.applicationId, n.applicationId, !0) : null,
     };
 }
-let rP = (0, sP.A)((0, sR.A)(rL)),
-    rM = u.Ay.connectStores(rk, rR)(rP),
-    rD = (0, sR.A)(u.Ay.connectStores(rk, rR)(rL));
+let rP = (0, sP.A)((0, sk.A)(rL)),
+    rM = u.Ay.connectStores(rR, rk)(rP),
+    rD = (0, sk.A)(u.Ay.connectStores(rR, rk)(rL));
 var rO = n(576171);
 function rU(e) {
     let { onClick: t, libraryApplication: n } = e;
@@ -4059,7 +4059,7 @@ function rU(e) {
 class rG extends r.PureComponent {
     get isHorizontal() {
         let { width: e } = this.props;
-        return e >= sk.Tm;
+        return e >= sR.Tm;
     }
     get isClientUpdateRequired() {
         return this.props.resolveErrorCode === W.t02.INVALID_GIFT_REDEMPTION_CLIENT_UPDATE_REQUIRED;
@@ -4084,7 +4084,7 @@ class rG extends r.PureComponent {
               ? J.intl.string(J.t.eEM3dq)
               : J.intl.string(J.t.tB8S6u);
     render() {
-        return (0, s.jsx)(sk.ug, {
+        return (0, s.jsx)(sR.ug, {
             isHorizontal: this.isHorizontal,
             renderTitle: this.renderTitle,
             renderTagline: this.renderTagline,
@@ -4285,8 +4285,8 @@ class rw extends r.Component {
         let { width: t } = this.props;
         if (null == e || null == e.giftStyle) return null;
         let n = lC.Wx.includes(e.giftStyle),
-            i = o()(rO.gB, { [rO.El]: n, [rO.by]: t >= sk.Tm }),
-            l = o()({ [rO.gc]: n, [rO.Ei]: n && t >= sk.Tm, [rO.ww]: !n, [rO.wy]: !n && t >= sk.Tm });
+            i = o()(rO.gB, { [rO.El]: n, [rO.by]: t >= sR.Tm }),
+            l = o()({ [rO.gc]: n, [rO.Ei]: n && t >= sR.Tm, [rO.ww]: !n, [rO.wy]: !n && t >= sR.Tm });
         return (0, s.jsxs)("div", {
             className: i,
             children: [
@@ -4337,13 +4337,13 @@ class rw extends r.Component {
             });
         if (null == e || e.revoked)
             if (t) return (0, s.jsx)(rG, { isSelfGift: l, width: i, resolveErrorCode: n });
-            else return (0, s.jsx)(sk.Wb, { isHorizontal: i >= sk.Tm });
+            else return (0, s.jsx)(sR.Wb, { isHorizontal: i >= sR.Tm });
         return (0, sD.hU)(e)
             ? (0, s.jsx)("div", { className: rO.mp, children: this.renderEmbed() })
             : this.renderEmbed();
     }
 }
-let rB = (0, sP.A)((0, sR.A)(rw)),
+let rB = (0, sP.A)((0, sk.A)(rw)),
     rV = function (e) {
         let { code: t, author: n } = e,
             {
@@ -4967,7 +4967,7 @@ function ad(e) {
         S = _?.isGuildVoiceOrThread() ?? !1,
         b = d?.features.has(W.GuildFeatures.HUB) ?? !1,
         L = d?.id,
-        { analyticsLocations: k } = (0, f.Ay)(x.A.INVITE_EMBED);
+        { analyticsLocations: R } = (0, f.Ay)(x.A.INVITE_EMBED);
     (0, e4.A)({
         name: e5.ImpressionNames.INVITE_EMBED,
         type: e5.ImpressionTypes.VIEW,
@@ -4978,16 +4978,16 @@ function ad(e) {
             invite_instance_id: (0, nz._U)(m.code, h.id),
             invite_channel_type: E?.type,
             embed_type: "guild_invite",
-            location_stack: k,
+            location_stack: R,
         },
     });
-    let [R, P] = r.useState(!1),
+    let [k, P] = r.useState(!1),
         M = r.useCallback(() => P(!1), []),
         D = r.useRef(null),
         O = (0, u.bG)([il.Ay], () => aa([il.Ay], m)),
         U = r.useCallback(() => {
-            P(!0), (0, rH.Pq)(L, "show profile", k);
-        }, [L, k]),
+            P(!0), (0, rH.Pq)(L, "show profile", R);
+        }, [L, R]),
         G = r.useCallback(() => {
             let e = "noop";
             j ? (a(), (e = "transition")) : (o(), (e = "accept")),
@@ -4999,9 +4999,9 @@ function ad(e) {
                         invite_message_id: h.id,
                         invite_instance_id: (0, nz._U)(m.code, h.id),
                     },
-                    k,
+                    R,
                 );
-        }, [m, h, k, j, a, o]);
+        }, [m, h, R, j, a, o]);
     if (null == d) {
         if (null == m.guild) return (0, s.jsx)(rQ, {});
         (d = rX.DY(m.guild)).premiumTier = m.guild.premium_tier ?? W.TVA.NONE;
@@ -5033,7 +5033,7 @@ function ad(e) {
                 (0, s.jsx)(ao.A, {
                     guildId: d.id,
                     name: d.name,
-                    shouldShow: R,
+                    shouldShow: k,
                     onRequestClose: M,
                     targetElementRef: D,
                     children: () => (0, s.jsx)(nT.A.GuildName, { guild: d, ref: D }),
@@ -5430,7 +5430,7 @@ function aj(e) {
         : ((L = "active"),
           A && ((b = J.intl.string(J.t.Q1W99y)), (L = "secondary")),
           (t = v ? J.intl.string(J.t["4hyaHu"]) : J.intl.formatToPlainString(J.t.QmlLEq, { name: y })));
-    let k =
+    let R =
         m === l.id && null != T
             ? (0, s.jsx)(nT.A.Channel, { channel: T })
             : J.intl.formatToPlainString(J.t.u0vaDE, { guildName: l.name });
@@ -5443,7 +5443,7 @@ function aj(e) {
                         className: nF.iH,
                         children: [
                             (0, s.jsx)(nT.A.Icon, { guild: l, onClick: N && E ? j : void 0 }),
-                            (0, s.jsx)(nT.A.Info, { title: t, onClick: N && E ? j : void 0, children: k }),
+                            (0, s.jsx)(nT.A.Info, { title: t, onClick: N && E ? j : void 0, children: R }),
                         ],
                     }),
                     (0, s.jsx)(eg.$, { onClick: j, loading: _, disabled: S, variant: L, text: b }),
@@ -5458,8 +5458,8 @@ var aN = n(459192),
     aS = n(52074),
     ab = n(725613),
     aL = n(693879),
-    ak = n(145497),
-    aR = n(481947),
+    aR = n(145497),
+    ak = n(481947),
     aP = n(977997),
     aM = n(607567),
     aD = n(198183);
@@ -5557,7 +5557,7 @@ function aO(e) {
                                         title: `${o?.name} / ${a}`,
                                         body: "",
                                         assetSize: 24,
-                                        asset: null != o ? (0, s.jsx)(ak.Ay, { guild: o, iconSize: 24 }) : void 0,
+                                        asset: null != o ? (0, s.jsx)(aR.Ay, { guild: o, iconSize: 24 }) : void 0,
                                         position: "top",
                                         children: (0, s.jsx)(eb.D, {
                                             className: aD.HA,
@@ -5586,7 +5586,7 @@ function aO(e) {
                                       className: aD.JD,
                                       children: m.map((e) =>
                                           (0, s.jsx)(
-                                              aR.Ay,
+                                              ak.Ay,
                                               {
                                                   className: aD.Eq,
                                                   user: e.user,
@@ -5967,8 +5967,8 @@ function a6(e) {
             location_stack: j,
         },
     });
-    let k = (0, u.bG)([sp.Ay], () => sp.Ay.useReducedMotion),
-        R = r.useRef(null),
+    let R = (0, u.bG)([sp.Ay], () => sp.Ay.useReducedMotion),
+        k = r.useRef(null),
         [P, O] = r.useState({ percentX: 0, percentY: 0, proximity: 0 }),
         U = (0, u.bG)([aB.A], () => {
             let e = g.map((e) => e.user),
@@ -5985,8 +5985,8 @@ function a6(e) {
     r.useEffect(() => () => G.cancel(), [G]);
     let w = r.useCallback(
             (e) => {
-                if (k) return;
-                let t = R.current?.getBoundingClientRect();
+                if (R) return;
+                let t = k.current?.getBoundingClientRect();
                 if (null == t) return;
                 let n = ((e.clientX - t.left) / t.width) * 2 - 1,
                     i = ((e.clientY - t.top) / t.height) * 2 - 1,
@@ -6001,7 +6001,7 @@ function a6(e) {
                 }
                 G({ percentX: n, percentY: i, proximity: l });
             },
-            [k, G],
+            [R, G],
         ),
         B = r.useCallback(() => {
             G.cancel(), O({ percentX: 0, percentY: 0, proximity: 0 });
@@ -6010,7 +6010,7 @@ function a6(e) {
         className: a3.kL,
         children: [
             (0, s.jsxs)("div", {
-                ref: R,
+                ref: k,
                 className: a3.hw,
                 onMouseMove: w,
                 onMouseLeave: B,
@@ -6253,7 +6253,7 @@ function a5(e) {
 }
 var a4 = n(266620),
     a9 = n(860227),
-    a7 = n(67416),
+    a7 = n(568006),
     a8 = n(666176),
     oe = n(272984);
 let ot = function (e) {
@@ -6447,7 +6447,7 @@ class oI extends r.Component {
                         children: (t) => {
                             switch (n.type) {
                                 case tM.I.APP_DIRECTORY_PROFILE:
-                                    return (0, s.jsx)(nk, { code: a, message: e });
+                                    return (0, s.jsx)(nR, { code: a, message: e });
                                 case tM.I.ACTIVITY_BOOKMARK:
                                     let { params: i } = n;
                                     return (0, s.jsx)(eh, { application: t, message: e, params: i });
@@ -6832,7 +6832,7 @@ class oI extends r.Component {
             { channel: n, isInteracting: i } = this.props;
         return 0 === t.length
             ? null
-            : t.map((e) => (0, s.jsx)(lR, { channel: n, isInteracting: i, renderableSticker: e }, e.id));
+            : t.map((e) => (0, s.jsx)(lk, { channel: n, isInteracting: i, renderableSticker: e }, e.id));
     }
     renderThreadAccessories(e) {
         if (e.hasFlag(W.pr7.HAS_THREAD) && !1 !== this.props.renderThreadAccessory)
@@ -6939,7 +6939,7 @@ class oI extends r.Component {
         if (null != t) return (0, s.jsx)(iE.A, { message: e, poll: t, className: op.PM });
     }
     renderShareClientTheme(e) {
-        return null != e.sharedClientTheme ? (0, s.jsx)(tk, { message: e }) : null;
+        return null != e.sharedClientTheme ? (0, s.jsx)(tR, { message: e }) : null;
     }
     renderReportedMessage(e) {
         if (e.messageSnapshots.length > 0 && (0, iC.Mn)(e, this.props.channel)) return (0, s.jsx)(iF, { message: e });
@@ -7009,7 +7009,7 @@ class oI extends r.Component {
             S = this.renderPoll(t, n),
             b = this.renderForwardedMessage(t),
             L = this.renderReportedMessage(t),
-            k = this.renderShareClientTheme(t);
+            R = this.renderShareClientTheme(t);
         return null == d &&
             null == u &&
             null == h &&
@@ -7029,7 +7029,7 @@ class oI extends r.Component {
             null == S &&
             null == b &&
             null == L &&
-            null == k
+            null == R
             ? null
             : (0, s.jsxs)("div", {
                   id: (0, a9.XL)(t),
@@ -7039,7 +7039,7 @@ class oI extends r.Component {
                       b,
                       C,
                       S,
-                      k,
+                      R,
                       d,
                       c,
                       j,
@@ -7088,7 +7088,7 @@ function oC(e) {
             }),
             [A, n],
         ),
-        C = (0, nR.ix)(n.guild_id),
+        C = (0, nk.ix)(n.guild_id),
         [, v] = (0, nP.c)(n.guild_id),
         _ = (0, lP.Id)(n),
         j =
@@ -7120,8 +7120,8 @@ function oC(e) {
         }),
         b = (0, t9.S)((i.editedTimestamp ?? i.timestamp).valueOf()),
         L = (0, n0.A)(n?.id),
-        k = (0, ix.A)(i),
-        R = (0, tZ.P)(i),
+        R = (0, ix.A)(i),
+        k = (0, tZ.P)(i),
         P = (0, l7.z)(n),
         D = (0, l5._f)(i.id, i.channel_id),
         O = (0, tq._R)(),
@@ -7142,11 +7142,11 @@ function oC(e) {
         renderEmbeds: h,
         gifAutoPlay: p,
         canRenderReferralEmbed: n.isDM(),
-        poll: k,
+        poll: R,
         showListsAndHeaders: b,
         showMaskedLinks: b,
         shouldHideMediaOptions: L,
-        enabledContentHarmTypeFlags: R,
+        enabledContentHarmTypeFlags: k,
         ctaButtonType: D,
         shouldAgeVerify: O,
         hideInviteEmbedBanner: a,
