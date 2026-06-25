@@ -610,7 +610,7 @@ function eC(e) {
             () =>
                 ea
                     ? {
-                          contentId: m,
+                          contentId: m.split("?")[0],
                           videoStreamType: _.u.isHlsUrl(m) ? "hls" : "mp4",
                           contentType: "clips",
                           title: n.title,
