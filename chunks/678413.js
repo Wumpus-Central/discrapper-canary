@@ -1,0 +1,16 @@
+e.exports = {
+    M0: "bar__68d31",
+    Qq: "rewardTile__68d31",
+    zh: "detailsButton__68d31",
+    KW: "metaRow__68d31",
+    I4: "promotedText__68d31",
+    me: "separator__68d31",
+    VP: "descriptionRow__68d31",
+    h_: "description__68d31",
+    lI: "ctaButton__68d31",
+    g5: "detailsPopout__68d31",
+    j$: "detailsPopoutHeader__68d31",
+    We: "detailsPopoutClose__68d31",
+    ek: "detailsPopoutBody__68d31",
+    Ul: "detailsIcon__68d31",
+};

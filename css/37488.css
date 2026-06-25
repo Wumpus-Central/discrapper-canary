@@ -50,7 +50,8 @@
     padding: 8px;
     position: absolute;
     top: 100%;
-    width: 385px
+    width: 385px;
+    z-index: 1
 }
 
 .wrapperAccepted__19b5e {
@@ -144,4 +145,48 @@
 
 .submenuIcon__19b5e:active {
     color: var(--interactive-text-active)
+}
+
+.wrapperV2__19b5e {
+    box-sizing: border-box;
+    inset-inline-end: 0;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 100%;
+    z-index: 1
+}
+
+.wrapperV2Notice__19b5e {
+    background-color: var(--background-surface-highest);
+    background-image: linear-gradient(var(--background-feedback-info), var(--background-feedback-info));
+    border: 1px solid var(--inlinenotice-border-info);
+    border-radius: 8px;
+    bottom: 88px;
+    box-shadow: var(--shadow-high);
+    box-sizing: border-box;
+    padding: 8px 12px;
+    position: fixed;
+    width: 640px;
+    z-index: 100
+}
+
+.enrolledNotice__19b5e {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    width: 100%
+}
+
+.enrolledNoticeQuestIcon__19b5e {
+    color: var(--notice-text-info);
+    flex: 0 0 auto
+}
+
+.enrolledNoticeText__19b5e {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
