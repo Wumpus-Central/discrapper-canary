@@ -8,7 +8,7 @@ var i = n(735438),
     l = n(95701),
     u = n(734057),
     c = n(71393),
-    d = n(222823),
+    d = n(568548),
     _ = n(309010),
     h = n(935208),
     f = n(970278),
@@ -179,8 +179,9 @@ function F(e) {
         n = d.Ay.hasUnread(e.id) && !p.A.isMuted(e.id),
         i = e.hasFlag(g.lx.PINNED),
         r = e.isActiveThread(),
-        s = r && m(e) > Date.now();
-    return { isUnread: ((r || i) && n) || t, isRelevant: s || i || n || t, isTimedRelevant: s };
+        s = r && m(e) > Date.now(),
+        a = _.A.getVoiceChannelId() === e.id;
+    return { isUnread: ((r || i) && n) || t, isRelevant: s || i || n || t || a, isTimedRelevant: s };
 }
 function V(e, t) {
     var n;
@@ -299,6 +300,12 @@ let Q = new X(a.h, {
     },
     GUILD_DELETE: R,
     CURRENT_USER_UPDATE: R,
+    VOICE_CHANNEL_SELECT: function (e) {
+        let { channelId: t } = e,
+            n = u.A.getChannel(t);
+        if (!n?.isThread()) return !1;
+        M(n.guild_id, n.parent_id, n.id);
+    },
     THREAD_CREATE: P,
     THREAD_UPDATE: P,
     THREAD_DELETE: P,

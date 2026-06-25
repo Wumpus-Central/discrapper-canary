@@ -1,15 +1,16 @@
 "use strict";
 n.d(t, {
-    G8: () => D,
-    NV: () => R,
-    QY: () => v,
-    V: () => b,
-    ax: () => M,
-    ds: () => L,
-    fK: () => C,
-    fS: () => w,
-    nh: () => N,
-    p6: () => O,
+    G8: () => w,
+    NV: () => O,
+    QY: () => R,
+    V: () => D,
+    Xk: () => L,
+    ax: () => x,
+    ds: () => M,
+    fK: () => N,
+    fS: () => P,
+    nh: () => v,
+    p6: () => b,
 }),
     n(938796),
     n(323874),
@@ -35,12 +36,13 @@ let h = /sketchfab/i,
     A = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/channels\/([0-9]+)\/game-shop\/([0-9]+)\/([0-9]+)/,
     I = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/game-shop\/([0-9]+)\/([0-9]+)/,
     T =
-        /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/;
-function S(e) {
+        /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/shop\?(?=.*tab=game-shops)(?=.*applicationId=[0-9]+)(?=.*skuId=[0-9]+)/,
+    S = /^https?:\/\/(?:canary\.|ptb\.|www\.)?discord(?:app)?\.com\/games\/[0-9]+(?:\/[A-Za-z0-9-]*)?\/?$/;
+function y(e) {
     let { width: t, height: n } = e;
     return t > 0 && n > 0;
 }
-function y(e) {
+function C(e) {
     let {
         url: t,
         proxy_url: n,
@@ -65,7 +67,7 @@ function y(e) {
         contentType: c ?? void 0,
     };
 }
-function C(e, t, n) {
+function N(e, t, n) {
     var i, s;
     let l,
         E = {
@@ -92,22 +94,22 @@ function C(e, t, n) {
         null != n.provider && null != n.provider.name && (E.provider = { name: n.provider.name, url: n.provider.url }),
         null != n.timestamp && (E.timestamp = a()(new Date(n.timestamp))),
         null != n.color && (E.color = (0, o.$k)(n.color, !0)),
-        null != n.thumbnail && S(n.thumbnail))
+        null != n.thumbnail && y(n.thumbnail))
     )
         switch (E.type) {
             case d.Auw.ARTICLE:
             case d.Auw.IMAGE:
-                E.image = y(n.thumbnail);
+                E.image = C(n.thumbnail);
                 break;
             default:
-                E.thumbnail = y(n.thumbnail);
+                E.thumbnail = C(n.thumbnail);
         }
     if (
-        (null != n.image && S(n.image) && (E.image = y(n.image)),
+        (null != n.image && y(n.image) && (E.image = C(n.image)),
         null != n.video &&
             (null == E.thumbnail &&
                 null != n.video.proxy_url &&
-                S(n.video) &&
+                y(n.video) &&
                 (E.thumbnail = {
                     width: n.video.width,
                     height: n.video.height,
@@ -121,7 +123,7 @@ function C(e, t, n) {
                         l.toString()),
                 }),
             null != E.thumbnail &&
-                S(n.video) &&
+                y(n.video) &&
                 (function (e, t, n) {
                     if ((null != t && h.test(t.name)) || f.test(n.url)) return !1;
                     let i = null != n.proxy_url || /^https:/i.test(n.url);
@@ -132,7 +134,7 @@ function C(e, t, n) {
                         i
                     );
                 })(t, n.provider, n.video) &&
-                (E.video = y(n.video))),
+                (E.video = C(n.video))),
         _.p.has(E.type)
             ? (E.fields = (n.fields ?? []).map((e) => {
                   let { name: t, value: n, inline: i } = e;
@@ -146,7 +148,7 @@ function C(e, t, n) {
     }
     return E;
 }
-function N(e) {
+function v(e) {
     let t = new Map(),
         n = [];
     return (
@@ -164,7 +166,7 @@ function N(e) {
         n
     );
 }
-function v(e, t) {
+function R(e, t) {
     if ("YouTube" === e || "TikTok" === e) return e;
     if (null != t)
         try {
@@ -174,30 +176,33 @@ function v(e, t) {
         } catch {}
     return e;
 }
-function R(e) {
+function O(e) {
     let { image: t, video: n, type: i, author: r, rawTitle: s } = e;
     return (null != t || null != n) && (i === d.Auw.GIFV || (i !== d.Auw.RICH && null == r && null == s));
 }
-function O(e) {
+function b(e) {
     return e.type === d.Auw.ARTICLE && null != e.url && (m.test(e.url) || E.test(e.url));
 }
-function b(e) {
+function D(e) {
     return e.type === d.Auw.ARTICLE && null != e.url && g.test(e.url);
 }
-function D(e) {
+function L(e) {
+    return e.type === d.Auw.ARTICLE && null != e.url && S.test(e.url);
+}
+function w(e) {
     return e.type === d.Auw.ARTICLE && null != e.url && (I.test(e.url) || A.test(e.url) || T.test(e.url));
 }
-function L(e, t, n) {
+function M(e, t, n) {
     return null != t && null != n
         ? { maxMediaWidth: t, maxMediaHeight: n }
         : e.provider?.name === "TikTok"
           ? { maxMediaWidth: 400, maxMediaHeight: 450 }
           : { maxMediaWidth: 400, maxMediaHeight: 300 };
 }
-function w(e, t) {
+function P(e, t) {
     return e.isPrivate() ? !e.isManaged() : t.can(d.xBc.EMBED_LINKS, e);
 }
-function M(e) {
+function x(e) {
     return (
         "" !== e.content || e.messageSnapshots.some((e) => "" !== e.message.content || e.message.attachments.length > 0)
     );

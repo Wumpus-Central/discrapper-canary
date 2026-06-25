@@ -1179,6 +1179,7 @@ ${s}`),
                                                         break;
                                                     }
                                                     case I.I.COLLECTIBLES_SHOP:
+                                                    case I.I.GAME_PROFILE:
                                                         break;
                                                     default:
                                                         throw Error(`Unknown coded link type: ${t}`);

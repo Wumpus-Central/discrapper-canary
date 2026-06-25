@@ -47,6 +47,7 @@ function _(e) {
                 case o.I.APP_OAUTH2_LINK:
                 case o.I.COLLECTIBLES_SHOP:
                 case o.I.EXPERIMENT:
+                case o.I.GAME_PROFILE:
                 case o.I.APP_DIRECTORY_PROFILE:
                     break;
                 default:
