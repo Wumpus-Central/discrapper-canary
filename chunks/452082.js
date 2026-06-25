@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => j, i: () => B }), n(321073);
+n.d(t, { A: () => Y, i: () => H }), n(321073);
 var i = n(284009),
     r = n.n(i),
     s = n(459838),
@@ -293,10 +293,15 @@ function D(e, t) {
 function L(e, t) {
     return e.map((e, n) => e.map((e, i) => (t[n][i] ? e : 0)));
 }
-function w(e, t) {
-    return e.map((e, n) => e.map((e, i) => e * t[n][i]));
+function w(e, t, n, i) {
+    if (!i.requireAttribution) return { laughter: e, shouting: t };
+    let r = D(n, i, !1);
+    return { laughter: L(e, r), shouting: L(t, r) };
 }
 function M(e, t) {
+    return e.map((e, n) => e.map((e, i) => e * t[n][i]));
+}
+function P(e, t) {
     if (0 === e.length) return [];
     let n = [...e].sort((e, t) => e.tStart - t.tStart),
         i = [{ ...n[0] }];
@@ -307,20 +312,46 @@ function M(e, t) {
     }
     return i;
 }
-function P(e, t, n) {
+function x(e, t, n) {
     let i = e[t];
     for (let r = t + 1; r <= n; r++) i = Math.max(i, e[r]);
     return i;
 }
-let x = [y, R];
-function k(e) {
+function k(e, t, n) {
+    return P(
+        (function (e, t) {
+            let n = [],
+                i = -1;
+            for (let r = 0; r <= e.length; r++) {
+                let s = r < e.length && e[r] >= t;
+                s && -1 === i && (i = r), s || -1 === i || (n.push({ tStart: i, tEnd: r - 1 }), (i = -1));
+            }
+            return n;
+        })(e, t),
+        n.eventChainGapChunks,
+    ).map((t) => {
+        let { tStart: n, tEnd: i } = t;
+        return {
+            tStart: n,
+            tEnd: i,
+            peakT: (function (e, t, n) {
+                let i = t;
+                for (let r = t + 1; r <= n; r++) e[r] > e[i] && (i = r);
+                return i;
+            })(e, n, i),
+            peakV: x(e, n, i),
+        };
+    });
+}
+let U = [y, R];
+function G(e) {
     r()(null != e.decision, "clip missing .decision");
     let t = e.decision.timestamp - e.length;
     return null != e.editMetadata
         ? { startMs: t + 1e3 * e.editMetadata.start, endMs: t + 1e3 * e.editMetadata.end }
         : { startMs: t, endMs: e.decision.timestamp };
 }
-function U(e, t, n, i) {
+function F(e, t, n, i) {
     let s,
         a = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         { requestedCount: o = 3, preTrimmedSignalsByFilepath: l, debug: u = !1 } = a,
@@ -361,7 +392,7 @@ function U(e, t, n, i) {
         h = [...t.gameEventData].sort((e, t) => e.timestamp_ms - t.timestamp_ms),
         f = (function (e, t) {
             if (null == e) return;
-            let n = x.find((t) => t.applicationIds.includes(e));
+            let n = U.find((t) => t.applicationIds.includes(e));
             return n?.create(t);
         })(i, h),
         p = Number.MAX_VALUE,
@@ -372,107 +403,107 @@ function U(e, t, n, i) {
             0 !== e.length && ((p = Math.min(p, e[0].timestamp_ms)), (E = Math.max(E, e[e.length - 1].timestamp_ms)));
     }
     null != f && p <= E && (s = f.calculateModifiers?.(p, E));
-    let m = (function (e) {
+    let g = (function (e) {
         if (null == e) return () => 1;
         let t = new Map(e.map((e) => [e.timestamp_ms, e.modifier]));
         return (e) => t.get(1e3 * Math.floor(e / 1e3)) ?? 1;
     })(s);
-    function g(e) {
+    function A(e) {
         return f?.eventScoreMultiplier?.(e) ?? 1;
     }
     for (let i of e) {
-        let e, s;
+        let e;
         r()(null != i.decision, "candidate clip missing .decision");
-        let a = i.decision.timestamp - i.length,
-            { startMs: o, endMs: f } = k(i);
-        {
-            let n = l?.[i.filepath];
-            if (
-                ((e = { audioModelDataPerUser: null != n ? n.audioModelDataPerUser : {}, gameEventData: [] }),
-                null != n)
-            ) {
-                let t = 1e3 * Math.floor(a / 1e3);
-                function A(e) {
-                    return G(
-                        e.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
-                        o,
-                        f,
-                    );
-                }
-                for (let t in ((e.audioModelDataPerUser = {}), n.audioModelDataPerUser)) {
-                    let i = n.audioModelDataPerUser[t];
-                    e.audioModelDataPerUser[t] = {
-                        laughterData: A(i.laughterData),
-                        shoutingData: A(i.shoutingData),
-                        rmsData: A(i.rmsData),
-                    };
+        let s = i.decision.timestamp - i.length;
+        function T(e, n) {
+            let a = l?.[i.filepath],
+                o = {};
+            if (null != a) {
+                let t = 1e3 * Math.floor(s / 1e3),
+                    i = (i) =>
+                        V(
+                            i.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
+                            e,
+                            n,
+                        );
+                for (let e in a.audioModelDataPerUser) {
+                    let t = a.audioModelDataPerUser[e];
+                    o[e] = { laughterData: i(t.laughterData), shoutingData: i(t.shoutingData), rmsData: i(t.rmsData) };
                 }
             } else
-                for (let n in t.audioModelDataPerUser) {
-                    let i = t.audioModelDataPerUser[n];
-                    e.audioModelDataPerUser[n] = {
-                        laughterData: G(i.laughterData, o, f),
-                        shoutingData: G(i.shoutingData, o, f),
-                        rmsData: G(i.rmsData, o, f),
+                for (let i in t.audioModelDataPerUser) {
+                    let r = t.audioModelDataPerUser[i];
+                    o[i] = {
+                        laughterData: V(r.laughterData, e, n),
+                        shoutingData: V(r.shoutingData, e, n),
+                        rmsData: V(r.rmsData, e, n),
                     };
                 }
-            (e.audioModelDataPerUser = (function (e) {
-                let t = Number.MAX_VALUE,
-                    n = -Number.MAX_VALUE;
-                for (let i in e) {
-                    let r = e[i];
-                    for (let e of [r.laughterData, r.shoutingData, r.rmsData])
-                        0 !== e.length &&
-                            (e[0].timestamp_ms < t && (t = e[0].timestamp_ms),
-                            e[e.length - 1].timestamp_ms > n && (n = e[e.length - 1].timestamp_ms));
-                }
-                if (t === Number.MAX_VALUE || n === -Number.MAX_VALUE) return e;
-                function i(e, t, n) {
-                    let i = [],
-                        s = 0;
-                    for (let a = 0; a < n; a++) {
-                        let n = t + 1e3 * a,
-                            o = e[s];
-                        null != o && o.timestamp_ms === n
-                            ? (i.push({ ...o }), s++)
-                            : (null != o && r()(o.timestamp_ms % 1e3 == 0, `bad timestamp! ${o.timestamp_ms}`),
-                              i.push({ value: 0, timestamp_ms: n }));
+            let u = (function (e) {
+                    let t = Number.MAX_VALUE,
+                        n = -Number.MAX_VALUE;
+                    for (let i in e) {
+                        let r = e[i];
+                        for (let e of [r.laughterData, r.shoutingData, r.rmsData])
+                            0 !== e.length &&
+                                (e[0].timestamp_ms < t && (t = e[0].timestamp_ms),
+                                e[e.length - 1].timestamp_ms > n && (n = e[e.length - 1].timestamp_ms));
                     }
-                    return r()(i.length === n, "bad track!"), i;
-                }
-                r()(t % 1e3 == 0 && n % 1e3 == 0, "bad timestamps!");
-                let s = (n - t) / 1e3 + 1,
-                    a = {};
-                for (let n in e) {
-                    let r = e[n];
-                    a[n] = {
-                        laughterData: i(r.laughterData, t, s),
-                        shoutingData: i(r.shoutingData, t, s),
-                        rmsData: i(r.rmsData, t, s),
-                    };
-                }
-                return a;
-            })(e.audioModelDataPerUser)),
-                (e.gameEventData = I(h, o, f));
+                    if (t === Number.MAX_VALUE || n === -Number.MAX_VALUE) return e;
+                    function i(e, t, n) {
+                        let i = [],
+                            s = 0;
+                        for (let a = 0; a < n; a++) {
+                            let n = t + 1e3 * a,
+                                o = e[s];
+                            null != o && o.timestamp_ms === n
+                                ? (i.push({ ...o }), s++)
+                                : (null != o && r()(o.timestamp_ms % 1e3 == 0, `bad timestamp! ${o.timestamp_ms}`),
+                                  i.push({ value: 0, timestamp_ms: n }));
+                        }
+                        return r()(i.length === n, "bad track!"), i;
+                    }
+                    r()(t % 1e3 == 0 && n % 1e3 == 0, "bad timestamps!");
+                    let s = (n - t) / 1e3 + 1,
+                        a = {};
+                    for (let n in e) {
+                        let r = e[n];
+                        a[n] = {
+                            laughterData: i(r.laughterData, t, s),
+                            shoutingData: i(r.shoutingData, t, s),
+                            rmsData: i(r.rmsData, t, s),
+                        };
+                    }
+                    return a;
+                })(o),
+                c = Object.keys(u),
+                d = [],
+                _ = [],
+                h = [];
+            for (let e of c) {
+                let t = u[e];
+                d.push(t.laughterData.map((e) => e.value)),
+                    _.push(t.shoutingData.map((e) => e.value)),
+                    h.push(t.rmsData.map((e) => e.value));
+            }
+            let f = c.length > 0 ? u[c[0]] : void 0;
+            return {
+                userIds: c,
+                pLaughter: d,
+                pShouting: _,
+                rms: h,
+                gridStartMs: f?.laughterData[0]?.timestamp_ms,
+                chunkCount: f?.laughterData.length ?? 0,
+            };
         }
-        let p = Object.keys(e.audioModelDataPerUser),
-            E = [],
-            T = [],
-            S = [];
-        for (let t of p) {
-            let n = e.audioModelDataPerUser[t];
-            E.push(n.laughterData.map((e) => e.value)),
-                T.push(n.shoutingData.map((e) => e.value)),
-                S.push(n.rmsData.map((e) => e.value));
-        }
-        let y = p.indexOf(n),
-            C = p.length > 0 ? e.audioModelDataPerUser[p[0]] : void 0,
-            N = C?.laughterData[0]?.timestamp_ms,
-            v = C?.laughterData.length ?? 0;
-        null != N &&
-            v > 0 &&
-            e.gameEventData.length > 0 &&
-            (s = e.gameEventData.map((e) => Math.max(0, Math.min(v - 1, Math.round((e.timestamp_ms - N) / 1e3)))));
+        let { startMs: a, endMs: o } = G(i),
+            { userIds: f, pLaughter: p, pShouting: E, rms: S, gridStartMs: y, chunkCount: C } = T(a, o),
+            N = f.indexOf(n),
+            v = I(h, a, o);
+        null != y &&
+            C > 0 &&
+            v.length > 0 &&
+            (e = v.map((e) => Math.max(0, Math.min(C - 1, Math.round((e.timestamp_ms - y) / 1e3)))));
         let R = (function (e, t) {
                 let n,
                     { pLaughter: i, pShouting: r, rms: s, main: a, gameEventChunks: o } = e,
@@ -501,8 +532,8 @@ function U(e, t, n, i) {
                         0 === t.rmsScale
                             ? s.map((e) => e.map(() => 1))
                             : s.map((e) => e.map((e) => (0, O.clamp)(e * t.rmsScale, 0, 1))),
-                    p = w(_, f),
-                    E = w(h, f),
+                    p = M(_, f),
+                    E = M(h, f),
                     {
                         mainEventScore: m,
                         anchors: g,
@@ -531,33 +562,7 @@ function U(e, t, n, i) {
                         for (let { emotion: e, gated: t, intensity: n, threshold: l, weight: u } of a) {
                             let a;
                             if (0 === t.length) continue;
-                            let c = (function (e, t, n) {
-                                return M(
-                                    (function (e, t) {
-                                        let n = [],
-                                            i = -1;
-                                        for (let r = 0; r <= e.length; r++) {
-                                            let s = r < e.length && e[r] >= t;
-                                            s && -1 === i && (i = r),
-                                                s || -1 === i || (n.push({ tStart: i, tEnd: r - 1 }), (i = -1));
-                                        }
-                                        return n;
-                                    })(e, t),
-                                    n.eventChainGapChunks,
-                                ).map((t) => {
-                                    let { tStart: n, tEnd: i } = t;
-                                    return {
-                                        tStart: n,
-                                        tEnd: i,
-                                        peakT: (function (e, t, n) {
-                                            let i = t;
-                                            for (let r = t + 1; r <= n; r++) e[r] > e[i] && (i = r);
-                                            return i;
-                                        })(e, n, i),
-                                        peakV: P(e, n, i),
-                                    };
-                                });
-                            })(t, l, i);
+                            let c = k(t, l, i);
                             if (0 === c.length) continue;
                             for (let e of (s.push(
                                 ...c.map((e) => {
@@ -567,7 +572,7 @@ function U(e, t, n, i) {
                             ),
                             c)) {
                                 let t = e.tEnd - e.tStart + 1,
-                                    i = P(n, e.tStart, e.tEnd) * Math.log1p(t);
+                                    i = x(n, e.tStart, e.tEnd) * Math.log1p(t);
                                 (null == a || i > a.mag) && (a = { mag: i, window: e });
                             }
                             if (null == a) continue;
@@ -575,9 +580,9 @@ function U(e, t, n, i) {
                             let { tStart: d, tEnd: _, peakT: h, peakV: f } = a.window;
                             r.push({ emotion: e, peakT: h, peakV: f, sustain: _ - d + 1, tStart: d, tEnd: _ });
                         }
-                        return { mainEventScore: o, anchors: M(s, i.eventChainGapChunks), events: r };
+                        return { mainEventScore: o, anchors: P(s, i.eventChainGapChunks), events: r };
                     })({ laughter: _, shouting: h }, { laughter: p, shouting: E }, a, t),
-                    I = M(
+                    I = P(
                         [
                             ...g,
                             ...(t.gameEventsAsReactionAnchors && null != o
@@ -606,13 +611,8 @@ function U(e, t, n, i) {
                         }
                         return Math.max(0, ...o);
                     })(I, p, E, a, t),
-                    S = _,
-                    y = h;
-                if (t.requireAttribution) {
-                    let e = D(s, t, !1);
-                    (S = L(u, e)), (y = L(c, e));
-                }
-                let { coOccurrenceScore: C, coContribPerChunk: N } = (function (e, t, n) {
+                    { laughter: S, shouting: y } = w(u, c, s, t),
+                    { coOccurrenceScore: C, coContribPerChunk: N } = (function (e, t, n) {
                         let i = e.length,
                             r = i > 0 ? e[0].length : 0,
                             s = Array(r).fill(0),
@@ -633,11 +633,11 @@ function U(e, t, n, i) {
                     let e = Math.max(1, l - 1);
                     n = (C - t.sCoMedianPerPair * e) / (t.sCoIqrPerPair * e);
                 } else n = Math.log1p(C);
-                let x = l <= 1,
-                    k = x ? t.soloReactionWeight : t.reactionWeight,
-                    U = x ? t.soloCoOccurrenceWeight : t.coOccurrenceWeight;
+                let U = l <= 1,
+                    G = U ? t.soloReactionWeight : t.reactionWeight,
+                    F = U ? t.soloCoOccurrenceWeight : t.coOccurrenceWeight;
                 return {
-                    audioScore: t.mainWeight * v + k * R + U * n,
+                    audioScore: t.mainWeight * v + G * R + F * n,
                     components: t.normalizeComponents
                         ? { mainEventScore: v, reactionScore: R, coOccurrenceScore: n }
                         : { mainEventScore: m, reactionScore: T, coOccurrenceScore: C },
@@ -652,8 +652,8 @@ function U(e, t, n, i) {
                         coContribPerChunk: N,
                     },
                 };
-            })({ pLaughter: E, pShouting: T, rms: S, main: y, gameEventChunks: s, participantCount: _ }, c),
-            x = (function (e, t, n) {
+            })({ pLaughter: p, pShouting: E, rms: S, main: N, gameEventChunks: e, participantCount: _ }, c),
+            U = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
                     let e = t(r.timestamp_ms),
@@ -661,31 +661,79 @@ function U(e, t, n, i) {
                     i += r.score * e * s;
                 }
                 return i;
-            })(e.gameEventData, m, g),
-            U = {
+            })(v, g, A),
+            F = (0.5 + 1 / (1 + Math.exp(-R.audioScore))) * (1 + Math.tanh(U / c.gameSquashScale)) - 0.5,
+            B = T(s, i.decision.timestamp),
+            j = B.gridStartMs,
+            H =
+                null != j
+                    ? (function (e, t) {
+                          let { pLaughter: n, pShouting: i, rms: r } = e;
+                          return 0 === n.length
+                              ? []
+                              : (function (e, t) {
+                                    let n = [];
+                                    for (let { emotion: i, matrix: r, threshold: s } of [
+                                        {
+                                            emotion: "laughter",
+                                            matrix: e.laughter,
+                                            threshold: t.laughterEventThreshold,
+                                        },
+                                        {
+                                            emotion: "shouting",
+                                            matrix: e.shouting,
+                                            threshold: t.shoutingEventThreshold,
+                                        },
+                                    ])
+                                        for (let e = 0; e < r.length; e++) {
+                                            let a = r[e];
+                                            if (0 !== a.length)
+                                                for (let { tStart: r, tEnd: o, peakT: l, peakV: u } of k(a, s, t))
+                                                    n.push({
+                                                        channel: e,
+                                                        emotion: i,
+                                                        tStart: r,
+                                                        tEnd: o,
+                                                        peakT: l,
+                                                        peakV: u,
+                                                    });
+                                        }
+                                    return n;
+                                })(w(b(n, t, t.laughterEventThreshold), b(i, t, t.shoutingEventThreshold), r, t), t);
+                      })({ pLaughter: B.pLaughter, pShouting: B.pShouting, rms: B.rms }, c).map((e) => ({
+                          type: "laughter" === e.emotion ? m.Gy.LAUGHTER : m.Gy.SHOUTING,
+                          userId: B.userIds[e.channel],
+                          startMs: j + 1e3 * e.tStart,
+                          endMs: j + (e.tEnd + 1) * 1e3,
+                          peakMs: j + 1e3 * e.peakT,
+                          peakConfidence: e.peakV,
+                      }))
+                    : [],
+            Y = {
                 clip: i,
-                score: (0.5 + 1 / (1 + Math.exp(-R.audioScore))) * (1 + Math.tanh(x / c.gameSquashScale)) - 0.5,
+                score: F,
                 audioScore: R.audioScore,
-                gameEventsScore: x,
-                hasAudio: E.length > 0,
-                hasGameEvents: e.gameEventData.length > 0,
+                gameEventsScore: U,
+                hasAudio: p.length > 0,
+                hasGameEvents: v.length > 0,
+                audioEvents: H,
             };
         if (u) {
-            U.components = { ...R.components, gameEventsScore: x };
-            let e = null != N ? (N - o) / 1e3 : 0;
-            U.debug = {
+            Y.components = { ...R.components, gameEventsScore: U };
+            let e = null != y ? (y - a) / 1e3 : 0;
+            Y.debug = {
                 ...R.debug,
-                userIds: p,
-                tsSec: Array.from({ length: v }, (t, n) => e + n),
-                pLaughter: E,
-                pShouting: T,
+                userIds: f,
+                tsSec: Array.from({ length: C }, (t, n) => e + n),
+                pLaughter: p,
+                pShouting: E,
                 rms: S,
             };
         }
-        d.push(U);
+        d.push(Y);
     }
     d.sort((e, t) => t.score - e.score);
-    let T = (function (e, t, n, i) {
+    let S = (function (e, t, n, i) {
         function r(t) {
             return [...e].sort((e, n) => t(n) - t(e));
         }
@@ -707,9 +755,9 @@ function U(e, t, n, i) {
             a = [],
             o = new Set(),
             l = (e) => {
-                let { startMs: t, endMs: n } = k(e.clip);
+                let { startMs: t, endMs: n } = G(e.clip);
                 for (let e of a) {
-                    let { startMs: i, endMs: r } = k(e.clip);
+                    let { startMs: i, endMs: r } = G(e.clip);
                     if (Math.min(n, r) - Math.max(t, i) >= 5e3) return !0;
                 }
                 return !1;
@@ -723,14 +771,14 @@ function U(e, t, n, i) {
             }
         return a;
     })(d, c, o, f?.gameAxisScoreThreshold);
-    return { allClipsRanked: d, selected: T };
+    return { allClipsRanked: d, selected: S };
 }
-function G(e, t, n) {
+function V(e, t, n) {
     return e.filter((e) => e.timestamp_ms >= t && e.timestamp_ms <= n);
 }
-var F = n(430795),
-    V = n(696016);
-class B extends o.A {
+var B = n(430795),
+    j = n(696016);
+class H extends o.A {
     timeline;
     scheduledClips = [];
     decisionSignals = A();
@@ -837,7 +885,7 @@ class B extends o.A {
             { trimStartMs: i, trimEndMs: s } = e,
             a = new Map();
         for (let e of Object.values(this.decisionSignals.audioModelDataPerUser))
-            for (let i of G(e.rmsData, t, n)) {
+            for (let i of V(e.rmsData, t, n)) {
                 r()(i.timestamp_ms % 1e3 == 0, "bad rms data");
                 let e = a.get(i.timestamp_ms) ?? 0;
                 a.set(i.timestamp_ms, e + i.value);
@@ -901,7 +949,7 @@ class B extends o.A {
                             t <= e.request.trimEndMs,
                     )
                 ) {
-                    V.nx.info(
+                    j.nx.info(
                         `decider: suppressing ${e.type} clip \u{2014} timestamp ${t} falls within an existing scheduled candidate's trimmed range`,
                     );
                     break;
@@ -917,10 +965,10 @@ class B extends o.A {
         this.sessionTransition = this.sessionTransition
             .catch(() => {})
             .then(t)
-            .catch((t) => V.nx.error(`decider: ${e} failed`, t));
+            .catch((t) => j.nx.error(`decider: ${e} failed`, t));
     }
     async clearAsync() {
-        V.nx.info(
+        j.nx.info(
             `decider: clear() called \u{2014} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${p.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey} candidates=${p.Ay.getClipCandidates().length}`,
         ),
             this.unscheduleClip(),
@@ -928,7 +976,7 @@ class B extends o.A {
             await this.processClipCandidates(),
             (this.currentSessionGameKey = null),
             (this.pendingSessionGameKey = null),
-            await (0, F.YV)(),
+            await (0, B.YV)(),
             this.timeline.clear();
     }
     unscheduleClip() {
@@ -958,16 +1006,16 @@ class B extends o.A {
                 trimStartMs: t?.trimStartMs != null ? t.trimStartMs : l,
                 trimEndMs: t?.trimEndMs != null ? t.trimEndMs : o,
             };
-        V.nx.info(`decider: scheduleClip signal=${e.type}, request=${JSON.stringify(t)}`);
+        j.nx.info(`decider: scheduleClip signal=${e.type}, request=${JSON.stringify(t)}`);
         let c = { timeout: new a.Ep(), request: u, signal: e };
         this.scheduledClips.push(c),
             c.timeout.start(o > s ? o - s : 0, async () => {
                 try {
                     let t = i ? this.adjustTrimForRms(u) : u;
-                    V.nx.info(
+                    j.nx.info(
                         `decider: scheduled timeout fired \u{2014} saving clip (signal=${e.type}, finalRequest=${JSON.stringify(t)})`,
                     ),
-                        await (0, F.yd)({
+                        await (0, B.yd)({
                             clipMethod: e.type === m.Gy.MANUAL ? "manual" : "auto",
                             request: t,
                             timeline: [...this.timeline.read(t.startMs, t.endMs)],
@@ -990,8 +1038,8 @@ class B extends o.A {
         if (null == e) return;
         this.currentSessionGameKey = (0, c.Es)(e);
         let t = crypto.randomUUID();
-        (0, F.mN)(t, e.id ?? null),
-            V.nx.info(
+        (0, B.mN)(t, e.id ?? null),
+            j.nx.info(
                 `decider: handleVoiceChannelSelect \u{2014} new gaming session id: ${t}, for game: ${this.currentSessionGameKey}`,
             );
     }
@@ -1002,7 +1050,7 @@ class B extends o.A {
         let e = c.Ay.getVisibleGame(),
             t = null != e ? (0, c.Es)(e) : null;
         if (
-            (V.nx.info(
+            (j.nx.info(
                 `decider: handleRunningGamesChange visibleGame=${e?.name ?? "null"} newPrimaryKey=${t} currentSessionGameKey=${this.currentSessionGameKey} currentSessionId=${p.Ay.getCurrentClipsSession()?.id} pendingSessionGameKey=${this.pendingSessionGameKey}`,
             ),
             null === this.currentSessionGameKey)
@@ -1010,32 +1058,32 @@ class B extends o.A {
             if (null != t) {
                 this.currentSessionGameKey = t;
                 let n = crypto.randomUUID();
-                (0, F.mN)(n, e?.id ?? null),
-                    V.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${n})`);
-            } else V.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`);
+                (0, B.mN)(n, e?.id ?? null),
+                    j.nx.info(`decider: handleRunningGamesChange \u{2014} starting session for ${t} (id=${n})`);
+            } else j.nx.info(`decider: handleRunningGamesChange \u{2014} not starting session (newPrimaryKey=${t})`);
             return;
         }
         if (t === this.currentSessionGameKey) {
-            V.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
+            j.nx.info("decider: handleRunningGamesChange \u2014 same primary, cancelling pending end"),
                 this.sessionEndTimeout.stop(),
                 (this.pendingSessionGameKey = null);
             return;
         }
         if (null === t) {
-            V.nx.info(
+            j.nx.info(
                 "decider: handleRunningGamesChange \u2014 visible game became null, finalizing session immediately",
             ),
                 this.sessionEndTimeout.stop(),
                 this.unscheduleClip(),
                 await this.processClipCandidates(),
                 (this.currentSessionGameKey = null),
-                await (0, F.YV)(),
+                await (0, B.YV)(),
                 (this.pendingSessionGameKey = null);
             return;
         }
         this.pendingSessionGameKey === t
-            ? V.nx.info("decider: handleRunningGamesChange \u2014 already debouncing for this key")
-            : (V.nx.info(
+            ? j.nx.info("decider: handleRunningGamesChange \u2014 already debouncing for this key")
+            : (j.nx.info(
                   `decider: handleRunningGamesChange \u{2014} primary game changed from ${this.currentSessionGameKey} to ${t}, debouncing 30000ms`,
               ),
               (this.pendingSessionGameKey = t),
@@ -1043,9 +1091,9 @@ class B extends o.A {
                   this.enqueueSessionTransition("sessionEndTimeout", async () => {
                       this.unscheduleClip(), await this.processClipCandidates(), (this.currentSessionGameKey = t);
                       let n = crypto.randomUUID();
-                      (0, F.mN)(n, e?.id ?? null),
+                      (0, B.mN)(n, e?.id ?? null),
                           (this.pendingSessionGameKey = null),
-                          V.nx.info(
+                          j.nx.info(
                               `decider: sessionEndTimeout fired after debounce \u{2014} finalizing previous session, started new session (newPrimaryKey=${t}, id=${n})`,
                           );
                   });
@@ -1061,15 +1109,15 @@ class B extends o.A {
             gameId: p.Ay.getCurrentClipsSession()?.gameId ?? void 0,
         };
         await l.A.clips.debugStashClipDeciderData(t),
-            V.nx.info(`debugStashDeciderData: stashed ${e.length} candidates`);
+            j.nx.info(`debugStashDeciderData: stashed ${e.length} candidates`);
     }
     static async debugRerunRanking() {
-        V.nx.info("DEBUG RERUN RANKING");
+        j.nx.info("DEBUG RERUN RANKING");
         let e = await l.A.clips.debugReadStashedClipDeciderData(),
-            t = U(e.clipCandidates, e.decisionSignals, e.localUserId, e.gameId);
-        V.nx.info("ranked clips:", t),
+            t = F(e.clipCandidates, e.decisionSignals, e.localUserId, e.gameId);
+        j.nx.info("ranked clips:", t),
             t.selected.forEach((e, t) => {
-                V.nx.info(`Clip ${t + 1} score ${e.score}, ${l.A.fileManager.basename(e.clip.filepath)}`);
+                j.nx.info(`Clip ${t + 1} score ${e.score}, ${l.A.fileManager.basename(e.clip.filepath)}`);
             });
     }
     async processClipCandidates() {
@@ -1079,15 +1127,15 @@ class B extends o.A {
             i = null == e ? t : t.filter((t) => t.gameSessionId !== e.id),
             r = this.decisionSignals;
         this.decisionSignals = A();
-        let s = U(n, r, _.default.getId(), e?.gameId ?? void 0);
-        V.nx.info("ranked clips:", s);
+        let s = F(n, r, _.default.getId(), e?.gameId ?? void 0);
+        j.nx.info("ranked clips:", s);
         let a = new Set(s.selected.map((e) => e.clip.id));
         await Promise.all(
             s.selected.map(async (e) => {
                 try {
-                    await (0, F.K7)(e.clip, e.score);
+                    await (0, B.K7)(e.clip, e.score, e.audioEvents);
                 } catch (e) {
-                    V.nx.error("decider: failed to promote clip candidate", e);
+                    j.nx.error("decider: failed to promote clip candidate", e);
                 }
             }),
         ),
@@ -1095,9 +1143,9 @@ class B extends o.A {
                 [...n, ...i].map(async (e) => {
                     if (!a.has(e.id))
                         try {
-                            await (0, F.oH)(e, !1);
+                            await (0, B.oH)(e, !1);
                         } catch (e) {
-                            V.nx.error("decider: failed to delete unpromoted clip candidate", e);
+                            j.nx.error("decider: failed to delete unpromoted clip candidate", e);
                         }
                 }),
             );
@@ -1106,4 +1154,4 @@ class B extends o.A {
         this.timeline.updateLength(Math.max(p.Ay.getSettings().clipsLength, 6e4));
     }
 }
-let j = new B();
+let Y = new H();
