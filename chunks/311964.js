@@ -1,27 +1,38 @@
 "use strict";
-n.d(t, { k: () => d, p: () => _ }), n(321073);
+n.d(t, { k: () => h, p: () => f }), n(321073);
 var i = n(495544),
     r = n(763827),
     s = n(174459),
     a = n(935208),
     o = n(652215);
-let l = new Map(),
-    u = -1;
-function c() {
+let l = (0, n(945810).mj)({
+        name: "2026-06-clickstream-analytics",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    u = new Map(),
+    c = -1,
+    d = !1;
+function _() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (e) {
         let e = a.default.extractTimestamp(i.default.getId());
-        e !== u && (_(!1), (u = e));
+        e !== c && (f(!1), (c = e)),
+            (d = (function () {
+                let { enabled: e } = l.getConfig({ location: "clickstream" });
+                return e;
+            })());
     }
-    return u % 10 == 0;
+    return d;
 }
-function d(e, t) {
-    c() && (l.has(e) || l.set(e, []), l.get(e)?.push({ timestamp: new Date(), rtc_state: r.A.getState(), ...t }));
+function h(e, t) {
+    _() && (u.has(e) || u.set(e, []), u.get(e)?.push({ timestamp: new Date(), rtc_state: r.A.getState(), ...t }));
 }
-function _() {
+function f() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-    if (!c(e)) return void l.clear();
-    for (let [e, t] of l)
+    if (!_(e)) return void u.clear();
+    for (let [e, t] of u)
         s.default.track(
             e,
             (function (e, t) {
@@ -62,5 +73,5 @@ function _() {
                 }
             })(e, t),
         );
-    l.clear();
+    u.clear();
 }
