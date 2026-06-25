@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { RI: () => p, Ay: () => m });
+n.d(t, { RI: () => f, Ay: () => E });
 var i = n(636537),
     r = n(439372),
     s = n(546183),
@@ -21,23 +21,22 @@ class c extends o.Ay.Store {
 }
 let d = new c(l.h, {
     ACCOUNT_LINK_AUTHORIZATION_STARTED: function (e) {
-        null == s.default.getNewestTokenForApplication(e.applicationId) &&
-            u.set(e.applicationId, {
-                applicationId: e.applicationId,
-                startedAt: Date.now(),
-                accountLinkCallbacks: e.accountLinkCallbacks,
-                claimIncentivizedAccountLinkingRewardCallbacks: e.claimIncentivizedAccountLinkingRewardCallbacks,
-            });
+        null != s.default.getNewestTokenForApplication(e.applicationId) ||
+            (null != e.accountLinkCallbacks &&
+                u.set(e.applicationId, {
+                    applicationId: e.applicationId,
+                    startedAt: Date.now(),
+                    accountLinkCallbacks: e.accountLinkCallbacks,
+                }));
     },
 });
-var _ = n(942370),
-    h = n(652215);
-let f = 20 * a.A.Millis.MINUTE;
-async function p(e) {
+var _ = n(652215);
+let h = 20 * a.A.Millis.MINUTE;
+async function f(e) {
     let { applicationId: t, onSuccess: n, onError: r } = e;
     try {
         await i.Bo.post({
-            url: h.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
+            url: _.Rsh.OAUTH2_ACCOUNT_LINKING_ACHIEVEMENT,
             body: { application_id: t },
             rejectWithError: !0,
         }),
@@ -46,7 +45,7 @@ async function p(e) {
         r?.(e);
     }
 }
-class E extends r.A {
+class p extends r.A {
     static displayName = "AccountLinkManager";
     actions = {
         OAUTH2_TOKEN_CREATE: (e) => this.handleOAuth2TokenCreate(e),
@@ -59,19 +58,13 @@ class E extends r.A {
         if (0 === e.size) return;
         let t = Date.now();
         for (let [n, i] of e) {
-            if (t - i.startedAt > f) {
-                d.deletePendingAuthorization(n);
+            if (t - i.startedAt > h) {
+                d.deletePendingAuthorization(n),
+                    i.accountLinkCallbacks?.onError?.("Account link authorization timed out");
                 continue;
             }
             null != s.default.getNewestTokenForApplication(n) &&
-                _.YJ.has(n) &&
-                null != i.claimIncentivizedAccountLinkingRewardCallbacks &&
-                (p({
-                    applicationId: n,
-                    onSuccess: i.claimIncentivizedAccountLinkingRewardCallbacks.onSuccess,
-                    onError: i.claimIncentivizedAccountLinkingRewardCallbacks.onError,
-                }),
-                d.deletePendingAuthorization(n));
+                (i.accountLinkCallbacks?.onSuccess?.(), d.deletePendingAuthorization(n));
         }
     }
     handleOAuth2TokenCreate(e) {
@@ -84,7 +77,7 @@ class E extends r.A {
         d.getPendingAuthorizations().has(e.applicationId) && this.evaluatePending();
     }
     handleAppStateUpdate(e) {
-        e.state === h.g6G.ACTIVE && this.evaluatePending();
+        e.state === _.g6G.ACTIVE && this.evaluatePending();
     }
 }
-let m = new E();
+let E = new p();
