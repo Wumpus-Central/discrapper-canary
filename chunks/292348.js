@@ -1,9 +1,8 @@
 "use strict";
-n.d(t, { OW: () => u, YK: () => l, dm: () => c, eM: () => o, ly: () => d });
+n.d(t, { OW: () => l, YK: () => o, dm: () => u, eM: () => a, ly: () => c });
 var i = n(565150),
-    r = n(757574),
-    s = n(381941);
-let a = [
+    r = n(757574);
+let s = [
         { reName: /\.jpe?g$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
         { reName: /\.jfif$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
         { reName: /\.png$/i, name: (e) => `image${e}.png`, type: "image/png" },
@@ -19,42 +18,39 @@ let a = [
         { reName: /\.mp4$/i, name: (e) => `video${e}.mp4`, type: "video/mp4" },
         { reName: /\.webm$/i, name: (e) => `video${e}.webm`, type: "image/webm" },
     ],
-    o = 524288e3,
-    l = 500;
-function u(e) {
+    a = 524288e3,
+    o = 500;
+function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
         n = arguments.length > 2 ? arguments[2] : void 0,
-        a = { id: t?.toString() ?? e.id };
-    null != e.description && (a.description = e.description);
-    let o = (function (e) {
-        let { spoiler: t } = e;
-        return t ? s._W : "";
-    })({ spoiler: e.spoiler });
+        s = { id: t?.toString() ?? e.id };
     return (
-        (a.filename = `${o}${n ?? e.filename}`),
-        (a.uploaded_filename = e.uploadedFilename),
-        "durationSecs" in e && null != e.durationSecs && (a.duration_secs = e.durationSecs),
-        "waveform" in e && null != e.waveform && (a.waveform = e.waveform),
-        "isThumbnail" in e && !0 === e.isThumbnail && (a.is_thumbnail = e.isThumbnail),
+        null != e.description && (s.description = e.description),
+        (s.filename = n ?? e.filename),
+        (s.uploaded_filename = e.uploadedFilename),
+        e.spoiler && (s.is_spoiler = !0),
+        "durationSecs" in e && null != e.durationSecs && (s.duration_secs = e.durationSecs),
+        "waveform" in e && null != e.waveform && (s.waveform = e.waveform),
+        "isThumbnail" in e && !0 === e.isThumbnail && (s.is_thumbnail = e.isThumbnail),
         "clip" in e &&
             null != e.clip &&
-            ((a.is_clip = !0),
-            (a.title = e.clip.name),
-            (a.application_id = e.clip.applicationId),
-            (a.clip_created_at = (0, r.Uq)(e.clip.createdAt)),
-            (a.clip_participant_ids = (0, r.gD)(e.clip.users)),
-            (a.clip_remote_id = e.clip.remoteClipId),
-            (a.clip_events_timeline = (0, r.lz)(e.clip))),
+            ((s.is_clip = !0),
+            (s.title = e.clip.name),
+            (s.application_id = e.clip.applicationId),
+            (s.clip_created_at = (0, r.Uq)(e.clip.createdAt)),
+            (s.clip_participant_ids = (0, r.gD)(e.clip.users)),
+            (s.clip_remote_id = e.clip.remoteClipId),
+            (s.clip_events_timeline = (0, r.lz)(e.clip))),
         "item" in e &&
             null != e.item &&
             e.item.platform === i.xz.WEB &&
             "mimeType" in e &&
             null != e.mimeType &&
-            (a.original_content_type = e.mimeType),
-        a
+            (s.original_content_type = e.mimeType),
+        s
     );
 }
-function c(e) {
+function u(e) {
     let t = new XMLHttpRequest();
     return new Promise((n, i) => {
         t.open("GET", e, !0),
@@ -66,14 +62,14 @@ function c(e) {
             t.send();
     });
 }
-function d(e) {
+function c(e) {
     let t,
-        { uri: n, i, overrideFilename: r, overrideType: s } = e,
+        { uri: n, i, overrideFilename: r, overrideType: a } = e,
         o = n.split("/"),
         l = o[o.length - 1];
     l = l.split("?")?.[0]?.toLowerCase() ?? "";
-    let u = a.find((e) => e.reName.test(l));
-    if ((null == u && null != r && (u = a.find((e) => e.reName.test(r))), null != u && null != r)) {
+    let u = s.find((e) => e.reName.test(l));
+    if ((null == u && null != r && (u = s.find((e) => e.reName.test(r))), null != u && null != r)) {
         let e = u.name(i).split(".").pop(),
             n = r.lastIndexOf(".");
         t = -1 !== n ? `${r.substr(0, n)}.${e}` : `${r}.${e}`;
@@ -81,8 +77,8 @@ function d(e) {
     return {
         uri: n,
         filename: t,
-        type: s ?? u?.type ?? "unknown",
-        isVideo: -1 !== (s ?? u?.name(i) ?? "").indexOf("video"),
-        isImage: -1 !== (s ?? u?.name(i) ?? "").indexOf("image"),
+        type: a ?? u?.type ?? "unknown",
+        isVideo: -1 !== (a ?? u?.name(i) ?? "").indexOf("video"),
+        isImage: -1 !== (a ?? u?.name(i) ?? "").indexOf("image"),
     };
 }

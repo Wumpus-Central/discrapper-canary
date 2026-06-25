@@ -3,18 +3,17 @@ n.d(t, {
     ES: () => l,
     Fd: () => c,
     Gt: () => f,
-    Hx: () => S,
+    Hx: () => T,
     N0: () => _,
-    VP: () => I,
-    ZG: () => T,
-    _W: () => E,
-    aj: () => m,
-    cZ: () => g,
+    VP: () => A,
+    ZG: () => I,
+    aj: () => E,
+    cZ: () => m,
     k8: () => h,
     mZ: () => d,
     q4: () => p,
     qh: () => o,
-    ty: () => A,
+    ty: () => g,
     y5: () => u,
 });
 var i,
@@ -43,10 +42,9 @@ let o = [0, 4, 8, 16, 24],
     h = 32,
     f = 64,
     p = "---new-messages-bar",
-    E = "SPOILER_",
-    m = 3447003,
-    g = 0.16;
-var A =
+    E = 3447003,
+    m = 0.16;
+var g =
     (((i = {}).ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
     (i.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE"),
     (i.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = "PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE"),
@@ -55,9 +53,9 @@ var A =
     (i.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR"),
     (i.EXPLICIT_CONTENT = "EXPLICIT_CONTENT"),
     i);
-let I = 0xc800000,
-    T = { timeout: 60 * a.A.Millis.SECOND, retries: 3, backoff: new s.A() };
-var S =
+let A = 0xc800000,
+    I = { timeout: 60 * a.A.Millis.SECOND, retries: 3, backoff: new s.A() };
+var T =
     (((r = {}).PUSH_NOTIFICATION = "push_notification"),
     (r.CHAT_INPUT = "chat_input"),
     (r.SHARE_MODAL = "share_modal"),

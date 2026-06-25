@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, {
-    Jn: () => E,
-    Tk: () => I,
-    UI: () => T,
-    W$: () => S,
-    _W: () => h,
-    _g: () => A,
-    eu: () => g,
-    f4: () => p,
-    l0: () => m,
-    qn: () => y,
-    tF: () => f,
+    Jn: () => p,
+    Q7: () => h,
+    Tk: () => A,
+    UI: () => I,
+    W$: () => T,
+    _W: () => _,
+    _g: () => g,
+    eu: () => m,
+    f4: () => f,
+    l0: () => E,
+    qn: () => S,
 });
 var i = n(989349),
     r = n.n(i),
@@ -20,15 +20,14 @@ var i = n(989349),
     l = n(739010),
     u = n(239093),
     c = n(652215),
-    d = n(381941),
-    _ = n(375708);
-function h(e) {
+    d = n(375708);
+function _(e) {
     return r()().to(r()(e));
 }
-function f(e) {
-    return (0, a.u)(e.filename) || (0, a.AE)(e.filename) ? `${d._W}${e.filename ?? ".png"}` : (e.filename ?? "");
+function h(e) {
+    return (0, a.u)(e.filename) || (0, a.AE)(e.filename) ? c.sbO.IS_SPOILER : 0;
 }
-function p(e) {
+function f(e) {
     if (null == e.fields) return;
     let t = e.fields.reduce((e, t) => ((e[t.rawName] = t.rawValue), e), {});
     return {
@@ -42,31 +41,31 @@ function p(e) {
         classification_id: t[u.g0.CLASSIFICATION_ID],
     };
 }
-function E(e) {
+function p(e) {
     return e.type !== l.Xo.MESSAGE || ("" === e.content && 0 === e.attachments.length);
 }
-function m(e) {
+function E(e) {
     return {
-        [u.Iv.DIDNT_VIOLATE_POLICY]: _.intl.string(_.t.mZffAi),
-        [u.Iv.TOO_STRICT_UNFAIR]: _.intl.string(_.t.wgZVAn),
-        [u.Iv.DONT_AGREE_PENALTY]: _.intl.string(_.t.eu8G4k),
-        [u.Iv.SOMETHING_ELSE]: _.intl.string(_.t.XU3s6r),
+        [u.Iv.DIDNT_VIOLATE_POLICY]: d.intl.string(d.t.mZffAi),
+        [u.Iv.TOO_STRICT_UNFAIR]: d.intl.string(d.t.wgZVAn),
+        [u.Iv.DONT_AGREE_PENALTY]: d.intl.string(d.t.eu8G4k),
+        [u.Iv.SOMETHING_ELSE]: d.intl.string(d.t.XU3s6r),
     }[e];
 }
-function g(e) {
+function m(e) {
     return null == e || 0 === e.length
         ? ""
         : 1 === e.length
           ? e.toUpperCase()
           : `${e.charAt(0).toUpperCase()}${e.slice(1)}`;
 }
-function A(e) {
+function g(e) {
     return null != e && null != e.guild_metadata;
 }
-function I(e) {
-    return e === c.t02.DSA_APPEAL_REQUEST_DEFLECTION ? _.intl.string(_.t["0qyXXH"]) : _.intl.string(_.t.aPmsx3);
+function A(e) {
+    return e === c.t02.DSA_APPEAL_REQUEST_DEFLECTION ? d.intl.string(d.t["0qyXXH"]) : d.intl.string(d.t.aPmsx3);
 }
-function T(e) {
+function I(e) {
     let t = e.max_expiration_time;
     if (null == t) return null;
     try {
@@ -75,9 +74,9 @@ function T(e) {
         return null;
     }
 }
-function S() {
+function T() {
     return null != (0, s.bG)([o.default], () => o.default.getSuspendedUserToken());
 }
-function y() {
+function S() {
     return null != o.default.getSuspendedUserToken();
 }

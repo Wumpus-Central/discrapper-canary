@@ -98,14 +98,8 @@ var eR = n(478644),
     eL = n(150679),
     ek = n(266599);
 function eP(e, t, n) {
-    let l = e.startsWith("attachment://"),
-        i = e;
-    if (l) {
-        let t = e.slice(13);
-        i = n ? `attachment://SPOILER_${t}` : e;
-    }
     return {
-        media: { url: i, proxyUrl: i, loadingState: en.TD.UNKNOWN, flags: 0 },
+        media: { url: e, proxyUrl: e, loadingState: en.TD.UNKNOWN, flags: 0 },
         description: t ?? void 0,
         spoiler: n,
     };

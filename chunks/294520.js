@@ -11,14 +11,14 @@ var c = n(665260),
     N = n(652215),
     s = n(375708);
 function d(e, t) {
-    let { spoiler: n, flags: r = 0 } = e,
-        u = (0, i.b)({ type: E.D.Attachment, media: e }, t),
-        T = (0, i.$V)({ type: E.D.Attachment, media: e }, t);
-    return u.length > 0
-        ? u[0]
-        : T
+    let { flags: n = 0 } = e,
+        r = (0, i.b)({ type: E.D.Attachment, media: e }, t),
+        u = (0, i.$V)({ type: E.D.Attachment, media: e }, t);
+    return r.length > 0
+        ? r[0]
+        : u
           ? O.Oc.POTENTIAL_EXPLICIT_CONTENT
-          : n || (0, c.Lt)(r, N.sbO.IS_SPOILER)
+          : (0, c.Lt)(n, N.sbO.IS_SPOILER)
             ? O.Oc.SPOILER
             : null;
 }

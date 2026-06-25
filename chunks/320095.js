@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { IU: () => v, SP: () => N, ec: () => M, rh: () => C, ei: () => w }), n(938796);
+n.d(t, { IU: () => N, SP: () => C, ec: () => L, rh: () => y, ei: () => D }), n(938796);
 var i = n(989349),
     r = n.n(i),
     s = n(833291),
@@ -37,45 +37,44 @@ var _ = n(383233),
     g = n(935208),
     A = n(451919);
 n(763754);
-var I = n(381941),
-    T = n(652215);
-let S = new c.A({ id: "???", username: "???" });
-function y(e) {
+var I = n(652215);
+let T = new c.A({ id: "???", username: "???" });
+function S(e) {
     return new _.go({
         ...e,
         timestamp: new Date(e.timestamp),
         editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
-        attachments: R(e),
-        embeds: b(e),
+        attachments: e.attachments ?? [],
+        embeds: R(e),
         components: (0, a.ZV)(e.components ?? []),
-        codedLinks: T.MRS.NON_PARSED.has(e.type) ? [] : (0, s.Ay)(e.content),
+        codedLinks: I.MRS.NON_PARSED.has(e.type) ? [] : (0, s.Ay)(e.content),
     });
 }
-function C(e) {
+function y(e) {
     let t,
         n,
         { reactions: i, interactionData: r } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        s = y(e),
+        s = S(e),
         a = e.mentions?.map((e) => e.id) ?? [],
         l = e.mention_roles ?? [],
         u = e.mention_channels ?? [],
         E = e.mention_games ?? [],
-        I = e.message_reference,
+        y = e.message_reference,
         C =
             null == e.author
-                ? S
+                ? T
                 : null != e.webhook_id
                   ? new c.A(e.author)
                   : (p.default.getUser(e.author.id) ?? new c.A(e.author)),
         N = e?.gift_info,
-        v = e.gifting_prompt,
-        R = null != e.interaction ? d.createFromServer(e.interaction) : null,
-        b = e.type === T.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
+        R = e.gifting_prompt,
+        D = null != e.interaction ? d.createFromServer(e.interaction) : null,
+        L = e.type === I.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
         w = e.content;
     return (
-        e.type === T.lAJ.PREMIUM_REFERRAL &&
+        e.type === I.lAJ.PREMIUM_REFERRAL &&
             ((t = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (w = "")),
-        e.type === T.lAJ.PREMIUM_GROUP_INVITE &&
+        e.type === I.lAJ.PREMIUM_GROUP_INVITE &&
             ((n = g.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (w = "")),
         new _.Ay({
             ...e,
@@ -83,14 +82,14 @@ function C(e) {
             ...s.toJS(),
             author: C,
             webhookId: e.webhook_id,
-            blocked: f.A.isBlockedForMessage(e) || (null != b && f.A.isBlocked(b)),
-            ignored: f.A.isIgnoredForMessage(e) || (null != b && f.A.isIgnored(b)),
+            blocked: f.A.isBlockedForMessage(e) || (null != L && f.A.isBlocked(L)),
+            ignored: f.A.isIgnoredForMessage(e) || (null != L && f.A.isIgnored(L)),
             mentionEveryone: e.mention_everyone,
             mentions: a,
             mentionRoles: l,
             mentionChannels: u,
             mentionGames: E,
-            messageReference: I,
+            messageReference: y,
             mentioned: (0, A.Uj)({
                 userId: h.default.getId(),
                 channelId: e.channel_id,
@@ -102,10 +101,10 @@ function C(e) {
             content: w,
             referralTrialOfferId: t,
             premiumGroupInviteId: n,
-            call: O(e.call, s.timestamp),
-            messageSnapshots: L(e),
-            reactions: D(i ?? e.reactions, e.poll),
-            interaction: R,
+            call: v(e.call, s.timestamp),
+            messageSnapshots: b(e),
+            reactions: O(i ?? e.reactions, e.poll),
+            interaction: D,
             interactionData: r ?? e.interaction_data,
             interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,
@@ -113,34 +112,34 @@ function C(e) {
             poll: null == e.poll ? void 0 : o(e.poll),
             sharedClientTheme: e.shared_client_theme,
             giftInfo: null == N ? void 0 : N,
-            giftingPrompt: v,
+            giftingPrompt: R,
             boostingPrompt: e.boosting_prompt,
         })
     );
 }
-function N(e, t) {
+function C(e, t) {
     return null != t.edited_timestamp
         ? { ...t, reactions: e.reactions, interaction_data: e.interaction_data }
         : { ...e, ...t };
 }
-function v(e, t) {
-    if (null != t.edited_timestamp) return C(t, { reactions: e.reactions, interactionData: e.interactionData });
+function N(e, t) {
+    if (null != t.edited_timestamp) return y(t, { reactions: e.reactions, interactionData: e.interactionData });
     let n = e,
         i = !1;
     return (
-        null != t.call && (n = n.set("call", O(t.call, e.timestamp))),
-        null != t.attachments && (n = n.set("attachments", R(t))),
+        null != t.call && (n = n.set("call", v(t.call, e.timestamp))),
+        null != t.attachments && (n = n.set("attachments", t.attachments)),
         null != t.application && (n = n.set("application", t.application)),
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
-        null != t.embeds && (n = n.set("embeds", b(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", L(t))),
+        null != t.embeds && (n = n.set("embeds", R(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", b(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new c.A(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
         null != t.components && (n = n.set("components", (0, a.ZV)(t.components))),
         null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)),
-        null != t.reactions && (n = n.set("reactions", D(e.reactions ?? t.reactions))),
+        null != t.reactions && (n = n.set("reactions", O(e.reactions ?? t.reactions))),
         null != t.poll && (n = n.set("poll", o(t.poll))),
         null != t.mentions &&
             ((n = n.set(
@@ -154,10 +153,7 @@ function v(e, t) {
         n
     );
 }
-function R(e) {
-    return null == e.attachments ? [] : e.attachments.map((e) => ({ ...e, spoiler: e.filename.startsWith(I._W) }));
-}
-function O(e, t) {
+function v(e, t) {
     if (null != e) {
         let n = null != e.ended_timestamp ? r()(new Date(e.ended_timestamp)) : null,
             i = null != n ? r().duration(n.diff(t)) : null;
@@ -165,12 +161,12 @@ function O(e, t) {
     }
     return null;
 }
-function b(e) {
+function R(e) {
     if (null == e.embeds) return [];
     let t = e.embeds.map((t) => (0, E.fK)(e.channel_id, e.id, t));
     return (0, E.nh)(t);
 }
-function D(e, t) {
+function O(e, t) {
     return null == e && t?.results == null
         ? []
         : [
@@ -195,17 +191,17 @@ function D(e, t) {
               );
           });
 }
-function L(e) {
+function b(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
               let { message: t, moderator_report: n } = e;
-              return new _.vF({ message: y(t), moderator_report: n });
+              return new _.vF({ message: S(t), moderator_report: n });
           });
 }
-function w(e) {
+function D(e) {
     return 0 === (0, l.o6)(e).length || "" !== e.content;
 }
-function M(e) {
-    return e.hasFlag(T.pr7.EPHEMERAL) && e.type !== T.lAJ.IN_GAME_MESSAGE_NUX;
+function L(e) {
+    return e.hasFlag(I.pr7.EPHEMERAL) && e.type !== I.lAJ.IN_GAME_MESSAGE_NUX;
 }

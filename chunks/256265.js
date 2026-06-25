@@ -45,33 +45,32 @@ function y(e) {
                           proxy_url: n,
                           url: i,
                           description: r,
-                          spoiler: a,
-                          flags: o,
-                          width: l,
-                          height: c,
-                          filename: d,
-                          content_scan_version: _,
+                          flags: a,
+                          width: o,
+                          height: l,
+                          filename: c,
+                          content_scan_version: d,
                       } = e;
-                      if (null == l || null == c) return null;
-                      let h = (0, u.AE)(d),
-                          f = null != e.flags && (0, s.Lt)(e.flags, g.sbO.IS_THUMBNAIL),
-                          p = n ?? i;
-                      if (h) {
+                      if (null == o || null == l) return null;
+                      let _ = (0, u.AE)(c),
+                          h = null != e.flags && (0, s.Lt)(e.flags, g.sbO.IS_THUMBNAIL),
+                          f = n ?? i;
+                      if (_) {
                           let e = m.A.toURLSafe(n);
                           if (null == e) return null;
-                          e.searchParams.append("format", "webp"), (p = e.toString());
+                          e.searchParams.append("format", "webp"), (f = e.toString());
                       }
                       return {
                           type: "attachment",
-                          src: p,
-                          width: l,
-                          height: c,
-                          spoiler: a ?? !1,
-                          flags: o,
-                          contentScanVersion: _,
+                          src: f,
+                          width: o,
+                          height: l,
+                          spoiler: (0, s.Lt)(a ?? 0, g.sbO.IS_SPOILER),
+                          flags: a,
+                          contentScanVersion: d,
                           alt: r,
-                          isVideo: h,
-                          isThumbnail: f,
+                          isVideo: _,
+                          isThumbnail: h,
                           attachmentId: e.id,
                           mediaIndex: t,
                           srcIsAnimated: (0, s.Lt)(e.flags ?? 0, g.sbO.IS_ANIMATED),
