@@ -11,7 +11,7 @@ var l,
     h = n(260509),
     g = n(652215),
     m = n(778712),
-    I = n(687285),
+    I = n(864053),
     E = (((l = {}).TINY_24 = "TINY_24"), (l.SMALL_32 = "SMALL_32"), (l.MEDIUM_40 = "MEDIUM_40"), l);
 let A = { TINY_24: 24, SMALL_32: 32, MEDIUM_40: 40 },
     f = { TINY_24: 24, SMALL_32: 26, MEDIUM_40: 34 },
@@ -123,6 +123,7 @@ let y = r.memo(function (e) {
                                       alt: g.name,
                                       src: k,
                                       className: I.es,
+                                      draggable: !1,
                                       style: { width: b, height: b },
                                   })
                                 : (0, i.jsx)("div", {

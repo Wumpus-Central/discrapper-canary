@@ -99,26 +99,33 @@ function eT(e) {
         } = e,
         p = (0, I.rm)(t),
         [N, x] = r.useState(!1),
-        T = r.useRef(null),
-        [_, y] = r.useState(!1);
+        [T, _] = r.useState(!1),
+        y = r.useCallback(() => _(!0), []),
+        v = r.useCallback((e) => {
+            e.currentTarget.contains(e.relatedTarget) || _(!1);
+        }, []),
+        C = r.useRef(null),
+        [R, D] = r.useState(!1);
     return (
         r.useEffect(() => {
-            if (null == l || T.current === l) return;
-            T.current = l;
+            if (null == l || C.current === l) return;
+            C.current = l;
             let e = Date.now();
-            l > e || e - l > eN.WS || y(!0);
+            l > e || e - l > eN.WS || D(!0);
         }, [l]),
         (0, i.jsxs)("div", {
             ref: s,
             className: h()(ex.nM, f, { [ex.SS]: n }),
+            onFocus: y,
+            onBlur: v,
             onAnimationEnd: (e) => {
-                "friendsWidgetRowRecentlyAdded" === e.animationName && y(!1);
+                "friendsWidgetRowRecentlyAdded" === e.animationName && D(!1);
             },
             children: [
                 null != a ? (0, i.jsx)("div", { className: ex.oT, children: a }) : null,
                 (0, i.jsx)(ep.A, {
                     innerClassName: h()(ex.bL, S),
-                    className: _ ? ex.fc : void 0,
+                    className: R ? ex.fc : void 0,
                     onClick: g,
                     onContextMenu: m,
                     onMouseEnter: (e) => {
@@ -130,9 +137,9 @@ function eT(e) {
                     avatar: u,
                     name: o,
                     subText: d,
-                    hovered: N,
+                    hovered: N || T,
                     ...p,
-                    children: null != c ? (0, i.jsx)("div", { className: ex.cm, children: c(N) }) : null,
+                    children: null != c ? (0, i.jsx)("div", { className: ex.cm, children: c(N || T) }) : null,
                 }),
             ],
         })
