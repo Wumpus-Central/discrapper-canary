@@ -2733,7 +2733,6 @@ var iX =
         (eu.SETTINGS_IGNORED_USERS = "Ignored Users"),
         (eu.SETTINGS_INVENTORY = "Library Inventory"),
         (eu.SETTINGS_SWIPE_RIGHT_TO_LEFT = "Swipe Right to Left Setting"),
-        (eu.SETTINGS_REACTION_NOTIFICATIONS = "Reaction Notifications"),
         (eu.TEXT_COMPONENT = "Text Component"),
         (eu.DESIGN_SYSTEM = "Design System"),
         (eu.DESIGN_SYSTEM_TEXT = "Design System (Text)"),
@@ -3248,7 +3247,6 @@ let i0 = { page: "Direct", object: "Web URL" },
         QUEST_PREVIEW_TOOL_2: "Quest Preview Tool 2",
         SECURE_FRAMES: "Secure Frames",
         SECURE_FRAMES_VERIFIED_DEVICES: "Secure Frames Verified Devices",
-        REACTION_NOTIFICATIONS: "Reaction Notifications",
     });
 var i2 =
         (((e_ = {}).APPLICATION_STORE = "Application Store Verified Guild Invite - Lurker"),

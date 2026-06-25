@@ -22,9 +22,14 @@ var i = n(731738),
     S = n(320095),
     y = n(807393),
     C = n(535586),
-    N = n(944043),
-    v = n(571524),
-    R = n(181370),
+    N = n(944043);
+let v = (0, n(945810).mj)({
+    name: "2026-02-gdm-all-reaction-notifications",
+    kind: "user",
+    defaultConfig: { showSettingsToggle: !1 },
+    variations: { 1: { showSettingsToggle: !0 } },
+});
+var R = n(181370),
     O = n.n(R),
     b = n(695515),
     D = n(976860),
@@ -482,7 +487,7 @@ new eA(
                       let e = q.default.getCurrentUser();
                       if (
                           a.author?.id !== e?.id &&
-                          !v.A.getConfig({ location: "desktopNotification" }).showSettingsToggle
+                          !v.getConfig({ location: "desktopNotification" }).showSettingsToggle
                       )
                           return !1;
                   }
