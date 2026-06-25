@@ -7393,7 +7393,6 @@ class d2 extends S.PureComponent {
                 onCloseCallback: () => {
                     (0, dC.ET)();
                 },
-                onCloseRequest: U.tEg,
             },
         );
     };
