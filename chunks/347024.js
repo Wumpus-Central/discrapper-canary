@@ -34,7 +34,7 @@ var _ = n(157941),
     m = n(35277),
     g = n(820066),
     A = n(551483),
-    I = n(618559);
+    I = n(206207);
 let T = new a.Vy("withCodeBlocks"),
     S = new Set(["line"]),
     y = /^[a-z0-9_+\-.#]+$/i,
@@ -75,8 +75,8 @@ function v(e) {
                             !r &&
                             ((r = !0),
                             (null == N &&
-                                (N = Promise.all([n.e("57036"), n.e("75134")])
-                                    .then(n.bind(n, 981776))
+                                (N = Promise.resolve()
+                                    .then(n.bind(n, 149938))
                                     .then((e) => {
                                         C = e.default;
                                     })

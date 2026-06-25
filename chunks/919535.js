@@ -28,6 +28,14 @@ n.d(t, {
             }
             return { ast: t, hasBailedAst: n.hasBailedAst };
         },
+    mm: () =>
+        function e(t, n) {
+            if (Array.isArray(t)) {
+                for (let i of t) e(i, n);
+                return;
+            }
+            n(t, null), Array.isArray(t.content) && e(t.content, n), "list" === t.type && e(t.items, n);
+        },
     rI: () =>
         function e(t, n) {
             let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null;
@@ -49,7 +57,13 @@ n.d(t, {
                             let t = null;
                             for (let n = 0; n < e.length; n++) {
                                 let i = e[n];
-                                if (null == t || "text" != t.type || t.type != i.type) {
+                                if (
+                                    null == t ||
+                                    "text" !== t.type ||
+                                    t.type !== i.type ||
+                                    "string" != typeof t.content ||
+                                    "string" != typeof i.content
+                                ) {
                                     t = i;
                                     continue;
                                 }

@@ -19,9 +19,7 @@ function o(n) {
             o?.(),
                 (0, d.openModalLazy)(
                     async () => {
-                        let { default: n } = await Promise.all([t.e("33287"), t.e("88941"), t.e("59139")]).then(
-                            t.bind(t, 609422),
-                        );
+                        let { default: n } = await t.e("59139").then(t.bind(t, 609422));
                         return (t) => (0, l.jsx)(n, { user: e, nickname: b, ...t });
                     },
                     { contextKey: null != u ? (0, d.modalContextFromAppContext)(u) : void 0 },

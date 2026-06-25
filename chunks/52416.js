@@ -1,47 +1,48 @@
-n.d(t, { A: () => b });
-var o = n(627968),
-    a = n(64700),
-    l = n(877624),
-    r = n(338854),
-    i = n(43105),
-    d = n(59318),
-    s = n(549996),
-    u = n(498470),
-    p = n(807098),
-    c = n(637706),
-    m = n(49999);
-function b(e) {
-    let { children: t, targetElementRef: n, dismissPopover: b } = e,
-        _ = (0, s.c)(l.C.PREMIUM_TAB_POPOVER),
-        f =
-            null != _ && "premiumTabPopover" === _.properties.properties.oneofKind
-                ? _.properties.properties.premiumTabPopover
+"use strict";
+n.d(t, { A: () => f });
+var i = n(627968),
+    r = n(64700),
+    s = n(877624),
+    a = n(338854),
+    o = n(43105),
+    l = n(59318),
+    u = n(549996),
+    c = n(498470),
+    d = n(807098),
+    _ = n(637706),
+    h = n(49999);
+function f(e) {
+    let { children: t, targetElementRef: n, dismissPopover: f } = e,
+        p = (0, u.c)(s.C.PREMIUM_TAB_POPOVER),
+        E =
+            null != p && "premiumTabPopover" === p.properties.properties.oneofKind
+                ? p.properties.properties.premiumTabPopover
                 : null,
-        A = (0, p.T)(f?.asset),
-        T = a.useMemo(() => null != A && (0, d.r1)(A), [A]);
-    if (null == f) return t;
-    let { icon: g } = (0, u.x)({ buttonAction: f.button?.buttonAction }),
-        I = () => b(m.i.USER_DISMISS),
-        N =
-            f.button?.copy != null
+        m = (0, d.T)(E?.asset),
+        g = r.useMemo(() => null != m && (0, l.r1)(m), [m]);
+    if (null == E) return t;
+    let { icon: A } = (0, c.x)({ buttonAction: E.button?.buttonAction }),
+        I = () => f(h.i.USER_DISMISS),
+        T =
+            E.button?.copy != null
                 ? {
-                      text: f.button.copy,
+                      text: E.button.copy,
                       variant: "expressive",
-                      onClick: (0, u.h)({
-                          buttonAction: f.button.buttonAction,
-                          deeplinkSection: f.button.deeplinkSection,
-                          applicationId: f.button.navigableStorefrontApplicationId?.value,
+                      onClick: (0, c.h)({
+                          buttonAction: E.button.buttonAction,
+                          deeplinkSection: E.button.deeplinkSection,
+                          applicationId: E.button.navigableStorefrontApplicationId?.value,
                           onClose: I,
                       }),
-                      icon: g,
+                      icon: A,
                   }
                 : void 0,
-        E = (0, c.C)(f.helpArticle, f.helpArticleId),
-        y = null != E ? { text: E.linkText, link: E.url } : void 0,
-        S = {
+        S = (0, _.C)(E.helpArticle, E.helpArticleId),
+        y = null != S ? { text: S.linkText, link: S.url } : void 0,
+        C = {
             targetElementRef: n,
-            title: f.header,
-            body: f.body,
+            title: E.header,
+            body: E.body,
             textLink: y,
             position: "right",
             alignmentStrategy: "edge",
@@ -49,16 +50,16 @@ function b(e) {
             caretConfig: { align: "start" },
             onRequestClose: I,
         };
-    if (T) {
-        let e = { ...S, assetUrl: A ?? "", action: N, disableMediaViewer: !0 };
-        return (0, o.jsxs)(o.Fragment, { children: [(0, o.jsx)("div", { children: t }), (0, o.jsx)(r.H, { ...e })] });
+    if (g) {
+        let e = { ...C, assetUrl: m ?? "", action: T, disableMediaViewer: !0 };
+        return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: t }), (0, i.jsx)(a.H, { ...e })] });
     }
-    let C = {
-        ...S,
-        graphic: null != A ? { type: "image", src: A, aspectRatio: "16/9" } : void 0,
+    let N = {
+        ...C,
+        graphic: null != m ? { type: "image", src: m, aspectRatio: "16/9" } : void 0,
         size: "md",
-        actions: null != N ? [N] : void 0,
+        actions: null != T ? [T] : void 0,
         gradientColor: "nitro-pink",
     };
-    return (0, o.jsxs)(o.Fragment, { children: [(0, o.jsx)("div", { children: t }), (0, o.jsx)(i.A, { ...C })] });
+    return (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { children: t }), (0, i.jsx)(o.A, { ...N })] });
 }

@@ -15,7 +15,6 @@ function u(e) {
           (0, r.openModalLazy)(async () => {
               let { default: e } = await Promise.all([
                   n.e("5587"),
-                  n.e("61935"),
                   n.e("36335"),
                   n.e("64610"),
                   n.e("85990"),
@@ -58,14 +57,9 @@ function u(e) {
               }))
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("7266"),
-                        n.e("71455"),
-                        n.e("88941"),
-                        n.e("37687"),
-                        n.e("82721"),
-                        n.e("94048"),
-                    ]).then(n.bind(n, 110819));
+                    let { default: e } = await Promise.all([n.e("77957"), n.e("82721"), n.e("94048")]).then(
+                        n.bind(n, 110819),
+                    );
                     return (t) => (0, i.jsx)(e, { analyticsLocation: [h ?? "unknown"], ...t });
                 })
               : s.A.get(_)?.isFederated === !0

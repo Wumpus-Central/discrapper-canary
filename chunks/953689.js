@@ -71,12 +71,8 @@ class I extends r.Component {
                                     onClick: (t) => {
                                         (0, _.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("82077"),
-                                                n.e("2912"),
-                                                n.e("60559"),
-                                                n.e("8289"),
+                                                n.e("38028"),
                                                 n.e("60464"),
-                                                n.e("64615"),
                                                 n.e("92064"),
                                                 n.e("87297"),
                                             ]).then(n.bind(n, 294264));

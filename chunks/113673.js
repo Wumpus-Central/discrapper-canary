@@ -26,8 +26,8 @@ var i = n(92077),
     A = n(174459),
     I = n(652215),
     T = n(375708),
-    S = n(237846),
-    y = n(818050);
+    S = n(640150),
+    y = n(373378);
 class C extends s.PureComponent {
     onClose = () => {
         this.props.onClose();
@@ -210,15 +210,9 @@ function M(e, t, s, a, o) {
         u = null != e.eulaId && !L.A.hasAcceptedEULA(e.eulaId);
     null == l || u
         ? (0, h.openModalLazy)(async () => {
-              let { default: i } = await Promise.all([
-                  n.e("55929"),
-                  n.e("41686"),
-                  n.e("19573"),
-                  n.e("34530"),
-                  n.e("28866"),
-                  n.e("52753"),
-                  n.e("16061"),
-              ]).then(n.bind(n, 125484));
+              let { default: i } = await Promise.all([n.e("92445"), n.e("52753"), n.e("16061")]).then(
+                  n.bind(n, 125484),
+              );
               return (n) => (0, r.jsx)(i, { ...n, applicationId: e.id, branchId: t, analyticsLocation: o });
           })
         : (0, i.oc)({

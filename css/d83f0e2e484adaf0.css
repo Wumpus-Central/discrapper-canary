@@ -1,0 +1,48 @@
+.container__4f074 {
+    display: flex;
+    flex: 1 1 auto;
+    position: relative
+}
+
+.container__4f074,
+.container__4f074 *,
+.input__4f074 {
+    box-sizing: border-box
+}
+
+.input__4f074 {
+    border: none;
+    font-size: 16px;
+    height: 32px;
+    line-height: 32px;
+    overflow: hidden;
+    padding: 0 6px;
+    text-overflow: ellipsis;
+    white-space: pre;
+    -webkit-app-region: no-drag;
+    background: transparent;
+    border-radius: var(--radius-sm);
+    color: var(--text-default)
+}
+
+.outer__4f074:hover .input__4f074 {
+    background-color: var(--background-mod-subtle);
+    box-shadow: none;
+    outline: 1px solid var(--border-strong)
+}
+
+.input__4f074:focus,
+.outer__4f074:hover .input__4f074:focus {
+    background-color: var(--input-background-default);
+    box-shadow: none;
+    outline: 1px solid var(--border-normal)
+}
+
+.density-compact .input__4f074 {
+    height: 28px;
+    line-height: 28px
+}
+
+.full-motion .input__4f074 {
+    transition: background-color .2s ease
+}

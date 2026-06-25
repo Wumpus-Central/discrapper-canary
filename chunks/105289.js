@@ -658,7 +658,7 @@ var ek = a(835245),
     eD = a(157559),
     eI = a(780777),
     eT = a(993408),
-    eR = a(315949),
+    eR = a(579151),
     eO = a(559474),
     ew = a(816866),
     eM = a(87558),
@@ -673,7 +673,7 @@ var ek = a(835245),
     eW = a(231723),
     ez = a(900686),
     eH = a(986687),
-    eK = a(675371),
+    eK = a(864457),
     eY = a(735438),
     eq = a.n(eY),
     eJ = a(855915),
@@ -7752,7 +7752,7 @@ let rI = {
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-action.lottiejson": () =>
         a.e("19534").then(a.t.bind(a, 87037, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-idle.lottiejson": () =>
-        a.e("12250").then(a.t.bind(a, 553998, 19)),
+        a.e("12250").then(a.t.bind(a, 331617, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-loop.lottiejson": () =>
         a.e("58526").then(a.t.bind(a, 138157, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/cake/cake-action.lottiejson": () =>
@@ -8093,21 +8093,20 @@ let rM = {
         },
         GuildContextMenu: async () => {
             let { default: e } = await Promise.all([
-                    a.e("6919"),
-                    a.e("2470"),
-                    a.e("13806"),
-                    a.e("8289"),
-                    a.e("81380"),
-                    a.e("74213"),
+                    a.e("10273"),
+                    a.e("52760"),
+                    a.e("61751"),
+                    a.e("53583"),
+                    a.e("85624"),
                     a.e("88950"),
                     a.e("19204"),
                     a.e("89861"),
                     a.e("475"),
-                    a.e("66238"),
+                    a.e("45412"),
                     a.e("68352"),
                     a.e("16597"),
                     a.e("51486"),
-                    a.e("19628"),
+                    a.e("66107"),
                     a.e("71115"),
                     a.e("97206"),
                     a.e("92333"),
@@ -8124,12 +8123,11 @@ let rM = {
                     a.e("10992"),
                     a.e("57079"),
                     a.e("40952"),
-                    a.e("8034"),
+                    a.e("62458"),
                     a.e("9743"),
                     a.e("76615"),
                     a.e("1637"),
-                    a.e("11098"),
-                    a.e("9428"),
+                    a.e("99828"),
                     a.e("23878"),
                     a.e("845"),
                     a.e("130"),
@@ -8148,7 +8146,7 @@ let rM = {
                     a.e("22148"),
                     a.e("84882"),
                     a.e("60568"),
-                    a.e("7266"),
+                    a.e("70158"),
                     a.e("26903"),
                     a.e("4937"),
                     a.e("21858"),
@@ -8163,21 +8161,20 @@ let rM = {
                     a.e("49145"),
                     a.e("30997"),
                     a.e("28136"),
-                    a.e("16084"),
                     a.e("43116"),
+                    a.e("16084"),
                     a.e("73669"),
-                    a.e("36624"),
                     a.e("61058"),
                     a.e("50342"),
                     a.e("33097"),
-                    a.e("22547"),
+                    a.e("36624"),
                     a.e("10262"),
                     a.e("46313"),
+                    a.e("22547"),
                     a.e("43233"),
                     a.e("63726"),
                     a.e("71329"),
                     a.e("56373"),
-                    a.e("83827"),
                     a.e("42749"),
                     a.e("56026"),
                     a.e("16301"),
@@ -8188,12 +8185,11 @@ let rM = {
                     a.e("66147"),
                     a.e("52823"),
                     a.e("56967"),
-                    a.e("47011"),
                     a.e("31203"),
                     a.e("66913"),
                     a.e("71719"),
                     a.e("19690"),
-                    a.e("93767"),
+                    a.e("83827"),
                     a.e("13848"),
                     a.e("39214"),
                     a.e("99108"),
@@ -8202,6 +8198,7 @@ let rM = {
                     a.e("26508"),
                     a.e("61347"),
                     a.e("91643"),
+                    a.e("47011"),
                     a.e("42935"),
                     a.e("73091"),
                     a.e("69178"),
@@ -8209,6 +8206,7 @@ let rM = {
                     a.e("83518"),
                     a.e("52695"),
                     a.e("16373"),
+                    a.e("93767"),
                     a.e("24484"),
                     a.e("44943"),
                     a.e("32347"),
@@ -8743,7 +8741,7 @@ let oe = {
         return (a) => (0, r.jsx)(e, { ...a, clientSettingType: t.LEGACY_GAME, gameId: "123456789" });
     },
     PremiumSubscriptionPauseModal: async () => {
-        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("92254"), a.e("80347")]).then(
+        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("66994"), a.e("80347")]).then(
                 a.bind(a, 318998),
             ),
             { CancellationContext: t } = await Promise.resolve().then(a.bind(a, 916974)),
@@ -8893,7 +8891,7 @@ let oe = {
     },
     AppealIngestionModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("85414"),
+            a.e("2797"),
             a.e("52703"),
             a.e("94978"),
             a.e("92030"),
@@ -9670,7 +9668,7 @@ let oe = {
     },
     OtherFriendRequestsModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("19628"),
+            a.e("79205"),
             a.e("58704"),
             a.e("9421"),
             a.e("73152"),
@@ -14352,7 +14350,8 @@ function uc() {
                                   void (0, e$.openModalLazy)(
                                       async () => {
                                           let { default: t } = await Promise.all([
-                                              a.e("73220"),
+                                              a.e("43604"),
+                                              a.e("6285"),
                                               a.e("70940"),
                                               a.e("2033"),
                                               a.e("82830"),
@@ -14780,7 +14779,7 @@ function uy() {
         }),
     });
 }
-var uE = a(858177);
+var uE = a(80558);
 function u_(e) {
     let { game: t, meta: a } = e;
     return (0, r.jsxs)("div", {
@@ -17556,7 +17555,7 @@ var hT = a(284009),
     hV = a(241124),
     hW = a(242939),
     hz = a(717695),
-    hH = a(961974),
+    hH = a(527549),
     hK = a(127219),
     hY = a(262514),
     hq = a(892955),
@@ -18469,8 +18468,7 @@ function xx() {
                                         let e = performance.now();
                                         (0, e$.openModalLazy)(async () => {
                                             let { default: n } = await Promise.all([
-                                                a.e("28112"),
-                                                a.e("4125"),
+                                                a.e("66215"),
                                                 a.e("72851"),
                                                 a.e("92868"),
                                                 a.e("63408"),

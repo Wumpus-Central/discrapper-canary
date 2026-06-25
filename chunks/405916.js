@@ -11,7 +11,7 @@ var i = n(627968),
     d = n(725792),
     _ = n(338771),
     h = n(929921),
-    f = n(394459),
+    f = n(472444),
     p = n(723702),
     E = n(74329),
     m = n(192308),
@@ -75,27 +75,9 @@ function D(e) {
                             (o = { ...b, object: N.ZSU.RADIO_ITEM, objectType: a }),
                                 (0, m.openModalLazy)(
                                     async () => {
-                                        let { default: e } = await Promise.all([
-                                            n.e("62203"),
-                                            n.e("39865"),
-                                            n.e("50870"),
-                                            n.e("54048"),
-                                            n.e("87306"),
-                                            n.e("41043"),
-                                            n.e("65030"),
-                                            n.e("76640"),
-                                            n.e("99666"),
-                                            n.e("72442"),
-                                            n.e("24622"),
-                                            n.e("62680"),
-                                            n.e("21825"),
-                                            n.e("75676"),
-                                            n.e("18441"),
-                                            n.e("86949"),
-                                            n.e("52073"),
-                                            n.e("93475"),
-                                            n.e("18630"),
-                                        ]).then(n.bind(n, 826789));
+                                        let { default: e } = await Promise.all([n.e("93475"), n.e("18630")]).then(
+                                            n.bind(n, 826789),
+                                        );
                                         return (t) => (0, i.jsx)(e, { ...t, analyticsSource: o });
                                     },
                                     { contextKey: t === N.BRT.POPOUT ? g.KX : g.SY },

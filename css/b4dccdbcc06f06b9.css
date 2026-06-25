@@ -1,0 +1,72 @@
+.container__75920 {
+    background: transparent;
+    border-radius: var(--radius-md);
+    margin: calc(var(--space-xs)*-1) calc(var(--space-sm)*-1);
+    outline: none;
+    padding: var(--space-xs) var(--space-sm);
+    scroll-margin-bottom: var(--space-16);
+    scroll-margin-top: var(--space-16);
+    transition: background .4s ease-out .75s
+}
+
+.container__75920.flash__75920 {
+    background: var(--message-highlight-background-default);
+    transition: background 0s ease-in-out
+}
+
+.baseSettingWrapper__32428 {
+    min-height: 48px
+}
+
+.icon_cf9ac1 {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 48px;
+    justify-content: center;
+    width: 48px
+}
+
+.baseControlItem_dbfbe0 {
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    gap: var(--space-12);
+    margin: 0 calc(var(--space-12)*-1);
+    min-height: 48px;
+    padding: var(--space-12);
+    transition: background-color .15s ease
+}
+
+.baseControlItem_dbfbe0:hover.clickable_dbfbe0 {
+    background-color: var(--interactive-background-hover);
+    cursor: pointer
+}
+
+.baseControlItemLeadingElement_dbfbe0,
+.baseControlItemTrailingElement_dbfbe0 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.baseControlItemTitle_dbfbe0 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.baseControlItemContent_dbfbe0 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    gap: var(--space-4);
+    justify-content: center
+}
+
+.secondaryTitle_dbfbe0:before {
+    color: var(--text-muted);
+    content: "•";
+    margin: 0 var(--space-8)
+}

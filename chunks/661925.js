@@ -1,4 +1,4 @@
-n.d(t, { default: () => C });
+n.d(e, { default: () => C });
 var a = n(627968),
     i = n(64700),
     l = n(284009),
@@ -10,38 +10,31 @@ var a = n(627968),
     u = n(940856),
     m = n(287809),
     k = n(375708),
-    p = n(696850);
-let C = function (e) {
-    let { onClose: t, transitionState: l } = e,
+    p = n(437650);
+let C = function (t) {
+    let { onClose: e, transitionState: l } = t,
         C = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
         [b, f] = i.useState(!1),
-        g = i.useCallback(() => (t?.(), Promise.resolve()), [t]),
+        g = i.useCallback(() => (e?.(), Promise.resolve()), [e]),
         h = i.useCallback(() => {
-            t?.(),
+            e?.(),
                 (0, c.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([
-                        n.e("97570"),
-                        n.e("33287"),
-                        n.e("54048"),
-                        n.e("88941"),
-                        n.e("32606"),
-                        n.e("41043"),
-                        n.e("62680"),
-                        n.e("18441"),
+                    let { default: t } = await Promise.all([
+                        n.e("67746"),
                         n.e("27323"),
                         n.e("20577"),
                         n.e("47999"),
                         n.e("65861"),
                     ]).then(n.bind(n, 97060));
-                    return (t) => (0, a.jsx)(e, { ...t });
+                    return (e) => (0, a.jsx)(t, { ...e });
                 });
-        }, [t]),
+        }, [e]),
         x = i.useCallback(() => {
-            t?.(),
+            e?.(),
                 r()(null != C, "ResendEmailVerificationButton: currentUser cannot be undefined"),
                 f(!0),
                 (0, u.S)(C).finally(() => f(!1));
-        }, [C, t]),
+        }, [C, e]),
         v = i.useMemo(
             () =>
                 C?.email == null

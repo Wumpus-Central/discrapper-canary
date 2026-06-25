@@ -1,0 +1,96 @@
+.contentHeader__5b400 {
+    justify-content: space-between;
+    margin-bottom: 8px
+}
+
+.contentHeader__5b400,
+.refreshWrapper__5b400 {
+    align-items: center;
+    display: flex
+}
+
+.refreshWrapper__5b400 {
+    color: var(--text-muted);
+    cursor: pointer;
+    gap: 4px
+}
+
+.refreshWrapper__5b400:hover {
+    color: var(--interactive-text-hover)
+}
+
+.disabled__5b400 {
+    color: var(--text-muted);
+    pointer-events: none
+}
+
+.colorTransition__5b400 {
+    transition: color .15s ease-in-out
+}
+
+.accountsWrapper__5b400 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.connectionRow__5b400 {
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    overflow: hidden
+}
+
+.connectionRowHeader__5b400 {
+    align-items: center;
+    background-color: var(--background-base-low);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 12px
+}
+
+.connectionRowHeaderError__5b400 {
+    background-color: hsl(var(--background-base-low-hsl)/.7)
+}
+
+.connectionRowHeaderContent__5b400 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
+.success__5b400 {
+    color: var(--text-feedback-positive)
+}
+
+.error__5b400 {
+    color: var(--text-feedback-critical)
+}
+
+.gameTile__5b400 {
+    height: 16px;
+    width: 16px
+}
+
+.errorRow__5b400 {
+    align-items: center;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    gap: 8px;
+    padding: 10px 12px
+}
+
+.errorsContainer__5b400 {
+    background: linear-gradient(to bottom, hsl(var(--red-430-hsl)/.15), hsl(var(--red-430-hsl)/.02))
+}
+
+.tooltip__5b400 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 2px
+}
+
+.placeholderElement__6e847 {
+    background-color: var(--background-base-low);
+    border-radius: 8px
+}

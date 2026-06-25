@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { default: () => i7 });
+l.r(t), l.d(t, { default: () => i6 });
 var i,
     s = l(627968),
     a = l(64700),
@@ -718,14 +718,14 @@ var eq = l(619517),
     eJ = l(34337),
     e0 = l(615300),
     e1 = l(456412),
-    e8 = l(133296),
-    e9 = l(689175),
-    e3 = l(532197),
-    e6 = l(236055);
-let e7 = { CENTER: e6.Hu, LEFT: e6.Vl };
+    e7 = l(133296),
+    e8 = l(689175),
+    e9 = l(532197),
+    e3 = l(236055);
+let e6 = { CENTER: e3.Hu, LEFT: e3.Vl };
 class e2 extends a.PureComponent {
-    static Align = e7;
-    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e7.CENTER };
+    static Align = e6;
+    static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e6.CENTER };
     _scrollerRef = null;
     _paginationItemRefs = [];
     componentDidUpdate(e) {
@@ -747,8 +747,8 @@ class e2 extends a.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: i, align: n } = this.props,
-            o = l ? e6.XA : e6.BU;
-        return (0, s.jsx)(e9.Gt, {
+            o = l ? e3.XA : e3.BU;
+        return (0, s.jsx)(e8.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: r()(o, i, n),
             ref: this.handleSetScrollerRef,
@@ -773,9 +773,9 @@ class e4 extends a.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(ek.D, {
-            className: r()(e6.t1, e),
+            className: r()(e3.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, s.jsx)(e3.A, { className: e6.UE, direction: e3.A.Directions.LEFT }),
+            children: (0, s.jsx)(e9.A, { className: e3.UE, direction: e9.A.Directions.LEFT }),
         });
     }
 }
@@ -788,9 +788,9 @@ class e5 extends a.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(ek.D, {
-            className: r()(e6.XS, e),
+            className: r()(e3.XS, e),
             onClick: this.handleNextClick,
-            children: (0, s.jsx)(e3.A, { className: e6.UE, direction: e3.A.Directions.RIGHT }),
+            children: (0, s.jsx)(e9.A, { className: e3.UE, direction: e9.A.Directions.RIGHT }),
         });
     }
 }
@@ -1032,7 +1032,7 @@ class th extends a.PureComponent {
     render() {
         let { items: e, className: t, autoplayInterval: l, paused: i } = this.props,
             { currentIndex: a, playingVideo: n, hasInteracted: r } = this.state;
-        return (0, s.jsxs)(e8.A, {
+        return (0, s.jsxs)(e7.A, {
             pauseOnHover: !0,
             onInterval: this.autoNext,
             interval: l,
@@ -1594,16 +1594,16 @@ var tQ = l(462887),
     tJ = l(514042),
     t0 = l(194261),
     t1 = l(173936),
-    t8 = l(9578),
-    t9 = l(736653),
-    t3 = l(573648),
-    t6 = l(826688);
-function t7(e) {
+    t7 = l(9578),
+    t8 = l(736653),
+    t9 = l(573648),
+    t3 = l(826688);
+function t6(e) {
     let { application: t, className: l, innerClassName: i } = e,
         a = t.directory_entry?.external_urls ?? [];
     return null != t.terms_of_service_url || null != t.privacy_policy_url || a.length > 0
         ? (0, s.jsxs)("div", {
-              className: r()(t6.kL, l),
+              className: r()(t3.kL, l),
               children: [
                   (0, s.jsx)(m.D, {
                       variant: "heading-sm/semibold",
@@ -1611,7 +1611,7 @@ function t7(e) {
                       children: w.intl.string(w.t.l6DP2n),
                   }),
                   (0, s.jsxs)("div", {
-                      className: r()(t6.p_, i),
+                      className: r()(t3.p_, i),
                       children: [
                           a.map((e, t) => (0, s.jsx)(t2, { url: e.url, children: e.name }, t)),
                           null != t.terms_of_service_url
@@ -1636,8 +1636,8 @@ function t7(e) {
 }
 function t2(e) {
     let { url: t, children: l } = e,
-        i = (0, t9.Ay)(),
-        a = t3.A.getByUrl(t),
+        i = (0, t8.Ay)(),
+        a = t9.A.getByUrl(t),
         n = (0, tQ.M)(i) ? a?.icon?.darkSVG : a?.icon?.lightSVG;
     return (0, s.jsx)(t4, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
 }
@@ -1646,14 +1646,14 @@ function t4(e) {
         o = G(),
         c = null;
     null != t
-        ? (c = (0, s.jsx)(t, { className: t6.GU, color: i ?? "currentColor", width: 20, height: 20, size: "custom" }))
-        : null != l && (c = (0, s.jsx)("img", { className: t6.GR, src: l, alt: "" }));
+        ? (c = (0, s.jsx)(t, { className: t3.GU, color: i ?? "currentColor", width: 20, height: 20, size: "custom" }))
+        : null != l && (c = (0, s.jsx)("img", { className: t3.GR, src: l, alt: "" }));
     let d = (0, s.jsxs)(s.Fragment, {
-        children: [c, (0, s.jsx)(x.E, { className: t6.so, variant: "text-sm/medium", selectable: !0, children: n })],
+        children: [c, (0, s.jsx)(x.E, { className: t3.so, variant: "text-sm/medium", selectable: !0, children: n })],
     });
-    return (0, s.jsx)(t8.A, {
+    return (0, s.jsx)(t7.A, {
         href: a,
-        className: r()(t6.Aw, t6.SF),
+        className: r()(t3.Aw, t3.SF),
         trusted: !o,
         useDefaultUnderlineStyles: !1,
         children: d,
@@ -1671,7 +1671,7 @@ var t5 = l(385648),
     lo = l(517061);
 function lc(e) {
     let { guild: t, className: l, onClick: i } = e,
-        a = (0, t9.Ay)(),
+        a = (0, t8.Ay)(),
         n = (0, la.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
         o = eo.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, ls.mZ)() }),
         c =
@@ -1878,7 +1878,7 @@ function lx(e) {
             (0, s.jsxs)("div", {
                 className: r()(lg.hd, { [lg.d5]: a }),
                 children: [
-                    (0, s.jsx)(t7, { application: i, className: lg.iY, innerClassName: a ? lg.RU : void 0 }),
+                    (0, s.jsx)(t6, { application: i, className: lg.iY, innerClassName: a ? lg.RU : void 0 }),
                     (0, s.jsx)(lu, { application: i, className: lg.iY }),
                 ],
             }),
@@ -2100,11 +2100,11 @@ var lH = l(607399),
     lJ = l(821609),
     l0 = l(782134),
     l1 = l(787389),
-    l8 = l(688810),
-    l9 = l(361926),
-    l3 = l(204776),
-    l6 = l(50268),
-    l7 = l(207371),
+    l7 = l(688810),
+    l8 = l(361926),
+    l9 = l(204776),
+    l3 = l(50268),
+    l6 = l(207371),
     l2 = l(928658),
     l4 = l(395671),
     l5 = l(957565),
@@ -2191,7 +2191,7 @@ function ia(e) {
                 }, [t, i, l]),
                 canInstall: a.useMemo(
                     () =>
-                        (0, l3.Ie)({
+                        (0, l9.Ie)({
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
                             integrationTypesConfig: t.integration_types_config,
@@ -2231,7 +2231,7 @@ function ir(e) {
 }
 let io = a.forwardRef(function (e, t) {
     let { application: l, size: i } = e,
-        { analyticsLocations: n } = (0, l8.Ay)(),
+        { analyticsLocations: n } = (0, l7.Ay)(),
         o = a.useCallback(() => {
             var e;
             k(O.HAw.APP_DIRECTORY_APPLICATION_LINK_COPIED, { application_id: l.id }),
@@ -2244,7 +2244,7 @@ let io = a.forwardRef(function (e, t) {
             let e = l4.Ay.createFromServer(l);
             (0, l2.r3)({ application: e, entrypoint: "app_directory" });
         }, [l]),
-        u = (0, l6.A)({
+        u = (0, l3.A)({
             id: l.id,
             label: w.intl.string(w.t["FfCL+6"]),
             onSuccess: () => (0, lY.P0)((0, lz.o)(w.intl.string(w.t.eNjAah), lX.Ck.SUCCESS)),
@@ -2286,8 +2286,8 @@ let io = a.forwardRef(function (e, t) {
         { onClickLaunchActivity: m, isSubmitting: p } = (function (e, t) {
             let l = e.id,
                 i = e?.bot?.id,
-                s = (0, l7.x)(e),
-                n = (0, l9.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: i }),
+                s = (0, l6.x)(e),
+                n = (0, l8.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: i }),
                 r = null != i && (0, en.$B)(e) && (0, en.Ag)(e) && (s || n),
                 [o, c] = a.useState(!1),
                 u = G(),
@@ -2655,9 +2655,8 @@ function iS(e) {
                     return void (0, ix.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("45580"),
-                                l.e("96126"),
-                                l.e("81463"),
+                                l.e("76647"),
+                                l.e("78931"),
                                 l.e("17989"),
                                 l.e("80830"),
                                 l.e("70104"),
@@ -2684,9 +2683,8 @@ function iS(e) {
                         void (0, ix.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("45580"),
-                                    l.e("96126"),
-                                    l.e("81463"),
+                                    l.e("76647"),
+                                    l.e("78931"),
                                     l.e("17989"),
                                     l.e("80830"),
                                     l.e("64850"),
@@ -2726,7 +2724,7 @@ function ib(e) {
         a = t.privacy_policy_url;
     if (null == i && null == a) return null;
     function n(e, t) {
-        return (0, s.jsx)(t8.A, { href: t, trusted: !l, children: e });
+        return (0, s.jsx)(t7.A, { href: t, trusted: !l, children: e });
     }
     return (0, s.jsx)("div", {
         className: i_.V6,
@@ -3062,7 +3060,7 @@ let i0 = function (e) {
     });
 };
 var i1 = l(198195);
-function i8(e) {
+function i7(e) {
     let { onSelectApplication: t, onScroll: l } = e,
         i = (0, d.bG)([f.default], () => f.default.isAuthenticated()),
         n = a.useRef(null),
@@ -3236,8 +3234,8 @@ function i8(e) {
         ],
     });
 }
-var i9 = l(651759);
-function i3(e) {
+var i8 = l(651759);
+function i9(e) {
     let { applicationId: t, hideDetailHeaderButtons: l, onClickBack: i } = e,
         n = (0, d.bG)([R.A], () => R.A.getApplication(t)),
         [o, c] = a.useState(l),
@@ -3245,25 +3243,25 @@ function i3(e) {
             c(l);
         }, [l]);
     return (0, s.jsxs)("div", {
-        className: i9._u,
+        className: i8._u,
         children: [
-            (0, s.jsx)("div", { className: i9.w$, children: (0, s.jsx)(v.XQ, { icon: h.Z, onClick: i }) }),
+            (0, s.jsx)("div", { className: i8.w$, children: (0, s.jsx)(v.XQ, { icon: h.Z, onClick: i }) }),
             (0, s.jsx)(m.D, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                className: i9.Rm,
+                className: i8.Rm,
                 lineClamp: 1,
                 children: n?.name,
             }),
             (0, s.jsx)("div", {
-                className: r()(i9.w$, i9.xY, { [i9.RK]: !l, [i9.jD]: l && !o, [i9.R]: l && o }),
+                className: r()(i8.w$, i8.xY, { [i8.RK]: !l, [i8.jD]: l && !o, [i8.R]: l && o }),
                 onTransitionEnd: u,
                 children: null != n ? (0, s.jsx)(io, { application: n, size: "sm" }) : null,
             }),
         ],
     });
 }
-function i6() {
+function i3() {
     let e = a.useCallback(() => {
             let e, t;
             (e = new URL(location.href)),
@@ -3275,9 +3273,9 @@ function i6() {
         }, []);
     return (0, s.jsxs)(p.$T, {
         color: p.Hv.BRAND,
-        className: i9.aL,
+        className: i8.aL,
         children: [
-            (0, s.jsx)(g.p, { size: "custom", color: "white", className: i9.wm }),
+            (0, s.jsx)(g.p, { size: "custom", color: "white", className: i8.wm }),
             (0, s.jsx)(x.E, {
                 tag: "span",
                 color: "always-white",
@@ -3285,7 +3283,7 @@ function i6() {
                 children: w.intl.string(w.t.Ol3MIt),
             }),
             (0, s.jsxs)("div", {
-                className: i9.ll,
+                className: i8.ll,
                 children: [
                     (0, s.jsx)(p.Z_, { onClick: e, noticeType: O.kqX.LOGIN, children: w.intl.string(w.t["825cFy"]) }),
                     (0, s.jsx)(p.Z_, {
@@ -3299,7 +3297,7 @@ function i6() {
         ],
     });
 }
-let i7 = function () {
+let i6 = function () {
     var e;
     let t,
         l,
@@ -3460,18 +3458,18 @@ let i7 = function () {
             [eC, x],
         );
     return (0, s.jsxs)("div", {
-        className: r()(i9.nw, { [i9.Yz]: g }),
+        className: r()(i8.nw, { [i8.Yz]: g }),
         children: [
-            g ? (0, s.jsx)(i6, {}) : null,
+            g ? (0, s.jsx)(i3, {}) : null,
             (0, s.jsxs)("div", {
-                className: i9.WH,
+                className: i8.WH,
                 children: [
                     (0, s.jsxs)(v.Ay, {
                         variant: ej ? v.Z5.RELATIVE : v.Z5.OVERLAY,
                         children: [
                             !ej && (0, s.jsx)(v.ns, { scrollPosition: R }),
                             ea
-                                ? (0, s.jsx)(i3, { applicationId: Y, hideDetailHeaderButtons: ee, onClickBack: ev })
+                                ? (0, s.jsx)(i9, { applicationId: Y, hideDetailHeaderButtons: ee, onClickBack: ev })
                                 : (0, s.jsxs)(s.Fragment, {
                                       children: [
                                           en
@@ -3481,7 +3479,7 @@ let i7 = function () {
                                               ? (0, s.jsx)(m.D, {
                                                     variant: "heading-lg/semibold",
                                                     color: "text-strong",
-                                                    className: i9.wL,
+                                                    className: i8.wL,
                                                     children:
                                                         null != X && "" !== X
                                                             ? w.intl.formatToPlainString(w.t.zHdzqW, { query: X })
@@ -3519,7 +3517,7 @@ let i7 = function () {
                               onButtonsVisibilityChange: et,
                           })
                         : en
-                          ? (0, s.jsx)(i8, { onSelectApplication: eA, onScroll: (e) => eI(e, D.ev.SEARCH) })
+                          ? (0, s.jsx)(i7, { onSelectApplication: eA, onScroll: (e) => eI(e, D.ev.SEARCH) })
                           : Q === U.GLOBAL_DISCOVERY_APPS_FEATURED_CATEGORY_ID.toString()
                             ? (0, s.jsx)(iH, { onScroll: (e) => eI(e, D.ev.HOME), onSelectApplication: eA })
                             : (0, s.jsx)(ey, {

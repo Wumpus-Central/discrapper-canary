@@ -13,8 +13,8 @@ var n = t(627968),
     g = t(960076),
     h = t(323073),
     p = t(693879),
-    I = t(268218),
-    f = t(643501),
+    f = t(268218),
+    I = t(643501),
     v = t(279250),
     x = t(834757),
     S = t(566668),
@@ -35,25 +35,23 @@ var n = t(627968),
     D = t(329554),
     R = t(402313),
     U = t(699976),
-    M = t(415679);
-let L = (0, I.Fe)({
+    M = t(713983);
+let L = (0, f.Fe)({
     createPromise: () =>
         Promise.all([
-            t.e("58247"),
-            t.e("62448"),
-            t.e("38123"),
-            t.e("56795"),
-            t.e("85723"),
-            t.e("24685"),
-            t.e("70676"),
-            t.e("1316"),
+            t.e("83002"),
+            t.e("34523"),
+            t.e("65787"),
+            t.e("97052"),
+            t.e("72980"),
+            t.e("4824"),
             t.e("9233"),
             t.e("69747"),
             t.e("88889"),
-            t.e("11133"),
             t.e("49013"),
-            t.e("93461"),
+            t.e("11133"),
             t.e("46430"),
+            t.e("93461"),
             t.e("90779"),
             t.e("39808"),
             t.e("9763"),
@@ -89,8 +87,8 @@ function z(e) {
         m = u?.nick ?? c,
         { avatarDecorationSrc: A, avatarSrc: h } = (0, y.A)({ userId: i.id, size: a._3.SIZE_32, guildId: t }),
         {
-            status: I,
-            isMobileOnline: f,
+            status: f,
+            isMobileOnline: I,
             activities: v,
         } = (0, s.cf)([O.A], () => ({
             status: O.A.getStatus(i.id, t),
@@ -107,8 +105,8 @@ function z(e) {
                 size: a._3.SIZE_32,
                 "aria-label": m,
                 avatarDecoration: A,
-                status: (0, g.A)(v) ? d.clD.STREAMING : I === d.clD.OFFLINE ? void 0 : I,
-                isMobile: f,
+                status: (0, g.A)(v) ? d.clD.STREAMING : f === d.clD.OFFLINE ? void 0 : f,
+                isMobile: I,
                 className: M.my,
             }),
             (0, n.jsxs)("div", {
@@ -125,15 +123,15 @@ function K(e) {
     let i,
         t,
         { channel: a, user: r, onAction: o, excludeActivity: g, onWatchStream: p } = e,
-        I = l.useMemo(() => ({ [a.guild_id]: [r.id] }), [a.guild_id, r.id]);
-    (0, c.Eq)(I, "VoiceUserActivities");
+        f = l.useMemo(() => ({ [a.guild_id]: [r.id] }), [a.guild_id, r.id]);
+    (0, c.Eq)(f, "VoiceUserActivities");
     let { enabled: y } = R.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
         [j, V] = (0, s.yK)(
             [C.A],
             () => [C.A.getStreamForUser(r.id, a.getGuildId()), C.A.getActiveStreamForUser(r.id, a.getGuildId())],
             [a, r.id],
         ),
-        [w, U] = (0, s.yK)([P.A, T.A, G.A, f.default], () => (0, v.eo)(a, P.A, T.A, G.A, f.default)),
+        [w, U] = (0, s.yK)([P.A, T.A, G.A, I.default], () => (0, v.eo)(a, P.A, T.A, G.A, I.default)),
         L = (0, s.bG)([b.default], () => b.default.getId()),
         K = (0, s.bG)([O.A], () => (0, x.nr)(j, O.A), [j]),
         B = (0, h.r9)() && (0, h.UK)(a.id),

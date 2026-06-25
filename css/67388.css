@@ -1,0 +1,193 @@
+.responseOptions_d650db {
+    margin-top: 8px
+}
+
+.confirmButton_d650db {
+    margin-inline-start: 8px
+}
+
+.inviteDetailsContainer_da5e8d {
+    align-items: center;
+    display: flex;
+    flex: 1000 0 auto;
+    gap: 16px;
+    max-width: 100%;
+    min-width: 0
+}
+
+.clickable_da5e8d {
+    cursor: pointer
+}
+
+.clickable_da5e8d:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.guildChannelInfoContainer_da5e8d {
+    align-items: center;
+    display: flex;
+    gap: 4px;
+    min-width: 0
+}
+
+.verticalContainer_da5e8d {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0
+}
+
+.footerContainer_da5e8d {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+    margin-top: 12px;
+    overflow: hidden
+}
+
+.eventDescription_da5e8d {
+    font-size: 14px;
+    line-height: 18px
+}
+
+.channelDescription_da5e8d {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.guildBadge_da5e8d {
+    flex-shrink: 0
+}
+
+.guildName_da5e8d {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.guildName_da5e8d,
+.guildNameClickable_da5e8d {
+    min-width: 0
+}
+
+.guildNameLinkable_da5e8d {
+    cursor: pointer
+}
+
+.guildNameLinkable_da5e8d:hover {
+    text-decoration: underline
+}
+
+.channelIcon_da5e8d {
+    flex-shrink: 0
+}
+
+.channelInfoContainer_da5e8d {
+    align-items: center;
+    color: var(--text-default);
+    display: flex;
+    flex-direction: row;
+    margin-top: 4px
+}
+
+.channelLocationLink_da5e8d {
+    color: var(--text-default);
+    cursor: pointer;
+    display: flex;
+    gap: 4px;
+    min-width: 0
+}
+
+.channelLocationLink_da5e8d:hover {
+    text-decoration: underline
+}
+
+.banner_da5e8d {
+    border-radius: 4px 4px 0 0;
+    margin: -16px -16px 16px
+}
+
+.icon__33e19 {
+    color: var(--interactive-text-default)
+}
+
+.separator_ae2544 {
+    background-color: var(--border-subtle);
+    height: 1px;
+    margin-bottom: 16px;
+    margin-top: 16px
+}
+
+.infoTitle_ae2544 {
+    align-items: center;
+    display: flex;
+    overflow: hidden
+}
+
+.infoBadge_ae2544 {
+    margin-inline-start: 4px
+}
+
+.inviteEmbed_ae2544 {
+    border-radius: var(--radius-md)
+}
+
+.inviteEmbedTitle_ae2544 {
+    margin-bottom: 12px;
+    max-width: 100%
+}
+
+.inviteMemberRow_ae2544 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.inviteMemberCount_ae2544 {
+    color: var(--text-muted);
+    cursor: pointer
+}
+
+.inviteMemberCount_ae2544:hover {
+    text-decoration: underline
+}
+
+.inviteMemberListPopout_ae2544 {
+    border-radius: var(--radius-md)
+}
+
+.headerLine_ae2544 {
+    align-items: center;
+    display: flex;
+    flex: 1000 0 auto;
+    gap: 16px;
+    max-width: 100%
+}
+
+.inviteEmbedHeaderLine_ae2544 {
+    gap: 12px;
+    width: 100%
+}
+
+.inviteEmbedAvatars_ae2544,
+.tooltipContainer_ae2544 {
+    margin-inline-start: 4px
+}
+
+.tooltipContainer_ae2544 {
+    display: inline-block;
+    line-height: 0;
+    vertical-align: sub
+}
+
+.infoIcon_ae2544 {
+    height: 16px;
+    width: 16px
+}
+
+.buttonContainer_ae2544 {
+    flex: 1
+}

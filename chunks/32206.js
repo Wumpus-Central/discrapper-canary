@@ -1,4 +1,5 @@
-n.d(t, { A: () => l, c: () => r });
+"use strict";
+n.d(t, { A: () => s, c: () => r });
 let i = (0, n(945810).mj)({
     name: "2026-03-collectibles-profile-frames",
     kind: "user",
@@ -8,4 +9,4 @@ let i = (0, n(945810).mj)({
 function r(e) {
     return i.useConfig({ location: e }).enableProfileFrames;
 }
-let l = 21552 == n.j ? i : null;
+let s = i;

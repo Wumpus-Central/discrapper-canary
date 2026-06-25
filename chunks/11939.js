@@ -1,20 +1,63 @@
 "use strict";
-n.d(t, { N: () => u, h: () => c });
-var l = n(64700),
-    i = n(702841),
-    r = n(426398),
-    s = n(202613),
-    a = n(753390),
-    o = n(176095);
-function u(e) {
-    return e.find((e) => e.source instanceof s.LQ) ?? null;
+n.d(t, { Ah: () => c, EG: () => _, EH: () => u, Vo: () => d });
+var i = n(627968),
+    r = n(64700),
+    s = n(143236),
+    a = n(444927),
+    o = n(625494);
+class l {
+    emitter = new s.EventEmitter();
+    subscribe(e, t) {
+        o._.subscribe(e, t), this.emitter.on(e, t);
+    }
+    unsubscribe(e, t) {
+        o._.unsubscribe(e, t), this.emitter.off(e, t);
+    }
+    bumpDispatchPriority() {
+        for (let e of this.emitter.eventNames()) for (let t of this.emitter.listeners(e)) o._.resubscribe(e, t);
+    }
 }
-function c() {
-    let e = (0, r.kc)(),
-        t = l.useMemo(() => u(e)?.id, [e]);
-    l.useEffect(() => {
-        null != t && (0, a.YP)(t);
-    }, [t]);
-    let n = (0, i.bG)([o.A], () => (null != t ? o.A.getBalance(t) : null), [t]);
-    return { giftCardBalance: null != n ? n.amount : null, giftCardCurrency: null != n ? n.currency : null };
+let u = r.createContext(
+        new (class {
+            subscribe(e, t) {
+                o._.subscribe(e, t);
+            }
+            unsubscribe(e, t) {
+                o._.unsubscribe(e, t);
+            }
+            bumpDispatchPriority() {}
+        })(),
+    ),
+    c = r.forwardRef(function (e, t) {
+        let { children: n } = e,
+            s = (0, a.A)(() => new l());
+        return r.useImperativeHandle(t, () => s, [s]), (0, i.jsx)(u.Provider, { value: s, children: n });
+    });
+function d(e) {
+    let { event: t, handler: n } = e,
+        i = r.useContext(u),
+        s = r.useRef(n);
+    r.useEffect(() => {
+        s.current = n;
+    }, [n]);
+    let a = null == n;
+    return (
+        r.useEffect(() => {
+            if (a) return;
+            let e = function () {
+                for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
+                s.current?.(...t);
+            };
+            return (
+                i.subscribe(t, e),
+                () => {
+                    i.unsubscribe(t, e);
+                }
+            );
+        }, [i, t, a]),
+        null
+    );
+}
+function _(e) {
+    return d(e), null;
 }

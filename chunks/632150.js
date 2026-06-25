@@ -9,7 +9,7 @@ var r = n(320448),
     l = n(286320),
     u = n(579245),
     c = n(778712),
-    d = n(123139);
+    d = n(749123);
 function _(e) {
     let { subtitle: t } = e,
         _ = (0, l.b)();
@@ -17,7 +17,7 @@ function _(e) {
         className: d.kL,
         onClick: function () {
             (0, a.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("33902"), n.e("99709"), n.e("3370"), n.e("69595")]).then(
+                let { default: e } = await Promise.all([n.e("99709"), n.e("3370"), n.e("69595")]).then(
                     n.bind(n, 526710),
                 );
                 return (t) => (0, i.jsx)(e, { ...t });

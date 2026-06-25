@@ -8,7 +8,7 @@ var i = n(627968),
     a = n(158032),
     d = n(830382),
     c = n(964486),
-    _ = n(11939),
+    _ = n(234320),
     p = n(145659),
     m = n(31823),
     S = n(426398),
@@ -17,7 +17,7 @@ var i = n(627968),
     A = n(666646),
     T = n(558620),
     I = n(427675),
-    h = n(169797),
+    h = n(480642),
     P = n(211159),
     C = n(357669),
     k = n(319437),
@@ -132,7 +132,7 @@ var ee = n(482132);
 n(322076);
 var et = n(652215),
     en = n(788868),
-    ei = n(106451);
+    ei = n(359379);
 let el = { [w.pn.GIFT_CUSTOMIZATION]: "xl", [w.pn.REVIEW]: "md", [w.pn.ADD_PAYMENT_STEPS]: "md" };
 function eu(e) {
     let {
@@ -250,9 +250,9 @@ function es(e) {
         e6 = (0, j.l)(),
         e3 = "sm";
     eT ? (e3 = "xl") : (eI || e0 === w.pn.ADD_PAYMENT_STEPS) && (e3 = "md");
-    let e5 = null != e1 ? e1.modalSizeGetter : void 0,
-        e2 = (0, D.O)(),
-        e4 = null != Z && !eJ && (0, b.U9)(e2, Z),
+    let e2 = null != e1 ? e1.modalSizeGetter : void 0,
+        e5 = (0, D.O)(),
+        e4 = null != Z && !eJ && (0, b.U9)(e5, Z),
         [e8, e9] = l.useState({
             load_id: ew.loadId,
             discovery_session_id: ew.discoverySessionId,
@@ -299,7 +299,7 @@ function es(e) {
                 continue_session_initial_step: eC,
                 custom_checkout_flow: eG,
                 has_saved_payment_source: ey,
-                discount_id: null != e2 ? e2.discountId : tn,
+                discount_id: null != e5 ? e5.discountId : tn,
             });
         }),
         l.useEffect(() => {
@@ -375,7 +375,7 @@ function es(e) {
                 giftRecipient: eZ,
                 returnRef: eh,
                 manaModalSize: e3,
-                modalSizeGetter: e5,
+                modalSizeGetter: e2,
                 handleClose: tl,
                 children: (0, i.jsx)(ee.Ay, {
                     header: (0, i.jsx)($, { handleClose: tl, skipUnifiedHeaderForSteps: e_, renderHeader: ec }),

@@ -1,42 +1,18 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { $: () => a });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(781696),
-    l = n(596333);
-function u(e) {
-    let { children: t, "aria-label": n, className: s, position: u, delay: c, lineClamp: d = 1, ..._ } = e,
-        h = r.useRef(null),
-        f = n ?? ("string" == typeof t && t),
-        p = {};
-    return (
-        null != d && d > 1 && (p = { lineClamp: d, WebkitLineClamp: d }),
-        (0, i.jsx)(o.ST, {
-            ..._,
-            position: u ?? "top",
-            delay: c ?? 500,
-            text: t,
-            "aria-label": f,
-            children: (n) => {
-                let { onMouseEnter: r, onMouseLeave: o } = n;
-                return (0, i.jsx)("div", {
-                    className: a()(s, { [l.j]: 1 === d, [l.E]: d > 1 }),
-                    ref: h,
-                    "aria-hidden": e["aria-hidden"],
-                    onMouseEnter: () => {
-                        let { current: e } = h;
-                        null == e ||
-                            (d > 1 && e.offsetHeight + 1 >= e.scrollHeight) ||
-                            (1 === d && e.offsetWidth >= e.scrollWidth) ||
-                            r?.();
-                    },
-                    onMouseLeave: o,
-                    style: p,
-                    children: t,
-                });
-            },
-        })
+    s = n(442433);
+function a(e) {
+    return r.useCallback(
+        (t) => {
+            (0, s.L3)(t, async () => {
+                let { default: t } = await Promise.all([n.e("46652"), n.e("57729"), n.e("9242"), n.e("38167")]).then(
+                    n.bind(n, 342186),
+                );
+                return (n) => (0, i.jsx)(t, { ...n, navId: e });
+            });
+        },
+        [e],
     );
 }

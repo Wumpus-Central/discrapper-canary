@@ -1,26 +1,26 @@
 l.d(t, { n: () => m });
-var a = l(627968),
-    n = l(192308),
+var n = l(627968),
+    a = l(192308),
     i = l(931991),
-    r = l(734057),
-    s = l(71393),
-    o = l(576705),
-    u = l(287809),
-    c = l(315240),
+    s = l(734057),
+    r = l(71393),
+    c = l(576705),
+    o = l(287809),
+    u = l(430795),
     d = l(696016);
 async function m(e, t) {
-    (0, c.H1)([e.id]);
-    let m = r.A.getChannel(t);
+    (0, u.H1)([e.id]);
+    let m = s.A.getChannel(t);
     try {
-        let t = await (0, c.VO)(e);
-        (0, n.openModalLazy)(
+        let t = await (0, u.VO)(e);
+        (0, a.openModalLazy)(
             async () => {
-                let { default: n } = await Promise.all([
-                        l.e("26543"),
-                        l.e("82546"),
-                        l.e("76846"),
-                        l.e("46934"),
-                        l.e("7792"),
+                let { default: a } = await Promise.all([
+                        l.e("54091"),
+                        l.e("42906"),
+                        l.e("81422"),
+                        l.e("6609"),
+                        l.e("8848"),
                         l.e("8555"),
                         l.e("66580"),
                         l.e("8979"),
@@ -29,22 +29,22 @@ async function m(e, t) {
                         l.e("98913"),
                         l.e("12811"),
                     ]).then(l.bind(l, 191110)),
-                    r = m?.guild_id != null ? s.A.getGuild(m.guild_id) : null,
-                    c = null != r && (0, i.ie)(r, o.A, u.default).canCreateExpressions,
-                    f = null == e.name || "" === e.name ? (0, d.cM)(e.createdAt) : e.name,
-                    h = f.slice(0, 32);
+                    s = m?.guild_id != null ? r.A.getGuild(m.guild_id) : null,
+                    u = null != s && (0, i.ie)(s, c.A, o.default).canCreateExpressions,
+                    h = null == e.name || "" === e.name ? (0, d.cM)(e.createdAt) : e.name,
+                    f = h.slice(0, 32);
                 return (e) =>
-                    (0, a.jsx)(n, {
+                    (0, n.jsx)(a, {
                         ...e,
                         showGuildPicker: !0,
-                        guildId: c ? m?.guild_id : void 0,
-                        sourceFile: { file: new File([t], `${f}.mp4`, { type: "video/mp4" }), name: h },
+                        guildId: u ? m?.guild_id : void 0,
+                        sourceFile: { file: new File([t], `${h}.mp4`, { type: "video/mp4" }), name: f },
                     });
             },
             { stackingBehavior: "stack" },
         );
     } finally {
-        (0, c.H1)(null);
+        (0, u.H1)(null);
     }
 }
 l(980504);

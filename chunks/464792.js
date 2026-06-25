@@ -207,7 +207,8 @@ function K(e) {
             e?.preventDefault();
             let [t, i] = l.code.split("-");
             return (
-                Promise.all([n.e("21574"), n.e("49607")])
+                n
+                    .e("49607")
                     .then(n.bind(n, 811546))
                     .then((e) => {
                         let { openGuildProductLink: n } = e;
@@ -221,8 +222,7 @@ function K(e) {
             e?.preventDefault();
             let [t, i] = l.code.split("-");
             return (
-                n
-                    .e("31445")
+                Promise.resolve()
                     .then(n.bind(n, 44724))
                     .then((e) => {
                         let { navigateToSocialLayerStorefrontWithGuildPreview: n } = e;
@@ -238,8 +238,7 @@ function K(e) {
                 r = O.A.getGuildIdFromApplicationId(i);
             if (null != r)
                 return (
-                    n
-                        .e("31445")
+                    Promise.resolve()
                         .then(n.bind(n, 44724))
                         .then((e) => {
                             let { default: n } = e;

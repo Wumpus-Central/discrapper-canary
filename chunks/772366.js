@@ -8,9 +8,7 @@ function a(e) {
     let { onCloseCallback: t, analyticsLocations: a, ...o } = e;
     (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([n.e("51762"), n.e("76649"), n.e("66901"), n.e("56430")]).then(
-                n.bind(n, 39613),
-            );
+            let { default: e } = await Promise.all([n.e("85029"), n.e("66901"), n.e("56430")]).then(n.bind(n, 39613));
             return (t) =>
                 (0, i.jsx)(e, {
                     ...t,

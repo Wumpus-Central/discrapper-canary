@@ -17,13 +17,9 @@ var d = n(192308);
 let _ = {
     show(e) {
         (0, d.openModalLazy)(async () => {
-            let { default: t } = await Promise.all([
-                n.e("80331"),
-                n.e("54048"),
-                n.e("20577"),
-                n.e("35681"),
-                n.e("20723"),
-            ]).then(n.bind(n, 667934));
+            let { default: t } = await Promise.all([n.e("80331"), n.e("20577"), n.e("35681"), n.e("20723")]).then(
+                n.bind(n, 667934),
+            );
             return (n) => (0, c.jsx)(t, { ...n, url: e });
         });
     },
@@ -39,7 +35,7 @@ let E = class {
 };
 var m = n(343328),
     g = n(235393),
-    A = n(527214);
+    A = n(694403);
 let I = {
         show(e) {
             let { url: t, trustUrl: i, onConfirm: r, onCancel: s, isProtocol: a, contextKey: o } = e;

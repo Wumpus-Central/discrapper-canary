@@ -1,20 +1,21 @@
-n.d(t, { BM: () => o, Re: () => a, uH: () => r });
+"use strict";
+n.d(t, { BM: () => l, Re: () => o, uH: () => a });
 var i,
-    l,
+    r,
     s,
-    r =
+    a =
         (((i = {}).MOBILE_WEB_REDIRECT_CHECKOUT = "mobile_web_redirect_checkout"),
         (i.META_QUEST_WEB_REDIRECT_CHECKOUT = "meta_quest_web_redirect_checkout"),
         (i.DEV_STORYBOOK_CHECKOUT = "dev_storybook_checkout"),
         i),
-    a =
-        (((l = {})[(l.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (l[(l.DRAFT = 1)] = "DRAFT"),
-        (l[(l.SIGNED = 2)] = "SIGNED"),
-        (l[(l.DISCARDED = 3)] = "DISCARDED"),
-        (l[(l.SIGNING_IN_PROGRESS = 4)] = "SIGNING_IN_PROGRESS"),
-        l),
     o =
+        (((r = {})[(r.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (r[(r.DRAFT = 1)] = "DRAFT"),
+        (r[(r.SIGNED = 2)] = "SIGNED"),
+        (r[(r.DISCARDED = 3)] = "DISCARDED"),
+        (r[(r.SIGNING_IN_PROGRESS = 4)] = "SIGNING_IN_PROGRESS"),
+        r),
+    l =
         (((s = {})[(s.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (s[(s.ONE_TIME = 1)] = "ONE_TIME"),
         (s[(s.SUBSCRIPTION = 2)] = "SUBSCRIPTION"),

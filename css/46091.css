@@ -1,0 +1,47 @@
+.userContainer__38ccf {
+    position: absolute
+}
+
+.dim__38ccf {
+    filter: brightness(35%)
+}
+
+.seat__80369 {
+    cursor: pointer;
+    position: absolute
+}
+
+.graphic__80369 {
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.seat__80369:focus-visible .glow__80369,
+.seat__80369:hover .glow__80369 {
+    filter: none;
+    opacity: 1
+}
+
+.seat__80369:focus-visible .fill__80369,
+.seat__80369:hover .fill__80369 {
+    r: 40px;
+    fill: var(--background-mod-subtle)
+}
+
+.seat__80369:focus-visible .graphic__80369,
+.seat__80369:hover .graphic__80369 {
+    border: 2px solid #fff;
+    border-radius: 50%
+}
+
+.effectsWrapper__78936 {
+    height: 100%;
+    position: relative
+}
+
+.effects__78936 {
+    inset: 0;
+    position: absolute
+}

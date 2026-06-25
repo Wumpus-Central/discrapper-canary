@@ -97,7 +97,7 @@ var C = i(85563),
     k = i(652215),
     w = i(601107),
     B = i(375708),
-    F = i(640692);
+    F = i(893620);
 let z = new T.A("SubscriptionHeader.tsx"),
     X = { page: k.liQ.USER_SETTINGS, section: k.JJy.SETTINGS_PREMIUM, object: k.ZSU.CARD },
     Y = [k.Dmq.PAUSED, k.Dmq.PAUSE_PENDING, k.Dmq.BILLING_RETRY];
@@ -237,9 +237,7 @@ let Q = function (e) {
     function er(e) {
         (0, d.openModalLazy)(async () => {
             let { PremiumBrandRefreshSubscriptionCancellationModal: s } = await Promise.all([
-                i.e("23866"),
-                i.e("69425"),
-                i.e("16581"),
+                i.e("66994"),
                 i.e("84820"),
                 i.e("94161"),
                 i.e("13051"),
@@ -280,7 +278,7 @@ let Q = function (e) {
                     (0, d.openModalLazy)(
                         async () => {
                             let { PremiumResubscribeModal: e } = await Promise.all([
-                                i.e("92443"),
+                                i.e("10971"),
                                 i.e("94161"),
                                 i.e("44547"),
                             ]).then(i.bind(i, 509614));

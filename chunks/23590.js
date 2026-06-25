@@ -1,41 +1,42 @@
-n.d(t, { A: () => a });
-var r = n(64700);
-let l = new (n(941426).Vy)("useMuxTracking");
-function a(e) {
-    let { videoRef: t, hlsRef: a, contentMetadata: i, isHls: s, debug: u } = e,
-        o = r.useRef(null),
-        [c, d] = r.useState(() => null == i);
+"use strict";
+n.d(t, { A: () => s });
+var i = n(64700);
+let r = new (n(941426).Vy)("useMuxTracking");
+function s(e) {
+    let { videoRef: t, hlsRef: s, contentMetadata: a, isHls: o, debug: l } = e,
+        u = i.useRef(null),
+        [c, d] = i.useState(() => null == a);
     return (
-        r.useEffect(() => {
-            if (null == t.current || null == i) return void d(!0);
-            if (s && null == a.current) return void d(!1);
+        i.useEffect(() => {
+            if (null == t.current || null == a) return void d(!0);
+            if (o && null == s.current) return void d(!1);
             d(!1);
             let e = !1;
             return (
                 Promise.all([n.e("92868"), n.e("63408")])
                     .then(n.bind(n, 531443))
                     .then((n) => {
-                        let { SimpleMuxWrapper: r } = n;
+                        let { SimpleMuxWrapper: i } = n;
                         e ||
                             null == t.current ||
-                            ((o.current = new r({
-                                debug: u ?? !1,
+                            ((u.current = new i({
+                                debug: l ?? !1,
                                 videoElement: t.current,
-                                hlsInstance: s ? (a.current ?? void 0) : void 0,
-                                feature: i.contentType,
-                                contentMetadata: i,
+                                hlsInstance: o ? (s.current ?? void 0) : void 0,
+                                feature: a.contentType,
+                                contentMetadata: a,
                             })),
-                            o.current.initialize(),
+                            u.current.initialize(),
                             d(!0));
                     })
                     .catch((t) => {
-                        e || (l.warn("Failed to load Mux SDK; continuing without QoE tracking", t), d(!0));
+                        e || (r.warn("Failed to load Mux SDK; continuing without QoE tracking", t), d(!0));
                     }),
                 () => {
-                    (e = !0), null != o.current && (o.current.endSession(), o.current.destroy(), (o.current = null));
+                    (e = !0), null != u.current && (u.current.endSession(), u.current.destroy(), (u.current = null));
                 }
             );
-        }, [s, a, t, i, u]),
+        }, [o, s, t, a, l]),
         { isReady: c }
     );
 }

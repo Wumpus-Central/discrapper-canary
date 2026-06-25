@@ -1,158 +1,159 @@
-l.d(t, { Ii: () => S, Ut: () => p, WS: () => T, cR: () => C, tG: () => A, u0: () => g });
-var n = l(64700),
-    r = l(835245),
-    s = l(323889),
-    i = l(345353),
-    u = l(69114),
-    a = l(174459),
-    o = l(723702),
-    d = l(507107),
-    c = l(710969),
-    E = l(561844),
-    v = l(590202),
-    _ = l(971649),
-    f = l(823784),
-    m = l(652215);
-function g() {
-    let e = (0, _.vU)();
-    return n.useCallback(
+"use strict";
+n.d(t, { Ii: () => T, Ut: () => g, WS: () => A, cR: () => S, tG: () => I, u0: () => m });
+var i = n(64700),
+    r = n(835245),
+    s = n(323889),
+    a = n(345353),
+    o = n(69114),
+    l = n(174459),
+    u = n(723702),
+    c = n(507107),
+    d = n(710969),
+    _ = n(561844),
+    h = n(590202),
+    f = n(971649),
+    p = n(823784),
+    E = n(652215);
+function m() {
+    let e = (0, f.vU)();
+    return i.useCallback(
         (t) => {
-            (0, E.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+            (0, _.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
         },
         [e],
     );
 }
-function p() {
-    let e = g();
-    return n.useCallback(
+function g() {
+    let e = m();
+    return i.useCallback(
         (t) => {
             let {
-                    questId: l,
-                    questContent: n,
+                    questId: n,
+                    questContent: i,
                     questContentCTA: s,
-                    questContentPosition: a,
-                    questContentRowIndex: d,
-                    trackGuildAndChannelMetadata: E,
-                    sourceQuestContent: _,
+                    questContentPosition: l,
+                    questContentRowIndex: c,
+                    trackGuildAndChannelMetadata: _,
+                    sourceQuestContent: f,
                 } = t,
-                g = (0, c.L4)(_),
-                p = (0, c.Gp)(_, l);
-            (0, i.N)((0, v.jO)(n)).then((t) => {
+                m = (0, d.L4)(f),
+                g = (0, d.Gp)(f, n);
+            (0, a.N)((0, h.jO)(i)).then((t) => {
                 e({
-                    questId: l,
-                    event: m.HAw.QUEST_CONTENT_CLICKED,
+                    questId: n,
+                    event: E.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
-                        ...(0, v.fF)(n, a, d),
-                        ...(0, u.A)(),
+                        ...(0, h.fF)(i, l, c),
+                        ...(0, o.A)(),
                         cta_name: s,
                         click_id: (0, r.A)(),
-                        apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
-                        android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
-                        metadata_sealed: null != g ? g : null,
-                        traffic_metadata_sealed: null != p ? p : null,
-                        search_session_id: (0, f.tv)()?.uuid ?? null,
+                        apple_advertising_id: null != t && (0, u.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, u.isAndroid)() ? t.advertisingId : null,
+                        metadata_sealed: null != m ? m : null,
+                        traffic_metadata_sealed: null != g ? g : null,
+                        search_session_id: (0, p.tv)()?.uuid ?? null,
                     },
-                    trackGuildAndChannelMetadata: E,
-                    shouldExtendSession: (0, c.xn)(n),
-                    sourceQuestContent: _,
+                    trackGuildAndChannelMetadata: _,
+                    shouldExtendSession: (0, d.xn)(i),
+                    sourceQuestContent: f,
                 });
             });
-        },
-        [e],
-    );
-}
-function T() {
-    let e = (0, _.vU)();
-    return n.useCallback(
-        (t) => {
-            (0, E.Qg)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
         },
         [e],
     );
 }
 function A() {
-    let e = T();
-    return n.useCallback(
+    let e = (0, f.vU)();
+    return i.useCallback(
+        (t) => {
+            (0, _.Qg)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+        },
+        [e],
+    );
+}
+function I() {
+    let e = A();
+    return i.useCallback(
         (t) => {
             let {
-                adContentId: l,
-                relatedQuestId: n,
+                adContentId: n,
+                relatedQuestId: i,
                 adCreativeType: s,
-                questContent: a,
-                questContentCTA: d,
-                questContentPosition: E,
-                questContentRowIndex: _,
-                trackGuildAndChannelMetadata: g,
-                sourceQuestContent: p,
+                questContent: l,
+                questContentCTA: c,
+                questContentPosition: _,
+                questContentRowIndex: f,
+                trackGuildAndChannelMetadata: m,
+                sourceQuestContent: g,
             } = t;
-            (0, i.N)((0, v.jO)(a)).then((t) => {
+            (0, a.N)((0, h.jO)(l)).then((t) => {
                 e({
-                    adContentId: l,
-                    relatedQuestId: n,
+                    adContentId: n,
+                    relatedQuestId: i,
                     adCreativeType: s,
-                    event: m.HAw.QUEST_CONTENT_CLICKED,
+                    event: E.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
-                        ...(0, v.fF)(a, E, _),
-                        ...(0, u.A)(),
-                        cta_name: d,
+                        ...(0, h.fF)(l, _, f),
+                        ...(0, o.A)(),
+                        cta_name: c,
                         click_id: (0, r.A)(),
-                        apple_advertising_id: null != t && (0, o.isIOS)() ? t.advertisingId : null,
-                        android_advertising_id: null != t && (0, o.isAndroid)() ? t.advertisingId : null,
-                        search_session_id: (0, f.tv)()?.uuid ?? null,
+                        apple_advertising_id: null != t && (0, u.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, u.isAndroid)() ? t.advertisingId : null,
+                        search_session_id: (0, p.tv)()?.uuid ?? null,
                     },
-                    trackGuildAndChannelMetadata: g,
-                    shouldExtendSession: (0, c.xn)(a),
-                    sourceQuestContent: p,
+                    trackGuildAndChannelMetadata: m,
+                    shouldExtendSession: (0, d.xn)(l),
+                    sourceQuestContent: g,
                 });
             });
         },
         [e],
     );
 }
-function S(e, t) {
-    n.useEffect(() => {
-        (0, E.DZ)(t, e);
+function T(e, t) {
+    i.useEffect(() => {
+        (0, _.DZ)(t, e);
     }, [e, t]);
 }
-function C(e) {
-    let { questHomeHero: t, shouldShowQuestHomeHeroContent: l } = e,
-        r = l ? d.uF.QUEST_HOME_ENTRYPOINT_THEMED : d.uF.QUEST_HOME_ENTRYPOINT,
-        i = n.useMemo(() => {
-            let e = (0, v.fF)(r);
+function S(e) {
+    let { questHomeHero: t, shouldShowQuestHomeHeroContent: n } = e,
+        r = n ? c.uF.QUEST_HOME_ENTRYPOINT_THEMED : c.uF.QUEST_HOME_ENTRYPOINT,
+        a = i.useMemo(() => {
+            let e = (0, h.fF)(r);
             return delete e.row_index, e;
         }, [r]),
-        u = n.useCallback(
+        o = i.useCallback(
             (e) => {
-                null != t && l
-                    ? (0, E.Qg)({
+                null != t && n
+                    ? (0, _.Qg)({
                           adContentId: t.id,
                           adCreativeType: s.p.QUEST_HOME_HERO,
                           event: e,
-                          properties: i,
+                          properties: a,
                           sourceQuestContent: r,
                       })
-                    : a.default.track(e, i);
+                    : l.default.track(e, a);
             },
-            [t, l, r, i],
+            [t, n, r, a],
         ),
-        o = n.useCallback(() => {
-            u(m.HAw.QUEST_HOVER);
-        }, [u]),
-        c = n.useCallback(() => {
-            u(m.HAw.QUEST_HOVER_OFF);
-        }, [u]),
-        _ = n.useCallback(() => {
-            a.default.track(m.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+        u = i.useCallback(() => {
+            o(E.HAw.QUEST_HOVER);
+        }, [o]),
+        d = i.useCallback(() => {
+            o(E.HAw.QUEST_HOVER_OFF);
+        }, [o]),
+        f = i.useCallback(() => {
+            l.default.track(E.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
         }, []),
-        f = n.useCallback(() => {
-            a.default.track(m.HAw.QUEST_CONTENT_CLICKED, {
+        p = i.useCallback(() => {
+            l.default.track(E.HAw.QUEST_CONTENT_CLICKED, {
                 is_targeted: !1,
-                ...i,
+                ...a,
                 ...(null != t ? { ad_content_id: t.id } : {}),
             });
-        }, [i, t]);
-    return n.useMemo(
-        () => ({ handleMouseEnter: o, handleMouseLeave: c, handleOnboardingPopoutRender: _, handleEntrypointClick: f }),
-        [o, c, _, f],
+        }, [a, t]);
+    return i.useMemo(
+        () => ({ handleMouseEnter: u, handleMouseLeave: d, handleOnboardingPopoutRender: f, handleEntrypointClick: p }),
+        [u, d, f, p],
     );
 }
