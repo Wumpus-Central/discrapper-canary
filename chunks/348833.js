@@ -679,6 +679,8 @@ function eC(e) {
             onMutedChange: b,
             onProgressUpdate: ei,
             orientation: "landscape",
+            minWidth: 0,
+            minHeight: 0,
             loadingSpinnerPosition: "center",
             renderPersistentOverlay: ec,
             parentTransitionState: null,

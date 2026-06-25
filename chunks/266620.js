@@ -1,9 +1,10 @@
-i.d(t, { Cr: () => x, I1: () => A, Nj: () => _, R6: () => M, SX: () => w, UB: () => k }), i(938796);
+i.d(t, { Cr: () => A, I1: () => I, Nj: () => _, R6: () => M, SX: () => w, UB: () => k }), i(938796);
 var n = i(627968),
     a = i(64700),
-    l = i(665260),
-    o = i(551011),
-    r = i(713021),
+    l = i(665260);
+i(876230);
+var r = i(348833),
+    o = i(713021),
     s = i(777501),
     d = i(121489),
     c = i(644447),
@@ -17,7 +18,7 @@ var n = i(627968),
     S = i(652215);
 i(516653);
 var v = i(375708);
-function x(e) {
+function A(e) {
     let t = e.item.originalItem;
     return (0, g.LL)({
         ...e,
@@ -36,7 +37,7 @@ function x(e) {
         analyticsSource: "ImageComponentForMessageAttachment",
     });
 }
-function A(e) {
+function I(e) {
     let t = e.item.originalItem,
         i = (0, l.Lt)(t.flags ?? 0, S.sbO.IS_CLIP),
         a = h.A.toURLSafe(t.proxy_url);
@@ -45,7 +46,7 @@ function A(e) {
         : (a.searchParams.append("format", "webp"), i)
           ? (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsx)(o.A, {
+                    (0, n.jsx)(r.A, {
                         attachment: t,
                         src: t.url,
                         posterUrl: a.toString(),
@@ -71,9 +72,9 @@ function A(e) {
             })
           : (e.naturalWidth <= 6016 && e.naturalHeight <= 3384) || (e.naturalWidth <= 3384 && e.naturalHeight <= 6016)
             ? (0, n.jsx)(C, { attachmentProps: e, posterUrl: a.toString() })
-            : I(e, a.toString());
+            : x(e, a.toString());
 }
-function I(e, t) {
+function x(e, t) {
     let i = e.item.originalItem;
     return (0, g.$o)({
         ...e,
@@ -96,30 +97,37 @@ function C(e) {
         a = t.item.originalItem,
         { useDiscordVideoPlayer: l } = (0, s.r)({ location: "VideoComponentForMessageAttachment" });
     if (l) {
-        let e = null != a.width && null != a.height && a.height > a.width ? "portrait" : "landscape",
-            l = null != a.description && "" !== a.description ? a.description : v.intl.string(v.t.FlNoSV),
-            { width: o, height: r } = (0, u.Uj)({
-                width: t.width ?? 0,
-                height: t.height ?? 0,
-                maxWidth: t.maxWidth ?? y.k6,
-                maxHeight: t.maxHeight ?? y.Rk,
-            });
+        let e,
+            l,
+            r,
+            o = null != a.width && null != a.height && a.height > a.width ? "portrait" : "landscape",
+            s = null != a.description && "" !== a.description ? a.description : v.intl.string(v.t.FlNoSV),
+            { width: d, height: c } =
+                ((e = t.maxWidth ?? y.k6),
+                (l = t.maxHeight ?? y.Rk),
+                (r = e >= 240 && l >= 180),
+                (0, u.Uj)({
+                    width: t.width ?? 0,
+                    height: t.height ?? 0,
+                    maxWidth: e,
+                    maxHeight: l,
+                    minWidth: 240 * !!r,
+                    minHeight: 180 * !!r,
+                }));
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
                     className: t.className ?? void 0,
-                    style: { width: o, height: r, position: "relative" },
+                    style: { width: d, height: c, position: "relative", display: "flex" },
                     onContextMenu: t.onContextMenu ?? void 0,
                     children: [
                         (0, n.jsx)(f.A, {
                             crossOrigin: null,
-                            alt: l,
+                            alt: s,
                             src: a.url,
                             poster: i,
                             posterPlaceholder: a.placeholder,
                             posterPlaceholderVersion: a.placeholder_version,
-                            downloadUrl: !1 === t.downloadable ? void 0 : a.url,
-                            downloadContentType: !1 === t.downloadable ? void 0 : a.content_type,
                             initialActive: !1,
                             playable: t.playable,
                             autoplay: t.autoPlay,
@@ -127,7 +135,9 @@ function C(e) {
                             initialMuted: (0, m.uj)(),
                             getInitialVolume: m.v1,
                             getInitialMuted: m.uj,
-                            orientation: e,
+                            orientation: o,
+                            minWidth: 0,
+                            minHeight: 0,
                             parentTransitionState: null,
                             onPlay: t.onPlay ?? void 0,
                             onVolumeChange: m.ls,
@@ -152,7 +162,7 @@ function C(e) {
             ],
         });
     }
-    return I(t, i);
+    return x(t, i);
 }
 function _(e) {
     let t = e.item.originalItem;
@@ -161,8 +171,8 @@ function _(e) {
 function w(e) {
     let { message: t, item: i } = e,
         n = i.originalItem,
-        l = (0, r.dx)(r.k0.VOICE_MESSAGE, n.id),
-        o = a.useCallback(
+        l = (0, o.dx)(o.k0.VOICE_MESSAGE, n.id),
+        r = a.useCallback(
             (e, i, a) => {
                 (0, d.wQ)(t.id, n.duration_secs ?? null, i, t.author.id);
             },
@@ -187,7 +197,7 @@ function w(e) {
         src: n.url,
         durationSecs: n.duration_secs,
         waveform: n.waveform,
-        onPlay: o,
+        onPlay: r,
         onPause: s,
         onError: c,
         playbackCacheKey: l,
