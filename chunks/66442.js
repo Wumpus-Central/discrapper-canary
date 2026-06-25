@@ -1,8 +1,8 @@
 n.d(t, { X: () => I, default: () => w });
 var a = n(627968),
-    l = n(64700),
-    i = n(503698),
-    s = n.n(i),
+    i = n(64700),
+    l = n(503698),
+    s = n.n(l),
     o = n(189213),
     c = n(17928),
     r = n(939249),
@@ -16,18 +16,18 @@ var a = n(627968),
     v = n(688810),
     x = n(571694),
     y = n(47167),
-    g = n(734057),
-    D = n(174459),
-    C = n(396787),
-    f = n(652215),
+    f = n(734057),
+    g = n(174459),
+    D = n(396787),
+    C = n(652215),
     j = n(375708),
-    E = n(718741);
+    E = n(740885);
 function I(e) {
     let {
             channel: t,
             previewIcon: n,
-            onIconChange: l,
-            onIconRemove: i,
+            onIconChange: i,
+            onIconRemove: l,
             analyticsLocations: o,
             petite: c = !1,
             className: m,
@@ -35,20 +35,20 @@ function I(e) {
         } = e,
         A = void 0 !== n ? n : t?.icon != null ? (0, x.Y)(t, 120) : null,
         { analyticsLocations: y } = (0, v.Ay)(o, p.A.GROUP_DM_ICON_EDITOR),
-        g = c ? 32 : 64;
+        f = c ? 32 : 64;
     return (0, a.jsxs)("div", {
         className: s()(E.r2, m),
         children: [
             (0, a.jsxs)(r.D, {
                 className: s()(E.zc, { [E.ud]: c }),
                 "aria-label": j.intl.string(j.t["0qPSMV"]),
-                onClick: () => (0, C.F5)(l, y),
+                onClick: () => (0, D.F5)(i, y),
                 children: [
                     null != A
                         ? (0, a.jsx)("img", { src: A, alt: "", className: E.Dp })
                         : (0, a.jsx)("div", {
                               className: E.Pz,
-                              children: (0, a.jsx)(d.n, { size: "custom", width: g, height: g, color: "currentColor" }),
+                              children: (0, a.jsx)(d.n, { size: "custom", width: f, height: f, color: "currentColor" }),
                           }),
                     (0, a.jsx)("div", {
                         className: E.qc,
@@ -59,7 +59,7 @@ function I(e) {
             null != A && _
                 ? (0, a.jsx)(h.Q, {
                       variant: "critical",
-                      onClick: i,
+                      onClick: l,
                       "aria-label": j.intl.string(j.t["uY+Nk/"]),
                       text: j.intl.string(j.t["uY+Nk/"]),
                       textVariant: "text-sm/medium",
@@ -75,16 +75,16 @@ let w = function (e) {
     let {
             channelId: t,
             onClose: n,
-            transitionState: i,
+            transitionState: l,
             setHasPendingChanges: s,
             closeOrShowDiscardChangesAlert: r,
             location: d,
         } = e,
-        u = (0, c.bG)([g.A], () => g.A.getChannel(t)),
+        u = (0, c.bG)([f.A], () => f.A.getChannel(t)),
         h = u?.name,
         x = (0, y.e5)(u),
-        [w, T] = l.useState(h ?? ""),
-        [b, k] = l.useState(void 0),
+        [w, T] = i.useState(h ?? ""),
+        [b, k] = i.useState(void 0),
         R = void 0 !== b,
         { analyticsLocations: N } = (0, v.Ay)(d, p.A.GROUP_DM_EDIT_MODAL),
         M = {
@@ -95,14 +95,14 @@ let w = function (e) {
             old_name_set: "" !== h,
             old_icon_set: u?.icon != null,
         };
-    return (l.useEffect(() => {
+    return (i.useEffect(() => {
         s(w !== h || R);
     }, [w, h, R, s]),
     (0, A.Ay)(
         () => (
-            D.default.track(f.HAw.GDM_EDIT_INTERACTED, { ...M, action: "opened" }),
+            g.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...M, action: "opened" }),
             () => {
-                D.default.track(f.HAw.GDM_EDIT_INTERACTED, { ...M, action: "dismissed" });
+                g.default.track(C.HAw.GDM_EDIT_INTERACTED, { ...M, action: "dismissed" });
             }
         ),
     ),
@@ -114,20 +114,20 @@ let w = function (e) {
                   onSubmit: (e) => {
                       e.preventDefault();
                       let a = w !== h,
-                          l = void 0 !== b;
+                          i = void 0 !== b;
                       if (
-                          (D.default.track(f.HAw.GDM_EDIT_INTERACTED, {
+                          (g.default.track(C.HAw.GDM_EDIT_INTERACTED, {
                               ...M,
                               action: "saved",
                               new_name_set: "" !== w,
-                              new_icon_set: (l ? b : u?.icon) != null,
+                              new_icon_set: (i ? b : u?.icon) != null,
                               name_changed: a,
-                              icon_changed: l,
+                              icon_changed: i,
                           }),
-                          a || l)
+                          a || i)
                       ) {
                           let e = {};
-                          a && (e.name = w), l && (e.icon = b), _.A.updateChannel(t, e, d).catch(C.XA);
+                          a && (e.name = w), i && (e.icon = b), _.A.updateChannel(t, e, d).catch(D.XA);
                       }
                       n();
                   },
@@ -143,7 +143,7 @@ let w = function (e) {
                           },
                       ],
                       onClose: () => Promise.resolve(r()),
-                      transitionState: i,
+                      transitionState: l,
                       children: (0, a.jsxs)("div", {
                           className: E.jE,
                           children: [
@@ -157,7 +157,7 @@ let w = function (e) {
                               (0, a.jsx)(m.k, {
                                   "aria-label": j.intl.string(j.t.GEGW3P),
                                   placeholder: x ?? "",
-                                  maxLength: f.Ign,
+                                  maxLength: C.Ign,
                                   value: w,
                                   onChange: T,
                                   autoFocus: !0,
@@ -168,3 +168,5 @@ let w = function (e) {
               }),
           });
 };
+0;
+})]})})})})}

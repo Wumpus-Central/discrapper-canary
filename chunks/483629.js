@@ -639,27 +639,18 @@ function eD(e) {
             },
             [n, r, c, s, u, m, l, t],
         );
-    if (null == m || 0 === o.length) return null;
-    let g = 2 !== o.length,
-        f = g ? o[0] : null,
-        p = g ? o.slice(1) : o;
-    return (0, i.jsx)(ey, {
-        title: eo.intl.string(eo.t.B0BV3Y),
-        onClickViewAll: x,
-        children: (0, i.jsxs)("div", {
-            className: eL.f3,
-            children: [
-                null != f && (0, i.jsx)(ew, { variant: "main", message: f, channelId: m, onCardClick: h }),
-                p.length > 0 &&
-                    (0, i.jsx)(Z.A, {
-                        gap: 16,
-                        children: p.map((e) =>
-                            (0, i.jsx)(ew, { variant: "small", message: e, channelId: m, onCardClick: h }, e.id),
-                        ),
-                    }),
-            ],
-        }),
-    });
+    return null == m || 0 === o.length
+        ? null
+        : (0, i.jsx)(ey, {
+              title: eo.intl.string(eo.t.B0BV3Y),
+              onClickViewAll: x,
+              children: (0, i.jsx)(Z.A, {
+                  gap: 16,
+                  children: o.map((e) =>
+                      (0, i.jsx)(ew, { variant: "small", message: e, channelId: m, onCardClick: h }, e.id),
+                  ),
+              }),
+          });
 }
 var eV = n(541830),
     eW = n(240248);
