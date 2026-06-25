@@ -1,29 +1,30 @@
-i.d(t, { A: () => c });
-var a = i(627968);
-i(64700);
-var n = i(821609),
-    s = i(597770),
-    r = i(194509),
-    l = i(783420);
-let c = function (e) {
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968);
+n(64700);
+var r = n(821609),
+    s = n(597770),
+    a = n(194509),
+    o = n(783420);
+let l = function (e) {
     let {
         subscriptionTier: t,
-        premiumModalAnalyticsLocation: i,
-        giftMessage: c,
-        onClick: o,
-        buttonTextOverride: d,
-        ...u
+        premiumModalAnalyticsLocation: n,
+        giftMessage: l,
+        onClick: u,
+        buttonTextOverride: c,
+        ...d
     } = e;
-    return (0, a.jsx)(l.A, {
+    return (0, i.jsx)(o.A, {
         isGift: !0,
         subscriptionTier: t,
-        premiumModalAnalyticsLocation: i,
-        giftMessage: c,
-        onClick: o,
+        premiumModalAnalyticsLocation: n,
+        giftMessage: l,
+        onClick: u,
         children: (e) => {
-            let { onClick: i } = e,
-                l = d ?? (0, r.U)(t);
-            return (0, a.jsx)(n.$, { onClick: i, icon: s.o, ...u, text: l });
+            let { onClick: n } = e,
+                o = c ?? (0, a.U)(t);
+            return (0, i.jsx)(r.$, { onClick: n, icon: s.o, ...d, text: o });
         },
     });
 };
