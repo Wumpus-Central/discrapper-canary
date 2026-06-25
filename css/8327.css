@@ -11,7 +11,7 @@
 }
 
 .userListItem_ec58fe:not(.popoutDisabled_ec58fe):hover {
-    background-color: var(--background-base-lowest);
+    background-color: var(--background-mod-subtle);
     cursor: pointer
 }
 

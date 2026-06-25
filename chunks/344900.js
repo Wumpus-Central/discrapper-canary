@@ -5,7 +5,11 @@ e.exports = {
     TV: "inviteEmbed_ae2544",
     JO: "inviteEmbedTitle_ae2544",
     er: "inviteMemberRow_ae2544",
+    N_: "inviteMemberCount_ae2544",
+    BV: "inviteMemberListPopout_ae2544",
     iH: "headerLine_ae2544",
+    mx: "inviteEmbedHeaderLine_ae2544",
+    t2: "inviteEmbedAvatars_ae2544",
     G: "infoIcon_ae2544",
     UD: "buttonContainer_ae2544",
 };

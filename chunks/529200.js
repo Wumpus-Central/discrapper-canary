@@ -1,12 +1,12 @@
-l.d(n, { A: () => T }), l(321073);
+l.d(n, { A: () => R }), l(321073);
 var i = l(627968),
     s = l(64700),
     t = l(503698),
     a = l.n(t),
     r = l(534514),
-    c = l(849516),
-    u = l(97808),
-    d = l(778712),
+    c = l(778712),
+    u = l(849516),
+    d = l(97808),
     o = l(939249),
     m = l(834730),
     h = l(571694),
@@ -47,35 +47,51 @@ function E(e) {
     });
 }
 function _(e) {
-    let { application: n, guild: l, channel: s, onClick: t, expired: r = !1, user: o, className: m } = e,
-        x = (0, p.Ay)(s) ?? "",
-        v = I.kt.useSetting();
+    let {
+            application: n,
+            guild: l,
+            channel: s,
+            onClick: t,
+            expired: r = !1,
+            user: o,
+            className: m,
+            channelIconSize: x = c._3.SIZE_56,
+        } = e,
+        v = (0, p.Ay)(s) ?? "",
+        g = I.kt.useSetting();
     if (r)
         return (0, i.jsx)("div", {
             className: y.guildIconExpired,
-            children: (0, i.jsx)(c.u, { size: "custom", width: 26, height: 26, color: "currentColor" }),
+            children: (0, i.jsx)(u.u, { size: "custom", width: 26, height: 26, color: "currentColor" }),
         });
-    let g = null == l || null != l.icon,
-        f = a()((0, C.t)(y, "guildIcon", g ? "Image" : "", null != t ? "Joined" : ""), m);
+    let f = null == l || null != l.icon,
+        A = a()((0, C.t)(y, "guildIcon", f ? "Image" : "", null != t ? "Joined" : ""), m);
     return null != n
-        ? (0, i.jsx)(N.A, { game: n, onClick: t, size: y.applicationIcon, className: f })
+        ? (0, i.jsx)(N.A, { game: n, onClick: t, size: y.applicationIcon, className: A })
         : null != l
-          ? (0, i.jsx)(j.Ay, { onClick: t, active: !0, guild: l, className: f, animate: v })
+          ? (0, i.jsx)(j.Ay, { onClick: t, active: !0, guild: l, className: A, animate: g })
           : null != s
-            ? (0, i.jsx)(u.eu, { onClick: t, src: (0, h.Y)(s), size: d._3.SIZE_56, className: f, "aria-label": x })
+            ? (0, i.jsx)(d.eu, { onClick: t, src: (0, h.Y)(s, (0, c.FT)(x)), size: x, className: A, "aria-label": v })
             : null != o
-              ? (0, i.jsx)(u.eu, {
+              ? (0, i.jsx)(d.eu, {
                     onClick: t,
-                    src: o.getAvatarURL(null, 56),
-                    size: d._3.SIZE_56,
-                    className: f,
-                    "aria-label": x,
+                    src: o.getAvatarURL(null, (0, c.FT)(c._3.SIZE_56)),
+                    size: c._3.SIZE_56,
+                    className: A,
+                    "aria-label": v,
                 })
               : null;
 }
 function S(e) {
-    let { title: n, onClick: l, expired: s, children: t, titleVariant: c = "heading-md/semibold" } = e,
-        u = (0, i.jsx)(r.D, {
+    let {
+            title: n,
+            onClick: l,
+            expired: s,
+            children: t,
+            titleVariant: c = "heading-md/semibold",
+            detailVariant: u = "text-sm/normal",
+        } = e,
+        d = (0, i.jsx)(r.D, {
             variant: c,
             className: a()((0, C.t)(y, "inviteDestination", s ? "Expired" : null != l ? "Joined" : ""), {
                 [y.inviteDestinationMedium]: "heading-md/medium" === c,
@@ -87,8 +103,8 @@ function S(e) {
         direction: v.A.Direction.VERTICAL,
         justify: v.A.Justify.CENTER,
         children: [
-            null == l ? u : (0, i.jsx)(o.D, { onClick: l, children: u }),
-            (0, i.jsx)(m.E, { tag: "strong", className: y.guildDetail, variant: "text-sm/normal", children: t }),
+            null == l ? d : (0, i.jsx)(o.D, { onClick: l, children: d }),
+            (0, i.jsx)(m.E, { tag: "strong", className: y.guildDetail, variant: u, children: t }),
         ],
     });
 }
@@ -182,7 +198,7 @@ function P(e) {
         children: (0, i.jsx)("span", { className: y.guildName, children: n.name }),
     });
 }
-function R(e) {
+function T(e) {
     let { guildTemplate: n } = e;
     return (0, i.jsx)("div", {
         className: y.guildNameWrapper,
@@ -197,7 +213,7 @@ function R(e) {
     (B.Channel = b),
     (B.GuildSplash = D),
     (B.GuildName = P),
-    (B.GuildTemplateName = R),
+    (B.GuildTemplateName = T),
     (k.displayName = "InviteButton.Header"),
     (E.displayName = "InviteButton.Body"),
     (_.displayName = "InviteButton.Icon"),
@@ -206,5 +222,5 @@ function R(e) {
     (b.displayName = "InviteButton.Channel"),
     (D.displayName = "InviteButton.GuildSplash"),
     (P.displayName = "InviteButton.GuildName"),
-    (R.displayName = "InviteButton.GuildTemplateName");
-let T = B;
+    (T.displayName = "InviteButton.GuildTemplateName");
+let R = B;

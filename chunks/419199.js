@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 569019, Version Hash: 51f94fe828bf37263d0c2c2ea0ee720f9f03806c`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 569101, Version Hash: 0729b6872ed792df3a875709685796c65db60cc5`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -4040,7 +4040,7 @@ let sA = (0, iz.Fe)({
                 n.e("7755"),
                 n.e("93720"),
                 n.e("54658"),
-                n.e("78477"),
+                n.e("79638"),
                 n.e("88504"),
                 n.e("73832"),
                 n.e("4787"),
@@ -18099,7 +18099,7 @@ let Su = "isHideDevBanner",
                     className: t6()(Sl.Wz, Sl.mr),
                     children: [
                         (0, F.jsx)(So, { className: Sl.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "569019" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "569101" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -28010,7 +28010,13 @@ class by extends nZ.A {
                 }
                 for (let e of t.marketingComponents)
                     if (e.component_type === A1.C.ANNOUNCEMENT_MODAL)
-                        return void this.maybeOpenServerDriveAnnouncementModal(e.id, e.promotion_id, e.properties, !1);
+                        return void this.maybeOpenServerDriveAnnouncementModal(
+                            e.id,
+                            e.promotion_id,
+                            e.properties,
+                            !1,
+                            t,
+                        );
             }
         (0, Il.al)(), (0, Il.QM)();
     };
@@ -28027,17 +28033,23 @@ class by extends nZ.A {
         let { entitlement: t } = e;
         vQ.P.isDisallowPopupsSet() || t.source_type !== eM.GD.REVERSE_TRIAL || (0, Il.al)();
     };
-    maybeOpenServerDriveAnnouncementModal = async (e, t, i, r) => {
+    maybeOpenServerDriveAnnouncementModal = async (e, t, i, r, s) => {
         if ((0, nb.hasModalOpen)(bS)) return !1;
-        let s = (0, bT.H)({ promotionId: t, content: i, isPreview: r });
-        if (null != s)
+        let a = (0, bT.H)({ promotionId: t, content: i, isPreview: r });
+        if (null != a)
             return (
-                (!1 !== r || s?.contentIdentifier !== "summer_bogo_content" || !!(await (0, bI.C)())) &&
+                (!1 !== r || a?.contentIdentifier !== "summer_bogo_content" || !!(await (0, bI.C)())) &&
                 ((0, nb.openModalLazy)(
                     async () => {
                         let { default: i } = await Promise.resolve().then(n.bind(n, 103407));
                         return (n) =>
-                            (0, F.jsx)(i, { renderModalProps: n, componentId: e, promotionId: t, properties: s });
+                            (0, F.jsx)(i, {
+                                renderModalProps: n,
+                                componentId: e,
+                                promotionId: t,
+                                promotion: s,
+                                properties: a,
+                            });
                     },
                     { modalKey: bS },
                 ),
@@ -28045,8 +28057,9 @@ class by extends nZ.A {
             );
     };
     handlePreview = (e) => {
-        let { data: t } = e;
-        this.maybeOpenServerDriveAnnouncementModal(t.id, t.promotion_id, t.properties, !0);
+        let { data: t } = e,
+            n = null != t.promotion ? bE.A.createFromServer(t.promotion) : void 0;
+        this.maybeOpenServerDriveAnnouncementModal(t.id, t.promotion_id, t.properties, !0, n);
     };
     mayShowAnnouncementModal = async () => {
         if ((await (0, Ia.hb)(), vQ.P.isDisallowPopupsSet())) return;
@@ -36388,8 +36401,8 @@ let x$ = (0, nO.Fe)({
             n.e("25279"),
             n.e("39810"),
             n.e("87306"),
-            n.e("92789"),
             n.e("57598"),
+            n.e("92789"),
             n.e("31390"),
             n.e("76602"),
             n.e("37687"),
@@ -36969,7 +36982,7 @@ let x$ = (0, nO.Fe)({
             n.e("80559"),
             n.e("71790"),
             n.e("81754"),
-            n.e("78477"),
+            n.e("79638"),
             n.e("88504"),
             n.e("73832"),
             n.e("19148"),
@@ -37770,8 +37783,8 @@ let kO = (0, iz.Fe)({
                 n.e("25279"),
                 n.e("39810"),
                 n.e("87306"),
-                n.e("92789"),
                 n.e("57598"),
+                n.e("92789"),
                 n.e("31390"),
                 n.e("37687"),
                 n.e("41043"),
@@ -38500,8 +38513,8 @@ let kZ = (0, iz.Fe)({
                 n.e("25279"),
                 n.e("39810"),
                 n.e("87306"),
-                n.e("92789"),
                 n.e("57598"),
+                n.e("92789"),
                 n.e("31390"),
                 n.e("37687"),
                 n.e("41043"),

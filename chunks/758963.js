@@ -6,6 +6,7 @@ _.exports = {
     nc: "size16__9ac28",
     qV: "size20__9ac28",
     q1: "size24__9ac28",
+    Hb: "size32__9ac28",
     NE: "isLast__9ac28",
     ju: "overflow__9ac28",
     x6: "button__9ac28",

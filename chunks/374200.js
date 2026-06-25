@@ -242,6 +242,9 @@ let D = new b(r.h, {
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,
             n = d.createFromServer(t);
-        C.set(n.componentType, n);
+        if ((C.set(n.componentType, n), null != t.promotion)) {
+            let e = a.A.createFromServer(t.promotion);
+            S[t.promotion.promotion_type][t.promotion.id] = e;
+        }
     },
 });

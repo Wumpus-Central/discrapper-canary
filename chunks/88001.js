@@ -1,16 +1,17 @@
 "use strict";
 n.d(t, {
-    BE: () => E,
-    DP: () => m,
-    Hy: () => I,
+    BE: () => m,
+    DP: () => g,
+    Hy: () => T,
     LM: () => c,
-    TE: () => p,
+    Sc: () => p,
+    TE: () => E,
     Vu: () => _,
     aw: () => d,
-    mU: () => g,
+    mU: () => A,
     qk: () => h,
     wl: () => f,
-    xI: () => A,
+    xI: () => I,
 });
 var i,
     r,
@@ -24,15 +25,16 @@ let c = 5,
     _ = 3,
     h = s.A.Millis.DAY,
     f = 12,
-    p = a.A.getArticleURL(o.MVz.PREMIUM_GROUP_ABOUT),
-    E = [o.Dmq.CANCELED, o.Dmq.PAUSED, o.Dmq.PAST_DUE, o.Dmq.ACCOUNT_HOLD, o.Dmq.BILLING_RETRY];
-function m() {
+    p = "2026-07-premium-group-announcement-modal",
+    E = a.A.getArticleURL(o.MVz.PREMIUM_GROUP_ABOUT),
+    m = [o.Dmq.CANCELED, o.Dmq.PAUSED, o.Dmq.PAST_DUE, o.Dmq.ACCOUNT_HOLD, o.Dmq.BILLING_RETRY];
+function g() {
     return u.intl.string(l.default.aFBQ3d);
 }
-function g() {
+function A() {
     return u.intl.string(u.t.jI66M4);
 }
-var A =
+var I =
         (((i = {}).UNKNOWN = "UNKNOWN"),
         (i.FETCHING = "FETCHING"),
         (i.PENDING = "PENDING"),
@@ -41,7 +43,7 @@ var A =
         (i.NOT_FOUND = "NOT_FOUND"),
         (i.ERROR = "ERROR"),
         i),
-    I =
+    T =
         (((r = {})[(r.UNKNOWN_USER = 10013)] = "UNKNOWN_USER"),
         (r[(r.BILLING_SUBSCRIPTION_GROUP_MAX_MEMBERS = 100123)] = "BILLING_SUBSCRIPTION_GROUP_MAX_MEMBERS"),
         (r[(r.BILLING_SUBSCRIPTION_GROUP_USER_INELIGIBLE = 100124)] = "BILLING_SUBSCRIPTION_GROUP_USER_INELIGIBLE"),
