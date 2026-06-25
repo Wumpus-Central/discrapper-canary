@@ -155,7 +155,7 @@ let eS = new eT(c.h, {
 var ey = n(696451),
     eC = n(317525),
     eN = n(71393),
-    ev = n(941327),
+    ev = n(472444),
     eR = n(803224),
     eO = n(576705),
     eb = n(362790),
@@ -220,7 +220,7 @@ let eJ = {
         [ep.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: "hidePremiumTier2TrialOfferEndingNotice",
         [ep.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: "hidePremiumTier2DiscountOfferEndingNotice",
         [ep.kqX.BLOCK_USER_FEEDBACK_NAGBAR]: "hideNagbarBlockUserFeedbackNotice",
-        [ep.kqX.MACOS_19_DEPRECATED_MESSAGE]: "hideMacOS19DeprecationMessageNotice",
+        [ep.kqX.MACOS_DEPRECATED_MESSAGE]: "hideMacOSDeprecationMessageNotice",
         [ep.kqX.SYSTEM_SERVICE_WARNING]: "hideSystemServiceWarningNotice",
         [ep.kqX.E2EE_UPDATE_REQUIRED]: "hideE2EEUpdateRequiredNotice",
     },
@@ -299,7 +299,7 @@ let tr = [
     ep.kqX.WIN32_DEPRECATED_MESSAGE,
     ep.kqX.WIN7_8_DEPRECATED_MESSAGE,
     ep.kqX.WIN_COMPAT_MODE_MESSAGE,
-    ep.kqX.MACOS_19_DEPRECATED_MESSAGE,
+    ep.kqX.MACOS_DEPRECATED_MESSAGE,
     ep.kqX.E2EE_UPDATE_REQUIRED,
     ep.kqX.WINDOWS_MEDIA_PACK_REQUIRED,
     ep.kqX.VOICE_CONNECTED_LAST_SESSION,
@@ -531,11 +531,11 @@ let ts = {
         },
         metadata: () => ({ dismissUntil: r()().add(5, "days").toDate() }),
     },
-    [ep.kqX.MACOS_19_DEPRECATED_MESSAGE]: {
+    [ep.kqX.MACOS_DEPRECATED_MESSAGE]: {
         predicate: () => {
             if (d.A?.process.platform === "darwin")
                 try {
-                    return 20 > parseInt(d.A?.os.release.split(".")[0]);
+                    return 21 > parseInt(d.A?.os.release.split(".")[0]);
                 } catch (e) {}
             return !1;
         },
