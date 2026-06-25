@@ -1226,8 +1226,8 @@ let tM = (e) => {
         ],
     });
 };
-var tP = n(930767),
-    tx = n(655857);
+var tP = n(908166),
+    tx = n(930767);
 async function tk(e, t) {
     let {
         stripe: n,
@@ -1235,13 +1235,13 @@ async function tk(e, t) {
         billingAddressState: r,
         lastConfirmedSetupIntentRef: s,
         analyticsLocation: a,
-        currency: o,
+        createSetupIntent: o,
     } = e;
     return {
         paymentSource: await (0, g.im)(
             n,
             i,
-            { billingAddress: r.info, paymentSourceType: t, lastConfirmedSetupIntentRef: s, currency: o },
+            { billingAddress: r.info, paymentSourceType: t, lastConfirmedSetupIntentRef: s, createSetupIntent: o },
             a,
         ),
         responseType: "payment-source",
@@ -1261,7 +1261,7 @@ async function tG(e) {
 async function tF(e, t, n) {
     let { adyenPaymentData: i, billingAddressState: r, analyticsLocation: s } = e;
     if (null != n && n.requireAdyenPaymentData && null == i)
-        throw new tP.v({
+        throw new tx.v({
             message: "Missing adyenPaymentData",
             extraSentryInformation: { paymentSourceType: t, analyticsLocation: s },
         });
@@ -1344,7 +1344,7 @@ let tB = {
                     overwriteSubscriptionPaymentSource: e.overwriteSubscriptionPaymentSource,
                 });
                 if (null == t)
-                    throw new tP.v({
+                    throw new tx.v({
                         message: "Cash App Pay Payment Source missing",
                         extraSentryInformation: {
                             paymentSourceType: em.he.CASH_APP,
@@ -1416,7 +1416,7 @@ function tW(e) {
             shouldUsePaymentElement: p,
         } = e,
         E = (0, eN.S)(),
-        { displayCurrency: m } = (0, tx.Jn)(),
+        { createSetupIntent: m } = (0, tP.x)(),
         {
             isSubmittingCurrentStep: g,
             billingAddressState: A,
@@ -1431,7 +1431,7 @@ function tW(e) {
             n = h.current,
             s = null != e && e in tB ? tB[e] : null;
         if (null == s)
-            throw new tP.v({
+            throw new tx.v({
                 message: "unknown Add Payment step not handled",
                 extraSentryInformation: { paymentSourceType: e, analyticsLocation: i },
             });
@@ -1444,7 +1444,7 @@ function tW(e) {
                 shouldUsePaymentElement: p,
                 stripeElements: n,
                 lastConfirmedSetupIntentRef: f,
-                currency: m,
+                createSetupIntent: m,
                 onPaymentRequestSourceFailed: o,
                 paymentRequestPaymentMethod: l,
                 overwriteSubscriptionPaymentSource: r,

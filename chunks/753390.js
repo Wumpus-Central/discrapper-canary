@@ -293,7 +293,8 @@ let B = new Set([b.he.CARD, b.he.PAYMENT_REQUEST]);
 async function j() {
     let e;
     for (var t, n = arguments.length, i = Array(n), r = 0; r < n; r++) i[r] = arguments[r];
-    let [s, o, { billingAddress: l, paymentSourceType: u, lastConfirmedSetupIntentRef: c, currency: d }, _] = i;
+    let [s, o, { billingAddress: l, paymentSourceType: u, lastConfirmedSetupIntentRef: c, createSetupIntent: d }, _] =
+        i;
     if (null == s) throw w("Stripe not loaded", !0);
     if (null == o) throw w("Stripe Elements not loaded", !0);
     a.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_START" });
@@ -313,7 +314,7 @@ async function j() {
             ("succeeded" === t.setup_intent.status || "canceled" === t.setup_intent.status) &&
             u !== b.he.PAYMENT_REQUEST
         ) {
-            let { client_secret: e } = await (0, O.w)(null != d ? { body: { currency: d } } : {});
+            let { client_secret: e } = await d();
             await G(o), (n = await s.confirmSetup({ redirect: "if_required", clientSecret: e, elements: o }));
         }
         let { setupIntent: i } = U(n.setupIntent, n.error, (e) => w(e, !0));
