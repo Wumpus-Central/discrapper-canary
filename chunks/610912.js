@@ -340,7 +340,7 @@ function eh(e) {
         : null;
 }
 var eg = n(821609),
-    ep = n(139716),
+    ep = n(379257),
     eA = n(847599),
     ex = n(36149);
 function ef(e) {
@@ -1509,7 +1509,7 @@ function nY(e) {
                           n.e("16227"),
                           n.e("78841"),
                           n.e("60361"),
-                          n.e("75189"),
+                          n.e("32048"),
                           n.e("99430"),
                           n.e("79864"),
                           n.e("72465"),
@@ -2745,7 +2745,9 @@ function lW(e) {
     (0, lH.Eq)(a, "ThreadMessageAccessoryMessage");
     let o = r.useMemo(
         () =>
-            null != t.content && "" !== t.content ? (0, lF.Ay)(t, { formatInline: !0, allowLinks: !0 }).content : null,
+            null != t.content && "" !== t.content
+                ? (0, lF.Ay)(t, { formatInline: !0, allowLinks: !0, allowGameMentions: !0 }).content
+                : null,
         [t],
     );
     return (0, s.jsxs)("div", {
@@ -5125,7 +5127,7 @@ function ad(e) {
 var ac = n(890856),
     au = n(9994),
     am = n(461888),
-    ah = n(179283),
+    ah = n(422253),
     ag = n(123213),
     ap = n(86376),
     aA = n(42780),
