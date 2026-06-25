@@ -608,10 +608,10 @@
     --background-feedback-notification: var(--red-new-46);
     --background-feedback-positive: hsl(var(--opacity-green-8-hsl)/0.0784313725490196);
     --background-feedback-warning: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
-    --background-mod-muted: hsl(var(--opacity-4-hsl)/0.0392156862745098);
+    --background-mod-muted: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-mod-normal: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-mod-strong: hsl(var(--opacity-20-hsl)/0.2);
-    --background-mod-subtle: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --background-mod-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-scrim: hsl(var(--opacity-black-72-hsl)/0.7215686274509804);
     --background-scrim-lightbox: hsl(var(--opacity-black-92-hsl)/0.9215686274509803);
     --background-secondary-alt: var(--primary-660);
@@ -661,7 +661,7 @@
     --card-background-default: var(--neutral-64);
     --card-border-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --card-primary-pressed-bg: var(--primary-645);
-    --card-secondary-bg: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --card-secondary-bg: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --card-secondary-pressed-bg: var(--primary-645);
     --channel-background-default: var(--neutral-69);
     --channel-icon: var(--neutral-28);
@@ -793,7 +793,7 @@
     --control-critical-primary-text-default: var(--neutral-1);
     --control-critical-primary-text-hover: var(--neutral-1);
     --control-critical-secondary-background-active: hsl(var(--opacity-20-hsl)/0.2);
-    --control-critical-secondary-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --control-critical-secondary-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-critical-secondary-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --control-critical-secondary-border-active: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --control-critical-secondary-border-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -860,7 +860,7 @@
     --control-primary-text-default: var(--neutral-1);
     --control-primary-text-hover: var(--neutral-1);
     --control-secondary-background-active: hsl(var(--opacity-20-hsl)/0.2);
-    --control-secondary-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --control-secondary-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-secondary-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --control-secondary-border-active: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --control-secondary-border-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -951,11 +951,11 @@
     --input-text-default: var(--neutral-4);
     --input-text-error-default: var(--neutral-4);
     --interactive-accent-background-active: var(--blurple-65);
-    --interactive-accent-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --interactive-accent-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-accent-background-hover: var(--blurple-50);
     --interactive-accent-background-selected: var(--blurple-50);
     --interactive-background-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
-    --interactive-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-20-hsl)/0.2);
     --interactive-icon-active: var(--neutral-1);
     --interactive-icon-default: var(--neutral-16);
@@ -969,7 +969,7 @@
     --mention-foreground: var(--blurple-8);
     --message-automod-background-default: hsl(var(--red-400-hsl)/0.05);
     --message-automod-background-hover: hsl(var(--red-400-hsl)/0.1);
-    --message-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --message-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --message-highlight-background-default: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --message-highlight-background-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --message-mentioned-background-default: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
@@ -1025,7 +1025,7 @@
     --radio-foreground-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-thumb-background-active: var(--neutral-1);
     --reaction-background-active: hsl(var(--opacity-20-hsl)/0.2);
-    --reaction-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --reaction-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --reaction-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --reaction-background-reacted-default: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
     --reaction-background-reacted-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
@@ -1130,11 +1130,11 @@
     --textbox-markdown-syntax: var(--primary-360);
     --thread-channel-spine: var(--primary-500);
     --user-profile-activity-toolbar-background: var(--neutral-60);
-    --user-profile-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-note-background-focus: var(--neutral-73);
     --user-profile-overlay-background: var(--neutral-60);
-    --user-profile-overlay-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --user-profile-overlay-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-toolbar-background: var(--neutral-60);
     --user-profile-toolbar-border: hsl(var(--opacity-4-hsl)/0.0392156862745098)
 }
@@ -1192,7 +1192,7 @@
         --card-background-default: color-mix(in oklab, var(--neutral-64) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --card-border-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --card-primary-pressed-bg: color-mix(in oklab, var(--primary-645) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --card-secondary-pressed-bg: color-mix(in oklab, var(--primary-645) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --channel-background-default: color-mix(in oklab, var(--neutral-69) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --channel-icon: color-mix(in oklab, var(--neutral-28) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -1317,11 +1317,11 @@
         --input-text-default: color-mix(in oklab, var(--neutral-4) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--neutral-4) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-accent-background-active: color-mix(in oklab, var(--blurple-65) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-hover: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-icon-default: color-mix(in oklab, var(--neutral-16) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -1335,7 +1335,7 @@
         --mention-foreground: color-mix(in oklab, var(--blurple-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --message-automod-background-default: color-mix(in oklab, hsl(var(--red-400-hsl)/0.05) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.05) var(--custom-theme-base-color-amount, 0%));
         --message-automod-background-hover: color-mix(in oklab, hsl(var(--red-400-hsl)/0.1) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1) var(--custom-theme-base-color-amount, 0%));
-        --message-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --message-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --message-highlight-background-default: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --message-highlight-background-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
@@ -1363,7 +1363,7 @@
         --progressbar-indicator-background: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --reaction-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --reaction-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-reacted-default: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-reacted-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
@@ -1441,11 +1441,11 @@
         --textbox-markdown-syntax: color-mix(in oklab, var(--primary-360) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--primary-500) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-activity-toolbar-background: color-mix(in oklab, var(--neutral-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-note-background-focus: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-overlay-background: color-mix(in oklab, var(--neutral-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-toolbar-background: color-mix(in oklab, var(--neutral-60) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-toolbar-border: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
     }
@@ -3236,10 +3236,10 @@
     --background-feedback-notification: var(--red-new-46);
     --background-feedback-positive: hsl(var(--opacity-green-8-hsl)/0.0784313725490196);
     --background-feedback-warning: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
-    --background-mod-muted: hsl(var(--opacity-4-hsl)/0.0392156862745098);
+    --background-mod-muted: hsl(var(--opacity-8-hsl)/0.0784313725490196);
     --background-mod-normal: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --background-mod-strong: hsl(var(--opacity-20-hsl)/0.2);
-    --background-mod-subtle: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --background-mod-subtle: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --background-scrim: hsl(var(--opacity-black-72-hsl)/0.7215686274509804);
     --background-scrim-lightbox: hsl(var(--opacity-black-92-hsl)/0.9215686274509803);
     --background-secondary-alt: var(--plum-15);
@@ -3289,7 +3289,7 @@
     --card-background-default: var(--neutral-79);
     --card-border-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --card-primary-pressed-bg: var(--plum-19);
-    --card-secondary-bg: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --card-secondary-bg: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --card-secondary-pressed-bg: var(--plum-21);
     --channel-background-default: var(--neutral-86);
     --channel-icon: var(--neutral-35);
@@ -3421,7 +3421,7 @@
     --control-critical-primary-text-default: var(--neutral-1);
     --control-critical-primary-text-hover: var(--neutral-1);
     --control-critical-secondary-background-active: hsl(var(--opacity-20-hsl)/0.2);
-    --control-critical-secondary-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --control-critical-secondary-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-critical-secondary-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --control-critical-secondary-border-active: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --control-critical-secondary-border-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -3488,7 +3488,7 @@
     --control-primary-text-default: var(--neutral-1);
     --control-primary-text-hover: var(--neutral-1);
     --control-secondary-background-active: hsl(var(--opacity-20-hsl)/0.2);
-    --control-secondary-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --control-secondary-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --control-secondary-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --control-secondary-border-active: hsl(var(--opacity-4-hsl)/0.0392156862745098);
     --control-secondary-border-default: hsl(var(--opacity-4-hsl)/0.0392156862745098);
@@ -3579,11 +3579,11 @@
     --input-text-default: var(--neutral-5);
     --input-text-error-default: var(--neutral-5);
     --interactive-accent-background-active: var(--blurple-65);
-    --interactive-accent-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --interactive-accent-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-accent-background-hover: var(--blurple-50);
     --interactive-accent-background-selected: var(--blurple-50);
     --interactive-background-active: hsl(var(--opacity-16-hsl)/0.1607843137254902);
-    --interactive-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --interactive-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --interactive-background-selected: hsl(var(--opacity-20-hsl)/0.2);
     --interactive-icon-active: var(--neutral-2);
     --interactive-icon-default: var(--neutral-23);
@@ -3597,7 +3597,7 @@
     --mention-foreground: var(--blurple-19);
     --message-automod-background-default: hsl(var(--red-345-hsl)/0.08);
     --message-automod-background-hover: hsl(var(--red-400-hsl)/0.1);
-    --message-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --message-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --message-highlight-background-default: hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902);
     --message-highlight-background-hover: hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039);
     --message-mentioned-background-default: hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196);
@@ -3653,7 +3653,7 @@
     --radio-foreground-hover: hsl(var(--opacity-black-8-hsl)/0.0784313725490196);
     --radio-thumb-background-active: var(--neutral-1);
     --reaction-background-active: hsl(var(--opacity-20-hsl)/0.2);
-    --reaction-background-default: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --reaction-background-default: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --reaction-background-hover: hsl(var(--opacity-16-hsl)/0.1607843137254902);
     --reaction-background-reacted-default: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
     --reaction-background-reacted-hover: hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981);
@@ -3758,11 +3758,11 @@
     --textbox-markdown-syntax: var(--plum-9);
     --thread-channel-spine: var(--plum-13);
     --user-profile-activity-toolbar-background: var(--neutral-73);
-    --user-profile-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --user-profile-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-border: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-note-background-focus: var(--neutral-92);
     --user-profile-overlay-background: var(--neutral-73);
-    --user-profile-overlay-background-hover: hsl(var(--opacity-8-hsl)/0.0784313725490196);
+    --user-profile-overlay-background-hover: hsl(var(--opacity-12-hsl)/0.12156862745098039);
     --user-profile-toolbar-background: var(--neutral-73);
     --user-profile-toolbar-border: hsl(var(--opacity-4-hsl)/0.0392156862745098)
 }
@@ -3820,7 +3820,7 @@
         --card-background-default: color-mix(in oklab, var(--neutral-79) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --card-border-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --card-primary-pressed-bg: color-mix(in oklab, var(--plum-19) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --card-secondary-bg: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --card-secondary-pressed-bg: color-mix(in oklab, var(--plum-21) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --channel-background-default: color-mix(in oklab, var(--neutral-86) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --channel-icon: color-mix(in oklab, var(--neutral-35) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -3945,11 +3945,11 @@
         --input-text-default: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --input-text-error-default: color-mix(in oklab, var(--neutral-5) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-accent-background-active: color-mix(in oklab, var(--blurple-65) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --interactive-accent-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-hover: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-accent-background-selected: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-active: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
-        --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --interactive-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --interactive-background-selected: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --interactive-icon-active: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --interactive-icon-default: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -3963,7 +3963,7 @@
         --mention-foreground: color-mix(in oklab, var(--blurple-19) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --message-automod-background-default: color-mix(in oklab, hsl(var(--red-345-hsl)/0.08) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.08) var(--custom-theme-base-color-amount, 0%));
         --message-automod-background-hover: color-mix(in oklab, hsl(var(--red-400-hsl)/0.1) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1) var(--custom-theme-base-color-amount, 0%));
-        --message-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --message-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --message-highlight-background-default: color-mix(in oklab, hsl(var(--opacity-blurple-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --message-highlight-background-hover: color-mix(in oklab, hsl(var(--opacity-blurple-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --message-mentioned-background-default: color-mix(in oklab, hsl(var(--opacity-yellow-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
@@ -3991,7 +3991,7 @@
         --progressbar-indicator-background: color-mix(in oklab, var(--blurple-50) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --progressbar-track-background: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-active: color-mix(in oklab, hsl(var(--opacity-20-hsl)/0.2) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.2) var(--custom-theme-base-color-amount, 0%));
-        --reaction-background-default: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --reaction-background-default: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-hover: color-mix(in oklab, hsl(var(--opacity-16-hsl)/0.1607843137254902) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.1607843137254902) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-reacted-default: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
         --reaction-background-reacted-hover: color-mix(in oklab, hsl(var(--opacity-blurple-24-hsl)/0.23921568627450981) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.23921568627450981) var(--custom-theme-base-color-amount, 0%));
@@ -4069,11 +4069,11 @@
         --textbox-markdown-syntax: color-mix(in oklab, var(--plum-9) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --thread-channel-spine: color-mix(in oklab, var(--plum-13) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-activity-toolbar-background: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --user-profile-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-border: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)));
         --user-profile-note-background-focus: color-mix(in oklab, var(--neutral-92) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-overlay-background: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
-        --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-8-hsl)/0.0784313725490196) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0784313725490196) var(--custom-theme-base-color-amount, 0%));
+        --user-profile-overlay-background-hover: color-mix(in oklab, hsl(var(--opacity-12-hsl)/0.12156862745098039) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.12156862745098039) var(--custom-theme-base-color-amount, 0%));
         --user-profile-toolbar-background: color-mix(in oklab, var(--neutral-73) 100%, var(--custom-theme-base-color, #000) var(--custom-theme-base-color-amount, 0%));
         --user-profile-toolbar-border: color-mix(in oklab, hsl(var(--opacity-4-hsl)/0.0392156862745098) 100%, hsl(var(--custom-theme-base-color-hsl, 0 0% 0%)/0.0392156862745098) var(--custom-theme-border-color-amount, var(--custom-theme-base-color-amount, 0%)))
     }
