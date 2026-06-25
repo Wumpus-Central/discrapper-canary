@@ -6,8 +6,8 @@ var l = n(627968),
     o = n(812993),
     s = n(834730),
     c = n(565645),
-    d = n(375708),
-    u = n(65242);
+    u = n(375708),
+    d = n(847194);
 function m(e) {
     return null != e && (null != e.id || null != e.name);
 }
@@ -52,23 +52,23 @@ function h(e) {
                 let i = null == x || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => x[e])),
                     r = null != x && i > 0;
                 return (0, l.jsxs)("div", {
-                    className: u.ei,
+                    className: d.ei,
                     children: [
                         p &&
                             n.isUnseen &&
                             (0, l.jsx)(o.Lp, {
                                 color: a.A.unsafe_rawColors.BRAND_260.css,
-                                text: d.intl.string(d.t.y2b7CA),
-                                className: u.Ad,
+                                text: u.intl.string(u.t.y2b7CA),
+                                className: d.Ad,
                             }),
                         r &&
                             (0, l.jsx)("div", {
-                                className: u.Kl,
+                                className: d.Kl,
                                 "data-hover": !0,
                                 children: (0, l.jsx)(s.E, {
                                     variant: "text-xs/normal",
                                     color: "always-white",
-                                    children: d.intl.format(d.t.EgKsZA, { memberCount: i }),
+                                    children: u.intl.format(u.t.EgKsZA, { memberCount: i }),
                                 }),
                             }),
                     ],

@@ -1,4 +1,4 @@
-l.d(t, { A: () => _, X: () => y });
+l.d(t, { A: () => G, X: () => y });
 var s = l(627968),
     a = l(64700),
     i = l(503698),
@@ -17,7 +17,7 @@ var s = l(627968),
     g = l(935208),
     f = l(107123),
     p = l(375708),
-    b = l(73045);
+    b = l(446037);
 function A(e) {
     let { profile: t, disableGuildNameClick: l } = e,
         i = t.id,
@@ -84,7 +84,7 @@ function y(e) {
         ],
     });
 }
-function _(e) {
+function G(e) {
     let { profile: t, disableGuildNameClick: l } = e,
         i = (0, r.bG)([h.default], () => h.default.locale),
         n = (0, f.P)(g.default.extractTimestamp(t.id), i),

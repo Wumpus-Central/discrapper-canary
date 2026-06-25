@@ -88,9 +88,9 @@ var eC = l(226421),
     ey = l.n(ev),
     eb = l(460905),
     eA = l(713608),
-    eN = l(16590),
+    eN = l(788077),
     ek = l(375708),
-    eL = l(788332);
+    eL = l(909740);
 function eE(e) {
     let { clip: t } = e,
         l = t.decision?.signal;
@@ -157,7 +157,7 @@ function eI(e) {
 var eP = l(665039),
     eS = l(718812),
     eD = l(652215),
-    eM = l(798594);
+    eM = l(55746);
 let eT = function (e) {
     let { clip: t, actionsDisabled: n, isNew: r, onEdit: c, onClick: o, onHoverChange: u } = e,
         m = (0, d.yK)([P.default], () => t.users.map((e) => P.default.getUser(e)).filter(eg.Vq)),
@@ -223,9 +223,9 @@ let eT = function (e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("64379"),
-                            l.e("6619"),
-                            l.e("45554"),
+                            l.e("4615"),
+                            l.e("94267"),
+                            l.e("75518"),
                             l.e("95429"),
                             l.e("91211"),
                             l.e("38601"),
@@ -560,7 +560,7 @@ var ez = l(702841),
     eB = l(350535),
     eX = l(572164),
     eq = l(953932),
-    eW = l(311162);
+    eW = l(713466);
 function eZ(e) {
     let { header: t, description: l } = e;
     return (0, i.jsxs)("div", {
@@ -635,8 +635,8 @@ function e0(e) {
 }
 let e1 = 16 / 9;
 var e3 = l(621466),
-    e2 = l(61491),
-    e9 = l(365199),
+    e9 = l(61491),
+    e2 = l(365199),
     e5 = l(821609),
     e7 = l(22231),
     e6 = l(549973),
@@ -646,7 +646,7 @@ var e3 = l(621466),
     tt = l(585579),
     tl = l(226870),
     ti = l(285072),
-    ta = l(742007);
+    ta = l(36087);
 function tn(e) {
     let { clip: t, actionsDisabled: l, isNew: a, onClick: n, onEdit: s } = e;
     return (0, i.jsx)(e4.Cl, {
@@ -691,9 +691,9 @@ function ts(e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("64379"),
-                            l.e("6619"),
-                            l.e("45554"),
+                            l.e("4615"),
+                            l.e("94267"),
+                            l.e("75518"),
                             l.e("95429"),
                             l.e("91211"),
                             l.e("38601"),
@@ -841,7 +841,7 @@ function to(e) {
                 text: ek.intl.string(ek.t["UKOtz+"]),
                 children: (0, i.jsx)(j.K, {
                     onClick: t,
-                    icon: e9.j,
+                    icon: e2.j,
                     "aria-label": ek.intl.string(ek.t["UKOtz+"]),
                     variant: "overlay-secondary",
                     size: "sm",
@@ -864,7 +864,7 @@ function td() {
                 1e3 * l < e.length && (t = 1e3 * l);
             }
             let l = Math.floor(t / 1e3);
-            return (0, e2.rB)(l);
+            return (0, e9.rB)(l);
         }, [e.length, e.editMetadata]);
     return t
         ? null
@@ -1024,8 +1024,8 @@ var tx = l(792852);
 function tp(e) {
     return Math.min(45 * e, 520);
 }
-var tg = l(352528),
-    tf = l(32122);
+var tg = l(142883),
+    tf = l(434426);
 let tj = [0, 16, 0, 16],
     tC = tj[1] + tj[3];
 function tv(e) {
@@ -1522,7 +1522,7 @@ function tz() {
         i = tO.A.useConfig({ location: "isAutoClipsAvailable" }).enableLeagueEvents;
     return e || t || l || i;
 }
-var tG = l(724993);
+var tG = l(26049);
 function tU(e) {
     let { icon: t, label: l, trailer: a, isSelected: n, isDisabled: r = !1, onClick: c } = e,
         o = r && !n;
@@ -1738,7 +1738,7 @@ function tY(e) {
         ],
     });
 }
-var tB = l(174726);
+var tB = l(703814);
 let tX = a.memo(function (e) {
         let { withHeaderFilters: t, allClips: l } = e,
             n = (0, tx.P)((e) => e.query),
@@ -2003,8 +2003,8 @@ var tJ = l(847374),
     t0 = l(112173),
     t1 = l(548118),
     t3 = l(441349),
-    t2 = l(789645),
-    t9 = l(939546),
+    t9 = l(789645),
+    t2 = l(939546),
     t5 = l(99478);
 function t7(e) {
     return e.setHours(0, 0, 0, 0), e.getTime();
@@ -2014,7 +2014,7 @@ function t6(e) {
 }
 function t4(e, t) {
     if (null == e && null == t) return null;
-    let l = (0, t9.Xj)();
+    let l = (0, t2.Xj)();
     return { preset: "custom", after: null != e ? t7(e.toDate(l)) : null, before: null != t ? t6(t.toDate(l)) : null };
 }
 function t8(e) {
@@ -2049,7 +2049,7 @@ function ll(e) {
         }
     }
 }
-var li = l(817480);
+var li = l(560968);
 function la(e) {
     let { closePopout: t } = e,
         l = (0, tx.P)((e) => e.dateFilter),
@@ -2069,7 +2069,7 @@ function la(e) {
         ),
         p = l?.preset ?? null,
         g = r && "custom" !== p ? null : p,
-        f = a.useMemo(() => (0, t9.Ec)((0, t9.Xj)()), []),
+        f = a.useMemo(() => (0, t2.Ec)((0, t2.Xj)()), []),
         C = a.useCallback(
             (e) => {
                 n(
@@ -2217,7 +2217,7 @@ function la(e) {
                                                     children: (0, i.jsx)(j.K, {
                                                         size: "sm",
                                                         variant: "icon-only",
-                                                        icon: t2.P,
+                                                        icon: t9.P,
                                                         onClick: () => y(null),
                                                         "aria-label": ek.intl.string(ek.t.VkKicb),
                                                     }),
@@ -2253,7 +2253,7 @@ function la(e) {
                                                     children: (0, i.jsx)(j.K, {
                                                         size: "sm",
                                                         variant: "icon-only",
-                                                        icon: t2.P,
+                                                        icon: t9.P,
                                                         onClick: () => b(null),
                                                         "aria-label": ek.intl.string(ek.t.VkKicb),
                                                     }),
@@ -2276,7 +2276,7 @@ function la(e) {
 }
 var ln = l(103552),
     ls = l(914427),
-    lr = l(213424);
+    lr = l(499376);
 function lc(e) {
     let {
             triggerLabel: t,
@@ -2341,7 +2341,7 @@ function lc(e) {
             }),
     });
 }
-var lo = l(941886);
+var lo = l(531454);
 function ld(e) {
     let { label: t, icon: l, onRemove: a, removeAriaLabel: n } = e;
     return (0, i.jsxs)("div", {
@@ -2359,12 +2359,12 @@ function ld(e) {
                 className: lo.DT,
                 onClick: a,
                 "aria-label": n ?? ek.intl.string(ek.t.N86XcP),
-                children: (0, i.jsx)(t2.P, { size: "xs", color: "currentColor" }),
+                children: (0, i.jsx)(t9.P, { size: "xs", color: "currentColor" }),
             }),
         ],
     });
 }
-var lu = l(841765);
+var lu = l(915173);
 let lm = { all: eN.default.lscwjQ, auto: eN.default.xrOIkz, manual: eN.default.D7HSLJ };
 function lh() {
     let e = (0, tx.P)((e) => e.dateFilter),
@@ -2782,7 +2782,7 @@ function lA(e) {
         .sort((e, t) => t.createdAt - e.createdAt)
         .slice(0, t);
 }
-var lN = l(452143);
+var lN = l(509615);
 function lk(e) {
     let { clips: t, onEdit: l } = e,
         n = a.useMemo(() => lA(t), [t]),
@@ -2926,7 +2926,7 @@ var lL = l(770178),
     lE = l(765548),
     lw = l(569926),
     lI = l(486020),
-    lP = l(251287);
+    lP = l(545367);
 function lS(e) {
     let {
             session: t,
@@ -3092,7 +3092,7 @@ function lS(e) {
         ],
     });
 }
-var lD = l(177435);
+var lD = l(471515);
 function lM(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: n, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: c } = lj.useConfig({ location: "ClipsGalleryHome" }),
@@ -3185,7 +3185,7 @@ function lM(e) {
 }
 var lT = l(409067),
     l_ = l(696016),
-    lR = l(847455);
+    lR = l(272863);
 let lF = a.createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},

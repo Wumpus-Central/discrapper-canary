@@ -25,8 +25,8 @@ var l = n(627968),
     v = n.n(y),
     T = n(534514),
     N = n(104510),
-    j = n(661531),
-    b = n(834730),
+    b = n(661531),
+    j = n(834730),
     R = n(821609),
     P = n(597770),
     L = n(548118),
@@ -39,7 +39,7 @@ var l = n(627968),
     G = n(652215),
     F = n(788868),
     V = n(375708),
-    B = n(474236);
+    B = n(111868);
 let H = function (e) {
     let { className: t, closeLayer: n, guild: r, onCtaVisibilityChange: a } = e,
         u = i.useRef(null),
@@ -88,10 +88,10 @@ let H = function (e) {
                                 children: [
                                     (0, l.jsx)(N._, {
                                         color:
-                                            C > 0 ? j.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
+                                            C > 0 ? b.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH : "currentColor",
                                         className: v()(B.Me, { [B.S3]: C > 0 }),
                                     }),
-                                    (0, l.jsx)(b.E, {
+                                    (0, l.jsx)(j.E, {
                                         className: B.n,
                                         variant: "text-md/semibold",
                                         children: V.intl.format(V.t["pob/cL"], { subscriptions: C }),
@@ -99,7 +99,7 @@ let H = function (e) {
                                 ],
                             }),
                             A > 0
-                                ? (0, l.jsx)(b.E, {
+                                ? (0, l.jsx)(j.E, {
                                       className: B.EV,
                                       variant: "text-sm/normal",
                                       children: V.intl.format(V.t.Jeto2u, { numSubscriptions: A }),
@@ -189,7 +189,7 @@ var W = n(232122),
     Y = n(736653),
     z = n(303136),
     Z = n(676279),
-    q = n(215895);
+    q = n(510679);
 function $(e) {
     let { className: t } = e,
         n = (0, Y.Ay)(),
@@ -253,8 +253,8 @@ function Q(e) {
 }
 var ee = n(210273),
     et = n(508155),
-    en = n(853513),
-    el = n(111674);
+    en = n(645704),
+    el = n(582778);
 function ei(e) {
     let { tier: t, isActive: n } = e,
         i = t === G.TVA.TIER_1,
@@ -303,7 +303,7 @@ function es(e) {
                                 className: el.yC,
                                 children: [
                                     (0, l.jsx)(N._, { size: "xs", color: "currentColor" }),
-                                    (0, l.jsx)(b.E, {
+                                    (0, l.jsx)(j.E, {
                                         variant: "text-md/medium",
                                         children: V.intl.format(V.t["pob/cL"], { subscriptions: a }),
                                     }),
@@ -327,7 +327,7 @@ function es(e) {
                                                 color: r ? "var(--text-default)" : "currentColor",
                                                 size: "sm",
                                             }),
-                                            (0, l.jsx)(b.E, {
+                                            (0, l.jsx)(j.E, {
                                                 variant: "text-md/medium",
                                                 color: r ? "text-default" : void 0,
                                                 children: e.getCopy(),
@@ -337,7 +337,7 @@ function es(e) {
                                     t,
                                 );
                             }),
-                            (0, l.jsx)(b.E, {
+                            (0, l.jsx)(j.E, {
                                 className: el.wx,
                                 variant: "text-md/medium",
                                 children: V.intl.string(en.default.nIj3LZ),
@@ -370,7 +370,7 @@ var eg = n(512750),
     eE = n(881756),
     eA = n(568065),
     eC = n(800007),
-    ex = n(576709);
+    ex = n(76660);
 let eI =
         "https://cdn.discordapp.com/assets/content/2b844e74bd90a5e0ccb408b039a4915f295d8b9c192c823a4afc69c1fc3604a2.png",
     e_ = new Set([...Array.from(eA.aH), ...Array.from(eA.m_), eg.FB]);
@@ -378,7 +378,7 @@ var eS = n(998418),
     ey = n(828162);
 n(667532);
 var ev = n(975571),
-    eT = n(262880);
+    eT = n(70240);
 function eN(e) {
     let {
             guildId: t,
@@ -472,7 +472,7 @@ function eN(e) {
                         className: eT.P_,
                         children: [
                             (0, l.jsx)(T.D, { className: eT.DD, variant: "heading-lg/semibold", children: r }),
-                            (0, l.jsx)(b.E, { className: eT.h_, variant: "text-md/medium", children: u }),
+                            (0, l.jsx)(j.E, { className: eT.h_, variant: "text-md/medium", children: u }),
                         ],
                     }),
                     (0, l.jsxs)("div", {
@@ -481,8 +481,8 @@ function eN(e) {
                             (0, l.jsxs)("div", {
                                 className: eT.qS,
                                 children: [
-                                    (0, l.jsx)(N._, { size: "xs", color: j.A.unsafe_rawColors.ILLO_PINK_40 }),
-                                    (0, l.jsx)(b.E, {
+                                    (0, l.jsx)(N._, { size: "xs", color: b.A.unsafe_rawColors.ILLO_PINK_40 }),
+                                    (0, l.jsx)(j.E, {
                                         className: eT.Vv,
                                         variant: "text-sm/semibold",
                                         children: V.intl.formatToPlainString(
@@ -497,7 +497,7 @@ function eN(e) {
                                     className: v()(eT.qS, eT.nt),
                                     children: [
                                         (0, l.jsx)(ed.y, { size: "xs", color: "currentColor" }),
-                                        (0, l.jsx)(b.E, {
+                                        (0, l.jsx)(j.E, {
                                             className: eT.nt,
                                             variant: "text-sm/semibold",
                                             children: V.intl.string(V.t.pCMkDb),
@@ -538,12 +538,12 @@ function eN(e) {
                 (0, l.jsx)(em.Lp, {
                     className: eT.AP,
                     text: V.intl.string(V.t.oW0eUd),
-                    color: j.A.colors.BACKGROUND_BRAND.css,
+                    color: b.A.colors.BACKGROUND_BRAND.css,
                 }),
         ],
     });
 }
-function ej(e) {
+function eb(e) {
     let { guildId: t, powerup: n, costDecorator: i, badge: s, onClose: r } = e,
         a = (0, eS.Ay)(t, n).type;
     return (0, l.jsx)(eN, {
@@ -560,7 +560,7 @@ function ej(e) {
         onClose: r,
     });
 }
-let eb = new Map([[eC.W5, "+"]]),
+let ej = new Map([[eC.W5, "+"]]),
     eR = i.forwardRef((e, t) => {
         var n;
         let r,
@@ -626,7 +626,7 @@ let eb = new Map([[eC.W5, "+"]]),
                                   variant: "heading-xxl/semibold",
                                   children: V.intl.string(en.default.wjI18Q),
                               }),
-                              (0, l.jsx)(b.E, {
+                              (0, l.jsx)(j.E, {
                                   className: eT.fV,
                                   variant: "text-md/medium",
                                   children: V.intl.format(en.default.S562fn, {
@@ -639,11 +639,11 @@ let eb = new Map([[eC.W5, "+"]]),
                           className: eT.vY,
                           children: c.map((e) =>
                               (0, l.jsx)(
-                                  ej,
+                                  eb,
                                   {
                                       guildId: o.id,
                                       powerup: e,
-                                      costDecorator: eb.get(e.skuId),
+                                      costDecorator: ej.get(e.skuId),
                                       badge: eA.ys[e.skuId],
                                       onClose: u,
                                   },
@@ -658,7 +658,7 @@ eR.displayName = "GuildBoostingMarketingPerkCards";
 var eP = n(527113),
     eL = n(862482),
     eM = n(944304),
-    eO = n(672350);
+    eO = n(130782);
 let ew = function (e) {
     let { closeLayer: t, guild: n, isVisible: s } = e,
         r = i.useRef(null),
@@ -679,7 +679,7 @@ let ew = function (e) {
                         className: eO.OA,
                         children: [
                             (0, l.jsx)(L.Ay, { className: eO.$f, guild: n, size: L.Ay.Sizes.SMALL }),
-                            (0, l.jsx)(b.E, { className: eO.J5, variant: "text-md/semibold", children: n.name }),
+                            (0, l.jsx)(j.E, { className: eO.J5, variant: "text-md/semibold", children: n.name }),
                         ],
                     }),
                     (0, l.jsx)(eM.A, {
@@ -703,13 +703,13 @@ let ew = function (e) {
 };
 var ek = n(192308),
     eD = n(65154),
-    eU = n(387772),
+    eU = n(303676),
     eG = n(519636);
 function eF(e) {
     let { guild: t, analyticsLocation: s, videoPlacement: r, sourceAnalyticsLocations: a } = e,
         o = i.useCallback(() => {
             (0, ek.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("6836"), n.e("85810")]).then(n.bind(n, 872233));
+                let { default: e } = await Promise.all([n.e("88340"), n.e("85810")]).then(n.bind(n, 872233));
                 return (n) =>
                     (0, l.jsx)(e, {
                         ...n,
@@ -743,10 +743,10 @@ function eV(e) {
         v = i.useRef(null),
         T = i.useRef(null),
         N = i.useRef(null),
-        j = i.useCallback(() => {
+        b = i.useCallback(() => {
             r?.();
         }, [r]),
-        b = i.useCallback(() => {
+        j = i.useCallback(() => {
             null != T.current &&
                 null != v.current &&
                 v.current.scrollIntoViewNode({ node: T.current, animate: !0, shouldScrollToStart: !0 });
@@ -785,11 +785,11 @@ function eV(e) {
         i.useEffect(() => {
             if (a && M) {
                 let e = setTimeout(() => {
-                    b();
+                    j();
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [a, b, M]),
+        }, [a, j, M]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 null != r &&
@@ -800,7 +800,7 @@ function eV(e) {
                             containerRef: N,
                             children: (0, l.jsx)(g.D, {
                                 className: q.b,
-                                onClick: j,
+                                onClick: b,
                                 "aria-label": V.intl.string(V.t.cpT0Cq),
                                 children: (0, l.jsx)(E.P, { size: "md", color: "currentColor" }),
                             }),
@@ -819,7 +819,7 @@ function eV(e) {
                                     children: [
                                         (0, l.jsx)(H, {
                                             guild: n,
-                                            closeLayer: j,
+                                            closeLayer: b,
                                             onCtaVisibilityChange: c,
                                             className: q.Oh,
                                         }),
@@ -836,7 +836,7 @@ function eV(e) {
                         }),
                         (0, l.jsx)("div", {
                             className: q.uE,
-                            children: (0, l.jsx)(eR, { ref: T, guild: e.guild, onClose: j }),
+                            children: (0, l.jsx)(eR, { ref: T, guild: e.guild, onClose: b }),
                         }),
                         (0, l.jsx)("div", {
                             className: q.o6,
@@ -856,7 +856,7 @@ function eV(e) {
                         }),
                     ],
                 }),
-                (0, l.jsx)(ew, { guild: n, isVisible: !u, closeLayer: j }),
+                (0, l.jsx)(ew, { guild: n, isVisible: !u, closeLayer: b }),
             ],
         })
     );

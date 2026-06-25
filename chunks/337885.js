@@ -5,8 +5,8 @@ var l = n(627968),
     a = n(452027),
     r = n(243721),
     o = n(17928),
-    d = n(990078),
-    c = n(192308),
+    c = n(990078),
+    d = n(192308),
     u = n(454292),
     m = n(793574),
     h = n(355622),
@@ -23,13 +23,13 @@ var l = n(627968),
     E = n(437992),
     S = n(652215);
 n(253913);
-var y = n(774418),
+var y = n(559965),
     T = n(375708),
-    I = n(939422);
+    I = n(45342);
 let _ = h.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
     R = "create-game-invite-post";
 function k(e) {
-    (0, c.openModalLazy)(
+    (0, d.openModalLazy)(
         async () => {
             let { default: t } = await Promise.resolve().then(n.bind(n, 337885));
             return (n) => (0, l.jsx)(t, { ...n, parentChannel: e });
@@ -40,7 +40,7 @@ function k(e) {
 let M = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function w(e) {
     let t,
-        { parentChannel: n, transitionState: c, onClose: h } = e,
+        { parentChannel: n, transitionState: d, onClose: h } = e,
         k = i.useMemo(() => n.availableTags ?? [], [n.availableTags]),
         { application: w } = (0, b._k)(n.guild_id),
         L = (0, o.bG)([C.A, N.A], () => (0, u.A)(C.A, N.A, w?.id), [w]),
@@ -95,7 +95,7 @@ function w(e) {
         }, [Z, J, h, P]);
     return (0, l.jsx)(s.Modal, {
         title: T.intl.string(y.default.tOsHsu),
-        transitionState: c,
+        transitionState: d,
         onClose: h,
         actions: [
             { variant: "secondary", text: T.intl.string(T.t["ETE/oC"]), onClick: h, disabled: H },
@@ -151,7 +151,7 @@ function w(e) {
                     layout: "horizontal",
                     label: T.intl.string(y.default.Xd2NFi),
                     description: T.intl.string(y.default.G91SYQ),
-                    children: (0, l.jsx)(d.m, {
+                    children: (0, l.jsx)(c.m, {
                         text: T.intl.formatToPlainString(y.default["0s2ICk"], { noMicTagName: b.Dg }),
                         shouldShow: null == V,
                         asContainer: !0,

@@ -120,7 +120,7 @@ class m extends l.EventEmitter {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: d,
                 getOptions: m,
-            } = await Promise.all([n.e("84253"), n.e("73220"), n.e("84806")]).then(n.bind(n, 961349));
+            } = await Promise.all([n.e("3325"), n.e("50839"), n.e("84806")]).then(n.bind(n, 961349));
         if (null == this.props.editorRef.current) return;
         let h = m(this.props),
             p = this.props.editorRef.current.getSlateEditor();
@@ -155,13 +155,13 @@ class m extends l.EventEmitter {
         l && C.length > 0 && C !== this.state.query?.queryText && (0, s.AR)(E, h);
         let T = !0 === S.isLoading,
             N = this.shouldShow(v, T, A),
-            j = this.state.selectedIndex;
-        !N || T ? (j = null) : null != j && j >= v && (j = v - 1),
+            b = this.state.selectedIndex;
+        !N || T ? (b = null) : null != b && b >= v && (b = v - 1),
             N && !this.state.isVisible && (0, s.uA)(E, this.props.channel, y),
             this.setState({
                 query: { type: E, typeInfo: A, queryText: C, results: S, resultCount: v, options: h, isLoading: T },
                 isVisible: N,
-                selectedIndex: j,
+                selectedIndex: b,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             });

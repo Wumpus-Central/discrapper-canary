@@ -23,9 +23,9 @@ var i = n(627968),
     y = n(46225),
     C = n(652215),
     N = n(49999),
-    v = n(230451),
+    v = n(566707),
     R = n(375708),
-    O = n(448759);
+    O = n(846775);
 let b = function (e) {
     let { markAsDismissed: t, applicationName: s } = e,
         a = [C.fg2.LEAGUE_OF_LEGENDS, C.fg2.RIOT_GAMES],
@@ -86,7 +86,7 @@ let b = function (e) {
                             claimIncentivizedAccountLinkingRewardCallbacks: {
                                 onSuccess: () =>
                                     (0, d.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(
+                                        let { default: e } = await Promise.all([n.e("428"), n.e("89387")]).then(
                                             n.bind(n, 494886),
                                         );
                                         return (t) => (0, i.jsx)(e, { ...t });

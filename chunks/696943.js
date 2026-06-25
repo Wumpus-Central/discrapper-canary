@@ -24,8 +24,8 @@ var l = n(627968),
     A = n(775602),
     g = n(793574),
     m = n(688810),
-    p = n(85829),
-    f = n(987144),
+    f = n(63152),
+    p = n(987144),
     C = n(976860),
     E = n(71393),
     x = n(881756),
@@ -40,7 +40,7 @@ var l = n(627968),
     j = n(565553),
     y = n(168900),
     M = n(285828);
-function L(e) {
+function T(e) {
     let { powerup: t, eventTargetRef: n, className: i } = e,
         s = { eventTargetRef: n, fit: "contain", className: i };
     switch (t.skuId) {
@@ -54,17 +54,17 @@ function L(e) {
             return null;
     }
 }
-var T = n(249286),
+var L = n(249286),
     U = n(867060),
     D = n(800007),
     O = n(568065),
     P = n(652215),
     V = n(746080),
     w = n(49999),
-    H = n(576709),
-    B = n(853513),
+    H = n(76660),
+    B = n(645704),
     k = n(375708),
-    F = n(945915);
+    F = n(958651);
 function z(e) {
     let { guildId: t, powerup: n, channelRowRef: i, markAsDismissed: s } = e;
     return (0, l.jsx)(et, {
@@ -108,7 +108,7 @@ function K(e) {
 function W(e) {
     let { guildId: t, powerups: n, channelRowRef: i, markAsDismissed: s } = e,
         a = (0, d.bG)([E.A], () => E.A.getGuild(t)?.name),
-        { onActivate: o, isLoading: c, error: u } = (0, T.A)(t, n[0]),
+        { onActivate: o, isLoading: c, error: u } = (0, L.A)(t, n[0]),
         h = (0, I.A)(n[0], !0);
     if (((0, U.A)(u), 0 === n.length)) return;
     let A =
@@ -336,7 +336,7 @@ function Z(e) {
                 variant: "primary",
                 onClick: () => {
                     n(w.i.TAKE_ACTION),
-                        (0, p.K4)({
+                        (0, f.K4)({
                             guildId: t,
                             location: { section: P.JJy.GUILD_HEADER, object: P.ZSU.BUTTON_CTA },
                             scrollToPowerupCards: !0,
@@ -369,7 +369,7 @@ function J(e) {
                     n(w.i.TAKE_ACTION),
                         r
                             ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, D.W5)
-                            : (0, p.K4)({
+                            : (0, f.K4)({
                                   guildId: t,
                                   location: { section: P.JJy.GUILD_HEADER, object: P.ZSU.BUTTON_CTA },
                                   scrollToPowerupCards: !0,
@@ -404,7 +404,7 @@ function $(e) {
                     r
                         ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_PRICING_CHANGE, D.W5)
                         : (n(w.i.TAKE_ACTION),
-                          (0, p.K4)({
+                          (0, f.K4)({
                               guildId: t,
                               location: { section: P.JJy.GUILD_HEADER, object: P.ZSU.BUTTON_CTA },
                               scrollToPowerupCards: !0,
@@ -426,7 +426,7 @@ function Q(e) {
     return (0, l.jsx)(et, {
         asset:
             n.type === O.o9.LEVEL
-                ? (0, l.jsx)(L, { powerup: n, eventTargetRef: A, className: F.Lj })
+                ? (0, l.jsx)(T, { powerup: n, eventTargetRef: A, className: F.Lj })
                 : (0, l.jsx)("img", { alt: "", src: c, className: F.Sl }),
         title: k.intl.string(B.default.n37JhA),
         body: k.intl.formatToPlainString(h || n.type === O.o9.LEVEL ? B.default.Yr1ogl : B.default["7MZ2tu"], {
@@ -441,7 +441,7 @@ function Q(e) {
                     let e = E.A.getGuild(t);
                     if (null == e) return;
                     let l = { page: P.liQ.GUILD_CHANNEL, section: P.JJy.GUILD_HEADER };
-                    await (0, f.g)({
+                    await (0, p.g)({
                         guild: e,
                         numberOfBoostsToAdd: d,
                         analyticsLocation: l,
@@ -462,7 +462,7 @@ function ee(e) {
         c = (0, d.bG)([_.A], () => _.A.getStateForGuild(t)),
         { analyticsLocations: u } = (0, m.Ay)(g.A.GUILD_POWERUPS_COACHMARK_EXPIRING_PERK),
         h = c?.allPowerups[n.skuId],
-        p = (0, I.A)(h, !0),
+        f = (0, I.A)(h, !0),
         C = i.useRef(null),
         x = (0, d.bG)([A.Ay], () => A.Ay.useReducedMotion);
     if (null == h && !n.isGameServer) return null;
@@ -481,8 +481,8 @@ function ee(e) {
                   stateMachine: x ? "SM_Main_Int" : "SM_Auto",
               })
             : h?.type === O.o9.LEVEL
-              ? (0, l.jsx)(L, { powerup: h, eventTargetRef: C, className: F.Lj })
-              : (0, l.jsx)("img", { alt: "", src: p, className: F.Sl }),
+              ? (0, l.jsx)(T, { powerup: h, eventTargetRef: C, className: F.Lj })
+              : (0, l.jsx)("img", { alt: "", src: f, className: F.Sl }),
         title: N,
         body: b,
         actions: [
@@ -493,7 +493,7 @@ function ee(e) {
                     let e = E.A.getGuild(t);
                     if (null == e) return;
                     let l = { page: P.liQ.GUILD_CHANNEL, section: P.JJy.GUILD_HEADER };
-                    await (0, f.g)({
+                    await (0, p.g)({
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,
                         analyticsLocation: l,

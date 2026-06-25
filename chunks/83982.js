@@ -23,16 +23,16 @@ var l = n(627968),
     _ = n(912630),
     S = n(530804),
     N = n(495544),
-    b = n(941327),
+    b = n(472444),
     y = n(531685),
     T = n(562153),
-    w = n(51082),
-    D = n(566566),
+    D = n(51082),
+    w = n(566566),
     R = n(289552),
     k = n(652215),
     O = n(731854),
     L = n(375708),
-    M = n(391308);
+    M = n(24908);
 let F = u._3.SIZE_80,
     V = u._3.SIZE_40;
 function G(e) {
@@ -80,7 +80,7 @@ function P(e) {
         z = (0, a.bG)([N.default], () => N.default.getId()),
         { user: W, streamId: $, speaking: B } = t,
         Y = W.id === z,
-        Z = (0, w.Ay)(t),
+        Z = (0, D.Ay)(t),
         K = (0, a.bG)([y.A], () => y.A.isFocused()),
         Q = (0, a.bG)([I.A], () => I.A.getWindowFocused(k.MLl.CHANNEL_CALL_POPOUT)),
         X = (0, a.bG)([b.Ay], () => null != W.id && b.Ay.isLocalVideoDisabled(W.id, (0, h.A)(t.type)), [W.id, t.type]),
@@ -108,7 +108,7 @@ function P(e) {
     }, [Z]),
     s && !X && !G && Z && !u && null != U && b.Ay.supports(O.O5.VIDEO))
         ? null != es && null == er
-            ? (0, l.jsx)(D.A, { avError: es, userId: t.id, width: o, selected: u })
+            ? (0, l.jsx)(w.A, { avError: es, userId: t.id, width: o, selected: u })
             : (0, l.jsx)(
                   C.A,
                   {

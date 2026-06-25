@@ -241,7 +241,7 @@ var Y = n(837381),
     V = n(928039),
     W = n(139286),
     $ = n(375708),
-    q = n(729920);
+    q = n(988480);
 function Z() {
     return (0, i.jsxs)("div", {
         className: q.kL,
@@ -309,7 +309,7 @@ let eM = "/assets/03f95d2957fb9ed2.svg",
         ADD_FRIEND: eM,
         FIRST_MESSAGE: "/assets/5ef5055571515a96.svg",
     };
-var eF = n(555644);
+var eF = n(218876);
 function eL(e) {
     let { mask: t } = e;
     return null == t
@@ -433,7 +433,7 @@ var eG = n(825484),
     ek = n(821609),
     ew = n(308528),
     eP = n(411986),
-    eK = n(897968);
+    eK = n(395248);
 function eH(e) {
     let { userId: t } = e,
         n = r.useCallback(
@@ -787,8 +787,8 @@ let e1 = r.memo(function (e) {
             (0, i.jsx)(i.Fragment, { children: n.map((e) => (0, i.jsx)(e1, { item: e, ackedBeforeId: s }, e.id)) })
         );
     });
-var e2 = n(523396);
-function e7(e) {
+var e2 = n(700164);
+function e8(e) {
     let { initialized: t, items: n, loading: s, loadMore: l } = e,
         a = r.useRef(null),
         o = (0, V.A)("for-you", a);
@@ -830,21 +830,21 @@ function e7(e) {
               })
         : (0, i.jsx)(X.y, { className: e2.k$ });
 }
-function e8() {
+function e7() {
     let { initialized: e, items: t, loading: n, loadMore: s } = J(),
-        l = e5(
+        l = e4(
             t,
             (0, g.bG)([_.A], () => _.A.localItems),
         );
-    return (0, i.jsx)(e7, { initialized: e, items: l, loading: n, loadMore: s });
+    return (0, i.jsx)(e8, { initialized: e, items: l, loading: n, loadMore: s });
 }
-function e5(e, t) {
+function e4(e, t) {
     return r.useMemo(() => [...[...e, ...t].sort((e, t) => -1 * k.default.compare(e.id, t.id))], [e, t]);
 }
-function e6() {
+function e9() {
     let { items: e } = J(),
         t = e.length > 0 ? e[0] : null,
-        n = e5(
+        n = e4(
             e,
             (0, g.bG)([_.A], () => _.A.localItems),
         ),
@@ -873,8 +873,8 @@ function e6() {
           })
         : null;
 }
-var e4 = n(815021),
-    e9 = n(935063),
+var e6 = n(815021),
+    e5 = n(935063),
     te = n(378939),
     tt = n(964486),
     tn = n(475743),
@@ -887,7 +887,7 @@ var e4 = n(815021),
     tc = n(517019),
     td = n(309010),
     tu = n(939249),
-    th = n(373423);
+    th = n(186415);
 function tm(e) {
     let { className: t, onJump: n } = e,
         [s, l] = r.useState(!1);
@@ -917,7 +917,7 @@ var tA = n(187322),
     ty = n(290863),
     tj = n(568548),
     tO = n(147925),
-    tD = n(110357);
+    tD = n(851157);
 let tM = { top: 8, bottom: 8, left: -4, right: -4 };
 function tv(e) {
     let { channelState: t, toggle: n, getNumUnreadChannels: s } = e;
@@ -1084,7 +1084,7 @@ function tk(e) {
         : null;
 }
 var tw = n(303727),
-    tP = n(711917);
+    tP = n(492589);
 function tK(e) {
     let { Icon: t, header: n, tip: s, disableStars: l } = e;
     return (0, i.jsxs)("div", {
@@ -1117,7 +1117,7 @@ function tK(e) {
         ],
     });
 }
-var tH = n(575863);
+var tH = n(724151);
 let tB = { offset: { left: 4, right: -12 } };
 function tz(e, t, n) {
     let s = t ? R.Ay.guildFilter : null,
@@ -1205,7 +1205,7 @@ function tX(e) {
                 channel: l,
                 gotoChannel: n,
                 children:
-                    null != s ? (0, i.jsx)(e4.J, { size: "sm", onClick: () => te.A.deleteRecentMention(t.id) }) : null,
+                    null != s ? (0, i.jsx)(e6.J, { size: "sm", onClick: () => te.A.deleteRecentMention(t.id) }) : null,
             }),
             (0, i.jsxs)("div", {
                 className: tH.zC,
@@ -1231,7 +1231,7 @@ function tX(e) {
     });
 }
 function tQ() {
-    return (0, i.jsx)(tK, { Icon: e9.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
+    return (0, i.jsx)(tK, { Icon: e5.X, header: $.intl.string($.t.bgDz74), tip: $.intl.string($.t.NS15vk) });
 }
 var tV = n(702841),
     tW = n(912592),
@@ -1241,8 +1241,8 @@ var tV = n(702841),
     t0 = n(214947),
     t1 = n(711950),
     t3 = n(912309),
-    t2 = n(134314);
-function t7(e) {
+    t2 = n(169085);
+function t8(e) {
     let { closePopout: t } = e,
         n = (0, t3.kX)();
     return (0, i.jsx)(E.m, {
@@ -1263,8 +1263,8 @@ function t7(e) {
         }),
     });
 }
-var t8 = n(783977);
-function t5(e) {
+var t7 = n(783977);
+function t4(e) {
     let { closePopout: t, onSelect: n } = e,
         s = (0, g.bG)([to.A, td.A], () => to.A.getChannel(td.A.getChannelId())),
         {
@@ -1313,7 +1313,7 @@ function t5(e) {
         ],
     });
 }
-function t6() {
+function t9() {
     let e = r.useRef(null);
     return (0, i.jsx)(eX.Y, {
         targetElementRef: e,
@@ -1322,7 +1322,7 @@ function t6() {
         position: "bottom",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(t5, { closePopout: t });
+            return (0, i.jsx)(t4, { closePopout: t });
         },
         children: (t) => {
             let { onClick: n } = t;
@@ -1333,15 +1333,15 @@ function t6() {
                     size: "sm",
                     variant: "secondary",
                     "aria-label": $.intl.string($.t.pEasFX),
-                    icon: t8.R,
+                    icon: t7.R,
                     onClick: n,
                 }),
             });
         },
     });
 }
-var t4 = n(481613),
-    t9 = n.n(t4),
+var t6 = n(481613),
+    t5 = n.n(t6),
     ne = n(621466),
     nt = n(775602),
     nn = n(625494),
@@ -1450,7 +1450,7 @@ var nI = n(350527),
     nS = n(747926),
     nR = n(403362),
     nx = n(37411),
-    nT = n(791641);
+    nT = n(288921);
 function ny(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
         l = (0, g.yK)(
@@ -1534,9 +1534,9 @@ var nj = n(989349),
     nZ = n(268719),
     n0 = n(234957),
     n1 = n(888675),
-    n3 = n(21623),
-    n2 = n(701628);
-let n7 = r.memo(function e(t) {
+    n3 = n(92919),
+    n2 = n(798204);
+let n8 = r.memo(function e(t) {
     let n,
         {
             channel: s,
@@ -1594,7 +1594,7 @@ let n7 = r.memo(function e(t) {
                   ? (n = $.t["VFWjc+"])
                   : (0, nb.kf)(l) && m && (n = $.t.xfkfTK),
             void 0 !== n)
-          ? (0, i.jsx)(n8, { className: r, compact: a, count: 1, collapsedReason: n })
+          ? (0, i.jsx)(n7, { className: r, compact: a, count: 1, collapsedReason: n })
           : (0, i.jsx)(nJ.A, {
                 compact: a,
                 className: c()(r, { [n2.M1]: (0, nK.ec)(l), [n2.XN]: u, [n2._A]: t.isGroupStart }),
@@ -1638,7 +1638,7 @@ let n7 = r.memo(function e(t) {
                 "aria-roledescription": $.intl.string($.t.BAB0yK),
             });
 });
-function n8(e) {
+function n7(e) {
     let { className: t, count: n, compact: s, collapsedReason: l } = e;
     return (0, i.jsx)(nJ.A, {
         className: t,
@@ -1652,10 +1652,10 @@ function n8(e) {
         }),
     });
 }
-var n5 = n(495544),
-    n6 = n(58703),
-    n4 = n(143236),
-    n9 = n(493336),
+var n4 = n(495544),
+    n9 = n(58703),
+    n6 = n(143236),
+    n5 = n(493336),
     se = n(181079),
     st = n(567035),
     sn = n(455234),
@@ -1682,7 +1682,7 @@ var n5 = n(495544),
         (s[(s.ReallyOldChannel = 8)] = "ReallyOldChannel"),
         s),
     sg = (((l = {}).Loading = "loading"), (l.Loaded = "loaded"), (l.Done = "done"), l);
-class sE extends n4.EventEmitter {
+class sE extends n6.EventEmitter {
     state;
     scrollerRef;
     undoStack = [];
@@ -1717,7 +1717,7 @@ class sE extends n4.EventEmitter {
         switch (e.type) {
             case "messages": {
                 let t = sf(e, !1);
-                if (t.messages.some(tl.$r)) return n9.A.clearChannel(e.channelId), { ...e, messages: [] };
+                if (t.messages.some(tl.$r)) return n5.A.clearChannel(e.channelId), { ...e, messages: [] };
                 return t;
             }
             case "nsfw":
@@ -1837,8 +1837,8 @@ class sE extends n4.EventEmitter {
         this.setState({ channels: e });
     };
     loadChannelMessages(e) {
-        n9.A.clearChannel(e.channelId);
-        let t = n9.A.fetchMessages({
+        n5.A.clearChannel(e.channelId);
+        let t = n5.A.fetchMessages({
             channelId: e.channelId,
             limit: M.EMb,
             jump: { messageId: e.oldestReadMessageId, flash: !0 },
@@ -2015,7 +2015,7 @@ function s_(e, t, n, s) {
 }
 let sI = 2 * G.A.Millis.DAY,
     sp = 10 * G.A.Millis.DAY;
-var sC = n(357242);
+var sC = n(916813);
 let sS = { left: 4, right: -12 },
     sR = [M.lAJ.THREAD_CREATED];
 function sx(e) {
@@ -2040,7 +2040,7 @@ function sx(e) {
             ...c,
             children: [
                 !u && (0, i.jsx)(tm, { className: sC.nn, onJump: (e) => o(e, n.id) }),
-                (0, i.jsx)(n7, {
+                (0, i.jsx)(n8, {
                     id: n.id,
                     message: n,
                     channel: t,
@@ -2061,7 +2061,7 @@ function sT(e) {
         r = (0, nb.iJ)(n),
         o = !1,
         c = 0 === t.messages.length || nO()(t.messages[0].timestamp).isSame(nO()(), "day"),
-        d = em.default.getUser(n5.default.getId())?.hasFlag(M.nhx.SPAMMER) ?? !1,
+        d = em.default.getUser(n4.default.getId())?.hasFlag(M.nhx.SPAMMER) ?? !1,
         u = [];
     if (!t.collapsed) {
         let e = null,
@@ -2069,7 +2069,7 @@ function sT(e) {
             m = t.messages.slice(0, 25);
         m.forEach((t) => {
             if (!c && (null == e || !e.isSame(t.timestamp, "day"))) {
-                let n = (0, n6.i$)(t.timestamp, "LL");
+                let n = (0, n9.i$)(t.timestamp, "LL");
                 u.push((0, i.jsx)(nd.A, { className: sC.yF, children: n }, n)), (e = nO()(t.timestamp));
             }
             let m = null == h || (0, nv.A)(n, h, t);
@@ -2111,7 +2111,7 @@ function sT(e) {
     }
     return o && r && nM.A.trackExposure({ location: "20e3b0_2" }), (0, i.jsx)("div", { className: sC.DZ, children: u });
 }
-var sy = n(201489);
+var sy = n(179345);
 let sj = r.memo(function (e) {
         let { channel: t, deleteChannel: n } = e,
             s = r.useRef(null),
@@ -2228,8 +2228,8 @@ function sD(e) {
         }),
     });
 }
-var sM = n(301328),
-    sv = n(691503);
+var sM = n(449616),
+    sv = n(350703);
 function sb(e) {
     var t, n, s, l, a, o;
     let { onJump: d, showTutorial: u, setSeenTutorial: h, closePopout: m } = e,
@@ -2371,7 +2371,7 @@ function sb(e) {
         ? (0, i.jsx)(tK, {
               Icon: tW.K,
               header: $.intl.string($.t["6XMM+D"]),
-              tip: t9().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
+              tip: t5().os?.family === "OS X" ? $.intl.string($.t.w9uDOW) : $.intl.string($.t.BiUJC6),
           })
         : (0, i.jsx)(Y.hD, {
               navigator: C,
@@ -2497,7 +2497,7 @@ function sL() {
 function sU() {
     return (0, i.jsx)(ni, { onClick: () => nn._.dispatch(M.jej.INBOX_MARK_ALL_UNREADS_READ) });
 }
-var sG = n(716030);
+var sG = n(693886);
 function sk(e) {
     let { tab: t, setTab: n, badgeState: s, closePopout: l } = e,
         { enabled: a, inInbox: r } = tq.A.useConfig({ location: "RecentsPopout" }),
@@ -2521,7 +2521,7 @@ function sk(e) {
                         onClick: (e) => e.stopPropagation(),
                         focusProps: { enabled: !1 },
                         "aria-label": $.intl.string($.t["8k+6QY"]),
-                        children: [(0, i.jsx)(sw, { tab: t }), (0, i.jsx)(t7, { closePopout: l })],
+                        children: [(0, i.jsx)(sw, { tab: t }), (0, i.jsx)(t8, { closePopout: l })],
                     }),
                 ],
             }),
@@ -2594,11 +2594,11 @@ function sk(e) {
 function sw(e) {
     let { tab: t } = e;
     return t === u.Y2.FOR_YOU
-        ? (0, i.jsx)(e6, {})
+        ? (0, i.jsx)(e9, {})
         : t === u.Y2.UNREADS
           ? (0, i.jsx)(sU, {})
           : t === u.Y2.MENTIONS
-            ? (0, i.jsx)(t6, {})
+            ? (0, i.jsx)(t9, {})
             : null;
 }
 var sP = n(406810),
@@ -2615,7 +2615,7 @@ var sP = n(406810),
         a),
     sJ = n(970244),
     sY = n(383233),
-    sX = n(560502);
+    sX = n(933494);
 let sQ = { offset: { left: 4, right: -12 } };
 function sV() {
     return (
@@ -2791,7 +2791,7 @@ let sq = r.memo(function (e) {
         l.id,
     );
 });
-var sZ = n(665553);
+var sZ = n(66001);
 function s0(e) {
     let {
         dialogClassName: t,
@@ -2815,7 +2815,7 @@ function s0(e) {
                 component: (0, i.jsx)(sk, { tab: s, setTab: l, badgeState: a, closePopout: r }),
                 children:
                     s === u.Y2.FOR_YOU
-                        ? (0, i.jsx)(e8, {})
+                        ? (0, i.jsx)(e7, {})
                         : s === u.Y2.MENTIONS
                           ? (0, i.jsx)(tJ, { onJump: o })
                           : f && N && s === u.Y2.BOOKMARKS

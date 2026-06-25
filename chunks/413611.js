@@ -15,9 +15,9 @@ var i = n(627968),
     E = n(71393),
     j = n(287809),
     N = n(493540),
-    p = n(469993),
-    A = n(512950),
-    f = n(375708);
+    f = n(469993),
+    p = n(512950),
+    A = n(375708);
 function I(e) {
     let t,
         {
@@ -32,20 +32,20 @@ function I(e) {
     let u = null;
     return (
         d
-            ? (u = f.intl.string(f.t.OrkTBn))
+            ? (u = A.intl.string(A.t.OrkTBn))
             : null != a
               ? (u = a)
-              : null != o && ((u = o), (t = f.intl.string(f.t["YKw/NQ"]))),
+              : null != o && ((u = o), (t = A.intl.string(A.t["YKw/NQ"]))),
         null != u
-            ? (0, i.jsx)(A.p, {
-                  messageType: A.Y.WARNING,
+            ? (0, i.jsx)(p.p, {
+                  messageType: p.Y.WARNING,
                   action: (0, i.jsx)(r.$, { variant: "overlay-secondary", text: t, onClick: s, loading: n }),
                   children: u,
               })
             : null
     );
 }
-var S = n(99895);
+var S = n(499703);
 let C = "role_subscriptions_eligibility_modal";
 function v(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
@@ -54,8 +54,8 @@ function v(e) {
         onClick: function () {
             (0, s.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("79480"), n.e("19631"), n.e("18266")]).then(
-                        n.bind(n, 258118),
+                    let { default: e } = await Promise.all([n.e("50360"), n.e("19631"), n.e("18266")]).then(
+                        n.bind(n, 35737),
                     );
                     return (n) =>
                         (0, i.jsx)(e, {
@@ -71,7 +71,7 @@ function v(e) {
             );
         },
         size: "md",
-        text: f.intl.string(f.t.NL5ZNS),
+        text: A.intl.string(A.t.NL5ZNS),
         icon: a.E,
     });
 }
@@ -86,7 +86,7 @@ function _(e) {
             let t = (0, g.bG)([E.A], () => E.A.getGuild(e)),
                 [n, i] = l.useState(),
                 [s, r] = l.useState(!1),
-                a = (0, p.ME)(t);
+                a = (0, f.ME)(t);
             return {
                 canSubmitAcceptance: (0, g.bG)([j.default], () => {
                     let e = j.default.getCurrentUser();
@@ -108,23 +108,23 @@ function _(e) {
                 }, [e, void 0, a]),
             };
         })(t.id),
-        [A, I] = l.useState(!1);
+        [p, I] = l.useState(!1);
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(o.S, {
                 onChange: function () {
                     I((e) => !e);
                 },
-                checked: A,
+                checked: p,
                 label: n,
             }),
             (0, i.jsx)(d.h, { size: 24 }),
             (0, i.jsx)(r.$, {
-                disabled: !A || !s,
+                disabled: !p || !s,
                 onClick: m,
                 loading: u,
                 variant: "expressive",
-                text: f.intl.string(f.t.NL5ZNS),
+                text: A.intl.string(A.t.NL5ZNS),
             }),
             null != a &&
                 (0, i.jsxs)(i.Fragment, {
@@ -164,20 +164,20 @@ function b(e) {
     return (0, i.jsxs)("div", {
         className: S.OQ,
         children: [
-            (0, i.jsx)("img", { className: S.hV, src: "/assets/45b68ce4917d46f1.svg", alt: f.intl.string(f.t.Af4klP) }),
+            (0, i.jsx)("img", { className: S.hV, src: "/assets/45b68ce4917d46f1.svg", alt: A.intl.string(A.t.Af4klP) }),
             (0, i.jsxs)("div", {
                 className: S.mv,
                 children: [
                     (0, i.jsx)(u.D, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        children: f.intl.string(f.t["PqYfh/"]),
+                        children: A.intl.string(A.t["PqYfh/"]),
                     }),
                     (0, i.jsx)(d.h, { size: 12 }),
                     (0, i.jsx)(m.E, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: f.intl.string(f.t["41wkMc"]),
+                        children: A.intl.string(A.t["41wkMc"]),
                     }),
                     (0, i.jsx)(d.h, { size: 24 }),
                     (0, i.jsx)(T, { guild: t, monetizationEligibility: n }),

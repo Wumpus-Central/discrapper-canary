@@ -4,7 +4,7 @@ var i = n(627968);
 n(64700);
 var r = n(97808),
     s = n(778712),
-    a = n(151900);
+    a = n(67804);
 function o(e) {
     let { user: t, nickname: n } = e,
         o = null != n;

@@ -1,4 +1,4 @@
-n.d(t, { M: () => j, X: () => _ });
+n.d(t, { M: () => _, X: () => j });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -18,8 +18,8 @@ var l = n(627968),
     E = n(360469),
     v = n(818348),
     C = n(375708),
-    I = n(391308);
-function _(e) {
+    I = n(24908);
+function j(e) {
     let { applicationId: t, hideApplicationName: n } = e,
         { gameId: i, gameRecord: s } = (0, f.A)({ applicationId: t }),
         a = (0, h.A)({
@@ -47,13 +47,13 @@ function _(e) {
         }),
     });
 }
-function j(e) {
+function _(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: u, idle: c } = e,
         [g, h] = i.useState(!1),
         f = i.useRef(null),
         x = i.useCallback(() => h(!0), []),
         E = i.useCallback(() => h(!1), []),
-        _ = C.intl.string(C.t["wg/30i"]);
+        j = C.intl.string(C.t["wg/30i"]);
     return (0, l.jsx)(a.Y, {
         targetElementRef: f,
         shouldShow: g,
@@ -71,7 +71,7 @@ function j(e) {
             (0, l.jsx)("div", {
                 ref: f,
                 children: (0, l.jsx)(o.m, {
-                    text: _,
+                    text: j,
                     shouldShow: !g && void 0,
                     children: (0, l.jsx)("div", {
                         className: r()(I.V7, { [I.kl]: u, [I.N7]: c }),
@@ -81,7 +81,7 @@ function j(e) {
                             onClick: (e) => {
                                 e.stopPropagation(), x();
                             },
-                            "aria-label": _,
+                            "aria-label": j,
                             icon: p.o,
                         }),
                     }),

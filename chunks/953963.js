@@ -3,7 +3,7 @@ var n = i(627968),
     l = i(64700),
     s = i(503698),
     a = i.n(s),
-    r = i(922139),
+    r = i(308186),
     d = i(17928),
     o = i(866323),
     c = i(765178),
@@ -19,15 +19,15 @@ var n = i(627968),
     I = i(183555),
     S = i(289173),
     v = i(836602),
-    b = i(958805),
+    E = i(958805),
     y = i(61881),
-    E = i(591179),
-    C = i(624826),
-    w = i(606758),
-    N = i(518477),
-    T = i(652215),
+    b = i(591179),
+    w = i(624826),
+    C = i(606758),
+    T = i(518477),
+    N = i(652215),
     R = i(375708),
-    k = i(381280);
+    k = i(82784);
 let O = "user-profile-save-reset-toolbar-label";
 function L(e) {
     let { className: t, guildId: i } = e,
@@ -51,27 +51,27 @@ function L(e) {
                 }));
             return { widgetsToSave: e, changedWidgets: t, removedWidgets: i, hasUnsavedWidgets: n, canSaveWidgets: l };
         })(),
-        V = (0, E.X)("UserProfileModalV2SaveBar"),
-        { hasUnsavedProfileChanges: B, canSubmitProfileChanges: z } = (0, d.cf)([v.A], () => ({
+        V = (0, b.X)("UserProfileModalV2SaveBar"),
+        { hasUnsavedProfileChanges: B, canSubmitProfileChanges: Y } = (0, d.cf)([v.A], () => ({
             hasUnsavedProfileChanges: v.A.hasUnsavedChanges(),
             canSubmitProfileChanges: v.A.canSubmit(),
         })),
-        X = V && B,
-        Y = F || X,
-        q = !(F && !H) && (!V || z),
-        Q = (0, o.p)(Y, {
+        z = V && B,
+        X = F || z,
+        q = !(F && !H) && (!V || Y),
+        Q = (0, o.p)(X, {
             from: { opacity: 0, y: 80 * !L },
             enter: { opacity: 1, y: 0 },
             leave: { opacity: 0, y: 80 * !L },
         }),
         K = l.useCallback(() => {
-            b.A.clearPendingWidgets(), V && (0, A.XQ)();
+            E.A.clearPendingWidgets(), V && (0, A.XQ)();
         }, [V]),
         $ = l.useCallback(async () => {
             if (V && !v.A.canSubmit()) return;
             _(!0);
             let e = !0;
-            if (X)
+            if (z)
                 try {
                     if (null == i) {
                         let t = v.A.getPendingChanges(),
@@ -82,7 +82,7 @@ function L(e) {
                             (e = n?.ok ?? !1),
                                 n?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, C.t)({
+                                        (0, w.t)({
                                             avatarHash: n.body.avatar,
                                             avatarId: i.avatarId,
                                             avatarAssetOrigin: t.pendingAvatar?.assetOrigin,
@@ -103,7 +103,7 @@ function L(e) {
                             (e = l?.ok ?? !1),
                                 l?.ok &&
                                     (void 0 !== t.pendingAvatar &&
-                                        (0, C.t)({
+                                        (0, w.t)({
                                             isGuildProfile: !0,
                                             avatarHash: l.body.avatar,
                                             avatarId: n.avatarId,
@@ -130,7 +130,7 @@ function L(e) {
                 }
             if (F)
                 try {
-                    for (let e of (await b.A.savePendingWidgets(U), D)) {
+                    for (let e of (await E.A.savePendingWidgets(U), D)) {
                         let t = { widgetEdited: e.type, isWidgetRemoved: !1 };
                         (0, S.fu)(e) &&
                             ((t.gameIds = e.games.map((e) => e.applicationId)),
@@ -142,8 +142,8 @@ function L(e) {
                 } catch {
                     e = !1;
                 }
-            e ? (0, m.x8)() : (0, w.XA)(N.jM.PROFILE_SAVE_GENERIC_FAILURE), _(!1);
-        }, [V, X, F, U, D, W, s, i]);
+            e ? (0, m.x8)() : (0, C.XA)(T.jM.PROFILE_SAVE_GENERIC_FAILURE), _(!1);
+        }, [V, z, F, U, D, W, s, i]);
     return (
         l.useEffect(() => {
             let e = null;
@@ -151,15 +151,15 @@ function L(e) {
                 G(!0), (e = setTimeout(() => G(!1), 500));
             }
             return (
-                j._.subscribe(T.jej.EMPHASIZE_NOTICE, t),
+                j._.subscribe(N.jej.EMPHASIZE_NOTICE, t),
                 () => {
-                    j._.unsubscribe(T.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
+                    j._.unsubscribe(N.jej.EMPHASIZE_NOTICE, t), null !== e && clearTimeout(e);
                 }
             );
         }, []),
         l.useEffect(() => {
-            Y && c.O.announce(R.intl.string(R.t["0Y/qkL"]));
-        }, [Y]),
+            X && c.O.announce(R.intl.string(R.t["0Y/qkL"]));
+        }, [X]),
         Q((e, i) =>
             i
                 ? (0, n.jsx)(r.animated.div, {
@@ -184,7 +184,7 @@ function L(e) {
                                           variant: "secondary",
                                           text: R.intl.string(R.t.yBZMsQ),
                                           onClick: K,
-                                          disabled: !Y || M,
+                                          disabled: !X || M,
                                       }),
                                       (0, n.jsx)(g.$, {
                                           size: "sm",
@@ -192,7 +192,7 @@ function L(e) {
                                           text: R.intl.string(R.t["R3BPH+"]),
                                           onClick: $,
                                           loading: M,
-                                          disabled: !q || !Y,
+                                          disabled: !q || !X,
                                       }),
                                   ],
                               }),

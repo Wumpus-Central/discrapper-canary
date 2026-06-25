@@ -41,7 +41,7 @@ function S() {
     if (null == e) throw Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     return e;
 }
-var y = n(837451),
+var y = n(931642),
     C = n(375708),
     N =
         (((i = {})[(i.REFRESH_APP = -1)] = "REFRESH_APP"),
@@ -68,7 +68,7 @@ var b = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"),
     P = n(287809),
     x = n(430993),
     k = n(825484),
-    U = n(214437);
+    U = n(818725);
 function G(e) {
     let { actions: t, footerInput: n } = e;
     return 0 === t.length && null == n
@@ -86,7 +86,7 @@ function G(e) {
           });
 }
 let F = { bottom: 40, left: 32, right: 32, top: 32 };
-var V = n(831067);
+var V = n(18075);
 function B(e) {
     let { children: t, actions: n, footerInput: i, title: r } = e;
     return (0, s.jsxs)(l.B, {
@@ -113,7 +113,7 @@ var j = n(224640),
     Z = n(10005),
     X = n(834981),
     Q = n(916590),
-    J = n(336862);
+    J = n(709854);
 function ee() {
     return (0, s.jsx)(c.E, {
         variant: "text-md/normal",
@@ -144,8 +144,8 @@ let ed = () => ({
     days: y.default.tVHevX,
     date: y.default.q6jzya,
 });
-var e_ = n(602339),
-    eh = n(402008);
+var e_ = n(477480),
+    eh = n(343768);
 function ef(e) {
     var t;
     let {
@@ -352,9 +352,9 @@ function ep(e) {
 }
 var eE = n(231723),
     em = n(818348),
-    eg = n(42076);
+    eg = n(925660);
 let eA = "https://support.discord.com/hc/articles/14155060633623";
-var eI = n(242235);
+var eI = n(430651);
 let eT = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
@@ -567,7 +567,7 @@ let eT = {
               });
     };
 var ey = n(754302),
-    eC = n(721940);
+    eC = n(910356);
 let eN = {
         [N.EMAIL_VERIFICATION]: C.intl.string(y.default.HC4IiR),
         [N.REFRESH_APP]: C.intl.string(y.default.SzfxQ3),
@@ -622,7 +622,7 @@ let eN = {
             ],
         });
     };
-var eR = n(561452);
+var eR = n(818604);
 let eO = n(843020);
 function eb(e) {
     let { task: t, handleSubmit: n, disabled: i, transitionState: r } = e,

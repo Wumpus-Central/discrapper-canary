@@ -1,18 +1,77 @@
-a.exports = {
-    kL: "container__91a9d",
-    SU: "muted__91a9d",
-    sn: "childContainer__91a9d",
-    EY: "nameplated__91a9d",
-    my: "avatar__91a9d",
-    vk: "clickable__91a9d",
-    mr: "highlighted__91a9d",
-    wH: "selected__91a9d",
-    Zp: "layout__91a9d",
-    Ib: "wrappedLayout__91a9d",
-    Qs: "content__91a9d",
-    UU: "name__91a9d",
-    to: "wrappedName__91a9d",
-    BG: "nameAndDecorators__91a9d",
-    Sv: "subText__91a9d",
-    Y_: "children__91a9d",
-};
+"use strict";
+n.d(t, { $: () => m, A: () => T });
+var i = n(735438),
+    r = n.n(i),
+    s = n(6161),
+    a = n(681154),
+    o = n(17928),
+    l = n(228366),
+    u = n(290863),
+    c = n(99753),
+    d = n(20805),
+    _ = n(83971),
+    h = n(751765),
+    f = n(652215);
+let p = new Set([a.ContentInventoryEntryType.LISTENED_SESSION]),
+    E = new Map();
+function m(e) {
+    return `${e.author_id}:${e.id}`;
+}
+function g(e) {
+    let t = new Set(),
+        n = new Set();
+    for (let i of e) {
+        let e = (function (e) {
+            return (0, h.I5)(e)
+                ? null
+                : (0, h.JM)(e) && e.author_type === s.ContentInventoryAuthorType.USER
+                  ? u.A.getActivities(e.author_id).find((t) =>
+                        t.type === f.$pd.PLAYING && (0, d.P)(e)
+                            ? (0, _.fp)(e, t)
+                            : !!(t.type === f.$pd.LISTENING && (0, d.Tq)(e)) && (0, _.qb)(e, t),
+                    )
+                  : void 0;
+        })(i.content);
+        if (void 0 !== e) {
+            let r = m(i.content);
+            n.add(r), e !== E.get(r) && (t.add(r), E.set(r, e));
+        }
+    }
+    return { updatedKeys: t, matchedKeys: n };
+}
+function A() {
+    let e = !1,
+        t = Array.from(E.keys()),
+        n = new Set(),
+        i = new Set();
+    for (let t of c.A.getFeeds().values()) {
+        let { updatedKeys: r, matchedKeys: s } = g(
+            n.size > 0 ? t.entries.filter((e) => !n.has(m(e.content))) : t.entries,
+        );
+        for (let e of r) n.add(e);
+        for (let e of s) i.add(e);
+        e = e || r.size > 0;
+    }
+    for (let n of r().difference(t, [...i])) E.delete(n), (e = !0);
+    return e;
+}
+class I extends o.Ay.Store {
+    static displayName = "ContentInventoryActivityStore";
+    initialize() {
+        this.waitFor(c.A, u.A), this.syncWith([u.A], A);
+    }
+    canRenderContent = (e) => !(0, h.I5)(e) && (!p.has(e.content_type) || null != this.getMatchingActivity(e));
+    getMatchingActivity(e) {
+        return (0, h.I5)(e) ? null : E.get(m(e));
+    }
+}
+let T = new I(l.h, {
+    CONNECTION_OPEN: function () {
+        E.clear();
+    },
+    CONTENT_INVENTORY_SET_FEED: function (e) {
+        let { feed: t } = e,
+            { updatedKeys: n } = g(t.entries);
+        return n.size > 0;
+    },
+});

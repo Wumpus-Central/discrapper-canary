@@ -277,7 +277,7 @@ async function eR(e) {
     (0, eb.pX)(ep.BVt.CHANNEL(n, l, i), { sourceLocationStack: a });
 }
 var eT = n(320448),
-    ek = n(274119);
+    ek = n(485895);
 function ey(e) {
     let { children: t, title: n, onClickViewAll: l } = e;
     return (0, i.jsxs)("div", {
@@ -302,8 +302,8 @@ function ey(e) {
         ],
     });
 }
-var eL = n(468489),
-    eO = n(992595);
+var eL = n(893705),
+    eO = n(168147);
 function e_(e, t) {
     return ee.A.parse(e, !0, { allowHeading: !0, allowList: !0, allowLinks: !0, channelId: t });
 }
@@ -685,7 +685,7 @@ var eK = n(998445),
     e0 = n(72265),
     e1 = n(454346),
     e8 = n(37948),
-    e4 = n(262420);
+    e4 = n(368340);
 let e5 = { size: "xs", colorClass: e4.wP };
 function e2(e) {
     let { website: t, trackAction: n } = e,
@@ -752,20 +752,20 @@ function e2(e) {
         children: (0, i.jsx)(J.D, { onClick: o, className: e4.yO, title: c, children: r }),
     });
 }
-var e3 = n(31300),
-    e6 = n(802516),
-    e7 = n(22363),
+var e7 = n(31300),
+    e3 = n(802516),
+    e6 = n(22363),
     e9 = n(418524),
-    te = n(141535);
+    te = n(923487);
 function tt(e) {
     let { platform: t, ...n } = e;
     switch (t) {
         case eY.Y.DESKTOP:
-            return (0, i.jsx)(e3.k, { size: "xs", ...n });
+            return (0, i.jsx)(e7.k, { size: "xs", ...n });
         case eY.Y.XBOX:
-            return (0, i.jsx)(e6.Y, { size: "xs", ...n });
+            return (0, i.jsx)(e3.Y, { size: "xs", ...n });
         case eY.Y.PLAYSTATION:
-            return (0, i.jsx)(e7.X, { size: "xs", ...n });
+            return (0, i.jsx)(e6.X, { size: "xs", ...n });
         case eY.Y.NINTENDO:
             return (0, i.jsx)(e9.M, { size: "xs", ...n });
         default:
@@ -797,7 +797,7 @@ function tn(e) {
     );
 }
 var tl = n(424994),
-    ti = n(60541);
+    ti = n(287677);
 function ta() {
     return (0, i.jsx)($.E, { variant: "text-sm/normal", color: "text-subtle", children: eo.intl.string(eo.t.GruYxV) });
 }
@@ -972,7 +972,7 @@ let ts = function (e) {
 };
 var tr = n(714991),
     tc = n(486020),
-    to = n(552523);
+    to = n(779659);
 function tu(e) {
     let { trackAction: t } = e,
         { canStartAuthorization: n, hasAlreadyLinked: l, invite: s, isMember: r, closeModal: c } = z(),
@@ -1411,7 +1411,7 @@ function tX(e) {
         ],
     });
 }
-var tK = n(8208);
+var tK = n(150544);
 function tJ(e) {
     let { game: t, show: n, trackAction: l } = e,
         a = t.name,
@@ -1530,7 +1530,7 @@ let t1 = function (e) {
 };
 var t8 = n(141628),
     t4 = n(289363),
-    t5 = n(448682);
+    t5 = n(192170);
 function t2(e) {
     let { trackAction: t, analyticsLocations: n } = e,
         {
@@ -1594,14 +1594,14 @@ function t2(e) {
         ],
     });
 }
-var t3 = n(80687),
-    t6 = n(775602),
-    t7 = n(248643),
+var t7 = n(80687),
+    t3 = n(775602),
+    t6 = n(248643),
     t9 = n(256905),
     ne = n(34337),
     nt = n(191096),
     nn = n(90721),
-    nl = n(616337);
+    nl = n(722257);
 let ni = a.memo(function (e) {
         let { item: t, index: n, isSelected: l, isPlaying: s, onSelect: c, gameName: o } = e,
             u = a.useCallback(() => c(n), [c, n]);
@@ -1620,7 +1620,7 @@ let ni = a.memo(function (e) {
                     "VIDEO" === t.type &&
                         (0, i.jsx)("div", {
                             className: nl.UZ,
-                            children: (0, i.jsx)(t3.D, { playing: l && s, size: "sm" }),
+                            children: (0, i.jsx)(t7.D, { playing: l && s, size: "sm" }),
                         }),
                 ],
             }),
@@ -1645,7 +1645,7 @@ let ni = a.memo(function (e) {
                     !n && (0, i.jsx)("canvas", { ref: d, className: nl.HW, "aria-hidden": "true" }),
                     (0, i.jsx)("div", {
                         className: nl.tN,
-                        children: (0, i.jsx)(t7.A, {
+                        children: (0, i.jsx)(t6.A, {
                             src: t.url,
                             poster: t.poster ?? "",
                             width: t.width ?? 1920,
@@ -1678,7 +1678,7 @@ function ns(e) {
         [o, u] = a.useState(t.screenshotUrls),
         m = a.useRef(null),
         x = a.useRef(null),
-        h = (0, d.bG)([t6.Ay], () => t6.Ay.useReducedMotion),
+        h = (0, d.bG)([t3.Ay], () => t3.Ay.useReducedMotion),
         { obscured: g } = (0, nt.I3)();
     o !== t.screenshotUrls && (u(t.screenshotUrls), s(0));
     let f = a.useMemo(
@@ -1886,7 +1886,7 @@ function nh(e) {
         }),
     });
 }
-var ng = n(99392);
+var ng = n(241728);
 function nf(e) {
     let { url: t, trackAction: n, title: l, rating: s, ratingCount: r, tooltipVariant: c = "all" } = e,
         o = (0, e8.A)(),
@@ -2175,7 +2175,7 @@ var nA = n(662388),
     nN = n(828614),
     nb = n(561769),
     nS = n(758836),
-    nC = n(804163);
+    nC = n(687747);
 let nR = a.createContext({ trackAction: () => {} });
 function nT(e) {
     let { skuId: t, aspectRatio: n } = e,
@@ -2248,7 +2248,7 @@ function nk(e) {
 var ny = n(871123),
     nL = n(317560),
     nO = n(328100),
-    n_ = n(627771);
+    n_ = n(481595);
 function nG(e) {
     let { skuIds: t, analyticsLocations: n, onCardClick: l } = e,
         s = a.useMemo(() => {
@@ -2374,7 +2374,7 @@ let nB = function (e) {
             };
         case "XBOX_GAME_PASS":
             return {
-                icon: e6.Y,
+                icon: e3.Y,
                 text: eo.intl.string(eo.t["QpN/Iz"]),
                 ariaLabel: eo.intl.string(eo.t["8JZmmF"]),
                 action: _.Ws.XboxGamePassStoreLink,
@@ -2387,7 +2387,7 @@ var nH = n(192308);
 function nz(e) {
     return (0, i.jsx)(h.$, { ...e, variant: "secondary", fullWidth: !0, role: "link" });
 }
-var nX = n(352639);
+var nX = n(271167);
 function nK(e) {
     let t,
         n,

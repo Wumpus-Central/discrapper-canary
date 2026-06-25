@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => p });
 var i = n(627968);
 n(64700);
 var l = n(503698),
@@ -7,7 +7,7 @@ var l = n(503698),
     r = n(834730),
     o = n(204651),
     c = n(375708),
-    d = n(943412);
+    d = n(49332);
 function u(e) {
     let { className: t, count: n } = e;
     return (0, i.jsxs)("div", {
@@ -18,7 +18,7 @@ function u(e) {
         ],
     });
 }
-function h(e) {
+function p(e) {
     let { count: t, ...n } = e;
     return (0, i.jsx)(o.A, {
         label: c.intl.string(c.t["jNqDh/"]),

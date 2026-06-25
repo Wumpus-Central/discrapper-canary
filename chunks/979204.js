@@ -2,8 +2,8 @@ n.d(t, { A: () => h });
 var r = n(627968),
     l = n(64700),
     i = n(717421),
-    s = n(17928),
-    a = n(287809),
+    a = n(17928),
+    s = n(287809),
     u = n(801365),
     o = n(503698),
     c = n.n(o),
@@ -15,31 +15,31 @@ var r = n(627968),
     p = n(646764);
 n(795068);
 var S = n(190107),
-    C = n(777555);
+    C = n(63507);
 let v = { duration: 250 },
     A = function (e) {
         let {
                 currentPx: t,
                 indicator: n,
-                isAnimated: s,
-                quest: a,
+                isAnimated: a,
+                quest: s,
                 sourceQuestContent: u,
                 expansionSpring: o,
                 onClick: S,
                 onMouseEnter: A,
                 onMouseLeave: g,
             } = e,
-            { label: h, targetSec: I, leftPx: D, rightPx: T, index: R } = n,
-            x = a.userStatus?.completedAt != null,
+            { label: h, targetSec: I, leftPx: T, rightPx: D, index: R } = n,
+            x = s.userStatus?.completedAt != null,
             [O, L] = l.useState(!1),
-            P = D - 4,
-            b = t >= P ? Math.min(1, (t - P) / (T - P)) : 0,
+            P = T - 4,
+            N = t >= P ? Math.min(1, (t - P) / (D - P)) : 0,
             k = 0 === R && !x,
-            { fill: N } = (0, i.z)({
-                fill: 100 * b,
+            { fill: b } = (0, i.z)({
+                fill: 100 * N,
                 config: v,
                 onRest: () => {
-                    b <= 0 && L(!1);
+                    N <= 0 && L(!1);
                 },
                 onStart: () => {
                     L(!0);
@@ -57,9 +57,9 @@ let v = { duration: 250 },
         return (0, r.jsxs)(d.animated.div, {
             className: c()(C.ck, { [C.a]: k && O, [C.C9]: !k && O }),
             style: {
-                left: s ? o.to((e) => D - e) : D,
-                "--custom-indicator-size": s ? o.to((e) => `${26 + 2 * e}px`) : "26px",
-                "--custom-indicator-fill": N.to((e) => e),
+                left: a ? o.to((e) => T - e) : T,
+                "--custom-indicator-size": a ? o.to((e) => `${26 + 2 * e}px`) : "26px",
+                "--custom-indicator-fill": b.to((e) => e),
             },
             onMouseDown: y,
             children: [
@@ -72,7 +72,7 @@ let v = { duration: 250 },
                     onMouseLeave: g,
                     children: (0, r.jsx)(p.A, {
                         fullWidth: !0,
-                        quest: a,
+                        quest: s,
                         questContent: m.uF.VIDEO_MODAL,
                         sourceQuestContent: u,
                         autoplay: !1,
@@ -99,7 +99,7 @@ let v = { duration: 250 },
     g = { tension: 500, friction: 30, clamp: !0 };
 function h(e) {
     let { targetSec: t, quest: n, sourceQuestContent: o, questConfig: c, clickable: d = !1 } = e,
-        E = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
+        E = (0, a.bG)([s.default], () => s.default.getCurrentUser()),
         f = l.useMemo(() => c?.features.includes(S.Li.FULL_EPISODE_VIDEO_QUEST) === !0, [c?.features]),
         [_, m] = l.useState(null),
         p = l.useRef(null),
@@ -117,15 +117,15 @@ function h(e) {
             [v],
         ),
         I = l.useMemo(() => [{ index: 0, timeSec: t, widthPx: 32, gapPx: 4, align: "end", clickable: d }], [t, d]),
-        D = l.useMemo(() => (f ? (0, u.mq)(c, E) : void 0), [c, f, E]),
-        T = l.useCallback(
+        T = l.useMemo(() => (f ? (0, u.mq)(c, E) : void 0), [c, f, E]),
+        D = l.useCallback(
             (e, l, i) => {
-                let s = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: D };
+                let a = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: T };
                 return (0, r.jsx)(
                     A,
                     {
                         currentPx: l,
-                        indicator: s,
+                        indicator: a,
                         isAnimated: _ === e.index,
                         expansionSpring: C,
                         quest: n,
@@ -137,7 +137,7 @@ function h(e) {
                     `indicator-${e.index}`,
                 );
             },
-            [t, D, _, C, n, o, h],
+            [t, T, _, C, n, o, h],
         );
-    if (f) return { indicators: I, animatingIndex: _, expansionSpring: C, hoverExpansionPx: 4, renderIndicator: T };
+    if (f) return { indicators: I, animatingIndex: _, expansionSpring: C, hoverExpansionPx: 4, renderIndicator: D };
 }

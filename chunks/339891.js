@@ -94,8 +94,8 @@ var P = n(854378),
     W = n(499785),
     H = (((i = {}).START = "start"), (i.PASSWORD = "password"), (i.SUCCESS = "success"), (i.FAILED = "failed"), i),
     K = n(375708),
-    z = n(244460),
-    Q = n(818050);
+    z = n(501612),
+    Q = n(373378);
 function Y(e) {
     let { setOriginalEmail: t, setSlide: l, ready: i, token: s } = e,
         [r, u] = o.useState(!1),
@@ -464,7 +464,7 @@ var ex = n(628284),
     eE = n(148864),
     e_ = n(354948);
 n(53516);
-var eN = n(653307);
+var eN = n(489979);
 let ej = ["loopback-network", "local-network-access"];
 async function ev() {
     if ("u" < typeof navigator || null == navigator.permissions) return "unknown";
@@ -493,7 +493,7 @@ var eb = n(154672),
     eR = n(331322),
     eO = n(534514),
     eL = n(289873),
-    eP = n(794347);
+    eP = n(807979);
 function eD(e) {
     let { title: t, subtitle: n, buttonText: l, image: i, onButtonClick: s, loading: r } = e;
     return (0, a.jsx)(P.Ay, {
@@ -573,7 +573,7 @@ var eX = n(842241),
     eJ = n(661531),
     e0 = n(993077),
     e1 = n(235986),
-    e2 = n(592743);
+    e2 = n(845671);
 function e7(e) {
     let { text: t, buttonCta: l, onClick: i } = e;
     return (0, a.jsxs)(a.Fragment, {
@@ -618,8 +618,8 @@ function e8(e) {
 var e3 = n(765671),
     e4 = n(9994),
     e6 = n(71393),
-    e5 = n(299091),
-    e9 = n(486020),
+    e9 = n(299091),
+    e5 = n(486020),
     te = n(403362),
     tt = n(778712),
     tn = n(47167),
@@ -628,7 +628,7 @@ var e3 = n(765671),
     ts = n(427262),
     tr = n(172799),
     ta = n(330936),
-    to = n(82210);
+    to = n(269218);
 function tu(e) {
     let t = { onlineCount: e.approximate_presence_count ?? 0, memberCount: e.approximate_member_count ?? 0 };
     return 0 === t.memberCount ? null : t;
@@ -683,9 +683,9 @@ function tA(e) {
                 n
                     ? null
                     : tc(t) && null != t.target_user
-                      ? e9.Ay.getUserAvatarURL(t.target_user)
+                      ? e5.Ay.getUserAvatarURL(t.target_user)
                       : tf(t) && null != t.inviter
-                        ? e9.Ay.getUserAvatarURL(t.inviter)
+                        ? e5.Ay.getUserAvatarURL(t.inviter)
                         : null,
             [t, n],
         ),
@@ -775,7 +775,7 @@ var t_ = n(395671),
     tv = n(548118),
     tI = n(557582),
     tC = n(167630),
-    tS = n(367048);
+    tS = n(308808);
 function tT(e) {
     let { guildScheduledEvent: t, channel: n, onAcceptInvite: l, isSubmitting: i } = e;
     return (0, a.jsxs)("div", {
@@ -855,7 +855,7 @@ function tb(e) {
         ? (0, a.jsx)(tT, { guildScheduledEvent: s, channel: n, isSubmitting: l, onAcceptInvite: i })
         : null;
 }
-var tR = n(467661);
+var tR = n(699533);
 function tO(e) {
     let { invite: t, onAcceptInvite: n, disableUser: l = !1 } = e;
     if (null == t) return null;
@@ -912,7 +912,7 @@ var tL = n(781696),
     tw = n(534400),
     tU = n(773669),
     tM = n(935208),
-    tB = n(963120);
+    tB = n(589104);
 function tV(e) {
     let { guild: t, invite: n, discoveryGuild: l, showGuildTag: i = !1, highContrast: s = !1, hideEnglish: r = !1 } = e,
         u = n.approximate_presence_count ?? 0,
@@ -935,7 +935,7 @@ function tV(e) {
         N = null != g,
         j = _ || N || x,
         v = N || x,
-        I = (0, h.bG)([e5.A], () => e5.A.getInvite(n.code));
+        I = (0, h.bG)([e9.A], () => e9.A.getInvite(n.code));
     if (null == I) return null;
     let C = (0, e4.oO)(I),
         S = s ? "text-default" : "text-subtle";
@@ -1018,7 +1018,7 @@ function tK(e) {
         l = (0, tF.A)("(max-width: 600px), (max-height: 600px)") ? tv.DN.LARGER : tv.DN.XLARGE,
         i = tv.iu[l],
         s = tv.s[l],
-        r = o.useMemo(() => e9.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: i }), [t.icon, t.id, i]),
+        r = o.useMemo(() => e5.Ay.getGuildIconURL({ id: t.id, icon: t.icon, size: i }), [t.icon, t.id, i]),
         u = (0, tH.Rb)(t),
         c =
             null != r
@@ -1048,7 +1048,7 @@ function tK(e) {
 }
 var tz = n(115703),
     tQ = n(81975),
-    tY = n(888849);
+    tY = n(10257);
 function tX(e) {
     let { invite: t, guild: n, profile: l, onAcceptInvite: i } = e,
         { gamesToDisplay: s, lastGameToDisplay: r, remainingGames: o } = (0, tz.A)(l),
@@ -1245,7 +1245,7 @@ function t4(e) {
         r = null != t ? (0, e4.oO)(t) : null,
         o = null != l && tZ(r) && null != t && !tg(t);
     if (l?.splash != null) {
-        let e = e9.Ay.getGuildSplashURL({ id: l.id, splash: l.splash });
+        let e = e5.Ay.getGuildSplashURL({ id: l.id, splash: l.splash });
         null != e && ((i.backgroundImage = `url(${e})`), (i.backgroundSize = "cover"));
     } else s && o && ((i.backgroundImage = `url(${t$})`), (i.backgroundSize = "cover"));
     return (0, a.jsxs)(P.Ay, {
@@ -1257,7 +1257,7 @@ function t4(e) {
     });
 }
 var t6 = n(723702);
-function t5(e) {
+function t9(e) {
     let { alt: t, ariaLabel: n, ariaHidden: l, role: i, width: s = 288, height: r = 192 } = e;
     return (0, a.jsx)("img", {
         style: { width: s, height: r },
@@ -1268,27 +1268,27 @@ function t5(e) {
         role: i ?? "img",
     });
 }
-var t9 = n(611346),
+var t5 = n(790930),
     ne = n(604880);
 function nt(e) {
     let { token: t, hasError: n, errorReason: l } = e;
     return n
         ? (0, a.jsxs)("div", {
-              className: t9.MY,
+              className: t5.MY,
               children: [
-                  (0, a.jsx)("div", { className: t9.r$, children: (0, a.jsx)("img", { src: ne, alt: "" }) }),
+                  (0, a.jsx)("div", { className: t5.r$, children: (0, a.jsx)("img", { src: ne, alt: "" }) }),
                   (0, a.jsxs)("div", {
-                      className: t9.Qs,
+                      className: t5.Qs,
                       children: [
-                          (0, a.jsx)(t5, { alt: "" }),
+                          (0, a.jsx)(t9, { alt: "" }),
                           (0, a.jsx)(eO.D, {
                               variant: "heading-lg/semibold",
-                              className: t9.ky,
+                              className: t5.ky,
                               children: K.intl.string(K.t.RtCSr1),
                           }),
                           (0, a.jsx)(M.E, {
                               variant: "text-md/normal",
-                              className: t9.G3,
+                              className: t5.G3,
                               children: K.intl.string(K.t["S+YjYJ"]),
                           }),
                           (0, a.jsx)(B.$, {
@@ -1305,21 +1305,21 @@ function nt(e) {
               ],
           })
         : (0, a.jsxs)("div", {
-              className: t9.MY,
+              className: t5.MY,
               children: [
-                  (0, a.jsx)("div", { className: t9.r$, children: (0, a.jsx)("img", { src: ne, alt: "" }) }),
+                  (0, a.jsx)("div", { className: t5.r$, children: (0, a.jsx)("img", { src: ne, alt: "" }) }),
                   (0, a.jsxs)("div", {
-                      className: t9.Qs,
+                      className: t5.Qs,
                       children: [
-                          (0, a.jsx)(t5, { alt: "" }),
+                          (0, a.jsx)(t9, { alt: "" }),
                           (0, a.jsx)(eO.D, {
                               variant: "heading-lg/semibold",
-                              className: t9.ky,
+                              className: t5.ky,
                               children: K.intl.string(K.t["9h/0Rl"]),
                           }),
                           (0, a.jsx)(M.E, {
                               variant: "text-md/normal",
-                              className: t9.G3,
+                              className: t5.G3,
                               children: K.intl.string(K.t.Wgm7Om),
                           }),
                           (0, a.jsx)(B.$, {
@@ -1475,7 +1475,7 @@ function ng(e, t) {
 }
 var nf = n(939249),
     nx = n(921853),
-    np = n(750997);
+    np = n(525909);
 let nA = { [nu.tY.MESSAGE]: K.t.fuqnBC, [nu.tY.USER]: K.t.F4jrRW, [nu.tY.GUILD]: K.t.gH3aMs },
     nE = (e) => {
         let { title: t, menuType: n, onReopen: l } = e,
@@ -1506,7 +1506,7 @@ let nA = { [nu.tY.MESSAGE]: K.t.fuqnBC, [nu.tY.USER]: K.t.F4jrRW, [nu.tY.GUILD]:
         });
     };
 var nN = n(881636),
-    nj = n(913951);
+    nj = n(316255);
 let nv = () => {
     let { goToStep: e } = (0, na.n)(),
         t = o.useCallback(() => {
@@ -1564,7 +1564,7 @@ let nv = () => {
         ],
     });
 };
-var nI = n(229503);
+var nI = n(171263);
 let nC = () =>
     (0, a.jsxs)(eR.B, {
         gap: 24,
@@ -1640,7 +1640,7 @@ let nC = () =>
             }),
         ],
     });
-var nS = n(725925);
+var nS = n(128229);
 h.Ay.initialize();
 var nT = (((s = {}).SELECTION = "selection"), (s.DSA = "dsa"), (s.TIDA = "tida"), s);
 let ny = (e) => {
@@ -1795,7 +1795,7 @@ var nk = n(111956),
     nU = n(319060),
     nM = n(844222),
     nB = n(240248),
-    nV = n(115617);
+    nV = n(263905);
 let nF = (0, nB.xI)(nU.A.WAVE_SPLASH_RESPONSIVE_WIDTH_MOBILE),
     nW = { friction: 10, tension: 130 },
     nH = function (e) {
@@ -2036,12 +2036,12 @@ var nJ = n(110782),
     n3 = n(587895),
     n4 = n(242874),
     n6 = n(165191),
-    n5 = n(287809),
-    n9 = n(97352),
+    n9 = n(287809),
+    n5 = n(97352),
     le = n(615396),
     lt = n(788868),
-    ln = n(402693);
-let ll = h.Ay.connectStores([n7.A, n3.A, n9.A, n5.default], (e) => {
+    ln = n(539205);
+let ll = h.Ay.connectStores([n7.A, n3.A, n5.A, n9.default], (e) => {
     let { giftCode: t } = e,
         n = n7.A.get(t.skuId),
         { subscriptionPlanId: l } = t;
@@ -2049,7 +2049,7 @@ let ll = h.Ay.connectStores([n7.A, n3.A, n9.A, n5.default], (e) => {
         sku: n,
         subscriptionPlan: null != l ? (0, le.c9)(l) : null,
         application: n3.A.getApplication(n.applicationId),
-        gifter: n5.default.getUser(t.userId),
+        gifter: n9.default.getUser(t.userId),
     };
 })(function (e) {
     let { error: t, giftCode: n, gifter: l, sku: i, application: s, subscriptionPlan: r } = e,
@@ -2102,7 +2102,7 @@ let ll = h.Ay.connectStores([n7.A, n3.A, n9.A, n5.default], (e) => {
 var li = n(935399),
     ls = n(475743),
     lr = n(707554),
-    la = n(379154);
+    la = n(902738);
 function lo(e) {
     let { loginStatus: t, authBoxClassName: n, onSubmit: l, onCancelAccountDeletion: i } = e,
         s = t === b.aUe.ACCOUNT_DISABLED,
@@ -2131,7 +2131,7 @@ function lo(e) {
 }
 var lu = n(504394),
     lc = n(275538),
-    ld = n(431870);
+    ld = n(357777);
 function lm(e) {
     let { children: t, className: n, ...l } = e,
         i = t();
@@ -2148,7 +2148,7 @@ var lh = n(895600),
     lg = n(506774),
     lf = n(927813),
     lx = n(104798),
-    lp = n(1959);
+    lp = n(14695);
 let lA = "mweb_handoff_nonce",
     lE = "mweb_handoff_nonce_expiration",
     l_ = +lf.A.Millis.MINUTE,
@@ -2268,7 +2268,7 @@ let lA = "mweb_handoff_nonce",
 var lC = n(274303),
     lS = n(139286),
     lT = n(970573),
-    ly = n(364488);
+    ly = n(629640);
 function lb(e) {
     let { onDismiss: t } = e;
     return (
@@ -2992,7 +2992,7 @@ let lq = new lX(g.h, {
     },
 });
 var l$ = n(509434),
-    lZ = n(153801);
+    lZ = n(741449);
 let lJ = function () {
     return (0, a.jsx)(P.Ay, {
         children: (0, a.jsxs)("div", {
@@ -3063,8 +3063,8 @@ function l6(e) {
         children: (0, a.jsx)(eq.animated.div, { style: { opacity: c.opacity }, ref: s, children: n }),
     });
 }
-var l5 = n(153488),
-    l9 = n(934337),
+var l9 = n(153488),
+    l5 = n(934337),
     ie = n(989349),
     it = n.n(ie),
     il = n(955437),
@@ -3159,14 +3159,14 @@ function ir(e) {
 }
 var ia = n(568385);
 function io() {
-    let { required: e, checked: t } = (0, l9.mZ)();
+    let { required: e, checked: t } = (0, l5.mZ)();
     return e
         ? (0, a.jsx)("div", {
               className: Q.Ot,
               children: (0, a.jsx)(ia.J, {
                   label: K.intl.string(K.t["0p3R0+"]),
                   checked: t,
-                  onChange: l9.Bw,
+                  onChange: l5.Bw,
                   labelType: "secondary",
               }),
           })
@@ -3208,7 +3208,7 @@ function im() {
         ]
     );
 }
-var ih = n(731286);
+var ih = n(420182);
 function ig(e) {
     let { consent: t, consentRequired: n, onConsentChange: l } = e;
     return n
@@ -3289,7 +3289,7 @@ function i_(e) {
     function A(e) {
         T.default.track(b.HAw.REGISTER_INPUT_BLUR, { field: e });
     }
-    let E = (0, h.bG)([l5.A], () => l5.A.getAuthenticationConsentRequired()),
+    let E = (0, h.bG)([l9.A], () => l9.A.getAuthenticationConsentRequired()),
         _ = (0, h.bG)([l8.A], () => l8.A.registrationUsernameSuggestion()),
         N = o.useRef(null),
         j = o.useRef(null),
@@ -3327,7 +3327,7 @@ function i_(e) {
     })({ apiErrors: q, emailRef: N, usernameRef: j, globalNameRef: v, passwordRef: I });
     let eg = o.useCallback(async () => {
             let e = null != l ? l.skuId : null,
-                t = l9.mZ.getState(),
+                t = l5.mZ.getState(),
                 r = (0, nB.uJ)(_) ? null : O === _;
             F._.dispatch(b.jej.WAVE_EMPHASIZE), z(!0), $({});
             try {
@@ -3509,7 +3509,7 @@ function i_(e) {
 n(436317);
 var iN = n(292666),
     ij = n(713654),
-    iv = n(131165);
+    iv = n(425245);
 function iI(e) {
     let { channel: t } = e,
         n = (0, ij._U)(t.type);
@@ -3532,7 +3532,7 @@ function iC(e) {
         ],
     });
 }
-var iS = n(831985);
+var iS = n(644977);
 function iT(e) {
     let { guild: t, onlineCount: n } = e;
     if (null == t) return null;
@@ -3658,7 +3658,7 @@ function ib(e) {
 function iR(e) {
     let t,
         { invite: n, authBoxClassName: l, onApiErrors: i, onGotoLogin: s, onRegister: r } = e,
-        u = (0, h.bG)([l5.A], () => l5.A.getAuthenticationConsentRequired()),
+        u = (0, h.bG)([l9.A], () => l9.A.getAuthenticationConsentRequired()),
         c = n?.guild_scheduled_event != null,
         d = o.useRef(null);
     t =
@@ -3791,7 +3791,7 @@ function iD(e) {
             onRegister: g,
             transitionTo: x = D.pX,
         } = e,
-        p = (0, h.bG)([l5.A], () => l5.A.getAuthenticationConsentRequired()),
+        p = (0, h.bG)([l9.A], () => l9.A.getAuthenticationConsentRequired()),
         A = (0, h.bG)([eQ.default], () => eQ.default.isAuthenticated()),
         E = (0, h.bG)([lq], () => lq.isUnderageAnonymous()),
         _ = (0, h.bG)([lC.A], () => lC.A.getHasLoggedInAccounts()),
@@ -4162,7 +4162,7 @@ var iU = n(871194),
     iB = n(894778),
     iV = n(315290),
     iF = n(396574),
-    iW = n(94654);
+    iW = n(171390);
 h.Ay.initialize();
 class iH extends o.PureComponent {
     componentDidMount() {
@@ -4328,7 +4328,7 @@ function i7(e) {
 }
 function i8(e) {
     let { invite: t, inviteKey: n, handleAccept: l, handleDefaultTransition: i } = e,
-        s = (0, h.bG)([e5.A], () => (t.state === b.elq.ERROR ? e5.A.getInviteError(n) : void 0)),
+        s = (0, h.bG)([e9.A], () => (t.state === b.elq.ERROR ? e9.A.getInviteError(n) : void 0)),
         r = t.guild_scheduled_event,
         o = s?.code === b.t02.INVALID_CANNOT_FRIEND_SELF;
     return (0, a.jsxs)("div", {
@@ -4440,7 +4440,7 @@ function i6(e) {
         ],
     });
 }
-function i5(e) {
+function i9(e) {
     let { handleDefaultTransition: t } = e;
     return (0, a.jsxs)(P.Ay, {
         children: [
@@ -4449,7 +4449,7 @@ function i5(e) {
         ],
     });
 }
-var i9 = n(334465);
+var i5 = n(334465);
 let se = (0, n(600975).C)({
     kind: "user",
     id: "2023-09_iar_dsa_webform",
@@ -4473,7 +4473,7 @@ let si = nH(lH),
         let t = o.useCallback(
                 (t) => {
                     let n;
-                    ((n = (0, i9.B)(t, { path: b.BVt.CHANNEL(ni.pv.guildId(), ni.pv.channelId()) })),
+                    ((n = (0, i5.B)(t, { path: b.BVt.CHANNEL(ni.pv.guildId(), ni.pv.channelId()) })),
                     +(n?.params?.channelId !== j.VV.ROLE_SUBSCRIPTIONS))
                         ? (e.transitionTo ?? D.pX)(t)
                         : D.bG(t);
@@ -4509,7 +4509,7 @@ let si = nH(lH),
     }),
     sr = nH(function (e) {
         let { inviteKey: t, location: n, transitionTo: l, login: i } = e,
-            s = (0, h.bG)([e5.A], () => e5.A.getInvite(t)),
+            s = (0, h.bG)([e9.A], () => e9.A.getInvite(t)),
             r = (0, h.bG)([n0.A], () => n0.A.getState(t)),
             u = (0, h.bG)([eQ.default], () => eQ.default.isAuthenticated()),
             c = (0, h.bG)([ed.A], () => ed.A.defaultRoute),
@@ -4660,7 +4660,7 @@ let si = nH(lH),
         if (m || j || s.state === b.elq.APP_OPENED)
             return (0, a.jsx)(i3, { invite: s, rpcConnected: j, onContinue: E });
         let { state: v } = s;
-        if (v === b.elq.APP_NOT_OPENED) return (0, a.jsx)(i5, { handleDefaultTransition: N });
+        if (v === b.elq.APP_NOT_OPENED) return (0, a.jsx)(i9, { handleDefaultTransition: N });
         if ([b.elq.RESOLVING, b.elq.ACCEPTING, b.elq.APP_OPENING].includes(v)) {
             let e =
                 v === b.elq.ACCEPTING ? K.intl.string(K.t["6wsY16"]) : (b.elq.RESOLVING, K.intl.string(K.t["Z+hCVU"]));
@@ -4708,7 +4708,7 @@ let si = nH(lH),
     so = nH(iG),
     su = nH(function (e) {
         let { inviteKey: t, transitionTo: n } = e,
-            l = (0, h.bG)([e5.A], () => e5.A.getInvite(t));
+            l = (0, h.bG)([e9.A], () => e9.A.getInvite(t));
         return (
             o.useEffect(() => {
                 let e = eQ.default.getAnalyticsToken();
@@ -5251,7 +5251,7 @@ class sC extends o.PureComponent {
                 ? null != i && (r = (0, nO.uD)(t.id, i, 1024))
                 : null != e &&
                   "string" == typeof e.splash &&
-                  (r = e9.Ay.getGuildSplashURL({ id: e.id, splash: e.splash }));
+                  (r = e5.Ay.getGuildSplashURL({ id: e.id, splash: e.splash }));
         }
         return { redirectTo: s, splash: r };
     }
@@ -5431,7 +5431,7 @@ class sC extends o.PureComponent {
         });
     }
 }
-let sS = h.Ay.connectStores([eQ.default, e5.A, nR.A, eI.A, eC.A], (e) => {
+let sS = h.Ay.connectStores([eQ.default, e9.A, nR.A, eI.A, eC.A], (e) => {
     let { match: t, location: n } = e,
         l = t?.params?.inviteCode,
         i = null != l ? (0, eX.fB)(l, n.search) : void 0,
@@ -5443,7 +5443,7 @@ let sS = h.Ay.connectStores([eQ.default, e5.A, nR.A, eI.A, eC.A], (e) => {
         giftCode: s,
         guildTemplateCode: r,
         gift: null != s ? nR.A.get(s) : null,
-        invite: null != i ? e5.A.getInvite(i) : null,
+        invite: null != i ? e9.A.getInvite(i) : null,
         guildTemplate: null != r ? eC.A.getGuildTemplate(r) : null,
         hasLoadedExperiments: eI.A.hasLoadedExperiments,
     };

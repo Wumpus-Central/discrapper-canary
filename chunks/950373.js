@@ -44,9 +44,9 @@ var i,
     Y = n(922016),
     W = n(827827),
     K = n(481045),
-    $ = n(395277),
+    $ = n(900640),
     z = n(375708),
-    q = n(982375);
+    q = n(159143);
 function Z(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)("div", {
@@ -455,7 +455,7 @@ var ew = n(769015),
     eB = n(929921),
     ej = n(650338),
     eH = n(753070),
-    eY = n(194368);
+    eY = n(521920);
 function eW(e) {
     let { className: t, color: n, ...i } = e;
     return (0, r.jsx)(U.E, { className: o()({ [eY.Q]: null == n }, t), color: n, ...i });
@@ -466,7 +466,7 @@ var eK = n(95701),
     eq = n(734057),
     eZ = n(184989),
     eX = n(71393),
-    eQ = n(394459),
+    eQ = n(472444),
     eJ = n(576705),
     e0 = n(290863),
     e1 = n(994500),
@@ -506,10 +506,10 @@ var e8 = n(994314),
     tI = n(274372),
     tT = n(572164),
     tS = n(430795),
-    ty = n(646693);
+    ty = n(794981);
 function tC(e) {
     (0, tp.L3)(e, async () => {
-        let { default: e } = await n.e("40638").then(n.bind(n, 562733));
+        let { default: e } = await n.e("40638").then(n.bind(n, 785114));
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }
@@ -572,7 +572,7 @@ let tL = (0, eu.mj)({
 });
 var tw = n(823748),
     tM = n(522055),
-    tP = n(576709);
+    tP = n(76660);
 function tx(e) {
     let { title: t, body: n, ctaText: i, runningGameId: s, targetElementRef: a, onClick: o, onClose: l } = e,
         u = (0, _.bG)([tM.A], () => null != s && tM.A.getGlobalCatalogGame(s)?.can_market === !0, [s]);
@@ -622,7 +622,7 @@ var tG = n(453774),
     tF = n(44724),
     tV = n(153488),
     tB = n(942370),
-    tj = n(610861);
+    tj = n(215917);
 function tH(e, t, n) {
     return (
         null != e &&
@@ -700,16 +700,16 @@ let tY = s.memo(function (e) {
             W = s.useCallback(() => {
                 (0, tt.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("64379"),
-                        n.e("85184"),
-                        n.e("41686"),
+                        n.e("4615"),
+                        n.e("12932"),
+                        n.e("65438"),
                         n.e("76171"),
                         n.e("86672"),
                         n.e("38601"),
                         n.e("36946"),
                         n.e("44727"),
-                        n.e("6565"),
-                        n.e("14304"),
+                        n.e("28724"),
+                        n.e("82013"),
                         n.e("76229"),
                     ]).then(n.bind(n, 477156));
                     return (t) =>
@@ -725,7 +725,7 @@ let tY = s.memo(function (e) {
             $ = s.useCallback(() => {
                 (0, tb.pK)({ gameApplicationId: d?.id, buttonVariant: "admin" }),
                     (0, tt.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("42209"), n.e("37084"), n.e("74132")]).then(
+                        let { default: e } = await Promise.all([n.e("99681"), n.e("37084"), n.e("74132")]).then(
                             n.bind(n, 279871),
                         );
                         return (t) => (0, r.jsx)(e, { gameName: K, gameApplicationId: d?.id, ...t });
@@ -936,7 +936,7 @@ function t$(e) {
     return (0, r.jsx)(tE.A, { tooltipText: z.intl.string(z.t.vyaWs7), onClick: o, onMouseDown: i, icon: to.U, ref: n });
 }
 var tz = n(428689),
-    tq = n(673294);
+    tq = n(686926);
 function tZ(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(E.D, {
@@ -958,8 +958,8 @@ function tX(e) {
 }
 var tQ = n(409626),
     tJ = n(692969),
-    t0 = n(16590),
-    t1 = n(379414);
+    t0 = n(788077),
+    t1 = n(984470);
 function t2(e) {
     let { name: t, applicationId: n } = e,
         i = (0, tJ.A)({
@@ -1078,8 +1078,8 @@ let t5 = {
     "1121201675240210523": "884849473329692723",
     "1402418594532298837": "560127830160048128",
 };
-var t7 = n(911070),
-    t8 = n(490696),
+var t7 = n(41959),
+    t8 = n(503432),
     t9 = n(268920),
     ne = n(633217);
 function nt(e) {

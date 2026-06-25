@@ -9,8 +9,8 @@ var n = l(627968),
     u = l(858174),
     d = l(530574),
     m = l(667408),
-    h = l(429364),
-    f = l(879305);
+    h = l(362081),
+    f = l(159369);
 let p = { [o.yz.ORIGINAL]: null, [o.yz.PORTRAIT_9_16]: 9 / 16, [o.yz.LANDSCAPE_16_9]: 16 / 9 };
 function x() {
     let { cropPreset: e, videoPlayerRef: t } = (0, h.T)(),
@@ -58,8 +58,8 @@ function x() {
     );
 }
 var v = l(584794),
-    g = l(885458),
-    j = l(97451);
+    g = l(609308),
+    j = l(594731);
 function b(e) {
     let { transitionState: t } = e,
         {
@@ -132,9 +132,9 @@ function b(e) {
     let I = null == y || t !== s.ip.ENTERED,
         O = E.type === o.nQ.VOICE_CLIP,
         D = A === u.Y.CROP,
-        _ = null != k ? k.width / k.height : null,
-        M = D
-            ? _
+        M = null != k ? k.width / k.height : null,
+        _ = D
+            ? M
             : (function (e, t) {
                   switch (e) {
                       case o.yz.PORTRAIT_9_16:
@@ -145,7 +145,7 @@ function b(e) {
                       default:
                           return t;
                   }
-              })(N, _);
+              })(N, M);
     return (0, n.jsxs)("div", {
         className: f.OJ,
         children: [
@@ -161,7 +161,7 @@ function b(e) {
                                   children: (0, n.jsx)(m.A, {
                                       ref: b,
                                       cropFraming: !O,
-                                      frameAspectRatio: M,
+                                      frameAspectRatio: _,
                                       overlay: D && !O ? (0, n.jsx)(x, {}) : null,
                                   }),
                               }),

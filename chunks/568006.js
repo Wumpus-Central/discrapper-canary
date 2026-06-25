@@ -1,4 +1,4 @@
-n.d(t, { P0: () => eP, em: () => ek }), n(321073);
+n.d(t, { P0: () => eM, em: () => ek }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(17928),
@@ -21,13 +21,13 @@ var i = n(627968),
     v = n(935208),
     _ = n(820672),
     j = n(768349),
-    N = n(783198),
+    N = n(244957),
     T = n(375708);
 function y(e) {
     let { currentUserId: t, message: l, application: r, channel: a, analyticsLocations: y, onView: S } = e,
         { staticBannerSrc: b, videoBannerSrc: L, bannerAspectRatio: R } = (0, g.f)(r),
         k = I.Ay.getApplicationIconURL({ id: r.id, icon: r.icon }),
-        P = (0, s.bG)([p.Ay, f.A], () =>
+        M = (0, s.bG)([p.Ay, f.A], () =>
             p.Ay.getVisibleRunningGames().find((e) => {
                 let { id: t } = e;
                 if (t === r.id) return !0;
@@ -35,7 +35,7 @@ function y(e) {
                 return null != n && t === n.id;
             }),
         ),
-        M = (0, s.bG)([x.A], () => x.A.getCurrentUserActiveStream()),
+        P = (0, s.bG)([x.A], () => x.A.getCurrentUserActiveStream()),
         D = (0, s.bG)([E.A], () => E.A.getChannelId()),
         O = v.default.extractTimestamp(l.id) + _.M < Date.now(),
         U = (0, i.jsx)(i.Fragment, { children: (0, d.Wf)(l, a, t) }),
@@ -45,11 +45,11 @@ function y(e) {
     return (
         O
             ? ((w = T.intl.string(N.default.u4QmWl)), (B = !0))
-            : null != M
+            : null != P
               ? ((w = T.intl.string(N.default.P0wwmM)), (B = !0))
               : D !== a.id
                 ? ((w = T.intl.string(N.default.qRXats)), (B = !0))
-                : null == P && ((w = T.intl.string(N.default["43zohO"])), (B = !0)),
+                : null == M && ((w = T.intl.string(N.default["43zohO"])), (B = !0)),
         (0, i.jsx)(m.h, {
             header: T.intl.string(N.default.nAyuPp),
             title: r.name,
@@ -67,14 +67,14 @@ function y(e) {
                               trackingArea: h.kY.STREAM,
                               disabled: B,
                               onClick: () => {
-                                  null != P &&
+                                  null != M &&
                                       ((0, C.isWindows)()
-                                          ? (0, A.A)(P.pid)
+                                          ? (0, A.A)(M.pid)
                                           : (0, o.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    n.e("64379"),
-                                                    n.e("85184"),
-                                                    n.e("41686"),
+                                                    n.e("4615"),
+                                                    n.e("12932"),
+                                                    n.e("65438"),
                                                     n.e("76171"),
                                                     n.e("38601"),
                                                     n.e("36946"),
@@ -83,8 +83,8 @@ function y(e) {
                                                     n.e("44727"),
                                                     n.e("59778"),
                                                     n.e("25241"),
-                                                    n.e("6565"),
-                                                    n.e("14304"),
+                                                    n.e("28724"),
+                                                    n.e("82013"),
                                                     n.e("76229"),
                                                     n.e("91782"),
                                                     n.e("90088"),
@@ -111,8 +111,8 @@ var S = n(666176),
     L = n(629016),
     R = n(480595),
     k = n(290863),
-    P = n(461213),
-    M = n(287809),
+    M = n(461213),
+    P = n(287809),
     D = n(454292),
     O = n(850670),
     U = n(125017),
@@ -164,7 +164,7 @@ var ec = n(939249),
     em = n(780907),
     eh = n(140651),
     eg = n(878831),
-    ep = n(193018);
+    ep = n(378);
 function eA(e) {
     let { applicationName: t, iconSrc: n, viewAction: l, trackingConfig: s } = e,
         { primaryColor: a, secondaryColor: o } = (0, eh.A)(n),
@@ -278,9 +278,9 @@ function ex(e) {
             }
             return { actions: e, hasAccountLinkButton: l };
         }, [p, g, A, L, v, n.id, t.id, N, y, _, S]),
-        P = R.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
-    (0, eg.A)(P, _);
-    let M = R.length > 0,
+        M = R.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
+    (0, eg.A)(M, _);
+    let P = R.length > 0,
         D = l.useMemo(
             () =>
                 (0, i.jsx)(r.E, {
@@ -288,9 +288,9 @@ function ex(e) {
                     className: ep.h_,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, d.BE)(t, a, o, u, M),
+                    children: (0, d.BE)(t, a, o, u, P),
                 }),
-            [t, a, o, u, M],
+            [t, a, o, u, P],
         ),
         O = {
             id: n.id,
@@ -415,8 +415,8 @@ function eI(e) {
                 return { label: T.intl.string(T.t["jaYS/h"]), icon: V.h, trackingArea: h.kY.CLOUD_PLAY, onClick: L };
         }, [L]),
         k = (0, J.F)(c),
-        P = l.useMemo(() => (null != S ? S : null != k && _ ? k : void 0), [_, S, k]),
-        M = Y.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
+        M = l.useMemo(() => (null != S ? S : null != k && _ ? k : void 0), [_, S, k]),
+        P = Y.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
         { canStartAuthorization: D, hasAlreadyLinked: O, startAuthorization: U } = (0, K.RD)(c),
         G = (0, z.z)(U, O),
         er = !(0, et.A)(v, x, c.id),
@@ -431,7 +431,7 @@ function eI(e) {
             !ec.hasAnyAfter(e, (e) => null != e.activity && e.activity.type === en.xL.JOIN, 25) &&
                 D &&
                 !O &&
-                M.enabled &&
+                P.enabled &&
                 t.push(w.M.GAME_INVITE_ACCOUNT_LINK_UPSELL),
             (0, i.jsx)(q.Ay, {
                 contentTypes: t,
@@ -469,12 +469,12 @@ function eI(e) {
               tryWithGdnAction: R,
               staticBannerSrc: y,
               hideBanner: A,
-              onClickContent: P,
+              onClickContent: M,
               iconSrc: j,
               onView: E,
               presenceActivity: v,
               analyticsLocations: o,
-              showAuthButton: D && !O && M.enabled,
+              showAuthButton: D && !O && P.enabled,
               startAuthorization: G,
               accountLinkButtonRef: eo,
               renderAccountLinkUpsell: eu,
@@ -491,7 +491,7 @@ function eI(e) {
               tryWithGdnAction: R,
               staticBannerSrc: y,
               hideBanner: A,
-              onClickContent: P,
+              onClickContent: M,
               iconSrc: j,
               onView: E,
               presenceActivity: v,
@@ -499,7 +499,7 @@ function eI(e) {
               hideParty: p,
               partyStatusElement: C,
               analyticsLocations: o,
-              showAuthButton: D && !O && M.enabled,
+              showAuthButton: D && !O && P.enabled,
               canPromptAuth: D && !O,
               startAuthorization: G,
               accountLinkButtonRef: eo,
@@ -699,7 +699,7 @@ function ek(e) {
         c = l.useMemo(
             () =>
                 a.map((e) => {
-                    let t = M.default.getUser(e);
+                    let t = P.default.getUser(e);
                     return null != t ? t : G.mt;
                 }),
             [a],
@@ -716,7 +716,7 @@ function ek(e) {
         [c, o, d, n.guild_id, r],
     );
 }
-function eP(e) {
+function eM(e) {
     let { analyticsLocations: t, app: n, channel: l, message: r, hideParty: o, hideBanner: d, onView: c } = e,
         u = (0, a.b)(n),
         m = (0, s.bG)([b.default], () => b.default.getId()),
@@ -730,7 +730,7 @@ function eP(e) {
                 );
             }
         }, [r, l, m]),
-        g = (0, s.bG)([R.A, P.A], () => (0, D.A)(R.A, P.A, u.id), [u.id]),
+        g = (0, s.bG)([R.A, M.A], () => (0, D.A)(R.A, M.A, u.id), [u.id]),
         p = ek({ presenceActivity: h, channel: l, activityActionType: r.activity?.type });
     return (0, eL.pH)(h?.party?.id) || u.id === S.HT.id
         ? (0, i.jsx)(eb, {

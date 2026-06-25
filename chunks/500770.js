@@ -16,7 +16,7 @@ var l = n(503698),
     A = n(724609),
     x = n(411342),
     f = n(375708),
-    E = n(859715);
+    E = n(48131);
 function I(e) {
     let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: l, children: o } = e;
     return (0, i.jsxs)("div", {
@@ -80,17 +80,17 @@ function v(e) {
             lineClamp: S = 1,
             cardWidth: b = 332,
             cardHeight: L,
-            thumbnailHeight: k = 187,
-            descriptionTextVariant: R = "text-sm/normal",
-            isDraft: P = !1,
+            thumbnailHeight: R = 187,
+            descriptionTextVariant: k = "text-sm/normal",
+            isDraft: M = !1,
         } = e,
-        M = (0, g.Ld)(),
+        P = (0, g.Ld)(),
         D = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(I, {
-                    showDraftBadge: P,
+                    showDraftBadge: M,
                     hidePurchaseToUnlockBadge: !0,
-                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: k } }),
+                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: R } }),
                 }),
                 (0, i.jsxs)("div", {
                     className: E.MS,
@@ -102,18 +102,18 @@ function v(e) {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     className: E.tZ,
-                                    id: M,
+                                    id: P,
                                     children: n,
                                 }),
                                 (0, i.jsx)(u.M, {
                                     children: (0, i.jsx)(p.A, {
-                                        variant: R,
+                                        variant: k,
                                         color: "text-muted",
                                         lineClamp: S,
                                         text: l,
                                     }),
                                 }),
-                                A && (0, i.jsx)(C, { onShowFullDescription: v, variant: R }),
+                                A && (0, i.jsx)(C, { onShowFullDescription: v, variant: k }),
                                 y || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
@@ -151,7 +151,7 @@ function v(e) {
             ],
         });
     return null == j
-        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": M, children: D })
+        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": P, children: D })
         : (0, i.jsx)("div", {
               style: { width: b, height: L },
               children: (0, i.jsx)(h.s, {

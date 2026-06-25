@@ -19,8 +19,8 @@ var i = n(627968),
     y = n(47167),
     E = n(882840),
     N = n(713654),
-    j = n(611371),
-    v = n(769015),
+    v = n(611371),
+    j = n(769015),
     I = n(408822),
     T = n(360729),
     _ = n(508654),
@@ -40,9 +40,9 @@ var i = n(627968),
     H = n(136523),
     G = n(806931),
     F = n(375708),
-    z = n(662731),
-    W = n(82644),
-    Y = n(992595);
+    z = n(189090),
+    W = n(188628),
+    Y = n(168147);
 function K(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, U.A)(n, t, l);
@@ -66,7 +66,7 @@ function X(e) {
             (t = (0, i.jsxs)(i.Fragment, {
                 children: [
                     (0, i.jsx)(P.Ay.Divider, { className: W.yF }),
-                    (0, i.jsx)(v.A, { game: n, className: W.RI }),
+                    (0, i.jsx)(j.A, { game: n, className: W.RI }),
                     (0, i.jsx)(d.E, {
                         className: W.W$,
                         variant: "text-md/normal",
@@ -89,7 +89,7 @@ function X(e) {
     return (0, i.jsx)("div", { className: W.kL, children: t });
 }
 function Z(e) {
-    let { channel: t, guild: a, appContext: c, inCall: g, isChatOpen: f, exitFullScreen: v, guildRoomVisible: _ } = e,
+    let { channel: t, guild: a, appContext: c, inCall: g, isChatOpen: f, exitFullScreen: j, guildRoomVisible: _ } = e,
         { focusedParticipant: S } = (0, r.cf)(
             [V.A],
             () => ({
@@ -169,7 +169,7 @@ function Z(e) {
                     appContext: c,
                     inCall: g,
                     isChatOpen: f,
-                    exitFullScreen: v,
+                    exitFullScreen: j,
                     focusedApplication: q,
                     shouldShowHeaderParticipants: !0,
                     guildRoomVisible: _,
@@ -188,7 +188,7 @@ function Z(e) {
                                       })
                                     : null,
                                 K,
-                                R && (0, i.jsx)(j.A, { className: W.vW }),
+                                R && (0, i.jsx)(v.A, { className: W.vW }),
                                 en &&
                                     (0, i.jsx)(o.m, {
                                         text: F.intl.string(F.t.QyZ4Td),

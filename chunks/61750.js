@@ -22,9 +22,9 @@ let a = function (e) {
         async () => {
             if ((0, s.EZ)(t.skuId) || t.skuId === s.Dp.ORB_PROFILE_BADGE) {
                 let { default: e } = await Promise.all([
-                    n.e("33460"),
-                    n.e("32890"),
-                    n.e("4430"),
+                    n.e("17640"),
+                    n.e("97106"),
+                    n.e("8718"),
                     n.e("54048"),
                     n.e("7167"),
                     n.e("92789"),
@@ -42,7 +42,7 @@ let a = function (e) {
                     n.e("86546"),
                     n.e("43256"),
                     n.e("32737"),
-                    n.e("14122"),
+                    n.e("2247"),
                     n.e("25265"),
                     n.e("95481"),
                 ]).then(n.bind(n, 328064));
@@ -58,8 +58,8 @@ let a = function (e) {
                     });
             }
             let { default: e } = await Promise.all([
-                n.e("33460"),
-                n.e("4430"),
+                n.e("17640"),
+                n.e("8718"),
                 n.e("54048"),
                 n.e("41043"),
                 n.e("1462"),
@@ -79,7 +79,7 @@ let a = function (e) {
                 n.e("86546"),
                 n.e("43256"),
                 n.e("32737"),
-                n.e("14122"),
+                n.e("2247"),
                 n.e("2750"),
                 n.e("25265"),
                 n.e("40481"),

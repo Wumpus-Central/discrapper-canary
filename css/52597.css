@@ -1,0 +1,419 @@
+.formError_f0c2ea {
+    margin-bottom: 20px
+}
+
+.card_f0c2ea {
+    padding: 20px
+}
+
+.formActions_f0c2ea {
+    -moz-column-gap: 2px;
+    column-gap: 2px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px
+}
+
+.addressSection_f0c2ea,
+.formActions_f0c2ea {
+    margin-top: 20px
+}
+
+.defaultSection_f0c2ea {
+    margin: var(--space-12) 0
+}
+
+.defaultCheckboxLabel_f0c2ea {
+    margin-inline-start: 4px
+}
+
+.sectionHeader_f0c2ea {
+    color: var(--text-muted);
+    margin-bottom: 10px
+}
+
+.subText_f0c2ea {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 20px
+}
+
+.errorSubText_f0c2ea {
+    color: var(--red-400)
+}
+
+.disabledTooltipWrapper_f0c2ea {
+    position: relative
+}
+
+.disabledTooltipTarget_f0c2ea {
+    cursor: not-allowed;
+    inset: 0;
+    position: absolute;
+    z-index: 1
+}
+
+.paymentSourceRow__0eeee {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 0
+}
+
+.giftCardRowRight__0eeee {
+    align-items: center;
+    display: flex;
+    gap: 12px
+}
+
+.giftCardBalance__0eeee {
+    align-items: center;
+    border: 1px solid var(--custom-background-modifier-accent);
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    min-height: 32px;
+    min-width: 64px;
+    padding: 4px 12px
+}
+
+.subText__0eeee {
+    margin-top: 4px
+}
+
+.footer__0eeee {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px
+}
+
+.footerContent__0eeee {
+    flex: 1
+}
+
+.lockIcon__0eeee {
+    margin-inline-end: var(--space-4)
+}
+
+.syncing_c72ea8 {
+    align-items: center;
+    display: flex;
+    height: 300px;
+    justify-content: center
+}
+
+.pageActions__2d021 {
+    border-radius: 3px;
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    padding: 20px 0
+}
+
+.buttons__2d021 {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-4)
+}
+
+.payment_e9cb00 {
+    transition: background-color .2s ease;
+    width: 100%
+}
+
+.payment_e9cb00:hover {
+    background-color: var(--background-mod-muted)
+}
+
+.payment_e9cb00[data-expanded=true] {
+    background-color: var(--background-mod-muted)
+}
+
+.expandInfo_e9cb00 {
+    padding: 20px
+}
+
+.summaryInfo_e9cb00 {
+    color: var(--text-strong);
+    cursor: pointer;
+    padding: var(--space-16);
+    transition: background-color .2s ease
+}
+
+.summaryInfo_e9cb00[data-expanded=true] {
+    background-color: var(--background-mod-muted)
+}
+
+.summaryInfo_e9cb00:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.expandedInfo_e9cb00 {
+    padding: var(--space-16)
+}
+
+.paymentHeader_e9cb00 {
+    border-top: 1px solid;
+    border-color: var(--primary-500);
+    font-size: 16px;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 8px;
+    margin-top: 20px;
+    padding-top: 20px
+}
+
+.paymentHeader_e9cb00:first-child {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0
+}
+
+.paymentText_e9cb00 {
+    color: var(--text-default);
+    font-size: 14px;
+    line-height: 1.4
+}
+
+.paymentBreakdown_e9cb00 {
+    padding-top: 10px
+}
+
+.paymentDetail_e9cb00 {
+    margin-top: 12px
+}
+
+.paymentDetail_e9cb00:first-child {
+    margin-top: 20px
+}
+
+.additionalInformationButtonContainer_e9cb00 {
+    margin-top: 16px
+}
+
+.guildProductDetail_e9cb00 {}
+
+.date_e9cb00 {
+    width: 20%
+}
+
+.amount_e9cb00 {
+    align-content: center;
+    display: flex;
+    justify-content: flex-end
+}
+
+.statusTag_e9cb00 {
+    border-radius: 3px;
+    color: var(--white);
+    display: block;
+    font-size: 11px;
+    font-weight: var(--font-weight-medium);
+    height: 14px;
+    letter-spacing: .4px;
+    line-height: 14px;
+    margin-inline-end: 20px;
+    max-width: 180px;
+    overflow: hidden;
+    padding: 0 4px;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.statusTagGreen_e9cb00 {
+    background-color: var(--green-360)
+}
+
+.statusTagRed_e9cb00 {
+    background-color: var(--background-feedback-critical)
+}
+
+.statusTagGrey_e9cb00 {
+    background-color: var(--primary-400)
+}
+
+.statusTagYellow_e9cb00 {
+    background-color: var(--yellow-360)
+}
+
+.price_e9cb00 {
+    white-space: nowrap
+}
+
+.orbPrice_e9cb00 {
+    align-items: center;
+    display: inline-flex;
+    gap: 4px
+}
+
+.description_e9cb00 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 50%;
+    margin-inline-end: 8px
+}
+
+.descriptionIcon_e9cb00 {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    margin-inline-end: 10px
+}
+
+.guildDescriptionIcon_e9cb00 {
+    background-color: var(--background-mod-muted)
+}
+
+.shopIcon_e9cb00 {
+    height: 20px;
+    margin-inline-end: 10px;
+    width: 20px
+}
+
+.expand_e9cb00 {
+    height: 24px;
+    margin-inline-start: 20px;
+    width: 24px
+}
+
+.downloadInvoice_e9cb00 {
+    font-size: 14px;
+    margin-top: 12px
+}
+
+.downloadRefundInvoice_e9cb00 {
+    margin-inline-start: 14px
+}
+
+.refundSubHeader_e9cb00 {
+    font-size: 12px;
+    font-weight: var(--font-weight-semibold);
+    margin: 20px 0 8px;
+    text-transform: uppercase
+}
+
+.refundSelect_e9cb00 {
+    flex: 1;
+    margin-inline-end: 12px
+}
+
+.refundCriteria_e9cb00 {
+    margin-inline-end: 32px
+}
+
+.refundCriteriaIcon_e9cb00 {
+    height: 16px;
+    margin-inline-end: 8px;
+    width: 16px
+}
+
+.giftIcon_e9cb00 {
+    color: var(--text-default);
+    height: 16px;
+    margin-inline-start: 10px;
+    width: 16px
+}
+
+@media (max-width:800px) {
+    .refundCriteria_e9cb00 {
+        margin-inline-end: 16px
+    }
+}
+
+.compact_e9cb00 .amount_e9cb00 {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    width: 20%
+}
+
+.compact_e9cb00 .summaryInfo_e9cb00 {
+    padding: 16px 20px
+}
+
+.compact_e9cb00 .amount_e9cb00,
+.compact_e9cb00 .date_e9cb00,
+.compact_e9cb00 .description_e9cb00 {
+    text-transform: unset
+}
+
+.compact_e9cb00 .date_e9cb00 {
+    opacity: .6
+}
+
+.compact_e9cb00 .descriptionIcon_e9cb00 {
+    height: 40px;
+    width: 40px
+}
+
+.compact_e9cb00 .statusTag_e9cb00 {
+    margin: 8px 0 0
+}
+
+.compact_e9cb00 .expand_e9cb00 {
+    margin-inline-start: 8px
+}
+
+.compact_e9cb00 .date_e9cb00 {
+    font-size: 12px;
+    line-height: 16px;
+    width: unset
+}
+
+.compact_e9cb00 .description_e9cb00 {
+    flex: 1 1 55%;
+    text-transform: unset;
+    width: unset
+}
+
+.refundActions_e9cb00 {
+    align-items: flex-end;
+    display: flex;
+    justify-content: space-between
+}
+
+.refundIconContainer_e9cb00,
+.refundRules_e9cb00 {
+    display: flex
+}
+
+.copiableContainer_e9cb00 {
+    cursor: pointer
+}
+
+.paymentInfo_e9cb00 {
+    display: flex;
+    justify-content: space-between
+}
+
+.divider_e9cb00 {
+    border-top: 1px solid var(--interactive-background-hover);
+    margin-bottom: 16px;
+    margin-top: 16px;
+    width: 100%
+}
+
+.sectionDivider_e9cb00 {
+    margin-bottom: 20px;
+    margin-top: 20px
+}
+
+.guildProductBenefits_e9cb00 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    padding: 16px
+}
+
+.guildProductBenefitLabel_e9cb00 {
+    margin-bottom: 12px;
+    text-transform: uppercase
+}
+
+.warningBlock_e9cb00 {
+    align-items: center;
+    overflow: auto;
+    width: 100%
+}

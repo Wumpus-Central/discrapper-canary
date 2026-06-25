@@ -1,16 +1,16 @@
-l.d(t, { A: () => v });
-var n = l(627968),
-    i = l(64700),
-    s = l(843282),
-    a = l(990078),
-    r = l(834730),
-    d = l(191023),
-    c = l(428678),
-    u = l(39623),
-    o = l(873298),
-    x = l(26692);
+n.d(t, { A: () => v });
+var l = n(627968),
+    i = n(64700),
+    s = n(843282),
+    r = n(990078),
+    a = n(834730),
+    d = n(191023),
+    c = n(428678),
+    u = n(39623),
+    o = n(873298),
+    x = n(321476);
 function m(e) {
-    let { redactionType: t, label: l } = e,
+    let { redactionType: t, label: n } = e,
         s = i.useMemo(() => {
             switch (t) {
                 case o.TO.BLUR:
@@ -23,51 +23,51 @@ function m(e) {
                     return null;
             }
         }, [t]);
-    return (0, n.jsxs)("div", {
+    return (0, l.jsxs)("div", {
         className: x.q,
         children: [
-            null != s && (0, n.jsx)(s, { size: "xs", color: "currentColor" }),
-            (0, n.jsx)(r.E, { variant: "text-md/normal", color: "text-default", children: l }),
+            null != s && (0, l.jsx)(s, { size: "xs", color: "currentColor" }),
+            (0, l.jsx)(a.E, { variant: "text-md/normal", color: "text-default", children: n }),
         ],
     });
 }
 let h = i.memo(function (e) {
     let { option: t } = e;
-    return (0, n.jsx)(m, { redactionType: t.value, label: t.label });
+    return (0, l.jsx)(m, { redactionType: t.value, label: t.label });
 });
-var j = l(731142);
-function g(e) {
-    let { title: t, value: l, onChange: i, options: a, isDisabled: d = !1 } = e;
-    return (0, n.jsxs)("div", {
+var j = n(685894);
+function f(e) {
+    let { title: t, value: n, onChange: i, options: r, isDisabled: d = !1 } = e;
+    return (0, l.jsxs)("div", {
         className: j.ar,
         children: [
-            (0, n.jsx)(r.E, {
+            (0, l.jsx)(a.E, {
                 variant: "text-md/medium",
                 color: d ? "text-muted" : "text-strong",
                 className: j.DD,
                 children: t,
             }),
-            (0, n.jsx)(s.Te, {
+            (0, l.jsx)(s.Te, {
                 variant: "text-only",
                 className: j.Lt,
-                options: a,
-                value: l,
+                options: r,
+                value: n,
                 onChange: (e) => i(e),
                 renderOptionValue: (e) => {
                     let [t] = e;
-                    return (0, n.jsx)(h, { option: t });
+                    return (0, l.jsx)(h, { option: t });
                 },
-                renderOptionLabel: (e) => (0, n.jsx)(h, { option: e }),
+                renderOptionLabel: (e) => (0, l.jsx)(h, { option: e }),
                 isDisabled: d,
                 "data-migration-pending": !0,
             }),
         ],
     });
 }
-function f(e) {
-    let { tooltipText: t, ...l } = e;
-    return (0, n.jsx)(a.m, { text: t, asContainer: !0, children: (0, n.jsx)(g, { ...l }) });
+function g(e) {
+    let { tooltipText: t, ...n } = e;
+    return (0, l.jsx)(r.m, { text: t, asContainer: !0, children: (0, l.jsx)(f, { ...n }) });
 }
 function v(e) {
-    return "tooltipText" in e && null != e.tooltipText ? (0, n.jsx)(f, { ...e }) : (0, n.jsx)(g, { ...e });
+    return "tooltipText" in e && null != e.tooltipText ? (0, l.jsx)(g, { ...e }) : (0, l.jsx)(f, { ...e });
 }

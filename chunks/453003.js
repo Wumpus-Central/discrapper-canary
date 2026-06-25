@@ -29,8 +29,8 @@ var i,
     L = n(689168),
     R = n(403362),
     k = n(456060),
-    P = n(723702),
-    M = n(850670),
+    M = n(723702),
+    P = n(850670),
     D = n(206589),
     O = n(125017);
 n(938796);
@@ -87,7 +87,7 @@ function Z(e) {
 }
 var $ = n(878831),
     Q = n(768349),
-    ee = n(193018);
+    ee = n(378);
 function et(e) {
     let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: i } = e,
         r = (function (e) {
@@ -216,7 +216,7 @@ function ei(e) {
             accountLinkButtonRef: ea,
             renderAccountLinkUpsell: eo,
         } = e,
-        ed = (0, M.v)(t),
+        ed = (0, P.v)(t),
         ec = (0, b.s)(n.id),
         eu = s.useMemo(
             () =>
@@ -266,7 +266,7 @@ function ei(e) {
             } = e;
             if (l.author.id === i || !(0, z.A)(t, l, s.id)) return { canJoin: !1, remoteJoinPlatform: null };
             let d = (0, O._)(t);
-            if (!(0, Y.A)(d) || (0, K.U)(d) || (0, D.w)(n, t) || (0, M.v)(l))
+            if (!(0, Y.A)(d) || (0, K.U)(d) || (0, D.w)(n, t) || (0, P.v)(l))
                 return { canJoin: !1, remoteJoinPlatform: null };
             if (r && a) return { canJoin: !0, remoteJoinPlatform: null };
             if (l.activity?.type === H.xL.JOIN && null != t) {
@@ -291,7 +291,7 @@ function ei(e) {
                 if (null != e) return { canJoin: !0, remoteJoinPlatform: e };
                 if ((0, F.A)(t, H.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
             }
-            return (0, P.platformSupportsActivityJoin)() && o
+            return (0, M.platformSupportsActivityJoin)() && o
                 ? { canJoin: !0, remoteJoinPlatform: null }
                 : { canJoin: !1, remoteJoinPlatform: null };
         })({
@@ -308,7 +308,7 @@ function ei(e) {
             null == T ||
             !(0, z.A)(T, t, n.id) ||
             !(0, F.A)(T, H.jUm.SYNC) ||
-            !P.isPlatformEmbedded ||
+            !M.isPlatformEmbedded ||
             (0, D.w)(R, T)
         ),
         eI = (function (e, t, n, i) {

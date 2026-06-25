@@ -20,7 +20,7 @@ var g = l(661531),
     b = l(602674),
     y = l(696016),
     C = l(335416),
-    E = l(664875);
+    E = l(944939);
 let A = new Map(),
     N = a.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: r, className: c } = e,
@@ -117,9 +117,9 @@ var k = l(584794),
     _ = l(372684),
     S = l(260612),
     P = l(953727),
-    G = l(16590),
+    G = l(788077),
     U = l(375708),
-    z = l(995469);
+    z = l(116109);
 function B(e) {
     let { icon: t, title: l, body: a, position: i } = e;
     return (0, n.jsx)(I.u, {
@@ -268,7 +268,7 @@ let F = a.memo(function (e) {
         }),
     ];
 });
-var K = l(698269);
+var K = l(818909);
 let Z = a.memo(function (e) {
     let { videoLength: t, clip: l, onMouseDown: i } = e,
         { timeNotches: s, subNotches: r } = a.useMemo(() => {
@@ -347,8 +347,8 @@ let Z = a.memo(function (e) {
         }),
     });
 });
-var W = l(445563),
-    X = l(541151);
+var W = l(639790),
+    X = l(553887);
 function Y(e) {
     ((e = Math.round(100 * e) / 100) < 0 || 0.01 > Math.abs(e)) && (e = 0);
     let t = Math.floor(e / 60),

@@ -11,17 +11,17 @@ var n = i(627968),
     g = i(201934),
     m = i(782505),
     h = i(515054),
-    x = i(851284);
+    x = i(63060);
 function p(e) {
     let { user: t, guildId: i, channelId: p, onClose: j } = e,
         { analyticsLocations: f } = (0, a.Ay)(),
         { context: A, trackUserProfileAction: I } = (0, d.NJ)(),
         { mutualFriends: S, mutualFriendsCount: v } = (0, o.A)(t),
-        b = (0, s.A)();
+        E = (0, s.A)();
     return (
         l.useEffect(() => {
-            (0, c.A)(t.id, b);
-        }, [t.id, b]),
+            (0, c.A)(t.id, E);
+        }, [t.id, E]),
         (0, n.jsx)(h.K, {
             className: x.XG,
             children:

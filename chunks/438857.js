@@ -16,7 +16,7 @@ var l = i(627968),
     m = i(722868),
     p = i(716804),
     g = i(718019),
-    N = i(803362),
+    N = i(413492),
     f = i(915614),
     v = i(559506),
     E = i(946356),
@@ -39,7 +39,7 @@ var l = i(627968),
     B = i(203363),
     V = i(841595),
     z = i(375708),
-    Y = i(935059);
+    Y = i(585235);
 function w(e) {
     let { icon: s, title: i, description: n } = e;
     return (0, l.jsxs)("div", {
@@ -93,7 +93,7 @@ var K = i(734057),
     q = i(280645),
     $ = i(347805),
     ee = i(518477),
-    es = i(142948);
+    es = i(354724);
 function ei(e) {
     let { userId: s } = e,
         i = (0, p.g)(),
@@ -109,7 +109,7 @@ function ei(e) {
         }),
     });
 }
-var el = i(741036);
+var el = i(26988);
 function en(e) {
     let { user: s, displayProfile: i, guildId: n, onClose: t } = e,
         d = (0, _.bG)([V.A], () => V.A.getUserProfile(s.id)?.application),
@@ -150,8 +150,8 @@ var et = i(652215),
     ej = i(353394),
     eI = i(64622),
     em = i(986712),
-    ep = i(437781),
-    eg = i(928666);
+    ep = i(862997),
+    eg = i(2074);
 function eN(e) {
     let { user: s, currentUser: i, guildId: n, onClose: t } = e,
         { live: d, recent: r, stream: a } = (0, ex.A)(s.id),
@@ -412,7 +412,7 @@ function eV(e) {
                     }),
     });
 }
-var ez = i(551652);
+var ez = i(837604);
 function eY(e) {
     let { section: s, user: i, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return s === ee.RP.ACTIVITY
@@ -502,7 +502,7 @@ function ew(e) {
 }
 var eH = i(186272),
     eK = i(996988),
-    eW = i(872116);
+    eW = i(978036);
 function eX(e) {
     let {
             user: s,
@@ -804,15 +804,15 @@ var e$ = i(503698),
     e0 = i.n(e$),
     e5 = i(628284),
     e3 = i(331322),
-    e9 = i(632738),
-    e7 = i(994500),
-    e1 = i(47675),
-    e6 = i(249790),
-    e8 = i(254828),
-    e4 = i(783123),
-    e2 = i(463156),
-    se = i(449572),
-    ss = i(337796);
+    e7 = i(632738),
+    e9 = i(994500),
+    e8 = i(47675),
+    e1 = i(249790),
+    e4 = i(254828),
+    e2 = i(783123),
+    e6 = i(463156),
+    se = i(864823),
+    ss = i(707972);
 function si(e) {
     let {
             user: s,
@@ -827,7 +827,7 @@ function si(e) {
             sourceAnalyticsLocations: m = [],
         } = e,
         p = i === et.ME ? void 0 : i,
-        g = (0, _.bG)([e7.A], () => e7.A.isBlocked(s.id)),
+        g = (0, _.bG)([e9.A], () => e9.A.isBlocked(s.id)),
         { analyticsLocations: N } = (0, x.Ay)([...m, g ? u.A.BLOCKED_PROFILE_MODAL : u.A.IGNORED_PROFILE_MODAL]),
         f = (0, j.pb)({ layout: "MODAL_V2", userId: s.id, guildId: p, channelId: n, messageId: t, roleId: r }),
         v = [
@@ -860,13 +860,13 @@ function si(e) {
                     children: [
                         (0, l.jsx)("div", {
                             className: ss.Oo,
-                            children: (0, l.jsx)(e2.A, { isCurrentUser: !1, onClose: c }),
+                            children: (0, l.jsx)(e6.A, { isCurrentUser: !1, onClose: c }),
                         }),
                         (0, l.jsx)("div", { className: se.Tp }),
                         (0, l.jsxs)("div", {
                             className: se.Qs,
                             children: [
-                                (0, l.jsx)(e6.A, { user: s, guildId: p }),
+                                (0, l.jsx)(e1.A, { user: s, guildId: p }),
                                 (0, l.jsxs)("div", {
                                     className: se.FS,
                                     children: [
@@ -887,7 +887,7 @@ function si(e) {
                                     children: v.map((e, s) => {
                                         let { icon: i, description: n } = e;
                                         return (0, l.jsx)(
-                                            e9.PQ,
+                                            e7.PQ,
                                             {
                                                 icon: i,
                                                 title: n,
@@ -901,23 +901,23 @@ function si(e) {
                                 (0, l.jsxs)(e3.B, {
                                     align: "center",
                                     children: [
-                                        (0, l.jsx)(e4.A, {
+                                        (0, l.jsx)(e2.A, {
                                             size: "md",
                                             isBlocked: g,
                                             onClick: () => {
                                                 A(),
-                                                    (0, e1.Wn)({
+                                                    (0, e8.Wn)({
                                                         action: g ? "VIEW_BLOCKED_PROFILE" : "VIEW_IGNORED_PROFILE",
                                                         analyticsLocations: N,
                                                         ...f,
                                                     });
                                             },
                                         }),
-                                        (0, l.jsx)(e8.A, {
+                                        (0, l.jsx)(e4.A, {
                                             userId: s.id,
                                             onClick: () => {
                                                 A(),
-                                                    (0, e1.Wn)({
+                                                    (0, e8.Wn)({
                                                         action: "DONT_SHOW_AGAIN_IGNORED_PROFILE",
                                                         analyticsLocations: N,
                                                         ...f,
@@ -934,7 +934,7 @@ function si(e) {
         }),
     });
 }
-var sl = i(600323);
+var sl = i(675371);
 function sn(e) {
     let { hideRestrictedProfile: s, ...i } = e,
         { user: n } = i,

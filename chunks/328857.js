@@ -15,23 +15,23 @@ var l = n(627968),
     A = n(444927),
     f = n(919796),
     C = n(793574),
-    E = n(95561),
-    x = n(735438),
-    S = n.n(x),
+    x = n(95561),
+    E = n(735438),
+    S = n.n(E),
     _ = n(855687),
     I = n(143413),
     j = n(495544),
     y = n(734057),
     b = n(808728),
-    T = n(498642),
-    N = n(71393),
-    v = n(186111),
+    N = n(498642),
+    v = n(71393),
+    T = n(186111),
     M = n(232835),
     R = n(576705),
     D = n(935208),
     L = n(652215),
-    P = n(468689),
-    k = n(794967),
+    k = n(468689),
+    P = n(794967),
     O = n(595818);
 let G = (0, n(945810).mj)({
     name: "2026-06-server-setup-boost-cta",
@@ -49,7 +49,7 @@ var U = n(363487),
     z = n(314307),
     W = n(936649),
     q = n(375708),
-    $ = n(516847);
+    $ = n(458607);
 function J(e) {
     let { className: t, iconUrl: n, icon: s, header: r, completed: o, onClick: c } = e,
         [m, g] = i.useState(!1),
@@ -82,7 +82,7 @@ function Z(e) {
         d,
         h,
         f,
-        x,
+        E,
         H,
         Z,
         Y,
@@ -92,7 +92,7 @@ function Z(e) {
         et,
         en,
         { channel: el } = e,
-        ei = (0, o.bG)([N.A], () => (null != el ? N.A.getGuild(el.getGuildId()) : null), [el]),
+        ei = (0, o.bG)([v.A], () => (null != el ? v.A.getGuild(el.getGuildId()) : null), [el]),
         es = null != ei && D.default.extractTimestamp(ei.id) < Date.now() - L.NOr,
         ea = (0, o.bG)([j.default], () => ei?.ownerId === j.default.getId(), [ei]),
         {
@@ -121,8 +121,8 @@ function Z(e) {
             guildPopulated:
                 ((s = (0, o.bG)([y.A], () => y.A.getChannel(ei?.systemChannelId))),
                 (d = (0, o.yK)([M.A], () => (null != s ? M.A.getMessages(s.id).toArray() : []))),
-                (0, o.bG)([T.A], () => {
-                    let e = T.A.getMemberCount(ei?.id) ?? 0,
+                (0, o.bG)([N.A], () => {
+                    let e = N.A.getMemberCount(ei?.id) ?? 0,
                         t = d.some((e) => e.type === L.lAJ.USER_JOIN);
                     return e > 1 || t;
                 }, [ei, d])),
@@ -137,9 +137,9 @@ function Z(e) {
                     }),
                 )),
             guildPersonalized:
-                ((x = (0, o.bG)([v.A], () => v.A.hasLayers())),
-                (H = (0, o.bG)([N.A], () => N.A.getGuild(ei?.id))),
-                H?.icon != null && !x),
+                ((E = (0, o.bG)([T.A], () => T.A.hasLayers())),
+                (H = (0, o.bG)([v.A], () => v.A.getGuild(ei?.id))),
+                H?.icon != null && !E),
             guildChannelCreated: (0, o.bG)([b.Ay], () => {
                 let e = b.Ay.getChannels(ei?.id),
                     t = e[b.vM];
@@ -157,19 +157,19 @@ function Z(e) {
             handleInvite: eA,
             handleMessage: ef,
             handlePersonalize: eC,
-            handleDownload: eE,
-            handleAddApplication: ex,
+            handleDownload: ex,
+            handleAddApplication: eE,
             handleBoost: eS,
         } = ((Z = i.useCallback(() => {
-            E.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.INVITE,
             }),
                 null != ei &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("82314"),
-                            n.e("80339"),
+                            n.e("7266"),
+                            n.e("26903"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
@@ -186,26 +186,26 @@ function Z(e) {
                     });
         }, [ei])),
         (Y = i.useCallback(() => {
-            E.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.SEND_MESSAGE,
             }),
                 B._.dispatch(L.jej.TEXTAREA_FOCUS, { highlight: !0, channelId: L.dJq });
         }, [])),
         (X = i.useCallback(() => {
-            E.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.PERSONALIZE_SERVER,
             }),
-                null != ei && P.A.open(ei.id, (0, O.x)(), { section: L.JJy.CHANNEL_WELCOME_CTA });
+                null != ei && k.A.open(ei.id, (0, O.x)(), { section: L.JJy.CHANNEL_WELCOME_CTA });
         }, [ei])),
         (Q = i.useCallback(() => {
-            E.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+            x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                 setup_type: W.XT.CHANNEL_WELCOME,
                 action: W.AG.DOWNLOAD,
             }),
                 (0, m.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("17951"), n.e("44602"), n.e("25280")]).then(
+                    let { default: e } = await Promise.all([n.e("22979"), n.e("44602"), n.e("25280")]).then(
                         n.bind(n, 987482),
                     );
                     return (t) => (0, l.jsx)(e, { source: L.JJy.CHANNEL_WELCOME_CTA, ...t });
@@ -218,12 +218,12 @@ function Z(e) {
             handleDownload: Q,
             handleAddApplication: i.useCallback(() => {
                 null != ei &&
-                    (E.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+                    (x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                         setup_type: W.XT.CHANNEL_WELCOME,
                         action: W.AG.ADD_APP,
                     }),
                     (0, m.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("81056"), n.e("66003")]).then(n.bind(n, 258942));
+                        let { default: e } = await Promise.all([n.e("64640"), n.e("66003")]).then(n.bind(n, 258942));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 guildId: ei.id ?? "",
@@ -233,7 +233,7 @@ function Z(e) {
                     }));
             }, [ei]),
             handleBoost: i.useCallback(() => {
-                E.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
+                x.Ay.trackWithMetadata(L.HAw.SERVER_SETUP_CTA_CLICKED, {
                     setup_type: W.XT.CHANNEL_WELCOME,
                     action: W.AG.BOOST,
                 }),
@@ -276,12 +276,12 @@ function Z(e) {
                 opacities: en,
             }),
         [ey, eb] = i.useState([]),
-        eT = ey.length > 0;
+        eN = ey.length > 0;
     if (
         (i.useEffect(() => {
             (async () => {
                 try {
-                    let e = await (0, k.c)(ei?.id ?? L.dJq);
+                    let e = await (0, P.c)(ei?.id ?? L.dJq);
                     eb(e.map((e) => e.id));
                 } catch {}
             })();
@@ -289,15 +289,15 @@ function Z(e) {
         null == ei)
     )
         return null;
-    let eN = [];
+    let ev = [];
     !es &&
         (er &&
-            eN.push(
+            ev.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[eN.length] } : {},
+                        style: e_ ? { opacity: ej[ev.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/ea08bfae3e0ab96d.svg",
                             header: q.intl.string(q.t.q9n0Ta),
@@ -309,12 +309,12 @@ function Z(e) {
                 ),
             ),
         eo &&
-            eN.push(
+            ev.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[eN.length] } : {},
+                        style: e_ ? { opacity: ej[ev.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/428a003b3c729aa6.svg",
                             header: q.intl.string(q.t.c5kxPh),
@@ -326,12 +326,12 @@ function Z(e) {
                 ),
             ),
         ec &&
-            eN.push(
+            ev.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[eN.length] } : {},
+                        style: e_ ? { opacity: ej[ev.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/2ed198e767bd5423.svg",
                             header: q.intl.string(q.t["SoP7+l"]),
@@ -343,33 +343,33 @@ function Z(e) {
                 ),
             ),
         (0, K.isWeb)() &&
-            eN.push(
+            ev.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[eN.length] } : {},
+                        style: e_ ? { opacity: ej[ev.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             header: q.intl.string(q.t.pGVNI9),
                             completed: ed,
-                            onClick: eE,
+                            onClick: ex,
                         }),
                     },
                     "download",
                 ),
             ),
-        eN.push(
+        ev.push(
             (0, l.jsx)(
                 r.A.div,
                 {
                     className: $.cW,
-                    style: e_ ? { opacity: ej[eN.length] } : {},
+                    style: e_ ? { opacity: ej[ev.length] } : {},
                     children: (0, l.jsx)(J, {
                         iconUrl: g,
                         header: q.intl.string(q.t.IhHDEO),
-                        completed: eT,
-                        onClick: ex,
+                        completed: eN,
+                        onClick: eE,
                     }),
                 },
                 "addapp",
@@ -377,12 +377,12 @@ function Z(e) {
         ),
         ep &&
             G.getConfig({ location: "WelcomeArea" }).enabled &&
-            eN.push(
+            ev.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[eN.length] } : {},
+                        style: e_ ? { opacity: ej[ev.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl:
                                 "https://cdn.discordapp.com/assets/content/4c6d9cf3ddf3b92b4cdc14d3f240caf669e515496180922dff9b608e4d42555d.svg",
@@ -394,8 +394,8 @@ function Z(e) {
                     "boost",
                 ),
             ));
-    let ev = ea ? q.intl.string(q.t["1ach9C"]) : q.intl.string(q.t["ezm+/j"]);
-    es && (ev = q.intl.string(q.t["gwyU/J"]));
+    let eT = ea ? q.intl.string(q.t["1ach9C"]) : q.intl.string(q.t["ezm+/j"]);
+    es && (eT = q.intl.string(q.t["gwyU/J"]));
     let eM = `${V.A.getArticleURL(L.MVz.GUILD_GETTING_STARTED)}?utm_source=discord&utm_medium=blog&utm_campaign=2020-06_help-new-user&utm_content=--t%3Apm`;
     return (0, l.jsx)(z.Ay, {
         channelId: el.id,
@@ -414,13 +414,13 @@ function Z(e) {
                             }),
                             (0, l.jsxs)(u.E, {
                                 color: "text-default",
-                                className: a()({ [$.VA]: !0, [$.lg]: 0 === eN.length }),
+                                className: a()({ [$.VA]: !0, [$.lg]: 0 === ev.length }),
                                 variant: "text-sm/normal",
-                                children: [ev, " ", eN.length > 0 ? q.intl.format(q.t.UOtD32, { guideURL: eM }) : null],
+                                children: [eT, " ", ev.length > 0 ? q.intl.format(q.t.UOtD32, { guideURL: eM }) : null],
                             }),
                         ],
                     }),
-                    eN,
+                    ev,
                 ],
             }),
         }),

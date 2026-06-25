@@ -25,7 +25,7 @@ var i = n(627968),
     N = n(914905),
     v = n(650583),
     R = n(375708),
-    O = n(402913);
+    O = n(53089);
 function b(e) {
     let { channelId: t, option: n, keyboardModeEnabled: s } = e,
         o = r.useRef(null),
@@ -138,8 +138,8 @@ function b(e) {
           });
 }
 var D = n(652215),
-    L = n(386016),
-    w = n(429128);
+    L = n(820896),
+    w = n(134536);
 let M = [];
 function P(e) {
     let { channelId: t, type: n, ignoreFile: s, smallAttachments: A = !1 } = e,

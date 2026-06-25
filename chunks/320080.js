@@ -40,7 +40,7 @@ let k = (0, _.v)((e, n) => ({
 }));
 var D = t(331322),
     w = t(775602),
-    B = t(826733);
+    B = t(656557);
 function G(e) {
     let { withHeader: n = !0, size: t = 15 } = e,
         i = (0, o.bG)([w.Ay], () => w.Ay.useReducedMotion);
@@ -141,7 +141,7 @@ var eN = t(922016),
     eM = t(849077),
     eC = t(652215),
     eR = t(375708),
-    eL = t(285618);
+    eL = t(655794);
 let e_ = {
     [eM.Th.MENTION]: [eM.kR.SETTINGS],
     [eM.Th.REPLY]: [eM.kR.SETTINGS],
@@ -329,7 +329,7 @@ function eB(e) {
 var eG = t(97808),
     eK = t(573435),
     ez = t(190460),
-    eX = t(282291);
+    eX = t(388275);
 function eY(e) {
     let {
             children: n,
@@ -853,7 +853,7 @@ let eJ = (0, i.memo)(
                               async () => {
                                   let { default: e } = await Promise.all([
                                       t.e("93336"),
-                                      t.e("26250"),
+                                      t.e("3869"),
                                       t.e("48118"),
                                   ]).then(t.bind(t, 594005));
                                   return (n) => (0, s.jsx)(e, { ...n, channel: h, message: c, isUnread: a });
@@ -877,14 +877,14 @@ var eq = t(735438),
     e0 = t(837381),
     e1 = t(847374),
     e3 = t(912592),
-    e2 = t(821609),
-    e8 = t(475825),
-    e4 = t(928039),
+    e4 = t(821609),
+    e2 = t(475825),
+    e8 = t(928039),
     e7 = t(625494);
-let e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
-    e6 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
+let e6 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
+    e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e5 = (0, _.v)((e, n) => ({
-        messageCategoryOpenStates: e6,
+        messageCategoryOpenStates: e9,
         lastInitializedWithUnreads: null,
         hasUserToggledSection: !1,
         getOpenState: (e) => n().messageCategoryOpenStates[e],
@@ -898,11 +898,11 @@ let e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.
             let s = n();
             s.hasUserToggledSection ||
                 (s.lastInitializedWithUnreads !== t &&
-                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e6 : e9 }));
+                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e9 : e6 }));
         },
     }));
-var ne = t(756195),
-    nn = t(645875);
+var ne = t(405198),
+    nn = t(16051);
 function nt(e) {
     e.stopPropagation();
 }
@@ -955,7 +955,7 @@ function na() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e2.$, {
+                (0, s.jsx)(e4.$, {
                     variant: "secondary",
                     onClick: () => (0, L.tZ)(e),
                     text: eR.intl.string(ne.default.klSpfs),
@@ -980,7 +980,7 @@ function nl(e) {
         x = (0, M.op)(),
         p = i.useRef(null),
         A = i.useRef(0),
-        N = (0, e4.A)(g, p),
+        N = (0, e8.A)(g, p),
         { entrypoint: f, notificationCenterVariant: j } = (0, U.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: I,
@@ -1141,7 +1141,7 @@ function nl(e) {
                         children: (0, s.jsx)(e0.PR, {
                             children: (e) => {
                                 let { ref: n, ...t } = e;
-                                return (0, s.jsx)(e8.OZ, {
+                                return (0, s.jsx)(e2.OZ, {
                                     ref: (e) => {
                                         (p.current = e), (n.current = e?.getScrollerNode() ?? null);
                                     },
@@ -1160,7 +1160,7 @@ function nl(e) {
         })
     );
 }
-var nr = t(873111);
+var nr = t(756695);
 let no = [],
     nc = {
         controller: new r.Controller({ value: 1, immediate: !0 }),

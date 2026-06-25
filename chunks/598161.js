@@ -25,8 +25,8 @@ var n = i(627968),
     S = i(600761),
     O = i(579950),
     C = i(605694),
-    R = i(990078),
-    k = i(657718),
+    k = i(990078),
+    R = i(657718),
     b = i(789645),
     D = i(478016),
     G = i(183555),
@@ -56,10 +56,10 @@ function F(e) {
             content: M.intl.format(M.t.BQySru, { applicationName: i.name }),
             buttons: (0, n.jsxs)(n.Fragment, {
                 children: [
-                    (0, n.jsx)(R.m, {
+                    (0, n.jsx)(k.m, {
                         text: M.intl.string(M.t.WAI6xu),
                         ariaHidden: !0,
-                        children: (0, n.jsx)(k.S, {
+                        children: (0, n.jsx)(R.S, {
                             variant: "secondary",
                             size: "sm",
                             icon: b.P,
@@ -69,10 +69,10 @@ function F(e) {
                             },
                         }),
                     }),
-                    (0, n.jsx)(R.m, {
+                    (0, n.jsx)(k.m, {
                         text: M.intl.string(M.t["lBG2s/"]),
                         ariaHidden: !0,
-                        children: (0, n.jsx)(k.S, {
+                        children: (0, n.jsx)(R.S, {
                             variant: "primary",
                             size: "sm",
                             icon: D.U,
@@ -90,7 +90,7 @@ function F(e) {
 var U = i(192308),
     W = i(821609),
     H = i(307301),
-    B = i(79284);
+    B = i(392756);
 function V(e) {
     let { className: t } = e,
         { trackUserProfileEditAction: s } = (0, G.NJ)(),
@@ -98,7 +98,7 @@ function V(e) {
             s({ action: "PRESS_ADD_WIDGET" }),
                 (0, U.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([i.e("8978"), i.e("87591")]).then(i.bind(i, 333114));
+                        let { default: e } = await Promise.all([i.e("4402"), i.e("87591")]).then(i.bind(i, 333114));
                         return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },
                     { stackingBehavior: "stack" },
@@ -119,8 +119,8 @@ function V(e) {
     });
 }
 var X = i(192),
-    K = i(554146),
-    z = i(382483),
+    z = i(554146),
+    K = i(382483),
     Y = i(385113),
     q = i(334074);
 function Q() {
@@ -132,7 +132,7 @@ function Q() {
     } = (function () {
         let e = (0, r.yK)([Y.A], () => Y.A.getFeaturedApplicationIds());
         l.useEffect(() => {
-            (0, z.Wq)();
+            (0, K.Wq)();
         }, []);
         let t = (0, r.bG)([p.default], () => p.default.getCurrentUser()),
             i = (0, m.A)(e),
@@ -152,7 +152,7 @@ function Q() {
             ),
             { eligibleToShow: u, markAsDismissed: d } = (0, q.hj)({
                 applications: o,
-                dismissibleContent: K.M.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
+                dismissibleContent: z.M.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
                 cooldownConfig: q.SH,
             }),
             I = l.useMemo(() => o.filter((e) => u.includes(e.id)), [o, u]);
@@ -172,7 +172,7 @@ var J = i(128988),
     ei = i(841595),
     en = i(725386),
     el = i(527139),
-    es = i(215538);
+    es = i(190322);
 function ea(e) {
     let { userId: t } = e,
         { trackUserProfileAction: i, trackUserProfileEditAction: s } = (0, G.NJ)(),
@@ -223,7 +223,7 @@ function ea(e) {
         })
     );
 }
-var er = i(117444);
+var er = i(812868);
 function ec(e) {
     let { widget: t, ...i } = e;
     return t instanceof f.R

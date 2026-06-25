@@ -1,104 +1,104 @@
-i.d(l, { Ay: () => v, CG: () => h, J$: () => m });
-var t = i(627968);
-i(64700);
-var n = i(503698),
-    s = i.n(n),
-    a = i(192308),
-    r = i(187322),
-    u = i(22231),
-    c = i(573435),
-    o = i(946274),
-    d = i(145497),
-    I = i(179283),
-    A = i(123213),
-    C = i(86376),
-    E = i(649640),
-    _ = i(339984),
-    N = i(375708),
-    g = i(890653);
-function m(e) {
-    let { profile: l, className: i } = e,
-        n = (0, E._3)(l);
+t.d(l, { Ay: () => _, CG: () => v, J$: () => g });
+var i = t(627968);
+t(64700);
+var n = t(503698),
+    s = t.n(n),
+    a = t(192308),
+    r = t(187322),
+    u = t(22231),
+    c = t(573435),
+    o = t(946274),
+    d = t(145497),
+    I = t(422253),
+    A = t(123213),
+    m = t(86376),
+    C = t(649640),
+    f = t(339984),
+    x = t(375708),
+    E = t(654365);
+function g(e) {
+    let { profile: l, className: t } = e,
+        n = (0, C._3)(l);
     return null != n
-        ? (0, t.jsx)("div", { className: s()(i, g.vK), style: { background: n } })
-        : (0, t.jsx)(x, { profile: l, className: i });
+        ? (0, i.jsx)("div", { className: s()(t, E.vK), style: { background: n } })
+        : (0, i.jsx)(N, { profile: l, className: t });
 }
-function x(e) {
-    let { profile: l, className: i } = e,
-        n = (0, E.b2)(),
-        a = (0, E.aG)({ profile: l, defaultColor: n.hex(), forceDefaultColor: null != l.brandColorPrimary }),
+function N(e) {
+    let { profile: l, className: t } = e,
+        n = (0, C.b2)(),
+        a = (0, C.aG)({ profile: l, defaultColor: n.hex(), forceDefaultColor: null != l.brandColorPrimary }),
         r = l.brandColorPrimary ?? a;
-    return (0, t.jsx)("div", { className: s()(i, g.vK), style: { background: (0, E.n6)(r) } });
+    return (0, i.jsx)("div", { className: s()(t, E.vK), style: { background: (0, C.n6)(r) } });
 }
-function h(e) {
+function v(e) {
     let { profile: l, onIconChange: n } = e;
     return null == n
-        ? (0, t.jsx)("div", {
-              className: g.H,
-              children: (0, t.jsx)(c.Ay, {
+        ? (0, i.jsx)("div", {
+              className: E.H,
+              children: (0, i.jsx)(c.Ay, {
                   mask: c.hW.CLAN_ICON,
                   width: 70,
                   height: 70,
-                  children: (0, t.jsx)("div", {
-                      className: g.R3,
-                      children: (0, t.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
+                  children: (0, i.jsx)("div", {
+                      className: E.R3,
+                      children: (0, i.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
                   }),
               }),
           })
-        : (0, t.jsx)("div", {
-              className: g.H,
-              children: (0, t.jsx)(r.vN, {
+        : (0, i.jsx)("div", {
+              className: E.H,
+              children: (0, i.jsx)(r.vN, {
                   within: !0,
-                  children: (0, t.jsx)(c.Ay, {
+                  children: (0, i.jsx)(c.Ay, {
                       mask: c.hW.CLAN_ICON,
                       width: 70,
                       height: 70,
-                      children: (0, t.jsxs)("div", {
-                          className: s()(g.R3, g.vk),
+                      children: (0, i.jsxs)("div", {
+                          className: s()(E.R3, E.vk),
                           children: [
-                              (0, t.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
-                              (0, t.jsx)("div", { className: g.Lw }),
-                              (0, t.jsx)(u.R, {
+                              (0, i.jsx)(d.j, { guildId: l.id, guildName: l.name, guildIcon: l.icon, iconSize: 64 }),
+                              (0, i.jsx)("div", { className: E.Lw }),
+                              (0, i.jsx)(u.R, {
                                   size: "custom",
-                                  className: g.QY,
+                                  className: E.QY,
                                   width: 20,
                                   height: 20,
                                   color: "white",
                               }),
-                              (0, t.jsx)(o.Ay, {
+                              (0, i.jsx)(o.Ay, {
                                   tabIndex: 0,
                                   onChange: function (e, l) {
                                       null != n &&
                                           (0, a.openModalLazy)(async () => {
                                               let { default: s } = await Promise.all([
-                                                  i.e("8794"),
-                                                  i.e("8308"),
-                                                  i.e("43662"),
-                                                  i.e("50342"),
-                                                  i.e("63726"),
-                                                  i.e("93513"),
-                                                  i.e("79149"),
-                                                  i.e("7406"),
-                                                  i.e("55524"),
-                                                  i.e("90017"),
-                                                  i.e("89908"),
-                                                  i.e("74571"),
-                                                  i.e("50348"),
-                                              ]).then(i.bind(i, 142630));
-                                              return (i) =>
-                                                  (0, t.jsx)(s, {
-                                                      uploadType: _.HL.GUILD_ICON,
+                                                  t.e("11098"),
+                                                  t.e("53680"),
+                                                  t.e("55306"),
+                                                  t.e("50342"),
+                                                  t.e("63726"),
+                                                  t.e("93513"),
+                                                  t.e("79149"),
+                                                  t.e("7406"),
+                                                  t.e("55524"),
+                                                  t.e("90017"),
+                                                  t.e("89908"),
+                                                  t.e("74571"),
+                                                  t.e("50348"),
+                                              ]).then(t.bind(t, 142630));
+                                              return (t) =>
+                                                  (0, i.jsx)(s, {
+                                                      uploadType: f.HL.GUILD_ICON,
                                                       imageUri: e,
                                                       file: l,
                                                       onCrop: (e) => {
                                                           let { imageUri: l } = e;
                                                           return n(l);
                                                       },
-                                                      ...i,
+                                                      ...t,
                                                   });
                                           }, {});
                                   },
-                                  "aria-label": N.intl.string(N.t.r3JdsT),
+                                  "aria-label": x.intl.string(x.t.r3JdsT),
                               }),
                           ],
                       }),
@@ -106,10 +106,10 @@ function h(e) {
               }),
           });
 }
-function v(e) {
+function _(e) {
     let {
             profile: l,
-            onIconChange: i,
+            onIconChange: t,
             className: n,
             disableCTA: a,
             CTAOverride: r,
@@ -118,15 +118,15 @@ function v(e) {
         } = e,
         o = null;
     return (
-        null != r ? (o = r) : a || (o = (0, t.jsx)(A.A, { profile: l, onComplete: u })),
-        (0, t.jsxs)("div", {
-            className: s()(g.kL, n),
+        null != r ? (o = r) : a || (o = (0, i.jsx)(A.A, { profile: l, onComplete: u })),
+        (0, i.jsxs)("div", {
+            className: s()(E.kL, n),
             children: [
-                (0, t.jsx)(m, { profile: l }),
-                (0, t.jsx)(h, { onIconChange: i, profile: l }),
-                (0, t.jsx)(C.A, { profile: l, disableGuildNameClick: c }),
-                (0, t.jsx)(I.P, { profile: l }),
-                null != o && (0, t.jsx)("div", { className: g.UD, children: o }),
+                (0, i.jsx)(g, { profile: l }),
+                (0, i.jsx)(v, { onIconChange: t, profile: l }),
+                (0, i.jsx)(m.A, { profile: l, disableGuildNameClick: c }),
+                (0, i.jsx)(I.P, { profile: l }),
+                null != o && (0, i.jsx)("div", { className: E.UD, children: o }),
             ],
         })
     );
