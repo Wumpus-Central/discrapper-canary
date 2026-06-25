@@ -65,7 +65,7 @@ var i,
         (s.METHOD_SELECT = "method_select"),
         (s.LOG_OUT = "log_out"),
         s),
-    E = (((a = {}).RETRY = "retry"), a),
+    E = (((a = {}).RETRY = "retry"), (a.CONNECT_TO_TEEN = "connect_to_teen"), a),
     m =
         (((o = {}).NSFW_CHANNEL_AGE_VERIFY = "nsfw_channel_age_verify"),
         (o.NSFW_CHANNEL_UNDERAGE = "nsfw_channel_underage"),
