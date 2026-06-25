@@ -1,5 +1,6 @@
-n.d(t, { A: () => l });
+"use strict";
+n.d(t, { A: () => r });
 var i = n(652215);
-function l(e) {
+function r(e) {
     return (e.type === i.$pd.PLAYING || e.type === i.$pd.COMPETING) && null != e.application_id;
 }
