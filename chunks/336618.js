@@ -10,14 +10,14 @@ var i = n(627968),
     c = n(533781),
     d = n(604121),
     _ = n(597770),
-    h = n(793574),
-    f = n(688810),
-    p = n(131607),
-    E = n(380619),
-    m = n(751188),
-    g = n(40493),
-    A = n(374200),
-    I = n(186111),
+    h = n(942857),
+    f = n(793574),
+    p = n(688810),
+    E = n(131607),
+    m = n(380619),
+    g = n(751188),
+    A = n(40493),
+    I = n(374200),
     T = n(287809),
     S = n(927813),
     y = n(935208),
@@ -28,8 +28,8 @@ var i = n(627968),
     O = n(652215),
     b = n(49999),
     D = n(375708),
-    L = n(849353),
-    w = n(266599);
+    L = n(767881),
+    w = n(871655);
 function M(e) {
     let t = r.useCallback(() => Promise.resolve({ default: e.boxAnimationUrl }), [e.boxAnimationUrl]);
     return (0, i.jsx)(R.A, {
@@ -64,19 +64,19 @@ function P(e) {
 let x = S.A.Millis.DAYS_30,
     k = r.memo(function (e) {
         let { disabled: t, channel: n } = e,
-            { analyticsLocations: s } = (0, f.Ay)(h.A.GIFT_BUTTON),
+            { analyticsLocations: s } = (0, p.Ay)(f.A.GIFT_BUTTON),
             [c, d] = r.useState(!1),
-            _ = (0, l.bG)([I.A], () => !I.A?.hasLayers()),
+            _ = (0, h.A)(),
             S = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
             R = null != S ? y.default.age(S.id) : 0,
-            D = (0, l.bG)([A.A], () => {
-                let e = A.A.getMarketingComponentByType(o.C.GIFT_ICON);
+            D = (0, l.bG)([I.A], () => {
+                let e = I.A.getMarketingComponentByType(o.C.GIFT_ICON);
                 return null == e || "giftIcon" !== e.properties.properties.oneofKind
                     ? null
                     : e.properties.properties.giftIcon;
             }),
-            w = (0, l.bG)([A.A], () => {
-                let e = A.A.getMarketingComponentByType(o.C.GIFT_ICON_COACHMARK);
+            w = (0, l.bG)([I.A], () => {
+                let e = I.A.getMarketingComponentByType(o.C.GIFT_ICON_COACHMARK);
                 return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                     ? null
                     : e.properties.properties.giftIconCoachmark;
@@ -84,20 +84,20 @@ let x = S.A.Millis.DAYS_30,
             k = D?.gradient,
             U =
                 null != k && null != k.colors && k.colors.length >= 2
-                    ? (0, E.K5)({ gradient: k.colors, angle: k.angle ?? void 0 }, { defaultAngle: 180 })
+                    ? (0, m.K5)({ gradient: k.colors, angle: k.angle ?? void 0 }, { defaultAngle: 180 })
                     : void 0,
             G = r.useMemo(() => {
                 if (U?.background != null) return { "--custom-promotion-gradient": U.background };
             }, [U]),
             F = !(0, C.uJ)(D?.boxAnimationUrl),
             V = !(0, C.uJ)(D?.trinketAnimationUrl) && !F,
-            B = (0, l.bG)([A.A], () => A.A.getGiftPromotion()?.id),
-            j = null != w && !t && _ && R >= x && null != B,
-            [H, Y] = (0, p.Cc)(j ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, B ?? ""),
+            B = (0, l.bG)([I.A], () => I.A.getGiftPromotion()?.id),
+            j = null != w && !t && !_ && R >= x && null != B,
+            [H, Y] = (0, E.Cc)(j ? u.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, B ?? ""),
             W = null != H,
             K = c || W,
             $ = (0, N.R1)(n),
-            { openGiftModal: z } = (0, m.$)({
+            { openGiftModal: z } = (0, g.$)({
                 giftRecipient: $,
                 analyticsLocations: s,
                 analyticsObject: {
@@ -134,7 +134,7 @@ let x = S.A.Millis.DAYS_30,
                 d(!1);
             },
             children: W
-                ? (0, i.jsx)(g.A, {
+                ? (0, i.jsx)(A.A, {
                       onComplete: () => d(!1),
                       onCheckItOutClick: z,
                       markAsDismissed: Y,
