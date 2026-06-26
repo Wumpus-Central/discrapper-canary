@@ -31,8 +31,8 @@ var l,
     M = n(738876),
     w = n(765671),
     L = n(964486),
-    P = n(775602),
-    D = n(47167),
+    D = n(775602),
+    P = n(47167),
     O = n(807632),
     F = n(337885),
     G = n(870136),
@@ -85,8 +85,8 @@ var l,
     eM = n(831688),
     ew = n(805964),
     eL = n(302031),
-    eP = n(885386),
-    eD = n(761640),
+    eD = n(885386),
+    eP = n(761640),
     eO = n(734057),
     eF = n(232835),
     eG = n(576705),
@@ -128,7 +128,7 @@ let eZ = s.memo(function (e) {
             let { threadId: t, overrideMedia: n } = e,
                 l = (0, g.bG)([eO.A], () => eO.A.getChannel(t));
             K()(null != l, "the thread should not be null here, a store must have missed an update");
-            let i = (0, g.bG)([eD.Ay], () => eD.Ay.getCurrentSidebarChannelId(l.parent_id) === l.id),
+            let i = (0, g.bG)([eP.Ay], () => eP.Ay.getCurrentSidebarChannelId(l.parent_id) === l.id),
                 { firstMessage: a } = (0, ef.OA)(l),
                 r = (function (e) {
                     let { firstMessage: t, formatInline: n = !0, noStyleAndInteraction: l = !0 } = e,
@@ -154,7 +154,7 @@ let eZ = s.memo(function (e) {
                 { messageCountText: d } = (0, eg.k6)(l);
             return { channel: l, isOpen: i, messageCount: d, firstMessage: a, content: o, media: n ?? c };
         })({ threadId: t, overrideMedia: a }),
-        p = (0, D.Ay)(c);
+        p = (0, P.Ay)(c);
     (0, $.vb)(f);
     let A = (0, g.bG)([eU.default, eF.A], () => {
             let e = eU.default.getUser(f?.messageSnapshots[0]?.moderatorReport?.reported_user_id);
@@ -246,7 +246,7 @@ let e1 = s.memo(function (e) {
     let { message: t, channel: n, content: l, hasMediaAttachment: s, hasUnreads: a, originalAuthor: o } = e,
         c = (0, g.bG)([ev.A], () => ev.A.isLoading(n.id)),
         d = (0, g.bG)([eG.A], () => eG.A.can(eq.xBc.MANAGE_MESSAGES, n)),
-        u = eP.gs.useSetting(),
+        u = eD.gs.useSetting(),
         m = (0, g.bG)([ez.A], () => ez.A.getGuildId()),
         { contentPlaceholder: h, renderedContent: x } =
             null == t
@@ -293,7 +293,7 @@ let e1 = s.memo(function (e) {
 function e2(e) {
     let { channel: t, facepileRef: n, firstMessage: l } = e,
         { isNew: s } = (0, eg.X5)(t),
-        a = (0, D.Ay)(t),
+        a = (0, P.Ay)(t),
         r = (0, em.m)(t.id),
         o = l?.reactions != null && l.reactions.length > 0;
     return (0, i.jsxs)("div", {
@@ -425,7 +425,7 @@ function e8(e) {
         { firstMedia: l, shouldObscure: s, obscureReason: a, shouldShowAgeVerification: o } = e,
         c = (0, g.bG)([eH.A], () => eH.A.isFocused()),
         d = (0, eS.ge)(l.src),
-        u = eP.kt.useSetting(),
+        u = eD.kt.useSetting(),
         m = (0, ey.rx)(a),
         { src: h, width: x, height: f, alt: j } = l;
     return (f > x ? (n = 72) : (t = 72), o)
@@ -538,8 +538,8 @@ var tj = n(308186),
     tM = n(56059),
     tw = n(141628),
     tL = n(696986),
-    tP = n(793574),
-    tD = n(688810),
+    tD = n(793574),
+    tP = n(688810),
     tO = n(359800),
     tF = n(46225),
     tG = n(559965),
@@ -589,7 +589,7 @@ function tH(e) {
 }
 function tB(e) {
     let { application: t } = e,
-        { analyticsLocations: n } = (0, tD.Ay)(tP.A.GAME_INVITE_CHANNEL_EMPTY_STATE),
+        { analyticsLocations: n } = (0, tP.Ay)(tD.A.GAME_INVITE_CHANNEL_EMPTY_STATE),
         { startAuthorization: l, hasAlreadyLinked: s, canStartAuthorization: a, fetched: r } = (0, tF.RD)(t),
         o = (0, tO.z)(l, s);
     if (!r) return null;
@@ -1307,7 +1307,7 @@ function np(e) {
         l = s.useRef(null),
         a = (0, g.bG)([nu.A], () => nu.A.getSoundsForGuild("0")?.find((e) => "airhorn" === e.name)),
         { createMultipleConfettiAt: r } = s.useContext(nc.x),
-        o = (0, g.bG)([P.Ay], () => P.Ay.useReducedMotion),
+        o = (0, g.bG)([D.Ay], () => D.Ay.useReducedMotion),
         { isPlaying: c, playSound: d } = (function (e) {
             let { isPlaying: t, playSound: n, preloadSound: l } = (0, ng.A)(null != e ? (0, nh.A)(e.soundId) : null);
             return (
@@ -1456,7 +1456,7 @@ class nL {
         return this.steps.every((e) => e.isDone);
     }
 }
-function nP(e) {
+function nD(e) {
     let { guild: t, roles: n } = e;
     return (0, i.jsx)("div", {
         className: nR.Ei,
@@ -1466,7 +1466,7 @@ function nP(e) {
         ),
     });
 }
-let nD = { mass: 1, tension: 250, friction: 18, clamp: !0 };
+let nP = { mass: 1, tension: 250, friction: 18, clamp: !0 };
 function nO(e) {
     let { handleHide: t } = e;
     return (0, i.jsx)(E.D, {
@@ -1490,7 +1490,7 @@ function nF(e) {
 let nG = (e) => {
     var t;
     let { hasAnyThread: l, hasActiveThreads: a, channel: o } = e,
-        c = (0, D.Ay)(o),
+        c = (0, P.Ay)(o),
         { onboardingExpanded: u } = (0, eA.kU)((e) => {
             let { onboardingExpanded: t } = e;
             return { onboardingExpanded: t };
@@ -1503,7 +1503,7 @@ let nG = (e) => {
             return {
                 transitions: (0, tA.p)(e, {
                     keys: (e) => (e ? "shown" : "hidden"),
-                    config: nD,
+                    config: nP,
                     from: { opacity: 0 },
                     enter: { opacity: 1 },
                     leave: { opacity: 0 },
@@ -1576,7 +1576,7 @@ let nG = (e) => {
                                         description: eY.intl.string(eY.t.gAIOfg),
                                         isDone: s && r,
                                         shouldWarn: s && !r,
-                                        children: s ? (0, i.jsx)(nP, { guild: c, roles: l }) : null,
+                                        children: s ? (0, i.jsx)(nD, { guild: c, roles: l }) : null,
                                         clickHandler: () => {
                                             nw(n_._G.PERMISSIONS),
                                                 (0, tp.openModalLazy)(
@@ -2102,7 +2102,7 @@ function lh(e) {
         [l, a] = s.useState(!1),
         { reducedMotion: r } = s.useContext(ln.C),
         o = (0, nz.z)({ from: r.enabled ? lr : la, to: lo, config: lc }, "animate-always"),
-        c = (0, g.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
+        c = (0, g.bG)([D.Ay], () => D.Ay.keyboardModeEnabled),
         d = (0, g.bG)([to.A], () => to.A.getUploads(t, n2.oU.CREATE_FORUM_POST.drafts.type)),
         x = (0, m.Ay)({
             id: "forum-composer-attachments-popout",
@@ -2358,8 +2358,8 @@ var l_ = n(304162),
     lM = n(998218),
     lw = n(36491),
     lL = n(595201);
-let lP = [{ name: "Media Post Thumbnail", extensions: ["jpg", "jpeg", "png", "gif", "webp"] }],
-    lD = (0, lA.Ld)();
+let lD = [{ name: "Media Post Thumbnail", extensions: ["jpg", "jpeg", "png", "gif", "webp"] }],
+    lP = (0, lA.Ld)();
 function lO(e) {
     let { mediaAttachments: t, containerWidth: n, containerHeight: l } = e,
         s = lT({ numAttachments: t.length, containerWidth: n, containerHeight: l });
@@ -2385,7 +2385,7 @@ let lF = (e) => {
             let { textAreaState: t } = e;
             return { textAreaState: t };
         }, d.x),
-        a = (0, n8.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
+        a = (0, n8.bG)([D.Ay], () => D.Ay.keyboardModeEnabled),
         o = (function (e, t) {
             let { mediaAttachments: n, hasThumbnail: l } = (function (e) {
                     let [t, n] = s.useState(null),
@@ -2528,8 +2528,6 @@ let lF = (e) => {
                             (0, i.jsx)(l, {
                                 ...n,
                                 upload: e,
-                                channelId: t.id,
-                                draftType: n2.oU.CREATE_FORUM_POST.drafts.type,
                                 onSubmit: (n) => {
                                     let { name: l, description: i, spoiler: s } = n;
                                     n1.A.update(t.id, e.id, n2.oU.CREATE_FORUM_POST.drafts.type, {
@@ -2549,8 +2547,8 @@ let lF = (e) => {
             onChange: h,
             multiple: !1,
             "aria-hidden": !0,
-            filters: lP,
-            "aria-describedby": lD,
+            filters: lD,
+            "aria-describedby": lP,
             "aria-label": u ? eY.intl.string(eY.t.MxJI3f) : eY.intl.string(eY.t.Cbiofa),
             children: u
                 ? (0, i.jsxs)(i.Fragment, {
@@ -3539,12 +3537,12 @@ var iS = n(602137),
     iM = n(461771),
     iw = n(602034);
 let iL = "data-grid-item-id",
-    iP = "data-grid-section",
-    iD = "data-grid-prev-section-boundary",
+    iD = "data-grid-section",
+    iP = "data-grid-prev-section-boundary",
     iO = new Set([h.D$.UP, h.D$.DOWN, h.D$.LEFT, h.D$.RIGHT]);
 function iF(e) {
     let { section: t, column: n, row: l } = e,
-        i = `[${iP}="${t}"]`,
+        i = `[${iD}="${t}"]`,
         s = `[aria-colindex="${n}"]`,
         a = `[aria-rowindex="${l}"]`;
     return `${i}${s}${a}`;
@@ -3567,8 +3565,8 @@ function iH(e) {
         ),
         {
             [iL]: (0, iw.t$)(c, t),
-            [iP]: n,
-            [iD]: a[n],
+            [iD]: n,
+            [iP]: a[n],
             role: "gridcell",
             "aria-rowindex": l,
             "aria-colindex": i,
@@ -3647,10 +3645,10 @@ function i0(e) {
         } = e,
         m = n.id,
         h = s.useRef(null),
-        x = (0, g.bG)([eD.Ay], () => eD.Ay.getCurrentSidebarChannelId(n.parent_id) === n.id),
+        x = (0, g.bG)([eP.Ay], () => eP.Ay.getCurrentSidebarChannelId(n.parent_id) === n.id),
         { firstMessage: f } = (0, ef.OA)(n),
         { user: j, author: v } = (0, eg.kn)(n),
-        p = (0, D.Ay)(n),
+        p = (0, P.Ay)(n),
         { messageCountText: A } = (0, eg.k6)(n),
         C = s.useRef(null),
         { handleLeftClick: N, handleRightClick: S } = (0, eb.A)({ facepileRef: C, goToThread: l, channel: n });
@@ -3705,7 +3703,7 @@ function i0(e) {
                                       (0, i.jsx)(i$.A, {
                                           application: M,
                                           size: "sm",
-                                          analyticsLocation: tP.A.GAME_INVITE_CHANNEL_POST,
+                                          analyticsLocation: tD.A.GAME_INVITE_CHANNEL_POST,
                                       }),
                               ],
                           }),
@@ -3789,9 +3787,9 @@ function i9(e) {
         } = e,
         h = n.id,
         x = s.useRef(null),
-        f = (0, g.bG)([eD.Ay], () => eD.Ay.getCurrentSidebarChannelId(n.parent_id) === n.id),
+        f = (0, g.bG)([eP.Ay], () => eP.Ay.getCurrentSidebarChannelId(n.parent_id) === n.id),
         { firstMessage: p, loaded: A } = (0, ef.OA)(n),
-        C = (0, D.Ay)(n),
+        C = (0, P.Ay)(n),
         { messageCountText: N } = (0, eg.k6)(n),
         { isNew: S, hasUnreads: y } = (0, eg.X5)(n),
         T = s.useRef(null),
@@ -3902,8 +3900,8 @@ function sn(e) {
         { firstMedia: o } = (0, eg.gk)({ firstMessage: n, formatInline: !1, noStyleAndInteraction: !1 }),
         { hasUnreads: c } = (0, eg.X5)(t),
         d = (0, g.bG)([eG.A], () => eG.A.can(eq.xBc.MANAGE_MESSAGES, t)),
-        u = eP.kt.useSetting(),
-        m = eP.gs.useSetting(),
+        u = eD.kt.useSetting(),
+        m = eD.gs.useSetting(),
         h = (0, eI.A)(m, d),
         x = (0, ej.no)(n, r, !1),
         f = t.isMediaPost(),
@@ -4114,7 +4112,7 @@ function sr(e) {
 }
 function so(e) {
     let { channel: t, firstMessage: n, isFirstMessageLoaded: l, containerWidth: a, hasUnreads: o } = e,
-        c = eP.hH.useSetting(),
+        c = eD.hH.useSetting(),
         [d, u] = i5(a - 24),
         { content: m } = (0, eg.gk)({ firstMessage: n, formatInline: !1, noStyleAndInteraction: !0 }),
         { shouldRenderTagsRow: h } = (0, eC.BA)({ channel: t, isNew: !1 }),
@@ -4293,7 +4291,7 @@ function sv(e) {
         a = (0, l0.OT)(t),
         { tagFilter: r } = (0, ex.R)(t.id),
         o = (0, ex.p)(),
-        c = (0, g.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
+        c = (0, g.bG)([D.Ay], () => D.Ay.keyboardModeEnabled),
         d = s.useCallback(
             (e) => {
                 (0, tf.UA)({
@@ -4530,7 +4528,7 @@ function sT(e) {
             );
         })(t),
         w = j.length > 0,
-        D = w || b.length > 0;
+        P = w || b.length > 0;
     (0, O.yk)(t, j);
     let F = (0, H.A)(t),
         { tagFilter: G, tagSetting: z } = (0, ex.R)(t.id);
@@ -4585,7 +4583,7 @@ function sT(e) {
         { containerRef: ee, containerWidth: et } = ia();
     s.useEffect(() => {
         if (null == Z.current && null != t.id) {
-            let e = eD.Ay.getSidebarState(t.id);
+            let e = eP.Ay.getSidebarState(t.id);
             null != e && e.type === te.PE.VIEW_THREAD && (Z.current = e.channelId);
         }
     }, [t.id]);
@@ -4657,7 +4655,7 @@ function sT(e) {
                               coords: n,
                               onHeightChange: eh,
                               children:
-                                  !_ && (0, i.jsx)(nG, { channel: t, hasAnyThread: D, hasActiveThreads: w }, t.id),
+                                  !_ && (0, i.jsx)(nG, { channel: t, hasAnyThread: P, hasActiveThreads: w }, t.id),
                           },
                           "forum-channel-header",
                       )
@@ -4666,7 +4664,7 @@ function sT(e) {
                           ? (0, i.jsx)(s_, { channel: t, coords: n }, "archive-or-search-result")
                           : l()
                       : (0, i.jsx)(sI, { channel: t, coords: n }, "archived-missing-reading-history-perm"),
-            [J, q, E, $, t, w, R, _, D],
+            [J, q, E, $, t, w, R, _, P],
         ),
         ej = (0, g.bG)([td.A], () => td.A.hasHidden(t.id)),
         ev = { editorHeight: l, isGridLayout: Q },
@@ -4924,7 +4922,7 @@ function sT(e) {
                     if (null == t.current || null == a.current) return;
                     let e = a.current;
                     if ("string" != typeof e) return;
-                    null == eD.Ay.getSidebarState(r) && (a.current = null);
+                    null == eP.Ay.getSidebarState(r) && (a.current = null);
                     let n = i.findIndex((t) => t.find((t) => t === e)),
                         l = t.current.getCoordsMap(),
                         s = l[`__section__${n}`],
@@ -4955,7 +4953,7 @@ function sT(e) {
             let n = e.scrollTop + e.offsetHeight;
             e.scrollHeight - n < (Q ? Math.max(200, i3(et)) : 200) && y();
         }, [J, Q, t.guild_id, t.id, et, y]),
-        eP = (0, g.bG)([P.Ay], () => P.Ay.keyboardModeEnabled),
+        eD = (0, g.bG)([D.Ay], () => D.Ay.keyboardModeEnabled),
         eF = (0, eA.kU)((e) => e.titleFocused || e.bodyFocused, d.x),
         eG = (function (e) {
             let { id: t, isEnabled: n, setFocus: l } = e,
@@ -5064,7 +5062,7 @@ function sT(e) {
                             case h.D$.UP: {
                                 let e;
                                 if (0 === d) {
-                                    let t = parseInt(s.getAttribute(iD));
+                                    let t = parseInt(s.getAttribute(iP));
                                     null == (e = c(iF({ section: a - 1, row: t, column: u }))) &&
                                         (e = c(iF({ section: a - 1, row: t - 1, column: u })));
                                 } else e = c(iF({ section: a, row: d - 1, column: u }));
@@ -5096,7 +5094,7 @@ function sT(e) {
                     [t],
                 );
             return s.useMemo(() => ({ id: t, containerProps: { onKeyDown: j, ref: r }, setFocus: v }), [t, j, v]);
-        })({ id: "forum-grid-view", isEnabled: Q && eP && !eF, setFocus: ew }),
+        })({ id: "forum-grid-view", isEnabled: Q && eD && !eF, setFocus: ew }),
         ez = (function (e) {
             let { listRef: t, padding: n, channel: l, isEnabled: i } = e,
                 a = s.useCallback(
@@ -5137,7 +5135,7 @@ function sT(e) {
                 scrollToEnd: o,
                 setFocus: a,
             });
-        })({ listRef: K, padding: 96, isEnabled: !Q && eP && !eF, channel: t }),
+        })({ listRef: K, padding: 96, isEnabled: !Q && eD && !eF, channel: t }),
         eU = s.useCallback(
             (e, n, l) =>
                 0 === e
@@ -5148,9 +5146,9 @@ function sT(e) {
             [t],
         ),
         { ref: eH, ...eB } = eG.containerProps,
-        eV = eD.Ay.getSidebarState(t.id),
-        eW = null != eV && (0, eD.JU)(eV),
-        e$ = (0, g.bG)([eD.Ay], () => eD.Ay.getSection(t.id)) === eq.YvQ.MEMBERS;
+        eV = eP.Ay.getSidebarState(t.id),
+        eW = null != eV && (0, eP.JU)(eV),
+        e$ = (0, g.bG)([eP.Ay], () => eP.Ay.getSection(t.id)) === eq.YvQ.MEMBERS;
     return (0, i.jsx)("div", {
         className: nl.container,
         ref: ee,
@@ -5236,7 +5234,7 @@ function sT(e) {
 }
 function sI(e) {
     let { channel: t, coords: n } = e,
-        l = (0, D.Ay)(t);
+        l = (0, P.Ay)(t);
     return (0, i.jsx)("div", {
         className: r()(nl.missingReadHistoryPermission, nl.columnsSpan),
         style: n,
@@ -5249,7 +5247,7 @@ function sI(e) {
 }
 function s_(e) {
     let { channel: t, coords: n } = e,
-        l = (0, D.Ay)(t);
+        l = (0, P.Ay)(t);
     return (0, i.jsx)("div", {
         className: r()(nl.missingReadHistoryPermission, nl.columnsSpan),
         style: n,
@@ -5300,7 +5298,7 @@ function sw(e) {
             formOpen: k,
             titleFocused: M,
             hasClickedForm: L,
-            textAreaState: D,
+            textAreaState: P,
             onboardingExpanded: O,
             setEditorAdditionRowHeight: F,
         } = (0, eA.kU)((e) => {
@@ -5374,7 +5372,7 @@ function sw(e) {
             !L &&
             !k &&
             M &&
-            (0 === D.textValue.trim().length || D.textValue.trim() === ei) &&
+            (0 === P.textValue.trim().length || P.textValue.trim() === ei) &&
             0 === el.length &&
             !J &&
             !a.isGameInvitesChannel();
@@ -5394,7 +5392,7 @@ function sw(e) {
         eN = s.useRef(null),
         eb =
             ((t = s.useRef(!1)),
-            (n = (0, g.bG)([P.Ay], () => P.Ay.keyboardModeEnabled)),
+            (n = (0, g.bG)([D.Ay], () => D.Ay.keyboardModeEnabled)),
             (l = s.useCallback(
                 (e) => {
                     t.current = e.shiftKey;

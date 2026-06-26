@@ -15,10 +15,10 @@ var n = t(627968),
     f = t(99696),
     m = t(667455),
     E = t(652215),
-    y = t(818348),
-    R = t(375708),
-    b = t(776409),
-    S = t(133112);
+    R = t(818348),
+    y = t(375708),
+    b = t(743292),
+    S = t(146744);
 let j = r.A.filter((l) => u.M.EURO_CURRENCY_COUNTRIES.has(l.alpha2)).map((l) => ({
     id: l.alpha2,
     value: l.alpha2,
@@ -45,11 +45,11 @@ function x(l) {
             (0, n.jsx)("span", {
                 className: S.ZY,
                 children: (0, n.jsx)(d.k, {
-                    label: R.intl.string(b.default["Bn/CZQ"]),
+                    label: y.intl.string(b.default["Bn/CZQ"]),
                     type: "text",
                     value: e,
                     onChange: C,
-                    placeholder: R.intl.string(b.default.dSPkHo),
+                    placeholder: y.intl.string(b.default.dSPkHo),
                     error: s,
                     fullWidth: !0,
                 }),
@@ -57,27 +57,27 @@ function x(l) {
             t
                 ? (0, n.jsx)(o.Z, {
                       selectionMode: "single",
-                      label: R.intl.string(R.t.eDdrAD),
-                      placeholder: R.intl.string(R.t.eDdrAD),
+                      label: y.intl.string(y.t.eDdrAD),
+                      placeholder: y.intl.string(y.t.eDdrAD),
                       value: r,
                       onSelectionChange: g,
                       options: j,
                       errorMessage: i,
                   })
                 : (0, n.jsx)(d.k, {
-                      label: R.intl.string(b.default["3jjweL"]),
+                      label: y.intl.string(b.default["3jjweL"]),
                       type: "text",
                       value: a,
                       onChange: h,
-                      placeholder: R.intl.string(b.default["B+/GvM"]),
+                      placeholder: y.intl.string(b.default["B+/GvM"]),
                       error: i,
                       fullWidth: !0,
                   }),
             (0, n.jsx)("p", {
                 className: S.Bm,
-                children: R.intl.format(b.default.CCVlIb, {
-                    giftCardTermsUrl: E.X7G.PAID_TERMS,
-                    walletTermsUrl: E.X7G.PAID_TERMS,
+                children: y.intl.format(b.default.CCVlIb, {
+                    giftCardTermsUrl: E.X7G.GIFT_CARD_TERMS,
+                    walletTermsUrl: E.X7G.WALLET_TERMS,
                 }),
             }),
         ],
@@ -96,86 +96,86 @@ function U(l) {
         [E, j] = a.useState(u),
         [U, v] = a.useState(!1),
         [A, I] = a.useState(""),
-        [k, M] = a.useState(null),
-        [N, _] = a.useState(null),
-        [P, T] = a.useState(null),
-        [w, D] = a.useState(null),
-        { isEU: O, displayCountry: B, savedPostalCode: G } = (0, m.A)(),
-        Y = (0, s.bG)([p.A], () => p.A.hasFetchedPaymentSources);
+        [_, k] = a.useState(null),
+        [M, N] = a.useState(null),
+        [T, w] = a.useState(null),
+        [P, D] = a.useState(null),
+        { isEU: O, displayCountry: G, savedPostalCode: B } = (0, m.A)(),
+        L = (0, s.bG)([p.A], () => p.A.hasFetchedPaymentSources);
     a.useEffect(() => {
-        Y || (0, C.$o)();
-    }, [Y]);
-    let L = a.useMemo(() => ({ source: d, loadId: c }), [d, c]);
-    a.useEffect(() => {
-        (0, f.Pc)(L);
+        L || (0, C.$o)();
     }, [L]);
-    let Z = a.useRef(!1);
+    let Y = a.useMemo(() => ({ source: d, loadId: c }), [d, c]);
     a.useEffect(() => {
-        Z.current || null == G || "" !== A || ((Z.current = !0), I(G), D(null));
-    }, [G, A]);
-    let W = R.intl.string(b.default["26tjwd"]),
+        (0, f.Pc)(Y);
+    }, [Y]);
+    let W = a.useRef(!1);
+    a.useEffect(() => {
+        W.current || null == B || "" !== A || ((W.current = !0), I(B), D(null));
+    }, [B, A]);
+    let Z = y.intl.string(b.default["26tjwd"]),
         X = a.useMemo(() => {
-            if (null != B)
+            if (null != G)
                 return {
-                    text: (0, g.Gw)(B),
-                    leadingIcon: () => (0, n.jsx)("img", { alt: "", src: (0, h.t)(B), className: S.IM }),
+                    text: (0, g.Gw)(G),
+                    leadingIcon: () => (0, n.jsx)("img", { alt: "", src: (0, h.t)(G), className: S.IM }),
                 };
-        }, [B]),
+        }, [G]),
         $ = a.useCallback((l) => {
-            j(l), T(null), _(null);
+            j(l), w(null), N(null);
         }, []),
         z = a.useCallback(async () => {
             let l = E.trim(),
-                e = O ? null == k : "" === A.trim(),
+                e = O ? null == _ : "" === A.trim(),
                 n = !1;
             if (
-                ("" === l && (T(R.intl.string(b.default.PZDPvQ)), (n = !0)),
-                e && (D(O ? R.intl.string(R.t["+bm+zE"]) : R.intl.string(R.t.LRlhb1)), (n = !0)),
+                ("" === l && (w(y.intl.string(b.default.PZDPvQ)), (n = !0)),
+                e && (D(O ? y.intl.string(y.t["+bm+zE"]) : y.intl.string(y.t.LRlhb1)), (n = !0)),
                 !n)
             ) {
-                v(!0), _(null);
+                v(!0), N(null);
                 try {
-                    let e = await (0, f.Ng)(l, O ? void 0 : A.trim(), O ? (k ?? void 0) : void 0);
-                    (0, f.Ey)(e, L),
+                    let e = await (0, f.Ng)(l, O ? void 0 : A.trim(), O ? (_ ?? void 0) : void 0);
+                    (0, f.Ey)(e, Y),
                         r?.(e),
                         t(),
-                        o && (0, f.cV)({ amountRedeemed: e.amount, currencyCode: e.currency, loadId: L.loadId }),
+                        o && (0, f.cV)({ amountRedeemed: e.amount, currencyCode: e.currency, loadId: Y.loadId }),
                         (0, C.$o)().then((l) => {
-                            let e = (l?.body ?? []).find((l) => l.type === y.he.TDS_WALLET);
+                            let e = (l?.body ?? []).find((l) => l.type === R.he.TDS_WALLET);
                             null != e && (0, C.YP)(e.id);
                         });
                 } catch (l) {
-                    _((0, f.tn)(l)), (0, f.k$)(L);
+                    N((0, f.tn)(l)), (0, f.k$)(Y);
                     return;
                 } finally {
                     v(!1);
                 }
             }
-        }, [E, O, k, A, r, t, o, L]),
-        Q = a.useCallback((l) => {
-            I(l), D(null), _(null);
+        }, [E, O, _, A, r, t, o, Y]),
+        F = a.useCallback((l) => {
+            I(l), D(null), N(null);
         }, []),
-        V = a.useCallback((l) => {
-            M(l), D(null), _(null);
+        Q = a.useCallback((l) => {
+            k(l), D(null), N(null);
         }, []);
     return (0, n.jsx)(i.Modal, {
         transitionState: e,
         onClose: t,
-        title: W,
+        title: Z,
         subtitle: X,
         input: (0, n.jsx)(x, {
             codeInput: E,
             isEU: O,
             postalCodeInput: A,
-            selectedBillingCountry: k,
-            redemptionError: N,
-            codeError: P,
-            billingError: w,
+            selectedBillingCountry: _,
+            redemptionError: M,
+            codeError: T,
+            billingError: P,
             onCodeInputChange: $,
-            onPostalCodeChange: Q,
-            onBillingCountryChange: V,
+            onPostalCodeChange: F,
+            onBillingCountryChange: Q,
         }),
         actionBarInput: (0, n.jsx)("span", {}),
-        actions: [{ variant: "primary", size: "md", text: R.intl.string(b.default.hnRau6), loading: U, onClick: z }],
+        actions: [{ variant: "primary", size: "md", text: y.intl.string(b.default.hnRau6), loading: U, onClick: z }],
     });
 }

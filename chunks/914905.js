@@ -273,9 +273,7 @@ function M(e) {
                   return (n) =>
                       (0, i.jsx)(e, {
                           ...n,
-                          draftType: s,
                           upload: l,
-                          channelId: t,
                           onSubmit: (e) => {
                               let { name: n, description: i, spoiler: r } = e;
                               p.A.update(t, l.id, s, { filename: n, description: i, spoiler: r });
