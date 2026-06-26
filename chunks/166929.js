@@ -98,6 +98,7 @@ var f =
         (s.MEDIATEK = "mediatek"),
         (s.UNCATEGORIZED = "uncategorized"),
         (s.D3D11VIDEODECODER = "d3d11videodecoder"),
+        (s.ANDROID = "android"),
         (s.UNKNOWN = "unknown"),
         s);
 let m = Object.freeze({
@@ -140,6 +141,8 @@ let m = Object.freeze({
         "c2.mtk": "mediatek",
         "omx.mtk": "mediatek",
         d3d11videodecoder: "d3d11videodecoder",
+        "c2.android": "android",
+        "omx.google": "android",
     });
 var A =
     (((a = {})[(a.None = 0)] = "None"),
