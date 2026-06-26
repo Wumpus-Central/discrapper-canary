@@ -3869,6 +3869,7 @@ var rD =
         (ex.GAME_DETECTION_ERROR = "game_detection_error"),
         (ex.GAME_BLOCKLIST_TRIGGERED = "game_blocklist_triggered"),
         (ex.GAME_APPLICATION_LOOKUP_FALLTHROUGH = "game_application_lookup_fallthrough"),
+        (ex.GAME_NAME_MATCH_FALLBACK = "game_name_match_fallback"),
         (ex.ACTIVITY_UPDATED = "activity_updated"),
         (ex.ACTIVITY_SESSION_JOINED = "activity_session_joined"),
         (ex.ACTIVITY_SESSION_JOIN_FAILED = "activity_session_join_failed"),

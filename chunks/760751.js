@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { A: () => B }), n(321073);
+n.d(t, { A: () => j }), n(321073);
 var r = n(17928),
     s = n(506774),
     a = n(228366),
@@ -33,8 +33,9 @@ let A = "GameStoreReportedGames",
     M = new Map(),
     P = h.A.Millis.HOUR,
     x = new Set(),
-    k = (0, p.isWindows)() ? "win32" : (0, p.isMac)() ? "darwin" : (0, p.isLinux)() ? "linux" : null;
-function U(e) {
+    k = new Set(),
+    U = (0, p.isWindows)() ? "win32" : (0, p.isMac)() ? "darwin" : (0, p.isLinux)() ? "linux" : null;
+function G(e) {
     return {
         id: e.id,
         name: e.name,
@@ -52,15 +53,15 @@ function U(e) {
         content_classification: e.content_classification ?? void 0,
     };
 }
-function G(e, t) {
+function F(e, t) {
     null == S[t] && (S[t] = []), S[t].push(e);
 }
-function F(e) {
-    let t = e instanceof u.xg ? U(e) : e;
-    for (let n of (T.set(e.id, t), G(t.id, t.name.toLowerCase()), e.aliases)) G(t.id, n.toLowerCase());
+function V(e) {
+    let t = e instanceof u.xg ? G(e) : e;
+    for (let n of (T.set(e.id, t), F(t.id, t.name.toLowerCase()), e.aliases)) F(t.id, n.toLowerCase());
     if ((0, p.isDesktop)()) for (let n of e.executables) y[n.name] = t.id;
 }
-class V extends r.Ay.PersistedStore {
+class B extends r.Ay.PersistedStore {
     static displayName = "GameStore";
     static persistKey = "GameStore";
     static migrations = [
@@ -68,7 +69,7 @@ class V extends r.Ay.PersistedStore {
             null != e
                 ? {
                       detectableGamesEtag: e.detectableGamesEtag,
-                      detectableGames: e.detectableGames?.map((e) => U(new u.xg(e))) ?? [],
+                      detectableGames: e.detectableGames?.map((e) => G(new u.xg(e))) ?? [],
                   }
                 : { detectableGamesEtag: "", detectableGames: [] },
         (e) => ((0, p.isDesktop)() ? e : { detectableGamesEtag: "", detectableGames: [] }),
@@ -86,7 +87,7 @@ class V extends r.Ay.PersistedStore {
             null != e.blocklistEtag && (D = e.blocklistEtag),
             null != e.blocklistExecutables && (L = e.blocklistExecutables),
             null != e.blocklistPatterns && (w = e.blocklistPatterns.map((e) => RegExp(e, "i"))),
-            e.detectableGames?.forEach((e) => F(e)));
+            e.detectableGames?.forEach((e) => V(e)));
     }
     getState() {
         return (0, p.isDesktop)()
@@ -143,7 +144,7 @@ class V extends r.Ay.PersistedStore {
                 r = this.getGameByExecutable(i);
             if (null != r) return r;
         }
-        return n;
+        return null != n && null != e.name && this.trackNameMatchFallback(e.name, n), n;
     }
     getOfficialGame(e) {
         let t;
@@ -211,9 +212,9 @@ class V extends r.Ay.PersistedStore {
     shouldBlock(e) {
         if (null == e.exePath || "" === e.exePath) return !1;
         let t = e.exePath.toLowerCase();
-        if (null != e.id && null != k) {
+        if (null != e.id && null != U) {
             let n = this.getDetectableGame(e.id);
-            if (null != n && n.executables.some((e) => e.os === k && t.endsWith(e.name.toLowerCase()))) return !1;
+            if (null != n && n.executables.some((e) => e.os === U && t.endsWith(e.name.toLowerCase()))) return !1;
         }
         let n = L.find((e) => t.includes(e));
         if (null != n) return this.maybeTrackBlock(e, "explicit_list", n), !0;
@@ -240,6 +241,11 @@ class V extends r.Ay.PersistedStore {
                 matched_game_name: n?.name ?? null,
             }));
     }
+    trackNameMatchFallback(e, t) {
+        let n = e.toLowerCase();
+        k.has(n) ||
+            (k.add(n), _.default.track(m.HAw.GAME_NAME_MATCH_FALLBACK, { matched_name: e, matched_game_id: t.id }));
+    }
     maybeTrackBlock(e, t, n) {
         let i = e.exePath.split(/[/\\]/).pop() ?? "unknown",
             r = M.get(i),
@@ -263,10 +269,10 @@ class V extends r.Ay.PersistedStore {
         (C[e] = !0), s.w.set(A, C);
     }
 }
-let B = new V(a.h, {
+let j = new B(a.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { detectableApplications: t } = e;
-        for (let e of (T.clear(), (S = Object.create(null)), (y = Object.create(null)), t)) F(e);
+        for (let e of (T.clear(), (S = Object.create(null)), (y = Object.create(null)), t)) V(e);
     },
     GAMES_DATABASE_FETCH: function () {
         i = !0;
@@ -280,7 +286,7 @@ let B = new V(a.h, {
             N !== n &&
             (T.clear(), (S = Object.create(null)), (y = Object.create(null)), (N = n)),
         t))
-            F({
+            V({
                 id: e.id,
                 name: e.name,
                 executables: (e.executables ?? []).map(d.lg),
