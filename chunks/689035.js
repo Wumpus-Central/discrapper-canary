@@ -2459,8 +2459,8 @@ function iK(e, t) {
             n.e("21921"),
             n.e("9233"),
             n.e("40402"),
-            n.e("52511"),
             n.e("72963"),
+            n.e("52511"),
             n.e("39970"),
             n.e("76418"),
             n.e("40258"),
@@ -2481,7 +2481,7 @@ function iK(e, t) {
             n.e("46070"),
             n.e("17249"),
             n.e("71273"),
-            n.e("29233"),
+            n.e("61835"),
             n.e("9640"),
             n.e("62422"),
             n.e("50117"),
@@ -3494,43 +3494,40 @@ function rl(e) {
                             className: rt.Xl,
                             barClassName: rt.Sh,
                         }),
-                        (0, r.jsx)("ul", {
+                        (0, r.jsxs)("div", {
                             ref: M,
                             ...x,
                             ...k,
                             role: "tree",
                             "aria-multiselectable": !1,
                             className: rt.B2,
-                            children: (0, r.jsxs)("div", {
-                                className: rt.qD,
-                                children: [
-                                    (0, r.jsxs)(y.zC, {
-                                        className: o()({ [rt.XG]: !0, [rt.qw]: U }),
-                                        experimental_useStack: !0,
-                                        gap: "xs",
-                                        ref: W.scrollerRef,
-                                        onScroll: W.handleScroll,
+                            children: [
+                                (0, r.jsxs)(y.zC, {
+                                    className: o()({ [rt.XG]: !0, [rt.qw]: U }),
+                                    experimental_useStack: !0,
+                                    gap: "xs",
+                                    ref: W.scrollerRef,
+                                    onScroll: W.handleScroll,
+                                    children: [
+                                        (0, r.jsx)(ra, { scrollToTop: z, lurkingGuildIds: f }),
+                                        (0, r.jsx)(nF, {}),
+                                        (0, r.jsx)(ro, {
+                                            guildDiscoveryButton: X,
+                                            disableAppDownload: n,
+                                            isOverlay: i,
+                                            renderTreeNode: Z,
+                                            lurkingGuildIds: f,
+                                        }),
+                                    ],
+                                }),
+                                Q &&
+                                    (0, r.jsxs)("div", {
                                         children: [
-                                            (0, r.jsx)(ra, { scrollToTop: z, lurkingGuildIds: f }),
-                                            (0, r.jsx)(nF, {}),
-                                            (0, r.jsx)(ro, {
-                                                guildDiscoveryButton: X,
-                                                disableAppDownload: n,
-                                                isOverlay: i,
-                                                renderTreeNode: Z,
-                                                lurkingGuildIds: f,
-                                            }),
+                                            (0, r.jsx)(nF, { fullWidth: !0 }),
+                                            (0, r.jsx)("div", { className: rt.JU, children: (0, r.jsx)(rn, {}) }),
                                         ],
                                     }),
-                                    Q &&
-                                        (0, r.jsxs)("div", {
-                                            children: [
-                                                (0, r.jsx)(nF, { fullWidth: !0 }),
-                                                (0, r.jsx)("div", { className: rt.JU, children: (0, r.jsx)(rn, {}) }),
-                                            ],
-                                        }),
-                                ],
-                            }),
+                            ],
                         }),
                         (0, r.jsx)(ti, {
                             reverse: !0,

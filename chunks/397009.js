@@ -2,7 +2,6 @@ e.exports = {
     iE: "wrapper_ef3116",
     R: "hidden_ef3116",
     B2: "tree_ef3116",
-    qD: "itemsContainer_ef3116",
     XG: "scroller_ef3116",
     qw: "scrolling_ef3116",
     LZ: "unreadMentionsIndicatorBottom_ef3116",
