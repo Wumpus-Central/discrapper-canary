@@ -9,7 +9,7 @@ var i = n(392054),
     u = n(573435),
     c = n(696451),
     d = n(486020),
-    _ = n(678322),
+    _ = n(32178),
     h = n(532406);
 function f(e) {
     let {
@@ -76,7 +76,7 @@ function f(e) {
 var p = n(633018),
     E = n(406810),
     m = n(73510),
-    g = n(958351);
+    g = n(824527);
 function A(e) {
     let { section: t, className: n, width: i, height: s, padding: a, isSelected: l, selectable: u = !1, ...c } = e,
         d = (function (e) {

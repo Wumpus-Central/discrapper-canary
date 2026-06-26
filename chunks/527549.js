@@ -59,7 +59,7 @@ var y = s(112142),
     Y = s(79545);
 s(134528), s(947204);
 var J = s(885574),
-    Z = s(50372);
+    Z = s(870788);
 let ee = l.forwardRef(function (e, t) {
     let { isInventory: s, style: l, children: i } = e;
     return (0, n.jsxs)("div", {
@@ -82,7 +82,7 @@ let ee = l.forwardRef(function (e, t) {
         ],
     });
 });
-var et = s(537524);
+var et = s(431540);
 let es = function (e) {
     let { className: t, color: s = _.A.colors.WHITE, quest: l, isInventory: i } = e,
         u = (0, q.aC)(e.quest),
@@ -124,7 +124,7 @@ var en = s(847641),
     eo = s(652215),
     ec = s(806931),
     eE = s(375708),
-    ed = s(645866);
+    ed = s(347562);
 function eA(e) {
     var t;
     let { channelId: s, quest: i, previewQuest: g, isParticipatingOverride: $ } = e,
@@ -288,8 +288,8 @@ function eA(e) {
     let e0 = null != i.userStatus && (0, P.gO)(i.userStatus, p.uF.QUEST_LIVE_STREAM),
         e1 = null != i.userStatus && (0, P.gO)(i.userStatus, p.uF.QUEST_BAR),
         e4 = eh && !e1,
-        e6 = y.t.useConfig({ location: ea.rE.QUEST_CHANNEL_CALL_HEADER }),
-        e7 = (0, Y.Pd)(i);
+        e7 = y.t.useConfig({ location: ea.rE.QUEST_CHANNEL_CALL_HEADER }),
+        e6 = (0, Y.Pd)(i);
     if (
         (eG.info({
             isQuestCallHeaderDismissed: e0,
@@ -447,9 +447,9 @@ function eA(e) {
                                             onClick: ew,
                                             fullWidth: !ez || i.config.features.includes(ea.Li.CLOUD_GAMING_ACTIVITY),
                                         }),
-                                        e6.enabled &&
-                                        e7 === Y.UA.UNENROLLED &&
-                                        e6.enabledQuestStates.has(Y.UA.UNENROLLED) &&
+                                        e7.enabled &&
+                                        e6 === Y.UA.UNENROLLED &&
+                                        e7.enabledQuestStates.has(Y.UA.UNENROLLED) &&
                                         !eK
                                             ? (0, n.jsx)(X.A, {
                                                   quest: i,

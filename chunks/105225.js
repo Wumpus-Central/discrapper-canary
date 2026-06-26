@@ -68,7 +68,7 @@ var l = t(627968),
     eC = t(652215),
     eE = t(806931),
     ep = t(49999),
-    eg = t(354944);
+    eg = t(56640);
 function ex(e, n) {
     en.Ay.isVideoEnabled() !== e && ((0, O.X)(f.A.VOICE_CONTROL_TRAY, O.O.CAMERA, e), e ? (0, em.A)(t, n) : t());
     function t() {

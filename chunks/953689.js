@@ -16,7 +16,7 @@ var i = n(627968),
     E = n(428262),
     m = n(652215),
     g = n(375708),
-    A = n(103930);
+    A = n(470330);
 class I extends r.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
@@ -71,8 +71,8 @@ class I extends r.Component {
                                     onClick: (t) => {
                                         (0, _.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
-                                                n.e("38028"),
-                                                n.e("60464"),
+                                                n.e("5096"),
+                                                n.e("71568"),
                                                 n.e("92064"),
                                                 n.e("87297"),
                                             ]).then(n.bind(n, 294264));

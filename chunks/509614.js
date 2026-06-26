@@ -92,7 +92,7 @@ var R = n(935462),
     U = n(659746),
     _ = n(151595),
     F = n(771566),
-    w = n(306326);
+    w = n(20374);
 function O(t) {
     let { onClose: e } = t,
         n = (0, r.jsx)(g.E, { className: w.h, variant: "text-md/normal", children: M.intl.string(M.t.FCsTCk) });

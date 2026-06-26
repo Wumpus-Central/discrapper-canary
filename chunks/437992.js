@@ -7,9 +7,9 @@ var l = n(627968),
     o = n(359800),
     c = n(46225),
     d = n(769015),
-    u = n(559965),
+    u = n(774418),
     m = n(375708),
-    h = n(215965);
+    h = n(27549);
 function x(e) {
     let t,
         { application: n, size: x = "md", analyticsLocation: g = a.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,

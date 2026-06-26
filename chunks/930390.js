@@ -16,8 +16,8 @@ var i = n(627968),
     x = n(114166),
     f = n(891734),
     E = n(831688),
-    I = n(10585),
-    C = n(471717);
+    I = n(347353),
+    C = n(866661);
 let v = l.memo(function (e) {
         let t,
             n,
@@ -40,21 +40,21 @@ let v = l.memo(function (e) {
             y = (0, E.IN)(d, c, j),
             S = (0, f.g)(T && null != h ? h : []),
             b = l ? C : I,
-            L = T ? m : o,
-            R = (0, x.x)(L, E.$Z),
-            k = {};
+            k = T ? m : o,
+            L = (0, x.x)(k, E.$Z),
+            R = {};
         if (T && null != S) {
             let { accentColor: e, backgroundColor: i, opacity: l } = S,
                 s = (0, p.xp)(i ?? "", l) ?? "";
-            y && (k.borderColor = i), (k.background = s), (t = e), (n = e);
+            y && (R.borderColor = i), (R.background = s), (t = e), (n = e);
         }
-        let M = { minWidth: R, color: t, borderColor: n };
+        let M = { minWidth: L, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
             className: r()(b.reaction, b.reactionInner, a, { [b.reactionMe]: y, [b.reactionReadOnly]: g && !v && !_ }),
-            style: k,
+            style: R,
             children: [
                 (0, i.jsx)(A.A, { emojiId: s.id, emojiName: s.name, size: N, animated: T && s.animated }),
-                (0, i.jsx)("div", { className: b.reactionCount, style: M, children: L }),
+                (0, i.jsx)("div", { className: b.reactionCount, style: M, children: k }),
             ],
         });
     }),
@@ -124,7 +124,7 @@ class T extends l.PureComponent {
             S = f ? C : I,
             b = T > 0;
         if (!b && !A) return null;
-        let L = A || b;
+        let k = A || b;
         return (0, i.jsxs)(a.F, {
             component: "div",
             className: r()(S.reactions, p),
@@ -161,12 +161,12 @@ class T extends l.PureComponent {
                 !t &&
                     !E &&
                     (0, i.jsx)(m.t, {
-                        tabIndex: L || this.state.isHovered ? 0 : -1,
+                        tabIndex: k || this.state.isHovered ? 0 : -1,
                         message: e,
                         channel: g,
                         useChatFontScaling: f,
                         isHovered: this.state.isHovered,
-                        className: r()({ [S.forceShow]: L }),
+                        className: r()({ [S.forceShow]: k }),
                     }),
             ],
         });

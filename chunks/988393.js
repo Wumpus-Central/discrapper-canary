@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(857250),
     l = n(691540),
     u = n(97483),
-    c = n(768218);
+    c = n(4506);
 let d = { duration: 300, friction: 24, tension: 280 },
     _ = {
         [u.xJ.TOP]: {

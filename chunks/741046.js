@@ -13,7 +13,7 @@ var i,
     g = t(107834),
     h = t(793574),
     f = t(688810),
-    N = t(753390),
+    N = t(277984),
     j = t(86379),
     p = t(160946),
     A = t(545075),
@@ -92,7 +92,7 @@ var ei =
     el = t(65470),
     er = t(792656),
     ec = t(652215),
-    eo = t(298203);
+    eo = t(870408);
 let ed = function (e) {
     let { isVisible: s, subscriptionTier: t, isEligibleForBogoPromotion: i } = e,
         a = (0, ea.z)({
@@ -124,7 +124,7 @@ var em = t(534514),
     eu = t(702841),
     ex = t(652533),
     eg = t(20458),
-    eh = t(999461),
+    eh = t(80933),
     ef = t(180894);
 let eN = function () {
     let e = (0, eu.bG)([F.Ay], () => F.Ay.useReducedMotion);
@@ -157,7 +157,7 @@ let eN = function () {
     });
 };
 var ej = t(375708),
-    ep = t(901013);
+    ep = t(296725);
 let eA = a.forwardRef((e, s) => {
     let { analyticsLocations: t } = (0, f.Ay)(h.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, n.jsx)(f.f5, {
@@ -188,7 +188,7 @@ var ev = t(403581),
     eI = t(909536),
     eT = t(400669),
     eR = t(876587),
-    e_ = t(680023);
+    e_ = t(503255);
 let eS = function (e) {
     let { navBarSections: s, activeSectionId: t, isAnimationComplete: i } = e,
         l = {
@@ -267,8 +267,8 @@ var eM = t(31502),
     eL = t(985603),
     eB = t(983060),
     eU = t(788868),
-    eH = t(151001),
-    ez = t(869590);
+    eH = t(237146),
+    ez = t(56598);
 function eF() {
     let { sectionRef: e, handleVisibilityChange: s } = (0, ew.A)({ boxType: eL.X, thirdPartyPartner: "xbox" }),
         t = [
@@ -384,7 +384,7 @@ function eF() {
 }
 var eK = t(750338),
     eV = t(280041),
-    eW = t(506732);
+    eW = t(856556);
 function eQ(e) {
     let {
         className: s,
@@ -458,22 +458,22 @@ var eY = t(877624),
     e8 = t(97808),
     e6 = t(854627),
     e7 = t(778712),
-    e4 = t(331813);
-function e5(e) {
+    e5 = t(45861);
+function e4(e) {
     let { referrer: s } = e,
         { avatarSrc: t, eventHandlers: i } = (0, e6.A)({ userId: s?.id, size: e7._3.SIZE_24, animateOnHover: !0 });
     return (0, n.jsx)("div", {
-        className: e4.$6,
+        className: e5.$6,
         children: (0, n.jsxs)("div", {
-            className: e4.sc,
+            className: e5.sc,
             children: [
                 (0, n.jsx)("div", {
-                    className: e4.kR,
+                    className: e5.kR,
                     children: (0, n.jsx)(e8.eu, { src: t, "aria-label": s.username, size: e7._3.SIZE_32, ...i }),
                 }),
                 (0, n.jsx)(em.D, {
                     variant: "heading-sm/normal",
-                    className: e4.FS,
+                    className: e5.FS,
                     color: "text-strong",
                     children: ej.intl.format(ej.t.IqxblS, {
                         username: null != s.globalName ? s.globalName : s.username,
@@ -496,7 +496,7 @@ function si() {
     return null != e ? (0, Q.sS)(e) : "\u2026";
 }
 var sn = t(141502),
-    sa = t(512105);
+    sa = t(188393);
 let sl = function (e) {
     let { containerVisibilityPercentage: s } = e,
         t = (0, eu.bG)([F.Ay], () => F.Ay.useReducedMotion),
@@ -529,7 +529,7 @@ let sl = function (e) {
         ],
     });
 };
-var sr = t(214496);
+var sr = t(469408);
 let sc = a.memo(
     a.forwardRef(function (e, s) {
         let { className: t, subscriptionTier: i, isEligibleForBogoPromotion: a } = e,
@@ -577,7 +577,7 @@ let sc = a.memo(
                                     m &&
                                         (0, n.jsx)("div", {
                                             className: sr.eZ,
-                                            children: (0, n.jsx)(e5, { referrer: d }),
+                                            children: (0, n.jsx)(e4, { referrer: d }),
                                         }),
                                     j &&
                                         (0, n.jsx)("div", {
@@ -640,10 +640,10 @@ var sf = t(773669),
     sp = t(881373),
     sA = t(84483),
     sv = t(190107),
-    sb = t(778414),
-    sE = t(587416),
-    sC = t(745699),
-    sI = t(746458),
+    sb = t(962995),
+    sE = t(490285),
+    sC = t(864386),
+    sI = t(799642),
     sT = t(202600);
 function sR(e) {
     let { includes: s } = e;
@@ -1078,7 +1078,7 @@ let sP = function (e) {
         );
     };
 var sk = t(818348),
-    sO = t(94509);
+    sO = t(808557);
 let sG = () => {
     let e = (0, c.zy)();
     (0, b.P)(v.b);
@@ -1206,7 +1206,7 @@ var sw = t(462887),
     sK = t(695366),
     sV = t(780964),
     sW = t(766075),
-    sQ = t(238272);
+    sQ = t(835968);
 let sX = function (e) {
     let s,
         t,
@@ -1252,7 +1252,7 @@ let sX = function (e) {
         })
     );
 };
-var sJ = t(442015);
+var sJ = t(147935);
 let sY = function (e) {
     let { lifted: s = !1 } = e;
     return (0, n.jsxs)("svg", {
@@ -1291,7 +1291,7 @@ let sY = function (e) {
 var sZ = t(900797),
     sq = t(847374),
     s$ = t(812993),
-    s0 = t(837761);
+    s0 = t(464769);
 function s2(e) {
     let { className: s } = e;
     return (0, n.jsx)(s$.Lp, { className: r()(s0.T, s), text: ej.intl.string(ej.t.EYxi0o) });
@@ -1300,15 +1300,15 @@ var s1 = t(904788),
     s8 = t(507553),
     s6 = t(591179),
     s7 = t(255438),
-    s4 = t(355097);
-let s5 = "/assets/5b4fec8511c3676a.svg",
+    s5 = t(355097);
+let s4 = "/assets/5b4fec8511c3676a.svg",
     s3 = "/assets/0838bda6ecd20d91.svg";
 var s9 = t(64514),
     te = t(121818);
 function ts(e, s, t) {
     return (0, sw.M)(e) ? s : t;
 }
-var tt = t(259270);
+var tt = t(446278);
 function ti(e) {
     let { isShowingAll: s, onClick: t } = e;
     return (0, n.jsxs)(eb.D, {
@@ -1421,7 +1421,7 @@ let ta = function (e) {
                         function s() {
                             {
                                 let { openUserSettings: s } = t(766075);
-                                s8.A.setState({ scrollPosition: s4._F.TRY_IT_OUT }),
+                                s8.A.setState({ scrollPosition: s5._F.TRY_IT_OUT }),
                                     s(sV.X.PROFILE_PANEL, { analyticsLocations: e });
                             }
                         }
@@ -1459,19 +1459,19 @@ let ta = function (e) {
                 stickers: {
                     title: ej.intl.string(ej.t["1c+xwT"]),
                     description: ej.intl.string(ej.t.hJG8ZN),
-                    imageSource: ts(i, s3, s5),
+                    imageSource: ts(i, s3, s4),
                     imageClassName: s.stickersImage,
                 },
                 stickersBurst: {
                     title: ej.intl.string(ej.t.tzdIwI),
                     description: ej.intl.string(ej.t.hJG8ZN),
-                    imageSource: ts(i, s3, s5),
+                    imageSource: ts(i, s3, s4),
                     imageClassName: s.stickersImage,
                 },
                 stickersPremiumPerk: {
                     title: ej.intl.string(ej.t.tzdIwI),
                     description: ej.intl.string(ej.t.hJG8ZN),
-                    imageSource: ts(i, s3, s5),
+                    imageSource: ts(i, s3, s4),
                     imageClassName: s.stickersImage,
                 },
                 streaming: {
@@ -1552,7 +1552,7 @@ let ta = function (e) {
     });
 };
 var tl = t(194509),
-    tr = t(618526);
+    tr = t(14238);
 let tc = function (e) {
     let { isVisible: s, subscriptionTier: t, isApplicationHome: i, isEligibleForBogoPromotion: a } = e,
         l = (0, ea.z)({
@@ -1584,7 +1584,7 @@ let tc = function (e) {
     });
 };
 var to = t(89366),
-    td = t(762405);
+    td = t(360101);
 function tm(e) {
     let {
             inOfferExperience: s,
@@ -1683,8 +1683,8 @@ let tg = a.forwardRef(function (e, s) {
     });
 });
 var th = t(22118),
-    tf = t(406012),
-    tN = t(302891),
+    tf = t(111932),
+    tN = t(16939),
     tj = t(79119);
 function tp(e) {
     let { inOfferExperience: s } = e;
@@ -1861,7 +1861,7 @@ let tA = () => {
                 return null;
         }
     };
-var tb = t(78103);
+var tb = t(972119);
 let tE = function (e) {
     let { entrypoint: s = eU.Mf.UserSettings } = e;
     (0, b.P)(v.b);

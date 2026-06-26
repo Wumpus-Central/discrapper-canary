@@ -18,7 +18,7 @@ var a = s(627968),
     v = s(943457),
     b = s(652215),
     N = s(375708),
-    k = s(94899);
+    k = s(907891);
 function A(e) {
     let {
             guildTemplate: t,

@@ -3,7 +3,7 @@ var i = n(627968),
     a = n(64700),
     l = n(503698),
     r = n.n(l),
-    s = n(127382),
+    s = n(285674),
     o = n(598748),
     c = n(205338),
     d = n(179771),
@@ -44,7 +44,7 @@ var i = n(627968),
     z = n(841595),
     V = n(623280),
     K = n(375708),
-    B = n(439907);
+    B = n(40355);
 function q(e) {
     let { trackUserProfileAction: t } = (0, Y.NJ)(),
         { user: n, widget: l, cta: s } = e,

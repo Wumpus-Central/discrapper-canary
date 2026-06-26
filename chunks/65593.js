@@ -8,8 +8,8 @@ var s = r(627968),
     d = r(961895),
     p = r(494921),
     c = r(375708),
-    g = r(58450),
-    v = r(611812);
+    g = r(910162),
+    v = r(571876);
 let h = new o.A("UploadArea");
 function u() {
     return (0, s.jsxs)("div", {

@@ -23,9 +23,9 @@ var l = n(627968),
     E = n(437992),
     S = n(652215);
 n(253913);
-var y = n(559965),
+var y = n(774418),
     T = n(375708),
-    I = n(45342);
+    I = n(939422);
 let _ = h.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
     R = "create-game-invite-post";
 function k(e) {
@@ -44,7 +44,7 @@ function w(e) {
         k = i.useMemo(() => n.availableTags ?? [], [n.availableTags]),
         { application: w } = (0, b._k)(n.guild_id),
         L = (0, o.bG)([C.A, N.A], () => (0, u.A)(C.A, N.A, w?.id), [w]),
-        [{ textValue: P, richValue: D }, O] = i.useState(() => (0, x.N3)()),
+        [{ textValue: D, richValue: P }, O] = i.useState(() => (0, x.N3)()),
         [F, G] = i.useState(!1),
         [z, U] = i.useState(() => new Set()),
         [H, B] = i.useState(!1),
@@ -70,7 +70,7 @@ function w(e) {
             },
             [V],
         ),
-        Q = ((t = P.trim().split("\n")[0] ?? ""), (0, v.A)(t.slice(0, S.Ign), !0)),
+        Q = ((t = D.trim().split("\n")[0] ?? ""), (0, v.A)(t.slice(0, S.Ign), !0)),
         X = i.useMemo(() => (null != L ? { type: S.xL.JOIN, activity: L } : void 0), [L]),
         J = (0, j.w0)({
             parentChannel: n,
@@ -81,18 +81,18 @@ function w(e) {
             applicationId: w?.id,
             voiceChatEnabled: W,
         }),
-        Z = !H && P.length > 0 && P.length <= 120,
+        Z = !H && D.length > 0 && D.length <= 120,
         ee = i.useCallback(async () => {
             if (Z) {
                 B(!0);
                 try {
-                    let e = await J(P);
+                    let e = await J(D);
                     (0, p.JA)(e), h();
                 } catch {
                     B(!1);
                 }
             }
-        }, [Z, J, h, P]);
+        }, [Z, J, h, D]);
     return (0, l.jsx)(s.Modal, {
         title: T.intl.string(y.default.tOsHsu),
         transitionState: d,
@@ -111,8 +111,8 @@ function w(e) {
                         type: _,
                         channel: n,
                         placeholder: T.intl.string(y.default["SU/IAE"]),
-                        textValue: P,
-                        richValue: D,
+                        textValue: D,
+                        richValue: P,
                         focused: F,
                         onChange: q,
                         onFocus: () => G(!0),

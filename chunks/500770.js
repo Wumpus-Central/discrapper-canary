@@ -16,7 +16,7 @@ var l = n(503698),
     A = n(724609),
     x = n(411342),
     f = n(375708),
-    E = n(48131);
+    E = n(859715);
 function I(e) {
     let { hidePurchaseToUnlockBadge: t, showDraftBadge: n, className: l, children: o } = e;
     return (0, i.jsxs)("div", {
@@ -79,9 +79,9 @@ function v(e) {
             hideRoleTag: y = !1,
             lineClamp: S = 1,
             cardWidth: b = 332,
-            cardHeight: L,
-            thumbnailHeight: R = 187,
-            descriptionTextVariant: k = "text-sm/normal",
+            cardHeight: k,
+            thumbnailHeight: L = 187,
+            descriptionTextVariant: R = "text-sm/normal",
             isDraft: M = !1,
         } = e,
         P = (0, g.Ld)(),
@@ -90,7 +90,7 @@ function v(e) {
                 (0, i.jsx)(I, {
                     showDraftBadge: M,
                     hidePurchaseToUnlockBadge: !0,
-                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: R } }),
+                    children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: L } }),
                 }),
                 (0, i.jsxs)("div", {
                     className: E.MS,
@@ -107,13 +107,13 @@ function v(e) {
                                 }),
                                 (0, i.jsx)(u.M, {
                                     children: (0, i.jsx)(p.A, {
-                                        variant: k,
+                                        variant: R,
                                         color: "text-muted",
                                         lineClamp: S,
                                         text: l,
                                     }),
                                 }),
-                                A && (0, i.jsx)(C, { onShowFullDescription: v, variant: k }),
+                                A && (0, i.jsx)(C, { onShowFullDescription: v, variant: R }),
                                 y || null == o || "" === o.name
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
@@ -153,7 +153,7 @@ function v(e) {
     return null == j
         ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": P, children: D })
         : (0, i.jsx)("div", {
-              style: { width: b, height: L },
+              style: { width: b, height: k },
               children: (0, i.jsx)(h.s, {
                   tag: "article",
                   "aria-label": f.intl.formatToPlainString(f.t["e+TmJa"], { productName: n }),

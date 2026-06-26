@@ -18,7 +18,7 @@ var i = n(627968),
     g = n(834730),
     A = n(29160),
     I = n(375708),
-    T = n(873054);
+    T = n(60062);
 let S = function (e) {
     let { className: t, hasVideo: n, text: r, hasConnectedChannel: s, textVariant: o = "text-md/medium" } = e,
         l = n ? I.intl.string(I.t.IlHdW8) : I.intl.string(I.t.WsOisp);
@@ -29,7 +29,7 @@ let S = function (e) {
     });
 };
 var y = n(652215),
-    C = n(754865);
+    C = n(648881);
 let N = { [y.vkP.CONNECTED]: C.nf, [y.vkP.CONNECTING]: C._6, [y.vkP.ERROR]: C.Il },
     v = { [y.bFR.FINE]: C.LP, [y.bFR.AVERAGE]: C.mq, [y.bFR.BAD]: C.yA, [y.bFR.UNKNOWN]: null },
     R = { [y.bFR.FINE]: l.Q, [y.bFR.AVERAGE]: u.j, [y.bFR.BAD]: c.R, [y.bFR.UNKNOWN]: d.e };

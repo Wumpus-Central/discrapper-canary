@@ -13,8 +13,8 @@ var a = l(17928),
     h = l(309010),
     g = l(287809),
     A = l(977997),
-    f = l(652215),
-    m = l(21197),
+    m = l(652215),
+    f = l(499214),
     v = l(375708);
 let x = { channelId: null, channelName: null, channel: null, guild: null, canJoin: !1, isAlreadyConnected: !1 };
 function b(e) {
@@ -33,7 +33,7 @@ function b(e) {
         let r = l.getGuildId?.() ?? null,
             a = null != r ? s.A.getGuild(r) : null,
             t = h.A.getVoiceChannelId() === l.id,
-            i = l.isPrivate() || c.A.can(f.xBc.CONNECT, l);
+            i = l.isPrivate() || c.A.can(m.xBc.CONNECT, l);
         return {
             channelId: l.id,
             channelName: (0, o.m1)(l, g.default, p.A),
@@ -44,12 +44,12 @@ function b(e) {
         };
     }, [e]);
     if (null == n || !C || I) return null;
-    let w = (0, u.gU)(b, j ?? void 0);
+    let G = (0, u.gU)(b, j ?? void 0);
     return (0, r.jsx)(t.Dr, {
         id: "join-user-voice-channel",
-        void_label: v.intl.format(m.default["4l56iz"], {
+        void_label: v.intl.format(f.default["4l56iz"], {
             channelName: l ?? n,
-            channelIcon: () => (null != w ? (0, r.jsx)(w, { size: "xxs", color: "currentColor" }) : null),
+            channelIcon: () => (null != G ? (0, r.jsx)(G, { size: "xxs", color: "currentColor" }) : null),
         }),
         action: () => {
             i.default.selectVoiceChannel(n);

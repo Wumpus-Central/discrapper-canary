@@ -17,7 +17,7 @@ var s = l(627968),
     g = l(935208),
     f = l(107123),
     p = l(375708),
-    b = l(446037);
+    b = l(73045);
 function A(e) {
     let { profile: t, disableGuildNameClick: l } = e,
         i = t.id,

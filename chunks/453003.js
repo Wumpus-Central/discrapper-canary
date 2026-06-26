@@ -26,9 +26,9 @@ var i,
     y = n(751765),
     S = n(207371),
     b = n(205184),
-    L = n(689168),
-    R = n(403362),
-    k = n(456060),
+    k = n(689168),
+    L = n(403362),
+    R = n(456060),
     M = n(723702),
     P = n(850670),
     D = n(206589),
@@ -87,7 +87,7 @@ function Z(e) {
 }
 var $ = n(878831),
     Q = n(768349),
-    ee = n(378);
+    ee = n(193018);
 function et(e) {
     let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: i } = e,
         r = (function (e) {
@@ -137,7 +137,7 @@ function et(e) {
                                 return null;
                         }
                     })
-                    .filter(R.Vq),
+                    .filter(L.Vq),
             [r],
         );
     if (!(null != n || a.length > 0)) return null;
@@ -205,7 +205,7 @@ function ei(e) {
             iconSrc: A,
             onView: f,
             presenceActivity: T,
-            currentUserPresenceActivity: R,
+            currentUserPresenceActivity: L,
             hideParty: q,
             hideBanner: X = !1,
             partyStatusElement: Z,
@@ -237,7 +237,7 @@ function ei(e) {
                     className: ee.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ed ? (0, k.YC)(t, i, r, d, !1) : (0, l.jsx)(en, { activity: T }), ed ? null : eu],
+                    children: [ed ? (0, R.YC)(t, i, r, d, !1) : (0, l.jsx)(en, { activity: T }), ed ? null : eu],
                 }),
             [ed, t, i, r, d, T, eu],
         ),
@@ -296,7 +296,7 @@ function ei(e) {
                 : { canJoin: !1, remoteJoinPlatform: null };
         })({
             presenceActivity: T,
-            currentUserPresenceActivity: R,
+            currentUserPresenceActivity: L,
             currentUserId: d,
             message: t,
             application: n,
@@ -309,7 +309,7 @@ function ei(e) {
             !(0, z.A)(T, t, n.id) ||
             !(0, F.A)(T, H.jUm.SYNC) ||
             !M.isPlatformEmbedded ||
-            (0, D.w)(R, T)
+            (0, D.w)(L, T)
         ),
         eI = (function (e, t, n, i) {
             if (
@@ -322,11 +322,11 @@ function ei(e) {
             let l = (0, O._)(e);
             return !(!(0, Y.A)(l) || (0, K.U)(l));
         })(T, t, n, d),
-        eC = (0, D.w)(R, T),
+        eC = (0, D.w)(L, T),
         ev = null != T && (0, F.A)(T, H.jUm.SUPPORTS_REMOTE_ACTIVITY_ACTION_JOIN),
         e_ = (0, u.bG)(
-            [L.A],
-            () => null != T && null != T.application_id && L.A.getState(T.application_id, H.xL.JOIN) === H.eAD.LOADING,
+            [k.A],
+            () => null != T && null != T.application_id && k.A.getState(T.application_id, H.xL.JOIN) === H.eAD.LOADING,
         ),
         { actions: ej, hasAccountLinkButton: eN } = s.useMemo(() => {
             let e = null,

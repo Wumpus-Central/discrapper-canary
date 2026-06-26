@@ -55,8 +55,8 @@ var W = n(336590),
     V = n(47167),
     K = n(928078),
     B = n(375708),
-    Z = n(159390),
-    X = n(791155);
+    Z = n(906462),
+    X = n(669747);
 function J(e) {
     let { channel: t, baseChannelId: n } = e,
         a = (0, V.Ay)(t),
@@ -144,7 +144,7 @@ function ep(e) {
 var eC = n(790499),
     eb = n(396478),
     eI = n(687599),
-    e_ = n(645581),
+    e_ = n(867853),
     ev = n(317017),
     eR = n(826223);
 function eN(e) {
@@ -163,7 +163,7 @@ var eM = n(625494),
     eT = n(615300),
     eG = n(187322),
     ek = n(442433),
-    ey = n(997835);
+    ey = n(249611);
 let eP = function (e) {
     let {
             index: t,
@@ -198,15 +198,15 @@ let eP = function (e) {
                                 e,
                                 async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("10570"),
-                                        n.e("98273"),
+                                        n.e("71406"),
+                                        n.e("94881"),
                                         n.e("26132"),
                                         n.e("46652"),
                                         n.e("93190"),
                                         n.e("8757"),
                                         n.e("85968"),
                                         n.e("89673"),
-                                        n.e("52168"),
+                                        n.e("29787"),
                                         n.e("82073"),
                                         n.e("97558"),
                                         n.e("91994"),
@@ -256,15 +256,15 @@ var eB = n(707539),
     e$ = n(903209),
     e0 = n(346055),
     e7 = n(863439),
-    e3 = n(465364),
+    e9 = n(465364),
     e6 = n(805964),
-    e9 = n(302031),
-    e8 = n(885386),
-    e5 = n(576705),
-    e1 = n(652215),
-    e2 = n(838541),
-    e4 = n(513642),
-    te = n(168147);
+    e8 = n(302031),
+    e3 = n(885386),
+    e4 = n(576705),
+    e2 = n(652215),
+    e5 = n(838541),
+    e1 = n(571882),
+    te = n(992595);
 let tt = l.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: a, message: r } = (0, eX.I)(t),
@@ -276,19 +276,19 @@ let tt = l.memo(function (e) {
             }),
             [r],
         ),
-        u = (0, o.bG)([e5.A], () => e5.A.can(e1.xBc.MANAGE_MESSAGES, t)),
-        h = e8.gs.useSetting(),
+        u = (0, o.bG)([e4.A], () => e4.A.can(e2.xBc.MANAGE_MESSAGES, t)),
+        h = e3.gs.useSetting(),
         { content: m } = l.useMemo(
             () =>
                 r?.content != null && "" !== r.content
-                    ? (0, e3.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
+                    ? (0, e9.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
                     : { content: null },
             [r],
         ),
         A = null;
     if (a)
         A = (0, s.jsx)(g.E, {
-            className: e4.G4,
+            className: e1.G4,
             variant: "text-sm/normal",
             color: "text-muted",
             children: B.intl.string(B.t.BZHld2),
@@ -296,48 +296,48 @@ let tt = l.memo(function (e) {
     else if (n)
         if (null != r && c)
             A = (0, s.jsx)(g.E, {
-                className: e4.G4,
+                className: e1.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t["WPe+xL"]),
             });
         else if (null != r && d)
             A = (0, s.jsx)(g.E, {
-                className: e4.G4,
+                className: e1.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e6.o)(r, m, c, d, i()(e4.BK, te.tZ), {
-                leadingIconClass: e4.AF,
-                trailingIconClass: e4.AF,
-                iconSize: e2.eJ,
+            let { contentPlaceholder: e, renderedContent: t } = (0, e6.o)(r, m, c, d, i()(e1.BK, te.tZ), {
+                leadingIconClass: e1.AF,
+                trailingIconClass: e1.AF,
+                iconSize: e5.eJ,
             });
             A =
                 null != t
-                    ? (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", className: e4.BK, children: t })
+                    ? (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", className: e1.BK, children: t })
                     : (0, s.jsx)(g.E, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: e4.G4,
+                          className: e1.G4,
                           children: e,
                       });
         } else
             A = (0, s.jsx)(g.E, {
-                className: e4.G4,
+                className: e1.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t["0KfDxM"]),
             });
     else A = null;
-    return (0, s.jsx)(e9.Bs.Provider, {
+    return (0, s.jsx)(e8.Bs.Provider, {
         value: (0, e7.A)(h, u),
-        children: (0, s.jsx)(e0.M, { className: e4.JY, children: A }),
+        children: (0, s.jsx)(e0.M, { className: e1.JY, children: A }),
     });
 });
-var tn = n(852265);
+var tn = n(746345);
 let ts = (e) => {
         let t,
             n,
@@ -445,7 +445,7 @@ function ta(e) {
         ],
     });
 }
-var ti = n(303722);
+var ti = n(610602);
 function tr(e) {
     let { active: t, user: n, channel: a, isRestricted: i = !1 } = e,
         r = (0, W.k)(),
@@ -520,13 +520,13 @@ function tc(e) {
         onClick: function (e) {
             e.stopPropagation(),
                 q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: D.fe, hasSingleMessageRequest: i }),
-                eu.default.track(e1.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: l.id,
                     other_user_id: a.id,
                 }),
                 setTimeout(() => {
-                    eM._.dispatch(e1.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                    eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                 }, 0);
         },
         children: (e) => (0, s.jsx)(tr, { active: e, user: a, channel: l, isRestricted: r }),
@@ -553,7 +553,7 @@ function tu(e) {
         text: B.intl.string(B.t.HHZmDn),
     });
 }
-var th = n(316571);
+var th = n(303835);
 function tm(e) {
     let { active: t, user: n, channel: a } = e,
         i = (0, W.r)(),
@@ -609,19 +609,19 @@ function tA(e) {
         onClick: function (e) {
             e.stopPropagation(),
                 q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: D.fe, hasSingleMessageRequest: i }),
-                eu.default.track(e1.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
+                eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
                     channel_id: l.id,
                     other_user_id: a.id,
                 }),
                 setTimeout(() => {
-                    eM._.dispatch(e1.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
+                    eM._.dispatch(e2.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: l.id });
                 }, 0);
         },
         children: (e) => (0, s.jsx)(tm, { active: e, user: a, channel: l }),
     });
 }
-var tg = n(87433);
+var tg = n(900425);
 function tE() {
     let e,
         t,
@@ -661,7 +661,7 @@ function tE() {
             b(d.map((e) => e.channel.id));
         }, [d, b]);
     (0, I.Ay)(() => {
-        eu.default.track(e1.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
+        eu.default.track(e2.HAw.SPAM_MESSAGE_REQUESTS_VIEWED, { num_spam_message_requests: u }),
             es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_VIEW });
     });
     let R = l.useCallback(
@@ -751,8 +751,8 @@ function tE() {
           });
 }
 var tS = n(49999),
-    tx = n(16123),
-    tf = n(362556);
+    tx = n(267899),
+    tf = n(964623);
 function tj() {
     let e,
         t,
@@ -885,7 +885,7 @@ function tp(e) {
         l = (0, o.bG)([D.Ay], () => D.Ay.getSidebarState(D.fe)),
         a = (0, o.bG)([eo.A], () => eo.A.getChannel(l?.channelId));
     if (null == l || l.type !== el.PE.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
-    let i = t - e1.ItT;
+    let i = t - e2.ItT;
     return (0, s.jsx)(v.A, {
         sidebarType: v.X.MessageRequestSidebar,
         maxWidth: i,
@@ -961,9 +961,9 @@ let tI = (0, b.A)(function (e) {
     let { width: t } = e,
         n = (0, ef.W)();
     (0, I.Ay)(() => {
-        C.I(e1.BVt.MESSAGE_REQUESTS),
+        C.I(e2.BVt.MESSAGE_REQUESTS),
             (0, ea.d)("message-requests"),
-            eu.default.track(e1.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
+            eu.default.track(e2.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             es.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW });
     });
     let a = (0, o.bG)([ei.A], () => ei.A.theme),

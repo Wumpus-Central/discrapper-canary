@@ -24,9 +24,9 @@ var i = n(627968),
     C = n(46225),
     N = n(652215),
     v = n(49999),
-    R = n(566707),
+    R = n(230451),
     O = n(375708),
-    b = n(846775);
+    b = n(448759);
 let D = function (e) {
     let { markAsDismissed: t, applicationName: s } = e,
         a = [N.fg2.LEAGUE_OF_LEGENDS, N.fg2.RIOT_GAMES],
@@ -52,7 +52,7 @@ let D = function (e) {
                 applicationId: M.id,
                 onSuccess: () => {
                     (0, d.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("428"), n.e("89387")]).then(n.bind(n, 494886));
+                        let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(n.bind(n, 494886));
                         return (t) => (0, i.jsx)(e, { ...t });
                     });
                 },

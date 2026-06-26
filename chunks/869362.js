@@ -78,7 +78,7 @@ var H = l(902119),
     Y = l(701508),
     z = l(979590),
     X = l(783531),
-    K = l(453958);
+    K = l(624134);
 let W = "/assets/3aa7e375b23dc56f.svg";
 function Z(e) {
     let { heading: t = w.intl.string(w.t.NGw8v2), body: l = w.intl.string(w.t["1XZRY4"]), className: i } = e;
@@ -101,7 +101,7 @@ var $ = l(935573),
     ee = l(111042),
     et = l(651753),
     el = l(289873),
-    ei = l(865288);
+    ei = l(566984);
 function es(e) {
     let { loading: t, children: l } = e;
     return (0, s.jsxs)("div", {
@@ -126,7 +126,7 @@ var ea = l(269115),
     eu = l(283488),
     eh = l(607470),
     em = l(654107),
-    ep = l(210240);
+    ep = l(564096);
 let eg = 16 / 9,
     ex = 325 / 72;
 function eA(e) {
@@ -243,7 +243,7 @@ let eI = function (e) {
                   : (0, s.jsx)(eC, { iconURL: i }),
     });
 };
-var e_ = l(246384);
+var e_ = l(92400);
 let eE = function (e) {
     let { application: t, onSelectApplication: l, showCategory: i = !1 } = e,
         n = a.useRef(null),
@@ -352,7 +352,7 @@ let eE = function (e) {
         }),
     });
 };
-var ef = l(167744);
+var ef = l(392896);
 let eN = { results: [], totalPages: 0, loadId: "" },
     eS = function (e) {
         let { categoryId: t, onSelectApplication: l, resetScroll: i } = e,
@@ -423,7 +423,7 @@ let eN = { results: [], totalPages: 0, loadId: "" },
                   ],
               });
     };
-var eb = l(312157);
+var eb = l(504797);
 let ey = function (e) {
     let { tabId: t, onSelectApplication: l, onScroll: i } = e,
         n = a.useRef(null),
@@ -469,7 +469,7 @@ let ey = function (e) {
 };
 var eR = l(123791),
     eP = l(761508),
-    eL = l(396689);
+    eL = l(759057);
 let eT = function (e) {
     let { tabs: t, onTabSelect: l, selectedTab: i, className: a } = e;
     return (0, s.jsx)(eP.V, {
@@ -506,7 +506,7 @@ var eD = l(82293),
     eY = l(228366),
     ez = l(725951),
     eX = l(625494),
-    eK = l(954748);
+    eK = l(332412);
 let eW = 16 / 9;
 class eZ extends a.PureComponent {
     static defaultProps = { includeHitboxPadding: !0 };
@@ -719,10 +719,10 @@ var eq = l(619517),
     e0 = l(615300),
     e1 = l(456412),
     e7 = l(133296),
-    e8 = l(689175),
-    e9 = l(532197),
-    e3 = l(236055);
-let e6 = { CENTER: e3.Hu, LEFT: e3.Vl };
+    e9 = l(689175),
+    e3 = l(532197),
+    e8 = l(937751);
+let e6 = { CENTER: e8.Hu, LEFT: e8.Vl };
 class e2 extends a.PureComponent {
     static Align = e6;
     static defaultProps = { scrollToPadding: { top: 0, left: 0, bottom: 0, right: 0 }, align: e6.CENTER };
@@ -747,8 +747,8 @@ class e2 extends a.PureComponent {
     };
     render() {
         let { renderItem: e, items: t, vertical: l, paginationContainerClass: i, align: n } = this.props,
-            o = l ? e3.XA : e3.BU;
-        return (0, s.jsx)(e8.Gt, {
+            o = l ? e8.XA : e8.BU;
+        return (0, s.jsx)(e9.Gt, {
             orientation: l ? "vertical" : "horizontal",
             className: r()(o, i, n),
             ref: this.handleSetScrollerRef,
@@ -773,9 +773,9 @@ class e4 extends a.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(ek.D, {
-            className: r()(e3.t1, e),
+            className: r()(e8.t1, e),
             onClick: this.handlePrevClick,
-            children: (0, s.jsx)(e9.A, { className: e3.UE, direction: e9.A.Directions.LEFT }),
+            children: (0, s.jsx)(e3.A, { className: e8.UE, direction: e3.A.Directions.LEFT }),
         });
     }
 }
@@ -788,15 +788,15 @@ class e5 extends a.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, s.jsx)(ek.D, {
-            className: r()(e3.XS, e),
+            className: r()(e8.XS, e),
             onClick: this.handleNextClick,
-            children: (0, s.jsx)(e9.A, { className: e3.UE, direction: e9.A.Directions.RIGHT }),
+            children: (0, s.jsx)(e3.A, { className: e8.UE, direction: e3.A.Directions.RIGHT }),
         });
     }
 }
 var te = l(452282),
     tt = l(821209),
-    tl = l(123126);
+    tl = l(795574);
 let ti = `rel=0&iv_load_policy=3&showinfo=0&modestbranding=1&pageType=${O.NzX}`,
     ts = { width: 640, height: 360, margin: 15 },
     ta = { width: 880, height: 495, margin: 20 },
@@ -1057,7 +1057,7 @@ class th extends a.PureComponent {
     }
 }
 (0, e1.A)(th);
-var tm = l(736809);
+var tm = l(665513);
 function tp(e) {
     let { className: t, ...l } = e;
     return (0, s.jsx)(eQ.A, {
@@ -1232,7 +1232,7 @@ class tC extends a.PureComponent {
 }
 var tI = l(256905),
     t_ = l(531685),
-    tE = l(401803);
+    tE = l(427019);
 function tf(e) {
     let { application: t, carouselItems: l } = e,
         i = (0, d.bG)([t_.A], () => t_.A.isFocused()),
@@ -1286,7 +1286,7 @@ function tf(e) {
 }
 var tN = l(168186);
 l(827669);
-var tS = l(192407);
+var tS = l(733975);
 function tb(e) {
     let { application: t } = e,
         l = a.useMemo(() => {
@@ -1339,7 +1339,7 @@ var ty = l(534890),
     tL = l(203363),
     tT = l(975571),
     tD = l(123917),
-    tO = l(914883);
+    tO = l(169795);
 let tk = tT.A.getArticleURL(O.MVz.BOT_DATA_ACCESS);
 function tG(e) {
     let { application: t } = e,
@@ -1427,7 +1427,7 @@ var tU = l(990078),
     tF = l(573435),
     tB = l(773669),
     tH = l(240248),
-    tY = l(695280),
+    tY = l(805936),
     tz =
         (((i = {})[(i.SMALL = (0, tH.xI)(tw.A.GUILD_COUNT_SMALL_ICON_SIZE))] = "SMALL"),
         (i[(i.LARGE = (0, tH.xI)(tw.A.GUILD_COUNT_LARGE_ICON_SIZE))] = "LARGE"),
@@ -1548,7 +1548,7 @@ function tW(e) {
           });
 }
 var tZ = l(973172),
-    t$ = l(49461);
+    t$ = l(788021);
 function tq(e) {
     let { application: t, className: l } = e,
         i = a.useCallback((e) => {
@@ -1595,15 +1595,15 @@ var tQ = l(462887),
     t0 = l(194261),
     t1 = l(173936),
     t7 = l(9578),
-    t8 = l(736653),
-    t9 = l(573648),
-    t3 = l(826688);
+    t9 = l(736653),
+    t3 = l(573648),
+    t8 = l(355584);
 function t6(e) {
     let { application: t, className: l, innerClassName: i } = e,
         a = t.directory_entry?.external_urls ?? [];
     return null != t.terms_of_service_url || null != t.privacy_policy_url || a.length > 0
         ? (0, s.jsxs)("div", {
-              className: r()(t3.kL, l),
+              className: r()(t8.kL, l),
               children: [
                   (0, s.jsx)(m.D, {
                       variant: "heading-sm/semibold",
@@ -1611,7 +1611,7 @@ function t6(e) {
                       children: w.intl.string(w.t.l6DP2n),
                   }),
                   (0, s.jsxs)("div", {
-                      className: r()(t3.p_, i),
+                      className: r()(t8.p_, i),
                       children: [
                           a.map((e, t) => (0, s.jsx)(t2, { url: e.url, children: e.name }, t)),
                           null != t.terms_of_service_url
@@ -1636,8 +1636,8 @@ function t6(e) {
 }
 function t2(e) {
     let { url: t, children: l } = e,
-        i = (0, t8.Ay)(),
-        a = t9.A.getByUrl(t),
+        i = (0, t9.Ay)(),
+        a = t3.A.getByUrl(t),
         n = (0, tQ.M)(i) ? a?.icon?.darkSVG : a?.icon?.lightSVG;
     return (0, s.jsx)(t4, { icon: void 0 === n ? t1.q : void 0, imageSrc: n, url: t, children: l });
 }
@@ -1646,14 +1646,14 @@ function t4(e) {
         o = G(),
         c = null;
     null != t
-        ? (c = (0, s.jsx)(t, { className: t3.GU, color: i ?? "currentColor", width: 20, height: 20, size: "custom" }))
-        : null != l && (c = (0, s.jsx)("img", { className: t3.GR, src: l, alt: "" }));
+        ? (c = (0, s.jsx)(t, { className: t8.GU, color: i ?? "currentColor", width: 20, height: 20, size: "custom" }))
+        : null != l && (c = (0, s.jsx)("img", { className: t8.GR, src: l, alt: "" }));
     let d = (0, s.jsxs)(s.Fragment, {
-        children: [c, (0, s.jsx)(x.E, { className: t3.so, variant: "text-sm/medium", selectable: !0, children: n })],
+        children: [c, (0, s.jsx)(x.E, { className: t8.so, variant: "text-sm/medium", selectable: !0, children: n })],
     });
     return (0, s.jsx)(t7.A, {
         href: a,
-        className: r()(t3.Aw, t3.SF),
+        className: r()(t8.Aw, t8.SF),
         trusted: !o,
         useDefaultUnderlineStyles: !1,
         children: d,
@@ -1666,12 +1666,12 @@ var t5 = l(385648),
     li = l(714991),
     ls = l(776231),
     la = l(860689),
-    ln = l(318536),
+    ln = l(728968),
     lr = l(937495),
     lo = l(517061);
 function lc(e) {
     let { guild: t, className: l, onClick: i } = e,
-        a = (0, t8.Ay)(),
+        a = (0, t9.Ay)(),
         n = (0, la.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
         o = eo.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, ls.mZ)() }),
         c =
@@ -1798,7 +1798,7 @@ function lu(e) {
           })
         : null;
 }
-var lh = l(191644);
+var lh = l(820764);
 let lm = (0, w.getAvailableLocales)();
 function lp(e) {
     let { application: t, className: l } = e,
@@ -1843,7 +1843,7 @@ function lp(e) {
         ],
     });
 }
-var lg = l(853503);
+var lg = l(78655);
 function lx(e) {
     let { className: t, view: l, application: i } = e,
         a = "embedded" === l,
@@ -1939,7 +1939,7 @@ let ly = /^discord.gg\/[a-zA-Z0-9-]+/,
                 ),
         },
     };
-var lP = l(323986);
+var lP = l(349202);
 let lL = lj().parserFor(lR),
     lT = lj().reactFor(lj().ruleOutput(lR, "react"));
 function lD(e) {
@@ -2031,7 +2031,7 @@ let lk = function (e) {
 var lG = l(136722),
     lM = l(595738),
     lU = l(376092),
-    lw = l(183813);
+    lw = l(925317);
 let lV = function (e) {
     let { application: t } = e,
         l = a.useMemo(() => {
@@ -2056,7 +2056,7 @@ let lV = function (e) {
           })
         : null;
 };
-var lF = l(489492);
+var lF = l(534740);
 function lB(e) {
     let { application: t } = e,
         l = a.useMemo(() => (t.directory_entry?.carousel_items ?? []).map(L.xb).filter(eO.Vq) ?? [], [t]);
@@ -2101,15 +2101,15 @@ var lH = l(607399),
     l0 = l(782134),
     l1 = l(787389),
     l7 = l(688810),
-    l8 = l(361926),
-    l9 = l(204776),
-    l3 = l(50268),
+    l9 = l(361926),
+    l3 = l(204776),
+    l8 = l(50268),
     l6 = l(207371),
     l2 = l(928658),
     l4 = l(395671),
     l5 = l(957565),
     ie = l(692848),
-    it = l(840778);
+    it = l(440970);
 let il = "start_application_install",
     ii = "launch_activity";
 function is(e) {
@@ -2191,7 +2191,7 @@ function ia(e) {
                 }, [t, i, l]),
                 canInstall: a.useMemo(
                     () =>
-                        (0, l9.Ie)({
+                        (0, l3.Ie)({
                             customInstallUrl: t.custom_install_url,
                             installParams: t.install_params,
                             integrationTypesConfig: t.integration_types_config,
@@ -2244,7 +2244,7 @@ let io = a.forwardRef(function (e, t) {
             let e = l4.Ay.createFromServer(l);
             (0, l2.r3)({ application: e, entrypoint: "app_directory" });
         }, [l]),
-        u = (0, l3.A)({
+        u = (0, l8.A)({
             id: l.id,
             label: w.intl.string(w.t["FfCL+6"]),
             onSuccess: () => (0, lY.P0)((0, lz.o)(w.intl.string(w.t.eNjAah), lX.Ck.SUCCESS)),
@@ -2287,7 +2287,7 @@ let io = a.forwardRef(function (e, t) {
             let l = e.id,
                 i = e?.bot?.id,
                 s = (0, l6.x)(e),
-                n = (0, l8.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: i }),
+                n = (0, l9.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: i }),
                 r = null != i && (0, en.$B)(e) && (0, en.Ag)(e) && (s || n),
                 [o, c] = a.useState(!1),
                 u = G(),
@@ -2357,7 +2357,7 @@ let io = a.forwardRef(function (e, t) {
         ],
     });
 });
-var ic = l(512812);
+var ic = l(811308);
 let id = function (e) {
     let { application: t, onButtonsVisibilityChange: l } = e,
         i = a.useRef(null),
@@ -2427,7 +2427,7 @@ let id = function (e) {
     });
 };
 var iu = l(172218),
-    ih = l(67976);
+    ih = l(668168);
 function im(e) {
     let { applicationId: t, similarApplications: l, onSelectApplication: i, similarLoadId: n } = e,
         r = (function (e) {
@@ -2561,7 +2561,7 @@ var ix = l(192308),
     iv = l(311321),
     iC = l(163437),
     iI = l(67480),
-    i_ = l(257040);
+    i_ = l(785936);
 function iE(e) {
     let { application: t } = e;
     return (0, s.jsxs)("div", {
@@ -2655,8 +2655,8 @@ function iS(e) {
                     return void (0, ix.openModalLazy)(
                         async () => {
                             let { ItemDetailsModal: e } = await Promise.all([
-                                l.e("76647"),
-                                l.e("78931"),
+                                l.e("18712"),
+                                l.e("99099"),
                                 l.e("17989"),
                                 l.e("80830"),
                                 l.e("70104"),
@@ -2683,8 +2683,8 @@ function iS(e) {
                         void (0, ix.openModalLazy)(
                             async () => {
                                 let { SubscriptionDetailsModal: a } = await Promise.all([
-                                    l.e("76647"),
-                                    l.e("78931"),
+                                    l.e("18712"),
+                                    l.e("99099"),
                                     l.e("17989"),
                                     l.e("80830"),
                                     l.e("64850"),
@@ -2745,7 +2745,7 @@ function ib(e) {
 function iy() {
     return window.location.pathname.startsWith("/login");
 }
-var iR = l(714289);
+var iR = l(798385);
 let iP = function (e) {
     let { applicationId: t, onSelectApplication: l, onScroll: i, initialTab: n, onButtonsVisibilityChange: r } = e,
         o = a.useRef(null),
@@ -2873,7 +2873,7 @@ var iL = l(984516),
     ik = l(239314),
     iG = l(707554),
     iM = l(111162),
-    iU = l(158712);
+    iU = l(242552);
 let iw = iD.K.APPLICATION_DIRECTORY;
 function iV(e) {
     let { collection: t, index: l, onSelectApplication: i } = e,
@@ -2950,7 +2950,7 @@ let iF = function (e) {
               children: r?.map((e, l) => (0, s.jsx)(iV, { collection: e, index: l, onSelectApplication: t }, l)),
           });
 };
-var iB = l(800109);
+var iB = l(210349);
 let iH = function (e) {
     let { onScroll: t, onSelectApplication: l } = e;
     return (0, s.jsxs)(X.A, {
@@ -2974,7 +2974,7 @@ var iY = l(873263),
     iz = l(994369),
     iX = l(475743),
     iK = l(191711),
-    iW = l(960952);
+    iW = l(666168);
 function iZ(e) {
     let { category: t, count: l, onSelectCategory: i, selected: n } = e,
         o = a.useCallback(() => {
@@ -3039,7 +3039,7 @@ function iq(e) {
               ],
           });
 }
-var iQ = l(423959),
+var iQ = l(678871),
     iJ = l(842503);
 let i0 = function (e) {
     let { selectedCategoryId: t, searchAllCategories: l } = e,
@@ -3059,7 +3059,7 @@ let i0 = function (e) {
         ],
     });
 };
-var i1 = l(198195);
+var i1 = l(798387);
 function i7(e) {
     let { onSelectApplication: t, onScroll: l } = e,
         i = (0, d.bG)([f.default], () => f.default.isAuthenticated()),
@@ -3234,8 +3234,8 @@ function i7(e) {
         ],
     });
 }
-var i8 = l(651759);
-function i9(e) {
+var i9 = l(386607);
+function i3(e) {
     let { applicationId: t, hideDetailHeaderButtons: l, onClickBack: i } = e,
         n = (0, d.bG)([R.A], () => R.A.getApplication(t)),
         [o, c] = a.useState(l),
@@ -3243,25 +3243,25 @@ function i9(e) {
             c(l);
         }, [l]);
     return (0, s.jsxs)("div", {
-        className: i8._u,
+        className: i9._u,
         children: [
-            (0, s.jsx)("div", { className: i8.w$, children: (0, s.jsx)(v.XQ, { icon: h.Z, onClick: i }) }),
+            (0, s.jsx)("div", { className: i9.w$, children: (0, s.jsx)(v.XQ, { icon: h.Z, onClick: i }) }),
             (0, s.jsx)(m.D, {
                 variant: "heading-lg/semibold",
                 color: "text-strong",
-                className: i8.Rm,
+                className: i9.Rm,
                 lineClamp: 1,
                 children: n?.name,
             }),
             (0, s.jsx)("div", {
-                className: r()(i8.w$, i8.xY, { [i8.RK]: !l, [i8.jD]: l && !o, [i8.R]: l && o }),
+                className: r()(i9.w$, i9.xY, { [i9.RK]: !l, [i9.jD]: l && !o, [i9.R]: l && o }),
                 onTransitionEnd: u,
                 children: null != n ? (0, s.jsx)(io, { application: n, size: "sm" }) : null,
             }),
         ],
     });
 }
-function i3() {
+function i8() {
     let e = a.useCallback(() => {
             let e, t;
             (e = new URL(location.href)),
@@ -3273,9 +3273,9 @@ function i3() {
         }, []);
     return (0, s.jsxs)(p.$T, {
         color: p.Hv.BRAND,
-        className: i8.aL,
+        className: i9.aL,
         children: [
-            (0, s.jsx)(g.p, { size: "custom", color: "white", className: i8.wm }),
+            (0, s.jsx)(g.p, { size: "custom", color: "white", className: i9.wm }),
             (0, s.jsx)(x.E, {
                 tag: "span",
                 color: "always-white",
@@ -3283,7 +3283,7 @@ function i3() {
                 children: w.intl.string(w.t.Ol3MIt),
             }),
             (0, s.jsxs)("div", {
-                className: i8.ll,
+                className: i9.ll,
                 children: [
                     (0, s.jsx)(p.Z_, { onClick: e, noticeType: O.kqX.LOGIN, children: w.intl.string(w.t["825cFy"]) }),
                     (0, s.jsx)(p.Z_, {
@@ -3458,18 +3458,18 @@ let i6 = function () {
             [eC, x],
         );
     return (0, s.jsxs)("div", {
-        className: r()(i8.nw, { [i8.Yz]: g }),
+        className: r()(i9.nw, { [i9.Yz]: g }),
         children: [
-            g ? (0, s.jsx)(i3, {}) : null,
+            g ? (0, s.jsx)(i8, {}) : null,
             (0, s.jsxs)("div", {
-                className: i8.WH,
+                className: i9.WH,
                 children: [
                     (0, s.jsxs)(v.Ay, {
                         variant: ej ? v.Z5.RELATIVE : v.Z5.OVERLAY,
                         children: [
                             !ej && (0, s.jsx)(v.ns, { scrollPosition: R }),
                             ea
-                                ? (0, s.jsx)(i9, { applicationId: Y, hideDetailHeaderButtons: ee, onClickBack: ev })
+                                ? (0, s.jsx)(i3, { applicationId: Y, hideDetailHeaderButtons: ee, onClickBack: ev })
                                 : (0, s.jsxs)(s.Fragment, {
                                       children: [
                                           en
@@ -3479,7 +3479,7 @@ let i6 = function () {
                                               ? (0, s.jsx)(m.D, {
                                                     variant: "heading-lg/semibold",
                                                     color: "text-strong",
-                                                    className: i8.wL,
+                                                    className: i9.wL,
                                                     children:
                                                         null != X && "" !== X
                                                             ? w.intl.formatToPlainString(w.t.zHdzqW, { query: X })

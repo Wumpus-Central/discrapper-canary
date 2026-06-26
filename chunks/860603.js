@@ -1,4 +1,4 @@
-n.d(t, { A: () => t8 }), n(321073);
+n.d(t, { A: () => t7 }), n(321073);
 var i,
     l = n(627968),
     s = n(64700),
@@ -33,7 +33,7 @@ var i,
     M = n(633018),
     _ = n(503698),
     P = n.n(_),
-    G = n(807377);
+    G = n(542225);
 function W(e) {
     let { children: t, icon: n, title: i } = e;
     return (0, l.jsxs)("header", {
@@ -66,7 +66,7 @@ var Y = n(261958),
     J = n(442433),
     Q = n(200662),
     $ = n(375708),
-    X = n(305687);
+    X = n(870807);
 function ee(e) {
     let { applicationIcon: t, applicationName: i, canNavigate: a, command: r, guildId: o } = e,
         c = s.useMemo(() => 0 !== Object.keys(r.permissions ?? {}).length, [r.permissions]),
@@ -125,7 +125,7 @@ function ee(e) {
     });
 }
 var et = n(636547),
-    en = n(32475);
+    en = n(746523);
 function ei(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: i, guildId: a } = e,
         {
@@ -198,7 +198,7 @@ function ei(e) {
           });
 }
 var el = n(534148),
-    es = n(468294);
+    es = n(830662);
 function ea(e) {
     let { application: t, canNavigate: n, guildId: i } = e,
         a = (0, o.bG)([U.A], () => U.A.isUnavailable());
@@ -246,7 +246,7 @@ var eo = n(308244),
     em = n(990078),
     eg = n(331322),
     eh = n(638916),
-    ex = n(641131);
+    ex = n(866219);
 function eA(e) {
     let {
         name: t,
@@ -349,7 +349,7 @@ var ep = n(136722),
     ev = n(889227),
     eT = n(696451),
     eI = n(317525),
-    eS = n(341046);
+    eS = n(592822);
 function ey(e) {
     let { guild: t, applicationIntegration: n } = e,
         { application: i } = n,
@@ -428,7 +428,7 @@ var eO = n(47167),
     eG = n(824953),
     eW = n(147925),
     eD = n(652215),
-    eU = n(776048);
+    eU = n(964099);
 function eB(e) {
     let { webhook: t, editedWebhook: n, channelOptions: i, isExpanded: a, errors: r, onToggleExpand: o } = e,
         c = s.useMemo(() => {
@@ -544,7 +544,7 @@ var eH = n(935399),
     eF = n(765178),
     eY = n(342298),
     eq = n(957565),
-    eZ = n(956322);
+    eZ = n(767906);
 function eJ(e, t) {
     return null != t && /^data:/.test(t) ? t : (0, ec.ku)({ id: e.id, avatar: t, discriminator: eD.h3J });
 }
@@ -745,7 +745,7 @@ function eQ(e) {
         })
     );
 }
-var e$ = n(803002);
+var e$ = n(400698);
 function eX(e) {
     let {
             webhooks: t,
@@ -849,8 +849,8 @@ function eX(e) {
         }),
     });
 }
-var e0 = n(693354);
-function e3(e) {
+var e0 = n(234);
+function e2(e) {
     let { application: t, guild: n, integration: i, ...s } = e;
     return (0, l.jsx)(E.ConfirmModal, {
         ...s,
@@ -864,7 +864,7 @@ function e3(e) {
         },
     });
 }
-function e2(e) {
+function e3(e) {
     let {
             guild: t,
             applicationIntegration: n,
@@ -884,7 +884,7 @@ function e2(e) {
         ),
         A = (0, o.bG)([f.A], () => f.A.can(eD.xBc.MANAGE_WEBHOOKS, t), [t]),
         p = s.useCallback(() => {
-            c() && (0, C.openModal)((e) => (0, l.jsx)(e3, { guild: t, application: d, integration: u, ...e }));
+            c() && (0, C.openModal)((e) => (0, l.jsx)(e2, { guild: t, application: d, integration: u, ...e }));
         }, [d, c, t, u]),
         b = s.useMemo(() => {
             let e = [
@@ -995,8 +995,8 @@ function e2(e) {
 }
 var e1 = n(573648);
 n(323874), n(14289), n(35956);
-var e7 = n(989349),
-    e8 = n.n(e7),
+var e8 = n(989349),
+    e7 = n.n(e8),
     e6 = n(788373),
     e4 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
@@ -1013,8 +1013,8 @@ var e7 = n(989349),
     ti = n(349288),
     tl = n(159273),
     ts = n(351906),
-    ta = n(159512),
-    tr = n(373378);
+    ta = n(858456),
+    tr = n(818050);
 function to(e) {
     let t,
         {
@@ -1100,7 +1100,7 @@ function to(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? $.intl.formatToPlainString($.t.G16Wji, { user: i.user, platformName: t.name })
-                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e8()(i.synced_at).calendar() }),
+                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e7()(i.synced_at).calendar() }),
             };
         }, [_, C, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eI.A], () => eI.A.getSortedRoles(n.id)),
@@ -1412,7 +1412,7 @@ function to(e) {
         })
     );
 }
-var tc = n(441091);
+var tc = n(836803);
 function td(e) {
     let {
             integrations: t,
@@ -1483,7 +1483,7 @@ function td(e) {
 }
 var tu = n(462887),
     tm = n(736653),
-    tg = n(237312);
+    tg = n(936256);
 let th = "/assets/a29cabf3e1357986.svg",
     tx = "/assets/c733a28e6fcba3ef.svg";
 function tA(e) {
@@ -1543,7 +1543,7 @@ var tp = n(22231),
     tS = n(264322),
     ty = n(174459),
     tO = n(320426),
-    tk = n(351388);
+    tk = n(338652);
 function tL(e) {
     let {
             name: t,
@@ -1683,7 +1683,7 @@ function tw(e) {
         c = s.useCallback(
             () =>
                 (0, C.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("35743"), n.e("73380")]).then(n.bind(n, 106895));
+                    let { default: e } = await Promise.all([n.e("10527"), n.e("73380")]).then(n.bind(n, 106895));
                     return (n) => (0, l.jsx)(e, { ...n, channel: t, application: i });
                 }),
             [i, t],
@@ -1691,7 +1691,7 @@ function tw(e) {
         d = a ? (i.getIconURL(48) ?? ec.vI["0"]) : void 0;
     return (0, l.jsx)(tL, { imageSrc: d, onButtonClick: c, details: null != o ? [{ text: o }] : void 0, ...r });
 }
-var tR = n(214225);
+var tR = n(108305);
 function tM(e) {
     let { applicationId: t, channels: n } = e,
         i = (0, tf.h)(t);
@@ -1760,7 +1760,7 @@ var tP = n(91871),
     tK = n(30370),
     tF = n(381616),
     tY = n(488995),
-    tq = n(326669),
+    tq = n(32589),
     tZ = n(854766),
     tJ = n(237070);
 function tQ(e, t) {
@@ -2156,8 +2156,8 @@ function tX(e) {
     });
 }
 var t0 = n(964486),
-    t3 = n(468980);
-function t2(e) {
+    t2 = n(174900);
+function t3(e) {
     let t,
         n,
         {
@@ -2196,13 +2196,13 @@ function t2(e) {
                     developersArticle: eD.X7G.API_DOCS_WEBHOOKS,
                 }),
             }),
-            (0, l.jsx)(y.c, { className: t3.zN }),
+            (0, l.jsx)(y.c, { className: t2.zN }),
             r.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: t3.Tf,
+                              className: t2.Tf,
                               children: (0, l.jsx)(L.$, {
                                   variant: "primary",
                                   size: "sm",
@@ -2226,11 +2226,11 @@ function t2(e) {
                       direction: h.A.Direction.VERTICAL,
                       align: h.A.Align.CENTER,
                       children: [
-                          (0, l.jsx)("img", { alt: "", src: t, className: t3.QT }),
+                          (0, l.jsx)("img", { alt: "", src: t, className: t2.QT }),
                           (0, l.jsx)(c.D, { variant: "heading-md/semibold", children: $.intl.string($.t.LzmsWl) }),
                           (0, l.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: t3.nM,
+                              className: t2.nM,
                               children: (0, l.jsx)(L.$, {
                                   variant: "primary",
                                   text: $.intl.string($.t.lOQqJK),
@@ -2243,8 +2243,8 @@ function t2(e) {
         ],
     });
 }
-var t1 = n(235931);
-function t7(e, t) {
+var t1 = n(458203);
+function t8(e, t) {
     switch (e) {
         case eD.wLn.APPLICATION:
             return t?.application.name ?? "";
@@ -2264,7 +2264,7 @@ function t7(e, t) {
             return "";
     }
 }
-let t8 = s.memo(function (e) {
+let t7 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,
@@ -2403,7 +2403,7 @@ let t8 = s.memo(function (e) {
         case eD.wLn.APPLICATION:
             let K = null != M ? (D[U[M]] ?? D[M]) : null;
             null != K &&
-                (V = (0, l.jsx)(e2, {
+                (V = (0, l.jsx)(e3, {
                     guild: i,
                     applicationIntegration: K,
                     editedWebhook: v,
@@ -2422,7 +2422,7 @@ let t8 = s.memo(function (e) {
             });
             break;
         case eD.wLn.WEBHOOKS:
-            V = (0, l.jsx)(t2, {
+            V = (0, l.jsx)(t3, {
                 guild: i,
                 channel: a,
                 customWebhooks: H,
@@ -2476,10 +2476,10 @@ let t8 = s.memo(function (e) {
                 className: t1.jD,
                 children:
                     t === eD.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eD.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t8(eD.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, D[M]) })),
+                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t8(e, D[M]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && W(parseInt(e.id));
                               },

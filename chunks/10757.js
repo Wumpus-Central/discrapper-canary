@@ -67,9 +67,9 @@ var Y = l(702841),
     ei = l(572164),
     ea = l(953932),
     en = l(652215),
-    es = l(788077),
+    es = l(16590),
     er = l(375708),
-    ec = l(713466);
+    ec = l(311162);
 function eo(e) {
     let { header: t, description: l } = e;
     return (0, i.jsxs)("div", {
@@ -172,7 +172,7 @@ var eh = l(621466),
     eF = l.n(eH),
     eG = l(460905),
     eO = l(713608),
-    eU = l(909740);
+    eU = l(788332);
 function eK(e) {
     let { clip: t } = e,
         l = t.decision?.signal;
@@ -237,7 +237,7 @@ function e$(e) {
     }
 }
 var eQ = l(718812),
-    eY = l(36087);
+    eY = l(742007);
 function eB(e) {
     let { clip: t, actionsDisabled: l, isNew: a, onClick: n, onEdit: s } = e;
     return (0, i.jsx)(eM.Cl, {
@@ -282,9 +282,9 @@ function eW(e) {
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
-                            l.e("4615"),
-                            l.e("94267"),
-                            l.e("75518"),
+                            l.e("64379"),
+                            l.e("6619"),
+                            l.e("93020"),
                             l.e("95429"),
                             l.e("91211"),
                             l.e("38601"),
@@ -628,8 +628,8 @@ var e5 = l(792852);
 function e3(e) {
     return Math.min(45 * e, 520);
 }
-var e9 = l(142883),
-    e7 = l(434426);
+var e9 = l(352528),
+    e7 = l(32122);
 let e4 = [0, 16, 0, 16],
     e8 = e4[1] + e4[3];
 function e6(e) {
@@ -861,7 +861,7 @@ function tA(e) {
         }
     }
 }
-var tN = l(560968);
+var tN = l(817480);
 function tk(e) {
     let { closePopout: t } = e,
         l = (0, e5.P)((e) => e.dateFilter),
@@ -1090,7 +1090,7 @@ var tE = l(91871),
     tL = l.n(tE),
     tw = l(103552),
     tP = l(914427),
-    tS = l(499376);
+    tS = l(213424);
 function tI(e) {
     let {
             triggerLabel: t,
@@ -1155,7 +1155,7 @@ function tI(e) {
             }),
     });
 }
-var tM = l(531454);
+var tM = l(941886);
 function tD(e) {
     let { label: t, icon: l, onRemove: a, removeAriaLabel: n } = e;
     return (0, i.jsxs)("div", {
@@ -1178,7 +1178,7 @@ function tD(e) {
         ],
     });
 }
-var t_ = l(915173);
+var t_ = l(841765);
 let tT = { all: es.default.lscwjQ, auto: es.default.xrOIkz, manual: es.default.D7HSLJ };
 function tR() {
     let e = (0, e5.P)((e) => e.dateFilter),
@@ -1598,7 +1598,7 @@ function tB(e) {
         .sort((e, t) => t.createdAt - e.createdAt)
         .slice(0, t);
 }
-var tW = l(509615);
+var tW = l(452143);
 function tZ(e) {
     let { clips: t, onEdit: l } = e,
         n = a.useMemo(() => tB(t), [t]),
@@ -1731,7 +1731,7 @@ var tX = l(770178),
     tq = l(765548),
     tJ = l(569926),
     t0 = l(486020),
-    t1 = l(545367);
+    t1 = l(251287);
 function t2(e) {
     let {
             session: t,
@@ -1897,7 +1897,7 @@ function t2(e) {
         ],
     });
 }
-var t5 = l(471515);
+var t5 = l(177435);
 function t3(e) {
     let { filteredClips: t, totalClipCount: l, onEdit: n, onClipClick: s, isLoading: r } = e,
         { enableAutoClipsReview: c } = tU.useConfig({ location: "ClipsGalleryHome" }),
@@ -1995,7 +1995,7 @@ var t9 = l(7689),
     t6 = l(650684),
     le = l(27232),
     lt = l(812993),
-    ll = l(968009);
+    ll = l(910537);
 function li(e) {
     let { icon: t, label: l, trailer: a, isSelected: n, isDisabled: r = !1, onClick: c } = e,
         o = r && !n;
@@ -2213,7 +2213,7 @@ function lc(e) {
 }
 var lo = l(409067),
     ld = l(696016),
-    lu = l(272863);
+    lu = l(847455);
 let lm = a.createContext({
     selectedClipIds: new Set(),
     toggleClipSelection: () => {},

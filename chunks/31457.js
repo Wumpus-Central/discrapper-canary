@@ -7,7 +7,7 @@ var t = n(503698),
     c = n(834730),
     o = n(628284);
 if (21552 == n.j) var i = n(285796);
-var d = n(206560);
+var d = n(72736);
 function u(e) {
     let { title: s, children: n } = e;
     return (0, r.jsxs)("div", {

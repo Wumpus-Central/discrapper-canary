@@ -18,7 +18,7 @@ var i,
     E = n(834730),
     S = n(259788),
     I = n(302614),
-    v = n(652830);
+    v = n(639198);
 let T = { mass: 1, tension: 600, friction: 60, clamp: !0 };
 function j(e) {
     let { locked: t, pinned: n } = e,
@@ -142,7 +142,7 @@ var C = n(149741),
     eh = n(761661),
     em = n(652215),
     eg = n(375708),
-    ep = n(592571);
+    ep = n(614715);
 function ef(e) {
     let { participant: t } = e,
         n = t.user.id,
@@ -464,7 +464,7 @@ let eG = (e) => {
         { maxWidth: 0.75 * d.maxX, maxHeight: 0.75 * d.maxY },
     );
 };
-var eU = n(198815);
+var eU = n(220959);
 let eF = { mass: 1, tension: 250, friction: 18, clamp: !0 },
     eH = c.memo(function (e) {
         let {
@@ -562,7 +562,7 @@ let eF = { mass: 1, tension: 250, friction: 18, clamp: !0 },
         );
     });
 var eZ = n(392164),
-    eY = n(780227);
+    eY = n(674243);
 function eX(e) {
     var t, n;
     let i,
@@ -893,7 +893,7 @@ var eW = n(243721),
     eq = n(706712),
     eK = n(617710),
     eQ = n(321090),
-    eJ = n(670342);
+    eJ = n(548934);
 function e$(e) {
     let { locked: t, pinned: n, anchorLeft: i } = e,
         s = (0, y.bG)([eK.A], () => eK.A.getSocket()),
@@ -1123,9 +1123,9 @@ var e0 = n(417098),
     e1 = n(55619),
     e2 = n(351906),
     e3 = n(377802),
-    e6 = n(348858),
+    e4 = n(348858),
     e5 = n(523875),
-    e4 = n(416696),
+    e6 = n(416696),
     e8 = n(621956),
     e9 = n(446080),
     e7 = n(922016),
@@ -1160,7 +1160,7 @@ var e0 = n(417098),
     tb = n(46282),
     tN = n(489277),
     t_ = n(243612),
-    tR = n(78793);
+    tR = n(296841);
 function tO(e) {
     let t = c.useRef(null);
     return (
@@ -1290,7 +1290,7 @@ function tD(e) {
             Component: o,
             play: d,
             events: { onMouseEnter: u, onMouseLeave: h },
-        } = (0, e6.I)(a ? "undeafen" : "deafen"),
+        } = (0, e4.I)(a ? "undeafen" : "deafen"),
         m = l ? te.T : o;
     function g() {
         (0, to.A)(l, em.JJy.OVERLAY),
@@ -1452,7 +1452,7 @@ function tP(e) {
         Component: x,
         events: { onMouseEnter: A, onMouseLeave: E },
         play: S,
-    } = (0, e4.c)(g ? "disable" : "enable");
+    } = (0, e6.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tO(i);
     return (0, r.jsx)(e7.Y, {
@@ -1708,7 +1708,7 @@ function tF(e) {
         })
     );
 }
-var tH = n(721309);
+var tH = n(423005);
 let tZ = c.memo(function () {
     let e = (0, y.bG)([e2.A], () => e2.A.enabled),
         t = (0, d.Mn)("StreamerModeNotice");
@@ -1786,9 +1786,9 @@ var tQ = n(459192),
     t1 = n(782603),
     t2 = n(241541),
     t3 = n(320448),
-    t6 = n(661531),
+    t4 = n(661531),
     t5 = n(446576),
-    t4 = n(789645),
+    t6 = n(789645),
     t8 = n(387755),
     t9 = n(945830),
     t7 = n(461678),
@@ -1844,7 +1844,7 @@ let nh = c.memo(function (e) {
             mentionCount: o,
             isMentionLowImportance: d,
         });
-    if (null == i) return (0, r.jsx)(tX.o, { size: nc(l, "default"), color: t6.A.colors.INTERACTIVE_ICON_DEFAULT });
+    if (null == i) return (0, r.jsx)(tX.o, { size: nc(l, "default"), color: t4.A.colors.INTERACTIVE_ICON_DEFAULT });
     {
         if (null == t) return (0, r.jsx)(tg.Ay, { guild: i, size: nc(l, "guild"), active: !0, showTooltip: !1 });
         let e = 40 === l ? nd.Q.MEDIUM_40 : nd.Q.TINY_24;
@@ -1860,8 +1860,8 @@ function ng(e) {
 }
 var np = n(429913),
     nf = n(34307),
-    nx = n(21197),
-    nA = n(321188);
+    nx = n(499214),
+    nA = n(657956);
 function nE(e) {
     return null != e && (e.isDM() || e.isMultiUserDM());
 }
@@ -2160,7 +2160,7 @@ function nj(e) {
                                           (0, r.jsx)(t3._, {
                                               className: nA.ln,
                                               size: "xs",
-                                              color: t6.A.colors.TEXT_MUTED,
+                                              color: t4.A.colors.TEXT_MUTED,
                                           }),
                                       ],
                                   })
@@ -2239,7 +2239,7 @@ function nj(e) {
                                   title: eg.intl.string(nx.default.ERApc4),
                                   body: eg.intl.string(nx.default.PBVXVW),
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t4.P,
+                                      icon: t6.P,
                                       "aria-label": eg.intl.string(nx.default.ERApc4),
                                       size: "sm",
                                       variant: "icon-only",
@@ -2284,14 +2284,14 @@ async function nM(e) {
         } catch {}
     }
 }
-var nk = n(870143),
+var nk = n(95231),
     nD = (((s = {}).DEFAULT = "DEFAULT"), (s.CHANNEL_TYPE = "CHANNEL_TYPE"), s);
 let nz = c.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: i, iconVariant: s = "DEFAULT" } = e,
         a = null != i && t === i,
         d = (0, y.bG)([o.A], () => o.A.getSelectedChannelId() === t, [t]),
         u = (0, y.bG)([o.A], () => o.A.getVoiceChatMinimized()),
-        h = (0, nC.r)(t6.A.colors.ICON_STATUS_ONLINE),
+        h = (0, nC.r)(t4.A.colors.ICON_STATUS_ONLINE),
         g = (0, y.bG)([nb.A], () => !!a && !!(nb.A.isAnyoneElseSpeaking() || nb.A.isCurrentUserSpeaking()), [a]),
         [p, f] = c.useState(!1),
         { mentionCount: x, isMentionLowImportance: E } = (0, y.cf)(
@@ -2349,7 +2349,7 @@ let nz = c.memo(function (e) {
                             children: (0, r.jsx)(e, {
                                 className: nk.Yc,
                                 size: "sm",
-                                color: d ? t6.A.colors.WHITE : t6.A.colors.ICON_STATUS_ONLINE,
+                                color: d ? t4.A.colors.WHITE : t4.A.colors.ICON_STATUS_ONLINE,
                             }),
                         })
                     );
@@ -2387,8 +2387,8 @@ let nz = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("10570"),
-                                    n.e("98273"),
+                                    n.e("71406"),
+                                    n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -2396,7 +2396,7 @@ let nz = c.memo(function (e) {
                                     n.e("85968"),
                                     n.e("38730"),
                                     n.e("89673"),
-                                    n.e("52168"),
+                                    n.e("29787"),
                                     n.e("82073"),
                                     n.e("97558"),
                                     n.e("91994"),
@@ -2409,7 +2409,7 @@ let nz = c.memo(function (e) {
                                     n.e("29422"),
                                     n.e("9291"),
                                     n.e("7059"),
-                                    n.e("95264"),
+                                    n.e("72883"),
                                     n.e("81609"),
                                     n.e("98199"),
                                     n.e("41175"),
@@ -2434,7 +2434,7 @@ let nz = c.memo(function (e) {
                                     n.e("38730"),
                                     n.e("43266"),
                                     n.e("81609"),
-                                    n.e("56985"),
+                                    n.e("79366"),
                                 ]).then(n.bind(n, 95616));
                                 return (n) => (0, r.jsx)(e, { ...n, channel: t, widgetType: em.uss.TEXT_CHAT_V3 });
                             });
@@ -2442,7 +2442,7 @@ let nz = c.memo(function (e) {
                             if (null == i) return;
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("41443"),
+                                    n.e("62867"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("38730"),
@@ -2490,7 +2490,7 @@ let nz = c.memo(function (e) {
         M = (() => {
             if (null == T || N) return null;
             let e = (0, tc.gU)(T, v);
-            return (e ??= tX.o), (0, r.jsx)(e, { size: "sm", color: t6.A.colors.INTERACTIVE_ICON_DEFAULT });
+            return (e ??= tX.o), (0, r.jsx)(e, { size: "sm", color: t4.A.colors.INTERACTIVE_ICON_DEFAULT });
         })();
     return null == T
         ? (0, r.jsx)("div", { className: nk.R })
@@ -2529,7 +2529,7 @@ var nP = n(493336),
     nG = n(232835),
     nU = n(576705),
     nF = n(625494),
-    nH = n(933200);
+    nH = n(827280);
 function nZ(e) {
     let t,
         n,
@@ -2576,7 +2576,7 @@ function nZ(e) {
           })
         : null;
 }
-var nY = n(662562);
+var nY = n(881890);
 function nX(e) {
     let { dragStart: t, dragging: n } = e,
         [i, s] = (0, y.bG)([o.A], () => o.A.getSessionEntries()),
@@ -2700,7 +2700,7 @@ var nB = n(428689),
     nQ = n(996439),
     nJ = n(799808),
     n$ = n(731854),
-    n0 = n(669668);
+    n0 = n(521380);
 let n1 = c.memo(function (e) {
         let { participant: t, channel: n, context: i } = e,
             s = t.user?.id;
@@ -2729,7 +2729,7 @@ let n1 = c.memo(function (e) {
                     (0, F.YX)(em.uss.VIDEO, { type: F.Z5.CAMERA, value: F.IP.SETTINGS_OPENED, userId: s?.id }),
                         (0, l.L3)(i, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("98273"),
+                                n.e("94881"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -2842,7 +2842,7 @@ let n1 = c.memo(function (e) {
                 })
               : null;
     }),
-    n6 = (e) => {
+    n4 = (e) => {
         let { widget: t, computedSize: n, borderWidth: i, padding: s, containerSpecs: r } = e;
         if (!(0, e_.cv)(t)) return n;
         let l = "boolean" != typeof t.meta.horizontal || t.meta.horizontal,
@@ -2911,7 +2911,7 @@ function n5(e) {
                         widgetLayoutSpecs: a,
                     } = r.current;
                     if (!((t && e.height > e.width) || (!t && e.width > e.height))) return;
-                    let { width: o, height: d } = n6({
+                    let { width: o, height: d } = n4({
                         ...a,
                         widget: l,
                         operation: ej.P.RESIZE_NORTH,
@@ -2932,7 +2932,7 @@ function n5(e) {
         })
     );
 }
-var n4 = n(450740),
+var n6 = n(450740),
     n8 = n(968898);
 n(321073);
 var n9 = n(518009),
@@ -2941,7 +2941,7 @@ var n9 = n(518009),
     it = n(57019),
     ii = n(191701),
     is = n(672396),
-    ir = n(373960);
+    ir = n(669192);
 let il = [];
 function ia(e) {
     return e.notification.id;
@@ -3024,14 +3024,14 @@ let iu = c.memo(function (e) {
                         (0, r.jsx)(n8.O0, { id: e.id, pinned: e.pinned }),
                     ],
                 }),
-            resizeValidation: n6,
+            resizeValidation: n4,
         },
         [em.uss.VOICE_V3]: {
             streamerModeLabel: () => eg.intl.string(eg.t.nFv3Gb),
             renderWidget(e) {
                 let { widget: t, anchorLeft: n, locked: i, showEmpty: s } = e;
                 return (0, e_.ZO)(t)
-                    ? (0, r.jsx)(n4.Ay, {
+                    ? (0, r.jsx)(n6.Ay, {
                           anchorLeft: n,
                           id: t.id,
                           locked: i,

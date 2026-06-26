@@ -29,7 +29,7 @@ function T() {
         children: (0, i.jsx)("ellipse", { cx: "3.4924", cy: "3", rx: "2.86154", ry: "3", fill: "#808BFF" }),
     });
 }
-var S = n(738894);
+var S = n(75662);
 let y = (e) => {
     let { percentage: t } = e;
     return (0, i.jsxs)("div", {
@@ -191,7 +191,7 @@ function w(e) {
     _.default.track(R.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { location_stack: t, partner_ids: r }),
         m.Ay.fetchActivePromotions(),
         (0, c.openModalLazy)(async () => {
-            let { Premium3PRewardsModalEntry: e } = await Promise.all([n.e("13762"), n.e("91900")]).then(
+            let { Premium3PRewardsModalEntry: e } = await Promise.all([n.e("967"), n.e("91900")]).then(
                 n.bind(n, 92375),
             );
             return (t) => (0, i.jsx)(e, { ...t, partnerIds: r, isLocked: s });

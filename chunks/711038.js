@@ -29,7 +29,7 @@ function E(e) {
     });
 }
 var C = s(262514),
-    j = s(79815);
+    j = s(822663);
 function f(e) {
     let { questId: t } = e,
         {

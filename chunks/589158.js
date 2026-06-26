@@ -22,7 +22,7 @@ var i,
     S = n(394871),
     y = n(709066),
     C = n(235986),
-    N = n(974119),
+    N = n(310887),
     v = (((i = v || {}).SINGLE_AVATAR = "1"), (i.MULTIPLE_AVATAR = "2"), i);
 let R = { [m._3.SIZE_32]: N.dT, [m._3.SIZE_40]: N.Jb };
 class O extends s.Component {
@@ -96,7 +96,7 @@ var j = n(967144),
     X = n(705751),
     Q = n(31408),
     J = n(375708),
-    ee = n(661971);
+    ee = n(28371);
 (0, z.xI)(c.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 let et = s.memo(function (e) {
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;

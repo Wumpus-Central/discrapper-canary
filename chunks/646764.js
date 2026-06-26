@@ -22,14 +22,14 @@ var i = n(627968),
     S = n(590202),
     y = n(971649),
     C = n(801365),
-    N = n(241124),
+    N = n(557637),
     v = n(415441),
     R = n(734736),
     O = n(617986),
     b = n(139384),
     D = n(190107),
     L = n(375708),
-    w = n(1389);
+    w = n(369453);
 let M = function (e) {
     let t,
         {
@@ -104,7 +104,7 @@ let M = function (e) {
         (0, b.A)(q, D.rE.QUEST_HOME_DESKTOP),
         X)
     )
-        t = (0, i.jsx)(N.Sn, {
+        t = (0, i.jsx)(N._M, {
             id: "QuestRewardTile_rewardTileNitro",
             children: (e) => (0, i.jsx)(R.A, { ref: e, className: w.eB }),
         });
@@ -125,7 +125,7 @@ let M = function (e) {
         });
     else if (K.isAnimated) {
         let n = (0, I.WV)(K.url);
-        t = (0, i.jsx)(N.Sn, {
+        t = (0, i.jsx)(N._M, {
             id: "QuestRewardTile_rewardTileAnimated",
             children: (t) =>
                 (0, i.jsxs)(i.Fragment, {
@@ -148,7 +148,7 @@ let M = function (e) {
                 }),
         });
     } else
-        t = (0, i.jsx)(N.Sn, {
+        t = (0, i.jsx)(N._M, {
             id: "QuestRewardTile_rewardTileStatic",
             children: (t) =>
                 (0, i.jsx)("img", { ref: t, alt: W, className: a()(w.eB, w.Qz), src: K.url, onLoad: e.onLoadComplete }),
