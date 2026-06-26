@@ -1,83 +1,84 @@
-i.d(e, { A: () => z });
+i.d(e, { A: () => K });
 var s = i(627968),
-    n = i(64700),
-    a = i(189213),
+    a = i(64700),
+    n = i(189213),
     l = i(815021),
     r = i(834730),
     c = i(192308),
     o = i(935462),
     d = i(289873),
-    u = i(507107),
-    m = i(73473),
+    m = i(507107),
+    u = i(73473),
     x = i(617986),
-    f = i(731355),
-    h = i(366010),
-    g = i(534514),
-    j = i(825484),
+    f = i(323889),
+    h = i(731355),
+    g = i(366010),
+    j = i(534514),
+    v = i(825484),
     N = i(408278),
-    v = i(173936),
-    C = i(821609),
+    C = i(173936),
+    p = i(821609),
     A = i(743368),
-    p = i(990078),
-    y = i(736653),
-    E = i(46948),
-    k = i(590202),
-    L = i(971649),
-    M = i(651892),
-    _ = i(901406),
-    T = i(814793),
-    w = i(241124),
-    I = i(918338),
-    W = i(371912),
-    b = i(491145),
-    D = i(190107),
-    P = i(818348),
-    R = i(375708),
+    y = i(990078),
+    E = i(736653),
+    M = i(46948),
+    _ = i(590202),
+    k = i(971649),
+    T = i(651892),
+    L = i(901406),
+    w = i(814793),
+    I = i(557637),
+    W = i(918338),
+    b = i(371912),
+    D = i(491145),
+    P = i(190107),
+    R = i(818348),
+    O = i(375708),
     S = i(27669);
 function q(t) {
-    let { quest: e, sourceQuestContent: i, onLoadComplete: a, preCtaClick: l } = t,
-        c = (0, y.Ay)(),
-        o = (0, h.M)(c) ? P.NJ.DARK : P.NJ.LIGHT,
-        d = (0, L.go)(),
-        m = (0, T.E0)(e.config);
+    let { quest: e, sourceQuestContent: i, onLoadComplete: n, preCtaClick: l } = t,
+        c = (0, E.Ay)(),
+        o = (0, g.M)(c) ? R.NJ.DARK : R.NJ.LIGHT,
+        d = (0, k.go)(),
+        u = (0, w.E0)(e.config);
     async function x() {
         await l?.(),
-            (0, _.pu)(e, {
-                content: u.uF.REWARD_MODAL,
-                ctaContent: k.Cy.OPEN_GAME_LINK,
+            (0, L.pu)(e, {
+                content: m.uF.REWARD_MODAL,
+                ctaContent: _.Cy.OPEN_GAME_LINK,
                 impressionId: d,
                 sourceQuestContent: i,
             });
     }
-    let q = n.useMemo(() => {
+    let f = a.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
-                : (0, T.pv)(e.config) !== f.Z.GAMEPLAY ||
-                    e.config.features.includes(D.Li.NON_GAMING_PLAY_QUEST) ||
-                    (0, T.ui)(e)
-                  ? R.intl.string(R.t.y8Xf3k)
-                  : R.intl.string(R.t["wirwN+"]);
+                : (0, w.pv)(e.config) !== h.Z.GAMEPLAY ||
+                    e.config.features.includes(P.Li.NON_GAMING_PLAY_QUEST) ||
+                    (0, w.ui)(e)
+                  ? O.intl.string(O.t.y8Xf3k)
+                  : O.intl.string(O.t["wirwN+"]);
         }, [e]),
-        O = (0, b.A)(e, { impressionId: d, sourceQuestContent: i }, l) ?? {
-            ctaText: (0, M.wr)(e),
+        q = (0, D.A)(e, { impressionId: d, sourceQuestContent: i }, l) ?? {
+            ctaText: (0, T.wr)(e),
             ctaVariant: "primary",
             onClickCta: x,
-            title: R.intl.format(R.t.EAYZAr, { questName: e.config.messages.questName }),
-            subtitle: q,
+            title: O.intl.format(O.t.EAYZAr, { questName: e.config.messages.questName }),
+            subtitle: f,
             ctaIconPosition: "end",
         },
-        { isLoading: G } = (0, w.Gk)();
-    n.useEffect(() => {
-        G || a();
-    }, [G, a]);
-    let Y = (0, W.Lk)({
-        isShareable: m,
+        { isLoading: z } = (0, I.zT)();
+    a.useEffect(() => {
+        z || n();
+    }, [z, n]);
+    let G = (0, b.Lk)({
+        isShareable: u,
         questId: e.id,
-        trackingCtx: n.useMemo(
+        trackingCtx: a.useMemo(
             () => ({
-                content: u.uF.REWARD_MODAL,
-                ctaContent: k.Cy.REWARD_MODAL_COPY_LINK,
+                content: m.uF.REWARD_MODAL,
+                ctaContent: _.Cy.REWARD_MODAL_COPY_LINK,
                 impressionId: d,
                 sourceQuestContent: i,
             }),
@@ -87,12 +88,12 @@ function q(t) {
     return (0, s.jsxs)("div", {
         className: S.kL,
         children: [
-            (0, s.jsx)(w.Sn, {
+            (0, s.jsx)(I._M, {
                 id: "hero-display",
                 children: (t) =>
-                    (0, s.jsx)(I.A, {
+                    (0, s.jsx)(W.A, {
                         quest: e,
-                        imageSize: { width: D.i$ * D.K, height: D.ls * D.K },
+                        imageSize: { width: P.i$ * P.K, height: P.ls * P.K },
                         containerClassName: S.WQ,
                         isInteracting: !0,
                         assetRef: t,
@@ -100,14 +101,14 @@ function q(t) {
             }),
             (0, s.jsx)("div", {
                 className: S.Lt,
-                children: (0, s.jsx)(w.Sn, {
+                children: (0, s.jsx)(I._M, {
                     id: "partner-logotype",
                     children: (t) =>
                         (0, s.jsx)("img", {
                             ref: t,
                             className: S.a$,
-                            alt: R.intl.formatToPlainString(R.t.rtm15P, { name: e.config.messages.gameTitle }),
-                            src: (0, E.tW)(e, E.fY.LOGO_TYPE, o).url,
+                            alt: O.intl.formatToPlainString(O.t.rtm15P, { name: e.config.messages.gameTitle }),
+                            src: (0, M.tW)(e, M.fY.LOGO_TYPE, o).url,
                         }),
                 }),
             }),
@@ -117,52 +118,52 @@ function q(t) {
                     (0, s.jsxs)("div", {
                         className: S.Ly,
                         children: [
-                            (0, s.jsx)(g.D, {
+                            (0, s.jsx)(j.D, {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
                                 className: S.fx,
-                                children: O.title,
+                                children: q.title,
                             }),
-                            (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: O.subtitle }),
+                            (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: q.subtitle }),
                         ],
                     }),
-                    (0, s.jsx)(w.Sn, {
+                    (0, s.jsx)(I._M, {
                         id: "partner-game-tile",
                         children: (t) =>
                             (0, s.jsx)("img", {
                                 ref: t,
                                 className: S.rw,
-                                alt: R.intl.formatToPlainString(R.t.rtm15P, { name: e.config.messages.gameTitle }),
-                                src: (0, E.tW)(e, E.fY.GAME_TILE, o).url,
+                                alt: O.intl.formatToPlainString(O.t.rtm15P, { name: e.config.messages.gameTitle }),
+                                src: (0, M.tW)(e, M.fY.GAME_TILE, o).url,
                             }),
                     }),
                 ],
             }),
             (0, s.jsx)("div", {
                 className: S.tu,
-                children: (0, s.jsxs)(j.e, {
+                children: (0, s.jsxs)(v.e, {
                     size: "sm",
                     direction: "horizontal",
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
-                        m &&
-                            (0, s.jsx)(p.m, {
-                                text: R.intl.string(R.t.WmfZHZ),
+                        u &&
+                            (0, s.jsx)(y.m, {
+                                text: O.intl.string(O.t.WmfZHZ),
                                 children: (0, s.jsx)(N.K, {
-                                    icon: v.q,
-                                    onClick: Y,
-                                    "aria-label": R.intl.string(R.t.WmfZHZ),
+                                    icon: C.q,
+                                    onClick: G,
+                                    "aria-label": O.intl.string(O.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
-                        (0, s.jsx)(C.$, {
-                            variant: O.ctaVariant,
-                            text: O.ctaText,
-                            onClick: O.onClickCta,
+                        (0, s.jsx)(p.$, {
+                            variant: q.ctaVariant,
+                            text: q.ctaText,
+                            onClick: q.onClickCta,
                             fullWidth: !0,
                             icon: A.W,
-                            iconPosition: O.ctaIconPosition,
+                            iconPosition: q.ctaIconPosition,
                         }),
                     ],
                 }),
@@ -170,60 +171,66 @@ function q(t) {
         ],
     });
 }
-function O(t) {
+function z(t) {
     let { quest: e, location: i } = t;
-    return (0, s.jsx)(w.jY, { source: i, questId: e.id, isPreview: e.preview, children: (0, s.jsx)(q, { ...t }) });
+    return (0, s.jsx)(I.y5, {
+        source: i,
+        adCreativeId: e.id,
+        adCreativeType: f.p.QUEST,
+        isPreview: e.preview,
+        children: (0, s.jsx)(q, { ...t }),
+    });
 }
 var G = i(592727);
 function Y(t) {
     let { onClose: e, transitionState: i } = t;
-    return (0, s.jsx)(a.Modal, {
+    return (0, s.jsx)(n.Modal, {
         size: "md",
-        title: R.intl.string(R.t.Hd3D8W),
-        actions: [{ variant: "primary", text: R.intl.string(R.t.cpT0Cq), onClick: e }],
+        title: O.intl.string(O.t.Hd3D8W),
+        actions: [{ variant: "primary", text: O.intl.string(O.t.cpT0Cq), onClick: e }],
         onClose: e,
         transitionState: i,
         children: (0, s.jsx)(r.E, {
             variant: "text-md/medium",
             color: "text-subtle",
-            children: R.intl.string(R.t.Ij97SL),
+            children: O.intl.string(O.t.Ij97SL),
         }),
     });
 }
-function z(t) {
+function K(t) {
     let {
             quest: e,
             sourceQuestContent: i,
-            transitionState: a,
+            transitionState: n,
             onClose: r,
             rewardContent: f,
             isRewardContentLoading: h,
             rewardContentHasError: g,
             location: j,
         } = t,
-        N = u.uF.REWARD_MODAL,
-        [v, C] = n.useState(!0),
-        A = e.config.features.some((t) => D.Tz.has(t)),
-        p = n.useCallback(async () => {
-            if (A) {
+        v = m.uF.REWARD_MODAL,
+        [N, C] = a.useState(!0),
+        p = e.config.features.some((t) => P.Tz.has(t)),
+        A = a.useCallback(async () => {
+            if (p) {
                 r(), (0, c.closeAllModals)();
                 return;
             }
             (await (0, x.f7)(e.config.ctaConfig?.link)) && (r(), (0, c.closeAllModals)());
-        }, [e.config.ctaConfig?.link, r, A]);
-    if (g) return (0, s.jsx)(Y, { onClose: r, transitionState: a });
-    let y = h || v;
-    return (0, s.jsx)(m.R, {
+        }, [e.config.ctaConfig?.link, r, p]);
+    if (g) return (0, s.jsx)(Y, { onClose: r, transitionState: n });
+    let y = h || N;
+    return (0, s.jsx)(u.R, {
         questOrQuests: e,
-        questContent: N,
+        questContent: v,
         sourceQuestContent: i,
         children: (t) =>
             (0, s.jsxs)(o.EO, {
                 "data-migration-pending": !0,
-                transitionState: a,
+                transitionState: n,
                 size: o.rI.DYNAMIC,
                 className: G.yl,
-                "aria-label": y ? R.intl.string(R.t.ZTNur7) : void 0,
+                "aria-label": y ? O.intl.string(O.t.ZTNur7) : void 0,
                 parentComponent: "QuestRewardModalBase",
                 children: [
                     (0, s.jsx)("div", {
@@ -242,11 +249,11 @@ function z(t) {
                                 (0, s.jsx)("div", { className: G._H, children: f }),
                                 (0, s.jsx)("div", {
                                     className: G.xK,
-                                    children: (0, s.jsx)(O, {
+                                    children: (0, s.jsx)(z, {
                                         quest: e,
                                         sourceQuestContent: i,
                                         onLoadComplete: () => C(!1),
-                                        preCtaClick: p,
+                                        preCtaClick: A,
                                         location: j,
                                     }),
                                 }),

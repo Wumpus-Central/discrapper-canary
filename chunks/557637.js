@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Gk: () => p, Sn: () => f, jY: () => h });
+n.d(t, { _M: () => f, y5: () => h, zT: () => p });
 var i = n(627968),
     r = n(64700),
     s = n(158390),
@@ -23,43 +23,44 @@ function _(e) {
           : ((0, a.vq)(e, HTMLDivElement), e.tagName);
 }
 function h(e) {
-    let { children: t, isPreview: n = !1, source: h, questId: f } = e,
-        [p, E] = r.useState(!1),
-        [m, g] = r.useState(new Set()),
-        [A, I] = r.useState(!1),
-        T = r.useRef(!1);
+    let { children: t, isPreview: n = !1, source: h, adCreativeId: f, adCreativeType: p } = e,
+        [E, m] = r.useState(!1),
+        [g, A] = r.useState(new Set()),
+        [I, T] = r.useState(!1),
+        S = r.useRef(!1);
     r.useEffect(() => {
         let e = new Set();
-        for (let t of m) d(t) || e.add(t);
-        e.size !== m.size && g(e);
-    }, [m]);
-    let S = r.useCallback(
+        for (let t of g) d(t) || e.add(t);
+        e.size !== g.size && A(e);
+    }, [g]);
+    let y = r.useCallback(
             (e) => {
                 let { assetNode: t, nodeId: i, errorPrefix: r, errorMessage: s } = e;
                 if (n || null == h) return;
                 let c = (0, a.vq)(t, HTMLVideoElement) ? t.networkState : void 0;
-                o.default.track(u.HAw.QUEST_ASSET_LOADING_FAILURE, {
+                o.default.track(u.HAw.AD_ASSET_LOADING_FAILURE, {
                     source: h,
-                    quest_id: f,
+                    ad_creative_id: f,
+                    ad_creative_type: p,
                     asset_id: _(t),
                     video_network_state: c,
                 }),
                     l.A.captureException(Error(`${r}: ${null != s ? `${s}, ` : ""}${_(t)}, ${i}`), {
                         tags: { source: h },
                     }),
-                    E(!0);
+                    m(!0);
             },
-            [n, h, f],
+            [n, h, f, p],
         ),
-        y = r.useCallback((e) => {
-            g((t) => {
+        C = r.useCallback((e) => {
+            A((t) => {
                 let n = new Set(t);
                 return n.delete(e), n;
             });
         }, []),
-        C = r.useCallback(
+        N = r.useCallback(
             (e, t) => {
-                I(!0);
+                T(!0);
                 let n = (0, a.vq)(e, HTMLImageElement)
                         ? "load"
                         : (0, a.vq)(e, HTMLVideoElement)
@@ -68,12 +69,12 @@ function h(e) {
                     i = new AbortController(),
                     r = new s.A();
                 function o() {
-                    r.succeed(), y(e), e.removeEventListener(n, o);
+                    r.succeed(), C(e), e.removeEventListener(n, o);
                 }
                 function l(n) {
                     c(),
-                        y(e),
-                        S({
+                        C(e),
+                        y({
                             assetNode: e,
                             nodeId: t,
                             errorPrefix: "Error loading asset",
@@ -89,7 +90,7 @@ function h(e) {
                 }
                 if (
                     (d(e) ||
-                        (g((t) => {
+                        (A((t) => {
                             let n = new Set(t);
                             return n.add(e), n;
                         }),
@@ -116,17 +117,17 @@ function h(e) {
                 }
                 return c;
             },
-            [S, y],
+            [y, C],
         ),
-        N = r.useMemo(() => m.size > 0 || !A, [A, m]);
+        v = r.useMemo(() => g.size > 0 || !I, [I, g]);
     r.useEffect(() => {
-        N || (T.current = !0);
-    }, [N]);
-    let v = r.useMemo(
-        () => ({ registerAsset: C, unregisterAsset: y, hasError: p, isLoading: N && !T.current }),
-        [C, y, p, N],
+        v || (S.current = !0);
+    }, [v]);
+    let R = r.useMemo(
+        () => ({ registerAsset: N, unregisterAsset: C, hasError: E, isLoading: v && !S.current }),
+        [N, C, E, v],
     );
-    return (0, i.jsx)(c.Provider, { value: v, children: t });
+    return (0, i.jsx)(c.Provider, { value: R, children: t });
 }
 function f(e) {
     let { id: t, children: n } = e,

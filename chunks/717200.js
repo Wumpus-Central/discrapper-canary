@@ -1,4 +1,4 @@
-s.d(t, { A: () => R });
+s.d(t, { A: () => z });
 var i = s(627968),
     l = s(64700),
     a = s(189213),
@@ -6,47 +6,48 @@ var i = s(627968),
     r = s(935462),
     c = s(289873),
     o = s(73473),
-    d = s(821609),
-    m = s(366010),
+    d = s(323889),
+    m = s(821609),
+    x = s(366010),
     u = s(534514),
-    x = s(736653),
-    h = s(3738),
+    h = s(736653),
+    v = s(3738),
     j = s(46948),
     g = s(971649),
-    v = s(241124),
-    p = s(918338),
+    p = s(557637),
+    C = s(918338),
     f = s(491145),
-    C = s(190107),
-    N = s(818348),
-    y = s(375708),
-    b = s(396355);
-function k(e) {
+    N = s(190107),
+    y = s(818348),
+    b = s(375708),
+    M = s(396355);
+function T(e) {
     let { quest: t } = e,
-        s = (0, x.Ay)(),
-        l = (0, m.M)(s) ? N.NJ.DARK : N.NJ.LIGHT,
+        s = (0, h.Ay)(),
+        l = (0, x.M)(s) ? y.NJ.DARK : y.NJ.LIGHT,
         a = (0, j.tW)(t, j.fY.LOGO_TYPE, l);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(v.Sn, {
+            (0, i.jsx)(p._M, {
                 id: "SplitQuestModal_hero",
                 children: (e) =>
-                    (0, i.jsx)(p.A, {
+                    (0, i.jsx)(C.A, {
                         quest: t,
-                        imageSize: { width: C.i$ * C.K, height: C.ls * C.K },
-                        containerClassName: b.jF,
+                        imageSize: { width: N.i$ * N.K, height: N.ls * N.K },
+                        containerClassName: M.jF,
                         isInteracting: !0,
                         assetRef: e,
                     }),
             }),
             (0, i.jsx)("div", {
-                className: b.Lt,
-                children: (0, i.jsx)(v.Sn, {
+                className: M.Lt,
+                children: (0, i.jsx)(p._M, {
                     id: "SplitQuestModal_logotype",
                     children: (e) =>
                         (0, i.jsx)("img", {
                             ref: e,
-                            className: b.a$,
-                            alt: y.intl.formatToPlainString(y.t.rtm15P, { name: t.config.messages.gameTitle }),
+                            className: M.a$,
+                            alt: b.intl.formatToPlainString(b.t.rtm15P, { name: t.config.messages.gameTitle }),
                             src: a.url,
                         }),
                 }),
@@ -54,30 +55,30 @@ function k(e) {
         ],
     });
 }
-function M(e) {
+function k(e) {
     let { quest: t, title: s, subtitle: l } = e,
-        a = (0, x.Ay)(),
-        r = (0, m.M)(a) ? N.NJ.DARK : N.NJ.LIGHT;
+        a = (0, h.Ay)(),
+        r = (0, x.M)(a) ? y.NJ.DARK : y.NJ.LIGHT;
     return (0, i.jsxs)("div", {
-        className: b.Th,
+        className: M.Th,
         children: [
-            (0, i.jsx)(v.Sn, {
+            (0, i.jsx)(p._M, {
                 id: "SplitQuestModal_gameTile",
                 children: (e) =>
                     (0, i.jsx)("img", {
                         ref: e,
-                        className: b.rw,
-                        alt: y.intl.formatToPlainString(y.t.rtm15P, { name: t.config.messages.gameTitle }),
+                        className: M.rw,
+                        alt: b.intl.formatToPlainString(b.t.rtm15P, { name: t.config.messages.gameTitle }),
                         src: (0, j.tW)(t, j.fY.GAME_TILE, r).url,
                     }),
             }),
             (0, i.jsxs)("div", {
-                className: b.Ly,
+                className: M.Ly,
                 children: [
                     (0, i.jsx)(u.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
-                        className: b.fx,
+                        className: M.fx,
                         children: s,
                     }),
                     (0, i.jsx)(n.E, { variant: "text-sm/medium", color: "text-subtle", children: l }),
@@ -86,26 +87,27 @@ function M(e) {
         ],
     });
 }
-function S(e) {
+function E(e) {
     let { quest: t, questContent: s, sourceQuestContent: l, location: a, preCtaClick: n } = e,
         r = (0, g.go)(),
-        c = (0, h.Jf)({ quest: t, questContent: s, impressionId: r, preCtaClick: n, sourceQuestContent: l }),
+        c = (0, v.Jf)({ quest: t, questContent: s, impressionId: r, preCtaClick: n, sourceQuestContent: l }),
         o = (0, f.A)(t, { impressionId: r, sourceQuestContent: l }, n) ?? c;
     return (0, i.jsxs)("div", {
-        className: b.kL,
+        className: M.kL,
         children: [
-            (0, i.jsxs)(v.jY, {
+            (0, i.jsxs)(p.y5, {
                 source: a,
-                questId: t.id,
+                adCreativeId: t.id,
+                adCreativeType: d.p.QUEST,
                 isPreview: t.preview,
                 children: [
-                    (0, i.jsx)(k, { quest: t }),
-                    (0, i.jsx)(M, { quest: t, title: o.title, subtitle: o.subtitle }),
+                    (0, i.jsx)(T, { quest: t }),
+                    (0, i.jsx)(k, { quest: t, title: o.title, subtitle: o.subtitle }),
                 ],
             }),
             (0, i.jsx)("div", {
-                className: b.z1,
-                children: (0, i.jsx)(d.$, {
+                className: M.z1,
+                children: (0, i.jsx)(m.$, {
                     fullWidth: !0,
                     variant: o.ctaVariant,
                     size: "md",
@@ -116,14 +118,14 @@ function S(e) {
         ],
     });
 }
-var T = s(408278),
-    A = s(173936),
-    E = s(815021),
+var A = s(408278),
+    _ = s(173936),
+    S = s(815021),
     q = s(590202),
     w = s(814793),
     I = s(371912),
     L = s(664618);
-function _(e) {
+function Q(e) {
     let { quest: t, questContent: s, sourceQuestContent: a, onClose: n } = e,
         r = (0, w.E0)(t.config),
         c = (0, g.go)(),
@@ -139,30 +141,30 @@ function _(e) {
         className: L.n,
         children: [
             r &&
-                (0, i.jsx)(T.K, {
+                (0, i.jsx)(A.K, {
                     size: "sm",
                     variant: "overlay-secondary",
-                    icon: A.q,
-                    "aria-label": y.intl.string(y.t.WqhZss),
+                    icon: _.q,
+                    "aria-label": b.intl.string(b.t.WqhZss),
                     onClick: o,
                 }),
-            (0, i.jsx)(E.J, { size: "sm", variant: "overlay-secondary", onClick: n }),
+            (0, i.jsx)(S.J, { size: "sm", variant: "overlay-secondary", onClick: n }),
         ],
     });
 }
-var Q = s(601862);
-function D(e) {
+var D = s(601862);
+function R(e) {
     let { onClose: t, transitionState: s, title: l, description: r } = e;
     return (0, i.jsx)(a.Modal, {
         size: "md",
         title: l,
-        actions: [{ variant: "primary", text: y.intl.string(y.t.cpT0Cq), onClick: t }],
+        actions: [{ variant: "primary", text: b.intl.string(b.t.cpT0Cq), onClick: t }],
         onClose: t,
         transitionState: s,
         children: (0, i.jsx)(n.E, { variant: "text-md/medium", color: "text-subtle", children: r }),
     });
 }
-function R(e) {
+function z(e) {
     let {
         quest: t,
         questContent: s,
@@ -171,19 +173,19 @@ function R(e) {
         transitionState: n,
         onClose: d,
         leftContent: m,
-        preCtaClick: u,
-        isContentLoading: x,
+        preCtaClick: x,
+        isContentLoading: u,
         contentHasError: h,
-        errorTitle: j,
-        errorDescription: g,
-        location: v,
+        errorTitle: v,
+        errorDescription: j,
+        location: g,
     } = e;
     return h
-        ? (0, i.jsx)(D, {
+        ? (0, i.jsx)(R, {
               onClose: d,
               transitionState: n,
-              title: j ?? y.intl.string(y.t["9cfXek"]),
-              description: g ?? y.intl.string(y.t.nYQyEg),
+              title: v ?? b.intl.string(b.t["9cfXek"]),
+              description: j ?? b.intl.string(b.t.nYQyEg),
           })
         : (0, i.jsx)(o.R, {
               questOrQuests: t,
@@ -194,28 +196,28 @@ function R(e) {
                       "data-migration-pending": !0,
                       transitionState: n,
                       size: r.rI.DYNAMIC,
-                      className: Q.yl,
+                      className: D.yl,
                       "aria-label": a,
                       parentComponent: "QuestSplitModalBase",
                       children: [
-                          (0, i.jsx)(_, { quest: t, questContent: s, sourceQuestContent: l, onClose: d }),
-                          x ? (0, i.jsx)(c.y, { className: Q.u1, type: c.y.Type.WANDERING_CUBES }) : null,
+                          (0, i.jsx)(Q, { quest: t, questContent: s, sourceQuestContent: l, onClose: d }),
+                          u ? (0, i.jsx)(c.y, { className: D.u1, type: c.y.Type.WANDERING_CUBES }) : null,
                           (0, i.jsx)("div", {
                               ref: e,
-                              className: Q.BM,
-                              style: { visibility: x ? "hidden" : "visible" },
+                              className: D.BM,
+                              style: { visibility: u ? "hidden" : "visible" },
                               children: (0, i.jsxs)("div", {
-                                  className: Q.jE,
+                                  className: D.jE,
                                   children: [
-                                      (0, i.jsx)("div", { className: Q._H, children: m }),
+                                      (0, i.jsx)("div", { className: D._H, children: m }),
                                       (0, i.jsx)("div", {
-                                          className: Q.xK,
-                                          children: (0, i.jsx)(S, {
+                                          className: D.xK,
+                                          children: (0, i.jsx)(E, {
                                               quest: t,
                                               questContent: s,
                                               sourceQuestContent: l,
-                                              location: v,
-                                              preCtaClick: u,
+                                              location: g,
+                                              preCtaClick: x,
                                           }),
                                       }),
                                   ],
