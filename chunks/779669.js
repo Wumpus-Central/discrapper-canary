@@ -1299,11 +1299,12 @@ function tX(e) {
         }, [f, l, g]),
         A = a.useCallback(() => g(!1), [g]),
         I = a.useCallback(() => {
+            l(_.Ws.CopyLink);
             let e = `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${ep.BVt.GAME_PROFILE(t.id)}`;
             (0, tT.C)(e, () => {
                 (0, tx.P0)((0, th.o)(eo.intl.string(eo.t["+5kSoW"]), tg.Ck.SUCCESS));
             });
-        }, [t.id]);
+        }, [t.id, l]);
     return (0, i.jsxs)("div", {
         className: n,
         children: [

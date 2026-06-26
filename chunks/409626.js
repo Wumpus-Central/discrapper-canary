@@ -58,6 +58,7 @@ var i,
         (i[(i.ClickTrailer = 36)] = "ClickTrailer"),
         (i[(i.Feedback = 37)] = "Feedback"),
         (i[(i.XboxGamePassStoreLink = 38)] = "XboxGamePassStoreLink"),
+        (i[(i.CopyLink = 39)] = "CopyLink"),
         i),
     _ =
         (((r = {}).ActivityCard = "activity_card"),
