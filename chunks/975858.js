@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { ie: () => p, w0: () => h, Om: () => m, hJ: () => g });
+n.d(t, { ie: () => p, w0: () => h, Om: () => A, HW: () => m, hJ: () => I });
 var i = n(70283),
     r = n(696292),
     s = n(617986),
@@ -53,7 +53,11 @@ let f = new Set(Object.values(_));
 function p(e) {
     return f.has(e);
 }
-let E = {
+let E = new Set([i.$.ACCOUNT_AGE, i.$.STREAMING, i.$.GAME_TIME, i.$.GAME_VARIETY]);
+function m(e) {
+    return E.has(e);
+}
+let g = {
     [i.$.PREMIUM_TENURE]: {
         ctaLabel: (e) => {
             let { owned: t, isViewerOnUpgradeableNitro: n } = e;
@@ -77,7 +81,7 @@ let E = {
         ctaAction: () => (0, s.navigateToQuestHome)({ fromContent: r.u.QUEST_BADGE }),
     },
 };
-function m(e) {
-    return E[e];
+function A(e) {
+    return g[e];
 }
-let g = "badge-details";
+let I = "badge-details";

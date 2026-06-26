@@ -193,6 +193,53 @@
     text-transform: uppercase
 }
 
+.badgeAccessoryRows__6db38 {
+    flex-direction: column
+}
+
+.badgeAccessoryLine__6db38,
+.badgeAccessoryRows__6db38 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-height: 16px;
+    width: 100%
+}
+
+.badgeAccessoryLine__6db38 {
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.badgeBetaTag__6db38 {
+    align-items: center;
+    color: var(--text-subtle);
+    display: inline-flex;
+    gap: 2px
+}
+
+.badgeBetaTagIcon__6db38 {
+    flex-shrink: 0
+}
+
+.badgeAccessoryDot__6db38 {
+    color: var(--text-subtle);
+    flex-shrink: 0
+}
+
+.badgeAccessoryGroup__6db38,
+.badgeAccessorySegment__6db38 {
+    align-items: center;
+    display: inline-flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.badgeAccessoryText__6db38 {
+    min-width: 0;
+    text-align: center
+}
+
 .uppercaseItalic__6db38 {
     font-style: italic;
     white-space: nowrap
