@@ -3994,6 +3994,11 @@ function rf() {
                     { id: "toggle-voice-mode", value: U.hCu.TOGGLE_VOICE_MODE, label: j.intl.string(j.t.Wa5H9S) },
                     { id: "toggle-streamer-mode", value: U.hCu.TOGGLE_STREAMER_MODE, label: j.intl.string(j.t.BK0Ncc) },
                     { id: "toggle-camera", value: U.hCu.TOGGLE_CAMERA, label: j.intl.string(j.t.hf8JVT) },
+                    {
+                        id: "toggle-voice-channel-chat",
+                        value: U.hCu.TOGGLE_VOICE_CHANNEL_CHAT,
+                        label: j.intl.string(j.t.YeqEjm),
+                    },
                 ];
             return (
                 t &&
@@ -4062,6 +4067,7 @@ function rf() {
                     [U.hCu.TOGGLE_STREAMER_MODE]: j.intl.string(j.t.YszLLx),
                     [U.hCu.VAD_PRIORITY]: j.intl.string(j.t.rSe8IZ),
                     [U.hCu.TOGGLE_CAMERA]: j.intl.string(j.t.v1JBtL),
+                    [U.hCu.TOGGLE_VOICE_CHANNEL_CHAT]: j.intl.string(j.t.desfB4),
                 };
             return (
                 t && (l[U.hCu.TOGGLE_OVERLAY_INPUT_LOCK] = j.intl.string(j.t.IoP5vc)),
