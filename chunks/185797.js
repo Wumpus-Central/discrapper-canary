@@ -10,7 +10,7 @@ var l = n(777376),
     u = n(758209),
     c = n(693037),
     d = n(674567),
-    _ = n(237146),
+    _ = n(151001),
     h = n(375708),
     f = (((i = {}).DEFAULT = "default"), (i.SUBSCRIBE = "subscribe"), i);
 function p() {
@@ -31,6 +31,17 @@ function p() {
                 return { text: h.intl.string(_.default.wBz9aO), disabled: !0 };
         }
     })(n);
+    if (t === d.s.NONE)
+        return {
+            kind: "default",
+            claimStatus: n,
+            requestInProgress: i,
+            text: m.text,
+            disabled: !0,
+            loading: !0,
+            icon: m.icon,
+            iconPosition: m.iconPosition,
+        };
     if (n === l.p.NOT_CLAIMED || n === l.p.CLAIM_IN_PROGRESS)
         e = () => {
             p();

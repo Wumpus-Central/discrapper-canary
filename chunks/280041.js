@@ -28,7 +28,7 @@ var i,
     O = n(503698),
     b = n.n(O),
     D = n(907581),
-    L = n(533873);
+    L = n(184049);
 let w = o.forwardRef((e, t) => {
     let { className: n } = e,
         i = o.useRef(null);
@@ -56,12 +56,12 @@ var M = n(440005),
     V = n(652215),
     B = n(190107),
     j = n(355097),
-    H = n(962995),
-    Y = n(466919),
-    W = n(490285),
+    H = n(778414),
+    Y = n(963458),
+    W = n(587416),
     K = n(375708),
-    $ = n(693227),
-    z = n(864386),
+    $ = n(491404),
+    z = n(745699),
     q = n(817577);
 let Z = "/assets/035ad0fba4997f3f.svg",
     X =
@@ -286,7 +286,11 @@ let eo = function () {
                 previewImage: eu.threePPromotions.thumbnail,
                 videoUrl: eu.threePPromotions.assetUrl,
                 onClick: () =>
-                    (0, R.u)({ analyticsLocations: t, partnerIds: [v.KS, v.Cs, v.XY, ...(el ? ["xbox"] : [])] }),
+                    (0, R.u)({
+                        analyticsLocations: t,
+                        partnerIds: [v.KS, v.Cs, v.XY, ...(el ? ["xbox"] : [])],
+                        isLocked: !0,
+                    }),
                 badgeText: el ? void 0 : K.intl.string(K.t.y2b7CA).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 mediaRef: el ? eo : void 0,

@@ -1780,7 +1780,7 @@ if (
     n.e("7451").then(n.t.bind(n, 121014, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 570035, Version Hash: 7d21708523f8f19ba70cbd9e35c60b75c095add4`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 570091, Version Hash: 9b67174f12889b0d0eee3dab1cba67626173a298`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -16668,34 +16668,32 @@ function I1(e) {
 }
 var I2 = n(741231),
     I3 = n(280041),
-    I6 = n(264779),
+    I6 = n(3074),
     I4 = n(382259);
 function I5(e) {
     let { targetElementRef: t, dismissPopover: n, children: i } = e,
         { analyticsLocations: r } = (0, aY.Ay)(io.A.HOME_PAGE_PREMIUM_TAB),
         s = (0, e5.bG)([ty.default], () => ty.default.getCurrentUser()),
-        a = (0, e5.bG)([Ii.A], () => Ii.A.getPremiumTypeSubscription()),
-        { fractionalState: o } = (0, A3.A)(),
-        l = (0, I6.$_)(a, o),
-        u = Ir.Ay.isPremiumExactly(s, uj.PremiumTypes.TIER_2),
-        c = (0, Iw.YS)({ location: "SSLogitechReheatPopover" }).functionalityEnabled,
-        d = !0 === l ? nl.intl.string(nl.t.YfTxzY) : nl.intl.string(nl.t.K0dyhm),
-        _ = te.useCallback(() => {
+        a = !0 !== (0, I6.N)(),
+        o = Ir.Ay.isPremiumExactly(s, uj.PremiumTypes.TIER_2),
+        l = (0, Iw.YS)({ location: "SSLogitechReheatPopover" }).functionalityEnabled,
+        u = !0 === a ? nl.intl.string(nl.t.YfTxzY) : nl.intl.string(nl.t.K0dyhm),
+        c = te.useCallback(() => {
             n(i4.i.TAKE_ACTION),
                 (0, I2.A)(eM.BVt.NITRO_HOME, { search: (0, nR.stringify)({ [IU.x6]: I3.NI.THREE_P_PROMOTIONS }) }),
-                (0, I4.u)({ analyticsLocations: r });
+                (0, I4.u)({ analyticsLocations: r, isLocked: !0 });
         }, [n, r]),
-        h = te.useCallback(() => {
+        d = te.useCallback(() => {
             n(i4.i.TAKE_ACTION),
                 (0, I2.A)(eM.BVt.NITRO_HOME, {
                     search: (0, nR.stringify)({
-                        [IU.WU]: c ? Ik.LOGITECH_3PP_CARD_ID : Ik.RECURRING_3P_PROMOTIONS_CARD_ID,
+                        [IU.WU]: l ? Ik.LOGITECH_3PP_CARD_ID : Ik.RECURRING_3P_PROMOTIONS_CARD_ID,
                     }),
                 });
-        }, [n, c]),
-        f = u
-            ? { text: nl.intl.string(nl.t["CDdYB/"]), onClick: h }
-            : { text: nl.intl.string(nl.t["CDdYB/"]), onClick: _ };
+        }, [n, l]),
+        _ = o
+            ? { text: nl.intl.string(nl.t["CDdYB/"]), onClick: d }
+            : { text: nl.intl.string(nl.t["CDdYB/"]), onClick: c };
     return (0, F.jsxs)(F.Fragment, {
         children: [
             (0, F.jsx)("div", { children: i }),
@@ -16703,7 +16701,7 @@ function I5(e) {
                 shouldShow: !0,
                 targetElementRef: t,
                 title: nl.intl.string(nl.t.nt2xCC),
-                body: d,
+                body: u,
                 graphic: {
                     type: "image",
                     src: "https://cdn.discordapp.com/assets/content/c70d0bb22b44b2c433ed2f725e31545da26e57881eb528f59ddccd75e8a16cec.png",
@@ -16713,7 +16711,7 @@ function I5(e) {
                 align: "top",
                 position: "right",
                 caretConfig: { align: "start" },
-                actions: [f],
+                actions: [_],
                 onRequestClose: () => n(i4.i.USER_DISMISS),
             }),
         ],
@@ -18028,7 +18026,7 @@ let Su = "isHideDevBanner",
                     className: t6()(Sl.Wz, Sl.mr),
                     children: [
                         (0, F.jsx)(So, { className: Sl.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "570035" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "570091" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })

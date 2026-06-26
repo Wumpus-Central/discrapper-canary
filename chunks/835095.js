@@ -1,10 +1,9 @@
 "use strict";
-n.d(t, { A: () => o }), n(938796);
+n.d(t, { A: () => a }), n(938796);
 var i = n(665260),
     r = n(315069),
-    s = n(852218),
-    a = n(788868);
-class o extends r.A {
+    s = n(852218);
+class a extends r.A {
     id;
     trialId;
     startDate;
@@ -29,7 +28,7 @@ class o extends r.A {
     rewardSkuIds;
     promotionKey;
     static createFromServer(e) {
-        return new o({
+        return new a({
             id: e.id,
             trialId: e.trial_id,
             startDate: new Date(e.start_date),
@@ -104,8 +103,5 @@ class o extends r.A {
             default:
                 return !1;
         }
-    }
-    isRedeemableByTrialUsers() {
-        return this.hasFlag(a.$3.IS_OUTBOUND_REDEEMABLE_BY_TRIAL_USERS);
     }
 }
