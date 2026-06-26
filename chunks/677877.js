@@ -3692,7 +3692,7 @@ function as(e) {
         return (0, l.jsx)("div", {
             className: ai.lS,
             children: (0, l.jsx)(p.$, {
-                variant: "primary",
+                variant: "secondary",
                 size: "md",
                 fullWidth: !0,
                 text: z.intl.string(z.t["+Xp3hq"]),
