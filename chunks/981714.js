@@ -876,75 +876,81 @@ function nE(e) {
                 A = eZ.jW.useSetting(),
                 f = eZ.Q_.useSetting(),
                 C = (0, m.bG)([tc.A], () => null == t.guild_id || tc.A.canChatInGuild(t.guild_id), [t]),
-                { canManageMessages: x, canAddNewReactions: E } = (0, m.cf)(
+                {
+                    canManageMessages: x,
+                    canAddNewReactions: E,
+                    canSendMessages: S,
+                } = (0, m.cf)(
                     [td.A],
                     () => ({
                         canAddNewReactions: C && td.A.can(ec.xBc.ADD_REACTIONS, t),
                         canManageMessages: td.A.can(ec.xBc.MANAGE_MESSAGES, t),
+                        canSendMessages: td.A.can(ec.xBc.SEND_MESSAGES, t),
                     }),
                     [t, C],
                 ),
-                S = (0, ti.u)(t, n),
-                _ = (0, ts.n)(t, n),
-                I = (0, ts.R)(n),
-                j = (0, m.bG)([tl.A], () => null != t.guild_id && tl.A.isLurking(t.guild_id), [t]),
-                y = c.id === u,
-                N = (x || n.canDeleteOwnMessage(u)) && h && !ec.MRS.UNDELETABLE.has(n.type);
-            n.type === ec.lAJ.AUTO_MODERATION_ACTION && (N = N && x),
-                t.isModeratorReportChannel() && (N = N && n.id !== p?.id && !(0, e2.A)(n));
-            let v = (0, no.ul)(n),
-                T = (0, tg.A)(n, t),
-                M = !t.isSystemDM() && (0, tm.A)(n, u) && h && !g,
-                { disableReactionCreates: R } = (0, tp.A)({
+                _ = (0, ti.u)(t, n),
+                I = (0, ts.n)(t, n),
+                j = (0, ts.R)(n),
+                y = (0, m.bG)([tl.A], () => null != t.guild_id && tl.A.isLurking(t.guild_id), [t]),
+                N = c.id === u,
+                v = (x || n.canDeleteOwnMessage(u)) && h && !ec.MRS.UNDELETABLE.has(n.type);
+            n.type === ec.lAJ.AUTO_MODERATION_ACTION && (v = v && x),
+                t.isModeratorReportChannel() && (v = v && n.id !== p?.id && !(0, e2.A)(n));
+            let T = (0, no.ul)(n),
+                M = (0, tg.A)(n, t),
+                R = !t.isSystemDM() && (0, tm.A)(n, u) && h && !g,
+                { disableReactionCreates: D } = (0, tp.A)({
                     channel: t,
                     canChat: C,
                     renderReactions: A,
                     canAddNewReactions: E,
-                    isLurking: j,
+                    isLurking: y,
                     isActiveChannelOrUnarchivableThread: h,
                 }),
-                D =
+                L =
                     t.type === ec.rbe.GUILD_ANNOUNCEMENT &&
                     null != d &&
                     d.features.has(ec.GuildFeatures.NEWS) &&
-                    (y || x) &&
+                    S &&
+                    (N || x) &&
                     (0, t2.A)(n),
-                L = t.getGuildId(),
-                k =
-                    null != L &&
+                k = t.getGuildId(),
+                P =
+                    null != k &&
                     n.type === ec.lAJ.USER_JOIN &&
-                    td.A.canWithPartialContext(ec.xBc.MANAGE_GUILD, { guildId: L }),
-                P = (0, tt.m)(n),
-                O = (0, e0.kn)(n, t, "MessageHoverBar"),
-                G = n.hasFlag(ec.pr7.IS_GUILD_OFFICIAL),
-                { enabled: U } = nn.A.useConfig({ location: "message_utilities" }),
-                w = (0, m.bG)([nl.A], () => null != nl.A.getSavedMessage(t.id, n.id)),
-                F = (0, tU.A)(a),
-                H = (0, m.bG)([b.Ay], () => b.Ay.keyboardModeEnabled);
+                    td.A.canWithPartialContext(ec.xBc.MANAGE_GUILD, { guildId: k }),
+                O = (0, tt.m)(n),
+                G = (0, e0.kn)(n, t, "MessageHoverBar"),
+                U = n.hasFlag(ec.pr7.IS_GUILD_OFFICIAL),
+                { enabled: w } = nn.A.useConfig({ location: "message_utilities" }),
+                F = (0, m.bG)([nl.A], () => null != nl.A.getSavedMessage(t.id, n.id)),
+                H = (0, tU.A)(a),
+                B = (0, m.bG)([b.Ay], () => b.Ay.keyboardModeEnabled);
             return {
                 channel: t,
                 message: n,
-                canPin: T,
-                canEdit: M,
-                canDelete: N,
-                canReport: v,
-                canReply: S,
-                canStartThread: _,
-                canViewThread: I,
-                canForward: P,
-                canManageOfficialMessages: O,
-                isGuildOfficial: G,
+                canPin: M,
+                canEdit: R,
+                canDelete: v,
+                canReport: T,
+                canReply: _,
+                canStartThread: I,
+                canViewThread: j,
+                canForward: O,
+                canManageOfficialMessages: G,
+                isGuildOfficial: U,
                 canCopy: tu.p5,
                 hasDeveloperMode: f,
-                canReact: !R && A,
-                canPublish: D,
-                canConfigureJoin: k,
-                isExpanded: F && !H && !l && !i && !s,
+                canReact: !D && A,
+                canPublish: L,
+                canConfigureJoin: P,
+                isExpanded: H && !B && !l && !i && !s,
                 showEmojiPicker: l,
                 showEmojiBurstPicker: i,
                 showMoreUtilities: s,
-                showMessageBookmarksActions: U,
-                isMessageBookmark: w,
+                showMessageBookmarksActions: w,
+                isMessageBookmark: F,
                 setPopout: r,
                 isFocused: o,
             };

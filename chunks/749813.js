@@ -805,15 +805,15 @@ let tg = new th(ta.h, {
         let { channelId: t, message: n, optimistic: i } = e;
         if (i || tu.has(t)) return !1;
         let l = D.A.getChannel(t),
-            s = G.default.getCurrentUser();
+            s = G.default.getCurrentUser(),
+            r = null != s && n.author?.id === s.id;
         if (
             !(
                 null != l &&
                 l.type === W.rbe.GUILD_ANNOUNCEMENT &&
                 (0, td.A)(n) &&
-                (null != s && n.author?.id === s.id
-                    ? to.A.can(W.xBc.SEND_MESSAGES, l)
-                    : to.A.can(W.xBc.MANAGE_MESSAGES, l)) &&
+                to.A.can(W.xBc.SEND_MESSAGES, l) &&
+                (r || to.A.can(W.xBc.MANAGE_MESSAGES, l)) &&
                 !c.Lt(Number(n.flags), W.pr7.CROSSPOSTED)
             )
         )
