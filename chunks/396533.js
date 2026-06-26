@@ -1,61 +1,62 @@
-u.d(t, { A: () => s });
-var r = u(64700),
-    n = u(17928),
-    l = u(775602);
-function s(e) {
+"use strict";
+n.d(t, { A: () => a });
+var i = n(64700),
+    r = n(17928),
+    s = n(775602);
+function a(e) {
     let {
             key: t,
-            isExpanded: u,
-            durationMs: s = 100,
-            minHeightOverride: c,
-            maxHeightOverride: i,
-            maxAnimationHeight: a,
+            isExpanded: n,
+            durationMs: a = 100,
+            minHeightOverride: o,
+            maxHeightOverride: l,
+            maxAnimationHeight: u,
         } = e,
-        f = (0, n.bG)([l.Ay], () => l.Ay.useReducedMotion),
-        [o, h] = r.useState(null),
-        d = r.useCallback(() => {}, []),
-        y = r.useRef(null),
-        p = r.useRef(null),
-        R = r.useRef(t),
-        g = r.useRef(s);
-    g.current = s;
-    let k = r.useRef(c);
-    k.current = c;
-    let m = r.useRef(i);
-    m.current = i;
-    let b = r.useRef(a);
-    b.current = a;
-    let [A, C] = r.useState(!1),
-        v = r.useCallback(() => C(!1), []);
+        c = (0, r.bG)([s.Ay], () => s.Ay.useReducedMotion),
+        [d, _] = i.useState(null),
+        h = i.useCallback(() => {}, []),
+        f = i.useRef(null),
+        p = i.useRef(null),
+        E = i.useRef(t),
+        m = i.useRef(a);
+    m.current = a;
+    let g = i.useRef(o);
+    g.current = o;
+    let A = i.useRef(l);
+    A.current = l;
+    let I = i.useRef(u);
+    I.current = u;
+    let [T, S] = i.useState(!1),
+        y = i.useCallback(() => S(!1), []);
     return (
-        r.useLayoutEffect(() => {
-            void 0 !== t && ((y.current = null), (p.current = null), C(!1));
+        i.useLayoutEffect(() => {
+            void 0 !== t && ((f.current = null), (p.current = null), S(!1));
         }, [t]),
-        r.useLayoutEffect(() => {
-            if (null == o) return;
-            let { height: e } = o.getBoundingClientRect();
-            !u && (null == y.current || e < y.current) && (y.current = e),
-                u && (null == p.current || e > p.current) && (p.current = e);
-            let r = k.current ?? y.current,
-                n = m.current ?? p.current,
-                l = R.current !== t;
-            if (((R.current = t), null == r || null == n || l)) return;
-            let s = Math.min(b.current ?? n, n),
-                c = u ? r : s,
-                i = u ? s : r;
-            if (c === i) return;
-            C(!0), (o.style.height = `${c}px`), (o.style.transition = "");
-            let a = null;
+        i.useLayoutEffect(() => {
+            if (null == d) return;
+            let { height: e } = d.getBoundingClientRect();
+            !n && (null == f.current || e < f.current) && (f.current = e),
+                n && (null == p.current || e > p.current) && (p.current = e);
+            let i = g.current ?? f.current,
+                r = A.current ?? p.current,
+                s = E.current !== t;
+            if (((E.current = t), null == i || null == r || s)) return;
+            let a = Math.min(I.current ?? r, r),
+                o = n ? i : a,
+                l = n ? a : i;
+            if (o === l) return;
+            S(!0), (d.style.height = `${o}px`), (d.style.transition = "");
+            let u = null;
             return (
-                (a = requestAnimationFrame(() => {
-                    (a = null), (o.style.height = `${i}px`), (o.style.transition = `height ${g.current}ms ease-in-out`);
+                (u = requestAnimationFrame(() => {
+                    (u = null), (d.style.height = `${l}px`), (d.style.transition = `height ${m.current}ms ease-in-out`);
                 })),
-                () => (null != a ? cancelAnimationFrame(a) : void 0)
+                () => (null != u ? cancelAnimationFrame(u) : void 0)
             );
-        }, [t, o, u]),
-        r.useLayoutEffect(() => {
-            null == o || A || ((o.style.height = ""), (o.style.transition = ""));
-        }, [t, o, A]),
-        { ref: f ? d : h, isTransitioning: A, onTransitionEnd: v }
+        }, [t, d, n]),
+        i.useLayoutEffect(() => {
+            null == d || T || ((d.style.height = ""), (d.style.transition = ""));
+        }, [t, d, T]),
+        { ref: c ? h : _, isTransitioning: T, onTransitionEnd: y }
     );
 }
