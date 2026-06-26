@@ -1,12 +1,11 @@
 "use strict";
-n.d(t, { A: () => o, s: () => a });
+n.d(t, { A: () => a, s: () => s });
 var i = n(575593),
-    r = n(820391),
-    s = n(149807);
-function a(e) {
-    return e instanceof o;
+    r = n(149807);
+function s(e) {
+    return e instanceof a;
 }
-class o extends s.A {
+class a extends r.A {
     label;
     layers;
     innerWidth;
@@ -18,14 +17,14 @@ class o extends s.A {
             (this.type = i.R.PROFILE_FRAME),
             (this.label = e.label),
             (this.layers = e.layers),
-            (this.innerWidth = e.innerWidth ?? r.x.INNER_WIDTH),
-            (this.overflowTop = e.overflowTop ?? r.x.OVERFLOW_TOP),
-            (this.overflowBottom = e.overflowBottom ?? r.x.OVERFLOW_BOTTOM),
-            (this.overflowHorizontal = e.overflowHorizontal ?? r.x.OVERFLOW_HORIZONTAL);
+            (this.innerWidth = e.innerWidth),
+            (this.overflowTop = e.overflowTop),
+            (this.overflowBottom = e.overflowBottom),
+            (this.overflowHorizontal = e.overflowHorizontal);
     }
     static fromServer(e) {
         let { inner_width: t, overflow_top: n, overflow_bottom: i, overflow_horizontal: r, ...s } = e;
-        return new o({
+        return new a({
             ...super.fromServer(s),
             ...s,
             innerWidth: t,
