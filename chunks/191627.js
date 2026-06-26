@@ -3,21 +3,22 @@ n.d(t, {
     EC: () => v,
     Ef: () => b,
     Gg: () => S,
-    H1: () => G,
+    H1: () => F,
     MH: () => M,
     NV: () => D,
     PH: () => C,
     QM: () => O,
     Uy: () => E,
     Y7: () => A,
-    dI: () => V,
+    bo: () => G,
+    dI: () => B,
     fD: () => m,
     h4: () => T,
     he: () => R,
     iN: () => P,
     jZ: () => y,
     kp: () => I,
-    lu: () => F,
+    lu: () => V,
     ly: () => k,
     nz: () => N,
     qb: () => x,
@@ -207,7 +208,8 @@ var U =
     (d[(d.PENDING_REQUEST_EXISTS = 2)] = "PENDING_REQUEST_EXISTS"),
     (d[(d.MAX_CONNECTIONS_REACHED = 3)] = "MAX_CONNECTIONS_REACHED"),
     d);
-let G = {
+let G = { 29e4: 1, 290002: 3, 290005: 2 },
+    F = {
         0: {
             header: () => p.intl.string(f.default.nGX8Co),
             description: () => p.intl.string(f.default.Uss2dn),
@@ -249,7 +251,7 @@ let G = {
             icon: 1,
         },
     },
-    F = () => ({
+    V = () => ({
         seconds: p.intl.string(f.default.CJdoee),
         minutes: f.default.InzMn3,
         hours: f.default.ErkYCI,
@@ -257,7 +259,7 @@ let G = {
         days: f.default.pWig18,
         date: f.default.MP3khg,
     }),
-    V = () => ({
+    B = () => ({
         seconds: p.intl.string(f.default.Bqsamd),
         minutes: f.default.kX3wJg,
         hours: f.default.J18GbG,
