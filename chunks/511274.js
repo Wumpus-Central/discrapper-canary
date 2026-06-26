@@ -2,14 +2,14 @@
 n.d(t, { U: () => f, Y: () => h });
 var i = n(627968),
     r = n(64700),
-    s = n(922139),
+    s = n(308186),
     a = n(866323),
     o = n(695366),
     l = n(661531),
     u = n(834730),
     c = n(919796),
     d = n(375708),
-    _ = n(482188);
+    _ = n(661772);
 function h(e) {
     let { validateOn: t, error: n, value: i, minLength: s, maxLength: a, defaultDirty: o } = e,
         [l, u] = r.useState(o),
@@ -48,6 +48,7 @@ function f(e) {
                 ? (0, i.jsx)(
                       s.animated.div,
                       {
+                          role: "alert",
                           style: { ...h, overflow: "hidden" },
                           children: (0, i.jsxs)(s.animated.div, {
                               style: { transform: d },
