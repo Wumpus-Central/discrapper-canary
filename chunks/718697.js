@@ -79,8 +79,12 @@ function er(e) {
     if (e === C.NV.TOTAL_VOICE_MINUTES) return (0, el.hO)(t);
     if (e === C.NV.PURCHASES) {
         let e = I.A.getTotalSpendAmount(),
-            t = I.A.getTotalSpendCurrency();
-        if (null != e && null != t) return (0, $.RS)(e, t);
+            n = I.A.getTotalSpendCurrency();
+        return null != e && null != n ? (0, $.RS)(e, n) : t;
+    }
+    if (e === C.NV.GIFTS) {
+        let e = I.A.getTotalGiftValue();
+        if (null != e) return (0, $.RS)(e.amount, e.currency);
     }
     return t;
 }
@@ -522,7 +526,7 @@ function te(e) {
             f((e) => e + C.PH), x(t);
         }, [t, x]);
     B()(h, `No text for action type: ${t}`);
-    let v = t === C.NV.PURCHASES && null != o ? h.sectionHeader(o) : h.sectionHeader(c),
+    let v = (t === C.NV.PURCHASES || t === C.NV.GIFTS) && null != o ? h.sectionHeader(o) : h.sectionHeader(c),
         A = i.useCallback(
             (e) => {
                 let { row: t } = e,

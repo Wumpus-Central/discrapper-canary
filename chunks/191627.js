@@ -37,7 +37,7 @@ var i,
     d,
     _ = n(323125),
     h = n(927813),
-    f = n(602339),
+    f = n(477480),
     p = n(375708);
 let E = "RESTRICTED_HOURS_LAYER",
     m = 30 * h.A.Millis.SECOND,
@@ -193,10 +193,10 @@ let k = new Map([
     [
         8,
         {
-            priority: 160,
+            priority: 600,
             tooltipHeader: () => p.intl.string(f.default.ULUspo),
             tooltipDescription: () => p.intl.string(f.default.nH8vlc),
-            sectionHeader: (e) => p.intl.formatToPlainString(f.default.mojZZz, { count: e }),
+            sectionHeader: (e) => p.intl.formatToPlainString(f.default["0R6I/b"], { amount: e }),
             sectionDescription: () => p.intl.string(f.default.nH8vlc),
         },
     ],

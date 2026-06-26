@@ -377,6 +377,17 @@ class er extends r.A {
     getTotalSpendCurrency() {
         return O;
     }
+    getTotalGiftValue() {
+        let e = null,
+            t = 0,
+            n = !1;
+        for (let i of Object.values(w))
+            if (null != i.price) {
+                if (null != e && i.price.currency !== e) return null;
+                (e = i.price.currency), (t += i.price.amount), (n = !0);
+            }
+        return n && null != e ? { amount: t, currency: e } : null;
+    }
     getSpendingLimit() {
         return b;
     }
