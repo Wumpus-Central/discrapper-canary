@@ -4,12 +4,13 @@ var i = n(627968),
     r = n(64700),
     s = n(460890),
     a = n(834730),
-    o = n(662126);
+    o = n(308270);
 function l(e) {
     let { message: t } = e,
         { i18n: n } = r.useContext(s.VO);
     return (0, i.jsx)("div", {
         className: o.p,
+        role: "status",
         children: (0, i.jsx)(a.E, { variant: "text-md/medium", className: o.q, children: t ?? n.LISTBOX_EMPTY_STATE }),
     });
 }
