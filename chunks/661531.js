@@ -7760,7 +7760,6 @@ let { Themes: c } = u.zv,
                         return 4;
                     },
                 },
-                CHAT_INPUT_ACTION_BUTTON_MIN_TOUCH_TARGET_SIZE: { resolve: () => 44 },
                 CHAT_INPUT_ACTION_BUTTON_SIZE: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -7793,6 +7792,7 @@ let { Themes: c } = u.zv,
                         return 24;
                     },
                 },
+                CHAT_INPUT_BUTTON_MIN_TOUCH_TARGET_SIZE: { resolve: () => 44 },
                 CHAT_INPUT_COMMAND_CATEGORIES_BORDER_TOP_WIDTH: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
