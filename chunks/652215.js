@@ -4119,6 +4119,7 @@ var rD =
         (ex.QUEST_THIRD_PARTY_LINK_CLICKED = "quest_third_party_link_clicked"),
         (ex.DISCOVERY_QUEST_TAB_CLICKED = "discovery_quest_tab_clicked"),
         (ex.QUEST_BAR_RENDER_DELAY = "quest_bar_render_delay"),
+        (ex.QUEST_HOME_ROUNDTRIP = "quest_home_roundtrip"),
         (ex.QUEST_HOME_SORT_METHOD_CHANGED = "quest_home_sort_method_changed"),
         (ex.QUEST_HOME_FILTERS_CHANGED = "quest_home_filters_changed"),
         (ex.QUEST_GAME_SHEET_ERROR = "quest_game_sheet_error"),
