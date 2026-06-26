@@ -205,7 +205,7 @@ function eA(e) {
             }
         }, [i, ev, eH]),
         ek = l.useCallback(async () => {
-            eH();
+            eH(), eM(!0);
             let { type: e } = await (0, j.Oy)(i.id, {
                 questContent: p.uF.QUEST_LIVE_STREAM,
                 questContentCTA: D.Cy.ACCEPT_QUEST,
@@ -213,15 +213,15 @@ function eA(e) {
             });
             switch (e) {
                 case j.WM.SUCCESS:
-                    eM(!0), (0, er.navigateToQuestHome)({ fromContent: p.uF.QUEST_LIVE_STREAM, questId: i.id });
+                    (0, er.navigateToQuestHome)({ fromContent: p.uF.QUEST_LIVE_STREAM, questId: i.id });
                     break;
                 case j.WM.PREVIOUS_IN_FLIGHT_REQUEST:
                     break;
                 case j.WM.CAPTCHA_FAILED:
-                    m.A.show({ title: eE.intl.string(eE.t["/CidxO"]), body: eE.intl.string(eE.t.HQdHg6) });
+                    eM(!1), m.A.show({ title: eE.intl.string(eE.t["/CidxO"]), body: eE.intl.string(eE.t.HQdHg6) });
                     break;
                 case j.WM.UNKNOWN_ERROR:
-                    m.A.show({ title: eE.intl.string(eE.t.R0RpRX), body: eE.intl.string(eE.t.OXD41D) });
+                    eM(!1), m.A.show({ title: eE.intl.string(eE.t.R0RpRX), body: eE.intl.string(eE.t.OXD41D) });
             }
         }, [i, eH]),
         eO = l.useCallback(() => {
