@@ -1,7 +1,7 @@
 t.r(a), t.d(a, { slayerStorefrontPlaygroundConfig: () => H, storefrontCollection: () => j });
 var l = t(34188),
-    r = t(627968),
-    n = t(64700),
+    n = t(627968),
+    r = t(64700),
     o = t(50777),
     i = t(328100),
     s = t(989349),
@@ -21,8 +21,8 @@ let f = "000000000000000100",
 function x(e, a, t) {
     let {
             name: l,
-            price: r,
-            salePrice: n,
+            price: n,
+            salePrice: r,
             salePercentage: o,
             exclusive: i,
             orbsReward: s,
@@ -47,7 +47,7 @@ function x(e, a, t) {
             available_regions: [],
             access_type: null,
             legal_notice: "",
-            price: { amount: r, currency: S.Yr.USD, sale_amount: n ?? void 0, sale_percentage: o ?? void 0 },
+            price: { amount: n, currency: S.Yr.USD, sale_amount: r ?? void 0, sale_percentage: o ?? void 0 },
             price_tier: 0,
             premium: !1,
             show_age_gate: !1,
@@ -62,26 +62,26 @@ function x(e, a, t) {
             eligible_offers: [],
             tenant_metadata: { social_layer: { carousel_items: [], expires_at: E } },
         };
-    if ((p.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: I }), null != n && null != o)) {
+    if ((p.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: I }), null != r && null != o)) {
         let a = {
             skuPriceMap: { [e]: { pricingResultId: b, rewardResultIds: [f] } },
             pricingResultIdMap: {
                 [b]: {
                     [m.QK.SELF_PURCHASE]: {
-                        userPrice: [{ currency: S.Yr.USD, amount: n }],
+                        userPrice: [{ currency: S.Yr.USD, amount: r }],
                         prices: {
                             [y.FBC.BASE]: {
-                                [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: r }],
-                                [m.v8.DISCOUNTED]: [{ currency: S.Yr.USD, amount: n }],
+                                [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: n }],
+                                [m.v8.DISCOUNTED]: [{ currency: S.Yr.USD, amount: r }],
                             },
                         },
                     },
                     [m.QK.GIFT]: {
-                        userPrice: [{ currency: S.Yr.USD, amount: n }],
+                        userPrice: [{ currency: S.Yr.USD, amount: r }],
                         prices: {
                             [y.FBC.BASE]: {
-                                [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: r }],
-                                [m.v8.DISCOUNTED]: [{ currency: S.Yr.USD, amount: n }],
+                                [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: n }],
+                                [m.v8.DISCOUNTED]: [{ currency: S.Yr.USD, amount: r }],
                             },
                         },
                     },
@@ -104,19 +104,19 @@ function x(e, a, t) {
                 pricingResultIdMap: {
                     [b]: {
                         [m.QK.SELF_PURCHASE]: {
-                            userPrice: [{ currency: S.Yr.USD, amount: r }],
+                            userPrice: [{ currency: S.Yr.USD, amount: n }],
                             prices: {
                                 [y.FBC.BASE]: {
-                                    [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: r }],
+                                    [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: n }],
                                     [m.v8.DISCOUNTED]: [],
                                 },
                             },
                         },
                         [m.QK.GIFT]: {
-                            userPrice: [{ currency: S.Yr.USD, amount: r }],
+                            userPrice: [{ currency: S.Yr.USD, amount: n }],
                             prices: {
                                 [y.FBC.BASE]: {
-                                    [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: r }],
+                                    [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: n }],
                                     [m.v8.DISCOUNTED]: [],
                                 },
                             },
@@ -140,16 +140,16 @@ function C(e) {
         {
             name: t,
             price: l,
-            salePrice: r,
+            salePrice: n,
             salePercentage: o,
             exclusive: i,
             orbsReward: s,
             daysUntilExpiry: d,
             isEligible: u,
         } = e;
-    n.useEffect(() => {
+    r.useEffect(() => {
         x(f, e, a);
-    }, [t, l, r, o, i, s, d, u, a]);
+    }, [t, l, n, o, i, s, d, u, a]);
 }
 let v = [
         {
@@ -241,7 +241,7 @@ let v = [
                 daysUntilExpiry: g ? b : null,
                 isEligible: S,
             }),
-                n.useEffect(() => {
+                r.useEffect(() => {
                     let e = {
                         id: h,
                         name: "Playground Game",
@@ -253,17 +253,17 @@ let v = [
                     };
                     p.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
                 }, []);
-            let v = n.useCallback((e) => {
+            let v = r.useCallback((e) => {
                 e.preventDefault();
             }, []);
             return a === i.s.EMBEDDED
-                ? (0, r.jsx)("div", {
+                ? (0, n.jsx)("div", {
                       style: { padding: 16 },
-                      children: (0, r.jsx)(o.A, { applicationId: h, guildId: E, skuId: f, channel: _ }),
+                      children: (0, n.jsx)(o.A, { applicationId: h, guildId: E, skuId: f, channel: _ }),
                   })
-                : (0, r.jsx)("div", {
+                : (0, n.jsx)("div", {
                       style: { maxWidth: a === i.s.SMALL ? 220 : 300, padding: 16 },
-                      children: (0, r.jsx)(i.A, { skuId: f, variant: a, onClick: v }),
+                      children: (0, n.jsx)(i.A, { skuId: f, variant: a, onClick: v }),
                   });
         },
         controls: {
@@ -290,15 +290,15 @@ let v = [
         },
     };
 var P = t(331322),
-    R = t(834730),
-    D = t(821609),
+    D = t(834730),
+    R = t(821609),
     T = t(231723),
-    L = t(213113);
+    L = t(439325);
 t(323874), t(14289), t(35956);
 var U = t(366523);
 let w = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
-    V = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
-var O = t(263911),
+    O = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
+var V = t(263911),
     N = t(403581),
     k = t(873297),
     M = t(758836),
@@ -337,8 +337,8 @@ let j = {
                                 } = e,
                                 g = l ? String(o) : null,
                                 b = l ? Math.round(t * (1 - o / 100)) : null,
-                                [y, S] = n.useState(!1),
-                                x = n.useRef(null);
+                                [y, S] = r.useState(!1),
+                                x = r.useRef(null);
                             return (C({
                                 name: a,
                                 price: t,
@@ -349,7 +349,7 @@ let j = {
                                 daysUntilExpiry: u ? c : null,
                                 isEligible: m,
                             }),
-                            n.useEffect(() => {
+                            r.useEffect(() => {
                                 p.h.dispatch({
                                     type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                     config: {
@@ -363,6 +363,8 @@ let j = {
                                                 collectiblesShopNavigationEnabled: !1,
                                                 excludedPlatforms: [],
                                                 disableMobileAccountLinking: !1,
+                                                allowOrbsSpending: !1,
+                                                promotionEndDatetime: null,
                                             },
                                         ],
                                         announcementModalConfig: null,
@@ -383,7 +385,7 @@ let j = {
                                     });
                             }, []),
                             y)
-                                ? (0, r.jsx)(L.default, {
+                                ? (0, n.jsx)(L.default, {
                                       transitionState: T.ip.ENTERED,
                                       returnRef: x,
                                       skuId: f,
@@ -391,18 +393,18 @@ let j = {
                                       isStorefront: !0,
                                       onClose: () => Promise.resolve(S(!1)),
                                   })
-                                : (0, r.jsxs)(P.B, {
+                                : (0, n.jsxs)(P.B, {
                                       gap: 12,
                                       style: { padding: 16 },
                                       children: [
-                                          (0, r.jsx)(R.E, {
+                                          (0, n.jsx)(D.E, {
                                               variant: "text-sm/normal",
                                               color: "text-muted",
                                               children:
                                                   "Opens the redesigned PDP modal with the configured mock data. Close with the X button or Escape.",
                                           }),
-                                          (0, r.jsx)("div", {
-                                              children: (0, r.jsx)(D.$, {
+                                          (0, n.jsx)("div", {
+                                              children: (0, n.jsx)(R.$, {
                                                   variant: "primary",
                                                   onClick: () => S(!0),
                                                   text: "Open PDP Modal",
@@ -450,16 +452,16 @@ let j = {
                         name: "ExclusiveBadge",
                         id: "exclusive-badge",
                         component: function () {
-                            return (0, r.jsxs)(P.B, {
+                            return (0, n.jsxs)(P.B, {
                                 gap: 16,
                                 children: [
-                                    (0, r.jsx)(R.E, {
+                                    (0, n.jsx)(D.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "The exclusive badge shown on storefront cards and the PDP modal for exclusive items.",
                                     }),
-                                    (0, r.jsx)(O.I, {}),
+                                    (0, n.jsx)(V.I, {}),
                                 ],
                             });
                         },
@@ -469,16 +471,16 @@ let j = {
                         id: "in-game-item-tag",
                         component: function (e) {
                             let { textColor: a } = e;
-                            return (0, r.jsxs)(P.B, {
+                            return (0, n.jsxs)(P.B, {
                                 gap: 16,
                                 children: [
-                                    (0, r.jsx)(R.E, {
+                                    (0, n.jsx)(D.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "The in-game item indicator tag shown on storefront cards and the PDP modal.",
                                     }),
-                                    (0, r.jsx)(Y.V, { textColor: a }),
+                                    (0, n.jsx)(Y.V, { textColor: a }),
                                 ],
                             });
                         },
@@ -500,11 +502,11 @@ let j = {
                         docs: "The card image component with gradient background extraction. Uses placeholder avatar images for demo.",
                         component: function (e) {
                             let { shape: a, useBackgroundImage: t } = e;
-                            return (0, r.jsx)("div", {
+                            return (0, n.jsx)("div", {
                                 style: { width: 220, height: 220 },
-                                children: (0, r.jsx)(U.A, {
+                                children: (0, n.jsx)(U.A, {
                                     cardImage: w,
-                                    cardBackgroundImage: t ? V : null,
+                                    cardBackgroundImage: t ? O : null,
                                     altText: "Playground preview",
                                     shape: a,
                                 }),
@@ -541,7 +543,7 @@ let j = {
                                 } = e,
                                 g =
                                     ((a = (0, c.bG)([b.default], () => b.default.getId())),
-                                    (t = n.useMemo(
+                                    (t = r.useMemo(
                                         () =>
                                             v.slice(0, u).map((e) => {
                                                 let { id: a } = e;
@@ -549,7 +551,7 @@ let j = {
                                             }),
                                         [u],
                                     )),
-                                    n.useEffect(() => {
+                                    r.useEffect(() => {
                                         for (let { id: e, params: t } of v.slice(0, u)) x(e, t, a);
                                         p.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
@@ -564,6 +566,8 @@ let j = {
                                                         collectiblesShopNavigationEnabled: !1,
                                                         excludedPlatforms: [],
                                                         disableMobileAccountLinking: !1,
+                                                        allowOrbsSpending: !1,
+                                                        promotionEndDatetime: null,
                                                     },
                                                 ],
                                                 announcementModalConfig: null,
@@ -586,12 +590,12 @@ let j = {
                                             });
                                     }, [u, a, t]),
                                     t),
-                                y = n.useMemo(
+                                y = r.useMemo(
                                     () =>
                                         "nitro" === o
                                             ? {
                                                   kind: "custom",
-                                                  node: (0, r.jsx)(D.$, {
+                                                  node: (0, n.jsx)(R.$, {
                                                       variant: "expressive",
                                                       size: "sm",
                                                       icon: N.t,
@@ -602,7 +606,7 @@ let j = {
                                             : { kind: "button", text: "Shop All", onClick: G },
                                     [o],
                                 );
-                            return (0, r.jsx)(k.A, {
+                            return (0, n.jsx)(k.A, {
                                 onDismiss: G,
                                 skuIds: g,
                                 tab: M.G2.GAME_SHOPS,

@@ -138,14 +138,23 @@ async function y() {
                     promotionalSkuIds: e.promotional_sku_ids,
                     promotionEndDatetime: t,
                     storefronts:
-                        e.storefronts?.map((e) => ({
-                            guildId: e.guild_id,
-                            applicationId: e.application_id,
-                            gameId: e.game_id,
-                            collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
-                            excludedPlatforms: e.excluded_platforms ?? [],
-                            disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
-                        })) ?? [],
+                        e.storefronts?.map((e) => {
+                            let t = null,
+                                n = null != e.promotion_end_datetime ? new Date(e.promotion_end_datetime) : null;
+                            return (
+                                null == n || Number.isNaN(n.getTime()) || (t = n),
+                                {
+                                    guildId: e.guild_id,
+                                    applicationId: e.application_id,
+                                    gameId: e.game_id,
+                                    collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
+                                    excludedPlatforms: e.excluded_platforms ?? [],
+                                    disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
+                                    promotionEndDatetime: t,
+                                    allowOrbsSpending: !0 === e.allow_orbs_spending,
+                                }
+                            );
+                        }) ?? [],
                     announcementModalConfig:
                         null != e.announcement_modal_config
                             ? {

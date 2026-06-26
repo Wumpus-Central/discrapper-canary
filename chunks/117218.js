@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { rW: () => g, CD: () => I, JL: () => T, Oj: () => m }), n(938796);
+n.d(t, { Oj: () => m, CD: () => A, JL: () => I }), n(938796);
 var i = n(64700),
     r = n(735438),
     s = n.n(r);
@@ -39,21 +39,20 @@ function m(e) {
     };
 }
 function g(e) {
-    if (null == e) return f.QK.SELF_PURCHASE;
-    switch (e) {
-        case u.lid.DEFAULT:
-            return f.QK.SELF_PURCHASE;
-        case u.lid.GIFT:
-            return f.QK.GIFT;
-        default:
-            return f.QK.SELF_PURCHASE;
-    }
-}
-function A(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: r } = e,
         s = (0, a.bG)([h.A], () => h.A.getPricesForSkuId(t?.id ?? null));
     return i.useMemo(() => {
-        let e = g(n);
+        let e = (function (e) {
+            if (null == e) return f.QK.SELF_PURCHASE;
+            switch (e) {
+                case u.lid.DEFAULT:
+                    return f.QK.SELF_PURCHASE;
+                case u.lid.GIFT:
+                    return f.QK.GIFT;
+                default:
+                    return f.QK.SELF_PURCHASE;
+            }
+        })(n);
         if (null == t || null == s)
             return { userPrice: void 0, pricesForPurchaseType: void 0, purchaseType: e, storeHasPrice: null != s };
         let i = s[e] ?? s[f.QK.SELF_PURCHASE];
@@ -67,7 +66,7 @@ function A(e) {
         };
     }, [t, s, n, r]);
 }
-function I(e) {
+function A(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = u.lid.DEFAULT } = e,
         r = (function (e) {
             let { sku: t, priceSetAssignmentPurchaseType: n = u.lid.DEFAULT } = e,
@@ -76,7 +75,7 @@ function I(e) {
                     pricesForPurchaseType: s,
                     purchaseType: l,
                     storeHasPrice: d,
-                } = A({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !1 }),
+                } = g({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !1 }),
                 _ = (0, a.yK)([h.A], () => h.A.getRewardsForSkuId(t?.id) ?? []),
                 p = (0, a.bG)([c.default], () => c.default.getCurrentUser());
             return i.useMemo(() => {
@@ -121,9 +120,9 @@ function I(e) {
         [r, s],
     );
 }
-function T(e) {
+function I(e) {
     let { sku: t, priceSetAssignmentPurchaseType: n = u.lid.DEFAULT } = e,
-        { userPrice: r, storeHasPrice: s } = A({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !0 }),
+        { userPrice: r, storeHasPrice: s } = g({ sku: t, priceSetAssignmentPurchaseType: n, isOrbPrice: !0 }),
         o = (0, a.bG)([c.default], () => c.default.getCurrentUser()),
         l = i.useMemo(() => d.Ay.isPremium(o, p.PremiumTypes.TIER_2), [o]);
     return i.useMemo(() => {
