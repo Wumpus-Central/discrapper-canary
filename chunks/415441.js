@@ -17,39 +17,42 @@ function d(e) {
             imageSize: h,
             onLoadComplete: f,
             assetRef: p,
+            imageRef: E,
         } = e,
-        E = (0, s.bG)([a.Ay], () => a.Ay.useReducedMotion),
-        m = null == d || d.asset.isAnimated ? null : d.asset.url,
-        g = null != _ && _.asset.isAnimated ? _.asset.url : null,
-        A = h?.width,
-        I = h?.height,
-        T = r.useMemo(() => {
-            let e = null != A && null != I ? (0, l.Yt)(A, I) : null;
-            return null != m
-                ? (0, l.UX)(m, { format: "webp", width: e?.width, height: e?.height })
-                : null != g
-                  ? (0, l.WV)(g, e ?? void 0)
+        m = (0, s.bG)([a.Ay], () => a.Ay.useReducedMotion),
+        g = null == d || d.asset.isAnimated ? null : d.asset.url,
+        A = null != _ && _.asset.isAnimated ? _.asset.url : null,
+        I = h?.width,
+        T = h?.height,
+        S = r.useMemo(() => {
+            let e = null != I && null != T ? (0, l.Yt)(I, T) : null;
+            return null != g
+                ? (0, l.UX)(g, { format: "webp", width: e?.width, height: e?.height })
+                : null != A
+                  ? (0, l.WV)(A, e ?? void 0)
                   : null;
-        }, [m, g, A, I]);
-    if (null == T) return null;
-    let S = !E && null != _ && null != g && t;
+        }, [g, A, I, T]);
+    if (null == S) return null;
+    let y = !m && null != _ && null != A && t;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (n || !S) &&
+            (n || !y) &&
                 (0, i.jsx)("img", {
                     alt: d?.alt ?? u.intl.string(u.t.P84bAD),
                     className: d?.className ?? c.S,
-                    src: T,
+                    src: S,
                     onLoad: f,
-                    ref: S ? void 0 : p,
+                    ref: (e) => {
+                        null != E && (E.current = e), y || null == p || (p.current = e);
+                    },
                 }),
-            S &&
+            y &&
                 (0, i.jsx)(o.A, {
                     autoPlay: !0,
                     loop: !0,
                     muted: !0,
                     preload: "auto",
-                    poster: T,
+                    poster: S,
                     playsInline: !0,
                     className: _.className,
                     controls: !1,

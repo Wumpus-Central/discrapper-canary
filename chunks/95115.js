@@ -1,5 +1,6 @@
 e.exports = {
     Tv: "heroBackground__5d00f",
+    lX: "heroBannerHidden__5d00f",
     Np: "backgroundOverlay__5d00f",
     LO: "heroAsset__5d00f",
     LY: "asset__5d00f",

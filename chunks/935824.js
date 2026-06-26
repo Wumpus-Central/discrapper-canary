@@ -9,6 +9,7 @@ e.exports = {
     FG: "contentWrapper__955a3",
     R: "hidden__955a3",
     iS: "heroWrapper__955a3",
+    lX: "heroBannerHidden__955a3",
     Tv: "heroBackground__955a3",
     nz: "heroGradient__955a3",
     Fe: "heroBannerAsset__955a3",
