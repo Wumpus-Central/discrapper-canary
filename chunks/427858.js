@@ -318,7 +318,7 @@ function F(e) {
 }
 n(321073);
 var V = n(38785),
-    B = n(71867),
+    B = n(577381),
     j = n(622631),
     H = n(755880),
     Y = n(134638),
@@ -361,15 +361,16 @@ function K(e) {
             );
         }, [a, o, l, n, s]),
         { priceOptions: b, planPricesLoading: w } = (0, m.Pr)(T, c, l),
-        M = r.useMemo(() => (_ ? (0, i.jsx)(B.P, { planSkuId: E.skuId, invoice: c }) : null), [_, E.skuId, c]),
-        P = (0, W.G)(g),
-        x = r.useMemo(() => (P ? (0, i.jsx)(H.a, {}) : null), [P]),
-        k = r.useMemo(() => (null != M ? M : null != x ? x : null), [M, x]),
-        U = (0, m.J$)(T.paymentSourceId),
-        G = null,
-        F = null;
+        M = (0, B.i)({ planSkuId: E.skuId, invoice: c }),
+        P = r.useMemo(() => (_ && null != M ? M : null), [_, M]),
+        x = (0, W.G)(g),
+        k = r.useMemo(() => (x ? (0, i.jsx)(H.a, {}) : null), [x]),
+        U = r.useMemo(() => (null != P ? P : null != k ? k : null), [P, k]),
+        G = (0, m.J$)(T.paymentSourceId),
+        F = null,
+        K = null;
     _
-        ? (F = (0, i.jsx)(j.X, {
+        ? (K = (0, i.jsx)(j.X, {
               disabled: t,
               headingSubText: u,
               planOptions: S,
@@ -379,28 +380,28 @@ function K(e) {
               planPricesLoading: w,
           }))
         : null != c &&
-          (G = (0, i.jsx)(Y._, {
+          (F = (0, i.jsx)(Y._, {
               type: I.N$.PREMIUM_SWITCH_PLAN,
               invoicePreview: c,
               subscriptionPlan: E,
-              isPrepaidPaymentSource: U,
+              isPrepaidPaymentSource: G,
               isPremiumGroupPurchase: a,
               bottomSubText: u,
           }));
-    let K = h ? d : (0, i.jsx)("div", { ref: y }),
-        $ = h ? null : d;
+    let $ = h ? d : (0, i.jsx)("div", { ref: y }),
+        z = h ? null : d;
     return (0, i.jsx)(V.T, {
         shouldShowGlobalNotices: !0,
         upperInlineNoticeProps: R,
         paymentMethodContent: N,
-        subscriptionDetailsContent: K,
-        purchaseItemContent: G,
-        planSelectContent: F,
-        invoiceSummaryContent: $,
+        subscriptionDetailsContent: $,
+        purchaseItemContent: F,
+        planSelectContent: K,
+        invoiceSummaryContent: z,
         legalContent: v,
         invoiceTotalDueLabel: C ? D.intl.string(L.default.R0cZsM) : D.intl.string(L.default["11g67A"]),
         invoiceTotalDueValue: null != c ? (0, O.U5)(c) : void 0,
-        promotionalNoticeContent: k,
+        promotionalNoticeContent: U,
     });
 }
 var $ = n(845347);

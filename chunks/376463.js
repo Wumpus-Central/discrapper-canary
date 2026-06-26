@@ -116,19 +116,16 @@ let S = new T(s.h, {
             "" !== n &&
             (!(function (e, t) {
                 if (!I()) return;
-                let n = new Set(),
-                    r = [],
-                    s = !1;
-                if (
-                    (l.A.getUsers().forEach((a) => {
-                        let { id: o } = a,
-                            l = i.getToken(o);
-                        o !== e && l === t && r.push(o), null != l && (n.has(l) ? (s = !0) : n.add(l));
-                    }),
-                    0 === r.length)
-                )
-                    return;
-                let a = { ...A(e), colliding_user_ids: r, is_already_corrupted: s };
+                let n = l.A.getUsers()
+                    .map((e) => {
+                        let { id: t } = e;
+                        return t;
+                    })
+                    .filter((n) => n !== e && i.getToken(n) === t);
+                if (0 === n.length) return;
+                let r = i.getToken(e) === t,
+                    s = n.length >= 2,
+                    a = { ...A(e), colliding_user_ids: n, is_already_corrupted: r || s };
                 c.log("setToken about to introduce per-user token collision", a),
                     o.default.track(u.HAw.MULTI_ACCOUNT_SWITCH_TOKEN_COLLISION_WRITE, a);
             })(t.id, n),
