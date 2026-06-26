@@ -79,6 +79,7 @@ var T =
     (r.CONTENT_INVENTORY_MEMBERLIST = "content_inventory_memberlist"),
     (r.GREET = "greet"),
     (r.SOCIAL_LAYER_STOREFRONT = "social_layer_storefront"),
+    (r.COLLECTIBLES_SHOP = "collectibles_shop"),
     (r.MEDIA_MENTION = "media_mention"),
     (r.OTHER = "other"),
     r);

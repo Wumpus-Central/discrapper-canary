@@ -102,6 +102,7 @@ class c extends o.A {
                 return n === t.id;
             }),
             prices: t.prices,
+            previewAssets: t.previewAssetPaths ?? void 0,
             variants:
                 r === i.R.VARIANTS_GROUP
                     ? e.skus
@@ -129,6 +130,7 @@ class c extends o.A {
                                       return t === n.id;
                                   }),
                                   prices: n.prices,
+                                  previewAssets: n.previewAssetPaths ?? void 0,
                                   googleSkuIds: n.googleSkuIds ?? {
                                       [u.lid.MOBILE]: "",
                                       [u.lid.MOBILE_PREMIUM_TIER_2]: "",

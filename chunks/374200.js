@@ -138,6 +138,9 @@ class b extends i.Ay.PersistedStore {
     getMarketingComponentByType(e) {
         return C.get(e) ?? null;
     }
+    hasPromotion(e) {
+        return Object.values(S).some((t) => Object.values(t).some((t) => t.promotionKey === e));
+    }
     getPromotionsByPartner(e) {
         return {
             oneTime: Object.values(S[_.pt.THIRD_PARTY_OUTBOUND]).filter((t) => t.partnerId === e),

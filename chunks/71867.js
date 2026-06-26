@@ -601,24 +601,26 @@ let b = function (e) {
 var D = n(937008),
     L = n(788868);
 function w(e) {
-    let { planSkuId: t, className: n } = e,
-        { isGift: u } = (0, D.Pv)(),
-        c = (0, a.t4)((e) => e.referralTrialOfferId ?? void 0),
-        d = (0, o.V)(c),
-        _ = (0, l.c)(s.C.PAYMENT_MODAL_BANNER);
+    let { planSkuId: t, className: n, invoice: u } = e,
+        { isGift: c } = (0, D.Pv)(),
+        d = (0, a.t4)((e) => e.referralTrialOfferId ?? void 0),
+        _ = (0, o.V)(d),
+        h = (0, l.c)(s.C.PAYMENT_MODAL_BANNER);
     return r.useMemo(
         () =>
-            u || t !== L.pe.TIER_2
+            c || t !== L.pe.TIER_2
                 ? null
-                : null != _ && "paymentModalBanner" === _.properties.properties.oneofKind
-                  ? (0, i.jsx)(f, {
-                        componentId: _.id,
-                        promotionBannerMarketingComponentFields: _.properties.properties.paymentModalBanner,
-                    })
-                  : d?.referrer_id != null
+                : null != h && "paymentModalBanner" === h.properties.properties.oneofKind
+                  ? h.properties.contentIdentifier === L.iu && u?.orbsReward !== L.Qm
+                      ? null
+                      : (0, i.jsx)(f, {
+                            componentId: h.id,
+                            promotionBannerMarketingComponentFields: h.properties.properties.paymentModalBanner,
+                        })
+                  : _?.referrer_id != null
                     ? (0, i.jsx)(b, { className: n })
                     : null,
-        [u, t, _, d, n],
+        [c, t, h, _, n, u],
     );
 }
 function M(e) {

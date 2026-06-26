@@ -18,14 +18,7 @@ function _(e) {
         g = (0, l.CC)(m?.premiumType, c.PremiumTypes.TIER_0);
     (0, r.openModalLazy)(
         async () => {
-            let { default: e } = await Promise.all([
-                n.e("83002"),
-                n.e("36494"),
-                n.e("88889"),
-                n.e("11133"),
-                n.e("98329"),
-                n.e("7200"),
-            ]).then(n.bind(n, 361845));
+            let { default: e } = await Promise.all([n.e("36494"), n.e("98329"), n.e("7200")]).then(n.bind(n, 361845));
             return (n) =>
                 (0, i.jsx)(e, {
                     code: t,

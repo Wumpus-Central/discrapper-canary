@@ -1,0 +1,38 @@
+.container_deb389 {
+    background: var(--background-base-low);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    display: flex;
+    flex-direction: column;
+    max-width: 512px;
+    overflow: hidden;
+    width: 100%
+}
+
+.spinnerContainer_deb389 {
+    min-height: 240px
+}
+
+.preview_deb389,
+.spinnerContainer_deb389 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.preview_deb389 .card_deb389 {
+    border: none;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0
+}
+
+.details_deb389 {
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    padding: var(--space-16)
+}
+
+.orbIconAligned_deb389 {
+    vertical-align: top
+}
