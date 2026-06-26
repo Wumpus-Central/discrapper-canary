@@ -173,7 +173,7 @@ function q(e) {
                 ],
             }),
             children: [
-                (0, i.jsxs)("div", {
+                (0, i.jsxs)(A.Ip, {
                     className: M.hG,
                     children: [
                         h.length > 0 &&
