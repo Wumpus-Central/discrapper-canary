@@ -3783,7 +3783,11 @@ function ao(e) {
                                         displayName: sV.Ay.getName(null, t.id, n),
                                         onClickName: a ? void 0 : x,
                                         pronouns: d?.pronouns,
-                                        trailing: (0, l.jsx)(s1.A, { displayProfile: d, themeType: aa.d.SIDEBAR }),
+                                        trailing: (0, l.jsx)(s1.A, {
+                                            displayProfile: d,
+                                            themeType: aa.d.SIDEBAR,
+                                            isRedesignEnabled: i,
+                                        }),
                                     }),
                                     i
                                         ? (0, l.jsxs)(l.Fragment, {
@@ -4324,7 +4328,11 @@ function rc(e) {
                             ? null
                             : (0, l.jsx)(aV.A, { userId: n.id, isVisible: r, onOpenProfile: o }),
                         pronouns: i?.pronouns,
-                        trailing: (0, l.jsx)(s1.A, { displayProfile: i, themeType: aa.d.SIDEBAR }),
+                        trailing: (0, l.jsx)(s1.A, {
+                            displayProfile: i,
+                            themeType: aa.d.SIDEBAR,
+                            isRedesignEnabled: d,
+                        }),
                     }),
                     d && (0, l.jsx)(aW.A, { user: n, onOpenProfile: (e) => o?.({ tabSection: e }) }),
                 ],

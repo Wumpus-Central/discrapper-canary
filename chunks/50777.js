@@ -1,4 +1,4 @@
-n.d(i, { A: () => H, I: () => M });
+n.d(i, { A: () => z, I: () => H });
 var t = n(627968),
     e = n(64700),
     a = n(503698),
@@ -20,29 +20,30 @@ var t = n(627968),
     b = n(652165),
     I = n(561794),
     T = n(287809),
-    f = n(328968),
-    N = n(871123),
-    v = n(733391),
-    g = n(832163),
-    k = n(69236),
-    R = n(31969),
-    D = n(510022),
+    f = n(67480),
+    N = n(328968),
+    v = n(871123),
+    g = n(733391),
+    k = n(832163),
+    R = n(69236),
+    D = n(31969),
+    F = n(510022),
     P = n(317560),
     S = n(533406),
-    F = n(971146),
-    O = n(300182),
-    G = n(328100),
-    L = n(533772),
+    O = n(971146),
+    G = n(300182),
+    L = n(328100),
+    B = n(533772),
     U = n(375708),
-    B = n(613798);
-function y(l) {
+    y = n(613798);
+function M(l) {
     let { sku: i, normalPrice: n, discountedPrice: a, discountPercent: r, orbsGate: c, orbPriceAmount: o } = l,
-        d = (0, R.F)("card", { applicationId: i.applicationId, skuId: i.id }),
+        d = (0, D.F)("card", { applicationId: i.applicationId, skuId: i.id }),
         p = e.useMemo(() => {
             if (null == d) return null;
             let { Icon: l, text: i } = d;
             return (0, t.jsx)("div", {
-                className: B.pt,
+                className: y.pt,
                 children: (0, t.jsxs)("div", {
                     children: [
                         null != l && (0, t.jsx)(l, { size: "xs", color: "currentColor" }),
@@ -52,16 +53,16 @@ function y(l) {
             });
         }, [d]);
     if ("HIDDEN" !== c && null != o)
-        return (0, t.jsx)(L.A, { orbsGate: c, className: B.PB, orbPrice: o, fiatPrice: n });
+        return (0, t.jsx)(B.A, { orbsGate: c, className: y.PB, orbPrice: o, fiatPrice: n });
     let m = null != r && null != a;
     return (0, t.jsx)("div", {
-        className: s()(B.PB, { [B.un]: m }),
+        className: s()(y.PB, { [y.un]: m }),
         children: m
             ? (0, t.jsxs)(t.Fragment, {
                   children: [
                       null != n &&
                           (0, t.jsx)(u.E, {
-                              className: B.of,
+                              className: y.of,
                               variant: "text-md/medium",
                               color: "text-muted",
                               lineClamp: 1,
@@ -82,138 +83,143 @@ function y(l) {
               }),
     });
 }
-function M(l) {
-    let { applicationId: i, skuId: n, channel: e } = l,
-        a = (0, o.bG)([g.A], () => g.A.getGuildIdFromApplicationId(i));
-    return (0, t.jsx)(H, { applicationId: i, guildId: a, skuId: n, channel: e });
-}
 function H(l) {
-    let { guildId: i, skuId: n, channel: a, applicationId: s, customNavigateToSocialLayerStorefront: R } = l,
-        L = (0, o.bG)([f.A], () => f.A.isFetchingForSKU(n)),
-        M = (0, _.A)({ skuId: n }),
-        H = (0, o.bG)([g.A], () => (null != i ? g.A.getApplicationIdFromGuildId(i) : void 0)),
-        K = M?.applicationId ?? s ?? H,
-        z = (0, o.bG)([E.A], () => null != K && E.A.isFetchingApplication(K)),
-        W = (0, o.bG)([E.A], () => null != K && E.A.didFetchingApplicationFail(K)),
-        Y = (0, C.h)(K),
-        { analyticsLocations: q } = (0, A.Ay)(x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
+    let { applicationId: i, skuId: n, channel: e } = l,
+        a = (0, o.bG)([k.A], () => k.A.getGuildIdFromApplicationId(i));
+    return (0, t.jsx)(z, { applicationId: i, guildId: a, skuId: n, channel: e });
+}
+function z(l) {
+    let { guildId: i, skuId: n, channel: a, applicationId: s, customNavigateToSocialLayerStorefront: D } = l,
+        B = (0, o.bG)([N.A], () => N.A.isFetchingForSKU(n)),
+        H = (0, _.A)({ skuId: n }),
+        z = (0, o.bG)([k.A], () => (null != i ? k.A.getApplicationIdFromGuildId(i) : void 0)),
+        K = H?.applicationId ?? s ?? z,
+        W = (0, o.bG)([E.A], () => null != K && E.A.isFetchingApplication(K)),
+        Y = (0, o.bG)([E.A], () => null != K && E.A.didFetchingApplicationFail(K)),
+        q = (0, C.h)(K),
+        { analyticsLocations: w } = (0, A.Ay)(x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED);
     (0, I.pE)();
-    let w = (0, o.bG)([T.default], () =>
+    let J = (0, o.bG)([T.default], () =>
             a.isDM() && null != a.recipients && 0 !== a.recipients.length ? T.default.getUser(a.recipients[0]) : null,
         ),
-        J = (0, o.bG)([g.A], () => (null != n ? g.A.getNormalizedSKUEligibility(n) : void 0), [n]),
-        { primaryIconAsset: $, primaryIconLabel: Q } = e.useMemo(() => (0, N.Cv)(M, K), [M, K]),
-        { normalPrice: V, discountedPrice: X, discountPercent: Z, userPrice: ll } = (0, j.CD)({ sku: M }),
-        li = (0, j.JL)({ sku: M }),
-        ln = li?.amount,
-        lt = (0, k.o)({
-            orbPriceAmount: ln,
+        $ = (0, o.bG)([k.A], () => (null != n ? k.A.getNormalizedSKUEligibility(n) : void 0), [n]),
+        { primaryIconAsset: Q, primaryIconLabel: V } = e.useMemo(() => (0, v.Cv)(H, K), [H, K]),
+        { normalPrice: X, discountedPrice: Z, discountPercent: ll, userPrice: li } = (0, j.CD)({ sku: H }),
+        ln = (0, j.JL)({ sku: H }),
+        lt = ln?.amount,
+        le = (0, R.o)({
+            orbPriceAmount: lt,
             applicationId: K,
             location: "social_layer_storefront_product_details_embed",
         });
     e.useEffect(() => {
-        null == K || null == n || f.A.isFetchingForSKU(n) || (0, v.Pp)(K, n);
+        null == K ||
+            null == n ||
+            null != f.A.get(n) ||
+            f.A.isFetching(n) ||
+            f.A.didFetchingSkuFail(n) ||
+            (0, g.Pp)(K, n);
     }, [K, n]);
-    let le = e.useCallback(
+    let la = e.useCallback(
             (l) => {
                 l.stopPropagation(),
-                    M?.applicationId != null &&
+                    H?.applicationId != null &&
                         (0, P.R)({
-                            customNavigateToSocialLayerStorefront: R,
+                            customNavigateToSocialLayerStorefront: D,
                             skuId: n,
-                            applicationId: M.applicationId,
+                            applicationId: H.applicationId,
                             isStorefront: !1,
-                            analyticsLocations: q,
+                            analyticsLocations: w,
                         });
             },
-            [n, M, q, R],
+            [n, H, w, D],
         ),
-        la = e.useCallback(() => {
-            null != M &&
-                J &&
+        ls = e.useCallback(() => {
+            null != H &&
+                $ &&
                 (0, S.a)(
-                    M,
+                    H,
                     { isGift: !1 },
                     { analyticsLocations: [x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: i },
                 );
-        }, [M, i, J]),
-        ls = e.useCallback(() => {
-            null != M &&
+        }, [H, i, $]),
+        lr = e.useCallback(() => {
+            null != H &&
                 (0, S.a)(
-                    M,
-                    { isGift: !0, giftRecipient: w ?? void 0 },
+                    H,
+                    { isGift: !0, giftRecipient: J ?? void 0 },
                     { analyticsLocations: [x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
                 );
-        }, [M, w]),
-        lr = e.useCallback(() => {
-            if (null == M || null == Y) return;
+        }, [H, J]),
+        lc = e.useCallback(() => {
+            if (null == H || null == q) return;
             let l = [x.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON];
             (0, b.B4)({
                 skuId: n,
-                applicationId: Y.id,
+                applicationId: q.id,
                 analyticsLocations: l,
                 onComplete: () => {
-                    (0, D.n)({ sku: M, application: Y, analyticsLocations: l });
+                    (0, F.n)({ sku: H, application: q, analyticsLocations: l });
                 },
             });
-        }, [M, Y, n]),
-        { onClick: lc, text: lo } = e.useMemo(
+        }, [H, q, n]),
+        { onClick: lo, text: ld } = e.useMemo(
             () =>
-                "CAN_CHECKOUT" === lt
+                "CAN_CHECKOUT" === le
                     ? {
-                          onClick: lr,
+                          onClick: lc,
                           text: U.intl.format(U.t.JC15qj, {
-                              orbPrice: ln,
+                              orbPrice: lt,
                               orbIconHook: () =>
-                                  (0, t.jsx)(p.C, { className: B.fN, size: "sm", color: "currentColor" }, "orbs-icon"),
+                                  (0, t.jsx)(p.C, { className: y.fN, size: "sm", color: "currentColor" }, "orbs-icon"),
                           }),
                       }
                     : {
-                          onClick: la,
-                          text: null != ll ? U.intl.format(U.t.Xp5WTn, { price: ll }) : U.intl.string(U.t.boqtTA),
+                          onClick: ls,
+                          text: null != li ? U.intl.format(U.t.Xp5WTn, { price: li }) : U.intl.string(U.t.boqtTA),
                       },
-            [lt, lr, la, ll, ln],
+            [le, lc, ls, li, lt],
         ),
-        ld = null != K && null == Y && !W;
-    return (L || z || ld) && (null == M || null == Y)
-        ? (0, t.jsx)("div", { className: B.kL, children: (0, t.jsx)(m.y, { className: B.u1 }) })
-        : null != Y && null != M && (0, h.A)(Y) && Y.id === M.applicationId
+        lu = null != K && null == q && !Y;
+    return (B || W || lu) && (null == H || null == q)
+        ? (0, t.jsx)("div", { className: y.kL, children: (0, t.jsx)(m.y, { className: y.u1 }) })
+        : null != q && null != H && (0, h.A)(q) && q.id === H.applicationId
           ? (0, t.jsxs)("div", {
-                className: B.kL,
+                className: y.kL,
                 children: [
-                    (0, t.jsx)(G.A, {
-                        className: B.Nr,
+                    (0, t.jsx)(L.A, {
+                        className: y.Nr,
                         skuId: n,
-                        variant: G.s.EMBEDDED,
-                        onClick: le,
-                        analyticsLocations: q,
+                        variant: L.s.EMBEDDED,
+                        onClick: la,
+                        analyticsLocations: w,
                     }),
                     (0, t.jsxs)("div", {
-                        className: B.zH,
+                        className: y.zH,
                         children: [
                             (0, t.jsxs)("div", {
-                                className: B.lI,
+                                className: y.lI,
                                 children: [
-                                    (0, t.jsx)(F.V, {}),
+                                    (0, t.jsx)(O.V, {}),
                                     (0, t.jsxs)("div", {
-                                        className: B.PB,
+                                        className: y.PB,
                                         children: [
-                                            null != $ &&
-                                                (0, t.jsx)("img", { src: $.toString(), alt: Q, className: B.ye }),
+                                            null != Q &&
+                                                (0, t.jsx)("img", { src: Q.toString(), alt: V, className: y.ye }),
                                             (0, t.jsx)(u.E, {
                                                 variant: "text-md/medium",
                                                 lineClamp: 1,
-                                                children: M.name,
+                                                children: H.name,
                                             }),
                                         ],
                                     }),
-                                    (0, t.jsx)(y, {
-                                        sku: M,
-                                        normalPrice: V,
-                                        discountedPrice: X,
-                                        discountPercent: Z,
-                                        orbsGate: lt,
-                                        orbPriceAmount: ln,
+                                    (0, t.jsx)(M, {
+                                        sku: H,
+                                        normalPrice: X,
+                                        discountedPrice: Z,
+                                        discountPercent: ll,
+                                        orbsGate: le,
+                                        orbPriceAmount: lt,
                                     }),
                                 ],
                             }),
@@ -222,16 +228,16 @@ function H(l) {
                                 fullWidth: !0,
                                 children: [
                                     (0, t.jsx)(d.m, {
-                                        text: J ? void 0 : U.intl.string(U.t.IqlPbQ),
+                                        text: $ ? void 0 : U.intl.string(U.t.IqlPbQ),
                                         children: (0, t.jsx)(c.$, {
-                                            variant: J ? "secondary" : "primary",
-                                            onClick: le,
+                                            variant: $ ? "secondary" : "primary",
+                                            onClick: la,
                                             text: U.intl.string(U.t.KLBTgF),
                                             fullWidth: !0,
                                         }),
                                     }),
-                                    J && (0, t.jsx)(c.$, { variant: "primary", onClick: lc, text: lo, fullWidth: !0 }),
-                                    (0, t.jsx)(O.A, { onGift: ls }),
+                                    $ && (0, t.jsx)(c.$, { variant: "primary", onClick: lo, text: ld, fullWidth: !0 }),
+                                    (0, t.jsx)(G.A, { onGift: lr }),
                                 ],
                             }),
                         ],

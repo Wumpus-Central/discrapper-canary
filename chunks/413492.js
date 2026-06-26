@@ -523,27 +523,28 @@ function eS(e) {
     let {
             displayProfile: t,
             themeType: n,
-            pendingLegacyUsernameDisabled: a,
-            pendingBadges: o,
-            onClose: l,
-            shouldOpenBadgeTooltip: u,
-            shouldGlowTenureBadge: c,
+            isRedesignEnabled: a,
+            pendingLegacyUsernameDisabled: o,
+            pendingBadges: l,
+            onClose: u,
+            shouldOpenBadgeTooltip: c,
+            shouldGlowTenureBadge: d,
         } = e,
-        d = _(t, a),
-        h = r.useMemo(() => {
-            if (null == o) return d;
-            let e = new Set(d.map((e) => e.id));
-            return [...d, ...o.filter((t) => !e.has(t.id))];
-        }, [d, o]);
-    return 0 === h.length
-        ? null
-        : (0, i.jsx)(i.Fragment, {
-              children: (0, s.chunk)(h, eT[n]).map((e) =>
-                  (0, i.jsx)(
-                      eA,
-                      { badges: e, displayProfile: t, onClose: l, shouldOpenBadgeTooltip: u, shouldGlowTenureBadge: c },
-                      e[0].id,
-                  ),
-              ),
-          });
+        h = _(t, o),
+        f = r.useMemo(() => {
+            if (null == l) return h;
+            let e = new Set(h.map((e) => e.id));
+            return [...h, ...l.filter((t) => !e.has(t.id))];
+        }, [h, l]);
+    if (0 === f.length) return null;
+    let p = !0 === a && n === eI.d.SIDEBAR ? eT[eI.d.POPOUT] : eT[n];
+    return (0, i.jsx)(i.Fragment, {
+        children: (0, s.chunk)(f, p).map((e) =>
+            (0, i.jsx)(
+                eA,
+                { badges: e, displayProfile: t, onClose: u, shouldOpenBadgeTooltip: c, shouldGlowTenureBadge: d },
+                e[0].id,
+            ),
+        ),
+    });
 }
