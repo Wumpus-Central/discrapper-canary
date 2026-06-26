@@ -1,43 +1,36 @@
-s.d(t, { default: () => o });
-var e = s(627968),
-    i = s(64700),
-    n = s(189213),
-    r = s(834730),
-    l = s(49999),
-    c = s(375708),
-    d = s(492250);
+i.d(t, { default: () => o });
+var e = i(627968),
+    s = i(64700),
+    n = i(189213),
+    r = i(834730),
+    l = i(49999),
+    c = i(375708),
+    d = i(492250);
 function o(a) {
-    let { modalConfig: t, markAsDismissed: s, ...o } = a,
-        h = i.useCallback(
+    let { modalConfig: t, markAsDismissed: i, onClose: o, ...h } = a,
+        p = s.useCallback(
             (a) => {
-                t.onPrimaryClick?.(a), s(l.i.TAKE_ACTION);
+                t.onPrimaryClick?.(a), i(l.i.TAKE_ACTION), o?.();
             },
-            [t, s],
+            [t, i, o],
         ),
-        m = [t.firstHeader, t.secondHeader].filter(Boolean).join(" "),
-        p = [
-            { variant: "secondary", text: c.intl.string(c.t["ETE/oC"]), onClick: o.onClose },
-            ...(null != t.primaryButtonText ? [{ variant: "primary", text: t.primaryButtonText, onClick: h }] : []),
+        m = [
+            { variant: "secondary", text: c.intl.string(c.t["ETE/oC"]), onClick: o },
+            ...(null != t.primaryButtonText ? [{ variant: "primary", text: t.primaryButtonText, onClick: p }] : []),
         ];
     return (0, e.jsx)(n.Modal, {
-        ...o,
-        title: m,
-        actions: p,
+        ...h,
+        onClose: o,
+        title: t.header,
+        actions: m,
         size: "md",
         children: (0, e.jsx)("div", {
             className: d.kL,
-            children: (0, e.jsxs)("div", {
+            children: (0, e.jsx)("div", {
                 className: d.hQ,
-                children: [
-                    (0, e.jsx)(r.E, { tag: "span", className: d.h_, variant: "text-sm/normal", children: t.firstBody }),
-                    (0, e.jsx)(r.E, {
-                        tag: "span",
-                        className: d.h_,
-                        variant: "text-sm/normal",
-                        children: t.secondBody,
-                    }),
-                    (0, e.jsx)(r.E, { tag: "span", className: d.h_, variant: "text-sm/normal", children: t.thirdBody }),
-                ],
+                children: t.bodies.map((a, t) =>
+                    (0, e.jsx)(r.E, { tag: "span", className: d.h_, variant: "text-sm/normal", children: a }, t),
+                ),
             }),
         }),
     });

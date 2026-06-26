@@ -175,7 +175,7 @@ function P(e, t) {
     return null != n && null != n[e] && !0 === n[e].dismissed;
 }
 function x(e, t) {
-    return (0, i.bG)([o.A], () => P(e, t));
+    return (0, i.bG)([o.A], () => null != e && P(e, t));
 }
 function k(e, t) {
     if ((0, E.P3)(e)) return !0;
