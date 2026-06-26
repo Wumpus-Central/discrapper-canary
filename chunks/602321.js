@@ -1,35 +1,31 @@
-t.d(a, { default: () => p });
-var l = t(627968),
-    n = t(64700),
-    o = t(192308),
-    r = t(980707),
-    u = t(477782),
-    d = t(442433),
-    s = t(545059),
-    i = t(810412),
-    c = t(652215);
+l.d(a, { default: () => p });
+var t = l(627968),
+    o = l(64700),
+    r = l(980707),
+    u = l(477782),
+    n = l(442433),
+    s = l(545059),
+    d = l(810412),
+    c = l(521398),
+    i = l(652215);
 function p(e) {
-    let { groupId: a, onSelect: p } = e,
-        b = n.useCallback(() => {
-            (0, o.openModalLazy)(async () => {
-                let { default: e } = await t.e("51080").then(t.bind(t, 297147));
-                return (t) => (0, l.jsx)(e, { ...t, groupId: a });
-            }),
-                (0, d.Z_)();
+    let { groupId: a, onSelect: l } = e,
+        p = o.useCallback(() => {
+            (0, c.R)({ groupId: a }), (0, n.Z_)();
         }, [a]),
-        _ = n.useCallback(() => {
+        _ = o.useCallback(() => {
             s.A.deleteGroup(a),
-                (0, d.Z_)(),
-                (0, i.YX)(c.uss.FRIENDS, { type: i.Z5.GROUP_MANAGED, value: i.IP.REMOVED_FROM_FAVORITES });
+                (0, n.Z_)(),
+                (0, d.YX)(i.uss.FRIENDS, { type: d.Z5.GROUP_MANAGED, value: d.IP.REMOVED_FROM_FAVORITES });
         }, [a]);
-    return (0, l.jsxs)(r.W, {
+    return (0, t.jsxs)(r.W, {
         "aria-label": "Group Context Menu",
         navId: "overlay-group-context-menu",
-        onClose: d.Z_,
-        onSelect: p,
+        onClose: n.Z_,
+        onSelect: l,
         children: [
-            (0, l.jsx)(u.Dr, { id: "edit", label: "Edit Group", action: b }),
-            (0, l.jsx)(u.Dr, { id: "delete", label: "Delete Group", action: _, color: "danger" }),
+            (0, t.jsx)(u.Dr, { id: "edit", label: "Edit Group", action: p }),
+            (0, t.jsx)(u.Dr, { id: "delete", label: "Delete Group", action: _, color: "danger" }),
         ],
     });
 }

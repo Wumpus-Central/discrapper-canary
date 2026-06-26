@@ -3,22 +3,22 @@ var r = l(627968);
 l(64700);
 var a = l(17928),
     t = l(477782),
-    i = l(192308),
-    o = l(545059),
-    u = l(870391),
-    d = l(994500),
-    s = l(589051),
+    i = l(545059),
+    o = l(870391),
+    u = l(994500),
+    d = l(589051),
+    s = l(521398),
     c = l(375708);
 function p(e) {
-    let { user: n, onAction: p, groupId: h } = e,
-        { hasFriendList: g } = (0, s.M8)("useManageFriendGroupsItems"),
-        A = n.id,
-        [f, m] = (0, a.yK)([d.A, u.A], () => [d.A.isFriend(A), u.A.getGroups()], [A]);
-    if (!g || !f) return null;
-    let v = [];
+    let { user: n, onAction: l, groupId: p } = e,
+        { hasFriendList: h } = (0, d.M8)("useManageFriendGroupsItems"),
+        g = n.id,
+        [A, m] = (0, a.yK)([u.A, o.A], () => [u.A.isFriend(g), o.A.getGroups()], [g]);
+    if (!h || !A) return null;
+    let f = [];
     return (
         m.length > 0
-            ? v.push(
+            ? f.push(
                   (0, r.jsxs)(
                       t.Dr,
                       {
@@ -32,7 +32,7 @@ function p(e) {
                                           id: `add-${e.id}`,
                                           label: e.name,
                                           action: () => {
-                                              p?.(), o.A.addUsersToGroup(e.id, A);
+                                              l?.(), i.A.addUsersToGroup(e.id, g);
                                           },
                                       },
                                       e.id,
@@ -45,11 +45,7 @@ function p(e) {
                                       id: "create-new-group",
                                       label: c.intl.string(c.t["3hF1W4"]),
                                       action: () => {
-                                          p?.(),
-                                              (0, i.openModalLazy)(async () => {
-                                                  let { default: e } = await l.e("51080").then(l.bind(l, 297147));
-                                                  return (n) => (0, r.jsx)(e, { ...n, initialUserIds: [A] });
-                                              });
+                                          l?.(), (0, s.R)({ initialUserIds: [g] });
                                       },
                                   },
                                   "create-new-group",
@@ -60,37 +56,33 @@ function p(e) {
                   ),
               )
             : 0 === m.length &&
-              v.push(
+              f.push(
                   (0, r.jsx)(
                       t.Dr,
                       {
                           id: "create-new-group",
                           label: c.intl.string(c.t["3hF1W4"]),
                           action: () => {
-                              p?.(),
-                                  (0, i.openModalLazy)(async () => {
-                                      let { default: e } = await l.e("51080").then(l.bind(l, 297147));
-                                      return (n) => (0, r.jsx)(e, { ...n, initialUserIds: [A] });
-                                  });
+                              l?.(), (0, s.R)({ initialUserIds: [g] });
                           },
                       },
                       "create-new-group",
                   ),
               ),
-        null != h &&
-            v.push(
+        null != p &&
+            f.push(
                 (0, r.jsx)(
                     t.Dr,
                     {
                         id: "remove-from-group",
                         label: "Remove from Group",
                         action: () => {
-                            p?.(), o.A.removeUsersFromGroup(h, A);
+                            l?.(), i.A.removeUsersFromGroup(p, g);
                         },
                     },
                     "remove-from-group",
                 ),
             ),
-        v
+        f
     );
 }

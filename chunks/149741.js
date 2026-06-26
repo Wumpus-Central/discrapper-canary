@@ -4203,6 +4203,7 @@ let l_ = r.memo(function (e) {
                                     n.e("76273"),
                                     n.e("95264"),
                                     n.e("81609"),
+                                    n.e("96443"),
                                     n.e("23490"),
                                     n.e("77687"),
                                 ]).then(n.bind(n, 341354));
@@ -4229,7 +4230,9 @@ let l_ = r.memo(function (e) {
                         let { groupId: t, groupName: l } = e;
                         if (null == t || null == l) return;
                         (0, lc.L3)(e.event, async () => {
-                            let { default: e } = await n.e("43562").then(n.bind(n, 602321));
+                            let { default: e } = await Promise.all([n.e("96443"), n.e("43562")]).then(
+                                n.bind(n, 602321),
+                            );
                             return (n) => (0, i.jsx)(e, { ...n, groupId: t, groupName: l });
                         }),
                             (0, u.YX)(ez.uss.FRIENDS, {
@@ -4292,6 +4295,7 @@ let l_ = r.memo(function (e) {
                                     n.e("98199"),
                                     n.e("41175"),
                                     n.e("60816"),
+                                    n.e("96443"),
                                     n.e("23490"),
                                     n.e("95049"),
                                 ]).then(n.bind(n, 92016));
