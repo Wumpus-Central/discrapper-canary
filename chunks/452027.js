@@ -9,7 +9,7 @@ var i = n(627968),
     u = n(695366),
     c = n(834730),
     d = n(15626),
-    _ = n(714304);
+    _ = n(856640);
 function h(e) {
     let {
         label: t,
@@ -68,34 +68,35 @@ function f(e) {
             ref: v,
         } = e,
         R = (function (e) {
-            let { id: t, errorMessage: n, helperText: i, successMessage: s, description: a } = e,
-                { hasTrailingAuxiliaryContent: o } =
+            let { id: t, label: n, errorMessage: i, helperText: s, successMessage: a, description: o } = e,
+                { hasTrailingAuxiliaryContent: l } =
                     arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                [l, u] = r.useState(!1),
-                c = r.useId(),
+                [u, c] = r.useState(!1),
                 d = r.useId(),
                 _ = r.useId(),
                 h = r.useId(),
                 f = r.useId(),
                 p = r.useId(),
-                E = null != a && "" !== a,
-                m = (null != i && "" !== i) || (null != s && "" !== s),
-                g = [];
-            E && g.push(h), m && g.push(_), o && g.push(p);
-            let A = g.length > 0 ? g.join(" ") : void 0;
+                E = r.useId(),
+                m = null != n && "" !== n,
+                g = null != o && "" !== o,
+                A = (null != s && "" !== s) || (null != a && "" !== a),
+                I = [];
+            g && I.push(f), A && I.push(h), l && I.push(E);
+            let T = I.length > 0 ? I.join(" ") : void 0;
             return r.useMemo(
                 () => ({
-                    labelId: c,
-                    controlId: t ?? d,
-                    describedById: A,
-                    errorMessageId: null != n && "" !== n ? f : void 0,
-                    helperTextId: m ? _ : void 0,
-                    descriptionId: E ? h : void 0,
-                    trailingAuxiliaryContentId: o ? p : void 0,
-                    isLabelHovered: l,
-                    setIsLabelHovered: u,
+                    labelId: m ? d : void 0,
+                    controlId: t ?? _,
+                    describedById: T,
+                    errorMessageId: null != i && "" !== i ? p : void 0,
+                    helperTextId: A ? h : void 0,
+                    descriptionId: g ? f : void 0,
+                    trailingAuxiliaryContentId: l ? E : void 0,
+                    isLabelHovered: u,
+                    setIsLabelHovered: c,
                 }),
-                [c, t, d, A, n, f, m, _, E, h, o, p, l, u],
+                [m, d, t, _, T, i, p, A, h, g, f, l, E, u, c],
             );
         })(e, { hasTrailingAuxiliaryContent: null != N }),
         { labelId: O, controlId: b, errorMessageId: D, describedById: L, helperTextId: w, descriptionId: M } = R,

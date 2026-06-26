@@ -43,10 +43,10 @@ let v = r.createContext({
     isEditing: !1,
     setIsEditing: C.tEg,
 });
-var R = n(571247),
+var R = n(458206),
     O = n(375708),
-    b = n(311109),
-    D = n(930856);
+    b = n(609413),
+    D = n(365736);
 let L = { keys: ["label"] };
 function w(e) {
     let {
@@ -385,8 +385,8 @@ function P(e) {
                                     "aria-controls": H,
                                     "aria-expanded": !$ || X,
                                     "aria-activedescendant": eo,
-                                    "aria-labelledby": `${P?.labelId}`,
-                                    "aria-describedby": `${P?.describedById}`,
+                                    "aria-labelledby": P?.labelId,
+                                    "aria-describedby": P?.describedById,
                                     "aria-errormessage": P?.errorMessageId,
                                     "aria-invalid": P?.errorMessageId != null,
                                     "aria-required": j,

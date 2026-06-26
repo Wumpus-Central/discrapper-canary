@@ -2,8 +2,8 @@ n.d(i, { m: () => h });
 var s = n(627968);
 n(64700);
 var e = n(224640),
-    l = n(430993),
-    a = n(696208),
+    a = n(430993),
+    l = n(696208),
     r = n(683071),
     c = n(478016),
     d = n(834730),
@@ -11,7 +11,7 @@ var e = n(224640),
     x = n(41032),
     j = n(188275),
     m = n(375708),
-    u = n(376960);
+    u = n(692288);
 function h(t) {
     let {
         sku: i,
@@ -23,14 +23,15 @@ function h(t) {
         canStartAuthorization: p,
         bodyText: N,
         title: g,
+        reward: b,
     } = t;
     return (0, s.jsxs)(e.d, {
         transitionState: c,
         onClose: o,
         "aria-label": g,
         children: [
-            (0, s.jsx)(x.z, { sku: i, title: g }),
-            (0, s.jsxs)(l.c, {
+            (0, s.jsx)(x.z, { sku: i, title: g, reward: b }),
+            (0, s.jsxs)(a.c, {
                 children: [
                     (0, s.jsxs)("div", {
                         className: u.S3,
@@ -63,7 +64,7 @@ function h(t) {
                         }),
                 ],
             }),
-            (0, s.jsx)(a.H, { actions: [r], actionsFullWidth: !0 }),
+            (0, s.jsx)(l.H, { actions: [r], actionsFullWidth: !0 }),
         ],
     });
 }

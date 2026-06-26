@@ -496,10 +496,10 @@ var e1 = s(892955),
     e2 = s(173936),
     e8 = s(365199),
     e4 = s(743674),
-    e7 = s(551875),
+    e7 = s(46948),
     e3 = s(971649),
-    e5 = s(814793),
-    e6 = s(415441),
+    e6 = s(814793),
+    e5 = s(415441),
     e9 = s(73473),
     te = s(270045),
     tt = s(79545),
@@ -965,7 +965,7 @@ function tK(e) {
         })(),
         p = (0, tt.Pd)(s),
         T = (0, e3.go)(),
-        A = (0, e5.E0)(s.config),
+        A = (0, e6.E0)(s.config),
         O = i.useContext(ts.X),
         { visibilityElementRef: b, almostVisibleInViewport: I } = (0, tW.I)(
             O?.current?.getScrollerNode() ?? null,
@@ -1017,7 +1017,7 @@ function tK(e) {
                     width: 600,
                     height: 450,
                     className: tG.Tv,
-                    children: (0, r.jsx)(e6.N, {
+                    children: (0, r.jsx)(e5.N, {
                         imageAsset:
                             null != h
                                 ? {
@@ -1351,8 +1351,8 @@ let t3 = function (e) {
         children: o?.id != null ? (0, r.jsx)(t8, { questId: o?.id, selectedSections: c }) : null,
     });
 };
-var t5 = s(203879),
-    t6 = s(403362),
+var t6 = s(203879),
+    t5 = s(403362),
     t9 = s(167417),
     se = s(783977),
     st = s(651892),
@@ -1683,7 +1683,7 @@ let sb = [],
                         let t = e
                             .split(",")
                             .map((e) => (0, tT.WQ)(e))
-                            .filter(t6.Vq);
+                            .filter(t5.Vq);
                         return t.length > 0 ? t : null;
                     })(c.get(sR)) ?? sb,
                 [c],
@@ -1997,8 +1997,8 @@ let s8 = (e, t) => (1220 - 2 * s2(e) * (t ? 2 : 0.75)) / 3;
 var s4 = s(227171);
 let s7 = "data-scroll-target",
     s3 = `[${s7}]`,
-    s5 = { anchors: [], pageSize: 1 },
-    s6 = '[role="button"]:not([tabindex="-1"]):not([aria-disabled="true"])';
+    s6 = { anchors: [], pageSize: 1 },
+    s5 = '[role="button"]:not([tabindex="-1"]):not([aria-disabled="true"])';
 function s9(e, t) {
     let s = t.length - 1,
         n = Math.max(0, e.scrollWidth - e.clientWidth),
@@ -2037,15 +2037,15 @@ let ne = i.memo(function (e) {
                 let { anchors: e, pageSize: t } = (function (e) {
                     let { scrollerRef: t, itemSelector: s, maskMarginMultiplier: n, maskWidth: l } = e,
                         r = t.current?.getScrollerNode();
-                    if (null == r || r.scrollWidth <= r.clientWidth) return s5;
+                    if (null == r || r.scrollWidth <= r.clientWidth) return s6;
                     let i = Array.from(r.querySelectorAll(s));
-                    if (0 === i.length) return s5;
+                    if (0 === i.length) return s6;
                     let a = i[0].offsetWidth,
                         o = i.length > 1 ? i[1].offsetLeft - i[0].offsetLeft - a : 0,
                         u = Math.max(1, Math.floor((r.clientWidth - 2 * l * n + o) / (a + o))),
                         c = i.length - u + 1;
                     return c <= 1
-                        ? s5
+                        ? s6
                         : {
                               anchors: [
                                   0,
@@ -2122,7 +2122,7 @@ let ne = i.memo(function (e) {
                         r = e.target.closest(n),
                         i = null == r ? -1 : l.indexOf(r),
                         a = l[i + t],
-                        o = null == a ? null : a.matches(s6) ? a : a.querySelector(s6);
+                        o = null == a ? null : a.matches(s5) ? a : a.querySelector(s5);
                     null != o && (o.focus({ preventScroll: !0 }), e.repeat && L(a, "instant"));
                 },
                 [n, L],
@@ -2533,7 +2533,7 @@ let nN = {
                                                       i && !0 === o && u.push(s0.PREVIEW),
                                                       null != a && null != a.enrolledAt && null == a.claimedAt)
                                                     ? [...u, s0.IN_PROGRESS]
-                                                    : null != s && (0, e5.I0)(s, t.id) && nC(s0.FEATURED, l)
+                                                    : null != s && (0, e6.I0)(s, t.id) && nC(s0.FEATURED, l)
                                                       ? [...u, s0.FEATURED]
                                                       : new Date(t.expiresAt).valueOf() <= Date.now() + ng
                                                         ? [...u, s0.ENDING_SOON]
@@ -2881,7 +2881,7 @@ function nJ(e) {
         children: [
             (0, r.jsx)("div", {
                 className: n$.Ve,
-                children: (0, r.jsx)(e6.N, {
+                children: (0, r.jsx)(e5.N, {
                     showVideo: !0,
                     assetRef: n,
                     imageAsset:
@@ -3069,7 +3069,7 @@ function nX(e) {
                                     gap: 4,
                                     fullWidth: !1,
                                     children: [
-                                        (0, e5.pv)(s.config) === nF.Z.VIDEO
+                                        (0, e6.pv)(s.config) === nF.Z.VIDEO
                                             ? (0, r.jsx)(nB.S, { size: "xs", color: eS.A.colors.ICON_MUTED.css })
                                             : (0, r.jsx)(tr._, { size: "xs", color: eS.A.colors.ICON_MUTED.css }),
                                         (0, r.jsx)(C.E, {
@@ -3190,7 +3190,7 @@ function n8(e) {
                   (0, r.jsx)(n2, {}),
                   (0, r.jsx)("div", {
                       className: n1.LO,
-                      children: (0, r.jsx)(e6.N, {
+                      children: (0, r.jsx)(e5.N, {
                           showImage: !1,
                           showVideo: !0,
                           assetRef: n,
@@ -3305,16 +3305,16 @@ function n7() {
     return (0, r.jsx)("div", { className: o()(nU.iE, nU.FG, nU.B3), children: (0, r.jsx)(ef.y, {}) });
 }
 var n3 = s(862287),
-    n5 = s(604880),
-    n6 = s(318808);
+    n6 = s(604880),
+    n5 = s(318808);
 function n9(e) {
     let { adCreativeIds: t } = e,
         s = i.useCallback(() => (0, tp.zg)(t), [t]);
     return (0, r.jsxs)("div", {
         className: n3.MY,
         children: [
-            (0, r.jsx)("img", { className: n3.Bg, src: n6.Ay, alt: "" }),
-            (0, r.jsx)("div", { className: n3.r$, children: (0, r.jsx)("img", { src: n5, alt: "" }) }),
+            (0, r.jsx)("img", { className: n3.Bg, src: n5.Ay, alt: "" }),
+            (0, r.jsx)("div", { className: n3.r$, children: (0, r.jsx)("img", { src: n6, alt: "" }) }),
             (0, r.jsxs)("div", {
                 className: n3.Nr,
                 children: [
@@ -3448,7 +3448,7 @@ let lo = {
             e.messages.questName.toLowerCase(),
             e.messages.gameTitle.toLowerCase(),
             e.messages.gamePublisher.toLowerCase(),
-        ].filter(t6.Vq);
+        ].filter(t5.Vq);
     },
     sortType: lr.r.JARO_WINKLER,
     throttleMs: 200,
@@ -3483,7 +3483,7 @@ function lx(e) {
     let { onLoadComplete: t, className: s, isVirtualCurrencyEnabled: n } = e,
         l = (0, E.bG)([T.Ay], () => T.Ay.useReducedMotion),
         a = (0, E.bG)([z.A], () => z.A.isFocused()),
-        { ref: o, inViewport: u } = (0, t5.p)(),
+        { ref: o, inViewport: u } = (0, t6.p)(),
         c = i.useRef(null);
     if (
         (i.useEffect(() => {
@@ -3650,7 +3650,7 @@ let lC = function (e) {
                                   }
                                 : null,
                             t && l ? { id: er.NC.PREVIEW_TOOL, label: ev.intl.string(ev.t.BDUDau) } : null,
-                        ].filter(t6.Vq),
+                        ].filter(t5.Vq),
                     [t, l, o],
                 ),
                 selectedTab: s,
@@ -3700,7 +3700,7 @@ let lC = function (e) {
                                           let { id: t } = e;
                                           return t;
                                       })
-                                      .filter(t6.Vq)
+                                      .filter(t5.Vq)
                                 : null,
                         ),
                         a)

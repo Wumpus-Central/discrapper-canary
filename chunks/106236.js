@@ -6,14 +6,14 @@ var i = n(627968),
     a = n.n(s),
     o = n(735438),
     l = n.n(o),
-    u = n(922139),
+    u = n(308186),
     c = n(621466),
     d = n(452027),
     _ = n(187322),
     h = n(717421),
     f = n(990078),
     p = n(775602),
-    E = n(160671);
+    E = n(266655);
 function m(e, t) {
     let n = 0;
     for (let i = 0; i < t.length; i++) {
@@ -182,7 +182,7 @@ class A extends r.PureComponent {
                                 "aria-orientation": R,
                                 "aria-hidden": x,
                                 "aria-label": k,
-                                "aria-labelledby": U,
+                                "aria-labelledby": U ?? r.labelId,
                                 "aria-describedby": G ?? r.describedById,
                                 "aria-errormessage": r.errorMessageId,
                                 "aria-invalid": null != r.errorMessageId,

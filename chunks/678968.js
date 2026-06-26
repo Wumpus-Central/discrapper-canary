@@ -1,20 +1,20 @@
 n.d(t, { A: () => I });
 var r = n(627968),
     l = n(64700),
-    s = n(554830),
+    i = n(554830),
     a = n(613373),
-    i = n(475815),
+    s = n(475815),
     u = n(507107),
     o = n(192444),
-    c = n(551875),
+    c = n(46948),
     d = n(590202),
     E = n(971649),
-    _ = n(651892),
-    f = n(73473),
+    f = n(651892),
+    _ = n(73473),
     m = n(795068),
     p = n(503698),
     S = n.n(p),
-    C = n(834926);
+    C = n(332206);
 function v(e) {
     let { className: t, color: n } = e;
     return (0, r.jsx)("svg", {
@@ -32,26 +32,26 @@ var A = n(781121),
     h = n(375708);
 function I(e) {
     let { videoRef: t, onTrackQuestContentClick: n, orientation: p } = e,
-        { onClose: S, sourceQuestContent: I, quest: D, isFullscreenEnabled: T } = l.useContext(m.a),
+        { onClose: S, sourceQuestContent: I, quest: T, isFullscreenEnabled: D } = l.useContext(m.a),
         R = (0, E.go)(),
-        x = (0, A.H)({ quest: D, onClose: S, sourceQuestContent: I, impressionId: R }),
+        x = (0, A.H)({ quest: T, onClose: S, sourceQuestContent: I, impressionId: R }),
         O = l.useCallback(
             (e) => {
-                if (T) {
-                    let e = (0, i.qf)(t.current?.parentNode, t.current);
-                    null != e && (0, i.sP)(e);
+                if (D) {
+                    let e = (0, s.qf)(t.current?.parentNode, t.current);
+                    null != e && (0, s.sP)(e);
                 }
                 n(e, d.Cy.LEARN_MORE), x(e, d.Cy.OPEN_GAME_LINK);
             },
-            [T, t, x, n],
+            [D, t, x, n],
         ),
         { title: L, subtitle: P } = {
-            title: (0, _.wr)(D),
-            subtitle: D.config.ctaConfig.subtitle ?? h.intl.string(h.t.mxaHfx),
+            title: (0, f.wr)(T),
+            subtitle: T.config.ctaConfig.subtitle ?? h.intl.string(h.t.mxaHfx),
         },
-        { enabled: b } = o.uK.useConfig({ location: g.rE.VIDEO_MODAL }),
-        k = l.useMemo(() => (0, c.tW)(D, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [D]);
-    return b
+        { enabled: N } = o.uK.useConfig({ location: g.rE.VIDEO_MODAL }),
+        k = l.useMemo(() => (0, c.tW)(T, c.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1)?.url ?? null, [T]);
+    return N
         ? (0, r.jsxs)(r.Fragment, {
               children: [
                   (0, r.jsx)(a.nY, { url: k }),
@@ -60,8 +60,8 @@ function I(e) {
                       orientation: p,
                       children: [
                           null != k &&
-                              (0, r.jsx)(f.R, {
-                                  questOrQuests: D,
+                              (0, r.jsx)(_.R, {
+                                  questOrQuests: T,
                                   questContent: u.uF.VIDEO_MODAL_END_CARD,
                                   sourceQuestContent: I,
                                   children: (e) =>
@@ -76,8 +76,8 @@ function I(e) {
                           (0, r.jsx)(a.lx, {
                               title: L,
                               subtitle: P,
-                              ctaBtnLabel: D.config.ctaConfig.buttonLabel,
-                              ctaIcon: s.K,
+                              ctaBtnLabel: T.config.ctaConfig.buttonLabel,
+                              ctaIcon: i.K,
                               onCTAClick: () => O(u.uF.VIDEO_MODAL),
                               orientation: p,
                           }),
@@ -88,8 +88,8 @@ function I(e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   null != k &&
-                      (0, r.jsx)(f.R, {
-                          questOrQuests: D,
+                      (0, r.jsx)(_.R, {
+                          questOrQuests: T,
                           questContent: u.uF.VIDEO_MODAL_END_CARD,
                           sourceQuestContent: I,
                           children: (e) =>
@@ -104,7 +104,7 @@ function I(e) {
                   (0, r.jsx)(a.OH, {
                       title: L,
                       subtitle: P,
-                      icon: s.K,
+                      icon: i.K,
                       className: C.mT,
                       onClick: () => O(u.uF.VIDEO_MODAL),
                       divider: (0, r.jsx)(v, { color: "#747783" }),

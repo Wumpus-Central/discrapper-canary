@@ -6,8 +6,8 @@ var n = a(627968),
     s = a(141628),
     r = a(811893),
     o = a(696208),
-    _ = a(289873),
-    d = a(834730),
+    d = a(289873),
+    _ = a(834730),
     u = a(964486),
     p = a(793574),
     A = a(688810),
@@ -17,32 +17,32 @@ var n = a(627968),
     E = a(738533),
     L = a(690493),
     S = a(26594),
-    h = a(118982),
+    h = a(331329),
     m = a(383089),
     x = a(41032),
     O = a(910200),
     T = a(188275),
     I = a(652215),
     R = a(375708),
-    N = a(520951);
+    N = a(891831);
 function y(t) {
     let { transitionState: i, onClose: a, sku: y, application: j, analyticsLocations: g, entitlement: D } = t,
-        [b, M] = (0, C.L)(j?.id),
-        { fetched: v, hasAlreadyLinked: H, canStartAuthorization: w, startAuthorization: P } = (0, k.RD)(j),
+        [b, w] = (0, C.L)(j?.id),
+        { fetched: M, hasAlreadyLinked: v, canStartAuthorization: H, startAuthorization: P } = (0, k.RD)(j),
         z = (0, L.J)(j),
         { analyticsLocations: F } = (0, A.Ay)(g ?? [], p.A.SOCIAL_LAYER_CLAIM_PURCHASED_ITEM_MODAL),
-        G = !v || M,
+        G = !M || w,
         K = e.useRef({
             analyticsLocations: F,
             skuId: y.id,
             applicationId: j.id,
             isLaunchable: b,
             isApplicationConnected: z,
-            canStartAuthorization: w,
+            canStartAuthorization: H,
         });
     e.useEffect(() => {
-        (K.current.isLaunchable = b), (K.current.isApplicationConnected = z), (K.current.canStartAuthorization = w);
-    }, [b, z, w]),
+        (K.current.isLaunchable = b), (K.current.isApplicationConnected = z), (K.current.canStartAuthorization = H);
+    }, [b, z, H]),
         (0, u.Ay)(() => {
             f.default.track(I.HAw.OPEN_MODAL, { location_stack: F, type: T.e2, sku_id: y.id, application_id: j.id });
         }),
@@ -54,10 +54,10 @@ function y(t) {
                 sku_id: i,
                 application_id: a,
                 is_gift: !1,
-                is_account_linked: H,
+                is_account_linked: v,
                 can_start_authorization: n,
             });
-        }, [G, H]);
+        }, [G, v]);
     let U = e.useCallback(() => {
             let { analyticsLocations: t, skuId: i, applicationId: a } = K.current;
             f.default.track(I.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
@@ -102,9 +102,9 @@ function y(t) {
         return (0, n.jsx)(c.d, {
             transitionState: i,
             onClose: a,
-            children: (0, n.jsx)(l.c, { children: (0, n.jsx)(_.y, {}) }),
+            children: (0, n.jsx)(l.c, { children: (0, n.jsx)(d.y, {}) }),
         });
-    if (H) {
+    if (v) {
         let t =
             b && !z
                 ? { variant: "primary", text: R.intl.string(R.t["s+J8Dl"]), onClick: Y, icon: r.t }
@@ -113,10 +113,10 @@ function y(t) {
             transitionState: i,
             onClose: a,
             children: [
-                (0, n.jsx)(x.z, { sku: y, title: R.intl.string(R.t["5glWta"]) }),
+                (0, n.jsx)(x.z, { sku: y, title: R.intl.string(R.t["5glWta"]), reward: B }),
                 (0, n.jsxs)(l.c, {
                     children: [
-                        (0, n.jsx)(d.E, {
+                        (0, n.jsx)(_.E, {
                             variant: "text-md/normal",
                             className: N.j,
                             children: R.intl.formatToPlainString(R.t.W2znvX, {
@@ -136,17 +136,18 @@ function y(t) {
         });
     }
     {
-        let t = { variant: "primary", text: R.intl.string(R.t["VDAhr+"]), onClick: U, icon: s.A, disabled: !w };
+        let t = { variant: "primary", text: R.intl.string(R.t["VDAhr+"]), onClick: U, icon: s.A, disabled: !H };
         return (0, n.jsx)(m.m, {
             sku: y,
             application: j,
             transitionState: i,
             onClose: a,
-            hasAlreadyLinked: H,
-            canStartAuthorization: w,
+            hasAlreadyLinked: v,
+            canStartAuthorization: H,
             primaryCTAButtonProps: t,
             bodyText: J,
             title: R.intl.string(R.t.GPAtvf),
+            reward: B,
         });
     }
 }

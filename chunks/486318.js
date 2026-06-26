@@ -1,15 +1,30 @@
-a.d(t, { N: () => r, e: () => c });
-var e = a(116833),
-    p = a(871123);
-function c(n) {
-    let { imageUrl: t, backgroundImageUrl: a, altText: p, overlayImageUrl: c, customClassNames: r } = n;
+e.d(r, { N: () => c, e: () => p });
+var n = e(116833),
+    t = e(871123);
+function p(a) {
+    let {
+        imageUrl: r,
+        backgroundImageUrl: e,
+        altText: t,
+        overlayImageUrl: p,
+        customClassNames: c,
+        rewardGraphic: i,
+    } = a;
     return {
         type: "dynamic",
-        component: e.DynamicGraphicComponent.SOCIAL_LAYER_SKU_PREVIEW,
-        aspectRatio: "16/9",
-        props: { imageUrl: t, backgroundImageUrl: a, altText: p, overlayImageUrl: c, customClassNames: r },
+        component: n.DynamicGraphicComponent.SOCIAL_LAYER_SKU_PREVIEW,
+        aspectRatio: null != i ? "16/9" : "6/4",
+        props: {
+            imageUrl: r,
+            backgroundImageUrl: e,
+            altText: t,
+            overlayImageUrl: p,
+            customClassNames: c,
+            rewardGraphic: i,
+        },
     };
 }
-function r(n) {
-    return c({ imageUrl: (0, p.fq)(n), backgroundImageUrl: (0, p.xf)(n), altText: n.name });
+function c(a) {
+    let { reward: r } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return p({ imageUrl: (0, t.fq)(a), backgroundImageUrl: (0, t.xf)(a), altText: a.name, rewardGraphic: r?.graphic });
 }

@@ -18,13 +18,13 @@ var n = a(627968),
     x = a(340124),
     C = a(507107),
     j = a(347135),
-    k = a(551875),
+    k = a(46948),
     R = a(801365),
     w = a(801870),
     E = a(586035),
     D = a(190107),
     _ = a(375708),
-    I = a(845612);
+    I = a(951532);
 function S(e) {
     let { quest: t, avatarDeco: a, onUseNow: r, user: s, mode: l } = e,
         c = (0, k.tW)(t, k.fY.REWARD).url,

@@ -42,7 +42,7 @@ let b = (0, s(945810).mj)({
 var y = s(112142),
     F = s(3738),
     q = s(347135),
-    V = s(551875),
+    V = s(46948),
     H = s(18437),
     D = s(590202),
     k = s(971649),
@@ -288,8 +288,8 @@ function eA(e) {
     let e0 = null != i.userStatus && (0, P.gO)(i.userStatus, p.uF.QUEST_LIVE_STREAM),
         e1 = null != i.userStatus && (0, P.gO)(i.userStatus, p.uF.QUEST_BAR),
         e4 = eh && !e1,
-        e7 = y.t.useConfig({ location: ea.rE.QUEST_CHANNEL_CALL_HEADER }),
-        e6 = (0, Y.Pd)(i);
+        e6 = y.t.useConfig({ location: ea.rE.QUEST_CHANNEL_CALL_HEADER }),
+        e7 = (0, Y.Pd)(i);
     if (
         (eG.info({
             isQuestCallHeaderDismissed: e0,
@@ -447,9 +447,9 @@ function eA(e) {
                                             onClick: ew,
                                             fullWidth: !ez || i.config.features.includes(ea.Li.CLOUD_GAMING_ACTIVITY),
                                         }),
-                                        e7.enabled &&
-                                        e6 === Y.UA.UNENROLLED &&
-                                        e7.enabledQuestStates.has(Y.UA.UNENROLLED) &&
+                                        e6.enabled &&
+                                        e7 === Y.UA.UNENROLLED &&
+                                        e6.enabledQuestStates.has(Y.UA.UNENROLLED) &&
                                         !eK
                                             ? (0, n.jsx)(X.A, {
                                                   quest: i,
