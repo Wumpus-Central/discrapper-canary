@@ -1601,8 +1601,10 @@ screen and (max-width:485px) {
     background-position: bottom
 }
 
-.user-profile-popout .profileFrameLayer__7d80f.rail__7d80f {
-    @container (max-height: 480px) {
+.user-profile-modal-v2 .profileFrameLayer__7d80f.rail__7d80f,
+.user-profile-popout .profileFrameLayer__7d80f.rail__7d80f,
+.user-profile-sidebar.user-profile-sidebar-redesign .profileFrameLayer__7d80f.rail__7d80f {
+    @container (min-aspect-ratio: 300 / 480) {
         &.responsive__7d80f {
             display: none
         }
