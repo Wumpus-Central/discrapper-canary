@@ -13,8 +13,10 @@ class o extends r.c {
             n.forEach((e) => {
                 let t = i(e),
                     n = s.B7[e],
-                    a = null != n ? s.su[n] : {};
-                c.tabs[e] = { ...s.us, ...a, ...u, ...r, limit: t };
+                    { has: a, ...o } = null != n ? s.su[n] : {},
+                    { has: l, ...d } = u,
+                    _ = [...new Set([...(a ?? []), ...(l ?? [])])];
+                c.tabs[e] = { ...s.us, ...o, ...d, ...(_.length > 0 ? { has: _ } : {}), ...r, limit: t };
             }),
             c
         );

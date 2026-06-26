@@ -361,7 +361,7 @@ function K(e) {
             );
         }, [a, o, l, n, s]),
         { priceOptions: b, planPricesLoading: w } = (0, m.Pr)(T, c, l),
-        M = r.useMemo(() => (_ ? (0, i.jsx)(B.P, { planSkuId: E.skuId, invoice: c }) : null), [_, E.skuId, c]),
+        M = r.useMemo(() => (_ ? (0, i.jsx)(B.P, { planSkuId: E.skuId }) : null), [_, E.skuId]),
         P = (0, W.G)(g),
         x = r.useMemo(() => (P ? (0, i.jsx)(H.a, {}) : null), [P]),
         k = r.useMemo(() => (null != M ? M : null != x ? x : null), [M, x]),

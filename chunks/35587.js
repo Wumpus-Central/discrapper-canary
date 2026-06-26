@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Eu: () => p, IO: () => f, T1: () => _, Wi: () => E, y7: () => h });
+n.d(t, { Eu: () => p, IO: () => f, T1: () => _, y7: () => h });
 var i = n(64700),
     r = n(17928),
     s = n(228366),
@@ -90,7 +90,4 @@ function f() {
 }
 function p() {
     return { promotion: (0, r.bG)([c.A], () => c.A.bogoPromotion) };
-}
-function E(e) {
-    return (0, r.bG)([c.A], () => c.A.hasPromotion(e));
 }
