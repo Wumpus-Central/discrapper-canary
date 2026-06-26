@@ -300,7 +300,8 @@ class O {
         let n;
         if (!this._include(N.rD.LINK)) return [];
         let i = (0, l.br)(e);
-        if (i?.type === o.I.INVITE) return [{ type: N.rD.LINK, record: p.fromInviteCode(i.code), score: 1 }];
+        if (i?.type === o.I.INVITE)
+            return [{ type: N.rD.LINK, record: p.fromInviteCode(i.code), score: (0, A.zy)(11) }];
         let r = a().sanitizeUrl(e);
         try {
             n = new URL(r);
@@ -309,7 +310,9 @@ class O {
         }
         let { pathname: s, hostname: u = "", host: c } = n,
             d = S.A.isDiscordHostname(u) || window.location.host === c;
-        return null !== s && d && S.A.isAppRoute(s) ? [{ type: N.rD.LINK, record: p.fromPath(s), score: 1 }] : [];
+        return null !== s && d && S.A.isAppRoute(s)
+            ? [{ type: N.rD.LINK, record: p.fromPath(s), score: (0, A.zy)(11) }]
+            : [];
     }
     queryInAppNavigations(e, t) {
         return this._include(N.rD.IN_APP_NAVIGATION)
