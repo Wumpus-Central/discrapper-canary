@@ -263,6 +263,25 @@
     margin-inline-end: 10px
 }
 
+.nitroColorlessIcon_e9cb00 {
+    background: var(--background-mod-normal);
+    display: grid;
+    overflow: clip;
+    place-items: center
+}
+
+.nitroColorlessIconNormal_e9cb00 {
+    border-radius: 4.5px;
+    height: 24px;
+    width: 24px
+}
+
+.nitroColorlessIconCompact_e9cb00 {
+    border-radius: 7.5px;
+    height: 40px;
+    width: 40px
+}
+
 .guildDescriptionIcon_e9cb00 {
     background-color: var(--background-mod-muted)
 }
