@@ -15,7 +15,7 @@ var s = n(395504),
     f = n(71393),
     p = n(536802),
     E = n(576705),
-    m = n(222823),
+    m = n(568548),
     g = n(309010),
     A = n(543465),
     I = n(287809),
@@ -506,6 +506,10 @@ class eE extends p.A {
     }
     getMentionCountForPrivateChannel(e) {
         return N[C]?.mentionCounts[e] ?? 0;
+    }
+    getHighImportanceMentionCountForChannel(e, t) {
+        let n = N[e ?? C]?.mentionCounts[t];
+        return null == n || n.isMentionLowImportance ? 0 : n.count;
     }
     getGuildChangeSentinel(e) {
         return b(e).sentinel;
