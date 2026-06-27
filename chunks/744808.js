@@ -12,7 +12,7 @@ var i = n(627968),
     _ = n(855915),
     h = n(940622),
     f = n(875741),
-    p = n(929697);
+    p = n(325409);
 function E(e) {
     let { skuId: t, layer: n, data: r, fadeIn: s, containerWidth: o, containerHeight: l } = e,
         u = r?.src ?? (0, d.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
@@ -106,7 +106,7 @@ function g(e) {
     let { frame: t, className: n, filterLayer: s, fadeIn: a = !0 } = e,
         u = (0, l.bG)([c.A], () => c.A.theme),
         d = (0, h.eo)(),
-        p = (0, f.A)(t.skuId),
+        p = (0, f.i)(t),
         { profileFrameStyle: E, profileFrameClassName: g } = d?.css ?? p,
         A = d?.layers ?? t.layers,
         I = null == s ? A : A.filter(s),
