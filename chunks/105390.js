@@ -34,7 +34,7 @@ function T(e) {
     let g = (0, i.jsxs)("div", {
         className: a()(I.Fg, I.C8, c, { [I.WO]: t }),
         children: [
-            (0, i.jsx)(l.O, { size: "custom", width: 16, height: 16, color: "currentColor", className: I._q }),
+            (0, i.jsx)(l.O, { size: "custom", width: 12, height: 12, color: "currentColor" }),
             (0, i.jsx)(u.E, { variant: "eyebrow", color: "text-strong", children: s }),
         ],
     });

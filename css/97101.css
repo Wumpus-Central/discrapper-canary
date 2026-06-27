@@ -81,8 +81,8 @@
 
 .linkButtonIcon__972a0 {
     color: var(--icon-muted);
-    height: 24px;
-    width: 24px
+    height: 20px;
+    width: 20px
 }
 
 .closeButton__972a0 {
@@ -237,11 +237,6 @@
 .channel__972a0:not(.dm__972a0) .avatarWithText__972a0 {
     height: unset;
     padding: 1px 0
-}
-
-.channel__972a0:not(.dm__972a0) svg {
-    height: 20px;
-    width: 20px
 }
 
 .enable-forced-colors .unreadPill__972a0 {

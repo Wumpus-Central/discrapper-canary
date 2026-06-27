@@ -14,12 +14,6 @@
     background: linear-gradient(90deg, #db00a4, #5968f0)
 }
 
-.premiumTrialBadge__4c1e4.premiumOfferUnackedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4,
-.premiumTrialBadge__4c1e4.premiumOfferWithTimerAcknowledgedBadge__4c1e4 .premiumTrialBadgeIcon__4c1e4 {
-    height: 10px;
-    width: 10px
-}
-
 .premiumOfferWithTimerUnacknowledgedBadge__4c1e4 {
     background-image: linear-gradient(to right, var(--premium-tier-2-purple-for-gradients), var(--premium-tier-2-pink-for-gradients))
 }
