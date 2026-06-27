@@ -142,50 +142,52 @@ let m = !1,
     T = null,
     S = null;
 function y() {
-    let e = (0, c.TD)(),
-        t = e && (0, o.qi)("pushClipsV3RuntimeFlagsToNative"),
-        n = e && (0, o.$i)("pushClipsV3RuntimeFlagsToNative"),
-        i = a.Ay.getEnableAutoclipping(),
-        s = null !== A,
-        l = A !== t,
-        u = I !== n,
-        d = T !== i;
-    if (!l && !u && !d) return { midSessionV3Flip: !1 };
-    let _ = r.Ay.getMediaEngine();
-    return (
-        l && _.setClipsV3Enabled(t),
-        E.nx.info(
-            `clips v3 runtime flags pushed: v3=${t} (was ${A}), ml=${n} (was ${I}), autoclipping=${i} (was ${T})`,
-        ),
-        (A = t),
-        (I = n),
-        (T = i),
-        (0, o.ak)(t ? "v3" : "v1"),
-        t &&
-            (n
-                ? (null === S &&
-                      (E.nx.info("clips v3 ml flag set ml=false until download complete"),
-                      _.setClipsV3MLEnabled(!1),
-                      (S = !1)),
-                  (async () => {
-                      let { allAssetsDownloaded: e } = await p.start(),
-                          t = e && !0 === I && !0 === T;
-                      S !== t &&
-                          (E.nx.info(
-                              `clips v3 ml flag set ml=${t} (was ${S}). allAssetsDownloaded=${e}, autoclipping=${T}`,
-                          ),
-                          _.setClipsV3MLEnabled(t),
-                          (S = t));
-                  })())
-                : !1 !== S &&
-                  (E.nx.info(`clips v3 ml flag set ml=false (was ${S})`), _.setClipsV3MLEnabled(!1), (S = !1))),
-        { midSessionV3Flip: s && l }
-    );
+    let { forceV3Capability: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        t = (0, c.TD)(),
+        n = r.Ay.getMediaEngine(),
+        i = n.hasSetClipsRecordingEnabled(),
+        s = (t || e || (i && !0 === A)) && (0, o.qi)("pushClipsV3RuntimeFlagsToNative"),
+        l = t && (0, o.$i)("pushClipsV3RuntimeFlagsToNative"),
+        u = a.Ay.getEnableAutoclipping(),
+        d = null !== A,
+        _ = A !== s,
+        h = I !== l,
+        f = T !== u;
+    return _ || h || f
+        ? (_ && n.setClipsV3Enabled(s),
+          E.nx.info(
+              `clips v3 runtime flags pushed: v3=${s} (was ${A}), ml=${l} (was ${I}), autoclipping=${u} (was ${T})`,
+          ),
+          (A = s),
+          (I = l),
+          (T = u),
+          (0, o.ak)(s ? "v3" : "v1"),
+          s &&
+              (l
+                  ? (null === S &&
+                        (E.nx.info("clips v3 ml flag set ml=false until download complete"),
+                        n.setClipsV3MLEnabled(!1),
+                        (S = !1)),
+                    (async () => {
+                        let { allAssetsDownloaded: e } = await p.start(),
+                            t = e && !0 === I && !0 === T;
+                        S !== t &&
+                            (E.nx.info(
+                                `clips v3 ml flag set ml=${t} (was ${S}). allAssetsDownloaded=${e}, autoclipping=${T}`,
+                            ),
+                            n.setClipsV3MLEnabled(t),
+                            (S = t));
+                    })())
+                  : !1 !== S &&
+                    (E.nx.info(`clips v3 ml flag set ml=false (was ${S})`), n.setClipsV3MLEnabled(!1), (S = !1))),
+          { midSessionV3Flip: d && _ })
+        : { midSessionV3Flip: !1 };
 }
 function C() {
+    let { forceV3Capability: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return null != g
         ? g
-        : (y(),
+        : (y({ forceV3Capability: e }),
           (g = (async () => {
               try {
                   await s.Ay.ensureModule("discord_clips");

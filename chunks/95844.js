@@ -237,8 +237,10 @@ class V extends M {
                 let i = N.Ay.getSettings(),
                     r = (0, b.TD)();
                 if (
-                    (n.setClipBufferLength(r ? i.clipsLength / 1e3 : 0),
-                    e?.settings.decoupledClipsEnabled === !0 && this.fireClipsInitEvent(),
+                    (n.setClipsRecordingEnabled(r),
+                    n.setClipBufferLength(r ? i.clipsLength / 1e3 : 0),
+                    (e?.settings.decoupledClipsEnabled === !0 || e?.settings.clipsEnabled === !0) &&
+                        this.fireClipsInitEvent(),
                     null == e || e?.settings.clipsQuality != null)
                 ) {
                     let { frameRate: t, resolution: r } = i.clipsQuality;

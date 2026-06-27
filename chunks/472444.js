@@ -2453,7 +2453,7 @@ function nV(e) {
     },
     CLIPS_SETTINGS_UPDATE: function (e) {
         let { settings: t } = e;
-        !1 === t.decoupledClipsEnabled && ((a = null), ti.setClipsSource(null));
+        !1 === t.decoupledClipsEnabled && ((a = null), ti.setClipsSource(null)), !1 === t.clipsEnabled && (a = null);
     },
     MEDIA_ENGINE_SET_ENABLE_HARDWARE_MUTE_NOTICE: function (e) {
         tQ = e.enabled;

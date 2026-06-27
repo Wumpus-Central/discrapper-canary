@@ -2232,6 +2232,12 @@ class er extends l.A {
     setClipsV3MLEnabled(e) {
         (0, b.lE)().setClipsV3MLEnabled?.(e);
     }
+    setClipsRecordingEnabled(e) {
+        (0, b.lE)().setClipsRecordingEnabled?.(e);
+    }
+    hasSetClipsRecordingEnabled() {
+        return null != (0, b.lE)().setClipsRecordingEnabled;
+    }
     setClipBufferLength(e) {
         (0, b.lE)().setClipBufferLength?.(e);
     }

@@ -3124,6 +3124,10 @@ class tr extends g.A {
     setClipsDataPath(e) {}
     setClipsV3Enabled(e) {}
     setClipsV3MLEnabled(e) {}
+    setClipsRecordingEnabled(e) {}
+    hasSetClipsRecordingEnabled() {
+        return !1;
+    }
     setClipsUIActive(e) {}
     setClipBufferLength(e) {}
     saveClip(e) {

@@ -799,7 +799,11 @@ async function eS(e) {
     try {
         eC([e.id]);
         let t = E.Ay.getMediaEngine();
-        if ((0, N.qi)("exportClip") && !(0, z.t_)() && (await (0, z.so)(), !(0, z.t_)()))
+        if (
+            (0, N.qi)("exportClip") &&
+            ((0, z.UW)({ forceV3Capability: !0 }), !(0, z.t_)()) &&
+            (await (0, z.so)({ forceV3Capability: !0 }), !(0, z.t_)())
+        )
             throw Error("discord_clips module failed to load");
         let { filepath: n, ...i } = e;
         await ec(e.id, i);
