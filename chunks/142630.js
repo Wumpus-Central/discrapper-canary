@@ -5,8 +5,8 @@ var n = i(627968),
     s = i.n(a),
     o = i(735438),
     l = i(830917),
-    c = i(189213),
-    u = i(990078),
+    u = i(189213),
+    c = i(990078),
     d = i(765178),
     m = i(123292),
     g = i(695366),
@@ -158,19 +158,19 @@ function z(e) {
         [en, er] = r.useState(!1),
         [ea, es] = r.useState(!1),
         [eo, el] = r.useState(0),
-        { analyticsLocations: ec } = (0, T.Ay)(f.A.IMAGE_CROPPING_MODAL),
-        { isGIF: eu, isCheckingAnimation: ed, isEditableAnimatedImage: em } = (0, L._)(t),
+        { analyticsLocations: eu } = (0, T.Ay)(f.A.IMAGE_CROPPING_MODAL),
+        { isGIF: ec, isCheckingAnimation: ed, isEditableAnimatedImage: em } = (0, L._)(t),
         eg = ea || en || ed;
     r.useEffect(() => {
-        eu &&
+        ec &&
             V &&
             w.default.track(G.HAw.OPEN_MODAL, {
                 type: G.JJy.CROP_GIF_MODAL,
                 location: { page: P },
-                location_stack: ec,
+                location_stack: eu,
                 upload_type: z,
             });
-    }, [V, P, eu, ec, z]);
+    }, [V, P, ec, eu, z]);
     let eh = r.useCallback(
             (e, t, i, n) => {
                 ($.current = (0, N.F3)(e, t, i)),
@@ -349,8 +349,8 @@ function z(e) {
     let ey = z === O.HL.AVATAR || z === O.HL.BANNER,
         eN = (0, x.b)(!ey);
     return (0, n.jsx)(T.f5, {
-        value: ec,
-        children: (0, n.jsxs)(c.Modal, {
+        value: eu,
+        children: (0, n.jsxs)(u.Modal, {
             title: S.intl.string(S.t.DxAYCF),
             size: "md",
             actionBarInput: (0, n.jsx)(m.Q, {
@@ -361,7 +361,14 @@ function z(e) {
             }),
             actions: [
                 { text: S.intl.string(S.t["9TG40l"]), onClick: ew, variant: "secondary" },
-                { text: S.intl.string(S.t.ZSHmKD), onClick: eI, variant: "primary", loading: ea, disabled: eg },
+                {
+                    text: S.intl.string(S.t.ZSHmKD),
+                    onClick: eI,
+                    variant: "primary",
+                    autoFocus: !1,
+                    loading: ea,
+                    disabled: eg,
+                },
             ],
             transitionState: y,
             returnRef: U,
@@ -373,7 +380,7 @@ function z(e) {
                         type: z,
                         analyticsPage: P,
                         analyticsSection: G.JJy.CROP_GIF_MODAL,
-                        isGIF: eu,
+                        isGIF: ec,
                         banner: i,
                     }),
                 (0, n.jsxs)("div", {
@@ -462,7 +469,7 @@ function z(e) {
                                         (0, n.jsx)(A.x, { size: "md", color: "currentColor", className: b.HQ }),
                                     ],
                                 }),
-                                (0, n.jsx)(u.m, {
+                                (0, n.jsx)(c.m, {
                                     text: S.intl.string(S.t.E36Wd4),
                                     ariaHidden: !0,
                                     children: (0, n.jsx)(C.D, {
