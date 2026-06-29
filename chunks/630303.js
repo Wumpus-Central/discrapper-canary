@@ -17,14 +17,9 @@ function c(e) {
             if (t) return void n(o.pn.GIFT_CUSTOMIZATION);
         }, [n, t]),
         c = r.useCallback((e, t) => {
-            let {
-                    paymentSourceId: n,
-                    isSelectedPaymentSourceDisabled: i,
-                    purchasePreviewError: r,
-                    invoicePreview: s,
-                } = t,
-                a = e.disablePurchase || null == n || i || null == s || null != r;
-            return { ...e, disablePurchase: a };
+            let { isSelectedPaymentSourceDisabled: n, purchasePreviewError: i, invoicePreview: r } = t,
+                s = e.disablePurchase || n || null == r || null != i;
+            return { ...e, disablePurchase: s };
         }, []);
     return (0, i.jsx)(s.Y, {
         ...e,
