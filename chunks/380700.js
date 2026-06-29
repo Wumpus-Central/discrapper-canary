@@ -278,6 +278,9 @@ function ek(e) {
                           "div",
                           {
                               ref: (t) => n(e.skuId, t),
+                              tabIndex: -1,
+                              role: "group",
+                              "aria-label": B.intl.formatToPlainString(B.t.FNtLb3, { category: e.name }),
                               children: (0, c.jsx)(v.R9, {
                                   newValue: { categoryPosition: t },
                                   children: (0, c.jsx)(eT, { category: e }),
