@@ -322,7 +322,7 @@ function p(e) {
                     }
                 );
         }, [U, V]),
-        (0, i.jsx)(G, { className: s, style: _ })
+        (0, i.jsx)(G, { className: s, style: _, "aria-hidden": !0 })
     );
 }
 n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073), a.RuntimeLoader.setWasmUrl(s);
