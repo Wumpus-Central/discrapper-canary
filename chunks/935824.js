@@ -1,10 +1,6 @@
 e.exports = {
     kL: "container__955a3",
     KY: "withoutTopBorder__955a3",
-    BW: "bannerAsset__955a3",
-    rZ: "redirectNoticeBannerAsset__955a3",
-    Gj: "redirectNoticeBannerContainer__955a3",
-    kj: "redirectNoticeContainer__955a3",
     Jo: "contentSection__955a3",
     FG: "contentWrapper__955a3",
     R: "hidden__955a3",

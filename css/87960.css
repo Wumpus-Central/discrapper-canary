@@ -1078,41 +1078,11 @@
     width: 100%
 }
 
-.bannerAsset__955a3 {
-    grid-area: layer;
-    height: 100%;
-    max-height: 348px;
-    max-width: 1300px;
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
-}
-
 .tabs__955a3 {
     display: flex;
     flex-flow: row nowrap;
     justify-content: space-between;
     padding: 24px 20px 4px
-}
-
-.redirectNoticeBannerAsset__955a3 {
-    -o-object-position: bottom center;
-    object-position: bottom center
-}
-
-.redirectNoticeBannerContainer__955a3 {
-    background-image: linear-gradient(180deg, #26007c, #00006a)
-}
-
-.redirectNoticeContainer__955a3 {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin: 0 auto;
-    max-width: 560px;
-    padding: 24px;
-    text-align: center
 }
 
 .contentSection__955a3 {

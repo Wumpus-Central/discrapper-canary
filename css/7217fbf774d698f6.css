@@ -1,0 +1,15 @@
+.contentSection_b6bcee {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 1
+}
+
+.content_b6bcee {
+    height: 100%;
+    max-width: 1300px;
+    width: 100%
+}

@@ -3,7 +3,7 @@ n.d(t, {
     transitionToGlobalDiscovery: () =>
         function e(t) {
             let n = t.tab;
-            switch ((c.A.setState({ selectedTab: n }), n)) {
+            switch ((n !== d.GlobalDiscoveryTab.QUESTS && c.A.setState({ selectedTab: n }), n)) {
                 case d.GlobalDiscoveryTab.SERVERS:
                     let p = t.selectedServersTab;
                     return (
@@ -87,11 +87,7 @@ n.d(t, {
                         return (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
                     else return (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS);
                 case d.GlobalDiscoveryTab.QUESTS:
-                    return (0, a.navigateToQuestHome)({
-                        fromContent: t.questContent,
-                        questId: t.questId,
-                        forceDiscoveryQuestHomeRoute: !0,
-                    });
+                    return (0, a.navigateToQuestHome)({ fromContent: t.questContent, questId: t.questId });
                 default:
                     throw Error(`[transitionToGlobalDiscovery] Unhandled tab type: ${n}`);
             }
