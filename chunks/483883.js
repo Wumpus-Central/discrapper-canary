@@ -1487,7 +1487,10 @@ class e1 extends m.A {
                     c = t.outboundBandwidthSurplus.getReport(a),
                     d = this.videoEntropy.getReport(a),
                     _ = t.aggregationDuration / 1e3,
-                    h = t.aggregatedProperties.screenshareFramesUnique;
+                    h =
+                        (0, er.isWeb)() || (0, er.isIOS)() || (0, er.isAndroid)()
+                            ? t.aggregatedProperties.framesCodec
+                            : t.aggregatedProperties.screenshareFramesUnique;
                 e.push({
                     ...this.getStats(t),
                     target_fps: _ > 0 ? Math.round((t.targetFrames ?? 0) / _) : 0,
