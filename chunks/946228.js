@@ -47,8 +47,7 @@ let B = r.memo(function (e) {
                     let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 38055));
                     return () => (0, i.jsx)(e, { closePopout: g.Z_ });
                 });
-            }, []),
-            d = r.useCallback(() => (u ? (0, M.Il)() : l > 3 ? a() : (0, U.tEg)()), [u, l, a]);
+            }, []);
         return (0, i.jsxs)(w.A, {
             className: V.lL,
             children: [
@@ -57,23 +56,19 @@ let B = r.memo(function (e) {
                     className: F.N1,
                     children: [
                         (0, i.jsx)(L.D, {
-                            onClick: d,
+                            onClick: (e) => {
+                                if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
+                                    return u ? (0, M.Il)() : l > 3 ? a() : (0, U.tEg)();
+                            },
                             onContextMenu: c,
                             tag: "span",
                             tabIndex: -1,
                             "aria-hidden": !0,
+                            className: F.qd,
                             children: (0, i.jsxs)("span", { children: [s, " \u2014 ", l] }),
                         }),
                         (0, i.jsx)(x.A, {}),
-                        (0, i.jsx)(L.D, {
-                            onClick: d,
-                            onContextMenu: c,
-                            tag: "span",
-                            tabIndex: -1,
-                            "aria-hidden": !0,
-                            className: F.AN,
-                            children: (0, i.jsx)("span", {}),
-                        }),
+                        (0, i.jsx)("div", { className: F.AN }),
                         l <= 3 && !u
                             ? null
                             : ((t = u
@@ -82,7 +77,7 @@ let B = r.memo(function (e) {
                                     ? (0, i.jsx)(b.a, { className: F.wT })
                                     : (0, i.jsx)(D._, { className: F.wT })),
                               (0, i.jsx)(L.D, {
-                                  onClick: d,
+                                  onClick: () => (u ? (0, M.Il)() : l > 3 ? a() : (0, U.tEg)()),
                                   tag: "span",
                                   "aria-label": G.intl.string(o && !u ? G.t.iTcuma : G.t.dcl9MQ),
                                   "aria-expanded": !u && o,
