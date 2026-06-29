@@ -1636,7 +1636,7 @@ var io = n(341662),
 function ix(e) {
     let { gameId: t } = e,
         { gameId: n, gameRecord: i, isLoading: l } = (0, iA.A)({ gameId: t }),
-        s = (0, ip.A)({ gameId: t, source: ih.Ob.Embed }),
+        s = (0, ip.A)({ gameId: t, source: ih.Ob.GameProfileEmbed }),
         r = (0, ig.A)(i),
         a = null != i && null != s && !l && !r,
         o = i?.getIconURL(80) ?? null,

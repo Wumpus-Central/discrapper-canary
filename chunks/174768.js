@@ -76,180 +76,181 @@ function K(e) {
         i.search(r);
 }
 function $(e, t) {
-    if (
-        !(function (e, t) {
-            if (e.length !== t.length) return !1;
-            for (let n = 0; n < e.length; n++) {
-                let i = e[n],
-                    r = t[n];
-                if (i.record.id !== r.record.id || i.type !== r.type) return !1;
-            }
-            return !0;
-        })(
-            (e =
-                "" === (t = t.trim()).trim()
-                    ? (function () {
-                          var e;
-                          let t,
-                              n = N.A.getGuildId() ?? void 0,
-                              i = C.A.getChannelId() ?? void 0;
-                          switch (U) {
-                              case u.rD.USER: {
-                                  let e = E.default.getId();
-                                  return R.Ay.getRecentlyTalked(i, 100).filter((t) => {
-                                      let { record: n } = t;
-                                      return n.id !== e;
-                                  });
+    !(function (e, t) {
+        if (e.length !== t.length) return !1;
+        for (let n = 0; n < e.length; n++) {
+            let i = e[n],
+                r = t[n];
+            if (i.record.id !== r.record.id || i.type !== r.type) return !1;
+        }
+        return !0;
+    })(
+        (e =
+            "" === (t = t.trim()).trim()
+                ? (function () {
+                      var e;
+                      let t,
+                          n = N.A.getGuildId() ?? void 0,
+                          i = C.A.getChannelId() ?? void 0;
+                      switch (U) {
+                          case u.rD.USER: {
+                              let e = E.default.getId();
+                              return R.Ay.getRecentlyTalked(i, 100).filter((t) => {
+                                  let { record: n } = t;
+                                  return n.id !== e;
+                              });
+                          }
+                          case u.rD.APPLICATION:
+                              return R.Ay.queryApplications({ query: "", limit: 100, fuzzy: !0 });
+                          case u.rD.GAME_PROFILE:
+                              return R.Ay.queryGames("", 100).map((e, t) => ({
+                                  type: u.rD.GAME_PROFILE,
+                                  record: (0, _.Sj)(e),
+                                  score: (0, R.zy)((0, R.XA)(e.name, "", t)),
+                                  comparator: e.name,
+                                  sortable: e.name.toLocaleLowerCase(),
+                              }));
+                          case u.rD.GUILD:
+                              return R.Ay.queryGuilds({ query: "", limit: 100, fuzzy: !0 });
+                          case u.rD.TEXT_CHANNEL:
+                              return R.Ay.queryChannels({
+                                  query: "",
+                                  guildId: N.A.getGuildId(),
+                                  limit: 100,
+                                  fuzzy: !0,
+                                  allowEmptyQueries: !0,
+                              });
+                          case u.rD.VOICE_CHANNEL:
+                              return R.Ay.queryChannels({
+                                  query: "",
+                                  guildId: N.A.getGuildId(),
+                                  limit: 100,
+                                  fuzzy: !0,
+                                  filter: () => !0,
+                                  type: A.vM,
+                                  allowEmptyQueries: !0,
+                              });
+                      }
+                      let r = [],
+                          s = new Set(),
+                          a = [];
+                      for (let e = 1; e < j.length; e += 1) {
+                          let t = W(j[e]);
+                          null != t &&
+                              ((t.type !== u.rD.TEXT_CHANNEL && t.type !== u.rD.VOICE_CHANNEL) ||
+                                  S.A.can(D.xBc.VIEW_CHANNEL, t.record)) &&
+                              (a.push(t), s.size < 3 && s.add(j[e]));
+                      }
+                      let o =
+                          ((e = (e) => e === i || s.has(e)),
+                          (t = []),
+                          g.A.getRecentlyEditedDrafts(g.C.ChannelMessage).forEach((n) => {
+                              let { channelId: i } = n;
+                              if (e(i)) return;
+                              let r = W(i);
+                              if (null != r) {
+                                  if (
+                                      (r.type === u.rD.TEXT_CHANNEL || r.type === u.rD.VOICE_CHANNEL) &&
+                                      !S.A.can(D.xBc.SEND_MESSAGES, r.record)
+                                  )
+                                      return;
+                                  t.push({ record: r, channelId: i });
                               }
-                              case u.rD.APPLICATION:
-                                  return R.Ay.queryApplications({ query: "", limit: 100, fuzzy: !0 });
-                              case u.rD.GAME_PROFILE:
-                                  return R.Ay.queryGames("", 100).map((e, t) => ({
-                                      type: u.rD.GAME_PROFILE,
-                                      record: (0, _.Sj)(e),
-                                      score: (0, R.zy)((0, R.XA)(e.name, "", t)),
-                                      comparator: e.name,
-                                      sortable: e.name.toLocaleLowerCase(),
-                                  }));
-                              case u.rD.GUILD:
-                                  return R.Ay.queryGuilds({ query: "", limit: 100, fuzzy: !0 });
-                              case u.rD.TEXT_CHANNEL:
-                                  return R.Ay.queryChannels({
-                                      query: "",
-                                      guildId: N.A.getGuildId(),
-                                      limit: 100,
-                                      fuzzy: !0,
-                                      allowEmptyQueries: !0,
-                                  });
-                              case u.rD.VOICE_CHANNEL:
-                                  return R.Ay.queryChannels({
-                                      query: "",
-                                      guildId: N.A.getGuildId(),
-                                      limit: 100,
-                                      fuzzy: !0,
-                                      filter: () => !0,
-                                      type: A.vM,
-                                      allowEmptyQueries: !0,
-                                  });
-                          }
-                          let r = [],
-                              s = new Set(),
-                              a = [];
-                          for (let e = 1; e < j.length; e += 1) {
-                              let t = W(j[e]);
-                              null != t &&
-                                  ((t.type !== u.rD.TEXT_CHANNEL && t.type !== u.rD.VOICE_CHANNEL) ||
-                                      S.A.can(D.xBc.VIEW_CHANNEL, t.record)) &&
-                                  (a.push(t), s.size < 3 && s.add(j[e]));
-                          }
-                          let o =
-                              ((e = (e) => e === i || s.has(e)),
-                              (t = []),
-                              g.A.getRecentlyEditedDrafts(g.C.ChannelMessage).forEach((n) => {
-                                  let { channelId: i } = n;
-                                  if (e(i)) return;
-                                  let r = W(i);
-                                  if (null != r) {
-                                      if (
-                                          (r.type === u.rD.TEXT_CHANNEL || r.type === u.rD.VOICE_CHANNEL) &&
-                                          !S.A.can(D.xBc.SEND_MESSAGES, r.record)
-                                      )
-                                          return;
-                                      t.push({ record: r, channelId: i });
-                                  }
-                              }),
-                              t);
-                          if (o.length > 0)
-                              for (let e of (r.push((0, u.jF)(L.intl.string(L.t["4B63jZ"]))), o))
-                                  s.add(e.channelId), r.push(e.record);
-                          let l = y.Ay.getMentionChannelIds().filter((e) => e !== i && !s.has(e)),
-                              c = [];
-                          for (let e = l.length - 1; e >= 0; e--) {
-                              let t = l[e];
-                              if (null == t) continue;
-                              let n = W(t);
-                              null != n && c.push({ channelId: t, result: n });
-                          }
-                          if (c.length > 0)
-                              for (let { channelId: e, result: t } of (r.push((0, u.jF)(L.intl.string(L.t["61Df13"]))),
-                              c))
-                                  s.add(t.record.id), s.add(e), r.push(t);
-                          if (null != n) {
-                              let e = A.Ay.getSelectableChannelIds(n)
-                                  .filter((e) => {
-                                      let t = m.A.getChannel(e);
-                                      return (
-                                          !(
-                                              null == t ||
-                                              e === i ||
-                                              s.has(e) ||
-                                              v.Ay.isChannelMuted(t.guild_id, e) ||
-                                              (null != t.parent_id && v.Ay.isChannelMuted(t.guild_id, t.parent_id))
-                                          ) && (0, h.Y)(t)
-                                      );
-                                  })
-                                  .map((e) => W(e))
-                                  .filter(O.Vq);
-                              Object.values(f.A.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
-                                  for (let n in t) {
-                                      let t = W(n);
-                                      null == t || s.has(t.record.id) || e.push(t);
-                                  }
-                              }),
-                                  e.length > 0 && (r.push((0, u.jF)(L.intl.string(L.t.ieCAhD))), (r = r.concat(e)));
-                          }
-                          let d = r.length > 0 ? 3 : 7;
-                          return (
-                              a.length > d && a.splice(d),
-                              a.length > 0 && (r = [(0, u.jF)(L.intl.string(L.t["80lOZ1"])), ...a, ...r]),
-                              r
-                          );
-                      })()
-                    : e),
-            B,
-        )
-    ) {
-        B = e;
-        var n = e,
-            i = t;
-        switch (U) {
-            case u.rD.USER: {
-                let e = T.A.getGuild(N.A.getGuildId());
-                n.unshift(
-                    (0, u.jF)(
-                        null != e
-                            ? L.intl.formatToPlainString(L.t.FREzQs, { name: e.name })
-                            : L.intl.string(L.t.XFYW1o),
+                          }),
+                          t);
+                      if (o.length > 0)
+                          for (let e of (r.push((0, u.jF)(L.intl.string(L.t["4B63jZ"]))), o))
+                              s.add(e.channelId), r.push(e.record);
+                      let l = y.Ay.getMentionChannelIds().filter((e) => e !== i && !s.has(e)),
+                          c = [];
+                      for (let e = l.length - 1; e >= 0; e--) {
+                          let t = l[e];
+                          if (null == t) continue;
+                          let n = W(t);
+                          null != n && c.push({ channelId: t, result: n });
+                      }
+                      if (c.length > 0)
+                          for (let { channelId: e, result: t } of (r.push((0, u.jF)(L.intl.string(L.t["61Df13"]))), c))
+                              s.add(t.record.id), s.add(e), r.push(t);
+                      if (null != n) {
+                          let e = A.Ay.getSelectableChannelIds(n)
+                              .filter((e) => {
+                                  let t = m.A.getChannel(e);
+                                  return (
+                                      !(
+                                          null == t ||
+                                          e === i ||
+                                          s.has(e) ||
+                                          v.Ay.isChannelMuted(t.guild_id, e) ||
+                                          (null != t.parent_id && v.Ay.isChannelMuted(t.guild_id, t.parent_id))
+                                      ) && (0, h.Y)(t)
+                                  );
+                              })
+                              .map((e) => W(e))
+                              .filter(O.Vq);
+                          Object.values(f.A.getActiveJoinedUnreadThreadsForGuild(n)).forEach((t) => {
+                              for (let n in t) {
+                                  let t = W(n);
+                                  null == t || s.has(t.record.id) || e.push(t);
+                              }
+                          }),
+                              e.length > 0 && (r.push((0, u.jF)(L.intl.string(L.t.ieCAhD))), (r = r.concat(e)));
+                      }
+                      let d = r.length > 0 ? 3 : 7;
+                      return (
+                          a.length > d && a.splice(d),
+                          a.length > 0 && (r = [(0, u.jF)(L.intl.string(L.t["80lOZ1"])), ...a, ...r]),
+                          r
+                      );
+                  })()
+                : e),
+        B,
+    ) &&
+        ((B = e),
+        (function (e, t) {
+            switch (U) {
+                case u.rD.USER: {
+                    let t = T.A.getGuild(N.A.getGuildId());
+                    e.unshift(
+                        (0, u.jF)(
+                            null != t
+                                ? L.intl.formatToPlainString(L.t.FREzQs, { name: t.name })
+                                : L.intl.string(L.t.XFYW1o),
+                        ),
                     ),
-                ),
-                    (G = n);
-                break;
+                        (G = e);
+                    break;
+                }
+                case u.rD.TEXT_CHANNEL:
+                    e.unshift((0, u.jF)(L.intl.string(L.t.W26k4V))), (G = e);
+                    break;
+                case u.rD.VOICE_CHANNEL:
+                    e.unshift((0, u.jF)(L.intl.string(L.t.zUoI5C))), (G = e);
+                    break;
+                case u.rD.GUILD:
+                    e.unshift((0, u.jF)(L.intl.string(L.t.olADPs))), (G = e);
+                    break;
+                case u.rD.APPLICATION:
+                    e.unshift((0, u.jF)(L.intl.string(L.t.VwK1ld))), (G = e);
+                    break;
+                case u.rD.GAME_PROFILE:
+                    e.unshift((0, u.jF)(L.intl.string(L.t.gEp2SG))), (G = e);
+                    break;
+                default: {
+                    let { enabled: t } = b.s.getConfig({ location: "QuickSwitcherStore.updateResults" });
+                    if (t) {
+                        let t = e.filter((e) => e.type === u.rD.GAME_PROFILE).slice(0, 3);
+                        G = [...e.filter((e) => e.type !== u.rD.GAME_PROFILE), ...t];
+                    } else G = e;
+                }
             }
-            case u.rD.TEXT_CHANNEL:
-                n.unshift((0, u.jF)(L.intl.string(L.t.W26k4V))), (G = n);
-                break;
-            case u.rD.VOICE_CHANNEL:
-                n.unshift((0, u.jF)(L.intl.string(L.t.zUoI5C))), (G = n);
-                break;
-            case u.rD.GUILD:
-                n.unshift((0, u.jF)(L.intl.string(L.t.olADPs))), (G = n);
-                break;
-            case u.rD.APPLICATION:
-                n.unshift((0, u.jF)(L.intl.string(L.t.VwK1ld))), (G = n);
-                break;
-            case u.rD.GAME_PROFILE:
-                n.unshift((0, u.jF)(L.intl.string(L.t.gEp2SG))), (G = n);
-                break;
-            default:
-                G = n;
-        }
-        if (i !== F) (F = i), (V = Math.max(i.length, V)), (P = (0, u.Vv)(u.vB.DOWN, -1, G));
-        else {
-            let e = G[P];
-            null != e && e.type === u.rD.HEADER && (P = (0, u.Vv)(u.vB.DOWN, P, G));
-        }
-        X.emitChange();
-    }
+            if (t !== F) (F = t), (V = Math.max(t.length, V)), (P = (0, u.Vv)(u.vB.DOWN, -1, G));
+            else {
+                let e = G[P];
+                null != e && e.type === u.rD.HEADER && (P = (0, u.Vv)(u.vB.DOWN, P, G));
+            }
+            X.emitChange();
+        })(e, t));
 }
 function z() {
     (F = null), (V = 0), (B = []), null != i && (i.destroy(), (i = null));
