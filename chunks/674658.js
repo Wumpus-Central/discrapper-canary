@@ -1,27 +1,22 @@
 "use strict";
-n.d(t, { q: () => d });
+n.d(t, { q: () => c });
 var i = n(64700),
     r = n(575593),
     s = n(702841),
     a = n(67480),
-    o = n(564064),
+    o = n(662388),
     l = n(590180),
-    u = n(758836),
-    c = n(652215);
-function d(e, t) {
+    u = n(652215);
+function c(e, t) {
     let n = (0, s.bG)([a.A], () => (null != e ? a.A.get(e) : null)),
-        d = null != n && n.productLine !== c.EZt.COLLECTIBLES,
-        [_, h] = (0, s.yK)([l.A], () => [l.A.getProduct(e), l.A.getProductFetch(e)]),
-        f = !0 === t && _?.type === r.R.BUNDLE && 0 === _.items.length;
+        c = null != n && n.productLine !== u.EZt.COLLECTIBLES,
+        [d, _] = (0, s.yK)([l.A], () => [l.A.getProduct(e), l.A.getProductFetch(e)]),
+        h = (0, s.bG)([l.A], () => l.A.isProductFetchBackedOff(e)),
+        f = !0 === t && d?.type === r.R.BUNDLE && 0 === d.items.length;
     return (
         (0, i.useEffect)(() => {
-            null == e ||
-                (null != _ && !f) ||
-                d ||
-                h?.state === "fetching" ||
-                (h?.state === "error" && null != h.endedAt && Date.now() - h.endedAt < u.Gj) ||
-                (0, o.Jp)(e, { includeBundles: t });
-        }, [e, _, d, h, t, f]),
-        { product: _, isFetching: h?.state === "fetching" }
+            null == e || (null != d && !f) || c || _?.state === "fetching" || h || (0, o.Jp)(e, { includeBundles: t });
+        }, [e, d, c, _, t, f, h]),
+        { product: d, isFetching: _?.state === "fetching" }
     );
 }

@@ -696,7 +696,7 @@ async function ea(e, t) {
     }
 }
 async function eo(e, t) {
-    h.A.isFetchingProduct(e) || (await ea(e, t));
+    h.A.isFetchingProduct(e) || h.A.isProductFetchBackedOff(e) || (await ea(e, t));
 }
 function el(e) {
     let t = Date.now();
