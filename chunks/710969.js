@@ -25,7 +25,7 @@ var i = n(665260),
     s = n(38405),
     a = n(265704),
     o = n(859703),
-    l = n(507107),
+    l = n(24001),
     u = n(302654),
     c = n(190107),
     d = n(652215);
@@ -84,13 +84,13 @@ function S(e, t, n) {
 }
 function y(e) {
     return {
-        [l.uF.QUEST_BAR]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        [l.uF.QUEST_BAR_V2]: l.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        [l.uF.QUEST_BAR_MOBILE]: l.yW.MOBILE_HOME_DOCK_AREA,
-        [l.uF.QUEST_HOME_HERO]: l.yW.QUEST_HOME_BANNER_DESKTOP,
-        [l.uF.QUEST_HOME_HERO_SHELF]: l.yW.QUEST_HOME_BANNER_DESKTOP,
-        [l.uF.QUEST_HOME_MOBILE_CAROUSEL]: l.yW.QUEST_HOME_MOBILE_CAROUSEL,
-        [l.uF.VIDEO_MODAL_MOBILE]: l.yW.VIDEO_MODAL_MOBILE,
+        [l.uF.QUEST_BAR]: l.p9.DESKTOP_ACCOUNT_PANEL_AREA,
+        [l.uF.QUEST_BAR_V2]: l.p9.DESKTOP_ACCOUNT_PANEL_AREA,
+        [l.uF.QUEST_BAR_MOBILE]: l.p9.MOBILE_HOME_DOCK_AREA,
+        [l.uF.QUEST_HOME_HERO]: l.p9.QUEST_HOME_BANNER_DESKTOP,
+        [l.uF.QUEST_HOME_HERO_SHELF]: l.p9.QUEST_HOME_BANNER_DESKTOP,
+        [l.uF.QUEST_HOME_MOBILE_CAROUSEL]: l.p9.QUEST_HOME_MOBILE_CAROUSEL,
+        [l.uF.VIDEO_MODAL_MOBILE]: l.p9.VIDEO_MODAL_MOBILE,
     }[e];
 }
 function C(e) {
@@ -109,14 +109,14 @@ function N(e) {
 }
 function v(e, t) {
     let n = (function (e, t) {
-        if ((e !== l.yW.QUEST_HOME_MOBILE_CAROUSEL && e !== l.yW.VIDEO_MODAL_MOBILE) || null == t) return null;
+        if ((e !== l.p9.QUEST_HOME_MOBILE_CAROUSEL && e !== l.p9.VIDEO_MODAL_MOBILE) || null == t) return null;
         let n = a.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
         return null != n ? N(n) : null;
     })(e, t);
     if (null != n) return n;
     let { enableNewRequestBehavior: i } = u.A.getConfig({ location: "getQuestDeliveryDataForPlacement" }),
         r = o.A.questAdDecisionByPlacement.get(e);
-    if (e === l.yW.QUEST_HOME_BANNER_DESKTOP && null != r) return N(r);
+    if (e === l.p9.QUEST_HOME_BANNER_DESKTOP && null != r) return N(r);
     if (i) return null == r ? null : N(r);
     {
         let t = o.A.questToDeliverForPlacement.get(e);

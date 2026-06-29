@@ -27,7 +27,7 @@ var n = s(627968),
     N = s(287809),
     j = s(340124),
     U = s(859703),
-    p = s(507107),
+    p = s(24001),
     M = s(104886);
 let b = (0, s(945810).mj)({
     name: "2026-06-livestream-entrypoint-v2",
@@ -139,7 +139,7 @@ function eA(e) {
         em = (0, a.bG)([h.A], () => h.A.getParticipants(e.channelId), [e.channelId]),
         ex = (0, a.bG)(
             [U.A],
-            () => (0, P.t6)(U.A.quests, U.A.questToDeliverForPlacement, p.yW.DESKTOP_ACCOUNT_PANEL_AREA),
+            () => (0, P.t6)(U.A.quests, U.A.questToDeliverForPlacement, p.p9.DESKTOP_ACCOUNT_PANEL_AREA),
             [],
         ),
         { isCurrentUserStreamingQuestApplication: eQ, isQuestInQuestBar: eh } = (0, a.cf)([v.A], () => {
@@ -288,8 +288,8 @@ function eA(e) {
     let e0 = null != i.userStatus && (0, P.gO)(i.userStatus, p.uF.QUEST_LIVE_STREAM),
         e1 = null != i.userStatus && (0, P.gO)(i.userStatus, p.uF.QUEST_BAR),
         e4 = eh && !e1,
-        e7 = y.t.useConfig({ location: ea.rE.QUEST_CHANNEL_CALL_HEADER }),
-        e6 = (0, Y.Pd)(i);
+        e6 = y.t.useConfig({ location: ea.rE.QUEST_CHANNEL_CALL_HEADER }),
+        e7 = (0, Y.Pd)(i);
     if (
         (eG.info({
             isQuestCallHeaderDismissed: e0,
@@ -447,9 +447,9 @@ function eA(e) {
                                             onClick: ew,
                                             fullWidth: !ez || i.config.features.includes(ea.Li.CLOUD_GAMING_ACTIVITY),
                                         }),
-                                        e7.enabled &&
-                                        e6 === Y.UA.UNENROLLED &&
-                                        e7.enabledQuestStates.has(Y.UA.UNENROLLED) &&
+                                        e6.enabled &&
+                                        e7 === Y.UA.UNENROLLED &&
+                                        e6.enabledQuestStates.has(Y.UA.UNENROLLED) &&
                                         !eK
                                             ? (0, n.jsx)(X.A, {
                                                   quest: i,

@@ -20,7 +20,7 @@ var s = n(627968),
     v = n(274670),
     g = n(144779),
     A = n(363195),
-    y = n(507107),
+    y = n(24001),
     T = n(104886),
     S = n(347135),
     I = n(46948),
@@ -33,7 +33,7 @@ var s = n(627968),
     R = n(371912),
     b = n(818348),
     D = n(375708),
-    k = n(817173);
+    k = n(212885);
 function P(t) {
     let { quest: e, errorHints: n, transitionState: a, onClose: h, sourceQuestContent: j } = t,
         [f, O] = (0, i.useState)(n),

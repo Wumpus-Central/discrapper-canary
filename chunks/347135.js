@@ -79,7 +79,7 @@ var A = n(27620),
 n(323874), n(14289), n(35956), n(636537), n(228366), n(181658);
 var w = n(46948);
 n(107195), n(881615), n(404851), n(265704);
-var M = n(507107),
+var M = n(24001),
     P = n(710969),
     x = n(652215),
     k = n(178540),
@@ -233,7 +233,7 @@ function en() {
             ) {
                 if ((n(!0), (0, U.N1)(), (0, D.isMac)() && "focused" !== m.A.getState())) return;
                 let { enableNewRequestBehavior: t } = V.A.getConfig({ location: "QuestHookUseQuests" });
-                if (!t) (0, U.r8)(M.yW.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
+                if (!t) (0, U.r8)(M.p9.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
             }
         }, [e.fetchPolicy, l, t, s, o, e.callerSource]),
         { quests: i, excludedQuests: r, isFetchingCurrentQuests: s, hasFetched: t }

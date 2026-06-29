@@ -10,7 +10,7 @@ var n = s(627968),
     E = s(365199),
     d = s(743368),
     A = s(246356),
-    T = s(507107),
+    T = s(24001),
     S = s(3738),
     C = s(347135),
     _ = s(646917),
@@ -23,7 +23,7 @@ var n = s(627968),
     f = s(617986),
     I = s(190107),
     g = s(375708),
-    v = s(678413);
+    v = s(305421);
 function N(e) {
     let { quest: t, isFocused: s, onAcceptQuest: N, isEnrolling: j } = e,
         U = (0, S.A9)(t, T.uF.QUEST_LIVE_STREAM, I.rE.QUEST_CHANNEL_CALL_HEADER),

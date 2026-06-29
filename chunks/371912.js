@@ -38,7 +38,7 @@ var m = n(87719),
     S = n(38405),
     y = n(340124),
     C = n(859703),
-    N = n(507107),
+    N = n(24001),
     v = n(192444),
     R = n(104886),
     O = n(302654),
@@ -311,7 +311,7 @@ function en() {
         i,
         { enableNewRequestBehavior: s } = O.A.useConfig({ location: "useQuestBarQuest" }),
         a =
-            ((e = N.yW.DESKTOP_ACCOUNT_PANEL_AREA),
+            ((e = N.p9.DESKTOP_ACCOUNT_PANEL_AREA),
             (t = (0, r.useRef)(null)),
             (n = (0, l.bG)([C.A], () => C.A.questAdDecisionByPlacement.get(e) ?? null)),
             (i = (0, l.bG)([C.A], () => (n?.questId != null ? (C.A.quests.get(n.questId) ?? null) : null))),
@@ -332,7 +332,7 @@ function en() {
         o = (0, l.bG)([C.A], () => C.A.getQuestPreviewOverride(N.uF.QUEST_BAR_V2), []),
         u = (0, l.bG)(
             [C.A],
-            () => (0, U.t6)(C.A.quests, C.A.questToDeliverForPlacement, N.yW.DESKTOP_ACCOUNT_PANEL_AREA) ?? null,
+            () => (0, U.t6)(C.A.quests, C.A.questToDeliverForPlacement, N.p9.DESKTOP_ACCOUNT_PANEL_AREA) ?? null,
         );
     return o ?? (s ? a : u);
 }

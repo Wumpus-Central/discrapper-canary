@@ -7,7 +7,7 @@ var i = n(439372),
     o = n(38405),
     l = n(340124),
     u = n(859703),
-    c = n(507107),
+    c = n(24001),
     d = n(302654),
     _ = n(945810);
 let h = { questFetchJitterMs: 5 * s.A.Millis.SECOND, questHomeHeroJitterMs: 5 * s.A.Millis.SECOND },
@@ -53,7 +53,7 @@ class T extends i.A {
         )
             return;
         let { enableNewRequestBehavior: t } = d.A.getConfig({ location: "QuestFetchManager" });
-        t || (0, l.r8)(c.yW.DESKTOP_ACCOUNT_PANEL_AREA, e);
+        t || (0, l.r8)(c.p9.DESKTOP_ACCOUNT_PANEL_AREA, e);
     }
     handleQuestsFetchCurrentQuestsBegin = () => {
         this.lastFetchAttemptedAt = Date.now();

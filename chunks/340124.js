@@ -225,7 +225,7 @@ class U {
     }
 }
 let G = new U();
-var F = n(507107),
+var F = n(24001),
     V = n(405670),
     B = n(104886);
 let j = (0, n(945810).mj)({
@@ -599,7 +599,7 @@ async function eh(e, t) {
             null == i)
         )
             return;
-        e === F.yW.DESKTOP_ACCOUNT_PANEL_AREA && M.A.startTracking(i.id),
+        e === F.p9.DESKTOP_ACCOUNT_PANEL_AREA && M.A.startTracking(i.id),
             y.default.track(b.HAw.QUEST_DECISION_RECEIVED, {
                 ...(0, E.A)(),
                 quest_id: i.id,
@@ -706,7 +706,7 @@ async function eA(e) {
 }
 let eI = 5 * C.A.Millis.MINUTE;
 async function eT() {
-    let e = F.yW.QUEST_HOME_BANNER_DESKTOP;
+    let e = F.p9.QUEST_HOME_BANNER_DESKTOP;
     if (P.A.isFetchingQuestToDeliverByPlacement(e)) return;
     let t = P.A.getLastFetchedQuestHomeHero();
     if (null != t && Date.now() - t <= eI) return;
@@ -747,7 +747,7 @@ async function eT() {
     }
 }
 async function eS(e) {
-    let t = F.yW.QUEST_HOME_BANNER_DESKTOP,
+    let t = F.p9.QUEST_HOME_BANNER_DESKTOP,
         n = Date.now();
     o.h.dispatch({ type: "QUESTS_FETCH_QUEST_HOME_HERO_BEGIN", placement: t });
     try {

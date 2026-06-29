@@ -55,7 +55,7 @@ var i,
         i),
     E = n(636537),
     m = n(927813),
-    g = n(507107);
+    g = n(24001);
 let A = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
@@ -155,11 +155,11 @@ let F = "1333839522189938740",
     H = "1496993616537587813",
     Y = "1496993616537587812",
     W = new Set([
-        g.yW.DESKTOP_ACCOUNT_PANEL_AREA,
-        g.yW.MOBILE_HOME_DOCK_AREA,
-        g.yW.QUEST_HOME_BANNER_DESKTOP,
-        g.yW.QUEST_HOME_MOBILE_CAROUSEL,
-        g.yW.VIDEO_MODAL_MOBILE,
+        g.p9.DESKTOP_ACCOUNT_PANEL_AREA,
+        g.p9.MOBILE_HOME_DOCK_AREA,
+        g.p9.QUEST_HOME_BANNER_DESKTOP,
+        g.p9.QUEST_HOME_MOBILE_CAROUSEL,
+        g.p9.VIDEO_MODAL_MOBILE,
     ]),
     K = new Set([
         h.n.STREAM_ON_DESKTOP,
