@@ -125,6 +125,9 @@ let D = new b(s.h, {
             (C = null),
             (N = { state: "idle" });
     },
+    STOREFRONT_PROMOTION_ID_OVERRIDE_SET: function () {
+        (c = {}), (u = {});
+    },
     POST_CONNECTION_OPEN: function () {
         (f = {}), (p = {}), (E = new Set());
     },
