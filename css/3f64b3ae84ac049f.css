@@ -63,6 +63,12 @@
     margin: calc(var(--custom-profile-frame-scaled-overflow-top)*1px) calc(var(--custom-profile-frame-scaled-overflow-horizontal)*1px) calc(var(--custom-profile-frame-scaled-overflow-bottom)*1px)
 }
 
+@media (max-height:510px) {
+    .themeContainer__7f9c0.custom-profile-frame {
+        margin: 0
+    }
+}
+
 .header__7f9c0 {
     margin-bottom: 8px;
     min-height: calc(var(--custom-user-profile-banner-height) + 39px);
