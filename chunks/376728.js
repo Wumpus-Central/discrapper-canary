@@ -125,8 +125,9 @@ function ed(e) {
             return K.A.can(s, r) ? t.id : (B.Ay.getDefaultChannel(e, !0, en.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
         })(t, i, r),
         m = f === en.rbe.GUILD_STAGE_VOICE,
-        I = E === r?.targetChannelId ? r?.targetMessageId : void 0,
-        T = en.BVt.CHANNEL(t, E, I);
+        I = r?.targetChannelId != null && E === r.targetChannelId,
+        T = I ? r?.targetMessageId : void 0,
+        y = en.BVt.CHANNEL(t, E, T);
     E === i.id && (0, G.QE)(f) && r?.autoJoin !== !1
         ? (0, C.B)(() => {
               Promise.resolve()
@@ -135,7 +136,7 @@ function ed(e) {
                       let { default: n } = e,
                           a = () => {
                               if (m) {
-                                  (0, U.av)(i instanceof G.YB ? i : (0, G.createChannelRecord)(i)), (0, k.pX)(T);
+                                  (0, U.av)(i instanceof G.YB ? i : (0, G.createChannelRecord)(i)), (0, k.pX)(y);
                                   return;
                               }
                               r?.muteOnJoinVoiceChannel && J.A.setSelfMute(h.x.DEFAULT, !0),
@@ -171,20 +172,23 @@ function ed(e) {
               commandOrigin: S.iw.CHAT,
           })),
         (function (e, t) {
-            let { type: n } = e,
-                { transitionTo: i, welcomeModalChannelId: r, guildScheduledEvent: s } = t ?? {},
-                a = n === en.rbe.GUILD_STAGE_VOICE,
-                o = { source: x.A.INVITE_ACCEPT, navigationReplace: !0 };
+            let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                { type: i } = e,
+                { transitionTo: r, welcomeModalChannelId: s, guildScheduledEvent: a } = t ?? {},
+                o = i === en.rbe.GUILD_STAGE_VOICE,
+                l = { source: x.A.INVITE_ACCEPT, navigationReplace: !0 };
             return (
-                null != r && (o.welcomeModalChannelId = r),
-                a && (o.state = { stageInviteKey: eo.J2 }),
-                null != s && (o.guildScheduledEventId = s.id),
-                (e) => (null != i ? i(e, o) : (0, k.pX)(e, o))
+                n && (l.openChannel = !0),
+                null != s && (l.welcomeModalChannelId = s),
+                o && (l.state = { stageInviteKey: eo.J2 }),
+                null != a && (l.guildScheduledEventId = a.id),
+                (e) => (null != r ? r(e, l) : (0, k.pX)(e, l))
             );
         })(
             i,
             r,
-        )(T);
+            I,
+        )(y);
 }
 function e_(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
