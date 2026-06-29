@@ -74,7 +74,7 @@ function D(e) {
     let T = E ? void 0 : _?.complex_icon_animated_url,
         S = T ?? _?.complex_icon_static_url ?? _?.simple_icon_url ?? u,
         C = null != T && S === T;
-    if (g) return (0, i.jsx)(L, { userId: o, title: n, badgeImage: S, rarity: _?.rarity, children: s });
+    if (g) return (0, i.jsx)(L, { userId: o, title: n, badgeImage: S, children: s });
     let O = _?.info_label ?? (null != f ? c.intl.formatToPlainString(c.t["0aEh2a"], { date: new Date(f) }) : void 0);
     return (0, i.jsx)(R.A, {
         title: n,
@@ -82,15 +82,14 @@ function D(e) {
         body: O,
         badgeImage: S,
         badgeName: r,
-        rarity: _?.rarity,
         variant: m ? "nitro" : "default",
         isAnimated: C,
         children: s,
     });
 }
 function L(e) {
-    let { children: t, userId: n, title: r, badgeImage: s, rarity: a } = e,
-        o = (0, p.bG)(
+    let { children: t, userId: n, title: r, badgeImage: s } = e,
+        a = (0, p.bG)(
             [O.A, l.A],
             () =>
                 l.A.hidePersonalInformation
@@ -100,7 +99,7 @@ function L(e) {
                       : void 0,
             [n],
         );
-    return (0, i.jsx)(R.A, { title: r, body: o, badgeImage: s, badgeName: r, rarity: a, children: t });
+    return (0, i.jsx)(R.A, { title: r, body: a, badgeImage: s, badgeName: r, children: t });
 }
 var w = n(470739),
     M = n(662388),
