@@ -37,12 +37,12 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
     ],
     _ = 100,
     h = [
-        [0xee9653, 8117632, 0xf7e064, 0xdb5acf, 5989865],
-        [0xea5146, 0xef9043, 0xf7d462, 0xeb5f9e, 8151537],
-        [0xe74584, 0xa249f5, 6326499, 0xafd98b, 0xf9e166],
-        [9954010, 9157881, 9470454, 0xcb81e2, 0xe48ed3],
-        [0xf4e57c, 0xf4c17a, 0xec8e89, 0xbd79d7, 0x9f7ef6],
-        [0xb6e6a6, 0xe2ec97, 0xf7d79d, 0xefbec3, 0xe9b8d6],
+        [0xfe9242, 3534206, 0xffe047, 0xff4cd2, 5793266],
+        [0xff3d3d, 0xff8a2a, 0xffd447, 0xff4fa3, 8086015],
+        [7997702, 0xc81e12, 0xf45a18, 0xff9500, 0xffd447],
+        [8316888, 8178687, 8359167, 0xb56dff, 0xf38ad8],
+        [3528287, 1497266, 2147829, 2850047, 7032319],
+        [0xa7e8a1, 0xd9f08c, 0xffe08a, 0xffc4a8, 0xf3b6d9],
     ];
 function f(e) {
     switch (e) {
