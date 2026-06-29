@@ -46,6 +46,7 @@ function d(e) {
         viewingChannelId: r.viewingChannelId,
         forceWhite: !!r.forceWhite,
         textColor: r.textColor,
+        disablePressableChannelMention: !!r.disablePressableChannelMention,
     };
 }
 function _(e) {
