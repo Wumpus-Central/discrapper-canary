@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => E, O: () => m });
+n.d(t, { Ay: () => E, O0: () => g });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -22,7 +22,7 @@ function E(e) {
             gradientColor: _ = "green",
             tooltip: h,
             text: E,
-            trailingText: m,
+            trailing: m,
             ...g
         } = e,
         A = () =>
@@ -39,14 +39,7 @@ function E(e) {
                             color: "currentColor",
                             children: "string" == typeof E ? (0, f.U)(E) : E,
                         }),
-                        null != m
-                            ? (0, i.jsx)(l.E, {
-                                  className: p.a9,
-                                  variant: "text-xs/medium",
-                                  color: "currentColor",
-                                  children: "string" == typeof m ? (0, f.U)(m) : m,
-                              })
-                            : null,
+                        (0, i.jsx)("div", { className: p.HF, children: m }),
                     ],
                 }),
             });
@@ -57,6 +50,20 @@ function E(e) {
           : A();
 }
 function m(e) {
+    let { trailingText: t, ...n } = e;
+    return (0, i.jsx)(E, {
+        trailing:
+            null != t
+                ? (0, i.jsx)(l.E, {
+                      variant: "text-xs/medium",
+                      color: "currentColor",
+                      children: "string" == typeof t ? (0, f.U)(t) : t,
+                  })
+                : null,
+        ...n,
+    });
+}
+function g(e) {
     let { text: t, endDatetime: n, ...s } = e,
         [a, o] = r.useState(() => (0, h.u)(n));
     return ((0, _.A)(() => {
@@ -64,5 +71,5 @@ function m(e) {
     }, 1e3),
     null != n && null == a)
         ? null
-        : (0, i.jsx)(E, { text: t, trailingText: null != a ? a : void 0, ...s });
+        : (0, i.jsx)(m, { text: t, trailingText: null != a ? a : void 0, ...s });
 }

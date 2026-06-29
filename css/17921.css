@@ -4496,7 +4496,7 @@ body .headerAnimation_b54a5b {
     gap: var(--space-8);
     padding-block: var(--space-4);
     padding-inline-end: var(--space-8);
-    padding-inline-start: var(--space-4)
+    padding-inline-start: var(--space-8)
 }
 
 .offerNoticeContent__8d3f5 {
@@ -4508,7 +4508,7 @@ body .headerAnimation_b54a5b {
     justify-content: space-between
 }
 
-.offerNoticeTrailingText__8d3f5 {
+.offerNoticeTrailing__8d3f5 {
     flex-shrink: 0;
     margin-inline-start: auto;
     text-align: end

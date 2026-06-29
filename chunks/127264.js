@@ -4765,7 +4765,7 @@ function sf(e) {
                           null != h &&
                               (0, r.jsx)("div", {
                                   className: sh.Is,
-                                  children: (0, r.jsx)(s_.O, { Icon: h.Icon, text: h.text }),
+                                  children: (0, r.jsx)(s_.O0, { Icon: h.Icon, text: h.text }),
                               }),
                           (0, r.jsx)("div", {
                               className: sh.UD,
@@ -4984,7 +4984,7 @@ let sL = {
                                         (0, so.Ri)(y) &&
                                         (0, r.jsx)(eA.w, { type: "info", children: ec.intl.string(ec.t.lORYb6) }),
                                     null != N &&
-                                        (0, r.jsx)(s_.O, {
+                                        (0, r.jsx)(s_.O0, {
                                             Icon: N.Icon,
                                             text: N.text,
                                             endDatetime: N.endsAt,

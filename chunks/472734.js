@@ -24,7 +24,7 @@ var n = a(627968),
     T = a(188275),
     I = a(652215),
     R = a(375708),
-    N = a(891831);
+    N = a(520951);
 function y(t) {
     let { transitionState: i, onClose: a, sku: y, application: j, analyticsLocations: g, entitlement: D } = t,
         [b, w] = (0, C.L)(j?.id),
@@ -127,7 +127,7 @@ function y(t) {
                         null != B &&
                             (0, n.jsx)("div", {
                                 className: N.I,
-                                children: (0, n.jsx)(O.O, { Icon: B.Icon, text: B.text }),
+                                children: (0, n.jsx)(O.O0, { Icon: B.Icon, text: B.text }),
                             }),
                     ],
                 }),

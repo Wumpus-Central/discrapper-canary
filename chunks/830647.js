@@ -596,7 +596,7 @@ function eL(e) {
                 direction: "vertical",
                 gap: 12,
                 children: [
-                    null != $ && (0, l.jsx)(eI.O, { Icon: $.Icon, text: $.text, endDatetime: $.endsAt }),
+                    null != $ && (0, l.jsx)(eI.O0, { Icon: $.Icon, text: $.text, endDatetime: $.endsAt }),
                     z ? (0, l.jsx)(A.y, { className: eS.Zp }) : (0, l.jsx)("div", { className: eS.HV, children: W }),
                 ],
             }),
@@ -672,7 +672,7 @@ function eM(e) {
                       direction: "vertical",
                       gap: 12,
                       children: [
-                          null != _ && (0, l.jsx)(eI.O, { Icon: _.Icon, text: _.text, endDatetime: _.endsAt }),
+                          null != _ && (0, l.jsx)(eI.O0, { Icon: _.Icon, text: _.text, endDatetime: _.endsAt }),
                           I,
                           (0, l.jsx)("div", { className: eS.aS, children: j }),
                       ],
