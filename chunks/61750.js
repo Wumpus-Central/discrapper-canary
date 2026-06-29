@@ -57,10 +57,9 @@ let a = function (e) {
                 n.e("86546"),
                 n.e("43256"),
                 n.e("14122"),
-                n.e("2750"),
                 n.e("25265"),
-                n.e("40481"),
-            ]).then(n.bind(n, 521720));
+                n.e("95632"),
+            ]).then(n.bind(n, 879059));
             return (n) =>
                 (0, i.jsx)(e, {
                     product: t,

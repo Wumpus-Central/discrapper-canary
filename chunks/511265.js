@@ -1,4 +1,4 @@
-n.d(t, { p: () => g });
+n.d(t, { p: () => d });
 var s = n(64700),
     l = n(702841),
     r = n(287809),
@@ -6,9 +6,8 @@ var s = n(64700),
     i = n(4227),
     o = n(993408),
     u = n(623373),
-    c = n(660653),
-    d = n(466459);
-function g() {
+    c = n(466459);
+function d() {
     let e = (0, l.bG)([r.default], () => r.default.getCurrentUser()),
         t = a.Ay.canUseShopDiscounts(e);
     return (0, s.useCallback)(
@@ -16,9 +15,8 @@ function g() {
             null == e || 0 === e.length
                 ? e
                 : e.filter((e) => {
-                      let { isPurchased: n } = (0, d.o)(i.A, e);
+                      let { isPurchased: n } = (0, c.o)(i.A, e);
                       if (!(0, o.aw)(e) || (0, o.tt)(e) || n) return !0;
-                      if (!(0, c.uh)(e)) return !1;
                       if ((0, u.Ab)(e)) return null != (0, u.CW)({ product: e, hasShopDiscount: t });
                       let s = (0, o.l8)(t),
                           l = (0, o.yt)(e, s);

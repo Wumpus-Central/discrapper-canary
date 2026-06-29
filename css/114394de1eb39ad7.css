@@ -1,0 +1,155 @@
+.container_e7c728 {
+    flex: 1;
+    justify-content: space-between
+}
+
+.container_e7c728,
+.guildPrefixContainer_e7c728 {
+    align-items: center;
+    display: flex;
+    min-width: 0
+}
+
+.guildPrefixContainer_e7c728 {
+    justify-content: center
+}
+
+.guildPrefixIcon_e7c728 {
+    flex: 1 0 auto
+}
+
+.details_e7c728 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-width: 0;
+    padding-inline-start: 8px
+}
+
+.guildName_e7c728 {
+    margin-inline-end: 4px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%
+}
+
+.tag_e7c728 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-strong);
+    flex: 0;
+    padding: 4px 8px
+}
+
+.badge_e7c728 {
+    margin-inline-end: 2px;
+    vertical-align: top
+}
+
+.tagContainer_e7c728 {
+    flex: 0 0 auto
+}
+
+.subtitle__105ba {
+    margin-bottom: 16px
+}
+
+.select__105ba,
+.selectPopout__105ba {
+    gap: 8px
+}
+
+.newBadge__105ba {
+    margin-inline-start: var(--space-4)
+}
+
+.displayNameStylesSection_e60bc0 {
+    margin-top: var(--space-24)
+}
+
+.section__84ed6:not(:last-child) {
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: var(--space-24);
+    padding-bottom: var(--space-24)
+}
+
+.sectionsContainer_e65a2c {
+    flex: 1;
+    padding-bottom: var(--space-48)
+}
+
+.floatingNitroUpsell__1abfe {
+    inset: auto;
+    bottom: var(--space-32);
+    inset-inline: var(--space-24);
+    max-width: 740px;
+    padding: var(--space-16);
+    position: sticky;
+    z-index: 100
+}
+
+.profilePreviewContainer__1abfe {
+    display: flex;
+    justify-content: center
+}
+
+.nameplatePreviewPlaceholder__1abfe {
+    background: var(--background-mod-normal)
+}
+
+.tryItOutButton__1abfe {
+    border: 1px solid var(--border-subtle);
+    border-radius: calc(var(--radius-sm) + 1px)
+}
+
+.divider_d6f9e9 {
+    margin-bottom: 24px;
+    padding-bottom: 4px
+}
+
+.divider_d6f9e9,
+.tabBar_d6f9e9 {
+    border-bottom: 1px solid var(--border-subtle)
+}
+
+.tabBar_d6f9e9 {
+    margin-bottom: 16px;
+    margin-top: 0
+}
+
+.tabBarItem_d6f9e9 {
+    padding-bottom: 16px
+}
+
+.guildTabBarItem_d6f9e9 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.profileCustomizationTab__3cfcf {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12);
+    max-width: 220px
+}
+
+.textContainer__3cfcf {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 0;
+    overflow: hidden;
+    word-wrap: break-word;
+    white-space: normal;
+    word-break: break-word
+}
+
+.editProfilesRow__3cfcf {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
