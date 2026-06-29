@@ -231,6 +231,8 @@ function z(e) {
                           popularApplicationCommandIds: o.popular_application_command_ids,
                           storefront_available: o.storefront_available,
                           name: o.name,
+                          termsOfServiceUrl: o.terms_of_service_url,
+                          privacyPolicyUrl: o.privacy_policy_url,
                       }
                     : null,
             badges: u,
