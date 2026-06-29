@@ -437,6 +437,11 @@
     margin: var(--space-8) 0 var(--space-4)
 }
 
+.progressBar_e54946,
+.custom-theme-background .progressBar_e54946 {
+    --custom-progressbar-indicator-color: var(--background-brand)
+}
+
 .viewAllLevelsHeader_e54946 {
     align-items: center;
     color: var(--text-subtle);
