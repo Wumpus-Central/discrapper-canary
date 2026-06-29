@@ -1,16 +1,17 @@
 "use strict";
-n.d(t, { Ad: () => h, BT: () => m, CK: () => g, Yd: () => E, np: () => p, qH: () => d, xs: () => f });
+n.d(t, { Ad: () => f, BT: () => g, CK: () => A, Yd: () => m, np: () => E, qH: () => _, xs: () => p });
 var i = n(636537),
     r = n(228366),
     s = n(495544),
     a = n(232835),
-    o = n(19745),
-    l = n(51501),
-    u = n(788868),
-    c = n(652215);
-function d(e) {
+    o = n(38405),
+    l = n(19745),
+    u = n(51501),
+    c = n(788868),
+    d = n(652215);
+function _(e) {
     let t = s.default.getId();
-    return i.Bo.get({ url: c.Rsh.GIFT_INTENT_DISMISSALS, oldFormErrors: !0, rejectWithError: !0 }).then(
+    return i.Bo.get({ url: d.Rsh.GIFT_INTENT_DISMISSALS, oldFormErrors: !0, rejectWithError: !0 }).then(
         (n) => {
             s.default.getId() !== t
                 ? r.h.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" })
@@ -23,40 +24,43 @@ function d(e) {
                       settingsTimestampMs: e,
                   });
         },
-        () => {
-            r.h.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
+        (e) => {
+            o.A.captureException(e, { tags: { feature: "gift_intent" } }),
+                r.h.dispatch({ type: "GIFT_INTENT_DISMISSALS_FETCH_FAILURE" });
         },
     );
 }
-function _(e, t) {
-    if (!(0, o.l)("dismissGiftIntent")) return;
-    let n = (0, l.Mi)(e);
+function h(e, t) {
+    if (!(0, l.l)("dismissGiftIntent")) return;
+    let n = (0, u.Mi)(e);
     null != n &&
         i.Bo.post({
-            url: c.Rsh.GIFT_INTENTS_DISMISS,
+            url: d.Rsh.GIFT_INTENTS_DISMISS,
             body: { intent_type: n, target_id: t },
             oldFormErrors: !0,
-            rejectWithError: !1,
-        }).catch(() => {});
+            rejectWithError: !0,
+        }).catch((e) => {
+            o.A.captureException(e, { tags: { feature: "gift_intent" } });
+        });
 }
-function h() {
+function f() {
     r.h.dispatch({ type: "FRIENDS_LIST_GIFT_INTENTS_SHOWN" });
 }
-function f(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.np.FRIEND_ANNIVERSARY;
-    r.h.dispatch({ type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId: e }), _(t, e);
+function p(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.np.FRIEND_ANNIVERSARY;
+    r.h.dispatch({ type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId: e }), h(t, e);
 }
-function p(e, t) {
+function E(e, t) {
     let n = a.A.getMessage(e, t)?.giftingPrompt;
-    null != n && _(n.giftIntentType, n.recipientUserId);
+    null != n && h(n.giftIntentType, n.recipientUserId);
 }
-function E(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : u.np.FRIEND_ANNIVERSARY;
-    r.h.dispatch({ type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId: e }), _(t, e);
+function m(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.np.FRIEND_ANNIVERSARY;
+    r.h.dispatch({ type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId: e }), h(t, e);
 }
-function m() {
+function g() {
     r.h.dispatch({ type: "GIFT_UNREAD_NOTIFICATION_DISMISS" });
 }
-function g(e) {
+function A(e) {
     r.h.dispatch({ type: "PROFILE_POPOUT_GIFT_INTENTS_DISMISS", recipientUserId: e });
 }
