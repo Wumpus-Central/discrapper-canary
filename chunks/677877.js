@@ -4580,35 +4580,37 @@ function rE(e) {
         d = __OVERLAY__,
         o = (0, lj.Ay)(n.id),
         c = (0, sX.Ay)(),
-        u = s.useRef(Date.now()),
-        { analyticsLocations: h } = (0, M.Ay)(L.A.USER_PROFILE_SIDEBAR),
-        A = (0, sJ.pb)({ layout: "SIDEBAR", userId: n.id, channelId: i.id }),
-        m = s.useRef(null),
-        { isHoveringOrFocusing: x, isHovering: p } = (0, sZ.A)(m),
-        f = (0, aC.fC)(),
-        j = (0, sB.A)(o?.profileFrame?.skuId, "UserProfileSidebar");
-    (0, af.A)({ skuId: o?.profileFrame?.skuId, openedAt: u.current, context: A, analyticsLocations: h });
-    let I = (0, ap.z)({ opacity: +(null != f.interactionType), config: { duration: 150 } });
-    function b(e) {
-        (0, sw.openUserProfileModal)({ sourceAnalyticsLocations: h, hideRestrictedProfile: !0, ...A, ...e });
+        u = s.useRef(void 0),
+        h = s.useRef(void 0);
+    h.current !== n.id && ((h.current = n.id), (u.current = Date.now()));
+    let { analyticsLocations: A } = (0, M.Ay)(L.A.USER_PROFILE_SIDEBAR),
+        m = (0, sJ.pb)({ layout: "SIDEBAR", userId: n.id, channelId: i.id }),
+        x = s.useRef(null),
+        { isHoveringOrFocusing: p, isHovering: f } = (0, sZ.A)(x),
+        j = (0, aC.fC)(),
+        I = (0, sB.A)(o?.profileFrame?.skuId, "UserProfileSidebar");
+    (0, af.A)({ skuId: o?.profileFrame?.skuId, openedAt: u.current, context: m, analyticsLocations: A });
+    let b = (0, ap.z)({ opacity: +(null != j.interactionType), config: { duration: 150 } });
+    function C(e) {
+        (0, sw.openUserProfileModal)({ sourceAnalyticsLocations: A, hideRestrictedProfile: !0, ...m, ...e });
     }
-    let C = o?.widgets != null && o.widgets.length > 0,
-        { defaultWishlistId: E } = (0, g.cf)([ab.A], () => ({ defaultWishlistId: ab.A.getFirstWishlistId(n.id) })),
-        { wishlist: y } = (0, aI.fw)({ wishlistId: a ? void 0 : E, userId: n.id });
-    (0, aj.A)(y);
-    let v = s.useMemo(() => (null == y ? null : y.items.filter((e) => !e.isOwned)), [y]);
+    let E = o?.widgets != null && o.widgets.length > 0,
+        { defaultWishlistId: y } = (0, g.cf)([ab.A], () => ({ defaultWishlistId: ab.A.getFirstWishlistId(n.id) })),
+        { wishlist: v } = (0, aI.fw)({ wishlistId: a ? void 0 : y, userId: n.id });
+    (0, aj.A)(v);
+    let N = s.useMemo(() => (null == v ? null : v.items.filter((e) => !e.isOwned)), [v]);
     return (0, l.jsx)(M.f5, {
-        value: h,
+        value: A,
         children: (0, l.jsx)(sJ.of, {
-            value: A,
+            value: m,
             openedAt: u.current,
             fetchStartedAt: o?.fetchStartedAt,
             fetchEndedAt: o?.fetchEndedAt,
             isLoaded: o?.isLoaded,
             children: (0, l.jsx)(aC.Hl, {
-                value: f,
+                value: j,
                 children: (0, l.jsxs)(s4.A, {
-                    ref: m,
+                    ref: x,
                     user: n,
                     displayProfile: o,
                     themeType: aa.d.SIDEBAR,
@@ -4618,9 +4620,9 @@ function rE(e) {
                     isPrivate: o?.private === !0,
                     children: [
                         o?.private === !0 && (0, l.jsx)(ay.A, {}),
-                        null != f.interactionType && (0, l.jsx)(ax.animated.div, { style: I, className: ar.tB }),
+                        null != j.interactionType && (0, l.jsx)(ax.animated.div, { style: b, className: ar.tB }),
                         (0, l.jsxs)(ti.d_, {
-                            className: r()(a && ar.BE, !a && null != j && ar.It),
+                            className: r()(a && ar.BE, !a && null != I && ar.It),
                             children: [
                                 (0, l.jsxs)(s6.A, {
                                     children: [
@@ -4638,7 +4640,7 @@ function rE(e) {
                                             specOverrides: a
                                                 ? { bannerWidth: 300, bannerHeight: 105, themePadding: 2 }
                                                 : void 0,
-                                            animateOnHoverOrFocusOnly: !x,
+                                            animateOnHoverOrFocusOnly: !p,
                                             className: ar.vK,
                                         }),
                                         (0, l.jsx)(aE.A, { userId: n.id, className: ar.oR }),
@@ -4647,7 +4649,7 @@ function rE(e) {
                                             displayProfile: o,
                                             channelId: i.id,
                                             themeType: aa.d.SIDEBAR,
-                                            onOpenProfile: d ? void 0 : b,
+                                            onOpenProfile: d ? void 0 : C,
                                         }),
                                         (0, l.jsx)(aS.A, {
                                             user: n,
@@ -4662,32 +4664,32 @@ function rE(e) {
                                     currentUser: t,
                                     displayProfile: o,
                                     channel: i,
-                                    isHoveringOrFocusing: null == f.interactionType && x,
+                                    isHoveringOrFocusing: null == j.interactionType && p,
                                     isRedesignEnabled: a,
-                                    onOpenProfile: d ? void 0 : b,
+                                    onOpenProfile: d ? void 0 : C,
                                 }),
                                 !a &&
-                                    C &&
+                                    E &&
                                     (0, l.jsx)("div", {
                                         className: ar.sJ,
                                         children: (0, l.jsx)(av.A, {
                                             user: n,
                                             widgets: o.widgets,
-                                            onOpenUserProfileModal: b,
+                                            onOpenUserProfileModal: C,
                                         }),
                                     }),
                                 !a &&
-                                    null != v &&
-                                    v.length > 0 &&
+                                    null != N &&
+                                    N.length > 0 &&
                                     (0, l.jsx)("div", {
                                         className: ar.vS,
                                         children: (0, l.jsx)(ro, {
                                             profileOwner: n,
-                                            unownedWishlistItems: v,
-                                            wishlistId: E,
+                                            unownedWishlistItems: N,
+                                            wishlistId: y,
                                             title: z.intl.string(z.t["7lZ31J"]),
                                             onClick: () => {
-                                                b?.({ tabSection: a6.RP.WISHLIST });
+                                                C?.({ tabSection: a6.RP.WISHLIST });
                                             },
                                         }),
                                     }),
@@ -4696,14 +4698,14 @@ function rE(e) {
                         }),
                         !d &&
                             (0, l.jsx)(as, {
-                                context: A,
-                                analyticsLocations: h,
-                                profileFrame: j,
-                                handleOpenProfile: b,
+                                context: m,
+                                analyticsLocations: A,
+                                profileFrame: I,
+                                handleOpenProfile: C,
                                 isRedesignEnabled: a,
                             }),
-                        o?.profileEffect != null && (0, l.jsx)(s$.A, { skuId: o?.profileEffect?.skuId, isHovering: p }),
-                        a && null != j && (0, l.jsx)(an.A, { frame: j, fadeIn: !1 }),
+                        o?.profileEffect != null && (0, l.jsx)(s$.A, { skuId: o?.profileEffect?.skuId, isHovering: f }),
+                        a && null != I && (0, l.jsx)(an.A, { frame: I, fadeIn: !1 }),
                     ],
                 }),
             }),

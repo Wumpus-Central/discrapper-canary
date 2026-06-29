@@ -3850,15 +3850,13 @@ span.clanTag__5d473 {
 
 .headerContainer__095fe {
     align-items: center;
+    cursor: pointer;
     display: flex;
     gap: 4px
 }
 
-.headerTitle__095fe {
-    cursor: pointer
-}
-
 .headerSpacer__095fe {
+    align-self: stretch;
     flex: 1
 }
 

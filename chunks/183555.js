@@ -11,16 +11,18 @@ let u = s.createContext(null),
         let { value: t, children: n, openedAt: i, fetchStartedAt: a, fetchEndedAt: c, isLoaded: d = !1 } = e,
             { analyticsLocations: _ } = (0, o.Ay)(),
             h = s.useRef(void 0),
-            f = { analyticsLocations: _, value: t },
-            p = s.useRef(f);
+            f = s.useRef(i);
+        f.current !== i && ((f.current = i), (h.current = void 0));
+        let p = { analyticsLocations: _, value: t },
+            E = s.useRef(p);
         return (
             s.useEffect(() => {
-                p.current = f;
+                E.current = p;
             }),
             s.useEffect(() => {
                 let e = Date.now();
                 if ((null == h.current && null != i && (h.current = e - i), !d)) return;
-                let { analyticsLocations: t, value: n } = p.current;
+                let { analyticsLocations: t, value: n } = E.current;
                 (0, l.Wn)({ action: "VIEW", analyticsLocations: t, ...n }),
                     (0, l.wd)({
                         profileUi: "USER_PROFILE",

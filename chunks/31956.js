@@ -7,21 +7,28 @@ var i = n(64700),
 function o(e) {
     let { skuId: t, openedAt: n, context: o, analyticsLocations: l } = e,
         u = (0, r.bG)([a.A], () => a.A.getProductFetch(t)),
-        c = (0, i.useRef)(void 0);
+        c = (0, i.useRef)(void 0),
+        d = (0, i.useRef)(void 0),
+        _ = (0, i.useRef)(void 0),
+        h = (0, i.useRef)(!1);
     (0, i.useEffect)(() => {
-        if (null == t) return;
+        if (null == t || null == n) return;
+        (d.current !== t || _.current !== n) &&
+            ((d.current = t), (_.current = n), (h.current = !1), (c.current = void 0));
         let e = Date.now();
-        null == c.current && null != n && (c.current = e - n),
-            u?.state === "success" &&
+        (c.current ??= e - n),
+            u?.state !== "success" ||
+                h.current ||
+                ((h.current = !0),
                 (0, s.wd)({
                     profileUi: "PROFILE_FRAME",
                     timeToInteractiveMs: c.current,
-                    timeToLoadMs: null != n ? e - n : void 0,
-                    timeToFetchMs: u?.startedAt != null && u?.endedAt != null ? u.endedAt - u.startedAt : void 0,
+                    timeToLoadMs: e - n,
+                    timeToFetchMs: null != u.startedAt && null != u.endedAt ? u.endedAt - u.startedAt : void 0,
                     viewStartedAt: n,
-                    fetchStartedAt: u?.startedAt,
+                    fetchStartedAt: u.startedAt,
                     analyticsLocations: l,
                     ...o,
-                });
-    }, [t, u]);
+                }));
+    }, [t, n, u]);
 }
