@@ -36,8 +36,8 @@ var i = n(627968),
 let k = "content-inventory-feed";
 var U = n(652215),
     G = n(375708),
-    F = n(359144),
-    V = n(689096);
+    F = n(933928),
+    V = n(540808);
 let B = r.memo(function (e) {
         let t,
             { title: s, onToggleExpand: a, expanded: o, expandedCount: l } = e,
@@ -47,7 +47,8 @@ let B = r.memo(function (e) {
                     let { MemberListContentSettingsMenu: e } = await Promise.resolve().then(n.bind(n, 38055));
                     return () => (0, i.jsx)(e, { closePopout: g.Z_ });
                 });
-            }, []);
+            }, []),
+            d = r.useCallback(() => (u ? (0, M.Il)() : l > 3 ? a() : (0, U.tEg)()), [u, l, a]);
         return (0, i.jsxs)(w.A, {
             className: V.lL,
             children: [
@@ -56,19 +57,23 @@ let B = r.memo(function (e) {
                     className: F.N1,
                     children: [
                         (0, i.jsx)(L.D, {
-                            onClick: (e) => {
-                                if (e.currentTarget === e.target || e.currentTarget.contains(e.target))
-                                    return u ? (0, M.Il)() : l > 3 ? a() : (0, U.tEg)();
-                            },
+                            onClick: d,
                             onContextMenu: c,
                             tag: "span",
                             tabIndex: -1,
                             "aria-hidden": !0,
-                            className: F.qd,
                             children: (0, i.jsxs)("span", { children: [s, " \u2014 ", l] }),
                         }),
                         (0, i.jsx)(x.A, {}),
-                        (0, i.jsx)("div", { className: F.AN }),
+                        (0, i.jsx)(L.D, {
+                            onClick: d,
+                            onContextMenu: c,
+                            tag: "span",
+                            tabIndex: -1,
+                            "aria-hidden": !0,
+                            className: F.AN,
+                            children: (0, i.jsx)("span", {}),
+                        }),
                         l <= 3 && !u
                             ? null
                             : ((t = u
@@ -77,7 +82,7 @@ let B = r.memo(function (e) {
                                     ? (0, i.jsx)(b.a, { className: F.wT })
                                     : (0, i.jsx)(D._, { className: F.wT })),
                               (0, i.jsx)(L.D, {
-                                  onClick: () => (u ? (0, M.Il)() : l > 3 ? a() : (0, U.tEg)()),
+                                  onClick: d,
                                   tag: "span",
                                   "aria-label": G.intl.string(o && !u ? G.t.iTcuma : G.t.dcl9MQ),
                                   "aria-expanded": !u && o,
@@ -174,11 +179,11 @@ let ew = eD.Ay.getEnableHardwareAcceleration(),
                 (e) => {
                     (0, g.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                                n.e("79205"),
-                                n.e("52760"),
-                                n.e("62458"),
-                                n.e("93909"),
-                                n.e("98273"),
+                                n.e("14973"),
+                                n.e("41831"),
+                                n.e("18078"),
+                                n.e("88429"),
+                                n.e("94881"),
                                 n.e("26692"),
                                 n.e("26132"),
                                 n.e("46652"),
@@ -194,9 +199,9 @@ let ew = eD.Ay.getEnableHardwareAcceleration(),
                                 n.e("89673"),
                                 n.e("68403"),
                                 n.e("88342"),
-                                n.e("52168"),
+                                n.e("29787"),
                                 n.e("89421"),
-                                n.e("54574"),
+                                n.e("35027"),
                                 n.e("98965"),
                                 n.e("82073"),
                                 n.e("97558"),
@@ -213,7 +218,7 @@ let ew = eD.Ay.getEnableHardwareAcceleration(),
                                 n.e("23427"),
                                 n.e("49145"),
                                 n.e("29422"),
-                                n.e("38887"),
+                                n.e("61268"),
                                 n.e("9291"),
                                 n.e("7059"),
                                 n.e("56753"),
