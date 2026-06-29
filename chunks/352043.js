@@ -3667,7 +3667,7 @@ let s1 = Object.freeze({
             let { message: t, compact: n } = e,
                 i = t.getChannelId(),
                 s = (0, c.bG)([tU.A], () => tU.A.getChannel(i), [i]),
-                a = null != s ? s.getGuildId() : null;
+                a = (null != s ? s.getGuildId() : null) ?? t.messageReference?.guild_id ?? null;
             return (0, l.jsx)(iF, {
                 message: t,
                 compact: n,

@@ -768,11 +768,12 @@
     border-radius: var(--radius-sm);
     flex-shrink: 0;
     height: 114px;
+    max-width: 86px;
+    min-width: 76px;
     opacity: 1;
     overflow: hidden;
     transform: translateY(0);
-    transition: opacity .15s ease-in-out;
-    width: 76px
+    transition: opacity .15s ease-in-out
 }
 
 .full-motion .heroCoverArt__8e688 {
