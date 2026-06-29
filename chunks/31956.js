@@ -1,27 +1,27 @@
-"use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => c });
 var i = n(64700),
-    r = n(702841),
+    l = n(702841),
     s = n(47675),
-    a = n(590180);
-function o(e) {
-    let { skuId: t, openedAt: n, context: o, analyticsLocations: l } = e,
-        u = (0, r.bG)([a.A], () => a.A.getProductFetch(t)),
-        c = (0, i.useRef)(void 0);
+    r = n(590180);
+function c(e) {
+    let { skuId: t, openedAt: n, context: c, analyticsLocations: a } = e,
+        o = (0, l.bG)([r.A], () => r.A.getProductFetch(t)),
+        d = (0, i.useRef)(void 0);
     (0, i.useEffect)(() => {
         if (null == t) return;
         let e = Date.now();
-        null == c.current && null != n && (c.current = e - n),
-            u?.state === "success" &&
+        null == d.current && null != n && (d.current = e - n),
+            o?.state === "success" &&
                 (0, s.wd)({
                     profileUi: "PROFILE_FRAME",
-                    timeToInteractiveMs: c.current,
+                    timeToInteractiveMs: d.current,
                     timeToLoadMs: null != n ? e - n : void 0,
-                    timeToFetchMs: u?.startedAt != null && u?.endedAt != null ? u.endedAt - u.startedAt : void 0,
+                    timeToFetchMs: o?.startedAt != null && o?.endedAt != null ? o.endedAt - o.startedAt : void 0,
                     viewStartedAt: n,
-                    fetchStartedAt: u?.startedAt,
-                    analyticsLocations: l,
-                    ...o,
+                    fetchStartedAt: o?.startedAt,
+                    analyticsLocations: a,
+                    ...c,
                 });
-    }, [t, u]);
+    }, [t, o]);
 }
+.o})},[t,u])}
