@@ -140,12 +140,8 @@
     transition: opacity .3s ease-in-out
 }
 
-.cardFlairGlowAlwaysOn_abfd90 {
-    opacity: .9
-}
-
-.cardFlairWrapper_abfd90:has(:focus-visible) .cardFlairGlowOnHover_abfd90,
-.cardFlairWrapper_abfd90:hover .cardFlairGlowOnHover_abfd90 {
+.cardFlairWrapper_abfd90:has(:focus-visible) .cardFlairGlow_abfd90,
+.cardFlairWrapper_abfd90:hover .cardFlairGlow_abfd90 {
     opacity: .9
 }
 

@@ -1661,11 +1661,12 @@ function iI(e) {
         } = ix({ gameId: t }),
         u = r.useCallback(
             (e) => {
-                if ((e.stopPropagation(), null == i)) return;
+                if ((e.stopPropagation(), null == i || null == n)) return;
+                (0, ih.OR)({ gameName: n.name, gameId: i, action: ih.Vv.CopyLink });
                 let t = `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${W.BVt.GAME_PROFILE(i)}`;
                 (0, eF.C)(t, () => (0, ek.P0)((0, eL.o)(J.intl.string(J.t["+5kSoW"]), eR.Ck.SUCCESS)));
             },
-            [i],
+            [i, n],
         );
     if (!c || null == n || null == d) return null;
     let m = null != a;

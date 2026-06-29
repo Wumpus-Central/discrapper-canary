@@ -5087,6 +5087,7 @@ var rD =
         (ex.RANKING_ITEM_INTERACTED_MUST_BE_SAMPLED = "ranking_item_interacted"),
         (ex.LEAGUE_OF_LEGENDS_MATCH_DATA_NOT_FETCHING = "league_of_legends_match_data_not_fetching"),
         (ex.GAME_PROFILE_ACTION = "game_profile_action"),
+        (ex.GAME_PROFILE_EMBED_ACTION = "game_profile_embed_action"),
         (ex.GAME_PROFILE_OPEN = "game_profile_open"),
         (ex.GAME_PROFILE_CLOSE = "game_profile_close"),
         (ex.GAME_PROFILE_ENTRY_POINT_AVAILABLE = "game_profile_entry_point_available"),
