@@ -47,7 +47,10 @@ let E = new p(r.h, {
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
             { users: n, ...i } = t;
-        (u[t.roomId] = i), (c[t.roomId] = n);
+        u[t.roomId] = i;
+        let r = s.default.getId(),
+            a = c[t.roomId]?.get(r);
+        (c[t.roomId] = n), null != a && c[t.roomId]?.set(r, a);
     },
     GUILD_ROOM_LOCAL_POSITION_REQUESTED: function (e) {
         let { position: t } = e;
