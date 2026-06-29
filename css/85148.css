@@ -1,0 +1,229 @@
+.container__122e4 {
+    display: flex;
+    width: 100%
+}
+
+.quote__122e4 {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    flex-shrink: 0;
+    margin-inline-end: 12px;
+    width: 4px
+}
+
+.content__122e4 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 100%
+}
+
+.headerContainer__122e4 {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    gap: 4px;
+    margin-bottom: 4px;
+    margin-top: 2px
+}
+
+.headerIcon__122e4 {
+    flex-shrink: 0
+}
+
+.headerText__122e4 {
+    font-style: italic
+}
+
+.footerContainer__122e4 {
+    align-items: center;
+    align-self: flex-start;
+    border-radius: 4px;
+    color: var(--text-muted);
+    cursor: pointer;
+    display: flex;
+    gap: 4px;
+    margin-top: 4px;
+    max-width: 100%;
+    padding-bottom: 1px;
+    padding-top: 1px
+}
+
+.footerContainer__122e4:hover {
+    background-color: var(--interactive-background-hover)
+}
+
+.footerContainer__122e4:hover .footerText__122e4 {
+    color: var(--interactive-text-hover)
+}
+
+.footerText__122e4 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre
+}
+
+.originIcon__122e4 {
+    border-radius: 4px;
+    height: 16px;
+    width: 16px
+}
+
+.embed_cbd65e {
+    --custom-banner-gradient-color: var(--background-surface-high);
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-strong);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    width: 380px
+}
+
+.embed_cbd65e:hover {
+    background-color: var(--background-surface-higher);
+    --custom-banner-gradient-color: var(--background-surface-higher)
+}
+
+.bannerArea_cbd65e {
+    background-position: 50%;
+    background-size: cover;
+    height: 184px;
+    position: relative;
+    width: 100%
+}
+
+.bannerGradient_cbd65e {
+    background: linear-gradient(to bottom, transparent 62%, color-mix(in oklab, var(--custom-banner-gradient-color) 90%, transparent) 87%, var(--custom-banner-gradient-color) 98%);
+    inset: -1px;
+    position: absolute
+}
+
+.body_cbd65e {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    padding-block: var(--space-16);
+    padding-inline: var(--space-16);
+    position: relative
+}
+
+.bodyWithBanner_cbd65e {
+    padding-block-start: 0
+}
+
+.icon_cbd65e {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: var(--size-48);
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: var(--size-48)
+}
+
+.iconFallback_cbd65e {
+    align-items: center;
+    color: var(--text-muted)
+}
+
+.iconFallback_cbd65e,
+.info_cbd65e {
+    display: flex;
+    justify-content: center
+}
+
+.info_cbd65e {
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.actions_cbd65e,
+.badgeRow_cbd65e {
+    display: flex
+}
+
+.actions_cbd65e {
+    align-items: flex-end;
+    gap: var(--space-16);
+    padding-block-end: var(--space-16);
+    padding-inline: var(--space-16)
+}
+
+.viewProfileButton_cbd65e {
+    flex: 1 1 auto;
+    min-width: 0
+}
+
+.embed_bbe1d5 {
+    align-items: center;
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    color: var(--text-strong);
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-8);
+    overflow: hidden;
+    padding: var(--space-12);
+    position: relative;
+    text-align: start;
+    width: 300px
+}
+
+.embed_bbe1d5:hover {
+    background-color: var(--background-surface-higher)
+}
+
+.backgroundLayer_bbe1d5 {
+    border-radius: var(--radius-sm);
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute
+}
+
+.background_bbe1d5 {
+    background-position: 50%;
+    background-size: cover;
+    inset: 0;
+    position: absolute
+}
+
+.backgroundGradient_bbe1d5 {
+    background: linear-gradient(to right, var(--background-surface-high) 50%, color-mix(in oklab, var(--background-surface-high) 60%, transparent));
+    inset: 0;
+    position: absolute
+}
+
+.icon_bbe1d5 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 40px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 40px
+}
+
+.content_bbe1d5,
+.icon_bbe1d5 {
+    position: relative
+}
+
+.content_bbe1d5 {
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.badgeRow_bbe1d5,
+.content_bbe1d5 {
+    display: flex
+}
