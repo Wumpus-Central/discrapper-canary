@@ -162,7 +162,7 @@ let W = Object.freeze({
         5: "Adyen",
         6: "Apple Partner",
         8: "Virtual Currency",
-        9: "Apple ACOM",
+        9: "Apple",
         10: "TDS",
     }),
     K = Object.freeze({
