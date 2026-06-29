@@ -42,8 +42,8 @@ var n = t(627968),
     K = t(427262),
     B = t(582904),
     Y = t(375708),
-    q = t(869397),
-    $ = t(813013);
+    q = t(176277),
+    $ = t(518229);
 let H = "VoiceInviteSuggestionsPopover";
 function W(e) {
     let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: c } = e,
@@ -71,8 +71,8 @@ function W(e) {
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
             (0, m.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
-                    t.e("70158"),
-                    t.e("26903"),
+                    t.e("92430"),
+                    t.e("80339"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
@@ -83,7 +83,7 @@ function W(e) {
             c();
     }, [i, c]);
     return (
-        (0, A.t)(f, { disable: !s }),
+        (0, A.tj)(f, { disable: !s }),
         (0, n.jsx)("div", {
             role: "dialog",
             tabIndex: -1,

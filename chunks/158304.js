@@ -22972,7 +22972,7 @@ function fu(e) {
     let { showSecondaryColor: t, palette: n, onPrimaryColorChange: i, onSecondaryColorChange: l } = e,
         s = R.useRef(null);
     return (
-        (0, fd.t)(s),
+        (0, fd.tj)(s),
         (0, p.jsxs)("div", {
             className: fc.jC,
             children: [

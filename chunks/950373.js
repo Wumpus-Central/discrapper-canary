@@ -107,7 +107,7 @@ function Q(e) {
     let { children: t } = e,
         n = (0, s.useRef)(null);
     return (
-        (0, V.t)(n),
+        (0, V.tj)(n),
         (0, r.jsx)("div", { className: q.iE, ref: n, children: (0, r.jsx)("div", { className: q.Qs, children: t }) })
     );
 }

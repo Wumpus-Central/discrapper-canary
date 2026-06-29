@@ -606,7 +606,7 @@ function ei(e) {
     let { playbackRate: t, onPlaybackRateChange: n, label: s } = e,
         a = r.useRef(null);
     return (
-        (0, v.t)(a),
+        (0, v.tj)(a),
         (0, i.jsxs)("div", {
             ref: a,
             className: G.qp,

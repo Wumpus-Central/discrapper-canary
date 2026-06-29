@@ -269,7 +269,7 @@ function V(e) {
         [L],
     );
     let M = n.useRef(null);
-    (0, h.t)(M, { returnRef: y }),
+    (0, h.tj)(M, { returnRef: y }),
         n.useLayoutEffect(() => {
             M.current?.focus();
         }, []),

@@ -14,7 +14,7 @@ let c = r.createContext({ inDialog: void 0 }),
             m = r.useRef(null),
             [g, A] = r.useState(!1),
             I = g ? m : E;
-        (0, a.t)(I, { returnRef: f }),
+        (0, a.tj)(I, { returnRef: f }),
             r.useContext(u.A)(
                 { type: d, name: _?.impressionName, properties: _?.impressionProperties },
                 { disableTrack: h },

@@ -3107,7 +3107,7 @@ let sE = function (e) {
         }, []);
     let ee = d.useRef(null),
         et = d.useRef(null);
-    (0, x.t)(ee);
+    (0, x.tj)(ee);
     let en = (0, E.useHasAnyModalOpen)();
     d.useEffect(() => {
         et.current?.focus();

@@ -1111,7 +1111,7 @@ function e_(e) {
     let P = s.useRef(null),
         x = s.useContext(A.jQ),
         k = "none" !== (x?.focus ?? "none");
-    (0, I.t)(P, { disable: k }),
+    (0, I.tj)(P, { disable: k }),
         s.useEffect(() => {
             k && P.current?.focus();
         }, [k]);

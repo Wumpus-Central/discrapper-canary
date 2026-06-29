@@ -21,12 +21,12 @@ function h() {
 let A = function (e) {
     let { channel: t, closeOnModalOuterClick: n = !1, parentModalKey: f } = e,
         A = i.useRef(null),
-        { renderWindow: T, windowDispatch: m } = i.useContext(c.Ay),
-        S = null != f,
-        j = (0, r.useIsModalAtTop)(f ?? ""),
+        { renderWindow: T, windowDispatch: j } = i.useContext(c.Ay),
+        m = null != f,
+        S = (0, r.useIsModalAtTop)(f ?? ""),
         y = i.useCallback(
             (e) => {
-                if ((!S && (0, r.hasAnyModalOpen)()) || (S && !(j && n)) || l.A.isOpen() || e.defaultPrevented) return;
+                if ((!m && (0, r.hasAnyModalOpen)()) || (m && !(S && n)) || l.A.isOpen() || e.defaultPrevented) return;
                 let { target: t } = e;
                 if ((0, u.vq)(t) && null != t.closest("." + L.Wx)) return;
                 for (; (0, u.vq)(t); ) {
@@ -41,25 +41,25 @@ let A = function (e) {
                 let s = (0, u.BF)(e)?.activeElement;
                 (null == s || "BODY" === s.tagName) && d._.dispatchToLastSubscribed(O.jej.TEXTAREA_FOCUS);
             },
-            [n, j, S],
+            [n, S, m],
         );
     i.useLayoutEffect(
         () => (
             T.addEventListener("mousedown", y),
             T.addEventListener("contextmenu", y),
-            m.subscribe(O.jej.POPOUT_CLOSE, h),
+            j.subscribe(O.jej.POPOUT_CLOSE, h),
             () => {
                 T.removeEventListener("mousedown", y),
                     T.removeEventListener("contextmenu", y),
-                    m.unsubscribe(O.jej.POPOUT_CLOSE, h);
+                    j.unsubscribe(O.jej.POPOUT_CLOSE, h);
             }
         ),
-        [y, T, m],
+        [y, T, j],
     ),
-        (0, a.t)(A),
+        (0, a.tj)(A),
         i.useEffect(() => {
-            ((!S && (0, r.hasAnyModalOpen)()) || (S && !j)) && h();
-        }, [j, S]);
+            ((!m && (0, r.hasAnyModalOpen)()) || (m && !S)) && h();
+        }, [S, m]);
     let C = (0, E.A)();
     return (0, s.jsx)(v.A, { ref: A, context: { channel: t, type: "channel" }, entrypoint: p.s4.TEXT, initHistory: C });
 };

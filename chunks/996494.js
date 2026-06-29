@@ -1780,7 +1780,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 570821, Version Hash: f6c2d9fb4b3bfd318f7fa99d0e68e5319440e03a`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 571037, Version Hash: c480dc061d2243fe515d7a98d35389c9d172537a`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -18091,7 +18091,7 @@ let Sd = "isHideDevBanner",
                     className: t6()(Sc.Wz, Sc.mr),
                     children: [
                         (0, F.jsx)(Su, { className: Sc.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "570821" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "571037" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -19818,7 +19818,7 @@ function CG(e) {
 }
 function CF() {
     let e = te.useRef(null);
-    (0, S9.t)(e),
+    (0, S9.tj)(e),
         te.useEffect(() => {
             eP.default.track(eM.HAw.OPEN_POPOUT, { type: eM.JJy.NOISE_CANCELLATION_POPOUT });
         }, []);
@@ -25314,7 +25314,7 @@ class vK extends te.PureComponent {
                 ...s,
                 children: i,
             });
-        return r ? u : (0, F.jsx)(S9.O, { containerRef: this.containerRef, children: u });
+        return r ? u : (0, F.jsx)(S9.Ok, { containerRef: this.containerRef, children: u });
     }
     getAnimatedStyle() {
         let { baseLayer: e } = this.props,

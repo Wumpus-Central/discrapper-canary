@@ -714,7 +714,7 @@ function tx(e) {
         s = r.useCallback(() => {
             tS.A.setState({ shouldRenderTenureLevelUp: !1 });
         }, []);
-    return (0, i.jsx)(tT.O, {
+    return (0, i.jsx)(tT.Ok, {
         containerRef: n,
         children: (0, i.jsxs)("div", {
             className: tw.i,
@@ -2966,7 +2966,7 @@ class rb extends r.PureComponent {
                     n.e("17773"),
                     n.e("81619"),
                     n.e("24143"),
-                    n.e("72328"),
+                    n.e("59046"),
                     n.e("40650"),
                     n.e("44792"),
                     n.e("25006"),
@@ -3023,7 +3023,7 @@ class rb extends r.PureComponent {
                     n.e("47018"),
                     n.e("9640"),
                     n.e("62422"),
-                    n.e("50117"),
+                    n.e("25949"),
                     n.e("90365"),
                     n.e("98765"),
                     n.e("89088"),

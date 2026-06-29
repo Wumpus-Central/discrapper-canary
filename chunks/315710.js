@@ -1,9 +1,12 @@
 "use strict";
-n.d(t, { O: () => o, t: () => a });
+n.d(t, { Ok: () => l, se: () => a, tj: () => o });
 var i = n(64700),
     r = n(825437),
     s = n(844222);
-function a(e) {
+function a() {
+    return r.rx.isActive();
+}
+function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = i.useContext(s.C),
         a = t.keyboardModeEnabled ?? n.keyboardModeEnabled,
@@ -14,7 +17,7 @@ function a(e) {
         c = t.disable ? u : e;
     return (0, r.Ay)(c, { ...t, disableReturnRef: o, attachTo: l });
 }
-function o(e) {
+function l(e) {
     let { keyboardModeEnabled: t } = e;
-    return a(e.containerRef, { keyboardModeEnabled: t }), e.children;
+    return o(e.containerRef, { keyboardModeEnabled: t }), e.children;
 }

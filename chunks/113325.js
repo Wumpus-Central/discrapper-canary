@@ -85,7 +85,7 @@ function E(e) {
         r.useEffect(() => {
             null != h && null != l && h({ componentName: u, payload: l });
         }, [h, u, l]),
-        (0, o.t)(_, { returnRef: n, disable: !s }),
+        (0, o.tj)(_, { returnRef: n, disable: !s }),
         (0, i.jsx)(s ? f : p, { ...c, ref: _ })
     );
 }
