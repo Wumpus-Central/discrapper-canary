@@ -336,6 +336,10 @@
     width: 100%
 }
 
+.descriptionNotice__6db38 {
+    width: 100%
+}
+
 .directoryFooter__6db38 {
     border-block-start: 1px solid var(--border-subtle);
     display: flex;
@@ -369,9 +373,7 @@
 
 .tierTimelineGrid_bf9073 {
     flex-wrap: wrap;
-    justify-content: center;
-    margin-inline: auto;
-    max-width: 300px
+    justify-content: center
 }
 
 .tierTimelineGrid_bf9073,
@@ -383,9 +385,13 @@
 
 .tierTimelineItem_bf9073 {
     align-items: center;
-    flex: 0 0 72px;
+    flex: 0 0 auto;
     flex-direction: column;
-    padding: var(--space-8)
+    max-width: 120px;
+    min-width: 77px;
+    padding: var(--space-8) 0;
+    width: -moz-min-content;
+    width: min-content
 }
 
 .tierTimelineItemLocked_bf9073 .tierTimelineIcon_bf9073 {
@@ -401,7 +407,7 @@
 
 .tierTimelineText_bf9073 {
     min-width: 48px;
-    overflow-wrap: anywhere;
+    overflow-wrap: break-word;
     text-align: center;
     width: 100%
 }

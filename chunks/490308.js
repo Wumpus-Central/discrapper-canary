@@ -47,6 +47,7 @@ e.exports = {
     ij: "descriptionText__6db38",
     c$: "legacyLabel__6db38",
     cJ: "descriptionCardExtras__6db38",
+    Z6: "descriptionNotice__6db38",
     HO: "directoryFooter__6db38",
     bn: "badgeOwnership__6db38",
     CT: "badgeOwnershipText__6db38",
