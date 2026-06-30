@@ -59,6 +59,7 @@ let a = {
         defaultLayerContext: void 0,
         trackImpression: void 0,
         isWindowFocused: void 0,
+        isMainWindowVisible: void 0,
         dynamicGraphicComponents: void 0,
     },
     o = r.createContext(a);

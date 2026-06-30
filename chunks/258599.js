@@ -84,21 +84,23 @@ function k(e) {
             locale: f,
             theme: p,
             focused: k,
-            currentWindow: U,
-            fontScale: G,
-            fontScaleClass: F,
-            keyboardModeEnabled: V,
-            saturation: B,
-            desaturateUserColors: j,
-            useForcedColors: H,
-            systemForcedColors: Y,
-            useReducedMotion: W,
-            alwaysShowLinkDecorations: K,
-            highContrastMode: $,
+            mainWindowVisible: U,
+            currentWindow: G,
+            fontScale: F,
+            fontScaleClass: V,
+            keyboardModeEnabled: B,
+            saturation: j,
+            desaturateUserColors: H,
+            useForcedColors: Y,
+            systemForcedColors: W,
+            useReducedMotion: K,
+            alwaysShowLinkDecorations: $,
+            highContrastMode: z,
         } = (0, c.cf)([R.default, m.Ay, O.A, v.A, b.A], () => ({
             locale: R.default.locale,
             theme: n ?? O.A.theme,
             focused: o ? v.A.getWindowFocused(t) : b.A.isFocused(),
+            mainWindowVisible: b.A.isVisible(),
             currentWindow: o ? (v.A.getWindow(t) ?? window) : window,
             fontScale: m.Ay.fontScale,
             fontScaleClass: m.Ay.fontScaleClass,
@@ -111,7 +113,7 @@ function k(e) {
             alwaysShowLinkDecorations: m.Ay.alwaysShowLinkDecorations,
             highContrastMode: m.Ay.isHighContrastModeEnabled,
         })),
-        z = (function (e, t) {
+        q = (function (e, t) {
             let [n, i] = s.useState(0),
                 r = (0, I.aL)();
             s.useEffect(() => {
@@ -145,21 +147,22 @@ function k(e) {
                 }, [e, a, n, t]),
                 t && 0 === n && a
             );
-        })(U, __OVERLAY__ || k),
-        q = 0;
-    1 !== B && (q |= _.REDUCE_SATURATION_ENABLED);
-    let Z = (0, L.C)(),
-        X = (0, y.qK)("RootThemeContextProvider"),
-        Q = (0, y.k5)("RootThemeContextProvider"),
-        J = (0, y.lV)("RootThemeContextProvider"),
-        ee = C.useConfig({ location: "RootThemeContextProvider" }).enabled,
-        et = (0, A.m2)({ isPopoutWindow: o }),
-        en = (function (e, t, n, i, r) {
-            let o = s.useContext(g.A),
-                l = s.useCallback(
+        })(G, __OVERLAY__ || k),
+        Z = 0;
+    1 !== j && (Z |= _.REDUCE_SATURATION_ENABLED);
+    let X = (0, L.C)(),
+        Q = (0, y.qK)("RootThemeContextProvider"),
+        J = (0, y.k5)("RootThemeContextProvider"),
+        ee = (0, y.lV)("RootThemeContextProvider"),
+        et = C.useConfig({ location: "RootThemeContextProvider" }).enabled,
+        en = (0, A.m2)({ isPopoutWindow: o }),
+        ei = (function (e) {
+            let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: o, locale: l } = e,
+                u = s.useContext(g.A),
+                c = s.useCallback(
                     (e) => {
                         let { componentName: t, payload: n } = e;
-                        o(
+                        u(
                             {
                                 type: n.impressionType ?? x[t],
                                 name: n.impression?.impressionName,
@@ -168,9 +171,9 @@ function k(e) {
                             { disableTrack: n.disableTrack },
                         );
                     },
-                    [o],
+                    [u],
                 ),
-                u = s.useCallback(
+                _ = s.useCallback(
                     () => ({
                         i18n: {
                             CANCEL: P.intl.string(P.t["ETE/oC"]),
@@ -223,72 +226,74 @@ function k(e) {
                             SELECTED_TAGS_HEADING: P.intl.string(M.default.VMNfsY),
                             PERCENT_COMPLETE: (e) => P.intl.formatToPlainString(M.default["2L/ygS"], { percent: e }),
                         },
-                        locale: r,
-                        theme: e,
-                        saturation: t,
+                        locale: l,
+                        theme: t,
+                        saturation: n,
                         defaultLayerContext: N.uY,
-                        experiments: { enabledExperiments: n },
-                        trackImpression: l,
-                        isWindowFocused: () => i,
+                        experiments: { enabledExperiments: i },
+                        trackImpression: c,
+                        isWindowFocused: () => r,
+                        isMainWindowVisible: () => o,
                         dynamicGraphicComponents: d.Q,
                     }),
-                    [e, t, n, l, i, r],
+                    [t, n, i, c, r, o, l],
                 ),
-                [c, _] = s.useState(u);
+                [h, f] = s.useState(_);
             return (
                 s.useLayoutEffect(() => {
                     function e() {
-                        _(u);
+                        f(_);
                     }
                     (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), P.intl.onLocaleChange(e);
-                }, [u]),
-                c
+                }, [_]),
+                h
             );
-        })(
-            p,
-            B,
-            s.useMemo(() => {
+        })({
+            theme: p,
+            saturation: j,
+            enabledExperiments: s.useMemo(() => {
                 let e = [];
                 return (
-                    X && e.push("refresh-fast-follow-avatars"),
-                    Q && e.push("refresh-fast-follow-guild-bg"),
-                    J && e.push("refresh-fast-follow-distinct-borders"),
-                    ee && e.push("mana-type-consolidation"),
+                    Q && e.push("refresh-fast-follow-avatars"),
+                    J && e.push("refresh-fast-follow-guild-bg"),
+                    ee && e.push("refresh-fast-follow-distinct-borders"),
+                    et && e.push("mana-type-consolidation"),
                     e
                 );
-            }, [X, Q, J, ee]),
-            k,
-            f,
-        );
+            }, [Q, J, ee, et]),
+            focused: k,
+            mainWindowVisible: U,
+            locale: f,
+        });
     return (0, r.jsx)(h.GE, {
-        value: en,
+        value: ei,
         children: (0, r.jsx)(E, {
             theme: p,
-            flags: q,
-            saturation: B,
-            density: Z,
+            flags: Z,
+            saturation: j,
+            density: X,
             children: (0, r.jsx)(w.fs, {
                 lang: f,
                 theme: p,
-                density: Z,
+                density: X,
                 focused: k,
-                fontScale: G,
-                fontScaleClass: F,
-                keyboardModeEnabled: V,
-                mouseMode: z,
-                saturation: B,
-                desaturateUserColors: j,
-                useForcedColors: H,
-                systemForcedColors: Y,
-                useReducedMotion: W,
-                alwaysShowLinkDecorations: K,
+                fontScale: F,
+                fontScaleClass: V,
+                keyboardModeEnabled: B,
+                mouseMode: q,
+                saturation: j,
+                desaturateUserColors: H,
+                useForcedColors: Y,
+                systemForcedColors: W,
+                useReducedMotion: K,
+                alwaysShowLinkDecorations: $,
                 hardwareAccelerationEnabled: u,
-                highContrastMode: $,
+                highContrastMode: z,
                 isPopoutWindow: o,
-                rootClassName: l()(et, {
-                    "refresh-fast-follow-avatars": X,
-                    "refresh-fast-follow-guild-bg": Q,
-                    "refresh-fast-follow-distinct-borders": J,
+                rootClassName: l()(en, {
+                    "refresh-fast-follow-avatars": Q,
+                    "refresh-fast-follow-guild-bg": J,
+                    "refresh-fast-follow-distinct-borders": ee,
                 }),
                 children: i,
             }),
