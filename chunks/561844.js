@@ -75,8 +75,6 @@ function N(e) {
                 ...{
                     quest_id: l.id,
                     quest_type: (0, m.pv)(l.config),
-                    game_id: l.config.application.id,
-                    game_name: l.config.application.name,
                     application_ids: (0, E._3)(l) ?? [],
                     quest_status: (0, g.NI)(l),
                     ...y(l.id, o, r.p.QUEST, a),
