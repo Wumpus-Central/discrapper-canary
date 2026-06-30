@@ -1,8 +1,8 @@
 l.d(n, { f: () => q });
 var t = l(627968),
-    a = l(64700),
-    r = l(503698),
-    i = l.n(r),
+    r = l(64700),
+    a = l(503698),
+    i = l.n(a),
     s = l(154283),
     u = l(670482),
     o = l(15626),
@@ -12,9 +12,9 @@ var t = l(627968),
     v = l(823607),
     h = l(511274),
     f = l(43990),
-    m = l(922016),
-    p = l(355622),
-    b = l(408018),
+    p = l(922016),
+    b = l(355622),
+    m = l(408018),
     I = l(186306),
     x = l(655098),
     A = l(323350),
@@ -25,7 +25,7 @@ var t = l(627968),
     N = l(490682),
     E = l(739181),
     w = l(375499),
-    S = l(267889),
+    S = l(334295),
     P = l(267102),
     R = l(363195),
     M = l(885386),
@@ -37,30 +37,30 @@ var t = l(627968),
     z = l(457845);
 let B = (0, D.createChannelRecord)({ id: "1", type: V.rbe.DM });
 function G(e) {
-    let { editor: n, pickerIntention: l, containerClassName: r } = e,
+    let { editor: n, pickerIntention: l, containerClassName: a } = e,
         s = (0, g.bG)([R.A], () => R.A.theme),
-        u = a.useRef(null),
-        o = a.useCallback(
+        u = r.useRef(null),
+        o = r.useCallback(
             (e, l) => {
-                let { emoji: t, willClose: a } = e;
+                let { emoji: t, willClose: r } = e;
                 null != t &&
                     (!(function (e, n) {
                         let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                             t = n.animated ? "a" : "",
-                            a = n.originalName ?? n.name ?? "",
-                            r = `:${n.name}:`,
-                            i = null != n.id ? `<${t}:${a.replace(/:/g, "")}:${n.id}>` : null,
-                            s = y.VW.areStylesDisabled(e) || null == i ? r : i;
+                            r = n.originalName ?? n.name ?? "",
+                            a = `:${n.name}:`,
+                            i = null != n.id ? `<${t}:${r.replace(/:/g, "")}:${n.id}>` : null,
+                            s = y.VW.areStylesDisabled(e) || null == i ? a : i;
                         I.o.withSingleEntry(e, () => {
                             k.b.insertText(e, s + (l ? " " : ""));
                         });
-                    })(n, t, a),
+                    })(n, t, r),
                     y.VW.focus(n)),
-                    a && l();
+                    r && l();
             },
             [n],
         ),
-        d = a.useCallback(
+        d = r.useCallback(
             (e) => {
                 let { closePopout: n } = e;
                 return (0, t.jsx)(f.N, {
@@ -83,13 +83,13 @@ function G(e) {
             [o, l, s],
         );
     return (0, t.jsx)("div", {
-        className: i()(T.S0, r),
+        className: i()(T.S0, a),
         onMouseDown: (e) => e.preventDefault(),
-        children: (0, t.jsx)(m.Y, {
+        children: (0, t.jsx)(p.Y, {
             targetElementRef: u,
             renderPopout: d,
             position: "top",
-            animation: m.Y.Animation.NONE,
+            animation: p.Y.Animation.NONE,
             align: "right",
             children: (e, n) => {
                 let { isShown: l } = n;
@@ -100,11 +100,11 @@ function G(e) {
 }
 function _(e) {
     let { editor: n, pickerIntention: l } = e,
-        [, r] = a.useState(n.selection);
+        [, a] = r.useState(n.selection);
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             function e() {
-                return r(n.selection);
+                return a(n.selection);
             }
             return (
                 n.events.addListener("onChange", e),
@@ -124,26 +124,26 @@ function K(e) {
     let {
             editor: n,
             toolbarVariant: l,
-            placeholder: r,
+            placeholder: a,
             readOnly: s,
             autoFocus: c,
             required: g,
             rows: v,
             pickerIntention: h,
             onChangeValue: f,
-            onKeyDown: m,
-            onFocus: p,
-            onBlur: b,
+            onKeyDown: p,
+            onFocus: b,
+            onBlur: m,
             ariaLabelledByProp: I,
         } = e,
-        A = a.useContext(o._),
+        A = r.useContext(o._),
         y = A?.errorMessageId != null,
-        E = a.useRef(null),
-        w = a.useRef(null),
-        S = a.useCallback(() => n, [n]),
-        P = a.useCallback((e) => [...(0, N.A)(n, e, void 0), ...(0, j.A)(n, e)], [n]);
+        E = r.useRef(null),
+        w = r.useRef(null),
+        S = r.useCallback(() => n, [n]),
+        P = r.useCallback((e) => [...(0, N.A)(n, e, void 0), ...(0, j.A)(n, e)], [n]);
     return (
-        a.useEffect(() => {
+        r.useEffect(() => {
             if ("floating" !== l) return;
             let e = w.current;
             if (null == e) return;
@@ -179,15 +179,15 @@ function K(e) {
                                     containerClassName: T.RZ,
                                     className: T.EN,
                                     editor: n,
-                                    placeholder: r,
+                                    placeholder: a,
                                     readOnly: s,
                                     canFocus: !s,
                                     autoFocus: c,
                                     decorate: P,
                                     onChange: f,
-                                    onKeyDown: m,
-                                    onFocus: p,
-                                    onBlur: b,
+                                    onKeyDown: p,
+                                    onFocus: b,
+                                    onBlur: m,
                                     "aria-labelledby": I ?? A?.labelId,
                                     "aria-describedby": A?.describedById,
                                     "aria-errormessage": A?.errorMessageId,
@@ -209,13 +209,13 @@ function q(e) {
     let {
             value: n,
             placeholder: l,
-            minLength: r,
+            minLength: a,
             maxLength: i,
             rows: o = 3,
             autosize: d = !0,
             autoFocus: g = !1,
             error: f,
-            emojiPickerIntention: m = O.EmojiIntention.CHAT,
+            emojiPickerIntention: p = O.EmojiIntention.CHAT,
             toolbarVariant: I = "floating",
             editorRef: x,
             onChange: C,
@@ -226,42 +226,40 @@ function q(e) {
             ...S
         } = e,
         R = (function (e) {
-            let n = a.useContext(P.Ay),
+            let n = r.useContext(P.Ay),
                 l = M.SI.useSetting(),
-                [t] = a.useState(() => {
+                [t] = r.useState(() => {
                     let t = (0, s.ie)();
                     return (
-                        (t.children = (0, b.x7)(e)),
+                        (t.children = (0, m.x7)(e)),
                         (t.selection = { anchor: L.K, focus: L.K }),
                         (0, E.a)({
                             editor: t,
-                            chatInputType: p.oU.GENERIC_RICH_TEXTAREA,
+                            chatInputType: b.oU.GENERIC_RICH_TEXTAREA,
                             channel: B,
-                            canUseCommands: !1,
-                            canOnlyUseTextCommands: !1,
                             windowContext: n,
                             previewMarkdown: l,
                             updateState: (e, n, l) => {
-                                let { value: t, selection: a } = l;
-                                void 0 !== t && (e.children = t), null != a && (e.selection = a), e.onChange();
+                                let { value: t, selection: r } = l;
+                                void 0 !== t && (e.children = t), null != r && (e.selection = r), e.onChange();
                             },
                         }),
                         t
                     );
                 });
             return (
-                a.useLayoutEffect(() => {
+                r.useLayoutEffect(() => {
                     t.onChange();
                 }, [t]),
-                a.useEffect(() => {
+                r.useEffect(() => {
                     t.previewMarkdown !== l && ((t.previewMarkdown = l), t.onChange());
                 }, [t, l]),
                 t
             );
         })(n),
-        [D, V] = a.useState(n),
-        [T, z] = a.useState(() => R.children.length);
-    a.useImperativeHandle(
+        [D, V] = r.useState(n),
+        [T, z] = r.useState(() => R.children.length);
+    r.useImperativeHandle(
         x,
         () => ({
             focus(e) {
@@ -278,31 +276,31 @@ function q(e) {
         {
             setShouldValidate: F,
             errorMessage: H,
-            hasError: U,
-        } = (0, h.Y)({ validateOn: "change", error: f, value: D, minLength: r, maxLength: i }),
-        X = a.useRef(D);
-    X.current = D;
-    let W = a.useCallback(
+            hasError: X,
+        } = (0, h.Y)({ validateOn: "change", error: f, value: D, minLength: a, maxLength: i }),
+        W = r.useRef(D);
+    W.current = D;
+    let Y = r.useCallback(
         (e) => {
             let n = (0, A.WO)(e, { mode: "raw" });
-            n !== X.current && (V(n), F(!0), C?.(n)), d && z(e.length);
+            n !== W.current && (V(n), F(!0), C?.(n)), d && z(e.length);
         },
         [d, C, F],
     );
-    a.useEffect(() => {
-        n !== X.current &&
-            ((R.children = (0, b.x7)(n)),
+    r.useEffect(() => {
+        n !== W.current &&
+            ((R.children = (0, m.x7)(n)),
             (R.selection = { anchor: L.K, focus: L.K }),
             R.onChange(),
             V(n),
             d && z(R.children.length));
     }, [d, n, R]);
-    let Y = d ? Math.max(o, Math.min(T, 15)) : o,
+    let U = d ? Math.max(o, Math.min(T, 15)) : o,
         Z = null != i ? (0, t.jsx)(v.n, { value: D, maxLength: i }) : null;
     return (0, t.jsx)(c.D, {
         ...G,
         trailingAuxiliaryContent: Z,
-        errorMessage: U ? H : void 0,
+        errorMessage: X ? H : void 0,
         children: (0, t.jsx)(K, {
             editor: R,
             toolbarVariant: I,
@@ -310,9 +308,9 @@ function q(e) {
             readOnly: _,
             autoFocus: g,
             required: q,
-            rows: Y,
-            pickerIntention: m,
-            onChangeValue: W,
+            rows: U,
+            pickerIntention: p,
+            onChangeValue: Y,
             onKeyDown: y,
             onFocus: j,
             onBlur: N,
