@@ -162,19 +162,22 @@
 }
 
 .embed_bbe1d5 {
-    align-items: center;
     background-color: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
     color: var(--text-strong);
     cursor: pointer;
-    display: flex;
-    gap: var(--space-8);
     overflow: hidden;
     padding: var(--space-12);
     position: relative;
     text-align: start;
     width: 300px
+}
+
+.body_bbe1d5 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
 }
 
 .embed_bbe1d5:hover {
