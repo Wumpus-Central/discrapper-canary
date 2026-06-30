@@ -493,8 +493,8 @@ function eD(e) {
     }, !1);
 }
 function eL(e) {
-    let { participants: t } = e;
-    return t.reduce((e, t) => ((0, a.A)(t) && O(t.member.user)) || e, !1);
+    let { instance: t } = e;
+    return t.participants.reduce((e, t) => ((0, a.A)(t) && O(t.member.user)) || e, !1);
 }
 function ew(e) {
     let {} = e,

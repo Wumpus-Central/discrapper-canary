@@ -1,0 +1,12 @@
+.grid__5af4c {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(246px, 1fr));
+    grid-gap: var(--space-xl);
+    width: 100%
+}
+
+.tile__5af4c {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8)
+}

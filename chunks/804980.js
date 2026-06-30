@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(834730),
     d = n(821609),
     _ = n(212245),
-    h = n(933958),
+    h = n(594592),
     f = n(62583),
     p = n(878549),
     E = n(969151),
@@ -64,12 +64,7 @@ function F(e) {
                 .map((e) => ((0, p.S)(e, D.default) ? null : w.default.getUser(e.userId)))
                 .filter(M.Vq),
         ),
-        I = (0, o.bG)(
-            [h.Ay],
-            () =>
-                h.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => e.applicationId === n.id) ??
-                h.Ay.getEmbeddedActivitiesForStartingChannel(s.id).find((e) => e.applicationId === n.id),
-        ),
+        I = (0, o.bG)([h.Ay], () => h.Ay.getEmbeddedActivitiesForChannel(s.id).find((e) => e.applicationId === n.id)),
         { analyticsLocations: T } = (0, v.Ay)(),
         S = (0, _.p)(),
         y = P.Ay.getName(s.getGuildId(), s.id, A?.[0]),

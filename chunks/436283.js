@@ -3,7 +3,7 @@ let i, r;
 n.d(t, { Ay: () => S });
 var s = n(17928),
     a = n(228366),
-    o = n(720149),
+    o = n(493336),
     l = n(155718),
     u = n(495544),
     c = n(734057),
@@ -132,15 +132,16 @@ let S = new T(a.h, {
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
         let t,
             n,
-            { participants: i } = e,
-            r = u.default.getSessionId(),
-            s = u.default.getId(),
-            a = i.find((e) => e.user_id === s && e.session_id === r);
-        if (null == a || null == a.nonce) return;
-        let l = g[a.nonce];
-        null == l ? ((t = m[a.nonce]), (n = p[a.nonce])) : ((t = l.messageId), (n = l.interaction)),
+            { instance: i } = e,
+            r = i.participants,
+            s = u.default.getSessionId(),
+            a = u.default.getId(),
+            l = r.find((e) => e.user_id === a && e.session_id === s);
+        if (null == l || null == l.nonce) return;
+        let c = g[l.nonce];
+        null == c ? ((t = m[l.nonce]), (n = p[l.nonce])) : ((t = c.messageId), (n = c.interaction)),
             null != n &&
                 null != t &&
-                (I(a.nonce), null != t && "channelId" in n.data && o.A.deleteMessage(n.data.channelId, t, !0));
+                (I(l.nonce), null != t && "channelId" in n.data && o.A.deleteMessage(n.data.channelId, t, !0));
     },
 });

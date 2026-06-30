@@ -4,7 +4,7 @@ var i = n(735438),
     r = n.n(i),
     s = n(17928),
     a = n(228366),
-    o = n(933958),
+    o = n(594592),
     l = n(969151),
     u = n(717125),
     c = n(698441),
@@ -17,7 +17,7 @@ var i = n(735438),
     m = n(945886),
     g = n(760751),
     A = n(576705),
-    I = n(222823),
+    I = n(568548),
     T = n(309010),
     S = n(543465),
     y = n(403362),
@@ -178,8 +178,8 @@ let H = new j(a.h, {
         return b.nonPositionalChannelIdUpdate(t);
     },
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
-        let { location: t } = e;
-        return b.updateSubtitles((0, l.D)(t), (0, l.H)(t));
+        let { instance: t } = e;
+        return b.updateSubtitles((0, l.D)(t.location), (0, l.H)(t.location));
     },
     EMBEDDED_ACTIVITY_LAUNCH_START: function (e) {
         V();

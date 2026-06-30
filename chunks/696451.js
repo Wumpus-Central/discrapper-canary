@@ -686,9 +686,9 @@ let el = new eo(o.h, {
         );
     },
     EMBEDDED_ACTIVITY_UPDATE_V2: function (e) {
-        let { location: t, participants: n } = e,
-            i = (0, u.D)(t);
-        return null != i && X(i, n);
+        let { instance: t } = e,
+            n = (0, u.D)(t.location);
+        return null != n && X(n, t.participants);
     },
     INTERACTION_MODAL_CREATE: function (e) {
         let t = T.A.getChannel(e.channelId);
