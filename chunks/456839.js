@@ -94,7 +94,7 @@ function b(e) {
 }
 function D(e) {
     let { product: t, sku: n } = e,
-        r = n?.id,
+        r = n?.id ?? t?.skuId,
         s = (0, l.bG)([_.A], () => _.A.getProduct(n?.id)),
         a = t ?? s;
     if (a?.type === o.R.BUNDLE) return (0, i.jsx)(b, { product: a });

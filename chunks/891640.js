@@ -91,7 +91,7 @@ let E = {
             return { paymentSource: await (0, s.Tv)(t, i.info, r), responseType: "payment-source" };
         },
     },
-    [u.he.PIX]: { renderAddressElementInStandaloneMode: !0, submitAddressStep: async (e) => await c(e, u.he.PIX) },
+    [u.he.PIX]: { submitAddressStep: async (e) => await c(e, u.he.PIX) },
     [u.he.IDEAL]: {
         submitAddressStep: async (e) =>
             e.shouldUsePaymentElement

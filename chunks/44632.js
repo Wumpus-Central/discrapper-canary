@@ -1,112 +1,106 @@
-i.d(t, { default: () => A });
+i.d(e, { default: () => N });
 var l = i(627968),
-    s = i(64700),
-    a = i(834730),
-    n = i(173936),
+    n = i(64700),
+    a = i(575593),
+    s = i(834730),
     r = i(691540),
     o = i(857250),
-    c = i(97483),
-    d = i(493336),
-    u = i(9578),
+    d = i(97483),
+    c = i(173936),
+    u = i(493336),
     C = i(115718),
     m = i(953832),
-    k = i(451909),
-    x = i(223863),
-    h = i(734057),
-    p = i(174459),
-    f = i(957565),
-    E = i(403362),
-    S = i(573749),
-    v = i(652215),
-    w = i(381941),
-    L = i(375708),
-    j = i(894135);
-let P = (e) => e.type === C.rD.USER || e.type === C.rD.GROUP_DM;
-function _(e) {
-    let { skuId: t, productName: i, tab: r } = e,
-        o = s.useMemo(() => (0, S.o)(t, r), [t, r]);
-    return (0, l.jsx)("div", {
-        className: j.sq,
-        children: (0, l.jsxs)("div", {
-            className: j.kx,
-            children: [
-                (0, l.jsx)(u.A, {
-                    title: i,
-                    href: o,
-                    children: (0, l.jsx)(a.E, {
-                        variant: "text-md/medium",
-                        color: "text-link",
-                        lineClamp: 1,
-                        children: i,
+    p = i(451909),
+    k = i(223863),
+    x = i(734057),
+    h = i(174459),
+    E = i(957565),
+    f = i(403362),
+    S = i(993408),
+    L = i(573749),
+    v = i(623373),
+    w = i(456839),
+    j = i(652215),
+    P = i(381941),
+    _ = i(375708),
+    g = i(628983);
+let y = (t) => t.type === C.rD.USER || t.type === C.rD.GROUP_DM;
+function A(t) {
+    let e,
+        { product: i, productName: n } = t;
+    return (0, l.jsxs)("div", {
+        className: g.sq,
+        children: [
+            (0, l.jsxs)("div", {
+                className: g.kx,
+                children: [
+                    (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-default", lineClamp: 1, children: n }),
+                    (0, l.jsx)(s.E, {
+                        variant: "text-sm/medium",
+                        color: "text-muted",
+                        children:
+                            (e = (0, v.YW)(i)) === a.R.BUNDLE
+                                ? _.intl.string(_.t.Zr5tjn)
+                                : ((null != e ? (0, S.Dm)(e) : null) ?? _.intl.string(_.t.pWG4ze)),
                     }),
-                }),
-                (0, l.jsxs)("div", {
-                    className: j.Bo,
-                    children: [
-                        (0, l.jsx)(n.q, { size: "xs", color: "currentColor", className: j.wP }),
-                        (0, l.jsx)(a.E, {
-                            variant: "text-sm/medium",
-                            color: "text-muted",
-                            children: L.intl.string(L.t.pWG4ze),
-                        }),
-                    ],
-                }),
-            ],
-        }),
+                ],
+            }),
+            (0, l.jsx)("div", { className: g.wP, children: (0, l.jsx)(w.O, { product: i }) }),
+        ],
     });
 }
-function A(e) {
-    let { skuId: t, productName: i, tab: a, source: u, onClose: C, ...j } = e,
-        A = s.useCallback(
-            async (e, i, l) => {
-                let { withMessage: s, closeAfterSend: n } = i;
+function N(t) {
+    let { skuId: e, product: i, productName: a, tab: s, source: C, onClose: S, ...v } = t,
+        w = n.useCallback(
+            async (t, i, l) => {
+                let { withMessage: n, closeAfterSend: a } = i;
                 l(!0);
                 try {
-                    let i = (await Promise.all(e.map(x.pk))).filter(E.Vq);
+                    let i = (await Promise.all(t.map(k.pk))).filter(f.Vq);
                     if (0 === i.length) return void l(!1);
-                    n && C();
-                    let u = `${(0, S.o)(t, a)}
+                    a && S();
+                    let c = `${(0, L.o)(e, s)}
 
 `;
-                    for (let e of i) {
-                        let t = h.A.getChannel(e);
-                        null != t &&
-                            (await d.A.sendMessage(t.id, k.Ay.parse(t, u + (s ?? "")), !1, {
-                                location: w.Hx.COLLECTIBLES_SHOP,
+                    for (let t of i) {
+                        let e = x.A.getChannel(t);
+                        null != e &&
+                            (await u.A.sendMessage(e.id, p.Ay.parse(e, c + (n ?? "")), !1, {
+                                location: P.Hx.COLLECTIBLES_SHOP,
                             }));
                     }
-                    (0, r.P0)((0, o.o)(L.intl.string(L.t.kwmYkt), c.Ck.SUCCESS));
-                } catch (e) {
-                    (0, r.P0)((0, o.o)(L.intl.string(L.t.iufib1), c.Ck.FAILURE));
+                    (0, r.P0)((0, o.o)(_.intl.string(_.t.kwmYkt), d.Ck.SUCCESS));
+                } catch (t) {
+                    (0, r.P0)((0, o.o)(_.intl.string(_.t.iufib1), d.Ck.FAILURE));
                 } finally {
                     l(!1);
                 }
             },
-            [C, t, a],
+            [S, e, s],
         ),
-        g = s.useMemo(
+        g = n.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        p.default.track(v.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
-                            (0, f.C)((0, S.o)(t, a), () =>
-                                (0, r.P0)((0, o.o)(L.intl.string(L.t["L/PwZf"]), c.Ck.SUCCESS)),
+                        h.default.track(j.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: e }),
+                            (0, E.C)((0, L.o)(e, s), () =>
+                                (0, r.P0)((0, o.o)(_.intl.string(_.t["L/PwZf"]), d.Ck.SUCCESS)),
                             );
                     },
-                    icon: n.q,
+                    icon: c.q,
                 },
             ],
-            [t, a],
+            [e, s],
         );
     return (0, l.jsx)(m.ForwardModal, {
-        ...j,
-        onClose: C,
-        source: u,
-        customPreview: (0, l.jsx)(_, { skuId: t, productName: i, tab: a }),
-        customSendHandler: A,
+        ...v,
+        onClose: S,
+        source: C,
+        customPreview: (0, l.jsx)(A, { product: i, productName: a }),
+        customSendHandler: w,
         additionalActions: g,
-        channelFilter: P,
+        channelFilter: y,
     });
 }
