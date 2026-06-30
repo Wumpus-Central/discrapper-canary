@@ -7,7 +7,7 @@ var i = n(627968),
     o = n(821609),
     l = n(289873),
     u = n(887555),
-    c = n(753390),
+    c = n(277984),
     d = n(176095),
     _ = n(6151),
     h = n(826469),
@@ -158,7 +158,10 @@ function D(e) {
                         return (
                             e.enabled
                                 ? null != e.relocationCountry && (t = T.intl.string(S.default.pWSgIu))
-                                : (t = T.intl.string(S.default["Kv+vV7"])),
+                                : (t =
+                                      "payment_method_unsupported" === e.disabledReason
+                                          ? T.intl.string(S.default.WJmme7)
+                                          : T.intl.string(S.default["Kv+vV7"])),
                             { value: e.id, label: i, brand: n, disabled: !e.enabled, tooltipText: t }
                         );
                     }
