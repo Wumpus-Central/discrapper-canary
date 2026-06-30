@@ -42,4 +42,7 @@ let d = new c(s.h, {
         let { path: t } = e;
         return (l.lastViewedNonVoicePath = t), !0;
     },
+    LOGOUT: function () {
+        l = { lastViewedPath: null, lastViewedNonVoicePath: null };
+    },
 });
