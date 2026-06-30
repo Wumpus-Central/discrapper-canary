@@ -190,6 +190,7 @@ class A extends r.PureComponent {
                                 role: "slider",
                                 tabIndex: 0,
                                 onKeyDown: this.handleKeyDown,
+                                onPointerDown: this.handlePointerDown,
                                 onMouseDown: this.handleContainerMouseDown,
                                 onFocus: () => {
                                     this.onFocus();
@@ -261,6 +262,9 @@ class A extends r.PureComponent {
     blur() {
         this.containerRef.current?.blur();
     }
+    handlePointerDown = (e) => {
+        this.props.disabled || e.currentTarget.setPointerCapture?.(e.pointerId);
+    };
     handleContainerMouseDown = (e) => {
         let t,
             {

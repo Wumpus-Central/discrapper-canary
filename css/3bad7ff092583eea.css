@@ -9,6 +9,7 @@
     height: 520px;
     overflow: hidden;
     padding: 0;
+    position: relative;
     width: 723px
 }
 
@@ -124,7 +125,8 @@
 .detailPanel__6db38 {
     background: var(--background-base-lower);
     flex: 1;
-    position: relative
+    position: relative;
+    z-index: 0
 }
 
 .detailPanel__6db38,
