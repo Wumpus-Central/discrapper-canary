@@ -1561,35 +1561,33 @@ let t$ = [
                                         }),
                                         null == T || null == b)
                                     ) {
-                                        if (
-                                            (eg()(null != e, "Missing paymentSource"),
-                                            (
-                                                await (0, z.Ky)({
-                                                    items: R,
-                                                    paymentSource: e,
-                                                    currency: l,
-                                                    expectedInvoicePrice: a,
-                                                    expectedRenewalPrice: c,
-                                                })
-                                            ).redirectConfirmation)
-                                        ) {
+                                        eg()(null != e, "Missing paymentSource");
+                                        let t = await (0, z.Ky)({
+                                            items: R,
+                                            paymentSource: e,
+                                            currency: l,
+                                            expectedInvoicePrice: a,
+                                            expectedRenewalPrice: c,
+                                        });
+                                        if (t.redirectConfirmation) {
                                             s = !0;
                                             return;
                                         }
+                                        if (t.pendingCustomerAction) return;
                                     } else {
                                         let t = { items: (0, e4.aE)(T, R) };
-                                        if (
-                                            ((t.currency = T.currency ?? l),
+                                        (t.currency = T.currency ?? l),
                                             (t.paymentSource = null != o ? g[o] : void 0),
                                             null == t.paymentSource &&
                                                 (eg()(null != e, "Missing paymentSource"),
                                                 (t.paymentSource = e),
-                                                (t.currency = l)),
-                                            (await (0, z.nV)(T, t, a, c, i.location_stack)).redirectConfirmation)
-                                        ) {
+                                                (t.currency = l));
+                                        let n = await (0, z.nV)(T, t, a, c, i.location_stack);
+                                        if (n.redirectConfirmation) {
                                             s = !0;
                                             return;
                                         }
+                                        if (n.pendingCustomerAction) return;
                                     }
                                     null == p && t(u.pn.CONFIRM),
                                         N(L.h.COMPLETED),

@@ -23,7 +23,7 @@ var i = n(627968),
     y = n(937008),
     C = n(158032),
     N = n(830382),
-    v = n(753390),
+    v = n(277984),
     R = n(243217),
     O = n(652215),
     b = n(788868);
@@ -292,7 +292,7 @@ function x(e) {
         ),
         ew = r.useCallback(
             (e) =>
-                e.redirectConfirmation
+                e.redirectConfirmation || e.pendingCustomerAction
                     ? (eN(null != e.redirectURL), { shouldReturnEarly: !0 })
                     : ($(w.h.COMPLETED), { shouldReturnEarly: !1 }),
             [$],

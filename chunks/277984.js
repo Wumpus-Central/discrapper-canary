@@ -521,7 +521,7 @@ let Z = {
             confirmationType: "stripe_direct_confirmation",
             constructStripeConfirmPaymentHandler: (e) => {
                 let { stripe: t, paymentMethodId: n } = e;
-                return { stripeConfirmPayment: t.confirmPixPayment, paymentMethod: n };
+                return { stripeConfirmPayment: t.confirmPixPayment, paymentMethod: n, pendingCustomerAction: !0 };
             },
         },
     };
@@ -597,22 +597,34 @@ class J extends Q {
     async confirmDirectPaymentSource(e) {
         let { clientSecret: t, paymentMethodId: n } = e,
             i = await this.getStripe(),
-            { stripeConfirmPayment: r, paymentMethod: s } = this.handlerRegistry.constructStripeConfirmPaymentHandler({
+            {
+                stripeConfirmPayment: r,
+                paymentMethod: s,
+                pendingCustomerAction: a,
+            } = this.handlerRegistry.constructStripeConfirmPaymentHandler({
                 stripe: i,
                 paymentSource: this.paymentSource,
                 paymentMethodId: n,
             }),
-            { paymentIntent: a, error: o } = await r(t, { payment_method: s });
-        if (null != o) throw N(o);
-        if (null == a) throw N("paymentIntent not available with successful stripe call");
+            { paymentIntent: o, error: l } = await r(t, { payment_method: s });
+        if (null != l) throw N(l);
+        if (null == o) throw N("paymentIntent not available with successful stripe call");
+        return { pendingCustomerAction: a };
     }
     async confirmPayment() {
         let { clientSecret: e, paymentMethodId: t } = await this.getPaymentIntentInfo();
-        return "stripe_redirect_confirmation" === this.handlerRegistry.confirmationType
-            ? (await this.confirmRedirectedPaymentSource({ clientSecret: e, paymentMethodId: t }),
-              { redirectConfirmation: !0 })
-            : (await this.confirmDirectPaymentSource({ clientSecret: e, paymentMethodId: t }),
-              { redirectConfirmation: !1 });
+        if ("stripe_redirect_confirmation" === this.handlerRegistry.confirmationType)
+            return (
+                await this.confirmRedirectedPaymentSource({ clientSecret: e, paymentMethodId: t }),
+                { redirectConfirmation: !0 }
+            );
+        {
+            let { pendingCustomerAction: n } = await this.confirmDirectPaymentSource({
+                clientSecret: e,
+                paymentMethodId: t,
+            });
+            return { redirectConfirmation: !1, pendingCustomerAction: n };
+        }
     }
 }
 class ee extends Q {
