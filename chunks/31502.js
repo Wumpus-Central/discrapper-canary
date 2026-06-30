@@ -13,3 +13,7 @@ function n(e) {
     let { enabled: t } = r.getConfig({ location: e });
     return t;
 }
+e;
+})
+return t
+}

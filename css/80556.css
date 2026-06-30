@@ -2330,6 +2330,19 @@ screen and (max-width:485px) {
     margin-inline-start: calc(var(--space-8)*-1)
 }
 
+.spinnerControl__63de2 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.spinner__63de2 {
+    transform: scale(.66)
+}
+
 .dropdownLoadingContainer_f38e43 {
     align-items: center;
     display: flex;
@@ -6141,18 +6154,4 @@ html:not(.chat-input) .inputInner_b1f01d {
     inset: 0;
     margin: auto;
     position: absolute
-}
-
-.wrapper__0c74f {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    inset-inline: 0;
-    bottom: 0
-}
-
-.wrapper__0d1ef {
-    flex: 1
 }

@@ -518,9 +518,9 @@ function e_(e) {
 }
 var eh = n(702841),
     ef = n(990078),
-    ep = n(150934),
-    eE = n(885574),
-    em = n(289873),
+    ep = n(289873),
+    eE = n(150934),
+    em = n(885574),
     eg = n(277984),
     eA = n(176095),
     eI = n(677665);
@@ -534,73 +534,80 @@ function eS(e) {
             onChange: i,
             className: a,
             disabled: l = !1,
-            disabledTooltip: u,
-            locked: c = !1,
-            showDisabledInfoIcon: d = !0,
+            loading: u = !1,
+            disabledTooltip: c,
+            locked: d = !1,
+            showDisabledInfoIcon: _ = !0,
         } = e,
-        _ = (0, eh.bG)([eA.A], () => eA.A.getBalance(t.id), [t.id]),
-        h = (0, eh.bG)([eA.A], () => eA.A.getIsFetching(t.id), [t.id]);
+        h = (0, eh.bG)([eA.A], () => eA.A.getBalance(t.id), [t.id]),
+        f = (0, eh.bG)([eA.A], () => eA.A.getIsFetching(t.id), [t.id]);
     s.useEffect(() => {
         (0, eg.YP)(t.id);
     }, [t.id]);
-    let f = null == _ && !h,
-        p = s.useMemo(() => {
-            if (null == _) return null;
-            let e = (0, ee.$g)(_.amount, _.currency);
+    let p = null == h && !f,
+        E = s.useMemo(() => {
+            if (null == h) return null;
+            let e = (0, ee.$g)(h.amount, h.currency);
             return F.intl.format(en.default["9Nb9Bz"], { amount: e });
-        }, [_]);
+        }, [h]);
     s.useEffect(() => {
-        !c && f && n && i(!1);
-    }, [c, f, n, i]);
-    let E = l || h || (!c && f),
-        m = E || c,
-        g = s.useCallback(() => {
-            m || i(!n);
-        }, [i, n, m]);
-    if (f && !c) return null;
-    let A = E && null != u && d,
-        I = m && null != u,
-        T = o()(eI.k, a),
-        S = (0, r.jsx)(ep.S, { checked: n && (c || !f), onChange: g, disabled: m, label: "" }),
-        y = (0, r.jsxs)("div", {
+        !d && p && n && i(!1);
+    }, [d, p, n, i]);
+    let m = l || u || f || (!d && p),
+        g = m || d,
+        A = s.useCallback(() => {
+            g || i(!n);
+        }, [i, n, g]);
+    if (p && !d) return null;
+    let I = m && null != c && _,
+        T = g && null != c,
+        S = o()(eI.kL, a),
+        y = u
+            ? (0, r.jsx)("div", {
+                  className: eI.tv,
+                  children: (0, r.jsx)(ep.y, { type: ep.y.Type.SPINNING_CIRCLE_SIMPLE, className: eI.u1 }),
+              })
+            : (0, r.jsx)(eE.S, { checked: n && (d || !p), onChange: A, disabled: g, label: "" }),
+        C = (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(b.E, {
                     variant: "text-md/normal",
                     color: "text-strong",
                     children: F.intl.string(en.default["febr+T"]),
                 }),
-                !h &&
-                    null != p &&
+                !f &&
+                    null != E &&
                     (0, r.jsx)(b.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         style: { marginTop: 4 },
-                        children: p,
+                        children: E,
                     }),
             ],
         }),
-        C = m
+        N = g
             ? (0, r.jsxs)("div", {
-                  className: T,
+                  className: S,
                   role: "checkbox",
-                  "aria-checked": n,
-                  "aria-disabled": E || void 0,
+                  "aria-checked": !u && n,
+                  "aria-busy": u || void 0,
+                  "aria-disabled": m || void 0,
                   children: [
-                      (0, r.jsx)("div", { children: S }),
-                      y,
-                      A && (0, r.jsx)(eE.m, { className: eI.G, size: "xs", color: z.A.colors.TEXT_MUTED }),
-                      h && (0, r.jsx)(em.y, { type: em.y.Type.PULSING_ELLIPSIS }),
+                      (0, r.jsx)("div", { children: y }),
+                      C,
+                      I && (0, r.jsx)(em.m, { className: eI.G, size: "xs", color: z.A.colors.TEXT_MUTED }),
+                      f && (0, r.jsx)(ep.y, { type: ep.y.Type.PULSING_ELLIPSIS }),
                   ],
               })
             : (0, r.jsxs)(K.D, {
-                  className: T,
-                  onClick: g,
+                  className: S,
+                  onClick: A,
                   role: "checkbox",
                   "aria-checked": n,
                   tabIndex: 0,
-                  children: [(0, r.jsx)(K.D, { onClick: eT, children: S }), y],
+                  children: [(0, r.jsx)(K.D, { onClick: eT, children: y }), C],
               });
-    return I ? (0, r.jsx)(ef.m, { text: u, asContainer: !0, position: "top", align: "center", children: C }) : C;
+    return T ? (0, r.jsx)(ef.m, { text: c, asContainer: !0, position: "top", align: "center", children: N }) : N;
 }
 var ey = n(637141),
     eC = n(457287),

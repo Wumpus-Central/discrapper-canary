@@ -1,3 +1,17 @@
+.wrapper__0c74f {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.wrapper__0d1ef {
+    flex: 1
+}
+
 .wrapper__0856d {
     display: grid;
     grid-template-columns: 48px auto;
