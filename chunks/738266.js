@@ -1913,7 +1913,7 @@ class nE extends i.PureComponent {
                   })
                 : null,
             C =
-                m && p
+                m && p && !e.isGameInvitesChannel()
                     ? (0, l.jsx)(tL.f, {
                           label: eH.intl.string(eH.t.qk2jdY),
                           placeholder: eH.intl.string(eH.t.DDjD1H),
