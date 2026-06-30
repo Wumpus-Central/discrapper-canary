@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ad: () => f, BT: () => g, CK: () => A, Yd: () => m, np: () => E, qH: () => _, xs: () => p });
+n.d(t, { Ad: () => f, BT: () => g, Yd: () => m, np: () => E, qH: () => _, xs: () => p });
 var i = n(636537),
     r = n(228366),
     s = n(495544),
@@ -60,7 +60,4 @@ function m(e) {
 }
 function g() {
     r.h.dispatch({ type: "GIFT_UNREAD_NOTIFICATION_DISMISS" });
-}
-function A(e) {
-    r.h.dispatch({ type: "PROFILE_POPOUT_GIFT_INTENTS_DISMISS", recipientUserId: e });
 }

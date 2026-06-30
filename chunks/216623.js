@@ -20,9 +20,11 @@ async function c(e) {
 }
 async function d() {
     if (!a.A.getIsStale()) return Promise.resolve();
-    let e = (await i.Bo.get({ url: l.Rsh.GET_SAVED_MESSAGES, rejectWithError: !1 })).body.results.map((e) => ({
+    let e = await i.Bo.get({ url: l.Rsh.GET_SAVED_MESSAGES, rejectWithError: !1 });
+    if (!e.ok) return void r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: [] });
+    let t = e.body.results.map((e) => ({
         message: null != e.message ? (0, s.rh)(e.message) : null,
         saveData: (0, o.Dd)(e.save_data),
     }));
-    r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: e });
+    r.h.dispatch({ type: "SAVED_MESSAGES_UPDATE", savedMessages: t });
 }

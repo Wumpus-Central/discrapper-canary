@@ -37,7 +37,6 @@ function C() {
         lastShownFriendsListGiftIntents: [],
         friendsTabBadgeLastDismissedTime: null,
         giftUnreadNotificationLastDismissedTimes: [],
-        profilePopoutGiftIntentsDismissMap: {},
         lastKnownGiftIntentDismissedAtMs: 0,
     };
 }
@@ -160,6 +159,7 @@ class V extends s.Ay.PersistedStore {
                       profilePopoutGiftIntentsDismissMap: {},
                   },
         (e) => (null == e ? e : { ...e, lastKnownGiftIntentDismissedAtMs: e.lastKnownGiftIntentDismissedAtMs ?? 0 }),
+        (e) => (null == e || delete e.profilePopoutGiftIntentsDismissMap, e),
     ];
     initialize(e) {
         (N = C()),
@@ -170,12 +170,10 @@ class V extends s.Ay.PersistedStore {
                 (N.giftUnreadNotificationLastDismissedTimes = Array.from(
                     e.giftUnreadNotificationLastDismissedTimes ?? [],
                 )),
-                (N.profilePopoutGiftIntentsDismissMap = { ...e.profilePopoutGiftIntentsDismissMap }),
                 (N.lastKnownGiftIntentDismissedAtMs = e.lastKnownGiftIntentDismissedAtMs ?? 0)),
             this.syncWith([h.A, u.A, _.A, o.A, l.A, d.A], x),
             (N.messageGiftIntentLastShownMap = I(N.messageGiftIntentLastShownMap, M(), 12096e5)),
-            U(),
-            (N.profilePopoutGiftIntentsDismissMap = I(N.profilePopoutGiftIntentsDismissMap, M(), 12096e5));
+            U();
     }
     getState() {
         return N;
@@ -203,9 +201,6 @@ class V extends s.Ay.PersistedStore {
         let n = b[e];
         return null == n ? 0 : ((t = n.friendsSince), Math.round((0, A.A)(new Date(), t) / 12));
     }
-    canShowProfilePopoutGiftIntents(e) {
-        return null == N.profilePopoutGiftIntentsDismissMap[e] && null != b[e];
-    }
     isGiftIntentMessageInCooldown(e) {
         return null != N.messageGiftIntentLastShownMap[e];
     }
@@ -229,9 +224,6 @@ class V extends s.Ay.PersistedStore {
     }
     getLastKnownGiftIntentDismissedAtMs() {
         return N.lastKnownGiftIntentDismissedAtMs;
-    }
-    getProfilePopoutGiftIntentsDismissMap() {
-        return N.profilePopoutGiftIntentsDismissMap;
     }
 }
 let B = new V(a.h, {
@@ -264,10 +256,6 @@ let B = new V(a.h, {
         }
         (N.messageGiftIntentLastShownMap = I(i, M(), 1296e6)), (N.lastKnownGiftIntentDismissedAtMs = n);
     },
-    PROFILE_POPOUT_GIFT_INTENTS_DISMISS: function (e) {
-        let { recipientUserId: t } = e;
-        N.profilePopoutGiftIntentsDismissMap[t] = M();
-    },
     DEV_TOOLS_FRIENDS_LIST_GIFT_INTENTS_SHOWN_RESET: function () {
         N.lastShownFriendsListGiftIntents = [];
     },
@@ -294,8 +282,5 @@ let B = new V(a.h, {
     },
     DEV_TOOLS_RESET_CURRENT_DATE: function () {
         w = null;
-    },
-    DEV_TOOLS_PROFILE_POPOUT_GIFT_INTENTS_DISMISS_RESET: function () {
-        N.profilePopoutGiftIntentsDismissMap = {};
     },
 });
