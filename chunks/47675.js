@@ -84,6 +84,7 @@ function T(e) {
                 .filter((e) => "string" == typeof e) ?? [],
         avatar_decoration_sku_id: h.avatarDecoration?.skuId,
         profile_effect_sku_id: f?.profileEffect?.skuId,
+        profile_frame_sku_id: f?.profileFrame?.skuId,
         user_status:
             ((t = h.id),
             (n = u.A.getStatus(t)),
@@ -250,6 +251,7 @@ function O(e) {
                   })
                 : null;
     _.default.track(g.HAw.DM_PROFILE_TOGGLED, {
+        ...T({ userId: i }),
         is_profile_open: n,
         has_images: !!(r?.assets?.large_image ?? r?.assets?.small_image),
         is_friend: c.A.isFriend(i),
