@@ -12,16 +12,16 @@ var n = i(627968),
     f = i(820081),
     p = i(241541),
     y = i(559647),
-    m = i(408278),
-    g = i(297152),
+    g = i(408278),
+    m = i(297152),
     I = i(834730),
     E = i(821609),
     S = i(308368),
-    N = i(298990),
-    _ = i(308528),
+    _ = i(298990),
+    N = i(308528),
     C = i(684013),
-    T = i(730134),
-    h = i(964486),
+    h = i(730134),
+    T = i(964486),
     v = i(55730),
     O = i(429913),
     b = i(20015),
@@ -69,7 +69,7 @@ var F = i(474397),
     Y = i(279877),
     H = i(976860),
     J = i(219271),
-    B = i(580763),
+    B = i(17389),
     z = i(616356),
     $ = i(734057),
     X = i(290863),
@@ -88,29 +88,29 @@ function ts(t) {
     let e,
         { entry: i, currentUserActivity: a, idx: s, variant: o } = t,
         u = (0, c.bG)([q.default], () => q.default.getUser(i.author_id)),
-        [g, I] = l.useState("unsent"),
-        [E, N] = l.useState(!1);
+        [m, I] = l.useState("unsent"),
+        [E, _] = l.useState(!1);
     l.useEffect(() => {
-        if ("sent" === g) {
-            let t = setTimeout(() => N(!0), 2e3);
+        if ("sent" === m) {
+            let t = setTimeout(() => _(!0), 2e3);
             return () => clearTimeout(t);
         }
-    }, [g]);
-    let T = (0, ti.JH)(a?.application_id ?? i.extra.application_id),
-        h = null != T,
+    }, [m]);
+    let h = (0, ti.JH)(a?.application_id ?? i.extra.application_id),
+        T = null != h,
         v = async (t) => {
-            if (null != u && "unsent" === g) {
+            if (null != u && "unsent" === m) {
                 t.stopPropagation();
                 try {
-                    if ((I("sending"), h && null != T))
+                    if ((I("sending"), T && null != h))
                         await S.A.sendActivityInviteUser({
                             type: tn.xL.JOIN,
                             userId: u.id,
-                            activity: T,
+                            activity: h,
                             location: tn.ThZ.UNLOCKED_OVERLAY,
                         });
                     else {
-                        let t = await _.A.getOrEnsurePrivateChannel(u.id),
+                        let t = await N.A.getOrEnsurePrivateChannel(u.id),
                             e = $.A.getChannel(t) ?? null;
                         r()(null != e, "Send channel must be defined"),
                             (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
@@ -148,23 +148,23 @@ function ts(t) {
         },
         O = async () => {
             if (null == u) return;
-            let t = await _.A.getOrEnsurePrivateChannel(u.id),
+            let t = await N.A.getOrEnsurePrivateChannel(u.id),
                 e = $.A.getChannel(t) ?? null;
             r()(null != e, "Send channel must be defined"),
                 (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
                 (0, F.A)(tn.BRT.OVERLAY, !0),
                 (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.REDIRECT, value: te.IP.CHAT, userId: u.id });
         },
-        b = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
+        b = T ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === g ? (E ? A.o : f.B) : h ? p.D : y.l),
+        (e = "sent" === m ? (E ? A.o : f.B) : T ? p.D : y.l),
         (0, n.jsx)(d.m, {
             text: b,
             "aria-label": b,
-            children: (0, n.jsx)(m.K, {
+            children: (0, n.jsx)(g.K, {
                 icon: e,
                 "aria-label": b,
-                loading: "sending" === g,
+                loading: "sending" === m,
                 onClick: E ? O : v,
                 variant: "subtle" === o ? "icon-only" : "secondary",
                 size: "sm",
@@ -205,8 +205,8 @@ function to(t) {
     return (0, n.jsx)(d.m, {
         text: y,
         "aria-label": y,
-        children: (0, n.jsx)(m.K, {
-            icon: "sent" === u ? f.B : g.E,
+        children: (0, n.jsx)(g.K, {
+            icon: "sent" === u ? f.B : m.E,
             "aria-label": y,
             loading: "sending" === u,
             onClick: p,
@@ -240,7 +240,7 @@ function tu(t) {
         : (0, n.jsxs)("div", {
               className: tr.nM,
               children: [
-                  (0, n.jsx)(T.A, { className: tr.my, user: r, isMobile: o, isVR: u, status: d }),
+                  (0, n.jsx)(h.A, { className: tr.my, user: r, isMobile: o, isVR: u, status: d }),
                   (0, n.jsxs)("div", {
                       className: tr.zH,
                       children: [
@@ -331,7 +331,7 @@ function td(t) {
 function tA(t) {
     let { gamingId: e, maxUserShowCount: i, userAffinityThresholdV2: n = 0.0029 } = t,
         a = w(e);
-    (0, h.Ay)(() => {
+    (0, T.Ay)(() => {
         (0, J.u)();
     });
     let r = (0, ti.xl)(e),
@@ -372,7 +372,7 @@ function tA(t) {
                 });
         }, [e, n]);
     return (
-        (0, h.Ay)(() => (Y.O(), () => Y.v())),
+        (0, T.Ay)(() => (Y.O(), () => Y.v())),
         {
             entries: l.useMemo(() => {
                 let t = a.filter((t) => !d.some((e) => e.activityUser.id === t.author_id)),
@@ -433,7 +433,7 @@ function tp(t) {
                                 size: "sm",
                                 variant: "secondary",
                                 onClick: () => {
-                                    (0, N.qf)(a, !1, tn.BRT.POPOUT),
+                                    (0, _.qf)(a, !1, tn.BRT.POPOUT),
                                         (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.PANEL_OPENED });
                                 },
                             }),
@@ -451,7 +451,7 @@ function ty(t) {
         s = (0, c.bG)([q.default], () => q.default.getCurrentUser()),
         o = null != a ? a : l,
         u = (0, ti.xl)(o);
-    (0, h.Ay)(() => (Y.O(), () => Y.v()));
+    (0, T.Ay)(() => (Y.O(), () => Y.v()));
     let d = tA({ gamingId: o, userAffinityThresholdV2: 0.00145, maxUserShowCount: 12 });
     return e || (0 === r.length && null == u)
         ? null

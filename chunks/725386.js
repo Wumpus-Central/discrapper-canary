@@ -1,61 +1,50 @@
-i.d(t, { A: () => A });
-var n = i(64700),
-    l = i(598748),
-    s = i(540185),
-    a = i(702841),
-    r = i(382483),
-    c = i(385113),
-    u = i(369374),
-    o = i(457965),
-    d = i(885386),
-    g = i(287809),
-    m = i(403362),
-    f = i(633075),
-    x = i(289173),
-    p = i(667049),
-    I = i(229231);
-function A(e) {
-    let { enabled: t } = u.A.useConfig({ location: e.location }),
-        i = d.Q_.useSetting(),
-        A = (0, a.bG)([g.default], () => g.default.getCurrentUser()),
-        E = (0, p.A)(A?.id),
-        h = (0, o.w$)(e),
-        j = (0, a.bG)([c.A], () => c.A.getAllConfigsByApplication()),
-        N = (0, a.bG)([c.A], () => c.A.getFeaturedApplicationIds()),
-        T = (0, a.bG)([c.A], () => c.A.getDeveloperApplicationIds());
+a.d(t, { A: () => I });
+var i = a(64700),
+    p = a(598748),
+    l = a(540185),
+    n = a(702841),
+    s = a(382483),
+    c = a(385113),
+    r = a(885386),
+    u = a(287809),
+    f = a(403362),
+    d = a(633075),
+    o = a(289173),
+    A = a(667049),
+    h = a(229231);
+function I() {
+    let e = r.Q_.useSetting(),
+        t = (0, n.bG)([u.default], () => u.default.getCurrentUser()),
+        a = (0, A.A)(t?.id),
+        I = (0, n.bG)([c.A], () => c.A.getAllConfigsByApplication()),
+        _ = (0, n.bG)([c.A], () => c.A.getFeaturedApplicationIds()),
+        m = (0, n.bG)([c.A], () => c.A.getDeveloperApplicationIds());
     return (
-        n.useEffect(() => {
-            t && ((0, r.Wq)().catch(() => {}), i && (0, r.i$)().catch(() => {}));
-        }, [t, i]),
-        n.useMemo(() => {
-            let e = new Set(E.filter((e) => e instanceof f.R).map((e) => e.applicationId)),
-                n = new Set(E.map((e) => e.type));
-            return I.Zc.flatMap((a) => {
-                if (a === s.x.APPLICATION) {
-                    if (t) {
-                        let t = new Set([...N, ...(i ? T : [])]);
-                        return Object.values(j)
-                            .map((e) => e[0])
-                            .filter(m.Vq)
-                            .filter((e) => t.has(e.application_id))
-                            .filter((t) => !e.has(t.application_id))
-                            .filter(
-                                (e) =>
-                                    null != e.surfaces[l.m.WIDGET_TOP] &&
-                                    null != e.surfaces[l.m.WIDGET_BOTTOM] &&
-                                    null != e.surfaces[l.m.ADD_WIDGET_PREVIEW],
-                            )
-                            .map((e) => new f.R({ applicationId: e.application_id }));
-                    }
-                    return null == h
-                        ? []
-                        : h
-                              .filter((t) => !e.has(t.applicationId))
-                              .map((e) => new f.R({ applicationId: e.applicationId }));
+        i.useEffect(() => {
+            (0, s.Wq)().catch(() => {}), e && (0, s.i$)().catch(() => {});
+        }, [e]),
+        i.useMemo(() => {
+            let t = new Set(a.filter((e) => e instanceof d.R).map((e) => e.applicationId)),
+                i = new Set(a.map((e) => e.type));
+            return h.Zc.flatMap((a) => {
+                if (a === l.x.APPLICATION) {
+                    let a = new Set([..._, ...(e ? m : [])]);
+                    return Object.values(I)
+                        .map((e) => e[0])
+                        .filter(f.Vq)
+                        .filter((e) => a.has(e.application_id))
+                        .filter((e) => !t.has(e.application_id))
+                        .filter(
+                            (e) =>
+                                null != e.surfaces[p.m.WIDGET_TOP] &&
+                                null != e.surfaces[p.m.WIDGET_BOTTOM] &&
+                                null != e.surfaces[p.m.ADD_WIDGET_PREVIEW],
+                        )
+                        .map((e) => new d.R({ applicationId: e.application_id }));
                 }
-                if ((0, x.hL)(a)) return n.has(a) ? [] : new x.Yy({ type: a, games: [] });
-                (0, m.xb)(a);
+                if ((0, o.hL)(a)) return i.has(a) ? [] : new o.Yy({ type: a, games: [] });
+                (0, f.xb)(a);
             });
-        }, [t, i, j, N, T, h, E])
+        }, [e, I, _, m, a])
     );
 }

@@ -15128,7 +15128,7 @@ let Tu = (0, a.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
             j.intl.string(j.t["+KCMSi"]),
         ],
     });
-var Tc = i(46225);
+var Tc = i(206828);
 let Tg = [U.fg2.LEAGUE_OF_LEGENDS, U.fg2.RIOT_GAMES];
 function Tm() {
     let e = (0, g.bG)([Sz.A], () => Sz.A.getAccounts().find((e) => Tg.includes(e.type))?.type),
@@ -15234,7 +15234,7 @@ function TL(e) {
 }
 var TD = i(986687),
     TP = i(101058),
-    TG = i(841595),
+    TG = i(321191),
     TM = i(696451),
     TU = i(10478);
 function TV() {

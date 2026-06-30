@@ -1,15 +1,5 @@
 "use strict";
-n.d(t, {
-    FE: () => f,
-    IS: () => c,
-    Rr: () => p,
-    Uv: () => _,
-    aG: () => h,
-    e5: () => d,
-    fj: () => g,
-    oU: () => E,
-    rq: () => m,
-}),
+n.d(t, { FE: () => f, IS: () => c, Rr: () => p, Uv: () => _, aG: () => h, e5: () => d, fj: () => m, oU: () => E }),
     n(938796);
 var i,
     r,
@@ -97,9 +87,6 @@ function E(e, t, n) {
     };
 }
 function m(e) {
-    return null != e.width && e.width > 0 && null != e.height && e.height > 0;
-}
-function g(e) {
     if (null == e) return null;
     if ("VIDEO" === e.type && null != e.proxyUrl) {
         let t = l.A.toURLSafe(e.proxyUrl);

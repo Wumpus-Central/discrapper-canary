@@ -2,13 +2,13 @@ i.d(t, { A: () => f });
 var n = i(627968),
     l = i(64700),
     s = i(688807),
-    a = i(17928),
-    r = i(425763),
-    c = i(519182),
-    o = i(287809),
-    u = i(788593),
+    r = i(17928),
+    a = i(425763),
+    c = i(248550),
+    u = i(287809),
+    o = i(788593),
     d = i(908683),
-    g = i(598161),
+    g = i(53069),
     m = i(524063);
 function f(e) {
     let { scrollerRef: t } = e,
@@ -21,11 +21,11 @@ function f(e) {
             item: e.getItem(),
             sourceClientOffset: e.getSourceClientOffset(),
         })),
-        p = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
-        I = (0, r.VU)(),
-        A = l.useMemo(
+        I = (0, r.bG)([u.default], () => u.default.getCurrentUser()),
+        p = (0, a.VU)(),
+        E = l.useMemo(
             () =>
-                null == p || null == f
+                null == I || null == f
                     ? null
                     : (function (e, t) {
                           let { id: i, itemType: l, itemPreviewProps: s } = e;
@@ -44,11 +44,11 @@ function f(e) {
                               });
                           }
                           if ("GAME_COVER" === l && s?.gameName != null) {
-                              let { imageSrc: e, gameName: l, getWidth: a } = s,
-                                  r = a?.() ?? 90;
+                              let { imageSrc: e, gameName: l, getWidth: r } = s,
+                                  a = r?.() ?? 90;
                               return (0, n.jsx)("div", {
-                                  style: { width: r },
-                                  children: (0, n.jsx)(u.A, {
+                                  style: { width: a },
+                                  children: (0, n.jsx)(o.A, {
                                       className: m.XJ,
                                       imageSrc: e,
                                       gameName: l,
@@ -60,10 +60,10 @@ function f(e) {
                           }
                           if ("GAME_DETAILS_CARD" === l && s?.game != null && s?.widgetType != null) {
                               let { game: e, widgetType: i, getWidth: l } = s,
-                                  a = l?.() ?? 400;
+                                  r = l?.() ?? 400;
                               return (0, n.jsx)("div", {
                                   className: m.xB,
-                                  style: { width: a },
+                                  style: { width: r },
                                   children: (0, n.jsx)(d.A, {
                                       user: t,
                                       widgetType: i,
@@ -86,29 +86,29 @@ function f(e) {
                               });
                           }
                           return null;
-                      })(f, p),
-            [f, p],
+                      })(f, I),
+            [f, I],
         ),
-        E = l.useRef(null),
+        A = l.useRef(null),
         h = l.useCallback(() => {
             if (null == t.current) return;
             let e = t.current.getBoundingClientRect();
-            E.current = { x: e.left, y: e.top };
+            A.current = { x: e.left, y: e.top };
         }, [t]);
     if (
         (l.useEffect(() => {
             if (!i) {
-                E.current = null;
+                A.current = null;
                 return;
             }
-            null == E.current && h();
+            null == A.current && h();
         }, [i, h]),
-        !0 !== i || null == x || null == A)
+        !0 !== i || null == x || null == E)
     )
         return null;
-    null == E.current && h();
-    let { x: j, y: N } = E.current ?? { x: 0, y: 0 },
-        v = x.x - j - 60 * !!I,
-        T = x.y - N;
-    return (0, n.jsx)("div", { className: m.kL, style: { transform: `translate3d(${v}px, ${T}px, 0)` }, children: A });
+    null == A.current && h();
+    let { x: j, y: T } = A.current ?? { x: 0, y: 0 },
+        N = x.x - j - 60 * !!p,
+        v = x.y - T;
+    return (0, n.jsx)("div", { className: m.kL, style: { transform: `translate3d(${N}px, ${v}px, 0)` }, children: E });
 }

@@ -83,7 +83,7 @@ var er = n(716965),
     ep = n(231483),
     eE = n(20015),
     em = n(935208),
-    eg = n(129090);
+    eg = n(348418);
 function eA(e) {
     let t,
         {
@@ -182,7 +182,7 @@ var eT = n(214947),
     ey = n(687966),
     eC = n(625903),
     eN = n(975571),
-    ev = n(458642);
+    ev = n(645650);
 function eR(e) {
     let t,
         { application: n, accountScopes: r } = e,
@@ -249,7 +249,7 @@ function eO(e) {
 var eb = n(285796),
     eD = n(628284),
     eL = n(444927),
-    ew = n(563410);
+    ew = n(415122);
 function eM(e) {
     let { text: t, error: n, isFake: r } = e,
         s = !0 === r ? en.intl.string(en.t.OX8EMU) : en.intl.string(en.t["0lpCFG"]),
@@ -326,7 +326,7 @@ function eP(e) {
 }
 var ex = n(150934),
     ek = n(789645),
-    eU = n(729501);
+    eU = n(751645);
 function eG(e) {
     let { application: t, permissions: n, deniedPermissions: s, onPermissionsChange: a, guild: o } = e,
         l = r.useMemo(() => h.B8(o.permissions), [o.permissions]);
@@ -398,7 +398,7 @@ function eG(e) {
     });
 }
 var eF = n(783878),
-    eV = n(808432);
+    eV = n(551280);
 function eB(e) {
     let { error: t, selectedGuildId: n, onGuildChange: r, guilds: s, disabled: a = !1 } = e,
         o = s
@@ -426,7 +426,7 @@ var ej = n(665260),
     eW = n(709066),
     eK = n(566615),
     e$ = n(778712),
-    ez = n(908539);
+    ez = n(510523);
 function eq(e) {
     let { user: t, application: n, bot: s, accountScopes: a, showLogout: o, location: l, scopes: u } = e,
         c = (0, eK.i)(),
@@ -576,10 +576,10 @@ function eQ(e) {
     });
 }
 var eJ = n(613057),
-    e0 = n(733239);
+    e0 = n(636663);
 let e1 = (0, F.Fe)({
     createPromise: () =>
-        Promise.all([n.e("28596"), n.e("78050"), n.e("80262"), n.e("56385"), n.e("59132"), n.e("58405")]).then(
+        Promise.all([n.e("99796"), n.e("78050"), n.e("80262"), n.e("56385"), n.e("91220"), n.e("58405")]).then(
             n.bind(n, 991054),
         ),
     webpackId: 991054,
@@ -931,7 +931,8 @@ function e7(e) {
         }, [f, ef, eu, e9, eS, tt, eI]);
     let tn = ei(eE?.application.content_classification ?? e$?.contentClassification, eV),
         ti = r.useCallback(
-            async (e) => {
+            async function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 if (null != ee) {
                     eC(!0), ee(e);
                     return;
@@ -939,7 +940,7 @@ function e7(e) {
                 if (null == eY) return void eS(Error("No integration type was selected."));
                 try {
                     eC(!0);
-                    let t = await (0, er.Gq)({
+                    let n = await (0, er.Gq)({
                         authorize: e,
                         clientId: f,
                         scopes: eJ,
@@ -956,14 +957,15 @@ function e7(e) {
                         channelId: eY === d.b.GUILD_INSTALL && null != eL ? eL : void 0,
                     });
                     if ((e && (await (0, x.Yx)(f, e8)), null != Z))
-                        Z({ application: eE?.application, location: t.location, guild: eH, scopes: eJ }), el?.();
-                    else if (null != t.location) {
-                        let e = Q.A.toURLSafe(t.location)?.pathname;
-                        Q.A.isDiscordUrl(t.location) && e === et.BVt.OAUTH2_AUTHORIZED
+                        Z({ application: eE?.application, location: n.location, guild: eH, scopes: eJ, canceled: t }),
+                            el?.();
+                    else if (null != n.location) {
+                        let e = Q.A.toURLSafe(n.location)?.pathname;
+                        Q.A.isDiscordUrl(n.location) && e === et.BVt.OAUTH2_AUTHORIZED
                             ? (0, H.pX)(et.BVt.OAUTH2_AUTHORIZED, {
                                   state: { application: eE?.application, guild: eH },
                               })
-                            : (window.location = t.location);
+                            : (window.location = n.location);
                     } else eC(!1);
                 } catch (t) {
                     let e = t.body;
@@ -1225,7 +1227,7 @@ function e7(e) {
             (tT.push(
                 null != n
                     ? { variant: "secondary", onClick: () => eI(n), text: en.intl.string(en.t["13/7kX"]) }
-                    : { variant: "secondary", onClick: () => ti(!1), text: en.intl.string(en.t["ETE/oC"]) },
+                    : { variant: "secondary", onClick: () => ti(!1, !0), text: en.intl.string(en.t["ETE/oC"]) },
             ),
             "SELECT_INSTALL_TYPE" !== eg))
     ) {
@@ -1262,17 +1264,18 @@ function e8(e, t) {
     if (null == t.location || (null != e.callback && e.callback(t))) return;
     let { host: n, pathname: r, searchParams: s } = Q.A.toURLSafe(t.location) ?? {},
         a = Q.A.isDiscordHostname(n ?? null) || window.location.host === n;
-    a && r === et.BVt.OAUTH2_AUTHORIZED
-        ? (0, m.openModal)((e) => (0, i.jsx)(eX.dR, { guild: t.guild, application: t.application, ...e }))
-        : a && r?.startsWith(et.BVt.OAUTH2_ERROR)
-          ? (0, m.openModal)((e) => {
-                let t = s?.get("error_description") ?? s?.get("error") ?? en.intl.string(en.t.mqn873);
-                return (
-                    Array.isArray(t) && (t = t[0]),
-                    (0, i.jsx)(eZ.f, { ...e, children: (0, i.jsx)(eX.gz, { message: t, onClose: e.onClose }) })
-                );
-            })
-          : window.open(t.location, "_blank")?.focus();
+    if (a && r === et.BVt.OAUTH2_AUTHORIZED)
+        (0, m.openModal)((e) => (0, i.jsx)(eX.dR, { guild: t.guild, application: t.application, ...e }));
+    else if (a && r?.startsWith(et.BVt.OAUTH2_ERROR)) {
+        if (!0 === t.canceled) return;
+        (0, m.openModal)((e) => {
+            let t = s?.get("error_description") ?? s?.get("error") ?? en.intl.string(en.t.mqn873);
+            return (
+                Array.isArray(t) && (t = t[0]),
+                (0, i.jsx)(eZ.f, { ...e, children: (0, i.jsx)(eX.gz, { message: t, onClose: e.onClose }) })
+            );
+        });
+    } else window.open(t.location, "_blank")?.focus();
 }
 function e9(e, t) {
     (0, j._9)() ? V.A.openCreateGuildModal({ onSuccess: (n) => te({ ...e, guildId: n }, t) }) : te(e, t);

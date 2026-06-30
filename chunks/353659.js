@@ -1,8 +1,4 @@
 e.exports = {
-    CR: "modalRoot_a470b4",
-    wx: "header_a470b4",
-    TK: "headerText_a470b4",
-    yY: "manageConnectionsFooterButton_a470b4",
     tV: "platformIcon_a470b4",
     AO: "botTag_a470b4",
     NL: "connectionsChecksGroups_a470b4",
@@ -14,7 +10,7 @@ e.exports = {
     $I: "connectionsChecksGroupTextNameInfoIcon_a470b4",
     Z1: "connectionsChecksGroupRequirementsNotMet_a470b4",
     t4: "connectionsChecksGroupCaret_a470b4",
-    gN: "connectionsChecksGroupRetryButton_a470b4",
+    dj: "connectionsChecksGroupRetryText_a470b4",
     rA: "connectionsChecksGroupCheckmark_a470b4",
     E6: "connectionsCheck_a470b4",
     PJ: "footerText_a470b4",
