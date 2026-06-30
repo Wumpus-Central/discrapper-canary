@@ -83,7 +83,7 @@ function J(e) {
             (0, i.jsx)("img", { src: t.simple_icon_url, alt: "", "aria-hidden": !0, className: M.pW }),
     });
 }
-function Z(e) {
+function Y(e) {
     let { label: t, navId: l, badges: n, selectedBadgeId: a, onSelectBadge: s } = e,
         r = (0, S.Ay)({
             id: l,
@@ -126,7 +126,7 @@ function Z(e) {
         ],
     });
 }
-function Y(e) {
+function Z(e) {
     let t = [],
         l = [];
     for (let i of e) i.owned ? l.push(i) : i.is_earnable && t.push(i);
@@ -142,7 +142,7 @@ function q(e) {
             onViewOwnCatalog: c,
         } = e,
         g = (0, s.bG)([v.Ay], () => (null != a ? v.Ay.getBadges(a) : []), [a]),
-        { earnable: x, owned: h } = n.useMemo(() => Y(g), [g]),
+        { earnable: x, owned: h } = n.useMemo(() => Z(g), [g]),
         _ = F(a, r, 48),
         b = null != d ? H(d) : null,
         j = null != d && b !== d,
@@ -177,7 +177,7 @@ function q(e) {
                     className: M.hG,
                     children: [
                         h.length > 0 &&
-                            (0, i.jsx)(Z, {
+                            (0, i.jsx)(Y, {
                                 label: { type: "aria", text: f },
                                 navId: "badge-directory-owned",
                                 badges: h,
@@ -186,7 +186,7 @@ function q(e) {
                             }),
                         !r &&
                             x.length > 0 &&
-                            (0, i.jsx)(Z, {
+                            (0, i.jsx)(Y, {
                                 label: {
                                     type: "heading",
                                     id: "badge-directory-section-earnable",
@@ -418,7 +418,12 @@ function ea(e) {
                               "aria-controls": g,
                               onClick: () => c(!d),
                               children: [
-                                  (0, i.jsx)(u.E, { variant: "text-xs/medium", color: "text-subtle", children: T }),
+                                  (0, i.jsx)(u.E, {
+                                      className: en.Yi,
+                                      variant: "text-xs/medium",
+                                      color: "text-subtle",
+                                      children: T,
+                                  }),
                                   (0, i.jsx)(W.a, {
                                       size: "sm",
                                       color: "currentColor",
@@ -734,11 +739,11 @@ function ef(e) {
                         return null;
                 }
             })(D?.rarity ?? g.rarity) ?? void 0,
-        Z = (0, P.Om)(g.badge_id),
-        Y = g.badge_id === p.$.PREMIUM_TENURE,
-        q = Y ? (D?.name ?? D?.key) : D?.name,
-        Q = Y ? L.intl.string(L.t.Ipxkog) : g.name;
-    Y ? (r = null != q ? `${Q} ${q}` : Q) : null != q ? ((a = Q), (r = q)) : (r = Q);
+        Y = (0, P.Om)(g.badge_id),
+        Z = g.badge_id === p.$.PREMIUM_TENURE,
+        q = Z ? (D?.name ?? D?.key) : D?.name,
+        Q = Z ? L.intl.string(L.t.Ipxkog) : g.name;
+    Z ? (r = null != q ? `${Q} ${q}` : Q) : null != q ? ((a = Q), (r = q)) : (r = Q);
     let W = (0, v.H5)(g),
         K = g.owned
             ? (function (e) {
@@ -772,10 +777,10 @@ function ef(e) {
                     : L.intl.formatToPlainString(L.t["0aEh2a"], { date: new Date(W) }));
     let en = h?.owned === !0 && (h.tiers?.length ?? 0) > 0 && null == h.next_tier,
         eu = x.default.getCurrentUser()?.premiumType,
-        em = Y && (eu === ex.PremiumTypes.TIER_0 || eu === ex.PremiumTypes.TIER_1);
+        em = Z && (eu === ex.PremiumTypes.TIER_0 || eu === ex.PremiumTypes.TIER_1);
     c = en ? L.intl.string(L.t.jY5xAL) : em ? L.intl.string(L.t.qkwSSp) : (h?.description ?? g.description);
     let ev = n.useCallback(() => {
-            null != Z &&
+            null != Y &&
                 (eg({
                     actionName: "primary_badge_action_clicked",
                     badge: g,
@@ -784,8 +789,8 @@ function ef(e) {
                 }),
                 _(),
                 U.A.popAll(),
-                Z.ctaAction());
-        }, [g, f, N, Z, _]),
+                Y.ctaAction());
+        }, [g, f, N, Y, _]),
         eb = (0, P.ie)(g.badge_id) && !g.is_earnable,
         ej =
             !N || g.is_earnable || E
@@ -825,7 +830,7 @@ function ef(e) {
                                         (0, i.jsx)(o.D, {
                                             variant: "display-sm",
                                             color: "text-strong",
-                                            className: j()(M._r, Y && M.tN),
+                                            className: j()(M._r, Z && M.tN),
                                             children: r,
                                         }),
                                         B &&
@@ -885,18 +890,18 @@ function ef(e) {
                                                             }),
                                                         ],
                                                     }),
-                                                    null != Z &&
+                                                    null != Y &&
                                                         (0, i.jsx)(m.$, {
                                                             variant: em
                                                                 ? "expressive"
                                                                 : E
                                                                   ? "secondary"
-                                                                  : Y
+                                                                  : Z
                                                                     ? "expressive"
                                                                     : "primary",
                                                             size: "sm",
                                                             onClick: ev,
-                                                            text: Z.ctaLabel({
+                                                            text: Y.ctaLabel({
                                                                 owned: E,
                                                                 isViewerOnUpgradeableNitro: em,
                                                             }),
@@ -965,7 +970,7 @@ function eE(e) {
             null != T && g.A.increment({ name: a.K.BADGE_DIRECTORY_MODAL_OPEN, tags: [T] });
         }, [T]);
     let O = n.useMemo(() => {
-            let { earnable: e, owned: t } = Y(I);
+            let { earnable: e, owned: t } = Z(I);
             return E ? (t[0]?.badge_id ?? null) : (t[0]?.badge_id ?? e[0]?.badge_id ?? null);
         }, [I, E]),
         S = null != C && null != A ? v.Ay.getBadgeById(C, A) : void 0,
@@ -1006,7 +1011,7 @@ function eE(e) {
                 (eg({ actionName: "view_your_badges_pressed", badge: D, displayedUserId: A, isSociallyNavigated: E }),
                 $({ targetUserId: j, targetUsername: p, viewingCurrentUserBadges: !0 }));
         }, [y, A, E, D, $, j, p]),
-        Z = n.useCallback(() => {
+        Y = n.useCallback(() => {
             null != A && (0, h.R)(A, { isRetry: !0 });
         }, [A]),
         Q = n.useCallback(() => {
@@ -1052,7 +1057,7 @@ function eE(e) {
                                     (0, i.jsx)(m.$, {
                                         variant: "primary",
                                         size: "sm",
-                                        onClick: Z,
+                                        onClick: Y,
                                         text: L.intl.string(L.t["7NqTJn"]),
                                     }),
                                 ],

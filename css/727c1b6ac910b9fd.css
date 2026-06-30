@@ -459,6 +459,11 @@
     width: 100%
 }
 
+.viewAllLevelsHeader_e54946:focus-visible .viewAllLevelsLabel_e54946,
+.viewAllLevelsHeader_e54946:hover .viewAllLevelsLabel_e54946 {
+    text-decoration: underline
+}
+
 .chevron_e54946 {
     transition: rotate .2s ease
 }
