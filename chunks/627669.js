@@ -3602,7 +3602,7 @@ function iJ(e) {
         c = (0, O.V6)(a, s),
         d = (0, iK.em)({ presenceActivity: c, channel: t, activityActionType: void 0 }),
         { primaryColor: u, secondaryColor: m } = (0, iQ.A)(o?.getIconURL(128));
-    if (null == l || null == c || !(0, iq.A)(c, l, o?.id)) return null;
+    if (null == l || null == c || !(0, iq.A)(c, l, o?.id) || !(0, O.Ij)(c)) return null;
     let h = `linear-gradient(45deg, ${u}, ${m})`,
         x = c.details ?? c.name;
     return (0, i.jsxs)("div", {

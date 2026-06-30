@@ -71,7 +71,9 @@ function w(e) {
             [V],
         ),
         Q = ((t = D.trim().split("\n")[0] ?? ""), (0, v.A)(t.slice(0, S.Ign), !0)),
-        X = i.useMemo(() => (null != L ? { type: S.xL.JOIN, activity: L } : void 0), [L]),
+        X = i.useMemo(() => {
+            if (null != L && (0, b.Ij)(L)) return { type: S.xL.JOIN, activity: L };
+        }, [L]),
         J = (0, j.w0)({
             parentChannel: n,
             name: Q,
