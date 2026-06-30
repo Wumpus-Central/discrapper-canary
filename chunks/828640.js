@@ -3,7 +3,7 @@ var l = t(34188),
     n = t(627968),
     r = t(64700),
     o = t(50777),
-    i = t(328100),
+    i = t(467884),
     s = t(989349),
     d = t.n(s),
     u = t(122817),
@@ -68,10 +68,16 @@ function x(e, a, t) {
             pricingResultIdMap: {
                 [b]: {
                     [m.QK.SELF_PURCHASE]: {
-                        userPrice: [{ currency: S.Yr.USD, amount: r }],
+                        userPrice: [
+                            { currency: S.Yr.USD, amount: r },
+                            { currency: S.Yr.DISCORD_ORB, amount: r },
+                        ],
                         prices: {
                             [y.FBC.BASE]: {
-                                [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: n }],
+                                [m.v8.NORMAL]: [
+                                    { currency: S.Yr.USD, amount: n },
+                                    { currency: S.Yr.DISCORD_ORB, amount: n },
+                                ],
                                 [m.v8.DISCOUNTED]: [{ currency: S.Yr.USD, amount: r }],
                             },
                         },
@@ -104,10 +110,16 @@ function x(e, a, t) {
                 pricingResultIdMap: {
                     [b]: {
                         [m.QK.SELF_PURCHASE]: {
-                            userPrice: [{ currency: S.Yr.USD, amount: n }],
+                            userPrice: [
+                                { currency: S.Yr.USD, amount: n },
+                                { currency: S.Yr.DISCORD_ORB, amount: n },
+                            ],
                             prices: {
                                 [y.FBC.BASE]: {
-                                    [m.v8.NORMAL]: [{ currency: S.Yr.USD, amount: n }],
+                                    [m.v8.NORMAL]: [
+                                        { currency: S.Yr.USD, amount: n },
+                                        { currency: S.Yr.DISCORD_ORB, amount: n },
+                                    ],
                                     [m.v8.DISCOUNTED]: [],
                                 },
                             },
@@ -289,27 +301,27 @@ let v = [
             isEligible: { label: "Purchase Eligible", type: "boolean", defaultValue: !0 },
         },
     };
-var P = t(331322),
-    D = t(834730),
-    R = t(821609),
-    T = t(231723),
-    L = t(439325);
+var D = t(331322),
+    R = t(834730),
+    P = t(821609),
+    O = t(231723),
+    T = t(439325);
 t(323874), t(14289), t(35956);
-var U = t(366523);
-let w = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
-    O = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
+var w = t(366523);
+let L = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
+    U = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
 var V = t(263911),
     N = t(403581),
     k = t(873297),
-    M = t(758836),
-    B = t(375708);
+    B = t(758836),
+    M = t(375708);
 function G() {}
-let F = {
+let Y = {
     storefront: "linear-gradient(90deg, rgba(88, 101, 242, 0.4) 0%, rgba(157, 60, 178, 0.4) 100%)",
     nitro: "linear-gradient(90deg, rgba(179, 38, 156, 0.4) 0%, rgba(20, 20, 203, 0.4) 100%)",
     none: void 0,
 };
-var Y = t(971146);
+var F = t(971146);
 let j = {
         id: "slayer-storefront",
         name: "Slayer Storefront",
@@ -385,26 +397,26 @@ let j = {
                                     });
                             }, []),
                             y)
-                                ? (0, n.jsx)(L.default, {
-                                      transitionState: T.ip.ENTERED,
+                                ? (0, n.jsx)(T.default, {
+                                      transitionState: O.ip.ENTERED,
                                       returnRef: x,
                                       skuId: f,
                                       applicationId: h,
                                       isStorefront: !0,
                                       onClose: () => Promise.resolve(S(!1)),
                                   })
-                                : (0, n.jsxs)(P.B, {
+                                : (0, n.jsxs)(D.B, {
                                       gap: 12,
                                       style: { padding: 16 },
                                       children: [
-                                          (0, n.jsx)(D.E, {
+                                          (0, n.jsx)(R.E, {
                                               variant: "text-sm/normal",
                                               color: "text-muted",
                                               children:
                                                   "Opens the redesigned PDP modal with the configured mock data. Close with the X button or Escape.",
                                           }),
                                           (0, n.jsx)("div", {
-                                              children: (0, n.jsx)(R.$, {
+                                              children: (0, n.jsx)(P.$, {
                                                   variant: "primary",
                                                   onClick: () => S(!0),
                                                   text: "Open PDP Modal",
@@ -452,10 +464,10 @@ let j = {
                         name: "ExclusiveBadge",
                         id: "exclusive-badge",
                         component: function () {
-                            return (0, n.jsxs)(P.B, {
+                            return (0, n.jsxs)(D.B, {
                                 gap: 16,
                                 children: [
-                                    (0, n.jsx)(D.E, {
+                                    (0, n.jsx)(R.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
@@ -471,16 +483,16 @@ let j = {
                         id: "in-game-item-tag",
                         component: function (e) {
                             let { textColor: a } = e;
-                            return (0, n.jsxs)(P.B, {
+                            return (0, n.jsxs)(D.B, {
                                 gap: 16,
                                 children: [
-                                    (0, n.jsx)(D.E, {
+                                    (0, n.jsx)(R.E, {
                                         variant: "text-sm/normal",
                                         color: "text-muted",
                                         children:
                                             "The in-game item indicator tag shown on storefront cards and the PDP modal.",
                                     }),
-                                    (0, n.jsx)(Y.V, { textColor: a }),
+                                    (0, n.jsx)(F.V, { textColor: a }),
                                 ],
                             });
                         },
@@ -504,9 +516,9 @@ let j = {
                             let { shape: a, useBackgroundImage: t } = e;
                             return (0, n.jsx)("div", {
                                 style: { width: 220, height: 220 },
-                                children: (0, n.jsx)(U.A, {
-                                    cardImage: w,
-                                    cardBackgroundImage: t ? O : null,
+                                children: (0, n.jsx)(w.A, {
+                                    cardImage: L,
+                                    cardBackgroundImage: t ? U : null,
                                     altText: "Playground preview",
                                     shape: a,
                                 }),
@@ -538,21 +550,22 @@ let j = {
                                     showLogo: i,
                                     showTimeLeft: s,
                                     timeLeftText: d,
-                                    cardCount: u,
-                                    gradientPreset: m,
+                                    showOrbsOnly: u,
+                                    cardCount: m,
+                                    gradientPreset: g,
                                 } = e,
-                                g =
+                                y =
                                     ((a = (0, c.bG)([b.default], () => b.default.getId())),
                                     (t = r.useMemo(
                                         () =>
-                                            v.slice(0, u).map((e) => {
+                                            v.slice(0, m).map((e) => {
                                                 let { id: a } = e;
                                                 return a;
                                             }),
-                                        [u],
+                                        [m],
                                     )),
                                     r.useEffect(() => {
-                                        for (let { id: e, params: t } of v.slice(0, u)) x(e, t, a);
+                                        for (let { id: e, params: t } of v.slice(0, m)) x(e, t, a);
                                         p.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
@@ -566,8 +579,8 @@ let j = {
                                                         collectiblesShopNavigationEnabled: !1,
                                                         excludedPlatforms: [],
                                                         disableMobileAccountLinking: !1,
-                                                        allowOrbsSpending: !1,
-                                                        promotionEndDatetime: null,
+                                                        allowOrbsSpending: u ?? !1,
+                                                        promotionEndDatetime: new Date("2030-06-30T00:00:00Z"),
                                                     },
                                                 ],
                                                 announcementModalConfig: null,
@@ -588,18 +601,18 @@ let j = {
                                                     promotions: {},
                                                 },
                                             });
-                                    }, [u, a, t]),
+                                    }, [m, a, t, u]),
                                     t),
-                                y = r.useMemo(
+                                S = r.useMemo(
                                     () =>
                                         "nitro" === o
                                             ? {
                                                   kind: "custom",
-                                                  node: (0, n.jsx)(R.$, {
+                                                  node: (0, n.jsx)(P.$, {
                                                       variant: "expressive",
                                                       size: "sm",
                                                       icon: N.t,
-                                                      text: B.intl.string(B.t.pj0XBN),
+                                                      text: M.intl.string(M.t.pj0XBN),
                                                       onClick: G,
                                                   }),
                                               }
@@ -608,19 +621,19 @@ let j = {
                                 );
                             return (0, n.jsx)(k.A, {
                                 onDismiss: G,
-                                skuIds: g,
-                                tab: M.G2.GAME_SHOPS,
+                                skuIds: y,
+                                tab: B.G2.GAME_SHOPS,
                                 applicationId: h,
                                 headerText: l,
                                 logoUrl: i
                                     ? "https://cdn.discordapp.com/app-assets/1346069614634864772/store/1461676971728572478.webp?size=128"
                                     : void 0,
-                                cta: y,
+                                cta: S,
                                 timeLeftText: s && null != d && "" !== d ? d : void 0,
                                 analyticsSection: "playground",
                                 analyticsTileType: "PLAYGROUND_BANNER",
                                 analyticsImpressionType: "playground_banner",
-                                backgroundGradient: F[m],
+                                backgroundGradient: Y[g],
                             });
                         },
                         controls: {
@@ -641,6 +654,7 @@ let j = {
                             showLogo: { label: "Show Logo", type: "boolean", defaultValue: !0 },
                             showTimeLeft: { label: "Show Time Left", type: "boolean", defaultValue: !0 },
                             timeLeftText: { label: "Time Left Text", type: "text", defaultValue: "33d left" },
+                            showOrbsOnly: { label: "Show Orbs Only", type: "boolean", defaultValue: !1 },
                             cardCount: {
                                 label: "Card Count",
                                 type: "slider",
