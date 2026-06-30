@@ -253,7 +253,7 @@ let x = function (e) {
                                       ? ((n = L.intl.string(L.t.nOunHC)), (t = a), (i = "primary"))
                                       : ((n = L.intl.string(L.t.tX4xrt)), (t = o), (i = "critical-primary")),
                                   P({
-                                      subHead: L.intl.string(L.t.RCYGot),
+                                      subHead: L.intl.string("branch" === p.type ? L.t.p9TwTG : L.t.RCYGot),
                                       buildDetails: p.id,
                                       buttonClick: () => {
                                           I.A.isConnected()
