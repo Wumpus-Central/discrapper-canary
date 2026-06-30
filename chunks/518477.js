@@ -175,6 +175,8 @@ var f =
         (a.COPY_AVATAR_IMAGE_LINK = "COPY_AVATAR_IMAGE_LINK"),
         (a.COPY_BANNER_IMAGE_LINK = "COPY_BANNER_IMAGE_LINK"),
         (a.GIFT = "GIFT"),
+        (a.SHOW_STYLES_PANEL = "SHOW_STYLES_PANEL"),
+        (a.HIDE_STYLES_PANEL = "HIDE_STYLES_PANEL"),
         a),
     g =
         (((o = {}).WISHLIST_ITEM_CLICKED = "WISHLIST_ITEM_CLICKED"),
