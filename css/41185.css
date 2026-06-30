@@ -1,0 +1,290 @@
+.channelHeader__35a7e {
+    align-items: center;
+    background-color: var(--background-surface-high);
+    box-sizing: border-box;
+    display: flex;
+    height: 64px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.collapseButton__35a7e {
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    height: 16px;
+    padding: 4px;
+    width: 16px
+}
+
+.collapseButton__35a7e.collapsed__35a7e {
+    transform: rotate(-90deg)
+}
+
+.dmIcon__35a7e {
+    border-radius: 12px;
+    height: 40px;
+    width: 40px
+}
+
+.dmIcon__35a7e,
+.guildIcon__35a7e {
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-inline-end: 16px
+}
+
+.guildIcon__35a7e {
+    background-color: var(--background-mod-normal)
+}
+
+.channelNameSection__35a7e {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-inline-end: 16px;
+    overflow: hidden
+}
+
+.badge__35a7e {
+    margin-inline-start: 8px
+}
+
+.channelName__35a7e,
+.subtext__35a7e {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-break: break-all
+}
+
+.channelName__35a7e,
+.guildName__35a7e {
+    cursor: pointer;
+    display: inline-block;
+    min-width: 0;
+    width: 100%
+}
+
+.channelName__35a7e:hover .channelNameSpan__35a7e,
+.guildName__35a7e:hover .channelNameSpan__35a7e {
+    text-decoration: underline
+}
+
+.channelName__35a7e {
+    align-items: center;
+    display: flex
+}
+
+.forumIcon__35a7e {
+    margin-inline-end: 4px
+}
+
+.channelNameHeader__35a7e {
+    height: 20px
+}
+
+.subtext__35a7e,
+.subtextContainer__35a7e {
+    max-height: 16px;
+    min-width: 0;
+    width: 100%
+}
+
+.container_d404a3 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 400px;
+    padding: 0 16px;
+    text-align: center
+}
+
+.iconContainer_d404a3 {
+    margin-bottom: 16px;
+    position: relative
+}
+
+.icon_d404a3 {
+    background-color: var(--background-base-low);
+    border-radius: 80px;
+    color: var(--text-muted);
+    padding: 22px
+}
+
+.stars_d404a3 {
+    inset-inline-start: -10px;
+    position: absolute
+}
+
+.header_d404a3 {
+    margin-bottom: 8px
+}
+
+.protip_d404a3 {
+    text-transform: uppercase
+}
+
+.friendRequestsButton__523aa {
+    align-items: center;
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
+    border-radius: 8px;
+    color: var(--control-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    height: 32px;
+    padding: 0 8px
+}
+
+.friendRequestsButton__523aa:hover {
+    background-color: var(--control-secondary-background-hover);
+    color: var(--interactive-text-active)
+}
+
+.slowModeIcon_b21699 {
+    display: block;
+    margin-inline-start: 4px
+}
+
+.cooldownWrapper_b21699 {
+    gap: 4px;
+    margin-inline-start: auto;
+    overflow: hidden;
+    padding: 3px 8px;
+    padding-inline-end: 16px;
+    white-space: nowrap
+}
+
+.cooldownText_b21699,
+.cooldownWrapper_b21699 {
+    align-items: center;
+    display: flex
+}
+
+.cooldownText_b21699 {
+    border-start-end-radius: 8px;
+    border-start-start-radius: 8px;
+    gap: var(--space-4);
+    transition: color .2s ease
+}
+
+.base_b88801 {
+    align-items: center;
+    bottom: 1px;
+    color: var(--text-subtle);
+    display: flex;
+    font-size: 12px;
+    font-weight: 500;
+    height: 24px;
+    inset-inline: var(--space-16) 16px;
+    line-height: 16px;
+    overflow-y: hidden;
+    position: absolute;
+    resize: none
+}
+
+.base_b88801 strong {
+    font-weight: var(--font-weight-bold)
+}
+
+.base_b88801 .text_b88801 {
+    display: block;
+    margin-inline-start: 4px;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.base_b88801 .ellipsis_b88801 {
+    display: block;
+    flex: 0 0 auto;
+    margin-inline-start: 0
+}
+
+.base_b88801 .typingDots_b88801 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.inTextChannel_b88801.base_b88801 {
+    bottom: unset;
+    top: -24px;
+    inset-inline: 0;
+    padding-inline-start: var(--space-md);
+    pointer-events: all
+}
+
+.inTextChannel_b88801 .typingDots_b88801 {
+    margin-inline-start: 8px
+}
+
+.inTextChannel_b88801 .text_b88801 {
+    margin-inline-start: calc(var(--space-md) + var(--space-8));
+    z-index: 1
+}
+
+.inTextChannel_b88801 .text_b88801>strong {
+    color: var(--text-default);
+    font-weight: var(--font-weight-semibold)
+}
+
+.typing_b88801 {
+    overflow: visible
+}
+
+.announcer_b88801 {
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    pointer-events: none;
+    white-space: nowrap
+}
+
+.activityInviteEducation_b88801 {
+    bottom: unset;
+    margin-inline-start: -8px;
+    opacity: 0;
+    top: -24px;
+    inset-inline: 0;
+    padding-inline-start: var(--space-md);
+    pointer-events: all;
+    z-index: 1
+}
+
+.activityInviteEducationFadeIn_b88801 {
+    opacity: 1
+}
+
+.activityInviteEducationArrow_b88801 {
+    background-repeat: no-repeat;
+    background-size: 12px 10px;
+    display: inline-block;
+    height: 15px;
+    margin-block: 0;
+    margin-inline: 24px 2px;
+    transform: scaleY(-1);
+    width: 15px
+}
+
+.images-light .activityInviteEducationArrow_b88801 {
+    background-image: url(/assets/3b11031474fb64a0.svg)
+}
+
+.images-dark .activityInviteEducationArrow_b88801 {
+    background-image: url(/assets/6ad5446be34bb27a.svg)
+}

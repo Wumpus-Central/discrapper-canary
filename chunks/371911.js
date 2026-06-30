@@ -69,7 +69,7 @@ let A = (0, c.Fe)({
             n.e("23549"),
             n.e("83566"),
             n.e("69722"),
-            n.e("84183"),
+            n.e("80083"),
             n.e("28510"),
             n.e("78104"),
             n.e("68323"),
@@ -94,9 +94,7 @@ let A = (0, c.Fe)({
             n.e("19464"),
             n.e("40775"),
             n.e("32538"),
-            n.e("7897"),
-            n.e("70402"),
-            n.e("20469"),
+            n.e("41185"),
             n.e("83314"),
             n.e("39328"),
             n.e("64801"),
@@ -140,7 +138,7 @@ let A = (0, c.Fe)({
             n.e("47018"),
             n.e("9640"),
             n.e("62422"),
-            n.e("50117"),
+            n.e("25949"),
             n.e("90365"),
             n.e("98765"),
             n.e("89088"),
@@ -231,7 +229,6 @@ let A = (0, c.Fe)({
             n.e("75859"),
             n.e("27659"),
             n.e("68530"),
-            n.e("92077"),
             n.e("98972"),
             n.e("42726"),
             n.e("79435"),
@@ -246,11 +243,10 @@ let A = (0, c.Fe)({
             n.e("70961"),
             n.e("23685"),
             n.e("42516"),
-            n.e("20705"),
             n.e("38951"),
             n.e("70276"),
-        ]).then(n.bind(n, 922068)),
-    webpackId: 922068,
+        ]).then(n.bind(n, 24226)),
+    webpackId: 24226,
     name: "RecentsPopoutRenderer",
     renderLoader: d.hc,
 });
@@ -261,16 +257,15 @@ function I(e) {
             onOpen: c,
             onClose: d,
             children: I,
-            badgeState: T,
-            popoutPosition: S,
-            popoutAlign: y,
-            targetElementRef: C,
-            spacing: N,
-            dialogClassName: v,
+            popoutPosition: T,
+            popoutAlign: S,
+            targetElementRef: y,
+            spacing: C,
+            dialogClassName: N,
         } = e,
-        { analyticsLocations: R } = (0, u.Ay)(l.A.NOTIFICATION_CENTER),
-        [O, b] = r.useState(!1),
-        [D, L] = [
+        { analyticsLocations: v } = (0, u.Ay)(l.A.NOTIFICATION_CENTER),
+        [R, O] = r.useState(!1),
+        [b, D] = [
             (0, s.bG)([E.A], () => E.A.settings.inbox?.currentTab ?? a.Y2.UNREADS),
             r.useCallback((e) => {
                 p.wc.updateAsync(
@@ -283,7 +278,7 @@ function I(e) {
                 );
             }, []),
         ],
-        { showTutorial: w, setSeenTutorial: M } =
+        { showTutorial: L, setSeenTutorial: w } =
             ((t = (0, s.bG)([E.A], () => E.A.settings.inbox?.viewedTutorial ?? !1)),
             (n = r.useCallback(() => {
                 p.wc.updateAsync(
@@ -294,57 +289,57 @@ function I(e) {
                     p.Sb.INFREQUENT_USER_ACTION,
                 );
             }, [])),
-            { showTutorial: !t && D === a.Y2.UNREADS, setSeenTutorial: n }),
+            { showTutorial: !t && b === a.Y2.UNREADS, setSeenTutorial: n }),
+        M = r.useCallback(() => {
+            O(!1), R && d?.();
+        }, [d, R]),
         P = r.useCallback(() => {
-            b(!1), O && d?.();
-        }, [d, O]),
-        x = r.useCallback(() => {
-            b(!O), O ? d?.() : c?.();
-        }, [d, c, O]);
-    r.useEffect(() => (m._.subscribe(g.jej.TOGGLE_INBOX, x), () => void m._.unsubscribe(g.jej.TOGGLE_INBOX, x)), [x]);
-    let { enabled: k, inInbox: U } = _.A.useConfig({ location: "RecentsPopout" }),
-        G = (0, s.bG)([h.A], () => h.A.hasOverdueReminder(), []) && k && U;
+            O(!R), R ? d?.() : c?.();
+        }, [d, c, R]);
+    r.useEffect(() => (m._.subscribe(g.jej.TOGGLE_INBOX, P), () => void m._.unsubscribe(g.jej.TOGGLE_INBOX, P)), [P]);
+    let { enabled: x, inInbox: k } = _.A.useConfig({ location: "RecentsPopout" }),
+        U = (0, s.bG)([h.A], () => h.A.hasOverdueReminder(), []) && x && k;
     r.useEffect(() => {
-        D !== a.Y2.BOOKMARKS || k || U || L(a.Y2.MENTIONS), D === a.Y2.GAME_INVITES && L(a.Y2.MENTIONS);
+        b !== a.Y2.BOOKMARKS || x || k || D(a.Y2.MENTIONS),
+            (b === a.Y2.GAME_INVITES || b === a.Y2.FOR_YOU) && D(a.Y2.UNREADS);
     });
-    let F = r.useCallback(
+    let G = r.useCallback(
             (e) => {
-                e.shiftKey || P();
+                e.shiftKey || M();
             },
-            [P],
+            [M],
         ),
-        V = (0, f.Sc)();
+        F = (0, f.Sc)();
     return (0, i.jsx)(u.f5, {
-        value: R,
+        value: v,
         children: (0, i.jsx)(o.Y, {
-            targetElementRef: C,
+            targetElementRef: y,
             animation: o.Y.Animation.NONE,
-            position: S,
-            align: y,
+            position: T,
+            align: S,
             autoInvert: !1,
-            shouldShow: O,
-            onRequestClose: P,
+            shouldShow: R,
+            onRequestClose: M,
             renderPopout: function () {
                 return (0, i.jsx)(A, {
-                    dialogClassName: v,
-                    isScheduledMessagesEnabled: V,
-                    tab: D,
-                    setTab: L,
-                    badgeState: T,
-                    closePopout: P,
-                    handleMentionsJump: F,
-                    showTutorial: w,
-                    setSeenTutorial: M,
-                    forLaterEnabled: k,
-                    showForLater: U,
+                    dialogClassName: N,
+                    isScheduledMessagesEnabled: F,
+                    tab: b,
+                    setTab: D,
+                    closePopout: M,
+                    handleMentionsJump: G,
+                    showTutorial: L,
+                    setSeenTutorial: w,
+                    forLaterEnabled: x,
+                    showForLater: k,
                 });
             },
             ignoreModalClicks: !0,
-            spacing: N,
+            spacing: C,
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return I(x, n, e, G);
+                return I(P, n, e, U);
             },
         }),
     });

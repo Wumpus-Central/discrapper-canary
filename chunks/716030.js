@@ -8,5 +8,4 @@ e.exports = {
     yH: "inboxIcon_ab6641",
     Hi: "inboxTitle_ab6641",
     ne: "controls_ab6641",
-    bG: "iconBadge_ab6641",
 };

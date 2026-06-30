@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { EG: () => l, Gu: () => c, JI: () => h, Lp: () => _, SC: () => p, fk: () => f, hV: () => d, o6: () => u });
+n.d(t, { EG: () => l, Gu: () => c, JI: () => h, Lp: () => _, fk: () => f, hV: () => d, o6: () => u });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -68,20 +68,5 @@ let d = (e) => {
             role: null != _ ? "img" : void 0,
             "aria-label": _,
             children: (0, i.jsx)(t, { className: o.Kk, color: "currentColor" }),
-        });
-    },
-    p = (e) => {
-        let {
-            className: t,
-            color: n = a.A.colors.INTERACTIVE_TEXT_ACTIVE.css,
-            shape: r = l.ROUND,
-            disableColor: u = !1,
-            style: c,
-            ...d
-        } = e;
-        return (0, i.jsx)("div", {
-            className: s()(t, o.Ky, r),
-            style: { backgroundColor: u ? void 0 : n, ...c },
-            ...d,
         });
     };
