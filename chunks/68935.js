@@ -90,6 +90,7 @@ let O = function (e) {
             s = Math.min(2, (0, i.mZ)());
         return `${location.protocol}${E}${o}?size=${(0, i.kr)(r * s)}${n}${d}${c}`;
     }
+    if (e.format_type === _.TG.LOTTIE && (0, l.isWeb)()) return o;
     let h = `${location.protocol}${E}${o}`;
     return u ? `${h}?force_sdr=true` : h;
 };
