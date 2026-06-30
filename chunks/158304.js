@@ -27431,6 +27431,7 @@ let { getSectionDefinition: IO } = {
                         variant: "destructive",
                         predicate: () => t.isOwnerWithRequiredMfaLevel,
                     };
+                case ei.BEX.TAG_CUSTOMIZE:
                 case ei.BEX.LANDING:
                 case ei.BEX.MEMBER_EDIT:
                 case ei.BEX.MEMBER_TIMEOUT:
