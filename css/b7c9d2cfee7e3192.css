@@ -1,0 +1,65 @@
+.card__969d2 {
+    border-radius: var(--radius-md)
+}
+
+.scroller_a02225 {
+    --custom-cover-width: calc((100% - (var(--custom-similar-games-per-page, 5) - 1)*var(--space-md))/var(--custom-similar-games-per-page, 5))
+}
+
+.card_a02225 {
+    aspect-ratio: 3/4;
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-low);
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-bottom: var(--space-8);
+    overflow: hidden;
+    width: var(--custom-cover-width)
+}
+
+.full-motion .card_a02225 {
+    transition: transform .15s ease-in-out;
+    will-change: transform
+}
+
+.full-motion .card_a02225:hover {
+    transform: scale(1.0225)
+}
+
+.full-motion .card_a02225:active {
+    transform: scale(.9775)
+}
+
+.coverArt_a02225 {
+    border-radius: inherit;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: top;
+    object-position: top;
+    width: 100%
+}
+
+.loadingArtwork_a02225 {
+    aspect-ratio: 3/4;
+    background-color: var(--background-mod-strong);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-low);
+    flex-shrink: 0;
+    margin-bottom: var(--space-8);
+    width: var(--custom-cover-width)
+}
+
+.full-motion .loadingArtwork_a02225 {
+    animation: pulse_a02225 1.4s ease-in-out infinite alternate
+}
+
+@keyframes pulse_a02225 {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: .5
+    }
+}

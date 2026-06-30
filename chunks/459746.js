@@ -10,12 +10,12 @@ var i,
     c = n(840625),
     d = (((i = {})[(i.SMALL = 0)] = "SMALL"), (i[(i.LARGE = 1)] = "LARGE"), i);
 function _(e) {
-    let { game: t, size: n, className: i } = e,
-        [a, d] = s.useState(!1),
-        _ = t.name,
-        h = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null,
-        f = t.getCoverURL();
-    return null == f || a
+    let { game: t, size: n, className: i, imageSize: a } = e,
+        [d, _] = s.useState(!1),
+        h = t.name,
+        f = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null,
+        p = t.getCoverURL(a);
+    return null == p || d
         ? (0, r.jsxs)("div", {
               className: o()(c.N, i),
               children: [
@@ -24,25 +24,25 @@ function _(e) {
                       variant: 1 === n ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
                       lineClamp: 1 === n ? 4 : 3,
-                      children: _,
+                      children: h,
                   }),
                   (0, r.jsx)("div", { className: c.j }),
                   (0, r.jsx)(l.E, {
                       variant: 1 === n ? "text-sm/normal" : "text-xxs/normal",
                       color: "always-white",
-                      children: null != h ? `(${h?.getFullYear()})` : null,
+                      children: null != f ? `(${f?.getFullYear()})` : null,
                   }),
               ],
           })
         : (0, r.jsx)("img", {
               className: i,
-              src: f,
-              alt: u.intl.formatToPlainString(u.t["3ev90U"], { game: _ }),
+              src: p,
+              alt: u.intl.formatToPlainString(u.t["3ev90U"], { game: h }),
               onError: function () {
-                  d(!0);
+                  _(!0);
               },
               onLoad: function () {
-                  d(!1);
+                  _(!1);
               },
               draggable: !1,
           });
