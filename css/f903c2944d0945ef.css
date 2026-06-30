@@ -120,8 +120,9 @@
 
 .modalRoot__38ccf {
     background-color: var(--control-secondary-background-default);
-    max-height: 560px;
-    min-height: 560px;
+    height: 560px;
+    max-height: 100%;
+    max-width: 100%;
     overflow: hidden;
     width: 1075px
 }
