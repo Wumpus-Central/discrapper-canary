@@ -413,7 +413,7 @@ let r = {
             "GIFT_INTENT_DISMISSALS_FETCH_FAILURE",
             "LOGOUT",
         ],
-        inlineRequire: () => n(528153).A,
+        inlineRequire: () => n(463105).A,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
@@ -855,6 +855,17 @@ let r = {
         ],
         inlineRequire: () => n(425116).A,
         hasStoreChangeListeners: !0,
+        neverLoadBeforeConnectionOpen: !0,
+    },
+    ParentalConsentWarningManager: {
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "WINDOW_FOCUS",
+            "WINDOW_VISIBILITY_CHANGE",
+            "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS",
+            "LOGOUT",
+        ],
+        inlineRequire: () => n(392447).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     SentryExperimentFeatureFlagManager: {
