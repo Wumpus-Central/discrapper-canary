@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { OY: () => I, ph: () => y, py: () => A });
+n.d(t, { No: () => A, OY: () => T, ph: () => C, py: () => I });
 var r = n(64700),
     s = n(534979),
     a = n(635377),
@@ -149,8 +149,9 @@ let m = {
         "julia-repl": "julia",
         jldoctest: "julia",
     },
-    g = new Set(Object.keys(s.pb));
-function A(e) {
+    g = new Set([...Object.keys(s.pb), "ansi"]),
+    A = new Set([...g, ...Object.keys(m)]);
+function I(e) {
     if (null == e) return;
     let t = e.toLowerCase();
     if (!_.test(t)) return;
@@ -158,7 +159,7 @@ function A(e) {
     let n = m[t];
     if (null != n && g.has(n)) return n;
 }
-function I(e, t) {
+function T(e, t) {
     let n = r.use(E(e)),
         i = r.useMemo(() => u()(`${e}\0${t}`), [e, t]),
         s = r.useCallback(
@@ -219,12 +220,11 @@ function I(e, t) {
         a?.html ?? null
     );
 }
-g.add("ansi");
-let T = null,
-    S = Object.fromEntries(Array.from({ length: 16 }, (e, t) => [t, `var(--custom-ansi-color-${t})`]));
-function y(e) {
-    T ??= n.e("1180").then(n.t.bind(n, 628759, 23));
-    let { default: t } = r.use(T),
-        [i] = r.useState(() => new t({ escapeXML: !0, fg: "var(--text-default)", bg: "transparent", colors: S }));
+let S = null,
+    y = Object.fromEntries(Array.from({ length: 16 }, (e, t) => [t, `var(--custom-ansi-color-${t})`]));
+function C(e) {
+    S ??= n.e("1180").then(n.t.bind(n, 628759, 23));
+    let { default: t } = r.use(S),
+        [i] = r.useState(() => new t({ escapeXML: !0, fg: "var(--text-default)", bg: "transparent", colors: y }));
     return r.useMemo(() => i.toHtml(e), [i, e]);
 }
