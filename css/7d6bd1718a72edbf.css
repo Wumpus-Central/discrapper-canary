@@ -25,7 +25,6 @@
 }
 
 .authorName__6764b,
-.messageContent__6764b,
 .parentName__6764b,
 .startedByName__6764b,
 .subtext__6764b,
@@ -90,13 +89,11 @@
 .messageContent__6764b {
     align-items: center;
     color: var(--text-default);
-    display: flex;
+    display: -webkit-inline-box;
     flex-shrink: 1;
-    white-space: pre
-}
-
-.messageContent__6764b .inline {
-    white-space: pre !important
+    min-width: 0;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical
 }
 
 .messageContent__6764b .mention {
