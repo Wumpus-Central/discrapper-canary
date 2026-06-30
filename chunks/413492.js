@@ -511,13 +511,7 @@ function eA(e) {
     });
 }
 var eI = n(996988);
-let eT = {
-    [eI.d.POPOUT]: 12,
-    [eI.d.MODAL]: 26,
-    [eI.d.MODAL_V2]: 16,
-    [eI.d.SIDEBAR]: 13,
-    [eI.d.VIDEO_TILE_BACKGROUND]: 12,
-};
+let eT = { [eI.d.POPOUT]: 12, [eI.d.MODAL]: 26, [eI.d.SIDEBAR]: 13, [eI.d.VIDEO_TILE_BACKGROUND]: 12 };
 function eS(e) {
     let {
             displayProfile: t,
@@ -536,9 +530,9 @@ function eS(e) {
             return [...h, ...l.filter((t) => !e.has(t.id))];
         }, [h, l]);
     if (0 === f.length) return null;
-    let p = !0 === a && n === eI.d.SIDEBAR ? eT[eI.d.POPOUT] : eT[n];
+    let p = n === eI.d.MODAL_V2 ? [f] : (0, s.chunk)(f, !0 === a && n === eI.d.SIDEBAR ? eT[eI.d.POPOUT] : eT[n]);
     return (0, i.jsx)(i.Fragment, {
-        children: (0, s.chunk)(f, p).map((e) =>
+        children: p.map((e) =>
             (0, i.jsx)(
                 eA,
                 { badges: e, displayProfile: t, onClose: u, shouldOpenBadgeTooltip: c, shouldGlowTenureBadge: d },
