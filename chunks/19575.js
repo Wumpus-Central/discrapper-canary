@@ -568,6 +568,9 @@ let W = {
         checkClipsFilesExist: async (e) => await I.fileManager.checkClipsFilesExist(e),
         cleanupUnusedClipsFiles: async (e) => await I.fileManager.cleanupUnusedClipsFiles(e),
         getClipsDataDirSync: () => I.fileManager.getClipsDataDirSync(),
+        getClipsSentryDirSync() {
+            if (null != I.fileManager.getClipsSentryDirSync) return I.fileManager.getClipsSentryDirSync();
+        },
         async downloadOpenH264(e, t, n, i) {
             o()(E.isPlatformEmbedded, "Download OpenH264 file method called outside native app");
             let r = m.A.toURLSafe(e);

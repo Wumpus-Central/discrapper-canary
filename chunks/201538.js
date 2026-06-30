@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { t_: () => v, UW: () => C, so: () => N });
+n.d(t, { t_: () => R, UW: () => N, so: () => v });
 var i,
     r = n(472444),
     s = n(19575),
@@ -126,74 +126,80 @@ class p {
 }
 let E = new p();
 var m = n(696016);
-let g = !1,
-    A = null,
+let g = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
+    A = !1,
     I = null,
     T = null,
     S = null,
-    y = null;
-function C() {
+    y = null,
+    C = null;
+function N() {
     let { forceV3Capability: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, d.TD)(),
         n = r.Ay.getMediaEngine(),
         i = n.hasSetClipsRecordingEnabled(),
-        s = (t || e || (i && !0 === I)) && (0, o.qi)("pushClipsV3RuntimeFlagsToNative"),
+        s = (t || e || (i && !0 === T)) && (0, o.qi)("pushClipsV3RuntimeFlagsToNative"),
         l = t && (0, o.$i)("pushClipsV3RuntimeFlagsToNative"),
         u = a.Ay.getEnableAutoclipping(),
-        c = null !== I,
-        _ = I !== s,
-        h = T !== l,
-        f = S !== u;
+        c = null !== T,
+        _ = T !== s,
+        h = S !== l,
+        f = y !== u;
     return _ || h || f
         ? (_ && n.setClipsV3Enabled(s),
           m.nx.info(
-              `clips v3 runtime flags pushed: v3=${s} (was ${I}), ml=${l} (was ${T}), autoclipping=${u} (was ${S})`,
+              `clips v3 runtime flags pushed: v3=${s} (was ${T}), ml=${l} (was ${S}), autoclipping=${u} (was ${y})`,
           ),
-          (I = s),
-          (T = l),
-          (S = u),
+          (T = s),
+          (S = l),
+          (y = u),
           (0, o.ak)(s ? "v3" : "v1"),
           s &&
               (l
-                  ? (null === y &&
+                  ? (null === C &&
                         (m.nx.info("clips v3 ml flag set ml=false until download complete"),
                         n.setClipsV3MLEnabled(!1),
-                        (y = !1)),
+                        (C = !1)),
                     (async () => {
                         let { allAssetsDownloaded: e } = await E.start(),
-                            t = e && !0 === T && !0 === S;
-                        y !== t &&
+                            t = e && !0 === S && !0 === y;
+                        C !== t &&
                             (m.nx.info(
-                                `clips v3 ml flag set ml=${t} (was ${y}). allAssetsDownloaded=${e}, autoclipping=${S}`,
+                                `clips v3 ml flag set ml=${t} (was ${C}). allAssetsDownloaded=${e}, autoclipping=${y}`,
                             ),
                             n.setClipsV3MLEnabled(t),
-                            (y = t));
+                            (C = t));
                     })())
-                  : !1 !== y &&
-                    (m.nx.info(`clips v3 ml flag set ml=false (was ${y})`), n.setClipsV3MLEnabled(!1), (y = !1))),
+                  : !1 !== C &&
+                    (m.nx.info(`clips v3 ml flag set ml=false (was ${C})`), n.setClipsV3MLEnabled(!1), (C = !1))),
           { midSessionV3Flip: c && _ })
         : { midSessionV3Flip: !1 };
 }
-function N() {
+function v() {
     let { forceV3Capability: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    return null != A
-        ? A
-        : (C({ forceV3Capability: e }),
-          (A = (async () => {
+    return null != I
+        ? I
+        : (N({ forceV3Capability: e }),
+          (I = (async () => {
               try {
                   await s.Ay.ensureModule("discord_clips");
                   let e = s.Ay.requireModule("discord_clips").getModulePath(),
                       t = r.Ay.getMediaEngine(),
                       n = s.Ay.getClipsDataDirSync();
-                  t.setClipsDataPath(n),
+                  t.setClipsDataPath(n);
+                  let i = g[s.Ay.releaseChannel] ?? g.stable,
+                      a = s.Ay.getClipsSentryDirSync();
+                  null != a &&
+                      null != t.setClipsSentryConfig &&
+                      t.setClipsSentryConfig(`discord_clips@${s.Ay.buildNumber ?? 0}`, a, i),
                       t.setClipsModulePath(e),
-                      (g = !0),
+                      (A = !0),
                       m.nx.info("discord_clips module loaded, path: " + e);
               } catch (e) {
-                  (A = null), m.nx.error("Failed to load discord_clips module", e);
+                  (I = null), m.nx.error("Failed to load discord_clips module", e);
               }
           })()));
 }
-function v() {
-    return g;
+function R() {
+    return A;
 }

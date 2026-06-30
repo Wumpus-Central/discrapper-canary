@@ -2223,6 +2223,9 @@ class er extends l.A {
     setClipsDataPath(e) {
         (0, b.lE)().setClipsDataPath?.(e);
     }
+    setClipsSentryConfig(e, t, n) {
+        (0, b.lE)().setClipsSentryConfig?.(e, t, n);
+    }
     setClipsV3Enabled(e) {
         (0, b.lE)().setClipsV3Enabled?.(e);
     }
