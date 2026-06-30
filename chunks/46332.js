@@ -276,6 +276,8 @@ function N(e) {
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
             hasAcceptedTerms: !1,
             setHasAcceptedTerms: (t) => e({ hasAcceptedTerms: t }),
+            checkoutReviewButtonLabel: "",
+            setCheckoutReviewButtonLabel: (t) => e({ checkoutReviewButtonLabel: t }),
             paymentSourceId: o,
             setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
             checkoutPriceOptions: { paymentSourceId: o ?? void 0, currency: l, loaded: !1 },

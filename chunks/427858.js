@@ -28,7 +28,7 @@ var i = n(627968),
     O = n(458785),
     b = n(788868),
     D = n(375708),
-    L = n(982772);
+    L = n(327105);
 function w(e) {
     let { children: t, containerNode: n } = e;
     return null == n ? null : T.createPortal(t, n);
@@ -404,7 +404,7 @@ function K(e) {
         promotionalNoticeContent: U,
     });
 }
-var $ = n(845347);
+var $ = n(207715);
 function z(e) {
     let {
             premiumSubscription: t,
@@ -559,7 +559,6 @@ function z(e) {
             null != M && null != w
                 ? (0, i.jsx)(p.PI, {
                       overrideRenewalDate: en,
-                      planGroup: S,
                       activeSubscription: t,
                       isTrial: !1,
                       plan: T,
