@@ -1,17 +1,20 @@
 "use strict";
-n.d(t, { t: () => a });
+n.d(t, { P: () => l, t: () => o });
 var i = n(64700),
     r = n(826469),
     s = n(46332);
-function a() {
+function a(e) {
+    return null != e && null != e.checkoutContext ? e.checkoutContext : null;
+}
+function o() {
     let e = (0, s.t4)((e) => {
             let { checkoutInvoicePreview: t } = e;
-            return null != t && null != t.checkoutContext ? t.checkoutContext : null;
+            return a(t);
         }),
         {
             paymentSourceRecords: t,
             allowedCurrencies: n,
-            storeCountry: a,
+            storeCountry: o,
         } = i.useMemo(
             () =>
                 (function (e) {
@@ -28,8 +31,14 @@ function a() {
     return {
         checkoutPaymentSources: t,
         allowedCurrencies: n,
-        storeCountry: a,
+        storeCountry: o,
         hasInvoiceOrderContextLoaded: null != e,
         invoiceOrderContext: e,
     };
+}
+function l() {
+    return (0, s.t4)((e) => {
+        let t = a(e.checkoutInvoicePreview);
+        return null == t || null == t.store_country ? null : t.store_country.country;
+    });
 }
