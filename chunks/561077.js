@@ -7587,7 +7587,7 @@ let d9 = (0, a.E2)(u.X.BILLING_PAYMENT_METHODS, {
         },
         buildLayout: () => [d9],
     });
-var ct = i(817820),
+var ct = i(549363),
     ci = i(545075);
 let cn = (0, a.E2)(u.X.BILLING_TRANSACTION_HISTORY, {
         Component: function () {
@@ -9101,7 +9101,7 @@ let g3 = function (e) {
 var g6 = i(338548),
     g4 = i(776096),
     g7 = i(178368),
-    g8 = i(308186),
+    g8 = i(18005),
     g5 = i(866323),
     g9 = i(530005),
     me = i(443865),

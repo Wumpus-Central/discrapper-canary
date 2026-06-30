@@ -862,7 +862,7 @@ function e4(e) {
         },
     });
 }
-function e6(e) {
+function e5(e) {
     var t;
     let { guildId: l, currentTab: s, onTabSelect: r } = e,
         [a, c] = n.useState(0),
@@ -945,15 +945,15 @@ function e6(e) {
         })
     );
 }
-var e8 = l(754744),
-    e5 = l(138298);
+var e6 = l(754744),
+    e8 = l(138298);
 function e2(e) {
     let { guildId: t } = e,
         l = (0, d.bG)([C.A], () => C.A.getGuild(t)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([I.Ay], () => I.Ay.getGuildSidebarState(t), [t]),
         a = n.useCallback(() => {
-            e5.A.closeGuildSidebar(t);
+            e8.A.closeGuildSidebar(t);
         }, [t]),
         c = null != r;
     return null != l && c && null != r
@@ -962,7 +962,7 @@ function e2(e) {
               children: (0, i.jsx)("div", {
                   className: e0.__invalid_sidebarContainer,
                   style: { width: ed.da6 },
-                  children: (0, i.jsx)(e8.default, {
+                  children: (0, i.jsx)(e6.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -972,7 +972,7 @@ function e2(e) {
         : null;
 }
 var e3 = l(856768),
-    e1 = l(308186),
+    e1 = l(18005),
     e9 = l(702841),
     te = l(717421),
     tt = l(144073),
@@ -1041,7 +1041,7 @@ function tu(e) {
             children: [
                 (0, i.jsx)(b.A.Icon, { icon: c.n, "aria-hidden": !0 }),
                 (0, i.jsx)(b.A.Title, { children: a }),
-                n && (0, i.jsx)(e6, { guildId: t.id, currentTab: l, onTabSelect: s }),
+                n && (0, i.jsx)(e5, { guildId: t.id, currentTab: l, onTabSelect: s }),
             ],
         })
     );

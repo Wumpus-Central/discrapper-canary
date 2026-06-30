@@ -1,7 +1,7 @@
 n.d(t, { A: () => A });
 var l = n(627968),
     i = n(64700),
-    s = n(922139),
+    s = n(18005),
     r = n(17928),
     a = n(866323),
     o = n(565645),
@@ -19,7 +19,7 @@ function A(e) {
         E = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
         [v, C] = i.useState(!0),
         I = !E,
-        _ = (0, a.p)(v, {
+        j = (0, a.p)(v, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
             leave: { rotate: -120 },
@@ -47,7 +47,7 @@ function A(e) {
     }, [x, t, I]),
     I)
         ? null
-        : _((e, t) => {
+        : j((e, t) => {
               let { rotate: n } = e;
               return (
                   t &&

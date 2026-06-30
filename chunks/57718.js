@@ -5,15 +5,15 @@ var i,
 n(64700);
 var s = n(503698),
     a = n.n(s),
-    o = n(308186),
+    o = n(18005),
     l = n(661531),
     u = n(462887),
     c = n(401432),
     d = n(347135),
     _ = n(46948),
-    h = n(241124),
+    h = n(557637),
     f = n(652215),
-    p = n(692997),
+    p = n(880005),
     E = (((i = {})[(i.SMALL = 2)] = "SMALL"), (i[(i.MEDIUM = 8)] = "MEDIUM"), i);
 let m = function (e) {
     let {
@@ -35,7 +35,7 @@ let m = function (e) {
         className: a()(p.Iu, t),
         children: [
             A &&
-                (0, r.jsx)(h.Sn, {
+                (0, r.jsx)(h._M, {
                     id: "QuestPartnerBranding_gameTile",
                     children: (e) =>
                         (0, r.jsx)("img", {
@@ -58,7 +58,7 @@ let m = function (e) {
                             onLoad: T,
                         }),
                 }),
-            (0, r.jsx)(h.Sn, {
+            (0, r.jsx)(h._M, {
                 id: "QuestPartnerBranding_gameLogotype",
                 children: (e) =>
                     (0, r.jsx)(o.animated.img, {
@@ -78,7 +78,7 @@ let m = function (e) {
                             style: { margin: `0 ${E}px` },
                             children: (0, r.jsx)(c.a, { className: p.JB, color: l.A.colors.WHITE }),
                         }),
-                        (0, r.jsx)(h.Sn, {
+                        (0, r.jsx)(h._M, {
                             id: "QuestPartnerBranding_cosponsorLogotype",
                             children: (e) =>
                                 (0, r.jsx)(o.animated.img, {

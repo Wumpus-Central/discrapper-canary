@@ -4,7 +4,7 @@ var i,
     r = n(64700),
     l = n(503698),
     a = n.n(l),
-    o = n(922139),
+    o = n(18005),
     d = n(52133),
     u = n(625494),
     c = n(5463),
@@ -31,11 +31,11 @@ let p = new Set([
     "RESIZE_SOUTH_WEST",
     "RESIZE_SOUTH_EAST",
 ]);
-function x(e, t, n) {
+function f(e, t, n) {
     let { width: i, height: s, fixed: r } = e;
     return { width: "auto" === i ? "auto" : Math.max(t, i), height: "auto" === s ? "auto" : Math.max(n, s), fixed: r };
 }
-function f(e) {
+function x(e) {
     let { top: t, left: n, bottom: i, right: s } = e;
     return (
         null == n && null == s && (n = 0), null == t && null == i && (t = 0), { top: t, left: n, bottom: i, right: s }
@@ -100,8 +100,8 @@ class v extends r.Component {
     };
     constructor(e) {
         super(e),
-            (this.anchor = f(e.anchor)),
-            (this.requestedSize = x(e.size, e.minSize.width, e.minSize.height)),
+            (this.anchor = x(e.anchor)),
+            (this.requestedSize = f(e.size, e.minSize.width, e.minSize.height)),
             (this.size = this.requestedSize);
     }
     shouldConstrainAutoSizeToExplicitResizeEvents() {
@@ -142,8 +142,8 @@ class v extends r.Component {
         );
     }
     componentDidMount() {
-        this.setDOMPositions(f(this.props.anchor)),
-            (this.requestedSize = x(this.props.size, this.props.minSize.width, this.props.minSize.height)),
+        this.setDOMPositions(x(this.props.anchor)),
+            (this.requestedSize = f(this.props.size, this.props.minSize.width, this.props.minSize.height)),
             this.setDOMSize(this.requestedSize),
             this.shouldConstrainAutoSizeToExplicitResizeEvents() &&
                 (this.scheduleConstrainedAutoSizeUpdate(),
@@ -152,9 +152,9 @@ class v extends r.Component {
     }
     componentDidUpdate(e, t) {
         null == this.state.operation &&
-            ((0, d.A)(this.props.anchor, e.anchor) || this.setDOMPositions(f(this.props.anchor)),
+            ((0, d.A)(this.props.anchor, e.anchor) || this.setDOMPositions(x(this.props.anchor)),
             (0, d.A)(this.props.size, e.size) ||
-                ((this.requestedSize = x(this.props.size, this.props.minSize.width, this.props.minSize.height)),
+                ((this.requestedSize = f(this.props.size, this.props.minSize.width, this.props.minSize.height)),
                 this.setDOMSize(this.requestedSize),
                 this.scheduleConstrainedAutoSizeUpdate()));
     }
@@ -244,10 +244,10 @@ class v extends r.Component {
         } = this;
         if (null == n) return null;
         (e = Math.max(Math.min(s, e), l)), (t = Math.max(Math.min(r, t), a));
-        let { width: p, height: x } = E(n, this.size),
-            f = t - m,
+        let { width: p, height: f } = E(n, this.size),
+            x = t - m,
             A = e - h,
-            I = (0, c.fh)((0, c.Ly)({ top: f, left: A, bottom: void 0, right: void 0 }, s, r, p, x)),
+            I = (0, c.fh)((0, c.Ly)({ top: x, left: A, bottom: void 0, right: void 0 }, s, r, p, f)),
             v = u ? (0, c.h1)(I) : S("RESIZE_SOUTH_EAST", I);
         this.setDOMPositions(v),
             this.setState(
@@ -269,38 +269,38 @@ class v extends r.Component {
                 },
                 state: { operation: m, operationStarted: g },
             } = this,
-            { startX: p, startY: x } = this.dragState,
-            f = 0,
+            { startX: p, startY: f } = this.dragState,
+            x = 0,
             A = 0;
         if (null == m) return;
         switch (((e = Math.max(Math.min(s, e), l)), (t = Math.max(Math.min(r, t), a)), m)) {
             case "RESIZE_EAST":
             case "RESIZE_SOUTH_EAST":
             case "RESIZE_NORTH_EAST":
-                f -= p - e;
+                x -= p - e;
                 break;
             case "RESIZE_WEST":
             case "RESIZE_SOUTH_WEST":
             case "RESIZE_NORTH_WEST":
-                f += p - e;
+                x += p - e;
         }
         switch (m) {
             case "RESIZE_SOUTH":
             case "RESIZE_SOUTH_WEST":
             case "RESIZE_SOUTH_EAST":
-                A -= x - t;
+                A -= f - t;
                 break;
             case "RESIZE_NORTH":
             case "RESIZE_NORTH_WEST":
             case "RESIZE_NORTH_EAST":
-                A += x - t;
+                A += f - t;
         }
         let E = h({
                 padding: 8,
                 borderWidth: 2,
                 operation: m,
                 computedSize: {
-                    width: Math.max(this.dragState.offsetWidth + f, i.width),
+                    width: Math.max(this.dragState.offsetWidth + x, i.width),
                     height: Math.max(this.dragState.offsetHeight + A, i.height),
                 },
                 originSize: { width: this.dragState.offsetWidth, height: this.dragState.offsetHeight },

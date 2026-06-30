@@ -567,7 +567,7 @@ var eV = n(284009),
     eX = n(877062);
 m.Ay.initialize();
 var eq = n(842241),
-    eY = n(308186),
+    eY = n(18005),
     e$ = n(280513),
     eZ = n(717421),
     eJ = n(661531),
@@ -615,8 +615,8 @@ function e7(e) {
     let { text: t, buttonCta: n, theme: i = b.NJ8.DARK, onClick: l } = e;
     return (0, a.jsx)(k.Ay, { theme: i, children: (0, a.jsx)(e3, { text: t, buttonCta: n, onClick: l }) });
 }
-var e8 = n(765671),
-    e4 = n(9994),
+var e4 = n(765671),
+    e8 = n(9994),
     e5 = n(71393),
     e6 = n(299091),
     e9 = n(486020),
@@ -937,7 +937,7 @@ function tM(e) {
         I = j || f,
         v = (0, m.bG)([e6.A], () => e6.A.getInvite(n.code));
     if (null == v) return null;
-    let C = (0, e4.oO)(v),
+    let C = (0, e8.oO)(v),
         S = s ? "text-default" : "text-subtle";
     return (0, a.jsxs)("div", {
         className: tV.hn,
@@ -1167,7 +1167,7 @@ function t1(e) {
 }
 function t2(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, sectionClassName: l, inviteCardClassName: s = tX.qF } = e,
-        { ref: r, height: o } = (0, e8.Ay)(),
+        { ref: r, height: o } = (0, e4.Ay)(),
         c = (0, eZ.z)({ height: null != o && 0 !== o ? `${o}px` : `${i}px`, config: eY.config.stiff });
     return (0, a.jsxs)(eY.animated.div, {
         className: s,
@@ -1193,12 +1193,12 @@ function t3(e) {
     });
 }
 let t7 = { 1: tX._r, 2: tX.Gm, 0: tX.Kt };
-function t8(e) {
+function t4(e) {
     let t,
         { invite: n } = e,
         i = t0(n),
         { enabled: l } = tY.useConfig({ location: "AcceptInviteMobile" }),
-        s = null != n ? (0, e4.oO)(n) : null,
+        s = null != n ? (0, e8.oO)(n) : null,
         r = n?.guild != null ? (0, eh.DY)(n.guild) : null,
         c = null != r && tZ(s) && null != n && !tg(n),
         d = l && c;
@@ -1237,12 +1237,12 @@ function t8(e) {
     let h = 1 === i && d ? tX.c4 : tX.qF;
     return (0, a.jsx)(t2, { startAnimHeightPx: 200, sectionClassName: t7[i], inviteCardClassName: h, children: t });
 }
-function t4(e) {
+function t8(e) {
     let { invite: t, onAcceptInvite: n } = e,
         { guild: i } = t ?? {},
         l = {},
         { enabled: s } = tY.useConfig({ location: "AcceptInviteMobile" }),
-        r = null != t ? (0, e4.oO)(t) : null,
+        r = null != t ? (0, e8.oO)(t) : null,
         o = null != i && tZ(r) && null != t && !tg(t);
     if (i?.splash != null) {
         let e = e9.Ay.getGuildSplashURL({ id: i.id, splash: i.splash });
@@ -1253,7 +1253,7 @@ function t4(e) {
         className: tX.G3,
         style: l,
         contentClassName: tX.__,
-        children: [(0, a.jsx)(t8, { ...e, onAcceptInvite: n }), (0, a.jsx)(t3, { ...e })],
+        children: [(0, a.jsx)(t4, { ...e, onAcceptInvite: n }), (0, a.jsx)(t3, { ...e })],
     });
 }
 var t5 = n(723702);
@@ -2033,22 +2033,22 @@ var nJ = n(110782),
     n2 = n(189081),
     n3 = n(67480),
     n7 = n(45938),
-    n8 = n(587895),
-    n4 = n(242874),
+    n4 = n(587895),
+    n8 = n(242874),
     n5 = n(165191),
     n6 = n(287809),
     n9 = n(97352),
     ie = n(615396),
     it = n(788868),
     ii = n(402693);
-let il = m.Ay.connectStores([n3.A, n8.A, n9.A, n6.default], (e) => {
+let il = m.Ay.connectStores([n3.A, n4.A, n9.A, n6.default], (e) => {
     let { giftCode: t } = e,
         n = n3.A.get(t.skuId),
         { subscriptionPlanId: i } = t;
     return {
         sku: n,
         subscriptionPlan: null != i ? (0, ie.c9)(i) : null,
-        application: n8.A.getApplication(n.applicationId),
+        application: n4.A.getApplication(n.applicationId),
         gifter: n6.default.getUser(t.userId),
     };
 })(function (e) {
@@ -2064,7 +2064,7 @@ let il = m.Ay.connectStores([n3.A, n8.A, n9.A, n6.default], (e) => {
         (0, a.jsxs)(o.Fragment, {
             children: [
                 null != n.giftStyle
-                    ? (0, a.jsx)(n5.A, { defaultAnimationState: n4.oA.LOOP, giftStyle: n.giftStyle, className: ii.e })
+                    ? (0, a.jsx)(n5.A, { defaultAnimationState: n8.oA.LOOP, giftStyle: n.giftStyle, className: ii.e })
                     : (0, a.jsx)(k.eu, {
                           src: null != i ? i.getAvatarURL(void 0, 100) : null,
                           size: tt._3.DEPRECATED_SIZE_100,
@@ -3017,8 +3017,8 @@ var i2 = n(990078),
     i3 = n(913122),
     i7 = n(201505);
 n(417635), n(827343), n(792251), n(19575), n(945041);
-var i8 = n(493527),
-    i4 = n(544395),
+var i4 = n(493527),
+    i8 = n(544395),
     i5 = n(446837);
 let i6 = window.ResizeObserver ?? i5.t;
 function i9(e) {
@@ -3281,7 +3281,7 @@ function l_(e) {
         [u, h] = o.useState(!1),
         [g, x] = o.useState(!1);
     async function f() {
-        T.length > 0 && !i4.A.wasRegistrationSuggestionFetched(T) && (await i8.A.fetchSuggestionsRegistration(T));
+        T.length > 0 && !i8.A.wasRegistrationSuggestionFetched(T) && (await i4.A.fetchSuggestionsRegistration(T));
     }
     function p(e) {
         y.default.track(b.HAw.REGISTER_INPUT_FOCUS, { field: e });
@@ -3290,7 +3290,7 @@ function l_(e) {
         y.default.track(b.HAw.REGISTER_INPUT_BLUR, { field: e });
     }
     let E = (0, m.bG)([le.A], () => le.A.getAuthenticationConsentRequired()),
-        _ = (0, m.bG)([i4.A], () => i4.A.registrationUsernameSuggestion()),
+        _ = (0, m.bG)([i8.A], () => i8.A.registrationUsernameSuggestion()),
         j = o.useRef(null),
         N = o.useRef(null),
         I = o.useRef(null),
@@ -4370,7 +4370,7 @@ function l7(e) {
         ],
     });
 }
-function l8(e) {
+function l4(e) {
     let { invite: t, inviteKey: n, rpcConnected: i, onContinue: l } = e;
     return (0, a.jsxs)(k.Ay, {
         children: [
@@ -4416,7 +4416,7 @@ function l8(e) {
         ],
     });
 }
-function l4(e) {
+function l8(e) {
     let { title: t } = e;
     return (0, a.jsxs)(k.Ay, { children: [(0, a.jsx)(k.hE, { children: t }), (0, a.jsx)(k.CK, {})] });
 }
@@ -4659,13 +4659,13 @@ let sl = nH(iK),
             return null;
         let I = c === b.fAW.OPEN;
         if (x || I || r.state === b.elq.APP_OPENED)
-            return (0, a.jsx)(l8, { invite: r, inviteKey: t, rpcConnected: I, onContinue: _ });
+            return (0, a.jsx)(l4, { invite: r, inviteKey: t, rpcConnected: I, onContinue: _ });
         let { state: v } = r;
         if (v === b.elq.APP_NOT_OPENED) return (0, a.jsx)(l6, { handleDefaultTransition: N });
         if ([b.elq.RESOLVING, b.elq.ACCEPTING, b.elq.APP_OPENING].includes(v)) {
             let e =
                 v === b.elq.ACCEPTING ? Q.intl.string(Q.t["6wsY16"]) : (b.elq.RESOLVING, Q.intl.string(Q.t["Z+hCVU"]));
-            return (0, a.jsx)(l4, { title: e });
+            return (0, a.jsx)(l8, { title: e });
         }
         if (v === b.elq.EXPIRED) return (0, a.jsx)(l5, { banned: !1, handleDefaultTransition: N });
         if (v === b.elq.BANNED) return (0, a.jsx)(l5, { banned: !0, handleDefaultTransition: N });
@@ -4674,7 +4674,7 @@ let sl = nH(iK),
                 return (
                     p.Ay.openApp(t),
                     lY.u.set(lJ.B, t),
-                    (0, a.jsx)(l8, { invite: r, inviteKey: t, rpcConnected: I, onContinue: () => i(b.BVt.APP) })
+                    (0, a.jsx)(l4, { invite: r, inviteKey: t, rpcConnected: I, onContinue: () => i(b.BVt.APP) })
                 );
             if (!d && lF.VP)
                 return A === l2
@@ -4718,7 +4718,7 @@ let sl = nH(iK),
                     (0, P.d)("invite_mobile"),
                     y.default.track(b.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 });
             }, []),
-            (0, a.jsx)(t4, {
+            (0, a.jsx)(t8, {
                 invite: i,
                 onAcceptInvite: function (e) {
                     let n, l, s, r;

@@ -3,7 +3,7 @@ var s = t(627968),
     i = t(64700),
     a = t(503698),
     l = t.n(a),
-    r = t(308186),
+    r = t(18005),
     o = t(17928),
     c = t(661531),
     d = t(990078),
@@ -878,8 +878,8 @@ var eq = t(735438),
     e1 = t(847374),
     e3 = t(912592),
     e2 = t(821609),
-    e8 = t(475825),
-    e4 = t(928039),
+    e4 = t(475825),
+    e8 = t(928039),
     e7 = t(625494);
 let e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e6 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
@@ -980,7 +980,7 @@ function nl(e) {
         x = (0, M.op)(),
         p = i.useRef(null),
         A = i.useRef(0),
-        N = (0, e4.A)(g, p),
+        N = (0, e8.A)(g, p),
         { entrypoint: f, notificationCenterVariant: j } = (0, U.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: I,
@@ -1141,7 +1141,7 @@ function nl(e) {
                         children: (0, s.jsx)(e0.PR, {
                             children: (e) => {
                                 let { ref: n, ...t } = e;
-                                return (0, s.jsx)(e8.OZ, {
+                                return (0, s.jsx)(e4.OZ, {
                                     ref: (e) => {
                                         (p.current = e), (n.current = e?.getScrollerNode() ?? null);
                                     },

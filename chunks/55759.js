@@ -4,7 +4,7 @@ var r = n(627968),
     i = n(503698),
     a = n.n(i),
     s = n(771253),
-    u = n(308186),
+    u = n(18005),
     o = n(942381),
     c = n(17928),
     d = n(876230),
@@ -207,8 +207,8 @@ function er(e) {
         e4 = (0, c.bG)([I.Ay], () => I.Ay.useReducedMotion),
         e8 = (0, l.useRef)(null),
         e2 = (0, l.useRef)(null),
-        e3 = (0, l.useRef)(null),
-        e9 = l.useRef(!0),
+        e9 = (0, l.useRef)(null),
+        e3 = l.useRef(!0),
         e5 = el.userStatus?.completedAt != null,
         te = l.useMemo(() => el.config.features.includes(Z.Li.FULL_EPISODE_VIDEO_QUEST), [el.config.features]),
         tt = l.useRef(!1),
@@ -222,8 +222,8 @@ function er(e) {
         [tE, tf] = l.useState(B.oA.MD),
         t_ = { [B.oA.MD]: eo ? 56 : 50, [B.oA.LG]: eo ? 64 : 58 };
     (0, h.u5)(() => {
-        e9.current &&
-            ((e9.current = !1),
+        e3.current &&
+            ((e3.current = !1),
             ew(R.A.getEffectiveConnectionSpeed()),
             e5 && eZ.timestampSec >= eZ.duration && eJ(el.id, 0, eZ.duration));
     });
@@ -392,7 +392,7 @@ function er(e) {
     }, [tz]),
         l.useEffect(() => {
             function e(e) {
-                return e3.current?.(e);
+                return e9.current?.(e);
             }
             return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
         }, []);
@@ -508,7 +508,7 @@ function er(e) {
     l.useEffect(() => {
         null != tm || t2.current || ((t2.current = !0), tN(B.SB.NO_VALID_SOURCE));
     }, [tm, tN, t2]);
-    let t3 = (e) => {
+    let t9 = (e) => {
         tc.info(`[QV] | handleCanPlay: playerState: ${ev}`),
             null != e8.current &&
                 ev === B.Q6.PLAYING &&
@@ -528,7 +528,7 @@ function er(e) {
         }, 1e3);
         return () => clearTimeout(e);
     }, [eL]);
-    let [{ controlBarAnimSpring: t9 }, t5] = (0, _.z)(() => ({
+    let [{ controlBarAnimSpring: t3 }, t5] = (0, _.z)(() => ({
             from: { controlBarAnimSpring: 0 },
             config: en,
             onStart: () => {
@@ -553,10 +553,10 @@ function er(e) {
             () => (
                 t5({ controlBarAnimSpring: tW || ej ? 1 : 0, immediate: e4 }),
                 () => {
-                    t9.stop();
+                    t3.stop();
                 }
             ),
-            [tW, t5, e4, ej, t9],
+            [tW, t5, e4, ej, t3],
         );
     let nr = ev === B.Q6.ENDED,
         nl = l.useMemo(() => (0, k.tW)(el, k.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1), [el]),
@@ -663,8 +663,8 @@ function er(e) {
                         }
                         eU(t);
                     },
-                    onCanPlay: t3,
-                    onCanPlayThrough: t3,
+                    onCanPlay: t9,
+                    onCanPlayThrough: t9,
                     onSeeked: function () {
                         tc.info("[QV] | handleSeeked"), t6.current || ((t6.current = !0), tw(0));
                     },
@@ -762,11 +762,11 @@ function er(e) {
                           className: z.R4,
                           "data-testid": "discord-web-video-player-share-btn",
                           style: {
-                              opacity: (0, u.to)([t9.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
-                              visibility: (0, u.to)([t9.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                              opacity: (0, u.to)([t3.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`),
+                              visibility: (0, u.to)([t3.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                   e < 0.1 ? "hidden" : "visible",
                               ),
-                              pointerEvents: (0, u.to)([t9.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                              pointerEvents: (0, u.to)([t3.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                   e < 0.3 ? "none" : "auto",
                               ),
                           },
@@ -786,7 +786,7 @@ function er(e) {
                             (0, r.jsx)(u.animated.div, {
                                 className: a()(z.xr, { [z.MZ]: "portrait" === q }),
                                 "data-testid": "discord-web-video-player-transcript",
-                                style: { marginBottom: (0, u.to)([t9, nt], (e, t) => `${e * t_[tE] + t}px`) },
+                                style: { marginBottom: (0, u.to)([t3, nt], (e, t) => `${e * t_[tE] + t}px`) },
                                 children: (0, r.jsx)(X, {
                                     quest: el,
                                     onClose: function () {
@@ -798,7 +798,7 @@ function er(e) {
                     }),
                 (0, r.jsx)(u.animated.div, {
                     className: z.Jp,
-                    style: { opacity: (0, u.to)([t9.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`) },
+                    style: { opacity: (0, u.to)([t3.to({ range: [0, 1], output: [0, 1] })], (e) => `${e}`) },
                 }),
                 tl &&
                     (0, r.jsx)(
@@ -821,7 +821,7 @@ function er(e) {
                         ref: ne,
                         "data-testid": "discord-web-video-player-captions",
                         style: {
-                            translateY: (0, u.to)([t9.to({ range: [0, 1], output: [-no, -t_[tE]] })], (e) => `${e}px`),
+                            translateY: (0, u.to)([t3.to({ range: [0, 1], output: [-no, -t_[tE]] })], (e) => `${e}px`),
                         },
                         children: (0, r.jsx)(g.E, {
                             variant: "text-lg/semibold",
@@ -832,18 +832,18 @@ function er(e) {
                     }),
                 (0, r.jsxs)(u.animated.div, {
                     className: z.r8,
-                    style: { height: (0, u.to)([t9.to({ range: [0, 1], output: [0, t_[tE]] })], (e) => `${e}px`) },
+                    style: { height: (0, u.to)([t3.to({ range: [0, 1], output: [0, t_[tE]] })], (e) => `${e}px`) },
                     children: [
                         (0, r.jsx)(u.animated.div, {
                             style: {
                                 transform: (0, u.to)(
-                                    [t9.to({ range: [1, 0], output: [0, 1] })],
+                                    [t3.to({ range: [1, 0], output: [0, 1] })],
                                     (e) => `translateY(-${e * no}px)`,
                                 ),
                             },
                             children: (0, r.jsx)(G, {
                                 percent: null != e$ ? e$ : eR,
-                                animate: !0 !== e9.current && !eL,
+                                animate: !0 !== e3.current && !eL,
                                 interactionEnabled: nc,
                                 playerState: ev,
                                 preloadedBuffers: tW ? eV : void 0,
@@ -865,14 +865,14 @@ function er(e) {
                             "data-testid": "discord-web-video-player-controls",
                             style: {
                                 paddingTop: (0, u.to)(
-                                    [t9.to({ range: [0, 1], output: [0, 1] })],
+                                    [t3.to({ range: [0, 1], output: [0, 1] })],
                                     (e) => `${e * e * nu}px`,
                                 ),
                                 paddingBottom: (0, u.to)(
-                                    [t9.to({ range: [0, 1], output: [0, 1] })],
+                                    [t3.to({ range: [0, 1], output: [0, 1] })],
                                     (e) => `${e * e * 12}px`,
                                 ),
-                                pointerEvents: (0, u.to)([t9.to({ range: [0, 1], output: [0, 1] })], (e) =>
+                                pointerEvents: (0, u.to)([t3.to({ range: [0, 1], output: [0, 1] })], (e) =>
                                     e < 0.3 ? "none" : "auto",
                                 ),
                             },
@@ -885,7 +885,7 @@ function er(e) {
                             children: (0, r.jsx)(D.zZ, {
                                 videoRef: e8,
                                 playerState: ev,
-                                animSpring: t9,
+                                animSpring: t3,
                                 visible: tW,
                                 seekForwardEnabled: na,
                                 hideCaptionBtn: null == ni,
@@ -894,7 +894,7 @@ function er(e) {
                                 hidePlaybackSpeedBtn: !0,
                                 size: tE,
                                 autoFocus: K,
-                                keyDownHandlerRef: e3,
+                                keyDownHandlerRef: e9,
                                 volume: e6,
                                 muted: e0,
                                 transcriptEnabled: ec,
