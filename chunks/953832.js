@@ -49,40 +49,48 @@ var O = n(355622),
     G = n(375708),
     B = n(745812);
 function H(e) {
-    let { message: t, canSend: n, selectedDestinations: i, onSend: s, inputValue: r, setInputValue: o } = e,
-        u = (0, k.A)(),
-        c = (0, _.QK)(i),
-        d = (0, D.VF)(),
-        { textValue: h, richValue: m } = r,
-        [g, f] = a.useState(!1),
-        x = a.useCallback(() => f(!0), []),
-        C = a.useCallback(() => f(!1), []),
-        A = a.useCallback(
+    let {
+            message: t,
+            canSend: n,
+            selectedDestinations: i,
+            isSending: s,
+            onSend: r,
+            inputValue: o,
+            setInputValue: u,
+        } = e,
+        c = (0, k.A)(),
+        d = (0, _.QK)(i),
+        h = (0, D.VF)(),
+        { textValue: m, richValue: g } = o,
+        [f, x] = a.useState(!1),
+        C = a.useCallback(() => x(!0), []),
+        A = a.useCallback(() => x(!1), []),
+        b = a.useCallback(
             (e, n, l) => {
-                o({ textValue: n, richValue: l }),
-                    null != t && (p.A.saveDraft(t.channel_id, n, P.C.ForwardContextMessage), d(t.channel_id, t.id));
+                u({ textValue: n, richValue: l }),
+                    null != t && (p.A.saveDraft(t.channel_id, n, P.C.ForwardContextMessage), h(t.channel_id, t.id));
             },
-            [d, t, o],
+            [h, t, u],
         ),
-        b = a.useCallback(() => {
-            null != t && (p.A.clearDraft(t.channel_id, P.C.ForwardContextMessage), s(h));
-        }, [t, s, h]),
-        j = a.useCallback(
-            () => (!n || h.length > u || b(), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
-            [b, h, u, n],
+        j = a.useCallback(() => {
+            null != t && p.A.clearDraft(t.channel_id, P.C.ForwardContextMessage), r(m);
+        }, [t, r, m]),
+        v = a.useCallback(
+            () => (s || !n || m.length > c || j(), Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })),
+            [j, m, c, n, s],
         );
     return (0, l.jsx)(V.Ay, {
         innerClassName: B.OG,
-        onChange: A,
+        onChange: b,
         placeholder: G.intl.string(G.t.ZroO3G),
-        channel: c,
-        textValue: h,
-        richValue: m,
+        channel: d,
+        textValue: m,
+        richValue: g,
         type: O.oU.FORWARD_MESSAGE_INPUT,
-        onBlur: C,
-        onFocus: x,
-        focused: g,
-        onSubmit: j,
+        onBlur: A,
+        onFocus: C,
+        focused: f,
+        onSubmit: v,
         parentModalKey: U.aU,
         autoCompletePosition: "bottom",
         emojiPickerCloseOnModalOuterClick: !0,
