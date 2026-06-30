@@ -51,12 +51,8 @@ function p(e) {
         [E, m] = i.useState(!0),
         [g, A] = i.useState([]),
         { createSetupIntent: I } = (0, d.x)(),
-        T = i.useMemo(() => {
-            let e = ["pix", "card"],
-                t = g.find((e) => e.payment_source_type === _.he.PAYPAL);
-            return null != t && e.push(t.custom_payment_method_id), e;
-        }, [g]),
-        { customPaymentMethods: S, customPaymentMethodIdsToSourceTypes: y } = i.useMemo(
+        [T, S] = i.useState([]),
+        { customPaymentMethods: y, customPaymentMethodIdsToSourceTypes: C } = i.useMemo(
             () => ({
                 customPaymentMethods: (0, c.Dd)(g),
                 customPaymentMethodIdsToSourceTypes: g.reduce(
@@ -66,10 +62,21 @@ function p(e) {
             }),
             [g],
         ),
-        C = i.useCallback(async () => {
+        N = i.useCallback(async () => {
             try {
-                let { client_secret: e, custom_payment_methods: t } = await I();
-                A(t), s(e);
+                let e,
+                    t,
+                    { client_secret: n, custom_payment_methods: i, payment_method_order: r } = await I();
+                A(i),
+                    s(n),
+                    S(
+                        null != r && Array.isArray(r)
+                            ? r
+                            : ((e = ["pix", "card"]),
+                              (t = i.find((e) => e.payment_source_type === _.he.PAYPAL)),
+                              null != t && e.push(t.custom_payment_method_id),
+                              e),
+                    );
             } catch (e) {
                 p(e),
                     null != t && t(e),
@@ -79,31 +86,31 @@ function p(e) {
             m(!1);
         }, [t, I]);
     (0, a.Ay)(() => {
-        C();
+        N();
     });
-    let { elementsAppearance: N, elementsAppearanceOptions: v } = f(n),
-        R = (0, u.PU)(),
-        O = i.useMemo(
+    let { elementsAppearance: v, elementsAppearanceOptions: R } = f(n),
+        O = (0, u.PU)(),
+        b = i.useMemo(
             () =>
                 E
                     ? null
                     : {
                           clientSecret: r,
-                          appearance: N,
-                          locale: R,
-                          customPaymentMethods: S,
+                          appearance: v,
+                          locale: O,
+                          customPaymentMethods: y,
                           paymentMethodCreation: "manual",
                       },
-            [N, R, r, S, E],
+            [v, O, r, y, E],
         ),
-        b = {
+        D = {
             setupError: o,
-            customPaymentMethods: S,
-            customPaymentMethodIdsToSourceTypes: y,
+            customPaymentMethods: y,
+            customPaymentMethodIdsToSourceTypes: C,
             paymentMethodOrder: T,
-            elementsAppearanceOptions: v,
+            elementsAppearanceOptions: R,
         };
-    return null == r || null == O || E
-        ? { ...b, isLoading: !0, elementsOptions: O, setupIntentSecret: r }
-        : { ...b, isLoading: !1, elementsOptions: O, setupIntentSecret: r };
+    return null == r || null == b || E
+        ? { ...D, isLoading: !0, elementsOptions: b, setupIntentSecret: r }
+        : { ...D, isLoading: !1, elementsOptions: b, setupIntentSecret: r };
 }
