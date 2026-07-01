@@ -5495,8 +5495,18 @@ html .tabBadge_e6b769 {
     position: relative
 }
 
-.familyCenterButtonContainer_e6b769.withPadding_e6b769 {
+.familyCenterPendingBadge_e6b769 {
+    align-items: center;
+    display: flex;
     padding-inline-end: var(--space-8)
+}
+
+@media (hover:hover) {
+
+    .familyCenterChannel_e6b769:focus-within .familyCenterPendingBadge_e6b769,
+    .familyCenterChannel_e6b769:hover .familyCenterPendingBadge_e6b769 {
+        display: none
+    }
 }
 
 .directMessagesHeader_e6b769 {

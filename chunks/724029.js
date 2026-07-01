@@ -25,7 +25,7 @@ var i = n(627968),
     N = n(428678),
     v = n(661531),
     R = n(549254),
-    O = n(549756);
+    O = n(912124);
 function b(e) {
     let { as: t, muted: n = !1, selected: r = !1, className: s, ...o } = e,
         l = t ?? T.D;
@@ -70,7 +70,7 @@ var D = n(778712),
     e_ = n(88686),
     eh = n(174755),
     ef = n(187322),
-    ep = n(984909);
+    ep = n(586893);
 let eE = r.forwardRef(function (e, t) {
     let { className: n, focusProps: r, ...s } = e;
     return (0, i.jsx)(ef.vN, { ...r, children: (0, i.jsx)("li", { className: a()(n, ep.k), ...s, ref: t }) });
@@ -90,7 +90,7 @@ var em = n(824994),
     eb = n(543465),
     eD = n(287809),
     eL = n(19575),
-    ew = n(480028);
+    ew = n(330076);
 let eM = eL.Ay.getEnableHardwareAcceleration() ? I.Js : I.eu,
     eP = { offset: { top: 2, bottom: 2, right: 4 } };
 function ex(e) {
@@ -181,51 +181,53 @@ function eB(e) {
             text: c,
             children: d,
             locationState: _,
-            onClick: h,
-            className: f,
-            role: p,
-            "aria-posinset": m,
-            "aria-setsize": g,
-            listItemRef: A,
-            showHoverGradient: I = !1,
-            nitroHoverGradient: T = !1,
-            hoverGradientStart: S,
-            hoverGradientMiddle: y,
-            hoverGradientEnd: C,
-            ...N
+            onClick: f,
+            className: p,
+            role: m,
+            "aria-posinset": g,
+            "aria-setsize": A,
+            listItemRef: I,
+            showHoverGradient: T = !1,
+            nitroHoverGradient: S = !1,
+            hoverGradientStart: y,
+            hoverGradientMiddle: C,
+            hoverGradientEnd: N,
+            ...v
         } = e,
-        { width: v, ref: R } = (0, x.Ay)(),
-        O = r.useRef(null),
-        D = A ?? O;
+        { width: R, ref: O } = (0, x.Ay)(),
+        D = r.useRef(null),
+        L = r.useRef(null),
+        w = (0, h.A)(I, D);
     return (0, i.jsx)(eE, {
-        className: a()(ew.Ix, { [ew.Ij]: E.Fr }, f),
-        onClick: h,
-        role: p,
-        focusProps: { within: !0, ...eP },
-        "aria-posinset": m,
-        "aria-setsize": g,
-        ref: D,
+        className: a()(ew.Ix, { [ew.Ij]: E.Fr }, p),
+        onClick: f,
+        role: m,
+        focusProps: { ...eP, focusTarget: L, ringTarget: D },
+        "aria-posinset": g,
+        "aria-setsize": A,
+        ref: w,
         children: (0, i.jsxs)(b, {
             as: "div",
             selected: n,
             className: a()(l, ew.bG, ew.$J, { [ew.Q2]: n }),
             children: [
-                I &&
+                T &&
                     (0, i.jsx)(eV, {
                         eventTargetRef: D,
-                        isNitro: T,
-                        contentWidth: v,
-                        hoverGradientStart: S,
-                        hoverGradientMiddle: y,
-                        hoverGradientEnd: C,
+                        isNitro: S,
+                        contentWidth: R,
+                        hoverGradientStart: y,
+                        hoverGradientMiddle: C,
+                        hoverGradientEnd: N,
                     }),
                 (0, i.jsxs)(u.N_, {
                     to: { pathname: t, state: _ },
                     className: ew.nf,
-                    ...N,
+                    innerRef: L,
+                    ...v,
                     children: [
                         (0, i.jsx)(B.A, {
-                            ref: I ? R : void 0,
+                            ref: T ? O : void 0,
                             muted: !1,
                             avatar: (0, i.jsx)(s, {
                                 size: "refresh_sm",
@@ -359,11 +361,11 @@ function ej(e) {
                       e,
                       async () => {
                           let { default: e } = await Promise.all([
-                              n.e("10570"),
-                              n.e("52760"),
-                              n.e("62458"),
-                              n.e("93909"),
-                              n.e("98273"),
+                              n.e("71406"),
+                              n.e("41831"),
+                              n.e("18078"),
+                              n.e("88429"),
+                              n.e("94881"),
                               n.e("26132"),
                               n.e("46652"),
                               n.e("93103"),
@@ -377,7 +379,7 @@ function ej(e) {
                               n.e("89673"),
                               n.e("68403"),
                               n.e("88342"),
-                              n.e("52168"),
+                              n.e("29787"),
                               n.e("89421"),
                               n.e("98965"),
                               n.e("82073"),
@@ -418,7 +420,7 @@ function ej(e) {
             ((r = eu.intl.formatToPlainString(eu.t.hVGjEW, { name: e7 })),
             (s = eu.intl.format(eu.t.IK1Qvs, { name: e7 }))),
             (0, L.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("57596"), n.e("37803")]).then(n.bind(n, 148166));
+                let { default: e } = await Promise.all([n.e("70588"), n.e("37803")]).then(n.bind(n, 148166));
                 return (t) => (0, i.jsx)(e, { title: r, body: s, onSubmit: tr, ...t });
             });
     }

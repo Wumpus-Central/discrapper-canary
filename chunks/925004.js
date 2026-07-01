@@ -8,6 +8,7 @@ e.exports = {
     F2: "friendsButtonContainer_e6b769",
     jD: "themedHeaderMobile_e6b769",
     lL: "familyCenterButtonContainer_e6b769",
-    iL: "withPadding_e6b769",
+    g4: "familyCenterPendingBadge_e6b769",
+    Bf: "familyCenterChannel_e6b769",
     HH: "preAlphaText_e6b769",
 };

@@ -113,7 +113,7 @@ var ei = n(160946),
     er = n(253390),
     es = n(97352),
     ea = n(615396),
-    eo = n(788868);
+    eo = n(202541);
 function el() {
     let e = (0, O.t4)((e) => e.activeSubscription),
         { numGuildBoostsToPurchase: t } = ee(),
@@ -264,7 +264,7 @@ var e1 = n(773669),
     e5 = n(580630),
     e7 = n(155718),
     e8 = n(606267),
-    e9 = n(126097),
+    e9 = n(319668),
     te = n(38785),
     tt = n(818824),
     tn = n(596034),
@@ -5145,7 +5145,7 @@ function s1(e) {
             return r !== eu.EZt.SOCIAL_LAYER_GAME_ITEM
                 ? { type: sx.I0.OrbsRedemption, purchaseButtonText: n }
                 : {
-                      type: sx.I0.GiftGameShop,
+                      type: sx.I0.OrbsGameShop,
                       purchaseButtonText: n,
                       applicationName: a?.name,
                       applicationId: s,
@@ -5819,7 +5819,7 @@ let aS = {
         [h.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
     ay = (0, s.lazy)(() =>
-        Promise.all([n.e("11005"), n.e("54791"), n.e("25246"), n.e("33319"), n.e("8430")])
+        Promise.all([n.e("11005"), n.e("93438"), n.e("54791"), n.e("25246"), n.e("33319"), n.e("8430")])
             .then(n.bind(n, 427325))
             .then((e) => {
                 let { UnifiedCheckoutInstance: t } = e;
@@ -6018,6 +6018,7 @@ class aN {
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
                         n.e("11005"),
+                        n.e("93438"),
                         n.e("54791"),
                         n.e("25246"),
                         n.e("33319"),

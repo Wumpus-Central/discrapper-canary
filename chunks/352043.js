@@ -703,7 +703,7 @@ var eX = n(989349),
     e9 = n(212737),
     e4 = n(465794),
     e5 = n(378135),
-    e8 = n(788868),
+    e8 = n(202541),
     te = n(613444),
     tt = n(954457);
 class tn extends a.Component {
@@ -1204,7 +1204,16 @@ function t2(e) {
             properties: { gift_intent_type: t, num_friend_anniversaries: tW.Ay.getFriendAnniversaries().length },
         });
     }, [t]);
-    let _ = () => (t === e8.np.FRIEND_ANNIVERSARY ? R.intl.string(R.t.ilhtIa) : (0, tX.yE)(t));
+    let _ = () => {
+        switch (t) {
+            case e8.np.FRIEND_ANNIVERSARY:
+                return R.intl.string(R.t.ilhtIa);
+            case e8.np.UNSPECIFIED:
+                return;
+            default:
+                return (0, tX.yE)(t);
+        }
+    };
     return (0, l.jsx)("div", {
         ref: o,
         className: tq.Qs,
@@ -1234,8 +1243,16 @@ function t2(e) {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     lineClamp: 3,
-                                    children:
-                                        t === e8.np.FRIEND_ANNIVERSARY ? R.intl.string(R.t.CeQIwZ) : (0, tX.yE)(t),
+                                    children: (() => {
+                                        switch (t) {
+                                            case e8.np.FRIEND_ANNIVERSARY:
+                                                return R.intl.string(R.t.CeQIwZ);
+                                            case e8.np.UNSPECIFIED:
+                                                return;
+                                            default:
+                                                return (0, tX.yE)(t);
+                                        }
+                                    })(),
                                 }),
                                 (0, l.jsxs)("div", {
                                     className: tq.jA,
@@ -1246,10 +1263,18 @@ function t2(e) {
                                             variant: "text-md/normal",
                                             color: "text-subtle",
                                             lineClamp: 1,
-                                            children:
-                                                t === e8.np.FRIEND_ANNIVERSARY
-                                                    ? R.intl.formatToPlainString(R.t.PpG27s, { numberOfYears: h })
-                                                    : (0, tX.yE)(t),
+                                            children: (() => {
+                                                switch (t) {
+                                                    case e8.np.FRIEND_ANNIVERSARY:
+                                                        return R.intl.formatToPlainString(R.t.PpG27s, {
+                                                            numberOfYears: h,
+                                                        });
+                                                    case e8.np.UNSPECIFIED:
+                                                        return;
+                                                    default:
+                                                        return (0, tX.yE)(t);
+                                                }
+                                            })(),
                                         }),
                                     ],
                                 }),
@@ -1880,7 +1905,7 @@ var nK = n(718564),
     nq = n(953822),
     n$ = n(585510),
     n0 = n(903093),
-    n1 = n(988672),
+    n1 = n(408346),
     n2 = n(854627),
     n3 = n(393239);
 function n7() {

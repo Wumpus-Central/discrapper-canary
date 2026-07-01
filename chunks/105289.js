@@ -5287,7 +5287,7 @@ var sc = a(334279),
     su = a(663417),
     sm = a(147925),
     sh = a(557009),
-    sx = a(788868);
+    sx = a(202541);
 async function sp() {
     return (
         await n2.Bo.get({
@@ -6166,7 +6166,7 @@ function iy(e) {
 }
 let iE = (e, t) =>
         null != t ? `/users/@me/gift-intents/dismissals/${e}/${t}` : `/users/@me/gift-intents/dismissals/${e}`,
-    i_ = "FRIEND_ANNIVERSARY";
+    i_ = sx.np.FRIEND_ANNIVERSARY;
 function iC(e) {
     return 403 === e?.status
         ? "Forbidden (403). This account is likely not in the backend-persistence experiment; clearing also requires a staff account."
@@ -8153,8 +8153,8 @@ let rM = {
                     a.e("91474"),
                     a.e("17566"),
                     a.e("49681"),
-                    a.e("96382"),
                     a.e("22687"),
+                    a.e("96382"),
                     a.e("63202"),
                     a.e("82596"),
                     a.e("9004"),
@@ -8745,7 +8745,7 @@ let oe = {
                 a.bind(a, 318998),
             ),
             { CancellationContext: t } = await Promise.resolve().then(a.bind(a, 916974)),
-            { PremiumTypes: n } = await Promise.resolve().then(a.bind(a, 788868)),
+            { PremiumTypes: n } = await Promise.resolve().then(a.bind(a, 202541)),
             l = {
                 id: "test-subscription-id",
                 userId: "test-user-id",
