@@ -50,7 +50,7 @@ function p(e) {
         [o, p] = i.useState(null),
         [E, m] = i.useState(!0),
         [g, A] = i.useState([]),
-        { createSetupIntent: I } = (0, d.x)(),
+        { createSetupIntentDeduped: I } = (0, d.x)(),
         [T, S] = i.useState([]),
         { customPaymentMethods: y, customPaymentMethodIdsToSourceTypes: C } = i.useMemo(
             () => ({

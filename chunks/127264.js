@@ -31,7 +31,7 @@ var g = n(17928),
     N = n(558620),
     v = n(584160),
     R = n(480642),
-    O = n(46332),
+    O = n(650170),
     b = n(832286),
     D = n(958340),
     L = n(566980),
@@ -3705,7 +3705,7 @@ function rm(e) {
             (0, r.jsxs)(eh.dZ, {
                 children: [
                     J,
-                    (0, r.jsx)(nT.A, {}),
+                    (0, r.jsx)(nT.A, { className: rE.tg }),
                     z ? (0, r.jsx)(eA.w, { type: "critical", children: K }) : et,
                     $ &&
                         (0, r.jsxs)(r.Fragment, {

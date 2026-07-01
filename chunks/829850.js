@@ -18,7 +18,7 @@ var i = n(627968),
     I = n(558620),
     T = n(427675),
     h = n(480642),
-    P = n(46332),
+    P = n(650170),
     C = n(357669),
     k = n(319437),
     M = n(70730),
@@ -131,7 +131,7 @@ function $(e) {
 var ee = n(482132);
 n(322076);
 var et = n(652215),
-    en = n(788868),
+    en = n(202541),
     ei = n(106451);
 let el = { [O.pn.GIFT_CUSTOMIZATION]: "xl", [O.pn.REVIEW]: "md", [O.pn.ADD_PAYMENT_STEPS]: "md" };
 function eu(e) {
@@ -248,11 +248,11 @@ function es(e) {
             if (null != e$) return e$.options;
         }, [e$]),
         e6 = (0, j.l)(),
-        e3 = "sm";
-    eI ? (e3 = "xl") : (eT || e0 === O.pn.ADD_PAYMENT_STEPS) && (e3 = "md");
-    let e2 = null != e1 ? e1.modalSizeGetter : void 0,
-        e4 = (0, g.O)(),
-        e5 = null != Z && !eJ && (0, v.U9)(e4, Z),
+        e2 = "sm";
+    eI ? (e2 = "xl") : (eT || e0 === O.pn.ADD_PAYMENT_STEPS) && (e2 = "md");
+    let e3 = null != e1 ? e1.modalSizeGetter : void 0,
+        e5 = (0, g.O)(),
+        e4 = null != Z && !eJ && (0, v.U9)(e5, Z),
         [e8, e9] = l.useState({
             load_id: eO.loadId,
             discovery_session_id: eO.discoverySessionId,
@@ -269,7 +269,7 @@ function es(e) {
             guild_id: eS,
             payment_modal_version: ek,
             activity_session_id: eL,
-            eligible_for_discount: e5,
+            eligible_for_discount: e4,
             sku_product_line: eV?.productLine,
             checkout_design: p.r.UNIFIED,
             checkout_flow: eY,
@@ -299,7 +299,7 @@ function es(e) {
                 continue_session_initial_step: eC,
                 custom_checkout_flow: eG,
                 has_saved_payment_source: ey,
-                discount_id: null != e4 ? e4.discountId : tn,
+                discount_id: null != e5 ? e5.discountId : tn,
             });
         }),
         l.useEffect(() => {
@@ -376,8 +376,8 @@ function es(e) {
                 isGift: eJ,
                 giftRecipient: eZ,
                 returnRef: eh,
-                manaModalSize: e3,
-                modalSizeGetter: e2,
+                manaModalSize: e2,
+                modalSizeGetter: e3,
                 handleClose: tu,
                 children: (0, i.jsx)(ee.Ay, {
                     header: (0, i.jsx)($, { handleClose: tu, skipUnifiedHeaderForSteps: e_, renderHeader: ec }),

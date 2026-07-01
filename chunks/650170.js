@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ni: () => T, t4: () => y, Q9: () => S, y$: () => N });
+n.d(t, { Ni: () => S, t4: () => C, Q9: () => y, y$: () => v });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -200,19 +200,20 @@ function A(e) {
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
         : { isPremiumPurchase: (0, m.ys)(e), isPremiumGroupPurchase: e === g.gD.PREMIUM_GROUP_MONTH };
 }
-var I = n(504275);
-let [T, S] = (0, E.A)();
-function y(e) {
+var I = n(504275),
+    T = n(219538);
+let [S, y] = (0, E.A)();
+function C(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return S()(e, t);
+    return y()(e, t);
 }
-function C(e, t) {
+function N(e, t) {
     if (null == e) return null;
     if ("premium_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-function N(e) {
+function v(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -250,6 +251,27 @@ function N(e) {
                     null == i().startingFractionalPremiumEndsAt && e({ startingFractionalPremiumEndsAt: t });
                 },
             },
+            ...{
+                fetchSetupIntentRequestKey: null,
+                fetchSetupIntentPromise: null,
+                getOrCreateSetupIntent: function (t) {
+                    let { forceRecreate: n = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                        r = JSON.stringify(t),
+                        { fetchSetupIntentRequestKey: s, fetchSetupIntentPromise: a, clearFetchSetupIntent: o } = i();
+                    if (!n && null != a && s === r) return a;
+                    let l = (0, T.w)({ body: t });
+                    return (
+                        e({ fetchSetupIntentRequestKey: r, fetchSetupIntentPromise: l }),
+                        l.catch(() => {
+                            i().fetchSetupIntentPromise === l && o();
+                        }),
+                        l
+                    );
+                },
+                clearFetchSetupIntent: () => {
+                    e({ fetchSetupIntentRequestKey: null, fetchSetupIntentPromise: null });
+                },
+            },
             get: (e) => (null != r[e] ? r[e]() : null),
             contextMetadata: s,
             order: a,
@@ -260,7 +282,7 @@ function N(e) {
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
             setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: C(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: N(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -270,7 +292,7 @@ function N(e) {
                     pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: C(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: N(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
