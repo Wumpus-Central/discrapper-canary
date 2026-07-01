@@ -864,8 +864,9 @@ let r = {
             "WINDOW_VISIBILITY_CHANGE",
             "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS",
             "LOGOUT",
+            "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS",
         ],
-        inlineRequire: () => n(392447).A,
+        inlineRequire: () => n(871218).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     SentryExperimentFeatureFlagManager: {
