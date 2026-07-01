@@ -72,7 +72,6 @@ var A =
     (i[(i.GiftNitro = 4)] = "GiftNitro"),
     (i[(i.GiftShop = 5)] = "GiftShop"),
     (i[(i.GiftGameShop = 6)] = "GiftGameShop"),
-    (i[(i.OrbsGameShop = 7)] = "OrbsGameShop"),
     i);
 function I(e) {
     return (0, r.jsxs)("div", {
@@ -117,23 +116,20 @@ function I(e) {
                                 virtualGoodsTermsUrl: n,
                             });
                         case 6:
-                        case 7:
                             let { applicationId: r, applicationName: s, shouldAppendDisclaimer: a } = e,
-                                u = s ?? "",
+                                u = s ?? "game's",
                                 c = (0, o.k3)(null != r ? { id: r, name: u } : void 0);
                             if (a)
-                                return f.intl.format(6 === e.type ? h.default["0Zl+Xt"] : h.default["5fbNBX"], {
+                                return f.intl.format(h.default["0Zl+Xt"], {
                                     ...e,
                                     applicationName: u,
                                     paidServicesTermsUrl: t,
                                     platformInfo: c,
-                                    virtualGoodsTermsUrl: d.X7G.PAID_TERMS_VIRTUAL_GOODS,
                                 });
-                            return f.intl.format(6 === e.type ? h.default.OVhTE7 : h.default.cwuBkH, {
+                            return f.intl.format(h.default.OVhTE7, {
                                 ...e,
                                 applicationName: u,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: d.X7G.PAID_TERMS_VIRTUAL_GOODS,
                             });
                         default:
                             (0, l.xb)(e);
