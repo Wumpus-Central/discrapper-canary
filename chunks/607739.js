@@ -19,8 +19,8 @@ var o = n(735438),
     v = n(34337),
     w = n(394839),
     I = n(375199),
-    x = n(715628),
-    E = n(752636),
+    E = n(715628),
+    x = n(752636),
     S = n(287809),
     C = n(515718),
     L = n(935208),
@@ -57,8 +57,10 @@ function k(e) {
                 mediaLayoutType: b.dG.MOSAIC,
                 autoPlayGif: !1,
                 canRemoveItem: !1,
+                canEditItem: !1,
                 isSingleMosaicItem: a,
                 onRemoveItem: o.noop,
+                onEditItem: o.noop,
                 renderVideoComponent: (t) =>
                     (function (e, t, n) {
                         let a = T.V5,
@@ -181,7 +183,7 @@ function N(e) {
                   ? (0, i.jsx)(d.y, {})
                   : (0, i.jsx)(y.A, {
                         compact: !1,
-                        childrenHeader: (0, E.A)({
+                        childrenHeader: (0, x.A)({
                             author: { ...l, colorString: "", colorStrings: null, nick: l?.username ?? p },
                             message: v,
                             channel: void 0,
@@ -193,7 +195,7 @@ function N(e) {
                             hideTimestamp: !1,
                         }),
                         childrenAccessories: (0, i.jsx)(k, { message: v }),
-                        childrenMessageContent: (0, x.A)({ message: v }, C.content),
+                        childrenMessageContent: (0, E.A)({ message: v }, C.content),
                         hasThread: !1,
                         hasReply: !1,
                         author: w,

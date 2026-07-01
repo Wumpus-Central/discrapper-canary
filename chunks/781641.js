@@ -1,56 +1,55 @@
-"use strict";
 r.d(t, { kl: () => t2 });
 var n,
-    o,
     a,
+    o,
     i,
     l,
     s,
-    u,
     p,
     c,
+    u,
     f,
     d = r(64700),
     h = r(205662),
-    b = function (e, t, r, n, o) {
-        var a = o.clientWidth,
-            i = o.clientHeight,
+    b = function (e, t, r, n, a) {
+        var o = a.clientWidth,
+            i = a.clientHeight,
             l = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
             s = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
-            u = l - (o.getBoundingClientRect().left + window.pageXOffset),
-            p = s - (o.getBoundingClientRect().top + window.pageYOffset);
+            p = l - (a.getBoundingClientRect().left + window.pageXOffset),
+            c = s - (a.getBoundingClientRect().top + window.pageYOffset);
         if ("vertical" === r) {
-            var c = void 0;
-            if (((c = p < 0 ? 0 : p > i ? 1 : Math.round((100 * p) / i) / 100), t.a !== c))
-                return { h: t.h, s: t.s, l: t.l, a: c, source: "rgb" };
+            var u = void 0;
+            if (((u = c < 0 ? 0 : c > i ? 1 : Math.round((100 * c) / i) / 100), t.a !== u))
+                return { h: t.h, s: t.s, l: t.l, a: u, source: "rgb" };
         } else {
             var f = void 0;
-            if (n !== (f = u < 0 ? 0 : u > a ? 1 : Math.round((100 * u) / a) / 100))
+            if (n !== (f = p < 0 ? 0 : p > o ? 1 : Math.round((100 * p) / o) / 100))
                 return { h: t.h, s: t.s, l: t.l, a: f, source: "rgb" };
         }
         return null;
     },
-    v = {},
-    g = function (e, t, r, n) {
+    g = {},
+    v = function (e, t, r, n) {
         if ("u" < typeof document && !n) return null;
-        var o = n ? new n() : document.createElement("canvas");
-        (o.width = 2 * r), (o.height = 2 * r);
-        var a = o.getContext("2d");
-        return a
-            ? ((a.fillStyle = e),
-              a.fillRect(0, 0, o.width, o.height),
-              (a.fillStyle = t),
-              a.fillRect(0, 0, r, r),
-              a.translate(r, r),
-              a.fillRect(0, 0, r, r),
-              o.toDataURL())
+        var a = n ? new n() : document.createElement("canvas");
+        (a.width = 2 * r), (a.height = 2 * r);
+        var o = a.getContext("2d");
+        return o
+            ? ((o.fillStyle = e),
+              o.fillRect(0, 0, a.width, a.height),
+              (o.fillStyle = t),
+              o.fillRect(0, 0, r, r),
+              o.translate(r, r),
+              o.fillRect(0, 0, r, r),
+              a.toDataURL())
             : null;
     },
     x = function (e, t, r, n) {
-        var o = e + "-" + t + "-" + r + (n ? "-server" : "");
-        if (v[o]) return v[o];
-        var a = g(e, t, r, n);
-        return (v[o] = a), a;
+        var a = e + "-" + t + "-" + r + (n ? "-server" : "");
+        if (g[a]) return g[a];
+        var o = v(e, t, r, n);
+        return (g[a] = o), o;
     },
     y =
         Object.assign ||
@@ -65,17 +64,17 @@ var n,
         var t = e.white,
             r = e.grey,
             n = e.size,
-            o = e.renderers,
-            a = e.borderRadius,
+            a = e.renderers,
+            o = e.borderRadius,
             i = e.boxShadow,
             l = e.children,
             s = (0, h.default)({
                 default: {
                     grid: {
-                        borderRadius: a,
+                        borderRadius: o,
                         boxShadow: i,
                         absolute: "0px 0px 0px 0px",
-                        background: "url(" + x(t, r, n, o.canvas) + ") center left",
+                        background: "url(" + x(t, r, n, a.canvas) + ") center left",
                     },
                 },
             });
@@ -111,14 +110,14 @@ function C(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-var O = (function (e) {
+var k = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
         function t() {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            for (var e, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
+            for (var e, r, n, a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
             return (
-                (r = n = C(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
+                (r = n = C(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
                 (n.handleChange = function (e) {
                     var t = b(e, n.props.hsl, n.props.direction, n.props.a, n.container);
                     t && "function" == typeof n.props.onChange && n.props.onChange(t, e);
@@ -253,7 +252,7 @@ var O = (function (e) {
             t
         );
     })(d.PureComponent || d.Component),
-    _ = (function () {
+    S = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -267,8 +266,8 @@ var O = (function (e) {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    S = [38, 40],
-    k = 1,
+    O = [38, 40],
+    _ = 1,
     j = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
@@ -288,10 +287,10 @@ var O = (function (e) {
                 (r.handleKeyDown = function (e) {
                     var t,
                         n = Number(String(e.target.value).replace(/%/g, ""));
-                    if (!isNaN(n) && ((t = e.keyCode), S.indexOf(t) > -1)) {
-                        var o = r.getArrowOffset(),
-                            a = 38 === e.keyCode ? n + o : n - o;
-                        r.setUpdatedValue(a, e);
+                    if (!isNaN(n) && ((t = e.keyCode), O.indexOf(t) > -1)) {
+                        var a = r.getArrowOffset(),
+                            o = 38 === e.keyCode ? n + a : n - a;
+                        r.setUpdatedValue(o, e);
                     }
                 }),
                 (r.handleDrag = function (e) {
@@ -318,7 +317,7 @@ var O = (function (e) {
                         window.removeEventListener("mouseup", r.handleMouseUp);
                 }),
                 (r.state = { value: String(e.value).toUpperCase(), blurValue: String(e.value).toUpperCase() }),
-                (r.inputId = "rc-editable-input-" + k++),
+                (r.inputId = "rc-editable-input-" + _++),
                 r
             );
         }
@@ -327,7 +326,7 @@ var O = (function (e) {
                 constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
             })),
             e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-            _(t, [
+            S(t, [
                 {
                     key: "componentDidUpdate",
                     value: function (e, t) {
@@ -427,24 +426,24 @@ var O = (function (e) {
         );
     })(d.PureComponent || d.Component),
     R = function (e, t, r, n) {
-        var o = n.clientWidth,
-            a = n.clientHeight,
+        var a = n.clientWidth,
+            o = n.clientHeight,
             i = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
             l = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
             s = i - (n.getBoundingClientRect().left + window.pageXOffset),
-            u = l - (n.getBoundingClientRect().top + window.pageYOffset);
+            p = l - (n.getBoundingClientRect().top + window.pageYOffset);
         if ("vertical" === t) {
-            var p = void 0;
-            if (((p = u < 0 ? 359 : u > a ? 0 : (360 * (-((100 * u) / a) + 100)) / 100), r.h !== p))
-                return { h: p, s: r.s, l: r.l, a: r.a, source: "hsl" };
-        } else {
             var c = void 0;
-            if (((c = s < 0 ? 0 : s > o ? 359 : (((100 * s) / o) * 360) / 100), r.h !== c))
+            if (((c = p < 0 ? 359 : p > o ? 0 : (360 * (-((100 * p) / o) + 100)) / 100), r.h !== c))
                 return { h: c, s: r.s, l: r.l, a: r.a, source: "hsl" };
+        } else {
+            var u = void 0;
+            if (((u = s < 0 ? 0 : s > a ? 359 : (((100 * s) / a) * 360) / 100), r.h !== u))
+                return { h: u, s: r.s, l: r.l, a: r.a, source: "hsl" };
         }
         return null;
     },
-    M = (function () {
+    B = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -458,18 +457,18 @@ var O = (function (e) {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
-function P(e, t) {
+function F(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-var B = (function (e) {
+var T = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
         function t() {
             if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-            for (var e, r, n, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
+            for (var e, r, n, a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
             return (
-                (r = n = P(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(a)))),
+                (r = n = F(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))),
                 (n.handleChange = function (e) {
                     var t = R(e, n.props.direction, n.props.hsl, n.container);
                     t && "function" == typeof n.props.onChange && n.props.onChange(t, e);
@@ -482,7 +481,7 @@ var B = (function (e) {
                 (n.handleMouseUp = function () {
                     n.unbindEventListeners();
                 }),
-                P(n, r)
+                F(n, r)
             );
         }
         return (
@@ -490,7 +489,7 @@ var B = (function (e) {
                 constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
             })),
             e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-            M(t, [
+            B(t, [
                 {
                     key: "componentWillUnmount",
                     value: function () {
@@ -576,17 +575,17 @@ var B = (function (e) {
             t
         );
     })(d.PureComponent || d.Component),
-    F = r(655972),
-    T = r.n(F);
-let D = function (e, t) {
+    A = r(655972),
+    z = r.n(A);
+let P = function (e, t) {
         return e === t || (e != e && t != t);
     },
-    L = function (e, t) {
-        for (var r = e.length; r--; ) if (D(e[r][0], t)) return r;
+    D = function (e, t) {
+        for (var r = e.length; r--; ) if (P(e[r][0], t)) return r;
         return -1;
     };
-var z = Array.prototype.splice;
-function A(e) {
+var L = Array.prototype.splice;
+function H(e) {
     var t = -1,
         r = null == e ? 0 : e.length;
     for (this.clear(); ++t < r; ) {
@@ -594,47 +593,47 @@ function A(e) {
         this.set(n[0], n[1]);
     }
 }
-(A.prototype.clear = function () {
+(H.prototype.clear = function () {
     (this.__data__ = []), (this.size = 0);
 }),
-    (A.prototype.delete = function (e) {
+    (H.prototype.delete = function (e) {
         var t = this.__data__,
-            r = L(t, e);
-        return !(r < 0) && (r == t.length - 1 ? t.pop() : z.call(t, r, 1), --this.size, !0);
+            r = D(t, e);
+        return !(r < 0) && (r == t.length - 1 ? t.pop() : L.call(t, r, 1), --this.size, !0);
     }),
-    (A.prototype.get = function (e) {
+    (H.prototype.get = function (e) {
         var t = this.__data__,
-            r = L(t, e);
+            r = D(t, e);
         return r < 0 ? void 0 : t[r][1];
     }),
-    (A.prototype.has = function (e) {
-        return L(this.__data__, e) > -1;
+    (H.prototype.has = function (e) {
+        return D(this.__data__, e) > -1;
     }),
-    (A.prototype.set = function (e, t) {
+    (H.prototype.set = function (e, t) {
         var r = this.__data__,
-            n = L(r, e);
+            n = D(r, e);
         return n < 0 ? (++this.size, r.push([e, t])) : (r[n][1] = t), this;
     });
-var H = "object" == typeof global && global && global.Object === Object && global,
+var M = "object" == typeof global && global && global.Object === Object && global,
     N = "object" == typeof self && self && self.Object === Object && self,
-    U = H || N || Function("return this")(),
-    W = U.Symbol,
+    G = M || N || Function("return this")(),
+    U = G.Symbol,
     X = Object.prototype,
-    G = X.hasOwnProperty,
+    W = X.hasOwnProperty,
     V = X.toString,
-    I = W ? W.toStringTag : void 0;
+    I = U ? U.toStringTag : void 0;
 let Y = function (e) {
-    var t = G.call(e, I),
+    var t = W.call(e, I),
         r = e[I];
     try {
         e[I] = void 0;
         var n = !0;
     } catch (e) {}
-    var o = V.call(e);
-    return n && (t ? (e[I] = r) : delete e[I]), o;
+    var a = V.call(e);
+    return n && (t ? (e[I] = r) : delete e[I]), a;
 };
 var $ = Object.prototype.toString,
-    K = W ? W.toStringTag : void 0;
+    K = U ? U.toStringTag : void 0;
 let q = function (e) {
         return null == e
             ? void 0 === e
@@ -658,8 +657,8 @@ let q = function (e) {
             "[object Proxy]" == t
         );
     };
-var Q = U["__core-js_shared__"],
-    ee = (a = /[^.]+$/.exec((Q && Q.keys && Q.keys.IE_PROTO) || "")) ? "Symbol(src)_1." + a : "",
+var Q = G["__core-js_shared__"],
+    ee = (o = /[^.]+$/.exec((Q && Q.keys && Q.keys.IE_PROTO) || "")) ? "Symbol(src)_1." + o : "",
     et = Function.prototype.toString;
 let er = function (e) {
     if (null != e) {
@@ -673,12 +672,12 @@ let er = function (e) {
     return "";
 };
 var en = /^\[object .+?Constructor\]$/,
-    eo = Object.prototype,
-    ea = Function.prototype.toString,
-    ei = eo.hasOwnProperty,
+    ea = Object.prototype,
+    eo = Function.prototype.toString,
+    ei = ea.hasOwnProperty,
     el = RegExp(
         "^" +
-            ea
+            eo
                 .call(ei)
                 .replace(/[\\^$.*+?()[\]{}|]/g, "\\$&")
                 .replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") +
@@ -687,12 +686,12 @@ var en = /^\[object .+?Constructor\]$/,
 let es = function (e) {
         return !!Z(e) && (!ee || !(ee in e)) && (J(e) ? el : en).test(er(e));
     },
-    eu = function (e, t) {
+    ep = function (e, t) {
         var r = null == e ? void 0 : e[t];
         return es(r) ? r : void 0;
     };
-var ep = eu(U, "Map"),
-    ec = eu(Object, "create"),
+var ec = ep(G, "Map"),
+    eu = ep(Object, "create"),
     ef = Object.prototype.hasOwnProperty,
     ed = Object.prototype.hasOwnProperty;
 function eh(e) {
@@ -704,7 +703,7 @@ function eh(e) {
     }
 }
 (eh.prototype.clear = function () {
-    (this.__data__ = ec ? ec(null) : {}), (this.size = 0);
+    (this.__data__ = eu ? eu(null) : {}), (this.size = 0);
 }),
     (eh.prototype.delete = function (e) {
         var t = this.has(e) && delete this.__data__[e];
@@ -712,7 +711,7 @@ function eh(e) {
     }),
     (eh.prototype.get = function (e) {
         var t = this.__data__;
-        if (ec) {
+        if (eu) {
             var r = t[e];
             return "__lodash_hash_undefined__" === r ? void 0 : r;
         }
@@ -720,21 +719,21 @@ function eh(e) {
     }),
     (eh.prototype.has = function (e) {
         var t = this.__data__;
-        return ec ? void 0 !== t[e] : ed.call(t, e);
+        return eu ? void 0 !== t[e] : ed.call(t, e);
     }),
     (eh.prototype.set = function (e, t) {
         var r = this.__data__;
-        return (this.size += +!this.has(e)), (r[e] = ec && void 0 === t ? "__lodash_hash_undefined__" : t), this;
+        return (this.size += +!this.has(e)), (r[e] = eu && void 0 === t ? "__lodash_hash_undefined__" : t), this;
     });
 let eb = function (e) {
         var t = typeof e;
         return "string" == t || "number" == t || "symbol" == t || "boolean" == t ? "__proto__" !== e : null === e;
     },
-    ev = function (e, t) {
+    eg = function (e, t) {
         var r = e.__data__;
         return eb(t) ? r["string" == typeof t ? "string" : "hash"] : r.map;
     };
-function eg(e) {
+function ev(e) {
     var t = -1,
         r = null == e ? 0 : e.length;
     for (this.clear(); ++t < r; ) {
@@ -743,29 +742,29 @@ function eg(e) {
     }
 }
 function ex(e) {
-    var t = (this.__data__ = new A(e));
+    var t = (this.__data__ = new H(e));
     this.size = t.size;
 }
-(eg.prototype.clear = function () {
-    (this.size = 0), (this.__data__ = { hash: new eh(), map: new (ep || A)(), string: new eh() });
+(ev.prototype.clear = function () {
+    (this.size = 0), (this.__data__ = { hash: new eh(), map: new (ec || H)(), string: new eh() });
 }),
-    (eg.prototype.delete = function (e) {
-        var t = ev(this, e).delete(e);
+    (ev.prototype.delete = function (e) {
+        var t = eg(this, e).delete(e);
         return (this.size -= !!t), t;
     }),
-    (eg.prototype.get = function (e) {
-        return ev(this, e).get(e);
+    (ev.prototype.get = function (e) {
+        return eg(this, e).get(e);
     }),
-    (eg.prototype.has = function (e) {
-        return ev(this, e).has(e);
+    (ev.prototype.has = function (e) {
+        return eg(this, e).has(e);
     }),
-    (eg.prototype.set = function (e, t) {
-        var r = ev(this, e),
+    (ev.prototype.set = function (e, t) {
+        var r = eg(this, e),
             n = r.size;
         return r.set(e, t), (this.size += +(r.size != n)), this;
     }),
     (ex.prototype.clear = function () {
-        (this.__data__ = new A()), (this.size = 0);
+        (this.__data__ = new H()), (this.size = 0);
     }),
     (ex.prototype.delete = function (e) {
         var t = this.__data__,
@@ -780,16 +779,16 @@ function ex(e) {
     }),
     (ex.prototype.set = function (e, t) {
         var r = this.__data__;
-        if (r instanceof A) {
+        if (r instanceof H) {
             var n = r.__data__;
-            if (!ep || n.length < 199) return n.push([e, t]), (this.size = ++r.size), this;
-            r = this.__data__ = new eg(n);
+            if (!ec || n.length < 199) return n.push([e, t]), (this.size = ++r.size), this;
+            r = this.__data__ = new ev(n);
         }
         return r.set(e, t), (this.size = r.size), this;
     });
 var ey = (function () {
     try {
-        var e = eu(Object, "defineProperty");
+        var e = ep(Object, "defineProperty");
         return e({}, "", {}), e;
     } catch (e) {}
 })();
@@ -797,81 +796,81 @@ let em = function (e, t, r) {
         "__proto__" == t && ey ? ey(e, t, { configurable: !0, enumerable: !0, value: r, writable: !0 }) : (e[t] = r);
     },
     ew = function (e, t, r) {
-        ((void 0 === r || D(e[t], r)) && (void 0 !== r || t in e)) || em(e, t, r);
+        ((void 0 === r || P(e[t], r)) && (void 0 !== r || t in e)) || em(e, t, r);
     },
     eE = function (e, t, r) {
-        for (var n = -1, o = Object(e), a = r(e), i = a.length; i--; ) {
-            var l = a[++n];
-            if (!1 === t(o[l], l, o)) break;
+        for (var n = -1, a = Object(e), o = r(e), i = o.length; i--; ) {
+            var l = o[++n];
+            if (!1 === t(a[l], l, a)) break;
         }
         return e;
     };
 var eC = "object" == typeof exports && exports && !exports.nodeType && exports,
-    eO = eC && "object" == typeof module && module && !module.nodeType && module,
-    e_ = eO && eO.exports === eC ? U.Buffer : void 0,
-    eS = e_ ? e_.allocUnsafe : void 0;
-let ek = function (e, t) {
+    ek = eC && "object" == typeof module && module && !module.nodeType && module,
+    eS = ek && ek.exports === eC ? G.Buffer : void 0,
+    eO = eS ? eS.allocUnsafe : void 0;
+let e_ = function (e, t) {
     if (t) return e.slice();
     var r = e.length,
-        n = eS ? eS(r) : new e.constructor(r);
+        n = eO ? eO(r) : new e.constructor(r);
     return e.copy(n), n;
 };
-var ej = U.Uint8Array;
+var ej = G.Uint8Array;
 let eR = function (e) {
         var t = new e.constructor(e.byteLength);
         return new ej(t).set(new ej(e)), t;
     },
-    eM = function (e, t) {
+    eB = function (e, t) {
         var r = t ? eR(e.buffer) : e.buffer;
         return new e.constructor(r, e.byteOffset, e.length);
     },
-    eP = function (e, t) {
+    eF = function (e, t) {
         var r = -1,
             n = e.length;
         for (t || (t = Array(n)); ++r < n; ) t[r] = e[r];
         return t;
     };
-var eB = Object.create,
-    eF = (function () {
+var eT = Object.create,
+    eA = (function () {
         function e() {}
         return function (t) {
             if (!Z(t)) return {};
-            if (eB) return eB(t);
+            if (eT) return eT(t);
             e.prototype = t;
             var r = new e();
             return (e.prototype = void 0), r;
         };
     })();
-let eT = function (e, t) {
+let ez = function (e, t) {
     return function (r) {
         return e(t(r));
     };
 };
-var eD = eT(Object.getPrototypeOf, Object),
-    eL = Object.prototype;
-let ez = function (e) {
+var eP = ez(Object.getPrototypeOf, Object),
+    eD = Object.prototype;
+let eL = function (e) {
         var t = e && e.constructor;
-        return e === (("function" == typeof t && t.prototype) || eL);
-    },
-    eA = function (e) {
-        return null != e && "object" == typeof e;
+        return e === (("function" == typeof t && t.prototype) || eD);
     },
     eH = function (e) {
-        return eA(e) && "[object Arguments]" == q(e);
+        return null != e && "object" == typeof e;
+    },
+    eM = function (e) {
+        return eH(e) && "[object Arguments]" == q(e);
     };
 var eN = Object.prototype,
-    eU = eN.hasOwnProperty,
-    eW = eN.propertyIsEnumerable,
-    eX = eH(
+    eG = eN.hasOwnProperty,
+    eU = eN.propertyIsEnumerable,
+    eX = eM(
         (function () {
             return arguments;
         })(),
     )
-        ? eH
+        ? eM
         : function (e) {
-              return eA(e) && eU.call(e, "callee") && !eW.call(e, "callee");
+              return eH(e) && eG.call(e, "callee") && !eU.call(e, "callee");
           },
-    eG = Array.isArray;
+    eW = Array.isArray;
 let eV = function (e) {
         return "number" == typeof e && e > -1 && e % 1 == 0 && e <= 0x1fffffffffffff;
     },
@@ -880,7 +879,7 @@ let eV = function (e) {
     };
 var eY = "object" == typeof exports && exports && !exports.nodeType && exports,
     e$ = eY && "object" == typeof module && module && !module.nodeType && module,
-    eK = e$ && e$.exports === eY ? U.Buffer : void 0;
+    eK = e$ && e$.exports === eY ? G.Buffer : void 0;
 let eq =
     (eK ? eK.isBuffer : void 0) ||
     function () {
@@ -891,8 +890,8 @@ var eZ = Object.prototype,
     eQ = eZ.hasOwnProperty,
     e0 = eJ.call(Object);
 let e1 = function (e) {
-    if (!eA(e) || "[object Object]" != q(e)) return !1;
-    var t = eD(e);
+    if (!eH(e) || "[object Object]" != q(e)) return !1;
+    var t = eP(e);
     if (null === t) return !0;
     var r = eQ.call(t, "constructor") && t.constructor;
     return "function" == typeof r && r instanceof r && eJ.call(r) == e0;
@@ -925,38 +924,38 @@ var e2 = {};
         e2["[object WeakMap]"] =
             !1);
 var e5 = "object" == typeof exports && exports && !exports.nodeType && exports,
-    e3 = e5 && "object" == typeof module && module && !module.nodeType && module,
-    e4 = e3 && e3.exports === e5 && H.process,
-    e6 = (function () {
+    e4 = e5 && "object" == typeof module && module && !module.nodeType && module,
+    e3 = e4 && e4.exports === e5 && M.process,
+    e8 = (function () {
         try {
-            var e = e3 && e3.require && e3.require("util").types;
+            var e = e4 && e4.require && e4.require("util").types;
             if (e) return e;
-            return e4 && e4.binding && e4.binding("util");
+            return e3 && e3.binding && e3.binding("util");
         } catch (e) {}
     })(),
-    e8 = e6 && e6.isTypedArray,
-    e7 = e8
+    e6 = e8 && e8.isTypedArray,
+    e9 = e6
         ? function (e) {
-              return e8(e);
+              return e6(e);
           }
         : function (e) {
-              return eA(e) && eV(e.length) && !!e2[q(e)];
+              return eH(e) && eV(e.length) && !!e2[q(e)];
           };
-let e9 = function (e, t) {
+let e7 = function (e, t) {
     if (("constructor" !== t || "function" != typeof e[t]) && "__proto__" != t) return e[t];
 };
 var te = Object.prototype.hasOwnProperty;
 let tt = function (e, t, r) {
         var n = e[t];
-        (te.call(e, t) && D(n, r) && (void 0 !== r || t in e)) || em(e, t, r);
+        (te.call(e, t) && P(n, r) && (void 0 !== r || t in e)) || em(e, t, r);
     },
     tr = function (e, t, r, n) {
-        var o = !r;
+        var a = !r;
         r || (r = {});
-        for (var a = -1, i = t.length; ++a < i; ) {
-            var l = t[a],
+        for (var o = -1, i = t.length; ++o < i; ) {
+            var l = t[o],
                 s = n ? n(r[l], e[l], l, r, e) : void 0;
-            void 0 === s && (s = e[l]), o ? em(r, l, s) : tt(r, l, s);
+            void 0 === s && (s = e[l]), a ? em(r, l, s) : tt(r, l, s);
         }
         return r;
     },
@@ -964,12 +963,12 @@ let tt = function (e, t, r) {
         for (var r = -1, n = Array(e); ++r < e; ) n[r] = t(r);
         return n;
     };
-var to = /^(?:0|[1-9]\d*)$/;
-let ta = function (e, t) {
+var ta = /^(?:0|[1-9]\d*)$/;
+let to = function (e, t) {
     var r = typeof e;
     return (
         !!(t = null == t ? 0x1fffffffffffff : t) &&
-        ("number" == r || ("symbol" != r && to.test(e))) &&
+        ("number" == r || ("symbol" != r && ta.test(e))) &&
         e > -1 &&
         e % 1 == 0 &&
         e < t
@@ -977,23 +976,23 @@ let ta = function (e, t) {
 };
 var ti = Object.prototype.hasOwnProperty;
 let tl = function (e, t) {
-        var r = eG(e),
+        var r = eW(e),
             n = !r && eX(e),
-            o = !r && !n && eq(e),
-            a = !r && !n && !o && e7(e),
-            i = r || n || o || a,
+            a = !r && !n && eq(e),
+            o = !r && !n && !a && e9(e),
+            i = r || n || a || o,
             l = i ? tn(e.length, String) : [],
             s = l.length;
-        for (var u in e)
-            (t || ti.call(e, u)) &&
+        for (var p in e)
+            (t || ti.call(e, p)) &&
                 !(
                     i &&
-                    ("length" == u ||
-                        (o && ("offset" == u || "parent" == u)) ||
-                        (a && ("buffer" == u || "byteLength" == u || "byteOffset" == u)) ||
-                        ta(u, s))
+                    ("length" == p ||
+                        (a && ("offset" == p || "parent" == p)) ||
+                        (o && ("buffer" == p || "byteLength" == p || "byteOffset" == p)) ||
+                        to(p, s))
                 ) &&
-                l.push(u);
+                l.push(p);
         return l;
     },
     ts = function (e) {
@@ -1001,58 +1000,58 @@ let tl = function (e, t) {
         if (null != e) for (var r in Object(e)) t.push(r);
         return t;
     };
-var tu = Object.prototype.hasOwnProperty;
-let tp = function (e) {
+var tp = Object.prototype.hasOwnProperty;
+let tc = function (e) {
         if (!Z(e)) return ts(e);
-        var t = ez(e),
+        var t = eL(e),
             r = [];
-        for (var n in e) ("constructor" == n && (t || !tu.call(e, n))) || r.push(n);
+        for (var n in e) ("constructor" == n && (t || !tp.call(e, n))) || r.push(n);
         return r;
     },
-    tc = function (e) {
-        return eI(e) ? tl(e, !0) : tp(e);
+    tu = function (e) {
+        return eI(e) ? tl(e, !0) : tc(e);
     },
-    tf = function (e, t, r, n, o, a, i) {
-        var l = e9(e, r),
-            s = e9(t, r),
-            u = i.get(s);
-        if (u) return void ew(e, r, u);
-        var p = a ? a(l, s, r + "", e, t, i) : void 0,
-            c = void 0 === p;
-        if (c) {
-            var f = eG(s),
+    tf = function (e, t, r, n, a, o, i) {
+        var l = e7(e, r),
+            s = e7(t, r),
+            p = i.get(s);
+        if (p) return void ew(e, r, p);
+        var c = o ? o(l, s, r + "", e, t, i) : void 0,
+            u = void 0 === c;
+        if (u) {
+            var f = eW(s),
                 d = !f && eq(s),
-                h = !f && !d && e7(s);
-            ((p = s), f || d || h)
-                ? eG(l)
-                    ? (p = l)
-                    : eA(l) && eI(l)
-                      ? (p = eP(l))
+                h = !f && !d && e9(s);
+            ((c = s), f || d || h)
+                ? eW(l)
+                    ? (c = l)
+                    : eH(l) && eI(l)
+                      ? (c = eF(l))
                       : d
-                        ? ((c = !1), (p = ek(s, !0)))
+                        ? ((u = !1), (c = e_(s, !0)))
                         : h
-                          ? ((c = !1), (p = eM(s, !0)))
-                          : (p = [])
+                          ? ((u = !1), (c = eB(s, !0)))
+                          : (c = [])
                 : e1(s) || eX(s)
-                  ? ((p = l), eX(l))
-                      ? (p = tr(l, tc(l)))
-                      : (!Z(l) || J(l)) && (p = "function" != typeof s.constructor || ez(s) ? {} : eF(eD(s)))
-                  : (c = !1);
+                  ? ((c = l), eX(l))
+                      ? (c = tr(l, tu(l)))
+                      : (!Z(l) || J(l)) && (c = "function" != typeof s.constructor || eL(s) ? {} : eA(eP(s)))
+                  : (u = !1);
         }
-        c && (i.set(s, p), o(p, s, n, a, i), i.delete(s)), ew(e, r, p);
+        u && (i.set(s, c), a(c, s, n, o, i), i.delete(s)), ew(e, r, c);
     },
-    td = function e(t, r, n, o, a) {
+    td = function e(t, r, n, a, o) {
         t !== r &&
             eE(
                 r,
                 function (i, l) {
-                    if ((a || (a = new ex()), Z(i))) tf(t, r, l, n, e, o, a);
+                    if ((o || (o = new ex()), Z(i))) tf(t, r, l, n, e, a, o);
                     else {
-                        var s = o ? o(e9(t, l), i, l + "", t, r, a) : void 0;
+                        var s = a ? a(e7(t, l), i, l + "", t, r, o) : void 0;
                         void 0 === s && (s = i), ew(t, l, s);
                     }
                 },
-                tc,
+                tu,
             );
     },
     th = function (e) {
@@ -1071,8 +1070,8 @@ let tp = function (e) {
         }
         return e.apply(t, r);
     };
-var tv = Math.max,
-    tg = Date.now,
+var tg = Math.max,
+    tv = Date.now,
     tx =
         ((i = ey
             ? function (e, t) {
@@ -1089,7 +1088,7 @@ var tv = Math.max,
         (l = 0),
         (s = 0),
         function () {
-            var e = tg(),
+            var e = tv(),
                 t = 16 - (e - s);
             if (((s = e), t > 0)) {
                 if (++l >= 800) return arguments[0];
@@ -1099,35 +1098,35 @@ var tv = Math.max,
 let ty = function (e, t, r) {
     if (!Z(r)) return !1;
     var n = typeof t;
-    return ("number" == n ? !!(eI(r) && ta(t, r.length)) : "string" == n && t in r) && D(r[t], e);
+    return ("number" == n ? !!(eI(r) && to(t, r.length)) : "string" == n && t in r) && P(r[t], e);
 };
 var tm =
-        ((u = function (e, t, r) {
+        ((p = function (e, t, r) {
             td(e, t, r);
         }),
         tx(
             ((n = function (e, t) {
                 var r = -1,
                     n = t.length,
-                    o = n > 1 ? t[n - 1] : void 0,
-                    a = n > 2 ? t[2] : void 0;
+                    a = n > 1 ? t[n - 1] : void 0,
+                    o = n > 2 ? t[2] : void 0;
                 for (
-                    o = u.length > 3 && "function" == typeof o ? (n--, o) : void 0,
-                        a && ty(t[0], t[1], a) && ((o = n < 3 ? void 0 : o), (n = 1)),
+                    a = p.length > 3 && "function" == typeof a ? (n--, a) : void 0,
+                        o && ty(t[0], t[1], o) && ((a = n < 3 ? void 0 : a), (n = 1)),
                         e = Object(e);
                     ++r < n;
                 ) {
                     var i = t[r];
-                    i && u(e, i, r, o);
+                    i && p(e, i, r, a);
                 }
                 return e;
             }),
-            (o = tv(((o = void 0), n.length - 1), 0)),
+            (a = tg(((a = void 0), n.length - 1), 0)),
             function () {
-                for (var e = arguments, t = -1, r = tv(e.length - o, 0), a = Array(r); ++t < r; ) a[t] = e[o + t];
+                for (var e = arguments, t = -1, r = tg(e.length - a, 0), o = Array(r); ++t < r; ) o[t] = e[a + t];
                 t = -1;
-                for (var i = Array(o + 1); ++t < o; ) i[t] = e[t];
-                return (i[o] = th(a)), tb(n, this, i);
+                for (var i = Array(a + 1); ++t < a; ) i[t] = e[t];
+                return (i[a] = th(o)), tb(n, this, i);
             }),
             n + "",
         )),
@@ -1135,8 +1134,8 @@ var tm =
         var t = e.zDepth,
             r = e.radius,
             n = e.background,
-            o = e.children,
-            a = e.styles,
+            a = e.children,
+            o = e.styles,
             i = (0, h.default)(
                 tm(
                     {
@@ -1159,7 +1158,7 @@ var tm =
                         square: { bg: { borderRadius: "0" } },
                         circle: { bg: { borderRadius: "50%" } },
                     },
-                    void 0 === a ? {} : a,
+                    void 0 === o ? {} : o,
                 ),
                 { "zDepth-1": 1 === t },
             );
@@ -1167,129 +1166,129 @@ var tm =
             "div",
             { style: i.wrap },
             d.createElement("div", { style: i.bg }),
-            d.createElement("div", { style: i.content }, o),
+            d.createElement("div", { style: i.content }, a),
         );
     };
 (tw.propTypes = {
-    background: T().string,
-    zDepth: T().oneOf([0, 1, 2, 3, 4, 5]),
-    radius: T().number,
-    styles: T().object,
+    background: z().string,
+    zDepth: z().oneOf([0, 1, 2, 3, 4, 5]),
+    radius: z().number,
+    styles: z().object,
 }),
     (tw.defaultProps = { background: "#fff", zDepth: 1, radius: 2, styles: {} });
 let tE = function () {
-    return U.Date.now();
+    return G.Date.now();
 };
 var tC = /\s/;
-let tO = function (e) {
+let tk = function (e) {
     for (var t = e.length; t-- && tC.test(e.charAt(t)); );
     return t;
 };
-var t_ = /^\s+/;
-let tS = function (e) {
-    return "symbol" == typeof e || (eA(e) && "[object Symbol]" == q(e));
+var tS = /^\s+/;
+let tO = function (e) {
+    return "symbol" == typeof e || (eH(e) && "[object Symbol]" == q(e));
 };
-var tk = 0 / 0,
+var t_ = 0 / 0,
     tj = /^[-+]0x[0-9a-f]+$/i,
     tR = /^0b[01]+$/i,
-    tM = /^0o[0-7]+$/i,
-    tP = parseInt;
-let tB = function (e) {
+    tB = /^0o[0-7]+$/i,
+    tF = parseInt;
+let tT = function (e) {
     if ("number" == typeof e) return e;
-    if (tS(e)) return tk;
+    if (tO(e)) return t_;
     if (Z(e)) {
         var t,
             r = "function" == typeof e.valueOf ? e.valueOf() : e;
         e = Z(r) ? r + "" : r;
     }
     if ("string" != typeof e) return 0 === e ? e : +e;
-    e = (t = e) ? t.slice(0, tO(t) + 1).replace(t_, "") : t;
+    e = (t = e) ? t.slice(0, tk(t) + 1).replace(tS, "") : t;
     var n = tR.test(e);
-    return n || tM.test(e) ? tP(e.slice(2), n ? 2 : 8) : tj.test(e) ? tk : +e;
+    return n || tB.test(e) ? tF(e.slice(2), n ? 2 : 8) : tj.test(e) ? t_ : +e;
 };
-var tF = Math.max,
-    tT = Math.min;
-let tD = function (e, t, r) {
+var tA = Math.max,
+    tz = Math.min;
+let tP = function (e, t, r) {
         var n,
-            o,
             a,
+            o,
             i,
             l,
             s,
-            u = 0,
-            p = !1,
+            p = 0,
             c = !1,
+            u = !1,
             f = !0;
         if ("function" != typeof e) throw TypeError("Expected a function");
         function d(t) {
             var r = n,
-                a = o;
-            return (n = o = void 0), (u = t), (i = e.apply(a, r));
+                o = a;
+            return (n = a = void 0), (p = t), (i = e.apply(o, r));
         }
         function h(e) {
             var r = e - s,
-                n = e - u;
-            return void 0 === s || r >= t || r < 0 || (c && n >= a);
+                n = e - p;
+            return void 0 === s || r >= t || r < 0 || (u && n >= o);
         }
         function b() {
             var e,
                 r,
                 n,
-                o = tE();
-            if (h(o)) return v(o);
-            l = setTimeout(b, ((e = o - s), (r = o - u), (n = t - e), c ? tT(n, a - r) : n));
+                a = tE();
+            if (h(a)) return g(a);
+            l = setTimeout(b, ((e = a - s), (r = a - p), (n = t - e), u ? tz(n, o - r) : n));
         }
-        function v(e) {
-            return ((l = void 0), f && n) ? d(e) : ((n = o = void 0), i);
+        function g(e) {
+            return ((l = void 0), f && n) ? d(e) : ((n = a = void 0), i);
         }
-        function g() {
+        function v() {
             var e,
                 r = tE(),
-                a = h(r);
-            if (((n = arguments), (o = this), (s = r), a)) {
-                if (void 0 === l) return (u = e = s), (l = setTimeout(b, t)), p ? d(e) : i;
-                if (c) return clearTimeout(l), (l = setTimeout(b, t)), d(s);
+                o = h(r);
+            if (((n = arguments), (a = this), (s = r), o)) {
+                if (void 0 === l) return (p = e = s), (l = setTimeout(b, t)), c ? d(e) : i;
+                if (u) return clearTimeout(l), (l = setTimeout(b, t)), d(s);
             }
             return void 0 === l && (l = setTimeout(b, t)), i;
         }
         return (
-            (t = tB(t) || 0),
+            (t = tT(t) || 0),
             Z(r) &&
-                ((p = !!r.leading),
-                (a = (c = "maxWait" in r) ? tF(tB(r.maxWait) || 0, t) : a),
+                ((c = !!r.leading),
+                (o = (u = "maxWait" in r) ? tA(tT(r.maxWait) || 0, t) : o),
                 (f = "trailing" in r ? !!r.trailing : f)),
-            (g.cancel = function () {
-                void 0 !== l && clearTimeout(l), (u = 0), (n = s = o = l = void 0);
+            (v.cancel = function () {
+                void 0 !== l && clearTimeout(l), (p = 0), (n = s = a = l = void 0);
             }),
-            (g.flush = function () {
-                return void 0 === l ? i : v(tE());
+            (v.flush = function () {
+                return void 0 === l ? i : g(tE());
             }),
-            g
+            v
         );
     },
-    tL = function (e, t, r) {
+    tD = function (e, t, r) {
         var n = !0,
-            o = !0;
+            a = !0;
         if ("function" != typeof e) throw TypeError("Expected a function");
         return (
-            Z(r) && ((n = "leading" in r ? !!r.leading : n), (o = "trailing" in r ? !!r.trailing : o)),
-            tD(e, t, { leading: n, maxWait: t, trailing: o })
+            Z(r) && ((n = "leading" in r ? !!r.leading : n), (a = "trailing" in r ? !!r.trailing : a)),
+            tP(e, t, { leading: n, maxWait: t, trailing: a })
         );
     };
-var tz = function (e, t, r) {
+var tL = function (e, t, r) {
         var n = r.getBoundingClientRect(),
-            o = n.width,
-            a = n.height,
+            a = n.width,
+            o = n.height,
             i = "number" == typeof e.pageX ? e.pageX : e.touches[0].pageX,
             l = "number" == typeof e.pageY ? e.pageY : e.touches[0].pageY,
             s = i - (r.getBoundingClientRect().left + window.pageXOffset),
-            u = l - (r.getBoundingClientRect().top + window.pageYOffset);
-        s < 0 ? (s = 0) : s > o && (s = o), u < 0 ? (u = 0) : u > a && (u = a);
-        var p = s / o,
-            c = 1 - u / a;
-        return { h: t.h, s: p, v: c, a: t.a, source: "hsv" };
+            p = l - (r.getBoundingClientRect().top + window.pageYOffset);
+        s < 0 ? (s = 0) : s > a && (s = a), p < 0 ? (p = 0) : p > o && (p = o);
+        var c = s / a,
+            u = 1 - p / o;
+        return { h: t.h, s: c, v: u, a: t.a, source: "hsv" };
     },
-    tA = (function () {
+    tH = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -1303,7 +1302,7 @@ var tz = function (e, t, r) {
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })(),
-    tH = (function (e) {
+    tM = (function (e) {
         if ("function" != typeof e && null !== e)
             throw TypeError("Super expression must either be null or a function, not " + typeof e);
         function t(e) {
@@ -1315,7 +1314,7 @@ var tz = function (e, t, r) {
             return (
                 (r.handleChange = function (e) {
                     "function" == typeof r.props.onChange &&
-                        r.throttle(r.props.onChange, tz(e, r.props.hsl, r.container), e);
+                        r.throttle(r.props.onChange, tL(e, r.props.hsl, r.container), e);
                 }),
                 (r.handleMouseDown = function (e) {
                     r.handleChange(e);
@@ -1325,7 +1324,7 @@ var tz = function (e, t, r) {
                 (r.handleMouseUp = function () {
                     r.unbindEventListeners();
                 }),
-                (r.throttle = tL(function (e, t, r) {
+                (r.throttle = tD(function (e, t, r) {
                     e(t, r);
                 }, 50)),
                 r
@@ -1336,7 +1335,7 @@ var tz = function (e, t, r) {
                 constructor: { value: t, enumerable: !1, writable: !0, configurable: !0 },
             })),
             e && (Object.setPrototypeOf ? Object.setPrototypeOf(t, e) : (t.__proto__ = e)),
-            tA(t, [
+            tH(t, [
                 {
                     key: "componentWillUnmount",
                     value: function () {
@@ -1366,8 +1365,8 @@ var tz = function (e, t, r) {
                             t = this.props.style || {},
                             r = t.color,
                             n = t.white,
-                            o = t.black,
-                            a = t.pointer,
+                            a = t.black,
+                            o = t.pointer,
                             i = t.circle,
                             l = (0, h.default)(
                                 {
@@ -1399,7 +1398,7 @@ var tz = function (e, t, r) {
                                             transform: "translate(-2px, -2px)",
                                         },
                                     },
-                                    custom: { color: r, white: n, black: o, pointer: a, circle: i },
+                                    custom: { color: r, white: n, black: a, pointer: o, circle: i },
                                 },
                                 { custom: !!this.props.style },
                             );
@@ -1442,29 +1441,29 @@ let tN = function (e, t) {
     for (var r = -1, n = null == e ? 0 : e.length; ++r < n && !1 !== t(e[r], r, e); );
     return e;
 };
-var tU = eT(Object.keys, Object),
-    tW = Object.prototype.hasOwnProperty;
+var tG = ez(Object.keys, Object),
+    tU = Object.prototype.hasOwnProperty;
 let tX = function (e) {
-        if (!ez(e)) return tU(e);
+        if (!eL(e)) return tG(e);
         var t = [];
-        for (var r in Object(e)) tW.call(e, r) && "constructor" != r && t.push(r);
+        for (var r in Object(e)) tU.call(e, r) && "constructor" != r && t.push(r);
         return t;
     },
-    tG = function (e) {
+    tW = function (e) {
         return eI(e) ? tl(e) : tX(e);
     };
 var tV =
-    ((p = function (e, t) {
-        return e && eE(e, t, tG);
+    ((c = function (e, t) {
+        return e && eE(e, t, tW);
     }),
     function (e, t) {
         if (null == e) return e;
-        if (!eI(e)) return p(e, t);
-        for (var r = e.length, n = -1, o = Object(e); ++n < r && !1 !== t(o[n], n, o); );
+        if (!eI(e)) return c(e, t);
+        for (var r = e.length, n = -1, a = Object(e); ++n < r && !1 !== t(a[n], n, a); );
         return e;
     });
 let tI = function (e, t) {
-    return (eG(e) ? tN : tV)(e, "function" == typeof t ? t : th);
+    return (eW(e) ? tN : tV)(e, "function" == typeof t ? t : th);
 };
 var tY = r(440745),
     t$ = r.n(tY),
@@ -1482,16 +1481,16 @@ var tY = r(440745),
     tq = function (e, t) {
         var r = e.hex ? t$()(e.hex) : t$()(e),
             n = r.toHsl(),
-            o = r.toHsv(),
-            a = r.toRgb(),
+            a = r.toHsv(),
+            o = r.toRgb(),
             i = r.toHex();
         return (
-            0 === n.s && ((n.h = t || 0), (o.h = t || 0)),
+            0 === n.s && ((n.h = t || 0), (a.h = t || 0)),
             {
                 hsl: n,
-                hex: "000000" === i && 0 === a.a ? "transparent" : "#" + i,
-                rgb: a,
-                hsv: o,
+                hex: "000000" === i && 0 === o.a ? "transparent" : "#" + i,
+                rgb: o,
+                hsv: a,
                 oldHue: e.h || t || n.h,
                 source: e.source,
             }
@@ -1564,7 +1563,7 @@ let t2 = function (e) {
                     }
                 }),
                 (t.state = t0({}, tq(e.color, 0))),
-                (t.debounce = tD(function (e, t, r) {
+                (t.debounce = tP(function (e, t, r) {
                     e(t, r);
                 }, 100)),
                 t
@@ -1616,7 +1615,7 @@ var t5 =
             }
             return e;
         },
-    t3 = (function () {
+    t4 = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
                 var n = t[r];
@@ -1630,11 +1629,11 @@ var t5 =
             return r && e(t.prototype, r), n && e(t, n), t;
         };
     })();
-function t4(e, t) {
+function t3(e, t) {
     if (!e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
     return t && ("object" == typeof t || "function" == typeof t) ? t : e;
 }
-var t6 =
+var t8 =
     Object.assign ||
     function (e) {
         for (var t = 1; t < arguments.length; t++) {
@@ -1643,16 +1642,16 @@ var t6 =
         }
         return e;
     };
-let t8 = (function (e) {
+let t6 = (function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "span",
         r = d.Component;
     if ("function" != typeof r && null !== r)
         throw TypeError("Super expression must either be null or a function, not " + typeof r);
     function n() {
         if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
-        for (var e, t, r, o = arguments.length, a = Array(o), i = 0; i < o; i++) a[i] = arguments[i];
+        for (var e, t, r, a = arguments.length, o = Array(a), i = 0; i < a; i++) o[i] = arguments[i];
         return (
-            (t = r = t4(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(a)))),
+            (t = r = t3(this, (e = n.__proto__ || Object.getPrototypeOf(n)).call.apply(e, [this].concat(o)))),
             (r.state = { focus: !1 }),
             (r.handleFocus = function () {
                 return r.setState({ focus: !0 });
@@ -1660,7 +1659,7 @@ let t8 = (function (e) {
             (r.handleBlur = function () {
                 return r.setState({ focus: !1 });
             }),
-            t4(r, t)
+            t3(r, t)
         );
     }
     return (
@@ -1668,7 +1667,7 @@ let t8 = (function (e) {
             constructor: { value: n, enumerable: !1, writable: !0, configurable: !0 },
         })),
         r && (Object.setPrototypeOf ? Object.setPrototypeOf(n, r) : (n.__proto__ = r)),
-        t3(n, [
+        t4(n, [
             {
                 key: "render",
                 value: function () {
@@ -1686,17 +1685,17 @@ let t8 = (function (e) {
     var t = e.color,
         r = e.style,
         n = e.onClick,
-        o = void 0 === n ? function () {} : n,
-        a = e.onHover,
+        a = void 0 === n ? function () {} : n,
+        o = e.onHover,
         i = e.title,
         l = void 0 === i ? t : i,
         s = e.children,
-        u = e.focus,
-        p = e.focusStyle,
-        c = "transparent" === t,
+        p = e.focus,
+        c = e.focusStyle,
+        u = "transparent" === t,
         f = (0, h.default)({
             default: {
-                swatch: t6(
+                swatch: t8(
                     {
                         background: t,
                         height: "100%",
@@ -1706,34 +1705,34 @@ let t8 = (function (e) {
                         outline: "none",
                     },
                     r,
-                    u ? (void 0 === p ? {} : p) : {},
+                    p ? (void 0 === c ? {} : c) : {},
                 ),
             },
         }),
         b = {};
     return (
-        a &&
+        o &&
             (b.onMouseOver = function (e) {
-                return a(t, e);
+                return o(t, e);
             }),
         d.createElement(
             "div",
-            t6(
+            t8(
                 {
                     style: f.swatch,
                     onClick: function (e) {
-                        return o(t, e);
+                        return a(t, e);
                     },
                     title: l,
                     tabIndex: 0,
                     onKeyDown: function (e) {
-                        return 13 === e.keyCode && o(t, e);
+                        return 13 === e.keyCode && a(t, e);
                     },
                 },
                 b,
             ),
             s,
-            c &&
+            u &&
                 d.createElement(m, {
                     borderRadius: f.swatch.borderRadius,
                     boxShadow: "inset 0 0 0 1px rgba(0,0,0,0.1)",
@@ -1741,7 +1740,7 @@ let t8 = (function (e) {
         )
     );
 });
-var t7 =
+var t9 =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -1750,30 +1749,30 @@ var t7 =
             }
             return e;
         },
-    t9 = function (e) {
+    t7 = function (e) {
         var t = e.rgb,
             r = e.hsl,
             n = e.width,
-            o = e.height,
-            a = e.onChange,
+            a = e.height,
+            o = e.onChange,
             i = e.direction,
             l = e.style,
             s = e.renderers,
-            u = e.pointer,
-            p = e.className,
-            c = (0, h.default)({
-                default: { picker: { position: "relative", width: n, height: o }, alpha: { radius: "2px", style: l } },
+            p = e.pointer,
+            c = e.className,
+            u = (0, h.default)({
+                default: { picker: { position: "relative", width: n, height: a }, alpha: { radius: "2px", style: l } },
             });
         return d.createElement(
             "div",
-            { style: c.picker, className: "alpha-picker " + (void 0 === p ? "" : p) },
+            { style: u.picker, className: "alpha-picker " + (void 0 === c ? "" : c) },
             d.createElement(
-                O,
-                t7({}, c.alpha, { rgb: t, hsl: r, pointer: u, renderers: s, onChange: a, direction: i }),
+                k,
+                t9({}, u.alpha, { rgb: t, hsl: r, pointer: p, renderers: s, onChange: o, direction: i }),
             ),
         );
     };
-(t9.defaultProps = {
+(t7.defaultProps = {
     width: "316px",
     height: "16px",
     direction: "horizontal",
@@ -1798,15 +1797,15 @@ var t7 =
         return d.createElement("div", { style: r.picker });
     },
 }),
-    t2(t9);
+    t2(t7);
 let re = function (e, t) {
-    for (var r = -1, n = null == e ? 0 : e.length, o = Array(n); ++r < n; ) o[r] = t(e[r], r, e);
-    return o;
+    for (var r = -1, n = null == e ? 0 : e.length, a = Array(n); ++r < n; ) a[r] = t(e[r], r, e);
+    return a;
 };
 function rt(e) {
     var t = -1,
         r = null == e ? 0 : e.length;
-    for (this.__data__ = new eg(); ++t < r; ) this.add(e[t]);
+    for (this.__data__ = new ev(); ++t < r; ) this.add(e[t]);
 }
 (rt.prototype.add = rt.prototype.push =
     function (e) {
@@ -1819,43 +1818,43 @@ let rr = function (e, t) {
         for (var r = -1, n = null == e ? 0 : e.length; ++r < n; ) if (t(e[r], r, e)) return !0;
         return !1;
     },
-    rn = function (e, t, r, n, o, a) {
+    rn = function (e, t, r, n, a, o) {
         var i = 1 & r,
             l = e.length,
             s = t.length;
         if (l != s && !(i && s > l)) return !1;
-        var u = a.get(e),
-            p = a.get(t);
-        if (u && p) return u == t && p == e;
-        var c = -1,
+        var p = o.get(e),
+            c = o.get(t);
+        if (p && c) return p == t && c == e;
+        var u = -1,
             f = !0,
             d = 2 & r ? new rt() : void 0;
-        for (a.set(e, t), a.set(t, e); ++c < l; ) {
-            var h = e[c],
-                b = t[c];
-            if (n) var v = i ? n(b, h, c, t, e, a) : n(h, b, c, e, t, a);
-            if (void 0 !== v) {
-                if (v) continue;
+        for (o.set(e, t), o.set(t, e); ++u < l; ) {
+            var h = e[u],
+                b = t[u];
+            if (n) var g = i ? n(b, h, u, t, e, o) : n(h, b, u, e, t, o);
+            if (void 0 !== g) {
+                if (g) continue;
                 f = !1;
                 break;
             }
             if (d) {
                 if (
                     !rr(t, function (e, t) {
-                        if (!d.has(t) && (h === e || o(h, e, r, n, a))) return d.push(t);
+                        if (!d.has(t) && (h === e || a(h, e, r, n, o))) return d.push(t);
                     })
                 ) {
                     f = !1;
                     break;
                 }
-            } else if (!(h === b || o(h, b, r, n, a))) {
+            } else if (!(h === b || a(h, b, r, n, o))) {
                 f = !1;
                 break;
             }
         }
-        return a.delete(e), a.delete(t), f;
+        return o.delete(e), o.delete(t), f;
     },
-    ro = function (e) {
+    ra = function (e) {
         var t = -1,
             r = Array(e.size);
         return (
@@ -1865,7 +1864,7 @@ let rr = function (e, t) {
             r
         );
     },
-    ra = function (e) {
+    ro = function (e) {
         var t = -1,
             r = Array(e.size);
         return (
@@ -1875,54 +1874,54 @@ let rr = function (e, t) {
             r
         );
     };
-var ri = W ? W.prototype : void 0,
+var ri = U ? U.prototype : void 0,
     rl = ri ? ri.valueOf : void 0;
-let rs = function (e, t, r, n, o, a, i) {
+let rs = function (e, t, r, n, a, o, i) {
         switch (r) {
             case "[object DataView]":
                 if (e.byteLength != t.byteLength || e.byteOffset != t.byteOffset) break;
                 (e = e.buffer), (t = t.buffer);
             case "[object ArrayBuffer]":
-                if (e.byteLength != t.byteLength || !a(new ej(e), new ej(t))) break;
+                if (e.byteLength != t.byteLength || !o(new ej(e), new ej(t))) break;
                 return !0;
             case "[object Boolean]":
             case "[object Date]":
             case "[object Number]":
-                return D(+e, +t);
+                return P(+e, +t);
             case "[object Error]":
                 return e.name == t.name && e.message == t.message;
             case "[object RegExp]":
             case "[object String]":
                 return e == t + "";
             case "[object Map]":
-                var l = ro;
+                var l = ra;
             case "[object Set]":
                 var s = 1 & n;
-                if ((l || (l = ra), e.size != t.size && !s)) break;
-                var u = i.get(e);
-                if (u) return u == t;
+                if ((l || (l = ro), e.size != t.size && !s)) break;
+                var p = i.get(e);
+                if (p) return p == t;
                 (n |= 2), i.set(e, t);
-                var p = rn(l(e), l(t), n, o, a, i);
-                return i.delete(e), p;
+                var c = rn(l(e), l(t), n, a, o, i);
+                return i.delete(e), c;
             case "[object Symbol]":
                 if (rl) return rl.call(e) == rl.call(t);
         }
         return !1;
     },
-    ru = function (e, t) {
-        for (var r = -1, n = t.length, o = e.length; ++r < n; ) e[o + r] = t[r];
+    rp = function (e, t) {
+        for (var r = -1, n = t.length, a = e.length; ++r < n; ) e[a + r] = t[r];
         return e;
     },
-    rp = function (e, t, r) {
+    rc = function (e, t, r) {
         var n = t(e);
-        return eG(e) ? n : ru(n, r(e));
+        return eW(e) ? n : rp(n, r(e));
     },
-    rc = function (e, t) {
-        for (var r = -1, n = null == e ? 0 : e.length, o = 0, a = []; ++r < n; ) {
+    ru = function (e, t) {
+        for (var r = -1, n = null == e ? 0 : e.length, a = 0, o = []; ++r < n; ) {
             var i = e[r];
-            t(i, r, e) && (a[o++] = i);
+            t(i, r, e) && (o[a++] = i);
         }
-        return a;
+        return o;
     };
 var rf = Object.prototype.propertyIsEnumerable,
     rd = Object.getOwnPropertySymbols,
@@ -1930,7 +1929,7 @@ var rf = Object.prototype.propertyIsEnumerable,
         ? function (e) {
               return null == e
                   ? []
-                  : rc(rd((e = Object(e))), function (t) {
+                  : ru(rd((e = Object(e))), function (t) {
                         return rf.call(e, t);
                     });
           }
@@ -1938,32 +1937,32 @@ var rf = Object.prototype.propertyIsEnumerable,
               return [];
           };
 let rb = function (e) {
-    return rp(e, tG, rh);
+    return rc(e, tW, rh);
 };
-var rv = Object.prototype.hasOwnProperty;
-let rg = function (e, t, r, n, o, a) {
+var rg = Object.prototype.hasOwnProperty;
+let rv = function (e, t, r, n, a, o) {
     var i = 1 & r,
         l = rb(e),
         s = l.length;
     if (s != rb(t).length && !i) return !1;
-    for (var u = s; u--; ) {
-        var p = l[u];
-        if (!(i ? p in t : rv.call(t, p))) return !1;
+    for (var p = s; p--; ) {
+        var c = l[p];
+        if (!(i ? c in t : rg.call(t, c))) return !1;
     }
-    var c = a.get(e),
-        f = a.get(t);
-    if (c && f) return c == t && f == e;
+    var u = o.get(e),
+        f = o.get(t);
+    if (u && f) return u == t && f == e;
     var d = !0;
-    a.set(e, t), a.set(t, e);
-    for (var h = i; ++u < s; ) {
-        var b = e[(p = l[u])],
-            v = t[p];
-        if (n) var g = i ? n(v, b, p, t, e, a) : n(b, v, p, e, t, a);
-        if (!(void 0 === g ? b === v || o(b, v, r, n, a) : g)) {
+    o.set(e, t), o.set(t, e);
+    for (var h = i; ++p < s; ) {
+        var b = e[(c = l[p])],
+            g = t[c];
+        if (n) var v = i ? n(g, b, c, t, e, o) : n(b, g, c, e, t, o);
+        if (!(void 0 === v ? b === g || a(b, g, r, n, o) : v)) {
             d = !1;
             break;
         }
-        h || (h = "constructor" == p);
+        h || (h = "constructor" == c);
     }
     if (d && !h) {
         var x = e.constructor,
@@ -1974,111 +1973,111 @@ let rg = function (e, t, r, n, o, a) {
             !("function" == typeof x && x instanceof x && "function" == typeof y && y instanceof y) &&
             (d = !1);
     }
-    return a.delete(e), a.delete(t), d;
+    return o.delete(e), o.delete(t), d;
 };
-var rx = eu(U, "DataView"),
-    ry = eu(U, "Promise"),
-    rm = eu(U, "Set"),
-    rw = eu(U, "WeakMap"),
+var rx = ep(G, "DataView"),
+    ry = ep(G, "Promise"),
+    rm = ep(G, "Set"),
+    rw = ep(G, "WeakMap"),
     rE = "[object Map]",
     rC = "[object Promise]",
-    rO = "[object Set]",
-    r_ = "[object WeakMap]",
-    rS = "[object DataView]",
-    rk = er(rx),
-    rj = er(ep),
+    rk = "[object Set]",
+    rS = "[object WeakMap]",
+    rO = "[object DataView]",
+    r_ = er(rx),
+    rj = er(ec),
     rR = er(ry),
-    rM = er(rm),
-    rP = er(rw),
-    rB = q;
-((rx && rB(new rx(new ArrayBuffer(1))) != rS) ||
-    (ep && rB(new ep()) != rE) ||
-    (ry && rB(ry.resolve()) != rC) ||
-    (rm && rB(new rm()) != rO) ||
-    (rw && rB(new rw()) != r_)) &&
-    (rB = function (e) {
+    rB = er(rm),
+    rF = er(rw),
+    rT = q;
+((rx && rT(new rx(new ArrayBuffer(1))) != rO) ||
+    (ec && rT(new ec()) != rE) ||
+    (ry && rT(ry.resolve()) != rC) ||
+    (rm && rT(new rm()) != rk) ||
+    (rw && rT(new rw()) != rS)) &&
+    (rT = function (e) {
         var t = q(e),
             r = "[object Object]" == t ? e.constructor : void 0,
             n = r ? er(r) : "";
         if (n)
             switch (n) {
-                case rk:
-                    return rS;
+                case r_:
+                    return rO;
                 case rj:
                     return rE;
                 case rR:
                     return rC;
-                case rM:
-                    return rO;
-                case rP:
-                    return r_;
+                case rB:
+                    return rk;
+                case rF:
+                    return rS;
             }
         return t;
     });
-let rF = rB;
-var rT = "[object Arguments]",
-    rD = "[object Array]",
-    rL = "[object Object]",
-    rz = Object.prototype.hasOwnProperty;
-let rA = function (e, t, r, n, o, a) {
-        var i = eG(e),
-            l = eG(t),
-            s = i ? rD : rF(e),
-            u = l ? rD : rF(t);
-        (s = s == rT ? rL : s), (u = u == rT ? rL : u);
-        var p = s == rL,
-            c = u == rL,
-            f = s == u;
+let rA = rT;
+var rz = "[object Arguments]",
+    rP = "[object Array]",
+    rD = "[object Object]",
+    rL = Object.prototype.hasOwnProperty;
+let rH = function (e, t, r, n, a, o) {
+        var i = eW(e),
+            l = eW(t),
+            s = i ? rP : rA(e),
+            p = l ? rP : rA(t);
+        (s = s == rz ? rD : s), (p = p == rz ? rD : p);
+        var c = s == rD,
+            u = p == rD,
+            f = s == p;
         if (f && eq(e)) {
             if (!eq(t)) return !1;
-            (i = !0), (p = !1);
+            (i = !0), (c = !1);
         }
-        if (f && !p) return a || (a = new ex()), i || e7(e) ? rn(e, t, r, n, o, a) : rs(e, t, s, r, n, o, a);
+        if (f && !c) return o || (o = new ex()), i || e9(e) ? rn(e, t, r, n, a, o) : rs(e, t, s, r, n, a, o);
         if (!(1 & r)) {
-            var d = p && rz.call(e, "__wrapped__"),
-                h = c && rz.call(t, "__wrapped__");
+            var d = c && rL.call(e, "__wrapped__"),
+                h = u && rL.call(t, "__wrapped__");
             if (d || h) {
                 var b = d ? e.value() : e,
-                    v = h ? t.value() : t;
-                return a || (a = new ex()), o(b, v, r, n, a);
+                    g = h ? t.value() : t;
+                return o || (o = new ex()), a(b, g, r, n, o);
             }
         }
-        return !!f && (a || (a = new ex()), rg(e, t, r, n, o, a));
+        return !!f && (o || (o = new ex()), rv(e, t, r, n, a, o));
     },
-    rH = function e(t, r, n, o, a) {
-        return t === r || (null != t && null != r && (eA(t) || eA(r)) ? rA(t, r, n, o, e, a) : t != t && r != r);
+    rM = function e(t, r, n, a, o) {
+        return t === r || (null != t && null != r && (eH(t) || eH(r)) ? rH(t, r, n, a, e, o) : t != t && r != r);
     },
     rN = function (e, t, r, n) {
-        var o = r.length,
-            a = o,
+        var a = r.length,
+            o = a,
             i = !n;
-        if (null == e) return !a;
-        for (e = Object(e); o--; ) {
-            var l = r[o];
+        if (null == e) return !o;
+        for (e = Object(e); a--; ) {
+            var l = r[a];
             if (i && l[2] ? l[1] !== e[l[0]] : !(l[0] in e)) return !1;
         }
-        for (; ++o < a; ) {
-            var s = (l = r[o])[0],
-                u = e[s],
-                p = l[1];
+        for (; ++a < o; ) {
+            var s = (l = r[a])[0],
+                p = e[s],
+                c = l[1];
             if (i && l[2]) {
-                if (void 0 === u && !(s in e)) return !1;
+                if (void 0 === p && !(s in e)) return !1;
             } else {
-                var c = new ex();
-                if (n) var f = n(u, p, s, e, t, c);
-                if (!(void 0 === f ? rH(p, u, 3, n, c) : f)) return !1;
+                var u = new ex();
+                if (n) var f = n(p, c, s, e, t, u);
+                if (!(void 0 === f ? rM(c, p, 3, n, u) : f)) return !1;
             }
         }
         return !0;
     },
-    rU = function (e) {
+    rG = function (e) {
         return e == e && !Z(e);
     },
-    rW = function (e) {
-        for (var t = tG(e), r = t.length; r--; ) {
+    rU = function (e) {
+        for (var t = tW(e), r = t.length; r--; ) {
             var n = t[r],
-                o = e[n];
-            t[r] = [n, o, rU(o)];
+                a = e[n];
+            t[r] = [n, a, rG(a)];
         }
         return t;
     },
@@ -2087,8 +2086,8 @@ let rA = function (e, t, r, n, o, a) {
             return null != r && r[e] === t && (void 0 !== t || e in Object(r));
         };
     },
-    rG = function (e) {
-        var t = rW(e);
+    rW = function (e) {
+        var t = rU(e);
         return 1 == t.length && t[0][2]
             ? rX(t[0][0], t[0][1])
             : function (r) {
@@ -2098,10 +2097,10 @@ let rA = function (e, t, r, n, o, a) {
 var rV = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
     rI = /^\w*$/;
 let rY = function (e, t) {
-    if (eG(e)) return !1;
+    if (eW(e)) return !1;
     var r = typeof e;
     return (
-        !!("number" == r || "symbol" == r || "boolean" == r || null == e || tS(e)) ||
+        !!("number" == r || "symbol" == r || "boolean" == r || null == e || tO(e)) ||
         rI.test(e) ||
         !rV.test(e) ||
         (null != t && e in Object(t))
@@ -2111,25 +2110,25 @@ function r$(e, t) {
     if ("function" != typeof e || (null != t && "function" != typeof t)) throw TypeError("Expected a function");
     var r = function () {
         var n = arguments,
-            o = t ? t.apply(this, n) : n[0],
-            a = r.cache;
-        if (a.has(o)) return a.get(o);
+            a = t ? t.apply(this, n) : n[0],
+            o = r.cache;
+        if (o.has(a)) return o.get(a);
         var i = e.apply(this, n);
-        return (r.cache = a.set(o, i) || a), i;
+        return (r.cache = o.set(a, i) || o), i;
     };
-    return (r.cache = new (r$.Cache || eg)()), r;
+    return (r.cache = new (r$.Cache || ev)()), r;
 }
-r$.Cache = eg;
+r$.Cache = ev;
 var rK = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g,
     rq = /\\(\\)?/g,
     rZ =
-        ((f = (c = r$(
+        ((f = (u = r$(
             function (e) {
                 var t = [];
                 return (
                     46 === e.charCodeAt(0) && t.push(""),
-                    e.replace(rK, function (e, r, n, o) {
-                        t.push(n ? o.replace(rq, "$1") : r || e);
+                    e.replace(rK, function (e, r, n, a) {
+                        t.push(n ? a.replace(rq, "$1") : r || e);
                     }),
                     t
                 );
@@ -2138,56 +2137,56 @@ var rK = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=
                 return 500 === f.size && f.clear(), e;
             },
         )).cache),
-        c),
+        u),
     rJ = 1 / 0,
-    rQ = W ? W.prototype : void 0,
+    rQ = U ? U.prototype : void 0,
     r0 = rQ ? rQ.toString : void 0;
 let r1 = function e(t) {
         if ("string" == typeof t) return t;
-        if (eG(t)) return re(t, e) + "";
-        if (tS(t)) return r0 ? r0.call(t) : "";
+        if (eW(t)) return re(t, e) + "";
+        if (tO(t)) return r0 ? r0.call(t) : "";
         var r = t + "";
         return "0" == r && 1 / t == -rJ ? "-0" : r;
     },
     r2 = function (e, t) {
-        return eG(e) ? e : rY(e, t) ? [e] : rZ(null == e ? "" : r1(e));
+        return eW(e) ? e : rY(e, t) ? [e] : rZ(null == e ? "" : r1(e));
     };
 var r5 = 1 / 0;
-let r3 = function (e) {
-        if ("string" == typeof e || tS(e)) return e;
+let r4 = function (e) {
+        if ("string" == typeof e || tO(e)) return e;
         var t = e + "";
         return "0" == t && 1 / e == -r5 ? "-0" : t;
     },
-    r4 = function (e, t) {
+    r3 = function (e, t) {
         t = r2(t, e);
-        for (var r = 0, n = t.length; null != e && r < n; ) e = e[r3(t[r++])];
+        for (var r = 0, n = t.length; null != e && r < n; ) e = e[r4(t[r++])];
         return r && r == n ? e : void 0;
     },
-    r6 = function (e, t, r) {
-        var n = null == e ? void 0 : r4(e, t);
+    r8 = function (e, t, r) {
+        var n = null == e ? void 0 : r3(e, t);
         return void 0 === n ? r : n;
     },
-    r8 = function (e, t) {
+    r6 = function (e, t) {
         return null != e && t in Object(e);
     },
-    r7 = function (e, t, r) {
+    r9 = function (e, t, r) {
         t = r2(t, e);
-        for (var n = -1, o = t.length, a = !1; ++n < o; ) {
-            var i = r3(t[n]);
-            if (!(a = null != e && r(e, i))) break;
+        for (var n = -1, a = t.length, o = !1; ++n < a; ) {
+            var i = r4(t[n]);
+            if (!(o = null != e && r(e, i))) break;
             e = e[i];
         }
-        return a || ++n != o ? a : !!(o = null == e ? 0 : e.length) && eV(o) && ta(i, o) && (eG(e) || eX(e));
+        return o || ++n != a ? o : !!(a = null == e ? 0 : e.length) && eV(a) && to(i, a) && (eW(e) || eX(e));
     },
-    r9 = function (e) {
+    r7 = function (e) {
         var t;
         return rY(e)
-            ? ((t = r3(e)),
+            ? ((t = r4(e)),
               function (e) {
                   return null == e ? void 0 : e[t];
               })
             : function (t) {
-                  return r4(t, e);
+                  return r3(t, e);
               };
     },
     ne = function (e) {
@@ -2195,37 +2194,37 @@ let r3 = function (e) {
         if (null == e) return th;
         if ("object" == typeof e) {
             var t, r;
-            return eG(e)
+            return eW(e)
                 ? ((t = e[0]),
                   (r = e[1]),
-                  rY(t) && rU(r)
-                      ? rX(r3(t), r)
+                  rY(t) && rG(r)
+                      ? rX(r4(t), r)
                       : function (e) {
-                            var n = r6(e, t);
-                            return void 0 === n && n === r ? null != e && r7(e, t, r8) : rH(r, n, 3);
+                            var n = r8(e, t);
+                            return void 0 === n && n === r ? null != e && r9(e, t, r6) : rM(r, n, 3);
                         })
-                : rG(e);
+                : rW(e);
         }
-        return r9(e);
+        return r7(e);
     },
     nt = function (e, t) {
         var r = -1,
             n = eI(e) ? Array(e.length) : [];
         return (
-            tV(e, function (e, o, a) {
-                n[++r] = t(e, o, a);
+            tV(e, function (e, a, o) {
+                n[++r] = t(e, a, o);
             }),
             n
         );
     },
     nr = function (e, t) {
-        return (eG(e) ? re : nt)(e, ne(t, 3));
+        return (eW(e) ? re : nt)(e, ne(t, 3));
     },
     nn = function (e) {
         var t = e.colors,
             r = e.onClick,
             n = e.onSwatchHover,
-            o = (0, h.default)({
+            a = (0, h.default)({
                 default: {
                     swatches: { marginRight: "-10px" },
                     swatch: {
@@ -2241,39 +2240,39 @@ let r3 = function (e) {
             });
         return d.createElement(
             "div",
-            { style: o.swatches },
+            { style: a.swatches },
             nr(t, function (e) {
-                return d.createElement(t8, {
+                return d.createElement(t6, {
                     key: e,
                     color: e,
-                    style: o.swatch,
+                    style: a.swatch,
                     onClick: r,
                     onHover: n,
                     focusStyle: { boxShadow: "0 0 4px " + e },
                 });
             }),
-            d.createElement("div", { style: o.clear }),
+            d.createElement("div", { style: a.clear }),
         );
     };
-var no = function (e) {
+var na = function (e) {
     var t = e.onChange,
         r = e.onSwatchHover,
         n = e.hex,
-        o = e.colors,
-        a = e.width,
+        a = e.colors,
+        o = e.width,
         i = e.triangle,
         l = e.styles,
         s = e.className,
-        u = "transparent" === n,
-        p = function (e, r) {
+        p = "transparent" === n,
+        c = function (e, r) {
             tZ(e) && t({ hex: e, source: "hex" }, r);
         },
-        c = (0, h.default)(
+        u = (0, h.default)(
             tm(
                 {
                     default: {
                         card: {
-                            width: a,
+                            width: o,
                             background: "#fff",
                             boxShadow: "0 1px rgba(0,0,0,.1)",
                             borderRadius: "6px",
@@ -2322,36 +2321,36 @@ var no = function (e) {
         );
     return d.createElement(
         "div",
-        { style: c.card, className: "block-picker " + (void 0 === s ? "" : s) },
-        d.createElement("div", { style: c.triangle }),
+        { style: u.card, className: "block-picker " + (void 0 === s ? "" : s) },
+        d.createElement("div", { style: u.triangle }),
         d.createElement(
             "div",
-            { style: c.head },
-            u && d.createElement(m, { borderRadius: "6px 6px 0 0" }),
-            d.createElement("div", { style: c.label }, n),
+            { style: u.head },
+            p && d.createElement(m, { borderRadius: "6px 6px 0 0" }),
+            d.createElement("div", { style: u.label }, n),
         ),
         d.createElement(
             "div",
-            { style: c.body },
-            d.createElement(nn, { colors: o, onClick: p, onSwatchHover: r }),
-            d.createElement(j, { style: { input: c.input }, value: n, onChange: p }),
+            { style: u.body },
+            d.createElement(nn, { colors: a, onClick: c, onSwatchHover: r }),
+            d.createElement(j, { style: { input: u.input }, value: n, onChange: c }),
         ),
     );
 };
-(no.propTypes = {
-    width: T().oneOfType([T().string, T().number]),
-    colors: T().arrayOf(T().string),
-    triangle: T().oneOf(["top", "hide"]),
-    styles: T().object,
+(na.propTypes = {
+    width: z().oneOfType([z().string, z().number]),
+    colors: z().arrayOf(z().string),
+    triangle: z().oneOf(["top", "hide"]),
+    styles: z().object,
 }),
-    (no.defaultProps = {
+    (na.defaultProps = {
         width: 170,
         colors: ["#D9E3F0", "#F47373", "#697689", "#37D67A", "#2CCCE4", "#555555", "#dce775", "#ff8a65", "#ba68c8"],
         triangle: "top",
         styles: {},
     }),
-    t2(no);
-var na = {
+    t2(na);
+var no = {
         50: "#ffebee",
         100: "#ffcdd2",
         200: "#ef9a9a",
@@ -2415,7 +2414,7 @@ var na = {
         a400: "#651fff",
         a700: "#6200ea",
     },
-    nu = {
+    np = {
         50: "#e8eaf6",
         100: "#c5cae9",
         200: "#9fa8da",
@@ -2431,7 +2430,7 @@ var na = {
         a400: "#3d5afe",
         a700: "#304ffe",
     },
-    np = {
+    nc = {
         50: "#e3f2fd",
         100: "#bbdefb",
         200: "#90caf9",
@@ -2447,7 +2446,7 @@ var na = {
         a400: "#2979ff",
         a700: "#2962ff",
     },
-    nc = {
+    nu = {
         50: "#e1f5fe",
         100: "#b3e5fc",
         200: "#81d4fa",
@@ -2527,7 +2526,7 @@ var na = {
         a400: "#76ff03",
         a700: "#64dd17",
     },
-    nv = {
+    ng = {
         50: "#f9fbe7",
         100: "#f0f4c3",
         200: "#e6ee9c",
@@ -2543,7 +2542,7 @@ var na = {
         a400: "#c6ff00",
         a700: "#aeea00",
     },
-    ng = {
+    nv = {
         50: "#fffde7",
         100: "#fff9c4",
         200: "#fff59d",
@@ -2635,8 +2634,8 @@ var na = {
         var t = e.color,
             r = e.onClick,
             n = e.onSwatchHover,
-            o = e.hover,
-            a = e.active,
+            a = e.hover,
+            o = e.active,
             i = e.circleSize,
             l = e.circleSpacing,
             s = (0, h.default)(
@@ -2660,12 +2659,12 @@ var na = {
                     hover: { swatch: { transform: "scale(1.2)" } },
                     active: { Swatch: { boxShadow: "inset 0 0 0 3px " + t } },
                 },
-                { hover: o, active: a },
+                { hover: a, active: o },
             );
         return d.createElement(
             "div",
             { style: s.swatch },
-            d.createElement(t8, {
+            d.createElement(t6, {
                 style: s.Swatch,
                 color: t,
                 onClick: r,
@@ -2675,18 +2674,18 @@ var na = {
         );
     };
 nC.defaultProps = { circleSize: 28, circleSpacing: 14 };
-let nO = (0, h.handleHover)(nC);
-var n_ = function (e) {
+let nk = (0, h.handleHover)(nC);
+var nS = function (e) {
     var t = e.width,
         r = e.onChange,
         n = e.onSwatchHover,
-        o = e.colors,
-        a = e.hex,
+        a = e.colors,
+        o = e.hex,
         i = e.circleSize,
         l = e.styles,
         s = e.circleSpacing,
-        u = e.className,
-        p = (0, h.default)(
+        p = e.className,
+        c = (0, h.default)(
             tm(
                 {
                     default: {
@@ -2696,49 +2695,49 @@ var n_ = function (e) {
                 void 0 === l ? {} : l,
             ),
         ),
-        c = function (e, t) {
+        u = function (e, t) {
             return r({ hex: e, source: "hex" }, t);
         };
     return d.createElement(
         "div",
-        { style: p.card, className: "circle-picker " + (void 0 === u ? "" : u) },
-        nr(o, function (e) {
-            return d.createElement(nO, {
+        { style: c.card, className: "circle-picker " + (void 0 === p ? "" : p) },
+        nr(a, function (e) {
+            return d.createElement(nk, {
                 key: e,
                 color: e,
-                onClick: c,
+                onClick: u,
                 onSwatchHover: n,
-                active: a === e.toLowerCase(),
+                active: o === e.toLowerCase(),
                 circleSize: i,
                 circleSpacing: s,
             });
         }),
     );
 };
-(n_.propTypes = {
-    width: T().oneOfType([T().string, T().number]),
-    circleSize: T().number,
-    circleSpacing: T().number,
-    styles: T().object,
+(nS.propTypes = {
+    width: z().oneOfType([z().string, z().number]),
+    circleSize: z().number,
+    circleSpacing: z().number,
+    styles: z().object,
 }),
-    (n_.defaultProps = {
+    (nS.defaultProps = {
         width: 252,
         circleSize: 28,
         circleSpacing: 14,
         colors: [
-            na["500"],
+            no["500"],
             ni["500"],
             nl["500"],
             ns["500"],
-            nu["500"],
             np["500"],
             nc["500"],
+            nu["500"],
             nf["500"],
             nd["500"],
             nh["500"],
             nb["500"],
-            nv["500"],
             ng["500"],
+            nv["500"],
             nx["500"],
             ny["500"],
             nm["500"],
@@ -2747,11 +2746,11 @@ var n_ = function (e) {
         ],
         styles: {},
     }),
-    t2(n_);
-let nS = function (e) {
+    t2(nS);
+let nO = function (e) {
     return void 0 === e;
 };
-var nk = r(717692),
+var n_ = r(717692),
     nj = (function () {
         function e(e, t) {
             for (var r = 0; r < t.length; r++) {
@@ -2816,8 +2815,8 @@ var nk = r(717692),
                               r.props.onChange(
                                   {
                                       h: e.h || r.props.hsl.h,
-                                      s: Number(nS(e.s) ? r.props.hsl.s : e.s),
-                                      l: Number(nS(e.l) ? r.props.hsl.l : e.l),
+                                      s: Number(nO(e.s) ? r.props.hsl.s : e.s),
+                                      l: Number(nO(e.l) ? r.props.hsl.l : e.l),
                                       source: "hsl",
                                   },
                                   t,
@@ -3026,7 +3025,7 @@ var nk = r(717692),
                                                     return (e.icon = t);
                                                 },
                                             },
-                                            d.createElement(nk.default, {
+                                            d.createElement(n_.default, {
                                                 style: t.svg,
                                                 onMouseOver: this.showHighlight,
                                                 onMouseEnter: this.showHighlight,
@@ -3052,7 +3051,7 @@ var nk = r(717692),
         );
     })(d.Component);
 nR.defaultProps = { view: "hex" };
-let nM = function () {
+let nB = function () {
         var e = (0, h.default)({
             default: {
                 picker: {
@@ -3067,7 +3066,7 @@ let nM = function () {
         });
         return d.createElement("div", { style: e.picker });
     },
-    nP = function () {
+    nF = function () {
         var e = (0, h.default)({
             default: {
                 picker: {
@@ -3081,18 +3080,18 @@ let nM = function () {
         });
         return d.createElement("div", { style: e.picker });
     };
-var nB = function (e) {
+var nT = function (e) {
     var t = e.width,
         r = e.onChange,
         n = e.disableAlpha,
-        o = e.rgb,
-        a = e.hsl,
+        a = e.rgb,
+        o = e.hsl,
         i = e.hsv,
         l = e.hex,
         s = e.renderers,
-        u = e.styles,
-        p = e.className,
-        c = e.defaultView,
+        p = e.styles,
+        c = e.className,
+        u = e.defaultView,
         f = (0, h.default)(
             tm(
                 {
@@ -3128,7 +3127,7 @@ var nB = function (e) {
                             absolute: "0px 0px 0px 0px",
                             borderRadius: "8px",
                             boxShadow: "inset 0 0 0 1px rgba(0,0,0,.1)",
-                            background: "rgba(" + o.r + ", " + o.g + ", " + o.b + ", " + o.a + ")",
+                            background: "rgba(" + a.r + ", " + a.g + ", " + a.b + ", " + a.a + ")",
                             zIndex: "2",
                         },
                         toggles: { flex: "1" },
@@ -3144,17 +3143,17 @@ var nB = function (e) {
                         swatch: { width: "10px", height: "10px", marginTop: "0px" },
                     },
                 },
-                void 0 === u ? {} : u,
+                void 0 === p ? {} : p,
             ),
             { disableAlpha: n },
         );
     return d.createElement(
         "div",
-        { style: f.picker, className: "chrome-picker " + (void 0 === p ? "" : p) },
+        { style: f.picker, className: "chrome-picker " + (void 0 === c ? "" : c) },
         d.createElement(
             "div",
             { style: f.saturation },
-            d.createElement(tH, { style: f.Saturation, hsl: a, hsv: i, pointer: nP, onChange: r }),
+            d.createElement(tM, { style: f.Saturation, hsl: o, hsv: i, pointer: nF, onChange: r }),
         ),
         d.createElement(
             "div",
@@ -3178,33 +3177,33 @@ var nB = function (e) {
                     d.createElement(
                         "div",
                         { style: f.hue },
-                        d.createElement(B, { style: f.Hue, hsl: a, pointer: nM, onChange: r }),
+                        d.createElement(T, { style: f.Hue, hsl: o, pointer: nB, onChange: r }),
                     ),
                     d.createElement(
                         "div",
                         { style: f.alpha },
-                        d.createElement(O, { style: f.Alpha, rgb: o, hsl: a, pointer: nM, renderers: s, onChange: r }),
+                        d.createElement(k, { style: f.Alpha, rgb: a, hsl: o, pointer: nB, renderers: s, onChange: r }),
                     ),
                 ),
             ),
-            d.createElement(nR, { rgb: o, hsl: a, hex: l, view: c, onChange: r, disableAlpha: n }),
+            d.createElement(nR, { rgb: a, hsl: o, hex: l, view: u, onChange: r, disableAlpha: n }),
         ),
     );
 };
-(nB.propTypes = {
-    width: T().oneOfType([T().string, T().number]),
-    disableAlpha: T().bool,
-    styles: T().object,
-    defaultView: T().oneOf(["hex", "rgb", "hsl"]),
+(nT.propTypes = {
+    width: z().oneOfType([z().string, z().number]),
+    disableAlpha: z().bool,
+    styles: z().object,
+    defaultView: z().oneOf(["hex", "rgb", "hsl"]),
 }),
-    (nB.defaultProps = { width: 225, disableAlpha: !1, styles: {} }),
-    t2(nB);
-let nF = function (e) {
+    (nT.defaultProps = { width: 225, disableAlpha: !1, styles: {} }),
+    t2(nT);
+let nA = function (e) {
         var t = e.color,
             r = e.onClick,
             n = e.onSwatchHover,
-            o = e.active,
-            a = (0, h.default)(
+            a = e.active,
+            o = (0, h.default)(
                 {
                     default: {
                         color: {
@@ -3223,25 +3222,25 @@ let nF = function (e) {
                     "color-#FFFFFF": { color: { boxShadow: "inset 0 0 0 1px #ddd" }, dot: { background: "#000" } },
                     transparent: { dot: { background: "#000" } },
                 },
-                { active: o, "color-#FFFFFF": "#FFFFFF" === t, transparent: "transparent" === t },
+                { active: a, "color-#FFFFFF": "#FFFFFF" === t, transparent: "transparent" === t },
             );
         return d.createElement(
-            t8,
+            t6,
             {
-                style: a.color,
+                style: o.color,
                 color: t,
                 onClick: void 0 === r ? function () {} : r,
                 onHover: n,
                 focusStyle: { boxShadow: "0 0 4px " + t },
             },
-            d.createElement("div", { style: a.dot }),
+            d.createElement("div", { style: o.dot }),
         );
     },
-    nT = function (e) {
+    nz = function (e) {
         var t = e.hex,
             r = e.rgb,
             n = e.onChange,
-            o = (0, h.default)({
+            a = (0, h.default)({
                 default: {
                     fields: { display: "flex", paddingBottom: "6px", paddingRight: "5px", position: "relative" },
                     active: {
@@ -3288,51 +3287,51 @@ let nF = function (e) {
                     },
                 },
             }),
-            a = function (e, t) {
+            o = function (e, t) {
                 e.r || e.g || e.b
                     ? n({ r: e.r || r.r, g: e.g || r.g, b: e.b || r.b, source: "rgb" }, t)
                     : n({ hex: e.hex, source: "hex" }, t);
             };
         return d.createElement(
             "div",
-            { style: o.fields, className: "flexbox-fix" },
-            d.createElement("div", { style: o.active }),
+            { style: a.fields, className: "flexbox-fix" },
+            d.createElement("div", { style: a.active }),
             d.createElement(j, {
-                style: { wrap: o.HEXwrap, input: o.HEXinput, label: o.HEXlabel },
+                style: { wrap: a.HEXwrap, input: a.HEXinput, label: a.HEXlabel },
                 label: "hex",
                 value: t,
-                onChange: a,
+                onChange: o,
             }),
             d.createElement(j, {
-                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
+                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
                 label: "r",
                 value: r.r,
-                onChange: a,
+                onChange: o,
             }),
             d.createElement(j, {
-                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
+                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
                 label: "g",
                 value: r.g,
-                onChange: a,
+                onChange: o,
             }),
             d.createElement(j, {
-                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
+                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
                 label: "b",
                 value: r.b,
-                onChange: a,
+                onChange: o,
             }),
         );
     };
-var nD = function (e) {
+var nP = function (e) {
     var t = e.onChange,
         r = e.onSwatchHover,
         n = e.colors,
-        o = e.hex,
-        a = e.rgb,
+        a = e.hex,
+        o = e.rgb,
         i = e.styles,
         l = void 0 === i ? {} : i,
         s = e.className,
-        u = (0, h.default)(
+        p = (0, h.default)(
             tm(
                 {
                     default: {
@@ -3344,35 +3343,35 @@ var nD = function (e) {
                 l,
             ),
         ),
-        p = function (e, r) {
+        c = function (e, r) {
             e.hex ? tZ(e.hex) && t({ hex: e.hex, source: "hex" }, r) : t(e, r);
         };
     return d.createElement(
         tw,
-        { style: u.Compact, styles: l },
+        { style: p.Compact, styles: l },
         d.createElement(
             "div",
-            { style: u.compact, className: "compact-picker " + (void 0 === s ? "" : s) },
+            { style: p.compact, className: "compact-picker " + (void 0 === s ? "" : s) },
             d.createElement(
                 "div",
                 null,
                 nr(n, function (e) {
-                    return d.createElement(nF, {
+                    return d.createElement(nA, {
                         key: e,
                         color: e,
-                        active: e.toLowerCase() === o,
-                        onClick: p,
+                        active: e.toLowerCase() === a,
+                        onClick: c,
                         onSwatchHover: r,
                     });
                 }),
-                d.createElement("div", { style: u.clear }),
+                d.createElement("div", { style: p.clear }),
             ),
-            d.createElement(nT, { hex: o, rgb: a, onChange: p }),
+            d.createElement(nz, { hex: a, rgb: o, onChange: c }),
         ),
     );
 };
-(nD.propTypes = { colors: T().arrayOf(T().string), styles: T().object }),
-    (nD.defaultProps = {
+(nP.propTypes = { colors: z().arrayOf(z().string), styles: z().object }),
+    (nP.defaultProps = {
         colors: [
             "#4D4D4D",
             "#999999",
@@ -3413,29 +3412,29 @@ var nD = function (e) {
         ],
         styles: {},
     }),
-    t2(nD);
-let nL = (0, h.handleHover)(function (e) {
+    t2(nP);
+let nD = (0, h.handleHover)(function (e) {
     var t = e.hover,
         r = e.color,
         n = e.onClick,
-        o = e.onSwatchHover,
-        a = { position: "relative", zIndex: "2", outline: "2px solid #fff", boxShadow: "0 0 5px 2px rgba(0,0,0,0.25)" },
+        a = e.onSwatchHover,
+        o = { position: "relative", zIndex: "2", outline: "2px solid #fff", boxShadow: "0 0 5px 2px rgba(0,0,0,0.25)" },
         i = (0, h.default)(
-            { default: { swatch: { width: "25px", height: "25px", fontSize: "0" } }, hover: { swatch: a } },
+            { default: { swatch: { width: "25px", height: "25px", fontSize: "0" } }, hover: { swatch: o } },
             { hover: t },
         );
     return d.createElement(
         "div",
         { style: i.swatch },
-        d.createElement(t8, { color: r, onClick: n, onHover: o, focusStyle: a }),
+        d.createElement(t6, { color: r, onClick: n, onHover: a, focusStyle: o }),
     );
 });
-var nz = function (e) {
+var nL = function (e) {
     var t = e.width,
         r = e.colors,
         n = e.onChange,
-        o = e.onSwatchHover,
-        a = e.triangle,
+        a = e.onSwatchHover,
+        o = e.triangle,
         i = e.styles,
         l = e.className,
         s = (0, h.default)(
@@ -3481,14 +3480,14 @@ var nz = function (e) {
                 void 0 === i ? {} : i,
             ),
             {
-                "hide-triangle": "hide" === a,
-                "top-left-triangle": "top-left" === a,
-                "top-right-triangle": "top-right" === a,
-                "bottom-left-triangle": "bottom-left" === a,
-                "bottom-right-triangle": "bottom-right" === a,
+                "hide-triangle": "hide" === o,
+                "top-left-triangle": "top-left" === o,
+                "top-right-triangle": "top-right" === o,
+                "bottom-left-triangle": "bottom-left" === o,
+                "bottom-right-triangle": "bottom-right" === o,
             },
         ),
-        u = function (e, t) {
+        p = function (e, t) {
             return n({ hex: e, source: "hex" }, t);
         };
     return d.createElement(
@@ -3497,17 +3496,17 @@ var nz = function (e) {
         d.createElement("div", { style: s.triangleShadow }),
         d.createElement("div", { style: s.triangle }),
         nr(r, function (e) {
-            return d.createElement(nL, { color: e, key: e, onClick: u, onSwatchHover: o });
+            return d.createElement(nD, { color: e, key: e, onClick: p, onSwatchHover: a });
         }),
     );
 };
-(nz.propTypes = {
-    width: T().oneOfType([T().string, T().number]),
-    colors: T().arrayOf(T().string),
-    triangle: T().oneOf(["hide", "top-left", "top-right", "bottom-left", "bottom-right"]),
-    styles: T().object,
+(nL.propTypes = {
+    width: z().oneOfType([z().string, z().number]),
+    colors: z().arrayOf(z().string),
+    triangle: z().oneOf(["hide", "top-left", "top-right", "bottom-left", "bottom-right"]),
+    styles: z().object,
 }),
-    (nz.defaultProps = {
+    (nL.defaultProps = {
         width: 200,
         colors: [
             "#B80000",
@@ -3530,8 +3529,8 @@ var nz = function (e) {
         triangle: "top-left",
         styles: {},
     }),
-    t2(nz);
-var nA =
+    t2(nL);
+var nH =
         Object.assign ||
         function (e) {
             for (var t = 1; t < arguments.length; t++) {
@@ -3540,16 +3539,16 @@ var nA =
             }
             return e;
         },
-    nH = function (e) {
+    nM = function (e) {
         var t = e.width,
             r = e.height,
             n = e.onChange,
-            o = e.hsl,
-            a = e.direction,
+            a = e.hsl,
+            o = e.direction,
             i = e.pointer,
             l = e.styles,
             s = e.className,
-            u = (0, h.default)(
+            p = (0, h.default)(
                 tm(
                     { default: { picker: { position: "relative", width: t, height: r }, hue: { radius: "2px" } } },
                     void 0 === l ? {} : l,
@@ -3557,22 +3556,22 @@ var nA =
             );
         return d.createElement(
             "div",
-            { style: u.picker, className: "hue-picker " + (void 0 === s ? "" : s) },
+            { style: p.picker, className: "hue-picker " + (void 0 === s ? "" : s) },
             d.createElement(
-                B,
-                nA({}, u.hue, {
-                    hsl: o,
+                T,
+                nH({}, p.hue, {
+                    hsl: a,
                     pointer: i,
                     onChange: function (e) {
                         return n({ a: 1, h: e.h, l: 0.5, s: 1 });
                     },
-                    direction: a,
+                    direction: o,
                 }),
             ),
         );
     };
-(nH.propTypes = { styles: T().object }),
-    (nH.defaultProps = {
+(nM.propTypes = { styles: z().object }),
+    (nM.defaultProps = {
         width: "316px",
         height: "16px",
         direction: "horizontal",
@@ -3598,13 +3597,13 @@ var nA =
         },
         styles: {},
     }),
-    t2(nH),
+    t2(nM),
     t2(function (e) {
         var t = e.onChange,
             r = e.hex,
             n = e.rgb,
-            o = e.styles,
-            a = void 0 === o ? {} : o,
+            a = e.styles,
+            o = void 0 === a ? {} : a,
             i = e.className,
             l = (0, h.default)(
                 tm(
@@ -3656,7 +3655,7 @@ var nA =
                             third: { flex: "1", paddingRight: "10px" },
                         },
                     },
-                    a,
+                    o,
                 ),
             ),
             s = function (e, r) {
@@ -3666,7 +3665,7 @@ var nA =
             };
         return d.createElement(
             tw,
-            { styles: a },
+            { styles: o },
             d.createElement(
                 "div",
                 { style: l.material, className: "material-picker " + (void 0 === i ? "" : i) },
@@ -3717,8 +3716,8 @@ let nN = function (e) {
         var t = e.onChange,
             r = e.rgb,
             n = e.hsv,
-            o = e.hex,
-            a = (0, h.default)({
+            a = e.hex,
+            o = (0, h.default)({
                 default: {
                     fields: { paddingTop: "5px", paddingBottom: "9px", width: "80px", position: "relative" },
                     divider: { height: "5px" },
@@ -3769,70 +3768,70 @@ let nN = function (e) {
                     symbol: { height: "20px", lineHeight: "22px", paddingBottom: "7px" },
                 },
             }),
-            i = function (e, o) {
+            i = function (e, a) {
                 e["#"]
-                    ? tZ(e["#"]) && t({ hex: e["#"], source: "hex" }, o)
+                    ? tZ(e["#"]) && t({ hex: e["#"], source: "hex" }, a)
                     : e.r || e.g || e.b
-                      ? t({ r: e.r || r.r, g: e.g || r.g, b: e.b || r.b, source: "rgb" }, o)
-                      : (e.h || e.s || e.v) && t({ h: e.h || n.h, s: e.s || n.s, v: e.v || n.v, source: "hsv" }, o);
+                      ? t({ r: e.r || r.r, g: e.g || r.g, b: e.b || r.b, source: "rgb" }, a)
+                      : (e.h || e.s || e.v) && t({ h: e.h || n.h, s: e.s || n.s, v: e.v || n.v, source: "hsv" }, a);
             };
         return d.createElement(
             "div",
-            { style: a.fields },
+            { style: o.fields },
             d.createElement(j, {
-                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
+                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
                 label: "h",
                 value: Math.round(n.h),
                 onChange: i,
             }),
             d.createElement(j, {
-                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
+                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
                 label: "s",
                 value: Math.round(100 * n.s),
                 onChange: i,
             }),
             d.createElement(j, {
-                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
+                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
                 label: "v",
                 value: Math.round(100 * n.v),
                 onChange: i,
             }),
-            d.createElement("div", { style: a.divider }),
+            d.createElement("div", { style: o.divider }),
             d.createElement(j, {
-                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
+                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
                 label: "r",
                 value: r.r,
                 onChange: i,
             }),
             d.createElement(j, {
-                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
+                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
                 label: "g",
                 value: r.g,
                 onChange: i,
             }),
             d.createElement(j, {
-                style: { wrap: a.RGBwrap, input: a.RGBinput, label: a.RGBlabel },
+                style: { wrap: o.RGBwrap, input: o.RGBinput, label: o.RGBlabel },
                 label: "b",
                 value: r.b,
                 onChange: i,
             }),
-            d.createElement("div", { style: a.divider }),
+            d.createElement("div", { style: o.divider }),
             d.createElement(j, {
-                style: { wrap: a.HEXwrap, input: a.HEXinput, label: a.HEXlabel },
+                style: { wrap: o.HEXwrap, input: o.HEXinput, label: o.HEXlabel },
                 label: "#",
-                value: o.replace("#", ""),
+                value: a.replace("#", ""),
                 onChange: i,
             }),
             d.createElement(
                 "div",
-                { style: a.fieldSymbols },
-                d.createElement("div", { style: a.symbol }, "\xb0"),
-                d.createElement("div", { style: a.symbol }, "%"),
-                d.createElement("div", { style: a.symbol }, "%"),
+                { style: o.fieldSymbols },
+                d.createElement("div", { style: o.symbol }, "\xb0"),
+                d.createElement("div", { style: o.symbol }, "%"),
+                d.createElement("div", { style: o.symbol }, "%"),
             ),
         );
     },
-    nU = function (e) {
+    nG = function (e) {
         var t = e.hsl,
             r = (0, h.default)(
                 {
@@ -3851,7 +3850,7 @@ let nN = function (e) {
             );
         return d.createElement("div", { style: r.picker });
     },
-    nW = function () {
+    nU = function () {
         var e = (0, h.default)({
             default: {
                 triangle: {
@@ -3888,8 +3887,8 @@ let nN = function (e) {
         var t = e.onClick,
             r = e.label,
             n = e.children,
-            o = e.active,
-            a = (0, h.default)(
+            a = e.active,
+            o = (0, h.default)(
                 {
                     default: {
                         button: {
@@ -3908,11 +3907,11 @@ let nN = function (e) {
                     },
                     active: { button: { boxShadow: "0 0 0 1px #878787" } },
                 },
-                { active: o },
+                { active: a },
             );
-        return d.createElement("div", { style: a.button, onClick: t }, r || n);
+        return d.createElement("div", { style: o.button, onClick: t }, r || n);
     },
-    nG = function (e) {
+    nW = function (e) {
         var t = e.rgb,
             r = e.currentColor,
             n = (0, h.default)({
@@ -4045,20 +4044,20 @@ var nV = (function () {
                                 d.createElement(
                                     "div",
                                     { style: n.saturation },
-                                    d.createElement(tH, {
+                                    d.createElement(tM, {
                                         hsl: this.props.hsl,
                                         hsv: this.props.hsv,
-                                        pointer: nU,
+                                        pointer: nG,
                                         onChange: this.props.onChange,
                                     }),
                                 ),
                                 d.createElement(
                                     "div",
                                     { style: n.hue },
-                                    d.createElement(B, {
+                                    d.createElement(T, {
                                         direction: "vertical",
                                         hsl: this.props.hsl,
-                                        pointer: nW,
+                                        pointer: nU,
                                         onChange: this.props.onChange,
                                     }),
                                 ),
@@ -4071,7 +4070,7 @@ var nV = (function () {
                                         d.createElement(
                                             "div",
                                             { style: n.previews },
-                                            d.createElement(nG, {
+                                            d.createElement(nW, {
                                                 rgb: this.props.rgb,
                                                 currentColor: this.state.currentColor,
                                             }),
@@ -4102,15 +4101,15 @@ var nV = (function () {
             t
         );
     })(d.Component);
-(nI.propTypes = { header: T().string, styles: T().object }),
+(nI.propTypes = { header: z().string, styles: z().object }),
     (nI.defaultProps = { header: "Color Picker", styles: {} }),
     t2(nI);
 let nY = function (e) {
     var t = e.onChange,
         r = e.rgb,
         n = e.hsl,
-        o = e.hex,
-        a = e.disableAlpha,
+        a = e.hex,
+        o = e.disableAlpha,
         i = (0, h.default)(
             {
                 default: {
@@ -4137,17 +4136,17 @@ let nY = function (e) {
                 },
                 disableAlpha: { alpha: { display: "none" } },
             },
-            { disableAlpha: a },
+            { disableAlpha: o },
         ),
-        l = function (e, o) {
+        l = function (e, a) {
             e.hex
-                ? tZ(e.hex) && t({ hex: e.hex, source: "hex" }, o)
+                ? tZ(e.hex) && t({ hex: e.hex, source: "hex" }, a)
                 : e.r || e.g || e.b
-                  ? t({ r: e.r || r.r, g: e.g || r.g, b: e.b || r.b, a: r.a, source: "rgb" }, o)
+                  ? t({ r: e.r || r.r, g: e.g || r.g, b: e.b || r.b, a: r.a, source: "rgb" }, a)
                   : e.a &&
                     (e.a < 0 ? (e.a = 0) : e.a > 100 && (e.a = 100),
                     (e.a /= 100),
-                    t({ h: n.h, s: n.s, l: n.l, a: e.a, source: "rgb" }, o));
+                    t({ h: n.h, s: n.s, l: n.l, a: e.a, source: "rgb" }, a));
         };
     return d.createElement(
         "div",
@@ -4158,7 +4157,7 @@ let nY = function (e) {
             d.createElement(j, {
                 style: { input: i.input, label: i.label },
                 label: "hex",
-                value: o.replace("#", ""),
+                value: a.replace("#", ""),
                 onChange: l,
             }),
         ),
@@ -4225,8 +4224,8 @@ var n$ =
         var t = e.colors,
             r = e.onClick,
             n = void 0 === r ? function () {} : r,
-            o = e.onSwatchHover,
-            a = (0, h.default)(
+            a = e.onSwatchHover,
+            o = (0, h.default)(
                 {
                     default: {
                         colors: {
@@ -4249,19 +4248,19 @@ var n$ =
             };
         return d.createElement(
             "div",
-            { style: a.colors, className: "flexbox-fix" },
+            { style: o.colors, className: "flexbox-fix" },
             t.map(function (e) {
                 var t = "string" == typeof e ? { color: e } : e,
                     r = "" + t.color + (t.title || "");
                 return d.createElement(
                     "div",
-                    { key: r, style: a.swatchWrap },
+                    { key: r, style: o.swatchWrap },
                     d.createElement(
-                        t8,
+                        t6,
                         n$({}, t, {
-                            style: a.swatch,
+                            style: o.swatch,
                             onClick: i,
-                            onHover: o,
+                            onHover: a,
                             focusStyle: { boxShadow: "inset 0 0 0 1px rgba(0,0,0,.15), 0 0 4px " + t.color },
                         }),
                     ),
@@ -4270,7 +4269,7 @@ var n$ =
         );
     };
 nK.propTypes = {
-    colors: T().arrayOf(T().oneOfType([T().string, T().shape({ color: T().string, title: T().string })])).isRequired,
+    colors: z().arrayOf(z().oneOfType([z().string, z().shape({ color: z().string, title: z().string })])).isRequired,
 };
 var nq =
         Object.assign ||
@@ -4285,17 +4284,17 @@ var nq =
         var t = e.width,
             r = e.rgb,
             n = e.hex,
-            o = e.hsv,
-            a = e.hsl,
+            a = e.hsv,
+            o = e.hsl,
             i = e.onChange,
             l = e.onSwatchHover,
             s = e.disableAlpha,
-            u = e.presetColors,
-            p = e.renderers,
-            c = e.styles,
-            f = void 0 === c ? {} : c,
+            p = e.presetColors,
+            c = e.renderers,
+            u = e.styles,
+            f = void 0 === u ? {} : u,
             b = e.className,
-            v = (0, h.default)(
+            g = (0, h.default)(
                 tm(
                     {
                         default: nq(
@@ -4359,37 +4358,37 @@ var nq =
             );
         return d.createElement(
             "div",
-            { style: v.picker, className: "sketch-picker " + (void 0 === b ? "" : b) },
+            { style: g.picker, className: "sketch-picker " + (void 0 === b ? "" : b) },
             d.createElement(
                 "div",
-                { style: v.saturation },
-                d.createElement(tH, { style: v.Saturation, hsl: a, hsv: o, onChange: i }),
+                { style: g.saturation },
+                d.createElement(tM, { style: g.Saturation, hsl: o, hsv: a, onChange: i }),
             ),
             d.createElement(
                 "div",
-                { style: v.controls, className: "flexbox-fix" },
+                { style: g.controls, className: "flexbox-fix" },
                 d.createElement(
                     "div",
-                    { style: v.sliders },
-                    d.createElement("div", { style: v.hue }, d.createElement(B, { style: v.Hue, hsl: a, onChange: i })),
+                    { style: g.sliders },
+                    d.createElement("div", { style: g.hue }, d.createElement(T, { style: g.Hue, hsl: o, onChange: i })),
                     d.createElement(
                         "div",
-                        { style: v.alpha },
-                        d.createElement(O, { style: v.Alpha, rgb: r, hsl: a, renderers: p, onChange: i }),
+                        { style: g.alpha },
+                        d.createElement(k, { style: g.Alpha, rgb: r, hsl: o, renderers: c, onChange: i }),
                     ),
                 ),
                 d.createElement(
                     "div",
-                    { style: v.color },
+                    { style: g.color },
                     d.createElement(m, null),
-                    d.createElement("div", { style: v.activeColor }),
+                    d.createElement("div", { style: g.activeColor }),
                 ),
             ),
-            d.createElement(nY, { rgb: r, hsl: a, hex: n, onChange: i, disableAlpha: s }),
-            d.createElement(nK, { colors: u, onClick: i, onSwatchHover: l }),
+            d.createElement(nY, { rgb: r, hsl: o, hex: n, onChange: i, disableAlpha: s }),
+            d.createElement(nK, { colors: p, onClick: i, onSwatchHover: l }),
         );
     };
-(nZ.propTypes = { disableAlpha: T().bool, width: T().oneOfType([T().string, T().number]), styles: T().object }),
+(nZ.propTypes = { disableAlpha: z().bool, width: z().oneOfType([z().string, z().number]), styles: z().object }),
     (nZ.defaultProps = {
         disableAlpha: !1,
         width: 200,
@@ -4417,8 +4416,8 @@ let nJ = function (e) {
         var t = e.hsl,
             r = e.offset,
             n = e.onClick,
-            o = void 0 === n ? function () {} : n,
-            a = e.active,
+            a = void 0 === n ? function () {} : n,
+            o = e.active,
             i = e.first,
             l = e.last,
             s = (0, h.default)(
@@ -4434,12 +4433,12 @@ let nJ = function (e) {
                     last: { swatch: { borderRadius: "0 2px 2px 0" } },
                     active: { swatch: { transform: "scaleY(1.8)", borderRadius: "3.6px/2px" } },
                 },
-                { active: a, first: i, last: l },
+                { active: o, first: i, last: l },
             );
         return d.createElement("div", {
             style: s.swatch,
             onClick: function (e) {
-                return o({ h: t.h, s: 0.5, l: r, source: "hsl" }, e);
+                return a({ h: t.h, s: 0.5, l: r, source: "hsl" }, e);
             },
         });
     },
@@ -4515,22 +4514,22 @@ var n0 = function (e) {
     var t = e.hsl,
         r = e.onChange,
         n = e.pointer,
-        o = e.styles,
-        a = e.className,
+        a = e.styles,
+        o = e.className,
         i = (0, h.default)(
             tm(
                 { default: { hue: { height: "12px", position: "relative" }, Hue: { radius: "2px" } } },
-                void 0 === o ? {} : o,
+                void 0 === a ? {} : a,
             ),
         );
     return d.createElement(
         "div",
-        { style: i.wrap || {}, className: "slider-picker " + (void 0 === a ? "" : a) },
-        d.createElement("div", { style: i.hue }, d.createElement(B, { style: i.Hue, hsl: t, pointer: n, onChange: r })),
+        { style: i.wrap || {}, className: "slider-picker " + (void 0 === o ? "" : o) },
+        d.createElement("div", { style: i.hue }, d.createElement(T, { style: i.Hue, hsl: t, pointer: n, onChange: r })),
         d.createElement("div", { style: i.swatches }, d.createElement(nQ, { hsl: t, onClick: r })),
     );
 };
-(n0.propTypes = { styles: T().object }),
+(n0.propTypes = { styles: z().object }),
     (n0.defaultProps = {
         pointer: function () {
             var e = (0, h.default)({
@@ -4555,8 +4554,8 @@ let n2 = function (e) {
         var t = e.color,
             r = e.onClick,
             n = e.onSwatchHover,
-            o = e.first,
-            a = e.last,
+            a = e.first,
+            o = e.last,
             i = e.active,
             l = (0, h.default)(
                 {
@@ -4570,10 +4569,10 @@ let n2 = function (e) {
                     "color-#FFFFFF": { color: { boxShadow: "inset 0 0 0 1px #ddd" }, check: { color: "#333" } },
                     transparent: { check: { color: "#333" } },
                 },
-                { first: o, last: a, active: i, "color-#FFFFFF": "#FFFFFF" === t, transparent: "transparent" === t },
+                { first: a, last: o, active: i, "color-#FFFFFF": "#FFFFFF" === t, transparent: "transparent" === t },
             );
         return d.createElement(
-            t8,
+            t6,
             {
                 color: t,
                 style: l.color,
@@ -4588,36 +4587,36 @@ let n2 = function (e) {
         var t = e.onClick,
             r = e.onSwatchHover,
             n = e.group,
-            o = e.active,
-            a = (0, h.default)({
+            a = e.active,
+            o = (0, h.default)({
                 default: { group: { paddingBottom: "10px", width: "40px", float: "left", marginRight: "10px" } },
             });
         return d.createElement(
             "div",
-            { style: a.group },
-            nr(n, function (e, a) {
+            { style: o.group },
+            nr(n, function (e, o) {
                 return d.createElement(n2, {
                     key: e,
                     color: e,
-                    active: e.toLowerCase() === o,
-                    first: 0 === a,
-                    last: a === n.length - 1,
+                    active: e.toLowerCase() === a,
+                    first: 0 === o,
+                    last: o === n.length - 1,
                     onClick: t,
                     onSwatchHover: r,
                 });
             }),
         );
     };
-var n3 = function (e) {
+var n4 = function (e) {
     var t = e.width,
         r = e.height,
         n = e.onChange,
-        o = e.onSwatchHover,
-        a = e.colors,
+        a = e.onSwatchHover,
+        o = e.colors,
         i = e.hex,
         l = e.styles,
         s = e.className,
-        u = (0, h.default)(
+        p = (0, h.default)(
             tm(
                 {
                     default: {
@@ -4630,59 +4629,59 @@ var n3 = function (e) {
                 void 0 === l ? {} : l,
             ),
         ),
-        p = function (e, t) {
+        c = function (e, t) {
             return n({ hex: e, source: "hex" }, t);
         };
     return d.createElement(
         "div",
-        { style: u.picker, className: "swatches-picker " + (void 0 === s ? "" : s) },
+        { style: p.picker, className: "swatches-picker " + (void 0 === s ? "" : s) },
         d.createElement(
             tw,
             null,
             d.createElement(
                 "div",
-                { style: u.overflow },
+                { style: p.overflow },
                 d.createElement(
                     "div",
-                    { style: u.body },
-                    nr(a, function (e) {
+                    { style: p.body },
+                    nr(o, function (e) {
                         return d.createElement(n5, {
                             key: e.toString(),
                             group: e,
                             active: i,
-                            onClick: p,
-                            onSwatchHover: o,
+                            onClick: c,
+                            onSwatchHover: a,
                         });
                     }),
-                    d.createElement("div", { style: u.clear }),
+                    d.createElement("div", { style: p.clear }),
                 ),
             ),
         ),
     );
 };
-(n3.propTypes = {
-    width: T().oneOfType([T().string, T().number]),
-    height: T().oneOfType([T().string, T().number]),
-    colors: T().arrayOf(T().arrayOf(T().string)),
-    styles: T().object,
+(n4.propTypes = {
+    width: z().oneOfType([z().string, z().number]),
+    height: z().oneOfType([z().string, z().number]),
+    colors: z().arrayOf(z().arrayOf(z().string)),
+    styles: z().object,
 }),
-    (n3.defaultProps = {
+    (n4.defaultProps = {
         width: 320,
         height: 240,
         colors: [
-            [na["900"], na["700"], na["500"], na["300"], na["100"]],
+            [no["900"], no["700"], no["500"], no["300"], no["100"]],
             [ni["900"], ni["700"], ni["500"], ni["300"], ni["100"]],
             [nl["900"], nl["700"], nl["500"], nl["300"], nl["100"]],
             [ns["900"], ns["700"], ns["500"], ns["300"], ns["100"]],
-            [nu["900"], nu["700"], nu["500"], nu["300"], nu["100"]],
             [np["900"], np["700"], np["500"], np["300"], np["100"]],
             [nc["900"], nc["700"], nc["500"], nc["300"], nc["100"]],
+            [nu["900"], nu["700"], nu["500"], nu["300"], nu["100"]],
             [nf["900"], nf["700"], nf["500"], nf["300"], nf["100"]],
             [nd["900"], nd["700"], nd["500"], nd["300"], nd["100"]],
             ["#194D33", nh["700"], nh["500"], nh["300"], nh["100"]],
             [nb["900"], nb["700"], nb["500"], nb["300"], nb["100"]],
-            [nv["900"], nv["700"], nv["500"], nv["300"], nv["100"]],
             [ng["900"], ng["700"], ng["500"], ng["300"], ng["100"]],
+            [nv["900"], nv["700"], nv["500"], nv["300"], nv["100"]],
             [nx["900"], nx["700"], nx["500"], nx["300"], nx["100"]],
             [ny["900"], ny["700"], ny["500"], ny["300"], ny["100"]],
             [nm["900"], nm["700"], nm["500"], nm["300"], nm["100"]],
@@ -4692,22 +4691,22 @@ var n3 = function (e) {
         ],
         styles: {},
     }),
-    t2(n3);
-var n4 = function (e) {
+    t2(n4);
+var n3 = function (e) {
     var t = e.onChange,
         r = e.onSwatchHover,
         n = e.hex,
-        o = e.colors,
-        a = e.width,
+        a = e.colors,
+        o = e.width,
         i = e.triangle,
         l = e.styles,
         s = e.className,
-        u = (0, h.default)(
+        p = (0, h.default)(
             tm(
                 {
                     default: {
                         card: {
-                            width: a,
+                            width: o,
                             background: "#fff",
                             border: "0 solid rgba(0,0,0,0.25)",
                             boxShadow: "0 1px 4px rgba(0,0,0,0.25)",
@@ -4783,41 +4782,41 @@ var n4 = function (e) {
                 "top-right-triangle": "top-right" === i,
             },
         ),
-        p = function (e, r) {
+        c = function (e, r) {
             tZ(e) && t({ hex: e, source: "hex" }, r);
         };
     return d.createElement(
         "div",
-        { style: u.card, className: "twitter-picker " + (void 0 === s ? "" : s) },
-        d.createElement("div", { style: u.triangleShadow }),
-        d.createElement("div", { style: u.triangle }),
+        { style: p.card, className: "twitter-picker " + (void 0 === s ? "" : s) },
+        d.createElement("div", { style: p.triangleShadow }),
+        d.createElement("div", { style: p.triangle }),
         d.createElement(
             "div",
-            { style: u.body },
-            nr(o, function (e, t) {
-                return d.createElement(t8, {
+            { style: p.body },
+            nr(a, function (e, t) {
+                return d.createElement(t6, {
                     key: t,
                     color: e,
                     hex: e,
-                    style: u.swatch,
-                    onClick: p,
+                    style: p.swatch,
+                    onClick: c,
                     onHover: r,
                     focusStyle: { boxShadow: "0 0 4px " + e },
                 });
             }),
-            d.createElement("div", { style: u.hash }, "#"),
-            d.createElement(j, { label: null, style: { input: u.input }, value: n.replace("#", ""), onChange: p }),
-            d.createElement("div", { style: u.clear }),
+            d.createElement("div", { style: p.hash }, "#"),
+            d.createElement(j, { label: null, style: { input: p.input }, value: n.replace("#", ""), onChange: c }),
+            d.createElement("div", { style: p.clear }),
         ),
     );
 };
-(n4.propTypes = {
-    width: T().oneOfType([T().string, T().number]),
-    triangle: T().oneOf(["hide", "top-left", "top-right"]),
-    colors: T().arrayOf(T().string),
-    styles: T().object,
+(n3.propTypes = {
+    width: z().oneOfType([z().string, z().number]),
+    triangle: z().oneOf(["hide", "top-left", "top-right"]),
+    colors: z().arrayOf(z().string),
+    styles: z().object,
 }),
-    (n4.defaultProps = {
+    (n3.defaultProps = {
         width: 276,
         colors: [
             "#FF6900",
@@ -4834,8 +4833,8 @@ var n4 = function (e) {
         triangle: "top-left",
         styles: {},
     }),
-    t2(n4);
-var n6 = function (e) {
+    t2(n3);
+var n8 = function (e) {
     var t = (0, h.default)({
         default: {
             picker: {
@@ -4857,9 +4856,9 @@ var n6 = function (e) {
     });
     return d.createElement("div", { style: t.picker });
 };
-(n6.propTypes = { hsl: T().shape({ h: T().number, s: T().number, l: T().number, a: T().number }) }),
-    (n6.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
-var n8 = function (e) {
+(n8.propTypes = { hsl: z().shape({ h: z().number, s: z().number, l: z().number, a: z().number }) }),
+    (n8.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
+var n6 = function (e) {
     var t = (0, h.default)({
         default: {
             picker: {
@@ -4874,35 +4873,35 @@ var n8 = function (e) {
     });
     return d.createElement("div", { style: t.picker });
 };
-(n8.propTypes = { hsl: T().shape({ h: T().number, s: T().number, l: T().number, a: T().number }) }),
-    (n8.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
-let n7 = function (e) {
+(n6.propTypes = { hsl: z().shape({ h: z().number, s: z().number, l: z().number, a: z().number }) }),
+    (n6.defaultProps = { hsl: { a: 1, h: 249.94, l: 0.2, s: 0.5 } });
+let n9 = function (e) {
     var t = e.onChange,
         r = e.rgb,
         n = e.hsl,
-        o = e.hex,
-        a = e.hsv,
+        a = e.hex,
+        o = e.hsv,
         i = function (e, r) {
             if (e.hex) tZ(e.hex) && t({ hex: e.hex, source: "hex" }, r);
             else if (e.rgb) {
                 var n = e.rgb.split(",");
                 tQ(e.rgb, "rgb") && t({ r: n[0], g: n[1], b: n[2], a: 1, source: "rgb" }, r);
             } else if (e.hsv) {
-                var o = e.hsv.split(",");
+                var a = e.hsv.split(",");
                 tQ(e.hsv, "hsv") &&
-                    ((o[2] = o[2].replace("%", "")),
-                    (o[1] = o[1].replace("%", "")),
-                    (o[0] = o[0].replace("\xb0", "")),
-                    1 == o[1] ? (o[1] = 0.01) : 1 == o[2] && (o[2] = 0.01),
-                    t({ h: Number(o[0]), s: Number(o[1]), v: Number(o[2]), source: "hsv" }, r));
-            } else if (e.hsl) {
-                var a = e.hsl.split(",");
-                tQ(e.hsl, "hsl") &&
                     ((a[2] = a[2].replace("%", "")),
                     (a[1] = a[1].replace("%", "")),
                     (a[0] = a[0].replace("\xb0", "")),
-                    1 == p[1] ? (p[1] = 0.01) : 1 == p[2] && (p[2] = 0.01),
-                    t({ h: Number(a[0]), s: Number(a[1]), v: Number(a[2]), source: "hsl" }, r));
+                    1 == a[1] ? (a[1] = 0.01) : 1 == a[2] && (a[2] = 0.01),
+                    t({ h: Number(a[0]), s: Number(a[1]), v: Number(a[2]), source: "hsv" }, r));
+            } else if (e.hsl) {
+                var o = e.hsl.split(",");
+                tQ(e.hsl, "hsl") &&
+                    ((o[2] = o[2].replace("%", "")),
+                    (o[1] = o[1].replace("%", "")),
+                    (o[0] = o[0].replace("\xb0", "")),
+                    1 == c[1] ? (c[1] = 0.01) : 1 == c[2] && (c[2] = 0.01),
+                    t({ h: Number(o[0]), s: Number(o[1]), v: Number(o[2]), source: "hsl" }, r));
             }
         },
         l = (0, h.default)({
@@ -4967,8 +4966,8 @@ let n7 = function (e) {
             },
         }),
         s = r.r + ", " + r.g + ", " + r.b,
-        u = Math.round(n.h) + "\xb0, " + Math.round(100 * n.s) + "%, " + Math.round(100 * n.l) + "%",
-        p = Math.round(a.h) + "\xb0, " + Math.round(100 * a.s) + "%, " + Math.round(100 * a.v) + "%";
+        p = Math.round(n.h) + "\xb0, " + Math.round(100 * n.s) + "%, " + Math.round(100 * n.l) + "%",
+        c = Math.round(o.h) + "\xb0, " + Math.round(100 * o.s) + "%, " + Math.round(100 * o.v) + "%";
     return d.createElement(
         "div",
         { style: l.wrap, className: "flexbox-fix" },
@@ -4978,7 +4977,7 @@ let n7 = function (e) {
             d.createElement(
                 "div",
                 { style: l.double },
-                d.createElement(j, { style: { input: l.input, label: l.label }, label: "hex", value: o, onChange: i }),
+                d.createElement(j, { style: { input: l.input, label: l.label }, label: "hex", value: a, onChange: i }),
             ),
             d.createElement(
                 "div",
@@ -4999,7 +4998,7 @@ let n7 = function (e) {
                     d.createElement(j, {
                         style: { input: l.input2, label: l.label2 },
                         label: "hsv",
-                        value: p,
+                        value: c,
                         onChange: i,
                     }),
                 ),
@@ -5009,7 +5008,7 @@ let n7 = function (e) {
                     d.createElement(j, {
                         style: { input: l.input2, label: l.label2 },
                         label: "hsl",
-                        value: u,
+                        value: p,
                         onChange: i,
                     }),
                 ),
@@ -5017,17 +5016,17 @@ let n7 = function (e) {
         ),
     );
 };
-var n9 = function (e) {
+var n7 = function (e) {
     var t = e.width,
         r = e.onChange,
         n = e.rgb,
-        o = e.hsl,
-        a = e.hsv,
+        a = e.hsl,
+        o = e.hsv,
         i = e.hex,
         l = e.header,
         s = e.styles,
-        u = e.className,
-        p = (0, h.default)(
+        p = e.className,
+        c = (0, h.default)(
             tm(
                 {
                     default: {
@@ -5071,30 +5070,30 @@ var n9 = function (e) {
         );
     return d.createElement(
         "div",
-        { style: p.picker, className: "google-picker " + (void 0 === u ? "" : u) },
-        d.createElement("div", { style: p.head }, l),
-        d.createElement("div", { style: p.swatch }),
+        { style: c.picker, className: "google-picker " + (void 0 === p ? "" : p) },
+        d.createElement("div", { style: c.head }, l),
+        d.createElement("div", { style: c.swatch }),
         d.createElement(
             "div",
-            { style: p.saturation },
-            d.createElement(tH, { hsl: o, hsv: a, pointer: n6, onChange: r }),
+            { style: c.saturation },
+            d.createElement(tM, { hsl: a, hsv: o, pointer: n8, onChange: r }),
         ),
         d.createElement(
             "div",
-            { style: p.body },
+            { style: c.body },
             d.createElement(
                 "div",
-                { style: p.controls, className: "flexbox-fix" },
+                { style: c.controls, className: "flexbox-fix" },
                 d.createElement(
                     "div",
-                    { style: p.hue },
-                    d.createElement(B, { style: p.Hue, hsl: o, radius: "4px", pointer: n8, onChange: r }),
+                    { style: c.hue },
+                    d.createElement(T, { style: c.Hue, hsl: a, radius: "4px", pointer: n6, onChange: r }),
                 ),
             ),
-            d.createElement(n7, { rgb: n, hsl: o, hex: i, hsv: a, onChange: r }),
+            d.createElement(n9, { rgb: n, hsl: a, hex: i, hsv: o, onChange: r }),
         ),
     );
 };
-(n9.propTypes = { width: T().oneOfType([T().string, T().number]), styles: T().object, header: T().string }),
-    (n9.defaultProps = { width: 652, styles: {}, header: "Color picker" }),
-    t2(n9);
+(n7.propTypes = { width: z().oneOfType([z().string, z().number]), styles: z().object, header: z().string }),
+    (n7.defaultProps = { width: 652, styles: {}, header: "Color picker" }),
+    t2(n7);

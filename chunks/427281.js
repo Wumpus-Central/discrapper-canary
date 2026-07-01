@@ -1,87 +1,140 @@
-n.d(t, { default: () => x }), n(323874), n(14289), n(35956);
-var i = n(627968),
-    a = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    r = n(189213),
-    o = n(331322),
-    c = n(292666),
-    u = n(150934),
-    d = n(565150),
-    g = n(650583),
-    p = n(375708),
-    h = n(910162);
-function f(e) {
-    let { file: t } = e,
-        [n, l] = a.useState();
+t.d(i, { ModifyMosaicAttachmentModal: () => k, default: () => S }), t(323874), t(14289), t(35956), t(938796);
+var n = t(627968),
+    s = t(64700),
+    l = t(503698),
+    a = t.n(l),
+    r = t(665260),
+    o = t(189213),
+    c = t(331322),
+    u = t(292666),
+    d = t(150934),
+    p = t(565150),
+    f = t(465856),
+    m = t(644447),
+    g = t(652215),
+    x = t(650583),
+    j = t(375708),
+    h = t(910162);
+function v(e) {
+    return (0, n.jsx)("img", { src: e.src ?? void 0, className: h.imageFilePreviewImg, "aria-hidden": !0, alt: "" });
+}
+function b(e) {
+    let { file: i } = e,
+        [t, l] = s.useState();
     return (
-        a.useEffect(() => {
-            if (null == t) return void l(void 0);
-            let e = URL.createObjectURL(t);
+        s.useEffect(() => {
+            if (null == i) return void l(void 0);
+            let e = URL.createObjectURL(i);
             return (
                 l(e),
                 () => {
                     l(void 0), URL.revokeObjectURL(e);
                 }
             );
-        }, [t]),
-        (0, i.jsx)("img", { src: n, className: h.imageFilePreviewImg, "aria-hidden": !0, alt: "" })
+        }, [i]),
+        (0, n.jsx)(v, { src: t })
     );
 }
-function j(e) {
-    let { upload: t } = e;
-    return t.item.platform !== d.xz.WEB
+function E(e) {
+    let { upload: i } = e;
+    return i.item.platform !== p.xz.WEB
         ? null
-        : t.isImage
-          ? (0, i.jsx)(f, { file: t.item.file })
-          : (0, i.jsx)("div", { className: s()(h.fileIcon, { [h[t.classification ?? ""]]: !0 }) });
+        : i.isImage
+          ? (0, n.jsx)(b, { file: i.item.file })
+          : (0, n.jsx)("div", { className: a()(h.fileIcon, { [h[i.classification ?? ""]]: !0 }) });
 }
-function x(e) {
-    let { upload: t, transitionState: n, disableSpoiler: l, onClose: s, onSubmit: d } = e,
-        [h, f] = a.useState(t.spoiler),
-        [x, m] = a.useState(t.filename ?? ""),
-        [v, k] = a.useState(t.description ?? ""),
-        C = () => {
-            d({ name: x, description: v, spoiler: h }), s();
+function I(e) {
+    let {
+            preview: i,
+            filename: t,
+            description: l,
+            spoiler: a,
+            isImage: r,
+            isVideo: p,
+            disableFilename: f,
+            disableSpoiler: m,
+            transitionState: g,
+            onClose: h,
+            onSubmit: v,
+        } = e,
+        [b, E] = s.useState(t ?? ""),
+        [I, S] = s.useState(l ?? ""),
+        [k, C] = s.useState(a),
+        y = () => {
+            v({ name: b, description: I, spoiler: k }), h();
         };
-    return (0, i.jsx)(r.Modal, {
-        transitionState: n,
-        onClose: s,
-        title: p.intl.string(p.t.Y8ujqr),
+    return (0, n.jsx)(o.Modal, {
+        transitionState: g,
+        onClose: h,
+        title: j.intl.string(j.t.Y8ujqr),
         actions: [
-            { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: s },
-            { variant: "primary", text: p.intl.string(p.t["TY+auE"]), onClick: C },
+            { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: h },
+            { variant: "primary", text: j.intl.string(j.t["TY+auE"]), onClick: y },
         ],
-        children: (0, i.jsxs)(o.B, {
+        children: (0, n.jsxs)(c.B, {
             gap: 24,
             children: [
-                (0, i.jsxs)(o.B, {
+                (0, n.jsxs)(c.B, {
                     gap: 16,
                     children: [
-                        (0, i.jsx)(j, { upload: t }),
-                        (0, i.jsx)(c.k, {
-                            label: p.intl.string(p.t.ILJuBq),
-                            value: x,
-                            onChange: m,
+                        i,
+                        (0, n.jsx)(u.k, {
+                            label: j.intl.string(j.t.ILJuBq),
+                            value: b,
+                            onChange: E,
                             onKeyDown: (e) => {
-                                e.key === g.dh.ENTER && (e.preventDefault(), C());
+                                e.key === x.dh.ENTER && (e.preventDefault(), y());
                             },
+                            disabled: f,
                         }),
-                        t.isImage
-                            ? (0, i.jsx)(c.k, {
-                                  label: p.intl.string(p.t.eOB2eR),
-                                  placeholder: p.intl.string(p.t.RNH1jn),
-                                  value: v,
-                                  onChange: k,
+                        r || p
+                            ? (0, n.jsx)(u.k, {
+                                  label: j.intl.string(j.t.eOB2eR),
+                                  placeholder: j.intl.string(j.t.RNH1jn),
+                                  value: I,
+                                  onChange: S,
                                   onKeyDown: (e) => {
-                                      e.key === g.dh.ENTER && (e.preventDefault(), C());
+                                      e.key === x.dh.ENTER && (e.preventDefault(), y());
                                   },
                               })
                             : null,
                     ],
                 }),
-                !0 !== l && (0, i.jsx)(u.S, { checked: h, onChange: f, label: p.intl.string(p.t["gsI+xC"]) }),
+                !0 !== m && (0, n.jsx)(d.S, { checked: k, onChange: C, label: j.intl.string(j.t["gsI+xC"]) }),
             ],
         }),
+    });
+}
+function S(e) {
+    let { upload: i, transitionState: t, disableSpoiler: s, onClose: l, onSubmit: a } = e;
+    return (0, n.jsx)(I, {
+        preview: (0, n.jsx)(E, { upload: i }),
+        filename: i.filename,
+        description: i.description,
+        spoiler: i.spoiler,
+        isImage: i.isImage,
+        isVideo: i.isVideo,
+        disableSpoiler: s,
+        transitionState: t,
+        onClose: l,
+        onSubmit: a,
+    });
+}
+function k(e) {
+    let { item: i, transitionState: t, onClose: s, onSubmit: l } = e,
+        a = i.originalItem,
+        o = "IMAGE" === i.type,
+        c = o ? (0, n.jsx)(v, { src: (0, m.E)({ proxyURL: a.proxy_url, url: a.url }) }) : void 0;
+    return (0, n.jsx)(I, {
+        preview: c,
+        filename: (0, f.A)(a),
+        description: a.description,
+        spoiler: (0, r.Lt)(a.flags ?? 0, g.sbO.IS_SPOILER),
+        isImage: o,
+        isVideo: "VIDEO" === i.type,
+        disableFilename: !0,
+        transitionState: t,
+        onClose: s,
+        onSubmit: l,
     });
 }

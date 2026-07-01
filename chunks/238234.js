@@ -92,7 +92,8 @@ var B = n(738419),
     ec = n(375708),
     ed = n(253499);
 let em = (0, ee.Fe)({
-    createPromise: () => Promise.all([n.e("60216"), n.e("22687"), n.e("20038"), n.e("86537")]).then(n.bind(n, 33136)),
+    createPromise: () =>
+        Promise.all([n.e("60216"), n.e("22687"), n.e("46859"), n.e("85787"), n.e("86537")]).then(n.bind(n, 33136)),
     webpackId: 33136,
     name: "CustomThemeColorPickerControlV2",
     renderLoader: function () {

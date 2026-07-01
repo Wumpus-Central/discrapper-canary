@@ -20,7 +20,9 @@ var t = n(627968),
     C = n(652215),
     v = n(375708),
     I = n(670989);
-let N = s.lazy(() => Promise.all([n.e("63241"), n.e("22687"), n.e("20038"), n.e("87680")]).then(n.bind(n, 148259))),
+let N = s.lazy(() =>
+        Promise.all([n.e("63241"), n.e("22687"), n.e("46859"), n.e("85787"), n.e("87680")]).then(n.bind(n, 148259)),
+    ),
     y = () => Promise.resolve();
 function A(e) {
     let {

@@ -1,5 +1,15 @@
 "use strict";
-n.d(t, { Jl: () => l, LP: () => d, _k: () => a, gz: () => o, ii: () => h, re: () => s });
+n.d(t, {
+    Jl: () => l,
+    LP: () => d,
+    NU: () => _,
+    Wf: () => u,
+    _k: () => a,
+    gz: () => o,
+    ii: () => h,
+    lU: () => c,
+    re: () => s,
+});
 var i = n(508425),
     r = n(559949);
 let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
@@ -19,11 +29,11 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [0xe4541e, 6674404],
     ].map((e) => ({ colors: e, name: "" })),
     c = [
-        [0xeaa486, 0xeadc86, 0xead686, 0xc6ea86],
-        [8841878, 0xeae186, 8841928, 0xc1ea86],
-        [8839658, 8818410, 8826858, 0xb086ea],
-        [0xd186ea, 0xeae186, 0xea86d1, 0xc1ea86],
-        [8833258, 0xea86b8, 8820458, 0xea8686],
+        [0xf4a7d8, 9626600, 0xf8f59a, 0xc9f7d8],
+        [0xff6b9a, 0xffd85a, 5629578, 7064575],
+        [0xff8a5c, 0xffd15a, 0xf06aa6, 0x9b6bff],
+        [0xd83a5f, 0xc94bcb, 9133311, 0xb06cff],
+        [5227519, 7268312, 9075967, 0xb7f5ff],
     ],
     d = 100,
     _ = [

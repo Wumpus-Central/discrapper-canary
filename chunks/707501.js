@@ -5,8 +5,8 @@ var o,
     r,
     i = n(64700),
     d = n(175841),
-    s = n(962644),
-    u = n(627968),
+    u = n(962644),
+    s = n(627968),
     p = n(877624),
     c = n(232582),
     m = n(821609),
@@ -35,7 +35,7 @@ var o,
         (l[(l.TIER_2 = 2)] = "TIER_2"),
         (l[(l.TIER_0 = 3)] = "TIER_0"),
         l);
-let E = [
+let y = [
     { id: "EVERYONE", label: "Everyone", premiumType: null, premiumSource: null, premiumSubscriptionType: null },
     { id: "NON_NITRO", label: "Non Nitro", premiumType: 0, premiumSource: g.NONE, premiumSubscriptionType: I.NONE },
     {
@@ -95,8 +95,8 @@ let E = [
         premiumSubscriptionType: I.TIER_2,
     },
 ];
-function y(e, t, n) {
-    let o = E.find((o) => o.premiumType === e && o.premiumSource === t && o.premiumSubscriptionType === n);
+function E(e, t, n) {
+    let o = y.find((o) => o.premiumType === e && o.premiumSource === t && o.premiumSubscriptionType === n);
     if (null != o) return { id: o.id, label: o.label };
     let a = null == e ? "Any" : N[e],
         l = null == t ? "Any" : g[t],
@@ -132,7 +132,7 @@ function R(e) {
                         let e = n.find(
                             (e) =>
                                 !e.isDefaultBase &&
-                                y(e.premiumType, e.premiumSource, e.premiumSubscriptionType).id === t,
+                                E(e.premiumType, e.premiumSource, e.premiumSubscriptionType).id === t,
                         );
                         if (null != e) return e;
                     }
@@ -192,14 +192,14 @@ function L(e) {
         l = O.useField("userStateByType"),
         r = O.useField("localeOverride"),
         d = O.useField("availableLocales"),
-        s =
+        u =
             ((t = O.useField("componentRowsByType")),
             i.useMemo(() => {
                 let e = t?.get(n) ?? [],
                     o = new Map();
                 for (let t of e) {
                     if (t.isDefaultBase) continue;
-                    let e = y(t.premiumType, t.premiumSource, t.premiumSubscriptionType);
+                    let e = E(t.premiumType, t.premiumSource, t.premiumSubscriptionType);
                     o.has(e.id) || o.set(e.id, e);
                 }
                 return [...o.values()];
@@ -226,15 +226,15 @@ function L(e) {
         }, [d, p]),
         m = (a?.get(n)?.length ?? 0) > 0;
     if (null == o || !m) return null;
-    let b = s.length >= 1,
-        f = [{ label: "Default", value: h }, ...s.map((e) => ({ label: e.label, value: e.id }))];
-    return (0, u.jsx)("div", {
+    let b = u.length >= 1,
+        f = [{ label: "Default", value: h }, ...u.map((e) => ({ label: e.label, value: e.id }))];
+    return (0, s.jsx)("div", {
         className: U.k,
-        children: (0, u.jsxs)(_.B, {
+        children: (0, s.jsxs)(_.B, {
             gap: 16,
             children: [
                 b &&
-                    (0, u.jsx)(A.l, {
+                    (0, s.jsx)(A.l, {
                         label: "User State",
                         value: l.get(n) ?? h,
                         onSelectionChange: (e) => {
@@ -251,7 +251,7 @@ function L(e) {
                         selectionMode: "single",
                         fullWidth: !0,
                     }),
-                (0, u.jsx)(A.l, {
+                (0, s.jsx)(A.l, {
                     label: "Locale",
                     value: r ?? h,
                     onSelectionChange: (e) => {
@@ -290,9 +290,9 @@ let V = "playground-announcement-modal",
                     t?.properties.oneofKind === "announcementModalVariant1"
                         ? t.properties.announcementModalVariant1
                         : null;
-            return (0, u.jsx)("div", {
+            return (0, s.jsx)("div", {
                 className: F.MT,
-                children: (0, u.jsx)(m.$, {
+                children: (0, s.jsx)(m.$, {
                     variant: "expressive",
                     size: "md",
                     text: "Open Announcement Modal",
@@ -345,6 +345,7 @@ let V = "playground-announcement-modal",
                                     n.e("51778"),
                                     n.e("24914"),
                                     n.e("42714"),
+                                    n.e("68532"),
                                     n.e("20382"),
                                     n.e("63333"),
                                     n.e("73165"),
@@ -352,7 +353,7 @@ let V = "playground-announcement-modal",
                                     n.e("54372"),
                                 ]).then(n.bind(n, 103407));
                                 return (t) =>
-                                    (0, u.jsx)(e, {
+                                    (0, s.jsx)(e, {
                                         renderModalProps: t,
                                         componentId: V,
                                         promotionId: j,
@@ -365,7 +366,7 @@ let V = "playground-announcement-modal",
                 }),
             });
         },
-        ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.ANNOUNCEMENT_MODAL }),
+        ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.ANNOUNCEMENT_MODAL }),
         useDefaultOverrides: () => {
             let e = R(p.C.ANNOUNCEMENT_MODAL),
                 t =
@@ -462,7 +463,7 @@ var en = n(336618),
 function ea(e) {
     let { id: t, component_type: n, promotion_id: o, properties: a } = e;
     i.useEffect(() => {
-        (0, s.Ak)(),
+        (0, u.Ak)(),
             Y.h.dispatch({
                 type: "PREMIUM_MARKETING_PREVIEW",
                 data: { id: t, component_type: n, promotion_id: o, properties: a },
@@ -473,8 +474,8 @@ var el = n(652215);
 let er = "playground-gift-icon",
     ei = (0, eo.createChannelRecord)({ id: "1", guild_id: "1", type: el.rbe.GUILD_TEXT, name: "playground" });
 var ed = n(720119),
-    es = n(743477),
-    eu = n(40493);
+    eu = n(743477),
+    es = n(40493);
 function ep() {}
 let ec = (0, eo.createChannelRecord)({ id: "1", guild_id: "1", type: el.rbe.GUILD_TEXT, name: "playground" });
 var em = n(978656);
@@ -512,15 +513,15 @@ let eN = {
                     : void 0),
                 (n = { assetUrl: e.assetUrl, header: e.header, body: e.body, button: t }),
                 null != a ? { ...a, ...n } : { helpArticleId: "", ...n });
-        return (0, u.jsx)("div", {
+        return (0, s.jsx)("div", {
             className: F.MT,
-            children: (0, u.jsx)(eI.x, {
+            children: (0, s.jsx)(eI.x, {
                 componentId: "playground-marketing-page-banner",
                 promotionBannerMarketingComponentFields: l,
             }),
         });
     },
-    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.MARKETING_PAGE_BANNER }),
+    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.MARKETING_PAGE_BANNER }),
     useDefaultOverrides: () => {
         let e = R(p.C.MARKETING_PAGE_BANNER),
             t = e?.properties.oneofKind === "marketingPageBanner" ? e.properties.marketingPageBanner : null;
@@ -572,8 +573,8 @@ let eN = {
         },
     },
 };
-var eE = n(754804);
-let ey = "playground-nagbar";
+var ey = n(754804);
+let eE = "playground-nagbar";
 var eS = n(834730),
     eC = n(709870);
 let eO = "playground-payment-modal-banner";
@@ -588,28 +589,28 @@ var eR = n(964661),
 function eG() {}
 let eB = i.forwardRef(function (e, t) {
     let { icon: n, label: o, selected: a = !1, decoration: l } = e;
-    return (0, u.jsxs)("button", {
+    return (0, s.jsxs)("button", {
         ref: t,
         type: "button",
         className: eh()(ex.pc, { [ex.EV]: a }),
         onClick: eG,
         children: [
-            (0, u.jsx)(n, { size: "md", color: "currentColor" }),
-            (0, u.jsx)(eS.E, { variant: "text-md/medium", color: "text-strong", className: ex.We, children: o }),
-            null != l && (0, u.jsx)("div", { className: ex.UT, children: l }),
+            (0, s.jsx)(n, { size: "md", color: "currentColor" }),
+            (0, s.jsx)(eS.E, { variant: "text-md/medium", color: "text-strong", className: ex.We, children: o }),
+            null != l && (0, s.jsx)("div", { className: ex.UT, children: l }),
         ],
     });
 });
 function eD(e) {
     let { tabLabel: t = "Nitro", selected: n = !1, decoration: o, nitroRowRef: a, wrapNitroRow: l } = e,
-        r = (0, u.jsx)(eB, { ref: a, icon: eP.t, label: t, selected: n, decoration: o });
-    return (0, u.jsxs)("nav", {
+        r = (0, s.jsx)(eB, { ref: a, icon: eP.t, label: t, selected: n, decoration: o });
+    return (0, s.jsxs)("nav", {
         className: ex.C$,
         children: [
-            (0, u.jsx)(eB, { icon: eU.$, label: "Friends" }),
+            (0, s.jsx)(eB, { icon: eU.$, label: "Friends" }),
             null != l ? l(r) : r,
-            (0, u.jsx)(eB, { icon: eM.U, label: "Shop" }),
-            (0, u.jsx)(eB, { icon: eL.r, label: "Quests" }),
+            (0, s.jsx)(eB, { icon: eM.U, label: "Shop" }),
+            (0, s.jsx)(eB, { icon: eL.r, label: "Quests" }),
         ],
     });
 }
@@ -628,7 +629,7 @@ let eV = "playground-premium-tab-popover",
                     body: l,
                     buttonCopy: r,
                     buttonAction: d,
-                    navigableStorefrontApplicationId: s,
+                    navigableStorefrontApplicationId: u,
                     assetUrl: m,
                 } = e,
                 b = R(p.C.PREMIUM_TAB_POPOVER),
@@ -640,7 +641,7 @@ let eV = "playground-premium-tab-popover",
                         body: l,
                         buttonCopy: r,
                         buttonAction: d,
-                        navigableStorefrontApplicationId: s,
+                        navigableStorefrontApplicationId: u,
                         assetUrl: m,
                     }).header,
                     body: t.body,
@@ -667,13 +668,13 @@ let eV = "playground-premium-tab-popover",
                 D(eV, p.C.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", o)),
             );
             let _ = i.useRef(null);
-            return (0, u.jsx)(eD, {
+            return (0, s.jsx)(eD, {
                 selected: !0,
                 nitroRowRef: _,
-                wrapNitroRow: (e) => (0, u.jsx)(ek.A, { targetElementRef: _, dismissPopover: eF, children: e }),
+                wrapNitroRow: (e) => (0, s.jsx)(ek.A, { targetElementRef: _, dismissPopover: eF, children: e }),
             });
         },
-        ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.PREMIUM_TAB_POPOVER }),
+        ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.PREMIUM_TAB_POPOVER }),
         useDefaultOverrides: () => {
             let e = R(p.C.PREMIUM_TAB_POPOVER),
                 t = e?.properties.oneofKind === "premiumTabPopover" ? e.properties.premiumTabPopover : null;
@@ -802,19 +803,19 @@ let eX = {
                                               }
                                             : void 0,
                                 }),
-                                (o = B(ey, {
+                                (o = B(eE, {
                                     oneofKind: "nagbar",
                                     nagbar:
                                         null != d
                                             ? { ...d, ...n }
                                             : { ctaAction: c.dz.OPEN_TIER_2_PAYMENT_MODAL, deeplinkSection: "", ...n },
                                 })),
-                                D(ey, p.C.NAGBAR, "playground-nagbar-promotion", o)),
+                                D(eE, p.C.NAGBAR, "playground-nagbar-promotion", o)),
                             ),
-                            (0, u.jsx)("div", { className: F.MT, children: (0, u.jsx)(eE.A, {}) })
+                            (0, s.jsx)("div", { className: F.MT, children: (0, s.jsx)(ey.A, {}) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.NAGBAR }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.NAGBAR }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.NAGBAR),
                             t = e?.properties.oneofKind === "nagbar" ? e.properties.nagbar : null;
@@ -837,18 +838,18 @@ let eX = {
                     id: "nitro-orbs-bonus-modal",
                     component: function (e) {
                         let { orbsAmount: t } = e;
-                        return (0, u.jsxs)(_.B, {
+                        return (0, s.jsxs)(_.B, {
                             direction: "vertical",
                             gap: 16,
                             align: "start",
                             children: [
-                                (0, u.jsx)(eS.E, {
+                                (0, s.jsx)(eS.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children:
                                         "The post-purchase \u201COrbs delivered\u201D confirmation modal for the Nitro orbs bonus. Set the orb amount in the controls, then open it.",
                                 }),
-                                (0, u.jsx)(m.$, {
+                                (0, s.jsx)(m.$, {
                                     text: "Open Orbs delivered modal",
                                     onClick: () => (0, eC.$)({ orbsAmount: t }),
                                 }),
@@ -880,9 +881,9 @@ let eX = {
                             ),
                         );
                         let { analyticsLocations: a } = (0, Z.Ay)($.A.PAYMENT_FLOW_TEST_PAGE);
-                        return (0, u.jsx)("div", {
+                        return (0, s.jsx)("div", {
                             className: F.MT,
-                            children: (0, u.jsx)(m.$, {
+                            children: (0, s.jsx)(m.$, {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Payment Modal",
@@ -890,7 +891,7 @@ let eX = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.PAYMENT_MODAL_BANNER }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.PAYMENT_MODAL_BANNER }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.PAYMENT_MODAL_BANNER),
                             t =
@@ -917,15 +918,15 @@ let eX = {
                     name: "Premium Tab Badge",
                     id: "premium-tab-badge",
                     component: function (e) {
-                        let t = (0, u.jsx)(eR.A, {
+                        let t = (0, s.jsx)(eR.A, {
                             componentId: "playground-premium-tab-badge",
                             badgeCopy: e.badgeCopy,
                             acknowledgedBadgeCopy: e.acknowledgedBadgeCopy,
                             isDismissed: e.isDismissed,
                         });
-                        return (0, u.jsx)(eD, { tabLabel: e.tabLabel, selected: e.selected, decoration: t });
+                        return (0, s.jsx)(eD, { tabLabel: e.tabLabel, selected: e.selected, decoration: t });
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.PREMIUM_TAB }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.PREMIUM_TAB }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.PREMIUM_TAB),
                             t = e?.properties.oneofKind === "premiumTab" ? e.properties.premiumTab : null;
@@ -965,10 +966,10 @@ let eX = {
                                 })),
                                 D(ew, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
                             ),
-                            (0, u.jsx)(eD, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(eK.A, { children: e }) })
+                            (0, s.jsx)(eD, { selected: !0, wrapNitroRow: (e) => (0, s.jsx)(eK.A, { children: e }) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.PREMIUM_TAB_TOOLTIP),
                             t = e?.properties.oneofKind === "premiumTabTooltip" ? e.properties.premiumTabTooltip : null;
@@ -1001,9 +1002,9 @@ let eX = {
                                 n?.properties.oneofKind === "billingSettingsNitroGiftBanner"
                                     ? n.properties.billingSettingsNitroGiftBanner
                                     : null;
-                        return (0, u.jsx)("div", {
+                        return (0, s.jsx)("div", {
                             className: F.MT,
-                            children: (0, u.jsx)(z.c, {
+                            children: (0, s.jsx)(z.c, {
                                 config:
                                     ((t = {
                                         header: e.header,
@@ -1021,7 +1022,7 @@ let eX = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.BILLING_SETTINGS_NITRO_GIFT_BANNER),
                             t =
@@ -1085,9 +1086,9 @@ let eX = {
                                 n?.properties.oneofKind === "giftCustomizationBanner"
                                     ? n.properties.giftCustomizationBanner
                                     : null;
-                        return (0, u.jsx)("div", {
+                        return (0, s.jsx)("div", {
                             className: F.MT,
-                            children: (0, u.jsx)(m.$, {
+                            children: (0, s.jsx)(m.$, {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Gift Payment Modal",
@@ -1147,7 +1148,7 @@ let eX = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.GIFT_CUSTOMIZATION_BANNER }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.GIFT_CUSTOMIZATION_BANNER }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.GIFT_CUSTOMIZATION_BANNER),
                             t =
@@ -1210,10 +1211,10 @@ let eX = {
                                 (n = B(er, { oneofKind: "giftIcon", giftIcon: null != a ? { ...a, ...t } : t })),
                                 D(er, p.C.GIFT_ICON, "playground-gift-icon-promotion", n)),
                             ),
-                            (0, u.jsx)("div", { className: F.WG, children: (0, u.jsx)(en.A, { channel: ei }) })
+                            (0, s.jsx)("div", { className: F.WG, children: (0, s.jsx)(en.A, { channel: ei }) })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.GIFT_ICON }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.GIFT_ICON }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.GIFT_ICON),
                             t = e?.properties.oneofKind === "giftIcon" ? e.properties.giftIcon : null;
@@ -1261,18 +1262,18 @@ let eX = {
                             n = t?.properties.oneofKind === "giftIconCoachmark" ? t.properties.giftIconCoachmark : null,
                             o = { header: e.header, body: e.body, asset: k(e.assetUrl, n?.asset) },
                             a = null != n ? { ...n, ...o } : ed.l.create(o);
-                        return (0, u.jsx)("div", {
+                        return (0, s.jsx)("div", {
                             className: F.WG,
-                            children: (0, u.jsx)(eu.A, {
+                            children: (0, s.jsx)(es.A, {
                                 coachmarkConfig: a,
                                 onComplete: ep,
                                 onCheckItOutClick: ep,
                                 markAsDismissed: ep,
-                                children: (0, u.jsx)(es.A, { channel: ec }),
+                                children: (0, s.jsx)(eu.A, { channel: ec }),
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.GIFT_ICON_COACHMARK }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.GIFT_ICON_COACHMARK }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.GIFT_ICON_COACHMARK),
                             t = e?.properties.oneofKind === "giftIconCoachmark" ? e.properties.giftIconCoachmark : null;
@@ -1303,9 +1304,9 @@ let eX = {
                                 n?.properties.oneofKind === "giftPlanSelectionCardBanner"
                                     ? n.properties.giftPlanSelectionCardBanner
                                     : null;
-                        return (0, u.jsx)("div", {
+                        return (0, s.jsx)("div", {
                             className: F.MT,
-                            children: (0, u.jsx)(m.$, {
+                            children: (0, s.jsx)(m.$, {
                                 variant: "expressive",
                                 size: "md",
                                 text: "Open Gift Payment Modal",
@@ -1367,7 +1368,7 @@ let eX = {
                             }),
                         });
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.GIFT_PLAN_SELECTION_CARD_BANNER }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.GIFT_PLAN_SELECTION_CARD_BANNER }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.GIFT_PLAN_SELECTION_CARD_BANNER),
                             t =
@@ -1429,13 +1430,13 @@ let eX = {
                                 })),
                                 D(eg, p.C.GIFT_REMINDER_NAGBAR, "playground-gift-reminder-nagbar-promotion", n)),
                             ),
-                            (0, u.jsx)("div", {
+                            (0, s.jsx)("div", {
                                 className: F.MT,
-                                children: (0, u.jsx)(eA.y, { markAsDismissed: eT, className: F.gO }),
+                                children: (0, s.jsx)(eA.y, { markAsDismissed: eT, className: F.gO }),
                             })
                         );
                     },
-                    ControlsExtension: () => (0, u.jsx)(L, { componentType: p.C.GIFT_REMINDER_NAGBAR }),
+                    ControlsExtension: () => (0, s.jsx)(L, { componentType: p.C.GIFT_REMINDER_NAGBAR }),
                     useDefaultOverrides: () => {
                         let e = R(p.C.GIFT_REMINDER_NAGBAR),
                             t =
@@ -1461,7 +1462,7 @@ let eX = {
             return (
                 i.useEffect(
                     () => () => {
-                        (0, s.Ak)(), (0, s.b8)();
+                        (0, u.Ak)(), (0, u.b8)();
                     },
                     [],
                 ),
@@ -1489,9 +1490,9 @@ let eX = {
                 l = i.useCallback((e, n) => eq((0, ez.Ht)(t, n, { keys: ["name"] })), [t]);
             return 0 === t.length
                 ? null
-                : (0, u.jsx)("div", {
+                : (0, s.jsx)("div", {
                       className: F.$K,
-                      children: (0, u.jsx)(eH.Z, {
+                      children: (0, s.jsx)(eH.Z, {
                           clearable: !0,
                           selectionMode: "single",
                           placeholder: "Load Promo Data",

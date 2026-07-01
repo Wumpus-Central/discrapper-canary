@@ -1,11 +1,22 @@
 "use strict";
-n.d(t, { $0: () => u, Xr: () => h, as: () => l, gN: () => d, mT: () => c, sx: () => _ });
+n.d(t, {
+    $0: () => c,
+    Xr: () => g,
+    as: () => u,
+    cf: () => h,
+    gN: () => E,
+    j0: () => f,
+    mT: () => p,
+    sx: () => m,
+    xo: () => d,
+});
 var i = n(310784),
     r = n.n(i),
     s = n(508425),
     a = n(559949),
-    o = n(750656);
-function l(e) {
+    o = n(317097),
+    l = n(750656);
+function u(e) {
     switch (e) {
         case s.z.GRADIENT:
             return 2;
@@ -17,7 +28,7 @@ function l(e) {
             return 1;
     }
 }
-function u(e) {
+function c(e) {
     let t = r()(e).alpha(1),
         n = t.get("hsl.l"),
         i = Math.min(1, 1.2 * t.get("hsl.s")),
@@ -32,22 +43,40 @@ function u(e) {
         neonStroke: t.set("hsl.s", i).set("hsl.l", s).hex(),
     };
 }
-function c(e) {
+function d(e) {
+    return ((e % 360) + 360) % 360;
+}
+let _ = [0, 60, 90, 30];
+function h(e) {
+    let [t, n, i] = (function (e) {
+        let [t, n, i] = r()((0, o.Hl)(e)).hsl();
+        return [Number.isNaN(t) ? 0 : t, n, i];
+    })(e);
+    return _.map((e) =>
+        r()
+            .hsl(d(t + e), n, i)
+            .num(),
+    );
+}
+function f(e) {
+    return r().hsl(e, 0.78, 0.72).num();
+}
+function p(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
-function d(e, t) {
+function E(e, t) {
     let n = t[Math.floor(Math.random() * t.length)],
         i = e[Math.floor(Math.random() * e.length)],
-        r = (0, o.ii)(n);
+        r = (0, l.ii)(n);
     return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
 }
-function _(e, t) {
+function m(e, t) {
     if (t || null == e) return e;
-    let n = o._k.includes(e.fontId) ? a.x.DEFAULT : e.fontId,
-        i = o.gz.includes(e.effectId) ? s.z.SOLID : e.effectId;
+    let n = l._k.includes(e.fontId) ? a.x.DEFAULT : e.fontId,
+        i = l.gz.includes(e.effectId) ? s.z.SOLID : e.effectId;
     return n === e.fontId && i === e.effectId ? e : { ...e, fontId: n, effectId: i };
 }
-function h(e) {
+function g(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);
