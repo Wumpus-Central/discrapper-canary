@@ -17,6 +17,7 @@
 .game_b53c4e {
     background-color: var(--background-mod-normal);
     border-radius: 12px;
+    box-shadow: var(--shadow-border);
     margin-bottom: 12px;
     padding: 16px;
     position: relative
@@ -45,6 +46,7 @@
 
 .activeGame_b53c4e {
     border-radius: 12px;
+    box-shadow: var(--shadow-border);
     position: relative
 }
 
@@ -142,6 +144,7 @@
     align-items: center;
     background-color: var(--background-surface-high);
     border-radius: 0;
+    box-shadow: none;
     display: flex;
     margin-bottom: 0;
     width: 100%
@@ -211,6 +214,7 @@
 .subgameContainer_b53c4e {
     background-color: var(--background-surface-high);
     border-radius: 0 0 12px 12px;
+    box-shadow: var(--shadow-border);
     margin-bottom: 20px
 }
 
