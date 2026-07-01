@@ -21,12 +21,13 @@ async function a(e) {
     return d;
 }
 async function o(e) {
-    let { orderId: t, updates: n } = e,
-        r = {};
-    "paymentSourceId" in n && (r.billing_facet = { payment_source_id: n.paymentSourceId });
-    let a = (await i.Bo.patch({ url: s.Rsh.ORDER_UPDATE(t), body: r, rejectWithError: !0 })).body;
-    if (null == a || null == a.id || "" === a.id) throw Error("Invalid order response");
-    return a;
+    let { orderId: t, updates: n, expectedRevision: r } = e,
+        a = {};
+    "paymentSourceId" in n && (a.billing_facet = { payment_source_id: n.paymentSourceId }),
+        null != r && (a.expected_revision = r);
+    let o = (await i.Bo.patch({ url: s.Rsh.ORDER_UPDATE(t), body: a, rejectWithError: !0 })).body;
+    if (null == o || null == o.id || "" === o.id) throw Error("Invalid order response");
+    return o;
 }
 async function l(e) {
     let t = await i.Bo.post({ url: s.Rsh.ORDER_DISCARD(e), rejectWithError: !1 });

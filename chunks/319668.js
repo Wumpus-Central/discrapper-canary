@@ -66,10 +66,37 @@ function b(e) {
             renderCustomPaymentSourceSelectorContent: I,
         } = e,
         { setPaymentSourceId: S, paymentSourceId: y } = (function (e) {
-            let { setPaymentSourceId: t, paymentSourceId: n } = (0, g.t4)((e) => ({
-                    setPaymentSourceId: e.setPaymentSourceId,
-                    paymentSourceId: e.paymentSourceId,
-                })),
+            let { setPaymentSourceId: t, paymentSourceId: n } = (function () {
+                    let {
+                            paymentSourceId: e,
+                            setPaymentSourceId: t,
+                            orderRecord: n,
+                            isOrderSyncing: i,
+                            orderSyncError: s,
+                            setOrderSyncError: a,
+                        } = (0, g.t4)((e) => ({
+                            paymentSourceId: e.paymentSourceId,
+                            setPaymentSourceId: e.setPaymentSourceId,
+                            orderRecord: e.orderRecord,
+                            isOrderSyncing: e.isOrderSyncing,
+                            orderSyncError: e.orderSyncError,
+                            setOrderSyncError: e.setOrderSyncError,
+                        })),
+                        o = null != n;
+                    return (
+                        (0, r.useEffect)(() => {
+                            if (null == n || null == s) return;
+                            let e = n.billingFacetRecord;
+                            t(null != e ? e.paymentSourceId : null), a(null);
+                        }, [n, s, t, a]),
+                        {
+                            paymentSourceId: e,
+                            setPaymentSourceId: t,
+                            isOrderSyncing: !!o && i,
+                            orderSyncError: o ? s : null,
+                        }
+                    );
+                })(),
                 { setPaymentSourceId: i, paymentSourceId: s } = r.useMemo(
                     () => ({
                         setPaymentSourceId: void 0 !== e.setPaymentSourceId ? e.setPaymentSourceId : t,

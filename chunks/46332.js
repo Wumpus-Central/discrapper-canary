@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y$: () => N, t4: () => y, Ni: () => T });
+n.d(t, { Ni: () => T, t4: () => y, Q9: () => S, y$: () => N });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -280,6 +280,10 @@ function N(e) {
             setCheckoutReviewButtonLabel: (t) => e({ checkoutReviewButtonLabel: t }),
             paymentSourceId: o,
             setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
+            isOrderSyncing: !1,
+            setIsOrderSyncing: (t) => e({ isOrderSyncing: t }),
+            orderSyncError: null,
+            setOrderSyncError: (t) => e({ orderSyncError: t ?? null }),
             checkoutPriceOptions: { paymentSourceId: o ?? void 0, currency: l, loaded: !1 },
             setCheckoutPriceOptions: (t) => e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, ...t } })),
             setCheckoutCurrency: (t) =>
