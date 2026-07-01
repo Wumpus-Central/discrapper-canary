@@ -36,17 +36,10 @@ function c(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
 function d(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        i = t[Math.floor(Math.random() * t.length)],
-        r = n
-            ? (function (e) {
-                  let t = Math.random() * e.reduce((e, t) => e + (o.sO.get(t) ?? 0), 0);
-                  for (let n of e) if ((t -= o.sO.get(n) ?? 0) <= 0) return n;
-                  return e[e.length - 1];
-              })(e)
-            : e[Math.floor(Math.random() * e.length)],
-        s = (0, o.ii)(i);
-    return { fontId: r, effectId: i, colors: [...s[Math.floor(Math.random() * s.length)]] };
+    let n = t[Math.floor(Math.random() * t.length)],
+        i = e[Math.floor(Math.random() * e.length)],
+        r = (0, o.ii)(n);
+    return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
 }
 function _(e, t) {
     if (t || null == e) return e;
