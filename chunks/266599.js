@@ -11,6 +11,7 @@ e.exports = {
     Ls: "inlineContainer__74017",
     AH: "flushContainer__74017 inlineContainer__74017",
     vW: "inner__74017",
+    Bz: "charCountShowing__74017",
     BF: "innerDisabled__74017 inner__74017",
     RL: "sansAttachButton__74017",
     fk: "sansAttachButtonCreateThread__74017",

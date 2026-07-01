@@ -85,6 +85,10 @@
     max-height: 80px
 }
 
+.characterCount__08bd2 {
+    bottom: 6px
+}
+
 .textArea__08bd2 [data-slate-placeholder=true] {
     color: var(--input-placeholder-text-default)
 }

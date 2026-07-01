@@ -2956,7 +2956,7 @@ a-rp {
 .slateTextArea_ec4baf {
     box-sizing: border-box;
     inset-inline: 0 10px;
-    min-height: var(--custom-channel-textarea-text-area-height);
+    min-height: var(--custom-channel-textarea-editor-min-height, var(--custom-channel-textarea-text-area-height));
     padding: calc((var(--custom-channel-textarea-text-area-height) - var(--chat-markup-line-height))/2) 0;
     position: absolute
 }
@@ -3124,6 +3124,10 @@ a-rp {
     display: flex;
     padding-inline-start: calc(var(--space-16) - 1px);
     position: relative
+}
+
+.charCountShowing__74017 {
+    --custom-channel-textarea-editor-min-height: calc(var(--custom-channel-textarea-text-area-height) + var(--chat-markup-line-height))
 }
 
 .innerDisabled__74017 {

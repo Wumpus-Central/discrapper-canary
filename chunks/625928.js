@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => D });
+n.d(t, { A: () => L });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -68,8 +68,9 @@ function O(e) {
               })
     );
 }
-var b = n(481395);
-function D(e) {
+var b = n(263582),
+    D = n(481395);
+function L(e) {
     let { type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: s, className: g } = e,
         A = (0, l.bG)([E.default], () => m.Ay.canUseIncreasedMessageLength(E.default.getCurrentUser())),
         I = (0, p.A)(),
@@ -78,51 +79,51 @@ function D(e) {
         y = n.length,
         v = null != t.upsellLongMessages && (y ?? 0) > C.uvi && A,
         R = null != t.upsellLongMessages && !A,
-        D = T - y,
-        L = D > S;
+        L = T - y,
+        w = L > S;
     (0, o.$)({ currentLength: y, maxLength: T, message: N.intl.string(N.t.c2Jqed) });
-    let w =
-            0 === D
+    let M =
+            0 === L
                 ? N.intl.string(N.t.tU6YQ7)
-                : D > 0
-                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: D })
+                : L > 0
+                  ? N.intl.formatToPlainString(N.t.qH8uFW, { count: L })
                   : N.intl.string(N.t.YSRIqa),
-        { analyticsLocations: M } = (0, f.Ay)(h.A.CHARACTER_COUNT);
-    if (!((v && D >= 0) || !L || (R && !L))) return null;
-    let P = D >= 0;
+        { analyticsLocations: P } = (0, f.Ay)(h.A.CHARACTER_COUNT);
+    if (!(0, b.A)({ type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: s })) return null;
+    let x = L >= 0;
     return (0, i.jsx)(f.f5, {
-        value: M,
+        value: P,
         children: (0, i.jsxs)("div", {
-            className: a()(g, b.Dq),
+            className: a()(g, D.Dq),
             children: [
                 (0, i.jsxs)("div", {
-                    className: b.SW,
+                    className: D.SW,
                     children: [
-                        v && P
+                        v && x
                             ? (0, i.jsx)(u.m, {
                                   text: N.intl.formatToPlainString(N.t.vcvHa0, { maxLength: T }),
                                   position: "top",
-                                  children: (0, i.jsx)(c.t, { size: "md", color: "currentColor", className: b.y }),
+                                  children: (0, i.jsx)(c.t, { size: "md", color: "currentColor", className: D.y }),
                               })
                             : null,
-                        L
+                        w
                             ? null
                             : (0, i.jsx)(u.m, {
-                                  text: w,
+                                  text: M,
                                   position: "top",
                                   children: (0, i.jsx)(d.E, {
                                       variant: "text-sm/semibold",
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
-                                      color: P ? "text-default" : "text-feedback-critical",
-                                      children: D,
+                                      color: x ? "text-default" : "text-feedback-critical",
+                                      children: L,
                                   }),
                               }),
                     ],
                 }),
-                (0, i.jsx)(_.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: D }) }),
-                R && !L
-                    ? (0, i.jsx)(O, { className: b.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: D })
+                (0, i.jsx)(_.A, { "aria-live": "polite", children: N.intl.format(N.t.qH8uFW, { count: L }) }),
+                R && !w
+                    ? (0, i.jsx)(O, { className: D.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: L })
                     : null,
             ],
         }),

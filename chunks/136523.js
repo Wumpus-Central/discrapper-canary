@@ -84,6 +84,7 @@ function N(e) {
         errorMessage: M,
         children: (0, i.jsx)(p.Ay, {
             innerClassName: S.Tg,
+            characterCountClassName: S.Dq,
             textValue: b,
             richValue: V,
             placeholder: T.intl.formatToPlainString(T.t.DUXxBh, { channelName: k }),
