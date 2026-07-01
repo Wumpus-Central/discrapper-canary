@@ -618,8 +618,8 @@ class eU extends r.Component {
                                         return (0, i.jsx)(
                                             E.OZ,
                                             {
-                                                innerRole: l,
-                                                innerAriaLabel: U.intl.string(U.t["9Oq93m"]),
+                                                role: l,
+                                                "aria-label": U.intl.string(U.t["9Oq93m"]),
                                                 ref: (e) => {
                                                     (this._list = e),
                                                         (this.props.listRef.current = e),
