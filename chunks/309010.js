@@ -14,7 +14,7 @@ var c = n(735438),
     I = n(734057),
     T = n(808728),
     S = n(71393),
-    y = n(941327),
+    y = n(472444),
     C = n(576705),
     N = n(967198),
     v = n(652215),
@@ -155,7 +155,7 @@ let j = new B(p.h, {
     CONNECTION_OPEN: function (e) {
         if (((i = e.sessionId), null != o)) {
             let e = I.A.getChannel(o);
-            (null != e && C.A.can(_.kg(v.xBc.VIEW_CHANNEL, v.xBc.CONNECT), e)) || (o = null);
+            (null != e && (e.isPrivate() || C.A.can(_.kg(v.xBc.VIEW_CHANNEL, v.xBc.CONNECT), e))) || (o = null);
         }
         G() && P();
     },
