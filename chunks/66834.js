@@ -209,18 +209,19 @@ let U = {
         }
     },
     async createRole(e, t, n, i) {
-        let l = {
-            name: null != t && "" !== t ? t : M.intl.string(M.t.QBMHvB),
-            color: n ?? 0,
-            colors: i ?? { primary_color: n ?? 0, secondary_color: null, tertiary_color: null },
-            permissions: O.x3,
-        };
+        let { skipSelect: l = !1 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+            u = {
+                name: null != t && "" !== t ? t : M.intl.string(M.t.QBMHvB),
+                color: n ?? 0,
+                colors: i ?? { primary_color: n ?? 0, secondary_color: null, tertiary_color: null },
+                permissions: O.x3,
+            };
         try {
-            let t = await s.Bo.post({ url: L.Rsh.GUILD_ROLES(e), oldFormErrors: !0, body: l, rejectWithError: !1 }),
+            let t = await s.Bo.post({ url: L.Rsh.GUILD_ROLES(e), oldFormErrors: !0, body: u, rejectWithError: !1 }),
                 n = t.body;
             return (
                 (n.permissions = r.iu(n.permissions)),
-                a.h.dispatch({ type: "GUILD_SETTINGS_ROLE_SELECT", roleId: t.body.id, role: n }),
+                l || a.h.dispatch({ type: "GUILD_SETTINGS_ROLE_SELECT", roleId: t.body.id, role: n }),
                 _.A.checkGuildTemplateDirty(e),
                 n
             );
