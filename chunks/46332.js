@@ -194,7 +194,7 @@ var h = n(566980),
     p = n(815545),
     E = n(786300),
     m = n(428262),
-    g = n(788868);
+    g = n(202541);
 function A(e) {
     return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
@@ -264,7 +264,11 @@ function N(e) {
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
-                e({ checkoutInvoicePreview: t ?? null, checkoutInvoiceError: n ?? null }),
+                e((e) => ({
+                    checkoutInvoicePreview: t ?? null,
+                    checkoutInvoiceError: n ?? null,
+                    pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
+                })),
             fetchRenewalInvoicePreviewRequest: null,
             setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: C(t, i) }),
             renewalInvoicePreview: null,
@@ -280,6 +284,8 @@ function N(e) {
             setCheckoutReviewButtonLabel: (t) => e({ checkoutReviewButtonLabel: t }),
             paymentSourceId: o,
             setPaymentSourceId: (t) => e({ paymentSourceId: t ?? null }),
+            pendingPaymentSourceId: null,
+            setPendingPaymentSourceId: (t) => e({ pendingPaymentSourceId: t ?? null }),
             isOrderSyncing: !1,
             setIsOrderSyncing: (t) => e({ isOrderSyncing: t }),
             orderSyncError: null,
