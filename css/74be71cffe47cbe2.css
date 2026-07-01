@@ -12,22 +12,9 @@
     box-shadow: var(--shadow-low);
     cursor: pointer;
     flex-shrink: 0;
-    margin-bottom: var(--space-8);
+    min-width: var(--custom-cover-min-width, 0);
     overflow: hidden;
     width: var(--custom-cover-width)
-}
-
-.full-motion .card_a02225 {
-    transition: transform .15s ease-in-out;
-    will-change: transform
-}
-
-.full-motion .card_a02225:hover {
-    transform: scale(1.0225)
-}
-
-.full-motion .card_a02225:active {
-    transform: scale(.9775)
 }
 
 .coverArt_a02225 {
@@ -40,13 +27,21 @@
     width: 100%
 }
 
+.full-motion .coverArt_a02225 {
+    transition: transform .6s cubic-bezier(.16, 1, .3, 1)
+}
+
+.full-motion .card_a02225:hover .coverArt_a02225 {
+    transform: scale(1.1)
+}
+
 .loadingArtwork_a02225 {
     aspect-ratio: 3/4;
     background-color: var(--background-mod-strong);
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-low);
     flex-shrink: 0;
-    margin-bottom: var(--space-8);
+    min-width: var(--custom-cover-min-width, 0);
     width: var(--custom-cover-width)
 }
 

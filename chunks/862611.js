@@ -194,10 +194,10 @@ let j = (e) => {
                         n.e("84050"),
                         n.e("21041"),
                         n.e("38672"),
-                        n.e("9447"),
+                        n.e("25994"),
                         n.e("86454"),
                         n.e("85330"),
-                    ]).then(n.bind(n, 747226));
+                    ]).then(n.bind(n, 797489));
                     return (t) =>
                         (0, r.jsx)(e, {
                             gameId: i.applicationId,
