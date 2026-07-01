@@ -113,9 +113,14 @@ var er = l(387408),
     eh = l(375708);
 let eg = /^#{1,3}\s+(.+)$/,
     ef = /^https?:\/\/\S+$/;
-function ep(e) {
-    let t = ex.A.toURLSafe(e);
-    return null == t ? null : (t.searchParams.append("format", "webp"), t.toString());
+function ep(e, t, l) {
+    let n = ex.A.toURLSafe(e);
+    return null == n
+        ? null
+        : (n.searchParams.append("format", "webp"),
+          null != t && n.searchParams.append("width", t.toString()),
+          null != l && n.searchParams.append("height", l.toString()),
+          n.toString());
 }
 var ej = l(60465),
     ev = l(158390),
@@ -643,8 +648,8 @@ function eX(e) {
             }));
             return (
                 (0, a.useEffect)(() => {
-                    null == e || l || M.A.isAnnouncementsFetching(e) || ek(e);
-                }, [e, l]),
+                    null == e || l || M.A.isAnnouncementsFetching(e) || ek(e, { limit: void 0 });
+                }, [e, l, void 0]),
                 { messages: t?.messages ?? [], channelId: t?.channelId, guildId: t?.guildId, loading: n }
             );
         })(t),
