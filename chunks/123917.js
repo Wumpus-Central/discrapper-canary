@@ -192,7 +192,7 @@ function Y(e, t) {
         if (d(t)) return;
     } else {
         let { default: e } = n(464792),
-            r = e(w, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: O });
+            r = e(w, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: O, channelId: D });
         if (null != r && r(t)) return;
     }
     let V = () => {

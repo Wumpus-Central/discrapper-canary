@@ -30,7 +30,7 @@ function T(e) {
         w = (0, f.A)({
             location: "ContentPopoutContextMenu",
             applicationId: L && !0 !== C ? S.extra?.application_id : void 0,
-            source: h.Ob.ActivityCardContextMenu,
+            source: h.GameProfileSources.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
             sourceUserId: S.author_id,
         });

@@ -810,7 +810,7 @@ var tL = s(315767);
 function tH(e) {
     let { quest: t, questContent: s, isHovering: n, isInFeaturedSection: l, sourceQuestContent: a } = e,
         u = i.useRef(null),
-        c = (0, tu.A9)(t, a, tg.rE.QUEST_HOME_DESKTOP, to.Ob.QuestHome, u),
+        c = (0, tu.A9)(t, a, tg.rE.QUEST_HOME_DESKTOP, to.GameProfileSources.QuestHome, u),
         d = (0, tc.z)(),
         m = (0, z.SD)(t, d);
     return (0, r.jsxs)("div", {

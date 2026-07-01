@@ -20,7 +20,7 @@ function j(e) {
         r = (0, m.A)({
             location: "UserActivityRow",
             applicationId: t.applicationId,
-            source: u.Ob.UserProfile,
+            source: u.GameProfileSources.UserProfile,
             sourceUserId: t.userId,
             trackEntryPointImpression: !0,
         }),

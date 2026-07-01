@@ -21,9 +21,9 @@ var n = s(793574),
     y = s(506326),
     N = s(299846),
     C = s(915089),
-    T = s(409626),
-    v = s(692969),
-    S = s(932413),
+    S = s(409626),
+    T = s(692969),
+    v = s(932413),
     R = s(92240),
     f = s(257367),
     g = s(946356),
@@ -33,41 +33,41 @@ var n = s(793574),
     k = s(531648),
     M = s(695311),
     L = s(518477),
-    V = s(272984),
-    z = s(996988),
-    G = s(514566);
+    G = s(272984),
+    V = s(996988),
+    z = s(514566);
 function U(e) {
     let { user: a, entry: s, header: n, className: l, onClose: r } = e,
         c = (0, C.GV)(),
         { themeType: j } = (0, P.E)(),
         { largeImage: A } = (0, p.nO)({ entry: s, showCoverImage: !1, trackingSource: "user_profile_gaming_entry" }),
         { appName: u, activity: I } = (0, N.u)(s),
-        M = (0, v.A)({
+        M = (0, T.A)({
             location: "UserProfileRecentActivityCard",
             applicationId: s.extra.application_id,
-            source: T.Ob.UserProfile,
+            source: S.GameProfileSources.UserProfile,
             sourceUserId: a.id,
             trackEntryPointImpression: !0,
         }),
-        { analyticsLocations: V } = (0, t.Ay)(),
-        U = (0, R.A)({ display: "recent", user: a, entry: s, analyticsLocations: V }),
+        { analyticsLocations: G } = (0, t.Ay)(),
+        U = (0, R.A)({ display: "recent", user: a, entry: s, analyticsLocations: G }),
         w = (0, f.A)({ userId: a.id, onAction: U });
     return null == M
         ? (0, i.jsx)("article", {
               "aria-labelledby": c,
               children: (0, i.jsxs)(g.A.Overlay, {
-                  className: o()(G.Nr, l),
+                  className: o()(z.Nr, l),
                   ref: w,
                   children: [
                       n,
                       (0, i.jsx)("div", {
-                          className: G.rf,
+                          className: z.rf,
                           children: (0, i.jsxs)("div", {
-                              className: G.Qs,
+                              className: z.Qs,
                               children: [
-                                  (0, i.jsx)(_.d, { image: A, size: _.w.SIZE_60, className: G.Sl }),
+                                  (0, i.jsx)(_.d, { image: A, size: _.w.SIZE_60, className: z.Sl }),
                                   (0, i.jsx)("div", {
-                                      className: G.zH,
+                                      className: z.zH,
                                       children: (0, i.jsx)("div", {
                                           children: (0, i.jsx)(k.Q, { variant: "heading-sm/semibold", text: u, id: c }),
                                       }),
@@ -87,37 +87,37 @@ function U(e) {
               "aria-labelledby": c,
               children: [
                   n,
-                  (0, i.jsx)(S.A, {
+                  (0, i.jsx)(v.A, {
                       applicationId: s.extra.application_id,
                       questContent: x.u.USER_PROFILE_ACTIVITY,
                       children: (e) =>
                           (0, i.jsx)("div", {
-                              className: G.rf,
+                              className: z.rf,
                               ref: e,
                               children: (0, i.jsxs)("div", {
-                                  className: G.Qs,
+                                  className: z.Qs,
                                   children: [
                                       (0, i.jsx)(_.d, {
                                           image: A,
                                           size: _.w.SIZE_60,
-                                          className: G.mM,
+                                          className: z.mM,
                                           onClick: (e) => {
                                               e.stopPropagation(),
                                                   U({ action: "PRESS_IMAGE" }),
                                                   M(e),
-                                                  j !== z.d.MODAL && j !== z.d.MODAL_V2 && r?.();
+                                                  j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.();
                                           },
                                       }),
                                       (0, i.jsxs)("div", {
-                                          className: G.zH,
+                                          className: z.zH,
                                           children: [
                                               (0, i.jsx)(m.D, {
-                                                  className: G.sd,
+                                                  className: z.sd,
                                                   onClick: (e) => {
                                                       e.stopPropagation(),
                                                           U({ action: "PRESS_TEXT" }),
                                                           M(e),
-                                                          j !== z.d.MODAL && j !== z.d.MODAL_V2 && r?.();
+                                                          j !== V.d.MODAL && j !== V.d.MODAL_V2 && r?.();
                                                   },
                                                   children: (0, i.jsx)(k.Q, {
                                                       variant: "heading-sm/semibold",
@@ -127,7 +127,7 @@ function U(e) {
                                               }),
                                               (0, i.jsx)(y.mG, {
                                                   location: y.N5.USER_PROFILE,
-                                                  className: G.jp,
+                                                  className: z.jp,
                                                   children:
                                                       s.content_type === d.ContentInventoryEntryType.TOP_GAME
                                                           ? E.ac.map((e, a) =>
@@ -165,28 +165,28 @@ function w(e) {
         children: [
             n,
             (0, i.jsx)("div", {
-                className: G.rf,
+                className: z.rf,
                 children: (0, i.jsxs)("div", {
-                    className: G.Qs,
+                    className: z.Qs,
                     children: [
                         null == d || "" === d
                             ? (0, i.jsx)(_.d, {
                                   aspectRatio: "crunchyroll",
                                   image: o,
                                   size: _.w.SIZE_60,
-                                  className: G.Sl,
+                                  className: z.Sl,
                               })
                             : (0, i.jsx)(_.d, {
                                   aspectRatio: "crunchyroll",
                                   image: o,
                                   size: _.w.SIZE_60,
-                                  className: G.mM,
+                                  className: z.mM,
                                   onClick: (e) => {
                                       e.stopPropagation(), A({ action: "PRESS_IMAGE" }), (0, j.C)(d);
                                   },
                               }),
                         (0, i.jsxs)("div", {
-                            className: G.zH,
+                            className: z.zH,
                             children: [
                                 null == d || "" === d
                                     ? (0, i.jsxs)("div", {
@@ -203,7 +203,7 @@ function w(e) {
                                           ],
                                       })
                                     : (0, i.jsxs)(m.D, {
-                                          className: G.sd,
+                                          className: z.sd,
                                           onClick: (e) => {
                                               e.stopPropagation(), A({ action: "PRESS_TEXT" }), (0, j.C)(d);
                                           },
@@ -221,7 +221,7 @@ function w(e) {
                                       }),
                                 (0, i.jsx)(y.mG, {
                                     location: y.N5.USER_PROFILE,
-                                    className: G.jp,
+                                    className: z.jp,
                                     children: I.R.map((e, a) => (0, i.jsx)(e, { entry: s }, `entry-${a}`)),
                                 }),
                             ],
@@ -252,22 +252,22 @@ function Q(e) {
               children: [
                   n,
                   (0, i.jsx)("div", {
-                      className: G.rf,
+                      className: z.rf,
                       children: (0, i.jsxs)("div", {
-                          className: G.Qs,
+                          className: z.Qs,
                           children: [
                               (0, i.jsx)(_.d, {
                                   image: o,
                                   size: _.w.SIZE_60,
-                                  className: G.mM,
+                                  className: z.mM,
                                   onClick: (e) => {
                                       e.stopPropagation(),
                                           x({ action: "OPEN_SPOTIFY_ALBUM" }),
-                                          (0, j.n)(V.M0.ALBUM, A.external_parent_id);
+                                          (0, j.n)(G.M0.ALBUM, A.external_parent_id);
                                   },
                               }),
                               (0, i.jsxs)("div", {
-                                  className: G.zH,
+                                  className: z.zH,
                                   children: [
                                       (0, i.jsxs)("div", {
                                           children: [
@@ -276,7 +276,7 @@ function Q(e) {
                                                   text: A.title,
                                                   onClick: () => {
                                                       x({ action: "OPEN_SPOTIFY_TRACK" }),
-                                                          (0, j.n)(V.M0.TRACK, A.external_id);
+                                                          (0, j.n)(G.M0.TRACK, A.external_id);
                                                   },
                                                   id: c,
                                               }),
@@ -285,14 +285,14 @@ function Q(e) {
                                                   text: A.artists[0]?.name,
                                                   onClick: () => {
                                                       x({ action: "OPEN_SPOTIFY_ARTIST" }),
-                                                          (0, j.n)(V.M0.ARTIST, A.artists[0]?.external_id);
+                                                          (0, j.n)(G.M0.ARTIST, A.artists[0]?.external_id);
                                                   },
                                               }),
                                           ],
                                       }),
                                       (0, i.jsx)(y.mG, {
                                           location: y.N5.USER_PROFILE,
-                                          className: G.jp,
+                                          className: z.jp,
                                           children: u.hh.map((e, a) => (0, i.jsx)(e, { entry: s }, `entry-${a}`)),
                                       }),
                                   ],
@@ -324,26 +324,26 @@ function F(e) {
         "aria-labelledby": c,
         children: [
             n,
-            (0, i.jsx)(S.A, {
+            (0, i.jsx)(v.A, {
                 applicationId: s.extra.application_id,
                 questContent: x.u.USER_PROFILE_ACTIVITY,
                 children: (e) =>
                     (0, i.jsx)("div", {
-                        className: G.rf,
+                        className: z.rf,
                         ref: e,
                         children: (0, i.jsxs)("div", {
-                            className: G.Qs,
+                            className: z.Qs,
                             children: [
                                 (0, i.jsx)(_.d, {
                                     image: o,
                                     size: _.w.SIZE_60,
-                                    className: G.mM,
+                                    className: z.mM,
                                     onClick: (e) => {
                                         e.stopPropagation(), m({ action: "PRESS_IMAGE" }), h();
                                     },
                                 }),
                                 (0, i.jsxs)("div", {
-                                    className: G.zH,
+                                    className: z.zH,
                                     children: [
                                         (0, i.jsx)("div", {
                                             children: (0, i.jsx)(k.Q, {
@@ -357,7 +357,7 @@ function F(e) {
                                         }),
                                         (0, i.jsx)(y.mG, {
                                             location: y.N5.USER_PROFILE,
-                                            className: G.jp,
+                                            className: z.jp,
                                             children: A.$.map((e, a) => (0, i.jsx)(e, { entry: s }, `entry-${a}`)),
                                         }),
                                     ],

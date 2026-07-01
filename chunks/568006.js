@@ -402,7 +402,7 @@ function eI(e) {
                 openGameProfileModal: (0, Z.A)({
                     location: "Rich Presence Activity Invite Embed",
                     applicationId: a?.id ?? void 0,
-                    source: X.Ob.Embed,
+                    source: X.GameProfileSources.Embed,
                     trackEntryPointImpression: !0,
                     sourceUserId: n,
                 }),

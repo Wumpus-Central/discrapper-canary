@@ -10,7 +10,7 @@ function s(e) {
         ? (r) => {
               r?.stopPropagation(),
                   r?.preventDefault(),
-                  i.A.openGameProfileModal({ ...e, gameId: s, gameProfileModalChecks: n }),
+                  i.default.openGameProfileModal({ ...e, gameId: s, gameProfileModalChecks: n }),
                   t?.();
           }
         : void 0;

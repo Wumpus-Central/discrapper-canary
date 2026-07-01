@@ -10,12 +10,12 @@ var i = n(627968),
 function c(e, t) {
     let c = r.useCallback(() => {
         null != e &&
-            (t?.(l.Ws.Feedback),
+            (t?.(l.GameProfileTrackActionActions.Feedback),
             (0, s.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    n.e("79877"),
-                    n.e("99243"),
-                    n.e("57656"),
+                    n.e("30593"),
+                    n.e("60435"),
+                    n.e("56600"),
                     n.e("8891"),
                     n.e("33771"),
                     n.e("46039"),

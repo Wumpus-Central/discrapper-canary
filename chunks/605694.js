@@ -1,4 +1,4 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => k });
 var i = n(627968),
     l = n(64700),
     s = n(503698),
@@ -106,7 +106,7 @@ function W(e) {
         ],
     });
 }
-let O = Object.assign(
+let k = Object.assign(
     function (e) {
         let {
                 user: t,
@@ -118,9 +118,9 @@ let O = Object.assign(
                 allowEditing: f,
                 disableInteraction: R,
                 index: W,
-                trailingContent: O,
+                trailingContent: k,
             } = e,
-            k = (function (e) {
+            G = (function (e) {
                 let { trackUserProfileAction: t } = (0, T.NJ)(),
                     { user: n, widget: s, cta: r } = e,
                     o = (0, c.bG)([_.default], () => _.default.getId()) === n.id,
@@ -134,7 +134,7 @@ let O = Object.assign(
                     f = (0, A.A)({
                         location: "UserProfileApplicationWidget",
                         applicationId: m?.id,
-                        source: D.Ob.UserProfile,
+                        source: D.GameProfileSources.UserProfile,
                         sourceUserId: n.id,
                         trackEntryPointImpression: !0,
                     }),
@@ -157,7 +157,7 @@ let O = Object.assign(
                             C({ analyticsLocations: R }));
                     }, [I, p, C, t, s.applicationId, R]),
                     W = null == r && j && !p && I,
-                    O =
+                    k =
                         null == r &&
                         j &&
                         p &&
@@ -166,7 +166,7 @@ let O = Object.assign(
                         !Array.from(d._.APPLICATION_IDENTITIES_SCOPES).some((e) => w.scopes.includes(e)) &&
                         !w.scopes.includes(d.F.SDK_SOCIAL_LAYER) &&
                         !w.scopes.includes(d.F.SDK_SOCIAL_LAYER_PRESENCE),
-                    k = (0, i.jsxs)(i.Fragment, {
+                    G = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != h
                                 ? (0, i.jsx)("img", { className: S.Z2, src: h, width: 16, height: 16, alt: "" })
@@ -177,23 +177,23 @@ let O = Object.assign(
                             }),
                         ],
                     }),
-                    G =
+                    O =
                         null == m
-                            ? (0, i.jsx)("div", { className: S.qd, children: k })
-                            : (0, i.jsx)(g.D, { className: a()(S.qd, S.vk), onClick: f, children: k });
+                            ? (0, i.jsx)("div", { className: S.qd, children: G })
+                            : (0, i.jsx)(g.D, { className: a()(S.qd, S.vk), onClick: f, children: G });
                 return {
                     isCurrentUser: o,
                     game: m,
                     openGameProfileModal: f,
                     handleConnect: y,
                     showConnectCta: W,
-                    showReconnectCta: O,
-                    headerTitle: G,
+                    showReconnectCta: k,
+                    headerTitle: O,
                 };
             })(e),
-            G = (0, C.A)(t.id, n.applicationId),
-            L = G.surfaceConfigs[o.m.WIDGET_TOP],
-            M = G.surfaceConfigs[o.m.WIDGET_BOTTOM];
+            O = (0, C.A)(t.id, n.applicationId),
+            L = O.surfaceConfigs[o.m.WIDGET_TOP],
+            M = O.surfaceConfigs[o.m.WIDGET_BOTTOM];
         return null == L || null == M
             ? null
             : (0, i.jsxs)(w.A, {
@@ -202,29 +202,29 @@ let O = Object.assign(
                   allowEditing: f,
                   disableInteraction: R,
                   index: W,
-                  trailingContent: O,
+                  trailingContent: k,
                   className: a()(S.Y5, { [S.aK]: h, [S.F9]: m }),
                   headerClassName: S.JE,
                   additionalManageWidgetMenuItems:
-                      null != k.game
+                      null != G.game
                           ? (0, i.jsx)(j.Dr, {
                                 id: "view-game-profile",
                                 label: "View Game Profile",
                                 icon: p._,
-                                action: k.openGameProfileModal,
+                                action: G.openGameProfileModal,
                             })
                           : null,
                   children: [
-                      (0, i.jsx)(r.kH, { ...G, surface: o.m.WIDGET_TOP, surfaceConfig: L, header: k.headerTitle }),
+                      (0, i.jsx)(r.kH, { ...O, surface: o.m.WIDGET_TOP, surfaceConfig: L, header: G.headerTitle }),
                       (0, i.jsx)(I.c, {}),
-                      (0, i.jsx)(r.kH, { ...G, surface: o.m.WIDGET_BOTTOM, surfaceConfig: M }),
+                      (0, i.jsx)(r.kH, { ...O, surface: o.m.WIDGET_BOTTOM, surfaceConfig: M }),
                       (0, i.jsx)(y, {
-                          isCurrentUser: k.isCurrentUser,
-                          isLoading: G.isLoading,
-                          hasData: G.hasIdentity,
-                          showConnectCta: k.showConnectCta,
-                          showReconnectCta: k.showReconnectCta,
-                          handleConnect: k.handleConnect,
+                          isCurrentUser: G.isCurrentUser,
+                          isLoading: O.isLoading,
+                          hasData: O.hasIdentity,
+                          showConnectCta: G.showConnectCta,
+                          showReconnectCta: G.showReconnectCta,
+                          handleConnect: G.handleConnect,
                           disableCTA: s,
                           cta: x,
                       }),

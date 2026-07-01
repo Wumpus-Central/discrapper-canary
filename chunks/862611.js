@@ -201,7 +201,7 @@ let j = (e) => {
                     return (t) =>
                         (0, r.jsx)(e, {
                             gameId: i.applicationId,
-                            source: I.Ob.GameSheet,
+                            source: I.GameProfileSources.GameSheet,
                             trackExternalAction: C,
                             ...t,
                         });

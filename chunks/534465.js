@@ -57,7 +57,7 @@ function p(e) {
         { applicationId: d, sourceUserId: f } = h({ activity: n, entry: r, user: t }),
         p = (0, u.A)({
             location: "UserProfileActivityContextMenu",
-            source: l.Ob.UserProfileCardContextMenu,
+            source: l.GameProfileSources.UserProfileCardContextMenu,
             trackEntryPointImpression: o,
             applicationId: d,
             sourceUserId: f,

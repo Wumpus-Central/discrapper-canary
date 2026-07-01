@@ -431,7 +431,7 @@ function eA(e) {
                             taskDetails: e2,
                             location: ea.rE.QUEST_CHANNEL_CALL_HEADER,
                             sourceQuestContent: p.uF.QUEST_LIVE_STREAM,
-                            gameProfileSource: L.Ob.QuestLiveStream,
+                            gameProfileSource: L.GameProfileSources.QuestLiveStream,
                         }),
                     (0, n.jsxs)("div", {
                         className: ed.uz,

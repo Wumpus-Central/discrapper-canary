@@ -1,4 +1,4 @@
-n.d(t, { M: () => _, X: () => j });
+n.d(t, { M: () => S, X: () => j });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -25,7 +25,7 @@ function j(e) {
         a = (0, h.A)({
             location: "SocialLayerCommerceGameDetailsButton",
             gameId: i ?? void 0,
-            source: g.Ob.CallTile,
+            source: g.GameProfileSources.CallTile,
             trackEntryPointImpression: !0,
         }),
         d = s?.getIconURL(E.iu.SMALL);
@@ -47,7 +47,7 @@ function j(e) {
         }),
     });
 }
-function _(e) {
+function S(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: u, idle: c } = e,
         [g, h] = i.useState(!1),
         f = i.useRef(null),

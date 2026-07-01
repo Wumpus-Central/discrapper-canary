@@ -1781,7 +1781,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tW = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tL.A().log(
-    `[BUILD INFO] Release Channel: ${tW}, Build Number: 572525, Version Hash: a8561f39f74b88db8fbb38d946ce155249b53d1d`,
+    `[BUILD INFO] Release Channel: ${tW}, Build Number: 572554, Version Hash: 73d7354af74c2dbf9c28b4ed6559f9e3833ca76a`,
 ),
     eR.A.setTags({ appContext: eM.QCW }),
     ta.A.initBasic(),
@@ -5056,7 +5056,7 @@ function lr(e) {
             a = (0, ox.A)({
                 applicationId: r.application_id,
                 location: "FriendsActivityFeed",
-                source: oP.Ob.FriendsActivityFeed,
+                source: oP.GameProfileSources.FriendsActivityFeed,
             }),
             { data: o } = (0, ok.I)(t.getCanonicalGameId()),
             l = o?.getIconURL(64) ?? t.getIconURL(64),
@@ -5089,7 +5089,7 @@ function lr(e) {
             o = (0, ox.A)({
                 applicationId: t.application_id,
                 location: "FriendsActivityFeed",
-                source: oP.Ob.FriendsActivityFeed,
+                source: oP.GameProfileSources.FriendsActivityFeed,
             }),
             { assets: l, details: u, state: c, application_id: d } = t,
             { hasButton: _ } = o8({ activity: t, user: r }),
@@ -5657,7 +5657,7 @@ function ld(e) {
         _ = (0, ox.A)({
             applicationId: t.currentActivities[0]?.activity?.application_id,
             location: "FriendsActivityFeed",
-            source: oP.Ob.FriendsActivityFeed,
+            source: oP.GameProfileSources.FriendsActivityFeed,
         }),
         h = (0, oL.A)({ userId: l.user.id, guildId: o?.id }),
         f = (0, ow.a)({ displayNameStyles: h }),
@@ -18057,7 +18057,7 @@ let Sc = "isHideDevBanner",
                     className: t6()(Su.Wz, Su.mr),
                     children: [
                         (0, F.jsx)(Sl, { className: Su.Kk }),
-                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "572525" }),
+                        nl.intl.format(nl.t.uyrfYF, { buildNumber: "572554" }),
                         (0, F.jsx)(r, {}),
                     ],
                 })
@@ -18304,7 +18304,11 @@ function SU() {
             }, 220);
             return () => window.clearTimeout(e);
         }, [_]);
-    let m = (0, ox.A)({ applicationId: i ?? void 0, location: "ClipsReminder", source: oP.Ob.ClipsReminder }),
+    let m = (0, ox.A)({
+            applicationId: i ?? void 0,
+            location: "ClipsReminder",
+            source: oP.GameProfileSources.ClipsReminder,
+        }),
         g = a.length,
         A = a.slice(0, 3);
     te.useEffect(() => {
@@ -35441,7 +35445,7 @@ let xA = [
                             n.e("25994"),
                             n.e("70788"),
                         ]).then(n.bind(n, 797489));
-                        return (t) => (0, F.jsx)(e, { gameId: i, source: oP.Ob.Deeplink, ...t });
+                        return (t) => (0, F.jsx)(e, { gameId: i, source: oP.GameProfileSources.Deeplink, ...t });
                     });
                 }),
                 (0, F.jsx)(nS.rd, { to: Sn.A.defaultRoute })

@@ -26,7 +26,7 @@ var a = n(409626),
     N = n(814793),
     v = n(347135),
     R = n(190107),
-    O = n(788868),
+    O = n(202541),
     b = n(375708);
 function D(e, t, n) {
     return n ? b.intl.formatToPlainString(e, t) : b.intl.format(e, t);
@@ -50,7 +50,11 @@ function x(e) {
         r = (0, v.I3)(t),
         l = !1 === (0, A.U)(t).hasAlreadyLinked,
         c = (0, C.I6)(t) ? (0, C.xc)(t) : (0, C._3)(t)?.[0],
-        _ = (0, o.A)({ applicationId: c, location: R.rE.QUEST_INSTRUCTIONS, source: n ?? a.Ob.QuestHome });
+        _ = (0, o.A)({
+            applicationId: c,
+            location: R.rE.QUEST_INSTRUCTIONS,
+            source: n ?? a.GameProfileSources.QuestHome,
+        });
     return (function (e) {
         let {
                 quest: t,
@@ -535,7 +539,7 @@ function U(e) {
             popoutTargetElementRef: o,
             onGameSheetOpened: l,
             onGameSheetClosed: c,
-            gameProfileSource: a.Ob.QuestBar,
+            gameProfileSource: a.GameProfileSources.QuestBar,
         }),
         L = null != m ? m.percentComplete : E.percentComplete;
     if (A) return b.intl.formatToPlainString(b.t.APddvF, { expirationDate: p });

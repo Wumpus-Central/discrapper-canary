@@ -84,7 +84,7 @@ function L(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
         r = (0, h.h)(t),
         { data: s } = (0, m.I)(t),
-        o = (0, E.A)({ applicationId: t, location: "ClipEmbed", source: p.Ob.ClipEmbed }),
+        o = (0, E.A)({ applicationId: t, location: "ClipEmbed", source: p.GameProfileSources.ClipEmbed }),
         l = s?.name ?? r?.name;
     if (null == l) return null;
     let u = (0, i.jsxs)(i.Fragment, {

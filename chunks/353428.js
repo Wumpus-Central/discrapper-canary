@@ -18,8 +18,8 @@ var l = n(627968),
     N = n(394871),
     f = n(429913),
     C = n(709066),
-    b = n(47167),
-    E = n(713654),
+    E = n(47167),
+    b = n(713654),
     I = n(131607),
     T = n(409626),
     v = n(692969),
@@ -27,10 +27,10 @@ var l = n(627968),
     _ = n(394953),
     U = n(976860),
     M = n(378570),
-    L = n(841595),
+    L = n(321191),
     y = n(903209),
-    k = n(290863),
-    S = n(994500),
+    S = n(290863),
+    k = n(994500),
     G = n(967198),
     R = n(287809),
     O = n(486020),
@@ -116,7 +116,7 @@ function K(e) {
             handleParentContextMenu: h,
             renderFollowButton: m,
         } = e,
-        A = (0, E.gU)(t, r),
+        A = (0, b.gU)(t, r),
         { prefix: g, level: j } = (function (e, t) {
             switch (e) {
                 case X.rbe.DM:
@@ -201,7 +201,7 @@ function K(e) {
         case X.rbe.PRIVATE_THREAD:
             let N = null;
             if (!c && null != s) {
-                let e = (0, E.gU)(s, r);
+                let e = (0, b.gU)(s, r);
                 N = (0, l.jsxs)(i.Fragment, {
                     children: [
                         et(e, q.intl.string(q.t.Pnajj0)),
@@ -210,7 +210,7 @@ function K(e) {
                             onContextMenu: h,
                             onClick: u,
                             className: a()(Y.rg, Y.or),
-                            children: (0, b.m1)(s, R.default, S.A),
+                            children: (0, E.m1)(s, R.default, k.A),
                         }),
                         (0, l.jsx)(w.A.Caret, {}),
                     ],
@@ -274,7 +274,7 @@ function W(e) {
 function $(e) {
     let { channel: t, enabled: n } = e,
         s = t.getRecipientId(),
-        [a, c, o] = (0, r.yK)([R.default, k.A], () => [R.default.getUser(s), k.A.getActivities(s), k.A.getStatus(s)], [
+        [a, c, o] = (0, r.yK)([R.default, S.A], () => [R.default.getUser(s), S.A.getActivities(s), S.A.getStatus(s)], [
             s,
         ]),
         { voiceChannel: d } = (0, p.Ay)({ userId: s }),
@@ -297,9 +297,13 @@ function $(e) {
         ),
         f = h[0] ?? null,
         C = x.length > 0,
-        b = h.length > 0 || null != d,
-        E = null != f && (0, g.A)(f) ? f.application_id : void 0,
-        I = (0, v.A)({ applicationId: E, source: T.Ob.DmHeaderActivity, trackEntryPointImpression: !1 }),
+        E = h.length > 0 || null != d,
+        b = null != f && (0, g.A)(f) ? f.application_id : void 0,
+        I = (0, v.A)({
+            applicationId: b,
+            source: T.GameProfileSources.DmHeaderActivity,
+            trackEntryPointImpression: !1,
+        }),
         D = null != I || null != d,
         _ = i.useCallback(
             (e) => {
@@ -323,7 +327,7 @@ function $(e) {
                         textSize: "sm",
                     }),
                 }),
-                b && (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: "\u2022" }),
+                E && (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: "\u2022" }),
                 (0, l.jsx)(N.A, {
                     user: a,
                     activities: x,

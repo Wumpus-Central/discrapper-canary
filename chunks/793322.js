@@ -11,7 +11,7 @@ var i = n(192308),
     d = n(793574),
     _ = n(115718),
     h = n(329308),
-    f = n(564064),
+    f = n(662388),
     p = n(790271),
     E = n(60465),
     m = n(409626),
@@ -170,10 +170,10 @@ function K(e) {
             P(N.id, R, { analyticsParams: { source: L.ThZ.QUICK_SWITCHER, location: L.ThZ.QUICK_SWITCHER } });
             break;
         case _.rD.GAME_PROFILE:
-            E.A.openGameProfileModal({
+            E.default.openGameProfileModal({
                 gameId: N.id,
                 gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: N.id },
-                source: m.Ob.QuickSwitcher,
+                source: m.GameProfileSources.QuickSwitcher,
             });
             break;
         case _.rD.LINK:

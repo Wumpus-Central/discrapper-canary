@@ -144,10 +144,10 @@ let C = function (e) {
         b = r.useCallback(
             (e) => {
                 (e.stopPropagation(), e.preventDefault(), v)
-                    ? u.A.openGameProfileModal({
+                    ? u.default.openGameProfileModal({
                           gameId: t,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: t },
-                          source: c.Ob.GameMention,
+                          source: c.GameProfileSources.GameMention,
                           sourceUserId: m,
                       })
                     : O();

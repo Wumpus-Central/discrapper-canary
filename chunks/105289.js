@@ -2214,7 +2214,11 @@ function t7() {
             () => (parseInt(d) > 0 ? d : (tz.A.searchGamesByName(d)[0] ?? tU.A.getApplicationByName(d)?.id)),
             [d],
         ),
-        p = (0, tW.A)({ applicationId: u, location: "DevToolsContentInventory", source: tV.Ob.DevTools }),
+        p = (0, tW.A)({
+            applicationId: u,
+            location: "DevToolsContentInventory",
+            source: tV.GameProfileSources.DevTools,
+        }),
         g = Object.entries(tL.w.get("GameProfileModal") ?? {})
             .filter((e) => {
                 let [t, a] = e;
@@ -2322,7 +2326,11 @@ function t7() {
 }
 function ae(e) {
     let { application: t } = e,
-        a = (0, tW.A)({ applicationId: t.id, location: "DevToolsContentInventory", source: tV.Ob.DevTools });
+        a = (0, tW.A)({
+            applicationId: t.id,
+            location: "DevToolsContentInventory",
+            source: tV.GameProfileSources.DevTools,
+        });
     return (0, r.jsx)(F.D, {
         onClick: a,
         children: (0, r.jsx)(h.E, { variant: "text-xs/normal", color: "text-muted", children: t.name }),
@@ -2385,7 +2393,7 @@ function ao() {
         }, []),
         u = a.trim(),
         x = u.length > 0 ? u : (e ?? void 0),
-        p = (0, tW.A)({ gameId: x, location: "DevToolsGameProfile", source: tV.Ob.DevTools });
+        p = (0, tW.A)({ gameId: x, location: "DevToolsGameProfile", source: tV.GameProfileSources.DevTools });
     return (0, r.jsx)("div", {
         className: tB.nd,
         children: (0, r.jsxs)($.B, {
@@ -2980,7 +2988,7 @@ function aF() {
         S = (0, tW.A)({
             location: "DevToolsSlayerStorefrontPanel",
             applicationId: d,
-            source: tV.Ob.Embed,
+            source: tV.GameProfileSources.Embed,
             trackEntryPointImpression: !0,
         }),
         N = o.useCallback(

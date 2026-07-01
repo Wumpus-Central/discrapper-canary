@@ -213,7 +213,11 @@ let $ = r.createContext({
 function q(e) {
     let { children: t, quest: n } = e,
         { hasAlreadyLinked: s } = (0, W.U)(n),
-        a = (0, Y.A)({ applicationId: (0, I.xc)(n), location: K.rE.QUEST_INSTRUCTIONS, source: H.Ob.QuestBar }),
+        a = (0, Y.A)({
+            applicationId: (0, I.xc)(n),
+            location: K.rE.QUEST_INSTRUCTIONS,
+            source: H.GameProfileSources.QuestBar,
+        }),
         o = r.useMemo(() => ({ hasAlreadyLinked: s, onClickGameTitle: a }), [s, a]);
     return (0, i.jsx)(z.Provider, { value: o, children: t });
 }
@@ -1280,7 +1284,7 @@ function tS(e) {
             popoutTargetElementRef: f,
             onGameSheetOpened: c,
             onGameSheetClosed: d,
-            gameProfileSource: H.Ob.QuestBar,
+            gameProfileSource: H.GameProfileSources.QuestBar,
         }),
         O = (0, eh.Pd)(l),
         b = (0, e$.z)(),

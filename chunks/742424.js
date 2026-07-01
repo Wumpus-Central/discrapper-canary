@@ -1134,7 +1134,7 @@ function tQ(e) {
             {
                 location: "ContentPopout",
                 applicationId: _ ? void 0 : A,
-                source: e1.Ob.ActivityCard,
+                source: e1.GameProfileSources.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: m.author_id,
             },
@@ -1242,7 +1242,7 @@ function tJ(e) {
             {
                 location: "ContentPopout",
                 applicationId: A,
-                source: e1.Ob.ActivityCard,
+                source: e1.GameProfileSources.ActivityCard,
                 trackEntryPointImpression: !0,
                 sourceUserId: m.author_id,
             },

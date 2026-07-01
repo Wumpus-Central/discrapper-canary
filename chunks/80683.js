@@ -420,15 +420,15 @@ function ef(e) {
                 }),
                 l = i.useCallback(() => {
                     null != n &&
-                        I.A.returnToGameProfile({
+                        I.default.returnToGameProfile({
                             gameId: n.gameId,
-                            source: j.Ob.AnnouncementChannelReturn,
+                            source: j.GameProfileSources.AnnouncementChannelReturn,
                             initialScrollOffset: n.initialScrollOffset,
                         });
                 }, [n]),
                 s = (0, r.bG)([S.A], () => (n?.gameId != null ? S.A.getGame(n.gameId) : null));
             i.useEffect(() => {
-                if (s?.id != null) return () => I.A.clearGameProfilePendingReturn(s.id);
+                if (s?.id != null) return () => I.default.clearGameProfilePendingReturn(s.id);
             }, [s?.id]);
             let a = s?.name;
             if (null == s || null == a) return null;

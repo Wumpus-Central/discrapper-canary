@@ -57,6 +57,7 @@ var i,
         (r.QUEST_HOME_PREVIEW = "quest-home-preview"),
         (r.SUBSCRIPTION_SETTINGS = "subscription-settings"),
         (r.ROLL_DICE = "roll-dice"),
+        (r.GAME_PROFILE = "game-profile"),
         r);
 let l = "CacheStoreLazy",
     u = "CacheStoreChannelsLazy",

@@ -48,7 +48,7 @@ var n,
     J = l(375708),
     q = l(432166),
     K = l(360469),
-    Q = l(620130),
+    Q = l(514146),
     Z =
         (((n = {}).ACTIVITY_FEED = "ActivityFeed"),
         (n.STREAM_PREVIEW = "StreamPreview"),
@@ -536,7 +536,7 @@ function ea(e) {
     let t = (0, b.A)({
         location: "UserActivity",
         applicationId: e.application?.id ?? e.activity?.application_id,
-        source: E.Ob.UserProfile,
+        source: E.GameProfileSources.UserProfile,
         sourceUserId: e.user.id,
         trackEntryPointImpression: !0,
     });

@@ -29,8 +29,8 @@ var i = e(627968),
     v = e(975732),
     L = e(939496),
     R = e(432585),
-    b = e(598748),
-    U = e(17928),
+    U = e(598748),
+    b = e(17928),
     M = e(554830),
     D = e(975460),
     G = e(531913),
@@ -47,11 +47,11 @@ function B(t) {
     var n, e;
     let a,
         s = (0, G.A)(t.userId, t.widgetApplication.id),
-        o = s.surfaceConfigs[b.m.ACTIVITY_ACCESSORY],
+        o = s.surfaceConfigs[U.m.ACTIVITY_ACCESSORY],
         { hasWidget: c, isLoadingProfile: d } =
             ((n = t.userId),
             (e = t.widgetApplication),
-            (a = (0, U.bG)([Y.A], () => Y.A.getUserProfile(n))),
+            (a = (0, b.bG)([Y.A], () => Y.A.getUserProfile(n))),
             l.useEffect(() => {
                 let t = new AbortController();
                 return (0, k.A)(n, void 0, { abortSignal: t.signal }), () => t.abort();
@@ -73,7 +73,7 @@ function B(t) {
               children: [
                   (0, i.jsx)("div", {
                       className: w.Qs,
-                      children: (0, i.jsx)(R.kH, { ...s, surface: b.m.ACTIVITY_ACCESSORY, surfaceConfig: o }),
+                      children: (0, i.jsx)(R.kH, { ...s, surface: U.m.ACTIVITY_ACCESSORY, surfaceConfig: o }),
                   }),
                   c &&
                       (0, i.jsx)(u.D, {
@@ -102,9 +102,9 @@ var z = e(55730),
     ta = e(518477);
 function tr(t) {
     let { applicationId: n, onAction: e, onClose: a } = t,
-        r = (0, U.bG)([ti.default], () => ti.default.getId()),
+        r = (0, b.bG)([ti.default], () => ti.default.getId()),
         s = (0, tn.Ay)(r, null),
-        o = (0, U.bG)([tl.A], () => tl.A.getDetectableGame(n)),
+        o = (0, b.bG)([tl.A], () => tl.A.getDetectableGame(n)),
         c = l.useMemo(
             () =>
                 !(
@@ -276,25 +276,25 @@ function tR(t) {
           })
         : null;
 }
-var tb = e(573648),
-    tU = e(968309),
+var tU = e(573648),
+    tb = e(968309),
     tM = e(30370);
 function tD(t) {
     let { platformType: n, icon: e, onAction: l } = t,
         { newestAnalyticsLocation: a } = (0, _.Ay)(),
         { themeType: r } = (0, L.E)(),
         s = r === tf.d.MODAL_V2;
-    return (0, U.bG)([tM.A], () => null != tM.A.getAccount(null, n))
+    return (0, b.bG)([tM.A], () => null != tM.A.getAccount(null, n))
         ? null
         : (0, i.jsx)(te.FD, {
               icon: e,
-              text: W.intl.formatToPlainString(W.t.XWSHTb, { platform: tb.A.get(n).name }),
+              text: W.intl.formatToPlainString(W.t.XWSHTb, { platform: tU.A.get(n).name }),
               fullWidth: !s,
               onClick: (t) => {
                   t.stopPropagation();
                   let e = n === tL.fg2.XBOX;
                   l?.({ action: e ? "PRESS_CONNECT_XBOX_BUTTON" : "PRESS_CONNECT_PLAYSTATION_BUTTON" }),
-                      (0, tU.A)({ platformType: n, location: a });
+                      (0, tb.A)({ platformType: n, location: a });
               },
           });
 }
@@ -309,9 +309,9 @@ function tH(t) {
         { themeType: a } = (0, L.E)(),
         r = a === tf.d.MODAL_V2,
         { channelId: s, guildId: o } = (0, S.UW)(n) ?? {},
-        c = (0, U.bG)([tw.A], () => null != s && tw.A.isInChannel(s), [s]),
-        u = (0, U.bG)([tk.A], () => (null != s ? tk.A.getChannel(s) : null), [s]),
-        d = (0, U.bG)([tW.A], () => null != u && tW.A.can(tY.Gk, u), [u]);
+        c = (0, b.bG)([tw.A], () => null != s && tw.A.isInChannel(s), [s]),
+        u = (0, b.bG)([tk.A], () => (null != s ? tk.A.getChannel(s) : null), [s]),
+        d = (0, b.bG)([tW.A], () => null != u && tW.A.can(tY.Gk, u), [u]);
     return (0, S.Cy)(n) && d && null != o && null != s
         ? (0, i.jsx)(te.FD, {
               text: W.intl.string(W.t.ZYO5OK),
@@ -345,7 +345,7 @@ var t$ = e(985629);
 function tF(t) {
     let { user: n, activity: e, onAction: l, onClose: a, application: r, containerClassName: s } = t,
         { themeType: o } = (0, L.E)(),
-        c = (0, U.bG)([ti.default], () => ti.default.getId() === n.id),
+        c = (0, b.bG)([ti.default], () => ti.default.getId() === n.id),
         u = (0, K.JC)(r),
         d = (0, tc.o)(e?.application_id ?? r?.id) || (0, z.A)(e, tL.jUm.SUPPORTS_JOIN_URL),
         { analyticsLocations: x } = (0, _.Ay)(f.A.USER_PROFILE_ACTIVITY_BUTTONS),
@@ -433,8 +433,8 @@ function t3(t) {
             activity: l,
             application: a,
             voiceGuild: R,
-            voiceChannel: b,
-            className: U,
+            voiceChannel: U,
+            className: b,
             onClose: M,
             appContext: D,
         } = t,
@@ -445,7 +445,7 @@ function t3(t) {
         w = (0, N.A)({ activity: l, user: n }),
         B = (0, y.A)({ display: "live", user: n, activity: l, entry: w, analyticsLocations: Y }),
         z = (0, O.A)({ userId: n.id, onAction: B }),
-        $ = (0, m.Ay)(b),
+        $ = (0, m.Ay)(U),
         F = (0, h.A)(l),
         X = null != F.text && "" !== F.text,
         { largeImage: Q, smallImage: q } = (0, T.XN)(l, a, "user_profile_activity_card"),
@@ -453,7 +453,7 @@ function t3(t) {
             let { location: n, user: e, currentUser: i, activity: l, application: a, entry: r, onClose: s } = t,
                 o = (0, t6.A)({
                     location: n,
-                    source: t7.Ob.UserProfile,
+                    source: t7.GameProfileSources.UserProfile,
                     trackEntryPointImpression: !0,
                     ...(0, t8.UE)({ user: e, activity: l, entry: r }),
                 }),
@@ -476,7 +476,7 @@ function t3(t) {
             onClose: M,
         });
     function J() {
-        return (0, p.A)(l) && null != b
+        return (0, p.A)(l) && null != U
             ? (0, i.jsxs)("div", {
                   className: t_.FH,
                   children: [
@@ -589,7 +589,7 @@ function t3(t) {
         value: Y,
         children: (0, i.jsxs)(tq.A, {
             ref: z,
-            className: r()(t_.Nr, U),
+            className: r()(t_.Nr, b),
             onAction: B,
             onClose: M,
             "aria-labelledby": X ? `${V} ${G}` : G,
@@ -663,9 +663,9 @@ function t3(t) {
                                         k === tf.d.MODAL && tn(),
                                     ],
                                 }),
-                                null == R || null == b
+                                null == R || null == U
                                     ? null
-                                    : (0, i.jsx)(tZ.A, { user: n, guild: R, channel: b, onAction: B, onClose: M }),
+                                    : (0, i.jsx)(tZ.A, { user: n, guild: R, channel: U, onAction: B, onClose: M }),
                             ],
                         });
                     },

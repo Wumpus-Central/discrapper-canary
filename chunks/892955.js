@@ -1281,7 +1281,7 @@ function tJ(t) {
         P = (0, tl.wo)(e.config, g),
         M = (0, R.I6)(e),
         { completedRatio: z, completedRatioDisplay: W } = (0, u.O9)(e, M),
-        $ = (0, ts.A9)(e, m, tq.rE.QUEST_HOME_DESKTOP, J.Ob.QuestHome, j),
+        $ = (0, ts.A9)(e, m, tq.rE.QUEST_HOME_DESKTOP, J.GameProfileSources.QuestHome, j),
         B = (function (t, e) {
             let { variant: n } = tn.Mk.useConfig({ location: e });
             return n === tn.d.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER

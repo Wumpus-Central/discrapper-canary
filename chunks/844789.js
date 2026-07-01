@@ -1544,7 +1544,7 @@ var na = n(211401),
     ng = n(424994),
     nj = (((a = {})[(a.EMBED = 1)] = "EMBED"), a);
 let nv = { [np.Y.XBOX]: ng.a4.XBOX, [np.Y.PLAYSTATION]: ng.a4.PLAYSTATION },
-    nC = { [nj.EMBED]: nx.Ob.Embed };
+    nC = { [nj.EMBED]: nx.GameProfileSources.Embed };
 function nN(e) {
     let t,
         n,
