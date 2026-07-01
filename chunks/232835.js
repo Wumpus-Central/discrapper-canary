@@ -340,23 +340,22 @@ let z = new $(o.h, {
                       (a = a.receiveMessage(i, !0 === v.A.isAtBottom(t))),
                       u.A.commit(a),
                       (function (e) {
-                          if (null != e.media_mention && null != e.media_mention.message_id) {
-                              let t = e.media_mention.attachment_id,
-                                  n = u.A.getOrCreate(t),
-                                  i = {
-                                      ...e,
-                                      channel_id: t,
-                                      type: x.lAJ.MEDIA_MENTION_MESSAGE,
-                                      id: e.media_mention.message_id,
-                                      message_reference: {
-                                          channel_id: e.channel_id,
-                                          message_id: e.media_mention.message_id,
-                                          type: x.SH7.DEFAULT,
-                                          guild_id: N.A.getChannel(e.channel_id)?.guild_id,
-                                      },
-                                  };
-                              (n = n.receiveMessage(i, !1)), u.A.commit(n);
-                          }
+                          if (e.media_mention?.message_id == null) return;
+                          let t = e.media_mention.attachment_id,
+                              n = u.A.getOrCreate(t),
+                              i = {
+                                  ...e,
+                                  channel_id: t,
+                                  type: x.lAJ.MEDIA_MENTION_MESSAGE,
+                                  id: e.media_mention.message_id,
+                                  message_reference: {
+                                      channel_id: e.channel_id,
+                                      message_id: e.media_mention.message_id,
+                                      type: x.SH7.DEFAULT,
+                                      guild_id: N.A.getChannel(e.channel_id)?.guild_id,
+                                  },
+                              };
+                          (n = n.receiveMessage(i, !1)), u.A.commit(n);
                       })(i));
         },
         MESSAGE_SEND_FAILED: function (e) {
@@ -388,7 +387,15 @@ let z = new $(o.h, {
                 n = e.message.channel_id,
                 i = u.A.getOrCreate(n);
             if (null == i || !i.has(t)) return !1;
-            (i = i.update(t, (t) => (0, g.IU)(t, e.message))), u.A.commit(i);
+            (i = i.update(t, (t) => (0, g.IU)(t, e.message))),
+                u.A.commit(i),
+                (function (e) {
+                    if (e.media_mention?.message_id == null || !("content" in e)) return;
+                    let t = e.media_mention.attachment_id,
+                        n = u.A.getOrCreate(t);
+                    (n = n.update(e.media_mention.message_id, (t) => (0, g.IU)(t, { content: e.content }))),
+                        u.A.commit(n);
+                })(e.message);
         },
         MESSAGE_EXPLICIT_CONTENT_SCAN_TIMEOUT: function (e) {
             let { messageId: t, channelId: n } = e,
