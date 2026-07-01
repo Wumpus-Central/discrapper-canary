@@ -162,6 +162,7 @@
 }
 
 .embed_bbe1d5 {
+    --custom-banner-gradient-color: var(--background-surface-high);
     background-color: var(--background-surface-high);
     border: 1px solid var(--border-subtle);
     border-radius: var(--radius-sm);
@@ -181,7 +182,8 @@
 }
 
 .embed_bbe1d5:hover {
-    background-color: var(--background-surface-higher)
+    background-color: var(--background-surface-higher);
+    --custom-banner-gradient-color: var(--background-surface-higher)
 }
 
 .backgroundLayer_bbe1d5 {
@@ -200,7 +202,7 @@
 }
 
 .backgroundGradient_bbe1d5 {
-    background: linear-gradient(to right, var(--background-surface-high) 50%, color-mix(in oklab, var(--background-surface-high) 60%, transparent));
+    background: linear-gradient(to right, var(--custom-banner-gradient-color) 50%, color-mix(in oklab, var(--custom-banner-gradient-color) 60%, transparent));
     inset: 0;
     position: absolute
 }
@@ -211,19 +213,24 @@
     height: 40px;
     -o-object-fit: cover;
     object-fit: cover;
+    position: relative;
     width: 40px
 }
 
-.content_bbe1d5,
-.icon_bbe1d5 {
-    position: relative
+.iconFallback_bbe1d5 {
+    align-items: center;
+    border: 1px solid var(--border-subtle);
+    color: var(--text-muted);
+    display: flex;
+    justify-content: center
 }
 
 .content_bbe1d5 {
     flex: 1 1 auto;
     flex-direction: column;
     gap: var(--space-4);
-    min-width: 0
+    min-width: 0;
+    position: relative
 }
 
 .badgeRow_bbe1d5,

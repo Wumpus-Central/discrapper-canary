@@ -1775,7 +1775,13 @@ function i_(e) {
                   (0, s.jsxs)("div", {
                       className: iv.rf,
                       children: [
-                          null != l && (0, s.jsx)("img", { src: l, alt: "", className: iv.Kk, draggable: !1 }),
+                          null != l
+                              ? (0, s.jsx)("img", { src: l, alt: "", className: iv.Kk, draggable: !1 })
+                              : (0, s.jsx)("div", {
+                                    "aria-hidden": !0,
+                                    className: iv.EU,
+                                    children: (0, s.jsx)(iu._, { size: "lg", color: "currentColor" }),
+                                }),
                           (0, s.jsxs)("div", {
                               className: iv.Qs,
                               children: [

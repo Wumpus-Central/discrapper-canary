@@ -5,6 +5,7 @@ e.exports = {
     Tp: "background_bbe1d5",
     N4: "backgroundGradient_bbe1d5",
     Kk: "icon_bbe1d5",
+    EU: "iconFallback_bbe1d5 icon_bbe1d5",
     Qs: "content_bbe1d5",
     k3: "badgeRow_bbe1d5",
 };
