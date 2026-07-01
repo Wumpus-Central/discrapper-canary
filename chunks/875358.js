@@ -7,6 +7,7 @@ e.exports = {
     _W: "underlineOnHover_dfb989",
     uY: "pop_dfb989",
     Zg: "emoji_dfb989",
+    Y0: "gummy_dfb989",
     M4: "gummyLetter_dfb989",
     _j: "shouldWrap_dfb989",
     qf: "gummyWord_dfb989",
@@ -23,6 +24,5 @@ e.exports = {
     Di: "pop-animation-main_dfb989",
     en: "pop-animation-shadow_dfb989",
     kt: "prism-scroll_dfb989",
-    Y0: "gummy_dfb989",
     Sc: "gummy-squish_dfb989",
 };

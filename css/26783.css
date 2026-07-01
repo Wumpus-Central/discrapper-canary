@@ -1769,6 +1769,11 @@
     z-index: 1
 }
 
+.gummy_dfb989 {
+    font-kerning: none;
+    font-variant-ligatures: none
+}
+
 .gummyLetter_dfb989 {
     display: inline-block;
     white-space: pre
