@@ -1409,7 +1409,7 @@ class j extends T.A {
                     this.experimentFlags.has(y.fd.LOW_LATENCY_RATE_CONTROL) &&
                         (o.params["low-latency-rate-control"] = "1"),
                     this.experimentFlags.has(y.fd.WMF_GPU_ENCODE) && (o.params["wmf-gpu"] = "1"),
-                    this.experimentFlags.has(y.fd.INTEL_GPU) && (o.params["intel-gpu"] = "0"));
+                    this.experimentFlags.has(y.fd.INTEL_GPU_DISABLE) && (o.params["intel-gpu"] = "0"));
         }
         return { videoEncoder: o, videoDecoders: a, audioEncoder: r, audioDecoders: s };
     }

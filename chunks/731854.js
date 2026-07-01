@@ -253,7 +253,7 @@ var eu =
         (m.USE_LIBOPENH264_DECODER = "use_libopenh264_decoder"),
         (m.SWALLOW_VOLUME_ONLY_SPEAKING_EVENTS = "swallow_volume_only_speaking_events"),
         (m.BROWSER_TRANSCEIVER_PADDING_REMOVAL = "browser_transceiver_padding_removal"),
-        (m.INTEL_GPU = "intel_gpu"),
+        (m.INTEL_GPU_DISABLE = "intel_gpu_disable"),
         m),
     em = (((g = {})[(g.AUTO = 1)] = "AUTO"), (g[(g.FULL = 2)] = "FULL"), g),
     eg =

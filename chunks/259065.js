@@ -175,7 +175,7 @@ let o = "display-name-styles-modal",
                     n.e("52617"),
                     n.e("4744"),
                     n.e("2698"),
-                    n.e("2331"),
+                    n.e("95152"),
                     n.e("37021"),
                     n.e("81314"),
                     n.e("71430"),
@@ -265,8 +265,8 @@ let o = "display-name-styles-modal",
                     n.e("49344"),
                     n.e("86492"),
                     n.e("72158"),
-                    n.e("45417"),
-                ]).then(n.bind(n, 354480));
+                    n.e("86438"),
+                ]).then(n.bind(n, 318117));
                 return (n) => (0, i.jsx)(e, { ...n, guildId: l, analyticsLocations: t, returnRef: c });
             },
             {

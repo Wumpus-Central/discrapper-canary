@@ -5095,6 +5095,7 @@ var rD =
         (ex.GAME_PROFILE_ENTRY_POINT_AVAILABLE = "game_profile_entry_point_available"),
         (ex.GAME_PROFILE_FOLLOW_SURVEY = "game_profile_follow_survey"),
         (ex.GAME_PROFILE_FEEDBACK = "game_profile_feedback"),
+        (ex.GAME_PROFILE_LINK_EMBED_SENT = "game_profile_link_embed_sent"),
         (ex.USER_NITRO_TENURE_REWARD_ACKNOWLEDGED = "user_nitro_tenure_reward_acknowledged"),
         (ex.REVIEW_REQUEST_DEFERRED = "review_request_deferred"),
         (ex.REVIEW_REQUEST_ELIGIBILITY_CHECKED = "review_request_eligibility_checked"),

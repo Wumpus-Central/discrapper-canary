@@ -1124,14 +1124,16 @@ class nF extends R.Ay.Store {
                     e.setExperimentFlag(eQ.fd.WMF_GPU_ENCODE, !0),
                 (0, m.isWindows)() &&
                     tq?.startsWith("Intel") &&
+                    !0 === tZ &&
+                    1 === tX &&
                     eC.getConfig({ location: "MediaEngineStore" }).enabled &&
-                    e.setExperimentFlag(eQ.fd.WMF_GPU_ENCODE, !0),
+                    (e.setExperimentFlag(eQ.fd.WMF_GPU_ENCODE, !0), e.setExperimentFlag(eQ.fd.INTEL_GPU_DISABLE, !0)),
                 (0, m.isWindows)() &&
                     tq?.startsWith("Intel") &&
                     !0 === tZ &&
                     1 === tX &&
                     eT.getConfig({ location: "MediaEngineStore" }).enabled &&
-                    e.setExperimentFlag(eQ.fd.INTEL_GPU, !0),
+                    e.setExperimentFlag(eQ.fd.INTEL_GPU_DISABLE, !0),
                 (0, m.isWindows)() &&
                     tq?.startsWith("Qualcomm") &&
                     ey("MediaEngineStore").enabled &&
