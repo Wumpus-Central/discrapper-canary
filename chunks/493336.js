@@ -1026,13 +1026,13 @@ ${s}`),
                     d.Ay.enqueue(
                         e_,
                         (f) => {
-                            let v = Date.now() - a;
+                            let R = Date.now() - a;
                             if (f.ok) {
-                                var R, b, G, V, B, j, Y;
+                                var b, G, V, B, j, Y, W;
                                 let s;
                                 ei.donateSentMessage(o, e),
                                     ez.receiveMessage(e, f.body, !0, {
-                                        sendAnalytics: { duration: v, queueSize: u },
+                                        sendAnalytics: { duration: R, queueSize: u },
                                         poll: O,
                                     }),
                                     null != n.alsoForwardToChannelId &&
@@ -1199,65 +1199,77 @@ ${s}`),
                                         location: p ?? "chat_input",
                                         inviteAnalyticsMetadata: m,
                                     }),
-                                    (R = o),
-                                    (b = f.body.id),
-                                    (G = p ?? "chat_input"),
-                                    (V = !!n.isGiftLinkSentOnBehalfOfUser),
-                                    (0, ew.e7)(R).forEach((t) => {
+                                    (b = o),
+                                    (G = f.body.id),
+                                    (V = p ?? "chat_input"),
+                                    (B = !!n.isGiftLinkSentOnBehalfOfUser),
+                                    (0, ew.e7)(b).forEach((t) => {
                                         let n = q.A.getChannel(e);
                                         null != n &&
                                             _.Ay.trackWithMetadata(L.HAw.GIFT_CODE_SENT, {
-                                                location: G,
+                                                location: V,
                                                 gift_code: t,
                                                 guild_id: n.getGuildId(),
                                                 channel_id: n.id,
                                                 channel_type: n.type,
-                                                message_id: b,
-                                                automatic_send: V,
+                                                message_id: G,
+                                                automatic_send: B,
                                             });
                                     }),
                                     null != n.gifMetadata &&
-                                        ((B = n.gifMetadata),
-                                        (j = f.body.id),
-                                        (Y = p ?? "chat_input"),
+                                        ((j = n.gifMetadata),
+                                        (Y = f.body.id),
+                                        (W = p ?? "chat_input"),
                                         null != (s = q.A.getChannel(e)) &&
                                             D.default.track(L.HAw.MESSAGE_SENT_WITH_GIF, {
-                                                location: Y,
-                                                message_id: j,
-                                                gif_provider: B.gif_provider,
-                                                load_id: B.load_id,
-                                                source_object: B.source_object,
-                                                gif_url: B.gif_url,
-                                                gif_id: B.gif_id,
+                                                location: W,
+                                                message_id: Y,
+                                                gif_provider: j.gif_provider,
+                                                load_id: j.load_id,
+                                                source_object: j.source_object,
+                                                gif_url: j.gif_url,
+                                                gif_id: j.gif_id,
                                                 ...(0, _.H$)(s.getGuildId()),
                                                 ...(0, _.dI)(s),
                                             })),
                                     (function (e) {
-                                        let { channelId: t, messageId: n, attachments: i, attachmentsToUpload: r } = e;
+                                        let {
+                                            channelId: t,
+                                            messageId: n,
+                                            attachments: i,
+                                            attachmentsToUpload: r,
+                                            messageReference: s,
+                                        } = e;
                                         if (i.length !== r.length) return;
-                                        let s = q.A.getChannel(t);
-                                        null != s &&
-                                            r.forEach((e, r) => {
-                                                let { clip: a } = e;
-                                                null != a &&
-                                                    D.default.track(L.HAw.CLIP_SHARED, {
-                                                        ...g.Zy(a),
-                                                        ...g.lc("trackClipsShared"),
-                                                        channel_id: t,
-                                                        guild_id: s.getGuildId(),
-                                                        channel_type: s.type,
-                                                        application_id: a.applicationId,
-                                                        clip_uuid: a.id,
-                                                        remote_clip_id: a.remoteClipId,
-                                                        message_id: n,
-                                                        attachment_id: i[r].id,
-                                                    });
+                                        let a = q.A.getChannel(t);
+                                        if (null == a) return;
+                                        let o = eE.A.getMessageByReference(s);
+                                        r.forEach((e, r) => {
+                                            let { clip: s } = e;
+                                            if (null == s) return;
+                                            let l =
+                                                o.state === eE.a.LOADED &&
+                                                o.message.attachments.some((e) => e.clip_remote_id === s.remoteClipId);
+                                            D.default.track(L.HAw.CLIP_SHARED, {
+                                                ...g.Zy(s),
+                                                ...g.lc("trackClipsShared"),
+                                                channel_id: t,
+                                                guild_id: a.getGuildId(),
+                                                channel_type: a.type,
+                                                application_id: s.applicationId,
+                                                clip_uuid: s.id,
+                                                remote_clip_id: s.remoteClipId,
+                                                message_id: n,
+                                                attachment_id: i[r].id,
+                                                is_distributed_clip_reply: l,
                                             });
+                                        });
                                     })({
                                         channelId: e,
                                         messageId: f.body.id,
                                         attachments: f.body.attachments ?? [],
                                         attachmentsToUpload: F ?? [],
+                                        messageReference: v,
                                     }),
                                     null != i &&
                                         l.h.dispatch({
