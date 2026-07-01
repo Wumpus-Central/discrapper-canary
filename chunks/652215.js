@@ -4207,6 +4207,7 @@ var rD =
         (ex.GIFT_INTENT_ACTION_BUTTON_CLICKED = "gift_intent_action_button_clicked"),
         (ex.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED = "gift_intent_card_secondary_cta_clicked"),
         (ex.GIFT_INTENT_MESSAGE_SENT = "gift_intent_message_sent"),
+        (ex.GIFT_INTENT_DISMISSED = "gift_intent_dismissed"),
         (ex.GIFT_INFO_OPTIONS_MISSING = "gift_info_options_missing"),
         (ex.GIFT_PROMOTION_REWARD_SELECTED = "gift_promotion_reward_selected"),
         (ex.SLASH_COMMAND_USED = "slash_command_used"),
