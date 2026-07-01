@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ad: () => E, BT: () => I, Yd: () => A, np: () => g, qH: () => f, xs: () => m });
+n.d(t, { Ad: () => E, Yd: () => A, np: () => g, qH: () => f, xs: () => m });
 var i = n(636537),
     r = n(228366),
     s = n(427358),
@@ -67,7 +67,4 @@ function g(e, t) {
 function A(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _.np.FRIEND_ANNIVERSARY;
     r.h.dispatch({ type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId: e }), p(t, e, "gift_sent");
-}
-function I() {
-    r.h.dispatch({ type: "GIFT_UNREAD_NOTIFICATION_DISMISS" });
 }
