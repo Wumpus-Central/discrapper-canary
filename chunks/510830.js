@@ -2731,6 +2731,7 @@ let nQ = i.forwardRef(function (e, t) {
         disableAdaptiveTheme: !0,
         children: (e) =>
             (0, r.jsx)("div", {
+                "data-testid": "quest-home-hero-banner",
                 className: o()(nR.iE, e, d),
                 onMouseEnter: f,
                 onMouseLeave: g,
