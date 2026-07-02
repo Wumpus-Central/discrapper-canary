@@ -3777,7 +3777,7 @@
     --icon-invert: #2e3036;
     --icon-link: #75b0f5;
     --icon-muted: #ababb3;
-    --icon-overlay-dark: #2e3036;
+    --icon-overlay-dark: #000;
     --icon-overlay-light: #fff;
     --icon-status-dnd: #db4247;
     --icon-status-idle: #ffcc6e;
@@ -4023,7 +4023,7 @@
     --text-invert: #2e3036;
     --text-link: #75b0f5;
     --text-muted: #ababb3;
-    --text-overlay-dark: #2e3036;
+    --text-overlay-dark: #000;
     --text-overlay-light: #fff;
     --text-status-dnd: #db4247;
     --text-status-idle: #ffcc6e;
@@ -4427,8 +4427,8 @@
     --icon-invert: #fff;
     --icon-link: #006ed4;
     --icon-muted: #6b6e75;
-    --icon-overlay-dark: #2e3036;
-    --icon-overlay-light: #fafafa;
+    --icon-overlay-dark: #000;
+    --icon-overlay-light: #fff;
     --icon-status-dnd: #d12e38;
     --icon-status-idle: #faab00;
     --icon-status-offline: #5e616b;
@@ -4673,8 +4673,8 @@
     --text-invert: #fff;
     --text-link: #006ed4;
     --text-muted: #6b6e75;
-    --text-overlay-dark: #2e3036;
-    --text-overlay-light: #fafafa;
+    --text-overlay-dark: #000;
+    --text-overlay-light: #fff;
     --text-status-dnd: #d12e38;
     --text-status-idle: #faab00;
     --text-status-offline: #5e616b;
@@ -5077,8 +5077,8 @@
     --icon-invert: #2e3036;
     --icon-link: #388aeb;
     --icon-muted: #878a91;
-    --icon-overlay-dark: #2e3036;
-    --icon-overlay-light: #e3e3e6;
+    --icon-overlay-dark: #000;
+    --icon-overlay-light: #fff;
     --icon-status-dnd: #db4247;
     --icon-status-idle: #ffcc6e;
     --icon-status-offline: #9e9ea6;
@@ -5323,8 +5323,8 @@
     --text-invert: #2e3036;
     --text-link: #388aeb;
     --text-muted: #878a91;
-    --text-overlay-dark: #2e3036;
-    --text-overlay-light: #e3e3e6;
+    --text-overlay-dark: #000;
+    --text-overlay-light: #fff;
     --text-status-dnd: #db4247;
     --text-status-idle: #ffcc6e;
     --text-status-offline: #9e9ea6;
@@ -5727,8 +5727,8 @@
     --icon-invert: #2e3036;
     --icon-link: #4d96ed;
     --icon-muted: #96969e;
-    --icon-overlay-dark: #2e3036;
-    --icon-overlay-light: #fafafa;
+    --icon-overlay-dark: #000;
+    --icon-overlay-light: #fff;
     --icon-status-dnd: #db4247;
     --icon-status-idle: #ffcc6e;
     --icon-status-offline: #9e9ea6;
@@ -5973,8 +5973,8 @@
     --text-invert: #2e3036;
     --text-link: #4d96ed;
     --text-muted: #96969e;
-    --text-overlay-dark: #2e3036;
-    --text-overlay-light: #fafafa;
+    --text-overlay-dark: #000;
+    --text-overlay-light: #fff;
     --text-status-dnd: #db4247;
     --text-status-idle: #ffcc6e;
     --text-status-offline: #9e9ea6;

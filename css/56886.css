@@ -922,7 +922,7 @@
     --icon-invert: var(--neutral-71);
     --icon-link: var(--blue-new-27);
     --icon-muted: var(--neutral-23);
-    --icon-overlay-dark: var(--neutral-71);
+    --icon-overlay-dark: var(--neutral-100);
     --icon-overlay-light: var(--neutral-1);
     --icon-status-dnd: var(--red-new-45);
     --icon-status-idle: var(--yellow-new-22);
@@ -1116,7 +1116,7 @@
     --text-invert: var(--neutral-71);
     --text-link: var(--blue-new-27);
     --text-muted: var(--neutral-23);
-    --text-overlay-dark: var(--neutral-71);
+    --text-overlay-dark: var(--neutral-100);
     --text-overlay-light: var(--neutral-1);
     --text-status-dnd: var(--red-new-45);
     --text-status-idle: var(--yellow-new-22);
@@ -1289,7 +1289,7 @@
         --icon-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-23) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-overlay-light: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -1798,8 +1798,8 @@
     --icon-invert: var(--neutral-1);
     --icon-link: var(--blue-new-53);
     --icon-muted: var(--neutral-41);
-    --icon-overlay-dark: var(--neutral-71);
-    --icon-overlay-light: var(--neutral-2);
+    --icon-overlay-dark: var(--neutral-100);
+    --icon-overlay-light: var(--neutral-1);
     --icon-status-dnd: var(--red-new-50);
     --icon-status-idle: var(--yellow-new-45);
     --icon-status-offline: var(--neutral-45);
@@ -1992,8 +1992,8 @@
     --text-invert: var(--neutral-1);
     --text-link: var(--blue-new-53);
     --text-muted: var(--neutral-41);
-    --text-overlay-dark: var(--neutral-71);
-    --text-overlay-light: var(--neutral-2);
+    --text-overlay-dark: var(--neutral-100);
+    --text-overlay-light: var(--neutral-1);
     --text-status-dnd: var(--red-new-50);
     --text-status-idle: var(--yellow-new-45);
     --text-status-offline: var(--neutral-45);
@@ -2165,8 +2165,8 @@
         --icon-invert: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-53) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-41) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --icon-overlay-light: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-light: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-50) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-offline: color-mix(in oklab, var(--neutral-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -2674,8 +2674,8 @@
     --icon-invert: var(--neutral-71);
     --icon-link: var(--blue-new-42);
     --icon-muted: var(--neutral-33);
-    --icon-overlay-dark: var(--neutral-71);
-    --icon-overlay-light: var(--neutral-8);
+    --icon-overlay-dark: var(--neutral-100);
+    --icon-overlay-light: var(--neutral-1);
     --icon-status-dnd: var(--red-new-45);
     --icon-status-idle: var(--yellow-new-22);
     --icon-status-offline: var(--neutral-27);
@@ -2868,8 +2868,8 @@
     --text-invert: var(--neutral-71);
     --text-link: var(--blue-new-42);
     --text-muted: var(--neutral-33);
-    --text-overlay-dark: var(--neutral-71);
-    --text-overlay-light: var(--neutral-8);
+    --text-overlay-dark: var(--neutral-100);
+    --text-overlay-light: var(--neutral-1);
     --text-status-dnd: var(--red-new-45);
     --text-status-idle: var(--yellow-new-22);
     --text-status-offline: var(--neutral-27);
@@ -3041,8 +3041,8 @@
         --icon-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-42) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-33) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --icon-overlay-light: color-mix(in oklab, var(--neutral-8) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-light: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
@@ -3550,8 +3550,8 @@
     --icon-invert: var(--neutral-71);
     --icon-link: var(--blue-new-37);
     --icon-muted: var(--neutral-29);
-    --icon-overlay-dark: var(--neutral-71);
-    --icon-overlay-light: var(--neutral-2);
+    --icon-overlay-dark: var(--neutral-100);
+    --icon-overlay-light: var(--neutral-1);
     --icon-status-dnd: var(--red-new-45);
     --icon-status-idle: var(--yellow-new-22);
     --icon-status-offline: var(--neutral-27);
@@ -3744,8 +3744,8 @@
     --text-invert: var(--neutral-71);
     --text-link: var(--blue-new-37);
     --text-muted: var(--neutral-29);
-    --text-overlay-dark: var(--neutral-71);
-    --text-overlay-light: var(--neutral-2);
+    --text-overlay-dark: var(--neutral-100);
+    --text-overlay-light: var(--neutral-1);
     --text-status-dnd: var(--red-new-45);
     --text-status-idle: var(--yellow-new-22);
     --text-status-offline: var(--neutral-27);
@@ -3917,8 +3917,8 @@
         --icon-invert: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-link: color-mix(in oklab, var(--blue-new-37) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-muted: color-mix(in oklab, var(--neutral-29) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --icon-overlay-dark: color-mix(in oklab, var(--neutral-71) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
-        --icon-overlay-light: color-mix(in oklab, var(--neutral-2) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-dark: color-mix(in oklab, var(--neutral-100) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
+        --icon-overlay-light: color-mix(in oklab, var(--neutral-1) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-dnd: color-mix(in oklab, var(--red-new-45) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-idle: color-mix(in oklab, var(--yellow-new-22) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
         --icon-status-offline: color-mix(in oklab, var(--neutral-27) 100%, var(--custom-theme-text-color, #000) var(--custom-theme-text-color-amount, 0%));
