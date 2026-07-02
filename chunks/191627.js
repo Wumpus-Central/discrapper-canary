@@ -38,7 +38,7 @@ var i,
     d,
     _ = n(323125),
     h = n(927813),
-    f = n(477480),
+    f = n(602339),
     p = n(375708);
 let E = "RESTRICTED_HOURS_LAYER",
     m = 30 * h.A.Millis.SECOND,
@@ -104,6 +104,8 @@ var O = (((i = {})[(i.PARENT = 1)] = "PARENT"), (i[(i.CHILD = 2)] = "CHILD"), i)
         (c[(c.SelectTeen = 6)] = "SelectTeen"),
         (c[(c.HideQRCode = 7)] = "HideQRCode"),
         (c[(c.NufConsentGateLinkCodeError = 8)] = "NufConsentGateLinkCodeError"),
+        (c[(c.ShareLink = 9)] = "ShareLink"),
+        (c[(c.CopyLink = 10)] = "CopyLink"),
         c);
 let k = new Map([
     [

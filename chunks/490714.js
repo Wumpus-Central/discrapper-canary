@@ -1685,11 +1685,13 @@ function iC(e) {
         "aria-label": q.intl.formatToPlainString(q.t["8QLQB+"], { gameName: i.name }),
         children: [
             h &&
-                (0, s.jsx)("div", {
+                (0, s.jsxs)("div", {
                     "aria-hidden": !0,
                     className: iI.q5,
-                    style: { backgroundImage: `url("${d}")` },
-                    children: (0, s.jsx)("div", { className: iI.nY }),
+                    children: [
+                        (0, s.jsx)("div", { className: iI._e, style: { backgroundImage: `url("${d}")` } }),
+                        (0, s.jsx)("div", { className: iI.nY }),
+                    ],
                 }),
             (0, s.jsxs)("div", {
                 className: o()(iI.rf, { [iI.F7]: h }),

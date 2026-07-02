@@ -4561,30 +4561,14 @@ let r7 = (e) => {
             },
         },
         TENANT_PROVIDER_CONFIGS: {
-            tenantProvidesCheckoutRoot: !0,
+            tenantProvidesCheckoutRoot: !1,
             CustomTenantProvider: (e) => {
-                let {
-                        loadId: t,
-                        applicationId: n,
-                        activeSubscription: i,
-                        stepConfigs: s,
-                        skuId: a,
-                        tenantParams: o,
-                        children: l,
-                    } = e,
-                    { guildId: u, showBenefitsFirst: c } = o;
-                return (0, r.jsx)(y.M, {
-                    loadId: t,
-                    applicationId: n,
-                    activeSubscription: i,
-                    stepConfigs: s,
-                    skuIDs: [a],
-                    unifiedCheckoutFlow: S.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT,
-                    children: (0, r.jsx)(r$, {
-                        guildId: u,
-                        showBenefitsFirst: c,
-                        children: (0, r.jsx)(ii.Qt, { children: l }),
-                    }),
+                let { tenantParams: t, children: n } = e,
+                    { guildId: i, showBenefitsFirst: s } = t;
+                return (0, r.jsx)(r$, {
+                    guildId: i,
+                    showBenefitsFirst: s,
+                    children: (0, r.jsx)(ii.Qt, { children: n }),
                 });
             },
             TenantPaymentModalRenderer: (e) => {

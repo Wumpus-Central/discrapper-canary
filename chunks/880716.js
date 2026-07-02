@@ -1,7 +1,9 @@
 e.exports = {
     E6: "embed_cbd65e",
     q5: "bannerArea_cbd65e",
-    nY: "bannerGradient_cbd65e",
+    y1: "bannerBase_cbd65e",
+    _e: "bannerImage_cbd65e bannerBase_cbd65e",
+    nY: "bannerGradient_cbd65e bannerBase_cbd65e",
     rf: "body_cbd65e",
     F7: "bodyWithBanner_cbd65e",
     Kk: "icon_cbd65e",

@@ -89,17 +89,25 @@
 }
 
 .bannerArea_cbd65e {
-    background-position: 50%;
-    background-size: cover;
-    height: 184px;
+    height: 156px;
     position: relative;
     width: 100%
 }
 
+.bannerBase_cbd65e {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: -48px
+}
+
+.bannerImage_cbd65e {
+    background-position: 50%;
+    background-size: cover
+}
+
 .bannerGradient_cbd65e {
-    background: linear-gradient(to bottom, transparent 62%, color-mix(in oklab, var(--custom-banner-gradient-color) 90%, transparent) 87%, var(--custom-banner-gradient-color) 98%);
-    inset: -1px;
-    position: absolute
+    background: linear-gradient(to bottom, transparent 0, color-mix(in oklab, var(--custom-banner-gradient-color) 30%, transparent) 50%, color-mix(in oklab, var(--custom-banner-gradient-color) 70%, transparent) 80%, var(--custom-banner-gradient-color) 100%)
 }
 
 .body_cbd65e {
