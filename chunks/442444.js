@@ -1,98 +1,102 @@
-s.d(t, { A: () => N });
+s.d(t, { A: () => U });
 var n = s(627968),
     l = s(64700),
     i = s(922016),
-    r = s(834730),
-    u = s(939249),
-    a = s(789645),
+    u = s(834730),
+    a = s(939249),
+    r = s(789645),
     o = s(821609),
-    c = s(408278),
-    E = s(365199),
+    E = s(408278),
+    c = s(365199),
     d = s(743368),
     A = s(246356),
-    T = s(24001),
-    S = s(3738),
-    C = s(347135),
-    _ = s(646917),
-    m = s(651892),
+    S = s(24001),
+    T = s(3738),
+    _ = s(347135),
+    C = s(646917),
+    m = s(590202),
+    Q = s(651892),
     x = s(576761),
-    Q = s(73473),
-    h = s(270045),
+    h = s(73473),
+    L = s(270045),
     R = s(442734),
-    L = s(646764),
-    f = s(617986),
-    I = s(190107),
-    g = s(375708),
-    v = s(305421);
-function N(e) {
-    let { quest: t, isFocused: s, onAcceptQuest: N, isEnrolling: j } = e,
-        U = (0, S.A9)(t, T.uF.QUEST_LIVE_STREAM, I.rE.QUEST_CHANNEL_CALL_HEADER),
-        p = (0, _.z)(),
-        M = (0, C.SD)(t, p) && (p === x.MA.NITRO || p === x.MA.CREPE),
-        b = null != t.config.ctaConfig ? (0, m.Jx)(t.config) : null,
-        [y, F] = l.useState(!1),
-        q = l.useRef(null),
-        V = l.useCallback((e) => {
-            e.stopPropagation(), F((e) => !e);
+    I = s(646764),
+    g = s(617986),
+    v = s(190107),
+    N = s(375708),
+    f = s(305421);
+function U(e) {
+    let { quest: t, isFocused: s, onAcceptQuest: U, isEnrolling: j } = e,
+        M = (0, T.A9)(t, S.uF.QUEST_LIVE_STREAM, v.rE.QUEST_CHANNEL_CALL_HEADER),
+        p = (0, C.z)(),
+        b = (0, _.SD)(t, p) && (p === x.MA.NITRO || p === x.MA.CREPE),
+        F = null != t.config.ctaConfig ? (0, Q.Jx)(t.config) : null,
+        y = (0, _.do)({
+            quest: t,
+            content: S.uF.QUEST_LIVE_STREAM,
+            ctaContent: m.Cy.OPEN_GAME_LINK,
+            sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
+        }),
+        [q, V] = l.useState(!1),
+        D = l.useRef(null),
+        O = l.useCallback((e) => {
+            e.stopPropagation(), V((e) => !e);
         }, []),
-        H = l.useCallback(() => {
-            F(!1);
+        P = l.useCallback(() => {
+            V(!1);
         }, []),
-        D = l.useCallback(() => {
-            (0, f.navigateToQuestHome)({ fromContent: T.uF.QUEST_LIVE_STREAM, questId: t.id }), F(!1);
-        }, [t.id]),
         k = l.useCallback(() => {
-            null != b && window.open(b, "_blank", "noopener,noreferrer");
-        }, [b]);
-    return (0, n.jsx)(Q.R, {
+            (0, g.navigateToQuestHome)({ fromContent: S.uF.QUEST_LIVE_STREAM, questId: t.id }), V(!1);
+        }, [t.id]);
+    return (0, n.jsx)(h.R, {
         questOrQuests: t,
-        questContent: T.uF.QUEST_LIVE_STREAM,
-        sourceQuestContent: T.uF.QUEST_LIVE_STREAM,
+        questContent: S.uF.QUEST_LIVE_STREAM,
+        sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
         children: () =>
             (0, n.jsxs)("div", {
-                className: v.M0,
-                ref: q,
+                className: f.M0,
+                ref: D,
                 children: [
-                    (0, n.jsx)(L.A, {
-                        className: v.Qq,
+                    (0, n.jsx)(I.A, {
+                        className: f.Qq,
                         style: { width: 32, height: 32 },
                         autoplay: s,
                         quest: t,
-                        questContent: T.uF.QUEST_LIVE_STREAM,
-                        sourceQuestContent: T.uF.QUEST_LIVE_STREAM,
+                        questContent: S.uF.QUEST_LIVE_STREAM,
+                        sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
                     }),
                     (0, n.jsx)(i.Y, {
-                        targetElementRef: q,
-                        shouldShow: y,
+                        targetElementRef: D,
+                        shouldShow: q,
                         position: "bottom",
                         align: "left",
                         spacing: 4,
                         animation: i.Y.Animation.NONE,
-                        onRequestClose: H,
+                        onRequestClose: P,
                         renderPopout: () =>
                             (0, n.jsx)(A.A, {
-                                children: (0, n.jsx)(Q.R, {
+                                children: (0, n.jsx)(h.R, {
                                     overrideVisibility: !0,
                                     questOrQuests: t,
-                                    questContent: T.uF.QUEST_LIVE_STREAM,
-                                    sourceQuestContent: T.uF.QUEST_LIVE_STREAM,
+                                    questContent: S.uF.QUEST_LIVE_STREAM,
+                                    sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
                                     children: () =>
                                         (0, n.jsxs)("div", {
-                                            className: v.g5,
+                                            className: f.g5,
                                             children: [
                                                 (0, n.jsxs)("div", {
-                                                    className: v.j$,
+                                                    className: f.j$,
                                                     children: [
-                                                        (0, n.jsx)(r.E, {
+                                                        (0, n.jsx)(u.E, {
                                                             variant: "text-md/semibold",
                                                             color: "text-default",
                                                             children: t.config.messages.questName,
                                                         }),
-                                                        (0, n.jsx)(u.D, {
-                                                            className: v.We,
-                                                            "aria-label": g.intl.string(g.t.cpT0Cq),
-                                                            onClick: H,
-                                                            children: (0, n.jsx)(a.P, {
+                                                        (0, n.jsx)(a.D, {
+                                                            className: f.We,
+                                                            "aria-label": N.intl.string(N.t.cpT0Cq),
+                                                            onClick: P,
+                                                            children: (0, n.jsx)(r.P, {
                                                                 size: "xs",
                                                                 color: "currentColor",
                                                             }),
@@ -100,20 +104,20 @@ function N(e) {
                                                     ],
                                                 }),
                                                 (0, n.jsxs)("div", {
-                                                    className: v.ek,
+                                                    className: f.ek,
                                                     children: [
-                                                        (0, n.jsx)(L.A, {
-                                                            className: v.Ul,
+                                                        (0, n.jsx)(I.A, {
+                                                            className: f.Ul,
                                                             style: { width: 48, height: 48 },
                                                             autoplay: !0,
                                                             quest: t,
-                                                            questContent: T.uF.QUEST_LIVE_STREAM,
-                                                            sourceQuestContent: T.uF.QUEST_LIVE_STREAM,
+                                                            questContent: S.uF.QUEST_LIVE_STREAM,
+                                                            sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
                                                         }),
-                                                        (0, n.jsx)(r.E, {
+                                                        (0, n.jsx)(u.E, {
                                                             variant: "text-sm/normal",
                                                             color: "text-default",
-                                                            children: U,
+                                                            children: M,
                                                         }),
                                                     ],
                                                 }),
@@ -121,8 +125,8 @@ function N(e) {
                                                     variant: "secondary",
                                                     size: "md",
                                                     fullWidth: !0,
-                                                    text: g.intl.string(g.t["th2+0j"]),
-                                                    onClick: D,
+                                                    text: N.intl.string(N.t["th2+0j"]),
+                                                    onClick: k,
                                                 }),
                                             ],
                                         }),
@@ -130,69 +134,69 @@ function N(e) {
                             }),
                         children: () =>
                             (0, n.jsx)("div", {
-                                className: v.zh,
+                                className: f.zh,
                                 children: (0, n.jsx)(o.$, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: g.intl.string(g.t["h/qYF6"]),
-                                    onClick: V,
+                                    text: N.intl.string(N.t["h/qYF6"]),
+                                    onClick: O,
                                 }),
                             }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: v.KW,
+                        className: f.KW,
                         children: [
-                            (0, n.jsx)(r.E, {
+                            (0, n.jsx)(u.E, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                className: v.I4,
-                                children: g.intl.string(g.t.o6FLcF),
+                                className: f.I4,
+                                children: N.intl.string(N.t.o6FLcF),
                             }),
-                            (0, n.jsx)("span", { className: v.me, "aria-hidden": !0, children: "\xb7" }),
+                            (0, n.jsx)("span", { className: f.me, "aria-hidden": !0, children: "\xb7" }),
                             (0, n.jsxs)("div", {
-                                className: v.VP,
+                                className: f.VP,
                                 children: [
-                                    (0, n.jsx)(r.E, {
+                                    (0, n.jsx)(u.E, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
-                                        className: v.h_,
-                                        children: U,
+                                        className: f.h_,
+                                        children: M,
                                     }),
-                                    M && (0, n.jsx)(R.e, { questId: t.id, orbMultiplierEligibility: p }),
+                                    b && (0, n.jsx)(R.e, { questId: t.id, orbMultiplierEligibility: p }),
                                 ],
                             }),
                         ],
                     }),
-                    (0, n.jsx)(h.C, {
-                        questContent: T.uF.QUEST_LIVE_STREAM,
-                        sourceQuestContent: T.uF.QUEST_LIVE_STREAM,
+                    (0, n.jsx)(L.C, {
+                        questContent: S.uF.QUEST_LIVE_STREAM,
+                        sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
                         quest: t,
                         preventIdle: !0,
                         shouldShowDisclosure: !0,
                         children: (e) =>
-                            (0, n.jsx)(c.K, {
+                            (0, n.jsx)(E.K, {
                                 ...e,
                                 variant: "secondary",
                                 size: "sm",
-                                icon: E.j,
-                                "aria-label": g.intl.string(g.t.DEoVWZ),
+                                icon: c.j,
+                                "aria-label": N.intl.string(N.t.DEoVWZ),
                             }),
                     }),
-                    null != b &&
-                        (0, n.jsx)(c.K, {
+                    null != F &&
+                        (0, n.jsx)(E.K, {
                             variant: "secondary",
                             size: "sm",
                             icon: d.W,
                             "aria-label": t.config.ctaConfig.buttonLabel,
-                            onClick: k,
+                            onClick: y,
                         }),
                     (0, n.jsx)("div", {
-                        className: v.lI,
+                        className: f.lI,
                         children: (0, n.jsx)(o.$, {
                             variant: "primary",
                             size: "sm",
-                            text: g.intl.string(g.t.l7E81v),
-                            onClick: N,
+                            text: N.intl.string(N.t.l7E81v),
+                            onClick: U,
                             loading: j,
                         }),
                     }),
