@@ -17,6 +17,7 @@ e.exports = {
     SV: "detailPanel__6db38",
     C9: "detailScroller__6db38",
     b: "closeButton__6db38",
+    Gw: "detailCloseButton__6db38",
     y2: "badgeGraphic__6db38",
     hu: "badgeGraphicAnimated__6db38",
     OU: "badgeInfo__6db38",

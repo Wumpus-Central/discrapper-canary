@@ -139,7 +139,7 @@
     align-items: center;
     gap: var(--space-8);
     padding-block-end: var(--space-24);
-    padding-block-start: var(--space-48);
+    padding-block-start: var(--space-16);
     padding-inline: var(--space-24)
 }
 
@@ -148,6 +148,10 @@
     inset-inline-end: var(--space-16);
     position: absolute;
     z-index: 1
+}
+
+.detailCloseButton__6db38 {
+    align-self: flex-end
 }
 
 .badgeGraphic__6db38 {
