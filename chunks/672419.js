@@ -8,7 +8,6 @@ _.exports = {
     me: "separator__99871",
     aV: "checklistIcon__99871",
     QL: "checklistText__99871",
-    zh: "detailsButton__99871",
     ty: "doesNot__99871",
     eb: "healthPending__99871",
     t: "healthFailingDescription__99871",

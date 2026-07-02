@@ -48,24 +48,6 @@
     background-color: var(--text-brand)
 }
 
-.backButton_c3ab2b {
-    align-items: center;
-    color: var(--interactive-text-default);
-    display: flex;
-    gap: 4px;
-    text-transform: uppercase
-}
-
-.backButton_c3ab2b:focus-visible,
-.backButton_c3ab2b:hover {
-    text-decoration: underline
-}
-
-.arrow_c3ab2b {
-    height: 16px;
-    width: 16px
-}
-
 .container_caee69 {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-border), var(--shadow-high);

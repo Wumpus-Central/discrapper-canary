@@ -6,6 +6,4 @@ e.exports = {
     zp: "clickableProgressBar_c3ab2b",
     hr: "progressBar_c3ab2b",
     Ou: "progressBarCurrent_c3ab2b",
-    Gv: "backButton_c3ab2b",
-    UE: "arrow_c3ab2b",
 };

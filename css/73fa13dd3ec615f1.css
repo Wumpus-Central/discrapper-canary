@@ -173,11 +173,6 @@
     flex: 1 1 auto
 }
 
-.detailsButton__99871 {
-    font-weight: var(--font-weight-normal);
-    padding: 0
-}
-
 .doesNot__99871 {
     color: var(--text-feedback-critical)
 }
