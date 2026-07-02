@@ -4,6 +4,7 @@ _.exports = {
     C$: "nav__7a068",
     vK: "banner__7a068",
     Dg: "pfxBanner__7a068",
+    BW: "framesBanner__7a068",
     st: "nameplateBanner__7a068",
     IP: "bundlesBanner__7a068",
 };
