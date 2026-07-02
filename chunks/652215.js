@@ -4156,6 +4156,7 @@ var rD =
         (ex.AD_VIDEO_LOOPED = "ad_video_looped"),
         (ex.AD_VIDEO_PAUSED = "ad_video_paused"),
         (ex.AD_VIDEO_RESUMED = "ad_video_resumed"),
+        (ex.AD_VIDEO_ERROR = "ad_video_error"),
         (ex.AD_ASSET_LOADING_FAILURE = "ad_asset_loading_failure"),
         (ex.BOUNTY_CAROUSEL_SCROLL = "bounty_carousel_scroll"),
         (ex.BOUNTY_CAROUSEL_EMPTY_STATE_VIEWED = "bounty_carousel_empty_state_viewed"),
