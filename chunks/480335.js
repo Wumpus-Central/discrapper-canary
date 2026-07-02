@@ -7,13 +7,13 @@ var i = n(627968),
     o = n(631903),
     l = n(17928),
     u = n(775602),
-    c = n(218394),
-    d = n(203632),
+    d = n(218394),
+    c = n(203632),
     _ = n(855915),
     h = n(940622),
     f = n(881106),
-    p = n(284009),
-    E = n.n(p),
+    E = n(284009),
+    p = n.n(E),
     m = n(964486);
 let g = 1e3 / 24,
     A = function (e) {
@@ -27,47 +27,50 @@ let g = 1e3 / 24,
             o = r.useRef(t),
             l = r.useRef(0),
             u = r.useRef(void 0),
-            c = r.useRef(void 0),
-            d = r.useRef(!0),
+            d = r.useRef(void 0),
+            c = r.useRef(!0),
             _ = r.useRef(0),
             h = r.useRef(void 0),
             f = r.useCallback(() => {
                 (_.current = 0), null != h.current && (clearTimeout(h.current), (h.current = void 0));
             }, []),
-            p = r.useCallback(() => {
-                (d.current = !1), cancelAnimationFrame(l.current), clearTimeout(h.current);
+            E = r.useCallback(() => {
+                (c.current = !1), cancelAnimationFrame(l.current), clearTimeout(h.current);
             }, []),
             A = r.useCallback(
                 (t) => {
-                    if (!d.current) return;
-                    null == u.current && (u.current = t), null == c.current && (c.current = t);
-                    let r = t - c.current;
+                    if (!c.current) return;
+                    null == u.current && (u.current = t), null == d.current && (d.current = t);
+                    let r = t - d.current;
                     t - u.current > 1.5 * Math.min(n ?? 120, o.current) &&
                         ((_.current += 1),
                         null != h.current && clearTimeout(h.current),
                         (h.current = setTimeout(f, a)),
                         null != i &&
                             _.current > i &&
-                            (E()(
+                            (p()(
                                 null != s,
                                 "useClock - If you set a dropped frames threshold, you must provide a droppedFramesCallback to do something when that threshold is hit",
                             ),
                             s() && (_.current = 0))),
                         (u.current = t),
-                        r >= o.current - 3 && ((c.current = t), e(r)),
+                        r >= o.current - 3 && ((d.current = t), e(r)),
                         (l.current = requestAnimationFrame(A));
                 },
                 [n, f, a, i, s, e],
             ),
             I = r.useCallback(() => {
-                (d.current = !0), (c.current = void 0), (l.current = requestAnimationFrame(A));
+                (c.current = !0),
+                    (d.current = void 0),
+                    cancelAnimationFrame(l.current),
+                    (l.current = requestAnimationFrame(A));
             }, [A]);
         return (
             r.useEffect(() => {
                 o.current = t;
             }, [t]),
-            (0, m.Ay)(() => ((l.current = requestAnimationFrame(A)), () => p())),
-            { stop: p, reset: I, ticking: d }
+            (0, m.Ay)(() => ((l.current = requestAnimationFrame(A)), () => E())),
+            { stop: E, reset: I, ticking: c }
         );
     };
 var I = n(942426),
@@ -96,9 +99,9 @@ function S(e) {
     );
 }
 n(323874), n(14289), n(35956);
-var y = n(676279),
+var N = n(676279),
     C = n(38405),
-    N = n(839827);
+    y = n(839827);
 let v = (e) => {
         let {
                 layerConfig: t,
@@ -107,20 +110,20 @@ let v = (e) => {
                 time: a,
                 hasPlayedThrough: l,
                 setHasPlayedThrough: u,
-                maxLoops: c,
-                loopEnd: d,
+                maxLoops: d,
+                loopEnd: c,
                 bannerAdjustment: _,
                 imageData: h,
             } = e,
-            p = !0,
-            E = 0,
+            E = !0,
+            p = 0,
             [m, g] = r.useState("reset"),
             A = r.useRef(h?.src ?? t.src),
             [I, T] = r.useState(h?.src ?? t.src),
             S = r.useRef(null),
-            v = (0, y.gm)() && null != t.loopDelay && t.loopDelay > 0 && h?.src != null;
+            v = (0, N.gm)() && null != t.loopDelay && t.loopDelay > 0 && h?.src != null;
         function R(e) {
-            (0, y.gm)() && e !== m && g(e);
+            (0, N.gm)() && e !== m && g(e);
         }
         if (
             (r.useEffect(() => {
@@ -154,22 +157,22 @@ let v = (e) => {
                 },
                 [],
             ),
-            s || (p = !1),
-            a < t.start && (p = !1),
-            !t.loop && a > t.duration + t.start && (p = !1),
-            n === o.l.ANIMATION_TYPE_PERSISTENT && !l && null != c && a >= d && u(!0),
+            s || (E = !1),
+            a < t.start && (E = !1),
+            !t.loop && a > t.duration + t.start && (E = !1),
+            n === o.l.ANIMATION_TYPE_PERSISTENT && !l && null != d && a >= c && u(!0),
             t.loop && void 0 !== t.loopDelay && t.loopDelay > 0)
         ) {
             let e = t.duration + t.loopDelay;
-            (E = Math.floor((a - t.start) / e)),
-                a - t.start - E * e > t.duration &&
-                    (n === o.l.ANIMATION_TYPE_INTERMITTENT && !l && null != c && E >= c && u(!0), (p = !1));
+            (p = Math.floor((a - t.start) / e)),
+                a - t.start - p * e > t.duration &&
+                    (n === o.l.ANIMATION_TYPE_INTERMITTENT && !l && null != d && p >= d && u(!0), (E = !1));
         }
-        return p
+        return E
             ? (R("layer"),
               (0, i.jsx)("img", {
                   src: I,
-                  className: N.QZ,
+                  className: y.QZ,
                   style: { top: (t.position?.y ?? 0) - _, left: t.position?.x ?? 0 },
                   alt: "",
                   "aria-hidden": !0,
@@ -183,12 +186,12 @@ let v = (e) => {
                 resetOnHover: s = !1,
                 isHovering: l = !1,
                 useOpacityOnHover: u = !0,
-                autoPlay: c = !0,
+                autoPlay: d = !0,
                 restartMethod: _,
                 profileEffect: h,
                 delayIntro: f = !0,
-                restartKey: p,
-                layerData: E,
+                restartKey: E,
+                layerData: p,
             } = e,
             m = r.useRef(null),
             g = r.useMemo(() => h.effects.sort((e, t) => (e.zIndex ?? 0) - (t.zIndex ?? 0)), [h]),
@@ -204,58 +207,58 @@ let v = (e) => {
                     { firstLoop: t, loopEnd: e }
                 );
             }, [g]),
-            y = f ? 500 : 0.1,
-            [C, R] = r.useState(-y),
+            N = f ? 500 : 0.1,
+            [C, R] = r.useState(-N),
             {
                 stop: O,
                 reset: b,
-                ticking: D,
+                ticking: L,
             } = A(
                 r.useCallback((e) => {
                     R((t) => t + e);
                 }, []),
             ),
-            L = r.useRef(y);
+            D = r.useRef(N);
         r.useEffect(() => {
-            L.current = y;
+            D.current = N;
         }),
             r.useEffect(() => {
-                R(-L.current);
+                R(-D.current);
             }, [h]);
-        let [w, M] = r.useState(!1);
+        let [P, w] = r.useState(!1);
         return (
             r.useEffect(() => {
-                null != p && (R(-L.current), M(!1), D.current || b());
-            }, [p, b, D]),
+                null != E && (R(-D.current), w(!1), L.current || b());
+            }, [E, b, L]),
             r.useEffect(() => {
-                !0 === c || l || (O(), R(0)),
-                    !l && w && D.current && (O(), R(0)),
+                !0 === d || l || (O(), R(0)),
+                    !l && P && L.current && (O(), R(0)),
                     s &&
                         l &&
-                        !D.current &&
+                        !L.current &&
                         (b(),
-                        h.animationType === o.l.ANIMATION_TYPE_PERSISTENT ? R(_ === d.HL.FromStart ? 0 : T) : R(0));
-            }, [l, w, T, s, O, b, D, h.animationType, c, _]),
+                        h.animationType === o.l.ANIMATION_TYPE_PERSISTENT ? R(_ === c.HL.FromStart ? 0 : T) : R(0));
+            }, [l, P, T, s, O, b, L, h.animationType, d, _]),
             (0, i.jsx)("div", {
                 ref: m,
-                className: a()(N.yC, { [N.yo]: l && u }),
+                className: a()(y.yC, { [y.yo]: l && u }),
                 "aria-label": I,
                 role: "img",
                 children: (0, i.jsx)("div", {
-                    className: N.vW,
+                    className: y.vW,
                     children: g.map((e, r) => {
                         if (
-                            !D.current &&
+                            !L.current &&
                             h.animationType === o.l.ANIMATION_TYPE_PERSISTENT &&
                             null != h.staticFrameSrc &&
                             0 === r &&
-                            !0 === c
+                            !0 === d
                         ) {
                             let { staticFrameSrc: n } = h;
                             return (0, i.jsx)(
                                 "img",
                                 {
-                                    className: N.QZ,
+                                    className: y.QZ,
                                     style: { top: e.position?.y ?? 0 - t, left: e.position?.x ?? 0 },
                                     src: n,
                                     alt: "",
@@ -269,14 +272,14 @@ let v = (e) => {
                             {
                                 layerConfig: e,
                                 animationType: h.animationType,
-                                ticking: D.current,
+                                ticking: L.current,
                                 time: C,
-                                hasPlayedThrough: w,
-                                setHasPlayedThrough: M,
+                                hasPlayedThrough: P,
+                                setHasPlayedThrough: w,
                                 maxLoops: n,
                                 loopEnd: S,
                                 bannerAdjustment: t,
-                                imageData: E?.[e.src],
+                                imageData: p?.[e.src],
                             },
                             e.src + r,
                         );
@@ -293,16 +296,16 @@ function O(e) {
             isHovering: s = !1,
             useOpacityOnHover: o = !0,
         } = e,
-        { reducedMotionSrc: l, thumbnailPreviewSrc: u, accessibilityLabel: c } = t;
+        { reducedMotionSrc: l, thumbnailPreviewSrc: u, accessibilityLabel: d } = t;
     return (0, i.jsx)("div", {
-        className: a()(N.yC, { [N.yo]: s && o }),
-        "aria-label": c,
+        className: a()(y.yC, { [y.yo]: s && o }),
+        "aria-label": d,
         role: "img",
         children: (0, i.jsx)("div", {
-            className: N.vW,
+            className: y.vW,
             children: (0, i.jsx)("img", {
                 src: n && !s ? u : l,
-                className: N.QZ,
+                className: y.QZ,
                 style: { top: 0 - r },
                 alt: "",
                 "aria-hidden": !0,
@@ -311,22 +314,22 @@ function O(e) {
     });
 }
 let b = function (e) {
-    let t = (0, c.j)(),
+    let t = (0, d.j)(),
         n = (0, l.bG)([u.Ay], () => u.Ay.useReducedMotion),
         s = (0, I.A)(e.skuId),
         a = (0, h.C)(s),
-        d = (function (e) {
+        c = (function (e) {
             let [t, n] = r.useState(e),
                 [i, s] = r.useState(S(e));
             return (0, T.isEqual)(t, e) || (n(e), s(S(e))), i;
         })(s),
-        f = a ?? d,
-        { autoPlay: p = !0, isHovering: E } = e,
+        f = a ?? c,
+        { autoPlay: E = !0, isHovering: p } = e,
         m = !!(
             (!t && e.shopPreview) ||
             (!t && s?.animationType === o.l.ANIMATION_TYPE_PERSISTENT) ||
             n ||
-            (!1 === p && !1 === E)
+            (!1 === E && !1 === p)
         ),
         { loaded: g, layerData: A } = (0, _.A)({ skuId: s?.skuId, layers: m ? void 0 : s?.effects });
     return null != s && null != f && (t || e.shopPreview || s.animationType !== o.l.ANIMATION_TYPE_INTERMITTENT)
