@@ -5240,16 +5240,20 @@ html:not(.chat-input) .inputInner_b1f01d {
 .headerWithBadge_d6f39b {}
 
 .title_d6f39b {
-    margin: 0;
     text-align: center
+}
+
+.headerBody_d6f39b,
+.title_d6f39b {
+    margin: 0;
+    text-wrap: pretty
 }
 
 .headerBody_d6f39b {
     color: var(--text-subtle);
     display: flex;
     flex-direction: column;
-    gap: 2px;
-    margin: 0
+    gap: 2px
 }
 
 .badgeContainer_d6f39b {
