@@ -9,8 +9,8 @@ var l = n(627968),
     d = n(935208),
     o = n(735438),
     m = n.n(o),
-    h = n(17928),
-    g = n(919796),
+    g = n(17928),
+    h = n(919796),
     v = n(927813),
     p = n(285059),
     f = n(698441),
@@ -30,17 +30,17 @@ var l = n(627968),
     T = n(209291);
 function I(t) {
     let { recurrenceId: e, originalScheduledStartTime: i, guildEventId: s, onClick: a, isActive: u } = t,
-        c = (0, h.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(s)),
+        c = (0, g.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(s)),
         d = (0, k.A)(e, c?.id),
-        o = (0, h.bG)([j.A], () => j.A.getGuild(c?.guild_id)),
-        m = (0, h.bG)([b.A], () => b.A.getChannel(c?.channel_id)),
-        { is_canceled: g = !1 } = d ?? {},
+        o = (0, g.bG)([j.A], () => j.A.getGuild(c?.guild_id)),
+        m = (0, g.bG)([b.A], () => b.A.getChannel(c?.channel_id)),
+        { is_canceled: h = !1 } = d ?? {},
         v = d?.scheduled_start_time != null ? new Date(d?.scheduled_start_time) : i,
         p = (0, D.A)(v.toISOString(), void 0, null != c),
         { startDateTimeString: I } = p;
     if (null == c) return null;
     let w = (0, A.G3)(c),
-        P = g ? N.XG.CANCELED : N.XG.SCHEDULED;
+        P = h ? N.XG.CANCELED : N.XG.SCHEDULED;
     w === e && (P = c.status);
     let X = c?.scheduled_start_time != null ? (0, A.j)(d, v, new Date(c?.scheduled_start_time)) : null,
         q = (t) => {
@@ -70,12 +70,12 @@ function I(t) {
                     });
         };
     return (0, l.jsxs)(E.s, {
-        className: r()(T.kL, { [T.aD]: g, [T.vk]: null != a, [T.vu]: u }),
+        className: r()(T.kL, { [T.aD]: h, [T.vk]: null != a, [T.vu]: u }),
         onClick: function (t) {
-            t.stopPropagation(), g || a?.(e);
+            t.stopPropagation(), h || a?.(e);
         },
         onContextMenu: q,
-        "aria-label": (0, S.o)({ timeData: p, status: X ?? P, eventType: c.entity_type, isCanceled: g }),
+        "aria-label": (0, S.o)({ timeData: p, status: X ?? P, eventType: c.entity_type, isCanceled: h }),
         children: [
             (0, l.jsx)(S.L, {
                 startTime: v.toISOString(),
@@ -86,7 +86,7 @@ function I(t) {
                 timeData: p,
                 className: T.q$,
             }),
-            g &&
+            h &&
                 (0, l.jsx)(y.E, {
                     variant: "text-sm/semibold",
                     color: "text-feedback-critical",
@@ -95,7 +95,8 @@ function I(t) {
                 }),
             (0, l.jsx)(C.K, {
                 icon: _.j,
-                variant: "secondary",
+                variant: "icon-only",
+                size: "sm",
                 "aria-label": G.intl.formatToPlainString(G.t.aNAh3u, { eventTime: I }),
                 onClick: q,
             }),
@@ -117,8 +118,8 @@ function P(t) {
             canViewMoreRecurrences: _,
             updateRecurrenceStartTimes: x,
         } = (function (t, e, n) {
-            let l = (0, h.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(t)),
-                s = (0, g.A)(n),
+            let l = (0, g.bG)([f.Ay], () => f.Ay.getGuildScheduledEvent(t)),
+                s = (0, h.A)(n),
                 [r, a] = i.useState(
                     null != n && null != l ? (0, A.er)(4, (0, A.X7)(n), new Date(l.scheduled_start_time)) : [],
                 );

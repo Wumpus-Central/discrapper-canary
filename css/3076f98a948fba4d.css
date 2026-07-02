@@ -2,7 +2,7 @@
     border-radius: var(--radius-xs);
     display: flex;
     justify-content: space-between;
-    padding: 4px
+    padding: 2px 4px
 }
 
 .container__04119.canceled__04119 {
@@ -20,24 +20,6 @@
 
 .timeStatus__04119 {
     width: 100%
-}
-
-.icon__04119 {
-    color: var(--text-default)
-}
-
-.iconButton__04119 {
-    align-items: center;
-    display: flex;
-    justify-content: center
-}
-
-.iconButton__04119:hover {
-    cursor: pointer
-}
-
-.iconButton__04119:hover .icon__04119 {
-    color: var(--interactive-text-active)
 }
 
 .canceledStatus__04119 {
