@@ -201,44 +201,50 @@ function ec(e) {
         { disabledReason: m } = (0, er.I)(r.skuId),
         h = (0, v.Q)(t),
         x = (0, T.B1)(t),
-        f = x ? t.variants[a ?? h] : null;
-    return (0, i.jsxs)(i.Fragment, {
-        children: [
-            (0, i.jsxs)("div", {
-                className: el.sn,
-                children: [
-                    (0, i.jsx)(M.D, { variant: "heading-xl/bold", className: el.R_, children: n }),
-                    (0, i.jsx)(U.E, { variant: "text-sm/normal", children: d }),
-                    (0, i.jsx)(ea, { skuId: u.skuId }),
-                    null !== m && (0, i.jsx)(U.E, { variant: "text-xs/normal", className: el.H$, children: m }),
-                ],
-            }),
-            x &&
-                (0, i.jsxs)(i.Fragment, {
+        f = x ? t.variants[a ?? h] : null,
+        E = s.useRef(null);
+    return (
+        s.useLayoutEffect(() => {
+            null != E.current && ((E.current.tabIndex = -1), E.current.focus());
+        }, []),
+        (0, i.jsxs)(i.Fragment, {
+            children: [
+                (0, i.jsxs)("div", {
+                    className: el.sn,
                     children: [
-                        null != f &&
-                            (0, i.jsx)(U.E, {
-                                variant: "text-xs/medium",
-                                color: "text-subtle",
-                                className: el.a9,
-                                lineClamp: 1,
-                                children: H.intl.format(H.t.EcaRWt, {
-                                    value: (0, i.jsx)("span", { className: el.I8, children: f.variantLabel }),
-                                }),
-                            }),
-                        (0, i.jsx)("div", {
-                            className: el._x,
-                            children: (0, i.jsx)(ei.A, {
-                                skuId: t.skuId,
-                                onVariantEnter: c,
-                                onVariantExit: o,
-                                wrap: !0,
-                            }),
-                        }),
+                        (0, i.jsx)(M.D, { ref: E, variant: "heading-xl/bold", className: el.R_, children: n }),
+                        (0, i.jsx)(U.E, { variant: "text-sm/normal", children: d }),
+                        (0, i.jsx)(ea, { skuId: u.skuId }),
+                        null !== m && (0, i.jsx)(U.E, { variant: "text-xs/normal", className: el.H$, children: m }),
                     ],
                 }),
-        ],
-    });
+                x &&
+                    (0, i.jsxs)(i.Fragment, {
+                        children: [
+                            null != f &&
+                                (0, i.jsx)(U.E, {
+                                    variant: "text-xs/medium",
+                                    color: "text-subtle",
+                                    className: el.a9,
+                                    lineClamp: 1,
+                                    children: H.intl.format(H.t.EcaRWt, {
+                                        value: (0, i.jsx)("span", { className: el.I8, children: f.variantLabel }),
+                                    }),
+                                }),
+                            (0, i.jsx)("div", {
+                                className: el._x,
+                                children: (0, i.jsx)(ei.A, {
+                                    skuId: t.skuId,
+                                    onVariantEnter: c,
+                                    onVariantExit: o,
+                                    wrap: !0,
+                                }),
+                            }),
+                        ],
+                    }),
+            ],
+        })
+    );
 }
 var eo =
         (((r = {}).COLLECTIBLE = "COLLECTIBLE"),
@@ -505,17 +511,21 @@ let ez = {
                     },
                     [a.length, l],
                 );
+            s.useEffect(() => {
+                let e = h.current;
+                if (null == e || !e.contains(document.activeElement)) return;
+                let t = e.querySelectorAll('[role="radio"]');
+                t[r]?.focus();
+            }, [r]);
+            let f = s.useRef(null);
             return (
-                s.useEffect(() => {
-                    let e = h.current;
-                    if (null == e || !e.contains(document.activeElement)) return;
-                    let t = e.querySelectorAll('[role="radio"]');
-                    t[r]?.focus();
-                }, [r]),
+                s.useLayoutEffect(() => {
+                    null != f.current && ((f.current.tabIndex = -1), f.current.focus());
+                }, []),
                 (0, i.jsxs)("div", {
                     className: w.Qf,
                     children: [
-                        (0, i.jsx)(M.D, { variant: "heading-xl/bold", className: w.R_, title: n, children: n }),
+                        (0, i.jsx)(M.D, { ref: f, variant: "heading-xl/bold", className: w.R_, title: n, children: n }),
                         (0, i.jsx)(U.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
