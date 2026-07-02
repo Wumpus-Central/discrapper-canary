@@ -110,8 +110,7 @@ function v(e) {
                     ...y(t, i, n, r),
                     metadata_sealed: (0, p.L4)(i, t) ?? null,
                     traffic_metadata_sealed: (0, p.Gp)(i, void 0, t) ?? null,
-                    quest_id: s ?? null,
-                    quest_status: null != a ? (0, g.NI)(a) : null,
+                    ...(null != s ? { quest_id: s, quest_status: null != a ? (0, g.NI)(a) : null } : {}),
                 };
             })({ adContentId: t, adCreativeType: i, sourceQuestContent: l, shouldExtendSession: o, relatedQuestId: n }),
             ...s,

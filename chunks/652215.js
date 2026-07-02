@@ -4132,6 +4132,7 @@ var rD =
         (ex.QUEST_HOME_SEARCH_ENTERED = "quest_home_search_entered"),
         (ex.QUEST_HOME_SEARCH_CLOSED = "quest_home_search_closed"),
         (ex.QUEST_HOME_SEARCH_QUERY_SUBMITTED = "quest_home_search_query_submitted"),
+        (ex.QUEST_HOME_HERO_MISSING_QUESTS = "quest_home_hero_missing_quests"),
         (ex.QUEST_VIDEO_APP_FOCUSED = "quest_video_app_focused"),
         (ex.QUEST_VIDEO_APP_UNFOCUSED = "quest_video_app_unfocused"),
         (ex.QUEST_VIDEO_BUFFERING_ENDED = "quest_video_buffering_ended"),
