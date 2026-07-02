@@ -1,4 +1,4 @@
-i.r(e), i.d(e, { default: () => eS }), i(321073), i(667532);
+i.r(e), i.d(e, { default: () => e_ }), i(321073), i(667532);
 var n = i(284009),
     l = i.n(n),
     a = i(835245),
@@ -16,12 +16,12 @@ var n = i(284009),
     m = i(616356),
     I = i(495544),
     E = i(734057),
-    S = i(232835),
-    _ = i(803224),
-    N = i(783592),
+    _ = i(232835),
+    N = i(803224),
+    S = i(783592),
     C = i(290863),
-    h = i(763827),
-    T = i(994500),
+    T = i(763827),
+    h = i(994500),
     v = i(309010),
     O = i(461213),
     b = i(351906),
@@ -93,12 +93,12 @@ var tu = i(387755),
     tm = i(769015),
     tI = i(562153),
     tE = i(41984),
-    tS = i(222506),
-    t_ = i(145567),
-    tN = i(774610),
+    t_ = i(222506),
+    tN = i(145567),
+    tS = i(774610),
     tC = i(308368),
-    th = i(334738),
-    tT = i(481484),
+    tT = i(334738),
+    th = i(481484),
     tv = i(258585),
     tO = i(560595),
     tb = i(929921),
@@ -131,7 +131,7 @@ function t$(t) {
         y = X.useCallback(() => p(!0), []),
         g = X.useCallback(() => p(!1), []);
     (0, tw.Ay)(() => {
-        (0, th.ack)(
+        (0, tT.ack)(
             n.id,
             {
                 section: z.JJy.OVERLAY,
@@ -303,7 +303,7 @@ function eg(t, e) {
 }
 function em() {
     if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return !1;
-    let t = N.A.usersPlaying,
+    let t = S.A.usersPlaying,
         e = new Set(),
         i = (function () {
             let t = [];
@@ -316,13 +316,13 @@ function em() {
             n ||
             (function (t, e) {
                 let i, n, l;
-                if (!T.A.isFriend(t)) return !1;
+                if (!h.A.isFriend(t)) return !1;
                 let a = e.gameId;
                 if (null == a) return !1;
                 let r = (function (t) {
-                    let e = N.A.getUserGame(t);
+                    let e = S.A.getUserGame(t);
                     if (null == e) return null;
-                    let i = N.A.getNowPlaying(e.gameId)[t]?.activity;
+                    let i = S.A.getNowPlaying(e.gameId)[t]?.activity;
                     return null == i || i.type !== z.$pd.PLAYING ? null : i;
                 })(t);
                 if (
@@ -358,10 +358,10 @@ function em() {
                                       d = (0, tI.mG)(a?.guild_id, a?.id, n);
                                   if (null == c || 0 === c.trim().length) return null;
                                   let f = (0, $.jsxs)("div", {
-                                          className: tN.Ql,
+                                          className: tS.Ql,
                                           children: [
                                               (0, $.jsx)("div", {
-                                                  className: tN.bf,
+                                                  className: tS.bf,
                                                   children: (0, $.jsx)(tg.A, {
                                                       user: n,
                                                       "aria-hidden": !0,
@@ -369,11 +369,11 @@ function em() {
                                                   }),
                                               }),
                                               (0, $.jsx)("div", {
-                                                  className: tN.rf,
+                                                  className: tS.rf,
                                                   children: (0, $.jsx)(ty.E, {
                                                       variant: "text-sm/medium",
                                                       color: "interactive-text-default",
-                                                      className: tN.G3,
+                                                      className: tS.G3,
                                                       children: J.intl.format(J.t["q7/rgv"], {
                                                           username: d ?? n.username,
                                                           gameName: c,
@@ -383,7 +383,7 @@ function em() {
                                                                         game: r,
                                                                         pid: s?.pid,
                                                                         size: tm.M.XSMALL,
-                                                                        className: tN.Gt,
+                                                                        className: tS.Gt,
                                                                     })
                                                                   : null,
                                                       }),
@@ -400,10 +400,10 @@ function em() {
                                       { hasChat: g } = (0, V.NI)("nowPlayingNotification");
                                   return {
                                       body: f,
-                                      className: tN.dn,
-                                      wrapperClassName: tN.P6,
-                                      animationWrapperClassName: tN.VG,
-                                      clickZoneClassName: tN.EO,
+                                      className: tS.dn,
+                                      wrapperClassName: tS.P6,
+                                      animationWrapperClassName: tS.VG,
+                                      clickZoneClassName: tS.EO,
                                       maxBodyLines: 1,
                                       disableClickableRegions: !g,
                                       onNotificationShow: () => {
@@ -413,9 +413,9 @@ function em() {
                                           g &&
                                               (async () => {
                                                   try {
-                                                      await (0, t_.D$)({
+                                                      await (0, tN.D$)({
                                                           target: {
-                                                              kind: t_.bB.DM_USER,
+                                                              kind: tN.bB.DM_USER,
                                                               userId: n.id,
                                                               messageId: null,
                                                           },
@@ -423,7 +423,7 @@ function em() {
                                                           widgetType: z.uss.NOTIFICATIONS,
                                                       });
                                                       let t = w.A.getTargetPID();
-                                                      tS.A.isInputLocked(t)
+                                                      t_.A.isInputLocked(t)
                                                           ? (y("unlock"), o.A.setInputLocked(!1, t))
                                                           : y("jump"),
                                                           o.A.updateNotificationStatus(e, z.yFH.DISMISSED);
@@ -482,7 +482,7 @@ function eI(t) {
     null != a && ep(a.id),
         eg(
             (function (t) {
-                let e = (0, tA.m1)(t, L.default, T.A),
+                let e = (0, tA.m1)(t, L.default, h.A),
                     i = J.intl.string(J.t.ssrVzG),
                     n = (0, td.Y)(t),
                     l = (0, tf.A)(t),
@@ -538,15 +538,15 @@ class eE extends r.Ay.Store {
             E.A,
             d.Ay,
             D.A,
-            S.A,
             _.A,
             N.A,
+            S.A,
             j.default,
             P.A,
             w.A,
             C.A,
-            h.A,
             T.A,
+            h.A,
             A.Ay,
             v.A,
             O.A,
@@ -554,7 +554,7 @@ class eE extends r.Ay.Store {
             L.default,
             x.A,
         ),
-            this.syncWith([N.A], em);
+            this.syncWith([S.A], em);
     }
     getNotifications() {
         return el;
@@ -570,7 +570,7 @@ class eE extends r.Ay.Store {
         return el.filter((i) => i.channelId === t && i.type === e);
     }
 }
-let eS = new eE(s.h, {
+let e_ = new eE(s.h, {
     OVERLAY_UPDATE_NOTIFICATION_STATUS: function (t) {
         let { notificationId: e, status: i } = t;
         ep(e, i);
@@ -789,13 +789,13 @@ let eS = new eE(s.h, {
                                         channelId: t.id,
                                         type: z.xL.JOIN,
                                         activity: n,
-                                        location: (0, tT.y)() ? z.ThZ.LOCKED_OVERLAY : z.ThZ.UNLOCKED_OVERLAY,
+                                        location: (0, th.y)() ? z.ThZ.LOCKED_OVERLAY : z.ThZ.UNLOCKED_OVERLAY,
                                     }),
                                         u("join"),
                                         o.A.updateNotificationStatus(i);
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, th.ack)(
+                                    (0, tT.ack)(
                                         t.id,
                                         {
                                             section: z.JJy.OVERLAY,
@@ -852,7 +852,7 @@ let eS = new eE(s.h, {
                                         o.A.updateNotificationStatus(e);
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, th.ack)(
+                                    (0, tT.ack)(
                                         t.id,
                                         {
                                             section: z.JJy.OVERLAY,
@@ -887,7 +887,7 @@ let eS = new eE(s.h, {
             if (!1 !== t) return t;
         }
         if (P.A.isNotificationDisabled(H.KS.TextChat) || b.A.disableNotifications || !(0, p.lx)(i, e)) return !1;
-        let r = !_.A.isSoundDisabled(R.cH),
+        let r = !N.A.isSoundDisabled(R.cH),
             s = (function (t, e, i, n) {
                 let { hasChat: l } = (0, V.NI)("textChatNotification");
                 if (P.A.isNotificationDisabled(H.KS.TextChat)) return tq(!0), null;
@@ -924,7 +924,7 @@ let eS = new eE(s.h, {
                     onNotificationClick: (i, n) => {
                         let a = w.A.getTargetPID();
                         if (
-                            ((0, th.ack)(
+                            ((0, tT.ack)(
                                 t.id,
                                 {
                                     section: z.JJy.OVERLAY,
@@ -937,9 +937,9 @@ let eS = new eE(s.h, {
                             ),
                             l)
                         ) {
-                            (0, t_.D$)({
+                            (0, tN.D$)({
                                 target: {
-                                    kind: t_.bB.CHANNEL,
+                                    kind: tN.bB.CHANNEL,
                                     channelId: t.id,
                                     guildId: t.guild_id ?? null,
                                     messageId: e.id,
@@ -947,14 +947,14 @@ let eS = new eE(s.h, {
                                 source: tE.B9.NOTIFICATION_CLICK,
                                 widgetType: z.uss.TEXT_CHAT_V3,
                             }),
-                                tS.A.isInputLocked(a) ? (c("unlock"), o.A.setInputLocked(!1, a)) : c("jump"),
+                                t_.A.isInputLocked(a) ? (c("unlock"), o.A.setInputLocked(!1, a)) : c("jump"),
                                 requestAnimationFrame(() => {
                                     tM._.dispatchToLastSubscribed(z.jej.TEXTAREA_FOCUS, { channelId: t.id });
                                 }),
                                 o.A.updateNotificationStatus(n, z.yFH.DISMISSED);
                             return;
                         }
-                        tS.A.isInputLocked(a)
+                        t_.A.isInputLocked(a)
                             ? (c("unlock"), o.A.setInputLocked(!1, a))
                             : (c("jump"),
                               (0, tk.pX)(z.BVt.CHANNEL(t.guild_id, t.id, e.id)),
@@ -964,7 +964,7 @@ let eS = new eE(s.h, {
                         c("dismiss");
                     },
                 };
-            })(n, S.A.getMessage(e, i.id) ?? (0, f.rh)(i), a, r);
+            })(n, _.A.getMessage(e, i.id) ?? (0, f.rh)(i), a, r);
         if (null == s) return !1;
         eg(s, { type: K.zb.TEXT, channelId: n.id, expirationExternallyManaged: !0, messageType: i.type }), eA();
     },
@@ -1128,6 +1128,8 @@ let eS = new eE(s.h, {
                             return "No encoded video frames yet \u2014 the capture pipeline just started or reset. Try again in a couple of seconds.";
                         case q.RC.BRIDGE_SHUTDOWN:
                             return "Clips bridge shut down before the save completed (process exited or v3 was disabled). Try again once clips is back up.";
+                        case q.RC.RECORDING_NOT_READY:
+                            return "Clips recorder is not recording yet (still cold-starting, or it idle-shut-down). Try again in a couple of seconds.";
                     }
                 })()),
                 { ...tn(H.KS.ClipsDebugSaveNoOp), title: "Clip hotkey ignored", body: n, maxBodyLines: 8 }),

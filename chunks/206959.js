@@ -443,6 +443,7 @@ var G =
         (r.REMOTE_USER_MULTI_STREAM = "remote_user_multi_stream"),
         (r.CLIPS = "clips"),
         (r.CLIPS_THUMBNAIL = "clips_thumbnail"),
+        (r.CLIPS_RECORDING_READY_EVENTS = "clips_recording_ready_events"),
         (r.GO_LIVE_HARDWARE = "go_live_hardware"),
         (r.IMAGE_QUALITY_MEASUREMENT = "image_quality_measurement"),
         (r.SCREEN_CAPTURE_KIT = "screen_capture_kit"),
@@ -470,6 +471,8 @@ var G =
         (s[(s.GoLiveEnded = 7)] = "GoLiveEnded"),
         (s[(s.IdleShutdown = 8)] = "IdleShutdown"),
         (s[(s.RecordingHealthy = 9)] = "RecordingHealthy"),
+        (s[(s.RecordingActive = 10)] = "RecordingActive"),
+        (s[(s.RecordingInactive = 11)] = "RecordingInactive"),
         s);
 let V = 0;
 function B(e) {
@@ -1853,6 +1856,8 @@ class er extends l.A {
     deviceChangeGeneration = 0;
     consecutiveWatchdogFailures = 0;
     codecSurvey = null;
+    clipsRecordingEventContext = { id: "", soundshareId: 0, applicationName: "" };
+    clipsRecordingEventHandlerRegistered = !1;
     logger = new u.Vy("MediaEngineNative");
     constructor() {
         super(), this.logger.enableNativeLogger(!0);
@@ -1950,6 +1955,8 @@ class er extends l.A {
                 return (0, b.$b)(G.SCREEN_PREVIEWS);
             case y.O5.CLIPS:
                 return (0, b.$b)(G.CLIPS);
+            case y.O5.CLIPS_RECORDING_READY_EVENTS:
+                return (0, b.$b)(G.CLIPS_RECORDING_READY_EVENTS);
             case y.O5.WINDOW_PREVIEWS:
                 return (0, b.$b)(G.WINDOW_PREVIEWS);
             case y.O5.AUDIO_DEBUG_STATE:
@@ -2150,47 +2157,33 @@ class er extends l.A {
                 useVideoHook: o,
                 useHookFramePacer: l,
                 useGraphicsCapture: u,
-                useQuartzCapturer: d,
-                allowScreenCaptureKit: _,
-                hdrCaptureMode: h,
-                videoHookAllowDx12: f,
-                minCaptureWidth: p,
-                minCaptureHeight: E,
+                useQuartzCapturer: c,
+                allowScreenCaptureKit: d,
+                hdrCaptureMode: _,
+                videoHookAllowDx12: h,
+                minCaptureWidth: f,
+                minCaptureHeight: p,
             } = e.desktopDescription;
-        t.setOnClipsRecordingEvent((t, n) => {
-            this.logger.info(`Clips recording event: ${F[t]} received for stream ${r} and sound ${s}.`),
-                t === F.GoLiveEnded
-                    ? this.emit(c.bg.ClipsRecordingRestartNeeded)
-                    : t === F.Error
-                      ? this.emit(
-                            c.bg.ClipsInitFailure,
-                            null != n && "" !== n ? n : "Failed to set clips source in media engine",
-                            e.applicationName,
-                        )
-                      : t === F.IdleShutdown
-                        ? this.emit(c.bg.ClipsBridgeIdleShutdown)
-                        : t === F.RecordingHealthy
-                          ? this.emit(c.bg.ClipsRecordingHealthy)
-                          : (t === F.Ended || t === F.StoppedByGoLive) && this.emit(c.bg.ClipsRecordingEnded, r, s);
-        }),
+        (this.clipsRecordingEventContext = { id: r, soundshareId: s, applicationName: e.applicationName }),
+            this.registerClipsRecordingEventHandler(),
             t.applyClipsSettings?.({
                 useVideoHook: o,
                 useHookFramePacer: l,
                 useGraphicsCapture: u,
-                useQuartzCapturer: d,
-                allowScreenCaptureKit: _,
-                hdrCaptureMode: h,
-                videoHookAllowDx12: f,
+                useQuartzCapturer: c,
+                allowScreenCaptureKit: d,
+                hdrCaptureMode: _,
+                videoHookAllowDx12: h,
                 soundshareLoopback: a,
                 frameRate: n,
                 width: i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
                 height: i,
                 videoEncoderExperiments: e.videoEncoderExperiments,
-                minCaptureWidth: p,
-                minCaptureHeight: E,
+                minCaptureWidth: f,
+                minCaptureHeight: p,
             });
-        let [m, g] = null != r ? r.split(":") : ["", ""];
-        t.setClipsSource({ id: g, soundshareId: null != s ? s : 0 });
+        let [E, m] = null != r ? r.split(":") : ["", ""];
+        t.setClipsSource({ id: m, soundshareId: null != s ? s : 0 });
     }
     setClipsQualitySettings(e, t, n) {
         let i = (0, b.lE)();
@@ -2227,7 +2220,35 @@ class er extends l.A {
         (0, b.lE)().setClipsSentryConfig?.(e, t, n);
     }
     setClipsV3Enabled(e) {
-        (0, b.lE)().setClipsV3Enabled?.(e);
+        e && this.registerClipsRecordingEventHandler(), (0, b.lE)().setClipsV3Enabled?.(e);
+    }
+    registerClipsRecordingEventHandler() {
+        let e = (0, b.lE)();
+        null == e.setOnClipsRecordingEvent ||
+            this.clipsRecordingEventHandlerRegistered ||
+            ((this.clipsRecordingEventHandlerRegistered = !0),
+            e.setOnClipsRecordingEvent((e, t) => {
+                let { id: n, soundshareId: i, applicationName: r } = this.clipsRecordingEventContext;
+                this.logger.info(`Clips recording event: ${F[e]} received for stream ${n} and sound ${i}.`),
+                    e === F.GoLiveEnded
+                        ? this.emit(c.bg.ClipsRecordingRestartNeeded)
+                        : e === F.Error
+                          ? this.emit(
+                                c.bg.ClipsInitFailure,
+                                null != t && "" !== t ? t : "Failed to set clips source in media engine",
+                                r,
+                            )
+                          : e === F.IdleShutdown
+                            ? this.emit(c.bg.ClipsBridgeIdleShutdown)
+                            : e === F.RecordingHealthy
+                              ? this.emit(c.bg.ClipsRecordingHealthy)
+                              : e === F.RecordingActive
+                                ? this.emit(c.bg.ClipsRecordingReadyChanged, !0)
+                                : e === F.RecordingInactive
+                                  ? this.emit(c.bg.ClipsRecordingReadyChanged, !1)
+                                  : (e === F.Ended || e === F.StoppedByGoLive) &&
+                                    this.emit(c.bg.ClipsRecordingEnded, n, i);
+            }));
     }
     setClipsUIActive(e) {
         (0, b.lE)().setClipsUIActive?.(e);

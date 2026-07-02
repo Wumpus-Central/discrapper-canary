@@ -581,6 +581,11 @@ async function eu(e) {
                 hasClipsSource: m,
             },
         });
+    if ((0, v.qi)("saveClip") && E.Ay.isClipsRecordingReadySignalSupported() && !E.Ay.isClipsRecordingReady()) {
+        P.nx.warn("Save clip ignored: clips recorder not ready (still starting up or idle shut down)"),
+            r.h.dispatch({ type: "CLIPS_SAVE_CLIP_NO_OP", clipMethod: t, reason: N.RC.RECORDING_NOT_READY });
+        return;
+    }
     let A = (() => {
         if (null != u) return P.Fv.STREAMER;
         if (g) return P.Fv.DECOUPLED;

@@ -18,6 +18,7 @@ function f(e) {
         case r.M.ACTIVITIES_VOICE_LAUNCHER_BADGE:
             return (0, l.C)({ storeState: o.Ay.getState(), surface: a.YI.VOICE_LAUNCHER });
         case r.M.GUILD_POWERUP_NEW_PERK_AVAILABLE_COACHMARK:
+        case r.M.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE:
             return 0;
         case r.M.COLLECTIBLES_SHOP_WIDE_BANNER:
             for (let e of [_.G2.HOME, _.G2.ORBS, _.G2.CATALOG]) {
