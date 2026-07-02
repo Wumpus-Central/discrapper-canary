@@ -3,9 +3,9 @@ var e = n(284009),
     a = n.n(e),
     i = n(339048),
     l = n(391048),
-    s = n(636099),
-    d = n(529427),
-    r = n(162307),
+    d = n(636099),
+    s = n(529427),
+    r = n(127264),
     u = n(163437),
     c = n(97352),
     p = n(67480),
@@ -27,7 +27,7 @@ function C(o) {
         onComplete: k,
         forcesTransitionToGuild: g,
     } = o;
-    return new r.o({ checkoutFlow: d.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT }).openCheckoutModal({
+    return new r.od({ checkoutFlow: s.CL.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT }).openCheckoutModal({
         checkoutConfiguration: { skuId: p, applicationId: h, activeSubscription: n },
         checkoutHandlers: { onComplete: k },
         unifiedCheckoutProviderProps: { analyticsLocations: i },
@@ -44,7 +44,7 @@ function C(o) {
         modalAPIOptions: {
             modalKey: "application-payment-modal",
             onCloseCallback: () => {
-                (0, l.ET)(), (0, s.z)();
+                (0, l.ET)(), (0, d.z)();
             },
         },
     });
@@ -57,14 +57,14 @@ async function h(o, t) {
 }
 async function f(o) {
     let { applicationId: t, skuId: n, initialPlanId: e, analyticsLocationObject: i, analyticsLocations: l } = o,
-        s = p.A.get(n),
-        d = c.A.getForSKU(n);
-    a()(null != s, "Failed to find SKU");
-    let r = (0, u.bg)(s.flags);
+        d = p.A.get(n),
+        s = c.A.getForSKU(n);
+    a()(null != d, "Failed to find SKU");
+    let r = (0, u.bg)(d.flags);
     a()(r, "Guild application subscriptions unsupported!"),
         await h(t, n),
         C({
-            initialPlanId: e ?? d[0]?.id,
+            initialPlanId: e ?? s[0]?.id,
             activeSubscription: null,
             analyticsLocations: l,
             analyticsLocationObject: i,
