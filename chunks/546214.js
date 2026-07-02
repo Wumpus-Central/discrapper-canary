@@ -36,8 +36,8 @@ var b = l(503698),
     D = l(837381),
     z = l(887129),
     V = l(741918),
-    G = l(939249),
-    F = l(707554),
+    F = l(939249),
+    G = l(707554),
     P = l(486020);
 function L(e, t, l) {
     let i = (0, s.bG)([x.default], () => (null != e ? x.default.getUser(e) : void 0), [e]);
@@ -68,7 +68,7 @@ function q(e) {
         o = t.badge_id === N.$.PREMIUM_TENURE ? (c?.name ?? c?.key) : c?.name,
         u = null != o ? `${t.name}, ${o}` : t.name,
         m = n.useRef(null);
-    return (0, i.jsx)(G.D, {
+    return (0, i.jsx)(F.D, {
         ...r,
         innerRef: m,
         role: "tab",
@@ -161,7 +161,7 @@ function K(e) {
         f = r && null != d ? Z.intl.formatToPlainString(Z.t.BCjSZy, { username: d }) : Z.intl.string(Z.t.UqnlQF);
     return (0, i.jsx)("div", {
         className: H.ws,
-        children: (0, i.jsxs)(F.F, {
+        children: (0, i.jsxs)(G.F, {
             component: (0, i.jsxs)("div", {
                 className: H.NG,
                 children: [
@@ -415,7 +415,7 @@ function ed(e) {
                                   }),
                               }),
                           }),
-                          (0, i.jsxs)(G.D, {
+                          (0, i.jsxs)(F.D, {
                               className: er.tw,
                               "aria-expanded": d,
                               "aria-controls": g,
@@ -712,8 +712,8 @@ function eA(e) {
             onToggleViewedUser: z,
             onViewOwnCatalog: V,
         } = e,
-        G = L(w, y, 32),
-        F = (function (e) {
+        F = L(w, y, 32),
+        G = (function (e) {
             let t = e.tiers;
             if (null == t || 0 === t.length) return;
             let l = e.owned ? e.current_tier : e.next_tier;
@@ -721,9 +721,9 @@ function eA(e) {
         })(h),
         P = (0, s.bG)([U.Ay], () => U.Ay.useReducedMotion)
             ? void 0
-            : (F?.complex_icon_animated_url ?? h.complex_icon_animated_url),
-        $ = F?.complex_icon_static_url ?? h.complex_icon_static_url,
-        Y = F?.simple_icon_url ?? h.simple_icon_url,
+            : (G?.complex_icon_animated_url ?? h.complex_icon_animated_url),
+        $ = G?.complex_icon_static_url ?? h.complex_icon_static_url,
+        Y = G?.simple_icon_url ?? h.simple_icon_url,
         q = P ?? $ ?? Y,
         Q =
             (function (e) {
@@ -737,14 +737,13 @@ function eA(e) {
                         return { type: { text: Z.intl.string(Z.t.RD8RiN) }, variant: "rarity-epic", icon: em.b };
                     case ec.x.MYTHIC:
                         return { type: { text: Z.intl.string(Z.t.vqc1ol) }, variant: "rarity-mythic", icon: eg.O };
-                    case ec.x.LEGENDARY:
                     default:
                         return null;
                 }
-            })(F?.rarity ?? h.rarity) ?? void 0,
+            })(G?.rarity ?? h.rarity) ?? void 0,
         W = (0, M.Om)(h.badge_id),
         K = h.badge_id === N.$.PREMIUM_TENURE,
-        X = K ? (F?.name ?? F?.key) : F?.name,
+        X = K ? (G?.name ?? G?.key) : G?.name,
         ee = K ? Z.intl.string(Z.t.Ipxkog) : h.name;
     K ? (r = null != X ? `${ee} ${X}` : ee) : null != X ? ((a = ee), (r = X)) : (r = ee);
     let et = (0, v.H5)(h),
@@ -760,7 +759,7 @@ function eA(e) {
                       });
               })(et)
             : void 0,
-        ei = ((l = null == (t = h.tiers?.[0]?.key) || F?.key === t), Z.intl.string(l ? Z.t.WDhIz2 : Z.t.wYaDmz)),
+        ei = ((l = null == (t = h.tiers?.[0]?.key) || G?.key === t), Z.intl.string(l ? Z.t.WDhIz2 : Z.t.wYaDmz)),
         en = D && null != el,
         ea = null != Q,
         er = null;
@@ -845,7 +844,7 @@ function eA(e) {
                                                 isOwnProfile: p,
                                                 isViewingOtherUser: y,
                                                 targetUsername: f,
-                                                viewedAvatarSrc: G,
+                                                viewedAvatarSrc: F,
                                                 targetOwnsBadge: E,
                                                 viewerOwnsBadge: S,
                                                 unlockedStatusText: c,
@@ -859,7 +858,7 @@ function eA(e) {
                                         isOwnProfile: p,
                                         isViewingOtherUser: y,
                                         targetUsername: f,
-                                        viewedAvatarSrc: G,
+                                        viewedAvatarSrc: F,
                                         targetOwnsBadge: E,
                                         viewerOwnsBadge: S,
                                         unlockedStatusText: c,
@@ -995,9 +994,9 @@ function eI(e) {
     n.useEffect(() => {
         V && null != T && g.A.increment({ name: a.K.BADGE_DIRECTORY_ERROR_STATE_VIEWED, tags: [T] });
     }, [V, T]);
-    let G = (0, s.bG)([v.Ay], () => null != j && null != D && (v.Ay.getBadgeById(D.badge_id, j)?.owned ?? !1), [D, j]),
-        F = (0, s.bG)([v.Ay], () => (null != y && null != D ? v.Ay.getBadgeById(D.badge_id, y) : void 0), [D, y]),
-        P = F?.owned ?? !1,
+    let F = (0, s.bG)([v.Ay], () => null != j && null != D && (v.Ay.getBadgeById(D.badge_id, j)?.owned ?? !1), [D, j]),
+        G = (0, s.bG)([v.Ay], () => (null != y && null != D ? v.Ay.getBadgeById(D.badge_id, y) : void 0), [D, y]),
+        P = G?.owned ?? !1,
         L = n.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
@@ -1090,13 +1089,13 @@ function eI(e) {
                                     null != D &&
                                         (0, i.jsx)(eA, {
                                             badge: D,
-                                            viewerBadge: F,
+                                            viewerBadge: G,
                                             onClose: Y,
                                             isOwnProfile: w,
                                             isViewingOtherUser: E,
                                             targetUsername: N,
                                             displayedUserId: A,
-                                            targetOwnsBadge: G,
+                                            targetOwnsBadge: F,
                                             viewerOwnsBadge: P,
                                             isMilestone2Enabled: f,
                                             onToggleViewedUser: M,
