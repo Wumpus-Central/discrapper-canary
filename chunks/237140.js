@@ -4,11 +4,11 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(18005),
+    o = n(580929),
     l = n(508382),
     u = n(365912),
-    c = n(502939),
-    d = n(834730),
+    d = n(502939),
+    c = n(834730),
     _ = n(623646),
     h = n(310855);
 function f() {
@@ -47,8 +47,8 @@ function f() {
         ],
     });
 }
-var p = n(112317),
-    E = n(736736);
+var E = n(112317),
+    p = n(736736);
 let m = (e, t, n) => {
     let i = (t ? (n ? 372 : 272) : 200) / 2 - 8;
     return Math.max(-i, Math.min(i, e));
@@ -56,18 +56,18 @@ let m = (e, t, n) => {
 function g(e) {
     let { caretConfig: t } = e,
         { position: n, align: r, customOffset: s } = t,
-        { isRichTooltip: o, richTooltipPadding: l } = (0, p.w6)(),
+        { isRichTooltip: o, richTooltipPadding: l } = (0, E.w6)(),
         u = "lg" === l;
     if (null == n) return null;
-    let c =
+    let d =
             "custom" === r && null != s
                 ? {
                       "--custom-caret-offset-x": ["top", "bottom"].includes(n) ? `${m(s, o, u)}px` : "0px",
                       "--custom-caret-offset-y": ["left", "right"].includes(n) ? `${m(s, o, u)}px` : "0px",
                   }
                 : void 0,
-        d = a()(E.caret, E[`caret--${n}`], E[`caret--${r}`]);
-    return (0, i.jsx)("div", { className: d, style: c, children: (0, i.jsx)(f, {}) });
+        c = a()(p.caret, p[`caret--${n}`], p[`caret--${r}`]);
+    return (0, i.jsx)("div", { className: c, style: d, children: (0, i.jsx)(f, {}) });
 }
 var A = n(348275);
 let I = ["left", "center", "right"],
@@ -78,35 +78,35 @@ function S(e) {
             isRendered: n = t,
             targetElementRef: s,
             targetElement: f,
-            anchorRef: E,
+            anchorRef: p,
             id: m,
             content: S,
-            position: y = "top",
+            position: N = "top",
             align: C = "center",
-            spacing: N = 11,
+            spacing: y = 11,
             caretConfig: v,
             layerContext: R,
             animationStyle: O,
             positionKey: b,
         } = e,
-        { isRichTooltip: D } = (0, p.w6)(),
-        L = (0, c.D)("Tooltip"),
-        [w, M] = r.useState(f?.ownerDocument);
+        { isRichTooltip: L } = (0, E.w6)(),
+        D = (0, d.D)("Tooltip"),
+        [P, w] = r.useState(f?.ownerDocument);
     r.useLayoutEffect(() => {
         var e, t;
-        M(((e = E?.current), (t = s.current), e?.ownerDocument ?? f?.ownerDocument ?? t?.ownerDocument));
-    }, [E, f, s]);
-    let P = r.useMemo(() => (("left" === y || "right" === y ? T : I).includes(C) ? C : "center"), [y, C]);
+        w(((e = p?.current), (t = s.current), e?.ownerDocument ?? f?.ownerDocument ?? t?.ownerDocument));
+    }, [p, f, s]);
+    let M = r.useMemo(() => (("left" === N || "right" === N ? T : I).includes(C) ? C : "center"), [N, C]);
     if (!n) return null;
     let x = (e) => {
         let { position: t, nudge: n } = e,
-            r = t ?? y,
+            r = t ?? N,
             s = v?.align ?? (null != n && 0 !== n ? "custom" : "center"),
             l = v?.customOffset ?? n ?? 0,
             u = { position: v?.position ?? (0, A.l8)(r), align: s, customOffset: "custom" === s ? l : void 0 },
-            c = (0, i.jsxs)("div", {
+            d = (0, i.jsxs)("div", {
                 id: m,
-                className: a()(h.YL, { [h.mj]: D }),
+                className: a()(h.YL, { [h.mj]: L }),
                 role: "tooltip",
                 "data-position": r,
                 "data-mana-component": "tooltip",
@@ -115,22 +115,22 @@ function S(e) {
                     (0, i.jsx)("div", {
                         className: h.rv,
                         children:
-                            "string" == typeof S ? (0, i.jsx)(d.E, { variant: "text-sm/medium", children: S }) : S,
+                            "string" == typeof S ? (0, i.jsx)(c.E, { variant: "text-sm/medium", children: S }) : S,
                     }),
                 ],
             });
-        return O ? (0, i.jsx)(o.animated.div, { style: O, children: c }) : c;
+        return O ? (0, i.jsx)(o.animated.div, { style: O, children: d }) : d;
     };
-    if (L) {
-        let e = (0, l.Pv)(y, C),
+    if (D) {
+        let e = (0, l.Pv)(N, C),
             t = f ?? s.current;
         return (0, i.jsx)(l.Ow, {
             className: h.BM,
             open: n,
-            spacing: N,
+            spacing: y,
             placement: e,
             reference: t,
-            ownerDocument: w,
+            ownerDocument: P,
             autoUpdate: null != b,
             renderLayer: (e) => {
                 let { placement: t, shift: n } = e,
@@ -140,15 +140,15 @@ function S(e) {
             children: () => null,
         });
     }
-    let k = (0, i.jsx)(_.Q, {
-        targetRef: E ?? s,
-        position: y,
-        align: P,
-        spacing: N,
+    let U = (0, i.jsx)(_.Q, {
+        targetRef: p ?? s,
+        position: N,
+        align: M,
+        spacing: y,
         positionKey: b,
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         children: x,
     });
-    return null != R ? (0, i.jsx)(u.Wd, { layerContext: R, children: k }) : k;
+    return null != R ? (0, i.jsx)(u.Wd, { layerContext: R, children: U }) : U;
 }

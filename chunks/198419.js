@@ -8,16 +8,16 @@ var i =
             }
             return e;
         },
-    r = c(n(143243)),
-    s = c(n(562627)),
-    a = c(n(223108)),
+    r = d(n(143243)),
+    s = d(n(562627)),
+    a = d(n(223108)),
     o = n(64700),
-    l = c(o),
-    u = c(n(406977));
-function c(e) {
+    l = d(o),
+    u = d(n(518872));
+function d(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var d = {
+var c = {
         bgColor: a.default.oneOfType([a.default.object, a.default.string]),
         fgColor: a.default.oneOfType([a.default.object, a.default.string]),
         level: a.default.string,
@@ -28,15 +28,15 @@ var d = {
         var n = e.bgColor,
             a = e.fgColor,
             o = e.level,
-            c = e.size,
-            d = e.value,
+            d = e.size,
+            c = e.value,
             _ = (function (e, t) {
                 var n = {};
                 for (var i in e) !(t.indexOf(i) >= 0) && Object.prototype.hasOwnProperty.call(e, i) && (n[i] = e[i]);
                 return n;
             })(e, ["bgColor", "fgColor", "level", "size", "value"]),
             h = new r.default(-1, s.default[o]);
-        h.addData(d), h.make();
+        h.addData(c), h.make();
         var f = h.modules;
         return l.default.createElement(
             u.default,
@@ -62,12 +62,12 @@ var d = {
                     })
                     .join(" "),
                 ref: t,
-                size: c,
+                size: d,
                 viewBoxSize: f.length,
             }),
         );
     });
 (_.displayName = "QRCode"),
-    (_.propTypes = d),
+    (_.propTypes = c),
     (_.defaultProps = { bgColor: "#FFFFFF", fgColor: "#000000", level: "L", size: 256 }),
     (t.default = _);

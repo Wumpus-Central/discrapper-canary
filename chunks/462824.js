@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { p: () => c });
+n.d(t, { p: () => d });
 var i = n(627968);
 n(64700);
 var r = n(503698),
     s = n.n(r),
-    a = n(18005),
+    a = n(580929),
     o = n(866323),
     l = n(150591),
     u = n(75967);
-function c(e) {
+function d(e) {
     let {
         variant: t = "default",
         animationVariant: n = "default",
         onClick: r,
-        isVisible: c,
-        disabled: d = !1,
+        isVisible: d,
+        disabled: c = !1,
         disablePointerEvents: _ = !1,
     } = e;
     return (0, o.p)(
-        c,
+        d,
         {
             keys: (e) => (e ? "scrim" : "empty"),
             config: l.hP,
@@ -33,7 +33,7 @@ function c(e) {
                   role: "none",
                   className: s()(u.f5, { [u.Et]: "lightbox" === t, [u.Ge]: "experimental_blur" === t, [u.RS]: _ }),
                   style: e,
-                  onClick: d ? void 0 : r,
+                  onClick: c ? void 0 : r,
               })
             : null,
     );

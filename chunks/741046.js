@@ -30,7 +30,7 @@ var i,
     y = t(881489),
     P = t(945960),
     D = t(7066),
-    k = t(217936),
+    k = t(205483),
     O = t(286320),
     G = t(422936),
     w = t(234419),
@@ -42,7 +42,7 @@ var i,
     F = t(775602),
     K = t(192444),
     V = t(440005),
-    W = t(49132),
+    W = t(26508),
     Q = t(428262),
     X = t(960851),
     J = t(994763),
@@ -87,7 +87,7 @@ var ei =
         (i.PLANS = "plans"),
         (i.COMPARE = "compare"),
         i),
-    en = t(18005),
+    en = t(580929),
     ea = t(717421),
     el = t(65470),
     er = t(792656),
@@ -266,7 +266,7 @@ var eM = t(31502),
     ew = t(406860),
     eL = t(985603),
     eB = t(983060),
-    eU = t(788868),
+    eU = t(202541),
     eH = t(237146),
     ez = t(56598);
 function eF() {
@@ -455,25 +455,25 @@ var eY = t(877624),
     e0 = t(549996),
     e2 = t(810660),
     e1 = t(371764),
-    e8 = t(97808),
-    e6 = t(854627),
-    e7 = t(778712),
-    e5 = t(45861);
-function e4(e) {
+    e6 = t(97808),
+    e8 = t(854627),
+    e5 = t(778712),
+    e4 = t(45861);
+function e7(e) {
     let { referrer: s } = e,
-        { avatarSrc: t, eventHandlers: i } = (0, e6.A)({ userId: s?.id, size: e7._3.SIZE_24, animateOnHover: !0 });
+        { avatarSrc: t, eventHandlers: i } = (0, e8.A)({ userId: s?.id, size: e5._3.SIZE_24, animateOnHover: !0 });
     return (0, n.jsx)("div", {
-        className: e5.$6,
+        className: e4.$6,
         children: (0, n.jsxs)("div", {
-            className: e5.sc,
+            className: e4.sc,
             children: [
                 (0, n.jsx)("div", {
-                    className: e5.kR,
-                    children: (0, n.jsx)(e8.eu, { src: t, "aria-label": s.username, size: e7._3.SIZE_32, ...i }),
+                    className: e4.kR,
+                    children: (0, n.jsx)(e6.eu, { src: t, "aria-label": s.username, size: e5._3.SIZE_32, ...i }),
                 }),
                 (0, n.jsx)(em.D, {
                     variant: "heading-sm/normal",
-                    className: e5.FS,
+                    className: e4.FS,
                     color: "text-strong",
                     children: ej.intl.format(ej.t.IqxblS, {
                         username: null != s.globalName ? s.globalName : s.username,
@@ -483,12 +483,12 @@ function e4(e) {
         }),
     });
 }
-var e3 = t(579245),
-    e9 = t(175569),
+var e9 = t(579245),
+    e3 = t(175569),
     se = t(369805);
 let ss = function () {
     let e = (0, se.A)(void 0, { includesPremiumGroup: !0 });
-    return null == e ? null : (0, n.jsx)(e9.A, { text: e });
+    return null == e ? null : (0, n.jsx)(e3.A, { text: e });
 };
 var st = t(97352);
 function si() {
@@ -577,12 +577,12 @@ let sc = a.memo(
                                     m &&
                                         (0, n.jsx)("div", {
                                             className: sr.eZ,
-                                            children: (0, n.jsx)(e4, { referrer: d }),
+                                            children: (0, n.jsx)(e7, { referrer: d }),
                                         }),
                                     j &&
                                         (0, n.jsx)("div", {
                                             className: sr.Qn,
-                                            children: (0, n.jsx)(e3.A, {
+                                            children: (0, n.jsx)(e9.A, {
                                                 textColor: "text-strong",
                                                 smallerText: !1,
                                                 isApplicationHome: !0,
@@ -1297,13 +1297,13 @@ function s2(e) {
     return (0, n.jsx)(s$.Lp, { className: r()(s0.T, s), text: ej.intl.string(ej.t.EYxi0o) });
 }
 var s1 = t(904788),
-    s8 = t(507553),
-    s6 = t(591179),
-    s7 = t(255438),
-    s5 = t(355097);
-let s4 = "/assets/5b4fec8511c3676a.svg",
-    s3 = "/assets/0838bda6ecd20d91.svg";
-var s9 = t(64514),
+    s6 = t(507553),
+    s8 = t(591179),
+    s5 = t(255438),
+    s4 = t(355097);
+let s7 = "/assets/5b4fec8511c3676a.svg",
+    s9 = "/assets/0838bda6ecd20d91.svg";
+var s3 = t(64514),
     te = t(121818);
 function ts(e, s, t) {
     return (0, sw.M)(e) ? s : t;
@@ -1372,12 +1372,12 @@ let ta = function (e) {
         o = (function (e) {
             let { styles: s } = e,
                 i = (0, $.Ay)(),
-                n = (0, s6.X)("usePerkCards"),
+                n = (0, s8.X)("usePerkCards"),
                 a = (0, eu.bG)([T.default], () => {
                     let e = T.default.getCurrentUser();
                     return Q.Ay.canUsePremiumProfileCustomization(e);
                 }),
-                l = (0, s7.Xq)(eU.f3 / 1024, { useKibibytes: !0 });
+                l = (0, s5.Xq)(eU.f3 / 1024, { useKibibytes: !0 });
             return {
                 badge: {
                     title: ej.intl.string(ej.t.SS87rQ),
@@ -1421,7 +1421,7 @@ let ta = function (e) {
                         function s() {
                             {
                                 let { openUserSettings: s } = t(766075);
-                                s8.A.setState({ scrollPosition: s5._F.TRY_IT_OUT }),
+                                s6.A.setState({ scrollPosition: s4._F.TRY_IT_OUT }),
                                     s(sV.X.PROFILE_PANEL, { analyticsLocations: e });
                             }
                         }
@@ -1459,19 +1459,19 @@ let ta = function (e) {
                 stickers: {
                     title: ej.intl.string(ej.t["1c+xwT"]),
                     description: ej.intl.string(ej.t.hJG8ZN),
-                    imageSource: ts(i, s3, s4),
+                    imageSource: ts(i, s9, s7),
                     imageClassName: s.stickersImage,
                 },
                 stickersBurst: {
                     title: ej.intl.string(ej.t.tzdIwI),
                     description: ej.intl.string(ej.t.hJG8ZN),
-                    imageSource: ts(i, s3, s4),
+                    imageSource: ts(i, s9, s7),
                     imageClassName: s.stickersImage,
                 },
                 stickersPremiumPerk: {
                     title: ej.intl.string(ej.t.tzdIwI),
                     description: ej.intl.string(ej.t.hJG8ZN),
-                    imageSource: ts(i, s3, s4),
+                    imageSource: ts(i, s9, s7),
                     imageClassName: s.stickersImage,
                 },
                 streaming: {
@@ -1495,7 +1495,7 @@ let ta = function (e) {
                 videoBackground: {
                     title: ej.intl.string(ej.t.NaGpTf),
                     description: ej.intl.string(ej.t["A8O/Qw"]),
-                    imageSource: ts(i, s9, te),
+                    imageSource: ts(i, s3, te),
                     imageClassName: s.videoBackgroundImage,
                 },
             };
@@ -1660,7 +1660,7 @@ let tg = a.forwardRef(function (e, s) {
                         u
                             ? (0, n.jsx)("div", {
                                   className: td.DF,
-                                  children: (0, n.jsx)(e3.A, { textColor: "always-white", smallerText: !d }),
+                                  children: (0, n.jsx)(e9.A, { textColor: "always-white", smallerText: !d }),
                               })
                             : (0, n.jsx)(tx, {}),
                         m || o

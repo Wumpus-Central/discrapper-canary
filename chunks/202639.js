@@ -4,11 +4,11 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(18005),
+    o = n(580929),
     l = n(717421),
     u = n(834730),
-    c = n(465794),
-    d = n(788868),
+    d = n(465794),
+    c = n(202541),
     _ = n(650583),
     h = n(379378);
 function f(e) {
@@ -17,22 +17,22 @@ function f(e) {
             text: n,
             textVariant: s,
             button: f,
-            buttonAnalyticsObject: p,
-            className: E,
+            buttonAnalyticsObject: E,
+            className: p,
             onSubscribeModalClose: m,
             position: g = "floating",
             useUpdatedStyling: A = !1,
             subscribeButtonVariantOverride: I,
             leadingAction: T,
         } = e,
-        [S, y] = r.useState(t);
-    t && !S && y(!0);
+        [S, N] = r.useState(t);
+    t && !S && N(!0);
     let C = (0, l.z)({
         transform: t ? "translateY(0%)" : "translateY(120%)",
         opacity: +!!t,
         config: { tension: 120, friction: 14 },
         onRest: () => {
-            t || y(!1);
+            t || N(!1);
         },
     });
     return (0, i.jsxs)(o.animated.div, {
@@ -40,16 +40,16 @@ function f(e) {
         onKeyDown: (e) => {
             (e.key === _.dh.ENTER || e.key === _.dh.SPACE) && e.stopPropagation();
         },
-        className: a()(h.Zj, A && h.ww, { [h.tO]: "floating" === g, [h.Kx]: "inline" === g }, E),
+        className: a()(h.Zj, A && h.ww, { [h.tO]: "floating" === g, [h.Kx]: "inline" === g }, p),
         children: [
             (0, i.jsx)(u.E, { variant: s ?? "text-sm/medium", color: "text-strong", className: h.tD, children: n }),
             null != T && (0, i.jsx)("div", { className: h.Zv, children: T }),
             "string" == typeof f
-                ? (0, i.jsx)(c.A, {
+                ? (0, i.jsx)(d.A, {
                       size: "sm",
-                      subscriptionTier: d.pe.TIER_2,
+                      subscriptionTier: c.pe.TIER_2,
                       buttonTextOverride: f,
-                      premiumModalAnalyticsLocation: p,
+                      premiumModalAnalyticsLocation: E,
                       tabIndex: t ? 0 : -1,
                       onSubscribeModalClose: m,
                       variantOverride: I,

@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { $: () => R, A: () => L });
+n.d(t, { $: () => R, A: () => D });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(18005),
+    o = n(580929),
     l = n(17928),
     u = n(834730),
-    c = n(821609),
-    d = n(97808),
+    d = n(821609),
+    c = n(97808),
     _ = n(778712),
     h = n(939249),
     f = n(717421),
-    p = n(684013),
-    E = n(789645),
+    E = n(684013),
+    p = n(789645),
     m = n(361147);
 let g = (e) => {
     let { className: t, onDismiss: n, "aria-label": r } = e;
@@ -22,7 +22,7 @@ let g = (e) => {
         onClick: n,
         className: a()(m.r, t),
         "aria-label": r,
-        children: (0, i.jsx)(E.P, { size: "xs", color: "currentColor", colorClass: m.M }),
+        children: (0, i.jsx)(p.P, { size: "xs", color: "currentColor", colorClass: m.M }),
     });
 };
 g.displayName = "DismissButton";
@@ -30,9 +30,9 @@ var A = n(302614),
     I = n(489277),
     T = n(222506),
     S = n(57019),
-    y = n(652215),
+    N = n(652215),
     C = n(375708),
-    N = n(70617);
+    y = n(70617);
 function v(e) {
     e.currentTarget.scrollTo(0, 0);
 }
@@ -42,38 +42,38 @@ let R = r.memo(function (e) {
         {
             maxBodyLines: s,
             expand: f = !1,
-            onNotificationShow: p,
-            onDismissClick: E,
+            onNotificationShow: E,
+            onDismissClick: p,
             onConfirmClick: m,
             onCancelClick: A,
             onNotificationClick: S,
             hint: R,
             cancelText: O,
             confirmText: b,
-            icon: D,
-            body: L,
-            title: w,
-            renderFooter: M,
-            contentOpacity: P,
+            icon: L,
+            body: D,
+            title: P,
+            renderFooter: w,
+            contentOpacity: M,
             status: x,
-            containerRef: k,
-            className: U,
+            containerRef: U,
+            className: k,
             wrapperClassName: G,
-            unreadAccessory: F,
+            unreadAccessory: V,
         } = e,
-        [V, B] = r.useState(!1),
-        j = f || V || x === y.yFH.FOCUSED,
+        [F, B] = r.useState(!1),
+        j = f || F || x === N.yFH.FOCUSED,
         H = (0, l.bG)([T.A, I.A], () => T.A.isInputLocked(I.A.getTargetPID()));
     r.useEffect(() => {
-        p?.();
-    }, [p]);
-    let Y = r.useCallback(
+        E?.();
+    }, [E]);
+    let W = r.useCallback(
             (e) => {
-                e.stopPropagation(), E?.(e);
+                e.stopPropagation(), p?.(e);
             },
-            [E],
+            [p],
         ),
-        W = r.useCallback(
+        Y = r.useCallback(
             (e) => {
                 e.stopPropagation(), m?.(e);
             },
@@ -94,57 +94,57 @@ let R = r.memo(function (e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: a()(N.af, G),
+                className: a()(y.af, G),
                 onScroll: v,
                 children: [
                     (0, i.jsx)(h.D, {
-                        innerRef: k,
+                        innerRef: U,
                         ignoreKeyPress: !0,
                         onMouseOver: $,
                         onMouseLeave: z,
                         onClick: S,
-                        className: a()(N.kL, { [N.vk]: null != S }, U),
+                        className: a()(y.kL, { [y.vk]: null != S }, k),
                         children:
-                            ((t = M?.(j, H)),
+                            ((t = w?.(j, H)),
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsxs)(o.animated.div, {
-                                        className: N.VM,
-                                        style: { opacity: P },
+                                        className: y.VM,
+                                        style: { opacity: M },
                                         children: [
-                                            null == D
+                                            null == L
                                                 ? null
-                                                : "string" == typeof D
-                                                  ? (0, i.jsx)(d.eu, {
-                                                        src: D,
+                                                : "string" == typeof L
+                                                  ? (0, i.jsx)(c.eu, {
+                                                        src: L,
                                                         size: _._3.SIZE_40,
-                                                        className: N.my,
+                                                        className: y.my,
                                                         "aria-hidden": !0,
                                                     })
-                                                  : (0, i.jsx)("div", { className: N.my, children: D }),
+                                                  : (0, i.jsx)("div", { className: y.my, children: L }),
                                             (0, i.jsxs)("div", {
-                                                className: N.zH,
+                                                className: y.zH,
                                                 children: [
-                                                    null != w
+                                                    null != P
                                                         ? (0, i.jsx)(u.E, {
                                                               color: "interactive-text-default",
                                                               variant: "text-sm/semibold",
                                                               lineClamp: 2,
-                                                              children: w,
+                                                              children: P,
                                                           })
                                                         : null,
-                                                    null != L
+                                                    null != D
                                                         ? (0, i.jsx)(u.E, {
                                                               color: "interactive-text-default",
                                                               variant: "text-sm/normal",
                                                               lineClamp: null != s ? s * (j ? 2 : 1) : void 0,
-                                                              children: L,
+                                                              children: D,
                                                           })
                                                         : null,
                                                     ((n = "function" == typeof R ? R(j, H) : R),
                                                     null != R
                                                         ? (0, i.jsx)(u.E, {
-                                                              className: N.aK,
+                                                              className: y.aK,
                                                               color: "text-muted",
                                                               variant: "text-xxs/medium",
                                                               children: n,
@@ -153,23 +153,23 @@ let R = r.memo(function (e) {
                                                     null == m && null == A
                                                         ? null
                                                         : (0, i.jsxs)("div", {
-                                                              className: N.UD,
+                                                              className: y.UD,
                                                               children: [
                                                                   null != m
                                                                       ? (0, i.jsx)("div", {
-                                                                            className: N.x6,
-                                                                            children: (0, i.jsx)(c.$, {
+                                                                            className: y.x6,
+                                                                            children: (0, i.jsx)(d.$, {
                                                                                 size: "sm",
                                                                                 variant: "active",
-                                                                                onClick: W,
+                                                                                onClick: Y,
                                                                                 text: b ?? C.intl.string(C.t.BddRzS),
                                                                             }),
                                                                         })
                                                                       : null,
                                                                   null != A
                                                                       ? (0, i.jsx)("div", {
-                                                                            className: N.x6,
-                                                                            children: (0, i.jsx)(c.$, {
+                                                                            className: y.x6,
+                                                                            children: (0, i.jsx)(d.$, {
                                                                                 size: "sm",
                                                                                 variant: "secondary",
                                                                                 onClick: K,
@@ -185,7 +185,7 @@ let R = r.memo(function (e) {
                                     }),
                                     null != t &&
                                         (0, i.jsx)(h.D, {
-                                            className: N.qr,
+                                            className: y.qr,
                                             ignoreKeyPress: !0,
                                             onClick: (e) => e.stopPropagation(),
                                             children: t,
@@ -193,10 +193,10 @@ let R = r.memo(function (e) {
                                 ],
                             })),
                     }),
-                    null == F ? null : (0, i.jsx)("div", { className: N.B3, children: F(V) }),
+                    null == V ? null : (0, i.jsx)("div", { className: y.B3, children: V(F) }),
                 ],
             }),
-            (0, i.jsx)(g, { className: N.r, onDismiss: Y, "aria-label": C.intl.string(C.t.LnEgqX) }),
+            (0, i.jsx)(g, { className: y.r, onDismiss: W, "aria-label": C.intl.string(C.t.LnEgqX) }),
         ],
     });
 });
@@ -205,14 +205,14 @@ function O(e) {
         springs: { opacity: t, scale: n, transform: r, height: s },
         scaleOverride: l,
         index: u,
-        children: c,
-        locked: d,
+        children: d,
+        locked: c,
         animationWrapperClassName: _,
     } = e;
     return (0, i.jsx)(o.animated.div, {
-        className: a()(N.k$, d && 0 !== u && N.fF, _),
+        className: a()(y.k$, c && 0 !== u && y.fF, _),
         style: {
-            pointerEvents: d && 0 !== u ? "none" : "auto",
+            pointerEvents: c && 0 !== u ? "none" : "auto",
             zIndex: Math.max(5 - u, 0),
             opacity: t,
             transform: r.to((e) => `translate3d(0, ${e}px, 0)`),
@@ -220,43 +220,43 @@ function O(e) {
             height: s,
             maxWidth: 0 === u ? void 0 : "100%",
         },
-        children: c,
+        children: d,
     });
 }
 function b(e) {
     let { observe: t, className: n, children: r } = e;
-    return t ? (0, i.jsx)(A.A, { className: a()(N.VC, n), children: r }) : r;
+    return t ? (0, i.jsx)(A.A, { className: a()(y.VC, n), children: r }) : r;
 }
-let D = { mass: 1, friction: 8, tension: 300 };
-function L(e) {
+let L = { mass: 1, friction: 8, tension: 300 };
+function D(e) {
     let { notification: t, index: n, locked: s, pinned: a, transitionState: o, cleanUp: l } = e,
         {
             id: u,
             props: {
-                onNotificationShow: c,
-                onDismissClick: d,
+                onNotificationShow: d,
+                onDismissClick: c,
                 onNotificationClick: _,
                 onConfirmClick: h,
-                onCancelClick: E,
+                onCancelClick: p,
                 renderFooter: m,
                 animationWrapperClassName: g,
             },
         } = t,
         A = r.useCallback(() => {
-            c(u);
-        }, [c, u]),
+            d(u);
+        }, [d, u]),
         I = r.useCallback(
             (e) => {
-                p.A.updateNotificationStatus(u), d?.(e, u);
+                E.A.updateNotificationStatus(u), c?.(e, u);
             },
-            [u, d],
+            [u, c],
         ),
-        { clickSpring: T, handleMouseClick: y } = (function () {
+        { clickSpring: T, handleMouseClick: N } = (function () {
             let [e, t] = r.useState(!1),
                 [n, i] = r.useState(!1),
                 s = (0, f.z)({
                     scale: e ? 0.975 : 1,
-                    config: D,
+                    config: L,
                     onRest: () => {
                         t(!1),
                             setTimeout(() => {
@@ -273,11 +273,11 @@ function L(e) {
         })(),
         C = r.useCallback(
             (e) => {
-                _?.(e, u), y();
+                _?.(e, u), N();
             },
-            [_, u, y],
+            [_, u, N],
         ),
-        N = r.useCallback(
+        y = r.useCallback(
             (e) => {
                 h?.(e, u);
             },
@@ -285,54 +285,54 @@ function L(e) {
         ),
         v = r.useCallback(
             (e) => {
-                E?.(e, u);
+                p?.(e, u);
             },
-            [E, u],
+            [p, u],
         ),
-        L = r.useCallback((e, t) => m?.(e, u, t), [m, u]),
+        D = r.useCallback((e, t) => m?.(e, u, t), [m, u]),
         {
             props: {
-                onNotificationShow: w,
-                onDismissClick: M,
-                renderFooter: P,
+                onNotificationShow: P,
+                onDismissClick: w,
+                renderFooter: M,
                 onNotificationClick: x,
-                onConfirmClick: k,
-                onCancelClick: U,
+                onConfirmClick: U,
+                onCancelClick: k,
                 disableClickableRegions: G = !1,
-                clickZoneClassName: F,
-                ...V
+                clickZoneClassName: V,
+                ...F
             },
             status: B,
         } = t,
         j = !a && s,
         H = 0 === n && !G && !j,
-        { ref: Y, springs: W } = (0, S.Ru)(t.id, o, l);
+        { ref: W, springs: Y } = (0, S.Ru)(t.id, o, l);
     return (0, i.jsx)(O, {
         transitionState: o,
-        springs: W,
+        springs: Y,
         scaleOverride: T?.scale,
         index: n,
         locked: s,
         animationWrapperClassName: g,
         children: (0, i.jsx)(b, {
             observe: H,
-            className: F,
+            className: V,
             children: (0, i.jsx)(R, {
-                ...V,
-                title: "function" == typeof V.title ? V.title(I) : V.title,
-                containerRef: Y,
+                ...F,
+                title: "function" == typeof F.title ? F.title(I) : F.title,
+                containerRef: W,
                 notificationId: t.id,
                 onNotificationShow: 0 === n ? A : void 0,
                 onDismissClick: I,
                 onNotificationClick: C,
-                onConfirmClick: null != h ? N : void 0,
-                onCancelClick: null != E ? v : void 0,
-                renderFooter: L,
+                onConfirmClick: null != h ? y : void 0,
+                onCancelClick: null != p ? v : void 0,
+                renderFooter: D,
                 expand: !1,
                 index: n,
                 locked: s,
                 status: B,
-                contentOpacity: W.contentOpacity,
+                contentOpacity: Y.contentOpacity,
             }),
         }),
     });

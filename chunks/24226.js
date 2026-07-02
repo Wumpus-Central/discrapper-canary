@@ -560,9 +560,9 @@ function e8(e) {
 }
 n(321073);
 var e6 = n(735438),
-    e4 = n.n(e6),
-    e5 = n(749314),
-    e9 = n(18005),
+    e5 = n.n(e6),
+    e4 = n(749314),
+    e9 = n(580929),
     te = n(311283),
     tt = n(717421),
     tn = n(825484),
@@ -625,7 +625,7 @@ function tE(e) {
         l = (0, A.yK)(
             [th.A, R.A],
             () =>
-                e4()(th.A.getThreadsForParent(n.guild_id, n.id))
+                e5()(th.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -695,7 +695,7 @@ var tx = n(989349),
     tU = n(467073),
     tF = n(491182),
     tG = n(860227),
-    tw = n(144241),
+    tw = n(490714),
     tH = n(375199),
     tP = n(824556),
     tK = n(715628),
@@ -831,8 +831,8 @@ var tQ = n(495544),
     t7 = n(181079),
     t8 = n(567035),
     t6 = n(455234),
-    t4 = n(695633),
-    t5 = n(152007),
+    t5 = n(695633),
+    t4 = n(152007),
     t9 = n(607508),
     ne = n(594061),
     nt = n(617617),
@@ -955,7 +955,7 @@ class nu extends t0.EventEmitter {
     };
     deleteChannel = (e) => {
         this.setState({
-            scrollToChannelIndex: e4().findIndex(this.state.channels, (t) => t.channelId === e),
+            scrollToChannelIndex: e5().findIndex(this.state.channels, (t) => t.channelId === e),
             channels: this.state.channels.filter((t) => t.channelId !== e),
         }),
             this.maybeLoadMore();
@@ -967,7 +967,7 @@ class nu extends t0.EventEmitter {
     toggle = (e) => {
         let { channelId: t, guildId: n } = e,
             { channels: s, collapsedChannels: l, loadState: a } = this.state,
-            i = e4().findIndex(s, (e) => e.channelId === t),
+            i = e5().findIndex(s, (e) => e.channelId === t),
             r = s[i],
             d = !r.collapsed;
         (l[t] = d),
@@ -995,7 +995,7 @@ class nu extends t0.EventEmitter {
         e.length !== this.state.channels.length && this.setState({ channels: e });
     };
     handleJoinedThreadsStoreChange = () => {
-        let e = this.state.channels.filter((e) => !t5.A.isMuted(e.channelId));
+        let e = this.state.channels.filter((e) => !t4.A.isMuted(e.channelId));
         e.length !== this.state.channels.length && this.setState({ channels: e });
     };
     handleActiveThreadsStoreChange = () => {
@@ -1110,15 +1110,15 @@ function ng() {
             ni.Ay.getFlattenedGuildIds().forEach((n) => {
                 if (null == n) return;
                 let s = ns.Ay.getSelectableChannelIds(n),
-                    l = t4.A.getActiveJoinedUnreadThreadsForGuild(n);
+                    l = t5.A.getActiveJoinedUnreadThreadsForGuild(n);
                 s.forEach((s) => {
                     nm(e, t, n, s);
                     let a = l[s] ?? {};
                     for (let s in a) nm(e, t, n, s);
                 });
             }),
-            e4().sortBy(t, (e) => e.sortOrder)),
-        l = e4()
+            e5().sortBy(t, (e) => e.sortOrder)),
+        l = e5()
             .uniq(s.map((e) => e.guildId))
             .filter(tm.Vq);
     return (
@@ -1243,7 +1243,7 @@ function nC(e) {
         g.forEach((t) => {
             if (!o && (null == e || !e.isSame(t.timestamp, "day"))) {
                 let n = (0, tW.i$)(t.timestamp, "LL");
-                u.push((0, i.jsx)(e5.A, { className: np.yF, children: n }, n)), (e = tS()(t.timestamp));
+                u.push((0, i.jsx)(e4.A, { className: np.yF, children: n }, n)), (e = tS()(t.timestamp));
             }
             let g = null == h || (0, ty.A)(n, h, t);
             (h = t),
@@ -1453,8 +1453,8 @@ function nM(e) {
                 ),
                 r.useEffect(
                     () => (
-                        t5.A.addChangeListener(t.handleJoinedThreadsStoreChange),
-                        () => t5.A.removeChangeListener(t.handleJoinedThreadsStoreChange)
+                        t4.A.addChangeListener(t.handleJoinedThreadsStoreChange),
+                        () => t4.A.removeChangeListener(t.handleJoinedThreadsStoreChange)
                     ),
                     [t],
                 ),
@@ -1569,7 +1569,7 @@ function nM(e) {
                                           getNumUnreadChannels: d,
                                       } = t,
                                       o = null;
-                                  return e4().flatMap(e, (e) => {
+                                  return e5().flatMap(e, (e) => {
                                       let t = e.sortOrder !== o;
                                       o = e.sortOrder;
                                       let c = [];
@@ -1578,7 +1578,7 @@ function nM(e) {
                                               (e.hasLoadedAnything && e.sortOrder === no.ReallyOldChannel
                                                   ? c.push(
                                                         (0, i.jsx)(
-                                                            e5.A,
+                                                            e4.A,
                                                             {
                                                                 className: n_.y,
                                                                 contentClassName: n_.$,
@@ -1591,7 +1591,7 @@ function nM(e) {
                                                     e.sortOrder === no.NoNotifications &&
                                                     c.push(
                                                         (0, i.jsx)(
-                                                            e5.A,
+                                                            e4.A,
                                                             {
                                                                 className: n_.y,
                                                                 contentClassName: n_.$,

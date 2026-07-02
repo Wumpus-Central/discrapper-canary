@@ -32,15 +32,15 @@ var l = {
             o = e.fgColor,
             l = e.size,
             u = e.title,
-            c = e.viewBoxSize,
-            d = (function (e, t) {
+            d = e.viewBoxSize,
+            c = (function (e, t) {
                 var n = {};
                 for (var i in e) !(t.indexOf(i) >= 0) && Object.prototype.hasOwnProperty.call(e, i) && (n[i] = e[i]);
                 return n;
             })(e, ["bgColor", "bgD", "fgD", "fgColor", "size", "title", "viewBoxSize"]);
         return a.default.createElement(
             "svg",
-            i({}, d, { height: l, ref: t, viewBox: "0 0 " + c + " " + c, width: l }),
+            i({}, c, { height: l, ref: t, viewBox: "0 0 " + d + " " + d, width: l }),
             u ? a.default.createElement("title", null, u) : null,
             a.default.createElement("path", { d: r, fill: n }),
             a.default.createElement("path", { d: s, fill: o }),

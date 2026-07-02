@@ -4,11 +4,11 @@ var i = n(627968),
     r = n(64700),
     s = n(503698),
     a = n.n(s),
-    o = n(18005),
+    o = n(580929),
     l = n(113325),
     u = n(187322),
-    c = n(707554),
-    d = n(22856),
+    d = n(707554),
+    c = n(22856),
     _ = n(150591),
     h = n(967744);
 function f(e) {
@@ -17,38 +17,38 @@ function f(e) {
             animationVariant: n = "default",
             size: s = "md",
             paddingSize: f = "sm",
-            fullScreenOnMobile: p = !0,
-            returnRef: E,
+            fullScreenOnMobile: E = !0,
+            returnRef: p,
             role: m = "dialog",
             "aria-label": g,
             dismissable: A = !0,
             maxHeight: I = "default",
             onClose: T,
             contentOutsideContainer: S,
-            trackingProps: y,
+            trackingProps: N,
             children: C,
         } = e,
-        N = r.useId(),
-        v = r.useMemo(() => ({ id: N, headingId: `heading-${N}`, onClose: T, dismissable: A }), [A, N, T]),
+        y = r.useId(),
+        v = r.useMemo(() => ({ id: y, headingId: `heading-${y}`, onClose: T, dismissable: A }), [A, y, T]),
         R = (0, _.kS)(t, n),
         O = r.useRef(null);
-    return (0, i.jsx)(d.V.Provider, {
+    return (0, i.jsx)(c.V.Provider, {
         value: v,
         children: (0, i.jsx)(l.lG, {
-            id: N,
+            id: y,
             role: m,
             "aria-label": g,
             "aria-labelledby": null != g ? void 0 : v.headingId,
-            returnRef: E,
-            trackingProps: y,
+            returnRef: p,
+            trackingProps: N,
             trackingComponentName: "Modal",
             children: (0, i.jsx)(u.xp, {
                 containerRef: O,
-                children: (0, i.jsx)(c.F, {
+                children: (0, i.jsx)(d.F, {
                     forceLevel: 1,
                     children: (0, i.jsxs)("div", {
                         ref: O,
-                        className: a()(h.outerContainer, { [h.fullScreenOnMobile]: p }),
+                        className: a()(h.outerContainer, { [h.fullScreenOnMobile]: E }),
                         children: [
                             S,
                             (0, i.jsx)(o.animated.div, {

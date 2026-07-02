@@ -1,27 +1,27 @@
 "use strict";
-n.d(t, { Ay: () => m, C8: () => E });
+n.d(t, { Ay: () => m, C8: () => p });
 var i,
     r = n(627968);
 n(64700);
 var s = n(503698),
     a = n.n(s),
-    o = n(18005),
+    o = n(580929),
     l = n(661531),
     u = n(462887),
-    c = n(401432),
-    d = n(347135),
+    d = n(401432),
+    c = n(347135),
     _ = n(46948),
     h = n(557637),
     f = n(652215),
-    p = n(880005),
-    E = (((i = {})[(i.SMALL = 2)] = "SMALL"), (i[(i.MEDIUM = 8)] = "MEDIUM"), i);
+    E = n(880005),
+    p = (((i = {})[(i.SMALL = 2)] = "SMALL"), (i[(i.MEDIUM = 8)] = "MEDIUM"), i);
 let m = function (e) {
     let {
             className: t,
             logotypeClassName: n,
             gameTileSize: i = 24,
             quest: s,
-            separatorSpacing: E = 2,
+            separatorSpacing: p = 2,
             theme: m = f.NJ8.DARK,
             withCosponsor: g = !0,
             withGameTile: A = !0,
@@ -29,10 +29,10 @@ let m = function (e) {
             onLoadComplete: T,
         } = e,
         S = (0, u.M)(m) ? f.NJ8.DARK : f.NJ8.LIGHT,
-        y = (0, d.a5)(s.id, S),
-        C = g && null != s.config.cosponsorMetadata && null != y;
+        N = (0, c.a5)(s.id, S),
+        C = g && null != s.config.cosponsorMetadata && null != N;
     return (0, r.jsxs)("div", {
-        className: a()(p.Iu, t),
+        className: a()(E.Iu, t),
         children: [
             A &&
                 (0, r.jsx)(h._M, {
@@ -40,7 +40,7 @@ let m = function (e) {
                     children: (e) =>
                         (0, r.jsx)("img", {
                             ref: e,
-                            className: p._Y,
+                            className: E._Y,
                             alt: "",
                             src: (0, _.tW)(s, _.fY.GAME_TILE, S).url,
                             style: {
@@ -63,7 +63,7 @@ let m = function (e) {
                 children: (e) =>
                     (0, r.jsx)(o.animated.img, {
                         ref: e,
-                        className: a()(p.lW, n, { [p.TO]: C }),
+                        className: a()(E.lW, n, { [E.TO]: C }),
                         style: I,
                         alt: s.config.messages.gameTitle,
                         src: (0, _.tW)(s, _.fY.LOGO_TYPE, S).url,
@@ -74,19 +74,19 @@ let m = function (e) {
                 (0, r.jsxs)(r.Fragment, {
                     children: [
                         (0, r.jsx)("div", {
-                            className: p.ub,
-                            style: { margin: `0 ${E}px` },
-                            children: (0, r.jsx)(c.a, { className: p.JB, color: l.A.colors.WHITE }),
+                            className: E.ub,
+                            style: { margin: `0 ${p}px` },
+                            children: (0, r.jsx)(d.a, { className: E.JB, color: l.A.colors.WHITE }),
                         }),
                         (0, r.jsx)(h._M, {
                             id: "QuestPartnerBranding_cosponsorLogotype",
                             children: (e) =>
                                 (0, r.jsx)(o.animated.img, {
                                     ref: e,
-                                    className: a()(p.lW, p.TO, n),
+                                    className: a()(E.lW, E.TO, n),
                                     style: I,
                                     alt: s.config.cosponsorMetadata?.name ?? "",
-                                    src: y.url,
+                                    src: N.url,
                                     onLoad: T,
                                 }),
                         }),
