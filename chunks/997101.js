@@ -813,6 +813,7 @@ let s = {
         "SL",
         "SR",
         "ST",
+        "SV",
         "SX",
         "SY",
         "TD",
