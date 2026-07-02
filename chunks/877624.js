@@ -17,4 +17,5 @@ var i,
         (i[(i.PREMIUM_TAB_TOOLTIP = 12)] = "PREMIUM_TAB_TOOLTIP"),
         (i[(i.PREMIUM_TAB_POPOVER = 13)] = "PREMIUM_TAB_POPOVER"),
         (i[(i.NAGBAR = 14)] = "NAGBAR"),
+        (i[(i.PLAN_SELECT_CARD_BANNER = 15)] = "PLAN_SELECT_CARD_BANNER"),
         i);
