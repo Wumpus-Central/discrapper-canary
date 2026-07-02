@@ -8,11 +8,15 @@ var i = n(95561),
     l = n(558076),
     u = n(652215);
 function d(e) {
-    let { userId: t, guildId: n, channelId: i } = e;
+    let { userId: t, guildId: n, channelId: i } = e,
+        a = t ?? r.default.getId(),
+        o = l.A.getRoomUsers(i);
     return {
-        user_id: t ?? r.default.getId(),
+        user_id: a,
         guild_id: null != n ? n : (s.A.getChannel(i)?.getGuildId() ?? void 0),
         channel_id: i,
+        guild_room_user_count: o.size,
+        guild_room_user_connected: o.has(a),
     };
 }
 function c(e, t) {
@@ -34,7 +38,9 @@ function c(e, t) {
                     voice_media_session_id: n,
                 }));
         },
-        s = setTimeout(i, 2500);
+        s = setTimeout(() => {
+            i(), t({ voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e)).length });
+        }, 2500);
     a.A.addChangeListener(r);
 }
 function _(e) {
