@@ -51,15 +51,15 @@ var W = n(336590),
     L = n(977347),
     O = n(378570),
     q = n(138298),
-    D = n(761640),
-    V = n(47167),
+    V = n(761640),
+    D = n(47167),
     K = n(928078),
     B = n(375708),
     Z = n(906462),
     X = n(669747);
 function J(e) {
     let { channel: t, baseChannelId: n } = e,
-        a = (0, V.Ay)(t),
+        a = (0, D.Ay)(t),
         i = (0, W.k)(),
         r = (0, W.r)(),
         c = (0, o.bG)([k.A], () => k.A.isMessageRequest(t.id)),
@@ -67,7 +67,7 @@ function J(e) {
         u = z("ViewMessageRequestSidebar") && c && !d,
         E = (0, L.D)(t.id, t.getRecipientId()),
         S = l.useCallback(() => {
-            q.A.closeChannelSidebar(D.fe), c && i && (0, O.iN)(t.id), d && r && (0, O.iN)(t.id);
+            q.A.closeChannelSidebar(V.fe), c && i && (0, O.iN)(t.id), d && r && (0, O.iN)(t.id);
         }, [t.id, d, r, c, i]),
         x = l.useCallback(() => {
             (0, h.P0)((0, m.o)(B.intl.string(B.t.pIQ3h4), A.Ck.FAILURE));
@@ -244,15 +244,15 @@ var eU = n(692617),
     eL = n(571694),
     eO = n(562819),
     eq = n(963977),
-    eD = n(994500),
-    eV = n(427262),
+    eV = n(994500),
+    eD = n(427262),
     eK = n(19575);
 n(989349);
 var eB = n(707539),
     eZ = n(568548),
     eX = n(978914),
     eJ = n(228366),
-    eY = n(841595),
+    eY = n(321191),
     e$ = n(903209),
     e0 = n(346055),
     e7 = n(863439),
@@ -262,17 +262,17 @@ var eB = n(707539),
     e3 = n(885386),
     e4 = n(576705),
     e2 = n(652215),
-    e5 = n(838541),
-    e1 = n(571882),
+    e1 = n(838541),
+    e5 = n(571882),
     te = n(992595);
 let tt = l.memo(function (e) {
     let { channel: t } = e,
         { loaded: n, error: a, message: r } = (0, eX.I)(t),
         { isBlocked: c, isIgnored: d } = (0, o.cf)(
-            [eD.A],
+            [eV.A],
             () => ({
-                isBlocked: null != r && eD.A.isBlockedForMessage(r),
-                isIgnored: null != r && eD.A.isIgnoredForMessage(r),
+                isBlocked: null != r && eV.A.isBlockedForMessage(r),
+                isIgnored: null != r && eV.A.isIgnoredForMessage(r),
             }),
             [r],
         ),
@@ -288,7 +288,7 @@ let tt = l.memo(function (e) {
         A = null;
     if (a)
         A = (0, s.jsx)(g.E, {
-            className: e1.G4,
+            className: e5.G4,
             variant: "text-sm/normal",
             color: "text-muted",
             children: B.intl.string(B.t.BZHld2),
@@ -296,37 +296,37 @@ let tt = l.memo(function (e) {
     else if (n)
         if (null != r && c)
             A = (0, s.jsx)(g.E, {
-                className: e1.G4,
+                className: e5.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t["WPe+xL"]),
             });
         else if (null != r && d)
             A = (0, s.jsx)(g.E, {
-                className: e1.G4,
+                className: e5.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e6.o)(r, m, c, d, i()(e1.BK, te.tZ), {
-                leadingIconClass: e1.AF,
-                trailingIconClass: e1.AF,
-                iconSize: e5.eJ,
+            let { contentPlaceholder: e, renderedContent: t } = (0, e6.o)(r, m, c, d, i()(e5.BK, te.tZ), {
+                leadingIconClass: e5.AF,
+                trailingIconClass: e5.AF,
+                iconSize: e1.eJ,
             });
             A =
                 null != t
-                    ? (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", className: e1.BK, children: t })
+                    ? (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", className: e5.BK, children: t })
                     : (0, s.jsx)(g.E, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: e1.G4,
+                          className: e5.G4,
                           children: e,
                       });
         } else
             A = (0, s.jsx)(g.E, {
-                className: e1.G4,
+                className: e5.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: B.intl.string(B.t["0KfDxM"]),
@@ -334,7 +334,7 @@ let tt = l.memo(function (e) {
     else A = null;
     return (0, s.jsx)(e8.Bs.Provider, {
         value: (0, e7.A)(h, u),
-        children: (0, s.jsx)(e0.M, { className: e1.JY, children: A }),
+        children: (0, s.jsx)(e0.M, { className: e5.JY, children: A }),
     });
 });
 var tn = n(746345);
@@ -378,7 +378,7 @@ function ta(e) {
         n,
         { channel: l, otherUser: a, active: i, isRestricted: r = !1 } = e,
         c = (0, o.bG)([eW.Ay], () => eW.Ay.useReducedMotion),
-        d = (0, o.bG)([eD.A], () => (null == a ? null : eD.A.getNickname(a.id))),
+        d = (0, o.bG)([eV.A], () => (null == a ? null : eV.A.getNickname(a.id))),
         u = !c && i,
         h =
             ((t = (0, eX.I)(l)),
@@ -419,7 +419,7 @@ function ta(e) {
                                 showAccountIdentifier: !0,
                                 className: tn.I8,
                                 usernameClass: tn.Xh,
-                                discriminatorClass: null != eV.Ay.getGlobalName(a) ? tn.vl : tn.D2,
+                                discriminatorClass: null != eD.Ay.getGlobalName(a) ? tn.vl : tn.D2,
                             }),
                             (0, s.jsx)(g.E, {
                                 className: tn.L7,
@@ -453,10 +453,10 @@ function tr(e) {
             (0, h.P0)((0, m.o)(B.intl.string(B.t["EDYbS+"]), A.Ck.FAILURE));
         }, []),
         o = l.useCallback(() => {
-            q.A.closeChannelSidebar(D.fe);
+            q.A.closeChannelSidebar(V.fe);
         }, []),
         d = l.useCallback(() => {
-            q.A.closeChannelSidebar(D.fe), r && (0, O.iN)(a.id);
+            q.A.closeChannelSidebar(V.fe), r && (0, O.iN)(a.id);
         }, [a.id, r]),
         {
             acceptMessageRequest: u,
@@ -481,7 +481,7 @@ function tr(e) {
                         children: (0, s.jsx)(N.$, {
                             variant: "secondary",
                             size: "sm",
-                            text: B.intl.string(B.t.B2nygW),
+                            text: B.intl.string(i ? B.t.BVN4pL : B.t.B2nygW),
                             onClick: function (e) {
                                 e.stopPropagation(), g(a.id);
                             },
@@ -519,7 +519,7 @@ function tc(e) {
         user: a,
         onClick: function (e) {
             e.stopPropagation(),
-                q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: D.fe, hasSingleMessageRequest: i }),
+                q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: V.fe, hasSingleMessageRequest: i }),
                 eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !1,
                     channel_id: l.id,
@@ -562,10 +562,10 @@ function tm(e) {
                 es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW });
         }, []),
         o = l.useCallback(() => {
-            q.A.closeChannelSidebar(D.fe);
+            q.A.closeChannelSidebar(V.fe);
         }, []),
         d = l.useCallback(() => {
-            q.A.closeChannelSidebar(D.fe), i && (0, O.iN)(a.id);
+            q.A.closeChannelSidebar(V.fe), i && (0, O.iN)(a.id);
         }, [a.id, i]),
         {
             acceptMessageRequest: u,
@@ -608,7 +608,7 @@ function tA(e) {
         user: a,
         onClick: function (e) {
             e.stopPropagation(),
-                q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: D.fe, hasSingleMessageRequest: i }),
+                q.A.openPrivateChannelAsSidebar({ channelId: l.id, baseChannelId: V.fe, hasSingleMessageRequest: i }),
                 eu.default.track(e2.HAw.MESSAGE_REQUEST_PREVIEW_VIEWED, {
                     is_spam: !0,
                     channel_id: l.id,
@@ -882,7 +882,7 @@ function tj() {
 }
 function tp(e) {
     let { pageWidth: t, onSidebarResize: n } = e,
-        l = (0, o.bG)([D.Ay], () => D.Ay.getSidebarState(D.fe)),
+        l = (0, o.bG)([V.Ay], () => V.Ay.getSidebarState(V.fe)),
         a = (0, o.bG)([eo.A], () => eo.A.getChannel(l?.channelId));
     if (null == l || l.type !== el.PE.VIEW_MESSAGE_REQUEST || null == a || !a.isPrivate()) return null;
     let i = t - e2.ItT;
@@ -890,7 +890,7 @@ function tp(e) {
         sidebarType: v.X.MessageRequestSidebar,
         maxWidth: i,
         onWidthChange: n,
-        children: (0, s.jsx)(J, { channel: a, baseChannelId: D.fe }),
+        children: (0, s.jsx)(J, { channel: a, baseChannelId: V.fe }),
     });
 }
 function tC(e) {
@@ -969,8 +969,8 @@ let tI = (0, b.A)(function (e) {
     let a = (0, o.bG)([ei.A], () => ei.A.theme),
         r = (0, eC.I)(),
         [d, u] = l.useState(!1),
-        h = (0, o.bG)([D.Ay], () => {
-            let e = D.Ay.getSidebarState(D.fe);
+        h = (0, o.bG)([V.Ay], () => {
+            let e = V.Ay.getSidebarState(V.fe);
             return null != e && e.type === el.PE.VIEW_MESSAGE_REQUEST ? e : null;
         }),
         m = h?.channelId,
@@ -983,7 +983,7 @@ let tI = (0, b.A)(function (e) {
         }),
         S = l.useRef(null);
     l.useEffect(() => {
-        null != m && !g && E && A && ((0, O.iN)(m), q.A.closeChannelSidebar(D.fe));
+        null != m && !g && E && A && ((0, O.iN)(m), q.A.closeChannelSidebar(V.fe));
     }, [m, E, A, g]);
     let [x, b] = l.useState(eI.zz.REQUESTS);
     function _(e) {
