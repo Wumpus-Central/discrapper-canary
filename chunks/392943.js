@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => r });
+n.d(t, { A: () => a });
 var i = n(627968);
-function r(e) {
+function a(e) {
     let { color: t = "white", className: n } = e;
     return (0, i.jsx)("svg", {
         width: "90",

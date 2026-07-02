@@ -1,61 +1,60 @@
-"use strict";
-n.d(t, { x: () => m });
+n.d(t, { x: () => f });
 var i = n(627968);
 n(64700);
-var r = n(562708),
+var a = n(562708),
     s = n(877624),
-    a = n(534514),
-    o = n(834730),
-    l = n(232582),
-    u = n(821609),
-    c = n(349288),
-    d = n(212245),
-    _ = n(688810),
-    h = n(139286),
-    f = n(498470),
-    p = n(637706),
-    E = n(975841);
-function m(e) {
+    r = n(534514),
+    l = n(834730),
+    c = n(232582),
+    o = n(821609),
+    d = n(349288),
+    u = n(212245),
+    m = n(688810),
+    A = n(139286),
+    g = n(498470),
+    N = n(637706),
+    p = n(975841);
+function f(e) {
     let { componentId: t, promotionBannerMarketingComponentFields: n } = e,
-        { analyticsLocations: m } = (0, _.Ay)(),
-        g = (0, d.p)();
-    (0, h.A)({
-        type: r.ImpressionTypes.VIEW,
-        name: r.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        { analyticsLocations: f } = (0, m.Ay)(),
+        E = (0, u.p)();
+    (0, A.A)({
+        type: a.ImpressionTypes.VIEW,
+        name: a.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
         properties: { component_type: s.C.MARKETING_PAGE_BANNER, component_id: t },
     });
-    let A = (0, f.h)({
-            buttonAction: n.button?.buttonAction ?? l.dz.OPEN_TIER_2_PAYMENT_MODAL,
+    let x = (0, g.h)({
+            buttonAction: n.button?.buttonAction ?? c.dz.OPEN_TIER_2_PAYMENT_MODAL,
             deeplinkSection: n.button?.deeplinkSection,
             applicationId: n.button?.navigableStorefrontApplicationId?.value,
-            analyticsLocations: m,
-            analyticsLocation: g.location,
+            analyticsLocations: f,
+            analyticsLocation: E.location,
         }),
-        I = (0, p.a)(n.body),
-        T = (0, p.C)(n.helpArticle, n.helpArticleId),
-        { icon: S } = (0, f.x)({ buttonAction: n.button?.buttonAction });
+        h = (0, N.a)(n.body),
+        C = (0, N.C)(n.helpArticle, n.helpArticleId),
+        { icon: R } = (0, g.x)({ buttonAction: n.button?.buttonAction });
     return (0, i.jsxs)("div", {
-        className: E.kL,
+        className: p.kL,
         children: [
             (0, i.jsx)("div", {
-                className: E.LY,
-                children: (0, i.jsx)("img", { src: n.assetUrl, className: E.ot, alt: "" }),
+                className: p.LY,
+                children: (0, i.jsx)("img", { src: n.assetUrl, className: p.ot, alt: "" }),
             }),
             (0, i.jsxs)("div", {
-                className: E.IH,
+                className: p.IH,
                 children: [
-                    (0, i.jsx)(a.D, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
-                    (0, i.jsxs)(o.E, {
+                    (0, i.jsx)(r.D, { variant: "heading-md/semibold", color: "text-strong", children: n.header }),
+                    (0, i.jsxs)(l.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
-                        className: E.tb,
+                        className: p.tb,
                         children: [
-                            I,
-                            null != T &&
+                            h,
+                            null != C &&
                                 (0, i.jsxs)(i.Fragment, {
                                     children: [
                                         "\xa0",
-                                        (0, i.jsx)(c.Anchor, { className: E.$T, href: T.url, children: T.linkText }),
+                                        (0, i.jsx)(d.Anchor, { className: p.$T, href: C.url, children: C.linkText }),
                                     ],
                                 }),
                         ],
@@ -64,13 +63,13 @@ function m(e) {
             }),
             null != n.button &&
                 (0, i.jsx)("div", {
-                    className: E.UD,
-                    children: (0, i.jsx)(u.$, {
+                    className: p.UD,
+                    children: (0, i.jsx)(o.$, {
                         variant: "expressive",
                         size: "md",
-                        onClick: A,
+                        onClick: x,
                         text: n.button.copy,
-                        icon: S,
+                        icon: R,
                     }),
                 }),
         ],

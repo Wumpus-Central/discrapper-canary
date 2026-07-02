@@ -1,204 +1,203 @@
-"use strict";
-n.d(t, { A: () => q });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(17928),
-    l = n(342952),
-    u = n(289873),
-    c = n(939249),
-    d = n(834730),
-    _ = n(111159),
-    h = n(778712),
-    f = n(140735),
-    p = n(707554),
-    E = n(730852),
-    m = n(401843),
-    g = n(475743),
-    A = n(672979),
-    I = n(717306),
-    T = n(323073),
-    S = n(793574),
-    y = n(688810),
-    C = n(47167),
-    N = n(402216),
-    v = n(450149),
-    R = n(279250),
-    O = n(734057),
-    b = n(71393),
-    D = n(576705),
-    L = n(290863),
-    w = n(607567),
-    M = n(92240),
-    P = n(257367),
-    x = n(939496),
-    k = n(584904),
-    U = n(351638),
-    G = n(316770),
-    F = n(910607),
-    V = n(70963),
-    B = n(269587),
-    j = n(652215),
-    H = n(996988),
-    Y = n(375708),
-    W = n(726342),
-    K = n(802558),
-    $ = n(399162),
-    z = n(181147);
-function q(e) {
+l.d(t, { A: () => J });
+var e = l(627968),
+    n = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    d = l(17928),
+    o = l(342952),
+    r = l(289873),
+    c = l(939249),
+    A = l(834730),
+    u = l(111159),
+    h = l(778712),
+    x = l(140735),
+    g = l(707554),
+    m = l(730852),
+    p = l(401843),
+    j = l(475743),
+    C = l(672979),
+    _ = l(717306),
+    N = l(323073),
+    v = l(793574),
+    f = l(688810),
+    O = l(47167),
+    E = l(402216),
+    I = l(450149),
+    L = l(279250),
+    S = l(734057),
+    y = l(71393),
+    D = l(576705),
+    V = l(290863),
+    b = l(607567),
+    T = l(92240),
+    M = l(257367),
+    P = l(939496),
+    w = l(584904),
+    G = l(351638),
+    U = l(316770),
+    k = l(910607),
+    F = l(70963),
+    R = l(269587),
+    z = l(652215),
+    H = l(996988),
+    B = l(375708),
+    Q = l(514566),
+    Y = l(478846),
+    $ = l(399162),
+    q = l(181147);
+function J(i) {
     let t,
-        { user: n, currentUser: s, stream: q, className: Z, onClose: X } = e,
-        { themeType: Q, theme: J } = (0, x.E)(),
-        ee = (0, o.bG)([b.A], () => b.A.getGuild(q?.guildId)),
-        et = (0, o.bG)([O.A], () => O.A.getChannel(q?.channelId)),
-        en = (0, C.Ay)(et),
-        ei = (0, o.yK)([w.Ay], () =>
-            null != et
-                ? w.Ay.getVoiceStatesForChannel(et).map((e) => {
-                      let { user: t } = e;
+        { user: l, currentUser: s, stream: J, className: X, onClose: Z } = i,
+        { themeType: K, theme: W } = (0, P.E)(),
+        ii = (0, d.bG)([y.A], () => y.A.getGuild(J?.guildId)),
+        it = (0, d.bG)([S.A], () => S.A.getChannel(J?.channelId)),
+        il = (0, O.Ay)(it),
+        ie = (0, d.yK)([b.Ay], () =>
+            null != it
+                ? b.Ay.getVoiceStatesForChannel(it).map((i) => {
+                      let { user: t } = i;
                       return t;
                   })
                 : [],
         ),
-        er = (0, o.bG)([L.A], () => L.A.findActivity(n.id, (e) => (0, A.A)(e) && !(0, I.A)(e))),
-        { analyticsLocations: es } = (0, y.Ay)(S.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        ea = (0, M.A)({ display: "live", voiceChannelId: et?.id, user: n, stream: q, analyticsLocations: es }),
-        eo = (0, P.A)({ userId: n.id, onAction: ea }),
-        { previewUrl: el, isLoading: eu } = (0, v.A)(q?.guildId, q?.channelId, q?.ownerId),
-        [ec, ed] = (0, R.zP)(et),
-        e_ = (0, T.a9)() && (0, T.UK)(et?.id),
-        eh = (0, o.bG)([D.A], () => null != et && !e_ && D.A.canBasicChannel(j.hVb.CONNECT, et)),
-        ef = (0, g.A)(eu ? null : el),
-        ep = eu || null == el ? ef : el,
-        eE = r.useId();
-    if (null == ee || null == et || !1 === q.discoverable) return null;
-    let em = () =>
-            n.id === s.id
+        is = (0, d.bG)([V.A], () => V.A.findActivity(l.id, (i) => (0, C.A)(i) && !(0, _.A)(i))),
+        { analyticsLocations: ia } = (0, f.Ay)(v.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        id = (0, T.A)({ display: "live", voiceChannelId: it?.id, user: l, stream: J, analyticsLocations: ia }),
+        io = (0, M.A)({ userId: l.id, onAction: id }),
+        { previewUrl: ir, isLoading: ic } = (0, I.A)(J?.guildId, J?.channelId, J?.ownerId),
+        [iA, iu] = (0, L.zP)(it),
+        ih = (0, N.a9)() && (0, N.UK)(it?.id),
+        ix = (0, d.bG)([D.A], () => null != it && !ih && D.A.canBasicChannel(z.hVb.CONNECT, it)),
+        ig = (0, j.A)(ic ? null : ir),
+        im = ic || null == ir ? ig : ir,
+        ip = n.useId();
+    if (null == ii || null == it || !1 === J.discoverable) return null;
+    let ij = () =>
+            l.id === s.id
                 ? null
-                : (0, i.jsx)("div", {
-                      className: W.o1,
-                      children: (0, i.jsx)(V.Ay, { channel: et, onAction: ea, onClose: X }),
+                : (0, e.jsx)("div", {
+                      className: Q.o1,
+                      children: (0, e.jsx)(F.Ay, { channel: it, onAction: id, onClose: Z }),
                   }),
-        eg = null != er ? Y.intl.formatToPlainString(Y.t["4CQq9Q"], { name: er.name }) : Y.intl.string(Y.t["Jpkr/q"]);
-    return (0, i.jsx)(y.f5, {
-        value: es,
-        children: (0, i.jsxs)(k.A, {
-            ref: eo,
-            className: Z,
-            onAction: ea,
-            onClose: X,
-            "aria-labelledby": eE,
+        iC = null != is ? B.intl.formatToPlainString(B.t["4CQq9Q"], { name: is.name }) : B.intl.string(B.t["Jpkr/q"]);
+    return (0, e.jsx)(f.f5, {
+        value: ia,
+        children: (0, e.jsxs)(w.A, {
+            ref: io,
+            className: X,
+            onAction: id,
+            onClose: Z,
+            "aria-labelledby": ip,
             children: [
-                (0, i.jsx)(U.A, {
-                    text: eg,
-                    tags: (0, i.jsx)(N.Ay, { size: N.ed.SMALL }),
-                    contextMenu: (0, i.jsx)(B.A, { display: "live", user: n, onClose: X }),
+                (0, e.jsx)(G.A, {
+                    text: iC,
+                    tags: (0, e.jsx)(E.Ay, { size: E.ed.SMALL }),
+                    contextMenu: (0, e.jsx)(R.A, { display: "live", user: l, onClose: Z }),
                 }),
-                (0, i.jsx)(f.A, { children: (0, i.jsx)(p.H, { id: eE, children: `${eg}, ${en}` }) }),
-                (0, i.jsxs)("div", {
-                    className: W.rf,
+                (0, e.jsx)(x.A, { children: (0, e.jsx)(g.H, { id: ip, children: `${iC}, ${il}` }) }),
+                (0, e.jsxs)("div", {
+                    className: Q.rf,
                     children: [
-                        (0, i.jsxs)("div", {
-                            className: W.Qs,
+                        (0, e.jsxs)("div", {
+                            className: Q.Qs,
                             children: [
-                                ((t = (e) => {
-                                    e.stopPropagation(),
-                                        ec &&
-                                            (ea({ action: "PRESS_IMAGE" }),
-                                            E.default.selectVoiceChannel(q.channelId),
-                                            (0, m.Nl)(q),
-                                            X?.());
+                                ((t = (i) => {
+                                    i.stopPropagation(),
+                                        iA &&
+                                            (id({ action: "PRESS_IMAGE" }),
+                                            m.default.selectVoiceChannel(J.channelId),
+                                            (0, p.Nl)(J),
+                                            Z?.());
                                 }),
-                                null == ep && eu
-                                    ? (0, i.jsx)("div", { className: K.VH, children: (0, i.jsx)(u.y, {}) })
-                                    : null == ep || e_
-                                      ? (0, i.jsxs)(c.D, {
-                                            className: a()(K.VH, K.Lw, ec ? K.vk : K.r9),
+                                null == im && ic
+                                    ? (0, e.jsx)("div", { className: Y.VH, children: (0, e.jsx)(r.y, {}) })
+                                    : null == im || ih
+                                      ? (0, e.jsxs)(c.D, {
+                                            className: a()(Y.VH, Y.Lw, iA ? Y.vk : Y.r9),
                                             onClick: t,
-                                            "aria-label": (0, R.CQ)(ed),
-                                            "aria-disabled": !ec,
+                                            "aria-label": (0, L.CQ)(iu),
+                                            "aria-disabled": !iA,
                                             children: [
-                                                (0, i.jsx)("img", { alt: "", src: J === j.NJ8.LIGHT ? z : $ }),
-                                                Q !== H.d.MODAL &&
-                                                    Q !== H.d.MODAL_V2 &&
-                                                    (0, i.jsxs)(i.Fragment, {
+                                                (0, e.jsx)("img", { alt: "", src: W === z.NJ8.LIGHT ? q : $ }),
+                                                K !== H.d.MODAL &&
+                                                    K !== H.d.MODAL_V2 &&
+                                                    (0, e.jsxs)(e.Fragment, {
                                                         children: [
-                                                            (0, i.jsx)(d.E, {
-                                                                className: K.um,
+                                                            (0, e.jsx)(A.E, {
+                                                                className: Y.um,
                                                                 variant: "text-sm/medium",
                                                                 color: "always-white",
-                                                                children: (0, R.CT)(ed),
+                                                                children: (0, L.CT)(iu),
                                                             }),
-                                                            (0, i.jsx)(d.E, {
+                                                            (0, e.jsx)(A.E, {
                                                                 variant: "text-sm/medium",
-                                                                children: eh
-                                                                    ? Y.intl.string(Y.t.uQZTBV)
-                                                                    : Y.intl.string(Y.t.pgUTZC),
+                                                                children: ix
+                                                                    ? B.intl.string(B.t.uQZTBV)
+                                                                    : B.intl.string(B.t.pgUTZC),
                                                             }),
                                                         ],
                                                     }),
                                             ],
                                         })
-                                      : (0, i.jsxs)(c.D, {
-                                            className: a()(K.VH, K.Lw, ec ? K.vk : K.r9),
+                                      : (0, e.jsxs)(c.D, {
+                                            className: a()(Y.VH, Y.Lw, iA ? Y.vk : Y.r9),
                                             onClick: t,
-                                            "aria-label": (0, R.CQ)(ed),
-                                            "aria-disabled": !ec,
+                                            "aria-label": (0, L.CQ)(iu),
+                                            "aria-disabled": !iA,
                                             children: [
-                                                (0, i.jsx)("img", { alt: "", src: ep, className: K.Sl }),
-                                                Q !== H.d.MODAL &&
-                                                    Q !== H.d.MODAL_V2 &&
-                                                    (0, i.jsxs)(i.Fragment, {
+                                                (0, e.jsx)("img", { alt: "", src: im, className: Y.Sl }),
+                                                K !== H.d.MODAL &&
+                                                    K !== H.d.MODAL_V2 &&
+                                                    (0, e.jsxs)(e.Fragment, {
                                                         children: [
-                                                            (0, i.jsx)(d.E, {
-                                                                className: K.um,
+                                                            (0, e.jsx)(A.E, {
+                                                                className: Y.um,
                                                                 variant: "text-sm/medium",
                                                                 color: "always-white",
-                                                                children: (0, R.CT)(ed),
+                                                                children: (0, L.CT)(iu),
                                                             }),
-                                                            (0, i.jsx)(_.p, {
+                                                            (0, e.jsx)(u.p, {
                                                                 size: "xs",
                                                                 color: "currentColor",
-                                                                className: K.wI,
+                                                                className: Y.wI,
                                                             }),
                                                         ],
                                                     }),
                                             ],
                                         })),
-                                Q !== H.d.MODAL && Q !== H.d.MODAL_V2
+                                K !== H.d.MODAL && K !== H.d.MODAL_V2
                                     ? null
-                                    : (0, i.jsxs)("div", {
-                                          className: W.zH,
+                                    : (0, e.jsxs)("div", {
+                                          className: Q.zH,
                                           children: [
-                                              (0, i.jsx)(G.A, { channel: et, guild: ee, onAction: ea, onClose: X }),
-                                              (0, i.jsx)(l.A, {
-                                                  users: ei,
-                                                  guildId: ee.id,
-                                                  channelId: et.id,
-                                                  maxUsers: F.k,
+                                              (0, e.jsx)(U.A, { channel: it, guild: ii, onAction: id, onClose: Z }),
+                                              (0, e.jsx)(o.A, {
+                                                  users: ie,
+                                                  guildId: ii.id,
+                                                  channelId: it.id,
+                                                  maxUsers: k.k,
                                                   size: h._3.SIZE_16,
-                                                  onClickOverflow: (e) => {
-                                                      e?.stopPropagation(),
-                                                          ea?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
+                                                  onClickOverflow: (i) => {
+                                                      i?.stopPropagation(),
+                                                          id?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" });
                                                   },
-                                                  onUserClick: (e) => e.stopPropagation(),
-                                                  disableUserPopout: (e) => e === n.id,
+                                                  onUserClick: (i) => i.stopPropagation(),
+                                                  disableUserPopout: (i) => i === l.id,
                                                   overflowCountColor: "text-muted",
-                                                  "aria-label": Y.intl.string(Y.t["jNqDh/"]),
+                                                  "aria-label": B.intl.string(B.t["jNqDh/"]),
                                               }),
-                                              Q === H.d.MODAL_V2 && em(),
+                                              K === H.d.MODAL_V2 && ij(),
                                           ],
                                       }),
-                                Q === H.d.MODAL && em(),
+                                K === H.d.MODAL && ij(),
                             ],
                         }),
-                        Q === H.d.MODAL || Q === H.d.MODAL_V2
+                        K === H.d.MODAL || K === H.d.MODAL_V2
                             ? null
-                            : (0, i.jsx)(F.A, { user: n, guild: ee, channel: et, onAction: ea, onClose: X }),
+                            : (0, e.jsx)(k.A, { user: l, guild: ii, channel: it, onAction: id, onClose: Z }),
                     ],
                 }),
-                Q !== H.d.MODAL && Q !== H.d.MODAL_V2 && em(),
+                K !== H.d.MODAL && K !== H.d.MODAL_V2 && ij(),
             ],
         }),
     });

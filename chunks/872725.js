@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { A: () => p });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(524007),
-    l = n(844222),
-    u = n(594639),
-    c = n(105596),
-    d = n(993077),
-    _ = n(544888);
+i.d(t, { A: () => x });
+var r = i(627968),
+    s = i(64700),
+    n = i(503698),
+    l = i.n(n),
+    a = i(524007),
+    o = i(844222),
+    d = i(594639),
+    c = i(105596),
+    u = i(993077),
+    m = i(544888);
 let h = {
         HoverLightmode: { posy: "number", posx: "number" },
         BaseGlow: {},
@@ -18,59 +17,59 @@ let h = {
         BaseGlowRemapped: {},
         ButtonFillDarkmode: {},
     },
-    f = {},
-    p = function (e) {
+    C = {},
+    x = function (e) {
         let {
                 children: t,
-                id: n,
-                tabIndex: s,
-                className: p,
-                cardClassName: E,
-                cardStyle: m = f,
+                id: i,
+                tabIndex: n,
+                className: x,
+                cardClassName: p,
+                cardStyle: _ = C,
                 cardType: g,
-                artboard: A = "BaseGlowRemapped",
-                fit: I = "layout",
-                glowing: T = !1,
-                glowAmount: S = 8,
-                blurAmount: y = 30,
-                hueRotate: C = 0,
-                isReducedMotion: N,
+                artboard: f = "BaseGlowRemapped",
+                fit: R = "layout",
+                glowing: j = !1,
+                glowAmount: E = 8,
+                blurAmount: A = 30,
+                hueRotate: N = 0,
+                isReducedMotion: P,
                 onMouseEnter: v,
-                onFocus: R,
+                onFocus: D,
             } = e,
-            O = r.useRef(null),
-            b = r.useRef(null),
-            { status: D, buffer: L } = (0, c.CE)(T ? o.A : null),
-            w = r.useContext(l.C),
-            M = N ?? w.reducedMotion.enabled,
-            P = {
-                "--custom-glow-amount": `${S}px`,
-                "--custom-blur-amount": `${y}px`,
-                "--custom-hue-rotate": `${C}deg`,
-                "--custom-glow-opacity": +(0 !== S),
+            I = s.useRef(null),
+            b = s.useRef(null),
+            { status: y, buffer: w } = (0, c.CE)(j ? a.A : null),
+            O = s.useContext(o.C),
+            T = P ?? O.reducedMotion.enabled,
+            S = {
+                "--custom-glow-amount": `${E}px`,
+                "--custom-blur-amount": `${A}px`,
+                "--custom-hue-rotate": `${N}deg`,
+                "--custom-glow-opacity": +(0 !== E),
             };
-        return (0, i.jsxs)("div", {
-            id: n,
-            ref: O,
-            tabIndex: s,
-            className: a()(_.k, p),
-            style: P,
+        return (0, r.jsxs)("div", {
+            id: i,
+            ref: I,
+            tabIndex: n,
+            className: l()(m.k, x),
+            style: S,
             onMouseEnter: v,
-            onFocus: R,
+            onFocus: D,
             children: [
-                T &&
-                    D !== c.BW.Loading &&
-                    (0, i.jsx)(u.w, {
-                        buffer: L,
-                        artboard: A,
+                j &&
+                    y !== c.BW.Loading &&
+                    (0, r.jsx)(d.w, {
+                        buffer: w,
+                        artboard: f,
                         artboardProperties: h,
-                        eventTargetRef: O,
-                        className: _.Q,
+                        eventTargetRef: I,
+                        className: m.Q,
                         ref: b,
-                        fit: I,
-                        withReducedMotion: M ? "halt" : "play",
+                        fit: R,
+                        withReducedMotion: T ? "halt" : "play",
                     }),
-                (0, i.jsx)(d.Z, { type: g ?? d.s.CUSTOM, className: E, style: m, children: t }),
+                (0, r.jsx)(u.Z, { type: g ?? u.s.CUSTOM, className: p, style: _, children: t }),
             ],
         });
     };

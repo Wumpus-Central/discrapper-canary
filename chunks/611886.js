@@ -1,52 +1,51 @@
-"use strict";
-n.d(t, { i: () => s });
-var i = n(321733),
-    r = n(64700);
-function s(e) {
+r.d(t, { i: () => o });
+var n = r(321733),
+    i = r(64700);
+function o(e) {
     var t = {};
     return (
-        Object.keys(e).forEach(function (n) {
-            var s = e[n];
-            if (n.endsWith("Ref")) t[n] = e[n];
+        Object.keys(e).forEach(function (r) {
+            var o = e[r];
+            if (r.endsWith("Ref")) t[r] = e[r];
             else {
-                var o = function () {
+                var u = function () {
                     var e,
                         t,
-                        n,
-                        o = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
-                        l = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-                    if (!(0, r.isValidElement)(o)) return s(o, l), o;
-                    if ("string" != typeof o.type) {
-                        var u = o.type.displayName || o.type.name || "the component";
+                        r,
+                        u = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null,
+                        c = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
+                    if (!(0, i.isValidElement)(u)) return o(u, c), u;
+                    if ("string" != typeof u.type) {
+                        var s = u.type.displayName || u.type.name || "the component";
                         throw Error(
                             "Only native element nodes can now be passed to React DnD connectors." +
-                                "You can either wrap ".concat(u, " into a <div>, or turn it into a ") +
+                                "You can either wrap ".concat(s, " into a <div>, or turn it into a ") +
                                 "drag source or a drop target itself.",
                         );
                     }
                     return (
-                        (e = o),
-                        (t = l
+                        (e = u),
+                        (t = c
                             ? function (e) {
-                                  return s(e, l);
+                                  return o(e, c);
                               }
-                            : s),
-                        (n = e.ref),
-                        ((0, i.V)(
-                            "string" != typeof n,
+                            : o),
+                        (r = e.ref),
+                        ((0, n.V)(
+                            "string" != typeof r,
                             "Cannot connect React DnD to an element with an existing string ref. Please convert it to use a callback ref instead, or wrap it into a <span> or <div>. Read more: https://reactjs.org/docs/refs-and-the-dom.html#callback-refs",
                         ),
-                        n)
-                            ? (0, r.cloneElement)(e, {
+                        r)
+                            ? (0, i.cloneElement)(e, {
                                   ref: function (e) {
-                                      a(n, e), a(t, e);
+                                      a(r, e), a(t, e);
                                   },
                               })
-                            : (0, r.cloneElement)(e, { ref: t })
+                            : (0, i.cloneElement)(e, { ref: t })
                     );
                 };
-                t[n] = function () {
-                    return o;
+                t[r] = function () {
+                    return u;
                 };
             }
         }),

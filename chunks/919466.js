@@ -1,85 +1,84 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => g });
 var i = n(17928),
-    r = n(228366),
+    a = n(228366),
     s = n(983060),
-    a = n(297966),
-    o = n(788868);
-let l = null,
-    u = a.db.NOT_FETCHED,
-    c = null;
-function d() {
-    u === a.db.NOT_FETCHED && (u = a.db.FETCHED);
+    r = n(297966),
+    l = n(202541);
+let c = null,
+    o = r.db.NOT_FETCHED,
+    d = null;
+function u() {
+    o === r.db.NOT_FETCHED && (o = r.db.FETCHED);
 }
-function _(e) {
+function m(e) {
     if (e.entitlement.sku_id !== s.cc) return !1;
     let t = (0, s.MM)(e.entitlement);
-    (l = null == t ? null : { perk: a.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), d();
+    (c = null == t ? null : { perk: r.n9.XGPP, state: t, entitlement_id: e.entitlement.id, redirect: null }), u();
 }
-class h extends i.Ay.Store {
+class A extends i.Ay.Store {
     static displayName = "PartnerActivationStore";
     getActivationStatus() {
-        return l;
-    }
-    getRequestState() {
-        return u;
-    }
-    getLastFetchTime() {
         return c;
     }
+    getRequestState() {
+        return o;
+    }
+    getLastFetchTime() {
+        return d;
+    }
 }
-let f = new h(r.h, {
+let g = new A(a.h, {
     PARTNER_ACTIVATION_FETCH_START: function () {
-        u = a.db.FETCHING;
+        o = r.db.FETCHING;
     },
     PARTNER_ACTIVATION_FETCH_SUCCESS: function (e) {
         let { activationStatus: t } = e;
-        (l = t), (u = a.db.FETCHED), (c = Date.now());
+        (c = t), (o = r.db.FETCHED), (d = Date.now());
     },
     PARTNER_ACTIVATION_FETCH_FAILURE: function () {
-        u = a.db.FETCHED;
+        o = r.db.FETCHED;
     },
     PARTNER_CANCELLATION_START: function () {
-        u = a.db.CANCELLING;
+        o = r.db.CANCELLING;
     },
     PARTNER_CANCELLATION_SUCCESS: function () {
-        (l = {
-            perk: l?.perk ?? a.n9.XGPP,
-            state: a.gR.CANCELLATION_PENDING,
-            entitlement_id: l?.entitlement_id ?? null,
+        (c = {
+            perk: c?.perk ?? r.n9.XGPP,
+            state: r.gR.CANCELLATION_PENDING,
+            entitlement_id: c?.entitlement_id ?? null,
             redirect: null,
         }),
-            (u = a.db.FETCHED),
-            (c = null);
+            (o = r.db.FETCHED),
+            (d = null);
     },
     PARTNER_CANCELLATION_FAILURE: function () {
-        u = a.db.FETCHED;
+        o = r.db.FETCHED;
     },
     PARTNER_ACTIVATION_RESET: function () {
-        (l = null), (u = a.db.FETCHED), (c = null);
+        (c = null), (o = r.db.FETCHED), (d = null);
     },
-    ENTITLEMENT_CREATE: _,
-    ENTITLEMENT_UPDATE: _,
+    ENTITLEMENT_CREATE: m,
+    ENTITLEMENT_UPDATE: m,
     ENTITLEMENT_DELETE: function (e) {
         if (e.entitlement.sku_id !== s.cc) return !1;
-        (l = null), (c = null), d();
+        (c = null), (d = null), u();
     },
     ENTITLEMENT_FETCH_APPLICATION_SUCCESS: function (e) {
-        if (e.applicationId !== o.tv || 0 === e.entitlements.length) return !1;
+        if (e.applicationId !== l.tv || 0 === e.entitlements.length) return !1;
         let t = null;
         for (let n of e.entitlements) {
             if (n.sku_id !== s.cc) continue;
             let e = (0, s.MM)(n);
-            if (e === a.gR.ACTIVATED) {
-                (l = { perk: a.n9.XGPP, state: a.gR.ACTIVATED, entitlement_id: n.id, redirect: null }), d();
+            if (e === r.gR.ACTIVATED) {
+                (c = { perk: r.n9.XGPP, state: r.gR.ACTIVATED, entitlement_id: n.id, redirect: null }), u();
                 return;
             }
-            e === a.gR.CANCELLATION_PENDING && (t = n.id);
+            e === r.gR.CANCELLATION_PENDING && (t = n.id);
         }
         if (null == t) return !1;
-        (l = { perk: a.n9.XGPP, state: a.gR.CANCELLATION_PENDING, entitlement_id: t, redirect: null }), d();
+        (c = { perk: r.n9.XGPP, state: r.gR.CANCELLATION_PENDING, entitlement_id: t, redirect: null }), u();
     },
     LOGOUT: function () {
-        (l = null), (u = a.db.NOT_FETCHED), (c = null);
+        (c = null), (o = r.db.NOT_FETCHED), (d = null);
     },
 });

@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => A, I: () => p });
+n.d(t, { A: () => x, I: () => N });
 var i = n(627968);
 n(64700);
-var r = n(607399),
+var a = n(607399),
     s = n(793574),
-    a = n(688810),
-    o = n(268218),
-    l = n(335180),
-    u = n(723702),
-    c = n(19575),
-    d = n(58736),
-    _ = n(746080),
-    h = n(546930);
-let f = (0, o.Fe)({
+    r = n(688810),
+    l = n(268218),
+    c = n(335180),
+    o = n(723702),
+    d = n(19575),
+    u = n(58736),
+    m = n(746080),
+    A = n(546930);
+let g = (0, l.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("57234"),
@@ -30,86 +29,86 @@ let f = (0, o.Fe)({
             n.e("66016"),
             n.e("81202"),
             n.e("21225"),
-            n.e("12549"),
+            n.e("71367"),
             n.e("83752"),
         ]).then(n.bind(n, 381687)),
     webpackId: 381687,
     name: "Search",
-    renderLoader: l.O7,
+    renderLoader: c.O7,
 });
-async function p(e) {
-    if (!e && (0, u.isMac)() && u.isPlatformEmbedded) {
+async function N(e) {
+    if (!e && (0, o.isMac)() && o.isPlatformEmbedded) {
         let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
-        "Minimize" === e ? c.Ay.minimize() : "Maximize" === e && c.Ay.maximize();
+        "Minimize" === e ? d.Ay.minimize() : "Maximize" === e && d.Ay.maximize();
     }
 }
-function E(e) {
+function p(e) {
     let {
         children: t,
         className: n,
         channelId: s,
-        guildId: a,
-        innerClassname: o,
-        transparent: l = !1,
-        hidden: u = !1,
-        toolbar: c,
-        mobileToolbar: E,
-        "aria-label": m,
-        "aria-labelledby": g,
-        scrollable: A,
-        role: I,
-        hideSearch: T,
-        disableDoubleClick: S,
+        guildId: r,
+        innerClassname: l,
+        transparent: c = !1,
+        hidden: o = !1,
+        toolbar: d,
+        mobileToolbar: p,
+        "aria-label": f,
+        "aria-labelledby": E,
+        scrollable: x,
+        role: h,
+        hideSearch: C,
+        disableDoubleClick: R,
     } = e;
-    return (0, i.jsx)(d.Ay, {
+    return (0, i.jsx)(u.Ay, {
         className: n,
-        innerClassName: o,
+        innerClassName: l,
         toolbar: (function () {
-            if (null == c) return null;
-            let e = null != s && !T;
-            return r.Fr
-                ? E
+            if (null == d) return null;
+            let e = null != s && !C;
+            return a.Fr
+                ? p
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          c,
-                          e && !(0, _.jq)(s)
-                              ? (0, i.jsx)(f, { guildId: a, channelId: s, className: h.$P }, a ?? s)
+                          d,
+                          e && !(0, m.jq)(s)
+                              ? (0, i.jsx)(g, { guildId: r, channelId: s, className: A.$P }, r ?? s)
                               : null,
                       ],
                   });
         })(),
-        transparent: l,
-        hidden: u,
-        onDoubleClick: () => p(S),
-        "aria-label": m,
-        "aria-labelledby": g,
-        role: I,
-        scrollable: A,
+        transparent: c,
+        hidden: o,
+        onDoubleClick: () => N(R),
+        "aria-label": f,
+        "aria-labelledby": E,
+        role: h,
+        scrollable: x,
         children: t,
     });
 }
-function m(e) {
-    let { children: t, className: n, "aria-label": r, "aria-labelledby": s, role: a, disableDoubleClick: o } = e;
-    return (0, i.jsx)(d.Ay, {
+function f(e) {
+    let { children: t, className: n, "aria-label": a, "aria-labelledby": s, role: r, disableDoubleClick: l } = e;
+    return (0, i.jsx)(u.Ay, {
         className: n,
-        onDoubleClick: () => p(o),
-        "aria-label": r,
+        onDoubleClick: () => N(l),
+        "aria-label": a,
         "aria-labelledby": s,
-        role: a,
+        role: r,
         children: t,
     });
 }
-function g(e) {
+function E(e) {
     let { isAuthenticated: t = !0, ...n } = e,
-        { analyticsLocations: r } = (0, a.Ay)(s.A.HEADER_BAR);
-    return (0, i.jsx)(a.f5, {
-        value: r,
-        children: t ? (0, i.jsx)(E, { ...n, className: n.className }) : (0, i.jsx)(m, { ...n, className: n.className }),
+        { analyticsLocations: a } = (0, r.Ay)(s.A.HEADER_BAR);
+    return (0, i.jsx)(r.f5, {
+        value: a,
+        children: t ? (0, i.jsx)(p, { ...n, className: n.className }) : (0, i.jsx)(f, { ...n, className: n.className }),
     });
 }
-(g.Title = d.Ay.Title),
-    (g.Icon = d.Ay.Icon),
-    (g.ChannelIcon = d.Ay.ChannelIcon),
-    (g.Divider = d.Ay.Divider),
-    (g.Caret = d.Ay.Caret);
-let A = g;
+(E.Title = u.Ay.Title),
+    (E.Icon = u.Ay.Icon),
+    (E.ChannelIcon = u.Ay.ChannelIcon),
+    (E.Divider = u.Ay.Divider),
+    (E.Caret = u.Ay.Caret);
+let x = E;

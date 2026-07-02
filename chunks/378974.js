@@ -1,52 +1,51 @@
-"use strict";
-n.d(t, { K: () => U, default: () => G });
+n.d(t, { K: () => q, default: () => v });
 var i = n(627968),
-    r = n(64700),
-    s = n(189213),
-    a = n(17928),
-    o = n(192308),
-    l = n(834730),
-    u = n(27620),
+    l = n(64700),
+    r = n(189213),
+    s = n(17928),
+    a = n(192308),
+    o = n(834730),
+    E = n(27620),
     c = n(668131),
-    d = n(797632);
+    u = n(797632);
 function _(e, t) {
-    let { Operator: n, QuestionID: i, ChoiceLocator: r, LeftOperand: s, RightOperand: a } = e;
+    let { Operator: n, QuestionID: i, ChoiceLocator: l, LeftOperand: r, RightOperand: s } = e;
     if (null == i) return !0;
-    let o = t[i];
-    if (null == o || "" === o) return !1;
-    let l = r?.match(/SelectableChoice\/(\d+)/),
-        u = l?.[1];
+    let a = t[i];
+    if (null == a || "" === a) return !1;
+    let o = l?.match(/SelectableChoice\/(\d+)/),
+        E = o?.[1];
     switch (n) {
         case "Selected":
-            return null != u && o.split(",").includes(u);
+            return null != E && a.split(",").includes(E);
         case "NotSelected":
-            return null != u && !o.split(",").includes(u);
+            return null != E && !a.split(",").includes(E);
         case "EqualTo":
-            return o === (a ?? s);
+            return a === (s ?? r);
         case "NotEqualTo":
-            return o !== (a ?? s);
+            return a !== (s ?? r);
         case "GreaterThan":
-            return Number(o) > Number(a ?? s ?? 0);
+            return Number(a) > Number(s ?? r ?? 0);
         case "LessThan":
-            return Number(o) < Number(a ?? s ?? 0);
+            return Number(a) < Number(s ?? r ?? 0);
         case "GreaterThanOrEqualTo":
-            return Number(o) >= Number(a ?? s ?? 0);
+            return Number(a) >= Number(s ?? r ?? 0);
         case "LessThanOrEqualTo":
-            return Number(o) <= Number(a ?? s ?? 0);
+            return Number(a) <= Number(s ?? r ?? 0);
         case "Contains":
-            return o.includes(a ?? s ?? "");
+            return a.includes(s ?? r ?? "");
         case "DoesNotContain":
-            return !o.includes(a ?? s ?? "");
+            return !a.includes(s ?? r ?? "");
         default:
             return !0;
     }
 }
-function h(e) {
+function A(e) {
     let t = [];
     for (let n of e.SurveyFlow.Flow) ("Block" === n.Type || "Standard" === n.Type) && null != n.ID && t.push(n.ID);
     return t;
 }
-function f(e) {
+function d(e) {
     let t = [],
         n = [];
     for (let i of e.BlockElements)
@@ -56,46 +55,46 @@ function f(e) {
     return n.length > 0 && t.push(n), t;
 }
 n(321073);
-var p = n(503698),
-    E = n.n(p),
-    m = n(939249),
-    g = n(773812),
-    A = n(658675),
-    I = n(292666),
-    T = n(793361);
-function S(e) {
+var T = n(503698),
+    I = n.n(T),
+    N = n(939249),
+    R = n(773812),
+    S = n(658675),
+    O = n(292666),
+    C = n(793361);
+function D(e) {
     let {
             choiceId: t,
             choice: n,
-            isSelected: r,
-            onSelectionChange: s,
-            inputType: a,
-            textInputValue: o,
-            onTextInputChange: u,
+            isSelected: l,
+            onSelectionChange: r,
+            inputType: s,
+            textInputValue: a,
+            onTextInputChange: E,
         } = e,
         c = "true" === n.TextEntry,
-        d = `choice-label-${t}`;
+        u = `choice-label-${t}`;
     return (0, i.jsxs)("div", {
-        className: T.NV,
+        className: C.NV,
         children: [
-            (0, i.jsxs)(m.D, {
-                className: T.d,
+            (0, i.jsxs)(N.D, {
+                className: C.d,
                 onClick: function () {
-                    s(t);
+                    r(t);
                 },
-                role: a,
-                "aria-checked": r,
-                "aria-labelledby": d,
+                role: s,
+                "aria-checked": l,
+                "aria-labelledby": u,
                 children: [
                     (0, i.jsx)("div", {
-                        className: T.jl,
+                        className: C.jl,
                         children:
-                            "radio" === a
-                                ? (0, i.jsx)(g.T, { disabled: !1, checked: r })
-                                : (0, i.jsx)(A.P, { disabled: !1, checked: r }),
+                            "radio" === s
+                                ? (0, i.jsx)(R.T, { disabled: !1, checked: l })
+                                : (0, i.jsx)(S.P, { disabled: !1, checked: l }),
                     }),
-                    (0, i.jsx)(l.E, {
-                        id: d,
+                    (0, i.jsx)(o.E, {
+                        id: u,
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: (0, i.jsx)("div", { dangerouslySetInnerHTML: { __html: n.Display } }),
@@ -104,64 +103,64 @@ function S(e) {
             }),
             c &&
                 (0, i.jsx)("div", {
-                    className: T.Vi,
-                    children: (0, i.jsx)(I.k, {
-                        value: o ?? "",
+                    className: C.Vi,
+                    children: (0, i.jsx)(O.k, {
+                        value: a ?? "",
                         onChange: function (e) {
-                            r || s(t), u?.(t, e);
+                            l || r(t), E?.(t, e);
                         },
-                        disabled: !r,
+                        disabled: !l,
                     }),
                 }),
         ],
     });
 }
-var y = n(880652),
-    C = n(225460);
-function N(e) {
-    let { question: t, questionId: n, value: r, onValueChange: s } = e,
-        { selectedChoice: a, textInputs: o } = (function (e) {
+var P = n(880652),
+    M = n(225460);
+function p(e) {
+    let { question: t, questionId: n, value: l, onValueChange: r } = e,
+        { selectedChoice: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoice: null, textInputs: {} };
             let t = e.split(":TEXT:", 2),
                 n = t[0],
                 i = {};
             return t.length > 1 && (i[n] = t[1]), { selectedChoice: n, textInputs: i };
-        })(r);
-    function u(e) {
-        let i = o[e];
+        })(l);
+    function E(e) {
+        let i = a[e];
         null == i || "" === i
-            ? s(n, e)
+            ? r(n, e)
             : null != t.Choices && t.Choices[e]?.TextEntry === "true"
-              ? s(n, `${e}:TEXT:${i}`)
-              : s(n, e);
+              ? r(n, `${e}:TEXT:${i}`)
+              : r(n, e);
     }
     function c(e, t) {
-        s(n, null != t && "" !== t ? `${e}:TEXT:${t}` : e);
+        r(n, null != t && "" !== t ? `${e}:TEXT:${t}` : e);
     }
     return null == t.Choices
         ? (0, i.jsx)("div", {
-              className: C.kL,
-              children: (0, i.jsx)(l.E, {
+              className: M.kL,
+              children: (0, i.jsx)(o.E, {
                   variant: "text-sm/medium",
-                  className: C.WN,
+                  className: M.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, i.jsx)("div", {
-              className: C.kL,
+              className: M.kL,
               children: (0, i.jsx)("div", {
-                  className: C.Me,
+                  className: M.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, i.jsx)(
-                          S,
+                          D,
                           {
                               choiceId: t,
                               choice: n,
-                              isSelected: a === t,
-                              onSelectionChange: u,
+                              isSelected: s === t,
+                              onSelectionChange: E,
                               inputType: "radio",
-                              textInputValue: o[t],
+                              textInputValue: a[t],
                               onTextInputChange: c,
                           },
                           t,
@@ -170,9 +169,9 @@ function N(e) {
               }),
           });
 }
-function v(e) {
-    let { question: t, questionId: n, value: r, onValueChange: s } = e,
-        { selectedChoices: a, textInputs: o } = (function (e) {
+function m(e) {
+    let { question: t, questionId: n, value: l, onValueChange: r } = e,
+        { selectedChoices: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoices: [], textInputs: {} };
             let t = e.split(","),
                 n = [],
@@ -180,13 +179,13 @@ function v(e) {
             return (
                 t.forEach((e) => {
                     let t = e.split(":TEXT:", 2),
-                        r = t[0];
-                    n.push(r), t.length > 1 && (i[r] = t[1]);
+                        l = t[0];
+                    n.push(l), t.length > 1 && (i[l] = t[1]);
                 }),
                 { selectedChoices: n, textInputs: i }
             );
-        })(r);
-    function u(e, t) {
+        })(l);
+    function E(e, t) {
         return e
             .map((e) => {
                 let n = t[e];
@@ -195,38 +194,38 @@ function v(e) {
             .join(",");
     }
     function c(e) {
-        let t = a.includes(e) ? a.filter((t) => t !== e) : [...a, e],
-            i = { ...o };
-        t.includes(e) || delete i[e], s(n, u(t, i));
+        let t = s.includes(e) ? s.filter((t) => t !== e) : [...s, e],
+            i = { ...a };
+        t.includes(e) || delete i[e], r(n, E(t, i));
     }
-    function d(e, t) {
-        s(n, u(a, { ...o, [e]: t }));
+    function u(e, t) {
+        r(n, E(s, { ...a, [e]: t }));
     }
     return null == t.Choices || 0 === Object.keys(t.Choices).length
         ? (0, i.jsx)("div", {
-              className: C.kL,
-              children: (0, i.jsx)(l.E, {
+              className: M.kL,
+              children: (0, i.jsx)(o.E, {
                   variant: "text-sm/medium",
-                  className: C.WN,
+                  className: M.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, i.jsx)("div", {
-              className: C.kL,
+              className: M.kL,
               children: (0, i.jsx)("div", {
-                  className: C.Me,
+                  className: M.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, i.jsx)(
-                          S,
+                          D,
                           {
                               choiceId: t,
                               choice: n,
-                              isSelected: a.includes(t),
+                              isSelected: s.includes(t),
                               onSelectionChange: c,
                               inputType: "checkbox",
-                              textInputValue: o[t],
-                              onTextInputChange: d,
+                              textInputValue: a[t],
+                              onTextInputChange: u,
                           },
                           t,
                       );
@@ -234,114 +233,114 @@ function v(e) {
               }),
           });
 }
-function R(e) {
-    let { question: t, questionId: n, value: r, onValueChange: s } = e;
-    return t.Selector === y.BO.SINGLE_ANSWER
-        ? (0, i.jsx)(N, { question: t, questionId: n, value: r, onValueChange: s })
-        : (0, i.jsx)(v, { question: t, questionId: n, value: r, onValueChange: s });
+function f(e) {
+    let { question: t, questionId: n, value: l, onValueChange: r } = e;
+    return t.Selector === P.BO.SINGLE_ANSWER
+        ? (0, i.jsx)(p, { question: t, questionId: n, value: l, onValueChange: r })
+        : (0, i.jsx)(m, { question: t, questionId: n, value: l, onValueChange: r });
 }
-var O = n(260598),
-    b = n(434122);
-function D(e) {
-    let { question: t, questionId: n, value: r, onValueChange: s } = e,
-        a = t.Selector !== y.BO.SINGLE_LINE;
+var U = n(260598),
+    g = n(434122);
+function h(e) {
+    let { question: t, questionId: n, value: l, onValueChange: r } = e,
+        s = t.Selector !== P.BO.SINGLE_LINE;
     return (0, i.jsx)("div", {
-        className: b.k,
-        children: a
-            ? (0, i.jsx)(O.f, { value: r, onChange: (e) => s(n, e), placeholder: "Enter your response...", rows: 4 })
-            : (0, i.jsx)(I.k, { value: r, onChange: (e) => s(n, e), placeholder: "Enter your response..." }),
+        className: g.k,
+        children: s
+            ? (0, i.jsx)(U.f, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response...", rows: 4 })
+            : (0, i.jsx)(O.k, { value: l, onChange: (e) => r(n, e), placeholder: "Enter your response..." }),
     });
 }
-var L = n(724368),
-    w = n(992595);
-function M(e) {
-    let { question: t, questionId: n, responses: r, onResponseChange: s } = e,
-        a = (function () {
+var k = n(724368),
+    y = n(992595);
+function L(e) {
+    let { question: t, questionId: n, responses: l, onResponseChange: r } = e,
+        s = (function () {
             switch (t.QuestionType) {
-                case y.SQ.TEXT_ENTRY:
-                    return (0, i.jsx)(D, { question: t, questionId: n, value: r[n] ?? "", onValueChange: s });
-                case y.SQ.MULTIPLE_CHOICE:
-                    return (0, i.jsx)(R, { question: t, questionId: n, value: r[n] ?? "", onValueChange: s });
-                case y.SQ.DESCRIPTIVE_BLOCK:
+                case P.SQ.TEXT_ENTRY:
+                    return (0, i.jsx)(h, { question: t, questionId: n, value: l[n] ?? "", onValueChange: r });
+                case P.SQ.MULTIPLE_CHOICE:
+                    return (0, i.jsx)(f, { question: t, questionId: n, value: l[n] ?? "", onValueChange: r });
+                case P.SQ.DESCRIPTIVE_BLOCK:
                     return (0, i.jsx)("div", {});
                 default:
                     return null;
             }
         })();
-    return null == a
+    return null == s
         ? null
         : (0, i.jsxs)("div", {
-              className: E()(w.PT, L.k),
+              className: I()(y.PT, k.k),
               children: [
-                  (0, i.jsx)(l.E, {
+                  (0, i.jsx)(o.E, {
                       variant: "text-lg/normal",
                       color: "text-strong",
                       children: (0, i.jsx)("div", { dangerouslySetInnerHTML: { __html: t.QuestionText_Unsafe ?? "" } }),
                   }),
-                  a,
+                  s,
               ],
           });
 }
-var P = n(375708),
-    x = n(772954);
-function k(e) {
-    let { surveyId: t, survey: n, onClose: a, transitionState: d } = e,
-        { getSurveyResponses: p, setResponse: E, trackDisplayedQuestions: m } = (0, c.i)(),
-        g = p(t),
-        A = (function (e) {
-            for (let t of h(e)) {
-                let n = f(e.Blocks[t]);
+var x = n(375708),
+    G = n(772954);
+function j(e) {
+    let { surveyId: t, survey: n, onClose: s, transitionState: u } = e,
+        { getSurveyResponses: T, setResponse: I, trackDisplayedQuestions: N } = (0, c.i)(),
+        R = T(t),
+        S = (function (e) {
+            for (let t of A(e)) {
+                let n = d(e.Blocks[t]);
                 if (n.length > 0 && n[0].length > 0)
                     return { blockId: t, pageIndex: 0, questionIds: n[0], isComplete: !1 };
             }
             return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
         })(n),
-        [I, T] = r.useState(A.blockId),
-        [S, y] = r.useState(A.pageIndex),
-        [C, N] = r.useState(!1);
-    function v(e, n) {
-        E(t, e, n);
+        [O, C] = l.useState(S.blockId),
+        [D, P] = l.useState(S.pageIndex),
+        [M, p] = l.useState(!1);
+    function m(e, n) {
+        I(t, e, n);
     }
-    let R = r.useCallback(
+    let f = l.useCallback(
             () => (
-                C
-                    ? a()
-                    : (0, o.openModal)((e) =>
-                          (0, i.jsx)(s.Modal, {
-                              title: P.intl.string(P.t.T9Sx3z),
+                M
+                    ? s()
+                    : (0, a.openModal)((e) =>
+                          (0, i.jsx)(r.Modal, {
+                              title: x.intl.string(x.t.T9Sx3z),
                               actions: [
-                                  { variant: "secondary", text: P.intl.string(P.t.oEAioF), onClick: e.onClose },
+                                  { variant: "secondary", text: x.intl.string(x.t.oEAioF), onClick: e.onClose },
                                   {
                                       variant: "critical-primary",
-                                      text: P.intl.string(P.t.p89ACt),
+                                      text: x.intl.string(x.t.p89ACt),
                                       onClick: () => {
-                                          e.onClose(), a();
+                                          e.onClose(), s();
                                       },
                                   },
                               ],
                               ...e,
-                              children: (0, i.jsx)(l.E, {
+                              children: (0, i.jsx)(o.E, {
                                   variant: "text-md/normal",
-                                  children: P.intl.string(P.t.iCK6G0),
+                                  children: x.intl.string(x.t.iCK6G0),
                               }),
                           }),
                       ),
                 Promise.resolve()
             ),
-            [a, C],
+            [s, M],
         ),
-        O = r.useMemo(
+        U = l.useMemo(
             () =>
-                null == I
+                null == O
                     ? []
                     : (function (e, t) {
-                          let { blockId: n, pageIndex: i, responses: r } = t,
-                              s = e.Blocks[n];
-                          if (null == s) return [];
-                          let a = f(s);
-                          return i >= a.length
+                          let { blockId: n, pageIndex: i, responses: l } = t,
+                              r = e.Blocks[n];
+                          if (null == r) return [];
+                          let s = d(r);
+                          return i >= s.length
                               ? []
-                              : a[i].filter((t) =>
+                              : s[i].filter((t) =>
                                     (function (e, t) {
                                         if (null == e.DisplayLogic) return !0;
                                         let { DisplayLogic: n } = e;
@@ -361,13 +360,13 @@ function k(e) {
                                                                 if (0 === n.length) return !0;
                                                                 let i = _(n[0], t);
                                                                 for (let e = 1; e < n.length; e++) {
-                                                                    let r = n[e],
-                                                                        s = _(r, t);
+                                                                    let l = n[e],
+                                                                        r = _(l, t);
                                                                     i =
                                                                         "Or" ===
-                                                                        (r.Conjuction ?? r.Conjunction ?? "And")
-                                                                            ? i || s
-                                                                            : i && s;
+                                                                        (l.Conjuction ?? l.Conjunction ?? "And")
+                                                                            ? i || r
+                                                                            : i && r;
                                                                 }
                                                                 return i;
                                                             })(i, t)
@@ -381,25 +380,25 @@ function k(e) {
                                                 }
                                             }
                                         return !1;
-                                    })(e.Questions[t], r),
+                                    })(e.Questions[t], l),
                                 );
-                      })(n, { blockId: I, pageIndex: S, responses: g }),
-            [n, I, S, g],
+                      })(n, { blockId: O, pageIndex: D, responses: R }),
+            [n, O, D, R],
         ),
-        b = r.useCallback(() => {
-            if (null == n || null == I) return;
+        g = l.useCallback(() => {
+            if (null == n || null == O) return;
             let e = (function (e, t) {
-                let { blockId: n, pageIndex: i, responses: r } = t,
-                    s = h(e),
-                    a = e.Blocks[n];
-                if (null == a) return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
-                let o = f(a),
-                    l = o[i];
-                if (null != l && l.length > 0)
-                    for (let t = l.length - 1; t >= 0; t--) {
-                        let n = l[t];
-                        if (null != e.Questions[n] && null != r[n]) {
-                            let t = a.BlockElements.find((e) => e.QuestionID === n);
+                let { blockId: n, pageIndex: i, responses: l } = t,
+                    r = A(e),
+                    s = e.Blocks[n];
+                if (null == s) return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
+                let a = d(s),
+                    o = a[i];
+                if (null != o && o.length > 0)
+                    for (let t = o.length - 1; t >= 0; t--) {
+                        let n = o[t];
+                        if (null != e.Questions[n] && null != l[n]) {
+                            let t = s.BlockElements.find((e) => e.QuestionID === n);
                             if (null != t) {
                                 let n = (function (e, t) {
                                     if (null == e.SkipLogic || 0 === e.SkipLogic.length) return null;
@@ -407,58 +406,58 @@ function k(e) {
                                         let {
                                                 QuestionID: e,
                                                 Condition: i,
-                                                Value: r,
-                                                SkipToDestination: s,
-                                                ChoiceLocator: a,
+                                                Value: l,
+                                                SkipToDestination: r,
+                                                ChoiceLocator: s,
                                             } = n,
-                                            o = t[e];
-                                        if (null == o || "" === o) continue;
-                                        let l = a?.match(/SelectableChoice\/(\d+)/),
-                                            u = l?.[1],
+                                            a = t[e];
+                                        if (null == a || "" === a) continue;
+                                        let o = s?.match(/SelectableChoice\/(\d+)/),
+                                            E = o?.[1],
                                             c = !1;
                                         switch (i) {
                                             case "Selected":
-                                                c = null != u && o.split(",").includes(u);
+                                                c = null != E && a.split(",").includes(E);
                                                 break;
                                             case "NotSelected":
-                                                c = null != u && !o.split(",").includes(u);
+                                                c = null != E && !a.split(",").includes(E);
                                                 break;
                                             case "EqualTo":
-                                                c = o === r?.toString();
+                                                c = a === l?.toString();
                                                 break;
                                             case "NotEqualTo":
-                                                c = o !== r?.toString();
+                                                c = a !== l?.toString();
                                                 break;
                                             case "GreaterThan":
-                                                c = Number(o) > Number(r ?? 0);
+                                                c = Number(a) > Number(l ?? 0);
                                                 break;
                                             case "LessThan":
-                                                c = Number(o) < Number(r ?? 0);
+                                                c = Number(a) < Number(l ?? 0);
                                                 break;
                                             case "GreaterThanOrEqualTo":
-                                                c = Number(o) >= Number(r ?? 0);
+                                                c = Number(a) >= Number(l ?? 0);
                                                 break;
                                             case "LessThanOrEqualTo":
-                                                c = Number(o) <= Number(r ?? 0);
+                                                c = Number(a) <= Number(l ?? 0);
                                                 break;
                                             case "Contains":
-                                                c = o.includes(r?.toString() ?? "");
+                                                c = a.includes(l?.toString() ?? "");
                                                 break;
                                             case "DoesNotContain":
-                                                c = !o.includes(r?.toString() ?? "");
+                                                c = !a.includes(l?.toString() ?? "");
                                         }
                                         if (c) {
-                                            if ("ENDOFSURVEY" === s?.trim().toUpperCase()) return "ENDOFSURVEY";
-                                            return s;
+                                            if ("ENDOFSURVEY" === r?.trim().toUpperCase()) return "ENDOFSURVEY";
+                                            return r;
                                         }
                                     }
                                     return null;
-                                })(t, r);
+                                })(t, l);
                                 if ("ENDOFSURVEY" === n)
                                     return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
                                 if (null != n)
-                                    for (let t of s) {
-                                        let i = f(e.Blocks[t]);
+                                    for (let t of r) {
+                                        let i = d(e.Blocks[t]);
                                         for (let e = 0; e < i.length; e++)
                                             if (i[e].includes(n))
                                                 return { blockId: t, pageIndex: e, questionIds: i[e], isComplete: !1 };
@@ -466,64 +465,64 @@ function k(e) {
                             }
                         }
                     }
-                if (i + 1 < o.length) return { blockId: n, pageIndex: i + 1, questionIds: o[i + 1], isComplete: !1 };
-                let u = s.indexOf(n);
-                for (let t = u + 1; t < s.length; t++) {
-                    let n = s[t],
-                        i = f(e.Blocks[n]);
+                if (i + 1 < a.length) return { blockId: n, pageIndex: i + 1, questionIds: a[i + 1], isComplete: !1 };
+                let E = r.indexOf(n);
+                for (let t = E + 1; t < r.length; t++) {
+                    let n = r[t],
+                        i = d(e.Blocks[n]);
                     if (i.length > 0 && i[0].length > 0)
                         return { blockId: n, pageIndex: 0, questionIds: i[0], isComplete: !1 };
                 }
                 return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
-            })(n, { blockId: I, pageIndex: S, responses: g });
-            m(t, O), e.isComplete && u.Ay.submitSurveyResponse(t, g), T(e.blockId), y(e.pageIndex), N(e.isComplete);
-        }, [n, I, S, g, t, O, m]);
-    r.useEffect(() => {
-        0 === O.length && b();
-    }, [O, b]);
-    let D = r.useMemo(() => {
-        if (C) return !1;
-        for (let e of O) {
+            })(n, { blockId: O, pageIndex: D, responses: R });
+            N(t, U), e.isComplete && E.Ay.submitSurveyResponse(t, R), C(e.blockId), P(e.pageIndex), p(e.isComplete);
+        }, [n, O, D, R, t, U, N]);
+    l.useEffect(() => {
+        0 === U.length && g();
+    }, [U, g]);
+    let h = l.useMemo(() => {
+        if (M) return !1;
+        for (let e of U) {
             let t = n.Questions[e];
             if (t?.Validation?.Settings?.ForceResponse === "ON") {
-                let t = g[e];
+                let t = R[e];
                 if (null == t || "" === t.trim()) return !1;
             }
         }
         return !0;
-    }, [C, O, n, g]);
-    return C
-        ? (0, i.jsxs)(s.Modal, {
-              transitionState: d,
-              onClose: a,
+    }, [M, U, n, R]);
+    return M
+        ? (0, i.jsxs)(r.Modal, {
+              transitionState: u,
+              onClose: s,
               size: "md",
-              title: P.intl.string(P.t.OSqLUF),
-              actions: [{ variant: "primary", text: P.intl.string(P.t.i4jeWR), onClick: a }],
+              title: x.intl.string(x.t.OSqLUF),
+              actions: [{ variant: "primary", text: x.intl.string(x.t.i4jeWR), onClick: s }],
               children: [
-                  (0, i.jsx)(l.E, { variant: "text-md/normal", children: P.intl.string(P.t["2scvdw"]) }),
-                  (0, i.jsx)(l.E, { variant: "text-md/normal", children: P.intl.string(P.t.chZxOD) }),
+                  (0, i.jsx)(o.E, { variant: "text-md/normal", children: x.intl.string(x.t["2scvdw"]) }),
+                  (0, i.jsx)(o.E, { variant: "text-md/normal", children: x.intl.string(x.t.chZxOD) }),
               ],
           })
-        : (0, i.jsx)(s.Modal, {
-              transitionState: d,
-              onClose: R,
-              title: P.intl.string(P.t.OSqLUF),
+        : (0, i.jsx)(r.Modal, {
+              transitionState: u,
+              onClose: f,
+              title: x.intl.string(x.t.OSqLUF),
               size: "md",
-              actions: [{ variant: "primary", text: P.intl.string(P.t.PDTjLN), onClick: b, disabled: !D }],
+              actions: [{ variant: "primary", text: x.intl.string(x.t.PDTjLN), onClick: g, disabled: !h }],
               children: (0, i.jsx)("div", {
                   style: { width: "100%" },
                   children:
-                      0 === O.length
+                      0 === U.length
                           ? null
                           : (0, i.jsx)("div", {
-                                className: x.Qs,
-                                children: O.map((e) => {
+                                className: G.Qs,
+                                children: U.map((e) => {
                                     let t = n.Questions[e];
                                     return null == t
                                         ? null
                                         : (0, i.jsx)(
-                                              M,
-                                              { question: t, questionId: e, responses: g, onResponseChange: v },
+                                              L,
+                                              { question: t, questionId: e, responses: R, onResponseChange: m },
                                               e,
                                           );
                                 }),
@@ -531,10 +530,10 @@ function k(e) {
               }),
           });
 }
-async function U(e) {
-    null != (await u.Ay.fetchSurveyDetails(e)) &&
+async function q(e) {
+    null != (await E.Ay.fetchSurveyDetails(e)) &&
         (c.i.getState().clearSurveyResponses(e),
-        (0, o.openModalLazy)(
+        (0, a.openModalLazy)(
             async () => {
                 let { default: t } = await Promise.resolve().then(n.bind(n, 378974));
                 return (n) => (0, i.jsx)(t, { ...n, surveyId: e });
@@ -542,10 +541,10 @@ async function U(e) {
             { onCloseRequest: () => {} },
         ));
 }
-function G(e) {
-    let { surveyId: t, onClose: n, transitionState: r } = e,
-        s = (0, a.bG)([d.A], () => d.A.getSurvey(t));
-    return null == s
-        ? (0, i.jsx)(l.E, { variant: "text-md/medium", className: x.Lq, children: P.intl.string(P.t.MKDeyL) })
-        : (0, i.jsx)(k, { surveyId: t, survey: s, onClose: n, transitionState: r });
+function v(e) {
+    let { surveyId: t, onClose: n, transitionState: l } = e,
+        r = (0, s.bG)([u.A], () => u.A.getSurvey(t));
+    return null == r
+        ? (0, i.jsx)(o.E, { variant: "text-md/medium", className: G.Lq, children: x.intl.string(x.t.MKDeyL) })
+        : (0, i.jsx)(j, { surveyId: t, survey: r, onClose: n, transitionState: l });
 }

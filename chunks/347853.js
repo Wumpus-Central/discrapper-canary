@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => o, D: () => l });
+n.d(t, { A: () => r, D: () => o });
 var i = n(627968);
 n(64700);
-var r = n(192308),
-    s = n(228366),
+var s = n(192308),
+    l = n(228366),
     a = n(573879);
-function o() {
-    (0, r.openModalLazy)(
+function r() {
+    (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e("16946"), n.e("84739"), n.e("79582"), n.e("28386")]).then(
                 n.bind(n, 845542),
@@ -15,19 +14,19 @@ function o() {
         },
         {
             onCloseCallback: () => {
-                s.h.dispatch({ type: "LOGIN_RESET", isMultiAccount: !0 });
+                l.h.dispatch({ type: "LOGIN_RESET", isMultiAccount: !0 });
             },
             modalKey: a.ov,
         },
     );
 }
-function l() {
-    (0, r.openModalLazy)(
+function o() {
+    (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 n.e("32048"),
                 n.e("56643"),
-                n.e("85899"),
+                n.e("91059"),
                 n.e("80963"),
                 n.e("25291"),
                 n.e("8979"),
@@ -38,11 +37,11 @@ function l() {
                 n.e("75080"),
                 n.e("1490"),
             ]).then(n.bind(n, 365225));
-            return (t) => (0, i.jsx)(e, { ...t, onBackPressed: o });
+            return (t) => (0, i.jsx)(e, { ...t, onBackPressed: r });
         },
         {
             onCloseCallback: () => {
-                s.h.dispatch({ type: "LOGIN_RESET", isMultiAccount: !0 });
+                l.h.dispatch({ type: "LOGIN_RESET", isMultiAccount: !0 });
             },
             modalKey: a.Gl,
         },

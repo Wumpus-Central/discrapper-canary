@@ -1,77 +1,76 @@
-"use strict";
-n.d(t, { Be: () => l, aU: () => a, fO: () => o, vK: () => u });
-var i = n(627968);
-n(64700);
-var r = n(192308),
-    s = n(530912);
-let a = "forward-modal";
-function o(e) {
+a.d(n, { Be: () => o, aU: () => d, fO: () => _, vK: () => c });
+var t = a(627968);
+a(64700);
+var s = a(192308),
+    i = a(530912);
+let d = "forward-modal";
+function _(e) {
     let {
-        message: t,
-        source: o,
-        initialSelectedDestinations: l = [],
-        forwardOptions: u,
-        onRequestSent: c,
-        customSendHandler: d,
+        message: n,
+        source: _,
+        initialSelectedDestinations: o = [],
+        forwardOptions: c,
+        onRequestSent: r,
+        customSendHandler: u,
     } = e;
-    (0, s.pp)(t.channel_id, t.id, o),
-        (0, r.openModalLazy)(
+    (0, i.pp)(n.channel_id, n.id, _),
+        (0, s.openModalLazy)(
             async () => {
                 let { ForwardModal: e } = await Promise.all([
-                    n.e("62279"),
-                    n.e("44667"),
-                    n.e("37634"),
-                    n.e("42157"),
-                    n.e("78910"),
-                    n.e("94635"),
-                    n.e("43880"),
-                    n.e("81647"),
-                    n.e("76602"),
-                    n.e("40402"),
-                    n.e("67861"),
-                    n.e("1518"),
-                    n.e("23354"),
-                    n.e("18997"),
-                    n.e("44780"),
-                    n.e("65617"),
-                    n.e("36946"),
-                    n.e("92639"),
-                    n.e("44385"),
-                    n.e("40963"),
-                    n.e("90480"),
-                    n.e("66031"),
-                    n.e("94317"),
-                    n.e("23601"),
-                ]).then(n.bind(n, 953832));
-                return (n) =>
-                    (0, i.jsx)(e, {
-                        ...n,
-                        message: t,
-                        initialSelectedDestinations: l,
-                        forwardOptions: u,
-                        onRequestSent: c,
-                        customSendHandler: d,
-                        source: o,
+                    a.e("62279"),
+                    a.e("67454"),
+                    a.e("37634"),
+                    a.e("42157"),
+                    a.e("16747"),
+                    a.e("94635"),
+                    a.e("43880"),
+                    a.e("81647"),
+                    a.e("76602"),
+                    a.e("40402"),
+                    a.e("67861"),
+                    a.e("1518"),
+                    a.e("23354"),
+                    a.e("44780"),
+                    a.e("18997"),
+                    a.e("65617"),
+                    a.e("36946"),
+                    a.e("92639"),
+                    a.e("44385"),
+                    a.e("40963"),
+                    a.e("90480"),
+                    a.e("66031"),
+                    a.e("94317"),
+                    a.e("23601"),
+                ]).then(a.bind(a, 953832));
+                return (a) =>
+                    (0, t.jsx)(e, {
+                        ...a,
+                        message: n,
+                        initialSelectedDestinations: o,
+                        forwardOptions: c,
+                        onRequestSent: r,
+                        customSendHandler: u,
+                        source: _,
                     });
             },
-            { modalKey: a },
+            { modalKey: d },
         );
 }
-function l() {
-    (0, r.closeModal)(a);
+function o() {
+    (0, s.closeModal)(d);
 }
-function u(e) {
-    let { message: t, failedDestinations: s, forwardOptions: a } = e;
-    (0, r.openModalLazy)(async () => {
+function c(e) {
+    let { message: n, failedDestinations: i, forwardOptions: d } = e;
+    (0, s.openModalLazy)(async () => {
         let { ForwardFailedAlertModal: e } = await Promise.all([
-            n.e("78910"),
-            n.e("94635"),
-            n.e("40556"),
-            n.e("65617"),
-            n.e("92639"),
-            n.e("44385"),
-            n.e("66139"),
-        ]).then(n.bind(n, 181622));
-        return (n) => (0, i.jsx)(e, { ...n, message: t, failedDestinations: s, forwardOptions: a });
+            a.e("16747"),
+            a.e("94635"),
+            a.e("40556"),
+            a.e("65617"),
+            a.e("92639"),
+            a.e("44385"),
+            a.e("66139"),
+        ]).then(a.bind(a, 181622));
+        return (a) => (0, t.jsx)(e, { ...a, message: n, failedDestinations: i, forwardOptions: d });
     });
 }

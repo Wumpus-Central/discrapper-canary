@@ -1,217 +1,216 @@
-"use strict";
-n.d(t, { default: () => P });
-var i = n(627968),
-    r = n(64700),
-    s = n(835245),
-    a = n(772707),
-    o = n(834730),
-    l = n(123292),
-    u = n(331322),
-    c = n(885574),
-    d = n(821609),
-    _ = n(632738),
-    h = n(627575),
-    f = n(393033),
-    p = n(975571),
-    E = n(139716),
-    m = n(847599),
-    g = n(295972),
-    A = n(36149),
-    I = n(731738),
-    T = n(17928),
-    S = n(807393),
-    y = n(787301);
-let C = (0, n(945810).mj)({
+i.d(e, { default: () => j });
+var n = i(627968),
+    l = i(64700),
+    r = i(835245),
+    a = i(772707),
+    o = i(834730),
+    s = i(123292),
+    E = i(331322),
+    c = i(885574),
+    d = i(821609),
+    u = i(632738),
+    _ = i(627575),
+    m = i(393033),
+    A = i(975571),
+    g = i(379257),
+    f = i(847599),
+    L = i(295972),
+    R = i(36149),
+    S = i(731738),
+    h = i(17928),
+    p = i(807393),
+    x = i(787301);
+let O = (0, i(945810).mj)({
     kind: "user",
     name: "2026-03-age-verification-google-wallet",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var N = n(40449),
-    v = n(375708);
-let R = function (e) {
-    let { onClose: t, classificationId: n, onGoogleWalletSelect: i } = e,
-        { methods: s, loading: a } = (0, T.cf)([y.A], () => ({ methods: y.A.methods, loading: y.A.loading })),
-        { initiateAgeVerification: o } = (0, A.nn)({
-            onComplete: t,
-            entryPoint: m.q1.EXPRESSIVE_GET_STARTED,
+var v = i(40449),
+    P = i(375708);
+let T = function (t) {
+    let { onClose: e, classificationId: i, onGoogleWalletSelect: n } = t,
+        { methods: r, loading: a } = (0, h.cf)([x.A], () => ({ methods: x.A.methods, loading: x.A.loading })),
+        { initiateAgeVerification: o } = (0, R.nn)({
+            onComplete: e,
+            entryPoint: f.q1.EXPRESSIVE_GET_STARTED,
             shouldShowExpressiveModal: !0,
-            classificationId: n,
+            classificationId: i,
         }),
-        [l, u] = r.useState(!1);
+        [s, E] = l.useState(!1);
     return (
-        r.useEffect(() => {
-            let e = !1;
+        l.useEffect(() => {
+            let t = !1;
             return (
-                Promise.resolve(!1).then((t) => {
-                    !e &&
-                        (S.A.increment({ name: I.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${t}`] }),
-                        u(t && C.getConfig({ location: "age_verification_methods" }).enabled));
+                Promise.resolve(!1).then((e) => {
+                    !t &&
+                        (p.A.increment({ name: S.K.GOOGLE_WALLET_AVAILABILITY_CHECK, tags: [`available:${e}`] }),
+                        E(e && O.getConfig({ location: "age_verification_methods" }).enabled));
                 }),
                 () => {
-                    e = !0;
+                    t = !0;
                 }
             );
         }, []),
-        r.useEffect(() => {
-            null == s && (0, g.DJ)();
-        }, [s]),
+        l.useEffect(() => {
+            null == r && (0, L.DJ)();
+        }, [r]),
         {
-            ageVerificationMethods: r.useMemo(() => {
-                let e =
-                    s
-                        ?.filter((e) => e !== N.VF.GOOGLE_WALLET)
-                        .map((e) => {
-                            let t = N.uv[e];
-                            if (null == t) return null;
-                            let { title: n, description: i } = t;
+            ageVerificationMethods: l.useMemo(() => {
+                let t =
+                    r
+                        ?.filter((t) => t !== v.VF.GOOGLE_WALLET)
+                        .map((t) => {
+                            let e = v.uv[t];
+                            if (null == e) return null;
+                            let { title: i, description: n } = e;
                             return {
-                                id: e,
-                                title: v.intl.string(n),
-                                description: v.intl.string(i),
-                                onClick: async (t) => {
-                                    (0, m.St)(t, m.WU.EXPRESSIVE_PRIMARY, m._7.METHOD_SELECT, e), await o(e);
+                                id: t,
+                                title: P.intl.string(i),
+                                description: P.intl.string(n),
+                                onClick: async (e) => {
+                                    (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, t), await o(t);
                                 },
                             };
                         })
-                        .filter((e) => null != e) ?? [];
-                if (l && null != i) {
-                    let t = N.uv[N.VF.GOOGLE_WALLET];
-                    if (null != t)
+                        .filter((t) => null != t) ?? [];
+                if (s && null != n) {
+                    let e = v.uv[v.VF.GOOGLE_WALLET];
+                    if (null != e)
                         return [
-                            ...e,
+                            ...t,
                             {
-                                id: N.VF.GOOGLE_WALLET,
-                                title: v.intl.string(t.title),
-                                description: v.intl.string(t.description),
-                                onClick: (e) => {
-                                    S.A.increment({ name: I.K.GOOGLE_WALLET_METHOD_SELECTED }),
-                                        (0, m.St)(e, m.WU.EXPRESSIVE_PRIMARY, m._7.METHOD_SELECT, N.VF.GOOGLE_WALLET),
-                                        i();
+                                id: v.VF.GOOGLE_WALLET,
+                                title: P.intl.string(e.title),
+                                description: P.intl.string(e.description),
+                                onClick: (t) => {
+                                    p.A.increment({ name: S.K.GOOGLE_WALLET_METHOD_SELECTED }),
+                                        (0, f.St)(t, f.WU.EXPRESSIVE_PRIMARY, f._7.METHOD_SELECT, v.VF.GOOGLE_WALLET),
+                                        n();
                                 },
                             },
                         ];
                 }
-                return e;
-            }, [s, l, i, o]),
+                return t;
+            }, [r, s, n, o]),
             loading: a,
         }
     );
 };
-var O = n(652215),
-    b = n(239093),
-    D = n(516761),
-    L = n(548416),
-    w = n(700129);
-function M(e) {
-    let { modalSessionId: t, entryPoint: n } = e;
-    return (0, f.W$)()
-        ? (0, i.jsx)(o.E, {
+var I = i(652215),
+    C = i(239093),
+    M = i(516761),
+    W = i(548416),
+    G = i(700129);
+function b(t) {
+    let { modalSessionId: e, entryPoint: i } = t;
+    return (0, m.W$)()
+        ? (0, n.jsx)(o.E, {
               variant: "text-xs/medium",
-              children: v.intl.format(D.default.htWh1G, {
+              children: P.intl.format(M.default.htWh1G, {
                   handleOnHelpUrlHook: () => {
-                      E.A.openUrl(b.d$.LEARN_MORE_UU_APPEAL_LINK),
-                          (0, m.St)(t, m.WU.EXPRESSIVE_PRIMARY, m._7.LEARN_MORE);
+                      g.A.openUrl(C.d$.LEARN_MORE_UU_APPEAL_LINK),
+                          (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE);
                   },
               }),
           })
-        : n === m.q1.SAFETY_FLOWS
-          ? (0, i.jsx)(l.Q, {
+        : i === f.q1.SAFETY_FLOWS
+          ? (0, n.jsx)(s.Q, {
                 size: "sm",
                 textVariant: "text-sm/medium",
-                text: v.intl.string(v.t["2jxGer"]),
+                text: P.intl.string(P.t["2jxGer"]),
                 onClick: () => {
-                    (0, m.St)(t, m.WU.EXPRESSIVE_PRIMARY, m._7.LOG_OUT), (0, h.k)("age_verification_get_started_modal");
+                    (0, f.St)(e, f.WU.EXPRESSIVE_PRIMARY, f._7.LOG_OUT), (0, _.k)("age_verification_get_started_modal");
                 },
             })
           : null;
 }
-let P = function (e) {
-    let { transitionState: t, entryPoint: n, onClose: l, onComplete: h, dismissable: I, classificationId: T } = e,
-        S = r.useMemo(() => (0, s.A)(), []),
-        y = (0, f.W$)(),
-        { loading: C, ageVerificationMethods: N } = R({
+let j = function (t) {
+    let { transitionState: e, entryPoint: i, onClose: s, onComplete: _, dismissable: S, classificationId: h } = t,
+        p = l.useMemo(() => (0, r.A)(), []),
+        x = (0, m.W$)(),
+        { loading: O, ageVerificationMethods: v } = T({
             onClose: () => {
-                h?.(), l();
+                _?.(), s();
             },
-            classificationId: T,
+            classificationId: h,
         });
     return (
-        r.useEffect(() => {
-            (0, m.Bs)(S, m.WU.EXPRESSIVE_PRIMARY, n);
-        }, [S, n]),
-        (0, i.jsx)(a.k, {
-            transitionState: t,
-            onClose: l,
+        l.useEffect(() => {
+            (0, f.Bs)(p, f.WU.EXPRESSIVE_PRIMARY, i);
+        }, [p, i]),
+        (0, n.jsx)(a.k, {
+            transitionState: e,
+            onClose: s,
             gradientColor: "blue",
-            dismissable: I,
-            graphic: { type: "image", src: w.A },
-            title: (0, A.ST)(n),
-            subtitle: (0, A.mK)(
-                n,
+            dismissable: S,
+            graphic: { type: "image", src: G.A },
+            title: (0, R.ST)(i),
+            subtitle: (0, R.mK)(
+                i,
                 () => {
-                    E.A.openUrl(p.A.getArticleURL(O.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                        (0, m.St)(S, m.WU.EXPRESSIVE_PRIMARY, m._7.LEARN_MORE);
+                    g.A.openUrl(A.A.getArticleURL(I.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                        (0, f.St)(p, f.WU.EXPRESSIVE_PRIMARY, f._7.LEARN_MORE);
                 },
-                y,
+                x,
             ),
-            actionBarInput: (0, i.jsx)(M, { modalSessionId: S, entryPoint: n }),
-            children: (0, i.jsxs)(u.B, {
+            actionBarInput: (0, n.jsx)(b, { modalSessionId: p, entryPoint: i }),
+            children: (0, n.jsxs)(E.B, {
                 direction: "vertical",
                 gap: 16,
                 children: [
-                    (0, i.jsxs)(u.B, {
+                    (0, n.jsxs)(E.B, {
                         fullWidth: !1,
                         direction: "horizontal",
                         gap: 8,
                         padding: { top: 8, bottom: 8, left: 12, right: 12 },
                         align: "center",
-                        className: L.W,
+                        className: W.W,
                         children: [
-                            (0, i.jsx)(c.m, { size: "lg", color: "currentColor" }),
-                            (0, i.jsx)(o.E, {
+                            (0, n.jsx)(c.m, { size: "lg", color: "currentColor" }),
+                            (0, n.jsx)(o.E, {
                                 variant: "text-sm/medium",
                                 color: "text-feedback-info",
-                                children: v.intl.string(D.default.ar3a3q),
+                                children: P.intl.string(M.default.ar3a3q),
                             }),
                         ],
                     }),
-                    null == N || 0 === N.length
-                        ? (0, i.jsxs)(u.B, {
+                    null == v || 0 === v.length
+                        ? (0, n.jsxs)(E.B, {
                               direction: "vertical",
                               align: "center",
                               gap: 16,
                               children: [
-                                  (0, i.jsx)(o.E, {
+                                  (0, n.jsx)(o.E, {
                                       variant: "text-xs/medium",
                                       color: "text-subtle",
-                                      children: v.intl.string(D.default.cR6336),
+                                      children: P.intl.string(M.default.cR6336),
                                   }),
-                                  (0, i.jsx)(d.$, {
+                                  (0, n.jsx)(d.$, {
                                       variant: "primary",
                                       size: "sm",
-                                      text: v.intl.string(D.default.hDvmYP),
+                                      text: P.intl.string(M.default.hDvmYP),
                                       onClick: () => {
-                                          (0, g.DJ)();
+                                          (0, L.DJ)();
                                       },
                                   }),
                               ],
                           })
-                        : (0, i.jsx)(u.B, {
+                        : (0, n.jsx)(E.B, {
                               direction: "vertical",
                               gap: 8,
-                              children: N.map((e) => {
-                                  let { title: t, description: n, onClick: r } = e;
-                                  return (0, i.jsx)(
-                                      _.PQ,
+                              children: v.map((t) => {
+                                  let { title: e, description: i, onClick: l } = t;
+                                  return (0, n.jsx)(
+                                      u.PQ,
                                       {
                                           variant: "clickable",
-                                          title: t,
-                                          description: n,
-                                          buttonDisabled: C,
-                                          onButtonPress: () => r(S),
+                                          title: e,
+                                          description: i,
+                                          buttonDisabled: O,
+                                          onButtonPress: () => l(p),
                                       },
-                                      t,
+                                      e,
                                   );
                               }),
                           }),

@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { A: () => h, Q: () => _ });
-var i = n(627968);
-n(64700);
-var r = n(3026),
-    s = n(939249),
-    a = n(534514),
-    o = n(834730),
-    l = n(939496),
-    u = n(996988),
-    c = n(726342);
-function d(e) {
-    let { text: t, onClick: n, component: a, ...o } = e,
-        { themeType: d } = (0, l.E)(),
-        _ = "string" == typeof t ? t.trim() : t;
-    if (null == _ || "" === _) return null;
-    let h = () =>
-        d === u.d.MODAL || d === u.d.MODAL_V2
-            ? (0, i.jsx)(a, { color: "text-default", ...o, children: _ })
-            : (0, i.jsx)(a, { color: "text-default", ...o, children: (0, i.jsx)(r.A, { children: _ }) });
-    return null != n
-        ? (0, i.jsx)(s.D, {
-              onClick: (e) => {
-                  e.stopPropagation(), n(e);
+e.d(n, { A: () => x, Q: () => A });
+var i = e(627968);
+e(64700);
+var l = e(3026),
+    a = e(939249),
+    r = e(534514),
+    s = e(834730),
+    o = e(939496),
+    c = e(996988),
+    u = e(514566);
+function d(t) {
+    let { text: n, onClick: e, component: r, ...s } = t,
+        { themeType: d } = (0, o.E)(),
+        A = "string" == typeof n ? n.trim() : n;
+    if (null == A || "" === A) return null;
+    let x = () =>
+        d === c.d.MODAL || d === c.d.MODAL_V2
+            ? (0, i.jsx)(r, { color: "text-default", ...s, children: A })
+            : (0, i.jsx)(r, { color: "text-default", ...s, children: (0, i.jsx)(l.A, { children: A }) });
+    return null != e
+        ? (0, i.jsx)(a.D, {
+              onClick: (t) => {
+                  t.stopPropagation(), e(t);
               },
-              className: c.sd,
-              children: h(),
+              className: u.sd,
+              children: x(),
           })
-        : h();
+        : x();
 }
-function _(e) {
-    return (0, i.jsx)(d, { component: a.D, ...e });
+function A(t) {
+    return (0, i.jsx)(d, { component: r.D, ...t });
 }
-function h(e) {
-    return (0, i.jsx)(d, { component: o.E, ...e });
+function x(t) {
+    return (0, i.jsx)(d, { component: s.E, ...t });
 }

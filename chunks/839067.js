@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { A: () => o });
 var i = n(17928),
-    r = n(228366);
+    l = n(228366);
 let s = null;
-class a extends i.Ay.Store {
+class r extends i.Ay.Store {
     static displayName = "ApplicationStoreLocationStore";
     getCurrentPath() {
         return null != s ? s.pathname : null;
@@ -17,7 +16,7 @@ class a extends i.Ay.Store {
         throw Error("Should not reset the store this way outside of a test environment");
     }
 }
-let o = new a(r.h, {
+let o = new r(l.h, {
     APPLICATION_STORE_LOCATION_CHANGE: function (e) {
         let { location: t } = e;
         s = { ...t };
