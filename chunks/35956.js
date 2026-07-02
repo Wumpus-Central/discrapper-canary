@@ -1,16 +1,15 @@
-"use strict";
-var r = n(257943),
-    a = n(410323),
-    i = n(485155),
+var t = a(257943),
+    n = a(410323),
+    i = a(485155),
     o = URLSearchParams.prototype,
-    s = a(o.forEach);
-!r ||
+    h = n(o.forEach);
+!t ||
     "size" in o ||
     i(o, "size", {
         get: function () {
             var e = 0;
             return (
-                s(this, function () {
+                h(this, function () {
                     e++;
                 }),
                 e

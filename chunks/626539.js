@@ -7,7 +7,7 @@ var i = n(157559),
     o = n(765682);
 class l extends a.V {
     nativeUtils = s.Ay.getDiscordUtils();
-    platformAlwaysPermits = (0, r.isLinux)();
+    platformAlwaysPermits = (0, r.isLinux)() || (0, r.isWindows)();
     static requestTypeLookup = {
         [o.iL.CAMERA]: s.kw.Camera,
         [o.iL.AUDIO]: s.kw.Microphone,
@@ -40,17 +40,6 @@ class l extends a.V {
               );
     }
     openSettings(e) {
-        if ((0, r.isWindows)())
-            switch (e) {
-                case o.iL.AUDIO:
-                    window.open("ms-settings:privacy-microphone");
-                    return;
-                case o.iL.CAMERA:
-                    window.open("ms-settings:privacy-webcam");
-                    return;
-                default:
-                    return;
-            }
         if (this.nativeUtils?.nativePermissionOpenSettings == null) return;
         let t = l.requestTypeLookup[e];
         void 0 !== t && this.nativeUtils.nativePermissionOpenSettings(t);
