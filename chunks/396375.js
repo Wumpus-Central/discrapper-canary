@@ -1,43 +1,44 @@
-r.d(e, { A: () => o });
-var s = r(627968);
-r(64700);
-var _ = r(462887),
-    c = r(862482),
-    i = r(736653),
-    n = r(234419),
-    a = r(725807),
-    E = r(145310),
-    M = r(943386);
-let o = function (t) {
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968);
+n(64700);
+var r = n(462887),
+    s = n(862482),
+    a = n(736653),
+    o = n(234419),
+    l = n(725807),
+    u = n(145310),
+    c = n(943386);
+let d = function (e) {
     let {
-            textOptions: e,
-            subscriptionTier: r,
-            hasActivePromotion: o = !1,
-            isPersistentCTA: T = !1,
-            useShorterCTA: N = !1,
-            showGradient: R,
-            confirmationFooter: U,
-            color: u,
-            ...l
-        } = t,
-        A = (0, i.Ay)(),
-        { buttonText: d, marketingSubscriptionTierSkuId: O } = (0, E.s)({
-            hasActivePromotion: o,
-            subscriptionTier: r,
-            useShorterCTA: N,
-            isPersistentCTA: T,
+            textOptions: t,
+            subscriptionTier: n,
+            hasActivePromotion: d = !1,
+            isPersistentCTA: _ = !1,
+            useShorterCTA: h = !1,
+            showGradient: f,
+            confirmationFooter: p,
+            color: E,
+            ...m
+        } = e,
+        g = (0, a.Ay)(),
+        { buttonText: A, marketingSubscriptionTierSkuId: I } = (0, u.s)({
+            hasActivePromotion: d,
+            subscriptionTier: n,
+            useShorterCTA: h,
+            isPersistentCTA: _,
         }),
-        p = (0, n.V)(),
-        P = p?.subscription_trial,
-        h = null != P && O === P.sku_id,
-        H = u ?? ((0, _.M)(A) ? c.XD.BRAND_INVERTED : c.XD.BRAND);
-    return (0, s.jsx)(a.A, {
-        color: H,
-        textOptions: { textOverride: d, textClassName: h ? M.A : void 0, ...e },
+        T = (0, o.V)(),
+        S = T?.subscription_trial,
+        y = null != S && I === S.sku_id,
+        C = E ?? ((0, r.M)(g) ? s.XD.BRAND_INVERTED : s.XD.BRAND);
+    return (0, i.jsx)(l.A, {
+        color: C,
+        textOptions: { textOverride: A, textClassName: y ? c.A : void 0, ...t },
         onlyShineOnHover: !0,
-        subscriptionTier: O,
-        showGradient: R,
-        confirmationFooter: U,
-        ...l,
+        subscriptionTier: I,
+        showGradient: f,
+        confirmationFooter: p,
+        ...m,
     });
 };

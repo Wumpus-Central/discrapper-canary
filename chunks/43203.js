@@ -1,51 +1,52 @@
-n.d(t, { $: () => p, A: () => f });
+"use strict";
+n.d(t, { $: () => f, A: () => p });
 var i = n(228366),
-    s = n(376728),
-    l = n(842241),
+    r = n(376728),
+    s = n(842241),
     a = n(976860),
-    r = n(495544),
-    o = n(174459),
+    o = n(495544),
+    l = n(174459),
     u = n(723702),
     c = n(19575),
     d = n(636401),
-    h = n(613057),
-    m = n(652215);
-async function p(e, t) {
+    _ = n(613057),
+    h = n(652215);
+async function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        h = (0, l.LO)(n?.targetChannelId),
-        p = (0, l.LO)(n?.targetMessageId),
-        f = (0, l.LO)(n?.guildScheduledEventId),
-        g = (0, l.WU)({ baseCode: e, targetChannelId: h, targetMessageId: p, guildScheduledEventId: f }),
-        { invite: A } = await s.Ay.resolveInvite(g, t);
-    if (null == A) throw new d.A({ errorCode: m.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
+        _ = (0, s.LO)(n?.targetChannelId),
+        f = (0, s.LO)(n?.targetMessageId),
+        p = (0, s.LO)(n?.guildScheduledEventId),
+        E = (0, s.WU)({ baseCode: e, targetChannelId: _, targetMessageId: f, guildScheduledEventId: p }),
+        { invite: m } = await r.Ay.resolveInvite(E, t);
+    if (null == m) throw new d.A({ errorCode: h.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
     return (
         n?.installationId != null &&
-            o.default.track(m.HAw.EXTERNAL_INSTALLATION_ID_RECEIVED, {
+            l.default.track(h.HAw.EXTERNAL_INSTALLATION_ID_RECEIVED, {
                 received_installation_id: n.installationId,
                 location: "openInviteFromRPC",
             }),
-        r.default.isAuthenticated()
+        o.default.isAuthenticated()
             ? i.h.dispatch({
                   type: "INVITE_MODAL_OPEN",
-                  invite: A,
-                  code: g,
-                  context: m.BRT.APP,
+                  invite: m,
+                  code: E,
+                  context: h.BRT.APP,
                   received_installation_id: null != n.installationId ? String(n.installationId) : void 0,
               })
             : (n?.installationId != null &&
-                  s.Ay.setReceivedInstallationIdForInviteCode(A.code, String(n.installationId)),
-              (0, a.bG)(m.BVt.INVITE(g))),
+                  r.Ay.setReceivedInstallationIdForInviteCode(m.code, String(n.installationId)),
+              (0, a.bG)(h.BVt.INVITE(E))),
         u.isPlatformEmbedded && c.Ay.focus(),
-        { invite: A, code: e }
+        { invite: m, code: e }
     );
 }
-let f = {
-    [m.e$_.OPEN_INVITE]: {
-        scope: h.hj,
+let p = {
+    [h.e$_.OPEN_INVITE]: {
+        scope: _.hj,
         async handler(e) {
             let { args: t } = e,
                 { code: n, ...i } = t;
-            await p(n, "RPC OPEN_INVITE Handler", i);
+            await f(n, "RPC OPEN_INVITE Handler", i);
         },
     },
 };

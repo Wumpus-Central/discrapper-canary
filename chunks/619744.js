@@ -1,48 +1,49 @@
+"use strict";
 n.d(t, { k: () => d });
-var a = n(627968),
+var i = n(627968),
     r = n(64700),
-    l = n(408278),
-    i = n(241326),
-    s = n(990078),
-    u = n(609174),
-    c = n(192308),
-    o = n(375708);
+    s = n(408278),
+    a = n(241326),
+    o = n(990078),
+    l = n(609174),
+    u = n(192308),
+    c = n(375708);
 function d(e) {
-    let { onBeforeDelete: t, onAfterDelete: d, variant: f = "overlay-secondary" } = e,
-        p = (0, u.Y_)(),
-        m = r.useCallback(
+    let { onBeforeDelete: t, onAfterDelete: d, variant: _ = "overlay-secondary" } = e,
+        h = (0, l.Y_)(),
+        f = r.useCallback(
             (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
                     (function (e) {
-                        let { clips: t, onBeforeDelete: r, onAfterDelete: l } = e;
-                        (0, c.openModalLazy)(
+                        let { clips: t, onBeforeDelete: r, onAfterDelete: s } = e;
+                        (0, u.openModalLazy)(
                             async () => {
                                 let { default: e } = await n.e("13367").then(n.bind(n, 223818));
                                 return (n) =>
-                                    (0, a.jsx)(e, {
+                                    (0, i.jsx)(e, {
                                         clips: t,
                                         ...n,
                                         onBeforeDelete: r,
                                         onAfterDelete: async () => {
-                                            await n.onClose(), l?.();
+                                            await n.onClose(), s?.();
                                         },
                                     });
                             },
                             { stackingBehavior: "stack" },
                         );
-                    })({ clips: [p], onAfterDelete: d, onBeforeDelete: t });
+                    })({ clips: [h], onAfterDelete: d, onBeforeDelete: t });
             },
-            [p, d, t],
+            [h, d, t],
         );
-    return (0, a.jsx)(s.m, {
-        text: o.intl.string(o.t.oyYWHE),
+    return (0, i.jsx)(o.m, {
+        text: c.intl.string(c.t.oyYWHE),
         position: "top",
-        children: (0, a.jsx)(l.K, {
-            onClick: m,
-            icon: i.u,
-            "aria-label": o.intl.string(o.t.oyYWHE),
-            variant: f,
+        children: (0, i.jsx)(s.K, {
+            onClick: f,
+            icon: a.u,
+            "aria-label": c.intl.string(c.t.oyYWHE),
+            variant: _,
             size: "sm",
         }),
     });

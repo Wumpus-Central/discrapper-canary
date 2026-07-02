@@ -1,3 +1,4 @@
-n.d(t, { $: () => a, X: () => i });
+"use strict";
+n.d(t, { $: () => r, X: () => i });
 let i = "thirdPartyPartnerPerk",
-    a = "third_party_learn_more_xbox";
+    r = "third_party_learn_more_xbox";

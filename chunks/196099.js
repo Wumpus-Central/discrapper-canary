@@ -1,15 +1,16 @@
-n.d(t, { H: () => c, M: () => o });
+"use strict";
+n.d(t, { H: () => l, M: () => u });
 var i,
-    a = n(64700),
+    r = n(64700),
     s = n(688810),
-    r = n(174459),
-    l = n(652215),
-    c = (((i = {}).CLAIM = "claim"), (i.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (i.CANCEL = "cancel"), i);
-function o(e) {
+    a = n(174459),
+    o = n(652215),
+    l = (((i = {}).CLAIM = "claim"), (i.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (i.CANCEL = "cancel"), i);
+function u(e) {
     let { analyticsLocations: t } = (0, s.Ay)();
-    return a.useCallback(
+    return r.useCallback(
         (n, i) => {
-            r.default.track(l.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+            a.default.track(o.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                 partner: e,
                 cta_type: n,
                 url: i ?? null,

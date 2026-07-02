@@ -1,54 +1,55 @@
-r.d(e, { N7: () => c, PK: () => d, XW: () => m, bc: () => f, e7: () => p, fW: () => u });
-var a = r(376304),
-    n = r(202803),
-    s = r(68935),
-    i = r(403362),
-    l = r(998218),
-    o = r(19575);
-let c = "png",
-    h = "cdn.discordapp.com";
-function u(t) {
-    return !((0, s.NO)(t) || (0, a.XD)(t));
+"use strict";
+n.d(t, { N7: () => u, PK: () => h, XW: () => p, bc: () => f, e7: () => _, fW: () => d });
+var i = n(376304),
+    r = n(202803),
+    s = n(68935),
+    a = n(403362),
+    o = n(998218),
+    l = n(19575);
+let u = "png",
+    c = "cdn.discordapp.com";
+function d(e) {
+    return !((0, s.NO)(e) || (0, i.XD)(e));
 }
-function p(t, e, r) {
-    let a = o.Ay.canSaveImage(t, r ?? e),
-        n = l.A.isDiscordAssetUrl(t, e, r),
-        s = u(t);
-    return a && n && s;
+function _(e, t, n) {
+    let i = l.Ay.canSaveImage(e, n ?? t),
+        r = o.A.isDiscordAssetUrl(e, t, n),
+        s = d(e);
+    return i && r && s;
 }
-function d(t, e, r) {
-    let a = o.Ay.canCopyImage(t),
-        n = l.A.isDiscordAssetUrl(t, e, r),
-        s = u(t);
-    return a && n && s;
+function h(e, t, n) {
+    let i = l.Ay.canCopyImage(e),
+        r = o.A.isDiscordAssetUrl(e, t, n),
+        s = d(e);
+    return i && r && s;
 }
-function f(t, e) {
-    if ((0, i.iT)()) return t ?? e;
-    if (null != t) {
-        let r = l.A.toURLSafe(e);
-        if (null != r && (0, n.BX)(r)) return t;
+function f(e, t) {
+    if ((0, a.iT)()) return e ?? t;
+    if (null != e) {
+        let n = o.A.toURLSafe(t);
+        if (null != n && (0, r.BX)(n)) return e;
     }
-    return e;
+    return t;
 }
-function m(t, e, r, a) {
-    let n = l.A.toURLSafe(t);
-    if (null == n || n.host === h) return t;
-    let s = (0, o.UB)(t, e),
-        c = !1;
+function p(e, t, n, i) {
+    let r = o.A.toURLSafe(e);
+    if (null == r || r.host === c) return e;
+    let s = (0, l.UB)(e, t),
+        u = !1;
     if (
-        ("https://media.discordapp.net" === n.origin && (c = !0),
-        (0, i.iT)() && "http://localhost:4000" === n.origin && (c = !0),
-        n.searchParams.delete("width"),
-        n.searchParams.delete("height"),
-        n.searchParams.delete("quality"),
-        n.searchParams.delete("size"),
-        c)
+        ("https://media.discordapp.net" === r.origin && (u = !0),
+        (0, a.iT)() && "http://localhost:4000" === r.origin && (u = !0),
+        r.searchParams.delete("width"),
+        r.searchParams.delete("height"),
+        r.searchParams.delete("quality"),
+        r.searchParams.delete("size"),
+        u)
     )
-        if ((0, i.iT)()) {
-            if (l.A.isOriginalContentTypeDifferent(e, r)) return n.toString();
-            (n.host = "localhost"),
-                (n.port = "3000"),
-                n.pathname.startsWith("/attachments/") && (n.pathname = "/channels/" + n.pathname.substring(13));
-        } else n.host = h;
-    return n.searchParams.delete("format"), null == s && null != a && n.searchParams.append("format", a), n.toString();
+        if ((0, a.iT)()) {
+            if (o.A.isOriginalContentTypeDifferent(t, n)) return r.toString();
+            (r.host = "localhost"),
+                (r.port = "3000"),
+                r.pathname.startsWith("/attachments/") && (r.pathname = "/channels/" + r.pathname.substring(13));
+        } else r.host = c;
+    return r.searchParams.delete("format"), null == s && null != i && r.searchParams.append("format", i), r.toString();
 }

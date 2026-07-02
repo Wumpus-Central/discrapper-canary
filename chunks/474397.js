@@ -1,31 +1,32 @@
-n.d(e, { A: () => l });
-var o = n(627968),
-    d = n(192308),
-    i = n(531685),
-    s = n(723702),
-    a = n(19575),
-    c = n(267102),
+"use strict";
+n.d(t, { A: () => c });
+var i = n(627968),
+    r = n(192308),
+    s = n(531685),
+    a = n(723702),
+    o = n(19575),
+    l = n(267102),
     u = n(652215);
-function l() {
-    let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.APP,
-        e = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        l = t ?? (0, c.zd)();
-    if (l !== u.BRT.APP && null != l) {
-        if (i.A.isFocused()) return;
-        e
-            ? s.isPlatformEmbedded
-                ? a.Ay.focus()
+function c() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.APP,
+        t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
+        c = e ?? (0, l.zd)();
+    if (c !== u.BRT.APP && null != c) {
+        if (s.A.isFocused()) return;
+        t
+            ? a.isPlatformEmbedded
+                ? o.Ay.focus()
                 : window.focus()
             : (function () {
-                  let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.POPOUT;
-                  t !== u.BRT.APP &&
-                      (0, d.openModalLazy)(
+                  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : u.BRT.POPOUT;
+                  e !== u.BRT.APP &&
+                      (0, r.openModalLazy)(
                           async () => {
-                              let { default: e } = await n.e("20570").then(n.bind(n, 368033));
-                              return (n) => (0, o.jsx)(e, { ...n, contextKey: t });
+                              let { default: t } = await n.e("20570").then(n.bind(n, 368033));
+                              return (n) => (0, i.jsx)(t, { ...n, contextKey: e });
                           },
-                          { contextKey: (0, d.modalContextFromAppContext)(t) },
+                          { contextKey: (0, r.modalContextFromAppContext)(e) },
                       );
-              })(t);
+              })(e);
     }
 }

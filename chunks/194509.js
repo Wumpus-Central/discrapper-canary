@@ -1,51 +1,52 @@
-i.d(t, { A: () => x, U: () => C });
-var r = i(627968);
-i(64700);
-var s = i(503698),
-    n = i.n(s),
-    l = i(462887),
-    a = i(862482),
-    o = i(597770),
-    d = i(736653),
-    c = i(783420),
-    u = i(202541),
-    m = i(375708),
-    h = i(806956);
-function C(e) {
-    return e === u.pe.TIER_0 ? m.intl.string(m.t.rk4Uu8) : m.intl.string(m.t.Ve9Ge6);
+"use strict";
+n.d(t, { A: () => p, U: () => f });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(462887),
+    o = n(862482),
+    l = n(597770),
+    u = n(736653),
+    c = n(783420),
+    d = n(202541),
+    _ = n(375708),
+    h = n(806956);
+function f(e) {
+    return e === d.pe.TIER_0 ? _.intl.string(_.t.rk4Uu8) : _.intl.string(_.t.Ve9Ge6);
 }
-let x = function (e) {
+let p = function (e) {
     let {
             className: t,
-            textOptions: i,
-            color: s,
-            look: u,
-            hideIcon: m,
-            subscriptionTier: x,
-            premiumModalAnalyticsLocation: p,
-            giftMessage: _,
+            textOptions: n,
+            color: r,
+            look: d,
+            hideIcon: _,
+            subscriptionTier: p,
+            premiumModalAnalyticsLocation: E,
+            giftMessage: m,
             onClick: g,
         } = e,
-        f = (0, d.Ay)(),
-        R = C(x);
-    return (0, r.jsx)(c.A, {
+        A = (0, u.Ay)(),
+        I = f(p);
+    return (0, i.jsx)(c.A, {
         isGift: !0,
-        subscriptionTier: x,
-        premiumModalAnalyticsLocation: p,
-        giftMessage: _,
+        subscriptionTier: p,
+        premiumModalAnalyticsLocation: E,
+        giftMessage: m,
         onClick: g,
         children: (e) => {
-            let { onClick: d } = e;
-            return (0, r.jsxs)(a.$n, {
+            let { onClick: u } = e;
+            return (0, i.jsxs)(o.$n, {
                 "data-migration-pending": !0,
                 innerClassName: h.Nq,
-                color: s ?? ((0, l.M)(f) ? a.XD.WHITE : a.XD.BRAND),
-                look: u ?? a.pR.OUTLINED,
-                className: n()(t, h.xP),
-                onClick: d,
+                color: r ?? ((0, a.M)(A) ? o.XD.WHITE : o.XD.BRAND),
+                look: d ?? o.pR.OUTLINED,
+                className: s()(t, h.xP),
+                onClick: u,
                 children: [
-                    !m && (0, r.jsx)(o.o, { size: "md", color: "currentColor", className: h.ez }),
-                    (0, r.jsx)("span", { className: n()(h._d, i?.textClassName), children: i?.textOverride ?? R }),
+                    !_ && (0, i.jsx)(l.o, { size: "md", color: "currentColor", className: h.ez }),
+                    (0, i.jsx)("span", { className: s()(h._d, n?.textClassName), children: n?.textOverride ?? I }),
                 ],
             });
         },

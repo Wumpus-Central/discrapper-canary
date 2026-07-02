@@ -1,35 +1,36 @@
-i.d(n, { n: () => d });
-var a = i(627968),
-    t = i(64700),
-    c = i(192308),
-    l = i(477782),
-    o = i(695366),
-    r = i(409626),
-    s = i(375708);
-function d(e, n) {
-    let d = t.useCallback(() => {
+"use strict";
+n.d(t, { n: () => c });
+var i = n(627968),
+    r = n(64700),
+    s = n(192308),
+    a = n(477782),
+    o = n(695366),
+    l = n(409626),
+    u = n(375708);
+function c(e, t) {
+    let c = r.useCallback(() => {
         null != e &&
-            (n?.(r.GameProfileTrackActionActions.Feedback),
-            (0, c.openModalLazy)(async () => {
-                let { default: n } = await Promise.all([
-                    i.e("30593"),
-                    i.e("60435"),
-                    i.e("56600"),
-                    i.e("8891"),
-                    i.e("33771"),
-                    i.e("46039"),
-                    i.e("55266"),
-                    i.e("27495"),
-                ]).then(i.bind(i, 651930));
-                return (i) => (0, a.jsx)(n, { ...i, detectedActivity: { application_id: e, name: "" } });
+            (t?.(l.GameProfileTrackActionActions.Feedback),
+            (0, s.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([
+                    n.e("30593"),
+                    n.e("60435"),
+                    n.e("56600"),
+                    n.e("8891"),
+                    n.e("33771"),
+                    n.e("46039"),
+                    n.e("55266"),
+                    n.e("27495"),
+                ]).then(n.bind(n, 651930));
+                return (n) => (0, i.jsx)(t, { ...n, detectedActivity: { application_id: e, name: "" } });
             }));
-    }, [e, n]);
+    }, [e, t]);
     return null == e
         ? null
-        : (0, a.jsx)(l.Dr, {
+        : (0, i.jsx)(a.Dr, {
               id: "game-profile-something-wrong",
-              label: s.intl.string(s.t.qP2cXd),
-              action: d,
+              label: u.intl.string(u.t.qP2cXd),
+              action: c,
               color: "danger",
               leadingAccessory: { type: "icon", icon: o.E },
           });

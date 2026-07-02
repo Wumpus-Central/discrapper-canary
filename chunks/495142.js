@@ -1,139 +1,140 @@
-var s;
-let n, i;
-function o(t) {
-    if (!Number.isSafeInteger(t) || t < 0) throw Error(`positive integer expected, not ${t}`);
+"use strict";
+var i;
+let r, s;
+function a(e) {
+    if (!Number.isSafeInteger(e) || e < 0) throw Error(`positive integer expected, not ${e}`);
 }
-function h(t, ...e) {
-    if (!(t instanceof Uint8Array || (null != t && "object" == typeof t && "Uint8Array" === t.constructor.name)))
+function o(e, ...t) {
+    if (!(e instanceof Uint8Array || (null != e && "object" == typeof e && "Uint8Array" === e.constructor.name)))
         throw Error("Uint8Array expected");
-    if (e.length > 0 && !e.includes(t.length))
-        throw Error(`Uint8Array expected of length ${e}, not of length=${t.length}`);
+    if (t.length > 0 && !t.includes(e.length))
+        throw Error(`Uint8Array expected of length ${t}, not of length=${e.length}`);
 }
-function a(t) {
-    if ("function" != typeof t || "function" != typeof t.create)
+function l(e) {
+    if ("function" != typeof e || "function" != typeof e.create)
         throw Error("Hash should be wrapped by utils.wrapConstructor");
-    o(t.outputLen), o(t.blockLen);
+    a(e.outputLen), a(e.blockLen);
 }
-function f(t, e = !0) {
-    if (t.destroyed) throw Error("Hash instance has been destroyed");
-    if (e && t.finished) throw Error("Hash#digest() has already been called");
+function u(e, t = !0) {
+    if (e.destroyed) throw Error("Hash instance has been destroyed");
+    if (t && e.finished) throw Error("Hash#digest() has already been called");
 }
-r.d(e, { Q: () => $ });
-let c = (t) => new Uint32Array(t.buffer, t.byteOffset, Math.floor(t.byteLength / 4)),
-    l = (t) => new DataView(t.buffer, t.byteOffset, t.byteLength),
-    u = (t, e) => (t << (32 - e)) | (t >>> e),
-    d = (t, e) => (t << e) | ((t >>> (32 - e)) >>> 0),
-    x = 68 === new Uint8Array(new Uint32Array([0x11223344]).buffer)[0],
-    b = (t) => ((t << 24) & 0xff000000) | ((t << 8) & 0xff0000) | ((t >>> 8) & 65280) | ((t >>> 24) & 255);
-function p(t) {
-    for (let e = 0; e < t.length; e++) t[e] = b(t[e]);
+n.d(t, { Q: () => k });
+let c = (e) => new Uint32Array(e.buffer, e.byteOffset, Math.floor(e.byteLength / 4)),
+    d = (e) => new DataView(e.buffer, e.byteOffset, e.byteLength),
+    _ = (e, t) => (e << (32 - t)) | (e >>> t),
+    h = (e, t) => (e << t) | ((e >>> (32 - t)) >>> 0),
+    f = 68 === new Uint8Array(new Uint32Array([0x11223344]).buffer)[0],
+    p = (e) => ((e << 24) & 0xff000000) | ((e << 8) & 0xff0000) | ((e >>> 8) & 65280) | ((e >>> 24) & 255);
+function E(e) {
+    for (let t = 0; t < e.length; t++) e[t] = p(e[t]);
 }
-let y = async () => {};
-async function g(t, e, r) {
-    let s = Date.now();
-    for (let n = 0; n < t; n++) {
-        r(n);
-        let t = Date.now() - s;
-        (t >= 0 && t < e) || (await y(), (s += t));
+let m = async () => {};
+async function g(e, t, n) {
+    let i = Date.now();
+    for (let r = 0; r < e; r++) {
+        n(r);
+        let e = Date.now() - i;
+        (e >= 0 && e < t) || (await m(), (i += e));
     }
 }
-function w(t) {
+function A(e) {
     return (
-        "string" == typeof t &&
-            (t = (function (t) {
-                if ("string" != typeof t) throw Error(`utf8ToBytes expected string, got ${typeof t}`);
-                return new Uint8Array(new TextEncoder().encode(t));
-            })(t)),
-        h(t),
-        t
+        "string" == typeof e &&
+            (e = (function (e) {
+                if ("string" != typeof e) throw Error(`utf8ToBytes expected string, got ${typeof e}`);
+                return new Uint8Array(new TextEncoder().encode(e));
+            })(e)),
+        o(e),
+        e
     );
 }
-class A {
+class I {
     clone() {
         return this._cloneInto();
     }
 }
-let L = {}.toString;
-function U(t, e) {
-    if (void 0 !== e && "[object Object]" !== L.call(e)) throw Error("Options should be object or undefined");
-    return Object.assign(t, e);
+let T = {}.toString;
+function S(e, t) {
+    if (void 0 !== t && "[object Object]" !== T.call(t)) throw Error("Options should be object or undefined");
+    return Object.assign(e, t);
 }
-let E = (t, e, r) => (t & e) ^ (~t & r),
-    H = (t, e, r) => (t & e) ^ (t & r) ^ (e & r);
-class I extends A {
-    constructor(t, e, r, s) {
+let y = (e, t, n) => (e & t) ^ (~e & n),
+    C = (e, t, n) => (e & t) ^ (e & n) ^ (t & n);
+class N extends I {
+    constructor(e, t, n, i) {
         super(),
-            (this.blockLen = t),
-            (this.outputLen = e),
-            (this.padOffset = r),
-            (this.isLE = s),
+            (this.blockLen = e),
+            (this.outputLen = t),
+            (this.padOffset = n),
+            (this.isLE = i),
             (this.finished = !1),
             (this.length = 0),
             (this.pos = 0),
             (this.destroyed = !1),
-            (this.buffer = new Uint8Array(t)),
-            (this.view = l(this.buffer));
+            (this.buffer = new Uint8Array(e)),
+            (this.view = d(this.buffer));
     }
-    update(t) {
-        f(this);
-        let { view: e, buffer: r, blockLen: s } = this,
-            n = (t = w(t)).length;
-        for (let i = 0; i < n; ) {
-            let o = Math.min(s - this.pos, n - i);
-            if (o === s) {
-                let e = l(t);
-                for (; s <= n - i; i += s) this.process(e, i);
+    update(e) {
+        u(this);
+        let { view: t, buffer: n, blockLen: i } = this,
+            r = (e = A(e)).length;
+        for (let s = 0; s < r; ) {
+            let a = Math.min(i - this.pos, r - s);
+            if (a === i) {
+                let t = d(e);
+                for (; i <= r - s; s += i) this.process(t, s);
                 continue;
             }
-            r.set(t.subarray(i, i + o), this.pos),
-                (this.pos += o),
-                (i += o),
-                this.pos === s && (this.process(e, 0), (this.pos = 0));
+            n.set(e.subarray(s, s + a), this.pos),
+                (this.pos += a),
+                (s += a),
+                this.pos === i && (this.process(t, 0), (this.pos = 0));
         }
-        return (this.length += t.length), this.roundClean(), this;
+        return (this.length += e.length), this.roundClean(), this;
     }
-    digestInto(t) {
-        f(this);
-        h(t);
-        let e = this.outputLen;
-        if (t.length < e) throw Error(`digestInto() expects output buffer of length at least ${e}`);
+    digestInto(e) {
+        u(this);
+        o(e);
+        let t = this.outputLen;
+        if (e.length < t) throw Error(`digestInto() expects output buffer of length at least ${t}`);
         this.finished = !0;
-        let { buffer: r, view: s, blockLen: n, isLE: i } = this,
-            { pos: o } = this;
-        (r[o++] = 128), this.buffer.subarray(o).fill(0), this.padOffset > n - o && (this.process(s, 0), (o = 0));
-        for (let t = o; t < n; t++) r[t] = 0;
-        !(function (t, e, r, s) {
-            if ("function" == typeof t.setBigUint64) return t.setBigUint64(e, r, s);
-            let n = BigInt(32),
-                i = BigInt(0xffffffff),
-                o = Number((r >> n) & i),
-                h = Number(r & i),
-                a = 4 * !!s,
-                f = 4 * !s;
-            t.setUint32(e + a, o, s), t.setUint32(e + f, h, s);
-        })(s, n - 8, BigInt(8 * this.length), i),
-            this.process(s, 0);
-        let a = l(t),
+        let { buffer: n, view: i, blockLen: r, isLE: s } = this,
+            { pos: a } = this;
+        (n[a++] = 128), this.buffer.subarray(a).fill(0), this.padOffset > r - a && (this.process(i, 0), (a = 0));
+        for (let e = a; e < r; e++) n[e] = 0;
+        !(function (e, t, n, i) {
+            if ("function" == typeof e.setBigUint64) return e.setBigUint64(t, n, i);
+            let r = BigInt(32),
+                s = BigInt(0xffffffff),
+                a = Number((n >> r) & s),
+                o = Number(n & s),
+                l = 4 * !!i,
+                u = 4 * !i;
+            e.setUint32(t + l, a, i), e.setUint32(t + u, o, i);
+        })(i, r - 8, BigInt(8 * this.length), s),
+            this.process(i, 0);
+        let l = d(e),
             c = this.outputLen;
         if (c % 4) throw Error("_sha2: outputLen should be aligned to 32bit");
-        let u = c / 4,
-            d = this.get();
-        if (u > d.length) throw Error("_sha2: outputLen bigger than state");
-        for (let t = 0; t < u; t++) a.setUint32(4 * t, d[t], i);
+        let _ = c / 4,
+            h = this.get();
+        if (_ > h.length) throw Error("_sha2: outputLen bigger than state");
+        for (let e = 0; e < _; e++) l.setUint32(4 * e, h[e], s);
     }
     digest() {
-        let { buffer: t, outputLen: e } = this;
-        this.digestInto(t);
-        let r = t.slice(0, e);
-        return this.destroy(), r;
+        let { buffer: e, outputLen: t } = this;
+        this.digestInto(e);
+        let n = e.slice(0, t);
+        return this.destroy(), n;
     }
-    _cloneInto(t) {
-        t || (t = new this.constructor()), t.set(...this.get());
-        let { blockLen: e, buffer: r, length: s, finished: n, destroyed: i, pos: o } = this;
-        return (t.length = s), (t.pos = o), (t.finished = n), (t.destroyed = i), s % e && t.buffer.set(r), t;
+    _cloneInto(e) {
+        e || (e = new this.constructor()), e.set(...this.get());
+        let { blockLen: t, buffer: n, length: i, finished: r, destroyed: s, pos: a } = this;
+        return (e.length = i), (e.pos = a), (e.finished = r), (e.destroyed = s), i % t && e.buffer.set(n), e;
     }
 }
-let k = new Uint32Array([
+let v = new Uint32Array([
         0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5, 0xd807aa98,
         0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174, 0xe49b69c1, 0xefbe4786,
         0xfc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152, 0xa831c66d, 0xb00327c8,
@@ -143,324 +144,312 @@ let k = new Uint32Array([
         0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7,
         0xc67178f2,
     ]),
-    C = new Uint32Array([
+    R = new Uint32Array([
         0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19,
     ]),
-    m = new Uint32Array(64);
-class v extends I {
+    O = new Uint32Array(64);
+class b extends N {
     constructor() {
         super(64, 32, 8, !1),
-            (this.A = 0 | C[0]),
-            (this.B = 0 | C[1]),
-            (this.C = 0 | C[2]),
-            (this.D = 0 | C[3]),
-            (this.E = 0 | C[4]),
-            (this.F = 0 | C[5]),
-            (this.G = 0 | C[6]),
-            (this.H = 0 | C[7]);
+            (this.A = 0 | R[0]),
+            (this.B = 0 | R[1]),
+            (this.C = 0 | R[2]),
+            (this.D = 0 | R[3]),
+            (this.E = 0 | R[4]),
+            (this.F = 0 | R[5]),
+            (this.G = 0 | R[6]),
+            (this.H = 0 | R[7]);
     }
     get() {
-        let { A: t, B: e, C: r, D: s, E: n, F: i, G: o, H: h } = this;
-        return [t, e, r, s, n, i, o, h];
+        let { A: e, B: t, C: n, D: i, E: r, F: s, G: a, H: o } = this;
+        return [e, t, n, i, r, s, a, o];
     }
-    set(t, e, r, s, n, i, o, h) {
-        (this.A = 0 | t),
-            (this.B = 0 | e),
-            (this.C = 0 | r),
-            (this.D = 0 | s),
-            (this.E = 0 | n),
-            (this.F = 0 | i),
-            (this.G = 0 | o),
-            (this.H = 0 | h);
+    set(e, t, n, i, r, s, a, o) {
+        (this.A = 0 | e),
+            (this.B = 0 | t),
+            (this.C = 0 | n),
+            (this.D = 0 | i),
+            (this.E = 0 | r),
+            (this.F = 0 | s),
+            (this.G = 0 | a),
+            (this.H = 0 | o);
     }
-    process(t, e) {
-        for (let r = 0; r < 16; r++, e += 4) m[r] = t.getUint32(e, !1);
-        for (let t = 16; t < 64; t++) {
-            let e = m[t - 15],
-                r = m[t - 2],
-                s = u(e, 7) ^ u(e, 18) ^ (e >>> 3),
-                n = u(r, 17) ^ u(r, 19) ^ (r >>> 10);
-            m[t] = (n + m[t - 7] + s + m[t - 16]) | 0;
+    process(e, t) {
+        for (let n = 0; n < 16; n++, t += 4) O[n] = e.getUint32(t, !1);
+        for (let e = 16; e < 64; e++) {
+            let t = O[e - 15],
+                n = O[e - 2],
+                i = _(t, 7) ^ _(t, 18) ^ (t >>> 3),
+                r = _(n, 17) ^ _(n, 19) ^ (n >>> 10);
+            O[e] = (r + O[e - 7] + i + O[e - 16]) | 0;
         }
-        let { A: r, B: s, C: n, D: i, E: o, F: h, G: a, H: f } = this;
-        for (let t = 0; t < 64; t++) {
-            let e = (f + (u(o, 6) ^ u(o, 11) ^ u(o, 25)) + E(o, h, a) + k[t] + m[t]) | 0,
-                c = ((u(r, 2) ^ u(r, 13) ^ u(r, 22)) + H(r, s, n)) | 0;
-            (f = a), (a = h), (h = o), (o = (i + e) | 0), (i = n), (n = s), (s = r), (r = (e + c) | 0);
+        let { A: n, B: i, C: r, D: s, E: a, F: o, G: l, H: u } = this;
+        for (let e = 0; e < 64; e++) {
+            let t = (u + (_(a, 6) ^ _(a, 11) ^ _(a, 25)) + y(a, o, l) + v[e] + O[e]) | 0,
+                c = ((_(n, 2) ^ _(n, 13) ^ _(n, 22)) + C(n, i, r)) | 0;
+            (u = l), (l = o), (o = a), (a = (s + t) | 0), (s = r), (r = i), (i = n), (n = (t + c) | 0);
         }
-        (r = (r + this.A) | 0),
-            (s = (s + this.B) | 0),
-            (n = (n + this.C) | 0),
-            (i = (i + this.D) | 0),
-            (o = (o + this.E) | 0),
-            (h = (h + this.F) | 0),
-            (a = (a + this.G) | 0),
-            (f = (f + this.H) | 0),
-            this.set(r, s, n, i, o, h, a, f);
+        (n = (n + this.A) | 0),
+            (i = (i + this.B) | 0),
+            (r = (r + this.C) | 0),
+            (s = (s + this.D) | 0),
+            (a = (a + this.E) | 0),
+            (o = (o + this.F) | 0),
+            (l = (l + this.G) | 0),
+            (u = (u + this.H) | 0),
+            this.set(n, i, r, s, a, o, l, u);
     }
     roundClean() {
-        m.fill(0);
+        O.fill(0);
     }
     destroy() {
         this.set(0, 0, 0, 0, 0, 0, 0, 0), this.buffer.fill(0);
     }
 }
-let B =
-    ((s = () => new v()),
-    ((n = (t) => s().update(w(t)).digest()).outputLen = (i = s()).outputLen),
-    (n.blockLen = i.blockLen),
-    (n.create = () => s()),
-    n);
-class O extends A {
-    constructor(t, e) {
-        super(), (this.finished = !1), (this.destroyed = !1), a(t);
-        const r = w(e);
-        if (((this.iHash = t.create()), "function" != typeof this.iHash.update))
+let D =
+    ((i = () => new b()),
+    ((r = (e) => i().update(A(e)).digest()).outputLen = (s = i()).outputLen),
+    (r.blockLen = s.blockLen),
+    (r.create = () => i()),
+    r);
+class L extends I {
+    constructor(e, t) {
+        super(), (this.finished = !1), (this.destroyed = !1), l(e);
+        const n = A(t);
+        if (((this.iHash = e.create()), "function" != typeof this.iHash.update))
             throw Error("Expected instance of class which extends utils.Hash");
         (this.blockLen = this.iHash.blockLen), (this.outputLen = this.iHash.outputLen);
-        const s = this.blockLen,
-            n = new Uint8Array(s);
-        n.set(r.length > s ? t.create().update(r).digest() : r);
-        for (let t = 0; t < n.length; t++) n[t] ^= 54;
-        this.iHash.update(n), (this.oHash = t.create());
-        for (let t = 0; t < n.length; t++) n[t] ^= 106;
-        this.oHash.update(n), n.fill(0);
+        const i = this.blockLen,
+            r = new Uint8Array(i);
+        r.set(n.length > i ? e.create().update(n).digest() : n);
+        for (let e = 0; e < r.length; e++) r[e] ^= 54;
+        this.iHash.update(r), (this.oHash = e.create());
+        for (let e = 0; e < r.length; e++) r[e] ^= 106;
+        this.oHash.update(r), r.fill(0);
     }
-    update(t) {
-        return f(this), this.iHash.update(t), this;
+    update(e) {
+        return u(this), this.iHash.update(e), this;
     }
-    digestInto(t) {
-        f(this),
-            h(t, this.outputLen),
+    digestInto(e) {
+        u(this),
+            o(e, this.outputLen),
             (this.finished = !0),
-            this.iHash.digestInto(t),
-            this.oHash.update(t),
-            this.oHash.digestInto(t),
+            this.iHash.digestInto(e),
+            this.oHash.update(e),
+            this.oHash.digestInto(e),
             this.destroy();
     }
     digest() {
-        let t = new Uint8Array(this.oHash.outputLen);
-        return this.digestInto(t), t;
+        let e = new Uint8Array(this.oHash.outputLen);
+        return this.digestInto(e), e;
     }
-    _cloneInto(t) {
-        t || (t = Object.create(Object.getPrototypeOf(this), {}));
-        let { oHash: e, iHash: r, finished: s, destroyed: n, blockLen: i, outputLen: o } = this;
+    _cloneInto(e) {
+        e || (e = Object.create(Object.getPrototypeOf(this), {}));
+        let { oHash: t, iHash: n, finished: i, destroyed: r, blockLen: s, outputLen: a } = this;
         return (
-            (t.finished = s),
-            (t.destroyed = n),
-            (t.blockLen = i),
-            (t.outputLen = o),
-            (t.oHash = e._cloneInto(t.oHash)),
-            (t.iHash = r._cloneInto(t.iHash)),
-            t
+            (e.finished = i),
+            (e.destroyed = r),
+            (e.blockLen = s),
+            (e.outputLen = a),
+            (e.oHash = t._cloneInto(e.oHash)),
+            (e.iHash = n._cloneInto(e.iHash)),
+            e
         );
     }
     destroy() {
         (this.destroyed = !0), this.oHash.destroy(), this.iHash.destroy();
     }
 }
-let _ = (t, e, r) => new O(t, e).update(r).digest();
-function j(t, e, r, s) {
-    var n;
-    let i,
-        {
-            c: h,
-            dkLen: f,
-            DK: c,
-            PRF: u,
-            PRFSalt: d,
-        } = (function (t, e, r, s) {
-            a(t);
-            let { c: n, dkLen: i, asyncTick: h } = U({ dkLen: 32, asyncTick: 10 }, s);
-            if ((o(n), o(i), o(h), n < 1)) throw Error("PBKDF2: iterations (c) should be >= 1");
-            let f = w(e),
-                c = w(r),
-                l = new Uint8Array(i),
-                u = _.create(t, f),
-                d = u._cloneInto().update(c);
-            return { c: n, dkLen: i, asyncTick: h, DK: l, PRF: u, PRFSalt: d };
-        })(t, e, r, s),
-        x = new Uint8Array(4),
-        b = l(x),
-        p = new Uint8Array(u.outputLen);
-    for (let t = 1, e = 0; e < f; t++, e += u.outputLen) {
-        let r = c.subarray(e, e + u.outputLen);
-        b.setInt32(0, t, !1), (i = d._cloneInto(i)).update(x).digestInto(p), r.set(p.subarray(0, r.length));
-        for (let t = 1; t < h; t++) {
-            u._cloneInto(i).update(p).digestInto(p);
-            for (let t = 0; t < r.length; t++) r[t] ^= p[t];
-        }
-    }
-    return (n = i), u.destroy(), d.destroy(), n && n.destroy(), p.fill(0), c;
-}
-function D(t, e, r, s, n, i) {
-    let o = t[e++] ^ r[s++],
-        h = t[e++] ^ r[s++],
-        a = t[e++] ^ r[s++],
-        f = t[e++] ^ r[s++],
-        c = t[e++] ^ r[s++],
-        l = t[e++] ^ r[s++],
-        u = t[e++] ^ r[s++],
-        x = t[e++] ^ r[s++],
-        b = t[e++] ^ r[s++],
-        p = t[e++] ^ r[s++],
-        y = t[e++] ^ r[s++],
-        g = t[e++] ^ r[s++],
-        w = t[e++] ^ r[s++],
-        A = t[e++] ^ r[s++],
-        L = t[e++] ^ r[s++],
-        U = t[e++] ^ r[s++],
-        E = o,
-        H = h,
-        I = a,
-        k = f,
-        C = c,
-        m = l,
-        v = u,
-        B = x,
-        O = b,
-        _ = p,
-        j = y,
-        D = g,
-        S = w,
-        $ = A,
-        N = L,
-        F = U;
-    for (let t = 0; t < 8; t += 2)
-        (C ^= d((E + S) | 0, 7)),
-            (O ^= d((C + E) | 0, 9)),
-            (S ^= d((O + C) | 0, 13)),
-            (E ^= d((S + O) | 0, 18)),
-            (_ ^= d((m + H) | 0, 7)),
-            ($ ^= d((_ + m) | 0, 9)),
-            (H ^= d(($ + _) | 0, 13)),
-            (m ^= d((H + $) | 0, 18)),
-            (N ^= d((j + v) | 0, 7)),
-            (I ^= d((N + j) | 0, 9)),
-            (v ^= d((I + N) | 0, 13)),
-            (j ^= d((v + I) | 0, 18)),
-            (k ^= d((F + D) | 0, 7)),
-            (B ^= d((k + F) | 0, 9)),
-            (D ^= d((B + k) | 0, 13)),
-            (F ^= d((D + B) | 0, 18)),
-            (H ^= d((E + k) | 0, 7)),
-            (I ^= d((H + E) | 0, 9)),
-            (k ^= d((I + H) | 0, 13)),
-            (E ^= d((k + I) | 0, 18)),
-            (v ^= d((m + C) | 0, 7)),
-            (B ^= d((v + m) | 0, 9)),
-            (C ^= d((B + v) | 0, 13)),
-            (m ^= d((C + B) | 0, 18)),
-            (D ^= d((j + _) | 0, 7)),
-            (O ^= d((D + j) | 0, 9)),
-            (_ ^= d((O + D) | 0, 13)),
-            (j ^= d((_ + O) | 0, 18)),
-            (S ^= d((F + N) | 0, 7)),
-            ($ ^= d((S + F) | 0, 9)),
-            (N ^= d(($ + S) | 0, 13)),
-            (F ^= d((N + $) | 0, 18));
-    (n[i++] = (o + E) | 0),
-        (n[i++] = (h + H) | 0),
-        (n[i++] = (a + I) | 0),
-        (n[i++] = (f + k) | 0),
-        (n[i++] = (c + C) | 0),
-        (n[i++] = (l + m) | 0),
-        (n[i++] = (u + v) | 0),
-        (n[i++] = (x + B) | 0),
-        (n[i++] = (b + O) | 0),
-        (n[i++] = (p + _) | 0),
-        (n[i++] = (y + j) | 0),
-        (n[i++] = (g + D) | 0),
-        (n[i++] = (w + S) | 0),
-        (n[i++] = (A + $) | 0),
-        (n[i++] = (L + N) | 0),
-        (n[i++] = (U + F) | 0);
-}
-function S(t, e, r, s, n) {
-    let i = s + 0,
-        o = s + 16 * n;
-    for (let s = 0; s < 16; s++) r[o + s] = t[e + (2 * n - 1) * 16 + s];
-    for (let s = 0; s < n; s++, i += 16, e += 16) D(r, o, t, e, r, i), s > 0 && (o += 16), D(r, i, t, (e += 16), r, o);
-}
-async function $(t, e, r) {
+let w = (e, t, n) => new L(e, t).update(n).digest();
+function M(e, t, n, i) {
+    var r;
     let s,
         {
-            N: n,
-            r: i,
-            p: h,
-            dkLen: a,
-            blockSize32: f,
-            V: l,
-            B32: u,
-            B: d,
-            tmp: b,
-            blockMixCb: y,
-            asyncTick: w,
-        } = (function (t, e, r) {
+            c: o,
+            dkLen: u,
+            DK: c,
+            PRF: _,
+            PRFSalt: h,
+        } = (function (e, t, n, i) {
+            l(e);
+            let { c: r, dkLen: s, asyncTick: o } = S({ dkLen: 32, asyncTick: 10 }, i);
+            if ((a(r), a(s), a(o), r < 1)) throw Error("PBKDF2: iterations (c) should be >= 1");
+            let u = A(t),
+                c = A(n),
+                d = new Uint8Array(s),
+                _ = w.create(e, u),
+                h = _._cloneInto().update(c);
+            return { c: r, dkLen: s, asyncTick: o, DK: d, PRF: _, PRFSalt: h };
+        })(e, t, n, i),
+        f = new Uint8Array(4),
+        p = d(f),
+        E = new Uint8Array(_.outputLen);
+    for (let e = 1, t = 0; t < u; e++, t += _.outputLen) {
+        let n = c.subarray(t, t + _.outputLen);
+        p.setInt32(0, e, !1), (s = h._cloneInto(s)).update(f).digestInto(E), n.set(E.subarray(0, n.length));
+        for (let e = 1; e < o; e++) {
+            _._cloneInto(s).update(E).digestInto(E);
+            for (let e = 0; e < n.length; e++) n[e] ^= E[e];
+        }
+    }
+    return (r = s), _.destroy(), h.destroy(), r && r.destroy(), E.fill(0), c;
+}
+function P(e, t, n, i, r, s) {
+    let a = e[t++] ^ n[i++],
+        o = e[t++] ^ n[i++],
+        l = e[t++] ^ n[i++],
+        u = e[t++] ^ n[i++],
+        c = e[t++] ^ n[i++],
+        d = e[t++] ^ n[i++],
+        _ = e[t++] ^ n[i++],
+        f = e[t++] ^ n[i++],
+        p = e[t++] ^ n[i++],
+        E = e[t++] ^ n[i++],
+        m = e[t++] ^ n[i++],
+        g = e[t++] ^ n[i++],
+        A = e[t++] ^ n[i++],
+        I = e[t++] ^ n[i++],
+        T = e[t++] ^ n[i++],
+        S = e[t++] ^ n[i++],
+        y = a,
+        C = o,
+        N = l,
+        v = u,
+        R = c,
+        O = d,
+        b = _,
+        D = f,
+        L = p,
+        w = E,
+        M = m,
+        P = g,
+        x = A,
+        k = I,
+        U = T,
+        G = S;
+    for (let e = 0; e < 8; e += 2)
+        (R ^= h((y + x) | 0, 7)),
+            (L ^= h((R + y) | 0, 9)),
+            (x ^= h((L + R) | 0, 13)),
+            (y ^= h((x + L) | 0, 18)),
+            (w ^= h((O + C) | 0, 7)),
+            (k ^= h((w + O) | 0, 9)),
+            (C ^= h((k + w) | 0, 13)),
+            (O ^= h((C + k) | 0, 18)),
+            (U ^= h((M + b) | 0, 7)),
+            (N ^= h((U + M) | 0, 9)),
+            (b ^= h((N + U) | 0, 13)),
+            (M ^= h((b + N) | 0, 18)),
+            (v ^= h((G + P) | 0, 7)),
+            (D ^= h((v + G) | 0, 9)),
+            (P ^= h((D + v) | 0, 13)),
+            (G ^= h((P + D) | 0, 18)),
+            (C ^= h((y + v) | 0, 7)),
+            (N ^= h((C + y) | 0, 9)),
+            (v ^= h((N + C) | 0, 13)),
+            (y ^= h((v + N) | 0, 18)),
+            (b ^= h((O + R) | 0, 7)),
+            (D ^= h((b + O) | 0, 9)),
+            (R ^= h((D + b) | 0, 13)),
+            (O ^= h((R + D) | 0, 18)),
+            (P ^= h((M + w) | 0, 7)),
+            (L ^= h((P + M) | 0, 9)),
+            (w ^= h((L + P) | 0, 13)),
+            (M ^= h((w + L) | 0, 18)),
+            (x ^= h((G + U) | 0, 7)),
+            (k ^= h((x + G) | 0, 9)),
+            (U ^= h((k + x) | 0, 13)),
+            (G ^= h((U + k) | 0, 18));
+    (r[s++] = (a + y) | 0),
+        (r[s++] = (o + C) | 0),
+        (r[s++] = (l + N) | 0),
+        (r[s++] = (u + v) | 0),
+        (r[s++] = (c + R) | 0),
+        (r[s++] = (d + O) | 0),
+        (r[s++] = (_ + b) | 0),
+        (r[s++] = (f + D) | 0),
+        (r[s++] = (p + L) | 0),
+        (r[s++] = (E + w) | 0),
+        (r[s++] = (m + M) | 0),
+        (r[s++] = (g + P) | 0),
+        (r[s++] = (A + x) | 0),
+        (r[s++] = (I + k) | 0),
+        (r[s++] = (T + U) | 0),
+        (r[s++] = (S + G) | 0);
+}
+function x(e, t, n, i, r) {
+    let s = i + 0,
+        a = i + 16 * r;
+    for (let i = 0; i < 16; i++) n[a + i] = e[t + (2 * r - 1) * 16 + i];
+    for (let i = 0; i < r; i++, s += 16, t += 16) P(n, a, e, t, n, s), i > 0 && (a += 16), P(n, s, e, (t += 16), n, a);
+}
+async function k(e, t, n) {
+    let i,
+        {
+            N: r,
+            r: s,
+            p: o,
+            dkLen: l,
+            blockSize32: u,
+            V: d,
+            B32: _,
+            B: h,
+            tmp: p,
+            blockMixCb: m,
+            asyncTick: A,
+        } = (function (e, t, n) {
             let {
-                N: s,
-                r: n,
-                p: i,
-                dkLen: h,
-                asyncTick: a,
-                maxmem: f,
-                onProgress: l,
-            } = U({ dkLen: 32, asyncTick: 10, maxmem: 0x40000400 }, r);
-            if ((o(s), o(n), o(i), o(h), o(a), o(f), void 0 !== l && "function" != typeof l))
+                N: i,
+                r,
+                p: s,
+                dkLen: o,
+                asyncTick: l,
+                maxmem: u,
+                onProgress: d,
+            } = S({ dkLen: 32, asyncTick: 10, maxmem: 0x40000400 }, n);
+            if ((a(i), a(r), a(s), a(o), a(l), a(u), void 0 !== d && "function" != typeof d))
                 throw Error("progressCb should be function");
-            let u = 128 * n,
-                d = u / 4;
-            if (s <= 1 || (s & (s - 1)) != 0 || s > 0x100000000)
+            let _ = 128 * r,
+                h = _ / 4;
+            if (i <= 1 || (i & (i - 1)) != 0 || i > 0x100000000)
                 throw Error("Scrypt: N must be larger than 1, a power of 2, and less than 2^32");
-            if (i < 0 || i > ((0x100000000 - 1) * 32) / u)
+            if (s < 0 || s > ((0x100000000 - 1) * 32) / _)
                 throw Error("Scrypt: p must be a positive integer less than or equal to ((2^32 - 1) * 32) / (128 * r)");
-            if (h < 0 || h > (0x100000000 - 1) * 32)
+            if (o < 0 || o > (0x100000000 - 1) * 32)
                 throw Error("Scrypt: dkLen should be positive integer less than or equal to (2^32 - 1) * 32");
-            let x = u * (s + i);
-            if (x > f) throw Error(`Scrypt: parameters too large, ${x} (128 * r * (N + p)) > ${f} (maxmem)`);
-            let b = j(B, t, e, { c: 1, dkLen: u * i }),
-                p = c(b),
-                y = c(new Uint8Array(u * s)),
-                g = c(new Uint8Array(u)),
-                w = () => {};
-            if (l) {
-                let t = 2 * s * i,
-                    e = Math.max(Math.floor(t / 1e4), 1),
-                    r = 0;
-                w = () => {
-                    r++, l && (!(r % e) || r === t) && l(r / t);
+            let f = _ * (i + s);
+            if (f > u) throw Error(`Scrypt: parameters too large, ${f} (128 * r * (N + p)) > ${u} (maxmem)`);
+            let p = M(D, e, t, { c: 1, dkLen: _ * s }),
+                E = c(p),
+                m = c(new Uint8Array(_ * i)),
+                g = c(new Uint8Array(_)),
+                A = () => {};
+            if (d) {
+                let e = 2 * i * s,
+                    t = Math.max(Math.floor(e / 1e4), 1),
+                    n = 0;
+                A = () => {
+                    n++, d && (!(n % t) || n === e) && d(n / e);
                 };
             }
-            return {
-                N: s,
-                r: n,
-                p: i,
-                dkLen: h,
-                blockSize32: d,
-                V: y,
-                B32: p,
-                B: b,
-                tmp: g,
-                blockMixCb: w,
-                asyncTick: a,
-            };
-        })(t, e, r);
-    x || p(u);
-    for (let t = 0; t < h; t++) {
-        let e = f * t;
-        for (let t = 0; t < f; t++) l[t] = u[e + t];
-        let r = 0;
-        await g(n - 1, w, () => {
-            S(l, r, l, (r += f), i), y();
+            return { N: i, r, p: s, dkLen: o, blockSize32: h, V: m, B32: E, B: p, tmp: g, blockMixCb: A, asyncTick: l };
+        })(e, t, n);
+    f || E(_);
+    for (let e = 0; e < o; e++) {
+        let t = u * e;
+        for (let e = 0; e < u; e++) d[e] = _[t + e];
+        let n = 0;
+        await g(r - 1, A, () => {
+            x(d, n, d, (n += u), s), m();
         }),
-            S(l, (n - 1) * f, u, e, i),
-            y(),
-            await g(n, w, () => {
-                let t = u[e + f - 16] % n;
-                for (let r = 0; r < f; r++) b[r] = u[e + r] ^ l[t * f + r];
-                S(b, 0, u, e, i), y();
+            x(d, (r - 1) * u, _, t, s),
+            m(),
+            await g(r, A, () => {
+                let e = _[t + u - 16] % r;
+                for (let n = 0; n < u; n++) p[n] = _[t + n] ^ d[e * u + n];
+                x(p, 0, _, t, s), m();
             });
     }
-    return x || p(u), (s = j(B, t, d, { c: 1, dkLen: a })), d.fill(0), l.fill(0), b.fill(0), s;
+    return f || E(_), (i = M(D, e, h, { c: 1, dkLen: l })), h.fill(0), d.fill(0), p.fill(0), i;
 }
-_.create = (t, e) => new O(t, e);
+w.create = (e, t) => new L(e, t);

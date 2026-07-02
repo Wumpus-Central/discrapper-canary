@@ -1,30 +1,31 @@
-t.d(_, { A: () => i });
-var I = t(627968);
-t(64700);
-var s = t(17928),
-    a = t(778712),
-    E = t(478063),
-    e = t(287809);
-let i = function (A) {
-    let { recipients: _, size: t, status: i, isTyping: L, className: h, ...l } = A,
-        C = a.vC[t],
-        n = (0, s.yK)(
-            [e.default],
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968);
+n(64700);
+var r = n(17928),
+    s = n(778712),
+    a = n(478063),
+    o = n(287809);
+let l = function (e) {
+    let { recipients: t, size: n, status: l, isTyping: u, className: c, ...d } = e,
+        _ = s.vC[n],
+        h = (0, r.yK)(
+            [o.default],
             () =>
-                _.slice(0, 2).map((A) => {
-                    let _ = e.default.getUser(A);
-                    if (null != _) return _.getAvatarURL(void 0, C.size, !1);
+                t.slice(0, 2).map((e) => {
+                    let t = o.default.getUser(e);
+                    if (null != t) return t.getAvatarURL(void 0, _.size, !1);
                 }),
-            [_, C.size],
+            [t, _.size],
         );
-    return (0, I.jsx)(E.A, {
-        "aria-label": l["aria-label"],
-        "aria-hidden": l["aria-hidden"],
-        backSrc: n[0],
-        frontSrc: n[1],
-        size: t,
-        status: i,
-        isTyping: L ?? !1,
-        className: h,
+    return (0, i.jsx)(a.A, {
+        "aria-label": d["aria-label"],
+        "aria-hidden": d["aria-hidden"],
+        backSrc: h[0],
+        frontSrc: h[1],
+        size: n,
+        status: l,
+        isTyping: u ?? !1,
+        className: c,
     });
 };

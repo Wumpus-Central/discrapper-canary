@@ -1,49 +1,50 @@
-t.d(e, {
-    Kg: () => f,
+"use strict";
+n.d(t, {
+    Kg: () => u,
     LO: () => c,
     P: () => _,
-    TX: () => s,
-    U5: () => A,
-    XC: () => E,
-    mv: () => u,
-    tC: () => d,
-    uS: () => p,
+    TX: () => d,
+    U5: () => E,
+    XC: () => f,
+    mv: () => l,
+    tC: () => p,
+    uS: () => h,
 });
-var i = t(967198),
-    a = t(174459),
-    l = t(5180),
-    o = t(652215);
-let r = "manual_browsing";
-function u(n) {
-    (0, l.ai)(i.A.getGuildId()) || (r = n);
+var i = n(967198),
+    r = n(174459),
+    s = n(5180),
+    a = n(652215);
+let o = "manual_browsing";
+function l(e) {
+    (0, s.ai)(i.A.getGuildId()) || (o = e);
 }
-function f() {
-    let n = r;
-    return (r = "manual_browsing"), n;
+function u() {
+    let e = o;
+    return (o = "manual_browsing"), e;
 }
-function c(n, e, t) {
-    a.default.track(o.HAw.FAVORITES_GUILD_ADD_TO_FAVORITES, { source: n, channel_type: e, total_favorites: t });
+function c(e, t, n) {
+    r.default.track(a.HAw.FAVORITES_GUILD_ADD_TO_FAVORITES, { source: e, channel_type: t, total_favorites: n });
 }
-function s(n, e) {
-    a.default.track(o.HAw.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, { channel_type: n, total_favorites: e });
+function d(e, t) {
+    r.default.track(a.HAw.FAVORITES_GUILD_REMOVE_FROM_FAVORITES, { channel_type: e, total_favorites: t });
 }
 function _() {
-    a.default.track(o.HAw.FAVORITES_GUILD_ORDER_UPDATED);
+    r.default.track(a.HAw.FAVORITES_GUILD_ORDER_UPDATED);
 }
-function p(n, e) {
-    a.default.track(o.HAw.FAVORITES_GUILD_SETTING_TOGGLED, { source: n, is_visible: e });
+function h(e, t) {
+    r.default.track(a.HAw.FAVORITES_GUILD_SETTING_TOGGLED, { source: e, is_visible: t });
 }
-function E(n) {
-    a.default.track(o.HAw.FAVORITES_GUILD_UPSELL_MODAL_OPENED, { source: n });
+function f(e) {
+    r.default.track(a.HAw.FAVORITES_GUILD_UPSELL_MODAL_OPENED, { source: e });
 }
-function d(n) {
-    a.default.track(o.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: n });
+function p(e) {
+    r.default.track(a.HAw.FAVORITES_GUILD_ADD_MODAL_OPENED, { source: e });
 }
-function A(n, e, t, i) {
-    a.default.track(o.HAw.FAVORITES_GUILD_VIEWED, {
-        source: n,
-        total_favorites: e,
-        is_xp_enabled: t,
+function E(e, t, n, i) {
+    r.default.track(a.HAw.FAVORITES_GUILD_VIEWED, {
+        source: e,
+        total_favorites: t,
+        is_xp_enabled: n,
         is_premium_tier_2: i,
     });
 }

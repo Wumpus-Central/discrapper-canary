@@ -1,29 +1,30 @@
-n.d(t, { A: () => c });
+"use strict";
+n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
-var a = n(821609),
+var r = n(821609),
     s = n(597770),
-    r = n(194509),
-    l = n(783420);
-let c = function (e) {
+    a = n(194509),
+    o = n(783420);
+let l = function (e) {
     let {
         subscriptionTier: t,
         premiumModalAnalyticsLocation: n,
-        giftMessage: c,
-        onClick: o,
-        buttonTextOverride: d,
-        ...u
+        giftMessage: l,
+        onClick: u,
+        buttonTextOverride: c,
+        ...d
     } = e;
-    return (0, i.jsx)(l.A, {
+    return (0, i.jsx)(o.A, {
         isGift: !0,
         subscriptionTier: t,
         premiumModalAnalyticsLocation: n,
-        giftMessage: c,
-        onClick: o,
+        giftMessage: l,
+        onClick: u,
         children: (e) => {
             let { onClick: n } = e,
-                l = d ?? (0, r.U)(t);
-            return (0, i.jsx)(a.$, { onClick: n, icon: s.o, ...u, text: l });
+                o = c ?? (0, a.U)(t);
+            return (0, i.jsx)(r.$, { onClick: n, icon: s.o, ...d, text: o });
         },
     });
 };

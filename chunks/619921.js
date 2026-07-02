@@ -1,52 +1,53 @@
-n.d(t, { A: () => E });
+"use strict";
+n.d(t, { A: () => f });
 var i = n(17928),
-    l = n(228366),
+    r = n(228366),
     s = n(734057),
-    r = n(650048),
+    a = n(650048),
     o = n(71393),
-    a = n(309010),
-    d = n(645959),
+    l = n(309010),
+    u = n(645959),
     c = n(652215);
-let u = (window?.location?.pathname ?? "").startsWith(c.BVt.ACTIVITIES) ? c.BVt.ACTIVITIES : null;
-function h(e) {
+let d = (window?.location?.pathname ?? "").startsWith(c.BVt.ACTIVITIES) ? c.BVt.ACTIVITIES : null;
+function _(e) {
     let { link: t } = e;
-    if (u === t) return !1;
-    u = t;
+    if (d === t) return !1;
+    d = t;
 }
-class A extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "AppViewStore";
     initialize() {
-        this.waitFor(r.A, d.A, a.A, o.A, s.A);
+        this.waitFor(a.A, u.A, l.A, o.A, s.A);
     }
     getHomeLink() {
-        return u ?? r.A.fallbackRoute;
+        return d ?? a.A.fallbackRoute;
     }
 }
-let E = new A(l.h, {
+let f = new h(r.h, {
     OVERLAY_INITIALIZE: function () {
-        let e = d.A.getPrivateChannelIds(),
-            t = a.A.getChannelId(c.ME);
-        (null != t || null != e[0]) && (u = c.BVt.CHANNEL(c.ME, t ?? e[0]));
+        let e = u.A.getPrivateChannelIds(),
+            t = l.A.getChannelId(c.ME);
+        (null != t || null != e[0]) && (d = c.BVt.CHANNEL(c.ME, t ?? e[0]));
     },
-    APP_VIEW_SET_HOME_LINK: h,
+    APP_VIEW_SET_HOME_LINK: _,
     APPLICATION_STORE_LOCATION_CHANGE: function (e) {
         let { location: t } = e;
-        h({ link: t.pathname, type: "APP_VIEW_SET_HOME_LINK" });
+        _({ link: t.pathname, type: "APP_VIEW_SET_HOME_LINK" });
     },
     APPLICATION_STORE_RESET_NAVIGATION: function () {
-        if (null == u || !u.startsWith(c.BVt.APPLICATION_STORE)) return !1;
-        u = c.BVt.APPLICATION_STORE;
+        if (null == d || !d.startsWith(c.BVt.APPLICATION_STORE)) return !1;
+        d = c.BVt.APPLICATION_STORE;
     },
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null == t && null != n) {
             let e = c.BVt.CHANNEL(c.ME, n);
-            if (e !== u) return (u = e), !0;
+            if (e !== d) return (d = e), !0;
         }
         return !1;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        null == t.guild_id && null != t.id && null != u && u === c.BVt.CHANNEL(c.ME, t.id) && (u = null);
+        null == t.guild_id && null != t.id && null != d && d === c.BVt.CHANNEL(c.ME, t.id) && (d = null);
     },
 });

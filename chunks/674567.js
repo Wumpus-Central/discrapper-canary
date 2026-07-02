@@ -1,14 +1,15 @@
-n.d(t, { V: () => l, s: () => r });
+"use strict";
+n.d(t, { V: () => o, s: () => a });
 var i,
-    a = n(3074),
+    r = n(3074),
     s = n(31502),
-    r =
+    a =
         (((i = {})[(i.NONE = 0)] = "NONE"),
         (i[(i.NO_ACCESS = 1)] = "NO_ACCESS"),
         (i[(i.HAS_ACCESS = 2)] = "HAS_ACCESS"),
         i);
-function l() {
+function o() {
     let e = (0, s.l)("userSettings.connections"),
-        t = (0, a.N)();
+        t = (0, r.N)();
     return e && null != t ? (t ? 2 : 1) : 0;
 }

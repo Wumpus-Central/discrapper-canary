@@ -1,176 +1,177 @@
-n.d(t, { SelectFriendsModalScreens: () => V, default: () => z });
+"use strict";
+n.d(t, { SelectFriendsModalScreens: () => H, default: () => Y });
 var i,
-    a = n(627968),
+    r = n(627968),
     s = n(64700),
-    r = n(503698),
-    l = n.n(r),
-    c = n(189213),
-    o = n(17928),
-    d = n(732771),
-    u = n(821609),
-    m = n(289873),
-    A = n(803306),
-    g = n(718213),
-    N = n(793574),
-    p = n(688810),
-    f = n(994500),
-    E = n(174459),
-    x = n(975571),
-    h = n(427262),
-    C = n(326084),
-    R = n(851746),
-    _ = n(794783),
-    I = n(972007),
-    T = n(772707),
-    b = n(844222),
-    j = n(778712),
-    v = n(97808),
-    S = n(834730),
-    P = n(534890),
-    y = n(90517),
-    M = n(308528),
-    O = n(854627),
-    L = n(830543),
-    D = n(652215),
-    U = n(375708),
-    k = n(494025);
+    a = n(503698),
+    o = n.n(a),
+    l = n(189213),
+    u = n(17928),
+    c = n(732771),
+    d = n(821609),
+    _ = n(289873),
+    h = n(803306),
+    f = n(718213),
+    p = n(793574),
+    E = n(688810),
+    m = n(994500),
+    g = n(174459),
+    A = n(975571),
+    I = n(427262),
+    T = n(326084),
+    S = n(851746),
+    y = n(794783),
+    C = n(972007),
+    N = n(772707),
+    v = n(844222),
+    R = n(778712),
+    O = n(97808),
+    b = n(834730),
+    D = n(534890),
+    L = n(90517),
+    w = n(308528),
+    M = n(854627),
+    P = n(830543),
+    x = n(652215),
+    k = n(375708),
+    U = n(494025);
 function G(e) {
     let { recipient: t, status: n, onClose: i } = e,
-        { avatarSrc: s, eventHandlers: r } = (0, O.A)({ userId: t?.id, size: j._3.SIZE_56 }),
-        c = h.Ay.getName(t),
-        o = n === C.o.FAIL;
-    return (0, a.jsxs)("div", {
-        className: k.w4,
+        { avatarSrc: s, eventHandlers: a } = (0, M.A)({ userId: t?.id, size: R._3.SIZE_56 }),
+        l = I.Ay.getName(t),
+        u = n === T.o.FAIL;
+    return (0, r.jsxs)("div", {
+        className: U.w4,
         children: [
-            (0, a.jsx)(v.eu, { imageClassName: l()({ [k.jN]: o }), src: s, "aria-label": c, size: j._3.SIZE_32, ...r }),
-            o
-                ? (0, a.jsxs)(a.Fragment, {
+            (0, r.jsx)(O.eu, { imageClassName: o()({ [U.jN]: u }), src: s, "aria-label": l, size: R._3.SIZE_32, ...a }),
+            u
+                ? (0, r.jsxs)(r.Fragment, {
                       children: [
-                          (0, a.jsx)(S.E, {
-                              className: k.E0,
+                          (0, r.jsx)(b.E, {
+                              className: U.E0,
                               variant: "text-md/medium",
                               color: "text-strong",
-                              children: c,
+                              children: l,
                           }),
-                          (0, a.jsx)(S.E, {
+                          (0, r.jsx)(b.E, {
                               variant: "text-md/medium",
-                              className: k.nT,
+                              className: U.nT,
                               color: "text-strong",
-                              children: U.intl.format(U.t.RO3T4B, { userName: c }),
+                              children: k.intl.format(k.t.RO3T4B, { userName: l }),
                           }),
                       ],
                   })
-                : (0, a.jsx)(S.E, { variant: "text-md/medium", className: k.Pm, color: "text-strong", children: c }),
-            (0, a.jsx)(u.$, {
+                : (0, r.jsx)(b.E, { variant: "text-md/medium", className: U.Pm, color: "text-strong", children: l }),
+            (0, r.jsx)(d.$, {
                 variant: "secondary",
                 size: "sm",
-                text: U.intl.string(U.t["g33r/P"]),
-                icon: P.o,
+                text: k.intl.string(k.t["g33r/P"]),
+                icon: D.o,
                 onClick: () => {
                     var e;
-                    return (e = t.id), void ((0, L.default)(), M.A.openPrivateChannel({ recipientIds: e }), i());
+                    return (e = t.id), void ((0, P.default)(), w.A.openPrivateChannel({ recipientIds: e }), i());
                 },
             }),
         ],
     });
 }
-function w(e) {
-    let { transitionState: t, results: n, onClose: i, isReminderConfirmation: r } = e,
-        l = (0, o.bG)([R.A], () => R.A.getReferralsRemaining());
-    E.default.track(D.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
-    let { reducedMotion: c } = s.useContext(b.C);
-    return null === l
-        ? (0, a.jsx)(m.y, {})
-        : (0, a.jsx)(T.k, {
-              graphic: c.enabled
+function F(e) {
+    let { transitionState: t, results: n, onClose: i, isReminderConfirmation: a } = e,
+        o = (0, u.bG)([S.A], () => S.A.getReferralsRemaining());
+    g.default.track(x.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED);
+    let { reducedMotion: l } = s.useContext(v.C);
+    return null === o
+        ? (0, r.jsx)(_.y, {})
+        : (0, r.jsx)(N.k, {
+              graphic: l.enabled
                   ? {
                         src: "https://cdn.discordapp.com/assets/content/7d3bb543f57192ba573ca7c515ef59c9cf5c285538f43508ccd8e10637ccd902.svg",
                         type: "image",
                     }
-                  : { rive: y.l, type: "rive" },
+                  : { rive: L.l, type: "rive" },
               gradientColor: "nitro-pink",
               title:
-                  0 === n.filter((e) => e.status === C.o.SUCCESS).length
-                      ? U.intl.string(U.t["7VBEue"])
-                      : !0 === r
-                        ? U.intl.string(U.t.GP5lbq)
-                        : U.intl.string(U.t.tKCltd),
+                  0 === n.filter((e) => e.status === T.o.SUCCESS).length
+                      ? k.intl.string(k.t["7VBEue"])
+                      : !0 === a
+                        ? k.intl.string(k.t.GP5lbq)
+                        : k.intl.string(k.t.tKCltd),
               subtitle:
-                  !0 === r
-                      ? U.intl.format(U.t["4gJJfD"], { helpdeskArticle: x.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) })
-                      : U.intl.format(U.t.AwGSWl, { helpdeskArticle: x.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) }),
+                  !0 === a
+                      ? k.intl.format(k.t["4gJJfD"], { helpdeskArticle: A.A.getArticleURL(x.MVz.REFERRAL_PROGRAM) })
+                      : k.intl.format(k.t.AwGSWl, { helpdeskArticle: A.A.getArticleURL(x.MVz.REFERRAL_PROGRAM) }),
               onClose: i,
               transitionState: t,
-              children: (0, a.jsx)("div", {
-                  className: k.Hz,
+              children: (0, r.jsx)("div", {
+                  className: U.Hz,
                   children: n.map((e) =>
-                      (0, a.jsx)(G, { recipient: e.recipient, status: e.status, onClose: i }, e.recipient.id),
+                      (0, r.jsx)(G, { recipient: e.recipient, status: e.status, onClose: i }, e.recipient.id),
                   ),
               }),
           });
 }
-var F = n(468049);
-function H(e) {
+var V = n(468049);
+function B(e) {
     let { transitionState: t, onClose: n, onShare: i } = e,
-        r = (0, o.bG)([R.A], () => R.A.getReferralsRemaining()),
-        A = (0, o.bG)([R.A], () => R.A.getHasEligibleFriends()),
-        [N, p] = s.useState(new Map()),
-        [f, E] = s.useState(""),
-        C = (0, g.A)(f, 400),
+        a = (0, u.bG)([S.A], () => S.A.getReferralsRemaining()),
+        h = (0, u.bG)([S.A], () => S.A.getHasEligibleFriends()),
+        [p, E] = s.useState(new Map()),
+        [m, g] = s.useState(""),
+        T = (0, f.A)(m, 400),
         {
-            eligibleUsers: T,
-            fetchUsers: b,
-            hasError: j,
-            isFetching: v,
-            resendUsers: S,
-        } = (0, I.i)({ searchQuery: C, selectedUsers: N }),
-        [P, y] = s.useState(!1),
-        M = T.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map());
-    return null === r
-        ? (0, a.jsx)(m.y, {})
-        : j
-          ? (0, a.jsx)(c.Modal, {
+            eligibleUsers: N,
+            fetchUsers: v,
+            hasError: R,
+            isFetching: O,
+            resendUsers: b,
+        } = (0, C.i)({ searchQuery: T, selectedUsers: p }),
+        [D, L] = s.useState(!1),
+        w = N.reduce((e, t) => (e.has(t.id) || e.set(t.id, t), e), new Map());
+    return null === a
+        ? (0, r.jsx)(_.y, {})
+        : R
+          ? (0, r.jsx)(l.Modal, {
                 transitionState: t,
                 size: "sm",
-                title: U.intl.string(U.t.lcuio4),
-                subtitle: U.intl.string(U.t["x09+CD"]),
+                title: k.intl.string(k.t.lcuio4),
+                subtitle: k.intl.string(k.t["x09+CD"]),
                 onClose: n,
                 actions: [],
             })
-          : !1 === A
-            ? (0, a.jsx)(c.Modal, {
+          : !1 === h
+            ? (0, r.jsx)(l.Modal, {
                   transitionState: t,
                   size: "sm",
-                  title: U.intl.string(U.t["2YigPp"]),
-                  subtitle: U.intl.format(U.t.OOCbz8, { helpdeskArticle: x.A.getArticleURL(D.MVz.REFERRAL_PROGRAM) }),
+                  title: k.intl.string(k.t["2YigPp"]),
+                  subtitle: k.intl.format(k.t.OOCbz8, { helpdeskArticle: A.A.getArticleURL(x.MVz.REFERRAL_PROGRAM) }),
                   onClose: n,
                   actions: [],
               })
-            : (0, a.jsx)(c.Modal, {
+            : (0, r.jsx)(l.Modal, {
                   size: "md",
                   transitionState: t,
-                  title: U.intl.string(U.t["2dVCLl"]),
-                  subtitle: U.intl.string(U.t.DXgoi2),
+                  title: k.intl.string(k.t["2dVCLl"]),
+                  subtitle: k.intl.string(k.t.DXgoi2),
                   onClose: n,
-                  input: (0, a.jsx)(d.iS, {
+                  input: (0, r.jsx)(c.iS, {
                       selectionMode: "multiple",
-                      value: Array.from(N.values()),
-                      options: Array.from(M.values()),
-                      formatOption: (e) => ({ id: e.id, value: e, label: h.Ay.getName(e) }),
+                      value: Array.from(p.values()),
+                      options: Array.from(w.values()),
+                      formatOption: (e) => ({ id: e.id, value: e, label: I.Ay.getName(e) }),
                       onSelectionChange: (e) => {
                           let t = Array.isArray(e) ? e : [e],
                               n = new Map();
                           t.forEach((e) => {
                               null != e && n.set(e.id, e);
                           }),
-                              p(n);
+                              E(n);
                       },
-                      children: (0, a.jsx)("div", {
-                          className: F.c,
-                          children: (0, a.jsx)(d.a3, {
-                              placeholder: 0 === N.size ? U.intl.string(U.t.Kd5RaI) : "",
+                      children: (0, r.jsx)("div", {
+                          className: V.c,
+                          children: (0, r.jsx)(c.a3, {
+                              placeholder: 0 === p.size ? k.intl.string(k.t.Kd5RaI) : "",
                               onQueryChange: (e) => {
-                                  E(e.target.value);
+                                  g(e.target.value);
                               },
                           }),
                       }),
@@ -179,135 +180,135 @@ function H(e) {
                   actionBarInput: (function (e) {
                       let t,
                           { eligibleRecipients: s } = e,
-                          r = C.length > 0 && 0 === s.size;
+                          a = T.length > 0 && 0 === s.size;
                       return (
                           (t =
-                              !0 === r
-                                  ? U.intl.string(U.t.wpSqAW)
-                                  : N.size <= 1
-                                    ? U.intl.string(U.t.ItpQxk)
-                                    : U.intl.format(U.t.iW2stn, { nTrials: N.size })),
-                          (0, a.jsx)("div", {
-                              className: l()(F.qr, F.h0),
-                              children: (0, a.jsx)(u.$, {
+                              !0 === a
+                                  ? k.intl.string(k.t.wpSqAW)
+                                  : p.size <= 1
+                                    ? k.intl.string(k.t.ItpQxk)
+                                    : k.intl.format(k.t.iW2stn, { nTrials: p.size })),
+                          (0, r.jsx)("div", {
+                              className: o()(V.qr, V.h0),
+                              children: (0, r.jsx)(d.$, {
                                   variant: "primary",
-                                  disabled: (0 === N.size && !r) || P,
+                                  disabled: (0 === p.size && !a) || D,
                                   text: t,
                                   size: "md",
                                   fullWidth: !0,
                                   onClick: async () => {
-                                      r ? n() : (y(!0), await i([...N.values()]), y(!1));
+                                      a ? n() : (L(!0), await i([...p.values()]), L(!1));
                                   },
                               }),
                           })
                       );
-                  })({ eligibleRecipients: M }),
+                  })({ eligibleRecipients: w }),
                   children: ((e) => {
                       let { eligibleRecipients: t } = e;
-                      return (0, a.jsx)(_.A, {
+                      return (0, r.jsx)(y.A, {
                           users: Array.from(t.values()),
-                          isUserSelected: (e) => N.has(e.id),
+                          isUserSelected: (e) => p.has(e.id),
                           onSelectionChange: (e, t) => {
-                              p((n) => {
+                              E((n) => {
                                   let i = new Map(n);
                                   return t ? i.set(e.id, e) : i.delete(e.id), i;
                               });
                           },
-                          isFetching: v,
-                          onFetchMore: b,
+                          isFetching: O,
+                          onFetchMore: v,
                           isUserDisabled: (e) =>
-                              null !== r &&
-                              0 !== r &&
-                              [...N.values()].filter((e) => !S.has(e.id)).length >= r &&
-                              !N.has(e.id) &&
-                              !S.has(e.id),
-                          searchQuery: C,
-                          emptySearchContent: { header: U.intl.string(U.t["8+ywHD"]), body: U.intl.string(U.t.CgQmY2) },
-                          className: F.p_,
+                              null !== a &&
+                              0 !== a &&
+                              [...p.values()].filter((e) => !b.has(e.id)).length >= a &&
+                              !p.has(e.id) &&
+                              !b.has(e.id),
+                          searchQuery: T,
+                          emptySearchContent: { header: k.intl.string(k.t["8+ywHD"]), body: k.intl.string(k.t.CgQmY2) },
+                          className: V.p_,
                       });
-                  })({ eligibleRecipients: M }),
+                  })({ eligibleRecipients: w }),
               });
 }
-function B(e) {
+function j(e) {
     let t,
-        { transitionState: n, onClose: i, onShare: r } = e,
-        d = (0, o.bG)([R.A], () => R.A.getRecipientStatus()),
-        [m, g] = s.useState(new Map()),
-        [N, p] = s.useState(new Map()),
-        [E, x] = s.useState(!1);
+        { transitionState: n, onClose: i, onShare: a } = e,
+        c = (0, u.bG)([S.A], () => S.A.getRecipientStatus()),
+        [_, f] = s.useState(new Map()),
+        [p, E] = s.useState(new Map()),
+        [g, A] = s.useState(!1);
     return (
         s.useEffect(() => {
             !(async function () {
                 let e = new Map();
-                for (let [t, n] of d) {
-                    if (f.A.isBlockedOrIgnored(t)) continue;
-                    let i = await (0, A.wz)(t);
+                for (let [t, n] of c) {
+                    if (m.A.isBlockedOrIgnored(t)) continue;
+                    let i = await (0, h.wz)(t);
                     (i.referralStatus = n), e.set(i.id, i);
                 }
-                g(e);
+                f(e);
             })();
-        }, [d]),
-        (0, a.jsx)(c.Modal, {
+        }, [c]),
+        (0, r.jsx)(l.Modal, {
             size: "md",
             transitionState: n,
-            title: U.intl.string(U.t.rKmy8I),
-            subtitle: U.intl.string(U.t.VDlF6o),
+            title: k.intl.string(k.t.rKmy8I),
+            subtitle: k.intl.string(k.t.VDlF6o),
             onClose: i,
             actions: [],
             actionBarInput:
-                ((t = N.size <= 1 ? U.intl.string(U.t.ItpQxk) : U.intl.format(U.t.iW2stn, { nTrials: N.size })),
-                (0, a.jsx)("div", {
-                    className: l()(F.qr, F.h0),
-                    children: (0, a.jsx)(u.$, {
+                ((t = p.size <= 1 ? k.intl.string(k.t.ItpQxk) : k.intl.format(k.t.iW2stn, { nTrials: p.size })),
+                (0, r.jsx)("div", {
+                    className: o()(V.qr, V.h0),
+                    children: (0, r.jsx)(d.$, {
                         variant: "primary",
-                        disabled: 0 === N.size || E,
+                        disabled: 0 === p.size || g,
                         text: t,
                         size: "md",
                         fullWidth: !0,
                         onClick: async () => {
-                            x(!0), await r([...N.values()]), x(!1);
+                            A(!0), await a([...p.values()]), A(!1);
                         },
                     }),
                 })),
-            children: (0, a.jsx)(_.A, {
-                users: Array.from(m.values()),
-                isUserSelected: (e) => N.has(e.id),
-                isUserDisabled: (e) => e.referralStatus === C.aK.REDEEMED,
+            children: (0, r.jsx)(y.A, {
+                users: Array.from(_.values()),
+                isUserSelected: (e) => p.has(e.id),
+                isUserDisabled: (e) => e.referralStatus === T.aK.REDEEMED,
                 onSelectionChange: (e, t) => {
-                    p((n) => {
+                    E((n) => {
                         let i = new Map(n);
                         return t ? i.set(e.id, e) : i.delete(e.id), i;
                     });
                 },
-                className: F.p_,
+                className: V.p_,
             }),
         })
     );
 }
-var V =
+var H =
     (((i = {})[(i.SELECT_FRIENDS = 1)] = "SELECT_FRIENDS"),
     (i[(i.CONFIRMATION = 2)] = "CONFIRMATION"),
     (i[(i.REMINDER = 3)] = "REMINDER"),
     i);
-let z = function (e) {
+let Y = function (e) {
     let { transitionState: t, onClose: n, startingScreen: i = 1 } = e,
-        r = (0, o.bG)([R.A], () => R.A.getReferralsRemaining()),
-        [l, c] = s.useState(i),
-        [d, u] = s.useState([]),
-        { analyticsLocations: A } = (0, p.Ay)([N.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
-    async function g(e) {
-        E.default.track(D.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: A });
-        let t = await (0, C.xm)(Object.values(e).map((e) => e.id));
-        u(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), c(2);
+        a = (0, u.bG)([S.A], () => S.A.getReferralsRemaining()),
+        [o, l] = s.useState(i),
+        [c, d] = s.useState([]),
+        { analyticsLocations: h } = (0, E.Ay)([p.A.PREMIUM_MARKETING_REFERALL_PROGRAM_SHARE_MODAL]);
+    async function f(e) {
+        g.default.track(x.HAw.REFERRAL_PROGRAM_SHARE_CTA_CLICKED, { location_stack: h });
+        let t = await (0, T.xm)(Object.values(e).map((e) => e.id));
+        d(e.map((e) => ({ recipient: e, status: t.get(e.id) }))), l(2);
     }
-    if (null === r) return (0, a.jsx)(m.y, {});
-    switch (l) {
+    if (null === a) return (0, r.jsx)(_.y, {});
+    switch (o) {
         case 2:
-            return (0, a.jsx)(w, { transitionState: t, isReminderConfirmation: 3 === i, results: d, onClose: n });
+            return (0, r.jsx)(F, { transitionState: t, isReminderConfirmation: 3 === i, results: c, onClose: n });
         case 1:
-            return (0, a.jsx)(H, { transitionState: t, onClose: n, onShare: g });
+            return (0, r.jsx)(B, { transitionState: t, onClose: n, onShare: f });
         case 3:
-            return (0, a.jsx)(B, { transitionState: t, onClose: n, onShare: g });
+            return (0, r.jsx)(j, { transitionState: t, onClose: n, onShare: f });
         default:
             return;
     }
