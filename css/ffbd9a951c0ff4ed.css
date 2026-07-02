@@ -24,12 +24,6 @@
     gap: var(--space-12)
 }
 
-.guildIcon_b2c7eb {
-    border-radius: var(--radius-sm);
-    height: 32px;
-    width: 32px
-}
-
 .channelName_b2c7eb {
     align-items: center;
     display: flex;

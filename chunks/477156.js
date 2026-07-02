@@ -1,4 +1,4 @@
-s.d(t, { default: () => tY });
+s.d(t, { default: () => t$ });
 var i = s(627968),
     l = s(64700),
     r = s(503698),
@@ -23,7 +23,7 @@ var i = s(627968),
     E = s(688810),
     _ = s(952818),
     w = s(885386),
-    N = s(472444),
+    N = s(451409),
     I = s(763827),
     O = s(287809),
     R = s(157257),
@@ -44,11 +44,11 @@ var D = s(342952),
     V = s(661531),
     Q = s(115718),
     W = s(280157),
-    z = s(174768),
-    q = s(146793),
-    X = s(95701),
-    $ = s(260509),
-    Y = s(734057),
+    z = s(548118),
+    q = s(174768),
+    X = s(146793),
+    Y = s(95701),
+    $ = s(734057),
     J = s(205761),
     K = s(808728),
     ee = s(71393),
@@ -76,7 +76,7 @@ function ed(e) {
             (0, i.jsxs)("div", {
                 className: eo.nN,
                 children: [
-                    (0, i.jsx)("img", { alt: "", src: null != l ? (0, $.Iv)(l, 32) : void 0, className: eo.$f }),
+                    null != l ? (0, i.jsx)(z.Ay, { guild: l, active: !0, size: z.Ay.Sizes.MEDIUM }) : void 0,
                     (0, i.jsxs)("div", {
                         children: [
                             (0, i.jsxs)(F.E, {
@@ -96,26 +96,26 @@ function ed(e) {
 }
 function eu(e) {
     let { onSelectChannel: t, className: s } = e,
-        { search: r, query: a, results: c } = (0, q.A)({ searchOptions: { frecencyBoosters: !0 } }),
-        o = (0, u.yK)([es.A, K.Ay, Y.A, ee.A, et.A], () => {
+        { search: r, query: a, results: c } = (0, X.A)({ searchOptions: { frecencyBoosters: !0 } }),
+        o = (0, u.yK)([es.A, K.Ay, $.A, ee.A, et.A], () => {
             let e = [],
                 t = es.A.getGuildId();
             if (null == t) return e;
             for (let s of K.Ay.getVocalChannelIds(t)) {
-                let t = Y.A.getChannel(s);
+                let t = $.A.getChannel(s);
                 null != t && (0, er.vz)(t, ee.A, et.A) && e.push(t);
             }
             return e;
         }),
-        d = (0, u.yK)([z.A, Y.A, J.A, ee.A, et.A], () => {
+        d = (0, u.yK)([q.A, $.A, J.A, ee.A, et.A], () => {
             let e = [],
                 t = new Set();
-            for (let s of z.A.getChannelHistory()) {
-                let i = Y.A.getChannel(s);
+            for (let s of q.A.getChannelHistory()) {
+                let i = $.A.getChannel(s);
                 i?.type === en.rbe.GUILD_VOICE && (0, er.vz)(i, ee.A, et.A) && (t.add(i.id), e.push(i));
             }
             for (let s of J.A.getFrequentlyWithoutFetchingLatest())
-                s instanceof X.YB &&
+                s instanceof Y.YB &&
                     s.type === en.rbe.GUILD_VOICE &&
                     !t.has(s.id) &&
                     (0, er.vz)(s, ee.A, et.A) &&
@@ -1400,8 +1400,8 @@ function eq(e) {
     });
 }
 var eX = s(843402),
-    e$ = s(859703),
-    eY = s(975571),
+    eY = s(859703),
+    e$ = s(975571),
     eJ = s(290805),
     eK = s(971276),
     e1 = s(639214),
@@ -1489,7 +1489,7 @@ function e4(e) {
             return t;
         }),
         S =
-            ((t = (0, u.bG)([e$.A], () => e$.A.quests)),
+            ((t = (0, u.bG)([eY.A], () => eY.A.quests)),
             (s = (0, eK.s)()),
             l.useMemo(() => {
                 if (null == n || !s) return null;
@@ -1574,7 +1574,7 @@ function e7() {
             }),
             (0, i.jsx)(F.E, {
                 variant: "text-sm/semibold",
-                children: ec.intl.format(ea.default.xpVzr3, { helpdeskURL: eY.A.getArticleURL(0x53d41ade17) }),
+                children: ec.intl.format(ea.default.xpVzr3, { helpdeskURL: e$.A.getArticleURL(0x53d41ade17) }),
             }),
         ],
     });
@@ -1613,7 +1613,7 @@ function tc(e) {
     return e === eO.on.RESOLUTION_SOURCE ? ec.intl.string(ec.t.XjXqzh) : `${e}p`;
 }
 function to() {
-    let e = (0, u.bG)([tr.A, Y.A], () => Y.A.getChannel(tr.A.getVoiceChannelId())),
+    let e = (0, u.bG)([tr.A, $.A], () => $.A.getChannel(tr.A.getVoiceChannelId())),
         t = e?.getGuildId();
     return (0, u.bG)([ee.A], () => (null != t ? ee.A.getGuild(t)?.premiumTier : null));
 }
@@ -1628,7 +1628,7 @@ let tu = (e) => {
 var tf = s(837859);
 function th(e) {
     let t = (0, u.bG)([O.default], () => O.default.getCurrentUser()),
-        s = (0, u.bG)([tr.A, Y.A], () => Y.A.getChannel(tr.A.getVoiceChannelId())),
+        s = (0, u.bG)([tr.A, $.A], () => $.A.getChannel(tr.A.getVoiceChannelId())),
         i = s?.getGuildId(),
         l = (0, u.bG)([ee.A], () => (null != i ? ee.A.getGuild(i)?.premiumTier : null));
     return (0, tf.Ay)(e, t, l);
@@ -1674,9 +1674,9 @@ function tS(e) {
             x,
         ] = eb(),
         p = (0, u.bG)([tr.A], () => tr.A.getVoiceChannelId()),
-        m = (0, u.bG)([Y.A, tl.A], () => {
+        m = (0, u.bG)([$.A, tl.A], () => {
             if (null == p) return !0;
-            let e = Y.A.getChannel(p),
+            let e = $.A.getChannel(p),
                 t = e?.guild_id;
             if (null == t) return !0;
             let s = tl.A.getMemberCount(t);
@@ -1899,7 +1899,7 @@ var tE = s(862482),
     tR = s(410516),
     tM = s(400669),
     tT = s(909536),
-    tL = s(788868),
+    tL = s(202541),
     tU = s(518728);
 function tG(e) {
     let { onClose: t } = e,
@@ -2097,8 +2097,8 @@ function tW() {
 var tz = s(451988);
 let tq = [d.fS.CAMERA],
     tX = [d.fS.SCREEN, d.fS.WINDOW, d.fS.CAMERA];
-var t$ = s(456713);
-function tY(e) {
+var tY = s(456713);
+function t$(e) {
     let { onClose: t, transitionState: s, sourcePID: r, analyticsLocations: a = [], selectSource: D = !0 } = e,
         P = (0, u.bG)([_.Ay], () => (null != r ? (_.Ay.getGameForPID(r) ?? void 0) : void 0)),
         F = l.useRef(performance.now()),
@@ -2173,8 +2173,8 @@ function tY(e) {
         z = !(0, M.isLinux)(),
         q = "confirm" === Q,
         X = !D && null != P && !q,
-        $ = q || B.sourceType === d.fS.CAMERA,
-        Y = k && B.sourceType !== d.fS.CAMERA,
+        Y = q || B.sourceType === d.fS.CAMERA,
+        $ = k && B.sourceType !== d.fS.CAMERA,
         J = l.useMemo(() => {
             let e = [
                 { name: ec.intl.string(ec.t.tHoi7u), value: d.fS.WINDOW, icon: h.W },
@@ -2231,21 +2231,21 @@ function tY(e) {
                 },
             },
             children: (0, i.jsxs)("div", {
-                className: n()(t$.zr, { [t$._g]: k && null == P, [t$.Tb]: X, [t$.Fe]: q }),
+                className: n()(tY.zr, { [tY._g]: k && null == P, [tY.Tb]: X, [tY.Fe]: q }),
                 children: [
                     X
-                        ? (0, i.jsx)(eu, { className: n()(t$.or, t$.Ym), onSelectChannel: et })
+                        ? (0, i.jsx)(eu, { className: n()(tY.or, tY.Ym), onSelectChannel: et })
                         : q
                           ? (0, i.jsx)(eP, {})
                           : (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     (0, i.jsx)("div", {
-                                        className: t$.wx,
+                                        className: tY.wx,
                                         children: (0, i.jsx)(j.I, {
-                                            className: t$.q0,
+                                            className: tY.q0,
                                             value: K,
                                             look: "pill",
-                                            optionClassName: t$.LD,
+                                            optionClassName: tY.LD,
                                             onChange: (e) => {
                                                 let { value: t } = e;
                                                 return V({ type: "set_source_type", sourceType: t });
@@ -2254,7 +2254,7 @@ function tY(e) {
                                         }),
                                     }),
                                     (0, i.jsx)(f.Ar, {
-                                        className: t$.Qs,
+                                        className: tY.Qs,
                                         children:
                                             k && K !== d.fS.CAMERA
                                                 ? (0, i.jsx)(eq, { onSourceSelect: es })
@@ -2269,27 +2269,27 @@ function tY(e) {
                                 ],
                             }),
                     (0, i.jsxs)("div", {
-                        className: t$.qr,
+                        className: tY.qr,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: t$.z8,
+                                className: tY.z8,
                                 children: [
                                     (0, i.jsx)(tW, {}),
                                     (0, i.jsxs)("div", {
-                                        className: t$.gt,
+                                        className: tY.gt,
                                         children: [
                                             W && (0, i.jsx)(ty, { onClose: t }),
-                                            (Y || $) &&
+                                            ($ || Y) &&
                                                 (0, i.jsx)(g.$, {
                                                     variant: "primary",
                                                     size: "md",
                                                     text: ec.intl.string(
-                                                        Y && "gamescope" !== B.nativeSourceType
+                                                        $ && "gamescope" !== B.nativeSourceType
                                                             ? ec.t.FiBjwU
                                                             : ea.default["5AyH/p"],
                                                     ),
                                                     onClick: () => {
-                                                        Y
+                                                        $
                                                             ? "gamescope" === B.nativeSourceType
                                                                 ? es()
                                                                 : ((0, L.E)(), (0, L.a)(B.nativeSourceType))
@@ -2298,15 +2298,15 @@ function tY(e) {
                                                               : null != B.selectedSource && ee(B.selectedSource);
                                                     },
                                                     disabled:
-                                                        (Y && !z && "" === B.nativeSourceType) ||
-                                                        ($ && null == B.selectedSource),
+                                                        ($ && !z && "" === B.nativeSourceType) ||
+                                                        (Y && null == B.selectedSource),
                                                 }),
                                             (0, i.jsx)(tC, { align: "right" }),
                                         ],
                                     }),
                                 ],
                             }),
-                            W && (0, i.jsx)("div", { className: t$.rO, children: (0, i.jsx)(tG, { onClose: t }) }),
+                            W && (0, i.jsx)("div", { className: tY.rO, children: (0, i.jsx)(tG, { onClose: t }) }),
                         ],
                     }),
                 ],
