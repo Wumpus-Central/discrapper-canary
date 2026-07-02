@@ -3,11 +3,11 @@ n.d(t, {
     $l: () => g,
     TF: () => l,
     Ul: () => m,
-    W0: () => c,
-    eZ: () => p,
+    W0: () => d,
+    eZ: () => E,
     pJ: () => f,
     tB: () => o,
-    w6: () => d,
+    w6: () => c,
     yy: () => h,
 }),
     n(140667);
@@ -26,8 +26,8 @@ class u {
     constructor(e, t, n, i) {
         (this.milliseconds += i || 0),
             (this.milliseconds += 1e3 * (n || 0)),
-            (this.milliseconds += 1e3 * (t || 0) * 60),
-            (this.milliseconds += 1e3 * (e || 0) * 3600);
+            (this.milliseconds += 6e4 * (t || 0)),
+            (this.milliseconds += 36e5 * (e || 0));
     }
     asMilliseconds = () => this.milliseconds;
     asSeconds = () => this.milliseconds / 1e3;
@@ -47,7 +47,7 @@ class u {
     static fromMinutes = (e) => new u(0, e);
     static fromHours = (e) => new u(e);
 }
-class c {
+class d {
     timestampProducer;
     startTime = void 0;
     timePassed = 0;
@@ -85,15 +85,15 @@ class c {
         return null != this.startTime;
     }
     static startNew() {
-        let e = new c();
+        let e = new d();
         return e.start(), e;
     }
 }
-class d {
+class c {
     stopwatch;
     state;
     constructor(e, t = l) {
-        (this.stopwatch = new c(t)), (this.state = e), this.stopwatch.toggle(e);
+        (this.stopwatch = new d(t)), (this.state = e), this.stopwatch.toggle(e);
     }
     set value(e) {
         this.stopwatch.toggle(e), (this.state = e);
@@ -113,7 +113,7 @@ class d {
 }
 class _ {
     timeout;
-    watch = new c();
+    watch = new d();
     constructor(e) {
         this.timeout = e;
     }
@@ -156,7 +156,7 @@ var f =
     (i.MONTHS = "MONTHS"),
     (i.YEARS = "YEARS"),
     i);
-function p(e, t) {
+function E(e, t) {
     switch (t) {
         case "NONE":
             return 0;
@@ -176,7 +176,7 @@ function p(e, t) {
             return e / 60 / 24 / 365;
     }
 }
-let E = [
+let p = [
     { unit: "NONE", max: 0 },
     { unit: "SECONDS", max: 1 },
     { unit: "MINUTES", max: 60 },
@@ -187,12 +187,12 @@ let E = [
     { unit: "YEARS", max: 1 / 0 },
 ];
 function m(e, t) {
-    let n = E.findIndex((t) => {
+    let n = p.findIndex((t) => {
             let { max: n, unit: i } = t;
             return ("NONE" === i && e === n) || e < n;
         }),
         i = s()(
-            E,
+            p,
             (e) => {
                 let { unit: n } = e;
                 return t(n);
@@ -200,7 +200,7 @@ function m(e, t) {
             n,
         );
     if (null != i) return i.unit;
-    let r = E.find((e) => {
+    let r = p.find((e) => {
         let { unit: n } = e;
         return t(n);
     });
@@ -209,6 +209,6 @@ function m(e, t) {
 function g(e, t) {
     if (null == e) return { unit: "NONE", time: 0 };
     let n = m(e, (e) => t.includes(e)),
-        i = null != n ? p(e, n) : null;
+        i = null != n ? E(e, n) : null;
     return { unit: n, time: null != i ? Math.floor(i) : null };
 }

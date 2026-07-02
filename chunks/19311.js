@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => A, ti: () => p });
+n.d(t, { Ay: () => A, CY: () => p, ti: () => E });
 var i,
     r = n(627968);
 n(64700);
@@ -8,17 +8,17 @@ var s = n(503698),
     o = n(331322),
     l = n(990078),
     u = n(821609),
-    c = n(123292),
-    d = n(364840),
+    d = n(123292),
+    c = n(364840),
     _ = n(999784),
     h = n(375708),
-    f = n(503020),
-    p =
+    f = n(613676),
+    E =
         (((i = {})[(i.CONTINUE = 0)] = "CONTINUE"),
         (i[(i.UPGRADE = 1)] = "UPGRADE"),
         (i[(i.PURCHASE = 2)] = "PURCHASE"),
         i);
-function E(e) {
+function p(e) {
     return 2 === e ? "expressive" : 0 === e ? "primary" : "active";
 }
 function m(e) {
@@ -31,7 +31,7 @@ function m(e) {
             primarySubmitting: o,
             onPrimary: l,
         } = e,
-        c = {
+        d = {
             type: i,
             disabled: a,
             onClick: l,
@@ -39,7 +39,7 @@ function m(e) {
             loading: o,
             text: s,
         };
-    return 2 === n ? (0, r.jsx)(u.$, { variant: E(n), ...c }) : (0, r.jsx)(u.$, { ...c, variant: E(n) });
+    return 2 === n ? (0, r.jsx)(u.$, { variant: p(n), ...d }) : (0, r.jsx)(u.$, { ...d, variant: p(n) });
 }
 function g(e) {
     let {
@@ -48,8 +48,8 @@ function g(e) {
             primaryIcon: i,
             primaryCTA: s,
             primaryType: u,
-            primaryText: p,
-            primaryTooltip: E,
+            primaryText: E,
+            primaryTooltip: p,
             primaryDisabled: g,
             primarySubmitting: A,
             onPrimary: I,
@@ -57,7 +57,7 @@ function g(e) {
         T =
             null == t
                 ? null
-                : (0, r.jsx)(c.Q, { text: n ?? h.intl.string(h.t["13/7kX"]), onClick: t, variant: "secondary" }),
+                : (0, r.jsx)(d.Q, { text: n ?? h.intl.string(h.t["13/7kX"]), onClick: t, variant: "secondary" }),
         S = (0, r.jsxs)(o.B, {
             direction: "horizontal",
             align: "center",
@@ -67,25 +67,25 @@ function g(e) {
             children: [
                 (0, r.jsx)(_.A, {}),
                 (() => {
-                    if (null == s || null == p) return null;
+                    if (null == s || null == E) return null;
                     let e = {
                         primaryIcon: i,
                         primaryCTA: s,
                         primaryType: u,
-                        primaryText: p,
+                        primaryText: E,
                         primaryDisabled: g,
                         primarySubmitting: A,
                         onPrimary: I,
                     };
-                    return null != E
-                        ? (0, r.jsx)(l.m, { text: E, asContainer: !0, children: (0, r.jsx)(m, { ...e }) })
+                    return null != p
+                        ? (0, r.jsx)(l.m, { text: p, asContainer: !0, children: (0, r.jsx)(m, { ...e }) })
                         : (0, r.jsx)(m, { ...e, onPrimary: I });
                 })(),
             ],
         });
-    return (0, r.jsx)(d.j, {
+    return (0, r.jsx)(c.j, {
         children: (0, r.jsxs)("div", { className: a()(f.eT, { [f.T$]: null == T }), children: [T, S] }),
     });
 }
-g.CTAType = p;
+g.CTAType = E;
 let A = g;

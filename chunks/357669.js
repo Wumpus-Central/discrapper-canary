@@ -1,10 +1,11 @@
-n.d(t, { b: () => o });
+"use strict";
+n.d(t, { b: () => l });
 var i = n(174459),
-    l = n(840251),
+    r = n(840251),
     s = n(688151),
-    u = n(652215);
-let a = new l.E([], s.$G.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
-function o(e) {
+    a = n(652215);
+let o = new r.E([], s.$G.PAYMENT_FLOW_STARTED, { location: "payment flow started" });
+function l(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    i.default.track(u.HAw.PAYMENT_FLOW_STARTED, e, t), a.trigger();
+    i.default.track(a.HAw.PAYMENT_FLOW_STARTED, e, t), o.trigger();
 }
