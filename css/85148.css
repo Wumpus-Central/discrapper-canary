@@ -78,10 +78,9 @@
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    max-width: 380px;
     overflow: hidden;
     position: relative;
-    width: 100%
+    width: 380px
 }
 
 .embed_cbd65e:hover {
@@ -177,12 +176,11 @@
     border-radius: var(--radius-sm);
     color: var(--text-strong);
     cursor: pointer;
-    max-width: 300px;
     overflow: hidden;
     padding: var(--space-12);
     position: relative;
     text-align: start;
-    width: 100%
+    width: 300px
 }
 
 .body_bbe1d5 {

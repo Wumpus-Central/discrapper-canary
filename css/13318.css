@@ -4089,23 +4089,10 @@ screen and (max-width:485px) {
     box-sizing: border-box;
     display: inline-flex;
     gap: var(--space-4);
-    max-width: 100%;
-    min-width: 0;
     padding: 0 var(--space-8);
     position: relative;
     text-align: center;
     text-transform: uppercase
-}
-
-.badge_c2b88c>:not(.label_c2b88c) {
-    flex-shrink: 0
-}
-
-.label_c2b88c {
-    min-width: 0;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
 }
 
 .default_c2b88c {
