@@ -1,9 +1,9 @@
 "use strict";
 n.d(t, { u: () => o });
 var i = n(64700),
-    r = n(716263),
+    r = n(862019),
     s = n(879821),
-    a = n(38339);
+    a = n(193439);
 function o(e) {
     let {
             defaultOpen: t,
@@ -11,21 +11,21 @@ function o(e) {
             placement: o,
             matchReferenceWidth: l = !0,
             setHeight: u,
-            setWidth: c,
-            transform: d,
+            setWidth: d,
+            transform: c,
         } = e,
         [_, h] = i.useState(t ?? !1),
         f = i.useRef(u);
     i.useEffect(() => {
         f.current = u;
     }, [u]);
-    let p = i.useRef(c);
+    let E = i.useRef(d);
     i.useEffect(() => {
-        p.current = c;
-    }, [c]);
-    let E = i.useRef(l);
+        E.current = d;
+    }, [d]);
+    let p = i.useRef(l);
     i.useEffect(() => {
-        E.current = l;
+        p.current = l;
     }, [l]);
     let {
             refs: m,
@@ -34,19 +34,19 @@ function o(e) {
         } = (0, r.we)({
             open: _,
             onOpenChange: h,
-            transform: d,
+            transform: c,
             middleware: [
                 null == o ? (0, s.RK)() : void 0,
                 (0, s.Ej)({
                     apply(e) {
                         let { rects: t, elements: n } = e;
-                        E.current &&
+                        p.current &&
                             Object.assign(n.floating.style, {
                                 minWidth: `${t.reference.width}px`,
                                 width: `${t.reference.width}px`,
                             }),
-                            null != p.current &&
-                                Object.assign(n.floating.style, { width: `${p.current(t.reference)}px` }),
+                            null != E.current &&
+                                Object.assign(n.floating.style, { width: `${E.current(t.reference)}px` }),
                             null != f.current &&
                                 Object.assign(n.floating.style, { maxHeight: `${f.current(t.reference)}px` });
                     },

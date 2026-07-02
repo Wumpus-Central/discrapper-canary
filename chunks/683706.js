@@ -1,11 +1,10 @@
 "use strict";
-n.d(t, { A: () => s });
-var i = n(29583),
-    r = n(618027);
-function s(e, t) {
-    (0, r.A)(2, arguments);
-    var n = (0, i.default)(e),
-        s = (0, i.default)(t),
-        a = n.getTime() - s.getTime();
-    return a < 0 ? -1 : a > 0 ? 1 : a;
+if ((n.d(t, { A: () => i }), !/^(38190|98365)$/.test(n.j))) var r = n(29583);
+if (!/^(38190|98365)$/.test(n.j)) var a = n(618027);
+function i(e, t) {
+    (0, a.A)(2, arguments);
+    var n = (0, r.default)(e),
+        i = (0, r.default)(t),
+        o = n.getTime() - i.getTime();
+    return o < 0 ? -1 : o > 0 ? 1 : o;
 }
