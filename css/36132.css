@@ -299,16 +299,16 @@
 .akaPopoverContent_f75fb0 {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: var(--space-8);
     max-width: 280px;
     min-width: 180px;
-    padding: 12px
+    text-align: start
 }
 
 .akaPopoverHeader_f75fb0 {
     align-items: baseline;
     display: flex;
-    gap: 8px;
+    gap: var(--space-8);
     min-width: 0
 }
 
@@ -319,35 +319,40 @@
     white-space: nowrap
 }
 
+.akaPopoverLabel_f75fb0 {
+    flex-shrink: 0
+}
+
 .akaPopoverDivider_f75fb0 {
     align-self: stretch;
     background: var(--border-subtle);
     height: 1px
 }
 
-.akaPopoverBadge_f75fb0 {
-    background-color: var(--background-base-lower);
-    color: var(--text-default);
-    flex-shrink: 0
-}
-
 .akaPopoverNicknames_f75fb0 {
     display: flex;
     flex-direction: column;
-    gap: 8px
+    gap: var(--space-4)
 }
 
 .akaPopoverRow_f75fb0 {
     align-items: center;
     display: flex;
-    gap: 8px
+    gap: var(--space-12);
+    justify-content: space-between
 }
 
 .akaPopoverNickname_f75fb0 {
+    flex: 1 1 auto;
     min-width: 0;
     overflow: hidden;
+    text-align: start;
     text-overflow: ellipsis;
     white-space: nowrap
+}
+
+.akaPopoverGuilds_f75fb0 {
+    flex-shrink: 0
 }
 
 .dmHeaderActivityStatus_f75fb0 {

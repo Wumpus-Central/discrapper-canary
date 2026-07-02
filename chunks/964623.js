@@ -30,11 +30,12 @@ f.exports = {
     y$: "akaPopoverContent_f75fb0",
     qc: "akaPopoverHeader_f75fb0",
     rX: "akaPopoverUsername_f75fb0",
+    FQ: "akaPopoverLabel_f75fb0",
     sA: "akaPopoverDivider_f75fb0",
-    qk: "akaPopoverBadge_f75fb0",
     cC: "akaPopoverNicknames_f75fb0",
     BZ: "akaPopoverRow_f75fb0",
     Vk: "akaPopoverNickname_f75fb0",
+    Js: "akaPopoverGuilds_f75fb0",
     aQ: "dmHeaderActivityStatus_f75fb0",
     gr: "dmHeaderActivityStatusClickable_f75fb0",
 };

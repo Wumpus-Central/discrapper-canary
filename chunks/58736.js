@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => C, In: () => I, cG: () => S });
+n.d(t, { Ay: () => y, In: () => I });
 var i = n(627968),
     r = n(64700),
     s = n(503698),
@@ -126,10 +126,6 @@ let I = r.forwardRef(function (e, t) {
         return (0, i.jsx)(I, { ...r, className: a()(A.p, n), ref: t });
     });
 function S(e) {
-    let { className: t } = e;
-    return (0, i.jsx)(g.A, { className: a()(A.Om, t) });
-}
-function y(e) {
     let {
             className: t,
             innerClassName: n,
@@ -172,9 +168,9 @@ function y(e) {
         }),
     });
 }
-(y.Icon = I),
-    (y.ChannelIcon = T),
-    (y.Title = function (e) {
+(S.Icon = I),
+    (S.ChannelIcon = T),
+    (S.Title = function (e) {
         let {
                 className: t,
                 wrapperClassName: n,
@@ -182,60 +178,75 @@ function y(e) {
                 onContextMenu: s,
                 onClick: o,
                 onKeyDown: l,
-                id: u,
-                muted: h = !1,
-                level: f = 1,
-                ref: p,
-                role: E,
-                tabIndex: m,
-                "aria-label": g,
-                "aria-selected": I,
-                "aria-controls": T,
-                "aria-current": S,
+                onMouseEnter: u,
+                onMouseLeave: h,
+                onFocus: f,
+                onBlur: p,
+                id: E,
+                muted: m = !1,
+                level: g = 1,
+                ref: I,
+                role: T,
+                tabIndex: S,
+                "aria-label": y,
+                "aria-selected": C,
+                "aria-controls": N,
+                "aria-current": v,
             } = e,
-            y = (0, i.jsx)(c.F, {
-                forceLevel: f,
+            R = (0, i.jsx)(c.F, {
+                forceLevel: g,
                 children: (0, i.jsx)(d.D, {
                     variant: "text-md/medium",
-                    color: h ? "text-default" : void 0,
+                    color: m ? "text-default" : void 0,
                     className: a()(t, A.DD, { [A.NP]: null != o }),
-                    id: u,
+                    id: E,
                     children: r,
                 }),
             });
         return null != o
             ? (0, i.jsx)(_.D, {
-                  innerRef: p,
+                  innerRef: I,
                   onClick: o,
                   onContextMenu: s,
                   onKeyDown: l,
+                  onMouseEnter: u,
+                  onMouseLeave: h,
+                  onFocus: f,
+                  onBlur: p,
                   className: a()(n, A.oB),
-                  role: E,
-                  tabIndex: m,
-                  "aria-label": g,
-                  "aria-selected": I,
-                  "aria-controls": T,
-                  "aria-current": S,
-                  children: y,
+                  role: T,
+                  tabIndex: S,
+                  "aria-label": y,
+                  "aria-selected": C,
+                  "aria-controls": N,
+                  "aria-current": v,
+                  children: R,
               })
             : (0, i.jsx)("div", {
-                  ref: p,
+                  ref: I,
                   className: a()(n, A.oB),
                   onContextMenu: s,
                   onKeyDown: l,
-                  role: E,
-                  "aria-label": g,
-                  "aria-selected": I,
-                  "aria-controls": T,
-                  "aria-current": S,
-                  children: y,
+                  onMouseEnter: u,
+                  onMouseLeave: h,
+                  onFocus: f,
+                  onBlur: p,
+                  role: T,
+                  "aria-label": y,
+                  "aria-selected": C,
+                  "aria-controls": N,
+                  "aria-current": v,
+                  children: R,
               });
     }),
-    (y.Divider = S),
-    (y.Caret = function (e) {
+    (S.Divider = function (e) {
+        let { className: t } = e;
+        return (0, i.jsx)(g.A, { className: a()(A.Om, t) });
+    }),
+    (S.Caret = function (e) {
         let { direction: t = "right", className: n } = e;
         return "right" === t
             ? (0, i.jsx)(h._, { size: "md", color: "currentColor", className: a()(A.OW, n) })
             : (0, i.jsx)(f.n, { size: "md", color: "currentColor", className: a()(A.OW, n) });
     });
-let C = y;
+let y = S;
