@@ -415,7 +415,12 @@ function tc(e) {
         c = (0, e2.aJ)("ClipsPopout"),
         _ = (0, d.bG)([eB.Ay], () => eB.Ay.getEnableAutoclipping()),
         h = (0, d.bG)([eX.Ay], () => eX.Ay.getKeybindForAction(to.hCu.SAVE_CLIP)),
-        f = r.useRef(null),
+        f = r.useCallback(
+            (e) => {
+                a?.(e);
+            },
+            [a],
+        ),
         E = !l.showPovClipsInGallery,
         p = r.useMemo(() => {
             let e = o.filter((e) => e.type === e1.nQ.CLIP && "" !== e.thumbnail && (!E || !(0, ej.kD)(e)));
@@ -432,9 +437,7 @@ function tc(e) {
     return (
         c && I.push(ef.intl.string(tu.default.XWkJoi)),
         (0, i.jsxs)("div", {
-            ref: (e) => {
-                (f.current = e), a?.(e);
-            },
+            ref: f,
             className: td.SW,
             role: "dialog",
             "aria-label": ef.intl.string(ef.t.z2jK6X),
@@ -3138,7 +3141,7 @@ class ry extends r.PureComponent {
                     n.e("54658"),
                     n.e("49409"),
                     n.e("81754"),
-                    n.e("52850"),
+                    n.e("49413"),
                     n.e("33049"),
                     n.e("21403"),
                     n.e("43456"),
