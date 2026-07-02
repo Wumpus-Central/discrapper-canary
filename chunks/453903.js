@@ -7,20 +7,20 @@ var i = n(627968),
     o = n(296489),
     l = n.n(o),
     u = n(340287),
-    c = n(621466),
-    d = n(707554),
+    d = n(621466),
+    c = n(707554),
     _ = n(365912),
     h = n(623646),
     f = n(451988),
-    p = n(192308),
-    E = n(750506),
+    E = n(192308),
+    p = n(750506),
     m = n(267102),
     g = n(712687),
     A = n(38405),
     I = n(292036),
     T = n(652215);
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
-    y = new Set(["Spacebar", " ", "Enter"]);
+    N = new Set(["Spacebar", " ", "Enter"]);
 class C extends r.Component {
     static defaultProps = {
         autoInvert: !1,
@@ -77,7 +77,7 @@ class C extends r.Component {
     }
     getDomElement() {
         let e = this.props.targetElementRef?.current;
-        if (!(0, c.vq)(e)) {
+        if (!(0, d.vq)(e)) {
             let e = Error("Popout cannot find DOM node");
             return console.error(e), A.A.captureException(e), null;
         }
@@ -99,7 +99,7 @@ class C extends r.Component {
             this.context.windowDispatch.subscribe(this.closeAction, this.handleEscapeClose),
             (this.domElementRef.current = t),
             (this.isValidClickStart = !1),
-            e && (this.modalsAtOpen = (0, p.getOpenModalKeys)()),
+            e && (this.modalsAtOpen = (0, E.getOpenModalKeys)()),
             this.subscribeToModalStack(),
             this.forceUpdate());
     }
@@ -107,10 +107,10 @@ class C extends r.Component {
         !0 === this.props.clickTrap &&
             (this.updateModalStackedOnTop(),
             null == this.unsubscribeModalChanges &&
-                (this.unsubscribeModalChanges = (0, p.subscribeToModalChanges)(this.updateModalStackedOnTop)));
+                (this.unsubscribeModalChanges = (0, E.subscribeToModalChanges)(this.updateModalStackedOnTop)));
     }
     updateModalStackedOnTop = () => {
-        let e = (0, p.hasModalOpenedSince)(this.modalsAtOpen);
+        let e = (0, E.hasModalOpenedSince)(this.modalsAtOpen);
         this.state.isModalStackedOnTop !== e && this.setState({ isModalStackedOnTop: e });
     };
     unsubscribe() {
@@ -148,7 +148,7 @@ class C extends r.Component {
                     },
                     { isShown: n, position: this.state.renderedPosition },
                 ),
-                (0, i.jsx)(d.F, { forceLevel: 2, children: this.renderLayer() }),
+                (0, i.jsx)(c.F, { forceLevel: 2, children: this.renderLayer() }),
             ],
         });
     }
@@ -164,16 +164,16 @@ class C extends r.Component {
                 offset: o,
                 autoInvert: l,
                 fixed: u,
-                positionKey: c,
-                disablePointerEvents: d,
+                positionKey: d,
+                disablePointerEvents: c,
                 layerContext: f,
-                clickTrap: p = !1,
+                clickTrap: E = !1,
             } = this.props,
             { resizeKey: m, isLoading: g, shouldShowLoadingState: A } = this.state;
         return g && !A
             ? null
             : (0, i.jsx)(_.Wd, {
-                  layerContext: f ?? E.uY,
+                  layerContext: f ?? p.uY,
                   children: (0, i.jsx)(h.Q, {
                       ref: this.layerRef,
                       onMount: this.handlePopoutShow,
@@ -189,10 +189,10 @@ class C extends r.Component {
                       offset: o,
                       autoInvert: l,
                       fixed: u,
-                      positionKey: c ?? String(m),
-                      disablePointerEvents: d,
+                      positionKey: d ?? String(m),
+                      disablePointerEvents: c,
                       onPositionChange: this.handlePopoutPositionChange,
-                      clickTrap: p && !this.state.isModalStackedOnTop,
+                      clickTrap: E && !this.state.isModalStackedOnTop,
                       children: this.renderPopout,
                   }),
               });
@@ -205,16 +205,17 @@ class C extends r.Component {
     };
     handleSetPopoutRef = (e) => {
         let t = e?.ownerDocument.defaultView;
-        null != e &&
-            null != t &&
-            ((this.popoutRef.current = e),
-            this.resizeObserver?.disconnect(),
-            (this.resizeObserver = new t.ResizeObserver(() => {
-                u.flushSync(() => {
-                    this.setState({ resizeKey: this.state.resizeKey + 1 });
-                });
-            })),
-            this.resizeObserver.observe(e));
+        null == e ||
+            null == t ||
+            (this.popoutRef.current !== e &&
+                ((this.popoutRef.current = e),
+                this.resizeObserver?.disconnect(),
+                (this.resizeObserver = new t.ResizeObserver(() => {
+                    u.flushSync(() => {
+                        this.setState({ resizeKey: this.state.resizeKey + 1 });
+                    });
+                })),
+                this.resizeObserver.observe(e)));
     };
     renderPopout = (e, t) => {
         let { renderPopout: n } = this.props;
@@ -257,7 +258,7 @@ class C extends r.Component {
         }
     };
     handleKeyboardPreload = (e) => {
-        y.has(e.key) && this.handlePreload();
+        N.has(e.key) && this.handlePreload();
     };
     handleDocumentMouseDown = (e) => {
         let { ignoreModalClicks: t, closeOnClickOutside: n } = this.props;
@@ -265,7 +266,7 @@ class C extends r.Component {
         let i = e.target,
             r = this.domElementRef.current;
         if (null != r) {
-            if ((0, h.H)(r, i) || g.A.isOpen() || (t && (0, p.hasModalOpenedSince)(this.modalsAtOpen))) return;
+            if ((0, h.H)(r, i) || g.A.isOpen() || (t && (0, E.hasModalOpenedSince)(this.modalsAtOpen))) return;
             this.isValidClickStart = !0;
         }
     };
