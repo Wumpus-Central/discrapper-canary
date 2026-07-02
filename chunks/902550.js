@@ -1,35 +1,35 @@
-a.d(t, { default: () => ep });
+a.d(t, { default: () => eE });
 var l = a(627968),
     n = a(64700),
     r = a(503698),
-    i = a.n(r),
-    s = a(17928),
-    c = a(990078),
-    o = a(189213),
+    s = a.n(r),
+    i = a(17928),
+    c = a(189213),
+    o = a(939249),
     u = a(834730),
     d = a(403581),
-    h = a(187322),
+    h = a(140735),
     A = a(750943),
-    m = a(140735),
-    x = a(939249),
-    g = a(391242),
-    f = a(638495),
-    E = a(192308),
-    C = a(793574),
-    p = a(688810),
-    j = a(753838),
-    T = a(946274),
-    N = a(702211),
-    R = a(699576),
-    y = a(392107),
-    v = a(241326),
+    m = a(391242),
+    g = a(638495),
+    x = a(192308),
+    f = a(793574),
+    E = a(688810),
+    C = a(753838),
+    p = a(946274),
+    j = a(702211),
+    T = a(699576),
+    N = a(392107),
+    R = a(990078),
+    v = a(187322),
+    y = a(241326),
     _ = a(534514),
     F = a(289873),
-    S = a(695366),
-    b = a(661531),
-    L = a(287809),
-    w = a(101058),
-    I = a(636537),
+    L = a(695366),
+    S = a(661531),
+    b = a(287809),
+    I = a(101058),
+    w = a(636537),
     H = a(765178),
     M = a(228366),
     k = a(157559),
@@ -39,7 +39,7 @@ function D() {
 }
 let P = [],
     O = D();
-class G extends s.Ay.Store {
+class G extends i.Ay.Store {
     static displayName = "RecentAvatarsStore";
     get isFetching() {
         return O.isFetching;
@@ -83,7 +83,7 @@ async function q() {
     if (z.shouldFetch) {
         M.h.dispatch({ type: "RECENT_AVATARS_FETCH_START" });
         try {
-            let e = await I.Bo.get({ url: V.Rsh.RECENT_AVATARS, rejectWithError: !0 });
+            let e = await w.Bo.get({ url: V.Rsh.RECENT_AVATARS, rejectWithError: !0 });
             M.h.dispatch({
                 type: "RECENT_AVATARS_FETCH_SUCCESS",
                 avatars: e.body.avatars.map((e) => {
@@ -98,7 +98,7 @@ async function q() {
 }
 async function J(e) {
     try {
-        await I.Bo.del({ url: V.Rsh.RECENT_AVATARS_DELETE(e), rejectWithError: !0 }),
+        await w.Bo.del({ url: V.Rsh.RECENT_AVATARS_DELETE(e), rejectWithError: !0 }),
             await M.h.dispatch({ type: "RECENT_AVATAR_DELETE", avatarId: e }),
             H.O.announce(B.intl.string(B.t.YJPieI));
     } catch (e) {
@@ -115,7 +115,7 @@ function W(e) {
         width: n,
         height: n,
         viewBox: `0 0 ${n} ${n}`,
-        className: i()(Z.R, t),
+        className: s()(Z.R, t),
         "aria-hidden": !0,
         children: (0, l.jsx)("path", {
             fillRule: "evenodd",
@@ -128,39 +128,39 @@ var $ = a(656925),
     Y = a(339984),
     Q = a(712839);
 function ee(e) {
-    let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: i, avatarButtonRef: s } = e,
-        { id: o, storageHash: u, description: d = B.intl.string(B.t.lqaIxI) } = t,
-        { avatarSrc: A, eventHandlers: m } = (0, $.A)({ avatarId: o, storageHash: u }),
-        { onMouseEnter: g, onMouseLeave: f } = m,
-        E = n.useRef(null),
-        C = d ?? u.substring(0, 6).toUpperCase(),
-        p = B.intl.formatToPlainString(B.t.tmJ75y, { orderNumber: a + 1, description: C }),
-        j = B.intl.formatToPlainString(B.t.pBzwhc, { orderNumber: a + 1, description: C });
+    let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: s, avatarButtonRef: i } = e,
+        { id: c, storageHash: u, description: d = B.intl.string(B.t.lqaIxI) } = t,
+        { avatarSrc: h, eventHandlers: A } = (0, $.A)({ avatarId: c, storageHash: u }),
+        { onMouseEnter: m, onMouseLeave: g } = A,
+        x = n.useRef(null),
+        f = d ?? u.substring(0, 6).toUpperCase(),
+        E = B.intl.formatToPlainString(B.t.tmJ75y, { orderNumber: a + 1, description: f }),
+        C = B.intl.formatToPlainString(B.t.pBzwhc, { orderNumber: a + 1, description: f });
     return (0, l.jsxs)("div", {
         className: Q.ge,
         children: [
-            (0, l.jsx)(x.D, {
+            (0, l.jsx)(o.D, {
                 onClick: () => r(t),
-                onMouseEnter: g,
-                onMouseLeave: f,
+                onMouseEnter: m,
+                onMouseLeave: g,
                 className: Q.Hk,
-                "aria-label": p,
-                innerRef: s,
-                children: (0, l.jsx)("img", { src: A, alt: d, className: Q.Hc }),
+                "aria-label": E,
+                innerRef: i,
+                children: (0, l.jsx)("img", { src: h, alt: d, className: Q.Hc }),
             }),
-            (0, l.jsx)(c.m, {
+            (0, l.jsx)(R.m, {
                 text: B.intl.string(B.t.N86XcP),
-                anchorRef: E,
+                anchorRef: x,
                 asContainer: !0,
                 ariaHidden: !0,
-                children: (0, l.jsx)(h.vN, {
+                children: (0, l.jsx)(v.vN, {
                     children: (0, l.jsx)("button", {
                         type: "button",
-                        ref: E,
-                        "aria-label": j,
-                        onClick: (e) => i(e, a, o, u, j),
+                        ref: x,
+                        "aria-label": C,
+                        onClick: (e) => s(e, a, c, u, C),
                         className: Q.G5,
-                        children: (0, l.jsx)(v.u, { size: "xs", color: "currentColor", className: Q.fy }),
+                        children: (0, l.jsx)(y.u, { size: "xs", color: "currentColor", className: Q.fy }),
                     }),
                 }),
             }),
@@ -169,27 +169,27 @@ function ee(e) {
 }
 function et(e) {
     let { avatars: t, onComplete: r, setFetchError: c, className: o } = e,
-        u = (0, s.bG)([L.default], () => L.default.getCurrentUser()),
+        u = (0, i.bG)([b.default], () => b.default.getCurrentUser()),
         d = n.useRef([]),
-        h = n.useRef(null),
-        A = n.useRef(t.length),
-        x = n.useRef(null),
-        [g, C] = n.useState(!1),
+        A = n.useRef(null),
+        m = n.useRef(t.length),
+        f = n.useRef(null),
+        [E, C] = n.useState(!1),
         [p, j] = n.useState(!1),
         T = t.length,
         N = Math.max(6 - T, 0),
-        R = (0, f.k)(),
-        y = n.useCallback(
+        R = (0, g.k)(),
+        v = n.useCallback(
             async (e) => {
-                if (null == u || g) return;
+                if (null == u || E) return;
                 C(!0), c(null);
-                let { id: t, storageHash: n, description: i } = e,
-                    s = (0, w.Xp)({ userId: u.id, avatarId: t, storageHash: n, size: V.XAf, canAnimate: !0 });
+                let { id: t, storageHash: n, description: s } = e,
+                    i = (0, I.Xp)({ userId: u.id, avatarId: t, storageHash: n, size: V.XAf, canAnimate: !0 });
                 try {
-                    let t = await fetch(s),
+                    let t = await fetch(i),
                         c = await t.blob(),
-                        { filename: o, type: u } = (0, w.yM)(n, i);
-                    (0, E.openModalLazy)(
+                        { filename: o, type: u } = (0, I.yM)(n, s);
+                    (0, x.openModalLazy)(
                         async () => {
                             let { default: t } = await Promise.all([
                                 a.e("78104"),
@@ -209,7 +209,7 @@ function et(e) {
                             ]).then(a.bind(a, 142630));
                             return (a) =>
                                 (0, l.jsx)(t, {
-                                    imageUri: s,
+                                    imageUri: i,
                                     file: new File([c], o, { type: u }),
                                     originalAsset: e,
                                     onCrop: r,
@@ -226,16 +226,16 @@ function et(e) {
                     C(!1);
                 }
             },
-            [R, g, r, c, u],
+            [R, E, r, c, u],
         ),
-        v = n.useCallback(
-            (e, n, r, i, s) => {
+        y = n.useCallback(
+            (e, n, r, s, i) => {
                 let c = n + 1 < t.length ? n + 1 : n - 1;
-                (x.current = c >= 0 ? d.current[c] : h.current),
+                (f.current = c >= 0 ? d.current[c] : A.current),
                     e.shiftKey
                         ? J(r)
                         : (j(!0),
-                          (0, E.openModalLazy)(async () => {
+                          (0, x.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([a.e("42317"), a.e("26563")]).then(
                                   a.bind(a, 555251),
                               );
@@ -243,8 +243,8 @@ function et(e) {
                                   let { onClose: a, ...n } = t;
                                   return (0, l.jsx)(e, {
                                       avatarId: r,
-                                      storageHash: i,
-                                      avatarDescription: s,
+                                      storageHash: s,
+                                      avatarDescription: i,
                                       onConfirmDelete: () => J(r),
                                       onClose: async () => {
                                           await a(),
@@ -262,15 +262,15 @@ function et(e) {
     return (
         n.useEffect(() => {
             p ||
-                (t.length < A.current &&
-                    null != x.current &&
+                (t.length < m.current &&
+                    null != f.current &&
                     requestAnimationFrame(() => {
-                        x.current?.focus();
+                        f.current?.focus();
                     }),
-                (A.current = t.length));
+                (m.current = t.length));
         }, [t.length, p]),
         (0, l.jsx)("div", {
-            className: i()(Q.AU, o),
+            className: s()(Q.AU, o),
             children: (0, l.jsxs)("div", {
                 className: Q.mE,
                 children: [
@@ -285,8 +285,8 @@ function et(e) {
                                         children: (0, l.jsx)(ee, {
                                             avatar: e,
                                             index: t,
-                                            onSelectRecentAvatar: y,
-                                            onDeleteRecentAvatar: v,
+                                            onSelectRecentAvatar: v,
+                                            onDeleteRecentAvatar: y,
                                             avatarButtonRef: (e) => {
                                                 d.current[t] = e;
                                             },
@@ -300,9 +300,9 @@ function et(e) {
                         (0, l.jsxs)("div", {
                             className: Q.wh,
                             tabIndex: -1,
-                            ref: h,
+                            ref: A,
                             children: [
-                                (0, l.jsxs)(m.A, {
+                                (0, l.jsxs)(h.A, {
                                     children: [
                                         0 === T &&
                                             (0, l.jsxs)(l.Fragment, { children: [B.intl.string(B.t.x0DsRS), " "] }),
@@ -323,7 +323,7 @@ function ea(e) {
             avatars: r,
             loading: c,
             error: o,
-        } = (0, s.cf)([z], () => ({ avatars: z.getAvatars(), loading: z.isFetching, error: z.fetchError })),
+        } = (0, i.cf)([z], () => ({ avatars: z.getAvatars(), loading: z.isFetching, error: z.fetchError })),
         [d, h] = n.useState(null),
         A = d ?? o?.message;
     return (
@@ -331,7 +331,7 @@ function ea(e) {
             q();
         }, []),
         (0, l.jsxs)("div", {
-            className: i()(Q.kL, t),
+            className: s()(Q.kL, t),
             children: [
                 (0, l.jsxs)("div", {
                     className: Q.xk,
@@ -352,7 +352,7 @@ function ea(e) {
                         className: Q.gJ,
                         role: "alert",
                         children: [
-                            (0, l.jsx)(S.E, { size: "xs", color: b.A.colors.TEXT_FEEDBACK_CRITICAL }),
+                            (0, l.jsx)(L.E, { size: "xs", color: S.A.colors.TEXT_FEEDBACK_CRITICAL }),
                             (0, l.jsx)(u.E, {
                                 variant: "text-xs/normal",
                                 color: "text-feedback-critical",
@@ -367,8 +367,8 @@ function ea(e) {
 var el = a(45837),
     en = a(71393),
     er = a(967198),
-    ei = a(174459),
-    es = a(473145),
+    es = a(174459),
+    ei = a(473145),
     ec = a(428262);
 function eo(e, t) {
     let { isGIF: a } = t;
@@ -384,7 +384,7 @@ let eA = [
     { gif: a(322821), png: a(891814) },
 ];
 function em(e) {
-    let { shouldAnimate: t = !0 } = e;
+    let { shouldAnimate: t } = e;
     return (0, l.jsx)("div", {
         className: eh.p8,
         children: eA.map((e) =>
@@ -392,162 +392,176 @@ function em(e) {
         ),
     });
 }
-function ex(e) {
-    let { guildFeature: t, guild: a } = e;
-    if (null == t || null == a) return;
-    let l = (0, es.Ys)(t),
-        n = a.features.has(t);
-    if (null == l) return;
-    let r = (0, es.gb)(l);
-    return n
-        ? B.intl.formatToPlainString(B.t.u3L3TX, { levelName: r })
-        : B.intl.formatToPlainString(B.t["r/v25U"], { levelName: r });
-}
 function eg(e) {
-    let { guildFeature: t, guild: a } = e;
-    return (0, l.jsx)("div", {
-        className: eh.x9,
-        children: (0, l.jsx)(j.A, { guildFeature: t, guild: a, hideTooltip: !0 }),
-    });
-}
-function ef(e) {
-    let { icon: t, label: a, guildFeature: n, guild: r, shouldShowPremiumIcon: s } = e,
-        o = null != r && null != n;
-    return (0, l.jsxs)("div", {
-        className: i()(eh.q3, { [eh.j5]: o }),
-        "aria-hidden": !0,
+    let {
+            className: t,
+            onClick: a,
+            onMouseEnter: r,
+            onMouseLeave: i,
+            guildFeature: c,
+            guild: A,
+            icon: m,
+            label: g,
+            shouldShowPremiumIcon: x,
+            children: f,
+        } = e,
+        E = n.useId(),
+        p = (function (e) {
+            let { guildFeature: t, guild: a } = e;
+            if (null == t || null == a) return;
+            let l = (0, ei.Ys)(t),
+                n = a.features.has(t);
+            if (null == l) return;
+            let r = (0, ei.gb)(l);
+            return n
+                ? B.intl.formatToPlainString(B.t.u3L3TX, { levelName: r })
+                : B.intl.formatToPlainString(B.t["r/v25U"], { levelName: r });
+        })({ guildFeature: c, guild: A }),
+        j = null != A && null != c;
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsxs)("div", {
-                className: eh.Mn,
+            (0, l.jsxs)(o.D, {
+                className: t,
+                onClick: a,
+                onMouseEnter: r,
+                onMouseLeave: i,
+                "aria-describedby": null != p ? E : void 0,
                 children: [
-                    t,
-                    (0, l.jsxs)(u.E, {
-                        variant: "text-sm/semibold",
-                        className: i()(eh.xo, { [eh.Fy]: s }),
+                    f,
+                    (0, l.jsxs)("div", {
+                        className: s()(eh.q3, { [eh.j5]: j }),
                         children: [
-                            s &&
-                                (0, l.jsx)(c.m, {
-                                    asContainer: !0,
-                                    text: B.intl.string(B.t["5AFxuK"]),
-                                    children: (0, l.jsx)(d.t, { size: "xs", color: "currentColor", className: eh.T$ }),
+                            (0, l.jsxs)("div", {
+                                className: eh.Mn,
+                                children: [
+                                    m,
+                                    (0, l.jsxs)(u.E, {
+                                        variant: "text-sm/semibold",
+                                        color: "text-strong",
+                                        className: s()(eh.xo, { [eh.Fy]: x }),
+                                        children: [
+                                            x &&
+                                                (0, l.jsx)(d.t, {
+                                                    size: "xs",
+                                                    color: "currentColor",
+                                                    className: eh.T$,
+                                                }),
+                                            g,
+                                        ],
+                                    }),
+                                    x && (0, l.jsx)(h.A, { children: `, ${B.intl.string(B.t["5AFxuK"])}` }),
+                                ],
+                            }),
+                            j &&
+                                (0, l.jsx)("div", {
+                                    className: eh.x9,
+                                    "aria-hidden": !0,
+                                    children: (0, l.jsx)(C.A, { guildFeature: c, guild: A, hideTooltip: !0 }),
                                 }),
-                            a,
                         ],
                     }),
                 ],
             }),
-            o && (0, l.jsx)(eg, { guild: r, guildFeature: n }),
+            null != p && (0, l.jsx)(h.A, { id: E, children: p }),
         ],
+    });
+}
+function ex(e) {
+    let {
+            label: t,
+            uploadType: a,
+            guild: r,
+            maxFileSizeBytes: i,
+            filters: c,
+            handleOpenImageEditingModal: o,
+            handleFileSizeError: u,
+        } = e,
+        d = a === Y.HL.BANNER,
+        h = eo(a, { isGIF: !1 }),
+        m = n.useRef(null);
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            (0, l.jsx)("div", {
+                className: eh.ls,
+                children: (0, l.jsx)(p.Ay, {
+                    ref: m,
+                    onChange: o,
+                    maxFileSizeBytes: i,
+                    onFileSizeError: u,
+                    filters: c,
+                    multiple: !1,
+                    tabIndex: -1,
+                    "aria-hidden": !0,
+                }),
+            }),
+            (0, l.jsx)(eg, {
+                className: s()(eh.uK, eh.kU),
+                onClick: () => {
+                    m.current?.activateUploadDialogue();
+                },
+                guildFeature: h,
+                guild: r,
+                icon: (0, l.jsx)(A.X, { size: "md", color: "currentColor" }),
+                label: t,
+                shouldShowPremiumIcon: d,
+            }),
+        ],
+    });
+}
+function ef(e) {
+    let { uploadType: t, guild: a, handleOpenGIFPickerModal: n } = e,
+        { shouldAnimate: r, onMouseEnter: s, onMouseLeave: i } = (0, el.A)(),
+        c = t === Y.HL.AVATAR || t === Y.HL.BANNER,
+        o = eo(t, { isGIF: !0 });
+    return (0, l.jsx)(eg, {
+        className: eh.uK,
+        onClick: n,
+        onMouseEnter: s,
+        onMouseLeave: i,
+        guildFeature: o,
+        guild: a,
+        icon: (0, l.jsx)(m.O, { size: "md", color: "currentColor" }),
+        label: B.intl.string(B.t["xsC+/y"]),
+        shouldShowPremiumIcon: c,
+        children: (0, l.jsx)(em, { shouldAnimate: r }),
     });
 }
 function eE(e) {
     let {
-            label: t,
-            uploadType: a,
-            guild: n,
-            maxFileSizeBytes: r,
-            filters: s,
-            handleOpenImageEditingModal: c,
-            handleFileSizeError: o,
-        } = e,
-        u = a === Y.HL.BANNER,
-        d = eo(a, { isGIF: !1 }),
-        x = ex({ guildFeature: d, guild: n });
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            (0, l.jsx)(h.vN, {
-                within: !0,
-                children: (0, l.jsxs)("div", {
-                    className: i()(eh.uK, eh.kU),
-                    children: [
-                        (0, l.jsx)(ef, {
-                            icon: (0, l.jsx)(A.X, { size: "md", color: "currentColor" }),
-                            label: t,
-                            guildFeature: d,
-                            guild: n,
-                            shouldShowPremiumIcon: u,
-                        }),
-                        (0, l.jsx)(T.Ay, {
-                            "aria-label": t,
-                            tabIndex: 0,
-                            onChange: c,
-                            maxFileSizeBytes: r,
-                            onFileSizeError: o,
-                            filters: s,
-                            multiple: !1,
-                        }),
-                    ],
-                }),
-            }),
-            null != x && (0, l.jsx)(m.A, { children: x }),
-        ],
-    });
-}
-function eC(e) {
-    let { uploadType: t, guild: a, handleOpenGIFPickerModal: n } = e,
-        { shouldAnimate: r, onMouseEnter: i, onMouseLeave: s } = (0, el.A)(),
-        c = t === Y.HL.AVATAR || t === Y.HL.BANNER,
-        o = eo(t, { isGIF: !0 }),
-        u = ex({ guildFeature: o, guild: a });
-    return (0, l.jsxs)(l.Fragment, {
-        children: [
-            (0, l.jsxs)(x.D, {
-                className: eh.uK,
-                onClick: n,
-                "aria-label": B.intl.string(B.t["xsC+/y"]),
-                onMouseEnter: i,
-                onMouseLeave: s,
-                children: [
-                    (0, l.jsx)(em, { shouldAnimate: r }),
-                    (0, l.jsx)(ef, {
-                        icon: (0, l.jsx)(g.O, { size: "md", color: "currentColor" }),
-                        label: B.intl.string(B.t["xsC+/y"]),
-                        guildFeature: o,
-                        guild: a,
-                        shouldShowPremiumIcon: c,
-                    }),
-                ],
-            }),
-            null != u && (0, l.jsx)(m.A, { children: u }),
-        ],
-    });
-}
-function ep(e) {
-    let {
             transitionState: t,
             onClose: r,
-            onComplete: i,
-            onFileSelected: c,
+            onComplete: s,
+            onFileSelected: o,
             uploadType: d,
             maxFileSizeBytes: h,
             showUpsellHeader: A,
             filters: m,
-            analyticsLocation: x,
-            analyticsLocations: g = [],
-            imageSpecifications: j,
-            modalTitle: T = B.intl.string(B.t.DToW4e),
-            uploadOptionTitle: v = B.intl.string(B.t["MsUY/S"]),
+            analyticsLocation: C,
+            analyticsLocations: p = [],
+            imageSpecifications: R,
+            modalTitle: v = B.intl.string(B.t.DToW4e),
+            uploadOptionTitle: y = B.intl.string(B.t["MsUY/S"]),
             allowRecentAvatarsSelection: _ = !0,
         } = e,
-        F = (0, s.bG)([L.default], () => L.default.getCurrentUser()),
-        S = (0, s.bG)([er.A], () => er.A.getGuildId()),
-        b = (0, s.bG)([en.A], () => en.A.getGuild(S)),
-        w = (0, f.k)(),
-        I = d === Y.HL.AVATAR || d === Y.HL.BANNER,
+        F = (0, i.bG)([b.default], () => b.default.getCurrentUser()),
+        L = (0, i.bG)([er.A], () => er.A.getGuildId()),
+        S = (0, i.bG)([en.A], () => en.A.getGuild(L)),
+        I = (0, g.k)(),
+        w = d === Y.HL.AVATAR || d === Y.HL.BANNER,
         H = !ec.Ay.canUseAnimatedAvatar(F) && d === Y.HL.AVATAR,
-        M = (0, N.b)(!I),
-        { analyticsLocations: k } = (0, p.Ay)(g, C.A.SELECT_IMAGE_MODAL),
+        M = (0, j.b)(!w),
+        { analyticsLocations: k } = (0, E.Ay)(p, f.A.SELECT_IMAGE_MODAL),
         U = n.useCallback(
             (e) => {
-                let { assetOrigin: t = y.E.NEW_ASSET, imageUri: a, file: l, originalAsset: n, isFromTenor: s = !1 } = e;
-                r(), i({ assetOrigin: t, imageUri: a, file: l, originalAsset: n, isFromTenor: s });
+                let { assetOrigin: t = N.E.NEW_ASSET, imageUri: a, file: l, originalAsset: n, isFromTenor: i = !1 } = e;
+                r(), s({ assetOrigin: t, imageUri: a, file: l, originalAsset: n, isFromTenor: i });
             },
-            [r, i],
+            [r, s],
         ),
         D = n.useCallback(
             (e, t) => {
-                if ((c?.(t), t.type === ed.a.MP4)) return U({ imageUri: e, file: t });
-                (0, E.openModalLazy)(
+                if ((o?.(t), t.type === ed.a.MP4)) return U({ imageUri: e, file: t });
+                (0, x.openModalLazy)(
                     async () => {
                         let { default: n } = await Promise.all([
                             a.e("78104"),
@@ -572,20 +586,20 @@ function ep(e) {
                                 onCrop: U,
                                 uploadType: d,
                                 showUpsellHeader: A,
-                                analyticsPage: x?.page,
+                                analyticsPage: C?.page,
                                 ...a,
                             });
                     },
-                    { contextKey: w },
+                    { contextKey: I },
                 );
             },
-            [x?.page, w, U, c, A, d],
+            [C?.page, I, U, o, A, d],
         ),
         P = n.useCallback(() => {
             (0, eu.A)(h);
         }, [h]),
         O = n.useCallback(() => {
-            (0, E.openModalLazy)(
+            (0, x.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         a.e("78104"),
@@ -608,33 +622,33 @@ function ep(e) {
                                 return U({ imageUri: t, file: a, isFromTenor: !0 });
                             },
                             showUpsellHeader: A,
-                            analyticsPage: x?.page,
+                            analyticsPage: C?.page,
                             ...t,
                         });
                 },
-                { contextKey: w },
+                { contextKey: I },
             );
-        }, [x?.page, w, U, A, d]);
+        }, [C?.page, I, U, A, d]);
     n.useEffect(() => {
         H &&
-            ei.default.track(V.HAw.PREMIUM_UPSELL_VIEWED, {
+            es.default.track(V.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: V.JJy.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
                 location_stack: k,
             }),
-            ei.default.track(V.HAw.OPEN_MODAL, {
+            es.default.track(V.HAw.OPEN_MODAL, {
                 type: V.JJy.UPLOAD_FILE_OR_CHOOSE_GIF_MODAL,
-                location: x,
+                location: C,
                 location_stack: k,
                 upload_type: d,
             });
-    }, [H, x, k, d]);
+    }, [H, C, k, d]);
     let G = A && M,
         z = _ && d === Y.HL.AVATAR;
-    return (0, l.jsx)(o.Modal, {
+    return (0, l.jsx)(c.Modal, {
         transitionState: t,
         onClose: r,
         size: "md",
-        title: T,
+        title: v,
         actions: [],
         children: (0, l.jsxs)("div", {
             className: eh.jE,
@@ -647,10 +661,10 @@ function ep(e) {
                             "aria-label": B.intl.string(B.t.iBnqtQ),
                             children: [
                                 (0, l.jsx)("li", {
-                                    children: (0, l.jsx)(eE, {
-                                        label: v,
+                                    children: (0, l.jsx)(ex, {
+                                        label: y,
                                         uploadType: d,
-                                        guild: b,
+                                        guild: S,
                                         handleOpenImageEditingModal: D,
                                         maxFileSizeBytes: h,
                                         filters: m,
@@ -658,22 +672,22 @@ function ep(e) {
                                     }),
                                 }),
                                 (0, l.jsx)("li", {
-                                    children: (0, l.jsx)(eC, { uploadType: d, guild: b, handleOpenGIFPickerModal: O }),
+                                    children: (0, l.jsx)(ef, { uploadType: d, guild: S, handleOpenGIFPickerModal: O }),
                                 }),
                             ],
                         }),
-                        null != j
+                        null != R
                             ? (0, l.jsx)(u.E, {
                                   className: eh.KQ,
                                   variant: "text-sm/normal",
                                   color: "text-muted",
-                                  children: j,
+                                  children: R,
                               })
                             : null,
                     ],
                 }),
                 z && (0, l.jsx)(ea, { onComplete: U }),
-                G && (0, l.jsx)(R.A, { uploadType: d, showUpsell: !0, position: "inline", className: eh.Lu }),
+                G && (0, l.jsx)(T.A, { uploadType: d, showUpsell: !0, position: "inline", className: eh.Lu }),
             ],
         }),
     });

@@ -13,6 +13,7 @@ e.exports = {
     nX: "gif_edf440",
     T$: "premiumWheel_edf440",
     x9: "boostingPill_edf440",
+    ls: "imageInputContainer_edf440",
     KQ: "imageSpecifications_edf440",
     Lu: "premiumUpsell_edf440",
 };

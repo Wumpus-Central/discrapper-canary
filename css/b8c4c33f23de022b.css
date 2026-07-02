@@ -196,16 +196,13 @@
 
 .optionIconAndLabel_edf440 {
     align-items: center;
-    color: var(--interactive-text-default);
     display: flex;
     flex-direction: column;
-    gap: var(--space-8);
-    transition: color 50ms ease-in
+    gap: var(--space-8)
 }
 
 .optionLabelText_edf440 {
     align-items: center;
-    color: currentColor;
     -moz-column-gap: var(--space-4);
     column-gap: var(--space-4);
     display: flex;
@@ -234,11 +231,6 @@
     position: absolute;
     transition: background-color 50ms ease-in;
     z-index: 1
-}
-
-.option_edf440:hover .optionIconAndLabel_edf440 {
-    color: var(--interactive-text-active);
-    transition: color .15s ease-out
 }
 
 .theme-dark .imageUploadOption_edf440:before {
@@ -293,6 +285,12 @@
     border-radius: var(--radius-round);
     color: var(--interactive-text-default);
     padding: 4px
+}
+
+.imageInputContainer_edf440 {
+    height: 0;
+    position: relative;
+    width: 0
 }
 
 .imagePickerContainer_edf440 {
