@@ -1,6 +1,5 @@
 e.exports = {
     kL: "container_d9914b",
-    uW: "section_d9914b",
     aP: "box_d9914b",
     dO: "linkingBanner_d9914b",
     p2: "linkingBannerParent_d9914b",
