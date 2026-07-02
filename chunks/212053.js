@@ -1,51 +1,54 @@
-n.d(t, { A: () => N });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
     a = n(17928),
     s = n(367513),
     r = n(401843),
-    o = n(313961),
-    c = n(643501),
-    d = n(279250),
-    u = n(175203),
-    p = n(734057),
-    h = n(71393),
-    m = n(576705),
-    A = n(309010),
-    x = n(977997),
-    g = n(408822),
-    f = n(806931),
-    C = n(125730);
-let y = [];
-function E(e) {
+    o = n(793574),
+    c = n(313961),
+    d = n(643501),
+    u = n(279250),
+    p = n(175203),
+    h = n(734057),
+    m = n(71393),
+    A = n(576705),
+    x = n(309010),
+    g = n(977997),
+    f = n(408822),
+    C = n(920639),
+    y = n(806931),
+    E = n(125730);
+let N = [];
+function v(e) {
     let { channelId: t, participant: n, popoutType: l } = e,
-        A = (0, a.bG)([p.A], () => p.A.getChannel(t)),
-        y = (0, a.bG)([o.A], () => o.A.getSelectedParticipant(t)),
-        [E, N] = (0, a.yK)([x.A, h.A, m.A, c.default], () => (0, d.eo)(A, x.A, h.A, m.A, c.default));
-    return null == A
+        x = (0, a.bG)([h.A], () => h.A.getChannel(t)),
+        N = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
+        [v, j] = (0, a.yK)([g.A, m.A, A.A, d.default], () => (0, u.eo)(x, g.A, m.A, A.A, d.default));
+    return null == x
         ? null
-        : (0, i.jsx)(u.Ay, {
+        : (0, i.jsx)(p.Ay, {
               participant: n,
               inCall: !0,
-              channel: A,
+              channel: x,
               width: 100,
               popoutType: l,
-              className: C.Vs,
+              className: E.Vs,
               onClick: () => {
-                  (0, f.Ay)(n) && E && (0, r.A9)(n.stream, { forceMultiple: !0 }),
-                      y?.id === n.id ? s.A.selectParticipant(A.id, null) : s.A.selectParticipant(A.id, n.id),
-                      (0, g.zD)(t, !0);
+                  (0, y.Ay)(n) && v && (0, r.A9)(n.stream, { forceMultiple: !0 }),
+                      N?.id === n.id ? s.A.selectParticipant(x.id, null) : s.A.selectParticipant(x.id, n.id),
+                      (0, f.zD)(t, !0),
+                      (0, C.yt)({ channelId: t, location: o.A.GUILD_ROOM });
               },
           });
 }
-function N(e) {
+function j(e) {
     let { channelId: t, popoutType: n, aspectRatio: s } = e,
         r = (0, l.useRef)(null),
-        [c, d] = (0, l.useState)(0),
-        u = (0, a.bG)([A.A], () => A.A.getVoiceChannelId()),
-        { streamParticipants: p, videoParticipants: h } = (0, a.cf)([o.A], () => ({
-            streamParticipants: o.A.getStreamParticipants(t),
-            videoParticipants: u === t ? o.A.getVideoParticipants(t) : y,
+        [o, d] = (0, l.useState)(0),
+        u = (0, a.bG)([x.A], () => x.A.getVoiceChannelId()),
+        { streamParticipants: p, videoParticipants: h } = (0, a.cf)([c.A], () => ({
+            streamParticipants: c.A.getStreamParticipants(t),
+            videoParticipants: u === t ? c.A.getVideoParticipants(t) : N,
         }));
     return (
         (0, l.useEffect)(() => {
@@ -55,12 +58,12 @@ function N(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         (0, i.jsxs)("div", {
-            className: C.kL,
-            style: { aspectRatio: s, paddingTop: 82 > c + 16 ? 82 - c : 16 },
+            className: E.kL,
+            style: { aspectRatio: s, paddingTop: 82 > o + 16 ? 82 - o : 16 },
             ref: r,
             children: [
-                p.map((e) => (0, i.jsx)(E, { participant: e, channelId: t, popoutType: n }, e.id)),
-                h.map((e) => (0, i.jsx)(E, { participant: e, channelId: t, popoutType: n }, e.id)),
+                p.map((e) => (0, i.jsx)(v, { participant: e, channelId: t, popoutType: n }, e.id)),
+                h.map((e) => (0, i.jsx)(v, { participant: e, channelId: t, popoutType: n }, e.id)),
             ],
         })
     );

@@ -1,33 +1,44 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => m });
 var i = n(627968),
-    l = n(503698),
-    a = n.n(l),
-    s = n(494012),
-    r = n(232571),
-    o = n(212053),
-    c = n(519342),
-    d = n(765402),
-    u = n(937591);
-function p(e) {
+    l = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    r = n(494012),
+    o = n(920639),
+    c = n(232571),
+    d = n(212053),
+    u = n(519342),
+    p = n(765402),
+    h = n(937591);
+function m(e) {
     let { channelId: t, popoutType: n } = e,
-        { background: l, seats: p, aspectRatio: h } = d.iX[d.I3.DEFAULT],
-        { width: m = 0, height: A = 0, ref: x } = (0, s.Ay)(),
-        g = m / A > h;
-    return (0, i.jsxs)("div", {
-        className: u.kL,
-        children: [
-            (0, i.jsx)("img", { className: u.Sl, src: l, alt: "", ref: x }),
-            (0, i.jsxs)("div", {
-                className: a()(u.hk, { [u.Nb]: g }),
-                style: { aspectRatio: h },
-                children: [
-                    p.map((e, n) =>
-                        (0, i.jsx)(r.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: m }, n),
-                    ),
-                    (0, i.jsx)(c.A, { channelId: t, roomWidth: m }),
-                    (0, i.jsx)(o.A, { channelId: t, popoutType: n, aspectRatio: h }),
-                ],
-            }),
-        ],
-    });
+        { background: a, seats: m, aspectRatio: A } = p.iX[p.I3.DEFAULT],
+        { width: x = 0, height: g = 0, ref: f } = (0, r.Ay)(),
+        C = x / g > A;
+    return (
+        l.useEffect(() => {
+            (0, o.zR)({ channelId: t });
+        }, [t]),
+        (0, i.jsxs)("div", {
+            className: h.kL,
+            children: [
+                (0, i.jsx)("img", { className: h.Sl, src: a, alt: "", ref: f }),
+                (0, i.jsxs)("div", {
+                    className: s()(h.hk, { [h.Nb]: C }),
+                    style: { aspectRatio: A },
+                    children: [
+                        m.map((e, n) =>
+                            (0, i.jsx)(
+                                c.A,
+                                { channelId: t, name: e.name, x: e.position.x, y: e.position.y, roomWidth: x },
+                                n,
+                            ),
+                        ),
+                        (0, i.jsx)(u.A, { channelId: t, roomWidth: x }),
+                        (0, i.jsx)(d.A, { channelId: t, popoutType: n, aspectRatio: A }),
+                    ],
+                }),
+            ],
+        })
+    );
 }

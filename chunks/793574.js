@@ -601,6 +601,7 @@ var i,
         (i.MOBILE_ACCOUNT_LINK_LARGE_BANNER = "mobile account link large banner"),
         (i.MOBILE_ACCOUNT_LINK_MEDIUM_BANNER = "mobile account link medium banner"),
         (i.GIFT_CARD_REDEMPTION_SUCCESS_MODAL = "gift card redemption success modal"),
+        (i.GUILD_ROOM = "guild room"),
         (i.GAME_COMMUNITY_MULTI_GUILD_UPSELL_GUILDS_BAR_ENTRYPOINT =
             "game community multi guild upsell guilds bar entrypoint"),
         (i.FAVORITES_GUILD_HOME = "favorites guild home"),
