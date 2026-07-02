@@ -268,7 +268,7 @@ function L(e) {
     });
 }
 var x = n(65412),
-    G = n(34869);
+    G = n(865678);
 function B(e, t) {
     return G.m.create({ contentIdentifier: e, properties: t });
 }

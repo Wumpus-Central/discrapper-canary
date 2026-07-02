@@ -18,4 +18,5 @@ var i,
         (i[(i.PREMIUM_TAB_POPOVER = 13)] = "PREMIUM_TAB_POPOVER"),
         (i[(i.NAGBAR = 14)] = "NAGBAR"),
         (i[(i.PLAN_SELECT_CARD_BANNER = 15)] = "PLAN_SELECT_CARD_BANNER"),
+        (i[(i.BILLING_SETTINGS_BANNER = 16)] = "BILLING_SETTINGS_BANNER"),
         i);
