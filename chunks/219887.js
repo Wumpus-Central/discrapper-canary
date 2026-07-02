@@ -39,6 +39,7 @@ class E extends s.PureComponent {
         else if (e instanceof d.EE) return u.Ay.Types.IDEAL;
         else if (e instanceof d.FQ) return u.Ay.Types.CASH_APP;
         else if (e instanceof d.Pw) return u.Ay.Types.APPLE;
+        else if (e instanceof d.IE) return u.Ay.Types.PIX;
         return u.Ay.Types.UNKNOWN;
     }
     getLabel(e) {
@@ -80,7 +81,9 @@ class E extends s.PureComponent {
                                             ? m.intl.string(m.t.RFi12i)
                                             : e instanceof d.LQ
                                               ? m.intl.string(A.default["/FQWfA"])
-                                              : m.intl.string(m.t.jdPblk);
+                                              : e instanceof d.IE
+                                                ? m.intl.string(m.t.JG3WQU)
+                                                : m.intl.string(m.t.jdPblk);
     }
     renderDescription() {
         let { paymentSource: e, descriptionClassName: t } = this.props;
