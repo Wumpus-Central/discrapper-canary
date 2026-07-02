@@ -1,4 +1,4 @@
-n.d(e, { L: () => _, o: () => I });
+n.d(e, { L: () => D, o: () => I });
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -14,8 +14,8 @@ var l = n(627968),
     h = n(602853),
     f = n(722260),
     N = n(492260),
-    E = n(647090),
-    A = n(604701),
+    A = n(647090),
+    E = n(604701),
     v = n(988794),
     j = n(375708),
     T = n(828342);
@@ -57,10 +57,10 @@ function L(t) {
         }),
     });
 }
-function _(t) {
-    return null != t.timeData ? (0, l.jsx)(p, { ...t, timeData: t.timeData }) : (0, l.jsx)(D, { ...t });
-}
 function D(t) {
+    return null != t.timeData ? (0, l.jsx)(p, { ...t, timeData: t.timeData }) : (0, l.jsx)(_, { ...t });
+}
+function _(t) {
     let e = (0, N.A)(t.startTime, t.endTime);
     return (0, l.jsx)(p, { ...t, timeData: e });
 }
@@ -74,15 +74,15 @@ function p(t) {
             textVariant: g = "text-sm/semibold",
             isNew: N,
             recurrenceRule: I,
-            guildEventId: _,
-            recurrenceId: D,
+            guildEventId: D,
+            recurrenceId: _,
             timeData: p,
         } = t,
         w = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
         S = (0, h.r)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
         b = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
     null == o && (o = i === v.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
-    let y = (0, f.A)(D, _),
+    let y = (0, f.A)(_, D),
         { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = p,
         K = P;
     null != k && "" !== k && (K = j.intl.formatToPlainString(j.t.tXbu7I, { start: P, end: k }));
@@ -90,7 +90,7 @@ function p(t) {
             () => (n === v.XG.CANCELED || y?.is_canceled ? 5 : n === v.XG.ACTIVE ? 3 : v.lV.has(n) ? 4 : X ? 2 : +!!G),
             [n, y?.is_canceled, X, G],
         ),
-        W = (function (t, e, n, r, i) {
+        z = (function (t, e, n, r, i) {
             switch (t) {
                 case 1:
                     return i > 0 ? j.intl.formatToPlainString(j.t.PQlCWk, { minutes: i }) : j.intl.string(j.t.WINqKV);
@@ -115,7 +115,7 @@ function p(t) {
             }
         })(R, K, o, k, V),
         {
-            Icon: z,
+            Icon: W,
             iconColor: H,
             textColor: O,
             tooltipText: Y,
@@ -161,32 +161,34 @@ function p(t) {
         ),
         B = null;
     if (null != I) {
-        let t = (0, E.X7)(I);
+        let t = (0, A.X7)(I);
         B = j.intl.formatToPlainString(j.t.HmKEqW, { recurrenceRule: t.toText() });
         let n = c()(e);
         B = (function (t, e) {
             let n = e.toDate(),
                 l = n.toLocaleString(j.intl.currentLocale, { weekday: "long" });
             switch (t) {
-                case A.z.WEEKLY:
+                case E.z.WEEKLY:
                     return j.intl.formatToPlainString(j.t.xQM9X0, { weekday: l });
-                case A.z.BIWEEKLY:
+                case E.z.BIWEEKLY:
                     return j.intl.formatToPlainString(j.t.RYscac, { weekday: l });
-                case A.z.MONTHLY:
+                case E.z.MONTHLY:
                     let r = Math.ceil(n.getDate() / 7);
                     return j.intl.formatToPlainString(j.t["4ZN9Ap"], { weekday: l, nth: r });
-                case A.z.YEARLY:
+                case E.z.YEARLY:
                     return j.intl.formatToPlainString(j.t["rXUS+j"], {
                         date: n.toLocaleString(j.intl.currentLocale, { month: "short", day: "2-digit" }),
                     });
-                case A.z.WEEKDAY_ONLY:
+                case E.z.DAILY:
+                    return j.intl.string(j.t["/i8N++"]);
+                case E.z.WEEKDAY_ONLY:
                     return j.intl.string(j.t["2BX6bC"]);
-                case A.z.WEEKEND_ONLY:
+                case E.z.WEEKEND_ONLY:
                     return j.intl.string(j.t["IEi+Rw"]);
                 default:
                     return null;
             }
-        })((0, E.z7)(n, I), n);
+        })((0, A.z7)(n, I), n);
     }
     return (0, l.jsxs)(L, {
         className: s()(a, { [T.AD]: null != B }),
@@ -194,11 +196,11 @@ function p(t) {
         children: [
             N && n === v.XG.SCHEDULED
                 ? (0, l.jsx)(C, {})
-                : (0, l.jsx)(z, { color: H, size: "custom", width: 20, height: 20 }),
+                : (0, l.jsx)(W, { color: H, size: "custom", width: 20, height: 20 }),
             (0, l.jsxs)("div", {
                 className: T.Zy,
                 children: [
-                    (0, l.jsx)(d.E, { color: O, variant: g, children: W }),
+                    (0, l.jsx)(d.E, { color: O, variant: g, children: z }),
                     null != B && (0, l.jsx)(d.E, { color: "text-default", variant: "text-xs/normal", children: B }),
                 ],
             }),

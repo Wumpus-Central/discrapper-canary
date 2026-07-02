@@ -9,4 +9,5 @@ var i,
         (i[(i.WEEKDAY_ONLY = 4)] = "WEEKDAY_ONLY"),
         (i[(i.BIWEEKLY = 5)] = "BIWEEKLY"),
         (i[(i.WEEKEND_ONLY = 6)] = "WEEKEND_ONLY"),
+        (i[(i.DAILY = 7)] = "DAILY"),
         i);

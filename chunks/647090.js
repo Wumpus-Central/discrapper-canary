@@ -2494,6 +2494,7 @@ function tn(e) {
                     date: t.toLocaleString(e0.intl.currentLocale, { month: "short", day: "2-digit" }),
                 }),
             },
+            { id: "daily", value: eQ.z.DAILY, label: e0.intl.string(e0.t.JX8E1E) },
         ];
     return (
         tt.has(t.getDay())
@@ -2641,6 +2642,8 @@ function tA(e, t) {
                 return new eG({ dtstart: a, freq: eG.MONTHLY, byweekday: [r.nth(s)] });
             case eQ.z.YEARLY:
                 return new eG({ dtstart: a, freq: eG.YEARLY });
+            case eQ.z.DAILY:
+                return new eG({ dtstart: a, freq: eG.DAILY });
             case eQ.z.WEEKDAY_ONLY:
                 return new eG({ dtstart: a, freq: eG.DAILY, byweekday: n });
             case eQ.z.WEEKEND_ONLY:
@@ -2686,6 +2689,7 @@ function tI(e, t) {
         case eG.MONTHLY:
             return eQ.z.MONTHLY;
         case eG.DAILY:
+            if (null == n.options.byweekday || 0 === n.options.byweekday.length) return eQ.z.DAILY;
             if ((0, s.isEqual)(n.options.byweekday, tm(e))) return eQ.z.WEEKDAY_ONLY;
             if ((0, s.isEqual)(n.options.byweekday, tg(e))) return eQ.z.WEEKEND_ONLY;
             return eQ.z.NONE;
