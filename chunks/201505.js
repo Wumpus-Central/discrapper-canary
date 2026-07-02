@@ -61,10 +61,10 @@ let m = n.forwardRef(function (e, t) {
             required: g,
             onFocus: x,
             onBlur: k,
-            name: b,
+            name: N,
         } = e,
         {
-            day: N,
+            day: b,
             setDay: D,
             month: R,
             setMonth: v,
@@ -81,8 +81,8 @@ let m = n.forwardRef(function (e, t) {
             return { day: l, setDay: i, month: o, setMonth: s, year: u, setYear: c };
         })(o),
         U = n.useMemo(
-            () => (null != N && null != R && null != O ? s()(`${N}/${R}/${O}`, "DD/MM/YYYY") : null),
-            [N, R, O],
+            () => (null != b && null != R && null != O ? s()(`${b}/${R}/${O}`, "DD/MM/YYYY") : null),
+            [b, R, O],
         );
     n.useEffect(() => {
         f(U?.isValid() ? U : null);
@@ -96,20 +96,20 @@ let m = n.forwardRef(function (e, t) {
                 l.current = Array.from(Array(101).keys()).map((e) => ({ value: a - e, label: `${a - e}` }));
             }, [a]),
             l.current),
-        [I, $] = n.useState(G ? 0 : -1),
-        j = n.useMemo(T, []),
-        w = { onPopulated: m, sortedInputs: j },
-        W = n.useRef(w);
+        [$, j] = n.useState(G ? 0 : -1),
+        w = n.useMemo(T, []),
+        I = { onPopulated: m, sortedInputs: w },
+        W = n.useRef(I);
     n.useEffect(() => {
-        W.current = w;
+        W.current = I;
     }),
         n.useEffect(() => {
             let { onPopulated: e, sortedInputs: t } = W.current;
-            if (I >= t.length) return void e?.();
-        }, [I]);
+            if ($ >= t.length) return void e?.();
+        }, [$]);
     let Y = [];
     for (let e = 0; e < 3; e++) {
-        let { type: t } = j[e];
+        let { type: t } = w[e];
         switch (t) {
             case "day":
                 Y.push({
@@ -122,12 +122,12 @@ let m = n.forwardRef(function (e, t) {
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.Voklre),
                             options: E,
-                            value: N,
+                            value: b,
                             onChange: (t) => {
-                                D(t), $(e + 1);
+                                D(t), j(e + 1);
                             },
                             maxVisibleItems: 6,
-                            autoFocus: I === e,
+                            autoFocus: $ === e,
                             required: g,
                             "data-migration-pending": !0,
                         }),
@@ -147,10 +147,10 @@ let m = n.forwardRef(function (e, t) {
                             options: h,
                             value: R,
                             onChange: (t) => {
-                                v(t), $(e + 1);
+                                v(t), j(e + 1);
                             },
                             maxVisibleItems: 6,
-                            autoFocus: I === e,
+                            autoFocus: $ === e,
                             required: g,
                             "data-migration-pending": !0,
                         }),
@@ -170,10 +170,10 @@ let m = n.forwardRef(function (e, t) {
                             options: S,
                             value: O,
                             onChange: (t) => {
-                                C(t), $(e + 1);
+                                C(t), j(e + 1);
                             },
                             maxVisibleItems: 6,
-                            autoFocus: I === e,
+                            autoFocus: $ === e,
                             required: g,
                             "data-migration-pending": !0,
                         }),
@@ -189,22 +189,21 @@ let m = n.forwardRef(function (e, t) {
             errorMessage: M ?? void 0,
             children: (0, r.jsx)("div", {
                 className: p.inputs,
-                children: Y.map((e, t) => {
-                    let { key: a, input: n } = e;
+                children: Y.map((e) => {
+                    let { key: t, input: a } = e;
                     return (0, r.jsx)(
                         "div",
                         {
-                            tabIndex: t + 1,
-                            className: p[a],
+                            className: p[t],
                             onFocus: (e) => {
-                                e.currentTarget.contains(e.relatedTarget) || x?.(`${b}_${a}`);
+                                e.currentTarget.contains(e.relatedTarget) || x?.(`${N}_${t}`);
                             },
                             onBlur: (e) => {
-                                e.currentTarget.contains(e.relatedTarget) || k?.(`${b}_${a}`);
+                                e.currentTarget.contains(e.relatedTarget) || k?.(`${N}_${t}`);
                             },
-                            children: n,
+                            children: a,
                         },
-                        a,
+                        t,
                     );
                 }),
             }),
