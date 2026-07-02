@@ -1426,6 +1426,10 @@
     margin-top: 8px
 }
 
+.planOptionQuantity_b13085 {
+    display: flex
+}
+
 .selectionBox_b13085 {
     border-radius: var(--radius-lg);
     margin-bottom: 12px;

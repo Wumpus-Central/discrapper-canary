@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { E: () => f, V: () => p });
+n.d(t, { E: () => f, V: () => E });
 var i = n(64700),
     r = n(284009),
     s = n.n(r),
@@ -7,8 +7,8 @@ var i = n(64700),
     o = n(937008),
     l = n(566980),
     u = n(800471),
-    c = n(299301),
-    d = n(97352),
+    d = n(299301),
+    c = n(97352),
     _ = n(650170),
     h = n(699595);
 function f(e) {
@@ -28,19 +28,20 @@ function f(e) {
             (r || null != n) && a(n);
         }, [n, a, r]);
 }
-function p(e) {
-    let { selectedPlanId: t, priceOptions: n, trialId: r, metadata: f, isTrial: p = !1 } = e,
+function E(e) {
+    let { selectedPlanId: t, priceOptions: n, trialId: r, metadata: f, isTrial: E = !1 } = e,
         {
-            selectedSkuId: E,
+            selectedSkuId: p,
             contextMetadata: m,
             setFetchCheckoutInvoicePreviewRequest: g,
             setFetchRenewalInvoicePreviewRequest: A,
             checkoutInvoicePreview: I,
             checkoutInvoiceError: T,
             renewalInvoicePreview: S,
-            renewalInvoiceError: y,
+            renewalInvoiceError: N,
             setPurchasePreviewError: C,
-            activeSubscription: N,
+            activeSubscription: y,
+            quantity: v,
         } = (0, _.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             contextMetadata: e.contextMetadata,
@@ -52,43 +53,45 @@ function p(e) {
             renewalInvoiceError: e.renewalInvoiceError,
             setPurchasePreviewError: e.setPurchasePreviewError,
             activeSubscription: e.activeSubscription,
+            quantity: e.quantity,
         })),
-        { isGift: v } = (0, o.Pv)(),
+        { isGift: R } = (0, o.Pv)(),
         {
-            subscriptionPlan: R,
-            purchaseDisabled: O,
-            newItems: b,
+            subscriptionPlan: O,
+            purchaseDisabled: b,
+            newItems: L,
         } = (function (e) {
             let { selectedPlanId: t } = e,
                 n = (0, _.t4)((e) => e.purchaseState),
-                r = (0, a.bG)([d.A], () => d.A.get(t));
+                r = (0, a.bG)([c.A], () => c.A.get(t));
             s()(null != r, "Missing plan");
             let o = i.useMemo(() => [{ planId: r.id, quantity: 1 }], [r.id]),
                 u = n === l.h.PURCHASING || n === l.h.COMPLETED;
             return { subscriptionPlan: r, purchaseState: n, purchaseDisabled: u, newItems: o };
         })({ selectedPlanId: t }),
         D = !0 === n.loaded,
-        L = O || !D,
+        P = b || !D,
         w = i.useMemo(
             () =>
-                v
+                R
                     ? {
                           type: "premium_one_time_gift_purchase_invoice",
                           params: {
                               paymentSourceId: n.paymentSourceId,
-                              skuId: E,
+                              skuId: p,
                               subscriptionPlanId: t,
                               currency: n.currency,
-                              preventFetch: L,
+                              preventFetch: P,
                               loadId: m.loadId,
+                              quantity: v,
                           },
                       }
                     : {
                           type: "premium_checkout_invoice",
                           params: {
-                              items: b,
+                              items: L,
                               renewal: !1,
-                              preventFetch: L,
+                              preventFetch: P,
                               applyEntitlements: !0,
                               paymentSourceId: n.paymentSourceId,
                               currency: n.currency,
@@ -97,26 +100,26 @@ function p(e) {
                               loadId: m.loadId,
                           },
                       },
-            [b, v, L, n.paymentSourceId, n.currency, r, f, m.loadId, t, E],
+            [L, R, P, n.paymentSourceId, n.currency, r, f, m.loadId, t, p, v],
         ),
         M = i.useMemo(
             () =>
-                v
+                R
                     ? null
                     : {
                           type: "premium_renewal_invoice",
                           params: {
-                              subscriptionId: N?.id,
-                              items: b,
+                              subscriptionId: y?.id,
+                              items: L,
                               renewal: !0,
-                              preventFetch: L,
+                              preventFetch: P,
                               trialId: r,
                               paymentSourceId: n.paymentSourceId,
                               currency: n.currency,
                               metadata: f ?? void 0,
                           },
                       },
-            [v, L, b, r, f, N?.id, n.paymentSourceId, n.currency],
+            [R, P, L, r, f, y?.id, n.paymentSourceId, n.currency],
         );
     i.useEffect(() => {
         g(w);
@@ -124,43 +127,43 @@ function p(e) {
         i.useEffect(() => {
             A(M);
         }, [M, A]);
-    let P = i.useMemo(() => (p && null != I ? I : null), [p, I]),
-        { oneTimePurchaseNitroGiftInvoicePreview: x, proratedInvoicePreview: k } = i.useMemo(
+    let x = i.useMemo(() => (E && null != I ? I : null), [E, I]),
+        { oneTimePurchaseNitroGiftInvoicePreview: U, proratedInvoicePreview: k } = i.useMemo(
             () =>
-                v
+                R
                     ? { oneTimePurchaseNitroGiftInvoicePreview: I, proratedInvoicePreview: null }
                     : { oneTimePurchaseNitroGiftInvoicePreview: null, proratedInvoicePreview: I },
-            [v, I],
+            [R, I],
         ),
-        { discountInvoiceError: U } = (0, h.W)({ priceOptions: n, trialId: r, metadata: f }),
-        G = i.useMemo(() => T ?? y ?? U, [T, y, U]);
+        { discountInvoiceError: G } = (0, h.W)({ priceOptions: n, trialId: r, metadata: f }),
+        V = i.useMemo(() => T ?? N ?? G, [T, N, G]);
     i.useEffect(() => {
-        C(G);
-    }, [G, C]);
+        C(V);
+    }, [V, C]);
     let F = i.useMemo(() => (null != k ? k.subscriptionPeriodEnd : void 0), [k]),
-        V = i.useMemo(() => (0, u.UB)(I, R), [I, R]),
-        B = i.useMemo(
+        B = i.useMemo(() => (0, u.UB)(I, O), [I, O]),
+        j = i.useMemo(
             () =>
-                (0, c.yf)({
-                    error: G,
-                    isGift: v,
-                    oneTimePurchaseNitroGiftInvoicePreview: x,
-                    trialInvoicePreview: P,
+                (0, d.yf)({
+                    error: V,
+                    isGift: R,
+                    oneTimePurchaseNitroGiftInvoicePreview: U,
+                    trialInvoicePreview: x,
                     proratedInvoicePreview: k,
                     renewalInvoicePreview: S,
-                    planSwitchLoading: V,
+                    planSwitchLoading: B,
                 }),
-            [G, v, x, P, k, S, V],
+            [V, R, U, x, k, S, B],
         );
     return {
         checkoutInvoicePreview: I,
-        invoiceSummaryTypeWithPreview: B,
-        oneTimePurchaseNitroGiftInvoicePreview: x,
-        trialInvoicePreview: P,
+        invoiceSummaryTypeWithPreview: j,
+        oneTimePurchaseNitroGiftInvoicePreview: U,
+        trialInvoicePreview: x,
         proratedInvoicePreview: k,
         renewalInvoicePreview: S,
-        purchaseDisabled: O,
-        invoiceError: G,
+        purchaseDisabled: b,
+        invoiceError: V,
         subscriptionPeriodEnd: F,
     };
 }

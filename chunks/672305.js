@@ -1,6 +1,7 @@
 e.exports = {
     XM: "planOption_b13085",
     _R: "planOneTimeCost_b13085",
+    ci: "planOptionQuantity_b13085",
     Gb: "selectionBox_b13085",
     vW: "selectedPlan_b13085",
     PA: "planOptionDisabled_b13085",

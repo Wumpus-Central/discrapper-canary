@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ni: () => S, t4: () => C, Q9: () => y, y$: () => v });
+n.d(t, { y0: () => S, Ni: () => N, t4: () => y, Q9: () => C, y$: () => R });
 var i = n(942381),
     r = n(265690),
     s = n(315069),
@@ -80,7 +80,7 @@ class u extends s.A {
         return this.availablePlans.find((t) => t.matchesItems(e)) ?? null;
     }
 }
-class c extends s.A {
+class d extends s.A {
     subscriptionId;
     subscriptionPreview;
     updateType;
@@ -89,7 +89,7 @@ class c extends s.A {
         var t, n;
         return null == e
             ? null
-            : new c({
+            : new d({
                   subscriptionId: e.subscription_id ?? null,
                   subscriptionPreview:
                       null == (t = e.subscription_preview)
@@ -123,7 +123,7 @@ class c extends s.A {
             (this.resetBillingCycle = e.resetBillingCycle ?? !1);
     }
 }
-class d extends s.A {
+class c extends s.A {
     paymentGateway;
     paymentSourceId;
     invoicePreview;
@@ -131,7 +131,7 @@ class d extends s.A {
         let t = e.billing_facet;
         return null == t
             ? null
-            : new d({
+            : new c({
                   paymentGateway: t.payment_gateway,
                   paymentSourceId: t.payment_source_id ?? null,
                   invoicePreview: a.Y.createInvoiceFromOrder(e),
@@ -161,12 +161,12 @@ class _ extends s.A {
             status: e.status,
             revision: e.revision,
             orderLineItems: e.order_line_items,
-            billingFacetRecord: d.createFromOrder(e),
+            billingFacetRecord: c.createFromOrder(e),
             giftingFacet: e.gifting_facet ?? null,
             checkoutContextRecord: u.createFromOrder(e),
             createdAt: e.created_at,
             unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
-            subscriptionFacet: c.createFromServer(e.subscription_facet),
+            subscriptionFacet: d.createFromServer(e.subscription_facet),
         });
     }
     constructor(e) {
@@ -191,8 +191,8 @@ class _ extends s.A {
 }
 var h = n(566980),
     f = n(410516),
-    p = n(815545),
-    E = n(786300),
+    E = n(815545),
+    p = n(786300),
     m = n(428262),
     g = n(202541);
 function A(e) {
@@ -202,18 +202,19 @@ function A(e) {
 }
 var I = n(504275),
     T = n(219538);
-let [S, y] = (0, E.A)();
-function C(e) {
+let S = 1,
+    [N, C] = (0, p.A)();
+function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return y()(e, t);
+    return C()(e, t);
 }
-function N(e, t) {
+function v(e, t) {
     if (null == e) return null;
     if ("premium_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-function v(e) {
+function R(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -235,7 +236,7 @@ function v(e) {
             isPremiumDiscountAppliedToCheckoutInvoice: () => {
                 let { discountOffer: e } = i().premiumDiscountInfo,
                     t = i().checkoutInvoicePreview;
-                return null != e && null != e.discount && null != t && (0, p.Ro)(t, e.discount.id);
+                return null != e && null != e.discount && null != t && (0, E.Ro)(t, e.discount.id);
             },
         };
         return {
@@ -279,10 +280,12 @@ function v(e) {
             setOrder: (t) => e({ order: t, orderRecord: _.createFromServer(t) }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
-            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0 }),
-            setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0 }),
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: S }),
+            setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0, quantity: S }),
+            quantity: S,
+            setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: N(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: v(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -292,7 +295,7 @@ function v(e) {
                     pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: N(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: v(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

@@ -1,31 +1,31 @@
 "use strict";
-n.d(t, { Aj: () => S, EX: () => g, NY: () => I, O1: () => A, T3: () => N, XU: () => y, lo: () => C });
+n.d(t, { Aj: () => S, EX: () => g, NY: () => I, O1: () => A, T3: () => y, XU: () => N, lo: () => C });
 var i = n(635358),
     r = n(636537),
     s = n(228366),
     a = n(913122),
     o = n(136857),
     l = n(178253),
-    u = n(753390),
-    c = n(977445),
-    d = n(937427),
+    u = n(277984),
+    d = n(977445),
+    c = n(937427),
     _ = n(67480),
     h = n(739508),
     f = n(403362),
-    p = n(107351),
-    E = n(371794),
+    E = n(107351),
+    p = n(371794),
     m = n(652215);
 async function g(e, t, n, r) {
     if (null == _.A.get(t)) {
         s.h.dispatch({ type: "SKU_FETCH_START", skuId: t });
         try {
-            let a = (0, c.Fs)(e),
+            let a = (0, d.Fs)(e),
                 o = { url: a ? m.Rsh.STORE_SKU(t) : m.Rsh.STORE_PUBLISHED_LISTINGS_SKU(t), rejectWithError: !1 },
                 l = {};
             n === i.g.VARIANTS_GROUP && (l.variants_return_style = n),
                 r && (l.include_unpublished = !0),
                 Object.keys(l).length > 0 && (o.query = l);
-            let u = await (0, E.aP)(o);
+            let u = await (0, p.aP)(o);
             s.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: a ? u.body : u.body.sku }),
                 a || s.h.dispatch({ type: "STORE_LISTING_FETCH_SUCCESS", storeListing: u.body });
         } catch (e) {
@@ -35,18 +35,18 @@ async function g(e, t, n, r) {
 }
 async function A(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    if (!(0, c.Fs)(e) && t) throw Error("this should only be used in test mode");
-    let n = (await (0, E.aP)({ url: m.Rsh.APPLICATION_SKUS(e), rejectWithError: !1 })).body;
+    if (!(0, d.Fs)(e) && t) throw Error("this should only be used in test mode");
+    let n = (await (0, p.aP)({ url: m.Rsh.APPLICATION_SKUS(e), rejectWithError: !1 })).body;
     return s.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: n }), n;
 }
 async function I(e) {
     let { applicationId: t, skuId: n, paymentSourceId: i, isGift: r, currency: s } = e,
         l = { payment_source_id: i, gift: r, currency: s };
-    (0, c.Fs)(t) && (l.test_mode = !0);
-    let u = d.A.getPromotionIdOverride();
+    (0, d.Fs)(t) && (l.test_mode = !0);
+    let u = c.A.getPromotionIdOverride();
     null != u && (l.promotion_id_override = u);
     try {
-        return (await (0, E.aP)({ url: m.Rsh.STORE_SKU_PURCHASE(n), query: l, oldFormErrors: !0, rejectWithError: !1 }))
+        return (await (0, p.aP)({ url: m.Rsh.STORE_SKU_PURCHASE(n), query: l, oldFormErrors: !0, rejectWithError: !1 }))
             .body;
     } catch (t) {
         let e = t instanceof a.Ey ? t : new a.Ey(t);
@@ -88,23 +88,24 @@ async function S(e, t, n, i, o) {
         throw (s.h.dispatch({ type: "ORDER_CREATE_FAIL" }), new a.Ey(`Failed to create order: ${e}`));
     }
 }
-async function y(e, t, n) {
+async function N(e, t, n) {
     let {
         paymentSource: i,
         expectedAmount: l,
         expectedCurrency: _,
-        analyticsLoadId: E,
+        analyticsLoadId: p,
         isGift: g,
         giftInfoOptions: A,
         subscriptionPlanId: I,
         loadId: S,
-        countryCode: y,
+        countryCode: N,
         orderId: C,
+        quantity: y,
     } = { ...T, ...n };
     s.h.wait(() => {
         s.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t });
     });
-    let N = (0, c.Fs)(e);
+    let v = (0, d.Fs)(e);
     try {
         let e = {
                 gift: g,
@@ -113,8 +114,8 @@ async function y(e, t, n) {
                 load_id: S,
                 gift_info_options: A,
             },
-            n = d.A.getPromotionIdOverride();
-        if ((null != n && (e.promotion_id_override = n), N)) e.test_mode = !0;
+            n = c.A.getPromotionIdOverride();
+        if ((null != n && (e.promotion_id_override = n), v)) e.test_mode = !0;
         else {
             if (
                 null != i &&
@@ -124,16 +125,17 @@ async function y(e, t, n) {
                 e.return_url =
                     (0, r.TP)() + m.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(i.type, t ?? "", "success");
             }
-            null != y && (e.country_code = y);
+            null != N && (e.country_code = N);
         }
         null != l && (e.expected_amount = l),
             null != _ && (e.expected_currency = _),
-            (e.purchase_token = (0, p.r)()),
-            null != C && (e.order_id = C);
+            (e.purchase_token = (0, E.r)()),
+            null != C && (e.order_id = C),
+            null != y && (e.quantity = y);
         let a = await r.Bo.post({
             url: m.Rsh.STORE_SKU_PURCHASE(t),
             body: e,
-            context: { load_id: E },
+            context: { load_id: p },
             oldFormErrors: !0,
             rejectWithError: !1,
         });
@@ -159,12 +161,12 @@ async function y(e, t, n) {
         )
             throw n;
         if (!r.body.payment_id) throw (0, u.i0)("payment id cannot be null on redirected confirmations.");
-        return (0, u.MM)(r.body, i);
+        return (0, u.Oj)(r.body, i);
     }
 }
 async function C() {
     try {
-        let e = { purchase_token: (0, p.r)() };
+        let e = { purchase_token: (0, E.r)() };
         return {
             ...(
                 await r.Bo.post({
@@ -179,6 +181,6 @@ async function C() {
         throw e instanceof a.Ey ? e : new a.Ey(e);
     }
 }
-function N() {
+function y() {
     s.h.dispatch({ type: "SKU_PURCHASE_CLEAR_ERROR" });
 }
