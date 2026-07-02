@@ -4521,7 +4521,6 @@ let r9 = (e) => {
                                           : (0, r.jsx)(r5.A, {
                                                 selectedPlan: p,
                                                 verifiedPlanId: p.id,
-                                                premiumSubscription: _,
                                                 handlePaymentSourceAdd: N,
                                                 planGroup: n,
                                                 hasOpenInvoice: null != i,
@@ -4531,7 +4530,6 @@ let r9 = (e) => {
                               (0, r.jsx)(ef.UX, {
                                   children: (0, r.jsx)(r7.U, {
                                       resolveTenantReviewButtonProps: r9,
-                                      premiumSubscription: _ ?? null,
                                       onBack: () => null != E && t(E),
                                       handleStepChange: t,
                                       postPurchaseStep: u.pn.CONFIRM,

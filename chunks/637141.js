@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => D, Sm: () => R });
+n.d(t, { Ay: () => L, Sm: () => R });
 var i = n(627968),
     r = n(64700),
     s = n(702841),
@@ -7,25 +7,25 @@ var i = n(627968),
     o = n(821609),
     l = n(289873),
     u = n(887555),
-    c = n(277984),
-    d = n(176095),
+    d = n(277984),
+    c = n(176095),
     _ = n(6151),
     h = n(826469),
     f = n(812745),
-    p = n(202613),
-    E = n(975571),
+    E = n(202613),
+    p = n(975571),
     m = n(580630),
     g = n(935208),
     A = n(652215),
     I = n(818348),
     T = n(375708),
     S = n(327105),
-    y = n(776409),
+    N = n(776409),
     C = n(714246);
-let N = "***@***.***",
-    v = new p.YS({ id: _.a, brand: f.Ay.Types.UNKNOWN, type: A.hes.CARD });
+let y = "***@***.***",
+    v = new E.YS({ id: _.a, brand: f.Ay.Types.UNKNOWN, type: A.hes.CARD });
 function R(e, t, n) {
-    if (e instanceof p.YS)
+    if (e instanceof E.YS)
         return e.id === _.a
             ? { brand: null, label: T.intl.string(T.t.eQ2bLp) }
             : "link" === e.brand && "0000" === e.last4
@@ -39,36 +39,36 @@ function R(e, t, n) {
                     brand: t ? f.Ay.Types.UNKNOWN : e.brand,
                     label: T.intl.formatToPlainString(T.t.QvBAQk, { last4: t ? "****" : e.last4 }),
                 };
-    if (e instanceof p.SJ) return { brand: f.Ay.Types.PAYPAL, label: t ? N : e.email };
-    if (e instanceof p.A0) return { brand: f.Ay.Types.SOFORT, label: t ? N : e.email };
-    if (e instanceof p.Qh) return { brand: f.Ay.Types.GIROPAY, label: T.intl.string(T.t["y+0MQZ"]) };
-    if (e instanceof p.Tu) return { brand: f.Ay.Types.PRZELEWY24, label: t ? N : e.email };
-    else if (e instanceof p.Ux) return { brand: f.Ay.Types.PAYSAFECARD, label: T.intl.string(T.t.e3APTT) };
-    else if (e instanceof p.F_) return { brand: f.Ay.Types.GCASH, label: T.intl.string(T.t.PjehcF) };
-    else if (e instanceof p.Xj) return { brand: f.Ay.Types.GRABPAY, label: T.intl.string(T.t.T5davE) };
-    else if (e instanceof p.am) return { brand: f.Ay.Types.MOMO_WALLET, label: T.intl.string(T.t.J0A1Vk) };
-    else if (e instanceof p._1) return { brand: f.Ay.Types.VENMO, label: t ? "***" : "@" + e.username };
-    else if (e instanceof p.i6) return { brand: f.Ay.Types.KAKAOPAY, label: T.intl.string(T.t.CSVexi) };
-    else if (e instanceof p.cg) return { brand: f.Ay.Types.GOPAY_WALLET, label: T.intl.string(T.t["43J8JK"]) };
-    else if (e instanceof p.UG) return { brand: f.Ay.Types.BANCONTACT, label: T.intl.string(T.t["1ITkfq"]) };
-    else if (e instanceof p.rJ)
+    if (e instanceof E.SJ) return { brand: f.Ay.Types.PAYPAL, label: t ? y : e.email };
+    if (e instanceof E.A0) return { brand: f.Ay.Types.SOFORT, label: t ? y : e.email };
+    if (e instanceof E.Qh) return { brand: f.Ay.Types.GIROPAY, label: T.intl.string(T.t["y+0MQZ"]) };
+    if (e instanceof E.Tu) return { brand: f.Ay.Types.PRZELEWY24, label: t ? y : e.email };
+    else if (e instanceof E.Ux) return { brand: f.Ay.Types.PAYSAFECARD, label: T.intl.string(T.t.e3APTT) };
+    else if (e instanceof E.F_) return { brand: f.Ay.Types.GCASH, label: T.intl.string(T.t.PjehcF) };
+    else if (e instanceof E.Xj) return { brand: f.Ay.Types.GRABPAY, label: T.intl.string(T.t.T5davE) };
+    else if (e instanceof E.am) return { brand: f.Ay.Types.MOMO_WALLET, label: T.intl.string(T.t.J0A1Vk) };
+    else if (e instanceof E._1) return { brand: f.Ay.Types.VENMO, label: t ? "***" : "@" + e.username };
+    else if (e instanceof E.i6) return { brand: f.Ay.Types.KAKAOPAY, label: T.intl.string(T.t.CSVexi) };
+    else if (e instanceof E.cg) return { brand: f.Ay.Types.GOPAY_WALLET, label: T.intl.string(T.t["43J8JK"]) };
+    else if (e instanceof E.UG) return { brand: f.Ay.Types.BANCONTACT, label: T.intl.string(T.t["1ITkfq"]) };
+    else if (e instanceof E.rJ)
         return { brand: f.Ay.Types.EPS, label: T.intl.format(T.t.hSPoZw, { bank: (0, u.j)(e.bank) }) };
-    else if (e instanceof p.EE)
+    else if (e instanceof E.EE)
         return {
             brand: f.Ay.Types.IDEAL,
             label:
                 null == e.bank ? T.intl.string(T.t.nSbwqC) : T.intl.format(T.t["9kUlRU"], { bank: (0, u.o)(e.bank) }),
         };
-    else if (e instanceof p.FQ) return { brand: f.Ay.Types.CASH_APP, label: t ? "***" : e.username };
-    else if (e instanceof p.LQ)
+    else if (e instanceof E.FQ) return { brand: f.Ay.Types.CASH_APP, label: t ? "***" : e.username };
+    else if (e instanceof E.LQ)
         return {
             brand: f.Ay.Types.GIFT_CARD,
             label:
                 null != n
-                    ? T.intl.formatToPlainString(y.default["Jz6+Oj"], { amount: n })
-                    : T.intl.string(y.default["/FQWfA"]),
+                    ? T.intl.formatToPlainString(N.default["Jz6+Oj"], { amount: n })
+                    : T.intl.string(N.default["/FQWfA"]),
         };
-    else if (e instanceof p.IE) return { brand: f.Ay.Types.PIX, label: T.intl.string(T.t.JG3WQU) };
+    else if (e instanceof E.IE) return { brand: f.Ay.Types.PIX, label: T.intl.string(T.t.JG3WQU) };
     throw Error("Invalid Payment Source");
 }
 function O(e) {
@@ -80,34 +80,34 @@ function O(e) {
             paymentSourceOptions: o,
             selectedPaymentSourceId: l,
             newPaymentMethodOptionLabel: u,
-            noticeMessage: c,
+            noticeMessage: d,
+            resolvePaymentSourceOptions: c,
         } = e,
-        d = r.useMemo(
-            () =>
-                o.map((e) => {
-                    let { label: t, brand: n, ...i } = e;
-                    return { id: null != i.key ? `${i.key}` : i.value, label: t ?? "", icon: n ?? void 0, ...i };
-                }),
-            [o],
-        ),
-        h = r.useMemo(
+        h = r.useMemo(() => {
+            let e = o.map((e) => {
+                let { label: t, brand: n, ...i } = e;
+                return { id: null != i.key ? `${i.key}` : i.value, label: t ?? "", icon: n ?? void 0, ...i };
+            });
+            return null != c ? c(e) : e;
+        }, [o, c]),
+        f = r.useMemo(
             () => ({
                 value: l ?? null,
-                options: d,
+                options: h,
                 onChange: a,
                 onNew: null != t ? t : () => {},
                 disabled: s || n,
                 newPaymentMethodOptionLabel: u,
             }),
-            [l, d, a, t, s, n, u],
+            [l, h, a, t, s, n, u],
         );
-    return (0, i.jsx)(_.v, { ...h, noticeMessage: c });
+    return (0, i.jsx)(_.v, { ...f, noticeMessage: d });
 }
 function b(e) {
     let { onClick: t } = e;
     return (0, i.jsx)(o.$, { variant: "primary", fullWidth: !0, onClick: t, text: T.intl.string(T.t.eQ2bLp) });
 }
-function D(e) {
+function L(e) {
     let {
             selectedPaymentSourceId: t,
             paymentSources: n,
@@ -115,19 +115,20 @@ function D(e) {
             hidePersonalInformation: u,
             onChange: f,
             onPaymentSourceAdd: g,
-            isTrial: y = !1,
-            disabled: N = !1,
-            dropdownLoading: D,
-            paymentGatewayRestrictions: L,
-            newPaymentMethodOptionLabel: w,
-            defaultPaymentSourceId: M,
-            tooltipText: P,
+            isTrial: N = !1,
+            disabled: y = !1,
+            dropdownLoading: L,
+            paymentGatewayRestrictions: D,
+            newPaymentMethodOptionLabel: P,
+            defaultPaymentSourceId: w,
+            tooltipText: M,
+            resolvePaymentSourceOptions: x,
         } = e,
         {
-            hasNoPaymentSources: x,
+            hasNoPaymentSources: U,
             handleChange: k,
-            paymentSource: U,
-            paymentSourceOptions: G,
+            paymentSource: G,
+            paymentSourceOptions: V,
             selectedPaymentSourceId: F,
         } = (function (e) {
             let {
@@ -140,18 +141,18 @@ function D(e) {
                     paymentGatewayRestrictions: u,
                     includeNewPaymentSourceOption: f,
                 } = e,
-                E = r.useMemo(() => n.find((e) => (e instanceof h.A ? e.source : e) instanceof p.LQ)?.id ?? null, [n]);
+                p = r.useMemo(() => n.find((e) => (e instanceof h.A ? e.source : e) instanceof E.LQ)?.id ?? null, [n]);
             r.useEffect(() => {
-                null != E && (0, c.YP)(E);
-            }, [E]);
-            let g = (0, s.bG)([d.A], () => {
-                    if (null == E) return null;
-                    let e = d.A.getBalance(E);
+                null != p && (0, d.YP)(p);
+            }, [p]);
+            let g = (0, s.bG)([c.A], () => {
+                    if (null == p) return null;
+                    let e = c.A.getBalance(p);
                     return null != e ? (0, m.$g)(e.amount, e.currency) : null;
-                }, [E]),
+                }, [p]),
                 A = 0 === n.length,
                 I = null != i ? [i] : [],
-                y = [...I, ...n, ...(f ? [v] : [])].map((e, t) => {
+                N = [...I, ...n, ...(f ? [v] : [])].map((e, t) => {
                     if (e instanceof h.A) {
                         let t,
                             { brand: n, label: i } = R(e.source, a, g);
@@ -165,7 +166,7 @@ function D(e) {
                             { value: e.id, label: i, brand: n, disabled: !e.enabled, tooltipText: t }
                         );
                     }
-                    if (e instanceof p.Ay) {
+                    if (e instanceof E.Ay) {
                         let t,
                             { brand: n, label: i } = R(e, a, g);
                         return (
@@ -195,7 +196,7 @@ function D(e) {
                     }
                 },
                 prependOptions: I,
-                paymentSourceOptions: y,
+                paymentSourceOptions: N,
                 paymentSource: r.useMemo(() => n.find((e) => e.id === C), [n, C]),
                 selectedPaymentSourceId: C,
             };
@@ -206,17 +207,17 @@ function D(e) {
             hidePersonalInformation: u,
             onChange: f,
             onPaymentSourceAdd: g,
-            paymentGatewayRestrictions: L,
+            paymentGatewayRestrictions: D,
             includeNewPaymentSourceOption: !1,
         }),
-        V = (function (e) {
+        B = (function (e) {
             let { isTrial: t, selectedPaymentSource: n, paymentSources: i, defaultPaymentSourceId: r } = e,
                 s = n instanceof h.A ? n.source : n;
             if (null != s) {
                 if (t && !s.canRedeemTrial()) return T.intl.string(T.t.SvheW9);
                 if (t && s.hasFlag(I.rI.NEW))
                     return T.intl.format(T.t.d7ZLKA, {
-                        helpDeskArticle: E.A.getArticleURL(A.MVz.PAYMENT_AUTHORIZATION_CHARGE),
+                        helpDeskArticle: p.A.getArticleURL(A.MVz.PAYMENT_AUTHORIZATION_CHARGE),
                     });
             }
             let a = i.filter((e) => e instanceof h.A);
@@ -230,17 +231,18 @@ function D(e) {
                 }
             }
             return null;
-        })({ isTrial: y, selectedPaymentSource: U, paymentSources: n, defaultPaymentSourceId: M });
-    if (D) return (0, i.jsx)("div", { className: C.h, children: (0, i.jsx)(l.y, { type: l.y.Type.PULSING_ELLIPSIS }) });
-    if (x) return (0, i.jsx)(b, { onClick: g });
-    let B = (0, i.jsx)(O, {
+        })({ isTrial: N, selectedPaymentSource: G, paymentSources: n, defaultPaymentSourceId: w });
+    if (L) return (0, i.jsx)("div", { className: C.h, children: (0, i.jsx)(l.y, { type: l.y.Type.PULSING_ELLIPSIS }) });
+    if (U) return (0, i.jsx)(b, { onClick: g });
+    let j = (0, i.jsx)(O, {
+        resolvePaymentSourceOptions: x,
         onPaymentSourceAdd: g,
-        disabled: N,
+        disabled: y,
         handleChange: k,
-        paymentSourceOptions: G,
+        paymentSourceOptions: V,
         selectedPaymentSourceId: F,
-        newPaymentMethodOptionLabel: w,
-        noticeMessage: V,
+        newPaymentMethodOptionLabel: P,
+        noticeMessage: B,
     });
-    return null != P ? (0, i.jsx)(a.m, { asContainer: !0, text: P, children: B }) : B;
+    return null != M ? (0, i.jsx)(a.m, { asContainer: !0, text: M, children: j }) : j;
 }

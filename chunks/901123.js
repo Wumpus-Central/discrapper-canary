@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { BV: () => _, Cr: () => c, ME: () => a, YY: () => o, c$: () => u, gN: () => l });
+n.d(t, { BV: () => _, Cr: () => d, ME: () => a, YY: () => o, c$: () => u, gN: () => l });
 var i = n(323125),
     r = n(758836);
 n(436317);
@@ -8,8 +8,8 @@ let a = "@me",
     o = "@favorites",
     l = "@inbox",
     u = "@guilds-empty-nux",
-    c = [a, o, u, l, "@guild-upsell-list"],
-    d = Object.freeze({
+    d = [a, o, u, l, "@guild-upsell-list"],
+    c = Object.freeze({
         INDEX: "/",
         APP: "/app",
         APP_WITH_INVITE_AND_GUILD_ONBOARDING: (e) => `/app/invite-with-guild-onboarding/${e}`,
@@ -124,6 +124,7 @@ let a = "@me",
         VERIFY_HUB_EMAIL: "/verify-hub-email",
         OPEN_APP_FROM_EMAIL: "/open-app-from-email",
         BILLING_MANAGE_SUBSCRIPTION: "/billing/premium/manage",
+        BILLING_PAST_DUE_SUBSCRIPTION: "/billing/premium/past-due",
         BILLING_MANAGE_SUBSCRIPTION_WITH_DEEP_LINK: (e, t) =>
             `/billing/premium/manage?deep_link_type=${e}${null != t ? `&load_id=${t}` : ""}`,
         BILLING_MANAGE_SUBSCRIPTION_WITH_FLOW_TYPE: (e, t) =>
@@ -196,4 +197,4 @@ let a = "@me",
         QUEST_PREVIEW_TOOL_2: (e) => `/quest-home?tab=preview_tool&quest_id=${e}`,
         ICYMI: "/icymi",
     }),
-    _ = (0, i.dN)(d, [":", "?", "@"]);
+    _ = (0, i.dN)(c, [":", "?", "@"]);

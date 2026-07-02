@@ -60,7 +60,10 @@ let g = 1e3 / 24,
                 [n, f, a, i, s, e],
             ),
             I = r.useCallback(() => {
-                (c.current = !0), (d.current = void 0), (l.current = requestAnimationFrame(A));
+                (c.current = !0),
+                    (d.current = void 0),
+                    cancelAnimationFrame(l.current),
+                    (l.current = requestAnimationFrame(A));
             }, [A]);
         return (
             r.useEffect(() => {
