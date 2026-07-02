@@ -6,6 +6,7 @@ e.exports = {
     MO: "inInput__2e223",
     vF: "listBoxItemLabel__2e223",
     vL: "listBoxItemDescription__2e223",
+    SG: "listBoxSectionHeader__2e223",
     Dt: "selectedIcon__2e223",
     vG: "loadingSpinnerWrapper__2e223",
     S: "loadingSpinner__2e223",

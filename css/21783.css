@@ -2761,21 +2761,28 @@
     flex-shrink: 1
 }
 
+.listBoxSectionHeader__2e223 {
+    padding: var(--space-4) var(--space-4) var(--space-4) var(--space-8)
+}
+
+.listBoxSectionHeader__2e223,
 .selectedIcon__2e223 {
+    align-items: center;
     box-sizing: border-box;
+    display: flex
+}
+
+.selectedIcon__2e223 {
+    justify-content: center;
     min-width: 24px;
     padding: var(--space-xxs) var(--space-4) var(--space-xxs) var(--space-4)
 }
 
-.loadingSpinnerWrapper__2e223,
-.selectedIcon__2e223 {
+.loadingSpinnerWrapper__2e223 {
     align-items: center;
     display: flex;
+    height: var(--select-option-height);
     justify-content: center
-}
-
-.loadingSpinnerWrapper__2e223 {
-    height: var(--select-option-height)
 }
 
 .loadingSpinner__2e223 {

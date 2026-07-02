@@ -14,4 +14,19 @@ function s() {
         t = arguments.length > 1 ? arguments[1] : void 0;
     return `${e}-option-${t}`;
 }
-n.d(t, { ZN: () => s, fI: () => i, qH: () => r }), n(321073);
+function a(e) {
+    if (
+        !(function (e) {
+            if (0 === e.length) return !1;
+            let t = e[0];
+            return !("value" in t) && Array.isArray(t.options);
+        })(e)
+    )
+        return { flatOptions: e, groups: [] };
+    let t = [],
+        n = [];
+    for (let i of e)
+        0 !== i.options.length && (t.push(...i.options), n.push({ label: i.label, count: i.options.length }));
+    return { flatOptions: t, groups: n };
+}
+n.d(t, { ZN: () => s, fI: () => i, qH: () => r, yG: () => a }), n(321073);

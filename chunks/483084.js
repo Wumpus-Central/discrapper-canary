@@ -1,48 +1,45 @@
 "use strict";
-n.d(t, { K: () => r });
-var i = n(64700);
-function r(e) {
-    let { active: t, options: n, renderOption: r } = e,
-        s = "function" == typeof n,
-        [a, o] = i.useState({ options: s ? [] : n, query: "", debouncedQuery: "", loading: !1 }),
-        { options: l, loading: u, query: c, debouncedQuery: d } = a,
-        _ = i.useCallback((e) => o((t) => ({ ...t, loading: s, query: e, debouncedQuery: e })), [s]);
-    return (
-        i.useEffect(() => {
-            t && _("");
-        }, [t, _]),
+n.d(t, { K: () => s });
+var i = n(64700),
+    r = n(715022);
+function s(e) {
+    let { active: t, options: n, renderOption: s } = e,
+        a = "function" == typeof n,
+        [o, l] = i.useState({ options: a ? [] : n, query: "", debouncedQuery: "", loading: !1 }),
+        { options: u, loading: d, query: c, debouncedQuery: _ } = o,
+        h = i.useCallback((e) => l((t) => ({ ...t, loading: a, query: e, debouncedQuery: e })), [a]);
+    i.useEffect(() => {
+        t && h("");
+    }, [t, h]),
         i.useEffect(() => {
             let e;
             return (
-                s
-                    ? (o((e) => ({ ...e, loading: !0, debouncedQuery: null })),
+                a
+                    ? (l((e) => ({ ...e, loading: !0, debouncedQuery: null })),
                       (e = setTimeout(() => {
-                          _(c);
+                          h(c);
                       }, 500)))
-                    : _(c),
+                    : h(c),
                 () => {
                     clearTimeout(e);
                 }
             );
-        }, [s, c, _]),
+        }, [a, c, h]),
         i.useEffect(() => {
             let e = !1;
             return (
-                ((t && null !== d && s) || !s) &&
-                    ("function" == typeof n ? n(d) : Promise.resolve(n)).then((t) => {
-                        e || (null != r && (t = t.map(r)), o((e) => ({ ...e, options: t, loading: !1 })));
+                ((t && null !== _ && a) || !a) &&
+                    ("function" == typeof n ? n(_) : Promise.resolve(n)).then((t) => {
+                        e || (null != s && (t = t.map(s)), l((e) => ({ ...e, options: t, loading: !1 })));
                     }),
                 () => {
                     e = !0;
                 }
             );
-        }, [t, n, d, r, s]),
-        {
-            options: l,
-            loading: u,
-            onQueryChange: i.useCallback((e) => {
-                o((t) => ({ ...t, query: e }));
-            }, []),
-        }
-    );
+        }, [t, n, _, s, a]);
+    let f = i.useCallback((e) => {
+            l((t) => ({ ...t, query: e }));
+        }, []),
+        { flatOptions: E, groups: p } = i.useMemo(() => (0, r.yG)(u), [u]);
+    return { options: E, groups: p, loading: d, onQueryChange: f };
 }

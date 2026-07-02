@@ -31,59 +31,63 @@ function N(e) {
             disabled: c = !1,
             selectionMode: _ = "single",
             items: g,
-            defaultSelectedItems: N,
-            selectedItems: v,
-            onSelectionChange: R,
-            activeDescendantIndex: O,
-            shouldFocusWrap: b = !1,
-            renderListItem: L,
-            renderEmptyState: D,
-            maxVisibleItems: P = 5,
-            loading: w = !1,
-            onBlur: M,
-            onFocus: x,
-            typeahead: U = !1,
+            groups: N = [],
+            defaultSelectedItems: v,
+            selectedItems: R,
+            onSelectionChange: O,
+            activeDescendantIndex: b,
+            shouldFocusWrap: L = !1,
+            renderListItem: D,
+            renderEmptyState: P,
+            maxVisibleItems: w = 5,
+            loading: M = !1,
+            onBlur: x,
+            onFocus: U,
+            typeahead: k = !1,
         } = e,
-        k = r.useId(),
-        G = n ?? k,
-        V = r.useRef(null),
-        F = r.useMemo(() => g.map((e, t) => ({ ...e, index: t })), [g]),
-        [B, j] = r.useState(N ?? []),
-        H = null != v,
-        W = H ? v : B,
-        Y = (0, o.Ay)({
-            id: G,
-            defaultFocused: null != O ? (0, m.ZN)(G, O) : void 0,
+        G = r.useId(),
+        V = n ?? G,
+        F = r.useRef(null),
+        B = r.useMemo(() => g.map((e, t) => ({ ...e, index: t })), [g]),
+        [j, H] = r.useState(v ?? []),
+        W = null != R,
+        Y = W ? R : j,
+        K = (0, o.Ay)({
+            id: V,
+            defaultFocused: null != b ? (0, m.ZN)(V, b) : void 0,
             async scrollToEnd() {},
             async scrollToStart() {},
             isEnabled: !c,
-            wrap: b,
+            wrap: L,
             preserveFocusPosition: !1,
             useVirtualFocus: -1 === s,
         });
     r.useEffect(() => {
         requestAnimationFrame(() => {
-            null != O && V.current?.scrollToIndex({ section: 0, row: O });
+            if (null != b) {
+                let [e, t] = (0, m.LE)(N, b);
+                F.current?.scrollToIndex({ section: e, row: t });
+            }
         });
-    }, [G, O]);
-    let { activeIndex: K, handleKeyDown: $ } = y(U, F);
+    }, [V, b, N]);
+    let { activeIndex: $, handleKeyDown: z } = y(k, B);
     r.useEffect(() => {
-        if (null != K && U && -1 !== s) {
-            let e = (0, l.t$)(G, (0, m.ZN)(G, K)),
+        if (null != $ && k && -1 !== s) {
+            let e = (0, l.t$)(V, (0, m.ZN)(V, $)),
                 t = document.querySelector((0, l.Mz)(e));
             t?.focus();
         }
-    }, [K, F, U, G, s]);
-    let z = r.useCallback((e, t) => (S(F[t]) ? T : I), [F]),
-        q = r.useCallback(
+    }, [$, B, k, V, s]);
+    let q = r.useCallback((e, t) => (S(B[(0, m.rp)(N, e, t)]) ? T : I), [B, N]),
+        Z = r.useCallback(
             (e) => {
-                if (!0 === d && 1 === W.length && W.includes(e)) return;
-                let t = (0, m.qH)(_, W, e);
-                H || j(t), R?.(t);
+                if (!0 === d && 1 === Y.length && Y.includes(e)) return;
+                let t = (0, m.qH)(_, Y, e);
+                W || H(t), O?.(t);
             },
-            [d, W, R, H, _],
+            [d, Y, O, W, _],
         ),
-        Z = r.useCallback((e, t) => {
+        X = r.useCallback((e, t) => {
             let { label: n, description: r } = e,
                 s = S(e);
             return (0, i.jsxs)("div", {
@@ -103,77 +107,107 @@ function N(e) {
                 ],
             });
         }, []);
-    return (
-        (t = w
-            ? (0, i.jsx)("div", {
-                  className: A.vG,
-                  "aria-busy": !0,
-                  children: (0, i.jsx)(f.y, { type: f.t.PULSING_ELLIPSIS, className: A.S, itemClassName: A.Ci }),
-              })
-            : F.length > 0
-              ? (0, i.jsx)(h.Ei, {
-                    ref: V,
-                    style: {
-                        height: null != P ? `${F.slice(0, P).reduce((e, t) => e + (S(t) ? T : I), 0)}px` : "100%",
-                    },
-                    role: void 0,
-                    tabIndex: s,
-                    rowHeight: z,
-                    sections: [F.length],
-                    sectionHeight: 0,
-                    renderSection: () => null,
-                    renderRow: (e) => {
-                        let { row: t } = e,
-                            n = F[t],
-                            r = (0, m.ZN)(G, t),
-                            a = null == L && S(n) ? `${r}-desc` : void 0,
-                            o = 0 !== W.length && null != W.find((e) => e.id === n.id);
-                        return (0, i.jsx)(
-                            C,
-                            {
-                                ...n,
-                                id: r,
-                                descriptionId: a,
-                                tabIndex: s,
-                                selectionMode: _,
-                                selected: o,
-                                disabled: c || n.disabled,
-                                focused: t === O,
-                                onClick: () => {
-                                    c || n.disabled || q(n);
-                                },
-                                children: L?.(n, a) ?? Z(n, a),
-                            },
-                            n.index,
-                        );
-                    },
-                })
-              : (D?.() ?? (0, i.jsx)(p.o, {}))),
-        (0, i.jsx)(u.hD, {
-            navigator: Y,
-            children: (0, i.jsx)(u.PR, {
-                children: (e) => {
-                    let { ref: n, onKeyDown: r, ...o } = e;
-                    return (0, i.jsx)("div", {
-                        onBlur: M,
-                        onFocus: x,
-                        "aria-busy": w,
-                        ref: n,
-                        onKeyDown: (e) => {
-                            r?.(e), $(e);
-                        },
-                        ...o,
-                        role: "listbox",
+    if (M)
+        t = (0, i.jsx)("div", {
+            className: A.vG,
+            "aria-busy": !0,
+            children: (0, i.jsx)(f.y, { type: f.t.PULSING_ELLIPSIS, className: A.S, itemClassName: A.Ci }),
+        });
+    else if (B.length > 0) {
+        let e = N.length > 0;
+        t = (0, i.jsx)(h.Ei, {
+            ref: F,
+            style: {
+                height:
+                    null != w
+                        ? `${
+                              B.slice(0, w).reduce((e, t) => e + (S(t) ? T : I), 0) +
+                              26 *
+                                  (function (e, t) {
+                                      let n = 0,
+                                          i = 0;
+                                      for (let r of e) i < t && n++, (i += r.count);
+                                      return n;
+                                  })(N, w)
+                          }px`
+                        : "100%",
+            },
+            role: void 0,
+            tabIndex: s,
+            rowHeight: q,
+            sections: e ? N.map((e) => e.count) : [B.length],
+            sectionHeight: 26 * !!e,
+            renderSection: e
+                ? (e) => {
+                      let { section: t } = e;
+                      return (0, i.jsx)(
+                          E.E,
+                          {
+                              "aria-hidden": !0,
+                              variant: "text-sm/semibold",
+                              color: "text-muted",
+                              className: A.SG,
+                              children: N[t].label,
+                          },
+                          `section-${t}`,
+                      );
+                  }
+                : () => null,
+            wrapSection: e
+                ? (e, t) =>
+                      (0, i.jsx)("div", { role: "group", "aria-label": N[e].label, children: t }, `section-group-${e}`)
+                : void 0,
+            renderRow: (e) => {
+                let { rowIndex: t } = e,
+                    n = B[t],
+                    r = (0, m.ZN)(V, t),
+                    a = null == D && S(n) ? `${r}-desc` : void 0,
+                    o = 0 !== Y.length && null != Y.find((e) => e.id === n.id);
+                return (0, i.jsx)(
+                    C,
+                    {
+                        ...n,
+                        id: r,
+                        descriptionId: a,
                         tabIndex: s,
-                        "aria-multiselectable": "multiple" === _,
-                        className: a()(A.cu, { [A.E1]: F.length > P }),
-                        "data-mana-component": "listbox",
-                        children: t,
-                    });
-                },
-            }),
-        })
-    );
+                        selectionMode: _,
+                        selected: o,
+                        disabled: c || n.disabled,
+                        focused: t === b,
+                        onClick: () => {
+                            c || n.disabled || Z(n);
+                        },
+                        children: D?.(n, a) ?? X(n, a),
+                    },
+                    n.index,
+                );
+            },
+        });
+    } else t = P?.() ?? (0, i.jsx)(p.o, {});
+    return (0, i.jsx)(u.hD, {
+        navigator: K,
+        children: (0, i.jsx)(u.PR, {
+            children: (e) => {
+                let { ref: n, onKeyDown: r, ...o } = e;
+                return (0, i.jsx)("div", {
+                    onBlur: x,
+                    onFocus: U,
+                    "aria-busy": M,
+                    ref: n,
+                    onKeyDown: (e) => {
+                        r?.(e), z(e);
+                    },
+                    ...o,
+                    role: "listbox",
+                    tabIndex: s,
+                    "aria-multiselectable": "multiple" === _,
+                    className: a()(A.cu, { [A.E1]: B.length > w }),
+                    "data-mana-component": "listbox",
+                    children: t,
+                });
+            },
+        }),
+    });
 }
 function C(e) {
     let {

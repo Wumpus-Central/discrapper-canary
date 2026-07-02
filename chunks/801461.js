@@ -21,4 +21,18 @@ function s() {
         t = arguments.length > 1 ? arguments[1] : void 0;
     return `${e}-option-${t}`;
 }
-n.d(t, { ZN: () => s, fI: () => i, qH: () => r }), n(321073);
+function a(e, t) {
+    let n = 0;
+    for (let i = 0; i < e.length; i++) {
+        let r = e[i].count;
+        if (t < n + r) return [i, t - n];
+        n += r;
+    }
+    return [0, t];
+}
+function o(e, t, n) {
+    let i = 0;
+    for (let n = 0; n < t; n++) i += e[n].count;
+    return i + n;
+}
+n.d(t, { LE: () => a, ZN: () => s, fI: () => i, qH: () => r, rp: () => o }), n(321073);
