@@ -1,0 +1,10 @@
+.guildSelection__5a555 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-8)
+}
+
+.guildSelectorContainer__5a555 {
+    flex: 1
+}
