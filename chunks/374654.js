@@ -1,105 +1,115 @@
-l.d(n, { A: () => j });
+l.d(n, { A: () => E });
 var t = l(627968),
     a = l(64700),
     r = l(503698),
     i = l.n(r),
-    s = l(688810),
-    u = l(674658),
-    o = l(344346),
-    d = l(637193),
-    c = l(536572),
-    g = l(919395),
-    v = l(84540),
-    h = l(930349),
-    f = l(993408),
-    m = l(841702),
-    p = l(746002),
-    b = l(515718),
-    I = l(195292);
-function x(e) {
-    let n = (0, p.getCollectiblesItemAssetUrl)({ skuId: e.skuId, assetFormat: p.CollectiblesItemAssetFormat.STATIC });
-    null != n && (0, b.NN)(n).catch(() => {});
+    s = l(17928),
+    u = l(688810),
+    o = l(674658),
+    d = l(344346),
+    c = l(637193),
+    g = l(536572),
+    v = l(919395),
+    h = l(84540),
+    f = l(836602),
+    p = l(930349),
+    m = l(993408),
+    b = l(841702),
+    I = l(746002),
+    A = l(515718),
+    x = l(195292);
+function C(e) {
+    let n = (0, I.getCollectiblesItemAssetUrl)({ skuId: e.skuId, assetFormat: I.CollectiblesItemAssetFormat.STATIC });
+    null != n && (0, A.NN)(n).catch(() => {});
 }
-var A = l(375708),
-    C = l(535592),
-    k = l(970389);
-function y(e) {
+var k = l(375708),
+    y = l(535592),
+    N = l(970389);
+function j(e) {
     let {
             user: n,
             guildId: l,
             nameplatePreview: r,
-            isEmpty: s,
-            hasMainProfileFallback: u,
-            isInteracting: d,
-            disabled: c,
+            isEmpty: u,
+            hasMainProfileFallback: o,
+            isInteracting: c,
+            disabled: g,
         } = e,
-        g = (function (e) {
+        v = (0, s.bG)([f.A], () => f.A.getPendingChanges(null).pendingGlobalName),
+        h = (0, s.bG)([f.A], () => f.A.getPendingChanges(l ?? null).pendingNickname),
+        p = (0, s.bG)([f.A], () => f.A.getPendingChanges(l ?? null).pendingDisplayNameStyles),
+        I = (0, s.bG)([f.A], () => f.A.getPendingChanges(null).pendingPrimaryGuildId),
+        A = (function (e) {
             let { enabled: n, isInteracting: l } = e,
-                { categories: t, purchases: r } = (0, m.Ay)({ stalePurchasesOK: !0 }),
-                i = a.useMemo(() => (0, f.zd)(r, t), [r, t]),
-                s = (0, I.A)({ enabled: n, isInteracting: l, items: i, preload: x });
+                { categories: t, purchases: r } = (0, b.Ay)({ stalePurchasesOK: !0 }),
+                i = a.useMemo(() => (0, m.zd)(r, t), [r, t]),
+                s = (0, x.A)({ enabled: n, isInteracting: l, items: i, preload: C });
             return null != s ? { skuId: s.skuId, asset: s.asset, label: s.label, palette: s.palette } : null;
-        })({ enabled: s && !u && !c, isInteracting: d }),
-        v = null != g;
+        })({ enabled: u && !o && !g, isInteracting: c }),
+        k = null != A;
     return (0, t.jsx)("div", {
-        className: i()(C.M, { [k.O]: v }),
+        className: i()(y.M, { [N.O]: k }),
         "aria-hidden": !0,
-        children: (0, t.jsx)(o.A, {
+        children: (0, t.jsx)(d.A, {
             user: n,
             guildId: l ?? void 0,
-            nameplate: v ? g : r,
-            showPlaceholderUser: s || !d,
-            isHighlighted: d,
+            nameplate: k ? A : r,
+            showPlaceholderUser: (u && !o) || !c,
+            isHighlighted: c,
+            pendingGlobalName: v,
+            pendingNickname: h,
+            pendingDisplayNameStyles: p,
+            pendingPrimaryGuildId: I,
         }),
     });
 }
-function j(e) {
+function E(e) {
     let { user: n, guildId: l, disabled: r, errorMessageId: i } = e,
-        { analyticsLocations: o } = (0, s.Ay)(),
-        f = null != l,
-        { guildNameplate: m, pendingNameplate: p } = (0, g.rv)(n, l ?? void 0),
+        { analyticsLocations: s } = (0, u.Ay)(),
+        d = null != l,
+        { guildNameplate: f, pendingNameplate: m } = (0, v.rv)(n, l ?? void 0),
         b = n.collectibles?.nameplate,
-        I = f ? m : b,
-        x = void 0 !== p,
-        C = null === p || (!x && null == I),
-        k = f && null != b,
-        j = (0, g.lw)({ pendingValue: p, userValue: b, guildValue: m, guildId: l ?? void 0 }),
-        { product: N } = (0, u.q)(j?.skuId),
-        E = x ? null != p : null != I,
+        I = d ? f : b,
+        A = void 0 !== m,
+        x = null === m || (!A && null == I),
+        C = d && null != b,
+        y = (0, v.lw)({ pendingValue: m, userValue: b, guildValue: f, guildId: l ?? void 0 }),
+        { product: N } = (0, o.q)(y?.skuId),
+        E = A ? null != m : null != I,
         w =
-            null != j && E
+            null != y && E
                 ? {
-                      onClick: () => (0, v.p)({ guildId: l ?? void 0, nameplate: null }),
-                      type: k ? "reset" : "remove",
-                      accessibleLabel: A.intl.string(k ? A.t.neYqhR : A.t["9zwziY"]),
+                      onClick: () => (0, h.p)({ guildId: l ?? void 0, nameplate: null }),
+                      type: C ? "reset" : "remove",
+                      accessibleLabel: k.intl.string(C ? k.t.neYqhR : k.t["9zwziY"]),
                   }
                 : void 0,
-        S = a.useCallback(() => {
-            (0, d.p)({ analyticsLocations: o, guildId: l ?? void 0, stackingBehavior: "stack" });
-        }, [o, l]);
-    return (0, t.jsx)(h.V, {
-        affordance: C && !k ? "add" : w,
+        P = a.useCallback(() => {
+            (0, c.p)({ analyticsLocations: s, guildId: l ?? void 0, stackingBehavior: "stack" });
+        }, [s, l]);
+    return (0, t.jsx)(p.V, {
+        affordance: x && !C ? "add" : w,
         variant: "bar",
-        onClick: S,
-        accessibleLabel: A.intl.string(A.t.x5CoXR),
+        onClick: P,
+        accessibleLabel: k.intl.string(k.t.x5CoXR),
         accessibleValue: (function (e) {
             let { nameplatePreview: n, productName: l, hasPendingSelection: t } = e;
             return null == n
-                ? A.intl.string(A.t["3Xph0/"])
+                ? k.intl.string(k.t["3Xph0/"])
                 : null != l && "" !== l
                   ? l
-                  : A.intl.string(t ? A.t.mo1Huz : A.t.s9kNKK);
-        })({ nameplatePreview: j, productName: (0, c.VG)(N), hasPendingSelection: null != p }),
+                  : k.intl.string(t ? k.t.mo1Huz : k.t.s9kNKK);
+        })({ nameplatePreview: y, productName: (0, g.VG)(N), hasPendingSelection: null != m }),
         "aria-haspopup": "dialog",
         disabled: r,
         errorMessageId: i,
         renderPreview: (e) =>
-            (0, t.jsx)(y, {
+            (0, t.jsx)(j, {
                 user: n,
                 guildId: l,
-                nameplatePreview: j,
-                isEmpty: C,
-                hasMainProfileFallback: k,
+                nameplatePreview: y,
+                isEmpty: x,
+                hasMainProfileFallback: C,
                 isInteracting: e,
                 disabled: r,
             }),

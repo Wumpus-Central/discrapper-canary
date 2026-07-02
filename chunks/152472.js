@@ -7,75 +7,83 @@ var i = n(627968),
     o = n(691540),
     l = n(857250),
     u = n(97483),
-    c = n(765178),
-    d = n(131607),
+    d = n(765178),
+    c = n(131607),
     _ = n(17928),
     h = n(688810),
-    f = n(841595),
-    p = n(808247),
-    E = n(561794),
+    f = n(321191),
+    E = n(808247),
+    p = n(561794),
     m = n(240248),
-    g = n(49999),
-    A = n(375708);
+    g = n(375708),
+    A = n(49999);
 function I(e) {
-    let { userId: t, skuId: o, nuxGraphic: l, onNuxShow: u, location: c, onAddSuccess: A, onError: I } = e,
-        [S, y] = (0, d.kn)([s.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
-        C = S === s.M.WISHLIST_NUX_TOOLTIP_AND_MODAL;
+    let { userId: t, skuId: o, nuxGraphic: l, onNuxShow: u, location: I, onAddSuccess: S, onError: N } = e,
+        [C, y] = (0, c.kn)([s.M.WISHLIST_NUX_TOOLTIP_AND_MODAL], void 0, !0),
+        v = C === s.M.WISHLIST_NUX_TOOLTIP_AND_MODAL;
     return {
         ...(function (e) {
-            let { userId: t, skuId: n, location: i, onAddSuccess: s, onRemoveSuccess: a, onError: o } = e,
-                { analyticsLocations: l } = (0, h.Ay)((0, m.uJ)(i) ? [] : [i]),
-                u = (0, _.bG)([f.A], () => f.A.getFirstWishlistId(t)),
-                c = (0, E.rJ)(u, n),
-                [d, g] = r.useState(null),
-                [A, I] = r.useState(!1),
-                T = null !== d ? d : c;
+            let {
+                    userId: t,
+                    skuId: n,
+                    location: i,
+                    onAddSuccess: s,
+                    onRemoveSuccess: a,
+                    onError: o,
+                    skipAddAnnouncement: l,
+                } = e,
+                { analyticsLocations: u } = (0, h.Ay)((0, m.uJ)(i) ? [] : [i]),
+                c = (0, _.bG)([f.A], () => f.A.getFirstWishlistId(t)),
+                A = (0, p.rJ)(c, n),
+                [I, T] = r.useState(null),
+                [S, N] = r.useState(!1),
+                C = null !== I ? I : A;
             r.useEffect(() => {
-                g(null), I(!1);
+                T(null), N(!1);
             }, [n]);
-            let S = r.useCallback(async () => {
-                if (!A)
-                    if ((I(!0), T && null != u)) {
-                        g(!1);
+            let y = r.useCallback(async () => {
+                if (!S)
+                    if ((N(!0), C && null != c)) {
+                        T(!1);
                         try {
-                            await p.A.removeSkuFromWishlist(u, n, l), a?.();
+                            await E.A.removeSkuFromWishlist(c, n, u), d.O.announce(g.intl.string(g.t.DSXOiP)), a?.();
                         } catch (e) {
                             o?.(e);
                         } finally {
-                            g(null), I(!1);
+                            T(null), N(!1);
                         }
                     } else {
-                        g(!0);
+                        T(!0);
                         try {
-                            await p.A.addSkuToWishlist(n, l), s?.();
+                            await E.A.addSkuToWishlist(n, u), l || d.O.announce(g.intl.string(g.t["3T2jbf"])), s?.();
                         } catch (e) {
                             o?.(e);
                         } finally {
-                            g(null), I(!1);
+                            T(null), N(!1);
                         }
                     }
-            }, [A, T, u, n, l, s, a, o]);
-            return { isWishlisted: T, isBusy: A, handleToggle: S };
+            }, [S, C, c, n, u, s, a, o, l]);
+            return { isWishlisted: C, isBusy: S, handleToggle: y };
         })({
             userId: t,
             skuId: o,
-            location: c,
+            location: I,
             onAddSuccess: r.useCallback(() => {
-                C &&
+                v &&
                     null != l &&
                     (u?.(),
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await n.e("64581").then(n.bind(n, 38884));
                         return (t) => (0, i.jsx)(e, { ...t, graphic: l });
                     }),
-                    y(g.i.USER_DISMISS)),
-                    A?.();
-            }, [y, l, u, C, A]),
-            onError: I ?? T,
+                    y(A.i.USER_DISMISS)),
+                    S?.();
+            }, [y, l, u, v, S]),
+            onError: N ?? T,
         }),
-        isFirstTimeWishlister: C,
+        isFirstTimeWishlister: v,
     };
 }
 function T() {
-    (0, o.P0)((0, l.o)(A.intl.string(A.t.F8FvUy), u.Ck.FAILURE)), c.O.announce(A.intl.string(A.t.F8FvUy));
+    (0, o.P0)((0, l.o)(g.intl.string(g.t.F8FvUy), u.Ck.FAILURE)), d.O.announce(g.intl.string(g.t.F8FvUy));
 }
