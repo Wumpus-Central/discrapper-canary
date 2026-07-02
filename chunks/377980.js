@@ -21,7 +21,7 @@ function d(e) {
                         i(!0),
                         (d.current = setTimeout(() => {
                             i(!1), c.A.setState({ requestFlashKey: void 0 });
-                        }, 100)));
+                        }, 2250)));
                 },
                 { equalityFn: o.x, fireImmediately: !0 },
             );
@@ -29,7 +29,7 @@ function d(e) {
                 clearTimeout(d.current), e();
             };
         }, [n.key, n.type]),
-        (0, r.jsx)("div", { tabIndex: -1, "data-nav-anchor-key": n.key, className: a()(u.k, s && u.j), children: t })
+        (0, r.jsx)("div", { tabIndex: -1, "data-nav-anchor-key": n.key, className: a()(u.kL, s && u.jl), children: t })
     );
 }
 var x = t(331322),

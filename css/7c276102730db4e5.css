@@ -5,13 +5,33 @@
     outline: none;
     padding: var(--space-xs) var(--space-sm);
     scroll-margin-bottom: var(--space-16);
-    scroll-margin-top: var(--space-16);
-    transition: background .4s ease-out .75s
+    scroll-margin-top: var(--space-16)
 }
 
 .container__75920.flash__75920 {
-    background: var(--message-highlight-background-default);
-    transition: background 0s ease-in-out
+    background: var(--message-mentioned-background-default)
+}
+
+.full-motion .container__75920.flash__75920 {
+    animation: settingNavAnchorFlash__75920 2.25s ease;
+    background: transparent
+}
+
+@keyframes settingNavAnchorFlash__75920 {
+
+    0%,
+    11.11% {
+        background: transparent
+    }
+
+    33.33%,
+    77.78% {
+        background: var(--message-mentioned-background-default)
+    }
+
+    to {
+        background: transparent
+    }
 }
 
 .baseSettingWrapper__32428 {
