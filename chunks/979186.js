@@ -320,7 +320,8 @@ class eS extends r.Component {
                 appContext: A,
             } = this.props,
             T = eT({ withTitleBar: s, isFullScreen: r }),
-            S = n === eA.f ? ed : w.A;
+            S = n === eA.f,
+            N = S ? ed : w.A;
         return (0, i.jsx)(u.Kd, {
             children: (0, i.jsx)(
                 e_.e,
@@ -333,8 +334,8 @@ class eS extends r.Component {
                             children: [
                                 (0, i.jsx)(eN, {
                                     guestWindow: o,
-                                    className: l,
-                                    children: (0, i.jsxs)(S, {
+                                    className: a()(l, { overlay: S }),
+                                    children: (0, i.jsxs)(N, {
                                         children: [
                                             (0, i.jsx)(L.Al, {}),
                                             (0, i.jsx)(U.Wr, {
@@ -385,16 +386,21 @@ class eS extends r.Component {
 let eN = r.forwardRef(function (e, t) {
         let { guestWindow: n, className: s, children: o } = e,
             { lang: u, style: d, className: c } = (0, eh.xb)();
-        return (
-            r.useEffect(() => {
-                let e = n.document.documentElement;
-                l()(null != e, "Window document element was null"), e.setAttribute("style", d);
-            }, [n, d]),
+        r.useEffect(() => {
+            let e = n.document.documentElement;
+            l()(null != e, "Window document element was null"), e.setAttribute("style", d);
+        }, [n, d]),
             r.useEffect(() => {
                 let e = n.document.documentElement;
                 l()(null != e, "Window document element was null"), e.setAttribute("lang", u);
-            }, [n, u]),
-            (0, i.jsx)("div", { "data-popout-root": !0, ref: t, className: a()(c, s), children: o })
+            }, [n, u]);
+        let _ = a()(c, s, "in-popout");
+        return (
+            r.useLayoutEffect(() => {
+                let e = n.document.documentElement;
+                l()(null != e, "Window document element was null"), e.setAttribute("class", _);
+            }, [n, _]),
+            (0, i.jsx)("div", { "data-popout-root": !0, ref: t, children: o })
         );
     }),
     eC = r.forwardRef(function (e, t) {

@@ -5154,7 +5154,7 @@ svg.radioIcon_c1e9c4 {
     --__header-bar-background: var(--background-base-lower);
     border-bottom: 1px solid var(--border-subtle);
     height: var(--custom-channel-header-height);
-    padding-inline-start: calc(var(--custom-message-margin-horizontal))
+    padding-inline-start: var(--custom-message-margin-horizontal)
 }
 
 .container__9293f,
