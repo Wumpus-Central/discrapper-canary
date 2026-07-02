@@ -1,6 +1,6 @@
 a.d(t, { A: () => m }), a(321073);
-var n = a(627968),
-    r = a(64700),
+var r = a(627968),
+    n = a(64700),
     l = a(503698),
     i = a.n(l),
     o = a(989349),
@@ -15,40 +15,40 @@ let A = s()().localeData().months(),
     f = /[a-zA-Z0-9]/;
 function _(e) {
     let { options: t, selectOption: a, children: l } = e,
-        [i, o] = r.useState("");
-    r.useEffect(() => {
+        [i, o] = n.useState("");
+    n.useEffect(() => {
         if ("" !== i) {
             let e = setTimeout(() => o(""), 1e3);
             return () => clearTimeout(e);
         }
     }, [i, o]);
-    let s = r.useCallback(
+    let s = n.useCallback(
         (e) => {
             if (f.test(e.key)) {
-                let n = `${i}${e.key.toLowerCase()}`,
-                    r = t.find((e) => e.label.toLowerCase().startsWith(n));
-                null != r && a(r.value), o(n);
+                let r = `${i}${e.key.toLowerCase()}`,
+                    n = t.find((e) => e.label.toLowerCase().startsWith(r));
+                null != n && a(n.value), o(r);
             }
         },
         [a, o, i, t],
     );
-    return (0, n.jsx)("div", { onKeyDown: s, children: l });
+    return (0, r.jsx)("div", { onKeyDown: s, children: l });
 }
 function T() {
     let e = s()().localeData().longDateFormat("L"),
         t = e.indexOf("D"),
         a = e.indexOf("M"),
-        n = e.indexOf("Y");
+        r = e.indexOf("Y");
     return (
-        (-1 === t || -1 === a || -1 === n) && ((t = 0), (a = 1), (n = 2)),
+        (-1 === t || -1 === a || -1 === r) && ((t = 0), (a = 1), (r = 2)),
         [
             { index: t, type: "day" },
             { index: a, type: "month" },
-            { index: n, type: "year" },
+            { index: r, type: "year" },
         ].sort((e, t) => (e.index < t.index ? -1 : 1))
     );
 }
-let m = r.forwardRef(function (e, t) {
+let m = n.forwardRef(function (e, t) {
     let a,
         l,
         {
@@ -73,37 +73,37 @@ let m = r.forwardRef(function (e, t) {
         } = (function (e) {
             let t = null,
                 a = null,
-                n = null;
-            null != e && ((t = e.date()), (a = e.month() + 1), (n = e.year()));
-            let [l, i] = r.useState(t),
-                [o, s] = r.useState(a),
-                [u, c] = r.useState(n);
+                r = null;
+            null != e && ((t = e.date()), (a = e.month() + 1), (r = e.year()));
+            let [l, i] = n.useState(t),
+                [o, s] = n.useState(a),
+                [u, c] = n.useState(r);
             return { day: l, setDay: i, month: o, setMonth: s, year: u, setYear: c };
         })(o),
-        U = r.useMemo(
+        U = n.useMemo(
             () => (null != N && null != R && null != O ? s()(`${N}/${R}/${O}`, "DD/MM/YYYY") : null),
             [N, R, O],
         );
-    r.useEffect(() => {
+    n.useEffect(() => {
         f(U?.isValid() ? U : null);
     }, [U, f]);
     let M = y;
     null == U || U.isValid() || (M = d.intl.string(d.t.udnqh6));
     let S =
             ((a = new Date().getFullYear()),
-            (l = r.useRef(Array.from(Array(101).keys()).map((e) => ({ value: a - e, label: `${a - e}` })))),
-            r.useEffect(() => {
+            (l = n.useRef(Array.from(Array(101).keys()).map((e) => ({ value: a - e, label: `${a - e}` })))),
+            n.useEffect(() => {
                 l.current = Array.from(Array(101).keys()).map((e) => ({ value: a - e, label: `${a - e}` }));
             }, [a]),
             l.current),
-        [I, $] = r.useState(G ? 0 : -1),
-        j = r.useMemo(T, []),
+        [I, $] = n.useState(G ? 0 : -1),
+        j = n.useMemo(T, []),
         w = { onPopulated: m, sortedInputs: j },
-        W = r.useRef(w);
-    r.useEffect(() => {
+        W = n.useRef(w);
+    n.useEffect(() => {
         W.current = w;
     }),
-        r.useEffect(() => {
+        n.useEffect(() => {
             let { onPopulated: e, sortedInputs: t } = W.current;
             if (I >= t.length) return void e?.();
         }, [I]);
@@ -114,10 +114,10 @@ let m = r.forwardRef(function (e, t) {
             case "day":
                 Y.push({
                     key: "day",
-                    input: (0, n.jsx)(_, {
+                    input: (0, r.jsx)(_, {
                         options: E,
                         selectOption: D,
-                        children: (0, n.jsx)(u.Te, {
+                        children: (0, r.jsx)(u.Te, {
                             "aria-label": d.intl.string(d.t.Voklre),
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.Voklre),
@@ -128,6 +128,7 @@ let m = r.forwardRef(function (e, t) {
                             },
                             maxVisibleItems: 6,
                             autoFocus: I === e,
+                            required: g,
                             "data-migration-pending": !0,
                         }),
                     }),
@@ -136,10 +137,10 @@ let m = r.forwardRef(function (e, t) {
             case "month":
                 Y.push({
                     key: "month",
-                    input: (0, n.jsx)(_, {
+                    input: (0, r.jsx)(_, {
                         options: h,
                         selectOption: v,
-                        children: (0, n.jsx)(u.Te, {
+                        children: (0, r.jsx)(u.Te, {
                             "aria-label": d.intl.string(d.t.UDlN8W),
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.UDlN8W),
@@ -150,6 +151,7 @@ let m = r.forwardRef(function (e, t) {
                             },
                             maxVisibleItems: 6,
                             autoFocus: I === e,
+                            required: g,
                             "data-migration-pending": !0,
                         }),
                     }),
@@ -158,10 +160,10 @@ let m = r.forwardRef(function (e, t) {
             case "year":
                 Y.push({
                     key: "year",
-                    input: (0, n.jsx)(_, {
+                    input: (0, r.jsx)(_, {
                         options: S,
                         selectOption: C,
-                        children: (0, n.jsx)(u.Te, {
+                        children: (0, r.jsx)(u.Te, {
                             "aria-label": d.intl.string(d.t.ZWr5WA),
                             popoutPosition: "top",
                             placeholder: d.intl.string(d.t.ZWr5WA),
@@ -172,23 +174,24 @@ let m = r.forwardRef(function (e, t) {
                             },
                             maxVisibleItems: 6,
                             autoFocus: I === e,
+                            required: g,
                             "data-migration-pending": !0,
                         }),
                     }),
                 });
         }
     }
-    return (0, n.jsx)("fieldset", {
+    return (0, r.jsx)("fieldset", {
         className: i()(p.container, A),
-        children: (0, n.jsx)(c.D, {
+        children: (0, r.jsx)(c.D, {
             label: d.intl.string(d.t.xNpFJ6),
             required: g,
             errorMessage: M ?? void 0,
-            children: (0, n.jsx)("div", {
+            children: (0, r.jsx)("div", {
                 className: p.inputs,
                 children: Y.map((e, t) => {
-                    let { key: a, input: r } = e;
-                    return (0, n.jsx)(
+                    let { key: a, input: n } = e;
+                    return (0, r.jsx)(
                         "div",
                         {
                             tabIndex: t + 1,
@@ -199,7 +202,7 @@ let m = r.forwardRef(function (e, t) {
                             onBlur: (e) => {
                                 e.currentTarget.contains(e.relatedTarget) || k?.(`${b}_${a}`);
                             },
-                            children: r,
+                            children: n,
                         },
                         a,
                     );
