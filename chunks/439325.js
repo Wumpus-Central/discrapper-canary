@@ -306,11 +306,11 @@ function eO(e) {
 }
 function eD(e) {
     let { orbPrice: l, orbsGate: t, formattedPrice: s, analyticsLocations: i, applicationId: r } = e,
-        { prioritizeGifting: a } = (0, D.q)();
+        { prioritizeGifting: a, removeOrbsClaim: o } = (0, D.q)();
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(eO, { orbPrice: l, orbsGate: t, formattedPrice: s, hideOrbsPrice: a }),
-            "HIDDEN" !== t && !a && (0, n.jsx)(ef, { analyticsLocations: i, applicationId: r, orbsGate: t }),
+            "HIDDEN" !== t && !o && (0, n.jsx)(ef, { analyticsLocations: i, applicationId: r, orbsGate: t }),
         ],
     });
 }
