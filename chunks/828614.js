@@ -1,4 +1,4 @@
-r.d(t, { A: () => e9 });
+r.d(t, { A: () => e3 });
 var n = r(627968),
     l = r(64700),
     i = r(503698),
@@ -223,7 +223,7 @@ var e_ = r(821609),
     em = r(766172),
     eO = r(61750),
     ev = r(758836),
-    ex = r(788868),
+    ex = r(202541),
     ey = r(40577);
 function eP(e) {
     let {
@@ -692,8 +692,9 @@ let e1 = l.memo(function (e) {
                     u = (0, O.xM)(a);
                 return l.useCallback(
                     (e, l) => {
+                        let a = (0, v.B1)(t) ? (t.variants[l ?? o]?.skuId ?? t.skuId) : t.skuId;
                         k.default.track(y.HAw.SHOP_CARD_CLICKED, {
-                            sku_id: (0, v.B1)(t) ? (t.variants[l ?? o]?.skuId ?? t.skuId) : t.skuId,
+                            sku_id: a,
                             cta: e,
                             shop_session_id: i,
                             card_id: n,
@@ -910,4 +911,4 @@ let e1 = l.memo(function (e) {
                       children: (0, n.jsx)(U.v3.Provider, { value: d, children: (0, n.jsx)(e1, { product: s, ...r }) }),
                   });
     },
-    e9 = (e) => ((0, S.$)("product_card") ? (0, n.jsx)(e6, { ...e }) : (0, n.jsx)(e8, { ...e }));
+    e3 = (e) => ((0, S.$)("product_card") ? (0, n.jsx)(e6, { ...e }) : (0, n.jsx)(e8, { ...e }));
