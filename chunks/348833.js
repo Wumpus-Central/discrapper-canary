@@ -252,26 +252,29 @@ function ei(e) {
     let {
             controlBarAnimationSpring: t,
             attachment: n,
-            durationSeconds: r,
-            guildId: s,
-            channelId: a,
-            messageId: l,
-            hidden: u = !1,
+            isActive: r,
+            durationSeconds: s,
+            guildId: a,
+            channelId: l,
+            messageId: u,
+            hidden: d = !1,
         } = e,
-        { enableMediaComments: d } = F.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
-        c = (0, I.Lt)(n.flags ?? 0, M.sbO.HAS_TIMELINE_COMMENTS),
-        _ = (0, o.bG)([w.A], () => w.A.getMessage(a, l), [a, l]),
-        { data: h } = x(n, a, s, _?.author.id, d && c);
-    return !d || null == h || r <= 0
+        { enableMediaComments: c } = F.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
+        _ = (0, I.Lt)(n.flags ?? 0, M.sbO.HAS_TIMELINE_COMMENTS),
+        h = (0, o.bG)([w.A], () => w.A.getMessage(l, u), [l, u]),
+        { data: f } = x(n, l, a, h?.author.id, c && _ && r);
+    return !c || null == f || s <= 0
         ? null
         : (0, i.jsx)(A.animated.div, {
               className: en.IO,
-              inert: u,
+              inert: d,
               style: {
-                  opacity: (0, A.to)(t.to({ range: [0.5, 1], output: [0, 1] }), (e) => (u ? 0 : `${e}`)),
-                  transform: (0, A.to)([t.to({ range: [0, 1], output: [96, 0] })], (e) => `translateY(${e}px)`),
+                  opacity: r ? (0, A.to)(t.to({ range: [0.5, 1], output: [0, 1] }), (e) => (d ? 0 : `${e}`)) : 1,
+                  transform: r
+                      ? (0, A.to)([t.to({ range: [0, 1], output: [96, 0] })], (e) => `translateY(${e}px)`)
+                      : "translateY(60px)",
               },
-              children: h.map((e) => (0, i.jsx)(er, { message: e, durationSeconds: r }, e.id)),
+              children: f.map((e) => (0, i.jsx)(er, { message: e, durationSeconds: s }, e.id)),
           });
 }
 function er(e) {
@@ -503,18 +506,18 @@ function eI(e) {
                             videoRef: s,
                             hidden: !r || l,
                         }),
-                    o &&
-                        null != d &&
+                    null != d &&
                         null != f &&
                         null != E &&
                         (0, i.jsx)(ei, {
+                            isActive: o,
                             controlBarAnimationSpring: n,
                             attachment: u,
                             channelId: f,
                             messageId: E,
                             guildId: d,
                             durationSeconds: u.duration_secs ?? I,
-                            hidden: !r,
+                            hidden: o && !r,
                         }),
                 ],
             }),
