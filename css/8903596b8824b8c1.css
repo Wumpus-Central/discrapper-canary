@@ -591,8 +591,7 @@
     flex-direction: column;
     gap: var(--space-12);
     padding: var(--space-24);
-    padding-top: 56px;
-    width: 660px
+    padding-top: 56px
 }
 
 .scrollerContainer__4b8d8 {
