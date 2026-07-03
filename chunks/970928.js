@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { RG: () => O, Di: () => C, uD: () => N, Y: () => v }), n(323874), n(14289), n(35956);
+n.d(t, { RG: () => O, Di: () => C, uD: () => y, Y: () => v }), n(323874), n(14289), n(35956);
 var i = n(284009),
     r = n.n(i),
     s = n(636537),
@@ -7,25 +7,25 @@ var i = n(284009),
     o = n(735438),
     l = n.n(o),
     u = n(17928);
-let c = {},
-    d = {};
+let d = {},
+    c = {};
 function _(e) {
     let { assets: t } = e,
-        n = { ...c };
+        n = { ...d };
     for (let e in t) {
         let i = t[e];
-        (n[e] = 2), (d[e] = { assets: l().keyBy(i, "name") ?? {}, lastUpdated: Date.now() });
+        (n[e] = 2), (c[e] = { assets: l().keyBy(i, "name") ?? {}, lastUpdated: Date.now() });
     }
-    c = n;
+    d = n;
 }
 class h extends u.Ay.Store {
     static displayName = "ApplicationAssetsStore";
     getApplicationAssetFetchState(e) {
-        return c[e] ?? 0;
+        return d[e] ?? 0;
     }
     getFetchingIds() {
         return [
-            ...Object.entries(c)
+            ...Object.entries(d)
                 .filter((e) => {
                     let [, t] = e;
                     return 1 === t;
@@ -37,27 +37,27 @@ class h extends u.Ay.Store {
         ];
     }
     getApplicationAssets(e) {
-        return d[e];
+        return c[e];
     }
 }
 let f = new h(a.h, {
     APPLICATION_ASSETS_FETCH: function (e) {
         let { applicationId: t } = e;
-        c = { ...c, [t]: 1 };
+        d = { ...d, [t]: 1 };
     },
     APPLICATION_ASSETS_FETCH_SUCCESS: function (e) {
         let { applicationId: t } = e;
-        c = { ...c, [t]: 2 };
+        d = { ...d, [t]: 2 };
     },
     APPLICATION_ASSETS_UPDATE: function (e) {
         let { applicationId: t, assets: n } = e;
-        null != n ? (d[t] = { assets: l().keyBy(n, "name") ?? {}, lastUpdated: Date.now() }) : delete d[t];
+        null != n ? (c[t] = { assets: l().keyBy(n, "name") ?? {}, lastUpdated: Date.now() }) : delete c[t];
     },
     EMBEDDED_ACTIVITY_FETCH_SHELF_SUCCESS: _,
     DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: _,
 });
-var p = n(626584),
-    E = n(776231),
+var E = n(626584),
+    p = n(776231),
     m = n(652215);
 let g = "https://i.scdn.co/image/",
     A = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
@@ -91,9 +91,15 @@ let g = "https://i.scdn.co/image/",
         },
         mp: {
             deserialize: (e) => {
+                let t;
                 r()(null != window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT, "MEDIA_PROXY_ENDPOINT not configured");
-                let t = new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT),
-                    n = e.toLowerCase().endsWith(".gif"),
+                try {
+                    t = new URL(e, location.protocol + window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT);
+                } catch {
+                    new E.A("ApplicationAssetUtils").warn(`getAssetImage: invalid media proxy asset path: ${e}`);
+                    return;
+                }
+                let n = e.toLowerCase().endsWith(".gif"),
                     i = e.toLowerCase().endsWith(".webp"),
                     s = e.toLowerCase().endsWith(".avif");
                 return (
@@ -106,7 +112,7 @@ let g = "https://i.scdn.co/image/",
         },
     },
     S = new Map();
-async function y(e) {
+async function N(e) {
     let { body: t } = await s.Bo.get({ url: m.Rsh.APPLICATION_ASSETS(e), oldFormErrors: !0, rejectWithError: !1 });
     return a.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: t }), f.getApplicationAssets(e);
 }
@@ -114,13 +120,13 @@ function C(e, t) {
     let n = T[e].serialize(t);
     return n ? `${e}:${n.toString()}` : null;
 }
-function N(e, t, n) {
+function y(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, i] = t.split(":");
         return e === m.fg2.TWITCH
             ? null == n || "number" == typeof n
-                ? void new p.A("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch")
+                ? void new E.A("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch")
                 : T[m.fg2.TWITCH].deserialize(i, n)
             : Object.prototype.hasOwnProperty.call(T, e)
               ? T[e].deserialize(i)
@@ -128,7 +134,7 @@ function N(e, t, n) {
     }
     if (null == e || null == t) return;
     let r = Array.isArray(n) ? Math.max(...n) : n,
-        a = "number" == typeof r ? `?size=${(0, E.kr)(r)}` : "";
+        a = "number" == typeof r ? `?size=${(0, p.kr)(r)}` : "";
     return null != window.GLOBAL_ENV.CDN_HOST
         ? `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${t}.${i}${a}`
         : `${(0, s.TP)()}/applications/${e}/app-assets/${t}.${i}${a}`;
@@ -137,7 +143,7 @@ async function v(e) {
     var t;
     let n,
         i = await (null == (n = f.getApplicationAssets(e)) || ((t = n.lastUpdated), Date.now() - t > 36e5)
-            ? y(e)
+            ? N(e)
             : Promise.resolve(n));
     return i?.assets;
 }
@@ -191,6 +197,6 @@ async function O(e, t) {
         }
         return r;
     })(t, i, s, n))
-        ? y(e).then(() => O(e, t, n - 1))
+        ? N(e).then(() => O(e, t, n - 1))
         : (a.h.dispatch({ type: "APPLICATION_ASSETS_FETCH_SUCCESS", applicationId: e }), i);
 }
