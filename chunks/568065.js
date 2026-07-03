@@ -1,30 +1,31 @@
 "use strict";
 n.d(t, {
-    At: () => W,
+    At: () => K,
     Fq: () => b,
-    G0: () => j,
-    HO: () => w,
+    G0: () => H,
+    HO: () => P,
     On: () => O,
     Pn: () => Y,
-    Q0: () => B,
-    QS: () => G,
-    Wb: () => y,
-    YV: () => x,
+    Q0: () => j,
+    QS: () => V,
+    Wb: () => N,
+    YV: () => U,
     a8: () => v,
     aH: () => F,
-    b_: () => U,
-    mB: () => N,
-    m_: () => V,
+    b_: () => G,
+    fe: () => M,
+    mB: () => y,
+    m_: () => B,
     o2: () => C,
     o9: () => S,
-    oN: () => D,
-    sy: () => P,
-    w$: () => M,
+    oN: () => L,
+    sy: () => x,
+    w$: () => w,
     wr: () => k,
     y7: () => R,
-    yG: () => H,
-    ys: () => L,
-    z0: () => K,
+    yG: () => W,
+    ys: () => D,
+    z0: () => $,
 }),
     n(64700);
 var i,
@@ -34,36 +35,36 @@ var i,
     o,
     l,
     u,
-    c = n(512750),
-    d = n(554146),
+    d = n(512750),
+    c = n(554146),
     _ = n(473145),
     h = n(488803),
     f = n(313205),
-    p = n(228756),
-    E = n(383272),
+    E = n(228756),
+    p = n(383272),
     m = n(414133),
     g = n(202541),
     A = n(800007),
     I = n(652215),
     T = n(375708),
     S = (((i = {}).PERK = "perk"), (i.LEVEL = "level"), i);
-let y = "1340102344645283891",
-    C = new Set([c.ec, c.RV, c.YG]),
-    N = "525479941211684874",
-    v = { [I.TVA.TIER_1]: c.ec, [I.TVA.TIER_2]: c.RV, [I.TVA.TIER_3]: c.YG, [I.TVA.NONE]: void 0 },
-    R = { [c.ec]: I.TVA.TIER_1, [c.RV]: I.TVA.TIER_2, [c.YG]: I.TVA.TIER_3 },
+let N = "1340102344645283891",
+    C = new Set([d.ec, d.RV, d.YG]),
+    y = "525479941211684874",
+    v = { [I.TVA.TIER_1]: d.ec, [I.TVA.TIER_2]: d.RV, [I.TVA.TIER_3]: d.YG, [I.TVA.NONE]: void 0 },
+    R = { [d.ec]: I.TVA.TIER_1, [d.RV]: I.TVA.TIER_2, [d.YG]: I.TVA.TIER_3 },
     O = {
-        [I.TVA.TIER_1]: d.V.GUILD_POWERUP_LEVEL_1_COACHMARK,
-        [I.TVA.TIER_2]: d.V.GUILD_POWERUP_LEVEL_2_COACHMARK,
-        [I.TVA.TIER_3]: d.V.GUILD_POWERUP_LEVEL_3_COACHMARK,
+        [I.TVA.TIER_1]: c.V.GUILD_POWERUP_LEVEL_1_COACHMARK,
+        [I.TVA.TIER_2]: c.V.GUILD_POWERUP_LEVEL_2_COACHMARK,
+        [I.TVA.TIER_3]: c.V.GUILD_POWERUP_LEVEL_3_COACHMARK,
         [I.TVA.NONE]: void 0,
     },
     b = "guild_powerup_modal",
-    D = [[c.SL], [c.aN], [c.FB], [c.OJ, c.jF], [c.Ht, c.tv], [c.zY], [c.d0]],
-    L = { [A.W5]: "beta", [c.zY]: "beta", [c.d0]: "beta" },
-    w = new Set([c.SL, c.aN, c.FB, c.OJ, c.jF, c.Ht, c.tv, c.d0]);
-c.aN;
-let M = () => ({
+    L = [[d.SL], [d.aN], [d.FB], [d.OJ, d.jF], [d.Ht, d.tv], [d.zY], [d.d0]],
+    D = { [A.W5]: "beta", [d.zY]: "beta", [d.d0]: "beta" },
+    P = new Set([d.SL, d.aN, d.FB, d.OJ, d.jF, d.Ht, d.tv, d.d0]);
+d.aN;
+let w = () => ({
         [I.GuildFeatures.VIDEO_QUALITY_1080_60FPS]: { perkIcon: _.TP.STREAM, description: T.intl.string(T.t.y4ft4D) },
         [I.GuildFeatures.AUDIO_BITRATE_128_KBPS]: {
             perkIcon: _.TP.AUDIO,
@@ -92,7 +93,8 @@ let M = () => ({
             description: T.intl.formatToPlainString(T.t.aFRl53, { uploadSizeLimit: T.intl.string(T.t.yMOW8D) }),
         },
     }),
-    P = {
+    M = 3,
+    x = {
         [I.GuildFeatures.VANITY_URL]: { boostPrice: 5, includedInLevel: I.TVA.TIER_3 },
         [I.GuildFeatures.GUILD_TAGS]: { boostPrice: 3 },
         [I.GuildFeatures.ENHANCED_ROLE_COLORS]: { boostPrice: 3 },
@@ -103,23 +105,23 @@ let M = () => ({
         [I.GuildFeatures.MAX_FILE_SIZE_250_MB]: {
             boostPrice: 4,
             isEnabled: (e) =>
-                !p.E.getConfig({ location: "GuildPowerupsConstants" }).enabled &&
+                !E.E.getConfig({ location: "GuildPowerupsConstants" }).enabled &&
                 (0, f.J2)(e, "GuildPowerupsConstants"),
         },
         [I.GuildFeatures.GUILD_THEME]: {
-            boostPrice: 3,
-            isEnabled: (e) => (0, m.ht)("GuildPowerupsConstants") && (0, E.Qs)(e, "GuildPowerupsConstants"),
+            boostPrice: M,
+            isEnabled: (e) => (0, m.ht)("GuildPowerupsConstants") && (0, p.Qs)(e, "GuildPowerupsConstants"),
         },
     },
-    x = { [I.GuildFeatures.GAME_SERVERS]: { boostPrice: 3, isEnabled: (e) => (0, h.TS)(e, "GuildPowerupsConstants") } },
-    k = { [c.FB]: I.TVA.TIER_3 };
-var U =
+    U = { [I.GuildFeatures.GAME_SERVERS]: { boostPrice: 3, isEnabled: (e) => (0, h.TS)(e, "GuildPowerupsConstants") } },
+    k = { [d.FB]: I.TVA.TIER_3 };
+var G =
         (((r = {}).INACTIVE = "inactive"),
         (r.POWERUP_ACTIVATED = "powerup_activated"),
         (r.LEVEL_ACTIVATED = "level_activated"),
         (r.TIER_OVERRIDE_ACTIVATED = "tier_override_activated"),
         r),
-    G =
+    V =
         (((s = {})[(s.VANITY_URL = 1)] = "VANITY_URL"),
         (s[(s.GUILD_TAG_BADGE_PACKS_WAVE_ONE = 2)] = "GUILD_TAG_BADGE_PACKS_WAVE_ONE"),
         (s[(s.GAME_SERVER_HOSTING = 3)] = "GAME_SERVER_HOSTING"),
@@ -127,11 +129,11 @@ var U =
         (s[(s.FILE_UPLOAD_250_MB = 5)] = "FILE_UPLOAD_250_MB"),
         (s[(s.GUILD_THEME = 6)] = "GUILD_THEME"),
         s);
-let F = new Set([c.OJ, c.jF]),
-    V = new Set([c.Ht, c.tv]),
-    B = { 1: new Set([c.FB]), 2: F, 3: new Set(), 4: V, 5: new Set([c.zY]), 6: new Set([c.d0]) },
-    j = "powerupId";
-var H = (((a = {})[(a.AVAILABLE = 0)] = "AVAILABLE"), (a[(a.SPENT = 1)] = "SPENT"), (a[(a.TOTAL = 2)] = "TOTAL"), a),
+let F = new Set([d.OJ, d.jF]),
+    B = new Set([d.Ht, d.tv]),
+    j = { 1: new Set([d.FB]), 2: F, 3: new Set(), 4: B, 5: new Set([d.zY]), 6: new Set([d.d0]) },
+    H = "powerupId";
+var W = (((a = {})[(a.AVAILABLE = 0)] = "AVAILABLE"), (a[(a.SPENT = 1)] = "SPENT"), (a[(a.TOTAL = 2)] = "TOTAL"), a),
     Y = (((o = {})[(o.LEVEL = 0)] = "LEVEL"), (o[(o.PERK = 1)] = "PERK"), o),
-    W = (((l = {}).START = "start"), (l.MIDDLE = "middle"), (l.END = "end"), l),
-    K = (((u = {}).FULL = "full"), (u.HALF = "half"), (u.NONE = "none"), u);
+    K = (((l = {}).START = "start"), (l.MIDDLE = "middle"), (l.END = "end"), l),
+    $ = (((u = {}).FULL = "full"), (u.HALF = "half"), (u.NONE = "none"), u);

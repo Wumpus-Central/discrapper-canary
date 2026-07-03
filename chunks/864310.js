@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => c, Z: () => u });
+n.d(t, { A: () => d, Z: () => u });
 var i = n(64700),
     r = n(17928),
     s = n(71393),
@@ -15,14 +15,14 @@ function u(e) {
     let u = i + (r ?? 0);
     return { available: Math.max(0, t - u), spent: u, total: t };
 }
-function c(e) {
+function d(e) {
     let t = (0, r.bG)([s.A], () => s.A.getGuild(e)?.premiumSubscriberCount) ?? 0,
         n = (0, a.C$)(e, "GuildPowerupsBoostCount"),
         u = (0, r.bG)([l.A], () => l.A.getStateForGuild(e)?.appliedBoosts),
-        c = (0, r.bG)([o.A], () => o.A.getStateForGuild(e)?.appliedBoosts);
+        d = (0, r.bG)([o.A], () => o.A.getStateForGuild(e)?.appliedBoosts);
     return i.useMemo(() => {
-        if (null == u || (n && null == c)) return { available: 0, spent: 0, total: t };
-        let e = u + (c ?? 0);
-        return { available: Math.max(0, t - e), spent: e, total: t };
-    }, [t, u, c, n]);
+        if (null == u || (n && null == d)) return { available: 0, spent: 0, total: t, isLoading: !0 };
+        let e = u + (d ?? 0);
+        return { available: Math.max(0, t - e), spent: e, total: t, isLoading: !1 };
+    }, [t, u, d, n]);
 }
