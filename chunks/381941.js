@@ -1,19 +1,20 @@
 "use strict";
 n.d(t, {
     ES: () => l,
-    Fd: () => c,
+    Fd: () => d,
     Gt: () => f,
-    Hx: () => T,
+    Hx: () => S,
+    MO: () => p,
     N0: () => _,
-    VP: () => A,
-    ZG: () => I,
-    aj: () => E,
-    cZ: () => m,
+    VP: () => I,
+    ZG: () => T,
+    aj: () => m,
+    cZ: () => g,
     k8: () => h,
-    mZ: () => d,
-    q4: () => p,
+    mZ: () => c,
+    q4: () => E,
     qh: () => o,
-    ty: () => g,
+    ty: () => A,
     y5: () => u,
 });
 var i,
@@ -24,7 +25,7 @@ n(652215);
 let o = [0, 4, 8, 16, 24],
     l = 16,
     u = 0,
-    c = Object.freeze({
+    d = Object.freeze({
         referencedAvatarProfile: !1,
         referencedUsernameProfile: !1,
         interactionAvatarProfile: !1,
@@ -37,14 +38,15 @@ let o = [0, 4, 8, 16, 24],
         moreUtilities: !1,
         contextMenu: !1,
     }),
-    d = 16,
+    c = 16,
     _ = 16,
     h = 32,
     f = 64,
-    p = "---new-messages-bar",
-    E = 3447003,
-    m = 0.16;
-var g =
+    E = "---new-messages-bar",
+    p = "SPOILER_",
+    m = 3447003,
+    g = 0.16;
+var A =
     (((i = {}).ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
     (i.PRECOMPRESSION_SUM_TOO_LARGE = "PRECOMPRESSION_SUM_TOO_LARGE"),
     (i.PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE = "PRECOMPRESSION_INDIVIDUAL_FILE_TOO_LARGE"),
@@ -53,9 +55,9 @@ var g =
     (i.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR"),
     (i.EXPLICIT_CONTENT = "EXPLICIT_CONTENT"),
     i);
-let A = 0xc800000,
-    I = { timeout: 60 * a.A.Millis.SECOND, retries: 3, backoff: new s.A() };
-var T =
+let I = 0xc800000,
+    T = { timeout: 60 * a.A.Millis.SECOND, retries: 3, backoff: new s.A() };
+var S =
     (((r = {}).PUSH_NOTIFICATION = "push_notification"),
     (r.CHAT_INPUT = "chat_input"),
     (r.SHARE_MODAL = "share_modal"),

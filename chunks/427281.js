@@ -1,4 +1,4 @@
-t.d(i, { ModifyMosaicAttachmentModal: () => k, default: () => S }), t(323874), t(14289), t(35956), t(938796);
+t.d(i, { ModifyMosaicAttachmentModal: () => C, default: () => k }), t(323874), t(14289), t(35956), t(938796);
 var n = t(627968),
     s = t(64700),
     l = t(503698),
@@ -9,16 +9,17 @@ var n = t(627968),
     u = t(292666),
     d = t(150934),
     p = t(565150),
-    f = t(465856),
-    m = t(644447),
+    m = t(465856),
+    f = t(644447),
     g = t(652215),
-    x = t(650583),
+    x = t(381941),
+    h = t(650583),
     j = t(375708),
-    h = t(910162);
-function v(e) {
-    return (0, n.jsx)("img", { src: e.src ?? void 0, className: h.imageFilePreviewImg, "aria-hidden": !0, alt: "" });
-}
+    v = t(910162);
 function b(e) {
+    return (0, n.jsx)("img", { src: e.src ?? void 0, className: v.imageFilePreviewImg, "aria-hidden": !0, alt: "" });
+}
+function E(e) {
     let { file: i } = e,
         [t, l] = s.useState();
     return (
@@ -32,18 +33,18 @@ function b(e) {
                 }
             );
         }, [i]),
-        (0, n.jsx)(v, { src: t })
+        (0, n.jsx)(b, { src: t })
     );
 }
-function E(e) {
+function I(e) {
     let { upload: i } = e;
     return i.item.platform !== p.xz.WEB
         ? null
         : i.isImage
-          ? (0, n.jsx)(b, { file: i.item.file })
-          : (0, n.jsx)("div", { className: a()(h.fileIcon, { [h[i.classification ?? ""]]: !0 }) });
+          ? (0, n.jsx)(E, { file: i.item.file })
+          : (0, n.jsx)("div", { className: a()(v.fileIcon, { [v[i.classification ?? ""]]: !0 }) });
 }
-function I(e) {
+function S(e) {
     let {
             preview: i,
             filename: t,
@@ -51,25 +52,26 @@ function I(e) {
             spoiler: a,
             isImage: r,
             isVideo: p,
-            disableFilename: f,
-            disableSpoiler: m,
+            disableFilename: m,
+            disableSpoiler: f,
             transitionState: g,
-            onClose: h,
-            onSubmit: v,
+            onClose: v,
+            onSubmit: b,
         } = e,
-        [b, E] = s.useState(t ?? ""),
-        [I, S] = s.useState(l ?? ""),
-        [k, C] = s.useState(a),
-        y = () => {
-            v({ name: b, description: I, spoiler: k }), h();
+        [E, I] = s.useState(t ?? ""),
+        [S, k] = s.useState(l ?? ""),
+        [C, y] = s.useState(a),
+        R = s.useMemo(() => E.startsWith(x.MO), [E]),
+        L = () => {
+            b({ name: E, description: S, spoiler: C }), v();
         };
     return (0, n.jsx)(o.Modal, {
         transitionState: g,
-        onClose: h,
+        onClose: v,
         title: j.intl.string(j.t.Y8ujqr),
         actions: [
-            { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: h },
-            { variant: "primary", text: j.intl.string(j.t["TY+auE"]), onClick: y },
+            { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: v },
+            { variant: "primary", text: j.intl.string(j.t["TY+auE"]), onClick: L },
         ],
         children: (0, n.jsxs)(c.B, {
             gap: 24,
@@ -80,35 +82,36 @@ function I(e) {
                         i,
                         (0, n.jsx)(u.k, {
                             label: j.intl.string(j.t.ILJuBq),
-                            value: b,
-                            onChange: E,
+                            value: E,
+                            onChange: I,
                             onKeyDown: (e) => {
-                                e.key === x.dh.ENTER && (e.preventDefault(), y());
+                                e.key === h.dh.ENTER && (e.preventDefault(), L());
                             },
-                            disabled: f,
+                            disabled: m,
                         }),
                         r || p
                             ? (0, n.jsx)(u.k, {
                                   label: j.intl.string(j.t.eOB2eR),
                                   placeholder: j.intl.string(j.t.RNH1jn),
-                                  value: I,
-                                  onChange: S,
+                                  value: S,
+                                  onChange: k,
                                   onKeyDown: (e) => {
-                                      e.key === x.dh.ENTER && (e.preventDefault(), y());
+                                      e.key === h.dh.ENTER && (e.preventDefault(), L());
                                   },
                               })
                             : null,
                     ],
                 }),
-                !0 !== m && (0, n.jsx)(d.S, { checked: k, onChange: C, label: j.intl.string(j.t["gsI+xC"]) }),
+                !0 !== f &&
+                    (0, n.jsx)(d.S, { checked: C || R, disabled: R, onChange: y, label: j.intl.string(j.t["gsI+xC"]) }),
             ],
         }),
     });
 }
-function S(e) {
+function k(e) {
     let { upload: i, transitionState: t, disableSpoiler: s, onClose: l, onSubmit: a } = e;
-    return (0, n.jsx)(I, {
-        preview: (0, n.jsx)(E, { upload: i }),
+    return (0, n.jsx)(S, {
+        preview: (0, n.jsx)(I, { upload: i }),
         filename: i.filename,
         description: i.description,
         spoiler: i.spoiler,
@@ -120,14 +123,14 @@ function S(e) {
         onSubmit: a,
     });
 }
-function k(e) {
+function C(e) {
     let { item: i, transitionState: t, onClose: s, onSubmit: l } = e,
         a = i.originalItem,
         o = "IMAGE" === i.type,
-        c = o ? (0, n.jsx)(v, { src: (0, m.E)({ proxyURL: a.proxy_url, url: a.url }) }) : void 0;
-    return (0, n.jsx)(I, {
+        c = o ? (0, n.jsx)(b, { src: (0, f.E)({ proxyURL: a.proxy_url, url: a.url }) }) : void 0;
+    return (0, n.jsx)(S, {
         preview: c,
-        filename: (0, f.A)(a),
+        filename: (0, m.A)(a),
         description: a.description,
         spoiler: (0, r.Lt)(a.flags ?? 0, g.sbO.IS_SPOILER),
         isImage: o,
