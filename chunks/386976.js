@@ -7,6 +7,9 @@ var i = n(64700),
     o = n(620233),
     l = n(710195),
     u = n(375441);
+function d(e) {
+    return { id: e, label: `Variant ${e}`, shortLabel: `Variant ${e}`, type: s.FZ.UNSPECIFIED };
+}
 function c() {
     (0, i.useEffect)(() => {
         (0, o.sD)(s.Um.APP);
@@ -17,19 +20,30 @@ function c() {
             () =>
                 (function (e, t) {
                     let n = {};
-                    for (let [t, i] of Object.entries(e))
-                        n[t] = {
-                            system: a.l5.APEX,
-                            kind: u.ag[i.unitType],
-                            name: i.name,
-                            title: i.title,
-                            variants: i.variants.map((e) => ({
+                    for (let [i, r] of Object.entries(e)) {
+                        let e = r.variants.map((e) => ({
                                 id: e.id,
                                 label: `Variant ${e.id}: ${e.label}`,
                                 shortLabel: `Variant ${e.id}`,
                                 type: e.type,
                             })),
+                            s = new Set(e.map((e) => e.id)),
+                            o = t[i],
+                            l =
+                                null != o
+                                    ? Object.keys(o.variations)
+                                          .map((e) => Number(e))
+                                          .filter((e) => !s.has(e))
+                                          .map(d)
+                                    : [];
+                        n[i] = {
+                            system: a.l5.APEX,
+                            kind: u.ag[r.unitType],
+                            name: r.name,
+                            title: r.title,
+                            variants: [...e, ...l].sort((e, t) => e.id - t.id),
                         };
+                    }
                     for (let [e, i] of Object.entries(t))
                         null == n[e] &&
                             (n[e] = {
@@ -37,15 +51,7 @@ function c() {
                                 kind: i.kind,
                                 name: i.name,
                                 title: i.name,
-                                variants: Object.entries(i.variations).map((e) => {
-                                    let [t, n] = e;
-                                    return {
-                                        id: Number(t),
-                                        label: `Variant ${t}`,
-                                        shortLabel: `Variant ${t}`,
-                                        type: s.FZ.UNSPECIFIED,
-                                    };
-                                }),
+                                variants: Object.keys(i.variations).map((e) => d(Number(e))),
                             });
                     return n;
                 })(e, t),
