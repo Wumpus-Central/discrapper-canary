@@ -6,14 +6,14 @@ var i = n(635377),
     a = n(228366),
     o = n(320095),
     l = n(815807),
-    u = n(495544),
+    u = n(280450),
     c = n(734057),
     d = n(994500),
     _ = n(309010),
     h = n(287809),
     f = n(935208),
-    p = n(256331),
-    E = n(575279);
+    E = n(256331),
+    p = n(575279);
 let m = new (r())({ max: 10, dispose: C }),
     g = new Map();
 function A(e, t) {
@@ -41,7 +41,7 @@ function S(e) {
     }
     return !0;
 }
-function y(e, t) {
+function N(e, t) {
     let n = m.peek(e);
     if (null == n) return !1;
     let i = n.messageMetadataByMessageId.get(t);
@@ -54,28 +54,23 @@ function y(e, t) {
 function C(e) {
     return g.delete(e);
 }
-function N(e) {
+function y(e) {
     let t = m.has(e);
     m.del(e);
     let n = C(e);
     return t || n;
 }
-class v extends s.Ay.Store {
+class O extends s.Ay.Store {
     static displayName = "ConversationsStore";
     initialize() {
-        this.waitFor(u.default, c.A, p.A, d.A, _.A, h.default);
+        this.waitFor(u.default, c.A, E.A, d.A, _.A, h.default);
     }
     hasChannelData(e) {
         return m.has(e);
     }
     getChannelConversations(e) {
         let t = m.peek(e);
-        return null == t
-            ? null
-            : t.conversations.map((e) => {
-                  let n = t.conversationMetadataById.get(e.id);
-                  return { conversation: e, color: n?.color ?? E.J["0"] };
-              });
+        return null == t ? null : t.conversations;
     }
     getConversationForMessage(e, t) {
         return m.peek(e)?.messageMetadataByMessageId.get(t)?.conversationId ?? null;
@@ -89,9 +84,9 @@ class v extends s.Ay.Store {
     getConversationMetadata(e, t) {
         return m.peek(e)?.conversationMetadataById.get(t) ?? null;
     }
-    hasMoreConversations(e, t) {
+    getEdgeMarker(e, t) {
         let n = m.peek(e);
-        return null != n && ("before" === t ? !n.reachedOldest : !n.reachedNewest);
+        return null == n ? null : "before" === t ? n.reachedOldest : n.reachedNewest;
     }
     isPendingFetch(e) {
         return g.has(e);
@@ -107,10 +102,9 @@ class v extends s.Ay.Store {
             n = t?.selectedConversationId;
         return null == n ? null : (t?.conversationMetadataById.get(n)?.conversation ?? null);
     }
-    getSelectedConversationColor(e) {
-        let t = m.peek(e),
-            n = t?.selectedConversationId;
-        return null == n ? null : (t?.conversationMetadataById.get(n)?.color ?? null);
+    getConversationColor(e, t) {
+        let n = m.peek(e);
+        return null == n ? null : (n.conversationMetadataById.get(t)?.color ?? null);
     }
     getHydratedMessages(e, t) {
         return m.peek(e)?.conversationMetadataById.get(t)?.hydratedMessages ?? null;
@@ -126,7 +120,7 @@ class v extends s.Ay.Store {
         return m.peek(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
     }
 }
-let R = new v(a.h, {
+let R = new O(a.h, {
     CONVERSATION_FETCH_START: function (e) {
         var t;
         let n,
@@ -168,11 +162,14 @@ let R = new v(a.h, {
                 n = null != e ? u?.conversationMetadataById.get(e)?.conversation : null;
             t = null != n ? [n] : [];
         } else t = u?.conversations ?? [];
-        let d = !o && (u?.reachedOldest ?? !1),
-            _ = !o && (u?.reachedNewest ?? !1),
+        let d = o ? null : (u?.reachedOldest ?? null),
+            _ = o ? null : (u?.reachedNewest ?? null),
             h = new Set(t.map((e) => e.id));
         if (
-            (i.some((e) => !h.has(e.id)) || null == a || ("before" === s ? (d = !0) : "after" === s && (_ = !0)),
+            (i.some((e) => !h.has(e.id)) ||
+                null == a ||
+                ("before" === s ? (d = Date.now()) : "after" === s && (_ = Date.now())),
+            "before" === s && null == a && (_ = Date.now()),
             (i = (function (e, t) {
                 let n = new Map();
                 for (let t of e) n.set(t.id, t);
@@ -181,24 +178,24 @@ let R = new v(a.h, {
                 return i.sort((e, t) => f.default.compare(e.startMessageId, t.startMessageId)), i;
             })(t, i)).length > 50)
         )
-            if ("after" === s) (i = i.slice(i.length - 50)), (d = !1);
-            else if ("before" === s) (i = i.slice(0, 50)), (_ = !1);
+            if ("after" === s) (i = i.slice(i.length - 50)), (d = null);
+            else if ("before" === s) (i = i.slice(0, 50)), (_ = null);
             else {
                 let e = (function (e, t) {
                     if (null == t) return 0;
                     let n = e.findIndex((e) => f.default.compare(e.startMessageId, t) >= 0);
                     return -1 === n && (n = e.length), Math.max(0, Math.min(n - Math.floor(25), e.length - 50));
                 })(i, a);
-                e > 0 && (d = !1), e + 50 < i.length && (_ = !1), (i = i.slice(e, e + 50));
+                e > 0 && (d = null), e + 50 < i.length && (_ = null), (i = i.slice(e, e + 50));
             }
-        let p = (function (e, t, n) {
+        let E = (function (e, t, n) {
             let i = n?.guildId ?? t[0]?.guildId ?? c.A.getChannel(e)?.guild_id ?? null,
                 s = new Map(),
                 a = new Map(),
                 o = n?.colorIndex ?? 0;
             for (let e of t) {
                 let t = n?.conversationMetadataById.get(e.id),
-                    i = t?.color ?? E.J[o++ % E.J.length],
+                    i = t?.color ?? p.J9[o++ % p.J9.length],
                     r = t?.hydratedMessages ?? null,
                     l = null != r && !!t?.fullyHydrated;
                 s.set(e.id, { conversation: e, color: i, hydratedMessages: r, fullyHydrated: l });
@@ -239,13 +236,13 @@ let R = new v(a.h, {
                 conversationMetadataById: s,
                 messageMetadataByMessageId: a,
                 recentFeedbackRatingsByConversationId: l,
-                reachedOldest: n?.reachedOldest ?? !1,
-                reachedNewest: n?.reachedNewest ?? !1,
+                reachedOldest: n?.reachedOldest ?? null,
+                reachedNewest: n?.reachedNewest ?? null,
                 selectedConversationId: d,
                 colorIndex: o,
             };
         })(n, i, u);
-        return (p.reachedOldest = d), (p.reachedNewest = _), null != u ? Object.assign(u, p) : m.set(n, p), !0;
+        return (E.reachedOldest = d), (E.reachedNewest = _), null != u ? Object.assign(u, E) : m.set(n, E), !0;
     },
     CONVERSATIONS_FETCH_FAILURE: function (e) {
         let { channelId: t, requestKey: n } = e;
@@ -257,20 +254,20 @@ let R = new v(a.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return N(t.id);
+        return y(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if ("unavailable" in t && !0 === t.unavailable) return !1;
         let n = !1;
-        for (let e of m.keys()) m.peek(e)?.guildId === t.id && N(e) && (n = !0);
+        for (let e of m.keys()) m.peek(e)?.guildId === t.id && y(e) && (n = !0);
         return n;
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { channelId: t, jump: n } = e;
         if (null == n || _.A.getChannelId() !== t) return !1;
         let i = m.peek(t);
-        return null != i && ((i.reachedOldest = !1), (i.reachedNewest = !1), !0);
+        return null != i && ((i.reachedOldest = null), (i.reachedNewest = null), !0);
     },
     SET_SELECTED_CONVERSATION: function (e) {
         let { channelId: t, conversationId: n } = e;
@@ -356,12 +353,12 @@ let R = new v(a.h, {
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e;
-        return y(t, n);
+        return N(t, n);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { channelId: t, ids: n } = e,
             i = !1;
-        for (let e of n) y(t, e) && (i = !0);
+        for (let e of n) N(t, e) && (i = !0);
         return i;
     },
     LOGOUT: function () {

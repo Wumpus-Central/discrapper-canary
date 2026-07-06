@@ -2827,10 +2827,7 @@ function lG(e) {
 function lU(e) {
     let { channel: t, scrollManager: n } = e,
         l = (0, P.sV)(t.guild_id, "scrollbar_chips"),
-        i = (0, m.yK)([O.A], () => (l ? (O.A.getChannelConversations(t.id)?.map((e) => e.conversation) ?? []) : []), [
-            t.id,
-            l,
-        ]);
+        i = (0, m.yK)([O.A], () => (l ? (O.A.getChannelConversations(t.id) ?? []) : []), [t.id, l]);
     return l && 0 !== i.length ? (0, r.jsx)(lG, { channel: t, scrollManager: n, conversations: i }) : null;
 }
 function lw(e) {
