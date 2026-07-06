@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { Fu: () => _, GZ: () => d, __: () => f, rn: () => h });
+n.d(t, { Fu: () => _, GZ: () => u, __: () => d, rn: () => A });
 var i = n(496431),
-    r = n(773669),
-    s = n(975571),
-    a = n(428262),
-    o = n(410516),
-    l = n(202541),
-    u = n(652215),
+    l = n(773669),
+    r = n(975571),
+    s = n(428262),
+    a = n(410516),
+    o = n(202541),
+    E = n(652215),
     c = n(375708);
-function d(e, t, n, i) {
+function u(e, t, n, i) {
     switch (e) {
-        case l.pe.TIER_0:
+        case o.pe.TIER_0:
             return t.days > 0
                 ? c.intl.formatToPlainString(c.t.sP5OqC, { days: t.days })
                 : t.hours > 0
                   ? c.intl.formatToPlainString(c.t["7Lhfu7"], { hours: t.hours })
                   : c.intl.formatToPlainString(c.t.coDiS0, { minutes: Math.max(t.minutes, 1) });
-        case l.pe.TIER_2:
+        case o.pe.TIER_2:
             return t.days > 0
                 ? c.intl.formatToPlainString(c.t.GPqVWT, { days: t.days, trialPeriod: n, termsUrl: i })
                 : t.hours > 0
@@ -33,21 +32,21 @@ function d(e, t, n, i) {
 let _ = (e) => {
     let t = e.expires_at,
         n = (0, i.A)(null != t ? Date.parse(t) : 0, 1e3),
-        r = e?.subscription_trial?.sku_id;
-    return null == t || null == r
+        l = e?.subscription_trial?.sku_id;
+    return null == t || null == l
         ? null
-        : d(
-              r,
+        : u(
+              l,
               n,
-              (0, a.re)({
+              (0, s.re)({
                   intervalType: e.subscription_trial?.interval,
                   intervalCount: e.subscription_trial?.interval_count,
               }),
-              s.A.getArticleURL(e.trial_id === l.yo ? u.MVz.NITRO_TRIAL_FOR_ALL : u.MVz.PREMIUM_TRIAL),
+              r.A.getArticleURL(e.trial_id === o.yo ? E.MVz.NITRO_TRIAL_FOR_ALL : E.MVz.PREMIUM_TRIAL),
           );
 };
-function h(e, t, n) {
-    let i = new Intl.NumberFormat(r.default.locale, {
+function A(e, t, n) {
+    let i = new Intl.NumberFormat(l.default.locale, {
         style: "percent",
         minimumFractionDigits: 0,
         maximumFractionDigits: 0,
@@ -61,8 +60,8 @@ function h(e, t, n) {
                 discountPercentage: i,
             });
 }
-let f = (e) => {
+let d = (e) => {
     let t = e.expiresAt,
         n = (0, i.A)(null != t ? t.getTime() : 0, 1e3);
-    return null == t ? null : h(n, Number(e.discount.amount), (0, o.hm)(e));
+    return null == t ? null : A(n, Number(e.discount.amount), (0, a.hm)(e));
 };

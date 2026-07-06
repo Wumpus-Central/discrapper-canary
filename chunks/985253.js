@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { T: () => s });
-var i = n(778712),
+n.d(t, { T: () => l });
+var a = n(778712),
     r = n(996988);
-let s = {
+let l = {
     [r.d.POPOUT]: {
-        avatarSize: i._3.SIZE_80,
+        avatarSize: a._3.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 4,
         bannerWidth: 300,
         bannerHeight: 105,
-        themePadding: 4,
+        themePadding: 2,
     },
     [r.d.MODAL]: {
-        avatarSize: i._3.SIZE_120,
+        avatarSize: a._3.SIZE_120,
         avatarOffsetX: 16,
         avatarOffsetY: 5,
         bannerWidth: 600,
@@ -20,7 +19,7 @@ let s = {
         themePadding: 0,
     },
     [r.d.MODAL_V2]: {
-        avatarSize: i._3.SIZE_120,
+        avatarSize: a._3.SIZE_120,
         avatarOffsetX: 24,
         avatarOffsetY: 0,
         bannerWidth: 400,
@@ -28,7 +27,7 @@ let s = {
         themePadding: 0,
     },
     [r.d.SIDEBAR]: {
-        avatarSize: i._3.SIZE_80,
+        avatarSize: a._3.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 8,
         bannerWidth: 340,
@@ -36,7 +35,7 @@ let s = {
         themePadding: 0,
     },
     [r.d.VIDEO_TILE_BACKGROUND]: {
-        avatarSize: i._3.SIZE_80,
+        avatarSize: a._3.SIZE_80,
         avatarOffsetX: 10,
         avatarOffsetY: 4,
         bannerWidth: 300,

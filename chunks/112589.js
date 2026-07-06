@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => a }), n(938796);
-var i = n(315069);
+i.d(t, { A: () => s }), i(938796);
+var l = i(315069);
 function r(e) {
     return { id: e.id, filename: e.filename, size: e.size, width: e.width, height: e.height, mimeType: e.mime_type };
 }
-var s = n(889227);
-class a extends i.A {
+var n = i(889227);
+class s extends l.A {
     id;
     applicationId;
     skuId;
@@ -33,7 +32,7 @@ class a extends i.A {
     published;
     static createFromServer(e) {
         let t = e.staff_notes;
-        return new a({
+        return new s({
             id: e.id,
             applicationId: e.sku.application_id,
             skuId: e.sku.id,
@@ -49,7 +48,7 @@ class a extends i.A {
                     ? e.carousel_items.map((e) => ({ assetId: e.asset_id, youtubeVideoId: e.youtube_video_id }))
                     : null,
             assets: null != e.assets ? e.assets.map(r) : null,
-            staffNotes: null != t ? { content: t.content, user: null != t.user ? new s.A(t.user) : null } : null,
+            staffNotes: null != t ? { content: t.content, user: null != t.user ? new n.A(t.user) : null } : null,
             guild:
                 null != e.guild
                     ? {

@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { T: () => s }), n(439174), n(878784);
-var i = n(202541),
-    r = n(375708);
-function s(e, t) {
-    switch (e) {
-        case i.Ac.PREMIUM_TENURE_1_MONTH:
-        case i.Ac.PREMIUM_TENURE_3_MONTH:
-        case i.Ac.PREMIUM_TENURE_6_MONTH:
-            return r.intl.formatToPlainString(r.t.erUSmA, { months: t });
-        case i.Ac.PREMIUM_TENURE_12_MONTH:
-        case i.Ac.PREMIUM_TENURE_24_MONTH:
-        case i.Ac.PREMIUM_TENURE_36_MONTH:
-        case i.Ac.PREMIUM_TENURE_60_MONTH:
-        case i.Ac.PREMIUM_TENURE_72_MONTH:
-            return r.intl.formatToPlainString(r.t.qOdyDe, { years: t / 12 });
+M.d(E, { T: () => t }), M(439174), M(878784);
+var c = M(202541),
+    a = M(375708);
+function t(_, E) {
+    switch (_) {
+        case c.Ac.PREMIUM_TENURE_1_MONTH:
+        case c.Ac.PREMIUM_TENURE_3_MONTH:
+        case c.Ac.PREMIUM_TENURE_6_MONTH:
+            return a.intl.formatToPlainString(a.t.erUSmA, { months: E });
+        case c.Ac.PREMIUM_TENURE_12_MONTH:
+        case c.Ac.PREMIUM_TENURE_24_MONTH:
+        case c.Ac.PREMIUM_TENURE_36_MONTH:
+        case c.Ac.PREMIUM_TENURE_60_MONTH:
+        case c.Ac.PREMIUM_TENURE_72_MONTH:
+            return a.intl.formatToPlainString(a.t.qOdyDe, { years: E / 12 });
         default:
             return null;
     }

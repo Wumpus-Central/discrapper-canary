@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(141639),
-    r = n(61330);
-function s(e) {
-    return (0, r.A)(e) || (0, i.A)(e);
+e.d(n, { A: () => a });
+var i = e(141639),
+    l = e(61330);
+function a(t) {
+    return (0, l.A)(t) || (0, i.A)(t);
 }

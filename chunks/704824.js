@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { U: () => u, j: () => l });
-var i = n(64700),
-    r = n(17928),
-    s = n(824552),
-    a = n(546183),
-    o = n(403362);
-function l(e, t) {
-    let { disableFetch: n = !1 } = t ?? {},
-        l = (0, r.yK)([a.default], () => e?.map((e) => a.default.getNewestTokenForApplication(e)).filter(o.Vq) ?? [], [
-            e,
+l.d(e, { U: () => o, j: () => c });
+var r = l(64700),
+    a = l(17928),
+    u = l(824552),
+    n = l(546183),
+    i = l(403362);
+function c(t, e) {
+    let { disableFetch: l = !1 } = e ?? {},
+        c = (0, a.yK)([n.default], () => t?.map((t) => n.default.getNewestTokenForApplication(t)).filter(i.Vq) ?? [], [
+            t,
         ]),
-        u = (0, r.bG)(
-            [a.default],
-            () => e?.every((e) => a.default.getFetchStateForApplication(e) === a.FetchState.FETCHED) ?? !1,
-            [e],
+        o = (0, a.bG)(
+            [n.default],
+            () => t?.every((t) => n.default.getFetchStateForApplication(t) === n.FetchState.FETCHED) ?? !1,
+            [t],
         ),
-        c = (0, r.yK)(
-            [a.default],
-            () => e?.filter((e) => a.default.getFetchStateForApplication(e) === a.FetchState.NOT_FETCHED) ?? [],
-            [e],
+        p = (0, a.yK)(
+            [n.default],
+            () => t?.filter((t) => n.default.getFetchStateForApplication(t) === n.FetchState.NOT_FETCHED) ?? [],
+            [t],
         );
     return (
-        i.useEffect(() => {
-            n || 0 === c.length || s.A.fetch(c);
-        }, [n, c]),
-        { tokens: l, fetched: u }
+        r.useEffect(() => {
+            l || 0 === p.length || u.A.fetch(p);
+        }, [l, p]),
+        { tokens: c, fetched: o }
     );
 }
-function u(e, t) {
-    let { tokens: n, fetched: r } = l(
-        i.useMemo(() => (null != e ? [e] : null), [e]),
-        t,
+function o(t, e) {
+    let { tokens: l, fetched: a } = c(
+        r.useMemo(() => (null != t ? [t] : null), [t]),
+        e,
     );
-    return { token: n.length > 0 ? n[0] : null, fetched: r };
+    return { token: l.length > 0 ? l[0] : null, fetched: a };
 }

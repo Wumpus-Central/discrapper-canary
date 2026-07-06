@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(64700),
-    r = n(17928),
-    s = n(429913),
+n.d(t, { A: () => s });
+var r = n(64700),
+    u = n(17928),
+    l = n(429913),
     a = n(832163);
-function o(e) {
+function s(e) {
     var t;
     let n,
-        o,
-        l,
-        u =
-            ((t = i.useMemo(() => (null != e ? [e] : []), [e])),
-            (n = (0, r.bG)([a.A], () => a.A.getConfig())),
-            (o = i.useMemo(() => {
+        s,
+        i,
+        o =
+            ((t = r.useMemo(() => (null != e ? [e] : []), [e])),
+            (n = (0, u.bG)([a.A], () => a.A.getConfig())),
+            (s = r.useMemo(() => {
                 if (null == n || 0 === t.length) return [];
                 let e = new Set(t);
                 return Array.from(
@@ -23,10 +22,10 @@ function o(e) {
                     ),
                 );
             }, [n, t])),
-            (l = (0, s.A)(o)),
-            i.useMemo(() => l.reduce((e, t) => (null == t || (e[t.id] = t), e), {}), [l]));
-    return i.useMemo(() => {
-        let e = Object.values(u);
+            (i = (0, l.A)(s)),
+            r.useMemo(() => i.reduce((e, t) => (null == t || (e[t.id] = t), e), {}), [i]));
+    return r.useMemo(() => {
+        let e = Object.values(o);
         return 0 === e.length ? null : e[0];
-    }, [u]);
+    }, [o]);
 }

@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { k: () => s });
-var i = n(627968),
-    r = n(289873);
-function s() {
-    return (0, i.jsx)("div", { children: (0, i.jsx)(r.y, { type: r.t.SPINNING_CIRCLE }) });
+p.d(i, { k: () => d });
+var t = p(627968),
+    c = p(289873);
+function d() {
+    return (0, t.jsx)("div", { children: (0, t.jsx)(c.y, { type: c.t.SPINNING_CIRCLE }) });
 }

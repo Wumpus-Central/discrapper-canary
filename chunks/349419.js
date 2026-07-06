@@ -1,129 +1,128 @@
-"use strict";
-n.d(t, { A: () => B }), n(321073);
-var i = n(627968),
-    r = n(64700),
-    s = n(432585),
-    a = n(598748),
-    o = n(17928),
-    l = n(688810),
-    u = n(549699),
-    d = n(29496),
-    c = n(352003),
-    _ = n(429913),
-    h = n(201718),
-    f = n(773669),
-    E = n(403362),
-    p = n(183555),
-    m = n(633075),
-    g = n(289173),
-    A = n(80330),
-    I = n(503698),
-    T = n.n(I),
-    S = n(331322),
-    N = n(834730),
-    C = n(890856),
-    y = n(619517),
-    v = n(946356),
-    R = n(646997);
-function O(e) {
-    let { applicationName: t, applicationIcon: n } = e;
-    return (0, i.jsxs)(S.B, {
+t.d(a, { A: () => F }), t(321073);
+var i = t(627968),
+    n = t(64700),
+    l = t(284513),
+    s = t(598748),
+    c = t(17928),
+    r = t(688810),
+    o = t(549699),
+    u = t(29496),
+    p = t(352003),
+    d = t(429913),
+    m = t(201718),
+    f = t(773669),
+    I = t(403362),
+    g = t(183555),
+    h = t(633075),
+    E = t(289173),
+    A = t(80330),
+    x = t(503698),
+    j = t.n(x),
+    R = t(331322),
+    C = t(834730),
+    _ = t(890856),
+    N = t(619517),
+    M = t(946356),
+    b = t(646997);
+function P(e) {
+    let { applicationName: a, applicationIcon: t } = e;
+    return (0, i.jsxs)(R.B, {
         direction: "horizontal",
         gap: 4,
         children: [
-            null != n
-                ? (0, i.jsx)(y.Ay, { width: 16, height: 16, src: n, className: R.In })
-                : (0, i.jsx)("div", { className: R.Fi }),
-            (0, i.jsx)(N.E, { variant: "text-xs/medium", children: t }),
+            null != t
+                ? (0, i.jsx)(N.Ay, { width: 16, height: 16, src: t, className: b.In })
+                : (0, i.jsx)("div", { className: b.Fi }),
+            (0, i.jsx)(C.E, { variant: "text-xs/medium", children: a }),
         ],
     });
 }
-function b(e) {
-    let { application: t, rendererProps: n, className: o, onClick: l } = e,
-        { trackUserProfileAction: u } = (0, p.NJ)(),
-        d = n.surfaceConfigs[a.m.MINI_PROFILE],
-        c = t.id;
+function v(e) {
+    let { application: a, rendererProps: t, className: c, onClick: r } = e,
+        { trackUserProfileAction: o } = (0, g.NJ)(),
+        u = t.surfaceConfigs[s.m.MINI_PROFILE],
+        p = a.id;
     return (!(function (e) {
-        let { trackUserProfileAction: t } = (0, p.NJ)(),
-            n = r.useRef(!1);
-        r.useEffect(() => {
-            n.current || (t({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (n.current = !0));
-        }, [t, e]);
-    })(c),
-    null == d)
+        let { trackUserProfileAction: a } = (0, g.NJ)(),
+            t = n.useRef(!1);
+        n.useEffect(() => {
+            t.current || (a({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (t.current = !0));
+        }, [a, e]);
+    })(p),
+    null == u)
         ? null
-        : (0, i.jsx)(C.s, {
+        : (0, i.jsx)(_.s, {
               onClick: () => {
-                  u({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: c }), l?.();
+                  o({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: p }), r?.();
               },
-              "aria-label": t.name,
-              children: (0, i.jsx)(v.A.Overlay, {
-                  className: T()(R.kL, o),
-                  children: (0, i.jsx)(s.kH, {
-                      ...n,
-                      surface: a.m.MINI_PROFILE,
-                      surfaceConfig: d,
-                      header: (0, i.jsx)(O, { applicationName: t.name, applicationIcon: t.getIconURL(16) }),
+              "aria-label": a.name,
+              children: (0, i.jsx)(M.A.Overlay, {
+                  className: j()(b.kL, c),
+                  children: (0, i.jsx)(l.kH, {
+                      ...t,
+                      surface: s.m.MINI_PROFILE,
+                      surfaceConfig: u,
+                      header: (0, i.jsx)(P, { applicationName: a.name, applicationIcon: a.getIconURL(16) }),
                   }),
               }),
           });
 }
-var L = n(939249),
-    D = n(780907),
-    P = n(760751),
-    w = n(486020),
-    M = n(939496),
-    x = n(996988),
-    U = n(375708),
-    k = n(216914);
-function G(e) {
-    var t;
-    let n,
-        { widgets: s = [], onClick: a, className: l } = e,
-        { trackUserProfileAction: u } = (0, p.NJ)(),
-        d =
-            ((t = s.filter((e) => e instanceof m.R)),
-            (n = (0, _.A)(t.map((e) => e.applicationId))),
-            (0, o.cf)([P.A], () =>
+var G = t(939249),
+    k = t(780907),
+    S = t(760751),
+    w = t(486020),
+    D = t(939496),
+    O = t(996988),
+    W = t(375708),
+    y = t(216914);
+function V(e) {
+    var a;
+    let t,
+        { widgets: l = [], onClick: s, className: r } = e,
+        { trackUserProfileAction: o } = (0, g.NJ)(),
+        u =
+            ((a = l.filter((e) => e instanceof h.R)),
+            (t = (0, d.A)(a.map((e) => e.applicationId))),
+            (0, c.cf)([S.A], () =>
                 Object.fromEntries(
-                    n
-                        .filter(E.Vq)
-                        .map((e) => [e.id, P.A.getGameByApplication(e)])
+                    t
+                        .filter(I.Vq)
+                        .map((e) => [e.id, S.A.getGameByApplication(e)])
                         .filter((e) => {
-                            let [t, n] = e;
-                            return null != n;
+                            let [a, t] = e;
+                            return null != t;
                         }),
                 ),
             )),
-        c = (0, r.useMemo)(
+        p = (0, n.useMemo)(
             () => [
                 ...new Set(
-                    s
+                    l
                         .map((e) =>
-                            e instanceof g.Yy
+                            e instanceof E.Yy
                                 ? e.games.map((e) => e.applicationId)
-                                : e instanceof m.R
-                                  ? d[e.applicationId]?.id
+                                : e instanceof h.R
+                                  ? u[e.applicationId]?.id
                                   : void 0,
                         )
-                        .filter(E.Vq)
+                        .filter(I.Vq)
                         .flat(),
                 ),
             ],
-            [s, d],
+            [l, u],
         ),
-        h = (0, o.bG)([P.A], () => P.A.canFetchDetectableGames()),
-        [f, A] = (0, r.useState)([]),
-        { themeType: I } = (0, M.E)(),
-        S = I === x.d.SIDEBAR,
-        C = (0, r.useRef)(!1);
+        m = (0, c.bG)([S.A], () => S.A.canFetchDetectableGames()),
+        [f, A] = (0, n.useState)([]),
+        { themeType: x } = (0, D.E)(),
+        R = x === O.d.SIDEBAR,
+        _ = (0, n.useRef)(!1);
     return (
-        (0, r.useEffect)(() => {
-            h
-                ? D.Ay.getDetectableGames()
+        (0, n.useEffect)(() => {
+            m
+                ? k.Ay.getDetectableGames()
                 : A(
-                      c
-                          .map((e) => P.A.getDetectableGame(e))
+                      p
+                          .map((e) => S.A.getDetectableGame(e))
                           .filter((e) => null != e)
                           .map((e) => ({
                               image: w.Ay.getApplicationIconURL({ id: e.id, icon: e.icon }) ?? "",
@@ -132,35 +131,35 @@ function G(e) {
                           .filter((e) => "" !== e.image)
                           .slice(0, 4),
                   );
-        }, [c, h]),
-        (0, r.useEffect)(() => {
-            0 === f.length || C.current || (u({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (C.current = !0));
-        }, [u, f.length]),
-        (0, i.jsx)(L.D, {
-            "aria-label": U.intl.string(U.t.JjiwFx),
+        }, [p, m]),
+        (0, n.useEffect)(() => {
+            0 === f.length || _.current || (o({ action: "VIEW_GAME_WIDGET_BREADCRUMB" }), (_.current = !0));
+        }, [o, f.length]),
+        (0, i.jsx)(G.D, {
+            "aria-label": W.intl.string(W.t.JjiwFx),
             onClick: () => {
-                u({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), a();
+                o({ action: "PRESS_GAME_WIDGET_BREADCRUMB" }), s();
             },
-            className: k.QF,
-            children: (0, i.jsxs)(v.A.Overlay, {
-                className: T()(k.WH, l),
+            className: y.QF,
+            children: (0, i.jsxs)(M.A.Overlay, {
+                className: j()(y.WH, r),
                 children: [
-                    (0, i.jsx)(N.E, {
-                        variant: S ? "text-sm/medium" : "text-xs/medium",
-                        children: U.intl.string(U.t.JjiwFx),
+                    (0, i.jsx)(C.E, {
+                        variant: R ? "text-sm/medium" : "text-xs/medium",
+                        children: W.intl.string(W.t.JjiwFx),
                     }),
                     (0, i.jsx)("div", {
-                        className: k.Pt,
-                        children: f.map((e, t) =>
+                        className: y.Pt,
+                        children: f.map((e, a) =>
                             (0, i.jsx)(
-                                V,
+                                L,
                                 {
                                     iconUrl: e.image,
                                     name: e.name,
-                                    displayCount: t === f.length - 1 && c.length > 4,
-                                    gameCount: c.length - f.length,
+                                    displayCount: a === f.length - 1 && p.length > 4,
+                                    gameCount: p.length - f.length,
                                 },
-                                t,
+                                a,
                             ),
                         ),
                     }),
@@ -169,104 +168,104 @@ function G(e) {
         })
     );
 }
-function V(e) {
-    let { iconUrl: t, name: n, displayCount: r, gameCount: s } = e;
+function L(e) {
+    let { iconUrl: a, name: t, displayCount: n, gameCount: l } = e;
     return (0, i.jsxs)("div", {
-        className: k.Kk,
+        className: y.Kk,
         children: [
-            (0, i.jsx)("img", { className: T()({ [k.um]: r }), src: t, alt: n }),
-            r &&
+            (0, i.jsx)("img", { className: j()({ [y.um]: n }), src: a, alt: t }),
+            n &&
                 (0, i.jsx)("div", {
-                    className: k.pp,
-                    children: (0, i.jsxs)(N.E, { variant: "text-xs/medium", className: k.gq, children: ["+", s] }),
+                    className: y.pp,
+                    children: (0, i.jsxs)(C.E, { variant: "text-xs/medium", className: y.gq, children: ["+", l] }),
                 }),
         ],
     });
 }
-var F = n(518477);
-function B(e) {
-    let { user: t, widgets: n = [], ...I } = e,
-        { openModal: T, onExpand: S } = (function (e) {
-            let { onOpenUserProfileModal: t } = e,
-                { analyticsLocations: n } = (0, l.Ay)(),
-                { trackUserProfileAction: i } = (0, p.NJ)(),
-                s = r.useCallback(() => {
-                    t?.({ tabSection: F.RP.WIDGETS });
-                }, [t]),
-                a = r.useCallback(() => {
-                    i({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: n }), s();
-                }, [i, n, s]);
-            return { openModal: s, onExpand: a };
-        })({ user: t, widgets: n, ...I }),
-        N = r.useMemo(() => n.filter((e) => e instanceof m.R), [n]),
-        C = r.useMemo(() => N.map((e) => e.applicationId), [N]),
-        y = (0, _.A)(C),
-        v = r.useMemo(() => new Map(y.filter(E.Vq).map((e) => [e.id, e])), [y]),
-        R = (0, c.A)(C),
-        O = r.useMemo(() => new Map(R.map((e) => [e.application_id, e])), [R]),
-        { data: L } = (0, h.P)(t.id),
-        D = r.useMemo(() => new Map(L?.map((e) => [e.application_id, e])), [L]),
-        P = (0, o.bG)([f.default], () => f.default.locale),
-        w = (0, o.cf)([d.A], () => Object.fromEntries(N.map((e) => [e.applicationId, d.A.getAssets(e.applicationId)]))),
-        M = r.useMemo(
+var T = t(518477);
+function F(e) {
+    let { user: a, widgets: t = [], ...x } = e,
+        { openModal: j, onExpand: R } = (function (e) {
+            let { onOpenUserProfileModal: a } = e,
+                { analyticsLocations: t } = (0, r.Ay)(),
+                { trackUserProfileAction: i } = (0, g.NJ)(),
+                l = n.useCallback(() => {
+                    a?.({ tabSection: T.RP.WIDGETS });
+                }, [a]),
+                s = n.useCallback(() => {
+                    i({ action: "PRESS_SHOW_MORE_WIDGETS", analyticsLocations: t }), l();
+                }, [i, t, l]);
+            return { openModal: l, onExpand: s };
+        })({ user: a, widgets: t, ...x }),
+        C = n.useMemo(() => t.filter((e) => e instanceof h.R), [t]),
+        _ = n.useMemo(() => C.map((e) => e.applicationId), [C]),
+        N = (0, d.A)(_),
+        M = n.useMemo(() => new Map(N.filter(I.Vq).map((e) => [e.id, e])), [N]),
+        b = (0, p.A)(_),
+        P = n.useMemo(() => new Map(b.map((e) => [e.application_id, e])), [b]),
+        { data: G } = (0, m.P)(a.id),
+        k = n.useMemo(() => new Map(G?.map((e) => [e.application_id, e])), [G]),
+        S = (0, c.bG)([f.default], () => f.default.locale),
+        w = (0, c.cf)([u.A], () => Object.fromEntries(C.map((e) => [e.applicationId, u.A.getAssets(e.applicationId)]))),
+        D = n.useMemo(
             () =>
-                0 === v.size || 0 === O.size || 0 === D.size
+                0 === M.size || 0 === P.size || 0 === k.size
                     ? null
                     : new Map(
-                          N.map((e) => {
-                              let t = v.get(e.applicationId),
-                                  n = O.get(e.applicationId),
-                                  i = D.get(e.applicationId);
-                              if (null == t || null == n || null == i) return null;
-                              let r = n.surfaces;
-                              if (null == r || null == r[a.m.MINI_PROFILE]) return null;
-                              let o = (0, s.VG)(i.profile),
-                                  l = Object.values(w[e.applicationId] ?? {}).filter(E.Vq);
-                              return [e, { surfaceConfigs: n.surfaces, data: o, application: t, assets: l }];
-                          }).filter(E.Vq),
+                          C.map((e) => {
+                              let a = M.get(e.applicationId),
+                                  t = P.get(e.applicationId),
+                                  i = k.get(e.applicationId);
+                              if (null == a || null == t || null == i) return null;
+                              let n = t.surfaces;
+                              if (null == n || null == n[s.m.MINI_PROFILE]) return null;
+                              let c = (0, l.VG)(i.profile),
+                                  r = Object.values(w[e.applicationId] ?? {}).filter(I.Vq);
+                              return [e, { surfaceConfigs: t.surfaces, data: c, application: a, assets: r }];
+                          }).filter(I.Vq),
                       ),
-            [N, v, O, D, w],
+            [C, M, P, k, w],
         ),
-        x = r.useCallback(
+        O = n.useCallback(
             (e) => {
-                let t = [],
-                    r = !1;
-                for (let s of n)
-                    if (s instanceof m.R) {
-                        let n = M?.get(s);
-                        if (null == n) continue;
-                        t.push(
+                let a = [],
+                    n = !1;
+                for (let l of t)
+                    if (l instanceof h.R) {
+                        let t = D?.get(l);
+                        if (null == t) continue;
+                        a.push(
                             (0, i.jsx)(
-                                b,
+                                v,
                                 {
-                                    application: n.application,
+                                    application: t.application,
                                     rendererProps: {
-                                        locale: P,
-                                        surfaceConfigs: n.surfaceConfigs,
+                                        locale: S,
+                                        surfaceConfigs: t.surfaceConfigs,
                                         isLoading: !1,
                                         hasIdentity: !0,
                                         resolutionContext: {
-                                            data: n.data,
-                                            applicationAssets: n.assets,
+                                            data: t.data,
+                                            applicationAssets: t.assets,
                                             getApplicationAssetUrl: (e) =>
-                                                (0, u.Q)(s.applicationId, e, e.metadata.width),
+                                                (0, o.Q)(l.applicationId, e, e.metadata.width),
                                             localizedStrings: [],
                                         },
                                     },
-                                    onClick: T,
+                                    onClick: j,
                                     ...e,
                                 },
-                                `application-widget-${s.applicationId}`,
+                                `application-widget-${l.applicationId}`,
                             ),
                         );
                     } else
-                        s instanceof g.Yy &&
-                            !r &&
-                            (t.push((0, i.jsx)(G, { widgets: n, onClick: T, ...e }, "collection-breadcrumb")),
-                            (r = !0));
-                return t;
+                        l instanceof E.Yy &&
+                            !n &&
+                            (a.push((0, i.jsx)(V, { widgets: t, onClick: j, ...e }, "collection-breadcrumb")),
+                            (n = !0));
+                return a;
             },
-            [n, T, M, P],
+            [t, j, D, S],
         );
-    return 0 === n.length ? null : (0, i.jsx)(A.A, { renderCards: x, heading: U.intl.string(U.t.Y55Tua), onExpand: S });
+    return 0 === t.length ? null : (0, i.jsx)(A.A, { renderCards: O, heading: W.intl.string(W.t.Y55Tua), onExpand: R });
 }

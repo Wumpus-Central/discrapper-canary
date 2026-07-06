@@ -1,29 +1,28 @@
-"use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => x });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     s = n(17928),
     a = n(43105),
-    o = n(403581),
-    l = n(793574),
-    u = n(688810),
+    r = n(403581),
+    o = n(793574),
+    d = n(688810),
     c = n(532794),
-    d = n(181079),
-    _ = n(313281),
-    h = n(49999),
-    f = n(202541),
-    p = n(335993),
-    E = n(375708),
-    m = n(988572);
-function g(e) {
+    u = n(181079),
+    h = n(313281),
+    p = n(49999),
+    m = n(202541),
+    f = n(335993),
+    g = n(375708),
+    A = n(988572);
+function x(e) {
     let { targetElementRef: t, markMenuItemPopoverAsDismissed: n } = e,
-        [g, A] = r.useState("top"),
-        I = r.useRef(null),
-        T = r.useRef(null),
-        { hasAccess: S } = (0, _.TW)("FavoritesOnboardingMenuItemPopover"),
-        { analyticsLocations: y } = (0, u.Ay)(l.A.FAVORITES_GUILD_MENU_ITEM),
-        C = (0, s.bG)([d.A], () => d.A.hasStoredFavorites());
-    r.useLayoutEffect(() => {
+        [x, v] = l.useState("top"),
+        E = l.useRef(null),
+        T = l.useRef(null),
+        { hasAccess: C } = (0, h.TW)("FavoritesOnboardingMenuItemPopover"),
+        { analyticsLocations: _ } = (0, d.Ay)(o.A.FAVORITES_GUILD_MENU_ITEM),
+        N = (0, s.bG)([u.A], () => u.A.hasStoredFavorites());
+    l.useLayoutEffect(() => {
         if (null != t.current)
             return (
                 e(),
@@ -42,31 +41,31 @@ function g(e) {
                         (function () {
                             let e = t.current?.getBoundingClientRect();
                             if (null == e) return;
-                            let n = I.current?.getBoundingClientRect().height ?? 0;
-                            A(window.innerHeight - e.top < n ? "bottom" : "top");
+                            let n = E.current?.getBoundingClientRect().height ?? 0;
+                            v(window.innerHeight - e.top < n ? "bottom" : "top");
                         })();
                 }));
         }
     }, [t]);
-    let N = r.useCallback(() => {
-            n?.(h.i.TAKE_ACTION), S || (0, c.A)({ subscriptionTier: f.pe.TIER_2, analyticsLocations: y });
-        }, [n, y, S]),
-        v = C ? p.default.TWuDTt : p.default["25YCHl"];
+    let I = l.useCallback(() => {
+            n?.(p.i.TAKE_ACTION), C || (0, c.A)({ subscriptionTier: m.pe.TIER_2, analyticsLocations: _ });
+        }, [n, _, C]),
+        j = N ? f.default.TWuDTt : f.default["25YCHl"];
     return (0, i.jsx)(a.A, {
         targetElementRef: t,
         gradientColor: "nitro-pink",
         position: "right",
         alignmentStrategy: "edge",
-        align: g,
-        caretConfig: { align: "top" === g ? "start" : "end" },
-        popoverRef: I,
+        align: x,
+        caretConfig: { align: "top" === x ? "start" : "end" },
+        popoverRef: E,
         badge: { type: "beta", variant: "expressive" },
-        graphic: { src: m.A, type: "image", aspectRatio: "16/9" },
-        title: E.intl.string(S ? v : p.default.A3ZjbM),
-        body: E.intl.string(S ? p.default.DFjrWw : p.default.qJUI2v),
-        onRequestClose: () => n?.(h.i.USER_DISMISS),
-        actions: S
+        graphic: { src: A.A, type: "image", aspectRatio: "16/9" },
+        title: g.intl.string(C ? j : f.default.A3ZjbM),
+        body: g.intl.string(C ? f.default.DFjrWw : f.default.qJUI2v),
+        onRequestClose: () => n?.(p.i.USER_DISMISS),
+        actions: C
             ? void 0
-            : [{ icon: o.t, text: E.intl.string(p.default["avps/2"]), onClick: () => N(), variant: "expressive" }],
+            : [{ icon: r.t, text: g.intl.string(f.default["avps/2"]), onClick: () => I(), variant: "expressive" }],
     });
 }

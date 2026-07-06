@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(839214);
-let r = Object.freeze({
+a.d(t, { A: () => n });
+var r = a(839214);
+let l = Object.freeze({
         selectedTab: null,
         isSearchVisible: !1,
         entrypoint: null,
-        searchBarState: n(488995).GlobalDiscoverySearchBarState.DEFAULT,
+        searchBarState: a(488995).GlobalDiscoverySearchBarState.DEFAULT,
     }),
-    s = (0, i.D)(() => r);
+    n = (0, r.D)(() => l);
