@@ -7838,7 +7838,7 @@ let rR = {
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-action.lottiejson": () =>
         a.e("19534").then(a.t.bind(a, 87037, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-idle.lottiejson": () =>
-        a.e("12250").then(a.t.bind(a, 331617, 19)),
+        a.e("12250").then(a.t.bind(a, 553998, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/box/box-loop.lottiejson": () =>
         a.e("58526").then(a.t.bind(a, 138157, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/cake/cake-action.lottiejson": () =>
@@ -8171,7 +8171,7 @@ let rP = {
             return () => (0, r.jsx)(e, { application: t, channelId: "987654321", onClose: rM.Z_ });
         },
         GuildChannelListContextMenu: async () => {
-            let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("45322"), a.e("10758")]).then(
+            let { default: e } = await Promise.all([a.e("9004"), a.e("19690"), a.e("22941"), a.e("10758")]).then(
                     a.bind(a, 455557),
                 ),
                 t = Object.values(a9.A.getGuilds())[0];
@@ -8182,17 +8182,16 @@ let rP = {
                     a.e("47173"),
                     a.e("41831"),
                     a.e("87960"),
-                    a.e("81599"),
-                    a.e("23004"),
+                    a.e("93200"),
+                    a.e("90629"),
                     a.e("8886"),
                     a.e("6212"),
-                    a.e("53637"),
-                    a.e("39655"),
-                    a.e("30772"),
+                    a.e("78279"),
+                    a.e("11262"),
                     a.e("37520"),
-                    a.e("44125"),
+                    a.e("38759"),
                     a.e("17738"),
-                    a.e("16155"),
+                    a.e("61312"),
                     a.e("44135"),
                     a.e("82393"),
                     a.e("48845"),
@@ -8233,7 +8232,8 @@ let rP = {
                     a.e("20578"),
                     a.e("36592"),
                     a.e("92430"),
-                    a.e("80339"),
+                    a.e("54453"),
+                    a.e("79254"),
                     a.e("38977"),
                     a.e("20802"),
                     a.e("91474"),
@@ -8261,6 +8261,7 @@ let rP = {
                     a.e("63726"),
                     a.e("71329"),
                     a.e("56373"),
+                    a.e("83827"),
                     a.e("42749"),
                     a.e("56026"),
                     a.e("16301"),
@@ -8275,7 +8276,7 @@ let rP = {
                     a.e("66913"),
                     a.e("71719"),
                     a.e("19690"),
-                    a.e("83827"),
+                    a.e("93767"),
                     a.e("13848"),
                     a.e("39214"),
                     a.e("99108"),
@@ -8292,7 +8293,6 @@ let rP = {
                     a.e("83518"),
                     a.e("52695"),
                     a.e("16373"),
-                    a.e("93767"),
                     a.e("24484"),
                     a.e("44943"),
                     a.e("32347"),
@@ -8319,15 +8319,15 @@ let rP = {
                     a.e("17699"),
                     a.e("57032"),
                     a.e("72238"),
-                    a.e("45322"),
+                    a.e("22941"),
                     a.e("94832"),
+                    a.e("37038"),
                     a.e("26386"),
                     a.e("65338"),
                     a.e("52191"),
                     a.e("14656"),
                     a.e("39855"),
                     a.e("14530"),
-                    a.e("37038"),
                     a.e("45291"),
                     a.e("32607"),
                     a.e("65011"),
@@ -8763,7 +8763,7 @@ let oa = {
             a.e("66234"),
             a.e("20969"),
             a.e("59405"),
-            a.e("97199"),
+            a.e("19580"),
             a.e("97804"),
             a.e("56856"),
             a.e("82758"),
@@ -8792,7 +8792,7 @@ let oa = {
         return (t) => (0, r.jsx)(e, { ...t, guildId: "123" });
     },
     PhoneVerificationModal: async () => {
-        let { default: e } = await Promise.all([a.e("56643"), a.e("82662"), a.e("89545"), a.e("11493")]).then(
+        let { default: e } = await Promise.all([a.e("56643"), a.e("4782"), a.e("89545"), a.e("11493")]).then(
             a.bind(a, 914724),
         );
         return (t) => (0, r.jsx)(e, { error: null, working: !1, validPhone: !1, ...t });
@@ -8827,7 +8827,7 @@ let oa = {
         return (a) => (0, r.jsx)(e, { ...a, clientSettingType: t.LEGACY_GAME, gameId: "123456789" });
     },
     PremiumSubscriptionPauseModal: async () => {
-        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("13742"), a.e("80347")]).then(
+        let { PremiumSubscriptionPauseModalSelect: e } = await Promise.all([a.e("23866"), a.e("80347")]).then(
                 a.bind(a, 318998),
             ),
             { CancellationContext: t } = await Promise.resolve().then(a.bind(a, 916974)),
@@ -9744,7 +9744,7 @@ let oa = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
     UserAgreementsModal: async () => {
-        let { default: e } = await Promise.all([a.e("37777"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
+        let { default: e } = await Promise.all([a.e("59728"), a.e("82911"), a.e("22220")]).then(a.bind(a, 639719));
         return (t) => (0, r.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {
@@ -9754,7 +9754,7 @@ let oa = {
     },
     OtherFriendRequestsModal: async () => {
         let { default: e } = await Promise.all([
-            a.e("14973"),
+            a.e("61312"),
             a.e("24748"),
             a.e("27917"),
             a.e("73152"),
@@ -9765,7 +9765,7 @@ let oa = {
     AcceptInviteModal: async () => {
         let { default: e } = await Promise.all([
             a.e("65123"),
-            a.e("24292"),
+            a.e("35316"),
             a.e("2238"),
             a.e("7265"),
             a.e("81079"),
@@ -9786,7 +9786,7 @@ let oa = {
             a.e("66234"),
             a.e("7850"),
             a.e("16138"),
-            a.e("97199"),
+            a.e("19580"),
             a.e("97804"),
             a.e("56856"),
             a.e("82721"),
@@ -14436,8 +14436,7 @@ function um() {
                                   void (0, eW.openModalLazy)(
                                       async () => {
                                           let { default: t } = await Promise.all([
-                                              a.e("8376"),
-                                              a.e("97893"),
+                                              a.e("25028"),
                                               a.e("70940"),
                                               a.e("2033"),
                                               a.e("82830"),
@@ -18493,7 +18492,9 @@ function xf() {
                                             source: "preview",
                                             adCreativeId: "0",
                                             adCreativeType: hU.p.QUEST,
-                                            children: (0, r.jsx)(hJ.A, { children: (0, r.jsx)(hq.Y, { quest: t }) }),
+                                            children: (0, r.jsx)(hJ.A, {
+                                                children: (0, r.jsx)(hq.QuestBar, { quest: t }),
+                                            }),
                                         }),
                                     }),
                                 ],
@@ -18594,12 +18595,14 @@ function xf() {
                                         let e = performance.now();
                                         (0, eW.openModalLazy)(async () => {
                                             let { default: n } = await Promise.all([
-                                                a.e("29071"),
+                                                a.e("22448"),
+                                                a.e("83485"),
                                                 a.e("88147"),
                                                 a.e("92868"),
                                                 a.e("63408"),
                                                 a.e("77375"),
-                                                a.e("19580"),
+                                                a.e("79907"),
+                                                a.e("97199"),
                                             ]).then(a.bind(a, 834135));
                                             return (a) =>
                                                 (0, r.jsx)(n, {

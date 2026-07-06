@@ -12,19 +12,19 @@ var i = n(627968),
     _ = n(834730),
     h = n(939249),
     f = n(417098),
-    p = n(349288),
-    E = n(403581),
+    E = n(349288),
+    p = n(403581),
     m = n(192308),
     g = n(289873),
     A = n(157559),
     I = n(827343),
     T = n(830215),
     S = n(228366);
-function y(e) {
+function N(e) {
     S.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
 }
 var C = n(912851);
-let N = {
+let y = {
     clearRemoteDisconnectVoiceChannelId() {
         S.h.dispatch({ type: "CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID" });
     },
@@ -32,26 +32,26 @@ let N = {
         S.h.dispatch({ type: "CLEAR_LAST_SESSION_VOICE_CHANNEL_ID" });
     },
 };
-var v = n(730852),
+var O = n(730852),
     R = n(785796),
-    O = n(55619),
+    v = n(55619),
     b = n(246605),
-    D = n(271866),
-    L = n(736653),
+    L = n(271866),
+    D = n(736653),
     w = n(77729),
-    M = n(573648),
-    P = n(793574),
+    P = n(573648),
+    M = n(793574),
     x = n(688810),
-    k = n(587895),
-    U = n(315982),
+    U = n(587895),
+    k = n(315982),
     G = n(235986),
-    F = n(626584),
-    V = n(554146),
+    V = n(626584),
+    F = n(554146),
     B = n(691540),
-    j = n(857250),
-    H = n(97483),
-    Y = n(803306),
-    W = n(975807),
+    H = n(857250),
+    j = n(97483),
+    W = n(803306),
+    Y = n(975807),
     K = n(968309),
     $ = n(532794),
     z = n(745299),
@@ -77,7 +77,7 @@ function el(e) {
         children: (e) => {
             let { visibleContent: t, markAsDismissed: s } = e;
             switch (t) {
-                case V.M.NAGBAR_NOTICE_DOWNLOAD:
+                case F.M.NAGBAR_NOTICE_DOWNLOAD:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.DEFAULT,
                         children: [
@@ -102,7 +102,7 @@ function el(e) {
                             }),
                         ],
                     });
-                case V.M.NAGBAR_QUEST_APP_UPSELL:
+                case F.M.NAGBAR_QUEST_APP_UPSELL:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.DEFAULT,
                         children: [
@@ -112,13 +112,13 @@ function el(e) {
                             (0, i.jsx)(f.Z_, {
                                 noticeType: r,
                                 onClick: () => {
-                                    (0, W.A)(ei.AMi.META_QUEST), s(en.i.TAKE_ACTION);
+                                    (0, Y.A)(ei.AMi.META_QUEST), s(en.i.TAKE_ACTION);
                                 },
                                 children: ea.intl.string(ea.t["1WjMbC"]),
                             }),
                         ],
                     });
-                case V.M.NAGBAR_NOTICE_CONNECT_SPOTIFY:
+                case F.M.NAGBAR_NOTICE_CONNECT_SPOTIFY:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.SPOTIFY,
                         children: [
@@ -132,7 +132,7 @@ function el(e) {
                             }),
                         ],
                     });
-                case V.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
+                case F.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.PLAYSTATION,
                         children: [
@@ -140,7 +140,7 @@ function el(e) {
                             (0, i.jsx)("img", {
                                 alt: "",
                                 className: eo.tV,
-                                src: M.A.get(ei.fg2.PLAYSTATION).icon.whiteSVG,
+                                src: P.A.get(ei.fg2.PLAYSTATION).icon.whiteSVG,
                             }),
                             ea.intl.string(ea.t.WHWgoY),
                             (0, i.jsx)(f.zr, {
@@ -149,7 +149,7 @@ function el(e) {
                             }),
                         ],
                     });
-                case V.M.NAGBAR_NOTICE_PASSKEY_BACKUP:
+                case F.M.NAGBAR_NOTICE_PASSKEY_BACKUP:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.DEFAULT,
                         children: [
@@ -179,7 +179,7 @@ function el(e) {
                                                 });
                                         });
                                     } catch (e) {
-                                        (0, B.P0)((0, j.o)(ea.intl.string(ea.t.xSCvBf), H.Ck.FAILURE));
+                                        (0, B.P0)((0, H.o)(ea.intl.string(ea.t.xSCvBf), j.Ck.FAILURE));
                                     }
                                 },
                                 noticeType: r,
@@ -187,7 +187,7 @@ function el(e) {
                             }),
                         ],
                     });
-                case V.M.NAGBAR_NOTICE_PREMIUM_PROMO:
+                case F.M.NAGBAR_NOTICE_PREMIUM_PROMO:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.PREMIUM_TIER_2,
                         children: [
@@ -207,23 +207,23 @@ function el(e) {
                             }),
                             (0, i.jsx)(f.PM, {
                                 onClick: () => {
-                                    s(en.i.UNKNOWN), (0, Y.lA)(ei.nhx.PREMIUM_PROMO_DISMISSED, !0);
+                                    s(en.i.UNKNOWN), (0, W.lA)(ei.nhx.PREMIUM_PROMO_DISMISSED, !0);
                                 },
                                 noticeType: r,
                             }),
                         ],
                     });
-                case V.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
+                case F.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING:
                     return (0, i.jsx)(z.A, {
                         dismissCurrentNotice: () => s(en.i.UNKNOWN),
                         subscriptionTier: er.pe.TIER_2,
                     });
-                case V.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
+                case F.M.NAGBAR_NOTICE_PREMIUM_TIER_0_TRIAL_ENDING:
                     return (0, i.jsx)(z.A, {
                         dismissCurrentNotice: () => s(en.i.UNKNOWN),
                         subscriptionTier: er.pe.TIER_0,
                     });
-                case V.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
+                case F.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.PREMIUM_TIER_2,
                         children: [
@@ -238,7 +238,7 @@ function el(e) {
                             }),
                         ],
                     });
-                case V.M.NAGBAR_BOUNCED_EMAIL_NOTICE:
+                case F.M.NAGBAR_BOUNCED_EMAIL_NOTICE:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.DANGER,
                         children: [
@@ -253,7 +253,7 @@ function el(e) {
                             }),
                         ],
                     });
-                case V.M.CHECKOUT_RECOVERY_NAGBAR:
+                case F.M.CHECKOUT_RECOVERY_NAGBAR:
                     return (0, i.jsxs)(f.$T, {
                         color: f.Hv.PREMIUM_TIER_2,
                         children: [
@@ -263,7 +263,7 @@ function el(e) {
                                 onClick: () => {
                                     (0, $.A)({
                                         subscriptionTier: er.pe.TIER_2,
-                                        analyticsLocations: [P.A.CHECKOUT_RECOVERY_NAGBAR],
+                                        analyticsLocations: [M.A.CHECKOUT_RECOVERY_NAGBAR],
                                         analyticsLocation: ei.ThZ.CHECKOUT_RECOVERY_NAGBAR,
                                         onClose: () => s(en.i.UNKNOWN),
                                     });
@@ -288,29 +288,29 @@ function eh(e) {
         { snowflakeId: s, couldShow: a } =
             ((t = (0, c.bG)([ec.A], () => ec.A.getGiftPromotion()?.id)),
             (n = (0, c.bG)([ec.A], () => null != ec.A.getMarketingComponentByType(eu.C.GIFT_REMINDER_NAGBAR))),
-            r === V.M.GIFTING_PROMOTION_REMINDER
+            r === F.M.GIFTING_PROMOTION_REMINDER
                 ? { snowflakeId: t, couldShow: n && null != t }
                 : { snowflakeId: void 0, couldShow: !1 }),
         [o, l] = (0, ed.Cc)(a ? r : null, s ?? "", en.m.NOTICE_BAR, !0);
     return null == o
         ? null
-        : o === V.M.GIFTING_PROMOTION_REMINDER
+        : o === F.M.GIFTING_PROMOTION_REMINDER
           ? (0, i.jsx)(e_.y, { markAsDismissed: (e) => l(e) })
           : void 0;
 }
 var ef = n(264779),
-    ep = n(962644),
-    eE = n(287809),
+    eE = n(962644),
+    ep = n(287809),
     em = n(428262),
     eg = n(946319);
 function eA(e) {
     let { dismissibleContent: t } = e,
         n = (0, ef.Cp)(),
-        s = (0, c.bG)([eE.default], () => !em.Ay.isPremium(eE.default.getCurrentUser())),
+        s = (0, c.bG)([ep.default], () => !em.Ay.isPremium(ep.default.getCurrentUser())),
         a = r.useCallback(() => {
             ee.default.track(ei.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
                 (0, Q.openUserSettings)(Z.X.GIFT_PANEL),
-                ep.Ay.dismissOutboundPromotionNotice();
+                eE.Ay.dismissOutboundPromotionNotice();
         }, []);
     return null == n
         ? null
@@ -322,17 +322,17 @@ function eA(e) {
               bypassAutoDismiss: !0,
               children: (e) => {
                   let { visibleContent: t, markAsDismissed: n } = e;
-                  if (t === V.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)
+                  if (t === F.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR)
                       return (0, i.jsxs)(f.$T, {
                           color: f.Hv.PREMIUM_TIER_2,
                           children: [
                               (0, i.jsx)(f.PM, {
                                   noticeType: ei.kqX.OUTBOUND_PROMOTION,
                                   onClick: () => {
-                                      ep.Ay.dismissOutboundPromotionNotice(), null !== n && n(en.i.USER_DISMISS);
+                                      eE.Ay.dismissOutboundPromotionNotice(), null !== n && n(en.i.USER_DISMISS);
                                   },
                               }),
-                              (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eg.P }),
+                              (0, i.jsx)(p.t, { size: "md", color: "currentColor", className: eg.P }),
                               s ? ea.intl.string(ea.t["5JMiOo"]) : ea.intl.string(ea.t["Pzh+G2"]),
                               (0, i.jsx)(f.Z_, {
                                   noticeType: ei.kqX.OUTBOUND_PROMOTION,
@@ -349,37 +349,37 @@ function eA(e) {
 var eI = n(587054),
     eT = n(487329),
     eS = n(102609),
-    ey = n(736056),
+    eN = n(736056),
     eC = n(194261),
-    eN = n(548118),
-    ev = n(134413),
+    ey = n(548118),
+    eO = n(134413),
     eR = n(221950),
-    eO = n(71393),
+    ev = n(71393),
     eb = n(309010),
-    eD = n(967198),
-    eL = n(585510),
+    eL = n(967198),
+    eD = n(585510),
     ew = n(834409),
-    eM = n(903093),
-    eP = n(746080),
+    eP = n(903093),
+    eM = n(746080),
     ex = n(500928);
-function ek(e) {
+function eU(e) {
     let { onDismiss: t } = e,
-        s = (0, c.bG)([eD.A], () => eD.A.getGuildId()),
+        s = (0, c.bG)([eL.A], () => eL.A.getGuildId()),
         a = (0, c.bG)([eb.A], () => (null != s ? eb.A.getChannelId(s) : null), [s]),
         o = s ?? null,
-        l = (0, c.bG)([eO.A], () => (null != o ? eO.A.getGuild(o) : null), [o]),
-        { shouldShowIncidentActions: u, incidentData: d, isUnderLockdown: _ } = (0, eL.Li)(o),
-        h = (0, ev.fw)(l?.id ?? ei.dJq),
-        p = r.useCallback(() => null != l && (0, eR.aZ)(l.id), [l]);
+        l = (0, c.bG)([ev.A], () => (null != o ? ev.A.getGuild(o) : null), [o]),
+        { shouldShowIncidentActions: u, incidentData: d, isUnderLockdown: _ } = (0, eD.Li)(o),
+        h = (0, eO.fw)(l?.id ?? ei.dJq),
+        E = r.useCallback(() => null != l && (0, eR.aZ)(l.id), [l]);
     if (null == l || null == d || !u) return null;
-    let E = (e) => {
-            e && h && a !== eP.VV.MEMBER_SAFETY && p()
+    let p = (e) => {
+            e && h && a !== eM.VV.MEMBER_SAFETY && E()
                 ? ee.default.track(ei.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
                       notice_type: ei.kqX.GUILD_RAID_NOTIFICATION,
                       guild_id: l.id,
                   })
                 : (0, m.openModalLazy)(async () => {
-                      let e = { source: ew.Eo.NAGBAR, alertType: (0, eM.$5)(d) },
+                      let e = { source: ew.Eo.NAGBAR, alertType: (0, eP.$5)(d) },
                           { default: t } = await Promise.all([
                               n.e("87960"),
                               n.e("36518"),
@@ -391,8 +391,8 @@ function ek(e) {
                       return (n) => (0, i.jsx)(t, { ...n, guildId: l.id, analyticsData: e });
                   });
         },
-        g = (0, i.jsx)(eN.Ay, { className: ex.$f, guild: l, size: eN.Ay.Sizes.MINI }),
-        A = (0, eM.ql)(d, l.name);
+        g = (0, i.jsx)(ey.Ay, { className: ex.$f, guild: l, size: ey.Ay.Sizes.MINI }),
+        A = (0, eP.ql)(d, l.name);
     if (null != (d.dmsDisabledUntil ?? d.invitesDisabledUntil) && _)
         return (0, i.jsxs)(f.$T, {
             className: ex.lm,
@@ -403,7 +403,7 @@ function ek(e) {
                 A,
                 (0, i.jsx)(f.zr, {
                     className: ex.hP,
-                    onClick: () => E(!1),
+                    onClick: () => p(!1),
                     children: (0, i.jsxs)("div", {
                         className: ex.rx,
                         children: [
@@ -414,12 +414,12 @@ function ek(e) {
                 }),
             ],
         });
-    let I = (0, eM.P$)(d)
+    let I = (0, eP.P$)(d)
             ? ea.intl.formatToPlainString(ea.t.tZTx2E, { guildName: l.name })
-            : (0, eM.Qm)(d)
+            : (0, eP.Qm)(d)
               ? ea.intl.formatToPlainString(ea.t["1bSmxr"], { guildName: l.name })
               : ea.intl.formatToPlainString(ea.t.W87xDE, { guildName: l.name }),
-        T = h && a === eP.VV.MEMBER_SAFETY;
+        T = h && a === eM.VV.MEMBER_SAFETY;
     return (0, i.jsxs)(f.$T, {
         className: ex.lm,
         color: f.Hv.WARNING,
@@ -430,7 +430,7 @@ function ek(e) {
             !T &&
                 (0, i.jsx)(f.zr, {
                     className: ex.hP,
-                    onClick: () => E(!0),
+                    onClick: () => p(!0),
                     children: (0, i.jsx)("div", {
                         className: ex.rx,
                         children: (0, i.jsx)("span", { children: ea.intl.string(ea.t.zDJDhr) }),
@@ -439,21 +439,21 @@ function ek(e) {
         ],
     });
 }
-var eU = n(995786),
+var ek = n(995786),
     eG = n(206835),
-    eF = n(495544),
-    eV = n(696451),
+    eV = n(280450),
+    eF = n(696451),
     eB = n(229527),
-    ej = n(81400),
-    eH = n(340837);
-function eY(e) {
+    eH = n(81400),
+    ej = n(340837);
+function eW(e) {
     let { guildId: t, analyticsLocations: n } = e,
-        [r, s] = (0, ej.j8)({ guildId: t, analyticsLocations: n }),
+        [r, s] = (0, eH.j8)({ guildId: t, analyticsLocations: n }),
         a = s ? ea.intl.string(ea.t["6ndMcq"]) : ea.intl.string(ea.t["0eiu6J"]),
         o = s ? ea.intl.string(ea.t.S09nw4) : ea.intl.string(ea.t.tEttXd);
     return (0, i.jsxs)(f.$T, { color: f.Hv.DANGER, children: [a, (0, i.jsx)(f.zr, { onClick: r, children: o })] });
 }
-function eW() {
+function eY() {
     let e = (0, eG.A)({ scrollPosition: es._F.GUILD_TAG });
     return (0, i.jsxs)(f.$T, {
         color: f.Hv.DANGER,
@@ -465,17 +465,17 @@ function eW() {
 }
 function eK(e) {
     let { analyticsLocations: t, ...n } = e,
-        { analyticsLocations: r } = (0, x.Ay)(t, P.A.AUTOMOD_NAGBAR_NOTICE),
-        s = (0, c.bG)([eF.default, eV.Ay], () => {
+        { analyticsLocations: r } = (0, x.Ay)(t, M.A.AUTOMOD_NAGBAR_NOTICE),
+        s = (0, c.bG)([eV.default, eF.Ay], () => {
             if (null == n.guildId) return new Set();
-            let e = eF.default.getId();
-            return (0, eB.wj)(eV.Ay.getMember(n.guildId, e));
+            let e = eV.default.getId();
+            return (0, eB.wj)(eF.Ay.getMember(n.guildId, e));
         }, [n.guildId]);
-    return s.has(eH.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || s.has(eH.D.AUTOMOD_QUARANTINED_BIO)
-        ? (0, i.jsx)(eY, { ...n, analyticsLocations: r })
-        : s.has(eH.D.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, i.jsx)(eW, {})
-          : (0, i.jsx)(eY, { ...n, analyticsLocations: r });
+    return s.has(ej.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || s.has(ej.D.AUTOMOD_QUARANTINED_BIO)
+        ? (0, i.jsx)(eW, { ...n, analyticsLocations: r })
+        : s.has(ej.D.AUTOMOD_QUARANTINED_SERVER_TAG)
+          ? (0, i.jsx)(eY, {})
+          : (0, i.jsx)(eW, { ...n, analyticsLocations: r });
 }
 var e$ = n(202384),
     ez = n(51758);
@@ -493,11 +493,11 @@ var eq = n(503698),
     e4 = n(182430),
     e5 = n(580537);
 let e7 = function () {
-    let e = (0, c.bG)([eD.A], () => eD.A.getGuildId(), []),
-        t = (0, c.bG)([eO.A], () => eO.A.getGuild(e), [e]),
+    let e = (0, c.bG)([eL.A], () => eL.A.getGuildId(), []),
+        t = (0, c.bG)([ev.A], () => ev.A.getGuild(e), [e]),
         r = (0, c.bG)([e6.A], () => (null != e ? e6.A.getRequest(e) : null), [e]),
         s = (0, eX.zy)(),
-        a = (0, e0.B)(s.pathname, ei.BVt.CHANNEL(t?.id, eP.VV.GUILD_ONBOARDING))?.isExact === !0;
+        a = (0, e0.B)(s.pathname, ei.BVt.CHANNEL(t?.id, eM.VV.GUILD_ONBOARDING))?.isExact === !0;
     if (null == t || !(0, e3.Qd)(t) || a) return null;
     let o = r?.applicationStatus ?? e2.B5.STARTED,
         l = null,
@@ -563,8 +563,8 @@ var tt = n(468689),
     ts = n(385648),
     ta = n(484154);
 let to = function () {
-    let e = (0, c.bG)([eD.A], () => eD.A.getGuildId(), []),
-        t = (0, c.bG)([eO.A], () => eO.A.getGuild(e), [e]),
+    let e = (0, c.bG)([eL.A], () => eL.A.getGuildId(), []),
+        t = (0, c.bG)([ev.A], () => ev.A.getGuild(e), [e]),
         [n, s] = r.useState(!1);
     if (null == t) return null;
     let a = async () => {
@@ -646,8 +646,8 @@ function th(e) {
     });
 }
 var tf = n(234419),
-    tp = n(661531),
-    tE = n(367727),
+    tE = n(661531),
+    tp = n(367727),
     tm = n(635995),
     tg = n(88001),
     tA = n(466919),
@@ -656,7 +656,7 @@ function tT(e) {
     let { premiumSubscription: t } = e,
         s = t?.id,
         a = r.useCallback(() => {
-            null != s && (0, tE.qr)(V.M.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR, s, { dismissAction: en.i.USER_DISMISS });
+            null != s && (0, tp.qr)(F.M.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR, s, { dismissAction: en.i.USER_DISMISS });
         }, [s]),
         o = r.useCallback(() => {
             a(),
@@ -671,7 +671,13 @@ function tT(e) {
                 }),
                 a(),
                 (0, m.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("44616"), n.e("85579")]).then(n.bind(n, 785606));
+                    let { default: e } = await Promise.all([
+                        n.e("3515"),
+                        n.e("44616"),
+                        n.e("74630"),
+                        n.e("48948"),
+                        n.e("85579"),
+                    ]).then(n.bind(n, 785606));
                     return (n) => (0, i.jsx)(e, { ...n, subscription: t });
                 }));
         }, [t, a]);
@@ -679,7 +685,7 @@ function tT(e) {
         onClick: o,
         className: tI.A,
         children: [
-            (0, i.jsx)(E.t, { color: tp.A.colors.ICON_STRONG }),
+            (0, i.jsx)(p.t, { color: tE.A.colors.ICON_STRONG }),
             (0, i.jsx)(tm.In, {
                 children: ea.intl.format(tA.default.fFt9bd, { premiumGroupProductName: (0, tg.DP)() }),
             }),
@@ -693,12 +699,12 @@ function tT(e) {
     });
 }
 var tS = n(754804),
-    ty = n(378974),
+    tN = n(378974),
     tC = n(340124),
-    tN = n(14594);
-function tv() {
-    let [e, t] = (0, ed.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tN.aH });
-    return e !== V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
+    ty = n(14594);
+function tO() {
+    let [e, t] = (0, ed.Wl)(F.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: ty.aH });
+    return e !== F.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
         : (0, i.jsxs)(f.$T, {
               color: f.Hv.BRAND,
@@ -728,26 +734,26 @@ function tv() {
           });
 }
 var tR = n(825484),
-    tO = n(379257),
+    tv = n(379257),
     tb = n(847599),
-    tD = n(734057),
-    tL = n(849736),
+    tL = n(734057),
+    tD = n(849736),
     tw = n(354583),
-    tM = n(366098),
-    tP = n(418208),
+    tP = n(366098),
+    tM = n(418208),
     tx = n(992262);
-function tk(e) {
-    if (!e && (0, tP.Cf)())
-        return void tO.A.showAgeVerificationGetStartedModal({ entryPoint: tb.q1.STAGE_CHANNEL_RAISE_HAND });
+function tU(e) {
+    if (!e && (0, tM.Cf)())
+        return void tv.A.showAgeVerificationGetStartedModal({ entryPoint: tb.q1.STAGE_CHANNEL_RAISE_HAND });
     let t = eb.A.getVoiceChannelId();
     if (null == t) return;
-    let n = tD.A.getChannel(t);
-    null != n && (0, tL.e7)(n, e);
+    let n = tL.A.getChannel(t);
+    null != n && (0, tD.e7)(n, e);
 }
-function tU(e) {
+function tk(e) {
     let { channelId: t } = e,
-        n = (0, tM.D3)(t) ?? 0,
-        r = (0, tM.Xk)(t) ?? 0;
+        n = (0, tP.D3)(t) ?? 0,
+        r = (0, tP.Xk)(t) ?? 0;
     return n > 0 && r > 0
         ? (0, i.jsx)("div", {
               className: tx.Z5,
@@ -774,7 +780,7 @@ function tG() {
               color: f.Hv.DEFAULT,
               children: [
                   ea.intl.string(ea.t.Ul1RJQ),
-                  (0, i.jsx)(tU, { channelId: e.id }),
+                  (0, i.jsx)(tk, { channelId: e.id }),
                   (0, i.jsxs)(tR.e, {
                       size: "sm",
                       className: tx.GC,
@@ -782,11 +788,11 @@ function tG() {
                           (0, i.jsx)(eJ.$, {
                               variant: "overlay-primary",
                               text: ea.intl.string(ea.t.MpO0px),
-                              onClick: () => tk(!1),
+                              onClick: () => tU(!1),
                           }),
                           (0, i.jsx)(eJ.$, {
                               variant: "secondary",
-                              onClick: () => tk(!0),
+                              onClick: () => tU(!0),
                               text: ea.intl.string(ea.t["1YDv7a"]),
                           }),
                       ],
@@ -794,13 +800,13 @@ function tG() {
               ],
           });
 }
-var tF = n(952818),
-    tV = n(935671);
+var tV = n(952818),
+    tF = n(935671);
 function tB() {
-    (0, tV.sL)("nagbar");
+    (0, tF.sL)("nagbar");
 }
-function tj() {
-    return null == (0, c.bG)([tF.Ay], () => tF.Ay.getVisibleGame())
+function tH() {
+    return null == (0, c.bG)([tV.Ay], () => tV.Ay.getVisibleGame())
         ? null
         : (0, i.jsxs)(f.$T, {
               color: f.Hv.DANGER,
@@ -815,7 +821,7 @@ function tj() {
               ],
           });
 }
-function tH() {
+function tj() {
     return (0, i.jsxs)(f.$T, {
         color: f.Hv.DANGER,
         children: [
@@ -830,11 +836,11 @@ function tH() {
         ],
     });
 }
-var tY = n(189213),
-    tW = n(150934);
+var tW = n(189213),
+    tY = n(150934);
 function tK(e) {
     let [t, n] = r.useState(!1);
-    return (0, i.jsx)(tY.Modal, {
+    return (0, i.jsx)(tW.Modal, {
         size: "md",
         title: ea.intl.string(ea.t["zQ1+Jw"]),
         subtitle: ea.intl.string(ea.t.K1gWXn),
@@ -847,7 +853,7 @@ function tK(e) {
                 variant: "primary",
             },
         ],
-        actionBarInput: (0, i.jsx)(tW.S, {
+        actionBarInput: (0, i.jsx)(tY.S, {
             checked: t,
             onChange: (e) => n(e),
             label: ea.intl.string(ea.t.XAiAgD),
@@ -866,7 +872,7 @@ var t$ = n(451409),
     t0 = n(325278),
     t1 = n(831502),
     t2 = n(731854);
-let t3 = new F.A("Notice");
+let t3 = new V.A("Notice");
 function t6(e) {
     let { error: t, allowClick: n = !1 } = e,
         r = (0, eT.B1)(t)?.errorCode,
@@ -987,11 +993,11 @@ function t9(e) {
     C.A.dismiss(null != e ? { untilAtLeast: a()(e) } : void 0);
 }
 let ne = r.memo(function () {
-    let e = (0, c.bG)([eE.default], () => eE.default.getCurrentUser()),
-        t = (0, c.bG)([eD.A], () => eD.A.getGuildId()),
+    let e = (0, c.bG)([ep.default], () => ep.default.getCurrentUser()),
+        t = (0, c.bG)([eL.A], () => eL.A.getGuildId()),
         s = (0, c.bG)([tX.Ay], () => tX.Ay.getNotice()),
         { analyticsLocations: a } = (0, x.Ay)(),
-        l = (0, L.Ay)(),
+        l = (0, D.Ay)(),
         u = (0, ez.H)(t),
         _ = (0, tf.V)();
     if (
@@ -1013,7 +1019,7 @@ let ne = r.memo(function () {
         r.useEffect(() => {
             if (null != s && s.type === ei.kqX.SURVEY && null != s.metadata) {
                 let { metadata: e } = s,
-                    t = ey.A.getUserExperimentDescriptor(e.id);
+                    t = eN.A.getUserExperimentDescriptor(e.id);
                 null != t && (0, eS.LQ)(e.id, t),
                     (async () => {
                         s.metadata?.id != null && (await (0, b.oX)(s.metadata?.id));
@@ -1026,15 +1032,15 @@ let ne = r.memo(function () {
     let h = null != s.type ? tX.Re[s.type] : null,
         S = null != s.type ? tX.rV[s.type] : null,
         C = null != s.type ? tX.f7[s.type] : null,
-        P = tX.pe[s.type];
+        M = tX.pe[s.type];
     if (null != h) return (0, i.jsx)(eI.$, { dismissibleContent: h, noticeType: s.type });
     if (null != S) return (0, i.jsx)(eh, { dismissibleContent: S });
     if (null != C) return (0, i.jsx)(eA, { dismissibleContent: C });
-    if (null != P) return (0, i.jsx)(el, { dismissibleContent: P, noticeType: s.type });
-    let F = s.metadata?.premiumType;
+    if (null != M) return (0, i.jsx)(el, { dismissibleContent: M, noticeType: s.type });
+    let V = s.metadata?.premiumType;
     switch (s.type) {
         case ei.kqX.PTT_NO_KEYBIND_WARNING:
-            return (0, i.jsx)(tH, {});
+            return (0, i.jsx)(tj, {});
         case ei.kqX.LURKING_GUILD:
             return (0, i.jsx)(to, {});
         case ei.kqX.PENDING_MEMBER:
@@ -1042,8 +1048,8 @@ let ne = r.memo(function () {
         case ei.kqX.INVITED_TO_SPEAK:
             return (0, i.jsx)(tG, {});
         case ei.kqX.GUILD_RAID_NOTIFICATION:
-            let { dismissUntil: V } = s.metadata;
-            return (0, i.jsx)(ek, { onDismiss: () => t9(V) });
+            let { dismissUntil: F } = s.metadata;
+            return (0, i.jsx)(eU, { onDismiss: () => t9(F) });
         case ei.kqX.WIN32_DEPRECATED_MESSAGE:
             let { dismissUntil: B } = s.metadata;
             return (0, i.jsxs)(f.$T, {
@@ -1054,32 +1060,32 @@ let ne = r.memo(function () {
                 ],
             });
         case ei.kqX.WIN7_8_DEPRECATED_MESSAGE:
-            let { dismissUntil: j } = s.metadata;
-            return (0, i.jsxs)(f.$T, {
-                color: f.Hv.WARNING,
-                children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t9(j), noticeType: s.type }),
-                    ea.intl.format(ea.t["8Je+dX"], { helpCenterLink: tQ.A.getArticleURL(ei.MVz.WIN7_8_DEPRECATE) }),
-                ],
-            });
-        case ei.kqX.WIN_COMPAT_MODE_MESSAGE:
             let { dismissUntil: H } = s.metadata;
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
                     (0, i.jsx)(f.PM, { onClick: () => t9(H), noticeType: s.type }),
+                    ea.intl.format(ea.t["8Je+dX"], { helpCenterLink: tQ.A.getArticleURL(ei.MVz.WIN7_8_DEPRECATE) }),
+                ],
+            });
+        case ei.kqX.WIN_COMPAT_MODE_MESSAGE:
+            let { dismissUntil: j } = s.metadata;
+            return (0, i.jsxs)(f.$T, {
+                color: f.Hv.WARNING,
+                children: [
+                    (0, i.jsx)(f.PM, { onClick: () => t9(j), noticeType: s.type }),
                     ea.intl.string(ea.t["9DJgOg"]),
                 ],
             });
         case ei.kqX.MACOS_DEPRECATED_MESSAGE:
-            let { dismissUntil: Y } = s.metadata,
-                W = 20 === parseInt(w.A?.os.release.split(".")[0]);
+            let { dismissUntil: W } = s.metadata,
+                Y = 20 === parseInt(w.A?.os.release.split(".")[0]);
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => t9(Y), noticeType: s.type }),
+                    (0, i.jsx)(f.PM, { onClick: () => t9(W), noticeType: s.type }),
                     ea.intl.format(ea.t.q8VPLo, {
-                        helpCenterLink: tQ.A.getArticleURL(W ? ei.MVz.MACOS_20_DEPRECATE : ei.MVz.MACOS_19_DEPRECATE),
+                        helpCenterLink: tQ.A.getArticleURL(Y ? ei.MVz.MACOS_20_DEPRECATE : ei.MVz.MACOS_19_DEPRECATE),
                     }),
                 ],
             });
@@ -1136,7 +1142,7 @@ let ne = r.memo(function () {
                 children: [
                     (0, i.jsx)(f.PM, {
                         onClick: () => {
-                            N.clearRemoteDisconnectVoiceChannelId(), t9();
+                            y.clearRemoteDisconnectVoiceChannelId(), t9();
                         },
                         noticeType: s.type,
                     }),
@@ -1144,7 +1150,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(f.Z_, {
                         onClick: () => {
                             let e = tz.A.getRemoteDisconnectVoiceChannelId();
-                            null != e && null != tD.A.getChannel(e) && v.default.selectVoiceChannel(e);
+                            null != e && null != tL.A.getChannel(e) && O.default.selectVoiceChannel(e);
                         },
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.vD60Pv),
@@ -1157,7 +1163,7 @@ let ne = r.memo(function () {
                 children: [
                     (0, i.jsx)(f.PM, {
                         onClick: () => {
-                            N.clearLastSessionVoiceChannelId(), t9();
+                            y.clearLastSessionVoiceChannelId(), t9();
                         },
                         noticeType: s.type,
                     }),
@@ -1165,7 +1171,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(f.Z_, {
                         onClick: () => {
                             let e = tz.A.getLastSessionVoiceChannelId();
-                            null != e && null != tD.A.getChannel(e) && v.default.selectVoiceChannel(e);
+                            null != e && null != tL.A.getChannel(e) && O.default.selectVoiceChannel(e);
                         },
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.vD60Pv),
@@ -1173,7 +1179,7 @@ let ne = r.memo(function () {
                 ],
             });
         case ei.kqX.SPOTIFY_AUTO_PAUSED:
-            let z = M.A.get(ei.fg2.SPOTIFY);
+            let z = P.A.get(ei.fg2.SPOTIFY);
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.DANGER,
                 children: [
@@ -1189,7 +1195,7 @@ let ne = r.memo(function () {
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.NiTd0e),
                     }),
-                    (0, i.jsx)(p.Anchor, {
+                    (0, i.jsx)(E.Anchor, {
                         className: eo.uD,
                         href: tQ.A.getArticleURL(ei.MVz.SPOTIFY_AUTO_PAUSED),
                         target: "_blank",
@@ -1204,7 +1210,7 @@ let ne = r.memo(function () {
                     ea.intl.string(ea.t["f+Zaol"]),
                     (0, i.jsx)(f.Z_, {
                         noticeType: s.type,
-                        onClick: () => (u && null != t ? (0, e$.Ze)(t) : U.R()),
+                        onClick: () => (u && null != t ? (0, e$.Ze)(t) : k.R()),
                         children: ea.intl.string(ea.t.fiNVin),
                     }),
                 ],
@@ -1222,7 +1228,7 @@ let ne = r.memo(function () {
                                     title: ea.intl.string(ea.t.LykQYk),
                                     body: ea.intl.format(ea.t.azKEPy, { email: e?.email }),
                                     cancelText: ea.intl.string(ea.t.Vm8akB),
-                                    onCancel: U.R,
+                                    onCancel: k.R,
                                 });
                         },
                         children: ea.intl.string(ea.t.WnX4J2),
@@ -1293,7 +1299,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(f.PM, { onClick: () => t9(), noticeType: ei.kqX.STREAMER_MODE }),
                     ea.intl.string(ea.t.iEgBXp),
                     (0, i.jsx)(f.Z_, {
-                        onClick: () => O.A.setEnabled(!1),
+                        onClick: () => v.A.setEnabled(!1),
                         noticeType: ei.kqX.STREAMER_MODE,
                         children: ea.intl.string(ea.t.R9GHya),
                     }),
@@ -1303,22 +1309,142 @@ let ne = r.memo(function () {
             if (null == s.metadata) return null;
             let { skuId: q, applicationId: X } = s.metadata,
                 J = tq.A.get(q),
-                et = k.A.getApplication(X);
+                et = U.A.getApplication(X);
             if (null == J || null == et) return null;
             let en = { page: ei.liQ.IN_APP };
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.PREMIUM_TIER_1,
                 children: [
-                    (0, i.jsx)(f.PM, { onClick: () => y(J.id), noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK }),
-                    (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
+                    (0, i.jsx)(f.PM, { onClick: () => N(J.id), noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK }),
+                    (0, i.jsx)(p.t, { size: "md", color: "currentColor", className: eo.PC }),
                     ea.intl.format(ea.t["g3MU/+"], { applicationName: et.name, skuName: J.name }),
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK,
                         onClick: async () => {
                             try {
-                                let { openIAPPurchaseModal: e } = await Promise.all([n.e("46070"), n.e("62075")]).then(
-                                    n.bind(n, 4630),
-                                );
+                                let { openIAPPurchaseModal: e } = await Promise.all([
+                                    n.e("86832"),
+                                    n.e("95512"),
+                                    n.e("69273"),
+                                    n.e("72210"),
+                                    n.e("3155"),
+                                    n.e("82104"),
+                                    n.e("41711"),
+                                    n.e("49623"),
+                                    n.e("35316"),
+                                    n.e("38838"),
+                                    n.e("45214"),
+                                    n.e("99253"),
+                                    n.e("17202"),
+                                    n.e("90862"),
+                                    n.e("97189"),
+                                    n.e("16918"),
+                                    n.e("33730"),
+                                    n.e("24059"),
+                                    n.e("42306"),
+                                    n.e("11291"),
+                                    n.e("96846"),
+                                    n.e("19709"),
+                                    n.e("4251"),
+                                    n.e("47412"),
+                                    n.e("65327"),
+                                    n.e("41625"),
+                                    n.e("96490"),
+                                    n.e("85484"),
+                                    n.e("51772"),
+                                    n.e("21918"),
+                                    n.e("11262"),
+                                    n.e("54483"),
+                                    n.e("62461"),
+                                    n.e("25677"),
+                                    n.e("73679"),
+                                    n.e("73178"),
+                                    n.e("333"),
+                                    n.e("97638"),
+                                    n.e("22995"),
+                                    n.e("84896"),
+                                    n.e("38759"),
+                                    n.e("51943"),
+                                    n.e("90072"),
+                                    n.e("88016"),
+                                    n.e("84133"),
+                                    n.e("13627"),
+                                    n.e("57940"),
+                                    n.e("58171"),
+                                    n.e("48404"),
+                                    n.e("39375"),
+                                    n.e("47944"),
+                                    n.e("84473"),
+                                    n.e("70990"),
+                                    n.e("15130"),
+                                    n.e("74051"),
+                                    n.e("50541"),
+                                    n.e("23924"),
+                                    n.e("42205"),
+                                    n.e("55675"),
+                                    n.e("48226"),
+                                    n.e("10471"),
+                                    n.e("64827"),
+                                    n.e("63232"),
+                                    n.e("68261"),
+                                    n.e("7167"),
+                                    n.e("11301"),
+                                    n.e("96643"),
+                                    n.e("84569"),
+                                    n.e("60235"),
+                                    n.e("61737"),
+                                    n.e("92789"),
+                                    n.e("21335"),
+                                    n.e("77333"),
+                                    n.e("47834"),
+                                    n.e("11735"),
+                                    n.e("85927"),
+                                    n.e("834"),
+                                    n.e("2368"),
+                                    n.e("42842"),
+                                    n.e("33115"),
+                                    n.e("6338"),
+                                    n.e("18573"),
+                                    n.e("55936"),
+                                    n.e("85404"),
+                                    n.e("44057"),
+                                    n.e("17879"),
+                                    n.e("88774"),
+                                    n.e("10120"),
+                                    n.e("62175"),
+                                    n.e("31988"),
+                                    n.e("44571"),
+                                    n.e("34303"),
+                                    n.e("97270"),
+                                    n.e("45959"),
+                                    n.e("73122"),
+                                    n.e("8304"),
+                                    n.e("93159"),
+                                    n.e("71202"),
+                                    n.e("8739"),
+                                    n.e("88131"),
+                                    n.e("42834"),
+                                    n.e("43430"),
+                                    n.e("94723"),
+                                    n.e("28866"),
+                                    n.e("62931"),
+                                    n.e("58529"),
+                                    n.e("58038"),
+                                    n.e("62531"),
+                                    n.e("34801"),
+                                    n.e("6174"),
+                                    n.e("46070"),
+                                    n.e("23532"),
+                                    n.e("52557"),
+                                    n.e("53133"),
+                                    n.e("83870"),
+                                    n.e("63645"),
+                                    n.e("5636"),
+                                    n.e("32085"),
+                                    n.e("24038"),
+                                    n.e("63556"),
+                                    n.e("62075"),
+                                ]).then(n.bind(n, 4630));
                                 await e({
                                     applicationId: et.id,
                                     skuId: J.id,
@@ -1334,7 +1460,7 @@ let ne = r.memo(function () {
                                     analyticsLocationObject: en,
                                     context: __OVERLAY__ ? ei.BRT.OVERLAY : ei.BRT.APP,
                                 }),
-                                    y(J.id);
+                                    N(J.id);
                             } catch (e) {
                                 null != e && t3.error("Failed to open off-platform premium perk modal", e);
                             }
@@ -1347,7 +1473,7 @@ let ne = r.memo(function () {
             if (null == s.metadata) return null;
             let { skuId: e, applicationId: t } = s.metadata,
                 n = tq.A.get(e),
-                r = k.A.getApplication(t);
+                r = U.A.getApplication(t);
             if (null == n || null == r) return null;
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.PREMIUM_TIER_1,
@@ -1356,7 +1482,7 @@ let ne = r.memo(function () {
                         onClick: () => t9(),
                         noticeType: ei.kqX.DETECTED_OFF_PLATFORM_PREMIUM_PERK_UPSELL,
                     }),
-                    (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
+                    (0, i.jsx)(p.t, { size: "md", color: "currentColor", className: eo.PC }),
                     ea.intl.format(ea.t.LquIKC, { applicationName: r.name, skuName: n.name }),
                     (0, i.jsx)(f.zr, {
                         children: (0, i.jsx)(o.N_, {
@@ -1388,7 +1514,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(f.Z_, {
                         noticeType: ei.kqX.SURVEY,
                         onClick: () => {
-                            o ? (0, ty.K)(l) : window.open(a, "_blank"), (0, b.pX)(t, !1);
+                            o ? (0, tN.K)(l) : window.open(a, "_blank"), (0, b.pX)(t, !1);
                         },
                         children: r,
                     }),
@@ -1485,7 +1611,7 @@ let ne = r.memo(function () {
                                     applicationName: s.metadata.applicationName,
                                 }),
                             }),
-                            (0, i.jsx)(f.PM, { onClick: D.cL, noticeType: ei.kqX.APPLICATION_TEST_MODE }),
+                            (0, i.jsx)(f.PM, { onClick: L.cL, noticeType: ei.kqX.APPLICATION_TEST_MODE }),
                         ],
                     }),
                 });
@@ -1498,7 +1624,7 @@ let ne = r.memo(function () {
                         (0, i.jsx)("div", {
                             children: ea.intl.format(ea.t.Fv5HrE, { applicationName: s.metadata.applicationName }),
                         }),
-                        (0, i.jsx)(f.PM, { onClick: D.cL, noticeType: ei.kqX.APPLICATION_TEST_MODE }),
+                        (0, i.jsx)(f.PM, { onClick: L.cL, noticeType: ei.kqX.APPLICATION_TEST_MODE }),
                     ],
                 }),
             });
@@ -1507,9 +1633,9 @@ let ne = r.memo(function () {
         case ei.kqX.PREMIUM_UNCANCEL:
             return (0, i.jsxs)(f.$T, {
                 color:
-                    F === er.PremiumTypes.TIER_1
+                    V === er.PremiumTypes.TIER_1
                         ? f.Hv.PREMIUM_TIER_1
-                        : F === er.PremiumTypes.TIER_0
+                        : V === er.PremiumTypes.TIER_0
                           ? f.Hv.PREMIUM_TIER_0
                           : f.Hv.PREMIUM_TIER_2,
                 children: [
@@ -1519,10 +1645,10 @@ let ne = r.memo(function () {
                             t9(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
-                    (0, i.jsx)(E.t, { size: "md", color: "currentColor", className: eo.PC }),
-                    F === er.PremiumTypes.TIER_1
+                    (0, i.jsx)(p.t, { size: "md", color: "currentColor", className: eo.PC }),
+                    V === er.PremiumTypes.TIER_1
                         ? ea.intl.formatToPlainString(ea.t.fXv4wm, { daysLeft: s.metadata.daysLeft })
-                        : F === er.PremiumTypes.TIER_0
+                        : V === er.PremiumTypes.TIER_0
                           ? ea.intl.formatToPlainString(ea.t.ZOHZMr, { daysLeft: s.metadata.daysLeft })
                           : ea.intl.formatToPlainString(ea.t.outyHh, { daysLeft: s.metadata.daysLeft }),
                     (0, i.jsx)(f.Z_, {
@@ -1530,21 +1656,56 @@ let ne = r.memo(function () {
                         onClick: () => {
                             t9(s.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, m.openModalLazy)(async () => {
-                                    let { default: e } = await n.e("14794").then(n.bind(n, 174705));
+                                    let { default: e } = await Promise.all([
+                                        n.e("86832"),
+                                        n.e("95512"),
+                                        n.e("69273"),
+                                        n.e("72210"),
+                                        n.e("3155"),
+                                        n.e("39375"),
+                                        n.e("58171"),
+                                        n.e("47944"),
+                                        n.e("82104"),
+                                        n.e("84473"),
+                                        n.e("25677"),
+                                        n.e("65327"),
+                                        n.e("90072"),
+                                        n.e("88016"),
+                                        n.e("10471"),
+                                        n.e("68261"),
+                                        n.e("11301"),
+                                        n.e("96643"),
+                                        n.e("61737"),
+                                        n.e("21335"),
+                                        n.e("77333"),
+                                        n.e("47834"),
+                                        n.e("11735"),
+                                        n.e("85927"),
+                                        n.e("2368"),
+                                        n.e("85404"),
+                                        n.e("10120"),
+                                        n.e("62175"),
+                                        n.e("8739"),
+                                        n.e("23532"),
+                                        n.e("52557"),
+                                        n.e("53133"),
+                                        n.e("83870"),
+                                        n.e("14794"),
+                                    ]).then(n.bind(n, 174705));
                                     return (t) =>
                                         (0, i.jsx)(e, {
                                             ...t,
                                             daysLeft: s.metadata.daysLeft,
-                                            premiumType: F,
+                                            premiumType: V,
                                             analyticsSource: "Nag Bar",
                                             premiumSubscription: s.metadata.premiumSubscription,
                                         });
                                 });
                         },
                         children:
-                            F === er.PremiumTypes.TIER_1
+                            V === er.PremiumTypes.TIER_1
                                 ? ea.intl.string(ea.t.BkbUPM)
-                                : F === er.PremiumTypes.TIER_0
+                                : V === er.PremiumTypes.TIER_0
                                   ? ea.intl.string(ea.t.Px978X)
                                   : ea.intl.string(ea.t.LW5tCE),
                     }),
@@ -1623,9 +1784,9 @@ let ne = r.memo(function () {
                             t9(s.metadata?.premiumSubscription?.currentPeriodEnd);
                         },
                     }),
-                    F === er.PremiumTypes.TIER_1
+                    V === er.PremiumTypes.TIER_1
                         ? ea.intl.formatToPlainString(ea.t.b6QUvf, { daysLeft: s.metadata.daysLeft })
-                        : F === er.PremiumTypes.TIER_0
+                        : V === er.PremiumTypes.TIER_0
                           ? ea.intl.formatToPlainString(ea.t["tURZ/M"], { daysLeft: s.metadata.daysLeft })
                           : ea.intl.formatToPlainString(ea.t.AyC74I, { daysLeft: s.metadata.daysLeft }),
                     (0, i.jsx)(f.Z_, {
@@ -1635,9 +1796,9 @@ let ne = r.memo(function () {
                                 (0, Q.openUserSettings)(Z.X.SUBSCRIPTIONS_PANEL);
                         },
                         children:
-                            F === er.PremiumTypes.TIER_1
+                            V === er.PremiumTypes.TIER_1
                                 ? ea.intl.string(ea.t.lboF5O)
-                                : F === er.PremiumTypes.TIER_0
+                                : V === er.PremiumTypes.TIER_0
                                   ? ea.intl.string(ea.t["4UPwOq"])
                                   : ea.intl.string(ea.t["P/VvGb"]),
                     }),
@@ -1665,7 +1826,7 @@ let ne = r.memo(function () {
                         noticeType: s.type,
                         children: ea.intl.string(ea.t.kvHdFN),
                     }),
-                    (0, i.jsx)(p.Anchor, {
+                    (0, i.jsx)(E.Anchor, {
                         href: tQ.A.getArticleURL(ei.MVz.QUARANTINE),
                         target: "_blank",
                         className: eo.yw,
@@ -1674,22 +1835,22 @@ let ne = r.memo(function () {
                 ],
             });
         case ei.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION:
-            let { dismissUntil: ep, decisionId: em } = s.metadata;
+            let { dismissUntil: eE, decisionId: em } = s.metadata;
             return (0, i.jsxs)(f.$T, {
                 color: f.Hv.WARNING,
                 children: [
                     (0, i.jsx)(f.PM, {
                         noticeType: ei.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION,
                         onClick: () => {
-                            null != t && (0, eU.wu)(t), t9(ep);
+                            null != t && (0, ek.wu)(t), t9(eE);
                         },
                     }),
                     ea.intl.string(ea.t.B8ruyY),
                     (0, i.jsx)(f.zr, {
                         onClick: () => {
                             null != t &&
-                                (0, eU.W5)(t, em, () => {
-                                    t9(ep), (0, eU.wu)(t);
+                                (0, ek.W5)(t, em, () => {
+                                    t9(eE), (0, ek.wu)(t);
                                 });
                         },
                         children: ea.intl.string(ea.t.oX14El),
@@ -1748,18 +1909,18 @@ let ne = r.memo(function () {
                 ],
             });
         case ei.kqX.IGNORE_USER_FEEDBACK_NAGBAR:
-            return (0, i.jsx)(tv, {});
+            return (0, i.jsx)(tO, {});
         case ei.kqX.PREMIUM_MARKETING_NAGBAR:
             return (0, i.jsx)(tS.A, {});
         case ei.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR:
             return (0, i.jsx)(tT, { premiumSubscription: s.metadata.premiumSubscription });
         case ei.kqX.SYSTEM_SERVICE_WARNING:
-            return (0, i.jsx)(tj, {});
+            return (0, i.jsx)(tH, {});
         default:
             return null;
     }
 });
 function nt() {
-    let { analyticsLocations: e } = (0, x.Ay)(P.A.NOTICE);
+    let { analyticsLocations: e } = (0, x.Ay)(M.A.NOTICE);
     return (0, i.jsx)(x.f5, { value: e, children: (0, i.jsx)(ne, {}) });
 }

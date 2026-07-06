@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { cy: () => p, p: () => f });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(990078),
-    l = n(821609),
-    u = n(696208),
-    c = n(364840),
-    d = n(999784),
-    _ = n(683433),
-    h = n(978793);
-function f(e) {
-    let { onClick: t, loading: n, disabled: r, text: s, tooltipText: a, ...u } = e,
-        c = { text: s, ...u },
-        d = (0, i.jsx)(l.$, { ...c, onClick: t, loading: n, disabled: r, text: s });
-    return null != a ? (0, i.jsx)(o.m, { text: a, asContainer: !0, children: d }) : d;
+t.d(n, { cy: () => m, p: () => h });
+var l = t(627968),
+    r = t(64700),
+    i = t(503698),
+    s = t.n(i),
+    a = t(990078),
+    c = t(821609),
+    o = t(696208),
+    d = t(364840),
+    u = t(999784),
+    x = t(683433),
+    j = t(978793);
+function h(e) {
+    let { onClick: n, loading: t, disabled: r, text: i, tooltipText: s, ...o } = e,
+        d = { text: i, ...o },
+        u = (0, l.jsx)(c.$, { ...d, onClick: n, loading: t, disabled: r, text: i });
+    return null != s ? (0, l.jsx)(a.m, { text: s, asContainer: !0, children: u }) : u;
 }
-function p(e) {
-    let { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: s } = e,
-        o = r.useMemo(() => [t], [t]),
-        l = r.useMemo(() => (null != s ? (0, i.jsx)(_.A, { onClick: s }) : void 0), [s]);
-    return null != t.tooltipText || n
-        ? (0, i.jsx)(c.j, {
-              children: (0, i.jsxs)("div", {
-                  className: a()(h.wm, null != s ? h.LT : h.Ub),
+function m(e) {
+    let { primaryCTAButtonProps: n, showLockIcon: t, onBackClick: i } = e,
+        a = r.useMemo(() => [n], [n]),
+        c = r.useMemo(() => (null != i ? (0, l.jsx)(x.A, { onClick: i }) : void 0), [i]);
+    return null != n.tooltipText || t
+        ? (0, l.jsx)(d.j, {
+              children: (0, l.jsxs)("div", {
+                  className: s()(j.wm, null != i ? j.LT : j.Ub),
                   children: [
-                      null != s ? (0, i.jsx)(_.A, { onClick: s }) : null,
-                      n && (0, i.jsx)(d.A, {}),
-                      (0, i.jsx)(f, { ...t }),
+                      null != i ? (0, l.jsx)(x.A, { onClick: i }) : null,
+                      t && (0, l.jsx)(u.A, {}),
+                      (0, l.jsx)(h, { ...n }),
                   ],
               }),
           })
-        : (0, i.jsx)(u.H, { leading: l, actions: o });
+        : (0, l.jsx)(o.H, { leading: c, actions: a });
 }

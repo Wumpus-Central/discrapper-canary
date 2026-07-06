@@ -1,81 +1,80 @@
-"use strict";
-n.d(t, { _m: () => u, jm: () => c, kc: () => _, mz: () => d });
-var i = n(64700),
-    r = n(17928),
-    s = n(826469),
-    a = n(295405),
-    o = n(67480),
-    l = n(650170);
-function u(e) {
+r.d(t, { _m: () => a, jm: () => o, kc: () => f, mz: () => d });
+var n = r(64700),
+    u = r(17928),
+    i = r(826469),
+    c = r(295405),
+    s = r(67480),
+    l = r(650170);
+function a(e) {
     let {
         isGift: t,
-        activeSubscription: n,
-        defaultPaymentSourceId: i,
-        paymentSources: r,
-        eligiblePaymentGateways: s,
+        activeSubscription: r,
+        defaultPaymentSourceId: n,
+        paymentSources: u,
+        eligiblePaymentGateways: i,
     } = e;
-    if (!t && n?.paymentSourceId != null) return n.paymentSourceId;
-    if (null != s && s.length > 0) {
-        if (null != i && i in r && s.includes(r[i].paymentGateway)) return i;
-        for (let e in r) {
-            let t = r[e];
-            if (s.includes(t.paymentGateway)) return e;
+    if (!t && r?.paymentSourceId != null) return r.paymentSourceId;
+    if (null != i && i.length > 0) {
+        if (null != n && n in u && i.includes(u[n].paymentGateway)) return n;
+        for (let e in u) {
+            let t = u[e];
+            if (i.includes(t.paymentGateway)) return e;
         }
         return null;
     }
-    return i;
+    return n;
 }
-function c() {
+function o() {
     let {
             defaultPaymentSourceId: e,
             paymentSources: t,
-            hasFetchedPaymentSources: n,
-        } = (0, r.cf)([a.A], () => ({
-            defaultPaymentSourceId: a.A.defaultPaymentSourceId,
-            paymentSources: a.A.paymentSources,
-            hasFetchedPaymentSources: a.A.hasFetchedPaymentSources,
+            hasFetchedPaymentSources: r,
+        } = (0, u.cf)([c.A], () => ({
+            defaultPaymentSourceId: c.A.defaultPaymentSourceId,
+            paymentSources: c.A.paymentSources,
+            hasFetchedPaymentSources: c.A.hasFetchedPaymentSources,
         })),
-        { hasPaymentSources: s, defaultPaymentSource: o } = i.useMemo(
+        { hasPaymentSources: i, defaultPaymentSource: s } = n.useMemo(
             () => ({ hasPaymentSources: Object.keys(t).length > 0, defaultPaymentSource: null != e ? t[e] : null }),
             [t, e],
         );
     return {
         defaultPaymentSourceId: e,
         paymentSources: t,
-        hasFetchedPaymentSources: n,
-        hasPaymentSources: s,
-        defaultPaymentSource: o,
+        hasFetchedPaymentSources: r,
+        hasPaymentSources: i,
+        defaultPaymentSource: s,
     };
 }
 function d(e) {
-    let { skuId: t, isGift: n, activeSubscription: s } = e,
-        a = (0, r.bG)([o.A], () => o.A.get(t), [t]),
-        l = null != a ? a.eligiblePaymentGateways : null,
-        { defaultPaymentSourceId: d, paymentSources: _, hasFetchedPaymentSources: h, hasPaymentSources: f } = c();
+    let { skuId: t, isGift: r, activeSubscription: i } = e,
+        c = (0, u.bG)([s.A], () => s.A.get(t), [t]),
+        l = null != c ? c.eligiblePaymentGateways : null,
+        { defaultPaymentSourceId: d, paymentSources: f, hasFetchedPaymentSources: p, hasPaymentSources: h } = o();
     return {
-        initialCheckoutPaymentSourceId: i.useMemo(
+        initialCheckoutPaymentSourceId: n.useMemo(
             () =>
-                u({
-                    isGift: n,
-                    activeSubscription: s,
+                a({
+                    isGift: r,
+                    activeSubscription: i,
                     defaultPaymentSourceId: d,
                     eligiblePaymentGateways: l,
-                    paymentSources: _,
+                    paymentSources: f,
                 }) ?? null,
-            [n, s, d, l, _],
+            [r, i, d, l, f],
         ),
         defaultPaymentSourceId: d,
         eligiblePaymentGateways: l,
-        hasFetchedPaymentSources: h,
-        paymentSources: _,
-        hasPaymentSources: f,
+        hasFetchedPaymentSources: p,
+        paymentSources: f,
+        hasPaymentSources: h,
     };
 }
-function _() {
+function f() {
     let e = (0, l.t4)((e) => e.checkoutInvoicePreview);
-    return i.useMemo(() => {
+    return n.useMemo(() => {
         if (null == e) return [];
         let t = e.checkoutContext;
-        return null == t || null == t.payment_sources ? [] : t.payment_sources.map(s.A.createFromCheckoutContext);
+        return null == t || null == t.payment_sources ? [] : t.payment_sources.map(i.A.createFromCheckoutContext);
     }, [e]);
 }

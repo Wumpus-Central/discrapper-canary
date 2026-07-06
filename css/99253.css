@@ -1,0 +1,47 @@
+.note__2ef07 {
+    font-size: 12px;
+    margin-top: 20px;
+    position: relative
+}
+
+.note__2ef07~.note__2ef07 {
+    margin-top: 8px
+}
+
+.icon__2ef07 {
+    flex-shrink: 0;
+    margin-inline-end: 8px
+}
+
+.large__2ef07 {
+    height: 20px;
+    width: 20px
+}
+
+.small__2ef07 {
+    height: 14px;
+    width: 14px
+}
+
+.colorWarning__2ef07 {
+    color: var(--yellow-300)
+}
+
+.colorError__2ef07 {
+    color: var(--text-feedback-critical)
+}
+
+.colorPrimary__2ef07 {
+    color: var(--text-muted)
+}
+
+.colorSecondary__2ef07 {
+    color: var(--text-default)
+}
+
+.wrapper__4106a {
+    background-color: var(--modal-background);
+    flex: 0 0 auto;
+    padding: var(--space-16) var(--space-16) var(--space-8);
+    padding-inline-start: var(--space-24)
+}

@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => _ });
-var i = n(64700),
-    r = n(17928),
-    s = n(975807),
-    a = n(183972),
-    o = n(919466),
-    l = n(196099),
-    u = n(297966),
-    c = n(927813);
-n(985603);
-let d = 5 * c.A.Millis.MINUTE;
-function _(e) {
-    let t = (0, r.bG)([o.A], () => o.A.getLastFetchTime()),
-        n = (0, l.M)("xbox");
-    return i.useCallback(async () => {
-        var i;
-        if (null != e && null != (i = t) && Date.now() - i < d) (0, s.A)(e.url, !0);
+A.d(e, { A: () => u });
+var r = A(64700),
+    I = A(17928),
+    a = A(975807),
+    C = A(183972),
+    E = A(919466),
+    _ = A(196099),
+    l = A(297966),
+    N = A(927813);
+A(985603);
+let n = 5 * N.A.Millis.MINUTE;
+function u(t) {
+    let e = (0, I.bG)([E.A], () => E.A.getLastFetchTime()),
+        A = (0, _.M)("xbox");
+    return r.useCallback(async () => {
+        var r;
+        if (null != t && null != (r = e) && Date.now() - r < n) (0, a.A)(t.url, !0);
         else {
-            let e = await (0, a.aB)(u.n9.XGPP);
-            e?.redirect != null && (0, s.A)(e.redirect.url, !0);
+            let t = await (0, C.aB)(l.n9.XGPP);
+            t?.redirect != null && (0, a.A)(t.redirect.url, !0);
         }
-        n(l.H.CLAIM);
-    }, [e, t, n]);
+        A(_.H.CLAIM);
+    }, [t, e, A]);
 }

@@ -2,13 +2,13 @@
 n.d(t, { ie: () => E, w0: () => h, Om: () => I, HW: () => g, wM: () => p, hJ: () => T });
 var i = n(70283),
     r = n(696292),
-    s = n(617986),
+    s = n(216934),
     a = n(976860),
     o = n(780964),
     l = n(766075),
     u = n(652215),
-    d = n(758836),
-    c = n(375708);
+    c = n(758836),
+    d = n(375708);
 let _ = {
     premium: 1,
     premium_tenure_1_month_v2: 1,
@@ -64,24 +64,24 @@ let A = {
     [i.$.PREMIUM_TENURE]: {
         ctaLabel: (e) => {
             let { owned: t, isViewerOnUpgradeableNitro: n } = e;
-            return !0 === n ? c.intl.string(c.t.uKFeS1) : t ? c.intl.string(c.t.xGjjkd) : c.intl.string(c.t.BTxm69);
+            return !0 === n ? d.intl.string(d.t.uKFeS1) : t ? d.intl.string(d.t.xGjjkd) : d.intl.string(d.t.BTxm69);
         },
         ctaAction: () => (0, a.pX)(u.BVt.NITRO_HOME),
     },
     [i.$.GUILD_BOOSTER]: {
         ctaLabel: (e) => {
             let { owned: t } = e;
-            return t ? c.intl.string(c.t.VMvz3m) : c.intl.string(c.t.xFVZeU);
+            return t ? d.intl.string(d.t.VMvz3m) : d.intl.string(d.t.xFVZeU);
         },
         ctaAction: () => (0, l.openUserSettings)(o.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
     },
     [i.$.ORB_PROFILE]: {
-        ctaLabel: () => c.intl.string(c.t.EBYkzk),
-        ctaAction: () => (0, a.pX)(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(d.G2.ORBS)),
+        ctaLabel: () => d.intl.string(d.t.EBYkzk),
+        ctaAction: () => (0, a.pX)(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(c.G2.ORBS)),
     },
     [i.$.QUEST_COMPLETED]: {
-        ctaLabel: () => c.intl.string(c.t.swICIT),
-        ctaAction: () => (0, s.navigateToQuestHome)({ fromContent: r.u.QUEST_BADGE }),
+        ctaLabel: () => d.intl.string(d.t.swICIT),
+        ctaAction: () => (0, s.m)({ fromContent: r.u.QUEST_BADGE }),
     },
 };
 function I(e) {

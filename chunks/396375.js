@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(627968);
-n(64700);
-var r = n(462887),
-    s = n(862482),
-    a = n(736653),
-    o = n(234419),
-    l = n(725807),
-    u = n(145310),
-    c = n(943386);
-let d = function (e) {
+r.d(i, { A: () => d });
+var s = r(627968);
+r(64700);
+var e = r(462887),
+    o = r(862482),
+    n = r(736653),
+    a = r(234419),
+    c = r(725807),
+    p = r(145310),
+    u = r(943386);
+let d = function (t) {
     let {
-            textOptions: t,
-            subscriptionTier: n,
+            textOptions: i,
+            subscriptionTier: r,
             hasActivePromotion: d = !1,
-            isPersistentCTA: _ = !1,
+            isPersistentCTA: l = !1,
             useShorterCTA: h = !1,
-            showGradient: f,
-            confirmationFooter: p,
-            color: E,
-            ...m
-        } = e,
-        g = (0, a.Ay)(),
-        { buttonText: A, marketingSubscriptionTierSkuId: I } = (0, u.s)({
+            showGradient: A,
+            confirmationFooter: k,
+            color: v,
+            ...D
+        } = t,
+        _ = (0, n.Ay)(),
+        { buttonText: b, marketingSubscriptionTierSkuId: x } = (0, p.s)({
             hasActivePromotion: d,
-            subscriptionTier: n,
+            subscriptionTier: r,
             useShorterCTA: h,
-            isPersistentCTA: _,
+            isPersistentCTA: l,
         }),
-        T = (0, o.V)(),
-        S = T?.subscription_trial,
-        y = null != S && I === S.sku_id,
-        C = E ?? ((0, r.M)(g) ? s.XD.BRAND_INVERTED : s.XD.BRAND);
-    return (0, i.jsx)(l.A, {
-        color: C,
-        textOptions: { textOverride: A, textClassName: y ? c.A : void 0, ...t },
+        N = (0, a.V)(),
+        w = N?.subscription_trial,
+        C = null != w && x === w.sku_id,
+        O = v ?? ((0, e.M)(_) ? o.XD.BRAND_INVERTED : o.XD.BRAND);
+    return (0, s.jsx)(c.A, {
+        color: O,
+        textOptions: { textOverride: b, textClassName: C ? u.A : void 0, ...i },
         onlyShineOnHover: !0,
-        subscriptionTier: I,
-        showGradient: f,
-        confirmationFooter: p,
-        ...m,
+        subscriptionTier: x,
+        showGradient: A,
+        confirmationFooter: k,
+        ...D,
     });
 };

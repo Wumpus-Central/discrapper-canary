@@ -1,62 +1,61 @@
-"use strict";
-n.d(t, { F: () => E });
-var l = n(64700),
-    i = n(17928),
-    s = n(318254),
-    r = n(278416),
-    a = n(561573),
-    o = n(288106),
-    u = n(240248),
-    c = n(429635),
-    d = n(430825),
-    m = n(375708);
-let h = "{value}",
-    p = { ORBS: s.C, TAG: r.g };
-function f(e) {
-    return null != e ? p[e] : void 0;
+l.d(t, { F: () => C });
+var i = l(64700),
+    n = l(17928),
+    a = l(318254),
+    r = l(278416),
+    s = l(561573),
+    o = l(288106),
+    c = l(240248),
+    u = l(429635),
+    d = l(430825),
+    h = l(375708);
+let p = "{value}",
+    S = { ORBS: a.C, TAG: r.g };
+function _(e) {
+    return null != e ? S[e] : void 0;
 }
-function g(e, t) {
-    return null == e ? null : e.includes(h) ? (null == t ? null : e.replaceAll(h, String(t))) : e;
+function f(e, t) {
+    return null == e ? null : e.includes(p) ? (null == t ? null : e.replaceAll(p, String(t))) : e;
 }
-function E(e, t) {
-    let { applicationId: n, skuId: s } = t,
-        r = (0, c.A)({ applicationId: n }),
-        h = l.useMemo(() => {
+function C(e, t) {
+    let { applicationId: l, skuId: a } = t,
+        r = (0, u.A)({ applicationId: l }),
+        p = i.useMemo(() => {
             let e = r?.storefront?.promotions;
             return null == e ? null : (Object.values(e)[0] ?? null);
         }, [r]),
-        p =
+        S =
             "gift_customization" === e || "sku_gift_badge" === e || "vc_gift_recommendations" === e
                 ? o.QK.GIFT
                 : o.QK.SELF_PURCHASE,
-        E = (0, i.bG)(
-            [a.A],
+        C = (0, n.bG)(
+            [s.A],
             () =>
                 (function (e, t) {
                     if (null == e) return null;
-                    for (let n of e) {
-                        let e = n[t];
+                    for (let l of e) {
+                        let e = l[t];
                         if (e?.amount != null) return e.amount;
                     }
                     return null;
-                })(a.A.getRewardsForSkuId(s), p),
-            [s, p],
+                })(s.A.getRewardsForSkuId(a), S),
+            [a, S],
         );
-    return l.useMemo(() => {
-        if (null == h) return null;
-        let t = null != h.endsAt ? new Date(h.endsAt) : null;
+    return i.useMemo(() => {
+        if (null == p) return null;
+        let t = null != p.endsAt ? new Date(p.endsAt) : null;
         switch (e) {
             case "storefront_banner": {
-                let e = h.storefront?.headerText;
-                if ((0, u.uJ)(e)) return null;
-                return { Icon: f(h.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t, rewardValue: null };
+                let e = p.storefront?.headerText;
+                if ((0, c.uJ)(e)) return null;
+                return { Icon: _(p.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t, rewardValue: null };
             }
             case "storefront_badge": {
-                let e = h.storefront?.headerText;
-                if ((0, u.uJ)(e)) return null;
+                let e = p.storefront?.headerText;
+                if ((0, c.uJ)(e)) return null;
                 return {
-                    Icon: f("TAG"),
-                    text: m.intl.string(d.default.hriMCc),
+                    Icon: _("TAG"),
+                    text: h.intl.string(d.default.hriMCc),
                     tooltip: e,
                     endsAt: t,
                     rewardValue: null,
@@ -65,44 +64,44 @@ function E(e, t) {
             case "pdp":
             case "card":
             case "gift_customization": {
-                if (null == E) return null;
-                let n = "gift_customization" === e ? h.checkout : h.pdp,
-                    l = g(n?.label ?? null, E);
-                if ((0, u.uJ)(l)) return null;
+                if (null == C) return null;
+                let l = "gift_customization" === e ? p.checkout : p.pdp,
+                    i = f(l?.label ?? null, C);
+                if ((0, c.uJ)(i)) return null;
                 return {
-                    Icon: f(n?.icon ?? null),
-                    text: l,
-                    tooltip: g(n?.tooltip ?? null, E),
+                    Icon: _(l?.icon ?? null),
+                    text: i,
+                    tooltip: f(l?.tooltip ?? null, C),
                     endsAt: t,
-                    rewardValue: E,
+                    rewardValue: C,
                 };
             }
             case "vc_purchase_recommendations":
             case "vc_gift_recommendations": {
-                let e = h.vcStream?.label;
-                if ((0, u.uJ)(e)) return null;
+                let e = p.vcStream?.label;
+                if ((0, c.uJ)(e)) return null;
                 return {
-                    Icon: f(h.vcStream?.icon ?? null),
+                    Icon: _(p.vcStream?.icon ?? null),
                     text: e,
-                    tooltip: h.vcStream?.tooltip ?? null,
+                    tooltip: p.vcStream?.tooltip ?? null,
                     endsAt: t,
                     rewardValue: null,
                 };
             }
             case "sku_purchase_badge":
             case "sku_gift_badge": {
-                if (null == E) return null;
-                let n = "sku_gift_badge" === e ? h.checkout : h.pdp,
-                    l = g(n?.label ?? null, E);
-                if ((0, u.uJ)(l)) return null;
+                if (null == C) return null;
+                let l = "sku_gift_badge" === e ? p.checkout : p.pdp,
+                    i = f(l?.label ?? null, C);
+                if ((0, c.uJ)(i)) return null;
                 return {
-                    Icon: f("TAG"),
-                    text: m.intl.string(d.default.hriMCc),
-                    tooltip: g(n?.tooltip ?? null, E),
+                    Icon: _("TAG"),
+                    text: h.intl.string(d.default.hriMCc),
+                    tooltip: f(l?.tooltip ?? null, C),
                     endsAt: t,
-                    rewardValue: E,
+                    rewardValue: C,
                 };
             }
         }
-    }, [e, h, E]);
+    }, [e, p, C]);
 }

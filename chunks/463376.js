@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { i: () => l });
-var i = n(64700),
-    r = n(422936),
-    s = n(234419),
+n.d(t, { i: () => o });
+var l = n(64700),
+    i = n(422936),
+    r = n(234419),
     a = n(650170),
-    o = n(202541);
-function l() {
+    s = n(202541);
+function o() {
     let {
             selectedSkuId: e,
             isPremium: t,
             isPremiumGroupPurchase: n,
-            referralTrialOfferId: l,
+            referralTrialOfferId: o,
             isGift: u,
         } = (0, a.t4)((e) => {
             let t = e.get("selectedPlanAttributes");
@@ -22,28 +21,28 @@ function l() {
                 isPremiumGroupPurchase: t.isPremiumGroupPurchase,
             };
         }),
-        c = (0, s.V)(l ?? void 0),
+        c = (0, r.V)(o ?? void 0),
         d = !n && !u && null != e,
-        _ = !!(d && null != c && o.TP[c.trial_id].skus.includes(e)),
-        h = (0, r.O)(),
-        f =
+        p = !!(d && null != c && s.TP[c.trial_id].skus.includes(e)),
+        m = (0, i.O)(),
+        h =
             null != e &&
-            null != h &&
-            null != h.discount &&
-            null != h.discount.planIds &&
-            h.discount.planIds.some((t) => o.hd[t].skuId === e),
-        p = !!(d && null != h && f),
-        E = (0, r.p)();
-    return i.useMemo(
+            null != m &&
+            null != m.discount &&
+            null != m.discount.planIds &&
+            m.discount.planIds.some((t) => s.hd[t].skuId === e),
+        C = !!(d && null != m && h),
+        E = (0, i.p)();
+    return l.useMemo(
         () => ({
             isPremium: t,
             isPremiumGroupPurchase: n,
-            isEligibleForTrial: _,
-            isEligibleForDiscount: p,
+            isEligibleForTrial: p,
+            isEligibleForDiscount: C,
             userTrialOffer: c,
-            discountOffer: h,
+            discountOffer: m,
             premiumGroupDiscountOffer: n ? E : null,
         }),
-        [t, n, _, p, c, h, E],
+        [t, n, p, C, c, m, E],
     );
 }

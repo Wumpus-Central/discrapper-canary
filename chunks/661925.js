@@ -10,7 +10,7 @@ var a = n(627968),
     u = n(940856),
     m = n(287809),
     k = n(375708),
-    p = n(437650);
+    p = n(696850);
 let C = function (t) {
     let { onClose: e, transitionState: l } = t,
         C = (0, o.bG)([m.default], () => m.default.getCurrentUser()),
@@ -20,7 +20,8 @@ let C = function (t) {
             e?.(),
                 (0, c.openModalLazy)(async () => {
                     let { default: t } = await Promise.all([
-                        n.e("67746"),
+                        n.e("97570"),
+                        n.e("32606"),
                         n.e("27323"),
                         n.e("20577"),
                         n.e("47999"),

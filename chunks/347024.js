@@ -1,6 +1,6 @@
 "use strict";
 let i;
-n.d(t, { W: () => x, Ay: () => v, Q9: () => k }), n(321073);
+n.d(t, { W: () => x, Ay: () => O, Q9: () => U }), n(321073);
 var r = n(635377),
     s = n.n(r),
     a = n(941426),
@@ -29,18 +29,18 @@ function d(e) {
 var _ = n(157941),
     h = n(768947),
     f = n(927813),
-    p = n(186306),
-    E = n(323350),
+    E = n(186306),
+    p = n(323350),
     m = n(35277),
     g = n(820066),
     A = n(551483),
-    I = n(206207);
+    I = n(618559);
 let T = new a.Vy("withCodeBlocks"),
     S = new Set(["line"]),
-    y = /^[a-z0-9_+\-.#]+$/i,
+    N = /^[a-z0-9_+\-.#]+$/i,
     C = null,
-    N = null;
-function v(e) {
+    y = null;
+function O(e) {
     let { onChange: t } = e,
         i = null,
         r = !1,
@@ -54,7 +54,7 @@ function v(e) {
                         queueMicrotask(() => {
                             s = !1;
                             try {
-                                p.o.withoutSaving(e, () => {
+                                E.o.withoutSaving(e, () => {
                                     g.VW.withoutNormalizing(e, () => R(e, a));
                                 }),
                                     (i = g.VW.richValue(e));
@@ -68,25 +68,25 @@ function v(e) {
     return (
         (e.onChange = () => {
             g.VW.richValue(e) !== i &&
-                (p.o.withoutSaving(e, () => {
+                (E.o.withoutSaving(e, () => {
                     g.VW.withoutNormalizing(e, () => {
                         R(e, a) &&
                             null == C &&
                             !r &&
                             ((r = !0),
-                            (null == N &&
-                                (N = Promise.resolve()
-                                    .then(n.bind(n, 149938))
+                            (null == y &&
+                                (y = Promise.all([n.e("57036"), n.e("75134")])
+                                    .then(n.bind(n, 981776))
                                     .then((e) => {
                                         C = e.default;
                                     })
                                     .catch((e) => {
-                                        throw ((N = null), e);
+                                        throw ((y = null), e);
                                     })),
-                            N)
+                            y)
                                 .then(() => {
                                     (i = null),
-                                        p.o.withoutSaving(e, () => {
+                                        E.o.withoutSaving(e, () => {
                                             g.VW.withoutNormalizing(e, () => R(e));
                                         }),
                                         (i = g.VW.richValue(e));
@@ -139,7 +139,7 @@ function R(e, t) {
                     c = n && 0 === s.length,
                     d = i && 0 === s.length,
                     _ = (u ? s.slice(1) : s).length % 2 == 1,
-                    h = _ && (null == l || "" === l || null != l.match(y)),
+                    h = _ && (null == l || "" === l || null != l.match(N)),
                     f = h && null != l && "" !== l ? l.toLowerCase() : null;
                 return {
                     blockEntry: t,
@@ -171,7 +171,7 @@ function R(e, t) {
                         (s.closesCodeBlock || a) &&
                         (r && a && !s.closesCodeBlock && i.push(s), (r = !1), i.length > 0)
                     ) {
-                        let e = i.map((e) => (0, E.IQ)(e.blockEntry[0])).join("\n"),
+                        let e = i.map((e) => (0, p.IQ)(e.blockEntry[0])).join("\n"),
                             r = i[0].lang;
                         if (null != r && n)
                             !(function (e, t, n, i) {
@@ -180,7 +180,7 @@ function R(e, t) {
                                         s = (0, h.py)(t);
                                     if (null == s) return null;
                                     let a = `${e}-${s}`,
-                                        o = M.get(a);
+                                        o = P.get(a);
                                     if (null != o && o.length === n) return o;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
                                     let l = u.has(s) ? (u.get(s) ?? null) : (d(s), null);
@@ -199,9 +199,9 @@ function R(e, t) {
                                     }
                                     let f = r.endsWith("\n") ? r.slice(0, -1).split("\n") : r.split("\n");
                                     if (f.length !== n) return null;
-                                    let p = [];
+                                    let E = [];
                                     for (let e = 0; e < n; e++)
-                                        p.push(
+                                        E.push(
                                             (function (e) {
                                                 let t,
                                                     n = [],
@@ -210,7 +210,7 @@ function R(e, t) {
                                                     s = 0;
                                                 for (b.lastIndex = 0; null != (t = b.exec(e)); ) {
                                                     let a = t.index + t[0].length,
-                                                        o = P(e.substring(s, t.index)).length,
+                                                        o = M(e.substring(s, t.index)).length,
                                                         l = i.filter((e) => null != e);
                                                     if (
                                                         (o > 0 &&
@@ -219,12 +219,12 @@ function R(e, t) {
                                                         o > 0 && (r += o),
                                                         null != t[1])
                                                     ) {
-                                                        let e = D.get(t[1]);
+                                                        let e = L.get(t[1]);
                                                         i.push(e ?? null);
                                                     } else i.pop();
                                                     s = a;
                                                 }
-                                                let a = P(e.substring(s)).length,
+                                                let a = M(e.substring(s)).length,
                                                     o = i.filter((e) => null != e);
                                                 return (
                                                     a > 0 && o.length > 0 && n.push({ types: o, start: r, end: r + a }),
@@ -232,7 +232,7 @@ function R(e, t) {
                                                 );
                                             })(f[e]),
                                         );
-                                    return M.set(a, p), p;
+                                    return P.set(a, E), E;
                                 })(e, t, n.length, i);
                                 if (null != r) for (let e = 0; e < n.length; e++) n[e].hljsTypes = r[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -262,7 +262,7 @@ function R(e, t) {
                                             a = [],
                                             o = 0,
                                             l = 0;
-                                        for (; null != (r = O.exec(s)); ) {
+                                        for (; null != (r = v.exec(s)); ) {
                                             let t = r.index + r[0].length,
                                                 n = r.index - l;
                                             r.index > l &&
@@ -309,14 +309,14 @@ function R(e, t) {
         n.some((e) => null != e.lang)
     );
 }
-let O = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
     b = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
-    D = new Map();
-for (let [e, t] of Object.entries(I)) e.startsWith("a-") && null != t && D.set(e, t);
-let L = { max: 1 / 0, maxAge: +f.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    w = new (s())(L),
-    M = new (s())(L);
-function P(e) {
+    L = new Map();
+for (let [e, t] of Object.entries(I)) e.startsWith("a-") && null != t && L.set(e, t);
+let D = { max: 1 / 0, maxAge: +f.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    w = new (s())(D),
+    P = new (s())(D);
+function M(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
@@ -338,11 +338,11 @@ function x(e, t) {
     }
     return n % 2 != 0;
 }
-function k(e) {
+function U(e) {
     if (null == e.selection) return !1;
     let t = g.ZF.start(e.selection);
     return x(e, t);
 }
 c.add(() => {
-    M.reset();
+    P.reset();
 });

@@ -12,8 +12,8 @@ var i = n(627968),
     _ = n(224640),
     h = n(17928),
     f = n(990078),
-    p = n(349288),
-    E = n(187322),
+    E = n(349288),
+    p = n(187322),
     m = n(475825),
     g = n(442433),
     A = n(390435),
@@ -26,37 +26,37 @@ let S = (0, n(600975).C)({
     defaultConfig: { showScores: !1 },
     treatments: [{ id: 1, label: "Show scores in QS results", config: { showScores: !0 } }],
 });
-var y = n(12351),
+var N = n(12351),
     C = n(915089),
-    N = n(734057),
-    v = n(458294),
+    y = n(734057),
+    O = n(458294),
     R = n(71393),
-    O = n(290863),
+    v = n(290863),
     b = n(568548),
-    D = n(309010),
-    L = n(607567),
-    w = n(11939),
-    M = n(625494),
-    P = n(975571),
+    L = n(309010),
+    D = n(607567),
+    w = n(234320),
+    P = n(625494),
+    M = n(975571),
     x = n(363738),
-    k = n(820785),
-    U = n(615300),
+    U = n(820785),
+    k = n(615300),
     G = n(451988),
-    F = n(844222),
-    V = n(652215),
+    V = n(844222),
+    F = n(652215),
     B = n(375708),
-    j = n(246729);
-let H = { friction: 15, tension: 100 };
-class Y extends r.PureComponent {
-    state = { shown: !1, translateY: new U.A.Value(0) };
-    static contextType = F.C;
+    H = n(246729);
+let j = { friction: 15, tension: 100 };
+class W extends r.PureComponent {
+    state = { shown: !1, translateY: new k.A.Value(0) };
+    static contextType = V.C;
     rootRef = r.createRef();
     focusTimeout = new G.Ep();
     componentDidMount() {
-        this.setState({ shown: !0 }), M._.subscribe(V.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.setState({ shown: !0 }), P._.subscribe(F.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentWillUnmount() {
-        this.focusTimeout.stop(), M._.unsubscribe(V.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
+        this.focusTimeout.stop(), P._.unsubscribe(F.jej.QUICKSWITCHER_RESULT_FOCUS, this.handleResultFocus);
     }
     componentDidUpdate() {
         let { hasQuery: e } = this.props;
@@ -75,34 +75,34 @@ class Y extends r.PureComponent {
     };
     springTo(e) {
         let { reducedMotion: t } = this.context;
-        !0 !== t.enabled && U.A.spring(this.state.translateY, { toValue: Math.min(e, 250), ...H }).start();
+        !0 !== t.enabled && k.A.spring(this.state.translateY, { toValue: Math.min(e, 250), ...j }).start();
     }
     renderArrowGroup(e) {
         return (0, i.jsxs)("div", {
-            className: d()(j.XN, e),
+            className: d()(H.XN, e),
             children: [
-                (0, i.jsx)(U.A.div, {
-                    className: d()(j.Hf, j.xM),
+                (0, i.jsx)(k.A.div, {
+                    className: d()(H.Hf, H.xM),
                     style: this.getStyle(),
-                    children: (0, i.jsx)("img", { alt: "", src: n(824829), className: j.D6 }),
+                    children: (0, i.jsx)("img", { alt: "", src: n(824829), className: H.D6 }),
                 }),
                 (0, i.jsx)("div", {
-                    className: d()(j.Hf, j.JM),
-                    children: (0, i.jsx)("img", { alt: "", src: n(162206), className: j.D6 }),
+                    className: d()(H.Hf, H.JM),
+                    children: (0, i.jsx)("img", { alt: "", src: n(162206), className: H.D6 }),
                 }),
                 (0, i.jsx)("div", {
-                    className: d()(j.Hf, j.QJ),
-                    children: (0, i.jsx)("img", { alt: "", src: n(298607), className: j.D6 }),
+                    className: d()(H.Hf, H.QJ),
+                    children: (0, i.jsx)("img", { alt: "", src: n(298607), className: H.D6 }),
                 }),
             ],
         });
     }
     renderContent() {
         return (0, i.jsxs)("div", {
-            className: j.fi,
+            className: H.fi,
             children: [
-                (0, i.jsx)("div", { className: j.Iv, children: B.intl.string(B.t.Mp0IGK) }),
-                (0, i.jsx)("div", { className: j.kp, children: B.intl.string(B.t["3CbpwH"]) }),
+                (0, i.jsx)("div", { className: H.Iv, children: B.intl.string(B.t.Mp0IGK) }),
+                (0, i.jsx)("div", { className: H.kp, children: B.intl.string(B.t["3CbpwH"]) }),
             ],
         });
     }
@@ -111,8 +111,8 @@ class Y extends r.PureComponent {
             { shown: t } = this.state;
         return (0, i.jsxs)("div", {
             ref: this.rootRef,
-            className: d()(j.d$, { [j.SP]: t, [j.tG]: e }),
-            children: [this.renderContent(), this.renderArrowGroup(j.__invalid_left), this.renderArrowGroup(j.pG)],
+            className: d()(H.d$, { [H.SP]: t, [H.tG]: e }),
+            children: [this.renderContent(), this.renderArrowGroup(H.__invalid_left), this.renderArrowGroup(H.pG)],
         });
     }
     getStyle() {
@@ -133,16 +133,16 @@ class Y extends r.PureComponent {
               };
     }
 }
-var W = n(781303);
+var Y = n(781303);
 function K() {
     return (0, i.jsxs)("div", {
-        className: W.p$,
+        className: Y.p$,
         children: [
-            (0, i.jsx)("div", { className: W.lv, children: B.intl.string(B.t.bpbATE) }),
+            (0, i.jsx)("div", { className: Y.lv, children: B.intl.string(B.t.bpbATE) }),
             (0, i.jsx)("div", {
-                className: W.PA,
-                children: (0, i.jsx)(p.Anchor, {
-                    href: P.A.getArticleURL(V.MVz.QUICK_SWITCHER_TUTORIAL),
+                className: Y.PA,
+                children: (0, i.jsx)(E.Anchor, {
+                    href: M.A.getArticleURL(F.MVz.QUICK_SWITCHER_TUTORIAL),
                     children: B.intl.string(B.t["4iPfEO"]),
                 }),
             }),
@@ -153,53 +153,53 @@ class $ extends r.Component {
     static defaultProps = { unread: !1 };
     render() {
         let e = R.A.getGuild(this.props.channel.guild_id);
-        return (0, i.jsx)(k.c3, {
+        return (0, i.jsx)(U.c3, {
             ...this.props,
-            children: (0, i.jsx)("div", { className: W.MD, children: null != e ? e.name : null }),
+            children: (0, i.jsx)("div", { className: Y.MD, children: null != e ? e.name : null }),
         });
     }
 }
-let z = h.Ay.connectStores([b.Ay, N.A], (e) => {
+let z = h.Ay.connectStores([b.Ay, y.A], (e) => {
         let { channel: t } = e;
         return {
             unread: b.Ay.hasUnread(t.id),
             mentions: b.Ay.getMentionCount(t.id),
             isMentionLowImportance: b.Ay.getIsMentionLowImportance(t.id),
-            category: N.A.getChannel(t.parent_id),
+            category: y.A.getChannel(t.parent_id),
         };
     })($),
-    q = h.Ay.connectStores([L.Ay], (e) => {
+    q = h.Ay.connectStores([D.Ay], (e) => {
         let { channel: t } = e;
         if (null == t.guild_id)
             throw Error("ConnectedVoiceChannel - somehow we got a voice channel with no guild_id...");
-        return { voiceStates: L.Ay.getVoiceStates(t.guild_id)[t.id] };
+        return { voiceStates: D.Ay.getVoiceStates(t.guild_id)[t.id] };
     })($),
-    Z = h.Ay.connectStores([v.default], (e) => {
+    Z = h.Ay.connectStores([O.default], (e) => {
         let { guild: t } = e;
-        return { unread: v.default.hasUnread(t.id) };
-    })(k.OS),
-    X = h.Ay.connectStores([b.Ay, O.A], (e) => {
+        return { unread: O.default.hasUnread(t.id) };
+    })(U.OS),
+    X = h.Ay.connectStores([b.Ay, v.A], (e) => {
         let { channel: t } = e,
             n = null,
-            i = O.A.getState().statuses;
+            i = v.A.getState().statuses;
         return (
-            t.recipients?.some((e) => i[e] === V.clD.ONLINE) && (n = V.clD.ONLINE),
+            t.recipients?.some((e) => i[e] === F.clD.ONLINE) && (n = F.clD.ONLINE),
             { mentions: b.Ay.getMentionCount(t.id), status: n }
         );
-    })(k.nG),
-    Q = h.Ay.connectStores([N.A, b.Ay, O.A], (e) => {
+    })(U.nG),
+    Q = h.Ay.connectStores([y.A, b.Ay, v.A], (e) => {
         let { user: t } = e,
-            n = N.A.getDMFromUserId(t.id);
+            n = y.A.getDMFromUserId(t.id);
         return {
             mentions: null != n ? b.Ay.getMentionCount(n) : 0,
-            status: O.A.getStatus(t.id),
-            isMobile: O.A.isMobileOnline(t.id),
+            status: v.A.getStatus(t.id),
+            isMobile: v.A.isMobileOnline(t.id),
         };
-    })(k.KJ);
+    })(U.KJ);
 function J(e, t, n) {
     return (0, i.jsx)(
         f.m,
-        { __unsupportedReactNodeAsText: n, children: (0, i.jsx)("span", { className: W.ZT, children: t }) },
+        { __unsupportedReactNodeAsText: n, children: (0, i.jsx)("span", { className: Y.ZT, children: t }) },
         e,
     );
 }
@@ -251,33 +251,88 @@ class ee extends r.PureComponent {
                     let { default: e } = await Promise.all([
                         n.e("26142"),
                         n.e("84287"),
-                        n.e("50692"),
+                        n.e("1780"),
                         n.e("47173"),
                         n.e("60361"),
                         n.e("41831"),
                         n.e("51437"),
                         n.e("87960"),
                         n.e("21293"),
-                        n.e("81599"),
-                        n.e("1324"),
-                        n.e("23004"),
+                        n.e("93200"),
+                        n.e("41625"),
+                        n.e("90629"),
                         n.e("8886"),
                         n.e("6212"),
-                        n.e("53637"),
-                        n.e("39655"),
+                        n.e("78279"),
                         n.e("78220"),
-                        n.e("30772"),
+                        n.e("11262"),
                         n.e("16227"),
                         n.e("37520"),
-                        n.e("46934"),
-                        n.e("44125"),
+                        n.e("12410"),
+                        n.e("38759"),
                         n.e("37634"),
                         n.e("812"),
-                        n.e("85190"),
+                        n.e("89209"),
+                        n.e("86832"),
+                        n.e("95512"),
+                        n.e("69273"),
+                        n.e("72210"),
+                        n.e("3155"),
+                        n.e("82104"),
+                        n.e("41711"),
+                        n.e("49623"),
+                        n.e("35316"),
+                        n.e("38838"),
+                        n.e("45214"),
+                        n.e("99253"),
+                        n.e("17202"),
+                        n.e("90862"),
+                        n.e("97189"),
+                        n.e("16918"),
+                        n.e("33730"),
+                        n.e("24059"),
+                        n.e("42306"),
+                        n.e("11291"),
+                        n.e("96846"),
+                        n.e("19709"),
+                        n.e("4251"),
+                        n.e("47412"),
+                        n.e("65327"),
+                        n.e("96490"),
+                        n.e("85484"),
+                        n.e("51772"),
+                        n.e("21918"),
+                        n.e("54483"),
+                        n.e("62461"),
+                        n.e("25677"),
+                        n.e("73679"),
+                        n.e("73178"),
+                        n.e("333"),
+                        n.e("97638"),
+                        n.e("22995"),
+                        n.e("84896"),
+                        n.e("51943"),
+                        n.e("90072"),
+                        n.e("88016"),
+                        n.e("84133"),
+                        n.e("13627"),
+                        n.e("57940"),
+                        n.e("58171"),
+                        n.e("48404"),
+                        n.e("39375"),
+                        n.e("47944"),
+                        n.e("84473"),
+                        n.e("70990"),
+                        n.e("15130"),
+                        n.e("74051"),
+                        n.e("50541"),
+                        n.e("32697"),
                         n.e("64622"),
                         n.e("47728"),
-                        n.e("87089"),
-                        n.e("51452"),
+                        n.e("31270"),
+                        n.e("6514"),
+                        n.e("8641"),
+                        n.e("6247"),
                         n.e("70298"),
                         n.e("82041"),
                         n.e("97238"),
@@ -291,24 +346,33 @@ class ee extends r.PureComponent {
                         n.e("53727"),
                         n.e("57034"),
                         n.e("85948"),
-                        n.e("52777"),
+                        n.e("12940"),
                         n.e("52443"),
                         n.e("11266"),
                         n.e("12124"),
                         n.e("18712"),
-                        n.e("99099"),
-                        n.e("98892"),
+                        n.e("60654"),
+                        n.e("70179"),
                         n.e("97690"),
                         n.e("87103"),
                         n.e("52865"),
                         n.e("57215"),
                         n.e("22535"),
                         n.e("31481"),
-                        n.e("41603"),
-                        n.e("36017"),
+                        n.e("83140"),
+                        n.e("18670"),
                         n.e("33238"),
-                        n.e("14254"),
-                        n.e("27973"),
+                        n.e("31591"),
+                        n.e("39111"),
+                        n.e("58530"),
+                        n.e("35426"),
+                        n.e("71505"),
+                        n.e("69487"),
+                        n.e("87550"),
+                        n.e("20631"),
+                        n.e("8736"),
+                        n.e("61285"),
+                        n.e("97242"),
                         n.e("98795"),
                         n.e("65123"),
                         n.e("23549"),
@@ -317,8 +381,9 @@ class ee extends r.PureComponent {
                         n.e("80083"),
                         n.e("28510"),
                         n.e("78104"),
-                        n.e("68323"),
-                        n.e("45687"),
+                        n.e("8502"),
+                        n.e("29483"),
+                        n.e("39680"),
                         n.e("21194"),
                         n.e("99272"),
                         n.e("20993"),
@@ -335,7 +400,7 @@ class ee extends r.PureComponent {
                         n.e("46819"),
                         n.e("81619"),
                         n.e("17738"),
-                        n.e("16155"),
+                        n.e("61312"),
                         n.e("57328"),
                         n.e("44135"),
                         n.e("79555"),
@@ -374,7 +439,7 @@ class ee extends r.PureComponent {
                         n.e("25870"),
                         n.e("76831"),
                         n.e("37870"),
-                        n.e("93083"),
+                        n.e("3515"),
                         n.e("77335"),
                         n.e("8177"),
                         n.e("41027"),
@@ -388,11 +453,16 @@ class ee extends r.PureComponent {
                         n.e("36592"),
                         n.e("26543"),
                         n.e("92430"),
-                        n.e("80339"),
+                        n.e("54453"),
+                        n.e("79254"),
                         n.e("38977"),
                         n.e("20802"),
                         n.e("91474"),
                         n.e("17566"),
+                        n.e("23924"),
+                        n.e("42205"),
+                        n.e("55675"),
+                        n.e("25845"),
                         n.e("19402"),
                         n.e("49681"),
                         n.e("22687"),
@@ -400,46 +470,103 @@ class ee extends r.PureComponent {
                         n.e("62052"),
                         n.e("63202"),
                         n.e("82596"),
+                        n.e("10471"),
+                        n.e("64827"),
+                        n.e("63232"),
+                        n.e("68261"),
+                        n.e("7167"),
+                        n.e("11301"),
+                        n.e("96643"),
+                        n.e("84569"),
+                        n.e("60235"),
+                        n.e("61737"),
+                        n.e("92789"),
+                        n.e("21335"),
+                        n.e("77333"),
+                        n.e("47834"),
+                        n.e("11735"),
+                        n.e("85927"),
+                        n.e("834"),
+                        n.e("2368"),
+                        n.e("42842"),
+                        n.e("33115"),
+                        n.e("6338"),
+                        n.e("18573"),
+                        n.e("55936"),
+                        n.e("85404"),
+                        n.e("44057"),
+                        n.e("17879"),
+                        n.e("88774"),
+                        n.e("10120"),
+                        n.e("62175"),
+                        n.e("31988"),
+                        n.e("44571"),
+                        n.e("34303"),
+                        n.e("97270"),
+                        n.e("45959"),
+                        n.e("73122"),
+                        n.e("8304"),
+                        n.e("93159"),
+                        n.e("71202"),
+                        n.e("8739"),
+                        n.e("88131"),
+                        n.e("42834"),
+                        n.e("43430"),
+                        n.e("94723"),
+                        n.e("28866"),
+                        n.e("62931"),
+                        n.e("58529"),
+                        n.e("58038"),
+                        n.e("62531"),
+                        n.e("34801"),
+                        n.e("6174"),
                         n.e("93103"),
                         n.e("28367"),
                         n.e("81647"),
+                        n.e("11310"),
                         n.e("76602"),
                         n.e("91763"),
                         n.e("21921"),
                         n.e("9233"),
-                        n.e("40402"),
                         n.e("36877"),
                         n.e("72963"),
                         n.e("52511"),
+                        n.e("40402"),
                         n.e("7575"),
+                        n.e("53930"),
+                        n.e("42724"),
+                        n.e("93766"),
+                        n.e("13823"),
+                        n.e("24303"),
                         n.e("39970"),
                         n.e("76418"),
-                        n.e("93766"),
                         n.e("40258"),
-                        n.e("24303"),
+                        n.e("98329"),
+                        n.e("92583"),
                         n.e("43437"),
+                        n.e("21957"),
                         n.e("66495"),
                         n.e("71210"),
                         n.e("8555"),
                         n.e("86127"),
-                        n.e("21957"),
+                        n.e("28095"),
+                        n.e("46070"),
                         n.e("88599"),
                         n.e("75842"),
                         n.e("36863"),
-                        n.e("98329"),
-                        n.e("72789"),
-                        n.e("88342"),
-                        n.e("6949"),
-                        n.e("28095"),
-                        n.e("46070"),
-                        n.e("17249"),
-                        n.e("71273"),
                         n.e("21200"),
+                        n.e("72789"),
                         n.e("54622"),
-                        n.e("9640"),
-                        n.e("62422"),
                         n.e("28203"),
                         n.e("25949"),
+                        n.e("88342"),
+                        n.e("6949"),
+                        n.e("54638"),
+                        n.e("17249"),
+                        n.e("71273"),
+                        n.e("79049"),
+                        n.e("9640"),
+                        n.e("62422"),
                         n.e("90365"),
                         n.e("89088"),
                         n.e("52548"),
@@ -448,45 +575,52 @@ class ee extends r.PureComponent {
                         n.e("35027"),
                         n.e("67861"),
                         n.e("1518"),
-                        n.e("79049"),
+                        n.e("37977"),
+                        n.e("49653"),
                         n.e("47626"),
                         n.e("23354"),
                         n.e("82644"),
+                        n.e("3589"),
+                        n.e("24689"),
                         n.e("53984"),
-                        n.e("37977"),
                         n.e("43780"),
                         n.e("20590"),
+                        n.e("47958"),
                         n.e("65437"),
                         n.e("80830"),
                         n.e("79745"),
-                        n.e("3589"),
                         n.e("80854"),
                         n.e("35395"),
                         n.e("45413"),
                         n.e("46844"),
                         n.e("63235"),
-                        n.e("12193"),
+                        n.e("90757"),
                         n.e("86672"),
+                        n.e("94427"),
                         n.e("32756"),
                         n.e("64850"),
                         n.e("70104"),
                         n.e("2564"),
+                        n.e("95152"),
                         n.e("71477"),
                         n.e("19558"),
                         n.e("58946"),
+                        n.e("86023"),
                         n.e("14285"),
                         n.e("48330"),
                         n.e("95752"),
+                        n.e("51011"),
                         n.e("3332"),
+                        n.e("30788"),
                         n.e("8362"),
                         n.e("41678"),
                         n.e("72401"),
                         n.e("52617"),
                         n.e("4744"),
                         n.e("2698"),
-                        n.e("95152"),
                         n.e("37021"),
                         n.e("81314"),
+                        n.e("62819"),
                         n.e("71430"),
                         n.e("501"),
                         n.e("86243"),
@@ -499,25 +633,33 @@ class ee extends r.PureComponent {
                         n.e("13658"),
                         n.e("87478"),
                         n.e("39171"),
+                        n.e("74630"),
+                        n.e("48948"),
+                        n.e("63244"),
+                        n.e("68214"),
                         n.e("44780"),
+                        n.e("91450"),
                         n.e("83952"),
                         n.e("93438"),
+                        n.e("36227"),
                         n.e("95340"),
                         n.e("44567"),
                         n.e("5557"),
                         n.e("62718"),
+                        n.e("89916"),
                         n.e("1812"),
+                        n.e("60773"),
                         n.e("92128"),
                         n.e("9004"),
-                        n.e("89916"),
+                        n.e("18113"),
+                        n.e("8018"),
                         n.e("92295"),
                         n.e("49145"),
                         n.e("41807"),
-                        n.e("60773"),
                         n.e("68763"),
+                        n.e("79548"),
                         n.e("99549"),
                         n.e("58273"),
-                        n.e("8018"),
                         n.e("20930"),
                         n.e("74610"),
                         n.e("15109"),
@@ -551,8 +693,8 @@ class ee extends r.PureComponent {
                         n.e("16084"),
                         n.e("73669"),
                         n.e("10943"),
-                        n.e("60989"),
                         n.e("7775"),
+                        n.e("60989"),
                         n.e("61058"),
                         n.e("50342"),
                         n.e("33097"),
@@ -572,6 +714,7 @@ class ee extends r.PureComponent {
                         n.e("63726"),
                         n.e("71329"),
                         n.e("56373"),
+                        n.e("83827"),
                         n.e("42749"),
                         n.e("56026"),
                         n.e("16301"),
@@ -587,7 +730,7 @@ class ee extends r.PureComponent {
                         n.e("66913"),
                         n.e("71719"),
                         n.e("19690"),
-                        n.e("83827"),
+                        n.e("93767"),
                         n.e("13848"),
                         n.e("39214"),
                         n.e("99108"),
@@ -604,7 +747,6 @@ class ee extends r.PureComponent {
                         n.e("52695"),
                         n.e("16373"),
                         n.e("81398"),
-                        n.e("93767"),
                         n.e("24484"),
                         n.e("44943"),
                         n.e("32347"),
@@ -630,11 +772,11 @@ class ee extends r.PureComponent {
                         n.e("21300"),
                         n.e("17699"),
                         n.e("57032"),
-                        n.e("45322"),
+                        n.e("22941"),
                         n.e("94832"),
                         n.e("26386"),
                         n.e("65338"),
-                        n.e("71790"),
+                        n.e("94171"),
                         n.e("76064"),
                         n.e("74572"),
                     ]).then(n.bind(n, 860417));
@@ -646,10 +788,10 @@ class ee extends r.PureComponent {
                     s = R.A.getGuild(r.getGuildId());
                 if (null == s) return;
                 switch (r.type) {
-                    case V.rbe.GUILD_TEXT:
-                    case V.rbe.GUILD_ANNOUNCEMENT:
-                    case V.rbe.GUILD_FORUM:
-                    case V.rbe.GUILD_MEDIA:
+                    case F.rbe.GUILD_TEXT:
+                    case F.rbe.GUILD_ANNOUNCEMENT:
+                    case F.rbe.GUILD_FORUM:
+                    case F.rbe.GUILD_MEDIA:
                         return (0, g.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("26132"),
@@ -679,8 +821,8 @@ class ee extends r.PureComponent {
                             ]).then(n.bind(n, 468916));
                             return (t) => (0, i.jsx)(e, { ...t, channel: r, guild: s, onSelect: l.jD });
                         });
-                    case V.rbe.GUILD_VOICE:
-                    case V.rbe.GUILD_STAGE_VOICE:
+                    case F.rbe.GUILD_VOICE:
+                    case F.rbe.GUILD_STAGE_VOICE:
                         return (0, g.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("26132"),
@@ -716,9 +858,9 @@ class ee extends r.PureComponent {
                             ]).then(n.bind(n, 119357));
                             return (t) => (0, i.jsx)(e, { ...t, channel: r, guild: s, onSelect: l.jD });
                         });
-                    case V.rbe.ANNOUNCEMENT_THREAD:
-                    case V.rbe.PUBLIC_THREAD:
-                    case V.rbe.PRIVATE_THREAD:
+                    case F.rbe.ANNOUNCEMENT_THREAD:
+                    case F.rbe.PUBLIC_THREAD:
+                    case F.rbe.PRIVATE_THREAD:
                         return (0, g.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("26132"),
@@ -739,7 +881,7 @@ class ee extends r.PureComponent {
                             ]).then(n.bind(n, 612826));
                             return (t) => (0, i.jsx)(e, { ...t, channel: r, onSelect: l.jD });
                         });
-                    case V.rbe.GUILD_STORE:
+                    case F.rbe.GUILD_STORE:
                         return (0, g.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("26132"),
@@ -754,7 +896,7 @@ class ee extends r.PureComponent {
                             ]).then(n.bind(n, 313140));
                             return (t) => (0, i.jsx)(e, { ...t, channel: r, guild: s, onSelect: l.jD });
                         });
-                    case V.rbe.GUILD_DIRECTORY:
+                    case F.rbe.GUILD_DIRECTORY:
                         return (0, g.L3)(e, async () => {
                             let { default: e } = await Promise.all([
                                 n.e("26132"),
@@ -786,7 +928,7 @@ class ee extends r.PureComponent {
                         (0, i.jsx)(e, {
                             ...n,
                             channel: t.record,
-                            selected: D.A.getChannelId() === t.record.id,
+                            selected: L.A.getChannelId() === t.record.id,
                             onSelect: l.jD,
                         });
                 });
@@ -871,10 +1013,10 @@ class ee extends r.PureComponent {
             r = t.length > 0 && "" !== n;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(w.EG, { event: V.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
-                (0, i.jsx)(E.vN, {
+                (0, i.jsx)(w.EG, { event: F.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
+                (0, i.jsx)(p.vN, {
                     children: (0, i.jsx)("input", {
-                        className: W.hF,
+                        className: Y.hF,
                         "aria-label": B.intl.string(B.t.ZvKwYa),
                         ref: this.inputRef,
                         type: "text",
@@ -914,15 +1056,15 @@ class ee extends r.PureComponent {
                         rowHeight: 34,
                         paddingBottom: 10,
                         sections: [t.length],
-                        className: W.XG,
+                        className: Y.XG,
                         renderRow: this.renderRow,
                         renderSection: this.renderSection,
                     });
         };
-        return (0, i.jsx)("div", { className: W.sN, children: e() });
+        return (0, i.jsx)("div", { className: Y.sN, children: e() });
     }
     focusNode(e) {
-        M._.dispatch(V.jej.QUICKSWITCHER_RESULT_FOCUS, { node: e });
+        P._.dispatch(F.jej.QUICKSWITCHER_RESULT_FOCUS, { node: e });
     }
     getRowId(e) {
         return `quick-switcher-${this._listId}-item-${e}`;
@@ -934,12 +1076,12 @@ class ee extends r.PureComponent {
             { showScores: s } = S.getCurrentConfig({ location: "62f4be_1" }, { autoTrackExposure: !1 }),
             { enabled: a, alternatePosition: o } = x.s.getConfig({ location: "QuickSwitcher.renderRow" }),
             l = a && !o ? B.intl.string(B.t["5qyruI"]) : void 0,
-            u = a && o ? (0, i.jsx)("div", { className: W.MD, children: B.intl.string(B.t["5qyruI"]) }) : null,
+            u = a && o ? (0, i.jsx)("div", { className: Y.MD, children: B.intl.string(B.t["5qyruI"]) }) : null,
             c = o ? void 0 : B.intl.string(B.t["9CHfCO"]),
-            d = o ? (0, i.jsx)("div", { className: W.MD, children: B.intl.string(B.t["9CHfCO"]) }) : null;
+            d = o ? (0, i.jsx)("div", { className: Y.MD, children: B.intl.string(B.t["9CHfCO"]) }) : null;
         switch (n.type) {
             case T.rD.HEADER:
-                return (0, i.jsx)(k.Y9, { children: n.record.text }, `${n.type}-${n.record.id}`);
+                return (0, i.jsx)(U.Y9, { children: n.record.text }, `${n.type}-${n.record.id}`);
             case T.rD.TEXT_CHANNEL:
                 return (0, i.jsx)(
                     z,
@@ -1020,7 +1162,7 @@ class ee extends r.PureComponent {
                 );
             case T.rD.APPLICATION:
                 return (0, i.jsx)(
-                    k.lg,
+                    U.lg,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -1033,7 +1175,7 @@ class ee extends r.PureComponent {
                 );
             case T.rD.GAME_PROFILE:
                 return (0, i.jsx)(
-                    k.IH,
+                    U.IH,
                     {
                         id: this.getRowId(t),
                         focused: r >= 0 && t === r,
@@ -1048,7 +1190,7 @@ class ee extends r.PureComponent {
                 );
             case T.rD.LINK:
                 return (0, i.jsx)(
-                    k.N_,
+                    U.N_,
                     {
                         focused: r >= 0 && t === r,
                         onClick: () => this.selectResult(n),
@@ -1063,7 +1205,7 @@ class ee extends r.PureComponent {
                 );
             case T.rD.IN_APP_NAVIGATION:
                 return (0, i.jsx)(
-                    k.vw,
+                    U.vw,
                     {
                         focused: r >= 0 && t === r,
                         onClick: () => this.selectResult(n),
@@ -1087,11 +1229,11 @@ class ee extends r.PureComponent {
                 textChannelSymbolHook: (e, t) => J(t, T.AT.TEXT_CHANNEL, B.intl.string(B.t.wrwhuZ)),
                 voiceChannelSymbolHook: (e, t) => J(t, T.AT.VOICE_CHANNEL, B.intl.string(B.t["jz+hJp"])),
                 guildSymbolHook: (e, t) => J(t, T.AT.GUILD, B.intl.string(B.t.WuwCWi)),
-                helpdeskArticle: P.A.getArticleURL(V.MVz.QUICK_SWITCHER_TUTORIAL),
+                helpdeskArticle: M.A.getArticleURL(F.MVz.QUICK_SWITCHER_TUTORIAL),
             };
-        return (0, i.jsx)(y.A, {
-            className: d()(W.PP, { [W.ov]: this.state.query.length > 0 }),
-            type: y.A.Types.INLINE,
+        return (0, i.jsx)(N.A, {
+            className: d()(Y.PP, { [Y.ov]: this.state.query.length > 0 }),
+            type: N.A.Types.INLINE,
             children: e
                 ? B.intl.format(B.t.BGHbLb, {
                       ...t,
@@ -1103,7 +1245,7 @@ class ee extends r.PureComponent {
     renderTutorial() {
         let { query: e } = this.state,
             { seenTutorial: t, results: n } = this.props;
-        return t ? null : (0, i.jsx)(Y, { hasQuery: e.length > 0 && n.length > 0 });
+        return t ? null : (0, i.jsx)(W, { hasQuery: e.length > 0 && n.length > 0 });
     }
     render() {
         return (0, i.jsx)(_.d, {
@@ -1112,7 +1254,7 @@ class ee extends r.PureComponent {
             transitionState: this.props.transitionState,
             onClose: this.props.onClose,
             children: (0, i.jsxs)("div", {
-                className: W.rs,
+                className: Y.rs,
                 onMouseMove: this.handleMouseMove,
                 children: [this.renderInput(), this.renderResults(), this.renderProtip(), this.renderTutorial()],
             }),

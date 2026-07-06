@@ -1,44 +1,43 @@
-"use strict";
-n.d(t, { r: () => h });
-var i = n(64700),
-    r = n(17928),
-    s = n(183972),
-    a = n(919466),
-    o = n(297966),
-    l = n(469778),
-    u = n(777376),
-    c = n(674567),
-    d = n(202541);
-let _ = {
-    [o.gR.INITIAL]: u.p.CLAIM_IN_PROGRESS,
-    [o.gR.AWAITING_ACTIVATION]: u.p.CLAIM_IN_PROGRESS,
-    [o.gR.ACTIVATED]: u.p.CLAIMED,
-    [o.gR.FAILED]: u.p.NOT_CLAIMED,
-    [o.gR.EXPIRED]: u.p.NOT_CLAIMED,
-    [o.gR.CANCELLATION_PENDING]: u.p.CANCELLATION_IN_PROGRESS,
+A.d(e, { r: () => c });
+var r = A(64700),
+    I = A(17928),
+    a = A(183972),
+    C = A(919466),
+    E = A(297966),
+    _ = A(469778),
+    l = A(777376),
+    N = A(674567),
+    n = A(202541);
+let u = {
+    [E.gR.INITIAL]: l.p.CLAIM_IN_PROGRESS,
+    [E.gR.AWAITING_ACTIVATION]: l.p.CLAIM_IN_PROGRESS,
+    [E.gR.ACTIVATED]: l.p.CLAIMED,
+    [E.gR.FAILED]: l.p.NOT_CLAIMED,
+    [E.gR.EXPIRED]: l.p.NOT_CLAIMED,
+    [E.gR.CANCELLATION_PENDING]: l.p.CANCELLATION_IN_PROGRESS,
 };
-function h() {
-    let e = (0, c.V)(),
-        t = (0, r.bG)([l.A], () => l.A.isFetchedForApplication(d.tv)),
-        { activationStatus: n, activationRequestState: h } = (0, r.cf)([a.A], () => ({
-            activationStatus: a.A.getActivationStatus(),
-            activationRequestState: a.A.getRequestState(),
+function c() {
+    let t = (0, N.V)(),
+        e = (0, I.bG)([_.A], () => _.A.isFetchedForApplication(n.tv)),
+        { activationStatus: A, activationRequestState: c } = (0, I.cf)([C.A], () => ({
+            activationStatus: C.A.getActivationStatus(),
+            activationRequestState: C.A.getRequestState(),
         })),
-        f = t && (null != n ? n.state === o.gR.CANCELLATION_PENDING : h === o.db.NOT_FETCHED);
+        i = e && (null != A ? A.state === E.gR.CANCELLATION_PENDING : c === E.db.NOT_FETCHED);
     return (
-        i.useEffect(() => {
-            e === c.s.HAS_ACCESS && f && (0, s.x6)(o.n9.XGPP);
-        }, [e, f]),
-        (function (e) {
-            let { activationStatus: t, activationRequestState: n } = e,
-                i = n === o.db.FETCHING || n === o.db.CANCELLING;
-            return n === o.db.NOT_FETCHED || n === o.db.FETCHING
-                ? { status: u.p.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
+        r.useEffect(() => {
+            t === N.s.HAS_ACCESS && i && (0, a.x6)(E.n9.XGPP);
+        }, [t, i]),
+        (function (t) {
+            let { activationStatus: e, activationRequestState: A } = t,
+                r = A === E.db.FETCHING || A === E.db.CANCELLING;
+            return A === E.db.NOT_FETCHED || A === E.db.FETCHING
+                ? { status: l.p.NOT_CLAIMED, redirect: null, requestInProgress: !0 }
                 : {
-                      status: null != t ? _[t.state] : u.p.NOT_CLAIMED,
-                      redirect: t?.redirect ?? null,
-                      requestInProgress: i,
+                      status: null != e ? u[e.state] : l.p.NOT_CLAIMED,
+                      redirect: e?.redirect ?? null,
+                      requestInProgress: r,
                   };
-        })({ activationStatus: n, activationRequestState: h })
+        })({ activationStatus: A, activationRequestState: c })
     );
 }

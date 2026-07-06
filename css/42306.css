@@ -1,0 +1,63 @@
+.invoiceTable__25766 {
+    margin-bottom: 16px
+}
+
+.invoiceRow__25766 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    font-size: 16px;
+    font-weight: var(--font-weight-medium);
+    gap: 10px;
+    line-height: 20px
+}
+
+.invoiceRow__25766:not(:last-child) {
+    margin-bottom: 8px
+}
+
+.invoiceTagColumn__25766 {
+    flex: 1
+}
+
+.invoiceDescriptionColumn__25766 {
+    flex: 5
+}
+
+.invoiceRegularText__25766 {
+    color: var(--text-strong)
+}
+
+.invoiceDiscountText__25766 {
+    color: var(--text-feedback-positive)
+}
+
+.invoiceDiscountTag__25766 {
+    background-color: var(--green-360);
+    border-radius: 12px;
+    display: inline-block;
+    padding: 2px 6px;
+    position: relative;
+    text-align: center
+}
+
+.totalRow__25766 {
+    font-weight: 700
+}
+
+.slayerStorefrontProductPreview__25766 {
+    box-sizing: border-box;
+    height: 48px;
+    width: 48px
+}
+
+.invoiceProductPreviewImage__25766 {
+    max-height: 64px;
+    max-width: 64px
+}
+
+.rentalDescription__25766 {
+    color: var(--text-muted);
+    display: block;
+    margin-top: 4px
+}

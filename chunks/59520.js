@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { I: () => o, J: () => a });
-var i = n(64700),
-    r = n(735438);
-function s(e) {
-    return e;
+r.d(e, { I: () => h, J: () => i });
+var n = r(64700),
+    u = r(735438);
+function c(t) {
+    return t;
 }
-let a = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            r = arguments.length > 3 ? arguments[3] : void 0,
-            a = o(s, t, n, r),
-            l = i.useRef(e);
+let i = function (t, e) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+            u = arguments.length > 3 ? arguments[3] : void 0,
+            i = h(c, e, r, u),
+            o = n.useRef(t);
         return (
-            i.useEffect(() => {
-                l.current = a(e);
-            }, [e, a]),
-            0 === t ? e : l.current
+            n.useEffect(() => {
+                o.current = i(t);
+            }, [t, i]),
+            0 === e ? t : o.current
         );
     },
-    o = function (e, t) {
-        let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            s = arguments.length > 3 ? arguments[3] : void 0,
-            a = i.useRef((0, r.throttle)(e, t, s));
+    h = function (t, e) {
+        let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
+            c = arguments.length > 3 ? arguments[3] : void 0,
+            i = n.useRef((0, u.throttle)(t, e, c));
         return (
-            i.useEffect(
+            n.useEffect(
                 () => (
-                    (a.current = (0, r.throttle)(e, t, s)),
+                    (i.current = (0, u.throttle)(t, e, c)),
                     () => {
-                        a.current?.cancel();
+                        i.current?.cancel();
                     }
                 ),
-                [e, t, s, ...n],
+                [t, e, c, ...r],
             ),
-            a.current
+            i.current
         );
     };

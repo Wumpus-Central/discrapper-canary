@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { K: () => d });
-var i = n(627968),
-    r = n(503698),
-    s = n.n(r),
-    a = n(17928),
-    o = n(462887),
-    l = n(607470),
-    u = n(363195),
-    c = n(475437);
-function d(e) {
-    let { className: t, options: n } = e,
-        r = (0, a.bG)([u.A], () => (0, o.M)(u.A.theme));
-    return null == n
+t.d(s, { K: () => p });
+var l = t(627968),
+    a = t(503698),
+    u = t.n(a),
+    c = t(17928),
+    n = t(462887),
+    r = t(607470),
+    i = t(363195),
+    d = t(475437);
+function p(e) {
+    let { className: s, options: t } = e,
+        a = (0, c.bG)([i.A], () => (0, n.M)(i.A.theme));
+    return null == t
         ? null
-        : null != n
-          ? n.animated
-              ? (0, i.jsx)(l.A, {
-                    src: n.getSrc(r),
-                    className: s()(c.O, t),
-                    style: n.style,
+        : null != t
+          ? t.animated
+              ? (0, l.jsx)(r.A, {
+                    src: t.getSrc(a),
+                    className: u()(d.O, s),
+                    style: t.style,
                     loop: !1,
                     muted: !0,
                     autoPlay: !0,
                 })
-              : (0, i.jsx)("img", {
-                    src: n.getSrc(r),
-                    className: s()(c.O, t),
-                    style: n.style,
+              : (0, l.jsx)("img", {
+                    src: t.getSrc(a),
+                    className: u()(d.O, s),
+                    style: t.style,
                     alt: "",
                     "aria-hidden": "true",
                 })

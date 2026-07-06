@@ -1,144 +1,143 @@
-"use strict";
-n.d(t, { W: () => N, _: () => C });
-var i = n(627968),
-    r = n(64700),
-    s = n(284009),
-    a = n.n(s),
-    o = n(364840),
-    l = n(331322),
-    u = n(123292),
-    c = n(38021),
-    d = n(834730),
-    _ = n(821609),
-    h = n(480642),
+n.d(t, { W: () => S, _: () => g });
+var a = n(627968),
+    i = n(64700),
+    c = n(284009),
+    r = n.n(c),
+    l = n(364840),
+    s = n(331322),
+    o = n(123292),
+    d = n(38021),
+    u = n(834730),
+    b = n(821609),
+    p = n(169797),
     f = n(166532),
-    p = n(997330),
-    E = n(659746),
-    m = n(975571),
-    g = n(652215),
-    A = n(26279),
-    I = n(788868),
-    T = n(818348),
-    S = n(375708),
-    y = n(7921);
-function C(e) {
+    m = n(997330),
+    y = n(659746),
+    E = n(975571),
+    h = n(652215),
+    v = n(26279),
+    x = n(202541),
+    R = n(818348),
+    j = n(375708),
+    I = n(7921);
+function g(e) {
     let {
         currentStep: t,
         isRefreshEnabled: n,
-        backStep: r,
-        handleStepChange: s,
-        primaryButtonProps: c,
-        secondaryButton: d,
-        legacySubmitButton: _,
+        backStep: i,
+        handleStepChange: c,
+        primaryButtonProps: d,
+        secondaryButton: u,
+        legacySubmitButton: b,
     } = e;
     return t === f.pn.CONFIRM
         ? null
         : t === f.pn.REVIEW
-          ? (a()(null != c, "Missing primaryButtonProps for review step"),
-            (0, i.jsx)(h.lo, { onBackClick: null != r ? () => s(r) : void 0, primaryButtonProps: c }))
-          : (0, i.jsx)(o.j, {
-                children: (0, i.jsxs)(l.B, {
+          ? (r()(null != d, "Missing primaryButtonProps for review step"),
+            (0, a.jsx)(p.lo, { onBackClick: null != i ? () => c(i) : void 0, primaryButtonProps: d }))
+          : (0, a.jsx)(l.j, {
+                children: (0, a.jsxs)(s.B, {
                     direction: "horizontal",
                     align: "center",
-                    justify: null != r ? "space-between" : "end",
+                    justify: null != i ? "space-between" : "end",
                     fullWidth: !0,
                     children: [
-                        null != r
-                            ? (0, i.jsx)(u.Q, {
-                                  text: S.intl.string(S.t["13/7kX"]),
-                                  onClick: () => s(r),
+                        null != i
+                            ? (0, a.jsx)(o.Q, {
+                                  text: j.intl.string(j.t["13/7kX"]),
+                                  onClick: () => c(i),
                                   variant: "secondary",
                               })
                             : null,
-                        (0, i.jsxs)(l.B, {
+                        (0, a.jsxs)(s.B, {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
                             ...(n && t === f.pn.PLAN_SELECT ? { gap: 8 } : {}),
                             fullWidth: !1,
-                            children: [d, _],
+                            children: [u, b],
                         }),
                     ],
                 }),
             });
 }
-function N(e) {
+function S(e) {
     let t,
         {
             onClose: n,
-            guild: s,
-            guildBoostQuantity: a,
-            isTransfer: o = !1,
-            withAnimation: l = !0,
-            paymentSourceType: u,
-            didPurchaseOnFractionalPremium: h = !1,
+            guild: c,
+            guildBoostQuantity: r,
+            isTransfer: l = !1,
+            withAnimation: s = !0,
+            paymentSourceType: o,
+            didPurchaseOnFractionalPremium: p = !1,
             fallbackGuildName: f,
-            customCheckoutFlow: C,
+            customCheckoutFlow: g,
         } = e,
-        { theme: N } = (0, c.wR)(),
-        [v, R] = r.useState(p.V1.Scenes.ENTRY),
-        [O, b] = r.useState(!1),
-        D = s?.name ?? f;
+        { theme: S } = (0, d.wR)(),
+        [w, U] = i.useState(m.V1.Scenes.ENTRY),
+        [L, N] = i.useState(!1),
+        T = c?.name ?? f;
     return (
-        (t = o
-            ? null == D
-                ? S.intl.format(S.t.P52e1r, {})
-                : S.intl.format(S.t["4UnIk9"], { guildName: D })
-            : h
-              ? S.intl.format(S.t.gFaKd1, { helpCenterLink: m.A.getArticleURL(g.MVz.FRACTIONAL_PREMIUM_ABOUT) })
-              : null == D
-                ? S.intl.format(S.t.SZ5ohR, { guildSubscriptionQuantity: a })
-                : S.intl.format(S.t.GxK3Mv, { guildName: D, guildSubscriptionQuantity: a })),
-        (0, i.jsxs)("div", {
-            className: y.RP,
+        (t = l
+            ? null == T
+                ? j.intl.format(j.t.P52e1r, {})
+                : j.intl.format(j.t["4UnIk9"], { guildName: T })
+            : p
+              ? j.intl.format(j.t.gFaKd1, { helpCenterLink: E.A.getArticleURL(h.MVz.FRACTIONAL_PREMIUM_ABOUT) })
+              : null == T
+                ? j.intl.format(j.t.SZ5ohR, { guildSubscriptionQuantity: r })
+                : j.intl.format(j.t.GxK3Mv, { guildName: T, guildSubscriptionQuantity: r })),
+        (0, a.jsxs)("div", {
+            className: I.RP,
             children: [
-                l
-                    ? (0, i.jsx)(p.V1, {
-                          className: y.ud,
-                          nextScene: v,
+                s
+                    ? (0, a.jsx)(m.V1, {
+                          className: I.ud,
+                          nextScene: w,
                           onScenePlay: (e) => {
-                              if (!O)
+                              if (!L)
                                   switch (e) {
-                                      case p.V1.Scenes.ENTRY:
-                                          return R(p.V1.Scenes.IDLE);
-                                      case p.V1.Scenes.IDLE:
-                                          return R(p.V1.Scenes.SUCCESS);
-                                      case p.V1.Scenes.SUCCESS:
-                                          return b(!0), R(p.V1.Scenes.IDLE);
+                                      case m.V1.Scenes.ENTRY:
+                                          return U(m.V1.Scenes.IDLE);
+                                      case m.V1.Scenes.IDLE:
+                                          return U(m.V1.Scenes.SUCCESS);
+                                      case m.V1.Scenes.SUCCESS:
+                                          return N(!0), U(m.V1.Scenes.IDLE);
                                   }
                           },
                           pauseWhileUnfocused: !1,
                       })
                     : null,
-                (0, i.jsx)(E.Ay, {
-                    className: y.E,
-                    theme: N,
-                    premiumType: I.PremiumTypes.TIER_2,
-                    type: T.Nc.has(u ?? T.he.UNKNOWN)
-                        ? E.Ay.Types.PREMIUM_PAYMENT_STARTED
-                        : E.Ay.Types.GUILD_BOOST_APPLIED,
+                (0, a.jsx)(y.Ay, {
+                    className: I.E,
+                    theme: S,
+                    premiumType: x.PremiumTypes.TIER_2,
+                    type: R.Nc.has(o ?? R.he.UNKNOWN)
+                        ? y.Ay.Types.PREMIUM_PAYMENT_STARTED
+                        : y.Ay.Types.GUILD_BOOST_APPLIED,
                 }),
-                (0, i.jsx)(d.E, {
+                (0, a.jsx)(u.E, {
                     variant: "text-md/medium",
                     color: "interactive-text-default",
-                    className: y.xR,
+                    className: I.xR,
                     children: t,
                 }),
-                C === A.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
-                    ? (0, i.jsx)(d.E, {
+                g === v.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
+                    ? (0, a.jsx)(u.E, {
                           variant: "text-md/medium",
                           color: "interactive-text-default",
-                          className: y.xR,
-                          children: (0, i.jsxs)("p", {
-                              children: [S.intl.string(S.t.bIVRSQ), " ", S.intl.string(S.t["0UJqOy"])],
+                          className: I.xR,
+                          children: (0, a.jsxs)("p", {
+                              children: [j.intl.string(j.t.bIVRSQ), " ", j.intl.string(j.t["0UJqOy"])],
                           }),
                       })
-                    : (0, i.jsx)(_.$, {
+                    : (0, a.jsx)(b.$, {
                           variant: "primary",
                           text:
-                              C === A.uH.MOBILE_WEB_REDIRECT_CHECKOUT
-                                  ? S.intl.string(S.t.sRApon)
-                                  : S.intl.string(S.t["/iTxgz"]),
+                              g === v.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+                                  ? j.intl.string(j.t.sRApon)
+                                  : j.intl.string(j.t["/iTxgz"]),
                           onClick: n,
                       }),
             ],

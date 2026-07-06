@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { Gm: () => l, yv: () => c });
-var i = n(627968),
-    r = n(64700),
-    s = n(786300),
-    a = n(650170);
-let [o, l, u] = (0, s.A)();
-function c(e) {
+r.d(t, { Gm: () => l, yv: () => o });
+var n = r(627968),
+    u = r(64700),
+    i = r(786300),
+    c = r(650170);
+let [s, l, a] = (0, i.A)();
+function o(e) {
     let { children: t } = e,
-        { purchaseErrorBlockRef: n } = (function () {
-            let e = r.useRef(null),
-                { purchaseError: t, setPurchaseError: n } = (0, a.t4)((e) => ({
+        { purchaseErrorBlockRef: r } = (function () {
+            let e = u.useRef(null),
+                { purchaseError: t, setPurchaseError: r } = (0, c.t4)((e) => ({
                     purchaseError: e.purchaseError,
                     setPurchaseError: e.setPurchaseError,
                 }));
             return (
-                r.useEffect(() => {
+                u.useEffect(() => {
                     null != t && null != e.current && e.current.scrollIntoView({ behavior: "smooth" });
                 }, [t]),
-                { purchaseError: t, setPurchaseError: n, purchaseErrorBlockRef: e }
+                { purchaseError: t, setPurchaseError: r, purchaseErrorBlockRef: e }
             );
         })(),
-        [s, l] = r.useState(null),
-        [u, c] = r.useState(null),
-        [d, _] = r.useState(null),
-        h = r.useMemo(
+        [i, l] = u.useState(null),
+        [a, o] = u.useState(null),
+        [d, f] = u.useState(null),
+        p = u.useMemo(
             () => ({
-                purchaseErrorBlockRef: n,
-                bodyNode: s,
+                purchaseErrorBlockRef: r,
+                bodyNode: i,
                 setBodyNode: l,
-                footerNode: u,
-                setFooterNode: c,
+                footerNode: a,
+                setFooterNode: o,
                 modalOverlayNode: d,
-                setModalOverlayNode: _,
+                setModalOverlayNode: f,
             }),
-            [n, s, u, d],
+            [r, i, a, d],
         );
-    return (0, i.jsx)(o, { value: h, children: t });
+    return (0, n.jsx)(s, { value: p, children: t });
 }

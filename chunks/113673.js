@@ -1,11 +1,11 @@
 "use strict";
 n.r(t),
     n.d(t, {
-        repairApplication: () => k,
+        repairApplication: () => U,
         updateApplication: () => x,
-        playApplication: () => v,
-        installApplication: () => P,
-        performDefaultLibraryApplicationAction: () => U,
+        playApplication: () => O,
+        installApplication: () => M,
+        performDefaultLibraryApplicationAction: () => k,
     });
 var i = n(92077),
     r = n(627968),
@@ -19,15 +19,15 @@ var i = n(92077),
     _ = n(534514),
     h = n(192308),
     f = n(54827),
-    p = n(780907),
-    E = n(587895),
+    E = n(780907),
+    p = n(587895),
     m = n(235986),
     g = n(465797),
     A = n(174459),
     I = n(652215),
     T = n(375708),
-    S = n(640150),
-    y = n(373378);
+    S = n(237846),
+    N = n(818050);
 class C extends s.PureComponent {
     onClose = () => {
         this.props.onClose();
@@ -38,7 +38,7 @@ class C extends s.PureComponent {
             let t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
                 n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                 { libraryApplication: i, analyticsParams: r } = e.props;
-            e.onClose(), v(i.id, i, { analyticsParams: r, cloudSync: t, cloudSyncForceHash: n });
+            e.onClose(), O(i.id, i, { analyticsParams: r, cloudSync: t, cloudSyncForceHash: n });
         };
     })();
     handleChooseDownload = () => {
@@ -125,7 +125,7 @@ class C extends s.PureComponent {
         let { application: e, cloudSyncState: t } = this.props;
         if (t.type !== I.VX0.CONFLICT) throw Error("Cannot render conflict for non conflict type");
         return (0, r.jsxs)(c.$m, {
-            className: y.SX,
+            className: N.SX,
             children: [
                 (0, r.jsx)("div", {
                     className: S.h_,
@@ -163,7 +163,7 @@ class C extends s.PureComponent {
                     separator: !1,
                     children: [
                         (0, r.jsx)(c.s_, { className: S.b, onClick: this.onClose }),
-                        (0, r.jsx)(_.D, { variant: "heading-lg/semibold", className: y.Gf, children: n }),
+                        (0, r.jsx)(_.D, { variant: "heading-lg/semibold", className: N.Gf, children: n }),
                     ],
                 }),
                 e.type === I.VX0.CONFLICT ? this.renderConflict() : this.renderError(),
@@ -171,12 +171,12 @@ class C extends s.PureComponent {
         });
     }
 }
-let N = l.Ay.connectStores([g.A, E.A], (e) => {
+let y = l.Ay.connectStores([g.A, p.A], (e) => {
     let { libraryApplication: t, branchId: n } = e;
-    return { cloudSyncState: g.A.getState(t.id, n), application: E.A.getApplication(t.id) };
+    return { cloudSyncState: g.A.getState(t.id, n), application: p.A.getApplication(t.id) };
 })(C);
-async function v(e, t, n) {
-    let i = E.A.getApplication(e);
+async function O(e, t, n) {
+    let i = p.A.getApplication(e);
     if (null == i) return;
     let { cloudSync: s = !0, cloudSyncForceHash: a = null, analyticsParams: o } = n;
     if (s && null != t) {
@@ -184,7 +184,7 @@ async function v(e, t, n) {
         try {
             await f.O(t.id, e, a);
         } catch (n) {
-            (0, h.openModal)((n) => (0, r.jsx)(N, { libraryApplication: t, analyticsParams: o, branchId: e, ...n }));
+            (0, h.openModal)((n) => (0, r.jsx)(y, { libraryApplication: t, analyticsParams: o, branchId: e, ...n }));
             return;
         }
     }
@@ -196,23 +196,27 @@ async function v(e, t, n) {
             distributor: null != t ? t.getDistributor() : null,
             ...o,
         }),
-        p.Ay.launch({ applicationId: i.id, branchId: t?.branchId })
+        E.Ay.launch({ applicationId: i.id, branchId: t?.branchId })
     );
 }
 var R = n(568004),
-    O = n(227841),
+    v = n(227841),
     b = n(340829),
-    D = n(966846),
-    L = n(293066),
+    L = n(966846),
+    D = n(293066),
     w = n(775228);
-function M(e, t, s, a, o) {
+function P(e, t, s, a, o) {
     let l = w.A.getInstallationPath(e.id, t),
-        u = null != e.eulaId && !L.A.hasAcceptedEULA(e.eulaId);
+        u = null != e.eulaId && !D.A.hasAcceptedEULA(e.eulaId);
     null == l || u
         ? (0, h.openModalLazy)(async () => {
-              let { default: i } = await Promise.all([n.e("92445"), n.e("52753"), n.e("16061")]).then(
-                  n.bind(n, 125484),
-              );
+              let { default: i } = await Promise.all([
+                  n.e("21918"),
+                  n.e("19573"),
+                  n.e("28866"),
+                  n.e("52753"),
+                  n.e("16061"),
+              ]).then(n.bind(n, 125484));
               return (n) => (0, r.jsx)(i, { ...n, applicationId: e.id, branchId: t, analyticsLocation: o });
           })
         : (0, i.oc)({
@@ -224,29 +228,29 @@ function M(e, t, s, a, o) {
               analyticsLocation: o,
           });
 }
-function P(e, t, n) {
-    let i = E.A.getApplication(e);
+function M(e, t, n) {
+    let i = p.A.getApplication(e);
     if (null == i) return;
     let r = R.A.getTargetBuildId(i.id, t),
         s = R.A.getTargetManifests(i.id, t);
-    null != r && null != s && null != M && M(i, t, r, s, n);
+    null != r && null != s && null != P && P(i, t, r, s, n);
 }
 function x(e, t) {
-    let n = E.A.getApplication(e);
+    let n = p.A.getApplication(e);
     if (null != n) return i.K3(n, t, R.A.getTargetBuildId(n.id, t), R.A.getTargetManifests(n.id, t));
 }
-function k(e, t, n) {
-    let r = E.A.getApplication(e);
+function U(e, t, n) {
+    let r = p.A.getApplication(e);
     if (null != r) return i.qv(r, t, n);
 }
-function U(e, t) {
-    let n = (0, O.F)(e, b.A, D.A),
+function k(e, t) {
+    let n = (0, v.F)(e, b.A, L.A),
         { analyticsParams: i } = t;
     switch (n) {
         case I.Hf6.PLAY:
-            return v(e.id, e, { analyticsParams: i });
+            return O(e.id, e, { analyticsParams: i });
         case I.Hf6.INSTALL:
-            return P(e.id, e.branchId, i.source);
+            return M(e.id, e.branchId, i.source);
         case I.Hf6.UPDATE:
             return x(e.id, e.branchId);
     }

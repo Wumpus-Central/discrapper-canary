@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { K: () => p }), n(321073);
+n.d(t, { K: () => E }), n(321073);
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -13,9 +13,9 @@ var r = n(192308),
     _ = n(430795),
     h = n(589553),
     f = n(696016);
-async function p(e, t) {
-    let { channelId: p, analyticsLocations: E, messageReference: m } = t,
-        g = o.A.getChannel(p);
+async function E(e, t) {
+    let { channelId: E, analyticsLocations: p, messageReference: m } = t,
+        g = o.A.getChannel(E);
     if (null != g) {
         if (null != m) {
             let e = u.A.getMessage(m.channel_id, m.message_id);
@@ -61,10 +61,11 @@ async function p(e, t) {
                     n.e("67861"),
                     n.e("1518"),
                     n.e("23354"),
+                    n.e("77084"),
                     n.e("44780"),
                     n.e("18997"),
-                    n.e("65617"),
                     n.e("36946"),
+                    n.e("65617"),
                     n.e("92639"),
                     n.e("44385"),
                     n.e("40963"),
@@ -75,7 +76,7 @@ async function p(e, t) {
                     n.e("95008"),
                     n.e("92871"),
                 ]).then(n.bind(n, 243258));
-                return (n) => (0, i.jsx)(t, { ...n, clips: e, analyticsLocations: E });
+                return (n) => (0, i.jsx)(t, { ...n, clips: e, analyticsLocations: p });
             },
             { stackingBehavior: "stack", modalKey: s.aU },
         );

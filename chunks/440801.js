@@ -2,19 +2,19 @@ t.d(n, { N: () => g });
 var l = t(627968),
     r = t(64700),
     a = t(503698),
-    s = t.n(a),
-    i = t(939249),
+    i = t.n(a),
+    s = t(939249),
     c = t(933832),
     d = t(624479),
     u = t(268218),
     o = t(157941),
     h = t(957565),
-    m = t(168147),
-    x = t(134536);
+    m = t(992595),
+    x = t(429128);
 function j(e) {
     let { text: n } = e,
         [t, a] = r.useState(!1);
-    return (0, l.jsx)(i.D, {
+    return (0, l.jsx)(s.D, {
         onClick: function () {
             (0, h.C)(
                 n,
@@ -30,7 +30,7 @@ function j(e) {
 function g(e) {
     let { language: n, content: r } = e;
     function a() {
-        return (0, l.jsx)("code", { className: s()(x.kw, "hljs"), children: r });
+        return (0, l.jsx)("code", { className: i()(x.kw, "hljs"), children: r });
     }
     return (0, l.jsx)("pre", {
         children: (0, l.jsxs)("div", {
@@ -41,10 +41,10 @@ function g(e) {
                     location: "CodeBlock",
                     code: r,
                     lang: n,
-                    className: s()(x.kw, "hljs"),
+                    className: i()(x.kw, "hljs"),
                     children: (0, l.jsx)(u.c2, {
-                        createPromise: () => Promise.resolve().then(t.bind(t, 149938)),
-                        webpackId: 149938,
+                        createPromise: () => Promise.all([t.e("57036"), t.e("75134")]).then(t.bind(t, 981776)),
+                        webpackId: 981776,
                         renderFallback: a,
                         render: (e) => {
                             if (!(null != n && e.hasLanguage(n))) return a();
@@ -53,7 +53,7 @@ function g(e) {
                                 return null == t
                                     ? a()
                                     : (0, l.jsx)("code", {
-                                          className: s()(x.kw, "hljs", t.language),
+                                          className: i()(x.kw, "hljs", t.language),
                                           dangerouslySetInnerHTML: { __html: t.value },
                                       });
                             }

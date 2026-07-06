@@ -1,60 +1,59 @@
-"use strict";
-n.d(t, { _z: () => h, x0: () => p, dI: () => f, k3: () => _ });
-var i,
-    r =
-        (((i = {}).DESKTOP = "desktop"),
-        (i.XBOX = "xbox"),
-        (i.PLAYSTATION = "playstation"),
-        (i.SWITCH = "switch"),
-        (i.APPLE_ARCADE = "apple arcade"),
-        (i.NETFLIX = "netflix"),
-        (i.AMAZON_KIDS_PLUS = "amazon kids+"),
-        i),
-    s = n(773669),
-    a = n(832163);
-n(652215);
-var o = n(580350),
-    l = n(375708);
+a.d(n, { _z: () => m, x0: () => c, dI: () => s, k3: () => p });
+var l,
+    e =
+        (((l = {}).DESKTOP = "desktop"),
+        (l.XBOX = "xbox"),
+        (l.PLAYSTATION = "playstation"),
+        (l.SWITCH = "switch"),
+        (l.APPLE_ARCADE = "apple arcade"),
+        (l.NETFLIX = "netflix"),
+        (l.AMAZON_KIDS_PLUS = "amazon kids+"),
+        l),
+    o = a(773669),
+    i = a(832163);
+a(652215);
+var r = a(430825),
+    f = a(375708);
 let u = {
-        [r.DESKTOP]: "PC",
-        [r.XBOX]: "Xbox",
-        [r.PLAYSTATION]: "PlayStation",
-        [r.SWITCH]: "Switch",
-        [r.APPLE_ARCADE]: "Apple Arcade",
-        [r.NETFLIX]: "Netflix",
-        [r.AMAZON_KIDS_PLUS]: "Amazon Kids+",
+        [e.DESKTOP]: "PC",
+        [e.XBOX]: "Xbox",
+        [e.PLAYSTATION]: "PlayStation",
+        [e.SWITCH]: "Switch",
+        [e.APPLE_ARCADE]: "Apple Arcade",
+        [e.NETFLIX]: "Netflix",
+        [e.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
-    c = [r.PLAYSTATION];
-function d(e) {
-    let t = (function (e) {
-        if (null == e) return c;
-        let t = a.A.getConfigForApplicationId(e);
-        return null == t ? c : t.excludedPlatforms;
-    })(e);
-    return 0 === t.length
+    d = [e.PLAYSTATION];
+function A(t) {
+    let n = (function (t) {
+        if (null == t) return d;
+        let n = i.A.getConfigForApplicationId(t);
+        return null == n ? d : n.excludedPlatforms;
+    })(t);
+    return 0 === n.length
         ? ""
-        : l.intl.formatToPlainString(o.default["5h8p5P"], {
-              platforms: new Intl.ListFormat(s.default.locale).format(t.map((e) => u[e])),
-              count: t.length,
+        : f.intl.formatToPlainString(r.default["5h8p5P"], {
+              platforms: new Intl.ListFormat(o.default.locale).format(n.map((t) => u[t])),
+              count: n.length,
           });
 }
-function _(e) {
-    return l.intl.format(o.default.Q0dHYO, { platforms_info: d(e?.id) });
+function p(t) {
+    return f.intl.format(r.default.Q0dHYO, { platforms_info: A(t?.id) });
 }
-function h(e, t) {
-    let { shouldAppendDisclaimer: n } = t,
-        i = e?.name ?? "game's";
-    return n
-        ? l.intl.format(o.default["3ah/a2"], { applicationName: i, platforms_info: _(e) })
-        : l.intl.format(l.t.CVITgq, { applicationName: i });
+function m(t, n) {
+    let { shouldAppendDisclaimer: a } = n,
+        l = t?.name ?? "game's";
+    return a
+        ? f.intl.format(r.default["3ah/a2"], { applicationName: l, platforms_info: p(t) })
+        : f.intl.format(f.t.CVITgq, { applicationName: l });
 }
-function f(e) {
-    let t = e.name;
-    return l.intl.format(o.default.fO4b1C, { applicationName: t, platforms_info: d(e.id) });
+function s(t) {
+    let n = t.name;
+    return f.intl.format(r.default.fO4b1C, { applicationName: n, platforms_info: A(t.id) });
 }
-function p(e, t) {
-    let { hasAlreadyLinked: n } = t,
-        i = e.name,
-        r = n ? o.default.yqAKVO : o.default.vyAtfo;
-    return l.intl.format(r, { applicationName: i, platforms_info: d(e.id) });
+function c(t, n) {
+    let { hasAlreadyLinked: a } = n,
+        l = t.name,
+        e = a ? r.default.yqAKVO : r.default.vyAtfo;
+    return f.intl.format(e, { applicationName: l, platforms_info: A(t.id) });
 }

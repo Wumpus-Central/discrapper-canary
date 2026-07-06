@@ -1,0 +1,49 @@
+.blockedUsersContainer__97cfe {
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.form__97cfe {
+    align-self: stretch
+}
+
+.formItem__97cfe {
+    margin-top: 24px;
+    width: 100%
+}
+
+.topicFormItem__97cfe {
+    margin-bottom: 16px;
+    width: 100%
+}
+
+.cancelButton__97cfe {
+    margin-inline-end: 8px
+}
+
+.addImageHint__97cfe,
+.warning__97cfe {
+    margin-bottom: 8px
+}
+
+.imageField__97cfe {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4)
+}
+
+.imagePreview__97cfe {
+    margin-bottom: 8px
+}
+
+.imagePreviewInner__97cfe {
+    width: 100%
+}
+
+.header__047bc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: var(--space-16) 0
+}

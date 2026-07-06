@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { H: () => l, M: () => u });
-var i,
-    r = n(64700),
-    s = n(688810),
-    a = n(174459),
-    o = n(652215),
-    l = (((i = {}).CLAIM = "claim"), (i.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (i.CANCEL = "cancel"), i);
-function u(e) {
-    let { analyticsLocations: t } = (0, s.Ay)();
-    return r.useCallback(
-        (n, i) => {
-            a.default.track(o.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
-                partner: e,
-                cta_type: n,
-                url: i ?? null,
-                location_stack: t,
+A.d(e, { H: () => _, M: () => l });
+var r,
+    I = A(64700),
+    a = A(688810),
+    C = A(174459),
+    E = A(652215),
+    _ = (((r = {}).CLAIM = "claim"), (r.PARTNER_PAGE_REDIRECT = "partner_page_redirect"), (r.CANCEL = "cancel"), r);
+function l(t) {
+    let { analyticsLocations: e } = (0, a.Ay)();
+    return I.useCallback(
+        (A, r) => {
+            C.default.track(E.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
+                partner: t,
+                cta_type: A,
+                url: r ?? null,
+                location_stack: e,
             });
         },
-        [e, t],
+        [t, e],
     );
 }

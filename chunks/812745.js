@@ -1,47 +1,46 @@
-"use strict";
-n.d(t, { Ay: () => E, Be: () => _, Nj: () => h, y3: () => f });
-var i,
+n.d(t, { Ay: () => A, Be: () => m, Nj: () => f, y3: () => p });
+var a,
     r = n(627968),
-    s = n(64700),
-    a = n(503698),
-    o = n.n(a),
-    l = n(355522),
-    u = n(37766),
+    l = n(64700),
+    i = n(503698),
+    s = n.n(i),
+    u = n(355522),
+    o = n(37766),
     c = n(637956),
     d = n(34382),
-    _ =
-        (((i = {}).UNKNOWN = "unknown"),
-        (i.VISA = "visa"),
-        (i.DISCOVER = "discover"),
-        (i.MASTERCARD = "mastercard"),
-        (i.AMEX = "amex"),
-        (i.PAYPAL = "paypal"),
-        (i.PAYMENT_REQUEST = "paymentRequest"),
-        (i.G_PAY = "gPay"),
-        (i.DINERS = "diners"),
-        (i.JCB = "jcb"),
-        (i.UNIONPAY = "unionpay"),
-        (i.SOFORT = "sofort"),
-        (i.PRZELEWY24 = "przelewy24"),
-        (i.GIROPAY = "giropay"),
-        (i.PAYSAFECARD = "paysafecard"),
-        (i.GCASH = "gcash"),
-        (i.GRABPAY = "grabpay"),
-        (i.MOMO_WALLET = "momo_wallet"),
-        (i.VENMO = "venmo"),
-        (i.KAKAOPAY = "kakaopay"),
-        (i.GOPAY_WALLET = "gopay_wallet"),
-        (i.BANCONTACT = "bancontact"),
-        (i.EPS = "eps"),
-        (i.IDEAL = "ideal"),
-        (i.CASH_APP = "cash_app"),
-        (i.APPLE = "apple"),
-        (i.APPLE_LIGHT = "apple_light"),
-        (i.BANK = "bank"),
-        (i.GIFT_CARD = "gift_card"),
-        (i.PIX = "pix"),
-        i);
-function h(e) {
+    m =
+        (((a = {}).UNKNOWN = "unknown"),
+        (a.VISA = "visa"),
+        (a.DISCOVER = "discover"),
+        (a.MASTERCARD = "mastercard"),
+        (a.AMEX = "amex"),
+        (a.PAYPAL = "paypal"),
+        (a.PAYMENT_REQUEST = "paymentRequest"),
+        (a.G_PAY = "gPay"),
+        (a.DINERS = "diners"),
+        (a.JCB = "jcb"),
+        (a.UNIONPAY = "unionpay"),
+        (a.SOFORT = "sofort"),
+        (a.PRZELEWY24 = "przelewy24"),
+        (a.GIROPAY = "giropay"),
+        (a.PAYSAFECARD = "paysafecard"),
+        (a.GCASH = "gcash"),
+        (a.GRABPAY = "grabpay"),
+        (a.MOMO_WALLET = "momo_wallet"),
+        (a.VENMO = "venmo"),
+        (a.KAKAOPAY = "kakaopay"),
+        (a.GOPAY_WALLET = "gopay_wallet"),
+        (a.BANCONTACT = "bancontact"),
+        (a.EPS = "eps"),
+        (a.IDEAL = "ideal"),
+        (a.CASH_APP = "cash_app"),
+        (a.APPLE = "apple"),
+        (a.APPLE_LIGHT = "apple_light"),
+        (a.BANK = "bank"),
+        (a.GIFT_CARD = "gift_card"),
+        (a.PIX = "pix"),
+        a);
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
         if ("apple" === e) return n(685430);
@@ -98,23 +97,23 @@ function h(e) {
             return n(511403);
     }
 }
-let f = { SMALL: d.cardIconSmall, MEDIUM: d.cardIconMedium, LARGE: d.cardIconLarge, XLARGE: d.cardIconXLarge };
-class p extends s.PureComponent {
-    static Types = _;
-    static Sizes = f;
+let p = { SMALL: d.cardIconSmall, MEDIUM: d.cardIconMedium, LARGE: d.cardIconLarge, XLARGE: d.cardIconXLarge };
+class b extends l.PureComponent {
+    static Types = m;
+    static Sizes = p;
     static getType(e) {
-        return null == e ? "unknown" : _[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
+        return null == e ? "unknown" : m[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
-    static defaultProps = { size: f.SMALL, flipped: !1 };
+    static defaultProps = { size: p.SMALL, flipped: !1 };
     render() {
-        let { flipped: e, type: t, className: n, size: i } = this.props;
+        let { flipped: e, type: t, className: n, size: a } = this.props;
         return "bank" === t
-            ? (0, r.jsx)(l.M, { className: n })
+            ? (0, r.jsx)(u.M, { className: n })
             : "gift_card" === t
-              ? (0, r.jsx)(u._, { className: n, size: "lg" })
+              ? (0, r.jsx)(o._, { className: n, size: "lg" })
               : "pix" === t
                 ? (0, r.jsx)(c.W, { className: n, size: "lg" })
-                : (0, r.jsx)("div", { "aria-hidden": !0, className: o()(i, d[t], n, { [d.flipped]: e }), children: t });
+                : (0, r.jsx)("div", { "aria-hidden": !0, className: s()(a, d[t], n, { [d.flipped]: e }), children: t });
     }
 }
-let E = p;
+let A = b;

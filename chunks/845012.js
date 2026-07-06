@@ -1,40 +1,237 @@
-"use strict";
-n.d(t, { v: () => o });
-var i = n(627968);
-n(64700);
-var r = n(661531),
-    s = n(996682),
-    a = n(27989);
-let o = (e) => {
+n.d(t, { X: () => v });
+var l = n(627968),
+    i = n(64700),
+    r = n(284009),
+    a = n.n(r),
+    s = n(834730),
+    o = n(17928),
+    u = n(854354),
+    c = n(944355),
+    d = n(650170),
+    p = n(986883),
+    m = n(410516),
+    h = n(186223),
+    C = n(361597),
+    E = n(135314),
+    A = n(773669),
+    f = n(97352),
+    S = n(252424),
+    y = n(428262),
+    P = n(580630),
+    I = n(202541),
+    T = n(375708),
+    _ = n(327105),
+    g = n(556208);
+function v(e) {
     let {
-            size: t = "md",
-            width: n,
-            height: o,
-            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
+            selectedPlanId: t,
+            priceOptions: n,
+            planOptions: r,
+            subscriptionPeriodEnd: v,
+            showPlanStatusSubText: x,
+            disabled: N = !1,
+            isInPlanSelectStep: R,
+            headingSubText: b,
+            planPricesLoading: M = !1,
         } = e,
-        d = (0, a.J)(t),
-        _ = d?.width ?? n,
-        h = d?.height ?? o;
-    return (0, i.jsxs)("svg", {
-        ...(0, s.A)(c),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: h,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: [
-            (0, i.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
-                d: "M22.52 13.17c-.2.41-.87.35-1.15 0a3.02 3.02 0 0 0-.45-.48.47.47 0 0 1-.13-.54c.04-.1.04-.2-.01-.31-.4-.9-1.18-2.4-2.4-3.76C16.89 6.38 14.82 5 12 5 9.2 5 7.13 6.38 5.61 8.08a15.05 15.05 0 0 0-2.37 3.72.48.48 0 0 0 0 .4c.4.9 1.18 2.37 2.37 3.72a8.46 8.46 0 0 0 5.89 3.07c.28.01.5.24.54.5.05.31.15.6.29.87.13.27-.03.64-.33.64-7.11 0-10.27-7.11-10.89-8.7a.83.83 0 0 1 0-.6C1.73 10.1 4.9 3 12 3c7.11 0 10.27 7.11 10.89 8.7.07.2.07.4 0 .6-.08.21-.2.5-.37.87Z",
-                className: u,
-            }),
-            (0, i.jsx)("path", {
-                fill: "string" == typeof l ? l : l.css,
-                d: "M15.56 11.77c.2-.1.44.02.44.23a4 4 0 1 1-4-4c.21 0 .33.25.23.44a2.5 2.5 0 0 0 3.32 3.32ZM19 14a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z",
-                className: u,
-            }),
-        ],
-    });
-};
+        {
+            selectedPlan: O,
+            selectedPlanPrice: j,
+            isPrepaid: L,
+            isPlansEligibleForDiscount: D,
+            shouldShowHRKEuroWarning: U,
+            shouldShowTotalInSubscriptionFlow: w,
+            shouldShowTrialOrDiscountLayout: k,
+            userTrialOffer: G,
+            trialPeriodCopy: F,
+            isEligibleForTrial: B,
+            isEligibleForBOGOPromotion: Y,
+            premiumSubscriptionPlan: H,
+            thePriceOptions: W,
+            skuId: V,
+        } = (0, C.RO)({ selectedPlanId: t, priceOptions: n, planOptions: r, subscriptionPeriodEnd: v, showTotal: R }),
+        { shouldShowPremiumSwitchPlanSelectText: K, premiumSwitchPlanSelectText: Z } = i.useMemo(() => {
+            let e = (0, C.U_)(H, { isEligibleForBOGOPromotion: Y });
+            return {
+                shouldShowPremiumSwitchPlanSelectText: e,
+                premiumSwitchPlanSelectText: e ? (0, C.yq)(H, V) : null,
+            };
+        }, [H, Y, V]),
+        q = i.useMemo(
+            () => (R && B ? (0, C.Ct)(G, { subscriptionPeriodEnd: v, trialPeriodCopy: F }) : b),
+            [R, B, G, v, F, b],
+        ),
+        z = i.useMemo(() => (r.length > 0 ? I.hd[r[0]].premiumType : void 0), [r]),
+        { setSelectedPlanId: $ } = (0, d.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
+        X = i.useCallback(
+            (e) => {
+                $(e.value);
+            },
+            [$],
+        ),
+        Q = (function (e, t) {
+            let {
+                    disabled: n,
+                    planPricesLoading: l,
+                    isEligibleForDiscount: r,
+                    priceOptions: s,
+                    isEligibleForTrial: c,
+                    isEligibleForBOGOPromotion: g,
+                    showPlanStatusSubText: v,
+                    isInPlanSelectStep: x,
+                } = t,
+                {
+                    currentPremiumSubscriptionForCheckout: N,
+                    isGift: R,
+                    discountInfo: b,
+                } = (0, d.t4)((e) => ({
+                    currentPremiumSubscriptionForCheckout: e.isGift ? null : e.activeSubscription,
+                    isGift: e.isGift,
+                    discountInfo: e.premiumDiscountInfo,
+                })),
+                M = (0, o.bG)([A.default], () => A.default.locale),
+                { discountOffer: O, discountAmountOff: j, applicablePlan: L } = b,
+                D = (0, p.DQ)({ location: "PremiumUnifiedCheckoutPlanSelect" });
+            return i.useMemo(
+                () =>
+                    e.map((e) => {
+                        let t,
+                            i,
+                            o,
+                            { isCurrentPlan: d, disabled: A } = (0, C.cD)(N, e),
+                            b = f.A.get(e);
+                        a()(null != b, "Missing subscriptionPlan");
+                        let U = (0, y.L_)({ planId: e, isGift: R, priceOptions: s, subscriptionPlan: b }),
+                            w = null != U && null == O,
+                            k = (0, y.y8)(e, !1, R, s),
+                            G = (0, E.gS)(N, b, {
+                                userLocale: M,
+                                isEligibleForBOGOPromotion: g,
+                                shouldShowSavingsPercent: w,
+                                isGift: R,
+                                planId: e,
+                                savingsPercent: U,
+                                priceOptions: s,
+                                annualPlanCheckoutCopyTreatment: D,
+                                isEligibleForTrial: c,
+                            }),
+                            F = (0, h.is)({
+                                treatment: D,
+                                targetSubscriptionPlan: b,
+                                isGift: R,
+                                shouldShowSavingsPercent: w,
+                                isEligibleForTrial: c,
+                            }),
+                            B = (function (e, t) {
+                                let { isEligibleForTrial: n } = t;
+                                return n
+                                    ? T.intl.formatToPlainString(T.t.hXcaLT, {
+                                          price: (0, P.$g)(0, e.currency, {
+                                              minimumFractionDigits: 0,
+                                              maximumFractionDigits: 0,
+                                          }),
+                                      })
+                                    : (0, P.$g)(e.amount, e.currency);
+                            })(k, { isEligibleForTrial: c }),
+                            Y = B,
+                            H = r && null != L && e === L ? j : null;
+                        if (
+                            (null != O &&
+                                !c &&
+                                ((0, m.p2)(O)
+                                    ? b.interval === I.WT.YEAR
+                                        ? (t = T.intl.format(_.default.ODKoJd, { percent: U ?? "" }))
+                                        : b.interval === I.WT.MONTH &&
+                                          (null != H &&
+                                              (Y = T.intl.format(T.t.hXcaLT, {
+                                                  price: (0, P.$g)(k.amount - H, k.currency),
+                                              })),
+                                          (t = T.intl.format(_.default.JsSin7, {
+                                              priceRate: (0, P.CE)(B, b.interval, b.intervalCount),
+                                              intervalCount: O.getFullIntervalCount(),
+                                          })))
+                                    : (0, m.hm)(O) &&
+                                      b.interval === I.WT.YEAR &&
+                                      null != H &&
+                                      ((Y = T.intl.format(T.t.hXcaLT, { price: (0, P.$g)(k.amount - H, k.currency) })),
+                                      (i = B),
+                                      (t = T.intl.format(T.t.VZ8Tvh, { regularPrice: B })),
+                                      (o = T.intl.formatToPlainString(_.default.nsG1jw, {
+                                          savingsText: (0, S.l9)(M, parseInt(O.discount.amount) / 100),
+                                      })))),
+                            v &&
+                                (x && c
+                                    ? (t = (0, E.O7)(b, k))
+                                    : d
+                                      ? (t = T.intl.string(T.t.ymSxhy))
+                                      : "string" != typeof G || F || (t = G)),
+                            F && D === p.qS.AMOUNT_OFF_WITH_MONTHLY_RATE && !d)
+                        ) {
+                            let e = (0, h.cg)(b, R, s);
+                            null != e && (t = e);
+                        }
+                        let W = (function (e) {
+                            let { promoTextOverride: t, overrideBadgeText: n, defaultValue: l } = e;
+                            return t ?? n ?? l;
+                        })({
+                            promoTextOverride: o,
+                            overrideBadgeText: null != G && "object" == typeof G ? (G.type, G.text) : null,
+                            defaultValue: (0, u.Nc)({
+                                subscriptionPlan: b,
+                                userLocale: M,
+                                discountOffer: O,
+                                yearlyPercentSavings: U,
+                                shouldHideYearlySavingsBadge: null != N || null != O,
+                            }),
+                        });
+                        return {
+                            id: e,
+                            value: e,
+                            primaryText: (0, u.YR)(b.interval, b.intervalCount, !0),
+                            subText: l ? T.intl.string(T.t.ZTNur7) : Y,
+                            subTextStrikethrough: l ? null : i,
+                            secondarySubText: l ? null : t,
+                            badgeText: l ? null : W,
+                            isDisabled: A || n,
+                        };
+                    }),
+                [l, e, r, s, c, g, v, x, N, j, L, O, R, M, n, D],
+            );
+        })(r, {
+            disabled: N,
+            planPricesLoading: M,
+            isEligibleForDiscount: D,
+            priceOptions: W,
+            isEligibleForTrial: B,
+            isEligibleForBOGOPromotion: Y,
+            showPlanStatusSubText: x,
+            isInPlanSelectStep: R,
+        });
+    return null == z
+        ? null
+        : (0, l.jsxs)(l.Fragment, {
+              children: [
+                  K &&
+                      (0, l.jsx)(s.E, { variant: "text-md/medium", color: "text-subtle", className: g.S, children: Z }),
+                  (0, l.jsx)(c.me, {
+                      headingComponent: (0, l.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: z }),
+                      headingSubText: q,
+                      planRadioOptions: Q,
+                      value: O?.id ?? "",
+                      onChange: X,
+                  }),
+                  R
+                      ? (0, C.LR)({
+                            selectedPlan: O,
+                            selectedPlanPrice: j,
+                            isPrepaid: L,
+                            shouldShowHRKEuroWarning: U,
+                            shouldShowTrialOrDiscountLayout: k,
+                            showTotal: R,
+                            shouldShowTotalInSubscriptionFlow: w,
+                            previewTotalSectionClassName: g.$,
+                        })
+                      : null,
+              ],
+          });
+}

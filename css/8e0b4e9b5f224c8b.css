@@ -1,0 +1,42 @@
+.phoneField_a0c54f {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 5fr 6fr;
+    position: relative
+}
+
+.phoneVerificationModal_db41ea {
+    min-height: 252px;
+    padding: 16px;
+    position: relative;
+    width: 440px
+}
+
+.phoneVerificationModal_db41ea .animationContainer_db41ea {
+    position: absolute;
+    top: -150px;
+    inset-inline: 130px
+}
+
+.phoneVerificationModal_db41ea .title_db41ea {
+    color: var(--text-strong);
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    margin-top: auto;
+    padding-top: 80px
+}
+
+.phoneVerificationModal_db41ea .description_db41ea {
+    color: var(--text-default);
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center
+}
+
+.phoneVerificationModal_db41ea .description_db41ea.error_db41ea {
+    color: var(--text-feedback-critical)
+}
+
+.phoneVerificationModal_db41ea .field_db41ea {
+    align-self: stretch
+}

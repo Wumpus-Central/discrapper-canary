@@ -1,40 +1,39 @@
-"use strict";
-n.d(t, { A: () => E, h: () => m });
-var i,
-    r = n(627968);
+n.d(t, { A: () => E, h: () => A });
+var l,
+    i = n(627968);
 n(64700);
-var s = n(17928),
+var r = n(17928),
     a = n(462887),
-    o = n(534514),
-    l = n(834730),
+    s = n(534514),
+    o = n(834730),
     u = n(821609),
     c = n(736653),
     d = n(287809),
-    _ = n(375708),
-    h = n(588651),
-    f = n(626768),
-    p = n(464896),
-    E = (((i = {})[(i.SHOP_PAGE = 0)] = "SHOP_PAGE"), (i[(i.GIFT_MODAL = 1)] = "GIFT_MODAL"), i);
-let m = function (e) {
-    let { onRetry: t, errorOrigin: n, errorMessage: i } = e,
+    p = n(375708),
+    m = n(588651),
+    h = n(626768),
+    C = n(464896),
+    E = (((l = {})[(l.SHOP_PAGE = 0)] = "SHOP_PAGE"), (l[(l.GIFT_MODAL = 1)] = "GIFT_MODAL"), l);
+let A = function (e) {
+    let { onRetry: t, errorOrigin: n, errorMessage: l } = e,
         E = (0, c.Ay)(),
-        m = (0, s.bG)([d.default], () => {
+        A = (0, r.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         }),
-        g = 1 === n ? h.tV : h.Df,
-        A = 1 === n ? _.intl.string(_.t["+2QBZX"]) : _.intl.string(_.t.LuhKs2);
-    return (0, r.jsxs)("div", {
-        className: g,
+        f = 1 === n ? m.tV : m.Df,
+        S = 1 === n ? p.intl.string(p.t["+2QBZX"]) : p.intl.string(p.t.LuhKs2);
+    return (0, i.jsxs)("div", {
+        className: f,
         children: [
-            (0, r.jsx)("img", { className: h.__invalid_loadIssueImg, src: (0, a.M)(E) ? f : p, alt: "" }),
-            (0, r.jsx)(o.D, { className: h.st, variant: "heading-xl/semibold", children: _.intl.string(_.t.i5SQ74) }),
-            (0, r.jsx)(l.E, { className: h.h_, variant: "text-md/normal", children: A }),
-            m && null != i && (0, r.jsx)(l.E, { variant: "text-md/normal", children: "staff-only debug: " + i }),
-            (0, r.jsx)("div", {
+            (0, i.jsx)("img", { className: m.__invalid_loadIssueImg, src: (0, a.M)(E) ? h : C, alt: "" }),
+            (0, i.jsx)(s.D, { className: m.st, variant: "heading-xl/semibold", children: p.intl.string(p.t.i5SQ74) }),
+            (0, i.jsx)(o.E, { className: m.h_, variant: "text-md/normal", children: S }),
+            A && null != l && (0, i.jsx)(o.E, { variant: "text-md/normal", children: "staff-only debug: " + l }),
+            (0, i.jsx)("div", {
                 "data-button-hoisted-classname-wrapper": !0,
-                className: h.yQ,
-                children: (0, r.jsx)(u.$, { variant: "primary", text: _.intl.string(_.t["+hivLW"]), onClick: t }),
+                className: m.yQ,
+                children: (0, i.jsx)(u.$, { variant: "primary", text: p.intl.string(p.t["+hivLW"]), onClick: t }),
             }),
         ],
     });

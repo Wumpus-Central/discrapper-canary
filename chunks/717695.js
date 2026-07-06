@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => s, Z: () => r });
-var i = n(627968);
+n.d(t, { A: () => l, Z: () => r });
+var s = n(627968);
 let r = n(64700).createContext(!1);
-function s(e) {
-    return (0, i.jsx)(r.Provider, { value: !0, children: e.children });
+function l(e) {
+    return (0, s.jsx)(r.Provider, { value: !0, children: e.children });
 }

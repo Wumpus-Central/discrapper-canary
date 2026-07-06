@@ -336,7 +336,7 @@ let eR = function (e) {
                     variant: "heading-md/semibold",
                     children: eo.intl.string(eo.t.L2mlUb),
                 }),
-                (0, r.jsx)(eI.A, { quest: t }),
+                (0, r.jsx)(eI.default, { quest: t }),
             ],
         }),
     });
@@ -368,7 +368,7 @@ let eH = function (e) {
                                     source: "preview",
                                     adCreativeId: t.id,
                                     adCreativeType: m.p.QUEST,
-                                    children: (0, r.jsx)(eM.Y, { quest: t }),
+                                    children: (0, r.jsx)(eM.QuestBar, { quest: t }),
                                 }),
                             }),
                         }),
@@ -1116,7 +1116,7 @@ let tV = function (e) {
         c = (0, tk.A)(a?.id),
         d = i.useCallback(
             (e) =>
-                (0, r.jsx)(tW.A, {
+                (0, r.jsx)(tW.default, {
                     name: u,
                     quest: t,
                     memberListItemRef: l,

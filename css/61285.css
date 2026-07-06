@@ -1,0 +1,113 @@
+.previewPage__8d6f9 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0 20px;
+    place-content: center
+}
+
+.errorIcon__8d6f9,
+.questsIcon__8d6f9 {
+    color: var(--text-strong);
+    height: 24px;
+    width: 24px
+}
+
+.messageWrapper__8d6f9 {
+    margin-bottom: 12px;
+    padding: 12px
+}
+
+.message__8d6f9 {
+    color: var(--text-default);
+    text-align: start;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.previewCard__8d6f9 {
+    gap: var(--space-sm);
+    padding: var(--space-md);
+    width: 450px
+}
+
+.previewBackground__8d6f9,
+.previewCard__8d6f9 {
+    display: flex;
+    flex-direction: column
+}
+
+.previewBackground__8d6f9 {
+    align-items: center;
+    background-color: var(--background-mod-normal);
+    border-radius: var(--radius-md);
+    justify-content: center;
+    padding-bottom: var(--space-md);
+    padding-top: var(--space-md);
+    width: 100%
+}
+
+.heading__8d6f9 {
+    grid-row: 1/span 1
+}
+
+.heading__8d6f9,
+.questTile__8d6f9 {
+    grid-column: 2/span 1
+}
+
+.questTile__8d6f9 {
+    grid-row: 2/span 1
+}
+
+.questChannelCallHeaderWrapper__8d6f9>div {
+    inset-inline-start: auto;
+    margin-inline-start: 0;
+    position: relative;
+    top: auto
+}
+
+.embedCard__8d6f9 {
+    align-self: flex-start;
+    min-width: 100%;
+    padding: 32px;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.partnerBranding__83420 {
+    align-items: center;
+    display: flex;
+    flex: 0 1 auto
+}
+
+.partnerBrandingGameTile__83420 {
+    display: block;
+    flex: 0 0 auto;
+    margin-inline-end: 8px
+}
+
+.partnerBrandingLogotype__83420 {
+    height: 24px;
+    max-width: 92px;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.partnerBrandingLogotypeWithCosponsor__83420 {
+    flex: 0 0 auto;
+    max-width: 44px
+}
+
+.cosponsorBrandSeparatorWrapper__83420 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto
+}
+
+.cosponsorBrandSeparator__83420 {
+    height: 12px;
+    width: 12px
+}

@@ -1,47 +1,46 @@
-"use strict";
-n.d(t, { A: () => a }), n(323874), n(14289), n(35956);
-var i = n(64700),
-    r = n(636537),
-    s = n(676279);
-function a(e) {
-    let t = (0, s.TM)(),
-        [n, a] = (0, i.useState)({
+n.d(t, { A: () => r }), n(323874), n(14289), n(35956);
+var a = n(64700),
+    i = n(636537),
+    c = n(676279);
+function r(e) {
+    let t = (0, c.TM)(),
+        [n, r] = (0, a.useState)({
             celebrationEntry: void 0,
             celebrationIdle: void 0,
             activationEntry: void 0,
             activationIdle: void 0,
         }),
-        [o, l] = (0, i.useState)(!1),
-        u = (0, i.useRef)(!1);
+        [l, s] = (0, a.useState)(!1),
+        o = (0, a.useRef)(!1);
     return (
-        (0, i.useEffect)(() => {
-            if (!e || u.current) return;
-            u.current = !0;
+        (0, a.useEffect)(() => {
+            if (!e || o.current) return;
+            o.current = !0;
             let n = !1;
             return (
                 Promise.all([
-                    r.Bo.get({
+                    i.Bo.get({
                         url: t
                             ? "https://cdn.discordapp.com/assets/content/4a769c43b3a02520a00fcb782469e485baafbd948bc051e0a2c287df639bfac8.mp4"
                             : "https://cdn.discordapp.com/assets/content/b7785d3a3260d1f754ce5979896641562ac08e5f4f28db068060399524546d5b.webm",
                         binary: !0,
                         rejectWithError: !0,
                     }),
-                    r.Bo.get({
+                    i.Bo.get({
                         url: t
                             ? "https://cdn.discordapp.com/assets/content/a474630c022b1935c7aa023ab813ed6771e795cd09e104169eb5493cd97b480b.mp4"
                             : "https://cdn.discordapp.com/assets/content/66cc295163c7250e2d9e7d919a5056518253a0cc15fd6e9d8fc55cd778e89080.webm",
                         binary: !0,
                         rejectWithError: !0,
                     }),
-                    r.Bo.get({
+                    i.Bo.get({
                         url: t
                             ? "https://cdn.discordapp.com/assets/content/92c8e0db0f501640be4561aad071382961b2d27697426fedd2a9c2ee066fca9c.mp4"
                             : "https://cdn.discordapp.com/assets/content/f37cc30b34f7d6391a52654ac4c2fdb569add13b5bd86e05305bd2b1fb4e7a5f.webm",
                         binary: !0,
                         rejectWithError: !0,
                     }),
-                    r.Bo.get({
+                    i.Bo.get({
                         url: t
                             ? "https://cdn.discordapp.com/assets/content/4f4338e03e1b4ca4252f31224716f4f9f5bfdefc8c057c8a5e7cfabe6309c72d.mp4"
                             : "https://cdn.discordapp.com/assets/content/897d803ad89d1d4ffa07ca77381eaa42c456ce9b2365b1cea51f5c7e3bbe8e59.webm",
@@ -50,26 +49,26 @@ function a(e) {
                     }),
                 ]).then(
                     (e) => {
-                        let [t, i, r, s] = e;
+                        let [t, a, i, c] = e;
                         n ||
-                            (a({
+                            (r({
                                 celebrationEntry: window.URL.createObjectURL(t.body),
-                                celebrationIdle: window.URL.createObjectURL(i.body),
-                                activationEntry: window.URL.createObjectURL(r.body),
-                                activationIdle: window.URL.createObjectURL(s.body),
+                                celebrationIdle: window.URL.createObjectURL(a.body),
+                                activationEntry: window.URL.createObjectURL(i.body),
+                                activationIdle: window.URL.createObjectURL(c.body),
                             }),
-                            l(!0));
+                            s(!0));
                     },
                     () => {
-                        n || (u.current = !1);
+                        n || (o.current = !1);
                     },
                 ),
                 () => {
-                    (n = !0), (u.current = !1);
+                    (n = !0), (o.current = !1);
                 }
             );
         }, [e, t]),
-        (0, i.useEffect)(
+        (0, a.useEffect)(
             () => () => {
                 null != n.celebrationEntry && window.URL.revokeObjectURL(n.celebrationEntry),
                     null != n.celebrationIdle && window.URL.revokeObjectURL(n.celebrationIdle),
@@ -78,6 +77,6 @@ function a(e) {
             },
             [n.celebrationEntry, n.celebrationIdle, n.activationEntry, n.activationIdle],
         ),
-        { mediaUrls: n, isSuccess: o }
+        { mediaUrls: n, isSuccess: l }
     );
 }

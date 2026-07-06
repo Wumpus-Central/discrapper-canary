@@ -1,0 +1,38 @@
+.wrapper_f7a803 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    color: var(--text-default);
+    display: flex;
+    gap: 8px;
+    height: auto;
+    margin-bottom: 8px;
+    overflow: hidden;
+    padding: 8px
+}
+
+.copy_f7a803,
+.wrapper_f7a803 {
+    position: relative
+}
+
+.copy_f7a803 {
+    margin-bottom: 0
+}
+
+.rewardTextRow_f7a803 {
+    align-items: center;
+    -moz-column-gap: 4px;
+    column-gap: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 4px
+}
+
+.rewardTile_f7a803 {
+    border-radius: 4px;
+    flex: 0 0 auto;
+    height: 58px;
+    position: relative;
+    width: 58px
+}

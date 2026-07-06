@@ -1,21 +1,20 @@
-"use strict";
 n.d(t, { A: () => u, y: () => c });
-var i = n(627968);
+var l = n(627968);
 n(64700);
-var r = n(23339),
-    s = n(319060),
+var i = n(23339),
+    r = n(319060),
     a = n(628677),
-    o = n(234914);
-let l = (0, r.xI)(s.A.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
+    s = n(234914);
+let o = (0, i.xI)(r.A.ASPECT_STABLE_IMAGE_CONTAINER_PADDING);
 function u(e) {
-    let { listing: t, imageSize: n, alt: r, ...s } = e,
-        o = (0, a.R)(t, n);
-    return (0, i.jsx)("img", { src: o, alt: r, ...s });
+    let { listing: t, imageSize: n, alt: i, ...r } = e,
+        s = (0, a.R)(t, n);
+    return (0, l.jsx)("img", { src: s, alt: i, ...r });
 }
 function c(e) {
-    let { listing: t, aspectRatio: n = 16 / 9, height: r, ...s } = e,
-        u = (r - 2 * l) * n,
+    let { listing: t, aspectRatio: n = 16 / 9, height: i, ...r } = e,
+        u = (i - 2 * o) * n,
         c = (0, a.R)(t, u),
         d = (0, a.R)(t, u, { shouldAnimate: !1 });
-    return (0, i.jsx)(o.A, { src: c, backgroundSrc: d, aspectRatio: n, ...s });
+    return (0, l.jsx)(s.A, { src: c, backgroundSrc: d, aspectRatio: n, ...r });
 }

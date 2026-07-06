@@ -1,9 +1,8 @@
-"use strict";
 n.d(t, { K: () => a });
-var i = n(702841),
-    r = n(328968),
-    s = n(650170);
+var l = n(702841),
+    i = n(328968),
+    r = n(650170);
 function a() {
-    let e = (0, s.t4)((e) => e.selectedSkuId);
-    return (0, i.bG)([r.A], () => (null != e ? r.A.getForSKU(e) : null), [e]);
+    let e = (0, r.t4)((e) => e.selectedSkuId);
+    return (0, l.bG)([i.A], () => (null != e ? i.A.getForSKU(e) : null), [e]);
 }

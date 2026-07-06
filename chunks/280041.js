@@ -12,26 +12,26 @@ var i,
     _ = n(688810),
     h = n(793943),
     f = n(31502),
-    p = n(259065),
-    E = n(532794),
+    E = n(259065),
+    p = n(532794),
     m = n(206835),
     g = n(192444),
-    A = n(617986),
+    A = n(216934),
     I = n(591179),
     T = n(462463),
     S = n(780964),
-    y = n(766075),
+    N = n(766075),
     C = n(676279),
-    N = n(975571),
-    v = n(769623),
+    y = n(975571),
+    O = n(769623),
     R = n(707922),
-    O = n(852218),
+    v = n(852218),
     b = n(382259),
-    D = n(503698),
-    L = n.n(D),
+    L = n(503698),
+    D = n.n(L),
     w = n(907581),
-    M = n(533873);
-let P = o.forwardRef((e, t) => {
+    P = n(533873);
+let M = o.forwardRef((e, t) => {
     let { className: n } = e,
         i = o.useRef(null);
     return (
@@ -42,23 +42,23 @@ let P = o.forwardRef((e, t) => {
             pause: () => i.current?.pause(),
         })),
         (0, a.jsx)("div", {
-            className: L()(n, M.k),
+            className: D()(n, P.k),
             children: (0, a.jsx)(w.C, { ref: i, autoplay: !1, stateMachine: "State Machine 1", fit: "contain" }),
         })
     );
 });
-P.displayName = "PremiumRewardsBentoBoxAsset";
+M.displayName = "PremiumRewardsBentoBoxAsset";
 var x = n(440005),
-    k = n(49132),
-    U = n(398523),
+    U = n(26508),
+    k = n(398523),
     G = n(881373),
-    F = n(862990),
-    V = n(202541),
+    V = n(862990),
+    F = n(202541),
     B = n(88001),
-    j = n(652215),
-    H = n(190107),
-    Y = n(355097),
-    W = n(962995),
+    H = n(652215),
+    j = n(190107),
+    W = n(355097),
+    Y = n(962995),
     K = n(466919),
     $ = n(490285),
     z = n(375708),
@@ -98,18 +98,18 @@ let eu = function () {
         { analyticsLocations: t } = (0, _.Ay)(d.A.PREMIUM_MARKETING_BENTO_BOX),
         i = (0, I.X)("useBentoBoxes"),
         r = (0, T.A)({ analyticsLocations: t }),
-        s = (0, m.A)({ scrollPosition: Y._F.TRY_IT_OUT, analyticsLocations: t }),
-        D = (0, o.useCallback)(() => {
-            (0, y.openUserSettings)(S.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
-                (0, p.L)({ analyticsLocations: t }),
+        s = (0, m.A)({ scrollPosition: W._F.TRY_IT_OUT, analyticsLocations: t }),
+        L = (0, o.useCallback)(() => {
+            (0, N.openUserSettings)(S.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
+                (0, E.L)({ analyticsLocations: t }),
             );
         }, [t]),
-        L = (0, o.useCallback)(() => {
-            (0, E.A)({ subscriptionTier: V.pe.TIER_2, initialPlanId: V.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
+        D = (0, o.useCallback)(() => {
+            (0, p.A)({ subscriptionTier: F.pe.TIER_2, initialPlanId: F.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
         w = (0, C.TM)(),
-        M = N.A.getArticleURL(j.MVz.REFERRAL_PROGRAM),
-        { shouldShowBonusOrbsUX: ea, multiplier: eo } = (0, g.lk)(H.rE.NITRO_HOME_MARKETING),
+        P = y.A.getArticleURL(H.MVz.REFERRAL_PROGRAM),
+        { shouldShowBonusOrbsUX: ea, multiplier: eo } = (0, g.lk)(j.rE.NITRO_HOME_MARKETING),
         eu = o.useRef(null),
         ec = (0, f.l)("bento_box"),
         ed = {
@@ -171,9 +171,9 @@ let eu = function () {
             orbRewards: { thumbnail: es.A, assetUrl: er.A },
             orbMultiplier: { thumbnail: et, assetUrl: w ? J : ee },
             combinedOrbs: { thumbnail: et, assetUrl: w ? J : ee },
-            threePPromotions: { thumbnail: ec ? (0, a.jsx)(P, { ref: eu }) : Q, assetUrl: ec ? void 0 : Q },
+            threePPromotions: { thumbnail: ec ? (0, a.jsx)(M, { ref: eu }) : Q, assetUrl: ec ? void 0 : Q },
         },
-        e_ = (0, v.Y)({ location: "bento_box" }),
+        e_ = (0, O.Y)({ location: "bento_box" }),
         eh = (0, R.A)(!e_),
         ef = {
             serverProfiles: {
@@ -188,7 +188,7 @@ let eu = function () {
             referralProgram: {
                 name: "referralProgram",
                 title: z.intl.string(z.t.tPY4o9),
-                description: z.intl.format(z.t.jRPQUH, { learnMoreLink: M }),
+                description: z.intl.format(z.t.jRPQUH, { learnMoreLink: P }),
                 previewImage: ed.referralProgram.thumbnail,
                 videoUrl: ed.referralProgram.assetUrl,
             },
@@ -209,7 +209,7 @@ let eu = function () {
                 description: z.intl.string(Z.default.MFNXZh),
                 descriptionCta: z.intl.string(z.t.jVcuVY),
                 previewImage: ed.displayNameStyles.thumbnail,
-                onClick: i ? r : D,
+                onClick: i ? r : L,
                 videoUrl: ed.displayNameStyles.assetUrl,
             },
             premiumGroup: {
@@ -228,7 +228,7 @@ let eu = function () {
                     {
                         variant: "primary",
                         text: z.intl.formatToPlainString(K.default.LwdrNi, { premiumGroupProductName: (0, B.DP)() }),
-                        onClick: L,
+                        onClick: D,
                         icon: c.t,
                         iconPosition: "start",
                     },
@@ -287,15 +287,15 @@ let eu = function () {
             },
             threePPromotions: {
                 name: "threePPromotions",
-                title: ec ? z.intl.string(z.t.E4U4SS) : z.intl.string(W.default.OlObRa),
-                description: ec ? z.intl.string(z.t["B4uSy/"]) : z.intl.string(W.default["8Gl8gP"]),
-                descriptionCta: ec ? z.intl.string(z.t.RzWDqY) : z.intl.string(W.default.HINTfJ),
+                title: ec ? z.intl.string(z.t.E4U4SS) : z.intl.string(Y.default.OlObRa),
+                description: ec ? z.intl.string(z.t["B4uSy/"]) : z.intl.string(Y.default["8Gl8gP"]),
+                descriptionCta: ec ? z.intl.string(z.t.RzWDqY) : z.intl.string(Y.default.HINTfJ),
                 previewImage: ed.threePPromotions.thumbnail,
                 videoUrl: ed.threePPromotions.assetUrl,
                 onClick: () =>
                     (0, b.u)({
                         analyticsLocations: t,
-                        partnerIds: [O.KS, O.Cs, O.XY, ...(ec ? ["xbox"] : [])],
+                        partnerIds: [v.KS, v.Cs, v.XY, ...(ec ? ["xbox"] : [])],
                         isLocked: !0,
                     }),
                 badgeText: ec ? void 0 : z.intl.string(z.t.y2b7CA).toLocaleUpperCase(),
@@ -308,7 +308,7 @@ let eu = function () {
                 description: z.intl.string($.default.wMi514),
                 descriptionCta: z.intl.string(z.t.hvVgAZ),
                 onClick: () => {
-                    window.open(N.A.getArticleURL(j.MVz.ORBS_REWARDS_FAQ), "_blank");
+                    window.open(y.A.getArticleURL(H.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
                 previewImage: ed.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
@@ -321,7 +321,7 @@ let eu = function () {
                 title: z.intl.string(z.t.Csf5Ol),
                 description: z.intl.format(z.t["G5k+lZ"], { bonusOrbMultiplier: eo }),
                 descriptionCta: z.intl.string(z.t.jVcuVY),
-                onClick: () => (0, A.navigateToQuestHome)({ fromContent: l.u.NITRO_HOME_PERK_CARD }),
+                onClick: () => (0, A.m)({ fromContent: l.u.NITRO_HOME_PERK_CARD }),
                 badgeVariant: "expressive",
                 previewImage: ed.orbMultiplier.thumbnail,
                 videoUrl: ed.orbMultiplier.assetUrl,
@@ -331,23 +331,23 @@ let eu = function () {
                 title: z.intl.string(z.t.Tzhw6e),
                 description: z.intl.format(z.t.djzJx6, { bonusOrbMultiplier: eo }),
                 descriptionCta: z.intl.string(z.t.RzWDqY),
-                onClick: () => (0, A.navigateToQuestHome)({ fromContent: l.u.NITRO_HOME_PERK_CARD }),
+                onClick: () => (0, A.m)({ fromContent: l.u.NITRO_HOME_PERK_CARD }),
                 badgeText: ec ? void 0 : z.intl.string(z.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 previewImage: ed.combinedOrbs.thumbnail,
                 videoUrl: ed.combinedOrbs.assetUrl,
             },
         };
-    function ep(e) {
+    function eE(e) {
         let t = ef[e];
         if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
         return t;
     }
-    let eE = (function (e) {
+    let ep = (function (e) {
             let t = (0, G.YS)({ location: "bento_box" }).functionalityEnabled,
-                { enabled: n } = U.Ay.useConfig({ location: "bento_box" }),
-                i = (0, F.O9)(),
-                r = (0, k.DK)(x.W.NITRO, "useBentoBoxes"),
+                { enabled: n } = k.Ay.useConfig({ location: "bento_box" }),
+                i = (0, V.O9)(),
+                r = (0, U.DK)(x.W.NITRO, "useBentoBoxes"),
                 s = r && e;
             return [
                 ...(t || n ? [el.THREE_P_PROMOTIONS] : []),
@@ -362,14 +362,14 @@ let eu = function () {
             ];
         })(ea),
         em = [],
-        eg = e ? null : eE[0],
-        eA = eE.slice(+!e, e ? 2 : 3);
+        eg = e ? null : ep[0],
+        eA = ep.slice(+!e, e ? 2 : 3);
     return (
-        null != eg && em.push([ep(eg)]),
-        1 === eA.length ? em.push([ep(eA[0])]) : 2 === eA.length && em.push([ep(eA[0]), ep(eA[1])]),
+        null != eg && em.push([eE(eg)]),
+        1 === eA.length ? em.push([eE(eA[0])]) : 2 === eA.length && em.push([eE(eA[0]), eE(eA[1])]),
         {
             whatsNewBoxes: [...em],
-            bestOfBoxes: [[ep("showYourStyle")], [ep("yourSpace")], [ep("emojis"), ep("noLimits")]],
+            bestOfBoxes: [[eE("showYourStyle")], [eE("yourSpace")], [eE("emojis"), eE("noLimits")]],
         }
     );
 };

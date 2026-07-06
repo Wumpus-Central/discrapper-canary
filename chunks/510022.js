@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { n: () => l });
-var i = n(627968),
-    r = n(192308),
-    s = n(174459),
+n.d(t, { n: () => o });
+var l = n(627968),
+    i = n(192308),
+    r = n(174459),
     a = n(188275),
-    o = n(652215);
-let l = (e) => {
-    let { sku: t, application: l, analyticsLocations: u, entitlement: c } = e;
-    (0, r.openModalLazy)(
+    s = n(652215);
+let o = (e) => {
+    let { sku: t, application: o, analyticsLocations: u, entitlement: c } = e;
+    (0, i.openModalLazy)(
         async () => {
             let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
                 n.e("90860"),
@@ -16,15 +15,15 @@ let l = (e) => {
                 n.e("20310"),
                 n.e("80307"),
             ]).then(n.bind(n, 472734));
-            return (n) => (0, i.jsx)(e, { ...n, sku: t, application: l, analyticsLocations: u, entitlement: c });
+            return (n) => (0, l.jsx)(e, { ...n, sku: t, application: o, analyticsLocations: u, entitlement: c });
         },
         {
             modalKey: "social-layer-storefront-item-claimed-successfully-modal",
             onCloseCallback: () => {
-                s.default.track(o.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
+                r.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {
                     type: a.e2,
                     sku_id: t.id,
-                    application_id: l.id,
+                    application_id: o.id,
                     location_stack: u ?? [],
                 });
             },

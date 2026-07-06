@@ -1,0 +1,97 @@
+.sectionHeader__9fe74 {
+    margin-top: 16px;
+    text-transform: uppercase
+}
+
+.fromGuildCard__9fe74 {
+    margin-top: 8px
+}
+
+.toGuildCardBorder__9fe74 {
+    background: var(--guild-boosting-pink-refresh);
+    border-radius: 8px;
+    margin-top: 8px;
+    padding: 2px
+}
+
+.modal__0f8ce {
+    overflow: hidden
+}
+
+.selectContent__0f8ce {
+    padding: 8px 0
+}
+
+.confirmImage__0f8ce {
+    height: 134px;
+    width: 264px
+}
+
+.transferConfirmImage__0f8ce {
+    height: 128px;
+    width: 216px
+}
+
+.successBody__0f8ce {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px
+}
+
+.successAnimation__0f8ce {
+    height: 200px;
+    width: 300px
+}
+
+.quantitySelectorBody__0f8ce {
+    margin-top: 20px
+}
+
+.quantitySelectorDescription__0f8ce,
+.quantitySelectorHeader__0f8ce {
+    margin-bottom: 16px
+}
+
+.quantitySelectorWrapper__0f8ce {
+    align-items: center;
+    display: flex;
+    margin: 32px auto
+}
+
+.quantitySelectorLabel__0f8ce {
+    line-height: 20px;
+    margin-inline-start: 16px
+}
+
+.modalCloseButton__0f8ce {
+    inset-inline-end: 12px;
+    opacity: .8;
+    position: absolute;
+    top: 12px
+}
+
+.modalCloseButton__0f8ce:hover {
+    opacity: 1
+}
+
+.images-light .confirmImage__0f8ce {
+    background-image: url(/assets/52c92d8492ebe041.svg)
+}
+
+.images-light .transferConfirmImage__0f8ce {
+    background-image: url(/assets/2d416896e0bbb412.svg)
+}
+
+.images-dark .confirmImage__0f8ce {
+    background-image: url(/assets/52c92d8492ebe041.svg)
+}
+
+.images-dark .transferConfirmImage__0f8ce {
+    background-image: url(/assets/c278e895ac47b4af.svg)
+}
+
+.tierPill__0f8ce {
+    background-color: var(--background-mod-normal);
+    color: var(--text-default)
+}

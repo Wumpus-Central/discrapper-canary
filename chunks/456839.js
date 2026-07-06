@@ -1,114 +1,113 @@
-"use strict";
-n.d(t, { a: () => b, O: () => D });
-var i = n(627968),
+n.d(t, { a: () => L, O: () => N });
+var a = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(575593),
-    l = n(17928),
-    u = n(462887),
+    l = n(503698),
+    i = n.n(l),
+    s = n(575593),
+    u = n(17928),
+    o = n(462887),
     c = n(778712),
     d = n(736653),
-    _ = n(590180),
-    h = n(442759),
-    f = n(88686),
-    p = n(780898),
-    E = n(174755),
-    m = n(942426),
-    g = n(665411),
-    A = n(181774),
-    I = n(576052),
-    T = n(929283),
-    S = n(38357),
-    y = n(180171),
-    C = n(989099);
-function N(e) {
+    m = n(590180),
+    f = n(442759),
+    p = n(88686),
+    b = n(780898),
+    A = n(174755),
+    g = n(942426),
+    v = n(665411),
+    _ = n(181774),
+    y = n(576052),
+    h = n(929283),
+    I = n(38357),
+    x = n(180171),
+    E = n(989099);
+function T(e) {
     let { avatarDecoration: t, avatarSize: n } = e,
         r = (0, d.Ay)(),
-        s = (0, u.q)(r);
-    return (0, i.jsx)(T.i, {
+        l = (0, o.q)(r);
+    return (0, a.jsx)(h.i, {
         item: t,
         avatarSize: n,
         isHighlighted: !1,
-        avatarPlaceholderSrc: s ? C : y,
-        className: S.M,
+        avatarPlaceholderSrc: l ? E : x,
+        className: I.M,
     });
 }
-function v(e) {
+function P(e) {
     let { item: t } = e,
-        n = (0, m.A)(t.skuId),
-        { accessibilityLabel: s, thumbnailPreviewSrc: a, title: o } = n ?? {},
-        l = r.useMemo(() => (0, A.Rc)(a), [a]);
+        n = (0, g.A)(t.skuId),
+        { accessibilityLabel: l, thumbnailPreviewSrc: i, title: s } = n ?? {},
+        u = r.useMemo(() => (0, _.Rc)(i), [i]);
     return null == n
         ? null
-        : (0, i.jsxs)("div", {
-              className: S.ti,
+        : (0, a.jsxs)("div", {
+              className: I.ti,
               children: [
-                  (0, i.jsx)("img", {
+                  (0, a.jsx)("img", {
                       src: "https://cdn.discordapp.com/assets/content/12b31ddb6470a59ecf9103c1aee866f9fdb3331727949eb88029160c02be9e0e.png",
-                      alt: s,
-                      className: S.Zp,
+                      alt: l,
+                      className: I.Zp,
                   }),
-                  (0, i.jsx)("img", { className: S.Hm, src: l, alt: o }),
+                  (0, a.jsx)("img", { className: I.Hm, src: u, alt: s }),
               ],
           });
 }
-function R(e) {
+function k(e) {
     let { item: t } = e;
-    return (0, i.jsx)("div", { className: S.uF, children: (0, i.jsx)(g.A, { frame: t }) });
+    return (0, a.jsx)("div", { className: I.uF, children: (0, a.jsx)(v.A, { frame: t }) });
 }
-function O(e) {
+function S(e) {
     let { nameplate: t } = e,
-        [n, s] = r.useState(!1),
-        a = r.useCallback(() => s(!0), []),
-        o = r.useCallback(() => s(!1), []);
+        [n, l] = r.useState(!1),
+        i = r.useCallback(() => l(!0), []),
+        s = r.useCallback(() => l(!1), []);
     return null == t
         ? null
-        : (0, i.jsx)("div", {
-              className: S.rz,
-              onMouseEnter: a,
-              onMouseLeave: o,
-              children: (0, i.jsx)(E.A, { nameplate: (0, p.WK)(t), hovered: n, placement: f.u.MINI_PREVIEW }),
+        : (0, a.jsx)("div", {
+              className: I.rz,
+              onMouseEnter: i,
+              onMouseLeave: s,
+              children: (0, a.jsx)(A.A, { nameplate: (0, b.WK)(t), hovered: n, placement: p.u.MINI_PREVIEW }),
           });
 }
-function b(e) {
+function L(e) {
     let { product: t, staticPreviewClassName: n } = e,
-        { firstAvatarDecoration: r, firstProfileEffect: s, firstNameplate: o } = (0, h.f5)(t),
-        l = t.previewAssets?.fgStatic;
-    return null != l
-        ? (0, i.jsx)("img", { src: l, alt: t.name, className: a()(S.C0, n) })
-        : null == r && null == s && null == o
+        { firstAvatarDecoration: r, firstProfileEffect: l, firstNameplate: s } = (0, f.f5)(t),
+        u = t.previewAssets?.fgStatic;
+    return null != u
+        ? (0, a.jsx)("img", { src: u, alt: t.name, className: i()(I.C0, n) })
+        : null == r && null == l && null == s
           ? null
-          : (0, i.jsxs)("div", {
-                className: S.WJ,
+          : (0, a.jsxs)("div", {
+                className: I.WJ,
                 children: [
-                    null != s && (0, i.jsx)("div", { className: S.zh, children: (0, i.jsx)(v, { item: s }) }),
-                    null != o && (0, i.jsx)("div", { className: S.sY, children: (0, i.jsx)(O, { nameplate: o }) }),
+                    null != l && (0, a.jsx)("div", { className: I.zh, children: (0, a.jsx)(P, { item: l }) }),
+                    null != s && (0, a.jsx)("div", { className: I.sY, children: (0, a.jsx)(S, { nameplate: s }) }),
                     null != r &&
-                        (0, i.jsx)("div", {
-                            className: S.kf,
-                            children: (0, i.jsx)(N, { avatarDecoration: r, avatarSize: c._3.SIZE_24 }),
+                        (0, a.jsx)("div", {
+                            className: I.kf,
+                            children: (0, a.jsx)(T, { avatarDecoration: r, avatarSize: c._3.SIZE_24 }),
                         }),
                 ],
             });
 }
-function D(e) {
+function N(e) {
     let { product: t, sku: n } = e,
         r = n?.id ?? t?.skuId,
-        s = (0, l.bG)([_.A], () => _.A.getProduct(n?.id)),
-        a = t ?? s;
-    if (a?.type === o.R.BUNDLE) return (0, i.jsx)(b, { product: a });
-    let [u] = a?.items ?? [];
-    if (void 0 !== r && r in I.m) return I.m[r].render({ animationState: "on_hover", className: S.Vr });
-    switch (u?.type) {
-        case o.R.AVATAR_DECORATION:
-            return (0, i.jsx)(N, { avatarDecoration: u, avatarSize: c._3.SIZE_40 });
-        case o.R.PROFILE_EFFECT:
-            return (0, i.jsx)(v, { item: u });
-        case o.R.PROFILE_FRAME:
-            return (0, i.jsx)(R, { item: u });
-        case o.R.NAMEPLATE:
-            return (0, i.jsx)(O, { nameplate: u });
+        l = (0, u.bG)([m.A], () => m.A.getProduct(n?.id)),
+        i = t ?? l;
+    if (i?.type === s.R.BUNDLE) return (0, a.jsx)(L, { product: i });
+    let [o] = i?.items ?? [];
+    if (void 0 !== r && r in y.m) return y.m[r].render({ animationState: "on_hover", className: I.Vr });
+    switch (o?.type) {
+        case s.R.AVATAR_DECORATION:
+            return (0, a.jsx)(T, { avatarDecoration: o, avatarSize: c._3.SIZE_40 });
+        case s.R.PROFILE_EFFECT:
+            return (0, a.jsx)(P, { item: o });
+        case s.R.PROFILE_FRAME:
+            return (0, a.jsx)(k, { item: o });
+        case s.R.NAMEPLATE:
+            return (0, a.jsx)(S, { nameplate: o });
         default:
             return null;
     }

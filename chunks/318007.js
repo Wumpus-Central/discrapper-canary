@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { t: () => f });
-var i = n(627968);
+n.d(t, { t: () => h });
+var l = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
+var i = n(503698),
+    r = n.n(i),
     a = n(289873),
-    o = n(937008),
-    l = n(650588),
+    s = n(937008),
+    o = n(650588),
     u = n(45938),
     c = n(242874),
-    d = n(165191),
-    _ = n(238017),
-    h = n(92814);
-function f(e) {
+    d = n(75825),
+    p = n(238017),
+    m = n(92814);
+function h(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
-            selectedGiftStyle: r,
-            emojiConfetti: f,
-            soundEffect: p,
+            selectedGiftStyle: i,
+            emojiConfetti: h,
+            soundEffect: C,
             setEmojiConfetti: E,
-            setSoundEffect: m,
-        } = (0, o.Pv)(),
-        g = (0, u.lo)(n, t),
-        A = g === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        I = g !== u.tB.DEFAULT;
-    return (0, i.jsxs)("div", {
+            setSoundEffect: A,
+        } = (0, s.Pv)(),
+        f = (0, u.lo)(n, t),
+        S = f === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        y = f !== u.tB.DEFAULT;
+    return (0, l.jsxs)("div", {
         children: [
-            I &&
-                (0, i.jsxs)("div", {
-                    className: h.Os,
+            y &&
+                (0, l.jsxs)("div", {
+                    className: m.Os,
                     children: [
-                        (0, i.jsx)("div", {
+                        (0, l.jsx)("div", {
                             "aria-hidden": !0,
                             style: { display: "contents" },
                             children:
-                                null != r
-                                    ? (0, i.jsx)(d.A, {
-                                          giftStyle: r,
+                                null != i
+                                    ? (0, l.jsx)(d.A, {
+                                          giftStyle: i,
                                           defaultAnimationState: c.oA.ACTION,
                                           idleAnimationState: c.oA.LOOP,
                                           shouldAnimate: !0,
-                                          className: h.lY,
+                                          className: m.lY,
                                       })
-                                    : (0, i.jsx)(a.y, { className: h.u1 }),
+                                    : (0, l.jsx)(a.y, { className: m.u1 }),
                         }),
-                        A &&
-                            (0, i.jsxs)("div", {
-                                className: s()(h.b7, h.Ow),
+                        S &&
+                            (0, l.jsxs)("div", {
+                                className: r()(m.b7, m.Ow),
                                 children: [
-                                    (0, i.jsx)(l.A, {
-                                        sound: p,
+                                    (0, l.jsx)(o.A, {
+                                        sound: C,
                                         onSelect: (e) => {
-                                            null != m && m(null == e ? void 0 : e);
+                                            null != A && A(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, i.jsx)(_.A, { setEmojiConfetti: E, emojiConfetti: null == f ? void 0 : f }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == h ? void 0 : h }),
                                 ],
                             }),
                     ],
                 }),
-            (0, i.jsx)("div", { className: h.__invalid_selectPlanDivider }),
+            (0, l.jsx)("div", { className: m.__invalid_selectPlanDivider }),
         ],
     });
 }

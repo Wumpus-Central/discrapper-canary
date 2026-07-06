@@ -1,0 +1,16 @@
+.paymentModalLockIcon__9a648 {
+    color: var(--primary-500);
+    padding: 0 var(--space-16)
+}
+
+.theme-dark .paymentModalLockIcon__9a648 {
+    color: var(--primary-300)
+}
+
+.lockIcon__9a648 {
+    margin-inline-end: 2px
+}
+
+.lockIconText__9a648 {
+    white-space: nowrap
+}

@@ -115,9 +115,11 @@ let w = (0, u.A)(
                               label: f.intl.string(f.t.Z5s7PM),
                               action: () =>
                                   (0, I.openModalLazy)(async () => {
-                                      let { default: l } = await Promise.all([t.e("74920"), t.e("78410")]).then(
-                                          t.bind(t, 753031),
-                                      );
+                                      let { default: l } = await Promise.all([
+                                          t.e("74920"),
+                                          t.e("77084"),
+                                          t.e("78410"),
+                                      ]).then(t.bind(t, 753031));
                                       return (t) => (0, e.jsx)(l, { ...t, guild: o, fromUser: n, toUser: u });
                                   }),
                           })),

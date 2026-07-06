@@ -1,27 +1,26 @@
-"use strict";
-n.d(t, { UN: () => h, oA: () => _, yE: () => f });
-var i,
-    r = n(284009),
-    s = n.n(r),
-    a = n(308528),
-    o = n(493336),
-    l = n(451909),
-    u = n(734057),
-    c = n(45938),
-    d = n(381941),
-    _ = (((i = {}).ACTION = "action"), (i.LOOP = "loop"), (i.IDLE = "idle"), i);
-async function h(e, t) {
-    if (null == t) throw Error("giftCode must be defined");
+i.d(n, { UN: () => f, oA: () => c, yE: () => p });
+var t,
+    r = i(284009),
+    l = i.n(r),
+    a = i(308528),
+    o = i(493336),
+    s = i(451909),
+    d = i(734057),
+    u = i(45938),
+    h = i(381941),
+    c = (((t = {}).ACTION = "action"), (t.LOOP = "loop"), (t.IDLE = "idle"), t);
+async function f(e, n) {
+    if (null == n) throw Error("giftCode must be defined");
     if (null == e) throw Error("Recipient must be defined");
-    let n = await a.A.openPrivateChannel({ recipientIds: e.id }).then((e) => {
-            let t = u.A.getChannel(e);
-            if ((s()(null != t, "PrivateChannel is null"), null == t)) throw Error("Channel must be defined");
-            return t;
+    let i = await a.A.openPrivateChannel({ recipientIds: e.id }).then((e) => {
+            let n = d.A.getChannel(e);
+            if ((l()(null != n, "PrivateChannel is null"), null == n)) throw Error("Channel must be defined");
+            return n;
         }),
-        i = (0, c.Zq)(t);
-    return o.A.sendMessage(n.id, l.Ay.parse(n, i), void 0, {
+        t = (0, u.Zq)(n);
+    return o.A.sendMessage(i.id, s.Ay.parse(i, t), void 0, {
         isGiftLinkSentOnBehalfOfUser: !0,
-        location: d.Hx.GIFTING,
+        location: h.Hx.GIFTING,
     });
 }
-function f(e) {}
+function p(e) {}

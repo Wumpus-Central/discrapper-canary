@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { A: () => E });
-var i,
-    r,
+n.d(l, { A: () => E });
+var r,
+    t,
     s = n(627968),
-    a = n(64700),
-    o = n(503698),
-    l = n.n(o),
-    u = n(235986),
+    i = n(64700),
+    a = n(503698),
+    d = n.n(a),
+    o = n(235986),
     c = n(536554),
-    d =
-        (((i = d || {}).PRIMARY = "primary"),
-        (i.SECONDARY = "secondary"),
-        (i.WARNING = "warning"),
-        (i.ERROR = "error"),
-        i),
-    _ = (((r = _ || {}).SMALL = "small"), (r.LARGE = "large"), (r.NONE = "none"), r);
-let h = { primary: c.cG, secondary: c.QU, warning: c.SO, error: c._r },
-    f = { small: c.EX, large: c.as, none: null };
-class p extends a.PureComponent {
-    static Colors = d;
-    static Sizes = _;
+    u =
+        (((r = u || {}).PRIMARY = "primary"),
+        (r.SECONDARY = "secondary"),
+        (r.WARNING = "warning"),
+        (r.ERROR = "error"),
+        r),
+    m = (((t = m || {}).SMALL = "small"), (t.LARGE = "large"), (t.NONE = "none"), t);
+let p = { primary: c.cG, secondary: c.QU, warning: c.SO, error: c._r },
+    N = { small: c.EX, large: c.as, none: null };
+class A extends i.PureComponent {
+    static Colors = u;
+    static Sizes = m;
     render() {
-        let { icon: e, color: t, children: n, iconSize: i, className: r, iconClassName: a } = this.props;
-        return (0, s.jsxs)(u.A, {
-            className: l()(c.N4, h[t], r),
-            align: u.A.Align.CENTER,
+        let { icon: e, color: l, children: n, iconSize: r, className: t, iconClassName: i } = this.props;
+        return (0, s.jsxs)(o.A, {
+            className: d()(c.N4, p[l], t),
+            align: o.A.Align.CENTER,
             children: [
-                (0, s.jsx)(e, { className: l()(c.Kk, f[i], a), color: "currentColor" }),
+                (0, s.jsx)(e, { className: d()(c.Kk, N[r], i), color: "currentColor" }),
                 (0, s.jsx)("div", { children: n }),
             ],
         });
     }
 }
-let E = p;
+let E = A;

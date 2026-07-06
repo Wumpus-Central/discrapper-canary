@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { R: () => l });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(834730),
-    o = n(67468);
-function l(e) {
-    let { text: t, className: n, disableGradient: r = !1 } = e;
-    return (0, i.jsx)("div", {
-        className: s()(o.Io, !r && o.SP, n),
-        children: (0, i.jsx)(a.E, { variant: "text-xxs/bold", color: "text-strong", className: o.dK, children: t }),
+t.d(e, { R: () => n });
+var a = t(627968);
+t(64700);
+var c = t(503698),
+    d = t.n(c),
+    r = t(834730),
+    i = t(67468);
+function n(s) {
+    let { text: e, className: t, disableGradient: c = !1 } = s;
+    return (0, a.jsx)("div", {
+        className: d()(i.Io, !c && i.SP, t),
+        children: (0, a.jsx)(r.E, { variant: "text-xxs/bold", color: "text-strong", className: i.dK, children: e }),
     });
 }

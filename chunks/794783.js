@@ -1,106 +1,105 @@
-"use strict";
-n.d(t, { A: () => T });
-var i = n(627968),
-    r = n(64700),
-    s = n(172218),
-    a = n(534514),
-    o = n(834730),
-    l = n(364522),
-    u = n(289873),
-    c = n(503698),
-    d = n.n(c),
-    _ = n(990078),
-    h = n(778712),
-    f = n(939249),
-    p = n(97808),
-    E = n(658675),
-    m = n(854627),
-    g = n(3161);
-function A(e) {
-    let { user: t, checked: n, onChange: s, disabled: a, tooltipConfig: l } = e,
-        u = r.useRef(null),
-        { avatarSrc: c, eventHandlers: A } = (0, m.A)({ userId: t?.id, size: h._3.SIZE_32 }),
-        I = t.globalName ?? t.username;
-    return (0, i.jsx)(_.m, {
-        text: l?.isActive(t, a) ? l.text(t) : null,
+t.d(s, { A: () => f });
+var a = t(627968),
+    l = t(64700),
+    i = t(172218),
+    n = t(534514),
+    d = t(834730),
+    r = t(364522),
+    c = t(289873),
+    o = t(503698),
+    x = t.n(o),
+    h = t(990078),
+    m = t(778712),
+    u = t(939249),
+    j = t(97808),
+    v = t(658675),
+    b = t(854627),
+    p = t(3161);
+function k(e) {
+    let { user: s, checked: t, onChange: i, disabled: n, tooltipConfig: r } = e,
+        c = l.useRef(null),
+        { avatarSrc: o, eventHandlers: k } = (0, b.A)({ userId: s?.id, size: m._3.SIZE_32 }),
+        N = s.globalName ?? s.username;
+    return (0, a.jsx)(h.m, {
+        text: r?.isActive(s, n) ? r.text(s) : null,
         position: "top",
-        anchorRef: u,
+        anchorRef: c,
         asContainer: !0,
-        children: (0, i.jsxs)(f.D, {
-            className: d()(g.kL, { [g.vk]: !a }),
+        children: (0, a.jsxs)(u.D, {
+            className: x()(p.kL, { [p.vk]: !n }),
             onClick: function () {
-                a || s(t, !n);
+                n || i(s, !t);
             },
             children: [
-                (0, i.jsx)("div", {
-                    className: g.dj,
-                    children: (0, i.jsx)(p.eu, {
-                        className: d()({ [g.SU]: a }),
-                        src: c,
-                        "aria-label": I,
-                        size: h._3.SIZE_32,
-                        ...A,
+                (0, a.jsx)("div", {
+                    className: p.dj,
+                    children: (0, a.jsx)(j.eu, {
+                        className: x()({ [p.SU]: n }),
+                        src: o,
+                        "aria-label": N,
+                        size: m._3.SIZE_32,
+                        ...k,
                     }),
                 }),
-                (0, i.jsxs)("div", {
-                    className: g.QV,
+                (0, a.jsxs)("div", {
+                    className: p.QV,
                     children: [
-                        (0, i.jsx)(o.E, {
-                            className: g.nT,
-                            color: a ? "text-muted" : "text-default",
+                        (0, a.jsx)(d.E, {
+                            className: p.nT,
+                            color: n ? "text-muted" : "text-default",
                             variant: "text-md/semibold",
-                            children: I,
+                            children: N,
                         }),
-                        (0, i.jsx)(o.E, {
-                            className: g.nT,
-                            color: a ? "text-muted" : "text-subtle",
+                        (0, a.jsx)(d.E, {
+                            className: p.nT,
+                            color: n ? "text-muted" : "text-subtle",
                             variant: "text-xs/normal",
-                            children: t.username,
+                            children: s.username,
                         }),
                     ],
                 }),
-                (0, i.jsx)("div", { ref: u, className: g.kv, children: (0, i.jsx)(E.P, { checked: n, disabled: a }) }),
+                (0, a.jsx)("div", { ref: c, className: p.kv, children: (0, a.jsx)(v.P, { checked: t, disabled: n }) }),
             ],
         }),
     });
 }
-var I = n(661829);
-function T(e) {
+var N = t(661829);
+function f(e) {
     let {
-            users: t,
-            isUserSelected: n,
-            onSelectionChange: r,
-            isFetching: c,
-            onFetchMore: d,
-            isUserDisabled: _,
-            searchQuery: h = "",
-            emptySearchContent: f,
-            className: p,
-            tooltipConfig: E,
+            users: s,
+            isUserSelected: t,
+            onSelectionChange: l,
+            isFetching: o,
+            onFetchMore: x,
+            isUserDisabled: h,
+            searchQuery: m = "",
+            emptySearchContent: u,
+            className: j,
+            tooltipConfig: v,
         } = e,
-        m = (0, s.K)((e) => {
-            e && !c && d?.();
+        b = (0, i.K)((e) => {
+            e && !o && x?.();
         });
-    return h.length > 0 && 0 === t.length && null != f
-        ? (0, i.jsxs)("div", {
-              className: I.t,
+    return m.length > 0 && 0 === s.length && null != u
+        ? (0, a.jsxs)("div", {
+              className: N.t,
               children: [
-                  (0, i.jsx)(a.D, { variant: "heading-md/semibold", color: "text-strong", children: f.header }),
-                  (0, i.jsx)(o.E, { variant: "text-md/medium", color: "text-subtle", children: f.body }),
+                  (0, a.jsx)(n.D, { variant: "heading-md/semibold", color: "text-strong", children: u.header }),
+                  (0, a.jsx)(d.E, { variant: "text-md/medium", color: "text-subtle", children: u.body }),
               ],
           })
-        : (0, i.jsxs)(l.d_, {
-              className: p,
+        : (0, a.jsxs)(r.d_, {
+              className: j,
               children: [
-                  t.map((e) =>
-                      (0, i.jsx)(
-                          A,
-                          { user: e, checked: n(e), disabled: !!_?.(e), onChange: r, tooltipConfig: E },
+                  s.map((e) =>
+                      (0, a.jsx)(
+                          k,
+                          { user: e, checked: t(e), disabled: !!h?.(e), onChange: l, tooltipConfig: v },
                           e.id,
                       ),
                   ),
-                  c && (0, i.jsx)(u.y, {}),
-                  (0, i.jsx)("div", { ref: m }),
+                  o && (0, a.jsx)(c.y, {}),
+                  (0, a.jsx)("div", { ref: b }),
               ],
           });
 }

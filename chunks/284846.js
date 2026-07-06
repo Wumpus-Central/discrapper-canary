@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { U: () => l });
+n.d(t, { U: () => o });
 var i = n(359800),
     r = n(206828),
-    s = n(429913),
+    l = n(429913),
     a = n(792620),
-    o = n(942370);
-function l(e) {
+    s = n(942370);
+function o(e) {
     let t = (0, a.I6)(e),
         n = (0, a.xc)(e),
-        l = (0, s.h)(n),
+        o = (0, l.h)(n),
         {
             fetched: u,
             hasAlreadyLinked: c,
             canStartAuthorization: d,
-            startAuthorization: _,
-        } = (0, r.RD)(t ? l : null, { allowedFlows: [o._M.WEB] }),
-        h = (0, i.z)(_, c, { showInGameModal: !1, showToastOnSuccess: !0 });
+            startAuthorization: f,
+        } = (0, r.RD)(t ? o : null, { allowedFlows: [s._M.WEB] }),
+        m = (0, i.z)(f, c, { showInGameModal: !1, showToastOnSuccess: !0 });
     return {
         isInGameQuest: t,
         fetched: u,
         hasAlreadyLinked: u ? c : void 0,
         canStartAuthorization: d,
-        startAuthorization: h,
+        startAuthorization: m,
     };
 }

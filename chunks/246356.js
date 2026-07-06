@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => s });
-var i = n(64700),
-    r = n(447404);
-function s(e) {
-    let { children: t } = e,
-        { preventIdle: n, allowIdle: s } = (0, r.o)("popup");
-    return i.useEffect(() => (n(), () => s()), [s, n]), t;
+t.d(s, { A: () => e });
+var u = t(64700),
+    c = t(447404);
+function e(p) {
+    let { children: s } = p,
+        { preventIdle: t, allowIdle: e } = (0, c.o)("popup");
+    return u.useEffect(() => (t(), () => e()), [e, t]), s;
 }

@@ -1,0 +1,151 @@
+.perkRow_c609c8 {
+    align-items: center;
+    border-bottom: 1px solid var(--channeltextarea-background);
+    display: flex;
+    margin: 0 16px;
+    padding: 16px 0
+}
+
+.perkRow_c609c8:last-child {
+    border-bottom: none
+}
+
+.perkIconContainer_c609c8 {
+    display: flex;
+    justify-content: center;
+    margin-inline-end: 16px
+}
+
+.perkIcon_c609c8,
+.perkIconContainer_c609c8 {
+    height: 24px;
+    width: 24px
+}
+
+.closeButton__2d726 {
+    inset-inline-end: 4px;
+    position: absolute;
+    top: 12px
+}
+
+.upsellImage__2d726 {
+    background-image: url(/assets/7a8cfb4e8b5926c9.svg);
+    background-size: cover;
+    height: 120px;
+    margin: 0 auto 32px;
+    width: 265px
+}
+
+.upsellImageWithTrialOffer__2d726 {
+    margin-top: 24px
+}
+
+.premiumTrialBadge__2d726 {
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%)
+}
+
+.perksList__2d726 {
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    margin: 16px 0
+}
+
+.perkIconGuild__2d726 {
+    color: var(--guild-boosting-pink)
+}
+
+.perkIconUpload__2d726 {
+    color: var(--premium-perk-yellow)
+}
+
+.perkIconStream__2d726 {
+    color: var(--premium-perk-dark-blue)
+}
+
+.perkIconChatPerks__2d726 {
+    color: var(--brand-400)
+}
+
+.offerNoticeContainerShared__3e43f {
+    background: linear-gradient(90deg, rgba(88, 101, 242, .24), rgba(88, 101, 242, .12));
+    box-sizing: border-box;
+    color: var(--text-strong)
+}
+
+.nitroPinkGradient__3e43f {
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%)
+}
+
+.greenGradient__3e43f {
+    background: var(--background-feedback-positive);
+    color: var(--text-feedback-positive)
+}
+
+.customGraphicContainer__3e43f {
+    flex-shrink: 0
+}
+
+.offerNoticeContainer__3e43f {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.offerNoticeOneLineContainer__3e43f {
+    align-self: stretch;
+    border-radius: var(--radius-md);
+    padding: var(--space-8) var(--space-16);
+    width: 100%
+}
+
+.offerNoticeOneLineText__3e43f {
+    text-align: start
+}
+
+.legalFinePrint__1048e {
+    display: flex;
+    flex-direction: column;
+    gap: 8px
+}
+
+.formTitle__553e7 {
+    margin-bottom: 8px;
+    margin-top: 8px
+}
+
+.checkbox__553e7 {
+    margin-bottom: 10px
+}
+
+.checkbox__553e7:last-child {
+    margin-bottom: 0
+}
+
+.checkboxLabel__553e7 {
+    color: var(--interactive-text-default)
+}
+
+.finePrint__553e7 {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 14px;
+    margin-bottom: 16px;
+    margin-top: 8px
+}
+
+.wrapper_c0e5ec {
+    border-radius: 4px;
+    transition: background-color .2s ease
+}
+
+.wrapperActive_c0e5ec {
+    background-color: var(--background-mod-subtle)
+}
+
+.fineprint_b44961 {
+    margin-bottom: 0;
+    margin-top: 16px
+}

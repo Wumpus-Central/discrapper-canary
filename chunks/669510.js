@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { _: () => d });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(834730),
-    l = n(580630),
-    u = n(381247),
-    c = n(303519);
-function d(e) {
+l.d(t, { _: () => o });
+var s = l(627968),
+    n = l(64700),
+    a = l(503698),
+    r = l.n(a),
+    i = l(834730),
+    d = l(580630),
+    c = l(777485),
+    u = l(303519);
+function o(e) {
     let {
             label: t,
-            totalLineItemLabel: n,
-            totalLineItemLabelSubText: s,
-            totalLineItemValueSubText: d,
-            showTotalWhenCollapsed: _ = !1,
-            lineItems: h,
-            intervalType: f,
-            intervalCount: p,
-            currency: E,
-            defaultExpanded: m = !1,
+            totalLineItemLabel: l,
+            totalLineItemLabelSubText: a,
+            totalLineItemValueSubText: o,
+            showTotalWhenCollapsed: m = !1,
+            lineItems: x,
+            intervalType: j,
+            intervalCount: h,
+            currency: v,
+            defaultExpanded: g = !1,
         } = e,
-        [g, A] = r.useState(m),
-        I = r.useMemo(() => {
-            let e = h.reduce((e, t) => e + t.amount, 0),
-                t = (0, l.$g)(e, E);
-            return (0, l.CE)(t, f, p);
-        }, [h, E, f, p]),
-        T = (0, i.jsxs)(u.h, {
+        [p, f] = n.useState(g),
+        N = n.useMemo(() => {
+            let e = x.reduce((e, t) => e + t.amount, 0),
+                t = (0, d.$g)(e, v);
+            return (0, d.CE)(t, j, h);
+        }, [x, v, j, h]),
+        b = (0, s.jsxs)(c.h, {
             label: t,
-            defaultExpanded: m,
-            isDisabled: h.length <= 0,
-            onExpandedChange: A,
-            collapsedContent: _
-                ? (0, i.jsx)(o.E, { variant: "text-md/normal", color: "text-subtle", children: I })
+            defaultExpanded: g,
+            isDisabled: x.length <= 0,
+            onExpandedChange: f,
+            collapsedContent: m
+                ? (0, s.jsx)(i.E, { variant: "text-md/normal", color: "text-subtle", children: N })
                 : null,
             children: [
-                h.map((e) => {
-                    let { formatWithoutRate: t, amount: n, ...r } = e,
-                        s = (0, l.$g)(n, E),
-                        a = t ? s : (0, l.CE)(s, f, p);
-                    return (0, i.jsx)(u.i, { value: a, ...r }, r.id);
+                x.map((e) => {
+                    let { formatWithoutRate: t, amount: l, ...n } = e,
+                        a = (0, d.$g)(l, v),
+                        r = t ? a : (0, d.CE)(a, j, h);
+                    return (0, s.jsx)(c.i, { value: r, ...n }, n.id);
                 }),
-                (0, i.jsx)("div", { className: c.m }),
-                (0, i.jsx)(u.i, {
-                    label: n ?? t,
-                    labelSubText: s,
-                    value: I,
-                    subText: d,
+                (0, s.jsx)("div", { className: u.m }),
+                (0, s.jsx)(c.i, {
+                    label: l ?? t,
+                    labelSubText: a,
+                    value: N,
+                    subText: o,
                     color: "text-strong",
                     valueColor: "text-strong",
                 }),
             ],
         });
-    return (0, i.jsx)("div", { className: a()({ [c.k]: g }), children: T });
+    return (0, s.jsx)("div", { className: r()({ [u.k]: p }), children: b });
 }

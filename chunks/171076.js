@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => j });
+n.d(t, { A: () => H });
 var i = n(684013),
     r = n(439372),
     s = n(547),
@@ -12,22 +12,22 @@ var i = n(684013),
     _ = n(287809),
     h = n(38405),
     f = n(140069),
-    p = n(41984),
-    E = n(267355),
+    E = n(41984),
+    p = n(267355),
     m = n(956753),
     g = n(296027),
     A = n(489277),
     I = n(222506),
     T = n(897720),
     S = n(145567),
-    y = n(652215);
+    N = n(652215);
 function C(e) {
     return (0, m.U5)(e, "OverlayTextChatAutomaticLifecycleManager");
 }
-let N = new Map(),
-    v = null,
+let y = new Map(),
+    O = null,
     R = !1;
-async function O() {
+async function v() {
     try {
         return (
             await Promise.all([
@@ -35,33 +35,46 @@ async function O() {
                 n.e("23017"),
                 n.e("74387"),
                 n.e("92417"),
-                n.e("28746"),
-                n.e("60435"),
+                n.e("58127"),
+                n.e("68515"),
+                n.e("14603"),
+                n.e("36252"),
+                n.e("88804"),
+                n.e("28041"),
+                n.e("89001"),
                 n.e("42535"),
                 n.e("23045"),
-                n.e("94585"),
+                n.e("73350"),
                 n.e("35027"),
                 n.e("37977"),
                 n.e("86672"),
-                n.e("18997"),
+                n.e("54625"),
+                n.e("77084"),
+                n.e("96137"),
+                n.e("35485"),
+                n.e("82069"),
                 n.e("34691"),
+                n.e("18997"),
+                n.e("80239"),
+                n.e("28752"),
+                n.e("78412"),
                 n.e("25486"),
                 n.e("72877"),
+                n.e("71467"),
                 n.e("97069"),
                 n.e("32207"),
-                n.e("71467"),
                 n.e("36150"),
                 n.e("99011"),
+                n.e("22067"),
                 n.e("55266"),
                 n.e("49333"),
-                n.e("22067"),
                 n.e("86262"),
-                n.e("30878"),
                 n.e("80077"),
+                n.e("30878"),
                 n.e("9528"),
                 n.e("10147"),
                 n.e("60249"),
-                n.e("50541"),
+                n.e("72922"),
                 n.e("61750"),
                 n.e("96232"),
             ]).then(n.bind(n, 191701))
@@ -73,27 +86,27 @@ async function O() {
 function b(e) {
     let { channelId: t, guildId: n, messageId: i } = e;
     if (!g.default.isAnyOverlayRendering() || null == l.A.getChannel(t) || u.A.isReady(t)) return;
-    let r = N.get(t);
+    let r = y.get(t);
     null != r && clearTimeout(r);
     let a = setTimeout(() => {
-        N.delete(t), u.A.isReady(t) || s.A.fetchMessages({ guildId: n, channelId: t, messageId: i });
+        y.delete(t), u.A.isReady(t) || s.A.fetchMessages({ guildId: n, channelId: t, messageId: i });
     }, 1e3);
-    N.set(t, a);
+    y.set(t, a);
 }
-async function D(e) {
-    let t = await O();
+async function L(e) {
+    let t = await v();
     if (!(null == t || I.A.isInputLocked(A.A.getTargetPID())))
-        for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) i.A.updateNotificationStatus(n.id, y.yFH.DISMISSED);
+        for (let n of t.getNotificationsForChannel(e, T.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
-function L() {
+function D() {
     !(function () {
         if (!g.default.isAnyOverlayRendering()) return;
         let e = f.A.getSelectedChannelId();
-        if (null == e || e === v) return;
+        if (null == e || e === O) return;
         let t = l.A.getChannel(e);
         null != t &&
             (0, o.pQ)(t.type) &&
-            ((v = e), b({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
+            ((O = e), b({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
     })();
 }
 function w(e) {
@@ -102,11 +115,11 @@ function w(e) {
     let i = l.A.getChannel(t);
     if (null == i) return;
     let r = _.default.getCurrentUser()?.id;
-    if ((null != r && n.author?.id === r && D(t), f.A.isChannelTracked(t))) return;
+    if ((null != r && n.author?.id === r && L(t), f.A.isChannelTracked(t))) return;
     if (i.isPrivate()) {
         if (d.Ay.isChannelMuted(null, t)) return;
     } else if (d.Ay.isChannelMuted(i.getGuildId(), t) || !(0, a.lx)(n, t, !0)) return;
-    let s = i.isPrivate() ? p.B9.INCOMING_DM_MESSAGE : p.B9.INCOMING_MENTION_MESSAGE,
+    let s = i.isPrivate() ? E.B9.INCOMING_DM_MESSAGE : E.B9.INCOMING_MENTION_MESSAGE,
         o = (function (e) {
             if (null == e.timestamp) return Date.now();
             let t = new Date(e.timestamp).getTime();
@@ -114,19 +127,19 @@ function w(e) {
         })(n);
     (0, S.Ml)({ channelId: t, source: s, lastActivityAtMs: o, lastMessageId: n.id });
 }
-function M(e) {
+function P(e) {
     let { channelId: t, lastMessageId: n } = e,
         i = l.A.getChannel(t);
     b({ channelId: t, guildId: i?.getGuildId?.() ?? i?.guild_id ?? null, messageId: n ?? null });
 }
-function P(e) {
+function M(e) {
     let { channelId: t, guildId: n, messageId: i, source: r } = e;
-    r !== p.B9.AUTOMATIC_CHANNEL_SELECT && ((R = !0), D(t)), b({ channelId: t, guildId: n, messageId: i });
+    r !== E.B9.AUTOMATIC_CHANNEL_SELECT && ((R = !0), L(t)), b({ channelId: t, guildId: n, messageId: i });
 }
 function x(e) {
     let { channelId: t } = e,
-        n = N.get(t);
-    null != n && (clearTimeout(n), N.delete(t)),
+        n = y.get(t);
+    null != n && (clearTimeout(n), y.delete(t)),
         setTimeout(() => {
             let e = f.A.getSelectedChannelId();
             if ((null == e && (R = !1), null == e || e === t)) return;
@@ -134,11 +147,11 @@ function x(e) {
             b({ channelId: e, guildId: n?.getGuildId?.() ?? n?.guild_id ?? null, messageId: null });
         }, 0);
 }
-function k() {
-    for (let [e, t] of N) clearTimeout(t), N.delete(e);
+function U() {
+    for (let [e, t] of y) clearTimeout(t), y.delete(e);
     R = !1;
 }
-function U(e) {
+function k(e) {
     let { minimized: t } = e;
     if (!t) return;
     let n = f.A.getSelectedChannelId();
@@ -153,41 +166,41 @@ function G(e) {
         f.A.getSelectedChannelId() !== e &&
         (0, S.D$)({
             target: { kind: S.bB.CHANNEL, channelId: e, guildId: t.getGuildId(), messageId: null },
-            source: p.B9.AUTOMATIC_CHANNEL_SELECT,
+            source: E.B9.AUTOMATIC_CHANNEL_SELECT,
             widgetType: null,
         });
 }
-function F(e) {
+function V(e) {
     let { channelId: t } = e;
-    !g.default.isAnyOverlayRendering() || null == t || ((0, E.isOverlayCurrentlyVisibleAndUnlocked)() && G(t));
+    !g.default.isAnyOverlayRendering() || null == t || ((0, p.isOverlayCurrentlyVisibleAndUnlocked)() && G(t));
 }
-async function V(e) {
+async function F(e) {
     if (e.locked) {
         let e = f.A.getSelectedChannelId();
         null != e && i.A.ackTextChatChannel(e);
         return;
     }
-    let t = await O();
+    let t = await v();
     if (null == t || !g.default.isAnyOverlayRendering()) return;
     let n = f.A.getSelectedChannelId();
     if (null != n && t.hasNotificationForChannel(n)) return;
     let r = null,
         s = t.getMostRecentNotificationChannelId();
-    null != s ? (r = s) : R || (r = c.A.getChannelId() ?? null), null != r && (G(r), D(r));
+    null != s ? (r = s) : R || (r = c.A.getChannelId() ?? null), null != r && (G(r), L(r));
 }
 class B extends r.A {
     actions = {
-        CHANNEL_SELECT: C(F),
-        SIDEBAR_VIEW_CHANNEL: C(F),
+        CHANNEL_SELECT: C(V),
+        SIDEBAR_VIEW_CHANNEL: C(V),
         MESSAGE_CREATE: C(w),
-        VOICE_STATE_UPDATES: C(L),
-        VOICE_CHANNEL_SELECT: C(L),
-        OVERLAY_SET_INPUT_LOCKED: C(V),
-        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: C(M),
-        OVERLAY_TEXT_CHAT_SELECT_CHANNEL: C(P),
+        VOICE_STATE_UPDATES: C(D),
+        VOICE_CHANNEL_SELECT: C(D),
+        OVERLAY_SET_INPUT_LOCKED: C(F),
+        OVERLAY_TEXT_CHAT_ADD_OR_UPDATE_CHANNEL: C(P),
+        OVERLAY_TEXT_CHAT_SELECT_CHANNEL: C(M),
         OVERLAY_TEXT_CHAT_REMOVE_CHANNEL: C(x),
-        OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: C(k),
-        OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: C(U),
+        OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS: C(U),
+        OVERLAY_TEXT_CHAT_SET_VOICE_CHAT_MINIMIZED: C(k),
     };
 }
-let j = new B();
+let H = new B();

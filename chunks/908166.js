@@ -1,25 +1,24 @@
-"use strict";
 n.d(t, { x: () => a });
-var i = n(64700),
-    r = n(655857),
-    s = n(650170);
+var l = n(64700),
+    i = n(655857),
+    r = n(650170);
 let a = () => {
-    let { displayCurrency: e } = (0, r.Jn)(),
+    let { displayCurrency: e } = (0, i.Jn)(),
         {
             selectedSkuId: t,
             skuIds: n,
             isGift: a,
-            getOrCreateSetupIntent: o,
-        } = (0, s.t4)((e) => ({
+            getOrCreateSetupIntent: s,
+        } = (0, r.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             skuIds: e.skuIds,
             isGift: e.isGift,
             getOrCreateSetupIntent: e.getOrCreateSetupIntent,
         })),
-        l = t ?? (1 === n.length ? n[0] : void 0),
-        u = i.useMemo(() => ({ currency: e, sku_id: l, is_gift: a }), [e, l, a]);
+        o = t ?? (1 === n.length ? n[0] : void 0),
+        u = l.useMemo(() => ({ currency: e, sku_id: o, is_gift: a }), [e, o, a]);
     return {
-        createSetupIntent: i.useCallback(() => o(u, { forceRecreate: !0 }), [o, u]),
-        createSetupIntentDeduped: i.useCallback(() => o(u), [o, u]),
+        createSetupIntent: l.useCallback(() => s(u, { forceRecreate: !0 }), [s, u]),
+        createSetupIntentDeduped: l.useCallback(() => s(u), [s, u]),
     };
 };

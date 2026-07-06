@@ -3,35 +3,35 @@ var n = s(627968),
     l = s(64700),
     i = s(922016),
     u = s(834730),
-    a = s(939249),
-    r = s(789645),
+    r = s(939249),
+    a = s(789645),
     o = s(821609),
     E = s(408278),
     c = s(365199),
     d = s(743368),
     A = s(246356),
     S = s(24001),
-    T = s(3738),
-    _ = s(347135),
+    _ = s(3738),
+    T = s(347135),
     C = s(646917),
     m = s(590202),
-    Q = s(651892),
-    x = s(576761),
+    x = s(651892),
+    Q = s(576761),
     h = s(73473),
     L = s(270045),
     R = s(442734),
     I = s(646764),
-    g = s(617986),
-    v = s(190107),
-    N = s(375708),
-    f = s(305421);
+    N = s(617986),
+    f = s(190107),
+    g = s(375708),
+    v = s(305421);
 function U(e) {
     let { quest: t, isFocused: s, onAcceptQuest: U, isEnrolling: j } = e,
-        M = (0, T.A9)(t, S.uF.QUEST_LIVE_STREAM, v.rE.QUEST_CHANNEL_CALL_HEADER),
+        M = (0, _.A9)(t, S.uF.QUEST_LIVE_STREAM, f.rE.QUEST_CHANNEL_CALL_HEADER),
         p = (0, C.z)(),
-        b = (0, _.SD)(t, p) && (p === x.MA.NITRO || p === x.MA.CREPE),
-        F = null != t.config.ctaConfig ? (0, Q.Jx)(t.config) : null,
-        y = (0, _.do)({
+        b = (0, T.SD)(t, p) && (p === Q.MA.NITRO || p === Q.MA.CREPE),
+        F = null != t.config.ctaConfig ? (0, x.Jx)(t.config) : null,
+        y = (0, T.do)({
             quest: t,
             content: S.uF.QUEST_LIVE_STREAM,
             ctaContent: m.Cy.OPEN_GAME_LINK,
@@ -46,7 +46,7 @@ function U(e) {
             V(!1);
         }, []),
         k = l.useCallback(() => {
-            (0, g.navigateToQuestHome)({ fromContent: S.uF.QUEST_LIVE_STREAM, questId: t.id }), V(!1);
+            (0, N.mA)({ fromContent: S.uF.QUEST_LIVE_STREAM, questId: t.id }), V(!1);
         }, [t.id]);
     return (0, n.jsx)(h.R, {
         questOrQuests: t,
@@ -54,11 +54,11 @@ function U(e) {
         sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
         children: () =>
             (0, n.jsxs)("div", {
-                className: f.M0,
+                className: v.M0,
                 ref: D,
                 children: [
                     (0, n.jsx)(I.A, {
-                        className: f.Qq,
+                        className: v.Qq,
                         style: { width: 32, height: 32 },
                         autoplay: s,
                         quest: t,
@@ -82,21 +82,21 @@ function U(e) {
                                     sourceQuestContent: S.uF.QUEST_LIVE_STREAM,
                                     children: () =>
                                         (0, n.jsxs)("div", {
-                                            className: f.g5,
+                                            className: v.g5,
                                             children: [
                                                 (0, n.jsxs)("div", {
-                                                    className: f.j$,
+                                                    className: v.j$,
                                                     children: [
                                                         (0, n.jsx)(u.E, {
                                                             variant: "text-md/semibold",
                                                             color: "text-default",
                                                             children: t.config.messages.questName,
                                                         }),
-                                                        (0, n.jsx)(a.D, {
-                                                            className: f.We,
-                                                            "aria-label": N.intl.string(N.t.cpT0Cq),
+                                                        (0, n.jsx)(r.D, {
+                                                            className: v.We,
+                                                            "aria-label": g.intl.string(g.t.cpT0Cq),
                                                             onClick: P,
-                                                            children: (0, n.jsx)(r.P, {
+                                                            children: (0, n.jsx)(a.P, {
                                                                 size: "xs",
                                                                 color: "currentColor",
                                                             }),
@@ -104,10 +104,10 @@ function U(e) {
                                                     ],
                                                 }),
                                                 (0, n.jsxs)("div", {
-                                                    className: f.ek,
+                                                    className: v.ek,
                                                     children: [
                                                         (0, n.jsx)(I.A, {
-                                                            className: f.Ul,
+                                                            className: v.Ul,
                                                             style: { width: 48, height: 48 },
                                                             autoplay: !0,
                                                             quest: t,
@@ -125,7 +125,7 @@ function U(e) {
                                                     variant: "secondary",
                                                     size: "md",
                                                     fullWidth: !0,
-                                                    text: N.intl.string(N.t["th2+0j"]),
+                                                    text: g.intl.string(g.t["th2+0j"]),
                                                     onClick: k,
                                                 }),
                                             ],
@@ -134,32 +134,32 @@ function U(e) {
                             }),
                         children: () =>
                             (0, n.jsx)("div", {
-                                className: f.zh,
+                                className: v.zh,
                                 children: (0, n.jsx)(o.$, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: N.intl.string(N.t["h/qYF6"]),
+                                    text: g.intl.string(g.t["h/qYF6"]),
                                     onClick: O,
                                 }),
                             }),
                     }),
                     (0, n.jsxs)("div", {
-                        className: f.KW,
+                        className: v.KW,
                         children: [
                             (0, n.jsx)(u.E, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                className: f.I4,
-                                children: N.intl.string(N.t.o6FLcF),
+                                className: v.I4,
+                                children: g.intl.string(g.t.o6FLcF),
                             }),
-                            (0, n.jsx)("span", { className: f.me, "aria-hidden": !0, children: "\xb7" }),
+                            (0, n.jsx)("span", { className: v.me, "aria-hidden": !0, children: "\xb7" }),
                             (0, n.jsxs)("div", {
-                                className: f.VP,
+                                className: v.VP,
                                 children: [
                                     (0, n.jsx)(u.E, {
                                         variant: "text-xs/medium",
                                         color: "text-muted",
-                                        className: f.h_,
+                                        className: v.h_,
                                         children: M,
                                     }),
                                     b && (0, n.jsx)(R.e, { questId: t.id, orbMultiplierEligibility: p }),
@@ -179,7 +179,7 @@ function U(e) {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: c.j,
-                                "aria-label": N.intl.string(N.t.DEoVWZ),
+                                "aria-label": g.intl.string(g.t.DEoVWZ),
                             }),
                     }),
                     null != F &&
@@ -191,11 +191,11 @@ function U(e) {
                             onClick: y,
                         }),
                     (0, n.jsx)("div", {
-                        className: f.lI,
+                        className: v.lI,
                         children: (0, n.jsx)(o.$, {
                             variant: "primary",
                             size: "sm",
-                            text: N.intl.string(N.t.l7E81v),
+                            text: g.intl.string(g.t.l7E81v),
                             onClick: U,
                             loading: j,
                         }),

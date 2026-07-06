@@ -1,18 +1,14 @@
-e.exports = {
-    wG: "loader__640e4",
-    FG: "contentWrapper__640e4",
-    Xn: "shaker__640e4",
-    X9: "customHeaderForMana__640e4",
-    t4: "errorBody__640e4",
-    rN: "promotionBodyWrapper__640e4",
-    u5: "promotionBody__640e4",
-    hb: "promotionImage__640e4",
-    iZ: "promotionAccountIdentifier__640e4",
-    FL: "promotionAccountIdentifierAvatar__640e4",
-    KZ: "promotionAccountIdentifierBody__640e4",
-    EF: "promotionAccountIdentifierError__640e4",
-    ex: "promotionConfirmUpgrade__640e4",
-    DD: "title__640e4",
-    G3: "bodyText__640e4",
-    M6: "errorImage__640e4",
-};
+"use strict";
+n.d(t, { H: () => r }), n(321073);
+var i = n(168186);
+function r(e) {
+    let t = e.split(",").map((e) => e.trim()),
+        n = [],
+        r = [];
+    return (
+        t.forEach((e) => {
+            (0, i.hT)(e) ? n.push(e) : r.push(e);
+        }),
+        [r, n]
+    );
+}

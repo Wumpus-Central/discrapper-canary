@@ -1,0 +1,212 @@
+.compactBarContainer__8e688 {
+    align-items: center;
+    display: flex;
+    inset-inline-end: var(--space-8);
+    inset-inline-start: 0;
+    max-height: var(--custom-compact-bar-height);
+    z-index: 1
+}
+
+.compactBarBackground__8e688,
+.compactBarContainer__8e688 {
+    height: var(--custom-compact-bar-height);
+    position: absolute;
+    top: 0
+}
+
+.compactBarBackground__8e688 {
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    background-color: color-mix(in srgb, var(--modal-background) 90%, transparent);
+    border-bottom: 1px solid var(--border-subtle);
+    inset-inline: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s ease-in-out
+}
+
+.compactBarScrollbarBackground__8e688 {
+    inset-inline-end: 0;
+    inset-inline-start: unset;
+    width: var(--space-8)
+}
+
+.compactBarBackgroundVisible__8e688 {
+    opacity: 1
+}
+
+.compactBarContent__8e688 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    height: var(--custom-compact-bar-height);
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    opacity: 0;
+    padding-inline-end: calc(var(--custom-spacing)*2 - var(--space-8));
+    padding-inline-start: calc(var(--custom-spacing)*2);
+    pointer-events: none;
+    transition: opacity .25s ease-in-out
+}
+
+.compactBarContentVisible__8e688 {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.compactIcon__8e688 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 32px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 32px
+}
+
+.compactName__8e688 {
+    flex: 1;
+    min-width: 0
+}
+
+.compactName__8e688,
+.overflowMenuContainer__8e688 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.overflowMenuContainer__8e688 {
+    flex-direction: row;
+    height: var(--custom-compact-bar-height);
+    inset-inline-end: calc(var(--custom-spacing)*2 - var(--space-8));
+    position: absolute;
+    top: 0
+}
+
+.backgroundArt__8e688 {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 500px;
+    -webkit-mask-image: linear-gradient(183deg, #000, rgba(0, 0, 0, .55) 50px, transparent 325px);
+    mask-image: linear-gradient(183deg, #000, rgba(0, 0, 0, .55) 50px, transparent 325px)
+}
+
+.backgroundArt__8e688,
+.backgroundGradient__8e688 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    pointer-events: none
+}
+
+.backgroundGradient__8e688 {
+    background: linear-gradient(to bottom, transparent 0, var(--background-base-lower) 200px);
+    bottom: 0
+}
+
+.heroContent__8e688 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-12);
+    margin-bottom: var(--space-12);
+    opacity: 1;
+    padding-inline: calc(var(--custom-spacing)*2);
+    padding-top: var(--space-24);
+    position: relative;
+    transform: translateY(0);
+    transition: opacity .15s ease-in-out
+}
+
+.full-motion .heroContent__8e688 {
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out
+}
+
+.heroContent__8e688.showCompactBar__8e688 {
+    opacity: 0
+}
+
+.full-motion .heroContent__8e688.showCompactBar__8e688 {
+    transform: translateY(-20px)
+}
+
+.heroCoverArt__8e688 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 114px;
+    max-width: 86px;
+    min-width: 76px;
+    opacity: 1;
+    overflow: hidden;
+    transform: translateY(0);
+    transition: opacity .15s ease-in-out
+}
+
+.full-motion .heroCoverArt__8e688 {
+    transition: opacity .15s ease-in-out, transform .15s ease-in-out
+}
+
+.heroContent__8e688.showCompactBar__8e688 .heroCoverArt__8e688 {
+    opacity: 0
+}
+
+.full-motion .heroContent__8e688.showCompactBar__8e688 .heroCoverArt__8e688 {
+    transform: translateY(-10px)
+}
+
+.heroCoverArtImg__8e688 {
+    border-radius: inherit;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.heroDetails__8e688 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: flex-end;
+    min-width: 0
+}
+
+.gameRankPill__8e688 {
+    align-items: center;
+    background-color: var(--white);
+    border-radius: var(--radius-round);
+    color: var(--black);
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-xxs);
+    padding-inline: var(--space-8);
+    text-transform: uppercase;
+    white-space: nowrap;
+    width: -moz-min-content;
+    width: min-content
+}
+
+.oneColumnCoverArt__8e688 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    max-height: 156px;
+    max-width: 117px;
+    min-height: 156px;
+    min-width: 117px
+}
+
+.twoColumnCoverArt__8e688 {
+    align-items: center;
+    display: flex;
+    height: 114px;
+    justify-content: center;
+    width: auto
+}
+
+.coverArt__8e688 {
+    border-radius: var(--radius-sm);
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}

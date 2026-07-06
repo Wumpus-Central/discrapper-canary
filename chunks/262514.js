@@ -18,20 +18,20 @@ var n = s(627968),
     g = s(775602),
     N = s(274670),
     v = s(144779),
-    _ = s(409626),
-    A = s(106799),
+    A = s(409626),
+    _ = s(106799),
     S = s(287809),
     q = s(859703),
     I = s(104886),
     y = s(112142),
-    T = s(3738),
-    b = s(347135),
-    p = s(646917),
+    b = s(3738),
+    p = s(347135),
+    T = s(646917),
     w = s(561844),
     D = s(590202),
     L = s(651892),
-    Q = s(710969),
-    M = s(576761),
+    M = s(710969),
+    Q = s(576761),
     k = s(801365),
     U = s(792620),
     R = s(895253),
@@ -43,8 +43,8 @@ var n = s(627968),
     G = s(646764),
     z = s(398025),
     K = s(617986),
-    H = s(795965),
-    $ = s(190107),
+    $ = s(795965),
+    H = s(190107),
     Y = s(375708),
     V = s(562296),
     X = s(474491);
@@ -54,17 +54,17 @@ async function Z() {
 function J(e) {
     let { quest: t, location: s, isInteracting: a, contentPosition: r, sourceQuestContent: o } = e,
         U = i.useRef(null),
-        { ref: O, scrollHeight: H } = (0, u.wR)(),
-        J = 104 !== H,
+        { ref: O, scrollHeight: $ } = (0, u.wR)(),
+        J = 104 !== $,
         { expansionSpring: es } = (0, m.z)({
             expansionSpring: +!!a,
             config: { tension: 250, friction: 20, clamp: !0 },
         }),
-        en = (0, p.z)(),
-        ei = (0, b.SD)(t, en),
-        ea = en === M.MA.NITRO && ei,
-        el = (0, Q.Ic)(t),
-        er = (0, b.In)(t),
+        en = (0, T.z)(),
+        ei = (0, p.SD)(t, en),
+        ea = en === Q.MA.NITRO && ei,
+        el = (0, M.Ic)(t),
+        er = (0, p.In)(t),
         eo = (0, j.bG)([S.default], () => S.default.getCurrentUser()),
         ec = (0, k.mq)(t.config, eo),
         eu = (0, k.mH)(t.config, eo),
@@ -74,8 +74,8 @@ function J(e) {
         eh = (0, k.ks)(t.config),
         eE = t.userStatus?.orbQuantityClaimed ?? (0, k._Z)(t.config),
         eC = (0, k.wo)(t.config, eo),
-        { completedRatio: ef, completedRatioDisplay: ej } = (0, b.O9)(t),
-        eg = (0, T.A9)(t, o, $.rE.EMBED_DESKTOP, _.GameProfileSources.QuestEmbed, U),
+        { completedRatio: ef, completedRatioDisplay: ej } = (0, p.O9)(t),
+        eg = (0, b.A9)(t, o, H.rE.EMBED_DESKTOP, A.GameProfileSources.QuestEmbed, U),
         eN = (0, F.Pd)(t),
         ev = i.useMemo(
             () =>
@@ -85,7 +85,7 @@ function J(e) {
                           {
                               questId: t.id,
                               children: [
-                                  (0, n.jsx)(A.A, { shouldUseThemeColor: !0, className: X.Kq, customSize: 14 }),
+                                  (0, n.jsx)(_.A, { shouldUseThemeColor: !0, className: X.Kq, customSize: 14 }),
                                   Y.intl.format(Y.t["nLXlh+"], { orbAmount: eE ?? 0 }),
                               ],
                           },
@@ -101,7 +101,7 @@ function J(e) {
                                       {
                                           questId: t.id,
                                           children: [
-                                              (0, n.jsx)(A.A, {
+                                              (0, n.jsx)(_.A, {
                                                   shouldUseThemeColor: !0,
                                                   className: X.Kq,
                                                   customSize: 14,
@@ -117,7 +117,7 @@ function J(e) {
                           }),
             [ec, ex, eu, t.id, eC, eE, eh],
         ),
-        e_ = i.useMemo(() => {
+        eA = i.useMemo(() => {
             if (null != eg)
                 return (0, n.jsx)(x.E, {
                     variant: "text-sm/medium",
@@ -126,14 +126,14 @@ function J(e) {
                     children: eg,
                 });
         }, [eg]),
-        eA = (0, j.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        eS = i.useMemo(() => (0, Q.Ic)(t) && !(0, Q.GR)(t.userStatus), [t]),
-        eq = (0, b.do)({ quest: t, content: s, ctaContent: D.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
+        e_ = (0, j.bG)([g.Ay], () => g.Ay.useReducedMotion),
+        eS = i.useMemo(() => (0, M.Ic)(t) && !(0, M.GR)(t.userStatus), [t]),
+        eq = (0, p.do)({ quest: t, content: s, ctaContent: D.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
         eI = (0, L.wr)(t),
         ey = i.useCallback(() => {
             eS
                 ? eq()
-                : ((0, K.navigateToQuestHome)({ fromContent: s, questId: t.id }),
+                : ((0, K.mA)({ fromContent: s, questId: t.id }),
                   (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "quest_embed_card_footer")
                       ? (0, N.r)({
                             type: v.F.CLICK_INTERNAL,
@@ -152,15 +152,15 @@ function J(e) {
                             sourceQuestContent: o,
                         }));
         }, [eS, eq, t.id, s, r, o]),
-        eT = (0, j.bG)([q.A], () => null != q.A.questEnrollmentBlockedUntil, []),
-        eb = y.t.useConfig({ location: $.rE.EMBED_DESKTOP });
+        eb = (0, j.bG)([q.A], () => null != q.A.questEnrollmentBlockedUntil, []),
+        ep = y.t.useConfig({ location: H.rE.EMBED_DESKTOP });
     return (0, n.jsxs)("div", {
         className: X.kL,
         ref: U,
         children: [
             (0, n.jsx)(R.A, { visible: ea, glow: !0 }),
             (0, n.jsxs)(c.animated.div, {
-                style: { maxHeight: es.to([0, 1], [104, (H ?? 0) + 12]) },
+                style: { maxHeight: es.to([0, 1], [104, ($ ?? 0) + 12]) },
                 className: X.z,
                 children: [
                     (0, n.jsxs)("div", {
@@ -177,7 +177,7 @@ function J(e) {
                                                   className: X.t_,
                                                   loop: !1,
                                                   autoplay: !1,
-                                                  shouldAnimate: !eA,
+                                                  shouldAnimate: !e_,
                                               }),
                                           (0, n.jsx)(P.A, {
                                               size: 76,
@@ -233,7 +233,7 @@ function J(e) {
                                       className: X.wx,
                                       children: ev,
                                   }),
-                            e_,
+                            eA,
                         ],
                     }),
                     J &&
@@ -245,7 +245,7 @@ function J(e) {
             }),
             (0, n.jsx)("div", {
                 className: V.kL,
-                children: eT
+                children: eb
                     ? (0, n.jsxs)(C.e, {
                           direction: "horizontal",
                           fullWidth: !0,
@@ -270,7 +270,7 @@ function J(e) {
                                   fullWidth: !0,
                                   onClick: ey,
                               }),
-                              eb.enabled && eb.enabledQuestStates.has(eN)
+                              ep.enabled && ep.enabledQuestStates.has(eN)
                                   ? (0, n.jsx)(B.A, {
                                         quest: t,
                                         surface: F.V3.QUEST_EMBED,
@@ -300,19 +300,19 @@ let ee = i.memo(function (e) {
     );
 });
 function et(e) {
-    return (0, Q.Ic)(e.quest) || e.progressState !== b.F3.COMPLETED
+    return (0, M.Ic)(e.quest) || e.progressState !== p.F3.COMPLETED
         ? (0, n.jsx)(en, { ...e })
         : (0, n.jsx)(es, { ...e });
 }
 function es(e) {
     let { quest: t, questContent: s, questContentPosition: i, sourceQuestContent: a } = e,
         l = (0, j.bG)([q.A], () => q.A.isClaimingReward(t.id) || q.A.isFetchingRewardCode(t.id)),
-        r = (0, H.D)({
+        r = (0, $.D)({
             quest: t,
             questContent: s,
             questContentPosition: i,
             sourceQuestContent: a,
-            experimentLocation: $.rE.EMBED_DESKTOP,
+            experimentLocation: H.rE.EMBED_DESKTOP,
         });
     return (0, n.jsx)(f.$, {
         fullWidth: !0,
@@ -327,7 +327,7 @@ function en(e) {
         r = (0, j.bG)([q.A], () => q.A.isEnrolling(t.id)),
         o = (0, U.vv)(t),
         c = (0, U.Cr)(t),
-        u = (0, Q.Ic)(t),
+        u = (0, M.Ic)(t),
         d = (0, O._c)({
             progressState: s,
             quest: t,
@@ -338,7 +338,7 @@ function en(e) {
             inGameQuest: c,
             sourceQuestContent: l,
         }),
-        m = (0, b.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
+        m = (0, p.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" });
     return u
         ? (0, n.jsx)(f.$, {
               variant: "secondary",
@@ -369,9 +369,9 @@ var ei = s(366010),
     eE = s(368774);
 function eC(e) {
     let { quest: t, isInteracting: s, location: i, sourceQuestContent: a } = e,
-        l = (0, Q.Ic)(t),
+        l = (0, M.Ic)(t),
         r = t.userStatus?.claimedAt != null,
-        o = (0, b.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
+        o = (0, p.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
         c = (0, eu.Ay)(),
         u = (0, ei.M)(c) ? "text-muted" : "always-white";
     return (0, n.jsxs)("div", {

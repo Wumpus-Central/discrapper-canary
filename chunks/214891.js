@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { v: () => s });
-var i = n(64700),
-    r = n(725836);
-function s() {
-    let { setCheckoutHeaderConfigs: e } = (0, r.ck)();
+n.d(t, { v: () => r });
+var l = n(64700),
+    i = n(725836);
+function r() {
+    let { setCheckoutHeaderConfigs: e } = (0, i.ck)();
     return {
-        setHeaderBadgeText: i.useCallback(
+        setHeaderBadgeText: l.useCallback(
             (t) => {
                 e((e) => (e.headerBadgeText === t ? e : { ...e, headerBadgeText: t ?? void 0 }));
             },
             [e],
         ),
-        unsetHeaderBadgeText: i.useCallback(() => {
+        unsetHeaderBadgeText: l.useCallback(() => {
             e((e) => (null == e.headerBadgeText ? e : { ...e, headerBadgeText: void 0 }));
         }, [e]),
     };

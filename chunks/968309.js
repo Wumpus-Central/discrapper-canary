@@ -9,12 +9,15 @@ var r = n(192308),
     l = n(652215);
 function u(e) {
     var t, u, c, d;
-    let { platformType: _, location: h, overrideUrl: f, successRedirect: p } = e;
+    let { platformType: _, location: h, overrideUrl: f, successRedirect: E } = e;
     (_ === l.fg2.LEAGUE_OF_LEGENDS && (_ = l.fg2.RIOT_GAMES), _ === l.fg2.CRUNCHYROLL)
         ? ((t = [h ?? "unknown"]),
           (0, r.openModalLazy)(async () => {
               let { default: e } = await Promise.all([
-                  n.e("88647"),
+                  n.e("58846"),
+                  n.e("37757"),
+                  n.e("29484"),
+                  n.e("32191"),
                   n.e("36335"),
                   n.e("64610"),
                   n.e("85990"),
@@ -26,9 +29,11 @@ function u(e) {
           ? ((u = [h ?? "unknown"]),
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("88647"),
+                    n.e("58846"),
+                    n.e("37757"),
                     n.e("95429"),
-                    n.e("67113"),
+                    n.e("45488"),
+                    n.e("32191"),
                     n.e("98965"),
                     n.e("30221"),
                     n.e("48370"),
@@ -45,7 +50,9 @@ function u(e) {
               (d = _),
               (0, r.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("88647"),
+                      n.e("58846"),
+                      n.e("37757"),
+                      n.e("32191"),
                       n.e("98965"),
                       n.e("36335"),
                       n.e("64610"),
@@ -57,23 +64,26 @@ function u(e) {
               }))
             : _ === l.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("20274"), n.e("82721"), n.e("94048")]).then(
-                        n.bind(n, 110819),
-                    );
+                    let { default: e } = await Promise.all([
+                        n.e("62461"),
+                        n.e("37687"),
+                        n.e("82721"),
+                        n.e("94048"),
+                    ]).then(n.bind(n, 110819));
                     return (t) => (0, i.jsx)(e, { analyticsLocation: [h ?? "unknown"], ...t });
                 })
               : s.A.get(_)?.isFederated === !0
                 ? (0, r.openModalLazy)(async () => {
                       let { default: e } = await n.e("10645").then(n.bind(n, 61492));
-                      return (t) => (0, i.jsx)(e, { platformType: _, location: h, successRedirect: p, ...t });
+                      return (t) => (0, i.jsx)(e, { platformType: _, location: h, successRedirect: E, ...t });
                   })
                 : null != f
                   ? (0, a.h)({
                         shouldConfirm: !0,
                         href: f,
                         onConfirm: () => {
-                            (0, o.d)(_, { location: h, successRedirect: p }, f);
+                            (0, o.d)(_, { location: h, successRedirect: E }, f);
                         },
                     })
-                  : (0, o.d)(_, { location: h, successRedirect: p });
+                  : (0, o.d)(_, { location: h, successRedirect: E });
 }

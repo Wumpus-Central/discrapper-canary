@@ -50,7 +50,7 @@ function L(e) {
                 ? (await I.A.transferOwnership(s.id, i.id, x.mfaEnabled ? S.MFA : null), (0, N.jH)())
                 : (await I.A.sendTransferOwnershipPincode(s.id),
                   (0, o.openModalLazy)(async () => {
-                      let { default: e } = await t.e("19840").then(t.bind(t, 79779));
+                      let { default: e } = await Promise.all([t.e("32606"), t.e("19840")]).then(t.bind(t, 79779));
                       return (s) =>
                           (0, n.jsx)(e, {
                               ...s,

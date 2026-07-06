@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { p: () => _ });
-var i = n(627968),
-    r = n(64700),
-    s = n(465657),
+n.d(t, { p: () => p });
+var l = n(627968),
+    i = n(64700),
+    r = n(465657),
     a = n(650170),
-    o = n(166532),
-    l = n(999968),
+    s = n(166532),
+    o = n(999968),
     u = n(375708);
 let c = (e, t) => {
     let { handlePaymentSourceAdd: n } = e;
-    return (0, i.jsx)(l.Ay, { handlePaymentSourceAdd: n, ...t });
+    return (0, l.jsx)(o.Ay, { handlePaymentSourceAdd: n, ...t });
 };
 class d {
     isGift;
@@ -17,36 +16,36 @@ class d {
         this.isGift = e;
     }
     resolveDisabledPurchase(e, t) {
-        let { isSelectedPaymentSourceDisabled: n, purchasePreviewError: i, invoicePreview: r } = t;
-        return !!e.disablePurchase || !!n || null == r || null != i;
+        let { isSelectedPaymentSourceDisabled: n, purchasePreviewError: l, invoicePreview: i } = t;
+        return !!e.disablePurchase || !!n || null == i || null != l;
     }
     resolveInternalState = (e, t) => ({ disablePurchase: this.resolveDisabledPurchase(e, t) });
     resolveReviewButtonLabel() {
         return this.isGift ? u.intl.string(u.t.ouo4FK) : u.intl.string(u.t.ExD0Ng);
     }
     resolveTenantReviewButtonProps = (e) => {
-        let { onReviewButtonClick: t, loading: n, disabled: i } = e;
+        let { onReviewButtonClick: t, loading: n, disabled: l } = e;
         return {
             variant: "active",
             text: this.resolveReviewButtonLabel(),
             dataTestId: "purchase",
             onClick: t,
             loading: n,
-            disabled: i,
+            disabled: l,
         };
     };
 }
-function _(e) {
+function p(e) {
     let { isGift: t } = (0, a.t4)((e) => ({ isGift: e.isGift })),
         n = e.handleStepChange,
-        l = r.useCallback(() => {
-            if (t) return void n(o.pn.GIFT_CUSTOMIZATION);
+        o = i.useCallback(() => {
+            if (t) return void n(s.pn.GIFT_CUSTOMIZATION);
         }, [n, t]),
-        u = r.useMemo(() => new d({ isGift: t }), [t]);
-    return (0, i.jsx)(s.Y, {
+        u = i.useMemo(() => new d({ isGift: t }), [t]);
+    return (0, l.jsx)(r.Y, {
         ...e,
         isBackButtonEligible: t,
-        onFooterBackClick: l,
+        onFooterBackClick: o,
         renderStepBody: c,
         resolveInternalState: u.resolveInternalState,
         resolveTenantReviewButtonProps: u.resolveTenantReviewButtonProps,

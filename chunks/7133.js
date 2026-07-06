@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => d }), n(938796);
-var l = n(989349),
-    i = n.n(l),
-    r = n(665260),
-    s = n(315069),
-    a = n(835095),
-    o = n(832946),
-    u = n(788868);
-let c = Object.freeze({
+i.d(e, { A: () => u }), i(938796);
+var s = i(989349),
+    r = i.n(s),
+    n = i(665260),
+    l = i(315069),
+    a = i(835095),
+    o = i(832946),
+    d = i(202541);
+let p = Object.freeze({
     PAYMENT_SOURCE_REQUIRED: 1,
     EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED: 2,
     NOT_SELF_REDEEMABLE: 4,
 });
-class d extends s.A {
+class u extends l.A {
     userId;
     code;
     skuId;
@@ -30,58 +29,58 @@ class d extends s.A {
     subscriptionTrial;
     promotion;
     giftStyle;
-    static createFromServer(e) {
-        return new d({
-            userId: null != e.user ? e.user.id : null,
-            code: e.code,
-            skuId: e.sku_id,
-            applicationId: e.application_id,
-            uses: e.uses,
-            maxUses: e.max_uses,
-            storeListingId: null != e.store_listing ? e.store_listing.id : null,
-            expiresAt: null != e.expires_at ? i()(e.expires_at) : null,
-            redeemed: e.redeemed,
-            subscriptionPlanId: null != e.subscription_plan ? e.subscription_plan.id : e.subscription_plan_id,
-            subscriptionPlan: null != e.subscription_plan ? o.Ay.createFromServer(e.subscription_plan) : null,
+    static createFromServer(t) {
+        return new u({
+            userId: null != t.user ? t.user.id : null,
+            code: t.code,
+            skuId: t.sku_id,
+            applicationId: t.application_id,
+            uses: t.uses,
+            maxUses: t.max_uses,
+            storeListingId: null != t.store_listing ? t.store_listing.id : null,
+            expiresAt: null != t.expires_at ? r()(t.expires_at) : null,
+            redeemed: t.redeemed,
+            subscriptionPlanId: null != t.subscription_plan ? t.subscription_plan.id : t.subscription_plan_id,
+            subscriptionPlan: null != t.subscription_plan ? o.Ay.createFromServer(t.subscription_plan) : null,
             revoked: !1,
-            entitlementBranches: null != e.entitlement_branches ? e.entitlement_branches : null,
-            flags: null != e.flags ? e.flags : 0,
-            giftStyle: e.gift_style,
+            entitlementBranches: null != t.entitlement_branches ? t.entitlement_branches : null,
+            flags: null != t.flags ? t.flags : 0,
+            giftStyle: t.gift_style,
             subscriptionTrial:
-                null != e.subscription_trial
+                null != t.subscription_trial
                     ? {
-                          id: e.subscription_trial.id,
-                          interval: e.subscription_trial.interval,
-                          intervalCount: e.subscription_trial.interval_count,
-                          skuId: e.subscription_trial.sku_id,
+                          id: t.subscription_trial.id,
+                          interval: t.subscription_trial.interval,
+                          intervalCount: t.subscription_trial.interval_count,
+                          skuId: t.subscription_trial.sku_id,
                       }
                     : null,
-            promotion: null != e.promotion ? a.A.createFromServer(e.promotion) : null,
+            promotion: null != t.promotion ? a.A.createFromServer(t.promotion) : null,
         });
     }
-    constructor(e) {
+    constructor(t) {
         super(),
-            (this.userId = e.userId),
-            (this.code = e.code),
-            (this.skuId = e.skuId),
-            (this.applicationId = e.applicationId),
-            (this.uses = e.uses),
-            (this.maxUses = e.maxUses),
-            (this.expiresAt = e.expiresAt),
-            (this.redeemed = e.redeemed),
-            (this.storeListingId = e.storeListingId),
-            (this.subscriptionPlanId = e.subscriptionPlanId),
-            (this.subscriptionPlan = e.subscriptionPlan),
-            (this.revoked = e.revoked),
-            (this.entitlementBranches = e.entitlementBranches),
-            (this.flags = e.flags),
-            (this.subscriptionTrial = e.subscriptionTrial),
-            (this.promotion = e.promotion),
-            (this.giftStyle = e.giftStyle);
+            (this.userId = t.userId),
+            (this.code = t.code),
+            (this.skuId = t.skuId),
+            (this.applicationId = t.applicationId),
+            (this.uses = t.uses),
+            (this.maxUses = t.maxUses),
+            (this.expiresAt = t.expiresAt),
+            (this.redeemed = t.redeemed),
+            (this.storeListingId = t.storeListingId),
+            (this.subscriptionPlanId = t.subscriptionPlanId),
+            (this.subscriptionPlan = t.subscriptionPlan),
+            (this.revoked = t.revoked),
+            (this.entitlementBranches = t.entitlementBranches),
+            (this.flags = t.flags),
+            (this.subscriptionTrial = t.subscriptionTrial),
+            (this.promotion = t.promotion),
+            (this.giftStyle = t.giftStyle);
     }
     isExpired() {
-        let e = this.expiresAt;
-        return null != e && i()().isAfter(e);
+        let t = this.expiresAt;
+        return null != t && r()().isAfter(t);
     }
     get hasMultipleCopies() {
         return this.maxUses > 1;
@@ -96,13 +95,13 @@ class d extends s.A {
         return null != this.subscriptionPlanId;
     }
     get premiumSubscriptionType() {
-        return this.isSubscription ? (u.WN[this.skuId] ?? null) : null;
+        return this.isSubscription ? (d.WN[this.skuId] ?? null) : null;
     }
     get isSelfRedeemable() {
-        return !(0, r.Lt)(this.flags, c.NOT_SELF_REDEEMABLE);
+        return !(0, n.Lt)(this.flags, p.NOT_SELF_REDEEMABLE);
     }
     get isExistingPremiumSubscriptionDisallowed() {
-        return (0, r.Lt)(this.flags, c.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
+        return (0, n.Lt)(this.flags, p.EXISTING_PREMIUM_SUBSCRIPTION_DISALLOWED);
     }
     get analyticsData() {
         return { gift_code: this.code, gift_code_max_uses: this.maxUses };

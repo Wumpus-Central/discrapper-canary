@@ -1,150 +1,149 @@
-"use strict";
-n.d(t, { U: () => j });
-var i = n(627968),
-    r = n(64700),
-    s = n(284009),
-    a = n.n(s),
-    o = n(228366),
-    l = n(391048),
+n.d(t, { U: () => Y });
+var l = n(627968),
+    i = n(64700),
+    r = n(284009),
+    a = n.n(r),
+    s = n(228366),
+    o = n(391048),
     u = n(688810),
-    d = n(234320),
-    c = n(426398),
-    _ = n(558620),
-    h = n(427675),
-    f = n(480642),
-    E = n(650170),
-    p = n(380619),
-    m = n(344159),
-    g = n(174459),
-    A = n(45938),
-    I = n(937008),
-    T = n(158032),
-    S = n(830382),
-    N = n(277984),
-    C = n(243217),
-    y = n(428262),
+    c = n(11939),
+    d = n(426398),
+    p = n(558620),
+    m = n(427675),
+    h = n(169797),
+    C = n(650170),
+    E = n(380619),
+    A = n(344159),
+    f = n(174459),
+    S = n(45938),
+    y = n(937008),
+    P = n(158032),
+    I = n(830382),
+    T = n(277984),
+    _ = n(243217),
+    g = n(428262),
     v = n(652215),
-    R = n(202541);
-async function O(e) {
+    x = n(202541);
+async function N(e) {
     let {
         onPurchaseAttempt: t,
         onPurchaseError: n,
-        onPurchaseComplete: i,
-        onPurchaseFinalize: r,
-        hasRedirectURL: s,
-        isGift: o,
-        analyticsLocation: l,
+        onPurchaseComplete: l,
+        onPurchaseFinalize: i,
+        hasRedirectURL: r,
+        isGift: s,
+        analyticsLocation: o,
         analyticsLocations: u,
-        subscriptionPlan: d,
-        planGroup: c,
-        trialId: _,
-        priceOptions: h,
-        paymentSource: f,
-        openInvoiceId: E,
-        premiumSubscription: p,
-        onNext: m,
-        metadata: g,
-        sku: A,
-        purchaseType: I,
-        referralCode: O,
-        loadId: b,
-        giftInfoOptions: L,
-        invoicePreview: D,
-        order: P,
-        quantity: w,
+        subscriptionPlan: c,
+        planGroup: d,
+        trialId: p,
+        priceOptions: m,
+        paymentSource: h,
+        openInvoiceId: C,
+        premiumSubscription: E,
+        onNext: A,
+        metadata: f,
+        sku: S,
+        purchaseType: y,
+        referralCode: N,
+        loadId: R,
+        giftInfoOptions: b,
+        invoicePreview: M,
+        order: O,
+        quantity: j,
     } = e;
     try {
-        let e, n, r, M;
-        if ((t(), s)) return;
-        if (I === v.VVm.ONE_TIME)
-            a()(null != A, "SKU must exist and be fetched."),
-                a()(null != D, "invoicePreview must exist."),
-                (e = await (0, S.XU)(A.applicationId, A.id, {
-                    expectedAmount: D.total,
-                    expectedCurrency: D.currency,
-                    isGift: o,
-                    paymentSource: f,
-                    loadId: b,
-                    giftInfoOptions: L,
-                    orderId: P?.id,
-                    quantity: w,
+        let e, n, i, L;
+        if ((t(), r)) return;
+        if (y === v.VVm.ONE_TIME)
+            a()(null != S, "SKU must exist and be fetched."),
+                a()(null != M, "invoicePreview must exist."),
+                (e = await (0, I.XU)(S.applicationId, S.id, {
+                    expectedAmount: M.total,
+                    expectedCurrency: M.currency,
+                    isGift: s,
+                    paymentSource: h,
+                    loadId: R,
+                    giftInfoOptions: b,
+                    orderId: O?.id,
+                    quantity: j,
                 }));
         else {
-            a()(null != d, "Missing subscriptionPlan"), a()(null != D, "Missing invoicePreview");
-            let t = { amount: D.total, currency: D.currency },
-                n = (0, y.l6)(h, D.checkoutContext?.available_plans),
-                i = (0, y.$Q)((0, y.y8)(d.id, !1, !1, n));
-            if (null != p) {
-                let e = h.currency ?? D.currency,
-                    t = (0, y.Pg)(p, d.id, 1, new Set(c));
-                (t = (0, y.qn)(t)), (i = (0, y.UC)(t, e.toLowerCase(), h.paymentSourceId));
+            a()(null != c, "Missing subscriptionPlan"), a()(null != M, "Missing invoicePreview");
+            let t = { amount: M.total, currency: M.currency },
+                n = (0, g.l6)(m, M.checkoutContext?.available_plans),
+                l = (0, g.$Q)((0, g.y8)(c.id, !1, !1, n));
+            if (null != E) {
+                let e = m.currency ?? M.currency,
+                    t = (0, g.Pg)(E, c.id, 1, new Set(d));
+                (t = (0, g.qn)(t)), (l = (0, g.UC)(t, e.toLowerCase(), m.paymentSourceId));
             }
-            if (o) {
-                let t = D.total,
-                    n = D.currency;
-                e = await (0, S.XU)(R.tv, d.skuId, {
+            if (s) {
+                let t = M.total,
+                    n = M.currency;
+                e = await (0, I.XU)(x.tv, c.skuId, {
                     expectedAmount: t,
                     expectedCurrency: n,
-                    paymentSource: f,
-                    subscriptionPlanId: d.id,
+                    paymentSource: h,
+                    subscriptionPlanId: c.id,
                     isGift: !0,
-                    loadId: b,
-                    giftInfoOptions: L,
-                    orderId: P?.id,
-                    quantity: w,
+                    loadId: R,
+                    giftInfoOptions: b,
+                    orderId: O?.id,
+                    quantity: j,
                 });
-            } else if (null != f && null != p && p.status === v.Dmq.PAST_DUE && null != E) {
-                let n = h.currency ?? D.currency;
-                e = v.AD1.has(f.type)
-                    ? await (0, N.LD)(p, E, f, n, b)
-                    : await (0, N.nV)(p, { paymentSource: f, currency: n }, t, i, u, l, b);
-            } else if (null != p) {
-                let n = (0, y.Pg)(p, d.id, 1, new Set(c)),
-                    r = { paymentSource: f, currency: h.currency ?? D.currency };
-                p.status === v.Dmq.PAUSED && (r.status = v.Dmq.ACTIVE),
-                    p.isPausedAllowsResumeButNotUpdates || (r.items = n),
-                    (e = await (0, N.nV)(p, r, t, i, u, l, b));
+            } else if (null != h && null != E && E.status === v.Dmq.PAST_DUE && null != C) {
+                let n = m.currency ?? M.currency;
+                e = v.AD1.has(h.type)
+                    ? await (0, T.LD)(E, C, h, n, R)
+                    : await (0, T.nV)(E, { paymentSource: h, currency: n }, t, l, u, o, R);
+            } else if (null != E) {
+                let n = (0, g.Pg)(E, c.id, 1, new Set(d)),
+                    i = { paymentSource: h, currency: m.currency ?? M.currency };
+                E.status === v.Dmq.PAUSED && (i.status = v.Dmq.ACTIVE),
+                    E.isPausedAllowsResumeButNotUpdates || (i.items = n),
+                    (e = await (0, T.nV)(E, i, t, l, u, o, R));
             } else
-                e = await (0, T.B1)({
-                    planId: d.id,
-                    currency: h.currency ?? D.currency,
-                    paymentSource: f,
-                    trialId: _,
-                    metadata: g,
-                    referralCode: O,
-                    loadId: b,
+                e = await (0, P.B1)({
+                    planId: c.id,
+                    currency: m.currency ?? M.currency,
+                    paymentSource: h,
+                    trialId: p,
+                    metadata: f,
+                    referralCode: N,
+                    loadId: R,
                     expectedInvoicePrice: t,
-                    expectedRenewalPrice: i,
+                    expectedRenewalPrice: l,
                 });
         }
-        let { shouldReturnEarly: x } = i(e);
-        if (x) return;
+        let { shouldReturnEarly: D } = l(e);
+        if (D) return;
         "subscription" in e
-            ? (n = null != e.subscription ? C.A.createFromServer(e.subscription) : null)
-            : "entitlements" in e && (r = null != e.entitlements ? e.entitlements : void 0),
+            ? (n = null != e.subscription ? _.A.createFromServer(e.subscription) : null)
+            : "entitlements" in e && (i = null != e.entitlements ? e.entitlements : void 0),
             "appliedUserDiscounts" in e &&
-                (M =
+                (L =
                     null != e.appliedUserDiscounts && e.appliedUserDiscounts.length > 0
                         ? e.appliedUserDiscounts
                         : void 0),
-            m(n, r, M);
+            A(n, i, L);
     } catch (e) {
         n(e);
     } finally {
-        r();
+        i();
     }
 }
-var b = n(166532),
-    L = n(566980),
-    D = n(216641),
-    P = n(17928),
-    w = n(10716),
-    M = n(20015),
-    x = n(364995),
+var R = n(166532),
+    b = n(566980),
+    M = n(216641),
+    O = n(17928),
+    j = n(10716),
+    L = n(20015),
+    D = n(364995),
     U = n(31823),
-    k = n(666646),
-    G = n(375708),
-    V = n(327105);
+    w = n(666646),
+    k = n(375708),
+    G = n(327105);
 class F {
     init;
     resolveTenantReviewButtonProps;
@@ -156,8 +155,8 @@ class F {
             variant: "active",
             text:
                 this.init.purchaseType === v.VVm.SUBSCRIPTION
-                    ? G.intl.string(G.t.YScQSF)
-                    : G.intl.string(V.default.BPzQj4),
+                    ? k.intl.string(k.t.YScQSF)
+                    : k.intl.string(G.default.BPzQj4),
             dataTestId: "purchase",
             onClick: this.init.onReviewButtonClick,
             loading: e.loading,
@@ -166,22 +165,22 @@ class F {
     }
     resolveButtonLabel(e) {
         return null === this.init.paymentSourceId && this.init.hasPaymentSources
-            ? G.intl.string(G.t.CpOiEO)
+            ? k.intl.string(k.t.CpOiEO)
             : this.init.willRelocateStoreCountry
-              ? G.intl.string(V.default["7r4HPu"])
+              ? k.intl.string(G.default["7r4HPu"])
               : null != e && null != e.text
                 ? e.text
-                : G.intl.string(V.default.BPzQj4);
+                : k.intl.string(G.default.BPzQj4);
     }
     resolvePaymentSourceRequiredProps(e) {
-        let t = { text: e, tooltipText: G.intl.string(G.t.L7jbQV), type: "submit", dataTestId: "submitButton" };
+        let t = { text: e, tooltipText: k.intl.string(k.t.L7jbQV), type: "submit", dataTestId: "submitButton" };
         return this.init.hasPaymentSources
             ? { ...t, variant: "primary", onClick: this.init.onPaymentSourceAdd }
             : { ...t, variant: "active", disabled: !0 };
     }
     resolveApplicationDevShelfLoadingProps(e) {
         return {
-            tooltipText: G.intl.string(G.t.cjA5tj),
+            tooltipText: k.intl.string(k.t.cjA5tj),
             variant: "active",
             text: e,
             type: "submit",
@@ -190,143 +189,143 @@ class F {
         };
     }
     resolveReviewButtonProps = (e) => {
-        let { needsPaymentSource: t, hasAcceptedTerms: n, handleShowLegalFlash: i, onReviewButtonClick: r } = this.init,
-            s = { ...e, handleShowLegalFlash: i, hasAcceptedTerms: n, onReviewButtonClick: r },
-            a = this.resolveTenantReviewButtonProps(s),
-            o = this.resolveButtonLabel(a),
-            { disabled: l, isApplicationDevShelfLoading: u } = e;
+        let { needsPaymentSource: t, hasAcceptedTerms: n, handleShowLegalFlash: l, onReviewButtonClick: i } = this.init,
+            r = { ...e, handleShowLegalFlash: l, hasAcceptedTerms: n, onReviewButtonClick: i },
+            a = this.resolveTenantReviewButtonProps(r),
+            s = this.resolveButtonLabel(a),
+            { disabled: o, isApplicationDevShelfLoading: u } = e;
         if (t) {
-            let e = this.resolvePaymentSourceRequiredProps(o),
+            let e = this.resolvePaymentSourceRequiredProps(s),
                 t = null != a ? a.variant : void 0;
             return { ...e, variant: t ?? e.variant };
         }
-        if (u) return this.resolveApplicationDevShelfLoadingProps(o);
-        let d = { ...a, text: o };
-        return l
-            ? { ...d, disabled: !0, onClick: void 0 }
+        if (u) return this.resolveApplicationDevShelfLoadingProps(s);
+        let c = { ...a, text: s };
+        return o
+            ? { ...c, disabled: !0, onClick: void 0 }
             : n
-              ? d
-              : { ...d, tooltipText: G.intl.string(G.t.XdvBLS), onClick: i, dataTestId: "submitButton" };
+              ? c
+              : { ...c, tooltipText: k.intl.string(k.t.XdvBLS), onClick: l, dataTestId: "submitButton" };
     };
 }
 function B(e) {
     let {
             resolveTenantReviewButtonProps: t,
             showBackButton: n,
-            makePurchase: s,
+            makePurchase: r,
             onPaymentSourceAdd: a,
-            handleShowLegalFlash: o,
-            disablePurchase: l,
+            handleShowLegalFlash: s,
+            disablePurchase: o,
             isSubmitting: u,
-            needsPaymentSource: d,
-            onBackClick: _,
+            needsPaymentSource: c,
+            onBackClick: p,
         } = e,
-        h = ((e) => {
+        m = ((e) => {
             let {
                     onReviewButtonClick: t,
                     handleShowLegalFlash: n,
-                    needsPaymentSource: i,
-                    isSubmitting: s,
+                    needsPaymentSource: l,
+                    isSubmitting: r,
                     disablePurchase: a,
-                    onPaymentSourceAdd: o,
-                    resolveTenantReviewButtonProps: l,
+                    onPaymentSourceAdd: s,
+                    resolveTenantReviewButtonProps: o,
                 } = e,
-                { hasPaymentSources: u } = (0, c.jm)(),
-                { checkoutPaymentSources: d } = (0, x.t)(),
+                { hasPaymentSources: u } = (0, d.jm)(),
+                { checkoutPaymentSources: c } = (0, D.t)(),
                 {
-                    hasAcceptedTerms: _,
-                    paymentSourceId: h,
-                    setCheckoutReviewButtonLabel: f,
-                    purchaseType: p,
-                } = (0, E.t4)((e) => ({
+                    hasAcceptedTerms: p,
+                    paymentSourceId: m,
+                    setCheckoutReviewButtonLabel: h,
+                    purchaseType: E,
+                } = (0, C.t4)((e) => ({
                     hasAcceptedTerms: e.hasAcceptedTerms,
                     paymentSourceId: e.paymentSourceId,
                     setCheckoutReviewButtonLabel: e.setCheckoutReviewButtonLabel,
                     purchaseType: e.purchaseType,
                 })),
-                m = null != h && d.some((e) => e.id === h && null != e.relocationCountry),
-                g = (0, k.mx)(),
-                { application: A } = (0, U.V)(),
-                I = (0, P.bG)([w.A], () => w.A.getFetchState()),
-                T = (0, M.n)(A, v.gfo.EMBEDDED) && I === w.$.LOADING,
-                S = s ?? !1,
-                N = (null != g || a) ?? !1,
-                C = r.useMemo(
+                A = null != m && c.some((e) => e.id === m && null != e.relocationCountry),
+                f = (0, w.mx)(),
+                { application: S } = (0, U.V)(),
+                y = (0, O.bG)([j.A], () => j.A.getFetchState()),
+                P = (0, L.n)(S, v.gfo.EMBEDDED) && y === j.$.LOADING,
+                I = r ?? !1,
+                T = (null != f || a) ?? !1,
+                _ = i.useMemo(
                     () =>
                         new F(
                             {
-                                purchaseType: p,
-                                needsPaymentSource: i,
+                                purchaseType: E,
+                                needsPaymentSource: l,
                                 handleShowLegalFlash: n,
-                                onPaymentSourceAdd: o,
+                                onPaymentSourceAdd: s,
                                 onReviewButtonClick: t,
                                 hasPaymentSources: u,
-                                willRelocateStoreCountry: m,
-                                paymentSourceId: h,
-                                hasAcceptedTerms: _,
+                                willRelocateStoreCountry: A,
+                                paymentSourceId: m,
+                                hasAcceptedTerms: p,
                             },
-                            l,
+                            o,
                         ),
-                    [p, i, n, o, t, u, m, h, _, l],
+                    [E, l, n, s, t, u, A, m, p, o],
                 ),
-                y = r.useMemo(
-                    () => C.resolveReviewButtonProps({ loading: S, disabled: N, isApplicationDevShelfLoading: T }),
-                    [S, N, T, C],
+                g = i.useMemo(
+                    () => _.resolveReviewButtonProps({ loading: I, disabled: T, isApplicationDevShelfLoading: P }),
+                    [I, T, P, _],
                 );
             return (
-                r.useEffect(() => {
-                    f(y.text);
-                }, [y.text, f]),
-                y
+                i.useEffect(() => {
+                    h(g.text);
+                }, [g.text, h]),
+                g
             );
         })({
-            onReviewButtonClick: s,
-            handleShowLegalFlash: o,
+            onReviewButtonClick: r,
+            handleShowLegalFlash: s,
             isSubmitting: u,
-            disablePurchase: l,
+            disablePurchase: o,
             onPaymentSourceAdd: a,
             resolveTenantReviewButtonProps: t,
-            needsPaymentSource: d,
+            needsPaymentSource: c,
         });
-    return (0, i.jsx)(f.lo, { onBackClick: n ? _ : void 0, primaryButtonProps: h });
+    return (0, l.jsx)(h.lo, { onBackClick: n ? p : void 0, primaryButtonProps: m });
 }
-function j(e) {
+function Y(e) {
     let {
             onBack: t,
             legalTermsNodeRef: n,
-            flashLegalTerms: s,
-            baseAnalyticsData: f,
-            flowStartTime: T,
-            trialId: S,
-            planGroup: N = [],
-            analyticsLocation: C,
-            openInvoiceId: y,
-            metadata: R,
-            backButtonEligible: P,
-            disablePurchase: w,
-            onPaymentSourceAdd: M,
-            handleStepChange: x,
-            postPurchaseStep: U = b.pn.CONFIRM,
-            resolveTenantReviewButtonProps: k,
+            flashLegalTerms: r,
+            baseAnalyticsData: h,
+            flowStartTime: P,
+            trialId: I,
+            planGroup: T = [],
+            analyticsLocation: _,
+            openInvoiceId: g,
+            metadata: x,
+            backButtonEligible: O,
+            disablePurchase: j,
+            onPaymentSourceAdd: L,
+            handleStepChange: D,
+            postPurchaseStep: U = R.pn.CONFIRM,
+            resolveTenantReviewButtonProps: w,
         } = e,
         {
-            activeSubscription: G,
-            selectedSkuId: V,
+            activeSubscription: k,
+            selectedSkuId: G,
             invoicePreview: F,
-            setHasAcceptedTerms: j,
+            setHasAcceptedTerms: Y,
             setPurchaseState: H,
             contextMetadata: W,
-            paymentSourceId: Y,
+            paymentSourceId: V,
             setPurchaseError: K,
-            order: $,
-            priceOptions: z,
-            purchaseType: q,
-            referralCode: Z,
+            order: Z,
+            priceOptions: q,
+            purchaseType: z,
+            referralCode: $,
             quantity: X,
             setEntitlementsGranted: Q,
             setAppliedUserDiscounts: J,
             setUpdatedSubscription: ee,
-        } = (0, E.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             invoicePreview: e.checkoutInvoicePreview,
             setHasAcceptedTerms: e.setHasAcceptedTerms,
@@ -344,137 +343,137 @@ function j(e) {
             setUpdatedSubscription: e.setUpdatedSubscription,
             activeSubscription: e.activeSubscription,
         })),
-        { paymentSources: et } = (0, c.jm)(),
-        en = (0, _.A)(),
-        ei = (0, h.gU)(),
+        { paymentSources: et } = (0, d.jm)(),
+        en = (0, p.A)(),
+        el = (0, m.gU)(),
         {
-            isGift: er,
-            selectedGiftStyle: es,
+            isGift: ei,
+            selectedGiftStyle: er,
             customGiftMessage: ea,
-            emojiConfetti: eo,
-            soundEffect: el,
+            emojiConfetti: es,
+            soundEffect: eo,
             giftRecipient: eu,
-            selectedGiftingPromotionReward: ed,
-        } = (0, I.Pv)(),
-        ec = (0, p.Mq)(en),
-        e_ = (0, A.lo)(eu),
-        eh = {};
-    (eh.gift_style = es),
-        (eh.reward_sku_ids = ec && null != ed ? [ed] : []),
-        e_ === A.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
+            selectedGiftingPromotionReward: ec,
+        } = (0, y.Pv)(),
+        ed = (0, E.Mq)(en),
+        ep = (0, S.lo)(eu),
+        em = {};
+    (em.gift_style = er),
+        (em.reward_sku_ids = ed && null != ec ? [ec] : []),
+        ep === S.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD &&
             (a()(null != eu, "Gift recipient must be set at purchase review step for these gift options."),
-            (eh.recipient_id = eu.id),
-            (eh.custom_message = ea),
-            (eh.emoji_id = eo?.id),
-            (eh.emoji_name = eo?.id == null ? eo?.surrogates : void 0),
-            (eh.sound_id = el?.soundId));
-    let ef = en?.id,
-        { analyticsLocations: eE } = (0, u.Ay)(),
-        ep = (0, D.W)(et, Y),
-        { giftCardBalance: em, giftCardCurrency: eg } = (0, d.h)(),
-        [eA, eI] = r.useState(!1),
-        [eT, eS] = r.useState(!1),
-        { hasEntitlements: eN } = (0, m.X)(ef, er),
-        eC = null;
-    q === v.VVm.ONE_TIME &&
-        (a()(null != V, "SKU must be selected for one-time purchases"),
-        (eC = ei[V] ?? null),
-        a()(null != eC, "SKU must exist and be fetched."));
-    let ey = r.useCallback(() => {
-            H(L.h.PURCHASING),
-                j(!0),
-                eI(!0),
-                o.h.wait(l.ET),
+            (em.recipient_id = eu.id),
+            (em.custom_message = ea),
+            (em.emoji_id = es?.id),
+            (em.emoji_name = es?.id == null ? es?.surrogates : void 0),
+            (em.sound_id = eo?.soundId));
+    let eh = en?.id,
+        { analyticsLocations: eC } = (0, u.Ay)(),
+        eE = (0, M.W)(et, V),
+        { giftCardBalance: eA, giftCardCurrency: ef } = (0, c.h)(),
+        [eS, ey] = i.useState(!1),
+        [eP, eI] = i.useState(!1),
+        { hasEntitlements: eT } = (0, A.X)(eh, ei),
+        e_ = null;
+    z === v.VVm.ONE_TIME &&
+        (a()(null != G, "SKU must be selected for one-time purchases"),
+        (e_ = el[G] ?? null),
+        a()(null != e_, "SKU must exist and be fetched."));
+    let eg = i.useCallback(() => {
+            H(b.h.PURCHASING),
+                Y(!0),
+                ey(!0),
+                s.h.wait(o.ET),
                 K(null),
-                g.default.track(v.HAw.PAYMENT_FLOW_COMPLETED, {
-                    ...f,
+                f.default.track(v.HAw.PAYMENT_FLOW_COMPLETED, {
+                    ...h,
                     subtotal: F?.subtotal,
                     tax: F?.tax,
                     expected_amount: F?.total,
                     expected_currency: F?.currency,
-                    duration_ms: Date.now() - T,
-                    gift_card_balance: em,
-                    gift_card_currency: eg,
+                    duration_ms: Date.now() - P,
+                    gift_card_balance: eA,
+                    gift_card_currency: ef,
                 });
-        }, [H, j, K, f, T, F, em, eg]),
-        ev = r.useCallback(
+        }, [H, Y, K, h, P, F, eA, ef]),
+        ev = i.useCallback(
             (e) => {
-                H(L.h.FAIL),
+                H(b.h.FAIL),
                     K(e),
-                    g.default.track(v.HAw.PAYMENT_FLOW_FAILED, {
-                        ...f,
+                    f.default.track(v.HAw.PAYMENT_FLOW_FAILED, {
+                        ...h,
                         payment_error_code: e?.code,
-                        payment_source_id: ep?.id,
-                        payment_source_type: ep?.type,
-                        duration_ms: Date.now() - T,
-                        gift_card_balance: em,
-                        gift_card_currency: eg,
+                        payment_source_id: eE?.id,
+                        payment_source_type: eE?.type,
+                        duration_ms: Date.now() - P,
+                        gift_card_balance: eA,
+                        gift_card_currency: ef,
                     });
             },
-            [H, K, f, T, ep, em, eg],
+            [H, K, h, P, eE, eA, ef],
         ),
-        eR = r.useCallback(
+        ex = i.useCallback(
             (e) =>
                 e.redirectConfirmation || e.pendingCustomerAction
-                    ? (eS(null != e.redirectURL), { shouldReturnEarly: !0 })
-                    : (H(L.h.COMPLETED), { shouldReturnEarly: !1 }),
+                    ? (eI(null != e.redirectURL), { shouldReturnEarly: !0 })
+                    : (H(b.h.COMPLETED), { shouldReturnEarly: !1 }),
             [H],
         ),
-        eO = r.useCallback(() => {
-            eT || eI(!1);
-        }, [eT]),
-        eb = r.useCallback(
+        eN = i.useCallback(() => {
+            eP || ey(!1);
+        }, [eP]),
+        eR = i.useCallback(
             (e, t, n) => {
-                let i = e ?? null;
-                ee(i),
+                let l = e ?? null;
+                ee(l),
                     null != t && Q(t),
                     null != n && J(n),
-                    x(U, { fulfillment: { subscription: i, entitlements: t } });
+                    D(U, { fulfillment: { subscription: l, entitlements: t } });
             },
-            [x, U, ee, Q, J],
+            [D, U, ee, Q, J],
         );
-    async function eL() {
-        await O({
-            onPurchaseAttempt: ey,
+    async function eb() {
+        await N({
+            onPurchaseAttempt: eg,
             onPurchaseError: ev,
-            onPurchaseComplete: eR,
-            onPurchaseFinalize: eO,
-            hasRedirectURL: eT,
-            isGift: er,
-            analyticsLocation: C,
-            analyticsLocations: eE,
+            onPurchaseComplete: ex,
+            onPurchaseFinalize: eN,
+            hasRedirectURL: eP,
+            isGift: ei,
+            analyticsLocation: _,
+            analyticsLocations: eC,
             subscriptionPlan: en,
-            planGroup: N,
-            trialId: S,
-            priceOptions: z,
-            paymentSource: ep,
-            openInvoiceId: y,
-            premiumSubscription: G ?? null,
-            onNext: eb,
-            metadata: R,
-            sku: eC,
-            purchaseType: q,
-            referralCode: Z,
+            planGroup: T,
+            trialId: I,
+            priceOptions: q,
+            paymentSource: eE,
+            openInvoiceId: g,
+            premiumSubscription: k ?? null,
+            onNext: eR,
+            metadata: x,
+            sku: e_,
+            purchaseType: z,
+            referralCode: $,
             loadId: W.loadId,
-            giftInfoOptions: eh,
+            giftInfoOptions: em,
             invoicePreview: F,
-            order: $,
+            order: Z,
             quantity: X,
         });
     }
-    let eD = null != y || (q === v.VVm.ONE_TIME && !er),
-        eP = r.useCallback(() => {
-            null != n.current && (n.current.scrollIntoView({ behavior: "smooth" }), s());
-        }, [n, s]);
-    return (0, i.jsx)(B, {
-        resolveTenantReviewButtonProps: k,
-        showBackButton: P && !eD,
+    let eM = null != g || (z === v.VVm.ONE_TIME && !ei),
+        eO = i.useCallback(() => {
+            null != n.current && (n.current.scrollIntoView({ behavior: "smooth" }), r());
+        }, [n, r]);
+    return (0, l.jsx)(B, {
+        resolveTenantReviewButtonProps: w,
+        showBackButton: O && !eM,
         onBackClick: t,
-        handleShowLegalFlash: eP,
-        disablePurchase: w,
-        isSubmitting: eA,
-        makePurchase: eL,
-        needsPaymentSource: null == ep && !eN,
-        onPaymentSourceAdd: M,
+        handleShowLegalFlash: eO,
+        disablePurchase: j,
+        isSubmitting: eS,
+        makePurchase: eb,
+        needsPaymentSource: null == eE && !eT,
+        onPaymentSourceAdd: L,
     });
 }

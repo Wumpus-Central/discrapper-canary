@@ -1,18 +1,17 @@
-"use strict";
 n.d(t, { U: () => d }), n(64700);
-var i = n(735438),
-    r = n.n(i),
-    s = n(29814),
+var l = n(735438),
+    i = n.n(l),
+    r = n(29814),
     a = n(46054),
-    o = n(551965);
-let l = ["heading", "list", "blockQuote"],
-    u = r().once(() =>
-        r().omit(
-            (0, o.A)([s.A.EMBED_TITLE_RULES, a.A.createReactRules({ enableBuildOverrides: !1, enableEmojiClick: !0 })]),
-            l,
+    s = n(551965);
+let o = ["heading", "list", "blockQuote"],
+    u = i().once(() =>
+        i().omit(
+            (0, s.A)([r.A.EMBED_TITLE_RULES, a.A.createReactRules({ enableBuildOverrides: !1, enableEmojiClick: !0 })]),
+            o,
         ),
     ),
-    c = r().once(() => a.A.reactParserFor(u()));
+    c = i().once(() => a.A.reactParserFor(u()));
 function d(e) {
     return c()(e, !0);
 }

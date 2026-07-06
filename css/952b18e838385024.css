@@ -1,0 +1,35 @@
+.getCrunchyollApp__1bc87 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-sm);
+    display: flex;
+    margin-top: 24px;
+    padding: 16px
+}
+
+.getCrunchyollAppBody__1bc87 {
+    text-align: start
+}
+
+.getCrunchyollAppHeading__1bc87 {
+    display: flex
+}
+
+.getCrunchyollAppQR__1bc87 {
+    margin-inline-start: 16px
+}
+
+.crunchyollLogoBox__1bc87 {
+    align-items: center;
+    border-radius: var(--radius-xs);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin-inline-end: 10px;
+    width: 24px
+}
+
+.crunchyollLogoBox__1bc87 img {
+    height: 20px;
+    width: 20px
+}

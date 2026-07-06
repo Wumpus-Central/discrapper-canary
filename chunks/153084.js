@@ -1,79 +1,78 @@
-"use strict";
-n.d(t, { A: () => I });
-var i = n(17928),
+n.d(t, { A: () => T });
+var l = n(17928),
     r = n(228366),
-    s = n(158032),
+    i = n(158032),
     a = n(830382),
     o = n(136857),
-    l = n(739508),
+    s = n(739508),
     u = n(71532),
     c = n(652215),
     d = n(375708);
-let _ = !1,
-    h = null,
-    f = null;
-function p() {
-    (_ = !1), (f = null), (h = null);
+let m = !1,
+    E = null,
+    p = null;
+function C() {
+    (m = !1), (p = null), (E = null);
 }
-function E(e) {
+function _(e) {
     let { error: t } = e,
-        { code: n, paymentId: i } = t;
+        { code: n, paymentId: l } = t;
     if (n !== o.Ay.ErrorCodes.CONFIRMATION_REQUIRED && n !== o.Ay.ErrorCodes.AUTHENTICATION_REQUIRED)
-        return (_ = !1), !1;
-    _ || ((_ = !0), (h = i), n === o.Ay.ErrorCodes.AUTHENTICATION_REQUIRED && m(i));
+        return (m = !1), !1;
+    m || ((m = !0), (E = l), n === o.Ay.ErrorCodes.AUTHENTICATION_REQUIRED && h(l));
 }
-async function m(e) {
+async function h(e) {
     if (null == e) return;
     let { error: t } = await (0, u.ap)(e);
     if (null != t) {
         let e = Error(t);
-        (0, l.pM)(e, { extra: { authenticationError: t } });
+        (0, s.pM)(e, { extra: { authenticationError: t } });
     }
 }
-function g(e) {
+function A(e) {
     let { payment: t } = e,
         n = [c.__0.COMPLETED, c.__0.FAILED, c.__0.CANCELED];
-    if (!_ || t.id !== h || !n.includes(t.status)) return !1;
-    if (((_ = !1), (h = null), t.status === c.__0.FAILED)) {
+    if (!m || t.id !== E || !n.includes(t.status)) return !1;
+    if (((m = !1), (E = null), t.status === c.__0.FAILED)) {
         let e = null;
         t.metadata?.billing_error_code === o.tG.BILLING_INSUFFICIENT_FUNDS && (e = o.tG.BILLING_INSUFFICIENT_FUNDS),
-            (f = new o.Ay(d.intl.string(d.t.khEaRI), e));
-    } else (f = null), r.h.wait(s.ET), r.h.wait(a.T3);
+            (p = new o.Ay(d.intl.string(d.t.khEaRI), e));
+    } else (p = null), r.h.wait(i.ET), r.h.wait(a.T3);
 }
-class A extends i.Ay.Store {
+class N extends l.Ay.Store {
     static displayName = "PaymentAuthenticationStore";
     get isAwaitingAuthentication() {
-        return _;
+        return m;
     }
     get error() {
-        return f;
+        return p;
     }
     get awaitingPaymentId() {
-        return h;
+        return E;
     }
 }
-let I = new A(r.h, {
-    BILLING_SUBSCRIPTION_UPDATE_START: p,
-    PAYMENT_AUTHENTICATION_CLEAR_ERROR: p,
-    PREMIUM_PAYMENT_ERROR_CLEAR: p,
-    PREMIUM_PAYMENT_MODAL_CLOSE: p,
-    PREMIUM_PAYMENT_MODAL_OPEN: p,
-    PREMIUM_PAYMENT_SUBSCRIBE_START: p,
-    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: p,
-    PREMIUM_PAYMENT_UPDATE_SUCCESS: p,
-    SKU_PURCHASE_MODAL_CLOSE: p,
-    SKU_PURCHASE_MODAL_OPEN: p,
-    SKU_PURCHASE_START: p,
-    SKU_PURCHASE_SUCCESS: p,
-    BILLING_SUBSCRIPTION_UPDATE_FAIL: E,
-    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: E,
-    PREMIUM_PAYMENT_UPDATE_FAIL: E,
-    SKU_PURCHASE_FAIL: E,
-    GIFT_CODE_REDEEM_FAILURE: E,
+let T = new N(r.h, {
+    BILLING_SUBSCRIPTION_UPDATE_START: C,
+    PAYMENT_AUTHENTICATION_CLEAR_ERROR: C,
+    PREMIUM_PAYMENT_ERROR_CLEAR: C,
+    PREMIUM_PAYMENT_MODAL_CLOSE: C,
+    PREMIUM_PAYMENT_MODAL_OPEN: C,
+    PREMIUM_PAYMENT_SUBSCRIBE_START: C,
+    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: C,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: C,
+    SKU_PURCHASE_MODAL_CLOSE: C,
+    SKU_PURCHASE_MODAL_OPEN: C,
+    SKU_PURCHASE_START: C,
+    SKU_PURCHASE_SUCCESS: C,
+    BILLING_SUBSCRIPTION_UPDATE_FAIL: _,
+    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: _,
+    PREMIUM_PAYMENT_UPDATE_FAIL: _,
+    SKU_PURCHASE_FAIL: _,
+    GIFT_CODE_REDEEM_FAILURE: _,
     PAYMENT_AUTHENTICATION_ERROR: function (e) {
         let { error: t } = e;
-        (f = t), (_ = !1);
+        (p = t), (m = !1);
     },
-    PAYMENT_UPDATE: g,
-    BILLING_PAYMENT_FETCH_SUCCESS: g,
+    PAYMENT_UPDATE: A,
+    BILLING_PAYMENT_FETCH_SUCCESS: A,
 });

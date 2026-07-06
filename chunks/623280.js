@@ -28,12 +28,12 @@ var h = n(633075),
     _ = n(241326),
     T = n(442433),
     w = n(775602),
-    R = n(495544),
-    S = n(606758),
+    R = n(280450),
+    S = n(384377),
     y = n(518477),
     W = n(375708),
-    O = n(184390);
-function k(e) {
+    k = n(184390);
+function G(e) {
     let { widget: t, className: n, buttonRef: l, additionalMenuItems: s } = e,
         r = (0, c.L)(t),
         d = (0, o.GV)();
@@ -42,10 +42,10 @@ function k(e) {
         widget: t,
         additionalMenuItems: s,
         children: (e) =>
-            (0, i.jsx)(G, {
+            (0, i.jsx)(O, {
                 children: (0, i.jsxs)(E.D, {
                     innerRef: l,
-                    className: a()(O.x6, n),
+                    className: a()(k.x6, n),
                     "data-dnd-name": r,
                     "aria-label": W.intl.formatToPlainString(W.t.HWNJJN, { widgetTitle: r }),
                     "aria-describedby": d,
@@ -59,13 +59,13 @@ function k(e) {
             }),
     });
 }
-function G(e) {
+function O(e) {
     let { children: t } = e,
         n = (0, p.bG)([w.Ay], () => w.Ay.keyboardModeEnabled),
         { isDragging: l } = (0, j.V)((e) => ({ isDragging: e.isDragging() }));
     return (0, i.jsx)(I.m, {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
-            className: O.HE,
+            className: k.HE,
             children: [
                 (0, i.jsx)(C.E, {
                     variant: "text-sm/normal",
@@ -105,11 +105,12 @@ function L(e) {
                     n.e("25781"),
                     n.e("62646"),
                     n.e("21377"),
-                    n.e("15166"),
-                    n.e("12160"),
-                    n.e("78692"),
-                    n.e("28746"),
-                    n.e("60435"),
+                    n.e("53702"),
+                    n.e("88634"),
+                    n.e("58127"),
+                    n.e("14603"),
+                    n.e("36252"),
+                    n.e("28041"),
                     n.e("79249"),
                     n.e("62867"),
                     n.e("30967"),
@@ -131,17 +132,17 @@ function L(e) {
                     n.e("54241"),
                     n.e("21930"),
                     n.e("41786"),
+                    n.e("22067"),
                     n.e("55266"),
                     n.e("94138"),
                     n.e("96574"),
-                    n.e("22067"),
                     n.e("86262"),
                     n.e("30878"),
                     n.e("58262"),
                     n.e("55895"),
+                    n.e("48407"),
                     n.e("20491"),
                     n.e("19119"),
-                    n.e("48407"),
                     n.e("87791"),
                     n.e("78377"),
                     n.e("53683"),
@@ -150,9 +151,9 @@ function L(e) {
                     n.e("74857"),
                     n.e("92992"),
                     n.e("36637"),
+                    n.e("84050"),
                     n.e("78"),
                     n.e("90590"),
-                    n.e("84050"),
                     n.e("89543"),
                     n.e("53600"),
                 ]).then(n.bind(n, 380035));
@@ -177,7 +178,7 @@ function L(e) {
                 },
                 onSelect: () => {},
                 "aria-label": W.intl.string(W.t.xpSHSk),
-                className: O.MK,
+                className: k.MK,
                 children: (0, i.jsxs)(P.rX, {
                     children: [
                         a,
@@ -318,7 +319,7 @@ function Z(e) {
         ref: g,
         className: a()(V.wX, { [V.A]: E, [V.Ze]: N, [V.Id]: j }),
         "aria-label": W.intl.formatToPlainString(W.t.YLczh4, { positionNumber: t + 1 }),
-        children: [(0, i.jsx)(k, { buttonRef: u, widget: n, className: V.vn, additionalMenuItems: s }), r],
+        children: [(0, i.jsx)(G, { buttonRef: u, widget: n, className: V.vn, additionalMenuItems: s }), r],
     });
 }
 function X(e) {

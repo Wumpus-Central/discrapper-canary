@@ -5,10 +5,10 @@ n.d(t, {
             let n = t.tab;
             switch ((n !== d.GlobalDiscoveryTab.QUESTS && c.A.setState({ selectedTab: n }), n)) {
                 case d.GlobalDiscoveryTab.SERVERS:
-                    let p = t.selectedServersTab;
+                    let E = t.selectedServersTab;
                     return (
-                        null != p
-                            ? s.A.setState({ selectedTab: p, entrypoint: t.entrypoint ?? f.J8.UNKNOWN })
+                        null != E
+                            ? s.A.setState({ selectedTab: E, entrypoint: t.entrypoint ?? f.J8.UNKNOWN })
                             : s.A.setState({ entrypoint: t.entrypoint ?? f.J8.UNKNOWN }),
                         (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_SERVERS, t.extra)
                     );
@@ -87,7 +87,7 @@ n.d(t, {
                         return (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS_CATEGORY(t.categoryId.toString()));
                     else return (0, o.pX)(_.BVt.GLOBAL_DISCOVERY_APPS);
                 case d.GlobalDiscoveryTab.QUESTS:
-                    return (0, a.navigateToQuestHome)({ fromContent: t.questContent, questId: t.questId });
+                    return (0, a.m)({ fromContent: t.questContent, questId: t.questId });
                 default:
                     throw Error(`[transitionToGlobalDiscovery] Unhandled tab type: ${n}`);
             }
@@ -99,7 +99,7 @@ n.d(t, {
 var i = n(310419),
     r = n(965660),
     s = n(601193),
-    a = n(617986),
+    a = n(216934),
     o = n(976860),
     l = n(287809),
     u = n(174459),

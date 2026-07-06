@@ -1,24 +1,23 @@
-"use strict";
-n.d(t, { Ay: () => c, Z8: () => h, bB: () => f, l: () => p, mz: () => u });
-var i = n(627968),
-    r = n(64700),
-    s = n(284009),
-    a = n.n(s),
-    o = n(353640);
-let l = r.createContext(null);
-function u(e) {
-    let { stepConfigs: t, breadcrumbs: n, children: s } = e,
-        a = r.useMemo(() => {
-            var e, i;
+r.d(t, { Ay: () => c, Z8: () => y, bB: () => f, l: () => b, mz: () => o });
+var n = r(627968),
+    l = r(64700),
+    a = r(284009),
+    i = r.n(a),
+    u = r(353640);
+let s = l.createContext(null);
+function o(e) {
+    let { stepConfigs: t, breadcrumbs: r, children: a } = e,
+        i = l.useMemo(() => {
+            var e, n;
             return (
                 (e = t),
-                (i = n),
-                (0, o.v)((t, n) => ({
+                (n = r),
+                (0, u.v)((t, r) => ({
                     stepConfigs: e,
                     steps: e.map((e) => e.key).filter((e) => null != e),
                     step: null != e[0] ? e[0].key : null,
                     setStep(e) {
-                        t({ step: e, previousStep: n().step });
+                        t({ step: e, previousStep: r().step });
                     },
                     breadcrumbsData: e
                         .filter((e) => null != e.key && e?.options?.useBreadcrumbLabel != null)
@@ -27,30 +26,30 @@ function u(e) {
                             useBreadcrumbLabel: e.options.useBreadcrumbLabel,
                             sectionHeaderText: e.options.sectionHeaderText,
                         }))
-                        .sort((e, t) => (null != i ? i.indexOf(e.id) - i.indexOf(t.id) : 0)),
+                        .sort((e, t) => (null != n ? n.indexOf(e.id) - n.indexOf(t.id) : 0)),
                     previousStep: null,
                 }))
             );
-        }, [t, n]);
-    return (0, i.jsx)(l, { value: a, children: s });
+        }, [t, r]);
+    return (0, n.jsx)(s, { value: i, children: a });
 }
 function c(e) {
-    let t = r.useContext(l);
-    return a()(null != t, "useSteps must be used inside StepContext"), t(e);
+    let t = l.useContext(s);
+    return i()(null != t, "useSteps must be used inside StepContext"), t(e);
 }
 function d(e) {
     return e.step;
 }
-function _(e) {
+function p(e) {
     return e.setStep;
 }
-function h() {
+function y() {
     let { step: e, stepConfigs: t } = c();
     return t.find((t) => t.key === e) ?? null;
 }
 function f() {
     return c(d);
 }
-function p() {
-    return c(_);
+function b() {
+    return c(p);
 }

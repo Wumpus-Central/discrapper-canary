@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => A, I: () => p });
+n.d(t, { A: () => A, I: () => E });
 var i = n(627968);
 n(64700);
 var r = n(607399),
@@ -18,14 +18,10 @@ let f = (0, o.Fe)({
             n.e("57234"),
             n.e("18078"),
             n.e("73515"),
-            n.e("16747"),
             n.e("11394"),
             n.e("37082"),
             n.e("38939"),
             n.e("61156"),
-            n.e("65617"),
-            n.e("8371"),
-            n.e("44385"),
             n.e("20803"),
             n.e("66016"),
             n.e("81202"),
@@ -37,13 +33,13 @@ let f = (0, o.Fe)({
     name: "Search",
     renderLoader: l.O7,
 });
-async function p(e) {
+async function E(e) {
     if (!e && (0, u.isMac)() && u.isPlatformEmbedded) {
         let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
         "Minimize" === e ? c.Ay.minimize() : "Maximize" === e && c.Ay.maximize();
     }
 }
-function E(e) {
+function p(e) {
     let {
         children: t,
         className: n,
@@ -53,7 +49,7 @@ function E(e) {
         transparent: l = !1,
         hidden: u = !1,
         toolbar: c,
-        mobileToolbar: E,
+        mobileToolbar: p,
         "aria-label": m,
         "aria-labelledby": g,
         scrollable: A,
@@ -68,7 +64,7 @@ function E(e) {
             if (null == c) return null;
             let e = null != s && !T;
             return r.Fr
-                ? E
+                ? p
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           c,
@@ -80,7 +76,7 @@ function E(e) {
         })(),
         transparent: l,
         hidden: u,
-        onDoubleClick: () => p(S),
+        onDoubleClick: () => E(S),
         "aria-label": m,
         "aria-labelledby": g,
         role: I,
@@ -92,7 +88,7 @@ function m(e) {
     let { children: t, className: n, "aria-label": r, "aria-labelledby": s, role: a, disableDoubleClick: o } = e;
     return (0, i.jsx)(d.Ay, {
         className: n,
-        onDoubleClick: () => p(o),
+        onDoubleClick: () => E(o),
         "aria-label": r,
         "aria-labelledby": s,
         role: a,
@@ -104,7 +100,7 @@ function g(e) {
         { analyticsLocations: r } = (0, a.Ay)(s.A.HEADER_BAR);
     return (0, i.jsx)(a.f5, {
         value: r,
-        children: t ? (0, i.jsx)(E, { ...n, className: n.className }) : (0, i.jsx)(m, { ...n, className: n.className }),
+        children: t ? (0, i.jsx)(p, { ...n, className: n.className }) : (0, i.jsx)(m, { ...n, className: n.className }),
     });
 }
 (g.Title = d.Ay.Title),

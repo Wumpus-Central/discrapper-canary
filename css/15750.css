@@ -1,0 +1,35 @@
+.applicationIcon__2c2b3 {
+    height: 1.33em;
+    margin-inline: 2px 4px;
+    vertical-align: text-bottom;
+    width: auto
+}
+
+.applicationNameWrapper__2c2b3 {
+    display: inline-block
+}
+
+.channelHeader__9f71b {
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-md);
+    gap: var(--space-12);
+    margin-top: 12px;
+    padding: 12px 16px
+}
+
+.header__9f71b {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.profile__9f71b {
+    gap: var(--space-8);
+    padding: 12px
+}
+
+.icon__9f71b {
+    color: var(--text-default);
+    flex-shrink: 0
+}

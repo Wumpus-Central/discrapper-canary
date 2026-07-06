@@ -1,82 +1,81 @@
-"use strict";
-n.d(t, { A: () => I });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(452027),
-    l = n(140735),
+n.d(t, { A: () => y });
+var l = n(627968),
+    i = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    s = n(452027),
+    o = n(140735),
     u = n(355622),
     c = n(408018),
     d = n(138617),
-    _ = n(915089),
-    h = n(95701),
-    f = n(788868),
-    p = n(652215),
+    p = n(915089),
+    m = n(95701),
+    h = n(202541),
+    C = n(652215),
     E = n(375708),
-    m = n(905126);
-let g = (0, h.createChannelRecord)({ id: "1", type: p.rbe.DM }),
-    A = (0, _.Ld)();
-function I(e) {
+    A = n(905126);
+let f = (0, m.createChannelRecord)({ id: "1", type: C.rbe.DM }),
+    S = (0, p.Ld)();
+function y(e) {
     let {
             label: t = E.intl.string(E.t.B3miE8),
             onTextChange: n,
-            pendingText: s,
-            currentText: _,
-            className: h,
-            innerClassName: p,
-            disableThemedBackground: I = !1,
+            pendingText: r,
+            currentText: p,
+            className: m,
+            innerClassName: C,
+            disableThemedBackground: y = !1,
         } = e,
-        [T, S] = r.useState(s ?? _),
-        [y, C] = r.useState((0, c.x7)(T)),
-        N = r.useRef(!1);
-    function v(e, t, i) {
-        t !== T && (S(t), C(i), n(t));
+        [P, I] = i.useState(r ?? p),
+        [T, _] = i.useState((0, c.x7)(P)),
+        g = i.useRef(!1);
+    function v(e, t, l) {
+        t !== P && (I(t), _(l), n(t));
     }
-    function R() {
+    function x() {
         return new Promise((e) => {
             e({ shouldClear: !1, shouldRefocus: !0 });
         });
     }
     return (
-        r.useEffect(() => {
-            N.current = !0;
+        i.useEffect(() => {
+            g.current = !0;
         }, []),
-        r.useEffect(() => {
-            if (void 0 === s) {
-                let e = (0, c.x7)(_);
-                S(_), C(e);
+        i.useEffect(() => {
+            if (void 0 === r) {
+                let e = (0, c.x7)(p);
+                I(p), _(e);
             }
-        }, [s, _]),
-        (0, i.jsx)("div", {
-            className: a()(m.rf, h),
-            children: (0, i.jsx)(o.D, {
+        }, [r, p]),
+        (0, l.jsx)("div", {
+            className: a()(A.rf, m),
+            children: (0, l.jsx)(s.D, {
                 label: t,
                 children: (e) =>
-                    (0, i.jsxs)(i.Fragment, {
+                    (0, l.jsxs)(l.Fragment, {
                         children: [
-                            (0, i.jsx)(d.Ay, {
-                                "aria-describedby": `${e.describedById} ${A}`,
+                            (0, l.jsx)(d.Ay, {
+                                "aria-describedby": `${e.describedById} ${S}`,
                                 "aria-labelledby": e.labelId,
-                                innerClassName: a()(m.Tg, p),
-                                editorClassName: m.OT,
-                                maxCharacterCount: f.Jo,
+                                innerClassName: a()(A.Tg, C),
+                                editorClassName: A.OT,
+                                maxCharacterCount: h.Jo,
                                 onChange: v,
-                                channel: g,
-                                textValue: T,
-                                richValue: y,
+                                channel: f,
+                                textValue: P,
+                                richValue: T,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
-                                    N.current = !1;
+                                    g.current = !1;
                                 },
                                 onFocus: () => {
-                                    N.current = !0;
+                                    g.current = !0;
                                 },
-                                focused: N.current,
-                                onSubmit: R,
-                                disableThemedBackground: I,
+                                focused: g.current,
+                                onSubmit: x,
+                                disableThemedBackground: y,
                             }),
-                            (0, i.jsx)(l.A, { id: A, children: E.intl.format(E.t["+DFxLc"], { maxLength: f.Jo }) }),
+                            (0, l.jsx)(o.A, { id: S, children: E.intl.format(E.t["+DFxLc"], { maxLength: h.Jo }) }),
                         ],
                     }),
             }),

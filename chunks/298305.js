@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { A: () => m });
-var i = n(627968);
+n.d(t, { A: () => p });
+var r = n(627968);
 n(64700);
-var r = n(17928),
-    s = n(289873),
-    a = n(97808),
-    o = n(778712),
-    l = n(775602),
-    u = n(912140),
-    c = n(674658),
-    d = n(898461),
-    _ = n(287809),
-    h = n(476630),
-    f = n(513653),
-    p = n(180391);
-function E(e) {
-    let { skuId: t, size: n, src: h, className: f } = e,
-        p = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
-        E = (0, r.bG)([l.Ay], () => l.Ay.useReducedMotion),
-        { product: m, isFetching: g } = (0, c.q)(t);
-    if (g || null == m) return (0, i.jsx)(s.y, { type: s.t.PULSING_ELLIPSIS });
-    let A = m.items[0];
-    if (null == A || !(0, d.T)(A)) return null;
-    let I = (0, u.A)({ legacyAssetId: A.asset, skuId: A.skuId, size: n, canAnimate: !E });
-    return (0, i.jsx)(a.Js, {
-        "aria-label": p?.username,
+var i = n(17928),
+    l = n(289873),
+    s = n(97808),
+    a = n(778712),
+    o = n(775602),
+    c = n(912140),
+    u = n(674658),
+    m = n(898461),
+    d = n(287809),
+    g = n(476630),
+    x = n(513653),
+    T = n(180391);
+function I(e) {
+    let { skuId: t, size: n, src: g, className: x } = e,
+        T = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
+        I = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        { product: p, isFetching: h } = (0, u.q)(t);
+    if (h || null == p) return (0, r.jsx)(l.y, { type: l.t.PULSING_ELLIPSIS });
+    let f = p.items[0];
+    if (null == f || !(0, m.T)(f)) return null;
+    let j = (0, c.A)({ legacyAssetId: f.asset, skuId: f.skuId, size: n, canAnimate: !I });
+    return (0, r.jsx)(s.Js, {
+        "aria-label": T?.username,
         size: n,
-        className: f,
-        src: h ?? p?.getAvatarURL(void 0, (0, o.FT)(n), !E),
-        avatarDecoration: I,
+        className: x,
+        src: g ?? T?.getAvatarURL(void 0, (0, a.FT)(n), !I),
+        avatarDecoration: j,
     });
 }
-function m(e) {
-    let { maxRewardImageSrc: t, claimableRewards: n, size: s, imageScaling: a = 1.5 } = e,
-        u = (0, r.bG)([_.default], () => _.default.getCurrentUser()),
-        c = (0, r.bG)([l.Ay], () => l.Ay.useReducedMotion),
-        d = (0, o.FT)(s);
+function p(e) {
+    let { maxRewardImageSrc: t, claimableRewards: n, size: l, imageScaling: s = 1.5 } = e,
+        c = (0, i.bG)([d.default], () => d.default.getCurrentUser()),
+        u = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        m = (0, a.FT)(l);
     return n.length > 0
-        ? (0, i.jsx)("img", { alt: "", src: t, style: { height: d * a } })
-        : (0, i.jsxs)("div", {
-              className: h.kL,
+        ? (0, r.jsx)("img", { alt: "", src: t, style: { height: m * s } })
+        : (0, r.jsxs)("div", {
+              className: g.kL,
               children: [
                   (1 === n.length || 2 === n.length) &&
-                      (0, i.jsx)(E, {
+                      (0, r.jsx)(I, {
                           skuId: n[0],
-                          size: s,
-                          className: h.M8,
-                          src: 1 === n.length ? u?.getAvatarURL(void 0, (0, o.FT)(s), !c) : p,
+                          size: l,
+                          className: g.M8,
+                          src: 1 === n.length ? c?.getAvatarURL(void 0, (0, a.FT)(l), !u) : T,
                       }),
                   2 === n.length &&
-                      (0, i.jsx)("div", {
-                          style: { marginRight: -Math.round(0.321 * d) },
-                          children: (0, i.jsx)(E, { skuId: n[1], size: s, src: f }),
+                      (0, r.jsx)("div", {
+                          style: { marginRight: -Math.round(0.321 * m) },
+                          children: (0, r.jsx)(I, { skuId: n[1], size: l, src: x }),
                       }),
               ],
           });

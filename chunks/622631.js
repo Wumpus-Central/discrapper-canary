@@ -1,238 +1,40 @@
 "use strict";
-n.d(t, { X: () => v });
-var i = n(627968),
-    r = n(64700),
-    s = n(284009),
-    a = n.n(s),
-    o = n(834730),
-    l = n(17928),
-    u = n(854354),
-    c = n(872452),
-    d = n(650170),
-    _ = n(986883),
-    h = n(410516),
-    f = n(186223),
-    p = n(361597),
-    E = n(736339),
-    m = n(773669),
-    g = n(97352),
-    A = n(252424),
-    I = n(428262),
-    T = n(580630),
-    S = n(202541),
-    y = n(375708),
-    C = n(327105),
-    N = n(556208);
-function v(e) {
+n.d(t, { v: () => o });
+var i = n(627968);
+n(64700);
+var r = n(661531),
+    s = n(996682),
+    a = n(27989);
+let o = (e) => {
     let {
-            selectedPlanId: t,
-            priceOptions: n,
-            planOptions: s,
-            subscriptionPeriodEnd: v,
-            showPlanStatusSubText: R,
-            disabled: O = !1,
-            isInPlanSelectStep: b,
-            headingSubText: D,
-            planPricesLoading: L = !1,
+            size: t = "md",
+            width: n,
+            height: o,
+            color: l = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...c
         } = e,
-        {
-            selectedPlan: w,
-            selectedPlanPrice: M,
-            isPrepaid: P,
-            isPlansEligibleForDiscount: x,
-            shouldShowHRKEuroWarning: k,
-            shouldShowTotalInSubscriptionFlow: U,
-            shouldShowTrialOrDiscountLayout: G,
-            userTrialOffer: F,
-            trialPeriodCopy: V,
-            isEligibleForTrial: B,
-            isEligibleForBOGOPromotion: j,
-            premiumSubscriptionPlan: H,
-            thePriceOptions: Y,
-            skuId: W,
-        } = (0, p.RO)({ selectedPlanId: t, priceOptions: n, planOptions: s, subscriptionPeriodEnd: v, showTotal: b }),
-        { shouldShowPremiumSwitchPlanSelectText: K, premiumSwitchPlanSelectText: $ } = r.useMemo(() => {
-            let e = (0, p.U_)(H, { isEligibleForBOGOPromotion: j });
-            return {
-                shouldShowPremiumSwitchPlanSelectText: e,
-                premiumSwitchPlanSelectText: e ? (0, p.yq)(H, W) : null,
-            };
-        }, [H, j, W]),
-        z = r.useMemo(
-            () => (b && B ? (0, p.Ct)(F, { subscriptionPeriodEnd: v, trialPeriodCopy: V }) : D),
-            [b, B, F, v, V, D],
-        ),
-        q = r.useMemo(() => (s.length > 0 ? S.hd[s[0]].premiumType : void 0), [s]),
-        { setSelectedPlanId: Z } = (0, d.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
-        X = r.useCallback(
-            (e) => {
-                Z(e.value);
-            },
-            [Z],
-        ),
-        Q = (function (e, t) {
-            let {
-                    disabled: n,
-                    planPricesLoading: i,
-                    isEligibleForDiscount: s,
-                    priceOptions: o,
-                    isEligibleForTrial: c,
-                    isEligibleForBOGOPromotion: N,
-                    showPlanStatusSubText: v,
-                    isInPlanSelectStep: R,
-                } = t,
-                {
-                    currentPremiumSubscriptionForCheckout: O,
-                    isGift: b,
-                    discountInfo: D,
-                } = (0, d.t4)((e) => ({
-                    currentPremiumSubscriptionForCheckout: e.isGift ? null : e.activeSubscription,
-                    isGift: e.isGift,
-                    discountInfo: e.premiumDiscountInfo,
-                })),
-                L = (0, l.bG)([m.default], () => m.default.locale),
-                { discountOffer: w, discountAmountOff: M, applicablePlan: P } = D,
-                x = (0, _.DQ)({ location: "PremiumUnifiedCheckoutPlanSelect" });
-            return r.useMemo(
-                () =>
-                    e.map((e) => {
-                        let t,
-                            r,
-                            l,
-                            { isCurrentPlan: d, disabled: m } = (0, p.cD)(O, e),
-                            D = g.A.get(e);
-                        a()(null != D, "Missing subscriptionPlan");
-                        let k = (0, I.L_)({ planId: e, isGift: b, priceOptions: o, subscriptionPlan: D }),
-                            U = null != k && null == w,
-                            G = (0, I.y8)(e, !1, b, o),
-                            F = (0, E.gS)(O, D, {
-                                userLocale: L,
-                                isEligibleForBOGOPromotion: N,
-                                shouldShowSavingsPercent: U,
-                                isGift: b,
-                                planId: e,
-                                savingsPercent: k,
-                                priceOptions: o,
-                                annualPlanCheckoutCopyTreatment: x,
-                                isEligibleForTrial: c,
-                            }),
-                            V = (0, f.is)({
-                                treatment: x,
-                                targetSubscriptionPlan: D,
-                                isGift: b,
-                                shouldShowSavingsPercent: U,
-                                isEligibleForTrial: c,
-                            }),
-                            B = (function (e, t) {
-                                let { isEligibleForTrial: n } = t;
-                                return n
-                                    ? y.intl.formatToPlainString(y.t.hXcaLT, {
-                                          price: (0, T.$g)(0, e.currency, {
-                                              minimumFractionDigits: 0,
-                                              maximumFractionDigits: 0,
-                                          }),
-                                      })
-                                    : (0, T.$g)(e.amount, e.currency);
-                            })(G, { isEligibleForTrial: c }),
-                            j = B,
-                            H = s && null != P && e === P ? M : null;
-                        if (
-                            (null != w &&
-                                !c &&
-                                ((0, h.p2)(w)
-                                    ? D.interval === S.WT.YEAR
-                                        ? (t = y.intl.format(C.default.ODKoJd, { percent: k ?? "" }))
-                                        : D.interval === S.WT.MONTH &&
-                                          (null != H &&
-                                              (j = y.intl.format(y.t.hXcaLT, {
-                                                  price: (0, T.$g)(G.amount - H, G.currency),
-                                              })),
-                                          (t = y.intl.format(C.default.JsSin7, {
-                                              priceRate: (0, T.CE)(B, D.interval, D.intervalCount),
-                                              intervalCount: w.getFullIntervalCount(),
-                                          })))
-                                    : (0, h.hm)(w) &&
-                                      D.interval === S.WT.YEAR &&
-                                      null != H &&
-                                      ((j = y.intl.format(y.t.hXcaLT, { price: (0, T.$g)(G.amount - H, G.currency) })),
-                                      (r = B),
-                                      (t = y.intl.format(y.t.VZ8Tvh, { regularPrice: B })),
-                                      (l = y.intl.formatToPlainString(C.default.nsG1jw, {
-                                          savingsText: (0, A.l9)(L, parseInt(w.discount.amount) / 100),
-                                      })))),
-                            v &&
-                                (R && c
-                                    ? (t = (0, E.O7)(D, G))
-                                    : d
-                                      ? (t = y.intl.string(y.t.ymSxhy))
-                                      : "string" != typeof F || V || (t = F)),
-                            V && x === _.qS.AMOUNT_OFF_WITH_MONTHLY_RATE && !d)
-                        ) {
-                            let e = (0, f.cg)(D, b, o);
-                            null != e && (t = e);
-                        }
-                        let Y = (function (e) {
-                            let { promoTextOverride: t, overrideBadgeText: n, defaultValue: i } = e;
-                            return t ?? n ?? i;
-                        })({
-                            promoTextOverride: l,
-                            overrideBadgeText: null != F && "object" == typeof F ? (F.type, F.text) : null,
-                            defaultValue: (0, u.Nc)({
-                                subscriptionPlan: D,
-                                userLocale: L,
-                                discountOffer: w,
-                                yearlyPercentSavings: k,
-                                shouldHideYearlySavingsBadge: null != O || null != w,
-                            }),
-                        });
-                        return {
-                            id: e,
-                            value: e,
-                            primaryText: (0, u.YR)(D.interval, D.intervalCount, !0),
-                            subText: i ? y.intl.string(y.t.ZTNur7) : j,
-                            subTextStrikethrough: i ? null : r,
-                            secondarySubText: i ? null : t,
-                            badgeText: i ? null : Y,
-                            isDisabled: m || n,
-                        };
-                    }),
-                [i, e, s, o, c, N, v, R, O, M, P, w, b, L, n, x],
-            );
-        })(s, {
-            disabled: O,
-            planPricesLoading: L,
-            isEligibleForDiscount: x,
-            priceOptions: Y,
-            isEligibleForTrial: B,
-            isEligibleForBOGOPromotion: j,
-            showPlanStatusSubText: R,
-            isInPlanSelectStep: b,
-        });
-    return null == q
-        ? null
-        : (0, i.jsxs)(i.Fragment, {
-              children: [
-                  K &&
-                      (0, i.jsx)(o.E, { variant: "text-md/medium", color: "text-subtle", className: N.S, children: $ }),
-                  (0, i.jsx)(c.me, {
-                      headingComponent: (0, i.jsx)(c.ec, { size: "sm", color: "text-strong", premiumType: q }),
-                      headingSubText: z,
-                      planRadioOptions: Q,
-                      value: w?.id ?? "",
-                      onChange: X,
-                  }),
-                  b
-                      ? (0, p.LR)({
-                            selectedPlan: w,
-                            selectedPlanPrice: M,
-                            isPrepaid: P,
-                            shouldShowHRKEuroWarning: k,
-                            shouldShowTrialOrDiscountLayout: G,
-                            showTotal: b,
-                            shouldShowTotalInSubscriptionFlow: U,
-                            previewTotalSectionClassName: N.$,
-                        })
-                      : null,
-              ],
-          });
-}
+        d = (0, a.J)(t),
+        _ = d?.width ?? n,
+        h = d?.height ?? o;
+    return (0, i.jsxs)("svg", {
+        ...(0, s.A)(c),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: _,
+        height: h,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
+                d: "M22.52 13.17c-.2.41-.87.35-1.15 0a3.02 3.02 0 0 0-.45-.48.47.47 0 0 1-.13-.54c.04-.1.04-.2-.01-.31-.4-.9-1.18-2.4-2.4-3.76C16.89 6.38 14.82 5 12 5 9.2 5 7.13 6.38 5.61 8.08a15.05 15.05 0 0 0-2.37 3.72.48.48 0 0 0 0 .4c.4.9 1.18 2.37 2.37 3.72a8.46 8.46 0 0 0 5.89 3.07c.28.01.5.24.54.5.05.31.15.6.29.87.13.27-.03.64-.33.64-7.11 0-10.27-7.11-10.89-8.7a.83.83 0 0 1 0-.6C1.73 10.1 4.9 3 12 3c7.11 0 10.27 7.11 10.89 8.7.07.2.07.4 0 .6-.08.21-.2.5-.37.87Z",
+                className: u,
+            }),
+            (0, i.jsx)("path", {
+                fill: "string" == typeof l ? l : l.css,
+                d: "M15.56 11.77c.2-.1.44.02.44.23a4 4 0 1 1-4-4c.21 0 .33.25.23.44a2.5 2.5 0 0 0 3.32 3.32ZM19 14a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1Z",
+                className: u,
+            }),
+        ],
+    });
+};

@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { z: () => s });
-var i = n(17928),
-    r = n(721101);
-function s() {
-    return (0, i.bG)([r.A], () => r.A.data?.allowed_billing_address_countries ?? null);
+n.d(t, { z: () => r });
+var l = n(17928),
+    i = n(721101);
+function r() {
+    return (0, l.bG)([i.A], () => i.A.data?.allowed_billing_address_countries ?? null);
 }

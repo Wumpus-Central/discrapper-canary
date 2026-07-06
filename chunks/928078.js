@@ -238,8 +238,8 @@ let eO = i.memo(
                 ),
             }),
             {
-                expressionPickerView: e5,
-                shouldHideExpressionPicker: e8,
+                expressionPickerView: e8,
+                shouldHideExpressionPicker: e5,
                 handleOuterClick: e6,
             } = (0, eN.MD)(f, el, A.id),
             { handleAutocompleteVisibilityChange: e9 } = (0, eN.uW)(f, A.id),
@@ -482,7 +482,7 @@ let eO = i.memo(
                                 canSendStickers: !0,
                                 textValue: s,
                                 focused: C,
-                                expressionPickerView: e5,
+                                expressionPickerView: e8,
                                 type: f,
                                 editorRef: el,
                                 onSendMessage: eJ,
@@ -494,7 +494,7 @@ let eO = i.memo(
                             }),
                         ],
                     }),
-                    e8
+                    e5
                         ? null
                         : (0, l.jsx)(eu.A, {
                               positionTargetRef: ee,
@@ -716,13 +716,13 @@ function eX(e) {
     });
 }
 var eQ = n(206835),
-    e0 = n(495544),
+    e0 = n(280450),
     e1 = n(696451),
     e2 = n(229527),
     e3 = n(340837),
     e4 = n(355097),
     e7 = n(944089);
-function e5(e) {
+function e8(e) {
     let { guild: t } = e,
         n = (0, eQ.A)({ scrollPosition: e4._F.GUILD_TAG });
     return (0, l.jsx)("div", {
@@ -741,7 +741,7 @@ function e5(e) {
         }),
     });
 }
-function e8(e) {
+function e5(e) {
     let { guild: t } = e,
         { analyticsLocations: n } = (0, es.Ay)(ei.A.AUTOMOD_PROFILE_QUARANTINE_ALERT),
         [i, s] = (0, eJ.j8)({ guildId: t?.id ?? eM.dJq, analyticsLocations: n }),
@@ -773,10 +773,10 @@ function e6(e) {
             return (0, e2.wj)(e1.Ay.getMember(t.id, e));
         }, [t]);
     return n.has(e3.D.AUTOMOD_QUARANTINED_USERNAME_OR_GUILD_NICKNAME) || n.has(e3.D.AUTOMOD_QUARANTINED_BIO)
-        ? (0, l.jsx)(e8, { guild: t })
+        ? (0, l.jsx)(e5, { guild: t })
         : n.has(e3.D.AUTOMOD_QUARANTINED_SERVER_TAG)
-          ? (0, l.jsx)(e5, { guild: t })
-          : (0, l.jsx)(e8, { guild: t });
+          ? (0, l.jsx)(e8, { guild: t })
+          : (0, l.jsx)(e5, { guild: t });
 }
 var e9 = n(554146),
     te = n(131607),
@@ -1063,14 +1063,14 @@ let t4 = function (e, t) {
     return null != e && e.hasFlag(eM.nhx.QUARANTINED) && n && !l;
 };
 var t7 = n(831502);
-let t5 = function () {
+let t8 = function () {
     return (0, l.jsx)(eX, {
         bannerIcon: (0, l.jsx)(t2.M, { alt: "", width: 80, height: 40 }),
         bannerHeader: eD.intl.string(eD.t.EouHwv),
         bannerSubtext: eD.intl.format(eD.t.PThBel, { appealLink: t7.q }),
     });
 };
-var t8 = n(118517),
+var t5 = n(118517),
     t6 = n(853145),
     t9 = n(226698),
     ne = n(221314),
@@ -1121,7 +1121,7 @@ var nf = n(728321),
     nE = n(309010),
     nS = n(174459),
     n_ = n(871237),
-    nI = n(11939),
+    nI = n(234320),
     nj = n(625494),
     ny = n(806150),
     nb = n(382287),
@@ -1435,7 +1435,7 @@ class n$ extends i.PureComponent {
                     x.A.sendMessage(h.id, _, void 0, I).then(() => {
                         p && nA(h.parent_id ?? void 0);
                     }),
-                    (0, t8.Jx)(h.id),
+                    (0, t5.Jx)(h.id),
                     nr.B({ channelId: h.id, enabled: !1 }),
                     { shouldClear: !1, shouldRefocus: !0 }
                 );
@@ -1480,7 +1480,7 @@ class n$ extends i.PureComponent {
                 });
             return (
                 this.setState((0, w.N3)()),
-                (0, t8.Jx)(h.id),
+                (0, t5.Jx)(h.id),
                 (0, na.x5)(h.id, g.drafts.type),
                 nr.B({ channelId: h.id, enabled: !1 }),
                 { shouldClear: !0, shouldRefocus: !0 }
@@ -1675,7 +1675,7 @@ class nJ extends i.PureComponent {
             : this.props.restrictedPreview && t.type === eM.rbe.DM
               ? (0, l.jsx)(nF, { channel: t })
               : t.type === eM.rbe.DM && n
-                ? (0, l.jsx)(t5, {})
+                ? (0, l.jsx)(t8, {})
                 : t.isModeratorReportChannel() && t.isArchivedThread()
                   ? (0, l.jsx)(nn, { channelId: t.id })
                   : null != s && (0, tm.n)(s) && null != i && !ta.A.can(eM.xBc.ADMINISTRATOR, i)

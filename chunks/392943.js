@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(627968);
-function r(e) {
-    let { color: t = "white", className: n } = e;
+s.d(t, { A: () => n });
+var i = s(627968);
+function n(e) {
+    let { color: t = "white", className: s } = e;
     return (0, i.jsx)("svg", {
         width: "90",
         height: "17",
         viewBox: "0 0 90 17",
-        className: n,
+        className: s,
         fill: t,
         xmlns: "http://www.w3.org/2000/svg",
         children: (0, i.jsx)("path", {

@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(627968);
-n(64700);
-var r = n(97808),
-    s = n(778712),
-    a = n(151900);
-function o(e) {
-    let { user: t, nickname: n } = e,
-        o = null != n;
+e.d(s, { A: () => d });
+var i = e(627968);
+e(64700);
+var r = e(97808),
+    t = e(778712),
+    c = e(151900);
+function d(a) {
+    let { user: s, nickname: e } = a,
+        d = null != e;
     return (0, i.jsx)(r.eu, {
-        src: t.getAvatarURL(void 0, o ? 16 : 24),
-        size: o ? s._3.SIZE_16 : s._3.SIZE_24,
-        className: o ? a.H : a.tM,
+        src: s.getAvatarURL(void 0, d ? 16 : 24),
+        size: d ? t._3.SIZE_16 : t._3.SIZE_24,
+        className: d ? c.H : c.tM,
         "aria-hidden": !0,
     });
 }

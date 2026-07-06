@@ -1,84 +1,83 @@
-"use strict";
-n.d(t, { D: () => g });
-var i = n(64700),
-    r = n(323889),
-    s = n(274670),
-    a = n(144779),
-    o = n(793574),
-    l = n(564064),
-    u = n(104886);
-let c = (0, n(945810).mj)({
+a.d(t, { D: () => f });
+var n = a(64700),
+    i = a(323889),
+    u = a(274670),
+    l = a(144779),
+    s = a(793574),
+    d = a(662388),
+    c = a(104886);
+let r = (0, a(945810).mj)({
     name: "2026-05-quest-home-reward-claim",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var d = n(18437),
-    _ = n(590202),
-    h = n(971649),
-    f = n(801365),
-    p = n(371912),
-    E = n(617986),
-    m = n(758836);
-function g(e) {
+var o = a(18437),
+    C = a(590202),
+    _ = a(971649),
+    m = a(801365),
+    E = a(371912),
+    p = a(617986),
+    A = a(758836);
+function f(e) {
     let {
             quest: t,
-            questContent: n,
-            sourceQuestContent: g,
-            questContentPosition: A,
+            questContent: a,
+            sourceQuestContent: f,
+            questContentPosition: T,
             questContentRowIndex: I,
-            experimentLocation: T,
-            shouldShowShopIfAlreadyClaimed: S = !0,
-            onBeforeClaim: y,
-            onCloseModal: C,
+            experimentLocation: S,
+            shouldShowShopIfAlreadyClaimed: k = !0,
+            onBeforeClaim: b,
+            onCloseModal: g,
         } = e,
-        N = (function (e) {
+        h = (function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                n = c.useConfig({ location: t && null != e ? e : "quest home reward claim experiment: disabled" });
-            return !!t && null != e && n.enabled;
-        })(T, t.userStatus?.completedAt != null && t.userStatus?.claimedAt == null),
-        v = (0, d.Ut)(),
-        R = (0, h.go)(),
-        O = (0, p.ix)({
+                a = r.useConfig({ location: t && null != e ? e : "quest home reward claim experiment: disabled" });
+            return !!t && null != e && a.enabled;
+        })(S, t.userStatus?.completedAt != null && t.userStatus?.claimedAt == null),
+        O = (0, o.Ut)(),
+        q = (0, _.go)(),
+        L = (0, E.ix)({
             quest: t,
-            questContent: n,
-            questContentPosition: A,
+            questContent: a,
+            questContentPosition: T,
             questContentRowIndex: I,
-            sourceQuestContent: g,
+            sourceQuestContent: f,
         });
-    return i.useCallback(
+    return n.useCallback(
         (e) => {
-            if ((null != e && y?.(e), S && (0, f.ks)(t.config) && t.userStatus?.claimedAt != null)) {
-                C?.(), (0, l.Cz)({ tab: m.G2.ORBS, analyticsLocations: [], analyticsSource: o.A.QUEST_HOME_PAGE });
+            if ((null != e && b?.(e), k && (0, m.ks)(t.config) && t.userStatus?.claimedAt != null)) {
+                g?.(), (0, d.Cz)({ tab: A.G2.ORBS, analyticsLocations: [], analyticsSource: s.A.QUEST_HOME_PAGE });
                 return;
             }
-            N &&
-                (C?.(),
-                (0, f.K9)(t.config) ||
-                    ((0, u.E5)(u.kI.STEP_2_CLICKED_INTERNAL, "completed_quest_claim_click")
-                        ? (0, s.r)({
-                              type: a.F.CLICK_INTERNAL,
-                              adCreativeType: r.p.QUEST,
+            h &&
+                (g?.(),
+                (0, m.K9)(t.config) ||
+                    ((0, c.E5)(c.kI.STEP_2_CLICKED_INTERNAL, "completed_quest_claim_click")
+                        ? (0, u.r)({
+                              type: l.F.CLICK_INTERNAL,
+                              adCreativeType: i.p.QUEST,
                               adCreativeId: t.id,
-                              questContentCTA: _.Cy.OPEN_QUEST_HOME_TO_CLAIM,
-                              surfaceId: n,
-                              sourceQuestContent: g,
-                              impressionId: R,
-                              questContentPosition: A,
+                              questContentCTA: C.Cy.OPEN_QUEST_HOME_TO_CLAIM,
+                              surfaceId: a,
+                              sourceQuestContent: f,
+                              impressionId: q,
+                              questContentPosition: T,
                               questContentRowIndex: I,
                           })
-                        : v({
+                        : O({
                               questId: t.id,
-                              questContent: n,
-                              questContentCTA: _.Cy.OPEN_QUEST_HOME_TO_CLAIM,
-                              sourceQuestContent: g,
-                              questContentPosition: A,
+                              questContent: a,
+                              questContentCTA: C.Cy.OPEN_QUEST_HOME_TO_CLAIM,
+                              sourceQuestContent: f,
+                              questContentPosition: T,
                               questContentRowIndex: I,
                           }),
-                    (0, E.navigateToQuestHome)({ questId: t.id, fromContent: n }))),
-                !N && (0, f.K9)(t.config) && C?.(),
-                O();
+                    (0, p.mA)({ questId: t.id, fromContent: a }))),
+                !h && (0, m.K9)(t.config) && g?.(),
+                L();
         },
-        [y, C, t.config, t.userStatus?.claimedAt, O, S, N, t.id, n, g, A, I, v, R],
+        [b, g, t.config, t.userStatus?.claimedAt, L, k, h, t.id, a, f, T, I, O, q],
     );
 }

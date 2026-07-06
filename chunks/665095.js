@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => k });
+n.d(t, { A: () => U });
 var i = n(627968),
     r = n(64700),
     s = n(562708),
@@ -12,25 +12,25 @@ var i = n(627968),
     _ = n(475743),
     h = n(775121),
     f = n(139286),
-    p = n(80556),
-    E = n(557722),
+    E = n(80556),
+    p = n(557722),
     m = n(363195),
     g = n(870570),
     A = n(446868),
     I = n(503698),
     T = n.n(I),
     S = n(607399),
-    y = n(821609),
+    N = n(821609),
     C = n(331322),
-    N = n(534514),
-    v = n(834730),
+    y = n(534514),
+    O = n(834730),
     R = n(700525),
-    O = n(975571),
+    v = n(975571),
     b = n(652215),
-    D = n(375708),
-    L = n(72828);
-let w = O.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
-class M extends r.PureComponent {
+    L = n(375708),
+    D = n(72828);
+let w = v.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+class P extends r.PureComponent {
     static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
@@ -38,14 +38,14 @@ class M extends r.PureComponent {
             children: e.map((e) =>
                 e === b.Fz7.CAPTCHA
                     ? (0, i.jsx)(R.A, { onVerify: r, theme: n }, t)
-                    : (0, i.jsx)(y.$, { onClick: () => this.handleClick(e), text: A.A.getButtonTitle(e) }, e),
+                    : (0, i.jsx)(N.$, { onClick: () => this.handleClick(e), text: A.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
         return (0, i.jsxs)(C.B, {
             gap: 16,
-            className: L.Ot,
+            className: D.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
@@ -53,7 +53,7 @@ class M extends r.PureComponent {
                 (0, i.jsxs)(C.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: T()(L.kL, { [L.Fr]: S.Fr }),
+                    className: T()(D.kL, { [D.Fr]: S.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
@@ -64,21 +64,21 @@ class M extends r.PureComponent {
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, i.jsx)("div", { className: L.Sl }),
+                                (0, i.jsx)("div", { className: D.Sl }),
                                 (0, i.jsxs)(C.B, {
-                                    className: L.FS,
+                                    className: D.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(N.D, {
+                                        (0, i.jsx)(y.D, {
                                             variant: "heading-xl/normal",
-                                            children: D.intl.string(D.t.Iz0kDg),
+                                            children: L.intl.string(L.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(v.E, {
+                                        (0, i.jsx)(O.E, {
                                             variant: "text-md/normal",
-                                            children: D.intl.format(D.t["0rqMV5"], { helpCenterURL: w }),
+                                            children: L.intl.format(L.t["0rqMV5"], { helpCenterURL: w }),
                                         }),
                                     ],
                                 }),
@@ -99,10 +99,10 @@ class M extends r.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(v.E, {
+                        (0, i.jsx)(O.E, {
                             variant: "text-sm/normal",
-                            className: L.qr,
-                            children: D.intl.string(D.t.qqYun3),
+                            className: D.qr,
+                            children: L.intl.string(L.t.qqYun3),
                         }),
                         (0, i.jsxs)(C.B, {
                             gap: 8,
@@ -110,16 +110,16 @@ class M extends r.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(v.E, {
+                                (0, i.jsx)(O.E, {
                                     variant: "text-sm/semibold",
-                                    className: L.qr,
-                                    children: D.intl.format(D.t.WL51ZR, { supportURL: O.A.getSubmitRequestURL() }),
+                                    className: D.qr,
+                                    children: L.intl.format(L.t.WL51ZR, { supportURL: v.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: T()(L.qr, L.mf), children: "\u2022" }),
-                                (0, i.jsx)(v.E, {
+                                (0, i.jsx)("div", { className: T()(D.qr, D.mf), children: "\u2022" }),
+                                (0, i.jsx)(O.E, {
                                     variant: "text-sm/semibold",
-                                    className: L.qr,
-                                    children: D.intl.format(D.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
+                                    className: D.qr,
+                                    children: L.intl.format(L.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
                         }),
@@ -133,13 +133,13 @@ class M extends r.PureComponent {
         t?.(e);
     };
 }
-var P = n(87404),
+var M = n(87404),
     x = n(53516);
-function k() {
+function U() {
     let { action: e, theme: t } = (0, a.cf)([g.A, m.A], () => ({ action: g.A.getAction(), theme: m.A.theme })),
         I = A.A.getVerificationTypes(e),
         [T, S] = r.useState(0),
-        y = (0, _.A)(I);
+        N = (0, _.A)(I);
     function C() {
         (0, d.Cw)(),
             (0, l.openModalLazy)(
@@ -149,7 +149,7 @@ function k() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: P.H1, Layer: p.Ay },
+                { modalKey: M.H1, Layer: E.Ay },
             );
     }
     return (
@@ -172,7 +172,7 @@ function k() {
             [],
         ),
         r.useEffect(() => {
-            y?.[0] === b.Fz7.PHONE &&
+            N?.[0] === b.Fz7.PHONE &&
                 I?.[0] === b.Fz7.EMAIL &&
                 (0, l.openModalLazy)(
                     async () => {
@@ -180,15 +180,15 @@ function k() {
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                title: D.intl.string(D.t.KLnLIP),
-                                body: D.intl.string(D.t.XGbCq3),
-                                confirmText: D.intl.string(D.t["3oK4qw"]),
+                                title: L.intl.string(L.t.KLnLIP),
+                                body: L.intl.string(L.t.XGbCq3),
+                                confirmText: L.intl.string(L.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: P.Pr, Layer: p.Ay, onCloseCallback: C },
+                    { modalKey: M.Pr, Layer: E.Ay, onCloseCallback: C },
                 );
-        }, [I, y]),
-        (0, i.jsx)(M, {
+        }, [I, N]),
+        (0, i.jsx)(P, {
             types: I,
             captchaKey: T,
             onCaptchaVerify: function (e) {
@@ -209,16 +209,17 @@ function k() {
                           async () => {
                               let { default: e } = await Promise.all([
                                   n.e("56643"),
-                                  n.e("82662"),
+                                  n.e("4782"),
+                                  n.e("86380"),
                                   n.e("89545"),
                                   n.e("91531"),
                                   n.e("11493"),
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, i.jsx)(e, { layerContext: p.OH, reason: E.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, i.jsx)(e, { layerContext: E.OH, reason: p.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: x.V, Layer: p.Ay },
+                          { modalKey: x.V, Layer: E.Ay },
                       );
             },
             onLogout: function () {
@@ -227,15 +228,15 @@ function k() {
                         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                title: D.intl.string(D.t["2jxGer"]),
-                                subtitle: D.intl.string(D.t.SUnWBB),
-                                confirmText: D.intl.string(D.t["2jxGer"]),
-                                cancelText: D.intl.string(D.t["ETE/oC"]),
+                                title: L.intl.string(L.t["2jxGer"]),
+                                subtitle: L.intl.string(L.t.SUnWBB),
+                                confirmText: L.intl.string(L.t["2jxGer"]),
+                                cancelText: L.intl.string(L.t["ETE/oC"]),
                                 onConfirm: () => u.A.logout("verification"),
                                 ...t,
                             });
                     },
-                    { Layer: p.Ay },
+                    { Layer: E.Ay },
                 );
             },
         })

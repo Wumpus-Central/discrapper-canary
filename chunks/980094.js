@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { Q: () => o });
-var i = n(627968);
+n.d(t, { Q: () => s });
+var a = n(627968);
 n(64700);
 var r = n(834730),
-    s = n(665711),
-    a = n(582275);
-let o = (e) => {
+    l = n(665711),
+    i = n(582275);
+let s = (e) => {
     let { application: t, iconSize: n = 20 } = e;
     return null == t
         ? null
-        : (0, i.jsxs)("div", {
-              className: a.k,
+        : (0, a.jsxs)("div", {
+              className: i.k,
               children: [
-                  (0, i.jsx)(s.W, { application: t, iconSize: n }),
-                  (0, i.jsx)(r.E, { variant: "text-sm/medium", color: "text-muted", children: t.name }),
+                  (0, a.jsx)(l.W, { application: t, iconSize: n }),
+                  (0, a.jsx)(r.E, { variant: "text-sm/medium", color: "text-muted", children: t.name }),
               ],
           });
 };

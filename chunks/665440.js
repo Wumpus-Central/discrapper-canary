@@ -17,9 +17,13 @@ function h(e) {
         (0, u.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("97893"),
+                    n.e("58846"),
+                    n.e("29389"),
+                    n.e("25028"),
                     n.e("93103"),
+                    n.e("32191"),
                     n.e("52229"),
+                    n.e("43549"),
                     n.e("38056"),
                     n.e("34546"),
                     n.e("60816"),
@@ -56,7 +60,7 @@ function f(e) {
     let i = (0, a.Di)(t);
     return null != i && (h({ warningId: i.id, warningType: i.type, senderId: n.getRecipientId(), channelId: t }), !0);
 }
-function p(e) {
+function E(e) {
     let { channels: t } = e;
     if (!(0, o.wv)({ location: "channel_updates" }) || !(0, a.gz)()) return !1;
     let n = s.A.getCurrentlySelectedChannelId();
@@ -69,7 +73,7 @@ function p(e) {
         (h({ warningId: r.id, warningType: r.type, senderId: i.getRecipientId(), channelId: i.id }), !0)
     );
 }
-class E extends i.A {
-    actions = { CHANNEL_SELECT: f, CHANNEL_UPDATES: p };
+class p extends i.A {
+    actions = { CHANNEL_SELECT: f, CHANNEL_UPDATES: E };
 }
-let m = new E();
+let m = new p();

@@ -1,0 +1,104 @@
+.ctaButtons_cc03e1 {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.cta_cc03e1 {
+    flex: 1;
+    margin-top: 12px
+}
+
+.copyIcon_cc03e1 {
+    margin-inline-start: 8px
+}
+
+.iconButtonLarge_cc03e1 {
+    align-items: center;
+    background-color: var(--interactive-background-hover);
+    display: flex;
+    flex: 1 0 0;
+    height: 32px;
+    justify-content: center;
+    padding: 8px
+}
+
+.iconButtonLarge_cc03e1:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.iconButton_cc03e1 {
+    background-color: var(--interactive-background-hover);
+    padding: 8px
+}
+
+.iconButton_cc03e1:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.iconButtonInner_cc03e1 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex
+}
+
+.wrapper_c4293b {
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 4
+}
+
+.background_c4293b,
+.wrapper_c4293b {
+    border-radius: 8px 8px 0 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.background_c4293b {
+    background-image: linear-gradient(180deg, rgba(45, 199, 113, .05), rgba(45, 199, 113, .1))
+}
+
+.borders_c4293b {
+    border: 0 solid var(--text-feedback-positive);
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    content: "";
+    height: 100%;
+    inset-inline-start: 0;
+    -webkit-mask-image: linear-gradient(115deg, rgba(0, 0, 0, .25), transparent 70%);
+    mask-image: linear-gradient(115deg, rgba(0, 0, 0, .25), transparent 70%);
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.bordersTopLeft_c4293b {
+    border-left-width: 2px;
+    border-top-width: 2px
+}
+
+.bordersBottom_c4293b {
+    border-bottom-width: 2px;
+    inset-inline-start: 2px
+}
+
+.confetti_c4293b,
+.confettiWrapper_c4293b {
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1
+}
+
+.confetti_c4293b {
+    border-radius: 8px 8px 0 0
+}

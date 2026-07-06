@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { XD: () => E, sv: () => m, eh: () => g, sN: () => I, rM: () => A, d3: () => T });
+n.d(t, { XD: () => p, sv: () => m, eh: () => g, sN: () => I, rM: () => A, d3: () => T });
 var i = n(627968);
 n(64700);
 var r = n(317097),
@@ -14,17 +14,18 @@ var a = n(77257),
     _ = n(228366),
     h = n(478644),
     f = n(339984),
-    p = n(375708);
-function E(e) {
-    let { uploadType: t, guildId: r, analyticsSource: u, filters: c, isTryItOut: d = !1, stackingBehavior: E } = e,
+    E = n(375708);
+function p(e) {
+    let { uploadType: t, guildId: r, analyticsSource: u, filters: c, isTryItOut: d = !1, stackingBehavior: p } = e,
         m = (0, o.Y)(t, r),
         g = null;
     (0, s.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("27565"),
-                n.e("36698"),
-                n.e("56989"),
+                n.e("79465"),
+                n.e("21866"),
+                n.e("50985"),
+                n.e("63232"),
                 n.e("29666"),
                 n.e("80436"),
                 n.e("93513"),
@@ -38,7 +39,7 @@ function E(e) {
                 (0, i.jsx)(e, {
                     filters: c,
                     maxFileSizeBytes: h.j,
-                    imageSpecifications: t === f.HL.BANNER ? p.intl.string(p.t.IhzZlo) : void 0,
+                    imageSpecifications: t === f.HL.BANNER ? E.intl.string(E.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
                         g = null != m ? a.A.fromBlob(m, e) : null;
                     },
@@ -86,7 +87,7 @@ function E(e) {
                     ...n,
                 });
         },
-        { stackingBehavior: E },
+        { stackingBehavior: p },
     );
 }
 function m(e, t, n) {

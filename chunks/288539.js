@@ -12,8 +12,8 @@ var i = n(627968),
     _ = n(342296),
     h = n(734057),
     f = n(696451),
-    p = n(994500),
-    E = n(287809),
+    E = n(994500),
+    p = n(287809),
     m = n(562153),
     g = n(427262);
 function A(e) {
@@ -42,23 +42,24 @@ function I(e) {
             channelId: I,
             parsedUserId: T,
             content: S,
-            inlinePreview: y = !1,
+            inlinePreview: N = !1,
             viewingChannelId: C,
         } = e,
-        N = r.useRef(null),
-        { analyticsLocations: v } = (0, u.Ay)(l.A.USER_MENTION),
-        R = (0, a.bG)([E.default], () => E.default.getUser(c)),
-        O = (0, a.bG)([h.A], () => h.A.getChannel(I)),
-        b = null != O ? O.getGuildId() : null,
-        D =
-            y || null == R || null == I || null == O
+        y = r.useRef(null),
+        { analyticsLocations: O } = (0, u.Ay)(l.A.USER_MENTION),
+        R = (0, a.bG)([p.default], () => p.default.getUser(c)),
+        v = (0, a.bG)([h.A], () => h.A.getChannel(I)),
+        b = null != v ? v.getGuildId() : null,
+        L =
+            N || null == R || null == I || null == v
                 ? void 0
                 : (e) => {
                       null != b
                           ? (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("14973"),
+                                    n.e("61312"),
                                     n.e("41831"),
+                                    n.e("87761"),
                                     n.e("18078"),
                                     n.e("88429"),
                                     n.e("94881"),
@@ -85,7 +86,11 @@ function I(e) {
                                     n.e("97558"),
                                     n.e("91994"),
                                     n.e("76665"),
+                                    n.e("28662"),
                                     n.e("35313"),
+                                    n.e("54625"),
+                                    n.e("71133"),
+                                    n.e("28152"),
                                     n.e("39171"),
                                     n.e("36564"),
                                     n.e("24198"),
@@ -116,22 +121,23 @@ function I(e) {
                                     n.e("54148"),
                                     n.e("74021"),
                                     n.e("13708"),
-                                    n.e("30221"),
                                     n.e("66939"),
+                                    n.e("30221"),
                                     n.e("24240"),
                                     n.e("21879"),
                                     n.e("17334"),
                                     n.e("84841"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
-                                    (0, i.jsx)(e, { ...t, viewingChannelId: C, user: R, channel: O, guildId: b });
+                                    (0, i.jsx)(e, { ...t, viewingChannelId: C, user: R, channel: v, guildId: b });
                             })
-                          : O.isDM() &&
+                          : v.isDM() &&
                             (0, o.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("71406"),
-                                    n.e("14973"),
+                                    n.e("61312"),
                                     n.e("41831"),
+                                    n.e("87761"),
                                     n.e("18078"),
                                     n.e("88429"),
                                     n.e("94881"),
@@ -156,7 +162,10 @@ function I(e) {
                                     n.e("97558"),
                                     n.e("91994"),
                                     n.e("76665"),
+                                    n.e("28662"),
                                     n.e("35313"),
+                                    n.e("54625"),
+                                    n.e("71133"),
                                     n.e("76273"),
                                     n.e("36564"),
                                     n.e("34971"),
@@ -200,27 +209,27 @@ function I(e) {
                                     n.e("39778"),
                                     n.e("63071"),
                                 ]).then(n.bind(n, 385913));
-                                return (t) => (0, i.jsx)(e, { ...t, user: R, channel: O, targetIsUser: !0 });
+                                return (t) => (0, i.jsx)(e, { ...t, user: R, channel: v, targetIsUser: !0 });
                             });
                   },
-        L = g.Ay.useName(R),
-        w = (0, a.bG)([h.A, f.Ay, p.A], () => m.Ay.getNickname(b, I, R));
+        D = g.Ay.useName(R),
+        w = (0, a.bG)([h.A, f.Ay, E.A], () => m.Ay.getNickname(b, I, R));
     if (null == R) return (0, i.jsx)(A, { userId: T, className: t, children: S });
-    function M(e) {
-        return (0, i.jsx)(d.A, { ref: N, className: t, onContextMenu: D, ...e, children: `@${w ?? L}` });
+    function P(e) {
+        return (0, i.jsx)(d.A, { ref: y, className: t, onContextMenu: L, ...e, children: `@${w ?? D}` });
     }
-    return y
-        ? (0, i.jsx)(u.f5, { value: v, children: M() })
+    return N
+        ? (0, i.jsx)(u.f5, { value: O, children: P() })
         : (0, i.jsx)(u.f5, {
-              value: v,
+              value: O,
               children: (0, i.jsx)(_.A, {
-                  targetElementRef: N,
+                  targetElementRef: y,
                   user: R,
                   guildId: b ?? void 0,
                   channelId: I,
                   position: s.Fr ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => M(e),
+                  children: (e) => P(e),
               }),
           });
 }

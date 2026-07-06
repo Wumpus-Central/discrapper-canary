@@ -16,7 +16,7 @@ var i = n(702841),
     y = n.n(p),
     h = n(827343),
     T = n(730852),
-    I = n(472444),
+    I = n(451409),
     S = n(469802),
     b = n(350701),
     G = n(857253),
@@ -97,9 +97,10 @@ function w(e) {
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("88647"),
+                                          n.e("37757"),
+                                          n.e("76962"),
                                           n.e("95429"),
-                                          n.e("67113"),
+                                          n.e("45488"),
                                           n.e("48370"),
                                           n.e("24227"),
                                       ]).then(n.bind(n, 832910));

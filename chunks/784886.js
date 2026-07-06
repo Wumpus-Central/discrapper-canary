@@ -1,67 +1,66 @@
-"use strict";
-n.d(t, { A: () => g });
-var i = n(627968),
-    r = n(64700),
-    s = n(688810),
-    a = n(355622),
-    o = n(408018),
-    l = n(138617),
-    u = n(195880),
-    c = n(95701),
-    d = n(562153),
-    _ = n(183555),
-    h = n(448613),
-    f = n(652215),
-    p = n(375708),
-    E = n(831111);
-let m = (0, c.createChannelRecord)({ id: "1", type: f.rbe.DM });
-function g(e) {
-    let { user: t, guildId: n, channelId: c, onClose: f, disableAutoFocus: g = !1 } = e,
-        { newestAnalyticsLocation: A } = (0, s.Ay)(),
-        { trackUserProfileAction: I } = (0, _.NJ)(),
-        [T, S] = r.useState(""),
-        [y, C] = r.useState((0, o.x7)(T)),
-        N = r.useRef(!1),
-        v = r.useRef(null),
-        R = r.useRef(null),
-        O = r.useMemo(() => ({ ...a.oU.USER_PROFILE, disableAutoFocus: g }), [g]);
-    return (0, i.jsx)(l.Ay, {
-        className: E.kL,
-        editorClassName: E.EN,
-        type: O,
-        placeholder: p.intl.formatToPlainString(p.t["0ZQw/X"], { name: d.Ay.getName(n, c, t) }),
+t.d(n, { A: () => y });
+var r = t(627968),
+    u = t(64700),
+    c = t(688810),
+    l = t(355622),
+    a = t(408018),
+    s = t(138617),
+    o = t(195880),
+    i = t(95701),
+    d = t(562153),
+    h = t(183555),
+    p = t(448613),
+    R = t(652215),
+    f = t(375708),
+    C = t(831111);
+let m = (0, i.createChannelRecord)({ id: "1", type: R.rbe.DM });
+function y(e) {
+    let { user: n, guildId: t, channelId: i, onClose: R, disableAutoFocus: y = !1 } = e,
+        { newestAnalyticsLocation: S } = (0, c.Ay)(),
+        { trackUserProfileAction: E } = (0, h.NJ)(),
+        [w, A] = u.useState(""),
+        [N, k] = u.useState((0, a.x7)(w)),
+        _ = u.useRef(!1),
+        b = u.useRef(null),
+        g = u.useRef(null),
+        x = u.useMemo(() => ({ ...l.oU.USER_PROFILE, disableAutoFocus: y }), [y]);
+    return (0, r.jsx)(s.Ay, {
+        className: C.kL,
+        editorClassName: C.EN,
+        type: x,
+        placeholder: f.intl.formatToPlainString(f.t["0ZQw/X"], { name: d.Ay.getName(t, i, n) }),
         channel: m,
-        textValue: T,
-        richValue: y,
-        onChange: (e, t, n) => {
-            t !== T && (S(t), C(n));
+        textValue: w,
+        richValue: N,
+        onChange: (e, n, t) => {
+            n !== w && (A(n), k(t));
         },
-        focused: N.current,
+        focused: _.current,
         onFocus: () => {
-            N.current = !0;
+            _.current = !0;
         },
         onBlur: () => {
-            N.current = !1;
+            _.current = !1;
         },
         onSubmit: async (e) => {
-            let { value: n } = e,
-                i = n.trim();
-            if ("" === i) return { shouldClear: !1, shouldRefocus: !0 };
-            (v.current !== i || null == R.current) && ((v.current = i), (R.current = (0, u.m)()));
+            let { value: t } = e,
+                r = t.trim();
+            if ("" === r) return { shouldClear: !1, shouldRefocus: !0 };
+            (b.current !== r || null == g.current) && ((b.current = r), (g.current = (0, o.m)()));
             try {
                 return (
-                    I({ action: "SEND_DIRECT_MESSAGE" }),
-                    await (0, h.p)({
-                        userId: t.id,
-                        content: i,
+                    E({ action: "SEND_DIRECT_MESSAGE" }),
+                    await (0, p.p)({
+                        userId: n.id,
+                        content: r,
                         openChannel: !0,
                         whenReady: !0,
-                        location: A,
-                        nonce: R.current ?? void 0,
+                        location: S,
+                        nonce: g.current ?? void 0,
                     }),
-                    (v.current = null),
-                    (R.current = null),
-                    f?.(),
+                    (b.current = null),
+                    (g.current = null),
+                    R?.(),
                     { shouldClear: !0, shouldRefocus: !1 }
                 );
             } catch {

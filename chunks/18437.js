@@ -1,159 +1,158 @@
-"use strict";
-n.d(t, { Ii: () => T, Ut: () => g, WS: () => A, cR: () => S, tG: () => I, u0: () => m });
-var i = n(64700),
-    r = n(835245),
-    s = n(323889),
-    a = n(345353),
-    o = n(69114),
-    l = n(174459),
-    u = n(723702),
-    c = n(24001),
-    d = n(710969),
-    _ = n(561844),
-    h = n(590202),
-    f = n(971649),
-    p = n(823784),
-    E = n(652215);
-function m() {
-    let e = (0, f.vU)();
-    return i.useCallback(
+i.d(t, { Ii: () => I, Ut: () => k, WS: () => v, cR: () => N, tG: () => f, u0: () => T });
+var n = i(64700),
+    l = i(835245),
+    a = i(323889),
+    s = i(345353),
+    d = i(69114),
+    u = i(174459),
+    r = i(723702),
+    _ = i(24001),
+    c = i(710969),
+    o = i(561844),
+    E = i(590202),
+    p = i(971649),
+    C = i(823784),
+    O = i(652215);
+function T() {
+    let e = (0, p.vU)();
+    return n.useCallback(
         (t) => {
-            (0, _.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+            (0, o.av)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
         },
         [e],
     );
 }
-function g() {
-    let e = m();
-    return i.useCallback(
+function k() {
+    let e = T();
+    return n.useCallback(
         (t) => {
             let {
-                    questId: n,
-                    questContent: i,
-                    questContentCTA: s,
-                    questContentPosition: l,
-                    questContentRowIndex: c,
-                    trackGuildAndChannelMetadata: _,
-                    sourceQuestContent: f,
+                    questId: i,
+                    questContent: n,
+                    questContentCTA: a,
+                    questContentPosition: u,
+                    questContentRowIndex: _,
+                    trackGuildAndChannelMetadata: o,
+                    sourceQuestContent: p,
                 } = t,
-                m = (0, d.L4)(f),
-                g = (0, d.Gp)(f, n);
-            (0, a.N)((0, h.jO)(i)).then((t) => {
+                T = (0, c.L4)(p),
+                k = (0, c.Gp)(p, i);
+            (0, s.N)((0, E.jO)(n)).then((t) => {
                 e({
-                    questId: n,
-                    event: E.HAw.QUEST_CONTENT_CLICKED,
+                    questId: i,
+                    event: O.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
-                        ...(0, h.fF)(i, l, c),
-                        ...(0, o.A)(),
-                        cta_name: s,
-                        click_id: (0, r.A)(),
-                        apple_advertising_id: null != t && (0, u.isIOS)() ? t.advertisingId : null,
-                        android_advertising_id: null != t && (0, u.isAndroid)() ? t.advertisingId : null,
-                        metadata_sealed: null != m ? m : null,
-                        traffic_metadata_sealed: null != g ? g : null,
-                        search_session_id: (0, p.tv)()?.uuid ?? null,
+                        ...(0, E.fF)(n, u, _),
+                        ...(0, d.A)(),
+                        cta_name: a,
+                        click_id: (0, l.A)(),
+                        apple_advertising_id: null != t && (0, r.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, r.isAndroid)() ? t.advertisingId : null,
+                        metadata_sealed: null != T ? T : null,
+                        traffic_metadata_sealed: null != k ? k : null,
+                        search_session_id: (0, C.tv)()?.uuid ?? null,
                     },
-                    trackGuildAndChannelMetadata: _,
-                    shouldExtendSession: (0, d.xn)(i),
-                    sourceQuestContent: f,
+                    trackGuildAndChannelMetadata: o,
+                    shouldExtendSession: (0, c.xn)(n),
+                    sourceQuestContent: p,
                 });
             });
         },
         [e],
     );
 }
-function A() {
-    let e = (0, f.vU)();
-    return i.useCallback(
+function v() {
+    let e = (0, p.vU)();
+    return n.useCallback(
         (t) => {
-            (0, _.Qg)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
+            (0, o.Qg)({ ...t, properties: { ...t.properties, impression_id: e?.getId() } });
         },
         [e],
     );
 }
-function I() {
-    let e = A();
-    return i.useCallback(
+function f() {
+    let e = v();
+    return n.useCallback(
         (t) => {
             let {
-                adContentId: n,
-                relatedQuestId: i,
-                adCreativeType: s,
-                questContent: l,
-                questContentCTA: c,
-                questContentPosition: _,
-                questContentRowIndex: f,
-                trackGuildAndChannelMetadata: m,
-                sourceQuestContent: g,
+                adContentId: i,
+                relatedQuestId: n,
+                adCreativeType: a,
+                questContent: u,
+                questContentCTA: _,
+                questContentPosition: o,
+                questContentRowIndex: p,
+                trackGuildAndChannelMetadata: T,
+                sourceQuestContent: k,
             } = t;
-            (0, a.N)((0, h.jO)(l)).then((t) => {
+            (0, s.N)((0, E.jO)(u)).then((t) => {
                 e({
-                    adContentId: n,
-                    relatedQuestId: i,
-                    adCreativeType: s,
-                    event: E.HAw.QUEST_CONTENT_CLICKED,
+                    adContentId: i,
+                    relatedQuestId: n,
+                    adCreativeType: a,
+                    event: O.HAw.QUEST_CONTENT_CLICKED,
                     properties: {
-                        ...(0, h.fF)(l, _, f),
-                        ...(0, o.A)(),
-                        cta_name: c,
-                        click_id: (0, r.A)(),
-                        apple_advertising_id: null != t && (0, u.isIOS)() ? t.advertisingId : null,
-                        android_advertising_id: null != t && (0, u.isAndroid)() ? t.advertisingId : null,
-                        search_session_id: (0, p.tv)()?.uuid ?? null,
+                        ...(0, E.fF)(u, o, p),
+                        ...(0, d.A)(),
+                        cta_name: _,
+                        click_id: (0, l.A)(),
+                        apple_advertising_id: null != t && (0, r.isIOS)() ? t.advertisingId : null,
+                        android_advertising_id: null != t && (0, r.isAndroid)() ? t.advertisingId : null,
+                        search_session_id: (0, C.tv)()?.uuid ?? null,
                     },
-                    trackGuildAndChannelMetadata: m,
-                    shouldExtendSession: (0, d.xn)(l),
-                    sourceQuestContent: g,
+                    trackGuildAndChannelMetadata: T,
+                    shouldExtendSession: (0, c.xn)(u),
+                    sourceQuestContent: k,
                 });
             });
         },
         [e],
     );
 }
-function T(e, t) {
-    i.useEffect(() => {
-        (0, _.DZ)(t, e);
+function I(e, t) {
+    n.useEffect(() => {
+        (0, o.DZ)(t, e);
     }, [e, t]);
 }
-function S(e) {
-    let { questHomeHero: t, shouldShowQuestHomeHeroContent: n } = e,
-        r = n ? c.uF.QUEST_HOME_ENTRYPOINT_THEMED : c.uF.QUEST_HOME_ENTRYPOINT,
-        a = i.useMemo(() => {
-            let e = (0, h.fF)(r);
+function N(e) {
+    let { questHomeHero: t, shouldShowQuestHomeHeroContent: i } = e,
+        l = i ? _.uF.QUEST_HOME_ENTRYPOINT_THEMED : _.uF.QUEST_HOME_ENTRYPOINT,
+        s = n.useMemo(() => {
+            let e = (0, E.fF)(l);
             return delete e.row_index, e;
-        }, [r]),
-        o = i.useCallback(
+        }, [l]),
+        d = n.useCallback(
             (e) => {
-                null != t && n
-                    ? (0, _.Qg)({
+                null != t && i
+                    ? (0, o.Qg)({
                           adContentId: t.id,
-                          adCreativeType: s.p.QUEST_HOME_HERO,
+                          adCreativeType: a.p.QUEST_HOME_HERO,
                           event: e,
-                          properties: a,
-                          sourceQuestContent: r,
+                          properties: s,
+                          sourceQuestContent: l,
                       })
-                    : l.default.track(e, a);
+                    : u.default.track(e, s);
             },
-            [t, n, r, a],
+            [t, i, l, s],
         ),
-        u = i.useCallback(() => {
-            o(E.HAw.QUEST_HOVER);
-        }, [o]),
-        d = i.useCallback(() => {
-            o(E.HAw.QUEST_HOVER_OFF);
-        }, [o]),
-        f = i.useCallback(() => {
-            l.default.track(E.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
+        r = n.useCallback(() => {
+            d(O.HAw.QUEST_HOVER);
+        }, [d]),
+        c = n.useCallback(() => {
+            d(O.HAw.QUEST_HOVER_OFF);
+        }, [d]),
+        p = n.useCallback(() => {
+            u.default.track(O.HAw.QUEST_HOME_ONBOARDING_POPOVER_RENDERED);
         }, []),
-        p = i.useCallback(() => {
-            l.default.track(E.HAw.QUEST_CONTENT_CLICKED, {
+        C = n.useCallback(() => {
+            u.default.track(O.HAw.QUEST_CONTENT_CLICKED, {
                 is_targeted: !1,
-                ...a,
+                ...s,
                 ...(null != t ? { ad_content_id: t.id } : {}),
             });
-        }, [a, t]);
-    return i.useMemo(
-        () => ({ handleMouseEnter: u, handleMouseLeave: d, handleOnboardingPopoutRender: f, handleEntrypointClick: p }),
-        [u, d, f, p],
+        }, [s, t]);
+    return n.useMemo(
+        () => ({ handleMouseEnter: r, handleMouseLeave: c, handleOnboardingPopoutRender: p, handleEntrypointClick: C }),
+        [r, c, p, C],
     );
 }

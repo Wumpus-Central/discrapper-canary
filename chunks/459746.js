@@ -1,48 +1,47 @@
-"use strict";
-n.d(t, { A: () => _, w: () => d });
-var i,
-    r = n(627968),
-    s = n(64700),
-    a = n(503698),
-    o = n.n(a),
-    l = n(834730),
-    u = n(375708),
-    c = n(840625),
-    d = (((i = {})[(i.SMALL = 0)] = "SMALL"), (i[(i.LARGE = 1)] = "LARGE"), i);
-function _(e) {
-    let { game: t, size: n, className: i, imageSize: a } = e,
-        [d, _] = s.useState(!1),
-        h = t.name,
-        f = null != t.firstReleaseDate ? new Date(t.firstReleaseDate) : null,
-        p = t.getCoverURL(a);
-    return null == p || d
-        ? (0, r.jsxs)("div", {
-              className: o()(c.N, i),
+t.d(a, { A: () => d, w: () => u });
+var l,
+    s = t(627968),
+    n = t(64700),
+    i = t(503698),
+    r = t.n(i),
+    c = t(834730),
+    o = t(375708),
+    m = t(840625),
+    u = (((l = {})[(l.SMALL = 0)] = "SMALL"), (l[(l.LARGE = 1)] = "LARGE"), l);
+function d(e) {
+    let { game: a, size: t, className: l, imageSize: i } = e,
+        [u, d] = n.useState(!1),
+        x = a.name,
+        h = null != a.firstReleaseDate ? new Date(a.firstReleaseDate) : null,
+        j = a.getCoverURL(i);
+    return null == j || u
+        ? (0, s.jsxs)("div", {
+              className: r()(m.N, l),
               children: [
-                  (0, r.jsx)("div", { className: c.j }),
-                  (0, r.jsx)(l.E, {
-                      variant: 1 === n ? "text-md/medium" : "text-xs/medium",
+                  (0, s.jsx)("div", { className: m.j }),
+                  (0, s.jsx)(c.E, {
+                      variant: 1 === t ? "text-md/medium" : "text-xs/medium",
                       color: "always-white",
-                      lineClamp: 1 === n ? 4 : 3,
-                      children: h,
+                      lineClamp: 1 === t ? 4 : 3,
+                      children: x,
                   }),
-                  (0, r.jsx)("div", { className: c.j }),
-                  (0, r.jsx)(l.E, {
-                      variant: 1 === n ? "text-sm/normal" : "text-xxs/normal",
+                  (0, s.jsx)("div", { className: m.j }),
+                  (0, s.jsx)(c.E, {
+                      variant: 1 === t ? "text-sm/normal" : "text-xxs/normal",
                       color: "always-white",
-                      children: null != f ? `(${f?.getFullYear()})` : null,
+                      children: null != h ? `(${h?.getFullYear()})` : null,
                   }),
               ],
           })
-        : (0, r.jsx)("img", {
-              className: i,
-              src: p,
-              alt: u.intl.formatToPlainString(u.t["3ev90U"], { game: h }),
+        : (0, s.jsx)("img", {
+              className: l,
+              src: j,
+              alt: o.intl.formatToPlainString(o.t["3ev90U"], { game: x }),
               onError: function () {
-                  _(!0);
+                  d(!0);
               },
               onLoad: function () {
-                  _(!1);
+                  d(!1);
               },
               draggable: !1,
           });

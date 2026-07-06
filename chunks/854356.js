@@ -10,7 +10,7 @@ var a = n(829097),
     o = n(795068),
     c = n(190107);
 function d(e) {
-    let { videoAssetUrl: t, videoRef: n, hlsRef: i, videoAssetType: d } = e,
+    let { videoAssetUrl: t, videoRef: n, hls: i, videoAssetType: d } = e,
         { questConfig: E } = r.useContext(o.l),
         f = (0, a._)({ location: c.rE.VIDEO_MODAL }).externalAnalyticsEnabled && null != t,
         _ = d === u.fY.VIDEO_PLAYER_VIDEO_HLS,
@@ -28,5 +28,5 @@ function d(e) {
                     : void 0,
             [f, t, _, E],
         );
-    (0, s.P8)({ videoRef: n, hlsRef: i, contentMetadata: m, isHls: _ });
+    (0, s.P8)({ videoRef: n, hls: i, contentMetadata: m, isHls: _ });
 }

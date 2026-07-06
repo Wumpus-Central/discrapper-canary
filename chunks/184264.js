@@ -8,8 +8,8 @@ var i = n(64700),
     p = n(87719),
     E = n(24001),
     c = n(617986),
-    o = n(780964),
-    A = n(766075),
+    A = n(780964),
+    o = n(766075),
     O = n(318346),
     R = n(174459),
     d = n(625494),
@@ -22,8 +22,8 @@ var i = n(64700),
     C = n(966971),
     T = n(758836),
     L = n(652215),
-    g = n(788868),
-    P = n(625265),
+    P = n(202541),
+    g = n(625265),
     S = n(375708);
 function h(t) {
     return null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null;
@@ -38,7 +38,7 @@ function B(t) {
         itemConsumed: l,
     } = t;
     if (null != n) return n;
-    if (T.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(P.default.nvaTQq);
+    if (T.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(g.default.nvaTQq);
     if ((0, T.EZ)(e.skuId))
         if (l) return S.intl.string(S.t.t0xkSB);
         else return S.intl.string(S.t.g5W1g8);
@@ -57,10 +57,10 @@ function D(t) {
         expiresAt: p,
     } = t;
     if (null != n) return n;
-    if (T.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(P.default.UnPGii);
+    if (T.Dp.ORB_PROFILE_BADGE === e.skuId) return S.intl.string(g.default.UnPGii);
     if (!(0, T.EZ)(e.skuId)) return e.type === u.R.AVATAR_DECORATION && r && null != a ? a : h(i);
     {
-        let t = g.NL[e.skuId],
+        let t = P.NL[e.skuId],
             n = t?.[1] ?? 3,
             i = S.intl.formatToPlainString(S.t.Cz1G97, { days: n });
         return l
@@ -89,12 +89,12 @@ function M(t) {
             openProfileSettings: _,
             itemConsumed: C,
         } = t,
-        g = (r ?? !1) && f,
+        P = (r ?? !1) && f,
         h = [];
     if (T.Dp.ORB_PROFILE_BADGE === e.skuId)
         h.push(
             {
-                text: S.intl.string(P.default.yfwZuy),
+                text: S.intl.string(g.default.yfwZuy),
                 variant: "primary",
                 onClick: () => {
                     n(), d._.dispatch(L.jej.SHOW_ACCOUNT_PROFILE_POPOUT, {});
@@ -110,7 +110,7 @@ function M(t) {
                             sectionType: L.JJy.ORBS_BADGE_REDEMPTION_MODAL,
                             ctaObject: L.ZSU.CTA_TO_QUEST_HOME,
                         }),
-                        (0, c.navigateToQuestHome)({ fromContent: E.uF.REWARD_MODAL });
+                        (0, c.mA)({ fromContent: E.uF.REWARD_MODAL });
                 },
             },
         );
@@ -132,7 +132,7 @@ function M(t) {
                       text: S.intl.string(S.t["Jr6N+s"]),
                       variant: "primary",
                       onClick: () => {
-                          (0, A.openUserSettings)(o.X.SUBSCRIPTIONS_PANEL), n();
+                          (0, o.openUserSettings)(A.X.SUBSCRIPTIONS_PANEL), n();
                       },
                   },
               );
@@ -140,7 +140,7 @@ function M(t) {
         let [t] = e.items;
         h.push({
             text: S.intl.string(S.t["2p2aYz"]),
-            variant: g ? "secondary" : "primary",
+            variant: P ? "secondary" : "primary",
             onClick: () => {
                 if ((n(), (0, s.jH)(), _?.(), e.type !== u.R.BUNDLE)) {
                     if (e.type === u.R.AVATAR_DECORATION) {
@@ -167,7 +167,7 @@ function M(t) {
             },
         });
     }
-    return g && h.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: a, loading: R }), h;
+    return P && h.push({ text: S.intl.string(S.t.MAS7uK), variant: "primary", onClick: a, loading: R }), h;
 }
 function N(t, e) {
     let n = i.useMemo(() => (0, _.V6)(t.type, t.skuId), [t.type, t.skuId]);

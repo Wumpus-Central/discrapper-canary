@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { j: () => o, v: () => s.v });
-var i = n(260447),
-    r = n(174459),
-    s = n(71804),
-    a = n(652215);
-class o extends i.z {
+r.d(t, { j: () => s, v: () => i.v });
+var n = r(260447),
+    u = r(174459),
+    i = r(71804),
+    c = r(652215);
+class s extends n.z {
     getSentryAppContext() {
         return "billing";
     }
@@ -14,22 +13,22 @@ class o extends i.z {
     getSentryExtras(e) {
         let {
             loadId: t,
-            selectedSkuId: n,
-            selectedPlanId: i,
-            skuIds: r,
-            isGift: a,
-            purchaseType: o,
+            selectedSkuId: r,
+            selectedPlanId: n,
+            skuIds: u,
+            isGift: c,
+            purchaseType: s,
             locationStack: l,
         } = this.props;
         return {
             loadId: t,
-            selectedSkuId: n,
-            selectedPlanId: i,
-            isGift: a,
-            purchaseType: o,
-            skuIds: r,
+            selectedSkuId: r,
+            selectedPlanId: n,
+            isGift: c,
+            purchaseType: s,
+            skuIds: u,
             locationStack: l,
-            ...(e instanceof s.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
+            ...(e instanceof i.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
         };
     }
     onErrorCaught(e) {
@@ -37,14 +36,14 @@ class o extends i.z {
     }
     emitPaymentFlowErrorAnalytics(e) {
         let t = this.getCrashedFlag(e),
-            { loadId: n, locationStack: i, additionalAnalyticsData: s } = this.props,
-            o = "string" == typeof e ? e : e.message;
-        r.default.track(a.HAw.PAYMENT_FLOW_ERROR, {
-            load_id: n,
+            { loadId: r, locationStack: n, additionalAnalyticsData: i } = this.props,
+            s = "string" == typeof e ? e : e.message;
+        u.default.track(c.HAw.PAYMENT_FLOW_ERROR, {
+            load_id: r,
             crashed: t,
-            error_message: o,
-            location_stack: i ?? [],
-            ...s,
+            error_message: s,
+            location_stack: n ?? [],
+            ...i,
         });
     }
 }

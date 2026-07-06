@@ -13,21 +13,21 @@ var n = s(627968),
     h = s(104886),
     E = s(18437),
     C = s(590202),
-    j = s(617986),
-    f = s(770178),
+    f = s(617986),
+    j = s(770178),
     g = s(765548),
     N = s(652215),
     v = s(375708),
-    _ = s(651029);
-function A(e) {
+    A = s(651029);
+function _(e) {
     let { questId: t, questContent: s, fullWidth: i } = e;
     return (0, n.jsx)("div", {
-        className: _.UD,
+        className: A.UD,
         children: (0, n.jsx)(o.$, {
             fullWidth: i,
             variant: "primary",
             onClick: function () {
-                (0, j.navigateToQuestHome)({ fromContent: s }),
+                (0, f.mA)({ fromContent: s }),
                     (0, h.E5)(h.kI.STEP_2_CLICKED_INTERNAL, "fallback_quest_embed")
                         ? (0, d.r)({
                               type: m.F.CLICK_INTERNAL,
@@ -59,7 +59,7 @@ function S(e) {
                         i = e.contentRect.width;
                     return (n(s.scrollHeight), null == i || i > 460) ? t("lg") : i > 280 ? t("sm") : t("xs");
                 });
-            return { containerRef: (0, f.w)(a), size: e, height: s };
+            return { containerRef: (0, j.w)(a), size: e, height: s };
         })();
     return (
         (0, E.Ii)(s, t),
@@ -67,10 +67,10 @@ function S(e) {
             ref: (e) => {
                 o.current = e;
             },
-            className: l()(_.kL, { [_.U]: "lg" === d, [_.SP]: "lg" !== d }),
+            className: l()(A.kL, { [A.U]: "lg" === d, [A.SP]: "lg" !== d }),
             children: [
                 (0, n.jsxs)("div", {
-                    className: _.hQ,
+                    className: A.hQ,
                     children: [
                         (0, n.jsx)(c.D, {
                             variant: "lg" === d ? "heading-xl/bold" : "heading-lg/bold",
@@ -80,15 +80,15 @@ function S(e) {
                         (0, n.jsx)(u.E, {
                             variant: "lg" === d ? "text-sm/medium" : "text-xs/medium",
                             color: "text-default",
-                            className: _.__invalid_mobileWebCopy,
+                            className: A.__invalid_mobileWebCopy,
                             children: a,
                         }),
-                        (0, n.jsx)(A, { questId: t, questContent: r, fullWidth: "lg" !== d }),
+                        (0, n.jsx)(_, { questId: t, questContent: r, fullWidth: "lg" !== d }),
                     ],
                 }),
                 (0, n.jsx)("div", {
-                    className: _.Dg,
-                    children: (0, n.jsx)("img", { src: "/assets/2431801debe6535e.svg", alt: "", className: _.Wg }),
+                    className: A.Dg,
+                    children: (0, n.jsx)("img", { src: "/assets/2431801debe6535e.svg", alt: "", className: A.Wg }),
                 }),
             ],
         })

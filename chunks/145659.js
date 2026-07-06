@@ -1,4 +1,3 @@
-"use strict";
-n.d(t, { r: () => r });
-var i,
-    r = (((i = {}).LEGACY = "legacy"), (i.UNIFIED = "unified"), i);
+n.d(t, { r: () => i });
+var l,
+    i = (((l = {}).LEGACY = "legacy"), (l.UNIFIED = "unified"), l);

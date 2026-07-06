@@ -1,25 +1,25 @@
-"use strict";
 n.d(t, { R: () => a, j: () => o });
-var i = n(627968),
+var l = n(627968),
     r = n(192308);
-let s = "social-layer-storefront-product-details-modal",
+let i = "social-layer-storefront-product-details-modal",
     a = (e) => {
         let {
             customNavigateToSocialLayerStorefront: t,
             skuId: a,
             applicationId: o,
-            isStorefront: l,
+            isStorefront: s,
             giftRecipient: u,
             giftingOrigin: c,
             analyticsLocations: d,
-            analyticsContext: _,
-            onClose: h,
+            analyticsContext: m,
+            onClose: E,
         } = e;
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("46438"),
-                    n.e("45687"),
+                    n.e("39680"),
+                    n.e("41060"),
                     n.e("55532"),
                     n.e("34454"),
                     n.e("79154"),
@@ -28,6 +28,7 @@ let s = "social-layer-storefront-product-details-modal",
                     n.e("20056"),
                     n.e("64622"),
                     n.e("33941"),
+                    n.e("71763"),
                     n.e("9233"),
                     n.e("72963"),
                     n.e("52511"),
@@ -35,49 +36,51 @@ let s = "social-layer-storefront-product-details-modal",
                     n.e("28095"),
                     n.e("21200"),
                     n.e("37021"),
+                    n.e("34691"),
                     n.e("20287"),
                     n.e("18997"),
-                    n.e("34691"),
                     n.e("18024"),
-                    n.e("47177"),
                     n.e("69747"),
                     n.e("3131"),
+                    n.e("47177"),
+                    n.e("8563"),
                     n.e("27272"),
                     n.e("36149"),
                     n.e("51778"),
+                    n.e("21930"),
                     n.e("24914"),
                     n.e("42714"),
-                    n.e("21930"),
+                    n.e("24265"),
                     n.e("68532"),
                     n.e("20382"),
-                    n.e("63333"),
                     n.e("73165"),
                     n.e("34268"),
+                    n.e("63333"),
                     n.e("12703"),
                     n.e("55598"),
                 ]).then(n.bind(n, 439325));
                 return (n) =>
-                    (0, i.jsx)(e, {
+                    (0, l.jsx)(e, {
                         ...n,
                         skuId: a,
                         applicationId: o,
-                        isStorefront: l,
+                        isStorefront: s,
                         analyticsLocations: d,
-                        analyticsContext: _,
+                        analyticsContext: m,
                         giftRecipient: u,
                         giftingOrigin: c,
                         customNavigateToSocialLayerStorefront: t,
                     });
             },
             {
-                modalKey: s,
-                allowsNavigation: l,
+                modalKey: i,
+                allowsNavigation: s,
                 onCloseCallback: () => {
-                    h?.();
+                    E?.();
                 },
             },
         );
     };
 function o() {
-    (0, r.hasModalOpen)(s) && (0, r.closeModal)(s);
+    (0, r.hasModalOpen)(i) && (0, r.closeModal)(i);
 }

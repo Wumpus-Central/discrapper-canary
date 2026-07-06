@@ -21,17 +21,20 @@ function d(e) {
 function _(e) {
     let { user: t, entry: c, display: _, onAction: h } = e,
         f = (0, u.A)(),
-        p = (0, r.bG)([l.default], () => l.default.getCurrentUser());
-    return t.id === p?.id && "recent" === _ && (0, o.$R)(c)
+        E = (0, r.bG)([l.default], () => l.default.getCurrentUser());
+    return t.id === E?.id && "recent" === _ && (0, o.$R)(c)
         ? (0, i.jsx)(a.Dr, {
               id: "delete-entry-history",
               label: d(c),
               action: () => {
                   h?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
                       (0, s.openModalLazy)(async () => {
-                          let { default: e } = await Promise.all([n.e("77791"), n.e("19119"), n.e("14565")]).then(
-                              n.bind(n, 839785),
-                          );
+                          let { default: e } = await Promise.all([
+                              n.e("77791"),
+                              n.e("28152"),
+                              n.e("19119"),
+                              n.e("14565"),
+                          ]).then(n.bind(n, 839785));
                           return (n) => (0, i.jsx)(e, { entry: c, user: t, onAction: h, onOpenGameSettings: f, ...n });
                       });
               },

@@ -1,46 +1,45 @@
-"use strict";
-n.r(t), n.d(t, { default: () => c });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(499373),
-    o = n(607470),
-    l = n(366523),
-    u = n(531691);
-function c(e) {
-    var t;
-    let { imageUrl: n, backgroundImageUrl: r, altText: c, customClassNames: d, rewardGraphic: _ } = e;
-    if (null == n) return null;
-    let h =
-            ((t = _),
-            t?.type === "image"
-                ? (0, i.jsx)("img", { src: t.url, alt: t.alt, className: s()(u.wP, u.Mc) })
-                : t?.type === "video"
-                  ? (0, i.jsx)(o.A, {
-                        src: t.url,
-                        alt: t.alt,
-                        className: s()(u.wP, u.Mc),
+s.r(l), s.d(l, { default: () => i });
+var e = s(627968);
+s(64700);
+var r = s(503698),
+    n = s.n(r),
+    u = s(499373),
+    c = s(607470),
+    t = s(366523),
+    d = s(161515);
+function i(a) {
+    var l;
+    let { imageUrl: s, backgroundImageUrl: r, altText: i, customClassNames: m, rewardGraphic: o } = a;
+    if (null == s) return null;
+    let p =
+            ((l = o),
+            l?.type === "image"
+                ? (0, e.jsx)("img", { src: l.url, alt: l.alt, className: n()(d.wP, d.Mc) })
+                : l?.type === "video"
+                  ? (0, e.jsx)(c.A, {
+                        src: l.url,
+                        alt: l.alt,
+                        className: n()(d.wP, d.Mc),
                         autoPlay: !0,
                         loop: !0,
                         muted: !0,
                         playsInline: !0,
                     })
                   : null),
-        { containerClassName: f = u.wP, backgroundImageClassName: p, foregroundImageClassName: E } = d ?? {};
-    return (0, i.jsxs)("div", {
-        className: s()(u.LZ, { [u.Mc]: null != h }),
+        { containerClassName: g = d.wP, backgroundImageClassName: h, foregroundImageClassName: x } = m ?? {};
+    return (0, e.jsxs)("div", {
+        className: n()(d.LZ, { [d.Mc]: null != p }),
         children: [
-            (0, i.jsx)(l.A, {
-                cardImage: n,
+            (0, e.jsx)(t.A, {
+                cardImage: s,
                 cardBackgroundImage: r,
-                altText: c,
-                shape: null != d ? "custom" : "square",
-                containerClassName: s()(f, { [u.Mc]: null != h }),
-                backgroundImageClassName: p,
-                foregroundImageClassName: E,
+                altText: i,
+                shape: null != m ? "custom" : "square",
+                containerClassName: n()(g, { [d.Mc]: null != p }),
+                backgroundImageClassName: h,
+                foregroundImageClassName: x,
             }),
-            null != h && (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(a.T, { size: "xs" }), h] }),
+            null != p && (0, e.jsxs)(e.Fragment, { children: [(0, e.jsx)(u.T, { size: "xs" }), p] }),
         ],
     });
 }

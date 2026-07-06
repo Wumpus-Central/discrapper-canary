@@ -1,30 +1,29 @@
-"use strict";
-n.d(t, { $c: () => a, VA: () => u, vf: () => o });
-var i = n(627968),
-    r = n(64700),
-    s = n(758836);
+r.d(t, { $c: () => a, VA: () => u, vf: () => c });
+var n = r(627968),
+    o = r(64700),
+    s = r(758836);
 function a(e) {
     return (0, s.EZ)(e);
 }
-let o = r.createContext(null);
+let c = o.createContext(null);
 function l(e) {
-    let { clientX: t, clientY: n, currentTarget: i } = e;
-    i.style.pointerEvents = "none";
-    let r = document.elementFromPoint(t, n);
-    return (i.style.pointerEvents = "auto"), { elementBelow: r, button: r?.closest("button") ?? null };
+    let { clientX: t, clientY: r, currentTarget: n } = e;
+    n.style.pointerEvents = "none";
+    let o = document.elementFromPoint(t, r);
+    return (n.style.pointerEvents = "auto"), { elementBelow: o, button: o?.closest("button") ?? null };
 }
 function u(e) {
-    let { isCustomCursorEnabled: t, className: n, riveEventTargetRef: r } = e,
+    let { isCustomCursorEnabled: t, className: r, riveEventTargetRef: o } = e,
         s = (e) => {
-            let { button: n } = l(e),
-                i = e.currentTarget;
+            let { button: r } = l(e),
+                n = e.currentTarget;
             t
-                ? (i.style.cursor = null != n ? "var(--custom-cursor-pointer)" : "var(--custom-cursor)")
-                : (i.style.cursor = null != n ? "pointer" : "default");
+                ? (n.style.cursor = null != r ? "var(--custom-cursor-pointer)" : "var(--custom-cursor)")
+                : (n.style.cursor = null != r ? "pointer" : "default");
         };
-    return (0, i.jsx)("div", {
-        ref: r,
-        className: n,
+    return (0, n.jsx)("div", {
+        ref: o,
+        className: r,
         onMouseMove: s,
         onMouseDown: (e) => {
             let { button: t } = l(e);

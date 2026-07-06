@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { gN: () => s, kj: () => a, r_: () => o });
-var i = n(17928),
-    r = n(505274);
-function s() {
-    return (0, i.bG)([r.A], () => r.A.balance);
+n.d(t, { gN: () => r, kj: () => a, r_: () => s });
+var l = n(17928),
+    i = n(505274);
+function r() {
+    return (0, l.bG)([i.A], () => i.A.balance);
 }
 function a(e) {
-    return (0, i.bG)([r.A], () => null != e && (r.A.balance ?? 0) >= e);
+    return (0, l.bG)([i.A], () => null != e && (i.A.balance ?? 0) >= e);
 }
-function o() {
-    return r.A.getCurrentBalance();
+function s() {
+    return i.A.getCurrentBalance();
 }

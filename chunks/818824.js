@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { U: () => l });
-var i = n(64700),
-    r = n(997101),
-    s = n(17928),
+n.d(t, { U: () => o });
+var l = n(64700),
+    i = n(997101),
+    r = n(17928),
     a = n(615405),
-    o = n(650170);
-function l() {
-    let { hasAcceptedTerms: e, setHasAcceptedTerms: t } = (0, o.t4)((e) => ({
+    s = n(650170);
+function o() {
+    let { hasAcceptedTerms: e, setHasAcceptedTerms: t } = (0, s.t4)((e) => ({
             hasAcceptedTerms: e.hasAcceptedTerms,
             setHasAcceptedTerms: e.setHasAcceptedTerms,
         })),
-        n = (0, s.bG)([a.A], () => r.M.EEA_COUNTRIES.has(a.A.ipCountryCodeWithFallback));
+        n = (0, r.bG)([a.A], () => i.M.EEA_COUNTRIES.has(a.A.ipCountryCodeWithFallback));
     return (
-        i.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             t(!n);
         }, [n, t]),
         { immediateDelivery: n ? { value: e, onChange: t } : void 0 }

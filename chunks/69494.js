@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(627968);
+n.d(l, { A: () => u });
+var r = n(627968);
 n(64700);
-var r = n(503698),
-    s = n.n(r),
-    a = n(40474),
-    o = n(650170),
-    l = n(166532),
-    u = n(615310),
+var t = n(503698),
+    s = n.n(t),
+    i = n(40474),
+    a = n(650170),
+    d = n(166532),
+    o = n(615310),
     c = n(756925);
-function d(e) {
-    let { className: t, isEligibleForTrial: n = !1 } = e,
-        { step: r, breadcrumbsData: d } = (0, u.Ay)(),
-        _ = (0, o.t4)((e) => e.startedPaymentFlowWithPaymentSources);
-    if ((0, o.t4)((e) => e.get("isPremiumPurchase")) || null == d || 0 === d.length) return null;
-    let h = d.flatMap((e) => {
-        let t = e.useBreadcrumbLabel(n);
-        return null != t ? { id: e.id, label: t } : [];
+function u(e) {
+    let { className: l, isEligibleForTrial: n = !1 } = e,
+        { step: t, breadcrumbsData: u } = (0, o.Ay)(),
+        m = (0, a.t4)((e) => e.startedPaymentFlowWithPaymentSources);
+    if ((0, a.t4)((e) => e.get("isPremiumPurchase")) || null == u || 0 === u.length) return null;
+    let p = u.flatMap((e) => {
+        let l = e.useBreadcrumbLabel(n);
+        return null != l ? { id: e.id, label: l } : [];
     });
-    return 0 === h.length
+    return 0 === p.length
         ? null
-        : ((h = h.filter((e) => {
-              let t = e.id !== l.pn.ADD_PAYMENT_STEPS,
-                  i = e.id === l.pn.ADD_PAYMENT_STEPS && !_;
-              return !n || t || i;
+        : ((p = p.filter((e) => {
+              let l = e.id !== d.pn.ADD_PAYMENT_STEPS,
+                  r = e.id === d.pn.ADD_PAYMENT_STEPS && !m;
+              return !n || l || r;
           })),
-          (0, i.jsx)("div", {
-              className: s()("breadcrumb", c.i, t),
-              children: (0, i.jsx)(a.A, { activeId: r, breadcrumbs: h }),
+          (0, r.jsx)("div", {
+              className: s()("breadcrumb", c.i, l),
+              children: (0, r.jsx)(i.A, { activeId: t, breadcrumbs: p }),
           }));
 }

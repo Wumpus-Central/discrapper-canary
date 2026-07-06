@@ -123,7 +123,7 @@ var k = r(7689),
     $ = r(174459),
     w = r(440938),
     D = r(652215),
-    B = r(345832);
+    B = r(113960);
 function q(e) {
     let { handleTransition: t, selectedTab: r, isNarrow: n, hasText: i } = e,
         { searchQuery: c, onSetSearchQuery: d } = (0, g.v)(),
@@ -245,7 +245,7 @@ function Z(e) {
         ),
     });
 }
-var ee = r(113600);
+var ee = r(584512);
 function et(e) {
     let { label: t, icon: r, showNewBadge: s } = e;
     return (0, l.jsxs)(U.E, {
@@ -508,7 +508,7 @@ var eo = r(812729),
     ep = r(486020);
 r(801416);
 var eS = r(518477),
-    eE = r(478511);
+    eE = r(773743);
 function ef(e) {
     let { selectedTab: t, handleTransition: r } = e,
         A = (0, a.bG)([h.default], () => h.default.getCurrentUser()),
@@ -673,7 +673,7 @@ function ef(e) {
         U = t === F.G2.ORBS ? D.liQ.SHOP_ORBS_TAB : D.liQ.COLLECTIBLES_SHOP,
         z = s.useCallback(() => {
             (0, E.Y)({ pageType: U, sectionType: D.JJy.ORBS_BALANCE_MENU, ctaObject: D.ZSU.CTA_TO_QUEST_HOME }),
-                (0, m.navigateToQuestHome)({ fromContent: n.u.ORBS_BALANCE_MENU });
+                (0, m.mA)({ fromContent: n.u.ORBS_BALANCE_MENU });
         }, [U]),
         K = s.useCallback(() => {
             A?.id != null && (0, S.openUserProfileModal)({ userId: A.id, tabSection: eS.RP.WISHLIST });

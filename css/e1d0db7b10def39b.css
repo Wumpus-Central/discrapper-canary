@@ -1,0 +1,12 @@
+.previewContainer__91895 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12);
+    margin-block: 6.5px 0;
+    margin-inline: 2px 3px;
+    min-height: 560px;
+    padding-inline-start: 10px;
+    width: -moz-min-content;
+    width: min-content
+}

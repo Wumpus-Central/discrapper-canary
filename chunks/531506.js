@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { vi: () => f, uA: () => _, NQ: () => h });
-var i,
-    r = n(627968);
+n.d(t, { vi: () => h, uA: () => p, NQ: () => m });
+var l,
+    i = n(627968);
 n(64700);
-var s = n(683071),
+var r = n(683071),
     a = n(834730),
-    o = n(403581),
-    l = n(496431),
-    u = n(788868),
+    s = n(403581),
+    o = n(496431),
+    u = n(202541),
     c = n(375708),
     d = n(637650),
-    _ = (((i = {}).TRIAL = "trial"), (i.DEFAULT = "default"), (i.REVERSE_TRIAL = "reverse_trial"), i);
-function h(e) {
-    let { fractionalPremiumInfo: t, variant: n = "default", trialPeriod: i, trialEnd: r } = e,
-        s = t.fractionalState === u.xc.FP_SUB_PAUSED,
+    p = (((l = {}).TRIAL = "trial"), (l.DEFAULT = "default"), (l.REVERSE_TRIAL = "reverse_trial"), l);
+function m(e) {
+    let { fractionalPremiumInfo: t, variant: n = "default", trialPeriod: l, trialEnd: i } = e,
+        r = t.fractionalState === u.xc.FP_SUB_PAUSED,
         a = (function (e) {
             var t;
             let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                i = e.clone();
+                l = e.clone();
             return (
-                n && (i = i.subtract(12e5, "milliseconds")),
-                (t = (0, l.A)(i.toDate(), 6e4)).minutes > 0 || t.seconds > 0
+                n && (l = l.subtract(12e5, "milliseconds")),
+                (t = (0, o.A)(l.toDate(), 6e4)).minutes > 0 || t.seconds > 0
                     ? 23 === t.hours
                         ? { days: t.days + 1, hours: 0, minutes: 0, seconds: 0 }
                         : { days: t.days, hours: t.hours + 1, minutes: 0, seconds: 0 }
                     : t
             );
-        })(t.endsAt, s),
-        o = "";
+        })(t.endsAt, r),
+        s = "";
     if ("reverse_trial" === n) {
         let e = Math.max(1, a.days);
         return c.intl.format(c.t.rzTJXq, { days: e });
@@ -37,72 +36,72 @@ function h(e) {
         default: { days_and_hours: c.t["6r9LLp"], days: c.t.c2BbVA, hours: c.t["8Xm6uL"] },
     };
     return (
-        "trial" === n && null != i && null != r
+        "trial" === n && null != l && null != i
             ? a.days > 0 && a.hours > 0
-                ? (o = c.intl.format(d.trial.days_and_hours, {
+                ? (s = c.intl.format(d.trial.days_and_hours, {
                       days: a.days,
                       hours: a.hours,
-                      trialPeriod: i,
-                      trialEnd: r,
+                      trialPeriod: l,
+                      trialEnd: i,
                   }))
                 : a.days > 0
-                  ? (o = c.intl.format(d.trial.days, { days: a.days, trialPeriod: i, trialEnd: r }))
-                  : a.hours > 0 && (o = c.intl.format(d.trial.hours, { hours: a.hours, trialPeriod: i, trialEnd: r }))
+                  ? (s = c.intl.format(d.trial.days, { days: a.days, trialPeriod: l, trialEnd: i }))
+                  : a.hours > 0 && (s = c.intl.format(d.trial.hours, { hours: a.hours, trialPeriod: l, trialEnd: i }))
             : a.days > 0 && a.hours > 0
-              ? (o = c.intl.format(d.default.days_and_hours, { days: a.days, hours: a.hours }))
+              ? (s = c.intl.format(d.default.days_and_hours, { days: a.days, hours: a.hours }))
               : a.days > 0
-                ? (o = c.intl.format(d.default.days, { days: a.days }))
-                : a.hours > 0 && (o = c.intl.format(d.default.hours, { hours: a.hours })),
-        o
+                ? (s = c.intl.format(d.default.days, { days: a.days }))
+                : a.hours > 0 && (s = c.intl.format(d.default.hours, { hours: a.hours })),
+        s
     );
 }
-function f(e) {
+function h(e) {
     let {
             fractionalPremiumInfo: t,
             variant: n = "default",
-            enablePremiumBrandRefresh: i = !1,
-            style: l,
+            enablePremiumBrandRefresh: l = !1,
+            style: o,
             trialPeriod: u,
             trialEnd: c,
         } = e,
-        _ = h({ fractionalPremiumInfo: t, variant: n, trialPeriod: u, trialEnd: c });
+        p = m({ fractionalPremiumInfo: t, variant: n, trialPeriod: u, trialEnd: c });
     return "reverse_trial" === n
-        ? "" === _
+        ? "" === p
             ? null
-            : (0, r.jsx)("div", { className: d.OK, children: (0, r.jsx)(s.w, { type: "info", children: _ }) })
+            : (0, i.jsx)("div", { className: d.OK, children: (0, i.jsx)(r.w, { type: "info", children: p }) })
         : "trial" === n && null != u && null != c
-          ? "" === _
+          ? "" === p
               ? null
-              : (0, r.jsxs)("div", {
+              : (0, i.jsxs)("div", {
                     children: [
-                        (0, r.jsx)(a.E, { variant: "text-sm/normal", className: d.OK, children: _ }),
-                        (0, r.jsx)("hr", { className: d.oz }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/normal", className: d.OK, children: p }),
+                        (0, i.jsx)("hr", { className: d.oz }),
                     ],
                 })
-          : "" === _
+          : "" === p
             ? null
-            : i
-              ? (0, r.jsxs)("div", {
+            : l
+              ? (0, i.jsxs)("div", {
                     className: d.bD,
-                    style: l,
+                    style: o,
                     children: [
-                        (0, r.jsx)("img", { src: "/assets/3a86a8f56102a71f.svg", alt: "Nitro Icon", className: d.Zb }),
-                        (0, r.jsx)(a.E, { variant: "text-sm/medium", children: _ }),
+                        (0, i.jsx)("img", { src: "/assets/3a86a8f56102a71f.svg", alt: "Nitro Icon", className: d.Zb }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/medium", children: p }),
                     ],
                 })
-              : (0, r.jsxs)("div", {
+              : (0, i.jsxs)("div", {
                     className: d.s2,
-                    style: l,
+                    style: o,
                     children: [
-                        (0, r.jsxs)("div", {
+                        (0, i.jsxs)("div", {
                             className: d.Dl,
                             children: [
-                                (0, r.jsx)(o.t, { size: "md", color: "white", className: d.T8 }),
-                                (0, r.jsx)(o.t, { size: "md", color: "currentColor", className: d.XI }),
+                                (0, i.jsx)(s.t, { size: "md", color: "white", className: d.T8 }),
+                                (0, i.jsx)(s.t, { size: "md", color: "currentColor", className: d.XI }),
                             ],
                         }),
-                        (0, r.jsx)(a.E, { variant: "text-sm/normal", children: _ }),
-                        (0, r.jsx)("div", { className: d.WW }),
+                        (0, i.jsx)(a.E, { variant: "text-sm/normal", children: p }),
+                        (0, i.jsx)("div", { className: d.WW }),
                     ],
                 });
 }

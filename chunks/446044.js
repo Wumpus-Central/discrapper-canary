@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { Y: () => r });
-var i = n(885180);
-function r(e) {
-    return { enabled: i.A.getConfig(e).enabled };
+n.d(t, { Y: () => i });
+var l = n(885180);
+function i(e) {
+    return { enabled: l.A.getConfig(e).enabled };
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => F, Y: () => G });
+n.d(t, { A: () => V, Y: () => G });
 var i = n(627968),
     r = n(64700),
     s = n(735438),
@@ -12,38 +12,38 @@ var i = n(627968),
     _ = n(922016),
     h = n(442433),
     f = n(589158),
-    p = n(964486),
-    E = n(775602),
+    E = n(964486),
+    p = n(775602),
     m = n(793574),
     g = n(688810),
     A = n(946228),
     I = n(485947),
     T = n(386784),
     S = n(545868),
-    y = n(332173),
+    N = n(332173),
     C = n(176201),
-    N = n(676608),
-    v = n(342296),
+    y = n(676608),
+    O = n(342296),
     R = n(260509),
-    O = n(734057),
+    v = n(734057),
     b = n(696451),
-    D = n(317525),
-    L = n(71393),
+    L = n(317525),
+    D = n(71393),
     w = n(287809),
-    M = n(427262),
-    P = n(375708),
+    P = n(427262),
+    M = n(375708),
     x = n(992595),
-    k = n(204865);
-function U(e) {
+    U = n(204865);
+function k(e) {
     let { member: t, guildId: s, channelId: a, role: o } = e,
         u = r.useRef(null),
-        c = (0, l.bG)([L.A], () => L.A.getGuild(s)?.ownerId, [s]),
+        c = (0, l.bG)([D.A], () => D.A.getGuild(s)?.ownerId, [s]),
         d = (0, l.bG)([w.default], () => w.default.getUser(t.userId), [t.userId]),
-        _ = (0, l.bG)([O.A], () => O.A.getChannel(a), [a]);
+        _ = (0, l.bG)([v.A], () => v.A.getChannel(a), [a]);
     return null == d || null == _
         ? null
         : (0, i.jsx)(
-              v.A,
+              O.A,
               {
                   targetElementRef: u,
                   userId: t.userId,
@@ -70,8 +70,9 @@ function U(e) {
                               onContextMenu: (e) => {
                                   (0, h.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
-                                          n.e("14973"),
+                                          n.e("61312"),
                                           n.e("41831"),
+                                          n.e("87761"),
                                           n.e("18078"),
                                           n.e("88429"),
                                           n.e("94881"),
@@ -98,7 +99,11 @@ function U(e) {
                                           n.e("97558"),
                                           n.e("91994"),
                                           n.e("76665"),
+                                          n.e("28662"),
                                           n.e("35313"),
+                                          n.e("54625"),
+                                          n.e("71133"),
+                                          n.e("28152"),
                                           n.e("39171"),
                                           n.e("36564"),
                                           n.e("24198"),
@@ -129,8 +134,8 @@ function U(e) {
                                           n.e("54148"),
                                           n.e("74021"),
                                           n.e("13708"),
-                                          n.e("30221"),
                                           n.e("66939"),
+                                          n.e("30221"),
                                           n.e("24240"),
                                           n.e("21879"),
                                           n.e("17334"),
@@ -152,15 +157,15 @@ function U(e) {
 function G(e) {
     let { popoutProps: t, roleId: n, guildId: s, channelId: o } = e,
         d = r.useRef(null);
-    (0, p.Ay)(() => {
+    (0, E.Ay)(() => {
         t.setPopoutRef?.(d.current);
     }),
-        (0, p.l0)(() => {
+        (0, E.l0)(() => {
             t.setPopoutRef?.(null);
         });
     let _ = (0, T.A)(s),
-        h = (0, l.bG)([L.A], () => {
-            let e = L.A.getGuild(s);
+        h = (0, l.bG)([D.A], () => {
+            let e = D.A.getGuild(s);
             return null == e ? null : (0, R.af)(e);
         }, [s]),
         f = (0, l.yK)([b.Ay, w.default], () => {
@@ -168,22 +173,22 @@ function G(e) {
                 t = null == n || n === h ? e : e.filter((e) => e.roles.includes(n));
             return a()(t)
                 .filter((e) => null != w.default.getUser(e.userId))
-                .sortBy((e) => e.nick ?? M.Ay.getName(w.default.getUser(e.userId)))
+                .sortBy((e) => e.nick ?? P.Ay.getName(w.default.getUser(e.userId)))
                 .value();
         }, [s, n, h]),
-        E = (0, l.bG)([D.A], () => {
+        p = (0, l.bG)([L.A], () => {
             let e = n ?? h;
-            return null == e ? null : D.A.getRole(s, e);
+            return null == e ? null : L.A.getRole(s, e);
         }, [s, n, h]),
         m = null == n ? null : _?.[n],
         g = r.useMemo(
             () =>
-                null != E
-                    ? f.map((e) => (0, i.jsx)(U, { member: e, guildId: s, channelId: o, role: E }, e.userId))
+                null != p
+                    ? f.map((e) => (0, i.jsx)(k, { member: e, guildId: s, channelId: o, role: p }, e.userId))
                     : [],
-            [o, s, E, f],
+            [o, s, p, f],
         );
-    return null == E
+    return null == p
         ? null
         : (0, i.jsx)(u.C.Provider, {
               value: void 0,
@@ -194,44 +199,44 @@ function G(e) {
                   children: (0, i.jsxs)(c.Ip, {
                       className: x.bY,
                       children: [
-                          (0, i.jsx)(A.Y, { id: n, guildId: s, title: E.name, count: m, className: x.sd }),
+                          (0, i.jsx)(A.Y, { id: n, guildId: s, title: p.name, count: m, className: x.sd }),
                           g,
                           null == m || m <= g.length
                               ? null
                               : (0, i.jsx)(I.A, {
                                     className: x.sd,
-                                    children: P.intl.formatToPlainString(P.t["9oMmZC"], { count: m - g.length }),
+                                    children: M.intl.formatToPlainString(M.t["9oMmZC"], { count: m - g.length }),
                                 }),
                       ],
                   }),
               }),
           });
 }
-function F(e) {
+function V(e) {
     let { roleId: t, channelId: n, roleName: s, guildId: a, children: u, inlinePreview: c = !1 } = e,
         { analyticsLocations: h } = (0, g.Ay)(m.A.ROLE_MENTION),
-        f = (0, l.bG)([E.Ay], () => E.Ay.roleStyle),
-        p = (0, l.bG)([D.A], () => (null == a || null == t ? null : D.A.getRole(a, t))),
-        A = (0, N.jV)(a, p),
-        I = !c && null != p && !(0, C.Qv)(p),
+        f = (0, l.bG)([p.Ay], () => p.Ay.roleStyle),
+        E = (0, l.bG)([L.A], () => (null == a || null == t ? null : L.A.getRole(a, t))),
+        A = (0, y.jV)(a, E),
+        I = !c && null != E && !(0, C.Qv)(E),
         T = I && "dot" === f,
-        v = I && "username" === f,
-        R = A && null != p ? p.colorStrings : null,
-        O = r.useRef(null),
+        O = I && "username" === f,
+        R = A && null != E ? E.colorStrings : null,
+        v = r.useRef(null),
         b = (e) =>
-            (0, i.jsxs)(y.A, {
-                ref: O,
+            (0, i.jsxs)(N.A, {
+                ref: v,
                 className: x.Dz,
-                color: v ? p.color : null,
-                roleColors: v ? R : null,
+                color: O ? E.color : null,
+                roleColors: O ? R : null,
                 ...e,
                 children: [
                     T &&
-                        null != p.color &&
+                        null != E.color &&
                         (0, i.jsx)(d.W, {
-                            color: (0, o.Hl)(p.color),
+                            color: (0, o.Hl)(E.color),
                             colors: R,
-                            className: k.m,
+                            className: U.m,
                             background: !1,
                             tooltip: !1,
                         }),
@@ -243,7 +248,7 @@ function F(e) {
         : (0, i.jsx)(g.f5, {
               value: h,
               children: (0, i.jsx)(_.Y, {
-                  targetElementRef: O,
+                  targetElementRef: v,
                   preload: async () => {
                       null != t && (await (0, S.a)(a, t));
                   },

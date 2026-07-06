@@ -1,38 +1,37 @@
-"use strict";
 n.d(t, { A: () => u });
-var i = n(17928),
-    r = n(228366);
-let s = !1,
+var l = n(17928),
+    i = n(228366);
+let r = !1,
     a = null,
-    o = null;
-class l extends i.Ay.Store {
+    s = null;
+class o extends l.Ay.Store {
     static displayName = "PaymentSourceCreationContextStore";
     get loading() {
-        return s;
+        return r;
     }
     get error() {
         return a;
     }
     get data() {
-        return o;
+        return s;
     }
 }
-let u = new l(r.h, {
+let u = new o(i.h, {
     PAYMENT_SOURCE_CREATION_CONTEXT_CLEAR: function (e) {
-        (s = !1), (a = null), (o = null);
+        (r = !1), (a = null), (s = null);
     },
     PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_START: function (e) {
-        (s = !0), (a = null), (o = null);
+        (r = !0), (a = null), (s = null);
     },
     PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_SUCCESS: function (e) {
         let { data: t } = e;
-        (s = !1), (a = null), (o = t);
+        (r = !1), (a = null), (s = t);
     },
     PAYMENT_SOURCE_CREATION_CONTEXT_FETCH_FAIL: function (e) {
         let { error: t } = e;
-        (s = !1), (a = t), (o = null);
+        (r = !1), (a = t), (s = null);
     },
     LOGOUT: function () {
-        (s = !1), (a = null), (o = null);
+        (r = !1), (a = null), (s = null);
     },
 });
