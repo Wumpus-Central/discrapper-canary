@@ -121,7 +121,7 @@ let R = (e) => {
             [ee, q],
         ),
         ea = n.useCallback(() => {
-            ee("dismiss"), R();
+            ee("dismiss"), R?.();
         }, [ee, R]),
         eo = n.useCallback(
             (e) => {
@@ -164,10 +164,11 @@ let R = (e) => {
                               className: L.kL,
                               children: [
                                   null != $ && (0, t.jsx)("div", { className: L.D7, style: { background: $ } }),
-                                  (0, t.jsx)("div", {
-                                      className: L.b,
-                                      children: (0, t.jsx)(r.J, { size: "sm", variant: "icon-only", onClick: ea }),
-                                  }),
+                                  null != R &&
+                                      (0, t.jsx)("div", {
+                                          className: L.b,
+                                          children: (0, t.jsx)(r.J, { size: "sm", variant: "icon-only", onClick: ea }),
+                                      }),
                                   null != J && (0, t.jsx)("img", { className: L.wm, src: J, alt: "" }),
                                   (0, t.jsx)("div", {
                                       className: L.xf,
