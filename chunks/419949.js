@@ -1,4 +1,4 @@
-e.r(
+t.r(
     (a.exports = {
         container: "container_f369db",
         uploadArea: "uploadArea_f369db",
@@ -17,6 +17,8 @@ e.r(
         mainCard: "mainCard_f369db",
         mainCardContainer: "mainCardContainer_f369db",
         gameInvitesHeaderContainer: "gameInvitesHeaderContainer_f369db",
+        gameIcon: "gameIcon_f369db",
+        gameIconClickable: "gameIconClickable_f369db",
         emptyMainCard: "emptyMainCard_f369db",
         outOfDate: "outOfDate_f369db",
         header: "header_f369db",
