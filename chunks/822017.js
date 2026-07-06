@@ -2,6 +2,7 @@ e.exports = {
     kL: "container__4e338",
     Gt: "gameIcon__4e338",
     T_: "gameIconImage__4e338",
+    U_: "gameIconButton__4e338",
     Fz: "extraGamesContainer__4e338",
     ZS: "extraGameRow__4e338",
     oL: "extraGameItem__4e338",

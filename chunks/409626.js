@@ -4,8 +4,8 @@ n.r(t),
         GameProfileEmbedAction: () => _,
         GameProfileSources: () => f,
         GameProfileTrackActionActions: () => h,
-        GameProfileTypes: () => p,
-        generateViewId: () => E,
+        GameProfileTypes: () => E,
+        generateViewId: () => p,
         getGuildIdAndVerifiedFromInvite: () => S,
         trackGameProfileAction: () => A,
         trackGameProfileClose: () => g,
@@ -20,8 +20,8 @@ var i,
     o = n(835245),
     l = n(99753),
     u = n(174459),
-    c = n(652215),
-    d = n(424994),
+    d = n(652215),
+    c = n(424994),
     _ = (((i = {})[(i.CopyLink = 0)] = "CopyLink"), i),
     h =
         (((r = {})[(r.FollowGame = 0)] = "FollowGame"),
@@ -93,21 +93,22 @@ var i,
         (s.Deeplink = "deeplink"),
         (s.DmHeaderActivity = "dm_header_activity"),
         (s.QuickSwitcher = "quick_switcher"),
+        (s.GuildProfileGames = "guild_profile_games"),
         s),
-    p = (((a = {}).FullProfile = "full_profile"), (a.MiniProfile = "mini_profile"), a);
-function E() {
+    E = (((a = {}).FullProfile = "full_profile"), (a.MiniProfile = "mini_profile"), a);
+function p() {
     return (0, o.A)();
 }
 function m(e) {
     let { viewId: t, source: n, gameName: i, gameId: r, authorId: s, profileType: a } = e;
     return (
-        u.default.track(c.HAw.GAME_PROFILE_OPEN, {
+        u.default.track(d.HAw.GAME_PROFILE_OPEN, {
             view_id: t,
             source: n,
             game_name: i,
             application_id: r,
             author_id: s,
-            request_id: l.A.getFeedRequestId(d.X1.GLOBAL_FEED),
+            request_id: l.A.getFeedRequestId(c.X1.GLOBAL_FEED),
             profile_type: a,
         }),
         t
@@ -124,14 +125,14 @@ function g(e) {
         guildId: o,
         isVerified: _,
     } = e;
-    u.default.track(c.HAw.GAME_PROFILE_CLOSE, {
+    u.default.track(d.HAw.GAME_PROFILE_CLOSE, {
         view_id: t,
         game_name: n,
         application_id: i,
         played_friend_ids: r,
         played_friends_data: s,
         similar_games: a,
-        request_id: l.A.getFeedRequestId(d.X1.GLOBAL_FEED),
+        request_id: l.A.getFeedRequestId(c.X1.GLOBAL_FEED),
         official_guild_id: _ ? o : void 0,
         guild_id: o,
     });
@@ -146,9 +147,9 @@ function A(e) {
         viewId: a,
         guildId: o,
         isVerified: l,
-        source: d,
+        source: c,
     } = e;
-    u.default.track(c.HAw.GAME_PROFILE_ACTION, {
+    u.default.track(d.HAw.GAME_PROFILE_ACTION, {
         game_name: t,
         application_id: n,
         action: i,
@@ -157,7 +158,7 @@ function A(e) {
         view_id: a,
         official_guild_id: l ? o : void 0,
         guild_id: o,
-        source: d,
+        source: c,
     });
 }
 function I(e) {
@@ -169,7 +170,7 @@ function I(e) {
         feedback: s,
         submitted: a,
     } = e;
-    return u.default.track(c.HAw.GAME_PROFILE_FEEDBACK, {
+    return u.default.track(d.HAw.GAME_PROFILE_FEEDBACK, {
         view_id: t,
         application_id: n,
         suggested_game_name: i,
@@ -180,8 +181,8 @@ function I(e) {
 }
 function T(e) {
     let { gameName: t, gameId: n, action: i } = e;
-    u.default.track(c.HAw.GAME_PROFILE_EMBED_ACTION, { game_name: t, application_id: n, action: i });
+    u.default.track(d.HAw.GAME_PROFILE_EMBED_ACTION, { game_name: t, application_id: n, action: i });
 }
 function S(e) {
-    return { guildId: e?.guild?.id ?? null, isVerified: e?.guild?.features.includes(c.GuildFeatures.VERIFIED) ?? !1 };
+    return { guildId: e?.guild?.id ?? null, isVerified: e?.guild?.features.includes(d.GuildFeatures.VERIFIED) ?? !1 };
 }
