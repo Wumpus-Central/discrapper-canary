@@ -559,8 +559,9 @@ function eC(e) {
         x = n.width ?? 0,
         U = n.height ?? 0,
         k = (0, o.bG)([f.A], () => f.A.getBasicChannel(S)?.guild_id, [S]),
-        G = x > 0 && U > 0 ? x / U : 16 / 9,
-        F = r.useRef(null);
+        G = x > 0 && U > 0 ? x / U : 16 / 9;
+    (G > 2 || G < 1) && (G = 16 / 9);
+    let F = r.useRef(null);
     (t = n.id),
         r.useEffect(() => {
             function e(e) {
