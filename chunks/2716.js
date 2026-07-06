@@ -1777,7 +1777,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tB = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tR.A().log(
-    `[BUILD INFO] Release Channel: ${tB}, Build Number: 573674, Version Hash: 91d005c02ace5a95d38f9985c658ba6187a80fb9`,
+    `[BUILD INFO] Release Channel: ${tB}, Build Number: 573677, Version Hash: f7ea46a269c93319bd31007292914432e968eb4a`,
 ),
     eN.A.setTags({ appContext: eb.QCW }),
     tn.A.initBasic(),
@@ -17557,15 +17557,17 @@ let TU = Math.ceil(Math.sqrt(115200)),
             { enabled: v } = Ty.useConfig({ location: ao.rE.PRIVATE_CHANNELS_LIST }),
             R = e5.useMemo(
                 () =>
-                    v && u?.questHomeEntrypoint?.gradientPreset != null
-                        ? TD
-                        : (function () {
-                              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : TO.NONE;
-                              return Tb[e];
-                          })(u?.questHomeEntrypoint?.gradientPreset),
-                [u?.questHomeEntrypoint?.gradientPreset, v],
+                    o
+                        ? v && u?.questHomeEntrypoint?.gradientPreset != null
+                            ? TD
+                            : (function () {
+                                  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : TO.NONE;
+                                  return Tb[e];
+                              })(u?.questHomeEntrypoint?.gradientPreset)
+                        : null,
+                [o, u?.questHomeEntrypoint?.gradientPreset, v],
             ),
-            O = e5.useMemo(() => null != R, [R]),
+            O = e5.useMemo(() => o && null != R, [o, R]),
             b = (0, x.jsx)("div", {
                 className: Tx.iE,
                 onMouseEnter: p,
@@ -18067,7 +18069,7 @@ let Su = "isHideDevBanner",
                     className: t0()(Sl.Wz, Sl.mr),
                     children: [
                         (0, x.jsx)(So, { className: Sl.Kk }),
-                        nr.intl.format(nr.t.uyrfYF, { buildNumber: "573674" }),
+                        nr.intl.format(nr.t.uyrfYF, { buildNumber: "573677" }),
                         (0, x.jsx)(r, {}),
                     ],
                 })
