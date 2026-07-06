@@ -1616,6 +1616,8 @@ let nP = "",
         STORE_LISTINGS_SKU: (e) => `/store/skus/${e}/listings`,
         SOCIAL_LAYER_APPLICATION_STOREFRONT: (e) => `/partner-sdk/guilds/${e}/application-storefront`,
         SOCIAL_LAYER_STOREFRONT_BY_APPLICATION_ID: (e) => `/partner-sdk/applications/${e}/application-storefront`,
+        SOCIAL_LAYER_STOREFRONTS_ALL: (e) => `/partner-sdk/applications/${e}/storefronts/all`,
+        SOCIAL_LAYER_STOREFRONT_BY_ID: (e, t) => `/partner-sdk/applications/${e}/storefront/${t}`,
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_BY_APPLICATION_ID: (e, t) =>
             `/partner-sdk/applications/${e}/storefront/skus/${t}`,
         SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU: (e, t) => `/partner-sdk/guilds/${e}/application-storefront/skus/${t}`,

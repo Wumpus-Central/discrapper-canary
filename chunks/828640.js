@@ -11,7 +11,7 @@ var l = t(34188),
     p = t(228366),
     m = t(288106),
     g = t(95701),
-    b = t(495544),
+    b = t(280450),
     y = t(652215),
     S = t(818348);
 let f = "000000000000000100",
@@ -386,6 +386,8 @@ let j = {
                                         type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                         guildOrApplicationId: { type: "guild", guildId: E },
                                         storefront: {
+                                            id: h,
+                                            publishedAt: null,
                                             applicationId: h,
                                             title: "Playground Game",
                                             logoAssetId: null,
@@ -590,6 +592,8 @@ let j = {
                                                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
                                                 guildOrApplicationId: { type: "guild", guildId: E },
                                                 storefront: {
+                                                    id: h,
+                                                    publishedAt: null,
                                                     applicationId: h,
                                                     title: "Playground Game",
                                                     logoAssetId: null,
