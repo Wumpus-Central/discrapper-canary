@@ -2577,7 +2577,7 @@ let nx = {
                     if (null == e || null == N || m || n) return !1;
                     t && (0, J.sB)(e);
                     let s = h(e),
-                        l = !0 === t ? sG.DISCOVERED : s;
+                        l = !0 === t && s !== sG.FEATURED ? sG.DISCOVERED : s;
                     if (null == s) return f(e), !1;
                     let r = document.getElementById((0, eW.sT)(e, l ?? void 0));
                     return (
