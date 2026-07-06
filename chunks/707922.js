@@ -1,32 +1,33 @@
-i.d(t, { A: () => u });
-var r = i(580630),
-    n = i(935399),
-    s = i(17928),
-    a = i(73825),
-    l = i(97352),
-    o = i(428262),
-    d = i(202541),
-    c = i(88001);
-function u(e) {
+"use strict";
+n.d(t, { A: () => d });
+var i = n(580630),
+    r = n(935399),
+    s = n(17928),
+    a = n(73825),
+    o = n(97352),
+    l = n(428262),
+    u = n(202541),
+    c = n(88001);
+function d(e) {
     let t = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            t = (0, o.mH)(d.pe.TIER_2),
-            { plan: i, isFetchingPlan: r } = (0, s.cf)([l.A], () => ({
-                plan: l.A.get(d.gD.PREMIUM_GROUP_MONTH),
-                isFetchingPlan: l.A.isFetchingForSKU(t),
+            t = (0, l.mH)(u.pe.TIER_2),
+            { plan: n, isFetchingPlan: i } = (0, s.cf)([o.A], () => ({
+                plan: o.A.get(u.gD.PREMIUM_GROUP_MONTH),
+                isFetchingPlan: o.A.isFetchingForSKU(t),
             }));
         if (
-            ((0, n.Ay)(() => {
-                e || null != i || r || (0, a.ur)(t);
+            ((0, r.Ay)(() => {
+                e || null != n || i || (0, a.ur)(t);
             }),
-            e || null == i)
+            e || null == n)
         )
             return null;
         try {
-            return (0, o.JM)(d.gD.PREMIUM_GROUP_MONTH, !1, !1, void 0, !1);
+            return (0, l.JM)(u.gD.PREMIUM_GROUP_MONTH, !1, !1, void 0, !1);
         } catch {
             return null;
         }
     })(e);
-    return null == t ? null : (0, r.$g)(Math.round(t.amount / c.aw), t.currency);
+    return null == t ? null : (0, i.$g)(Math.round(t.amount / c.aw), t.currency);
 }

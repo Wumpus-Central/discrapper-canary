@@ -1,38 +1,39 @@
-n.d(t, { A: () => T, n: () => m });
-var l = n(627968);
+"use strict";
+n.d(t, { A: () => A, n: () => E });
+var i = n(627968);
 n(64700);
 var r = n(192308),
-    i = n(228366),
+    s = n(228366),
     a = n(272355),
-    s = n(267102),
-    o = n(287809),
+    o = n(267102),
+    l = n(287809),
     u = n(207803),
     c = n(958805),
     d = n(591179),
-    f = n(485745),
+    _ = n(485745),
     h = n(652215);
-let A = new Set();
-function m(e, t) {
+let f = new Set();
+function E(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-async function x(e) {
+async function p(e) {
     let {
             userId: t,
-            tabSection: i,
+            tabSection: s,
             scrollTarget: a,
-            guildId: x,
-            originGuildId: S,
+            guildId: p,
+            originGuildId: m,
             channelId: g,
-            appContext: T,
-            customStatusPrompt: E,
-            ...p
+            appContext: A,
+            customStatusPrompt: I,
+            ...T
         } = e,
-        v = o.default.getUser(t);
-    if (null == v) return;
-    let R = o.default.getCurrentUser();
-    if (null == R) return;
-    let y = m(t, x);
-    A.add(
+        S = l.default.getUser(t);
+    if (null == S) return;
+    let N = l.default.getCurrentUser();
+    if (null == N) return;
+    let C = E(t, p);
+    f.add(
         await (0, r.openModalLazy)(
             async () => {
                 let e = (
@@ -399,44 +400,44 @@ async function x(e) {
                     ]).then(n.bind(n, 577593))
                 ).default;
                 return (t) =>
-                    (0, l.jsx)(e, {
-                        user: v,
-                        currentUser: R,
-                        guildId: x,
-                        originGuildId: S ?? x,
-                        initialTabSection: i,
+                    (0, i.jsx)(e, {
+                        user: S,
+                        currentUser: N,
+                        guildId: p,
+                        originGuildId: m ?? p,
+                        initialTabSection: s,
                         initialScrollTarget: a,
                         channelId: g,
-                        customStatusPrompt: E,
+                        customStatusPrompt: I,
                         ...t,
-                        ...p,
+                        ...T,
                     });
             },
             {
-                modalKey: y,
-                contextKey: (0, r.modalContextFromAppContext)(T ?? (0, s.zd)() ?? h.BRT.APP),
+                modalKey: C,
+                contextKey: (0, r.modalContextFromAppContext)(A ?? (0, o.zd)() ?? h.BRT.APP),
                 onCloseRequest: () => {
                     let e = !(0, d.E)("UserProfileModalManager");
-                    t === R.id && (0, f.b)(e)
+                    t === N.id && (0, _.b)(e)
                         ? (0, u.VQ)()
-                        : ((0, r.closeModal)(y), A.delete(y), c.A.clearPendingWidgets(), e || (0, u.XQ)());
+                        : ((0, r.closeModal)(C), f.delete(C), c.A.clearPendingWidgets(), e || (0, u.XQ)());
                 },
             },
         ),
     );
 }
-function S() {
-    if (0 !== A.size) {
-        for (let e of A) (0, r.closeModal)(e);
-        A.clear(), c.A.clearPendingWidgets(), (0, d.E)("UserProfileModalManager") && (0, u.XQ)();
+function m() {
+    if (0 !== f.size) {
+        for (let e of f) (0, r.closeModal)(e);
+        f.clear(), c.A.clearPendingWidgets(), (0, d.E)("UserProfileModalManager") && (0, u.XQ)();
     }
 }
 class g extends a.A {
     _initialize() {
-        i.h.subscribe("USER_PROFILE_MODAL_OPEN", x), i.h.subscribe("USER_PROFILE_MODAL_CLOSE", S);
+        s.h.subscribe("USER_PROFILE_MODAL_OPEN", p), s.h.subscribe("USER_PROFILE_MODAL_CLOSE", m);
     }
     _terminate() {
-        i.h.unsubscribe("USER_PROFILE_MODAL_OPEN", x), i.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", S);
+        s.h.unsubscribe("USER_PROFILE_MODAL_OPEN", p), s.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", m);
     }
 }
-let T = new g();
+let A = new g();

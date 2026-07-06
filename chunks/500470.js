@@ -1,11 +1,12 @@
-n.d(t, { k: () => a, x: () => i });
-var u = n(702841),
-    l = n(287809),
-    r = n(695515);
-function i() {
-    let e = (0, u.bG)([r.A], () => r.A.getSelectedTeenId());
-    return (0, u.bG)([l.default], () => (null !== e ? l.default.getUser(e) : void 0));
-}
+"use strict";
+n.d(t, { k: () => o, x: () => a });
+var i = n(702841),
+    r = n(287809),
+    s = n(695515);
 function a() {
-    return (0, u.bG)([r.A], () => r.A.getSelectedTeenId());
+    let e = (0, i.bG)([s.A], () => s.A.getSelectedTeenId());
+    return (0, i.bG)([r.default], () => (null !== e ? r.default.getUser(e) : void 0));
+}
+function o() {
+    return (0, i.bG)([s.A], () => s.A.getSelectedTeenId());
 }

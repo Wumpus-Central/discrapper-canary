@@ -1,154 +1,155 @@
-n.d(t, { RD: () => C }), n(321073);
+"use strict";
+n.d(t, { RD: () => I }), n(321073);
 var i = n(64700),
-    l = n(52133),
-    r = n(958538),
-    o = n(17928),
-    a = n(975807),
-    u = n(95561),
-    c = n(289919),
-    s = n(123917),
-    p = n(878118),
-    d = n(281020),
-    A = n(975460),
-    _ = n(704824);
-let h = Symbol();
-var f = n(942370),
-    b = n(652215);
-let T = "AUTHORIZE_REQUEST",
-    y = [f._M.RPC, f._M.WEB];
-function C(e) {
+    r = n(52133),
+    s = n(958538),
+    a = n(17928),
+    o = n(975807),
+    l = n(95561),
+    u = n(289919),
+    c = n(123917),
+    d = n(878118),
+    _ = n(281020),
+    h = n(975460),
+    f = n(704824);
+let E = Symbol();
+var p = n(942370),
+    m = n(652215);
+let g = "AUTHORIZE_REQUEST",
+    A = [p._M.RPC, p._M.WEB];
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { debug: n = !1 } = t,
-        C = (0, A.g)(e),
-        S = (0, o.bG)([p.A], () => p.A.getGloballyDisabledAuthorizationFlows()),
-        R = i.useMemo(
+        I = (0, h.g)(e),
+        S = (0, a.bG)([d.A], () => d.A.getGloballyDisabledAuthorizationFlows()),
+        N = i.useMemo(
             () => ({
                 ...t,
                 allowedFlows:
-                    null != t.allowedFlows ? t.allowedFlows.filter((e) => !S.has(e)) : y.filter((e) => !S.has(e)),
+                    null != t.allowedFlows ? t.allowedFlows.filter((e) => !S.has(e)) : A.filter((e) => !S.has(e)),
             }),
             [t, S],
         ),
-        w = (function (e, t) {
-            var n, o, p, A;
-            let _,
-                C,
+        C = (function (e, t) {
+            var n, a, d, h;
+            let f,
+                I,
                 S,
-                R,
-                w =
+                N,
+                C =
                     ((n = i.useMemo(() => (null != e ? [e] : []), [e])),
-                    (o = t?.allowedFlows ?? y),
-                    (_ = (0, r.A)(() => o, o, l.v)),
-                    (p = E),
-                    (A = i.useCallback(
+                    (a = t?.allowedFlows ?? A),
+                    (f = (0, s.A)(() => a, a, r.v)),
+                    (d = T),
+                    (h = i.useCallback(
                         () =>
                             n.map((e) => ({
                                 application: e,
-                                isSubscribedToAuthorizeRequest: c.A.isSubscribed(e.id, T),
+                                isSubscribedToAuthorizeRequest: u.A.isSubscribed(e.id, g),
                             })),
                         [n],
                     )),
-                    (C = i.useRef(h)),
-                    (S = i.useRef(A)),
-                    (R = i.useSyncExternalStore(
+                    (I = i.useRef(E)),
+                    (S = i.useRef(h)),
+                    (N = i.useSyncExternalStore(
                         i.useCallback(
                             (e) =>
-                                p(() => {
-                                    (C.current = h), e();
+                                d(() => {
+                                    (I.current = E), e();
                                 }),
-                            [p],
+                            [d],
                         ),
                         i.useCallback(
                             () => (
-                                S.current !== A && ((S.current = A), (C.current = h)),
-                                C.current === h && (C.current = A()),
-                                C.current
+                                S.current !== h && ((S.current = h), (I.current = E)),
+                                I.current === E && (I.current = h()),
+                                I.current
                             ),
-                            [A],
+                            [h],
                         ),
                     )),
                     i.useMemo(
                         () =>
-                            R.map((e) => {
+                            N.map((e) => {
                                 let t = [];
                                 if (
-                                    (_.includes(f._M.RPC) &&
+                                    (f.includes(p._M.RPC) &&
                                         e.isSubscribedToAuthorizeRequest &&
                                         t.push({
-                                            type: f._M.RPC,
+                                            type: p._M.RPC,
                                             initiate(t) {
-                                                c.A.dispatchToSubscriptions(
-                                                    T,
+                                                u.A.dispatchToSubscriptions(
+                                                    g,
                                                     (t) => t.socket.application.id === e.application.id,
                                                     {},
                                                 ),
                                                     t.onConfirm?.(),
-                                                    u.Ay.trackWithMetadata(
-                                                        b.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED,
+                                                    l.Ay.trackWithMetadata(
+                                                        m.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED,
                                                         {
                                                             location_stack: t.analyticsLocations,
                                                             application_id: e.application.id,
-                                                            flow_type: f._M.RPC,
+                                                            flow_type: p._M.RPC,
                                                         },
                                                     ),
-                                                    (0, d.gk)(e.application.id, {
+                                                    (0, _.gk)(e.application.id, {
                                                         onSuccess: t.onSuccess,
                                                         onError: t.onError,
                                                     });
                                             },
                                         }),
-                                    _.includes(f._M.WEB) && null != e.application.connectionEntrypointUrl)
+                                    f.includes(p._M.WEB) && null != e.application.connectionEntrypointUrl)
                                 ) {
                                     let n = e.application.connectionEntrypointUrl;
                                     t.push({
-                                        type: f._M.WEB,
+                                        type: p._M.WEB,
                                         initiate(t) {
-                                            (0, s.h)({
+                                            (0, c.h)({
                                                 href: n,
                                                 onConfirm: () => {
-                                                    (0, a.A)(n),
+                                                    (0, o.A)(n),
                                                         t?.onConfirm?.(),
-                                                        (0, d.gk)(e.application.id, {
+                                                        (0, _.gk)(e.application.id, {
                                                             onSuccess: t.onSuccess,
                                                             onError: t.onError,
                                                         });
                                                 },
                                             }),
-                                                u.Ay.trackWithMetadata(b.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
+                                                l.Ay.trackWithMetadata(m.HAw.ON_PLATFORM_ACCOUNT_LINK_FLOW_STARTED, {
                                                     location_stack: t.analyticsLocations,
                                                     application_id: e.application.id,
-                                                    flow_type: f._M.WEB,
+                                                    flow_type: p._M.WEB,
                                                 });
                                         },
                                     });
                                 }
                                 return { context: e, availableFlows: t, preferredFlow: t.length > 0 ? t[0] : null };
                             }),
-                        [R, _],
+                        [N, f],
                     ));
-            return w.length > 0 ? w[0] : null;
-        })(C, R),
-        O = w?.preferredFlow,
-        M = null != O,
-        { token: L, fetched: k } = (0, _.U)(C?.parentId ?? C?.id, { disableFetch: R.disableFetch });
+            return C.length > 0 ? C[0] : null;
+        })(I, N),
+        y = C?.preferredFlow,
+        O = null != y,
+        { token: R, fetched: v } = (0, f.U)(I?.parentId ?? I?.id, { disableFetch: N.disableFetch });
     return {
-        fetched: k,
-        hasAlreadyLinked: k && null != L,
-        canStartAuthorization: M,
-        startAuthorization: i.useCallback((e) => (null == O ? null : (O.initiate(e), O.type)), [O]),
-        connectionApp: C,
-        chosenFlow: O?.type ?? null,
-        token: L,
+        fetched: v,
+        hasAlreadyLinked: v && null != R,
+        canStartAuthorization: O,
+        startAuthorization: i.useCallback((e) => (null == y ? null : (y.initiate(e), y.type)), [y]),
+        connectionApp: I,
+        chosenFlow: y?.type ?? null,
+        token: R,
         debug: n
             ? {
-                  isSubscribedToAuthorizeRequest: w?.context?.isSubscribedToAuthorizeRequest ?? !1,
-                  oauth2Token: L,
-                  hasConnectionEntrypointUrl: C?.connectionEntrypointUrl != null,
-                  validFlows: w?.availableFlows?.map((e) => e.type) ?? [],
+                  isSubscribedToAuthorizeRequest: C?.context?.isSubscribedToAuthorizeRequest ?? !1,
+                  oauth2Token: R,
+                  hasConnectionEntrypointUrl: I?.connectionEntrypointUrl != null,
+                  validFlows: C?.availableFlows?.map((e) => e.type) ?? [],
               }
             : void 0,
     };
 }
-function E(e) {
-    return c.A.listenIsSubscribed(e);
+function T(e) {
+    return u.A.listenIsSubscribed(e);
 }

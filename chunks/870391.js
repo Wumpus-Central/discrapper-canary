@@ -1,17 +1,18 @@
-n.d(t, { A: () => h }), n(321073);
+"use strict";
+n.d(t, { A: () => _ }), n(321073);
 var i = n(17928),
-    l = n(228366),
+    r = n(228366),
     s = n(427358),
-    r = n(153488),
-    a = n(994500),
-    o = n(287809);
+    a = n(153488),
+    o = n(994500),
+    l = n(287809);
 let u = [],
-    d = !1;
-class c extends i.Ay.PersistedStore {
+    c = !1;
+class d extends i.Ay.PersistedStore {
     static displayName = "FriendGroupsStore";
     static persistKey = "FriendGroupsStoreV2";
     initialize(e) {
-        this.waitFor(r.A, a.A, s.A, o.default), null != e && ((u = e.groups ?? []), (d = e.isInitialized ?? !1));
+        this.waitFor(a.A, o.A, s.A, l.default), null != e && ((u = e.groups ?? []), (c = e.isInitialized ?? !1));
     }
     getGroups() {
         return u;
@@ -30,16 +31,16 @@ class c extends i.Ay.PersistedStore {
         return null == t || 0 === t.userIds.length;
     }
     isInitialized() {
-        return d;
+        return c;
     }
     getState() {
-        return { groups: u, isInitialized: d };
+        return { groups: u, isInitialized: c };
     }
 }
-let h = new c(l.h, {
+let _ = new d(r.h, {
     POST_CONNECTION_OPEN: function () {
-        if (d || u.length > 0) return !1;
-        (u = []), (d = !0);
+        if (c || u.length > 0) return !1;
+        (u = []), (c = !0);
     },
     CREATE_FRIEND_GROUP: function (e) {
         let { groupId: t, name: n } = e;
@@ -69,18 +70,18 @@ let h = new c(l.h, {
         let { groupId: t, userIds: n } = e,
             i = u.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
-        let l = u[i],
-            s = new Set(l.userIds),
-            r = n.filter((e) => !s.has(e));
-        return 0 !== r.length && ((u[i] = { ...l, userIds: [...l.userIds, ...r] }), !0);
+        let r = u[i],
+            s = new Set(r.userIds),
+            a = n.filter((e) => !s.has(e));
+        return 0 !== a.length && ((u[i] = { ...r, userIds: [...r.userIds, ...a] }), !0);
     },
     REMOVE_USERS_FROM_GROUP: function (e) {
         let { groupId: t, userIds: n } = e,
             i = u.findIndex((e) => e.id === t);
         if (-1 === i) return !1;
-        let l = u[i],
+        let r = u[i],
             s = new Set(n),
-            r = l.userIds.filter((e) => !s.has(e));
-        return r.length !== l.userIds.length && ((u[i] = { ...l, userIds: r }), !0);
+            a = r.userIds.filter((e) => !s.has(e));
+        return a.length !== r.userIds.length && ((u[i] = { ...r, userIds: a }), !0);
     },
 });

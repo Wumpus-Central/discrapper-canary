@@ -1,99 +1,100 @@
-a.r(e), a.d(e, { BadgeImageWithProgressCircle: () => h, default: () => x });
-var s = a(627968);
-a(64700);
-var t = a(503698),
-    l = a.n(t),
-    c = a(366010),
-    i = a(834730),
-    o = a(736653),
-    n = a(905545);
-let d = (r) => {
+"use strict";
+n.r(t), n.d(t, { BadgeImageWithProgressCircle: () => _, default: () => h });
+var i = n(627968);
+n(64700);
+var r = n(503698),
+    s = n.n(r),
+    a = n(366010),
+    o = n(834730),
+    l = n(736653),
+    u = n(905545);
+let c = (e) => {
     let {
-            innerRingPercent: e,
-            outerRingColor: a = "currentColor",
-            innerRingColor: t = "currentColor",
-            strokeWidth: l = 4,
-            children: c,
-            backgroundCircleColor: i,
-            backgroundCircleBlurAmount: o = 0,
-        } = r,
-        d = Math.min(Math.max(e, 0), 100),
-        u = (100 - l) / 2,
-        h = u * Math.PI * 2,
-        x = (100 - l) / 2,
-        k = x * Math.PI * 2;
-    return (0, s.jsxs)("div", {
-        className: n.kL,
+            innerRingPercent: t,
+            outerRingColor: n = "currentColor",
+            innerRingColor: r = "currentColor",
+            strokeWidth: s = 4,
+            children: a,
+            backgroundCircleColor: o,
+            backgroundCircleBlurAmount: l = 0,
+        } = e,
+        c = Math.min(Math.max(t, 0), 100),
+        d = (100 - s) / 2,
+        _ = d * Math.PI * 2,
+        h = (100 - s) / 2,
+        f = h * Math.PI * 2;
+    return (0, i.jsxs)("div", {
+        className: u.kL,
         children: [
-            (0, s.jsx)("svg", {
+            (0, i.jsx)("svg", {
                 viewBox: "0 0 100 100",
-                className: n.DT,
-                style: null != o ? { "--custom-backdrop-blur-amount": `${o}px` } : void 0,
-                children: (0, s.jsx)("circle", { cx: 50, cy: 50, r: 50, fill: i }),
+                className: u.DT,
+                style: null != l ? { "--custom-backdrop-blur-amount": `${l}px` } : void 0,
+                children: (0, i.jsx)("circle", { cx: 50, cy: 50, r: 50, fill: o }),
             }),
-            (0, s.jsxs)("svg", {
+            (0, i.jsxs)("svg", {
                 viewBox: "0 0 100 100",
-                className: n.JW,
+                className: u.JW,
                 children: [
-                    (0, s.jsx)("circle", {
+                    (0, i.jsx)("circle", {
                         cx: 50,
                         cy: 50,
-                        r: u,
-                        strokeWidth: l,
-                        stroke: a,
+                        r: d,
+                        strokeWidth: s,
+                        stroke: n,
                         fill: "none",
                         strokeLinecap: "round",
                         transform: "rotate(-90 50 50)",
-                        style: { strokeDasharray: h },
+                        style: { strokeDasharray: _ },
                     }),
-                    (0, s.jsx)("circle", {
+                    (0, i.jsx)("circle", {
                         cx: 50,
                         cy: 50,
-                        r: x,
-                        strokeWidth: l,
-                        stroke: t,
+                        r: h,
+                        strokeWidth: s,
+                        stroke: r,
                         fill: "none",
                         strokeLinecap: "round",
                         transform: "rotate(-90 50 50)",
-                        style: { strokeDasharray: k, strokeDashoffset: (1 - d / 100) * k },
+                        style: { strokeDasharray: f, strokeDashoffset: (1 - c / 100) * f },
                     }),
                 ],
             }),
-            null != c && (0, s.jsx)("div", { className: n.Lw, children: c }),
+            null != a && (0, i.jsx)("div", { className: u.Lw, children: a }),
         ],
     });
 };
-var u = a(255041);
-function h(r) {
+var d = n(255041);
+function _(e) {
     let {
-            src: e,
-            alt: a,
-            progressCircleText: t,
-            progressCirclePercent: n,
-            progressCircleUrgency: h,
-            compact: x = !1,
-        } = r,
-        k = (0, o.Ay)();
-    return (0, s.jsxs)("div", {
-        className: l()(u.mI, { [u.oE]: x }),
+            src: t,
+            alt: n,
+            progressCircleText: r,
+            progressCirclePercent: u,
+            progressCircleUrgency: _,
+            compact: h = !1,
+        } = e,
+        f = (0, l.Ay)();
+    return (0, i.jsxs)("div", {
+        className: s()(d.mI, { [d.oE]: h }),
         children: [
-            (0, s.jsx)("img", { alt: a, src: e, className: u.pq }),
-            null != t &&
-                null != n &&
-                null != h &&
-                (0, s.jsx)("div", {
-                    className: u.$t,
-                    children: (0, s.jsx)(d, {
-                        innerRingPercent: n,
-                        outerRingColor: "critical" === h ? "var(--red-new-74)" : "var(--opacity-orange-36)",
-                        innerRingColor: "critical" === h ? "var(--red-new-43)" : "var(--opacity-orange-96)",
+            (0, i.jsx)("img", { alt: n, src: t, className: d.pq }),
+            null != r &&
+                null != u &&
+                null != _ &&
+                (0, i.jsx)("div", {
+                    className: d.$t,
+                    children: (0, i.jsx)(c, {
+                        innerRingPercent: u,
+                        outerRingColor: "critical" === _ ? "var(--red-new-74)" : "var(--opacity-orange-36)",
+                        innerRingColor: "critical" === _ ? "var(--red-new-43)" : "var(--opacity-orange-96)",
                         strokeWidth: 7,
-                        backgroundCircleColor: (0, c.M)(k) ? "var(--opacity-black-72)" : "var(--opacity-white-72)",
+                        backgroundCircleColor: (0, a.M)(f) ? "var(--opacity-black-72)" : "var(--opacity-white-72)",
                         backgroundCircleBlurAmount: 2,
-                        children: (0, s.jsx)(i.E, { variant: "text-sm/semibold", color: "text-subtle", children: t }),
+                        children: (0, i.jsx)(o.E, { variant: "text-sm/semibold", color: "text-subtle", children: r }),
                     }),
                 }),
         ],
     });
 }
-let x = h;
+let h = _;

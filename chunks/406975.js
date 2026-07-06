@@ -1,13 +1,14 @@
-n.d(t, { Ay: () => c, O$: () => d, Ur: () => a, hU: () => o });
+"use strict";
+n.d(t, { Ay: () => c, O$: () => u, Ur: () => o, hU: () => l });
 var i = n(955572),
-    l = n(775602),
-    r = n(652215);
-function s(e) {
-    return r.hH7.ZOOM_SCALES[
-        Math.max(0, Math.min(r.hH7.ZOOM_SCALES.indexOf(l.Ay.zoom) + e, r.hH7.ZOOM_SCALES.length - 1))
+    r = n(775602),
+    s = n(652215);
+function a(e) {
+    return s.hH7.ZOOM_SCALES[
+        Math.max(0, Math.min(s.hH7.ZOOM_SCALES.indexOf(r.Ay.zoom) + e, s.hH7.ZOOM_SCALES.length - 1))
     ];
 }
-let a = { binds: ["mod+plus"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(s(1)), !1) },
-    o = { binds: ["mod+minus"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(s(-1)), !1) },
-    d = { binds: ["mod+0"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(r.hH7.ZOOM_DEFAULT), !1) },
-    c = 21552 == n.j ? { ZOOM_IN: a, ZOOM_OUT: o, ZOOM_RESET: d } : null;
+let o = { binds: ["mod+plus"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(a(1)), !1) },
+    l = { binds: ["mod+minus"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(a(-1)), !1) },
+    u = { binds: ["mod+0"], comboKeysBindGlobal: !0, action: () => ((0, i.Qp)(s.hH7.ZOOM_DEFAULT), !1) },
+    c = { ZOOM_IN: o, ZOOM_OUT: l, ZOOM_RESET: u };

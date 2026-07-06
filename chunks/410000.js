@@ -1,6 +1,7 @@
-n.d(t, { c: () => s, n: () => l });
+"use strict";
+n.d(t, { c: () => s, n: () => r });
 var i = n(240921);
-let l = (0, i.Ay)({
+let r = (0, i.Ay)({
         kind: "user",
         name: "2026-06-add-to-dm-title",
         defaultConfig: { enabled: !1 },

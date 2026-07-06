@@ -1,6 +1,7 @@
-var i = r(101968);
+"use strict";
+var r = n(101968);
 e.exports = function () {
-    var e = i(this),
+    var e = r(this),
         t = "";
     return (
         e.hasIndices && (t += "d"),

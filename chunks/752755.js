@@ -1,44 +1,45 @@
-l.d(t, { A: () => d, e: () => n });
-var a,
-    s = l(17928),
-    i = l(228366),
-    n =
-        (((a = {})[(a.NOT_FETCHED = 0)] = "NOT_FETCHED"),
-        (a[(a.FETCHING = 1)] = "FETCHING"),
-        (a[(a.FETCHED = 2)] = "FETCHED"),
-        (a[(a.FAILED = 3)] = "FAILED"),
-        a);
-let r = {},
-    o = {};
-class c extends s.Ay.Store {
+"use strict";
+n.d(t, { A: () => c, e: () => a });
+var i,
+    r = n(17928),
+    s = n(228366),
+    a =
+        (((i = {})[(i.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+        (i[(i.FETCHING = 1)] = "FETCHING"),
+        (i[(i.FETCHED = 2)] = "FETCHED"),
+        (i[(i.FAILED = 3)] = "FAILED"),
+        i);
+let o = {},
+    l = {};
+class u extends r.Ay.Store {
     static displayName = "MediaPostEmbedStore";
     getMediaPostEmbed(e) {
-        if (null != e) return r[e];
+        if (null != e) return o[e];
     }
     getEmbedFetchState(e) {
-        return o[e] ?? 0;
+        return l[e] ?? 0;
     }
     getMediaPostEmbeds() {
-        return r;
+        return o;
     }
 }
-let d = new c(i.h, {
+let c = new u(s.h, {
     CONNECTION_OPEN: function () {
-        (r = {}), (o = {});
+        (o = {}), (l = {});
     },
     MEDIA_POST_EMBED_FETCH: function (e) {
         let { threadId: t } = e;
-        o[t] = 1;
+        l[t] = 1;
     },
     MEDIA_POST_EMBED_FETCH_SUCCESS: function (e) {
-        let { threadId: t, mediaPostEmbed: l } = e;
-        (r = { ...r, [t]: l }), (o[t] = 2);
+        let { threadId: t, mediaPostEmbed: n } = e;
+        (o = { ...o, [t]: n }), (l[t] = 2);
     },
     MEDIA_POST_EMBED_FETCH_FAILURE: function (e) {
         let { threadId: t } = e;
-        o[t] = 3;
+        l[t] = 3;
     },
     LOGOUT: function (e) {
-        e.isSwitchingAccount || ((r = {}), (o = {}));
+        e.isSwitchingAccount || ((o = {}), (l = {}));
     },
 });

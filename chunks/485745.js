@@ -1,10 +1,11 @@
-n.d(t, { A: () => a, b: () => s });
-var l = n(17928),
+"use strict";
+n.d(t, { A: () => a, b: () => o });
+var i = n(17928),
     r = n(836602),
-    i = n(61881);
+    s = n(61881);
 function a(e) {
-    return (0, l.bG)([i.A, r.A], () => i.A.hasUnsavedChanges() || (!e && r.A.hasUnsavedChanges()));
+    return (0, i.bG)([s.A, r.A], () => s.A.hasUnsavedChanges() || (!e && r.A.hasUnsavedChanges()));
 }
-function s(e) {
-    return i.A.hasUnsavedChanges() || (!e && r.A.hasUnsavedChanges());
+function o(e) {
+    return s.A.hasUnsavedChanges() || (!e && r.A.hasUnsavedChanges());
 }

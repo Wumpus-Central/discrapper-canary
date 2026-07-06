@@ -1,33 +1,34 @@
-var t = a(693655),
-    n = a(410323),
-    i = a(304880),
-    o = a(627),
-    h = URLSearchParams,
-    s = h.prototype,
-    u = n(s.append),
-    v = n(s.delete),
-    f = n(s.forEach),
-    p = n([].push),
-    c = new h("a=1&a=2&b=3");
-c.delete("a", 1),
-    c.delete("b", void 0),
-    c + "" != "a=2" &&
-        t(
+"use strict";
+var r = n(693655),
+    o = n(410323),
+    a = n(304880),
+    i = n(627),
+    u = URLSearchParams,
+    s = u.prototype,
+    l = o(s.append),
+    c = o(s.delete),
+    f = o(s.forEach),
+    d = o([].push),
+    h = new u("a=1&a=2&b=3");
+h.delete("a", 1),
+    h.delete("b", void 0),
+    h + "" != "a=2" &&
+        r(
             s,
             "delete",
             function (e) {
-                var r,
-                    a = arguments.length,
-                    t = a < 2 ? void 0 : arguments[1];
-                if (a && void 0 === t) return v(this, e);
-                var n = [];
-                f(this, function (e, r) {
-                    p(n, { key: r, value: e });
+                var t,
+                    n = arguments.length,
+                    r = n < 2 ? void 0 : arguments[1];
+                if (n && void 0 === r) return c(this, e);
+                var o = [];
+                f(this, function (e, t) {
+                    d(o, { key: t, value: e });
                 }),
-                    o(a, 1);
-                for (var h = i(e), s = i(t), c = 0, l = 0, d = !1, g = n.length; c < g; )
-                    (r = n[c++]), d || r.key === h ? ((d = !0), v(this, r.key)) : l++;
-                for (; l < g; ) ((r = n[l++]).key !== h || r.value !== s) && u(this, r.key, r.value);
+                    i(n, 1);
+                for (var u = a(e), s = a(r), h = 0, p = 0, v = !1, y = o.length; h < y; )
+                    (t = o[h++]), v || t.key === u ? ((v = !0), c(this, t.key)) : p++;
+                for (; p < y; ) ((t = o[p++]).key !== u || t.value !== s) && l(this, t.key, t.value);
             },
             { enumerable: !0, unsafe: !0 },
         );

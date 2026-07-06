@@ -1,50 +1,51 @@
-t.d(s, { S: () => h });
-var i = t(627968),
-    l = t(64700),
-    n = t(503698),
-    a = t.n(n),
-    o = t(580929),
-    r = t(17928),
-    d = t(866323),
-    u = t(834730),
-    c = t(475358),
-    m = t(775602),
-    p = t(425763),
-    g = t(375708),
-    f = t(493442);
-function h(e) {
-    let { className: s } = e,
-        t = [
-            { keybinds: ["Spacebar", "Enter"], name: g.intl.string(g.t["cs/HVH"]) },
-            { keybinds: ["up", "down"], name: g.intl.string(g.t.dmMqay) },
-            { keybinds: ["ESC"], name: g.intl.string(g.t["1ioMJQ"]) },
+"use strict";
+n.d(t, { S: () => p });
+var i = n(627968),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(580929),
+    l = n(17928),
+    u = n(866323),
+    c = n(834730),
+    d = n(475358),
+    _ = n(775602),
+    h = n(425763),
+    f = n(375708),
+    E = n(493442);
+function p(e) {
+    let { className: t } = e,
+        n = [
+            { keybinds: ["Spacebar", "Enter"], name: f.intl.string(f.t["cs/HVH"]) },
+            { keybinds: ["up", "down"], name: f.intl.string(f.t.dmMqay) },
+            { keybinds: ["ESC"], name: f.intl.string(f.t["1ioMJQ"]) },
         ],
-        n = (0, r.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        h = (0, p.VU)();
-    return (0, d.p)(
-        h,
+        s = (0, l.bG)([_.Ay], () => _.Ay.useReducedMotion),
+        p = (0, h.VU)();
+    return (0, u.p)(
+        p,
         {
-            enter: { from: { opacity: 0, y: 80 * !n }, to: { opacity: 1, y: 0 } },
-            leave: { opacity: 0, y: 80 * !n },
+            enter: { from: { opacity: 0, y: 80 * !s }, to: { opacity: 1, y: 0 } },
+            leave: { opacity: 0, y: 80 * !s },
             config: o.config.stiff,
         },
         "animate-always",
-    )((e, n) =>
-        n
+    )((e, s) =>
+        s
             ? (0, i.jsx)("div", {
-                  className: a()(f.lY, s),
+                  className: a()(E.lY, t),
                   children: (0, i.jsx)(o.animated.div, {
-                      className: f.kL,
+                      className: E.kL,
                       style: e,
-                      children: t.map((e, s) => {
-                          let { keybinds: n, name: a } = e;
+                      children: n.map((e, t) => {
+                          let { keybinds: s, name: a } = e;
                           return (0, i.jsxs)(
-                              l.Fragment,
+                              r.Fragment,
                               {
                                   children: [
-                                      (0, i.jsx)(u.E, { variant: "text-md/semibold", className: f.nx, children: a }),
-                                      n.map((e) => (0, i.jsx)(c.e, { shortcut: e, className: f.LE }, e)),
-                                      s < t.length - 1 ? (0, i.jsx)("span", { className: f.me }) : null,
+                                      (0, i.jsx)(c.E, { variant: "text-md/semibold", className: E.nx, children: a }),
+                                      s.map((e) => (0, i.jsx)(d.e, { shortcut: e, className: E.LE }, e)),
+                                      t < n.length - 1 ? (0, i.jsx)("span", { className: E.me }) : null,
                                   ],
                               },
                               a,

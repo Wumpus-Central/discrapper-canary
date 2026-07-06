@@ -1,104 +1,105 @@
-n.d(t, { A: () => p, j: () => g });
-var a = n(627968),
+"use strict";
+n.d(t, { A: () => m, j: () => p });
+var i = n(627968),
     r = n(64700),
-    l = n(503698),
-    i = n.n(l),
-    s = n(312640),
-    d = n(208756),
-    o = n(798618),
+    s = n(503698),
+    a = n.n(s),
+    o = n(312640),
+    l = n(208756),
+    u = n(798618),
     c = n(916845),
-    u = n(534514),
-    f = n(834730),
-    m = n(353795),
-    E = n(989108);
-function _(e) {
+    d = n(534514),
+    _ = n(834730),
+    h = n(353795),
+    f = n(989108);
+function E(e) {
     let { title: t, body: n } = e;
-    return (0, a.jsxs)("div", {
-        className: E.header,
+    return (0, i.jsxs)("div", {
+        className: f.header,
         children: [
-            (0, a.jsx)(u.D, { variant: "heading-md/semibold", className: E.title, children: t }),
-            (0, a.jsx)("div", {
-                className: E.headerBody,
-                children: (0, a.jsx)(f.E, { variant: "text-sm/normal", color: "none", children: n }),
+            (0, i.jsx)(d.D, { variant: "heading-md/semibold", className: f.title, children: t }),
+            (0, i.jsx)("div", {
+                className: f.headerBody,
+                children: (0, i.jsx)(_.E, { variant: "text-sm/normal", color: "none", children: n }),
             }),
         ],
     });
 }
-function g(e) {
+function p(e) {
     let {
             title: t,
             body: n,
-            graphic: l,
-            size: u = "md",
-            actions: f,
-            gradientColor: g,
-            onRequestClose: p,
-            position: b,
-            caretConfig: h,
-            scrollBehavior: A,
-            showCloseButton: R = !0,
-            isCaretHoverable: v = !1,
-            shouldTrapFocus: x = !1,
-            returnRef: I,
-            onNudgeChange: N,
-            ...T
+            graphic: s,
+            size: d = "md",
+            actions: _,
+            gradientColor: p,
+            onRequestClose: m,
+            position: g,
+            caretConfig: A,
+            scrollBehavior: I,
+            showCloseButton: T = !0,
+            isCaretHoverable: S = !1,
+            shouldTrapFocus: N = !1,
+            returnRef: C,
+            onNudgeChange: y,
+            ...O
         } = e,
-        [j, S] = r.useState(b ?? "top");
+        [R, v] = r.useState(g ?? "top");
     r.useEffect(() => {
-        null != b && S(b);
-    }, [b]);
-    let C = r.useMemo(() => ({ align: h?.align ?? "center", customOffset: h?.customOffset }), [h]),
-        y = r.useCallback(() => {
-            p?.();
-        }, [p]),
-        M = r.useCallback(
+        null != g && v(g);
+    }, [g]);
+    let b = r.useMemo(() => ({ align: A?.align ?? "center", customOffset: A?.customOffset }), [A]),
+        L = r.useCallback(() => {
+            m?.();
+        }, [m]),
+        D = r.useCallback(
             (e) => {
-                p?.(e);
+                m?.(e);
             },
-            [p],
+            [m],
         ),
-        D = r.useCallback((e) => {
-            S(e);
+        w = r.useCallback((e) => {
+            v(e);
         }, []),
-        O = v ? E.caretHoverable : void 0,
-        U = {
-            targetElementRef: T.targetElementRef,
-            shouldShow: T.shouldShow,
-            hasVideo: T.hasVideo,
-            position: j,
-            caretConfig: C,
-            onRequestClose: y,
-            gradientColor: g,
-            onPositionChange: D,
-            onNudgeChange: N,
-            scrollBehavior: A,
-            modal: x,
-            returnRef: I,
+        P = S ? f.caretHoverable : void 0,
+        M = {
+            targetElementRef: O.targetElementRef,
+            shouldShow: O.shouldShow,
+            hasVideo: O.hasVideo,
+            position: R,
+            caretConfig: b,
+            onRequestClose: L,
+            gradientColor: p,
+            onPositionChange: w,
+            onNudgeChange: y,
+            scrollBehavior: I,
+            modal: N,
+            returnRef: C,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
-            ...("edge" === T.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: T.align }
+            ...("edge" === O.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: O.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, a.jsx)(s.x, {
-        ...U,
-        children: (0, a.jsxs)("div", {
+    return (0, i.jsx)(o.x, {
+        ...M,
+        children: (0, i.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
-                R && (0, a.jsx)(c.q, { onClick: M, variant: null != g ? "color-mix" : void 0 }),
-                null != l &&
-                    (0, a.jsx)("div", {
-                        className: i()(E.graphic, { [E[`graphic--${u}`]]: null != u }),
-                        children: (0, a.jsx)(m.v, {
-                            ...l,
-                            aspectRatio: l.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
+                T && (0, i.jsx)(c.q, { onClick: D, variant: null != p ? "color-mix" : void 0 }),
+                null != s &&
+                    (0, i.jsx)("div", {
+                        className: a()(f.graphic, { [f[`graphic--${d}`]]: null != d }),
+                        children: (0, i.jsx)(h.v, {
+                            ...s,
+                            aspectRatio: s.aspectRatio ?? ("sm" === d ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, a.jsx)(_, { title: t, body: n }),
-                null != f && f.length > 0 ? (0, a.jsx)(d.Z, { actions: f, className: E.actionBar }) : null,
-                null != C && (0, a.jsx)(o.F, { className: O }),
+                (0, i.jsx)(E, { title: t, body: n }),
+                null != _ && _.length > 0 ? (0, i.jsx)(l.Z, { actions: _, className: f.actionBar }) : null,
+                null != b && (0, i.jsx)(u.F, { className: P }),
             ],
         }),
     });
 }
-let p = g;
+let m = p;

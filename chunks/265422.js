@@ -1,17 +1,18 @@
-l.d(t, { a: () => c, i: () => o });
-var a = l(192308),
-    s = l(367513),
-    i = l(951001),
-    n = l(366811),
-    r = l(652215);
-function o(e, t) {
-    let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
-        o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    (0, a.hasAnyModalOpen)() ||
-        (l && i.A.channelListScrollTo(e, t),
-        o && null != t && s.A.updateChatOpen(t, !0),
-        n.A.getState().updatePath(r.BVt.CHANNEL(e, t)));
+"use strict";
+n.d(t, { a: () => u, i: () => l });
+var i = n(192308),
+    r = n(367513),
+    s = n(951001),
+    a = n(366811),
+    o = n(652215);
+function l(e, t) {
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+        l = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    (0, i.hasAnyModalOpen)() ||
+        (n && s.A.channelListScrollTo(e, t),
+        l && null != t && r.A.updateChatOpen(t, !0),
+        a.A.getState().updatePath(o.BVt.CHANNEL(e, t)));
 }
-function c(e) {
-    (0, a.hasAnyModalOpen)() || n.A.getState().updatePath(e);
+function u(e) {
+    (0, i.hasAnyModalOpen)() || a.A.getState().updatePath(e);
 }

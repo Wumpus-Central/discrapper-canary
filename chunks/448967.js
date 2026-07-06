@@ -1,71 +1,72 @@
-n.d(t, { m: () => N, default: () => w });
+"use strict";
+n.d(t, { m: () => b, default: () => R });
 var i = n(627968),
-    a = n(64700),
-    o = n(503698),
-    s = n.n(o),
-    l = n(580929),
-    r = n(717421),
+    r = n(64700),
+    s = n(503698),
+    a = n.n(s),
+    o = n(580929),
+    l = n(717421),
     u = n(935462),
     c = n(430690),
     d = n(534514),
-    m = n(834730),
-    f = n(821609),
-    p = n(939249),
-    C = n(320448),
-    E = n(192308),
-    y = n(964486),
-    _ = n(235986),
-    g = n(174459),
-    A = n(859703),
-    I = n(347135),
-    h = n(590202),
-    S = n(652215),
-    x = n(375708),
-    T = n(399407);
-let v = "/assets/1929535a8397f7f0.png";
-function w(e) {
-    let { questId: t, survey: n, transitionState: o, onClose: s, onSubmit: p } = e,
-        C = (0, I.C5)(t),
-        [E, A] = a.useState(0),
-        [h, w] = (0, r.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } })),
-        N = (e) => {
-            p(),
-                A(1),
-                null != C &&
-                    g.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...q(C, n), choice: e.text, choice_id: e.key });
+    _ = n(834730),
+    h = n(821609),
+    f = n(939249),
+    E = n(320448),
+    p = n(192308),
+    m = n(964486),
+    g = n(235986),
+    A = n(174459),
+    I = n(859703),
+    T = n(347135),
+    S = n(590202),
+    N = n(652215),
+    C = n(375708),
+    y = n(399407);
+let O = "/assets/1929535a8397f7f0.png";
+function R(e) {
+    let { questId: t, survey: n, transitionState: s, onClose: a, onSubmit: f } = e,
+        E = (0, T.C5)(t),
+        [p, I] = r.useState(0),
+        [S, R] = (0, l.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } })),
+        b = (e) => {
+            f(),
+                I(1),
+                null != E &&
+                    A.default.track(N.HAw.QUEST_SURVEY_SUBMITTED, { ...L(E, n), choice: e.text, choice_id: e.key });
         };
-    async function b(e) {
-        1 === e && (await w({ width: "100%" }), s());
+    async function D(e) {
+        1 === e && (await R({ width: "100%" }), a());
     }
     return (
-        (0, y.Ay)(() => {
-            null != C && g.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, q(C, n));
+        (0, m.Ay)(() => {
+            null != E && A.default.track(N.HAw.QUEST_SURVEY_DISPLAYED, L(E, n));
         }),
-        null == C && s(),
+        null == E && a(),
         (0, i.jsx)(u.EO, {
             "data-migration-pending": !0,
-            transitionState: o,
+            transitionState: s,
             size: u.rI.DYNAMIC,
-            className: T.modalRoot,
+            className: y.modalRoot,
             parentComponent: "QuestSurveyModal",
             children: (0, i.jsxs)(c.t, {
-                activeSlide: E,
+                activeSlide: p,
                 width: 467,
-                onSlideReady: b,
+                onSlideReady: D,
                 children: [
                     (0, i.jsxs)(c.q, {
                         id: 0,
                         children: [
                             (0, i.jsxs)(u.rQ, {
                                 "data-migration-pending": !0,
-                                direction: _.A.Direction.VERTICAL,
+                                direction: g.A.Direction.VERTICAL,
                                 separator: !1,
-                                className: T.Hc,
+                                className: y.Hc,
                                 children: [
-                                    (0, i.jsx)(u.s_, { "data-migration-pending": !0, className: T.PV, onClick: s }),
-                                    (0, i.jsx)("img", { src: v, alt: "", className: T.LY }),
+                                    (0, i.jsx)(u.s_, { "data-migration-pending": !0, className: y.PV, onClick: a }),
+                                    (0, i.jsx)("img", { src: O, alt: "", className: y.LY }),
                                     (0, i.jsx)(d.D, { variant: "heading-lg/semibold", children: n.title }),
-                                    (0, i.jsx)(m.E, {
+                                    (0, i.jsx)(_.E, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
                                         children: n.subtitle,
@@ -74,8 +75,8 @@ function w(e) {
                             }),
                             (0, i.jsx)(u.$m, {
                                 "data-migration-pending": !0,
-                                className: T.jE,
-                                children: n.choices.map((e) => (0, i.jsx)(L, { choice: e, onClick: N }, e.key)),
+                                className: y.jE,
+                                children: n.choices.map((e) => (0, i.jsx)(v, { choice: e, onClick: b }, e.key)),
                             }),
                         ],
                     }),
@@ -84,31 +85,31 @@ function w(e) {
                         children: [
                             (0, i.jsxs)(u.$m, {
                                 "data-migration-pending": !0,
-                                className: T.wD,
+                                className: y.wD,
                                 children: [
-                                    (0, i.jsx)("img", { src: v, alt: "", className: T.LY }),
+                                    (0, i.jsx)("img", { src: O, alt: "", className: y.LY }),
                                     (0, i.jsx)(d.D, {
                                         variant: "heading-lg/semibold",
-                                        children: x.intl.string(x.t.KTjjrG),
+                                        children: C.intl.string(C.t.KTjjrG),
                                     }),
-                                    (0, i.jsx)(m.E, {
+                                    (0, i.jsx)(_.E, {
                                         variant: "text-md/normal",
                                         color: "text-muted",
-                                        children: x.intl.string(x.t.AvbrEM),
+                                        children: C.intl.string(C.t.AvbrEM),
                                     }),
                                 ],
                             }),
                             (0, i.jsx)(u.jl, {
                                 "data-migration-pending": !0,
                                 children: (0, i.jsxs)("div", {
-                                    className: T.cG,
+                                    className: y.cG,
                                     children: [
-                                        (0, i.jsx)(f.$, {
+                                        (0, i.jsx)(h.$, {
                                             variant: "primary",
-                                            text: x.intl.string(x.t.cpT0Cq),
-                                            onClick: s,
+                                            text: C.intl.string(C.t.cpT0Cq),
+                                            onClick: a,
                                         }),
-                                        (0, i.jsx)(l.animated.div, { className: T.ce, style: h }),
+                                        (0, i.jsx)(o.animated.div, { className: y.ce, style: S }),
                                     ],
                                 }),
                             }),
@@ -119,21 +120,21 @@ function w(e) {
         })
     );
 }
-function L(e) {
-    let { className: t, choice: n, onClick: a } = e;
-    return (0, i.jsxs)(p.D, {
-        className: s()(T.z5, t),
-        onClick: () => a(n),
-        children: [(0, i.jsx)(m.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(C._, {})],
+function v(e) {
+    let { className: t, choice: n, onClick: r } = e;
+    return (0, i.jsxs)(f.D, {
+        className: a()(y.z5, t),
+        onClick: () => r(n),
+        children: [(0, i.jsx)(_.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(E._, {})],
     });
 }
-function N(e) {
+function b(e) {
     let t = !1;
-    (0, E.openModalLazy)(
+    (0, p.openModalLazy)(
         async () => {
-            let { default: a } = await Promise.resolve().then(n.bind(n, 448967));
+            let { default: r } = await Promise.resolve().then(n.bind(n, 448967));
             return (n) =>
-                (0, i.jsx)(a, {
+                (0, i.jsx)(r, {
                     ...n,
                     ...e,
                     onSubmit: () => {
@@ -143,16 +144,16 @@ function N(e) {
         },
         {
             onCloseCallback: () => {
-                let n = A.A.getQuest(e.questId);
-                null != n && g.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...q(n, e.survey), submitted: t });
+                let n = I.A.getQuest(e.questId);
+                null != n && A.default.track(N.HAw.QUEST_SURVEY_DISMISSED, { ...L(n, e.survey), submitted: t });
             },
         },
     );
 }
-function q(e, t) {
+function L(e, t) {
     return {
         quest_id: e.id,
-        quest_status: (0, h.NI)(e),
+        quest_status: (0, S.NI)(e),
         survey_id: t.id,
         survey_title: t.title,
         survey_subtitle: t.subtitle,

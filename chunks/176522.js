@@ -1,89 +1,90 @@
-n.d(t, { M$: () => R, Fv: () => f, kF: () => m, Oc: () => O, GY: () => b }), n(667532);
+"use strict";
+n.d(t, { M$: () => v, Fv: () => O, kF: () => C, Oc: () => y, GY: () => R }), n(667532);
 var i = n(310953),
-    l = n(473529),
-    r = n(519059),
-    s = n(380335),
-    a = n(157550),
-    o = n(366811),
-    d = n(885386),
+    r = n(473529),
+    s = n(519059),
+    a = n(380335),
+    o = n(157550),
+    l = n(366811),
+    u = n(885386),
     c = n(189081),
-    u = n(839067),
-    A = n(645959),
+    d = n(839067),
+    _ = n(645959),
     h = n(403362),
-    E = n(265422),
-    C = n(652215),
-    g = n(746080);
-let _ = () => {
-    let e = s.A.getMessageRequestsCount() > 0 || a.A.getSpamChannelsCount() > 0;
+    f = n(265422),
+    E = n(652215),
+    p = n(746080);
+let m = () => {
+    let e = a.A.getMessageRequestsCount() > 0 || o.A.getSpamChannelsCount() > 0;
     return [
-        C.BVt.FRIENDS,
-        (0, r.HF)("navigateToChannel") ? C.BVt.ICYMI : null,
-        c.A.hasLibraryApplication() && !d.l_.getSetting() ? C.BVt.APPLICATION_LIBRARY : null,
-        e ? C.BVt.MESSAGE_REQUESTS : null,
-        C.BVt.APPLICATION_STORE,
-        C.BVt.COLLECTIBLES_SHOP,
-        d.dm.getSetting() ? C.BVt.FAMILY_CENTER : null,
-        C.BVt.QUEST_HOME,
+        E.BVt.FRIENDS,
+        (0, s.HF)("navigateToChannel") ? E.BVt.ICYMI : null,
+        c.A.hasLibraryApplication() && !u.l_.getSetting() ? E.BVt.APPLICATION_LIBRARY : null,
+        e ? E.BVt.MESSAGE_REQUESTS : null,
+        E.BVt.APPLICATION_STORE,
+        E.BVt.COLLECTIBLES_SHOP,
+        u.dm.getSetting() ? E.BVt.FAMILY_CENTER : null,
+        E.BVt.QUEST_HOME,
     ].filter(h.Vq);
 };
-function I() {
+function g() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
-        t = o.A.getState().guildId;
+        t = l.A.getState().guildId;
     if (null == t)
         !(function (e) {
             var t, n;
-            let { channelId: i, path: l, basePath: r } = o.A.getState(),
-                s = A.A.getPrivateChannelIds(),
-                a = __OVERLAY__ ? s : [..._(), ...s],
-                d =
-                    (null == i ? ((t = l ?? r), _().findIndex((e) => t.startsWith(e))) : null != i ? a.indexOf(i) : 0) +
+            let { channelId: i, path: r, basePath: s } = l.A.getState(),
+                a = _.A.getPrivateChannelIds(),
+                o = __OVERLAY__ ? a : [...m(), ...a],
+                u =
+                    (null == i ? ((t = r ?? s), m().findIndex((e) => t.startsWith(e))) : null != i ? o.indexOf(i) : 0) +
                     e;
-            d >= a.length ? (d = 0) : d < 0 && (d = a.length - 1);
-            let c = a[d];
-            if (_().includes(c)) {
+            u >= o.length ? (u = 0) : u < 0 && (u = o.length - 1);
+            let c = o[u];
+            if (m().includes(c)) {
                 let e;
-                (e = u.A.getCurrentRoute()), c === C.BVt.APPLICATION_STORE && null != e ? (0, E.a)(e) : (0, E.a)(c);
-            } else (n = C.ME), (0, E.i)(n, c);
+                (e = d.A.getCurrentRoute()), c === E.BVt.APPLICATION_STORE && null != e ? (0, f.a)(e) : (0, f.a)(c);
+            } else (n = E.ME), (0, f.i)(n, c);
         })(e);
     else {
-        var n, r, s;
-        let a, d;
-        (a = o.A.getState().channelId),
-            (d = (0, i.A)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id)),
-            (0, l.K)(t) && d.unshift(g.VV.GUILD_HOME),
-            (n = (null != a ? d.indexOf(a) : -1) + e),
-            (r = d.length),
-            (s = d[n < 0 ? r - 1 : n >= r ? 0 : n]),
-            (0, E.i)(t, s);
+        var n, s, a;
+        let o, u;
+        (o = l.A.getState().channelId),
+            (u = (0, i.A)(t, { withCurrentVoiceChannel: !0 }).map((e) => e.id)),
+            (0, r.K)(t) && u.unshift(p.VV.GUILD_HOME),
+            (n = (null != o ? u.indexOf(o) : -1) + e),
+            (s = u.length),
+            (a = u[n < 0 ? s - 1 : n >= s ? 0 : n]),
+            (0, f.i)(t, a);
     }
 }
-var T = n(963169),
-    N = n(345942),
-    p = n(309010),
+var A = n(963169),
+    I = n(345942),
+    T = n(309010),
     S = n(967198),
-    L = n(723702);
-let m = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (I(), !1) },
-    O = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (I(-1), !1) },
-    f = {
+    N = n(723702);
+let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (g(), !1) },
+    y = { binds: ["alt+up"], comboKeysBindGlobal: !0, action: () => (g(-1), !1) },
+    O = {
         binds: ["mod+alt+right"],
         comboKeysBindGlobal: !0,
         action() {
             let e;
-            if (null != S.A.getGuildId()) e = C.ME;
+            if (null != S.A.getGuildId()) e = E.ME;
             else {
                 let t = S.A.getLastSelectedGuildId();
-                null != t && ((e = t), (0, E.i)(t, p.A.getChannelId(t)));
+                null != t && ((e = t), (0, f.i)(t, T.A.getChannelId(t)));
             }
-            return null != e && (0, N.u)(e), !1;
+            return null != e && (0, I.u)(e), !1;
         },
     },
-    b = {
-        binds: (0, L.isMac)() || (0, L.isMacWeb)() ? ["mod+["] : ["alt+left"],
-        comboKeysBindGlobal: !0,
-        action: () => ((0, T.OE)("keybind"), !1),
-    },
     R = {
-        binds: (0, L.isMac)() || (0, L.isMacWeb)() ? ["mod+]"] : ["alt+right"],
+        binds: (0, N.isMac)() || (0, N.isMacWeb)() ? ["mod+["] : ["alt+left"],
         comboKeysBindGlobal: !0,
-        action: () => ((0, T.Qb)("keybind"), !1),
+        action: () => ((0, A.OE)("keybind"), !1),
+    },
+    v = {
+        binds: (0, N.isMac)() || (0, N.isMacWeb)() ? ["mod+]"] : ["alt+right"],
+        comboKeysBindGlobal: !0,
+        action: () => ((0, A.Qb)("keybind"), !1),
     };
