@@ -1,5 +1,5 @@
 let i, s;
-n.d(t, { updateCreateGuildModal: () => Y, openCreateGuildModal: () => K });
+n.d(t, { updateCreateGuildModal: () => K, openCreateGuildModal: () => Y });
 var l = n(627968),
     a = n(64700),
     o = n(192308),
@@ -13,8 +13,8 @@ var l = n(627968),
     C = n(935462),
     N = n(430690),
     S = n(475743),
-    D = n(362311),
-    E = n(243460),
+    E = n(362311),
+    D = n(243460),
     _ = n(424912),
     L = n(360475),
     T = n(862482),
@@ -98,7 +98,7 @@ function H(e) {
                             e instanceof U.Wl || e instanceof U.LG ? u((0, k.s)(e.code)) : u(v.intl.string(v.t.dDZRdy));
                         },
                     );
-                }
+                } else u(v.intl.string(v.t["GEYI+Z"]));
             },
             (e) => {
                 d(!1);
@@ -262,7 +262,7 @@ function V(e) {
                     id: J.oS.CREATION_INTENT,
                     impressionName: m.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                     impressionProperties: y,
-                    children: (0, l.jsx)(E.A, { onClose: s, onBack: b, onCreationIntentChosen: v }),
+                    children: (0, l.jsx)(D.A, { onClose: s, onBack: b, onCreationIntentChosen: v }),
                 }),
                 (0, l.jsx)(N.q, {
                     id: J.oS.CUSTOMIZE_GUILD,
@@ -281,7 +281,7 @@ function V(e) {
                     id: J.oS.CHANNEL_PROMPT,
                     impressionName: m.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
                     impressionProperties: y,
-                    children: (0, l.jsx)(D.A, {
+                    children: (0, l.jsx)(E.A, {
                         createdGuildId: j,
                         onClose: s,
                         onChannelPromptCompleted: w,
@@ -328,11 +328,11 @@ function W(e, t, n, i) {
         ...e,
     });
 }
-function K(e) {
+function Y(e) {
     let { initialSlide: t, location: n, onSuccess: i } = e;
     (0, o.openModal)((e) => W(e, t, n, i), { modalKey: J.fc });
 }
-function Y(e) {
+function K(e) {
     let { slide: t, location: n } = e;
     (0, o.updateModal)(J.fc, (e) => W(e, t, n));
 }

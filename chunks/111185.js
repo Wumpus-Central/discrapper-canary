@@ -155,20 +155,20 @@ var q = i(292666),
     V = i(780964),
     Z = i(766075),
     K = i(4274),
-    Q = i(488020);
-let X =
+    Y = i(488020);
+let Q =
     ((t = window.GLOBAL_ENV.INVITE_HOST),
     (n = ""),
     null == t && ((t = location.host), (n = M.BVt.INVITE(""))),
     `${location.protocol}//${t}${n}/`);
-var Y = i(994277),
+var X = i(994277),
     ee = i(147646);
 function es(e) {
     let { step: s } = e,
-        i = s === Y.i.AGE_GATE,
-        t = s === Y.i.CHOOSE_TEMPLATE || s === Y.i.CREATION_INTENT,
-        n = s === Y.i.CUSTOMIZE_GUILD,
-        a = s === Y.i.CHANNEL_PROMPT || s === Y.i.JOIN_GUILD,
+        i = s === X.i.AGE_GATE,
+        t = s === X.i.CHOOSE_TEMPLATE || s === X.i.CREATION_INTENT,
+        n = s === X.i.CUSTOMIZE_GUILD,
+        a = s === X.i.CHANNEL_PROMPT || s === X.i.JOIN_GUILD,
         r = n || a,
         c = t || r;
     return (0, l.jsxs)("div", {
@@ -199,10 +199,10 @@ function ea(e) {
         [r, v] = a.useState(!1),
         L = (0, d.bG)([A.default], () => A.default.getCurrentUser()),
         D = null != L && null == L.nsfwAllowed,
-        [O, S] = a.useState(D ? Y.i.AGE_GATE : Y.i.CHOOSE_TEMPLATE),
+        [O, S] = a.useState(D ? X.i.AGE_GATE : X.i.CHOOSE_TEMPLATE),
         [b, k] = a.useState(null);
     a.useEffect(() => {
-        i(r ? Y.i.COMPLETE : O);
+        i(r ? X.i.COMPLETE : O);
     }, [i, O, r]);
     let [y, R] = a.useState(null),
         [w, H] = a.useState(null),
@@ -211,7 +211,7 @@ function ea(e) {
         er = a.useCallback(
             (e) => {
                 H(e),
-                    S(Y.i.CREATION_INTENT),
+                    S(X.i.CREATION_INTENT),
                     g.default.track(M.HAw.GUILD_TEMPLATE_SELECTED, { template_name: e.label, template_code: e.code });
             },
             [H, S],
@@ -219,10 +219,10 @@ function ea(e) {
         { content: eo, footer: ec } = (0, j.u)({
             hasFooter: !1,
             onBack: () => {
-                H(null), S(Y.i.CHOOSE_TEMPLATE);
+                H(null), S(X.i.CHOOSE_TEMPLATE);
             },
             onCreationIntentChosen: (e) => {
-                ee(e === en.IR.COMMUNITY), S(Y.i.CUSTOMIZE_GUILD);
+                ee(e === en.IR.COMMUNITY), S(X.i.CUSTOMIZE_GUILD);
             },
         }),
         { content: ed, footer: em } = (0, I.D)({
@@ -230,12 +230,12 @@ function ea(e) {
             titleClassName: el.RH,
             hasFooter: !1,
             onGuildCreated: (e) => {
-                R(e), w?.id === et.v.CREATE ? S(Y.i.CHANNEL_PROMPT) : v(!0);
+                R(e), w?.id === et.v.CREATE ? S(X.i.CHANNEL_PROMPT) : v(!0);
             },
             onBack: () => {
-                S(Y.i.CREATION_INTENT);
+                S(X.i.CREATION_INTENT);
             },
-            isSlideReady: b === Y.i.CUSTOMIZE_GUILD,
+            isSlideReady: b === X.i.CUSTOMIZE_GUILD,
             isCommunity: J,
         }),
         { content: eu, footer: eN } = (0, T.m)({
@@ -244,7 +244,7 @@ function ea(e) {
             onChannelPromptCompleted: () => {
                 v(!0);
             },
-            isSlideReady: b === Y.i.CHANNEL_PROMPT,
+            isSlideReady: b === X.i.CHANNEL_PROMPT,
         }),
         { content: eE, footer: eh } = (function (e) {
             let { onBack: s, onComplete: i, onConnect: t, isSlideReady: n } = e,
@@ -280,7 +280,7 @@ function ea(e) {
                                         ? N((0, K.s)(e.code))
                                         : N(P.intl.string(P.t.dDZRdy));
                                 });
-                            }
+                            } else N(P.intl.string(P.t["GEYI+Z"]));
                         },
                         (e) => {
                             d(!1);
@@ -296,14 +296,14 @@ function ea(e) {
                     children: [
                         (0, l.jsxs)(m.rQ, {
                             "data-migration-pending": !0,
-                            className: Q.wx,
+                            className: Y.wx,
                             direction: p.A.Direction.VERTICAL,
                             separator: !1,
                             children: [
                                 (0, l.jsx)(G.D, {
                                     variant: "heading-xl/bold",
                                     color: "text-strong",
-                                    className: Q.DD,
+                                    className: Y.DD,
                                     children: P.intl.string(P.t.riOUtB),
                                 }),
                                 (0, l.jsx)(h.E, {
@@ -318,7 +318,7 @@ function ea(e) {
                             children: [
                                 (0, l.jsx)("form", {
                                     onSubmit: x,
-                                    className: Q.$j,
+                                    className: Y.$j,
                                     children: (0, l.jsx)(q.k, {
                                         label: P.intl.string(P.t.qreV25),
                                         error: u,
@@ -330,12 +330,12 @@ function ea(e) {
                                 (0, l.jsx)(h.E, {
                                     color: "text-default",
                                     variant: "text-xs/normal",
-                                    children: P.intl.format(P.t.lHTZl2, { examples: `${X}wumpus-friends, hTKzmak` }),
+                                    children: P.intl.format(P.t.lHTZl2, { examples: `${Q}wumpus-friends, hTKzmak` }),
                                 }),
                                 (0, l.jsx)(h.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
-                                    className: Q.LR,
+                                    className: Y.LR,
                                     children: P.intl.format(P.t["8F/who"], {
                                         onClick: function () {
                                             t(), (0, Z.openUserSettings)(V.X.CONNECTIONS_PANEL);
@@ -357,7 +357,7 @@ function ea(e) {
                         }),
                         (0, l.jsx)(U.$n, {
                             "data-migration-pending": !0,
-                            className: Q.__invalid_skipButton,
+                            className: Y.__invalid_skipButton,
                             look: U.$n.Looks.BLANK,
                             size: U.$n.Sizes.MIN,
                             onClick: s,
@@ -367,25 +367,25 @@ function ea(e) {
                 }),
             };
         })({
-            onBack: () => S(Y.i.CHOOSE_TEMPLATE),
+            onBack: () => S(X.i.CHOOSE_TEMPLATE),
             onComplete: () => {
                 n();
             },
             onConnect: n,
-            isSlideReady: b === Y.i.JOIN_GUILD,
+            isSlideReady: b === X.i.JOIN_GUILD,
         }),
         ex = null;
     switch (O) {
-        case Y.i.CUSTOMIZE_GUILD:
+        case X.i.CUSTOMIZE_GUILD:
             ex = em;
             break;
-        case Y.i.CHANNEL_PROMPT:
+        case X.i.CHANNEL_PROMPT:
             ex = eN;
             break;
-        case Y.i.JOIN_GUILD:
+        case X.i.JOIN_GUILD:
             ex = eh;
             break;
-        case Y.i.CREATION_INTENT:
+        case X.i.CREATION_INTENT:
             ex = ec;
     }
     let { ref: ep, width: e_ } = (0, x.Ay)();
@@ -425,19 +425,19 @@ function ea(e) {
                                     width: e_,
                                     children: [
                                         (0, l.jsx)(N.q, {
-                                            id: Y.i.AGE_GATE,
+                                            id: X.i.AGE_GATE,
                                             children: (0, l.jsx)("div", {
                                                 className: el.kL,
                                                 children: (0, l.jsx)(W, {
                                                     onComplete: () => {
-                                                        ea ? n() : S(Y.i.CHOOSE_TEMPLATE);
+                                                        ea ? n() : S(X.i.CHOOSE_TEMPLATE);
                                                     },
                                                     onClose: n,
                                                 }),
                                             }),
                                         }),
                                         (0, l.jsx)(N.q, {
-                                            id: Y.i.CHOOSE_TEMPLATE,
+                                            id: X.i.CHOOSE_TEMPLATE,
                                             impressionName: c.ImpressionNames.GUILD_ADD_LANDING,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", {
@@ -450,25 +450,25 @@ function ea(e) {
                                             }),
                                         }),
                                         (0, l.jsx)(N.q, {
-                                            id: Y.i.CREATION_INTENT,
+                                            id: X.i.CREATION_INTENT,
                                             impressionName: c.ImpressionNames.GUILD_ADD_INTENT_SELECTION,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: eo }),
                                         }),
                                         (0, l.jsx)(N.q, {
-                                            id: Y.i.CUSTOMIZE_GUILD,
+                                            id: X.i.CUSTOMIZE_GUILD,
                                             impressionName: c.ImpressionNames.GUILD_ADD_CUSTOMIZE,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: ed }),
                                         }),
                                         (0, l.jsx)(N.q, {
-                                            id: Y.i.CHANNEL_PROMPT,
+                                            id: X.i.CHANNEL_PROMPT,
                                             impressionName: c.ImpressionNames.GUILD_ADD_CHANNEL_PROMPT,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: eu }),
                                         }),
                                         (0, l.jsx)(N.q, {
-                                            id: Y.i.JOIN_GUILD,
+                                            id: X.i.JOIN_GUILD,
                                             impressionName: c.ImpressionNames.GUILD_ADD_JOIN,
                                             impressionProperties: eT,
                                             children: (0, l.jsx)("div", { className: o()(el.kL, el.tn), children: eE }),
@@ -476,10 +476,10 @@ function ea(e) {
                                     ],
                                 }),
                             }),
-                            O !== Y.i.AGE_GATE
+                            O !== X.i.AGE_GATE
                                 ? (0, l.jsx)(m.s_, { "data-migration-pending": !0, onClick: n, className: el.b })
                                 : null,
-                            O === Y.i.CHOOSE_TEMPLATE
+                            O === X.i.CHOOSE_TEMPLATE
                                 ? (0, l.jsx)(m.jl, {
                                       "data-migration-pending": !0,
                                       justify: p.A.Justify.BETWEEN,
@@ -487,7 +487,7 @@ function ea(e) {
                                       children: (0, l.jsx)(E.Anchor, {
                                           className: el.D3,
                                           onClick: () => {
-                                              S(Y.i.JOIN_GUILD);
+                                              S(X.i.JOIN_GUILD);
                                           },
                                           children: (0, l.jsxs)(h.E, {
                                               variant: "text-sm/medium",
