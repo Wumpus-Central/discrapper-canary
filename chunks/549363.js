@@ -69,8 +69,8 @@ var y = i(334279),
     D = i(202613),
     P = i(243217),
     G = i(652215),
-    M = i(788868);
-class U extends O.A {
+    U = i(202541);
+class M extends O.A {
     id;
     createdAt;
     currency;
@@ -97,7 +97,7 @@ class U extends O.A {
         let t = null != e.payment_source ? D.Ay.createFromServer(e.payment_source) : null,
             i = null != e.sku ? R.A.createFromServer(e.sku) : null,
             n = null != e.subscription ? P.A.createFromServer(e.subscription) : null;
-        return new U({
+        return new M({
             id: e.id,
             createdAt: new Date(e.created_at),
             currency: e.currency,
@@ -161,7 +161,7 @@ class U extends O.A {
         return null != this.subscription;
     }
     get isPremiumSubscription() {
-        return null != this.subscription && M.JM.has(this.subscription.planId);
+        return null != this.subscription && U.JM.has(this.subscription.planId);
     }
     get isPremiumGuildSubscription() {
         return (
@@ -169,7 +169,7 @@ class U extends O.A {
             null !=
                 this.subscription.additionalPlans.find((e) => {
                     let { planId: t } = e;
-                    return M.pW.has(t);
+                    return U.pW.has(t);
                 })
         );
     }
@@ -177,7 +177,7 @@ class U extends O.A {
         return j.Lt(this.flags, 1);
     }
     get isPremiumGift() {
-        return this.isGift && Object.values(M.pe).includes(this.skuId);
+        return this.isGift && Object.values(U.pe).includes(this.skuId);
     }
     get isGuildProductPurchase() {
         return (
@@ -202,7 +202,7 @@ let V = [],
     k = !1;
 function w(e) {
     let { payment: t } = e,
-        i = U.createFromServer(t),
+        i = M.createFromServer(t),
         n = V.findIndex((e) => e.id === t.id);
     -1 === n ? (V.push(i), V.sort((e, t) => t.createdAt.getTime() - e.createdAt.getTime())) : (V[n] = i), (V = [...V]);
 }
@@ -222,7 +222,7 @@ let B = new F(h.h, {
     BILLING_PAYMENTS_FETCH_SUCCESS: function (e) {
         let { payments: t } = e;
         for (let e of ((k = !0), t)) {
-            let t = U.createFromServer(e),
+            let t = M.createFromServer(e),
                 i = V.findIndex((t) => t.id === e.id);
             -1 !== i ? (V[i] = t) : V.push(t);
         }
@@ -367,8 +367,8 @@ var ex = i(769015),
     eD = i(780964),
     eP = i(830543),
     eG = i(766075),
-    eM = i(106799),
-    eU = i(317525),
+    eU = i(106799),
+    eM = i(317525),
     eV = i(71393),
     ek = i(287809),
     ew = i(295405),
@@ -455,7 +455,7 @@ function e3(e) {
         s = (0, ep.Qi)(t, i, { requireCurrentGuild: !1 }),
         l = (0, d.bG)([ef.A], () => ef.A.getGuildProductFetchState(i) === ef.e.FETCHING),
         r = s?.role_id,
-        a = (0, d.bG)([eU.A], () => (null != r ? eU.A.getRole(t, r) : void 0), [t, r]),
+        a = (0, d.bG)([eM.A], () => (null != r ? eM.A.getRole(t, r) : void 0), [t, r]),
         o = (0, eI.A)({ guildId: t, productId: i }),
         u = (s?.attachments?.length ?? 0) > 0,
         c = null != a;
@@ -639,7 +639,7 @@ class e4 extends s.PureComponent {
             ? (0, n.jsxs)("span", {
                   className: eE.db,
                   children: [
-                      (0, n.jsx)(eM.A, { customSize: 16 }),
+                      (0, n.jsx)(eU.A, { customSize: 16, shouldUseThemeColor: !0 }),
                       I.intl.formatToPlainString(I.t.YMor7k, { count: e }),
                   ],
               })
@@ -918,19 +918,19 @@ class e4 extends s.PureComponent {
                     (g.items.forEach((e) => {
                         let { planId: i, quantity: n } = e;
                         (0, Y.xq)(i)
-                            ? (s.push(Y.Ay.getDisplayName(i, !1, m)), (o = (0, Y.mH)(M.hd[i].skuId)))
+                            ? (s.push(Y.Ay.getDisplayName(i, !1, m)), (o = (0, Y.mH)(U.hd[i].skuId)))
                             : (s.push(`${n > 1 ? `${n}x ` : ""}${Y.Ay.getDisplayName(i, !1, m)}`),
-                              null == o && (o = (0, Y.mH)(M.hd[i].skuId))),
+                              null == o && (o = (0, Y.mH)(U.hd[i].skuId))),
                             (0, Y.z4)(i) || (t ??= i);
                     }),
                     null != t)
                 ) {
                     let s = Y.Ay.getPremiumType(t);
-                    e = (0, n.jsx)(e6, { withGradient: s === M.PremiumTypes.TIER_2, compactMode: i });
+                    e = (0, n.jsx)(e6, { withGradient: s === U.PremiumTypes.TIER_2, compactMode: i });
                 }
             } else if (g.type === G.rzx.GUILD) {
                 if (null != u) {
-                    let e = u.interval === M.WT.YEAR ? I.t.V6UFQM : I.t["6oq128"];
+                    let e = u.interval === U.WT.YEAR ? I.t.V6UFQM : I.t["6oq128"];
                     s.push(I.intl.format(e, { planName: u.name })), (o = u.skuId);
                 }
             } else
@@ -1122,8 +1122,8 @@ function e7(e) {
         hasLinkedToApplication: h,
     });
 }
-var e8 = i(687788);
-function e5(e) {
+var e5 = i(687788);
+function e8(e) {
     let { payments: t, locale: i, compactMode: l, numPages: a } = e,
         o = s.useRef(null),
         [d, g] = s.useState(0),
@@ -1147,7 +1147,7 @@ function e5(e) {
             children: (e) => {
                 let { ref: t, ...s } = e;
                 return (0, n.jsx)(b, {
-                    className: e8.GD,
+                    className: e5.GD,
                     currentPageIndex: d,
                     onChangePage: E,
                     numPages: a,
@@ -1155,11 +1155,11 @@ function e5(e) {
                     ref: t,
                     ...s,
                     children: (0, n.jsx)(c.Ch, {
-                        className: e8.Bd,
+                        className: e5.Bd,
                         ref: o,
                         overflow: "auto",
                         children: h.map((e, t) =>
-                            (0, n.jsx)(e7, { className: r()(e8.Nj, e8.Bd), payment: e, locale: i, compactMode: l }, t),
+                            (0, n.jsx)(e7, { className: r()(e5.Nj, e5.Bd), payment: e, locale: i, compactMode: l }, t),
                         ),
                     }),
                 });
@@ -1182,14 +1182,14 @@ class e9 extends s.PureComponent {
         return (
             o()(null != e.paymentGateway, "Expected payment gateway when rendering for external subscription"),
             (0, n.jsxs)(g.Z, {
-                className: e8.K1,
+                className: e5.K1,
                 children: [
                     (0, n.jsx)("div", {
-                        className: e8.BF,
+                        className: e5.BF,
                         children: I.intl.format(I.t["6mIX6s"], { paymentGatewayName: eh.qm[e.paymentGateway] }),
                     }),
                     (0, n.jsx)("div", {
-                        className: e8.Q2,
+                        className: e5.Q2,
                         children: I.intl.format(I.t.eG0uZB, {
                             paymentGatewayName: eh.qm[e.paymentGateway],
                             billingHistoryLink: (0, Y.tW)(e.paymentGateway, "BILLING_HISTORY"),
@@ -1204,26 +1204,26 @@ class e9 extends s.PureComponent {
             a = null != i && i.isPurchasedExternally;
         return l
             ? (0, n.jsxs)("div", {
-                  className: e8.GD,
+                  className: e5.GD,
                   children: [
                       null != i && a ? this.renderPremiumExternalSubscription(i) : null,
                       t.length > 0
                           ? (0, n.jsxs)("div", {
-                                className: r()(e8.PQ, e8.GD),
+                                className: r()(e5.PQ, e5.GD),
                                 children: [
                                     e
                                         ? null
                                         : (0, n.jsx)("div", {
-                                              className: r()(e8.Nj, e8.Bd),
+                                              className: r()(e5.Nj, e5.Bd),
                                               children: (0, n.jsxs)(p.A, {
-                                                  className: e8.Yi,
+                                                  className: e5.Yi,
                                                   children: [
                                                       (0, n.jsx)("div", {
                                                           className: eE.p6,
                                                           children: I.intl.string(I.t["5t11BV"]),
                                                       }),
                                                       (0, n.jsx)("div", {
-                                                          className: e8.Ir,
+                                                          className: e5.Ir,
                                                           children: I.intl.string(I.t.yAAPb2),
                                                       }),
                                                       (0, n.jsx)("div", {
@@ -1233,7 +1233,7 @@ class e9 extends s.PureComponent {
                                                   ],
                                               }),
                                           }),
-                                    (0, n.jsx)(e5, { compactMode: e, locale: s, payments: t, numPages: this.numPages }),
+                                    (0, n.jsx)(e8, { compactMode: e, locale: s, payments: t, numPages: this.numPages }),
                                 ],
                             })
                           : a
@@ -1251,7 +1251,7 @@ class e9 extends s.PureComponent {
 function te(e) {
     let t = e.skuId,
         i = e.subscription?.items[0].planId;
-    return !(null == t || null == i || Object.values(M.pe).includes(t) || (0, Y.ys)(i));
+    return !(null == t || null == i || Object.values(U.pe).includes(t) || (0, Y.ys)(i));
 }
 function tt(e) {
     let t = (0, d.bG)([B], () => B.getPayments()),
