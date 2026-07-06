@@ -395,7 +395,7 @@ var X = a(789645),
     ei = a(641886),
     er = a(780898),
     eo = a(652215),
-    ed = a(89865),
+    ed = a(178347),
     ec = a(427262);
 function eu(e) {
     let { nameplate: t } = e,
@@ -1981,7 +1981,7 @@ function tw(e) {
                     t(3);
                 },
                 children: (0, r.jsx)("div", {
-                    className: $()(tR.vK, tR.Dg),
+                    className: $()(tR.vK, tR.BW),
                     children: (0, r.jsx)(p.E, {
                         variant: "text-md/bold",
                         color: "always-white",

@@ -1805,7 +1805,7 @@ function iR(e) {
                 graphic: {
                     type: "video",
                     ref: o,
-                    src: "https://cdn.discordapp.com/assets/content/5d90dc1e412ad3aa0b39088fba382025e32b718d7bf5d797512be9701b5f53b4.webm",
+                    src: "https://cdn.discordapp.com/assets/content/c0da8c4f64ef225b01b94a5c05d7fece18b9f36338c1f214ffb7b26299058973.webm",
                     aspectRatio: "21/9",
                     loop: !0,
                 },
@@ -3119,7 +3119,7 @@ class ry extends r.PureComponent {
                     n.e("52694"),
                     n.e("43148"),
                     n.e("71811"),
-                    n.e("89572"),
+                    n.e("62883"),
                     n.e("38249"),
                     n.e("40976"),
                     n.e("85216"),
