@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { Ot: () => u, do: () => l, hc: () => c, jC: () => d, ju: () => _ });
+n.d(t, { Ot: () => c, do: () => u, hc: () => d, jC: () => _, jK: () => f, ju: () => h });
 var i,
     r,
     s,
     a,
     o,
-    l =
+    l,
+    u =
         (((i = {}).UNKNOWN = "unknown"),
         (i.ANY = "any"),
         (i.INVITE = "invite"),
@@ -14,9 +15,9 @@ var i,
         (i.ORGANIC_GUILD_TEMPLATES = "organic_guild_template"),
         (i.CREATE_GUILD = "create_guild"),
         i),
-    u = (((r = {}).AGE_GATE = "age_gate"), (r.AGE_GATE_UNDERAGE = "age_gate_underage"), r),
-    c = (((s = {}).CLAIM_ACCOUNT = "claim_account"), (s.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"), s),
-    d =
+    c = (((r = {}).AGE_GATE = "age_gate"), (r.AGE_GATE_UNDERAGE = "age_gate_underage"), r),
+    d = (((s = {}).CLAIM_ACCOUNT = "claim_account"), (s.CLAIM_ACCOUNT_SUCCESS = "claim_account_success"), s),
+    _ =
         (((a = {}).GUILD_TEMPLATES = "guild_templates"),
         (a.GUILD_CREATE = "guild_create"),
         (a.CREATION_INTENT = "creation_intent"),
@@ -24,9 +25,21 @@ var i,
         (a.JOIN_GUILD = "join_guild"),
         (a.SUCCESS = "create_success"),
         a),
-    _ =
+    h =
         (((o = {}).NUF_STARTED = "nuf_started"),
         (o.AGE_GATE = "age_gate"),
         (o.NUF_COMPLETE = "nuf_complete"),
         (o.HUB_CONNECTION = "hub_connection"),
-        o);
+        o),
+    f =
+        (((l = {}).WELCOME = "onboarding_welcome"),
+        (l.APPEARANCE = "onboarding_appearance"),
+        (l.DOWNLOAD_DESKTOP = "onboarding_download_desktop"),
+        (l.PROFILE = "onboarding_profile"),
+        (l.NEXT_STEPS = "onboarding_next_steps"),
+        (l.JOIN_SERVER = "onboarding_join_server"),
+        (l.ADD_FRIEND = "onboarding_add_friend"),
+        (l.EXPLORE = "onboarding_explore"),
+        (l.CREATE_SERVER = "onboarding_create_server"),
+        (l.DISMISSED = "onboarding_dismissed"),
+        l);
