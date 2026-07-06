@@ -2946,7 +2946,7 @@ function l$() {
                   }),
                   (0, i.jsx)(eT.E, {
                       variant: "text-md/medium",
-                      color: "always-white",
+                      color: "text-overlay-light",
                       children: J.intl.string(J.t.Abiuci),
                   }),
               ],

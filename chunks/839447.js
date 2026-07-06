@@ -67,7 +67,7 @@ function h(e) {
                                 "data-hover": !0,
                                 children: (0, l.jsx)(s.E, {
                                     variant: "text-xs/normal",
-                                    color: "always-white",
+                                    color: "text-overlay-light",
                                     children: u.intl.format(u.t.EgKsZA, { memberCount: i }),
                                 }),
                             }),

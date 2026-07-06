@@ -27,17 +27,17 @@ var i = s(627968),
     C = s(780964),
     M = s(766075),
     R = s(909536),
-    D = s(186111),
-    g = s(287809),
+    g = s(186111),
+    D = s(287809),
     k = s(174459),
     H = s(428262),
     b = s(47671),
-    w = s(11029),
-    L = s(742023),
+    L = s(11029),
+    w = s(742023),
     O = s(617617),
     G = s(823459),
     V = s(652215),
-    U = s(788868),
+    U = s(202541),
     W = s(185928);
 function z() {
     let { previewPaneVariant: e } = (0, c.cf)([b.A], () => ({
@@ -121,7 +121,7 @@ function ei() {
                 (0, i.jsx)(P.A, { className: es.PC, size: "md" }),
                 (0, i.jsx)(E.D, {
                     variant: "heading-md/bold",
-                    color: "always-white",
+                    color: "text-overlay-light",
                     children: K.intl.string(K.t.POSLGY),
                 }),
             ],
@@ -137,7 +137,7 @@ function en(e) {
             (0, i.jsx)(u.D, {
                 className: es.VV,
                 onClick: () => {
-                    null != t && t(et.i.DISMISS), s(V.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, w.D)();
+                    null != t && t(et.i.DISMISS), s(V.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, L.D)();
                 },
                 children: (0, i.jsx)(m.a, { size: "md", color: "currentColor", className: es.P0 }),
             }),
@@ -148,7 +148,7 @@ function en(e) {
 function er(e) {
     let { onSubscribeSuccess: t, markAsDismissed: s } = e,
         { analyticsLocations: n } = (0, f.Ay)(I.A.CLIENT_THEMES_EDITOR),
-        [r, a] = (0, c.yK)([g.default, b.A], () => [b.A.gradientPreset, H.Ay.isPremium(g.default.getCurrentUser())]),
+        [r, a] = (0, c.yK)([D.default, b.A], () => [b.A.gradientPreset, H.Ay.isPremium(D.default.getCurrentUser())]),
         l = (0, v.V)(),
         o = (0, H.FY)({
             intervalType: l?.subscription_trial?.interval,
@@ -217,7 +217,7 @@ function ea(e) {
                 onClick: () => {
                     null != t && t(et.i.DISMISS),
                         E(V.HAw.CLIENT_THEME_PREVIEW_CLOSED),
-                        (0, w.D)(),
+                        (0, L.D)(),
                         s || (0, M.openUserSettings)(C.X.APPEARANCE_THEME_CATEGORY);
                 },
                 variant: "secondary",
@@ -229,7 +229,7 @@ function ea(e) {
 function el(e) {
     let { markAsDismissed: t, showClientThemesCoachmark: s, iconSize: r = ee.ni.SIZE_60 } = e,
         { analyticsLocations: l } = (0, f.Ay)(I.A.CLIENT_THEMES_EDITOR),
-        d = (0, c.bG)([D.A], () => D.A.hasLayers()),
+        d = (0, c.bG)([g.A], () => g.A.hasLayers()),
         { isPreview: o, shouldEditorAnimate: E } = (0, c.cf)([b.A, x.Ay], () => ({
             isPreview: b.A.isPreview,
             shouldEditorAnimate: s && !x.Ay.useReducedMotion,
@@ -246,7 +246,7 @@ function el(e) {
         }, [o, l]);
     let T = (() => {
             let e = (0, c.bG)([b.A], () => b.A.gradientPreset),
-                t = (0, c.bG)([L.Ay], () => L.Ay.useSystemTheme === W.Q_.ON),
+                t = (0, c.bG)([w.Ay], () => w.Ay.useSystemTheme === W.Q_.ON),
                 [s, i] = (0, n.useState)(t);
             return (
                 (0, n.useEffect)(() => {

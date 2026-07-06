@@ -78,7 +78,7 @@ let f = function (e) {
                 children: [
                     (0, l.jsx)(d.E, {
                         variant: "heading-xxl/extrabold",
-                        color: g ? "text-strong" : "always-white",
+                        color: g ? "text-strong" : "text-overlay-light",
                         tag: "span",
                         children: R,
                     }),

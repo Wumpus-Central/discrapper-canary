@@ -18,8 +18,8 @@ var l,
     x = t(652215),
     I = t(375708),
     f = t(186349);
-let T = ["embedded_cover"],
-    v = { tension: 800, friction: 24 };
+let v = ["embedded_cover"],
+    T = { tension: 800, friction: 24 };
 var _ =
     (((l = _ || {})[(l.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (l[(l.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
@@ -38,7 +38,7 @@ function j(e) {
             locationObject: {},
             onActivityItemSelected: l,
             embeddedActivitiesManager: g.A,
-            assetNames: T,
+            assetNames: v,
             commandOrigin: j,
         }),
         [y, R] = s.useState(!1),
@@ -65,7 +65,7 @@ function j(e) {
                             className: f.aF,
                             children: (0, i.jsx)(u.E, {
                                 variant: "text-sm/medium",
-                                color: "always-white",
+                                color: "text-overlay-light",
                                 children: I.intl.string(I.t.VJlc0S),
                             }),
                         }),
@@ -77,7 +77,7 @@ function j(e) {
                             className: r()(f.aF, f.pS),
                             children: (0, i.jsx)(u.E, {
                                 variant: "text-sm/medium",
-                                color: "always-white",
+                                color: "text-overlay-light",
                                 children: I.intl.string(I.t["wH/wDO"]),
                             }),
                         }),
@@ -95,7 +95,7 @@ function j(e) {
         onMouseLeave: M,
         className: f.XA,
         children: (0, i.jsx)(A.c, {
-            config: v,
+            config: T,
             from: { value: 0 },
             to: { value: +!!y },
             children: (e) => {

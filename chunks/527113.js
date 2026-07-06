@@ -10,10 +10,10 @@ var r = n(503698),
     u = n(534514),
     c = n(116891),
     d = n(652215),
-    _ = n(788868),
+    _ = n(202541),
     h = n(375708),
     f = n(131148);
-let p = [
+let E = [
     {
         getPerkLabel: () => h.intl.string(h.t.tIiwuj),
         getTier0Value: () => _.TG[d.TVA.NONE].limits.emoji,
@@ -122,7 +122,7 @@ let p = [
         getTier3Value: () => !0,
     },
 ];
-function E(e) {
+function p(e) {
     let { value: t, isBoosted: n = !1 } = e;
     return "boolean" == typeof t
         ? t
@@ -154,7 +154,7 @@ function m(e) {
               className: s()(f.ER, { [f.GH]: n === d.TVA.TIER_2, [f.z5]: n === d.TVA.TIER_3 }),
               children: (0, i.jsx)(l.E, {
                   className: f.uQ,
-                  color: "always-white",
+                  color: "text-overlay-light",
                   variant: "text-xs/bold",
                   children: t === d.TVA.TIER_3 ? h.intl.string(h.t.d849Up) : h.intl.string(h.t.dZeX1z),
               }),
@@ -260,11 +260,11 @@ function g(e) {
                                     }),
                                 ],
                             }),
-                            p.map((e, t) =>
+                            E.map((e, t) =>
                                 (0, i.jsxs)(
                                     "div",
                                     {
-                                        className: s()(f.nM, { [f.fW]: t === p.length - 1 }),
+                                        className: s()(f.nM, { [f.fW]: t === E.length - 1 }),
                                         children: [
                                             (0, i.jsx)("div", {
                                                 className: s()(f.Hn, f.DV),
@@ -277,19 +277,19 @@ function g(e) {
                                             !a &&
                                                 (0, i.jsx)("div", {
                                                     className: s()(f.Hn, f.pU),
-                                                    children: (0, i.jsx)(E, { value: e.getTier0Value() }),
+                                                    children: (0, i.jsx)(p, { value: e.getTier0Value() }),
                                                 }),
                                             (0, i.jsx)("div", {
                                                 className: s()(f.Hn, f.pU),
-                                                children: (0, i.jsx)(E, { value: e.getTier1Value(), isBoosted: !0 }),
+                                                children: (0, i.jsx)(p, { value: e.getTier1Value(), isBoosted: !0 }),
                                             }),
                                             (0, i.jsx)("div", {
                                                 className: s()(f.Hn, f.pU),
-                                                children: (0, i.jsx)(E, { value: e.getTier2Value(), isBoosted: !0 }),
+                                                children: (0, i.jsx)(p, { value: e.getTier2Value(), isBoosted: !0 }),
                                             }),
                                             (0, i.jsx)("div", {
                                                 className: s()(f.Hn, f.pU),
-                                                children: (0, i.jsx)(E, { value: e.getTier3Value(), isBoosted: !0 }),
+                                                children: (0, i.jsx)(p, { value: e.getTier3Value(), isBoosted: !0 }),
                                             }),
                                         ],
                                     },

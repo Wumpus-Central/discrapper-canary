@@ -8,10 +8,10 @@ var l = a(627968),
     d = a(735353),
     c = a(364801),
     u = a(975117);
-function h() {
+function x() {
     return (0, l.jsx)("div", { style: { background: "rgba(255, 255, 255, 0.6)", height: 120, minWidth: 120 } });
 }
-var x = a(450117),
+var h = a(450117),
     m = a(488757);
 function b() {
     return (0, l.jsx)("div", {
@@ -196,37 +196,37 @@ let R = {
                                 (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "red" },
-                                        children: (0, l.jsx)(h, {}),
+                                        children: (0, l.jsx)(x, {}),
                                     }),
                                 }),
                                 (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "orange" },
-                                        children: (0, l.jsx)(h, {}),
+                                        children: (0, l.jsx)(x, {}),
                                     }),
                                 }),
                                 (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "yellow" },
-                                        children: (0, l.jsx)(h, {}),
+                                        children: (0, l.jsx)(x, {}),
                                     }),
                                 }),
                                 (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "green" },
-                                        children: (0, l.jsx)(h, {}),
+                                        children: (0, l.jsx)(x, {}),
                                     }),
                                 }),
                                 (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "blue" },
-                                        children: (0, l.jsx)(h, {}),
+                                        children: (0, l.jsx)(x, {}),
                                     }),
                                 }),
                                 (0, l.jsx)(u.A, {
                                     children: (0, l.jsx)("div", {
                                         style: { background: "violet" },
-                                        children: (0, l.jsx)(h, {}),
+                                        children: (0, l.jsx)(x, {}),
                                     }),
                                 }),
                             ],
@@ -243,37 +243,37 @@ let R = {
                                         (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "red" },
-                                                children: (0, l.jsx)(h, {}),
+                                                children: (0, l.jsx)(x, {}),
                                             }),
                                         }),
                                         (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "orange" },
-                                                children: (0, l.jsx)(h, {}),
+                                                children: (0, l.jsx)(x, {}),
                                             }),
                                         }),
                                         (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "yellow" },
-                                                children: (0, l.jsx)(h, {}),
+                                                children: (0, l.jsx)(x, {}),
                                             }),
                                         }),
                                         (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "green" },
-                                                children: (0, l.jsx)(h, {}),
+                                                children: (0, l.jsx)(x, {}),
                                             }),
                                         }),
                                         (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "blue" },
-                                                children: (0, l.jsx)(h, {}),
+                                                children: (0, l.jsx)(x, {}),
                                             }),
                                         }),
                                         (0, l.jsx)(u.A, {
                                             children: (0, l.jsx)("div", {
                                                 style: { background: "violet" },
-                                                children: (0, l.jsx)(h, {}),
+                                                children: (0, l.jsx)(x, {}),
                                             }),
                                         }),
                                     ],
@@ -641,7 +641,7 @@ let R = {
                                 (0, l.jsxs)(m.A, {
                                     ...e,
                                     children: [
-                                        (0, l.jsx)(x.A, {
+                                        (0, l.jsx)(h.A, {
                                             href: "",
                                             backgroundImage: {
                                                 src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
@@ -654,7 +654,7 @@ let R = {
                                             },
                                             ctaText: "View The Collection",
                                         }),
-                                        (0, l.jsx)(x.A, {
+                                        (0, l.jsx)(h.A, {
                                             href: "",
                                             backgroundImage: {
                                                 src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
@@ -667,7 +667,7 @@ let R = {
                                             },
                                             ctaText: "View The Collection",
                                         }),
-                                        (0, l.jsx)(x.A, {
+                                        (0, l.jsx)(h.A, {
                                             href: "",
                                             backgroundImage: {
                                                 src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
@@ -680,7 +680,7 @@ let R = {
                                             },
                                             ctaText: "View The Collection",
                                         }),
-                                        (0, l.jsx)(x.A, {
+                                        (0, l.jsx)(h.A, {
                                             href: "",
                                             backgroundImage: {
                                                 src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
@@ -765,7 +765,7 @@ let R = {
                                 columns: 2,
                                 children: [
                                     (0, l.jsx)(H.A, {
-                                        children: (0, l.jsx)(x.A, {
+                                        children: (0, l.jsx)(h.A, {
                                             backgroundImage: {
                                                 src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
                                             },
@@ -780,7 +780,7 @@ let R = {
                                         }),
                                     }),
                                     (0, l.jsx)(H.A, {
-                                        children: (0, l.jsx)(x.A, {
+                                        children: (0, l.jsx)(h.A, {
                                             backgroundImage: {
                                                 src: "https://cdn.discordapp.com/assets/content/cd657aa88cb5c636a97dd3a5d68debfb009515cdc1c541296c1ac4e3ad5fc63e",
                                             },
@@ -819,7 +819,7 @@ let N = function (e) {
             backgroundPosition: "left",
             children: (0, l.jsx)("div", {
                 className: W.R,
-                children: (0, l.jsx)(r.E, { variant: "text-lg/bold", color: "always-white", children: s }),
+                children: (0, l.jsx)(r.E, { variant: "text-lg/bold", color: "text-overlay-light", children: s }),
             }),
         }),
     });
@@ -1100,14 +1100,14 @@ var ei = a(3830),
     ed = a(338124),
     ec = a(993077),
     eu = a(824388);
-function eh(e) {
+function ex(e) {
     let { color: t, children: a } = e;
     return (0, l.jsx)(ec.Z, {
         style: { backgroundColor: t, padding: "16px", minWidth: "100px", minHeight: "100px" },
         children: (0, l.jsx)(r.E, { variant: "text-md/semibold", children: a }),
     });
 }
-var ex = a(32236),
+var eh = a(32236),
     em = a(572204);
 let eb = {
     title: "Mana",
@@ -1243,9 +1243,9 @@ let eb = {
                             children: (0, l.jsxs)(eu.A, {
                                 ...e,
                                 children: [
-                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(ex, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(ex, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(ex, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
@@ -1257,9 +1257,9 @@ let eb = {
                                 ...e,
                                 direction: "horizontal",
                                 children: [
-                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(ex, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(ex, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(ex, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
@@ -1270,9 +1270,9 @@ let eb = {
                                 ...e,
                                 direction: "vertical",
                                 children: [
-                                    (0, l.jsx)(eh, { color: "#5865F2", children: "Item 1" }),
-                                    (0, l.jsx)(eh, { color: "#57F287", children: "Item 2" }),
-                                    (0, l.jsx)(eh, { color: "#FEE75C", children: "Item 3" }),
+                                    (0, l.jsx)(ex, { color: "#5865F2", children: "Item 1" }),
+                                    (0, l.jsx)(ex, { color: "#57F287", children: "Item 2" }),
+                                    (0, l.jsx)(ex, { color: "#FEE75C", children: "Item 3" }),
                                 ],
                             }),
                         }),
@@ -1324,18 +1324,18 @@ let eb = {
                             variant: "text-lg/semibold",
                             children: "Text component for Layout System content.",
                         }),
-                        (0, l.jsx)(ex.A, { ...e }),
+                        (0, l.jsx)(eh.A, { ...e }),
                         (0, l.jsx)("hr", {}),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-xs/normal", variant: "text-xs/normal" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-sm/normal", variant: "text-sm/normal" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-sm/medium", variant: "text-sm/medium" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-sm/semibold", variant: "text-sm/semibold" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-md/normal", variant: "text-md/normal" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-md/medium", variant: "text-md/medium" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-md/semibold", variant: "text-md/semibold" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-lg/normal", variant: "text-lg/normal" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
-                        (0, l.jsx)(ex.A, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-xs/normal", variant: "text-xs/normal" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-sm/normal", variant: "text-sm/normal" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-sm/medium", variant: "text-sm/medium" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-sm/semibold", variant: "text-sm/semibold" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-md/normal", variant: "text-md/normal" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-md/medium", variant: "text-md/medium" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-md/semibold", variant: "text-md/semibold" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-lg/normal", variant: "text-lg/normal" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-lg/medium", variant: "text-lg/medium" }),
+                        (0, l.jsx)(eh.A, { content: "Variant = text-lg/semibold", variant: "text-lg/semibold" }),
                     ],
                 });
             },
@@ -2036,7 +2036,7 @@ let eT = {
                                     ctaText: c,
                                     href: u,
                                 } = e,
-                                h = {
+                                x = {
                                     backgroundImage: { src: a },
                                     logoSrc: { src: n },
                                     supplementalImage: { src: s },
@@ -2050,7 +2050,7 @@ let eT = {
                                         children:
                                             "Featured Collection will take up the full width of the parent, so it is best suited for LayoutSystemStack or Grid parents",
                                     }),
-                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(x.A, { ...h }) }),
+                                    (0, l.jsx)(d.A, { children: (0, l.jsx)(h.A, { ...x }) }),
                                     (0, l.jsxs)(d.A, {
                                         children: [
                                             (0, l.jsxs)(r.E, {
@@ -2059,7 +2059,7 @@ let eT = {
                                             }),
                                             (0, l.jsxs)(i.Ay, {
                                                 columns: t,
-                                                children: [(0, l.jsx)(x.A, { ...h }), (0, l.jsx)(x.A, { ...h })],
+                                                children: [(0, l.jsx)(h.A, { ...x }), (0, l.jsx)(h.A, { ...x })],
                                             }),
                                         ],
                                     }),
@@ -2069,10 +2069,10 @@ let eT = {
                                             (0, l.jsxs)(o.Ym, {
                                                 direction: "horizontal",
                                                 children: [
-                                                    (0, l.jsx)(x.A, { ...h }),
-                                                    (0, l.jsx)(x.A, { ...h }),
-                                                    (0, l.jsx)(x.A, { ...h }),
-                                                    (0, l.jsx)(x.A, { ...h }),
+                                                    (0, l.jsx)(h.A, { ...x }),
+                                                    (0, l.jsx)(h.A, { ...x }),
+                                                    (0, l.jsx)(h.A, { ...x }),
+                                                    (0, l.jsx)(h.A, { ...x }),
                                                 ],
                                             }),
                                         ],

@@ -41,12 +41,12 @@ function _() {
                 children: [
                     (0, l.jsx)(u.E, {
                         variant: "text-md/bold",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: p.intl.string(p.t.OEtqpm),
                     }),
                     (0, l.jsx)(u.E, {
                         variant: "text-md/medium",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: p.intl.formatToPlainString(p.t["2h5M+X"], { availableCount: e.length }),
                     }),
                 ],

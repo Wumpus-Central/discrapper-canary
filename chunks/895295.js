@@ -8,7 +8,13 @@ var s = l(627968),
     c = l(318626);
 function u(e) {
     let { text: t } = e;
-    return (0, s.jsx)(d.E, { tag: "span", variant: "eyebrow", color: "always-white", className: c.Fi, children: t });
+    return (0, s.jsx)(d.E, {
+        tag: "span",
+        variant: "eyebrow",
+        color: "text-overlay-light",
+        className: c.Fi,
+        children: t,
+    });
 }
 function o(e) {
     let { headingComponent: t, headingSubText: l, value: a, planRadioOptions: o, ...m } = e,

@@ -12,15 +12,15 @@ var i = n(627968),
     _ = n(403581),
     h = n(834730),
     f = n(736653),
-    p = n(775602),
-    E = n(131607),
+    E = n(775602),
+    p = n(131607),
     m = n(49999),
     g = n(375708),
     A = n(344767);
 let I = 41;
 function T() {
-    let e = (0, o.bG)([p.Ay], () => p.Ay.useReducedMotion),
-        [t, s] = (0, E.kn)([l.M.TRIAL_NUX_EMOJI_PICKER]),
+    let e = (0, o.bG)([E.Ay], () => E.Ay.useReducedMotion),
+        [t, s] = (0, p.kn)([l.M.TRIAL_NUX_EMOJI_PICKER]),
         u = t === l.M.TRIAL_NUX_EMOJI_PICKER;
     return (
         r.useEffect(
@@ -51,7 +51,7 @@ function T() {
                                 (0, i.jsx)(_.t, { size: "xs", color: "white" }),
                                 (0, i.jsx)(h.E, {
                                     variant: "text-xs/medium",
-                                    color: "always-white",
+                                    color: "text-overlay-light",
                                     lineClamp: 1,
                                     children: g.intl.string(g.t["BMw+7I"]),
                                 }),

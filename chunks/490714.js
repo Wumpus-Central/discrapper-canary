@@ -2222,7 +2222,7 @@ function lp(e) {
                                         (0, s.jsx)(la, { color: nC.A.colors.WHITE.css }),
                                         (0, s.jsx)(A.E, {
                                             variant: "text-sm/semibold",
-                                            color: "always-white",
+                                            color: "text-overlay-light",
                                             children: d.coverImageOverlayText,
                                         }),
                                     ],

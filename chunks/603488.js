@@ -22,7 +22,7 @@ function c() {
               className: l()(u.Fg, u.N4),
               children: (0, i.jsx)(o.E, {
                   variant: "eyebrow",
-                  color: "always-white",
+                  color: "text-overlay-light",
                   children: h.intl.string(h.t.OS9KPu),
               }),
           });

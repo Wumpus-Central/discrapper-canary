@@ -15,10 +15,10 @@ var r,
     E = n(903209),
     R = n(652165),
     p = n(287809),
-    A = n(174459),
-    g = n(662388),
-    N = n(440938),
-    v = n(298072),
+    g = n(174459),
+    A = n(662388),
+    v = n(440938),
+    N = n(298072),
     j = n(993408),
     I = n(503089),
     _ = n(331884),
@@ -199,7 +199,7 @@ function ec(e) {
             }, [e, t]);
         })(u, !1),
         { disabledReason: m } = (0, er.I)(r.skuId),
-        h = (0, v.Q)(t),
+        h = (0, N.Q)(t),
         x = (0, T.B1)(t),
         f = x ? t.variants[a ?? h] : null,
         E = s.useRef(null);
@@ -262,10 +262,10 @@ var eo =
     eE = n(262295),
     eR = n(320095),
     ep = n(963852),
-    eA = n(763754),
-    eg = n(20851),
-    eN = n(986687),
-    ev = n(101058),
+    eg = n(763754),
+    eA = n(20851),
+    ev = n(986687),
+    eN = n(101058),
     ej = n(84540),
     eI = n(836602),
     e_ = n(428262),
@@ -348,7 +348,7 @@ function eL(e) {
                 outline: !0,
                 "aria-hidden": !0,
                 children: [
-                    (0, i.jsx)(eg.A, { className: eT.G5, author: (0, eA.p_)(n), message: n }, n.id),
+                    (0, i.jsx)(eA.A, { className: eT.G5, author: (0, eg.p_)(n), message: n }, n.id),
                     (0, i.jsxs)("div", {
                         className: eT.lG,
                         children: [
@@ -365,39 +365,39 @@ function eb(e) {
     let { product: t, user: n, activeBundleSlide: r } = e,
         l = e_.Ay.canUsePremiumProfileCustomization(n),
         { pendingAvatar: a, ...c } = (0, u.cf)([eI.A], () => eI.A.getPendingChanges()),
-        o = (0, ev.V7)({ userId: n.id, image: a }),
+        o = (0, eN.V7)({ userId: n.id, image: a }),
         d = t.type === L.R.BUNDLE ? t.items[r ?? 0] : void 0,
         m = d?.type ?? t.type,
         h = m === L.R.AVATAR_DECORATION,
         x = m === L.R.PROFILE_EFFECT,
         { firstAvatarDecoration: f, firstProfileEffect: E, firstNameplate: R, firstProfileFrame: p } = (0, K.f5)(t),
-        A = d?.type === L.R.AVATAR_DECORATION ? d : f,
-        g = d?.type === L.R.PROFILE_EFFECT ? d : E,
-        N = d?.type === L.R.PROFILE_FRAME ? d : p,
-        v = d?.type === L.R.NAMEPLATE ? d : R;
+        g = d?.type === L.R.AVATAR_DECORATION ? d : f,
+        A = d?.type === L.R.PROFILE_EFFECT ? d : E,
+        v = d?.type === L.R.PROFILE_FRAME ? d : p,
+        N = d?.type === L.R.NAMEPLATE ? d : R;
     if (
         (s.useEffect(() => {
-            if (null != A) return (0, ej.p)({ avatarDecoration: A }), () => (0, ej.p)({ avatarDecoration: void 0 });
-        }, [A]),
-        m === L.R.NAMEPLATE && null != v)
+            if (null != g) return (0, ej.p)({ avatarDecoration: g }), () => (0, ej.p)({ avatarDecoration: void 0 });
+        }, [g]),
+        m === L.R.NAMEPLATE && null != N)
     )
         return (0, i.jsx)("div", {
             className: eT.Zj,
-            children: (0, i.jsx)(eO, { user: n, nameplate: v, avatarDecoration: A }),
+            children: (0, i.jsx)(eO, { user: n, nameplate: N, avatarDecoration: g }),
         });
     return (0, i.jsx)("div", {
         className: h ? eT.RA : eT.hZ,
         children: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(eN.A, {
+                (0, i.jsx)(ev.A, {
                     ...c,
                     pendingAvatar: o,
                     user: n,
                     canUsePremiumCustomization: l,
-                    pendingAvatarDecoration: A,
-                    pendingProfileEffect: g,
+                    pendingAvatarDecoration: g,
+                    pendingProfileEffect: A,
                     profileEffectRestartKey: r,
-                    pendingProfileFrame: N,
+                    pendingProfileFrame: v,
                     disabledInputs: !0,
                     hideMessageInput: !x,
                     hideCustomStatus: !0,
@@ -441,7 +441,7 @@ function eU() {
                                 (0, i.jsx)(eP.U, { color: eS.A.colors.WHITE }),
                                 (0, i.jsx)(U.E, {
                                     variant: "text-sm/medium",
-                                    color: "always-white",
+                                    color: "text-overlay-light",
                                     children: H.intl.string(e),
                                 }),
                             ],
@@ -460,10 +460,10 @@ function ew(e) {
     let { user: t } = e,
         n = e_.Ay.canUsePremiumProfileCustomization(t),
         { pendingAvatar: r, ...s } = (0, eM.cf)([eI.A], () => eI.A.getPendingChanges()),
-        l = (0, ev.V7)({ userId: t.id, image: r });
+        l = (0, eN.V7)({ userId: t.id, image: r });
     return (0, i.jsx)("div", {
         className: eH.k,
-        children: (0, i.jsx)(eN.A, {
+        children: (0, i.jsx)(ev.A, {
             ...s,
             pendingAvatar: l,
             user: t,
@@ -701,8 +701,8 @@ function tR(e) {
     });
 }
 var tp = n(219103),
-    tA = n(469215);
-function tg(e) {
+    tg = n(469215);
+function tA(e) {
     let {
             product: t,
             hasShopDiscount: n,
@@ -719,27 +719,27 @@ function tg(e) {
     let { defaultPrice: m, showDefaultPriceOnly: h } = d;
     if (h)
         return (0, i.jsx)("div", {
-            className: D()(tA.kG, l),
+            className: D()(tg.kG, l),
             children: (0, i.jsx)(tp.x, { priceAmount: m.amount, priceCurrency: m.currency }),
         });
     let { showDiscountPrice: x, originalPrice: f, finalPrice: E } = d;
     return (0, i.jsxs)("div", {
-        className: D()(tA.kG, l),
+        className: D()(tg.kG, l),
         children: [
-            c ? null : (0, i.jsx)(tR, { price: f, className: tA.q9 }),
+            c ? null : (0, i.jsx)(tR, { price: f, className: tg.q9 }),
             (0, i.jsx)(tp.x, {
                 priceAmount: E.amount,
                 priceCurrency: E.currency,
                 discount: s,
-                className: D()({ [tA.q9]: null == a }),
+                className: D()({ [tg.q9]: null == a }),
                 discountIconConfig: x && null != o ? { displayMode: o, source: r ?? j.D0.NITRO, size: u } : void 0,
                 discountOfferAmount: a,
             }),
         ],
     });
 }
-var tN = n(403581),
-    tv = n(532794),
+var tv = n(403581),
+    tN = n(532794),
     tj = n(202541),
     tI = n(447806);
 function t_(e) {
@@ -751,7 +751,7 @@ function t_(e) {
         innerRef: l,
         onClick: () => {
             n?.(es.sH.SUBSCRIBE_NOW),
-                (0, tv.A)({ subscriptionTier: tj.pe.TIER_2, analyticsLocations: r, returnRef: l });
+                (0, tN.A)({ subscriptionTier: tj.pe.TIER_2, analyticsLocations: r, returnRef: l });
         },
         children: t,
     });
@@ -768,7 +768,7 @@ function tT(e) {
             (0, i.jsx)(eZ.m, {
                 text: H.intl.string(H.t.MPFyJ5),
                 "aria-label": H.intl.string(H.t.X3Ekj8),
-                children: (0, i.jsx)(tN.t, { size: "md", color: "currentColor", className: tC.o }),
+                children: (0, i.jsx)(tv.t, { size: "md", color: "currentColor", className: tC.o }),
             }),
             (0, i.jsx)(U.E, {
                 variant: "text-xs/medium",
@@ -820,7 +820,7 @@ function tb(e) {
                     (0, i.jsxs)("div", {
                         className: tO.pw,
                         children: [
-                            (0, i.jsx)(tg, {
+                            (0, i.jsx)(tA, {
                                 product: l,
                                 discount: s,
                                 hasShopDiscount: n,
@@ -873,7 +873,7 @@ function tM(e) {
             onTrackClick: f,
             canGiftProduct: E,
         } = e,
-        { cardId: p, sessionId: A, tilePosition: v } = (0, N.uM)() ?? {},
+        { cardId: p, sessionId: g, tilePosition: N } = (0, v.uM)() ?? {},
         I = (0, e8.L)(tj.PremiumTypes.TIER_2),
         _ = (0, j.xM)(t),
         T = (0, eW.Do)("CollectiblesShopProductDetailsModal") && r.type === L.R.PROFILE_FRAME,
@@ -909,10 +909,10 @@ function tM(e) {
             (0, e9.A)({
                 skuId: r.skuId,
                 analyticsLocations: m,
-                discoverySessionId: A,
+                discoverySessionId: g,
                 onClose: (e) => (e ? x() : (0, tk.tE)()),
             });
-    }, [m, x, r.skuId, f, A]);
+    }, [m, x, r.skuId, f, g]);
     function ei(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             r = (0, i.jsx)(e3.A, {
@@ -933,8 +933,8 @@ function tM(e) {
                         giftRecipient: o,
                         giftingOrigin: d,
                         cardId: p,
-                        sessionId: A,
-                        tilePosition: v,
+                        sessionId: g,
+                        tilePosition: N,
                     });
                 },
             });
@@ -957,7 +957,7 @@ function tM(e) {
                         (0, R.B4)({
                             skuId: r.skuId,
                             onComplete: (e) => {
-                                (0, g.gB)(),
+                                (0, A.gB)(),
                                     x(),
                                     (0, tD.A)({
                                         product: r,
@@ -967,7 +967,7 @@ function tM(e) {
                                     });
                             },
                             analyticsLocations: m,
-                            discoverySessionId: A,
+                            discoverySessionId: g,
                         });
                 },
                 disabled: s,
@@ -1087,7 +1087,7 @@ function tM(e) {
                             loadingFinishedLabel: H.intl.string(H.t.Pg1UP5),
                             onClick: async () => {
                                 f(es.sH.ADD_TO_COLLECTION),
-                                    await (0, g.iJ)(r.skuId),
+                                    await (0, A.iJ)(r.skuId),
                                     x(),
                                     (0, tD.A)({
                                         product: r,
@@ -1201,7 +1201,7 @@ var tw = n(34188),
 function tJ(e) {
     let { skuId: t, tab: n, onTrackClick: r } = e,
         l = s.useCallback(() => {
-            A.default.track(C.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
+            g.default.track(C.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
                 r?.(es.sH.COPY_LINK),
                 (0, tq.C)((0, tZ.o)(t, n), () => (0, tW.P0)((0, tY.o)(H.intl.string(H.t["L/PwZf"]), t$.Ck.SUCCESS)));
         }, [t, n, r]);
@@ -1219,7 +1219,7 @@ var tQ = n(427209),
 function t4(e) {
     let { skuId: t, product: r, productName: l, tab: a, onTrackClick: c } = e,
         o = s.useCallback(() => {
-            A.default.track(C.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
+            g.default.track(C.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
                 c?.(es.sH.SHARE_LINK),
                 ((e) => {
                     let { skuId: t, product: r, productName: s, tab: l, source: a } = e;
@@ -1232,8 +1232,8 @@ function t4(e) {
                                 n.e("43880"),
                                 n.e("89084"),
                                 n.e("44780"),
-                                n.e("65617"),
                                 n.e("36946"),
+                                n.e("65617"),
                                 n.e("92639"),
                                 n.e("44385"),
                                 n.e("40963"),
@@ -1313,26 +1313,26 @@ function t6(e) {
         } = e,
         R = eK(n),
         p = (0, tK.x)("CollectiblesShopProductDetailsModal"),
-        A = (0, j.aw)(l),
-        g = A ? l.items.length : 0,
-        N = s.useCallback(() => {
-            g <= 1 || o((e) => (e - 1 + g) % g);
-        }, [g, o]),
+        g = (0, j.aw)(l),
+        A = g ? l.items.length : 0,
         v = s.useCallback(() => {
-            g <= 1 || o((e) => (e + 1) % g);
-        }, [g, o]),
+            A <= 1 || o((e) => (e - 1 + A) % A);
+        }, [A, o]),
+        N = s.useCallback(() => {
+            A <= 1 || o((e) => (e + 1) % A);
+        }, [A, o]),
         I = s.useCallback(
             (e) => {
-                if (g <= 1) return;
+                if (A <= 1) return;
                 let t = e.target;
                 "INPUT" === t.tagName ||
                     "TEXTAREA" === t.tagName ||
                     t.isContentEditable ||
                     ("ArrowLeft" === e.key
-                        ? (e.preventDefault(), N())
-                        : "ArrowRight" === e.key && (e.preventDefault(), v()));
+                        ? (e.preventDefault(), v())
+                        : "ArrowRight" === e.key && (e.preventDefault(), N()));
             },
-            [g, N, v],
+            [A, v, N],
         ),
         _ = s.useCallback(() => {
             f(es.sH.CLOSE_DETAIL), x();
@@ -1379,7 +1379,7 @@ function t6(e) {
                         isOrbCheckoutModalOpen: d,
                     }),
                 }),
-                A && g > 1 && (0, i.jsx)(t5, { goPrev: N, goNext: v }),
+                g && A > 1 && (0, i.jsx)(t5, { goPrev: v, goNext: N }),
                 (0, i.jsxs)("div", {
                     className: t7.VG,
                     children: [
@@ -1431,7 +1431,7 @@ let nt = function (e) {
         w = (0, u.bG)([p.default], () => p.default.getCurrentUser()),
         G = (0, P.f)(r),
         { previewingVariantIndex: V } = G,
-        z = (0, v.Q)(r),
+        z = (0, N.Q)(r),
         K = b(r, V),
         W = (0, T.rb)(r, z);
     a()(null != W, "Selected product should not be null");
@@ -1444,25 +1444,25 @@ let nt = function (e) {
     }, [w]);
     let Z = s.useMemo(() => (0, j.V6)(r.type, r.skuId), [r.type, r.skuId]);
     s.useEffect(() => {
-        A.default.track(C.HAw.OPEN_MODAL, {
+        g.default.track(C.HAw.OPEN_MODAL, {
             type: C.JJy.COLLECTIBLES_SHOP_DETAILS_MODAL,
             source: S,
             location_stack: Y,
             sku_id: W.skuId,
             product_type: Z,
         }),
-            (0, g.RD)(W.skuId);
+            (0, A.RD)(W.skuId);
     }, [S, Y, W.skuId, Z]);
-    let { cardId: J, sessionId: Q, tilePosition: ee } = (0, N.uM)() ?? {},
+    let { cardId: J, sessionId: Q, tilePosition: ee } = (0, v.uM)() ?? {},
         et = s.useMemo(() => (0, T.v8)(r), [r]),
         en = (function (e) {
             let { skuId: t, productSkuIds: n, analyticsLocations: r } = e,
-                { cardId: i, sessionId: l } = (0, N.uM)() ?? {},
+                { cardId: i, sessionId: l } = (0, v.uM)() ?? {},
                 a = (0, _.o)(),
                 c = (0, j.xM)(a);
             return s.useCallback(
                 (e) => {
-                    A.default.track(C.HAw.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, {
+                    g.default.track(C.HAw.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, {
                         sku_id: t,
                         cta: e,
                         shop_session_id: l,

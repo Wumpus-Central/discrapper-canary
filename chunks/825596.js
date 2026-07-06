@@ -36,7 +36,7 @@ function y(e) {
         children: [
             (0, i.jsx)(f.E, {
                 variant: "text-sm/normal",
-                color: "always-white",
+                color: "text-overlay-light",
                 className: T.__invalid_badgeText,
                 children: t,
             }),
@@ -54,8 +54,8 @@ function b() {
         iconColor: _.A.unsafe_rawColors.PRIMARY_330.css,
     });
 }
-var L = n(818348),
-    k = n(559046);
+var k = n(818348),
+    L = n(559046);
 function R(e) {
     let {
         showEditProduct: t,
@@ -74,7 +74,7 @@ function R(e) {
         onSelect: I,
     } = e;
     return (0, i.jsx)("div", {
-        className: k.li,
+        className: L.li,
         children: (0, i.jsxs)(a.W, {
             "data-menu-migrated": !0,
             navId: "guild-product-context",
@@ -195,11 +195,11 @@ function P(e) {
                     "aria-label": N.intl.formatToPlainString(N.t.RtqjeB, { productName: t.name }),
                     "aria-haspopup": "listbox",
                     "aria-expanded": l,
-                    className: k.hC,
+                    className: L.hC,
                     children: (0, i.jsx)(g.F, {
                         size: "md",
                         color: "currentColor",
-                        className: k.Su,
+                        className: L.Su,
                         "aria-hidden": !0,
                     }),
                 });
@@ -219,11 +219,11 @@ function M(e) {
             disabled: c = !1,
         } = e,
         u = (0, I.R)(t, 600),
-        m = null !== t.price_tier ? (0, C.$g)(t.price_tier, L.Yr.USD) : void 0,
+        m = null !== t.price_tier ? (0, C.$g)(t.price_tier, k.Yr.USD) : void 0,
         h = (0, v.z)(t);
     return (0, i.jsxs)(p.s, {
         tag: "article",
-        className: r()(k.gc, k.Um, { [k.r9]: c }),
+        className: r()(L.gc, L.Um, { [L.r9]: c }),
         onClick: c ? void 0 : l,
         onContextMenu: function (e) {
             (0, E.L3)(e, () =>
@@ -251,28 +251,28 @@ function M(e) {
         },
         "aria-label": N.intl.formatToPlainString(N.t["X/yAKs"], { productName: t.name }),
         children: [
-            (0, i.jsx)("img", { alt: "", src: u, className: k.K_ }),
+            (0, i.jsx)("img", { alt: "", src: u, className: L.K_ }),
             (0, i.jsxs)("div", {
-                className: k.aG,
+                className: L.aG,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: k.jb,
+                        className: L.jb,
                         children: [
                             (0, i.jsx)(A.D, {
                                 variant: "text-md/semibold",
                                 color: "text-strong",
-                                className: k.tZ,
+                                className: L.tZ,
                                 children: t.name,
                             }),
                             (0, i.jsx)(x.h, { size: 8 }),
                             (0, i.jsxs)("div", {
-                                className: k.MS,
+                                className: L.MS,
                                 children: [
                                     (0, i.jsx)(f.E, { variant: "text-md/normal", color: "text-default", children: m }),
                                     null != h
                                         ? (0, i.jsxs)(i.Fragment, {
                                               children: [
-                                                  (0, i.jsx)("div", { className: k.zk }),
+                                                  (0, i.jsx)("div", { className: L.zk }),
                                                   (0, i.jsx)(f.E, {
                                                       variant: "text-md/normal",
                                                       color: "text-default",

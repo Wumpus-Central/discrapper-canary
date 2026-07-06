@@ -310,7 +310,7 @@ let y = {
                                         },
                                         children: (0, o.jsx)(m.E, {
                                             variant: "text-xs/semibold",
-                                            color: "always-white",
+                                            color: "text-overlay-light",
                                             children: "R",
                                         }),
                                     },

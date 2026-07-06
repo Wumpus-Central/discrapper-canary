@@ -447,7 +447,7 @@ let eO = i.memo(
                                                             children: [
                                                                 (0, l.jsx)(q.E, {
                                                                     variant: "text-sm/semibold",
-                                                                    color: "always-white",
+                                                                    color: "text-overlay-light",
                                                                     children: eD.intl.string(eD.t.TXNS7S),
                                                                 }),
                                                                 (0, l.jsxs)("div", {

@@ -443,7 +443,7 @@ function AP(A) {
                         (0, n.jsx)(AF.k, { size: "xs", color: "currentColor", className: AX.T8, "aria-hidden": !0 }),
                         (0, n.jsx)(c.E, {
                             variant: "text-sm/medium",
-                            color: "always-white",
+                            color: "text-overlay-light",
                             children: G.intl.string(G.t["23LeCD"]),
                         }),
                     ],

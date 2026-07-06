@@ -1,42 +1,42 @@
-i.d(s, { A: () => k });
-var e = i(627968),
-    l = i(64700),
-    n = i(503698),
-    t = i.n(n),
-    c = i(408278),
-    r = i(192308),
-    d = i(939249),
-    o = i(834730),
-    m = i(789645),
-    x = i(688810),
-    u = i(821209),
-    h = i(853513),
-    j = i(375708),
-    v = i(437326),
-    b = i(519636);
+s.d(i, { A: () => k });
+var e = s(627968),
+    l = s(64700),
+    n = s(503698),
+    t = s.n(n),
+    c = s(408278),
+    r = s(192308),
+    d = s(939249),
+    o = s(834730),
+    m = s(789645),
+    x = s(688810),
+    u = s(821209),
+    h = s(853513),
+    j = s(375708),
+    v = s(437326),
+    b = s(519636);
 function k(a) {
     let {
-            guildId: s,
+            guildId: i,
             variant: n = "admin",
             className: k,
             analyticsLocation: N,
-            videoPlacement: p = "sidebar",
-            onDismiss: g,
+            videoPlacement: g = "sidebar",
+            onDismiss: p,
         } = a,
         { analyticsLocations: y } = (0, x.Ay)(),
         A = l.useCallback(() => {
             (0, r.openModalLazy)(async () => {
-                let { default: a } = await Promise.all([i.e("6836"), i.e("85810")]).then(i.bind(i, 872233));
-                return (i) =>
+                let { default: a } = await Promise.all([s.e("6836"), s.e("85810")]).then(s.bind(s, 872233));
+                return (s) =>
                     (0, e.jsx)(a, {
-                        ...i,
-                        guildId: s,
+                        ...s,
+                        guildId: i,
                         analyticsLocation: N,
-                        videoPlacement: p,
+                        videoPlacement: g,
                         sourceAnalyticsLocations: y,
                     });
             });
-        }, [N, y, s, p]);
+        }, [N, y, i, g]);
     return "member" === n
         ? (0, e.jsxs)(d.D, {
               className: t()(v.iR, k),
@@ -49,7 +49,7 @@ function k(a) {
                       className: v.i5,
                       children: (0, e.jsx)(o.E, {
                           variant: "text-xs/semibold",
-                          color: "always-white",
+                          color: "text-overlay-light",
                           children: j.intl.string(h.default.diMhWc),
                       }),
                   }),
@@ -65,7 +65,7 @@ function k(a) {
                           variant: "icon-only",
                           size: "md",
                           "aria-label": j.intl.string(j.t.WAI6xu),
-                          onClick: g,
+                          onClick: p,
                           icon: m.P,
                       }),
                   }),

@@ -810,7 +810,7 @@ let ny = ["high", "medium", "low"],
                             children: [
                                 (0, l.jsx)(y.E, {
                                     variant: "text-md/semibold",
-                                    color: null == n ? "text-muted" : t ? "status-positive" : "status-danger",
+                                    color: null == n ? "text-muted" : t ? "status-positive" : "text-feedback-critical",
                                     children: null == n ? "\u2014" : t ? "\u2713" : "\u2717",
                                 }),
                                 (0, l.jsx)(y.E, {
@@ -833,7 +833,7 @@ let ny = ["high", "medium", "low"],
                             children: [
                                 (0, l.jsx)(y.E, {
                                     variant: "text-md/semibold",
-                                    color: null == n ? "text-muted" : i ? "status-positive" : "status-danger",
+                                    color: null == n ? "text-muted" : i ? "status-positive" : "text-feedback-critical",
                                     children: null == n ? "\u2014" : i ? "\u2713" : "\u2717",
                                 }),
                                 (0, l.jsx)(y.E, {
@@ -878,7 +878,7 @@ let ny = ["high", "medium", "low"],
                                             ? "text-muted"
                                             : "passed" === r
                                               ? "status-positive"
-                                              : "status-danger",
+                                              : "text-feedback-critical",
                                     children:
                                         null == n || "unknown" === r ? "\u2014" : "passed" === r ? "\u2713" : "\u2717",
                                 }),

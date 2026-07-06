@@ -321,7 +321,7 @@ let es = function (e) {
                         className: i()(en.ol, { [en.yZ]: l }),
                         style: { opacity: (0, O.a)(d.to({ range: [0, 1], output: [l ? 1 : 0.7, 0] })) },
                         children: (0, s.jsx)(T.E, {
-                            color: "always-white",
+                            color: "text-overlay-light",
                             lineClamp: 1,
                             variant: "text-xs/medium",
                             children: et.intl.string(et.t["3mgEQf"]),
@@ -393,7 +393,7 @@ let el = (0, a.animated)(I.Ay),
                             onClick: x,
                             children: [
                                 (0, s.jsx)(T.E, {
-                                    color: "always-white",
+                                    color: "text-overlay-light",
                                     variant: "text-xs/normal",
                                     children: et.intl.string(et.t.o6FLcF),
                                 }),

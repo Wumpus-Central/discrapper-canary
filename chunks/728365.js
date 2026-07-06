@@ -1193,7 +1193,7 @@ function td(e) {
                       colSpan: 3,
                       children: (0, i.jsx)(A.E, {
                           variant: "text-sm/normal",
-                          color: "always-white",
+                          color: "text-overlay-light",
                           children: D.intl.format(D.t["/i5uJ1"], { count: m, date: a }),
                       }),
                   }),
@@ -1207,7 +1207,7 @@ function td(e) {
                               className: tr.Fu,
                               children: (0, i.jsxs)(A.E, {
                                   variant: "text-sm/normal",
-                                  color: "always-white",
+                                  color: "text-overlay-light",
                                   className: tr.Lb,
                                   children: [
                                       (0, i.jsx)("div", { children: D.intl.string(D.t.rkyOzK) }),

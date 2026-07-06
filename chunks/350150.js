@@ -8654,7 +8654,7 @@ let gz = function (e) {
                 children: [
                     (0, E.jsx)(eP.D, {
                         className: gw.R_,
-                        color: "always-white",
+                        color: "text-overlay-light",
                         variant: "heading-xxl/bold",
                         children: j.intl.string(j.t.IzKs3o),
                     }),
@@ -8942,7 +8942,7 @@ function g2(e) {
               className: e6()(gJ.ER, { [gJ.GH]: i === M.TVA.TIER_2, [gJ.z5]: i === M.TVA.TIER_3 }),
               children: (0, E.jsx)(es.E, {
                   className: gJ.uQ,
-                  color: "always-white",
+                  color: "text-overlay-light",
                   variant: "text-xs/bold",
                   children: t === M.TVA.TIER_3 ? j.intl.string(j.t.d849Up) : j.intl.string(j.t.dZeX1z),
               }),
@@ -15907,12 +15907,12 @@ function xR(e) {
                               children: [
                                   (0, E.jsx)(es.E, {
                                       variant: "text-lg/semibold",
-                                      color: "always-white",
+                                      color: "text-overlay-light",
                                       children: j.intl.string(j.t.dMaDFX),
                                   }),
                                   (0, E.jsx)(es.E, {
                                       variant: "text-sm/normal",
-                                      color: "always-white",
+                                      color: "text-overlay-light",
                                       children: j.intl.string(j.t.F7sgFH),
                                   }),
                               ],
@@ -16412,7 +16412,12 @@ function pi(e) {
                 className: pt.Lt,
                 children: [
                     (0, E.jsx)("img", { alt: "", "aria-hidden": !0, src: r, className: pt.L_ }),
-                    (0, E.jsx)(es.E, { className: pt._e, variant: "text-sm/bold", color: "always-white", children: l }),
+                    (0, E.jsx)(es.E, {
+                        className: pt._e,
+                        variant: "text-sm/bold",
+                        color: "text-overlay-light",
+                        children: l,
+                    }),
                 ],
             }),
         ],

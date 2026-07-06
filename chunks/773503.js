@@ -18,7 +18,7 @@ function g(e) {
         children: [
             (0, s.jsx)(l.eu, { "aria-label": a, size: d._3.SIZE_24, src: t }),
             i,
-            (0, s.jsx)(u.E, { className: h.PW, color: "always-white", variant: "text-sm/normal", children: n }),
+            (0, s.jsx)(u.E, { className: h.PW, color: "text-overlay-light", variant: "text-sm/normal", children: n }),
         ],
     });
 }

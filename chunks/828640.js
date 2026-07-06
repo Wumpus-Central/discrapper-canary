@@ -307,9 +307,9 @@ var D = t(331322),
     O = t(231723),
     T = t(439325);
 t(323874), t(14289), t(35956);
-var w = t(366523);
-let L = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
-    U = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
+var L = t(366523);
+let U = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
+    w = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
 var V = t(263911),
     N = t(403581),
     k = t(873297),
@@ -505,7 +505,7 @@ let j = {
                                 defaultValue: "text-muted",
                                 options: [
                                     { label: "Muted", value: "text-muted" },
-                                    { label: "Always White", value: "always-white" },
+                                    { label: "Always White", value: "text-overlay-light" },
                                 ],
                             },
                         },
@@ -518,9 +518,9 @@ let j = {
                             let { shape: a, useBackgroundImage: t } = e;
                             return (0, n.jsx)("div", {
                                 style: { width: 220, height: 220 },
-                                children: (0, n.jsx)(w.A, {
-                                    cardImage: L,
-                                    cardBackgroundImage: t ? U : null,
+                                children: (0, n.jsx)(L.A, {
+                                    cardImage: U,
+                                    cardBackgroundImage: t ? w : null,
                                     altText: "Playground preview",
                                     shape: a,
                                 }),

@@ -28,16 +28,16 @@ let I = function (e) {
         E = (0, a.q)((0, m.Ay)());
     if (!A) return (0, r.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: T.xB });
     let _ = d.A.getForSkuAndInterval((0, g.mH)(t), n),
-        P = null != _ ? (0, g.sS)(_, h, !1, I) : null;
+        v = null != _ ? (0, g.sS)(_, h, !1, I) : null;
     if (j) {
         let e = n === x.WT.YEAR;
         return (0, r.jsxs)("div", {
             children: [
                 (0, r.jsx)(c.E, {
                     variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
-                    color: e ? "text-muted" : E ? "text-strong" : "always-white",
+                    color: e ? "text-muted" : E ? "text-strong" : "text-overlay-light",
                     tag: "span",
-                    children: (0, r.jsx)("span", { children: P }),
+                    children: (0, r.jsx)("span", { children: v }),
                 }),
                 (0, r.jsxs)(c.E, {
                     variant: "text-xs/medium",
@@ -49,11 +49,11 @@ let I = function (e) {
         });
     }
     return (0, r.jsx)(u.D, {
-        color: f ? "none" : "always-white",
+        color: f ? "none" : "text-overlay-light",
         variant: p ?? "heading-md/medium",
         className: l()(T.SW, i),
         children: (0, r.jsxs)(r.Fragment, {
-            children: [(0, r.jsx)("span", { className: f ? void 0 : T.q9, children: P }), " / ", (0, g.FJ)(n)],
+            children: [(0, r.jsx)("span", { className: f ? void 0 : T.q9, children: v }), " / ", (0, g.FJ)(n)],
         }),
     });
 };

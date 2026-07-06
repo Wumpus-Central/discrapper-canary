@@ -595,7 +595,7 @@ let t_ = function (e) {
     let { text: t } = e;
     return (0, u.jsx)("div", {
         className: tb.i,
-        children: (0, u.jsx)(ed.E, { variant: "text-sm/bold", color: "always-white", children: t }),
+        children: (0, u.jsx)(ed.E, { variant: "text-sm/bold", color: "text-overlay-light", children: t }),
     });
 };
 var tv = s(371764),
@@ -634,7 +634,7 @@ let tD = function (e) {
                                   className: x()(tM.Fg, tM.cj),
                                   children: (0, u.jsx)(ed.E, {
                                       variant: "eyebrow",
-                                      color: "always-white",
+                                      color: "text-overlay-light",
                                       children: eR.intl.string(eR.t.OS9KPu),
                                   }),
                               }),
@@ -4219,7 +4219,7 @@ let ai = function (e) {
     }
     let o = (null != r ? eA.Ay.getSkuIdForPlan(r.planId) : null) === eE.pe.TIER_1;
     return (
-        (s = null != a ? a : l ? "always-white" : "text-default"),
+        (s = null != a ? a : l ? "text-overlay-light" : "text-default"),
         (0, u.jsxs)(ek.Z, {
             className: x()(as.kL, n, { [as.He]: l }),
             type: ek.Z.Types.CUSTOM,
@@ -4614,7 +4614,7 @@ function aT(e) {
         n = nw();
     return (0, u.jsx)(ed.E, {
         variant: t,
-        color: i ? "text-subtle" : "always-white",
+        color: i ? "text-subtle" : "text-overlay-light",
         className: x()(ab.h_, { [ab.If]: s, [ab.jn]: i }),
         children: eR.intl.format(eR.t.kt9wxs, { cheapestMonthlyPrice: n }),
     });
@@ -4641,14 +4641,14 @@ let aI = m.forwardRef(function (e, t) {
                             forceLevel: 1,
                             children: (0, u.jsx)(eo.D, {
                                 variant: c ? "display-lg" : "display-md",
-                                color: "always-white",
+                                color: "text-overlay-light",
                                 children: m,
                             }),
                         }),
                         d
                             ? (0, u.jsx)("div", {
                                   className: ab.DF,
-                                  children: (0, u.jsx)(nk.A, { textColor: "always-white", smallerText: !c }),
+                                  children: (0, u.jsx)(nk.A, { textColor: "text-overlay-light", smallerText: !c }),
                               })
                             : (0, u.jsx)(aT, {}),
                         o || r

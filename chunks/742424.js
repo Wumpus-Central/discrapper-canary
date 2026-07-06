@@ -1469,7 +1469,7 @@ function tJ(e) {
                                         className: tH.NE,
                                         children: (0, i.jsx)(ey.E, {
                                             variant: "text-md/normal",
-                                            color: "always-white",
+                                            color: "text-overlay-light",
                                             children: el.intl.string(el.t["7Xq/nV"]),
                                         }),
                                     }),

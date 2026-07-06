@@ -134,13 +134,13 @@ function eg(e) {
                                   children: [
                                       (0, i.jsx)(Q.D, {
                                           variant: "heading-md/bold",
-                                          color: null != o ? void 0 : "always-white",
+                                          color: null != o ? void 0 : "text-overlay-light",
                                           style: o,
                                           children: em.intl.string(em.t["6CxPoB"]),
                                       }),
                                       (0, i.jsx)(ee.E, {
                                           variant: "text-xs/normal",
-                                          color: "always-white",
+                                          color: "text-overlay-light",
                                           children: em.intl.format(em.t.IVzJ8G, {
                                               settingsHook: (e, t) =>
                                                   (0, i.jsx)(

@@ -21,7 +21,7 @@ let f = function (e) {
             className: s()(h.bE, { [h._k]: !t && r }),
             children: (0, i.jsx)(l.E, {
                 variant: "eyebrow",
-                color: t ? "always-white" : void 0,
+                color: t ? "text-overlay-light" : void 0,
                 className: h.gp,
                 children: _.intl.string(_.t["5nrJDO"]),
             }),

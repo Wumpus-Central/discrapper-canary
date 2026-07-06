@@ -124,7 +124,7 @@ function E(e) {
                             style: e,
                             children: (0, l.jsx)(g.E, {
                                 variant: "text-xs/normal",
-                                color: "always-white",
+                                color: "text-overlay-light",
                                 children: N.intl.format(N.t.EgKsZA, { memberCount: H }),
                             }),
                         }),

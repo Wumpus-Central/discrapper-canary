@@ -258,7 +258,7 @@ function eb(e) {
                                             " \xb7 ",
                                             (0, p.jsx)(G.E, {
                                                 variant: "text-sm/medium",
-                                                color: "status-warning",
+                                                color: "text-feedback-warning",
                                                 tag: "span",
                                                 children: el.intl.formatToPlainString(el.t.sgiPrC, { count: x }),
                                             }),
@@ -7516,11 +7516,11 @@ function a7(e) {
                     children: [
                         (0, p.jsx)(G.E, {
                             variant: "text-lg/semibold",
-                            color: o ?? "always-white",
+                            color: o ?? "text-overlay-light",
                             className: a4.wx,
                             children: t,
                         }),
-                        (0, p.jsx)(G.E, { variant: "text-sm/normal", color: a ?? "always-white", children: i }),
+                        (0, p.jsx)(G.E, { variant: "text-sm/normal", color: a ?? "text-overlay-light", children: i }),
                     ],
                 }),
                 (0, p.jsx)("div", {
@@ -8554,7 +8554,7 @@ function oK(e) {
         children: [
             (0, p.jsx)("div", {
                 className: oW.DM,
-                children: (0, p.jsx)(G.E, { variant: "text-md/normal", color: "always-white", children: t }),
+                children: (0, p.jsx)(G.E, { variant: "text-md/normal", color: "text-overlay-light", children: t }),
             }),
             (0, p.jsxs)("div", {
                 className: oW.Dn,
@@ -8562,7 +8562,7 @@ function oK(e) {
                     (0, p.jsx)(oY.A, { color: ed.A.colors.WHITE.css }),
                     (0, p.jsx)(G.E, {
                         variant: "text-md/normal",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: el.intl.string(el.t["3NNXPW"]),
                     }),
                 ],
@@ -15492,7 +15492,7 @@ function gN(e) {
                     (0, p.jsx)(iF.E, { size: "xs", color: "currentColor", className: gj.$e }),
                     (0, p.jsx)(G.E, {
                         variant: "text-xs/semibold",
-                        color: "status-warning",
+                        color: "text-feedback-warning",
                         className: gj.qS,
                         children: el.intl.string(el.t["yTa+di"]),
                     }),
@@ -16671,7 +16671,7 @@ function g$(e) {
                                             o
                                                 ? (0, p.jsx)(G.E, {
                                                       variant: "text-sm/normal",
-                                                      color: "status-warning",
+                                                      color: "text-feedback-warning",
                                                       children: el.intl.string(el.t.DhYsPL),
                                                   })
                                                 : null,

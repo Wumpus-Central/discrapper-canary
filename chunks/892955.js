@@ -78,7 +78,7 @@ function B(t) {
                         (0, s.jsx)(y, { size: "xs", color: S }),
                         (0, s.jsx)(N.E, {
                             variant: "text-xs/medium",
-                            color: l ? "text-muted" : "always-white",
+                            color: l ? "text-muted" : "text-overlay-light",
                             children: E.at(0),
                         }),
                     ],
@@ -118,7 +118,7 @@ function X(t) {
         G = e.userStatus?.enrolledAt != null,
         Y = e.userStatus?.completedAt != null,
         { onAssetLoadComplete: Z } = i.useContext(H.M),
-        J = b ? "text-muted" : "always-white",
+        J = b ? "text-muted" : "text-overlay-light",
         tt = i.useCallback(() => {
             v &&
                 (0, z.d5)({
@@ -259,7 +259,7 @@ function X(t) {
                                             }),
                                             (0, s.jsx)(N.E, {
                                                 variant: "text-sm/medium",
-                                                color: "always-white",
+                                                color: "text-overlay-light",
                                                 children:
                                                     e.config.cosponsorMetadata?.name ?? e.config.messages.gamePublisher,
                                             }),

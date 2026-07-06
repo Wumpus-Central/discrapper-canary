@@ -1785,7 +1785,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let tB = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new tR.A().log(
-    `[BUILD INFO] Release Channel: ${tB}, Build Number: 573776, Version Hash: e272285bc442dd222ebf561987c4c6d4881b1898`,
+    `[BUILD INFO] Release Channel: ${tB}, Build Number: 573833, Version Hash: 349440385a8cb93e4308a445323ed36908eaca9f`,
 ),
     eN.A.setTags({ appContext: eb.QCW }),
     tn.A.initBasic(),
@@ -5986,7 +5986,7 @@ function o9(e) {
                     (0, x.jsx)(rQ.E, {
                         className: oq.Er,
                         variant: "text-sm/medium",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: (0, ow.CT)(l),
                     }),
                 ],
@@ -19023,7 +19023,7 @@ let Su = "isHideDevBanner",
                     className: t0()(Sl.Wz, Sl.mr),
                     children: [
                         (0, x.jsx)(So, { className: Sl.Kk }),
-                        nr.intl.format(nr.t.uyrfYF, { buildNumber: "573776" }),
+                        nr.intl.format(nr.t.uyrfYF, { buildNumber: "573833" }),
                         (0, x.jsx)(r, {}),
                     ],
                 })
@@ -19738,7 +19738,11 @@ function NI(e) {
         className: t0()(Ng.zr, a ? Ng.jI : Ng.aW),
         children: [
             (0, x.jsx)(NA, { platform: s }),
-            (0, x.jsx)(rQ.E, { color: a ? "text-strong" : "always-white", variant: "text-xs/medium", children: o }),
+            (0, x.jsx)(rQ.E, {
+                color: a ? "text-strong" : "text-overlay-light",
+                variant: "text-xs/medium",
+                children: o,
+            }),
         ],
     });
 }

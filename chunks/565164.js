@@ -101,7 +101,7 @@ function h(e) {
             (0, i.jsx)(a.E, {
                 className: l.Sp,
                 variant: "text-xs/normal",
-                color: "always-white",
+                color: "text-overlay-light",
                 tabularNumbers: !0,
                 children: (0, s.rB)(n),
             }),

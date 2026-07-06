@@ -1,4 +1,4 @@
-n.d(t, { qu: () => ey, Nz: () => e_, pw: () => eR, ZP: () => eP, Lg: () => ej, nH: () => eA });
+n.d(t, { qu: () => ey, Nz: () => e_, pw: () => eR, ZP: () => ev, Lg: () => ej, nH: () => eA });
 var r,
     i = n(627968),
     l = n(64700),
@@ -20,8 +20,8 @@ var r,
     A = n(224016),
     E = n(217392),
     _ = n(960851),
-    P = n(526292),
-    v = n(552736),
+    v = n(526292),
+    P = n(552736),
     R = n(778712),
     y = n(775602),
     N = n(937008),
@@ -31,7 +31,7 @@ var r,
 function U() {
     let e = (0, o.bG)([y.Ay], () => y.Ay.useReducedMotion),
         { claimableRewards: t } = (0, N.Pv)(),
-        n = (0, v.A)(),
+        n = (0, P.A)(),
         r = n?.planSelection;
     if (null == r || null == t || 0 === t.length) return null;
     let l = (0, M.gc)(r.getBannerImageUrl?.()),
@@ -43,11 +43,15 @@ function U() {
             (0, i.jsxs)("div", {
                 className: S.ZR,
                 children: [
-                    (0, i.jsx)(u.E, { variant: "text-sm/semibold", color: "always-white", children: r.heading() }),
+                    (0, i.jsx)(u.E, {
+                        variant: "text-sm/semibold",
+                        color: "text-overlay-light",
+                        children: r.heading(),
+                    }),
                     null != r.subheading &&
                         (0, i.jsx)(u.E, {
                             variant: "text-sm/normal",
-                            color: "always-white",
+                            color: "text-overlay-light",
                             children: r.subheading(t.length),
                         }),
                 ],
@@ -64,9 +68,9 @@ function U() {
     });
 }
 var L = n(286320),
-    w = n(422936),
-    b = n(234419),
-    O = n(410516),
+    b = n(422936),
+    O = n(234419),
+    w = n(410516),
     k = n(774774),
     G = n(231265),
     D = n(349563),
@@ -102,7 +106,12 @@ function W() {
                       size: R._3.SIZE_24,
                       ...r,
                   }),
-                  (0, i.jsx)(u.E, { className: V.Qq, variant: "text-sm/normal", color: "always-white", children: a }),
+                  (0, i.jsx)(u.E, {
+                      className: V.Qq,
+                      variant: "text-sm/normal",
+                      color: "text-overlay-light",
+                      children: a,
+                  }),
               ],
           });
 }
@@ -259,7 +268,7 @@ function ef(e) {
             (0, i.jsx)(t, { className: c ? ep.hi : ep.Kk, color: "currentColor" }),
             (0, i.jsx)(u.E, {
                 variant: s ?? "text-md/normal",
-                color: c || o ? "currentColor" : "always-white",
+                color: c || o ? "currentColor" : "text-overlay-light",
                 children: n,
             }),
             r
@@ -315,7 +324,7 @@ function eE(e) {
     let { showWumpus: t, ctaButton: n, showYearlyPrice: r, className: l, isGift: s = !1, priceOptions: c } = e,
         u = (0, o.bG)([j.A], () => j.A.getPremiumTypeSubscription()),
         x = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
-        T = (0, b.V)(),
+        T = (0, O.V)(),
         I = T?.subscription_trial?.sku_id,
         p = !!u?.hasActiveTrial,
         h = p ? x?.premiumType : null,
@@ -360,7 +369,7 @@ function eE(e) {
                                 showYearlyPrice: r,
                                 priceOptions: c,
                                 headingVariant: "heading-md/normal",
-                                headingColor: "always-white",
+                                headingColor: "text-overlay-light",
                             }),
                         ],
                     }),
@@ -380,7 +389,7 @@ var e_ =
     (r[(r.PREMIUM_GROUP_PRIMARY = 4)] = "PREMIUM_GROUP_PRIMARY"),
     (r[(r.PREMIUM_GROUP_MEMBER = 5)] = "PREMIUM_GROUP_MEMBER"),
     r);
-function eP(e) {
+function ev(e) {
     let {
             featureSet: t = 0,
             isModal: n = !1,
@@ -436,7 +445,7 @@ function eP(e) {
         ],
     });
 }
-function ev(e) {
+function eP(e) {
     let {
             showWumpus: t,
             ctaButton: n,
@@ -450,16 +459,16 @@ function ev(e) {
         } = e,
         E = (0, o.bG)([j.A], () => j.A.getPremiumTypeSubscription()),
         R = (0, o.bG)([f.default], () => f.default.getCurrentUser()),
-        y = (0, b.V)(),
+        y = (0, O.V)(),
         N = y?.subscription_trial?.sku_id,
         M = E?.hasActiveTrial ? R?.premiumType : null,
-        C = (0, P.ar)(),
-        S = (0, w.O)(),
-        L = (0, P.k5)(),
+        C = (0, v.ar)(),
+        S = (0, b.O)(),
+        L = (0, v.k5)(),
         F = null != N || null != M ? et.Vk.PREMIUM_TRIAL : null != S || L ? et.Vk.PREMIUM_DISCOUNT : null,
         H = (0, _.cg)(),
         V = !T && C,
-        W = (0, v.A)()?.planSelection,
+        W = (0, P.A)()?.planSelection,
         J = W?.getBackgroundImageUrl?.(),
         B = W?.getCardImageUrl?.(),
         Y = (0, G._)(),
@@ -514,15 +523,15 @@ function ev(e) {
                                 isGift: T,
                                 premiumTier: et.PremiumTypes.TIER_2,
                                 offerType: F,
-                                offerTierMatchesCard: N === et.pe.TIER_2 || (0, O.U9)(S, et.pe.TIER_2),
+                                offerTierMatchesCard: N === et.pe.TIER_2 || (0, w.U9)(S, et.pe.TIER_2),
                                 showYearlyPrice: r,
                                 priceOptions: p,
                                 headingVariant: "heading-md/normal",
-                                headingColor: "always-white",
+                                headingColor: "text-overlay-light",
                             }),
                         ],
                     }),
-                    (0, i.jsx)("div", { children: (0, i.jsx)(eP, { featureSet: l, isModal: I, isGift: T }) }),
+                    (0, i.jsx)("div", { children: (0, i.jsx)(ev, { featureSet: l, isModal: I, isGift: T }) }),
                 ],
             }),
             T || (N !== et.pe.TIER_2 && null == S) ? null : (0, i.jsx)(D.Wy, { tier: et.PremiumTypes.TIER_2 }),
@@ -547,7 +556,7 @@ function ey(e) {
             className: a()(ep.Zo, n),
             children: [
                 (0, i.jsx)(eE, { showWumpus: !0, ctaButton: r }),
-                (0, i.jsx)(ev, { showWumpus: !0, ctaButton: l }),
+                (0, i.jsx)(eP, { showWumpus: !0, ctaButton: l }),
             ],
         }),
     });

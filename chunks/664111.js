@@ -627,7 +627,7 @@ let x = { tension: 250, friction: 5, clamp: !0 },
                                 },
                                 children: (0, i.jsx)(p.E, {
                                     variant: "text-lg/semibold",
-                                    color: "always-white",
+                                    color: "text-overlay-light",
                                     className: M.qh,
                                     children: tq.text,
                                 }),

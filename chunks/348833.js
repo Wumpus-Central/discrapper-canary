@@ -35,11 +35,11 @@ var I = n(580929),
     T = n(334295),
     k = n(228366),
     L = n(95701),
-    w = n(232835),
-    R = n(652215);
-let P = (0, r.UT)(w.A, {
+    R = n(232835),
+    w = n(652215);
+let P = (0, r.UT)(R.A, {
     getQueryId: (e, t, n, i, l) => (null != n && null != t && null != i && l ? e.id : null),
-    get: (e) => (w.A.isReady(e.id) ? w.A.getMessages(e.id) : null),
+    get: (e) => (R.A.isReady(e.id) ? R.A.getMessages(e.id) : null),
     load: async (e, t, n, i) => {
         if (null == n || null == t) return;
         let l = e.id;
@@ -49,16 +49,16 @@ let P = (0, r.UT)(w.A, {
                 channel: new L.Lt({
                     id: l,
                     parent_id: t,
-                    type: R.rbe.MEDIA_THREAD,
+                    type: w.rbe.MEDIA_THREAD,
                     name: e.title ?? "",
-                    guild_id: n ?? R.eGj,
+                    guild_id: n ?? w.eGj,
                     ownerId: i,
                     threadMetadata: { archived: !0, autoArchiveDuration: 60, locked: !0, invitable: !1 },
                 }),
                 messageId: e.id,
             });
     },
-    getIsLoading: (e) => w.A.isLoadingMessages(e.id),
+    getIsLoading: (e) => R.A.isLoadingMessages(e.id),
 });
 var D = n(451909),
     H = n(118517),
@@ -91,11 +91,11 @@ function Y(e) {
         } = e,
         m = n.id,
         p = (0, S.QZ)(d).slice(0, 3),
-        g = (0, r.bG)([w.A], () => w.A.getMessage(a, o), [a, o]),
+        g = (0, r.bG)([R.A], () => R.A.getMessage(a, o), [a, o]),
         C = (0, r.bG)([h.A], () => h.A.getChannel(a), [a]),
         f = (0, r.bG)([h.A], () => h.A.getChannel(m), [m]),
         { enableMediaComments: A } = B.useConfig({ location: "ClipEmbedMediaMentionBar" }),
-        k = (0, v.Lt)(n.flags ?? 0, R.sbO.HAS_TIMELINE_COMMENTS),
+        k = (0, v.Lt)(n.flags ?? 0, w.sbO.HAS_TIMELINE_COMMENTS),
         { data: L } = P(n, a, d, g?.author.id, A && k),
         Y = l.useRef(null);
     function Q(e, t) {
@@ -208,7 +208,7 @@ function Y(e) {
                                         showMentionToggle: !C.isPrivate(),
                                         mediaMention: $(m, u),
                                     }),
-                                    V._.dispatch(R.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: C.id })));
+                                    V._.dispatch(w.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: C.id })));
                     },
                     children: (0, i.jsx)(M.W, { size: "sm" }),
                 }),
@@ -259,8 +259,8 @@ function ei(e) {
             hidden: u = !1,
         } = e,
         { enableMediaComments: c } = B.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
-        m = (0, v.Lt)(n.flags ?? 0, R.sbO.HAS_TIMELINE_COMMENTS),
-        p = (0, r.bG)([w.A], () => w.A.getMessage(o, d), [o, d]),
+        m = (0, v.Lt)(n.flags ?? 0, w.sbO.HAS_TIMELINE_COMMENTS),
+        p = (0, r.bG)([R.A], () => R.A.getMessage(o, d), [o, d]),
         { data: h } = P(n, o, s, p?.author.id, c && m && l);
     return !c || null == h || a <= 0
         ? null
@@ -429,7 +429,7 @@ function eA(e) {
                   (0, i.jsx)(eC, { size: "refresh_sm", color: J.A.colors.WHITE }),
                   (0, i.jsx)(y.E, {
                       variant: "text-xs/semibold",
-                      color: "always-white",
+                      color: "text-overlay-light",
                       children: K.intl.string(F.default.YKst58),
                   }),
               ],
@@ -553,7 +553,7 @@ function eM(e) {
             onClick: T,
             onContextMenu: k,
             onPlay: L,
-            allowFullScreen: w = !0,
+            allowFullScreen: R = !0,
         } = e,
         P = n.width ?? 0,
         D = n.height ?? 0,
@@ -568,9 +568,9 @@ function eM(e) {
                 null != B.current && (B.current.seek(t / 1e3), B.current.play());
             }
             return (
-                V._.subscribeKeyed(R.zOV.CLIP_SEEK_VIDEO, t, e),
+                V._.subscribeKeyed(w.zOV.CLIP_SEEK_VIDEO, t, e),
                 () => {
-                    V._.unsubscribeKeyed(R.zOV.CLIP_SEEK_VIDEO, t, e);
+                    V._.unsubscribeKeyed(w.zOV.CLIP_SEEK_VIDEO, t, e);
                 }
             );
         }, [t, B]);
@@ -693,7 +693,7 @@ function eM(e) {
             withVideoHalo: !0,
             objectFit: A ? "cover" : void 0,
             muxContentMetadata: er,
-            hideFullScreenBtn: !w,
+            hideFullScreenBtn: !R,
             hideSkipButtons: !0,
             compactTimeDisplay: !0,
             autoHideVolumeSlider: !0,

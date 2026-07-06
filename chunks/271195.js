@@ -13,8 +13,8 @@ var r = n(503698),
     _ = n(282413),
     h = n(763827),
     f = n(6155),
-    p = n(919706),
-    E = n(375708),
+    E = n(919706),
+    p = n(375708),
     m = n(27600);
 function g(e) {
     let { title: t, onJumpToChannel: n, idle: r, preventIdleComponent: s } = e,
@@ -30,7 +30,7 @@ function g(e) {
                     (0, i.jsx)(u.r, {
                         size: "custom",
                         color: "currentColor",
-                        "aria-label": E.intl.string(E.t.mSfLs0),
+                        "aria-label": p.intl.string(p.t.mSfLs0),
                         className: m.Gv,
                         width: 20,
                         height: 20,
@@ -38,7 +38,7 @@ function g(e) {
                     (0, i.jsx)(c.D, {
                         variant: "heading-md/normal",
                         className: m.TK,
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: t,
                     }),
                 ],
@@ -58,7 +58,7 @@ function A(e) {
         renderBottomLeftControls: c,
         renderBottomRightControls: h,
         screenMessage: f,
-        hideControls: E = !1,
+        hideControls: p = !1,
         className: A,
         innerClassName: I,
         videoControlsClassName: T,
@@ -72,8 +72,8 @@ function A(e) {
         onDoubleClick: r,
         children: [
             (0, i.jsx)(o.F, { children: (0, i.jsx)(_.o, { className: I, children: t }, a) }),
-            null != f ? (0, i.jsx)(p.A, { size: "small", ...f }) : null,
-            !E &&
+            null != f ? (0, i.jsx)(E.A, { size: "small", ...f }) : null,
+            !p &&
                 (0, i.jsxs)("div", {
                     className: s()(m._v, T, "theme-dark"),
                     children: [

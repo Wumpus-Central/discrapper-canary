@@ -583,7 +583,7 @@ let tl = (e) => {
         l = (0, e4.Ay)() === e3.NJ.DARK,
         a = d.useCallback(
             (e) => {
-                if (n.has(e) || l) return "always-white";
+                if (n.has(e) || l) return "control-primary-text-default";
             },
             [n, l],
         ),
@@ -1049,7 +1049,7 @@ let tk = (e) => {
                         : (0, c.jsx)(
                               J.E,
                               {
-                                  color: "always-white",
+                                  color: "text-overlay-light",
                                   variant: "md" === n ? "heading-md/bold" : "heading-xl/bold",
                                   className: tO.ai,
                                   "aria-hidden": !0,
@@ -1566,7 +1566,7 @@ let t9 = function (e) {
                                               }),
                                               (0, c.jsx)(ed.D, {
                                                   variant: "heading-lg/semibold",
-                                                  color: "always-white",
+                                                  color: "text-overlay-light",
                                                   children: t.title,
                                               }),
                                           ],
@@ -3027,7 +3027,7 @@ let sd = { pink: "pinkCountdown" },
                 children: [
                     (0, c.jsx)(J.E, {
                         variant: "text-md/medium",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         className: sc.message,
                         children: t,
                     }),

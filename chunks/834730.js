@@ -19,8 +19,8 @@ let h = Object.fromEntries(Object.keys(u.A.colors).map((e) => [l()(e), e])),
                 selectable: o = !1,
                 className: l,
                 lineClamp: f,
-                color: p,
-                tabularNumbers: E = !1,
+                color: E,
+                tabularNumbers: p = !1,
                 scaleFontToUserSetting: m = !1,
                 ...g
             } = e,
@@ -28,26 +28,23 @@ let h = Object.fromEntries(Object.keys(u.A.colors).map((e) => [l()(e), e])),
             I = {};
         if (
             (null != f && (1 === f ? (A = d.DN) : ((A = d.ED), (I = { lineClamp: f, WebkitLineClamp: f }))),
-            void 0 !== p)
+            void 0 !== E)
         )
-            switch (p) {
+            switch (E) {
                 case "currentColor":
                     n = "currentColor";
                     break;
                 case "none":
                     n = void 0;
                     break;
-                case "always-white":
-                    n = "white";
-                    break;
                 default:
-                    n = u.A.colors[h[p]]?.css;
+                    n = u.A.colors[h[E]]?.css;
             }
         let T = { color: n, ...I, ...g.style },
             S = (0, c.p)(r, !1);
         return (0, i.jsx)(s, {
             ref: t,
-            className: a()({ [d.fT]: void 0 === p, [d.rb]: o, [d.w9]: E, [_.fontScaling]: m }, A, _[S], l),
+            className: a()({ [d.fT]: void 0 === E, [d.rb]: o, [d.w9]: p, [_.fontScaling]: m }, A, _[S], l),
             ...g,
             style: Object.values(T).filter(Boolean).length > 0 ? T : void 0,
             "data-text-variant": r,

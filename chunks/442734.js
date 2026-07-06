@@ -1,4 +1,4 @@
-n.d(e, { e: () => x });
+n.d(e, { e: () => T });
 var s = n(627968),
     i = n(661531),
     o = n(602853),
@@ -11,9 +11,9 @@ var s = n(627968),
     E = n(617986),
     d = n(652215),
     A = n(375708),
-    T = n(900601);
-function x(t) {
-    let { onClick: e, questId: n, orbMultiplierEligibility: x } = t,
+    x = n(900601);
+function T(t) {
+    let { onClick: e, questId: n, orbMultiplierEligibility: T } = t,
         _ = (0, C.ZP)(n),
         I = (0, o.r)(i.A.colors.EXPRESSIVE_GRADIENT_NITRO_PINK_START, d.NJ8.DARK).hex(),
         q = (0, o.r)(i.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, d.NJ8.DARK).hex(),
@@ -21,30 +21,30 @@ function x(t) {
         L = (0, o.r)(i.A.colors.BACKGROUND_BRAND).hex(),
         N = (0, l.cb)(I, 0.5),
         O = (0, l.cb)(q, 0.5),
-        Q = x === c.MA.CREPE,
-        R = (0, c.B9)(x);
+        Q = T === c.MA.CREPE,
+        R = (0, c.B9)(T);
     if (null == _) return null;
     let f = R
             ? A.intl.formatToPlainString(A.t.l2UfLG, { bonusOrbMultiplier: _ })
             : A.intl.formatToPlainString(A.t["G+mKoo"], { bonusOrbMultiplier: _ }),
         P = () => {
-            (0, E.gC)(_, x), e?.();
+            (0, E.gC)(_, T), e?.();
         };
     return Q
         ? (0, s.jsx)(u.D, {
               onClick: P,
               "aria-label": f,
               children: (0, s.jsx)("div", {
-                  className: T._,
+                  className: x._,
                   style: { "--custom-pill-crepe-bg": L },
-                  children: (0, s.jsx)(r.E, { variant: "text-xs/semibold", color: "always-white", children: f }),
+                  children: (0, s.jsx)(r.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: f }),
               }),
           })
         : (0, s.jsx)(u.D, {
               onClick: P,
               "aria-label": f,
               children: (0, s.jsxs)("div", {
-                  className: T.I,
+                  className: x.I,
                   style: {
                       "--custom-pill-gradient-start": N,
                       "--custom-pill-gradient-end": O,
@@ -52,7 +52,7 @@ function x(t) {
                   },
                   children: [
                       (0, s.jsx)(a.t, { size: "xs", color: "white" }),
-                      (0, s.jsx)(r.E, { variant: "text-xs/semibold", color: "always-white", children: f }),
+                      (0, s.jsx)(r.E, { variant: "text-xs/semibold", color: "text-overlay-light", children: f }),
                   ],
               }),
           });

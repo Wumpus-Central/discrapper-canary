@@ -9,21 +9,21 @@ var l = a(627968),
     u = a(480335),
     c = a(474257),
     m = a(744808),
-    p = a(999291),
-    g = a(101928),
+    g = a(999291),
+    p = a(101928),
     h = a(854627),
     v = a(946356),
     y = a(983495),
-    A = a(696451),
-    x = a(919395),
+    x = a(696451),
+    A = a(919395),
     f = a(97808),
     P = a(133171),
     j = a(939249),
     I = a(403581),
     b = a(922016),
     C = a(22231),
-    w = a(688810),
-    N = a(562819),
+    N = a(688810),
+    w = a(562819),
     D = a(290863),
     T = a(19575),
     k = a(980707),
@@ -56,31 +56,31 @@ function E(e) {
             previewAvatar: u,
             previewAvatarDecorationSrc: c,
             previewTheme: m,
-            previewPrimaryColor: p,
-            className: g,
+            previewPrimaryColor: g,
+            className: p,
             disabledInputs: h,
             isTryItOut: v,
             onUpsellClick: y,
         } = e,
-        A = r.useRef(null),
-        { analyticsLocations: x, newestAnalyticsLocation: f } = (0, w.Ay)(),
+        x = r.useRef(null),
+        { analyticsLocations: A, newestAnalyticsLocation: f } = (0, N.Ay)(),
         T = (0, t.bG)([D.A], () => D.A.getStatus(i.id)),
         k = null == a || n?.canUsePremiumProfileCustomization || o,
         O = (0, l.jsx)(z, {
             src: u,
             avatarDecoration: c,
-            imageClassName: s()(g, { [_.Lw]: !h }),
+            imageClassName: s()(p, { [_.Lw]: !h }),
             size: d._3.SIZE_80,
             "aria-label": i.username,
             status: T,
             statusTooltip: !1,
-            statusBackdropColor: null != p ? (0, P.C$)(m) : void 0,
+            statusBackdropColor: null != g ? (0, P.C$)(m) : void 0,
         });
     return h
         ? (0, l.jsx)("div", { className: _.my, children: O })
         : k
           ? (0, l.jsx)(b.Y, {
-                targetElementRef: A,
+                targetElementRef: x,
                 renderPopout: (e) => {
                     let { closePopout: i } = e;
                     return (0, l.jsx)(B, {
@@ -88,14 +88,14 @@ function E(e) {
                         onChangeAvatar: () =>
                             (0, U.XD)({ uploadType: V.HL.AVATAR, guildId: a?.id, analyticsSource: f, isTryItOut: v }),
                         onChangeAvatarDecoration: () => {
-                            (0, N.L)({ guild: null == a ? void 0 : a, analyticsLocations: x });
+                            (0, w.L)({ guild: null == a ? void 0 : a, analyticsLocations: A });
                         },
                     });
                 },
                 children: (e) =>
                     (0, l.jsxs)(j.D, {
                         ...e,
-                        innerRef: A,
+                        innerRef: x,
                         className: s()(_.my, _.vk),
                         children: [
                             O,
@@ -129,10 +129,10 @@ function Y(e) {
             disabledInputs: o,
             onUpsellClick: u,
         } = e,
-        { newestAnalyticsLocation: c } = (0, w.Ay)(),
+        { newestAnalyticsLocation: c } = (0, N.Ay)(),
         m = n || a?.canUsePremiumProfileCustomization || !1,
-        p = m ? C.R : I.t,
-        g = (0, L.b)(m);
+        g = m ? C.R : I.t,
+        p = (0, L.b)(m);
     return (0, l.jsx)(F.A, {
         user: i,
         displayProfile: a,
@@ -145,17 +145,17 @@ function Y(e) {
             !o &&
             (0, l.jsxs)(j.D, {
                 onClick: () => {
-                    m || g
+                    m || p
                         ? (0, U.XD)({ uploadType: V.HL.BANNER, analyticsSource: c, guildId: r, isTryItOut: d })
                         : u?.();
                 },
                 className: M.v,
                 children: [
-                    (0, l.jsx)(p, { size: "xs", color: "white" }),
+                    (0, l.jsx)(g, { size: "xs", color: "white" }),
                     (0, l.jsx)(R.D, {
                         variant: "text-sm/medium",
-                        color: "always-white",
-                        children: m || g ? S.intl.string(S.t.N0bC3P) : S.intl.string(S.t.O1sT5v),
+                        color: "text-overlay-light",
+                        children: m || p ? S.intl.string(S.t.N0bC3P) : S.intl.string(S.t.O1sT5v),
                     }),
                 ],
             }),
@@ -180,17 +180,17 @@ function K(e) {
             pendingPronouns: u,
             pendingLegacyUsernameDisabled: c,
             pendingBadges: m,
-            pendingDisplayNameStyles: p,
-            pendingPrimaryGuildId: g,
+            pendingDisplayNameStyles: g,
+            pendingPrimaryGuildId: p,
             hideBioSection: h,
             shouldOpenBadgeTooltip: v,
         } = e,
-        y = (0, t.bG)([A.Ay], () => (null == r ? null : A.Ay.getMember(r.id, i.id))),
-        x = (0, t.bG)([X.A], () => X.A.hidePersonalInformation),
+        y = (0, t.bG)([x.Ay], () => (null == r ? null : x.Ay.getMember(r.id, i.id))),
+        A = (0, t.bG)([X.A], () => X.A.hidePersonalInformation),
         f = a?.getPreviewBio(o),
         P = u ?? a?.pronouns,
         j = (0, U.eh)({ pendingNickname: s, pendingGlobalName: d, user: i, guildMember: y }),
-        I = (0, Z.gS)(g);
+        I = (0, Z.gS)(p);
     return (0, l.jsxs)("div", {
         className: J.rf,
         inert: !0,
@@ -199,7 +199,7 @@ function K(e) {
                 user: i,
                 guildId: r?.id,
                 displayName: j,
-                pendingDisplayNameStyles: p,
+                pendingDisplayNameStyles: g,
                 usernameIcon: (() => {
                     if (null != y) {
                         if (null !== n && (null != y.avatar || null != n))
@@ -219,7 +219,7 @@ function K(e) {
             !h &&
                 null != f &&
                 "" !== f &&
-                (0, l.jsx)(Q.A, { userId: i.id, userBio: f, hidePersonalInformation: x, viewFullBioDisabled: !0 }),
+                (0, l.jsx)(Q.A, { userId: i.id, userBio: f, hidePersonalInformation: A, viewFullBioDisabled: !0 }),
         ],
     });
 }
@@ -255,8 +255,8 @@ function er(e) {
             pendingPronouns: I,
             pendingAvatar: b,
             pendingAvatarDecoration: C,
-            pendingNickname: w,
-            pendingGlobalName: N,
+            pendingNickname: N,
+            pendingGlobalName: w,
             pendingThemeColors: D,
             pendingProfileEffect: T,
             profileEffectRestartKey: k,
@@ -278,9 +278,9 @@ function er(e) {
             hideExampleButton: X = !1,
             interactive: J = !0,
         } = e,
-        $ = (0, p.Ay)(i.id, a?.id),
-        ee = (0, t.bG)([A.Ay], () => (null != a ? A.Ay.getMember(a.id, i.id) : null)),
-        er = (0, x.lw)({
+        $ = (0, g.Ay)(i.id, a?.id),
+        ee = (0, t.bG)([x.Ay], () => (null != a ? x.Ay.getMember(a.id, i.id) : null)),
+        er = (0, A.lw)({
             pendingValue: C,
             userValue: i?.avatarDecoration,
             guildValue: ee?.avatarDecoration,
@@ -294,7 +294,7 @@ function er(e) {
             size: d._3.SIZE_80,
             showPending: !0,
         }),
-        et = (0, x.lw)({
+        et = (0, A.lw)({
             pendingValue: T,
             userValue: $?._userProfile?.profileEffect,
             guildValue: $?._guildMemberProfile?.profileEffect,
@@ -302,14 +302,14 @@ function er(e) {
         }),
         ed = q
             ? void 0
-            : (0, x.lw)({
+            : (0, A.lw)({
                   pendingValue: O,
                   userValue: $?._userProfile?.profileFrame,
                   guildValue: $?._guildMemberProfile?.profileFrame,
                   guildId: a?.id,
               }),
         eo = (0, c.A)(ed?.skuId, "UserProfilePreview"),
-        { theme: eu, primaryColor: ec } = (0, g.A)({ user: i, displayProfile: $, pendingThemeColors: D, isPreview: r }),
+        { theme: eu, primaryColor: ec } = (0, p.A)({ user: i, displayProfile: $, pendingThemeColors: D, isPreview: r }),
         em = (0, l.jsxs)(v.A, {
             user: i,
             displayProfile: $,
@@ -355,8 +355,8 @@ function er(e) {
                     displayProfile: $,
                     guild: a,
                     pendingAvatar: b,
-                    pendingNickname: w,
-                    pendingGlobalName: N,
+                    pendingNickname: N,
+                    pendingGlobalName: w,
                     pendingBio: j,
                     pendingPronouns: I,
                     pendingLegacyUsernameDisabled: B,

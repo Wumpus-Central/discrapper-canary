@@ -1,4 +1,4 @@
-n.d(e, { default: () => G }), n(321073);
+n.d(e, { default: () => S }), n(321073);
 var i = n(627968),
     l = n(64700),
     s = n(91871),
@@ -15,22 +15,22 @@ var i = n(627968),
     j = n(711014),
     p = n(473145),
     y = n(652215),
-    C = n(375708),
-    f = n(249836);
-function v(t) {
+    v = n(375708),
+    C = n(249836);
+function f(t) {
     let { setQuery: e, query: n } = t;
     return (0, i.jsx)(d.I, {
-        placeholder: C.intl.string(C.t.vf3ZTa),
-        "aria-label": C.intl.string(C.t.vf3ZTa),
+        placeholder: v.intl.string(v.t.vf3ZTa),
+        "aria-label": v.intl.string(v.t.vf3ZTa),
         query: n,
         onChange: e,
         onClear: () => e(""),
     });
 }
-function w(t) {
+function G(t) {
     let { isTransfer: e = !1, selectedSlotGuilds: n, onClose: l, onSelectGuild: s, query: r } = t,
         d = (0, c.bG)([j.Ay], () => j.Ay.getFlattenedGuildIds()),
-        v = (0, c.yK)([g.A], () =>
+        f = (0, c.yK)([g.A], () =>
             d.reduce((t, e) => {
                 let i = g.A.getGuild(e);
                 return (
@@ -41,41 +41,41 @@ function w(t) {
                 );
             }, []),
         );
-    function w() {
+    function G() {
         l(), (0, m.jH)(), (0, x.pX)(y.BVt.GUILD_DISCOVERY);
     }
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            0 === v.length &&
+            0 === f.length &&
                 (0, i.jsx)("div", {
-                    className: f.Kl,
+                    className: C.Kl,
                     children: (0, i.jsx)(o.E, {
                         variant: "text-md/normal",
                         children:
                             0 === d.length
-                                ? C.intl.format(C.t["E3tB6+"], {
+                                ? v.intl.format(v.t["E3tB6+"], {
                                       publicGuildDirectoryHook: (t, e) =>
-                                          (0, i.jsx)(u.D, { onClick: w, tag: "a", children: t }, e),
+                                          (0, i.jsx)(u.D, { onClick: G, tag: "a", children: t }, e),
                                   })
-                                : C.intl.string(C.t.w3GLl9),
+                                : v.intl.string(v.t.w3GLl9),
                     }),
                 }),
-            v.map((t) =>
+            f.map((t) =>
                 (0, i.jsxs)(
                     u.D,
                     {
-                        className: f.Ss,
+                        className: C.Ss,
                         onClick: () => {
                             s(t);
                         },
                         children: [
-                            (0, i.jsx)(h.Ay, { className: f.Bq, guild: t, size: h.Ay.Sizes.SMALL, active: !0 }),
+                            (0, i.jsx)(h.Ay, { className: C.Bq, guild: t, size: h.Ay.Sizes.SMALL, active: !0 }),
                             (0, i.jsxs)("div", {
-                                className: f.Vi,
+                                className: C.Vi,
                                 children: [
-                                    (0, i.jsx)(o.E, { className: f.tD, variant: "text-md/normal", children: t.name }),
+                                    (0, i.jsx)(o.E, { className: C.tD, variant: "text-md/normal", children: t.name }),
                                     (0, i.jsx)(o.E, {
-                                        className: f.w2,
+                                        className: C.w2,
                                         color: "text-muted",
                                         variant: "text-xs/normal",
                                         children: (0, p.gb)(t.premiumTier),
@@ -83,10 +83,10 @@ function w(t) {
                                 ],
                             }),
                             (0, i.jsx)(o.E, {
-                                className: f.qW,
-                                color: "always-white",
+                                className: C.qW,
+                                color: "text-overlay-light",
                                 variant: "text-sm/medium",
-                                children: e ? C.intl.string(C.t.dUgaF8) : C.intl.string(C.t.Uj0md3),
+                                children: e ? v.intl.string(v.t.dUgaF8) : v.intl.string(v.t.Uj0md3),
                             }),
                         ],
                     },
@@ -96,20 +96,20 @@ function w(t) {
         ],
     });
 }
-function G(t) {
+function S(t) {
     let { onClose: e, onSelectGuild: n, transitionState: s, isTransfer: a = !1, selectedSlotGuilds: c } = t,
         [d, o] = l.useState("");
     async function u() {
         await e();
     }
-    let m = a ? C.intl.string(C.t.IB13DV) : C.intl.string(C.t.cQYceV);
+    let m = a ? v.intl.string(v.t.IB13DV) : v.intl.string(v.t.cQYceV);
     return (0, i.jsx)(r.Modal, {
         transitionState: s,
         onClose: u,
         size: "md",
         title: m,
-        input: (0, i.jsx)(v, { query: d, setQuery: o }),
+        input: (0, i.jsx)(f, { query: d, setQuery: o }),
         actions: [],
-        children: (0, i.jsx)(w, { onClose: e, onSelectGuild: n, query: d, isTransfer: a, selectedSlotGuilds: c }),
+        children: (0, i.jsx)(G, { onClose: e, onSelectGuild: n, query: d, isTransfer: a, selectedSlotGuilds: c }),
     });
 }

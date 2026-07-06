@@ -26,8 +26,8 @@ var t = l(627968),
     I = l(174459),
     S = l(371794),
     N = l(440938),
-    w = l(652215),
-    L = l(74564);
+    L = l(652215),
+    w = l(74564);
 let R = (e) => {
     let s,
         l,
@@ -93,7 +93,7 @@ let R = (e) => {
         Z = n.useMemo(() => ({ pageSection: z }), [z]),
         ee = n.useCallback(
             (e, s) => {
-                I.default.track(w.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                I.default.track(L.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: V?.sessionId,
                     page_type: M,
                     page_category: V?.pageCategory,
@@ -130,7 +130,7 @@ let R = (e) => {
                         ? (X.current = setTimeout(() => {
                               (W.current = !0),
                                   (X.current = null),
-                                  I.default.track(w.HAw.COLLECTIBLES_TILE_IMPRESSION, {
+                                  I.default.track(L.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                                       collectibles_shop_session_id: V?.sessionId,
                                       page_type: M,
                                       page_category: V?.pageCategory,
@@ -151,7 +151,7 @@ let R = (e) => {
     0 === U.length)
         ? null
         : (0, t.jsx)(o.N, {
-              theme: w.NJ8.DARKER,
+              theme: L.NJ8.DARKER,
               children: (e) =>
                   (0, t.jsx)(f.L, {
                       innerRef: Q,
@@ -159,34 +159,34 @@ let R = (e) => {
                       threshold: 0,
                       children: (0, t.jsx)("div", {
                           ref: Q,
-                          className: a()(L.YB, e),
+                          className: a()(w.YB, e),
                           children: (0, t.jsxs)("div", {
-                              className: L.kL,
+                              className: w.kL,
                               children: [
-                                  null != $ && (0, t.jsx)("div", { className: L.D7, style: { background: $ } }),
+                                  null != $ && (0, t.jsx)("div", { className: w.D7, style: { background: $ } }),
                                   null != R &&
                                       (0, t.jsx)("div", {
-                                          className: L.b,
+                                          className: w.b,
                                           children: (0, t.jsx)(r.J, { size: "sm", variant: "icon-only", onClick: ea }),
                                       }),
-                                  null != J && (0, t.jsx)("img", { className: L.wm, src: J, alt: "" }),
+                                  null != J && (0, t.jsx)("img", { className: w.wm, src: J, alt: "" }),
                                   (0, t.jsx)("div", {
-                                      className: L.xf,
+                                      className: w.xf,
                                       children: (0, t.jsxs)("div", {
-                                          className: L.B5,
+                                          className: w.B5,
                                           children: [
                                               (0, t.jsx)(c.D, {
-                                                  className: L.R_,
+                                                  className: w.R_,
                                                   variant: "heading-lg/normal",
-                                                  color: "always-white",
+                                                  color: "text-overlay-light",
                                                   children: (0, E.U)(T),
                                               }),
                                               (0, t.jsxs)("div", {
-                                                  className: L.U9,
+                                                  className: w.U9,
                                                   children: [
                                                       null != P &&
                                                           (0, t.jsxs)("div", {
-                                                              className: L.f$,
+                                                              className: w.f$,
                                                               children: [
                                                                   (0, t.jsx)(u.O, {
                                                                       size: "xs",
@@ -218,7 +218,7 @@ let R = (e) => {
                                   (0, t.jsx)(x.E9, {
                                       newValue: Z,
                                       children: (0, t.jsx)("div", {
-                                          className: L.$2,
+                                          className: w.$2,
                                           children: U.map((e, s) =>
                                               (0, t.jsx)(
                                                   v.A,

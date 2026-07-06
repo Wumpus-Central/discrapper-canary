@@ -27,9 +27,9 @@ var n = s(627968),
     b = s(3738),
     p = s(347135),
     T = s(646917),
-    w = s(561844),
-    D = s(590202),
-    L = s(651892),
+    D = s(561844),
+    L = s(590202),
+    w = s(651892),
     M = s(710969),
     Q = s(576761),
     k = s(801365),
@@ -128,8 +128,8 @@ function J(e) {
         }, [eg]),
         e_ = (0, j.bG)([g.Ay], () => g.Ay.useReducedMotion),
         eS = i.useMemo(() => (0, M.Ic)(t) && !(0, M.GR)(t.userStatus), [t]),
-        eq = (0, p.do)({ quest: t, content: s, ctaContent: D.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
-        eI = (0, L.wr)(t),
+        eq = (0, p.do)({ quest: t, content: s, ctaContent: L.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
+        eI = (0, w.wr)(t),
         ey = i.useCallback(() => {
             eS
                 ? eq()
@@ -139,16 +139,16 @@ function J(e) {
                             type: v.F.CLICK_INTERNAL,
                             adCreativeType: d.p.QUEST,
                             adCreativeId: t.id,
-                            questContentCTA: D.Cy.LEARN_MORE,
+                            questContentCTA: L.Cy.LEARN_MORE,
                             surfaceId: s,
                             sourceQuestContent: o,
                             questContentPosition: r,
                         })
-                      : (0, w.Y5)({
+                      : (0, D.Y5)({
                             questId: t.id,
                             questContent: s,
                             questContentPosition: r,
-                            questContentCTA: D.Cy.LEARN_MORE,
+                            questContentCTA: L.Cy.LEARN_MORE,
                             sourceQuestContent: o,
                         }));
         }, [eS, eq, t.id, s, r, o]),
@@ -373,7 +373,7 @@ function eC(e) {
         r = t.userStatus?.claimedAt != null,
         o = (0, p.S5)(t.config.expiresAt, { month: "numeric", day: "numeric" }),
         c = (0, eu.Ay)(),
-        u = (0, ei.M)(c) ? "text-muted" : "always-white";
+        u = (0, ei.M)(c) ? "text-muted" : "text-overlay-light";
     return (0, n.jsxs)("div", {
         className: eE.kL,
         children: [
@@ -458,7 +458,7 @@ function eC(e) {
                                         }),
                                         (0, n.jsx)(x.E, {
                                             variant: "text-sm/medium",
-                                            color: "always-white",
+                                            color: "text-overlay-light",
                                             children:
                                                 t.config.cosponsorMetadata?.name ?? t.config.messages.gamePublisher,
                                         }),

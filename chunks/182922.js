@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => E });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -35,13 +35,13 @@ function f(e) {
             t === d.tm.TOP_GUILD_EMOJI ? (0, i.jsx)(u, { foreground: h.Gb }) : (0, i.jsx)(c.A, { foreground: h.Gb }),
             (0, i.jsx)(a.E, {
                 variant: "text-sm/semibold",
-                color: "always-white",
+                color: "text-overlay-light",
                 children: t === d.tm.TOP_GUILD_EMOJI ? _.intl.string(_.t.TR2B4T) : _.intl.string(_.t["1aZ4V6"]),
             }),
         ],
     });
 }
-let p = function (e) {
+let E = function (e) {
     let {
         className: t,
         graphicPrimary: n,
@@ -49,7 +49,7 @@ let p = function (e) {
         titlePrimary: l,
         titleSecondary: u,
         isFavorite: c = !1,
-        emojiSubCategory: p = d.tm.NONE,
+        emojiSubCategory: E = d.tm.NONE,
     } = e;
     return (0, i.jsxs)("div", {
         className: s()(h.qV, t),
@@ -78,9 +78,9 @@ let p = function (e) {
                     null != u && (0, i.jsx)(a.E, { className: h.Fm, variant: "text-xs/normal", children: u }),
                 ],
             }),
-            p === d.tm.NONE
+            E === d.tm.NONE
                 ? null != r && (0, i.jsx)("div", { className: h.vK, "aria-hidden": !0, children: r })
-                : (0, i.jsx)(f, { emojiSubCategory: p }),
+                : (0, i.jsx)(f, { emojiSubCategory: E }),
         ],
     });
 };

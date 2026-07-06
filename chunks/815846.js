@@ -30,9 +30,9 @@ var l,
     O = s(682174),
     L = s(721668),
     P = s(976860),
-    w = s(780964),
-    S = s(830543),
-    D = s(766075),
+    S = s(780964),
+    D = s(830543),
+    w = s(766075),
     G = s(287809),
     U = s(166403),
     F = s(224016),
@@ -718,9 +718,9 @@ var ev = s(194509),
     eO = s(156601),
     eL = s(860839),
     eP = s(202541),
-    ew = s(88001),
-    eS = s(466919),
-    eD = s(613741);
+    eS = s(88001),
+    eD = s(466919),
+    ew = s(613741);
 let eG = "to_premium_home_button",
     eU = "premium home page",
     eF = "gifting_button",
@@ -740,26 +740,26 @@ function ek(e) {
         return (0, n.jsxs)(n.Fragment, {
             children: [
                 !r && (a || o)
-                    ? (0, n.jsx)(eb.e4, { text: eE.intl.string(eE.t.EyjDRE), className: eD.LW, colorOptions: e })
+                    ? (0, n.jsx)(eb.e4, { text: eE.intl.string(eE.t.EyjDRE), className: ew.LW, colorOptions: e })
                     : (0, n.jsxs)(n.Fragment, {
                           children: [
                               (0, n.jsx)(eb.HU, {
                                   text: r ? eE.intl.string(eE.t.qYKftX) : eE.intl.string(eE.t.EyjDRE),
-                                  className: eD.uS,
+                                  className: ew.uS,
                                   colorOptions: e,
                               }),
-                              (0, n.jsx)("div", { className: eD.on }),
+                              (0, n.jsx)("div", { className: ew.on }),
                           ],
                       }),
                 (0, n.jsx)(g.D, {
                     variant: "heading-md/normal",
-                    color: "always-white",
-                    className: eD.KB,
+                    color: "text-overlay-light",
+                    className: ew.KB,
                     children: (() => {
                         if (r) return eE.intl.format(eE.t["2CGBri"], { remainingTime: u, price: p });
                         if (o && null != l && t.metadata?.active_discount_expires_at != null) {
                             let e = (0, V.$g)(m.amount, m.currency);
-                            return eE.intl.format(eS.default.FwjZzr, {
+                            return eE.intl.format(eD.default.FwjZzr, {
                                 percent: l?.percentage ?? 0,
                                 discountEndDate: new Date(t.metadata.active_discount_expires_at),
                                 regularPrice: e,
@@ -797,19 +797,19 @@ function eH() {
     let u = o.isFractionalPremiumActive,
         m = null !== l && l.hasActiveTrial;
     return (0, n.jsxs)("div", {
-        className: a()(eD.$Y, { [eD.J5]: e || m }),
+        className: a()(ew.$Y, { [ew.J5]: e || m }),
         children: [
             (0, n.jsxs)("div", {
-                className: eD.jp,
+                className: ew.jp,
                 children: [
                     r
                         ? (0, n.jsx)(g.D, {
                               variant: "display-md",
-                              color: "always-white",
-                              className: eD._K,
-                              children: (0, ew.DP)(),
+                              color: "text-overlay-light",
+                              className: ew._K,
+                              children: (0, eS.DP)(),
                           })
-                        : (0, n.jsx)(F.A, { className: eD.TJ }),
+                        : (0, n.jsx)(F.A, { className: ew.TJ }),
                     r && !e
                         ? (0, n.jsx)("div", { style: { marginBottom: "6px" } })
                         : u && !c
@@ -817,13 +817,13 @@ function eH() {
                                 children: [
                                     (0, n.jsx)(eb.e4, {
                                         text: eE.intl.string(eE.t.uXF4c4),
-                                        className: eD.LW,
+                                        className: ew.LW,
                                         colorOptions: eb.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                     }),
                                     (0, n.jsx)(g.D, {
                                         variant: "heading-md/normal",
-                                        color: "always-white",
-                                        className: eD.sQ,
+                                        color: "text-overlay-light",
+                                        className: ew.sQ,
                                         children: eE.intl.format(eE.t.sK7fGl, {
                                             helpCenterLink: k.A.getArticleURL(eA.MVz.FRACTIONAL_PREMIUM_ABOUT),
                                         }),
@@ -842,15 +842,15 @@ function eH() {
                                     children: [
                                         (0, n.jsx)(eb.HU, {
                                             text: eE.intl.string(eE.t.qYKftX),
-                                            className: eD.uS,
+                                            className: ew.uS,
                                             colorOptions: (0, _.M)(s)
                                                 ? eb.at.PREMIUM_TIER_2_WHITE_FILL
                                                 : eb.at.PREMIUM_TIER_2_OLD_GRADIENT_FILL,
                                         }),
                                         (0, n.jsx)(g.D, {
                                             variant: "heading-md/normal",
-                                            color: "always-white",
-                                            className: eD.KB,
+                                            color: "text-overlay-light",
+                                            className: ew.KB,
                                             children: eE.intl.format(eE.t["/SfHwl"], { weeks: 1 }),
                                         }),
                                     ],
@@ -882,7 +882,7 @@ function eH() {
                                               cta_type: eG,
                                               target: eU,
                                           }),
-                                              (0, S.default)(),
+                                              (0, D.default)(),
                                               (0, P.pX)(eA.BVt.APPLICATION_STORE);
                                       },
                                       variant: "overlay-secondary",
@@ -905,7 +905,7 @@ function eH() {
                                               cta_type: eG,
                                               target: eU,
                                           }),
-                                              (0, S.default)(),
+                                              (0, D.default)(),
                                               (0, P.pX)(eA.BVt.APPLICATION_STORE);
                                       },
                                       text: eE.intl.string(eE.t.VR2iVB),
@@ -918,7 +918,7 @@ function eH() {
                                               cta_type: "to_subscriptions_button",
                                               target: "subscriptions settings",
                                           }),
-                                              (0, D.openUserSettings)(w.X.SUBSCRIPTIONS_PANEL);
+                                              (0, w.openUserSettings)(S.X.SUBSCRIPTIONS_PANEL);
                                       },
                                       text: eE.intl.string(eE.t["9uDy6C"]),
                                       fullWidth: !0,
@@ -929,8 +929,8 @@ function eH() {
                 ],
             }),
             (0, n.jsx)("div", {
-                className: eD.ah,
-                children: (0, n.jsx)("img", { className: eD.ah, alt: "", src: "/assets/3aaa2c2d1874c196.svg" }),
+                className: ew.ah,
+                children: (0, n.jsx)("img", { className: ew.ah, alt: "", src: "/assets/3aaa2c2d1874c196.svg" }),
             }),
         ],
     });
@@ -948,23 +948,23 @@ function eV(e) {
         d = (0, Y.x)(o, c),
         u = { color: null != s.textColor && "" !== s.textColor ? s.textColor : "var(--always-white)" };
     return (0, n.jsxs)("div", {
-        className: a()(eD.WR, t),
+        className: a()(ew.WR, t),
         style: d,
         children: [
-            null != l && (0, n.jsx)("img", { alt: "", className: eD.TB, "aria-hidden": !0, src: l }),
+            null != l && (0, n.jsx)("img", { alt: "", className: ew.TB, "aria-hidden": !0, src: l }),
             (0, n.jsxs)("div", {
-                className: eD.QT,
+                className: ew.QT,
                 children: [
                     (0, n.jsx)(g.D, {
-                        className: eD.u_,
+                        className: ew.u_,
                         style: u,
                         variant: "heading-lg/extrabold",
                         children: s.header,
                     }),
-                    (0, n.jsx)(E.E, { className: eD.Oi, style: u, variant: "text-xs/medium", children: s.body }),
+                    (0, n.jsx)(E.E, { className: ew.Oi, style: u, variant: "text-xs/medium", children: s.body }),
                     null != s.additionalTerms &&
                         (0, n.jsx)(E.E, {
-                            className: eD.KW,
+                            className: ew.KW,
                             style: u,
                             variant: "text-xxs/normal",
                             children: s.additionalTerms,
@@ -983,25 +983,25 @@ function eV(e) {
 }
 function ez() {
     return (0, n.jsxs)("div", {
-        className: eD.T1,
+        className: ew.T1,
         children: [
-            (0, n.jsx)("img", { className: eD.GY, alt: "", src: "/assets/9f5bdd034cc313ae.svg" }),
+            (0, n.jsx)("img", { className: ew.GY, alt: "", src: "/assets/9f5bdd034cc313ae.svg" }),
             (0, n.jsxs)("div", {
-                className: eD.b4,
+                className: ew.b4,
                 children: [
                     (0, n.jsx)(g.D, {
-                        className: eD.Vz,
+                        className: ew.Vz,
                         variant: "heading-xl/extrabold",
                         children: eE.intl.string(eE.t["3KomGa"]),
                     }),
                     (0, n.jsx)(E.E, {
-                        className: eD.Oi,
+                        className: ew.Oi,
                         variant: "text-sm/normal",
                         children: eE.intl.string(eE.t.yQ06u1),
                     }),
                     (0, n.jsx)(ev.A, {
-                        className: a()(eD.Tp, eD._c),
-                        textOptions: { textOverride: eE.intl.string(eE.t.Ve9Ge6), textClassName: eD.VV },
+                        className: a()(ew.Tp, ew._c),
+                        textOptions: { textOverride: eE.intl.string(eE.t.Ve9Ge6), textClassName: ew.VV },
                         color: f.$n.Colors.CUSTOM,
                         onClick: () => {
                             B.default.track(eA.HAw.PREMIUM_SETTINGS_INTERACTED, { cta_type: eF, target: eB });
@@ -1039,11 +1039,11 @@ let eW = function () {
     let [E, T] = i.useState(!1);
     if (e) return (0, n.jsx)(O.uK, {});
     let P = r && null !== l && a,
-        w = p.fetched && p.isFractionalPremiumActive,
-        S = s?.isPremiumWithPremiumGroup();
-    if (!P && !w && !o && !S) return (0, n.jsx)(L.A, { title: eE.intl.string(eE.t.dyq9TR), note: null });
-    if ((!P && !w && !S) || o) return (0, n.jsx)(A.y, {});
-    let D = !!l?.hasActiveTrial;
+        S = p.fetched && p.isFractionalPremiumActive,
+        D = s?.isPremiumWithPremiumGroup();
+    if (!P && !S && !o && !D) return (0, n.jsx)(L.A, { title: eE.intl.string(eE.t.dyq9TR), note: null });
+    if ((!P && !S && !D) || o) return (0, n.jsx)(A.y, {});
+    let w = !!l?.hasActiveTrial;
     return (0, n.jsx)(N.f5, {
         value: t,
         children: (0, n.jsxs)(n.Fragment, {
@@ -1059,8 +1059,8 @@ let eW = function () {
                         (0, n.jsx)(Z.A, {
                             hideCTAs: !0,
                             headingOverride: eE.intl.string(eE.t.dnVvQS),
-                            hidePill: !D,
-                            selectedPlanColumnClassName: eD.JG,
+                            hidePill: !w,
+                            selectedPlanColumnClassName: ew.JG,
                             selectedPlanTier: eP.PremiumTypes.TIER_2,
                         }),
                     ],
@@ -1073,7 +1073,7 @@ let eW = function () {
                             (B.default.track(eA.HAw.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM, { location_stack: t }),
                             T(!0));
                     },
-                    children: (0, n.jsx)("div", { ref: f, className: eD._Z }),
+                    children: (0, n.jsx)("div", { ref: f, className: ew._Z }),
                 }),
             ],
         }),

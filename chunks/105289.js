@@ -1598,7 +1598,7 @@ function ta() {
                                     children: [
                                         (0, r.jsx)(p.E, {
                                             variant: "text-md/normal",
-                                            color: "always-white",
+                                            color: "text-overlay-light",
                                             children: "Import Shared Config",
                                         }),
                                         (0, r.jsx)(eR.A, { ref: s, onChange: g, multiple: !1 }),
@@ -1672,7 +1672,7 @@ function ta() {
                                                     className: e1.Hd,
                                                     children: (0, r.jsx)(p.E, {
                                                         variant: "text-md/normal",
-                                                        color: "always-white",
+                                                        color: "text-overlay-light",
                                                         children: e.title,
                                                     }),
                                                 }),
@@ -1958,7 +1958,7 @@ function tw(e) {
                     className: $()(tR.vK, tR.Dg),
                     children: (0, r.jsx)(p.E, {
                         variant: "text-md/bold",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: "Profile Effects",
                     }),
                 }),
@@ -1971,7 +1971,7 @@ function tw(e) {
                     className: $()(tR.vK, tR.st),
                     children: (0, r.jsx)(p.E, {
                         variant: "text-md/bold",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: "Nameplates",
                     }),
                 }),
@@ -1984,7 +1984,7 @@ function tw(e) {
                     className: $()(tR.vK, tR.BW),
                     children: (0, r.jsx)(p.E, {
                         variant: "text-md/bold",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: "Profile Frames",
                     }),
                 }),
@@ -1995,7 +1995,11 @@ function tw(e) {
                 },
                 children: (0, r.jsx)("div", {
                     className: $()(tR.vK, tR.IP),
-                    children: (0, r.jsx)(p.E, { variant: "text-md/bold", color: "always-white", children: "Products" }),
+                    children: (0, r.jsx)(p.E, {
+                        variant: "text-md/bold",
+                        color: "text-overlay-light",
+                        children: "Products",
+                    }),
                 }),
             }),
             !a &&
@@ -4918,7 +4922,8 @@ function lq() {
         children: [
             (0, r.jsx)(x.$, { variant: "primary", onClick: i, text: "Reset Onboarding", disabled: e, fullWidth: !0 }),
             !(0, lK.uJ)(a) && (0, r.jsx)(p.E, { variant: "text-md/normal", color: "status-positive", children: a }),
-            !(0, lK.uJ)(l) && (0, r.jsx)(p.E, { variant: "text-md/normal", color: "status-danger", children: l }),
+            !(0, lK.uJ)(l) &&
+                (0, r.jsx)(p.E, { variant: "text-md/normal", color: "text-feedback-critical", children: l }),
         ],
     });
 }
@@ -9918,7 +9923,7 @@ function og(e) {
                     className: $()(s_.qS, s_.vk, { [s_.vu]: n, [s_.R1]: t, [s_._7]: a }),
                     children: (0, r.jsxs)(p.E, {
                         variant: "eyebrow",
-                        color: t ? void 0 : "always-white",
+                        color: t ? void 0 : "text-overlay-light",
                         children: [i, n ? " *" : ""],
                     }),
                 }),
@@ -9926,7 +9931,11 @@ function og(e) {
                     s.active &&
                     (0, r.jsx)("div", {
                         className: $()(s_.qS, s_.k3),
-                        children: (0, r.jsx)(p.E, { variant: "eyebrow", color: "always-white", children: s.label }),
+                        children: (0, r.jsx)(p.E, {
+                            variant: "eyebrow",
+                            color: "text-overlay-light",
+                            children: s.label,
+                        }),
                     }),
             ],
         })
@@ -9999,7 +10008,11 @@ function ov(e) {
             children: [
                 (0, r.jsx)("div", {
                     className: $()(s_.nM, s_.S7),
-                    children: (0, r.jsx)(K.D, { variant: "heading-lg/semibold", color: "always-white", children: E }),
+                    children: (0, r.jsx)(K.D, {
+                        variant: "heading-lg/semibold",
+                        color: "text-overlay-light",
+                        children: E,
+                    }),
                 }),
                 (0, r.jsxs)(V.D, {
                     className: $()(s_.nM, s_.QB),
@@ -10007,7 +10020,7 @@ function ov(e) {
                         (0, n_.C)(g, () => i(!0));
                     },
                     children: [
-                        (0, r.jsxs)(p.E, { variant: "eyebrow", color: "always-white", children: ["Offer: ", g] }),
+                        (0, r.jsxs)(p.E, { variant: "eyebrow", color: "text-overlay-light", children: ["Offer: ", g] }),
                         s
                             ? (0, r.jsx)(ol.A, { size: "md", color: "currentColor", className: s_.Kk })
                             : (0, r.jsx)(np.T, { size: "xs", color: "currentColor", className: s_.Kk }),
@@ -10019,7 +10032,7 @@ function ov(e) {
                         (0, n_.C)(f, () => c(!0));
                     },
                     children: [
-                        (0, r.jsxs)(p.E, { variant: "eyebrow", color: "always-white", children: ["Trial: ", f] }),
+                        (0, r.jsxs)(p.E, { variant: "eyebrow", color: "text-overlay-light", children: ["Trial: ", f] }),
                         d
                             ? (0, r.jsx)(ol.A, { size: "md", color: "currentColor", className: s_.Kk })
                             : (0, r.jsx)(np.T, { size: "xs", color: "currentColor", className: s_.Kk }),
@@ -10029,7 +10042,7 @@ function ov(e) {
                     className: s_.nM,
                     children: (0, r.jsxs)(p.E, {
                         variant: "eyebrow",
-                        color: "always-white",
+                        color: "text-overlay-light",
                         children: [
                             "Trial Length:",
                             " ",
@@ -10046,7 +10059,7 @@ function ov(e) {
                     children: [
                         (0, r.jsxs)(p.E, {
                             variant: "eyebrow",
-                            color: "always-white",
+                            color: "text-overlay-light",
                             children: ["Expires (", (0, os.A)(), "):"],
                         }),
                         (0, r.jsx)("input", {
@@ -10061,7 +10074,7 @@ function ov(e) {
                 (0, r.jsxs)("div", {
                     className: s_.nM,
                     children: [
-                        (0, r.jsx)(p.E, { variant: "eyebrow", color: "always-white", children: "Referrer ID:" }),
+                        (0, r.jsx)(p.E, { variant: "eyebrow", color: "text-overlay-light", children: "Referrer ID:" }),
                         (0, r.jsx)("input", {
                             type: "text",
                             value: y?.id ?? "",
@@ -10190,7 +10203,7 @@ function oj(e) {
                     children: [
                         (0, r.jsxs)(p.E, {
                             variant: "eyebrow",
-                            color: "always-white",
+                            color: "text-overlay-light",
                             children: ["Expires (", (0, os.A)(), "):"],
                         }),
                         (0, r.jsx)("input", {
@@ -19599,7 +19612,7 @@ function ph(e) {
         d = o.useCallback(() => {
             i(!s);
         }, [s]),
-        c = "migrated" === n || "migrated-root" === n ? void 0 : "status-warning",
+        c = "migrated" === n || "migrated-root" === n ? void 0 : "text-feedback-warning",
         u = (e) => (0, r.jsx)(p.E, { variant: e, color: c, children: t });
     return null == l
         ? (0, r.jsx)("div", { className: pm.NF, children: u("text-md/normal") })

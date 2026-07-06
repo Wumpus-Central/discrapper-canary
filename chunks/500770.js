@@ -30,7 +30,7 @@ function I(e) {
                         (0, i.jsx)(r.X, { size: "xs", className: E.hz, color: "currentColor", "aria-hidden": !0 }),
                         (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            color: "always-white",
+                            color: "text-overlay-light",
                             className: E.__invalid_unlockText,
                             children: f.intl.string(f.t.YmIiSe),
                         }),
@@ -82,13 +82,13 @@ function v(e) {
             cardHeight: k,
             thumbnailHeight: L = 187,
             descriptionTextVariant: R = "text-sm/normal",
-            isDraft: M = !1,
+            isDraft: P = !1,
         } = e,
-        P = (0, g.Ld)(),
+        M = (0, g.Ld)(),
         D = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(I, {
-                    showDraftBadge: M,
+                    showDraftBadge: P,
                     hidePurchaseToUnlockBadge: !0,
                     children: (0, i.jsx)("img", { alt: "", src: t, className: E.K_, style: { height: L } }),
                 }),
@@ -102,7 +102,7 @@ function v(e) {
                                     variant: "text-md/medium",
                                     color: "text-strong",
                                     className: E.tZ,
-                                    id: P,
+                                    id: M,
                                     children: n,
                                 }),
                                 (0, i.jsx)(u.M, {
@@ -151,7 +151,7 @@ function v(e) {
             ],
         });
     return null == j
-        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": P, children: D })
+        ? (0, i.jsx)("article", { className: s()(E.Um, T ? E.sG : E.Wi), "aria-labelledby": M, children: D })
         : (0, i.jsx)("div", {
               style: { width: b, height: k },
               children: (0, i.jsx)(h.s, {

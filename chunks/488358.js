@@ -26,9 +26,9 @@ var n = l(627968),
     _ = l(364522),
     k = l(123292),
     P = l(77468),
-    w = l(66834),
-    R = l(730134),
-    T = l(964486),
+    R = l(66834),
+    T = l(730134),
+    w = l(964486),
     I = l(736653),
     G = l(573648),
     L = l(95561),
@@ -44,7 +44,7 @@ var n = l(627968),
     $ = l(780964),
     B = l(766075),
     Y = l(889227),
-    K = l(495544),
+    K = l(280450),
     Q = l(546183),
     W = l(734057),
     Z = l(30370),
@@ -183,7 +183,7 @@ function eA(e) {
               className: a()(ed.UY, y ? ed.o6 : null, x ? null : ed.pC),
               onClick: !y && x ? N : void 0,
               children: [
-                  null != f ? (0, n.jsx)(R.A, { user: f }) : null,
+                  null != f ? (0, n.jsx)(T.A, { user: f }) : null,
                   (0, n.jsxs)("div", {
                       className: ed.EZ,
                       children: [
@@ -263,11 +263,11 @@ function ep(e) {
                     S = null == y || y.enabled,
                     k = null != y && null != y.replacedBy && _,
                     P = k || !S,
-                    w = f?.application,
-                    T = w?.bot != null ? new Y.A(w.bot) : null;
-                en.iC.includes(w?.id ?? "")
+                    R = f?.application,
+                    w = R?.bot != null ? new Y.A(R.bot) : null;
+                en.iC.includes(R?.id ?? "")
                     ? (t = (0, n.jsx)(es.A, { className: ed.AO, color: C, size: 16 }))
-                    : null != T && (t = (0, n.jsx)(O.A, { className: ed.AO, verified: T.isVerifiedBot() }));
+                    : null != w && (t = (0, n.jsx)(O.A, { className: ed.AO, verified: w.isVerifiedBot() }));
                 let I = r[y?.type ?? eo.zR],
                     L = !h && null != I && I <= d;
                 return (
@@ -304,11 +304,11 @@ function ep(e) {
                                               void ((0, ei.A)({
                                                   platformType: e,
                                                   location: "Verified Roles Connect Accounts Modal",
-                                                  overrideUrl: w?.role_connections_verification_url,
+                                                  overrideUrl: R?.role_connections_verification_url,
                                               }),
                                               c({ ...r, [e]: Date.now() }),
                                               p(e),
-                                              E(w ?? null),
+                                              E(R ?? null),
                                               l())
                                           );
                                       },
@@ -318,13 +318,13 @@ function ep(e) {
                                           className: ed.Z1,
                                           children: (0, n.jsx)(j.E, {
                                               variant: "text-xs/normal",
-                                              color: "always-white",
+                                              color: "text-overlay-light",
                                               children: eu.intl.string(eu.t.UB3hKo),
                                           }),
                                       })
                                     : null,
                                 null != y ? (0, n.jsx)(em, { platformType: y.type }) : null,
-                                null != T ? (0, n.jsx)(R.A, { user: T }) : null,
+                                null != w ? (0, n.jsx)(T.A, { user: w }) : null,
                                 (0, n.jsxs)("div", {
                                     className: ed.EZ,
                                     children: [
@@ -334,7 +334,7 @@ function ep(e) {
                                                 (0, n.jsx)(j.E, {
                                                     variant: "text-md/medium",
                                                     color: "text-strong",
-                                                    children: y?.name ?? w?.name,
+                                                    children: y?.name ?? R?.name,
                                                 }),
                                                 t,
                                                 null != s
@@ -396,7 +396,7 @@ function ef(e) {
         [d, m] = i.useState(a.showActivity),
         [x, h] = i.useState(1 === a.metadataVisibility),
         [A, p] = i.useState(1 === a.visibility);
-    (0, T.Ay)(() => {
+    (0, w.Ay)(() => {
         r(!A), o(x);
     });
     let f = G.A.get(a.type);
@@ -453,8 +453,8 @@ function ej(e) {
         [p, f] = i.useState(0),
         [g, v] = i.useState(null),
         [y, E] = i.useState(!1),
-        [P, R] = i.useState(!0),
-        [T, M] = i.useState(!1),
+        [P, T] = i.useState(!0),
+        [w, M] = i.useState(!1),
         [V, H] = i.useState(!0),
         [O, D] = i.useState(!1),
         z = (0, x.bG)([Z.A], () => Z.A.getAccounts()),
@@ -480,24 +480,24 @@ function ej(e) {
         ey(!0), (0, B.openUserSettings)($.X.CONNECTIONS_PANEL);
     }
     async function eS() {
-        M(!0), await w.A.assignGuildRoleConnection(d, h.id);
+        M(!0), await R.A.assignGuildRoleConnection(d, h.id);
     }
     i.useEffect(() => {
-        w.A.fetchGuildRoleConnectionsEligibility(d, h.id).then((e) => {
-            v(e), E(e.some((e) => e.every((e) => e.result))), R(!1);
+        R.A.fetchGuildRoleConnectionsEligibility(d, h.id).then((e) => {
+            v(e), E(e.some((e) => e.every((e) => e.result))), T(!1);
         });
     }, [d, h.id, z, Y]),
         i.useEffect(() => {
             et.default.track(ec.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: h.id, ...(0, L.H$)(d) });
         }, [d, h.id]),
         i.useEffect(() => {
-            T &&
+            w &&
                 null != eg &&
                 eg.roles.includes(h.id) &&
                 (M(!1),
                 ev.length > 0 ? f(2) : u?.(),
                 et.default.track(ec.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: h.id, ...(0, L.H$)(d) }));
-        }, [T, ev.length, eg, d, h.id, u]);
+        }, [w, ev.length, eg, d, h.id, u]);
     let eb = g?.flat().some((e) => null == e.application_id) ?? !1;
     switch (p) {
         case 0: {
@@ -558,7 +558,7 @@ function ej(e) {
                         variant: "primary",
                         text: eu.intl.string(eu.t["8SuVoE"]),
                         onClick: () => eS(),
-                        disabled: P || !y || T,
+                        disabled: P || !y || w,
                     },
                 ]),
                 (a = eb

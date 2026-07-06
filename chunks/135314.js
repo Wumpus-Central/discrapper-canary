@@ -134,7 +134,7 @@ function O(e) {
                     (0, l.jsx)(c.E, {
                         tag: "span",
                         variant: e.textBadgeVariant,
-                        color: "always-white",
+                        color: "text-overlay-light",
                         className: N.kP,
                         children: e.text,
                     }))

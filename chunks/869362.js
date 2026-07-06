@@ -3280,7 +3280,7 @@ function s8() {
             (0, i.jsx)(g.p, { size: "custom", color: "white", className: s1.wm }),
             (0, i.jsx)(x.E, {
                 tag: "span",
-                color: "always-white",
+                color: "text-overlay-light",
                 variant: "text-md/normal",
                 children: w.intl.string(w.t.Ol3MIt),
             }),

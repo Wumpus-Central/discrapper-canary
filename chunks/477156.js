@@ -1923,7 +1923,7 @@ function tG(e) {
                 (0, i.jsxs)(F.E, {
                     className: tU.aV,
                     variant: "text-xs/normal",
-                    color: "always-white",
+                    color: "text-overlay-light",
                     children: [
                         (0, i.jsx)(t_.X, { size: "xxs", color: "currentColor" }),
                         ec.intl.format(ec.t.sLJ3EV, {

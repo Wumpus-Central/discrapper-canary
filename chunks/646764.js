@@ -16,17 +16,17 @@ var r = s(627968),
     _ = s(607470),
     E = s(287809),
     R = s(104886),
-    N = s(46948),
-    x = s(18437),
+    x = s(46948),
+    N = s(18437),
     p = s(590202),
-    h = s(971649),
-    g = s(801365),
+    g = s(971649),
+    h = s(801365),
     j = s(557637),
-    w = s(415441),
-    y = s(734736),
+    y = s(415441),
+    v = s(734736),
     M = s(617986),
     q = s(139384),
-    v = s(190107),
+    w = s(190107),
     I = s(375708),
     L = s(369453);
 let S = function (e) {
@@ -43,21 +43,21 @@ let S = function (e) {
             style: D,
             orbTier: U,
         } = e,
-        V = (0, x.Ut)(),
-        Y = (0, h.go)(),
+        V = (0, N.Ut)(),
+        Y = (0, g.go)(),
         z = (0, o.bG)([C.Ay], () => C.Ay.useReducedMotion),
         B = (0, o.bG)([E.default], () => E.default.getCurrentUser()),
         G = n.useMemo(
             () =>
-                (0, g.ks)(i.config) && i.userStatus?.claimedAt != null
+                (0, h.ks)(i.config) && i.userStatus?.claimedAt != null
                     ? I.intl.formatToPlainString(I.t["nLXlh+"], {
-                          orbAmount: i.userStatus?.orbQuantityClaimed ?? (0, g._Z)(i.config) ?? 0,
+                          orbAmount: i.userStatus?.orbQuantityClaimed ?? (0, h._Z)(i.config) ?? 0,
                       })
-                    : (0, g.mq)(i.config, B),
+                    : (0, h.mq)(i.config, B),
             [i.config, i.userStatus?.claimedAt, i.userStatus?.orbQuantityClaimed, B],
         ),
-        H = n.useMemo(() => (0, N.tW)(i, N.fY.REWARD, void 0, void 0, U), [i, U]),
-        K = n.useMemo(() => (0, N.tW)(i, N.fY.REWARD_IMAGE), [i]),
+        H = n.useMemo(() => (0, x.tW)(i, x.fY.REWARD, void 0, void 0, U), [i, U]),
+        K = n.useMemo(() => (0, x.tW)(i, x.fY.REWARD_IMAGE), [i]),
         O = n.useCallback(
             (t) => {
                 (0, u.vq)(t.currentTarget, HTMLElement) && t.currentTarget.blur(),
@@ -86,7 +86,7 @@ let S = function (e) {
         ),
         X = n.useRef(null),
         F = n.useRef(S),
-        Z = (0, g.K9)(i.config);
+        Z = (0, h.K9)(i.config);
     if (
         (n.useEffect(() => {
             if (null != X.current) {
@@ -100,15 +100,15 @@ let S = function (e) {
                     (F.current = S);
             }
         }, [S, H, z]),
-        (0, q.A)(X, v.rE.QUEST_HOME_DESKTOP),
+        (0, q.A)(X, w.rE.QUEST_HOME_DESKTOP),
         Z)
     )
         t = (0, r.jsx)(j._M, {
             id: "QuestRewardTile_rewardTileNitro",
-            children: (e) => (0, r.jsx)(y.A, { ref: e, className: L.eB }),
+            children: (e) => (0, r.jsx)(v.A, { ref: e, className: L.eB }),
         });
     else if (k)
-        t = (0, r.jsx)(w.N, {
+        t = (0, r.jsx)(y.N, {
             showVideo: S,
             imageAsset:
                 null != K
@@ -123,7 +123,7 @@ let S = function (e) {
             onLoadComplete: e.onLoadComplete,
         });
     else if (H.isAnimated) {
-        let s = (0, N.WV)(H.url);
+        let s = (0, x.WV)(H.url);
         t = (0, r.jsx)(j._M, {
             id: "QuestRewardTile_rewardTileAnimated",
             children: (t) =>
@@ -162,7 +162,7 @@ let S = function (e) {
                   t,
                   "text" === b &&
                       (0, r.jsx)(d.E, {
-                          color: "always-white",
+                          color: "text-overlay-light",
                           variant: "text-xs/normal",
                           className: L.n_,
                           style: { fontSize: Q },

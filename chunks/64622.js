@@ -126,7 +126,7 @@ function J(i) {
                                                             (0, e.jsx)(A.E, {
                                                                 className: Y.um,
                                                                 variant: "text-sm/medium",
-                                                                color: "always-white",
+                                                                color: "text-overlay-light",
                                                                 children: (0, L.CT)(iu),
                                                             }),
                                                             (0, e.jsx)(A.E, {
@@ -153,7 +153,7 @@ function J(i) {
                                                             (0, e.jsx)(A.E, {
                                                                 className: Y.um,
                                                                 variant: "text-sm/medium",
-                                                                color: "always-white",
+                                                                color: "text-overlay-light",
                                                                 children: (0, L.CT)(iu),
                                                             }),
                                                             (0, e.jsx)(u.p, {

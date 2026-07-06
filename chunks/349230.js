@@ -32,12 +32,12 @@ function j(e) {
             p(),
         ),
         y = { timeToLiveMs: j, reappearTimeMs: C },
-        w = c.useRef(y);
-    function b() {
+        b = c.useRef(y);
+    function w() {
         s(Date.now()), g((e) => e + 1);
     }
     c.useEffect(() => {
-        w.current = y;
+        b.current = y;
     }),
         c.useEffect(
             () => (
@@ -47,8 +47,8 @@ function j(e) {
                         d((t) => {
                             if (0 === t) return e;
                             let n = e - t,
-                                i = w.current.timeToLiveMs,
-                                s = i + w.current.reappearTimeMs;
+                                i = b.current.timeToLiveMs,
+                                s = i + b.current.reappearTimeMs;
                             return n > i ? t + s : t;
                         });
                 }, 100)),
@@ -85,11 +85,11 @@ function j(e) {
                           children: (0, r.jsx)(I.A, {
                               className: m()(v.VC, N && v.Nd),
                               children: (0, r.jsx)(A.D, {
-                                  onClick: b,
+                                  onClick: w,
                                   className: v.vk,
                                   children: (0, r.jsxs)(E.E, {
                                       variant: "text-md/semibold",
-                                      color: "always-white",
+                                      color: "text-overlay-light",
                                       children: ["Click Me (", h, ")"],
                                   }),
                               }),
@@ -100,14 +100,14 @@ function j(e) {
 }
 var C = n(149741),
     y = n(17928),
-    w = n(183623),
-    b = n(684013),
+    b = n(183623),
+    w = n(684013),
     N = n(964486),
     _ = n(313961),
     R = n(652896),
     O = n(567249),
     M = n(616356),
-    k = n(495544),
+    k = n(280450),
     D = n(734057),
     z = n(38502),
     P = n(309010),
@@ -121,7 +121,7 @@ var C = n(149741),
     Y = n(990078),
     X = n(358618),
     W = n(983851),
-    B = n(845012),
+    B = n(622631),
     q = n(365199),
     K = n(890856),
     Q = n(827343),
@@ -215,7 +215,7 @@ function eA(e) {
                             children: [
                                 (0, r.jsx)(E.E, {
                                     variant: "text-sm/semibold",
-                                    color: "always-white",
+                                    color: "text-overlay-light",
                                     children: eg.intl.string(eg.t.I6JG46),
                                 }),
                                 (0, r.jsx)(B.v, { size: "sm", color: "currentColor" }),
@@ -233,7 +233,7 @@ function eA(e) {
                             children: [
                                 (0, r.jsx)(E.E, {
                                     variant: "text-md/medium",
-                                    color: "always-white",
+                                    color: "text-overlay-light",
                                     className: ep.yb,
                                     children: ec.Ay.getName(n.stream.guildId, n.stream.channelId, l),
                                 }),
@@ -337,13 +337,13 @@ var eI = n(765671),
     ej = n(129537);
 let eC = 9 / 16,
     ey = 16 / 9;
-function ew(e, t) {
+function eb(e, t) {
     return t * (Math.max(1, e) - 1);
 }
-function eb(e) {
+function ew(e) {
     let { width: t, height: n, containerOffset: i, gapSize: s, tileCount: r, isVertical: l } = e,
-        a = l ? t : t - ew(r, s),
-        o = l ? n - ew(r, s) : n;
+        a = l ? t : t - eb(r, s),
+        o = l ? n - eb(r, s) : n;
     return { verticalRatio: (o - i) / (a - i), horizontalRatio: (a - i) / (o - i) };
 }
 function eN(e, t, n) {
@@ -353,8 +353,8 @@ function eN(e, t, n) {
         u = e.width > a,
         c = e.height > o;
     if (!u && !c) return e;
-    let h = ew(r, s),
-        { verticalRatio: m, horizontalRatio: g } = eb({
+    let h = eb(r, s),
+        { verticalRatio: m, horizontalRatio: g } = ew({
             width: e.width,
             height: e.height,
             containerOffset: i,
@@ -371,7 +371,7 @@ function eN(e, t, n) {
         u && c && (e.width > e.height ? (f = (p = x) * m) : (p = (f = A) * g), (u = p > x), (c = f > A)),
         u && (f = (p = x) * m),
         c && (p = (f = A) * g),
-        l ? (f += ew(r, s)) : (p += ew(r, s)),
+        l ? (f += eb(r, s)) : (p += eb(r, s)),
         { width: p + i, height: f + i }
     );
 }
@@ -388,7 +388,7 @@ function ek(e, t, n, i) {
     let s = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 256,
         r = { width: s, height: s * eC },
         l = Math.max(1, e),
-        a = ew(e, t),
+        a = eb(e, t),
         o = eO(n, t);
     return i
         ? { width: r.width + o, height: r.height * l + a + o }
@@ -439,8 +439,8 @@ let eG = (e) => {
         m = { width: c, height: h },
         g = ez(m),
         p = ((t = ez(m)), (i = (n = eD(a, o, m, t)) * eC), t ? Math.floor(m.height / i) : Math.floor(m.width / n)),
-        f = eb({ width: c, height: h, containerOffset: u, gapSize: o, tileCount: p, isVertical: g }),
-        x = ew(p, o);
+        f = ew({ width: c, height: h, containerOffset: u, gapSize: o, tileCount: p, isVertical: g }),
+        x = eb(p, o);
     return eN(
         (() => {
             var e, t;
@@ -857,10 +857,10 @@ function eX(e) {
     })({ id: a, streamParticipants: U, layout: S, widgetLayoutSpecs: J });
     let $ = null == j || (0 === F.size && u) || (0 === Z && !u);
     return (c.useEffect(() => {
-        b.A.setGpuBoostRequested(L.y7.OVERLAY_VIDEO_STREAM_RENDERING, !$);
+        w.A.setGpuBoostRequested(L.y7.OVERLAY_VIDEO_STREAM_RENDERING, !$);
     }, [$]),
     (0, N.Ay)(() => () => {
-        b.A.setGpuBoostRequested(L.y7.OVERLAY_VIDEO_STREAM_RENDERING, !1);
+        w.A.setGpuBoostRequested(L.y7.OVERLAY_VIDEO_STREAM_RENDERING, !1);
     }),
     ($ || !f) && u)
         ? null
@@ -868,7 +868,7 @@ function eX(e) {
           ? E
               ? u
                   ? null
-                  : (0, r.jsx)(V.g, { emptyText: eg.intl.string(eg.t["T6+rXy"]), icon: w.F, absolute: !0 })
+                  : (0, r.jsx)(V.g, { emptyText: eg.intl.string(eg.t["T6+rXy"]), icon: b.F, absolute: !0 })
               : null
           : (0, r.jsx)("div", {
                 className: eY.u,
@@ -912,14 +912,14 @@ function e$(e) {
             frameCheckerEffect: S,
         } = (0, eq.Dj)(!0, o, !0),
         [v, T, j] = (0, eq.F5)(s),
-        [C, w] = (0, eq.km)(v, S, a),
-        b = performance.now() - d.current < eq.Jc,
+        [C, b] = (0, eq.km)(v, S, a),
+        w = performance.now() - d.current < eq.Jc,
         _ = T(h, A.current);
     (0, N.Ay)(
         () => (
             C(),
             () => {
-                w();
+                b();
             }
         ),
     );
@@ -1089,7 +1089,7 @@ function e$(e) {
                               }),
                           ],
                       }),
-                  b &&
+                  w &&
                       (0, r.jsx)(Y.m, {
                           position: "left",
                           text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
@@ -1124,8 +1124,8 @@ var e0 = n(417098),
     e2 = n(351906),
     e3 = n(377802),
     e5 = n(348858),
-    e4 = n(523875),
-    e6 = n(416696),
+    e6 = n(523875),
+    e4 = n(416696),
     e8 = n(621956),
     e9 = n(446080),
     e7 = n(922016),
@@ -1156,8 +1156,8 @@ var e0 = n(417098),
     tj = n(222692),
     tC = n(204651),
     ty = n(71393),
-    tw = n(977997),
-    tb = n(46282),
+    tb = n(977997),
+    tw = n(46282),
     tN = n(489277),
     t_ = n(243612),
     tR = n(296841);
@@ -1222,7 +1222,7 @@ function tk(e) {
         { suppress: s, selfMute: l, mute: a } = (0, tS.A)(t),
         o = l || a || s,
         d = (0, tr.A)(l, a, s, !1),
-        { Component: u, play: h, events: m } = (0, e4.L)(o ? "unmute" : "mute");
+        { Component: u, play: h, events: m } = (0, e6.L)(o ? "unmute" : "mute");
     c.useEffect(() => () => h(), [h, o]);
     let g = tO(n);
     function p(e) {
@@ -1417,7 +1417,7 @@ function tP(e) {
         o = (0, y.cf)([ed.Ay], () => (0, th.A)(ed.Ay)),
         d = (0, y.bG)([M.A], () => M.A.getCurrentUserActiveStream()),
         u = (0, y.bG)([tN.A], () => tN.A.getTargetPID()),
-        h = (0, tb.y)({ pid: u, allowOneClickGoLive: !0, analyticsLocation: em.ThZ.UNLOCKED_OVERLAY });
+        h = (0, tw.y)({ pid: u, allowOneClickGoLive: !0, analyticsLocation: em.ThZ.UNLOCKED_OVERLAY });
     function m() {
         h(), (0, F.YX)(em.uss.QUICK_ACTIONS, { type: F.Z5.GO_LIVE, value: F.IP.ENABLED, userId: k.default.getId() });
     }
@@ -1452,7 +1452,7 @@ function tP(e) {
         Component: x,
         events: { onMouseEnter: A, onMouseLeave: E },
         play: S,
-    } = (0, e6.c)(g ? "disable" : "enable");
+    } = (0, e4.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tO(i);
     return (0, r.jsx)(e7.Y, {
@@ -1687,7 +1687,7 @@ function tF(e) {
     let { voiceChannel: t } = e,
         n = t?.id,
         i = (0, y.cf)([a.A], () => ({ quality: a.A.getQuality(), state: a.A.getState(), lastPing: a.A.getLastPing() })),
-        s = (0, y.bG)([tw.A], () => null != n && tw.A.hasVideo(n), [n]),
+        s = (0, y.bG)([tb.A], () => null != n && tb.A.hasVideo(n), [n]),
         l = (0, d.Mn)("VoiceConnectionStatus"),
         o = (0, y.bG)([e2.A], () => e2.A.hidePersonalInformation);
     return (
@@ -1720,7 +1720,7 @@ let tZ = c.memo(function () {
                   (0, r.jsx)(E.E, {
                       tag: "span",
                       variant: "text-sm/medium",
-                      color: "always-white",
+                      color: "text-overlay-light",
                       children: eg.intl.string(eg.t.q9K7jp),
                   }),
                   (0, r.jsx)(e0.Z_, {
@@ -1787,8 +1787,8 @@ var tQ = n(459192),
     t2 = n(241541),
     t3 = n(320448),
     t5 = n(661531),
-    t4 = n(446576),
-    t6 = n(789645),
+    t6 = n(446576),
+    t4 = n(789645),
     t8 = n(387755),
     t9 = n(945830),
     t7 = n(461678),
@@ -2081,7 +2081,7 @@ function nj(e) {
                           : null
             );
         }, [n, i]),
-        w = c.useCallback(
+        b = c.useCallback(
             (e) => {
                 nE(n) &&
                     ((0, F.YX)(em.uss.TEXT_CHAT_V3, {
@@ -2093,7 +2093,7 @@ function nj(e) {
             },
             [n],
         ),
-        b = c.useCallback(() => {
+        w = c.useCallback(() => {
             n?.id != null &&
                 p((e) => {
                     let t = !e;
@@ -2196,15 +2196,15 @@ function nj(e) {
                 children: [
                     (0, r.jsx)(nv, {
                         channel: n,
-                        onStartPrivateCall: w,
+                        onStartPrivateCall: b,
                         pinsOpen: g,
-                        onTogglePinsPopout: b,
+                        onTogglePinsPopout: w,
                         onRequestClosePinsPopout: () => p(!1),
                     }),
                     (0, r.jsx)(nT, {
                         channel: n,
                         pinsOpen: g,
-                        onTogglePinsPopout: b,
+                        onTogglePinsPopout: w,
                         onRequestClosePinsPopout: () => p(!1),
                     }),
                     h &&
@@ -2221,7 +2221,7 @@ function nj(e) {
                                   text: v,
                                   "aria-label": v,
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t4.g,
+                                      icon: t6.g,
                                       "aria-label": v,
                                       size: "sm",
                                       variant: "icon-only",
@@ -2239,7 +2239,7 @@ function nj(e) {
                                   title: eg.intl.string(nx.default.ERApc4),
                                   body: eg.intl.string(nx.default.PBVXVW),
                                   children: (0, r.jsx)(tJ.K, {
-                                      icon: t6.P,
+                                      icon: t4.P,
                                       "aria-label": eg.intl.string(nx.default.ERApc4),
                                       size: "sm",
                                       variant: "icon-only",
@@ -2266,8 +2266,8 @@ function nj(e) {
 }
 var nC = n(602853),
     ny = n(941971),
-    nw = n(568548),
-    nb = n(485296),
+    nb = n(568548),
+    nw = n(485296),
     nN = n(741961),
     n_ = n(228366),
     nR = n(308528);
@@ -2292,15 +2292,15 @@ let nz = c.memo(function (e) {
         d = (0, y.bG)([o.A], () => o.A.getSelectedChannelId() === t, [t]),
         u = (0, y.bG)([o.A], () => o.A.getVoiceChatMinimized()),
         h = (0, nC.r)(t5.A.colors.ICON_STATUS_ONLINE),
-        g = (0, y.bG)([nb.A], () => !!a && !!(nb.A.isAnyoneElseSpeaking() || nb.A.isCurrentUserSpeaking()), [a]),
+        g = (0, y.bG)([nw.A], () => !!a && !!(nw.A.isAnyoneElseSpeaking() || nw.A.isCurrentUserSpeaking()), [a]),
         [p, f] = c.useState(!1),
         { mentionCount: x, isMentionLowImportance: E } = (0, y.cf)(
-            [nw.Ay],
+            [nb.Ay],
             () =>
                 null != t
                     ? {
-                          mentionCount: nw.Ay.getMentionCount(t),
-                          isMentionLowImportance: nw.Ay.getIsMentionLowImportance(t),
+                          mentionCount: nb.Ay.getMentionCount(t),
+                          isMentionLowImportance: nb.Ay.getIsMentionLowImportance(t),
                       }
                     : { mentionCount: 0, isMentionLowImportance: !1 },
             [t],
@@ -2326,11 +2326,11 @@ let nz = c.memo(function (e) {
             for (let n in t) if (n !== e) return !0;
             return !1;
         }, [T]),
-        C = (0, y.bG)([nw.Ay], () => {
+        C = (0, y.bG)([nb.Ay], () => {
             let e = T?.id;
-            return null != e && nw.Ay.hasUnread(e);
+            return null != e && nb.Ay.hasUnread(e);
         }, [T]),
-        w = (0, r.jsx)("div", {
+        b = (0, r.jsx)("div", {
             className: nk.St,
             children: (() => {
                 let e = T?.isPrivate() ?? !1;
@@ -2366,7 +2366,7 @@ let nz = c.memo(function (e) {
                 });
             })(),
         }),
-        b = (function (e) {
+        w = (function (e) {
             let { channel: t, guild: i, user: s } = e;
             return c.useCallback(
                 (e) => {
@@ -2510,11 +2510,11 @@ let nz = c.memo(function (e) {
                               widgetType: em.uss.TEXT_CHAT_V3,
                           });
                   },
-                  onContextMenu: b,
+                  onContextMenu: w,
                   onMouseEnter: () => f(!0),
                   onMouseLeave: () => f(!1),
                   children: [
-                      w,
+                      b,
                       (0, r.jsx)("div", {
                           className: nk.vT,
                           children: (0, r.jsx)(ny.A, { selected: d, hovered: p, unread: C }),
@@ -2857,7 +2857,7 @@ let n1 = c.memo(function (e) {
             { maxWidth: 0.75 * r.maxX, maxHeight: 0.75 * r.maxY },
         );
     };
-function n4(e) {
+function n6(e) {
     let t = (0, y.bG)([P.A, D.A], () => D.A.getChannel(P.A.getVoiceChannelId())),
         n = 2 * e.padding + 2 * e.borderWidth,
         i = t?.id,
@@ -2932,7 +2932,7 @@ function n4(e) {
         })
     );
 }
-var n6 = n(450740),
+var n4 = n(450740),
     n8 = n(968898);
 n(321073);
 var n9 = n(518009),
@@ -2991,7 +2991,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, locked: n, size: i, padding: s, borderWidth: l, showEmpty: a } = e;
                 return (0, e_.cv)(t)
-                    ? (0, r.jsx)(n4, {
+                    ? (0, r.jsx)(n6, {
                           id: t.id,
                           locked: n,
                           widget: t,
@@ -3031,7 +3031,7 @@ let iu = c.memo(function (e) {
             renderWidget(e) {
                 let { widget: t, anchorLeft: n, locked: i, showEmpty: s } = e;
                 return (0, e_.ZO)(t)
-                    ? (0, r.jsx)(n6.Ay, {
+                    ? (0, r.jsx)(n4.Ay, {
                           anchorLeft: n,
                           id: t.id,
                           locked: i,

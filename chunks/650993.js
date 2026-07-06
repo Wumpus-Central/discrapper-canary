@@ -19,7 +19,7 @@ let d = function (e) {
                 backgroundPosition: "left",
                 children: (0, r.jsx)("div", {
                     className: u.j,
-                    children: (0, r.jsx)(a.E, { variant: "text-lg/bold", color: "always-white", children: h }),
+                    children: (0, r.jsx)(a.E, { variant: "text-lg/bold", color: "text-overlay-light", children: h }),
                 }),
             }),
         }),

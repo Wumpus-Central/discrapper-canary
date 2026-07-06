@@ -3617,7 +3617,12 @@ function iZ(e) {
         className: r()(n, iJ.Nr),
         style: { background: h },
         children: [
-            (0, i.jsx)(E.E, { variant: "text-sm/semibold", color: "always-white", className: iJ.DD, children: x }),
+            (0, i.jsx)(E.E, {
+                variant: "text-sm/semibold",
+                color: "text-overlay-light",
+                className: iJ.DD,
+                children: x,
+            }),
             (0, i.jsxs)("div", {
                 className: iJ.yu,
                 children: [

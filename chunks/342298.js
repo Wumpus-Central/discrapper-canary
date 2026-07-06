@@ -59,9 +59,9 @@ class g extends s.PureComponent {
                 showIcon: R,
                 showIconDisabled: k,
                 className: b,
-                imageClassName: w,
-                iconClassName: D,
-                iconWrapperClassName: F,
+                imageClassName: D,
+                iconClassName: F,
+                iconWrapperClassName: w,
                 icon: y,
                 hideSize: A,
                 imageStyle: U,
@@ -77,7 +77,7 @@ class g extends s.PureComponent {
                 : null != c &&
                   (a = (0, n.jsx)(h.D, {
                       variant: "heading-xxl/normal",
-                      color: "always-white",
+                      color: "text-overlay-light",
                       className: v.nX,
                       children: (0, x.oN)(c),
                   })),
@@ -86,9 +86,9 @@ class g extends s.PureComponent {
             return (0, n.jsx)("div", {
                 className: t()(v.WY, v.r9, b),
                 children: (0, n.jsxs)("div", {
-                    className: t()(v.Yp, w),
+                    className: t()(v.Yp, D),
                     style: { ...U, backgroundImage: l },
-                    children: [a, k && (0, n.jsx)("div", { className: t()(v.XD, v.$N, D), children: y })],
+                    children: [a, k && (0, n.jsx)("div", { className: t()(v.XD, v.$N, F), children: y })],
                 }),
             });
         null != i
@@ -105,10 +105,10 @@ class g extends s.PureComponent {
                 (0, n.jsx)(u.vN, {
                     within: !0,
                     children: (0, n.jsxs)("div", {
-                        className: R ? t()(v.U1, F) : void 0,
+                        className: R ? t()(v.U1, w) : void 0,
                         children: [
                             (0, n.jsxs)("div", {
-                                className: t()(v.Yp, w),
+                                className: t()(v.Yp, D),
                                 style: { ...U, backgroundImage: l },
                                 children: [
                                     (0, n.jsx)("span", { "aria-hidden": !0, children: a }),
@@ -136,7 +136,7 @@ class g extends s.PureComponent {
                                 ],
                             }),
                             null != r && (0, n.jsx)("div", { className: v.$J, "aria-hidden": "true", children: r }),
-                            R && (0, n.jsx)(f, { className: D, icon: y }),
+                            R && (0, n.jsx)(f, { className: F, icon: y }),
                         ],
                     }),
                 }),

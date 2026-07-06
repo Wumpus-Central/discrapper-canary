@@ -1,167 +1,167 @@
-r.d(n, { A: () => k });
-var l = r(627968),
-    a = r(64700),
-    t = r(503698),
-    s = r.n(t),
-    o = r(735438),
-    i = r(269115),
-    c = r(508770),
-    u = r(821609),
-    d = r(745396),
-    x = r(534514),
-    h = r(825484),
-    p = r(834730),
-    j = r(315629),
-    m = r(241524),
-    b = r(303136),
-    A = r(607470),
-    g = r(174459),
-    v = r(676279),
-    C = r(406860),
-    y = r(280041),
-    E = r(652215),
-    N = r(693591),
-    f = r(856556);
-let k = (e) => {
+a.d(r, { A: () => R });
+var n = a(627968),
+    s = a(64700),
+    t = a(503698),
+    l = a.n(t),
+    i = a(735438),
+    c = a(269115),
+    d = a(508770),
+    o = a(821609),
+    u = a(745396),
+    x = a(534514),
+    m = a(825484),
+    h = a(834730),
+    j = a(315629),
+    p = a(241524),
+    v = a(303136),
+    g = a(607470),
+    N = a(174459),
+    A = a(676279),
+    E = a(406860),
+    y = a(280041),
+    b = a(652215),
+    _ = a(693591),
+    C = a(856556);
+let R = (e) => {
     let {
-            name: n,
-            title: r,
+            name: r,
+            title: a,
             description: t,
-            descriptionCta: k,
-            previewImage: R,
-            videoUrl: _,
-            shouldLoadVideo: M,
+            descriptionCta: R,
+            previewImage: f,
+            videoUrl: k,
+            shouldLoadVideo: I,
             index: T,
-            customVideoStyle: B,
-            isReducedMotion: I,
-            onClick: L,
-            badgeText: w,
-            badgeVariant: O = "gradient",
-            size: V,
-            backgroundVideoUrl: G,
-            previewImageStyle: D = y.Tb.CONTAINED,
-            actions: P,
-            mediaRef: $,
-            boxArtContainerClassName: F,
+            customVideoStyle: M,
+            isReducedMotion: P,
+            onClick: O,
+            badgeText: D,
+            badgeVariant: B = "gradient",
+            size: L,
+            backgroundVideoUrl: V,
+            previewImageStyle: w = y.Tb.CONTAINED,
+            actions: S,
+            mediaRef: U,
+            boxArtContainerClassName: W,
         } = e,
-        H = (0, v.TM)(),
-        S = a.useRef(null),
-        W = a.useRef(0),
-        { sectionRef: K, handleVisibilityChange: U } = (0, C.A)({ boxType: n }),
-        X = (0, m.A)("(min-width: 1140px)"),
-        Y = D === y.Tb.OVERLAY && (V !== y.A0.LARGE || !X),
-        q = V === y.A0.LARGE && X && D === y.Tb.OVERLAY,
-        z = null != G && X && V === y.A0.LARGE,
-        J = a.useMemo(
+        H = (0, A.TM)(),
+        G = s.useRef(null),
+        K = s.useRef(0),
+        { sectionRef: Y, handleVisibilityChange: $ } = (0, E.A)({ boxType: r }),
+        q = (0, p.A)("(min-width: 1140px)"),
+        F = w === y.Tb.OVERLAY && (L !== y.A0.LARGE || !q),
+        X = L === y.A0.LARGE && q && w === y.Tb.OVERLAY,
+        z = null != V && q && L === y.A0.LARGE,
+        J = s.useMemo(
             () =>
-                (0, o.debounce)(() => {
-                    g.default.track(E.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, o.snakeCase)(n) });
+                (0, i.debounce)(() => {
+                    N.default.track(b.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, i.snakeCase)(r) });
                 }, 800),
-            [n],
+            [r],
         );
     function Q() {
-        null == S.current || I || ((S.current.currentTime = W.current), S.current.play()), I || $?.current?.play();
+        null == G.current || P || ((G.current.currentTime = K.current), G.current.play()), P || U?.current?.play();
     }
     function Z() {
-        null == S.current || I || ((W.current = S.current.currentTime), S.current.pause()), I || $?.current?.pause();
+        null == G.current || P || ((K.current = G.current.currentTime), G.current.pause()), P || U?.current?.pause();
     }
-    let ee = V === y.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold",
-        en = () => {
-            let e = null != k && null != L,
-                n = null != P && P.length > 0;
-            if (!e && !n) return null;
-            let r = e ? [{ variant: "secondary", onClick: L, text: k }] : P;
-            return (0, l.jsx)("div", {
-                className: f.bentoBoxButton,
-                children: (0, l.jsx)(h.e, {
-                    children: r?.map((e, n) => {
-                        let { onClick: r, ...a } = e;
-                        return (0, l.jsx)(
-                            u.$,
+    let ee = L === y.A0.LARGE ? "heading-xxl/bold" : "heading-xl/bold",
+        er = () => {
+            let e = null != R && null != O,
+                r = null != S && S.length > 0;
+            if (!e && !r) return null;
+            let a = e ? [{ variant: "secondary", onClick: O, text: R }] : S;
+            return (0, n.jsx)("div", {
+                className: C.bentoBoxButton,
+                children: (0, n.jsx)(m.e, {
+                    children: a?.map((e, r) => {
+                        let { onClick: a, ...s } = e;
+                        return (0, n.jsx)(
+                            o.$,
                             {
-                                ...a,
+                                ...s,
                                 onClick: function (e) {
-                                    J(), r?.(e);
+                                    J(), a?.(e);
                                 },
                             },
-                            n,
+                            r,
                         );
                     }),
                 }),
             });
         },
-        er = () =>
-            (0, l.jsxs)("div", {
-                className: s()(f.textBox, f[`${V}`], q && f.overlayTextBox),
+        ea = () =>
+            (0, n.jsxs)("div", {
+                className: l()(C.textBox, C[`${L}`], X && C.overlayTextBox),
                 children: [
-                    (0, l.jsxs)("div", {
+                    (0, n.jsxs)("div", {
                         children: [
-                            null == w
+                            null == D
                                 ? null
-                                : "gradient" === O
-                                  ? (0, l.jsx)("div", {
-                                        className: f.badgeContainer,
-                                        children: (0, l.jsx)("div", {
-                                            className: f.badge,
-                                            children: (0, l.jsx)(x.D, {
+                                : "gradient" === B
+                                  ? (0, n.jsx)("div", {
+                                        className: C.badgeContainer,
+                                        children: (0, n.jsx)("div", {
+                                            className: C.badge,
+                                            children: (0, n.jsx)(x.D, {
                                                 variant: "eyebrow",
-                                                color: "always-white",
-                                                children: w,
+                                                color: "text-overlay-light",
+                                                children: D,
                                             }),
                                         }),
                                     })
-                                  : (0, l.jsx)("div", {
-                                        className: f.badgeContainer,
-                                        children: (0, l.jsx)(c.E, { type: { text: w }, variant: O }),
+                                  : (0, n.jsx)("div", {
+                                        className: C.badgeContainer,
+                                        children: (0, n.jsx)(d.E, { type: { text: D }, variant: B }),
                                     }),
-                            (0, l.jsx)(x.D, { variant: ee, color: "text-strong", className: f.header, children: r }),
+                            (0, n.jsx)(x.D, { variant: ee, color: "text-strong", className: C.header, children: a }),
                         ],
                     }),
-                    (0, l.jsx)(p.E, {
+                    (0, n.jsx)(h.E, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        className: f.description,
+                        className: C.description,
                         children: t,
                     }),
-                    (0, l.jsx)(en, {}),
+                    (0, n.jsx)(er, {}),
                 ],
             }),
-        el = () =>
-            (0, l.jsx)("div", {
-                className: s()(f.boxArtContainer, f[`${V}`], F),
+        en = () =>
+            (0, n.jsx)("div", {
+                className: l()(C.boxArtContainer, C[`${L}`], W),
                 children:
-                    null == _ && (0, d.O)(R) && "string" != typeof R
-                        ? R
-                        : (0, l.jsx)(
-                              A.A,
+                    null == k && (0, u.O)(f) && "string" != typeof f
+                        ? f
+                        : (0, n.jsx)(
+                              g.A,
                               {
                                   playsInline: !0,
-                                  preload: M ? "auto" : "none",
+                                  preload: I ? "auto" : "none",
                                   muted: !0,
-                                  poster: R,
+                                  poster: f,
                                   loop: !0,
-                                  className: s()(q ? f.overlayImage : f.boxVideo, { [B]: null != B }),
-                                  ref: S,
-                                  children: (0, l.jsx)("source", { src: _, type: H ? N.a.MP4 : N.a.WEBM }),
+                                  className: l()(X ? C.overlayImage : C.boxVideo, { [M]: null != M }),
+                                  ref: G,
+                                  children: (0, n.jsx)("source", { src: k, type: H ? _.a.MP4 : _.a.WEBM }),
                               },
-                              _,
+                              k,
                           ),
             }),
-        ea = T % 2 != 0;
-    return (0, l.jsx)(i.L, {
-        innerRef: K,
-        onChange: U,
+        es = T % 2 != 0;
+    return (0, n.jsx)(c.L, {
+        innerRef: Y,
+        onChange: $,
         threshold: 0.5,
-        children: (0, l.jsxs)(j.h, {
-            ref: K,
-            id: n,
-            className: s()(
-                f.backgroundColor,
-                f.boxContainer,
-                f[`${V}`],
-                f.gradientBackground,
-                Y && f.overlayImageMode,
-                q && f.overlayMode,
+        children: (0, n.jsxs)(j.h, {
+            ref: Y,
+            id: r,
+            className: l()(
+                C.backgroundColor,
+                C.boxContainer,
+                C[`${L}`],
+                C.gradientBackground,
+                F && C.overlayImageMode,
+                X && C.overlayMode,
             ),
             onMouseEnter: Q,
             onFocus: Q,
@@ -170,18 +170,18 @@ let k = (e) => {
             color: "purple",
             children: [
                 z &&
-                    (0, l.jsx)("div", {
-                        className: f.backgroundVideoContainer,
-                        children: (0, l.jsx)(b.A, {
-                            preload: M ? "auto" : "none",
-                            className: f.backgroundVideo,
-                            src: G,
+                    (0, n.jsx)("div", {
+                        className: C.backgroundVideoContainer,
+                        children: (0, n.jsx)(v.A, {
+                            preload: I ? "auto" : "none",
+                            className: C.backgroundVideo,
+                            src: V,
                         }),
                     }),
-                (0, l.jsx)(function () {
-                    return ea
-                        ? (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(er, {}), (0, l.jsx)(el, {})] })
-                        : (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(el, {}), (0, l.jsx)(er, {})] });
+                (0, n.jsx)(function () {
+                    return es
+                        ? (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(ea, {}), (0, n.jsx)(en, {})] })
+                        : (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(en, {}), (0, n.jsx)(ea, {})] });
                 }, {}),
             ],
         }),
