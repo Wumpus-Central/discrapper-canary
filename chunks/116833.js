@@ -14,6 +14,7 @@ var i,
         (i[(i.BADGE_IMAGE_WITH_PROGRESS_CIRCLE = 8)] = "BADGE_IMAGE_WITH_PROGRESS_CIRCLE"),
         (i[(i.QUEST_ACTIVITY_UNENROLLED = 9)] = "QUEST_ACTIVITY_UNENROLLED"),
         (i[(i.GUILD_THEME_NUX_PREVIEW = 10)] = "GUILD_THEME_NUX_PREVIEW"),
+        (i[(i.BADGE_DIRECTORY_NUX = 11)] = "BADGE_DIRECTORY_NUX"),
         i);
 let a = {
         0: () => Promise.all([n.e("18990"), n.e("48565")]).then(n.bind(n, 732852)),
@@ -30,6 +31,7 @@ let a = {
         8: () => Promise.resolve().then(n.bind(n, 140049)),
         9: () => Promise.all([n.e("99818"), n.e("71695")]).then(n.bind(n, 392498)),
         10: () => Promise.all([n.e("78230"), n.e("46570"), n.e("44262")]).then(n.bind(n, 276837)),
+        11: () => Promise.all([n.e("57345"), n.e("77433")]).then(n.bind(n, 868544)),
     },
     o = {
         0: r.lazy(a[0]),
@@ -43,4 +45,5 @@ let a = {
         8: r.lazy(a[8]),
         9: r.lazy(a[9]),
         10: r.lazy(a[10]),
+        11: r.lazy(a[11]),
     };

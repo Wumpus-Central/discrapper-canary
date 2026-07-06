@@ -1,0 +1,18 @@
+.assetRow_f3e80c,
+.progressAssetRow_f3e80c {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.assetRow_f3e80c {
+    gap: var(--space-12);
+    height: 50px;
+    width: 154px
+}
+
+.progressAssetRow_f3e80c {
+    gap: var(--space-8);
+    height: 60px;
+    width: 160px
+}
