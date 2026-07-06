@@ -2378,10 +2378,17 @@ let n6 = c()(ed.bo, 200),
                                         ? (0, p.Sw)(a)
                                         : (l?.(e), (0, p.V4)(a)));
                                 if (c !== em.EmojiDisabledReasons.GUILD_SUBSCRIPTION_UNAVAILABLE) {
-                                    if (c === em.EmojiDisabledReasons.PREMIUM_LOCKED)
-                                        return void s({ type: 0, emojiDescriptor: e });
-                                    if (c === em.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED && a.type === eQ.i.GUILD)
-                                        return void s({ type: 1, guildId: a.guildId, emojiId: a.id });
+                                    if (c === em.EmojiDisabledReasons.PREMIUM_LOCKED) {
+                                        o?.(e, c), s({ type: 0, emojiDescriptor: e });
+                                        return;
+                                    }
+                                    if (
+                                        c === em.EmojiDisabledReasons.ROLE_SUBSCRIPTION_LOCKED &&
+                                        a.type === eQ.i.GUILD
+                                    ) {
+                                        o?.(e, c), s({ type: 1, guildId: a.guildId, emojiId: a.id });
+                                        return;
+                                    }
                                     c !== em.EmojiDisabledReasons.ROLE_SUBSCRIPTION_UNAVAILABLE &&
                                         (o?.(e), r({ emoji: a, willClose: i.isFinalSelection, isBurst: i.isBurst }));
                                 }
@@ -2396,12 +2403,13 @@ let n6 = c()(ed.bo, 200),
                     closePopout: c,
                     onSelectEmoji: O,
                     setUpsellConfigs: eh,
-                    emojiSelectAnalytics: (e) => {
+                    emojiSelectAnalytics: (e, t) => {
                         "" !== eI
                             ? (0, ed.Wf)({
                                   emoji: e.emoji,
                                   location: { ...ek, object: J.ZSU.EMOJI },
                                   searchQuery: eI,
+                                  isLocked: null != t,
                                   intention: r,
                                   messageId: j,
                               })
@@ -2417,6 +2425,8 @@ let n6 = c()(ed.bo, 200),
                                       M.isNewerThanLastSeen(eC, e.emoji.id),
                                   isBurstReaction: ey,
                                   messageId: j,
+                                  lockedReason: t,
+                                  visibleRowIndex: e.visibleRowIndex,
                               });
                     },
                     trackEmojiFavorited: (e) => {
