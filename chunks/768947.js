@@ -1,27 +1,29 @@
 "use strict";
 let i;
-n.d(t, { No: () => A, OY: () => T, ph: () => C, py: () => I });
+n.d(t, { No: () => T, OY: () => N, ph: () => O, py: () => S });
 var r = n(64700),
     s = n(534979),
     a = n(635377),
     o = n.n(a),
     l = n(181370),
     u = n.n(l),
-    c = n(52133);
-async function d(e) {
+    c = n(52133),
+    d = n(38405);
+async function _(e) {
     let t = s.pb[e];
     return (await (null == i && (i = (0, s.A)()), i)).loadGrammar(t);
 }
-let _ = /^[a-z0-9_+\-.#]+$/,
-    h = Promise.resolve(null),
-    f = new Map(),
-    p = new (o())({ max: 256 });
-function E(e) {
-    if (null == e || !(e in s.pb)) return h;
-    let t = f.get(e);
-    return null == t && ((t = d(e)), f.set(e, t)), t;
+let h = /^[a-z0-9_+\-.#]+$/,
+    f = Promise.resolve(null),
+    E = new Map(),
+    p = new (o())({ max: 256 }),
+    m = new (o())({ max: 256 });
+function g(e) {
+    if (null == e || !(e in s.pb)) return f;
+    let t = E.get(e);
+    return null == t && ((t = _(e)), E.set(e, t)), t;
 }
-let m = {
+let A = {
         h: "cpp",
         hpp: "cpp",
         cc: "cpp",
@@ -149,49 +151,62 @@ let m = {
         "julia-repl": "julia",
         jldoctest: "julia",
     },
-    g = new Set([...Object.keys(s.pb), "ansi"]),
-    A = new Set([...g, ...Object.keys(m)]);
-function I(e) {
+    I = new Set([...Object.keys(s.pb), "ansi"]),
+    T = new Set([...I, ...Object.keys(A)]);
+function S(e) {
     if (null == e) return;
     let t = e.toLowerCase();
-    if (!_.test(t)) return;
-    if (g.has(t)) return t;
-    let n = m[t];
-    if (null != n && g.has(n)) return n;
+    if (!h.test(t)) return;
+    if (I.has(t)) return t;
+    let n = A[t];
+    if (null != n && I.has(n)) return n;
 }
-function T(e, t) {
-    let n = r.use(E(e)),
+function N(e, t) {
+    let n = r.use(g(e)),
         i = r.useMemo(() => u()(`${e}\0${t}`), [e, t]),
         s = r.useCallback(
             function () {
-                let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-                if (!e) {
+                let r,
+                    s = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
+                if (!s) {
                     let e = p.get(i);
                     if (null != e) return e;
                 }
                 if (
-                    !(function (e) {
-                        for (let t of e.split("\n")) if (t.length > 1e3) return !1;
-                        return !0;
-                    })(t) ||
-                    null == n
-                )
-                    return;
-                let r = (function (e, t) {
-                    let n = e.endsWith("\n")
-                            ? e
-                            : `${e}
-`,
-                        i = t.createSession();
+                    !(
+                        !(function (e) {
+                            for (let t of e.split("\n")) if (t.length > 1e3) return !1;
+                            return !0;
+                        })(t) ||
+                        null == n ||
+                        m.has(i)
+                    )
+                ) {
                     try {
-                        return i.setText(n), i.highlightToHtml();
-                    } finally {
-                        i.free();
+                        r = (function (e, t) {
+                            let n = e.endsWith("\n")
+                                    ? e
+                                    : `${e}
+`,
+                                i = t.createSession();
+                            try {
+                                return i.setText(n), i.highlightToHtml();
+                            } finally {
+                                i.free();
+                            }
+                        })(t, n);
+                    } catch (t) {
+                        m.set(i, !0),
+                            d.A.captureException(t instanceof Error ? t : Error(String(t)), {
+                                tags: { app_context: "syntax_highlighting" },
+                                extra: { lang: e },
+                            });
+                        return;
                     }
-                })(t, n);
-                if (null != r) return p.set(i, r), r;
+                    if (null != r) return p.set(i, r), r;
+                }
             },
-            [i, t, n],
+            [i, t, n, e],
         ),
         [a, o] = r.useState(s);
     return (
@@ -203,7 +218,7 @@ function T(e, t) {
             if (null == e || 0 === e.length) return;
             let t = !1;
             for (let n of e)
-                E(n).then(() => {
+                g(n).then(() => {
                     t ||
                         o((e) => {
                             let t = s(!0);
@@ -220,11 +235,11 @@ function T(e, t) {
         a?.html ?? null
     );
 }
-let S = null,
+let C = null,
     y = Object.fromEntries(Array.from({ length: 16 }, (e, t) => [t, `var(--custom-ansi-color-${t})`]));
-function C(e) {
-    S ??= n.e("1180").then(n.t.bind(n, 628759, 23));
-    let { default: t } = r.use(S),
+function O(e) {
+    C ??= n.e("1180").then(n.t.bind(n, 628759, 23));
+    let { default: t } = r.use(C),
         [i] = r.useState(() => new t({ escapeXML: !0, fg: "var(--text-default)", bg: "transparent", colors: y }));
     return r.useMemo(() => i.toHtml(e), [i, e]);
 }
