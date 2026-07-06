@@ -3346,9 +3346,7 @@ function n1(e) {
                                             }),
                                     ],
                                 }),
-                                background:
-                                    null != t.heroImage &&
-                                    (0, r.jsx)(nZ, { heroImage: t.heroImage, heroVideo: t.heroVideo }),
+                                background: (0, r.jsx)(nZ, { heroImage: t.heroImage, heroVideo: t.heroVideo }),
                             }),
                         ],
                     }),
