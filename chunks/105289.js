@@ -3267,6 +3267,8 @@ function nn() {
                 children: [
                     (0, r.jsx)(K.D, { variant: "heading-lg/normal", children: "Authorization status" }),
                     (0, r.jsx)(a8.VT, {
+                        flow: a7._M.RPC,
+                        showGlobalFlowToggle: !0,
                         overallStatus: C.debug.isSubscribedToAuthorizeRequest
                             ? a8.nW.OVERALL_GOOD
                             : A
@@ -3302,6 +3304,8 @@ function nn() {
                         isChosen: k.chosenFlow === a7._M.RPC,
                     }),
                     (0, r.jsx)(a8.VT, {
+                        flow: a7._M.WEB,
+                        showGlobalFlowToggle: !0,
                         overallStatus: N.debug.hasConnectionEntrypointUrl ? a8.nW.OVERALL_GOOD : a8.nW.OVERALL_BAD,
                         name: ne.intl.string(nt.default.K3ObrU),
                         steps: [
@@ -3559,7 +3563,7 @@ var nm = a(989349),
     n_ = a(957565),
     nC = a(58703),
     nS = a(80703),
-    nN = a(495544);
+    nN = a(280450);
 let nA = 0,
     nk = [],
     nD = 0,

@@ -5,4 +5,6 @@ e.exports = {
     bc: "statusTextContainer__3a0cf",
     I8: "statusIcon__3a0cf",
     MH: "calloutBox__3a0cf",
+    vi: "calloutBoxDanger__3a0cf",
+    WV: "globalDisableToggle__3a0cf",
 };
