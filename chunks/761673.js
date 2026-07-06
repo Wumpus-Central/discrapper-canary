@@ -10,6 +10,7 @@ c.exports = {
     SW: "popout_cb9592",
     XW: "poppedOut_cb9592",
     ik: "callContainer_cb9592",
+    ty: "verticalSplit_cb9592",
     jZ: "leftTrayIcon_cb9592",
     iq: "rightTrayIcon_cb9592",
     P0: "iconWrapper_cb9592",

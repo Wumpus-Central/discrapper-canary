@@ -62,6 +62,11 @@
     border-inline-end: 1px solid var(--app-frame-border)
 }
 
+.high-contrast-mode:not(.in-popout) .verticalSplit_cb9592,
+.theme-midnight:not(.in-popout) .verticalSplit_cb9592 {
+    border-bottom: 1px solid var(--app-frame-border)
+}
+
 .centerControls_cb9592 {
     display: flex;
     flex: 1 1 auto;
