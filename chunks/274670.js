@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { r: () => f });
+n.d(t, { r: () => p });
 var i = n(835245),
     r = n(323889),
     s = n(859703),
@@ -7,58 +7,43 @@ var i = n(835245),
     o = n(590202),
     l = n(823784),
     u = n(710969),
-    c = n(174459),
-    d = n(144779),
+    d = n(174459),
+    c = n(144779),
     _ = n(652215);
 async function h(e) {
     let {
-        adCreativeType: t,
-        questContentCTA: n,
-        surfaceId: s,
-        sourceQuestContent: d,
-        impressionId: h,
-        clickId: f,
-        questContentPosition: p,
-        questContentRowIndex: E,
-        trackGuildAndChannelMetadata: m,
-    } = e;
-    if (null == t) {
-        let t = (0, o.fF)(s, p, E);
-        c.default.track(_.HAw.QUEST_CONTENT_CLICKED, {
-            cta_name: n,
-            click_id: f ?? (0, i.A)(),
-            is_targeted: e.isTargeted ?? !1,
-            content_id: t.content_id,
-            content_name: t.content_name,
-            content_position: t.content_position,
-            row_index: t.row_index,
-            ad_content_id: e.adContentId,
-            quest_id: e.relatedQuestId,
+            adCreativeType: t,
+            questContentCTA: n,
+            surfaceId: i,
+            sourceQuestContent: s,
+            impressionId: o,
+            clickId: d,
+            questContentPosition: c,
+            questContentRowIndex: h,
+            trackGuildAndChannelMetadata: f,
+        } = e,
+        E = await (0, a.LW)({
+            questContent: i,
+            questContentPosition: c,
+            questContentRowIndex: h,
+            questContentCTA: n,
+            impressionId: o,
+            clickId: d,
         });
-        return;
-    }
-    let g = await (0, a.LW)({
-        questContent: s,
-        questContentPosition: p,
-        questContentRowIndex: E,
-        questContentCTA: n,
-        impressionId: h,
-        clickId: f,
-    });
     if (t === r.p.QUEST) {
         let t = e.adCreativeId;
         (0, a.av)({
             questId: t,
             event: _.HAw.QUEST_CONTENT_CLICKED,
             properties: {
-                ...g,
-                metadata_sealed: (0, u.L4)(d, t) ?? null,
-                traffic_metadata_sealed: (0, u.Gp)(d, t) ?? null,
+                ...E,
+                metadata_sealed: (0, u.L4)(s, t) ?? null,
+                traffic_metadata_sealed: (0, u.Gp)(s, t) ?? null,
                 search_session_id: (0, l.tv)()?.uuid ?? null,
             },
-            trackGuildAndChannelMetadata: m,
-            shouldExtendSession: (0, u.xn)(s),
-            sourceQuestContent: d,
+            trackGuildAndChannelMetadata: f,
+            shouldExtendSession: (0, u.xn)(i),
+            sourceQuestContent: s,
         });
         return;
     }
@@ -67,15 +52,37 @@ async function h(e) {
         relatedQuestId: e.relatedQuestId,
         adCreativeType: t,
         event: _.HAw.QUEST_CONTENT_CLICKED,
-        properties: { ...g, search_session_id: (0, l.tv)()?.uuid ?? null },
-        trackGuildAndChannelMetadata: m,
-        shouldExtendSession: (0, u.xn)(s),
-        sourceQuestContent: d,
+        properties: { ...E, search_session_id: (0, l.tv)()?.uuid ?? null },
+        trackGuildAndChannelMetadata: f,
+        shouldExtendSession: (0, u.xn)(i),
+        sourceQuestContent: s,
     });
 }
-function f(e) {
+async function f(e) {
+    if (null == e.adCreativeType) {
+        let { surfaceId: t, questContentCTA: n, clickId: r, questContentPosition: s, questContentRowIndex: a } = e,
+            l = (0, o.fF)(t, s, a);
+        d.default.track(_.HAw.QUEST_CONTENT_CLICKED, {
+            cta_name: n,
+            click_id: r ?? (0, i.A)(),
+            is_targeted: e.isTargeted ?? !1,
+            content_id: l.content_id,
+            content_name: l.content_name,
+            content_position: l.content_position,
+            row_index: l.row_index,
+            ad_content_id: e.adContentId,
+            quest_id: e.relatedQuestId,
+        });
+        return;
+    }
+    await h(e);
+}
+async function E(e) {
+    await h(e);
+}
+function p(e) {
     switch (e.type) {
-        case d.F.END_CONTENT_LOAD:
+        case c.F.END_CONTENT_LOAD:
             let t = null != s.A.questEnrollmentBlockedUntil;
             if (e.adCreativeType === r.p.QUEST) {
                 let n = e.adCreativeId;
@@ -114,7 +121,10 @@ function f(e) {
                     },
                 });
             break;
-        case d.F.CLICK_INTERNAL:
-            h(e);
+        case c.F.CLICK_INTERNAL:
+            f(e);
+            break;
+        case c.F.CLICK_EXTERNAL_ADVERTISER_CTA:
+            E(e);
     }
 }
