@@ -2,12 +2,13 @@
 n.d(t, {
     Du: () => p,
     GR: () => f,
+    Ld: () => I,
     Li: () => E,
     VE: () => m,
     VT: () => A,
-    W1: () => I,
-    XC: () => S,
-    v4: () => T,
+    W1: () => T,
+    XC: () => N,
+    v4: () => S,
     vx: () => h,
     xk: () => _,
     xr: () => g,
@@ -70,15 +71,19 @@ function A() {
         ? 0
         : Object.values(t).filter((t) => null != t && t.link_status === c.Ef.PENDING && e.id !== t.requestor_id).length;
 }
-function I() {
+function I(e) {
+    let t = (0, r.bG)([a.A], () => a.A.getLinkedUsers());
+    return null != e && (t[e]?.teen_requires_parental_consent ?? !1);
+}
+function T() {
     return h().length;
 }
-function T(e) {
+function S(e) {
     let t = (0, u.k)(),
         n = (0, r.bG)([a.A], () => (null == t ? null : a.A.getRangeStartTimestamp()));
     return null == n ? null : (0, o.i6)(new Date(n).getTime(), () => e, 7);
 }
-function S(e, t) {
+function N(e, t) {
     let n = (0, r.bG)([a.A], () => a.A.getLinkTimestamp(e));
     return null != n ? (0, o.mV)(Date.parse(n), t === c.Ef.PENDING ? c.lu : c.dI) : null;
 }
