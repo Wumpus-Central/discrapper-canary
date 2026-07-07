@@ -6,7 +6,4 @@ e.exports = {
     Gt: "gameIcon__8c6c2",
     pq: "info__8c6c2",
     it: "liveBadge__8c6c2",
-    En: "clipKeybindHint__8c6c2",
-    oH: "clipKeyCombo__8c6c2",
-    Bj: "clipKeyComboKey__8c6c2",
 };
