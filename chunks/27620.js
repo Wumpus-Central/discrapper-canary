@@ -12,6 +12,7 @@ let i = {
     hangout_window_set: 100,
     populated_clip_gallery_closed: 100,
     topical_navigation_multiple_impressions: 10,
+    guild_room_joined: 100,
 };
 var r = n(636537),
     s = n(228366),

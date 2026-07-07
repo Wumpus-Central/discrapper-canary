@@ -13,4 +13,5 @@ var i,
         (i.HANGOUT_WINDOW_SET = "hangout_window_set"),
         (i.POPULATED_CLIP_GALLERY_CLOSED = "populated_clip_gallery_closed"),
         (i.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS = "topical_navigation_multiple_impressions"),
+        (i.GUILD_ROOM_JOINED = "guild_room_joined"),
         i);
