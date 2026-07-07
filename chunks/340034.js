@@ -7,12 +7,12 @@ var i = n(683071),
     s = n(818824),
     o = n(944355),
     u = n(270537),
-    c = n(650170),
+    c = n(6938),
     d = n(881489),
     p = n(531506),
     m = n(458785),
-    h = n(299301),
-    C = n(888751),
+    C = n(299301),
+    h = n(888751),
     E = n(375708),
     A = n(327105);
 function f(e) {
@@ -26,9 +26,9 @@ function f(e) {
         { invoicePreview: o } = t,
         c = [];
     c =
-        t.type === h.N$.PREMIUM_GIFT
-            ? (0, C.fk)(o, { isCustomGift: s, isPrepaidPaymentSource: a, subscriptionPlan: n })
-            : (0, C.IY)(o, {
+        t.type === C.N$.PREMIUM_GIFT
+            ? (0, h.fk)(o, { isCustomGift: s, isPrepaidPaymentSource: a, subscriptionPlan: n })
+            : (0, h.IY)(o, {
                   isPrepaidPaymentSource: a,
                   invoiceSummaryType: t.type,
                   subscriptionPlan: n,
@@ -67,25 +67,25 @@ function y(e) {
         } = e,
         { immediateDelivery: S } = (0, s.U)(),
         { discountOffer: y, premiumGroupDiscountOffer: P } = (0, a.i)(),
-        { checkoutReviewButtonLabel: I } = (0, c.t4)((e) => ({
+        { checkoutReviewButtonLabel: T } = (0, c.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
         }));
-    if (d.type === h.N$.LOADING) return null;
-    let { invoicePreview: T } = d,
-        _ = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? T,
-        { renewalPrice: g, multiPeriodDiscountAttributes: v } = (0, C.Go)(_, n, P ?? y);
+    if (d.type === C.N$.LOADING) return null;
+    let { invoicePreview: I } = d,
+        _ = ("renewalInvoicePreview" in d ? d.renewalInvoicePreview : null) ?? I,
+        { renewalPrice: g, multiPeriodDiscountAttributes: v } = (0, h.Go)(_, n, P ?? y);
     if (A) return null;
     let x = {
-        purchaseButtonText: I,
-        totalDue: f ? T.total : 0,
+        purchaseButtonText: T,
+        totalDue: f ? I.total : 0,
         renewalPrice: g,
         multiPeriodDiscountAttributes: v,
-        currency: T.currency,
+        currency: I.currency,
         interval: n.interval,
         intervalCount: n.intervalCount,
         startDate: (0, m.de)({
             overrideRenewalDate: p,
-            currentInvoice: T.id !== _.id ? T : void 0,
+            currentInvoice: I.id !== _.id ? I : void 0,
             renewalInvoice: _,
             isSubscriptionUpdate: null != u,
             fractionalPremiumInfo: E,

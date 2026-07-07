@@ -19,7 +19,7 @@ var o = n(17928),
     S = n(184015),
     y = n(723702),
     P = n(652215);
-function I() {
+function T() {
     let e = A.A.getClient();
     null != e &&
         (0, S.j)().then((t) => {
@@ -33,7 +33,7 @@ function I() {
                 });
         });
 }
-function T() {
+function I() {
     let e = A.A.getClient();
     null != e &&
         (0, S.j)().then((t) => {
@@ -151,7 +151,7 @@ class O extends a.PureComponent {
     }
     componentWillUnmount() {
         v(A.A.getPayPalClient(), { type: "BRAINTREE_TEARDOWN_PAYPAL_CLIENT" }).then(() => {
-            null != A.A.getClient() && T();
+            null != A.A.getClient() && I();
         });
     }
     render() {
@@ -181,7 +181,7 @@ class w extends a.PureComponent {
     }
     componentWillUnmount() {
         v(A.A.getVenmoClient(), { type: "BRAINTREE_TEARDOWN_VENMO_CLIENT" }).then(() => {
-            null != A.A.getClient() && I();
+            null != A.A.getClient() && T();
         });
     }
     render() {
@@ -260,13 +260,13 @@ let $ = function (e) {
                     }
                 }
         }, [y, n]),
-        I = a.useCallback(
+        T = a.useCallback(
             (e) => {
                 C || e.empty || h(!0), null != i && i(e.complete), null != e.error && m(!1);
             },
             [C, i],
         ),
-        T = a.useCallback(() => {
+        I = a.useCallback(() => {
             m(!0), o?.();
         }, [o]),
         _ = a.useCallback(() => {
@@ -285,9 +285,9 @@ let $ = function (e) {
                                     : null != e.error
                                       ? A(M.intl.string(M.t.x4pWtJ))
                                       : A(null),
-                                I(e);
+                                T(e);
                         }),
-                            e.on("focus", T),
+                            e.on("focus", I),
                             e.on("blur", _);
                         break;
                     }
@@ -295,9 +295,9 @@ let $ = function (e) {
                         let e = y.getElement(s.CardExpiryElement);
                         if (null == e) return;
                         e.on("change", (e) => {
-                            null != e.error || (e.empty && C) ? A(M.intl.string(M.t["9/zZdl"])) : A(null), I(e);
+                            null != e.error || (e.empty && C) ? A(M.intl.string(M.t["9/zZdl"])) : A(null), T(e);
                         }),
-                            e.on("focus", T),
+                            e.on("focus", I),
                             e.on("blur", _);
                         break;
                     }
@@ -305,13 +305,13 @@ let $ = function (e) {
                         let e = y.getElement(s.CardCvcElement);
                         if (null == e) return;
                         e.on("change", (e) => {
-                            null != e.error || (e.empty && C) ? A(M.intl.string(M.t.ro4isZ)) : A(null), I(e);
+                            null != e.error || (e.empty && C) ? A(M.intl.string(M.t.ro4isZ)) : A(null), T(e);
                         }),
-                            e.on("focus", T),
+                            e.on("focus", I),
                             e.on("blur", _);
                     }
                 }
-        }, [_, I, T, c, y, C, n]);
+        }, [_, T, I, c, y, C, n]);
     a.useEffect(
         () => (
             g(),
@@ -715,9 +715,9 @@ var ef = n(71804),
 n(426398), n(211083);
 var ey = n(944355);
 n(21713);
-var eP = n(650170),
-    eI = n(783327),
-    eT = n(626584),
+var eP = n(6938),
+    eT = n(783327),
+    eI = n(626584),
     e_ = n(166532),
     eg = n(69494),
     ev = n(901930),
@@ -1021,15 +1021,15 @@ let tc = [e_.pn.PAYMENT_TYPE],
         SHARED_TYPE_AND_ADDRESS_STEPS: [e_.pn.PAYMENT_ELEMENT, e_.pn.ADDRESS],
     };
 var tP = n(801753);
-function tI(e) {
+function tT(e) {
     return () => (null != b.A.error && (0, x.ET)(), e());
 }
-function tT(e) {
+function tI(e) {
     let { onPrimary: t, onBack: n, ...l } = e,
         i = t;
-    null != t && (i = tI(t));
+    null != t && (i = tT(t));
     let a = n;
-    return null != n && (a = tI(n)), (0, r.jsx)(ex.Ay, { ...l, onPrimary: i, onBack: a });
+    return null != n && (a = tT(n)), (0, r.jsx)(ex.Ay, { ...l, onPrimary: i, onBack: a });
 }
 function t_(e) {
     let { paymentSourceTypeRestrictions: t } = e,
@@ -1063,8 +1063,8 @@ function tg(e) {
             PAYPAL_STEPS: f,
             VENMO_STEPS: S,
             PAYMENT_REQUEST_STEPS: P,
-            PRZELEWY24_STEPS: I,
-            EPS_STEPS: T,
+            PRZELEWY24_STEPS: T,
+            EPS_STEPS: I,
             IDEAL_STEPS: _,
             CASH_APP_STEPS: g,
             setConnectorPaymentRequestReady: v,
@@ -1092,10 +1092,10 @@ function tg(e) {
                       : (c(P), u(e_.pn.PAYMENT_REQUEST_INFORMATION));
                 break;
             case eh.he.PRZELEWY24:
-                c(I), u(e_.pn.PRZELEWY24_INFORMATION);
+                c(T), u(e_.pn.PRZELEWY24_INFORMATION);
                 break;
             case eh.he.EPS:
-                c(T), u(e_.pn.EPS_INFORMATION);
+                c(I), u(e_.pn.EPS_INFORMATION);
                 break;
             case eh.he.IDEAL:
                 c(_), u(e_.pn.IDEAL_INFORMATION);
@@ -1163,7 +1163,7 @@ function tv(e) {
     } = e;
     if (i === e_.pn.ATTEMPT_GOOGLE_PAY || i === e_.pn.ATTEMPT_APPLE_PAY) {
         let e = M.intl.string(i === e_.pn.ATTEMPT_APPLE_PAY ? M.t.WoXvJL : M.t.wnVVr0);
-        return (0, r.jsx)(tT, {
+        return (0, r.jsx)(tI, {
             onBack: () => l(e_.pn.PAYMENT_TYPE),
             primaryCTA: ex.Ay.CTAType.CONTINUE,
             primaryText: e,
@@ -1172,7 +1172,7 @@ function tv(e) {
             shouldUseManaModal: n,
         });
     }
-    return (0, r.jsx)(tT, { onBack: t, shouldUseManaModal: n });
+    return (0, r.jsx)(tI, { onBack: t, shouldUseManaModal: n });
 }
 var tx = n(198970),
     tN = n(116673),
@@ -1228,7 +1228,7 @@ let tb = (e) => {
 var tM = n(908166),
     tO = n(930767),
     tj = n(891640);
-let tL = new eT.A("AddPaymentAddressStep.tsx");
+let tL = new eI.A("AddPaymentAddressStep.tsx");
 function tD(e) {
     let { billingAddressInfo: t, onBillingAddressChange: n, paymentSourceType: l } = e,
         i = (0, o.bG)([b.A], () => b.A.error);
@@ -1264,15 +1264,15 @@ function tw(e) {
             lastConfirmedSetupIntentRef: C,
             shouldUsePaymentElement: h,
         } = e,
-        E = (0, eI.S)(),
+        E = (0, eT.S)(),
         { createSetupIntent: A } = (0, tM.x)(),
         {
             isSubmittingCurrentStep: f,
             billingAddressState: S,
             setIsSubmittingCurrentStep: y,
             hasRedirectURL: P,
-            setHasRedirectURL: I,
-            isAuthenticating: T,
+            setHasRedirectURL: T,
+            isAuthenticating: I,
         } = t;
     async function _() {
         y(!0);
@@ -1298,7 +1298,7 @@ function tw(e) {
                 paymentRequestPaymentMethod: o,
                 overwriteSubscriptionPaymentSource: i,
             });
-            "redirect-url" === e.responseType ? I(e.hasRedirectURL) : u(e.paymentSource), P || y(!1);
+            "redirect-url" === e.responseType ? T(e.hasRedirectURL) : u(e.paymentSource), P || y(!1);
         } catch (e) {
             y(!1), tL.warn(`Error confirming submitting Address Step for Payment Source Type: ${g}`, e);
         }
@@ -1336,19 +1336,19 @@ function tw(e) {
                   }
               })(g),
         x = h ? () => p(void 0) : () => a(v);
-    return (0, r.jsx)(tT, {
+    return (0, r.jsx)(tI, {
         onBack: x,
         primaryCTA: ex.Ay.CTAType.CONTINUE,
         primaryText: M.intl.string(M.t.PDTjLN),
         primarySubmitting: f,
-        primaryDisabled: !S.isValid || T,
+        primaryDisabled: !S.isValid || I,
         onPrimary: _,
         shouldUseManaModal: n,
     });
 }
-let tk = new eT.A("PaymentElementStepFooter.tsx");
+let tk = new eI.A("PaymentElementStepFooter.tsx");
 function tG(e) {
-    let t = (0, eI.S)(),
+    let t = (0, eT.S)(),
         {
             shouldUseManaModal: n,
             paymentModalArgs: l,
@@ -1387,7 +1387,7 @@ function tG(e) {
                 p(!1);
             }
         }, [C, d, h, A, i, t, s, p, m]);
-    return (0, r.jsx)(tT, {
+    return (0, r.jsx)(tI, {
         onBack: o,
         primaryCTA: ex.Ay.CTAType.CONTINUE,
         primaryType: "submit",
@@ -1400,7 +1400,7 @@ function tG(e) {
 }
 var tF = n(447952),
     tB = n(691189);
-let tY = new eT.A("AddPaymentStep.tsx"),
+let tY = new eI.A("AddPaymentStep.tsx"),
     tH = { name: "", cardNumber: "", expirationDate: "", cvc: "" },
     tW = { email: "", name: "", country: "", line1: "", line2: "", city: "", postalCode: "", state: "" };
 function tV(e) {
@@ -1435,8 +1435,8 @@ function tX(e) {
             appendSteps: f,
             onReturn: S,
             onComplete: y,
-            onStepChange: I,
-            breadcrumpSteps: T,
+            onStepChange: T,
+            breadcrumpSteps: I,
             currentBreadcrumpStep: v,
             header: x,
             analyticsData: N,
@@ -1450,7 +1450,7 @@ function tX(e) {
             overwriteSubscriptionPaymentSource: k = !1,
             shouldUseManaModal: G = !0,
         } = e,
-        F = (0, eI.S)(),
+        F = (0, eT.S)(),
         { activitySessionId: B } = (0, eS.V)(),
         { enabled: Y } = (0, es.Y)({ location: "AddPaymentFlow" }),
         { contextMetadata: H, clearFetchSetupIntent: W } = (0, eP.t4)((e) => ({
@@ -1563,10 +1563,10 @@ function tX(e) {
     }, []);
     let eC = (0, o.bG)([b.A], () => b.A.redirectedPaymentSourceId),
         eE = (0, o.bG)([e6], () => e6.cashAppPayComponent),
-        eT = { completeSteps: tl, setIsSubmittingCurrentStep: l.setIsSubmittingCurrentStep },
-        eb = a.useRef(eT);
+        eI = { completeSteps: tl, setIsSubmittingCurrentStep: l.setIsSubmittingCurrentStep },
+        eb = a.useRef(eI);
     a.useEffect(() => {
-        eb.current = eT;
+        eb.current = eI;
     }),
         a.useEffect(() => {
             let { completeSteps: e, setIsSubmittingCurrentStep: t } = eb.current;
@@ -1580,9 +1580,9 @@ function tX(e) {
     let eM = a.useCallback(
             function (e) {
                 let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-                ec(null), ea(e), t && I({ currentStep: ei, toStep: e });
+                ec(null), ea(e), t && T({ currentStep: ei, toStep: e });
             },
-            [ei, I],
+            [ei, T],
         ),
         eO = a.useCallback(
             (e) => {
@@ -1684,7 +1684,7 @@ function tX(e) {
         tf = a.useCallback(() => {
             eM(e_.pn.ADDRESS), Y && tF.Ky.includes(ei) && tE();
         }, [eM, Y, tE, ei]),
-        tI = a.useCallback(
+        tT = a.useCallback(
             (e) => {
                 Y && null != tc && (0, eu.PE)(e) ? td(e) : eM(e_.pn.PAYMENT_TYPE);
             },
@@ -1781,7 +1781,7 @@ function tX(e) {
             n = (0, r.jsx)(s.ElementsConsumer, {
                 children: (e) => {
                     let { elements: t } = e;
-                    return (0, r.jsx)(tT, {
+                    return (0, r.jsx)(tI, {
                         onBack: tb,
                         primaryCTA: ex.Ay.CTAType.CONTINUE,
                         primaryType: "submit",
@@ -1816,8 +1816,8 @@ function tX(e) {
                 epsBankValue: e3,
                 billingAddressInfo: eH.info,
             })),
-                (n = (0, r.jsx)(tT, {
-                    onBack: () => tI(eh.he.EPS),
+                (n = (0, r.jsx)(tI, {
+                    onBack: () => tT(eh.he.EPS),
                     primaryCTA: ex.Ay.CTAType.CONTINUE,
                     primaryText: M.intl.string(M.t.PDTjLN),
                     primaryDisabled: void 0 === e3 || "" === e3 || "" === eH.info.name,
@@ -1831,7 +1831,7 @@ function tX(e) {
                 onAccountHolderNameChange: (e) => eW({ info: { ...eH.info, name: e }, isValid: eH.isValid }),
                 billingAddressInfo: eH.info,
             })),
-                (n = (0, r.jsx)(tT, {
+                (n = (0, r.jsx)(tI, {
                     onBack: () => eM(e_.pn.PAYMENT_TYPE),
                     primaryCTA: ex.Ay.CTAType.CONTINUE,
                     primaryText: M.intl.string(M.t.PDTjLN),
@@ -1851,8 +1851,8 @@ function tX(e) {
                 p24BankValue: e7,
                 billingAddressInfo: eH.info,
             })),
-                (n = (0, r.jsx)(tT, {
-                    onBack: () => tI(eh.he.PRZELEWY24),
+                (n = (0, r.jsx)(tI, {
+                    onBack: () => tT(eh.he.PRZELEWY24),
                     primaryCTA: ex.Ay.CTAType.CONTINUE,
                     primaryText: M.intl.string(M.t.PDTjLN),
                     primaryDisabled:
@@ -1869,8 +1869,8 @@ function tX(e) {
         case e_.pn.PAYPAL_INFORMATION:
             let tO = 0 !== eq.length && null != e$;
             (t = (0, r.jsx)(tK, {})),
-                (n = (0, r.jsx)(tT, {
-                    onBack: () => tI(eh.he.PAYPAL),
+                (n = (0, r.jsx)(tI, {
+                    onBack: () => tT(eh.he.PAYPAL),
                     primaryCTA: ex.Ay.CTAType.CONTINUE,
                     primaryText: tO ? M.intl.string(M.t.PDTjLN) : M.intl.string(M.t.Djzd7L),
                     onPrimary: () => {
@@ -1887,8 +1887,8 @@ function tX(e) {
         case e_.pn.VENMO_INFORMATION:
             let tj = 0 !== e0.length && null != e$;
             (t = (0, r.jsx)(tZ, {})),
-                (n = (0, r.jsx)(tT, {
-                    onBack: () => tI(eh.he.VENMO),
+                (n = (0, r.jsx)(tI, {
+                    onBack: () => tT(eh.he.VENMO),
                     primaryCTA: ex.Ay.CTAType.CONTINUE,
                     primaryText: tj ? M.intl.string(M.t.PDTjLN) : M.intl.string(M.t["4KoTLM"]),
                     onPrimary: () => (tj ? tf() : void g()),
@@ -1897,13 +1897,13 @@ function tX(e) {
             break;
         case e_.pn.PAYMENT_REQUEST_INFORMATION:
             (t = (0, r.jsx)(tz, {})),
-                (n = (0, r.jsx)(tT, { onBack: () => eM(e_.pn.PAYMENT_TYPE), shouldUseManaModal: G }));
+                (n = (0, r.jsx)(tI, { onBack: () => eM(e_.pn.PAYMENT_TYPE), shouldUseManaModal: G }));
             break;
         case e_.pn.CASH_APP_INFORMATION:
             let tL = null != e1;
             (t = (0, r.jsx)(tq, {})),
-                (n = (0, r.jsx)(tT, {
-                    onBack: () => tI(eh.he.CASH_APP),
+                (n = (0, r.jsx)(tI, {
+                    onBack: () => tT(eh.he.CASH_APP),
                     primaryCTA: ex.Ay.CTAType.CONTINUE,
                     primaryText: tL ? M.intl.string(M.t.PDTjLN) : M.intl.string(M.t["9ALP8w"]),
                     onPrimary: () => (tL ? tf() : tt()),
@@ -1990,7 +1990,7 @@ function tX(e) {
           })
         : (0, r.jsx)(e2.A, {
               shouldUseManaModal: G,
-              steps: T ?? ep.steps,
+              steps: I ?? ep.steps,
               currentStep: v ?? ei,
               overrideKey: tH,
               paymentError: l.paymentError,
@@ -2031,7 +2031,7 @@ function tQ(e) {
                         });
                     })
                         .then(() => {
-                            T(), I();
+                            I(), T();
                         })
                         .catch((e) => {
                             f.pM(e);

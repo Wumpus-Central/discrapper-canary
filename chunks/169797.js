@@ -1,134 +1,139 @@
-t.d(n, { DJ: () => B, Jg: () => N, lo: () => y, oH: () => A, s3: () => k });
+t.d(n, { DJ: () => T, Jg: () => I, KT: () => A, lo: () => N, oH: () => w, s3: () => y });
 var l = t(627968),
-    r = t(64700),
-    i = t(503698),
-    s = t.n(i),
+    i = t(64700),
+    r = t(503698),
+    s = t.n(r),
     a = t(20742),
-    c = t(364840),
-    o = t(331322),
-    d = t(224640),
+    o = t(364840),
+    d = t(331322),
+    c = t(224640),
     u = t(430993),
     x = t(289873),
-    j = t(632088),
-    h = t(500380),
+    j = t(231723),
+    h = t(632088),
+    g = t(500380),
     m = t(423764),
-    g = t(683433),
-    C = t(981036),
-    p = t(725836),
-    v = t(520149),
-    f = t(857414);
-function k(e) {
+    C = t(683433),
+    p = t(981036),
+    v = t(725836),
+    f = t(520149),
+    k = t(652215),
+    b = t(857414);
+function y(e) {
     let {
             gradientColor: n,
             title: t,
-            headerBadgeVariant: i = "expressive",
+            headerBadgeVariant: r = "expressive",
             headerBadgeText: s,
-            headerBadgeIcon: c,
-            countryCode: o,
-            relocationCountryCode: d,
+            headerBadgeIcon: o,
+            countryCode: d,
+            relocationCountryCode: c,
             ...u
         } = e,
-        { checkoutHeaderConfigs: x } = (0, p.ck)(),
-        j = r.useCallback(
-            () => (null == o ? null : (0, l.jsx)("img", { alt: "", className: f.bI, src: (0, h.t)(o) })),
-            [o],
+        { checkoutHeaderConfigs: x } = (0, v.ck)(),
+        j = i.useCallback(
+            () => (null == d ? null : (0, l.jsx)("img", { alt: "", className: b.bI, src: (0, g.t)(d) })),
+            [d],
         ),
-        g = r.useMemo(() => {
+        h = i.useMemo(() => {
             if (null != s || null != x.headerBadgeText)
                 return {
-                    icon: x.headerBadgeIcon ?? c,
+                    icon: x.headerBadgeIcon ?? o,
                     type: { text: x.headerBadgeText ?? s ?? "" },
-                    variant: x.headerBadgeVariant ?? i,
+                    variant: x.headerBadgeVariant ?? r,
                 };
-        }, [s, c, x.headerBadgeText, x.headerBadgeIcon, i, x.headerBadgeVariant]),
-        C = null != o && null != d,
-        k = r.useMemo(() => {
-            if (!C && null != o) return { text: (0, m.j7)((0, m.ni)(o)), leadingIcon: j };
-        }, [C, o, j]);
+        }, [s, o, x.headerBadgeText, x.headerBadgeIcon, r, x.headerBadgeVariant]),
+        C = null != d && null != c,
+        p = i.useMemo(() => {
+            if (!C && null != d) return { text: (0, m.j7)((0, m.ni)(d)), leadingIcon: j };
+        }, [C, d, j]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(a.rQ, {
                 ...u,
-                badge: g,
+                badge: h,
                 badgePosition: "end",
                 gradientColor: n,
                 titleTextVariant: "heading-lg/semibold",
                 alignCenter: !1,
                 title: t,
-                subtitle: k,
+                subtitle: p,
             }),
-            C && (0, l.jsx)(v.w, { countryCode: o, relocationCountryCode: d }),
+            C && (0, l.jsx)(f.w, { countryCode: d, relocationCountryCode: c }),
         ],
     });
 }
-let b = { top: 16, bottom: 8 };
-function y(e) {
-    let { onBackClick: n, primaryButtonProps: t, portalClassName: r } = e,
-        { variant: i } = t,
-        { setCheckoutFooterContentNode: a } = (0, p.ck)();
-    return (0, l.jsxs)(c.j, {
+let B = { top: 16, bottom: 8 };
+function N(e) {
+    let { onBackClick: n, primaryButtonProps: t, portalClassName: i } = e,
+        { variant: r } = t,
+        { setCheckoutFooterContentNode: a } = (0, v.ck)();
+    return (0, l.jsxs)(o.j, {
         children: [
-            (0, l.jsx)("div", { ref: a, className: s()(f.K4, r) }),
-            (0, l.jsxs)(o.B, {
+            (0, l.jsx)("div", { ref: a, className: s()(b.K4, i) }),
+            (0, l.jsxs)(d.B, {
                 direction: "horizontal",
                 align: "center",
                 justify: null != n ? "space-between" : "end",
                 fullWidth: !0,
-                padding: b,
+                padding: B,
                 children: [
-                    null != n ? (0, l.jsx)(g.A, { onClick: n }) : null,
-                    (0, l.jsx)(C.p, { ...t, variant: i ?? "active", autoFocus: !0 }),
+                    null != n ? (0, l.jsx)(C.A, { onClick: n }) : null,
+                    (0, l.jsx)(p.p, { ...t, variant: r ?? "active", autoFocus: !0 }),
                 ],
             }),
         ],
     });
 }
-function B(e) {
+function T(e) {
     let { className: n } = e;
     return (0, l.jsx)("div", {
-        className: s()(f.g4, n),
-        children: (0, l.jsx)(x.y, { type: x.y.Type.PULSING_ELLIPSIS, itemClassName: f.Je }),
+        className: s()(b.g4, n),
+        children: (0, l.jsx)(x.y, { type: x.y.Type.PULSING_ELLIPSIS, itemClassName: b.Je }),
     });
 }
-function N(e) {
-    let { children: n, size: t = "md", maxHeight: r = "viewport", isModalContentLoading: i, ...s } = e;
-    return (0, l.jsx)(p.e0, {
-        children: (0, l.jsx)(d.d, {
+function I(e) {
+    let { children: n, size: t = "md", maxHeight: i = "viewport", isModalContentLoading: r, ...s } = e;
+    return (0, l.jsx)(v.e0, {
+        children: (0, l.jsx)(c.d, {
             size: t,
             ...s,
-            maxHeight: r,
-            contentOutsideContainer: (0, l.jsx)(j.A, {}),
-            children: i ? (0, l.jsx)(B, {}) : n,
+            maxHeight: i,
+            contentOutsideContainer: (0, l.jsx)(h.A, {}),
+            children: r ? (0, l.jsx)(T, {}) : n,
         }),
     });
 }
-function A(e) {
+function A() {
+    return (0, l.jsx)(I, { transitionState: j.ip.ENTERED, onClose: k.tEg, size: "md", isModalContentLoading: !0 });
+}
+function w(e) {
     let {
         title: n,
         gradientColor: t = "purple",
-        countryCode: r,
-        relocationCountryCode: i,
+        countryCode: i,
+        relocationCountryCode: r,
         headerBadgeText: s,
         headerBadgeIcon: a,
-        onBackClick: c,
-        primaryButtonProps: o,
+        onBackClick: o,
+        primaryButtonProps: d,
         children: x,
         ...j
     } = e;
-    return (0, l.jsx)(p.e0, {
-        children: (0, l.jsxs)(d.d, {
+    return (0, l.jsx)(v.e0, {
+        children: (0, l.jsxs)(c.d, {
             ...j,
             children: [
-                (0, l.jsx)(k, {
+                (0, l.jsx)(y, {
                     gradientColor: t,
                     title: n,
-                    countryCode: r,
-                    relocationCountryCode: i,
+                    countryCode: i,
+                    relocationCountryCode: r,
                     headerBadgeText: s,
                     headerBadgeIcon: a,
                 }),
                 (0, l.jsx)(u.c, { children: x }),
-                (0, l.jsx)(y, { onBackClick: c, primaryButtonProps: o }),
+                (0, l.jsx)(N, { onBackClick: o, primaryButtonProps: d }),
             ],
         }),
     });

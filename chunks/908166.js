@@ -1,7 +1,7 @@
 n.d(t, { x: () => a });
 var l = n(64700),
     i = n(655857),
-    r = n(650170);
+    r = n(6938);
 let a = () => {
     let { displayCurrency: e } = (0, i.Jn)(),
         {

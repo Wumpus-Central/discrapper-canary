@@ -80,7 +80,7 @@ class u extends s.A {
         return this.availablePlans.find((t) => t.matchesItems(e)) ?? null;
     }
 }
-class d extends s.A {
+class c extends s.A {
     subscriptionId;
     subscriptionPreview;
     updateType;
@@ -89,7 +89,7 @@ class d extends s.A {
         var t, n;
         return null == e
             ? null
-            : new d({
+            : new c({
                   subscriptionId: e.subscription_id ?? null,
                   subscriptionPreview:
                       null == (t = e.subscription_preview)
@@ -123,7 +123,7 @@ class d extends s.A {
             (this.resetBillingCycle = e.resetBillingCycle ?? !1);
     }
 }
-class c extends s.A {
+class d extends s.A {
     paymentGateway;
     paymentSourceId;
     invoicePreview;
@@ -131,7 +131,7 @@ class c extends s.A {
         let t = e.billing_facet;
         return null == t
             ? null
-            : new c({
+            : new d({
                   paymentGateway: t.payment_gateway,
                   paymentSourceId: t.payment_source_id ?? null,
                   invoicePreview: a.Y.createInvoiceFromOrder(e),
@@ -161,12 +161,12 @@ class _ extends s.A {
             status: e.status,
             revision: e.revision,
             orderLineItems: e.order_line_items,
-            billingFacetRecord: c.createFromOrder(e),
+            billingFacetRecord: d.createFromOrder(e),
             giftingFacet: e.gifting_facet ?? null,
             checkoutContextRecord: u.createFromOrder(e),
             createdAt: e.created_at,
             unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
-            subscriptionFacet: d.createFromServer(e.subscription_facet),
+            subscriptionFacet: c.createFromServer(e.subscription_facet),
         });
     }
     constructor(e) {
@@ -208,7 +208,7 @@ function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return C()(e, t);
 }
-function v(e, t) {
+function O(e, t) {
     if (null == e) return null;
     if ("premium_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
@@ -238,6 +238,11 @@ function R(e) {
                     t = i().checkoutInvoicePreview;
                 return null != e && null != e.discount && null != t && (0, E.Ro)(t, e.discount.id);
             },
+            isCheckoutInvoicePreviewLoading: () => {
+                let e = i().fetchCheckoutInvoicePreviewRequest,
+                    t = null == i().checkoutInvoicePreview && null == i().checkoutInvoiceError;
+                return null != e && t;
+            },
         };
         return {
             ...(0, I.p)(e, i, t),
@@ -250,6 +255,10 @@ function R(e) {
                 },
                 captureStartingFractionalPremiumEndsAt: (t) => {
                     null == i().startingFractionalPremiumEndsAt && e({ startingFractionalPremiumEndsAt: t });
+                },
+                startingIsInPastDueCheckout: null,
+                setStartingIsInPastDueCheckout: (t) => {
+                    null == i().startingIsInPastDueCheckout && e({ startingIsInPastDueCheckout: t });
                 },
             },
             ...{
@@ -285,7 +294,7 @@ function R(e) {
             quantity: S,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: v(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: O(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -295,7 +304,7 @@ function R(e) {
                     pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: v(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: O(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

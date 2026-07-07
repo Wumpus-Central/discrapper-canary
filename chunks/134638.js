@@ -6,20 +6,20 @@ var l = n(627968),
     s = n(463376),
     o = n(944355),
     u = n(241989),
-    c = n(650170),
+    c = n(6938),
     d = n(548118),
     p = n(410516),
     m = n(815545),
-    h = n(135314),
-    C = n(299301),
+    C = n(135314),
+    h = n(299301),
     E = n(71393),
     A = n(967198),
     f = n(67480),
     S = n(486020),
     y = n(428262),
     P = n(580630),
-    I = n(888751),
-    T = n(652215),
+    T = n(888751),
+    I = n(652215),
     _ = n(202541),
     g = n(88001),
     v = n(375708),
@@ -54,7 +54,7 @@ function R(e) {
                     ? (0, m.Tp)(s, l)
                     : v.intl.formatToPlainString(N.default["8bPDtb"], { premiumGroupProductName: (0, g.DP)() });
             if (M(t)) {
-                let e = (0, I.iK)(l);
+                let e = (0, T.iK)(l);
                 return a > 1 ? v.intl.format(x.default.kyGViz, { quantity: a, label: e }) : e;
             }
             return (0, y.ys)(l.id) ? (0, y.Mn)(l.id, !1, r) : l.name;
@@ -95,10 +95,10 @@ function R(e) {
                 let e = f.A.get(t);
                 if (null == e) return {};
                 let n = e.productLine;
-                if (n === T.EZt.PREMIUM) return {};
+                if (n === I.EZt.PREMIUM) return {};
                 let l = a.A.getApplication(e.applicationId);
                 if (null == l) return {};
-                if (n === T.EZt.GUILD_ROLE) {
+                if (n === I.EZt.GUILD_ROLE) {
                     let e = A.A.getGuildId(),
                         t = E.A.getGuild(e);
                     return null != t ? { header: t.name, guildForIcon: t } : {};
@@ -130,18 +130,18 @@ function R(e) {
                         } = e,
                         { subscriptionPlanInvoiceItem: u } = (0, m.Sb)(l, n),
                         c = M(t),
-                        d = t === C.N$.PREMIUM_WITH_TRIAL,
+                        d = t === h.N$.PREMIUM_WITH_TRIAL,
                         E = (c ? u?.amount : u?.subscriptionPlanPrice) ?? 0,
                         A = (0, P.$g)(E, l.currency),
                         f = (0, P.CE)(A, n.interval, n.intervalCount),
                         S = null,
-                        T = null,
+                        I = null,
                         g = !1,
                         N = f,
                         R = s?.discountOffer;
                     if (d)
-                        (S = (0, h.O7)(n, { amount: E, currency: l.currency })),
-                            (N = (0, I.ib)(l.currency, { includeNowSuffix: !0 }));
+                        (S = (0, C.O7)(n, { amount: E, currency: l.currency })),
+                            (N = (0, T.ib)(l.currency, { includeNowSuffix: !0 }));
                     else if (c) {
                         if (((N = A), n.interval === _.WT.YEAR && (0, y.xq)(n.id))) {
                             let e = (0, y.VA)({ subscriptionPlan: n, isGift: c, priceOptions: i });
@@ -162,7 +162,7 @@ function R(e) {
                         if ((0, m.Ro)(l, R.discount.id) && null != e) {
                             let t = (0, P.$g)(E - e, l.currency);
                             (N = v.intl.format(v.t.hXcaLT, { price: t })),
-                                (T = A),
+                                (I = A),
                                 (S = (0, p.hm)(R)
                                     ? v.intl.format(v.t.VZ8Tvh, { regularPrice: A })
                                     : v.intl.format(x.default.JsSin7, {
@@ -171,7 +171,7 @@ function R(e) {
                                       }));
                         }
                     }
-                    return { price: N, priceStrikethroughText: T, priceSubText: S, priceSubTextHasStrikethrough: g };
+                    return { price: N, priceStrikethroughText: I, priceSubText: S, priceSubTextHasStrikethrough: g };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: u,
@@ -208,5 +208,5 @@ function b(e) {
     return (0, l.jsx)(u.WH, { sku: i, premiumType: a, storeListing: n });
 }
 function M(e) {
-    return e === C.N$.PREMIUM_GIFT;
+    return e === h.N$.PREMIUM_GIFT;
 }

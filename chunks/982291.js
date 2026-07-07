@@ -10,11 +10,11 @@ var l = n(627968),
     d = n(295405),
     p = n(75304),
     m = n(558620),
-    h = n(650170),
-    C = n(818348);
+    C = n(6938),
+    h = n(818348);
 function E(e) {
     let { returnStep: t = a.pn.REVIEW, returnStepIfNoPaymentSources: n, paymentModalStepProps: r } = e,
-        { purchaseType: o } = (0, h.t4)((e) => ({ purchaseType: e.purchaseType })),
+        { purchaseType: o } = (0, C.t4)((e) => ({ purchaseType: e.purchaseType })),
         u = i.useCallback(
             () =>
                 (function (e) {
@@ -26,7 +26,7 @@ function E(e) {
                     } = e;
                     if (0 === Object.keys(d.A.paymentSources).length) {
                         if (null != l) return void t.handleStepChange(l);
-                        i === C.VV.SUBSCRIPTION
+                        i === h.VV.SUBSCRIPTION
                             ? t.handleStepChange(n, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS })
                             : t.handleClose();
                     } else t.handleStepChange(n, { trackedFromStep: a.pn.ADD_PAYMENT_STEPS });
@@ -37,11 +37,11 @@ function E(e) {
 }
 function A(e) {
     let { initialPlanId: t } = e,
-        n = (0, h.t4)((e) => e.selectedSkuId),
+        n = (0, C.t4)((e) => e.selectedSkuId),
         s = (0, m.A)(),
         { isGift: d, claimableRewards: p } = (0, r.Pv)(),
-        C = (0, u.A)({ isGift: d, skuId: n }),
-        A = (0, o.lp)(C),
+        h = (0, u.A)({ isGift: d, skuId: n }),
+        A = (0, o.lp)(h),
         f = (0, c.px)(s, d, p),
         S = i.useMemo(() => {
             let e = null == t ? a.pn.PLAN_SELECT : a.pn.REVIEW;

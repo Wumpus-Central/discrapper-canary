@@ -10,16 +10,16 @@ var l = n(627968),
     d = n(939249),
     p = n(150934),
     m = n(663803),
-    h = n(650170),
-    C = n(937008),
+    C = n(6938),
+    h = n(937008),
     E = n(773669),
     A = n(97352),
     f = n(45938),
     S = n(252424),
     y = n(428262),
     P = n(580630),
-    I = n(960851),
-    T = n(986883);
+    T = n(960851),
+    I = n(986883);
 let _ = (0, n(945810).mj)({
     name: "2026-06-bulk-nitro-gifting",
     kind: "user",
@@ -92,21 +92,21 @@ function O(e) {
             isGift: k,
             quantity: G,
             setQuantity: F,
-        } = (0, h.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             discountInfo: e.premiumDiscountInfo,
             setSelectedPlanId: e.setSelectedPlanId,
             isGift: e.isGift,
             quantity: e.quantity,
             setQuantity: e.setQuantity,
         })),
-        { giftRecipient: B } = (0, C.Pv)(),
+        { giftRecipient: B } = (0, h.Pv)(),
         Y = k && (0, f.Ik)(B),
         { discountOffer: H, discountAmountOff: W, applicablePlan: V } = U,
         K = (0, u.bG)([A.A], () => A.A.get(n));
     o()(null != K, "Missing subscriptionPlan");
     let Z = (0, y.m6)(K.id),
-        q = (0, I.cg)(),
-        z = (0, T.DQ)({ location: "PremiumSwitchPlanSelectOption" }),
+        q = (0, T.cg)(),
+        z = (0, I.DQ)({ location: "PremiumSwitchPlanSelectOption" }),
         $ =
             (function (e) {
                 let { location: t } = e;
@@ -216,7 +216,7 @@ function O(e) {
                 $ &&
                 (0, l.jsx)("div", {
                     className: N.ci,
-                    children: (0, l.jsx)(m.l, { value: G, onChange: F, minValue: h.y0, maxValue: 50 }),
+                    children: (0, l.jsx)(m.l, { value: G, onChange: F, minValue: C.y0, maxValue: 50 }),
                 }),
             g &&
                 (0, l.jsx)("div", {

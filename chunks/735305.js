@@ -7,11 +7,11 @@ var l = n(284009),
     o = n(211083),
     u = n(463376),
     c = n(21713),
-    d = n(650170),
+    d = n(6938),
     p = n(61299),
     m = n(174459),
-    h = n(723702),
-    C = n(937008),
+    C = n(723702),
+    h = n(937008),
     E = n(166532),
     A = n(566980),
     f = n(615310),
@@ -23,8 +23,8 @@ function P(e) {
             initialPlanId: n,
             breadcrumbSteps: l,
             handleStepChange: P,
-            onReturn: I,
-            continueSessionToInitialStep: T,
+            onReturn: T,
+            continueSessionToInitialStep: I,
         } = e,
         { paymentSources: _ } = (0, s.jm)(),
         {
@@ -51,7 +51,7 @@ function P(e) {
         { enabled: D } = (0, a.Y)({ location: "PaymentModalAddPaymentStep" }),
         { isPremiumGroupPurchase: U, isEligibleForTrial: w } = (0, u.i)(),
         { step: k, previousStep: G } = (0, f.Ay)(),
-        { isGift: F } = (0, C.Pv)(),
+        { isGift: F } = (0, h.Pv)(),
         B = {
             ...(0, p._V)(),
             paymentSources: _,
@@ -65,7 +65,7 @@ function P(e) {
             isGift: F,
         },
         Y =
-            I ??
+            T ??
             function () {
                 P(Object.values(_).length < 1 && null == n ? E.pn.PLAN_SELECT : E.pn.REVIEW, {
                     trackedFromStep: D ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
@@ -75,8 +75,8 @@ function P(e) {
     let H = (0, r.A)(() => Date.now(), [k]),
         W = (0, r.A)(
             () =>
-                null != T && null == G ? (D ? E.pn.PAYMENT_ELEMENT : T) : D ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
-            [T, G, D],
+                null != I && null == G ? (D ? E.pn.PAYMENT_ELEMENT : I) : D ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
+            [I, G, D],
         );
     return (0, p.Y)({
         paymentModalArgs: B,
@@ -106,8 +106,8 @@ function P(e) {
         },
         isEligibleForTrial: w,
         allowDesktopRedirectPurchase:
-            (0, h.isDesktop)() && null != g && [y.pe.TIER_0, y.pe.TIER_2].includes(g) && !F && null == O,
-        continueSessionToInitialStep: T,
+            (0, C.isDesktop)() && null != g && [y.pe.TIER_0, y.pe.TIER_2].includes(g) && !F && null == O,
+        continueSessionToInitialStep: I,
         shouldUseManaModal: !0,
     });
 }

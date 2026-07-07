@@ -19,16 +19,16 @@ var l = n(627968),
     d = n(834730),
     p = n(726656),
     m = n(463376),
-    h = n(558620),
-    C = n(650170),
+    C = n(558620),
+    h = n(6938),
     E = n(34188),
     A = n(661531),
     f = n(939249),
     S = n(398590),
     y = n(793574),
     P = n(688810),
-    I = n(63152),
-    T = n(663066),
+    T = n(63152),
+    I = n(663066),
     _ = n(976860),
     g = n(662388),
     v = n(652215),
@@ -42,7 +42,7 @@ let R = function (e) {
             (0, _.pX)(v.BVt.COLLECTIBLES_SHOP),
             (0, g.Cz)({ analyticsSource: y.A.PREMIUM_PAYMENT_MODAL, analyticsLocations: n }),
             (0, S.jH)(),
-            (0, T.dF)(I.Zt);
+            (0, I.dF)(T.Zt);
     }
     return (0, l.jsxs)("div", {
         className: N.kL,
@@ -157,7 +157,7 @@ function en(e) {
             setSelectedPlanId: d,
             checkoutPriceOptions: p,
             activeSubscription: E,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
             checkoutPriceOptions: e.checkoutPriceOptions,
@@ -167,16 +167,16 @@ function en(e) {
         y = (0, Y.YJ)(S),
         {
             isGift: P,
-            giftRecipient: I,
-            selectedGiftStyle: T,
+            giftRecipient: T,
+            selectedGiftStyle: I,
             customGiftMessage: _,
             setCustomGiftMessage: g,
             claimableRewards: v,
             setSelectedGiftingPromotionReward: x,
         } = (0, b.Pv)(),
-        N = (0, h.A)(),
-        R = (0, F.kz)(N, P && (0, L.Ik)(I), v),
-        M = (0, O.tA)({ giftRecipient: I, isGift: P });
+        N = (0, C.A)(),
+        R = (0, F.kz)(N, P && (0, L.Ik)(T), v),
+        M = (0, O.tA)({ giftRecipient: T, isGift: P });
     a()(void 0 !== E, "should not be undefined");
     let [D, w] = (0, s.yK)([j.A], () => [null != E ? j.A.get(E.planId) : null, null != t ? j.A.get(t) : null]),
         G = A?.subscription_trial,
@@ -224,10 +224,10 @@ function en(e) {
         radioGroupRef: $,
         radioGroupProps: Q,
         isGift: P,
-        giftRecipient: I,
+        giftRecipient: T,
         customGiftMessage: _,
         setCustomGiftMessage: g,
-        selectedGiftStyle: T,
+        selectedGiftStyle: I,
         isEligibleForBOGOPromotion: H,
         isEligibleForTrial: f,
         userTrialOffer: A,
@@ -268,8 +268,8 @@ function ei(e) {
         selectedPlan: d,
         selectedPlanPrice: p,
         useCompactGiftComponents: m,
-        handleClose: h,
-        showTotal: C,
+        handleClose: C,
+        showTotal: h,
         switchPlanSelectComponent: E,
         warningComponent: A,
     } = e;
@@ -307,7 +307,7 @@ function ei(e) {
                           })(),
                           f(E),
                           A,
-                          !a && (0, l.jsx)(R, { onClose: h }),
+                          !a && (0, l.jsx)(R, { onClose: C }),
                       ],
                   }),
               ],
@@ -318,12 +318,12 @@ function ei(e) {
                   (0, l.jsx)(z.Z, { className: m ? Q.KW : void 0, giftRecipient: t }),
                   f(E),
                   o &&
-                      C &&
+                      h &&
                       null != d &&
                       null != p &&
                       (0, l.jsx)(el, { selectedPlan: d, selectedPlanPrice: p, intervalType: null, isPrepaid: s }),
                   A,
-                  !a && (0, l.jsx)(R, { onClose: h }),
+                  !a && (0, l.jsx)(R, { onClose: C }),
               ],
           });
 }
@@ -348,7 +348,7 @@ function ea(e) {
             isPlansEligibleForDiscount: c,
             isEligibleForTrial: d,
         } = e,
-        { currentPremiumSubscriptionForCheckout: p } = (0, C.t4)((e) => ({
+        { currentPremiumSubscriptionForCheckout: p } = (0, h.t4)((e) => ({
             currentPremiumSubscriptionForCheckout: e.isGift ? null : e.activeSubscription,
         })),
         m = i.useMemo(
@@ -443,15 +443,15 @@ function ec(e) {
         } = e,
         {
             skuId: m,
-            selectedPlan: h,
+            selectedPlan: C,
             premiumSubscription: E,
             premiumSubscriptionPlan: A,
             isEligibleForBOGOPromotion: f,
             isGift: S,
             thePriceOptions: y,
             isEligibleForTrial: P,
-            giftRecipient: I,
-            customGiftMessage: T,
+            giftRecipient: T,
+            customGiftMessage: I,
             setCustomGiftMessage: _,
             selectedGiftStyle: g,
             isPlansEligibleForDiscount: v,
@@ -468,7 +468,7 @@ function ec(e) {
             canContinue: B,
             trialPeriodCopy: Y,
         } = en({ selectedPlanId: n, priceOptions: r, planOptions: a, subscriptionPeriodEnd: s, showTotal: o }),
-        { discountAmountOff: H, applicablePlan: W, discountOffer: K } = (0, C.t4)((e) => e.premiumDiscountInfo),
+        { discountAmountOff: H, applicablePlan: W, discountOffer: K } = (0, h.t4)((e) => e.premiumDiscountInfo),
         Z = (0, G.ds)();
     function q() {
         return (0, l.jsx)(ea, {
@@ -479,7 +479,7 @@ function ec(e) {
             isGift: S,
             isPrepaid: j,
             premiumSubscription: E,
-            selectedPlan: h,
+            selectedPlan: C,
             thePriceOptions: y,
             shouldShowTrialOrDiscountLayout: O,
             isEligibleForTrial: P,
@@ -495,14 +495,14 @@ function ec(e) {
     });
     if (S)
         return (0, l.jsx)(ei, {
-            giftRecipient: I,
-            customGiftMessage: T,
+            giftRecipient: T,
+            customGiftMessage: I,
             setCustomGiftMessage: _,
             selectedGiftStyle: g,
             hasSeenCollectiblesInSkuSelect: R,
             isPrepaid: j,
             canContinue: B,
-            selectedPlan: h,
+            selectedPlan: C,
             selectedPlanPrice: U,
             useCompactGiftComponents: u,
             handleClose: p,
@@ -552,7 +552,7 @@ function ec(e) {
                             ],
                         });
                     if (i && null != H && null != N && null != W && n === W) {
-                        let e = h?.interval === $.WT.YEAR,
+                        let e = C?.interval === $.WT.YEAR,
                             t = (0, w.$g)(N.amount - H, N.currency),
                             n = (0, w.$g)(N.amount, N.currency);
                         return (0, l.jsxs)("div", {
@@ -579,7 +579,7 @@ function ec(e) {
                 })(b, P, v),
             q(),
             eu({
-                selectedPlan: h,
+                selectedPlan: C,
                 selectedPlanPrice: U,
                 isPrepaid: j,
                 shouldShowHRKEuroWarning: k,

@@ -10,10 +10,10 @@ var l = n(627968),
     d = n(482132),
     p = n(615310),
     m = n(216641),
-    h = n(364995),
-    C = n(426398),
+    C = n(364995),
+    h = n(426398),
     E = n(666646),
-    A = n(650170),
+    A = n(6938),
     f = n(26279);
 function S(e) {
     let {
@@ -23,8 +23,8 @@ function S(e) {
             subscriptionMetadata: S,
             renderStepBody: y,
             resolveInternalState: P,
-            resolveTenantReviewButtonProps: I,
-            handleStepChange: T,
+            resolveTenantReviewButtonProps: T,
+            handleStepChange: I,
             openInvoiceId: _,
             analyticsData: g,
             analyticsLocation: v,
@@ -48,8 +48,8 @@ function S(e) {
     a()(null != j, "Step should be set");
     let L = i.useRef(null),
         [D, U] = (0, s.A)(!1, 500),
-        { paymentSources: w } = (0, C.jm)(),
-        { checkoutPaymentSources: k, hasInvoiceOrderContextLoaded: G } = (0, h.t)(),
+        { paymentSources: w } = (0, h.jm)(),
+        { checkoutPaymentSources: k, hasInvoiceOrderContextLoaded: G } = (0, C.t)(),
         F = (0, E.sw)(),
         B = (0, m.W)(w, x),
         Y = i.useMemo(() => {
@@ -82,12 +82,12 @@ function S(e) {
             O(void 0), n();
         }, [O, n]),
         Z = i.useCallback(() => {
-            T(u.pn.ADD_PAYMENT_STEPS);
-        }, [T]),
+            I(u.pn.ADD_PAYMENT_STEPS);
+        }, [I]),
         q = i.useMemo(() => ({ hasLegalTermsFlash: D, legalTermsNodeRef: V }), [D, V]),
         z = i.useMemo(() => y({ handlePaymentSourceAdd: Z }, q), [y, Z, q]),
         $ = (0, l.jsx)(c.U, {
-            resolveTenantReviewButtonProps: I,
+            resolveTenantReviewButtonProps: T,
             onBack: K,
             legalTermsNodeRef: V,
             flashLegalTerms: () => U(!0),
@@ -97,7 +97,7 @@ function S(e) {
             analyticsLocation: v,
             baseAnalyticsData: g,
             openInvoiceId: _,
-            handleStepChange: T,
+            handleStepChange: I,
             postPurchaseStep: u.pn.CONFIRM,
             backButtonEligible: r,
             metadata: S,

@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { Jn: () => E, _r: () => f, el: () => _, ow: () => p });
+n.d(t, { Jn: () => p, _r: () => f, el: () => _, ow: () => E });
 var i = n(64700),
     r = n(17928),
     s = n(160946),
     a = n(97352),
     o = n(83617),
-    l = n(650170),
+    l = n(6938),
     u = n(652215),
     c = n(202541);
 function d(e, t, n) {
@@ -24,7 +24,7 @@ function h(e) {
 function f(e) {
     return e.filter((e) => e !== c.pe.NONE);
 }
-function p(e) {
+function E(e) {
     let { skuIDs: t, paymentSourceId: n, isGift: o } = e,
         l = i.useMemo(() => f(t), [t]),
         u = (0, r.bG)([a.A], () => d(a.A, l, o)),
@@ -38,7 +38,7 @@ function p(e) {
         hasFetchedRelatedSubscriptionPlans: (0, s.Y)(l),
     };
 }
-function E() {
+function p() {
     let {
             skuIds: e,
             isGift: t,
@@ -58,7 +58,7 @@ function E() {
             currenciesFromSubscriptionPlan: o,
             subscriptionPlanIdForCurrency: u,
             hasFetchedRelatedSubscriptionPlans: c,
-        } = p({ skuIDs: f(e), paymentSourceId: n, isGift: t }),
+        } = E({ skuIDs: f(e), paymentSourceId: n, isGift: t }),
         { allowedCurrencies: d } = (function () {
             let e = (0, l.t4)((e) => e.checkoutInvoicePreview),
                 { allowedCurrencies: t, invoiceCurrency: n } = i.useMemo(
@@ -76,8 +76,8 @@ function E() {
         })(),
         _ = i.useMemo(() => (d.length > 0 ? d : o), [d, o]),
         h = i.useMemo(() => s.paymentSourceId !== n || !s.loaded || null == u || !c, [s, n, u, c]),
-        E = s.currency,
-        m = i.useMemo(() => (null != E ? E : null != a ? a : _.length > 0 ? _[0] : void 0), [E, a, _]);
+        p = s.currency,
+        m = i.useMemo(() => (null != p ? p : null != a ? a : _.length > 0 ? _[0] : void 0), [p, a, _]);
     return {
         checkoutPriceOptions: s,
         dropdownCurrencies: _,

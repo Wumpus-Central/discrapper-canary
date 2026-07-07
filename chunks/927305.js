@@ -10,8 +10,8 @@ var l = n(627968),
     d = n(299301),
     p = n(580630),
     m = n(134638),
-    h = n(888751),
-    C = n(826161),
+    C = n(888751),
+    h = n(826161),
     E = n(375708),
     A = n(327105);
 function f(e) {
@@ -24,30 +24,30 @@ function f(e) {
             paymentMethodContent: c,
             legalContent: d,
         } = e,
-        [m, h] = i.useMemo(
+        [m, C] = i.useMemo(
             () =>
                 null == n
                     ? [E.intl.string(A.default.R0cZsM), void 0]
                     : [E.intl.string(A.default.R0cZsM), (0, p.$g)(0, n.currency)],
             [n],
         );
-    if (null == n) return (0, l.jsx)(o.E, {});
+    if (null == n) return (0, l.jsx)(o.Ed, {});
     let f = a
             ? [{ key: "fractional-premium-notice", directContent: (0, l.jsx)(S, { fractionalPremiumInfo: u }) }]
             : null,
-        I = (0, l.jsx)(y, { plan: t, renewalInvoicePreview: n }),
-        T = (0, l.jsx)(P, { renewalInvoicePreview: n, subscriptionTrial: r });
-    return (0, l.jsx)(o.T, {
+        T = (0, l.jsx)(y, { plan: t, renewalInvoicePreview: n }),
+        I = (0, l.jsx)(P, { renewalInvoicePreview: n, subscriptionTrial: r });
+    return (0, l.jsx)(o.T_, {
         shouldShowGlobalNotices: !0,
         upperInlineNoticeProps: f,
-        purchaseItemContent: I,
-        subscriptionDetailsContent: T,
+        purchaseItemContent: T,
+        subscriptionDetailsContent: I,
         invoiceSummaryContent: null,
         paymentMethodContent: c,
         legalContent: d,
         invoiceTotalDueLabel: m,
-        invoiceTotalDueValue: h,
-        promotionalNoticeContent: null != r && (0, l.jsx)(s.J, { text: (0, C.i)(r, t) }),
+        invoiceTotalDueValue: C,
+        promotionalNoticeContent: null != r && (0, l.jsx)(s.J, { text: (0, h.i)(r, t) }),
     });
 }
 function S(e) {
@@ -67,6 +67,6 @@ function y(e) {
 function P(e) {
     let { renewalInvoicePreview: t, subscriptionTrial: n } = e;
     if (null == t) return (0, l.jsx)(a.y, {});
-    let i = (0, h.Gj)(null, t, n, { isSubscriptionUpdate: !1 });
+    let i = (0, C.Gj)(null, t, n, { isSubscriptionUpdate: !1 });
     return (0, l.jsx)(u._D, { ...i, defaultExpanded: !0 });
 }

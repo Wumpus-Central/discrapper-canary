@@ -2,7 +2,7 @@ r.d(t, { Gm: () => l, yv: () => o });
 var n = r(627968),
     u = r(64700),
     i = r(786300),
-    c = r(650170);
+    c = r(6938);
 let [s, l, a] = (0, i.A)();
 function o(e) {
     let { children: t } = e,
