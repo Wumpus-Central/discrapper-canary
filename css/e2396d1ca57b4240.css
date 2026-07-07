@@ -145,6 +145,13 @@
     grid-template-columns: repeat(var(--custom-dns-tile-columns), 1fr)
 }
 
+.betaCaption_a1294d {
+    inset-block-end: var(--space-4);
+    inset-inline: 0;
+    position: absolute;
+    text-align: center
+}
+
 .effectPreview_caa50c {
     display: flex;
     justify-content: center;
@@ -175,6 +182,7 @@
     justify-content: center;
     min-width: 0;
     overflow: hidden;
+    position: relative;
     width: 100%
 }
 
@@ -199,6 +207,7 @@
     justify-content: center;
     min-width: 0;
     overflow: hidden;
+    position: relative;
     width: 100%
 }
 
