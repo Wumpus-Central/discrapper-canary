@@ -99,13 +99,12 @@ async function N(e, t, n) {
         subscriptionPlanId: I,
         loadId: S,
         countryCode: N,
-        orderId: C,
-        quantity: y,
+        quantity: C,
     } = { ...T, ...n };
     s.h.wait(() => {
         s.h.dispatch({ type: "SKU_PURCHASE_START", applicationId: e, skuId: t });
     });
-    let O = (0, c.Fs)(e);
+    let y = (0, c.Fs)(e);
     try {
         let e = {
                 gift: g,
@@ -115,7 +114,7 @@ async function N(e, t, n) {
                 gift_info_options: A,
             },
             n = d.A.getPromotionIdOverride();
-        if ((null != n && (e.promotion_id_override = n), O)) e.test_mode = !0;
+        if ((null != n && (e.promotion_id_override = n), y)) e.test_mode = !0;
         else {
             if (
                 null != i &&
@@ -130,8 +129,7 @@ async function N(e, t, n) {
         null != l && (e.expected_amount = l),
             null != _ && (e.expected_currency = _),
             (e.purchase_token = (0, E.r)()),
-            null != C && (e.order_id = C),
-            null != y && (e.quantity = y);
+            null != C && (e.quantity = C);
         let a = await r.Bo.post({
             url: m.Rsh.STORE_SKU_PURCHASE(t),
             body: e,
