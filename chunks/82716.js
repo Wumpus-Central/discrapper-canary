@@ -33,5 +33,3 @@ function p() {
         `${e.id}:favorite:${e.isFavorite}`,
     );
 }
-sFavorite;
-}`)}
