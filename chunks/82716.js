@@ -1,31 +1,32 @@
-n.d(t, { z: () => p });
-var a = n(627968),
+"use strict";
+n.d(t, { z: () => h });
+var i = n(627968),
     r = n(64700),
-    l = n(408278),
-    i = n(27232),
-    s = n(505930),
-    u = n(990078),
-    c = n(609174),
-    o = n(430795),
+    s = n(408278),
+    a = n(27232),
+    o = n(505930),
+    l = n(990078),
+    u = n(609174),
+    c = n(430795),
     d = n(16590),
-    f = n(375708);
-function p() {
-    let e = (0, c.Y_)(),
+    _ = n(375708);
+function h() {
+    let e = (0, u.Y_)(),
         t = r.useCallback(
             (t) => {
-                t.stopPropagation(), t.preventDefault(), (0, o.XK)(e);
+                t.stopPropagation(), t.preventDefault(), (0, c.XK)(e);
             },
             [e],
         );
-    return (0, a.jsx)(
-        u.m,
+    return (0, i.jsx)(
+        l.m,
         {
-            text: f.intl.string(e.isFavorite ? d.default.IZsalP : d.default.ihBfyA),
+            text: _.intl.string(e.isFavorite ? d.default.IZsalP : d.default.ihBfyA),
             position: "top",
-            children: (0, a.jsx)(l.K, {
+            children: (0, i.jsx)(s.K, {
                 onClick: t,
-                icon: e.isFavorite ? i.G : s.y,
-                "aria-label": f.intl.string(f.t.k8fFjp),
+                icon: e.isFavorite ? a.G : o.y,
+                "aria-label": _.intl.string(_.t.k8fFjp),
                 variant: "overlay-secondary",
                 size: "sm",
             }),
@@ -33,5 +34,3 @@ function p() {
         `${e.id}:favorite:${e.isFavorite}`,
     );
 }
-sFavorite;
-}`)}
