@@ -8,8 +8,8 @@ n.d(t, {
     _k: () => a,
     gz: () => o,
     ii: () => E,
-    kp: () => c,
-    lU: () => d,
+    kp: () => d,
+    lU: () => c,
     re: () => s,
 });
 var i = n(508425),
@@ -30,19 +30,19 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
         [0xf5983c, 0xe55ae7],
         [0xe4541e, 6674404],
     ].map((e) => ({ colors: e, name: "" })),
-    d = [
+    c = [
         [0xf4a7d8, 9626600, 0xf8f59a, 0xc9f7d8],
         [0xff6b9a, 0xffd85a, 5629578, 7064575],
-        [0xff8a5c, 0xffd15a, 0xf06aa6, 0x9b6bff],
-        [0xd83a5f, 0xc94bcb, 9133311, 0xb06cff],
         [5227519, 7268312, 9075967, 0xb7f5ff],
+        [0xff8a5c, 0xffd15a, 0xf06aa6, 5621759],
+        [0xd83a5f, 0xc94bcb, 9133311, 0xb06cff],
     ],
-    c = 0.78,
+    d = 0.78,
     _ = 0.72,
     h = 100,
     f = [
         [0xfe9242, 3534206, 0xffe047, 0xff4cd2, 5793266],
-        [0xff3d3d, 0xff8a2a, 0xffd447, 0xff4fa3, 5621759],
+        [0xff3d3d, 0xff8a2a, 0xffd447, 0xff4fa3, 8086015],
         [7997702, 0xc81e12, 0xf45a18, 0xff9500, 0xffd447],
         [8316888, 8178687, 8359167, 0xb56dff, 0xf38ad8],
         [3528287, 1497266, 2147829, 2850047, 7032319],
@@ -51,7 +51,7 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
 function E(e) {
     switch (e) {
         case i.z.GUMMY:
-            return d;
+            return c;
         case i.z.PRISM:
             return f;
         case i.z.GRADIENT:

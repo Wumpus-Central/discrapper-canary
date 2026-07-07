@@ -1,12 +1,12 @@
 "use strict";
 n.d(t, {
     $0: () => c,
+    UZ: () => f,
     Xr: () => g,
     as: () => u,
     cf: () => h,
-    gN: () => E,
-    j0: () => f,
-    mT: () => p,
+    gN: () => p,
+    mT: () => E,
     sx: () => m,
     xo: () => d,
 });
@@ -46,7 +46,7 @@ function c(e) {
 function d(e) {
     return ((e % 360) + 360) % 360;
 }
-let _ = [0, 60, 90, 30];
+let _ = [0, 60, 110, 30];
 function h(e) {
     let [t, n, i] = (function (e) {
         let [t, n, i] = r()((0, o.Hl)(e)).hsl();
@@ -59,12 +59,12 @@ function h(e) {
     );
 }
 function f(e) {
-    return r().hsl(e, 0.78, 0.72).num();
+    return r().hsl(e, l.kp, l.PS).num();
 }
-function p(e) {
+function E(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
-function E(e, t) {
+function p(e, t) {
     let n = t[Math.floor(Math.random() * t.length)],
         i = e[Math.floor(Math.random() * e.length)],
         r = (0, l.ii)(n);
