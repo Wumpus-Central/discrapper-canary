@@ -3665,7 +3665,7 @@ let lf = function (e) {
                 s = lr.A.useField("tab"),
                 n = (0, u.zy)(),
                 l = (0, z.p5)(),
-                { enabled: r } = V.A8.useConfig({ location: tx.rE.QUEST_HOME_DESKTOP }),
+                { enabled: r } = V.Mk.useConfig({ location: tx.rE.QUEST_HOME_DESKTOP }),
                 { useNewLayoutWithSearch: a } = V.aD.useConfig({ location: tx.rE.QUEST_HOME_DESKTOP }),
                 o = r || a;
             i.useEffect(() => {
@@ -3780,17 +3780,16 @@ let lf = function (e) {
     let { enabled: w } = (0, F.Z)({ location: tx.rE.QUEST_HOME_DESKTOP });
     (0, I.HU)({ location: eo.intl.string(eo.t.JALI2K) });
     let B = i.useRef(null),
-        { enabled: K, variant: J } = V.A8.useConfig({ location: tx.rE.QUEST_HOME_DESKTOP }),
-        { useNewLayoutWithSearch: X } = V.aD.useConfig({ location: tx.rE.QUEST_HOME_DESKTOP }),
-        ee = K || X,
-        et = (K && J === V.zY.NEW_LAYOUT_WITH_SEARCH) || X,
-        es = i.useRef(null),
-        en = i.useCallback((e) => {
-            es.current?.scrollToQuest(e);
+        { enabled: K } = V.Mk.useConfig({ location: tx.rE.QUEST_HOME_DESKTOP }),
+        { useNewLayoutWithSearch: J } = V.aD.useConfig({ location: tx.rE.QUEST_HOME_DESKTOP }),
+        X = K || J,
+        ee = i.useRef(null),
+        et = i.useCallback((e) => {
+            ee.current?.scrollToQuest(e);
         }, []),
-        el = i.useMemo(() => ((0, W.uJ)(s.hash) ? null : s.hash.substring(1)), [s.hash]),
-        { questHomeHero: er, isLoading: ei } = (0, Y.lg)(l[0] ?? null),
-        ea = i.useCallback(() => {
+        es = i.useMemo(() => ((0, W.uJ)(s.hash) ? null : s.hash.substring(1)), [s.hash]),
+        { questHomeHero: en, isLoading: el } = (0, Y.lg)(l[0] ?? null),
+        er = i.useCallback(() => {
             (0, q.Y)({
                 pageType: eg.liQ.GLOBAL_DISCOVERY_QUESTS,
                 sectionType: eg.JJy.ORBS_BALANCE_MENU,
@@ -3831,28 +3830,28 @@ let lf = function (e) {
         i.useEffect(() => {
             t && (0, R.Dr)(h.M.QUEST_HOME_ENTRYPOINT_ONBOARDING);
         }, [t]);
-    let eu = i.useCallback(
+    let ei = i.useCallback(
             (e) => {
                 n.replace({ ...n.location, hash: void 0 }), B.current?.scrollToTop({ animate: !1 }), g(e), Q();
             },
             [n, g, Q],
         ),
-        ec = i.useMemo(() => null != M && et, [M, et]),
-        ed = i.useMemo(() => ({ onAssetLoadComplete: D }), [D]),
-        em = i.useMemo(() => ({ onScroll: H, scrollerRef: B }), [H, B]),
-        eE = (0, V.Qj)() && 0 === l.length;
+        ea = i.useMemo(() => null != M && X, [M, X]),
+        eu = i.useMemo(() => ({ onAssetLoadComplete: D }), [D]),
+        ec = i.useMemo(() => ({ onScroll: H, scrollerRef: B }), [H, B]),
+        ed = (0, V.Qj)() && 0 === l.length;
     return a
         ? (0, r.jsx)(n7, { adCreativeIds: l })
         : (0, r.jsx)(nC.M.Provider, {
-              value: ed,
+              value: eu,
               children: (0, r.jsx)(lu.Provider, {
-                  value: em,
+                  value: ec,
                   children: (0, r.jsx)("div", {
                       className: o()(lo.kL, { [lo.KY]: !t }),
                       children: (0, r.jsxs)(lc, {
                           header: (0, r.jsx)(ld, {
                               selectedTab: f,
-                              onSelectTab: eu,
+                              onSelectTab: ei,
                               tabs: v,
                               endContent: (0, r.jsxs)(j.B, {
                                   gap: 8,
@@ -3860,7 +3859,7 @@ let lf = function (e) {
                                   align: "center",
                                   justify: "end",
                                   children: [
-                                      et &&
+                                      X &&
                                           (0, r.jsx)(S.I, {
                                               query: C,
                                               onChange: b,
@@ -3873,45 +3872,45 @@ let lf = function (e) {
                                               analyticsPage: eg.liQ.GLOBAL_DISCOVERY_QUESTS,
                                               cardAlignment: P.cP.END,
                                               ctaText: eo.intl.string(eo.t["J+vlIR"]),
-                                              ctaOnClick: ea,
+                                              ctaOnClick: er,
                                           }),
                                   ],
                               }),
                           }),
                           banner:
                               f === z.NC.ALL &&
-                              !eE &&
+                              !ed &&
                               (0, r.jsx)(
                                   $.y5,
                                   {
                                       source: tx.rE.QUEST_HOME_DESKTOP,
-                                      adCreativeId: er?.id ?? null,
+                                      adCreativeId: en?.id ?? null,
                                       adCreativeType: m.p.QUEST_HOME_HERO,
                                       children: (0, r.jsx)(lx, {
                                           onAssetLoad: D,
-                                          onQuestCtaClick: en,
-                                          hasSearchResults: ec,
-                                          questHomeHero: er,
-                                          isLoadingQuestHomeHero: ei,
+                                          onQuestCtaClick: et,
+                                          hasSearchResults: ea,
+                                          questHomeHero: en,
+                                          isLoadingQuestHomeHero: el,
                                       }),
                                   },
-                                  er?.id,
+                                  en?.id,
                               ),
                           children: [
-                              ec && null != M && (0, r.jsx)(n5, { matchingQuestIds: M }),
+                              ea && null != M && (0, r.jsx)(n5, { matchingQuestIds: M }),
                               f === z.NC.CLAIMED
-                                  ? (0, r.jsx)(sk, { onSelectTab: eu, className: ec ? lo.R : void 0 })
+                                  ? (0, r.jsx)(sk, { onSelectTab: ei, className: ea ? lo.R : void 0 })
                                   : f === z.NC.PREVIEW_TOOL
-                                    ? (0, r.jsx)(tY, { className: ec ? lo.R : void 0 })
-                                    : ee
+                                    ? (0, r.jsx)(tY, { className: ea ? lo.R : void 0 })
+                                    : X
                                       ? (0, r.jsx)(ng, {
-                                            className: ec ? lo.R : void 0,
-                                            ref: es,
-                                            deepLinkedQuestId: el,
-                                            isLoadingQuestHomeHero: !eE && ei,
-                                            withQuestHomeHero: !eE,
+                                            className: ea ? lo.R : void 0,
+                                            ref: ee,
+                                            deepLinkedQuestId: es,
+                                            isLoadingQuestHomeHero: !ed && el,
+                                            withQuestHomeHero: !ed,
                                         })
-                                      : (0, r.jsx)(sC, { ref: es }),
+                                      : (0, r.jsx)(sC, { ref: ee }),
                           ],
                       }),
                   }),
