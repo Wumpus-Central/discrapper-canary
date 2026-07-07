@@ -1645,12 +1645,7 @@ function iE(e) {
         a = (0, ip.A)(l),
         o = null != l && null != r && !s && !a,
         d = l?.getIconURL(80) ?? null,
-        c =
-            l?.bannerHash != null
-                ? (B.Ay.getGameAssetURL({ id: l.id, hash: l.bannerHash, size: 512, keepAspectRatio: !0 }) ?? null)
-                : l?.screenshotUrls != null && l.screenshotUrls.length > 0
-                  ? (l.screenshotUrls[0] ?? null)
-                  : null;
+        c = l?.getBannerURL(512) ?? l?.screenshotUrls?.[0] ?? null;
     return { game: l ?? null, resolvedGameId: i, iconUrl: d, bannerUrl: c, openGameProfile: r, shouldRender: o };
 }
 var iI = n(880716);

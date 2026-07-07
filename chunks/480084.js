@@ -542,10 +542,10 @@ function eL(e) {
         soundboard: s(eb.soundboard),
         gameMention: {
             react(e, t, n) {
-                let { gameId: r, channelId: s, gameName: a, gameIconHash: o } = e;
+                let { gameId: r, channelId: s, gameName: a, gameIcon: o } = e;
                 return (0, i.jsx)(
                     eI.A,
-                    { gameId: r, channelId: s, authorId: n.authorId, gameName: a, gameIconHash: o },
+                    { gameId: r, channelId: s, authorId: n.authorId, gameName: a, gameIcon: o },
                     n.key,
                 );
             },

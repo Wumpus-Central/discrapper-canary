@@ -386,7 +386,7 @@ let en = {
             } = e,
             i = t[n];
         return (
-            l.addMentionGame({ id: i.id, name: i.name, icon_hash: i.icon_hash }),
+            l.addMentionGame({ id: i.id, name: i.name, icon: i.icon }),
             l.replaceInlineInput("gameMentionInput", el(i.name), (0, L.K)(i.id)),
             { type: a.kc.GAME_MENTION, metadata: { gameId: i.id } }
         );
@@ -1045,7 +1045,7 @@ let eK = {
             p.insertText(((r = A), `@${r.name}`), ((s = A), `<@&${s.id}>`));
         } else if (null != M)
             return (
-                p.addMentionGame({ id: M.id, name: M.name, icon_hash: M.icon_hash }),
+                p.addMentionGame({ id: M.id, name: M.name, icon: M.icon }),
                 p.insertText(`@${M.name}`, (0, L.K)(M.id)),
                 { type: a.kc.GAME_MENTION, metadata: { gameId: M.id } }
             );

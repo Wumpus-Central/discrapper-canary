@@ -1,69 +1,62 @@
 "use strict";
-n.d(t, { $r: () => I, AN: () => S, BX: () => f, fr: () => h, w6: () => p });
+n.d(t, { $r: () => g, AN: () => I, BX: () => _, fr: () => d, w6: () => h });
 var i = n(636537),
-    r = n(927813),
-    s = n(998218),
-    a = n(652215);
-function o(e) {
-    return e?.split(":")[0];
-}
+    r = n(756954),
+    s = n(927813),
+    a = n(998218),
+    o = n(652215);
 let l = new Set(["/attachments/", "/ephemeral-attachments/"]),
-    u = new Set(["/external/"]),
-    c = +r.A.Millis.HOUR,
-    d = new Set(
-        [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.substring(2)].map(o).filter(Boolean),
-    ),
-    _ = new Set(
-        (window.GLOBAL_ENV.IMAGE_PROXY_ENDPOINTS?.split(",") ?? [])
-            .map((e) => e.substring(2))
-            .map(o)
+    u = +s.A.Millis.HOUR,
+    c = new Set(
+        [window.GLOBAL_ENV.CDN_HOST, window.GLOBAL_ENV.MEDIA_PROXY_ENDPOINT?.substring(2)]
+            .map(function (e) {
+                return e?.split(":")[0];
+            })
             .filter(Boolean),
     );
-function h(e) {
-    let t = d.has(e.hostname),
+function d(e) {
+    let t = c.has(e.hostname),
         n = Array.from(l).some((t) => e.pathname.startsWith(t));
     return (t || !1) && n;
 }
-function f(e) {
-    let t = _.has(e.hostname),
-        n = Array.from(u).some((t) => e.pathname.startsWith(t));
-    return (t || !1) && n;
+function _(e) {
+    return (0, r.v)(e);
 }
-function p(e) {
-    let t = s.A.toURLSafe(e);
+function h(e) {
+    let t = a.A.toURLSafe(e);
     if (null == t) return e;
     for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
     return t;
 }
-function E(e) {
+function f(e) {
     let t,
-        n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * r.A.Millis.SECOND;
-    return null == n || n <= Date.now() + c;
+        n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * s.A.Millis.SECOND;
+    return null == n || n <= Date.now() + u;
+}
+function E(e) {
+    let t = a.A.toURLSafe(e.url);
+    return null != t && f(t);
+}
+function p(e) {
+    if (null == e) return !1;
+    let t = a.A.toURLSafe(e.url);
+    return null != t && !!d(t) && f(t);
 }
 function m(e) {
-    let t = s.A.toURLSafe(e.url);
-    return null != t && E(t);
+    return p(e.image) || e.images?.some(p) || p(e.video);
 }
 function g(e) {
-    if (null == e) return !1;
-    let t = s.A.toURLSafe(e.url);
-    return null != t && !!h(t) && E(t);
+    return e.attachments.some(E) || e.embeds.some(m);
 }
-function A(e) {
-    return g(e.image) || e.images?.some(g) || g(e.video);
-}
-function I(e) {
-    return e.attachments.some(m) || e.embeds.some(A);
-}
-async function T(e) {
+async function A(e) {
     let t = await i.Bo.post({
-        url: a.Rsh.ATTACHMENTS_REFRESH_URLS,
+        url: o.Rsh.ATTACHMENTS_REFRESH_URLS,
         body: { attachment_urls: [e] },
         rejectWithError: !1,
     });
     return t.ok ? t.body.refreshed_urls[0].refreshed : void 0;
 }
-async function S(e) {
-    let t = s.A.toURLSafe(e);
-    return null != t && E(t) ? ((await T(e)) ?? e) : e;
+async function I(e) {
+    let t = a.A.toURLSafe(e);
+    return null != t && f(t) ? ((await A(e)) ?? e) : e;
 }

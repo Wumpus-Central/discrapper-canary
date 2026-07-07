@@ -12,7 +12,7 @@ async function u(e) {
         a.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH", query: t });
         try {
             let { body: e } = await s.Bo.get({ url: l.Rsh.GAMES_AUTOCOMPLETE, query: { q: t }, rejectWithError: !1 }),
-                n = (e ?? []).map((e) => ({ id: String(e.id), name: e.name, icon_hash: e.icon_hash }));
+                n = (e ?? []).map((e) => ({ id: String(e.id), name: e.name, icon: e.icon }));
             a.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: t, results: n });
         } catch (e) {
             throw (a.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: t }), e);

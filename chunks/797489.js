@@ -27,8 +27,8 @@ var l,
     C = n(583846),
     R = n(569926),
     y = n(928550),
-    G = n(570962),
-    L = n(975732),
+    L = n(570962),
+    G = n(975732),
     P = n(773669),
     O = n(409626),
     _ = n(422069),
@@ -286,14 +286,14 @@ async function eR(e, t) {
     }
 }
 var ey = n(284009),
-    eG = n.n(ey),
-    eL = n(376728),
+    eL = n.n(ey),
+    eG = n(376728),
     eP = n(976860),
     eO = n(71393),
     e_ = n(385648);
 async function eM(e) {
     let { invite: t, guildId: n, channelId: l, messageId: i, analyticsLocationStack: a } = e;
-    eG()(a.length > 0, "analyticsLocationStack must have at least one location");
+    eL()(a.length > 0, "analyticsLocationStack must have at least one location");
     let r = a[a.length - 1],
         s = null;
     if ((null != t && ((n = t.guild?.id), (s = new Set(t.guild?.features))), null == n)) return;
@@ -308,7 +308,7 @@ async function eM(e) {
             ));
         else
             null != t &&
-                (await eL.Ay.acceptInvite({ inviteKey: t.code, context: { location: r }, skipOnboarding: !0 }));
+                (await eG.Ay.acceptInvite({ inviteKey: t.code, context: { location: r }, skipOnboarding: !0 }));
     (0, eP.pX)(eb.BVt.CHANNEL(n, l, i), { sourceLocationStack: a });
 }
 var ew = n(320448),
@@ -1142,8 +1142,8 @@ var tv = n(369606),
     tC = n(663341),
     tR = n(408278),
     ty = n(34188),
-    tG = n(173936),
-    tL = n(365199),
+    tL = n(173936),
+    tG = n(365199),
     tP = n(789645),
     tO = n(442433),
     t_ = n(50268),
@@ -1391,7 +1391,7 @@ function t4(e) {
                 (0, i.jsx)(m.m, {
                     text: eh.intl.string(eh.t.WqhZss),
                     children: (0, i.jsx)(tR.K, {
-                        icon: tG.q,
+                        icon: tL.q,
                         variant: "overlay-secondary",
                         size: "sm",
                         "aria-label": eh.intl.string(eh.t.WqhZss),
@@ -1425,7 +1425,7 @@ function t4(e) {
                                 ...e,
                                 ref: r,
                                 children: (0, i.jsx)(tR.K, {
-                                    icon: tL.j,
+                                    icon: tG.j,
                                     variant: "overlay-secondary",
                                     size: "sm",
                                     "aria-label": eh.intl.string(eh.t["UKOtz+"]),
@@ -1477,14 +1477,14 @@ let t5 = a.forwardRef(function (e, t) {
     let { game: n } = e,
         [l] = a.useState(() => Math.random()),
         r = a.useMemo(() => {
-            if (null != n.bannerHash)
-                return tA.Ay.getGameAssetURL({ id: n.id, hash: n.bannerHash, size: 2048, keepAspectRatio: !0 }) ?? "";
+            let e = n.getBannerURL(2048);
+            if (null != e) return e;
             if (null != n.screenshotUrls && n.screenshotUrls.length > 0) {
                 let e = Math.floor(l * n.screenshotUrls.length);
                 return n.screenshotUrls[e];
             }
             return "";
-        }, [n.id, n.bannerHash, n.screenshotUrls, l]);
+        }, [n, l]);
     return (0, eJ.uJ)(r)
         ? null
         : (0, i.jsxs)("div", {
@@ -2202,8 +2202,8 @@ let ny = function (e) {
           })
         : null;
 };
-var nG = n(662388),
-    nL = n(674658),
+var nL = n(662388),
+    nG = n(674658),
     nP = n(828614),
     nO = n(561769),
     n_ = n(758836),
@@ -2211,14 +2211,14 @@ var nG = n(662388),
 let nw = a.createContext({ trackAction: () => {} });
 function nD(e) {
     let { skuId: t, aspectRatio: n } = e,
-        { product: l } = (0, nL.q)(t, !0),
+        { product: l } = (0, nG.q)(t, !0),
         r = a.useContext(nO.v3),
         { closeModal: s } = q(),
         { trackAction: c } = a.useContext(nw),
         o = a.useCallback(() => {
             c(O.GameProfileTrackActionActions.DiscordCollectiblesShopItem),
                 s(),
-                (0, nG.Cz)({
+                (0, nL.Cz)({
                     analyticsLocations: [I.A.GAME_PROFILE],
                     analyticsSource: I.A.GAME_PROFILE,
                     initialProductSkuId: t,
@@ -2259,7 +2259,7 @@ function nV(e) {
         s = a.useCallback(() => {
             n(O.GameProfileTrackActionActions.DiscordCollectiblesShop),
                 l(),
-                (0, nG.Cz)({
+                (0, nL.Cz)({
                     analyticsLocations: [I.A.GAME_PROFILE],
                     analyticsSource: I.A.GAME_PROFILE,
                     tab: n_.G2.CATALOG,
@@ -2835,7 +2835,7 @@ let lh = function (e) {
         ed = a.useCallback(
             function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e ? ((0, f.closeAllModals)(), (0, L.closeUserProfileModal)()) : c();
+                e ? ((0, f.closeAllModals)(), (0, G.closeUserProfileModal)()) : c();
             },
             [c],
         ),
@@ -2887,7 +2887,7 @@ let lh = function (e) {
                       children: (0, i.jsx)("div", {
                           className: s()(y, to.kL),
                           ref: eu,
-                          children: (0, i.jsxs)(G.A, {
+                          children: (0, i.jsxs)(L.A, {
                               obscured: Q,
                               onClose: em,
                               children: [

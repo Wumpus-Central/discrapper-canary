@@ -7,7 +7,8 @@ function r(e) {
     return t.length > 0 ? t : null;
 }
 function s(e) {
-    return { id: e.id, name: e.name, icon_hash: e.icon ?? e.icon_hash ?? null };
+    let t = e.icon ?? e.icon_hash ?? null;
+    return { id: e.id, name: e.name, icon: null != t ? { type: "hash", value: t } : null };
 }
 function a(e) {
     return !i.Z.has(e.id);
