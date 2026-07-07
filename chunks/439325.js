@@ -97,7 +97,7 @@ var Q = t(263911),
 function en(e) {
     let { orbsGate: l, orbPrice: t, onCheckout: i, variant: r = "secondary" } = e,
         a = s.useCallback(() => {
-            (0, el.mA)({ fromContent: ee.u.SOCIAL_LAYER_STOREFRONT });
+            (0, el.mA)({ fromContent: ee.u.SOCIAL_LAYER_STOREFRONT }), (0, W.j)();
         }, []);
     return "HIDDEN" === l || null == t
         ? null
