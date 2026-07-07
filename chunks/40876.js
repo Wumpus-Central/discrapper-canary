@@ -576,6 +576,8 @@ let r = {
             "RTC_CONNECTION_VIDEO",
             "CLIPS_SAVE_CLIP",
             "CLIPS_PROMOTE_CLIP_CANDIDATE",
+            "CLIPS_SESSION_START",
+            "CLIPS_SESSION_STOP",
         ],
         inlineRequire: () => n(95844).A,
         neverLoadBeforeConnectionOpen: !0,
