@@ -1,4 +1,37 @@
 "use strict";
-n.d(t, { A: () => i });
-let i =
-    "https://cdn.discordapp.com/assets/content/431cff901982be5f61cdad9935b62804bb53d9ed428708f9695bbc77094c6437.riv";
+n.d(t, { A: () => u });
+var i = n(627968),
+    r = n(64700),
+    s = n(735438),
+    a = n.n(s),
+    o = n(649671),
+    l = n(707712);
+let u = function (e) {
+    let { showImage: t } = e,
+        {
+            usageWidth: n,
+            descriptionWidth: s,
+            sourceWidth: u,
+        } = r.useMemo(
+            () => ({
+                usageWidth: a().random(60, 120),
+                descriptionWidth: a().random(200, 600),
+                sourceWidth: a().random(45, 90),
+            }),
+            [],
+        );
+    return (0, i.jsxs)("div", {
+        className: l.iE,
+        children: [
+            t ? (0, i.jsx)("div", { className: l.Sl }) : null,
+            (0, i.jsxs)("div", {
+                className: l.QR,
+                children: [
+                    (0, i.jsx)("div", { style: { maxWidth: (0, o.a8)(n) }, className: l.nY }),
+                    (0, i.jsx)("div", { style: { maxWidth: (0, o.a8)(s) }, className: l.h_ }),
+                ],
+            }),
+            (0, i.jsx)("div", { style: { width: (0, o.a8)(u) }, className: l.sP }),
+        ],
+    });
+};
