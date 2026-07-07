@@ -33,8 +33,7 @@ function d(e) {
     return c !== d;
 }
 function _() {
-    let e = i.useContext(u.n0);
-    return e?.current;
+    return i.useContext(u.n0)?.current;
 }
 function h() {
     return _()?.getId();
