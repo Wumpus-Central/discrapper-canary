@@ -1247,6 +1247,10 @@
     text-decoration: underline
 }
 
+.topic__6ec1a.topic__6ec1a:focus-within {
+    overflow: visible
+}
+
 .topicClickTarget__6ec1a {
     bottom: 0;
     pointer-events: none;

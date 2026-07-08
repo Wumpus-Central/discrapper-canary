@@ -159,20 +159,22 @@
 }
 
 .topic_e4503a {
+    overflow: hidden;
+    text-overflow: ellipsis;
     white-space: nowrap
 }
 
-.channelName_e4503a,
-.topic_e4503a {
-    overflow: hidden;
-    text-overflow: ellipsis
+.topic_e4503a:focus-within {
+    overflow: visible
 }
 
 .channelName_e4503a {
     align-items: center;
     display: flex;
     gap: var(--space-xs);
-    margin-inline-end: 8px
+    margin-inline-end: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .separator_e4503a {
