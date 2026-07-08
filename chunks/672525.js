@@ -14,25 +14,27 @@ function d(e) {
         isGift: n,
         priceOptions: i,
         showPromotionalGiftBanner: s,
-        narrowLayout: u,
-        wumpusPosition: d,
-        className: p,
+        showPlanSelectCardBanner: u,
+        narrowLayout: d,
+        wumpusPosition: p,
+        className: m,
     } = e;
     return (0, l.jsx)(a.D, {
         onClick: t,
-        className: r()(c.f_, { [c.QD]: u }),
+        className: r()(c.f_, { [c.QD]: d }),
         children: (0, l.jsx)(o.oK, {
             ctaButton: null,
             showPromotionalGiftBanner: s,
+            showPlanSelectCardBanner: u,
             showYearlyPrice: !0,
             isGift: n,
             isModal: !0,
             priceOptions: i,
-            className: r()(p, { [c.gH]: u }),
-            showWumpus: !u,
-            showPill: !u,
-            wumpusPosition: d,
-            narrowLayout: u,
+            className: r()(m, { [c.gH]: d }),
+            showWumpus: !d,
+            showPill: !d,
+            wumpusPosition: p,
+            narrowLayout: d,
         }),
     });
 }
@@ -52,7 +54,13 @@ function p(e) {
     });
 }
 function m(e) {
-    let { onSelectSku: t, onSelectPremiumGroup: n, priceOptions: i, showPromotionalGiftBanner: m } = e;
+    let {
+        onSelectSku: t,
+        onSelectPremiumGroup: n,
+        priceOptions: i,
+        showPromotionalGiftBanner: m,
+        showPlanSelectCardBanner: h,
+    } = e;
     return (0, l.jsxs)(s.B, {
         direction: "horizontal",
         gap: 12,
@@ -63,6 +71,7 @@ function m(e) {
                 isGift: !1,
                 priceOptions: i,
                 showPromotionalGiftBanner: m,
+                showPlanSelectCardBanner: h,
                 narrowLayout: !0,
             }),
             (0, l.jsx)(a.D, {
@@ -74,12 +83,18 @@ function m(e) {
     });
 }
 let h = function (e) {
-    let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: r } = e;
+    let { onSelectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: r, showPlanSelectCardBanner: a } = e;
     return (0, l.jsxs)(s.B, {
         direction: "vertical",
         gap: 12,
         children: [
-            (0, l.jsx)(d, { onClick: () => t(u.pe.TIER_2), isGift: n, priceOptions: i, showPromotionalGiftBanner: r }),
+            (0, l.jsx)(d, {
+                onClick: () => t(u.pe.TIER_2),
+                isGift: n,
+                priceOptions: i,
+                showPromotionalGiftBanner: r,
+                showPlanSelectCardBanner: a,
+            }),
             (0, l.jsx)(p, { onClick: () => t(u.pe.TIER_0), isGift: n, priceOptions: i }),
         ],
     });

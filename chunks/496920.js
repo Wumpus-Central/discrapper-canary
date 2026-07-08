@@ -3725,7 +3725,8 @@ function iC(e) {
         { hasPaymentSources: c } = (0, n8.jm)(),
         { isGift: d, claimableRewards: p } = (0, t1.Pv)(),
         m = d && null != p && p.length > 0,
-        h = (0, eU.V)(u);
+        h = !d,
+        E = (0, eU.V)(u);
     return (0, l.jsx)(iE, {
         selectSku: (e) =>
             (function (e) {
@@ -3759,7 +3760,7 @@ function iC(e) {
                 setSelectedSkuId: n,
                 handleStepChange: t,
                 isGift: d,
-                userTrialOffer: h,
+                userTrialOffer: E,
                 startedPaymentFlowWithPaymentSources: o,
                 setSelectedPlanId: i,
                 defaultPlanId: s,
@@ -3774,23 +3775,32 @@ function iC(e) {
         isGift: d,
         priceOptions: r,
         showPromotionalGiftBanner: m,
+        showPlanSelectCardBanner: h,
     });
 }
 function iE(e) {
-    let { selectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: r, onSelectPremiumGroup: a } = e,
-        s = (0, id.FY)({ isGift: n });
+    let {
+            selectSku: t,
+            isGift: n,
+            priceOptions: i,
+            showPromotionalGiftBanner: r,
+            showPlanSelectCardBanner: a,
+            onSelectPremiumGroup: s,
+        } = e,
+        o = (0, id.FY)({ isGift: n });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(t2.rQ, { titleTextVariant: "heading-lg/semibold", title: J.intl.string(J.t["r+SebU"]) }),
-            s
+            o
                 ? (0, l.jsx)(M.c, {
                       children: (0, l.jsx)("div", {
                           className: ih.eE,
                           children: (0, l.jsx)(ip.yS, {
                               onSelectSku: (e) => t((0, eq.mH)(e)),
-                              onSelectPremiumGroup: a,
+                              onSelectPremiumGroup: s,
                               priceOptions: i,
                               showPromotionalGiftBanner: r,
+                              showPlanSelectCardBanner: a,
                           }),
                       }),
                   })
@@ -3802,6 +3812,7 @@ function iE(e) {
                               isGift: n,
                               priceOptions: i,
                               showPromotionalGiftBanner: r,
+                              showPlanSelectCardBanner: a,
                           }),
                       }),
                   }),
