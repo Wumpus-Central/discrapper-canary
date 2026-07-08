@@ -1,78 +1,78 @@
 "use strict";
-n.d(t, { Eu: () => p, IO: () => f, T1: () => _, Wi: () => E, y7: () => h });
+n.d(t, { Eu: () => h, IO: () => A, Sq: () => f, T1: () => _, Wi: () => I, y7: () => E });
 var i = n(64700),
     r = n(17928),
-    s = n(228366),
-    a = n(287809),
-    o = n(428262),
-    l = n(264779),
-    u = n(962644),
+    a = n(228366),
+    s = n(287809),
+    l = n(428262),
+    o = n(264779),
+    d = n(962644),
     c = n(374200),
-    d = n(788868);
+    u = n(202541);
 function _() {
     let { includeClaimedPromotions: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         t = (0, r.yK)([c.A], () => c.A.outboundPromotions),
         n = (0, r.bG)([c.A], () => c.A.consumedInboundPromotionId),
-        s = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodes);
+        a = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodes);
     return i.useMemo(() => {
         let i = e
             ? new Set(
-                  s.map((e) => {
+                  a.map((e) => {
                       let { promotion: t } = e;
                       return t.id;
                   }),
               )
             : null;
-        return t.filter((e) => !(e.id === n || !(0, l.OP)(e) || (0, l.dG)(e)) && (i?.has(e.id), !0));
-    }, [t, n, s, e]);
+        return t.filter((e) => !(e.id === n || !(0, o.OP)(e) || (0, o.dG)(e)) && (i?.has(e.id), !0));
+    }, [t, n, a, e]);
 }
-function h() {
+function E() {
     let e = (0, r.bG)([c.A], () => c.A.lastFetchedActivePromotions),
-        t = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
-        n = o.Ay.isPremiumExactly(t, d.PremiumTypes.TIER_2),
-        h = !o.Ay.isPremium(t) || n,
-        f = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodes),
-        p = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodesLoaded);
+        t = (0, r.bG)([s.default], () => s.default.getCurrentUser()),
+        n = l.Ay.isPremiumExactly(t, u.PremiumTypes.TIER_2),
+        E = !l.Ay.isPremium(t) || n,
+        A = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodes),
+        h = (0, r.bG)([c.A], () => c.A.claimedOutboundPromotionCodesLoaded);
     i.useEffect(() => {
-        null != e && s.h.wait(() => u.Ay.markOutboundPromotionsSeen());
+        null != e && a.h.wait(() => d.Ay.markOutboundPromotionsSeen());
     }, [e]),
         i.useEffect(() => {
-            s.h.wait(() => {
-                h && null == e && u.Ay.fetchActivePromotions();
+            a.h.wait(() => {
+                E && null == e && d.Ay.fetchActivePromotions();
             });
-        }, [e, h]),
+        }, [e, E]),
         i.useEffect(() => {
-            s.h.wait(() => {
-                u.Ay.fetchClaimedOutboundPromotionCodes();
+            a.h.wait(() => {
+                d.Ay.fetchClaimedOutboundPromotionCodes();
             });
         }, []);
-    let E = i.useMemo(() => (0, l.eN)(f), [f]),
-        m = _({ includeClaimedPromotions: !0 }),
-        g = i.useMemo(() => {
+    let I = i.useMemo(() => (0, o.eN)(A), [A]),
+        f = _({ includeClaimedPromotions: !0 }),
+        p = i.useMemo(() => {
             let e = new Set(
-                m.map((e) => {
+                f.map((e) => {
                     let { id: t } = e;
                     return t;
                 }),
             );
-            return f.filter((t) => {
+            return A.filter((t) => {
                 let { promotion: n } = t;
                 return (
                     !e.has(n.id) &&
-                    !1 === (0, l.HB)({ promotionType: n.promotionType }) &&
-                    !(0, l.dG)(n) &&
-                    (0, l.OP)(n)
+                    !1 === (0, o.HB)({ promotionType: n.promotionType }) &&
+                    !(0, o.dG)(n) &&
+                    (0, o.OP)(n)
                 );
             });
-        }, [m, f]);
+        }, [f, A]);
     return {
-        promotionsLoaded: p && (!h || null != e),
-        activeOutboundPromotions: m,
-        claimedEndedOutboundPromotions: g,
-        claimedOutboundPromotionCodeMap: E,
+        promotionsLoaded: h && (!E || null != e),
+        activeOutboundPromotions: f,
+        claimedEndedOutboundPromotions: p,
+        claimedOutboundPromotionCodeMap: I,
     };
 }
-function f() {
+function A() {
     let e = (0, r.bG)([c.A], () => c.A.lastSeenOutboundPromotionStartDate),
         t = _();
     return i
@@ -86,11 +86,19 @@ function f() {
                       }),
             [t, e],
         )
-        .filter((e) => (0, l.OP)(e));
+        .filter((e) => (0, o.OP)(e));
 }
-function p() {
+function h() {
     return { promotion: (0, r.bG)([c.A], () => c.A.bogoPromotion) };
 }
-function E(e) {
+function I(e) {
     return (0, r.bG)([c.A], () => c.A.hasPromotion(e));
+}
+function f() {
+    return (
+        i.useEffect(() => {
+            (0, d.BE)();
+        }, []),
+        (0, r.bG)([c.A], () => c.A.getMarketingMomentPromotion()?.hasBogoReward === !0)
+    );
 }
