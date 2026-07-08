@@ -1,11 +1,8 @@
 e.exports = {
     kL: "container_e99fef",
     Ps: "progressHeader_e99fef",
-    hr: "progressBar_e99fef",
     G9: "progressBarContainer_e99fef",
     kT: "monthlyCodeCountdownLabel_e99fef",
-    SX: "progressBarFill_e99fef",
-    ML: "progressBarIndicator_e99fef",
     kR: "cards_e99fef",
     lA: "promoCardContainer_e99fef",
     LV: "wrap_e99fef",
