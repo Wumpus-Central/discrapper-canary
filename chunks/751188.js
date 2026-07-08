@@ -250,7 +250,7 @@ function o(e) {
         { modalKey: `gift-option-select-modal-${t.id}`, onCloseCallback: i },
     );
 }
-var d = n(928898),
+var d = n(611881),
     c = n(945810);
 let u = (0, c.mj)({
         name: "2026-02-gifting-modal-redesign",
@@ -526,7 +526,7 @@ function h(e) {
         } = e,
         { enabled: T } = u.useConfig({ location: p }),
         { enabled: m } = _.useConfig({ location: p }),
-        { enabled: g } = d.n.useConfig({ location: p }),
+        g = (0, d.F5)(p),
         S = (0, a.tA)({ isGift: !0, giftRecipient: t }),
         N = T && null != t,
         C = m && null == t,

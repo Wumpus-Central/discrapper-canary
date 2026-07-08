@@ -2906,7 +2906,7 @@ var lG = n(800471),
     lH = n(982240),
     lW = n(463376),
     lV = n(699595),
-    lK = n(998370),
+    lK = n(611881),
     lZ = n(442123),
     lq = n(492275),
     lz = n(67948),
@@ -3578,7 +3578,7 @@ function ic(e) {
             return null != e && "giftCustomizationBanner" === e.properties.properties.oneofKind;
         }),
         j = x && M && null != R && R.length > 0 && O,
-        { enabled: L } = lK.J.useConfig({ location: "PremiumPaymentPlanSelectStep" }),
+        L = (0, lK.F5)("PremiumPaymentPlanSelectStep"),
         { nextTier: w, giftsToNextTier: D } = (0, r.cf)([lH.Ay], () => ({
             nextTier: lH.Ay.getNextTier(lF.$.GIFTING),
             giftsToNextTier: lH.Ay.getRemainingToNextTier(lF.$.GIFTING),
@@ -4535,7 +4535,7 @@ let i2 = (e) => {
         },
         CUSTOM_CONFIRM_STEP_CONFIG: { renderStep: (e) => (0, l.jsx)(i$, { ...e }) },
     };
-var i1 = n(835245),
+var i1 = n(132500),
     i4 = n(869038),
     i7 = n(852218),
     i6 = n(7133),
