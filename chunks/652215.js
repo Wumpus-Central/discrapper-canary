@@ -4317,6 +4317,7 @@ var rv =
         (ew.TEXT_COPIED = "text_copied"),
         (ew.TEXT_SHARED = "text_shared"),
         (ew.NAV_DRAWER_OPENED = "nav_drawer_opened"),
+        (ew.SERVER_DRAWER_INTERACT = "server_drawer_interact"),
         (ew.EXPERIMENT_USER_TRIGGERED = "experiment_user_triggered"),
         (ew.EXPERIMENT_GUILD_TRIGGERED = "experiment_guild_triggered"),
         (ew.EXPERIMENT_USER_TRIGGERED_FALLBACK = "experiment_user_triggered_fallback"),
