@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => y });
+n.d(t, { A: () => v });
 var i = n(17928),
     r = n(228366),
     s = n(334738),
@@ -17,8 +17,16 @@ var i = n(17928),
     m = n(652215);
 let g = new Set(),
     A = {},
-    I = {};
-function T(e, t) {
+    I = {},
+    T = new Set();
+function S(e) {
+    return _.A.getGuild(e)?.features.has(m.GuildFeatures.COMMUNITY) === !0;
+}
+function N() {
+    for (let e of (T.clear(), _.A.getGuildIds())) S(e) && T.add(e);
+    return !1;
+}
+function C(e, t) {
     let n = A[e];
     null != n &&
         null != t &&
@@ -39,7 +47,7 @@ function T(e, t) {
             ),
         );
 }
-function S(e) {
+function y(e) {
     if (null != A[e]) return;
     let t = c.Ay.getChannels(e)[c.I6].map((e) => e.channel.id),
         n = d.Ay.getMember(e, l.default.getId())?.joinedAt;
@@ -61,19 +69,19 @@ function S(e) {
         )),
         (I[e] = Date.now()));
 }
-function N() {
+function O() {
     p.default.keys(A).forEach((e) => {
         let t = A[e];
         A[e] = new Set([...t].filter((t) => !f.Ay.isChannelOrParentOptedIn(e, t)));
     });
 }
-class C extends i.Ay.Store {
+class R extends i.Ay.Store {
     static displayName = "NewChannelsStore";
     initialize() {
-        this.waitFor(l.default, u.A, c.Ay, d.Ay, _.A, h.Ay, f.Ay, o.A), this.syncWith([f.Ay], N);
+        this.waitFor(l.default, u.A, c.Ay, d.Ay, _.A, h.Ay, f.Ay, o.A), this.syncWith([f.Ay], O);
     }
     getNewChannelIds(e) {
-        return null != e && null == A[e] && S(e), null != e ? (A[e] ?? g) : g;
+        return null != e && null == A[e] && y(e), null != e ? (A[e] ?? g) : g;
     }
     shouldIndicateNewChannel(e, t) {
         if (null == e) return !1;
@@ -81,11 +89,11 @@ class C extends i.Ay.Store {
         return (
             null != n &&
             !!n.features.has(m.GuildFeatures.COMMUNITY) &&
-            (null != e && null == A[e] && S(e), A[e]?.has(t) && null == h.Ay.getTrackedAckMessageId(t))
+            (null != e && null == A[e] && y(e), A[e]?.has(t) && null == h.Ay.getTrackedAckMessageId(t))
         );
     }
 }
-let y = new C(r.h, {
+let v = new R(r.h, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
         if (null == A[t]) return !1;
@@ -95,20 +103,47 @@ let y = new C(r.h, {
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         return (
-            null != t && (null == A[t] || I[t] < Date.now() - E.A.Millis.HOUR ? (S(t), !0) : (null != n && T(t, n), !1))
+            null != t && (null == A[t] || I[t] < Date.now() - E.A.Millis.HOUR ? (y(t), !0) : (null != n && C(t, n), !1))
         );
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;
-        return null != t && i === a.PE.VIEW_CHANNEL && (T(t, n), !1);
+        return null != t && i === a.PE.VIEW_CHANNEL && (C(t, n), !1);
     },
     SIDEBAR_VIEW_GUILD: function (e) {
         let { guildId: t, baseChannelId: n } = e;
-        return null != t && (T(t, n), !1);
+        return null != t && (C(t, n), !1);
+    },
+    CONNECTION_OPEN: N,
+    CACHE_LOADED: N,
+    GUILD_CREATE: function (e) {
+        let { guild: t } = e;
+        return S(t.id) && T.add(t.id), !1;
+    },
+    GUILD_UPDATE: function (e) {
+        let { guild: t } = e,
+            n = S(t.id);
+        if (n && !T.has(t.id)) {
+            T.add(t.id);
+            let e = A[t.id],
+                n = _.A.getGuild(t.id),
+                i = new Set();
+            return (
+                null != n &&
+                    null != e &&
+                    [n.rulesChannelId, n.publicUpdatesChannelId].forEach((t) => {
+                        null != t && e.has(t) && i.add(t);
+                    }),
+                (A[t.id] = i),
+                (I[t.id] = Date.now()),
+                !0
+            );
+        }
+        return n || T.delete(t.id), !1;
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete A[t.id];
+        delete A[t.id], T.delete(t.id);
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
