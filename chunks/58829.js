@@ -1,4 +1,4 @@
-e.d(l, { default: () => b });
+e.d(l, { default: () => A });
 var t = e(627968);
 e(64700);
 var i = e(284009),
@@ -9,34 +9,32 @@ var i = e(284009),
     o = e(534514),
     d = e(730134),
     u = e(289498),
-    p = e(941314),
-    m = e(858177),
-    x = e(429913),
-    h = e(672130),
-    j = e(874490),
-    f = e(534952),
-    v = e(375708),
-    N = e(644461);
-function g(n) {
+    p = e(858177),
+    m = e(429913),
+    x = e(672130),
+    h = e(874490),
+    j = e(534952),
+    f = e(375708),
+    v = e(977498);
+function N(n) {
     let {
             onComplete: l,
             excludedPlatformTypes: e,
             includedPlatformTypes: i,
             includeApplicationConnections: s = !0,
         } = n,
-        a = (0, p.useIsRiotSocialSDKMigrationEnabled)({ location: "User Settings Connections" }),
-        c = (0, x.A)(s && a ? f.tX.filter((n) => !e?.has(n) && (null == i || i.has(n))) : []),
-        r = (0, j.gn)();
+        a = (0, m.A)(s ? (0, j.Gl)("ConnectionsGridModal") : []),
+        c = (0, h.gn)();
     return (0, t.jsxs)("div", {
-        className: N.lA,
+        className: v.lA,
         children: [
-            c.map((n) => null != n && (0, t.jsx)(h.A, { application: n, className: N.W2, innerClassName: N.Uz }, n.id)),
-            r
+            a.map((n) => null != n && (0, t.jsx)(x.A, { application: n, className: v.W2, innerClassName: v.Uz }, n.id)),
+            c
                 .filter((n) => !e?.has(n.type) && (null == i || i.has(n.type)))
                 .map((n) =>
                     (0, t.jsx)(
                         u.A,
-                        { type: n.type, className: N.W2, innerClassName: N.Uz, onConnect: () => l(n.type) },
+                        { type: n.type, className: v.W2, innerClassName: v.Uz, onConnect: () => l(n.type) },
                         n.type,
                     ),
                 ),
@@ -54,11 +52,11 @@ function C(n) {
                   (0, t.jsx)(c.E, {
                       variant: "text-sm/medium",
                       color: "interactive-text-default",
-                      className: N.jS,
-                      children: v.intl.string(v.t.PHjkRE),
+                      className: v.jS,
+                      children: f.intl.string(f.t.PHjkRE),
                   }),
                   (0, t.jsx)("div", {
-                      className: N.$v,
+                      className: v.$v,
                       children: i.map((n) => {
                           let l = n.application;
                           s()(null != l, "application is null");
@@ -69,22 +67,22 @@ function C(n) {
                                   r.D,
                                   {
                                       onClick: () => e(l.id),
-                                      className: N.pW,
+                                      className: v.pW,
                                       children: [
-                                          (0, t.jsx)(d.A, { user: i, className: N.In }),
+                                          (0, t.jsx)(d.A, { user: i, className: v.In }),
                                           (0, t.jsxs)("div", {
-                                              className: N.RM,
+                                              className: v.RM,
                                               children: [
                                                   (0, t.jsx)(o.D, {
                                                       variant: "heading-sm/semibold",
-                                                      className: N.p4,
+                                                      className: v.p4,
                                                       children: l.name,
                                                   }),
                                                   null != l.description && l.description.length > 0
                                                       ? (0, t.jsx)(c.E, {
                                                             variant: "text-xs/normal",
                                                             color: "text-default",
-                                                            className: N.p4,
+                                                            className: v.p4,
                                                             children: l.description,
                                                         })
                                                       : null,
@@ -100,25 +98,25 @@ function C(n) {
               ],
           });
 }
-function y(n) {
+function g(n) {
     let { applicationId: l, onCompleteIdentityApplication: e } = n,
-        i = (0, m.O)(l);
+        i = (0, p.O)(l);
     if (null == i) return null;
     let s = i.bot;
     return (0, t.jsxs)(r.D, {
         onClick: () => e(i.id),
-        className: N.pW,
+        className: v.pW,
         children: [
-            null != s ? (0, t.jsx)(d.A, { user: s, className: N.In }) : null,
+            null != s ? (0, t.jsx)(d.A, { user: s, className: v.In }) : null,
             (0, t.jsxs)("div", {
-                className: N.RM,
+                className: v.RM,
                 children: [
-                    (0, t.jsx)(o.D, { variant: "heading-sm/semibold", className: N.p4, children: i.name }),
+                    (0, t.jsx)(o.D, { variant: "heading-sm/semibold", className: v.p4, children: i.name }),
                     null != i.description && i.description.length > 0
                         ? (0, t.jsx)(c.E, {
                               variant: "text-xs/normal",
                               color: "text-default",
-                              className: N.p4,
+                              className: v.p4,
                               children: i.description,
                           })
                         : null,
@@ -127,7 +125,7 @@ function y(n) {
         ],
     });
 }
-function A(n) {
+function y(n) {
     let { gameApplicationIds: l, onCompleteIdentityApplication: e } = n;
     return null == l || 0 === l.length || null == e
         ? null
@@ -136,17 +134,17 @@ function A(n) {
                   (0, t.jsx)(c.E, {
                       variant: "text-sm/medium",
                       color: "interactive-text-default",
-                      className: N.jS,
-                      children: v.intl.string(v.t.y3ZnnU),
+                      className: v.jS,
+                      children: f.intl.string(f.t.y3ZnnU),
                   }),
                   (0, t.jsx)("div", {
-                      className: N.$v,
-                      children: l.map((n) => (0, t.jsx)(y, { applicationId: n, onCompleteIdentityApplication: e }, n)),
+                      className: v.$v,
+                      children: l.map((n) => (0, t.jsx)(g, { applicationId: n, onCompleteIdentityApplication: e }, n)),
                   }),
               ],
           });
 }
-function b(n) {
+function A(n) {
     let {
         transitionState: l,
         onComplete: e,
@@ -160,12 +158,12 @@ function b(n) {
         onCompleteIdentityApplication: p,
     } = n;
     return (0, t.jsxs)(a.Modal, {
-        title: v.intl.string(v.t.syl6HS),
+        title: f.intl.string(f.t.syl6HS),
         transitionState: l,
         onClose: i,
         actions: [],
         children: [
-            (0, t.jsx)(g, {
+            (0, t.jsx)(N, {
                 onComplete: function (n) {
                     e(n), i();
                 },
@@ -182,7 +180,7 @@ function b(n) {
                           }
                         : void 0,
             }),
-            (0, t.jsx)(A, {
+            (0, t.jsx)(y, {
                 gameApplicationIds: u ?? null,
                 onCompleteIdentityApplication:
                     null != p

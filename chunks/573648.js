@@ -1,16 +1,17 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => E });
 var i = n(735438),
     r = n.n(i),
-    s = n(374994),
-    a = n(998218),
+    a = n(374994),
+    s = n(472636),
+    l = n(998218),
     o = n(652215),
-    l = n(534952);
-let u = [
+    d = n(534952);
+let c = [
         {
             type: o.fg2.TWITCH,
             name: "Twitch",
-            color: (0, s.dE)("PLATFORM_TWITCH"),
+            color: (0, a.dE)("PLATFORM_TWITCH"),
             icon: {
                 lightPNG: n(491679),
                 darkPNG: n(491679),
@@ -29,7 +30,7 @@ let u = [
         {
             type: o.fg2.YOUTUBE,
             name: "YouTube",
-            color: (0, s.dE)("PLATFORM_YOUTUBE"),
+            color: (0, a.dE)("PLATFORM_YOUTUBE"),
             icon: {
                 lightPNG: n(913027),
                 darkPNG: n(913027),
@@ -48,7 +49,7 @@ let u = [
         {
             type: o.fg2.BATTLENET,
             name: "Battle.net",
-            color: (0, s.dE)("PLATFORM_BATTLENET"),
+            color: (0, a.dE)("PLATFORM_BATTLENET"),
             icon: {
                 lightPNG: n(560623),
                 darkPNG: n(560623),
@@ -58,6 +59,13 @@ let u = [
                 whiteSVG: n(254592),
             },
             enabled: !0,
+            migrationData: {
+                replacedBy: d.OW.BATTLENET,
+                getMigrationExperimentEnabled: (e) =>
+                    s.battlenetSocialSDKMigrationExperiment.getConfig({ location: e }).enabled,
+                useMigrationExperimentEnabled: (e) =>
+                    s.battlenetSocialSDKMigrationExperiment.useConfig({ location: e }).enabled,
+            },
         },
         {
             type: o.fg2.BLUESKY,
@@ -81,7 +89,7 @@ let u = [
         {
             type: o.fg2.BUNGIE,
             name: "Bungie.net",
-            color: (0, s.dE)("PLATFORM_BUNGIE"),
+            color: (0, a.dE)("PLATFORM_BUNGIE"),
             icon: {
                 lightPNG: n(788439),
                 darkPNG: n(664471),
@@ -95,7 +103,7 @@ let u = [
         {
             type: o.fg2.SKYPE,
             name: "Skype",
-            color: (0, s.dE)("PLATFORM_SKYPE"),
+            color: (0, a.dE)("PLATFORM_SKYPE"),
             icon: {
                 lightPNG: n(2016),
                 darkPNG: n(2016),
@@ -113,7 +121,7 @@ let u = [
         {
             type: o.fg2.LEAGUE_OF_LEGENDS,
             name: "League of Legends",
-            color: (0, s.dE)("PLATFORM_LOL"),
+            color: (0, a.dE)("PLATFORM_LOL"),
             icon: {
                 lightPNG: n(17096),
                 darkPNG: n(17096),
@@ -123,12 +131,16 @@ let u = [
                 whiteSVG: n(415369),
             },
             enabled: !0,
-            replacedBy: l.OW.RIOT_GAMES,
+            migrationData: {
+                replacedBy: d.OW.RIOT_GAMES,
+                getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
+                useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
+            },
         },
         {
             type: o.fg2.STEAM,
             name: "Steam",
-            color: (0, s.dE)("PLATFORM_STEAM"),
+            color: (0, a.dE)("PLATFORM_STEAM"),
             icon: {
                 lightPNG: n(123775),
                 darkPNG: n(601156),
@@ -147,7 +159,7 @@ let u = [
         {
             type: o.fg2.REDDIT,
             name: "Reddit",
-            color: (0, s.dE)("PLATFORM_REDDIT"),
+            color: (0, a.dE)("PLATFORM_REDDIT"),
             icon: {
                 lightPNG: n(615408),
                 darkPNG: n(615408),
@@ -167,7 +179,7 @@ let u = [
         {
             type: o.fg2.FACEBOOK,
             name: "Facebook",
-            color: (0, s.dE)("PLATFORM_FACEBOOK"),
+            color: (0, a.dE)("PLATFORM_FACEBOOK"),
             icon: {
                 lightPNG: n(427788),
                 darkPNG: n(427788),
@@ -182,7 +194,7 @@ let u = [
         {
             type: o.fg2.TWITTER_LEGACY,
             name: "Twitter",
-            color: (0, s.dE)("PLATFORM_TWITTER"),
+            color: (0, a.dE)("PLATFORM_TWITTER"),
             icon: {
                 lightPNG: n(482585),
                 darkPNG: n(482585),
@@ -202,7 +214,7 @@ let u = [
         {
             type: o.fg2.TWITTER,
             name: "X",
-            color: (0, s.dE)("PLATFORM_TWITTER"),
+            color: (0, a.dE)("PLATFORM_TWITTER"),
             icon: {
                 lightPNG: n(311891),
                 darkPNG: n(49515),
@@ -222,7 +234,7 @@ let u = [
         {
             type: o.fg2.SPOTIFY,
             name: "Spotify",
-            color: (0, s.dE)("PLATFORM_SPOTIFY"),
+            color: (0, a.dE)("PLATFORM_SPOTIFY"),
             icon: {
                 lightPNG: n(223184),
                 darkPNG: n(223184),
@@ -240,7 +252,7 @@ let u = [
         {
             type: o.fg2.XBOX,
             name: "Xbox",
-            color: (0, s.dE)("PLATFORM_XBOX"),
+            color: (0, a.dE)("PLATFORM_XBOX"),
             icon: {
                 lightPNG: n(443770),
                 darkPNG: n(254485),
@@ -255,7 +267,7 @@ let u = [
         {
             type: o.fg2.SAMSUNG,
             name: "Samsung Galaxy",
-            color: (0, s.dE)("PLATFORM_SAMSUNG"),
+            color: (0, a.dE)("PLATFORM_SAMSUNG"),
             icon: {
                 lightPNG: n(609106),
                 darkPNG: n(609106),
@@ -269,7 +281,7 @@ let u = [
         {
             type: o.fg2.GITHUB,
             name: "GitHub",
-            color: (0, s.dE)("PLATFORM_GITHUB"),
+            color: (0, a.dE)("PLATFORM_GITHUB"),
             icon: {
                 lightPNG: n(442932),
                 darkPNG: n(325031),
@@ -288,7 +300,7 @@ let u = [
         {
             type: o.fg2.PLAYSTATION,
             name: "PlayStation Network",
-            color: (0, s.dE)("PLATFORM_PLAYSTATION"),
+            color: (0, a.dE)("PLATFORM_PLAYSTATION"),
             icon: {
                 lightPNG: n(695973),
                 darkPNG: n(346058),
@@ -302,7 +314,7 @@ let u = [
         {
             type: o.fg2.PLAYSTATION_STAGING,
             name: "PlayStation Network (Staging)",
-            color: (0, s.dE)("PLATFORM_PLAYSTATION"),
+            color: (0, a.dE)("PLATFORM_PLAYSTATION"),
             icon: {
                 lightPNG: n(346058),
                 darkPNG: n(695973),
@@ -339,7 +351,11 @@ let u = [
                 blackSVG: n(135577),
             },
             enabled: !0,
-            replacedBy: l.OW.RIOT_GAMES,
+            migrationData: {
+                replacedBy: d.OW.RIOT_GAMES,
+                getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
+                useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
+            },
         },
         {
             type: o.fg2.ROBLOX,
@@ -449,7 +465,7 @@ let u = [
         {
             type: o.fg2.CRUNCHYROLL,
             name: "Crunchyroll",
-            color: (0, s.dE)("PLATFORM_CRUNCHYROLL"),
+            color: (0, a.dE)("PLATFORM_CRUNCHYROLL"),
             icon: {
                 lightPNG: n(405921),
                 darkPNG: n(405921),
@@ -504,25 +520,25 @@ let u = [
             enabled: !1,
         },
     ],
-    c = r().keyBy(u, "type"),
-    d = {};
-u.forEach((e) => {
+    u = r().keyBy(c, "type"),
+    _ = {};
+c.forEach((e) => {
     e.domains?.forEach((t) => {
-        d[t] = e;
+        _[t] = e;
     });
 });
-let _ = {
-    get: (e) => c[e] ?? null,
+let E = {
+    get: (e) => u[e] ?? null,
     getByUrl(e) {
-        let t = a.A.toURLSafe(e);
+        let t = l.A.toURLSafe(e);
         if (null == t) return;
         let n = t.hostname;
-        return d[n.startsWith("www.") ? n.slice(4) : n];
+        return _[n.startsWith("www.") ? n.slice(4) : n];
     },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(c, e),
-    map: (e) => u.map(e),
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
+    map: (e) => c.map(e),
     filter(e) {
-        let t = u.filter(e);
+        let t = c.filter(e);
         return (
             t.sort((e, t) => {
                 let { name: n } = e,
@@ -532,5 +548,5 @@ let _ = {
             t
         );
     },
-    find: (e) => u.find(e),
+    find: (e) => c.find(e),
 };

@@ -9,7 +9,7 @@ var s,
     d = n(64700),
     u = n(503698),
     g = n.n(u),
-    m = n(835245),
+    m = n(132500),
     h = n(702841),
     x = n(192308),
     E = n(315710),
@@ -43,7 +43,7 @@ var M = n(758836),
     w = n(621653),
     F = n(983545),
     U = n(23161);
-n(321073);
+n(323874), n(14289), n(35956), n(321073);
 var G = n(873263),
     z = (((l = {}).HOME = "home"), (l.CATALOG = "catalog"), (l.ORBS = "orbs"), l),
     V = n(775602),
@@ -2943,15 +2943,20 @@ function si(e) {
     })(r);
     let o = (0, O.bG)([V.Ay], () => V.Ay.useReducedMotion),
         u = (0, G.W6)(),
-        [g] = d.useState(() => {
+        g = (0, G.zy)(),
+        [m] = d.useState(() => {
             if ("POP" === u.action) {
                 let e;
                 return (e = eN), (eN = null), e ?? void 0;
             }
         }),
-        [m, h] = d.useState(g),
-        [x, E] = d.useState(null == g),
-        p = d.useMemo(
+        [h, x] = d.useState(m),
+        [E, p] = d.useState(null == m),
+        f = d.useMemo(() => {
+            let e = new URLSearchParams(g.search).get(M.P1);
+            return null != e && "" !== e ? e : void 0;
+        }, [g.search]),
+        C = d.useMemo(
             () =>
                 n.filter(
                     (e) =>
@@ -2962,9 +2967,9 @@ function si(e) {
                 ),
             [n],
         ),
-        f = (0, W.U)("CollectiblesContent"),
-        C = (0, $.a)("CollectiblesContent"),
-        b = d.useCallback(
+        b = (0, W.U)("CollectiblesContent"),
+        S = (0, $.a)("CollectiblesContent"),
+        _ = d.useCallback(
             (e) => {
                 let {
                     sourceButton: t,
@@ -2973,38 +2978,37 @@ function si(e) {
                     isInternalShopDeeplink: i,
                     isOrbsExclusive: r,
                 } = e;
-                if ((a(t, n), C && null != n && i && !r))
+                if ((a(t, n), S && null != n && i && !r))
                     return void u.push(es.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
                 let c = l && !o,
                     d = r ? M.G2.ORBS : M.G2.CATALOG;
-                h(n), E(!i), s(d, c);
+                x(n), p(!i), s(d, c);
             },
-            [o, s, a, C, u],
+            [o, s, a, S, u],
         ),
-        { searchError: S } = (0, q.S)();
-    return null != S
+        { searchError: j } = (0, q.S)();
+    return null != j
         ? (0, c.jsx)(sl, {})
         : null != r
           ? (0, c.jsx)(tm.h, { onRetry: i, errorMessage: r, errorOrigin: tm.A.SHOP_PAGE })
-          : t === M.G2.HOME && f
-            ? (0, c.jsx)(sn, { tab: z.HOME, transitionState: l, handleTransition: b })
-            : t === M.G2.ORBS && f
-              ? (0, c.jsx)(sn, { tab: z.ORBS, transitionState: l, handleTransition: b })
+          : t === M.G2.HOME && b
+            ? (0, c.jsx)(sn, { tab: z.HOME, transitionState: l, handleTransition: _ })
+            : t === M.G2.ORBS && b
+              ? (0, c.jsx)(sn, { tab: z.ORBS, transitionState: l, handleTransition: _ })
               : sa.includes(t)
-                ? (0, c.jsx)(n1, { handleTransition: b, tab: t, transitionState: l })
+                ? (0, c.jsx)(n1, { handleTransition: _, tab: t, transitionState: l })
                 : (0, c.jsx)(tu, {
                       tab: t,
-                      categories: p,
-                      initialCategoryId: m,
-                      showFilterInitially: x,
+                      categories: C,
+                      initialCategoryId: h ?? f,
+                      showFilterInitially: E && null == f,
                       onUnmount: () => {
-                          h(void 0), E(!0);
+                          x(void 0), p(!0);
                       },
                   });
 }
-var sr = n(956123);
-n(323874), n(14289), n(35956);
-var so = n(766075),
+var sr = n(956123),
+    so = n(766075),
     sc = n(893489);
 let sd = { pink: "pinkCountdown" },
     su = d.memo(function (e) {

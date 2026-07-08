@@ -7,5 +7,5 @@ e.exports = {
     Jq: "collectiblePreviewsContainerWithChat__7f14f collectiblePreviewsContainer__7f14f",
     bF: "fractionalNitroPreviewContainer__7f14f collectiblePreviewsContainer__7f14f",
     VG: "pdpControls__7f14f",
-    gW: "goToShopButton__7f14f",
+    GV: "goToCollectionButton__7f14f",
 };
