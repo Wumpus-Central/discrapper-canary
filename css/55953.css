@@ -1,0 +1,29 @@
+.container__39957 {
+    background-color: var(--background-mod-muted);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    flex-direction: row;
+    gap: var(--space-12);
+    padding: var(--space-12) var(--space-16);
+    width: 100%
+}
+
+.container__39957,
+.iconContainer__39957 {
+    align-items: center;
+    display: flex
+}
+
+.iconContainer__39957 {
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 40px;
+    justify-content: center;
+    overflow: hidden;
+    width: 40px
+}
+
+.icon__39957 {
+    -o-object-fit: contain;
+    object-fit: contain
+}

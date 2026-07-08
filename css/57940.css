@@ -98,3 +98,7 @@
 .unifiedCheckoutLoadingContainer__7ec3a {
     min-height: 394px
 }
+
+.badgeBannerContainer__7ec3a {
+    margin: 0 var(--space-24)
+}

@@ -1,53 +1,59 @@
-i.d(s, { A: () => k, U: () => h });
-var n = i(627968);
-i(64700);
-var t = i(503698),
-    r = i.n(t),
-    a = i(462887),
-    c = i(862482),
-    l = i(597770),
-    o = i(736653),
-    d = i(783420),
-    p = i(202541),
-    u = i(375708),
-    m = i(806956);
-function h(e) {
-    return e === p.pe.TIER_0 ? u.intl.string(u.t.rk4Uu8) : u.intl.string(u.t.Ve9Ge6);
+n.d(t, { A: () => T, U: () => N });
+var r = n(627968);
+n(64700);
+var i = n(503698),
+    s = n.n(i),
+    a = n(462887),
+    l = n(862482),
+    o = n(597770),
+    u = n(736653),
+    c = n(688810),
+    d = n(751188),
+    p = n(485140),
+    b = n(202541),
+    m = n(652215),
+    C = n(375708),
+    f = n(806956);
+function N(e) {
+    return e === b.pe.TIER_0 ? C.intl.string(C.t.rk4Uu8) : C.intl.string(C.t.Ve9Ge6);
 }
-let k = function (e) {
+let T = function (e) {
     let {
-            className: s,
-            textOptions: i,
-            color: t,
-            look: p,
-            hideIcon: u,
-            subscriptionTier: k,
-            premiumModalAnalyticsLocation: N,
-            giftMessage: x,
-            onClick: C,
+            className: t,
+            textOptions: n,
+            color: i,
+            look: b,
+            hideIcon: C,
+            subscriptionTier: T,
+            premiumModalAnalyticsLocation: y,
+            giftMessage: A,
+            onClick: g,
         } = e,
-        g = (0, o.Ay)(),
-        A = h(k);
-    return (0, n.jsx)(d.A, {
-        isGift: !0,
-        subscriptionTier: k,
-        premiumModalAnalyticsLocation: N,
-        giftMessage: x,
-        onClick: C,
-        children: (e) => {
-            let { onClick: o } = e;
-            return (0, n.jsxs)(c.$n, {
-                "data-migration-pending": !0,
-                innerClassName: m.Nq,
-                color: t ?? ((0, a.M)(g) ? c.XD.WHITE : c.XD.BRAND),
-                look: p ?? c.pR.OUTLINED,
-                className: r()(s, m.xP),
-                onClick: o,
-                children: [
-                    !u && (0, n.jsx)(l.o, { size: "md", color: "currentColor", className: m.ez }),
-                    (0, n.jsx)("span", { className: r()(m._d, i?.textClassName), children: i?.textOverride ?? A }),
-                ],
-            });
-        },
+        h = (0, u.Ay)(),
+        j = N(T),
+        { analyticsLocations: x } = (0, c.Ay)(),
+        { openGiftModal: O } = (0, d.$)({
+            giftRecipient: null,
+            analyticsLocations: x,
+            analyticsObject: { object: m.ZSU.BUTTON_CTA, objectType: m.AnalyticsObjectTypes.GIFT, ...y },
+            giftMessage: A,
+            subscriptionTier: T,
+            location: "gift-button",
+        }),
+        _ = (0, p.Y)();
+    return (0, r.jsxs)(l.$n, {
+        "data-migration-pending": !0,
+        innerClassName: f.Nq,
+        color: i ?? ((0, a.M)(h) ? l.XD.WHITE : l.XD.BRAND),
+        look: b ?? l.pR.OUTLINED,
+        className: s()(t, f.xP),
+        onClick: (e) =>
+            _(() => {
+                O(), g?.(e);
+            }),
+        children: [
+            !C && (0, r.jsx)(o.o, { size: "md", color: "currentColor", className: f.ez }),
+            (0, r.jsx)("span", { className: s()(f._d, n?.textClassName), children: n?.textOverride ?? j }),
+        ],
     });
 };
