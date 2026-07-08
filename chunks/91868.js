@@ -1,22 +1,23 @@
-n.d(t, { A: () => O, Y: () => p }), n(321073);
+"use strict";
+n.d(t, { A: () => v, Y: () => T }), n(321073);
 var i,
-    l = n(17928),
-    s = n(713402),
-    r = n(228366),
-    a = n(174768),
+    r = n(17928),
+    a = n(713402),
+    s = n(228366),
+    l = n(174768),
     o = n(95701),
-    u = n(734057),
-    d = n(568548),
-    c = n(994500),
-    h = n(645959),
-    g = n(935208),
-    f = n(914853),
-    A = n(956753),
-    E = n(648427),
-    I = n(315240),
-    S = n(652215),
-    p = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
-let m = new s.J(
+    d = n(734057),
+    c = n(568548),
+    u = n(994500),
+    _ = n(645959),
+    E = n(935208),
+    A = n(914853),
+    h = n(956753),
+    I = n(648427),
+    f = n(315240),
+    p = n(652215),
+    T = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
+let m = new a.J(
         function (e) {
             let t = [];
             return (
@@ -30,14 +31,14 @@ let m = new s.J(
             return e.sortKey;
         },
     ),
-    _ = null,
-    C = new Set();
+    g = null,
+    S = new Set();
 function N(e) {
     return String(Math.max(0, Math.min(0x9184e729fff, 0x9184e729fff - Math.floor(e)))).padStart(13, "0");
 }
-function T(e) {
+function C(e) {
     let t = (function (e) {
-        let t = u.A.getChannel(e);
+        let t = d.A.getChannel(e);
         if (null == t) return null;
         let n = t.isPrivate(),
             i = !n && (0, o.ke)(t.type);
@@ -46,67 +47,67 @@ function T(e) {
             let e = t.getRecipientId?.();
             if (
                 null != e &&
-                c.A.getRelationshipType(e) === S.eA$.PENDING_INCOMING &&
-                (c.A.isIgnored(e) || c.A.isSpam(e))
+                u.A.getRelationshipType(e) === p.eA$.PENDING_INCOMING &&
+                (u.A.isIgnored(e) || u.A.isSpam(e))
             )
                 return null;
         }
-        let l = I.A.hasActiveNowChannelId({ kind: I.u.Text, channelId: e }),
-            s = i && (a.A.getChannelHistory().includes(e) || E.A.getTextChannelHistory().includes(e)),
-            r = d.Ay.hasUnread(e) || d.Ay.getMentionCount(e) > 0,
-            h = null != t.lastMessageId ? g.default.extractTimestamp(t.lastMessageId) : 0,
-            f = (() => {
+        let r = f.A.hasActiveNowChannelId({ kind: f.u.Text, channelId: e }),
+            a = i && (l.A.getChannelHistory().includes(e) || I.A.getTextChannelHistory().includes(e)),
+            s = c.Ay.hasUnread(e) || c.Ay.getMentionCount(e) > 0,
+            _ = null != t.lastMessageId ? E.default.extractTimestamp(t.lastMessageId) : 0,
+            A = (() => {
                 var t;
-                if (n) return `DM\0${N(h)}\0${e}`;
-                if (l) {
+                if (n) return `DM\0${N(_)}\0${e}`;
+                if (r) {
                     let n;
                     return (
-                        (t = I.A.getScoreForChannelId(e) ?? 0),
+                        (t = f.A.getScoreForChannelId(e) ?? 0),
                         (n = Math.floor(Math.max(0, Math.min(0x2540be3ff, 1e6 * t)))),
                         `AN\0${String(0x2540be3ff - n).padStart(10, "0")}\0${e}`
                     );
                 }
-                return `GT\0${r ? "0" : "1"}\0${N(h)}\0${e}`;
+                return `GT\0${s ? "0" : "1"}\0${N(_)}\0${e}`;
             })();
         return {
             id: e,
             channelId: e,
-            isInActiveNow: l,
+            isInActiveNow: r,
             isInDmsList: n,
-            isInRecentTextList: s,
-            hasUnread: r,
-            lastActivityAtMs: h,
-            sortKey: f,
+            isInRecentTextList: a,
+            hasUnread: s,
+            lastActivityAtMs: _,
+            sortKey: A,
         };
     })(e);
     return null == t ? m.delete(e) : m.set(e, t);
 }
-function v() {
-    let e = I.A.getActiveNowChannelIds({ kind: I.u.Text }),
+function R() {
+    let e = f.A.getActiveNowChannelIds({ kind: f.u.Text }),
         t = new Set(e),
         n = !1;
-    for (let t of e) n = T(t) || n;
-    for (let e of [...m.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = T(e.channelId) || n);
-    return (C = t), n;
+    for (let t of e) n = C(t) || n;
+    for (let e of [...m.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = C(e.channelId) || n);
+    return (S = t), n;
 }
-function M() {
-    m.clear(), (C = new Set());
+function O() {
+    m.clear(), (S = new Set());
     let e = !1;
-    for (let t of h.A.getPrivateChannelIds()) e = T(t) || e;
-    for (let t of a.A.getChannelHistory()) e = T(t) || e;
-    for (let t of E.A.getTextChannelHistory()) e = T(t) || e;
-    let t = I.A.getActiveNowChannelIds({ kind: I.u.Text });
-    for (let n of ((C = new Set(t)), t)) e = T(n) || e;
+    for (let t of _.A.getPrivateChannelIds()) e = C(t) || e;
+    for (let t of l.A.getChannelHistory()) e = C(t) || e;
+    for (let t of I.A.getTextChannelHistory()) e = C(t) || e;
+    let t = f.A.getActiveNowChannelIds({ kind: f.u.Text });
+    for (let n of ((S = new Set(t)), t)) e = C(n) || e;
     return e;
 }
-function y(e) {
-    let t = u.A.getDMFromUserId(e);
-    return null != t && T(t);
+function L(e) {
+    let t = d.A.getDMFromUserId(e);
+    return null != t && C(t);
 }
-class D extends l.Ay.Store {
+class D extends r.Ay.Store {
     static displayName = "FriendsWidgetMessagesStore";
     initialize() {
-        this.waitFor(u.A, I.A, a.A, d.Ay, c.A, h.A, E.A), M();
+        this.waitFor(d.A, f.A, l.A, c.Ay, u.A, _.A, I.A), O();
     }
     getRows(e) {
         return [m.values(e), m.version];
@@ -115,77 +116,77 @@ class D extends l.Ay.Store {
         return m.get(e);
     }
 }
-function R(e) {
-    return (0, A.v$)(e, "FriendsWidgetMessagesStore");
+function y(e) {
+    return (0, h.v$)(e, "FriendsWidgetMessagesStore");
 }
-let O = new D(
-    r.h,
+let v = new D(
+    s.h,
     __OVERLAY__
         ? {}
         : {
-              OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: R(function (e) {
-                  return e.tab === f.x.MESSAGES && T(e.targetId);
+              OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: y(function (e) {
+                  return e.tab === A.x.MESSAGES && C(e.targetId);
               }),
-              CHANNEL_SELECT: R(function (e) {
+              CHANNEL_SELECT: y(function (e) {
                   let t = e.channelId ?? null,
-                      n = _;
-                  _ = t;
+                      n = g;
+                  g = t;
                   let i = !1;
-                  null != n && (i = T(n) || i), null != t && (i = T(t) || i);
-                  let l = v();
-                  return i || l;
+                  null != n && (i = C(n) || i), null != t && (i = C(t) || i);
+                  let r = R();
+                  return i || r;
               }),
-              MESSAGE_CREATE: R(function (e) {
+              MESSAGE_CREATE: y(function (e) {
                   if (e.optimistic) return !1;
-                  let t = T(e.channelId),
-                      n = v();
+                  let t = C(e.channelId),
+                      n = R();
                   return t || n;
               }),
-              MESSAGE_ACK: R(function (e) {
-                  return T(e.channelId);
+              MESSAGE_ACK: y(function (e) {
+                  return C(e.channelId);
               }),
-              TYPING_START: R(function (e) {
+              TYPING_START: y(function (e) {
                   var t = e.channelId;
-                  let n = new Set(I.A.getActiveNowChannelIds({ kind: I.u.Text })),
+                  let n = new Set(f.A.getActiveNowChannelIds({ kind: f.u.Text })),
                       i = !1;
-                  for (let e of ((i = T(t) || i), n)) C.has(e) || (i = T(e) || i);
-                  for (let e of C) n.has(e) || (i = T(e) || i);
-                  return (C = n), i;
+                  for (let e of ((i = C(t) || i), n)) S.has(e) || (i = C(e) || i);
+                  for (let e of S) n.has(e) || (i = C(e) || i);
+                  return (S = n), i;
               }),
-              RTC_CONNECTION_STATE: R(function () {
-                  return v();
+              RTC_CONNECTION_STATE: y(function () {
+                  return R();
               }),
-              VOICE_CHANNEL_SELECT: R(function () {
-                  return v();
+              VOICE_CHANNEL_SELECT: y(function () {
+                  return R();
               }),
-              USER_GUILD_SETTINGS_CHANNEL_UPDATE: R(v),
-              USER_GUILD_SETTINGS_GUILD_UPDATE: R(v),
-              USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: R(v),
-              RELATIONSHIP_ADD: R(function (e) {
-                  return y(e.relationship.id);
+              USER_GUILD_SETTINGS_CHANNEL_UPDATE: y(R),
+              USER_GUILD_SETTINGS_GUILD_UPDATE: y(R),
+              USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: y(R),
+              RELATIONSHIP_ADD: y(function (e) {
+                  return L(e.relationship.id);
               }),
-              RELATIONSHIP_REMOVE: R(function (e) {
-                  return y(e.relationship.id);
+              RELATIONSHIP_REMOVE: y(function (e) {
+                  return L(e.relationship.id);
               }),
-              RELATIONSHIP_UPDATE: R(function (e) {
-                  return y(e.relationship.id);
+              RELATIONSHIP_UPDATE: y(function (e) {
+                  return L(e.relationship.id);
               }),
-              RELATIONSHIP_PENDING_INCOMING_REMOVED: R(function (e) {
+              RELATIONSHIP_PENDING_INCOMING_REMOVED: y(function (e) {
                   let t = !1;
-                  for (let e of h.A.getPrivateChannelIds()) {
-                      let n = u.A.getChannel(e);
-                      null != n && n.isDM() && (t = T(e) || t);
+                  for (let e of _.A.getPrivateChannelIds()) {
+                      let n = d.A.getChannel(e);
+                      null != n && n.isDM() && (t = C(e) || t);
                   }
                   return t;
               }),
-              OVERLAY_INITIALIZE: R(M),
-              POST_CONNECTION_OPEN: R(M),
-              CACHE_LOADED: R(M),
-              CACHE_LOADED_LAZY: R(M),
-              FRIENDS_LIST_POPOUT_MOUNTED: R(M),
-              LOGOUT: R(function () {
+              OVERLAY_INITIALIZE: y(O),
+              POST_CONNECTION_OPEN: y(O),
+              CACHE_LOADED: y(O),
+              CACHE_LOADED_LAZY: y(O),
+              FRIENDS_LIST_POPOUT_MOUNTED: y(O),
+              LOGOUT: y(function () {
                   let e = m.size() > 0;
-                  return m.clear(), (_ = null), (C = new Set()), e;
+                  return m.clear(), (g = null), (S = new Set()), e;
               }),
           },
 );
