@@ -1,0 +1,4951 @@
+@layer properties {
+    @supports ((-webkit-hyphens:none) and (not (margin-trim:inline))) or ((-moz-orient:inline) and (not (color:rgb(from red r g b)))) {
+
+        *,
+        ::backdrop,
+        :after,
+        :before {
+            --tw-rotate-x: initial;
+            --tw-rotate-y: initial;
+            --tw-rotate-z: initial;
+            --tw-skew-x: initial;
+            --tw-skew-y: initial;
+            --tw-border-style: solid;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-color: initial;
+            --tw-shadow-alpha: 100%;
+            --tw-inset-shadow: 0 0 #0000;
+            --tw-inset-shadow-color: initial;
+            --tw-inset-shadow-alpha: 100%;
+            --tw-ring-color: initial;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-inset-ring-color: initial;
+            --tw-inset-ring-shadow: 0 0 #0000;
+            --tw-ring-inset: initial;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-outline-style: solid;
+            --tw-blur: initial;
+            --tw-brightness: initial;
+            --tw-contrast: initial;
+            --tw-grayscale: initial;
+            --tw-hue-rotate: initial;
+            --tw-invert: initial;
+            --tw-opacity: initial;
+            --tw-saturate: initial;
+            --tw-sepia: initial;
+            --tw-drop-shadow: initial;
+            --tw-drop-shadow-color: initial;
+            --tw-drop-shadow-alpha: 100%;
+            --tw-drop-shadow-size: initial;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-translate-z: 0;
+            --tw-leading: initial;
+            --tw-font-weight: initial;
+            --tw-tracking: initial;
+            --tw-duration: initial
+        }
+    }
+}
+
+@layer incode-theme;
+
+@layer incode-utilities {
+    .\!visible {
+        visibility: visible !important
+    }
+
+    .invisible {
+        visibility: hidden
+    }
+
+    .visible {
+        visibility: visible
+    }
+
+    .sr-only {
+        border-width: 0;
+        clip-path: inset(50%);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        white-space: nowrap;
+        width: 1px
+    }
+
+    .absolute,
+    .sr-only {
+        position: absolute
+    }
+
+    .fixed {
+        position: fixed
+    }
+
+    .relative {
+        position: relative
+    }
+
+    .static {
+        position: static
+    }
+
+    .incode-container {
+        width: 100%
+    }
+
+    @media (min-width:40rem) {
+        .incode-container {
+            max-width: 40rem
+        }
+    }
+
+    @media (min-width:48rem) {
+        .incode-container {
+            max-width: 48rem
+        }
+    }
+
+    @media (min-width:64rem) {
+        .incode-container {
+            max-width: 64rem
+        }
+    }
+
+    @media (min-width:80rem) {
+        .incode-container {
+            max-width: 80rem
+        }
+    }
+
+    @media (min-width:96rem) {
+        .incode-container {
+            max-width: 96rem
+        }
+    }
+
+    .incode-container {
+        height: 100%;
+        margin: auto
+    }
+
+    @media (min-width:48rem) {
+        .incode-container {
+            max-height: var(--incode-page-max-h);
+            max-width: var(--incode-page-max-w)
+        }
+
+        @media not all and (min-width:80rem) {
+            @media (orientation:landscape) {
+                .incode-container {
+                    max-height: var(--incode-page-max-h-landscape)
+                }
+            }
+        }
+    }
+
+    .container {
+        width: 100%
+    }
+
+    @media (min-width:40rem) {
+        .container {
+            max-width: 40rem
+        }
+    }
+
+    @media (min-width:48rem) {
+        .container {
+            max-width: 48rem
+        }
+    }
+
+    @media (min-width:64rem) {
+        .container {
+            max-width: 64rem
+        }
+    }
+
+    @media (min-width:80rem) {
+        .container {
+            max-width: 80rem
+        }
+    }
+
+    @media (min-width:96rem) {
+        .container {
+            max-width: 96rem
+        }
+    }
+
+    .m-auto {
+        margin: auto
+    }
+
+    .mx-auto {
+        margin-inline: auto
+    }
+
+    .ml-8 {
+        margin-left: var(--spacing-8, var(--spacing-8, 8px))
+    }
+
+    .block {
+        display: block
+    }
+
+    .contents {
+        display: contents
+    }
+
+    .flex {
+        display: flex
+    }
+
+    .grid {
+        display: grid
+    }
+
+    .hidden {
+        display: none
+    }
+
+    .inline {
+        display: inline
+    }
+
+    .inline-flex {
+        display: inline-flex
+    }
+
+    .w-full {
+        width: 100%
+    }
+
+    .max-w-\[420px\] {
+        max-width: 420px
+    }
+
+    .max-w-\[480px\] {
+        max-width: 480px
+    }
+
+    .flex-1 {
+        flex: 1
+    }
+
+    .transform {
+        transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, )
+    }
+
+    .resize {
+        resize: both
+    }
+
+    .flex-col {
+        flex-direction: column
+    }
+
+    .items-center {
+        align-items: center
+    }
+
+    .justify-between {
+        justify-content: space-between
+    }
+
+    .border {
+        border-style: var(--tw-border-style);
+        border-width: 1px
+    }
+
+    .bg-white {
+        background-color: var(--color-white, #fff)
+    }
+
+    .text-button-m-underlined {
+        font-family: var(--typography-button-family);
+        font-size: var(--typography-button-m-underlined-size);
+        font-weight: var(--typography-button-m-underlined-weight);
+        letter-spacing: var(--typography-button-m-underlined-letter-spacing);
+        line-height: var(--typography-button-m-underlined-line-height);
+        text-decoration-line: underline;
+        -webkit-text-decoration-skip-ink: none;
+        text-decoration-skip-ink: none;
+        text-decoration-style: solid;
+        text-decoration-thickness: auto
+    }
+
+    .lowercase {
+        text-transform: lowercase
+    }
+
+    .uppercase {
+        text-transform: uppercase
+    }
+
+    .shadow {
+        --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, #0000001a), 0 1px 2px -1px var(--tw-shadow-color, #0000001a)
+    }
+
+    .ring,
+    .shadow {
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)
+    }
+
+    .ring {
+        --tw-ring-shadow: var(--tw-ring-inset, ) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor)
+    }
+
+    .outline {
+        outline-style: var(--tw-outline-style);
+        outline-width: 1px
+    }
+
+    .blur {
+        --tw-blur: blur(8px)
+    }
+
+    .blur,
+    .filter {
+        filter: var(--tw-blur, ) var(--tw-brightness, ) var(--tw-contrast, ) var(--tw-grayscale, ) var(--tw-hue-rotate, ) var(--tw-invert, ) var(--tw-saturate, ) var(--tw-sepia, ) var(--tw-drop-shadow, )
+    }
+
+    .transition {
+        transition-duration: var(--tw-duration, var(--default-transition-duration, .15s));
+        transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+        transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(.4, 0, .2, 1)))
+    }
+}
+
+@layer incode-base, incode-components;
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%)
+    }
+
+    to {
+        transform: translateY(0)
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(8px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.IncodeCameraButton {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.IncodeCameraButton .IncodeCameraButtonBackground {
+    fill: var(--color-icon-neutral-800-static, var(--icon-neutral-800-static))
+}
+
+.IncodeCameraButton .IncodeCameraButtonPath,
+.IncodeCameraButton .IncodeCameraButtonRing {
+    fill: var(--color-icon-neutral-50, var(--icon-neutral-50-static))
+}
+
+.IncodeCaptureContainer {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: flex-start;
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.IncodeCaptureContainer .IncodeCaptureFrame {
+    aspect-ratio: 1;
+    border-color: #0000;
+    border-radius: var(--radius-full, var(--border-radius-full));
+    border-style: var(--tw-border-style);
+    border-width: 12px;
+    max-width: 335px;
+    position: relative;
+    width: 100%
+}
+
+.IncodeCaptureContainer .IncodeCaptureVideoWrapper {
+    --tw-translate-x: -50%;
+    --tw-translate-y: -50%;
+    align-items: center;
+    background-color: var(--color-white, #fff);
+    border-radius: var(--radius-full, var(--border-radius-full));
+    display: flex;
+    height: calc(100% - 24px);
+    justify-content: center;
+    left: 50%;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    transform: var(--tw-rotate-x, ) var(--tw-rotate-y, ) var(--tw-rotate-z, ) var(--tw-skew-x, ) var(--tw-skew-y, );
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    width: calc(100% - 24px)
+}
+
+.IncodeCaptureContainer .IncodeCaptureVideo {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    z-index: 50
+}
+
+.IncodeCaptureContainer .IncodeCaptureVideoElement {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.IncodeCaptureContainer .IncodeCaptureVideoElement.IncodeCaptureVideoMirrored {
+    transform: scaleX(-1)
+}
+
+.IncodeCaptureCapturingPage .IncodeCaptureCapturingActions {
+    display: flex;
+    justify-content: center;
+    margin-top: auto
+}
+
+.IncodeCaptureVisuallyHidden {
+    border-width: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px
+}
+
+.IncodeCaptureStatusPage .IncodeCaptureStatusContainer {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.IncodeCaptureStatusPage .IncodeCaptureStatusTitle {
+    font-size: var(--text-2xl, 1.5rem);
+    line-height: var(--tw-leading, var(--text-2xl--line-height, 1.33333));
+    text-align: center;
+    --tw-leading: 125%;
+    --tw-font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    line-height: 125%;
+    --tw-tracking: -1px;
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    letter-spacing: -1px
+}
+
+.IncodeFaceOutline {
+    height: 100%;
+    width: 100%
+}
+
+.IncodeLoadingBorder {
+    aspect-ratio: 1;
+    max-width: 335px;
+    position: absolute;
+    width: 100%
+}
+
+.IncodeLoadingBorder .IncodeLoadingBorderBase,
+.IncodeLoadingBorder .IncodeLoadingBorderForeground {
+    inset: var(--spacing-0, var(--spacing-none, 0));
+    position: absolute
+}
+
+.IncodeLoadingBorder .IncodeLoadingBorderForeground.IncodeLoadingBorderSpinning {
+    animation: var(--animate-spin, spin 1s linear infinite)
+}
+
+.IncodeLoadingBorder .IncodeLoadingBorderPath {
+    transition: all 1s ease-in-out
+}
+
+.IncodeSelfieManualCapture {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: 275px
+}
+
+.IncodeSelfieManualCaptureText {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    text-align: center
+}
+
+.IncodeSelfieManualCaptureButton {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeNotification {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.IncodeNotification .IncodeNotificationText {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-feedback-family);
+    font-size: var(--typography-feedback-l-size);
+    font-weight: var(--typography-feedback-l-weight);
+    letter-spacing: var(--typography-feedback-l-letter-spacing);
+    line-height: var(--typography-feedback-l-line-height);
+    text-align: center
+}
+
+.IncodeSelfieTutorial {
+    --brand-color: var(--surface-brand-500)
+}
+
+.IncodeSelfieTutorial .IncodeBaseTutorialAnimation svg linearGradient#__lottie_element_29 stop {
+    stop-color: var(--brand-color)
+}
+
+.IncodeSelfieTutorial .IncodeBaseTutorialAnimation svg>g>g>g:first-child>g:first-child>g>g>g:nth-child(2)>g:first-child>g>path,
+.IncodeSelfieTutorial .IncodeBaseTutorialAnimation svg>g>g>g:first-child>g:first-child>g>g>g:nth-child(2)>g:nth-child(3)>g>path {
+    fill: var(--brand-color)
+}
+
+.IncodePhonePage .IncodePageContent {
+    align-items: center;
+    padding-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    padding-top: var(--spacing-32, var(--spacing-32, 32px))
+}
+
+.IncodePhoneInputContainer {
+    max-width: 420px;
+    width: 100%
+}
+
+.IncodeEmailInput,
+.IncodeEmailInputContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.IncodeEmailPage .IncodePageContent {
+    padding-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    padding-top: var(--spacing-32, var(--spacing-32, 32px))
+}
+
+.IncodeFaceMatchPage,
+.IncodeFaceMatchPage .IncodeFaceMatchContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.IncodeFaceMatchPage .IncodeFaceMatchContent {
+    align-items: center;
+    flex: 1;
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    position: relative
+}
+
+.IncodeFaceMatchAnimationContainer {
+    display: flex;
+    flex: 1;
+    min-height: 250px;
+    position: relative;
+    width: 100%
+}
+
+.IncodeFaceMatchContainer {
+    flex: 1;
+    height: 100%;
+    min-height: 225px;
+    position: relative;
+    width: 100%
+}
+
+.IncodeFaceMatchResultContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    inset: 0;
+    justify-content: center;
+    position: absolute
+}
+
+.IncodeFaceMatchHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    transition: opacity .3s ease-out
+}
+
+.IncodeFaceMatchHeaderHidden {
+    height: 0;
+    opacity: 0;
+    overflow: hidden
+}
+
+.IncodeFaceMatchPhotoWrapper {
+    inset: var(--spacing-0, var(--spacing-none, 0));
+    position: absolute;
+    transition: opacity .3s ease-out
+}
+
+.IncodeFaceMatchPhotoWrapperHidden {
+    opacity: 0;
+    pointer-events: none
+}
+
+.IncodeFaceMatchResultVisible {
+    align-items: center;
+    animation: resultFadeIn .4s ease-out forwards;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    position: static;
+    width: 100%
+}
+
+.IncodeFaceMatchResultVisible .IncodeFaceMatchAnimatedIcon,
+.IncodeFaceMatchResultVisible .IncodeFaceMatchAnimatedResultTitle {
+    animation: none;
+    opacity: 1
+}
+
+@keyframes resultFadeIn {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.IncodeFaceMatchResultContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    width: 100%
+}
+
+.IncodeFaceMatchShowResult {
+    flex: 1;
+    min-height: auto
+}
+
+.IncodeFaceMatchLivenessContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-32, var(--spacing-32, 32px));
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity .4s ease-out, transform .4s ease-out;
+    width: 100%
+}
+
+.IncodeFaceMatchLivenessVisible {
+    animation: fadeIn .4s ease-out;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0)
+}
+
+.IncodeFaceMatchButtonContainer {
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(8px);
+    transition: opacity .4s ease-out, transform .4s ease-out;
+    width: 100%
+}
+
+.IncodeFaceMatchButtonVisible {
+    animation: fadeIn .4s ease-out;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0)
+}
+
+.IncodeFaceMatchTooltip {
+    background: var(--surface-neutral-50);
+    border: 1px solid var(--border-neutral-100);
+    border-radius: var(--border-radius-medium);
+    color: var(--text-body-800-primary);
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 500;
+    height: 44px;
+    letter-spacing: -.192px;
+    line-height: 44px;
+    padding: 0 20px;
+    position: relative;
+    text-align: center
+}
+
+.IncodeFaceMatchTooltip:after {
+    border-left: 9px solid #0000;
+    border-right: 9px solid #0000;
+    border-top: 9px solid var(--surface-neutral-50);
+    bottom: -9px;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 0
+}
+
+.IncodeFaceMatchTooltip:before {
+    border-left: 9px solid #0000;
+    border-right: 9px solid #0000;
+    border-top: 9px solid var(--border-neutral-100);
+    bottom: -10px;
+    content: "";
+    height: 0;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    width: 0
+}
+
+.IncodeFaceMatchAnimatedTitle {
+    font-size: var(--text-2xl, 1.5rem);
+    line-height: var(--tw-leading, var(--text-2xl--line-height, 1.33333));
+    text-align: center;
+    --tw-font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    color: var(--text-body-800-primary);
+    font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    line-height: 125%
+}
+
+:root {
+    --animation-duration: .8s;
+    --transition-delay: .2s;
+    --transition-duration: .25s;
+    --entrance-duration: .8s;
+    --entrance-delay: .45s;
+    --tooltip-duration: 1.6s;
+    --tooltip-show-delay: 1.25s;
+    --animation-delay: 2.85s
+}
+
+@keyframes leftEntrance {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes rightEntrance {
+    0% {
+        opacity: 0;
+        transform: translateX(200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0)
+    }
+}
+
+@keyframes bottomEntrance {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 200px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%)
+    }
+}
+
+@keyframes leftIn {
+    0% {
+        left: 0;
+        opacity: 1;
+        transform: translateX(0)
+    }
+
+    to {
+        left: 50%;
+        opacity: 0;
+        transform: translateX(-50%)
+    }
+}
+
+@keyframes rightIn {
+    0% {
+        opacity: 1;
+        right: 0;
+        transform: translateX(0)
+    }
+
+    to {
+        opacity: 0;
+        right: 50%;
+        transform: translateX(50%)
+    }
+}
+
+@keyframes bottomUp {
+    0% {
+        opacity: 1;
+        transform: translate(-50%)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%, -225px)
+    }
+}
+
+@keyframes tooltipShowHide {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+@keyframes fadeInTitle {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@keyframes fadeOutTitle {
+    0% {
+        opacity: 1;
+        visibility: visible
+    }
+
+    to {
+        opacity: 0;
+        visibility: hidden
+    }
+}
+
+@keyframes simpleFadeInTitle {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeInIcon {
+    0% {
+        opacity: 0;
+        visibility: hidden
+    }
+
+    to {
+        opacity: 1;
+        visibility: visible
+    }
+}
+
+@keyframes slideUpButton {
+    0% {
+        opacity: 0;
+        transform: translateY(20px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}
+
+.IncodeFaceMatchPhotoContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    position: absolute;
+    top: 0
+}
+
+.IncodeFaceMatchPhotoContainerHidden {
+    visibility: hidden
+}
+
+.IncodeFaceMatchPhotoContainer>.IncodeFaceMatchTooltip {
+    animation: tooltipShowHide var(--tooltip-duration, 1.6s) linear forwards;
+    animation-delay: var(--tooltip-show-delay, 1.25s);
+    opacity: 0
+}
+
+.IncodeFaceMatchLeftPhoto {
+    animation: leftEntrance var(--entrance-duration, .8s) cubic-bezier(.25, .46, .45, .94) forwards, leftIn var(--animation-duration, .8s) cubic-bezier(.25, .46, .45, .94) forwards;
+    animation-delay: var(--entrance-delay, .45s), var(--animation-delay, 2.85s);
+    left: 0;
+    opacity: 0;
+    transform: translateX(-200px) translateZ(0);
+    will-change: transform, opacity;
+    z-index: 2
+}
+
+.IncodeFaceMatchRightPhoto {
+    animation: rightEntrance var(--entrance-duration, .8s) cubic-bezier(.25, .46, .45, .94) forwards, rightIn var(--animation-duration, .8s) cubic-bezier(.25, .46, .45, .94) forwards;
+    animation-delay: var(--entrance-delay, .45s), var(--animation-delay, 2.85s);
+    opacity: 0;
+    right: 0;
+    transform: translateX(200px) translateZ(0);
+    will-change: transform, opacity;
+    z-index: 1
+}
+
+.IncodeFaceMatchBottomPhotoContainer {
+    align-items: center;
+    animation: bottomEntrance var(--entrance-duration, .8s) cubic-bezier(.25, .46, .45, .94) forwards, bottomUp var(--animation-duration, .8s) cubic-bezier(.25, .46, .45, .94) forwards;
+    animation-delay: var(--entrance-delay, .45s), var(--animation-delay, 2.85s);
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+    left: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 225px;
+    transform: translate(-50%, 200px) translateZ(0);
+    will-change: transform, opacity;
+    z-index: 3
+}
+
+.IncodeFaceMatchBottomPhotoContainerHidden {
+    visibility: hidden
+}
+
+.IncodeFaceMatchBottomPhotoContainer>.IncodeFaceMatchTooltip {
+    animation: tooltipShowHide var(--tooltip-duration, 1.6s) linear forwards;
+    animation-delay: var(--tooltip-show-delay, 1.25s);
+    opacity: 0
+}
+
+.IncodeFaceMatchCircularImage {
+    background-color: #ddd;
+    border-radius: 50%;
+    height: 160px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 160px
+}
+
+.IncodeFaceMatchAnimatedTitle {
+    animation: simpleFadeInTitle var(--transition-duration, .25s) ease-out forwards, fadeOutTitle var(--transition-duration, .25s) linear forwards;
+    animation-delay: 0s, calc(var(--animation-delay, 2.85s) + var(--animation-duration, .8s) + var(--transition-delay, .2s));
+    opacity: 0
+}
+
+.IncodeFaceMatchAnimatedResultTitle {
+    font-size: var(--text-2xl, 1.5rem);
+    line-height: var(--tw-leading, var(--text-2xl--line-height, 1.33333));
+    text-align: center;
+    --tw-font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    animation: fadeInTitle var(--transition-duration, .25s) linear forwards;
+    animation-delay: calc(var(--animation-delay, 2.85s) + var(--animation-duration, .8s) + var(--transition-delay, .2s));
+    color: var(--text-body-800-primary);
+    font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    line-height: 125%;
+    opacity: 0
+}
+
+.IncodeFaceMatchAnimatedIcon {
+    animation: fadeInIcon var(--transition-duration, .25s) linear forwards;
+    animation-delay: calc(var(--animation-delay, 2.85s) + var(--animation-duration, .8s) + var(--transition-delay, .2s));
+    opacity: 0
+}
+
+.IncodeFaceMatchAnimatedButton {
+    animation: slideUpButton var(--transition-duration, .25s) cubic-bezier(.25, .46, .45, .94) forwards;
+    animation-delay: calc(var(--animation-delay, 2.85s) + var(--animation-duration, .8s) + var(--transition-delay, .2s));
+    opacity: 0
+}
+
+.IncodeGovtValidation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.IncodeGovtValidation,
+.IncodeGovtValidation .IncodeGovtValidationPage {
+    height: 100%;
+    width: 100%
+}
+
+.IncodeGovtValidation .IncodeGovtValidationPage .IncodePageContent {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center
+}
+
+.IncodeGovtValidation .IncodeGovtValidationStatus {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+}
+
+.IncodeGovtValidation .IncodeGovtValidationText {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    margin-top: var(--spacing-12, var(--spacing-12, 12px))
+}
+
+.IncodeGovtValidation.IncodeGovtValidation--otp .IncodeGovtValidationPage .IncodePageContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.IncodeGovtValidation.IncodeGovtValidation--otp .IncodeGovtValidationPage .IncodeGovtValidationOtpInstructions {
+    margin-bottom: var(--spacing-12, var(--spacing-12, 12px))
+}
+
+.IncodeGovtValidation.IncodeGovtValidation--otp .IncodeGovtValidationPage .IncodeGovtValidationOtpInstructions h2,
+.IncodeGovtValidation.IncodeGovtValidation--otp .IncodeGovtValidationPage .IncodeGovtValidationOtpInstructions p {
+    font-family: var(--typography-input-dropdown-family);
+    font-size: var(--typography-input-dropdown-m-size);
+    font-weight: var(--typography-input-dropdown-m-weight);
+    letter-spacing: var(--typography-input-dropdown-m-letter-spacing);
+    line-height: var(--typography-input-dropdown-m-line-height);
+    text-wrap: nowrap
+}
+
+.IncodeFlowStart {
+    justify-content: center;
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px));
+    padding-bottom: var(--spacing-32, var(--spacing-32, 32px));
+    padding-top: var(--spacing-20, var(--spacing-20, 20px))
+}
+
+.IncodeFlowStart,
+.IncodeFlowStartContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.IncodeFlowStartContent {
+    justify-content: space-between;
+    text-align: center
+}
+
+.IncodeFlowStartCenterSection {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%
+}
+
+.IncodeFlowStartLogoContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-height: 250px;
+    min-width: 100px
+}
+
+.IncodeFlowStartLogo {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 260px
+}
+
+@media screen and (max-width:767px) {
+    .IncodeFlowStartLogo {
+        width: 200px
+    }
+}
+
+.IncodeFlowStartSubtitle {
+    color: #20263d;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.37;
+    margin-top: 10px;
+    text-align: center
+}
+
+.IncodeFlowStartButton {
+    margin-top: auto
+}
+
+@media screen and (min-width:992px) {
+    .IncodeFlowStart {
+        padding: 5% 20% 15%
+    }
+}
+
+.IncodeCpfOcrPage {
+    animation: fadeIn var(--motion-fade-in-duration, .7s) ease-out;
+    animation-fill-mode: both;
+    height: 100%;
+    margin-inline: auto;
+    width: 100%
+}
+
+@media (min-width:48rem) {
+    .IncodeCpfOcrPage.IncodePageContainer {
+        align-items: stretch
+    }
+}
+
+.IncodeCpfOcrPage .IncodePageInner {
+    height: 100%
+}
+
+.IncodeCpfOcrPage .IncodePageContent,
+.IncodeCpfOcrPage .IncodePageInner {
+    min-height: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeCpfOcrPage .IncodeCpfOcr {
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    max-width: var(--incode-form-max-w);
+    width: 100%
+}
+
+.IncodeCpfOcrPage .IncodeCpfOcr,
+.IncodeCpfOcrPage .IncodeCpfOcrLoading {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    min-height: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeCpfOcrPage .IncodeCpfOcrLoading {
+    justify-content: center
+}
+
+.IncodeHome {
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px));
+    padding-bottom: var(--spacing-32, var(--spacing-32, 32px));
+    padding-top: var(--spacing-20, var(--spacing-20, 20px))
+}
+
+.IncodeHome,
+.IncodeHome .IncodeHomeContent {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.IncodeHome .IncodeHomeHeader {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: space-between
+}
+
+.IncodeHome .IncodeHomeLanguage {
+    display: flex;
+    flex-direction: column
+}
+
+.IncodeHome .IncodeHomeLanguageLabel {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-label-family);
+    font-size: var(--typography-label-m-size);
+    font-weight: var(--typography-label-m-weight);
+    letter-spacing: var(--typography-label-m-letter-spacing);
+    line-height: var(--typography-label-m-line-height);
+    margin: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeHome .IncodeHomeLanguageValue {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-m-regular-size);
+    font-weight: var(--typography-body-m-regular-weight);
+    letter-spacing: var(--typography-body-m-regular-letter-spacing);
+    line-height: var(--typography-body-m-regular-line-height);
+    margin: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeHome .IncodeHomeSettingsButton {
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    --tw-border-style: none;
+    align-items: center;
+    background-color: #0000;
+    border-style: none;
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeHome .IncodeHomeSettingsButton:focus-visible {
+    outline: var(--focus-outline-width) solid var(--border-status-focus);
+    outline-offset: var(--focus-outline-offset)
+}
+
+.IncodeHome .IncodeHomeCenterSection {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center
+}
+
+.IncodeHome .IncodeHomeLogoContainer {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    max-width: var(--home-logo-container-max-width);
+    width: 100%
+}
+
+.IncodeHome .IncodeHomeLogo {
+    height: auto;
+    max-height: var(--home-logo-max-height);
+    max-width: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.IncodeHome .IncodeHomeSubtitle {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h4-size);
+    font-weight: var(--typography-headline-h4-weight);
+    letter-spacing: var(--typography-headline-h4-letter-spacing);
+    line-height: var(--typography-headline-h4-line-height);
+    margin-top: var(--spacing-12, var(--spacing-12, 12px));
+    --tw-outline-style: none;
+    outline-style: none
+}
+
+.IncodeHome .IncodeHomeStartButton {
+    margin-top: auto
+}
+
+.IncodeHomeSettingsModal.IncodeModalRoot .IncodeModalDialog {
+    height: 100%;
+    max-height: 100%;
+    max-width: none
+}
+
+.IncodeHomeSettingsModal.IncodeModalRoot .IncodeModalContent {
+    align-items: stretch;
+    border-radius: var(--radius-none, var(--border-radius-none));
+    height: 100%;
+    max-width: none;
+    padding-block: var(--spacing-32, var(--spacing-32, 32px));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeHomeSettingsModal .IncodeHomeSettingsContainer {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    width: 100%
+}
+
+.IncodeHomeSettingsModal .IncodeHomeSettingsBody {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.IncodeHomeSettingsModal .IncodeHomeSettingsTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    --tw-outline-style: none;
+    outline-style: none
+}
+
+.IncodeHomeSettingsModal .IncodeHomeSettingsFooter {
+    margin-top: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeHomeSettingsModal .IncodeHomeSettingsBodyContent {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center
+}
+
+.IncodeFlowCompleted {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: var(--spacing-20, var(--spacing-20, 20px));
+    width: 100%
+}
+
+.IncodeComponent .IncodeFlowCompleted h1.IncodeFlowCompletedTitle {
+    color: #20263d;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 20px 0;
+    text-align: left;
+    width: 100%
+}
+
+.IncodeComponent .IncodeFlowCompleted p.IncodeFlowCompletedSubtitle {
+    color: #20263d;
+    font-size: 1rem;
+    font-weight: 700;
+    margin: 20px 0;
+    text-align: left;
+    width: 100%
+}
+
+@media screen and (min-width:992px) {
+
+    .IncodeComponent .IncodeFlowCompleted h1.IncodeFlowCompletedTitle,
+    .IncodeComponent .IncodeFlowCompleted p.IncodeFlowCompletedSubtitle {
+        text-align: center
+    }
+}
+
+.IncodeUnsupportedModule {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    padding: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeUnsupportedModule .IncodeUnsupportedModuleContent,
+.IncodeUnsupportedModule .IncodeUnsupportedModuleContent .IncodeUnsupportedModuleContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    max-width: var(--container-md, 28rem);
+    text-align: center
+}
+
+.IncodeUnsupportedModule .IncodeUnsupportedModuleContent .IncodeUnsupportedModuleTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height)
+}
+
+.IncodeUnsupportedModule .IncodeUnsupportedModuleContent .IncodeUnsupportedModuleMessage {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height)
+}
+
+.IncodeUnsupportedModule .IncodeUnsupportedModuleContent .IncodeUnsupportedModuleButton {
+    margin-top: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeSrOnly {
+    border-width: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px
+}
+
+.IncodeAgeVerificationPage .IncodePageInner {
+    padding-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    padding-top: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeAgeVerificationPage .IncodePageHeader {
+    height: var(--page-header-height);
+    min-height: var(--page-header-height)
+}
+
+.IncodeAgeVerificationPage .IncodePageLogo {
+    height: var(--age-verification-logo-height)
+}
+
+.IncodeAgeVerificationPage .IncodePageTitleContainer {
+    max-width: none
+}
+
+.IncodeAgeVerificationPage .IncodePageContent {
+    justify-content: center
+}
+
+.IncodeAgeVerificationPage .IncodePageFooter {
+    padding-bottom: var(--spacing-0, var(--spacing-none, 0));
+    padding-top: var(--spacing-12, var(--spacing-12, 12px))
+}
+
+.IncodeAgeVerificationPage .IncodeAgeVerificationContent {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: space-between
+}
+
+.IncodeAgeVerificationPage .IncodeAgeVerificationList {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: center;
+    list-style-type: none;
+    margin-inline: auto;
+    max-width: var(--incode-form-max-w);
+    padding: var(--spacing-0, var(--spacing-none, 0));
+    width: 100%
+}
+
+.IncodeAgeVerificationPage .IncodeAgeVerificationItem {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeAgeVerificationPage .IncodeAgeVerificationIcon {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: var(--spacing-64, var(--spacing-64, 64px));
+    justify-content: center;
+    width: var(--spacing-96, var(--spacing-96, 96px))
+}
+
+.IncodeAgeVerificationPage .IncodeAgeVerificationIcon img {
+    height: 100%;
+    width: 100%
+}
+
+.IncodeAgeVerificationPage .IncodeAgeVerificationText {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    flex: 1;
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height)
+}
+
+.IncodeAgeVerificationPage .IncodeAgeVerificationButton {
+    margin-inline: auto;
+    max-width: var(--incode-form-max-w);
+    width: 100%
+}
+
+.IncodeIdTutorial {
+    --brand-color: var(--surface-brand-500)
+}
+
+.IncodeIdTutorial .IncodePageTitleContainer {
+    padding-block: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeIdTutorial .IncodeBaseTutorialContainer {
+    margin: calc(var(--spacing-24, var(--spacing-24, 24px))*-1)
+}
+
+.IncodeIdTutorial .IncodeBaseTutorialAnimationContainer {
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeIdTutorial.IncodeIdTutorialId .IncodeBaseTutorialAnimation svg>g>g>g:first-child>g>path,
+.IncodeIdTutorial.IncodeIdTutorialId .IncodeBaseTutorialAnimation svg>g>g>g:nth-child(2)>g:nth-child(5)>g>g>g:nth-child(3)>g>path,
+.IncodeIdTutorial.IncodeIdTutorialPassport .IncodeBaseTutorialAnimation svg>g>g:first-child>g>path,
+.IncodeIdTutorial.IncodeIdTutorialPassport .IncodeBaseTutorialAnimation svg>g>g:nth-child(2)>g:nth-child(2)>g:nth-child(2)>g:nth-child(2)>g>g>g>g:nth-child(4)>g>path {
+    fill: var(--brand-color)
+}
+
+.IncodeFlipAnimation {
+    align-items: center;
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    padding: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeCommonIssuesFullScreen .IncodeModalDialog {
+    height: 100%;
+    max-height: none;
+    max-width: none
+}
+
+.IncodeCommonIssuesFullScreen .IncodeModalContent {
+    border-radius: var(--radius-none, var(--border-radius-none));
+    height: 100%;
+    margin: auto;
+    max-width: none
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesQuestionIcon {
+    flex-shrink: 0
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesTitle {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height)
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesCards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32, var(--spacing-32, 32px));
+    max-width: 420px;
+    padding-block: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesCard {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesCardIcon {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    flex-shrink: 0
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesCardText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4, var(--spacing-4, 4px))
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesCardTitle {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height)
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesCardBody {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-m-regular-size);
+    font-weight: var(--typography-body-m-regular-weight);
+    letter-spacing: var(--typography-body-m-regular-letter-spacing);
+    line-height: var(--typography-body-m-regular-line-height)
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesButtons {
+    margin-top: auto
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesTakeManually {
+    color: var(--color-text-body-primary, var(--text-body-800-primary))
+}
+
+.IncodeCommonIssuesContent .IncodeCommonIssuesTryAgain {
+    width: 100%
+}
+
+.IncodeChooserPage .IncodePageContent {
+    padding-bottom: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeChooserPage .IncodePageTitle {
+    max-width: 15.625rem
+}
+
+.IncodeChooserPage .IncodeChooserContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    width: 100%
+}
+
+.IncodeCaptureFrame {
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    --frame-border-color: var(--border-neutral-100);
+    align-items: center;
+    align-self: center;
+    border: 4px solid var(--frame-border-color);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    transition: max-width .3s ease-out, border-color .3s ease-out
+}
+
+.IncodeCaptureFrame.IncodeCaptureFrameHorizontal {
+    aspect-ratio: 35/22;
+    max-width: 640px;
+    width: 100%
+}
+
+.IncodeCaptureFrame.IncodeCaptureFrameVertical {
+    aspect-ratio: 22/35;
+    max-width: 274px;
+    width: 100%
+}
+
+.IncodeCaptureFrame.IncodeCaptureFramePassport {
+    aspect-ratio: 42/30
+}
+
+.IncodeCaptureFrame.IncodeCaptureFrameIdle {
+    --frame-border-color: var(--border-neutral-100)
+}
+
+.IncodeCaptureFrame.IncodeCaptureFrameCapturing,
+.IncodeCaptureFrame.IncodeCaptureFrameFocus {
+    --frame-border-color: var(--border-status-focus)
+}
+
+.IncodeCaptureFrame.IncodeCaptureFrameAnalyzing,
+.IncodeCaptureFrame.IncodeCaptureFrameSuccess {
+    --frame-border-color: var(--border-status-positive-static)
+}
+
+.IncodeCaptureFrame.IncodeCaptureFrameError {
+    --frame-border-color: var(--border-status-negative)
+}
+
+.IncodeIdCapturePage {
+    background-color: var(--color-surface-neutral-900, var(--surface-neutral-900))
+}
+
+@media (min-width:48rem) {
+    .IncodeIdCapturePage {
+        background-color: var(--color-black, #000)
+    }
+}
+
+.IncodeIdCapturePage .IncodePageInner {
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeIdCapturePage .IncodePageContent {
+    flex: 1;
+    position: relative
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing {
+    align-items: center;
+    color: var(--color-text-body-0, var(--text-body-0-static));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureVideo {
+    inset: var(--spacing-0, var(--spacing-none, 0));
+    pointer-events: none;
+    position: absolute
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureVideo.IncodeCaptureVideoLoading {
+    opacity: 0
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureVideo .IncodeCaptureVideoElement {
+    height: 100%;
+    inset: var(--spacing-0, var(--spacing-none, 0));
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureOverlay {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureButton {
+    background-color: var(--color-button-primary-surface-default, var(--button-primary-surface-default));
+    border-radius: var(--radius-button-primary, var(--button-primary-border-radius));
+    color: var(--color-button-primary-text-default, var(--button-primary-text-default));
+    padding-block: var(--spacing-12, var(--spacing-12, 12px));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureInitializing {
+    align-items: center;
+    color: var(--color-text-body-0, var(--text-body-0-static));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureInitializing .IncodeCaptureInitializingText {
+    margin-top: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeIdCapturePage .IncodeCaptureInitializing .IncodeCaptureUploading,
+.IncodeIdCapturePage .IncodeCaptureUploading {
+    align-items: center;
+    color: var(--color-text-body-0, var(--text-body-0-static));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+.IncodeCaptureOverlayId {
+    align-items: center;
+    padding: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeCaptureOverlayId .IncodeCaptureTopSection {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-24, var(--spacing-24, 24px));
+    justify-content: flex-end;
+    padding-bottom: var(--spacing-40, var(--spacing-40, 40px));
+    z-index: 10
+}
+
+.IncodeCaptureOverlayId .IncodeCaptureTopSection .IncodeCameraOverlayHeader {
+    padding-inline: var(--spacing-16, var(--spacing-16, 16px));
+    padding-top: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeCaptureOverlayId .IncodeCaptureFooter {
+    flex: 1;
+    justify-content: space-between
+}
+
+.IncodeCaptureOverlayId .IncodeCaptureFooter .IncodeIdManualCaptureTooltipContainer {
+    animation: slideUp .5s ease-out forwards
+}
+
+.IncodeCaptureOverlayId .IncodeCaptureFooter .IncodeIdManualCaptureTooltipContainer .IncodeIdManualCaptureTooltip {
+    background-color: var(--color-surface-neutral-900, var(--surface-neutral-900));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    padding: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeCaptureOverlayId .IncodeCaptureFooter .IncodeIdManualCaptureTooltipContainer .IncodeIdManualCaptureTooltip .IncodeIdManualCaptureTooltipList {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeCaptureOverlayId .IncodeCaptureFooter .IncodeIdManualCaptureTooltipContainer .IncodeIdManualCaptureTooltip .IncodeIdManualCaptureTooltipList li {
+    color: var(--color-text-body-0-static, var(--text-body-0-static));
+    font-family: var(--typography-tooltip-family);
+    font-size: var(--typography-tooltip-m-size);
+    font-weight: var(--typography-tooltip-m-weight);
+    letter-spacing: var(--typography-tooltip-m-letter-spacing);
+    line-height: var(--typography-tooltip-m-line-height);
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    text-wrap: nowrap
+}
+
+.IncodeCaptureFramePassport {
+    aspect-ratio: 42/30
+}
+
+.IncodeIdManualCaptureButton {
+    bottom: var(--spacing-24, var(--spacing-24, 24px));
+    z-index: 100;
+    --tw-translate-x: -50%;
+    align-items: center;
+    animation: slideUp .5s ease-out forwards;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    justify-content: center;
+    left: 50%;
+    position: absolute;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    width: 100%
+}
+
+.IncodeIdManualCaptureButton .IncodeButtonLink {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    height: 100%;
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeIdManualCaptureButton .IncodeIdManualCaptureTooltipContainer .IncodeIdManualCaptureTooltip {
+    background-color: var(--color-surface-neutral-900, var(--surface-neutral-900));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    padding: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeIdManualCaptureButton .IncodeIdManualCaptureTooltipContainer .IncodeIdManualCaptureTooltip .IncodeIdManualCaptureTooltipList {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeIdManualCaptureButton .IncodeIdManualCaptureTooltipContainer .IncodeIdManualCaptureTooltip .IncodeIdManualCaptureTooltipList li {
+    color: var(--color-text-body-0-static, var(--text-body-0-static));
+    font-family: var(--typography-tooltip-family);
+    font-size: var(--typography-tooltip-m-size);
+    font-weight: var(--typography-tooltip-m-weight);
+    letter-spacing: var(--typography-tooltip-m-letter-spacing);
+    line-height: var(--typography-tooltip-m-line-height);
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    text-wrap: nowrap
+}
+
+.IncodeIdManualCaptureButton .IncodeIdManualCaptureButtonContent .IncodeIdManualCaptureButtonButton svg {
+    transition: filter .2s, transform .2s
+}
+
+.IncodeIdManualCaptureButton .IncodeIdManualCaptureButtonContent:active svg {
+    filter: brightness(.8);
+    transform: scale(.95)
+}
+
+@keyframes slideUpAndDown {
+
+    0%,
+    12% {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+
+    24% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    76% {
+        opacity: 1;
+        transform: translateY(0)
+    }
+
+    88%,
+    to {
+        opacity: 0;
+        transform: translateY(100%)
+    }
+}
+
+.IncodeIdHint {
+    inset: var(--spacing-0, var(--spacing-none, 0));
+    position: absolute;
+    z-index: 10
+}
+
+.IncodeIdHint,
+.IncodeIdHint .IncodeIdHintAnimated {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.IncodeIdHint .IncodeIdHintAnimated {
+    animation: slideUpAndDown 3s ease-in-out forwards;
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.IncodeIdHint .IncodeIdHintAnimated .IncodeIdHintSvg {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.IncodeIdHint .IncodeIdHintAnimated .IncodeIdHintSvg svg {
+    height: 800px;
+    min-height: 800px;
+    min-width: 800px;
+    width: 800px
+}
+
+.IncodeIdProcessingLayout {
+    align-items: center;
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    z-index: 10
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeIdProcessingTopArea {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-24, var(--spacing-24, 24px));
+    justify-content: flex-end;
+    padding-bottom: var(--spacing-40, var(--spacing-40, 40px));
+    width: 100%;
+    z-index: 10
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeCaptureFrame {
+    overflow: hidden
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeCaptureFrame.IncodeCaptureFrameVertical {
+    width: clamp(180px, 30vh, 274px)
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeCaptureFrame.IncodeCaptureFrameVertical .IncodeIdProcessingOverlay {
+    left: -25%;
+    right: -25%
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeCaptureFrame .IncodeIdProcessingImage {
+    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeCaptureFrame .IncodeIdProcessingImage.IncodeIdProcessingImageBlurred {
+    -webkit-backdrop-filter: blur(var(--id-processing-image-blur-radius));
+    backdrop-filter: blur(var(--id-processing-image-blur-radius));
+    filter: blur(var(--id-processing-image-blur-radius))
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeCaptureFrame .IncodeIdProcessingOverlay {
+    align-items: center;
+    display: flex;
+    inset: 0 -10%;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    z-index: 10
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeIdProcessingBottomArea {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 384px;
+    padding-top: var(--spacing-8, var(--spacing-8, 8px));
+    width: 100%;
+    z-index: 10
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingLayoutContent .IncodeIdProcessingBottomArea .IncodeCaptureEncryptionLabel {
+    align-items: center;
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    display: flex;
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-m-regular-size);
+    font-weight: var(--typography-body-m-regular-weight);
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    justify-content: center;
+    letter-spacing: var(--typography-body-m-regular-letter-spacing);
+    line-height: var(--typography-body-m-regular-line-height);
+    padding-bottom: var(--spacing-12, var(--spacing-12, 12px));
+    white-space: nowrap
+}
+
+.IncodeIdProcessingLayout .IncodeAnalyzingContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.IncodeIdProcessingLayout .IncodeAnalyzingContent .IncodeProgressBarContainer {
+    margin-bottom: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeIdProcessingLayout .IncodeAnalyzingContent .IncodeAnalyzingTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    text-align: center
+}
+
+.IncodeIdProcessingLayout .IncodeAnalyzingLottie {
+    max-width: none;
+    width: 100%
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingResultContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingResultTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    text-align: center
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingResultSubtitle {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    max-width: 300px;
+    text-align: center
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingResultButtonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    margin-top: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeIdProcessingLayout .IncodeIdProcessingResultAttempts {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h4-size);
+    font-weight: var(--typography-headline-h4-weight);
+    letter-spacing: var(--typography-headline-h4-letter-spacing);
+    line-height: var(--typography-headline-h4-line-height);
+    padding-block: var(--spacing-12, var(--spacing-12, 12px));
+    text-align: center
+}
+
+.IncodeIdError {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    height: 100%;
+    inset: var(--spacing-0, var(--spacing-none, 0));
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    z-index: 1000
+}
+
+.IncodeIdErrorMessage {
+    font-size: var(--text-18, var(--primitive-typography-size-18));
+    text-align: center;
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-text-body-0, var(--text-body-0-static));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    max-width: 350px
+}
+
+.IncodeIdNoAttemptsContent {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    max-height: 840px;
+    max-width: 800px;
+    padding-inline: var(--spacing-20, var(--spacing-20, 20px))
+}
+
+.IncodeIdNoAttemptsIcon {
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeIdNoAttemptsTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    text-align: center
+}
+
+.IncodeIdNoAttemptsSubtitle {
+    font-size: var(--text-14, var(--primitive-typography-size-14));
+    --tw-font-weight: var(--font-weight-normal, 400);
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-weight: var(--font-weight-normal, 400);
+    max-width: 350px;
+    text-align: center
+}
+
+.IncodeIdNoAttemptsButtonContainer {
+    bottom: var(--spacing-32, var(--spacing-32, 32px));
+    display: flex;
+    justify-content: center;
+    left: var(--spacing-0, var(--spacing-none, 0));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px));
+    position: absolute;
+    right: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeIdCaptureNotification {
+    align-items: flex-end;
+    display: flex;
+    left: var(--spacing-24, var(--spacing-24, 24px));
+    margin: auto;
+    max-width: 420px;
+    padding-bottom: var(--spacing-32, var(--spacing-32, 32px));
+    position: absolute;
+    right: var(--spacing-24, var(--spacing-24, 24px));
+    top: var(--spacing-24, var(--spacing-24, 24px));
+    z-index: 100
+}
+
+.IncodeIdCaptureNotification .IncodeIdCaptureNotificationContent {
+    background-color: var(--color-surface-neutral-900-80, var(--surface-neutral-900-80));
+    border-color: var(--color-border-neutral-300, var(--border-neutral-300));
+    border-radius: var(--radius-large, var(--border-radius-large));
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    box-shadow: 0 2.079px 36.379px #00000059;
+    display: flex;
+    overflow: hidden;
+    padding-inline: var(--spacing-20, var(--spacing-20, 20px));
+    width: 100%;
+    z-index: 100
+}
+
+.IncodeIdCaptureNotification .IncodeIdCaptureNotificationContent .IncodeIdCaptureNotificationText {
+    color: var(--color-white, #fff);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8, var(--spacing-8, 8px));
+    justify-content: center;
+    padding-bottom: var(--spacing-12, var(--spacing-12, 12px));
+    padding-top: var(--spacing-16, var(--spacing-16, 16px));
+    text-align: center
+}
+
+.IncodeIdCaptureNotification .IncodeIdCaptureNotificationContent .IncodeIdCaptureNotificationText .IncodeIdCaptureNotificationTitle {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h3-size);
+    font-weight: var(--typography-headline-h3-weight);
+    letter-spacing: var(--typography-headline-h3-letter-spacing);
+    line-height: var(--typography-headline-h3-line-height)
+}
+
+.IncodeIdCaptureNotification .IncodeIdCaptureNotificationContent .IncodeIdCaptureNotificationText .IncodeIdCaptureNotificationDescription {
+    color: var(--color-text-body-tertiary, var(--text-body-300-tertiary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height)
+}
+
+.IncodeIdCaptureNotification .IncodeIdCaptureNotificationContent .IncodeIdCaptureNotificationAnimation {
+    align-items: center;
+    display: flex;
+    height: 130px;
+    justify-content: center;
+    width: auto
+}
+
+.IncodeManualUploadPage .IncodeManualUploadContainer {
+    display: flex;
+    flex-direction: column;
+    padding-block: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeManualUploadPage .IncodeManualUploadFooter {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    margin-top: auto;
+    padding-top: var(--spacing-24, var(--spacing-24, 24px));
+    row-gap: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeManualUploadPage .IncodeManualUploadHintCard {
+    background-color: var(--color-surface-brand-50, var(--surface-brand-50));
+    border-radius: var(--radius-x-small, var(--border-radius-x-small));
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    list-style-type: disc;
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    padding-block: var(--spacing-16, var(--spacing-16, 16px));
+    padding-left: var(--spacing-32, var(--spacing-32, 32px));
+    padding-right: var(--spacing-12, var(--spacing-12, 12px));
+    width: 100%
+}
+
+.IncodeManualUploadPage .IncodeManualUploadHintCard li {
+    font-family: var(--font-family-dm-sans, var(--primitive-typography-family-dm-sans));
+    font-size: var(--text-14, var(--primitive-typography-size-14));
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium))
+}
+
+.IncodeManualUploadPage .IncodeManualUploadHintCard li+li {
+    margin-top: var(--spacing-4, var(--spacing-4, 4px))
+}
+
+.IncodeManualUploadPage .IncodeManualUploadTabsList {
+    align-self: center;
+    display: flex;
+    padding-inline: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeManualUploadPage .IncodeManualUploadTabTrigger {
+    cursor: pointer;
+    --tw-border-style: solid;
+    font-family: var(--font-family-dm-sans, var(--primitive-typography-family-dm-sans));
+    font-size: var(--text-16, var(--primitive-typography-size-16));
+    padding-block: var(--spacing-16, var(--spacing-16, 16px));
+    padding-inline: var(--spacing-12, var(--spacing-12, 12px));
+    text-align: center;
+    --tw-leading: var(--spacing-16, var(--spacing-16, 16px));
+    line-height: var(--spacing-16, var(--spacing-16, 16px));
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    background-color: #0000;
+    border-bottom: var(--border-width-bold, var(--primitive-border-width-2)) #0000;
+    border-left-color: #0000;
+    border-right-color: #0000;
+    border-style: solid;
+    border-top-color: #0000;
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    flex: 1;
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium))
+}
+
+.IncodeManualUploadPage .IncodeManualUploadTabTrigger:focus-visible {
+    border-radius: var(--radius-xs, .125rem);
+    outline-color: var(--color-border-status-focus, var(--border-status-focus));
+    outline-offset: 2px;
+    outline-style: var(--tw-outline-style);
+    outline-width: 2px
+}
+
+.IncodeManualUploadPage .IncodeManualUploadTabTrigger--active {
+    border-bottom-color: var(--color-button-primary-surface-default, var(--button-primary-surface-default));
+    --tw-font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold))
+}
+
+.IncodeManualUploadPage .IncodeManualUploadError {
+    align-items: flex-start;
+    color: var(--color-input-text-helper-negative, var(--input-text-helper-negative));
+    display: flex;
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-m-regular-size);
+    font-weight: var(--typography-body-m-regular-weight);
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    letter-spacing: var(--typography-body-m-regular-letter-spacing);
+    line-height: var(--typography-body-m-regular-line-height);
+    width: 100%
+}
+
+.IncodeManualUploadPage .IncodeManualUploadError p {
+    flex: 1;
+    margin: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeManualUploadPage .IncodeManualUploadTab {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    margin-top: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeManualUploadSlot {
+    align-items: center;
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    border-width: var(--border-width-regular, var(--primitive-border-width-1));
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    --tw-border-style: solid;
+    background-color: var(--color-surface-neutral-50, var(--surface-neutral-50));
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-style: solid;
+    display: flex;
+    padding-block: var(--spacing-24, var(--spacing-24, 24px));
+    padding-left: var(--spacing-20, var(--spacing-20, 20px));
+    padding-right: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeManualUploadSlot .IncodeManualUploadSlotIcon {
+    display: flex;
+    flex-shrink: 0;
+    height: var(--spacing-24, var(--spacing-24, 24px));
+    justify-content: center;
+    width: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeManualUploadSlot .IncodeManualUploadSlotIconHighlight {
+    fill: var(--color-icon-neutral-500, var(--icon-neutral-500))
+}
+
+.IncodeManualUploadSlot .IncodeManualUploadSlotLabel {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    flex: 1;
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    overflow: hidden;
+    text-align: left;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.IncodeManualUploadSlot .IncodeManualUploadSlotAction {
+    border-radius: var(--radius-full, var(--border-radius-full));
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    cursor: pointer;
+    --tw-border-style: none;
+    background-color: var(--color-button-primary-surface-default, var(--button-primary-surface-default));
+    color: var(--color-button-primary-text-default, var(--button-primary-text-default));
+    padding: var(--spacing-8, var(--spacing-8, 8px));
+    transition-duration: var(--tw-duration, var(--default-transition-duration, .15s));
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(.4, 0, .2, 1)));
+    --tw-duration: .2s;
+    align-items: center;
+    border-style: none;
+    display: inline-flex;
+    flex-shrink: 0;
+    justify-content: center;
+    transition-duration: .2s
+}
+
+.IncodeManualUploadSlot .IncodeManualUploadSlotAction:hover:not(:disabled) {
+    background-color: var(--color-button-primary-surface-hover, var(--button-primary-surface-hover))
+}
+
+.IncodeManualUploadSlot .IncodeManualUploadSlotAction:disabled {
+    background-color: var(--color-button-primary-surface-disabled, var(--button-primary-surface-disabled));
+    color: var(--color-button-primary-text-disabled, var(--button-primary-text-disabled));
+    cursor: not-allowed
+}
+
+.IncodeManualUploadSlot.IncodeManualUploadSlot--uploaded .IncodeManualUploadSlotAction,
+.IncodeManualUploadSlot.IncodeManualUploadSlot--uploaded .IncodeManualUploadSlotAction:hover:not(:disabled) {
+    background-color: #0000;
+    color: var(--color-surface-status-positive-500, var(--surface-status-positive-500));
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeManualUploadSlot.IncodeManualUploadSlot--disabled {
+    opacity: .5
+}
+
+.IncodeManualUploadSlot .IncodeManualUploadSlotInput {
+    border-width: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px
+}
+
+.IncodeDigitalIdUploadPage {
+    height: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadBody {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadBody,
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadPreviewBody {
+    height: 100%;
+    margin-inline: auto;
+    max-width: var(--digital-id-content-max-w);
+    row-gap: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadPreviewBody {
+    align-content: center;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: var(--spacing-24) var(--digital-id-preview-h) var(--spacing-24);
+    justify-items: center
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadPreStatusZone {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadPostCaptionZone {
+    align-items: flex-start;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-inline: auto;
+    margin-bottom: var(--spacing-8, var(--spacing-8, 8px));
+    margin-top: var(--spacing-24, var(--spacing-24, 24px));
+    max-width: var(--digital-id-content-max-w);
+    min-height: var(--digital-id-footer-min-h);
+    row-gap: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadHiddenInput {
+    display: none
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadTutorialIllustration {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    max-height: var(--digital-id-tutorial-illustration-max-h);
+    overflow: hidden;
+    width: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeUploadIdScreenImage {
+    max-height: var(--digital-id-illustration-max-h);
+    width: auto
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadPreviewCard {
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    --tw-border-style: solid;
+    align-items: center;
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    height: var(--digital-id-preview-h);
+    justify-content: center;
+    overflow: hidden;
+    width: var(--digital-id-preview-w)
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadDocumentPreview {
+    align-items: center;
+    display: flex;
+    height: var(--digital-id-preview-h);
+    justify-content: center;
+    overflow: visible;
+    position: relative;
+    width: var(--digital-id-preview-w)
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadDocumentPreviewPdf {
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    border-width: var(--border-width-bold, var(--primitive-border-width-2));
+    --tw-border-style: solid;
+    border-color: var(--color-border-status-positive, var(--border-status-positive-static));
+    border-style: solid;
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    overflow: hidden;
+    width: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadPreviewPdf {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadFileName {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-m-regular-size);
+    font-weight: var(--typography-body-m-regular-weight);
+    letter-spacing: var(--typography-body-m-regular-letter-spacing);
+    line-height: var(--typography-body-m-regular-line-height);
+    max-width: var(--digital-id-file-name-max-w);
+    overflow: hidden;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadProgressBar {
+    background-color: var(--color-surface-neutral-200, var(--surface-neutral-200));
+    border-radius: var(--radius-full, var(--border-radius-full));
+    height: var(--digital-id-progress-bar-h);
+    overflow: hidden;
+    position: relative;
+    width: var(--digital-id-progress-bar-w)
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadProgressBar>span {
+    background-color: var(--color-icon-status-positive, var(--icon-status-positive));
+    border-radius: var(--radius-full, var(--border-radius-full));
+    height: 100%;
+    left: var(--spacing-0, var(--spacing-none, 0));
+    position: absolute;
+    top: var(--spacing-0, var(--spacing-none, 0));
+    transition-duration: var(--tw-duration, var(--default-transition-duration, .15s));
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(.4, 0, .2, 1)))
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadLaserOverlay {
+    height: var(--digital-id-laser-h);
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    top: -2px;
+    transform: translateX(-50%) scale(var(--digital-id-laser-scale));
+    width: var(--digital-id-preview-w)
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .IncodeDigitalIdUploadPage .IncodeDigitalIdUploadLaserOverlay {
+        display: none
+    }
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadSuccessIcon {
+    align-items: center;
+    color: var(--color-icon-status-positive, var(--icon-status-positive));
+    display: flex;
+    justify-content: center
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadErrorIcon {
+    color: var(--color-icon-status-negative, var(--icon-status-negative));
+    margin-bottom: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadErrorPreview {
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    margin-top: var(--spacing-8, var(--spacing-8, 8px));
+    --tw-border-style: solid;
+    border-color: var(--color-border-status-negative, var(--border-status-negative));
+    border-style: solid;
+    border-width: 1px;
+    padding: var(--spacing-4)
+}
+
+.IncodeDigitalIdUploadPage .IncodeDigitalIdUploadAttempts {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-s-regular-size);
+    font-weight: var(--typography-body-s-regular-weight);
+    letter-spacing: var(--typography-body-s-regular-letter-spacing);
+    line-height: var(--typography-body-s-regular-line-height);
+    margin-top: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeIdOcrPage {
+    animation: fadeIn var(--motion-fade-in-duration, .7s) ease-out;
+    animation-fill-mode: both;
+    height: 100%;
+    margin-inline: auto;
+    width: 100%
+}
+
+@media (min-width:48rem) {
+    .IncodeIdOcrPage.IncodePageContainer {
+        align-items: stretch
+    }
+}
+
+.IncodeIdOcrPage .IncodePageInner {
+    height: 100%
+}
+
+.IncodeIdOcrPage .IncodeIdOcrForm,
+.IncodeIdOcrPage .IncodePageContent,
+.IncodeIdOcrPage .IncodePageInner {
+    min-height: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeIdOcrPage .IncodeIdOcrForm {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    height: 100%;
+    justify-content: flex-start;
+    margin-top: var(--spacing-32, var(--spacing-32, 32px));
+    overflow-y: auto;
+    width: 100%
+}
+
+.IncodeIdOcrPage .IncodeIdOcrButton {
+    bottom: var(--spacing-0, var(--spacing-none, 0));
+    position: sticky;
+    width: 100%
+}
+
+.IncodeIdOcrPage .IncodeIdOcrRadioGroup {
+    max-width: var(--incode-form-max-w)
+}
+
+.IncodeDocumentUploadPage {
+    background-color: var(--color-surface-neutral-900, var(--surface-neutral-900))
+}
+
+.IncodeDocumentUploadInitializing {
+    align-items: center;
+    color: var(--color-text-body-0, var(--text-body-0-static));
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center
+}
+
+.IncodeDocumentUploadInitializingText {
+    margin-top: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeDocumentUploadUploading {
+    height: 100%
+}
+
+.IncodeDocumentUploadError,
+.IncodeDocumentUploadUploading {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.IncodeDocumentUploadError {
+    color: var(--color-text-body-0, var(--text-body-0-static));
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    padding: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeDocumentUploadErrorMessage {
+    text-align: center
+}
+
+.IncodeDocumentUploadRetryButton {
+    margin-top: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeDocumentCaptureFileInput {
+    border-style: var(--tw-border-style);
+    opacity: 0;
+    padding: var(--spacing-0, var(--spacing-none, 0));
+    pointer-events: none;
+    clip: rect(0, 0, 0, 0);
+    border-width: 0;
+    clip-path: inset(50%);
+    height: 0 !important;
+    margin: 0 !important;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 0 !important
+}
+
+.IncodeDocumentCaptureFileInput::file-selector-button {
+    display: none
+}
+
+.IncodeDocumentCapturePageTutorial .IncodePageContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.IncodeDocumentCapturePageTutorial .IncodeDocumentCaptureTutorialContent {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    margin-block: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeDocumentCapturePageTutorial .IncodeDocumentCaptureTutorialContent .IncodeDocumentCaptureTutorialIllustration {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-inline: auto;
+    width: 292px
+}
+
+.IncodeDocumentCapturePageTutorial .IncodeDocumentCaptureTutorialContent .IncodeDocumentCaptureTutorialIllustration .IncodeDocumentCaptureTutorialImage {
+    width: 100%
+}
+
+.IncodeDocumentCapturePageTutorial .IncodeDocumentCaptureError {
+    font-size: var(--text-14, var(--primitive-typography-size-14));
+    padding-inline: var(--spacing-16, var(--spacing-16, 16px));
+    text-align: center;
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--input-text-helper-negative, #e53e3e);
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium))
+}
+
+.IncodeDocumentCapturePageTutorial .IncodeDocumentCaptureActions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8, var(--spacing-8, 8px));
+    padding-block: var(--spacing-16, var(--spacing-16, 16px));
+    padding-inline: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeDocumentCapturePageTutorial .IncodeDocumentCaptureActions .IncodeDocumentCaptureSkipWrapper {
+    display: flex;
+    justify-content: center;
+    padding-top: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeDocumentCapturePageTutorial .IncodeDocumentCaptureCentered {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: center
+}
+
+.IncodeDocumentCaptureBottomSheetOptions {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--spacing-20, var(--spacing-20, 20px));
+    padding-top: var(--spacing-8, var(--spacing-8, 8px));
+    width: 100%
+}
+
+.IncodeDocumentCaptureBottomSheetOptions .IncodeDocumentCaptureBottomSheetOption {
+    align-items: center;
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    --tw-border-style: none;
+    background-color: #0000;
+    border-style: none;
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    display: flex;
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    padding-block: var(--spacing-16, var(--spacing-16, 16px));
+    padding-inline: var(--spacing-12, var(--spacing-12, 12px));
+    width: 100%
+}
+
+.IncodeDocumentCaptureBottomSheetOptions .IncodeDocumentCaptureBottomSheetOption svg {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    flex-shrink: 0
+}
+
+.IncodeDocumentCaptureReviewPage .IncodePageContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden;
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+@media (min-width:48rem) {
+    .IncodeDocumentCaptureReviewPage .IncodePageInner {
+        padding: var(--spacing-24, var(--spacing-24, 24px))
+    }
+}
+
+.IncodeDocumentCaptureReviewLayout {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewHeader .IncodeDocumentCaptureReviewTitle {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    text-align: center
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewHeader .IncodeDocumentCaptureReviewSubtitle {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    max-width: var(--incode-form-max-w);
+    text-align: center
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewPreview {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    overflow: hidden
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewPreview.IncodeDocumentCaptureReviewPreviewPdf {
+    padding-inline: var(--spacing-48, var(--spacing-48, 48px))
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewPreview .IncodeDocumentCaptureReviewImageContainer {
+    background-color: var(--color-neutral-50, oklch(98.5% 0 0));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    display: flex;
+    flex: 1;
+    min-height: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewPreview .IncodeDocumentCaptureReviewImage {
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    border-style: var(--tw-border-style);
+    border-width: 4px;
+    max-height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewPreview .IncodeDocumentCaptureReviewImage.IncodeDocumentCaptureSuccessBorder {
+    border-color: var(--color-border-status-positive, var(--border-status-positive-static))
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewPreview .IncodeCaptureEncryptionLabel {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    justify-content: center
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewFooter {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    max-width: var(--incode-form-max-w);
+    width: 100%
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewFooter.IncodeDocumentCaptureReviewFooterEmpty {
+    height: 56px;
+    visibility: hidden
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewFooter .IncodeDocumentCaptureActionRow {
+    display: flex;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    width: 100%
+}
+
+.IncodeDocumentCaptureReviewLayout .IncodeDocumentCaptureReviewFooter .IncodeDocumentCaptureActionRow .IncodeButton {
+    flex: 1
+}
+
+.IncodeDocumentCaptureReviewCentered {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center
+}
+
+.IncodeDocumentCapturePdfCard {
+    align-items: center;
+    background-color: var(--color-neutral-50, oklch(98.5% 0 0));
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-radius: var(--radius-large, var(--border-radius-large));
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24, var(--spacing-24, 24px));
+    justify-content: center;
+    overflow: hidden;
+    padding-block: var(--spacing-32, var(--spacing-32, 32px));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeDocumentCapturePdfCard .ImageDocumentCapturePdfPreviewContainer {
+    background-color: var(--color-neutral-50, oklch(98.5% 0 0));
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-radius: var(--radius-lg, .5rem);
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+    height: var(--document-capture-pdf-preview-height);
+    overflow: hidden;
+    width: var(--spacing-120, var(--spacing-120, 120px))
+}
+
+.IncodeDocumentCapturePdfCard .ImageDocumentCapturePdfPreviewContainer .ImageDocumentCapturePdfPreview {
+    border-style: var(--tw-border-style);
+    border-width: 0;
+    height: calc(100% + 4px);
+    margin: -2px;
+    width: calc(100% + 4px)
+}
+
+.IncodeDocumentCapturePdfCard .IncodeDocumentCapturePdfFileName {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    overflow-wrap: break-word;
+    text-align: center
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesTitle {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height)
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesCards {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32, var(--spacing-32, 32px));
+    padding-block: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesCards .IncodeDocumentCommonIssuesCard {
+    align-items: flex-start;
+    background-color: var(--color-surface-neutral-50, var(--surface-neutral-50));
+    border-radius: 12px;
+    display: flex;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    padding: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesCards .IncodeDocumentCommonIssuesCard .IncodeDocumentCommonIssuesCardIcon {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    flex-shrink: 0
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesCards .IncodeDocumentCommonIssuesCard .IncodeDocumentCommonIssuesCardText {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4, var(--spacing-4, 4px))
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesCards .IncodeDocumentCommonIssuesCard .IncodeDocumentCommonIssuesCardText .IncodeDocumentCommonIssuesCardTitle {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height)
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesCards .IncodeDocumentCommonIssuesCard .IncodeDocumentCommonIssuesCardText .IncodeDocumentCommonIssuesCardBody {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-m-regular-size);
+    font-weight: var(--typography-body-m-regular-weight);
+    letter-spacing: var(--typography-body-m-regular-letter-spacing);
+    line-height: var(--typography-body-m-regular-line-height)
+}
+
+.IncodeOverlay .IncodeDocumentCommonIssuesButtons {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    margin-top: auto;
+    padding-top: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeCurpValidationPage .IncodePageContent {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    padding-top: var(--spacing-32, var(--spacing-32, 32px))
+}
+
+.IncodeCurpValidationPage .IncodeCurpValidation {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%
+}
+
+.IncodeCurpValidationPage .IncodeCurpInput {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    max-width: var(--incode-form-max-w);
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    width: 100%
+}
+
+.IncodeCurpValidationPage .IncodeCurpInput .IncodeButtonSecondary:focus {
+    text-decoration: none
+}
+
+.IncodeCurpValidationPage .IncodeCurpInput .IncodeButtonSecondary:active {
+    color: var(--color-button-secondary-text-default, var(--button-secondary-text-default))
+}
+
+.IncodeCurpValidationPage .IncodeGenerateCurpForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8, var(--spacing-8, 8px));
+    max-width: var(--incode-form-max-w);
+    width: 100%
+}
+
+.IncodeCurpValidationPage .IncodeCurpConfirm {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--incode-curp-confirm-max-w);
+    width: 100%
+}
+
+.IncodeCurpValidationPage .IncodeCurpConfirm .IncodeInput {
+    font-family: var(--typography-input-dropdown-family);
+    font-size: var(--typography-input-dropdown-m-size);
+    font-weight: var(--typography-input-dropdown-m-weight);
+    letter-spacing: var(--typography-input-dropdown-m-letter-spacing);
+    line-height: var(--typography-input-dropdown-m-line-height);
+    text-align: center
+}
+
+.IncodeCurpValidationPage .IncodeCurpFailure,
+.IncodeCurpValidationPage .IncodeCurpSuccess {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.IncodeCurpValidationPage .IncodeCurpFailureTitle,
+.IncodeCurpValidationPage .IncodeCurpSuccessTitle {
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeCurpValidationPage .IncodeCurpFailureHint {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    text-align: center
+}
+
+.IncodeGeolocationPage {
+    animation: fadeIn .4s ease-out
+}
+
+@media (prefers-reduced-motion:reduce) {
+    .IncodeGeolocationPage {
+        animation: none
+    }
+}
+
+.IncodeGeolocationPage .IncodeGeolocationIconWrapper {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    margin-top: var(--spacing-16, var(--spacing-16, 16px));
+    padding-block: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeGeolocationPage .IncodeGeolocationButtonWrapper {
+    padding-block: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodePageTitleContainer {
+    margin: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionSections {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-24, var(--spacing-24, 24px));
+    margin-top: var(--spacing-24, var(--spacing-24, 24px));
+    max-width: 420px;
+    width: 100%
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionSectionTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h4-size);
+    font-weight: var(--typography-headline-h4-weight);
+    letter-spacing: var(--typography-headline-h4-letter-spacing);
+    line-height: var(--typography-headline-h4-line-height);
+    margin: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStepsList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    list-style-type: none;
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStep {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStepIcon {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--color-surface-neutral-50, var(--surface-neutral-50));
+    border-radius: var(--radius-small, var(--border-radius-small));
+    display: flex;
+    height: var(--spacing-40, var(--spacing-40, 40px));
+    justify-content: center;
+    min-height: var(--spacing-40, var(--spacing-40, 40px));
+    min-width: var(--spacing-40, var(--spacing-40, 40px));
+    width: var(--spacing-40, var(--spacing-40, 40px))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStepImg {
+    height: 100%;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStepImgPaddedSettings {
+    padding: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStepImgPaddedBrowser {
+    padding: 5px
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStepText {
+    font-size: var(--text-16, var(--primitive-typography-size-16));
+    --tw-leading: var(--leading-snug, 1.375);
+    line-height: var(--leading-snug, 1.375);
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionStepTextBold {
+    --tw-font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold))
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationPermissionArrow {
+    display: inline-block;
+    vertical-align: middle
+}
+
+.IncodeGeolocationPage.IncodeGeolocationPermissionPage .IncodeGeolocationSrOnly {
+    border-width: 0;
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px
+}
+
+.IncodeEkycPage {
+    margin-inline: auto;
+    max-width: 480px
+}
+
+@media (min-width:48rem) {
+    .IncodeEkycPage .IncodePageInner {
+        padding-block: var(--spacing-0, var(--spacing-none, 0));
+        padding-inline: var(--spacing-0, var(--spacing-none, 0))
+    }
+}
+
+.IncodeEkycPage .IncodeEkycSpinner {
+    flex: 1
+}
+
+.IncodeEkycPage .IncodeEkycForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    margin-top: var(--spacing-32, var(--spacing-32, 32px));
+    width: 100%
+}
+
+.IncodeEkycPage .IncodeEkycForm .IncodeAddressAutocomplete,
+.IncodeEkycPage .IncodeEkycForm .IncodeDateInputComposed,
+.IncodeEkycPage .IncodeEkycForm .IncodeDropdownComposed,
+.IncodeEkycPage .IncodeEkycForm .IncodeInputComposed,
+.IncodeEkycPage .IncodeEkycForm .IncodePhoneInputComposed {
+    margin-inline: auto
+}
+
+.IncodeEkycPage .IncodeEkycForm .IncodeFormField {
+    margin-bottom: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeEkycPage .IncodeEkycSectionHeader {
+    color: var(--color-input-text-label-default, var(--input-text-label-default));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h3-size);
+    font-weight: var(--typography-headline-h3-weight);
+    letter-spacing: var(--typography-headline-h3-letter-spacing);
+    line-height: var(--typography-headline-h3-line-height);
+    margin-top: var(--spacing-16, var(--spacing-16, 16px));
+    padding-block: var(--spacing-12, var(--spacing-12, 12px))
+}
+
+.IncodeEkycPage .IncodeEkycRadioGroup,
+.IncodeEkycPage .IncodeEkycSectionHeader {
+    margin-inline: auto;
+    max-width: 420px;
+    width: 100%
+}
+
+.IncodeEkycPage .IncodeEkycFooter {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    margin-top: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeEkycPage .IncodeEkycFooter .IncodeEkycSubmitError {
+    color: var(--color-input-text-helper-negative, var(--input-text-helper-negative));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    margin-bottom: var(--spacing-12, var(--spacing-12, 12px));
+    margin-top: 0;
+    text-align: center
+}
+
+@media (min-width:768px) {
+    .IncodeEkycPage.IncodePageContainer {
+        height: 100dvh;
+        margin-top: var(--spacing-0, var(--spacing-none, 0));
+        max-height: none
+    }
+
+    .IncodeEkycPage .IncodePageInner {
+        height: 100%
+    }
+
+    .IncodeEkycPage.IncodeEkycPageScrollable {
+        max-width: 500px
+    }
+
+    .IncodeEkycPage .IncodeEkycForm,
+    .IncodeEkycPage .IncodePageContent {
+        min-height: var(--spacing-0, var(--spacing-none, 0))
+    }
+
+    .IncodeEkycPage .IncodeEkycForm {
+        overflow-y: auto;
+        padding-bottom: var(--spacing-8, var(--spacing-8, 8px))
+    }
+
+    .IncodeEkycPage.IncodeEkycPageScrollable .IncodeEkycForm {
+        margin-left: var(--spacing-8, var(--spacing-8, 8px))
+    }
+
+    .IncodeEkycPage .IncodeEkycFooter {
+        flex-shrink: 0
+    }
+}
+
+.IncodeEkybPage {
+    margin-inline: auto
+}
+
+.IncodeEkybPage .IncodeEkybSpinner {
+    flex: 1
+}
+
+.IncodeEkybPage .IncodeEkybForm {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    margin-top: var(--spacing-32, var(--spacing-32, 32px));
+    width: 100%
+}
+
+.IncodeEkybPage .IncodeEkybForm .IncodeCountrySelector,
+.IncodeEkybPage .IncodeEkybForm .IncodeDropdownComposed,
+.IncodeEkybPage .IncodeEkybForm .IncodeFormField,
+.IncodeEkybPage .IncodeEkybForm .IncodeInputComposed {
+    margin-inline: auto
+}
+
+.IncodeEkybPage .IncodeEkybForm .IncodeFormField {
+    margin-bottom: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeEkybPage .IncodeEkybForm .IncodeAddressAutocomplete {
+    margin-inline: auto
+}
+
+.IncodeEkybPage .IncodeEkybCountrySelector {
+    width: 100%
+}
+
+.IncodeEkybPage .IncodeEkybUboEntry,
+.IncodeEkybPage .IncodeEkybUbos {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeEkybPage .IncodeEkybRemoveUbo {
+    color: var(--color-text-status-negative, var(--text-status-negative));
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-s-regular-size);
+    font-weight: var(--typography-body-s-regular-weight);
+    letter-spacing: var(--typography-body-s-regular-letter-spacing);
+    line-height: var(--typography-body-s-regular-line-height);
+    padding: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeEkybPage .IncodeEkybAddUbo,
+.IncodeEkybPage .IncodeEkybRemoveUbo {
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    cursor: pointer;
+    --tw-border-style: none;
+    background-color: #0000;
+    border-style: none
+}
+
+.IncodeEkybPage .IncodeEkybAddUbo {
+    color: var(--color-button-primary-surface-default, var(--button-primary-surface-default));
+    font-family: var(--typography-button-family);
+    font-size: var(--typography-button-m-underlined-size);
+    font-weight: var(--typography-button-m-underlined-weight);
+    letter-spacing: var(--typography-button-m-underlined-letter-spacing);
+    line-height: var(--typography-button-m-underlined-line-height);
+    padding-block: var(--spacing-8, var(--spacing-8, 8px));
+    text-align: center;
+    text-decoration-line: underline;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto
+}
+
+.IncodeEkybPage .IncodeEkybAddUbo:hover {
+    opacity: .8
+}
+
+.IncodeEkybPage .IncodeEkybSectionHeader {
+    color: var(--color-input-text-label-default, var(--input-text-label-default));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h3-size);
+    font-weight: var(--typography-headline-h3-weight);
+    letter-spacing: var(--typography-headline-h3-letter-spacing);
+    line-height: var(--typography-headline-h3-line-height);
+    margin-inline: auto;
+    margin-top: var(--spacing-16, var(--spacing-16, 16px));
+    max-width: 420px;
+    padding-block: var(--spacing-12, var(--spacing-12, 12px));
+    width: 100%
+}
+
+.IncodeEkybPage .IncodeEkybFooter {
+    margin-top: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+@media (min-width:768px) {
+    .IncodeEkybPage.IncodePageContainer {
+        margin-top: var(--spacing-0, var(--spacing-none, 0));
+        max-height: none
+    }
+
+    .IncodeEkybPage.IncodeEkybPageScrollable {
+        max-width: 500px
+    }
+
+    .IncodeEkybPage .IncodeEkybForm,
+    .IncodeEkybPage .IncodePageContent {
+        min-height: var(--spacing-0, var(--spacing-none, 0))
+    }
+
+    .IncodeEkybPage .IncodeEkybForm {
+        overflow-y: auto;
+        padding-bottom: var(--spacing-8, var(--spacing-8, 8px))
+    }
+
+    .IncodeEkybPage .IncodeEkybFooter {
+        flex-shrink: 0
+    }
+}
+
+.IncodeRedirectRoot {
+    height: 100%;
+    width: 100%
+}
+
+.IncodeRedirectRoot .IncodeRedirectLogo {
+    max-height: 100%;
+    max-width: 100%
+}
+
+.IncodeRedirectRoot .IncodeRedirectContainer {
+    align-items: safe center;
+    background-color: var(--color-surface-neutral-50, var(--surface-neutral-50));
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    overflow-y: auto;
+    position: relative;
+    width: 100%
+}
+
+.IncodeRedirectRoot .IncodeRedirectContainer .IncodeRedirectCard {
+    align-items: center;
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: var(--redirect-card-max-width);
+    min-height: min(var(--redirect-card-max-width), var(--redirect-card-min-height));
+    overflow-x: clip;
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px));
+    padding-bottom: var(--spacing-24, var(--spacing-24, 24px));
+    padding-top: var(--spacing-32, var(--spacing-32, 32px));
+    width: 100%
+}
+
+.IncodeRedirectRoot .IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions,
+.IncodeRedirectRoot .IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectTopGroup {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32, var(--spacing-32, 32px));
+    width: 100%
+}
+
+.IncodeRedirectRoot .IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions {
+    max-width: var(--redirect-options-max-width)
+}
+
+.IncodeRedirectContainer .IncodeRedirectToast {
+    animation: fadeInOut 3s ease-in-out forwards;
+    left: 50%;
+    position: absolute;
+    top: var(--spacing-16, var(--spacing-16, 16px));
+    z-index: 50
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -20px)
+    }
+
+    15% {
+        opacity: 1;
+        transform: translate(-50%)
+    }
+
+    85% {
+        opacity: 1;
+        transform: translate(-50%)
+    }
+
+    to {
+        opacity: 0;
+        transform: translate(-50%, -20px)
+    }
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectHeader {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectHeader .IncodeRedirectLogoWrapper {
+    --min-height-logo-wrapper: 44px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: var(--min-height-logo-wrapper);
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectHeader .IncodeRedirectLogo {
+    max-height: var(--logo-height, 44px)
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectHeader .IncodeRedirectTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    text-align: center
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectHeader .IncodeRedirectSubtitle {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    text-align: center
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectBottomNav {
+    --max-width-bottom-nav: 390px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-40, var(--spacing-40, 40px));
+    max-width: var(--max-width-bottom-nav);
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectBottomNav .IncodeRedirectVerifiedBy {
+    align-items: center;
+    display: flex;
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    justify-content: center;
+    padding-bottom: var(--spacing-12, var(--spacing-12, 12px));
+    padding-top: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectTabs {
+    align-items: flex-end;
+    border-bottom-style: var(--tw-border-style);
+    border-bottom-width: 1px;
+    border-color: var(--color-border-neutral-300, var(--border-neutral-300));
+    display: flex;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    justify-content: center;
+    max-width: var(--redirect-tabs-max-width);
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectTabs .IncodeRedirectTab {
+    background-color: #0000;
+    border-bottom: 2px var(--tw-border-style);
+    border-color: #0000;
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    cursor: pointer;
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    padding-block: var(--spacing-12, var(--spacing-12, 12px));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectTabs .IncodeRedirectTab:focus-visible {
+    border-radius: var(--radius-xs, .125rem);
+    outline-color: var(--color-border-status-focus, var(--border-status-focus));
+    outline-offset: 2px;
+    outline-style: var(--tw-outline-style);
+    outline-width: 2px
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectTabs .IncodeRedirectTab.IncodeRedirectTabActive {
+    border-color: var(--color-text-link-default, var(--text-link-default));
+    color: var(--color-text-body-primary, var(--text-body-800-primary))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions>[role=tabpanel] {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-32, var(--spacing-32, 32px));
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodeRedirectTabDescription {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    max-width: var(--redirect-tab-description-max-width);
+    text-align: center
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodeRedirectQrWrapper {
+    align-items: center;
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-radius: var(--redirect-qr-wrapper-border-radius);
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-12, var(--spacing-12, 12px))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInput,
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputRow {
+    --max-width-phone-input-row: 340px;
+    align-items: stretch;
+    display: flex;
+    gap: var(--spacing-8, var(--spacing-8, 8px));
+    max-width: var(--max-width-phone-input-row);
+    position: relative;
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputWrapper {
+    background-color: var(--color-input-surface-default, var(--input-surface-default));
+    border-color: var(--color-input-border-default, var(--input-border-default));
+    border-radius: var(--radius-small, var(--border-radius-small));
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    transition-duration: var(--tw-duration, var(--default-transition-duration, .15s));
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(.4, 0, .2, 1)));
+    --tw-duration: .2s;
+    align-items: center;
+    display: flex;
+    flex: 1;
+    transition-duration: .2s
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputWrapper:focus-within {
+    border-color: var(--color-input-border-focused, var(--input-border-focused))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputWrapper.IncodePhoneInputWrapperError {
+    border-color: var(--color-input-border-negative, var(--input-border-negative))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputWrapper.IncodePhoneInputWrapperDisabled {
+    background-color: var(--color-input-surface-disabled, var(--input-surface-disabled));
+    border-color: var(--color-input-border-disabled, var(--input-border-disabled))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountrySelector {
+    --width-country-selector: 124px;
+    background-color: var(--color-input-surface-default, var(--input-surface-default));
+    border-color: var(--color-input-border-default, var(--input-border-default));
+    border-radius: var(--radius-small, var(--border-radius-small));
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    transition-duration: var(--tw-duration, var(--default-transition-duration, .15s));
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(.4, 0, .2, 1)));
+    --tw-duration: .2s;
+    flex-shrink: 0;
+    position: static;
+    transition-duration: .2s;
+    width: var(--width-country-selector)
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountrySelector.IncodePhoneCountrySelectorOpen {
+    border-color: var(--color-input-border-focused, var(--input-border-focused))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountrySelector.IncodePhoneCountrySelectorDisabled {
+    background-color: var(--color-input-surface-disabled, var(--input-surface-disabled));
+    border-color: var(--color-input-border-disabled, var(--input-border-disabled))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryButton {
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    cursor: pointer;
+    height: 100%;
+    padding: var(--spacing-8, var(--spacing-8, 8px));
+    padding-left: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%;
+    --tw-border-style: none;
+    font-size: var(--text-18, var(--primitive-typography-size-18));
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    align-items: center;
+    background-color: #0000;
+    border-radius: var(--radius-small, var(--border-radius-small));
+    border-style: none;
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    display: flex;
+    font-family: inherit;
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    justify-content: center
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryButton:disabled {
+    color: var(--color-input-text-field-disabled, var(--input-text-field-disabled));
+    cursor: not-allowed
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryButton:focus {
+    --tw-outline-style: none;
+    outline-style: none
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryFlag {
+    font-size: var(--text-24, var(--primitive-typography-size-24));
+    --tw-leading: 1;
+    line-height: 1
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryCode {
+    font-size: var(--text-18, var(--primitive-typography-size-18));
+    margin-left: var(--spacing-4, var(--spacing-4, 4px));
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    white-space: nowrap
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryArrow {
+    color: var(--color-icon-neutral-500, var(--icon-neutral-500));
+    height: var(--spacing-24, var(--spacing-24, 24px));
+    margin-left: var(--spacing-8, var(--spacing-8, 8px));
+    transition-duration: var(--tw-duration, var(--default-transition-duration, .15s));
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function, cubic-bezier(.4, 0, .2, 1)));
+    width: var(--spacing-24, var(--spacing-24, 24px));
+    --tw-duration: .2s;
+    transition-duration: .2s
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryArrowUp {
+    rotate: 180deg
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryButton:disabled .IncodePhoneCountryArrow {
+    color: var(--color-icon-neutral-300, var(--icon-neutral-300))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryDropdown {
+    --max-height-country-dropdown: 320px;
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    border-color: var(--color-input-border-default, var(--input-border-default));
+    border-radius: var(--radius-small, var(--border-radius-small));
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    box-shadow: 0 4px 16px #0000001f;
+    left: var(--spacing-0, var(--spacing-none, 0));
+    margin-top: var(--spacing-8, var(--spacing-8, 8px));
+    max-height: var(--max-height-country-dropdown);
+    overflow-y: auto;
+    padding: var(--spacing-8, var(--spacing-8, 8px));
+    position: absolute;
+    right: var(--spacing-0, var(--spacing-none, 0));
+    top: 100%;
+    z-index: 50
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryOption {
+    align-items: center;
+    border-radius: var(--radius-small, var(--border-radius-small));
+    cursor: pointer;
+    font-size: var(--text-16, var(--primitive-typography-size-16));
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    padding-block: var(--spacing-12, var(--spacing-12, 12px));
+    padding-inline: var(--spacing-12, var(--spacing-12, 12px));
+    width: 100%;
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    --tw-border-style: none;
+    background-color: #0000;
+    border-style: none;
+    display: flex;
+    font-family: inherit;
+    text-align: left
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryOption:hover {
+    background-color: var(--color-surface-neutral-100, var(--surface-neutral-100))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryOption:focus {
+    background-color: var(--color-surface-neutral-100, var(--surface-neutral-100));
+    --tw-outline-style: none;
+    outline-style: none
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryOptionSelected,
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryOptionSelected:hover {
+    background-color: var(--color-surface-brand-50, var(--surface-brand-50))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryOptionCode {
+    --min-width-country-code: 52px;
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-size: var(--text-16, var(--primitive-typography-size-16));
+    min-width: var(--min-width-country-code)
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneCountryOptionName {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    flex: 1;
+    font-size: var(--text-16, var(--primitive-typography-size-16));
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputField {
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    --tw-border-style: none;
+    font-size: var(--text-18, var(--primitive-typography-size-18));
+    padding-block: var(--spacing-16, var(--spacing-16, 16px));
+    padding-inline: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%;
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-input-text-field-default, var(--input-text-field-default));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    --tw-outline-style: none;
+    background-color: #0000;
+    border-radius: var(--radius-small, var(--border-radius-small));
+    border-style: none;
+    outline-style: none
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputField::-moz-placeholder {
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-input-text-field-placeholder, var(--input-text-field-placeholder));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputField::placeholder {
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-input-text-field-placeholder, var(--input-text-field-placeholder));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputField:disabled {
+    color: var(--color-input-text-field-disabled, var(--input-text-field-disabled));
+    cursor: not-allowed
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodePhoneInputError {
+    font-size: var(--text-14, var(--primitive-typography-size-14));
+    margin: var(--spacing-0, var(--spacing-none, 0));
+    text-align: center;
+    --tw-font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium));
+    color: var(--color-input-text-helper-negative, var(--input-text-helper-negative));
+    font-weight: var(--font-weight-medium, var(--primitive-typography-weight-medium))
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodeRedirectSmsSendButton {
+    --max-width-sms-button: 335px;
+    max-width: var(--max-width-sms-button);
+    width: 100%
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodeRedirectLinkSent {
+    align-items: center;
+    display: flex;
+    flex-direction: column
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodeRedirectLinkSent .IncodeRedirectLinkSentTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    text-align: center
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodeRedirectLinkSent .IncodeRedirectLinkSentPhone {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    text-align: center
+}
+
+.IncodeRedirectContainer .IncodeRedirectCard .IncodeRedirectOptions .IncodeRedirectLinkSent .IncodeRedirectLinkSentActions {
+    --width-link-sent-actions: 335px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: var(--Button-family, "DM Sans");
+    font-size: 18px;
+    font-weight: 500;
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    justify-content: center;
+    letter-spacing: 0;
+    line-height: 100%;
+    width: var(--width-link-sent-actions)
+}
+
+.IncodeRedirectFinishedContainer {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    width: 100%
+}
+
+.IncodeRedirectFinishedContainer .IncodeRedirectLogo {
+    max-height: var(--logo-height, 44px)
+}
+
+.IncodeRedirectFinishedContainer .IncodeRedirectFinishedTitle {
+    --width-finished-title: 500px;
+    font-size: var(--text-3xl, 1.875rem);
+    line-height: var(--tw-leading, var(--text-3xl--line-height, 1.2));
+    margin-block: var(--spacing-20, var(--spacing-20, 20px));
+    --tw-font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    width: var(--width-finished-title)
+}
+
+.IncodeRedirectFinishedContainer .IncodeRedirectFinishedSubtitle,
+.IncodeRedirectFinishedContainer .IncodeRedirectFinishedTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    text-align: center
+}
+
+.IncodeRedirectFinishedContainer .IncodeRedirectFinishedSubtitle {
+    --width-finished-subtitle: 400px;
+    font-size: var(--text-2xl, 1.5rem);
+    line-height: var(--tw-leading, var(--text-2xl--line-height, 1.33333));
+    --tw-font-weight: var(--font-weight-bold, var(--primitive-typography-weight-bold));
+    width: var(--width-finished-subtitle)
+}
+
+.IncodeConsentPage {
+    height: 100%
+}
+
+.IncodeConsentPage .IncodePageInner {
+    padding: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeConsentPage .IncodePageContent {
+    min-height: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeConsentPage .IncodeConsentContent {
+    gap: var(--spacing-24, var(--spacing-24, 24px));
+    height: 100%;
+    justify-content: space-between
+}
+
+.IncodeConsentPage .IncodeConsentBody,
+.IncodeConsentPage .IncodeConsentContent {
+    display: flex;
+    flex-direction: column;
+    min-height: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeConsentPage .IncodeConsentBody {
+    flex: 1;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    overflow-y: auto
+}
+
+.IncodeConsentPage .IncodeConsentBody .IncodeRichText .markup h2,
+.IncodeConsentPage .IncodeConsentBody .IncodeRichText h2 {
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    margin-bottom: var(--spacing-12, var(--spacing-12, 12px))
+}
+
+.IncodeConsentPage .IncodeConsentTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h1-size);
+    font-weight: var(--typography-headline-h1-weight);
+    letter-spacing: var(--typography-headline-h1-letter-spacing);
+    line-height: var(--typography-headline-h1-line-height)
+}
+
+.IncodeConsentPage .IncodeConsentSubtitle {
+    color: var(--color-text-body-secondary, var(--text-body-500-secondary))
+}
+
+.IncodeConsentPage .IncodeConsentCheckboxList {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12, var(--spacing-12, 12px))
+}
+
+.IncodeConsentPage .IncodeConsentCheckbox {
+    background-color: var(--color-surface-brand-50, var(--surface-brand-50));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    padding: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeConsentPage .IncodeConsentCheckbox .IncodeCheckboxLabel {
+    align-items: flex-start
+}
+
+.IncodeConsentPage .IncodeConsentCheckbox .IncodeCheckboxText,
+.IncodeConsentPage .IncodeConsentCheckboxLabel {
+    font-family: var(--typography-checkbox-radio-family);
+    font-size: var(--typography-checkbox-radio-s-size);
+    font-weight: var(--typography-checkbox-radio-s-weight);
+    letter-spacing: var(--typography-checkbox-radio-s-letter-spacing);
+    line-height: var(--typography-checkbox-radio-s-line-height)
+}
+
+.IncodeConsentPage .IncodeConsentCheckboxLabel {
+    color: var(--color-text-body-primary, var(--text-body-800-primary))
+}
+
+.IncodeConsentPage .IncodeConsentCheckboxLabel .IncodeRichText,
+.IncodeConsentPage .IncodeConsentCheckboxLabel .IncodeRichText .markup {
+    display: inline
+}
+
+.IncodeConsentPage .IncodeConsentCheckboxLabel .IncodeRichText .markup p,
+.IncodeConsentPage .IncodeConsentCheckboxLabel .IncodeRichText p {
+    display: inline;
+    font-family: var(--typography-checkbox-radio-family);
+    font-size: var(--typography-checkbox-radio-s-size);
+    font-weight: var(--typography-checkbox-radio-s-weight);
+    letter-spacing: var(--typography-checkbox-radio-s-letter-spacing);
+    line-height: var(--typography-checkbox-radio-s-line-height);
+    margin-bottom: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeConsentPage .IncodeConsentCheckboxLabel .IncodeRichText .markup a,
+.IncodeConsentPage .IncodeConsentCheckboxLabel .IncodeRichText a {
+    color: var(--color-surface-brand-600, var(--surface-brand-600-static))
+}
+
+.IncodeConsentPage .IncodeConsentButton {
+    width: 100%
+}
+
+.IncodeConsentPage .IncodeConsentActions {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-8, var(--spacing-8, 8px));
+    width: 100%
+}
+
+.IncodeCustomFieldsForm {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    margin-top: var(--spacing-32, var(--spacing-32, 32px));
+    overflow-y: auto;
+    width: 100%
+}
+
+.IncodeCustomFieldsForm .IncodeCustomFieldsField {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%
+}
+
+.IncodeCustomFieldsPage .IncodePageHeader {
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeDynamicFormsProgress {
+    color: var(--text-secondary);
+    font-size: var(--text-sm, .875rem);
+    line-height: var(--tw-leading, var(--text-sm--line-height, 1.42857));
+    margin-bottom: var(--spacing-4, var(--spacing-4, 4px));
+    text-align: center
+}
+
+.IncodeDynamicFormsPage .IncodePageTitleContainer {
+    margin-top: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeDynamicFormsPage .IncodePageContent {
+    align-items: center
+}
+
+.IncodeDynamicFormsForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-width: 420px;
+    width: 100%
+}
+
+.IncodeDynamicFormsForm button {
+    margin-top: auto
+}
+
+.IncodeDynamicFormsField {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeSignature .IncodeSignatureContent {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    padding-top: var(--spacing-32, var(--spacing-32, 32px));
+    width: 100%
+}
+
+.IncodeSignature .IncodeSignatureButtonContainer {
+    margin-block: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeSignature.IncodeSignatureFadeIn {
+    animation: fadeIn var(--motion-fade-in-duration, .7s) ease-out;
+    animation-fill-mode: both
+}
+
+.IncodeSignature .IncodeSignatureButtonContainer .IncodeButton.IncodeButtonPrimary {
+    transition: background-color .35s ease-out, color .35s ease-out, border-color .35s ease-out, opacity .35s ease-out, box-shadow .35s ease-out
+}
+
+.IncodeSignature .SignatureCanvasContainer {
+    align-self: center;
+    background-color: var(--color-input-surface-default, var(--input-surface-default));
+    border-color: var(--color-input-border-default, var(--input-border-default));
+    border-radius: var(--radius-small, var(--border-radius-small));
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    height: var(--signature-canvas-height);
+    max-width: var(--signature-canvas-max-width);
+    padding-block: var(--spacing-8, var(--spacing-8, 8px));
+    padding-inline: var(--spacing-16, var(--spacing-16, 16px));
+    position: relative;
+    width: 100%
+}
+
+.IncodeSignature .SignatureCanvas {
+    height: 100%;
+    padding-block: var(--spacing-8, var(--spacing-8, 8px));
+    width: 100%
+}
+
+.IncodeSignature .SignatureCanvasPlaceholder {
+    color: var(--color-input-text-field-placeholder, var(--input-text-field-placeholder));
+    font-family: var(--typography-input-dropdown-family);
+    font-size: var(--typography-input-dropdown-m-size);
+    font-weight: var(--typography-input-dropdown-m-weight);
+    letter-spacing: var(--typography-input-dropdown-m-letter-spacing);
+    line-height: var(--typography-input-dropdown-m-line-height);
+    --tw-translate-x: -50%;
+    --tw-translate-y: -50%;
+    animation: fadeIn var(--motion-fade-in-duration, .7s) ease-out;
+    animation-fill-mode: both;
+    left: 50%;
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    width: 100%
+}
+
+.IncodeSignature .IncodeSignatureSuccess {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
+
+.IncodeWatchlistForBusinessPage {
+    height: 100%
+}
+
+.IncodeWatchlistForBusinessPage .IncodeWatchlistForBusinessForm {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    height: 100%;
+    margin-top: var(--spacing-32, var(--spacing-32, 32px));
+    width: 100%
+}
+
+.IncodeWatchlistForBusinessPage .IncodeWatchlistForBusinessForm button {
+    margin-top: auto
+}
+
+.IncodeElectronicSignature .IncodePageContent {
+    justify-content: space-between;
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    padding-top: var(--spacing-32, var(--spacing-32, 32px))
+}
+
+.IncodeElectronicSignature .IncodePageContent:has(.IncodeElectronicSignatureDocViewHeader),
+.IncodeElectronicSignature .IncodePageContent:has(.IncodeElectronicSignatureUploadBody) {
+    padding-top: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeElectronicSignature .IncodePageTitleContainer {
+    max-width: 600px
+}
+
+.IncodeElectronicSignature .IncodePageFooter {
+    padding-top: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeElectronicSignatureUploadBody {
+    align-items: center;
+    container-type: size;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-height: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeElectronicSignatureIllustration {
+    align-items: center;
+    aspect-ratio: 1;
+    background-color: var(--color-surface-brand-50, var(--surface-brand-50));
+    border-radius: var(--radius-full, var(--border-radius-full));
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+    width: min(100cqw, 100cqh - 32px, 297px)
+}
+
+.IncodeElectronicSignatureIllustration svg {
+    --tw-translate-y: -3%;
+    height: auto;
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+    width: 80%
+}
+
+.IncodeElectronicSignatureFileInput {
+    height: 1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 1px
+}
+
+.IncodeElectronicSignatureReviewBody {
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: center;
+    margin-inline: auto;
+    max-width: 420px;
+    padding-inline: var(--spacing-48, var(--spacing-48, 48px))
+}
+
+.IncodeElectronicSignatureReviewBody,
+.IncodeElectronicSignatureReviewCard {
+    align-items: center;
+    display: flex;
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    width: 100%
+}
+
+.IncodeElectronicSignatureReviewCard {
+    background-color: var(--color-surface-neutral-50, var(--surface-neutral-50));
+    border-radius: var(--radius-large, var(--border-radius-large));
+    flex-direction: column;
+    gap: var(--spacing-24, var(--spacing-24, 24px));
+    padding-block: var(--spacing-20, var(--spacing-20, 20px));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px))
+}
+
+.IncodeElectronicSignatureDocPreview,
+.IncodeElectronicSignatureReviewCard {
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-style: var(--tw-border-style);
+    border-width: 1px
+}
+
+.IncodeElectronicSignatureDocPreview {
+    aspect-ratio: 113/150;
+    background-color: var(--color-surface-neutral-0, var(--surface-neutral-0));
+    border-radius: 6px;
+    flex: 1;
+    max-height: 150px;
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    overflow: hidden;
+    pointer-events: none;
+    position: relative
+}
+
+.IncodeElectronicSignatureDocPreviewObject {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.IncodeElectronicSignatureDocName {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    flex-shrink: 0;
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h5-size);
+    font-weight: var(--typography-headline-h5-weight);
+    letter-spacing: var(--typography-headline-h5-letter-spacing);
+    line-height: var(--typography-headline-h5-line-height);
+    text-align: center
+}
+
+.IncodeElectronicSignatureEncrypted {
+    align-items: center;
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    display: flex;
+    font-family: var(--typography-body-family);
+    font-size: var(--typography-body-m-regular-size);
+    font-weight: var(--typography-body-m-regular-weight);
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    justify-content: center;
+    letter-spacing: var(--typography-body-m-regular-letter-spacing);
+    line-height: var(--typography-body-m-regular-line-height);
+    padding-block: var(--spacing-8, var(--spacing-8, 8px))
+}
+
+.IncodeElectronicSignatureEncryptedIcon {
+    color: var(--color-icon-neutral-500, var(--icon-neutral-500));
+    height: var(--spacing-16, var(--spacing-16, 16px));
+    width: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeElectronicSignatureSigningTop {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0
+}
+
+.IncodeElectronicSignatureSigningBottom {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    justify-content: flex-end;
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    padding-top: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeElectronicSignatureDocContainer {
+    align-items: center;
+    background-color: var(--color-surface-neutral-50, var(--surface-neutral-50));
+    border-color: var(--color-border-neutral-100, var(--border-neutral-100));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    justify-content: center;
+    max-width: 420px;
+    overflow: clip;
+    padding-block: var(--spacing-8, var(--spacing-8, 8px));
+    padding-inline: var(--spacing-24, var(--spacing-24, 24px));
+    width: 100%
+}
+
+.IncodeElectronicSignatureDocRow {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    height: 56px;
+    justify-content: space-between;
+    width: 100%
+}
+
+.IncodeElectronicSignatureDocRowName {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-button-family);
+    font-size: var(--typography-button-m-size);
+    font-weight: var(--typography-button-m-weight);
+    letter-spacing: var(--typography-button-m-letter-spacing);
+    line-height: var(--typography-button-m-line-height)
+}
+
+.IncodeElectronicSignatureDocRowAction {
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    cursor: pointer;
+    --tw-border-style: none;
+    background-color: #0000;
+    border-style: none;
+    color: var(--color-text-link-default, var(--text-link-default));
+    font-family: var(--typography-button-family);
+    font-size: var(--typography-button-m-underlined-size);
+    font-weight: var(--typography-button-m-underlined-weight);
+    letter-spacing: var(--typography-button-m-underlined-letter-spacing);
+    line-height: var(--typography-button-m-underlined-line-height);
+    padding: var(--spacing-0, var(--spacing-none, 0));
+    text-decoration-line: underline;
+    -webkit-text-decoration-skip-ink: none;
+    text-decoration-skip-ink: none;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto
+}
+
+.IncodeElectronicSignatureConsents {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-4, var(--spacing-4, 4px));
+    max-width: 420px;
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    overflow: auto;
+    width: 100%
+}
+
+.IncodeElectronicSignatureConsents .IncodeCheckbox {
+    background-color: var(--color-surface-brand-50, var(--surface-brand-50));
+    border-radius: var(--radius-medium, var(--border-radius-medium));
+    padding-block: var(--spacing-20, var(--spacing-20, 20px));
+    padding-inline: var(--spacing-16, var(--spacing-16, 16px));
+    width: 100%
+}
+
+.IncodeElectronicSignatureConsents .IncodeCheckboxText {
+    font-family: var(--typography-checkbox-radio-family);
+    font-size: var(--typography-checkbox-radio-s-size);
+    font-weight: var(--typography-checkbox-radio-s-weight);
+    letter-spacing: var(--typography-checkbox-radio-s-letter-spacing);
+    line-height: var(--typography-checkbox-radio-s-line-height)
+}
+
+.IncodeElectronicSignatureConsents a {
+    color: var(--color-text-link-default, var(--text-link-default));
+    text-decoration-line: underline
+}
+
+.IncodeElectronicSignatureSuccess .IncodePageContent {
+    justify-content: center;
+    padding-top: var(--spacing-0, var(--spacing-none, 0))
+}
+
+.IncodeElectronicSignatureSuccessCenter {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: center
+}
+
+.IncodeElectronicSignatureSuccessTitle {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h3-size);
+    font-weight: var(--typography-headline-h3-weight);
+    letter-spacing: var(--typography-headline-h3-letter-spacing);
+    line-height: var(--typography-headline-h3-line-height);
+    text-align: center
+}
+
+.IncodeElectronicSignatureDownloadLink {
+    color: var(--color-text-link-default, var(--text-link-default));
+    font-family: var(--typography-button-family);
+    font-size: var(--typography-button-m-size);
+    font-weight: var(--typography-button-m-weight);
+    letter-spacing: var(--typography-button-m-letter-spacing);
+    line-height: var(--typography-button-m-line-height);
+    text-align: center;
+    text-decoration-line: underline
+}
+
+.IncodeElectronicSignatureFooter {
+    align-items: center;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: center;
+    max-width: 420px;
+    width: 100%
+}
+
+.IncodeElectronicSignatureDocViewHeader {
+    align-items: center;
+    align-self: flex-start;
+    display: flex;
+    height: var(--page-header-height);
+    margin-top: calc(var(--page-header-height)*-1);
+    position: relative;
+    z-index: 10
+}
+
+.IncodeElectronicSignatureBackButton {
+    color: var(--color-text-body-primary, var(--text-body-800-primary))
+}
+
+.IncodeElectronicSignatureDocViewer {
+    border-width: var(--border-width-none, var(--primitive-border-width-0));
+    min-height: var(--spacing-0, var(--spacing-none, 0));
+    --tw-border-style: none;
+    border-style: none;
+    flex: 1;
+    width: 100%
+}
+
+.IncodeVerificationResult .IncodePageContent {
+    animation: fadeIn var(--motion-fade-in-duration, .7s) ease-out;
+    animation-fill-mode: both;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    padding-bottom: var(--spacing-16, var(--spacing-16, 16px))
+}
+
+.IncodeVerificationResult__center {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--spacing-16, var(--spacing-16, 16px));
+    justify-content: center;
+    margin-inline: auto;
+    max-width: 420px;
+    width: 100%
+}
+
+.IncodeVerificationResult__title {
+    color: var(--color-text-body-primary, var(--text-body-800-primary));
+    font-family: var(--typography-headline-family);
+    font-size: var(--typography-headline-h2-size);
+    font-weight: var(--typography-headline-h2-weight);
+    letter-spacing: var(--typography-headline-h2-letter-spacing);
+    line-height: var(--typography-headline-h2-line-height);
+    text-align: center
+}
+
+.IncodeVerificationResult__actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-12, var(--spacing-12, 12px));
+    margin-inline: auto;
+    max-width: 420px;
+    width: 100%
+}
+
+.IncodeFormField {
+    margin-bottom: .75rem;
+    width: 100%
+}
+
+.IncodeFlow {
+    height: 100%;
+    width: 100%
+}
+
+.IncodeFlowModuleLoading {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    text-align: center
+}
+
+@property --tw-rotate-x {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-rotate-y {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-rotate-z {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-skew-x {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-skew-y {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-border-style {
+    syntax: "*";
+    inherits: false;
+    initial-value: solid
+}
+
+@property --tw-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-shadow-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-shadow-alpha {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 100%
+}
+
+@property --tw-inset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-inset-shadow-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-inset-shadow-alpha {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 100%
+}
+
+@property --tw-ring-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-ring-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-inset-ring-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-inset-ring-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-ring-inset {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-ring-offset-width {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --tw-ring-offset-color {
+    syntax: "*";
+    inherits: false;
+    initial-value: #fff
+}
+
+@property --tw-ring-offset-shadow {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0 0 #0000
+}
+
+@property --tw-outline-style {
+    syntax: "*";
+    inherits: false;
+    initial-value: solid
+}
+
+@property --tw-blur {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-brightness {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-contrast {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-grayscale {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-hue-rotate {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-invert {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-opacity {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-saturate {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-sepia {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-drop-shadow {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-drop-shadow-color {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-drop-shadow-alpha {
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 100%
+}
+
+@property --tw-drop-shadow-size {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-translate-x {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --tw-translate-y {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --tw-translate-z {
+    syntax: "*";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --tw-leading {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-font-weight {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-tracking {
+    syntax: "*";
+    inherits: false
+}
+
+@property --tw-duration {
+    syntax: "*";
+    inherits: false
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(1turn)
+    }
+}

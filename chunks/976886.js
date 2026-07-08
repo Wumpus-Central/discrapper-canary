@@ -1,4 +1,15 @@
-i.d(t, { a: () => _, c: () => w, i: () => m, l: () => p, n: () => D, o: () => y, r: () => S, s: () => L, t: () => F });
+i.d(t, {
+    a: () => _,
+    c: () => w,
+    i: () => m,
+    l: () => p,
+    n: () => F,
+    o: () => y,
+    r: () => E,
+    s: () => L,
+    t: () => D,
+    u: () => h,
+});
 var r,
     n,
     o = class {
@@ -56,8 +67,8 @@ var r,
         }
     };
 "u" > typeof window && void 0 === window.wasmArrayBuffer && (window.wasmArrayBuffer = null);
-let s = null,
-    a = null;
+let a = null,
+    s = null;
 async function l(e) {
     let t = await import(e);
     if ("function" != typeof t.Module) throw Error(`WASM glue at ${e} did not export a Module factory`);
@@ -73,9 +84,9 @@ async function d(e, t) {
 }
 async function u(e) {
     return (
-        a ||
         s ||
-        (s = (async () => {
+        a ||
+        (a = (async () => {
             try {
                 let t = !1 !== e.useSimd,
                     i = e.wasmSimdPath ?? e.wasmPath;
@@ -84,16 +95,16 @@ async function u(e) {
                         let t = await l(e.glueCodeSimdPath ?? i.replace(/\.wasm($|\?)/, ".js$1"));
                         window.Module = t;
                         let r = { wasmModule: await d(t, i), simdUsed: !0 };
-                        return (a = r), r;
+                        return (s = r), r;
                     } catch (e) {
                         console.warn("[Incode SDK] SIMD WASM load failed, falling back to non-SIMD", e);
                     }
                 let r = await l(e.glueCodePath);
                 window.Module = r;
                 let n = { wasmModule: await d(r, e.wasmPath), simdUsed: !1 };
-                return (a = n), n;
+                return (s = n), n;
             } catch (e) {
-                throw ((s = null), e);
+                throw ((a = null), e);
             }
         })())
     );
@@ -130,13 +141,13 @@ var m = class extends Error {
     }
 };
 let g = null,
-    C = null,
-    v = new o(4);
+    v = null,
+    C = new o(4);
 async function y(e, t, i, r, n) {
     if (!g)
         return (
-            C ||
-            (C = (async () => {
+            v ||
+            (v = (async () => {
                 try {
                     let { wasmModule: o } = await u({
                         wasmPath: e,
@@ -151,19 +162,19 @@ async function y(e, t, i, r, n) {
                         );
                     g = new o.WebClient();
                 } catch (e) {
-                    throw ((C = null), e);
+                    throw ((v = null), e);
                 }
             })())
         );
 }
 async function w(e, t, i, r, n) {
-    let o = E();
-    o.resetSessionState?.(), o.setDefaultHeaders?.(r), await f(v, () => o.createApi(e, t, n, i), !1);
-    let s = o.getRequestResult(-1);
-    if (s.hasError) throw new m(s.errorMessage || "WebClient handshake failed", s.statusCode, s.result);
+    let o = S();
+    o.resetSessionState?.(), o.setDefaultHeaders?.(r), await f(C, () => o.createApi(e, t, n, i), !1);
+    let a = o.getRequestResult(-1);
+    if (a.hasError) throw new m(a.errorMessage || "WebClient handshake failed", a.statusCode, a.result);
 }
-async function _(e, t, i, r, n, o, s, a = !1) {
-    let l = E(),
+async function _(e, t, i, r, n, o, a, s = !1) {
+    let l = S(),
         c = ((e) => {
             if (!e) return;
             let t = {};
@@ -173,12 +184,12 @@ async function _(e, t, i, r, n, o, s, a = !1) {
             }
             return t;
         })(n);
-    return v.withLock(async (n) => {
-        s &&
+    return C.withLock(async (n) => {
+        a &&
             l.setOnUploadProgress &&
             l.setOnUploadProgress((e) => {
                 try {
-                    s(e);
+                    a(e);
                 } catch (e) {
                     console.error("WasmWebClient: error in onUploadProgress callback", e);
                 }
@@ -186,24 +197,24 @@ async function _(e, t, i, r, n, o, s, a = !1) {
         try {
             return (
                 await f(
-                    v,
+                    C,
                     () =>
-                        (function (e, t, i, r, n, o, s, a, l) {
+                        (function (e, t, i, r, n, o, a, s, l) {
                             switch (t) {
                                 case "GET":
-                                    return e.get(i, r, s, o, a);
+                                    return e.get(i, r, a, o, s);
                                 case "POST":
-                                    return e.post(i, r, n ?? {}, o, s, a, l);
+                                    return e.post(i, r, n ?? {}, o, a, s, l);
                                 case "PUT":
-                                    return e.put(i, r, n ?? {}, o, s, a, l);
+                                    return e.put(i, r, n ?? {}, o, a, s, l);
                                 case "PATCH":
-                                    return e.patch(i, r, n ?? {}, o, s, a, l);
+                                    return e.patch(i, r, n ?? {}, o, a, s, l);
                                 case "DELETE":
-                                    return e.del(i, r, n ?? {}, o, s, a, l);
+                                    return e.del(i, r, n ?? {}, o, a, s, l);
                                 default:
                                     throw Error(`Unsupported WASM HTTP method: ${t}`);
                             }
-                        })(l, e, n, t, i, r, c, o, a),
+                        })(l, e, n, t, i, r, c, o, s),
                     !1,
                 ),
                 (function (e, t) {
@@ -222,11 +233,11 @@ let b = null;
 function L(e) {
     b = e;
 }
-function E() {
+function S() {
     if (!g) throw Error("WasmWebClient not initialized. Call initializeWasmWebClient() first.");
     return g;
 }
-var S = class e {
+var E = class e {
     constructor() {
         (this.versionsFile = null),
             (this.modelsBuffers = null),
@@ -245,9 +256,9 @@ var S = class e {
             (this.wasmCallSemaphore = new o()),
             (this.Module = null);
     }
-    async initialize(e, t, i, r, n, o, s) {
-        await this.freeResources(), (this.pipelines_ = s), (this.versionsFile = o);
-        let { wasmModule: a, simdUsed: l } = await u({
+    async initialize(e, t, i, r, n, o, a) {
+        await this.freeResources(), (this.pipelines_ = a), (this.versionsFile = o);
+        let { wasmModule: s, simdUsed: l } = await u({
             glueCodePath: i,
             glueCodeSimdPath: r || void 0,
             wasmPath: e,
@@ -255,7 +266,7 @@ var S = class e {
             useSimd: n,
         });
         return (
-            (this.wasmModule = a),
+            (this.wasmModule = s),
             (this.Module = window.Module),
             (this.workflowApiUtilities = new this.wasmModule.WorkflowApiUtilities()),
             (this.utilityApi = new this.wasmModule.UtilityApi()),
@@ -407,7 +418,7 @@ var S = class e {
         this.checkWasmInitialization("Unable to set face position constraints, cpp API hasn't been initialized"),
             this.faceProcessingWasmApi.setFacePositionConstraints(this.pipelineTypeToWasmEnum(e), t, i, r, n);
     }
-    async setFaceDetectionThresholds(e, t, i, r, n, o, s, a, l, c, d) {
+    async setFaceDetectionThresholds(e, t, i, r, n, o, a, s, l, c, d) {
         this.checkWasmInitialization("Unable to set face detection thresholds, cpp API hasn't been initialized"),
             this.faceProcessingWasmApi.setFaceProcessingThresholds(
                 this.pipelineTypeToWasmEnum(e),
@@ -416,8 +427,8 @@ var S = class e {
                 r,
                 n,
                 o,
-                s,
                 a,
+                s,
                 l,
                 c,
                 d,
@@ -435,7 +446,7 @@ var S = class e {
         this.checkWasmInitialization("Unable to set face detection mode, cpp API hasn't been initialized"),
             this.faceProcessingWasmApi.setFaceProcessingMode(this.pipelineTypeToWasmEnum(e), t);
     }
-    async setFaceDetectionCallbacks(e, t, i, r, n, o, s, a, l, c, d, u, h, p, f, m, g, C) {
+    async setFaceDetectionCallbacks(e, t, i, r, n, o, a, s, l, c, d, u, h, p, f, m, g, v) {
         this.checkWasmInitialization("Unable to set face detection callbacks, cpp API hasn't been initialized"),
             this.faceProcessingWasmApi.setFaceProcessingCallbacks(
                 this.pipelineTypeToWasmEnum(e),
@@ -444,8 +455,8 @@ var S = class e {
                 r,
                 n,
                 o,
-                s,
                 a,
+                s,
                 l,
                 c,
                 d,
@@ -455,14 +466,14 @@ var S = class e {
                 f,
                 m,
                 g,
-                C,
+                v,
             );
     }
-    async setIdCaptureThresholds(e, t, i, r, n, o, s, a, l, c) {
+    async setIdCaptureThresholds(e, t, i, r, n, o, a, s, l, c) {
         this.checkWasmInitialization("Unable to set thresholds, cpp API hasn't been initialized"),
-            this.idCaptureWasmApi.setIdCaptureThresholds(this.pipelineTypeToWasmEnum(e), t, i, r, n, o, s, a, l, c);
+            this.idCaptureWasmApi.setIdCaptureThresholds(this.pipelineTypeToWasmEnum(e), t, i, r, n, o, a, s, l, c);
     }
-    async setIdCaptureCallbacks(e, t, i, r, n, o, s, a, l, c, d, u, h, p) {
+    async setIdCaptureCallbacks(e, t, i, r, n, o, a, s, l, c, d, u, h, p) {
         this.checkWasmInitialization("Unable to set callbacks, cpp API hasn't been initialized"),
             this.idCaptureWasmApi.setIdCaptureCallbacks(
                 this.pipelineTypeToWasmEnum(e),
@@ -471,8 +482,8 @@ var S = class e {
                 r,
                 n,
                 o,
-                s,
                 a,
+                s,
                 l,
                 c,
                 d,
@@ -481,7 +492,7 @@ var S = class e {
                 p,
             );
     }
-    async setIdCaptureGeometryParams(e, t, i, r, n, o, s, a, l, c, d, u, h) {
+    async setIdCaptureGeometryParams(e, t, i, r, n, o, a, s, l, c, d, u, h) {
         this.checkWasmInitialization("Unable to set geometry params, cpp API hasn't been initialized"),
             this.idCaptureWasmApi.setIdCaptureGeometryParams(
                 this.pipelineTypeToWasmEnum(e),
@@ -490,8 +501,8 @@ var S = class e {
                 r,
                 n,
                 o,
-                s,
                 a,
+                s,
                 l,
                 c,
                 d,
@@ -499,9 +510,9 @@ var S = class e {
                 h,
             );
     }
-    async setIdCaptureConfigParams(e, t, i, r, n, o, s, a, l) {
+    async setIdCaptureConfigParams(e, t, i, r, n, o, a, s, l) {
         this.checkWasmInitialization("Unable to set config params, cpp API hasn't been initialized"),
-            this.idCaptureWasmApi.setIdCaptureConfigParams(this.pipelineTypeToWasmEnum(e), t, i, r, n, o, a, l);
+            this.idCaptureWasmApi.setIdCaptureConfigParams(this.pipelineTypeToWasmEnum(e), t, i, r, n, o, s, l);
     }
     setIdCaptureModelType(e, t) {
         this.checkWasmInitialization("Unable to set model type, cpp API hasn't been initialized"),
@@ -526,8 +537,8 @@ var S = class e {
             i = new Map();
         for (let [r, n] of this.pipelines_) {
             let o = this.pipelineTypeToWasmEnum(r),
-                s = [],
-                a = new this.wasmModule.VectorInt();
+                a = [],
+                s = new this.wasmModule.VectorInt();
             for (let e of n) {
                 if (!i.has(e)) {
                     let t = await fetch(e)
@@ -536,9 +547,9 @@ var S = class e {
                     i.set(e, t);
                 }
                 let t = i.get(e);
-                a.push_back(t.byteLength), s.push(t);
+                s.push_back(t.byteLength), a.push(t);
             }
-            e.set(o, a), t.set(o, s);
+            e.set(o, s), t.set(o, a);
         }
         for (let [i, r] of ((this.modelsBuffers = this.workflowApiUtilities.allocateModelsBuffers(e)), t)) {
             let e = this.modelsBuffers?.get(i);
@@ -724,11 +735,11 @@ let I = ["selfie", "idCapture"],
         ],
         idCapture: ["id_capture_2_01_fp16.ortmodelv2", "id_fiqa_19a81a0b9bf6492eb03b4667f6db4c85_fp16.ortmodelv2"],
     },
-    k = "idle",
+    M = "idle",
     x = null,
-    P = null,
-    M = [],
-    O = null;
+    k = null,
+    O = [],
+    P = null;
 function A(e) {
     let t = e.lastIndexOf("/");
     return -1 === t ? "models" : `${e.substring(0, t)}/models`;
@@ -755,58 +766,58 @@ function R(e, t, i) {
     }
     return r;
 }
-async function D(e) {
+async function F(e) {
     let t = e.pipelines ?? [...I],
         i = e.modelsBasePath ?? A(e.wasmPath);
-    if ("loading" === k && x) return x;
-    if ("ready" === k) {
-        if (0 === t.filter((e) => !M.includes(e)).length) return;
-        if (!O) throw Error("Cannot add pipelines: original warmup config not available");
+    if ("loading" === M && x) return x;
+    if ("ready" === M) {
+        if (0 === t.filter((e) => !O.includes(e)).length) return;
+        if (!P) throw Error("Cannot add pipelines: original warmup config not available");
         if (
-            O.wasmPath !== e.wasmPath ||
-            O.glueCodePath !== e.glueCodePath ||
-            (O.wasmSimdPath ?? O.wasmPath) !== (e.wasmSimdPath ?? e.wasmPath) ||
-            (O.glueCodeSimdPath ?? "") !== (e.glueCodeSimdPath ?? "") ||
-            (O.useSimd ?? !0) !== (e.useSimd ?? !0)
+            P.wasmPath !== e.wasmPath ||
+            P.glueCodePath !== e.glueCodePath ||
+            (P.wasmSimdPath ?? P.wasmPath) !== (e.wasmSimdPath ?? e.wasmPath) ||
+            (P.glueCodeSimdPath ?? "") !== (e.glueCodeSimdPath ?? "") ||
+            (P.useSimd ?? !0) !== (e.useSimd ?? !0)
         )
             throw Error(
                 "Cannot add pipelines: WASM config mismatch. Use same wasmPath, glueCodePath, and useSimd settings.",
             );
-        let i = [...new Set([...M, ...t])];
+        let i = [...new Set([...O, ...t])];
         return (
-            (k = "loading"),
-            (P = null),
+            (M = "loading"),
+            (k = null),
             (x = (async () => {
                 try {
-                    let e = R(i, O.modelsBasePath ?? A(O.wasmPath), O.pipelineModels);
-                    await S.initialize(
-                        O.wasmPath,
-                        O.wasmSimdPath ?? O.wasmPath,
-                        O.glueCodePath,
-                        O.glueCodeSimdPath ?? "",
-                        O.useSimd ?? !0,
+                    let e = R(i, P.modelsBasePath ?? A(P.wasmPath), P.pipelineModels);
+                    await E.initialize(
+                        P.wasmPath,
+                        P.wasmSimdPath ?? P.wasmPath,
+                        P.glueCodePath,
+                        P.glueCodeSimdPath ?? "",
+                        P.useSimd ?? !0,
                         "",
                         e,
                     ),
-                        await S.loadModels(),
-                        await S.initializePipelines(),
-                        (k = "ready"),
-                        (M = i),
-                        (O = { ...O, pipelines: i }),
+                        await E.loadModels(),
+                        await E.initializePipelines(),
+                        (M = "ready"),
+                        (O = i),
+                        (P = { ...P, pipelines: i }),
                         (x = null);
                 } catch (e) {
-                    throw ((k = "error"), (P = e instanceof Error ? e : Error(String(e))), (x = null), P);
+                    throw ((M = "error"), (k = e instanceof Error ? e : Error(String(e))), (x = null), k);
                 }
             })())
         );
     }
     return (
-        (k = "loading"),
-        (P = null),
+        (M = "loading"),
+        (k = null),
         (x = (async () => {
             try {
                 let r = R(t, i, e.pipelineModels);
-                await S.initialize(
+                await E.initialize(
                     e.wasmPath,
                     e.wasmSimdPath ?? e.wasmPath,
                     e.glueCodePath,
@@ -815,19 +826,19 @@ async function D(e) {
                     "",
                     r,
                 ),
-                    await S.loadModels(),
-                    await S.initializePipelines(),
-                    (k = "ready"),
-                    (M = [...t]),
-                    (O = { ...e, pipelines: t }),
+                    await E.loadModels(),
+                    await E.initializePipelines(),
+                    (M = "ready"),
+                    (O = [...t]),
+                    (P = { ...e, pipelines: t }),
                     (x = null);
             } catch (e) {
-                throw ((k = "error"), (P = e instanceof Error ? e : Error(String(e))), (x = null), P);
+                throw ((M = "error"), (k = e instanceof Error ? e : Error(String(e))), (x = null), k);
             }
         })())
     );
 }
-var F = class {
+var D = class {
     constructor(e) {
         (this._isInitialized = !1), (this.pipelineType = e);
     }
@@ -840,19 +851,19 @@ var F = class {
     }
     async initializeBase(e, t) {
         if (this._isInitialized) return;
-        let i = { isReady: "ready" === k, isLoading: "loading" === k, error: P ?? void 0, loadedPipelines: [...M] };
-        if (i.isLoading || "ready" === k || i.error)
-            await ("ready" === k
+        let i = { isReady: "ready" === M, isLoading: "loading" === M, error: k ?? void 0, loadedPipelines: [...O] };
+        if (i.isLoading || "ready" === M || i.error)
+            await ("ready" === M
                 ? Promise.resolve()
-                : "loading" === k && x
+                : "loading" === M && x
                   ? x
-                  : "error" === k
-                    ? Promise.reject(P ?? Error("WASM initialization failed"))
+                  : "error" === M
+                    ? Promise.reject(k ?? Error("WASM initialization failed"))
                     : Promise.reject(Error("WASM warmup was not started. Call warmupWasm() first.")));
         else {
             if (!e.wasmPath || !e.glueCodePath)
                 throw Error("WASM path and glue code path are required. Call warmupWasm() first.");
-            await D({
+            await F({
                 wasmPath: e.wasmPath,
                 wasmSimdPath: e.wasmSimdPath,
                 glueCodePath: e.glueCodePath,
@@ -871,13 +882,13 @@ var F = class {
         this.ensureInitialized();
         let t = this.getPipelineType();
         return (
-            await S.allocateImageBuffers(e.width, e.height),
-            await S.handleDetectionCallAndUpdateState(t),
-            await S.process(e, t)
+            await E.allocateImageBuffers(e.width, e.height),
+            await E.handleDetectionCallAndUpdateState(t),
+            await E.process(e, t)
         );
     }
     reset() {
-        this._isInitialized && void 0 !== this.pipelineType && S.resetPipeline(this.pipelineType);
+        this._isInitialized && void 0 !== this.pipelineType && E.resetPipeline(this.pipelineType);
     }
     async dispose() {
         this.reset(), (this._isInitialized = !1);

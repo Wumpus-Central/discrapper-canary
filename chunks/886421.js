@@ -1,177 +1,227 @@
 let r;
-i.d(t, { i: () => t$, r: () => tz });
+i.d(t, { c: () => d, d: () => p, i: () => tY, l: () => f, n: () => tq, r: () => tK, t: () => tG });
 var n,
     o = i(209688),
-    s = i(588233),
-    a = i(171251),
+    a = i(588233),
+    s = i(171251),
     l = i(799201),
     c = i(401959),
-    d = "user-agent",
-    u = "function",
-    h = "object",
-    p = "string",
-    f = "undefined",
-    m = "browser",
-    g = "device",
-    C = "engine",
-    v = "result",
-    y = "name",
-    w = "type",
-    _ = "vendor",
-    b = "version",
-    L = "architecture",
-    E = "major",
-    S = "model",
-    I = "console",
-    T = "mobile",
-    k = "tablet",
-    x = "smarttv",
-    P = "wearable",
-    M = "embedded",
-    O = "inapp",
-    A = "brands",
-    R = "formFactors",
-    D = "fullVersionList",
-    F = "platform",
-    U = "platformVersion",
-    H = "bitness",
-    N = "sec-ch-ua",
-    V = N + "-full-version-list",
-    B = N + "-arch",
-    z = N + "-" + H,
-    $ = N + "-form-factors",
-    Z = N + "-" + T,
-    W = N + "-" + S,
-    j = N + "-" + F,
-    K = j + "-version",
-    G = [A, D, T, S, F, U, L, R, H],
-    q = "Amazon",
-    Y = "Apple",
-    Q = "ASUS",
-    X = "BlackBerry",
-    J = "Google",
-    ee = "Huawei",
-    et = "Lenovo",
-    ei = "Honor",
-    er = "Microsoft",
-    en = "Motorola",
-    eo = "Nvidia",
-    es = "OnePlus",
-    ea = "OPPO",
-    el = "Samsung",
-    ec = "Sharp",
-    ed = "Sony",
-    eu = "Xiaomi",
-    eh = "Zebra",
-    ep = "Chrome",
-    ef = "Chromium",
-    em = "Chromecast",
-    eg = "Edge",
-    eC = "Firefox",
-    ev = "Opera",
-    ey = "Facebook",
-    ew = "Sogou",
-    e_ = "Mobile ",
-    eb = " Browser",
-    eL = "Windows",
-    eE = typeof window !== f && window.navigator ? window.navigator : void 0,
-    eS = eE && eE.userAgentData ? eE.userAgentData : void 0,
-    eI = function (e, t) {
+    d = class extends Error {
+        constructor(e, t) {
+            super(`POST ${s.t.qrValidateUuid} failed: ${e} ${t}`),
+                (this.name = "QrValidationError"),
+                (this.status = e),
+                (this.statusText = t);
+        }
+    };
+async function u(e, t, i) {
+    let r = await (0, o.n)().post(
+        s.t.createSession,
+        {
+            configurationId: t.configurationId,
+            externalId: t.externalId,
+            externalCustomerId: t.externalCustomerId,
+            language: t.language ?? "en-US",
+            customFields: t.customFields,
+            uuid: t.uuid ?? null,
+            urlUuid: t.urlUuid ?? null,
+            interviewId: t.interviewId ?? null,
+            ...(null != t.loginHint && "" !== t.loginHint ? { loginHint: t.loginHint } : {}),
+        },
+        { headers: { "x-api-key": e, "api-version": "1.0" }, signal: i },
+    );
+    if (!r.ok) throw Error(`POST ${s.t.createSession} failed: ${r.status} ${r.statusText}`);
+    return r.data;
+}
+async function h(e, t) {
+    try {
+        return (
+            await (0, o.n)().post(
+                s.t.qrValidateUuid,
+                { onboardingId: e.onboardingId, urlUuid: e.urlUuid },
+                { headers: { "api-version": "1.0" }, signal: t },
+            )
+        ).data;
+    } catch (e) {
+        throw new d(e.data?.status ?? e.status, e.statusText);
+    }
+}
+async function p(e, t) {
+    if ("string" != typeof e.urlUuid || 0 === e.urlUuid.length) return;
+    let i = await h({ onboardingId: e.onboardingId ?? null, urlUuid: e.urlUuid }, t);
+    return e.onRefreshed?.(i.urlUuid), i.urlUuid;
+}
+async function f(e, t, i) {
+    let { onUrlUuidRefreshed: r, ...n } = t,
+        o = await p({ urlUuid: t.urlUuid, onboardingId: t.uuid ?? null, onRefreshed: r }, i);
+    return u(e, { ...n, urlUuid: o }, i);
+}
+var m = "user-agent",
+    g = "function",
+    v = "object",
+    C = "string",
+    y = "undefined",
+    w = "browser",
+    _ = "device",
+    b = "engine",
+    L = "result",
+    S = "name",
+    E = "type",
+    I = "vendor",
+    T = "version",
+    M = "architecture",
+    x = "major",
+    k = "model",
+    O = "console",
+    P = "mobile",
+    A = "tablet",
+    R = "smarttv",
+    F = "wearable",
+    D = "embedded",
+    U = "inapp",
+    N = "brands",
+    H = "formFactors",
+    V = "fullVersionList",
+    B = "platform",
+    $ = "platformVersion",
+    z = "bitness",
+    j = "sec-ch-ua",
+    Z = j + "-full-version-list",
+    W = j + "-arch",
+    K = j + "-" + z,
+    G = j + "-form-factors",
+    q = j + "-" + P,
+    Y = j + "-" + k,
+    Q = j + "-" + B,
+    X = Q + "-version",
+    J = [N, V, P, k, B, $, M, H, z],
+    ee = "Amazon",
+    et = "Apple",
+    ei = "ASUS",
+    er = "BlackBerry",
+    en = "Google",
+    eo = "Huawei",
+    ea = "Lenovo",
+    es = "Honor",
+    el = "Microsoft",
+    ec = "Motorola",
+    ed = "Nvidia",
+    eu = "OnePlus",
+    eh = "OPPO",
+    ep = "Samsung",
+    ef = "Sharp",
+    em = "Sony",
+    eg = "Xiaomi",
+    ev = "Zebra",
+    eC = "Chrome",
+    ey = "Chromium",
+    ew = "Chromecast",
+    e_ = "Edge",
+    eb = "Firefox",
+    eL = "Opera",
+    eS = "Facebook",
+    eE = "Sogou",
+    eI = "Mobile ",
+    eT = " Browser",
+    eM = "Windows",
+    ex = typeof window !== y && window.navigator ? window.navigator : void 0,
+    ek = ex && ex.userAgentData ? ex.userAgentData : void 0,
+    eO = function (e, t) {
         var i = {},
             r = t;
-        if (!ex(t)) for (var n in ((r = {}), t)) for (var o in t[n]) r[o] = t[n][o].concat(r[o] ? r[o] : []);
-        for (var s in e) i[s] = r[s] && r[s].length % 2 == 0 ? r[s].concat(e[s]) : e[s];
+        if (!eR(t)) for (var n in ((r = {}), t)) for (var o in t[n]) r[o] = t[n][o].concat(r[o] ? r[o] : []);
+        for (var a in e) i[a] = r[a] && r[a].length % 2 == 0 ? r[a].concat(e[a]) : e[a];
         return i;
     },
-    eT = function (e) {
+    eP = function (e) {
         for (var t = {}, i = 0; i < e.length; i++) t[e[i].toUpperCase()] = e[i];
         return t;
     },
-    ek = function (e, t) {
-        if (typeof e === h && e.length > 0) {
-            for (var i in e) if (eO(t) == eO(e[i])) return !0;
+    eA = function (e, t) {
+        if (typeof e === v && e.length > 0) {
+            for (var i in e) if (eU(t) == eU(e[i])) return !0;
             return !1;
         }
-        return !!eP(e) && eO(t) == eO(e);
+        return !!eF(e) && eU(t) == eU(e);
     },
-    ex = function (e, t) {
-        for (var i in e) return /^(browser|cpu|device|engine|os)$/.test(i) || (!!t && ex(e[i]));
+    eR = function (e, t) {
+        for (var i in e) return /^(browser|cpu|device|engine|os)$/.test(i) || (!!t && eR(e[i]));
     },
-    eP = function (e) {
-        return typeof e === p;
+    eF = function (e) {
+        return typeof e === C;
     },
-    eM = function (e) {
+    eD = function (e) {
         if (e) {
-            for (var t = [], i = eD(/\\?\"/g, e).split(","), r = 0; r < i.length; r++)
+            for (var t = [], i = eV(/\\?\"/g, e).split(","), r = 0; r < i.length; r++)
                 if (i[r].indexOf(";") > -1) {
-                    var n = eU(i[r]).split(";v=");
+                    var n = e$(i[r]).split(";v=");
                     t[r] = { brand: n[0], version: n[1] };
-                } else t[r] = eU(i[r]);
+                } else t[r] = e$(i[r]);
             return t;
         }
     },
-    eO = function (e) {
-        return eP(e) ? e.toLowerCase() : e;
+    eU = function (e) {
+        return eF(e) ? e.toLowerCase() : e;
     },
-    eA = function (e) {
-        return eP(e) ? eD(/[^\d\.]/g, e).split(".")[0] : void 0;
+    eN = function (e) {
+        return eF(e) ? eV(/[^\d\.]/g, e).split(".")[0] : void 0;
     },
-    eR = function (e) {
+    eH = function (e) {
         for (var t in e)
             if (e.hasOwnProperty(t)) {
                 var i = e[t];
-                typeof i == h && 2 == i.length ? (this[i[0]] = i[1]) : (this[i] = void 0);
+                typeof i == v && 2 == i.length ? (this[i[0]] = i[1]) : (this[i] = void 0);
             }
         return this;
     },
-    eD = function (e, t) {
-        return eP(t) ? t.replace(e, "") : t;
+    eV = function (e, t) {
+        return eF(t) ? t.replace(e, "") : t;
     },
-    eF = function (e) {
-        return eD(/\\?\"/g, e);
+    eB = function (e) {
+        return eV(/\\?\"/g, e);
     },
-    eU = function (e, t) {
-        return (e = eD(/^\s\s*/, String(e))), typeof t === f ? e : e.substring(0, t);
+    e$ = function (e, t) {
+        return (e = eV(/^\s\s*/, String(e))), typeof t === y ? e : e.substring(0, t);
     },
-    eH = function (e, t) {
+    ez = function (e, t) {
         if (e && t)
-            for (var i, r, n, o, s, a, l = 0; l < t.length && !s; ) {
+            for (var i, r, n, o, a, s, l = 0; l < t.length && !a; ) {
                 var c = t[l],
                     d = t[l + 1];
-                for (i = r = 0; i < c.length && !s && c[i]; )
-                    if ((s = c[i++].exec(e)))
+                for (i = r = 0; i < c.length && !a && c[i]; )
+                    if ((a = c[i++].exec(e)))
                         for (n = 0; n < d.length; n++)
-                            (a = s[++r]),
-                                typeof (o = d[n]) === h && o.length > 0
+                            (s = a[++r]),
+                                typeof (o = d[n]) === v && o.length > 0
                                     ? 2 === o.length
-                                        ? typeof o[1] == u
-                                            ? (this[o[0]] = o[1].call(this, a))
+                                        ? typeof o[1] == g
+                                            ? (this[o[0]] = o[1].call(this, s))
                                             : (this[o[0]] = o[1])
                                         : o.length >= 3 &&
-                                          (typeof o[1] !== u || (o[1].exec && o[1].test)
+                                          (typeof o[1] !== g || (o[1].exec && o[1].test)
                                               ? 3 == o.length
-                                                  ? (this[o[0]] = a ? a.replace(o[1], o[2]) : void 0)
+                                                  ? (this[o[0]] = s ? s.replace(o[1], o[2]) : void 0)
                                                   : 4 == o.length
-                                                    ? (this[o[0]] = a ? o[3].call(this, a.replace(o[1], o[2])) : void 0)
+                                                    ? (this[o[0]] = s ? o[3].call(this, s.replace(o[1], o[2])) : void 0)
                                                     : o.length > 4 &&
-                                                      (this[o[0]] = a
-                                                          ? o[3].apply(this, [a.replace(o[1], o[2])].concat(o.slice(4)))
+                                                      (this[o[0]] = s
+                                                          ? o[3].apply(this, [s.replace(o[1], o[2])].concat(o.slice(4)))
                                                           : void 0)
                                               : o.length > 3
-                                                ? (this[o[0]] = a ? o[1].apply(this, o.slice(2)) : void 0)
-                                                : (this[o[0]] = a ? o[1].call(this, a, o[2]) : void 0))
-                                    : (this[o] = a || void 0);
+                                                ? (this[o[0]] = s ? o[1].apply(this, o.slice(2)) : void 0)
+                                                : (this[o[0]] = s ? o[1].call(this, s, o[2]) : void 0))
+                                    : (this[o] = s || void 0);
                 l += 2;
             }
     },
-    eN = function (e, t) {
+    ej = function (e, t) {
         for (var i in t)
-            if (typeof t[i] === h && t[i].length > 0) {
-                for (var r = 0; r < t[i].length; r++) if (ek(t[i][r], e)) return "?" === i ? void 0 : i;
-            } else if (ek(t[i], e)) return "?" === i ? void 0 : i;
+            if (typeof t[i] === v && t[i].length > 0) {
+                for (var r = 0; r < t[i].length; r++) if (eA(t[i][r], e)) return "?" === i ? void 0 : i;
+            } else if (eA(t[i], e)) return "?" === i ? void 0 : i;
         return t.hasOwnProperty("*") ? t["*"] : e;
     },
-    eV = {
+    eZ = {
         ME: "4.90",
         "NT 3.51": "3.51",
         "NT 4.0": "4.0",
@@ -184,7 +234,7 @@ var n,
         10: ["6.4", "10.0"],
         NT: "",
     },
-    eB = {
+    eW = {
         embedded: "Automotive",
         mobile: "Mobile",
         tablet: ["Tablet", "EInk"],
@@ -194,7 +244,7 @@ var n,
         "?": ["Desktop", "Unknown"],
         "*": void 0,
     },
-    ez = {
+    eK = {
         Chrome: "Google Chrome",
         Edge: "Microsoft Edge",
         "Edge WebView2": "Microsoft Edge WebView2",
@@ -205,30 +255,30 @@ var n,
         "Opera Mobi": "OperaMobile",
         Yandex: "YaBrowser",
     },
-    e$ = {
+    eG = {
         browser: [
             [/\b(?:crmo|crios)\/([\w\.]+)/i],
-            [b, [y, e_ + "Chrome"]],
+            [T, [S, eI + "Chrome"]],
             [/webview.+edge\/([\w\.]+)/i],
-            [b, [y, eg + " WebView"]],
+            [T, [S, e_ + " WebView"]],
             [/edg(?:e|ios|a)?\/([\w\.]+)/i],
-            [b, [y, "Edge"]],
+            [T, [S, "Edge"]],
             [
                 /(opera mini)\/([-\w\.]+)/i,
                 /(opera [mobiletab]{3,6})\b.+version\/([-\w\.]+)/i,
                 /(opera)(?:.+version\/|[\/ ]+)([\w\.]+)/i,
             ],
-            [y, b],
+            [S, T],
             [/opios[\/ ]+([\w\.]+)/i],
-            [b, [y, ev + " Mini"]],
+            [T, [S, eL + " Mini"]],
             [/\bop(?:rg)?x\/([\w\.]+)/i],
-            [b, [y, ev + " GX"]],
+            [T, [S, eL + " GX"]],
             [/\bopr\/([\w\.]+)/i],
-            [b, [y, ev]],
+            [T, [S, eL]],
             [/\bb[ai]*d(?:uhd|[ub]*[aekoprswx]{5,6})[\/ ]?([\w\.]+)/i],
-            [b, [y, "Baidu"]],
+            [T, [S, "Baidu"]],
             [/\b(?:mxbrowser|mxios|myie2)\/?([-\w\.]*)\b/i],
-            [b, [y, "Maxthon"]],
+            [T, [S, "Maxthon"]],
             [
                 /(kindle)\/([\w\.]+)/i,
                 /(lunascape|maxthon|netfront|jasmine|blazer|sleipnir)[\/ ]?([\w\.]*)/i,
@@ -240,67 +290,67 @@ var n,
                 /(qwant)(?:ios|mobile)\/([\d\.]+)/i,
                 /(ecosia|weibo)(?:__| \w+@)([\d\.]+)/i,
             ],
-            [y, b],
+            [S, T],
             [/quark(?:pc)?\/([-\w\.]+)/i],
-            [b, [y, "Quark"]],
+            [T, [S, "Quark"]],
             [/\bddg\/([\w\.]+)/i],
-            [b, [y, "DuckDuckGo"]],
+            [T, [S, "DuckDuckGo"]],
             [/(?:\buc? ?browser|(?:juc.+)ucweb)[\/ ]?([\w\.]+)/i],
-            [b, [y, "UCBrowser"]],
+            [T, [S, "UCBrowser"]],
             [/microm.+\bqbcore\/([\w\.]+)/i, /\bqbcore\/([\w\.]+).+microm/i, /micromessenger\/([\w\.]+)/i],
-            [b, [y, "WeChat"]],
+            [T, [S, "WeChat"]],
             [/konqueror\/([\w\.]+)/i],
-            [b, [y, "Konqueror"]],
+            [T, [S, "Konqueror"]],
             [/trident.+rv[: ]([\w\.]{1,9})\b.+like gecko/i],
-            [b, [y, "IE"]],
+            [T, [S, "IE"]],
             [/ya(?:search)?browser\/([\w\.]+)/i],
-            [b, [y, "Yandex"]],
+            [T, [S, "Yandex"]],
             [/slbrowser\/([\w\.]+)/i],
-            [b, [y, "Smart " + et + eb]],
+            [T, [S, "Smart " + ea + eT]],
             [/(av(?:ast|g|ira))\/([\w\.]+)/i],
-            [[y, /(.+)/, "$1 Secure" + eb], b],
+            [[S, /(.+)/, "$1 Secure" + eT], T],
             [/norton\/([\w\.]+)/i],
-            [b, [y, "Norton Private" + eb]],
+            [T, [S, "Norton Private" + eT]],
             [/\bfocus\/([\w\.]+)/i],
-            [b, [y, eC + " Focus"]],
+            [T, [S, eb + " Focus"]],
             [/ mms\/([\w\.]+)$/i],
-            [b, [y, ev + " Neon"]],
+            [T, [S, eL + " Neon"]],
             [/ opt\/([\w\.]+)$/i],
-            [b, [y, ev + " Touch"]],
+            [T, [S, eL + " Touch"]],
             [/coc_coc\w+\/([\w\.]+)/i],
-            [b, [y, "Coc Coc"]],
+            [T, [S, "Coc Coc"]],
             [/dolfin\/([\w\.]+)/i],
-            [b, [y, "Dolphin"]],
+            [T, [S, "Dolphin"]],
             [/coast\/([\w\.]+)/i],
-            [b, [y, ev + " Coast"]],
+            [T, [S, eL + " Coast"]],
             [/miuibrowser\/([\w\.]+)/i],
-            [b, [y, "MIUI" + eb]],
+            [T, [S, "MIUI" + eT]],
             [/fxios\/([\w\.-]+)/i],
-            [b, [y, e_ + eC]],
+            [T, [S, eI + eb]],
             [/\bqihoobrowser\/?([\w\.]*)/i],
-            [b, [y, "360"]],
+            [T, [S, "360"]],
             [/\b(qq)\/([\w\.]+)/i],
-            [[y, /(.+)/, "$1Browser"], b],
+            [[S, /(.+)/, "$1Browser"], T],
             [/(oculus|sailfish|huawei|vivo|pico)browser\/([\w\.]+)/i],
-            [[y, /(.+)/, "$1" + eb], b],
+            [[S, /(.+)/, "$1" + eT], T],
             [/samsungbrowser\/([\w\.]+)/i],
-            [b, [y, el + " Internet"]],
+            [T, [S, ep + " Internet"]],
             [/metasr[\/ ]?([\d\.]+)/i],
-            [b, [y, ew + " Explorer"]],
+            [T, [S, eE + " Explorer"]],
             [/(sogou)mo\w+\/([\d\.]+)/i],
-            [[y, ew + " Mobile"], b],
+            [[S, eE + " Mobile"], T],
             [
                 /(electron)\/([\w\.]+) safari/i,
                 /(tesla)(?: qtcarbrowser|\/(20\d\d\.[-\w\.]+))/i,
                 /m?(qqbrowser|2345(?=browser|chrome|explorer))\w*[\/ ]?v?([\w\.]+)/i,
             ],
-            [y, b],
+            [S, T],
             [/(lbbrowser|luakit|rekonq|steam(?= (clie|tenf|gameo)))/i],
-            [y],
+            [S],
             [/ome\/([\w\.]+).+(iron(?= saf)|360(?=[es]e$))/i],
-            [b, y],
+            [T, S],
             [/((?:fban\/fbios|fb_iab\/fb4a)(?!.+fbav)|;fbav\/([\w\.]+);)/i],
-            [[y, ey], b, [w, O]],
+            [[S, eS], T, [E, U]],
             [
                 /(kakao(?:talk|story))[\/ ]([\w\.]+)/i,
                 /(naver)\(.*?(\d+\.[\w\.]+).*\)/i,
@@ -312,49 +362,49 @@ var n,
                 /(bing)(?:web|sapphire)\/([\w\.]+)/i,
                 /(instagram|snapchat|klarna)[\/ ]([-\w\.]+)/i,
             ],
-            [y, b, [w, O]],
+            [S, T, [E, U]],
             [/\bgsa\/([\w\.]+) .*safari\//i],
-            [b, [y, "GSA"], [w, O]],
+            [T, [S, "GSA"], [E, U]],
             [/(?:musical_ly|trill)(?:.+app_?version\/|_)([\w\.]+)/i],
-            [b, [y, "TikTok"], [w, O]],
+            [T, [S, "TikTok"], [E, U]],
             [/\[(linkedin)app\]/i],
-            [y, [w, O]],
+            [S, [E, U]],
             [/(zalo(?:app)?)[\/\sa-z]*([\w\.-]+)/i],
-            [[y, /(.+)/, "Zalo"], b, [w, O]],
+            [[S, /(.+)/, "Zalo"], T, [E, U]],
             [/(chromium)[\/ ]([-\w\.]+)/i],
-            [y, b],
+            [S, T],
             [/ome-(lighthouse)$/i],
-            [y, [w, "fetcher"]],
+            [S, [E, "fetcher"]],
             [/headlesschrome(?:\/([\w\.]+)| )/i],
-            [b, [y, ep + " Headless"]],
+            [T, [S, eC + " Headless"]],
             [/wv\).+chrome\/([\w\.]+).+edgw\//i],
-            [b, [y, eg + " WebView2"]],
+            [T, [S, e_ + " WebView2"]],
             [/ wv\).+(chrome)\/([\w\.]+)/i],
-            [[y, ep + " WebView"], b],
+            [[S, eC + " WebView"], T],
             [/droid.+ version\/([\w\.]+)\b.+(?:mobile safari|safari)/i],
-            [b, [y, "Android" + eb]],
+            [T, [S, "Android" + eT]],
             [/chrome\/([\w\.]+) mobile/i],
-            [b, [y, e_ + "Chrome"]],
+            [T, [S, eI + "Chrome"]],
             [/(chrome|omniweb|arora|[tizenoka]{5} ?browser)\/v?([\w\.]+)/i],
-            [y, b],
+            [S, T],
             [/version\/([\w\.\,]+) .*mobile(?:\/\w+ | ?)safari/i],
-            [b, [y, e_ + "Safari"]],
+            [T, [S, eI + "Safari"]],
             [/iphone .*mobile(?:\/\w+ | ?)safari/i],
-            [[y, e_ + "Safari"]],
+            [[S, eI + "Safari"]],
             [/version\/([\w\.\,]+) .*(safari)/i],
-            [b, y],
+            [T, S],
             [/webkit.+?(mobile ?safari|safari)(\/[\w\.]+)/i],
-            [y, [b, "1"]],
+            [S, [T, "1"]],
             [/(webkit|khtml)\/([\w\.]+)/i],
-            [y, b],
+            [S, T],
             [/(?:mobile|tablet);.*(firefox)\/([\w\.-]+)/i],
-            [[y, e_ + eC], b],
+            [[S, eI + eb], T],
             [/(navigator|netscape\d?)\/([-\w\.]+)/i],
-            [[y, "Netscape"], b],
+            [[S, "Netscape"], T],
             [/(wolvic|librewolf)\/([\w\.]+)/i],
-            [y, b],
+            [S, T],
             [/mobile vr; rv:([\w\.]+)\).+firefox/i],
-            [b, [y, eC + " Reality"]],
+            [T, [S, eb + " Reality"]],
             [
                 /ekiohf.+(flow)\/([\w\.]+)/i,
                 /(swiftfox)/i,
@@ -365,69 +415,69 @@ var n,
                 /(amaya|dillo|doris|icab|ladybird|lynx|mosaic|netsurf|obigo|polaris|w3m|(?:go|ice|up)[\. ]?browser)[-\/ ]?v?([\w\.]+)/i,
                 /\b(links) \(([\w\.]+)/i,
             ],
-            [y, [b, /_/g, "."]],
+            [S, [T, /_/g, "."]],
             [/(cobalt)\/([\w\.]+)/i],
-            [y, [b, /[^\d\.]+./, ""]],
+            [S, [T, /[^\d\.]+./, ""]],
         ],
         cpu: [
             [/\b((amd|x|x86[-_]?|wow|win)64)\b/i],
-            [[L, "amd64"]],
+            [[M, "amd64"]],
             [/(ia32(?=;))/i, /\b((i[346]|x)86)(pc)?\b/i],
-            [[L, "ia32"]],
+            [[M, "ia32"]],
             [/\b(aarch64|arm(v?[89]e?l?|_?64))\b/i],
-            [[L, "arm64"]],
+            [[M, "arm64"]],
             [/\b(arm(v[67])?ht?n?[fl]p?)\b/i],
-            [[L, "armhf"]],
+            [[M, "armhf"]],
             [/( (ce|mobile); ppc;|\/[\w\.]+arm\b)/i],
-            [[L, "arm"]],
+            [[M, "arm"]],
             [/ sun4\w[;\)]/i],
-            [[L, "sparc"]],
+            [[M, "sparc"]],
             [
                 /\b(avr32|ia64(?=;)|68k(?=\))|\barm(?=v([1-7]|[5-7]1)l?|;|eabi)|(irix|mips|sparc)(64)?\b|pa-risc)/i,
                 /((ppc|powerpc)(64)?)( mac|;|\))/i,
                 /(?:osf1|[freopnt]{3,4}bsd) (alpha)/i,
             ],
-            [[L, /ower/, "", eO]],
+            [[M, /ower/, "", eU]],
             [/mc680.0/i],
-            [[L, "68k"]],
+            [[M, "68k"]],
             [/winnt.+\[axp/i],
-            [[L, "alpha"]],
+            [[M, "alpha"]],
         ],
         device: [
             [/\b(sch-i[89]0\d|shw-m380s|sm-[ptx]\w{2,4}|gt-[pn]\d{2,4}|sgh-t8[56]9|nexus 10)/i],
-            [S, [_, el], [w, k]],
+            [k, [I, ep], [E, A]],
             [
                 /\b((?:s[cgp]h|gt|sm)-(?![lr])\w+|sc[g-]?[\d]+a?|galaxy nexus)/i,
                 /samsung[- ]((?!sm-[lr]|browser)[-\w]+)/i,
                 /sec-(sgh\w+)/i,
             ],
-            [S, [_, el], [w, T]],
+            [k, [I, ep], [E, P]],
             [/(?:\/|\()(ip(?:hone|od)[\w, ]*)[\/\);]/i],
-            [S, [_, Y], [w, T]],
+            [k, [I, et], [E, P]],
             [/\b(?:ios|apple\w+)\/.+[\(\/](ipad)/i, /\b(ipad)[\d,]*[;\] ].+(mac |i(pad)?)os/i],
-            [S, [_, Y], [w, k]],
+            [k, [I, et], [E, A]],
             [/(macintosh);/i],
-            [S, [_, Y]],
+            [k, [I, et]],
             [/\b(sh-?[altvz]?\d\d[a-ekm]?)/i],
-            [S, [_, ec], [w, T]],
+            [k, [I, ef], [E, P]],
             [/\b((?:brt|eln|hey2?|gdi|jdn)-a?[lnw]09|(?:ag[rm]3?|jdn2|kob2)-a?[lw]0[09]hn)(?: bui|\)|;)/i],
-            [S, [_, ei], [w, k]],
+            [k, [I, es], [E, A]],
             [/honor([-\w ]+)[;\)]/i],
-            [S, [_, ei], [w, T]],
+            [k, [I, es], [E, P]],
             [
                 /\b((?:ag[rs][2356]?k?|bah[234]?|bg[2o]|bt[kv]|cmr|cpn|db[ry]2?|jdn2|got|kob2?k?|mon|pce|scm|sht?|[tw]gr|vrd)-[ad]?[lw][0125][09]b?|605hw|bg2-u03|(?:gem|fdr|m2|ple|t1)-[7a]0[1-4][lu]|t1-a2[13][lw]|mediapad[\w\. ]*(?= bui|\)))\b(?!.+d\/s)/i,
             ],
-            [S, [_, ee], [w, k]],
+            [k, [I, eo], [E, A]],
             [/(?:huawei) ?([-\w ]+)[;\)]/i, /\b(nexus 6p|\w{2,4}e?-[atu]?[ln][\dx][\dc][adnt]?)\b(?!.+d\/s)/i],
-            [S, [_, ee], [w, T]],
+            [k, [I, eo], [E, P]],
             [
                 /oid[^\)]+; (2[\dbc]{4}(182|283|rp\w{2})[cgl]|m2105k81a?c)(?: bui|\))/i,
                 /\b(?:xiao)?((?:red)?mi[-_ ]?pad[\w- ]*)(?: bui|\))/i,
             ],
             [
-                [S, /_/g, " "],
-                [_, eu],
-                [w, k],
+                [k, /_/g, " "],
+                [I, eg],
+                [E, A],
             ],
             [
                 /\b; (\w+) build\/hm\1/i,
@@ -437,132 +487,132 @@ var n,
                 / ([\w ]+) miui\/v?\d/i,
             ],
             [
-                [S, /_/g, " "],
-                [_, eu],
-                [w, T],
+                [k, /_/g, " "],
+                [I, eg],
+                [E, P],
             ],
             [
                 /droid.+; (cph2[3-6]\d[13579]|((gm|hd)19|(ac|be|in|kb)20|(d[en]|eb|le|mt)21|ne22)[0-2]\d|p[g-l]\w[1m]10)\b/i,
                 /(?:one)?(?:plus)? (a\d0\d\d)(?: b|\))/i,
             ],
-            [S, [_, es], [w, T]],
+            [k, [I, eu], [E, P]],
             [/; (\w+) bui.+ oppo/i, /\b(cph[12]\d{3}|p(?:af|c[al]|d\w|e[ar])[mt]\d0|x9007|a101op)\b/i],
-            [S, [_, ea], [w, T]],
+            [k, [I, eh], [E, P]],
             [/\b(opd2(\d{3}a?))(?: bui|\))/i],
-            [S, [_, eN, { OnePlus: ["203", "304", "403", "404", "413", "415"], "*": ea }], [w, k]],
+            [k, [I, ej, { OnePlus: ["203", "304", "403", "404", "413", "415"], "*": eh }], [E, A]],
             [/(vivo (5r?|6|8l?|go|one|s|x[il]?[2-4]?)[\w\+ ]*)(?: bui|\))/i],
-            [S, [_, "BLU"], [w, T]],
+            [k, [I, "BLU"], [E, P]],
             [/; vivo (\w+)(?: bui|\))/i, /\b(v[12]\d{3}\w?[at])(?: bui|;)/i],
-            [S, [_, "Vivo"], [w, T]],
+            [k, [I, "Vivo"], [E, P]],
             [/\b(rmx[1-3]\d{3})(?: bui|;|\))/i],
-            [S, [_, "Realme"], [w, T]],
+            [k, [I, "Realme"], [E, P]],
             [
                 /(ideatab[-\w ]+|602lv|d-42a|a101lv|a2109a|a3500-hv|s[56]000|pb-6505[my]|tb-?x?\d{3,4}(?:f[cu]|xu|[av])|yt\d?-[jx]?\d+[lfmx])( bui|;|\)|\/)/i,
                 /lenovo ?(b[68]0[08]0-?[hf]?|tab(?:[\w- ]+?)|tb[\w-]{6,7})( bui|;|\)|\/)/i,
             ],
-            [S, [_, et], [w, k]],
+            [k, [I, ea], [E, A]],
             [/lenovo[-_ ]?([-\w ]+?)(?: bui|\)|\/)/i],
-            [S, [_, et], [w, T]],
+            [k, [I, ea], [E, P]],
             [
                 /\b(milestone|droid(?:[2-4x]| (?:bionic|x2|pro|razr))?:?( 4g)?)\b[\w ]+build\//i,
                 /\bmot(?:orola)?[- ]([\w\s]+)(\)| bui)/i,
                 /((?:moto(?! 360)[-\w\(\) ]+|xt\d{3,4}[cgkosw\+]?[-\d]*|nexus 6)(?= bui|\)))/i,
             ],
-            [S, [_, en], [w, T]],
+            [k, [I, ec], [E, P]],
             [/\b(mz60\d|xoom[2 ]{0,2}) build\//i],
-            [S, [_, en], [w, k]],
+            [k, [I, ec], [E, A]],
             [/\b(?:lg)?([vl]k\-?\d{3}) bui| 3\.[-\w; ]{10}lg?-([06cv9]{3,4})/i],
-            [S, [_, "LG"], [w, k]],
+            [k, [I, "LG"], [E, A]],
             [
                 /(lm(?:-?f100[nv]?|-[\w\.]+)(?= bui|\))|nexus [45])/i,
                 /\blg[-e;\/ ]+(?!.*(?:browser|netcast|android tv|watch|webos))(\w+)/i,
                 /\blg-?([\d\w]+) bui/i,
             ],
-            [S, [_, "LG"], [w, T]],
+            [k, [I, "LG"], [E, P]],
             [/(nokia) (t[12][01])/i],
-            [_, S, [w, k]],
+            [I, k, [E, A]],
             [/(?:maemo|nokia).*(n900|lumia \d+|rm-\d+)/i, /nokia[-_ ]?(([-\w\. ]*?))( bui|\)|;|\/)/i],
             [
-                [S, /_/g, " "],
-                [w, T],
-                [_, "Nokia"],
+                [k, /_/g, " "],
+                [E, P],
+                [I, "Nokia"],
             ],
             [/(pixel (c|tablet))\b/i],
-            [S, [_, J], [w, k]],
+            [k, [I, en], [E, A]],
             [
                 /droid.+;(?: google)? (g(01[13]a|020[aem]|025[jn]|1b60|1f8f|2ybb|4s1m|576d|5nz6|8hhn|8vou|a02099|c15s|d1yq|e2ae|ec77|gh2x|kv4x|p4bc|pj41|r83y|tt9q|ur25|wvk6)|pixel[\d ]*a?( pro)?( xl)?( fold)?( \(5g\))?)( bui|\))/i,
             ],
-            [S, [_, J], [w, T]],
+            [k, [I, en], [E, P]],
             [/(google) (pixelbook( go)?)/i],
-            [_, S],
+            [I, k],
             [/droid.+; (a?\d[0-2]{2}so|[c-g]\d{4}|so[-gl]\w+|xq-\w\w\d\d)(?= bui|\).+chrome\/(?![1-6]{0,1}\d\.))/i],
-            [S, [_, ed], [w, T]],
+            [k, [I, em], [E, P]],
             [/sony tablet [ps]/i, /\b(?:sony)?sgp\w+(?: bui|\))/i],
             [
-                [S, "Xperia Tablet"],
-                [_, ed],
-                [w, k],
+                [k, "Xperia Tablet"],
+                [I, em],
+                [E, A],
             ],
             [/(alexa)webm/i, /(kf[a-z]{2}wi|aeo(?!bc)\w\w)( bui|\))/i, /(kf[a-z]+)( bui|\)).+silk\//i],
-            [S, [_, q], [w, k]],
+            [k, [I, ee], [E, A]],
             [/((?:sd|kf)[0349hijorstuw]+)( bui|\)).+silk\//i],
             [
-                [S, /(.+)/g, "Fire Phone $1"],
-                [_, q],
-                [w, T],
+                [k, /(.+)/g, "Fire Phone $1"],
+                [I, ee],
+                [E, P],
             ],
             [/(playbook);[-\w\),; ]+(rim)/i],
-            [S, _, [w, k]],
+            [k, I, [E, A]],
             [/\b((?:bb[a-f]|st[hv])100-\d)/i, /(?:blackberry|\(bb10;) (\w+)/i],
-            [S, [_, X], [w, T]],
+            [k, [I, er], [E, P]],
             [/(?:\b|asus_)(transfo[prime ]{4,10} \w+|eeepc|slider \w+|nexus 7|padfone|p00[cj])/i],
-            [S, [_, Q], [w, k]],
+            [k, [I, ei], [E, A]],
             [/ (z[bes]6[027][012][km][ls]|zenfone \d\w?)\b/i],
-            [S, [_, Q], [w, T]],
+            [k, [I, ei], [E, P]],
             [/(nexus 9)/i],
-            [S, [_, "HTC"], [w, k]],
+            [k, [I, "HTC"], [E, A]],
             [
                 /(htc)[-;_ ]{1,2}([\w ]+(?=\)| bui)|\w+)/i,
                 /(zte)[- ]([\w ]+?)(?: bui|\/|\))/i,
                 /(alcatel|geeksphone|nexian|panasonic(?!(?:;|\.))|sony(?!-bra))[-_ ]?([-\w]*)/i,
             ],
-            [_, [S, /_/g, " "], [w, T]],
+            [I, [k, /_/g, " "], [E, P]],
             [
                 /tcl (xess p17aa)/i,
                 /droid [\w\.]+; ((?:8[14]9[16]|9(?:0(?:48|60|8[01])|1(?:3[27]|66)|2(?:6[69]|9[56])|466))[gqswx])(_\w(\w|\w\w))?(\)| bui)/i,
             ],
-            [S, [_, "TCL"], [w, k]],
+            [k, [I, "TCL"], [E, A]],
             [
                 /droid [\w\.]+; (418(?:7d|8v)|5087z|5102l|61(?:02[dh]|25[adfh]|27[ai]|56[dh]|59k|65[ah])|a509dl|t(?:43(?:0w|1[adepqu])|50(?:6d|7[adju])|6(?:09dl|10k|12b|71[efho]|76[hjk])|7(?:66[ahju]|67[hw]|7[045][bh]|71[hk]|73o|76[ho]|79w|81[hks]?|82h|90[bhsy]|99b)|810[hs]))(_\w(\w|\w\w))?(\)| bui)/i,
             ],
-            [S, [_, "TCL"], [w, T]],
+            [k, [I, "TCL"], [E, P]],
             [/(itel) ((\w+))/i],
-            [[_, eO], S, [w, eN, { tablet: ["p10001l", "w7001"], "*": "mobile" }]],
+            [[I, eU], k, [E, ej, { tablet: ["p10001l", "w7001"], "*": "mobile" }]],
             [/droid.+; ([ab][1-7]-?[0178a]\d\d?)/i],
-            [S, [_, "Acer"], [w, k]],
+            [k, [I, "Acer"], [E, A]],
             [/droid.+; (m[1-5] note) bui/i, /\bmz-([-\w]{2,})/i],
-            [S, [_, "Meizu"], [w, T]],
+            [k, [I, "Meizu"], [E, P]],
             [/; ((?:power )?armor(?:[\w ]{0,8}))(?: bui|\))/i],
-            [S, [_, "Ulefone"], [w, T]],
+            [k, [I, "Ulefone"], [E, P]],
             [/; (energy ?\w+)(?: bui|\))/i, /; energizer ([\w ]+)(?: bui|\))/i],
-            [S, [_, "Energizer"], [w, T]],
+            [k, [I, "Energizer"], [E, P]],
             [/; cat (b35);/i, /; (b15q?|s22 flip|s48c|s62 pro)(?: bui|\))/i],
-            [S, [_, "Cat"], [w, T]],
+            [k, [I, "Cat"], [E, P]],
             [/((?:new )?andromax[\w- ]+)(?: bui|\))/i],
-            [S, [_, "Smartfren"], [w, T]],
+            [k, [I, "Smartfren"], [E, P]],
             [/droid.+; (a(in)?(0(15|59|6[35])|142)p?)/i],
-            [S, [_, "Nothing"], [w, T]],
+            [k, [I, "Nothing"], [E, P]],
             [
                 /; (x67 5g|tikeasy \w+|ac[1789]\d\w+)( b|\))/i,
                 /archos ?(5|gamepad2?|([\w ]*[t1789]|hello) ?\d+[\w ]*)( b|\))/i,
             ],
-            [S, [_, "Archos"], [w, k]],
+            [k, [I, "Archos"], [E, A]],
             [/archos ([\w ]+)( b|\))/i, /; (ac[3-6]\d\w{2,8})( b|\))/i],
-            [S, [_, "Archos"], [w, T]],
+            [k, [I, "Archos"], [E, P]],
             [/; (n159v)/i],
-            [S, [_, "HMD"], [w, T]],
+            [k, [I, "HMD"], [E, P]],
             [/(imo) (tab \w+)/i, /(infinix|tecno) (x1101b?|p904|dp(7c|8d|10a)( pro)?|p70[1-3]a?|p904|t1101)/i],
-            [_, S, [w, k]],
+            [I, k, [E, A]],
             [
                 /(blackberry|benq|palm(?=\-)|sonyericsson|acer|asus(?! zenw)|dell|jolla|meizu|motorola|polytron|tecno|micromax|advan)[-_ ]?([-\w]*)/i,
                 /; (blu|hmd|imo|infinix|lava|oneplus|tcl|wiko)[_ ]([\w\+ ]+?)(?: bui|\)|; r)/i,
@@ -572,92 +622,92 @@ var n,
                 /(hisense) ([ehv][\w ]+)\)/i,
                 /droid[^;]+; (philips)[_ ]([sv-x][\d]{3,4}[xz]?)/i,
             ],
-            [_, S, [w, T]],
+            [I, k, [E, P]],
             [/(kobo)\s(ereader|touch)/i, /(hp).+(touchpad(?!.+tablet)|tablet)/i, /(kindle)\/([\w\.]+)/i],
-            [_, S, [w, k]],
+            [I, k, [E, A]],
             [/(surface duo)/i],
-            [S, [_, er], [w, k]],
+            [k, [I, el], [E, A]],
             [/droid [\d\.]+; (fp\du?)(?: b|\))/i],
-            [S, [_, "Fairphone"], [w, T]],
+            [k, [I, "Fairphone"], [E, P]],
             [/((?:tegranote|shield t(?!.+d tv))[\w- ]*?)(?: b|\))/i],
-            [S, [_, eo], [w, k]],
+            [k, [I, ed], [E, A]],
             [/(sprint) (\w+)/i],
-            [_, S, [w, T]],
+            [I, k, [E, P]],
             [/(kin\.[onetw]{3})/i],
             [
-                [S, /\./g, " "],
-                [_, er],
-                [w, T],
+                [k, /\./g, " "],
+                [I, el],
+                [E, P],
             ],
             [/droid.+; ([c6]+|et5[16]|mc[239][23]x?|vc8[03]x?)\)/i],
-            [S, [_, eh], [w, k]],
+            [k, [I, ev], [E, A]],
             [/droid.+; (ec30|ps20|tc[2-8]\d[kx])\)/i],
-            [S, [_, eh], [w, T]],
+            [k, [I, ev], [E, P]],
             [/(philips)[\w ]+tv/i, /smart-tv.+(samsung)/i],
-            [_, [w, x]],
+            [I, [E, R]],
             [/hbbtv.+maple;(\d+)/i],
             [
-                [S, /^/, "SmartTV"],
-                [_, el],
-                [w, x],
+                [k, /^/, "SmartTV"],
+                [I, ep],
+                [E, R],
             ],
             [/(vizio)(?: |.+model\/)(\w+-\w+)/i, /tcast.+(lg)e?. ([-\w]+)/i],
-            [_, S, [w, x]],
+            [I, k, [E, R]],
             [/(nux; netcast.+smarttv|lg (netcast\.tv-201\d|android tv))/i],
             [
-                [_, "LG"],
-                [w, x],
+                [I, "LG"],
+                [E, R],
             ],
             [/(apple) ?tv/i],
-            [_, [S, Y + " TV"], [w, x]],
+            [I, [k, et + " TV"], [E, R]],
             [/crkey.*devicetype\/chromecast/i],
             [
-                [S, em + " Third Generation"],
-                [_, J],
-                [w, x],
+                [k, ew + " Third Generation"],
+                [I, en],
+                [E, R],
             ],
             [/crkey.*devicetype\/([^/]*)/i],
             [
-                [S, /^/, "Chromecast "],
-                [_, J],
-                [w, x],
+                [k, /^/, "Chromecast "],
+                [I, en],
+                [E, R],
             ],
             [/fuchsia.*crkey/i],
             [
-                [S, em + " Nest Hub"],
-                [_, J],
-                [w, x],
+                [k, ew + " Nest Hub"],
+                [I, en],
+                [E, R],
             ],
             [/crkey/i],
             [
-                [S, em],
-                [_, J],
-                [w, x],
+                [k, ew],
+                [I, en],
+                [E, R],
             ],
             [/(portaltv)/i],
-            [S, [_, ey], [w, x]],
+            [k, [I, eS], [E, R]],
             [/droid.+aft(\w+)( bui|\))/i],
-            [S, [_, q], [w, x]],
+            [k, [I, ee], [E, R]],
             [/(shield \w+ tv)/i],
-            [S, [_, eo], [w, x]],
+            [k, [I, ed], [E, R]],
             [/\(dtv[\);].+(aquos)/i, /(aquos-tv[\w ]+)\)/i],
-            [S, [_, ec], [w, x]],
+            [k, [I, ef], [E, R]],
             [/(bravia[\w ]+)( bui|\))/i],
-            [S, [_, ed], [w, x]],
+            [k, [I, em], [E, R]],
             [/(mi(tv|box)-?\w+) bui/i],
-            [S, [_, eu], [w, x]],
+            [k, [I, eg], [E, R]],
             [/Hbbtv.*(technisat) (.*);/i],
-            [_, S, [w, x]],
+            [I, k, [E, R]],
             [/\b(roku)[\dx]*[\)\/]((?:dvp-)?[\d\.]*)/i, /hbbtv\/\d+\.\d+\.\d+ +\([\w\+ ]*; *([\w\d][^;]*);([^;]*)/i],
             [
-                [_, /.+\/(\w+)/, "$1", eN, { LG: "lge" }],
-                [S, eU],
-                [w, x],
+                [I, /.+\/(\w+)/, "$1", ej, { LG: "lge" }],
+                [k, e$],
+                [E, R],
             ],
             [/(playstation \w+)/i],
-            [S, [_, ed], [w, I]],
+            [k, [I, em], [E, O]],
             [/\b(xbox(?: one)?(?!; xbox))[\); ]/i],
-            [S, [_, er], [w, I]],
+            [k, [I, el], [E, O]],
             [
                 /(ouya)/i,
                 /(nintendo) (\w+)/i,
@@ -665,61 +715,61 @@ var n,
                 /(valve).+(steam deck)/i,
                 /droid.+; ((shield|rgcube|gr0006))( bui|\))/i,
             ],
-            [[_, eN, { Nvidia: "Shield", Anbernic: "RGCUBE", Logitech: "GR0006" }], S, [w, I]],
+            [[I, ej, { Nvidia: "Shield", Anbernic: "RGCUBE", Logitech: "GR0006" }], k, [E, O]],
             [/\b(sm-[lr]\d\d[0156][fnuw]?s?|gear live)\b/i],
-            [S, [_, el], [w, P]],
+            [k, [I, ep], [E, F]],
             [/((pebble))app/i, /(asus|google|lg|oppo|xiaomi) ((pixel |zen)?watch[\w ]*)( bui|\))/i],
-            [_, S, [w, P]],
+            [I, k, [E, F]],
             [/(ow(?:19|20)?we?[1-3]{1,3})/i],
-            [S, [_, ea], [w, P]],
+            [k, [I, eh], [E, F]],
             [/(watch)(?: ?os[,\/]|\d,\d\/)[\d\.]+/i],
-            [S, [_, Y], [w, P]],
+            [k, [I, et], [E, F]],
             [/(opwwe\d{3})/i],
-            [S, [_, es], [w, P]],
+            [k, [I, eu], [E, F]],
             [/(moto 360)/i],
-            [S, [_, en], [w, P]],
+            [k, [I, ec], [E, F]],
             [/(smartwatch 3)/i],
-            [S, [_, ed], [w, P]],
+            [k, [I, em], [E, F]],
             [/(g watch r)/i],
-            [S, [_, "LG"], [w, P]],
+            [k, [I, "LG"], [E, F]],
             [/droid.+; (wt63?0{2,3})\)/i],
-            [S, [_, eh], [w, P]],
+            [k, [I, ev], [E, F]],
             [/droid.+; (glass) \d/i],
-            [S, [_, J], [w, "xr"]],
+            [k, [I, en], [E, "xr"]],
             [/(pico) ([\w ]+) os\d/i],
-            [_, S, [w, "xr"]],
+            [I, k, [E, "xr"]],
             [/(quest( \d| pro)?s?).+vr/i],
-            [S, [_, ey], [w, "xr"]],
+            [k, [I, eS], [E, "xr"]],
             [/mobile vr; rv.+firefox/i],
-            [[w, "xr"]],
+            [[E, "xr"]],
             [/(tesla)(?: qtcarbrowser|\/[-\w\.]+)/i],
-            [_, [w, M]],
+            [I, [E, D]],
             [/(aeobc)\b/i],
-            [S, [_, q], [w, M]],
+            [k, [I, ee], [E, D]],
             [/(homepod).+mac os/i],
-            [S, [_, Y], [w, M]],
+            [k, [I, et], [E, D]],
             [/windows iot/i],
-            [[w, M]],
+            [[E, D]],
             [/droid.+; ([\w- ]+) (4k|android|smart|google)[- ]?tv/i],
-            [S, [w, x]],
+            [k, [E, R]],
             [/\b((4k|android|smart|opera)[- ]?tv|tv; rv:|large screen[\w ]+safari)\b/i],
-            [[w, x]],
+            [[E, R]],
             [/droid .+?; ([^;]+?)(?: bui|; wv\)|\) applew|; hmsc).+?(mobile|vr|\d) safari/i],
-            [S, [w, eN, { mobile: "Mobile", xr: "VR", "*": k }]],
+            [k, [E, ej, { mobile: "Mobile", xr: "VR", "*": A }]],
             [/\b((tablet|tab)[;\/]|focus\/\d(?!.+mobile))/i],
-            [[w, k]],
+            [[E, A]],
             [/(phone|mobile(?:[;\/]| [ \w\/\.]*safari)|pda(?=.+windows ce))/i],
-            [[w, T]],
+            [[E, P]],
             [/droid .+?; ([\w\. -]+)( bui|\))/i],
-            [S, [_, "Generic"]],
+            [k, [I, "Generic"]],
         ],
         engine: [
             [/windows.+ edge\/([\w\.]+)/i],
-            [b, [y, eg + "HTML"]],
+            [T, [S, e_ + "HTML"]],
             [/(arkweb)\/([\w\.]+)/i],
-            [y, b],
+            [S, T],
             [/webkit\/537\.36.+chrome\/(?!27)([\w\.]+)/i],
-            [b, [y, "Blink"]],
+            [T, [S, "Blink"]],
             [
                 /(presto)\/([\w\.]+)/i,
                 /(webkit|trident|netfront|netsurf|amaya|lynx|w3m|goanna|servo)\/([\w\.]+)/i,
@@ -728,30 +778,30 @@ var n,
                 /(icab)[\/ ]([23]\.[\d\.]+)/i,
                 /\b(libweb)/i,
             ],
-            [y, b],
+            [S, T],
             [/ladybird\//i],
-            [[y, "LibWeb"]],
+            [[S, "LibWeb"]],
             [/rv\:([\w\.]{1,9})\b.+(gecko)/i],
-            [b, y],
+            [T, S],
         ],
         os: [
             [/(windows nt) (6\.[23]); arm/i],
             [
-                [y, /N/, "R"],
-                [b, eN, eV],
+                [S, /N/, "R"],
+                [T, ej, eZ],
             ],
             [
                 /(windows (?:phone|mobile|iot))(?: os)?[\/ ]?([\d\.]*( se)?)/i,
                 /(windows)[\/ ](1[01]|2000|3\.1|7|8(\.1)?|9[58]|me|server 20\d\d( r2)?|vista|xp)/i,
             ],
-            [y, b],
+            [S, T],
             [/windows nt ?([\d\.\)]*)(?!.+xbox)/i, /\bwin(?=3| ?9|n)(?:nt| 9x )?([\d\.;]*)/i],
             [
-                [b, /(;|\))/g, "", eN, eV],
-                [y, eL],
+                [T, /(;|\))/g, "", ej, eZ],
+                [S, eM],
             ],
             [/(windows ce)\/?([\d\.]*)/i],
-            [y, b],
+            [S, T],
             [
                 /[adehimnop]{4,7}\b(?:.*os ([\w]+) like mac|; opera)/i,
                 /(?:ios;fbsv|ios(?=.+ip(?:ad|hone)|.+apple ?tv)|ip(?:ad|hone)(?: |.+i(?:pad)?)os|apple ?tv.+ios)[\/ ]([\w\.]+)/i,
@@ -759,48 +809,48 @@ var n,
                 /cfnetwork\/.+darwin/i,
             ],
             [
-                [b, /_/g, "."],
-                [y, "iOS"],
+                [T, /_/g, "."],
+                [S, "iOS"],
             ],
             [/(mac os x) ?([\w\. ]*)/i, /(macintosh|mac_powerpc\b)(?!.+(haiku|morphos))/i],
             [
-                [y, "macOS"],
-                [b, /_/g, "."],
+                [S, "macOS"],
+                [T, /_/g, "."],
             ],
             [/android ([\d\.]+).*crkey/i],
-            [b, [y, em + " Android"]],
+            [T, [S, ew + " Android"]],
             [/fuchsia.*crkey\/([\d\.]+)/i],
-            [b, [y, em + " Fuchsia"]],
+            [T, [S, ew + " Fuchsia"]],
             [/crkey\/([\d\.]+).*devicetype\/smartspeaker/i],
-            [b, [y, em + " SmartSpeaker"]],
+            [T, [S, ew + " SmartSpeaker"]],
             [/linux.*crkey\/([\d\.]+)/i],
-            [b, [y, em + " Linux"]],
+            [T, [S, ew + " Linux"]],
             [/crkey\/([\d\.]+)/i],
-            [b, [y, em]],
+            [T, [S, ew]],
             [/droid ([\w\.]+)\b.+(android[- ]x86)/i],
-            [b, y],
+            [T, S],
             [/(ubuntu) ([\w\.]+) like android/i],
-            [[y, /(.+)/, "$1 Touch"], b],
+            [[S, /(.+)/, "$1 Touch"], T],
             [
                 /(harmonyos)[\/ ]?([\d\.]*)/i,
                 /(android|bada|blackberry|kaios|maemo|meego|openharmony|qnx|rim tablet os|sailfish|series40|symbian|tizen)\w*[-\/\.; ]?([\d\.]*)/i,
             ],
-            [y, b],
+            [S, T],
             [/\(bb(10);/i],
-            [b, [y, X]],
+            [T, [S, er]],
             [/(?:symbian ?os|symbos|s60(?=;)|series ?60)[-\/ ]?([\w\.]*)/i],
-            [b, [y, "Symbian"]],
+            [T, [S, "Symbian"]],
             [
                 /mozilla\/[\d\.]+ \((?:mobile[;\w ]*|tablet|tv|[^\)]*(?:viera|lg(?:l25|-d300)|alcatel ?o.+|y300-f1)); rv:([\w\.]+)\).+gecko\//i,
             ],
-            [b, [y, eC + " OS"]],
+            [T, [S, eb + " OS"]],
             [/\b(?:hp)?wos(?:browser)?\/([\w\.]+)/i, /webos(?:[ \/]?|\.tv-20(?=2[2-9]))(\d[\d\.]*)/i],
-            [b, [y, "webOS"]],
+            [T, [S, "webOS"]],
             [/web0s;.+?(?:chr[o0]me|safari)\/(\d+)/i],
             [
                 [
-                    b,
-                    eN,
+                    T,
+                    ej,
                     {
                         25: "120",
                         24: "108",
@@ -815,14 +865,14 @@ var n,
                         "*": "TV",
                     },
                 ],
-                [y, "webOS"],
+                [S, "webOS"],
             ],
             [/watch(?: ?os[,\/ ]|\d,\d\/)([\d\.]+)/i],
-            [b, [y, "watchOS"]],
+            [T, [S, "watchOS"]],
             [/cros [\w]+(?:\)| ([\w\.]+)\b)/i],
-            [b, [y, "Chrome OS"]],
+            [T, [S, "Chrome OS"]],
             [/kepler ([\w\.]+); (aft|aeo)/i],
-            [b, [y, "Vega OS"]],
+            [T, [S, "Vega OS"]],
             [
                 /(netrange)mmh/i,
                 /(nettv)\/(\d+\.[\w\.]+)/i,
@@ -840,134 +890,134 @@ var n,
                 /\b([-frentopcghs]{0,5}bsd|dragonfly)[\/ ]?(?!amd|[ix346]{1,2}86)([\w\.]*)/i,
                 /(haiku) ?(r\d)?/i,
             ],
-            [y, b],
+            [S, T],
             [/(sunos) ?([\d\.]*)/i],
-            [[y, "Solaris"], b],
+            [[S, "Solaris"], T],
             [/\b(beos|os\/2|amigaos|openvms|hp-ux|serenityos)/i, /(unix) ?([\w\.]*)/i],
-            [y, b],
+            [S, T],
         ],
     },
-    eZ =
+    eq =
         ((n = { init: {}, isIgnore: {}, isIgnoreRgx: {}, toString: {} }),
-        eR.call(n.init, [
-            [m, [y, b, E, w]],
-            ["cpu", [L]],
-            [g, [w, S, _]],
-            [C, [y, b]],
-            ["os", [y, b]],
+        eH.call(n.init, [
+            [w, [S, T, x, E]],
+            ["cpu", [M]],
+            [_, [E, k, I]],
+            [b, [S, T]],
+            ["os", [S, T]],
         ]),
-        eR.call(n.isIgnore, [
-            [m, [b, E]],
-            [C, [b]],
-            ["os", [b]],
+        eH.call(n.isIgnore, [
+            [w, [T, x]],
+            [b, [T]],
+            ["os", [T]],
         ]),
-        eR.call(n.isIgnoreRgx, [
-            [m, / ?browser$/i],
+        eH.call(n.isIgnoreRgx, [
+            [w, / ?browser$/i],
             ["os", / ?os$/i],
         ]),
-        eR.call(n.toString, [
-            [m, [y, b]],
-            ["cpu", [L]],
-            [g, [_, S]],
-            [C, [y, b]],
-            ["os", [y, b]],
+        eH.call(n.toString, [
+            [w, [S, T]],
+            ["cpu", [M]],
+            [_, [I, k]],
+            [b, [S, T]],
+            ["os", [S, T]],
         ]),
         n),
-    eW = function (e, t) {
-        var i = eZ.init[t],
-            r = eZ.isIgnore[t] || 0,
-            n = eZ.isIgnoreRgx[t] || 0,
-            o = eZ.toString[t] || 0;
-        function s() {
-            eR.call(this, i);
+    eY = function (e, t) {
+        var i = eq.init[t],
+            r = eq.isIgnore[t] || 0,
+            n = eq.isIgnoreRgx[t] || 0,
+            o = eq.toString[t] || 0;
+        function a() {
+            eH.call(this, i);
         }
         return (
-            (s.prototype.getItem = function () {
+            (a.prototype.getItem = function () {
                 return e;
             }),
-            (s.prototype.withClientHints = function () {
-                return eS
-                    ? eS.getHighEntropyValues(G).then(function (t) {
-                          return e.setCH(new ej(t, !1)).parseCH().get();
+            (a.prototype.withClientHints = function () {
+                return ek
+                    ? ek.getHighEntropyValues(J).then(function (t) {
+                          return e.setCH(new eQ(t, !1)).parseCH().get();
                       })
                     : e.parseCH().get();
             }),
-            (s.prototype.withFeatureCheck = function () {
+            (a.prototype.withFeatureCheck = function () {
                 return e.detectFeature().get();
             }),
-            t != v &&
-                ((s.prototype.is = function (e) {
+            t != L &&
+                ((a.prototype.is = function (e) {
                     var t = !1;
                     for (var i in this)
                         if (
                             this.hasOwnProperty(i) &&
-                            !ek(r, i) &&
-                            eO(n ? eD(n, this[i]) : this[i]) == eO(n ? eD(n, e) : e)
+                            !eA(r, i) &&
+                            eU(n ? eV(n, this[i]) : this[i]) == eU(n ? eV(n, e) : e)
                         ) {
-                            if (((t = !0), e != f)) break;
-                        } else if (e == f && t) {
+                            if (((t = !0), e != y)) break;
+                        } else if (e == y && t) {
                             t = !t;
                             break;
                         }
                     return t;
                 }),
-                (s.prototype.toString = function () {
+                (a.prototype.toString = function () {
                     var e = "";
-                    for (var t in o) typeof this[o[t]] !== f && (e += (e ? " " : "") + this[o[t]]);
-                    return e || f;
+                    for (var t in o) typeof this[o[t]] !== y && (e += (e ? " " : "") + this[o[t]]);
+                    return e || y;
                 })),
-            (s.prototype.then = function (e) {
+            (a.prototype.then = function (e) {
                 var t = this,
                     i = function () {
                         for (var e in t) t.hasOwnProperty(e) && (this[e] = t[e]);
                     };
                 i.prototype = {
-                    is: s.prototype.is,
-                    toString: s.prototype.toString,
-                    withClientHints: s.prototype.withClientHints,
-                    withFeatureCheck: s.prototype.withFeatureCheck,
+                    is: a.prototype.is,
+                    toString: a.prototype.toString,
+                    withClientHints: a.prototype.withClientHints,
+                    withFeatureCheck: a.prototype.withFeatureCheck,
                 };
                 var r = new i();
                 return e(r), r;
             }),
-            new s()
+            new a()
         );
     };
-function ej(e, t) {
-    if (((e = e || {}), eR.call(this, G), t))
-        eR.call(this, [
-            [A, eM(e[N])],
-            [D, eM(e[V])],
-            [T, /\?1/.test(e[Z])],
-            [S, eF(e[W])],
-            [F, eF(e[j])],
-            [U, eF(e[K])],
-            [L, eF(e[B])],
-            [R, eM(e[$])],
-            [H, eF(e[z])],
+function eQ(e, t) {
+    if (((e = e || {}), eH.call(this, J), t))
+        eH.call(this, [
+            [N, eD(e[j])],
+            [V, eD(e[Z])],
+            [P, /\?1/.test(e[q])],
+            [k, eB(e[Y])],
+            [B, eB(e[Q])],
+            [$, eB(e[X])],
+            [M, eB(e[W])],
+            [H, eD(e[G])],
+            [z, eB(e[K])],
         ]);
-    else for (var i in e) this.hasOwnProperty(i) && typeof e[i] !== f && (this[i] = e[i]);
+    else for (var i in e) this.hasOwnProperty(i) && typeof e[i] !== y && (this[i] = e[i]);
 }
-function eK(e, t, i, r) {
+function eX(e, t, i, r) {
     return (
-        eR.call(this, [
+        eH.call(this, [
             ["itemType", e],
             ["ua", t],
             ["uaCH", r],
             ["rgxMap", i],
-            ["data", eW(this, e)],
+            ["data", eY(this, e)],
         ]),
         this
     );
 }
-function eG(e, t, i) {
+function eJ(e, t, i) {
     if (
-        (typeof e === h
-            ? (ex(e, !0) ? (typeof t === h && (i = t), (t = e)) : ((i = e), (t = void 0)), (e = void 0))
-            : typeof e !== p || ex(t, !0) || ((i = t), (t = void 0)),
+        (typeof e === v
+            ? (eR(e, !0) ? (typeof t === v && (i = t), (t = e)) : ((i = e), (t = void 0)), (e = void 0))
+            : typeof e !== C || eR(t, !0) || ((i = t), (t = void 0)),
         i)
     )
-        if (typeof i.append === u) {
+        if (typeof i.append === g) {
             var r = {};
             i.forEach(function (e, t) {
                 r[String(t).toLowerCase()] = e;
@@ -978,164 +1028,164 @@ function eG(e, t, i) {
             for (var o in i) i.hasOwnProperty(o) && (n[String(o).toLowerCase()] = i[o]);
             i = n;
         }
-    if (!(this instanceof eG)) return new eG(e, t, i).getResult();
-    var s = typeof e === p ? e : i && i[d] ? i[d] : eE && eE.userAgent ? eE.userAgent : "",
-        a = new ej(i, !0),
-        l = t ? eI(e$, t) : e$,
+    if (!(this instanceof eJ)) return new eJ(e, t, i).getResult();
+    var a = typeof e === C ? e : i && i[m] ? i[m] : ex && ex.userAgent ? ex.userAgent : "",
+        s = new eQ(i, !0),
+        l = t ? eO(eG, t) : eG,
         c = function (e) {
-            return e == v
+            return e == L
                 ? function () {
-                      return new eK(e, s, l, a)
-                          .set("ua", s)
-                          .set(m, this.getBrowser())
+                      return new eX(e, a, l, s)
+                          .set("ua", a)
+                          .set(w, this.getBrowser())
                           .set("cpu", this.getCPU())
-                          .set(g, this.getDevice())
-                          .set(C, this.getEngine())
+                          .set(_, this.getDevice())
+                          .set(b, this.getEngine())
                           .set("os", this.getOS())
                           .get();
                   }
                 : function () {
-                      return new eK(e, s, l[e], a).parseUA().get();
+                      return new eX(e, a, l[e], s).parseUA().get();
                   };
         };
     return (
-        eR
+        eH
             .call(this, [
-                ["getBrowser", c(m)],
+                ["getBrowser", c(w)],
                 ["getCPU", c("cpu")],
-                ["getDevice", c(g)],
-                ["getEngine", c(C)],
+                ["getDevice", c(_)],
+                ["getEngine", c(b)],
                 ["getOS", c("os")],
-                ["getResult", c(v)],
+                ["getResult", c(L)],
                 [
                     "getUA",
                     function () {
-                        return s;
+                        return a;
                     },
                 ],
                 [
                     "setUA",
                     function (e) {
-                        return eP(e) && (s = eU(e, 500)), this;
+                        return eF(e) && (a = e$(e, 500)), this;
                     },
                 ],
             ])
-            .setUA(s),
+            .setUA(a),
         this
     );
 }
-(eK.prototype.get = function (e) {
+(eX.prototype.get = function (e) {
     return e ? (this.data.hasOwnProperty(e) ? this.data[e] : void 0) : this.data;
 }),
-    (eK.prototype.set = function (e, t) {
+    (eX.prototype.set = function (e, t) {
         return (this.data[e] = t), this;
     }),
-    (eK.prototype.setCH = function (e) {
+    (eX.prototype.setCH = function (e) {
         return (this.uaCH = e), this;
     }),
-    (eK.prototype.detectFeature = function () {
-        if (eE && eE.userAgent == this.ua)
+    (eX.prototype.detectFeature = function () {
+        if (ex && ex.userAgent == this.ua)
             switch (this.itemType) {
-                case m:
-                    eE.brave && typeof eE.brave.isBrave == u && this.set(y, "Brave");
+                case w:
+                    ex.brave && typeof ex.brave.isBrave == g && this.set(S, "Brave");
                     break;
-                case g:
-                    !this.get(w) && eS && eS[T] && this.set(w, T),
-                        "Macintosh" == this.get(S) &&
-                            eE &&
-                            typeof eE.standalone !== f &&
-                            eE.maxTouchPoints &&
-                            eE.maxTouchPoints > 2 &&
-                            this.set(S, "iPad").set(w, k);
+                case _:
+                    !this.get(E) && ek && ek[P] && this.set(E, P),
+                        "Macintosh" == this.get(k) &&
+                            ex &&
+                            typeof ex.standalone !== y &&
+                            ex.maxTouchPoints &&
+                            ex.maxTouchPoints > 2 &&
+                            this.set(k, "iPad").set(E, A);
                     break;
                 case "os":
-                    !this.get(y) && eS && eS[F] && this.set(y, eS[F]);
+                    !this.get(S) && ek && ek[B] && this.set(S, ek[B]);
                     break;
-                case v:
+                case L:
                     var e = this.data,
                         t = function (t) {
                             return e[t].getItem().detectFeature().get();
                         };
-                    this.set(m, t(m)).set("cpu", t("cpu")).set(g, t(g)).set(C, t(C)).set("os", t("os"));
+                    this.set(w, t(w)).set("cpu", t("cpu")).set(_, t(_)).set(b, t(b)).set("os", t("os"));
             }
         return this;
     }),
-    (eK.prototype.parseUA = function () {
-        switch ((this.itemType != v && eH.call(this.data, this.ua, this.rgxMap), this.itemType)) {
-            case m:
-                this.set(E, eA(this.get(b)));
+    (eX.prototype.parseUA = function () {
+        switch ((this.itemType != L && ez.call(this.data, this.ua, this.rgxMap), this.itemType)) {
+            case w:
+                this.set(x, eN(this.get(T)));
                 break;
             case "os":
-                if ("iOS" == this.get(y) && "18.6" == this.get(b)) {
+                if ("iOS" == this.get(S) && "18.6" == this.get(T)) {
                     var e = /\) Version\/([\d\.]+)/.exec(this.ua);
-                    e && parseInt(e[1].substring(0, 2), 10) >= 26 && this.set(b, e[1]);
+                    e && parseInt(e[1].substring(0, 2), 10) >= 26 && this.set(T, e[1]);
                 }
         }
         return this;
     }),
-    (eK.prototype.parseCH = function () {
+    (eX.prototype.parseCH = function () {
         var e = this.uaCH,
             t = this.rgxMap;
         switch (this.itemType) {
-            case m:
-            case C:
+            case w:
+            case b:
                 var i,
-                    r = e[D] || e[A];
+                    r = e[V] || e[N];
                 if (r)
                     for (var n = 0; n < r.length; n++) {
                         var o = r[n].brand || r[n],
-                            s = r[n].version;
-                        this.itemType == m &&
+                            a = r[n].version;
+                        this.itemType == w &&
                             !/not.a.brand/i.test(o) &&
-                            (!i || (/Chrom/.test(i) && o != ef) || (i == eg && /WebView2/.test(o))) &&
-                            ((o = eN(o, ez)),
-                            ((i = this.get(y)) && !/Chrom/.test(i) && /Chrom/.test(o)) ||
-                                this.set(y, o).set(b, s).set(E, eA(s)),
+                            (!i || (/Chrom/.test(i) && o != ey) || (i == e_ && /WebView2/.test(o))) &&
+                            ((o = ej(o, eK)),
+                            ((i = this.get(S)) && !/Chrom/.test(i) && /Chrom/.test(o)) ||
+                                this.set(S, o).set(T, a).set(x, eN(a)),
                             (i = o)),
-                            this.itemType == C && o == ef && this.set(b, s);
+                            this.itemType == b && o == ey && this.set(T, a);
                     }
                 break;
             case "cpu":
-                var a = e[L];
-                a && (a && "64" == e[H] && (a += "64"), eH.call(this.data, a + ";", t));
+                var s = e[M];
+                s && (s && "64" == e[z] && (s += "64"), ez.call(this.data, s + ";", t));
                 break;
-            case g:
-                if ((e[T] && this.set(w, T), e[S] && (this.set(S, e[S]), !this.get(w) || !this.get(_)))) {
+            case _:
+                if ((e[P] && this.set(E, P), e[k] && (this.set(k, e[k]), !this.get(E) || !this.get(I)))) {
                     var l,
                         c = {};
-                    eH.call(c, "droid 9; " + e[S] + ")", t),
-                        !this.get(w) && c.type && this.set(w, c.type),
-                        !this.get(_) && c.vendor && this.set(_, c.vendor);
+                    ez.call(c, "droid 9; " + e[k] + ")", t),
+                        !this.get(E) && c.type && this.set(E, c.type),
+                        !this.get(I) && c.vendor && this.set(I, c.vendor);
                 }
-                if (e[R]) {
-                    if ("string" != typeof e[R]) for (var d = 0; !l && d < e[R].length; ) l = eN(e[R][d++], eB);
-                    else l = eN(e[R], eB);
-                    this.set(w, l);
+                if (e[H]) {
+                    if ("string" != typeof e[H]) for (var d = 0; !l && d < e[H].length; ) l = ej(e[H][d++], eW);
+                    else l = ej(e[H], eW);
+                    this.set(E, l);
                 }
                 break;
             case "os":
-                var u = e[F];
+                var u = e[B];
                 if (u) {
-                    var h = e[U];
-                    u == eL && (h = parseInt(eA(h), 10) >= 13 ? "11" : "10"), this.set(y, u).set(b, h);
+                    var h = e[$];
+                    u == eM && (h = parseInt(eN(h), 10) >= 13 ? "11" : "10"), this.set(S, u).set(T, h);
                 }
-                this.get(y) == eL && "Xbox" == e[S] && this.set(y, "Xbox").set(b, void 0);
+                this.get(S) == eM && "Xbox" == e[k] && this.set(S, "Xbox").set(T, void 0);
                 break;
-            case v:
+            case L:
                 var p = this.data,
                     f = function (t) {
                         return p[t].getItem().setCH(e).parseCH().get();
                     };
-                this.set(m, f(m)).set("cpu", f("cpu")).set(g, f(g)).set(C, f(C)).set("os", f("os"));
+                this.set(w, f(w)).set("cpu", f("cpu")).set(_, f(_)).set(b, f(b)).set("os", f("os"));
         }
         return this;
     }),
-    (eG.VERSION = "2.0.9"),
-    (eG.BROWSER = eT([y, b, E, w])),
-    (eG.CPU = eT([L])),
-    (eG.DEVICE = eT([S, _, w, I, T, x, k, P, M])),
-    (eG.ENGINE = eG.OS = eT([y, b]));
-var eq = class {
+    (eJ.VERSION = "2.0.9"),
+    (eJ.BROWSER = eP([S, T, x, E])),
+    (eJ.CPU = eP([M])),
+    (eJ.DEVICE = eP([k, I, E, O, P, R, A, F, D])),
+    (eJ.ENGINE = eJ.OS = eP([S, T]));
+var e1 = class {
     checkWebRtcSupport() {
         if ("u" < typeof window) return !1;
         let e =
@@ -1147,7 +1197,7 @@ var eq = class {
     }
     getBrowserInfo() {
         let e = "u" > typeof navigator ? navigator.userAgent : "",
-            t = new eG(e).getResult();
+            t = new eJ(e).getResult();
         return {
             userAgent: e,
             isWebRtcSupported: this.checkWebRtcSupport(),
@@ -1159,48 +1209,48 @@ var eq = class {
         };
     }
 };
-let eY = new Set(["model", "platformVersion", "fullVersionList", "brands", "platform"]);
-function eQ() {
-    let e = new eG().getResult();
+let e2 = new Set(["model", "platformVersion", "fullVersionList", "brands", "platform"]);
+function e0() {
+    let e = new eJ().getResult();
     return {
         device: { model: e.device.model },
         os: { name: e.os.name, version: e.os.version },
         browser: { name: e.browser.name, version: e.browser.version },
     };
 }
-function eX(e) {
+function e3(e) {
     return e?.trim() || void 0;
 }
-async function eJ(e) {
+async function e6(e) {
     var t, i;
     let r,
-        n = await e.getHighEntropyValues(Array.from(eY)),
-        { name: o, version: s } =
+        n = await e.getHighEntropyValues(Array.from(e2)),
+        { name: o, version: a } =
             ((t = n.fullVersionList),
             (i = e.brands),
             (r = t?.[0] || i?.[0]),
-            { name: eX(r?.brand), version: eX(r?.version) });
+            { name: e3(r?.brand), version: e3(r?.version) });
     return {
-        device: { model: eX(n.model) },
-        os: { name: eX(n.platform), version: eX(n.platformVersion) },
-        browser: { name: o, version: s },
+        device: { model: e3(n.model) },
+        os: { name: e3(n.platform), version: e3(n.platformVersion) },
+        browser: { name: o, version: a },
     };
 }
-async function e1() {
+async function e5() {
     var e;
     if ("u" < typeof navigator) return { device: {}, os: {}, browser: {} };
     let t = navigator,
-        i = eQ();
+        i = e0();
     if (!t.userAgentData?.getHighEntropyValues || "function" != typeof t.userAgentData.getHighEntropyValues) return i;
     try {
         return (
-            (e = await eJ(t.userAgentData)),
+            (e = await e6(t.userAgentData)),
             {
                 device: { model: e.device?.model || i.device.model },
                 os: { name: e.os?.name || i.os.name, version: e.os?.version || i.os.version },
                 browser: ((e) => {
                     let t = "u" > typeof navigator ? navigator.userAgent : "",
-                        i = eQ();
+                        i = e0();
                     if (!t) return e;
                     try {
                         return { ...e, name: i.browser.name, version: i.browser.version };
@@ -1214,9 +1264,9 @@ async function e1() {
         return i;
     }
 }
-let e2 = "thumbmark",
-    e3 = "https://api.thumbmarkjs.com",
-    e0 = {
+let e4 = "thumbmark",
+    e8 = "https://api.thumbmarkjs.com",
+    e9 = {
         exclude: [],
         include: [],
         stabilize: ["private", "iframe"],
@@ -1226,10 +1276,10 @@ let e2 = "thumbmark",
         cache_lifetime_in_ms: 0,
         performance: !1,
         experimental: !1,
-        property_name_factory: (e) => `${e2}_${e}`,
+        property_name_factory: (e) => `${e4}_${e}`,
     };
-({ ...e0 });
-let e6 = {
+({ ...e9 });
+let e7 = {
         private: [
             { exclude: ["canvas"], browsers: ["firefox", "safari>=17", "brave"] },
             { exclude: ["audio"], browsers: ["samsungbrowser", "safari"] },
@@ -1253,8 +1303,8 @@ let e6 = {
         ],
         vpn: [{ exclude: ["ip"] }],
     },
-    e5 = "u" > typeof window ? window.OfflineAudioContext || window.webkitOfflineAudioContext : null;
-function e4(e, t, i) {
+    te = "u" > typeof window ? window.OfflineAudioContext || window.webkitOfflineAudioContext : null;
+function tt(e, t, i) {
     let r = [];
     for (let t = 0; t < e[0].data.length; t++) {
         let i = [];
@@ -1272,7 +1322,7 @@ function e4(e, t, i) {
     }
     return new ImageData(new Uint8ClampedArray(r), t, i);
 }
-function e9(e) {
+function ti(e) {
     return (
         (e ^= e >>> 16),
         (e = Math.imul(e, 0x85ebca6b)),
@@ -1281,11 +1331,11 @@ function e9(e) {
         (e ^= e >>> 16) >>> 0
     );
 }
-let e8 = new Uint32Array([0x239b961b, 0xab0e9789, 0x38b34ae5, 0xa1e38b93]);
-function e7(e, t) {
+let tr = new Uint32Array([0x239b961b, 0xab0e9789, 0x38b34ae5, 0xa1e38b93]);
+function tn(e, t) {
     return (e << t) | (e >>> (32 - t));
 }
-function te(e, t = 0) {
+function to(e, t = 0) {
     var i;
     if (
         ((t = t ? 0 | t : 0),
@@ -1317,32 +1367,32 @@ function te(e, t = 0) {
                 r = new Uint32Array(e, 0, 4 * i);
             for (let e = 0; e < i; e++) {
                 let i = r.subarray(4 * e, 4 * (e + 1));
-                (i[0] = Math.imul(i[0], e8[0])),
-                    (i[0] = e7(i[0], 15)),
-                    (i[0] = Math.imul(i[0], e8[1])),
+                (i[0] = Math.imul(i[0], tr[0])),
+                    (i[0] = tn(i[0], 15)),
+                    (i[0] = Math.imul(i[0], tr[1])),
                     (t[0] = t[0] ^ i[0]),
-                    (t[0] = e7(t[0], 19)),
+                    (t[0] = tn(t[0], 19)),
                     (t[0] = t[0] + t[1]),
                     (t[0] = Math.imul(t[0], 5) + 0x561ccd1b),
-                    (i[1] = Math.imul(i[1], e8[1])),
-                    (i[1] = e7(i[1], 16)),
-                    (i[1] = Math.imul(i[1], e8[2])),
+                    (i[1] = Math.imul(i[1], tr[1])),
+                    (i[1] = tn(i[1], 16)),
+                    (i[1] = Math.imul(i[1], tr[2])),
                     (t[1] = t[1] ^ i[1]),
-                    (t[1] = e7(t[1], 17)),
+                    (t[1] = tn(t[1], 17)),
                     (t[1] = t[1] + t[2]),
                     (t[1] = Math.imul(t[1], 5) + 0xbcaa747),
-                    (i[2] = Math.imul(i[2], e8[2])),
-                    (i[2] = e7(i[2], 17)),
-                    (i[2] = Math.imul(i[2], e8[3])),
+                    (i[2] = Math.imul(i[2], tr[2])),
+                    (i[2] = tn(i[2], 17)),
+                    (i[2] = Math.imul(i[2], tr[3])),
                     (t[2] = t[2] ^ i[2]),
-                    (t[2] = e7(t[2], 15)),
+                    (t[2] = tn(t[2], 15)),
                     (t[2] = t[2] + t[3]),
                     (t[2] = Math.imul(t[2], 5) + 0x96cd1c35),
-                    (i[3] = Math.imul(i[3], e8[3])),
-                    (i[3] = e7(i[3], 18)),
-                    (i[3] = Math.imul(i[3], e8[0])),
+                    (i[3] = Math.imul(i[3], tr[3])),
+                    (i[3] = tn(i[3], 18)),
+                    (i[3] = Math.imul(i[3], tr[0])),
                     (t[3] = t[3] ^ i[3]),
-                    (t[3] = e7(t[3], 13)),
+                    (t[3] = tn(t[3], 13)),
                     (t[3] = t[3] + t[0]),
                     (t[3] = Math.imul(t[3], 5) + 0x32ac3b17);
             }
@@ -1359,9 +1409,9 @@ function te(e, t = 0) {
                     n[3] = n[3] ^ (o[13] << 8);
                 case 13:
                     (n[3] = n[3] ^ o[12]),
-                        (n[3] = Math.imul(n[3], e8[3])),
-                        (n[3] = e7(n[3], 18)),
-                        (n[3] = Math.imul(n[3], e8[0])),
+                        (n[3] = Math.imul(n[3], tr[3])),
+                        (n[3] = tn(n[3], 18)),
+                        (n[3] = Math.imul(n[3], tr[0])),
                         (t[3] = t[3] ^ n[3]);
                 case 12:
                     n[2] = n[2] ^ (o[11] << 24);
@@ -1371,9 +1421,9 @@ function te(e, t = 0) {
                     n[2] = n[2] ^ (o[9] << 8);
                 case 9:
                     (n[2] = n[2] ^ o[8]),
-                        (n[2] = Math.imul(n[2], e8[2])),
-                        (n[2] = e7(n[2], 17)),
-                        (n[2] = Math.imul(n[2], e8[3])),
+                        (n[2] = Math.imul(n[2], tr[2])),
+                        (n[2] = tn(n[2], 17)),
+                        (n[2] = Math.imul(n[2], tr[3])),
                         (t[2] = t[2] ^ n[2]);
                 case 8:
                     n[1] = n[1] ^ (o[7] << 24);
@@ -1383,9 +1433,9 @@ function te(e, t = 0) {
                     n[1] = n[1] ^ (o[5] << 8);
                 case 5:
                     (n[1] = n[1] ^ o[4]),
-                        (n[1] = Math.imul(n[1], e8[1])),
-                        (n[1] = e7(n[1], 16)),
-                        (n[1] = Math.imul(n[1], e8[2])),
+                        (n[1] = Math.imul(n[1], tr[1])),
+                        (n[1] = tn(n[1], 16)),
+                        (n[1] = Math.imul(n[1], tr[2])),
                         (t[1] = t[1] ^ n[1]);
                 case 4:
                     n[0] = n[0] ^ (o[3] << 24);
@@ -1395,9 +1445,9 @@ function te(e, t = 0) {
                     n[0] = n[0] ^ (o[1] << 8);
                 case 1:
                     (n[0] = n[0] ^ o[0]),
-                        (n[0] = Math.imul(n[0], e8[0])),
-                        (n[0] = e7(n[0], 15)),
-                        (n[0] = Math.imul(n[0], e8[1])),
+                        (n[0] = Math.imul(n[0], tr[0])),
+                        (n[0] = tn(n[0], 15)),
+                        (n[0] = Math.imul(n[0], tr[1])),
                         (t[0] = t[0] ^ n[0]);
             }
         })(e, r),
@@ -1412,10 +1462,10 @@ function te(e, t = 0) {
         (r[1] = (r[1] + r[0]) | 0),
         (r[2] = (r[2] + r[0]) | 0),
         (r[3] = (r[3] + r[0]) | 0),
-        (r[0] = e9(r[0])),
-        (r[1] = e9(r[1])),
-        (r[2] = e9(r[2])),
-        (r[3] = e9(r[3])),
+        (r[0] = ti(r[0])),
+        (r[1] = ti(r[1])),
+        (r[2] = ti(r[2])),
+        (r[3] = ti(r[3])),
         (r[0] = (r[0] + r[1]) | 0),
         (r[0] = (r[0] + r[2]) | 0),
         (r[0] = (r[0] + r[3]) | 0),
@@ -1427,7 +1477,7 @@ function te(e, t = 0) {
             .join("")
     );
 }
-async function tt(e) {
+async function ta(e) {
     for (var t; !document.body; ) await new Promise((e) => setTimeout(e, 50, void 0));
     let i = document.createElement("iframe");
     i.setAttribute("frameBorder", "0");
@@ -1446,7 +1496,7 @@ async function tt(e) {
             document.body.removeChild(i);
         }, 0);
 }
-let ti = [
+let ts = [
         "Arial",
         "Arial Black",
         "Arial Narrow",
@@ -1537,17 +1587,17 @@ let ti = [
         "Verdana",
         "Work Sans",
     ],
-    tr = ["monospace", "sans-serif", "serif"];
-function tn(e, t) {
+    tl = ["monospace", "sans-serif", "serif"];
+function tc(e, t) {
     return (e.font = `72px ${t}`), e.measureText("WwMmLli0Oo").width;
 }
-let to = (e, t, i, r) => {
+let td = (e, t, i, r) => {
         let n = (i - t) / r,
             o = 0;
         for (let i = 0; i < r; i++) o += e(t + (i + 0.5) * n);
         return o * n;
     },
-    ts = [
+    tu = [
         "accelerometer",
         "accessibility",
         "accessibility-events",
@@ -1577,11 +1627,11 @@ let to = (e, t, i, r) => {
         "window-management",
         "query",
     ];
-function ta() {
+function th() {
     var e, t, i, r, n, o;
     if ("u" < typeof navigator) return { name: "unknown", version: "unknown" };
-    let s = navigator.userAgent,
-        a = {
+    let a = navigator.userAgent,
+        s = {
             edg: "Edge",
             edga: "Edge",
             edgios: "Edge",
@@ -1610,31 +1660,31 @@ function ta() {
         /(?<name>MSIE|Trident|IEMobile).+?(?<version>\d+(?:\.\d+)+)/,
         /(?<name>[A-Za-z]+)\/(?<version>\d+(?:\.\d+)+)/,
     ]) {
-        let c = s.match(l);
+        let c = a.match(l);
         if (c) {
-            let s = null == (e = c.groups) ? void 0 : e.name,
+            let a = null == (e = c.groups) ? void 0 : e.name,
                 d =
                     (null == (t = c.groups) ? void 0 : t.version) ||
                     (null == (i = c.groups) ? void 0 : i.version1) ||
                     (null == (r = c.groups) ? void 0 : r.version2);
             if (
-                (!s &&
+                (!a &&
                     ((null == (n = c.groups) ? void 0 : n.version1) ||
                         (null == (o = c.groups) ? void 0 : o.version2)) &&
-                    (s = "Safari"),
-                !s && l.source.includes("Opera Mini") && (s = "Opera Mini"),
-                !s && l.source.includes("Opera Mobi") && (s = "Opera Mobi"),
-                !s && l.source.includes("Opera") && (s = "Opera"),
-                !s && c[1] && (s = c[1]),
+                    (a = "Safari"),
+                !a && l.source.includes("Opera Mini") && (a = "Opera Mini"),
+                !a && l.source.includes("Opera Mobi") && (a = "Opera Mobi"),
+                !a && l.source.includes("Opera") && (a = "Opera"),
+                !a && c[1] && (a = c[1]),
                 !d && c[2] && (d = c[2]),
-                s)
+                a)
             )
-                return { name: a[s.toLowerCase()] || s, version: d || "unknown" };
+                return { name: s[a.toLowerCase()] || a, version: d || "unknown" };
         }
     }
     return { name: "unknown", version: "unknown" };
 }
-function tl() {
+function tp() {
     if ("u" < typeof navigator || !navigator.userAgent) return !1;
     let e = navigator.userAgent;
     return (
@@ -1642,10 +1692,10 @@ function tl() {
         !/iPad/i.test(e)
     );
 }
-let tc = "SamsungBrowser" !== ta().name ? 1 : 3,
-    td,
-    tu = null;
-function th(e) {
+let tf = "SamsungBrowser" !== th().name ? 1 : 3,
+    tm,
+    tg = null;
+function tv(e) {
     let t = [];
     return (
         (function e(i) {
@@ -1660,9 +1710,9 @@ function th(e) {
             if (null === i) return "null";
             if (-1 !== t.indexOf(i)) throw TypeError("Converting circular structure to JSON");
             let o = t.push(i) - 1,
-                s = Object.keys(i).sort();
-            for (n = "", r = 0; r < s.length; r++) {
-                let t = s[r],
+                a = Object.keys(i).sort();
+            for (n = "", r = 0; r < a.length; r++) {
+                let t = a[r],
                     o = e(i[t]);
                 o && (n && (n += ","), (n += JSON.stringify(t) + ":" + o));
             }
@@ -1670,7 +1720,7 @@ function th(e) {
         })(e) || ""
     );
 }
-let tp = [
+let tC = [
         "\uD835\uDD04",
         "\uD835\uDD05",
         "\u212D",
@@ -1684,7 +1734,7 @@ let tp = [
         "\uD835\uDD3C",
         "\uD835\uDD3D",
     ],
-    tf = [
+    ty = [
         "\u03B2",
         "\u03C8",
         "\u03BB",
@@ -1710,17 +1760,17 @@ let tp = [
         "\u03C5",
         "\u03BF",
     ];
-function tm(e, t) {
+function tw(e, t) {
     return `<math><mrow>${t}</mrow></math>`;
 }
-let tg = {
+let t_ = {
         audio: async function () {
-            return e5
+            return te
                 ? (async function () {
                       return new Promise((e, t) => {
                           try {
                               let t,
-                                  i = new e5(1, 5e3, 44100),
+                                  i = new te(1, 5e3, 44100),
                                   r = i.createBufferSource(),
                                   n = i.createOscillator();
                               n.frequency.value = 1e3;
@@ -1788,19 +1838,19 @@ let tg = {
                         );
                     })(),
                 ).filter((e) => null !== e);
-                e(0 !== t.length ? { commonPixelsHash: te(e4(t, 280, 20).data.toString()).toString() } : null);
+                e(0 !== t.length ? { commonPixelsHash: to(tt(t, 280, 20).data.toString()).toString() } : null);
             });
         },
         fonts: async function (e) {
             return new Promise((e) => {
                 try {
-                    tt(async ({ iframe: t }) => {
+                    ta(async ({ iframe: t }) => {
                         let i = t.createElement("canvas").getContext("2d");
                         if (!i) return void e(null);
-                        let r = tr.map((e) => tn(i, e)),
+                        let r = tl.map((e) => tc(i, e)),
                             n = {};
-                        ti.forEach((e) => {
-                            let t = tn(i, e);
+                        ts.forEach((e) => {
+                            let t = tc(i, e);
                             r.includes(t) || (n[e] = t);
                         }),
                             e(n);
@@ -1864,20 +1914,20 @@ let tg = {
             return new Promise((e) => {
                 e({
                     acos: Math.acos(0.5),
-                    asin: to(Math.asin, -1, 1, 97),
-                    cos: to(Math.cos, 0, Math.PI, 97),
+                    asin: td(Math.asin, -1, 1, 97),
+                    cos: td(Math.cos, 0, Math.PI, 97),
                     largeCos: 0.7639704044417283,
                     largeSin: -0.6452512852657808,
                     largeTan: Math.tan(1e20),
-                    sin: to(Math.sin, -Math.PI, Math.PI, 97),
-                    tan: to(Math.tan, 0, 2 * Math.PI, 97),
+                    sin: td(Math.sin, -Math.PI, Math.PI, 97),
+                    tan: td(Math.tan, 0, 2 * Math.PI, 97),
                 });
             });
         },
         permissions: async function (e) {
             var t;
             let i,
-                r = (null == e ? void 0 : e.permissions_to_check) || ts;
+                r = (null == e ? void 0 : e.permissions_to_check) || tu;
             return (
                 (t = await Promise.all(
                     Array.from({ length: 3 }, () =>
@@ -1956,7 +2006,7 @@ let tg = {
                         }),
                         t),
                 };
-                tl() &&
+                tp() &&
                     navigator.maxTouchPoints > 0 &&
                     ((r = window.screen.width),
                     (n = window.screen.height),
@@ -1966,7 +2016,7 @@ let tg = {
         },
         system: function () {
             return new Promise((e) => {
-                let t = ta();
+                let t = th();
                 e({
                     platform: window.navigator.platform,
                     productSub: navigator.productSub,
@@ -1974,7 +2024,7 @@ let tg = {
                     useragent: navigator.userAgent,
                     hardwareConcurrency: navigator.hardwareConcurrency,
                     browser: { name: t.name, version: t.version },
-                    mobile: tl(),
+                    mobile: tp(),
                     applePayVersion: (function () {
                         if ("https:" === window.location.protocol && "function" == typeof window.ApplePaySession)
                             try {
@@ -1989,85 +2039,85 @@ let tg = {
         },
         webgl: async function () {
             "u" > typeof document &&
-                (((td = document.createElement("canvas")).width = 200),
-                (td.height = 100),
-                (tu = td.getContext("webgl")));
+                (((tm = document.createElement("canvas")).width = 200),
+                (tm.height = 100),
+                (tg = tm.getContext("webgl")));
             try {
-                if (!tu) throw Error("WebGL not supported");
+                if (!tg) throw Error("WebGL not supported");
                 return {
-                    commonPixelsHash: te(
-                        e4(
-                            Array.from({ length: tc }, () =>
+                    commonPixelsHash: to(
+                        tt(
+                            Array.from({ length: tf }, () =>
                                 (function () {
                                     try {
-                                        if (!tu) throw Error("WebGL not supported");
-                                        let e = tu.createShader(tu.VERTEX_SHADER),
-                                            t = tu.createShader(tu.FRAGMENT_SHADER);
+                                        if (!tg) throw Error("WebGL not supported");
+                                        let e = tg.createShader(tg.VERTEX_SHADER),
+                                            t = tg.createShader(tg.FRAGMENT_SHADER);
                                         if (!e || !t) throw Error("Failed to create shaders");
                                         if (
-                                            (tu.shaderSource(
+                                            (tg.shaderSource(
                                                 e,
                                                 "\n          attribute vec2 position;\n          void main() {\n              gl_Position = vec4(position, 0.0, 1.0);\n          }\n      ",
                                             ),
-                                            tu.shaderSource(
+                                            tg.shaderSource(
                                                 t,
                                                 "\n          precision mediump float;\n          void main() {\n              gl_FragColor = vec4(0.812, 0.195, 0.553, 0.921); // Set line color\n          }\n      ",
                                             ),
-                                            tu.compileShader(e),
-                                            !tu.getShaderParameter(e, tu.COMPILE_STATUS))
+                                            tg.compileShader(e),
+                                            !tg.getShaderParameter(e, tg.COMPILE_STATUS))
                                         )
-                                            throw Error("Vertex shader compilation failed: " + tu.getShaderInfoLog(e));
-                                        if ((tu.compileShader(t), !tu.getShaderParameter(t, tu.COMPILE_STATUS)))
+                                            throw Error("Vertex shader compilation failed: " + tg.getShaderInfoLog(e));
+                                        if ((tg.compileShader(t), !tg.getShaderParameter(t, tg.COMPILE_STATUS)))
                                             throw Error(
-                                                "Fragment shader compilation failed: " + tu.getShaderInfoLog(t),
+                                                "Fragment shader compilation failed: " + tg.getShaderInfoLog(t),
                                             );
-                                        let i = tu.createProgram();
+                                        let i = tg.createProgram();
                                         if (!i) throw Error("Failed to create shader program");
                                         if (
-                                            (tu.attachShader(i, e),
-                                            tu.attachShader(i, t),
-                                            tu.linkProgram(i),
-                                            !tu.getProgramParameter(i, tu.LINK_STATUS))
+                                            (tg.attachShader(i, e),
+                                            tg.attachShader(i, t),
+                                            tg.linkProgram(i),
+                                            !tg.getProgramParameter(i, tg.LINK_STATUS))
                                         )
-                                            throw Error("Shader program linking failed: " + tu.getProgramInfoLog(i));
-                                        tu.useProgram(i);
+                                            throw Error("Shader program linking failed: " + tg.getProgramInfoLog(i));
+                                        tg.useProgram(i);
                                         let r = new Float32Array(548),
                                             n = (2 * Math.PI) / 137;
                                         for (let e = 0; e < 137; e++) {
                                             let t = e * n;
                                             (r[4 * e] = 0),
                                                 (r[4 * e + 1] = 0),
-                                                (r[4 * e + 2] = Math.cos(t) * (td.width / 2)),
-                                                (r[4 * e + 3] = Math.sin(t) * (td.height / 2));
+                                                (r[4 * e + 2] = Math.cos(t) * (tm.width / 2)),
+                                                (r[4 * e + 3] = Math.sin(t) * (tm.height / 2));
                                         }
-                                        let o = tu.createBuffer();
-                                        tu.bindBuffer(tu.ARRAY_BUFFER, o),
-                                            tu.bufferData(tu.ARRAY_BUFFER, r, tu.STATIC_DRAW);
-                                        let s = tu.getAttribLocation(i, "position");
-                                        tu.enableVertexAttribArray(s),
-                                            tu.vertexAttribPointer(s, 2, tu.FLOAT, !1, 0, 0),
-                                            tu.viewport(0, 0, td.width, td.height),
-                                            tu.clearColor(0, 0, 0, 1),
-                                            tu.clear(tu.COLOR_BUFFER_BIT),
-                                            tu.drawArrays(tu.LINES, 0, 274);
-                                        let a = new Uint8ClampedArray(td.width * td.height * 4);
+                                        let o = tg.createBuffer();
+                                        tg.bindBuffer(tg.ARRAY_BUFFER, o),
+                                            tg.bufferData(tg.ARRAY_BUFFER, r, tg.STATIC_DRAW);
+                                        let a = tg.getAttribLocation(i, "position");
+                                        tg.enableVertexAttribArray(a),
+                                            tg.vertexAttribPointer(a, 2, tg.FLOAT, !1, 0, 0),
+                                            tg.viewport(0, 0, tm.width, tm.height),
+                                            tg.clearColor(0, 0, 0, 1),
+                                            tg.clear(tg.COLOR_BUFFER_BIT),
+                                            tg.drawArrays(tg.LINES, 0, 274);
+                                        let s = new Uint8ClampedArray(tm.width * tm.height * 4);
                                         return (
-                                            tu.readPixels(0, 0, td.width, td.height, tu.RGBA, tu.UNSIGNED_BYTE, a),
-                                            new ImageData(a, td.width, td.height)
+                                            tg.readPixels(0, 0, tm.width, tm.height, tg.RGBA, tg.UNSIGNED_BYTE, s),
+                                            new ImageData(s, tm.width, tm.height)
                                         );
                                     } catch (e) {
                                         return new ImageData(1, 1);
                                     } finally {
-                                        tu &&
-                                            (tu.bindBuffer(tu.ARRAY_BUFFER, null),
-                                            tu.useProgram(null),
-                                            tu.viewport(0, 0, tu.drawingBufferWidth, tu.drawingBufferHeight),
-                                            tu.clearColor(0, 0, 0, 0));
+                                        tg &&
+                                            (tg.bindBuffer(tg.ARRAY_BUFFER, null),
+                                            tg.useProgram(null),
+                                            tg.viewport(0, 0, tg.drawingBufferWidth, tg.drawingBufferHeight),
+                                            tg.clearColor(0, 0, 0, 0));
                                     }
                                 })(),
                             ),
-                            td.width,
-                            td.height,
+                            tm.width,
+                            tm.height,
                         ).data.toString(),
                     ).toString(),
                 };
@@ -2076,7 +2126,7 @@ let tg = {
             }
         },
     },
-    tC = {
+    tb = {
         webrtc: async function () {
             return new Promise((e) => {
                 try {
@@ -2100,7 +2150,7 @@ let tg = {
                                         let t = r.match(RegExp(`m=${e} [^\\s]+ [^\\s]+ ([^\\n\\r]+)`));
                                         return t ? t[1].split(" ") : [];
                                     },
-                                    s = (e, t) =>
+                                    a = (e, t) =>
                                         t
                                             .map((t) => {
                                                 let i = RegExp(`(rtpmap|fmtp|rtcp-fb):${t} (.+)`, "g"),
@@ -2110,11 +2160,11 @@ let tg = {
                                                 return (
                                                     n.forEach((t) => {
                                                         let [i, r, n] = t,
-                                                            s = n.split("/");
+                                                            a = n.split("/");
                                                         "rtpmap" === r
-                                                            ? ((o.mimeType = `${e}/${s[0]}`),
-                                                              (o.clockRate = +s[1]),
-                                                              "audio" === e && (o.channels = +s[2] || 1))
+                                                            ? ((o.mimeType = `${e}/${a[0]}`),
+                                                              (o.clockRate = +a[1]),
+                                                              "audio" === e && (o.channels = +a[2] || 1))
                                                             : "rtcp-fb" === r
                                                               ? ((o.feedbackSupport = o.feedbackSupport || []),
                                                                 o.feedbackSupport.push(n))
@@ -2124,12 +2174,12 @@ let tg = {
                                                 );
                                             })
                                             .filter(Boolean),
-                                    a = s("audio", o("audio")),
-                                    l = s("video", o("video")),
+                                    s = a("audio", o("audio")),
+                                    l = a("video", o("video")),
                                     c = {
-                                        audio: { count: a.length, hash: te(th(a)) },
-                                        video: { count: l.length, hash: te(th(l)) },
-                                        extensionsHash: te(th(n)),
+                                        audio: { count: s.length, hash: to(tv(s)) },
+                                        video: { count: l.length, hash: to(tv(l)) },
+                                        extensionsHash: to(tv(n)),
                                     },
                                     d = await new Promise((e) => {
                                         let t = setTimeout(() => {
@@ -2148,7 +2198,7 @@ let tg = {
                                             };
                                         i.addEventListener("icecandidate", r);
                                     });
-                                e({ details: d, hash: te(th(d)) });
+                                e({ details: d, hash: to(tv(d)) });
                             } catch (t) {
                                 i.close(), e({ supported: !0, error: `WebRTC offer failed: ${t.message}` });
                             }
@@ -2161,7 +2211,7 @@ let tg = {
         mathml: async function () {
             return new Promise((e) => {
                 try {
-                    tt(async ({ iframe: t }) => {
+                    ta(async ({ iframe: t }) => {
                         try {
                             let i, r;
                             if (
@@ -2181,33 +2231,33 @@ let tg = {
                             )
                                 return void e({ supported: !1, error: "MathML not supported" });
                             let n = [
-                                    tm(
+                                    tw(
                                         "integral",
                                         "<msubsup><mo>\u222B</mo><mi>a</mi><mi>b</mi></msubsup><mfrac><mrow><mi>f</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><mrow><mi>g</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow></mfrac><mi>dx</mi>",
                                     ),
-                                    tm(
+                                    tw(
                                         "fraction",
                                         "<mfrac><mrow><mi>\u03C0</mi><mo>\xd7</mo><msup><mi>r</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mi>\u03C3</mi></mrow></mfrac>",
                                     ),
-                                    tm(
+                                    tw(
                                         "matrix",
                                         "<mo>[</mo><mtable><mtr><mtd><mi>\u03B1</mi></mtd><mtd><mi>\u03B2</mi></mtd></mtr><mtr><mtd><mi>\u03B3</mi></mtd><mtd><mi>\u03B4</mi></mtd></mtr></mtable><mo>]</mo>",
                                     ),
                                     ((i = "<mo>\u220F</mo>"),
-                                    tp.forEach((e, t) => {
+                                    tC.forEach((e, t) => {
                                         let r = 2 * t,
-                                            n = tf.slice(r, r + 2);
+                                            n = ty.slice(r, r + 2);
                                         2 === n.length &&
                                             (i += `<mmultiscripts><mi>${e}</mi><none/><mi>${n[1]}</mi><mprescripts></mprescripts><mi>${n[0]}</mi><none/></mmultiscripts>`);
                                     }),
-                                    tm(0, `<munderover><mmultiscripts>${i}</mmultiscripts></munderover>`)),
+                                    tw(0, `<munderover><mmultiscripts>${i}</mmultiscripts></munderover>`)),
                                     ...((r = []),
-                                    tp.forEach((e, t) => {
+                                    tC.forEach((e, t) => {
                                         let i = 2 * t,
-                                            n = tf.slice(i, i + 2);
+                                            n = ty.slice(i, i + 2);
                                         2 === n.length &&
                                             r.push(
-                                                tm(
+                                                tw(
                                                     0,
                                                     `<mmultiscripts><mi>${e}</mi><none/><mi>${n[1]}</mi><mprescripts></mprescripts><mi>${n[0]}</mi><none/></mmultiscripts>`,
                                                 ),
@@ -2216,7 +2266,7 @@ let tg = {
                                     r),
                                 ],
                                 o = [],
-                                s = "";
+                                a = "";
                             n.forEach((e, i) => {
                                 let r = (function (e, t) {
                                     try {
@@ -2252,10 +2302,10 @@ let tg = {
                                     }
                                 })(e, t);
                                 o.push({ width: r.dimensions.width, height: r.dimensions.height }),
-                                    0 === i && r.fontInfo && (s = te(th(r.fontInfo)));
+                                    0 === i && r.fontInfo && (a = to(tv(r.fontInfo)));
                             });
-                            let a = { fontStyleHash: s, dimensions: o };
-                            e({ details: a, hash: te(th(a)) });
+                            let s = { fontStyleHash: a, dimensions: o };
+                            e({ details: s, hash: to(tv(s)) });
                         } catch (t) {
                             e({ supported: !1, error: `MathML error: ${t.message}` });
                         }
@@ -2291,8 +2341,8 @@ let tg = {
                                         ].join(",");
                                     });
                                     t.sort();
-                                    let i = { voiceCount: r.length, voicesHash: te(th(t)) };
-                                    e({ details: i, hash: te(th(i)) });
+                                    let i = { voiceCount: r.length, voicesHash: to(tv(t)) };
+                                    e({ details: i, hash: to(tv(i)) });
                                 } catch (t) {
                                     e({ supported: !0, error: `Voice processing failed: ${t.message}` });
                                 }
@@ -2314,11 +2364,11 @@ let tg = {
             });
         },
     },
-    tv = {},
-    ty = { timeout: "true" };
-function tw(e, t) {
+    tL = {},
+    tS = { timeout: "true" };
+function tE(e, t) {
     var i;
-    let r = ta();
+    let r = th();
     if ("unknown" === r.name && e.system && "object" == typeof e.system && !Array.isArray(e.system)) {
         let t = e.system.browser;
         t &&
@@ -2328,11 +2378,11 @@ function tw(e, t) {
     }
     let n = r.name.toLowerCase(),
         o = parseInt(r.version.split(".")[0] || "0", 10),
-        s = [...((null == t ? void 0 : t.exclude) || [])],
-        a = (null == t ? void 0 : t.stabilize) || [],
+        a = [...((null == t ? void 0 : t.exclude) || [])],
+        s = (null == t ? void 0 : t.stabilize) || [],
         l = (null == t ? void 0 : t.include) || [];
-    for (let e of a) {
-        let t = e6[e];
+    for (let e of s) {
+        let t = e7[e];
         if (t)
             for (let e of t) {
                 let t = !("browsers" in e),
@@ -2348,7 +2398,7 @@ function tw(e, t) {
                                   }
                                   return n === e;
                               }));
-                (t || r) && s.push(...e.exclude);
+                (t || r) && a.push(...e.exclude);
             }
     }
     return (function e(t, i = "") {
@@ -2356,7 +2406,7 @@ function tw(e, t) {
         for (let [n, o] of Object.entries(t)) {
             let t = i ? `${i}.${n}` : n;
             if ("object" != typeof o || Array.isArray(o) || null === o) {
-                let e = s.some((e) => t.startsWith(e)),
+                let e = a.some((e) => t.startsWith(e)),
                     i = l.some((e) => t.startsWith(e));
                 (e && !i) || (r[n] = o);
             } else {
@@ -2367,62 +2417,62 @@ function tw(e, t) {
         return r;
     })(e);
 }
-let t_ = "visitor_id";
-function tb(e) {
-    return e.storage_property_name ? e.storage_property_name : e.property_name_factory(t_);
+let tI = "visitor_id";
+function tT(e) {
+    return e.storage_property_name ? e.storage_property_name : e.property_name_factory(tI);
 }
-let tL = `${e2}_${t_}`;
-function tE(e, t) {
+let tM = `${e4}_${tI}`;
+function tx(e, t) {
     try {
-        localStorage.setItem(tb(t), e);
+        localStorage.setItem(tT(t), e);
     } catch (e) {}
 }
-let tS = "cache";
-function tI(e) {
+let tk = "cache";
+function tO(e) {
     try {
-        let t = localStorage.getItem(e.property_name_factory(tS));
+        let t = localStorage.getItem(e.property_name_factory(tk));
         return JSON.parse(t) || {};
     } catch (e) {}
     return {};
 }
-let tT = null,
-    tk = null;
-async function tx(e) {
+let tP = null,
+    tA = null;
+async function tR(e) {
     var t;
     if ("u" < typeof document || "u" < typeof window)
         return { thumbmark: "", components: {}, info: {}, version: "1.6.3", error: "Browser environment required" };
-    let i = { ...e0, ...e },
+    let i = { ...e9, ...e },
         r = i.logging && !sessionStorage.getItem("_tmjs_l") && 1e-4 > Math.random(),
-        { elapsed: n, resolvedComponents: o } = await tP({ ...tg, ...tv }, i),
-        s = {},
-        a = {};
+        { elapsed: n, resolvedComponents: o } = await tF({ ...t_, ...tL }, i),
+        a = {},
+        s = {};
     if (r || i.experimental) {
-        let { elapsed: e, resolvedComponents: t } = await tP(tC, i);
-        (s = t), (a = e);
+        let { elapsed: e, resolvedComponents: t } = await tF(tb, i);
+        (a = t), (s = e);
     }
     let l = i.api_key
             ? ((e, t) => {
                   if (e.cache_api_call) {
-                      if (tk) return Promise.resolve(tk);
+                      if (tA) return Promise.resolve(tA);
                       let t = (function (e) {
-                          let t = tI(e);
+                          let t = tO(e);
                           if (t && t.apiResponse && t.apiResponseExpiry && Date.now() <= t.apiResponseExpiry)
                               return t.apiResponse;
                       })(e);
                       if (t) return Promise.resolve(t);
-                      if (tT) return tT;
+                      if (tP) return tP;
                   }
-                  let i = `${e.api_endpoint || e3}/thumbmark`,
+                  let i = `${e.api_endpoint || e8}/thumbmark`,
                       r = (function (e) {
                           try {
-                              let t = tb(e),
+                              let t = tT(e),
                                   i = localStorage.getItem(t);
-                              return i || t === tL || ((i = localStorage.getItem(tL)) && tE(i, e)), i;
+                              return i || t === tM || ((i = localStorage.getItem(tM)) && tx(i, e)), i;
                           } catch (e) {
                               return null;
                           }
                       })(e),
-                      n = { components: t, options: e, clientHash: te(th(t)), version: "1.6.3" };
+                      n = { components: t, options: e, clientHash: to(tv(t)), version: "1.6.3" };
                   r && (n.visitorId = r);
                   let o = fetch(i, {
                           method: "POST",
@@ -2442,8 +2492,8 @@ async function tx(e) {
                           })
                           .then(
                               (t) => (
-                                  t.visitorId && t.visitorId !== r && tE(t.visitorId, e),
-                                  (tk = t),
+                                  t.visitorId && t.visitorId !== r && tx(t.visitorId, e),
+                                  (tA = t),
                                   (function (e, t) {
                                       if (e.cache_api_call && e.cache_lifetime_in_ms) {
                                           var i = {
@@ -2453,35 +2503,35 @@ async function tx(e) {
                                                       : Date.now() + e.cache_lifetime_in_ms,
                                               apiResponse: t,
                                           };
-                                          let r = { ...tI(e), ...i };
+                                          let r = { ...tO(e), ...i };
                                           try {
-                                              localStorage.setItem(e.property_name_factory(tS), JSON.stringify(r));
+                                              localStorage.setItem(e.property_name_factory(tk), JSON.stringify(r));
                                           } catch (e) {}
                                       }
                                   })(e, t),
-                                  (tT = null),
+                                  (tP = null),
                                   t
                               ),
                           )
                           .catch((e) => {
                               if (
                                   (console.error("Error fetching pro data", e),
-                                  (tT = null),
+                                  (tP = null),
                                   "INVALID_API_KEY" === e.message)
                               )
                                   throw e;
                               return null;
                           }),
-                      s = e.timeout || 5e3;
-                  return (tT = Promise.race([
+                      a = e.timeout || 5e3;
+                  return (tP = Promise.race([
                       o,
                       new Promise((t) => {
                           setTimeout(() => {
-                              let i = tI(e);
+                              let i = tO(e);
                               i && i.apiResponse
                                   ? t(i.apiResponse)
                                   : t({ info: { timed_out: !0 }, ...(r && { visitorId: r }) });
-                          }, s);
+                          }, a);
                       }),
                   ]));
               })(i, o)
@@ -2501,18 +2551,18 @@ async function tx(e) {
                 };
             throw e;
         }
-    let d = { ...n, ...a },
+    let d = { ...n, ...s },
         u = i.performance ? { elapsed: d } : {},
-        h = tw((null == c ? void 0 : c.components) || {}, i),
+        h = tE((null == c ? void 0 : c.components) || {}, i),
         p = { ...o, ...h },
         f = (null == c ? void 0 : c.info) || { uniqueness: { score: "api only" } },
-        m = null != (t = null == c ? void 0 : c.thumbmark) ? t : te(th(p));
+        m = null != (t = null == c ? void 0 : c.thumbmark) ? t : to(tv(p));
     return (
         r &&
             (async function (e, t, i, r = {}) {
                 var n;
-                let o = `${e3}/log`,
-                    s = {
+                let o = `${e8}/log`,
+                    a = {
                         thumbmark: e,
                         components: t,
                         experimental: r,
@@ -2525,10 +2575,10 @@ async function tx(e) {
                     await fetch(o, {
                         method: "POST",
                         headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify(s),
+                        body: JSON.stringify(a),
                     });
                 } catch (e) {}
-            })(m, p, i, s).catch(() => {}),
+            })(m, p, i, a).catch(() => {}),
         {
             ...((null == c ? void 0 : c.visitorId) && { visitorId: c.visitorId }),
             thumbmark: m,
@@ -2536,14 +2586,14 @@ async function tx(e) {
             info: f,
             version: "1.6.3",
             ...u,
-            ...(Object.keys(s).length > 0 && i.experimental && { experimental: s }),
+            ...(Object.keys(a).length > 0 && i.experimental && { experimental: a }),
             ...((null == c ? void 0 : c.requestId) && { requestId: c.requestId }),
         }
     );
 }
-async function tP(e, t) {
+async function tF(e, t) {
     var i, r;
-    let n = { ...e0, ...t },
+    let n = { ...e9, ...t },
         o = Object.entries(e)
             .filter(([e]) => {
                 var t;
@@ -2558,8 +2608,8 @@ async function tP(e, t) {
                     : 0 === (null == (r = null == n ? void 0 : n.include) ? void 0 : r.length) ||
                           (null == (o = null == n ? void 0 : n.include) ? void 0 : o.includes(e));
             }),
-        s = o.map(([e]) => e),
-        a = await ((i = o.map(([e, i]) => i(t))),
+        a = o.map(([e]) => e),
+        s = await ((i = o.map(([e, i]) => i(t))),
         (r = (null == n ? void 0 : n.timeout) || 5e3),
         Promise.all(
             i.map((e) => {
@@ -2567,7 +2617,7 @@ async function tP(e, t) {
                 return Promise.race([
                     e.then((e) => ({ value: e, elapsed: performance.now() - t })),
                     new Promise((e) => {
-                        setTimeout(() => e(ty), r);
+                        setTimeout(() => e(tS), r);
                     }).then((e) => ({ value: e, elapsed: performance.now() - t })),
                 ]);
             }),
@@ -2575,50 +2625,50 @@ async function tP(e, t) {
         l = {},
         c = {};
     return (
-        a.forEach((e, t) => {
+        s.forEach((e, t) => {
             var i;
-            null != e.value && ((c[s[t]] = e.value), (l[s[t]] = null != (i = e.elapsed) ? i : 0));
+            null != e.value && ((c[a[t]] = e.value), (l[a[t]] = null != (i = e.elapsed) ? i : 0));
         }),
-        { elapsed: l, resolvedComponents: tw(c, n) }
+        { elapsed: l, resolvedComponents: tE(c, n) }
     );
 }
-var tM = class {
+var tD = class {
     constructor(e) {
-        this.options = { ...e0, ...e };
+        this.options = { ...e9, ...e };
     }
     async get(e) {
-        return tx({ ...this.options, ...e });
+        return tR({ ...this.options, ...e });
     }
     getVersion() {
         return "1.6.3";
     }
     includeComponent(e, t) {
-        tv[e] = t;
+        tL[e] = t;
     }
 };
-async function tO() {
-    return (await new tM().get()).thumbmark;
+async function tU() {
+    return (await new tD().get()).thumbmark;
 }
-var tA = class {
+var tN = class {
     constructor(e) {
         this.ipLookup = e;
     }
     async getFingerprint(e = !1) {
-        let t = await tO(),
-            [i, r] = await Promise.all([e1(), e ? Promise.resolve("") : this.ipLookup.getIp()]);
+        let t = await tU(),
+            [i, r] = await Promise.all([e5(), e ? Promise.resolve("") : this.ipLookup.getIp()]);
         return { visitorId: t, ip: r, deviceInfo: i };
     }
 };
-let tR = null;
-async function tD(e) {
-    if (tR) return tR;
-    let t = await o.t.get(a.t.featureConfig, { signal: e });
+let tH = null;
+async function tV(e) {
+    if (tH) return tH;
+    let t = await o.t.get(s.t.featureConfig, { signal: e });
     if (!t.ok) throw Error(`Failed to fetch feature config: ${t.status} ${t.statusText}`);
-    return (tR = t.data);
+    return (tH = t.data);
 }
-async function tF(e = {}, t) {
+async function tB(e = {}, t) {
     var i, r;
-    let { disableIpify: n = !1, hostingApp: s, signal: l } = e,
+    let { disableIpify: n = !1, hostingApp: a, signal: l } = e,
         d = await t.fingerprintProvider.getFingerprint(n),
         u = (0, c.t)(t.browserEnv),
         h = {
@@ -2631,38 +2681,38 @@ async function tF(e = {}, t) {
             browser: (r = d.deviceInfo.browser).name && r.version ? `${r.name} ${r.version}` : "Unknown",
             hasLiedBrowser: u,
             sdkVersion: "2.0.1",
-            hostingApp: s ?? "Web SDK",
+            hostingApp: a ?? "Web SDK",
         },
-        p = await o.t.post(a.t.deviceFingerprint, h, { signal: l });
+        p = await o.t.post(s.t.deviceFingerprint, h, { signal: l });
     if (!p.ok) throw Error(`Failed to submit fingerprint: ${p.status} ${p.statusText}`);
     return p.data;
 }
-let tU = !1,
-    tH = null,
-    tN = !1,
-    tV = !1,
-    tB = null;
-async function tz(e = {}) {
+let t$ = !1,
+    tz = null,
+    tj = !1,
+    tZ = !1,
+    tW = null;
+async function tK(e = {}) {
     let { token: t, hostingApp: i, signal: n } = e;
-    return (void 0 !== t && t !== (0, o.r)() && ((0, o.s)(t), t$()), tU && tH)
-        ? { features: tH, disableIpify: tN, fingerprintSuccess: tV, fingerprintResult: r }
-        : tB ||
-              (tB = (async () => {
+    return (void 0 !== t && t !== (0, o.r)() && ((0, o.s)(t), tY()), t$ && tz)
+        ? { features: tz, disableIpify: tj, fingerprintSuccess: tZ, fingerprintResult: r }
+        : tW ||
+              (tW = (async () => {
                   let e,
                       t,
                       o = !1;
                   try {
-                      var a;
-                      (a = (e = await tD(n)).features),
-                          (o = a?.find((e) => "DISABLE_IPIFY" === e.feature)?.enabled ?? !1);
+                      var s;
+                      (s = (e = await tV(n)).features),
+                          (o = s?.find((e) => "DISABLE_IPIFY" === e.feature)?.enabled ?? !1);
                   } catch {
                       e = { sessionIdentifier: "" };
                   }
                   let c = !1;
                   try {
-                      let e = new tA(new l.t()),
+                      let e = new tN(new l.t()),
                           r = new l.r();
-                      (t = await tF(
+                      (t = await tB(
                           { disableIpify: o, hostingApp: i, signal: n },
                           { fingerprintProvider: e, browserEnv: r },
                       )),
@@ -2671,8 +2721,8 @@ async function tz(e = {}) {
                       console.warn("Failed to submit device fingerprint:", e);
                   }
                   try {
-                      let e = new eq().getBrowserInfo();
-                      (0, s.h)({
+                      let e = new e1().getBrowserInfo();
+                      (0, a.h)({
                           code: "browser",
                           payload: {
                               userAgent: e.userAgent,
@@ -2688,17 +2738,23 @@ async function tz(e = {}) {
                       console.warn("Failed to send browser info event:", e);
                   }
                   return (
-                      (tU = !0),
-                      (tH = e),
-                      (tN = o),
-                      (tV = c),
+                      (t$ = !0),
+                      (tz = e),
+                      (tj = o),
+                      (tZ = c),
                       (r = t),
                       { features: e, disableIpify: o, fingerprintSuccess: c, fingerprintResult: t }
                   );
               })().finally(() => {
-                  (tB = null), (0, s.g)()?.start();
+                  (tW = null), (0, a.g)()?.start();
               }));
 }
-function t$() {
-    (tU = !1), (tH = null), (tN = !1), (tV = !1), (r = void 0), (tB = null), (tR = null), (0, l.n)();
+function tG() {
+    return tj;
+}
+function tq() {
+    return r;
+}
+function tY() {
+    (t$ = !1), (tz = null), (tj = !1), (tZ = !1), (r = void 0), (tW = null), (tH = null), (0, l.n)();
 }

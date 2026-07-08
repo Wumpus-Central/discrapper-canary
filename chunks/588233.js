@@ -1,47 +1,63 @@
-let r;
-i.d(t, { _: () => u, g: () => d, h: () => h, m: () => p, n: () => S, o: () => E, r: () => I, v: () => c });
-var n = i(209688);
-function o() {
+i.d(t, {
+    S: () => o,
+    _: () => h,
+    b: () => a,
+    g: () => u,
+    h: () => p,
+    m: () => f,
+    n: () => I,
+    o: () => E,
+    r: () => T,
+    v: () => d,
+    x: () => n,
+});
+var r = i(209688);
+function n() {
     return Date.now();
 }
-let s =
-        ((r = []),
-        {
-            subscribe: function (e) {
-                return (
-                    r.push(e),
-                    () => {
-                        let t = r.indexOf(e);
-                        t > -1 && r.splice(t, 1);
-                    }
-                );
-            },
-            emit: function (e) {
-                r.forEach((t) => {
-                    try {
-                        t(e);
-                    } catch {
-                        return;
-                    }
-                });
-            },
-            clear: function () {
-                r.length = 0;
-            },
-        }),
-    a = null,
-    l = [];
-function c(e) {
-    if ((a?.dispose(), (a = e), l.length > 0)) for (let t of l.splice(0)) e.enqueue(t);
+function o(e) {
+    URL.revokeObjectURL(e);
+}
+function a() {
+    let e = [];
+    return {
+        subscribe: function (t) {
+            return (
+                e.push(t),
+                () => {
+                    let i = e.indexOf(t);
+                    i > -1 && e.splice(i, 1);
+                }
+            );
+        },
+        emit: function (t) {
+            e.forEach((e) => {
+                try {
+                    e(t);
+                } catch {
+                    return;
+                }
+            });
+        },
+        clear: function () {
+            e.length = 0;
+        },
+    };
+}
+let s = a(),
+    l = null,
+    c = [];
+function d(e) {
+    if ((l?.dispose(), (l = e), c.length > 0)) for (let t of c.splice(0)) e.enqueue(t);
     return e;
 }
-function d() {
-    return a;
-}
 function u() {
-    a?.dispose(), (a = null), (l.length = 0);
+    return l;
 }
-function h(e) {
+function h() {
+    l?.dispose(), (l = null), (c.length = 0);
+}
+function p(e) {
     s.emit(e);
     let t = {
         code: e.code,
@@ -55,19 +71,19 @@ function h(e) {
                       return i > 0 ? t.slice(0, i) : t;
                   })(e.screen)
                 : void 0,
-        clientTimestamp: e.clientTimestamp ?? o(),
+        clientTimestamp: e.clientTimestamp ?? n(),
         payload: e.payload ?? {},
     };
-    a ? a.enqueue(t) : l.push(t);
+    l ? l.enqueue(t) : c.push(t);
 }
-function p(e) {
+function f(e) {
     let {
             endpoint: t,
             authToken: i,
-            pageLifecycle: r,
+            pageLifecycle: n,
             timer: o,
-            apiBaseUrl: s,
-            apiClient: a = n.t,
+            apiBaseUrl: a,
+            apiClient: s = r.t,
             maxBatchSize: l = 50,
             maxBatchAgeMs: c = 1e3,
             maxRetries: d = 2,
@@ -78,16 +94,16 @@ function p(e) {
         f = null,
         m = null,
         g = !1;
-    function C() {
+    function v() {
         null !== f && (o.clearTimeout(f), (f = null));
     }
-    function v() {
+    function C() {
         g || ((g = !0), console.warn("[AnalyticsBatchingService] Dropping batch: no auth token at flush time."));
     }
     function y(e, i) {
         let r;
         try {
-            r = a.post(t, e, { keepalive: !0 });
+            r = s.post(t, e, { keepalive: !0 });
         } catch (t) {
             w(e, t, i);
             return;
@@ -114,17 +130,17 @@ function p(e) {
     function _() {
         if (p || 0 === u.length) return;
         let e = u;
-        ((u = []), C(), i()) ? y(e, 0) : v();
+        ((u = []), v(), i()) ? y(e, 0) : C();
     }
     function b() {
         if (p || 0 === u.length) return;
         let e = u;
-        (u = []), C();
-        let n = i();
-        if (!n) return void v();
-        let o = `${s().replace(/\/$/, "")}${t}`,
-            a = JSON.stringify({ token: n, events: e });
-        r.sendBeacon(o, a);
+        (u = []), v();
+        let r = i();
+        if (!r) return void C();
+        let o = `${a().replace(/\/$/, "")}${t}`,
+            s = JSON.stringify({ token: r, events: e });
+        n.sendBeacon(o, s);
     }
     return {
         enqueue: function (e) {
@@ -137,33 +153,33 @@ function p(e) {
             }
         },
         start: function () {
-            h || p || ((h = !0), (m = r.onPageHide(b)), u.length > 0 && _());
+            h || p || ((h = !0), (m = n.onPageHide(b)), u.length > 0 && _());
         },
         flush: _,
         dispose: function () {
-            p || ((p = !0), C(), m?.(), (m = null), (u = []));
+            p || ((p = !0), v(), m?.(), (m = null), (u = []));
         },
     };
 }
-function f(e) {
-    h({ code: e.code, module: e.module, screen: e.screen, clientTimestamp: o(), payload: e.payload });
-}
-function m(e, t, i) {
-    f({ module: e, screen: t, code: "moduleOpened", payload: i });
+function m(e) {
+    p({ code: e.code, module: e.module, screen: e.screen, clientTimestamp: n(), payload: e.payload });
 }
 function g(e, t, i) {
-    f({ module: e, screen: t, code: "moduleClosed", payload: i });
-}
-function C(e, t, i) {
-    f({ module: e, screen: t, code: "screenOpened", payload: i });
+    m({ module: e, screen: t, code: "moduleOpened", payload: i });
 }
 function v(e, t, i) {
-    f({ module: e, screen: t, code: "screenClosed", payload: i });
+    m({ module: e, screen: t, code: "moduleClosed", payload: i });
+}
+function C(e, t, i) {
+    m({ module: e, screen: t, code: "screenOpened", payload: i });
 }
 function y(e, t, i) {
-    f({ module: e, screen: t, code: "errorTriggered", payload: i });
+    m({ module: e, screen: t, code: "screenClosed", payload: i });
 }
-function w(e) {
+function w(e, t, i) {
+    m({ module: e, screen: t, code: "errorTriggered", payload: i });
+}
+function _(e) {
     return "string" != typeof e
         ? ""
         : e
@@ -173,22 +189,22 @@ function w(e) {
               .replace(/[^a-z0-9]+/g, "-")
               .replace(/^-+|-+$/g, "");
 }
-function _(e) {
+function b(e) {
     return e
         .split("+")
         .map((e) =>
             e
                 .split(".")
-                .map((e) => w(e))
+                .map((e) => _(e))
                 .filter((e) => e.length > 0)
                 .join("."),
         )
         .filter((e) => e.length > 0)
         .join("+");
 }
-function b(e) {
+function L(e) {
     if ("string" == typeof e || "number" == typeof e) {
-        let t = w(String(e));
+        let t = _(String(e));
         return t.length > 0 ? t : void 0;
     }
     if ("object" != typeof e || null === e) return;
@@ -196,58 +212,58 @@ function b(e) {
     if (0 === t.length) return;
     let i = t
         .map(([e, t]) => {
-            let i = w(e),
-                r = b(t);
+            let i = _(e),
+                r = L(t);
             return 0 === i.length ? r : void 0 === r ? i : `${i}.${r}`;
         })
         .filter((e) => void 0 !== e && e.length > 0);
     if (0 !== i.length) return i.join("+");
 }
-function L(e, t) {
+function S(e, t) {
     let i = "string" == typeof e ? e.trim() : "",
-        r = _(t);
+        r = b(t);
     return 0 === i.length ? r : 0 === r.length ? i : `${i}.${r}`;
 }
 function E(e, t) {
     return {
         moduleName: e,
-        onModuleOpened: m,
-        onModuleClosed: g,
+        onModuleOpened: g,
+        onModuleClosed: v,
         onScreenOpened: C,
-        onScreenClosed: v,
-        onErrorTriggered: y,
+        onScreenClosed: y,
+        onErrorTriggered: w,
         onElementClicked: (e, t, i) => {
-            f({ module: e, screen: t, code: "elementClicked", payload: i });
+            m({ module: e, screen: t, code: "elementClicked", payload: i });
         },
         onCaptureAttemptFinished: (e, t, i) => {
-            f({ module: e, screen: t, code: "captureAttemptFinished", payload: i });
+            m({ module: e, screen: t, code: "captureAttemptFinished", payload: i });
         },
         getScreenName: (i) =>
             (function (e, t, i) {
                 let r = i?.getEventScreenName?.(t);
                 if (void 0 !== r) return r;
-                let n = i?.getScreenName?.(t) ?? b(t.value);
-                if (void 0 !== n) return L(e, n);
+                let n = i?.getScreenName?.(t) ?? L(t.value);
+                if (void 0 !== n) return S(e, n);
             })(e, i, { getEventScreenName: t?.getEventScreenName, getScreenName: t?.getScreenName }),
         getErrorName: (i) => {
             let r =
                 t?.getErrorName?.(i) ??
                 (function (e) {
-                    let t = b(e.value);
+                    let t = L(e.value);
                     if (void 0 === t) return;
-                    let i = _(t);
+                    let i = b(t);
                     if (0 !== i.length) {
                         if ("error" === i) return "error.unknown";
                         if ("error" === i || i.includes("error") || i.includes("failed") || i.includes("failure"))
                             return `error.${i}`;
                     }
                 })(i);
-            if (void 0 !== r) return L(e, r);
+            if (void 0 !== r) return S(e, r);
         },
         getErrorPayload: (e) => t?.getErrorPayload?.(e),
     };
 }
-let S = {
+let I = {
         selfie: "SELFIE",
         faceCapture: "faceCapture",
         authentication: "AUTHENTICATION",
@@ -291,7 +307,7 @@ let S = {
         watchlistForBusiness: "WATCHLIST_FOR_BUSINESS",
         trustGraph: "TRUST_GRAPH",
     },
-    I = {
+    T = {
         faceMatch: "FACE_MATCH",
         faceCaptureTutorial: "SELFIE_CAPTURE_TUTORIAL",
         faceCaptureCamera: "SELFIE_CAMERA_CAPTURE",
@@ -388,4 +404,4 @@ let S = {
         digitalIdVerificationFailed: "DIGITAL_ID_VERIFICATION_FAILED",
         ekybForm: "EKYB_FORM",
     };
-I.passportTutorial, I.frontTutorial, I.backTutorial, I.faceCaptureTutorial;
+T.passportTutorial, T.frontTutorial, T.backTutorial, T.faceCaptureTutorial;
