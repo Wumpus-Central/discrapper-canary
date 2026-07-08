@@ -6,6 +6,7 @@ e.exports = {
     AG: "settingsHeroBogoHeight__11fc5",
     dY: "premiumTierCardsContainerSettings__11fc5",
     w$: "giftPromoCard__11fc5",
+    Ol: "billingSettingsBannerContainer__11fc5",
     B_: "perkCardsContainerSpacingSettings__11fc5",
     JQ: "planComparisonTable__11fc5",
     aC: "planComparisonTableContainer__11fc5",
