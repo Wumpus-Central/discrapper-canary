@@ -831,8 +831,8 @@ var e1 = l(97808),
     e9 = l(778712),
     e6 = l(463930),
     e5 = l(730134),
-    e4 = l(63152),
-    e3 = l(319756),
+    e3 = l(63152),
+    e4 = l(319756),
     e8 = l(854627),
     e7 = l(696451),
     e2 = l(317525),
@@ -871,7 +871,7 @@ function ts(e) {
                               variant: "text-sm/medium",
                               children: k.intl.format(u ? G.default["7fWTg4"] : G.default["7PXeeQ"], {
                                   onClick: () => {
-                                      (0, e4.K4)({
+                                      (0, e3.K4)({
                                           guildId: t,
                                           location: {
                                               section: ex.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -885,7 +885,7 @@ function ts(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(e3.V, {
+                      (0, n.jsx)(e4.V, {
                           avatar: (0, n.jsx)(ti, {
                               ...f,
                               user: s,
@@ -1196,7 +1196,7 @@ function tC(e) {
                             boostCount: u.cost,
                         }),
                     ],
-                    primaryButtonText: k.intl.string(G.default["4A5erd"]),
+                    hasCancelButton: !1,
                 };
             }, [y, u, p])),
             { shouldShow: y, modalConfig: w }),
