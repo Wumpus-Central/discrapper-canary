@@ -864,11 +864,11 @@ let r = {
             "POST_CONNECTION_OPEN",
             "WINDOW_FOCUS",
             "WINDOW_VISIBILITY_CHANGE",
-            "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS",
+            "CURRENT_USER_UPDATE",
             "LOGOUT",
             "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS",
         ],
-        inlineRequire: () => n(871218).A,
+        inlineRequire: () => n(516207).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     SentryExperimentFeatureFlagManager: {

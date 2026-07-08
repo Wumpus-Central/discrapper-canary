@@ -1,6 +1,7 @@
-e.exports = {
+_.exports = {
     C$: "nav__77616",
     pc: "navItem__77616",
+    Hq: "navContent__77616",
     EV: "navItemSelected__77616",
     We: "navLabel__77616",
     UT: "navDecoration__77616",

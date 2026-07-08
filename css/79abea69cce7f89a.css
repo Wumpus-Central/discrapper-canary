@@ -1,0 +1,16 @@
+.button_e18686 {
+    align-items: center;
+    color: var(--icon-subtle);
+    display: flex;
+    justify-content: center;
+    transition: color .2s ease
+}
+
+.button_e18686:hover {
+    color: var(--icon-strong)
+}
+
+.enable-forced-colors .button_e18686 {
+    background-color: ButtonFace;
+    border: 1px solid ButtonText
+}
