@@ -15,6 +15,7 @@ e.exports = {
     AM: "groupLabel_b08638",
     Zi: "groupErrorMessage_b08638",
     i_: "groupLabelHeading_b08638",
+    NY: "groupLabelBadge_b08638",
     l3: "groupLabelIcon_b08638",
     X6: "perServerNotice_b08638",
     TD: "perServerNoticeDismissButton_b08638",
