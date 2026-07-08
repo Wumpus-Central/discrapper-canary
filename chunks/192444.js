@@ -154,9 +154,10 @@ function v() {
 }
 var b =
     (((s = {})[(s.CONTROL = 0)] = "CONTROL"),
-    (s[(s.LARGE_MASK_MARGIN = 1)] = "LARGE_MASK_MARGIN"),
-    (s[(s.REMOVE_QUEST_TITLE_SUFFIX = 2)] = "REMOVE_QUEST_TITLE_SUFFIX"),
-    (s[(s.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 3)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
+    (s[(s.NEW_LAYOUT_WITH_SEARCH = 1)] = "NEW_LAYOUT_WITH_SEARCH"),
+    (s[(s.LARGE_MASK_MARGIN = 2)] = "LARGE_MASK_MARGIN"),
+    (s[(s.REMOVE_QUEST_TITLE_SUFFIX = 3)] = "REMOVE_QUEST_TITLE_SUFFIX"),
+    (s[(s.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 4)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
     s);
 let L = (0, l.mj)({
     name: "2026-06-quest-home-layout-visual-tweaks",
@@ -167,5 +168,6 @@ let L = (0, l.mj)({
         1: { enabled: !0, variant: 1 },
         2: { enabled: !0, variant: 2 },
         3: { enabled: !0, variant: 3 },
+        4: { enabled: !0, variant: 4 },
     },
 });
