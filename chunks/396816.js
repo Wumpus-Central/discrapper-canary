@@ -172,6 +172,9 @@ class Y extends u.Ay.Store {
     hasChanges() {
         return T || b || L;
     }
+    isRoleEdited(e) {
+        return v.has(e) || G.has(e);
+    }
     getRoleStyleData(e) {
         return M.get(e);
     }
