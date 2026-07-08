@@ -34,14 +34,6 @@
     width: 100%
 }
 
-.progressBar_e99fef {
-    background-color: var(--background-surface-highest);
-    border-radius: 94px;
-    height: 10px;
-    position: relative;
-    width: 100%
-}
-
 .progressBarContainer_e99fef {
     margin: var(--space-12) 0;
     width: 100%
@@ -49,22 +41,6 @@
 
 .monthlyCodeCountdownLabel_e99fef {
     margin-bottom: 10px
-}
-
-.progressBarFill_e99fef {
-    background: linear-gradient(90deg, #13184c, #5865f2);
-    height: 100%;
-    fill: #5865f2;
-    border-radius: 5px 0 0 5px
-}
-
-.progressBarIndicator_e99fef {
-    align-items: center;
-    border-radius: 50%;
-    box-shadow: 0 0 20px 5px #5865f2;
-    display: flex;
-    height: 100%;
-    position: absolute
 }
 
 .cards_e99fef {
@@ -178,10 +154,6 @@
 .progressBarSlim_e99fef {
     box-sizing: border-box;
     padding: 0 var(--space-16)
-}
-
-.progressBarSlim_e99fef .progressBar_e99fef {
-    height: 5px
 }
 
 .sectionSpacer_e99fef {
