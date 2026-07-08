@@ -1,29 +1,25 @@
-function t(e, t, n, i) {
-    Object.defineProperty(e, t, { get: n, set: i, enumerable: !0, configurable: !0 });
-}
-t(e.exports, "announce", () => r),
-    t(e.exports, "createAnnouncer", () => i),
-    t(e.exports, "clearAnnouncer", () => s),
-    t(e.exports, "destroyAnnouncer", () => a);
-let n = null;
-function i(e = null) {
-    n || (n = new o(e));
-}
-function r(e, t = "assertive", i = 7e3) {
-    n
-        ? n.announce(e, t, i)
-        : ((n = new o()),
+"use strict";
+n.d(t, { iP: () => r, pA: () => s, vS: () => a });
+let i = null;
+function r(e, t = "assertive", n = 7e3) {
+    i
+        ? i.announce(e, t, n)
+        : ((i = new o()),
           ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
-              ? n.announce(e, t, i)
+              ? i.announce(e, t, n)
               : setTimeout(() => {
-                    (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, i));
+                    (null == i ? void 0 : i.isAttached()) && (null == i || i.announce(e, t, n));
                 }, 100));
 }
 function s(e) {
-    n && n.clear(e);
+    i && i.clear(e);
 }
-function a() {
-    n && (n.destroy(), (n = null));
+function a(e = null) {
+    i
+        ? i.move(e)
+        : (function (e = null) {
+              i || (i = new o(e));
+          })(e);
 }
 class o {
     isAttached() {
@@ -41,6 +37,9 @@ class o {
     }
     destroy() {
         this.node && this.parentNode && (this.parentNode.removeChild(this.node), (this.node = null));
+    }
+    move(e = null) {
+        this.node && ((this.parentNode = null != e ? e : document.body), this.parentNode.prepend(this.node));
     }
     announce(e, t = "assertive", n = 7e3) {
         var i, r;

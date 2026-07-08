@@ -1,16 +1,16 @@
 "use strict";
 n.d(t, { O: () => s });
-var i = n(959611);
+var i = n(230906);
 let r = new Map(),
     s = {
         announce: i.iP,
         clearAnnouncements: i.pA,
         moveTo: function (e, t) {
-            null != t && ((0, i.c5)(), (0, i.So)(t), r.set(e, t));
+            null == t || r.has(e) || ((0, i.vS)(t), r.set(e, t));
         },
         remove: function (e) {
-            (0, i.c5)(), r.delete(e);
+            r.delete(e);
             let t = Array.from(r.values()).pop();
-            (0, i.So)(null != t ? t : null);
+            (0, i.vS)(null != t ? t : null);
         },
     };

@@ -1,24 +1,33 @@
-"use strict";
-n.d(t, { So: () => r, c5: () => o, iP: () => s, pA: () => a });
-let i = null;
-function r(e = null) {
-    i || (i = new l(e));
+function t(e, t, n, i) {
+    Object.defineProperty(e, t, { get: n, set: i, enumerable: !0, configurable: !0 });
 }
-function s(e, t = "assertive", n = 7e3) {
-    i
-        ? i.announce(e, t, n)
-        : ((i = new l()),
+t(e.exports, "announce", () => r),
+    t(e.exports, "createAnnouncer", () => i),
+    t(e.exports, "clearAnnouncer", () => s),
+    t(e.exports, "destroyAnnouncer", () => a),
+    t(e.exports, "moveAnnouncer", () => o);
+let n = null;
+function i(e = null) {
+    n || (n = new l(e));
+}
+function r(e, t = "assertive", i = 7e3) {
+    n
+        ? n.announce(e, t, i)
+        : ((n = new l()),
           ("boolean" == typeof IS_REACT_ACT_ENVIRONMENT ? IS_REACT_ACT_ENVIRONMENT : "u" > typeof jest)
-              ? i.announce(e, t, n)
+              ? n.announce(e, t, i)
               : setTimeout(() => {
-                    (null == i ? void 0 : i.isAttached()) && (null == i || i.announce(e, t, n));
+                    (null == n ? void 0 : n.isAttached()) && (null == n || n.announce(e, t, i));
                 }, 100));
 }
-function a(e) {
-    i && i.clear(e);
+function s(e) {
+    n && n.clear(e);
 }
-function o() {
-    i && (i.destroy(), (i = null));
+function a() {
+    n && (n.destroy(), (n = null));
+}
+function o(e = null) {
+    n ? n.move(e) : i(e);
 }
 class l {
     isAttached() {
@@ -36,6 +45,9 @@ class l {
     }
     destroy() {
         this.node && this.parentNode && (this.parentNode.removeChild(this.node), (this.node = null));
+    }
+    move(e = null) {
+        this.node && ((this.parentNode = null != e ? e : document.body), this.parentNode.prepend(this.node));
     }
     announce(e, t = "assertive", n = 7e3) {
         var i, r;
