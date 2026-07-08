@@ -443,6 +443,10 @@
     visibility: visible
 }
 
+.has-webkit-scrollbar .fade_d125d2:hover {
+    will-change: scroll-position
+}
+
 .no-webkit-scrollbar .thin_d125d2 {
     scrollbar-color: var(--scrollbar-thin-thumb) var(--scrollbar-thin-track);
     scrollbar-width: thin
