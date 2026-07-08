@@ -1,15 +1,16 @@
 "use strict";
-n.d(t, { L: () => d, QY: () => u, aQ: () => c });
-var i = n(17928),
-    r = n(280450),
-    a = n(558076),
-    s = n(360729),
-    l = n(765402);
-let o = { x: 50, y: 50 };
-function d(e) {
-    let { users: t, currentUserId: n, listenerHeight: i } = e,
-        r = t.get(n)?.position ?? null,
-        { aspectRatio: a } = l.iX[l.I3.DEFAULT];
+n.d(t, { L: () => c, QY: () => _, aQ: () => u });
+var i = n(821578),
+    r = n(17928),
+    a = n(280450),
+    s = n(558076),
+    l = n(360729),
+    o = n(971954);
+let d = { x: 50, y: 50 };
+function c(e) {
+    let { users: t, currentUserId: n, listenerHeight: r } = e,
+        a = t.get(n)?.position ?? null,
+        { aspectRatio: s } = o.iX[i.I.DEFAULT];
     return Object.fromEntries(
         [...t.values()]
             .filter((e) => {
@@ -22,31 +23,31 @@ function d(e) {
                     t,
                     (function (e, t, n) {
                         let { aspectRatio: i, listenerHeight: r } = n,
-                            a = t ?? o,
+                            a = t ?? d,
                             s = (e.x - a.x) / 100,
                             l = (e.y - a.y) / 100;
                         return { worldX: s * i * 8, worldY: r - 4 * l, worldZ: 8 * l };
-                    })(n, r, { aspectRatio: a, listenerHeight: i }),
+                    })(n, a, { aspectRatio: s, listenerHeight: r }),
                 ];
             }),
     );
 }
-function c(e) {
+function u(e) {
     let { worldX: t, worldY: n, worldZ: i } = e;
     return { x: t, y: n, z: i };
 }
-function u(e) {
-    let { channelId: t, guildId: n, mode: o, listenerHeight: c } = e,
-        u = (0, i.bG)([r.default], () => r.default.getId()),
-        { experimental: _ } = s.A.useExperiment({ guildId: n, location: "SpatialAudioPanel" }),
+function _(e) {
+    let { channelId: t, guildId: n, mode: i, listenerHeight: d } = e,
+        u = (0, r.bG)([a.default], () => a.default.getId()),
+        { experimental: _ } = l.A.useExperiment({ guildId: n, location: "SpatialAudioPanel" }),
         E = _ && null != n,
-        A = E && o === l.sg;
+        A = E && i === o.sg;
     return {
         available: E,
-        worldPoints: (0, i.bG)(
-            [a.A],
-            () => (A && null != t ? d({ users: a.A.getRoomUsers(t), currentUserId: u, listenerHeight: c }) : {}),
-            [A, t, u, c],
+        worldPoints: (0, r.bG)(
+            [s.A],
+            () => (A && null != t ? c({ users: s.A.getRoomUsers(t), currentUserId: u, listenerHeight: d }) : {}),
+            [A, t, u, d],
         ),
     };
 }

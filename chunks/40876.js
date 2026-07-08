@@ -200,7 +200,7 @@ let r = {
         inlineRequire: () => n(229683).A,
     },
     GuildRoomManager: {
-        actions: ["VOICE_STATE_UPDATES", "GUILD_ROOM_CONNECT", "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS"],
+        actions: ["VOICE_STATE_UPDATES", "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS"],
         inlineRequire: () => n(602350).A,
         neverLoadBeforeConnectionOpen: !0,
     },

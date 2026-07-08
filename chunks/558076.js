@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => T });
+n.d(t, { A: () => T, i: () => d });
 var i = n(17928),
     r = n(228366),
     a = n(280450),
@@ -47,6 +47,13 @@ let T = new p(r.h, {
             { users: i, ...r } = t;
         (c[t.roomId] = r), (u[t.roomId] = i), null != n && null != _ && (_ = null);
     },
+    GUILD_ROOM_CONNECT_FAILURE: function (e) {
+        let { roomId: t } = e;
+        if (null == c[t]) return !1;
+        let n = a.default.getId(),
+            i = new Map(u[t]);
+        i.delete(n), (u[t] = i);
+    },
     GUILD_ROOM_DISCONNECT: function (e) {
         let { userId: t, roomId: n } = e;
         if (null == c[n]) return !1;
@@ -63,6 +70,16 @@ let T = new p(r.h, {
         let r = a.default.getId(),
             s = u[t.roomId]?.get(r);
         (u[t.roomId] = n), null != s && u[t.roomId]?.set(r, s);
+    },
+    GUILD_ROOM_UPDATE_FAILURE: function (e) {
+        let { originalRoom: t, originalRoomUsers: n } = e;
+        if (null == c[t.roomId]) return !1;
+        (c[t.roomId] = t), (u[t.roomId] = n);
+    },
+    GUILD_ROOM_FETCH_SUCCESS: function (e) {
+        let { room: t } = e,
+            { users: n, ...i } = t;
+        (c[t.roomId] = i), (u[t.roomId] = n);
     },
     GUILD_ROOM_LOCAL_POSITION_REQUESTED: function (e) {
         let { position: t } = e;
