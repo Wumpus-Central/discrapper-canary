@@ -150,7 +150,6 @@ class _ extends a.A {
     revision;
     orderLineItems;
     billingFacetRecord;
-    externalGatewayFacet;
     giftingFacet;
     subscriptionFacet;
     checkoutContextRecord;
@@ -163,7 +162,6 @@ class _ extends a.A {
             revision: e.revision,
             orderLineItems: e.order_line_items,
             billingFacetRecord: u.createFromOrder(e),
-            externalGatewayFacet: e.external_gateway_facet ?? null,
             giftingFacet: e.gifting_facet ?? null,
             checkoutContextRecord: d.createFromOrder(e),
             createdAt: e.created_at,
@@ -178,7 +176,6 @@ class _ extends a.A {
             (this.revision = e.revision),
             (this.orderLineItems = e.orderLineItems ?? []),
             (this.billingFacetRecord = e.billingFacetRecord ?? null),
-            (this.externalGatewayFacet = e.externalGatewayFacet ?? null),
             (this.giftingFacet = e.giftingFacet ?? null),
             (this.subscriptionFacet = e.subscriptionFacet ?? null),
             (this.checkoutContextRecord = e.checkoutContextRecord ?? null),
