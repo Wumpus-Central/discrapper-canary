@@ -1,15 +1,16 @@
 "use strict";
-n.d(t, { oq: () => S, qC: () => N, xI: () => I, WF: () => g, Eg: () => A, p7: () => C, P7: () => T });
+n.d(t, { oq: () => N, qC: () => C, xI: () => g, WF: () => T, Eg: () => m, p7: () => R, P7: () => S });
 var i = n(517846),
     r = n(636537),
-    s = n(228366),
-    a = n(493336),
-    o = n(27620),
-    l = n(403362),
-    u = n(828488),
+    a = n(228366),
+    s = n(493336),
+    l = n(27620),
+    o = n(403362),
+    d = n(828488),
     c = n(727011),
-    d = n(958720);
-function _(e) {
+    u = n(958720),
+    _ = n(735438);
+function E(e) {
     var t;
     let n = e.summary_map?.entries.find((e) => "TOPIC_EXTRACTION_SUMMARY" === e.summary_type),
         i =
@@ -19,7 +20,7 @@ function _(e) {
                           let t = JSON.parse(e);
                           if ("string" == typeof t?.title && "string" == typeof t?.brief_summary)
                               return {
-                                  title: t.title,
+                                  title: (0, _.upperFirst)(t.title),
                                   brief_summary: t.brief_summary,
                                   key_points: Array.isArray(t.key_points)
                                       ? t.key_points.map((e) => e?.text).filter((e) => "string" == typeof e)
@@ -84,93 +85,93 @@ function _(e) {
                       : null,
           };
 }
-var h = n(17928);
-let f = 0;
-class E extends h.Ay.DeviceSettingsStore {
+var A = n(17928);
+let h = 0;
+class I extends A.Ay.DeviceSettingsStore {
     static displayName = "TopicalNavigationSurveyStore";
     static persistKey = "TopicalNavigationSurveyStore";
     initialize(e) {
-        f = e?.channelsExposedCount ?? 0;
+        h = e?.channelsExposedCount ?? 0;
     }
     shouldTriggerOnNextExposure() {
-        return 2 === f;
+        return 2 === h;
     }
     getState() {
-        return { channelsExposedCount: f };
+        return { channelsExposedCount: h };
     }
     getUserAgnosticState() {
-        return { channelsExposedCount: f };
+        return { channelsExposedCount: h };
     }
 }
-let p = new E(s.h, {
+let f = new I(a.h, {
     TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION: function () {
-        f++;
+        h++;
     },
 });
 n(575279);
-var m = n(652215);
-async function g(e) {
-    let { channelId: t, guildId: n, direction: i, anchor: a, limit: o = 25, isJump: c, throwOnError: h = !1 } = e;
-    if (!(0, u.Lc)(n, "fetch_channel_conversations")) return;
-    let f = `${i}:${a}:${o}:${!0 === c}`;
-    if (d.A.isListFetchPending(t, f)) return;
-    s.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: t, direction: i, requestKey: f, isJump: c ?? !1 });
-    let E = { limit: o };
-    null != a && ("before" === i ? (E.before = a) : "after" === i ? (E.after = a) : (E.around = a));
+var p = n(652215);
+async function T(e) {
+    let { channelId: t, guildId: n, direction: i, anchor: s, limit: l = 25, isJump: c, throwOnError: _ = !1 } = e;
+    if (!(0, d.Lc)(n, "fetch_channel_conversations")) return;
+    let A = `${i}:${s}:${l}:${!0 === c}`;
+    if (u.A.isListFetchPending(t, A)) return;
+    a.h.dispatch({ type: "CONVERSATIONS_FETCH_START", channelId: t, direction: i, requestKey: A, isJump: c ?? !1 });
+    let h = { limit: l };
+    null != s && ("before" === i ? (h.before = s) : "after" === i ? (h.after = s) : (h.around = s));
     try {
         let e = (
-            await r.Bo.get({ url: m.Rsh.CHANNEL_CONVERSATIONS(t), query: E, oldFormErrors: !0, rejectWithError: !0 })
+            await r.Bo.get({ url: p.Rsh.CHANNEL_CONVERSATIONS(t), query: h, oldFormErrors: !0, rejectWithError: !0 })
         ).body.conversations
-            .map(_)
-            .filter(l.Vq);
+            .map(E)
+            .filter(o.Vq);
         return (
-            s.h.dispatch({
+            a.h.dispatch({
                 type: "CONVERSATIONS_FETCH_SUCCESS",
                 channelId: t,
                 conversations: e,
                 direction: i,
-                requestKey: f,
-                anchor: a,
+                requestKey: A,
+                anchor: s,
                 isJump: c ?? !1,
             }),
             e
         );
     } catch {
-        if ((s.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: t, requestKey: f }), h))
+        if ((a.h.dispatch({ type: "CONVERSATIONS_FETCH_FAILURE", channelId: t, requestKey: A }), _))
             throw Error("Failed to fetch conversations");
     }
 }
-function A() {
-    s.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
+function m() {
+    a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function I(e, t, n) {
+function g(e, t, n) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    s.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), N(e, t, n, { full: !0 });
-    let r = d.A.getConversationMetadata(e, n);
+    a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), C(e, t, n, { full: !0 });
+    let r = u.A.getConversationMetadata(e, n);
     i &&
         r?.conversation.startMessageId != null &&
-        a.A.jumpToMessage({ channelId: e, messageId: r.conversation.startMessageId, flash: !1 });
+        s.A.jumpToMessage({ channelId: e, messageId: r.conversation.startMessageId, flash: !1 });
 }
-function T(e, t) {
-    s.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
+function S(e, t) {
+    a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
-function S(e, t, n) {
-    s.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
+function N(e, t, n) {
+    a.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
 }
-async function N(e, t, n) {
-    let { full: i = !1, previewLimit: a = 4 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
-    if (!(0, u.Lc)(t, "fetch_conversation")) return;
-    let o = d.A.getConversationMetadata(e, n);
-    if ((i ? o?.fullyHydrated !== !0 : o?.hydratedMessages == null) && !d.A.isConversationFetchPending(n, i)) {
-        s.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n, full: i });
+async function C(e, t, n) {
+    let { full: i = !1, previewLimit: s = 4 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+    if (!(0, d.Lc)(t, "fetch_conversation")) return;
+    let l = u.A.getConversationMetadata(e, n);
+    if ((i ? l?.fullyHydrated !== !0 : l?.hydratedMessages == null) && !u.A.isConversationFetchPending(n, i)) {
+        a.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n, full: i });
         try {
             let t = await r.Bo.get({
-                url: m.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, n),
-                query: i ? {} : { limit: a },
+                url: p.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, n),
+                query: i ? {} : { limit: s },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
-            s.h.dispatch({
+            a.h.dispatch({
                 type: "CONVERSATION_FETCH_SUCCESS",
                 channelId: e,
                 conversationId: n,
@@ -178,14 +179,14 @@ async function N(e, t, n) {
                 fullyHydrated: i,
             });
         } catch {
-            s.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n, full: i });
+            a.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n, full: i });
         }
     }
 }
-function C(e, t, n) {
+function R(e, t, n) {
     c.X.trackEntrypointImpression({ channel: e, conversationCount: n }),
-        p.shouldTriggerOnNextExposure() && o.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
-        s.h.dispatch({
+        f.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
+        a.h.dispatch({
             type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION",
             channel: e,
             guildId: t,
