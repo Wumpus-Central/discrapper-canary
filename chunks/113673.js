@@ -210,13 +210,9 @@ function P(e, t, s, a, o) {
         u = null != e.eulaId && !D.A.hasAcceptedEULA(e.eulaId);
     null == l || u
         ? (0, h.openModalLazy)(async () => {
-              let { default: i } = await Promise.all([
-                  n.e("21918"),
-                  n.e("19573"),
-                  n.e("28866"),
-                  n.e("52753"),
-                  n.e("16061"),
-              ]).then(n.bind(n, 125484));
+              let { default: i } = await Promise.all([n.e("36416"), n.e("52753"), n.e("90345")]).then(
+                  n.bind(n, 353904),
+              );
               return (n) => (0, r.jsx)(i, { ...n, applicationId: e.id, branchId: t, analyticsLocation: o });
           })
         : (0, i.oc)({

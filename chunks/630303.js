@@ -4,11 +4,11 @@ var l = n(627968),
     r = n(465657),
     a = n(6938),
     s = n(166532),
-    o = n(999968),
+    o = n(630934),
     u = n(375708);
-let c = (e, t) => {
-    let { handlePaymentSourceAdd: n } = e;
-    return (0, l.jsx)(o.Ay, { handlePaymentSourceAdd: n, ...t });
+let c = (e) => {
+    let { handlePaymentSourceAdd: t } = e;
+    return (0, l.jsx)(o.Ay, { handlePaymentSourceAdd: t });
 };
 class d {
     isGift;

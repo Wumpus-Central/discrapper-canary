@@ -289,20 +289,20 @@ var eO = n(875317),
     e1 = n(156867),
     e3 = n(83297),
     e2 = n(562708),
-    e8 = n(702841),
-    e6 = n(139286),
+    e6 = n(702841),
+    e8 = n(139286),
     e7 = n(468689),
     e4 = n(375708),
     e5 = n(330766);
 function e9(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        s = (0, e8.bG)([V.A, eN.default], () => {
+        s = (0, e6.bG)([V.A, eN.default], () => {
             let e = eN.default.getCurrentUser(),
                 n = V.A.getGuild(t);
             return null != n && (0, eI.bM)(n, e);
         });
     return (
-        (0, e6.A)({
+        (0, e8.A)({
             type: e2.ImpressionTypes.POPOUT,
             name: e2.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: s },
@@ -758,8 +758,8 @@ var tQ = n(503698),
     t1 = n(116085),
     t3 = n(597601),
     t2 = n(451394),
-    t8 = n(104171),
-    t6 = n(47167),
+    t6 = n(104171),
+    t8 = n(47167),
     t7 = n(713654),
     t4 = n(976860),
     t5 = n(790535),
@@ -844,7 +844,7 @@ let nh = r.memo(function (e) {
 });
 function ng(e) {
     let { guildEvent: t, channel: n } = e,
-        i = (0, t6.Ay)(n),
+        i = (0, t8.Ay)(n),
         s = (0, d.yK)(
             [x.Ay],
             () =>
@@ -889,7 +889,7 @@ function nI(e) {
         i = (0, nu.oF)(t),
         s = null != i ? (0, no.l)(i, !0) : null,
         a = (0, nu.WN)(t),
-        o = (0, t6.Ay)(a),
+        o = (0, t8.Ay)(a),
         d = (0, t7.gU)(a),
         { startTime: u, endTime: c } = (0, nd.Ay)(t),
         { startDateTimeString: A, upcomingEvent: E, diffMinutes: h } = (0, nc.CC)(u.toISOString(), c?.toISOString()),
@@ -1027,7 +1027,7 @@ function nC(e) {
 }
 function nS(e) {
     let { stageInstance: t, channel: n } = e,
-        i = (0, t6.Ay)(n),
+        i = (0, t8.Ay)(n),
         s = (0, d.yK)([p.A], () => [...new Set(p.A.getMutableParticipants(n.id, M.ip.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
@@ -1092,7 +1092,7 @@ function np(e) {
                       ? (0, l.jsxs)("div", {
                             className: tq()(nE.fI, nE.pF),
                             children: [
-                                (0, l.jsx)(t8.Ay, { guildId: a, users: o, showUserPopout: !0, size: t8.DN.SIZE_16 }),
+                                (0, l.jsx)(t6.Ay, { guildId: a, users: o, showUserPopout: !0, size: t6.DN.SIZE_16 }),
                                 (0, l.jsx)(tn.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
@@ -1210,7 +1210,7 @@ function nU(e) {
     let { channel: t, guild: n } = e,
         i = (0, d.bG)([nL.HP], () => nL.HP.hasHotspot(nL._2.HUB_STUDY_ROOM_NOTICE)),
         s = (0, nD.Q)(t.guild_id),
-        r = (0, t6.Ay)(t),
+        r = (0, t8.Ay)(t),
         o = (0, nO.z)({ maxHeight: 300 * !s, overflow: "hidden", delay: 400 });
     return (0, l.jsx)(a.animated.div, {
         style: o,
@@ -1421,7 +1421,7 @@ var n3 = n(731667);
 function n2() {
     return !0;
 }
-class n8 extends d.Ay.Store {
+class n6 extends d.Ay.Store {
     static displayName = "InviteNoticeStore";
     initialize() {
         this.waitFor(R.A), this.syncWith([R.A], n2);
@@ -1430,7 +1430,7 @@ class n8 extends d.Ay.Store {
         return Date.now() - t >= H.D2K && R.A.can(H.xBc.ADMINISTRATOR, e);
     }
 }
-let n6 = new n8(I.h),
+let n8 = new n6(I.h),
     n7 = "lastHiddenChannelNotice",
     n4 = [
         { type: H.n5X.CLAN_ADMIN_UPSELL, dismissibleContentType: u.M.CHANNEL_LIST_CLAN_ADMIN_UPSELL },
@@ -1440,7 +1440,7 @@ let n6 = new n8(I.h),
             dismissibleContentType: u.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION,
         },
         { type: H.n5X.GUILD_BANNER, store: nJ, dismissibleContentType: u.M.CHANNEL_NOTICE_GUILD_BANNER },
-        { type: H.n5X.INVITE, store: n6, dismissibleContentType: u.M.CHANNEL_NOTICE_INVITE },
+        { type: H.n5X.INVITE, store: n8, dismissibleContentType: u.M.CHANNEL_NOTICE_INVITE },
         { type: H.n5X.HUB_LINK, store: n3.A, dismissibleContentType: u.M.CHANNEL_NOTICE_HUBLINK },
         { type: H.n5X.QUICKSWITCHER, store: nq.A, dismissibleContentType: u.M.CHANNEL_NOTICE_QUICKSWITCHER },
         { type: H.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: u.M.LINKED_ROLE_ADMIN_GUILD },
@@ -1680,7 +1680,7 @@ class iA extends r.PureComponent {
                     n.e("96490"),
                     n.e("85484"),
                     n.e("51772"),
-                    n.e("21918"),
+                    n.e("6605"),
                     n.e("54483"),
                     n.e("62461"),
                     n.e("25677"),
@@ -1885,7 +1885,6 @@ class iA extends r.PureComponent {
                     n.e("42834"),
                     n.e("43430"),
                     n.e("94723"),
-                    n.e("28866"),
                     n.e("62931"),
                     n.e("58529"),
                     n.e("58038"),
@@ -1917,8 +1916,8 @@ class iA extends r.PureComponent {
                     n.e("66495"),
                     n.e("71210"),
                     n.e("8555"),
-                    n.e("86127"),
                     n.e("28095"),
+                    n.e("86127"),
                     n.e("46070"),
                     n.e("88599"),
                     n.e("75842"),
@@ -1981,7 +1980,7 @@ class iA extends r.PureComponent {
                     n.e("4744"),
                     n.e("37021"),
                     n.e("81314"),
-                    n.e("62819"),
+                    n.e("23397"),
                     n.e("71430"),
                     n.e("501"),
                     n.e("86243"),
@@ -2512,8 +2511,8 @@ function iE(e) {
             );
         }, []),
     });
-    let e8 = (0, d.bG)([e$.A], () => e$.A.getChannelId()),
-        e6 = (0, d.bG)([eq.A], () => eq.A.desyncedVoiceStatesCount),
+    let e6 = (0, d.bG)([e$.A], () => e$.A.getChannelId()),
+        e8 = (0, d.bG)([eq.A], () => eq.A.desyncedVoiceStatesCount),
         e7 = (0, ev.A)(O),
         e4 = (function (e) {
             let t = (0, ev.A)(e),
@@ -2582,8 +2581,8 @@ function iE(e) {
         selectedChannel: eF,
         selectedVoiceChannelId: v,
         voiceStates: y,
-        rtcConnectedChannelId: e8,
-        rtcDesyncedVoiceStatesCount: e6,
+        rtcConnectedChannelId: e6,
+        rtcDesyncedVoiceStatesCount: e8,
         isUnavailable: w,
         user: k,
         hasChannelNotice: null != $ || Q,
