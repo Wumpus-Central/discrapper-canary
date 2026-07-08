@@ -20,5 +20,3 @@ let r = (function () {
         o = "number" == typeof r ? Math.abs(r + e - s) : 36e5;
     if ((n < 36e5 || o < 36e5) && n <= o) return t.timeOrigin;
 })();
-imeOrigin;
-})()
