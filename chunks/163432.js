@@ -1,9 +1,9 @@
-l.d(t, { Ay: () => k, Vp: () => d, i4: () => S }), l(321073);
+l.d(t, { Ay: () => k, Vp: () => d, i4: () => x }), l(321073);
 var i = l(627968),
     n = l(64700),
     r = l(735438),
     a = l(90575),
-    s = l(495544),
+    s = l(280450),
     u = l(927813),
     o = l(403362),
     c = l(175203),
@@ -11,22 +11,22 @@ var i = l(627968),
     h = l(264395);
 let d = 112,
     f = (16 / 9) * 112 + 8,
-    g = 10 * u.A.Millis.SECOND;
-function x(e) {
+    S = 10 * u.A.Millis.SECOND;
+function g(e) {
     let t = s.default.getId();
     return e.type === p.lp.USER && e.user.id === t && e.voiceState?.selfVideo;
 }
-function S(e, t) {
+function x(e, t) {
     let l =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : { tileWidth: f, tileMinWidth: 124, tileMargin: 8, limit: 12, cropSelfVideo: !1 },
         { tileWidth: i, tileMinWidth: s, tileMargin: u, limit: c, cropSelfVideo: h, version: d } = l,
-        [S, k] = n.useState(Date.now());
+        [x, k] = n.useState(Date.now());
     n.useEffect(() => {
         let e = setTimeout(() => {
             k(Date.now());
-        }, g);
+        }, S);
         return () => {
             clearTimeout(e);
         };
@@ -50,7 +50,7 @@ function S(e, t) {
                                 return (
                                     e.speaking
                                         ? (n = "\x03")
-                                        : t - e.lastSpoke < g
+                                        : t - e.lastSpoke < S
                                           ? (n = "\x04")
                                           : e.voiceState?.selfVideo && (n = "\x05"),
                                     `${n}${((l = e.lastSpoke), (i = String(864e13).length), String(864e13 - l).padStart(i, "0"))}${(0, a.A)(e.userNick, e.user)}`
@@ -59,21 +59,21 @@ function S(e, t) {
                     })(e, l),
                 ),
                 [d, f] = (0, r.partition)(n, p.Xw),
-                S = d.findIndex(x),
+                x = d.findIndex(g),
                 k = null;
-            -1 !== S && ((k = d[S]), d.splice(S, 1));
+            -1 !== x && ((k = d[x]), d.splice(x, 1));
             let M = null == k || h ? e : e - i - u,
                 y = Math.max(0, Math.min(Math.floor((M - u) / (s + u)), c, t.length)),
-                v = Math.min((M - u) / y - u, i),
-                w = Math.max(0, y - f.length),
-                A = f.slice(0, y),
-                C = d.slice(0, w),
-                D = Array(w);
-            if (w > 0) {
+                A = Math.min((M - u) / y - u, i),
+                v = Math.max(0, y - f.length),
+                C = f.slice(0, y),
+                w = d.slice(0, v),
+                D = Array(v);
+            if (v > 0) {
                 let e = [];
-                for (let t of C) {
+                for (let t of w) {
                     let l = m.current[t.id];
-                    null != l && l < w ? (D[l] = t) : e.push(t);
+                    null != l && l < v ? (D[l] = t) : e.push(t);
                 }
                 for (let t = 0; t < D.length; t++) {
                     if (null != D[t]) continue;
@@ -84,12 +84,12 @@ function S(e, t) {
             }
             let E = D.filter(o.Vq);
             m.current = (0, r.keyBy)((0, r.range)(E.length), (e) => E[e].id);
-            let V = [...A, ...E];
+            let N = [...C, ...E];
             return (
-                null != k && (h && V.length >= y ? (V[Math.max(0, V.length - 1)] = k) : V.push(k)),
-                { visibleParticipants: V, participantTileWidth: v }
+                null != k && (h && N.length >= y ? (N[Math.max(0, N.length - 1)] = k) : N.push(k)),
+                { visibleParticipants: N, participantTileWidth: A }
             );
-        }, [e, t, S, d, h, c, u, s, i]);
+        }, [e, t, x, d, h, c, u, s, i]);
     return { visibleParticipants: M, participantTileWidth: y };
 }
 function k(e) {
@@ -109,7 +109,7 @@ function k(e) {
         className: h.zr,
         children: t.map((e) => {
             if (null == e) return null;
-            let t = x(e);
+            let t = g(e);
             return (0, i.jsx)(
                 "div",
                 {
@@ -120,7 +120,7 @@ function k(e) {
                         selected: n === e.id,
                         channel: u,
                         className: h.Vs,
-                        fit: c.Yl.COVER,
+                        fit: c.Yl.COVER_LANDSCAPE,
                         onClick: s,
                         onDoubleClick: r,
                         onContextMenu: a,
