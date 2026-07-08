@@ -1,72 +1,72 @@
-l.d(e, { default: () => j }), l(321073);
+l.d(e, { default: () => b }), l(321073);
 var i = l(627968),
     n = l(64700),
-    r = l(189213),
-    a = l(695366),
+    a = l(189213),
+    r = l(695366),
     o = l(17928),
-    s = l(843282),
-    c = l(687966),
-    d = l(834730),
-    p = l(321471),
+    s = l(687966),
+    c = l(834730),
+    d = l(321471),
+    p = l(691885),
     u = l(260598),
-    h = l(736653),
-    A = l(573648),
-    g = l(627363),
-    I = l(587895),
-    _ = l(240248),
+    A = l(736653),
+    I = l(573648),
+    h = l(627363),
+    _ = l(587895),
+    g = l(240248),
     S = l(913758),
     L = l(636537),
-    x = l(228366);
-let f = null,
-    C = null,
-    N = !1;
-class E extends o.Ay.Store {
+    N = l(228366);
+let E = null,
+    f = null,
+    C = !1;
+class O extends o.Ay.Store {
     static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
     getAllowedApplicationIds(t) {
-        return f === t ? C : null;
+        return E === t ? f : null;
     }
     isFetching(t) {
-        return f === t && N;
+        return E === t && C;
     }
     hasCachedData(t) {
-        return f === t && null !== C;
+        return E === t && null !== f;
     }
 }
-let O = new E(x.h, {
+let T = new O(N.h, {
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
         let { guildId: e } = t;
-        (f = e), (N = !0), (C = []);
+        (E = e), (C = !0), (f = []);
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { guildId: e, applicationIds: l } = t;
-        f === e && ((C = l), (N = !1));
+        E === e && ((f = l), (C = !1));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
-        f === e && ((C = []), (N = !1));
+        E === e && ((f = []), (C = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (f = null), (C = null), (N = !1);
+        (E = null), (f = null), (C = !1);
     },
 });
-var T = l(652215);
+var v = l(652215);
 async function m(t) {
-    let e = O.getAllowedApplicationIds(t);
+    let e = T.getAllowedApplicationIds(t);
     if (null !== e) return Promise.resolve(e);
-    if (O.isFetching(t))
+    if (T.isFetching(t))
         return new Promise((e) => {
-            O.addChangeListener(function l() {
-                let i = O.getAllowedApplicationIds(t);
-                null !== i && (O.removeChangeListener(l), e(i));
+            T.addChangeListener(function l() {
+                let i = T.getAllowedApplicationIds(t);
+                null !== i && (T.removeChangeListener(l), e(i));
             });
         });
-    x.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START", guildId: t });
+    N.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START", guildId: t });
     try {
-        let e = await L.Bo.get({ url: T.Rsh.GUILD_ONBOARDING_ALLOWED_APPLICATIONS(t), rejectWithError: !1 });
+        let e = await L.Bo.get({ url: v.Rsh.GUILD_ONBOARDING_ALLOWED_APPLICATIONS(t), rejectWithError: !1 });
         if (e.ok && e.body?.application_ids) {
             let l = e.body.application_ids.map((t) => String(t));
             return (
-                x.h.dispatch({
+                N.h.dispatch({
                     type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS",
                     guildId: t,
                     applicationIds: l,
@@ -75,7 +75,7 @@ async function m(t) {
             );
         }
         return (
-            x.h.dispatch({
+            N.h.dispatch({
                 type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS",
                 guildId: t,
                 applicationIds: [],
@@ -83,136 +83,120 @@ async function m(t) {
             []
         );
     } catch (e) {
-        return x.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE", guildId: t }), [];
+        return N.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE", guildId: t }), [];
     }
 }
-var v = l(923121),
+var x = l(923121),
     G = l(539916),
-    y = l(375708),
-    D = l(886106);
-function j(t) {
-    let { transitionState: e, onClose: l, connection: L, index: x } = t,
-        f = (0, h.Ay)(),
-        C = null != L && null != x,
-        N = S.A.getGuildId(),
-        E = (0, o.bG)([O], () => O.getAllowedApplicationIds(N) ?? [], [N]);
+    D = l(375708),
+    y = l(886106);
+function b(t) {
+    let { transitionState: e, onClose: l, connection: L, index: N } = t,
+        E = (0, A.Ay)(),
+        f = null != L && null != N,
+        C = S.A.getGuildId(),
+        O = (0, o.bG)([T], () => T.getAllowedApplicationIds(C) ?? [], [C]);
     n.useEffect(() => {
-        null != N && m(N);
-    }, [N]),
+        null != C && m(C);
+    }, [C]),
         n.useEffect(() => {
-            for (let t of E)
-                null != I.A.getApplication(t) || I.A.isFetchingApplication(t) || (0, g.TA)(t).catch(() => {});
-        }, [E]);
-    let T = (0, o.yK)([I.A], () => {
+            for (let t of O)
+                null != _.A.getApplication(t) || _.A.isFetchingApplication(t) || (0, h.TA)(t).catch(() => {});
+        }, [O]);
+    let v = (0, o.yK)([_.A], () => {
             let t = [];
-            for (let e of E) {
-                let l = I.A.getApplication(e);
+            for (let e of O) {
+                let l = _.A.getApplication(e);
                 null != l && t.push(l);
             }
             return t;
-        }, [E]),
-        [j, b] = n.useState(() => (null != L ? (0, G.Sq)(L) : void 0)),
-        [P, F] = n.useState(L?.description ?? ""),
+        }, [O]),
+        [b, P] = n.useState(() => (null != L ? (0, G.Sq)(L) : void 0)),
+        [j, F] = n.useState(L?.description ?? ""),
         [U, R] = n.useState([]),
-        w = n.useMemo(() => {
+        W = n.useMemo(() => {
             let t = [];
-            for (let e of A.A.filter((t) => t.enabled && !G.tb.has(t.type))) {
-                let l = "light" === f ? e.icon?.lightPNG : e.icon?.darkPNG;
+            for (let e of I.A.filter((t) => t.enabled && !G.tb.has(t.type))) {
+                let l = "light" === E ? e.icon?.lightPNG : e.icon?.darkPNG;
                 t.push({ label: e.name, value: `provider:${e.type}`, icon: l });
             }
-            for (let e of T) t.push({ label: e.name, value: `app:${e.id}`, icon: e.getIconURL(128) });
-            for (let e of E)
-                null == I.A.getApplication(e) &&
-                    I.A.isFetchingApplication(e) &&
+            for (let e of v) t.push({ label: e.name, value: `app:${e.id}`, icon: e.getIconURL(128) });
+            for (let e of O)
+                null == _.A.getApplication(e) &&
+                    _.A.isFetchingApplication(e) &&
                     t.push({ label: "Loading...", value: `app:${e}`, icon: void 0 });
             return t.sort((t, e) => t.label.localeCompare(e.label)), t;
-        }, [T, E, f]),
-        k = n.useCallback(() => {
-            if (null == j || "" === j) return void R(["Please select a connection"]);
-            let t = (0, G.vK)(j);
+        }, [v, O, E]),
+        B = n.useCallback(() => {
+            if (null == b || "" === b) return void R(["Please select a connection"]);
+            let t = (0, G.vK)(b);
             if (null == t) return void R(["Invalid connection selected"]);
-            let e = P.trim(),
+            let e = j.trim(),
                 i = {
                     connection_type: t.type,
-                    description: (0, _.uJ)(e) ? void 0 : e,
+                    description: (0, g.uJ)(e) ? void 0 : e,
                     ...(null != t.applicationId && { application_id: t.applicationId }),
                     ...(null != t.providerId && { provider_id: t.providerId }),
                 },
                 n = (0, G.Ii)(i);
-            n.length > 0 ? R(n) : (C ? (0, v.yM)(x, i) : (0, v.sF)(i), l());
-        }, [j, P, C, x, l]),
-        B = n.useCallback(
-            (t) =>
-                (0, i.jsxs)("div", {
-                    style: { display: "flex", alignItems: "center", gap: "8px" },
-                    children: [
-                        t.icon
-                            ? "string" == typeof t.icon
-                                ? (0, i.jsx)("img", { src: t.icon, alt: "", width: 20, height: 20 })
-                                : null
-                            : (0, i.jsx)(c._, { size: "custom", width: 20, height: 20, color: "currentColor" }),
-                        (0, i.jsx)("span", { children: t.label }),
-                    ],
-                }),
+            n.length > 0 ? R(n) : (f ? (0, x.yM)(N, i) : (0, x.sF)(i), l());
+        }, [b, j, f, N, l]),
+        k = n.useCallback(
+            (t) => ({
+                id: t.value,
+                value: t.value,
+                label: t.label,
+                leading: "string" == typeof t.icon ? { type: "image", src: t.icon } : s._,
+            }),
             [],
-        ),
-        W = n.useCallback((t) => {
-            if (0 === t.length) return null;
-            let e = t[0];
-            return (0, i.jsxs)("div", {
-                style: { display: "flex", alignItems: "center", gap: "8px" },
-                children: [
-                    e.icon && "string" == typeof e.icon
-                        ? (0, i.jsx)("img", { src: e.icon, alt: "", width: 20, height: 20 })
-                        : (0, i.jsx)(c._, { size: "custom", width: 20, height: 20, color: "currentColor" }),
-                    (0, i.jsx)("span", { children: e.label }),
-                ],
-            });
-        }, []);
-    return (0, i.jsx)(r.Modal, {
+        );
+    return (0, i.jsx)(a.Modal, {
         transitionState: e,
-        title: C ? y.intl.string(y.t.yqegs1) : y.intl.string(y.t.B6qOe2),
+        title: f ? D.intl.string(D.t.yqegs1) : D.intl.string(D.t.B6qOe2),
         onClose: l,
         actions: [
-            { variant: "secondary", text: y.intl.string(y.t["ETE/oC"]), onClick: l },
-            { variant: "primary", text: C ? y.intl.string(y.t["R3BPH+"]) : y.intl.string(y.t.qMOnJu), onClick: k },
+            { variant: "secondary", text: D.intl.string(D.t["ETE/oC"]), onClick: l },
+            { variant: "primary", text: f ? D.intl.string(D.t["R3BPH+"]) : D.intl.string(D.t.qMOnJu), onClick: B },
         ],
         children: (0, i.jsxs)("div", {
-            className: D.Qs,
+            className: y.Qs,
             children: [
-                !C &&
+                !f &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(d.E, {
+                            (0, i.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
-                                children: y.intl.string(y.t.mGhCgX),
+                                children: D.intl.string(D.t.mGhCgX),
                             }),
-                            (0, i.jsx)(p.e, {
-                                title: y.intl.string(y.t.joNLrt),
-                                children: (0, i.jsx)(s.Te, {
-                                    value: j ?? "",
-                                    onChange: (t) => {
-                                        b(t), R([]);
+                            (0, i.jsx)(d.e, {
+                                title: D.intl.string(D.t.joNLrt),
+                                children: (0, i.jsx)(p.l, {
+                                    selectionMode: "single",
+                                    value: b,
+                                    onSelectionChange: (t) => {
+                                        P(t), R([]);
                                     },
-                                    options: w,
-                                    placeholder: y.intl.string(y.t.Wq1LfI),
-                                    renderOptionLabel: B,
-                                    renderOptionValue: W,
-                                    "data-migration-pending": !0,
+                                    options: W,
+                                    formatOption: k,
+                                    placeholder: D.intl.string(D.t.Wq1LfI),
+                                    label: D.intl.string(D.t.joNLrt),
+                                    hideLabel: !0,
+                                    required: !0,
+                                    fullWidth: !0,
                                 }),
                             }),
                             U.length > 0 &&
                                 (0, i.jsx)("div", {
-                                    className: D.sO,
+                                    className: y.sO,
                                     children: U.map((t, e) =>
                                         (0, i.jsxs)(
                                             "div",
                                             {
-                                                className: D.Ff,
+                                                className: y.Ff,
                                                 children: [
-                                                    (0, i.jsx)(a.E, { size: "sm", color: "currentColor" }),
-                                                    (0, i.jsx)(d.E, {
+                                                    (0, i.jsx)(r.E, { size: "sm", color: "currentColor" }),
+                                                    (0, i.jsx)(c.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-feedback-critical",
                                                         children: t,
@@ -230,22 +214,22 @@ function j(t) {
                         (0, i.jsxs)("div", {
                             style: { display: "flex", flexDirection: "column", gap: "4px", marginBottom: "8px" },
                             children: [
-                                (0, i.jsx)(d.E, {
+                                (0, i.jsx)(c.E, {
                                     variant: "text-md/medium",
                                     color: "text-strong",
-                                    children: y.intl.string(y.t.WoyrU8),
+                                    children: D.intl.string(D.t.WoyrU8),
                                 }),
-                                (0, i.jsx)(d.E, {
+                                (0, i.jsx)(c.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
-                                    children: y.intl.string(y.t.zdWNET),
+                                    children: D.intl.string(D.t.zdWNET),
                                 }),
                             ],
                         }),
                         (0, i.jsx)(u.f, {
-                            value: P,
+                            value: j,
                             onChange: F,
-                            placeholder: y.intl.string(y.t["28bQNf"]),
+                            placeholder: D.intl.string(D.t["28bQNf"]),
                             maxLength: G.sd,
                         }),
                     ],
