@@ -204,6 +204,21 @@ let r = {
         inlineRequire: () => n(602350).A,
         neverLoadBeforeConnectionOpen: !0,
     },
+    GuildRoomSpatialAudioManager: {
+        actions: [
+            "AUDIO_SET_AUDIO_MIXER_SETTINGS",
+            "RTC_CONNECTION_STATE",
+            "RTC_CONNECTION_USERS_MERGED",
+            "MEDIA_SESSION_JOINED",
+            "GUILD_ROOM_CONNECT",
+            "GUILD_ROOM_UPDATE",
+            "GUILD_ROOM_LOCAL_UPDATE",
+            "GUILD_ROOM_DISCONNECT",
+        ],
+        inlineRequire: () => n(475868).A,
+        neverLoadBeforeConnectionOpen: !0,
+        hasStoreChangeListeners: !0,
+    },
     GuildScheduledEventManager: {
         actions: [
             "POST_CONNECTION_OPEN",
