@@ -1,15 +1,15 @@
 "use strict";
 n.d(t, {
     IL: () => _,
-    Jq: () => f,
-    L0: () => d,
-    PN: () => m,
-    XQ: () => E,
-    Zm: () => h,
-    ef: () => p,
+    Jq: () => A,
+    L0: () => u,
+    PN: () => f,
+    XQ: () => I,
+    Zm: () => E,
+    ef: () => h,
     ki: () => c,
-    vf: () => g,
-    zd: () => A,
+    vf: () => p,
+    zd: () => T,
 });
 var i = n(554146);
 let r = [
@@ -23,7 +23,7 @@ let r = [
         i.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA,
         i.M.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER,
     ],
-    s = [
+    a = [
         i.M.GIFTING_INTENT_FRIENDS_TAB_BADGE,
         i.M.FRACTIONAL_NITRO_DURATION_LEFT_PILL,
         i.M.GUILD_TAG_AVAILABLE_COACHMARK,
@@ -49,9 +49,10 @@ let r = [
         i.M.REFERRAL_PROGRAM_ENTRYPOINT_NITRO_BUTTON_NOTIFICATION,
         i.M.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
         i.M.APP_WIDGET_V2_PROFILE_UPSELL_SUGGESTED,
+        i.M.MONTHLY_TO_YEARLY_UPSELL_STICKY_BAR,
         i.M.PARENTAL_CONSENT_GRACE_WARNING,
     ],
-    a = [
+    s = [
         i.M.GIFTING_PROMOTION_ICON,
         i.M.THIRD_PARTY_OUTBOUND_PROMO_NAGBAR,
         i.M.GOOGLE_PLAY_PRICE_CHANGE_ACTION_SHEET,
@@ -76,8 +77,8 @@ let r = [
         i.M.MONTHLY_TO_YEARLY_UPSELL_STICKY_BAR,
         i.M.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
     ],
-    o = [i.M.GAME_SHOP_NEW_BADGE, i.M.GAME_SHOP_NEW_DROP_POPOVER],
-    l = [
+    l = [i.M.GAME_SHOP_NEW_BADGE, i.M.GAME_SHOP_NEW_DROP_POPOVER],
+    o = [
         i.M.VANITY_URL_POWERUP_ROLLBACK_NOTIFICATION,
         i.M.GAME_SERVER_HOSTING_NEW_BADGE,
         i.M.GAME_SERVER_HOSTING_NEW_COACHMARK,
@@ -87,35 +88,35 @@ let r = [
         i.M.MOBILE_ACCOUNT_LINKING_BANNER,
         i.M.FILE_UPLOAD_POWERUP_ROLLBACK_NOTIFICATION,
     ],
-    u = [i.M.BOOST_TO_UNLOCK_COACHMARK, i.M.EXPIRING_POWERUP_COACHMARK, i.M.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD];
+    d = [i.M.BOOST_TO_UNLOCK_COACHMARK, i.M.EXPIRING_POWERUP_COACHMARK, i.M.NOTIFICATION_NUDGE_GUILD_OPEN_PER_GUILD];
 function c(e) {
-    return s.includes(e);
+    return a.includes(e);
 }
-function d(e) {
+function u(e) {
     return r.includes(e);
 }
 function _(e) {
-    return a.includes(e);
-}
-function h(e) {
-    return c(e) || d(e) || _(e);
-}
-function f(e) {
-    return !h(e);
-}
-function p(e) {
-    return l.includes(e);
+    return s.includes(e);
 }
 function E(e) {
-    return u.includes(e);
+    return c(e) || u(e) || _(e);
 }
-function m(e) {
+function A(e) {
+    return !E(e);
+}
+function h(e) {
     return o.includes(e);
 }
-function g(e) {
-    return p(e) || E(e) || m(e);
+function I(e) {
+    return d.includes(e);
 }
-let A = Object.keys(i.M)
+function f(e) {
+    return l.includes(e);
+}
+function p(e) {
+    return h(e) || I(e) || f(e);
+}
+let T = Object.keys(i.M)
     .map((e) => parseInt(e))
     .filter((e) => !isNaN(e));
-A.filter(f);
+T.filter(A);
