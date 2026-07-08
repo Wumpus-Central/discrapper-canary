@@ -39,7 +39,7 @@ let s = [i.z.SOLID, i.z.GRADIENT, i.z.NEON, i.z.TOON, i.z.POP],
     ],
     d = 0.78,
     _ = 0.72,
-    h = 100,
+    h = 38,
     f = [
         [0xfe9242, 3534206, 0xffe047, 0xff4cd2, 5793266],
         [0xff3d3d, 0xff8a2a, 0xffd447, 0xff4fa3, 8086015],
