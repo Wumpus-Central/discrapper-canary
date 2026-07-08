@@ -30,8 +30,8 @@ var n = t(627968),
     F = t(31969),
     P = t(510022),
     S = t(317560),
-    O = t(533406),
-    G = t(971146),
+    G = t(533406),
+    O = t(971146),
     L = t(300182),
     B = t(467884),
     U = t(533772),
@@ -111,7 +111,7 @@ function z(l) {
         { normalPrice: X, discountedPrice: Z, discountPercent: ll, userPrice: li } = (0, j.CD)({ sku: U }),
         lt = (0, j.JL)({ sku: U }),
         ln = lt?.amount,
-        le = (0, D.o)({
+        le = (0, D.oG)({
             orbPriceAmount: ln,
             applicationId: z,
             location: "social_layer_storefront_product_details_embed",
@@ -141,7 +141,7 @@ function z(l) {
         ls = e.useCallback(() => {
             null != U &&
                 Q &&
-                (0, O.a)(
+                (0, G.a)(
                     U,
                     { isGift: !1 },
                     { analyticsLocations: [A.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_PURCHASE_BUTTON], guildId: i },
@@ -149,7 +149,7 @@ function z(l) {
         }, [U, i, Q]),
         lo = e.useCallback(() => {
             null != U &&
-                (0, O.a)(
+                (0, G.a)(
                     U,
                     { isGift: !0, giftRecipient: J ?? void 0 },
                     { analyticsLocations: [A.A.SLAYER_STOREFRONT_PRODUCT_DETAILS_EMBED_GIFT_BUTTON] },
@@ -204,7 +204,7 @@ function z(l) {
                             (0, n.jsxs)("div", {
                                 className: M.lI,
                                 children: [
-                                    (0, n.jsx)(G.V, {}),
+                                    (0, n.jsx)(O.V, {}),
                                     (0, n.jsxs)("div", {
                                         className: M.PB,
                                         children: [

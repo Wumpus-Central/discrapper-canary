@@ -1,4 +1,4 @@
-l.r(t), l.d(t, { SocialLayerStorefrontInnerWrapper: () => e8, default: () => e7 });
+l.r(t), l.d(t, { SocialLayerStorefrontInnerWrapper: () => e7, default: () => e3 });
 var n = l(627968),
     s = l(64700),
     i = l(503698),
@@ -391,7 +391,7 @@ var eL = l(821609),
     ew = l(201483);
 function eG(e) {
     let { applicationId: t, analyticsLocations: l } = e,
-        i = (0, eM.W)(),
+        i = (0, eM.W8)(),
         r = (0, o.bG)([eT.A], () => eT.A.getApplication(t)),
         a = (0, o.bG)([L.A], () => L.A.getConfigForApplicationId(t)),
         c = s.useCallback(() => {
@@ -673,7 +673,7 @@ function e0(e) {
     });
 }
 var e1 = l(253004);
-function e3(e) {
+function e8(e) {
     let { storefront: t, guildId: l, selectedPageIndex: i, selectedSku: r, isTestMode: a, isLive: o } = e,
         c = (0, E.jM)(),
         { renderHeader: d, getSocialLayerStorefrontLink: u } = (0, _.H)(),
@@ -716,7 +716,7 @@ function e3(e) {
         })
     );
 }
-function e7(e) {
+function e3(e) {
     let { match: t } = e,
         { guildId: l, gameShopPageIndex: i, gameShopSkuId: r } = t.params,
         a = (0, o.bG)([j.default], () => j.default.getSessionId(), []),
@@ -727,7 +727,7 @@ function e7(e) {
         s.useEffect(() => {
             null == l || null == a || (null == A.A.getGuild(l) && (0, S.Z2)(l, {}, { shouldNavigate: !1 }));
         }, [l, a]),
-        (0, n.jsx)(e8, {
+        (0, n.jsx)(e7, {
             applicationId: d,
             guildId: l,
             skuId: r,
@@ -737,7 +737,7 @@ function e7(e) {
         })
     );
 }
-function e8(e) {
+function e7(e) {
     let {
             applicationId: t,
             guildId: l,
@@ -816,7 +816,7 @@ function e8(e) {
                   getSocialLayerStorefrontLink: S,
                   children: (0, n.jsx)(E.E9, {
                       newValue: Y,
-                      children: (0, n.jsx)(e3, {
+                      children: (0, n.jsx)(e8, {
                           storefront: M ?? C.storefront,
                           guildId: l,
                           selectedPageIndex: P,

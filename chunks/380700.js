@@ -2100,7 +2100,7 @@ let nI = function (e) {
             logoUrl: u,
         } = e,
         g = (0, nA.u)(r) ?? void 0,
-        m = (0, nj.W)(),
+        m = (0, nj.W8)(),
         h = d.useMemo(
             () =>
                 "nitro" !== o || m
