@@ -6,7 +6,9 @@ function r(e, t, n) {
     return (
         (r.position_ = t.order),
         null != t.nickname && n.type !== i.rbe.DM && (r.name = t.nickname),
-        null != t.parentId && t.parentId in e && (r.parent_id = t.parentId),
+        null != t.parentId && t.parentId in e
+            ? (r.parent_id = t.parentId)
+            : void 0 === r.parent_id && (r.parent_id = null),
         r
     );
 }

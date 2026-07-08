@@ -1,4 +1,4 @@
-r.d(n, { default: () => L });
+r.d(n, { default: () => V });
 var i = r(627968);
 r(64700);
 var l = r(980707),
@@ -22,17 +22,18 @@ var l = r(980707),
     _ = r(533957),
     b = r(886393),
     E = r(477190),
-    k = r(307623),
-    v = r(317910),
-    T = r(475777),
+    T = r(307623),
+    k = r(317910),
+    v = r(475777),
     f = r(848977),
     S = r(995102),
     I = r(288104),
     M = r(661504),
     U = r(969128),
     Z = r(643111),
-    y = r(652215);
-function H(e) {
+    y = r(57907),
+    H = r(652215);
+function F(e) {
     let { channel: n, onSelect: r } = e,
         a = (0, f.A)(n),
         d = (0, b.A)(n),
@@ -41,11 +42,13 @@ function H(e) {
         g = (0, X.A)(n),
         p = (0, u.A)(n),
         m = (0, S.A)(n),
-        _ = (0, I.A)(n),
-        E = (0, o.A)({ id: n.id, label: N.intl.string(N.t.gFHI3k) }),
-        k = (0, c.A)(n),
-        v = (0, M.Ay)(n),
-        T = (0, C.os)("ChannelContextFavoritesMenu");
+        _ = (0, y.A)(n),
+        E = n.isThread() ? _ : m,
+        T = (0, I.A)(n),
+        k = (0, o.A)({ id: n.id, label: N.intl.string(N.t.gFHI3k) }),
+        v = (0, c.A)(n),
+        U = (0, M.Ay)(n),
+        Z = (0, C.os)("ChannelContextFavoritesMenu");
     return (0, i.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "channel-context",
@@ -56,14 +59,14 @@ function H(e) {
             (0, i.jsx)(s.rX, { children: a }),
             (0, i.jsxs)(s.rX, { children: [g, p, h] }),
             (0, i.jsx)(s.rX, { children: d }),
-            (0, i.jsxs)(s.rX, { children: [m, T ? v : _] }),
-            (0, i.jsx)(s.rX, { children: k }),
+            (0, i.jsxs)(s.rX, { children: [E, Z ? U : T] }),
+            (0, i.jsx)(s.rX, { children: v }),
             (0, i.jsx)(s.rX, { children: A }),
-            (0, i.jsx)(s.rX, { children: E }),
+            (0, i.jsx)(s.rX, { children: k }),
         ],
     });
 }
-function F(e) {
+function L(e) {
     let n,
         { channel: r, guild: a, onSelect: d } = e,
         A = (0, f.A)(r),
@@ -82,11 +85,11 @@ function F(e) {
                   })
                 : null),
         F = (0, S.A)(r),
-        L = (0, v.A)(r),
-        V = (0, T.A)(r, a),
+        L = (0, k.A)(r),
+        V = (0, v.A)(r, a),
         w = (0, _.A)(r, a),
         D = (0, E.A)(r, a),
-        O = (0, k.A)(r),
+        O = (0, T.A)(r),
         W = (0, o.A)({ id: r.id, label: N.intl.string(N.t.gFHI3k) }),
         G = (0, c.A)(r),
         q = (0, I.A)(r),
@@ -111,12 +114,12 @@ function F(e) {
         ],
     });
 }
-let L = (0, d.A)(
+let V = (0, d.A)(
     (0, a.A)(
         function (e) {
-            return (0, h.DZ)() ? (0, i.jsx)(H, { ...e }) : (0, i.jsx)(F, { ...e });
+            return (0, h.DZ)() ? (0, i.jsx)(F, { ...e }) : (0, i.jsx)(L, { ...e });
         },
-        { object: y.ZSU.CONTEXT_MENU },
+        { object: H.ZSU.CONTEXT_MENU },
     ),
     [A.A.CONTEXT_MENU, A.A.CHANNEL_LIST_TEXT_CHANNEL_MENU],
 );
