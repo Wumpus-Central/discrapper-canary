@@ -148,11 +148,9 @@
 }
 
 .container__50d91 {
-    -webkit-backdrop-filter: blur(32px);
-    backdrop-filter: blur(32px);
-    background-color: var(--profile-gradient-note-background);
-    border: 1px solid var(--border-muted);
+    background-color: var(--background-base-low);
     border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-border), var(--shadow-high);
     display: flex;
     flex-direction: column;
     width: 400px
