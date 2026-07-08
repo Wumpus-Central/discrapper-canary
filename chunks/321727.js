@@ -1,7 +1,6 @@
-"use strict";
-var i = n(652320),
-    r = TypeError;
-e.exports = function (e) {
-    if (i(e)) throw new r("Can't call method on " + e);
-    return e;
+var n = e(652320),
+    o = TypeError;
+r.exports = function (r) {
+    if (n(r)) throw new o("Can't call method on " + r);
+    return r;
 };

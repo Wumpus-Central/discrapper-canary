@@ -1,13 +1,12 @@
-"use strict";
-var i = n(860511),
-    r = n(635896),
-    s = n(210140),
-    a = n(753891),
-    o = n(812294),
-    l = n(633895),
-    u = i.Symbol,
-    c = r("wks"),
-    d = l ? u.for || u : (u && u.withoutSetter) || a;
-e.exports = function (e) {
-    return s(c, e) || (c[e] = o && s(u, e) ? u[e] : d("Symbol." + e)), c[e];
+var n = e(860511),
+    o = e(635896),
+    i = e(210140),
+    a = e(753891),
+    u = e(812294),
+    c = e(633895),
+    f = n.Symbol,
+    p = o("wks"),
+    s = c ? f.for || f : (f && f.withoutSetter) || a;
+r.exports = function (r) {
+    return i(p, r) || (p[r] = u && i(f, r) ? f[r] : s("Symbol." + r)), p[r];
 };

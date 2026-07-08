@@ -1,4 +1,0 @@
-var i = n(509185);
-e.exports = function (e) {
-    return e == e && !i(e);
-};

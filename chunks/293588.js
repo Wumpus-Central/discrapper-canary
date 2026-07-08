@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { C: () => s, m: () => a });
+n.d(t, { C: () => a, m: () => s });
 var i = n(627968);
 n(64700);
 var r = n(192308);
-let s = "command-share-modal";
-function a(e) {
+let a = "command-share-modal";
+function s(e) {
     let {
         applicationId: t,
-        channel: a,
-        command: o,
-        previewMessage: l,
-        requireLaunchChannel: u,
+        channel: s,
+        command: l,
+        previewMessage: o,
+        requireLaunchChannel: d,
         contextKey: c,
-        onShareResult: d,
+        onShareResult: u,
     } = e;
     (0, r.openModalLazy)(
         async () => {
@@ -20,7 +20,8 @@ function a(e) {
                 n.e("18712"),
                 n.e("60654"),
                 n.e("86832"),
-                n.e("95512"),
+                n.e("76342"),
+                n.e("60988"),
                 n.e("69273"),
                 n.e("72210"),
                 n.e("3155"),
@@ -143,7 +144,7 @@ function a(e) {
                 n.e("58529"),
                 n.e("58038"),
                 n.e("62531"),
-                n.e("34801"),
+                n.e("44974"),
                 n.e("6174"),
                 n.e("28367"),
                 n.e("81647"),
@@ -186,19 +187,19 @@ function a(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     applicationId: t,
-                    channel: a,
-                    command: o,
-                    previewMessage: l,
-                    onShareResult: d,
-                    requireLaunchChannel: u,
+                    channel: s,
+                    command: l,
+                    previewMessage: o,
+                    onShareResult: u,
+                    requireLaunchChannel: d,
                     ...n,
                 });
         },
         {
-            modalKey: s,
+            modalKey: a,
             contextKey: c,
             onCloseCallback: () => {
-                d(!1);
+                u(!1);
             },
         },
     );

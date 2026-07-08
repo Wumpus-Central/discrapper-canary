@@ -1,3 +1,0 @@
-"use strict";
-var i = n(65978);
-e.exports = /(?:ipad|iphone|ipod).*applewebkit/i.test(i);

@@ -1,7 +1,6 @@
-"use strict";
-var i = n(739305),
-    r = n(304052).findLastIndex,
-    s = i.aTypedArray;
-(0, i.exportTypedArrayMethod)("findLastIndex", function (e) {
-    return r(s(this), e, arguments.length > 1 ? arguments[1] : void 0);
+var n = e(739305),
+    o = e(304052).findLastIndex,
+    i = n.aTypedArray;
+(0, n.exportTypedArrayMethod)("findLastIndex", function (r) {
+    return o(i(this), r, arguments.length > 1 ? arguments[1] : void 0);
 });

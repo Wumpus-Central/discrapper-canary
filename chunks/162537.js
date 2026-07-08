@@ -1,8 +1,0 @@
-var i = n(382531),
-    r = n(411638),
-    s = n(240820),
-    a = n(467957),
-    o = n(67771);
-e.exports = function (e) {
-    return "function" == typeof e ? e : null == e ? s : "object" == typeof e ? (a(e) ? r(e[0], e[1]) : i(e)) : o(e);
-};

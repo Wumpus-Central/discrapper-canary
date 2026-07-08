@@ -1,6 +1,0 @@
-var i = n(433714);
-e.exports = function (e) {
-    return function (t) {
-        return i(t, e);
-    };
-};

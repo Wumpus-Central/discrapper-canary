@@ -1,9 +1,0 @@
-var i = n(34524),
-    r = n(191803),
-    s = n(762760);
-e.exports =
-    i && 1 / s(new i([, -0]))[1] == 1 / 0
-        ? function (e) {
-              return new i(e);
-          }
-        : r;

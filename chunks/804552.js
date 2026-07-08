@@ -1,8 +1,0 @@
-"use strict";
-n.r(t), n.d(t, { default: () => a });
-var i = n(273518),
-    r = n(29583),
-    s = n(618027);
-function a(e) {
-    return (0, s.A)(1, arguments), (!!(0, i.default)(e) || "number" == typeof e) && !isNaN(Number((0, r.default)(e)));
-}

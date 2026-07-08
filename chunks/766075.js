@@ -1,40 +1,40 @@
 "use strict";
-n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => E, openUserSettings: () => p });
+n.r(t), n.d(t, { USER_SETTINGS_MODAL_KEY: () => h, openUserSettings: () => I });
 var i = n(627968),
     r = n(192308),
-    s = n(231723),
-    a = n(228366),
-    o = n(790284),
-    l = n(272053),
-    u = n(280450),
+    a = n(231723),
+    s = n(228366),
+    l = n(790284),
+    o = n(272053),
+    d = n(280450),
     c = n(780964),
-    d = n(358776),
+    u = n(358776),
     _ = n(843010),
-    h = n(402651),
-    f = n(355097);
-let E = "USER_SETTINGS_MODAL_MODAL_KEY";
-async function p(e) {
+    E = n(402651),
+    A = n(355097);
+let h = "USER_SETTINGS_MODAL_MODAL_KEY";
+async function I(e) {
     let {
             path: t,
-            stackingBehavior: p = "replaceAll",
-            searchParams: m,
-            analyticsLocations: g,
+            stackingBehavior: I = "replaceAll",
+            searchParams: f,
+            analyticsLocations: p,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        A = arguments.length > 2 ? arguments[2] : void 0;
-    if (u.default.isAuthenticated()) {
+        T = arguments.length > 2 ? arguments[2] : void 0;
+    if (d.default.isAuthenticated()) {
         if (
-            ((0, d.Bv)("openUserSettings") &&
+            ((0, u.Bv)("openUserSettings") &&
                 (e === c.X.CONNECTIONS_PANEL && (e = c.X.CONNECTIONS_CATEGORY),
                 e === c.X.AUTHORIZED_APPS_PANEL && (e = c.X.AUTHORIZED_APPS_CATEGORY),
                 e === c.X.CONTENT_AND_SOCIAL_PANEL && (e = c.X.MESSAGING_PERMISSIONS_PANEL),
                 e === c.X.CONTENT_AND_SOCIAL_CONNECTED_GAMES_TAB && (e = c.X.CONNECTED_GAMES_CATEGORY)),
-            null != t && t === f.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && o.A.setState({ subsection: f.nR }),
-            h.A.setState({ source: m?.source, analyticsLocations: g ?? [] }),
-            a.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN" }),
+            null != t && t === A.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS && l.A.setState({ subsection: A.nR }),
+            E.A.setState({ source: f?.source, analyticsLocations: p ?? [] }),
+            s.h.dispatch({ type: "USER_SETTINGS_MODAL_OPEN" }),
             (0, _.f)())
         ) {
             if (null == e) return;
-            l.A.navigate(e);
+            o.A.navigate(e);
         } else
             await (0, r.openModalLazy)(
                 async () => {
@@ -78,7 +78,8 @@ async function p(e) {
                         n.e("812"),
                         n.e("89209"),
                         n.e("86832"),
-                        n.e("95512"),
+                        n.e("76342"),
+                        n.e("60988"),
                         n.e("69273"),
                         n.e("72210"),
                         n.e("3155"),
@@ -412,7 +413,7 @@ async function p(e) {
                         n.e("71763"),
                         n.e("68201"),
                         n.e("13111"),
-                        n.e("73350"),
+                        n.e("87183"),
                         n.e("26692"),
                         n.e("38939"),
                         n.e("34786"),
@@ -1027,15 +1028,15 @@ async function p(e) {
                     return (n) => (0, i.jsx)(t, { ...n, target: e });
                 },
                 {
-                    modalKey: E,
-                    stackingBehavior: p,
+                    modalKey: h,
+                    stackingBehavior: I,
                     stackNextByDefault: !0,
-                    contextKey: s.SY,
+                    contextKey: a.SY,
                     onCloseRequest: () => {
-                        null != l.A.closeWithValidation ? l.A.closeWithValidation() : (0, r.closeModal)(E, s.SY);
+                        null != o.A.closeWithValidation ? o.A.closeWithValidation() : (0, r.closeModal)(h, a.SY);
                     },
                 },
             );
-        A?.();
+        T?.();
     }
 }

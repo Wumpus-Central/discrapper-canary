@@ -1,6 +1,0 @@
-var i = n(631595),
-    r = n(706523),
-    s = n(925269);
-e.exports = function (e) {
-    return i(e, s, r);
-};

@@ -3,24 +3,25 @@ n.d(t, { A: () => c });
 var i = n(627968);
 n(64700);
 var r = n(231723),
-    s = n(192308),
-    a = n(869146),
-    o = n(709055),
-    l = n(174459),
-    u = n(652215);
+    a = n(192308),
+    s = n(869146),
+    l = n(709055),
+    o = n(174459),
+    d = n(652215);
 function c(e, t) {
-    let c = t ?? `${u.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
+    let c = t ?? `${d.JJy.PREMIUM_GUILD_UPSELL_MODAL}`;
     null != e.targetBoostedGuildTier && (c += ` - Tier ${e.targetBoostedGuildTier}`),
-        l.default.track(u.HAw.OPEN_MODAL, { type: c, location: e.analyticsSourceLocation });
-    let { openInPopoutEnabled: d, ..._ } = e,
-        h = a.A.getWindowOpen(u.MLl.CHANNEL_CALL_POPOUT) && null != d && d;
-    h && (0, o.A)(u.MLl.CHANNEL_CALL_POPOUT);
-    let f = h ? r.KX : r.SY;
-    (0, s.openModalLazy)(
+        o.default.track(d.HAw.OPEN_MODAL, { type: c, location: e.analyticsSourceLocation });
+    let { openInPopoutEnabled: u, ..._ } = e,
+        E = s.A.getWindowOpen(d.MLl.CHANNEL_CALL_POPOUT) && null != u && u;
+    E && (0, l.A)(d.MLl.CHANNEL_CALL_POPOUT);
+    let A = E ? r.KX : r.SY;
+    (0, a.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 n.e("86832"),
-                n.e("95512"),
+                n.e("76342"),
+                n.e("60988"),
                 n.e("69273"),
                 n.e("72210"),
                 n.e("3155"),
@@ -53,9 +54,9 @@ function c(e, t) {
         },
         {
             onCloseCallback: function () {
-                l.default.track(u.HAw.MODAL_DISMISSED, { type: c, location: e.analyticsSourceLocation });
+                o.default.track(d.HAw.MODAL_DISMISSED, { type: c, location: e.analyticsSourceLocation });
             },
-            contextKey: f,
+            contextKey: A,
         },
     );
 }

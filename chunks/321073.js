@@ -1,34 +1,33 @@
-"use strict";
-var i = n(557939),
-    r = n(250594),
-    s = n(503199),
-    a = n(496538),
-    o = n(732376);
-i(
+var n = e(557939),
+    o = e(250594),
+    i = e(503199),
+    a = e(496538),
+    u = e(732376);
+n(
     {
         target: "Array",
         proto: !0,
         arity: 1,
         forced:
-            n(503628)(function () {
+            e(503628)(function () {
                 return 0x100000001 !== [].push.call({ length: 0x100000000 }, 1);
             }) ||
             !(function () {
                 try {
                     Object.defineProperty([], "length", { writable: !1 }).push();
-                } catch (e) {
-                    return e instanceof TypeError;
+                } catch (r) {
+                    return r instanceof TypeError;
                 }
             })(),
     },
     {
-        push: function (e) {
-            var t = r(this),
-                n = s(t),
-                i = arguments.length;
-            o(n + i);
-            for (var l = 0; l < i; l++) (t[n] = arguments[l]), n++;
-            return a(t, n), n;
+        push: function (r) {
+            var t = o(this),
+                e = i(t),
+                n = arguments.length;
+            u(e + n);
+            for (var c = 0; c < n; c++) (t[e] = arguments[c]), e++;
+            return a(t, e), e;
         },
     },
 );

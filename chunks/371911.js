@@ -1,29 +1,30 @@
 "use strict";
-n.d(t, { C: () => I });
+n.d(t, { C: () => m });
 var i = n(627968),
     r = n(64700),
-    s = n(17928),
-    a = n(873298),
-    o = n(922016),
-    l = n(793574),
-    u = n(688810),
+    a = n(17928),
+    s = n(873298),
+    l = n(922016),
+    o = n(793574),
+    d = n(688810),
     c = n(268218),
-    d = n(335180),
+    u = n(335180),
     _ = n(966597),
-    h = n(85109),
-    f = n(910425),
-    E = n(594061),
-    p = n(617617),
-    m = n(625494),
-    g = n(652215);
-let A = (0, c.Fe)({
+    E = n(85109),
+    A = n(910425),
+    h = n(594061),
+    I = n(617617),
+    f = n(625494),
+    p = n(652215);
+let T = (0, c.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("37634"),
             n.e("812"),
             n.e("89209"),
             n.e("86832"),
-            n.e("95512"),
+            n.e("76342"),
+            n.e("60988"),
             n.e("69273"),
             n.e("72210"),
             n.e("3155"),
@@ -222,7 +223,7 @@ let A = (0, c.Fe)({
             n.e("58529"),
             n.e("58038"),
             n.e("62531"),
-            n.e("34801"),
+            n.e("44974"),
             n.e("6174"),
             n.e("28367"),
             n.e("81647"),
@@ -386,90 +387,90 @@ let A = (0, c.Fe)({
         ]).then(n.bind(n, 24226)),
     webpackId: 24226,
     name: "RecentsPopoutRenderer",
-    renderLoader: d.hc,
+    renderLoader: u.hc,
 });
-function I(e) {
+function m(e) {
     let t,
         n,
         {
             onOpen: c,
-            onClose: d,
-            children: I,
-            popoutPosition: T,
+            onClose: u,
+            children: m,
+            popoutPosition: g,
             popoutAlign: S,
             targetElementRef: N,
             spacing: C,
-            dialogClassName: y,
+            dialogClassName: R,
         } = e,
-        { analyticsLocations: O } = (0, u.Ay)(l.A.NOTIFICATION_CENTER),
-        [R, v] = r.useState(!1),
-        [b, L] = [
-            (0, s.bG)([p.A], () => p.A.settings.inbox?.currentTab ?? a.Y2.UNREADS),
+        { analyticsLocations: O } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
+        [L, D] = r.useState(!1),
+        [y, v] = [
+            (0, a.bG)([I.A], () => I.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
             r.useCallback((e) => {
-                E.wc.updateAsync(
+                h.wc.updateAsync(
                     "inbox",
                     (t) => {
                         if (t.currentTab === e) return !1;
                         t.currentTab = e;
                     },
-                    E.Sb.FREQUENT_USER_ACTION,
+                    h.Sb.FREQUENT_USER_ACTION,
                 );
             }, []),
         ],
-        { showTutorial: D, setSeenTutorial: w } =
-            ((t = (0, s.bG)([p.A], () => p.A.settings.inbox?.viewedTutorial ?? !1)),
+        { showTutorial: b, setSeenTutorial: M } =
+            ((t = (0, a.bG)([I.A], () => I.A.settings.inbox?.viewedTutorial ?? !1)),
             (n = r.useCallback(() => {
-                E.wc.updateAsync(
+                h.wc.updateAsync(
                     "inbox",
                     (e) => {
                         e.viewedTutorial = !0;
                     },
-                    E.Sb.INFREQUENT_USER_ACTION,
+                    h.Sb.INFREQUENT_USER_ACTION,
                 );
             }, [])),
-            { showTutorial: !t && b === a.Y2.UNREADS, setSeenTutorial: n }),
+            { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
         P = r.useCallback(() => {
-            v(!1), R && d?.();
-        }, [d, R]),
-        M = r.useCallback(() => {
-            v(!R), R ? d?.() : c?.();
-        }, [d, c, R]);
-    r.useEffect(() => (m._.subscribe(g.jej.TOGGLE_INBOX, M), () => void m._.unsubscribe(g.jej.TOGGLE_INBOX, M)), [M]);
-    let { enabled: x, inInbox: U } = _.A.useConfig({ location: "RecentsPopout" }),
-        k = (0, s.bG)([h.A], () => h.A.hasOverdueReminder(), []) && x && U;
+            D(!1), L && u?.();
+        }, [u, L]),
+        U = r.useCallback(() => {
+            D(!L), L ? u?.() : c?.();
+        }, [u, c, L]);
+    r.useEffect(() => (f._.subscribe(p.jej.TOGGLE_INBOX, U), () => void f._.unsubscribe(p.jej.TOGGLE_INBOX, U)), [U]);
+    let { enabled: w, inInbox: G } = _.A.useConfig({ location: "RecentsPopout" }),
+        x = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w && G;
     r.useEffect(() => {
-        b !== a.Y2.BOOKMARKS || x || U || L(a.Y2.MENTIONS),
-            (b === a.Y2.GAME_INVITES || b === a.Y2.FOR_YOU) && L(a.Y2.UNREADS);
+        y !== s.Y2.BOOKMARKS || w || G || v(s.Y2.MENTIONS),
+            (y === s.Y2.GAME_INVITES || y === s.Y2.FOR_YOU) && v(s.Y2.UNREADS);
     });
-    let G = r.useCallback(
+    let k = r.useCallback(
             (e) => {
                 e.shiftKey || P();
             },
             [P],
         ),
-        V = (0, f.Sc)();
-    return (0, i.jsx)(u.f5, {
+        F = (0, A.Sc)();
+    return (0, i.jsx)(d.f5, {
         value: O,
-        children: (0, i.jsx)(o.Y, {
+        children: (0, i.jsx)(l.Y, {
             targetElementRef: N,
-            animation: o.Y.Animation.NONE,
-            position: T,
+            animation: l.Y.Animation.NONE,
+            position: g,
             align: S,
             autoInvert: !1,
-            shouldShow: R,
+            shouldShow: L,
             onRequestClose: P,
             renderPopout: function () {
-                return (0, i.jsx)(A, {
-                    dialogClassName: y,
-                    isScheduledMessagesEnabled: V,
-                    tab: b,
-                    setTab: L,
+                return (0, i.jsx)(T, {
+                    dialogClassName: R,
+                    isScheduledMessagesEnabled: F,
+                    tab: y,
+                    setTab: v,
                     closePopout: P,
-                    handleMentionsJump: G,
-                    showTutorial: D,
-                    setSeenTutorial: w,
-                    forLaterEnabled: x,
-                    showForLater: U,
+                    handleMentionsJump: k,
+                    showTutorial: b,
+                    setSeenTutorial: M,
+                    forLaterEnabled: w,
+                    showForLater: G,
                 });
             },
             ignoreModalClicks: !0,
@@ -477,7 +478,7 @@ function I(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return I(M, n, e, k);
+                return m(U, n, e, x);
             },
         }),
     });

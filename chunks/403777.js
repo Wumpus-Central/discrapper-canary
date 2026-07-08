@@ -1,39 +1,39 @@
 "use strict";
-n.d(t, { A: () => A, n: () => E });
+n.d(t, { A: () => T, n: () => h });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    s = n(228366),
-    a = n(272355),
-    o = n(267102),
-    l = n(287809),
-    u = n(207803),
+    a = n(228366),
+    s = n(272355),
+    l = n(267102),
+    o = n(287809),
+    d = n(207803),
     c = n(958805),
-    d = n(591179),
+    u = n(591179),
     _ = n(485745),
-    h = n(652215);
-let f = new Set();
-function E(e, t) {
+    E = n(652215);
+let A = new Set();
+function h(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-async function p(e) {
+async function I(e) {
     let {
             userId: t,
-            tabSection: s,
-            scrollTarget: a,
-            guildId: p,
-            originGuildId: m,
-            channelId: g,
-            appContext: A,
-            customStatusPrompt: I,
-            ...T
+            tabSection: a,
+            scrollTarget: s,
+            guildId: I,
+            originGuildId: f,
+            channelId: p,
+            appContext: T,
+            customStatusPrompt: m,
+            ...g
         } = e,
-        S = l.default.getUser(t);
+        S = o.default.getUser(t);
     if (null == S) return;
-    let N = l.default.getCurrentUser();
+    let N = o.default.getCurrentUser();
     if (null == N) return;
-    let C = E(t, p);
-    f.add(
+    let C = h(t, I);
+    A.add(
         await (0, r.openModalLazy)(
             async () => {
                 let e = (
@@ -92,7 +92,8 @@ async function p(e) {
                         n.e("44400"),
                         n.e("25781"),
                         n.e("86832"),
-                        n.e("95512"),
+                        n.e("76342"),
+                        n.e("60988"),
                         n.e("69273"),
                         n.e("72210"),
                         n.e("3155"),
@@ -172,7 +173,7 @@ async function p(e) {
                         n.e("55675"),
                         n.e("48226"),
                         n.e("68201"),
-                        n.e("73350"),
+                        n.e("87183"),
                         n.e("34786"),
                         n.e("10471"),
                         n.e("64827"),
@@ -404,41 +405,41 @@ async function p(e) {
                     (0, i.jsx)(e, {
                         user: S,
                         currentUser: N,
-                        guildId: p,
-                        originGuildId: m ?? p,
-                        initialTabSection: s,
-                        initialScrollTarget: a,
-                        channelId: g,
-                        customStatusPrompt: I,
+                        guildId: I,
+                        originGuildId: f ?? I,
+                        initialTabSection: a,
+                        initialScrollTarget: s,
+                        channelId: p,
+                        customStatusPrompt: m,
                         ...t,
-                        ...T,
+                        ...g,
                     });
             },
             {
                 modalKey: C,
-                contextKey: (0, r.modalContextFromAppContext)(A ?? (0, o.zd)() ?? h.BRT.APP),
+                contextKey: (0, r.modalContextFromAppContext)(T ?? (0, l.zd)() ?? E.BRT.APP),
                 onCloseRequest: () => {
-                    let e = !(0, d.E)("UserProfileModalManager");
+                    let e = !(0, u.E)("UserProfileModalManager");
                     t === N.id && (0, _.b)(e)
-                        ? (0, u.VQ)()
-                        : ((0, r.closeModal)(C), f.delete(C), c.A.clearPendingWidgets(), e || (0, u.XQ)());
+                        ? (0, d.VQ)()
+                        : ((0, r.closeModal)(C), A.delete(C), c.A.clearPendingWidgets(), e || (0, d.XQ)());
                 },
             },
         ),
     );
 }
-function m() {
-    if (0 !== f.size) {
-        for (let e of f) (0, r.closeModal)(e);
-        f.clear(), c.A.clearPendingWidgets(), (0, d.E)("UserProfileModalManager") && (0, u.XQ)();
+function f() {
+    if (0 !== A.size) {
+        for (let e of A) (0, r.closeModal)(e);
+        A.clear(), c.A.clearPendingWidgets(), (0, u.E)("UserProfileModalManager") && (0, d.XQ)();
     }
 }
-class g extends a.A {
+class p extends s.A {
     _initialize() {
-        s.h.subscribe("USER_PROFILE_MODAL_OPEN", p), s.h.subscribe("USER_PROFILE_MODAL_CLOSE", m);
+        a.h.subscribe("USER_PROFILE_MODAL_OPEN", I), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", f);
     }
     _terminate() {
-        s.h.unsubscribe("USER_PROFILE_MODAL_OPEN", p), s.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", m);
+        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", I), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", f);
     }
 }
-let A = new g();
+let T = new p();

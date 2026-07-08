@@ -2,68 +2,69 @@
 (t.createDateTimeFormat = u),
     (t.createDateTimeFormats = function (e) {
         var t,
+            r,
             n,
             i,
-            r,
-            s,
+            o,
             a = e.availableFormats,
             c = e.timeFormats,
-            d = e.dateFormats,
-            _ = e.medium,
+            f = e.dateFormats,
+            d = e.medium,
+            p = [],
             h = [],
-            f = [],
-            p = [];
-        function E(e, t) {
-            var n = Array((e.match(/M/g) || []).length + 1),
-                i = Array((e.match(/E/g) || []).length + 1);
+            m = [];
+        function g(e, t) {
+            var r = Array((e.match(/M/g) || []).length + 1),
+                n = Array((e.match(/E/g) || []).length + 1);
             return (
-                n.length > 2 && (t = t.replace(/(M|L)+/, n.join("$1"))),
-                i.length > 2 && (t = t.replace(/([Eec])+/, i.join("$1"))),
+                r.length > 2 && (t = t.replace(/(M|L)+/, r.join("$1"))),
+                n.length > 2 && (t = t.replace(/([Eec])+/, n.join("$1"))),
                 t
             );
         }
         for (t in a)
             a.hasOwnProperty(t) &&
-                (i = u((n = E(t, a[t])))) &&
-                (h.push(i),
+                (n = u((r = g(t, a[t])))) &&
+                (p.push(n),
                 (function (e) {
                     for (var t = 0; t < l.length; t += 1) if (e.hasOwnProperty(l[t])) return !1;
                     return !0;
-                })(i)
-                    ? p.push(n)
+                })(n)
+                    ? m.push(r)
                     : (function (e) {
-                          for (var t = 0; t < o.length; t += 1) if (e.hasOwnProperty(o[t])) return !1;
+                          for (var t = 0; t < s.length; t += 1) if (e.hasOwnProperty(s[t])) return !1;
                           return !0;
-                      })(i) && f.push(n));
-        for (r = 0; r < f.length; r += 1)
-            for (s = 0; s < p.length; s += 1)
-                (i = u(
-                    (n = _.replace("{0}", f[r])
-                        .replace("{1}", p[s])
+                      })(n) && h.push(r));
+        for (i = 0; i < h.length; i += 1)
+            for (o = 0; o < m.length; o += 1)
+                (n = u(
+                    (r = d
+                        .replace("{0}", h[i])
+                        .replace("{1}", m[o])
                         .replace(/^[,\s]+|[,\s]+$/gi, "")),
-                )) && h.push(i);
-        for (t in c) c.hasOwnProperty(t) && (i = u((n = E(t, c[t])))) && h.push(i);
-        for (t in d) d.hasOwnProperty(t) && (i = u((n = E(t, d[t])))) && h.push(i);
-        return h;
+                )) && p.push(n);
+        for (t in c) c.hasOwnProperty(t) && (n = u((r = g(t, c[t])))) && p.push(n);
+        for (t in f) f.hasOwnProperty(t) && (n = u((r = g(t, f[t])))) && p.push(n);
+        return p;
     });
-var n =
+var r =
         /(?:[Eec]{1,6}|G{1,5}|(?:[yYu]+|U{1,5})|[ML]{1,5}|d{1,2}|a|[hkHK]{1,2}|m{1,2}|s{1,2}|z{1,4})(?=([^']*'[^']*')*[^']*$)/g,
-    i = /[QxXVOvZASjgFDwWIQqH]/,
-    r = ["numeric", "2-digit", "short", "long", "narrow"],
-    s = ["short", "short", "short", "long", "narrow"],
+    n = /[QxXVOvZASjgFDwWIQqH]/,
+    i = ["numeric", "2-digit", "short", "long", "narrow"],
+    o = ["short", "short", "short", "long", "narrow"],
     a = ["short", "short", "short", "long", "narrow"],
-    o = ["weekday", "era", "year", "month", "day"],
+    s = ["weekday", "era", "year", "month", "day"],
     l = ["hour", "minute", "second", "timeZoneName"];
 function u(e) {
-    if (!i.test(e)) {
+    if (!n.test(e)) {
         var t = {};
         return (
-            (t.pattern = e.replace(n, function (e) {
+            (t.pattern = e.replace(r, function (e) {
                 switch (e.charAt(0)) {
                     case "E":
                     case "e":
                     case "c":
-                        return (t.weekday = s[e.length - 1]), "{weekday}";
+                        return (t.weekday = o[e.length - 1]), "{weekday}";
                     case "G":
                         return (t.era = a[e.length - 1]), "{era}";
                     case "y":
@@ -73,7 +74,7 @@ function u(e) {
                         return (t.year = 2 === e.length ? "2-digit" : "numeric"), "{year}";
                     case "M":
                     case "L":
-                        return (t.month = r[e.length - 1]), "{month}";
+                        return (t.month = i[e.length - 1]), "{month}";
                     case "d":
                         return (t.day = 2 === e.length ? "2-digit" : "numeric"), "{day}";
                     case "a":

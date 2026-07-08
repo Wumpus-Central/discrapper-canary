@@ -1,5 +1,4 @@
-"use strict";
-e.exports = [
+r.exports = [
     "constructor",
     "hasOwnProperty",
     "isPrototypeOf",

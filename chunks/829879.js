@@ -1,6 +1,0 @@
-var i = n(417015),
-    r = n(856803),
-    s = n(454571);
-e.exports = function (e, t, n) {
-    return t == t ? s(e, t, n) : i(e, r, n);
-};

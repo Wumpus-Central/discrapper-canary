@@ -2,29 +2,29 @@
 n.d(t, { A: () => O });
 var i = n(562708),
     r = n(765178),
-    s = n(636537),
-    a = n(228366),
-    o = n(398590),
-    l = n(77257),
-    u = n(61310),
+    a = n(636537),
+    s = n(228366),
+    l = n(398590),
+    o = n(77257),
+    d = n(61310),
     c = n(626584),
-    d = n(568185),
+    u = n(568185),
     _ = n(529942),
-    h = n(164956),
-    f = n(857071),
-    E = n(976860),
-    p = n(138298),
-    m = n(280450),
-    g = n(696451),
-    A = n(71393),
-    I = n(499785),
-    T = n(913758),
+    E = n(164956),
+    A = n(857071),
+    h = n(976860),
+    I = n(138298),
+    f = n(280450),
+    p = n(696451),
+    T = n(71393),
+    m = n(499785),
+    g = n(913758),
     S = n(652215),
     N = n(375708);
 let C = new c.A("GuildSettingsActionCreators"),
-    y = {
+    R = {
         init(e, t, n, i) {
-            a.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: t, subsection: i, location: n });
+            s.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: t, subsection: i, location: n });
         },
         async open(e, t, i, r) {
             await Promise.all([
@@ -63,7 +63,8 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("812"),
                 n.e("89209"),
                 n.e("86832"),
-                n.e("95512"),
+                n.e("76342"),
+                n.e("60988"),
                 n.e("69273"),
                 n.e("72210"),
                 n.e("3155"),
@@ -758,39 +759,39 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("15046"),
                 n.e("98700"),
             ]).then(n.bind(n, 422559)),
-                A.A.getGuild(e)?.features.has(S.GuildFeatures.COMMUNITY) &&
+                T.A.getGuild(e)?.features.has(S.GuildFeatures.COMMUNITY) &&
                     (t === S.BEX.GUILD_AUTOMOD && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_AUTOMOD)),
                     t === S.BEX.MEMBER_VERIFICATION && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
-                y.init(e, t, i, r),
-                p.A.closeGuildSidebar(e),
-                (0, o.id)(S.zgK.GUILD_SETTINGS);
+                R.init(e, t, i, r),
+                I.A.closeGuildSidebar(e),
+                (0, l.id)(S.zgK.GUILD_SETTINGS);
         },
         close() {
-            a.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
+            s.h.dispatch({ type: "GUILD_SETTINGS_CLOSE" });
         },
         saveRouteStack(e) {
-            a.h.dispatch({ type: "GUILD_SETTINGS_SAVE_ROUTE_STACK", state: e });
+            s.h.dispatch({ type: "GUILD_SETTINGS_SAVE_ROUTE_STACK", state: e });
         },
         setSection(e, t) {
-            let n = T.A.getGuildId();
+            let n = g.A.getGuildId();
             null != n &&
-                (A.A.getGuild(n)?.features.has(S.GuildFeatures.COMMUNITY) &&
+                (T.A.getGuild(n)?.features.has(S.GuildFeatures.COMMUNITY) &&
                     (e === S.BEX.GUILD_AUTOMOD && ((e = S.BEX.SAFETY), (t = S.nd0.SAFETY_AUTOMOD)),
                     e === S.BEX.MEMBER_VERIFICATION && ((e = S.BEX.SAFETY), (t = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
-                a.h.dispatch({ type: "GUILD_SETTINGS_SET_SECTION", section: e, subsection: t }));
+                s.h.dispatch({ type: "GUILD_SETTINGS_SET_SECTION", section: e, subsection: t }));
         },
         setSearchQuery(e) {
-            a.h.dispatch({ type: "GUILD_SETTINGS_SET_SEARCH_QUERY", searchQuery: e });
+            s.h.dispatch({ type: "GUILD_SETTINGS_SET_SEARCH_QUERY", searchQuery: e });
         },
-        selectRole: (e, t) => a.h.dispatch({ type: "GUILD_SETTINGS_ROLE_SELECT", roleId: e, searchQuery: t }),
+        selectRole: (e, t) => s.h.dispatch({ type: "GUILD_SETTINGS_ROLE_SELECT", roleId: e, searchQuery: t }),
         updateEmbed: (e, t, n) =>
-            s.Bo.patch({
+            a.Bo.patch({
                 url: S.Rsh.GUILD_WIDGET(e),
                 body: { enabled: t, channel_id: n },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             }).then((t) => {
-                a.h.dispatch({
+                s.h.dispatch({
                     type: "GUILD_SETTINGS_SET_WIDGET",
                     guildId: e,
                     enabled: t.body.enabled,
@@ -799,138 +800,138 @@ let C = new c.A("GuildSettingsActionCreators"),
             }),
         updateMFALevel(e) {
             let { guildId: t, level: n } = e;
-            return s.Bo.post({
+            return a.Bo.post({
                 url: S.Rsh.GUILD_MFA(t),
                 body: { level: n },
                 oldFormErrors: !0,
                 rejectWithError: !1,
-            }).then((e) => a.h.dispatch({ type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: e.body.level }));
+            }).then((e) => s.h.dispatch({ type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: e.body.level }));
         },
         updateIcon(e, t) {
-            s.Bo.patch({ url: S.Rsh.GUILD(e), body: { icon: t }, oldFormErrors: !0, rejectWithError: !1 }).then(
+            a.Bo.patch({ url: S.Rsh.GUILD(e), body: { icon: t }, oldFormErrors: !0, rejectWithError: !1 }).then(
                 () => {
-                    a.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", icon: t }), d.A.checkGuildTemplateDirty(e);
+                    s.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", icon: t }), u.A.checkGuildTemplateDirty(e);
                 },
-                (e) => a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
+                (e) => s.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
             );
         },
         cancelChanges(e) {
-            a.h.dispatch({ type: "GUILD_SETTINGS_CANCEL_CHANGES", guildId: e });
+            s.h.dispatch({ type: "GUILD_SETTINGS_CANCEL_CHANGES", guildId: e });
         },
         updateGuild(e) {
             let { safetyAlertsChannelId: t, profile: n, ...i } = e,
                 r = { ...i };
             null != n && (r.profile = { ...(r.profile ?? {}), ...n }),
-                null != T.A.getGuildId() && null != t && (r.safetyAlertsChannelId = t),
-                a.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", ...r });
+                null != g.A.getGuildId() && null != t && (r.safetyAlertsChannelId = t),
+                s.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", ...r });
         },
         updateGuildProfile(e, t) {
-            a.h.dispatch({ type: "GUILD_SETTINGS_PROFILE_UPDATE", guildId: e, ...t });
+            s.h.dispatch({ type: "GUILD_SETTINGS_PROFILE_UPDATE", guildId: e, ...t });
         },
         saveGuild(e, t) {
             let {
                     name: n,
                     description: i,
                     icon: r,
-                    splash: o,
+                    splash: l,
                     banner: c,
                     homeHeader: _,
-                    afkChannelId: h,
-                    afkTimeout: f,
-                    systemChannelId: E,
-                    verificationLevel: p,
-                    defaultMessageNotifications: m,
-                    explicitContentFilter: g,
-                    features: A,
-                    systemChannelFlags: I,
+                    afkChannelId: E,
+                    afkTimeout: A,
+                    systemChannelId: h,
+                    verificationLevel: I,
+                    defaultMessageNotifications: f,
+                    explicitContentFilter: p,
+                    features: T,
+                    systemChannelFlags: m,
                     preferredLocale: N,
-                    rulesChannelId: y,
+                    rulesChannelId: R,
                     safetyAlertsChannelId: O,
-                    ownerConfiguredContentLevel: R,
-                    discoverySplash: v,
-                    publicUpdatesChannelId: b,
-                    premiumProgressBarEnabled: L,
-                    profile: D,
-                    moderatorReportingEnabled: w,
+                    ownerConfiguredContentLevel: L,
+                    discoverySplash: D,
+                    publicUpdatesChannelId: y,
+                    premiumProgressBarEnabled: v,
+                    profile: b,
+                    moderatorReportingEnabled: M,
                     officialMessageColor: P,
-                    verificationRoleId: M,
+                    verificationRoleId: U,
                 } = t,
-                x = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                U = {
+                w = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+                G = {
                     name: n,
                     description: i,
                     icon: r,
-                    splash: o,
+                    splash: l,
                     banner: c,
                     home_header: _,
-                    features: A,
+                    features: T,
                     preferred_locale: N,
-                    afk_channel_id: h,
-                    afk_timeout: f,
-                    system_channel_id: E,
-                    verification_level: p,
-                    default_message_notifications: m,
-                    explicit_content_filter: g,
-                    system_channel_flags: I,
-                    rules_channel_id: y,
-                    owner_configured_content_level: R,
-                    discovery_splash: v,
-                    public_updates_channel_id: b,
+                    afk_channel_id: E,
+                    afk_timeout: A,
+                    system_channel_id: h,
+                    verification_level: I,
+                    default_message_notifications: f,
+                    explicit_content_filter: p,
+                    system_channel_flags: m,
+                    rules_channel_id: R,
+                    owner_configured_content_level: L,
+                    discovery_splash: D,
+                    public_updates_channel_id: y,
                     safety_alerts_channel_id: O,
-                    ...(null != L ? { premium_progress_bar_enabled: L } : null),
-                    profile: null != D ? { tag: D.tag } : D,
-                    moderator_reporting_enabled: w,
+                    ...(null != v ? { premium_progress_bar_enabled: v } : null),
+                    profile: null != b ? { tag: b.tag } : b,
+                    moderator_reporting_enabled: M,
                     official_message_color: P,
-                    verification_role_id: M,
+                    verification_role_id: U,
                 };
-            a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
-            let k = T.A.getPendingOriginalMd5s(),
-                G = l.A.buildHeadersForMd5({
-                    [u.f.GUILD_ICON]: k.icon,
-                    [u.f.GUILD_BANNER]: k.banner,
-                    [u.f.GUILD_INVITE_SPLASH]: k.splash,
-                    [u.f.GUILD_DISCOVERY_SPLASH]: k.discoverySplash,
+            s.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT" });
+            let x = g.A.getPendingOriginalMd5s(),
+                k = o.A.buildHeadersForMd5({
+                    [d.f.GUILD_ICON]: x.icon,
+                    [d.f.GUILD_BANNER]: x.banner,
+                    [d.f.GUILD_INVITE_SPLASH]: x.splash,
+                    [d.f.GUILD_DISCOVERY_SPLASH]: x.discoverySplash,
                 });
-            return s.Bo.patch({
+            return a.Bo.patch({
                 url: S.Rsh.GUILD(e),
-                query: { for_discovery: x.isForDiscovery },
-                body: U,
-                headers: G,
+                query: { for_discovery: w.isForDiscovery },
+                body: G,
+                headers: k,
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then(
                 (t) => {
-                    a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: t.body }),
-                        d.A.checkGuildTemplateDirty(e);
+                    s.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: t.body }),
+                        u.A.checkGuildTemplateDirty(e);
                 },
                 (e) => {
                     if (
-                        (a.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
+                        (s.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_FAILURE", errors: e.body }),
                         C.error("Failed to save guild settings", { errors: e.body }),
-                        x.throwErr)
+                        w.throwErr)
                     )
                         throw e.body;
                 },
             );
         },
         updateGuildModeration: (e, t) =>
-            s.Bo.patch({
+            a.Bo.patch({
                 url: S.Rsh.GUILD(e),
                 body: { verification_level: t.verificationLevel, explicit_content_filter: t.explicitContentFilter },
                 oldFormErrors: !0,
                 rejectWithError: !1,
-            }).then((t) => (d.A.checkGuildTemplateDirty(e), t)),
+            }).then((t) => (u.A.checkGuildTemplateDirty(e), t)),
         updateGuildPremiumProgressBar: (e, t) =>
-            s.Bo.patch({
+            a.Bo.patch({
                 url: S.Rsh.GUILD(e),
                 body: { premium_progress_bar_enabled: t },
                 oldFormErrors: !0,
                 rejectWithError: !1,
-            }).then((t) => (d.A.checkGuildTemplateDirty(e), t)),
+            }).then((t) => (u.A.checkGuildTemplateDirty(e), t)),
         transferOwnership(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
                 r = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null;
-            return I.A.patch({
+            return m.A.patch({
                 url: S.Rsh.GUILD(e),
                 body: { owner_id: t, code: r },
                 oldFormErrors: !0,
@@ -943,7 +944,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         sendTransferOwnershipPincode(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-            return I.A.put({
+            return m.A.put({
                 url: S.Rsh.GUILD_PINCODE(e),
                 oldFormErrors: !0,
                 trackedActionData: {
@@ -954,75 +955,75 @@ let C = new c.A("GuildSettingsActionCreators"),
             });
         },
         deleteGuild: (e) =>
-            s.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
-                y.close();
+            a.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
+                R.close();
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-                n = f.A.isLurking(e);
-            await s.Bo.del({
+                n = A.A.isLurking(e);
+            await a.Bo.del({
                 url: S.Rsh.GUILD_LEAVE(e),
-                body: { lurking: n || g.Ay.isCurrentUserGuest(e) },
+                body: { lurking: n || p.Ay.isCurrentUserGuest(e) },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }).then(() => {
                 r.O.announce(N.intl.string(N.t["7iPyVW"]));
             }),
-                y.close(),
-                t && n && (0, E.pX)(S.BVt.GUILD_DISCOVERY);
+                R.close(),
+                t && n && (0, h.pX)(S.BVt.GUILD_DISCOVERY);
         },
         async updateMemberRoles(e, t, n, i, r) {
-            h.A.isFullServerPreview(e) && t === m.default.getId()
+            E.A.isFullServerPreview(e) && t === f.default.getId()
                 ? (0, _.ID)(e, n)
-                : (await s.Bo.patch({
+                : (await a.Bo.patch({
                       url: S.Rsh.GUILD_MEMBER(e, t),
                       body: { roles: n },
                       oldFormErrors: !0,
                       rejectWithError: !1,
                   }),
-                  i.forEach((n) => a.h.dispatch({ type: "GUILD_ROLE_MEMBER_ADD", guildId: e, roleId: n, userId: t })),
+                  i.forEach((n) => s.h.dispatch({ type: "GUILD_ROLE_MEMBER_ADD", guildId: e, roleId: n, userId: t })),
                   r.forEach((n) =>
-                      a.h.dispatch({ type: "GUILD_ROLE_MEMBER_REMOVE", guildId: e, roleId: n, userId: t }),
+                      s.h.dispatch({ type: "GUILD_ROLE_MEMBER_REMOVE", guildId: e, roleId: n, userId: t }),
                   ));
         },
         bulkAddMemberRoles: (e, t, n) =>
-            s.Bo.patch({ url: S.Rsh.GUILD_ROLE_MEMBERS(e, t), body: { member_ids: n }, rejectWithError: !1 }).then(
+            a.Bo.patch({ url: S.Rsh.GUILD_ROLE_MEMBERS(e, t), body: { member_ids: n }, rejectWithError: !1 }).then(
                 (n) => {
-                    a.h.dispatch({ type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: e, roleId: t, added: n.body });
+                    s.h.dispatch({ type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: e, roleId: t, added: n.body });
                 },
             ),
         enableIntegration: (e, t, n) =>
-            s.Bo.post({
+            a.Bo.post({
                 url: S.Rsh.GUILD_INTEGRATIONS(e),
                 body: { type: t, id: n },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
         disableIntegration: (e, t) =>
-            s.Bo.del({ url: S.Rsh.GUILD_INTEGRATION(e, t), oldFormErrors: !0, rejectWithError: !1 }),
+            a.Bo.del({ url: S.Rsh.GUILD_INTEGRATION(e, t), oldFormErrors: !0, rejectWithError: !1 }),
         updateIntegration: (e, t, n, i, r) =>
-            s.Bo.patch({
+            a.Bo.patch({
                 url: S.Rsh.GUILD_INTEGRATION(e, t),
                 body: { expire_behavior: n, expire_grace_period: i, enable_emoticons: r },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
         syncIntegration(e, t) {
-            s.Bo.post({ url: S.Rsh.GUILD_INTEGRATION_SYNC(e, t), oldFormErrors: !0, rejectWithError: !1 });
+            a.Bo.post({ url: S.Rsh.GUILD_INTEGRATION_SYNC(e, t), oldFormErrors: !0, rejectWithError: !1 });
         },
         async migratePinPermission(e) {
-            await s.Bo.post({ url: S.Rsh.GUILD_MIGRATE_PIN_PERMISSION(e), rejectWithError: !0 }).then(() =>
-                a.h.dispatch({ type: "GUILD_SETTINGS_PIN_PERMISSION_MIGRATED", guildId: e }),
+            await a.Bo.post({ url: S.Rsh.GUILD_MIGRATE_PIN_PERMISSION(e), rejectWithError: !0 }).then(() =>
+                s.h.dispatch({ type: "GUILD_SETTINGS_PIN_PERMISSION_MIGRATED", guildId: e }),
             );
         },
         async migrateSlowmodePermission(e) {
-            await s.Bo.post({ url: S.Rsh.GUILD_MIGRATE_SLOWMODE_PERMISSION(e), rejectWithError: !0 }).then(() =>
-                a.h.dispatch({ type: "GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED", guildId: e }),
+            await a.Bo.post({ url: S.Rsh.GUILD_MIGRATE_SLOWMODE_PERMISSION(e), rejectWithError: !0 }).then(() =>
+                s.h.dispatch({ type: "GUILD_SETTINGS_SLOWMODE_PERMISSION_MIGRATED", guildId: e }),
             );
         },
         async migratePermissions(e, t) {
             let { migratePin: n, migrateSlowmode: i } = t;
-            n && (await y.migratePinPermission(e)), i && (await y.migrateSlowmodePermission(e));
+            n && (await R.migratePinPermission(e)), i && (await R.migrateSlowmodePermission(e));
         },
     },
-    O = y;
+    O = R;

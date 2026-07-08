@@ -1,8 +1,7 @@
-"use strict";
-var i = n(184389),
-    r = n(143320).concat("length", "prototype");
+var n = e(184389),
+    o = e(143320).concat("length", "prototype");
 t.f =
     Object.getOwnPropertyNames ||
-    function (e) {
-        return i(e, r);
+    function (r) {
+        return n(r, o);
     };

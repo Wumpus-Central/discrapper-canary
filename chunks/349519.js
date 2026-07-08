@@ -1,7 +1,0 @@
-var i = n(147818),
-    r = n(63532);
-e.exports = function (e, t) {
-    t = i(t, e);
-    for (var n = 0, s = t.length; null != e && n < s; ) e = e[r(t[n++])];
-    return n && n == s ? e : void 0;
-};

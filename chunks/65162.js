@@ -1,19 +1,18 @@
-"use strict";
-var i = n(710821),
-    r = n(739305),
-    s = n(464046),
-    a = n(120394),
-    o = n(900923),
-    l = r.aTypedArray,
-    u = r.getTypedArrayConstructor;
-(0, r.exportTypedArrayMethod)(
+var n = e(710821),
+    o = e(739305),
+    i = e(464046),
+    a = e(120394),
+    u = e(900923),
+    c = o.aTypedArray,
+    f = o.getTypedArrayConstructor;
+(0, o.exportTypedArrayMethod)(
     "with",
     {
-        with: function (e, t) {
-            var n = l(this),
-                r = a(e),
-                c = s(n) ? o(t) : +t;
-            return i(n, u(n), r, c);
+        with: function (r, t) {
+            var e = c(this),
+                o = a(r),
+                p = i(e) ? u(t) : +t;
+            return n(e, f(e), o, p);
         },
     }.with,
     !(function () {
@@ -23,8 +22,8 @@ var i = n(710821),
                     throw 8;
                 },
             });
-        } catch (e) {
-            return 8 === e;
+        } catch (r) {
+            return 8 === r;
         }
     })(),
 );

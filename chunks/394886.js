@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { G: () => o });
-var i = n(321733);
-function r(e, t, n) {
+t.d(n, { G: () => s });
+var a = t(321733);
+function r(e, n, t) {
     return (
-        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
+        n in e ? Object.defineProperty(e, n, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : (e[n] = t),
         e
     );
 }
-var s = !1,
-    a = !1,
-    o = (function () {
+var i = !1,
+    u = !1,
+    s = (function () {
         var e;
-        function t(e) {
-            if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        function n(e) {
+            if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
             r(this, "internalMonitor", void 0), r(this, "sourceId", null), (this.internalMonitor = e.getMonitor());
         }
         return (
@@ -32,14 +31,14 @@ var s = !1,
                 {
                     key: "canDrag",
                     value: function () {
-                        (0, i.V)(
-                            !s,
+                        (0, a.V)(
+                            !i,
                             "You may not call monitor.canDrag() inside your canDrag() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (s = !0), this.internalMonitor.canDragSource(this.sourceId);
+                            return (i = !0), this.internalMonitor.canDragSource(this.sourceId);
                         } finally {
-                            s = !1;
+                            i = !1;
                         }
                     },
                 },
@@ -47,21 +46,21 @@ var s = !1,
                     key: "isDragging",
                     value: function () {
                         if (!this.sourceId) return !1;
-                        (0, i.V)(
-                            !a,
+                        (0, a.V)(
+                            !u,
                             "You may not call monitor.isDragging() inside your isDragging() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drag-source-monitor",
                         );
                         try {
-                            return (a = !0), this.internalMonitor.isDraggingSource(this.sourceId);
+                            return (u = !0), this.internalMonitor.isDraggingSource(this.sourceId);
                         } finally {
-                            a = !1;
+                            u = !1;
                         }
                     },
                 },
                 {
                     key: "subscribeToStateChange",
-                    value: function (e, t) {
-                        return this.internalMonitor.subscribeToStateChange(e, t);
+                    value: function (e, n) {
+                        return this.internalMonitor.subscribeToStateChange(e, n);
                     },
                 },
                 {
@@ -72,8 +71,8 @@ var s = !1,
                 },
                 {
                     key: "isOverTarget",
-                    value: function (e, t) {
-                        return this.internalMonitor.isOverTarget(e, t);
+                    value: function (e, n) {
+                        return this.internalMonitor.isOverTarget(e, n);
                     },
                 },
                 {
@@ -167,15 +166,15 @@ var s = !1,
                     },
                 },
             ]),
-            (function (e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var i = t[n];
-                    (i.enumerable = i.enumerable || !1),
-                        (i.configurable = !0),
-                        "value" in i && (i.writable = !0),
-                        Object.defineProperty(e, i.key, i);
+            (function (e, n) {
+                for (var t = 0; t < n.length; t++) {
+                    var a = n[t];
+                    (a.enumerable = a.enumerable || !1),
+                        (a.configurable = !0),
+                        "value" in a && (a.writable = !0),
+                        Object.defineProperty(e, a.key, a);
                 }
-            })(t.prototype, e),
-            t
+            })(n.prototype, e),
+            n
         );
     })();

@@ -1,17 +1,16 @@
-"use strict";
-n.d(t, { b: () => a });
-var i = n(321733);
-function r(e, t, n) {
+t.d(n, { b: () => u });
+var a = t(321733);
+function r(e, n, t) {
     return (
-        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
+        n in e ? Object.defineProperty(e, n, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : (e[n] = t),
         e
     );
 }
-var s = !1,
-    a = (function () {
+var i = !1,
+    u = (function () {
         var e;
-        function t(e) {
-            if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
+        function n(e) {
+            if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
             r(this, "internalMonitor", void 0), r(this, "targetId", null), (this.internalMonitor = e.getMonitor());
         }
         return (
@@ -30,22 +29,22 @@ var s = !1,
                 },
                 {
                     key: "subscribeToStateChange",
-                    value: function (e, t) {
-                        return this.internalMonitor.subscribeToStateChange(e, t);
+                    value: function (e, n) {
+                        return this.internalMonitor.subscribeToStateChange(e, n);
                     },
                 },
                 {
                     key: "canDrop",
                     value: function () {
                         if (!this.targetId) return !1;
-                        (0, i.V)(
-                            !s,
+                        (0, a.V)(
+                            !i,
                             "You may not call monitor.canDrop() inside your canDrop() implementation. Read more: http://react-dnd.github.io/react-dnd/docs/api/drop-target-monitor",
                         );
                         try {
-                            return (s = !0), this.internalMonitor.canDropOnTarget(this.targetId);
+                            return (i = !0), this.internalMonitor.canDropOnTarget(this.targetId);
                         } finally {
-                            s = !1;
+                            i = !1;
                         }
                     },
                 },
@@ -110,15 +109,15 @@ var s = !1,
                     },
                 },
             ]),
-            (function (e, t) {
-                for (var n = 0; n < t.length; n++) {
-                    var i = t[n];
-                    (i.enumerable = i.enumerable || !1),
-                        (i.configurable = !0),
-                        "value" in i && (i.writable = !0),
-                        Object.defineProperty(e, i.key, i);
+            (function (e, n) {
+                for (var t = 0; t < n.length; t++) {
+                    var a = n[t];
+                    (a.enumerable = a.enumerable || !1),
+                        (a.configurable = !0),
+                        "value" in a && (a.writable = !0),
+                        Object.defineProperty(e, a.key, a);
                 }
-            })(t.prototype, e),
-            t
+            })(n.prototype, e),
+            n
         );
     })();

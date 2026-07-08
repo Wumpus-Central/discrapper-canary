@@ -1,7 +1,0 @@
-var i = n(50613),
-    r = n(627335),
-    s = n(744082),
-    a = i ? i.toStringTag : void 0;
-e.exports = function (e) {
-    return null == e ? (void 0 === e ? "[object Undefined]" : "[object Null]") : a && a in Object(e) ? r(e) : s(e);
-};

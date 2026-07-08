@@ -1,40 +1,39 @@
-"use strict";
-n.d(t, { P: () => o });
-var i = n(816885),
-    r = n(611886),
-    s = n(251874);
-function a(e, t, n) {
+t.d(n, { P: () => s });
+var a = t(816885),
+    r = t(611886),
+    i = t(251874);
+function u(e, n, t) {
     return (
-        t in e ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 }) : (e[t] = n),
+        n in e ? Object.defineProperty(e, n, { value: t, enumerable: !0, configurable: !0, writable: !0 }) : (e[n] = t),
         e
     );
 }
-var o = (function () {
+var s = (function () {
     var e;
-    function t(e) {
-        var n = this;
-        if (!(this instanceof t)) throw TypeError("Cannot call a class as a function");
-        a(
+    function n(e) {
+        var t = this;
+        if (!(this instanceof n)) throw TypeError("Cannot call a class as a function");
+        u(
             this,
             "hooks",
             (0, r.i)({
-                dropTarget: function (e, t) {
-                    n.clearDropTarget(),
-                        (n.dropTargetOptions = t),
-                        (0, s.i)(e) ? (n.dropTargetRef = e) : (n.dropTargetNode = e),
-                        n.reconnect();
+                dropTarget: function (e, n) {
+                    t.clearDropTarget(),
+                        (t.dropTargetOptions = n),
+                        (0, i.i)(e) ? (t.dropTargetRef = e) : (t.dropTargetNode = e),
+                        t.reconnect();
                 },
             }),
         ),
-            a(this, "handlerId", null),
-            a(this, "dropTargetRef", null),
-            a(this, "dropTargetNode", void 0),
-            a(this, "dropTargetOptionsInternal", null),
-            a(this, "unsubscribeDropTarget", void 0),
-            a(this, "lastConnectedHandlerId", null),
-            a(this, "lastConnectedDropTarget", null),
-            a(this, "lastConnectedDropTargetOptions", null),
-            a(this, "backend", void 0),
+            u(this, "handlerId", null),
+            u(this, "dropTargetRef", null),
+            u(this, "dropTargetNode", void 0),
+            u(this, "dropTargetOptionsInternal", null),
+            u(this, "unsubscribeDropTarget", void 0),
+            u(this, "lastConnectedHandlerId", null),
+            u(this, "lastConnectedDropTarget", null),
+            u(this, "lastConnectedDropTargetOptions", null),
+            u(this, "backend", void 0),
             (this.backend = e);
     }
     return (
@@ -50,19 +49,19 @@ var o = (function () {
                 value: function () {
                     var e = this.didHandlerIdChange() || this.didDropTargetChange() || this.didOptionsChange();
                     e && this.disconnectDropTarget();
-                    var t = this.dropTarget;
+                    var n = this.dropTarget;
                     if (this.handlerId) {
-                        if (!t) {
-                            this.lastConnectedDropTarget = t;
+                        if (!n) {
+                            this.lastConnectedDropTarget = n;
                             return;
                         }
                         e &&
                             ((this.lastConnectedHandlerId = this.handlerId),
-                            (this.lastConnectedDropTarget = t),
+                            (this.lastConnectedDropTarget = n),
                             (this.lastConnectedDropTargetOptions = this.dropTargetOptions),
                             (this.unsubscribeDropTarget = this.backend.connectDropTarget(
                                 this.handlerId,
-                                t,
+                                n,
                                 this.dropTargetOptions,
                             )));
                     }
@@ -98,7 +97,7 @@ var o = (function () {
             {
                 key: "didOptionsChange",
                 value: function () {
-                    return !(0, i.b)(this.lastConnectedDropTargetOptions, this.dropTargetOptions);
+                    return !(0, a.b)(this.lastConnectedDropTargetOptions, this.dropTargetOptions);
                 },
             },
             {
@@ -120,15 +119,15 @@ var o = (function () {
                 },
             },
         ]),
-        (function (e, t) {
-            for (var n = 0; n < t.length; n++) {
-                var i = t[n];
-                (i.enumerable = i.enumerable || !1),
-                    (i.configurable = !0),
-                    "value" in i && (i.writable = !0),
-                    Object.defineProperty(e, i.key, i);
+        (function (e, n) {
+            for (var t = 0; t < n.length; t++) {
+                var a = n[t];
+                (a.enumerable = a.enumerable || !1),
+                    (a.configurable = !0),
+                    "value" in a && (a.writable = !0),
+                    Object.defineProperty(e, a.key, a);
             }
-        })(t.prototype, e),
-        t
+        })(n.prototype, e),
+        n
     );
 })();

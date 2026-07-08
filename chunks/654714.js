@@ -1,5 +1,0 @@
-var i = n(338036),
-    r = n(422750);
-e.exports = function (e) {
-    return r(e) && "[object Arguments]" == i(e);
-};

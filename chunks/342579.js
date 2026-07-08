@@ -1,7 +1,0 @@
-"use strict";
-var i = n(860511);
-e.exports = function (e, t) {
-    var n = i[e],
-        r = n && n.prototype;
-    return r && r[t];
-};

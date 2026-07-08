@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { L: () => l });
+n.d(t, { L: () => o });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    s = n(174459),
-    a = n(652215);
-let o = "display-name-styles-modal",
-    l = (e) => {
-        let { analyticsLocations: t, guildId: l, stackingBehavior: u, returnRef: c } = e;
+    a = n(174459),
+    s = n(652215);
+let l = "display-name-styles-modal",
+    o = (e) => {
+        let { analyticsLocations: t, guildId: o, stackingBehavior: d, returnRef: c } = e;
         (0, r.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
@@ -19,7 +19,8 @@ let o = "display-name-styles-modal",
                     n.e("812"),
                     n.e("89209"),
                     n.e("86832"),
-                    n.e("95512"),
+                    n.e("76342"),
+                    n.e("60988"),
                     n.e("69273"),
                     n.e("72210"),
                     n.e("3155"),
@@ -402,13 +403,13 @@ let o = "display-name-styles-modal",
                     n.e("72158"),
                     n.e("60115"),
                 ]).then(n.bind(n, 336126));
-                return (n) => (0, i.jsx)(e, { ...n, guildId: l, analyticsLocations: t, returnRef: c });
+                return (n) => (0, i.jsx)(e, { ...n, guildId: o, analyticsLocations: t, returnRef: c });
             },
             {
-                modalKey: o,
-                stackingBehavior: u,
+                modalKey: l,
+                stackingBehavior: d,
                 onCloseRequest: () => {
-                    s.default.track(a.HAw.DISPLAY_NAME_STYLES_CLOSED), (0, r.closeModal)(o);
+                    a.default.track(s.HAw.DISPLAY_NAME_STYLES_CLOSED), (0, r.closeModal)(l);
                 },
             },
         );

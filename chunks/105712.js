@@ -1,2 +1,1 @@
-"use strict";
-e.exports = !1;
+r.exports = !1;
