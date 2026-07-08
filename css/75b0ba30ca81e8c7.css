@@ -293,12 +293,7 @@
 
 .cta__24e2c {
     flex: 0 0 auto;
-    margin-top: 8px;
-    pointer-events: none
-}
-
-.contentInteractable__24e2c .cta__24e2c {
-    pointer-events: all
+    margin-top: 8px
 }
 
 .iconButton__24e2c {

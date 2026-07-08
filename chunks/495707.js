@@ -12,7 +12,6 @@ e.exports = {
     tV: "legibilityGradient__24e2c",
     LO: "heroAsset__24e2c",
     lO: "cta__24e2c",
-    Yd: "contentInteractable__24e2c",
     DD: "title__24e2c",
     Qq: "rewardTile__24e2c",
     wq: "hiddenRewardTile__24e2c",

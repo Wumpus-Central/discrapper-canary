@@ -251,8 +251,8 @@ function X(e) {
         );
     return (0, s.jsx)(H.Provider, { value: C, children: (0, _.I6)(x) ? (0, s.jsx)(K, { quest: x, children: t }) : t });
 }
-var Y = n(775602),
-    Z = n(646764),
+var Z = n(775602),
+    Y = n(646764),
     J = n(717421);
 function ee() {
     let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
@@ -279,7 +279,7 @@ let es = function (e) {
                 );
             })(),
         }.label,
-        o = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+        o = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
         { quest: c } = r.useContext(H),
         { expansionSpring: d } = r.useContext(w),
         x = l ? -4 : 6;
@@ -297,7 +297,7 @@ let es = function (e) {
                         (e, t, n) => `translate(${e}px, ${t}px) scale(${n})`,
                     ),
                 },
-                children: (0, s.jsx)(Z.A, {
+                children: (0, s.jsx)(Y.A, {
                     learnMoreStyle: "text",
                     learnMoreFontSize: t ? 9 : void 0,
                     quest: c,
@@ -604,7 +604,7 @@ let eN = (e) => {
         })(),
         f = o.userStatus?.completedAt != null,
         E = r.useRef(!1),
-        h = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+        h = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
         g = r.useRef(null),
         _ = (0, u.bG)([C.A], () => C.A.hasLayers()),
         j = (0, c.A)(_),
@@ -722,7 +722,7 @@ let eB = function (e) {
                         style: "small",
                         percentComplete: i,
                         size: 42,
-                        children: (0, s.jsx)(Z.A, {
+                        children: (0, s.jsx)(Y.A, {
                             fullWidth: !0,
                             quest: o,
                             questContent: f.uF.QUEST_BAR_V2,
@@ -800,48 +800,48 @@ var eI = n(249309);
 let eO = r.forwardRef(function (e, t) {
     let { className: n, overlayRef: l } = e,
         { expansionSpring: o } = r.useContext(w),
-        { quest: u, taskDetails: c, isExpanded: d, isExpansionAnimationComplete: x } = r.useContext(H),
-        m = u.userStatus?.completedAt != null,
-        C = (0, E.I3)(u),
-        p = r.useRef(null),
-        h = u.userStatus?.enrolledAt != null,
-        g = null != C ? C.percentComplete : c.percentComplete,
-        _ = r.useRef(null),
-        [j, A] = r.useState(!1);
+        { quest: u, taskDetails: c, isExpanded: d } = r.useContext(H),
+        x = u.userStatus?.completedAt != null,
+        m = (0, E.I3)(u),
+        C = r.useRef(null),
+        p = u.userStatus?.enrolledAt != null,
+        h = null != m ? m.percentComplete : c.percentComplete,
+        g = r.useRef(null),
+        [_, j] = r.useState(!1);
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            m && (0, s.jsx)(eN, { overlayRef: l, progressBarRef: p, isHovered: j }),
+            x && (0, s.jsx)(eN, { overlayRef: l, progressBarRef: C, isHovered: _ }),
             (0, s.jsx)(a.animated.div, {
                 ref: t,
-                "aria-hidden": d && x,
-                inert: (!!d && !!x) || void 0,
-                className: i()(n, eI.hR, { [eI.Ag]: d, [eI.s]: h }),
+                "aria-hidden": d,
+                inert: !!d || void 0,
+                className: i()(n, eI.hR, { [eI.Ag]: d, [eI.s]: p }),
                 style: {
                     opacity: (0, O.a)(o.to({ range: [0, 1], output: [1, 0] })),
-                    backgroundImage: m ? `linear-gradient(90deg, ${k}, ${q})` : void 0,
+                    backgroundImage: x ? `linear-gradient(90deg, ${k}, ${q})` : void 0,
                 },
-                onMouseEnter: () => A(!0),
-                onMouseLeave: () => A(!1),
+                onMouseEnter: () => j(!0),
+                onMouseLeave: () => j(!1),
                 children: (0, s.jsxs)("div", {
                     className: eI.o8,
                     children: [
-                        m &&
+                        x &&
                             (0, s.jsxs)(s.Fragment, {
                                 children: [(0, s.jsx)(eb, {}), (0, s.jsx)("div", { className: eI.yF })],
                             }),
-                        h
+                        p
                             ? (0, s.jsx)(eB, {
                                   contentLocation: "collapsed",
-                                  progressBarRef: p,
+                                  progressBarRef: C,
                                   isExpanded: !1,
-                                  percentComplete: g,
+                                  percentComplete: h,
                               })
                             : null,
-                        m &&
+                        x &&
                             (0, s.jsx)("div", {
-                                ref: _,
+                                ref: g,
                                 children: (0, s.jsx)(eS, {
-                                    parentContainerRef: _,
+                                    parentContainerRef: g,
                                     awaitingConsoleConnections: !1,
                                     hasMadeProgress: !0,
                                     isProgressing: !1,
@@ -870,8 +870,8 @@ var eV = n(889137),
     eW = n(46948),
     eK = n(576761),
     eX = n(895253),
-    eY = n(976019),
-    eZ = n(442734),
+    eZ = n(976019),
+    eY = n(442734),
     eJ = n(139384),
     e0 = n(114046),
     e1 = n(695366),
@@ -1041,7 +1041,7 @@ function ti(e) {
 }
 let ta = function (e) {
         let { quest: t, taskDetails: n } = e,
-            l = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+            l = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
             i = (0, E.Du)(),
             a = r.useMemo(
                 () => (0, F.bg)(t).filter((e) => i.xboxAndPlaystationAccounts.find((t) => t.type === e)),
@@ -1103,7 +1103,7 @@ function tu(e) {
 function tc(e) {
     let { children: t } = e,
         { springConfig: n, isExpanded: l } = r.useContext(to),
-        i = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+        i = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
         { ref: o, height: d = null } = (0, L.Ay)(),
         x = (0, c.A)(d) ?? null,
         [{ height: m }, C] = (0, J.z)(() => ({ from: { height: 0 }, config: n }));
@@ -1184,7 +1184,7 @@ var th = n(495707);
 let tg = r.forwardRef(function (e, t) {
     let { isHovered: n, asset: l, poster: i, className: a, autoPlay: o = !1 } = e,
         { isExpanded: c } = r.useContext(H),
-        d = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+        d = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
         x = r.useRef(null);
     return (
         r.useEffect(() => {
@@ -1209,7 +1209,7 @@ let tg = r.forwardRef(function (e, t) {
 function t_(e) {
     let { onClick: t } = e,
         { quest: n } = r.useContext(H),
-        l = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+        l = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
         [a, o] = r.useState(!1),
         c = (0, eW.tW)(n, eW.fY.QUEST_BAR_HERO_VIDEO, void 0, !1),
         d = (0, eW.tW)(n, eW.fY.VIDEO_PLAYER_THUMBNAIL, void 0, !1),
@@ -1256,7 +1256,7 @@ function t_(e) {
 }
 function tj(e) {
     let { quest: t } = e;
-    return (0, s.jsx)(Z.A, {
+    return (0, s.jsx)(Y.A, {
         className: i()(th.Qq, th.wq),
         learnMoreStyle: "text",
         quest: t,
@@ -1265,7 +1265,7 @@ function tj(e) {
     });
 }
 function tA(e) {
-    let { isInteractable: t, containerRef: n, onAcceptQuest: l } = e,
+    let { isCtaInteractable: t, containerRef: n, onAcceptQuest: l } = e,
         { quest: o, onGameSheetOpen: c, onGameSheetClose: d, taskDetails: x } = r.useContext(H),
         { expansionSpring: m } = r.useContext(w),
         C = r.useRef(null),
@@ -1311,7 +1311,7 @@ function tA(e) {
                                     className: th.zf,
                                     children: [
                                         (0, s.jsx)(T.E, { className: th.h_, variant: "text-xs/normal", children: y }),
-                                        U && (0, s.jsx)(eZ.e, { questId: o.id, orbMultiplierEligibility: Q }),
+                                        U && (0, s.jsx)(eY.e, { questId: o.id, orbMultiplierEligibility: Q }),
                                     ],
                                 }),
                             ],
@@ -1319,6 +1319,7 @@ function tA(e) {
                         (0, s.jsx)("div", {
                             className: th.lO,
                             "data-testid": "quest-bar-enroll-cta",
+                            inert: !t || void 0,
                             children: (0, s.jsx)(ew.e, {
                                 direction: "horizontal",
                                 fullWidth: !0,
@@ -1333,7 +1334,7 @@ function tA(e) {
                                               analyticsCtxSourceQuestContent: f.uF.QUEST_BAR_V2,
                                           })
                                         : (0, s.jsx)(ea.$, {
-                                              onClick: t ? l : void 0,
+                                              onClick: l,
                                               variant: "primary",
                                               loading: h,
                                               text: _,
@@ -1378,7 +1379,7 @@ function tA(e) {
 function tR(e) {
     let { quest: t } = e,
         { hasAlreadyLinked: n, onClickGameTitle: l } = r.useContext(W);
-    return !0 !== n ? null : (0, s.jsx)(eY.A, { quest: t, hasAlreadyLinked: n, onClickGameTitle: l });
+    return !0 !== n ? null : (0, s.jsx)(eZ.A, { quest: t, hasAlreadyLinked: n, onClickGameTitle: l });
 }
 function tS(e) {
     let { activeScreen: t, selectPlatform: n } = e,
@@ -1534,12 +1535,11 @@ let tB = r.forwardRef(function (e, t) {
             let e = p ? U.Cy.START_QUEST : U.Cy.ACCEPT_QUEST;
             await tU(x, f.uF.QUEST_BAR_V2, e, f.uF.QUEST_BAR_V2), p && C();
         }, [x, C, p]),
-        g = x.userStatus?.enrolledAt != null,
-        _ = c && d;
+        g = x.userStatus?.enrolledAt != null;
     return (0, s.jsxs)(a.animated.div, {
-        "aria-hidden": !_,
-        inert: !_ || void 0,
-        className: i()(l, th.Rh, { [th.Yd]: _, [th.iH]: g }),
+        "aria-hidden": !c,
+        inert: !c || void 0,
+        className: i()(l, th.Rh, { [th.iH]: g }),
         style: {
             transform: (0, a.to)(
                 [m.to({ range: [0, 1], output: [0, -100] }), m.to({ range: [0, 1], output: [0, u] })],
@@ -1552,7 +1552,7 @@ let tB = r.forwardRef(function (e, t) {
                 style: { opacity: 1 },
                 children: g
                     ? (0, s.jsx)(tQ, { overlayRef: o, containerRef: t })
-                    : (0, s.jsx)(tA, { isInteractable: _, containerRef: t, onAcceptQuest: h }),
+                    : (0, s.jsx)(tA, { isCtaInteractable: !c || d, containerRef: t, onAcceptQuest: h }),
             }),
         ],
     });
@@ -1659,7 +1659,7 @@ function tD(e) {
             springConfig: D,
         } = (function (e) {
             let { isQuestAccepted: t, isQuestCompleted: n, isQuestBarVisible: s } = e,
-                l = (0, u.bG)([Y.Ay], () => Y.Ay.useReducedMotion),
+                l = (0, u.bG)([Z.Ay], () => Z.Ay.useReducedMotion),
                 [i, a] = r.useState(!1),
                 [o, c] = r.useState(!0),
                 [d, x] = r.useState(!0),
@@ -1724,7 +1724,7 @@ function tD(e) {
             handleCtxMenuSelection: H,
             handleGameSheetOpened: W,
             handleGameSheetClosed: K,
-            handleFocusWithoutDelay: Z,
+            handleFocusWithoutDelay: Y,
             handleBlur: ee,
             handleMouseEnter: et,
             handleMouseLeave: en,
@@ -1954,7 +1954,7 @@ function tD(e) {
                         "aria-hidden": !I,
                         onMouseLeave: en,
                         onMouseEnter: et,
-                        onFocus: Z,
+                        onFocus: Y,
                         onBlur: ee,
                         className: i()(tw.iE, { [tw.Xc]: !I, [tw.uv]: I && q }),
                         style: { height: M.to({ range: [0, 1], output: [0, eu] }) },
