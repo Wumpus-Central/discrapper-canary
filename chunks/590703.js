@@ -1,35 +1,35 @@
 "use strict";
-n.d(t, { Ay: () => g, Gc: () => p.Gc, Vg: () => E });
+n.d(t, { Ay: () => p, Gc: () => h.Gc, Vg: () => I });
 var i = n(64700),
     r = n(503698),
-    s = n.n(r),
-    a = n(735438),
-    o = n(17928),
-    l = n(793943),
-    u = n(476931),
+    a = n.n(r),
+    s = n(735438),
+    l = n(17928),
+    o = n(793943),
+    d = n(476931),
     c = n(875317),
-    d = n(363195),
+    u = n(363195),
     _ = n(617617),
-    h = n(467135),
-    f = n(47671),
-    p = n(153469);
-let E = "data-client-themes";
-function m(e) {
-    return { clientThemesCSS: e, clientThemesClassName: s()(p.Gc, p.hK) };
+    E = n(467135),
+    A = n(147248),
+    h = n(153469);
+let I = "data-client-themes";
+function f(e) {
+    return { clientThemesCSS: e, clientThemesClassName: a()(h.Gc, h.hK) };
 }
-function g() {
+function p() {
     let e,
-        t = (0, o.bG)([d.A], () => d.A.theme),
+        t = (0, l.bG)([u.A], () => u.A.theme),
         n = (0, c.Q)(),
         r = i.useMemo(() => {
             if (null == n) return null;
             if ("custom" === n.type) {
                 let e = n.customUserThemeSettings,
                     i = e.colors[0];
-                return null == i ? null : (0, p.dY)([...(0, u.kI)(i, t)], e.gradientAngle ?? 0, e.baseMix ?? u.BC, t);
+                return null == i ? null : (0, h.dY)([...(0, d.kI)(i, t)], e.gradientAngle ?? 0, e.baseMix ?? d.BC, t);
             }
-            let e = (0, u.oE)(n.preset, t);
-            return (0, p.dY)(
+            let e = (0, d.oE)(n.preset, t);
+            return (0, h.dY)(
                 e.colors.map((e) => {
                     let { hex: t } = e;
                     return t;
@@ -39,30 +39,30 @@ function g() {
                 t,
             );
         }, [n, t]),
-        E = i.useMemo(() => (null == n ? "" : s()(p.Gc, p.hK)), [n]),
-        g =
-            ((e = (0, o.bG)([f.A], () => f.A.gradientPreset)),
+        I = i.useMemo(() => (null == n ? "" : a()(h.Gc, h.hK)), [n]),
+        p =
+            ((e = (0, l.bG)([A.A], () => A.A.gradientPreset)),
             i.useMemo(() => {
                 if (null == e) return null;
-                let t = f.A.getLinearGradient();
-                return null == t ? null : (0, p.hm)(e, t);
+                let t = A.A.getLinearGradient();
+                return null == t ? null : (0, h.hm)(e, t);
             }, [e])),
-        A = (function () {
-            let e = (0, o.bG)([d.A], () => d.A.theme),
-                { colors: t, chassisMixAmount: n, gradientAngle: r, setAll: s } = (0, h.ko)(),
-                l = (0, o.bG)([_.A], () => _.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
-                u = i.useRef(void 0);
+        T = (function () {
+            let e = (0, l.bG)([u.A], () => u.A.theme),
+                { colors: t, chassisMixAmount: n, gradientAngle: r, setAll: a } = (0, E.ko)(),
+                o = (0, l.bG)([_.A], () => _.A.settings.appearance?.clientThemeSettings?.customUserThemeSettings),
+                d = i.useRef(void 0);
             return (
                 i.useEffect(() => {
-                    (0, a.isEqual)(l, u.current) ||
-                        ((u.current = l),
-                        s({
-                            colors: l?.colors ?? [],
-                            gradientAngle: l?.gradientAngle ?? 0,
-                            chassisMixAmount: l?.baseMix ?? h.kJ,
+                    (0, s.isEqual)(o, d.current) ||
+                        ((d.current = o),
+                        a({
+                            colors: o?.colors ?? [],
+                            gradientAngle: o?.gradientAngle ?? 0,
+                            chassisMixAmount: o?.baseMix ?? E.kJ,
                         }));
-                }, [l, s]),
-                i.useMemo(() => (0 === t.length ? null : (0, p.dY)(t, r, n, e)), [t, n, r, e])
+                }, [o, a]),
+                i.useMemo(() => (0 === t.length ? null : (0, h.dY)(t, r, n, e)), [t, n, r, e])
             );
         })();
     return (function (e) {
@@ -71,26 +71,26 @@ function g() {
             guildClassName: n,
             customThemeColorCSS: i,
             backgroundGradientCSS: r,
-            isCustomThemePreviewActive: s,
-            isClientThemesEditorPreviewActive: a,
+            isCustomThemePreviewActive: a,
+            isClientThemesEditorPreviewActive: s,
         } = e;
-        return s && null != i
-            ? m(i)
-            : a && null != r
-              ? { clientThemesCSS: r, clientThemesClassName: p.Gc }
+        return a && null != i
+            ? f(i)
+            : s && null != r
+              ? { clientThemesCSS: r, clientThemesClassName: h.Gc }
               : null != t
                 ? { clientThemesCSS: t, clientThemesClassName: n }
                 : null != i
-                  ? m(i)
+                  ? f(i)
                   : null == r
                     ? { clientThemesCSS: "", clientThemesClassName: "" }
-                    : { clientThemesCSS: r, clientThemesClassName: p.Gc };
+                    : { clientThemesCSS: r, clientThemesClassName: h.Gc };
     })({
         guildCSS: r,
-        guildClassName: E,
-        customThemeColorCSS: A,
-        backgroundGradientCSS: g,
-        isCustomThemePreviewActive: (0, l.fy)((e) => e.activePanel === l.HP.CUSTOM_THEME),
-        isClientThemesEditorPreviewActive: (0, l.fy)((e) => e.activePanel === l.HP.CLIENT_THEMES),
+        guildClassName: I,
+        customThemeColorCSS: T,
+        backgroundGradientCSS: p,
+        isCustomThemePreviewActive: (0, o.fy)((e) => e.activePanel === o.HP.CUSTOM_THEME),
+        isClientThemesEditorPreviewActive: (0, o.fy)((e) => e.activePanel === o.HP.CLIENT_THEMES),
     });
 }

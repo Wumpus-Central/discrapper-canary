@@ -1,49 +1,49 @@
 "use strict";
-n.d(t, { $i: () => _, NC: () => f, qo: () => h });
+n.d(t, { $i: () => _, NC: () => A, qo: () => E });
 var i = n(17928),
     r = n(462887),
-    s = n(467135),
-    a = n(47671),
-    o = n(875317),
-    l = n(363195),
-    u = n(885386),
+    a = n(467135),
+    s = n(147248),
+    l = n(875317),
+    o = n(363195),
+    d = n(885386),
     c = n(652215);
-function d(e) {
+function u(e) {
     let {
             theme: t,
             darkSidebar: n,
             gradientPreset: i,
-            clientThemeSettings: s,
-            isCustomThemeEditorActive: a,
-            hasActiveGuildTheme: o,
-            isGuildThemePreviewActive: l,
+            clientThemeSettings: a,
+            isCustomThemeEditorActive: s,
+            hasActiveGuildTheme: l,
+            isGuildThemePreviewActive: o,
         } = e,
-        u = null != s.customUserThemeSettings;
-    return (0, r.q)(t) && n && null == i && !(u || a || o || l);
+        d = null != a.customUserThemeSettings;
+    return (0, r.q)(t) && n && null == i && !(d || s || l || o);
 }
 function _() {
-    let e = (0, o.fX)();
-    return d({
-        theme: l.A.theme,
-        darkSidebar: u.l$.getSetting(),
-        gradientPreset: a.A.gradientPreset,
-        clientThemeSettings: u.eh.getSetting(),
-        isCustomThemeEditorActive: s.ko.getState().isEditorActive(),
+    let e = (0, l.fX)();
+    return u({
+        theme: o.A.theme,
+        darkSidebar: d.l$.getSetting(),
+        gradientPreset: s.A.gradientPreset,
+        clientThemeSettings: d.eh.getSetting(),
+        isCustomThemeEditorActive: a.ko.getState().isEditorActive(),
         hasActiveGuildTheme: null != e,
         isGuildThemePreviewActive: !1,
     });
 }
-function h() {
-    let e = u.eh.useSetting(),
-        t = u.l$.useSetting(),
-        n = (0, s.ko)((e) => e.isEditorActive()),
-        r = null != (0, o.Q)(),
-        c = (0, o.gM)();
-    return (0, i.bG)([l.A, a.A], () =>
-        d({
-            theme: l.A.theme,
+function E() {
+    let e = d.eh.useSetting(),
+        t = d.l$.useSetting(),
+        n = (0, a.ko)((e) => e.isEditorActive()),
+        r = null != (0, l.Q)(),
+        c = (0, l.gM)();
+    return (0, i.bG)([o.A, s.A], () =>
+        u({
+            theme: o.A.theme,
             darkSidebar: t,
-            gradientPreset: a.A.gradientPreset,
+            gradientPreset: s.A.gradientPreset,
             clientThemeSettings: e,
             isCustomThemeEditorActive: n,
             hasActiveGuildTheme: r,
@@ -51,6 +51,6 @@ function h() {
         }),
     );
 }
-function f() {
-    return h() ? c.NJ8.DARK : void 0;
+function A() {
+    return E() ? c.NJ8.DARK : void 0;
 }

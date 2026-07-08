@@ -65,61 +65,61 @@ let C = (0, n.E2)(s.X.APPEARANCE_CUSTOM_THEMES_UPSELL, {
 var b = i(366010),
     y = i(17928),
     v = i(775602),
-    j = i(47671),
+    j = i(147248),
     O = i(875317),
     R = i(97469),
-    D = i(363195),
-    L = i(885386),
+    L = i(363195),
+    D = i(885386),
     P = i(818348);
 let G = (0, n.zD)(s.X.APPEARANCE_DARK_SIDEBAR, {
     useTitle: () => r.intl.string(r.t.EpSHAQ),
     useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)],
     useValue: function () {
         let e = (0, R.qo)();
-        return (0, y.bG)([D.A, v.Ay], () => {
-            let t = D.A.theme,
+        return (0, y.bG)([L.A, v.Ay], () => {
+            let t = L.A.theme,
                 i = v.Ay.useForcedColors;
             return e && (0, b.q)(t) && !i;
         });
     },
     usePredicate: function () {
-        let e = null != L.eh.useSetting().customUserThemeSettings,
+        let e = null != D.eh.useSetting().customUserThemeSettings,
             t = null != (0, O.Q)();
-        return (0, y.bG)([D.A, j.A], () => {
-            let i = D.A.theme,
+        return (0, y.bG)([L.A, j.A], () => {
+            let i = L.A.theme,
                 n = j.A.gradientPreset;
             return (0, b.q)(i) && null == n && !e && !t;
         });
     },
     useDisabled: function () {
-        return (0, y.bG)([D.A, v.Ay], () => {
-            let e = D.A.theme,
+        return (0, y.bG)([L.A, v.Ay], () => {
+            let e = L.A.theme,
                 t = v.Ay.useForcedColors;
             return e !== P.NJ.LIGHT || t;
         });
     },
-    setValue: (e) => L.l$.updateSetting(e),
+    setValue: (e) => D.l$.updateSetting(e),
 });
-var M = i(331322),
-    U = i(487245),
+var U = i(331322),
+    M = i(487245),
     V = i(385803);
 let k = (0, n.E2)(s.X.APPEARANCE_DEFAULT_THEMES, {
         useSearchTerms: () => [r.intl.string(r.t.Ksh3ik)],
         Component: function () {
-            return (0, o.jsxs)(U.Ay, {
-                type: U.v0.SETTINGS,
+            return (0, o.jsxs)(M.Ay, {
+                type: M.v0.SETTINGS,
                 children: [
                     (0, o.jsx)(m.D, {
                         variant: "heading-md/semibold",
                         color: "text-default",
                         children: r.intl.string(r.t["0EzVst"]),
                     }),
-                    (0, o.jsx)(M.B, {
+                    (0, o.jsx)(U.B, {
                         direction: "horizontal",
                         wrap: !0,
                         gap: 8,
                         padding: { top: 24 },
-                        children: (0, o.jsx)(U.t6, { size: V.ni.SIZE_48 }),
+                        children: (0, o.jsx)(M.t6, { size: V.ni.SIZE_48 }),
                     }),
                 ],
             });

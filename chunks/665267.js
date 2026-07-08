@@ -1,4 +1,4 @@
-i.d(t, { J3: () => v, sB: () => L });
+i.d(t, { J3: () => v, sB: () => D });
 var n = i(627968),
     s = i(64700),
     l = i(17928),
@@ -7,7 +7,7 @@ var n = i(627968),
     o = i(331322),
     u = i(793574),
     d = i(688810),
-    c = i(47671),
+    c = i(147248),
     g = i(487245),
     m = i(793943),
     A = i(826673),
@@ -21,7 +21,7 @@ var n = i(627968),
     N = i(652215),
     _ = i(385803),
     I = i(49999),
-    C = i(788868),
+    C = i(202541),
     b = i(375708),
     y = i(220982);
 function v() {
@@ -69,7 +69,7 @@ function R(e) {
         ? (0, n.jsx)("div", { className: y._$, children: t })
         : t;
 }
-function D() {
+function L() {
     let e = (0, l.bG)([c.A], () => c.A.isPreview),
         t = (0, E.V)()?.subscription_trial?.sku_id === C.pe.TIER_2;
     return e && t
@@ -90,7 +90,7 @@ function D() {
           })
         : null;
 }
-function L() {
+function D() {
     return (0, n.jsx)(g.Ay, {
         type: g.v0.SETTINGS,
         children: (0, n.jsxs)(R, {
@@ -110,7 +110,7 @@ function L() {
                     padding: { top: 24 },
                     children: (0, n.jsx)(g.Zg, { disabled: !1, size: _.ni.SIZE_48 }),
                 }),
-                (0, n.jsx)(D, {}),
+                (0, n.jsx)(L, {}),
             ],
         }),
     });
