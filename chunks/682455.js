@@ -3542,7 +3542,7 @@ function iH(e) {
 var iV = n(139033),
     iz = n(319060),
     iY = n(530557),
-    iW = n(773812),
+    iW = n(144228),
     iK = n(260598),
     iX = n(452027),
     iq = n(691885),
@@ -7368,7 +7368,7 @@ function aU(e) {
     });
 }
 var aP = n(691223),
-    aw = n(835245),
+    aw = n(132500),
     aF = n(396478),
     aB = n(157559),
     aH = n(554375),
@@ -26628,7 +26628,7 @@ var Ie = n(383329),
     In = n(201438),
     Ii = n(461565);
 function Il(e) {
-    let { applicationId: t, selected: n, onClick: i, disabled: l } = e,
+    let { gameId: t, selected: n, onClick: i, disabled: l } = e,
         { coverImageUrl: s, gameName: r, isLoading: a } = (0, In.A)(t, void 0, 256),
         o = R.useCallback(() => {
             i?.(t);
@@ -26679,7 +26679,7 @@ let Ia = new Map(),
     }));
 var Id = n(847955);
 function Ic(e) {
-    let { guildId: t, selectedGameApplicationIds: n, onUpdateGames: i, disabled: l } = e,
+    let { guildId: t, selectedGameIds: n, onUpdateGames: i, disabled: l } = e,
         { topGames: s, tryFetchTopGames: r } = Io(),
         a = s.get(t),
         [o, d] = R.useState(!1);
@@ -26722,7 +26722,7 @@ function Ic(e) {
                             (0, p.jsx)("div", {
                                 className: Id.CW,
                                 children: c.map((e) =>
-                                    (0, p.jsx)(Il, { applicationId: e, selected: !1, onClick: u, disabled: l }, e),
+                                    (0, p.jsx)(Il, { gameId: e, selected: !1, onClick: u, disabled: l }, e),
                                 ),
                             }),
                         ],
@@ -26750,12 +26750,12 @@ function Im(e) {
     });
 }
 function Ig(e) {
-    let { gameApplicationIds: t, onRemoveGame: n, disabled: i } = e;
+    let { gameIds: t, onRemoveGame: n, disabled: i } = e;
     return 0 === t.length
         ? null
         : (0, p.jsx)("div", {
               className: Iu.Rh,
-              children: t.map((e) => (0, p.jsx)(Il, { applicationId: e, selected: !0, onClick: n, disabled: i }, e)),
+              children: t.map((e) => (0, p.jsx)(Il, { gameId: e, selected: !0, onClick: n, disabled: i }, e)),
           });
 }
 let Ix = [];
@@ -26783,8 +26783,8 @@ function Ih(e) {
         description: el.intl.string(el.t.MobxiB),
         children: [
             (0, p.jsx)(Im, { gameApplicationIds: l, handleChange: s, disabled: !n }),
-            (0, p.jsx)(Ig, { gameApplicationIds: o, onRemoveGame: r, disabled: !n }),
-            (0, p.jsx)(Ic, { guildId: i, selectedGameApplicationIds: l, onUpdateGames: s, disabled: !n }),
+            (0, p.jsx)(Ig, { gameIds: o, onRemoveGame: r, disabled: !n }),
+            (0, p.jsx)(Ic, { guildId: i, selectedGameIds: l, onUpdateGames: s, disabled: !n }),
         ],
     });
 }

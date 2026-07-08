@@ -6,7 +6,7 @@ let a = "guild-room",
     s = {
         0: {
             background:
-                "https://cdn.discordapp.com/assets/content/69a818dab9d81c925957377f0aad60015b243a36dbbdf4b69b91900abfbe9661.png",
+                "https://cdn.discordapp.com/assets/content/953fe0f3c32fb58ba28de77c49726e4cf1c7d4b34d3f6e6c17b95195469a58cb.jpg",
             aspectRatio: 1337 / 972,
             seats: [
                 { name: "PC_SEAT_1", position: { x: 13.6, y: 56.8 } },
