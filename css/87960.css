@@ -633,7 +633,7 @@
     width: var(--custom-extra-spacing-placeholder-size)
 }
 
-.questTile__02563 {
+.questTile__02563.questTile__02563 {
     flex-shrink: 0;
     overflow: hidden;
     position: relative;
