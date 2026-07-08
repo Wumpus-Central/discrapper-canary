@@ -1,11 +1,11 @@
 "use strict";
-n.d(t, { A: () => A }), n(321073);
+n.d(t, { A: () => T }), n(321073);
 var i = n(17928),
     r = n(228366),
-    s = n(735438),
-    a = n.n(s),
-    o = n(451988);
-class l {
+    a = n(735438),
+    s = n.n(a),
+    l = n(451988);
+class o {
     _guildId;
     _pendingRequests = new Set();
     _sentRequests = new Set();
@@ -40,11 +40,11 @@ class l {
         this._pendingRequests.add(e);
     }
 }
-class u {
+class d {
     _onChange;
     _guildMemberExists;
     _guildStates = {};
-    _flush = new o.J_(0, () => this.flushRequests());
+    _flush = new l.J_(0, () => this.flushRequests());
     constructor(e, t) {
         (this._guildMemberExists = e), (this._onChange = t);
     }
@@ -58,21 +58,21 @@ class u {
         this._getGuildState(e).acknowledge(t);
     }
     flushRequests() {
-        a().forEach(this._guildStates, (e) => e.flushRequests(this._onChange));
+        s().forEach(this._guildStates, (e) => e.flushRequests(this._onChange));
     }
     requestUnacknowledged() {
-        a().reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || e, !1) && this._flush.delay();
+        s().reduce(this._guildStates, (e, t) => !1 !== t.requestUnacknowledged() || e, !1) && this._flush.delay();
     }
     _getGuildState(e) {
         let t = this._guildStates[e];
-        return null == t && (t = this._guildStates[e] = new l(e, this._guildMemberExists)), t;
+        return null == t && (t = this._guildStates[e] = new o(e, this._guildMemberExists)), t;
     }
     getDebugState(e) {
         let t = [],
             n = [],
             i = [];
         return (
-            a().forEach(this._guildStates, (r) => {
+            s().forEach(this._guildStates, (r) => {
                 r._pendingRequests.has(e) && t.push(r._guildId),
                     r._unacknowledgedRequests.has(e) && n.push(r._guildId),
                     r._sentRequests.has(e) && i.push(r._guildId);
@@ -82,31 +82,31 @@ class u {
     }
 }
 var c = n(734057),
-    d = n(696451);
-let _ = new u(d.Ay.isMember, (e, t) => {
+    u = n(696451);
+let _ = new d(u.Ay.isMember, (e, t) => {
     r.h.dispatch({ type: "GUILD_MEMBERS_REQUEST", guildIds: [e], userIds: t });
 });
-function h() {
+function E() {
     _.reset();
 }
-function f(e, t) {
+function A(e, t) {
     return _.request(e, t), !1;
 }
-function p(e, t) {
+function h(e, t) {
     return (
         t.forEach((t) => {
             let { author: n, mentions: i } = t;
-            null != n && f(e, n.id), i?.forEach((t) => f(e, t.id));
+            null != n && A(e, n.id), i?.forEach((t) => A(e, t.id));
         }),
         !1
     );
 }
-function E(e) {
+function I(e) {
     let { channelId: t, messages: n } = e,
         i = c.A.getChannel(t);
-    return null != i && null != i.guild_id && p(i.guild_id, n);
+    return null != i && null != i.guild_id && h(i.guild_id, n);
 }
-function m(e) {
+function f(e) {
     let { guildId: t, data: n } = e;
     if (null == t) return !1;
     let i = [];
@@ -119,24 +119,24 @@ function m(e) {
                 });
             });
         }),
-        p(t, i)
+        h(t, i)
     );
 }
-class g extends i.Ay.Store {
+class p extends i.Ay.Store {
     static displayName = "GuildMemberRequesterStore";
     initialize() {
-        this.waitFor(c.A, d.Ay);
+        this.waitFor(c.A, u.Ay);
     }
     requestMember(e, t) {
-        f(e, t);
+        A(e, t);
     }
     getDebugState(e) {
         return _.getDebugState(e);
     }
 }
-let A = new g(r.h, {
-    CONNECTION_CLOSED: h,
-    CONNECTION_OPEN: h,
+let T = new p(r.h, {
+    CONNECTION_CLOSED: E,
+    CONNECTION_OPEN: E,
     CONNECTION_RESUMED: function () {
         return _.requestUnacknowledged(), !1;
     },
@@ -149,19 +149,19 @@ let A = new g(r.h, {
                 null != e.notFound && e.notFound.forEach((t) => _.acknowledge(e.guildId, t));
         return !1;
     },
-    SEARCH_MESSAGES_SUCCESS: m,
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: m,
-    LOCAL_MESSAGES_LOADED: E,
-    LOAD_MESSAGES_SUCCESS: E,
-    LOAD_MESSAGES_AROUND_SUCCESS: E,
-    LOAD_RECENT_MENTIONS_SUCCESS: E,
+    SEARCH_MESSAGES_SUCCESS: f,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: f,
+    LOCAL_MESSAGES_LOADED: I,
+    LOAD_MESSAGES_SUCCESS: I,
+    LOAD_MESSAGES_AROUND_SUCCESS: I,
+    LOAD_RECENT_MENTIONS_SUCCESS: I,
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { pins: t, channelId: n } = e,
             i = c.A.getChannel(n);
         return (
             null != i &&
             null != i.guild_id &&
-            p(
+            h(
                 i.guild_id,
                 t.map((e) => {
                     let { message: t } = e;
@@ -173,6 +173,18 @@ let A = new g(r.h, {
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { channelId: t, messages: n } = e,
             i = c.A.getChannel(t);
-        return null != i && null != i.guild_id && p(i.guild_id, n);
+        return null != i && null != i.guild_id && h(i.guild_id, n);
+    },
+    CONVERSATIONS_FETCH_SUCCESS: function (e) {
+        let { channelId: t, rawConversations: n } = e,
+            i = c.A.getChannel(t);
+        if (null == i || null == i.guild_id) return !1;
+        let r = n
+            .map((e) => {
+                let { messages: t } = e;
+                return t ?? [];
+            })
+            .flat();
+        return h(i.guild_id, r);
     },
 });
