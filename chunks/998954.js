@@ -1360,7 +1360,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let e3 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ej.A().log(
-    `[BUILD INFO] Release Channel: ${e3}, Build Number: 575246, Version Hash: 0d81d15cd31b1e2c549d37585a8786f45a36cf65`,
+    `[BUILD INFO] Release Channel: ${e3}, Build Number: 575253, Version Hash: afd189540716130ab12835a4a0845a6da2a43949`,
 ),
     v.A.setTags({ appContext: G.QCW }),
     ep.A.initBasic(),
@@ -10631,10 +10631,10 @@ let _C = (e) => {
                 size: t = "md",
                 width: n,
                 height: i,
-                secondaryColor: r = iw.A.colors.ICON_VOICE_SPEAKING,
-                secondaryColorClass: a = "",
-                color: s = iw.A.colors.INTERACTIVE_ICON_DEFAULT,
-                colorClass: l = "",
+                color: r = iw.A.colors.INTERACTIVE_ICON_DEFAULT,
+                colorClass: a = "",
+                secondaryColor: s = iw.A.colors.ICON_VOICE_SPEAKING,
+                secondaryColorClass: l = "",
                 ...o
             } = e,
             d = (0, d3.J)(t),
@@ -10648,21 +10648,24 @@ let _C = (e) => {
             fill: "none",
             viewBox: "0 0 24 24",
             children: [
-                (0, O.jsx)("circle", {
-                    cx: "19",
-                    cy: "5",
-                    r: "5",
+                (0, O.jsx)("path", {
                     fill: "string" == typeof r ? r : r.css,
+                    d: "M5 9a1 1 0 0 1 1 1 6 6 0 0 0 11.37 2.68c.2-.4.58-.68 1.03-.68.68 0 1.18.65.9 1.27a8 8 0 0 1-6.3 4.67V20h2a1 1 0 1 1 0 2H9a1 1 0 0 1 0-2h2v-2.06A8 8 0 0 1 4 10a1 1 0 0 1 1-1Z",
+                    className: a,
+                }),
+                (0, O.jsx)("path", {
+                    fill: "string" == typeof r ? r : r.css,
+                    d: "M11.01 2.12c.54-.13.99.33.99.88v3.75c0 .92.72 1.68 1.63 1.74h.83c.83 0 1.5.68 1.5 1.51 0 1.11-.45 2.12-1.18 2.84-.1.12-.21.23-.34.33a3.98 3.98 0 0 1-2.37.83h-.1A4 4 0 0 1 8 10V6a4 4 0 0 1 3.01-3.88Z",
                     className: a,
                 }),
                 (0, O.jsx)("path", {
                     fill: "string" == typeof s ? s : s.css,
-                    d: "M12 2c.33 0 .51.35.4.66a6.99 6.99 0 0 0 3.04 8.37c.2.12.31.37.21.6A4 4 0 0 1 8 10V6a4 4 0 0 1 4-4Z",
+                    d: "M21.78 8.89a6.67 6.67 0 0 0-6.67-6.67 1.11 1.11 0 0 1 0-2.22C20.02 0 24 3.98 24 8.89a1.11 1.11 0 0 1-2.22 0Z",
                     className: l,
                 }),
                 (0, O.jsx)("path", {
                     fill: "string" == typeof s ? s : s.css,
-                    d: "M17.55 12.29c.1-.23.33-.37.58-.34.29.03.58.05.87.05h.04c.35 0 .63.32.51.65A8 8 0 0 1 13 17.94V20h2a1 1 0 1 1 0 2H9a1 1 0 1 1 0-2h2v-2.06A8 8 0 0 1 4 10a1 1 0 1 1 2 0 6 6 0 0 0 11.55 2.29Z",
+                    d: "M17.67 8.89c0-1.23-1-2.22-2.23-2.22a1.11 1.11 0 0 1 0-2.23A4.44 4.44 0 0 1 19.9 8.9a1.11 1.11 0 0 1-2.22 0Z",
                     className: l,
                 }),
             ],
@@ -18586,7 +18589,7 @@ let gR = "isHideDevBanner",
                     className: ts()(gC.Wz, gC.mr),
                     children: [
                         (0, O.jsx)(gN, { className: gC.Kk }),
-                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "575246" }),
+                        tm.intl.format(tm.t.uyrfYF, { buildNumber: "575253" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
