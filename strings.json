@@ -22678,6 +22678,7 @@
   "ttJ/hj": "You are at the {quantity, number} server limit.",
   "LJuFRG": "No conversations available.",
   "u54FxB": "View recent conversations",
+  "poZZGL": "{count, plural,one {# message}other {# messages}",
   "eylmYW": "We ran into an issue loading messages.",
   "T3WBRp": "Recent Conversations",
   "aBNTxl": "View in channel",
