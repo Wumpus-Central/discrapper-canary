@@ -1729,6 +1729,7 @@
     -webkit-box-orient: vertical
 }
 
+.deletedMessage_a2d698,
 .messageContentContainer_a2d698 {
     height: var(--custom-message-height)
 }

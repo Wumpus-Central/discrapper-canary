@@ -5480,31 +5480,40 @@ function rb(e) {
     let { message: t, compact: n, channel: l, id: i } = e,
         s = (0, iZ.kt)(l),
         a = (0, lH.IO)(l),
-        c = (0, o.useMemo)(() => ({ [l.guild_id]: [t.author.id] }), [l.guild_id, t.author.id]);
+        c = t?.author.id,
+        d = (0, o.useMemo)(() => (null != c ? { [l.guild_id]: [c] } : {}), [l.guild_id, c]);
     return (
-        (0, rh.Eq)(c, "GameInviteChannelFirstMessage"),
+        (0, rh.Eq)(d, "GameInviteChannelFirstMessage"),
         (0, r.jsxs)("div", {
             className: ry.TX,
             children: [
                 (0, r.jsxs)(ru.Ar, {
                     children: [
-                        (0, r.jsx)("ol", {
-                            children: (0, r.jsx)(nZ, {
-                                className: ry.iU,
-                                compact: n,
-                                channel: l,
-                                message: t,
-                                groupId: t.id,
-                                id: i,
-                                isLastItem: !1,
-                                renderContentOnly: !1,
-                                hideInviteEmbedBanner: !0,
-                                hideActivityInvite: !0,
-                            }),
-                        }),
+                        null != t
+                            ? (0, r.jsx)("ol", {
+                                  children: (0, r.jsx)(nZ, {
+                                      className: ry.iU,
+                                      compact: n,
+                                      channel: l,
+                                      message: t,
+                                      groupId: t.id,
+                                      id: i,
+                                      isLastItem: !1,
+                                      renderContentOnly: !1,
+                                      hideInviteEmbedBanner: !0,
+                                      hideActivityInvite: !0,
+                                  }),
+                              })
+                            : null,
                         (0, r.jsxs)("div", {
                             className: ry.iQ,
                             children: [
+                                null == t &&
+                                    (0, r.jsx)(e_.E, {
+                                        variant: "text-sm/normal",
+                                        color: "text-muted",
+                                        children: eR.intl.string(eR.t.mE3KJN),
+                                    }),
                                 s.length > 0 &&
                                     (0, r.jsx)("div", {
                                         className: ry.GA,
@@ -5512,7 +5521,7 @@ function rb(e) {
                                             (0, r.jsx)(iY.A, { tag: e, size: iY.A.Sizes.SMALL }, e.id),
                                         ),
                                     }),
-                                null != t.activity &&
+                                t?.activity != null &&
                                     (0, r.jsx)(rm.A, {
                                         channel: l,
                                         message: t,
@@ -6266,18 +6275,23 @@ let ot = (0, u.animated)(S),
                                     });
                             return null;
                         })(s, L ?? k ?? P),
-                        U = s.isForumPost() && !M ? (0, r.jsx)(rd, { postId: s.id }) : null,
-                        { firstMessage: w } = (0, lH.n5)(s, _),
-                        F =
-                            null != w
+                        U = !s.isForumPost() || M || _ ? null : (0, r.jsx)(rd, { postId: s.id }),
+                        { firstMessage: w, loaded: F } = (0, lH.n5)(s, _),
+                        H =
+                            _ && F
                                 ? (0, r.jsx)(
                                       rb,
-                                      { compact: u, channel: s, message: w, id: (0, e1.j)(s.id, w.id) },
-                                      w.id,
+                                      {
+                                          compact: u,
+                                          channel: s,
+                                          message: w,
+                                          id: null != w ? (0, e1.j)(s.id, w.id) : `deleted-${s.id}`,
+                                      },
+                                      w?.id ?? `deleted-${s.id}`,
                                   )
                                 : null,
-                        H = (0, iT.A)(s.id),
-                        B = (0, aq.W1)(s);
+                        B = (0, iT.A)(s.id),
+                        V = (0, aq.W1)(s);
                     (t = eZ.Sf.useSetting()),
                         (n = (0, aN.bG)([b.Ay], () => b.Ay.useReducedMotion)),
                         o.useEffect(() => {
@@ -6296,9 +6310,9 @@ let ot = (0, u.animated)(S),
                                 }
                             );
                         }, [t, n]);
-                    let V = null,
-                        K = [],
-                        z = h.map((e, t) => {
+                    let K = null,
+                        z = [],
+                        W = h.map((e, t) => {
                             if (e.type === ec.TZK.DIVIDER) {
                                 let n = null != e.unreadId;
                                 return null != C
@@ -6365,9 +6379,9 @@ let ot = (0, u.animated)(S),
                                 );
                             }
                             if (null != C && C > e.content.timestamp.getTime() * rz.A.Millis.SECOND) return;
-                            e.type === ec.TZK.MESSAGE && null == V && (V = e);
-                            let n = e.groupId === V?.groupId ? V.content.id : e.groupId,
-                                l = B && e.content.isFirstMessageInForumPost(s),
+                            e.type === ec.TZK.MESSAGE && null == K && (K = e);
+                            let n = e.groupId === K?.groupId ? K.content.id : e.groupId,
+                                l = V && e.content.isFirstMessageInForumPost(s),
                                 i = e.type === ec.TZK.THREAD_STARTER_MESSAGE ? n$ : nZ;
                             return (0, r.jsx)(
                                 i,
@@ -6379,18 +6393,18 @@ let ot = (0, u.animated)(S),
                                     flashKey: e.flashKey,
                                     id: (0, e1.j)(s.id, e.content.id),
                                     isLastItem: t >= h.length - 1,
-                                    renderContentOnly: H || l,
+                                    renderContentOnly: B || l,
                                 },
                                 e.content.id,
                             );
                         });
-                    K.push(...z);
-                    let W = h[h.length - 1];
+                    z.push(...W);
+                    let q = h[h.length - 1];
                     if (
                         (null != y &&
                             g.forEach((e, t) => {
-                                let n = 0 === t && (0, et.l)(s, W, new rV.Ay({ type: ec.lAJ.DEFAULT, author: y }));
-                                K.push(
+                                let n = 0 === t && (0, et.l)(s, q, new rV.Ay({ type: ec.lAJ.DEFAULT, author: y }));
+                                z.push(
                                     (0, r.jsx)(
                                         r9,
                                         { file: e, channel: s, user: y, isGroupStart: n, compact: u },
@@ -6411,19 +6425,19 @@ let ot = (0, u.animated)(S),
                                         }
                                     return t;
                                 })(h) &&
-                                K.unshift(
+                                z.unshift(
                                     (0, r.jsx)(rZ, { loading: a.loadingMore, onClick: () => p() }, "load-more-before"),
                                 ),
-                            K.unshift((0, r.jsx)("div", { style: { height: nq.N0, flex: "0 0 auto" } }, "buffer")));
+                            z.unshift((0, r.jsx)("div", { style: { height: nq.N0, flex: "0 0 auto" } }, "buffer")));
                         let { useReducedMotion: e } = b.Ay;
-                        ((e && N()) || !e) && K.unshift((0, r.jsx)(l1, { compact: u, ...f }, "has-more"));
+                        ((e && N()) || !e) && z.unshift((0, r.jsx)(l1, { compact: u, ...f }, "has-more"));
                     }
                     if (
                         ((a.hasMoreBefore && null == C) ||
                             _ ||
-                            K.unshift((0, r.jsx)(aC, { channel: s, showingBanner: x }, "empty-message")),
-                        a.hasMoreAfter && K.push((0, r.jsx)(l1, { compact: u, ...f }, "has-more-after")),
-                        !x && T && N() && K.push((0, r.jsx)(r4, { channel: s })),
+                            z.unshift((0, r.jsx)(aC, { channel: s, showingBanner: x }, "empty-message")),
+                        a.hasMoreAfter && z.push((0, r.jsx)(l1, { compact: u, ...f }, "has-more-after")),
+                        !x && T && N() && z.push((0, r.jsx)(r4, { channel: s })),
                         c > 0 && d && N())
                     ) {
                         let e,
@@ -6574,11 +6588,11 @@ let ot = (0, u.animated)(S),
                                     });
                     }
                     return {
-                        channelStreamMarkup: K,
+                        channelStreamMarkup: z,
                         newMessagesBar: l,
                         jumpToPresentBar: i,
                         forumPostActionBar: U,
-                        pinnedFirstMessage: F,
+                        pinnedFirstMessage: H,
                         safetyWarningBanner: G,
                     };
                 })({

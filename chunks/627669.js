@@ -3669,49 +3669,57 @@ function i5(e) {
         m = n.id,
         h = s.useRef(null),
         x = (0, g.bG)([eG.Ay], () => eG.Ay.getCurrentSidebarChannelId(n.parent_id) === n.id),
-        { firstMessage: f } = (0, ep.OA)(n),
-        { user: j, author: v } = (0, ev.kn)(n),
-        p = (0, O.Ay)(n),
-        { messageCountText: A } = (0, ev.k6)(n),
-        C = s.useRef(null),
-        { handleLeftClick: N, handleRightClick: b } = (0, ey.A)({ facepileRef: C, goToThread: l, channel: n });
+        { firstMessage: f, loaded: j } = (0, ep.OA)(n),
+        { user: v, author: p } = (0, ev.kn)(n),
+        A = (0, O.Ay)(n),
+        { messageCountText: C } = (0, ev.k6)(n),
+        N = s.useRef(null),
+        { handleLeftClick: b, handleRightClick: y } = (0, ey.A)({ facepileRef: N, goToThread: l, channel: n });
     s.useEffect(() => {
         u?.(h.current?.ref, m);
     }, [u, m]);
-    let y = (0, ev.Mw)(n, iI.T.CREATION_DATE, nM.EG.POSTED_DURATION_AGO),
-        { shouldRenderTagsRow: T } = (0, eE.BA)({ channel: n, isNew: !1 }),
-        { onFocus: I, ..._ } = iW({ id: t, row: o.row, column: o.column, section: o.section, boundaries: c }),
-        R = v?.nick ?? j?.username ?? "",
-        k = j?.getAvatarURL(n.guild_id, (0, el.FT)(el._3.SIZE_24));
+    let T = (0, ev.Mw)(n, iI.T.CREATION_DATE, nM.EG.POSTED_DURATION_AGO),
+        { shouldRenderTagsRow: I } = (0, eE.BA)({ channel: n, isNew: !1 }),
+        { onFocus: _, ...R } = iW({ id: t, row: o.row, column: o.column, section: o.section, boundaries: c }),
+        k = p?.nick ?? v?.username ?? "",
+        M = v?.getAvatarURL(n.guild_id, (0, el.FT)(el._3.SIZE_24));
     return (0, i.jsxs)(S.D, {
         ref: h,
         tag: "li",
-        onClick: N,
-        onFocus: I,
-        onContextMenu: b,
+        onClick: b,
+        onFocus: _,
+        onContextMenu: y,
         className: r()(i2.kL, d, { [i2.nT]: x }),
-        "aria-label": eJ.intl.formatToPlainString(eJ.t.pgYN6c, { title: p ?? "", count: A }),
+        "aria-label": eJ.intl.formatToPlainString(eJ.t.pgYN6c, { title: A ?? "", count: C }),
         style: { ...a },
-        ..._,
+        ...R,
         children: [
             (0, i.jsxs)("div", {
                 className: i2.wx,
                 children: [
-                    (0, i.jsx)(en.eu, { src: k, size: el._3.SIZE_24, className: i2.my, "aria-label": R }),
+                    (0, i.jsx)(en.eu, { src: M, size: el._3.SIZE_24, className: i2.my, "aria-label": k }),
                     (0, i.jsx)(E.E, {
                         variant: "text-md/semibold",
                         color: "text-strong",
                         className: i2.fh,
-                        children: R,
+                        children: k,
                     }),
-                    (0, i.jsx)(E.E, { variant: "text-xs/medium", color: "text-subtle", className: i2.vE, children: y }),
+                    (0, i.jsx)(E.E, { variant: "text-xs/medium", color: "text-subtle", className: i2.vE, children: T }),
                 ],
             }),
             (0, i.jsxs)(et.M, {
                 className: i2.rf,
                 children: [
+                    j &&
+                        null == f &&
+                        (0, i.jsx)(E.E, {
+                            variant: "text-sm/normal",
+                            color: "text-muted",
+                            className: i2.tq,
+                            children: eJ.intl.string(eJ.t.mE3KJN),
+                        }),
                     null != f ? (0, i.jsx)(i4, { message: f, channel: n, containerWidth: a.width }) : null,
-                    T ? (0, i.jsx)("div", { className: i2.GA, children: (0, i.jsx)(eE.Ay, { channel: n }) }) : null,
+                    I ? (0, i.jsx)("div", { className: i2.GA, children: (0, i.jsx)(eE.Ay, { channel: n }) }) : null,
                     n.isArchivedThread()
                         ? null
                         : (0, i.jsx)("div", {
@@ -3722,7 +3730,7 @@ function i5(e) {
             }),
             (0, i.jsx)(et.M, {
                 className: i2.qr,
-                children: (0, i.jsx)(sr, { channel: n, firstMessage: f, facepileRef: C }),
+                children: (0, i.jsx)(sr, { channel: n, firstMessage: f, facepileRef: N }),
             }),
         ],
     });
