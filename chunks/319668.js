@@ -33,10 +33,9 @@ function _(e) {
 function g(e) {
     var t;
     let { onPaymentSourceAdd: n } = e,
-        { enabled: r } = ((t = { location: "CheckoutStatefulPayWithPixLink" }), { enabled: p.useConfig(t).enabled }),
-        { enabled: a } = (0, m.Y)({ location: "CheckoutStatefulPayWithPixLink" }),
-        s = i.useCallback(() => n({ linkWalletEnabled: !1 }), [n]);
-    return r && a ? (0, l.jsx)(A.y, { className: T.K, text: P.intl.string(S.default.JPRQ9L), onClick: s }) : null;
+        { enabled: i } = ((t = { location: "CheckoutStatefulPayWithPixLink" }), { enabled: p.useConfig(t).enabled }),
+        { enabled: r } = (0, m.Y)({ location: "CheckoutStatefulPayWithPixLink" });
+    return i && r ? (0, l.jsx)(A.y, { className: T.K, text: P.intl.string(S.default.JPRQ9L), onClick: n }) : null;
 }
 function x(e) {
     let { onPaymentSourceAdd: t } = e,
