@@ -7,7 +7,8 @@ e.exports = {
     xp: "uploader_e45886",
     Ow: "uploadImageIcon_e45886",
     um: "iconUploadContainer_e45886",
-    gu: "imageOverlay_e45886",
-    JW: "iconUpload_e45886",
-    K8: "uploadMenuItem_e45886",
+    uJ: "hiddenFileUpload_e45886",
+    bu: "editIconContainer_e45886",
+    r9: "editButton_e45886",
+    VU: "chosenIconContainer_e45886",
 };

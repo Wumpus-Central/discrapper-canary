@@ -80,17 +80,45 @@
     color: var(--interactive-text-active)
 }
 
-.uploadMenuItem_e45886 {
-    position: relative
+.hiddenFileUpload_e45886 {
+    height: 0;
+    position: relative;
+    width: 0
 }
 
-.imageOverlay_e45886 {
-    background-color: #00000080;
-    border-radius: var(--radius-sm);
-    display: none;
+.editIconContainer_e45886 {
+    background-color: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    padding: var(--space-8);
+    position: relative;
+    transition: background-color .2s ease-out
+}
+
+.editIconContainer_e45886 .editButton_e45886 {
+    inset-inline-end: var(--space-8);
+    opacity: 0;
     position: absolute;
-    top: 0;
-    inset-inline: 0;
-    bottom: 0;
-    padding: 8px
+    top: var(--space-8);
+    transition: opacity .2s ease-out
+}
+
+.editIconContainer_e45886:focus-within,
+.editIconContainer_e45886:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.editIconContainer_e45886:focus-within .editButton_e45886,
+.editIconContainer_e45886:hover .editButton_e45886 {
+    opacity: 1
+}
+
+.chosenIconContainer_e45886 {
+    align-items: center;
+    border-radius: var(--radius-sm);
+    display: flex;
+    height: 56px;
+    justify-content: center;
+    overflow: hidden;
+    width: 56px
 }

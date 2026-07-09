@@ -42,10 +42,11 @@ var s = i(627968),
     H = i(8414);
 function V(e) {
     let { index: t, title: i, selected: l } = e;
-    return (0, s.jsxs)("div", {
+    return (0, s.jsxs)("li", {
         className: a()(H.wJ, { [H.wH]: l }),
+        "aria-current": !!l && "step",
         children: [
-            (0, s.jsx)(g.E, { className: H.BM, variant: "text-sm/normal", children: t + 1 }),
+            (0, s.jsx)(g.E, { className: H.BM, variant: "text-sm/normal", "aria-hidden": !0, children: t + 1 }),
             (0, s.jsx)(g.E, { variant: "text-md/normal", className: H.Fb, children: i }),
         ],
     });
@@ -93,7 +94,7 @@ let W = (e) => {
                 className: H.A0,
                 children: [
                     (0, s.jsx)(h.D, { id: A, variant: "heading-xl/semibold", className: H.wx, children: i }),
-                    (0, s.jsx)("div", {
+                    (0, s.jsx)("ol", {
                         className: H.Ji,
                         children: n.map((e, t) =>
                             (0, s.jsx)(V, { index: t, title: e.overviewTitle, selected: t === I }, t),
