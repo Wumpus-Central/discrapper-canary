@@ -1489,7 +1489,6 @@
         flex-direction: column;
         justify-content: flex-start;
         max-height: unset;
-        overflow: scroll;
         padding-top: 60px
     }
 
