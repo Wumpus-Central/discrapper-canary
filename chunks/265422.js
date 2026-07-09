@@ -1,17 +1,18 @@
-l.d(t, { a: () => c, i: () => o });
-var a = l(192308),
-    s = l(367513),
-    i = l(951001),
-    n = l(366811),
-    r = l(652215);
+"use strict";
+n.d(t, { a: () => d, i: () => o });
+var i = n(192308),
+    r = n(367513),
+    a = n(951001),
+    s = n(366811),
+    l = n(652215);
 function o(e, t) {
-    let l = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
+    let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
         o = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
-    (0, a.hasAnyModalOpen)() ||
-        (l && i.A.channelListScrollTo(e, t),
-        o && null != t && s.A.updateChatOpen(t, !0),
-        n.A.getState().updatePath(r.BVt.CHANNEL(e, t)));
+    (0, i.hasAnyModalOpen)() ||
+        (n && a.A.channelListScrollTo(e, t),
+        o && null != t && r.A.updateChatOpen(t, !0),
+        s.A.getState().updatePath(l.BVt.CHANNEL(e, t)));
 }
-function c(e) {
-    (0, a.hasAnyModalOpen)() || n.A.getState().updatePath(e);
+function d(e) {
+    (0, i.hasAnyModalOpen)() || s.A.getState().updatePath(e);
 }

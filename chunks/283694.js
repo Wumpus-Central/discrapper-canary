@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { marketingCollection: () => e4, playgroundConfig: () => e5 });
+n.r(t), n.d(t, { marketingCollection: () => e5, playgroundConfig: () => e9 });
 var o,
     a,
     l,
@@ -268,7 +268,7 @@ function M(e) {
     });
 }
 var x = n(65412),
-    B = n(34869);
+    B = n(934661);
 function G(e, t) {
     return B.m.create({ contentIdentifier: e, properties: t });
 }
@@ -600,8 +600,9 @@ let eT = "playground-gift-plan-selection-card-banner",
 var eN = n(823901);
 function eE() {}
 let ey = "playground-gift-reminder-nagbar";
-var eS = n(371764);
-let eC = {
+var eS = n(670474),
+    eC = n(371764);
+let eO = {
     name: "Marketing Page Banner",
     id: "marketing-page-banner",
     component: function (e) {
@@ -627,10 +628,10 @@ let eC = {
                       }
                     : void 0),
                 (n = { assetUrl: e.assetUrl, header: e.header, body: e.body, button: t }),
-                null != a ? { ...a, ...n } : { helpArticleId: "", ...n });
+                null != a ? { ...a, ...n } : { helpArticleId: "", buttonVariant: eS.FF.UNSPECIFIED, ...n });
         return (0, u.jsx)("div", {
             className: F.MT,
-            children: (0, u.jsx)(eS.x, {
+            children: (0, u.jsx)(eC.x, {
                 componentId: "playground-marketing-page-banner",
                 promotionBannerMarketingComponentFields: l,
             }),
@@ -688,54 +689,54 @@ let eC = {
         },
     },
 };
-var eO = n(754804);
-let eR = "playground-nagbar";
-var ev = n(834730),
-    eh = n(709870);
-let eP =
+var eR = n(754804);
+let ev = "playground-nagbar";
+var eh = n(834730),
+    eP = n(709870);
+let eL =
         "https://cdn.discordapp.com/assets/content/ce3500be6abe18b64c923af6d520c74cc915387831c4cdd5e4240d175417a87a.svg",
-    eL = "playground-payment-modal-banner",
-    eU = "playground-plan-select-card-banner";
-var eM = n(964661),
-    ex = n(503698),
-    eB = n.n(ex),
-    eG = n(612324),
-    eD = n(403581),
-    ek = n(214947),
-    eF = n(34188),
-    eV = n(577473),
-    ej = n(724029),
-    eK = n(765671),
-    ew = n(15632);
-function ez() {}
-let eH = i.forwardRef(function (e, t) {
+    eU = "playground-payment-modal-banner",
+    eM = "playground-plan-select-card-banner";
+var ex = n(964661),
+    eB = n(503698),
+    eG = n.n(eB),
+    eD = n(612324),
+    ek = n(403581),
+    eF = n(214947),
+    eV = n(34188),
+    ej = n(577473),
+    eK = n(724029),
+    ew = n(765671),
+    ez = n(15632);
+function eH() {}
+let eW = i.forwardRef(function (e, t) {
     let { icon: n, label: o, selected: a = !1, decoration: l, showHoverGradient: r = !1 } = e,
-        { width: i, ref: d } = (0, eK.Ay)(),
-        s = (0, eG.A)(t, d);
+        { width: i, ref: d } = (0, ew.Ay)(),
+        s = (0, eD.A)(t, d);
     return (0, u.jsxs)("button", {
         ref: s,
         type: "button",
-        className: eB()(ew.pc, { [ew.EV]: a }),
-        onClick: ez,
+        className: eG()(ez.pc, { [ez.EV]: a }),
+        onClick: eH,
         children: [
-            r && (0, u.jsx)(ej.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
+            r && (0, u.jsx)(eK.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
             (0, u.jsxs)("span", {
-                className: ew.Hq,
+                className: ez.Hq,
                 children: [
                     (0, u.jsx)(n, { size: "md", color: "currentColor" }),
-                    (0, u.jsx)(ev.E, {
+                    (0, u.jsx)(eh.E, {
                         variant: "text-md/medium",
                         color: "text-strong",
-                        className: ew.We,
+                        className: ez.We,
                         children: o,
                     }),
-                    null != l && (0, u.jsx)("div", { className: ew.UT, children: l }),
+                    null != l && (0, u.jsx)("div", { className: ez.UT, children: l }),
                 ],
             }),
         ],
     });
 });
-function eW(e) {
+function eY(e) {
     let {
             tabLabel: t = "Nitro",
             selected: n = !1,
@@ -744,21 +745,21 @@ function eW(e) {
             nitroRowRef: l,
             wrapNitroRow: r,
         } = e,
-        i = (0, u.jsx)(eH, { ref: l, icon: eD.t, label: t, selected: n, decoration: o, showHoverGradient: a });
+        i = (0, u.jsx)(eW, { ref: l, icon: ek.t, label: t, selected: n, decoration: o, showHoverGradient: a });
     return (0, u.jsxs)("nav", {
-        className: ew.C$,
+        className: ez.C$,
         children: [
-            (0, u.jsx)(eH, { icon: ek.$, label: "Friends" }),
+            (0, u.jsx)(eW, { icon: eF.$, label: "Friends" }),
             null != r ? r(i) : i,
-            (0, u.jsx)(eH, { icon: eF.U, label: "Shop" }),
-            (0, u.jsx)(eH, { icon: eV.r, label: "Quests" }),
+            (0, u.jsx)(eW, { icon: eV.U, label: "Shop" }),
+            (0, u.jsx)(eW, { icon: ej.r, label: "Quests" }),
         ],
     });
 }
-var eY = n(52416);
-function e$() {}
-let eZ = "playground-premium-tab-popover",
-    eq = {
+var e$ = n(52416);
+function eZ() {}
+let eq = "playground-premium-tab-popover",
+    eJ = {
         name: "Premium Tab Popover",
         id: "premium-tab-popover",
         component: function (e) {
@@ -802,17 +803,17 @@ let eZ = "playground-premium-tab-popover",
                     },
                     asset: k(t.assetUrl, f?.asset),
                 }),
-                (o = G(eZ, {
+                (o = G(eq, {
                     oneofKind: "premiumTabPopover",
                     premiumTabPopover: null != f ? { ...f, ...n } : { helpArticleId: "", ...n },
                 })),
-                D(eZ, p.C.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", o)),
+                D(eq, p.C.PREMIUM_TAB_POPOVER, "playground-premium-tab-popover-promotion", o)),
             );
             let _ = i.useRef(null);
-            return (0, u.jsx)(eW, {
+            return (0, u.jsx)(eY, {
                 selected: !0,
                 nitroRowRef: _,
-                wrapNitroRow: (e) => (0, u.jsx)(eY.A, { targetElementRef: _, dismissPopover: e$, children: e }),
+                wrapNitroRow: (e) => (0, u.jsx)(e$.A, { targetElementRef: _, dismissPopover: eZ, children: e }),
             });
         },
         ControlsExtension: () => (0, u.jsx)(M, { componentType: p.C.PREMIUM_TAB_POPOVER }),
@@ -865,20 +866,20 @@ let eZ = "playground-premium-tab-popover",
             },
         },
     };
-var eJ = n(796878);
-let eQ = "playground-premium-tab-tooltip";
+var eQ = n(796878);
+let eX = "playground-premium-tab-tooltip";
 n(321073);
-var eX = n(896170),
-    e0 = n(783878),
-    e2 = n(636537);
-async function e1() {
-    return (await e2.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
+var e0 = n(896170),
+    e2 = n(783878),
+    e1 = n(636537);
+async function e6() {
+    return (await e1.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
         let { id: t, name: n, type: o, source: a, end_date: l } = e;
         return { id: t, name: n, type: o, source: a, endDate: null != l ? new Date(l) : void 0 };
     });
 }
-async function e6(e) {
-    let t = await e2.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
+async function e7(e) {
+    let t = await e1.Bo.get({ url: `/premium-marketing/promotions/${e}/components`, rejectWithError: !0 }),
         n = new Map();
     for (let e of t.body) {
         let t = B.m.fromBinary((0, x.A)(e.properties)),
@@ -895,13 +896,13 @@ async function e6(e) {
     }
     return n;
 }
-let e7 = [
+let e3 = [
     { type: "marketing_moment", label: "Marketing Moments" },
     { type: "gift", label: "Gift Promotions" },
 ];
-function e3(e) {
+function e8(e) {
     let t = [];
-    for (let n of e7) {
+    for (let n of e3) {
         let o = e.filter((e) => e.type === n.type);
         if (0 !== o.length)
             for (let e of (t.push({ id: `header-${n.type}`, value: `header-${n.type}`, label: n.label, disabled: !0 }),
@@ -910,17 +911,17 @@ function e3(e) {
     }
     return t;
 }
-function e8(e, t) {
+function e4(e, t) {
     return { title: e, stories: [...t].sort((e, t) => e.name.localeCompare(t.name)) };
 }
-let e4 = {
+let e5 = {
         id: "marketing",
         name: "Marketing",
         groups: [
-            e8("Premium Surfaces", [
+            e4("Premium Surfaces", [
                 K,
                 Y,
-                eC,
+                eO,
                 {
                     name: "Nagbar",
                     id: "nagbar",
@@ -945,16 +946,16 @@ let e4 = {
                                               }
                                             : void 0,
                                 }),
-                                (o = G(eR, {
+                                (o = G(ev, {
                                     oneofKind: "nagbar",
                                     nagbar:
                                         null != d
                                             ? { ...d, ...n }
                                             : { ctaAction: c.dz.OPEN_TIER_2_PAYMENT_MODAL, deeplinkSection: "", ...n },
                                 })),
-                                D(eR, p.C.NAGBAR, "playground-nagbar-promotion", o)),
+                                D(ev, p.C.NAGBAR, "playground-nagbar-promotion", o)),
                             ),
-                            (0, u.jsx)("div", { className: F.MT, children: (0, u.jsx)(eO.A, {}) })
+                            (0, u.jsx)("div", { className: F.MT, children: (0, u.jsx)(eR.A, {}) })
                         );
                     },
                     ControlsExtension: () => (0, u.jsx)(M, { componentType: p.C.NAGBAR }),
@@ -985,7 +986,7 @@ let e4 = {
                             gap: 16,
                             align: "start",
                             children: [
-                                (0, u.jsx)(ev.E, {
+                                (0, u.jsx)(eh.E, {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     children:
@@ -993,7 +994,7 @@ let e4 = {
                                 }),
                                 (0, u.jsx)(b.$, {
                                     text: "Open Orbs delivered modal",
-                                    onClick: () => (0, eh.$)({ orbsAmount: t }),
+                                    onClick: () => (0, eP.$)({ orbsAmount: t }),
                                 }),
                             ],
                         });
@@ -1010,11 +1011,11 @@ let e4 = {
                             (function (e, t) {
                                 let { body: n, assetUrl: o } = e,
                                     a = { assetUrl: o, body: n },
-                                    l = G(eL, {
+                                    l = G(eU, {
                                         oneofKind: "paymentModalBanner",
                                         paymentModalBanner: null != t ? { ...t, ...a } : { header: "", ...a },
                                     });
-                                return D(eL, p.C.PAYMENT_MODAL_BANNER, "playground-payment-modal-banner-promotion", l);
+                                return D(eU, p.C.PAYMENT_MODAL_BANNER, "playground-payment-modal-banner-promotion", l);
                             })(
                                 { body: t, assetUrl: n },
                                 o?.properties.oneofKind === "paymentModalBanner"
@@ -1048,7 +1049,7 @@ let e4 = {
                             type: "text",
                             defaultValue: "Your Nitro offer is waiting - subscribe now to claim it.",
                         },
-                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eP },
+                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eL },
                     },
                 },
                 {
@@ -1060,12 +1061,12 @@ let e4 = {
                         es(
                             (function (e, t) {
                                 let { body: n, assetUrl: o } = e,
-                                    a = G(eU, {
+                                    a = G(eM, {
                                         oneofKind: "planSelectCardBanner",
                                         planSelectCardBanner: { ...t, body: n, asset: k(o, t?.asset) },
                                     });
                                 return D(
-                                    eU,
+                                    eM,
                                     p.C.PLAN_SELECT_CARD_BANNER,
                                     "playground-plan-select-card-banner-promotion",
                                     a,
@@ -1103,20 +1104,20 @@ let e4 = {
                             type: "text",
                             defaultValue: "Join Nitro today and get your second month free! Limited time offer.",
                         },
-                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eP },
+                        assetUrl: { label: "Asset URL", type: "text", defaultValue: eL },
                     },
                 },
                 {
                     name: "Premium Tab Badge",
                     id: "premium-tab-badge",
                     component: function (e) {
-                        let t = (0, u.jsx)(eM.A, {
+                        let t = (0, u.jsx)(ex.A, {
                             componentId: "playground-premium-tab-badge",
                             badgeCopy: e.badgeCopy,
                             acknowledgedBadgeCopy: e.acknowledgedBadgeCopy,
                             isDismissed: e.isDismissed,
                         });
-                        return (0, u.jsx)(eW, {
+                        return (0, u.jsx)(eY, {
                             tabLabel: e.tabLabel,
                             selected: e.selected,
                             decoration: t,
@@ -1144,7 +1145,7 @@ let e4 = {
                         showHoverGradient: { label: "Show hover gradient", type: "boolean", defaultValue: !1 },
                     },
                 },
-                eq,
+                eJ,
                 {
                     name: "Premium Tab Tooltip",
                     id: "premium-tab-tooltip",
@@ -1162,13 +1163,13 @@ let e4 = {
                                     body: t.body,
                                     asset: k(t.assetUrl, d?.asset),
                                 }),
-                                (o = G(eQ, {
+                                (o = G(eX, {
                                     oneofKind: "premiumTabTooltip",
                                     premiumTabTooltip: null != d ? { ...d, ...n } : n,
                                 })),
-                                D(eQ, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
+                                D(eX, p.C.PREMIUM_TAB_TOOLTIP, "playground-premium-tab-tooltip-promotion", o)),
                             ),
-                            (0, u.jsx)(eW, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(eJ.A, { children: e }) })
+                            (0, u.jsx)(eY, { selected: !0, wrapNitroRow: (e) => (0, u.jsx)(eQ.A, { children: e }) })
                         );
                     },
                     ControlsExtension: () => (0, u.jsx)(M, { componentType: p.C.PREMIUM_TAB_TOOLTIP }),
@@ -1193,7 +1194,7 @@ let e4 = {
                     },
                 },
             ]),
-            e8("Gifting Surfaces", [
+            e4("Gifting Surfaces", [
                 {
                     name: "Billing Settings Gift Banner",
                     id: "billing-settings-nitro-gift-banner",
@@ -1682,7 +1683,7 @@ let e4 = {
             i.useEffect(() => {
                 let e = !0;
                 return (
-                    e1()
+                    e6()
                         .then((t) => {
                             e && n(t);
                         })
@@ -1692,13 +1693,13 @@ let e4 = {
                     }
                 );
             }, []);
-            let a = i.useMemo(() => e3(t), [t]),
-                l = i.useCallback((e, n) => e3((0, eX.Ht)(t, n, { keys: ["name"] })), [t]);
+            let a = i.useMemo(() => e8(t), [t]),
+                l = i.useCallback((e, n) => e8((0, e0.Ht)(t, n, { keys: ["name"] })), [t]);
             return 0 === t.length
                 ? null
                 : (0, u.jsx)("div", {
                       className: F.$K,
-                      children: (0, u.jsx)(e0.Z, {
+                      children: (0, u.jsx)(e2.Z, {
                           clearable: !0,
                           selectionMode: "single",
                           placeholder: "Load Promo Data",
@@ -1716,7 +1717,7 @@ let e4 = {
                                   });
                               let n = t.find((t) => t.id === e);
                               null != n &&
-                                  e6(n.id)
+                                  e7(n.id)
                                       .then((e) => {
                                           o.current === n.id &&
                                               (function (e, t) {
@@ -1753,4 +1754,4 @@ let e4 = {
                   });
         },
     },
-    e5 = { playgroundBaseUrl: "marketing", collections: [e4] };
+    e9 = { playgroundBaseUrl: "marketing", collections: [e5] };

@@ -2,7 +2,7 @@
 n.d(t, { A: () => l });
 var i = n(65412),
     r = n(638504),
-    a = n(34869),
+    a = n(934661),
     s = n(315069);
 class l extends s.A {
     id;

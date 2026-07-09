@@ -1,24 +1,25 @@
-n.d(t, { A: () => i });
-var a = n(64700),
+"use strict";
+n.d(t, { A: () => s });
+var i = n(64700),
     r = n(885386),
-    l = n(486020);
-function i(e) {
-    let { displayProfile: t, size: n, canAnimate: i, pendingBanner: s } = e,
-        d = r.kt.getSetting(),
-        o = t?.getPreviewBanner(s, i, n),
-        [c, u] = (0, a.useState)(t?.banner == null ? "COMPLETE" : "SHOULD_LOAD");
+    a = n(486020);
+function s(e) {
+    let { displayProfile: t, size: n, canAnimate: s, pendingBanner: l } = e,
+        o = r.kt.getSetting(),
+        d = t?.getPreviewBanner(l, s, n),
+        [c, u] = (0, i.useState)(t?.banner == null ? "COMPLETE" : "SHOULD_LOAD");
     return (
-        (0, a.useEffect)(() => {
-            if (null == o || "SHOULD_LOAD" !== c) return;
+        (0, i.useEffect)(() => {
+            if (null == d || "SHOULD_LOAD" !== c) return;
             u("LOADING");
             let e = new Image();
-            (e.src = o), (e.onload = () => u("COMPLETE"));
-        }, [o, c]),
-        (0, a.useEffect)(() => {
-            if (d) return;
-            let e = t?.getPreviewBanner(s, !0, n);
-            null != e && (0, l.o4)(e) && (new Image().src = e);
-        }, [d, t, n, s]),
-        { bannerSrc: o, status: c }
+            (e.src = d), (e.onload = () => u("COMPLETE"));
+        }, [d, c]),
+        (0, i.useEffect)(() => {
+            if (o) return;
+            let e = t?.getPreviewBanner(l, !0, n);
+            null != e && (0, a.o4)(e) && (new Image().src = e);
+        }, [o, t, n, l]),
+        { bannerSrc: d, status: c }
     );
 }

@@ -1,34 +1,35 @@
-t.d(e, { A: () => a });
-var n = t(17928),
-    l = t(228366);
-let i = {};
-class o extends n.Ay.Store {
+"use strict";
+n.d(t, { A: () => l });
+var i = n(17928),
+    r = n(228366);
+let a = {};
+class s extends i.Ay.Store {
     static displayName = "ChannelFollowerStatsStore";
-    getFollowerStatsForChannel(s) {
-        return i[s];
+    getFollowerStatsForChannel(e) {
+        return a[e];
     }
 }
-let a = new o(l.h, {
+let l = new s(r.h, {
     CONNECTION_OPEN: function () {
-        i = {};
+        a = {};
     },
-    CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (s) {
-        let { channelId: e, stats: t } = s;
-        (t = null != t ? t : {}),
-            (i[e] = {
+    CHANNEL_FOLLOWER_STATS_FETCH_SUCCESS: function (e) {
+        let { channelId: t, stats: n } = e;
+        (n = null != n ? n : {}),
+            (a[t] = {
                 loadingStatus: "succeeded",
                 lastFetched: Date.now(),
-                channelsFollowing: t.channels_following,
-                guildMembers: t.guild_members,
-                guildsFollowing: t.guilds_following,
-                usersSeenEver: t.users_seen_ever,
-                subscribersGainedSinceLastPost: t.subscribers_gained_since_last_post,
-                subscribersLostSinceLastPost: t.subscribers_lost_since_last_post,
+                channelsFollowing: n.channels_following,
+                guildMembers: n.guild_members,
+                guildsFollowing: n.guilds_following,
+                usersSeenEver: n.users_seen_ever,
+                subscribersGainedSinceLastPost: n.subscribers_gained_since_last_post,
+                subscribersLostSinceLastPost: n.subscribers_lost_since_last_post,
             });
     },
-    CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (s) {
-        let { channelId: e } = s;
-        i[e] = {
+    CHANNEL_FOLLOWER_STATS_FETCH_FAILURE: function (e) {
+        let { channelId: t } = e;
+        a[t] = {
             loadingStatus: "failed",
             lastFetched: Date.now(),
             channelsFollowing: 0,

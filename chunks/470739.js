@@ -1,26 +1,27 @@
-n.d(t, { _: () => l });
-var a = n(627968),
+"use strict";
+n.d(t, { _: () => a });
+var i = n(627968),
     r = n(192308);
-function l() {
+function a() {
     let {
         initialBadgeId: e,
         targetUserId: t,
-        targetUsername: l,
-        viewingCurrentUserBadges: i,
-        stackingBehavior: s,
+        targetUsername: a,
+        viewingCurrentUserBadges: s,
+        stackingBehavior: l,
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (0, r.openModalLazy)(
         async () => {
             let { default: r } = await Promise.all([n.e("58877"), n.e("28971")]).then(n.bind(n, 546214));
             return (n) =>
-                (0, a.jsx)(r, {
+                (0, i.jsx)(r, {
                     ...n,
                     initialBadgeId: e,
                     targetUserId: t,
-                    targetUsername: l,
-                    viewingCurrentUserBadges: i,
+                    targetUsername: a,
+                    viewingCurrentUserBadges: s,
                 });
         },
-        { stackingBehavior: s ?? "stack" },
+        { stackingBehavior: l ?? "stack" },
     );
 }
