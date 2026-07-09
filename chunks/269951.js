@@ -7,4 +7,5 @@ e.exports = {
     uW: "wishlistGiftPreview_bf1b4a",
     vX: "wishlistGiftPreviewHeader_bf1b4a",
     fi: "wishlistGiftPreviewFooter_bf1b4a",
+    qr: "giftingBadgeBanner_bf1b4a",
 };

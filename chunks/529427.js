@@ -1,4 +1,4 @@
-n.d(t, { vd: () => r.v, Mw: () => h, UnifiedCheckoutFlowManagerSingletons: () => T, XZ: () => l.X, CL: () => l.C });
+n.d(t, { vd: () => r.v, Mw: () => C, UnifiedCheckoutFlowManagerSingletons: () => I, XZ: () => l.X, CL: () => l.C });
 var l = n(75304),
     i = n(675219),
     r = n(71804);
@@ -10,44 +10,50 @@ var a = n(627968),
     c = n(981036),
     d = n(426398),
     p = n(375708),
-    m = n(367644);
-function h(e) {
+    m = n(661724);
+function C(e) {
     let {
             paymentModalStepProps: { handleStepChange: t },
             layout: n,
             renderStepBody: i,
             renderLeftColumn: r,
-            renderRightColumn: h,
-            primaryCTAButtonProps: C,
-            onBackClick: E,
+            renderRightColumn: C,
+            renderBelowColumns: h,
+            primaryCTAButtonProps: E,
+            onBackClick: A,
         } = e,
-        { hasPaymentSources: A } = (0, d.jm)(),
-        f = A ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
-        S = s.useCallback(() => t(f), [t, f]),
-        y = s.useMemo(
-            () => (n === l.X.CUSTOM_STEP_BODY ? i() : (0, a.jsxs)("div", { className: m.D, children: [r(), h()] })),
-            [n, i, r, h],
+        { hasPaymentSources: f } = (0, d.jm)(),
+        y = f ? o.pn.REVIEW : o.pn.ADD_PAYMENT_STEPS,
+        S = s.useCallback(() => t(y), [t, y]),
+        P = s.useMemo(
+            () =>
+                n === l.X.CUSTOM_STEP_BODY
+                    ? i()
+                    : (0, a.jsxs)(a.Fragment, {
+                          children: [(0, a.jsxs)("div", { className: m.D, children: [r(), C()] }), h?.()],
+                      }),
+            [n, i, r, C, h],
         ),
-        P = s.useMemo(() => ({ ...C, onClick: S, text: p.intl.string(p.t.XiOHRX) }), [C, S]);
+        T = s.useMemo(() => ({ ...E, onClick: S, text: p.intl.string(p.t.XiOHRX) }), [E, S]);
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)(u.dZ, { children: y }),
-            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: E, primaryCTAButtonProps: P }) }),
+            (0, a.jsx)(u.dZ, { children: P }),
+            (0, a.jsx)(u.UX, { children: (0, a.jsx)(c.cy, { onBackClick: A, primaryCTAButtonProps: T }) }),
         ],
     });
 }
-let C = null,
+let h = null,
     E = null,
     A = null,
     f = null,
-    S = null,
     y = null,
+    S = null,
     P = null,
-    I = null,
-    T = {
+    T = null,
+    I = {
         [l.C.ORB_CHECKOUT]: {
             get: function () {
-                return null == C && (C = new i.od({ checkoutFlow: l.C.ORB_CHECKOUT })), C;
+                return null == h && (h = new i.od({ checkoutFlow: l.C.ORB_CHECKOUT })), h;
             },
         },
         [l.C.COLLECTIBLES_CHECKOUT]: {
@@ -67,12 +73,12 @@ let C = null,
         },
         [l.C.GUILD_PRODUCT_CHECKOUT]: {
             get: function () {
-                return null == S && (S = new i.od({ checkoutFlow: l.C.GUILD_PRODUCT_CHECKOUT })), S;
+                return null == y && (y = new i.od({ checkoutFlow: l.C.GUILD_PRODUCT_CHECKOUT })), y;
             },
         },
         [l.C.GUILD_ROLE_CHECKOUT]: {
             get: function () {
-                return null == y && (y = new i.od({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), y;
+                return null == S && (S = new i.od({ checkoutFlow: l.C.GUILD_ROLE_CHECKOUT })), S;
             },
         },
         [l.C.GUILD_BOOST_CHECKOUT]: {
@@ -82,7 +88,7 @@ let C = null,
         },
         [l.C.PREMIUM_CHECKOUT]: {
             get: function () {
-                return null == I && (I = new i.od({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), I;
+                return null == T && (T = new i.od({ checkoutFlow: l.C.PREMIUM_CHECKOUT })), T;
             },
         },
     };

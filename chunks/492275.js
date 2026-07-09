@@ -1,36 +1,38 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => m });
 var l = n(627968);
 n(64700);
-var i = n(562708),
-    r = n(834730),
-    a = n(688810),
-    s = n(139286),
-    o = n(322798),
-    u = n(375708),
-    c = n(670152);
-function d(e) {
-    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: d, analyticsLocations: p } = e,
-        { analyticsLocations: m } = (0, a.Ay)(...(p ?? []));
+var i = n(503698),
+    r = n.n(i),
+    a = n(562708),
+    s = n(834730),
+    o = n(688810),
+    u = n(139286),
+    c = n(322798),
+    d = n(375708),
+    p = n(670152);
+function m(e) {
+    let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: C } = e,
+        { analyticsLocations: h } = (0, o.Ay)();
     return (
-        (0, s.A)(
+        (0, u.A)(
             {
-                name: i.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER,
-                type: i.ImpressionTypes.VIEW,
-                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: m },
+                name: a.ImpressionNames.GIFTING_BADGE_PROGRESS_BANNER,
+                type: a.ImpressionTypes.VIEW,
+                properties: { gifts_to_next_tier: t, next_tier: n, location_stack: m ?? h },
             },
             { trackOnInitialLoad: !0 },
         ),
         (0, l.jsxs)("div", {
-            className: c.kL,
+            className: r()(p.kL, C),
             children: [
                 (0, l.jsx)("div", {
-                    className: c.zc,
+                    className: p.zc,
                     children:
-                        null != d && (0, l.jsx)("img", { src: d, alt: "", width: 32, height: 32, className: c.Kk }),
+                        null != i && (0, l.jsx)("img", { src: i, alt: "", width: 32, height: 32, className: p.Kk }),
                 }),
-                (0, l.jsx)(r.E, {
+                (0, l.jsx)(s.E, {
                     variant: "text-md/medium",
-                    children: u.intl.format(o.default["0+xfd9"], { giftsRemaining: t, nextTier: n }),
+                    children: d.intl.format(c.default["0+xfd9"], { giftsRemaining: t, nextTier: n }),
                 }),
             ],
         })
