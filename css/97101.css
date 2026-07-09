@@ -177,9 +177,6 @@
 }
 
 .subtext__972a0 {
-    font-size: 12px;
-    font-weight: var(--font-weight-medium);
-    line-height: 16px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap

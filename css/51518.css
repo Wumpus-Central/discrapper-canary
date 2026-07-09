@@ -3362,20 +3362,17 @@
 }
 
 .header__1219f {
-    align-items: center;
-    display: flex;
     justify-content: space-between;
     margin-bottom: 8px
 }
 
-.title__1219f {
-    font-size: 16px;
-    font-weight: var(--font-weight-bold)
+.header__1219f,
+.headerButtons__1219f {
+    align-items: center;
+    display: flex
 }
 
 .headerButtons__1219f {
-    align-items: center;
-    display: flex;
     gap: 4px
 }
 
@@ -4976,17 +4973,11 @@
 }
 
 .mediaMosaicAltTextPopoutTitle__0f481 {
-    font-size: 12px;
-    font-weight: var(--font-weight-bold);
-    line-height: 16px;
     margin-bottom: 9.5px;
     text-transform: uppercase
 }
 
 .mediaMosaicAltTextPopoutDescription__0f481 {
-    font-size: 16px;
-    font-weight: var(--font-weight-normal);
-    line-height: 20px;
     word-break: break-word
 }
 
