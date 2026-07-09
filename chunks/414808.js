@@ -1,72 +1,71 @@
-"use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => h });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     s = n(17928),
-    a = n(43105),
-    o = n(403581),
-    l = n(793574),
+    r = n(43105),
+    a = n(403581),
+    o = n(793574),
     u = n(688810),
     c = n(532794),
     d = n(181079),
-    _ = n(313281),
-    h = n(49999),
-    f = n(202541),
-    E = n(335993),
-    p = n(375708),
-    m = n(988572);
-function g(e) {
+    A = n(313281),
+    m = n(49999),
+    g = n(202541),
+    N = n(335993),
+    f = n(375708),
+    p = n(988572);
+function h(e) {
     let { targetElementRef: t, markMenuItemPopoverAsDismissed: n } = e,
-        [g, A] = r.useState("top"),
-        I = r.useRef(null),
-        T = r.useRef(null),
-        { hasAccess: S } = (0, _.TW)("FavoritesOnboardingMenuItemPopover"),
-        { analyticsLocations: N } = (0, u.Ay)(l.A.FAVORITES_GUILD_MENU_ITEM),
-        C = (0, s.bG)([d.A], () => d.A.hasStoredFavorites());
-    r.useLayoutEffect(() => {
+        [h, I] = l.useState("top"),
+        R = l.useRef(null),
+        _ = l.useRef(null),
+        { hasAccess: E } = (0, A.TW)("FavoritesOnboardingMenuItemPopover"),
+        { analyticsLocations: v } = (0, u.Ay)(o.A.FAVORITES_GUILD_MENU_ITEM),
+        T = (0, s.bG)([d.A], () => d.A.hasStoredFavorites());
+    l.useLayoutEffect(() => {
         if (null != t.current)
             return (
                 e(),
                 window.addEventListener("resize", e),
                 window.addEventListener("scroll", e, !0),
                 () => {
-                    null != T.current && (window.cancelAnimationFrame(T.current), (T.current = null)),
+                    null != _.current && (window.cancelAnimationFrame(_.current), (_.current = null)),
                         window.removeEventListener("resize", e),
                         window.removeEventListener("scroll", e, !0);
                 }
             );
         function e() {
-            null == T.current &&
-                (T.current = window.requestAnimationFrame(() => {
-                    (T.current = null),
+            null == _.current &&
+                (_.current = window.requestAnimationFrame(() => {
+                    (_.current = null),
                         (function () {
                             let e = t.current?.getBoundingClientRect();
                             if (null == e) return;
-                            let n = I.current?.getBoundingClientRect().height ?? 0;
-                            A(window.innerHeight - e.top < n ? "bottom" : "top");
+                            let n = R.current?.getBoundingClientRect().height ?? 0;
+                            I(window.innerHeight - e.top < n ? "bottom" : "top");
                         })();
                 }));
         }
     }, [t]);
-    let y = r.useCallback(() => {
-            n?.(h.i.TAKE_ACTION), S || (0, c.A)({ subscriptionTier: f.pe.TIER_2, analyticsLocations: N });
-        }, [n, N, S]),
-        O = C ? E.default.TWuDTt : E.default["25YCHl"];
-    return (0, i.jsx)(a.A, {
+    let S = l.useCallback(() => {
+            n?.(m.i.TAKE_ACTION), E || (0, c.A)({ subscriptionTier: g.pe.TIER_2, analyticsLocations: v });
+        }, [n, v, E]),
+        C = T ? N.default.TWuDTt : N.default["25YCHl"];
+    return (0, i.jsx)(r.A, {
         targetElementRef: t,
         gradientColor: "nitro-pink",
         position: "right",
         alignmentStrategy: "edge",
-        align: g,
-        caretConfig: { align: "top" === g ? "start" : "end" },
-        popoverRef: I,
+        align: h,
+        caretConfig: { align: "top" === h ? "start" : "end" },
+        popoverRef: R,
         badge: { type: "beta", variant: "expressive" },
-        graphic: { src: m.A, type: "image", aspectRatio: "16/9" },
-        title: p.intl.string(S ? O : E.default.A3ZjbM),
-        body: p.intl.string(S ? E.default.DFjrWw : E.default.qJUI2v),
-        onRequestClose: () => n?.(h.i.USER_DISMISS),
-        actions: S
+        graphic: { src: p.A, type: "image", aspectRatio: "16/9" },
+        title: f.intl.string(E ? C : N.default.A3ZjbM),
+        body: f.intl.string(E ? N.default.DFjrWw : N.default.qJUI2v),
+        onRequestClose: () => n?.(m.i.USER_DISMISS),
+        actions: E
             ? void 0
-            : [{ icon: o.t, text: p.intl.string(E.default["avps/2"]), onClick: () => y(), variant: "expressive" }],
+            : [{ icon: a.t, text: f.intl.string(N.default["avps/2"]), onClick: () => S(), variant: "expressive" }],
     });
 }

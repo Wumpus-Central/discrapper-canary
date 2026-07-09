@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(788733),
-    r = n(652215),
-    s = n(375708);
-function a(e, t) {
+l.d(t, { A: () => i });
+var n = l(788733),
+    a = l(652215),
+    s = l(375708);
+function i(e, t) {
     switch (e.type) {
-        case r.fg2.XBOX:
+        case a.fg2.XBOX:
             return s.intl.string(s.t.Nfvo72);
-        case r.fg2.PLAYSTATION:
+        case a.fg2.PLAYSTATION:
             return s.intl.string(s.t.fFl4jo);
-        case r.fg2.META_QUEST_OR_HORIZON:
-            return (0, i.A)(t) ? s.intl.string(s.t.BrHQaq) : s.intl.string(s.t.p6vL0e);
+        case a.fg2.META_QUEST_OR_HORIZON:
+            return (0, n.A)(t) ? s.intl.string(s.t.BrHQaq) : s.intl.string(s.t.p6vL0e);
         default:
             return e.name;
     }

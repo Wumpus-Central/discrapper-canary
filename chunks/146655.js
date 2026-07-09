@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(64700),
-    r = n(17928),
-    s = n(87664),
-    a = n(517164),
-    o = n(20805),
-    l = n(83971),
-    u = n(583846),
-    c = n(290863),
-    d = n(343129);
-let _ = [],
-    h = [];
-function f(e) {
-    let t = (0, s.A)(e),
-        n = (0, r.bG)([c.A], () => c.A.getActivities(e)),
-        f = (0, r.bG)([a.A], () => a.A.getUserOutbox(e)),
-        { live: E, recent: p } = (0, i.useMemo)(() => {
-            let e = (0, d.U)(n),
-                t = f?.entries.filter(
+    l = n(17928),
+    r = n(87664),
+    s = n(517164),
+    u = n(20805),
+    c = n(83971),
+    a = n(583846),
+    d = n(290863),
+    h = n(343129);
+let o = [],
+    p = [];
+function A(e) {
+    let t = (0, r.A)(e),
+        n = (0, l.bG)([d.A], () => d.A.getActivities(e)),
+        A = (0, l.bG)([s.A], () => s.A.getUserOutbox(e)),
+        { live: b, recent: g } = (0, i.useMemo)(() => {
+            let e = (0, h.U)(n),
+                t = A?.entries.filter(
                     (t) =>
-                        !(0, u.Hd)(t) &&
-                        ((0, o.Tq)(t)
-                            ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, l.qb)(t, e))
-                            : (0, o.Lf)(t)
-                              ? !e.some((e) => null != e && (0, l.SU)(t, e))
-                              : (0, o.$R)(t)),
+                        !(0, a.Hd)(t) &&
+                        ((0, u.Tq)(t)
+                            ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, c.qb)(t, e))
+                            : (0, u.Lf)(t)
+                              ? !e.some((e) => null != e && (0, c.SU)(t, e))
+                              : (0, u.$R)(t)),
                 );
-            return { live: 0 === e.length ? _ : e, recent: null == t || 0 === t.length ? h : t };
-        }, [n, f?.entries]);
-    return { live: E, recent: p, stream: t, outbox: f };
+            return { live: 0 === e.length ? o : e, recent: null == t || 0 === t.length ? p : t };
+        }, [n, A?.entries]);
+    return { live: b, recent: g, stream: t, outbox: A };
 }

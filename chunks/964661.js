@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(627968);
+n.d(t, { A: () => s });
+var o = n(627968);
 n(64700);
-var r = n(562708),
-    s = n(877624),
-    a = n(508770),
-    o = n(406810),
-    l = n(139286);
-function u(e) {
-    let { componentId: t, badgeCopy: n, acknowledgedBadgeCopy: u, isDismissed: c } = e;
-    return ((0, l.A)({
-        type: r.ImpressionTypes.VIEW,
-        name: r.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
-        properties: { component_type: s.C.PREMIUM_TAB, component_id: t },
+var a = n(562708),
+    l = n(877624),
+    r = n(508770),
+    i = n(406810),
+    d = n(139286);
+function s(e) {
+    let { componentId: t, badgeCopy: n, acknowledgedBadgeCopy: s, isDismissed: u } = e;
+    return ((0, d.A)({
+        type: a.ImpressionTypes.VIEW,
+        name: a.ImpressionNames.PREMIUM_MARKETING_COMPONENT,
+        properties: { component_type: l.C.PREMIUM_TAB, component_id: t },
     }),
-    c)
-        ? (0, i.jsx)(a.E, { type: { text: u }, icon: o.O, variant: "default" })
-        : (0, i.jsx)(a.E, { type: { text: n }, variant: "expressive" });
+    u)
+        ? (0, o.jsx)(r.E, { type: { text: s }, icon: i.O, variant: "default" })
+        : (0, o.jsx)(r.E, { type: { text: n }, variant: "expressive" });
 }

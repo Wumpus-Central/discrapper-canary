@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     s = n(451988),
-    a = n(375708);
-function o(e) {
+    r = n(375708);
+function a(e) {
     return `${e}`.length < 13 ? 1e3 * e : e;
 }
-function l(e) {
-    return class extends r.PureComponent {
+function o(e) {
+    return class extends l.PureComponent {
         _interval;
         constructor(e) {
             super(e), (this._interval = new s.IX()), (this.state = { ...this.getUpdatedTime() });
@@ -27,9 +26,9 @@ function l(e) {
             let { timestamps: e } = this.props,
                 t = Date.now() / 1e3;
             return null != e.end
-                ? this.getDiff(t, o(e.end) / 1e3)
+                ? this.getDiff(t, a(e.end) / 1e3)
                 : null != e.start
-                  ? this.getDiff(o(e.start) / 1e3, t)
+                  ? this.getDiff(a(e.start) / 1e3, t)
                   : { hours: 0, minutes: 0, seconds: 0 };
         }
         renderTime(e) {
@@ -39,19 +38,19 @@ function l(e) {
         getDiff(e, t) {
             let n = Math.max(t - e, 0),
                 i = Math.floor(n) % 60,
-                r = Math.floor(n / 60) % 60;
-            return { hours: Math.floor(n / 3600) % 24, minutes: r, seconds: i };
+                l = Math.floor(n / 60) % 60;
+            return { hours: Math.floor(n / 3600) % 24, minutes: l, seconds: i };
         }
         render() {
             let { timestamps: t, ...n } = this.props,
-                r = this.renderTime(this.state.hours, !0),
+                l = this.renderTime(this.state.hours, !0),
                 s = this.renderTime(this.state.minutes),
-                o = this.renderTime(this.state.seconds),
-                l = -1 === r ? `${s}:${o}` : `${r}:${s}:${o}`;
+                a = this.renderTime(this.state.seconds),
+                o = -1 === l ? `${s}:${a}` : `${l}:${s}:${a}`;
             return null != t.end
-                ? (0, i.jsx)(e, { ...n, message: a.intl.formatToPlainString(a.t["I/J7vI"], { duration: l }) })
+                ? (0, i.jsx)(e, { ...n, message: r.intl.formatToPlainString(r.t["I/J7vI"], { duration: o }) })
                 : null != t.start
-                  ? (0, i.jsx)(e, { ...n, message: a.intl.formatToPlainString(a.t.M9Fexd, { duration: l }) })
+                  ? (0, i.jsx)(e, { ...n, message: r.intl.formatToPlainString(r.t.M9Fexd, { duration: o }) })
                   : null;
         }
     };

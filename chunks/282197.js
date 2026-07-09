@@ -1,53 +1,52 @@
-"use strict";
-n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
-var r = n(889137),
-    s = n(20805),
-    a = n(506326),
-    o = n(365185),
-    l = n(82149),
-    u = n(78871),
-    c = n(652215);
-function d(e) {
-    let { entry: t } = e;
+e.d(n, { A: () => p });
+var i = e(627968);
+e(64700);
+var l = e(889137),
+    a = e(20805),
+    r = e(506326),
+    s = e(365185),
+    o = e(82149),
+    c = e(78871),
+    u = e(652215);
+function d(t) {
+    let { entry: n } = t;
     return (0, i.jsx)(i.Fragment, {
-        children: [a.$X, a.tR, a.K7, a.fg, a.sp, a.MK].map((e, n) => (0, i.jsx)(e, { entry: t }, `entry-${n}`)),
+        children: [r.$X, r.tR, r.K7, r.fg, r.sp, r.MK].map((t, e) => (0, i.jsx)(t, { entry: n }, `entry-${e}`)),
     });
 }
-function _(e) {
-    let { entry: t } = e;
-    return (0, i.jsx)(i.Fragment, { children: [a.Xr].map((e, n) => (0, i.jsx)(e, { entry: t }, `entry-${n}`)) });
+function A(t) {
+    let { entry: n } = t;
+    return (0, i.jsx)(i.Fragment, { children: [r.Xr].map((t, e) => (0, i.jsx)(t, { entry: n }, `entry-${e}`)) });
 }
-function h(e) {
-    let { entry: t } = e;
-    return (0, i.jsx)(i.Fragment, { children: [a.Y8].map((e, n) => (0, i.jsx)(e, { entry: t }, `entry-${n}`)) });
+function x(t) {
+    let { entry: n } = t;
+    return (0, i.jsx)(i.Fragment, { children: [r.Y8].map((t, e) => (0, i.jsx)(t, { entry: n }, `entry-${e}`)) });
 }
-function f(e) {
-    let { user: t, activity: n, className: f } = e,
-        E = (0, o.A)({ activity: n, user: t }),
-        p = (0, l.Cy)(n)
+function p(t) {
+    let { user: n, activity: e, className: p } = t,
+        f = (0, s.A)({ activity: e, user: n }),
+        _ = (0, o.Cy)(e)
             ? []
-            : n.type === c.$pd.PLAYING
-              ? [u.cy, u.QA]
-              : n.type === c.$pd.LISTENING
-                ? [u.QA]
-                : n.type === c.$pd.WATCHING
-                  ? [u.QA, u.Rq]
-                  : n.type === c.$pd.COMPETING
-                    ? [u.QA]
+            : e.type === u.$pd.PLAYING
+              ? [c.cy, c.QA]
+              : e.type === u.$pd.LISTENING
+                ? [c.QA]
+                : e.type === u.$pd.WATCHING
+                  ? [c.QA, c.Rq]
+                  : e.type === u.$pd.COMPETING
+                    ? [c.QA]
                     : [];
-    return 0 === p.length
+    return 0 === _.length
         ? null
-        : (0, i.jsxs)(a.mG, {
-              location: a.N5.USER_PROFILE,
-              className: f,
+        : (0, i.jsxs)(r.mG, {
+              location: r.N5.USER_PROFILE,
+              className: p,
               children: [
-                  p.map((e, t) => (0, i.jsx)(e, { activity: n }, `activity-${t}`)),
-                  (0, r.YW)(E)
-                      .when(s.qQ, (e) => (0, i.jsx)(d, { entry: e }))
-                      .when(s.UQ, (e) => (0, i.jsx)(_, { entry: e }))
-                      .when(s.p6, (e) => (0, i.jsx)(h, { entry: e }))
+                  _.map((t, n) => (0, i.jsx)(t, { activity: e }, `activity-${n}`)),
+                  (0, l.YW)(f)
+                      .when(a.qQ, (t) => (0, i.jsx)(d, { entry: t }))
+                      .when(a.UQ, (t) => (0, i.jsx)(A, { entry: t }))
+                      .when(a.p6, (t) => (0, i.jsx)(x, { entry: t }))
                       .otherwise(() => null),
               ],
           });

@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { A: () => c, e: () => l });
-var i,
-    r = n(17928),
-    s = n(228366);
-let a = new Map(),
-    o = new Map();
-var l =
-    (((i = {})[(i.NOT_FETCHED = 0)] = "NOT_FETCHED"),
-    (i[(i.FETCHING = 1)] = "FETCHING"),
-    (i[(i.FETCHED = 2)] = "FETCHED"),
-    i);
-class u extends r.Ay.Store {
+l.d(t, { A: () => d, e: () => o });
+var a,
+    s = l(17928),
+    i = l(228366);
+let n = new Map(),
+    r = new Map();
+var o =
+    (((a = {})[(a.NOT_FETCHED = 0)] = "NOT_FETCHED"),
+    (a[(a.FETCHING = 1)] = "FETCHING"),
+    (a[(a.FETCHED = 2)] = "FETCHED"),
+    a);
+class c extends s.Ay.Store {
     static displayName = "CreatorMonetizationStore";
     getPriceTiersFetchStateForGuildAndType(e, t) {
-        return o.get(e)?.get(t) ?? 0;
+        return r.get(e)?.get(t) ?? 0;
     }
     getPriceTiersForGuildAndType(e, t) {
-        return a.get(e)?.get(t);
+        return n.get(e)?.get(t);
     }
 }
-let c = new u(s.h, {
+let d = new c(i.h, {
     CONNECTION_OPEN: function () {
-        a.clear(), o.clear();
+        n.clear(), r.clear();
     },
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH: function (e) {
-        let { guildId: t, priceTierType: n } = e;
-        o.has(t) || o.set(t, new Map()), o.get(t).set(n, 1);
+        let { guildId: t, priceTierType: l } = e;
+        r.has(t) || r.set(t, new Map()), r.get(t).set(l, 1);
     },
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH_SUCCESS: function (e) {
-        let { guildId: t, priceTierType: n, priceTiers: i } = e;
-        o.has(t) || o.set(t, new Map()), o.get(t).set(n, 2), a.has(t) || a.set(t, new Map()), a.get(t).set(n, i);
+        let { guildId: t, priceTierType: l, priceTiers: a } = e;
+        r.has(t) || r.set(t, new Map()), r.get(t).set(l, 2), n.has(t) || n.set(t, new Map()), n.get(t).set(l, a);
     },
     CREATOR_MONETIZATION_PRICE_TIERS_FETCH_FAILURE: function (e) {
-        let { guildId: t, priceTierType: n } = e;
-        o.has(t) || o.set(t, new Map()), o.get(t).set(n, 2);
+        let { guildId: t, priceTierType: l } = e;
+        r.has(t) || r.set(t, new Map()), r.get(t).set(l, 2);
     },
 });

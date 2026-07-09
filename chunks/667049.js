@@ -1,19 +1,18 @@
-"use strict";
-n.d(t, { A: () => o });
-var i = n(17928),
-    r = n(280450),
-    s = n(321191),
-    a = n(61881);
-function o(e) {
-    let t = (0, i.bG)([r.default], () => {
-            let t = r.default.getId();
+r.d(t, { A: () => i });
+var u = r(17928),
+    n = r(280450),
+    l = r(321191),
+    d = r(61881);
+function i(e) {
+    let t = (0, u.bG)([n.default], () => {
+            let t = n.default.getId();
             return null != e && t === e;
         }, [e]),
-        n = (0, i.bG)([a.A], () => a.A.getPendingWidgets()),
-        o = (0, i.yK)([s.A], () => {
+        r = (0, u.bG)([d.A], () => d.A.getPendingWidgets()),
+        i = (0, u.yK)([l.A], () => {
             if (null == e) return [];
-            let t = s.A.getUserProfile(e);
+            let t = l.A.getUserProfile(e);
             return t?.widgets ?? [];
         }, [e]);
-    return t && null !== n ? n : o;
+    return t && null !== r ? r : i;
 }

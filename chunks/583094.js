@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { u: () => l });
-var i = n(627968);
-n(64700);
-let r =
+e.d(t, { u: () => c });
+var o = e(627968);
+e(64700);
+let a =
     "https://cdn.discordapp.com/assets/content/53eb00aa300595b54d999e60d501f621ad4399918c568561f74b536b6f37c0ab.riv";
-var s = n(594639),
-    a = n(105596);
-let o = { "Nitro Wishlist": { reducedMotion: "boolean", logoColor: "color" } };
-function l(e) {
-    let { artboard: t = "Nitro Wishlist", stateMachine: n, ...l } = e,
-        { status: u, buffer: c } = (0, a.CE)(r),
-        d = (0, a.m2)(r);
-    return u === a.BW.Loading
+var i = e(502377),
+    s = e(799226);
+let d = { "Nitro Wishlist": { reducedMotion: "boolean", logoColor: "color" } };
+function c(r) {
+    let { artboard: t = "Nitro Wishlist", stateMachine: e, ...c } = r,
+        { status: n, buffer: b } = (0, s.CE)(a),
+        l = (0, s.m2)(a);
+    return n === s.BW.Loading
         ? null
-        : (0, i.jsx)(s.w, {
-              ...(d ? { key: "override" } : {}),
-              buffer: c,
+        : (0, o.jsx)(i.w, {
+              ...(l ? { key: "override" } : {}),
+              buffer: b,
               artboard: t,
-              stateMachine: n,
-              artboardProperties: o,
-              ...l,
+              stateMachine: e,
+              artboardProperties: d,
+              ...c,
           });
 }
-l.riveSrc = r;
+c.riveSrc = a;

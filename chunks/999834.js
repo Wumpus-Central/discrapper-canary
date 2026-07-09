@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { Pi: () => a, b_: () => o });
-var i = n(17928),
-    r = n(614455),
-    s = n(723702);
-function a() {
-    return s.isPlatformEmbedded;
+e.d(n, { Pi: () => r, b_: () => s });
+var i = e(17928),
+    l = e(614455),
+    a = e(723702);
+function r() {
+    return a.isPlatformEmbedded;
 }
-function o() {
-    return (0, i.bG)([r.A], () => r.A.isSupported) || !1;
+function s() {
+    return (0, i.bG)([l.A], () => l.A.isSupported) || !1;
 }

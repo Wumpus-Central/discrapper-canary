@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(570950),
-    l = n(993077),
-    u = n(544888);
-let c = {},
-    d = function (e) {
+t.d(s, { A: () => i });
+var o = t(627968),
+    a = t(64700),
+    u = t(503698),
+    l = t.n(u),
+    c = t(570950),
+    n = t(993077),
+    r = t(544888);
+let d = {},
+    i = function (e) {
         let {
-                children: t,
-                id: n,
-                tabIndex: s,
-                className: d,
-                cardClassName: _,
-                cardStyle: h = c,
-                cardType: f,
-                fit: E = "layout",
-                glowing: p = !1,
-                glowAmount: m = 8,
-                blurAmount: g = 30,
-                hueRotate: A = 0,
-                onMouseEnter: I,
-                onFocus: T,
+                children: s,
+                id: t,
+                tabIndex: u,
+                className: i,
+                cardClassName: p,
+                cardStyle: h = d,
+                cardType: m,
+                fit: f = "layout",
+                glowing: w = !1,
+                glowAmount: x = 8,
+                blurAmount: b = 30,
+                hueRotate: k = 0,
+                onMouseEnter: y,
+                onFocus: R,
             } = e,
-            S = r.useRef(null),
-            N = r.useRef(null),
-            C = {
-                "--custom-glow-amount": `${m}px`,
-                "--custom-blur-amount": `${g}px`,
-                "--custom-hue-rotate": `${A}deg`,
-                "--custom-glow-opacity": +(0 !== m),
+            g = a.useRef(null),
+            j = a.useRef(null),
+            v = {
+                "--custom-glow-amount": `${x}px`,
+                "--custom-blur-amount": `${b}px`,
+                "--custom-hue-rotate": `${k}deg`,
+                "--custom-glow-opacity": +(0 !== x),
             };
-        return (0, i.jsxs)("div", {
-            id: n,
-            ref: S,
-            tabIndex: s,
-            className: a()(u.k, d),
-            style: C,
-            onMouseEnter: I,
-            onFocus: T,
+        return (0, o.jsxs)("div", {
+            id: t,
+            ref: g,
+            tabIndex: u,
+            className: l()(r.k, i),
+            style: v,
+            onMouseEnter: y,
+            onFocus: R,
             children: [
-                p &&
-                    (0, i.jsx)(o.s, {
+                w &&
+                    (0, o.jsx)(c.s, {
                         artboard: "BaseGlowRemapped",
-                        eventTargetRef: S,
-                        className: u.Q,
-                        ref: N,
-                        fit: E,
+                        eventTargetRef: g,
+                        className: r.Q,
+                        ref: j,
+                        fit: f,
                         withReducedMotion: "short-loop",
                     }),
-                (0, i.jsx)(l.Z, { type: f ?? l.s.CUSTOM, className: _, style: h, children: t }),
+                (0, o.jsx)(n.Z, { type: m ?? n.s.CUSTOM, className: p, style: h, children: s }),
             ],
         });
     };

@@ -1,37 +1,36 @@
-"use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(17928),
-    r = n(228366),
-    s = n(935208),
-    a = n(734057);
-let o = {},
-    l = o;
-function u() {
-    s.default.keys(l).forEach((e) => {
-        null == a.A.getChannel(e) && delete l[e];
+    s = n(228366),
+    l = n(935208),
+    r = n(734057);
+let a = {},
+    d = a;
+function o() {
+    l.default.keys(d).forEach((e) => {
+        null == r.A.getChannel(e) && delete d[e];
     });
 }
-class c extends i.Ay.PersistedStore {
+class h extends i.Ay.PersistedStore {
     static displayName = "CollapsedVoiceChannelStore";
     static persistKey = "collapsedChannels";
     initialize(e) {
-        this.waitFor(a.A), (l = e ?? o);
+        this.waitFor(r.A), (d = e ?? a);
     }
     getState() {
-        return l;
+        return d;
     }
     getCollapsed() {
-        return l;
+        return d;
     }
     isCollapsed(e) {
-        return l[e] || !1;
+        return d[e] || !1;
     }
 }
-let d = new c(r.h, {
-    CONNECTION_OPEN: u,
-    OVERLAY_INITIALIZE: u,
+let u = new h(s.h, {
+    CONNECTION_OPEN: o,
+    OVERLAY_INITIALIZE: o,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: t } = e;
-        l[t] ? delete l[t] : (l[t] = !0), (l = { ...l });
+        d[t] ? delete d[t] : (d[t] = !0), (d = { ...d });
     },
 });

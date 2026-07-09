@@ -1,45 +1,44 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(636537),
-    r = n(451988),
-    s = n(228366),
-    a = n(546183),
-    o = n(652215);
-let l = new r.OC(u, (e) => a.default.getFetchStateForApplication(e) !== a.FetchState.FETCHING);
-async function u(e) {
-    s.h.dispatch({
+l.d(e, { A: () => p });
+var r = l(636537),
+    a = l(451988),
+    u = l(228366),
+    n = l(546183),
+    i = l(652215);
+let c = new a.OC(o, (t) => n.default.getFetchStateForApplication(t) !== n.FetchState.FETCHING);
+async function o(t) {
+    u.h.dispatch({
         type: "USER_AUTHORIZED_APPS_REQUEST",
-        request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
+        request: null == t ? { type: "full" } : { type: "partial", applicationIds: t },
     }),
-        await i.Bo.get({
-            url: o.Rsh.OAUTH2_TOKENS,
+        await r.Bo.get({
+            url: i.Rsh.OAUTH2_TOKENS,
             oldFormErrors: !0,
             rejectWithError: !0,
-            query: { application_ids: e },
+            query: { application_ids: t },
         }).then(
-            (t) =>
-                s.h.dispatch({
+            (e) =>
+                u.h.dispatch({
                     type: "USER_AUTHORIZED_APPS_UPDATE",
-                    isFullFetch: null == e,
-                    tokens: (function (e, t) {
-                        let n = Object.fromEntries(t?.map((e) => [e, null]) ?? []);
-                        for (let t of e) n[t.application.id] = t;
-                        return n;
-                    })(t.body, e),
+                    isFullFetch: null == t,
+                    tokens: (function (t, e) {
+                        let l = Object.fromEntries(e?.map((t) => [t, null]) ?? []);
+                        for (let e of t) l[e.application.id] = e;
+                        return l;
+                    })(e.body, t),
                 }),
             () =>
-                s.h.dispatch({
+                u.h.dispatch({
                     type: "USER_AUTHORIZED_APPS_REQUEST_FAILED",
-                    request: null == e ? { type: "full" } : { type: "partial", applicationIds: e },
+                    request: null == t ? { type: "full" } : { type: "partial", applicationIds: t },
                 }),
         );
 }
-let c = {
-    fetch(e) {
-        a.default.getFetchState() !== a.FetchState.FETCHING && (null != e ? l.queue(e) : (l.reset(), u()));
+let p = {
+    fetch(t) {
+        n.default.getFetchState() !== n.FetchState.FETCHING && (null != t ? c.queue(t) : (c.reset(), o()));
     },
-    delete(e) {
-        i.Bo.del({ url: o.Rsh.OAUTH2_TOKEN(e), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
+    delete(t) {
+        r.Bo.del({ url: i.Rsh.OAUTH2_TOKEN(t), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
             this.fetch();
         });
     },

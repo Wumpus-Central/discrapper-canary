@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(17928),
-    r = n(280450),
+    l = n(280450),
     s = n(470710);
-function a(e) {
-    return (0, i.cf)([s.A, r.default], () => {
+function r(e) {
+    return (0, i.cf)([s.A, l.default], () => {
         let t = s.A.getCall(e),
-            n = r.default.getId(),
+            n = l.default.getId(),
             i = null != t && null != n && t.ringing.includes(n);
         return { isIncomingCall: i, isOngoingCall: s.A.isCallActive(e) && !i };
     });

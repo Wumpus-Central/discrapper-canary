@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { z: () => _ });
+n.d(t, { z: () => A });
 var i = n(17928),
-    r = n(554146),
+    l = n(554146),
     s = n(192308),
-    a = n(826673),
-    o = n(131607),
-    l = n(309010),
+    r = n(826673),
+    a = n(131607),
+    o = n(309010),
     u = n(313281),
     c = n(652215);
 let d = new Set([c.rbe.DM, c.rbe.GROUP_DM, c.rbe.GUILD_TEXT, c.rbe.GUILD_ANNOUNCEMENT, c.rbe.GUILD_FORUM]);
-function _(e) {
-    let { location: t, isChannelSelected: n, isTargetInViewport: c = !0, channelType: _, isPopoverAllowed: h = !0 } = e,
-        f = (0, a.JZ)(r.M.FAVORITES_SERVER_ONBOARDING_INTRO),
-        { isExperimentEnabled: E } = (0, u.TW)(t),
-        p = (0, i.bG)([l.A], () => null != l.A.getVoiceChannelId()),
-        m = (0, s.useHasAnyModalOpen)(),
-        g = E && c && n && d.has(_) && h && !p && !m,
-        [A, I] = (0, o.kn)(g && f ? [r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : []);
-    return { showMenuItemPopover: A === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markMenuItemPopoverAsDismissed: I };
+function A(e) {
+    let { location: t, isChannelSelected: n, isTargetInViewport: c = !0, channelType: A, isPopoverAllowed: m = !0 } = e,
+        g = (0, r.JZ)(l.M.FAVORITES_SERVER_ONBOARDING_INTRO),
+        { isExperimentEnabled: N } = (0, u.TW)(t),
+        f = (0, i.bG)([o.A], () => null != o.A.getVoiceChannelId()),
+        p = (0, s.useHasAnyModalOpen)(),
+        h = N && c && n && d.has(A) && m && !f && !p,
+        [I, R] = (0, a.kn)(h && g ? [l.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : []);
+    return { showMenuItemPopover: I === l.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markMenuItemPopoverAsDismissed: R };
 }

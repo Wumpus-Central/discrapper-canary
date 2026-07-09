@@ -1,103 +1,102 @@
-"use strict";
-n.d(t, { A: () => L, V: () => b });
-var i = n(627968),
-    r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(17928),
-    l = n(97808),
-    u = n(133171),
-    c = n(890856),
-    d = n(960076),
-    _ = n(793574),
-    h = n(688810),
-    f = n(178418),
-    E = n(290863),
-    p = n(428262),
-    m = n(19575),
-    g = n(183555),
-    A = n(146655),
-    I = n(854627),
-    T = n(939496),
-    S = n(518477),
-    N = n(652215),
-    C = n(202541),
-    y = n(985253),
-    O = n(375708),
-    R = n(106106);
-let v = m.Ay.getEnableHardwareAcceleration() ? l.Js : l.eu;
-function b(e) {
+a.d(s, { A: () => V, V: () => P });
+var e = a(627968),
+    t = a(64700),
+    l = a(503698),
+    r = a.n(l),
+    n = a(17928),
+    o = a(97808),
+    u = a(133171),
+    c = a(890856),
+    d = a(960076),
+    A = a(793574),
+    p = a(688810),
+    m = a(178418),
+    v = a(290863),
+    N = a(428262),
+    R = a(19575),
+    b = a(183555),
+    g = a(146655),
+    h = a(854627),
+    I = a(939496),
+    T = a(518477),
+    k = a(652215),
+    y = a(202541),
+    C = a(985253),
+    E = a(375708),
+    S = a(106106);
+let O = R.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
+function P(i) {
     let {
-            user: t,
-            displayProfile: n,
-            guildId: i,
-            channelId: s,
-            themeType: a,
-            animateOnHover: l,
+            user: s,
+            displayProfile: a,
+            guildId: e,
+            channelId: l,
+            themeType: r,
+            animateOnHover: o,
             previewStatus: c,
-            specOverrides: _,
-            avatarDecorationOverride: h,
-            avatarOverride: m,
-        } = e,
-        { theme: g } = (0, T.E)(),
-        O = p.Ay.isPremiumAtLeast(n?.premiumType, C.PremiumTypes.TIER_2),
-        R = r.useMemo(() => t.isNonUserBot() || (0, f.c)(t, s), [t, s]),
-        { live: v } = (0, A.A)(t.id),
-        [b] = v,
+            specOverrides: A,
+            avatarDecorationOverride: p,
+            avatarOverride: R,
+        } = i,
+        { theme: b } = (0, I.E)(),
+        E = N.Ay.isPremiumAtLeast(a?.premiumType, y.PremiumTypes.TIER_2),
+        S = t.useMemo(() => s.isNonUserBot() || (0, m.c)(s, l), [s, l]),
+        { live: O } = (0, g.A)(s.id),
+        [P] = O,
         {
-            status: L,
-            isMobileOnline: D,
-            isVROnline: w,
-        } = (0, o.cf)([E.A], () => ({
-            status: (0, d.A)(b) ? N.clD.STREAMING : E.A.getStatus(t.id),
-            isMobileOnline: E.A.isMobileOnline(t.id),
-            isVROnline: E.A.isVROnline(t.id),
+            status: V,
+            isMobileOnline: M,
+            isVROnline: _,
+        } = (0, n.cf)([v.A], () => ({
+            status: (0, d.A)(P) ? k.clD.STREAMING : v.A.getStatus(s.id),
+            isMobileOnline: v.A.isMobileOnline(s.id),
+            isVROnline: v.A.isVROnline(s.id),
         })),
-        P = _?.avatarSize ?? y.T[a].avatarSize,
+        f = A?.avatarSize ?? C.T[r].avatarSize,
         {
-            avatarDecorationSrc: M,
-            avatarSrc: x,
-            eventHandlers: U,
-        } = (0, I.A)({
-            userId: t.id,
-            guildId: null != n ? n.guildId : i,
-            size: P,
-            animateOnHover: l,
-            avatarDecorationOverride: h,
-            avatarOverride: m,
+            avatarDecorationSrc: j,
+            avatarSrc: w,
+            eventHandlers: x,
+        } = (0, h.A)({
+            userId: s.id,
+            guildId: null != a ? a.guildId : e,
+            size: f,
+            animateOnHover: o,
+            avatarDecorationOverride: p,
+            avatarOverride: R,
         });
     return {
         avatarProps: {
-            src: x,
-            avatarDecoration: M,
-            size: P,
-            "aria-label": t.username,
-            status: R ? N.clD.UNKNOWN : void 0 !== c ? c : L,
-            statusBackdropColor: O && !R ? (0, u.C$)(g) : void 0,
-            isMobile: D,
-            isVR: w,
+            src: w,
+            avatarDecoration: j,
+            size: f,
+            "aria-label": s.username,
+            status: S ? k.clD.UNKNOWN : void 0 !== c ? c : V,
+            statusBackdropColor: E && !S ? (0, u.C$)(b) : void 0,
+            isMobile: M,
+            isVR: _,
             statusTooltip: !0,
-            statusTooltipDelay: S.In,
+            statusTooltipDelay: T.In,
         },
-        eventHandlers: U,
+        eventHandlers: x,
     };
 }
-function L(e) {
-    let { onOpenProfile: t, className: n, ...r } = e,
-        { analyticsLocations: s } = (0, h.Ay)(_.A.AVATAR),
-        { trackUserProfileAction: o } = (0, g.NJ)(),
-        { avatarProps: l, eventHandlers: u } = b(r),
-        d = a()(R.my, n);
-    return null == t
-        ? (0, i.jsx)("div", { ...u, className: d, children: (0, i.jsx)(v, { ...l }) })
-        : (0, i.jsx)(c.s, {
-              "aria-label": O.intl.string(O.t["+Xp3hq"]),
+function V(i) {
+    let { onOpenProfile: s, className: a, ...t } = i,
+        { analyticsLocations: l } = (0, p.Ay)(A.A.AVATAR),
+        { trackUserProfileAction: n } = (0, b.NJ)(),
+        { avatarProps: o, eventHandlers: u } = P(t),
+        d = r()(S.my, a);
+    return null == s
+        ? (0, e.jsx)("div", { ...u, className: d, children: (0, e.jsx)(O, { ...o }) })
+        : (0, e.jsx)(c.s, {
+              "aria-label": E.intl.string(E.t["+Xp3hq"]),
               ...u,
-              className: a()(d, R.vk),
-              focusProps: { ringClassName: R.Rg },
+              className: r()(d, S.vk),
+              focusProps: { ringClassName: S.Rg },
               onClick: () => {
-                  o({ action: "PRESS_VIEW_PROFILE", analyticsLocations: s }), t?.();
+                  n({ action: "PRESS_VIEW_PROFILE", analyticsLocations: l }), s?.();
               },
-              children: (0, i.jsx)(v, { ...l, imageClassName: R.Lw }),
+              children: (0, e.jsx)(O, { ...o, imageClassName: S.Lw }),
           });
 }

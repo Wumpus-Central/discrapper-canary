@@ -1,60 +1,59 @@
-"use strict";
-n.d(t, { A: () => c }), n(508300);
-var i = n(64700),
-    r = n(626584),
-    s = n(403362),
-    a = n(746002);
-let o = new r.A("usePreloadLayerImages");
-async function l(e, t) {
-    let n;
-    t.throwIfAborted();
-    let i = new Image();
-    i.src = e;
+t.d(r, { A: () => i }), t(508300);
+var n = t(64700),
+    l = t(626584),
+    a = t(403362),
+    u = t(746002);
+let s = new l.A("usePreloadLayerImages");
+async function o(e, r) {
+    let t;
+    r.throwIfAborted();
+    let n = new Image();
+    n.src = e;
     try {
         await Promise.race([
-            i.decode(),
-            new Promise((e, r) => {
-                (n = () => {
-                    (i.src = ""), r(new DOMException("Aborted", "AbortError"));
+            n.decode(),
+            new Promise((e, l) => {
+                (t = () => {
+                    (n.src = ""), l(new DOMException("Aborted", "AbortError"));
                 }),
-                    t.addEventListener("abort", n, { once: !0 });
+                    r.addEventListener("abort", t, { once: !0 });
             }),
         ]);
     } finally {
-        null != n && t.removeEventListener("abort", n);
+        null != t && r.removeEventListener("abort", t);
     }
-    return i;
-}
-function u(e) {
-    return "id" in e ? e.id : e.src;
+    return n;
 }
 function c(e) {
-    let { skuId: t, layers: n } = e,
-        [r, c] = i.useState({}),
-        [d, _] = i.useState(t);
+    return "id" in e ? e.id : e.src;
+}
+function i(e) {
+    let { skuId: r, layers: t } = e,
+        [l, i] = n.useState({}),
+        [d, f] = n.useState(r);
     return (
-        t !== d && (_(t), c({})),
-        i.useEffect(() => {
-            if (null == t || null == n || 0 === n.length) return;
+        r !== d && (f(r), i({})),
+        n.useEffect(() => {
+            if (null == r || null == t || 0 === t.length) return;
             let e = new AbortController(),
-                { signal: i } = e;
+                { signal: n } = e;
             return (
-                n.forEach(async (e) => {
-                    let n =
+                t.forEach(async (e) => {
+                    let t =
                         "id" in e
-                            ? (0, a.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: e.id })
+                            ? (0, u.getCollectiblesItemAssetUrl)({ skuId: r, assetFormat: "static", assetId: e.id })
                             : e.src;
-                    if (null != n)
+                    if (null != t)
                         try {
-                            let t = await l(n, i);
-                            i.aborted || c((n) => ({ ...n, [u(e)]: t }));
+                            let r = await o(t, n);
+                            n.aborted || i((t) => ({ ...t, [c(e)]: r }));
                         } catch (e) {
-                            !i.aborted && (0, s.m6)() && o.error(`Failed to preload layer image: ${n}`, e);
+                            !n.aborted && (0, a.m6)() && s.error(`Failed to preload layer image: ${t}`, e);
                         }
                 }),
                 () => e.abort()
             );
-        }, [t, n]),
-        { loaded: null != n && n.every((e) => null != r[u(e)]), layerData: r }
+        }, [r, t]),
+        { loaded: null != t && t.every((e) => null != l[c(e)]), layerData: l }
     );
 }

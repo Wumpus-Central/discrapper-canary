@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { A: () => f });
-var i = n(627968);
-n(64700);
-var r = n(17928),
-    s = n(638495),
-    a = n(192308),
-    o = n(477782),
-    l = n(635739),
-    u = n(39623),
-    c = n(952572),
-    d = n(280450),
-    _ = n(451409),
-    h = n(375708);
-function f(e, t) {
-    let f = (0, s.k)(),
-        { videoEnabled: E, hasVideoDevice: p } = (0, r.cf)([_.Ay], () => ({
-            videoEnabled: _.Ay.isVideoEnabled(),
-            hasVideoDevice: _.Ay.isVideoAvailable(),
+l.d(a, { A: () => p });
+var t = l(627968);
+l(64700);
+var i = l(17928),
+    n = l(638495),
+    c = l(192308),
+    d = l(477782),
+    o = l(635739),
+    r = l(39623),
+    s = l(952572),
+    A = l(280450),
+    h = l(451409),
+    u = l(375708);
+function p(e, a) {
+    let p = (0, n.k)(),
+        { videoEnabled: v, hasVideoDevice: b } = (0, i.cf)([h.Ay], () => ({
+            videoEnabled: h.Ay.isVideoEnabled(),
+            hasVideoDevice: h.Ay.isVideoAvailable(),
         })),
-        m = (0, r.bG)([d.default], () => d.default.getId() === e),
-        g = (0, c.A)();
-    return (!E || g) && m && p
-        ? (0, i.jsx)(o.Dr, {
+        f = (0, i.bG)([A.default], () => A.default.getId() === e),
+        g = (0, s.A)();
+    return (!v || g) && f && b
+        ? (0, t.jsx)(d.Dr, {
               id: "change-video-background",
-              label: E ? h.intl.string(h.t.mZKxHb) : h.intl.string(h.t["vkV93/"]),
+              label: v ? u.intl.string(u.t.mZKxHb) : u.intl.string(u.t["vkV93/"]),
               action: function () {
-                  (0, a.openModalLazy)(
+                  (0, c.openModalLazy)(
                       async () => {
                           let { default: e } = await Promise.all([
-                              n.e("12410"),
-                              n.e("64345"),
-                              n.e("5288"),
-                              n.e("25695"),
-                              n.e("66759"),
-                              n.e("28367"),
-                              n.e("20287"),
-                              n.e("58337"),
-                              n.e("20683"),
-                              n.e("6809"),
-                              n.e("80436"),
-                              n.e("97162"),
-                              n.e("59778"),
-                              n.e("95782"),
-                              n.e("85160"),
-                              n.e("10534"),
-                          ]).then(n.bind(n, 308229));
-                          return (t) => (0, i.jsx)(e, { ...t, videoEnabled: E });
+                              l.e("12410"),
+                              l.e("64345"),
+                              l.e("5288"),
+                              l.e("25695"),
+                              l.e("66759"),
+                              l.e("28367"),
+                              l.e("20287"),
+                              l.e("58337"),
+                              l.e("20683"),
+                              l.e("6809"),
+                              l.e("80436"),
+                              l.e("97162"),
+                              l.e("59778"),
+                              l.e("95782"),
+                              l.e("85160"),
+                              l.e("10534"),
+                          ]).then(l.bind(l, 308229));
+                          return (a) => (0, t.jsx)(e, { ...a, videoEnabled: v });
                       },
-                      { modalKey: "camera-preview", contextKey: null != t ? (0, a.modalContextFromAppContext)(t) : f },
+                      { modalKey: "camera-preview", contextKey: null != a ? (0, c.modalContextFromAppContext)(a) : p },
                   );
               },
-              icon: E ? l.f : u.b,
-              leadingAccessory: { type: "icon", icon: E ? l.f : u.b },
+              icon: v ? o.f : r.b,
+              leadingAccessory: { type: "icon", icon: v ? o.f : r.b },
           })
         : null;
 }

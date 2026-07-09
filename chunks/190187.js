@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { i: () => _ });
+n.d(t, { i: () => T });
 var i = n(64700),
-    r = n(17928),
-    s = n(531260),
-    a = n(287809),
-    o = n(474090),
-    l = n(526292),
-    u = n(89366),
-    c = n(851746),
-    d = n(202541);
-function _() {
+    l = n(17928),
+    r = n(531260),
+    c = n(287809),
+    a = n(474090),
+    s = n(526292),
+    o = n(89366),
+    _ = n(851746),
+    u = n(202541);
+function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
-        n = (0, l.k5)(),
-        _ = (0, u.QQ)(),
-        h = (0, s.A)(),
-        f =
+        t = (0, l.bG)([c.default], () => c.default.getCurrentUser()),
+        n = (0, s.k5)(),
+        T = (0, o.QQ)(),
+        A = (0, r.A)(),
+        E =
             t?.verified === !0 &&
-            (0, o.YE)(t, d.PremiumTypes.TIER_2) &&
-            h.fetched &&
-            h.fractionalState !== d.xc.FP_ONLY &&
+            (0, a.YE)(t, u.PremiumTypes.TIER_2) &&
+            A.fetched &&
+            A.fractionalState !== u.xc.FP_ONLY &&
             !n &&
-            !_;
+            !T;
     i.useEffect(() => {
-        f && !e && c.A.checkAndFetchReferralsRemaining();
-    }, [f, e]);
+        E && !e && _.A.checkAndFetchReferralsRemaining();
+    }, [E, e]);
 }

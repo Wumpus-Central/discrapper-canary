@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
-    r = n(228366);
+    l = n(228366);
 let s = !1;
-class a extends i.Ay.PersistedStore {
+class r extends i.Ay.PersistedStore {
     static displayName = "ParentalConsentStore";
     static persistKey = "ParentalConsentStore";
     initialize(e) {
@@ -16,16 +15,16 @@ class a extends i.Ay.PersistedStore {
         return { shouldShowGuardianConnect: s };
     }
 }
-let o = new a(r.h, {
+let a = new r(l.h, {
         GUARDIAN_CONNECT_REQUIRED: function (e) {
             let { shouldShowGuardianConnect: t } = e;
-            (s = !0 === t), o.persist();
+            (s = !0 === t), a.persist();
         },
         GUARDIAN_CONNECT_CLEARED: function () {
-            (s = !1), o.persist();
+            (s = !1), a.persist();
         },
         NUF_COMPLETE: function () {
-            (s = !1), o.persist();
+            (s = !1), a.persist();
         },
     }),
-    l = o;
+    o = 21552 == n.j ? a : null;
