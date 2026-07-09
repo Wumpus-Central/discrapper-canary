@@ -9,6 +9,7 @@ e.exports = {
     QP: "addFriendInput__72ba7 inputText__72ba7",
     hF: "input__72ba7 inputText__72ba7",
     dQ: "addFriendHint__72ba7 inputText__72ba7",
+    FY: "addFriendHintPrefix__72ba7",
     hN: "ring__72ba7",
     v7: "friendNoteTextContainer__72ba7",
     xh: "friendNoteTextArea__72ba7 inputText__72ba7",
