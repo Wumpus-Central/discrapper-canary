@@ -284,6 +284,10 @@ function L(e) {
                 clearFetchSetupIntent: () => {
                     e({ fetchSetupIntentRequestKey: null, fetchSetupIntentPromise: null });
                 },
+                linkWalletEnabled: !0,
+                setLinkWalletEnabled: (t) => {
+                    e({ linkWalletEnabled: t });
+                },
             },
             get: (e) => (null != r[e] ? r[e]() : null),
             contextMetadata: a,
