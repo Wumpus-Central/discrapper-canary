@@ -1,26 +1,25 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(580630),
-    r = n(935399),
-    a = n(17928),
-    s = n(73825),
-    l = n(97352),
-    o = n(428262),
-    d = n(202541),
-    c = n(88001);
+i.d(t, { A: () => u });
+var r = i(580630),
+    n = i(935399),
+    s = i(17928),
+    a = i(73825),
+    l = i(97352),
+    o = i(428262),
+    d = i(202541),
+    c = i(88001);
 function u(e) {
     let t = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = (0, o.mH)(d.pe.TIER_2),
-            { plan: n, isFetchingPlan: i } = (0, a.cf)([l.A], () => ({
+            { plan: i, isFetchingPlan: r } = (0, s.cf)([l.A], () => ({
                 plan: l.A.get(d.gD.PREMIUM_GROUP_MONTH),
                 isFetchingPlan: l.A.isFetchingForSKU(t),
             }));
         if (
-            ((0, r.Ay)(() => {
-                e || null != n || i || (0, s.ur)(t);
+            ((0, n.Ay)(() => {
+                e || null != i || r || (0, a.ur)(t);
             }),
-            e || null == n)
+            e || null == i)
         )
             return null;
         try {
@@ -29,5 +28,5 @@ function u(e) {
             return null;
         }
     })(e);
-    return null == t ? null : (0, i.$g)(Math.round(t.amount / c.aw), t.currency);
+    return null == t ? null : (0, r.$g)(Math.round(t.amount / c.aw), t.currency);
 }

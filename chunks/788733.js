@@ -1,7 +1,6 @@
-"use strict";
-n.d(t, { A: () => a });
-var i = n(360469),
-    r = n(652215);
-function a(e) {
-    return e?.application_id === i.D4 && (e?.platform === r.yTV.ANDROID || e?.platform === r.yTV.IOS);
+l.d(t, { A: () => s });
+var n = l(360469),
+    a = l(652215);
+function s(e) {
+    return e?.application_id === n.D4 && (e?.platform === a.yTV.ANDROID || e?.platform === a.yTV.IOS);
 }

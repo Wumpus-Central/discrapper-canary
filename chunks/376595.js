@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { H: () => s }), n(321073);
-var i = n(372684),
-    r = n(731854);
-let a = { speakingUserIds: [], activeSoundboards: [] };
-class s {
+a.d(t, { H: () => r }), a(321073);
+var s = a(372684),
+    n = a(731854);
+let i = { speakingUserIds: [], activeSoundboards: [] };
+class r {
     timeline;
     userSpeakingStates;
     activeSoundboards;
@@ -14,17 +13,17 @@ class s {
             (this.activeSoundboards = new Map()),
             (this.soundboardPlayCounts = new Map());
         const t = [...e].sort((e, t) => e.timestamp - t.timestamp),
-            n = new Set(),
-            r = new Set();
+            a = new Set(),
+            n = new Set();
         for (const e of t) {
             const t = e.signal;
-            if (t.type === i.Gy.SPEAKING)
-                n.has(t.userId) ||
-                    (n.add(t.userId), 0 === t.speakingFlags && this.userSpeakingStates.set(t.userId, !0));
-            else if (t.type === i.Gy.SOUNDBOARD) {
+            if (t.type === s.Gy.SPEAKING)
+                a.has(t.userId) ||
+                    (a.add(t.userId), 0 === t.speakingFlags && this.userSpeakingStates.set(t.userId, !0));
+            else if (t.type === s.Gy.SOUNDBOARD) {
                 const e = this.getSoundboardKey(t.soundboardId, t.userId);
-                !r.has(e) &&
-                    (r.add(e),
+                !n.has(e) &&
+                    (n.add(e),
                     t.playing ||
                         (this.soundboardPlayCounts.set(e, 1),
                         this.activeSoundboards.set(e, this.soundboardFromSignal(t))));
@@ -33,19 +32,19 @@ class s {
         for (const e of ((this.userSpeakingStates.size > 0 || this.activeSoundboards.size > 0) &&
             this.appendSnapshot(0),
         t))
-            e.signal.type === i.Gy.SPEAKING
+            e.signal.type === s.Gy.SPEAKING
                 ? this.processSpeakingEvent(e.signal)
-                : e.signal.type === i.Gy.SOUNDBOARD && this.processSoundboardEvent(e.signal),
+                : e.signal.type === s.Gy.SOUNDBOARD && this.processSoundboardEvent(e.signal),
                 this.appendSnapshot(e.timestamp);
     }
     static fromAttachmentTimeline(e) {
-        return new s(
+        return new r(
             e
                 .filter((e) => null != e.speaking)
                 .map((e) => ({
                     timestamp: e.timestamp_ms,
                     signal: {
-                        type: i.Gy.SPEAKING,
+                        type: s.Gy.SPEAKING,
                         userId: e.speaking.user_id,
                         speakingFlags: e.speaking.speaking_flags,
                     },
@@ -69,15 +68,15 @@ class s {
         };
     }
     processSpeakingEvent(e) {
-        this.userSpeakingStates.set(e.userId, (e.speakingFlags & r.ME.VOICE) === r.ME.VOICE);
+        this.userSpeakingStates.set(e.userId, (e.speakingFlags & n.ME.VOICE) === n.ME.VOICE);
     }
     processSoundboardEvent(e) {
         let t = this.getSoundboardKey(e.soundboardId, e.userId),
-            n = this.soundboardPlayCounts.get(t) ?? 0;
+            a = this.soundboardPlayCounts.get(t) ?? 0;
         if (e.playing)
-            this.soundboardPlayCounts.set(t, n + 1), this.activeSoundboards.set(t, this.soundboardFromSignal(e));
+            this.soundboardPlayCounts.set(t, a + 1), this.activeSoundboards.set(t, this.soundboardFromSignal(e));
         else {
-            let e = Math.max(0, n - 1);
+            let e = Math.max(0, a - 1);
             this.soundboardPlayCounts.set(t, e), 0 === e && this.activeSoundboards.delete(t);
         }
     }
@@ -85,11 +84,11 @@ class s {
         return {
             speakingUserIds: Array.from(this.userSpeakingStates.entries())
                 .filter((e) => {
-                    let [t, n] = e;
-                    return n;
+                    let [t, a] = e;
+                    return a;
                 })
                 .map((e) => {
-                    let [t, n] = e;
+                    let [t, a] = e;
                     return t;
                 }),
             activeSoundboards: Array.from(this.activeSoundboards.values()),
@@ -97,12 +96,12 @@ class s {
     }
     getEventsAtTimestamp(e) {
         let t = 0,
-            n = this.timeline.length - 1,
-            i = -1;
-        for (; t <= n; ) {
-            let r = Math.floor((t + n) / 2);
-            this.timeline[r].timestamp <= e ? ((i = r), (t = r + 1)) : (n = r - 1);
+            a = this.timeline.length - 1,
+            s = -1;
+        for (; t <= a; ) {
+            let n = Math.floor((t + a) / 2);
+            this.timeline[n].timestamp <= e ? ((s = n), (t = n + 1)) : (a = n - 1);
         }
-        return -1 === i ? a : this.timeline[i].snapshot;
+        return -1 === s ? i : this.timeline[s].snapshot;
     }
 }

@@ -1,112 +1,111 @@
-"use strict";
-n.d(t, { A: () => C, o: () => N });
-var i = n(627968),
+n.d(t, { A: () => I, o: () => x });
+var a = n(627968),
     r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(317097),
-    o = n(17928),
-    d = n(661531),
+    l = n(503698),
+    i = n.n(l),
+    s = n(317097),
+    d = n(17928),
+    o = n(661531),
     c = n(778712),
     u = n(602853),
-    _ = n(654107),
-    E = n(450373),
-    A = n(915089),
-    h = n(693875),
-    I = n(885386),
-    f = n(531685),
-    p = n(486020),
-    T = n(837529),
-    m = n(686189),
-    g = n(985253),
-    S = n(926601);
-function N(e) {
+    f = n(654107),
+    m = n(450373),
+    E = n(915089),
+    _ = n(693875),
+    g = n(885386),
+    p = n(531685),
+    b = n(486020),
+    h = n(837529),
+    A = n(686189),
+    R = n(985253),
+    v = n(926601);
+function x(e) {
     let {
             user: t,
             displayProfile: n,
-            guildId: a,
-            pendingBanner: g,
-            children: N,
-            className: C,
-            avatarSize: R,
-            avatarOffsetX: O,
-            avatarOffsetY: L,
-            bannerWidth: D,
-            bannerHeight: y,
-            themePadding: v,
-            pendingAccentColor: b,
-            animateOnHoverOrFocusOnly: M = !1,
+            guildId: l,
+            pendingBanner: R,
+            children: x,
+            className: I,
+            avatarSize: N,
+            avatarOffsetX: T,
+            avatarOffsetY: j,
+            bannerWidth: S,
+            bannerHeight: M,
+            themePadding: C,
+            pendingAccentColor: y,
+            animateOnHoverOrFocusOnly: D = !1,
         } = e,
-        P = (0, A.GV)(),
-        [U, w] = r.useState(!1),
-        G = (0, o.bG)([f.A], () => f.A.isFocused()),
-        x = I.kt.getSetting(),
-        k = (0, T.Nx)(),
-        { bannerSrc: F, status: V } = (0, m.A)({
+        O = (0, E.GV)(),
+        [U, P] = r.useState(!1),
+        B = (0, d.bG)([p.A], () => p.A.isFocused()),
+        G = g.kt.getSetting(),
+        k = (0, h.Nx)(),
+        { bannerSrc: L, status: w } = (0, A.A)({
             displayProfile: n,
-            pendingBanner: g,
-            size: D,
-            canAnimate: M || !x ? U : G,
+            pendingBanner: R,
+            size: S,
+            canAnimate: D || !G ? U : B,
         }),
-        B = k ? null : F,
-        H = (0, u.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
-        j = t.getAvatarURL(a, (0, c.FT)(R)),
-        W = (0, l.LX)((0, _.Ay)(j, H, !1)),
-        Y = (0, E.A)(b ?? n?.primaryColor ?? W).hex,
-        K = (function (e) {
+        H = k ? null : L,
+        V = (0, u.r)(o.A.unsafe_rawColors.PRIMARY_800).hex(),
+        $ = t.getAvatarURL(l, (0, c.FT)(N)),
+        X = (0, s.LX)((0, f.Ay)($, V, !1)),
+        F = (0, m.A)(y ?? n?.primaryColor ?? X).hex,
+        Y = (function (e) {
             let { size: t, stroke: n } = (0, c.Kj)(e);
             return t / 2 + n;
-        })(R),
-        $ = y - L - v;
-    return (0, i.jsxs)("svg", {
-        className: S.dK,
-        viewBox: `0 0 ${D} ${y}`,
-        style: { minWidth: D, minHeight: y },
+        })(N),
+        z = M - j - C;
+    return (0, a.jsxs)("svg", {
+        className: v.dK,
+        viewBox: `0 0 ${S} ${M}`,
+        style: { minWidth: S, minHeight: M },
         children: [
-            (0, i.jsxs)("mask", {
-                id: P,
+            (0, a.jsxs)("mask", {
+                id: O,
                 children: [
-                    (0, i.jsx)("rect", { fill: "white", x: "0", y: "0", width: "100%", height: "100%" }),
-                    (0, i.jsx)("circle", { fill: "black", cx: K + O - v, cy: $, r: K }),
+                    (0, a.jsx)("rect", { fill: "white", x: "0", y: "0", width: "100%", height: "100%" }),
+                    (0, a.jsx)("circle", { fill: "black", cx: Y + T - C, cy: z, r: Y }),
                 ],
             }),
-            (0, i.jsxs)("foreignObject", {
+            (0, a.jsxs)("foreignObject", {
                 x: "0",
                 y: "0",
                 width: "100%",
                 height: "100%",
                 overflow: "visible",
-                mask: `url(#${P})`,
+                mask: `url(#${O})`,
                 children: [
-                    N,
-                    (0, i.jsx)("div", {
-                        className: s()(S.vK, C),
-                        onMouseMove: () => w(!0),
-                        onMouseLeave: () => w(!1),
+                    x,
+                    (0, a.jsx)("div", {
+                        className: i()(v.vK, I),
+                        onMouseMove: () => P(!0),
+                        onMouseLeave: () => P(!1),
                         style: {
-                            height: y,
-                            minHeight: y,
-                            backgroundImage: null != B ? `url(${B})` : void 0,
-                            backgroundColor: "COMPLETE" === V || k ? Y : d.A.unsafe_rawColors.PRIMARY_800.css,
+                            height: M,
+                            minHeight: M,
+                            backgroundImage: null != H ? `url(${H})` : void 0,
+                            backgroundColor: "COMPLETE" === w || k ? F : o.A.unsafe_rawColors.PRIMARY_800.css,
                         },
-                        children: !x && (0, p.o4)(B) && (0, i.jsx)(h.A, { className: S.pH }),
+                        children: !G && (0, b.o4)(H) && (0, a.jsx)(_.A, { className: v.pH }),
                     }),
                 ],
             }),
         ],
     });
 }
-function C(e) {
+function I(e) {
     let {
             themeType: t,
             user: n,
             displayProfile: r,
-            canUsePremiumProfileCustomization: a = !1,
-            specOverrides: s,
-            ...l
+            canUsePremiumProfileCustomization: l = !1,
+            specOverrides: i,
+            ...s
         } = e,
-        o = g.T[t],
-        d = null != s ? { ...o, ...s } : o,
-        c = !(0, T.Qq)() && (a || r?.canUsePremiumProfileCustomization || !1);
-    return (0, i.jsx)(N, { ...l, ...d, user: n, displayProfile: r, themePadding: c ? d.themePadding : 0 });
+        d = R.T[t],
+        o = null != i ? { ...d, ...i } : d,
+        c = !(0, h.Qq)() && (l || r?.canUsePremiumProfileCustomization || !1);
+    return (0, a.jsx)(x, { ...s, ...o, user: n, displayProfile: r, themePadding: c ? o.themePadding : 0 });
 }

@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { h: () => l });
-var i = n(627968);
+n.d(t, { h: () => s });
+var a = n(627968);
 n(64700);
 var r = n(503698),
-    a = n.n(r),
-    s = n(780479);
-function l(e) {
+    l = n.n(r),
+    i = n(780479);
+function s(e) {
     let { children: t, className: n, isVisible: r = !0 } = e;
-    return (0, i.jsx)("div", { className: a()(s.n, { [s.z]: r }, n), children: t });
+    return (0, a.jsx)("div", { className: l()(i.n, { [i.z]: r }, n), children: t });
 }

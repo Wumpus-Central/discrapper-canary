@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => r });
 var i = n(17928),
-    r = n(280450),
-    a = n(470710);
-function s(e) {
-    return (0, i.cf)([a.A, r.default], () => {
-        let t = a.A.getCall(e),
-            n = r.default.getId(),
+    l = n(280450),
+    s = n(470710);
+function r(e) {
+    return (0, i.cf)([s.A, l.default], () => {
+        let t = s.A.getCall(e),
+            n = l.default.getId(),
             i = null != t && null != n && t.ringing.includes(n);
-        return { isIncomingCall: i, isOngoingCall: a.A.isCallActive(e) && !i };
+        return { isIncomingCall: i, isOngoingCall: s.A.isCallActive(e) && !i };
     });
 }

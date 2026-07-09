@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { Ax: () => m, Lk: () => N, cu: () => g, hK: () => S });
-var i = n(627968);
+n.d(t, { Ax: () => v, Lk: () => I, cu: () => w, hK: () => E });
+var l = n(627968);
 n(64700);
 var r = n(228366),
-    a = n(489277),
-    s = n(979186),
-    l = n(574172),
+    i = n(489277),
+    a = n(979186),
+    s = n(574172),
     o = n(734057),
-    d = n(763827),
-    c = n(184809),
-    u = n(19575),
-    _ = n(317084),
-    E = n(980504),
-    A = n(652215),
-    h = n(375708);
-let I = {
-        width: E.ed.width,
-        height: E.ed.height,
+    u = n(763827),
+    d = n(184809),
+    c = n(19575),
+    h = n(317084),
+    A = n(980504),
+    f = n(652215),
+    y = n(375708);
+let g = {
+        width: A.ed.width,
+        height: A.ed.height,
         resizable: !1,
         movable: !1,
         alwaysOnTop: !0,
@@ -28,48 +27,48 @@ let I = {
         backgroundColor: "#00000000",
         titleBarStyle: null,
     },
-    f = E.ed.padding,
-    p = I.width - f,
-    T = I.height - f;
-async function m(e) {
-    let t = d.A.getGuildId(),
-        n = d.A.getChannelId(),
+    m = A.ed.padding,
+    x = g.width - m,
+    p = g.height - m;
+async function v(e) {
+    let t = u.A.getGuildId(),
+        n = u.A.getChannelId(),
         r = o.A.getChannel(n);
     if (null == t || null == r) return;
-    let { x: a, y: c } = await u.Ay.invoke("GET_MOUSE_COORDINATES");
-    (0, l.open)(
-        A.MLl.SOUNDBOARD,
+    let { x: i, y: d } = await c.Ay.invoke("GET_MOUSE_COORDINATES");
+    (0, s.open)(
+        f.MLl.SOUNDBOARD,
         (n) =>
-            (0, i.jsx)(s.A, {
+            (0, l.jsx)(a.A, {
                 windowKey: n,
                 withTitleBar: !1,
-                title: h.intl.string(h.t["IiA///"]),
-                onBlur: g,
-                children: (0, i.jsx)(_.A, {
+                title: y.intl.string(y.t["IiA///"]),
+                onBlur: w,
+                children: (0, l.jsx)(h.A, {
                     guildId: t,
                     channel: r,
-                    width: p,
-                    height: T,
+                    width: x,
+                    height: p,
                     keepOpen: e,
-                    onClose: g,
+                    onClose: w,
                     analyticsSource: "global",
                 }),
             }),
-        { ...I, left: a - I.width / 2, top: c - I.height / 2 },
+        { ...g, left: i - g.width / 2, top: d - g.height / 2 },
     );
 }
-function g() {
-    (0, l.close)(A.MLl.SOUNDBOARD);
+function w() {
+    (0, s.close)(f.MLl.SOUNDBOARD);
 }
-function S(e, t) {
-    let n = a.A.isOverlayV3EnabledForPID(t),
-        i = c.default.disableClickableRegions;
-    n || i || r.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
+function E(e, t) {
+    let n = i.A.isOverlayV3EnabledForPID(t),
+        l = d.default.disableClickableRegions;
+    n || l || r.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
         r.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e });
 }
-function N(e) {
+function I(e) {
     r.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
-    let t = a.A.isOverlayV3EnabledForPID(e),
-        n = c.default.disableClickableRegions;
-    c.default.isLocked(e) || t || n || r.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
+    let t = i.A.isOverlayV3EnabledForPID(e),
+        n = d.default.disableClickableRegions;
+    d.default.isLocked(e) || t || n || r.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !0, pid: e });
 }
