@@ -1,11 +1,11 @@
 l.r(t),
     l.d(t, {
-        nitroCollection: () => an,
-        virtualCurrencyCollection: () => aa,
-        playgroundConfig: () => ar,
-        identityCollection: () => ai,
-        RevenuePlaygroundCollectionId: () => ae,
-        paymentsCollection: () => al,
+        nitroCollection: () => ai,
+        virtualCurrencyCollection: () => an,
+        playgroundConfig: () => ao,
+        identityCollection: () => ar,
+        RevenuePlaygroundCollectionId: () => at,
+        paymentsCollection: () => aa,
     });
 var a,
     n = l(700623),
@@ -3006,6 +3006,14 @@ function lO() {
     });
 }
 function lL(e) {
+    return (0, s.jsx)(C.M, {
+        activeSubscription: null,
+        stepConfigs: [],
+        skuIDs: [],
+        children: (0, s.jsx)(lw, { ...e }),
+    });
+}
+function lw(e) {
     let {
             theme: t,
             colorText: l,
@@ -3104,7 +3112,7 @@ function lL(e) {
               ],
           });
 }
-let lw = {
+let lU = {
         theme: {
             label: "Theme",
             type: "select",
@@ -3117,32 +3125,32 @@ let lw = {
         tabBackgroundColor: { label: "Tab Background Color", type: "text", defaultValue: "#00000014" },
         tabSelectedBackgroundColor: { label: "Tab Selected Background Color", type: "text", defaultValue: "#5865f2" },
     },
-    lU = {
+    lB = {
         name: "Joined Payment + Address",
         id: "joined-payment-address-elements",
         component: function (e) {
             return (0, s.jsx)(lL, { ...e, storyType: "joined-payment-address-elements" });
         },
-        controls: { ...lw },
+        controls: { ...lU },
     },
-    lB = {
+    lG = {
         name: "Stripe Payment Element",
         id: "stripe-payment-element",
         component: function (e) {
             return (0, s.jsx)(lL, { ...e, storyType: "stripe-payment-element" });
         },
-        controls: { ...lw },
+        controls: { ...lU },
     },
-    lG = {
+    lH = {
         name: "Stripe Address Element",
         id: "stripe-address-element",
         component: function (e) {
             return (0, s.jsx)(lL, { ...e, storyType: "stripe-address-element" });
         },
-        controls: { ...lw },
+        controls: { ...lU },
     };
-var lH = l(786826);
-let l$ = {
+var l$ = l(786826);
+let lW = {
     title: "RichTextArea",
     stories: [
         {
@@ -3166,7 +3174,7 @@ let l$ = {
                     [h, x] = u.useState("");
                 return (0, s.jsx)("div", {
                     style: { maxWidth: 480, padding: 24 },
-                    children: (0, s.jsx)(lH.f, {
+                    children: (0, s.jsx)(l$.f, {
                         label: t,
                         placeholder: l,
                         toolbarVariant: a,
@@ -3210,18 +3218,18 @@ let l$ = {
     ],
 };
 l(321073);
-var lW = l(735438),
-    lF = l(96337),
-    lY = l(997101),
-    lz = l(597770),
-    lq = l(278416),
-    lK = l(606267),
-    lJ = l(169797),
-    lX = l(944355),
-    lQ = l(864717),
-    lZ = l(826469),
-    l0 = l(812745);
-let l1 = {
+var lF = l(735438),
+    lY = l(96337),
+    lz = l(997101),
+    lq = l(597770),
+    lK = l(278416),
+    lJ = l(606267),
+    lX = l(169797),
+    lQ = l(944355),
+    lZ = l(864717),
+    l0 = l(826469),
+    l1 = l(812745);
+let l2 = {
         name: "Primitive: Nitro Plan Select",
         id: "unified-checkout-nitro-plan-select",
         component: function (e) {
@@ -3242,23 +3250,23 @@ let l1 = {
             return (0, s.jsxs)("div", {
                 className: U.Cd,
                 children: [
-                    (0, s.jsx)(lX.q7, {
+                    (0, s.jsx)(lQ.q7, {
                         selection: b,
                         onChange: h,
                         planOptions: [
                             {
                                 id: 0,
-                                title: (0, s.jsx)(lX.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                                title: (0, s.jsx)(lQ.ec, { size: "sm", color: "text-strong", premiumType: t }),
                                 titleDescriber: l,
                                 primaryText: a,
-                                subtext: i ? (0, s.jsx)(lX.Lo, { strikethrough: r, price: n }) : void 0,
+                                subtext: i ? (0, s.jsx)(lQ.Lo, { strikethrough: r, price: n }) : void 0,
                             },
                             {
                                 id: 1,
-                                title: (0, s.jsx)(lX.ec, { size: "sm", color: "text-strong", premiumType: t }),
+                                title: (0, s.jsx)(lQ.ec, { size: "sm", color: "text-strong", premiumType: t }),
                                 titleDescriber: o,
                                 primaryText: d,
-                                subtext: p ? (0, s.jsx)(lX.Lo, { strikethrough: m, price: c }) : void 0,
+                                subtext: p ? (0, s.jsx)(lQ.Lo, { strikethrough: m, price: c }) : void 0,
                             },
                         ],
                     }),
@@ -3292,7 +3300,7 @@ let l1 = {
             },
         },
     },
-    l2 = {
+    l6 = {
         name: "Primitive: Subscription Details Accordion",
         id: "unified-checkout-subscription-details",
         component: function (e) {
@@ -3347,7 +3355,7 @@ let l1 = {
                     : [];
             return (0, s.jsx)("div", {
                 className: U.SG,
-                children: (0, s.jsx)(lX._D, {
+                children: (0, s.jsx)(lQ._D, {
                     label: t,
                     totalLineItemLabel: "" !== l ? l : void 0,
                     totalLineItemLabelSubText: "" !== a ? a : void 0,
@@ -3413,21 +3421,21 @@ let l1 = {
             discountAmount: { label: "Discount - Amount (minor units)", type: "number", defaultValue: -100 },
         },
     };
-function l6(e) {
+function l3(e) {
     let { label: t, giftCardsEnabled: l, disabled: a, hidePersonalInformation: n } = e,
         i = (0, x.bG)([tZ.A], () => Object.values(tZ.A.paymentSources)),
         [r, o] = u.useState(void 0);
     u.useEffect(() => {
         (0, er.$o)();
     }, []);
-    let d = u.useMemo(() => i.map((e) => new lZ.A(e, !0, [])), [i]),
+    let d = u.useMemo(() => i.map((e) => new l0.A(e, !0, [])), [i]),
         {
             dropdownPaymentSources: c,
             dropdownPaymentSourceId: p,
             handleDropdownPaymentSourceChange: m,
             giftCardCheckboxProps: b,
             walletCoversSubtotal: h,
-        } = (0, lK.Y0)({
+        } = (0, lJ.Y0)({
             checkoutPaymentSources: d,
             paymentSourceId: r,
             setPaymentSourceId: o,
@@ -3435,7 +3443,7 @@ function l6(e) {
         });
     return (0, s.jsxs)("div", {
         children: [
-            (0, s.jsx)(lX.nL, {
+            (0, s.jsx)(lQ.nL, {
                 label: t,
                 giftCardsEnabled: l,
                 giftCardCheckboxProps: b,
@@ -3452,14 +3460,14 @@ function l6(e) {
         ],
     });
 }
-let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
-    l9 = lF.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
-    l4 = {
+let l9 = { "nitro-wheel": r.t, gift: lq.o, orbs: i.C },
+    l4 = lY.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })),
+    l7 = {
         name: "Modal: Unified Checkout Stateless Modal",
         id: "unified-checkout-stateless-modal",
         component: function (e) {
             let { primaryButtonText: t, primaryButtonIcon: l, headerBadgeHasIcon: a, ...n } = e,
-                i = a ? lq.g : void 0;
+                i = a ? lK.g : void 0;
             return (0, s.jsxs)(Q.B, {
                 gap: 16,
                 align: "center",
@@ -3474,7 +3482,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                         onClick: () =>
                             (0, en.openModal)(
                                 (e) =>
-                                    (0, s.jsx)(lJ.oH, {
+                                    (0, s.jsx)(lX.oH, {
                                         ...e,
                                         ...n,
                                         title: n.title,
@@ -3482,7 +3490,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                                         primaryButtonProps: {
                                             onClick: e.onClose,
                                             text: t,
-                                            icon: "none" !== l ? l3[l] : void 0,
+                                            icon: "none" !== l ? l9[l] : void 0,
                                         },
                                         onBackClick: e.onClose,
                                         children: (0, s.jsx)(Q.B, {
@@ -3513,7 +3521,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                     { label: "None", value: "none" },
                 ],
             },
-            countryCode: { label: "Country Code", type: "select", defaultValue: lY.d.US, options: l9 },
+            countryCode: { label: "Country Code", type: "select", defaultValue: lz.d.US, options: l4 },
             headerBadgeText: { label: "Header Pill Text", type: "text", defaultValue: "PROMO" },
             headerBadgeHasIcon: { label: "Header Badge Has Icon", type: "boolean", defaultValue: !1 },
             gradientColor: {
@@ -3530,7 +3538,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
             dismissable: { label: "Dismissable", type: "boolean", defaultValue: !0 },
         },
     },
-    l7 = {
+    l8 = {
         purchaseButtonText: "Subscribe",
         totalDue: 999,
         renewalPrice: 1099,
@@ -3539,33 +3547,33 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
         intervalCount: 1,
         startDate: new Date(),
     },
-    l8 = {
-        [lX.I0.Subscription]: { type: lX.I0.Subscription, ...l7 },
-        [lX.I0.SubscriptionApplication]: { type: lX.I0.SubscriptionApplication, ...l7 },
-        [lX.I0.GuildProductOneTimePurchase]: { type: lX.I0.GuildProductOneTimePurchase, ...l7 },
-        [lX.I0.PremiumAppsOneTimePurchase]: { type: lX.I0.PremiumAppsOneTimePurchase, ...l7 },
-        [lX.I0.SubscriptionTrial]: { type: lX.I0.SubscriptionTrial, ...l7 },
-        [lX.I0.OrbsRedemption]: { type: lX.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
-        [lX.I0.Shop]: { type: lX.I0.Shop, purchaseButtonText: "Purchase" },
-        [lX.I0.GiftNitro]: { type: lX.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
-        [lX.I0.GiftShop]: { type: lX.I0.GiftShop, purchaseButtonText: "Buy Gift" },
-        [lX.I0.GiftGameShop]: {
-            type: lX.I0.GiftGameShop,
+    l5 = {
+        [lQ.I0.Subscription]: { type: lQ.I0.Subscription, ...l8 },
+        [lQ.I0.SubscriptionApplication]: { type: lQ.I0.SubscriptionApplication, ...l8 },
+        [lQ.I0.GuildProductOneTimePurchase]: { type: lQ.I0.GuildProductOneTimePurchase, ...l8 },
+        [lQ.I0.PremiumAppsOneTimePurchase]: { type: lQ.I0.PremiumAppsOneTimePurchase, ...l8 },
+        [lQ.I0.SubscriptionTrial]: { type: lQ.I0.SubscriptionTrial, ...l8 },
+        [lQ.I0.OrbsRedemption]: { type: lQ.I0.OrbsRedemption, purchaseButtonText: "Redeem" },
+        [lQ.I0.Shop]: { type: lQ.I0.Shop, purchaseButtonText: "Purchase" },
+        [lQ.I0.GiftNitro]: { type: lQ.I0.GiftNitro, purchaseButtonText: "Buy Gift" },
+        [lQ.I0.GiftShop]: { type: lQ.I0.GiftShop, purchaseButtonText: "Buy Gift" },
+        [lQ.I0.GiftGameShop]: {
+            type: lQ.I0.GiftGameShop,
             purchaseButtonText: "Buy Gift",
             applicationName: "Marvel Rivals",
             shouldAppendDisclaimer: !1,
         },
-        [lX.I0.OrbsGameShop]: {
-            type: lX.I0.OrbsGameShop,
+        [lQ.I0.OrbsGameShop]: {
+            type: lQ.I0.OrbsGameShop,
             purchaseButtonText: "Buy Gift",
             applicationName: "Marvel Rivals",
             shouldAppendDisclaimer: !1,
         },
     },
-    l5 = {
+    ae = {
         title: "Unified Checkout",
         stories: [
-            l4,
+            l7,
             {
                 name: "Primitive: Order Summary Accordion",
                 id: "unified-checkout-order-summary",
@@ -3581,7 +3589,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                         l && a && n.push({ id: 3, label: "Discount Applied", amount: -100 }),
                         (0, s.jsx)("div", {
                             className: U.SG,
-                            children: (0, s.jsx)(lX.Vm, { label: t, lineItems: n, currency: N.Yri.USD }),
+                            children: (0, s.jsx)(lQ.Vm, { label: t, lineItems: n, currency: N.Yri.USD }),
                         })
                     );
                 },
@@ -3591,8 +3599,8 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                     hasLineItems: { label: "Has Line Items", type: "boolean", defaultValue: !0 },
                 },
             },
-            l1,
             l2,
+            l6,
             {
                 name: "Primitive: Purchase Item",
                 id: "unified-checkout-purchase-item",
@@ -3611,7 +3619,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                     function p(e, p) {
                         let m = e0.default.getCurrentUser(),
                             b = eC.A.getGuildsArray()[0];
-                        return (0, s.jsx)(lX.f7, {
+                        return (0, s.jsx)(lQ.f7, {
                             header: l ? t : void 0,
                             headerIconSrc: "https://cdn.discordapp.com/embed/avatars/1.png",
                             label: `${a} ${p}`,
@@ -3632,11 +3640,11 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                     return (0, s.jsxs)("div", {
                         className: U.SG,
                         children: [
-                            p(lX.JW, "Nitro"),
-                            p(lX.DH, "Nitro Basic"),
-                            p(lX.a6, "Boost"),
-                            p(lX.jw, "App"),
-                            p(lX.oo, "Nitro Credit"),
+                            p(lQ.JW, "Nitro"),
+                            p(lQ.DH, "Nitro Basic"),
+                            p(lQ.a6, "Boost"),
+                            p(lQ.jw, "App"),
+                            p(lQ.oo, "Nitro Credit"),
                         ],
                     });
                 },
@@ -3667,19 +3675,19 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                 component: function (e) {
                     let { disabled: t, error: l, errorMessage: a } = e,
                         n = [
-                            { id: "visa-1234", label: "Visa ending in 1234", icon: l0.Be.VISA },
-                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: l0.Be.MASTERCARD },
-                            { id: "paypal", label: "user@example.com", icon: l0.Be.PAYPAL },
-                            { id: "amex-9012", label: "Amex ending in 9012", icon: l0.Be.AMEX },
+                            { id: "visa-1234", label: "Visa ending in 1234", icon: l1.Be.VISA },
+                            { id: "mastercard-5678", label: "Mastercard ending in 5678", icon: l1.Be.MASTERCARD },
+                            { id: "paypal", label: "user@example.com", icon: l1.Be.PAYPAL },
+                            { id: "amex-9012", label: "Amex ending in 9012", icon: l1.Be.AMEX },
                         ],
                         [i, r] = u.useState(n[0].id);
                     return (0, s.jsxs)("div", {
                         children: [
-                            (0, s.jsx)(lX.v7, {
+                            (0, s.jsx)(lQ.v7, {
                                 value: i,
                                 options: n,
                                 onChange: r,
-                                onNew: lW.noop,
+                                onNew: lF.noop,
                                 disabled: t,
                                 error: l ? a : void 0,
                             }),
@@ -3706,7 +3714,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                 component: function (e) {
                     return (0, s.jsx)(ex.mz, {
                         stepConfigs: [],
-                        children: (0, s.jsx)(lQ.P, { children: (0, s.jsx)(l6, { ...e }) }),
+                        children: (0, s.jsx)(lZ.P, { children: (0, s.jsx)(l3, { ...e }) }),
                     });
                 },
                 controls: {
@@ -3722,8 +3730,8 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                 component: function (e) {
                     let { type: t, immediateDelivery: l, paysafecard: a } = e,
                         [n, i] = u.useState(!1);
-                    return (0, s.jsx)(lX._P, {
-                        variant: l8[t],
+                    return (0, s.jsx)(lQ._P, {
+                        variant: l5[t],
                         immediateDelivery: l ? { value: n, onChange: i } : void 0,
                         paymentSourceType: a ? N.hes.PAYSAFE_CARD : N.hes.CARD,
                     });
@@ -3732,16 +3740,16 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                     type: {
                         label: "Type",
                         type: "select",
-                        defaultValue: lX.I0.Subscription,
+                        defaultValue: lQ.I0.Subscription,
                         options: [
-                            { label: "Subscription", value: lX.I0.Subscription },
-                            { label: "Subscription Trial", value: lX.I0.SubscriptionTrial },
-                            { label: "Orbs Redemption", value: lX.I0.OrbsRedemption },
-                            { label: "Shop", value: lX.I0.Shop },
-                            { label: "Nitro Gift", value: lX.I0.GiftNitro },
-                            { label: "Shop Gift", value: lX.I0.GiftShop },
-                            { label: "Game Shop Gift", value: lX.I0.GiftGameShop },
-                            { label: "Orbs Game Shop Gift", value: lX.I0.OrbsGameShop },
+                            { label: "Subscription", value: lQ.I0.Subscription },
+                            { label: "Subscription Trial", value: lQ.I0.SubscriptionTrial },
+                            { label: "Orbs Redemption", value: lQ.I0.OrbsRedemption },
+                            { label: "Shop", value: lQ.I0.Shop },
+                            { label: "Nitro Gift", value: lQ.I0.GiftNitro },
+                            { label: "Shop Gift", value: lQ.I0.GiftShop },
+                            { label: "Game Shop Gift", value: lQ.I0.GiftGameShop },
+                            { label: "Orbs Game Shop Gift", value: lQ.I0.OrbsGameShop },
                         ],
                     },
                     immediateDelivery: { label: "Immediate Delivery", type: "boolean", defaultValue: !1 },
@@ -3755,10 +3763,10 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                     return (0, s.jsxs)("div", {
                         children: [
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Stateless Component:" }),
-                            (0, s.jsx)(lX.y, { onClick: N.tEg }),
+                            (0, s.jsx)(lQ.y, { onClick: N.tEg }),
                             (0, s.jsx)("br", {}),
                             (0, s.jsx)(y.E, { variant: "text-sm/normal", children: "Link with Modal:" }),
-                            (0, s.jsx)(lX.Z4, { onComplete: N.tEg }),
+                            (0, s.jsx)(lQ.Z4, { onComplete: N.tEg }),
                         ],
                     });
                 },
@@ -3769,8 +3777,8 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                 component: function () {
                     let [e, t] = u.useState("yearly");
                     return (0, s.jsx)("div", {
-                        children: (0, s.jsx)(lX.me, {
-                            headingComponent: (0, s.jsx)(lX.ec, {
+                        children: (0, s.jsx)(lQ.me, {
+                            headingComponent: (0, s.jsx)(lQ.ec, {
                                 size: "sm",
                                 color: "text-strong",
                                 premiumType: eT.PremiumTypes.TIER_2,
@@ -3790,10 +3798,10 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                 id: "checkout-store-country-row",
                 component: function (e) {
                     let { storeCountry: t } = e;
-                    return (0, s.jsx)(lX.s7, { storeCountry: t });
+                    return (0, s.jsx)(lQ.s7, { storeCountry: t });
                 },
                 controls: {
-                    storeCountry: { label: "Store Country", type: "select", defaultValue: lY.d.US, options: l9 },
+                    storeCountry: { label: "Store Country", type: "select", defaultValue: lz.d.US, options: l4 },
                 },
             },
             {
@@ -3801,7 +3809,7 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                 id: "checkout-store-relocation-notice",
                 component: function (e) {
                     let { relocationCountry: t, relocationCurrencyCode: l, willForfeitGiftCardBalance: a } = e;
-                    return (0, s.jsx)(lX.ch, {
+                    return (0, s.jsx)(lQ.ch, {
                         relocationCountry: t,
                         relocationCurrencyCode: l,
                         willForfeitGiftCardBalance: a,
@@ -3811,8 +3819,8 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
                     relocationCountry: {
                         label: "Relocation Country",
                         type: "select",
-                        defaultValue: lY.d.US,
-                        options: l9,
+                        defaultValue: lz.d.US,
+                        options: l4,
                     },
                     relocationCurrencyCode: { label: "Relocation Currency Code", type: "text", defaultValue: "USD" },
                     willForfeitGiftCardBalance: {
@@ -3824,19 +3832,19 @@ let l3 = { "nitro-wheel": r.t, gift: lz.o, orbs: i.C },
             },
         ],
     };
-var ae =
+var at =
     (((a = {}).PAYMENTS = "payments"),
     (a.VIRTUAL_CURRENCY = "virtual-currency"),
     (a.NITRO = "nitro"),
     (a.IDENTITY = "identity"),
     a);
-let at = ["Revenue Storybook", "Revenue Playground"],
-    al = {
+let al = ["Revenue Storybook", "Revenue Playground"],
+    aa = {
         id: "payments",
         name: "Payments",
         groups: [
             ek,
-            l5,
+            ae,
             {
                 title: "Gift Card",
                 stories: [
@@ -3894,7 +3902,7 @@ let at = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Payment Elements", stories: [lB, lG, lU] },
+            { title: "Payment Elements", stories: [lG, lH, lB] },
             {
                 title: "Add Payment (Legacy Checkout)",
                 stories: [
@@ -3932,10 +3940,10 @@ let at = ["Revenue Storybook", "Revenue Playground"],
             { title: "Checkout Review Step", stories: [eW, eF] },
             lf,
         ],
-        tags: at,
+        tags: al,
         IconComponent: n.d,
     },
-    aa = {
+    an = {
         id: "virtual-currency",
         name: "Virtual Currency",
         groups: [
@@ -3991,10 +3999,10 @@ let at = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
         ],
-        tags: at,
+        tags: al,
         IconComponent: i.C,
     },
-    an = {
+    ai = {
         id: "nitro",
         name: "Nitro",
         groups: [
@@ -4380,10 +4388,10 @@ let at = ["Revenue Storybook", "Revenue Playground"],
             },
             { title: "Clips", stories: [e3] },
         ],
-        tags: at,
+        tags: al,
         IconComponent: r.t,
     },
-    ai = {
+    ar = {
         id: "identity",
         name: "Identity",
         groups: [
@@ -4477,9 +4485,9 @@ let at = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            l$,
+            lW,
         ],
-        tags: at,
+        tags: al,
         IconComponent: o.n,
     },
-    ar = { playgroundBaseUrl: "revenue", collections: [al, aa, an, ai] };
+    ao = { playgroundBaseUrl: "revenue", collections: [aa, an, ai, ar] };
