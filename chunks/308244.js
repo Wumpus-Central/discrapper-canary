@@ -1,32 +1,31 @@
-"use strict";
-n.d(t, { E: () => S, A: () => g });
-var i = n(627968),
+n.d(t, { E: () => v, A: () => R });
+var a = n(627968),
     r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(834730),
-    o = n(140735),
-    d = n(707554),
+    l = n(503698),
+    i = n.n(l),
+    s = n(834730),
+    d = n(140735),
+    o = n(707554),
     c = n(349288),
     u = n(174459),
-    _ = n(559868),
-    E = n(652215),
-    A = n(375708);
-function h() {
-    u.default.track(E.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: _.Do });
+    f = n(559868),
+    m = n(652215),
+    E = n(375708);
+function _() {
+    u.default.track(m.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: f.Do });
 }
-function I() {
-    return (0, i.jsxs)(i.Fragment, {
+function g() {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, i.jsx)("span", { children: A.intl.string(A.t.OJmNR9) }),
-            (0, i.jsx)("br", {}),
-            (0, i.jsx)("br", {}),
-            (0, i.jsx)("span", {
-                children: A.intl.format(A.t.RCYeBL, {
+            (0, a.jsx)("span", { children: E.intl.string(E.t.OJmNR9) }),
+            (0, a.jsx)("br", {}),
+            (0, a.jsx)("br", {}),
+            (0, a.jsx)("span", {
+                children: E.intl.format(E.t.RCYeBL, {
                     blogHook: (e, t) =>
-                        (0, i.jsx)(
+                        (0, a.jsx)(
                             c.Anchor,
-                            { onClick: h, target: "_blank", rel: "noreferrer noopener", href: _.Do, children: e },
+                            { onClick: _, target: "_blank", rel: "noreferrer noopener", href: f.Do, children: e },
                             t,
                         ),
                 }),
@@ -34,49 +33,49 @@ function I() {
         ],
     });
 }
-var f = n(311016),
-    p = n(692051),
-    T = n(713804),
-    m = n(992595);
-function g(e) {
+var p = n(311016),
+    b = n(692051),
+    h = n(713804),
+    A = n(168147);
+function R(e) {
     let {
             userBio: t,
             className: n,
-            animateOnHoverOrFocusOnly: a = !1,
-            isHoveringOrFocusing: o = !1,
-            lineClamp: d = 6,
+            animateOnHoverOrFocusOnly: l = !1,
+            isHoveringOrFocusing: d = !1,
+            lineClamp: o = 6,
             setLineClamp: c = !0,
             textColor: u,
-            userId: _,
+            userId: f,
         } = e,
-        E = r.useMemo(
-            () => ((0, f.A)(_) ? (0, i.jsx)(I, {}) : null == t || "" === t ? null : (0, T.parseBioReact)(t)),
-            [_, t],
+        m = r.useMemo(
+            () => ((0, p.A)(f) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, h.parseBioReact)(t)),
+            [f, t],
         );
-    return null == E
+    return null == m
         ? null
-        : (0, i.jsx)("div", {
-              className: s()(n, m.PT),
-              children: (0, i.jsx)(l.E, {
+        : (0, a.jsx)("div", {
+              className: i()(n, A.PT),
+              children: (0, a.jsx)(s.E, {
                   variant: "text-sm/normal",
-                  lineClamp: c ? d : void 0,
+                  lineClamp: c ? o : void 0,
                   color: void 0 !== u ? u : void 0,
-                  children: (0, i.jsx)(p.Y.Provider, {
-                      value: { disableAnimations: a && !o, disableInteractions: !1 },
-                      children: E,
+                  children: (0, a.jsx)(b.Y.Provider, {
+                      value: { disableAnimations: l && !d, disableInteractions: !1 },
+                      children: m,
                   }),
               }),
           });
 }
-function S(e) {
+function v(e) {
     let t = r.useId(),
-        { userBio: n, userId: a } = e;
-    return (0, f.A)(a) || (null != n && "" !== n)
-        ? (0, i.jsxs)("section", {
+        { userBio: n, userId: l } = e;
+    return (0, p.A)(l) || (null != n && "" !== n)
+        ? (0, a.jsxs)("section", {
               "aria-labelledby": t,
               children: [
-                  (0, i.jsx)(o.A, { children: (0, i.jsx)(d.H, { id: t, children: A.intl.string(A.t.ZzAR2Y) }) }),
-                  (0, i.jsx)(g, { ...e }),
+                  (0, a.jsx)(d.A, { children: (0, a.jsx)(o.H, { id: t, children: E.intl.string(E.t.ZzAR2Y) }) }),
+                  (0, a.jsx)(R, { ...e }),
               ],
           })
         : null;

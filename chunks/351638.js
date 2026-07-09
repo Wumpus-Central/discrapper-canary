@@ -1,43 +1,42 @@
-"use strict";
-n.d(t, { A: () => u });
-var i = n(627968);
-n(64700);
-var r = n(503698),
-    a = n.n(r),
-    s = n(3026),
-    l = n(834730),
-    o = n(939496),
-    d = n(996988),
-    c = n(514566);
-function u(e) {
-    let { text: t, textId: n, tags: r, platformIcon: u, platformLabel: _, contextMenu: E } = e,
-        { themeType: A } = (0, o.E)();
-    return (null == t || "" === t) && null == E
+e.d(n, { A: () => d });
+var i = e(627968);
+e(64700);
+var l = e(503698),
+    a = e.n(l),
+    r = e(3026),
+    s = e(834730),
+    o = e(939496),
+    c = e(996988),
+    u = e(726342);
+function d(t) {
+    let { text: n, textId: e, tags: l, platformIcon: d, platformLabel: A, contextMenu: x } = t,
+        { themeType: p } = (0, o.E)();
+    return (null == n || "" === n) && null == x
         ? null
-        : null == t || "" === t
-          ? (0, i.jsx)("div", { className: a()(c.Si, c.ys), children: E })
+        : null == n || "" === n
+          ? (0, i.jsx)("div", { className: a()(u.Si, u.ys), children: x })
           : (0, i.jsxs)("div", {
-                className: c.wx,
+                className: u.wx,
                 children: [
-                    (0, i.jsxs)(l.E, {
-                        className: c.TK,
-                        variant: A === d.d.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
+                    (0, i.jsxs)(s.E, {
+                        className: u.TK,
+                        variant: p === c.d.SIDEBAR ? "text-xs/semibold" : "text-xs/medium",
                         color: "text-strong",
-                        id: n,
+                        id: e,
                         children: [
-                            (0, i.jsx)(s.A, { children: t }),
-                            null != u &&
+                            (0, i.jsx)(r.A, { children: n }),
+                            null != d &&
                                 (0, i.jsx)("div", {
                                     role: "image",
-                                    "aria-label": _,
-                                    "aria-hidden": null == _,
-                                    className: c.tV,
-                                    style: { maskImage: `url(${u.whiteSVG})`, WebkitMaskImage: `url(${u.whiteSVG})` },
+                                    "aria-label": A,
+                                    "aria-hidden": null == A,
+                                    className: u.tV,
+                                    style: { maskImage: `url(${d.whiteSVG})`, WebkitMaskImage: `url(${d.whiteSVG})` },
                                 }),
-                            r,
+                            l,
                         ],
                     }),
-                    null != E && (0, i.jsx)("div", { className: c.Si, children: E }),
+                    null != x && (0, i.jsx)("div", { className: u.Si, children: x }),
                 ],
             });
 }

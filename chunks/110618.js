@@ -1,61 +1,60 @@
-"use strict";
-n.d(t, { DO: () => A, Mt: () => _, c: () => u, l7: () => E }), n(735438);
-var i = n(763827),
-    r = n(562153),
-    a = n(488926),
-    s = n(446600),
-    l = n(516607),
-    o = n(652215),
-    d = n(719366),
-    c = n(375708);
-function u(e, t, n, i) {
-    let a = t[0],
-        s = r.Ay.getName(e, n, a),
-        l = i ?? t.length;
-    return 1 === l && null != a
-        ? s
-        : null == a
-          ? c.intl.formatToPlainString(c.t.chmM9N, { count: l })
-          : c.intl.formatToPlainString(c.t.GhkJ21, { name: s, count: l - 1 });
+r.d(e, { DO: () => T, Mt: () => S, c: () => A, l7: () => I }), r(735438);
+var i = r(763827),
+    n = r(562153),
+    E = r(488926),
+    c = r(446600),
+    l = r(516607),
+    s = r(652215),
+    a = r(719366),
+    _ = r(375708);
+function A(t, e, r, i) {
+    let E = e[0],
+        c = n.Ay.getName(t, r, E),
+        l = i ?? e.length;
+    return 1 === l && null != E
+        ? c
+        : null == E
+          ? _.intl.formatToPlainString(_.t.chmM9N, { count: l })
+          : _.intl.formatToPlainString(_.t.GhkJ21, { name: c, count: l - 1 });
 }
-function _(e, t) {
-    switch (e) {
-        case d.T6.OWNER:
-            return c.intl.string(c.t.icuNBM);
-        case d.T6.ADMINISTRATOR:
-            return c.intl.string(c.t.eTmN5a);
-        case d.T6.MEMBER:
-        case d.T6.ROLE:
-            return t ? c.intl.string(c.t.Hw3XWx) : c.intl.string(c.t.YieyPi);
-        case d.T6.EMPTY_STATE:
+function S(t, e) {
+    switch (t) {
+        case a.T6.OWNER:
+            return _.intl.string(_.t.icuNBM);
+        case a.T6.ADMINISTRATOR:
+            return _.intl.string(_.t.eTmN5a);
+        case a.T6.MEMBER:
+        case a.T6.ROLE:
+            return e ? _.intl.string(_.t.Hw3XWx) : _.intl.string(_.t.YieyPi);
+        case a.T6.EMPTY_STATE:
     }
     return null;
 }
-function E(e) {
-    let t = s.A.getStageInstanceByChannel(e.id);
+function I(t) {
+    let e = c.A.getStageInstanceByChannel(t.id);
     return {
-        channel_id: e.id,
-        guild_id: e.guild_id,
-        topic: t?.topic,
+        channel_id: t.id,
+        guild_id: t.guild_id,
+        topic: e?.topic,
         media_session_id: i.A.getMediaSessionId(),
-        request_to_speak_state: a.MJ(o.xBc.REQUEST_TO_SPEAK, e) ? l.kw.EVERYONE : l.kw.NO_ONE,
-        stage_instance_id: t?.id,
+        request_to_speak_state: E.MJ(s.xBc.REQUEST_TO_SPEAK, t) ? l.kw.EVERYONE : l.kw.NO_ONE,
+        stage_instance_id: e?.id,
     };
 }
-function A(e, t) {
-    function n(t) {
-        return r.Ay.getName(e.getGuildId(), e.id, t.user);
+function T(t, e) {
+    function r(e) {
+        return n.Ay.getName(t.getGuildId(), t.id, e.user);
     }
     let i = new Set(),
-        a = t.filter((e) => {
-            let t = e.user.id;
-            return !i.has(t) && (i.add(t), !0);
+        E = e.filter((t) => {
+            let e = t.user.id;
+            return !i.has(e) && (i.add(e), !0);
         });
-    return 0 === a.length
-        ? c.intl.string(c.t.FUVhyC)
-        : 1 === a.length
-          ? c.intl.formatToPlainString(c.t.EQwZlN, { a: n(a[0]) })
-          : 2 === a.length
-            ? c.intl.formatToPlainString(c.t.zBcKoA, { a: n(a[0]), b: n(a[1]) })
-            : c.intl.formatToPlainString(c.t["3AqFaG"], { a: n(a[0]), b: n(a[1]), n: a.length - 2 });
+    return 0 === E.length
+        ? _.intl.string(_.t.FUVhyC)
+        : 1 === E.length
+          ? _.intl.formatToPlainString(_.t.EQwZlN, { a: r(E[0]) })
+          : 2 === E.length
+            ? _.intl.formatToPlainString(_.t.zBcKoA, { a: r(E[0]), b: r(E[1]) })
+            : _.intl.formatToPlainString(_.t["3AqFaG"], { a: r(E[0]), b: r(E[1]), n: E.length - 2 });
 }

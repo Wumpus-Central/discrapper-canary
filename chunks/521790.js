@@ -1,63 +1,62 @@
-"use strict";
-n.d(t, { A: () => N, X: () => C });
+n.d(t, { A: () => P, X: () => M });
 var i = n(627968);
 n(64700);
-var r = n(503698),
-    a = n.n(r),
+var l = n(503698),
+    r = n.n(l),
     s = n(284009),
-    l = n.n(s),
+    a = n.n(s),
     o = n(17928),
-    d = n(554146),
-    c = n(417098),
-    u = n(736653),
+    E = n(554146);
+if (21552 == n.j) var c = n(417098);
+var u = n(736653),
     _ = n(573648),
-    E = n(619006),
-    A = n(145643),
-    h = n(826673),
+    A = n(619006),
+    d = n(145643),
+    T = n(826673),
     I = n(468689),
-    f = n(773669),
-    p = n(967198),
-    T = n(652215),
-    m = n(230451),
-    g = n(375708),
-    S = n(448759);
-function N(e) {
-    let { markAsDismissed: t, deprecationDate: n, platformType: r } = e,
-        s = p.A.getGuildId(),
-        E = (0, u.DP)(),
-        A = (0, o.bG)([f.default], () => f.default.locale);
-    l()(s, "Guild Id must be defined");
-    let N = _.A.get(r),
-        C = n.toLocaleDateString(A, { month: "long", day: "numeric", year: "numeric" });
+    N = n(773669),
+    R = n(967198),
+    S = n(652215),
+    O = n(566707),
+    C = n(375708),
+    D = n(846775);
+function P(e) {
+    let { markAsDismissed: t, deprecationDate: n, platformType: l } = e,
+        s = R.A.getGuildId(),
+        A = (0, u.DP)(),
+        d = (0, o.bG)([N.default], () => N.default.locale);
+    a()(s, "Guild Id must be defined");
+    let P = _.A.get(l),
+        M = n.toLocaleDateString(d, { month: "long", day: "numeric", year: "numeric" });
     return (0, i.jsxs)(c.$T, {
         color: c.Hv.WARNING,
         children: [
             (0, i.jsx)(c.PM, {
-                onClick: () => (0, h.Dr)(d.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE),
-                noticeType: T.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+                onClick: () => (0, T.Dr)(E.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE),
+                noticeType: S.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
             }),
             (0, i.jsx)("img", {
-                src: "light" === E ? N?.icon.blackSVG : N?.icon.whiteSVG,
-                alt: g.intl.string(m.default["1S6oAo"]),
-                className: a()(S.tV, S._R),
+                src: "light" === A ? P?.icon.blackSVG : P?.icon.whiteSVG,
+                alt: C.intl.string(O.default["1S6oAo"]),
+                className: r()(D.tV, D._R),
             }),
-            g.intl.format(m.default.kb0maj, { date: C }),
+            C.intl.format(O.default.kb0maj, { date: M }),
             (0, i.jsx)(c.Z_, {
                 onClick: () => {
-                    t(), I.A.open(s, T.BEX.ROLES);
+                    t(), I.A.open(s, S.BEX.ROLES);
                 },
-                noticeType: T.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
-                className: S.HE,
-                children: g.intl.string(m.default.spsZYI),
+                noticeType: S.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+                className: D.HE,
+                children: C.intl.string(O.default.spsZYI),
             }),
-            (0, i.jsx)(c.zr, { onClick: () => t(), className: S.wX, children: g.intl.string(m.default["MVB/Ab"]) }),
+            (0, i.jsx)(c.zr, { onClick: () => t(), className: D.wX, children: C.intl.string(O.default["MVB/Ab"]) }),
         ],
     });
 }
-function C(e, t) {
+function M(e, t) {
     e.forEach((e) => {
-        null == A.A.getGuildRoleConnectionsConfiguration(e.id) && (0, E.os)(e.guildId, e.id);
+        null == d.A.getGuildRoleConnectionsConfiguration(e.id) && (0, A.os)(e.guildId, e.id);
     });
-    let n = e.map((e) => A.A.getGuildRoleConnectionsConfiguration(e.id));
+    let n = e.map((e) => d.A.getGuildRoleConnectionsConfiguration(e.id));
     return null != n && n.some((e) => e?.some((e) => e.some((e) => t.some((t) => t === e.connectionType))));
 }

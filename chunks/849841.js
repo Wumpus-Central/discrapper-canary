@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => l });
-var i = n(64700),
-    r = n(206835),
-    a = n(84540),
-    s = n(355097);
-function l(e) {
-    let t = (0, r.A)({ scrollPosition: s._F.GUILD_TAG });
-    return i.useCallback(() => {
-        (0, a.p)({ primaryGuildId: e }), t();
-    }, [e, t]);
+u.d(i, { A: () => d });
+var r = u(64700),
+    n = u(206835),
+    e = u(84540),
+    l = u(355097);
+function d(t) {
+    let i = (0, n.A)({ scrollPosition: l._F.GUILD_TAG });
+    return r.useCallback(() => {
+        (0, e.p)({ primaryGuildId: t }), i();
+    }, [t, i]);
 }

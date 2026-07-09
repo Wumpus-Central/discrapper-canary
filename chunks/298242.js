@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
-var r = n(17928),
-    a = n(477782),
-    s = n(964355),
-    l = n(827343),
+var l = n(17928),
+    s = n(477782),
+    r = n(964355),
+    a = n(827343),
     o = n(451409),
-    d = n(824744),
-    c = n(723702),
-    u = n(375708);
-function _(e) {
-    let t = (0, r.bG)([o.Ay], () => (0, d.M)(o.Ay.getOutputVolume()));
-    return (0, i.jsx)(a.aK, {
+    u = n(824744),
+    d = n(723702),
+    c = n(375708);
+function h(e) {
+    let t = (0, l.bG)([o.Ay], () => (0, u.M)(o.Ay.getOutputVolume()));
+    return (0, i.jsx)(s.aK, {
         id: "output",
-        label: u.intl.string(u.t.eATD2B),
-        control: (n, r) =>
-            (0, i.jsx)(s.i, {
+        label: c.intl.string(c.t.eATD2B),
+        control: (n, l) =>
+            (0, i.jsx)(r.i, {
                 ...n,
-                ref: r,
+                ref: l,
                 value: t,
-                maxValue: c.isPlatformEmbedded ? 200 : 100,
-                onChange: (t) => l.A.setOutputVolume((0, d.w)(t), { analyticsLocations: e }),
-                "aria-label": u.intl.string(u.t.eATD2B),
+                maxValue: d.isPlatformEmbedded ? 200 : 100,
+                onChange: (t) => a.A.setOutputVolume((0, u.w)(t), { analyticsLocations: e }),
+                "aria-label": c.intl.string(c.t.eATD2B),
             }),
     });
 }

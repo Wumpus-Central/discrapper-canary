@@ -1,35 +1,34 @@
-"use strict";
-n.d(t, { A: () => _ });
+s.d(t, { A: () => d });
 var i,
-    r = n(627968);
-n(64700);
-var a = n(503698),
-    s = n.n(a),
-    l = n(990078),
-    o = n(939249),
-    d = n(909800),
-    c = (((i = c || {})[(i.ACCEPT = 0)] = "ACCEPT"), (i[(i.DENY = 1)] = "DENY"), (i[(i.DEFAULT = 2)] = "DEFAULT"), i);
-function u(e) {
+    n = s(627968);
+s(64700);
+var a = s(503698),
+    r = s.n(a),
+    l = s(990078),
+    o = s(939249),
+    u = s(753704),
+    h = (((i = h || {})[(i.ACCEPT = 0)] = "ACCEPT"), (i[(i.DENY = 1)] = "DENY"), (i[(i.DEFAULT = 2)] = "DEFAULT"), i);
+function c(e) {
     let {
         icon: t,
-        tooltip: n,
+        tooltip: s,
         onClick: i,
         actionType: a = 2,
-        shouldHighlight: c,
-        loading: u = !1,
-        tabIndex: _ = 0,
+        shouldHighlight: h,
+        loading: c = !1,
+        tabIndex: d = 0,
     } = e;
-    return (0, r.jsx)(l.m, {
-        text: n,
-        children: (0, r.jsx)(o.D, {
+    return (0, n.jsx)(l.m, {
+        text: s,
+        children: (0, n.jsx)(o.D, {
             tag: "div",
-            "aria-label": n,
-            tabIndex: _,
-            onClick: u ? void 0 : i,
-            className: s()(d.hP, { [d.Jj]: 0 === a, [d.Bs]: 1 === a, [d.Zt]: c, [d.r9]: u }),
-            children: (0, r.jsx)(t, { className: d.Kk, color: "currentColor" }),
+            "aria-label": s,
+            tabIndex: d,
+            onClick: c ? void 0 : i,
+            className: r()(u.hP, { [u.Jj]: 0 === a, [u.Bs]: 1 === a, [u.Zt]: h, [u.r9]: c }),
+            children: (0, n.jsx)(t, { className: u.Kk, color: "currentColor" }),
         }),
     });
 }
-u.ActionTypes = c;
-let _ = u;
+c.ActionTypes = h;
+let d = c;

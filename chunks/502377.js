@@ -264,7 +264,9 @@ function h(e) {
             if (null != x) {
                 "layout" === c && x.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
-                    null != x.canvas && x.resizeDrawingSurfaceToCanvas();
+                    null != x.canvas &&
+                        (x.resizeDrawingSurfaceToCanvas(),
+                        x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering())));
                 }, 100);
                 return () => clearTimeout(e);
             }
@@ -274,7 +276,8 @@ function h(e) {
             let e = x.canvas;
             if (null == e) return;
             let t = new ResizeObserver(() => {
-                x.resizeDrawingSurfaceToCanvas();
+                x.resizeDrawingSurfaceToCanvas(),
+                    x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering()));
             });
             return t.observe(e), () => t.disconnect();
         }, [x, y.reducedMotion.enabled]),
