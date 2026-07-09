@@ -39,18 +39,19 @@ function q(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: n, preCtaClick: l } = t,
         c = (0, E.Ay)(),
         o = (0, g.M)(c) ? R.NJ.DARK : R.NJ.LIGHT,
-        d = (0, k.go)(),
-        u = (0, w.E0)(e.config);
-    async function x() {
+        d = (0, k.wW)(),
+        u = (0, k.go)(),
+        x = (0, w.E0)(e.config);
+    async function f() {
         await l?.(),
             (0, L.pu)(e, {
                 content: m.uF.REWARD_MODAL,
                 ctaContent: _.Cy.OPEN_GAME_LINK,
-                impressionId: d,
+                impressionId: d(),
                 sourceQuestContent: i,
             });
     }
-    let f = a.useMemo(() => {
+    let q = a.useMemo(() => {
             let t = e.config.ctaConfig?.subtitle;
             return null != t
                 ? t
@@ -60,29 +61,29 @@ function q(t) {
                   ? O.intl.string(O.t.y8Xf3k)
                   : O.intl.string(O.t["wirwN+"]);
         }, [e]),
-        q = (0, D.A)(e, { impressionId: d, sourceQuestContent: i }, l) ?? {
+        z = (0, D.A)(e, { impressionId: u, sourceQuestContent: i }, l) ?? {
             ctaText: (0, T.wr)(e),
             ctaVariant: "primary",
-            onClickCta: x,
+            onClickCta: f,
             title: O.intl.format(O.t.EAYZAr, { questName: e.config.messages.questName }),
-            subtitle: f,
+            subtitle: q,
             ctaIconPosition: "end",
         },
-        { isLoading: z } = (0, I.zT)();
+        { isLoading: G } = (0, I.zT)();
     a.useEffect(() => {
-        z || n();
-    }, [z, n]);
-    let G = (0, b.Lk)({
-        isShareable: u,
+        G || n();
+    }, [G, n]);
+    let Y = (0, b.Lk)({
+        isShareable: x,
         questId: e.id,
         trackingCtx: a.useMemo(
             () => ({
                 content: m.uF.REWARD_MODAL,
                 ctaContent: _.Cy.REWARD_MODAL_COPY_LINK,
-                impressionId: d,
+                impressionId: u,
                 sourceQuestContent: i,
             }),
-            [d, i],
+            [u, i],
         ),
     });
     return (0, s.jsxs)("div", {
@@ -122,9 +123,9 @@ function q(t) {
                                 variant: "heading-md/semibold",
                                 color: "text-strong",
                                 className: S.fx,
-                                children: q.title,
+                                children: z.title,
                             }),
-                            (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: q.subtitle }),
+                            (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: z.subtitle }),
                         ],
                     }),
                     (0, s.jsx)(I._M, {
@@ -147,23 +148,23 @@ function q(t) {
                     fullWidth: !0,
                     fullWidthContainer: !0,
                     children: [
-                        u &&
+                        x &&
                             (0, s.jsx)(y.m, {
                                 text: O.intl.string(O.t.WmfZHZ),
                                 children: (0, s.jsx)(N.K, {
                                     icon: C.q,
-                                    onClick: G,
+                                    onClick: Y,
                                     "aria-label": O.intl.string(O.t.WmfZHZ),
                                     variant: "secondary",
                                 }),
                             }),
                         (0, s.jsx)(p.$, {
-                            variant: q.ctaVariant,
-                            text: q.ctaText,
-                            onClick: q.onClickCta,
+                            variant: z.ctaVariant,
+                            text: z.ctaText,
+                            onClick: z.onClickCta,
                             fullWidth: !0,
                             icon: A.W,
-                            iconPosition: q.ctaIconPosition,
+                            iconPosition: z.ctaIconPosition,
                         }),
                     ],
                 }),

@@ -2916,7 +2916,7 @@ function nW(e) {
         N = i.useMemo(() => (0, tA.wo)(s.config, f), [s.config, f]),
         p = (0, nT.tG)(),
         T = (0, nT.WS)(),
-        A = (0, e$.go)(),
+        A = (0, e$.wW)(),
         { isHovering: O, hoverProps: I } = nw(
             i.useCallback(
                 (e) => {
@@ -2949,7 +2949,7 @@ function nW(e) {
                           surfaceId: ew.uF.QUEST_HOME_HERO_SHELF,
                           sourceQuestContent: ew.uF.QUEST_HOME_HERO_SHELF,
                           questContentPosition: l,
-                          impressionId: A,
+                          impressionId: A(),
                       })
                     : p({
                           adContentId: t,

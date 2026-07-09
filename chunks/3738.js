@@ -14,7 +14,7 @@ var a = n(409626),
     g = n(939249),
     E = n(834730),
     A = n(862611),
-    C = n(420298),
+    C = n(362058),
     _ = n(590202),
     p = n(284846),
     S = n(287875),
@@ -625,10 +625,10 @@ function j(e) {
     return null != r ? s[r] : void 0;
 }
 function Q(e) {
-    let { quest: t, questContent: n, preCtaClick: l, impressionId: a, sourceQuestContent: s } = e;
+    let { quest: t, questContent: n, preCtaClick: l, getImpressionId: a, sourceQuestContent: s } = e;
     async function o() {
         await l?.(),
-            (0, T.pu)(t, { content: n, ctaContent: _.Cy.OPEN_GAME_LINK, impressionId: a, sourceQuestContent: s });
+            (0, T.pu)(t, { content: n, ctaContent: _.Cy.OPEN_GAME_LINK, impressionId: a?.(), sourceQuestContent: s });
     }
     let u = i.useMemo(() => {
         let e = t.config.ctaConfig?.subtitle;

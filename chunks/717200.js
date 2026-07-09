@@ -1,4 +1,4 @@
-s.d(t, { A: () => z });
+s.d(t, { A: () => W });
 var i = s(627968),
     l = s(64700),
     a = s(189213),
@@ -89,9 +89,10 @@ function k(e) {
 }
 function E(e) {
     let { quest: t, questContent: s, sourceQuestContent: l, location: a, preCtaClick: n } = e,
-        r = (0, g.go)(),
-        c = (0, v.Jf)({ quest: t, questContent: s, impressionId: r, preCtaClick: n, sourceQuestContent: l }),
-        o = (0, f.A)(t, { impressionId: r, sourceQuestContent: l }, n) ?? c;
+        r = (0, g.wW)(),
+        c = (0, g.go)(),
+        o = (0, v.Jf)({ quest: t, questContent: s, getImpressionId: r, preCtaClick: n, sourceQuestContent: l }),
+        x = (0, f.A)(t, { impressionId: c, sourceQuestContent: l }, n) ?? o;
     return (0, i.jsxs)("div", {
         className: M.kL,
         children: [
@@ -102,17 +103,17 @@ function E(e) {
                 isPreview: t.preview,
                 children: [
                     (0, i.jsx)(T, { quest: t }),
-                    (0, i.jsx)(k, { quest: t, title: o.title, subtitle: o.subtitle }),
+                    (0, i.jsx)(k, { quest: t, title: x.title, subtitle: x.subtitle }),
                 ],
             }),
             (0, i.jsx)("div", {
                 className: M.z1,
                 children: (0, i.jsx)(m.$, {
                     fullWidth: !0,
-                    variant: o.ctaVariant,
+                    variant: x.ctaVariant,
                     size: "md",
-                    text: o.ctaText,
-                    onClick: o.onClickCta,
+                    text: x.ctaText,
+                    onClick: x.onClickCta,
                 }),
             }),
         ],
@@ -121,19 +122,19 @@ function E(e) {
 var A = s(408278),
     _ = s(173936),
     S = s(815021),
-    q = s(590202),
-    w = s(814793),
+    w = s(590202),
+    q = s(814793),
     I = s(371912),
     L = s(664618);
 function Q(e) {
     let { quest: t, questContent: s, sourceQuestContent: a, onClose: n } = e,
-        r = (0, w.E0)(t.config),
+        r = (0, q.E0)(t.config),
         c = (0, g.go)(),
         o = (0, I.Lk)({
             isShareable: r,
             questId: t.id,
             trackingCtx: l.useMemo(
-                () => ({ content: s, ctaContent: q.Cy.COPY_QUEST_URL, impressionId: c, sourceQuestContent: a }),
+                () => ({ content: s, ctaContent: w.Cy.COPY_QUEST_URL, impressionId: c, sourceQuestContent: a }),
                 [s, a, c],
             ),
         });
@@ -164,7 +165,7 @@ function R(e) {
         children: (0, i.jsx)(n.E, { variant: "text-md/medium", color: "text-subtle", children: r }),
     });
 }
-function z(e) {
+function W(e) {
     let {
         quest: t,
         questContent: s,

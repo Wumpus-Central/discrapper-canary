@@ -20,8 +20,8 @@ var i = n(627968),
     S = n(590202),
     N = n(971649),
     f = n(901406),
-    P = n(801365),
-    I = n(108811),
+    I = n(801365),
+    P = n(108811),
     h = n(123292),
     x = n(52093),
     U = n(114046),
@@ -32,7 +32,7 @@ var i = n(627968),
     j = n(30370),
     y = n(814793),
     X = n(375708),
-    Y = n(590091);
+    Y = n(876043);
 function R(t) {
     return (0, i.jsx)(D.E, { className: Y.rf, color: "text-muted", variant: "text-xxs/normal", children: t.children });
 }
@@ -108,7 +108,7 @@ function v(t) {
         ],
     });
 }
-var q = n(553409);
+var q = n(730177);
 function F(t) {
     let {
             quest: e,
@@ -130,7 +130,7 @@ function F(t) {
                         children: X.intl.formatToPlainString(X.t.NIimTt, {
                             gameTitle: e.config.messages.gameTitle,
                             targetMinutes: O.targetMinutes,
-                            rewardNameWithArticle: (0, P.mH)(e.config, g),
+                            rewardNameWithArticle: (0, I.mH)(e.config, g),
                         }),
                     }),
                 isComplete: _,
@@ -161,7 +161,7 @@ function F(t) {
                 },
             );
         }, [e, C, n]),
-        I = s.useMemo(
+        P = s.useMemo(
             () => [
                 {
                     renderContent: (t) =>
@@ -182,7 +182,7 @@ function F(t) {
             ],
             [A, _, u, m],
         ),
-        U = a === f.WU.DESKTOP ? L : I,
+        U = a === f.WU.DESKTOP ? L : P,
         p = u && (c || d.length > 0) && !_;
     return (0, i.jsx)(x.Ay, {
         heading: X.intl.string(X.t.dc9w4N),
@@ -207,14 +207,14 @@ function b(t) {
 }
 function k(t) {
     let { quest: e, sourceQuestContent: n } = t,
-        a = (0, N.go)(),
+        a = (0, N.wW)(),
         u = (0, m.Ut)(),
         h = (0, T.bG)([E.default], () => E.default.getCurrentUser()),
         x = s.useCallback(() => {
             (0, f.pu)(e, {
                 content: l.uF.PLAY_QUEST_MODAL,
                 ctaContent: S.Cy.OPEN_GAME_LINK,
-                impressionId: a,
+                impressionId: a(),
                 sourceQuestContent: n,
             });
         }, [e, a, n]),
@@ -255,7 +255,7 @@ function k(t) {
                                   questContentCTA: i,
                                   surfaceId: l.uF.PLAY_QUEST_MODAL,
                                   sourceQuestContent: n,
-                                  impressionId: a,
+                                  impressionId: a(),
                               })
                             : u({
                                   questId: e.id,
@@ -268,8 +268,8 @@ function k(t) {
                 disabled: k.length <= 1,
             },
         ],
-        [G, H] = s.useState({ [f.WU.XBOX]: [], [f.WU.PLAYSTATION]: [], [f.WU.DESKTOP]: [] }),
-        { startingConsoleQuest: w, startConsoleQuest: z } = (0, r.Wj)({
+        [w, G] = s.useState({ [f.WU.XBOX]: [], [f.WU.PLAYSTATION]: [], [f.WU.DESKTOP]: [] }),
+        { startingConsoleQuest: H, startConsoleQuest: z } = (0, r.Wj)({
             questId: e.id,
             beforeRequest: () => {
                 (0, L.E5)(L.kI.STEP_2_CLICKED_INTERNAL, "play_quest_modal_left_panel")
@@ -280,7 +280,7 @@ function k(t) {
                           questContentCTA: S.Cy.DEFIBRILLATOR,
                           surfaceId: l.uF.PLAY_QUEST_MODAL,
                           sourceQuestContent: n,
-                          impressionId: a,
+                          impressionId: a(),
                       })
                     : u({
                           questId: e.id,
@@ -290,7 +290,7 @@ function k(t) {
                       });
             },
             afterRequest: (t) => {
-                H((e) => ({ ...e, [j]: t }));
+                G((e) => ({ ...e, [j]: t }));
             },
         }),
         V = X.intl.string(X.t.qQmNEy);
@@ -301,10 +301,10 @@ function k(t) {
             (V = X.intl.format(X.t["0vGRCS"], {
                 gameTitle: e.config.messages.gameTitle,
                 targetMinutes: U.targetMinutes,
-                rewardNameWithArticle: (0, P.mH)(e.config, h),
+                rewardNameWithArticle: (0, I.mH)(e.config, h),
                 onClickGameTitle: x,
             })),
-        G[j]?.length > 0)
+        w[j]?.length > 0)
     ) {
         let t = A.A.getArticleURL(K.MVz.QUEST_HOW_TO_PLAYSTATION),
             e = A.A.getArticleURL(K.MVz.QUEST_HOW_TO_XBOX);
@@ -313,7 +313,7 @@ function k(t) {
     let Z = X.intl.string(X.t["Gcmjy/"]);
     return (
         Y ? (Z = X.intl.string(X.t["5ZilMg"])) : j === f.WU.DESKTOP && (Z = X.intl.string(X.t["93tEDn"])),
-        (0, i.jsx)(I.A, {
+        (0, i.jsx)(P.A, {
             heading: Z,
             subtitle: V,
             methodSelect: B,
@@ -322,7 +322,7 @@ function k(t) {
                     ? { text: X.intl.string(X.t.E4kW5O), onClick: x }
                     : Y
                       ? q
-                          ? { text: X.intl.string(X.t.nPThNb), onClick: z, loading: w, icon: g.f }
+                          ? { text: X.intl.string(X.t.nPThNb), onClick: z, loading: H, icon: g.f }
                           : {
                                 text: X.intl.string(X.t.S0W8Z5),
                                 onClick: () => {
@@ -331,7 +331,7 @@ function k(t) {
                                         {
                                             content: l.uF.PLAY_QUEST_MODAL,
                                             ctaContent: S.Cy.CONNECT_CONSOLE,
-                                            impressionId: a,
+                                            impressionId: a(),
                                             sourceQuestContent: n,
                                         },
                                         j === f.WU.XBOX ? K.fg2.XBOX : K.fg2.PLAYSTATION,
@@ -348,7 +348,7 @@ function k(t) {
                     noConsoleProgress: Y && j !== b(U.taskType),
                     supportedPlatforms: p,
                     isConnected: q,
-                    errorHints: G[j],
+                    errorHints: w[j],
                 }),
         })
     );
