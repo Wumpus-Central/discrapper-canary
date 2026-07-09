@@ -360,5 +360,6 @@ let c = {
             autocomplete: { alwaysUseLayer: !0, small: !0 },
             submit: { useDisabledStylesOnSubmit: !0, clearOnSubmit: !0 },
             toolbarType: 2,
+            showCharacterCount: !0,
         },
     };

@@ -1,130 +1,135 @@
 "use strict";
-n.d(t, { A: () => T, i: () => d });
+n.d(t, { A: () => g, i: () => c });
 var i = n(17928),
     r = n(228366),
     a = n(280450),
     s = n(763827),
-    l = n(309010);
-let o = new Map(),
-    d = {},
+    l = n(309010),
+    o = n(872772);
+let d = new Map(),
     c = {},
-    u = {},
-    _ = null,
+    u = [],
+    _ = {},
     E = {},
-    A = new Map(),
-    h = !1,
-    I = {};
-function f() {
+    A = null,
+    h = {},
+    I = new Map(),
+    f = !1,
+    p = {};
+function T() {
     let e = l.A.getVoiceChannelId();
-    null != e && (A.delete(e), (E[e] = E[e] ?? !0));
+    null != e && (I.delete(e), (h[e] = h[e] ?? !0));
 }
-class p extends i.Ay.Store {
+class m extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.default, s.A, l.A), this.syncWith([l.A], f);
+        this.waitFor(a.default, s.A, l.A), this.syncWith([l.A], T);
     }
     getRoom(e) {
-        return c[e] ?? d;
+        return _[e] ?? c;
     }
     getRoomUsers(e) {
-        return u[e] ?? o;
+        return E[e] ?? d;
     }
     getPendingPosition() {
-        return _;
+        return A;
     }
     getMediaSessionId(e) {
-        return A.get(e);
+        return I.get(e);
     }
     isVisible(e) {
-        return E[e] ?? !0;
+        return h[e] ?? !0;
     }
     getPendingNote(e) {
-        return I[e] ?? null;
+        return p[e] ?? null;
+    }
+    getNotes(e) {
+        return _[e]?.objects.get(o.N.NOTE) ?? u;
     }
 }
-let T = new p(r.h, {
+let g = new m(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
         let { room: t, guildId: n } = e,
             { users: i, ...r } = t;
-        (c[t.roomId] = r), (u[t.roomId] = i), null != n && null != _ && (_ = null);
+        (_[t.roomId] = r), (E[t.roomId] = i), null != n && null != A && (A = null);
     },
     GUILD_ROOM_CONNECT_FAILURE: function (e) {
         let { roomId: t } = e;
-        if (null == c[t]) return !1;
+        if (null == _[t]) return !1;
         let n = a.default.getId(),
-            i = new Map(u[t]);
-        i.delete(n), (u[t] = i);
+            i = new Map(E[t]);
+        i.delete(n), (E[t] = i);
     },
     GUILD_ROOM_DISCONNECT: function (e) {
         let { userId: t, roomId: n } = e;
-        if (null == c[n]) return !1;
-        let i = new Map(u[n]);
+        if (null == _[n]) return !1;
+        let i = new Map(E[n]);
         i.delete(t),
-            (u[n] = i),
-            h && t === a.default.getId() && ((E[n] = !0), (h = !1)),
-            t === a.default.getId() && delete I[n];
+            (E[n] = i),
+            f && t === a.default.getId() && ((h[n] = !0), (f = !1)),
+            t === a.default.getId() && delete p[n];
     },
     GUILD_ROOM_UPDATE: function (e) {
         let { room: t } = e,
             { users: n, ...i } = t;
-        c[t.roomId] = i;
+        _[t.roomId] = i;
         let r = a.default.getId(),
-            s = u[t.roomId]?.get(r);
-        (u[t.roomId] = n), null != s && u[t.roomId]?.set(r, s);
+            s = E[t.roomId]?.get(r);
+        (E[t.roomId] = n), null != s && E[t.roomId]?.set(r, s);
     },
     GUILD_ROOM_UPDATE_FAILURE: function (e) {
         let { originalRoom: t, originalRoomUsers: n } = e,
-            i = c[t.roomId];
+            i = _[t.roomId];
         if (null == i) return !1;
-        c[t.roomId] = { ...i, background: t.background };
+        _[t.roomId] = { ...i, background: t.background };
         let r = a.default.getId(),
             s = n.get(r);
         if (null == s) {
-            let e = new Map(u[t.roomId]);
-            e.delete(r), (u[t.roomId] = e);
-        } else u[t.roomId]?.set(r, s);
+            let e = new Map(E[t.roomId]);
+            e.delete(r), (E[t.roomId] = e);
+        } else E[t.roomId]?.set(r, s);
     },
     GUILD_ROOM_FETCH_SUCCESS: function (e) {
         let { room: t } = e,
             { users: n, ...i } = t;
-        (c[t.roomId] = i), (u[t.roomId] = n);
+        (_[t.roomId] = i), (E[t.roomId] = n);
     },
     GUILD_ROOM_LOCAL_POSITION_REQUESTED: function (e) {
         let { position: t } = e;
-        _ = t;
+        A = t;
     },
     GUILD_ROOM_TOGGLE_LAYOUT: function (e) {
         let { roomId: t, clearLayout: n } = e;
-        (E[t] = !E[t]), n && (h = !0);
+        (h[t] = !h[t]), n && (f = !0);
     },
     GUILD_ROOM_LOCAL_UPDATE: function (e) {
         let { roomId: t, background: n, position: i, statusId: r, statusText: s } = e;
-        if (null == c[t]) return !1;
+        if (null == _[t]) return !1;
         let l = a.default.getId();
-        if ((null != n && (c[t] = { ...c[t], background: n }), null != i || null != r || null != s)) {
-            let e = u[t].get(l);
+        if ((null != n && (_[t] = { ..._[t], background: n }), null != i || null != r || null != s)) {
+            let e = E[t].get(l);
             if (null != e) {
-                let n = new Map(u[t]);
+                let n = new Map(E[t]);
                 n.set(l, {
                     userId: l,
                     position: i ?? e.position,
                     statusId: r ?? e.statusId,
                     statusText: s ?? e.statusText,
                 }),
-                    (u[t] = n);
+                    (E[t] = n);
             }
         }
     },
     MEDIA_SESSION_JOINED: function () {
         let e = s.A.getChannelId(),
             t = s.A.getMediaSessionId();
-        null != e && null != t && A.set(e, t);
+        null != e && null != t && I.set(e, t);
     },
     GUILD_ROOM_PENDING_NOTE_CREATE: function (e) {
         let { roomId: t, note: n } = e;
-        I[t] = n;
+        p[t] = n;
     },
-    GUILD_ROOM_NOTE_CREATE_START: function (e) {
+    GUILD_ROOM_NOTE_CREATE_COMPLETE: function (e) {
         let { roomId: t } = e;
-        delete I[t];
+        delete p[t];
     },
 });

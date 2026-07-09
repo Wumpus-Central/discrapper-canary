@@ -1,5 +1,15 @@
 "use strict";
-n.d(t, { z5: () => g, zD: () => f, zK: () => m, x2: () => A, Ix: () => T, tB: () => S, AQ: () => N, TJ: () => I });
+n.d(t, {
+    zD: () => f,
+    z5: () => S,
+    zK: () => g,
+    x2: () => A,
+    Ix: () => m,
+    Lw: () => T,
+    tB: () => N,
+    AQ: () => C,
+    TJ: () => I,
+});
 var i = n(517846),
     r = n(636537),
     a = n(228366),
@@ -83,24 +93,31 @@ function f(e, t) {
 async function p(e, t, n) {
     return await r.Bo.post({ url: _.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
 }
-function T(e, t) {
+async function T(e, t, n, i) {
+    return await r.Bo.del({ url: _.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
+}
+function m(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_CREATE", roomId: e, note: t });
 }
-async function m(e, t, n, i) {
-    a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_START", roomId: t }),
-        await p(e, t, { object_type: c.N.NOTE, content: n, position: i });
+async function g(e, t, n, i) {
+    try {
+        await p(e, t, { object_type: c.N.NOTE, content: n, position: i }),
+            a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t });
+    } catch (e) {
+        a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t });
+    }
 }
-async function g(e, t) {
+async function S(e, t) {
     let n = await r.Bo.get({ url: _.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
         i = (0, u.S)(n.body);
     a.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
 }
-async function S(e, t, n) {
+async function N(e, t, n) {
     try {
         await E(e, t, n);
     } catch (e) {}
 }
-async function N(e, t, n) {
+async function C(e, t, n) {
     try {
         await h(e, t, n);
     } catch (e) {}
