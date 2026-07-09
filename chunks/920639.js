@@ -1,76 +1,98 @@
 "use strict";
-n.d(t, { E2: () => p, EB: () => E, U8: () => g, Yv: () => f, e6: () => m, yt: () => _, zR: () => h });
+n.d(t, {
+    E2: () => p,
+    EB: () => f,
+    Ql: () => _,
+    U8: () => m,
+    Yv: () => I,
+    e6: () => T,
+    n0: () => E,
+    yt: () => A,
+    zR: () => h,
+});
 var i = n(95561),
-    r = n(495544),
-    s = n(734057),
-    a = n(763827),
-    o = n(977997),
-    l = n(558076),
-    u = n(652215);
-function d(e) {
+    r = n(280450),
+    a = n(734057),
+    s = n(763827),
+    l = n(977997),
+    o = n(558076),
+    d = n(652215);
+function c(e) {
     let { userId: t, guildId: n, channelId: i } = e,
-        a = t ?? r.default.getId(),
-        o = l.A.getRoomUsers(i);
+        s = t ?? r.default.getId(),
+        l = o.A.getRoomUsers(i);
     return {
-        user_id: a,
-        guild_id: null != n ? n : (s.A.getChannel(i)?.getGuildId() ?? void 0),
+        user_id: s,
+        guild_id: null != n ? n : (a.A.getChannel(i)?.getGuildId() ?? void 0),
         channel_id: i,
-        guild_room_user_count: o.size,
-        guild_room_user_connected: o.has(a),
+        guild_room_user_count: l.size,
+        guild_room_user_connected: l.has(s),
     };
 }
-function c(e, t) {
-    let n = a.A.getMediaSessionId();
+function u(e, t) {
+    let n = s.A.getMediaSessionId();
     if (null != n)
         return void t({
-            voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e)).length,
+            voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length,
             voice_media_session_id: n,
         });
     let i = () => {
-            a.A.removeChangeListener(r), clearTimeout(s);
+            s.A.removeChangeListener(r), clearTimeout(a);
         },
         r = () => {
-            let n = a.A.getMediaSessionId();
+            let n = s.A.getMediaSessionId();
             null != n &&
                 (i(),
                 t({
-                    voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e)).length,
+                    voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length,
                     voice_media_session_id: n,
                 }));
         },
-        s = setTimeout(() => {
-            i(), t({ voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e)).length });
+        a = setTimeout(() => {
+            i(), t({ voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length });
         }, 2500);
-    a.A.addChangeListener(r);
+    s.A.addChangeListener(r);
 }
 function _(e) {
+    let { interactionType: t, ...n } = e;
+    u(n.channelId, (e) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_OBJECT_INTERACTED, { ...c(n), interaction_type: t, ...e });
+    });
+}
+function E(e) {
+    let { interactionType: t, ...n } = e;
+    u(n.channelId, (e) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_INTERACTED, { ...c(n), interaction_type: t, ...e });
+    });
+}
+function A(e) {
     let { location: t, ...n } = e;
-    c(n.channelId, (e) => {
-        i.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_LAYOUT_TOGGLED, { ...d(n), location: t, ...e });
+    u(n.channelId, (e) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_LAYOUT_TOGGLED, { ...c(n), location: t, ...e });
     });
 }
 function h(e) {
     let { location: t, ...n } = e;
-    c(n.channelId, (e) => {
-        i.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_OPENED, { ...d(n), location: t, ...e });
+    u(n.channelId, (e) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_OPENED, { ...c(n), location: t, ...e });
     });
 }
-function f(e) {
+function I(e) {
     let { seatName: t, seatPosition: n, ...r } = e;
-    c(r.channelId, (e) => {
-        i.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_SEAT_SELECTED, {
-            ...d(r),
+    u(r.channelId, (e) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_SEAT_SELECTED, {
+            ...c(r),
             seat_name: t,
             seat_position: [n.x, n.y],
             ...e,
         });
     });
 }
-function E(e) {
+function f(e) {
     let { targetUserId: t, interactionType: n, ...r } = e;
-    c(r.channelId, (e) => {
-        i.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_USER_INTERACTED, {
-            ...d(r),
+    u(r.channelId, (e) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_USER_INTERACTED, {
+            ...c(r),
             target_user_id: t,
             interaction_type: n,
             ...e,
@@ -78,22 +100,22 @@ function E(e) {
     });
 }
 function p(e) {
-    c(e.channelId, (t) => {
-        i.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_USER_CONNECTED, { ...d(e), ...t });
+    u(e.channelId, (t) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_USER_CONNECTED, { ...c(e), ...t });
+    });
+}
+function T(e) {
+    i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_USER_DISCONNECTED, {
+        ...c(e),
+        voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e.channelId)).length,
+        voice_media_session_id: o.A.getMediaSessionId(e.channelId),
     });
 }
 function m(e) {
-    i.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_USER_DISCONNECTED, {
-        ...d(e),
-        voice_state_count: Object.keys(o.A.getVoiceStatesForChannel(e.channelId)).length,
-        voice_media_session_id: l.A.getMediaSessionId(e.channelId),
-    });
-}
-function g(e) {
     let { update: t, ...n } = e;
-    c(n.channelId, (e) => {
-        i.Ay.trackWithMetadata(u.HAw.GUILD_ROOM_USER_UPDATED, {
-            ...d(n),
+    u(n.channelId, (e) => {
+        i.Ay.trackWithMetadata(d.HAw.GUILD_ROOM_USER_UPDATED, {
+            ...c(n),
             ...(function (e) {
                 let t = { update_type: e.updateType, update_reason: e.updateReason };
                 switch (e.updateType) {

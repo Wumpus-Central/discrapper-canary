@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => E });
 var i = n(627968),
     l = n(64700),
     a = n(17928),
@@ -13,68 +13,67 @@ var i = n(627968),
     m = n(287809),
     A = n(562153),
     x = n(446243),
-    g = n(872772),
-    f = n(996752),
-    C = n(189090),
-    y = n(375708),
-    j = n(599459),
-    E = n(739549);
-function v(e) {
-    let { channelId: t, note: n, roomWidth: v } = e,
-        [N, I] = (0, l.useState)(!1),
-        _ = (0, l.useRef)(null),
-        T = (0, f.F)(v).numericAvatarSize / 2,
-        S = (0, a.bG)([m.default], () => m.default.getUser(n.createdBy)),
-        R = (0, a.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
-        b = (0, A.tx)(R, t, S);
-    return null == S || null == R
+    g = n(996752),
+    f = n(189090),
+    C = n(375708),
+    y = n(599459),
+    j = n(739549);
+function E(e) {
+    let { channelId: t, note: n, roomWidth: E } = e,
+        [v, N] = (0, l.useState)(!1),
+        I = (0, l.useRef)(null),
+        _ = (0, g.F)(E).numericAvatarSize / 2,
+        T = (0, a.bG)([m.default], () => m.default.getUser(n.createdBy)),
+        S = (0, a.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
+        R = (0, A.tx)(S, t, T);
+    return null == T || null == S
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.D, {
-                      innerRef: _,
-                      className: j.kL,
+                      innerRef: I,
+                      className: y.kL,
                       onClick: () => {
-                          I(!N);
+                          N(!v);
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
                       children: (0, i.jsx)("img", {
-                          className: j.N4,
-                          src: E.A,
-                          alt: y.intl.string(C.default["Vj+S0/"]),
-                          style: { width: T },
+                          className: y.N4,
+                          src: j.A,
+                          alt: C.intl.string(f.default["Vj+S0/"]),
+                          style: { width: _ },
                       }),
                   }),
                   (0, i.jsxs)(s.x, {
-                      shouldShow: N,
+                      shouldShow: v,
                       onRequestClose: () => {
-                          I(!1);
+                          N(!1);
                       },
                       closeOnClickOutside: !0,
-                      targetElementRef: _,
+                      targetElementRef: I,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: j.oO,
+                              className: y.oO,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: j.wx,
+                                      className: y.wx,
                                       children: [
                                           (0, i.jsxs)("div", {
-                                              className: j.kQ,
+                                              className: y.kQ,
                                               children: [
                                                   (0, i.jsx)(c.eu, {
-                                                      "aria-label": b,
-                                                      src: S.getAvatarURL(R, 24),
+                                                      "aria-label": R,
+                                                      src: T.getAvatarURL(S, 24),
                                                       size: d._3.SIZE_24,
                                                   }),
-                                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: b }),
+                                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: R }),
                                               ],
                                           }),
                                           (0, i.jsx)(o.D, {
                                               onClick: () => {
-                                                  null != R && (0, x.Lw)(R, t, n.objectId, { object_type: g.N.NOTE });
+                                                  null != S && (0, x.yF)(S, t, n.objectId);
                                               },
-                                              className: j.Kk,
+                                              className: y.Kk,
                                               children: (0, i.jsx)(p.u, { size: "sm", color: "currentColor" }),
                                           }),
                                       ],
