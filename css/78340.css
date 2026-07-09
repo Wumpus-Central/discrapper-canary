@@ -51,6 +51,8 @@
 .video__3e32a {
     border-radius: 16px;
     height: 349px;
+    -o-object-fit: contain;
+    object-fit: contain;
     width: 620px
 }
 
@@ -128,6 +130,8 @@
 
 .featureCardImg__3e32a {
     height: 80px;
+    -o-object-fit: contain;
+    object-fit: contain;
     width: 120px
 }
 
