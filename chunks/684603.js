@@ -27,13 +27,13 @@ var n,
     F = s(24001),
     Y = s(104886),
     V = s(945810),
-    p =
+    S =
         (((n = {})[(n.CONTROL = 0)] = "CONTROL"),
         (n[(n.T1_COMPACT = 1)] = "T1_COMPACT"),
         (n[(n.T2_HERO_IMAGE = 2)] = "T2_HERO_IMAGE"),
         n);
-let S = (0, V.mj)({
-    name: "social-entrypoints-v2-activity-panel-p0-visual-upgrade",
+let p = (0, V.mj)({
+    name: "2026-07-activity-entrypoint-ui",
     kind: "user",
     defaultConfig: { variant: 0 },
     variations: { 0: { variant: 0 }, 1: { variant: 1 }, 2: { variant: 2 } },
@@ -156,9 +156,9 @@ function tn(t) {
         tI = s.userStatus?.enrolledAt != null,
         tE = s.userStatus?.completedAt != null,
         tm = (0, q.fc)(s),
-        tN = S.useConfig({ location: B.rE.ACTIVITY_PANEL }).variant,
-        t_ = tN === p.T1_COMPACT,
-        tx = tN === p.T2_HERO_IMAGE,
+        tN = p.useConfig({ location: B.rE.ACTIVITY_PANEL }).variant,
+        t_ = tN === S.T1_COMPACT,
+        tx = tN === S.T2_HERO_IMAGE,
         tL = t_ || tx,
         tP = a.useCallback(async () => {
             if (tL) {
@@ -202,8 +202,8 @@ function tn(t) {
             gameProfileSource: P.GameProfileSources.QuestActivityPanel,
         }),
         tV = tx ? (0, k.tW)(s, k.fY.HERO_IMAGE)?.url : null,
-        tp = (0, k.tW)(s, k.fY.GAME_TILE, th).url,
-        tS = tx && null != tV,
+        tS = (0, k.tW)(s, k.fY.GAME_TILE, th).url,
+        tp = tx && null != tV,
         ty = null != s.config.ctaConfig ? (0, D.Jx)(s.config) : "",
         tR = (0, q.do)({
             quest: s,
@@ -277,7 +277,7 @@ function tn(t) {
             onBlur: tl,
             onMouseLeave: tl,
             children: [
-                tS &&
+                tp &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)("img", { className: te.km, alt: "", src: tV }),
@@ -285,7 +285,7 @@ function tn(t) {
                         ],
                     }),
                 (0, i.jsxs)("div", {
-                    className: l()(te.CU, { [te.eF]: tS }),
+                    className: l()(te.CU, { [te.eF]: tp }),
                     children: [
                         !tL && (0, i.jsx)("div", { className: te.Wp, children: tM }),
                         tL && (0, i.jsx)("div", { className: te.FG, children: tG }),
@@ -293,7 +293,7 @@ function tn(t) {
                             (0, i.jsxs)("div", {
                                 className: te.we,
                                 children: [
-                                    (0, i.jsx)("img", { className: te.Zc, alt: "", src: tp }),
+                                    (0, i.jsx)("img", { className: te.Zc, alt: "", src: tS }),
                                     (0, i.jsxs)("div", {
                                         className: te.l3,
                                         children: [
