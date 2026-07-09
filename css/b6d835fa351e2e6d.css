@@ -60,7 +60,8 @@
     align-items: center;
     display: flex;
     gap: var(--space-8);
-    margin-top: var(--space-8)
+    margin-top: var(--space-8);
+    padding-top: 10px
 }
 
 .customPicker__5d6af {
