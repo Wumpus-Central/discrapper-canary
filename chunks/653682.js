@@ -123,7 +123,14 @@ function I(t) {
                         className: b.mG,
                         children: [
                             (0, n.jsx)(h.E, { color: "text-strong", variant: "text-sm/semibold", children: s }),
-                            i && (0, n.jsx)("span", { className: b.aj, children: p.intl.string(p.t.fyE8sH) }),
+                            i &&
+                                (0, n.jsx)(h.E, {
+                                    variant: "text-xxs/semibold",
+                                    color: "none",
+                                    tag: "span",
+                                    className: b.aj,
+                                    children: p.intl.string(p.t.fyE8sH),
+                                }),
                         ],
                     }),
                     (0, n.jsx)(h.E, { color: "text-default", variant: "text-sm/normal", children: e }),
@@ -200,7 +207,7 @@ function k(t) {
         }),
     });
 }
-function A(t) {
+function E(t) {
     let { id: a } = t,
         [e, i] = s.useState(0),
         r = s.useRef(null),
@@ -405,13 +412,13 @@ function A(t) {
         })
     );
 }
-var E = e(652215),
+var A = e(652215),
     T = e(49999),
     H = e(789051);
 function M(t) {
     let { guildId: a, shouldUpsellCreation: h, transitionState: v, onClose: j } = t,
         N = (0, o.bG)([g.A], () => g.A.getGuild(a), [a]),
-        f = (0, o.bG)([u.A], () => u.A.can(E.xBc.MANAGE_CHANNELS, N)),
+        f = (0, o.bG)([u.A], () => u.A.can(A.xBc.MANAGE_CHANNELS, N)),
         S = [
             { id: 0, name: p.intl.string(p.t.HTA517) },
             { id: 1, name: p.intl.string(p.t["IHjjY/"]) },
@@ -451,7 +458,7 @@ function M(t) {
                     return (e) =>
                         (0, n.jsx)(t, {
                             ...e,
-                            channelType: E.rbe.GUILD_FORUM,
+                            channelType: A.rbe.GUILD_FORUM,
                             guildId: a,
                             prefillChannelName: h ? p.intl.string(p.t["5z1Xat"]) : void 0,
                         });
@@ -478,7 +485,7 @@ function M(t) {
                         className: H._,
                         children: S.map((t, a) => (0, n.jsx)(m.V.Item, { id: a, children: t.name }, a)),
                     }),
-                    (0, n.jsx)(A, { id: C }),
+                    (0, n.jsx)(E, { id: C }),
                 ],
             }),
             f && (0, n.jsx)(c.H, { actions: b }),

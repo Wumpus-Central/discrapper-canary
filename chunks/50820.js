@@ -248,7 +248,9 @@ class ei extends a.PureComponent {
                         className: Q.twitchImageOverlay,
                         children: [
                             (0, i.jsx)(x.H, { className: Q.streamName, children: e.name }),
-                            (0, i.jsx)("div", {
+                            (0, i.jsx)(g.E, {
+                                variant: "text-xs/semibold",
+                                color: "none",
                                 className: Q.streamGame,
                                 children: J.intl.format(J.t.gmCZRY, { game: e.details }),
                             }),

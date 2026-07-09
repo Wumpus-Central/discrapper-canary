@@ -39,13 +39,13 @@ let g = [16, 16, 14, 14, 12, 10, 8],
             P = (0, a.M)(R) ? h : T,
             O = _.Ay.getGuildIconURL({ id: i.id, icon: i.icon, size: 40 }) ?? void 0,
             V = null != i.description ? i.description : C,
-            F = null != N ? N : i?.memberCount,
-            j = null != D ? D : i?.presenceCount,
-            x = null;
-        if (null != O) x = (0, l.jsx)("img", { src: O, alt: "", className: S.my });
+            x = null != N ? N : i?.memberCount,
+            F = null != D ? D : i?.presenceCount,
+            j = null;
+        if (null != O) j = (0, l.jsx)("img", { src: O, alt: "", className: S.my });
         else {
             let e = (0, f.oN)(i.name);
-            x = (0, l.jsx)("div", {
+            j = (0, l.jsx)("div", {
                 className: S.DE,
                 children: (0, l.jsx)(u.E, {
                     className: S.q9,
@@ -82,7 +82,7 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                                         mask: c.Ay.Masks.SQUIRCLE,
                                         width: 40,
                                         height: 40,
-                                        children: null != x ? x : null,
+                                        children: null != j ? j : null,
                                     }),
                                 }),
                             }),
@@ -116,29 +116,33 @@ let g = [16, 16, 14, 14, 12, 10, 8],
                         (0, l.jsxs)("div", {
                             className: S.Fj,
                             children: [
-                                null != j &&
-                                    (0, l.jsxs)("div", {
+                                null != F &&
+                                    (0, l.jsxs)(u.E, {
+                                        variant: "text-xs/semibold",
+                                        color: "none",
                                         className: S.Kl,
                                         children: [
                                             (0, l.jsx)("div", { className: S.JX }),
                                             (0, l.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 children: r
-                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: j })
-                                                    : A.intl.formatToPlainString(A.t["LC+S+m"], { membersOnline: j }),
+                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: F })
+                                                    : A.intl.formatToPlainString(A.t["LC+S+m"], { membersOnline: F }),
                                             }),
                                         ],
                                     }),
-                                null != F &&
-                                    (0, l.jsxs)("div", {
+                                null != x &&
+                                    (0, l.jsxs)(u.E, {
+                                        variant: "text-xs/semibold",
+                                        color: "none",
                                         className: S.Kl,
                                         children: [
                                             (0, l.jsx)("div", { className: S.Li }),
                                             (0, l.jsx)(u.E, {
                                                 variant: "text-xs/normal",
                                                 children: r
-                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: F })
-                                                    : A.intl.formatToPlainString(A.t.zRl6XR, { count: F }),
+                                                    ? A.intl.formatToPlainString(A.t.YMor7k, { count: x })
+                                                    : A.intl.formatToPlainString(A.t.zRl6XR, { count: x }),
                                             }),
                                         ],
                                     }),

@@ -1,7 +1,6 @@
 e.exports = {
     gP: "statsOverlay__1219f",
     wx: "header__1219f",
-    DD: "title__1219f",
     Pz: "headerButtons__1219f",
     b: "closeButton__1219f",
     cL: "copyButton__1219f",

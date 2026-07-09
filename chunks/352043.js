@@ -782,7 +782,7 @@ class tn extends a.Component {
                         },
                     }),
                 }),
-                (0, l.jsx)("div", { className: te.yu, children: t }),
+                (0, l.jsx)(y.E, { variant: "text-xs/semibold", color: "none", className: te.yu, children: t }),
             ],
         });
     }
@@ -3805,8 +3805,8 @@ let s6 = Object.freeze({
                                     n.e("43746"),
                                     n.e("99011"),
                                     n.e("90554"),
-                                    n.e("85802"),
                                     n.e("65200"),
+                                    n.e("85802"),
                                     n.e("26250"),
                                     n.e("51212"),
                                     n.e("84615"),

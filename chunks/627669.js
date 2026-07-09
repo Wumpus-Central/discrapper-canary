@@ -2238,7 +2238,12 @@ function lv(e) {
                           onMouseEnter: d,
                           children: [
                               (0, i.jsx)(ll.J, { upload: r[0], size: ln.L.SMALL }),
-                              (0, i.jsx)("div", { className: lo.qS, children: o }),
+                              (0, i.jsx)(E.E, {
+                                  variant: "text-xs/semibold",
+                                  color: "text-overlay-light",
+                                  className: lo.qS,
+                                  children: o,
+                              }),
                           ],
                       })
                     : (0, i.jsx)(lg, { onMouseEnter: d, channelId: t }),

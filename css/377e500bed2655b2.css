@@ -94,10 +94,7 @@
     background-color: var(--brand-500);
     border: 2px solid var(--background-base-low);
     border-radius: var(--radius-lg);
-    color: var(--white);
     display: flex;
-    font-size: 12px;
-    font-weight: var(--font-weight-semibold);
     height: 16px;
     inset-inline-end: -4px;
     justify-content: center;

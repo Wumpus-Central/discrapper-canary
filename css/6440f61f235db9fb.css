@@ -142,9 +142,6 @@
 .memberCount_f44397 {
     align-items: center;
     display: flex;
-    font-size: 12px;
-    font-weight: var(--font-weight-semibold);
-    line-height: 16px;
     margin-inline-end: 16px
 }
 

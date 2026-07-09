@@ -13,8 +13,8 @@ var n,
     g = i(778712),
     f = i(834730),
     p = i(43990),
-    A = i(821609),
-    x = i(387755),
+    x = i(821609),
+    A = i(387755),
     v = i(228366);
 let E = {
     move(e, t) {
@@ -183,14 +183,14 @@ class D extends s.PureComponent {
         )
             return;
         h = !0;
-        let { clientWidth: A, clientHeight: x } = n,
-            v = I(N({ top: i - this._offsetY, left: t - this._offsetX }, l, s, A, x));
+        let { clientWidth: x, clientHeight: A } = n,
+            v = I(N({ top: i - this._offsetY, left: t - this._offsetX }, l, s, x, A));
         if (u) {
             let e = b((v = y(v)));
             (g = e[0]), (f = e[1]);
         } else v = { top: v.top, left: v.left };
-        2 === o && f !== this.state.horizontalOrientation && ((this._offsetX = A - this._offsetX), (p = !0)),
-            2 === a && g !== this.state.verticalOrientation && ((this._offsetY = x - this._offsetY), (p = !0)),
+        2 === o && f !== this.state.horizontalOrientation && ((this._offsetX = x - this._offsetX), (p = !0)),
+            2 === a && g !== this.state.verticalOrientation && ((this._offsetY = A - this._offsetY), (p = !0)),
             this.setDOMPositions(v),
             m || r?.(v, n),
             d?.(v, n),
@@ -293,8 +293,8 @@ var L = i(793574),
     eg = i(980707),
     ef = i(477782),
     ep = i(428689),
-    eA = i(270816),
-    ex = i(495544),
+    ex = i(270816),
+    eA = i(280450),
     ev = i(855187),
     eE = i(384059),
     ej = i(818348),
@@ -303,8 +303,8 @@ var L = i(793574),
 function eN(e) {
     let { onClose: t, channel: i } = e,
         { analyticsLocations: n } = (0, k.Ay)(),
-        a = (0, d.bG)([ex.default], () => ex.default.getId()),
-        o = (0, eA.H)({ deviceType: eC.oh.VIDEO_INPUT, analyticsLocations: n, asSubmenu: !0 }),
+        a = (0, d.bG)([eA.default], () => eA.default.getId()),
+        o = (0, ex.H)({ deviceType: eC.oh.VIDEO_INPUT, analyticsLocations: n, asSubmenu: !0 }),
         r = (0, ev.A)(a),
         c = (0, s.useCallback)(() => {
             (0, eE.X)(n[0], eE.O.JOIN_VIDEO_CALL),
@@ -434,7 +434,7 @@ function eT(e) {
         X = s.useCallback(() => {
             (0, eE.X)(u[0], eE.O.DISCONNECT),
                 Z.default.track(C.HAw.RING_CALL_DECLINED, { location: u[0], guild_id: a.guild_id, ...(0, O.dI)(a) }),
-                x.A.stopRinging(a.id);
+                A.A.stopRinging(a.id);
         }, [a, u]),
         z = s.useCallback(() => {
             (0, eE.X)(u[0], eE.O.JOIN_CALL),
@@ -443,7 +443,7 @@ function eT(e) {
         }, [a, u]);
     s.useEffect(() => {
         function e(e) {
-            e.key === eO.dh.ESCAPE && x.A.stopRinging(a.id);
+            e.key === eO.dh.ESCAPE && A.A.stopRinging(a.id);
         }
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [a]),
@@ -514,7 +514,9 @@ function eT(e) {
                                                             : null != _
                                                               ? (0, l.jsx)("div", {
                                                                     className: ek.$r,
-                                                                    children: (0, l.jsx)("div", {
+                                                                    children: (0, l.jsx)(f.E, {
+                                                                        variant: "text-md/medium",
+                                                                        color: "none",
                                                                         className: ek.q9,
                                                                         children: (0, W.Rb)(_),
                                                                     }),
@@ -575,7 +577,7 @@ function eT(e) {
                             (0, l.jsxs)("div", {
                                 className: ek.o1,
                                 children: [
-                                    (0, l.jsx)(A.$, {
+                                    (0, l.jsx)(x.$, {
                                         text: e_.intl.string(e_.t.L5eIZ2),
                                         fullWidth: !0,
                                         variant: "secondary",
@@ -602,7 +604,7 @@ function eT(e) {
                                                   });
                                               },
                                           })
-                                        : (0, l.jsx)(A.$, {
+                                        : (0, l.jsx)(x.$, {
                                               text: e_.intl.string(e_.t["96ANUN"]),
                                               onClick: z,
                                               fullWidth: !0,
@@ -670,7 +672,7 @@ function eB(e) {
                             guild_id: i.guild_id,
                             ...(0, O.dI)(i),
                         }),
-                        x.A.stopRinging(i.id);
+                        A.A.stopRinging(i.id);
                 },
             }),
             t &&
@@ -744,7 +746,7 @@ function eY(e) {
         P = (0, m.z)({ value: +!!u, config: { ...r.config.stiff, clamp: !0 } }, "animate-always");
     s.useEffect(() => {
         function e(e) {
-            e.key === eO.dh.ESCAPE && x.A.stopRinging(a.id);
+            e.key === eO.dh.ESCAPE && A.A.stopRinging(a.id);
         }
         return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
     }, [a]);
@@ -826,7 +828,7 @@ function eY(e) {
                                 ? (0, l.jsx)("div", {
                                       "data-button-hoisted-classname-wrapper": !0,
                                       className: eU.jc,
-                                      children: (0, l.jsx)(A.$, {
+                                      children: (0, l.jsx)(x.$, {
                                           variant: "secondary",
                                           size: "sm",
                                           text: e_.intl.string(e_.t["8B0UDr"]),
