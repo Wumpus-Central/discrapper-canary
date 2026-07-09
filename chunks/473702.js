@@ -1,15 +1,16 @@
-i.d(t, { T: () => s, g: () => n }), i(64700);
-var r,
-    n =
-        (((r = {})[(r.WHAT_YOU_LOSE = 1)] = "WHAT_YOU_LOSE"),
-        (r[(r.CONFIRM = 2)] = "CONFIRM"),
-        (r[(r.PREVIEW = 3)] = "PREVIEW"),
-        (r[(r.CONFIRM_DISCOUNT = 4)] = "CONFIRM_DISCOUNT"),
-        (r[(r.DISCOUNT_APPLIED = 5)] = "DISCOUNT_APPLIED"),
-        (r[(r.PAUSE_SELECT = 6)] = "PAUSE_SELECT"),
-        (r[(r.PAUSE_CONFIRM = 7)] = "PAUSE_CONFIRM"),
-        r);
-let s = {
+"use strict";
+n.d(t, { T: () => a, g: () => r }), n(64700);
+var i,
+    r =
+        (((i = {})[(i.WHAT_YOU_LOSE = 1)] = "WHAT_YOU_LOSE"),
+        (i[(i.CONFIRM = 2)] = "CONFIRM"),
+        (i[(i.PREVIEW = 3)] = "PREVIEW"),
+        (i[(i.CONFIRM_DISCOUNT = 4)] = "CONFIRM_DISCOUNT"),
+        (i[(i.DISCOUNT_APPLIED = 5)] = "DISCOUNT_APPLIED"),
+        (i[(i.PAUSE_SELECT = 6)] = "PAUSE_SELECT"),
+        (i[(i.PAUSE_CONFIRM = 7)] = "PAUSE_CONFIRM"),
+        i);
+let a = {
     1: "What You're Losing",
     2: "Confirm Cancellation",
     3: "Preview Updated Subscription",
