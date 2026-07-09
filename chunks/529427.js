@@ -18,7 +18,7 @@ function C(e) {
             renderStepBody: i,
             renderLeftColumn: r,
             renderRightColumn: C,
-            renderBelowColumns: h,
+            renderBottomContent: h,
             primaryCTAButtonProps: E,
             onBackClick: A,
         } = e,
@@ -30,7 +30,7 @@ function C(e) {
                 n === l.X.CUSTOM_STEP_BODY
                     ? i()
                     : (0, a.jsxs)(a.Fragment, {
-                          children: [(0, a.jsxs)("div", { className: m.D, children: [r(), C()] }), h?.()],
+                          children: [(0, a.jsxs)("div", { className: m.D, children: [r(), C()] }), null != h && h()],
                       }),
             [n, i, r, C, h],
         ),

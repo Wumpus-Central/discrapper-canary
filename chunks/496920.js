@@ -2184,7 +2184,7 @@ let n7 = {
                 {
                     renderLeftColumn: a,
                     renderRightColumn: u,
-                    renderBelowColumns: c,
+                    renderBottomContent: c,
                     ctaDisabled: d,
                     loading: p,
                 } = (function (e) {
@@ -2284,7 +2284,7 @@ let n7 = {
                                           ],
                                       });
                             },
-                            renderBelowColumns: () =>
+                            renderBottomContent: () =>
                                 g
                                     ? (0, l.jsx)(nZ.A, {
                                           giftsToNextTier: _,
@@ -2307,7 +2307,7 @@ let n7 = {
                 layout: ep.XZ.TWO_COLUMN,
                 renderLeftColumn: a,
                 renderRightColumn: u,
-                renderBelowColumns: c,
+                renderBottomContent: c,
                 primaryCTAButtonProps: m,
             });
         },
