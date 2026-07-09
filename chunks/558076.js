@@ -72,9 +72,16 @@ let T = new p(r.h, {
         (u[t.roomId] = n), null != s && u[t.roomId]?.set(r, s);
     },
     GUILD_ROOM_UPDATE_FAILURE: function (e) {
-        let { originalRoom: t, originalRoomUsers: n } = e;
-        if (null == c[t.roomId]) return !1;
-        (c[t.roomId] = t), (u[t.roomId] = n);
+        let { originalRoom: t, originalRoomUsers: n } = e,
+            i = c[t.roomId];
+        if (null == i) return !1;
+        c[t.roomId] = { ...i, background: t.background };
+        let r = a.default.getId(),
+            s = n.get(r);
+        if (null == s) {
+            let e = new Map(u[t.roomId]);
+            e.delete(r), (u[t.roomId] = e);
+        } else u[t.roomId]?.set(r, s);
     },
     GUILD_ROOM_FETCH_SUCCESS: function (e) {
         let { room: t } = e,

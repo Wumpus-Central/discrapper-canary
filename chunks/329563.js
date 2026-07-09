@@ -1,6 +1,9 @@
 "use strict";
 var i = n(626584),
     r = n(279234);
+try {
+    performance.setResourceTimingBufferSize(500);
+} catch {}
 let a = new i.A("libdiscore");
 !(async function () {
     try {
@@ -10,7 +13,7 @@ let a = new i.A("libdiscore");
     }
     setTimeout(() => {
         try {
-            n(998954);
+            n(424045);
         } finally {
             n(19575).Ay.indexLoadedAsync();
         }
