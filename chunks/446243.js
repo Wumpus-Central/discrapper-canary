@@ -1,13 +1,14 @@
 "use strict";
 n.d(t, {
-    zD: () => p,
-    z5: () => C,
-    zK: () => S,
+    z5: () => R,
+    HW: () => S,
     x2: () => h,
+    zK: () => N,
     Ix: () => g,
-    tB: () => R,
-    yF: () => N,
-    AQ: () => O,
+    zD: () => p,
+    tB: () => O,
+    yF: () => C,
+    AQ: () => L,
     TJ: () => f,
 });
 var i = n(517846),
@@ -116,7 +117,10 @@ async function m(e, t, n, i) {
 function g(e, t) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_CREATE", roomId: e, note: t });
 }
-async function S(e, t, n, i) {
+function S(e) {
+    a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId: e });
+}
+async function N(e, t, n, i) {
     try {
         await T(e, t, { object_type: c.N.NOTE, content: n, position: i }),
             t !== e && (0, o.Ql)({ interactionType: "note_created", guildId: e, channelId: t }),
@@ -125,21 +129,21 @@ async function S(e, t, n, i) {
         a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t });
     }
 }
-async function N(e, t, n) {
+async function C(e, t, n) {
     await m(e, t, n, { object_type: c.N.NOTE }),
         t !== e && (0, o.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t });
 }
-async function C(e, t) {
+async function R(e, t) {
     let n = await r.Bo.get({ url: _.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
         i = (0, u.S)(n.body);
     a.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
 }
-async function R(e, t, n) {
+async function O(e, t, n) {
     try {
         await A(e, t, n);
     } catch (e) {}
 }
-async function O(e, t, n) {
+async function L(e, t, n) {
     try {
         await I(e, t, n);
     } catch (e) {}

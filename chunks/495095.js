@@ -10,10 +10,10 @@ var l = t(627968),
     d = t(408018),
     A = t(138617),
     h = t(7584),
-    m = t(408822),
-    C = t(662731),
+    m = t(446243),
+    C = t(189090),
     E = t(375708),
-    p = t(691053);
+    p = t(927066);
 function x(e) {
     let { channel: n, onClose: t } = e,
         [x, g] = (0, i.useState)(""),
@@ -41,6 +41,7 @@ function x(e) {
                 className: p.Kf,
                 innerClassName: p.Kf,
                 maxCharacterCount: 512,
+                showRemainingCharsAfterCount: 10,
                 onChange: (e, n, t) => {
                     f(n), v(t), g(h.Ay.translateInlineEmojiToSurrogates(n));
                 },

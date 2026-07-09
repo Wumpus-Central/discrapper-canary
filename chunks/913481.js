@@ -16,7 +16,7 @@ var i = n(627968),
 function g(e) {
     let { channelId: t, pendingNote: n, roomWidth: s, containerRef: d } = e,
         u = (0, p.F)(s).numericAvatarSize / 2,
-        [g, f] = (0, r.z)(() => ({ x: -1 * u, y: -1 * u })),
+        [g, f] = (0, r.z)(() => ({ x: -1 * u, y: -1 * u, config: { clamp: !0, tension: 300 } })),
         C = (0, l.useRef)(!1);
     return (
         (0, l.useEffect)(() => {
@@ -36,12 +36,18 @@ function g(e) {
                             y: (100 * a) / (e?.clientHeight ?? 1),
                         }),
                         (C.current = !0));
+                },
+                a = (e) => {
+                    "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (0, c.HW)(t));
                 };
             return (
                 e?.addEventListener("mousemove", i),
                 e?.addEventListener("click", l),
+                document.addEventListener("keydown", a),
                 () => {
-                    e?.removeEventListener("mousemove", i), e?.removeEventListener("click", l);
+                    e?.removeEventListener("mousemove", i),
+                        e?.removeEventListener("click", l),
+                        document.removeEventListener("keydown", a);
                 }
             );
         }, [d, n, t, C, f]),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => g, i: () => c });
+n.d(t, { A: () => S, i: () => c });
 var i = n(17928),
     r = n(228366),
     a = n(280450),
@@ -20,7 +20,11 @@ function T() {
     let e = l.A.getVoiceChannelId();
     null != e && (I.delete(e), (h[e] = h[e] ?? !0));
 }
-class m extends i.Ay.Store {
+function m(e) {
+    let { roomId: t } = e;
+    delete p[t];
+}
+class g extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default, s.A, l.A), this.syncWith([l.A], T);
     }
@@ -46,7 +50,7 @@ class m extends i.Ay.Store {
         return _[e]?.objects.get(o.N.NOTE) ?? u;
     }
 }
-let g = new m(r.h, {
+let S = new g(r.h, {
     GUILD_ROOM_CONNECT: function (e) {
         let { room: t, guildId: n } = e,
             { users: i, ...r } = t;
@@ -128,8 +132,6 @@ let g = new m(r.h, {
         let { roomId: t, note: n } = e;
         p[t] = n;
     },
-    GUILD_ROOM_NOTE_CREATE_COMPLETE: function (e) {
-        let { roomId: t } = e;
-        delete p[t];
-    },
+    GUILD_ROOM_PENDING_NOTE_DELETE: m,
+    GUILD_ROOM_NOTE_CREATE_COMPLETE: m,
 });
