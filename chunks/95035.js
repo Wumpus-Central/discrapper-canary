@@ -27,5 +27,3 @@ let u = l.forwardRef(function (e, t) {
         C = (0, r.jsx)("a", { ref: t, href: a, onClick: f, onKeyPress: k, ...o, children: u });
     return (0, r.jsx)(n.vN, { ...i, children: C });
 });
-hildren: I;
-})})

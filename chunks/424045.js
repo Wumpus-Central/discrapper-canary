@@ -1364,7 +1364,7 @@ if (
     n.e("7451").then(n.t.bind(n, 121014, 19));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ej.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 575724, Version Hash: d9c3fd176347943c77cc50f1b586262742dab223`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 575848, Version Hash: d90a75e22238c62ee8352f4c80ee70b71a9e4fdb`,
 ),
     v.A.setTags({ appContext: G.QCW }),
     ep.A.initBasic(),
@@ -18670,7 +18670,7 @@ let gv = "isHideDevBanner",
                     className: tl()(gy.Wz, gy.mr),
                     children: [
                         (0, O.jsx)(gD, { className: gy.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "575724" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "575848" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -25640,6 +25640,8 @@ function Ri(e) {
                     return (0, O.jsx)(dH, { initialSection: G.m3P.PENDING });
                 case "sessionManagement":
                     return (0, O.jsx)(tw.rd, { to: (0, gg.settingsPathToRoute)(CS.od.SESSIONS) });
+                case "messageRequests":
+                    return (0, O.jsx)(tw.rd, { to: G.BVt.MESSAGE_REQUESTS });
                 case "connections":
                     return (0, O.jsx)(tw.rd, {
                         to: { pathname: (0, gg.settingsPathToRoute)(CS.od.CONNECTIONS), search: e.location.search },

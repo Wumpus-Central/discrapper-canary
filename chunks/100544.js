@@ -1,10 +1,10 @@
 "use strict";
-n.d(t, { CT: () => l, W6: () => o, WM: () => d, XY: () => u, g6: () => a, j_: () => c });
+n.d(t, { CT: () => o, W6: () => l, WM: () => u, XY: () => d, g6: () => s, j_: () => c });
 var i,
     r,
-    s,
-    a = (((i = {}).INACTIVE = "inactive"), (i.BACKGROUND = "background"), (i.ACTIVE = "active"), i),
-    o =
+    a,
+    s = (((i = {}).INACTIVE = "inactive"), (i.BACKGROUND = "background"), (i.ACTIVE = "active"), i),
+    l =
         (((r = {}).INVITE = "invite"),
         (r.GUILD_TEMPLATE = "guild-template"),
         (r.CHANNEL = "channel"),
@@ -58,18 +58,19 @@ var i,
         (r.SUBSCRIPTION_SETTINGS = "subscription-settings"),
         (r.ROLL_DICE = "roll-dice"),
         (r.GAME_PROFILE = "game-profile"),
+        (r.MESSAGE_REQUESTS = "message-requests"),
         r);
-let l = "CacheStoreLazy",
-    u = "CacheStoreChannelsLazy",
+let o = "CacheStoreLazy",
+    d = "CacheStoreChannelsLazy",
     c = "CacheStore";
-var d =
-    (((s = {}).NONE = "none"),
-    (s.SLIDE_UP = "slide-up"),
-    (s.SLIDE_IN = "slide-in"),
-    (s.SLIDE_OUT = "slide-out"),
-    (s.SLIDE_IN_OUT = "slide-in-out"),
-    (s.SLIDE_IN_OUT_REVERSE = "slide-in-out-reverse"),
-    (s.FADE = "fade"),
-    s);
+var u =
+    (((a = {}).NONE = "none"),
+    (a.SLIDE_UP = "slide-up"),
+    (a.SLIDE_IN = "slide-in"),
+    (a.SLIDE_OUT = "slide-out"),
+    (a.SLIDE_IN_OUT = "slide-in-out"),
+    (a.SLIDE_IN_OUT_REVERSE = "slide-in-out-reverse"),
+    (a.FADE = "fade"),
+    a);
 Object.freeze({ START: { x: 0, y: 0 }, END: { x: 1, y: 0 } }),
     Object.freeze({ START: { x: 0, y: 0 }, END: { x: 0, y: 1 } });
