@@ -14,5 +14,3 @@ function a(e, t) {
         return () => cancelAnimationFrame(r);
     }, [e, t, n]);
 }
-r;
-)},[e,t,n])}
