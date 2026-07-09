@@ -1,5 +1,5 @@
-var n,
-    r = i(31144),
+var r,
+    n = i(31144),
     o = i(248702),
     a = i(115977),
     s = i(899656),
@@ -16,22 +16,22 @@ var m = i(295985),
     g = i(766200),
     v = i(347989);
 function C(e, t, i) {
-    let n = e / 360,
-        r = t / 100,
+    let r = e / 360,
+        n = t / 100,
         o = i / 100,
         a,
         s,
         l;
-    if (0 === r) a = s = l = o;
+    if (0 === n) a = s = l = o;
     else {
         let e = (e, t, i) => (
                 i < 0 && (i += 1),
                 i > 1 && --i,
                 i < 1 / 6 ? e + (t - e) * 6 * i : i < 0.5 ? t : i < 2 / 3 ? e + (t - e) * (2 / 3 - i) * 6 : e
             ),
-            t = o < 0.5 ? o * (1 + r) : o + r - o * r,
+            t = o < 0.5 ? o * (1 + n) : o + n - o * n,
             i = 2 * o - t;
-        (a = e(i, t, n + 1 / 3)), (s = e(i, t, n)), (l = e(i, t, n - 1 / 3));
+        (a = e(i, t, r + 1 / 3)), (s = e(i, t, r)), (l = e(i, t, r - 1 / 3));
     }
     let c = (e) => {
         let t = Math.round(255 * e).toString(16);
@@ -43,18 +43,18 @@ async function y() {
     return (await f.t.get("/omni/asset/fetch-all")).data;
 }
 var w = new Map();
-async function b(e) {
+async function _(e) {
     if (e.startsWith("data:")) return e;
     let t = w.get(e);
     if (t) return t;
     let i = await (await fetch(e)).blob(),
-        n = await new Promise((e, t) => {
-            let n = new FileReader();
-            (n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(i);
+        r = await new Promise((e, t) => {
+            let r = new FileReader();
+            (r.onloadend = () => e(r.result)), (r.onerror = t), r.readAsDataURL(i);
         });
-    return w.set(e, n), n;
+    return w.set(e, r), r;
 }
-async function _() {
+async function b() {
     let e = await y();
     if (!e.theme) throw Error("Theme URL not found in assets response");
     let t = e.theme,
@@ -64,12 +64,12 @@ async function _() {
         if (!e.ok) throw Error(`Failed to fetch theme: ${e.statusText}`);
         i = await e.json();
     } else i = (await f.t.get(t)).data;
-    let n = e["logo.png"] || e["logo.svg"] || e["logo.jpg"] || e["logo.jpeg"] || e["logo.webp"] || i.logo,
-        r = n;
-    return n && (r = await b(n)), { ...i, logo: r };
+    let r = e["logo.png"] || e["logo.svg"] || e["logo.jpg"] || e["logo.jpeg"] || e["logo.webp"] || i.logo,
+        n = r;
+    return r && (n = await _(r)), { ...i, logo: n };
 }
-async function S() {
-    let e = await _();
+async function L() {
+    let e = await b();
     return (
         e.main &&
             (function (e, t) {
@@ -84,25 +84,25 @@ async function S() {
                                     .join(""));
                             let i = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(t);
                             if (!i) return null;
-                            let n = Number.parseInt(i[1], 16) / 255,
-                                r = Number.parseInt(i[2], 16) / 255,
+                            let r = Number.parseInt(i[1], 16) / 255,
+                                n = Number.parseInt(i[2], 16) / 255,
                                 o = Number.parseInt(i[3], 16) / 255,
-                                a = Math.max(n, r, o),
-                                s = Math.min(n, r, o),
+                                a = Math.max(r, n, o),
+                                s = Math.min(r, n, o),
                                 l = 0,
                                 c = 0,
                                 d = (a + s) / 2;
                             if (a !== s) {
                                 let e = a - s;
                                 switch (((c = d > 0.5 ? e / (2 - a - s) : e / (a + s)), a)) {
-                                    case n:
-                                        l = ((r - o) / e + 6 * (r < o)) / 6;
-                                        break;
                                     case r:
-                                        l = ((o - n) / e + 2) / 6;
+                                        l = ((n - o) / e + 6 * (n < o)) / 6;
+                                        break;
+                                    case n:
+                                        l = ((o - r) / e + 2) / 6;
                                         break;
                                     case o:
-                                        l = ((n - r) / e + 4) / 6;
+                                        l = ((r - n) / e + 4) / 6;
                                 }
                             }
                             return { h: 360 * l, s: 100 * c, l: 100 * d };
@@ -118,9 +118,9 @@ async function S() {
                             900: C(t.h, t.s, 20),
                         };
                     })(e),
-                    n = document.getElementById("incode-theme");
-                n || (((n = document.createElement("style")).id = "incode-theme"), document.head.appendChild(n));
-                let r = `
+                    r = document.getElementById("incode-theme");
+                r || (((r = document.createElement("style")).id = "incode-theme"), document.head.appendChild(r));
+                let n = `
     :root,
     :host {
       --primitive-color-brand-50: ${i[50]};
@@ -133,16 +133,17 @@ async function S() {
       --button-primary-text-default: ${t || "#ffffff"};
     }
   `;
-                n.textContent = r;
+                r.textContent = n;
             })(e.main, e.buttonColor),
         e
     );
 }
-var L,
+var S,
     E = () =>
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -160,8 +161,8 @@ var L,
         ])
             .then(i.bind(i, 590327))
             .then((e) => e.Id),
-    k = new Set(["IP_ADDRESS", "TRUST_GRAPH"]);
-function x(e) {
+    I = new Set(["IP_ADDRESS", "TRUST_GRAPH"]);
+function T(e) {
     return "IP_ADDRESS" === e
         ? () =>
               Promise.resolve()
@@ -260,7 +261,8 @@ function x(e) {
                                                   .then((e) => e.documentCaptureMachine)
                                         : "COMBINED_CONSENT" === e
                                           ? () =>
-                                                Promise.resolve()
+                                                i
+                                                    .e("35607")
                                                     .then(i.bind(i, 778186))
                                                     .then((e) => e.consentMachine)
                                           : "MANDATORY_CONSENT" === e
@@ -329,7 +331,7 @@ function x(e) {
                                                                           .then((e) => e.dynamicFormsMachine)
                                                                 : void 0;
 }
-var I = {
+var M = {
     REDIRECT_TO_MOBILE: () =>
         Promise.all([
             i.e("98936"),
@@ -344,13 +346,23 @@ var I = {
             .then(i.bind(i, 531147))
             .then((e) => e.RedirectToMobile),
     PHONE: () =>
-        Promise.all([i.e("98936"), i.e("26725"), i.e("47673"), i.e("66850"), i.e("50894"), i.e("26827"), i.e("12224")])
+        Promise.all([
+            i.e("98936"),
+            i.e("26725"),
+            i.e("66638"),
+            i.e("47673"),
+            i.e("66850"),
+            i.e("50894"),
+            i.e("26827"),
+            i.e("12224"),
+        ])
             .then(i.bind(i, 515907))
             .then((e) => e.Phone),
     EMAIL: () =>
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -391,6 +403,7 @@ var I = {
             i.e("58941"),
             i.e("87127"),
             i.e("33144"),
+            i.e("83243"),
             i.e("11716"),
             i.e("90407"),
             i.e("44800"),
@@ -415,6 +428,7 @@ var I = {
             i.e("58941"),
             i.e("30606"),
             i.e("87601"),
+            i.e("83243"),
             i.e("25526"),
             i.e("72245"),
             i.e("78970"),
@@ -426,6 +440,7 @@ var I = {
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -436,6 +451,7 @@ var I = {
             i.e("30606"),
             i.e("33144"),
             i.e("6940"),
+            i.e("83243"),
             i.e("25526"),
             i.e("79039"),
             i.e("78970"),
@@ -448,6 +464,7 @@ var I = {
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -467,6 +484,7 @@ var I = {
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -483,17 +501,18 @@ var I = {
             .then(i.bind(i, 997923))
             .then((e) => e.DocumentCapture),
     COMBINED_CONSENT: () =>
-        Promise.resolve()
+        Promise.all([i.e("66638"), i.e("30931"), i.e("83243"), i.e("59975"), i.e("35607"), i.e("5460")])
             .then(i.bind(i, 225055))
             .then((e) => e.Consent),
     MANDATORY_CONSENT: () =>
-        Promise.all([i.e("30682"), i.e("2895")])
+        Promise.all([i.e("66638"), i.e("30931"), i.e("59975"), i.e("30682"), i.e("2895")])
             .then(i.bind(i, 962098))
             .then((e) => e.MandatoryConsent),
     SIGNATURE: () =>
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -504,6 +523,7 @@ var I = {
             i.e("30606"),
             i.e("33144"),
             i.e("6940"),
+            i.e("30931"),
             i.e("58349"),
             i.e("88680"),
         ])
@@ -513,6 +533,7 @@ var I = {
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -524,6 +545,7 @@ var I = {
             i.e("87601"),
             i.e("33144"),
             i.e("6940"),
+            i.e("83243"),
             i.e("47898"),
             i.e("72051"),
         ])
@@ -538,7 +560,16 @@ var I = {
             .then(i.bind(i, 154211))
             .then((e) => e.Antifraud),
     CUSTOM_FIELDS: () =>
-        Promise.all([i.e("98936"), i.e("47673"), i.e("58941"), i.e("52061"), i.e("98808"), i.e("36027"), i.e("85041")])
+        Promise.all([
+            i.e("98936"),
+            i.e("66638"),
+            i.e("47673"),
+            i.e("58941"),
+            i.e("52061"),
+            i.e("98808"),
+            i.e("36027"),
+            i.e("85041"),
+        ])
             .then(i.bind(i, 704584))
             .then((e) => e.CustomFields),
     WATCHLIST: () =>
@@ -554,11 +585,11 @@ var I = {
             .then(i.bind(i, 716670))
             .then((e) => e.CustomWatchlist),
     AE_SIGNATURE: () =>
-        Promise.all([i.e("51944"), i.e("26001"), i.e("67862"), i.e("61135"), i.e("27516")])
+        Promise.all([i.e("66638"), i.e("51944"), i.e("26001"), i.e("67862"), i.e("61135"), i.e("27516")])
             .then(i.bind(i, 607191))
             .then((e) => e.AeSignature),
     QE_SIGNATURE: () =>
-        Promise.all([i.e("51944"), i.e("26001"), i.e("67862"), i.e("61135"), i.e("46332")])
+        Promise.all([i.e("66638"), i.e("51944"), i.e("26001"), i.e("67862"), i.e("61135"), i.e("46332")])
             .then(i.bind(i, 666615))
             .then((e) => e.QeSignature),
     CROSS_DOCUMENT_DATA_MATCH: () =>
@@ -569,6 +600,7 @@ var I = {
         Promise.all([
             i.e("98936"),
             i.e("26725"),
+            i.e("66638"),
             i.e("47673"),
             i.e("51944"),
             i.e("66850"),
@@ -589,31 +621,31 @@ var I = {
             .then(i.bind(i, 660376))
             .then((e) => e.DynamicForms),
 };
-function T() {
-    L ||
-        (L = Promise.all([i.e("26725"), i.e("87127"), i.e("14989")])
+function x() {
+    S ||
+        (S = Promise.all([i.e("26725"), i.e("87127"), i.e("14989")])
             .then(i.bind(i, 783228))
             .then((e) => e.HomeScreen)).catch(() => {
-            L = void 0;
+            S = void 0;
         });
 }
-async function M(e) {
-    await (0, v.T7)({ token: e.token }), (0, r.r)((0, r.i)(e.lang ? { lang: e.lang } : void 0));
+async function k(e) {
+    await (0, v.T7)({ token: e.token }), (0, n.r)((0, n.i)(e.lang ? { lang: e.lang } : void 0));
 }
-async function A(e) {
-    let { token: t, lang: i, flowManager: n } = e;
-    await M({ token: t, lang: i }), n.load();
+async function O(e) {
+    let { token: t, lang: i, flowManager: r } = e;
+    await k({ token: t, lang: i }), r.load();
 }
-async function R() {
+async function P() {
     try {
-        let e = await S(),
+        let e = await L(),
             t = { logoSrc: e.logo, subtitle: e.subtitle, hideFooterBranding: e.hideFooterBranding };
         return (0, a.t)(t), { theme: e, uiConfig: t };
     } catch {
         return {};
     }
 }
-var O = ({ moduleKey: e, onNext: t }) =>
+var A = ({ moduleKey: e, onNext: t }) =>
         (0, o.v)("section", {
             class: "IncodeUnsupportedModule",
             "aria-live": "polite",
@@ -634,47 +666,47 @@ var O = ({ moduleKey: e, onNext: t }) =>
                 ],
             }),
         }),
-    P = () => null,
-    D = () => Promise.resolve(P),
-    F = new WeakMap(),
-    N = new WeakMap();
-function U(e) {
-    if (e) return F.get(e);
+    R = () => null,
+    F = () => Promise.resolve(R),
+    D = new WeakMap(),
+    U = new WeakMap();
+function N(e) {
+    if (e) return D.get(e);
 }
 function H(e) {
     if (!e) return { status: "idle" };
-    let t = U(e);
+    let t = N(e);
     return t ? { status: "loaded", Component: t } : { status: "loading" };
 }
-function $(e) {
-    let { loader: t, onLoading: i, onLoaded: n, onError: r } = e,
+function V(e) {
+    let { loader: t, onLoading: i, onLoaded: r, onError: n } = e,
         [a, s] = (0, o.p)(() => H(t)),
         l = (0, o.l)(t),
         c = (0, o.l)(i),
-        d = (0, o.l)(n),
-        u = (0, o.l)(r);
+        d = (0, o.l)(r),
+        u = (0, o.l)(n);
     return (
         (0, o._)(() => {
-            (c.current = i), (d.current = n), (u.current = r);
-        }, [i, n, r]),
+            (c.current = i), (d.current = r), (u.current = n);
+        }, [i, r, n]),
         l.current !== t && ((l.current = t), s(H(t))),
         (0, o._)(() => {
             if (!t) return;
-            if (U(t)) return void d.current?.();
+            if (N(t)) return void d.current?.();
             c.current?.();
             let e = !1;
             return (
                 (function (e) {
-                    let t = F.get(e);
+                    let t = D.get(e);
                     if (t) return Promise.resolve(t);
-                    let i = N.get(e);
+                    let i = U.get(e);
                     if (i) return i;
-                    let n = e()
-                        .then((t) => (F.set(e, t), N.delete(e), t))
+                    let r = e()
+                        .then((t) => (D.set(e, t), U.delete(e), t))
                         .catch((t) => {
-                            throw (N.delete(e), t);
+                            throw (U.delete(e), t);
                         });
-                    return N.set(e, n), n;
+                    return U.set(e, r), r;
                 })(t)
                     .then((t) => {
                         e || (s({ status: "loaded", Component: t }), d.current?.());
@@ -694,12 +726,12 @@ function $(e) {
     );
 }
 function B(e, t) {
-    let [i, n] = (0, o.p)(!1);
+    let [i, r] = (0, o.p)(!1);
     return (
         (0, o._)(() => {
-            if (!1 === e) return void n(!1);
+            if (!1 === e) return void r(!1);
             let i = window.setTimeout(() => {
-                n(!0);
+                r(!0);
             }, t);
             return () => {
                 window.clearTimeout(i);
@@ -708,7 +740,7 @@ function B(e, t) {
         i
     );
 }
-async function V(e) {
+async function $(e) {
     let t = globalThis.crypto?.subtle;
     if (!t) throw Error("SHA-1 is not available in this environment");
     return Array.from(new Uint8Array(await t.digest("SHA-1", new TextEncoder().encode(e))), (e) =>
@@ -717,7 +749,7 @@ async function V(e) {
 }
 async function z(e) {
     if ("string" == typeof e.apiKey) return e.apiKey;
-    if ("string" == typeof e.clientId) return V(e.clientId);
+    if ("string" == typeof e.clientId) return $(e.clientId);
     throw Error("Flow self-loading mode requires apiKey or clientId");
 }
 async function j(e, t) {
@@ -741,27 +773,27 @@ function Z(e) {
     return "string" == typeof e.token;
 }
 var W = new Map();
-function G(e) {
+function K(e) {
     return W.get(e) ?? null;
 }
-function K(e) {
-    let t = G(e);
+function G(e) {
+    let t = K(e);
     return t && W.delete(e), t;
 }
 function q(e) {
-    e.getState().presentation.shouldPrefetchHome && T();
+    e.getState().presentation.shouldPrefetchHome && x();
 }
 function Y() {
     "desktop" === (0, m.l3)() &&
         (function () {
-            if (n) return;
-            let e = I.REDIRECT_TO_MOBILE,
-                t = x("REDIRECT_TO_MOBILE"),
+            if (r) return;
+            let e = M.REDIRECT_TO_MOBILE,
+                t = T("REDIRECT_TO_MOBILE"),
                 i = [];
             e && i.push(e()),
                 t && i.push(t()),
-                (n = Promise.all(i)).catch(() => {
-                    n = void 0;
+                (r = Promise.all(i)).catch(() => {
+                    r = void 0;
                 });
         })();
 }
@@ -771,17 +803,17 @@ var Q = (0, o.c)(() =>
             .then((e) => ({ default: e.HomeScreen })),
     ),
     X = ({ config: e, onFinish: t, onError: i }) => {
-        var n, l;
+        var r, l;
         let d,
-            { i18n: u } = (0, r.n)(),
+            { i18n: u } = (0, n.n)(),
             f = (function (e) {
-                let { lang: t, disableDashboardTheme: i, enableHome: n, onError: r, useCPF: s } = e,
+                let { lang: t, disableDashboardTheme: i, enableHome: r, onError: n, useCPF: s } = e,
                     l = Z(e) ? e.token : void 0,
                     c = (0, o.l)(null),
                     [d, u] = (0, o.p)(() => {
-                        let t = l ? G(l) : null;
+                        let t = l ? K(l) : null;
                         if (l && t?.status === "ready") {
-                            let e = K(l);
+                            let e = G(l);
                             if (e)
                                 return (
                                     (c.current = e.flowManager),
@@ -794,23 +826,23 @@ var Q = (0, o.c)(() =>
                         let i = (function (e = {}) {
                             let t = {},
                                 i = e.isDesktop ?? "desktop" === (0, m.l3)(),
-                                { enableHome: n, ...r } = e;
+                                { enableHome: r, ...n } = e;
                             return (0, g.ET)({
-                                enableHome: n,
+                                enableHome: r,
                                 getFlow: async (e) => {
-                                    let n = await (0, g.lv)(e, { ...r, isDesktop: i }),
+                                    let r = await (0, g.lv)(e, { ...n, isDesktop: i }),
                                         o = (function (e) {
                                             let t = {};
                                             for (let i of e) {
                                                 let e = i.key;
                                                 if (t[e]) continue;
-                                                let n = x(e);
-                                                n && (t[e] = n);
+                                                let r = T(e);
+                                                r && (t[e] = r);
                                             }
                                             return t;
-                                        })(n.flowModules ?? []);
+                                        })(r.flowModules ?? []);
                                     for (let e of Object.keys(t)) delete t[e];
-                                    return Object.assign(t, o), n;
+                                    return Object.assign(t, o), r;
                                 },
                                 lazyModules: t,
                             });
@@ -828,11 +860,11 @@ var Q = (0, o.c)(() =>
                 return (
                     (0, o._)(() => {
                         if ("initializing" !== d.status) return;
-                        let n = l ? G(l) : null;
-                        if (l && n?.status === "loading")
-                            return void n.readyPromise
+                        let r = l ? K(l) : null;
+                        if (l && r?.status === "loading")
+                            return void r.readyPromise
                                 .then(() => {
-                                    let e = K(l);
+                                    let e = G(l);
                                     e &&
                                         ((c.current = e.flowManager),
                                         q(e.flowManager),
@@ -844,7 +876,7 @@ var Q = (0, o.c)(() =>
                                     let t = e instanceof Error ? e.message : "Preload failed",
                                         i = e instanceof v.LJ ? e.status : void 0;
                                     u({ status: "error", error: t, errorCode: i, flowManager: d.flowManager }),
-                                        r?.(t, i);
+                                        n?.(t, i);
                                 });
                         if (h.current) return;
                         h.current = !0;
@@ -853,9 +885,9 @@ var Q = (0, o.c)(() =>
                         return (
                             (async () => {
                                 try {
-                                    let n;
+                                    let r;
                                     if (Z(e))
-                                        (n = e.token),
+                                        (r = e.token),
                                             e.urlUuid &&
                                                 (await (0, v.jq)(
                                                     {
@@ -869,49 +901,49 @@ var Q = (0, o.c)(() =>
                                         "string" == typeof e.configurationId &&
                                         ("string" == typeof e.apiKey || "string" == typeof e.clientId)
                                     )
-                                        n = (await j(e, s)).token;
+                                        r = (await j(e, s)).token;
                                     else throw Error("Flow requires token, or configurationId with apiKey or clientId");
-                                    await A({ token: n, lang: t, flowManager: d.flowManager });
-                                    let r = i
+                                    await O({ token: r, lang: t, flowManager: d.flowManager });
+                                    let n = i
                                             ? Promise.resolve()
-                                            : R().then((e) => {
+                                            : P().then((e) => {
                                                   e.uiConfig && (0, a.t)(e.uiConfig);
                                               }),
                                         o = d.flowManager.waitForReady();
-                                    await Promise.all([o, r]), u({ status: "ready", flowManager: d.flowManager });
+                                    await Promise.all([o, n]), u({ status: "ready", flowManager: d.flowManager });
                                 } catch (i) {
                                     if (s.aborted) return;
                                     let e = i instanceof Error ? i.message : "Failed to initialize SDK",
                                         t = i instanceof v.LJ ? i.status : void 0;
                                     u({ status: "error", error: e, errorCode: t, flowManager: d.flowManager }),
-                                        r?.(e, t);
+                                        n?.(e, t);
                                 }
                             })(),
                             () => o.abort()
                         );
-                    }, [l, t, i, n, s, r, e, d]),
+                    }, [l, t, i, r, s, n, e, d]),
                     d
                 );
             })((0, o.d)(() => ({ ...e, onError: i }), [e, i])),
             [C, y] = (0, s.o)(() => f.flowManager, { autoLoad: !1 }),
             w = C.presentation.lazyModuleKey,
-            b = "ready" === C.status ? C.currentStep : void 0,
-            _ = (function (e) {
+            _ = "ready" === C.status ? C.currentStep : void 0,
+            b = (function (e) {
                 let {
                         moduleKey: t,
                         modules: i,
-                        headlessModuleKeys: n,
-                        onModuleLoading: r,
+                        headlessModuleKeys: r,
+                        onModuleLoading: n,
                         onModuleLoaded: a,
                         onError: s,
                     } = e,
                     [l, c] = (0, o.p)(void 0),
                     d = (function (e, t, i) {
-                        if (e) return t[e] ?? (i?.has(e) ? D : void 0);
-                    })(t, i, n),
-                    u = $({
+                        if (e) return t[e] ?? (i?.has(e) ? F : void 0);
+                    })(t, i, r),
+                    u = V({
                         loader: d,
-                        onLoading: t ? () => r?.(t) : void 0,
+                        onLoading: t ? () => n?.(t) : void 0,
                         onLoaded: t ? () => a?.(t) : void 0,
                         onError: t ? (e) => s?.(`Failed to load ${t}: ${e}`) : void 0,
                     });
@@ -931,37 +963,37 @@ var Q = (0, o.c)(() =>
                 );
             })({
                 moduleKey: w,
-                modules: I,
+                modules: M,
                 onModuleLoading: e.onModuleLoading,
                 onModuleLoaded: e.onModuleLoaded,
                 onError: i,
             });
         !(function (e) {
             let { moduleKey: t, modules: i } = e,
-                n = t ? i[t] : void 0,
-                r = $({ loader: n });
-            null != n && r.status;
-        })({ moduleKey: "ready" === C.status && C.homeScreen.visible ? b : void 0, modules: I });
-        let S = "loaded" === _.status,
-            L =
+                r = t ? i[t] : void 0,
+                n = V({ loader: r });
+            null != r && n.status;
+        })({ moduleKey: "ready" === C.status && C.homeScreen.visible ? _ : void 0, modules: M });
+        let L = "loaded" === b.status,
+            S =
                 !0 === e.enableHome &&
                 "ready" === C.status &&
                 !0 !== C.flow.disableLaunchScreen &&
                 0 === C.currentStepIndex &&
                 !1 === C.homeScreen.visible &&
-                "loading" === _.status,
+                "loading" === b.status,
             E = B(!0 === C.presentation.isAwaitingReady, 150),
-            M = B("ready" === C.status && ("idle" === _.status || "loading" === _.status || "error" === _.status), 150);
-        (n = C?.status === "ready" ? C.steps : []),
+            k = B("ready" === C.status && ("idle" === b.status || "loading" === b.status || "error" === b.status), 150);
+        (r = C?.status === "ready" ? C.steps : []),
             (l = C?.status === "ready" ? C.currentStepIndex : -1),
             (d = (0, o.l)(new Set())),
             (0, o._)(() => {
-                if (S && l < n.length - 1) {
-                    let t = n[l + 1];
+                if (L && l < r.length - 1) {
+                    let t = r[l + 1];
                     if (t && !d.current.has(t)) {
                         var e;
                         d.current.add(t);
-                        let i = I[t];
+                        let i = M[t];
                         i &&
                             ((e = () => {
                                 i().catch(() => {
@@ -975,12 +1007,12 @@ var Q = (0, o.c)(() =>
                                 : setTimeout(e, 0));
                     }
                 }
-            }, [n, l, I, S]),
+            }, [r, l, M, L]),
             (0, o._)(() => {
                 if (e.onFlowEvent) return y.subscribeFlowEvent(e.onFlowEvent);
             }, [y, e.onFlowEvent]),
             (0, o._)(() => {
-                C.presentation.shouldPrefetchHome && T();
+                C.presentation.shouldPrefetchHome && x();
             }, [C.presentation.shouldPrefetchHome]),
             (0, o._)(() => {
                 e.lang && u.language !== e.lang && u.changeLanguage(e.lang);
@@ -995,11 +1027,11 @@ var Q = (0, o.c)(() =>
                         let i = (0, g.Ni)(e.flow);
                         if (i.length > 0) {
                             let e = (0, h.l)({ ...(t ?? {}), pipelines: i }),
-                                n = { ...e, pipelines: e.pipelines ? [...e.pipelines] : void 0 };
-                            (0, h.i)(n),
+                                r = { ...e, pipelines: e.pipelines ? [...e.pipelines] : void 0 };
+                            (0, h.i)(r),
                                 (0, p.n)(e)
-                                    .then(() => (0, h.t)(n))
-                                    .then(() => (0, h.o)(n))
+                                    .then(() => (0, h.t)(r))
+                                    .then(() => (0, h.o)(r))
                                     .catch((e) => {
                                         console.error("WASM warmup failed:", e);
                                     });
@@ -1018,19 +1050,19 @@ var Q = (0, o.c)(() =>
                     C.steps.includes("TUTORIAL_ID") &&
                     y.completeModule();
             }, [C, y]);
-        let P = !(e.spinnerConfig?.title || e.spinnerConfig?.subtitle);
+        let R = !(e.spinnerConfig?.title || e.spinnerConfig?.subtitle);
         if ("error" === f.status)
             return (0, o.v)("div", {
                 class: "IncodeFlow",
                 children: (0, o.v)("div", { children: ["Error: ", f.error] }),
             });
-        if (C.homeScreen.visible || L)
+        if (C.homeScreen.visible || S)
             return (0, o.v)("div", {
                 class: "IncodeFlow",
                 children: (0, o.v)(o.o, {
                     fallback: null,
                     children: (0, o.v)(Q, {
-                        isContinueLoading: C.homeScreen.isContinueLoading || L,
+                        isContinueLoading: C.homeScreen.isContinueLoading || S,
                         onContinue: () => y.continueFromHome(),
                     }),
                 }),
@@ -1038,13 +1070,13 @@ var Q = (0, o.c)(() =>
         if ("initializing" === f.status)
             return (0, o.v)("div", {
                 class: "IncodeFlow",
-                children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: R }),
             });
         if (C.presentation.isAwaitingReady)
             return E
                 ? (0, o.v)("div", {
                       class: "IncodeFlow",
-                      children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                      children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: R }),
                   })
                 : (0, o.v)("div", { class: "IncodeFlow" });
         if ("error" === C.status)
@@ -1054,34 +1086,34 @@ var Q = (0, o.c)(() =>
             });
         if ("finished" === C.status) return null;
         if (C?.status === "ready") {
-            let { currentStep: t, config: n, flow: r } = C,
-                { flowId: a } = r;
-            if (!t || !n)
+            let { currentStep: t, config: r, flow: n } = C,
+                { flowId: a } = n;
+            if (!t || !r)
                 return (0, o.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                    children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: R }),
                 });
-            if (k.has(t)) return (0, o.v)("div", { class: "IncodeFlow" });
-            if ("unsupported" === _.status)
+            if (I.has(t)) return (0, o.v)("div", { class: "IncodeFlow" });
+            if ("unsupported" === b.status)
                 return (0, o.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(O, { moduleKey: t, onNext: () => y.completeModule() }),
+                    children: (0, o.v)(A, { moduleKey: t, onNext: () => y.completeModule() }),
                 });
-            if ("idle" === _.status || "loading" === _.status || "error" === _.status)
-                return M
+            if ("idle" === b.status || "loading" === b.status || "error" === b.status)
+                return k
                     ? (0, o.v)("div", {
                           class: "IncodeFlow",
-                          children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                          children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: R }),
                       })
                     : (0, o.v)("div", { class: "IncodeFlow" });
-            let { Component: s } = _;
+            let { Component: s } = b;
             if ("REDIRECT_TO_MOBILE" === t)
                 return (0, o.v)("div", {
                     class: "IncodeFlow",
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeFlow(),
                             onContinue: () => y.completeModule(),
                             onError: i,
@@ -1095,7 +1127,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Selfie verification error");
@@ -1110,7 +1142,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: { ...n, authHint: e.authHint },
+                            config: { ...r, authHint: e.authHint },
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Authentication error");
@@ -1125,7 +1157,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Phone verification error");
@@ -1135,13 +1167,13 @@ var Q = (0, o.c)(() =>
                     ),
                 });
             if ("EMAIL" === t)
-                return n && "boolean" == typeof n.otpVerification && "number" == typeof n.otpExpirationInMinutes
+                return r && "boolean" == typeof r.otpVerification && "number" == typeof r.otpExpirationInMinutes
                     ? (0, o.v)("div", {
                           class: "IncodeFlow",
                           children: (0, o.v)(
                               s,
                               {
-                                  config: n,
+                                  config: r,
                                   onFinish: () => y.completeModule(),
                                   onError: (e) => {
                                       i?.(e ?? "Email verification error");
@@ -1160,7 +1192,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: "SECOND_ID" === t ? { ...n, isSecondId: !0 } : n,
+                            config: "SECOND_ID" === t ? { ...r, isSecondId: !0 } : r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "ID capture error");
@@ -1176,7 +1208,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: { ...n, secondId: n.secondId ?? e, flowId: a },
+                            config: { ...r, secondId: r.secondId ?? e, flowId: a },
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "ID OCR error");
@@ -1206,7 +1238,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Face match error");
@@ -1221,7 +1253,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "CURP validation error");
@@ -1236,7 +1268,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Government validation error");
@@ -1251,7 +1283,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Geolocation error");
@@ -1281,7 +1313,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Document capture error");
@@ -1296,7 +1328,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: { ...n, processingType: "addressStatement" },
+                            config: { ...r, processingType: "addressStatement" },
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Address capture error");
@@ -1311,7 +1343,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Signature capture error");
@@ -1328,10 +1360,10 @@ var Q = (0, o.c)(() =>
                         {
                             config: {
                                 flowId: a,
-                                checkBusinessName: n.checkBusinessName,
-                                checkAddress: n.checkAddress,
-                                checkTaxId: n.checkTaxId,
-                                checkUniqueBeneficialOwner: n.checkUniqueBeneficialOwner,
+                                checkBusinessName: r.checkBusinessName,
+                                checkAddress: r.checkAddress,
+                                checkTaxId: r.checkTaxId,
+                                checkUniqueBeneficialOwner: r.checkUniqueBeneficialOwner,
                             },
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
@@ -1347,7 +1379,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Combined consent error");
@@ -1362,7 +1394,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Mandatory consent error");
@@ -1378,7 +1410,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: { uploadDocument: n.uploadDocument, downloadDocument: n.downloadDocument },
+                            config: { uploadDocument: r.uploadDocument, downloadDocument: r.downloadDocument },
                             onFinish: () => y.completeModule(),
                             onError: (t) => {
                                 i?.(t ?? `${e.toUpperCase()} Signature error`);
@@ -1408,7 +1440,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Custom fields error");
@@ -1451,7 +1483,7 @@ var Q = (0, o.c)(() =>
                     children: (0, o.v)(
                         s,
                         {
-                            config: n,
+                            config: r,
                             onFinish: () => y.completeModule(),
                             onError: (e) => {
                                 i?.(e ?? "Custom watchlist check error");
@@ -1481,7 +1513,7 @@ var Q = (0, o.c)(() =>
                         s,
                         {
                             config: {
-                                screens: n.screens.map((e) => ({
+                                screens: r.screens.map((e) => ({
                                     title: e.title,
                                     hideTitle: e.hideTitle,
                                     questions: e.questions.map((e) => ({
