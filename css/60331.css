@@ -5295,7 +5295,8 @@ a-rp {
 .icon__41ea0 {
     background-position: 50%;
     background-repeat: no-repeat;
-    height: 144px
+    height: 144px;
+    position: relative
 }
 
 .icon__41ea0.imageSmall__41ea0 {
