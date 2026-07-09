@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -16,12 +16,12 @@ var i = n(627968),
     g = n(519342),
     f = n(207274),
     C = n(971954),
-    y = n(937591);
-function E(e) {
+    y = n(915447);
+function j(e) {
     let { channelId: t, popoutType: n } = e,
-        { background: a, seats: E, aspectRatio: v } = C.iX[c.I.DEFAULT],
-        { width: j = 0, height: N = 0, ref: I } = (0, o.Ay)(),
-        T = j / N > v;
+        { background: a, seats: j, aspectRatio: E } = C.iX[c.I.DEFAULT],
+        { width: v = 0, height: N = 0, ref: I } = (0, o.Ay)(),
+        _ = v / N > E;
     return (
         l.useEffect(() => {
             (0, p.zR)({ channelId: t });
@@ -36,20 +36,16 @@ function E(e) {
             children: [
                 (0, i.jsx)("img", { className: y.Sl, src: a, alt: "", ref: I }),
                 (0, i.jsxs)("div", {
-                    className: s()(y.hk, { [y.Nb]: T }),
-                    style: { aspectRatio: v },
+                    className: s()(y.hk, { [y.Nb]: _ }),
+                    style: { aspectRatio: E },
                     children: [
-                        E.map((e, n) =>
-                            (0, i.jsx)(
-                                A.A,
-                                { channelId: t, name: e.name, x: e.position.x, y: e.position.y, roomWidth: j },
-                                n,
-                            ),
+                        j.map((e, n) =>
+                            (0, i.jsx)(A.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: v }, n),
                         ),
-                        (0, i.jsx)(g.A, { channelId: t, roomWidth: j }),
-                        (0, i.jsx)(x.A, { channelId: t, popoutType: n, aspectRatio: v }),
+                        (0, i.jsx)(g.A, { channelId: t, roomWidth: v }),
+                        (0, i.jsx)(x.A, { channelId: t, popoutType: n, aspectRatio: E }),
                         (0, i.jsx)(f.A, { channelId: t }),
-                        (0, i.jsx)(m.A, { channelId: t, roomWidth: j, aspectRatio: v }),
+                        (0, i.jsx)(m.A, { channelId: t, roomWidth: v, aspectRatio: E }),
                     ],
                 }),
             ],

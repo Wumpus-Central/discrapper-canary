@@ -1,4 +1,4 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => N });
 var i = n(627968),
     l = n(64700),
     a = n(17928),
@@ -14,16 +14,16 @@ var i = n(627968),
     A = n(576705),
     x = n(309010),
     g = n(977997),
-    f = n(408822),
+    f = n(446243),
     C = n(920639),
     y = n(806931),
-    E = n(125730);
-let N = [];
+    j = n(378658);
+let E = [];
 function v(e) {
     let { channelId: t, participant: n, popoutType: l } = e,
         x = (0, a.bG)([h.A], () => h.A.getChannel(t)),
-        N = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
-        [v, j] = (0, a.yK)([g.A, m.A, A.A, d.default], () => (0, u.eo)(x, g.A, m.A, A.A, d.default));
+        E = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
+        [v, N] = (0, a.yK)([g.A, m.A, A.A, d.default], () => (0, u.eo)(x, g.A, m.A, A.A, d.default));
     return null == x
         ? null
         : (0, i.jsx)(p.Ay, {
@@ -32,23 +32,23 @@ function v(e) {
               channel: x,
               width: 100,
               popoutType: l,
-              className: E.Vs,
+              className: j.Vs,
               onClick: () => {
                   (0, y.Ay)(n) && v && (0, r.A9)(n.stream, { forceMultiple: !0 }),
-                      N?.id === n.id ? s.A.selectParticipant(x.id, null) : s.A.selectParticipant(x.id, n.id),
+                      E?.id === n.id ? s.A.selectParticipant(x.id, null) : s.A.selectParticipant(x.id, n.id),
                       (0, f.zD)(t, !0),
-                      (0, C.yt)({ channelId: t, location: o.A.GUILD_ROOM });
+                      (0, C.yt)({ channelId: t, location: o.A.GUILD_ROOM, guildRoomOpen: !1 });
               },
           });
 }
-function j(e) {
+function N(e) {
     let { channelId: t, popoutType: n, aspectRatio: s } = e,
         r = (0, l.useRef)(null),
         [o, d] = (0, l.useState)(0),
         u = (0, a.bG)([x.A], () => x.A.getVoiceChannelId()),
         { streamParticipants: p, videoParticipants: h } = (0, a.cf)([c.A], () => ({
             streamParticipants: c.A.getStreamParticipants(t),
-            videoParticipants: u === t ? c.A.getVideoParticipants(t) : N,
+            videoParticipants: u === t ? c.A.getVideoParticipants(t) : E,
         }));
     return (
         (0, l.useEffect)(() => {
@@ -58,7 +58,7 @@ function j(e) {
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         (0, i.jsxs)("div", {
-            className: E.kL,
+            className: j.kL,
             style: { aspectRatio: s, paddingTop: 82 > o + 16 ? 82 - o : 16 },
             ref: r,
             children: [

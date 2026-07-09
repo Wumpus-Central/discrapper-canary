@@ -28,8 +28,8 @@ class u extends i.A {
                         (await (0, s.x2)(c, d)),
                     null != i && null != n)
                 ) {
-                    let e = l.A.getPendingPosition() ?? { x: 0, y: 0 };
-                    null != e && this.isExperimentEnabled(n, "VOICE_STATE_UPDATE") && (0, s.tB)(n, i, e);
+                    let e = l.A.getPendingPosition();
+                    this.isExperimentEnabled(n, "VOICE_STATE_UPDATE") && (0, s.tB)(n, i, e);
                 }
                 (d = i), (c = n);
             }
