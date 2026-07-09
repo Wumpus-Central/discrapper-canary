@@ -137,8 +137,11 @@
 }
 
 .sectionTitle_beb040 {
-    margin-bottom: calc(var(--space-12)*-1);
     margin-top: var(--space-48)
+}
+
+.reducedTopMargin_beb040 {
+    margin-top: var(--space-12)
 }
 
 .container_cc66e9 {

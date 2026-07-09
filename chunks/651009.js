@@ -346,13 +346,13 @@ function ek(e) {
 }
 var eb = l(894071);
 function eE(e) {
-    let { skuIds: t, variant: l = ei.s.SMALL, analyticsLocations: s } = e;
-    return null == t || 0 === t.length
+    let { className: t, skuIds: l, variant: s = ei.s.SMALL, analyticsLocations: i } = e;
+    return null == l || 0 === l.length
         ? null
         : (0, n.jsx)("div", {
-              className: r()(eb.kL, eb.$2, { [eb.Wc]: l === ei.s.MEDIUM }),
-              children: t.map((e, t) =>
-                  (0, n.jsx)(ei.A, { positionInSection: t, skuId: e, variant: l, analyticsLocations: s }, `${e}-${t}`),
+              className: r()(t, eb.kL, eb.$2, { [eb.Wc]: s === ei.s.MEDIUM }),
+              children: l.map((e, t) =>
+                  (0, n.jsx)(ei.A, { positionInSection: t, skuId: e, variant: s, analyticsLocations: i }, `${e}-${t}`),
               ),
           });
 }
@@ -360,26 +360,25 @@ var eN = l(629414);
 function e_(e) {
     let { analyticsSectionId: t, sectionTitle: l, skuIds: i, variant: r = ei.s.SMALL } = e,
         a = s.useMemo(() => ({ pageSection: t, pageSectionTitle: l }), [t, l]);
-    return null == i || 0 === i.length
-        ? null
-        : (0, n.jsx)(E.E9, {
-              newValue: a,
-              children: (0, n.jsxs)("div", {
-                  className: eN.h,
-                  children: [
-                      null != l &&
-                          l.length > 0 &&
-                          (0, n.jsx)(c.D, {
-                              variant: "heading-lg/semibold",
-                              color: "text-strong",
-                              lineClamp: 1,
-                              className: eN.G,
-                              children: l,
-                          }),
-                      (0, n.jsx)(eE, { skuIds: i, variant: r }),
-                  ],
-              }),
-          });
+    if (null == i || 0 === i.length) return null;
+    let o = null != l && l.length > 0;
+    return (0, n.jsx)(E.E9, {
+        newValue: a,
+        children: (0, n.jsxs)("div", {
+            className: eN.hd,
+            children: [
+                o &&
+                    (0, n.jsx)(c.D, {
+                        variant: "heading-lg/semibold",
+                        color: "text-strong",
+                        lineClamp: 1,
+                        className: eN.Gf,
+                        children: l,
+                    }),
+                (0, n.jsx)(eE, { className: o ? eN.EM : void 0, skuIds: i, variant: r }),
+            ],
+        }),
+    });
 }
 var eC = l(821609),
     eL = l(403581),

@@ -1,1 +1,1 @@
-e.exports = { h: "sectionContainer_beb040", G: "sectionTitle_beb040" };
+e.exports = { hd: "sectionContainer_beb040", Gf: "sectionTitle_beb040", EM: "reducedTopMargin_beb040" };
