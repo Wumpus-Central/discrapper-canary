@@ -1,4 +1,4 @@
-n.d(t, { EA: () => A, Gj: () => x, Go: () => I, IY: () => _, Ig: () => v, fk: () => y, iK: () => b, ib: () => f }),
+n.d(t, { EA: () => A, Gj: () => x, Go: () => I, IY: () => h, Ig: () => v, fk: () => _, iK: () => b, ib: () => f }),
     n(321073);
 var a = n(403581),
     r = n(458785),
@@ -8,7 +8,7 @@ var a = n(403581),
     u = n(580630),
     o = n(202541),
     c = n(375708),
-    d = n(327105);
+    d = n(982772);
 function m(e) {
     return (0, s.xq)(e) || (0, s.Zb)(e);
 }
@@ -77,9 +77,9 @@ function g(e, t) {
             currency: i,
         }),
         v = null != A || null != g,
-        _ = { id: e.id, label: m, amount: v ? b : f, lineItemType: "main" },
-        y = [
-            _,
+        h = { id: e.id, label: m, amount: v ? b : f, lineItemType: "main" },
+        _ = [
+            h,
             ...r.map((e) => ({
                 id: e.id,
                 label: e.label,
@@ -90,8 +90,8 @@ function g(e, t) {
             })),
         ];
     return (
-        null == A || o || y.push(p(A, "subscription-discount", c.intl.string(d.default["9yHcmL"]))),
-        { lineItems: y, primaryLineItem: _, entitlementDiscount: g }
+        null == A || o || _.push(p(A, "subscription-discount", c.intl.string(d.default["9yHcmL"]))),
+        { lineItems: _, primaryLineItem: h, entitlementDiscount: g }
     );
 }
 function v(e, t) {
@@ -128,7 +128,7 @@ function v(e, t) {
         { lineItems: p, primaryLineItem: b, entitlementDiscount: A }
     );
 }
-function _(e, t) {
+function h(e, t) {
     let { isPrepaidPaymentSource: n = !1, invoiceSummaryType: a, subscriptionPlan: r, subscriptionTrial: s } = t,
         { newPlanInvoiceItem: u, basePlanFullAmount: o, invoiceAdjustmentDisplayItems: c } = (0, l.SA)(e, r),
         {
@@ -145,7 +145,7 @@ function _(e, t) {
         });
     return { lineItems: d, primaryLineItem: m, entitlementDiscount: f, hasAdjustmentLineItem: c.length > 0 };
 }
-function y(e, t) {
+function _(e, t) {
     let { isCustomGift: n = !1, isPrepaidPaymentSource: a = !1, subscriptionPlan: l } = t;
     return [
         {
@@ -155,7 +155,7 @@ function y(e, t) {
         },
     ];
 }
-function h(e, t) {
+function y(e, t) {
     let n = (0, l.NL)(e),
         a = (function (e, t) {
             if (null == e || null == t || e !== t.discountId) return null;
@@ -192,20 +192,21 @@ function h(e, t) {
 function I(e, t, n) {
     let a = e.invoiceItems.find((e) => e.subscriptionPlanId === t.id);
     if (null == a) return { renewalPrice: e.subtotal };
-    let { amount: r, matchedDiscountInfo: l } = h(a, n);
-    if (null == n || null == l) return { renewalPrice: r };
+    let r = e.invoiceItems.filter((e) => e !== a && null != e.subscriptionPlanId).reduce((e, t) => e + t.amount, 0),
+        { amount: l, matchedDiscountInfo: i } = y(a, n);
+    if (null == n || null == i) return { renewalPrice: l + r };
     if (n.getIsMultiIntervalDiscount()) {
         let e = a.subscriptionPlanPrice * a.quantity;
         return {
-            renewalPrice: e,
+            renewalPrice: e + r,
             multiPeriodDiscountAttributes: {
-                discountedRenewalPrice: r,
-                priceWithoutDiscount: e,
-                discountEndDate: l.discountEndDate,
+                discountedRenewalPrice: l + r,
+                priceWithoutDiscount: e + r,
+                discountEndDate: i.discountEndDate,
             },
         };
     }
-    return { renewalPrice: r };
+    return { renewalPrice: l + r };
 }
 function x(e, t, n) {
     let {
@@ -223,8 +224,8 @@ function x(e, t, n) {
               },
         A = (0, l.Q8)(t, e, { isSubscriptionUpdate: f }),
         { intervalType: g, intervalCount: v } = (0, s.Ge)(t),
-        _ = t.currency,
-        y = [],
+        h = t.currency,
+        _ = [],
         I = A.some((e) => (0, s.xq)(e.subscriptionPlanId));
     for (let e of A) {
         let { subscriptionPlanId: t } = e,
@@ -243,8 +244,8 @@ function x(e, t, n) {
                         subscriptionDiscount: g,
                         originalAmount: v,
                     } = (0, l.Ae)(e, { subscriptionTrial: t, currency: p }),
-                    _ = b ? c.intl.format(c.t.UDop9c, {}) : void 0,
-                    y =
+                    h = b ? c.intl.format(c.t.UDop9c, {}) : void 0,
+                    _ =
                         i || null == g
                             ? null
                             : {
@@ -254,7 +255,7 @@ function x(e, t, n) {
                                   color: "text-feedback-positive",
                                   valueColor: "text-feedback-positive",
                               },
-                    { amount: I, matchedDiscountInfo: x } = h(e, f),
+                    { amount: I, matchedDiscountInfo: x } = y(e, f),
                     E = null != x && x.intervalCount > 1,
                     T =
                         i && E
@@ -263,16 +264,16 @@ function x(e, t, n) {
                                   subTextColor: "text-feedback-positive",
                               }
                             : null;
-                return { matchedDiscountInfo: x, lineItem: { id: e.id, label: A, amount: I, tooltip: _, ...T, ...y } };
+                return { matchedDiscountInfo: x, lineItem: { id: e.id, label: A, amount: I, tooltip: h, ...T, ..._ } };
             })(e, n, {
                 invoiceIncludesPremiumBasePlan: I,
                 isPremiumPlanInvoiceItem: m(t),
                 intervalType: g,
                 intervalCount: v,
                 discountOffer: p,
-                currency: _,
+                currency: h,
             });
-        y.push(r);
+        _.push(r);
     }
     let x = (0, r.de)({
         overrideRenewalDate: i,
@@ -282,10 +283,10 @@ function x(e, t, n) {
         fractionalPremiumInfo: b,
     });
     return {
-        lineItems: y,
+        lineItems: _,
         intervalType: g,
         intervalCount: v,
-        currency: _,
+        currency: h,
         label: c.intl.string(d.default.GGn3pp),
         totalLineItemValueSubText: c.intl.string(d.default.yvUaHi),
         totalLineItemLabel: (function (e, t) {
