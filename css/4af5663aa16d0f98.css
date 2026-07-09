@@ -117,13 +117,13 @@
     align-items: center;
     flex-direction: row;
     justify-content: center;
-    margin-top: 24px;
+    margin-top: var(--space-24);
     width: 100%
 }
 
 .cardGrid_e176e1 {
     display: grid;
-    grid-gap: 24px;
+    grid-gap: var(--space-24);
     grid-auto-rows: 1fr;
     grid-template-columns: repeat(auto-fill, minmax(246px, 1fr))
 }
@@ -137,7 +137,8 @@
 }
 
 .sectionTitle_beb040 {
-    margin-top: 24px
+    margin-bottom: calc(var(--space-12)*-1);
+    margin-top: var(--space-48)
 }
 
 .container_cc66e9 {
