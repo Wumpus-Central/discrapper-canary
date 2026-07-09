@@ -1,61 +1,58 @@
 "use strict";
-n.d(t, { CC: () => E, CZ: () => m, DK: () => f, J8: () => _ });
+n.d(t, { CC: () => A, CZ: () => I, DK: () => E, J8: () => u });
 var i = n(239266),
     r = n(968671),
-    s = n(84483),
-    a = n(371446),
-    o = n(287809),
+    a = n(84483),
+    s = n(287809),
     l = n(428262),
-    u = n(440005),
+    o = n(440005),
     d = n(212739),
     c = n(202541);
-function _(e) {
+function u(e) {
     if (null == e) return !0;
     let t = e.next_reward_date;
     return null != t && "" !== t && (0, i.A)(new Date(t));
 }
-function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ProgramRewardsUtils",
-        { enabled: n } = (0, a.m)({ location: t });
+function _(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ProgramRewardsUtils";
     switch (e) {
-        case u.W.NITRO: {
-            let { isInTreatment: e } = (0, s.v9)(t);
-            return e && n;
+        case o.W.NITRO: {
+            let { isInTreatment: e } = (0, a.v9)(t);
+            return e;
         }
-        case u.W.XBOX:
-            return (0, r.f0)(t) && n;
+        case o.W.XBOX:
+            return (0, r.f0)(t);
         default:
             return !1;
     }
 }
-function f(e) {
+function E(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ProgramRewardsUtils",
-        { isInTreatment: n } = (0, s.uX)(t),
-        i = (0, r.GM)(t),
-        { enabled: o } = (0, a.Z)({ location: t });
+        { isInTreatment: n } = (0, a.uX)(t),
+        i = (0, r.GM)(t);
     switch (e) {
-        case u.W.NITRO:
-            return n && o;
-        case u.W.XBOX:
-            return i && o;
+        case o.W.NITRO:
+            return n;
+        case o.W.XBOX:
+            return i;
         default:
             return !1;
     }
 }
-function E() {
+function A() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
-    return h(u.W.NITRO, t) && ((e = void 0 ?? o.default.getCurrentUser()), (0, l.YE)(e, c.PremiumTypes.TIER_2));
+    return _(o.W.NITRO, t) && ((e = void 0 ?? s.default.getCurrentUser()), (0, l.YE)(e, c.PremiumTypes.TIER_2));
 }
-let p = {
-    [u.W.NITRO]: E,
-    [u.W.XBOX]: function () {
+let h = {
+    [o.W.NITRO]: A,
+    [o.W.XBOX]: function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
-        return h(u.W.XBOX, e) && (0, d.H)(o.default.getCurrentUser());
+        return _(o.W.XBOX, e) && (0, d.H)(s.default.getCurrentUser());
     },
 };
-function m() {
+function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
-    for (let t of Object.values(u.W)) if ("number" == typeof t && p[t](e)) return !0;
+    for (let t of Object.values(o.W)) if ("number" == typeof t && h[t](e)) return !0;
     return !1;
 }

@@ -28,13 +28,7 @@ var i = n(607399),
     D = n(832163),
     y = n(788995),
     v = n(432e3);
-n(809733),
-    (0, n(240921).Ay)({
-        name: "2026-03-mobile-orbs",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 1: { enabled: !0 } },
-    });
+n(809733);
 var b = n(280450),
     M = n(696451),
     P = n(71393),
