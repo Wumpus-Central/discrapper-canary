@@ -9316,34 +9316,34 @@
 
 @font-face {
     font-display: swap;
-    font-family: Playpen Sans;
+    font-family: Monkey Bars;
     font-style: normal;
     font-weight: 700;
-    src: url(/assets/d15ccb3db7f4075a.woff2) format("woff2")
+    src: url(/assets/45ef50dce38a931a.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Orbitron;
+    font-family: Mainframe;
     font-style: normal;
     font-weight: 700;
-    src: url(/assets/79f79ccec8e32d92.woff2) format("woff2")
+    src: url(/assets/4841dace333e9054.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: New Rocker;
+    font-family: Headbang;
     font-style: normal;
     font-weight: 400;
-    src: url(/assets/ded5376cd2c7b654.woff2) format("woff2")
+    src: url(/assets/c00df4f25667809b.woff2) format("woff2")
 }
 
 @font-face {
     font-display: swap;
-    font-family: Kalam;
+    font-family: Journal;
     font-style: normal;
     font-weight: 700;
-    src: url(/assets/65f593e7df88662a.woff2) format("woff2")
+    src: url(/assets/c1328856a21aa6fd.woff2) format("woff2")
 }
 
 :root {
