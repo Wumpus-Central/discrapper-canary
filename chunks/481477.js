@@ -6,7 +6,7 @@ var l = t(627968),
     r = t(64700),
     o = t(536246),
     c = t(395678),
-    u = t(667080);
+    u = t(773e3);
 function d(e) {
     let { application: n, queryParams: t, url: i } = e;
     return (0, l.jsx)(c.o, {
@@ -22,7 +22,7 @@ var p = t(289873),
     m = t(475743),
     A = t(587895),
     x = t(574172),
-    I = t(982484),
+    I = t(850891),
     h = t(933958),
     y = t(969151),
     f = t(503698),
@@ -74,7 +74,7 @@ var D = t(423562),
     Q = t(728033),
     ee = t(652215),
     en = t(16961),
-    et = t(316561);
+    et = t(504977);
 let el = Z.DN.SIZE_24;
 function ei(e) {
     let n,
@@ -317,7 +317,7 @@ function ea(e) {
         onConfirmClosePopout: s,
     });
 }
-var es = t(376554);
+var es = t(124778);
 function er(e) {
     let { activity: n, renderHeader: t, renderActivityIFrameWithLoadedData: a, isLoading: s = !1 } = e,
         o = r.useRef(null),

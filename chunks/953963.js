@@ -23,11 +23,11 @@ var n = i(627968),
     y = i(61881),
     b = i(591179),
     w = i(624826),
-    C = i(606758),
+    C = i(384377),
     T = i(518477),
     N = i(652215),
     R = i(375708),
-    k = i(381280);
+    k = i(82784);
 let O = "user-profile-save-reset-toolbar-label";
 function L(e) {
     let { className: t, guildId: i } = e,

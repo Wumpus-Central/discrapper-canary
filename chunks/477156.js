@@ -58,9 +58,9 @@ var D = s(342952),
     el = s(403362),
     er = s(279250),
     en = s(652215),
-    ea = s(710787),
+    ea = s(864204),
     ec = s(375708),
-    eo = s(617335);
+    eo = s(222391);
 function ed(e) {
     let { result: t, onSelectChannel: s } = e,
         l = (0, u.bG)([ee.A], () => ee.A.getGuild(t.record.guild_id)),
@@ -382,7 +382,7 @@ function eG(e) {
 function eb() {
     return [l.useContext(eT), l.useContext(eL)];
 }
-var eD = s(67788);
+var eD = s(596876);
 function eP() {
     let [{ selectedSource: e }] = eb(),
         [t, s] = l.useState(null),
@@ -439,7 +439,7 @@ function eP() {
 var eF = s(534514),
     ek = s(66455),
     eZ = s(775602),
-    eH = s(120559);
+    eH = s(617839);
 let eB = l.memo(function (e) {
     let { className: t, animated: s = !1 } = e,
         r = l.useId();
@@ -1312,7 +1312,7 @@ let eB = l.memo(function (e) {
 });
 var eV = s(325278),
     eQ = s(818348),
-    eW = s(538298);
+    eW = s(726714);
 function ez(e) {
     let { id: t, text: s, icon: l, selected: r, onClick: a } = e;
     return (0, i.jsx)(P.D, {
@@ -1405,7 +1405,7 @@ var eX = s(843402),
     eJ = s(290805),
     eK = s(971276),
     e1 = s(639214),
-    e0 = s(495163);
+    e0 = s(82811);
 function e2(e, t, s, i) {
     let l = (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A) : null,
         r = _.Ay.getRunningGames(),
@@ -1588,7 +1588,7 @@ var e8 = s(505312),
     ti = s(270816),
     tl = s(498642),
     tr = s(309010),
-    tn = s(366340);
+    tn = s(687583);
 function ta(e) {
     switch (e) {
         case eO.jQ.PRESET_CUSTOM:
@@ -1634,7 +1634,7 @@ function th(e) {
     return (0, tf.Ay)(e, t, l);
 }
 var tx = s(731854),
-    tp = s(396989);
+    tp = s(894269);
 let tm = [
         {
             value: eO.jQ.PRESET_AUTO,
@@ -1873,7 +1873,7 @@ function tC(e) {
             }),
     });
 }
-var tA = s(167338);
+var tA = s(570941);
 function ty(e) {
     let { onClose: t } = e,
         { analyticsLocations: s } = (0, E.Ay)(y.A.GO_LIVE_MODAL_V2);
@@ -1900,7 +1900,7 @@ var tE = s(862482),
     tM = s(400669),
     tT = s(909536),
     tL = s(202541),
-    tU = s(518728);
+    tU = s(531464);
 function tG(e) {
     let { onClose: t } = e,
         { analyticsLocations: s } = (0, E.Ay)(y.A.GO_LIVE_MODAL_V2),
@@ -1970,7 +1970,7 @@ var tb = s(183623),
 function tH(e) {
     return e.hasOwnProperty("pid");
 }
-var tB = s(860876);
+var tB = s(301727);
 function tV() {
     return (0, i.jsx)("span", { className: tB.gO, children: "\u2022" });
 }
@@ -2097,7 +2097,7 @@ function tW() {
 var tz = s(451988);
 let tq = [d.fS.CAMERA],
     tX = [d.fS.SCREEN, d.fS.WINDOW, d.fS.CAMERA];
-var tY = s(456713);
+var tY = s(237385);
 function t$(e) {
     let { onClose: t, transitionState: s, sourcePID: r, analyticsLocations: a = [], selectSource: D = !0 } = e,
         P = (0, u.bG)([_.Ay], () => (null != r ? (_.Ay.getGameForPID(r) ?? void 0) : void 0)),

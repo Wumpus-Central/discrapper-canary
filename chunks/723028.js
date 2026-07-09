@@ -14,7 +14,7 @@ var i = s(627968),
     j = s(263356),
     x = s(564490),
     m = s(362081),
-    A = s(97451);
+    A = s(594731);
 function I(n) {
     let { clipId: e, onEdit: s, channelId: I, transitionState: f, onClose: E } = n;
     (0, h.A)();

@@ -1,4 +1,4 @@
-n.d(t, { T_: () => P, Ed: () => A, yg: () => S });
+n.d(t, { T_: () => x, Ed: () => N, yg: () => A });
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -13,33 +13,33 @@ var c = n(525723),
     E = n(900730),
     C = n(426398),
     p = n(375708),
-    _ = n(169797),
-    h = n(270537),
-    N = n(652215),
-    I = n(327105),
-    f = n(312867);
-function A(e) {
+    h = n(169797),
+    _ = n(270537),
+    S = n(652215),
+    I = n(982772),
+    f = n(76579);
+function N(e) {
     let { className: t } = e;
-    return (0, l.jsx)(_.DJ, { className: a()(f.g4, t) });
+    return (0, l.jsx)(h.DJ, { className: a()(f.g4, t) });
 }
-function S() {
-    return (0, l.jsx)(_.Jg, {
+function A() {
+    return (0, l.jsx)(h.Jg, {
         transitionState: o.i.ENTERED,
-        onClose: N.tEg,
+        onClose: S.tEg,
         size: "md",
         isModalContentLoading: !0,
-        children: (0, l.jsx)(A, {}),
+        children: (0, l.jsx)(N, {}),
     });
 }
-function T(e) {
+function y(e) {
     return null != e && "object" == typeof e && "message" in e && "type" in e
         ? (0, l.jsx)(s.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
         : (0, l.jsx)(r.Fragment, { children: e.directContent }, e.key);
 }
-function g(e) {
+function T(e) {
     return null == e || "" === e;
 }
-function y(e) {
+function g(e) {
     let { children: t, showUpperNoticesAboveGlobalNotices: n = !1 } = e,
         {
             errorMessage: i,
@@ -93,15 +93,15 @@ function y(e) {
         u = r.useRef(null);
     return (
         r.useEffect(() => {
-            g(i) || null == u.current || u.current.scrollIntoView({ behavior: "smooth" });
+            T(i) || null == u.current || u.current.scrollIntoView({ behavior: "smooth" });
         }, [i]),
         r.useMemo(() => {
-            if (!(!g(i) || !g(a) || o.length > 0 || null != t)) return null;
+            if (!(!T(i) || !T(a) || o.length > 0 || null != t)) return null;
             let e = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    g(i) ? null : (0, l.jsx)(s.w, { type: "critical", children: i }),
-                    g(a) ? null : (0, l.jsx)(s.w, { type: "warning", children: a }),
-                    o.map(T),
+                    T(i) ? null : (0, l.jsx)(s.w, { type: "critical", children: i }),
+                    T(a) ? null : (0, l.jsx)(s.w, { type: "warning", children: a }),
+                    o.map(y),
                 ],
             });
             return (0, l.jsx)("div", {
@@ -114,7 +114,7 @@ function y(e) {
         }, [i, a, o, t, n])
     );
 }
-function R(e) {
+function P(e) {
     return r.useMemo(
         () =>
             null == e
@@ -122,29 +122,29 @@ function R(e) {
                 : Array.isArray(e)
                   ? 0 === e.length
                       ? null
-                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => T(e)) })
+                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => y(e)) })
                   : null != e
-                    ? T(e)
+                    ? y(e)
                     : null,
         [e],
     );
 }
-function x(e) {
+function R(e) {
     let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: i } = e,
-        a = R(t);
+        a = P(t);
     return r.useMemo(
         () =>
             null != a || n
                 ? n
                     ? null != a
-                        ? (0, l.jsx)(y, { showUpperNoticesAboveGlobalNotices: i, children: a })
-                        : (0, l.jsx)(y, {})
+                        ? (0, l.jsx)(g, { showUpperNoticesAboveGlobalNotices: i, children: a })
+                        : (0, l.jsx)(g, {})
                     : (0, l.jsx)("div", { className: f.dD, children: a })
                 : null,
         [n, a, i],
     );
 }
-function P(e) {
+function x(e) {
     let {
             upperInlineNoticeProps: t,
             planSelectContent: n,
@@ -157,23 +157,23 @@ function P(e) {
             legalContent: m,
             invoiceTotalDueLabel: E = p.intl.string(I.default.R0cZsM),
             invoiceTotalDueValue: C,
-            shouldShowGlobalNotices: _,
-            showUpperNoticesAboveGlobalNotices: N,
-            footerInlineNoticeProps: S,
-            className: T,
+            shouldShowGlobalNotices: h,
+            showUpperNoticesAboveGlobalNotices: S,
+            footerInlineNoticeProps: A,
+            className: y,
         } = e,
-        g = R(S);
+        T = P(A);
     return o
-        ? (0, l.jsx)(A, { className: T })
+        ? (0, l.jsx)(N, { className: y })
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: a()(T, { [f.pg]: null == c }),
+                      className: a()(y, { [f.pg]: null == c }),
                       children: [
-                          (0, l.jsx)(x, {
+                          (0, l.jsx)(R, {
                               upperInlineNoticeProps: t,
-                              shouldShowGlobalNotices: _,
-                              showUpperNoticesAboveGlobalNotices: N,
+                              shouldShowGlobalNotices: h,
+                              showUpperNoticesAboveGlobalNotices: S,
                           }),
                           n,
                           null != n && null != r && (0, l.jsx)("div", { className: f.ls }),
@@ -185,10 +185,10 @@ function P(e) {
                   }),
                   (0, l.jsxs)(u.bx, {
                       children: [
-                          null != E && null != C && (0, l.jsx)(h.Qf, { className: f.NR, label: E, value: C }),
+                          null != E && null != C && (0, l.jsx)(_.Qf, { className: f.NR, label: E, value: C }),
                           null != d ? (0, l.jsx)("div", { className: f.uh, children: d }) : null,
                           m,
-                          null != g ? (0, l.jsx)("div", { className: f.Uu, children: g }) : null,
+                          null != T ? (0, l.jsx)("div", { className: f.Uu, children: T }) : null,
                       ],
                   }),
               ],

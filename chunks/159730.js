@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { A: () => Y, Y: () => H });
+n.d(t, { A: () => W, Y: () => j });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(284009),
-    l = n.n(o),
-    u = n(621466),
+    a = n(503698),
+    s = n.n(a),
+    l = n(284009),
+    o = n.n(l),
+    d = n(621466),
     c = n(17928),
-    d = n(939249),
+    u = n(939249),
     _ = n(186111),
-    h = n(531685),
-    f = n(787541),
-    p = n(244083),
-    E = n(552893);
-let m = "/assets/b6c2e5ec03845c03.jpg",
-    g = "/assets/f2e13fd1d0c497be.jpg";
-function A() {
+    E = n(531685),
+    A = n(787541),
+    h = n(244083),
+    I = n(701181);
+let f = "/assets/b6c2e5ec03845c03.jpg",
+    p = "/assets/f2e13fd1d0c497be.jpg";
+function T() {
     return (0, i.jsx)("div", {
-        className: E.k,
+        className: I.k,
         children: (0, i.jsxs)("svg", {
             width: "224",
             height: "148",
@@ -73,7 +73,7 @@ function A() {
                             patternUnits: "objectBoundingBox",
                             height: "1",
                             width: "1",
-                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "32", width: "32", href: m }),
+                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "32", width: "32", href: f }),
                         }),
                         (0, i.jsx)("pattern", {
                             id: "tutorial-media-channels-image2",
@@ -82,7 +82,7 @@ function A() {
                             patternUnits: "objectBoundingBox",
                             height: "1",
                             width: "1",
-                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "32", width: "32", href: g }),
+                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "32", width: "32", href: p }),
                         }),
                     ],
                 }),
@@ -90,10 +90,10 @@ function A() {
         }),
     });
 }
-var I = n(749391);
-function T() {
+var m = n(562383);
+function g() {
     return (0, i.jsx)("div", {
-        className: I.k,
+        className: m.k,
         children: (0, i.jsxs)("svg", {
             width: "248",
             height: "67",
@@ -224,7 +224,7 @@ function T() {
                             patternUnits: "objectBoundingBox",
                             height: "1",
                             width: "1",
-                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "44", width: "44", href: m }),
+                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "44", width: "44", href: f }),
                         }),
                         (0, i.jsx)("pattern", {
                             id: "tutorial-media-voice-channels-image2",
@@ -233,7 +233,7 @@ function T() {
                             patternUnits: "objectBoundingBox",
                             height: "1",
                             width: "1",
-                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "44", width: "44", href: g }),
+                            children: (0, i.jsx)("image", { x: "0", y: "0", height: "44", width: "44", href: p }),
                         }),
                     ],
                 }),
@@ -242,42 +242,42 @@ function T() {
     });
 }
 var S = n(942381),
-    y = n(97808),
+    N = n(97808),
     C = n(778712),
-    N = n(571694),
-    v = n(548118),
-    R = n(366811),
-    O = n(734057),
-    b = n(71393),
-    D = n(287809),
-    L = n(486020),
-    w = n(642713);
-function M() {
-    let { guildId: e, channelId: t } = (0, R.A)((e) => {
+    R = n(571694),
+    O = n(548118),
+    L = n(366811),
+    D = n(734057),
+    y = n(71393),
+    v = n(287809),
+    b = n(486020),
+    M = n(941017);
+function P() {
+    let { guildId: e, channelId: t } = (0, L.A)((e) => {
             let { guildId: t, channelId: n } = e;
             return { guildId: t, channelId: n };
         }, S.x),
-        n = (0, c.bG)([b.A], () => b.A.getGuild(e)),
-        r = (0, c.bG)([O.A], () => (null == n ? O.A.getChannel(t) : null)),
-        s = (0, c.bG)([D.default], () => D.default.getCurrentUser()),
-        a = null != r ? (0, N.Y)(r) : null,
-        o = null != s ? s.getAvatarURL(e, 80) : L.vI["0"],
-        l = (0, i.jsx)(y.eu, { src: o, "aria-hidden": !0, size: C._3.SIZE_80, className: w.HT }),
-        u = null;
+        n = (0, c.bG)([y.A], () => y.A.getGuild(e)),
+        r = (0, c.bG)([D.A], () => (null == n ? D.A.getChannel(t) : null)),
+        a = (0, c.bG)([v.default], () => v.default.getCurrentUser()),
+        s = null != r ? (0, R.Y)(r) : null,
+        l = null != a ? a.getAvatarURL(e, 80) : b.vI["0"],
+        o = (0, i.jsx)(N.eu, { src: l, "aria-hidden": !0, size: C._3.SIZE_80, className: M.HT }),
+        d = null;
     return (
-        (u =
+        (d =
             null != n
-                ? (0, i.jsx)(v.Ay, { guild: n })
-                : null != a
-                  ? (0, i.jsx)(y.eu, { "aria-hidden": !0, src: a, size: C._3.SIZE_80, className: w.HT })
-                  : l),
+                ? (0, i.jsx)(O.Ay, { guild: n })
+                : null != s
+                  ? (0, i.jsx)(N.eu, { "aria-hidden": !0, src: s, size: C._3.SIZE_80, className: M.HT })
+                  : o),
         (0, i.jsxs)("div", {
-            className: w.kL,
+            className: M.kL,
             children: [
-                (0, i.jsx)("div", { className: w.$H, children: l }),
-                (0, i.jsx)("div", { className: w.XN, children: u }),
+                (0, i.jsx)("div", { className: M.$H, children: o }),
+                (0, i.jsx)("div", { className: M.XN, children: d }),
                 (0, i.jsx)("svg", {
-                    className: w.bm,
+                    className: M.bm,
                     xmlns: "http://www.w3.org/2000/svg",
                     width: "156",
                     height: "70",
@@ -356,27 +356,27 @@ function M() {
         })
     );
 }
-let P = Object.freeze({
+let U = Object.freeze({
     "voice-conversations": {
         popoutPosition: "right",
         highPriority: !0,
-        textAlign: p.YL.CENTER,
-        media: () => (0, i.jsx)(T, {}),
+        textAlign: h.YL.CENTER,
+        media: () => (0, i.jsx)(g, {}),
     },
     "writing-messages": {
         popoutPosition: "top",
         highPriority: !0,
-        textAlign: p.YL.CENTER,
+        textAlign: h.YL.CENTER,
         spacing: 10,
-        media: () => (0, i.jsx)(M, {}),
+        media: () => (0, i.jsx)(P, {}),
     },
     "direct-messages": { popoutPosition: "right" },
     "create-first-server": { popoutPosition: "right", highPriority: !0 },
     "organize-by-topic": {
         popoutPosition: "right",
-        textAlign: p.YL.CENTER,
+        textAlign: h.YL.CENTER,
         spacing: 8,
-        media: () => (0, i.jsx)(A, {}),
+        media: () => (0, i.jsx)(T, {}),
     },
     "instant-invite": { popoutPosition: "right", spacing: 24, highPriority: !0 },
     "whos-online": { spacing: 16, popoutPosition: "left" },
@@ -384,26 +384,26 @@ let P = Object.freeze({
     "friends-list": { spacing: 8, popoutPosition: "right" },
     "create-more-servers": { spacing: 8, popoutPosition: "right" },
 });
-var x = n(241541),
-    k = n(967198),
-    U = n(375708),
-    G = n(724509);
+var w = n(241541),
+    G = n(967198),
+    x = n(375708),
+    k = n(537501);
 function F() {
     return (0, i.jsx)(i.Fragment, {
-        children: U.intl.format(U.t.ymkBti, {
-            shareIcon: U.intl.string(U.t.VINpSK),
-            shareIconHook: () => (0, i.jsx)(x.D, { className: G.Kk }, "icon"),
+        children: x.intl.format(x.t.ymkBti, {
+            shareIcon: x.intl.string(x.t.VINpSK),
+            shareIconHook: () => (0, i.jsx)(w.D, { className: k.Kk }, "icon"),
         }),
     });
 }
 function V() {
-    let e = (0, c.bG)([b.A, k.A], () => b.A.getGuild(k.A.getGuildId()), []),
+    let e = (0, c.bG)([y.A, G.A], () => y.A.getGuild(G.A.getGuildId()), []),
         t = e?.name;
-    return (0, i.jsx)(i.Fragment, { children: U.intl.format(U.t.oQuG3K, { serverName: t }) });
+    return (0, i.jsx)(i.Fragment, { children: x.intl.format(x.t.oQuG3K, { serverName: t }) });
 }
 var B = n(79858),
-    j = n(234645);
-class H extends r.PureComponent {
+    H = n(47637);
+class j extends r.PureComponent {
     state = { offsetX: null, offsetY: null };
     contentRef = r.createRef();
     componentDidMount() {
@@ -414,23 +414,23 @@ class H extends r.PureComponent {
             tutorialId: t,
             origin: { x: n, y: i },
             targetWidth: r,
-            targetHeight: s,
-            position: a,
-            offset: o,
+            targetHeight: a,
+            position: s,
+            offset: l,
         } = e;
         (this.props.tutorialId !== t ||
             this.props.origin.x !== n ||
             this.props.origin.y !== i ||
             this.props.targetWidth !== r ||
-            this.props.targetHeight !== s ||
-            this.props.position !== a ||
-            this.props.offset.x !== o.x ||
-            this.props.offset.y !== o.y) &&
+            this.props.targetHeight !== a ||
+            this.props.position !== s ||
+            this.props.offset.x !== l.x ||
+            this.props.offset.y !== l.y) &&
             this.updateCache();
     }
     updateCache() {
         let e = this.contentRef.current;
-        if (null == e || !(0, u.vq)(e, HTMLElement)) return;
+        if (null == e || !(0, d.vq)(e, HTMLElement)) return;
         let { offsetWidth: t, offsetHeight: n } = e,
             i = { offsetX: (this.props.targetWidth - t) / 2, offsetY: (this.props.targetHeight - n) / 2 };
         switch (this.props.position) {
@@ -449,10 +449,10 @@ class H extends r.PureComponent {
         (i.offsetX += this.props.offset.x ?? 0), (i.offsetY += this.props.offset.y ?? 0), this.setState(i);
     }
     handleSkipTips() {
-        f.n7();
+        A.n7();
     }
     handleDismiss = () => {
-        f.X8(this.props.tutorialId);
+        A.X8(this.props.tutorialId);
     };
     getTutorialPopoutText() {
         let e,
@@ -461,24 +461,24 @@ class H extends r.PureComponent {
             title: (e =
                 {
                     VOICE_CONVERSATIONS: {
-                        title: (0, i.jsx)("div", { className: G.lU, children: U.intl.string(U.t.w5HAll) }),
-                        body: U.intl.string(U.t.Ww4hhq),
+                        title: (0, i.jsx)("div", { className: k.lU, children: x.intl.string(x.t.w5HAll) }),
+                        body: x.intl.string(x.t.Ww4hhq),
                     },
                     WRITING_MESSAGES: {
-                        title: (0, i.jsx)("div", { className: G.nG, children: U.intl.string(U.t.nkP0ly) }),
+                        title: (0, i.jsx)("div", { className: k.nG, children: x.intl.string(x.t.nkP0ly) }),
                         body: (0, i.jsx)(V, {}),
                     },
                     ORGANIZE_BY_TOPIC: {
-                        title: (0, i.jsx)("div", { className: G.vX, children: U.intl.string(U.t["j/5+IX"]) }),
-                        body: U.intl.string(U.t.mufH2P),
+                        title: (0, i.jsx)("div", { className: k.vX, children: x.intl.string(x.t["j/5+IX"]) }),
+                        body: x.intl.string(x.t.mufH2P),
                     },
-                    WHOS_ONLINE: { title: U.intl.string(U.t.l2nSoI), body: U.intl.format(U.t.y6tbBB, {}) },
-                    INSTANT_INVITE: { title: U.intl.string(U.t.XcehY3), body: (0, i.jsx)(F, {}) },
-                    SERVER_SETTINGS: { title: U.intl.string(U.t.wc8wi5), body: U.intl.format(U.t.mIfDhc, {}) },
-                    DIRECT_MESSAGES: { title: U.intl.string(U.t.V07x5y), body: U.intl.format(U.t.GEBBey, {}) },
-                    CREATE_MORE_SERVERS: { title: U.intl.string(U.t["50FORo"]), body: U.intl.format(U.t.zVL4qa, {}) },
-                    CREATE_FIRST_SERVER: { title: U.intl.string(U.t.CtOX9T), body: U.intl.format(U.t.TflqTe, {}) },
-                    FRIENDS_LIST: { title: U.intl.string(U.t.Fnk9L4), body: U.intl.format(U.t.NTq0AZ, {}) },
+                    WHOS_ONLINE: { title: x.intl.string(x.t.l2nSoI), body: x.intl.format(x.t.y6tbBB, {}) },
+                    INSTANT_INVITE: { title: x.intl.string(x.t.XcehY3), body: (0, i.jsx)(F, {}) },
+                    SERVER_SETTINGS: { title: x.intl.string(x.t.wc8wi5), body: x.intl.format(x.t.mIfDhc, {}) },
+                    DIRECT_MESSAGES: { title: x.intl.string(x.t.V07x5y), body: x.intl.format(x.t.GEBBey, {}) },
+                    CREATE_MORE_SERVERS: { title: x.intl.string(x.t["50FORo"]), body: x.intl.format(x.t.zVL4qa, {}) },
+                    CREATE_FIRST_SERVER: { title: x.intl.string(x.t.CtOX9T), body: x.intl.format(x.t.TflqTe, {}) },
+                    FRIENDS_LIST: { title: x.intl.string(x.t.Fnk9L4), body: x.intl.format(x.t.NTq0AZ, {}) },
                 }[t.replace(/-/g, "_").toUpperCase()] ?? {}).title,
             body: e.body,
             isLongText: e.isLongText ?? !1,
@@ -486,60 +486,60 @@ class H extends r.PureComponent {
     }
     render() {
         let { tutorialId: e, autoInvert: t, focused: n, origin: r } = this.props,
-            s = e in P ? P[e] : null;
-        if (null == s) return null;
+            a = e in U ? U[e] : null;
+        if (null == a) return null;
         let {
-                media: o,
-                textAlign: l,
-                isLongText: u,
+                media: l,
+                textAlign: o,
+                isLongText: d,
                 highPriority: c,
                 spacing: _,
-                arrowAlignment: h = p.oN.TOP,
-                popoutPosition: f,
-            } = s,
-            { offsetX: E, offsetY: m } = this.state,
-            g = { left: null != E ? r.x + E : void 0, top: null != m ? r.y + m : void 0 };
-        function A(e) {
+                arrowAlignment: E = h.oN.TOP,
+                popoutPosition: A,
+            } = a,
+            { offsetX: I, offsetY: f } = this.state,
+            p = { left: null != I ? r.x + I : void 0, top: null != f ? r.y + f : void 0 };
+        function T(e) {
             let t = n && !e;
-            return { [j.bW]: t, [j.EO]: !t, [j.TX]: c };
+            return { [H.bW]: t, [H.EO]: !t, [H.TX]: c };
         }
-        let I = this.getTutorialPopoutText();
-        return (0, i.jsx)(p.Ay, {
+        let m = this.getTutorialPopoutText();
+        return (0, i.jsx)(h.Ay, {
             innerRef: this.contentRef,
-            position: f,
-            renderMedia: o,
-            textAlign: l,
+            position: A,
+            renderMedia: l,
+            textAlign: o,
             spacing: _,
-            isLongText: u,
+            isLongText: d,
             uniqueId: e,
             autoInvert: t,
-            arrowAlignment: h,
+            arrowAlignment: E,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...I,
+            ...m,
             children: (e, t) => {
                 let r,
-                    { isShown: s } = t;
-                return (0, i.jsx)(d.D, {
+                    { isShown: a } = t;
+                return (0, i.jsx)(u.D, {
                     ...e,
-                    "aria-label": U.intl.string(U.t.IyCzIF),
-                    className: j.q3,
-                    style: g,
+                    "aria-label": x.intl.string(x.t.IyCzIF),
+                    className: H.q3,
+                    style: p,
                     innerRef: this.contentRef,
                     children: (0, i.jsxs)("div", {
-                        className: a()(j.Mp, A(s)),
+                        className: s()(H.Mp, T(a)),
                         children: [
-                            ((r = n && !s),
+                            ((r = n && !a),
                             !0 !== c
                                 ? null
                                 : (0, i.jsxs)("div", {
                                       children: [
-                                          (0, i.jsx)("div", { className: a()(j.Mn, { [j.bW]: r, [j.EO]: !r }) }),
-                                          (0, i.jsx)("div", { className: a()(j.sQ, { [j.bW]: r, [j.EO]: !r }) }),
+                                          (0, i.jsx)("div", { className: s()(H.Mn, { [H.bW]: r, [H.EO]: !r }) }),
+                                          (0, i.jsx)("div", { className: s()(H.sQ, { [H.bW]: r, [H.EO]: !r }) }),
                                       ],
                                   })),
-                            (0, i.jsx)("div", { className: a()(j.r6, A(s)) }),
-                            (0, i.jsx)("div", { className: a()(j.CY, A(s)) }),
+                            (0, i.jsx)("div", { className: s()(H.r6, T(a)) }),
+                            (0, i.jsx)("div", { className: s()(H.CY, T(a)) }),
                         ],
                     }),
                 });
@@ -547,26 +547,26 @@ class H extends r.PureComponent {
         });
     }
 }
-let Y = function () {
+let W = function () {
     let {
         indicators: e,
         tutorialData: t,
         windowFocused: n,
         shouldShowAny: r,
-    } = (0, c.cf)([B.A, h.A, _.A], () => ({
+    } = (0, c.cf)([B.A, E.A, _.A], () => ({
         indicators: B.A.getIndicators(),
         tutorialData: B.A.getData(),
         shouldShowAny: B.A.shouldShowAnyIndicators() && !_.A.hasLayers(),
-        windowFocused: h.A.isFocused(),
+        windowFocused: E.A.isFocused(),
     }));
     return r
         ? (0, i.jsx)(i.Fragment, {
               children: Object.entries(e).map((e) => {
-                  let [r, s] = e,
-                      a = t[r];
+                  let [r, a] = e,
+                      s = t[r];
                   return (
-                      l()(null != a, `Missing tutorial definition for ${r}`),
-                      (0, i.jsx)(H, { tutorialId: r, tutorialDefinition: a, focused: n, ...s }, r)
+                      o()(null != s, `Missing tutorial definition for ${r}`),
+                      (0, i.jsx)(j, { tutorialId: r, tutorialDefinition: s, focused: n, ...a }, r)
                   );
               }),
           })

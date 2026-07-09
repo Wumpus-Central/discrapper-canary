@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { Ay: () => _, Ur: () => d, mk: () => c });
+n.d(t, { Ay: () => _, Ur: () => u, mk: () => c });
 var i = n(143236),
     r = n(721768),
-    s = n(612394),
-    a = n(820066),
-    o = n(885386),
-    l = n(38405),
-    u = n(597184);
+    a = n(612394),
+    s = n(820066),
+    l = n(885386),
+    o = n(38405),
+    d = n(597184);
 let c = ["gameMentionInput", "timestampMentionInput"];
-function d() {
+function u() {
     return {
         query: null,
         selectedIndex: null,
@@ -25,7 +25,7 @@ class _ extends i.EventEmitter {
     nextUpdateContextChanged = !1;
     updateTimeout;
     constructor(e) {
-        super(), (this.props = e), (this.state = d());
+        super(), (this.props = e), (this.state = u());
     }
     updateProps(e) {
         let t = this.props.focused !== e.focused,
@@ -54,7 +54,7 @@ class _ extends i.EventEmitter {
         if (!this.state.isVisible) return !1;
         if (null == this.state.selectedIndex) {
             let t = this.state.query?.typeInfo.focusMode;
-            return !e && (t === u.e.MANUAL || t === u.e.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0);
+            return !e && (t === d.e.MANUAL || t === d.e.AUTO_WHEN_FILTERED) && (this.setSelectedIndex(0), !0);
         }
         return this.selectResult(this.state.selectedIndex, e, !0);
     }
@@ -62,7 +62,7 @@ class _ extends i.EventEmitter {
         if (!this.state.isVisible) return !1;
         if (
             (e < 0 ? this.props.navigator.focusPreviousItem() : e > 0 && this.props.navigator.focusNextItem(),
-            null != this.state.selectedIndex && this.state.query?.type === u.DB.COMMANDS)
+            null != this.state.selectedIndex && this.state.query?.type === d.DB.COMMANDS)
         ) {
             let e = this.state.query.results.commands?.[this.state.selectedIndex];
             null != e && r.e0(this.props.channel.id, e.id);
@@ -108,7 +108,7 @@ class _ extends i.EventEmitter {
                 (this.nextUpdateQueryChanged = !1),
                     (this.nextUpdateContextChanged = !1),
                     (this.updateTimeout = void 0),
-                    this.updateResults(e, t).catch((e) => l.A.captureException(e));
+                    this.updateResults(e, t).catch((e) => o.A.captureException(e));
             }, 0));
     }
     async updateResults() {
@@ -117,22 +117,22 @@ class _ extends i.EventEmitter {
             i = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             {
-                findCommandOptionAutocompleteType: l,
-                findMatchingAutocompleteType: d,
+                findCommandOptionAutocompleteType: o,
+                findMatchingAutocompleteType: u,
                 getOptions: _,
-            } = await Promise.all([n.e("84253"), n.e("73220"), n.e("84806")]).then(n.bind(n, 961349));
+            } = await Promise.all([n.e("3325"), n.e("50839"), n.e("84806")]).then(n.bind(n, 961349));
         if (null == this.props.editorRef.current) return;
-        let h = _(this.props),
-            f = this.props.editorRef.current.getSlateEditor();
-        null != f &&
+        let E = _(this.props),
+            A = this.props.editorRef.current.getSlateEditor();
+        null != A &&
             (t =
-                null != (e = a.VW.getSelectedParentOfType(f, c))
-                    ? a.VW.getTextFromRange(f, a.VW.range(f, e[1]))
+                null != (e = s.VW.getSelectedParentOfType(A, c))
+                    ? s.VW.getTextFromRange(A, s.VW.range(A, e[1]))
                     : null);
-        let p = d({
+        let h = u({
                 channel: this.props.channel,
                 guild: this.props.guild,
-                options: h,
+                options: E,
                 currentWord: this.props.currentWord,
                 currentWordIsAtStart: this.props.currentWordIsAtStart,
                 textValue: this.props.textValue,
@@ -140,28 +140,28 @@ class _ extends i.EventEmitter {
                 parentAutocompleteInputType: e?.[0].type,
                 parentAutocompleteInputValue: t,
             }),
-            E = h.commands !== u.Ze.DISABLED ? l(this.props.activeCommandOption, this.props.currentWord) : null;
-        if (null == p && null != E) p = E;
-        else if (null == p || (null != E && p.type !== E.type)) return void this.clearQuery();
-        let { type: m, typeInfo: g, query: A } = p,
-            I = r || (i && (this.state.query?.queryText !== A || this.state.query?.typeInfo !== g)),
-            T = o.ML.getSetting();
-        h.allowStickers = h.allowStickers ? T : h.allowStickers;
-        let S = o.eK.getSetting();
-        h.allowSoundmoji = h.allowSoundmoji ? S : h.allowSoundmoji;
-        let { results: y, metadata: C } = g.queryResults(this.props.channel, this.props.guild, A, h, I),
-            N = 0;
-        for (let e of Object.values(y)) Array.isArray(e) && (N += e.length);
-        i && A.length > 0 && A !== this.state.query?.queryText && (0, s.AR)(m, h);
-        let v = !0 === y.isLoading,
-            R = this.shouldShow(N, v, g),
-            O = this.state.selectedIndex;
-        !R || v ? (O = null) : null != O && O >= N && (O = N - 1),
-            R && !this.state.isVisible && (0, s.uA)(m, this.props.channel, C),
+            I = E.commands !== d.Ze.DISABLED ? o(this.props.activeCommandOption, this.props.currentWord) : null;
+        if (null == h && null != I) h = I;
+        else if (null == h || (null != I && h.type !== I.type)) return void this.clearQuery();
+        let { type: f, typeInfo: p, query: T } = h,
+            m = r || (i && (this.state.query?.queryText !== T || this.state.query?.typeInfo !== p)),
+            g = l.ML.getSetting();
+        E.allowStickers = E.allowStickers ? g : E.allowStickers;
+        let S = l.eK.getSetting();
+        E.allowSoundmoji = E.allowSoundmoji ? S : E.allowSoundmoji;
+        let { results: N, metadata: C } = p.queryResults(this.props.channel, this.props.guild, T, E, m),
+            R = 0;
+        for (let e of Object.values(N)) Array.isArray(e) && (R += e.length);
+        i && T.length > 0 && T !== this.state.query?.queryText && (0, a.AR)(f, E);
+        let O = !0 === N.isLoading,
+            L = this.shouldShow(R, O, p),
+            D = this.state.selectedIndex;
+        !L || O ? (D = null) : null != D && D >= R && (D = R - 1),
+            L && !this.state.isVisible && (0, a.uA)(f, this.props.channel, C),
             this.setState({
-                query: { type: m, typeInfo: g, queryText: A, results: y, resultCount: N, options: h, isLoading: v },
-                isVisible: R,
-                selectedIndex: O,
+                query: { type: f, typeInfo: p, queryText: T, results: N, resultCount: R, options: E, isLoading: O },
+                isVisible: L,
+                selectedIndex: D,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             });
@@ -171,19 +171,19 @@ class _ extends i.EventEmitter {
     }
     selectResult(e, t, n) {
         if (!this.state.isVisible) return !1;
-        let { type: i, typeInfo: r, results: a, resultCount: o, options: l } = this.state.query;
-        if (e >= o) return !1;
+        let { type: i, typeInfo: r, results: s, resultCount: l, options: o } = this.state.query;
+        if (e >= l) return !1;
         let c = r.onSelect?.({
-            results: a,
+            results: s,
             index: e,
-            type: t ? u.lg.SEND : u.lg.INSERT,
-            options: l,
+            type: t ? d.lg.SEND : d.lg.INSERT,
+            options: o,
             channel: this.props.channel,
             guild: this.props.guild,
             tabOrEnter: n,
             queryText: this.state.query?.queryText,
         });
-        return null != c && (0, s.So)(i, c.type ?? null, this.props.channel, c.metadata), !0;
+        return null != c && (0, a.So)(i, c.type ?? null, this.props.channel, c.metadata), !0;
     }
     setState(e) {
         for (let t in e)

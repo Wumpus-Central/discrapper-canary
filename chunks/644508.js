@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { f: () => u });
+n.d(t, { f: () => d });
 var i = n(627968),
     r = n(192308),
-    s = n(174459),
-    a = n(80569),
-    o = n(308295),
-    l = n(652215);
-async function u(e) {
-    let { analyticsLocation: t = null, ...u } = e;
-    s.default.track(l.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
+    a = n(174459),
+    s = n(80569),
+    l = n(308295),
+    o = n(652215);
+async function d(e) {
+    let { analyticsLocation: t = null, ...d } = e;
+    a.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
         await (0, r.openModalLazy)(
             async () => {
                 let { EmojiStudioModal: e } = await Promise.all([
-                    n.e("91766"),
+                    n.e("5270"),
                     n.e("24761"),
                     n.e("50342"),
                     n.e("7406"),
@@ -22,12 +22,12 @@ async function u(e) {
                     n.e("34936"),
                     n.e("95903"),
                 ]).then(n.bind(n, 227780));
-                return (t) => (0, i.jsx)(e, { ...t, ...u });
+                return (t) => (0, i.jsx)(e, { ...t, ...d });
             },
             {
-                modalKey: a.y,
+                modalKey: s.y,
                 onCloseRequest: () => {
-                    (0, o.p)();
+                    (0, l.p)();
                 },
             },
         );

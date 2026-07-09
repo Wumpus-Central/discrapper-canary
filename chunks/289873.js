@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { t: () => d, y: () => _ });
+n.d(t, { t: () => u, y: () => _ });
 var i,
     r = n(627968),
-    s = n(64700),
-    a = n(503698),
-    o = n.n(a),
-    l = n(844222),
-    u = n(460890),
-    c = n(165980),
-    d =
+    a = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    o = n(844222),
+    d = n(460890),
+    c = n(49564),
+    u =
         (((i = {}).WANDERING_CUBES = "wanderingCubes"),
         (i.CHASING_DOTS = "chasingDots"),
         (i.PULSING_ELLIPSIS = "pulsingEllipsis"),
@@ -17,10 +17,10 @@ var i,
         (i.LOW_MOTION = "lowMotion"),
         i);
 function _(e) {
-    let { type: t = "wanderingCubes", animated: n = !0, className: i, itemClassName: a, ...d } = e,
-        { i18n: _ } = (0, u.G9)(),
-        { reducedMotion: h } = s.useContext(l.C),
-        f = h.enabled
+    let { type: t = "wanderingCubes", animated: n = !0, className: i, itemClassName: s, ...u } = e,
+        { i18n: _ } = (0, d.G9)(),
+        { reducedMotion: E } = a.useContext(o.C),
+        A = E.enabled
             ? (function (e) {
                   switch (e) {
                       case "wanderingCubes":
@@ -31,55 +31,55 @@ function _(e) {
                   }
               })(t)
             : t,
-        p = d["aria-label"] ?? _.SPINNER_LOADING_LABEL;
-    if ("spinningCircle" === f || "spinningCircleSimple" === f)
+        h = u["aria-label"] ?? _.SPINNER_LOADING_LABEL;
+    if ("spinningCircle" === A || "spinningCircleSimple" === A)
         return (0, r.jsx)("div", {
-            className: o()(c.spinner, c[f], i, { [c.stopAnimation]: !n }),
+            className: l()(c.spinner, c[A], i, { [c.stopAnimation]: !n }),
             role: "img",
-            ...d,
-            "aria-label": p,
+            ...u,
+            "aria-label": h,
             children: (0, r.jsx)("div", {
                 className: c.spinningCircleInner,
                 children: (0, r.jsxs)("svg", {
                     className: c.circular,
                     viewBox: "25 25 50 50",
                     children: [
-                        "spinningCircle" === f &&
+                        "spinningCircle" === A &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
                                     (0, r.jsx)("circle", {
-                                        className: o()(c.path, c.path3, a),
+                                        className: l()(c.path, c.path3, s),
                                         cx: "50",
                                         cy: "50",
                                         r: "20",
                                     }),
                                     (0, r.jsx)("circle", {
-                                        className: o()(c.path, c.path2, a),
+                                        className: l()(c.path, c.path2, s),
                                         cx: "50",
                                         cy: "50",
                                         r: "20",
                                     }),
                                 ],
                             }),
-                        (0, r.jsx)("circle", { className: o()(c.path, a), cx: "50", cy: "50", r: "20" }),
+                        (0, r.jsx)("circle", { className: l()(c.path, s), cx: "50", cy: "50", r: "20" }),
                     ],
                 }),
             }),
         });
-    let E = o()(c.item, a);
+    let I = l()(c.item, s);
     return (0, r.jsx)("span", {
-        className: o()(c.spinner, i, { [c.stopAnimation]: !n }),
+        className: l()(c.spinner, i, { [c.stopAnimation]: !n }),
         role: "img",
-        "aria-label": p,
-        ...d,
+        "aria-label": h,
+        ...u,
         children: (0, r.jsxs)("span", {
-            className: o()(c.inner, c[f]),
+            className: l()(c.inner, c[A]),
             children: [
-                (0, r.jsx)("span", { className: E }),
-                (0, r.jsx)("span", { className: E }),
-                "pulsingEllipsis" === f || "lowMotion" === f ? (0, r.jsx)("span", { className: E }) : null,
+                (0, r.jsx)("span", { className: I }),
+                (0, r.jsx)("span", { className: I }),
+                "pulsingEllipsis" === A || "lowMotion" === A ? (0, r.jsx)("span", { className: I }) : null,
             ],
         }),
     });
 }
-_.Type = d;
+_.Type = u;

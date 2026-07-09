@@ -1,53 +1,53 @@
 "use strict";
-n.d(t, { A: () => eL, x: () => eR });
+n.d(t, { A: () => ev, x: () => eL });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(791332),
-    l = n(939249),
-    u = n(933832),
+    a = n(503698),
+    s = n.n(a),
+    l = n(791332),
+    o = n(939249),
+    d = n(933832),
     c = n(624479),
-    d = n(140735),
+    u = n(140735),
     _ = n(228366),
-    h = n(9578),
-    f = n(268218),
-    E = n(159273),
-    p = n(232042),
-    m = n(906754),
-    g = n(332173),
-    A = n(37632),
-    I = n(534890),
-    T = n(375708),
-    S = n(569417);
+    E = n(9578),
+    A = n(268218),
+    h = n(159273),
+    I = n(232042),
+    f = n(906754),
+    p = n(332173),
+    T = n(37632),
+    m = n(534890),
+    g = n(375708),
+    S = n(191753);
 let N = function () {
-    return (0, i.jsx)(I.o, {
+    return (0, i.jsx)(m.o, {
         size: "md",
         color: "currentColor",
         className: S.K,
-        "aria-label": T.intl.string(T.t.BAB0yK),
+        "aria-label": g.intl.string(g.t.BAB0yK),
     });
 };
 var C = n(112107),
-    y = n(930101),
+    R = n(930101),
     O = n(976860),
-    R = n(302031),
-    v = n(157941),
-    b = n(696451),
-    L = n(317525),
-    D = n(71393),
-    w = n(957565),
+    L = n(302031),
+    D = n(157941),
+    y = n(696451),
+    v = n(317525),
+    b = n(71393),
+    M = n(957565),
     P = n(143145),
-    M = n(785562),
-    x = n(192308),
-    U = n(588975),
-    k = n(442433),
-    G = n(975807),
-    V = n(235393),
-    F = n(202803),
+    U = n(785562),
+    w = n(192308),
+    G = n(588975),
+    x = n(442433),
+    k = n(975807),
+    F = n(235393),
+    V = n(202803),
     B = n(652215),
-    H = n(238999),
-    j = n(995257),
+    H = n(13911),
+    j = n(101241),
     W = n(556300),
     Y = n(990474);
 n(938796);
@@ -64,64 +64,64 @@ var K = n(380610),
     en = n(331322),
     ei = n(776078),
     er = n(821609),
-    es = n(280450),
-    ea = n(287809),
-    eo = n(102609),
-    el = n(271478),
-    eu = n(386976),
+    ea = n(280450),
+    es = n(287809),
+    el = n(102609),
+    eo = n(271478),
+    ed = n(386976),
     ec = n(257433),
-    ed = n(32523),
+    eu = n(32523),
     e_ = n(688151),
-    eh = n(919093);
-function ef(e) {
+    eE = n(990389);
+function eA(e) {
     let { url: t } = e,
         n = r.useCallback(() => {
-            (0, w.C)(t, () =>
+            (0, M.C)(t, () =>
                 (0, Q.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: J.Ck.SUCCESS }),
             );
         }, [t]);
-    return (0, i.jsx)(l.D, {
-        className: eh.wp,
+    return (0, i.jsx)(o.D, {
+        className: eE.wp,
         onClick: n,
         children: (0, i.jsx)(ee.q, { size: "sm", color: "currentColor" }),
     });
 }
-function eE(e) {
+function eh(e) {
     let { url: t } = e,
         n = (0, Z.OL)(t),
-        s = (0, Z.Kb)(t),
-        { experiments: a, overridesInfo: o } = (0, ed.hI)(),
-        { experiments: l, overridesInfo: u } = (0, eu.op)(),
-        c = r.useMemo(() => (null == n ? null : null != a[n] ? a[n] : l[n]), [a, l, n]),
-        d = r.useMemo(() => {
+        a = (0, Z.Kb)(t),
+        { experiments: s, overridesInfo: l } = (0, eu.hI)(),
+        { experiments: o, overridesInfo: d } = (0, ed.op)(),
+        c = r.useMemo(() => (null == n ? null : null != s[n] ? s[n] : o[n]), [s, o, n]),
+        u = r.useMemo(() => {
             if (null == n);
-            else if (null != o[n]) return o[n];
-            else if (null != u[n]) return u[n];
-        }, [o, u, n]),
-        _ = es.default.getId(),
-        h = (0, ec.Fm)(c, _),
-        f = r.useMemo(() => (0, Z.GI)(c, h), [h, c]),
-        E = (0, X.bG)([ea.default], () => {
-            let e = ea.default.getCurrentUser();
+            else if (null != l[n]) return l[n];
+            else if (null != d[n]) return d[n];
+        }, [l, d, n]),
+        _ = ea.default.getId(),
+        E = (0, ec.Fm)(c, _),
+        A = r.useMemo(() => (0, Z.GI)(c, E), [E, c]),
+        h = (0, X.bG)([es.default], () => {
+            let e = es.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         });
     if (null == n || null == c) return null;
-    let p = (0, Z.hp)(c).find((e) => e.value === s),
-        m = null != p ? e_.Ps.EXPERIMENT_TREATMENT : e_.Ps.EXPERIMENT,
-        g = null != d && null != p && d.variantId === p.value,
-        A = (0, i.jsx)(ef, { url: t }),
-        I = null;
-    return (m === e_.Ps.EXPERIMENT_TREATMENT && null != p
-        ? (I = (0, i.jsx)(et.E, { variant: "text-xs/normal", color: "text-muted", children: p.label }))
-        : null != h &&
-          (I = (0, i.jsxs)(et.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", f] })),
-    E)
+    let I = (0, Z.hp)(c).find((e) => e.value === a),
+        f = null != I ? e_.Ps.EXPERIMENT_TREATMENT : e_.Ps.EXPERIMENT,
+        p = null != u && null != I && u.variantId === I.value,
+        T = (0, i.jsx)(eA, { url: t }),
+        m = null;
+    return (f === e_.Ps.EXPERIMENT_TREATMENT && null != I
+        ? (m = (0, i.jsx)(et.E, { variant: "text-xs/normal", color: "text-muted", children: I.label }))
+        : null != E &&
+          (m = (0, i.jsxs)(et.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", A] })),
+    h)
         ? (0, i.jsxs)("div", {
-              className: eh.zr,
+              className: eE.zr,
               children: [
                   (0, i.jsx)("div", {
                       children: (0, i.jsx)("div", {
-                          className: eh.wx,
+                          className: eE.wx,
                           children: (0, i.jsxs)(en.B, {
                               direction: "horizontal",
                               justify: "space-between",
@@ -136,77 +136,77 @@ function eE(e) {
                                               gap: 0,
                                               children: [
                                                   (0, i.jsx)(et.E, { variant: "text-md/semibold", children: c.title }),
-                                                  I,
+                                                  m,
                                               ],
                                           }),
                                       ],
                                   }),
-                                  A,
+                                  T,
                               ],
                           }),
                       }),
                   }),
-                  null != p
+                  null != I
                       ? (0, i.jsx)(er.$, {
                             fullWidth: !0,
-                            variant: g ? "critical-primary" : "primary",
-                            text: g ? `Clear Treatment ${p.value}` : `Apply Treatment ${p.value}`,
+                            variant: p ? "critical-primary" : "primary",
+                            text: p ? `Clear Treatment ${I.value}` : `Apply Treatment ${I.value}`,
                             onClick: () => {
-                                null != p && (g ? (0, eo.t$)(c.system, n, null) : (0, eo.t$)(c.system, n, p.value));
+                                null != I && (p ? (0, el.t$)(c.system, n, null) : (0, el.t$)(c.system, n, I.value));
                             },
                         })
                       : (0, i.jsx)("div", {
-                            className: eh.uh,
-                            children: (0, i.jsx)(el.g, { experiment: c, experimentId: n, overrideInfo: d }),
+                            className: eE.uh,
+                            children: (0, i.jsx)(eo.g, { experiment: c, experimentId: n, overrideInfo: u }),
                         }),
               ],
           })
         : null;
 }
-var ep = n(836156);
-let em = r.lazy(() =>
-        Promise.all([n.e("45609"), n.e("61764"), n.e("18126"), n.e("67696")])
+var eI = n(836156);
+let ef = r.lazy(() =>
+        Promise.all([n.e("58601"), n.e("61764"), n.e("18126"), n.e("67696")])
             .then(n.bind(n, 881267))
             .then((e) => ({ default: e.PlaygroundEmbed })),
     ),
-    eg = r.lazy(() =>
-        Promise.all([n.e("49491"), n.e("86456"), n.e("78078")])
+    ep = r.lazy(() =>
+        Promise.all([n.e("62483"), n.e("86456"), n.e("78078")])
             .then(n.bind(n, 909261))
             .then((e) => ({ default: e.DevToolsLinkEmbed })),
     ),
-    eA = RegExp("^" + z.st.source, z.st.flags);
-var eI = n(266645),
-    eT = n(881140),
+    eT = RegExp("^" + z.st.source, z.st.flags);
+var em = n(266645),
+    eg = n(881140),
     eS = n(746080),
-    eN = n(992595),
-    eC = n(429128);
-let ey = { display: "inline" };
+    eN = n(168147),
+    eC = n(134536);
+let eR = { display: "inline" };
 function eO(e) {
     return e.stopPropagation();
 }
-function eR(e) {
+function eL(e) {
     return {
         ...e,
-        react: (t, n, r) => (0, i.jsx)("span", { style: ey, onClick: eO, children: e.react(t, n, r) }, r.key),
+        react: (t, n, r) => (0, i.jsx)("span", { style: eR, onClick: eO, children: e.react(t, n, r) }, r.key),
     };
 }
-function ev(e) {
+function eD(e) {
     let { text: t } = e,
-        [n, s] = r.useState(!1);
-    return (0, i.jsx)(l.D, {
+        [n, a] = r.useState(!1);
+    return (0, i.jsx)(o.D, {
         onClick: function () {
-            (0, w.C)(
+            (0, M.C)(
                 t,
-                () => s(!0),
-                () => s(!1),
+                () => a(!0),
+                () => a(!1),
             );
         },
         children: n
-            ? (0, i.jsx)(u.A, { size: "xs", color: "currentColor" })
+            ? (0, i.jsx)(d.A, { size: "xs", color: "currentColor" })
             : (0, i.jsx)(c.T, { size: "xs", color: "currentColor" }),
     });
 }
-let eb = {
+let ey = {
     blockQuote: {
         react: (e, t, n) =>
             (0, i.jsxs)(
@@ -227,8 +227,8 @@ let eb = {
     inlineCode: { react: (e, t, n) => (0, i.jsx)("code", { className: "inline", children: (0, P.t)(e, t, n) }, n.key) },
     codeBlock: {
         react(e, t, r) {
-            function s() {
-                return (0, i.jsx)("code", { className: a()(eC.kw, "hljs"), children: (0, P.t)(e, t, r) });
+            function a() {
+                return (0, i.jsx)("code", { className: s()(eC.kw, "hljs"), children: (0, P.t)(e, t, r) });
             }
             return (0, i.jsx)(
                 "pre",
@@ -236,27 +236,27 @@ let eb = {
                     children: (0, i.jsxs)("div", {
                         className: eN.Hy,
                         children: [
-                            w.p5
-                                ? (0, i.jsx)("div", { className: eN.lB, children: (0, i.jsx)(ev, { text: e.content }) })
+                            M.p5
+                                ? (0, i.jsx)("div", { className: eN.lB, children: (0, i.jsx)(eD, { text: e.content }) })
                                 : null,
-                            (0, i.jsx)(v.l, {
+                            (0, i.jsx)(D.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
-                                className: a()(eC.kw, "hljs"),
-                                children: (0, i.jsx)(f.c2, {
+                                className: s()(eC.kw, "hljs"),
+                                children: (0, i.jsx)(A.c2, {
                                     createPromise: () =>
                                         Promise.all([n.e("57036"), n.e("75134")]).then(n.bind(n, 981776)),
                                     webpackId: 981776,
-                                    renderFallback: s,
+                                    renderFallback: a,
                                     render: (t) => {
-                                        if (!(e.lang && t.hasLanguage(e.lang))) return s();
+                                        if (!(e.lang && t.hasLanguage(e.lang))) return a();
                                         {
                                             let n = t.highlight(e.lang, e.content, !0);
                                             return null == n
-                                                ? s()
+                                                ? a()
                                                 : (0, i.jsx)("code", {
-                                                      className: a()(eC.kw, "hljs", n.language),
+                                                      className: s()(eC.kw, "hljs", n.language),
                                                       dangerouslySetInnerHTML: { __html: n.value },
                                                   });
                                         }
@@ -279,12 +279,12 @@ let eb = {
     spoiler: {
         react: (e, t, n) =>
             (0, i.jsx)(
-                R.Ay,
+                L.Ay,
                 {
-                    type: R.Ay.Types.TEXT,
+                    type: L.Ay.Types.TEXT,
                     inline: n.formatInline,
                     renderTextElement: (e, t) =>
-                        null == e || e.type !== h.A || t ? e : r.cloneElement(e, { tabIndex: -1 }),
+                        null == e || e.type !== E.A || t ? e : r.cloneElement(e, { tabIndex: -1 }),
                     children: () => t(e.content, n),
                 },
                 n.key,
@@ -304,12 +304,12 @@ let eb = {
         react: (e, t, n) =>
             (0, P.d)(e.id)
                 ? (0, i.jsxs)(
-                      g.A,
+                      p.A,
                       {
                           role: "link",
                           onClick: function () {
                               !(function (e, t, n) {
-                                  let i = D.A.getGuild(e);
+                                  let i = b.A.getGuild(e);
                                   if (null == e || null == i) return;
                                   let r = (t) => {
                                       i.features.has(B.GuildFeatures.COMMUNITY) && (0, O.pX)(B.BVt.CHANNEL(e, t));
@@ -327,9 +327,9 @@ let eb = {
                                           break;
                                       case "linked-roles":
                                           if (null != n) {
-                                              let t = b.Ay.getSelfMember(e);
+                                              let t = y.Ay.getSelfMember(e);
                                               if (null == t) return;
-                                              let i = L.A.getRole(e, n);
+                                              let i = v.A.getRole(e, n);
                                               null == i || t.roles.includes(i.id)
                                                   ? _.h.dispatch({
                                                         type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
@@ -349,7 +349,7 @@ let eb = {
                           iconType: e.id,
                           children: [
                               t(e.mainContent, n),
-                              null != e.itemContent ? (0, i.jsx)(A.A, {}) : null,
+                              null != e.itemContent ? (0, i.jsx)(T.A, {}) : null,
                               null != e.itemContent ? t(e.itemContent, n) : null,
                           ],
                       },
@@ -357,19 +357,19 @@ let eb = {
                   )
                 : null,
     },
-    timestamp: { react: (e, t, n) => (0, i.jsx)(M.A, { node: e }, n.key) },
+    timestamp: { react: (e, t, n) => (0, i.jsx)(U.A, { node: e }, n.key) },
     list: {
         react: (e, t, n) => {
             let r = e.ordered ? "ol" : "ul",
-                s = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
-            return (0, o.reactElement)(r, `${n.key}`, {
+                a = null == e.start ? void 0 : (e.start + (e.items.length - 1)).toString().length;
+            return (0, l.reactElement)(r, `${n.key}`, {
                 start: e.start,
                 className: n.formatInline ? eN.tZ : null,
-                style: { "--totalCharacters": s },
+                style: { "--totalCharacters": a },
                 children: e.items.map((e, r) => {
-                    let s = (0, o.reactElement)("span", `${n.key}-${r}-innerSpan`, { children: t(e, n) });
-                    return (0, o.reactElement)("li", `${n.key}-${r}` + r, {
-                        children: [s, (0, i.jsx)(d.A, { children: "," }, "screen-reader-pause")],
+                    let a = (0, l.reactElement)("span", `${n.key}-${r}-innerSpan`, { children: t(e, n) });
+                    return (0, l.reactElement)("li", `${n.key}-${r}` + r, {
+                        children: [a, (0, i.jsx)(u.A, { children: "," }, "screen-reader-pause")],
                     });
                 }),
             });
@@ -377,25 +377,25 @@ let eb = {
     },
     heading: {
         react: (e, t, n) => {
-            let r = (0, o.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
-            return (0, o.reactElement)("h" + e.level, n?.key != null ? `${n.key}` : null, {
-                children: [r, (0, i.jsx)(d.A, { children: "," }, "screen-reader-pause")],
+            let r = (0, l.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
+            return (0, l.reactElement)("h" + e.level, n?.key != null ? `${n.key}` : null, {
+                children: [r, (0, i.jsx)(u.A, { children: "," }, "screen-reader-pause")],
                 className: n.formatInline ? eN.tZ : null,
             });
         },
     },
     guild: {
         react: (e, t, n) => {
-            let r = D.A.getGuild(e.guildId);
-            return (0, i.jsx)(m.A, { guild: r, children: (0, P.t)(e, t, n) }, n.key);
+            let r = b.A.getGuild(e.guildId);
+            return (0, i.jsx)(f.A, { guild: r, children: (0, P.t)(e, t, n) }, n.key);
         },
     },
-    channel: { react: (e, t, n) => (0, i.jsx)(p.A, { iconType: e.iconType, children: (0, P.t)(e, t, n) }, n.key) },
+    channel: { react: (e, t, n) => (0, i.jsx)(I.A, { iconType: e.iconType, children: (0, P.t)(e, t, n) }, n.key) },
     message: { react: (e, t, n) => (0, i.jsx)(N, {}, n.key) },
     subtext: {
         react: (e, t, n) => {
-            let i = (0, o.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
-            return (0, o.reactElement)("small", n?.key != null ? `${n.key}` : null, {
+            let i = (0, l.reactElement)("span", `${n.key}-innerSpan`, { children: t(e.content, n) });
+            return (0, l.reactElement)("small", n?.key != null ? `${n.key}` : null, {
                 children: i,
                 className: n.formatInline ? eN.tZ : null,
             });
@@ -408,89 +408,89 @@ let eb = {
                 : (0, i.jsx)("span", { children: t(e.content, n) }, n.key),
     },
 };
-function eL(e) {
+function ev(e) {
     let { shouldStopPropagation: t } = e;
-    function s(e) {
-        return !0 === t ? eR(e) : e;
+    function a(e) {
+        return !0 === t ? eL(e) : e;
     }
     return {
-        ...eb,
-        link: (0, eT.A)(e),
+        ...ey,
+        link: (0, eg.A)(e),
         devLink: {
-            match: (e, t) => (t.allowLinks && t.allowDevLinks ? eA.exec(e) : null),
+            match: (e, t) => (t.allowLinks && t.allowDevLinks ? eT.exec(e) : null),
             parse: (e, t) => ({ target: e, type: "devLink" }),
             react: (e, t, n) => {
-                let s = e.target[0];
-                return (0, K.h4)(s)
+                let a = e.target[0];
+                return (0, K.h4)(a)
                     ? (0, i.jsxs)(
                           r.Fragment,
-                          { children: [(0, i.jsx)("span", { children: s }), (0, i.jsx)($.A, { url: s }, s)] },
+                          { children: [(0, i.jsx)("span", { children: a }), (0, i.jsx)($.A, { url: a }, a)] },
                           n.key,
                       )
-                    : (0, Z.W0)(s)
+                    : (0, Z.W0)(a)
                       ? (0, i.jsxs)(
                             r.Fragment,
-                            { children: [(0, i.jsx)("span", { children: s }), (0, i.jsx)(eE, { url: s })] },
+                            { children: [(0, i.jsx)("span", { children: a }), (0, i.jsx)(eh, { url: a })] },
                             n.key,
                         )
-                      : (0, ep.i)(s)
+                      : (0, eI.i)(a)
                         ? (0, i.jsx)(
                               r.Fragment,
                               {
                                   children: (0, i.jsxs)(r.Suspense, {
                                       fallback: null,
-                                      children: [(0, i.jsx)("span", { children: s }), (0, i.jsx)(em, { url: s })],
+                                      children: [(0, i.jsx)("span", { children: a }), (0, i.jsx)(ef, { url: a })],
                                   }),
                               },
                               n.key,
                           )
-                        : (0, q.my)(s)
+                        : (0, q.my)(a)
                           ? (0, i.jsx)(
                                 r.Fragment,
                                 {
                                     children: (0, i.jsxs)(r.Suspense, {
                                         fallback: null,
-                                        children: [(0, i.jsx)("span", { children: s }), (0, i.jsx)(eg, { url: s })],
+                                        children: [(0, i.jsx)("span", { children: a }), (0, i.jsx)(ep, { url: a })],
                                     }),
                                 },
                                 n.key,
                             )
-                          : (0, i.jsx)("span", { children: s }, n.key);
+                          : (0, i.jsx)("span", { children: a }, n.key);
             },
             order: 6,
         },
-        emoji: s(
+        emoji: a(
             (function (e) {
                 let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
                 return {
-                    react(e, r, s) {
-                        let { key: a, channelId: o, messageId: l } = s;
+                    react(e, r, a) {
+                        let { key: s, channelId: l, messageId: o } = a;
                         return e.src
                             ? (0, i.jsx)(
-                                  y.H,
-                                  { node: e, tooltipPosition: t, enableClick: n, channelId: o, messageId: l },
-                                  a,
+                                  R.H,
+                                  { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: o },
+                                  s,
                               )
-                            : (0, i.jsx)("span", { children: e.surrogate }, a);
+                            : (0, i.jsx)("span", { children: e.surrogate }, s);
                     },
                 };
             })(e),
         ),
-        customEmoji: s(
+        customEmoji: a(
             (function (e) {
                 let { emojiTooltipPosition: t = "top", enableEmojiClick: n = !0 } = e;
                 return {
-                    react(e, r, s) {
-                        let { key: a, guildId: o, channelId: l, messageId: u } = s,
-                            c = E.Ay.getDisambiguatedEmojiContext(o).getById(e.emojiId);
+                    react(e, r, a) {
+                        let { key: s, guildId: l, channelId: o, messageId: d } = a,
+                            c = h.Ay.getDisambiguatedEmojiContext(l).getById(e.emojiId);
                         if (null != c) {
                             let t = c.require_colons;
                             e = { ...e, name: t ? `:${c.name}:` : c.name };
                         }
                         return (0, i.jsx)(
-                            y.X,
-                            { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: u },
-                            a,
+                            R.X,
+                            { node: e, tooltipPosition: t, enableClick: n, channelId: o, messageId: d },
+                            s,
                         );
                     },
                 };
@@ -499,20 +499,20 @@ function eL(e) {
         channelMention: (0, W.A)(e),
         commandMention: (0, Y.Ay)(e),
         attachmentLink: {
-            react(t, r, s) {
-                let o = s.noStyleAndInteraction
+            react(t, r, a) {
+                let l = a.noStyleAndInteraction
                         ? void 0
                         : async (n) => {
-                              let i = await (0, F.AN)(t.attachmentUrl);
+                              let i = await (0, V.AN)(t.attachmentUrl);
                               e.shouldStopPropagation && n?.stopPropagation(),
-                                  V.A.trackLinkClicked(i),
-                                  e.shouldCloseDefaultModals && (0, x.closeAllModals)(),
-                                  (0, G.A)(i);
+                                  F.A.trackLinkClicked(i),
+                                  e.shouldCloseDefaultModals && (0, w.closeAllModals)(),
+                                  (0, k.A)(i);
                           },
-                    l = s.noStyleAndInteraction
+                    o = a.noStyleAndInteraction
                         ? B.tEg
                         : (e) => {
-                              (0, k.L3)(e, async () => {
+                              (0, x.L3)(e, async () => {
                                   let { default: e } = await n.e("62529").then(n.bind(n, 740024));
                                   return (n) =>
                                       (0, i.jsx)(e, {
@@ -523,29 +523,29 @@ function eL(e) {
                               });
                           };
                 return (0, i.jsxs)(
-                    g.A,
+                    p.A,
                     {
                         role: "link",
                         href: t.attachmentUrl,
-                        onClick: o,
-                        onContextMenu: l,
+                        onClick: l,
+                        onContextMenu: o,
                         className: "attachmentLink",
                         children: [
-                            (0, i.jsx)(U.P, { size: "xs", className: a()(j.Kk, H.K), color: "currentColor" }),
-                            (0, P.t)(t, r, s),
+                            (0, i.jsx)(G.P, { size: "xs", className: s()(j.Kk, H.K), color: "currentColor" }),
+                            (0, P.t)(t, r, a),
                         ],
                     },
-                    s.key,
+                    a.key,
                 );
             },
         },
-        soundboard: s(eb.soundboard),
+        soundboard: a(ey.soundboard),
         gameMention: {
             react(e, t, n) {
-                let { gameId: r, channelId: s, gameName: a, gameIcon: o } = e;
+                let { gameId: r, channelId: a, gameName: s, gameIcon: l } = e;
                 return (0, i.jsx)(
-                    eI.A,
-                    { gameId: r, channelId: s, authorId: n.authorId, gameName: a, gameIcon: o },
+                    em.A,
+                    { gameId: r, channelId: a, authorId: n.authorId, gameName: s, gameIcon: l },
                     n.key,
                 );
             },

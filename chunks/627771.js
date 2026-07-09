@@ -1,1 +1,0 @@
-e.exports = { B: "smallCardItem__02912" };

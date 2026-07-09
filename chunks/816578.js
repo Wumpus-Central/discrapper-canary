@@ -19,15 +19,15 @@ var l = n(627968),
     v = n(753727),
     C = n(899e3),
     I = n(638480),
-    j = n(607407),
-    S = n(872363),
+    S = n(607407),
+    j = n(872363),
     _ = n(451988),
     N = n(765671),
     b = n(461782),
     y = n(228366),
     T = n(51092),
     D = n(40056),
-    R = n(926613);
+    R = n(707285);
 function k(e) {
     return (1 & e.buttons) == 1;
 }
@@ -49,9 +49,9 @@ let w = i.memo(function (e) {
             setVideoAspectRatio: v,
             wrapperRef: C,
             doZoom: I,
-            clampPanOffset: j,
+            clampPanOffset: S,
         } = i.useContext(D.e9),
-        [S, w] = i.useState(null),
+        [j, w] = i.useState(null),
         [O, L] = i.useState(null),
         [M, F] = i.useState(0),
         [V, G] = i.useState(null),
@@ -91,9 +91,9 @@ let w = i.memo(function (e) {
                 let t = K(e),
                     n = t.x - P.x,
                     l = t.y - P.y;
-                h(j({ x: V.x + n, y: V.y + l })), w(t);
+                h(S({ x: V.x + n, y: V.y + l })), w(t);
             },
-            [j, P, V, u, K, d, Y, o, h],
+            [S, P, V, u, K, d, Y, o, h],
         ),
         q = i.useCallback(
             (e) => {
@@ -103,14 +103,14 @@ let w = i.memo(function (e) {
         ),
         J = i.useCallback(
             (e) => {
-                if (Y && null != O && null != S) {
+                if (Y && null != O && null != j) {
                     let { x: t, y: n } = O,
-                        { x: l, y: i } = S;
+                        { x: l, y: i } = j;
                     (Math.sqrt((l - t) ** 2 + (i - n) ** 2) > 0.01 || Date.now() - M >= 500) &&
                         (e.preventDefault(), e.stopPropagation());
                 }
             },
-            [Y, O, M, S],
+            [Y, O, M, j],
         ),
         ee = i.useCallback(() => {
             m(!1), H(null), G(null);
@@ -146,14 +146,14 @@ let w = i.memo(function (e) {
                             r = (s * (f - 1)) / 2,
                             a = (t * (f - 1)) / 2,
                             o = (n * (f - 1)) / 2;
-                        return j({ x: (0 !== l ? e.x / l : 0) * a, y: (0 !== r ? e.y / r : 0) * o });
+                        return S({ x: (0 !== l ? e.x / l : 0) * a, y: (0 !== r ? e.y / r : 0) * o });
                     }),
                     (B.current = { width: t, height: n }),
                     $.current.start(100, () => {
                         z(!1);
                     }));
             },
-            [j, Y, f, h],
+            [S, Y, f, h],
         ),
         [Y, f],
     ),
@@ -168,14 +168,14 @@ let w = i.memo(function (e) {
             }
         }, [u, Y, n, f]);
     let en = i.useMemo(() => {
-        let e = j(p);
+        let e = S(p);
         return {
             "--custom-zoom-scale": f,
             "--custom-pan-x": `${e.x}px`,
             "--custom-pan-y": `${e.y}px`,
             "--custom-zoom-transition": d || U || x || E ? "none" : "transform 0.15s ease-out",
         };
-    }, [j, d, U, x, E, p, f]);
+    }, [S, d, U, x, E, p, f]);
     return (0, l.jsx)("div", {
         ref: C,
         className: r()(R.iE, a, { [R.rc]: u && Y, [R.d$]: d }),
@@ -207,12 +207,12 @@ var O = n(919706),
     W = n(834730),
     $ = n(1215),
     B = n(375708),
-    Y = n(391308);
+    Y = n(24908);
 function Z(e) {
     let { stream: t, isSmall: n, selected: i, isSelfStream: s } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(j.A, { className: r()(Y.HL, Y.gH), stream: t, noText: !0 }),
+            (0, l.jsx)(S.A, { className: r()(Y.HL, Y.gH), stream: t, noText: !0 }),
             !i &&
                 (0, l.jsxs)("div", {
                     className: r()(Y.Qs, Y.JK, { [Y.EX]: n }),
@@ -255,7 +255,7 @@ function et(e) {
             n || i ? null : (0, l.jsx)(K.A, { participant: t }),
             i || null == u || u.state === X.XYD.ENDED || u.state === X.XYD.FAILED
                 ? null
-                : (0, l.jsx)(S.A, {
+                : (0, l.jsx)(j.A, {
                       size: x.Ay.Sizes.SMALL,
                       className: Y.Ok,
                       participant: t,
@@ -273,7 +273,7 @@ function en(e) {
             onVideoResize: s,
             fit: x,
             popoutType: A,
-            width: S,
+            width: j,
             wrapperClassName: _,
             paused: N = !1,
         } = e,
@@ -289,7 +289,7 @@ function en(e) {
         en = $?.ownerId === y,
         el = en && !(Q || et) && A === f.N.NO_POPOUT,
         ei = null != $ ? (0, I.A)($, R, R.id === y, el) : null,
-        es = S < 195;
+        es = j < 195;
     (0, g.Ay)(() => {
         !K && W?.isGuildStageVoice() && !en && ((0, p.A9)(D), m.A.updateStageStreamSize(D.channelId, !1));
     });
@@ -303,10 +303,10 @@ function en(e) {
         T)
     )
         return (0, l.jsx)(Z, { stream: t.stream, isSmall: es, selected: n, isSelfStream: R.id === y });
-    if ($?.state === X.XYD.ENDED) return (0, l.jsx)(H.A, { selected: n, stream: $, width: S });
+    if ($?.state === X.XYD.ENDED) return (0, l.jsx)(H.A, { selected: n, stream: $, width: j });
     if (null != er || $?.state === X.XYD.FAILED)
-        return (0, l.jsx)(U.A, { avError: er?.type, avErrorContext: er, selected: n, stream: t.stream, width: S });
-    if (t.type === q.lp.HIDDEN_STREAM) return (0, l.jsx)(z.A, { selected: n, participant: t, width: S });
+        return (0, l.jsx)(U.A, { avError: er?.type, avErrorContext: er, selected: n, stream: t.stream, width: j });
+    if (t.type === q.lp.HIDDEN_STREAM) return (0, l.jsx)(z.A, { selected: n, participant: t, width: j });
     if (null != $ && !n && null != b && V.Ay.supports(J.O5.VIDEO))
         return (0, l.jsxs)(l.Fragment, {
             children: [
@@ -326,14 +326,14 @@ function en(e) {
                     },
                     k,
                 ),
-                null != ei ? (0, l.jsx)(O.A, { size: (0, P.J)(S), ...ei }) : null,
+                null != ei ? (0, l.jsx)(O.A, { size: (0, P.J)(j), ...ei }) : null,
             ],
         });
     else
         return (0, l.jsxs)("div", {
             className: r()(Y.Qs, Y.Rh, { [Y.EX]: es }),
             children: [
-                (0, l.jsx)(j.A, {
+                (0, l.jsx)(S.A, {
                     noImage: !0,
                     noText: !0,
                     className: r()(Y.HL, { [Y.gH]: null == $ }),
@@ -348,7 +348,7 @@ function en(e) {
                                   children: (0, l.jsx)(u.$, {
                                       variant: "secondary",
                                       size: es ? "sm" : "md",
-                                      text: S < 175 ? B.intl.string(B.t.I6JG46) : B.intl.string(B.t["7Xq/nV"]),
+                                      text: j < 175 ? B.intl.string(B.t.I6JG46) : B.intl.string(B.t["7Xq/nV"]),
                                   }),
                               }),
                               K

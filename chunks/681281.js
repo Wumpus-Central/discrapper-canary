@@ -1,4 +1,4 @@
-n.d(t, { A: () => $ });
+n.d(t, { A: () => Q });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -18,33 +18,33 @@ var i = n(627968),
     C = n(793574),
     y = n(429913),
     E = n(47167),
-    N = n(882840),
-    v = n(713654),
-    j = n(611371),
+    v = n(882840),
+    j = n(713654),
+    N = n(611371),
     I = n(769015),
-    T = n(408822),
+    T = n(446243),
     _ = n(920639),
     S = n(360729),
     R = n(508654),
-    P = n(974930),
-    b = n(961314),
+    b = n(974930),
+    P = n(961314),
     O = n(58736),
     L = n(742589),
     D = n(376352),
     M = n(353428),
-    U = n(46054),
-    w = n(527549),
+    w = n(46054),
+    U = n(527549),
     V = n(665691),
     k = n(241756),
     B = n(313961),
-    H = n(532622),
-    G = n(416528),
+    G = n(532622),
+    H = n(416528),
     F = n(136523),
     z = n(806931),
     W = n(375708),
-    Y = n(662731),
-    K = n(82644),
-    X = n(992595);
+    Y = n(189090),
+    K = n(188628),
+    X = n(168147);
 function Z(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, k.A)(n, t, l);
@@ -61,7 +61,7 @@ function q(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
         s = (0, R.Qs)(a.id),
-        r = null != s ? (0, P.G3)(s) : null,
+        r = null != s ? (0, b.G3)(s) : null,
         o = null != s;
     if (l?.type === z.lp.ACTIVITY)
         null != n &&
@@ -87,12 +87,12 @@ function q(e) {
                 (0, i.jsx)(D.F, { user: e, stream: n, channel: a }),
             ],
         });
-    } else o && (t = (0, i.jsx)(b.A, { guildEvent: s, recurrenceId: r }));
+    } else o && (t = (0, i.jsx)(P.A, { guildEvent: s, recurrenceId: r }));
     return (0, i.jsx)("div", { className: K.kL, children: t });
 }
-function $(e) {
+function Q(e) {
     let { channel: t, guild: a, appContext: c, inCall: g, isChatOpen: f, exitFullScreen: I, guildRoomVisible: R } = e,
-        { focusedParticipant: P } = (0, r.cf)(
+        { focusedParticipant: b } = (0, r.cf)(
             [B.A],
             () => ({
                 focusedParticipant: B.A.getSelectedParticipant(t.id),
@@ -100,17 +100,17 @@ function $(e) {
             }),
             [t.id],
         ),
-        { enabled: b } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
-        D = b && !R,
+        { enabled: P } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
+        D = P && !R,
         k = (0, E.Ay)(t),
         Z = D ? W.intl.string(Y.default.f7g0DK) : R ? `${k} \xb7 ${W.intl.string(Y.default.wRLmM0)}` : k,
-        $ = D ? u.Z : (0, v.gU)(t),
-        [Q] = (0, y.A)(P?.type === z.lp.ACTIVITY ? [P.applicationId] : []),
+        Q = D ? u.Z : (0, j.gU)(t),
+        [$] = (0, y.A)(b?.type === z.lp.ACTIVITY ? [b.applicationId] : []),
         J = W.intl.string(W.t.BVZqJl);
     t.isDM() ? (J = W.intl.string(W.t.jN2DfZ)) : t.isGroupDM() && (J = W.intl.string(W.t["e5y+gm"]));
-    let ee = (0, N.l)(t),
+    let ee = (0, v.l)(t),
         et = t.isGuildVoice() && g && null != ee && ee.length > 0,
-        en = (0, H.Ay)(t),
+        en = (0, G.Ay)(t),
         ei = et
             ? (0, i.jsx)("div", {
                   className: K.Ke,
@@ -137,7 +137,7 @@ function $(e) {
                               (0, i.jsx)(d.E, {
                                   variant: "text-xs/normal",
                                   className: s()(K.Gh, X.PT, { [K.BI]: en }),
-                                  children: U.A.parseVoiceChannelStatus(ee, !0, { channelId: t.id }),
+                                  children: w.A.parseVoiceChannelStatus(ee, !0, { channelId: t.id }),
                               }),
                               en &&
                                   (0, i.jsx)(h.R, {
@@ -166,13 +166,13 @@ function $(e) {
                 innerClassName: K.gi,
                 toolbarClassName: K.KE,
                 childrenBottom: ei,
-                toolbar: (0, i.jsx)(G.A, {
+                toolbar: (0, i.jsx)(H.A, {
                     channel: t,
                     appContext: c,
                     inCall: g,
                     isChatOpen: f,
                     exitFullScreen: I,
-                    focusedApplication: Q,
+                    focusedApplication: $,
                     shouldShowHeaderParticipants: !0,
                     guildRoomVisible: R,
                 }),
@@ -182,15 +182,15 @@ function $(e) {
                         onClick: D ? ea : void 0,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
-                                null != $
+                                null != Q
                                     ? (0, i.jsx)(O.Ay.ChannelIcon, {
-                                          icon: $,
+                                          icon: Q,
                                           "aria-label": J,
                                           color: D ? "white" : void 0,
                                       })
                                     : null,
                                 Z,
-                                b && (0, i.jsx)(j.A, { className: K.vW }),
+                                P && (0, i.jsx)(N.A, { className: K.vW }),
                                 el &&
                                     (0, i.jsx)(o.m, {
                                         text: W.intl.string(W.t.QyZ4Td),
@@ -205,10 +205,10 @@ function $(e) {
                         }),
                     }),
                     (0, i.jsx)(M.i$, { channel: t, guild: a }),
-                    (0, i.jsx)(q, { focusedApplication: Q, focusedParticipant: P, channel: t }),
+                    (0, i.jsx)(q, { focusedApplication: $, focusedParticipant: b, channel: t }),
                 ],
             }),
-            (0, i.jsx)(w.A, { channelId: t.id }),
+            (0, i.jsx)(U.A, { channelId: t.id }),
         ],
     });
 }

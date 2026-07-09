@@ -45,7 +45,7 @@ function I(e) {
             : null
     );
 }
-var S = n(99895);
+var S = n(499703);
 let C = "role_subscriptions_eligibility_modal";
 function v(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
@@ -54,8 +54,8 @@ function v(e) {
         onClick: function () {
             (0, s.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("79480"), n.e("19631"), n.e("18266")]).then(
-                        n.bind(n, 258118),
+                    let { default: e } = await Promise.all([n.e("50360"), n.e("19631"), n.e("18266")]).then(
+                        n.bind(n, 35737),
                     );
                     return (n) =>
                         (0, i.jsx)(e, {

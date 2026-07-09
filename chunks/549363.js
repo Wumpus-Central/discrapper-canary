@@ -21,7 +21,7 @@ var n = i(627968),
     N = i(921853),
     _ = i(320448),
     I = i(375708),
-    C = i(632787);
+    C = i(516883);
 let b = s.forwardRef(function (e, t) {
     let { currentPageIndex: i, numPages: s, onChangePage: l, children: r, showPageCount: a = !0, ...o } = e,
         u = i >= s - 1,
@@ -269,7 +269,7 @@ let eA = function (e, t) {
     });
 };
 var eh = i(818348),
-    eE = i(12762);
+    eE = i(600410);
 async function eS(e) {
     try {
         return (
@@ -1122,7 +1122,7 @@ function e7(e) {
         hasLinkedToApplication: h,
     });
 }
-var e5 = i(687788);
+var e5 = i(665644);
 function e8(e) {
     let { payments: t, locale: i, compactMode: l, numPages: a } = e,
         o = s.useRef(null),

@@ -26,7 +26,7 @@ var i = n(627968),
     O = n(778712),
     L = n(562153),
     D = n(996988),
-    y = n(242697);
+    y = n(17545);
 let v = [
         [{ top: 15, left: 15, width: 28, height: 28 }],
         [
@@ -116,7 +116,7 @@ var P = n(939249),
     B = n(531648),
     H = n(652215),
     j = n(375708),
-    W = n(237770);
+    W = n(380170);
 function Y(e) {
     let { voiceChannel: t, onAction: n, onClose: a } = e,
         { themeType: l } = (0, T.E)(),
@@ -166,7 +166,7 @@ function Y(e) {
 }
 var K = n(70963),
     $ = n(269587),
-    z = n(514566);
+    z = n(726342);
 function q(e) {
     let { user: t, currentUser: n, voiceChannel: a, className: N, onClose: C } = e,
         { themeType: R } = (0, T.E)(),

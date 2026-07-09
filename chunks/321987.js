@@ -1,50 +1,50 @@
 "use strict";
-n.d(t, { $: () => A, f: () => I });
+n.d(t, { $: () => T, f: () => m });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(224640),
-    l = n(20742),
-    u = n(430993),
+    a = n(503698),
+    s = n.n(a),
+    l = n(224640),
+    o = n(20742),
+    d = n(430993),
     c = n(364840),
-    d = n(696208),
+    u = n(696208),
     _ = n(17928),
-    h = n(43990),
-    f = n(726249),
-    p = n(540999),
-    E = n(652215),
-    m = n(375708),
-    g = n(966258);
-function A(e) {
+    E = n(43990),
+    A = n(726249),
+    h = n(540999),
+    I = n(652215),
+    f = n(375708),
+    p = n(42994);
+function T(e) {
     let { children: t, removeChildWrapper: n, wrapperClassName: r } = e;
-    (0, f.HU)({ location: m.intl.string(m.t["3S2494"]) });
-    let s = (0, _.bG)([p.A], () => p.A.isDeveloper) ? "92px" : void 0;
-    return (0, i.jsx)(h.N, {
-        theme: E.NJ8.DARK,
+    (0, A.HU)({ location: f.intl.string(f.t["3S2494"]) });
+    let a = (0, _.bG)([h.A], () => h.A.isDeveloper) ? "92px" : void 0;
+    return (0, i.jsx)(E.N, {
+        theme: I.NJ8.DARK,
         children: (e) =>
             (0, i.jsx)("div", {
-                className: a()(e, g.Y, r),
-                style: { marginBottom: s },
-                children: !0 === n ? t : (0, i.jsx)("div", { className: g.Q, children: t }),
+                className: s()(e, p.Y, r),
+                style: { marginBottom: a },
+                children: !0 === n ? t : (0, i.jsx)("div", { className: p.Q, children: t }),
             }),
     });
 }
-function I(e) {
-    let { hideHeader: t, "aria-label": n, ...s } = e,
-        a = (0, i.jsx)(r.Fragment, {}, "controls");
-    return (0, i.jsxs)(o.d, {
-        ...s,
-        onClose: () => Promise.resolve(s.onClose?.()),
-        "aria-label": n ?? s.title,
+function m(e) {
+    let { hideHeader: t, "aria-label": n, ...a } = e,
+        s = (0, i.jsx)(r.Fragment, {}, "controls");
+    return (0, i.jsxs)(l.d, {
+        ...a,
+        onClose: () => Promise.resolve(a.onClose?.()),
+        "aria-label": n ?? a.title,
         children: [
-            t ? null : (0, i.jsx)(l.rQ, { title: s.title ?? "", subtitle: s.subtitle }),
-            (0, i.jsx)(u.c, { controls: a, children: s.children }),
-            (0, i.jsx)(c.j, { children: s.preview }),
-            (0, i.jsx)(d.H, {
-                leading: s.actionBarInput,
-                actions: s.actions ?? [],
-                actionsFullWidth: null == s.actionBarInput,
+            t ? null : (0, i.jsx)(o.rQ, { title: a.title ?? "", subtitle: a.subtitle }),
+            (0, i.jsx)(d.c, { controls: s, children: a.children }),
+            (0, i.jsx)(c.j, { children: a.preview }),
+            (0, i.jsx)(u.H, {
+                leading: a.actionBarInput,
+                actions: a.actions ?? [],
+                actionsFullWidth: null == a.actionBarInput,
             }),
         ],
     });

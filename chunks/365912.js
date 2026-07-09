@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { Ay: () => m, J$: () => p, Wd: () => E });
+n.d(t, { Ay: () => f, J$: () => h, Wd: () => I });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(340287),
-    l = n(621466),
-    u = n(51906),
+    a = n(503698),
+    s = n.n(a),
+    l = n(340287),
+    o = n(621466),
+    d = n(51906),
     c = n(508382),
-    d = n(56553);
-let _ = d.n7;
-class h extends r.Component {
+    u = n(342505);
+let _ = u.n7;
+class E extends r.Component {
     state = { layerContainerElement: null };
     setLayerContainerElement = (e) => {
         this.setState({ layerContainerElement: e });
     };
-    getContextValue = (0, u.L_)((e) => [e, this.setLayerContainerElement]);
+    getContextValue = (0, d.L_)((e) => [e, this.setLayerContainerElement]);
     componentWillUnmount() {
         this.state.layerContainerElement = null;
     }
@@ -25,38 +25,38 @@ class h extends r.Component {
         return (0, i.jsx)(e.Provider, { value: this.getContextValue(n), children: t });
     }
 }
-let f = (e) => {
+let A = (e) => {
     let { layerContext: t, className: n } = e,
-        [, s] = r.useContext(t),
-        o = r.useCallback(
+        [, a] = r.useContext(t),
+        l = r.useCallback(
             (e) => {
-                s(e);
+                a(e);
             },
-            [s],
+            [a],
         );
-    return (0, i.jsx)("div", { className: a()(_, n), ref: o });
+    return (0, i.jsx)("div", { className: s()(_, n), ref: l });
 };
-function p(e) {
-    let t = (0, l.p3)(e, d.n7);
-    if ((null == t && (t = (0, l.wB)(e, c.IP)), null == t)) throw Error("Unexpected missing parent container");
+function h(e) {
+    let t = (0, o.p3)(e, u.n7);
+    if ((null == t && (t = (0, o.wB)(e, c.IP)), null == t)) throw Error("Unexpected missing parent container");
     return t;
 }
-let E = (e) => {
+let I = (e) => {
     let { layerContext: t, children: n } = e;
     return (0, i.jsx)(t.Consumer, {
         children: (e) =>
             (function (e, t) {
                 let [n] = e;
-                return null == n ? null : o.createPortal(r.Children.only(t), n);
+                return null == n ? null : l.createPortal(r.Children.only(t), n);
             })(e, n),
     });
 };
-function m(e) {
+function f(e) {
     let t = r.createContext([null, () => {}]),
         n = {
-            LayerProvider: (e) => (0, i.jsx)(h, { layerContext: t, ...e }),
-            LayerContainer: (e) => (0, i.jsx)(f, { layerContext: t, ...e }),
-            Layer: (e) => (0, i.jsx)(E, { layerContext: t, ...e }),
+            LayerProvider: (e) => (0, i.jsx)(E, { layerContext: t, ...e }),
+            LayerContainer: (e) => (0, i.jsx)(A, { layerContext: t, ...e }),
+            Layer: (e) => (0, i.jsx)(I, { layerContext: t, ...e }),
             layerContext: t,
         };
     return (

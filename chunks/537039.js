@@ -15,7 +15,7 @@ var s = n(627968),
     p = n(438437),
     g = n(306417),
     A = n(375708),
-    f = n(233271);
+    f = n(996983);
 function j(e) {
     let { didSelfVote: t, label: n, percentage: i } = e;
     return (0, s.jsxs)("div", {
@@ -77,7 +77,7 @@ var v = n(290794),
     T = n(915089),
     _ = n(956703),
     V = n(969632),
-    k = n(140957);
+    k = n(746013);
 function L(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: r } = e,
         l = (0, T.GV)(),
@@ -245,7 +245,7 @@ function O(e) {
         ...r,
     });
 }
-var U = n(2445);
+var U = n(815437);
 function B(e) {
     let { media: t } = e;
     return (0, s.jsx)(c.D, {

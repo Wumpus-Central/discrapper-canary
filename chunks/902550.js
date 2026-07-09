@@ -107,7 +107,7 @@ async function J(e) {
 }
 var X = a(778712),
     K = a(595535),
-    Z = a(915710);
+    Z = a(104126);
 function W(e) {
     let { className: t, size: a = K.q } = e,
         n = (0, X.FT)(a);
@@ -126,7 +126,7 @@ function W(e) {
 }
 var $ = a(656925),
     Y = a(339984),
-    Q = a(712839);
+    Q = a(376071);
 function ee(e) {
     let { avatar: t, index: a, onSelectRecentAvatar: r, onDeleteRecentAvatar: s, avatarButtonRef: i } = e,
         { id: c, storageHash: u, description: d = B.intl.string(B.t.lqaIxI) } = t,
@@ -192,9 +192,9 @@ function et(e) {
                     (0, x.openModalLazy)(
                         async () => {
                             let { default: t } = await Promise.all([
-                                a.e("78104"),
-                                a.e("62280"),
-                                a.e("21866"),
+                                a.e("92424"),
+                                a.e("99828"),
+                                a.e("36698"),
                                 a.e("43437"),
                                 a.e("58164"),
                                 a.e("71470"),
@@ -236,7 +236,7 @@ function et(e) {
                         ? J(r)
                         : (j(!0),
                           (0, x.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([a.e("42317"), a.e("26563")]).then(
+                              let { default: e } = await Promise.all([a.e("60845"), a.e("48944")]).then(
                                   a.bind(a, 555251),
                               );
                               return (t) => {
@@ -376,7 +376,7 @@ function eo(e, t) {
 }
 var eu = a(2553),
     ed = a(693591),
-    eh = a(294891);
+    eh = a(593195);
 let eA = [
     { gif: a(981355), png: a(775788) },
     { gif: a(640237), png: a(689006) },
@@ -564,9 +564,9 @@ function eE(e) {
                 (0, x.openModalLazy)(
                     async () => {
                         let { default: n } = await Promise.all([
-                            a.e("78104"),
-                            a.e("62280"),
-                            a.e("21866"),
+                            a.e("92424"),
+                            a.e("99828"),
+                            a.e("36698"),
                             a.e("43437"),
                             a.e("58164"),
                             a.e("71470"),
@@ -602,10 +602,10 @@ function eE(e) {
             (0, x.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        a.e("78104"),
-                        a.e("62280"),
-                        a.e("21866"),
-                        a.e("4067"),
+                        a.e("92424"),
+                        a.e("99828"),
+                        a.e("36698"),
+                        a.e("78979"),
                         a.e("43437"),
                         a.e("58164"),
                         a.e("71470"),

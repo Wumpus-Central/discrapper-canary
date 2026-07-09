@@ -1,4 +1,4 @@
-t.d(n, { A: () => x });
+t.d(n, { A: () => g });
 var l = t(627968);
 t(64700);
 var i = t(17928),
@@ -12,24 +12,24 @@ var i = t(17928),
     A = t(698441),
     h = t(935159),
     m = t(508654),
-    C = t(647090),
+    C = t(974930),
     E = t(47868),
     p = t(375708),
-    g = t(282741);
-function x(e) {
-    let { channelId: n, showDismiss: x = !0 } = e,
+    x = t(908725);
+function g(e) {
+    let { channelId: n, showDismiss: g = !0 } = e,
         I = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
         f = (0, m.RO)(n),
         T = null != (0, m.Qs)(n),
         { canManageGuildEvent: v } = (0, o.nr)(I),
-        _ = (0, i.bG)([u.A], () => f.filter((e) => !u.A.isEventDismissed(e.id)), [f]),
-        j = (0, i.cf)([A.Ay], () => _.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
-            _,
+        j = (0, i.bG)([u.A], () => f.filter((e) => !u.A.isEventDismissed(e.id)), [f]),
+        _ = (0, i.cf)([A.Ay], () => j.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
+            j,
         ]);
-    return _.length < 1 || T
+    return j.length < 1 || T
         ? null
         : (0, l.jsx)(l.Fragment, {
-              children: _.map((e) =>
+              children: j.map((e) =>
                   (0, l.jsx)(
                       E.A,
                       {
@@ -43,8 +43,8 @@ function x(e) {
                               v(e)
                                   ? (0, a.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
-                                            t.e("4278"),
-                                            t.e("40296"),
+                                            t.e("38314"),
+                                            t.e("53032"),
                                             t.e("70644"),
                                             t.e("1922"),
                                             t.e("49347"),
@@ -55,14 +55,14 @@ function x(e) {
                                     })
                                   : (0, d.uR)({ eventId: e.id });
                           },
-                          onDismiss: x
+                          onDismiss: g
                               ? () => {
                                     var n;
                                     return (n = e.id), void (0, h.Nt)(n);
                                 }
                               : void 0,
-                          userCount: j[e.id],
-                          className: g.f,
+                          userCount: _[e.id],
+                          className: x.f,
                       },
                       e.id,
                   ),

@@ -15,17 +15,17 @@ var a = n(627968),
     A = n(174755),
     g = n(942426),
     v = n(665411),
-    _ = n(181774),
-    y = n(576052),
-    h = n(929283),
-    I = n(38357),
+    h = n(181774),
+    _ = n(576052),
+    y = n(929283),
+    I = n(741717),
     x = n(180171),
     E = n(989099);
 function T(e) {
     let { avatarDecoration: t, avatarSize: n } = e,
         r = (0, d.Ay)(),
         l = (0, o.q)(r);
-    return (0, a.jsx)(h.i, {
+    return (0, a.jsx)(y.i, {
         item: t,
         avatarSize: n,
         isHighlighted: !1,
@@ -37,7 +37,7 @@ function P(e) {
     let { item: t } = e,
         n = (0, g.A)(t.skuId),
         { accessibilityLabel: l, thumbnailPreviewSrc: i, title: s } = n ?? {},
-        u = r.useMemo(() => (0, _.Rc)(i), [i]);
+        u = r.useMemo(() => (0, h.Rc)(i), [i]);
     return null == n
         ? null
         : (0, a.jsxs)("div", {
@@ -52,11 +52,11 @@ function P(e) {
               ],
           });
 }
-function k(e) {
+function S(e) {
     let { item: t } = e;
     return (0, a.jsx)("div", { className: I.uF, children: (0, a.jsx)(v.A, { frame: t }) });
 }
-function S(e) {
+function k(e) {
     let { nameplate: t } = e,
         [n, l] = r.useState(!1),
         i = r.useCallback(() => l(!0), []),
@@ -82,7 +82,7 @@ function L(e) {
                 className: I.WJ,
                 children: [
                     null != l && (0, a.jsx)("div", { className: I.zh, children: (0, a.jsx)(P, { item: l }) }),
-                    null != s && (0, a.jsx)("div", { className: I.sY, children: (0, a.jsx)(S, { nameplate: s }) }),
+                    null != s && (0, a.jsx)("div", { className: I.sY, children: (0, a.jsx)(k, { nameplate: s }) }),
                     null != r &&
                         (0, a.jsx)("div", {
                             className: I.kf,
@@ -98,16 +98,16 @@ function N(e) {
         i = t ?? l;
     if (i?.type === s.R.BUNDLE) return (0, a.jsx)(L, { product: i });
     let [o] = i?.items ?? [];
-    if (void 0 !== r && r in y.m) return y.m[r].render({ animationState: "on_hover", className: I.Vr });
+    if (void 0 !== r && r in _.m) return _.m[r].render({ animationState: "on_hover", className: I.Vr });
     switch (o?.type) {
         case s.R.AVATAR_DECORATION:
             return (0, a.jsx)(T, { avatarDecoration: o, avatarSize: c._3.SIZE_40 });
         case s.R.PROFILE_EFFECT:
             return (0, a.jsx)(P, { item: o });
         case s.R.PROFILE_FRAME:
-            return (0, a.jsx)(k, { item: o });
+            return (0, a.jsx)(S, { item: o });
         case s.R.NAMEPLATE:
-            return (0, a.jsx)(S, { nameplate: o });
+            return (0, a.jsx)(k, { nameplate: o });
         default:
             return null;
     }

@@ -21,7 +21,7 @@ var i,
     b = n(580630),
     f = n(501957),
     j = (((i = {})[(i.CONFIRM = 1)] = "CONFIRM"), (i[(i.SUCCESS = 2)] = "SUCCESS"), i),
-    A = n(788868),
+    A = n(202541),
     T = n(652215),
     M = n(375708),
     v = n(977544);
@@ -92,7 +92,7 @@ var R = n(935462),
     U = n(659746),
     _ = n(151595),
     F = n(771566),
-    w = n(20374);
+    w = n(306326);
 function O(t) {
     let { onClose: e } = t,
         n = (0, r.jsx)(g.E, { className: w.h, variant: "text-md/normal", children: M.intl.string(M.t.FCsTCk) });

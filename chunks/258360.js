@@ -1,8 +1,8 @@
 n.d(e, { default: () => O });
 var a = n(627968),
     r = n(64700),
-    l = n(154283),
-    i = n(670482),
+    l = n(719442),
+    i = n(253018),
     s = n(17928),
     o = n(477782),
     c = n(980707),
@@ -28,7 +28,7 @@ var a = n(627968),
     M = n(323350),
     N = n(652215),
     P = n(375708),
-    I = n(27013);
+    I = n(461893);
 function O(t) {
     let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U } = t,
         L = r.useCallback(
@@ -223,7 +223,7 @@ function O(t) {
                                       label: P.intl.string(P.t.IcDoaD),
                                       action: () => {
                                           (0, j.openModalLazy)(async () => {
-                                              let { default: t } = await Promise.all([n.e("21984"), n.e("54191")]).then(
+                                              let { default: t } = await Promise.all([n.e("3936"), n.e("54191")]).then(
                                                   n.bind(n, 665906),
                                               );
                                               return (e) => (0, a.jsx)(t, { ...e });

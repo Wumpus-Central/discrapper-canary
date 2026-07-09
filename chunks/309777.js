@@ -45,9 +45,9 @@ var n = l(627968),
     K = l(718812),
     Z = l(362081),
     W = l(696016),
-    X = l(16590),
+    X = l(788077),
     Y = l(375708),
-    q = l(567282);
+    q = l(330994);
 let J = $.I.difference(new Set([$.C.EXPORT_TO_SOUNDBOARD, $.C.FAVORITE, $.C.DELETE, $.C.SHARE, $.C.EDIT]));
 function Q(e) {
     let { channelId: t, onEdit: $, onClose: Q } = e,
@@ -116,9 +116,9 @@ function Q(e) {
                                 er(),
                                     (0, w.L3)(e, async () => {
                                         let { default: e } = await Promise.all([
-                                            l.e("64379"),
-                                            l.e("6619"),
-                                            l.e("93020"),
+                                            l.e("4615"),
+                                            l.e("94267"),
+                                            l.e("34780"),
                                             l.e("95429"),
                                             l.e("91211"),
                                             l.e("38601"),

@@ -28,7 +28,7 @@ var i = n(627968),
     D = n(975571),
     y = n(652215),
     v = n(375708),
-    b = n(72828);
+    b = n(854780);
 let M = D.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
 class P extends r.PureComponent {
     static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
@@ -176,7 +176,7 @@ function G() {
                 m?.[0] === y.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("31910"), n.e("10919")]).then(n.bind(n, 556506));
+                        let { default: e } = await Promise.all([n.e("80198"), n.e("10919")]).then(n.bind(n, 556506));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -208,9 +208,9 @@ function G() {
                     : (0, o.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("56643"),
-                                  n.e("65264"),
-                                  n.e("86380"),
+                                  n.e("11183"),
+                                  n.e("15080"),
+                                  n.e("84684"),
                                   n.e("89545"),
                                   n.e("91531"),
                                   n.e("11493"),

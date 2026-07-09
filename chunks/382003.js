@@ -19,8 +19,8 @@ var n = s(627968),
     _ = s(834730),
     h = s(782134),
     E = s(812993),
-    O = s(403581),
-    v = s(750943),
+    v = s(403581),
+    O = s(750943),
     I = s(638495),
     C = s(428678),
     b = s(635739),
@@ -34,15 +34,15 @@ var n = s(627968),
     L = s(738011),
     P = s(174459),
     M = s(486020),
-    w = s(935208),
-    G = s(498559),
+    G = s(935208),
+    w = s(498559),
     R = s(577718),
     V = s(652215),
     H = s(897513),
     F = s(339984),
     K = s(202541),
     W = s(375708),
-    z = s(941531);
+    z = s(545819);
 function J(e) {
     let {
         icon: t,
@@ -120,10 +120,10 @@ function Y(e) {
         _ = l.useCallback((e) => {
             if (!(0, L.u)(e)) throw e;
         }, []),
-        O = u
+        v = u
             ? (0, n.jsx)(D.A, { className: z.PQ, src: a, loop: !0, playOnHover: !0, muted: !0, onPlayError: _ })
             : (0, n.jsx)(Q, { isAnimated: d, option: (0, x.d1)(t) ? t : void 0, source: a });
-    function v() {
+    function O() {
         null != m &&
             f &&
             (U.sF(m),
@@ -144,7 +144,7 @@ function Y(e) {
             }),
         children: [
             o ? (0, n.jsx)("div", { className: z.SH }) : null,
-            (0, n.jsx)("div", { onFocus: v, onMouseEnter: v, className: z.kV, children: O }),
+            (0, n.jsx)("div", { onFocus: O, onMouseEnter: O, className: z.kV, children: v }),
             u || d
                 ? (0, n.jsx)("div", {
                       className: z.uZ,
@@ -159,7 +159,7 @@ function Z() {
     return (0, n.jsxs)("div", {
         className: z.j1,
         children: [
-            (0, n.jsx)(O.t, { size: "md", color: "currentColor", className: z.eo }),
+            (0, n.jsx)(v.t, { size: "md", color: "currentColor", className: z.eo }),
             (0, n.jsx)(_.E, { variant: "text-sm/normal", children: W.intl.string(W.t["T+yRY3"]) }),
         ],
     });
@@ -179,14 +179,14 @@ function $(e) {
                 (0, n.jsxs)(J, {
                     className: z.__invalid_backgroundOptionBlurred,
                     disabled: l,
-                    icon: v.X,
+                    icon: O.X,
                     onClick: t,
                     onMouseLeave: o,
                     onBlur: o,
                     text: (0, n.jsxs)("div", {
                         className: z.Us,
                         children: [
-                            (0, n.jsx)(O.t, { size: "md", color: "currentColor", className: z.PK }),
+                            (0, n.jsx)(v.t, { size: "md", color: "currentColor", className: z.PK }),
                             (0, n.jsx)("div", { className: z.kr, children: W.intl.string(W.t["1t7U8W"]) }),
                         ],
                     }),
@@ -223,9 +223,9 @@ function X(e) {
             (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        s.e("79465"),
-                        s.e("21866"),
-                        s.e("50985"),
+                        s.e("27565"),
+                        s.e("36698"),
+                        s.e("56989"),
                         s.e("63232"),
                         s.e("29666"),
                         s.e("93513"),
@@ -270,14 +270,14 @@ function ee(e) {
             () =>
                 s.sort((e, t) =>
                     null == e.last_used || null == t.last_used
-                        ? w.default.compare(t.id, e.id)
+                        ? G.default.compare(t.id, e.id)
                         : new Date(t.last_used).getTime() - new Date(e.last_used).getTime(),
                 ),
             [s],
         ),
         d = c.length >= 25,
         { analyticsLocations: u } = (0, k.Ay)(T.A.VIDEO_BACKGROUND_OPTIONS),
-        m = Object.values((0, G.A)()).sort((e, t) => R.sl[e.id] - R.sl[t.id]);
+        m = Object.values((0, w.A)()).sort((e, t) => R.sl[e.id] - R.sl[t.id]);
     return (0, n.jsx)(k.f5, {
         value: u,
         children: (0, n.jsxs)("div", {
@@ -365,15 +365,15 @@ function es(e) {
         } = e,
         _ = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
         [h, E] = l.useState(null),
-        O = (0, A.A)(),
-        v = d.Ay.canUseCustomBackgrounds(_);
+        v = (0, A.A)(),
+        O = d.Ay.canUseCustomBackgrounds(_);
     l.useEffect(() => {
         (0, u.HR)();
     }, []);
-    let I = (0, i.cf)([m.A], () => (v ? m.A.videoFilterAssets : {})),
+    let I = (0, i.cf)([m.A], () => (O ? m.A.videoFilterAssets : {})),
         C = l.useMemo(() => Object.values(I).filter((e) => e.type === R.yZ.BACKGROUND), [I]),
         b = (0, r.p)(),
-        y = { isVideoBackgroundSupported: O, onSelectBackgroundOption: j, selectedBackgroundOption: g },
+        y = { isVideoBackgroundSupported: v, onSelectBackgroundOption: j, selectedBackgroundOption: g },
         S = l.useRef(y);
     function T(e) {
         j(e),
@@ -391,21 +391,21 @@ function es(e) {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = S.current;
             e ? (0, p.S1)(s, f, { track: !1 }).catch(() => t(null)) : null != s && t(null);
         }, [f]),
-        O
+        v
             ? (0, n.jsx)("div", {
                   className: N,
                   children: (0, n.jsx)(o.D, {
                       label: W.intl.string(W.t.lZTUPs),
                       errorMessage: h,
                       children: (0, n.jsx)(ee, {
-                          canUseCustomBackgrounds: v,
+                          canUseCustomBackgrounds: O,
                           customBackgroundOptions: C,
                           selectedOption: g,
                           onSelectOption: T,
                           onUpsellClick: function () {
                               (0, a.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      s.e("2125"),
+                                      s.e("85029"),
                                       s.e("66901"),
                                       s.e("40716"),
                                   ]).then(s.bind(s, 629959));

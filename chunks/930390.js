@@ -16,8 +16,8 @@ var i = n(627968),
     x = n(114166),
     f = n(891734),
     E = n(831688),
-    I = n(347353),
-    C = n(866661);
+    I = n(10585),
+    C = n(471717);
 let v = l.memo(function (e) {
         let t,
             n,
@@ -48,13 +48,13 @@ let v = l.memo(function (e) {
                 s = (0, p.xp)(i ?? "", l) ?? "";
             y && (R.borderColor = i), (R.background = s), (t = e), (n = e);
         }
-        let M = { minWidth: L, color: t, borderColor: n };
+        let P = { minWidth: L, color: t, borderColor: n };
         return (0, i.jsxs)("div", {
             className: r()(b.reaction, b.reactionInner, a, { [b.reactionMe]: y, [b.reactionReadOnly]: g && !v && !_ }),
             style: R,
             children: [
                 (0, i.jsx)(A.A, { emojiId: s.id, emojiName: s.name, size: N, animated: T && s.animated }),
-                (0, i.jsx)("div", { className: b.reactionCount, style: M, children: k }),
+                (0, i.jsx)("div", { className: b.reactionCount, style: P, children: k }),
             ],
         });
     }),

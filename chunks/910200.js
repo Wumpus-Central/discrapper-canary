@@ -11,7 +11,7 @@ var l = n(627968),
     p = n(396583),
     m = n(421108),
     h = n(920948),
-    C = n(82199);
+    C = n(719831);
 function E(e) {
     let {
             className: t,
@@ -24,7 +24,7 @@ function E(e) {
             trailing: A,
             ...f
         } = e,
-        S = () =>
+        y = () =>
             (0, l.jsx)(d.A, {
                 className: a()(C.Xx, t),
                 gradientColor: p,
@@ -43,10 +43,10 @@ function E(e) {
                 }),
             });
     return null != m && "object" == typeof m
-        ? (0, l.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ...m, children: S() })
+        ? (0, l.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ...m, children: y() })
         : null != m && "string" == typeof m
-          ? (0, l.jsx)(c.m, { text: m, asContainer: !0, tag: "div", children: S() })
-          : S();
+          ? (0, l.jsx)(c.m, { text: m, asContainer: !0, tag: "div", children: y() })
+          : y();
 }
 function A(e) {
     let { trailingText: t, ...n } = e;

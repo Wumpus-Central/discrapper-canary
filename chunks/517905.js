@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
 var r = n(292036),
-    s = n(922016);
-let a = (0, n(268218).Fe)({
+    a = n(922016);
+let s = (0, n(268218).Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("23549"),
-            n.e("83566"),
-            n.e("69722"),
-            n.e("80083"),
-            n.e("28510"),
-            n.e("78104"),
-            n.e("8502"),
-            n.e("29483"),
+            n.e("8273"),
+            n.e("97198"),
+            n.e("42714"),
+            n.e("92283"),
+            n.e("33566"),
+            n.e("92424"),
+            n.e("13558"),
+            n.e("52487"),
             n.e("43437"),
             n.e("86127"),
             n.e("75842"),
@@ -33,21 +33,21 @@ let a = (0, n(268218).Fe)({
     webpackId: 109026,
     renderLoader: () => (0, i.jsx)(r.s, {}),
 });
-function o(e) {
-    let { guildId: t, name: n, position: r = "right", onClose: o, targetElementRef: l, ...u } = e;
-    return (0, i.jsx)(s.Y, {
-        targetElementRef: l,
+function l(e) {
+    let { guildId: t, name: n, position: r = "right", onClose: l, targetElementRef: o, ...d } = e;
+    return (0, i.jsx)(a.Y, {
+        targetElementRef: o,
         position: r,
         clickTrap: !0,
         renderPopout: (e) =>
-            (0, i.jsx)(a, {
+            (0, i.jsx)(s, {
                 ...e,
                 onClose: () => {
-                    e.closePopout(), o?.();
+                    e.closePopout(), l?.();
                 },
                 guildId: t,
                 name: n,
             }),
-        ...u,
+        ...d,
     });
 }

@@ -27,7 +27,7 @@ var A = n(832712),
     S = n(790782),
     _ = n(355097),
     I = n(375708),
-    j = n(927933);
+    j = n(1341);
 function y(e) {
     let { channel: t, clearUnreadsNotice: n } = e;
     return (0, l.jsxs)("div", {
@@ -62,14 +62,14 @@ function y(e) {
     });
 }
 var b = n(228098),
-    N = n(157259),
-    v = n(503698),
-    T = n.n(v),
+    v = n(157259),
+    N = n(503698),
+    T = n.n(N),
     M = n(95561),
     R = n(174459),
     D = n(867455),
     L = n(406704),
-    k = n(916168);
+    k = n(549768);
 function P(e) {
     let { channel: t, narrow: n } = e,
         s = (0, L.lK)(t);
@@ -177,6 +177,6 @@ let U = i.memo(function (e) {
             : h
               ? (0, l.jsx)(y, { channel: t, clearUnreadsNotice: m })
               : d && u.includes(G.i.OPT_IN_CHANNEL)
-                ? (0, l.jsx)(N.A, { channel: t, narrow: n })
+                ? (0, l.jsx)(v.A, { channel: t, narrow: n })
                 : null;
 });

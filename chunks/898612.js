@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => p });
 var l = n(627968);
 n(64700);
 var r = n(191023),
@@ -10,8 +10,8 @@ var r = n(191023),
     c = n(739455),
     d = n(2242),
     m = n(375708),
-    E = n(60927);
-function p(e) {
+    E = n(355711);
+function C(e) {
     let { channelId: t } = e,
         n = (0, c.fE)(t),
         u = (0, o.Ay)(n);
@@ -27,10 +27,10 @@ function p(e) {
         ],
     });
 }
-function C(e) {
+function p(e) {
     switch (e.ref_type) {
         case d.bN.CHANNEL:
-            return (0, l.jsx)(p, { channelId: e.ref_id });
+            return (0, l.jsx)(C, { channelId: e.ref_id });
         case d.bN.INTANGIBLE:
             return e.name;
         default:

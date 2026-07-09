@@ -26,9 +26,9 @@ var l = n(627968),
     T = n(359800),
     I = n(206828),
     _ = n(769015),
-    k = n(774418),
-    M = n(375708),
-    R = n(27549);
+    R = n(559965),
+    k = n(375708),
+    M = n(215965);
 function w(e) {
     let t,
         { application: n, size: i = "md", analyticsLocation: s = m.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
@@ -39,18 +39,18 @@ function w(e) {
     let h = !1;
     return (
         "sm" === i
-            ? (t = M.intl.format(k.default.vznMVa, { onClick: () => u({ analyticsLocations: a }) }))
-            : ((t = M.intl.string(k.default.UHF2Zn)), (h = !0)),
+            ? (t = k.intl.format(R.default.vznMVa, { onClick: () => u({ analyticsLocations: a }) }))
+            : ((t = k.intl.string(R.default.UHF2Zn)), (h = !0)),
         (0, l.jsxs)("div", {
-            className: R._,
+            className: M._,
             children: [
                 (0, l.jsx)(_.A, { game: n, size: _.M.MEDIUM }),
-                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: R.d, children: t }),
+                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: M.d, children: t }),
                 h
                     ? (0, l.jsx)(E.Q, {
                           variant: "primary",
                           size: "sm",
-                          text: M.intl.string(k.default.EBSaL4),
+                          text: k.intl.string(R.default.EBSaL4),
                           onClick: () => u({ analyticsLocations: a }),
                       })
                     : null,
@@ -60,7 +60,7 @@ function w(e) {
 }
 var L = n(652215);
 n(253913);
-var D = n(939422);
+var D = n(45342);
 let P = h.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
     O = "create-game-invite-post";
 function F(e) {
@@ -80,7 +80,7 @@ function z(e) {
         { application: S } = (0, b._k)(n.guild_id),
         y = (0, o.bG)([C.A, N.A], () => (0, u.A)(C.A, N.A, S?.id), [S]),
         [{ textValue: T, richValue: I }, _] = i.useState(() => (0, x.N3)()),
-        [R, F] = i.useState(!1),
+        [M, F] = i.useState(!1),
         [z, U] = i.useState(() => new Set()),
         [H, B] = i.useState(!1),
         V = i.useMemo(() => E.find((e) => e.name === b.Dg), [E]),
@@ -131,26 +131,26 @@ function z(e) {
             }
         }, [Z, J, h, T]);
     return (0, l.jsx)(s.Modal, {
-        title: M.intl.string(k.default.tOsHsu),
+        title: k.intl.string(R.default.tOsHsu),
         transitionState: d,
         onClose: h,
         actions: [
-            { variant: "secondary", text: M.intl.string(M.t["ETE/oC"]), onClick: h, disabled: H },
-            { variant: "primary", text: M.intl.string(M.t.CumH4u), onClick: ee, disabled: !Z, loading: H },
+            { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: h, disabled: H },
+            { variant: "primary", text: k.intl.string(k.t.CumH4u), onClick: ee, disabled: !Z, loading: H },
         ],
         children: (0, l.jsxs)("div", {
             className: D.rf,
             children: [
                 (0, l.jsx)(a.D, {
                     required: !0,
-                    label: M.intl.string(k.default["/mEbGf"]),
+                    label: k.intl.string(R.default["/mEbGf"]),
                     children: (0, l.jsx)(g.Ay, {
                         type: P,
                         channel: n,
-                        placeholder: M.intl.string(k.default["SU/IAE"]),
+                        placeholder: k.intl.string(R.default["SU/IAE"]),
                         textValue: T,
                         richValue: I,
-                        focused: R,
+                        focused: M,
                         onChange: q,
                         onFocus: () => F(!0),
                         onBlur: () => F(!1),
@@ -164,8 +164,8 @@ function z(e) {
                 }),
                 E.length > 0
                     ? (0, l.jsx)(a.D, {
-                          label: M.intl.string(M.t.KM6lRG),
-                          description: M.intl.formatToPlainString(k.default["yoIAe/"], { tagsMax: 5 }),
+                          label: k.intl.string(k.t.KM6lRG),
+                          description: k.intl.formatToPlainString(R.default["yoIAe/"], { tagsMax: 5 }),
                           children: (0, l.jsx)("div", {
                               className: D.GA,
                               children: E.map((e) =>
@@ -186,10 +186,10 @@ function z(e) {
                     : null,
                 (0, l.jsx)(a.D, {
                     layout: "horizontal",
-                    label: M.intl.string(k.default.Xd2NFi),
-                    description: M.intl.string(k.default.G91SYQ),
+                    label: k.intl.string(R.default.Xd2NFi),
+                    description: k.intl.string(R.default.G91SYQ),
                     children: (0, l.jsx)(c.m, {
-                        text: M.intl.formatToPlainString(k.default["0s2ICk"], { noMicTagName: b.Dg }),
+                        text: k.intl.formatToPlainString(R.default["0s2ICk"], { noMicTagName: b.Dg }),
                         shouldShow: null == V,
                         asContainer: !0,
                         children: (0, l.jsx)(r.d, {

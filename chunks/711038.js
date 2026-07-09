@@ -1,4 +1,4 @@
-s.d(t, { A: () => f });
+s.d(t, { A: () => j });
 var n = s(627968),
     i = s(64700),
     a = s(289873),
@@ -29,8 +29,8 @@ function E(e) {
     });
 }
 var C = s(262514),
-    j = s(822663);
-function f(e) {
+    f = s(79815);
+function j(e) {
     let { questId: t } = e,
         {
             quests: s,
@@ -38,11 +38,11 @@ function f(e) {
             isFetchingCurrentQuests: d,
         } = (0, r.mL)({ fetchPolicy: "cache-or-network", callerSource: "embed" }),
         m = i.useMemo(() => (0, o.vc)(t, s, u), [t, s, u]),
-        f = i.useMemo(() => u.find((e) => e.id === t), [t, u]);
+        j = i.useMemo(() => u.find((e) => e.id === t), [t, u]);
     return d
-        ? (0, n.jsx)(a.y, { className: j.u })
+        ? (0, n.jsx)(a.y, { className: f.u })
         : null == m
-          ? null != f
+          ? null != j
               ? (0, n.jsx)(x, { questId: t })
               : (0, n.jsx)(h.l, { questId: t, reason: h.o.NOT_FOUND })
           : (0, c.E0)(m.config)

@@ -1,8 +1,8 @@
 s.d(t, { P: () => v, ThirdPartyPromotionsModal: () => _ });
 var i = s(627968);
 s(64700);
-var n = s(289873),
-    a = s(189213),
+var a = s(289873),
+    n = s(189213),
     l = s(834730),
     r = s(17928),
     c = s(192308),
@@ -10,11 +10,11 @@ var n = s(289873),
     d = s(174459),
     u = s(975571),
     m = s(962644),
-    g = s(35587),
-    x = s(374200),
+    x = s(35587),
+    g = s(412260),
     p = s(772167),
     h = s(881373);
-function f(e) {
+function N(e) {
     let { promotion: t, analyticsLocations: s } = e;
     return (0, i.jsx)(p.wx, {
         recurrence: t,
@@ -24,10 +24,10 @@ function f(e) {
         analyticsLocations: s,
     });
 }
-var N = s(652215),
-    A = s(962995),
+var f = s(652215),
+    A = s(778414),
     j = s(375708),
-    E = s(75662);
+    E = s(738894);
 let C = {
         "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: h.aW }, body: A.default.mH30Yx },
         "Logitech 5%": {
@@ -42,17 +42,17 @@ let C = {
             body: A.default.lsRjfl,
         },
     },
-    R = {
+    b = {
         logitech: {
             modalTitle: A.default["2I7nK+"],
             modalSubtitle: {
                 message: A.default.W8jOD0,
-                values: { termsUrl: u.A.getArticleURL(N.MVz.LOGITECH_PROMOTION) },
+                values: { termsUrl: u.A.getArticleURL(f.MVz.LOGITECH_PROMOTION) },
             },
             landingUrl: "https://www.logitech.com/",
         },
     };
-function b(e, t) {
+function R(e, t) {
     let s = C[e.outboundTitle];
     return {
         id: e.id,
@@ -68,16 +68,16 @@ function b(e, t) {
 }
 function _(e) {
     let { partnerId: t, transitionState: s, onClose: c } = e,
-        d = R[t],
-        [u, m] = (0, r.yK)([x.A], () => {
-            let { recurring: e, oneTime: s } = x.A.getPromotionsByPartner(t);
+        d = b[t],
+        [u, m] = (0, r.yK)([g.A], () => {
+            let { recurring: e, oneTime: s } = g.A.getPromotionsByPartner(t);
             return [e.filter((e) => null != C[e.outboundTitle]), s.filter((e) => null != C[e.outboundTitle])];
         }),
-        { promotionsLoaded: h, claimedOutboundPromotionCodeMap: N } = (0, g.y7)();
-    if (!h) return (0, i.jsx)(n.y, {});
+        { promotionsLoaded: h, claimedOutboundPromotionCodeMap: f } = (0, x.y7)();
+    if (!h) return (0, i.jsx)(a.y, {});
     let _ = d?.modalSubtitle != null ? j.intl.format(d.modalSubtitle.message, d.modalSubtitle.values) : void 0,
         v = null == d ? t : j.intl.string(d.modalTitle);
-    return (0, i.jsx)(a.Modal, {
+    return (0, i.jsx)(n.Modal, {
         title: v,
         subtitle: _,
         actions: [],
@@ -101,7 +101,7 @@ function _(e) {
                                         p.wx,
                                         {
                                             recurrence: {
-                                                ...b(e, N[e.id] ?? null),
+                                                ...R(e, f[e.id] ?? null),
                                                 asset: (0, p.Cf)()[e.partnerId ?? ""]?.asset ?? "",
                                             },
                                             showPartnerImage: !0,
@@ -127,9 +127,9 @@ function _(e) {
                                 className: E.kR,
                                 children: m.map((e) =>
                                     (0, i.jsx)(
-                                        f,
+                                        N,
                                         {
-                                            promotion: b(e, N[e.id] ?? null),
+                                            promotion: R(e, f[e.id] ?? null),
                                             analyticsLocations: [o.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                         },
                                         e.id,
@@ -143,8 +143,8 @@ function _(e) {
     });
 }
 function v(e) {
-    let { partnerId: t, analyticsLocations: n } = e;
-    d.default.track(N.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: [t], partner_id: t, location_stack: n }),
+    let { partnerId: t, analyticsLocations: a } = e;
+    d.default.track(f.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: [t], partner_id: t, location_stack: a }),
         m.Ay.fetchActivePromotions(),
         (0, c.openModalLazy)(async () => {
             let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(s.bind(s, 581921));

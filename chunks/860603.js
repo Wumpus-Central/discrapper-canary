@@ -1,4 +1,4 @@
-n.d(t, { A: () => t7 }), n(321073);
+n.d(t, { A: () => t8 }), n(321073);
 var i,
     l = n(627968),
     s = n(64700),
@@ -33,7 +33,7 @@ var i,
     M = n(633018),
     _ = n(503698),
     P = n.n(_),
-    G = n(542225);
+    G = n(807377);
 function W(e) {
     let { children: t, icon: n, title: i } = e;
     return (0, l.jsxs)("header", {
@@ -62,11 +62,11 @@ function F(e) {
 }
 var Y = n(261958),
     q = n(939249),
-    Z = n(885574),
-    J = n(442433),
-    Q = n(200662),
-    $ = n(375708),
-    X = n(870807);
+    Q = n(885574),
+    Z = n(442433),
+    J = n(200662),
+    X = n(375708),
+    $ = n(305687);
 function ee(e) {
     let { applicationIcon: t, applicationName: i, canNavigate: a, command: r, guildId: o } = e,
         c = s.useMemo(() => 0 !== Object.keys(r.permissions ?? {}).length, [r.permissions]),
@@ -88,35 +88,35 @@ function ee(e) {
         }, [t, i, a, r, o]),
         u = s.useCallback(
             (e) => {
-                (0, J.L3)(e, async () => {
+                (0, Z.L3)(e, async () => {
                     let { default: e } = await n.e("15687").then(n.bind(n, 646938));
-                    return (t) => (0, l.jsx)(e, { ...t, id: r.id, label: $.intl.string($.t.oJ1Muw) });
+                    return (t) => (0, l.jsx)(e, { ...t, id: r.id, label: X.intl.string(X.t.oJ1Muw) });
                 });
             },
             [r],
         ),
         m = r.type === V.kc.CHAT ? M.k : Y.u,
-        g = (0, Q.p6)(r.type, r.displayName);
+        g = (0, J.p6)(r.type, r.displayName);
     return (0, l.jsxs)(q.D, {
         onClick: d,
-        className: X.AS,
+        className: $.AS,
         onContextMenu: u,
         children: [
             (0, l.jsxs)("div", {
-                className: X.Cv,
+                className: $.Cv,
                 children: [
-                    (0, l.jsx)(m, { className: X.Kk, size: "md", color: "currentColor" }),
+                    (0, l.jsx)(m, { className: $.Kk, size: "md", color: "currentColor" }),
                     (0, l.jsx)(S.E, { variant: "text-md/normal", children: g }),
                 ],
             }),
             (0, l.jsx)("div", {
-                className: X.II,
+                className: $.II,
                 children: c
                     ? (0, l.jsxs)("div", {
-                          className: X.Bs,
+                          className: $.Bs,
                           children: [
-                              (0, l.jsx)(S.E, { variant: "text-md/normal", children: $.intl.string($.t.jH4B9O) }),
-                              (0, l.jsx)(Z.m, { size: "sm", color: "currentColor", className: X.I8 }),
+                              (0, l.jsx)(S.E, { variant: "text-md/normal", children: X.intl.string(X.t.jH4B9O) }),
+                              (0, l.jsx)(Q.m, { size: "sm", color: "currentColor", className: $.I8 }),
                           ],
                       })
                     : null,
@@ -125,7 +125,7 @@ function ee(e) {
     });
 }
 var et = n(636547),
-    en = n(746523);
+    en = n(32475);
 function ei(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: i, guildId: a } = e,
         {
@@ -167,7 +167,7 @@ function ei(e) {
         ? (0, l.jsx)(et.A, {
               bar: (0, l.jsx)(H.I, { size: "sm", query: c, onChange: d, onClear: () => d("") }),
               inModal: !1,
-              title: $.intl.string($.t["0hKkS+"]),
+              title: X.intl.string(X.t["0hKkS+"]),
               children: r.map((e, o) =>
                   (0, l.jsxs)(
                       s.Fragment,
@@ -193,12 +193,12 @@ function ei(e) {
               children: (0, l.jsx)(S.E, {
                   color: "text-muted",
                   variant: "text-sm/normal",
-                  children: $.intl.string($.t["x78c+J"]),
+                  children: X.intl.string(X.t["x78c+J"]),
               }),
           });
 }
 var el = n(534148),
-    es = n(830662);
+    es = n(468294);
 function ea(e) {
     let { application: t, canNavigate: n, guildId: i } = e,
         a = (0, o.bG)([U.A], () => U.A.isUnavailable());
@@ -212,12 +212,12 @@ function ea(e) {
               children: [
                   (0, l.jsx)(W, {
                       icon: (0, l.jsx)(M.k, { size: "md", color: "currentColor" }),
-                      title: $.intl.string($.t.RGoJNN),
+                      title: X.intl.string(X.t.RGoJNN),
                   }),
                   (0, l.jsx)(S.E, {
                       color: "text-muted",
                       variant: "text-sm/normal",
-                      children: $.intl.string($.t.sCkD3Z),
+                      children: X.intl.string(X.t.sCkD3Z),
                   }),
                   (0, l.jsx)(er, { guildId: i, applicationId: t.id }),
                   (0, l.jsx)(ei, { applicationIcon: t.icon, applicationName: t.name, canNavigate: n, guildId: i }),
@@ -246,7 +246,7 @@ var eo = n(308244),
     em = n(990078),
     eg = n(331322),
     eh = n(638916),
-    ex = n(866219);
+    ex = n(641131);
 function eA(e) {
     let {
         name: t,
@@ -317,7 +317,7 @@ function eA(e) {
                                         t,
                                         r &&
                                             (0, l.jsx)(em.m, {
-                                                text: $.intl.string($.t.VFuFum),
+                                                text: X.intl.string(X.t.VFuFum),
                                                 children: (0, l.jsx)(eh.q, {
                                                     size: "xs",
                                                     color: "currentColor",
@@ -349,7 +349,7 @@ var ep = n(136722),
     ev = n(889227),
     eT = n(696451),
     eI = n(317525),
-    eS = n(592822);
+    eS = n(341046);
 function ey(e) {
     let { guild: t, applicationIntegration: n } = e,
         { application: i } = n,
@@ -377,7 +377,7 @@ function ey(e) {
                         (0, l.jsx)(S.E, {
                             color: "text-strong",
                             variant: "text-sm/normal",
-                            children: $.intl.format($.t.GyhzGw, { user: a.toString() }),
+                            children: X.intl.format(X.t.GyhzGw, { user: a.toString() }),
                         }),
                         (0, l.jsx)(eE.A, { className: eS.Tc, verified: a.isVerifiedBot() }),
                     ],
@@ -391,7 +391,7 @@ function ey(e) {
                             (0, l.jsx)(y.c, { className: eS.yF }),
                             n.length > 0
                                 ? (0, l.jsx)(ef.D, {
-                                      label: $.intl.format($.t.PCs0oo, { numRoles: n.length }),
+                                      label: X.intl.format(X.t.PCs0oo, { numRoles: n.length }),
                                       children: (0, l.jsx)(ej.Ay, {
                                           className: eS.pf,
                                           user: e,
@@ -405,9 +405,9 @@ function ey(e) {
                             s.length > 0 || a.length > 0
                                 ? (0, l.jsx)(eN.A, {
                                       grantedPermissions: s,
-                                      grantedPermissionsHeader: $.intl.string($.t["hA4+su"]),
+                                      grantedPermissionsHeader: X.intl.string(X.t["hA4+su"]),
                                       disabledPermissions: a,
-                                      disabledPermissionsHeader: $.intl.string($.t["/rEZ2i"]),
+                                      disabledPermissionsHeader: X.intl.string(X.t["/rEZ2i"]),
                                   })
                                 : null,
                         ],
@@ -428,7 +428,7 @@ var eO = n(47167),
     eG = n(824953),
     eW = n(147925),
     eD = n(652215),
-    eU = n(964099);
+    eU = n(776048);
 function eB(e) {
     let { webhook: t, editedWebhook: n, channelOptions: i, isExpanded: a, errors: r, onToggleExpand: o } = e,
         c = s.useMemo(() => {
@@ -439,12 +439,12 @@ function eB(e) {
         }, [t]),
         d = s.useCallback(() => {
             (0, eR.A)({
-                title: $.intl.formatToPlainString($.t.gBKqZ0, { name: t.name }),
-                subtitle: $.intl.string($.t.zO9jrD),
-                confirmText: $.intl.string($.t.CMy0Cj),
+                title: X.intl.formatToPlainString(X.t.gBKqZ0, { name: t.name }),
+                subtitle: X.intl.string(X.t.zO9jrD),
+                confirmText: X.intl.string(X.t.CMy0Cj),
                 onConfirm: () => {
                     eG.A.delete(t.guild_id, t.id).catch(() => {
-                        w.A.show({ title: $.intl.string($.t.LpbaFV), body: $.intl.string($.t["/4TwKf"]) });
+                        w.A.show({ title: X.intl.string(X.t.LpbaFV), body: X.intl.string(X.t["/4TwKf"]) });
                     });
                 },
             });
@@ -458,7 +458,7 @@ function eB(e) {
                 "span",
                 {
                     className: eU.lM,
-                    children: $.intl.format($.t["H/jJ6R"], {
+                    children: X.intl.format(X.t["H/jJ6R"], {
                         guildHook: () => (0, l.jsx)("span", { className: eU.VZ, children: t.source_guild.name }, t.id),
                     }),
                 },
@@ -481,7 +481,7 @@ function eB(e) {
                                 gap: 16,
                                 children: [
                                     (0, l.jsx)(e_.k, {
-                                        label: $.intl.string($.t.I1o5gV),
+                                        label: X.intl.string(X.t.I1o5gV),
                                         value: n.name,
                                         onChange: (e) => {
                                             u.A.updateWebhook({ name: e });
@@ -490,7 +490,7 @@ function eB(e) {
                                         error: r.name,
                                     }),
                                     (0, l.jsx)(eP.l, {
-                                        label: $.intl.string($.t["4TuWfc"]),
+                                        label: X.intl.string(X.t["4TuWfc"]),
                                         value: n.channel_id,
                                         options: i,
                                         onSelectionChange: (e) => {
@@ -506,7 +506,7 @@ function eB(e) {
                                 onClick: d,
                                 size: "sm",
                                 variant: "critical",
-                                text: $.intl.string($.t.CMy0Cj),
+                                text: X.intl.string(X.t.CMy0Cj),
                             }),
                         ],
                     }),
@@ -544,11 +544,11 @@ var eH = n(935399),
     eF = n(765178),
     eY = n(342298),
     eq = n(957565),
-    eZ = n(767906);
-function eJ(e, t) {
+    eQ = n(956322);
+function eZ(e, t) {
     return null != t && /^data:/.test(t) ? t : (0, ec.ku)({ id: e.id, avatar: t, discriminator: eD.h3J });
 }
-function eQ(e) {
+function eJ(e) {
     let {
             id: t,
             webhook: n,
@@ -566,23 +566,23 @@ function eQ(e) {
     (0, eH.Ay)(() => {
         !0 === o && (u.A.startEditingWebhook(n.id), A.current?.scrollIntoView({ behavior: "smooth", block: "center" }));
     });
-    let p = s.useMemo(() => eJ(n, n.avatar), [n]),
+    let p = s.useMemo(() => eZ(n, n.avatar), [n]),
         f = s.useCallback(() => {
             let e = `${(0, ez.TP)(!1)}${eD.Rsh.WEBHOOK_INTEGRATION(n.id, n.token)}`;
             (0, eq.C)(e);
         }, [n]),
         b = s.useCallback(() => {
             (0, eR.A)({
-                title: $.intl.formatToPlainString($.t.QVFjHh, { name: n.name }),
-                subtitle: $.intl.format($.t["rIWe+5"], { name: n.name }),
-                confirmText: $.intl.string($.t["W+K1Fs"]),
-                cancelText: $.intl.string($.t.xNhj0O),
+                title: X.intl.formatToPlainString(X.t.QVFjHh, { name: n.name }),
+                subtitle: X.intl.format(X.t["rIWe+5"], { name: n.name }),
+                confirmText: X.intl.string(X.t["W+K1Fs"]),
+                cancelText: X.intl.string(X.t.xNhj0O),
                 onConfirm: () => {
                     eG.A.delete(n.guild_id, n.id).catch((e) => {
                         let { status: t } = e;
                         429 === t
-                            ? w.A.show({ title: $.intl.string($.t.N5riYn), body: $.intl.string($.t.eAxcCc) })
-                            : w.A.show({ title: $.intl.string($.t.N5riYn), body: $.intl.string($.t["/4TwKf"]) });
+                            ? w.A.show({ title: X.intl.string(X.t.N5riYn), body: X.intl.string(X.t.eAxcCc) })
+                            : w.A.show({ title: X.intl.string(X.t.N5riYn), body: X.intl.string(X.t["/4TwKf"]) });
                     });
                 },
             });
@@ -591,7 +591,7 @@ function eQ(e) {
     null != n.user
         ? j.push({
               icon: v.O,
-              text: $.intl.formatToPlainString($.t["7EcUbr"], {
+              text: X.intl.formatToPlainString(X.t["7EcUbr"], {
                   user: (function (e) {
                       if (null == e) return null;
                       let t = new ev.A(e);
@@ -602,23 +602,23 @@ function eQ(e) {
           })
         : j.push({
               icon: v.O,
-              text: $.intl.formatToPlainString($.t["7mv59O"], { timestamp: ed.default.extractTimestamp(n.id) }),
+              text: X.intl.formatToPlainString(X.t["7mv59O"], { timestamp: ed.default.extractTimestamp(n.id) }),
           });
     let N = null;
     return (
         r &&
             null != i &&
             (N = (0, l.jsxs)("div", {
-                className: eZ.rf,
+                className: eQ.rf,
                 children: [
-                    (0, l.jsx)(y.c, { className: eZ.fV }),
+                    (0, l.jsx)(y.c, { className: eQ.fV }),
                     (0, l.jsxs)(h.A, {
                         children: [
                             (0, l.jsx)(h.A.Child, {
                                 shrink: 1,
                                 grow: 0,
                                 children: (0, l.jsxs)(h.A, {
-                                    className: eZ.R3,
+                                    className: eQ.R3,
                                     direction: h.A.Direction.VERTICAL,
                                     children: [
                                         (0, l.jsx)(eY.A, {
@@ -626,8 +626,8 @@ function eQ(e) {
                                             onChange: (e) => {
                                                 u.A.updateWebhook({ avatar: e });
                                             },
-                                            makeURL: (e) => eJ(n, e),
-                                            imageClassName: eZ.mr,
+                                            makeURL: (e) => eZ(n, e),
+                                            imageClassName: eQ.mr,
                                             showIcon: !0,
                                         }),
                                         null != c.avatar && "" !== c.avatar
@@ -649,7 +649,7 @@ function eQ(e) {
                                                 wrap: !0,
                                                 basis: "50%",
                                                 children: (0, l.jsx)(e_.k, {
-                                                    label: $.intl.string($.t.ukdxuo),
+                                                    label: X.intl.string(X.t.ukdxuo),
                                                     value: i.name,
                                                     onChange: (e) => {
                                                         u.A.updateWebhook({ name: e });
@@ -662,7 +662,7 @@ function eQ(e) {
                                                 basis: "50%",
                                                 children: (0, l.jsx)("div", {
                                                     children: (0, l.jsx)(eK.Z, {
-                                                        label: $.intl.string($.t.GK18KJ),
+                                                        label: X.intl.string(X.t.GK18KJ),
                                                         value: i.channel_id,
                                                         options: a,
                                                         formatOption: (e) => {
@@ -672,32 +672,32 @@ function eQ(e) {
                                                         onSelectionChange: (e) => {
                                                             u.A.updateWebhook({ channelId: e });
                                                         },
-                                                        placeholder: $.intl.string($.t.r2ptsz),
+                                                        placeholder: X.intl.string(X.t.r2ptsz),
                                                         selectionMode: "single",
                                                     }),
                                                 }),
                                             }),
                                         ],
                                     }),
-                                    (0, l.jsx)(y.c, { className: eZ.Bd }),
+                                    (0, l.jsx)(y.c, { className: eQ.Bd }),
                                     (0, l.jsxs)(h.A, {
                                         children: [
                                             (0, l.jsx)(em.m, {
-                                                text: $.intl.string($.t.wwdb3g),
+                                                text: X.intl.string(X.t.wwdb3g),
                                                 shouldShow: m,
                                                 hideOnClick: !1,
                                                 forceOpen: m,
                                                 children: (0, l.jsx)("div", {
                                                     "data-button-hoisted-classname-wrapper": !0,
-                                                    className: eZ.cL,
+                                                    className: eQ.cL,
                                                     children: (0, l.jsx)(L.$, {
                                                         variant: "secondary",
                                                         size: "sm",
-                                                        text: $.intl.string($.t.Ae9rUW),
+                                                        text: X.intl.string(X.t.Ae9rUW),
                                                         "aria-label": "",
                                                         onClick: () => {
                                                             g(!0),
-                                                                eF.O.announce($.intl.string($.t.wwdb3g)),
+                                                                eF.O.announce(X.intl.string(X.t.wwdb3g)),
                                                                 x.start(1e3, () => g(!1)),
                                                                 f();
                                                         },
@@ -708,7 +708,7 @@ function eQ(e) {
                                             (0, l.jsx)(L.$, {
                                                 variant: "critical-secondary",
                                                 size: "sm",
-                                                text: $.intl.string($.t.jVrUnC),
+                                                text: X.intl.string(X.t.jVrUnC),
                                                 onClick: b,
                                             }),
                                         ],
@@ -723,19 +723,19 @@ function eQ(e) {
             ref: A,
             editable: !0,
             id: t,
-            className: P()(eZ.Nr, o ? eZ.U6 : null),
+            className: P()(eQ.Nr, o ? eQ.U6 : null),
             children: (0, l.jsxs)(h.A, {
                 direction: h.A.Direction.VERTICAL,
                 children: [
                     (0, l.jsx)(q.D, {
-                        className: eZ.wx,
+                        className: eQ.wx,
                         "aria-expanded": r,
                         onClick: d,
                         children: (0, l.jsxs)(h.A, {
                             align: h.A.Align.CENTER,
                             children: [
                                 (0, l.jsx)(eA, { name: n.name, imageSrc: p, details: j }),
-                                (0, l.jsx)(eW.A, { className: eZ.eO, expanded: r, "aria-hidden": !0 }),
+                                (0, l.jsx)(eW.A, { className: eQ.eO, expanded: r, "aria-hidden": !0 }),
                             ],
                         }),
                     }),
@@ -745,8 +745,8 @@ function eQ(e) {
         })
     );
 }
-var e$ = n(400698);
-function eX(e) {
+var eX = n(803002);
+function e$(e) {
     let {
             webhooks: t,
             selectableWebhookChannels: n,
@@ -776,7 +776,7 @@ function eX(e) {
             [o, a],
         );
     return (0, l.jsx)("div", {
-        className: e$.__invalid_list,
+        className: eX.__invalid_list,
         children: d.map((e) => {
             let { channel: t, webhooks: n } = e;
             return (function (e) {
@@ -795,12 +795,12 @@ function eX(e) {
                         children: [
                             (0, l.jsx)(S.E, {
                                 variant: "text-md/medium",
-                                className: e$.x,
-                                children: $.intl.format($.t.TKDIZg, {
+                                className: eX.x,
+                                children: X.intl.format(X.t.TKDIZg, {
                                     channelHook: () =>
                                         (0, l.jsx)(
                                             "span",
-                                            { className: e$.H, children: (0, eO.m1)(t, eL.default, ek.A, !0) },
+                                            { className: eX.H, children: (0, eO.m1)(t, eL.default, ek.A, !0) },
                                             t.id,
                                         ),
                                 }),
@@ -820,7 +820,7 @@ function eX(e) {
                                           e.id,
                                       )
                                     : (0, l.jsx)(
-                                          eQ,
+                                          eJ,
                                           {
                                               webhook: e,
                                               editedWebhook: a,
@@ -849,22 +849,22 @@ function eX(e) {
         }),
     });
 }
-var e0 = n(234);
-function e2(e) {
+var e0 = n(693354);
+function e3(e) {
     let { application: t, guild: n, integration: i, ...s } = e;
     return (0, l.jsx)(E.ConfirmModal, {
         ...s,
-        title: $.intl.formatToPlainString($.t["rL9d/1"], { applicationName: t.name }),
-        subtitle: $.intl.format($.t.FGE8ya, { applicationName: t.name }),
-        confirmText: $.intl.string($.t.ebGf4m),
+        title: X.intl.formatToPlainString(X.t["rL9d/1"], { applicationName: t.name }),
+        subtitle: X.intl.format(X.t.FGE8ya, { applicationName: t.name }),
+        confirmText: X.intl.string(X.t.ebGf4m),
         onConfirm: () => {
             R.A.disableIntegration(n.id, i.id).catch(() => {
-                w.A.show({ title: $.intl.string($.t.wYqMmI), body: $.intl.string($.t.A4Mnst) });
+                w.A.show({ title: X.intl.string(X.t.wYqMmI), body: X.intl.string(X.t.A4Mnst) });
             });
         },
     });
 }
-function e3(e) {
+function e2(e) {
     let {
             guild: t,
             applicationIntegration: n,
@@ -884,20 +884,20 @@ function e3(e) {
         ),
         A = (0, o.bG)([f.A], () => f.A.can(eD.xBc.MANAGE_WEBHOOKS, t), [t]),
         p = s.useCallback(() => {
-            c() && (0, C.openModal)((e) => (0, l.jsx)(e2, { guild: t, application: d, integration: u, ...e }));
+            c() && (0, C.openModal)((e) => (0, l.jsx)(e3, { guild: t, application: d, integration: u, ...e }));
         }, [d, c, t, u]),
         b = s.useMemo(() => {
             let e = [
                 {
                     icon: v.O,
-                    text: $.intl.formatToPlainString($.t.gcdJ8J, { timestamp: ed.default.extractTimestamp(u.id) }),
+                    text: X.intl.formatToPlainString(X.t.gcdJ8J, { timestamp: ed.default.extractTimestamp(u.id) }),
                 },
             ];
             return (
                 null != u.user &&
                     e.push({
                         icon: T.n,
-                        text: $.intl.formatToPlainString($.t.qE7oqs, { user: eu.Ay.getUserTag(u.user) }),
+                        text: X.intl.formatToPlainString(X.t.qE7oqs, { user: eu.Ay.getUserTag(u.user) }),
                     }),
                 e
             );
@@ -912,7 +912,7 @@ function e3(e) {
                           children: (0, l.jsx)(S.E, {
                               color: "text-muted",
                               variant: "text-sm/normal",
-                              children: $.intl.string($.t.pfLnza),
+                              children: X.intl.string(X.t.pfLnza),
                           }),
                       }),
             [d.bot, n, t, u.scopes],
@@ -934,7 +934,7 @@ function e3(e) {
                       children: [
                           (0, l.jsx)(W, {
                               icon: (0, l.jsx)(O.C, { size: "xs", color: "currentColor" }),
-                              title: $.intl.string($.t.AOdOYr),
+                              title: X.intl.string(X.t.AOdOYr),
                           }),
                           j,
                       ],
@@ -945,10 +945,10 @@ function e3(e) {
                 children: [
                     (0, l.jsx)(W, {
                         icon: (0, l.jsx)(k.X, { size: "md", color: "currentColor" }),
-                        title: $.intl.string($.t["t9ZX/I"]),
+                        title: X.intl.string(X.t["t9ZX/I"]),
                     }),
                     m.length > 0
-                        ? (0, l.jsx)(eX, {
+                        ? (0, l.jsx)(e$, {
                               webhooks: m,
                               editedWebhook: a,
                               selectableWebhookChannels: i,
@@ -961,7 +961,7 @@ function e3(e) {
                               children: (0, l.jsx)(S.E, {
                                   color: "text-muted",
                                   variant: "text-sm/normal",
-                                  children: A ? $.intl.string($.t.ahPd2Y) : $.intl.string($.t.axqYMl),
+                                  children: A ? X.intl.string(X.t.ahPd2Y) : X.intl.string(X.t.axqYMl),
                               }),
                           }),
                 ],
@@ -975,7 +975,7 @@ function e3(e) {
                     (0, l.jsx)(S.E, {
                         color: "text-default",
                         variant: "text-sm/normal",
-                        children: x ? $.intl.string($.t.hdneL4) : $.intl.string($.t.xRCMqx),
+                        children: x ? X.intl.string(X.t.hdneL4) : X.intl.string(X.t.xRCMqx),
                     }),
                     (0, l.jsx)(h.A.Child, {
                         grow: 0,
@@ -983,7 +983,7 @@ function e3(e) {
                         children: (0, l.jsx)(L.$, {
                             variant: "critical-primary",
                             size: "sm",
-                            text: $.intl.string($.t.ebGf4m),
+                            text: X.intl.string(X.t.ebGf4m),
                             disabled: !x,
                             onClick: p,
                         }),
@@ -995,10 +995,10 @@ function e3(e) {
 }
 var e1 = n(573648);
 n(323874), n(14289), n(35956);
-var e8 = n(989349),
-    e7 = n.n(e8),
-    e6 = n(788373),
-    e4 =
+var e7 = n(989349),
+    e8 = n.n(e7),
+    e4 = n(788373),
+    e6 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
         (i[(i.SEVEN_DAYS = 7)] = "SEVEN_DAYS"),
@@ -1013,8 +1013,8 @@ var e8 = n(989349),
     ti = n(349288),
     tl = n(159273),
     ts = n(351906),
-    ta = n(858456),
-    tr = n(818050);
+    ta = n(159512),
+    tr = n(373378);
 function to(e) {
     let t,
         {
@@ -1034,22 +1034,22 @@ function to(e) {
         }, [i, g]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e6.F.KICK) {
+                if (b || i.expire_behavior !== e4.F.KICK) {
                     let e =
-                        i.expire_behavior === e6.F.REMOVE_ROLE
-                            ? $.intl.string($.t["6kpw4i"])
-                            : $.intl.string($.t.fQUQIJ);
+                        i.expire_behavior === e4.F.REMOVE_ROLE
+                            ? X.intl.string(X.t["6kpw4i"])
+                            : X.intl.string(X.t.fQUQIJ);
                     (0, eR.A)({
-                        title: $.intl.string($.t.emx3lN),
-                        subtitle: i.type === e5.s.YOUTUBE ? $.intl.string($.t.anKQWU) : $.intl.string($.t["BW/xtn"]),
+                        title: X.intl.string(X.t.emx3lN),
+                        subtitle: i.type === e5.s.YOUTUBE ? X.intl.string(X.t.anKQWU) : X.intl.string(X.t["BW/xtn"]),
                         confirmText: e,
                         onConfirm: () => m(i),
                         variant: "critical",
                     });
                 } else
                     (0, e9.A)({
-                        title: $.intl.string($.t.emx3lN),
-                        subtitle: i.type === e5.s.YOUTUBE ? $.intl.string($.t.pDCiEf) : $.intl.string($.t.sQqHFk),
+                        title: X.intl.string(X.t.emx3lN),
+                        subtitle: i.type === e5.s.YOUTUBE ? X.intl.string(X.t.pDCiEf) : X.intl.string(X.t.sQqHFk),
                     });
         }, [i, m, b]),
         E = s.useCallback(() => {
@@ -1069,10 +1069,10 @@ function to(e) {
             switch (i.type) {
                 case e5.s.YOUTUBE:
                     return {
-                        serviceName: $.intl.string($.t.aS6cK4),
-                        expireBehaviorLabel: $.intl.string($.t.A5MiqO),
-                        syncLabel: $.intl.string($.t["7vHKVe"]),
-                        subscribersText: $.intl.formatToPlainString($.t["7lNtce"], {
+                        serviceName: X.intl.string(X.t.aS6cK4),
+                        expireBehaviorLabel: X.intl.string(X.t.A5MiqO),
+                        syncLabel: X.intl.string(X.t["7vHKVe"]),
+                        subscribersText: X.intl.formatToPlainString(X.t["7lNtce"], {
                             subscribers: i.subscriber_count ?? 0,
                         }),
                         channelURL: e,
@@ -1080,10 +1080,10 @@ function to(e) {
                 case e5.s.TWITCH:
                 default:
                     return {
-                        serviceName: $.intl.string($.t.q4pBG3),
-                        expireBehaviorLabel: $.intl.string($.t["S/WCrG"]),
-                        syncLabel: $.intl.string($.t["0jbPK4"]),
-                        subscribersText: $.intl.formatToPlainString($.t.RdUTrl, {
+                        serviceName: X.intl.string(X.t.q4pBG3),
+                        expireBehaviorLabel: X.intl.string(X.t["S/WCrG"]),
+                        syncLabel: X.intl.string(X.t["0jbPK4"]),
+                        subscribersText: X.intl.formatToPlainString(X.t.RdUTrl, {
                             subscribers: i.subscriber_count ?? 0,
                         }),
                         channelURL: e,
@@ -1093,14 +1093,14 @@ function to(e) {
         _ = (0, o.bG)([eI.A], () => (null != i.role_id ? eI.A.getRole(n.id, i.role_id) : void 0)),
         { roleLink: G, syncDescriptionText: W } = s.useMemo(() => {
             let e;
-            e = null != _ ? (0, l.jsx)(ti.Anchor, { onClick: C, children: _.name }) : $.intl.string($.t.PoWNfe);
+            e = null != _ ? (0, l.jsx)(ti.Anchor, { onClick: C, children: _.name }) : X.intl.string(X.t.PoWNfe);
             let t = e1.A.get(i.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
                     i.revoked && null != t
-                        ? $.intl.formatToPlainString($.t.G16Wji, { user: i.user, platformName: t.name })
-                        : $.intl.formatToPlainString($.t.unl3AP, { datetime: e7()(i.synced_at).calendar() }),
+                        ? X.intl.formatToPlainString(X.t.G16Wji, { user: i.user, platformName: t.name })
+                        : X.intl.formatToPlainString(X.t.unl3AP, { datetime: e8()(i.synced_at).calendar() }),
             };
         }, [_, C, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eI.A], () => eI.A.getSortedRoles(n.id)),
@@ -1123,8 +1123,8 @@ function to(e) {
             {
                 icon: v.O,
                 text: p
-                    ? $.intl.formatToPlainString($.t.gcdJ8J, { timestamp: ed.default.extractTimestamp(i.id) })
-                    : $.intl.formatToPlainString($.t.Nu9sat, {
+                    ? X.intl.formatToPlainString(X.t.gcdJ8J, { timestamp: ed.default.extractTimestamp(i.id) })
+                    : X.intl.formatToPlainString(X.t.Nu9sat, {
                           user: null != i.user ? new ev.A(i.user).tag : null,
                           timestamp: ed.default.extractTimestamp(i.id),
                       }),
@@ -1134,7 +1134,7 @@ function to(e) {
         let e = new URL(O);
         t = [
             {
-                text: $.intl.format($.t.BegylZ, {
+                text: X.intl.format(X.t.BegylZ, {
                     serviceName: T,
                     accountUrl: O,
                     accountUrlText: e.hostname + e.pathname,
@@ -1162,13 +1162,13 @@ function to(e) {
                                     size: "sm",
                                     disabled: !0,
                                     icon: tt.f,
-                                    "aria-label": $.intl.string($.t["7sCN8m"]),
+                                    "aria-label": X.intl.string(X.t["7sCN8m"]),
                                 })
                               : (0, l.jsx)(L.$, {
                                     variant: "primary",
                                     size: "sm",
                                     onClick: j,
-                                    text: $.intl.string($.t["7sCN8m"]),
+                                    text: X.intl.string(X.t["7sCN8m"]),
                                 }),
                       }),
             ],
@@ -1200,7 +1200,7 @@ function to(e) {
                                         (0, l.jsx)(c.D, {
                                             variant: "heading-md/semibold",
                                             className: tr.QB,
-                                            children: $.intl.string($.t.eBtNBa),
+                                            children: X.intl.string(X.t.eBtNBa),
                                         }),
                                         (0, l.jsx)(S.E, {
                                             className: ta.RZ,
@@ -1241,13 +1241,13 @@ function to(e) {
                                                           size: "sm",
                                                           variant: "primary",
                                                           icon: tt.f,
-                                                          "aria-label": $.intl.string($.t.BkuOO6),
+                                                          "aria-label": X.intl.string(X.t.BkuOO6),
                                                           disabled: !0,
                                                       })
                                                     : (0, l.jsx)(L.$, {
                                                           size: "sm",
                                                           variant: "primary",
-                                                          text: $.intl.string($.t.BkuOO6),
+                                                          text: X.intl.string(X.t.BkuOO6),
                                                           disabled: t.revoked,
                                                           onClick: r,
                                                       }),
@@ -1280,13 +1280,13 @@ function to(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e6.F.REMOVE_ROLE.toString(),
-                                                label: $.intl.string($.t["6kpw4i"]),
+                                                value: e4.F.REMOVE_ROLE.toString(),
+                                                label: X.intl.string(X.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e6.F.KICK.toString(),
-                                                label: $.intl.string($.t.fQUQIJ),
+                                                value: e4.F.KICK.toString(),
+                                                label: X.intl.string(X.t.fQUQIJ),
                                             },
                                         ],
                                         disabled: t.syncing,
@@ -1297,16 +1297,16 @@ function to(e) {
                                     basis: "50%",
                                     children: (0, l.jsx)(eP.l, {
                                         selectionMode: "single",
-                                        label: $.intl.string($.t.uiXMow),
-                                        placeholder: $.intl.string($.t.uiXMow),
+                                        label: X.intl.string(X.t.uiXMow),
+                                        placeholder: X.intl.string(X.t.uiXMow),
                                         maxOptionsVisible: 5,
                                         value: `${t.expire_grace_period}`,
-                                        options: Object.values(e4)
+                                        options: Object.values(e6)
                                             .filter(Number.isInteger)
                                             .map((e) => ({
                                                 id: `${e}`,
                                                 value: `${e}`,
-                                                label: $.intl.formatToPlainString($.t.eGjmy5, { days: e }),
+                                                label: X.intl.formatToPlainString(X.t.eGjmy5, { days: e }),
                                             })),
                                         onSelectionChange: (e) => s(parseInt(e)),
                                         disabled: t.syncing,
@@ -1325,12 +1325,12 @@ function to(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e6.F.KICK &&
+                        a.expire_behavior === e4.F.KICK &&
                         (0, l.jsx)(S.E, {
                             className: ta.Ce,
                             color: "text-feedback-critical",
                             variant: "text-sm/normal",
-                            children: $.intl.string($.t.mThMlB),
+                            children: X.intl.string(X.t.mThMlB),
                         }),
                     i.type === e5.s.TWITCH
                         ? (function (e) {
@@ -1344,7 +1344,7 @@ function to(e) {
                                               checked: !!t.enable_emoticons,
                                               disabled: t.syncing,
                                               onChange: (e) => i(e),
-                                              label: $.intl.string($.t["7r4OKg"]),
+                                              label: X.intl.string(X.t["7r4OKg"]),
                                           }),
                                       }),
                                       (0, l.jsx)(h.A, {
@@ -1358,7 +1358,7 @@ function to(e) {
                                                       children: (0, l.jsx)(
                                                           "img",
                                                           {
-                                                              alt: $.intl.formatToPlainString($.t.n6ZZn4, {
+                                                              alt: X.intl.formatToPlainString(X.t.n6ZZn4, {
                                                                   name: e.name,
                                                               }),
                                                               draggable: !1,
@@ -1391,7 +1391,7 @@ function to(e) {
                         children: (0, l.jsx)(L.$, {
                             size: "sm",
                             variant: "critical-secondary",
-                            text: $.intl.string($.t.M6q6eX),
+                            text: X.intl.string(X.t.M6q6eX),
                             onClick: N,
                         }),
                     }),
@@ -1412,7 +1412,7 @@ function to(e) {
         })
     );
 }
-var tc = n(836803);
+var tc = n(441091);
 function td(e) {
     let {
             integrations: t,
@@ -1483,7 +1483,7 @@ function td(e) {
 }
 var tu = n(462887),
     tm = n(736653),
-    tg = n(936256);
+    tg = n(237312);
 let th = "/assets/a29cabf3e1357986.svg",
     tx = "/assets/c733a28e6fcba3ef.svg";
 function tA(e) {
@@ -1495,13 +1495,13 @@ function tA(e) {
         children: [
             (0, l.jsx)(S.E, {
                 variant: "text-sm/normal",
-                children: $.intl.format($.t["5u+aV1"], {
+                children: X.intl.format(X.t["5u+aV1"], {
                     helpdeskArticle: j.A.getArticleURL(eD.MVz.CHANNEL_FOLLOWING),
                 }),
             }),
             (0, l.jsx)(y.c, { className: tg.zN }),
             i.length > 0
-                ? (0, l.jsx)(eX, {
+                ? (0, l.jsx)(e$, {
                       webhooks: i,
                       editedWebhook: s,
                       selectableWebhookChannels: a,
@@ -1515,13 +1515,13 @@ function tA(e) {
                       align: h.A.Align.CENTER,
                       children: [
                           (0, l.jsx)("img", { alt: "", src: n, className: tg.QT }),
-                          (0, l.jsx)(c.D, { variant: "heading-md/semibold", children: $.intl.string($.t.gzuVH0) }),
+                          (0, l.jsx)(c.D, { variant: "heading-md/semibold", children: X.intl.string(X.t.gzuVH0) }),
                           (0, l.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
                               className: tg.nM,
                               children: (0, l.jsx)(L.$, {
                                   variant: "primary",
-                                  text: $.intl.string($.t["ZwSt+T"]),
+                                  text: X.intl.string(X.t["ZwSt+T"]),
                                   onClick: t,
                               }),
                           }),
@@ -1537,13 +1537,13 @@ var tp = n(22231),
     tN = n(887501),
     tE = n(514810),
     tC = n(43105),
-    tv = n(528265),
+    tv = n(340351),
     tT = n(320448),
     tI = n(95561),
     tS = n(264322),
     ty = n(174459),
     tO = n(320426),
-    tk = n(338652);
+    tk = n(351388);
 function tL(e) {
     let {
             name: t,
@@ -1600,8 +1600,8 @@ function tL(e) {
             v && (null != y.current || null != T.current)
                 ? (0, l.jsx)(tC.A, {
                       targetElementRef: h ? y : T,
-                      title: $.intl.string($.t.ufFDiC),
-                      body: $.intl.string($.t.TyMJwC),
+                      title: X.intl.string(X.t.ufFDiC),
+                      body: X.intl.string(X.t.TyMJwC),
                       onRequestClose: () => {
                           C(!0), tO.A.dismissOverviewTooltip(p, u.integration);
                       },
@@ -1638,24 +1638,24 @@ function tL(e) {
                                 n.push({
                                     id: "bot",
                                     label: new ev.A(i.bot).isVerifiedBot()
-                                        ? $.intl.string($.t.xxcTGy)
-                                        : $.intl.string($.t.AOdOYr),
+                                        ? X.intl.string(X.t.xxcTGy)
+                                        : X.intl.string(X.t.AOdOYr),
                                     icon: O.C,
                                 }),
                             a.length > 0 &&
                                 n.push({
                                     id: "webhooks",
-                                    label: $.intl.formatToPlainString($.t["6HqDfT"], { count: a.length }),
+                                    label: X.intl.formatToPlainString(X.t["6HqDfT"], { count: a.length }),
                                     icon: k.X,
                                 }),
                             s?.scopes?.includes(N.F.APPLICATIONS_COMMANDS) === !0 &&
                                 t &&
-                                n.push({ id: "commands", label: $.intl.string($.t["0hKkS+"]), icon: M.k }),
+                                n.push({ id: "commands", label: X.intl.string(X.t["0hKkS+"]), icon: M.k }),
                             (0, l.jsx)(eg.B, {
                                 direction: "horizontal",
                                 gap: 4,
                                 children: (0, l.jsx)(tv.C, {
-                                    label: $.intl.string($.t.G8u3Jf),
+                                    label: X.intl.string(X.t.G8u3Jf),
                                     layout: "inline",
                                     items: n,
                                 }),
@@ -1683,7 +1683,7 @@ function tw(e) {
         c = s.useCallback(
             () =>
                 (0, C.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("10527"), n.e("73380")]).then(n.bind(n, 106895));
+                    let { default: e } = await Promise.all([n.e("35743"), n.e("73380")]).then(n.bind(n, 106895));
                     return (n) => (0, l.jsx)(e, { ...n, channel: t, application: i });
                 }),
             [i, t],
@@ -1691,7 +1691,7 @@ function tw(e) {
         d = a ? (i.getIconURL(48) ?? ec.vI["0"]) : void 0;
     return (0, l.jsx)(tL, { imageSrc: d, onButtonClick: c, details: null != o ? [{ text: o }] : void 0, ...r });
 }
-var tR = n(108305);
+var tR = n(214225);
 function tM(e) {
     let { applicationId: t, channels: n } = e,
         i = (0, tf.h)(t);
@@ -1738,7 +1738,7 @@ function t_(e) {
             children: [
                 (0, l.jsx)(S.E, {
                     variant: "text-sm/normal",
-                    children: $.intl.format($.t["9gsSLu"], {
+                    children: X.intl.format(X.t["9gsSLu"], {
                         helpdeskArticle: j.A.getArticleURL(eD.MVz.LINKED_LOBBIES),
                     }),
                 }),
@@ -1760,13 +1760,13 @@ var tP = n(91871),
     tK = n(30370),
     tF = n(381616),
     tY = n(488995),
-    tq = n(32589),
-    tZ = n(854766),
-    tJ = n(237070);
-function tQ(e, t) {
+    tq = n(326669),
+    tQ = n(854766),
+    tZ = n(237070);
+function tJ(e, t) {
     return t.includes(e);
 }
-function t$(e) {
+function tX(e) {
     let { query: t, setQuery: n } = e,
         i = s.useCallback(
             (e) => {
@@ -1782,12 +1782,12 @@ function t$(e) {
             onClear: function () {
                 return n("");
             },
-            placeholder: $.intl.string($.t["5prvKe"]),
-            "aria-label": $.intl.string($.t["5prvKe"]),
+            placeholder: X.intl.string(X.t["5prvKe"]),
+            "aria-label": X.intl.string(X.t["5prvKe"]),
         }),
     });
 }
-function tX(e) {
+function t$(e) {
     var t, n, i, a;
     let r,
         d,
@@ -1821,7 +1821,7 @@ function tX(e) {
             () => ({ isFetchingConnections: tK.A.isFetching(), accounts: tK.A.getAccounts() }),
             [],
         ),
-        { canManageWebhooks: q, canManageGuild: Z } = (0, o.cf)(
+        { canManageWebhooks: q, canManageGuild: Q } = (0, o.cf)(
             [f.A],
             () => ({
                 canManageWebhooks:
@@ -1831,9 +1831,9 @@ function tX(e) {
             }),
             [T, O],
         ),
-        J = (0, tV.e)(O),
-        Q = (0, tf.h)(O?.linkedLobby?.application_id),
-        X = (0, tN.A)(T?.id),
+        Z = (0, tV.e)(O),
+        J = (0, tf.h)(O?.linkedLobby?.application_id),
+        $ = (0, tN.A)(T?.id),
         {
             availableTwitchIntegrations: ee,
             availableYoutubeIntegrations: et,
@@ -1849,15 +1849,15 @@ function tX(e) {
             [w.twitch, w.youtube],
         ),
         { showTwitchCard: el, showYoutubeCard: es } = s.useMemo(() => {
-            if (F || !Z) return { showTwitchCard: !1, showYoutubeCard: !1 };
+            if (F || !Q) return { showTwitchCard: !1, showYoutubeCard: !1 };
             let e = T?.features.has(eD.GuildFeatures.COMMUNITY),
                 t = Y.filter((e) => e.type === eD.fg2.TWITCH).length > 0,
                 n = Y.filter((e) => e.type === eD.fg2.YOUTUBE).length > 0;
             return { showTwitchCard: ee > 0 || (!t && e), showYoutubeCard: et > 0 || (!n && e) };
-        }, [F, Z, T, Y, ee, et]),
+        }, [F, Q, T, Y, ee, et]),
         ea = Object.values(L).length,
         er = s.useMemo(() => {
-            let e = ea > 100 ? tQ : tG();
+            let e = ea > 100 ? tJ : tG();
             return Object.values(L).filter((t) => {
                 var n;
                 let { application: i } = t;
@@ -1896,14 +1896,14 @@ function tX(e) {
                     null != r.user
                         ? o.push({
                               icon: v.O,
-                              text: $.intl.formatToPlainString($.t.Nu9sat, {
+                              text: X.intl.formatToPlainString(X.t.Nu9sat, {
                                   timestamp: ed.default.extractTimestamp(r.id),
                                   user: eu.Ay.getUserTag(r.user),
                               }),
                           })
                         : o.push({
                               icon: v.O,
-                              text: $.intl.formatToPlainString($.t.gcdJ8J, {
+                              text: X.intl.formatToPlainString(X.t.gcdJ8J, {
                                   timestamp: ed.default.extractTimestamp(r.id),
                               }),
                           }),
@@ -1913,7 +1913,7 @@ function tX(e) {
                             name: a.name,
                             imageSrc: ec.Ay.getApplicationIconURL({ id: a.id, icon: a.icon, size: 48 }),
                             integration: t,
-                            buttonText: $.intl.string($.t["Z/qRnM"]),
+                            buttonText: X.intl.string(X.t["Z/qRnM"]),
                             hasNextSection: !0,
                             onButtonClick: () => {
                                 n(a.id),
@@ -1934,10 +1934,10 @@ function tX(e) {
             })(T, e, B, eh, t);
         }),
         eb = (0, l.jsx)("div", { className: tq.Hw });
-    if (0 === ef.length && Z) {
+    if (0 === ef.length && Q) {
         let e, n, i;
         (t = T?.id),
-            (e = (0, tu.M)(z) ? tZ : tJ),
+            (e = (0, tu.M)(z) ? tQ : tZ),
             (n = (0, l.jsxs)(h.A, {
                 direction: h.A.Direction.VERTICAL,
                 align: h.A.Align.CENTER,
@@ -1950,7 +1950,7 @@ function tX(e) {
                         children: (0, l.jsx)(S.E, {
                             color: "text-muted",
                             variant: "text-sm/normal",
-                            children: $.intl.string($.t.EVWFNr),
+                            children: X.intl.string(X.t.EVWFNr),
                         }),
                     }),
                 ],
@@ -1965,12 +1965,12 @@ function tX(e) {
                         (0, l.jsx)(c.D, {
                             color: "text-default",
                             variant: "heading-xl/bold",
-                            children: $.intl.string($.t.nQQeFM),
+                            children: X.intl.string(X.t.nQQeFM),
                         }),
                         (0, l.jsx)(S.E, {
                             color: "text-default",
                             variant: "text-sm/normal",
-                            children: $.intl.format($.t.snvKU3, {
+                            children: X.intl.format(X.t.snvKU3, {
                                 handleGoToAppDirectory: function () {
                                     (0, tH.transitionToGlobalDiscovery)({
                                         tab: tY.GlobalDiscoveryTab.APPS,
@@ -1990,24 +1990,24 @@ function tX(e) {
             (eb = null);
     }
     let ej = j.A.getArticleURL(eD.MVz.INTEGRATIONS),
-        eN = null != O ? $.t.YV0vh6 : $.t.FnZEJs,
+        eN = null != O ? X.t.YV0vh6 : X.t.FnZEJs,
         eE = [];
     if (q) {
         let e, t, s, a, r;
         eE.push(
             ((n = R.length),
-            n > 0 ? (t = (0, l.jsx)(tW.u, { size: "xs" })) : (e = $.intl.string($.t.lOQqJK)),
+            n > 0 ? (t = (0, l.jsx)(tW.u, { size: "xs" })) : (e = X.intl.string(X.t.lOQqJK)),
             (0, l.jsx)(
                 tL,
                 {
-                    name: $.intl.string($.t.xOg4SP),
+                    name: X.intl.string(X.t.xOg4SP),
                     icon: k.X,
                     buttonText: e,
                     buttonDisabled: !G,
                     trailing: t,
                     onButtonClick: D,
                     hasNextSection: n > 0,
-                    details: [{ text: $.intl.formatToPlainString($.t["6HqDfT"], { count: n }) }],
+                    details: [{ text: X.intl.formatToPlainString(X.t["6HqDfT"], { count: n }) }],
                 },
                 "webhooks",
             )),
@@ -2018,36 +2018,36 @@ function tX(e) {
                     ((i = M.length),
                     i > 0
                         ? ((r = (0, l.jsx)(tW.u, { size: "xs" })), (a = U))
-                        : ((s = $.intl.string($.t["ZwSt+T"])),
+                        : ((s = X.intl.string(X.t["ZwSt+T"])),
                           (a = () => open(j.A.getArticleURL(eD.MVz.CHANNEL_FOLLOWING)))),
                     (0, l.jsx)(
                         tL,
                         {
-                            name: $.intl.string($.t.OrV60r),
+                            name: X.intl.string(X.t.OrV60r),
                             icon: tD._,
                             buttonText: s,
                             onButtonClick: a,
                             trailing: r,
                             hasNextSection: i > 0,
-                            details: [{ text: $.intl.formatToPlainString($.t.JUNGIZ, { count: i }) }],
+                            details: [{ text: X.intl.formatToPlainString(X.t.JUNGIZ, { count: i }) }],
                         },
                         "channels-followed",
                     )),
                 );
     }
     null == O &&
-        X.length > 0 &&
+        $.length > 0 &&
         eE.push(
-            ((a = X.length),
+            ((a = $.length),
             (0, l.jsx)(
                 tL,
                 {
-                    name: $.intl.string($.t.tqtDXC),
+                    name: X.intl.string(X.t.tqtDXC),
                     icon: tt.f,
                     trailing: (0, l.jsx)(tW.u, { size: "xs" }),
                     onButtonClick: H,
                     hasNextSection: !0,
-                    details: [{ text: $.intl.formatToPlainString($.t["puxS4+"], { count: a }) }],
+                    details: [{ text: X.intl.formatToPlainString(X.t["puxS4+"], { count: a }) }],
                 },
                 "channels-syncing",
             )),
@@ -2057,15 +2057,15 @@ function tX(e) {
                 ((x = e1.A.get(eD.fg2.TWITCH)),
                 ee > 0
                     ? ((m = (0, l.jsx)(tW.u, { size: "xs" })),
-                      (d = $.intl.formatToPlainString($.t.FFpnT8, { count: en })),
+                      (d = X.intl.formatToPlainString(X.t.FFpnT8, { count: en })),
                       (u = () => W(eD.fg2.TWITCH)))
-                    : ((r = $.intl.string($.t.bkvGkn)),
-                      (d = $.intl.string($.t.Qq3X2M)),
+                    : ((r = X.intl.string(X.t.bkvGkn)),
+                      (d = X.intl.string(X.t.Qq3X2M)),
                       (u = () => (0, g.A)({ platformType: eD.fg2.TWITCH, location: "Integration Settings" }))),
                 (0, l.jsx)(
                     tL,
                     {
-                        name: $.intl.string($.t.q4pBG3),
+                        name: X.intl.string(X.t.q4pBG3),
                         icon: x.icon.whiteSVG,
                         iconBackgroundColor: x.color,
                         iconClassName: tq.tV,
@@ -2083,15 +2083,15 @@ function tX(e) {
                 ((E = e1.A.get(eD.fg2.YOUTUBE)),
                 et > 0
                     ? ((N = (0, l.jsx)(tW.u, { size: "xs" })),
-                      (p = $.intl.formatToPlainString($.t.b2g5vC, { count: ei })),
+                      (p = X.intl.formatToPlainString(X.t.b2g5vC, { count: ei })),
                       (b = () => W(eD.fg2.YOUTUBE)))
-                    : ((A = $.intl.string($.t.xEyQ3X)),
-                      (p = $.intl.string($.t.T0ivgQ)),
+                    : ((A = X.intl.string(X.t.xEyQ3X)),
+                      (p = X.intl.string(X.t.T0ivgQ)),
                       (b = () => (0, g.A)({ platformType: eD.fg2.YOUTUBE, location: "Integration Settings" }))),
                 (0, l.jsx)(
                     tL,
                     {
-                        name: $.intl.string($.t.aS6cK4),
+                        name: X.intl.string(X.t.aS6cK4),
                         icon: E.icon.whiteSVG,
                         iconBackgroundColor: E.color,
                         iconClassName: tq.tV,
@@ -2104,11 +2104,11 @@ function tX(e) {
                     "integrations-youtube",
                 )),
             );
-    let eC = null != O && J && null != Q;
+    let eC = null != O && Z && null != J;
     return (0, l.jsxs)("div", {
         className: P()(null != eb ? tq.bg : null),
         children: [
-            (0, l.jsx)(S.E, { variant: "text-sm/normal", children: $.intl.format(eN, { helpdeskArticle: ej }) }),
+            (0, l.jsx)(S.E, { variant: "text-sm/normal", children: X.intl.format(eN, { helpdeskArticle: ej }) }),
             (0, l.jsx)(y.c, { className: tq.yF }),
             _ || F || null == T
                 ? (0, l.jsx)(tU.y, { className: tq.__invalid_spinner, type: tU.y.Type.SPINNING_CIRCLE })
@@ -2122,29 +2122,29 @@ function tX(e) {
                                       (0, l.jsx)(c.D, {
                                           variant: "heading-md/semibold",
                                           className: tq.bV,
-                                          children: $.intl.string($.t.oAvIAg),
+                                          children: X.intl.string(X.t.oAvIAg),
                                       }),
                                       (0, l.jsx)(tw, {
                                           channel: O,
-                                          application: Q,
+                                          application: J,
                                           showApplicationImage: !0,
-                                          name: Q.name,
+                                          name: J.name,
                                           hasNextSection: !0,
                                           iconClassName: tq.d0,
                                           trailing: (0, l.jsx)(tp.R, { size: "xs" }),
                                       }),
                                   ],
                               }),
-                          Z
+                          Q
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         eE.length > 0 || eC ? (0, l.jsx)(y.c, { className: tq.yF }) : null,
                                         (0, l.jsx)(c.D, {
                                             variant: "heading-md/semibold",
                                             className: tq.bV,
-                                            children: $.intl.string($.t.pUBKht),
+                                            children: X.intl.string(X.t.pUBKht),
                                         }),
-                                        ea > 4 ? (0, l.jsx)(t$, { query: V, setQuery: K }) : null,
+                                        ea > 4 ? (0, l.jsx)(tX, { query: V, setQuery: K }) : null,
                                         ef,
                                     ],
                                 })
@@ -2156,8 +2156,8 @@ function tX(e) {
     });
 }
 var t0 = n(964486),
-    t2 = n(174900);
-function t3(e) {
+    t3 = n(468980);
+function t2(e) {
     let t,
         n,
         {
@@ -2191,27 +2191,27 @@ function t3(e) {
         children: [
             (0, l.jsx)(S.E, {
                 variant: "text-sm/normal",
-                children: $.intl.format($.t.WL0d0e, {
+                children: X.intl.format(X.t.WL0d0e, {
                     helpdeskArticle: j.A.getArticleURL(eD.MVz.WEBHOOKS),
                     developersArticle: eD.X7G.API_DOCS_WEBHOOKS,
                 }),
             }),
-            (0, l.jsx)(y.c, { className: t2.zN }),
+            (0, l.jsx)(y.c, { className: t3.zN }),
             r.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: t2.Tf,
+                              className: t3.Tf,
                               children: (0, l.jsx)(L.$, {
                                   variant: "primary",
                                   size: "sm",
-                                  text: $.intl.string($.t["nrO/HH"]),
+                                  text: X.intl.string(X.t["nrO/HH"]),
                                   disabled: !b,
                                   onClick: f,
                               }),
                           }),
-                          (0, l.jsx)(eX, {
+                          (0, l.jsx)(e$, {
                               webhooks: r,
                               editedWebhook: o,
                               selectableWebhookChannels: d,
@@ -2226,14 +2226,14 @@ function t3(e) {
                       direction: h.A.Direction.VERTICAL,
                       align: h.A.Align.CENTER,
                       children: [
-                          (0, l.jsx)("img", { alt: "", src: t, className: t2.QT }),
-                          (0, l.jsx)(c.D, { variant: "heading-md/semibold", children: $.intl.string($.t.LzmsWl) }),
+                          (0, l.jsx)("img", { alt: "", src: t, className: t3.QT }),
+                          (0, l.jsx)(c.D, { variant: "heading-md/semibold", children: X.intl.string(X.t.LzmsWl) }),
                           (0, l.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: t2.nM,
+                              className: t3.nM,
                               children: (0, l.jsx)(L.$, {
                                   variant: "primary",
-                                  text: $.intl.string($.t.lOQqJK),
+                                  text: X.intl.string(X.t.lOQqJK),
                                   disabled: !b,
                                   onClick: f,
                               }),
@@ -2243,28 +2243,28 @@ function t3(e) {
         ],
     });
 }
-var t1 = n(458203);
-function t8(e, t) {
+var t1 = n(235931);
+function t7(e, t) {
     switch (e) {
         case eD.wLn.APPLICATION:
             return t?.application.name ?? "";
         case eD.wLn.OVERVIEW:
-            return $.intl.string($.t.s69NLF);
+            return X.intl.string(X.t.s69NLF);
         case eD.wLn.CHANNEL_FOLLOWING:
-            return $.intl.string($.t.OrV60r);
+            return X.intl.string(X.t.OrV60r);
         case eD.wLn.TWITCH:
-            return $.intl.string($.t.q4pBG3);
+            return X.intl.string(X.t.q4pBG3);
         case eD.wLn.WEBHOOKS:
-            return $.intl.string($.t.xOg4SP);
+            return X.intl.string(X.t.xOg4SP);
         case eD.wLn.YOUTUBE:
-            return $.intl.string($.t.aS6cK4);
+            return X.intl.string(X.t.aS6cK4);
         case eD.wLn.LOBBIES_LINKED:
-            return $.intl.string($.t.tqtDXC);
+            return X.intl.string(X.t.tqtDXC);
         default:
             return "";
     }
 }
-let t7 = s.memo(function (e) {
+let t8 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,
@@ -2371,10 +2371,10 @@ let t7 = s.memo(function (e) {
                     guild: i,
                     integrations: B[eD.fg2.TWITCH],
                     editedIntegration: E,
-                    labelText: $.intl.string($.t.q4pBG3),
+                    labelText: X.intl.string(X.t.q4pBG3),
                     platformType: eD.fg2.TWITCH,
-                    descriptionText: $.intl.string($.t.V9kNqt),
-                    helpText: $.intl.format($.t.ro1jEN, {
+                    descriptionText: X.intl.string(X.t.V9kNqt),
+                    helpText: X.intl.format(X.t.ro1jEN, {
                         connectAction: () =>
                             (0, g.A)({ platformType: eD.fg2.TWITCH, location: "Integration Settings" }),
                         helpdeskArticle: j.A.getArticleURL(eD.MVz.TWITCH_INTEGRATION),
@@ -2389,10 +2389,10 @@ let t7 = s.memo(function (e) {
                     guild: i,
                     integrations: B[eD.fg2.YOUTUBE],
                     editedIntegration: E,
-                    labelText: $.intl.string($.t.aS6cK4),
+                    labelText: X.intl.string(X.t.aS6cK4),
                     platformType: eD.fg2.YOUTUBE,
-                    descriptionText: $.intl.string($.t["7Tv7JK"]),
-                    helpText: $.intl.format($.t["4OSAQ9"], {
+                    descriptionText: X.intl.string(X.t["7Tv7JK"]),
+                    helpText: X.intl.format(X.t["4OSAQ9"], {
                         connectAction: () => (0, g.A)({ platformType: eD.fg2.YOUTUBE }),
                         helpdeskArticle: j.A.getArticleURL(eD.MVz.YOUTUBE_INTEGRATION),
                     }),
@@ -2403,7 +2403,7 @@ let t7 = s.memo(function (e) {
         case eD.wLn.APPLICATION:
             let K = null != M ? (D[U[M]] ?? D[M]) : null;
             null != K &&
-                (V = (0, l.jsx)(e3, {
+                (V = (0, l.jsx)(e2, {
                     guild: i,
                     applicationIntegration: K,
                     editedWebhook: v,
@@ -2422,7 +2422,7 @@ let t7 = s.memo(function (e) {
             });
             break;
         case eD.wLn.WEBHOOKS:
-            V = (0, l.jsx)(t3, {
+            V = (0, l.jsx)(t2, {
                 guild: i,
                 channel: a,
                 customWebhooks: H,
@@ -2437,7 +2437,7 @@ let t7 = s.memo(function (e) {
             V = (0, l.jsx)(t_, { guild: i });
             break;
         default:
-            V = (0, l.jsx)(tX, {
+            V = (0, l.jsx)(t$, {
                 guild: i,
                 channel: a,
                 applicationIntegrations: D,
@@ -2476,10 +2476,10 @@ let t7 = s.memo(function (e) {
                 className: t1.jD,
                 children:
                     t === eD.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t8(eD.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eD.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t8(e, D[M]) })),
+                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, D[M]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && W(parseInt(e.id));
                               },

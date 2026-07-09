@@ -1,73 +1,73 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => L });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    s = n.n(r),
-    a = n(17928),
-    o = n(289873),
-    l = n(536246),
-    u = n(395678),
+    a = n.n(r),
+    s = n(17928),
+    l = n(289873),
+    o = n(536246),
+    d = n(395678),
     c = n(793574),
-    d = n(688810),
+    u = n(688810),
     _ = n(429913),
-    h = n(869146),
-    f = n(272812),
-    p = n(461782),
-    E = n(334463),
-    m = n(113854),
-    g = n(91242),
-    A = n(113192),
-    I = n(165610),
-    T = n(652215),
+    E = n(869146),
+    A = n(272812),
+    h = n(461782),
+    I = n(334463),
+    f = n(113854),
+    p = n(91242),
+    T = n(113192),
+    m = n(165610),
+    g = n(652215),
     S = n(360469),
-    y = n(970682),
-    C = n(27600),
-    N = n(604949);
-function v(e) {
+    N = n(157690),
+    C = n(429904),
+    R = n(794005);
+function O(e) {
     let { isLoading: t } = e,
-        n = (0, a.bG)([g.A], () => g.A.getConnectedFrame()),
-        r = (0, a.bG)([g.A], () => g.A.getFrameLayoutMode()),
+        n = (0, s.bG)([p.A], () => p.A.getConnectedFrame()),
+        r = (0, s.bG)([p.A], () => p.A.getFrameLayoutMode()),
         c = (0, _.h)(n?.applicationId),
-        d = (0, a.bG)([g.A], () => null != c && g.A.isProxyTicketRefreshing(c.id), [c]),
-        v = (0, a.bG)([h.A], () => h.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT)),
-        R = (0, a.bG)([E.A], () => E.A.isFrameHidden()),
-        O = r === I.y.PIP && !R && !v,
-        b = O && null != E.A.pipVideoWindow && null != E.A.pipFrameWindow;
-    if (null == n || null == c || v) return null;
-    let D = { instance_id: "example-cl-instance", platform: S.vu.DESKTOP };
+        u = (0, s.bG)([p.A], () => null != c && p.A.isProxyTicketRefreshing(c.id), [c]),
+        O = (0, s.bG)([E.A], () => E.A.getWindowOpen(g.MLl.ACTIVITY_POPOUT)),
+        L = (0, s.bG)([I.A], () => I.A.isFrameHidden()),
+        D = r === m.y.PIP && !L && !O,
+        y = D && null != I.A.pipVideoWindow && null != I.A.pipFrameWindow;
+    if (null == n || null == c || O) return null;
+    let v = { instance_id: "example-cl-instance", platform: S.vu.DESKTOP };
     return (
-        null != n.proxyTicket && (D.discord_proxy_ticket = n.proxyTicket),
-        (0, i.jsx)(p.Ay, {
+        null != n.proxyTicket && (v.discord_proxy_ticket = n.proxyTicket),
+        (0, i.jsx)(h.Ay, {
             timeout: 2e3,
             children: (e) => {
-                let { idle: r, onActive: a, onForceIdle: _ } = e;
-                return (0, i.jsxs)(f.A, {
-                    className: s()(y.zr, { [y.NW]: O, [N.a8]: O, [C.N7]: r, [y.p0]: O, [y.R]: R, [y.Gq]: b }),
-                    noBorder: !O,
+                let { idle: r, onActive: s, onForceIdle: _ } = e;
+                return (0, i.jsxs)(A.A, {
+                    className: a()(N.zr, { [N.NW]: D, [R.a8]: D, [C.N7]: r, [N.p0]: D, [N.R]: L, [N.Gq]: y }),
+                    noBorder: !D,
                     children: [
                         (0, i.jsx)("div", {
                             className: "theme-dark",
                             children: (function (e) {
-                                let { onActive: t, onForceIdle: r, idle: s } = e;
-                                return O && null != n
+                                let { onActive: t, onForceIdle: r, idle: a } = e;
+                                return D && null != n
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)("div", {
                                                   onMouseMove: t,
                                                   onMouseDown: t,
                                                   onMouseLeave: r,
-                                                  className: y.OB,
+                                                  className: N.OB,
                                               }),
-                                              (0, i.jsx)(A.v, {
-                                                  idle: s,
+                                              (0, i.jsx)(T.v, {
+                                                  idle: a,
                                                   onMouseMove: t,
                                                   onMouseDown: t,
                                                   onMouseLeave: r,
                                                   onFocus: () => {
-                                                      m.A.updateFrameLayoutMode({
+                                                      f.A.updateFrameLayoutMode({
                                                           applicationId: n.applicationId,
-                                                          layoutMode: I.y.FOCUSED,
+                                                          layoutMode: m.y.FOCUSED,
                                                       });
                                                   },
                                                   applicationId: n.applicationId,
@@ -75,17 +75,17 @@ function v(e) {
                                           ],
                                       })
                                     : null;
-                            })({ onActive: a, onForceIdle: _, idle: r }),
+                            })({ onActive: s, onForceIdle: _, idle: r }),
                         }),
-                        t || d
-                            ? (0, i.jsx)(o.y, { className: s()(y.pU, { [y.p0]: O }) })
-                            : (0, i.jsx)(u.o, {
-                                  allowPopups: (0, l.b)(c),
+                        t || u
+                            ? (0, i.jsx)(l.y, { className: a()(N.pU, { [N.p0]: D }) })
+                            : (0, i.jsx)(d.o, {
+                                  allowPopups: (0, o.b)(c),
                                   referrerPolicy: "origin",
                                   url: n.url,
-                                  queryParams: D,
-                                  className: s()(y.pU, { [y.p0]: O, [y.v8]: O }),
-                                  shouldRefocus: !O,
+                                  queryParams: v,
+                                  className: a()(N.pU, { [N.p0]: D, [N.v8]: D }),
+                                  shouldRefocus: !D,
                               }),
                     ],
                 });
@@ -93,8 +93,8 @@ function v(e) {
         })
     );
 }
-let R = () => {
-    let { analyticsLocations: e } = (0, d.Ay)(c.A.FRAME_PIP),
-        t = (0, a.bG)([g.A], () => g.A.isFrameActive());
-    return (0, i.jsx)(d.f5, { value: e, children: (0, i.jsx)(v, { isLoading: !t }) });
+let L = () => {
+    let { analyticsLocations: e } = (0, u.Ay)(c.A.FRAME_PIP),
+        t = (0, s.bG)([p.A], () => p.A.isFrameActive());
+    return (0, i.jsx)(u.f5, { value: e, children: (0, i.jsx)(O, { isLoading: !t }) });
 };

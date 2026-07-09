@@ -259,7 +259,7 @@ function ee() {
     return parseInt("" !== e ? e : "375");
 }
 var et = n(375708),
-    en = n(173399);
+    en = n(438551);
 let es = function (e) {
     let { isFullyExpanded: t, partnerBranding: n } = e,
         l = {
@@ -332,7 +332,7 @@ let es = function (e) {
         ],
     });
 };
-var er = n(173839);
+var er = n(362255);
 let el = (0, a.animated)(I.Ay),
     ei = function () {
         let e = (0, B.go)(),
@@ -435,7 +435,7 @@ var ea = n(821609),
     em = n(79545),
     eC = n(862611),
     ep = n(795965),
-    ef = n(519508);
+    ef = n(640916);
 function eE(e) {
     let { quest: t, sourceQuestContent: n, taskDetails: r } = e;
     return (0, s.jsx)(ea.$, {
@@ -588,7 +588,7 @@ function eS(e) {
 }
 var ev = n(106778),
     eT = n(536283),
-    ey = n(947638);
+    ey = n(640758);
 let eN = (e) => {
     let { overlayRef: t, progressBarRef: n, isHovered: l } = e,
         { quest: o, isExpanded: d } = r.useContext(H),
@@ -691,7 +691,7 @@ let eN = (e) => {
           });
 };
 var eQ = n(453384),
-    eU = n(460131);
+    eU = n(472867);
 let eB = function (e) {
     let { isExpanded: t, contentLocation: n, progressBarRef: l, percentComplete: i, popoutTargetElementRef: a } = e,
         { quest: o, onGameSheetOpen: u, onGameSheetClose: c, taskDetails: d } = r.useContext(H),
@@ -764,7 +764,7 @@ let eB = function (e) {
         ],
     });
 };
-var eF = n(78385);
+var eF = n(265393);
 function eb() {
     let { quest: e, onCtxMenuOpen: t, onCtxMenuClose: n, onCtxMenuSelect: l } = r.useContext(H),
         a = (0, E.S5)(e.config.expiresAt);
@@ -796,7 +796,7 @@ function eb() {
         ],
     });
 }
-var eI = n(249309);
+var eI = n(369949);
 let eO = r.forwardRef(function (e, t) {
     let { className: n, overlayRef: l } = e,
         { expansionSpring: o } = r.useContext(w),
@@ -876,14 +876,14 @@ var eV = n(889137),
     e0 = n(114046),
     e1 = n(695366),
     e2 = n(274670),
-    e7 = n(144779),
-    e3 = n(30370),
-    e6 = n(104886),
+    e3 = n(144779),
+    e6 = n(30370),
+    e7 = n(104886),
     e9 = n(18437),
-    e5 = n(780964),
-    e8 = n(766075),
-    e4 = n(52093),
-    te = n(540037);
+    e4 = n(780964),
+    e5 = n(766075),
+    e8 = n(52093),
+    te = n(481797);
 function tt(e) {
     let { text: t, quest: n, sourceQuestContent: r } = e,
         l = (0, e9.Ut)(),
@@ -891,9 +891,9 @@ function tt(e) {
     return (0, s.jsx)(v.D, {
         className: te.Z0,
         onClick: () => {
-            (0, e6.E5)(e6.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
+            (0, e7.E5)(e7.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
                 ? (0, e2.r)({
-                      type: e7.F.CLICK_INTERNAL,
+                      type: e3.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
                       adCreativeId: n.id,
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
@@ -907,7 +907,7 @@ function tt(e) {
                       questContentCTA: U.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
                       sourceQuestContent: r,
                   }),
-                (0, e8.openUserSettings)(e5.X.CONNECTIONS_PANEL);
+                (0, e5.openUserSettings)(e4.X.CONNECTIONS_PANEL);
         },
         children: (0, s.jsx)(T.E, { "aria-label": t, color: "none", variant: "text-xxs/normal", children: t }),
     });
@@ -920,10 +920,10 @@ function tn(e) {
 }
 function ts(e) {
     return (0, s.jsxs)(s.Fragment, {
-        children: [(0, s.jsx)(e4.L5, { children: et.intl.string(et.t.EJFSvD) }), (0, s.jsx)(tn, { ...e })],
+        children: [(0, s.jsx)(e8.L5, { children: et.intl.string(et.t.EJFSvD) }), (0, s.jsx)(tn, { ...e })],
     });
 }
-var tr = n(256023);
+var tr = n(949143);
 function tl(e) {
     return (0, s.jsx)(T.E, { className: tr.eW, color: "text-muted", variant: "text-xxs/normal", children: e.children });
 }
@@ -940,9 +940,9 @@ function ti(e) {
         } = (0, E.Wj)({
             questId: t.id,
             beforeRequest: () => {
-                (0, e6.E5)(e6.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
+                (0, e7.E5)(e7.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
                     ? (0, e2.r)({
-                          type: e7.F.CLICK_INTERNAL,
+                          type: e3.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,
                           adCreativeId: t.id,
                           questContentCTA: U.Cy.DEFIBRILLATOR,
@@ -976,7 +976,7 @@ function ti(e) {
                           return (0, s.jsx)(s.Fragment, {
                               children: d.map((e, n) => {
                                   if (e.type === e0._.EXPIRED_CREDENTIAL) {
-                                      let r = e3.A.getAccount(e.connected_account_id, e.connected_account_type),
+                                      let r = e6.A.getAccount(e.connected_account_id, e.connected_account_type),
                                           l = (0, F.IG)(e),
                                           i = (0, F.$J)(e);
                                       return (0, s.jsx)(
@@ -1066,7 +1066,7 @@ let ta = function (e) {
                         },
                         {
                             renderContent: () =>
-                                (0, s.jsx)(e4.L5, {
+                                (0, s.jsx)(e8.L5, {
                                     children: (0, ec.ui)(t)
                                         ? et.intl.string(et.t["5tXqFe"])
                                         : et.intl.formatToPlainString(et.t["+8JB6Y"], { gameTitle: l }),
@@ -1075,7 +1075,7 @@ let ta = function (e) {
                         },
                         {
                             renderContent: () =>
-                                (0, s.jsx)(e4.L5, {
+                                (0, s.jsx)(e8.L5, {
                                     children: et.intl.formatToPlainString(et.t.HhfrYS, { numMinutes: n.targetMinutes }),
                                 }),
                             isComplete: o,
@@ -1086,7 +1086,7 @@ let ta = function (e) {
                     isQuestComplete: o,
                 };
             }, [i, a.length, t, n.targetMinutes]);
-        return (0, s.jsx)(e4.Ay, {
+        return (0, s.jsx)(e8.Ay, {
             heading: et.intl.string(et.t.UPWlJu),
             steps: o,
             children: c && !d && !x && (0, s.jsx)(ti, { useReducedMotion: l, quest: t }),
@@ -1118,7 +1118,7 @@ function tc(e) {
     );
 }
 n(134528), n(947204);
-var td = n(909714);
+var td = n(922450);
 function tx(e) {
     let { header: t, children: n } = e;
     return (0, s.jsxs)("div", {
@@ -1154,7 +1154,7 @@ let tm = function (e) {
 };
 var tC = n(31300),
     tp = n(687966),
-    tf = n(825807);
+    tf = n(600719);
 let tE = function (e) {
     let { onDesktop: t, onConsole: n } = e;
     return (0, s.jsxs)(ew.e, {
@@ -1180,7 +1180,7 @@ let tE = function (e) {
         ],
     });
 };
-var th = n(495707);
+var th = n(508443);
 let tg = r.forwardRef(function (e, t) {
     let { isHovered: n, asset: l, poster: i, className: a, autoPlay: o = !1 } = e,
         { isExpanded: c } = r.useContext(H),
@@ -1612,7 +1612,7 @@ var tI = n(192308),
     tL = n(731738),
     tk = n(807393),
     tq = n(260364),
-    tw = n(737595);
+    tw = n(325243);
 function tM(e) {
     let { isExpanded: t, questId: n } = e;
     return (

@@ -1,50 +1,50 @@
 "use strict";
-n.d(t, { A: () => w });
+n.d(t, { A: () => M });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(17928),
-    l = n(876230),
-    u = n(990078),
+    a = n(503698),
+    s = n.n(a),
+    l = n(17928),
+    o = n(876230),
+    d = n(990078),
     c = n(176781),
-    d = n(834730),
+    u = n(834730),
     _ = n(939249),
-    h = n(429913),
-    f = n(769015),
-    E = n(409626),
-    p = n(692969),
-    m = n(569926),
-    g = n(287809),
-    A = n(58703),
-    I = n(403362),
-    T = n(922016),
-    S = n(433781);
+    E = n(429913),
+    A = n(769015),
+    h = n(409626),
+    I = n(692969),
+    f = n(569926),
+    p = n(287809),
+    T = n(58703),
+    m = n(403362),
+    g = n(922016),
+    S = n(732085);
 let N = r.lazy(() =>
-    Promise.all([n.e("17179"), n.e("46054")])
+    Promise.all([n.e("30171"), n.e("46054")])
         .then(n.bind(n, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
 function C(e) {
-    let { participants: t, maxVisibleParticipants: n, guildId: s } = e,
-        a = r.useRef(null),
-        o = (0, r.useCallback)(
-            () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(N, { users: t, guildId: s }) }),
-            [t, s],
+    let { participants: t, maxVisibleParticipants: n, guildId: a } = e,
+        s = r.useRef(null),
+        l = (0, r.useCallback)(
+            () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(N, { users: t, guildId: a }) }),
+            [t, a],
         );
-    return (0, i.jsx)(T.Y, {
-        renderPopout: o,
-        targetElementRef: a,
+    return (0, i.jsx)(g.Y, {
+        renderPopout: l,
+        targetElementRef: s,
         position: "right",
         children: (e) =>
             (0, i.jsx)(_.D, {
                 ...e,
-                innerRef: a,
+                innerRef: s,
                 className: S.x,
                 onClick: (t) => {
                     t.stopPropagation(), e.onClick?.(t);
                 },
-                children: (0, i.jsxs)(d.E, {
+                children: (0, i.jsxs)(u.E, {
                     className: S.s,
                     variant: "text-xs/medium",
                     color: "interactive-text-default",
@@ -53,15 +53,15 @@ function C(e) {
             }),
     });
 }
-var y = n(97808),
+var R = n(97808),
     O = n(778712),
-    R = n(342296),
-    v = n(812924);
-function b(e) {
+    L = n(342296),
+    D = n(44796);
+function y(e) {
     let { user: t, guildId: n } = e,
-        s = r.useRef(null);
-    return (0, i.jsx)(R.A, {
-        targetElementRef: s,
+        a = r.useRef(null);
+    return (0, i.jsx)(L.A, {
+        targetElementRef: a,
         shouldPreload: !0,
         user: t,
         guildId: n,
@@ -69,97 +69,97 @@ function b(e) {
         children: (e) =>
             (0, i.jsx)(_.D, {
                 ...e,
-                innerRef: s,
-                className: v.RB,
+                innerRef: a,
+                className: D.RB,
                 onClick: (t) => {
                     e.onClick(t), t.stopPropagation();
                 },
                 "aria-label": t.username,
-                children: (0, i.jsx)(y.eu, { src: t.getAvatarURL(n, 24), size: O._3.SIZE_24, "aria-hidden": !0 }),
+                children: (0, i.jsx)(R.eu, { src: t.getAvatarURL(n, 24), size: O._3.SIZE_24, "aria-hidden": !0 }),
             }),
     });
 }
-var L = n(375708);
-function D(e) {
+var v = n(375708);
+function b(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
-        r = (0, h.h)(t),
-        { data: s } = (0, m.I)(t),
-        o = (0, p.A)({ applicationId: t, location: "ClipEmbed", source: E.GameProfileSources.ClipEmbed }),
-        l = s?.name ?? r?.name;
-    if (null == l) return null;
-    let u = (0, i.jsxs)(i.Fragment, {
+        r = (0, E.h)(t),
+        { data: a } = (0, f.I)(t),
+        l = (0, I.A)({ applicationId: t, location: "ClipEmbed", source: h.GameProfileSources.ClipEmbed }),
+        o = a?.name ?? r?.name;
+    if (null == o) return null;
+    let d = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(f.A, { game: s ?? r, size: f.M.XXSMALL, className: v.Gt, allowUnknownGameIcon: !1 }),
-                (0, i.jsx)(d.E, {
-                    className: v.mO,
+                (0, i.jsx)(A.A, { game: a ?? r, size: A.M.XXSMALL, className: D.Gt, allowUnknownGameIcon: !1 }),
+                (0, i.jsx)(u.E, {
+                    className: D.mO,
                     variant: "text-sm/normal",
                     color: "text-overlay-light",
-                    children: l,
+                    children: o,
                 }),
             ],
         }),
         c =
-            null != o
-                ? (0, i.jsx)(_.D, { className: a()(v.Nn, v.On), onClick: o, children: u })
-                : (0, i.jsx)("span", { className: v.Nn, children: u });
+            null != l
+                ? (0, i.jsx)(_.D, { className: s()(D.Nn, D.On), onClick: l, children: d })
+                : (0, i.jsx)("span", { className: D.Nn, children: d });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             c,
-            !0 === n && (0, i.jsx)(d.E, { variant: "text-sm/normal", color: "text-overlay-light", children: "\xb7" }),
+            !0 === n && (0, i.jsx)(u.E, { variant: "text-sm/normal", color: "text-overlay-light", children: "\xb7" }),
         ],
     });
 }
-let w = function (e) {
+let M = function (e) {
     let {
             createdAt: t,
             participantIds: n,
             applicationId: r,
-            title: s,
+            title: a,
             guildId: _,
-            className: h,
-            playerState: f = l.Q6.PAUSED,
-            isControlBarExpanded: E = !0,
-            isFullScreen: p = !1,
-            showTextContent: m = !0,
+            className: E,
+            playerState: A = o.Q6.PAUSED,
+            isControlBarExpanded: h = !0,
+            isFullScreen: I = !1,
+            showTextContent: f = !0,
         } = e,
-        T = (0, o.yK)([g.default], () => n.map((e) => g.default.getUser(e)).filter(I.Vq) ?? []),
-        S = null != t ? (0, A.Fe)(new Date(t)) : null;
+        g = (0, l.yK)([p.default], () => n.map((e) => p.default.getUser(e)).filter(m.Vq) ?? []),
+        S = null != t ? (0, T.Fe)(new Date(t)) : null;
     return (0, i.jsxs)("div", {
-        className: a()(v.oK, { [v.pd]: f === l.Q6.PLAYING && !E, [v.aS]: p }, h),
+        className: s()(D.oK, { [D.pd]: A === o.Q6.PLAYING && !h, [D.aS]: I }, E),
         children: [
-            (0, i.jsx)("div", { className: v.Lu }),
+            (0, i.jsx)("div", { className: D.Lu }),
             (0, i.jsxs)("div", {
-                className: v.s$,
+                className: D.s$,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: v.yR,
+                        className: D.yR,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: v.$,
+                                className: D.$,
                                 children: [
-                                    (0, i.jsx)(u.m, {
+                                    (0, i.jsx)(d.m, {
                                         asContainer: !0,
-                                        text: L.intl.string(L.t["/fgfWh"]),
-                                        children: (0, i.jsx)(c.x, { className: v.gr, size: "xs", color: "white" }),
+                                        text: v.intl.string(v.t["/fgfWh"]),
+                                        children: (0, i.jsx)(c.x, { className: D.gr, size: "xs", color: "white" }),
                                     }),
-                                    m &&
-                                        (0, i.jsx)(d.E, {
-                                            className: v.DD,
+                                    f &&
+                                        (0, i.jsx)(u.E, {
+                                            className: D.DD,
                                             variant: "text-md/semibold",
                                             color: "text-overlay-light",
-                                            children: null != s && s.length > 0 ? s : L.intl.string(L.t.Cyxddp),
+                                            children: null != a && a.length > 0 ? a : v.intl.string(v.t.Cyxddp),
                                         }),
                                 ],
                             }),
-                            m &&
+                            f &&
                                 (null != r || null != S) &&
                                 (0, i.jsxs)("div", {
-                                    className: v.yu,
+                                    className: D.yu,
                                     children: [
-                                        (0, i.jsx)(D, { applicationId: r, hasTrailingDate: null != S }),
+                                        (0, i.jsx)(b, { applicationId: r, hasTrailingDate: null != S }),
                                         null != S &&
-                                            (0, i.jsx)(d.E, {
-                                                className: v.BR,
+                                            (0, i.jsx)(u.E, {
+                                                className: D.BR,
                                                 variant: "text-sm/normal",
                                                 color: "text-overlay-light",
                                                 children: S,
@@ -168,15 +168,15 @@ let w = function (e) {
                                 }),
                         ],
                     }),
-                    T.length > 0 &&
+                    g.length > 0 &&
                         (0, i.jsxs)("div", {
-                            className: v.HD,
+                            className: D.HD,
                             role: "group",
-                            "aria-label": L.intl.string(L.t.WTozwe),
+                            "aria-label": v.intl.string(v.t.WTozwe),
                             children: [
-                                T.slice(0, 4).map((e) => (0, i.jsx)(b, { user: e, guildId: _ }, e.id)),
-                                T.length > 4 &&
-                                    (0, i.jsx)(C, { participants: T, maxVisibleParticipants: 4, guildId: _ }),
+                                g.slice(0, 4).map((e) => (0, i.jsx)(y, { user: e, guildId: _ }, e.id)),
+                                g.length > 4 &&
+                                    (0, i.jsx)(C, { participants: g, maxVisibleParticipants: 4, guildId: _ }),
                             ],
                         }),
                 ],

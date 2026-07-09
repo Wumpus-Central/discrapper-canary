@@ -1,34 +1,34 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    s = n(174459),
-    a = n(408213),
-    o = n(890620),
-    l = n(260197),
-    u = n(652215);
+    a = n(174459),
+    s = n(408213),
+    l = n(890620),
+    o = n(260197),
+    d = n(652215);
 function c() {
-    s.default.track(u.HAw.MODAL_DISMISSED, { type: l.mk });
+    a.default.track(d.HAw.MODAL_DISMISSED, { type: o.mk });
 }
-let d = {
-    openMemberVerificationModal(e, t, d) {
+let u = {
+    openMemberVerificationModal(e, t, u) {
         !__OVERLAY__ &&
-            (s.default.track(u.HAw.OPEN_MODAL, { type: l.mk, guild_id: e }),
+            (a.default.track(d.HAw.OPEN_MODAL, { type: o.mk, guild_id: e }),
             (0, r.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        n.e("35316"),
-                        n.e("23549"),
-                        n.e("69722"),
-                        n.e("80083"),
-                        n.e("28510"),
-                        n.e("83566"),
-                        n.e("78104"),
-                        n.e("8502"),
-                        n.e("20802"),
-                        n.e("31299"),
-                        n.e("30593"),
+                        n.e("31880"),
+                        n.e("8273"),
+                        n.e("42714"),
+                        n.e("92283"),
+                        n.e("33566"),
+                        n.e("97198"),
+                        n.e("92424"),
+                        n.e("13558"),
+                        n.e("21858"),
+                        n.e("6051"),
+                        n.e("79877"),
                         n.e("60235"),
                         n.e("43437"),
                         n.e("86127"),
@@ -58,47 +58,47 @@ let d = {
                         (0, i.jsx)(t, {
                             ...n,
                             guildId: e,
-                            inviteKey: d,
+                            inviteKey: u,
                             onComplete: _,
                             onClose: async function () {
                                 let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
                                 if (!e)
-                                    if (o.YN.getState().hasUnsubmittedChanges) return void (0, o.C7)(!0);
+                                    if (l.YN.getState().hasUnsubmittedChanges) return void (0, l.C7)(!0);
                                     else c();
                                 await n.onClose();
                             },
                         });
                 },
                 {
-                    modalKey: l.LC,
+                    modalKey: o.LC,
                     onCloseRequest: () => {
-                        c(), o.YN.getState().hasUnsubmittedChanges ? (0, o.C7)(!0) : (0, r.closeModal)(l.LC);
+                        c(), l.YN.getState().hasUnsubmittedChanges ? (0, l.C7)(!0) : (0, r.closeModal)(o.LC);
                     },
                     onCloseCallback: t,
                 },
             ));
         async function _(t) {
-            await a.Ay.submitVerificationForm(e, t);
+            await s.Ay.submitVerificationForm(e, t);
         }
     },
     closeMemberVerificationModal() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-        e || c(), (0, r.closeModal)(l.LC);
+        e || c(), (0, r.closeModal)(o.LC);
     },
     openMemberVerificationPreviewModal(e) {
         (0, r.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("35316"),
-                n.e("23549"),
-                n.e("69722"),
-                n.e("80083"),
-                n.e("28510"),
-                n.e("83566"),
-                n.e("78104"),
-                n.e("8502"),
-                n.e("20802"),
-                n.e("31299"),
-                n.e("30593"),
+                n.e("31880"),
+                n.e("8273"),
+                n.e("42714"),
+                n.e("92283"),
+                n.e("33566"),
+                n.e("97198"),
+                n.e("92424"),
+                n.e("13558"),
+                n.e("21858"),
+                n.e("6051"),
+                n.e("79877"),
                 n.e("60235"),
                 n.e("43437"),
                 n.e("86127"),

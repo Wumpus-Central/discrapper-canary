@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { A: () => E }), n(321073);
+n.d(t, { A: () => I }), n(321073);
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(111956),
-    l = n.n(o),
-    u = n(615300),
+    a = n(503698),
+    s = n.n(a),
+    l = n(111956),
+    o = n.n(l),
+    d = n(615300),
     c = n(52133),
-    d = n(844222),
-    _ = n(21);
-let h = { friction: 10, tension: 300 };
-class f extends r.Component {
+    u = n(844222),
+    _ = n(884117);
+let E = { friction: 10, tension: 300 };
+class A extends r.Component {
     _timeout;
     constructor(e) {
-        super(e), (this.state = { translateY: new u.A.Value(), reduceMotion: !1 });
+        super(e), (this.state = { translateY: new d.A.Value(), reduceMotion: !1 });
     }
     shouldComponentUpdate(e, t) {
         return !(0, c.A)(this.props, e, ["animate"]) || !(0, c.A)(this.state, t);
@@ -35,20 +35,20 @@ class f extends r.Component {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
             ? (this._timeout = setTimeout(() => {
-                  u.A.spring(e, { toValue: 0, ...h }).start();
+                  d.A.spring(e, { toValue: 0, ...E }).start();
               }, 100))
             : e.setValue(0);
     }
     animateOut() {
         let { translateY: e } = this.state;
         (null != this._timeout && clearTimeout(this._timeout), this.props.animate)
-            ? u.A.spring(e, { toValue: 1, ...h }).start()
+            ? d.A.spring(e, { toValue: 1, ...E }).start()
             : e.setValue(1);
     }
     render() {
         let { className: e, text: t, hide: n, onClick: r } = this.props;
-        return (0, i.jsx)(u.A.div, {
-            className: a()(_.M0, e, { [_.R]: n }),
+        return (0, i.jsx)(d.A.div, {
+            className: s()(_.M0, e, { [_.R]: n }),
             onClick: r,
             style: this.getAnimatedStyle(),
             "aria-hidden": n,
@@ -65,8 +65,8 @@ class f extends r.Component {
         };
     }
 }
-class p extends r.PureComponent {
-    static contextType = d.C;
+class h extends r.PureComponent {
+    static contextType = u.C;
     static defaultProps = { className: _.kL, reverse: !1, hide: !1, animate: !0 };
     state = { unread: null, mention: null };
     componentDidMount() {
@@ -78,41 +78,41 @@ class p extends r.PureComponent {
     componentWillUnmount() {
         this.calculateState.cancel();
     }
-    calculateState = l()(() => {
+    calculateState = o()(() => {
         let {
                 items: e,
                 expandedFolders: t,
                 isVisible: n,
                 isUnread: i,
                 isMentioned: r,
-                reverse: s,
-                onCalculate: a,
+                reverse: a,
+                onCalculate: s,
             } = this.props,
-            o = null,
             l = null,
-            u = [];
+            o = null,
+            d = [];
         function c(e) {
-            null == o && r(e, s, u) && (o = e), null == l && i(e, s, u) && (l = e);
+            null == l && r(e, a, d) && (l = e), null == o && i(e, a, d) && (o = e);
         }
         e.forEach((e) => {
             "string" == typeof e
-                ? u.push(e)
+                ? d.push(e)
                 : "object" == typeof e && null != e.folderId
                   ? null != t && t.has(e.folderId)
-                      ? (u.push(`folder:${e.folderId}`), e.guildIds.forEach((e) => u.push(e)))
-                      : u.push(e.guildIds)
-                  : u.push(e.guildIds[0]);
+                      ? (d.push(`folder:${e.folderId}`), e.guildIds.forEach((e) => d.push(e)))
+                      : d.push(e.guildIds)
+                  : d.push(e.guildIds[0]);
         });
-        let d = s ? u.length - 1 : 0,
-            _ = u[d];
+        let u = a ? d.length - 1 : 0,
+            _ = d[u];
         for (; null != _; ) {
             if ("string" == typeof _) {
-                if (n(_, s, u)) break;
+                if (n(_, a, d)) break;
                 c(_);
             } else {
                 let e = !1;
                 for (let t of _) {
-                    if (n(t, s, u)) {
+                    if (n(t, a, d)) {
                         e = !0;
                         break;
                     }
@@ -120,9 +120,9 @@ class p extends r.PureComponent {
                 }
                 if (e) break;
             }
-            (d += s ? -1 : 1), (_ = u[d]);
+            (u += a ? -1 : 1), (_ = d[u]);
         }
-        null != a && a(o, l, s), this.setState({ mention: o, unread: l });
+        null != s && s(l, o, a), this.setState({ mention: l, unread: o });
     }, 200);
     handleClick = (e) => {
         e.preventDefault(), e.stopPropagation();
@@ -136,24 +136,24 @@ class p extends r.PureComponent {
             {
                 textMention: n,
                 textUnread: r,
-                reverse: s,
-                className: o,
-                barClassName: l,
-                hide: u,
+                reverse: a,
+                className: l,
+                barClassName: o,
+                hide: d,
                 animate: c,
             } = this.props,
-            { reducedMotion: d } = this.context;
+            { reducedMotion: u } = this.context;
         return (0, i.jsx)("div", {
-            className: o ?? void 0,
-            children: (0, i.jsx)(f, {
-                hide: !0 === u || (null == e && null == t),
-                className: a()(l, null != t ? _.lE : _.gy),
+            className: l ?? void 0,
+            children: (0, i.jsx)(A, {
+                hide: !0 === d || (null == e && null == t),
+                className: s()(o, null != t ? _.lE : _.gy),
                 text: null != t ? n : r,
-                reverse: s,
-                animate: c && !d.enabled,
+                reverse: a,
+                animate: c && !u.enabled,
                 onClick: this.handleClick,
             }),
         });
     }
 }
-let E = p;
+let I = h;

@@ -1,75 +1,75 @@
 "use strict";
-n.d(t, { A: () => f, h: () => p });
+n.d(t, { A: () => A, h: () => h });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(353795),
-    l = n(312640),
-    u = n(208756),
+    a = n(503698),
+    s = n.n(a),
+    l = n(353795),
+    o = n(312640),
+    d = n(208756),
     c = n(798618),
-    d = n(916845),
+    u = n(916845),
     _ = n(627330),
-    h = n(824078);
-function f(e) {
+    E = n(77006);
+function A(e) {
     let {
             title: t,
             body: n,
-            badge: s,
-            graphic: f,
-            size: p = "md",
-            actions: E,
-            textLink: m,
-            gradientColor: g,
-            onRequestClose: A,
-            popoverRef: I,
-            position: T,
+            badge: a,
+            graphic: A,
+            size: h = "md",
+            actions: I,
+            textLink: f,
+            gradientColor: p,
+            onRequestClose: T,
+            popoverRef: m,
+            position: g,
             caretConfig: S,
-            scrollBehavior: y,
+            scrollBehavior: N,
             ...C
         } = e,
-        N = r.useCallback(
+        R = r.useCallback(
             (e, t) => {
-                A?.(t);
+                T?.(t);
             },
-            [A],
+            [T],
         ),
-        v = r.useCallback(() => {
-            A?.("user:explicit");
-        }, [A]),
-        R = {
+        O = r.useCallback(() => {
+            T?.("user:explicit");
+        }, [T]),
+        L = {
             targetElementRef: C.targetElementRef,
             shouldShow: C.shouldShow,
             hasVideo: C.hasVideo,
-            position: T,
+            position: g,
             caretConfig: S,
-            onRequestClose: N,
-            gradientColor: g,
-            scrollBehavior: y,
+            onRequestClose: R,
+            gradientColor: p,
+            scrollBehavior: N,
             ...("edge" === C.alignmentStrategy
                 ? { alignmentStrategy: "edge", align: C.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, i.jsx)(l.x, {
-        ...R,
+    return (0, i.jsx)(o.x, {
+        ...L,
         children: (0, i.jsxs)("div", {
-            ref: I,
+            ref: m,
             "data-mana-component": "popover",
             children: [
-                (0, i.jsx)(d.q, { onClick: v, variant: null != g ? "color-mix" : void 0 }),
-                null != f &&
+                (0, i.jsx)(u.q, { onClick: O, variant: null != p ? "color-mix" : void 0 }),
+                null != A &&
                     (0, i.jsx)("div", {
-                        className: a()(h.graphic, { [h[`graphic--${p}`]]: null != p }),
-                        children: (0, i.jsx)(o.v, {
-                            ...f,
-                            aspectRatio: f.aspectRatio ?? ("sm" === p ? "2/1" : "16/9"),
+                        className: s()(E.graphic, { [E[`graphic--${h}`]]: null != h }),
+                        children: (0, i.jsx)(l.v, {
+                            ...A,
+                            aspectRatio: A.aspectRatio ?? ("sm" === h ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, i.jsx)(_.D, { title: t, body: n, badge: s, textLink: m }),
-                null != E && E.length > 0 ? (0, i.jsx)(u.Z, { actions: E }) : null,
+                (0, i.jsx)(_.D, { title: t, body: n, badge: a, textLink: f }),
+                null != I && I.length > 0 ? (0, i.jsx)(d.Z, { actions: I }) : null,
                 (0, i.jsx)(c.F, {}),
             ],
         }),
     });
 }
-let p = f;
+let h = A;

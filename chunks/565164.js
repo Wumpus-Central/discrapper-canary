@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { B8: () => _, wb: () => h, z5: () => d }), n(321073);
+n.d(t, { B8: () => _, wb: () => E, z5: () => u }), n(321073);
 var i = n(627968),
     r = n(64700),
-    s = n(61491),
-    a = n(834730),
-    o = n(984212),
-    l = n(875699);
-let u = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
+    a = n(61491),
+    s = n(834730),
+    l = n(984212),
+    o = n(62707);
+let d = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
     c = [];
-function d(e, t, n, i) {
-    let [s, a] = r.useState(null),
-        [l, d] = r.useState(null);
+function u(e, t, n, i) {
+    let [a, s] = r.useState(null),
+        [o, u] = r.useState(null);
     return (
         r.useEffect(() => {
             if (null == n || 0 === n.length || !e) return;
@@ -22,9 +22,9 @@ function d(e, t, n, i) {
                     t = [];
                 for (let n = 0; n < e.length; n++) {
                     let i = e[n];
-                    if (!(0, o.C)(i)) continue;
+                    if (!(0, l.C)(i)) continue;
                     let r = (function (e) {
-                        let t = e.match(u);
+                        let t = e.match(d);
                         if (null == t) return null;
                         let n = e.split("#")[0];
                         return 0 === n.length
@@ -39,7 +39,7 @@ function d(e, t, n, i) {
                     })(i.text);
                     null != r && t.push({ startSec: i.startTime, endSec: i.endTime, ...r });
                 }
-                t.sort((e, t) => e.startSec - t.startSec), a({ url: n, cues: t });
+                t.sort((e, t) => e.startSec - t.startSec), s({ url: n, cues: t });
             };
             return (
                 i.addEventListener("load", r),
@@ -51,14 +51,14 @@ function d(e, t, n, i) {
             if (null == i || 0 === i.length || !e) return;
             let t = new Image();
             return (
-                (t.onload = () => d(i)),
+                (t.onload = () => u(i)),
                 (t.src = i),
                 () => {
                     t.onload = null;
                 }
             );
         }, [i, e]),
-        null != s && s?.url === n && l === i ? s.cues : c
+        null != a && a?.url === n && o === i ? a.cues : c
     );
 }
 function _(e, t) {
@@ -67,29 +67,29 @@ function _(e, t) {
         i = e.length - 1;
     for (; n <= i; ) {
         let r = (n + i) >> 1,
-            s = e[r];
-        if (t < s.startSec) i = r - 1;
+            a = e[r];
+        if (t < a.startSec) i = r - 1;
         else {
-            if (!(t >= s.endSec)) return s;
+            if (!(t >= a.endSec)) return a;
             n = r + 1;
         }
     }
     return e[Math.max(0, Math.min(n, e.length - 1))];
 }
-function h(e) {
-    let { cue: t, timeSec: n, cursorXPx: r, timelineWidthPx: o } = e;
+function E(e) {
+    let { cue: t, timeSec: n, cursorXPx: r, timelineWidthPx: l } = e;
     if (t.w <= 0 || t.h <= 0) return null;
-    let u = t.w / 2,
-        c = 8 + u,
-        d = Math.max(c, o - 8 - u),
-        _ = Math.max(c, Math.min(r, d));
+    let d = t.w / 2,
+        c = 8 + d,
+        u = Math.max(c, l - 8 - d),
+        _ = Math.max(c, Math.min(r, u));
     return (0, i.jsxs)("div", {
-        className: l.kL,
+        className: o.kL,
         "aria-hidden": !0,
         style: { left: `${_}px`, bottom: "16px", width: `${t.w}px` },
         children: [
             (0, i.jsx)("div", {
-                className: l.FF,
+                className: o.FF,
                 style: {
                     width: `${t.w}px`,
                     height: `${t.h}px`,
@@ -98,12 +98,12 @@ function h(e) {
                     backgroundRepeat: "no-repeat",
                 },
             }),
-            (0, i.jsx)(a.E, {
-                className: l.Sp,
+            (0, i.jsx)(s.E, {
+                className: o.Sp,
                 variant: "text-xs/normal",
                 color: "text-overlay-light",
                 tabularNumbers: !0,
-                children: (0, s.rB)(n),
+                children: (0, a.rB)(n),
             }),
         ],
     });

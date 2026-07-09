@@ -18,19 +18,19 @@ var i = n(627968),
     C = n(834730),
     y = n(789645),
     E = n(964486),
-    N = n(648027),
-    v = n(855446),
-    j = n(793574),
+    v = n(648027),
+    j = n(855446),
+    N = n(793574),
     I = n(688810),
     T = n(975412),
     _ = n(392054),
     S = n(826673),
     R = n(757293),
-    P = n(174459),
-    b = n(272812),
+    b = n(174459),
+    P = n(272812),
     O = n(652215),
     L = n(375708),
-    D = n(17795),
+    D = n(766019),
     M = n(867010);
 function w(e) {
     let {
@@ -50,10 +50,10 @@ function w(e) {
 }
 function U(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, I.Ay)(j.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
     return (0, i.jsx)(I.f5, {
         value: a,
-        children: (0, i.jsxs)(b.A, {
+        children: (0, i.jsxs)(P.A, {
             className: D.zr,
             children: [
                 (0, i.jsx)(c.m, {
@@ -95,18 +95,18 @@ function U(e) {
 function V(e) {
     let { channel: t, guild: a, inPopout: r, activitiesEnabled: o = !0 } = e;
     l.useEffect(() => {
-        P.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        b.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, I.Ay)(j.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
     function h() {
         (0, m.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("92430"),
-                    n.e("80339"),
+                    n.e("70158"),
+                    n.e("52757"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -130,7 +130,7 @@ function V(e) {
             disableAdaptiveTheme: !0,
             theme: O.NJ8.MIDNIGHT,
             children: (e) =>
-                (0, i.jsxs)(b.A, {
+                (0, i.jsxs)(P.A, {
                     className: s()(D.zr, D.co, e),
                     children: [
                         (0, i.jsx)("img", { src: M, className: D.Qw, alt: "" }),
@@ -161,17 +161,17 @@ function V(e) {
 function k(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
     (0, E.Ay)(() => {
-        P.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        b.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
         });
     });
-    let u = (0, N.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: p } = (0, I.Ay)(j.A.VC_TILE_ACTIVITY_SUGGESTION),
+    let u = (0, v.A)({ guildId: n.id }).slice(0, 3),
+        { analyticsLocations: p } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
         h = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
     return (0, i.jsx)(I.f5, {
         value: p,
-        children: (0, i.jsxs)(b.A, {
+        children: (0, i.jsxs)(P.A, {
             className: D.zr,
             children: [
                 o > 300
@@ -185,11 +185,11 @@ function k(e) {
                     className: s()(D.Di, { [D.qy]: o <= 300 }),
                     children: u.map((e) =>
                         (0, i.jsx)(
-                            v.C,
+                            j.C,
                             {
                                 context: h,
                                 activityItem: e,
-                                aspectRatio: v.C.AspectRatio.SIXTEEN_BY_NINE,
+                                aspectRatio: j.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: D.KU,
                                 commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
@@ -200,7 +200,7 @@ function k(e) {
                 (0, i.jsxs)(d.D, {
                     className: D.HI,
                     onClick: function () {
-                        P.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        b.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "permanent",
                             n_participants: c,
@@ -215,7 +215,7 @@ function k(e) {
                 (0, i.jsx)(d.D, {
                     className: D.cG,
                     onClick: function () {
-                        P.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        b.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "temporary",
                             n_participants: c,

@@ -1,4 +1,4 @@
-n.d(t, { M: () => S, X: () => j });
+n.d(t, { M: () => j, X: () => S });
 var l = n(627968),
     i = n(64700),
     s = n(503698),
@@ -13,13 +13,13 @@ var l = n(627968),
     g = n(409626),
     h = n(692969),
     f = n(738250),
-    A = n(830647),
-    x = n(240248),
+    x = n(830647),
+    A = n(240248),
     E = n(360469),
     v = n(818348),
     C = n(375708),
-    I = n(391308);
-function j(e) {
+    I = n(24908);
+function S(e) {
     let { applicationId: t, hideApplicationName: n } = e,
         { gameId: i, gameRecord: s } = (0, f.A)({ applicationId: t }),
         a = (0, h.A)({
@@ -29,7 +29,7 @@ function j(e) {
             trackEntryPointImpression: !0,
         }),
         d = s?.getIconURL(E.iu.SMALL);
-    if (null == a || null == s || (0, x.uJ)(d)) return null;
+    if (null == a || null == s || (0, A.uJ)(d)) return null;
     let m = C.intl.string(C.t.ajHoOr);
     return (0, l.jsx)(o.m, {
         text: m,
@@ -47,13 +47,13 @@ function j(e) {
         }),
     });
 }
-function S(e) {
+function j(e) {
     let { userId: t, applicationId: n, channel: s, hideWhenInactive: u, idle: c } = e,
         [g, h] = i.useState(!1),
         f = i.useRef(null),
-        x = i.useCallback(() => h(!0), []),
+        A = i.useCallback(() => h(!0), []),
         E = i.useCallback(() => h(!1), []),
-        j = C.intl.string(C.t["wg/30i"]);
+        S = C.intl.string(C.t["wg/30i"]);
     return (0, l.jsx)(a.Y, {
         targetElementRef: f,
         shouldShow: g,
@@ -65,13 +65,13 @@ function S(e) {
         renderPopout: () =>
             (0, l.jsx)(d.N, {
                 theme: v.NJ.DARKER,
-                children: (e) => (0, l.jsx)(A.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: E }),
+                children: (e) => (0, l.jsx)(x.Z, { className: e, userId: t, channel: s, applicationId: n, onClose: E }),
             }),
         children: () =>
             (0, l.jsx)("div", {
                 ref: f,
                 children: (0, l.jsx)(o.m, {
-                    text: j,
+                    text: S,
                     shouldShow: !g && void 0,
                     children: (0, l.jsx)("div", {
                         className: r()(I.V7, { [I.kl]: u, [I.N7]: c }),
@@ -79,9 +79,9 @@ function S(e) {
                             size: "sm",
                             variant: "overlay-secondary",
                             onClick: (e) => {
-                                e.stopPropagation(), x();
+                                e.stopPropagation(), A();
                             },
-                            "aria-label": j,
+                            "aria-label": S,
                             icon: p.o,
                         }),
                     }),

@@ -5,7 +5,7 @@ var n = i(627968),
     s = i.n(a),
     r = i(735438),
     o = i.n(r),
-    d = i(835245),
+    d = i(132500),
     c = i(189213),
     u = i(27192),
     m = i(834730),
@@ -25,7 +25,7 @@ var n = i(627968),
     _ = i(384684),
     y = i(652215),
     N = i(375708),
-    R = i(228624);
+    R = i(64848);
 function k(e) {
     let { className: t, onChange: i, textVariant: l = "text-md/normal", label: a, value: r, isArchived: o = !1 } = e;
     return (0, n.jsx)(u.Kj, {

@@ -1,173 +1,173 @@
 "use strict";
-n.d(t, { A: () => H });
+n.d(t, { A: () => j });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(17928),
-    l = n(289873),
-    u = n(228366),
-    d = n(367513),
-    c = n(951001),
+    a = n(503698),
+    s = n.n(a),
+    l = n(17928),
+    o = n(289873),
+    d = n(228366),
+    c = n(367513),
+    u = n(951001),
     _ = n(398590),
-    h = n(793574),
-    f = n(688810),
-    E = n(429913),
-    p = n(568598),
-    m = n(313961),
-    g = n(408822),
-    A = n(558076),
-    I = n(360729),
-    T = n(976860),
+    E = n(793574),
+    A = n(688810),
+    h = n(429913),
+    I = n(568598),
+    f = n(313961),
+    p = n(446243),
+    T = n(558076),
+    m = n(360729),
+    g = n(976860),
     S = n(272812),
     N = n(461782),
     C = n(334463),
-    y = n(309010),
-    v = n(287809),
-    R = n(795816),
-    O = n(933958),
-    b = n(851907),
-    L = n(838274),
-    D = n(536246),
-    P = n(108959),
-    w = n(395678),
-    M = n(56129),
-    x = n(360469),
-    U = n(5867),
-    k = n(652215),
-    G = n(806931),
-    V = n(970682),
-    F = n(27600),
-    B = n(604949);
-function j(e) {
+    R = n(309010),
+    O = n(287809),
+    L = n(795816),
+    D = n(933958),
+    y = n(851907),
+    v = n(838274),
+    b = n(536246),
+    M = n(108959),
+    P = n(395678),
+    U = n(56129),
+    w = n(360469),
+    G = n(5867),
+    x = n(652215),
+    k = n(806931),
+    F = n(157690),
+    V = n(429904),
+    B = n(794005);
+function H(e) {
     let { channel: t, isLoading: n } = e,
-        [s, h] = r.useState(!1),
-        f = (0, o.bG)([O.Ay], () => O.Ay.getCurrentEmbeddedActivity()),
-        L = f?.applicationId,
-        j = (0, o.bG)([O.Ay], () => null != L && O.Ay.isProxyTicketRefreshing(L), [L]),
-        H = (0, o.bG)([O.Ay], () => O.Ay.getActivityPanelMode()),
-        W = (0, E.h)(L),
-        Y = f?.launchId,
-        K = (0, o.bG)([y.A], () => y.A.getChannelId() === t?.id),
-        { dockedRect: $, isHidden: z } = (0, o.cf)([C.A], () => {
+        [a, E] = r.useState(!1),
+        A = (0, l.bG)([D.Ay], () => D.Ay.getCurrentEmbeddedActivity()),
+        v = A?.applicationId,
+        H = (0, l.bG)([D.Ay], () => null != v && D.Ay.isProxyTicketRefreshing(v), [v]),
+        j = (0, l.bG)([D.Ay], () => D.Ay.getActivityPanelMode()),
+        W = (0, h.h)(v),
+        Y = A?.launchId,
+        K = (0, l.bG)([R.A], () => R.A.getChannelId() === t?.id),
+        { dockedRect: $, isHidden: z } = (0, l.cf)([C.A], () => {
             let e = C.A.pipWindow;
             return { dockedRect: null != e ? C.A.getDockedRect(e.id) : null, isHidden: C.A.isEmbeddedActivityHidden() };
         }),
-        q = (0, b.xi)({ channelId: t?.id }),
+        q = (0, y.xi)({ channelId: t?.id }),
         {
             activityParticipant: Z,
             selectedParticipant: X,
             participantsOpen: Q,
-        } = (0, o.cf)([m.A], () => ({
+        } = (0, l.cf)([f.A], () => ({
             activityParticipant:
-                null != f && null != t
-                    ? m.A.getParticipant(
+                null != A && null != t
+                    ? f.A.getParticipant(
                           t.id,
-                          (0, p.Qt)({ applicationId: f.applicationId, instanceId: f.compositeInstanceId }),
+                          (0, I.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                       )
                     : null,
-            selectedParticipant: null != t ? m.A.getSelectedParticipant(t.id) : null,
-            participantsOpen: null != t && m.A.getParticipantsOpen(t.id),
+            selectedParticipant: null != t ? f.A.getSelectedParticipant(t.id) : null,
+            participantsOpen: null != t && f.A.getParticipantsOpen(t.id),
         })),
         J = K || null != q,
-        ee = (0, P.A)(t?.id),
+        ee = (0, M.A)(t?.id),
         et = t?.id,
         en = t?.getGuildId(),
-        { enabled: ei } = I.A.useExperiment({ guildId: en ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
-        er = (0, o.bG)([A.A], () => null != et && A.A.isVisible(et), [et]),
-        es = ee && ei && er,
-        ea = ee && X?.type !== G.lp.ACTIVITY,
-        eo = !ee && H === U.Gd.PIP,
-        el = (!J || (J && (ea || eo || es) && null == $)) && !z,
-        eu = el && null != C.A.pipVideoWindow && null != C.A.pipActivityWindow;
-    function ed() {
+        { enabled: ei } = m.A.useExperiment({ guildId: en ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
+        er = (0, l.bG)([T.A], () => null != et && T.A.isVisible(et), [et]),
+        ea = ee && ei && er,
+        es = ee && X?.type !== k.lp.ACTIVITY,
+        el = !ee && j === G.Gd.PIP,
+        eo = (!J || (J && (es || el || ea) && null == $)) && !z,
+        ed = eo && null != C.A.pipVideoWindow && null != C.A.pipActivityWindow;
+    function ec() {
         if (null != t) {
-            null != f &&
-                d.A.selectParticipant(
+            null != A &&
+                c.A.selectParticipant(
                     t.id,
-                    (0, p.Qt)({ applicationId: f.applicationId, instanceId: f.compositeInstanceId }),
+                    (0, I.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                 ),
-                es && (0, g.zD)(t.id, !0);
-            let e = t.getGuildId() ?? k.ME;
-            c.A.channelListScrollTo(e, t.id), (0, T.uh)(e, t.id);
+                ea && (0, p.zD)(t.id, !0);
+            let e = t.getGuildId() ?? x.ME;
+            u.A.channelListScrollTo(e, t.id), (0, g.uh)(e, t.id);
         }
         null == q && (0, _.bz)();
     }
-    function ec() {
-        h(!s);
+    function eu() {
+        E(!a);
     }
     if (
         (r.useEffect(() => {
-            if (null != L) {
-                let e = el ? x.bN.PIP : x.bN.FOCUSED;
-                u.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: L });
+            if (null != v) {
+                let e = eo ? w.bN.PIP : w.bN.FOCUSED;
+                d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: v });
             }
-        }, [L, el]),
-        null == f || null == Y || ((0, P.A)(t?.id) && null == Z) || null == W)
+        }, [v, eo]),
+        null == A || null == Y || ((0, M.A)(t?.id) && null == Z) || null == W)
     )
         return null;
-    let e_ = Array.from(f.userIds)
-            .map((e) => v.default.getUser(e))
+    let e_ = Array.from(A.userIds)
+            .map((e) => O.default.getUser(e))
             .filter((e) => null != e),
-        eh = {
-            instance_id: f.compositeInstanceId ?? f.launchId ?? "",
-            location_id: f.location?.id,
-            launch_id: f.launchId,
-            referrer_id: f.referrerId,
-            custom_id: f.customId,
+        eE = {
+            instance_id: A.compositeInstanceId ?? A.launchId ?? "",
+            location_id: A.location?.id,
+            launch_id: A.launchId,
+            referrer_id: A.referrerId,
+            custom_id: A.customId,
         };
     return (
-        null != f.proxyTicket && (eh.discord_proxy_ticket = f.proxyTicket),
-        t?.guild_id != null && t?.guild_id !== "" && (eh.guild_id = t.guild_id),
-        t?.id != null && t?.id !== "" && (eh.channel_id = t.id),
+        null != A.proxyTicket && (eE.discord_proxy_ticket = A.proxyTicket),
+        t?.guild_id != null && t?.guild_id !== "" && (eE.guild_id = t.guild_id),
+        t?.id != null && t?.id !== "" && (eE.channel_id = t.id),
         (0, i.jsx)(N.Ay, {
             timeout: 2e3,
             children: (e) => {
-                let { idle: r, onActive: o, onForceIdle: u } = e;
+                let { idle: r, onActive: l, onForceIdle: d } = e;
                 return (0, i.jsxs)(S.A, {
-                    className: a()(V.zr, {
-                        [V.NW]: el,
-                        [B.a8]: el,
-                        [F.N7]: r && !f.config?.useInteractivePIP,
-                        [V.p0]: el && !s,
-                        [V.ST]: el && s,
-                        [V.R]: z,
-                        [V.Gq]: eu,
+                    className: s()(F.zr, {
+                        [F.NW]: eo,
+                        [B.a8]: eo,
+                        [V.N7]: r && !A.config?.useInteractivePIP,
+                        [F.p0]: eo && !a,
+                        [F.ST]: eo && a,
+                        [F.R]: z,
+                        [F.Gq]: ed,
                     }),
-                    noBorder: !el,
+                    noBorder: !eo,
                     children: [
                         (0, i.jsx)("div", {
                             className: "theme-dark",
                             children: (function (e) {
-                                let { onActive: n, onForceIdle: r, idle: a, isActivityInTextChannel: o, users: l } = e;
-                                return el && null != f && (Z?.type === G.lp.ACTIVITY || o)
-                                    ? f.config?.useInteractivePIP
-                                        ? (0, i.jsx)(M.tM, {
-                                              onJumpToChannel: ed,
-                                              applicationId: f.applicationId,
+                                let { onActive: n, onForceIdle: r, idle: s, isActivityInTextChannel: l, users: o } = e;
+                                return eo && null != A && (Z?.type === k.lp.ACTIVITY || l)
+                                    ? A.config?.useInteractivePIP
+                                        ? (0, i.jsx)(U.tM, {
+                                              onJumpToChannel: ec,
+                                              applicationId: A.applicationId,
                                               channel: t,
-                                              showControls: !a,
+                                              showControls: !s,
                                               onMouseDown: n,
                                               onMouseMove: n,
                                               onMouseLeave: r,
-                                              onToggleHeight: ec,
-                                              isExpanded: s,
-                                              hideExpandedButton: o,
-                                              embeddedActivity: f,
+                                              onToggleHeight: eu,
+                                              isExpanded: a,
+                                              hideExpandedButton: l,
+                                              embeddedActivity: A,
                                           })
-                                        : o
-                                          ? (0, i.jsx)(M.Mp, {
-                                                idle: a,
+                                        : l
+                                          ? (0, i.jsx)(U.Mp, {
+                                                idle: s,
                                                 onMouseMove: n,
                                                 onMouseDown: n,
                                                 onMouseLeave: r,
                                                 onJumpToChannel: () => {
-                                                    ed(), (0, R.gk)(U.Gd.PANEL);
+                                                    ec(), (0, L.gk)(G.Gd.PANEL);
                                                 },
                                                 channel: t,
-                                                applicationId: f.applicationId,
-                                                users: l,
-                                                embeddedActivity: f,
+                                                applicationId: A.applicationId,
+                                                users: o,
+                                                embeddedActivity: A,
                                             })
                                           : null == Z
                                             ? null
@@ -177,52 +177,52 @@ function j(e) {
                                                           onMouseMove: n,
                                                           onMouseDown: n,
                                                           onMouseLeave: r,
-                                                          className: V.OB,
-                                                          onDoubleClick: ed,
+                                                          className: F.OB,
+                                                          onDoubleClick: ec,
                                                       }),
-                                                      (0, i.jsx)(M.gE, {
-                                                          idle: a,
+                                                      (0, i.jsx)(U.gE, {
+                                                          idle: s,
                                                           onMouseMove: n,
                                                           onMouseDown: n,
                                                           onMouseLeave: r,
-                                                          onJumpToChannel: ed,
+                                                          onJumpToChannel: ec,
                                                           channel: t,
-                                                          applicationId: f.applicationId,
+                                                          applicationId: A.applicationId,
                                                           selectedParticipant: Z,
-                                                          embeddedActivity: f,
+                                                          embeddedActivity: A,
                                                       }),
                                                   ],
                                               })
                                     : null;
-                            })({ onActive: o, onForceIdle: u, idle: r, isActivityInTextChannel: eo, users: e_ }),
+                            })({ onActive: l, onForceIdle: d, idle: r, isActivityInTextChannel: el, users: e_ }),
                         }),
-                        n || j
-                            ? (0, i.jsx)(l.y, { className: a()(V.pU, { [V.p0]: el && !s, [V.ST]: el && s }) })
-                            : (0, i.jsx)(w.o, {
-                                  allowPopups: (0, D.b)(W),
+                        n || H
+                            ? (0, i.jsx)(o.y, { className: s()(F.pU, { [F.p0]: eo && !a, [F.ST]: eo && a }) })
+                            : (0, i.jsx)(P.o, {
+                                  allowPopups: (0, b.b)(W),
                                   referrerPolicy: "origin",
-                                  url: f.url,
-                                  queryParams: eh,
-                                  className: a()(V.pU, {
-                                      [V.p0]: el && !s,
-                                      [V.ST]: el && s,
-                                      [V.v8]: el && !f.config?.useInteractivePIP,
+                                  url: A.url,
+                                  queryParams: eE,
+                                  className: s()(F.pU, {
+                                      [F.p0]: eo && !a,
+                                      [F.ST]: eo && a,
+                                      [F.v8]: eo && !A.config?.useInteractivePIP,
                                   }),
-                                  shouldRefocus: !el && K,
+                                  shouldRefocus: !eo && K,
                               }),
-                        !el &&
+                        !eo &&
                             null != t &&
-                            (0, i.jsx)(M.ll, { participantsOpen: Q, showToggleParticipants: !1, channelId: t.id }),
+                            (0, i.jsx)(U.ll, { participantsOpen: Q, showToggleParticipants: !1, channelId: t.id }),
                     ],
                 });
             },
         })
     );
 }
-let H = (e) => {
+let j = (e) => {
     let { channel: t, ...n } = e,
-        r = O.Ay.getCurrentEmbeddedActivity();
-    (0, L.A)({ connectedEmbeddedActivity: r });
-    let { analyticsLocations: s } = (0, f.Ay)(h.A.ACTIVITY_PIP);
-    return (0, i.jsx)(f.f5, { value: s, children: (0, i.jsx)(j, { channel: t, isLoading: null == r, ...n }) });
+        r = D.Ay.getCurrentEmbeddedActivity();
+    (0, v.A)({ connectedEmbeddedActivity: r });
+    let { analyticsLocations: a } = (0, A.Ay)(E.A.ACTIVITY_PIP);
+    return (0, i.jsx)(A.f5, { value: a, children: (0, i.jsx)(H, { channel: t, isLoading: null == r, ...n }) });
 };

@@ -1,5 +1,5 @@
 n.d(t, {
-    ch: () => G.c,
+    ch: () => M.c,
     DH: () => u.DH,
     Z4: () => N,
     v7: () => o.v,
@@ -13,7 +13,7 @@ n.d(t, {
     ec: () => i.e,
     a6: () => u.a6,
     JW: () => u.JW,
-    nL: () => M.n,
+    nL: () => G.n,
     vW: () => j,
     q7: () => r.q7,
     _P: () => c._,
@@ -38,20 +38,20 @@ var c = n(596034),
     A = n(307301),
     g = n(661531),
     v = n(834730),
-    _ = n(691540),
-    y = n(857250),
-    h = n(97483),
+    h = n(691540),
+    _ = n(857250),
+    y = n(97483),
     I = n(459357),
     x = n(99696),
     E = n(580630),
     T = n(6938),
-    P = n(776409),
-    k = n(375708),
-    S = n(513857);
+    P = n(743292),
+    S = n(375708),
+    k = n(884033);
 function L(e) {
-    let { text: t = k.intl.string(P.default.iBFPMf), onClick: n, className: a, analytics: r } = e;
+    let { text: t = S.intl.string(P.default.iBFPMf), onClick: n, className: a, analytics: r } = e;
     return (0, d.jsxs)(b.D, {
-        className: p()(S.U, a),
+        className: p()(k.U, a),
         onClick: () => {
             null != r && (0, x.P6)(r), n();
         },
@@ -74,9 +74,9 @@ function N(e) {
                       initialCode: l ?? "",
                       onComplete: (e) => {
                           let n = (0, E.$g)(e.amount, e.currency);
-                          (0, _.P0)(
-                              (0, y.o)(k.intl.formatToPlainString(P.default["66Wi6B"], { price: n }), h.Ck.SUCCESS, {
-                                  position: h.xJ.TOP,
+                          (0, h.P0)(
+                              (0, _.o)(S.intl.formatToPlainString(P.default["66Wi6B"], { price: n }), y.Ck.SUCCESS, {
+                                  position: y.xJ.TOP,
                               }),
                           ),
                               t?.(e);
@@ -92,27 +92,27 @@ function N(e) {
           })
         : null;
 }
-var C = n(452027),
-    R = n(91774);
+var R = n(452027),
+    C = n(835262);
 function j(e) {
     let {
-        fieldLabel: t = k.intl.string(k.t["u+Cw58"]),
+        fieldLabel: t = S.intl.string(S.t["u+Cw58"]),
         label: n,
         value: a,
         Icon: r,
         iconColor: l = g.A.colors.ICON_SUBTLE,
     } = e;
-    return (0, d.jsx)(C.D, {
+    return (0, d.jsx)(R.D, {
         label: t,
         children: (0, d.jsxs)("div", {
-            className: R.nQ,
+            className: C.nQ,
             children: [
-                (0, d.jsx)(v.E, { className: R.OL, variant: "text-md/normal", children: n }),
+                (0, d.jsx)(v.E, { className: C.OL, variant: "text-md/normal", children: n }),
                 (0, d.jsx)("span", {
-                    className: R.OL,
+                    className: C.OL,
                     children: (0, d.jsxs)(v.E, {
                         variant: "text-md/normal",
-                        className: R.Kk,
+                        className: C.Kk,
                         children: [(0, d.jsx)(r, { color: l, size: "sm" }), a],
                     }),
                 }),
@@ -122,6 +122,6 @@ function j(e) {
 }
 var D = n(454666);
 n(87730);
-var M = n(70433),
-    G = n(900730);
+var G = n(70433),
+    M = n(900730);
 n(451636);
