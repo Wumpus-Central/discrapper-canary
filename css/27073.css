@@ -242,7 +242,7 @@
     filter: brightness(110%)
 }
 
-.quacking__2dee0 {
+.quackButton__2dee0:not(.disabled__2dee0):active .duck__2dee0 {
     transform: scale(95%)
 }
 
