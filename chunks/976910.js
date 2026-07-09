@@ -2,55 +2,56 @@
 n.d(t, { A: () => c });
 var i = n(17928),
     r = n(228366),
-    s = n(155718);
-let a = !1,
-    o = [],
-    l = !1;
-class u extends i.Ay.Store {
+    a = n(155718);
+let s = !1,
+    l = [],
+    o = !1;
+class d extends i.Ay.Store {
     static displayName = "WebAuthnStore";
     hasFetchedCredentials() {
-        return a;
+        return s;
     }
     get hasCredentials() {
-        return o.length > 0;
+        return l.length > 0;
     }
     getCredentials() {
-        return o;
-    }
-    hasPendingRegisterTrigger() {
         return l;
     }
+    hasPendingRegisterTrigger() {
+        return o;
+    }
 }
-let c = new u(r.h, {
+let c = new d(r.h, {
     LOGOUT: function () {
-        (o = []), (a = !1), (l = !1);
+        (l = []), (s = !1), (o = !1);
     },
     MFA_WEBAUTHN_CREDENTIALS_LOADED: function (e) {
         let { credentials: t } = e,
             n = !1;
-        return o !== t && ((o = t), (n = !0)), a || ((a = !0), (n = !0)), n;
+        return l !== t && ((l = t), (n = !0)), s || ((s = !0), (n = !0)), n;
     },
     AUTHENTICATOR_CREATE: function (e) {
         let { credential: t } = e;
-        if (t.type !== s.Wq.WEBAUTHN || void 0 !== o.find((e) => e.id === t.id)) return !1;
-        o = [...o, t];
+        return t.type !== a.Wq.WEBAUTHN
+            ? (t.type, !1)
+            : void 0 === l.find((e) => e.id === t.id) && void (l = [...l, t]);
     },
     AUTHENTICATOR_UPDATE: function (e) {
         let { credential: t } = e;
-        if (t.type !== s.Wq.WEBAUTHN) return !1;
-        o = o.map((e) => (e.id === t.id ? t : e));
+        if (t.type !== a.Wq.WEBAUTHN) return t.type, !1;
+        l = l.map((e) => (e.id === t.id ? t : e));
     },
     AUTHENTICATOR_DELETE: function (e) {
         let { credential: t } = e;
-        if (t.type !== s.Wq.WEBAUTHN) return !1;
-        o = o.filter((e) => e.id !== t.id);
+        if (t.type !== a.Wq.WEBAUTHN) return t.type, !1;
+        l = l.filter((e) => e.id !== t.id);
     },
     WEBAUTHN_TRIGGER_REGISTER: function () {
-        if (l) return !1;
-        l = !0;
+        if (o) return !1;
+        o = !0;
     },
     WEBAUTHN_CLEAR_REGISTER_TRIGGER: function () {
-        if (!l) return !1;
-        l = !1;
+        if (!o) return !1;
+        o = !1;
     },
 });

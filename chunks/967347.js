@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { w: () => m });
+n.d(t, { w: () => f });
 var i = n(17928),
     r = n(228366),
-    s = n(736056),
-    a = n(174459),
-    o = n(723702),
-    l = n(19575),
-    u = n(652215);
+    a = n(736056),
+    s = n(174459),
+    l = n(723702),
+    o = n(19575),
+    d = n(652215);
 let c = { hashes: {} };
-function d(e) {
+function u(e) {
     let t = (e >>> 0).toString(16);
     return t.length >= 4 ? t : t.padStart(4, "0");
 }
@@ -19,14 +19,14 @@ async function _() {
         n = (await window.DiscordNative?.hardware?.getDisplayCount?.()) ?? null,
         i = t.electronGPUInfo?.gpuDevice ?? [],
         r = i.find((e) => e.active) ?? i[0] ?? null,
-        s = t.electronGPUInfo?.auxAttributes,
-        a = "string" == typeof s?.glRenderer ? s.glRenderer : null,
-        o = null != r && "string" == typeof r.driverVersion && "" !== r.driverVersion ? r.driverVersion : null,
-        l = i.map((e) => ({
-            brand: a,
+        a = t.electronGPUInfo?.auxAttributes,
+        s = "string" == typeof a?.glRenderer ? a.glRenderer : null,
+        l = null != r && "string" == typeof r.driverVersion && "" !== r.driverVersion ? r.driverVersion : null,
+        o = i.map((e) => ({
+            brand: s,
             memory: 0,
-            vendor_id: d(e.vendorId),
-            device_id: d(e.deviceId),
+            vendor_id: u(e.vendorId),
+            device_id: u(e.deviceId),
             sub_sys_id: null,
             revision: null,
             driver_version: "string" == typeof e.driverVersion && "" !== e.driverVersion ? e.driverVersion : "",
@@ -36,22 +36,22 @@ async function _() {
             pcie_current_link_width: null,
             pcie_max_link_width: null,
         })),
-        u = {
+        d = {
             wave: 1,
             cpu_brand: t.cpus[0]?.model ?? null,
             cpu_vendor: null,
             cpu_memory: t.total_memory,
             cpu_memory_avail: null,
-            gpu_brand: a,
+            gpu_brand: s,
             gpu_memory: null,
             gpu_count: i.length,
-            gpu_device_vendor_id: null != r ? d(r.vendorId) : null,
-            gpu_device_device_id: null != r ? d(r.deviceId) : null,
+            gpu_device_vendor_id: null != r ? u(r.vendorId) : null,
+            gpu_device_device_id: null != r ? u(r.deviceId) : null,
             gpu_device_sub_sys_id: null,
             gpu_device_revision: null,
-            gpu_driver_version: o,
+            gpu_driver_version: l,
             has_intel_hybrid_igpu: !1,
-            gpus: l.length > 0 ? l : null,
+            gpus: o.length > 0 ? o : null,
             batteries: null,
             display_monitors: n,
             display_primary_width: window.screen.width,
@@ -91,35 +91,35 @@ async function _() {
                     n = 5381;
                 for (let e = 0; e < t.length; e++) n = (((n << 5) + n) ^ t.charCodeAt(e)) >>> 0;
                 return n;
-            })(u),
-            data: u,
+            })(d),
+            data: d,
         },
     ];
 }
-async function h() {
-    if (!o.isPlatformEmbedded) return [];
-    if ((0, o.isLinux)()) return _();
-    if (!(0, o.isWindows)()) return [];
-    await l.Ay.ensureModule("discord_media");
-    let e = l.Ay.requireModule("discord_media");
+async function E() {
+    if (!l.isPlatformEmbedded) return [];
+    if ((0, l.isLinux)()) return _();
+    if (!(0, l.isWindows)()) return [];
+    await o.Ay.ensureModule("discord_media");
+    let e = o.Ay.requireModule("discord_media");
     return (await e.getSystemAnalyticsBlob()) ?? [];
 }
-async function f() {
+async function A() {
     try {
-        let e = (await h()).filter((e) => c.hashes[e.name] !== e.hash);
+        let e = (await E()).filter((e) => c.hashes[e.name] !== e.hash);
         for (let { name: t, hash: n, data: i } of e) {
             let e = { ...i, gpus: i.gpus?.map((e) => JSON.stringify(e)) };
-            a.default.track(u.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
+            s.default.track(d.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n);
         }
-        e.length > 0 && E.emitChange();
+        e.length > 0 && I.emitChange();
     } catch (e) {}
 }
-class p extends i.Ay.PersistedStore {
+class h extends i.Ay.PersistedStore {
     static displayName = "SystemAnalyticsStore";
     static persistKey = "SystemAnalyticsStore";
     cachedHardwareInfo;
     initialize(e) {
-        (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(s.A);
+        (c = null != e && "object" == typeof e.hashes ? e : { hashes: {} }), this.waitFor(a.A);
     }
     getState() {
         return c;
@@ -127,17 +127,17 @@ class p extends i.Ay.PersistedStore {
     async info() {
         if (void 0 !== this.cachedHardwareInfo) return this.cachedHardwareInfo;
         try {
-            let e = (await h()).find((e) => "hardware_detected" === e.name);
+            let e = (await E()).find((e) => "hardware_detected" === e.name || (e.name, !1));
             if (null == e) return null;
-            return (0, o.isLinux)() && (this.cachedHardwareInfo = e.data), e.data;
+            return (0, l.isLinux)() && (this.cachedHardwareInfo = e.data), e.data;
         } catch (e) {}
     }
 }
-let E = new p(r.h, {
+let I = new h(r.h, {
     START_SESSION: function () {
-        return f(), !1;
+        return A(), !1;
     },
 });
-function m() {
-    return E.info();
+function f() {
+    return I.info();
 }

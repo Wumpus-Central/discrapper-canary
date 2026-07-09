@@ -371,7 +371,7 @@ function es(e) {
         (0, u.HR)();
     }, []);
     let I = (0, i.cf)([m.A], () => (O ? m.A.videoFilterAssets : {})),
-        C = l.useMemo(() => Object.values(I).filter((e) => e.type === R.yZ.BACKGROUND), [I]),
+        C = l.useMemo(() => Object.values(I).filter((e) => e.type === R.yZ.BACKGROUND || (e.type, !1)), [I]),
         b = (0, r.p)(),
         y = { isVideoBackgroundSupported: v, onSelectBackgroundOption: j, selectedBackgroundOption: g },
         S = l.useRef(y);

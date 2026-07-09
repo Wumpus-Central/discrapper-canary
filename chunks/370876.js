@@ -5,9 +5,8 @@ var i = n(284009),
     l = n.n(a),
     d = n(946116);
 function _(t) {
-    return (
-        r()(t.type === d.fx.GUILD, "Directory entries must be connected to a guild!"),
-        {
+    if (t.type === d.fx.GUILD)
+        return {
             channelId: t.directory_channel_id,
             guildId: t.entity_id,
             type: t.type,
@@ -22,8 +21,8 @@ function _(t) {
             approximateMemberCount: t.guild?.approximate_member_count,
             approximatePresenceCount: t.guild?.approximate_presence_count,
             featurableInDirectory: t.guild?.featurable_in_directory,
-        }
-    );
+        };
+    t.type, r()(!1, "Directory entries must be connected to a guild!");
 }
 let p = 5;
 function I(t) {

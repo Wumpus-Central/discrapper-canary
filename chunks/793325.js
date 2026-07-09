@@ -20137,23 +20137,28 @@ let CE = (0, a.zD)(u.X.CLIPS_ALLOW_VOICE_RECORDING_SETTING, {
         useSubtitle: function () {
             let e = Cu();
             if (e.allowed) return j.intl.format(j.t.NRI6vt, { article: tN.A.getArticleURL(M.MVz.GDPR_REQUEST_DATA) });
-            if ("staff" === e.reason) return j.intl.string(j.t.hIbRso);
-            if ("not_verified" === e.reason)
-                return j.intl.format(j.t.rBqJDq, {
-                    settingsLink: (e, t) =>
-                        (0, E.jsx)(
-                            en.D,
-                            {
-                                tag: "a",
-                                onClick: () => (0, eH.openUserSettings)(u.X.ACCOUNT_INFO_EMAIL_SETTING),
-                                children: e,
-                            },
-                            t,
-                        ),
-                });
-            if ("rate_limited" === e.reason) {
-                let t = r4()(e.nextAllowed).format("MMMM Do YYYY");
-                return j.intl.format(j.t["VLMG1+"], { date: t });
+            switch (e.reason) {
+                case "staff":
+                    return j.intl.string(j.t.hIbRso);
+                case "not_verified":
+                    return j.intl.format(j.t.rBqJDq, {
+                        settingsLink: (e, t) =>
+                            (0, E.jsx)(
+                                en.D,
+                                {
+                                    tag: "a",
+                                    onClick: () => (0, eH.openUserSettings)(u.X.ACCOUNT_INFO_EMAIL_SETTING),
+                                    children: e,
+                                },
+                                t,
+                            ),
+                    });
+                case "rate_limited": {
+                    let t = r4()(e.nextAllowed).format("MMMM Do YYYY");
+                    return j.intl.format(j.t["VLMG1+"], { date: t });
+                }
+                default:
+                    return;
             }
         },
         initialize: () => {
