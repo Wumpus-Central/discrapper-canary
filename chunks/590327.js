@@ -832,7 +832,7 @@ var b = ({ state: i }) => {
     },
     K = !1,
     Y = (0, t.c)(() =>
-        Promise.all([a.e("30931"), a.e("59975"), a.e("30682"), a.e("2895")])
+        Promise.all([a.e("30682"), a.e("2895")])
             .then(a.bind(a, 962098))
             .then((i) => ({ default: i.MandatoryConsent })),
     ),

@@ -40,18 +40,25 @@ let h = {
             } = e,
             I = { modalKey: E.SW, onCloseCallback: t, backdropStyle: A(r), Layer: s.Ay };
         if (d === E.XM.INCODE && u.getConfig({ location: r }).enabled) {
-            let { api_url: e, session_token: t, interview_id: s } = _ ?? {};
+            if (
+                !(
+                    null != _ &&
+                    ["api_url", "session_token", "interview_id", "consent_id"].every(
+                        (e) => "string" == typeof _[e] && _[e].length > 0,
+                    )
+                )
+            )
+                return !1;
+            let { api_url: e, session_token: t, interview_id: s, consent_id: l } = _;
             return (
-                null != e &&
-                null != t &&
-                null != s &&
-                ((0, a.openModalLazy)(async () => {
+                (0, a.openModalLazy)(async () => {
                     let { default: a } = await Promise.all([
                         n.e("47449"),
                         n.e("10723"),
                         n.e("14651"),
                         n.e("62041"),
                         n.e("10849"),
+                        n.e("35431"),
                         n.e("46883"),
                         n.e("44381"),
                         n.e("35956"),
@@ -59,9 +66,17 @@ let h = {
                         n.e("38394"),
                     ]).then(n.bind(n, 832417));
                     return (n) =>
-                        (0, i.jsx)(a, { apiUrl: e, sessionToken: t, interviewId: s, entryPoint: r, ...h, ...n });
+                        (0, i.jsx)(a, {
+                            apiUrl: e,
+                            sessionToken: t,
+                            consentId: l,
+                            interviewId: s,
+                            entryPoint: r,
+                            ...h,
+                            ...n,
+                        });
                 }, I),
-                !0)
+                !0
             );
         }
         return (
