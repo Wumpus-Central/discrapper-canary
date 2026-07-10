@@ -249,6 +249,7 @@ let c = {
             drafts: { type: s.C.ChannelMessage },
             emojis: {},
             permissions: { requireSendMessages: !0 },
+            autocomplete: { alwaysUseLayer: !0, small: !0 },
             submit: { useDisabledStylesOnSubmit: !0, disableEnterToSubmit: !0 },
             disableAutoFocus: !0,
             showCharacterCount: !0,
