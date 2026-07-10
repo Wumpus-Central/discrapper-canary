@@ -4147,8 +4147,8 @@
     --border-feedback-warning: #945400;
     --border-focus: #408fed;
     --border-muted: hsla(240, 4%, 61%, .2);
-    --border-normal: hsla(240, 4%, 61%, .36);
-    --border-strong: hsla(240, 4%, 61%, .48);
+    --border-normal: hsla(240, 4%, 61%, .4);
+    --border-strong: hsla(240, 4%, 61%, .52);
     --border-subtle: hsla(240, 4%, 61%, .28);
     --border-voice-muted: rgba(209, 46, 56, .12);
     --button-danger-background-disabled: #d12e38;
@@ -4456,9 +4456,9 @@
     --input-background-default: rgba(0, 0, 0, .02);
     --input-background-error-default: rgba(209, 46, 56, .04);
     --input-border-active: #5966f2;
-    --input-border-default: hsla(240, 4%, 61%, .36);
+    --input-border-default: hsla(240, 4%, 61%, .4);
     --input-border-error-default: #ba2633;
-    --input-border-hover: hsla(240, 4%, 61%, .36);
+    --input-border-hover: hsla(240, 4%, 61%, .4);
     --input-border-readonly: rgba(0, 0, 0, .04);
     --input-icon-default: #595963;
     --input-placeholder-text-default: #696b73;
@@ -4588,7 +4588,7 @@
     --reaction-background-hover: hsla(240, 4%, 61%, .16);
     --reaction-background-reacted-default: rgba(89, 102, 242, .24);
     --reaction-background-reacted-hover: rgba(89, 102, 242, .24);
-    --reaction-border-active: hsla(240, 4%, 61%, .48);
+    --reaction-border-active: hsla(240, 4%, 61%, .52);
     --reaction-border-default: hsla(240, 4%, 61%, .28);
     --reaction-border-hover: hsla(240, 4%, 61%, .2);
     --reaction-border-reacted-default: #5966f2;
@@ -4624,7 +4624,7 @@
     --spoiler-revealed-background: #ebedf0;
     --stage-card-pill-bg: hsla(240, 4%, 61%, .12);
     --standalone-channel-content-background: #fafafa;
-    --standalone-channel-header-border: hsla(240, 4%, 61%, .48);
+    --standalone-channel-header-border: hsla(240, 4%, 61%, .52);
     --standard-tab-gradient-center: #a1a8fa;
     --standard-tab-gradient-inner-ring: rgba(194, 199, 252, .25);
     --standard-tab-gradient-outer-ring: rgba(194, 199, 252, 0);
