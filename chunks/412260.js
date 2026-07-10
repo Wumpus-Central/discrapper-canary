@@ -137,6 +137,10 @@ class R extends i.Ay.PersistedStore {
     getMarketingMomentRewardSkuIds() {
         return this.getMarketingMomentPromotion()?.rewardSkuIds ?? [];
     }
+    getActiveBogoRewardPromotion() {
+        let e = new Date();
+        return Object.values(p[o.pt.MARKETING_MOMENT]).find((t) => t.hasBogoReward && t.endDate >= e) ?? null;
+    }
     get claimedOutboundPromotionCodes() {
         return g;
     }
