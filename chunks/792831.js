@@ -1,66 +1,67 @@
-t.d(r, { A: () => T });
-var n,
-    s = t(627968);
-t(64700);
-var l = t(503698),
-    i = t.n(l),
-    c = t(953727),
-    u = t(774910),
-    a =
-        (((n = {}).LEFT = "LEFT"),
-        (n.RIGHT = "RIGHT"),
-        (n.UP = "UP"),
-        (n.DOWN = "DOWN"),
-        (n.UP_LEFT = "UP_LEFT"),
-        (n.DOWN_RIGHT = "DOWN_RIGHT"),
-        n);
-let o = (e) => {
+"use strict";
+n.d(t, { A: () => u });
+var i,
+    r = n(627968);
+n(64700);
+var a = n(503698),
+    s = n.n(a),
+    l = n(953727),
+    o = n(774910),
+    d =
+        (((i = {}).LEFT = "LEFT"),
+        (i.RIGHT = "RIGHT"),
+        (i.UP = "UP"),
+        (i.DOWN = "DOWN"),
+        (i.UP_LEFT = "UP_LEFT"),
+        (i.DOWN_RIGHT = "DOWN_RIGHT"),
+        i);
+let c = (e) => {
     let {
-        width: r = 24,
-        height: t = 24,
-        color: n = "currentColor",
-        direction: l,
-        foreground: a,
-        className: o,
-        title: T,
-        ...h
+        width: t = 24,
+        height: n = 24,
+        color: i = "currentColor",
+        direction: a,
+        foreground: d,
+        className: c,
+        title: u,
+        ..._
     } = e;
-    return (0, s.jsxs)("svg", {
-        ...(0, c.A)(h),
-        width: r,
-        height: t,
-        className: i()(
-            o,
+    return (0, r.jsxs)("svg", {
+        ...(0, l.A)(_),
+        width: t,
+        height: n,
+        className: s()(
+            c,
             (function (e) {
                 switch (e) {
                     case "LEFT":
-                        return u.kb;
+                        return o.kb;
                     case "RIGHT":
-                        return u.pG;
+                        return o.pG;
                     case "UP":
                         return null;
                     case "DOWN":
-                        return u.TR;
+                        return o.TR;
                     case "UP_LEFT":
-                        return u.l0;
+                        return o.l0;
                     case "DOWN_RIGHT":
-                        return u.Nu;
+                        return o.Nu;
                     default:
                         throw Error(`Invalid Direction ${e}`);
                 }
-            })(l),
+            })(a),
         ),
         viewBox: "0 0 24 24",
         children: [
-            null != T ? (0, s.jsx)("title", { children: T }) : null,
-            (0, s.jsx)("polygon", {
-                className: a,
-                fill: n,
+            null != u ? (0, r.jsx)("title", { children: u }) : null,
+            (0, r.jsx)("polygon", {
+                className: d,
+                fill: i,
                 fillRule: "nonzero",
                 points: "13 20 11 20 11 8 5.5 13.5 4.08 12.08 12 4.16 19.92 12.08 18.5 13.5 13 8",
             }),
         ],
     });
 };
-o.Directions = a;
-let T = o;
+c.Directions = d;
+let u = c;

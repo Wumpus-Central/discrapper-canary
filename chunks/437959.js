@@ -1,26 +1,27 @@
+"use strict";
 n.d(t, { A: () => _ });
 var i = n(17928),
-    l = n(506774),
-    r = n(228366),
+    r = n(506774),
+    a = n(228366),
     s = n(785796);
-let a = "MaintenanceStore",
+let l = "MaintenanceStore",
     o = null,
-    E = null,
+    d = null,
     c = null;
 class u extends i.Ay.Store {
     static displayName = "MaintenanceStore";
     initialize() {
-        c = l.w.get(a);
+        c = r.w.get(l);
     }
     getIncident() {
         return o;
     }
     getScheduledMaintenance() {
-        let e = E?.scheduled_until ?? E?.scheduled_for;
-        return null != E && E.id !== c && (null == e || Date.now() < new Date(e).getTime()) ? E : null;
+        let e = d?.scheduled_until ?? d?.scheduled_for;
+        return null != d && d.id !== c && (null == e || Date.now() < new Date(e).getTime()) ? d : null;
     }
 }
-let _ = new u(r.h, {
+let _ = new u(a.h, {
     CONNECTION_OPEN: function () {
         (o = null), s.A.checkScheduledMaintenances();
     },
@@ -28,10 +29,10 @@ let _ = new u(r.h, {
         o = e.incident;
     },
     STATUS_PAGE_SCHEDULED_MAINTENANCE: function (e) {
-        E = e.maintenance;
+        d = e.maintenance;
     },
     STATUS_PAGE_SCHEDULED_MAINTENANCE_ACK: function () {
-        if (null == E) return !1;
-        (c = E.id), l.w.set(a, c);
+        if (null == d) return !1;
+        (c = d.id), r.w.set(l, c);
     },
 });

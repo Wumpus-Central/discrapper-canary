@@ -1,31 +1,32 @@
-l.d(t, { A: () => v });
-var n = l(64700),
-    a = l(284513),
-    s = l(17928),
-    i = l(549699),
-    r = l(29496),
-    u = l(201718),
-    o = l(339580),
-    c = l(773669),
-    m = l(403362),
-    d = l(352003);
-let p = [];
-function v(e, t) {
-    (0, u.P)(e);
-    let l = (0, s.bG)([o.A], () => o.A.getUserIdentityByApplication(e, t)),
-        v = (0, s.bG)([c.default], () => c.default.locale),
-        x = n.useMemo(() => [t], [t]),
-        [f] = (0, d.A)(x),
-        _ = n.useMemo(() => (0, a.VG)(l?.profile ?? void 0), [l?.profile]),
-        h = (0, s.bG)([o.A], () => o.A.getFetchState(e) !== o.e.FETCHED),
-        N = (0, s.bG)([r.A], () => r.A.getAssets(t)),
-        T = n.useMemo(() => Object.values(N ?? {}).filter(m.Vq), [N]),
-        E = n.useCallback((e) => (0, i.Q)(t, e, e.metadata.width), [t]);
+"use strict";
+n.d(t, { A: () => A });
+var i = n(64700),
+    r = n(284513),
+    a = n(17928),
+    s = n(549699),
+    l = n(29496),
+    o = n(201718),
+    d = n(339580),
+    c = n(773669),
+    u = n(403362),
+    _ = n(352003);
+let E = [];
+function A(e, t) {
+    (0, o.P)(e);
+    let n = (0, a.bG)([d.A], () => d.A.getUserIdentityByApplication(e, t)),
+        A = (0, a.bG)([c.default], () => c.default.locale),
+        h = i.useMemo(() => [t], [t]),
+        [I] = (0, _.A)(h),
+        f = i.useMemo(() => (0, r.VG)(n?.profile ?? void 0), [n?.profile]),
+        p = (0, a.bG)([d.A], () => d.A.getFetchState(e) !== d.e.FETCHED),
+        T = (0, a.bG)([l.A], () => l.A.getAssets(t)),
+        m = i.useMemo(() => Object.values(T ?? {}).filter(u.Vq), [T]),
+        g = i.useCallback((e) => (0, s.Q)(t, e, e.metadata.width), [t]);
     return {
-        locale: v,
-        surfaceConfigs: f?.surfaces ?? {},
-        isLoading: h,
-        hasIdentity: null != l,
-        resolutionContext: { data: _, applicationAssets: T, getApplicationAssetUrl: E, localizedStrings: p },
+        locale: A,
+        surfaceConfigs: I?.surfaces ?? {},
+        isLoading: p,
+        hasIdentity: null != n,
+        resolutionContext: { data: f, applicationAssets: m, getApplicationAssetUrl: g, localizedStrings: E },
     };
 }

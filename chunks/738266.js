@@ -326,20 +326,23 @@ function eX(e) {
                     n,
                 ),
             ),
-            r === t.id
+            h
                 ? null
-                : (0, l.jsx)(T.$, {
-                      variant: "critical-secondary",
-                      text: eH.intl.format(eH.t.txPV7k, { name: d() }),
-                      onClick: function () {
-                          let e = d();
-                          _.A.show({
-                              title: eH.intl.string(eH.t.GuPYQB),
-                              body: eH.intl.format(eH.t.xERCnZ, { name: e }),
-                              cancelText: eH.intl.string(eH.t["ETE/oC"]),
-                              onConfirm: () => G.A.clearPermissionOverwrite(o, t.id),
-                          });
-                      },
+                : (0, l.jsx)("div", {
+                      className: eW.O6,
+                      children: (0, l.jsx)(T.$, {
+                          variant: "critical-secondary",
+                          text: eH.intl.format(eH.t.txPV7k, { name: d() }),
+                          onClick: function () {
+                              let e = d();
+                              _.A.show({
+                                  title: eH.intl.string(eH.t.GuPYQB),
+                                  body: eH.intl.format(eH.t.xERCnZ, { name: e }),
+                                  cancelText: eH.intl.string(eH.t["ETE/oC"]),
+                                  onConfirm: () => G.A.clearPermissionOverwrite(o, t.id),
+                              });
+                          },
+                      }),
                   }),
         ],
     });

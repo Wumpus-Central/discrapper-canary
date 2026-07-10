@@ -1,7 +1,8 @@
-s.d(e, { qO: () => r });
-var i = s(83220),
-    n = s(231577);
-function r(t, e = {}) {
+"use strict";
+n.d(e, { qO: () => o });
+var i = n(83220),
+    r = n(231577);
+function o(t, e = {}) {
     if (
         (e.user &&
             (!t.ipAddress && e.user.ip_address && (t.ipAddress = e.user.ip_address),
@@ -9,7 +10,7 @@ function r(t, e = {}) {
         (t.timestamp = e.timestamp || (0, i.zf)()),
         e.abnormal_mechanism && (t.abnormal_mechanism = e.abnormal_mechanism),
         e.ignoreDuration && (t.ignoreDuration = e.ignoreDuration),
-        e.sid && (t.sid = 32 === e.sid.length ? e.sid : (0, n.eJ)()),
+        e.sid && (t.sid = 32 === e.sid.length ? e.sid : (0, r.eJ)()),
         void 0 !== e.init && (t.init = e.init),
         !t.did && e.did && (t.did = `${e.did}`),
         "number" == typeof e.started && (t.started = e.started),

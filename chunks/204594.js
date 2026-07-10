@@ -15,4 +15,5 @@ e.exports = {
     xf: "roleRow__0ab2c",
     S3: "roleName__0ab2c",
     ON: "searchBar__0ab2c",
+    O6: "removeButtonContainer__0ab2c",
 };

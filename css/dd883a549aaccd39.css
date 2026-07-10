@@ -99,7 +99,7 @@
 }
 
 .permissionsForm__0ab2c:not(:last-of-type) {
-    margin-bottom: 40px
+    margin-bottom: var(--space-40)
 }
 
 .createOverwritePopout__0ab2c {
@@ -123,6 +123,10 @@
 
 .searchBar__0ab2c {
     padding: 12px 12px 8px
+}
+
+.removeButtonContainer__0ab2c {
+    margin-top: var(--space-40)
 }
 
 .advancedModeDivider__4914c {

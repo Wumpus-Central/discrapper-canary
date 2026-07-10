@@ -1,27 +1,28 @@
-n.d(t, { A: () => c });
-var r = n(627968);
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(314116),
+var r = n(314116),
     a = n(192308),
-    o = n(231723),
+    s = n(231723),
     l = n(652215),
-    u = n(375708);
-let c = {
+    o = n(375708);
+let d = {
     openSecureFramesStreamVerification: function (e, t) {
         (0, a.openModalLazy)(async () => {
-            let i = (
+            let r = (
                 await Promise.all([n.e("65673"), n.e("6134"), n.e("63510"), n.e("30049"), n.e("46115")]).then(
                     n.bind(n, 773262),
                 )
             ).default;
-            return (n) => (0, r.jsx)(i, { streamKey: e, channelId: t, ...n });
+            return (n) => (0, i.jsx)(r, { streamKey: e, channelId: t, ...n });
         });
     },
-    openSecureFramesUserVerificationModal: function (e, t, i, u) {
-        i() &&
+    openSecureFramesUserVerificationModal: function (e, t, r, o) {
+        r() &&
             (0, a.openModalLazy)(
                 async () => {
-                    let i = (
+                    let r = (
                         await Promise.all([
                             n.e("65673"),
                             n.e("6134"),
@@ -32,14 +33,14 @@ let c = {
                             n.e("40623"),
                         ]).then(n.bind(n, 912018))
                     ).default;
-                    return (n) => (0, r.jsx)(i, { userId: e, channelId: t, ...n });
+                    return (n) => (0, i.jsx)(r, { userId: e, channelId: t, ...n });
                 },
-                { contextKey: u === l.BRT.POPOUT ? o.KX : o.SY },
+                { contextKey: o === l.BRT.POPOUT ? s.KX : s.SY },
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: n, confirmText: r = u.intl.string(u.t["cY+Oob"]), onConfirm: a } = e;
-        (0, i.A)({ title: t, subtitle: n, confirmText: r, onConfirm: a });
+        let { title: t, subtitle: n, confirmText: i = o.intl.string(o.t["cY+Oob"]), onConfirm: a } = e;
+        (0, r.A)({ title: t, subtitle: n, confirmText: i, onConfirm: a });
     },
     handleSecureFramesUserVerificationLink: function (e) {
         throw Error("handleSecureFramesUserVerificationLink not implemented");
