@@ -1,50 +1,51 @@
 "use strict";
-n.r(t), n.d(t, { openUserProfileModal: () => E, closeUserProfileModal: () => m });
+n.r(t), n.d(t, { openUserProfileModal: () => I, closeUserProfileModal: () => f });
 var i = n(778712),
     r = n(228366),
-    s = n(803306),
-    a = n(927813),
-    o = n(86070),
-    l = n(517164);
-let u = a.A.Millis.MINUTE;
+    a = n(803306),
+    s = n(927813),
+    l = n(86070),
+    o = n(517164);
+let d = s.A.Millis.MINUTE;
 var c = n(626584),
-    d = n(287809),
+    u = n(287809),
     _ = n(903209);
-let h = (0, i.FT)(i._3.SIZE_120),
-    f = new c.A("UserProfileModalActionCreators");
-async function p(e) {
+let E = (0, i.FT)(i._3.SIZE_120),
+    A = new c.A("UserProfileModalActionCreators");
+async function h(e) {
     try {
         await (function (e) {
-            if (l.A.isFetchingUserOutbox(e)) return;
-            let t = l.A.getUserOutbox(e)?.lastFetched ?? 0;
-            if (!(Date.now() - t < u)) return (0, o.r7)(e, void 0);
+            if (o.A.isFetchingUserOutbox(e)) return;
+            let t = o.A.getUserOutbox(e)?.lastFetched ?? 0;
+            if (!(Date.now() - t < d)) return (0, l.r7)(e, void 0);
         })(e);
     } catch (t) {
-        f.log(`Failed to fetch content inventory outbox for ${e}:`, t);
+        A.log(`Failed to fetch content inventory outbox for ${e}:`, t);
     }
 }
-async function E(e) {
+async function I(e) {
     let {
             userId: t,
             guildId: n,
             originGuildId: i,
-            channelId: a,
-            messageId: o,
-            roleId: l,
-            sessionId: u,
+            channelId: s,
+            messageId: l,
+            roleId: o,
+            sessionId: d,
             joinRequestId: c,
-            tabSection: f,
-            scrollTarget: E,
-            hideRestrictedProfile: m,
-            sourceAnalyticsLocations: g,
-            appContext: A,
-            customStatusPrompt: I = null,
+            tabSection: A,
+            scrollTarget: I,
+            hideRestrictedProfile: f,
+            sourceAnalyticsLocations: p,
+            appContext: T,
+            customStatusPrompt: m = null,
+            onModalOpen: g,
         } = e,
-        T = Date.now(),
-        S = d.default.getUser(t);
-    p(t),
-        null == S
-            ? await (0, s.eO)(t, {
+        S = Date.now(),
+        N = u.default.getUser(t);
+    h(t),
+        null == N
+            ? await (0, a.eO)(t, {
                   type: "modal",
                   guildId: n ?? void 0,
                   withMutualFriendsCount: !0,
@@ -52,10 +53,10 @@ async function E(e) {
                   withMutualGuilds: !0,
                   joinRequestId: c,
               })
-            : (0, _.A)(S.id, S.getAvatarURL(void 0, h), {
+            : (0, _.A)(N.id, N.getAvatarURL(void 0, E), {
                   type: "modal",
                   guildId: n ?? void 0,
-                  withMutualFriendsCount: !S.bot,
+                  withMutualFriendsCount: !N.bot,
                   withMutualFriends: !1,
                   withMutualGuilds: !0,
                   joinRequestId: c,
@@ -65,19 +66,20 @@ async function E(e) {
             userId: t,
             guildId: n ?? void 0,
             originGuildId: i ?? void 0,
-            channelId: a ?? void 0,
-            messageId: o ?? void 0,
-            roleId: l ?? void 0,
-            sessionId: u ?? void 0,
-            openedAt: T,
-            customStatusPrompt: I,
-            tabSection: f,
-            scrollTarget: E,
-            hideRestrictedProfile: m,
-            sourceAnalyticsLocations: g,
-            appContext: A,
+            channelId: s ?? void 0,
+            messageId: l ?? void 0,
+            roleId: o ?? void 0,
+            sessionId: d ?? void 0,
+            openedAt: S,
+            customStatusPrompt: m,
+            tabSection: A,
+            scrollTarget: I,
+            hideRestrictedProfile: f,
+            sourceAnalyticsLocations: p,
+            appContext: T,
+            onModalOpen: g,
         });
 }
-function m() {
+function f() {
     r.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
 }

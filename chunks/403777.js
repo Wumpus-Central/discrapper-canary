@@ -26,13 +26,14 @@ async function I(e) {
             channelId: p,
             appContext: T,
             customStatusPrompt: m,
-            ...g
+            onModalOpen: g,
+            ...S
         } = e,
-        S = o.default.getUser(t);
-    if (null == S) return;
-    let N = o.default.getCurrentUser();
+        N = o.default.getUser(t);
     if (null == N) return;
-    let C = h(t, I);
+    let C = o.default.getCurrentUser();
+    if (null == C) return;
+    let O = h(t, I);
     A.add(
         await (0, r.openModalLazy)(
             async () => {
@@ -405,8 +406,8 @@ async function I(e) {
                 ).default;
                 return (t) =>
                     (0, i.jsx)(e, {
-                        user: S,
-                        currentUser: N,
+                        user: N,
+                        currentUser: C,
                         guildId: I,
                         originGuildId: f ?? I,
                         initialTabSection: a,
@@ -414,21 +415,22 @@ async function I(e) {
                         channelId: p,
                         customStatusPrompt: m,
                         ...t,
-                        ...g,
+                        ...S,
                     });
             },
             {
-                modalKey: C,
+                modalKey: O,
                 contextKey: (0, r.modalContextFromAppContext)(T ?? (0, l.zd)() ?? E.BRT.APP),
                 onCloseRequest: () => {
                     let e = !(0, u.E)("UserProfileModalManager");
-                    t === N.id && (0, _.b)(e)
+                    t === C.id && (0, _.b)(e)
                         ? (0, d.VQ)()
-                        : ((0, r.closeModal)(C), A.delete(C), c.A.clearPendingWidgets(), e || (0, d.XQ)());
+                        : ((0, r.closeModal)(O), A.delete(O), c.A.clearPendingWidgets(), e || (0, d.XQ)());
                 },
             },
         ),
-    );
+    ),
+        g?.();
 }
 function f() {
     if (0 !== A.size) {
