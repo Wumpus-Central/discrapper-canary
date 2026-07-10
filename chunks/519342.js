@@ -13,8 +13,8 @@ var i = n(627968),
     m = n(85448),
     A = n(734057),
     x = n(287809),
-    f = n(977997),
-    g = n(531685),
+    g = n(977997),
+    f = n(531685),
     C = n(562153),
     j = n(446243),
     y = n(920639),
@@ -25,18 +25,18 @@ var i = n(627968),
     T = n(655413),
     _ = n(884863),
     S = n(971954),
-    b = n(189090),
+    b = n(662731),
     R = n(375708),
-    P = n(874119);
+    P = n(621191);
 function O(e) {
     let { userId: t, channelId: n, x: a, y: v, statusId: E, numericAvatarSize: N, avatarSize: O, experimental: L } = e,
         w = (0, c.bG)([x.default], () => x.default.getUser(t)),
         D = (0, c.bG)([x.default], () => x.default.getCurrentUser()?.id === t),
         [M, U] = l.useState(!1),
         V = (0, c.bG)([A.A], () => A.A.getChannel(n)?.guild_id),
-        k = (0, c.bG)([f.A], () => f.A.getVoiceState(V, t)),
+        k = (0, c.bG)([g.A], () => g.A.getVoiceState(V, t)),
         B = (0, p.A)({ userId: t }),
-        G = (0, c.bG)([g.A], () => g.A.isFocused()),
+        G = (0, c.bG)([f.A], () => f.A.isFocused()),
         H = (0, C.tx)(V, n, w),
         { seats: F } = S.iX[o.I.DEFAULT],
         z = F.find((e) => e.position.x === a && e.position.y === v),
@@ -67,16 +67,16 @@ function O(e) {
             children: (0, i.jsx)(u.D, { onMouseEnter: K, onClick: Y, children: X }),
         });
     let q = I.x.find((e) => e.id === E),
-        $ = q?.icon,
-        Q = (0, i.jsxs)("div", {
+        Q = q?.icon,
+        $ = (0, i.jsxs)("div", {
             className: P.R3,
             children: [
                 X,
                 null != q &&
-                    null != $ &&
+                    null != Q &&
                     (0, i.jsx)("div", {
                         className: s()(P.qS, P.Af),
-                        children: (0, i.jsx)($, { size: "sm", color: "currentColor" }),
+                        children: (0, i.jsx)(Q, { size: "sm", color: "currentColor" }),
                     }),
                 D &&
                     (0, i.jsx)("div", {
@@ -111,13 +111,12 @@ function O(e) {
                                       onClick: () => {
                                           n(), Y();
                                       },
-                                      children: Q,
+                                      children: $,
                                   }),
                               });
                           },
                       }),
                       (0, i.jsx)(_.T.Popup, {
-                          elevation: "below",
                           "aria-label": R.intl.string(b.default.LTAf2V),
                           children: I.x.map((e) => {
                               let t = e.icon;
@@ -144,7 +143,7 @@ function O(e) {
             : (0, i.jsx)(T.A, {
                   name: H,
                   status: q,
-                  children: (0, i.jsx)(u.D, { onMouseEnter: K, onClick: Y, children: Q }),
+                  children: (0, i.jsx)(u.D, { onMouseEnter: K, onClick: Y, children: $ }),
               }),
     });
 }
