@@ -16,9 +16,9 @@ var i = n(627968),
     f = n(446243),
     g = n(920639),
     C = n(996752),
-    j = n(189090),
+    j = n(662731),
     y = n(375708),
-    v = n(599459),
+    v = n(818787),
     E = n(739549);
 function N(e) {
     let { channelId: t, note: n, roomWidth: N } = e,
@@ -83,6 +83,7 @@ function N(e) {
                                   (0, i.jsx)(u.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
+                                      className: v.Qs,
                                       children: p.A.parseTopic(n.content, !0, { channelId: t }),
                                   }),
                               ],

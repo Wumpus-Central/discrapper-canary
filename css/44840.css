@@ -58,6 +58,10 @@
     color: var(--interactive-icon-active)
 }
 
+.content__52fde {
+    word-wrap: break-word
+}
+
 .container__3d96b {
     position: absolute;
     top: 50%;

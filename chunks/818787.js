@@ -5,4 +5,5 @@ _.exports = {
     wx: "header__52fde",
     kQ: "user__52fde",
     Kk: "icon__52fde",
+    Qs: "content__52fde",
 };
