@@ -495,24 +495,25 @@ let tt = function (t) {
                 taskType: o,
                 size: r = "sm",
                 surface: c,
-                preClickCallback: d,
-                analyticsCtxQuestContent: I,
-                analyticsCtxSourceQuestContent: q,
-                analyticsCtxQuestContentPosition: y,
-                analyticsCtxQuestContentRowIndex: L,
+                showPlayInstantlyLabel: d = !1,
+                preClickCallback: I,
+                analyticsCtxQuestContent: q,
+                analyticsCtxSourceQuestContent: y,
+                analyticsCtxQuestContentPosition: L,
+                analyticsCtxQuestContentRowIndex: Q,
             } = t,
-            Q = {
-                questContent: I,
+            R = {
+                questContent: q,
                 questContentCTA: J(o),
-                sourceQuestContent: q,
-                questContentPosition: y,
-                questContentRowIndex: L,
+                sourceQuestContent: y,
+                questContentPosition: L,
+                questContentRowIndex: Q,
             },
-            R = n.id,
-            f = c === a.V3.QUEST_HOME_TILE_V2_FOOTER,
-            { isEnrolling: P } = (0, N.cf)([O.A], () => ({ isEnrolling: O.A.isEnrolling(R) }), [R]),
-            U = f ? (0, x.Q_)(n) : (0, x.Oz)(n),
-            S = (function (t, e, n, s) {
+            f = n.id,
+            P = c === a.V3.QUEST_HOME_TILE_V2_FOOTER,
+            { isEnrolling: U } = (0, N.cf)([O.A], () => ({ isEnrolling: O.A.isEnrolling(f) }), [f]),
+            S = P ? (0, x.Q_)(n) : (0, x.Oz)(n, d),
+            g = (function (t, e, n, s) {
                 let { launchInGameActivity: i } = (0, C.zW)(e),
                     o = s === a.V3.QUEST_HOME_TILE_V2_FOOTER;
                 if ((0, E.K$)(e))
@@ -542,55 +543,57 @@ let tt = function (t) {
                     default:
                         return null;
                 }
-            })(o, n, q, c),
-            g = f
+            })(o, n, y, c),
+            D = P
                 ? (0, u.C0)(n)
                 : (function (t, e) {
-                      let { features: n } = e.config;
+                      let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+                          { features: s } = e.config;
                       switch (t) {
                           case l.n.WATCH_VIDEO:
                               return (0, A.WM)((0, E.Yh)(e));
                           case l.n.ACHIEVEMENT_IN_ACTIVITY:
                               return _.intl.string(_.t.CkUzLd);
                           case l.n.PLAY_ACTIVITY:
-                              if (n.includes(T.Li.CLOUD_GAMING_ACTIVITY)) return _.intl.string(_.t["+qoymD"]);
+                              if (s.includes(T.Li.CLOUD_GAMING_ACTIVITY))
+                                  return _.intl.string(n ? _.t.V5Qt9D : _.t["+qoymD"]);
                               return _.intl.string(_.t.E4kW5O);
                           default:
                               return _.intl.string(_.t.kUQLMJ);
                       }
-                  })(o, n),
-            D =
-                ((e = S ?? void 0),
+                  })(o, n, d),
+            p =
+                ((e = g ?? void 0),
                 o === l.n.WATCH_VIDEO
                     ? async () => {
                           await (0, x.e0)(n, {
-                              questContent: Q.questContent,
-                              questContentCTA: Q.questContentCTA,
-                              sourceQuestContent: Q.sourceQuestContent,
+                              questContent: R.questContent,
+                              questContentCTA: R.questContentCTA,
+                              sourceQuestContent: R.sourceQuestContent,
                               sourceQuestContentCTA: J(o),
-                              questContentPosition: Q.questContentPosition,
-                              questContentRowIndex: Q.questContentRowIndex,
+                              questContentPosition: R.questContentPosition,
+                              questContentRowIndex: R.questContentRowIndex,
                           });
                       }
                     : async () => {
                           await (0, Z.Oy)(n.id, {
-                              questContent: Q.questContent,
-                              questContentCTA: Q.questContentCTA,
-                              sourceQuestContent: Q.sourceQuestContent,
-                              questContentPosition: Q.questContentPosition,
-                              questContentRowIndex: Q.questContentRowIndex,
+                              questContent: R.questContent,
+                              questContentCTA: R.questContentCTA,
+                              sourceQuestContent: R.sourceQuestContent,
+                              questContentPosition: R.questContentPosition,
+                              questContentRowIndex: R.questContentRowIndex,
                           }),
                               e?.();
                       });
         return (0, s.jsx)(i.$, {
             size: r,
-            loading: P,
+            loading: U,
             variant: (0, a.wX)(c, "primary"),
             onClick: () => {
-                d?.(), D();
+                I?.(), p();
             },
-            text: g,
-            icon: U,
+            text: D,
+            icon: S,
             fullWidth: !0,
         });
     },
@@ -604,18 +607,20 @@ let tt = function (t) {
                 analyticsCtxQuestContentPosition: l,
                 analyticsCtxQuestContentRowIndex: C,
                 size: c = "md",
+                showPlayInstantlyLabel: E,
             } = t,
-            E = (0, a.Pd)(e);
+            d = (0, a.Pd)(e);
         if (0 === Object.keys(e.config.taskConfigV2.tasks).length)
             return (0, s.jsx)(i.$, { variant: "primary", fullWidth: !0, size: "sm", text: _.intl.string(_.t.P84bAD) });
-        let d = Object.values(e.config.taskConfigV2.tasks)[0];
-        switch (E) {
+        let A = Object.values(e.config.taskConfigV2.tasks)[0];
+        switch (d) {
             case a.UA.UNENROLLED:
                 return (0, s.jsx)(tt, {
                     quest: e,
-                    taskType: d.type,
+                    taskType: A.type,
                     size: c,
                     surface: n,
+                    showPlayInstantlyLabel: E,
                     preClickCallback: o,
                     analyticsCtxQuestContent: u,
                     analyticsCtxSourceQuestContent: r,
@@ -625,7 +630,7 @@ let tt = function (t) {
             case a.UA.ENROLLED:
                 return (0, s.jsx)(G, {
                     quest: e,
-                    taskType: d.type,
+                    taskType: A.type,
                     size: c,
                     analyticsCtxQuestContent: u,
                     analyticsCtxSourceQuestContent: r,
@@ -636,7 +641,7 @@ let tt = function (t) {
             case a.UA.INCOMPLETE:
                 return (0, s.jsx)($, {
                     quest: e,
-                    taskType: d.type,
+                    taskType: A.type,
                     size: c,
                     analyticsCtxQuestContent: u,
                     analyticsCtxSourceQuestContent: r,
@@ -658,7 +663,7 @@ let tt = function (t) {
             case a.UA.CLAIMED:
                 return (0, s.jsx)(L, {
                     quest: e,
-                    taskType: d.type,
+                    taskType: A.type,
                     size: c,
                     surface: n,
                     analyticsCtxQuestContent: u,
@@ -669,7 +674,7 @@ let tt = function (t) {
             case a.UA.EXPIRED:
                 return (0, s.jsx)(H, {
                     quest: e,
-                    taskType: d.type,
+                    taskType: A.type,
                     surface: n,
                     size: c,
                     analyticsCtxQuestContent: u,

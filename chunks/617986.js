@@ -49,8 +49,8 @@ var o = n(192308),
     S = n(711014),
     N = n(174459),
     C = n(998218),
-    R = n(877062),
-    O = n(340124),
+    O = n(877062),
+    R = n(340124),
     L = n(859703),
     D = n(405670),
     y = n(192444),
@@ -377,7 +377,7 @@ function ei() {
         n.e("92868"),
         n.e("11310"),
         n.e("53930"),
-        n.e("54638"),
+        n.e("44502"),
         n.e("24689"),
         n.e("34691"),
         n.e("24761"),
@@ -406,11 +406,11 @@ function er(e) {
     let u = (0, r.A)();
     if (!c && t.userStatus?.enrolledAt == null && !(0, F.Ic)(t)) {
         L.A.isEnrolling(t.id) ||
-            (0, O.Oy)(t.id, { questContent: n, questContentCTA: P.Cy.ACCEPT_QUEST, sourceQuestContent: a });
+            (0, R.Oy)(t.id, { questContent: n, questContentCTA: P.Cy.ACCEPT_QUEST, sourceQuestContent: a });
         let e = D.Ay.getState().getVideoProgress(t.id);
         null != e &&
             e.timestampSec > 1 &&
-            ((0, O.QG)(t.id),
+            ((0, R.QG)(t.id),
             N.default.track(W.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: t.id,
                 source_quest_content: (0, P.jO)(a),
@@ -465,7 +465,7 @@ function ea(e) {
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        R.A.launch(t, (t) => {
+        O.A.launch(t, (t) => {
             t || (0, T.bG)({ pathname: W.BVt.QUEST_HOME, hash: e });
         });
 }
@@ -487,7 +487,7 @@ function es(e) {
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        R.A.launch(t, (t) => {
+        O.A.launch(t, (t) => {
             t || (0, T.bG)({ pathname: W.BVt.QUEST_HOME, hash: e });
         });
 }
@@ -509,7 +509,7 @@ function el(e) {
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        R.A.launch(t, (e) => {
+        O.A.launch(t, (e) => {
             e || (0, T.bG)({ pathname: W.BVt.QUEST_HOME });
         });
 }
@@ -541,7 +541,7 @@ function ed(e) {
     });
 }
 async function ec(e, t) {
-    let { type: n } = await (0, O.Oy)(e.id, {
+    let { type: n } = await (0, R.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
         sourceQuestContent: t.sourceQuestContent,
@@ -549,7 +549,7 @@ async function ec(e, t) {
         questContentRowIndex: t.questContentRowIndex,
     });
     switch (n) {
-        case O.WM.SUCCESS:
+        case R.WM.SUCCESS:
             er({
                 quest: e,
                 questContent: t.questContent,
@@ -557,16 +557,17 @@ async function ec(e, t) {
                 sourceQuestContentCTA: t.sourceQuestContentCTA,
             });
             break;
-        case O.WM.CAPTCHA_FAILED:
+        case R.WM.CAPTCHA_FAILED:
             E.A.show({ title: k.intl.string(k.t["/CidxO"]), body: k.intl.string(k.t.HQdHg6) });
             break;
-        case O.WM.UNKNOWN_ERROR:
+        case R.WM.UNKNOWN_ERROR:
             E.A.show({ title: k.intl.string(k.t.R0RpRX), body: k.intl.string(k.t.OXD41D) });
-        case O.WM.PREVIOUS_IN_FLIGHT_REQUEST:
+        case R.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
 function eu(e) {
-    if ((0, V.vA)(e)) return e.config.features.includes(j.Li.CLOUD_GAMING_ACTIVITY) ? c.h : u._;
+    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
+    if ((0, V.vA)(e)) return e.config.features.includes(j.Li.CLOUD_GAMING_ACTIVITY) ? (t ? void 0 : c.h) : u._;
 }
 function e_(e) {
     if ((0, x.K$)(e)) return _.u;

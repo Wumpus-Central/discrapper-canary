@@ -14,7 +14,7 @@ var a = n(409626),
     g = n(939249),
     E = n(834730),
     A = n(862611),
-    C = n(362058),
+    C = n(420298),
     _ = n(590202),
     p = n(284846),
     S = n(287875),
@@ -587,8 +587,8 @@ function b(e, t) {
           : G.intl.string(G.t["7e5k7L"]);
 }
 function U(e) {
-    let { quest: t, application: n, shortText: r = !1 } = e,
-        l = i.useMemo(
+    let { quest: t, application: n, shortText: r = !1, showPlayInstantlyLabel: l = !1 } = e,
+        a = i.useMemo(
             () =>
                 (function (e) {
                     return (0, R.g5)(e) || (0, R.vl)(e)
@@ -601,16 +601,17 @@ function U(e) {
                 })(t),
             [t],
         ),
-        a = (0, N.fc)(t);
-    switch (l) {
+        s = (0, N.fc)(t);
+    switch (a) {
         case 0:
-            if (t.config.features.includes(v.Li.CLOUD_GAMING_ACTIVITY)) return G.intl.string(G.t["+qoymD"]);
+            if (t.config.features.includes(v.Li.CLOUD_GAMING_ACTIVITY))
+                return G.intl.string(l ? G.t.V5Qt9D : G.t["+qoymD"]);
             if ((0, L.vA)(t)) return G.intl.string(r ? G.t.E4kW5O : G.t["Ie9++s"]);
             return G.intl.string(G.t.l7E81v);
         case 1:
             return G.intl.string(G.t.l7E81v);
         case 2:
-            return (0, S.WM)(a);
+            return (0, S.WM)(s);
         case 3:
             return (0, L.vA)(t) && 1 ? G.intl.string(r ? G.t.CkUzLd : G.t["hRIVy+"]) : G.intl.string(G.t.l7E81v);
     }
