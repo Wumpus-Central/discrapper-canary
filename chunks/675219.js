@@ -1,38 +1,38 @@
-n.d(t, { j9: () => x, od: () => R }), n(321073);
+n.d(t, { od: () => R }), n(321073);
 var l = n(627968),
     r = n(64700),
-    i = n(835245),
-    a = n(192308),
-    o = n(231723),
+    i = n(132500),
+    o = n(192308),
+    a = n(231723),
     s = n(166532),
     u = n(925847),
     c = n(310829),
     d = n(174459),
-    m = n(75304),
-    E = n(145659),
-    C = n(241440),
-    p = n(258083),
+    E = n(75304),
+    C = n(145659),
+    h = n(241440),
+    m = n(496920),
     _ = n(982291),
-    h = n(291767),
-    N = n(331611),
-    I = n(169797),
-    f = n(652215);
+    S = n(291767),
+    I = n(331611),
+    f = n(169797),
+    p = n(652215);
 n(322076);
 var A = n(202541),
-    S = n(375708);
-let T = {
-        [m.C.ORB_CHECKOUT]: { allowGiftCustomization: !1, excludePaymentAuthSteps: !0, predicateStepType: "unified" },
-        [m.C.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
-        [m.C.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
-        [m.C.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
-        [m.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]: { allowGiftCustomization: !1 },
-        [m.C.PREMIUM_APPS_OTP_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
-        [m.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1 },
-        [m.C.GUILD_BOOST_CHECKOUT]: { allowGiftCustomization: !1 },
-        [m.C.GUILD_PRODUCT_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "one_time_payment" },
-        [m.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
+    N = n(375708);
+let g = {
+        [E.C.ORB_CHECKOUT]: { allowGiftCustomization: !1, excludePaymentAuthSteps: !0, predicateStepType: "unified" },
+        [E.C.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
+        [E.C.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
+        [E.C.PREMIUM_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
+        [E.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT]: { allowGiftCustomization: !1 },
+        [E.C.PREMIUM_APPS_OTP_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
+        [E.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1 },
+        [E.C.GUILD_BOOST_CHECKOUT]: { allowGiftCustomization: !1 },
+        [E.C.GUILD_PRODUCT_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "one_time_payment" },
+        [E.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
-    g = (0, r.lazy)(() =>
+    y = (0, r.lazy)(() =>
         Promise.all([n.e("11005"), n.e("93438"), n.e("25246"), n.e("33319"), n.e("8430")])
             .then(n.bind(n, 427325))
             .then((e) => {
@@ -40,7 +40,7 @@ let T = {
                 return { default: t };
             }),
     ),
-    y = (e) => (0, l.jsx)(g, { ...e });
+    T = (e) => (0, l.jsx)(y, { ...e });
 class R {
     checkoutFlow;
     checkoutFlowConfiguration;
@@ -49,7 +49,7 @@ class R {
     override_analytic_params;
     constructor({ checkoutFlow: e }) {
         this.checkoutFlow = e;
-        const t = p.Y[e];
+        const t = m.Y[e];
         if (
             !(function (e, t) {
                 return null != t && t.implemented && t.flowType === e;
@@ -58,7 +58,7 @@ class R {
             throw Error(`Checkout flow ${e} is not implemented`);
         (this.checkoutFlowConfiguration = t),
             (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG),
-            (this.internalCheckoutFlowControls = T[e]),
+            (this.internalCheckoutFlowControls = g[e]),
             (this.override_analytic_params =
                 this.tenantCheckoutFlowConfig.TENANT_PROVIDER_CONFIGS.overrideAnalyticParams);
     }
@@ -79,18 +79,18 @@ class R {
         return null != e
             ? { key: null, renderStep: e.renderStep, options: e.options }
             : "one_time_payment" === t
-              ? h.kO
+              ? S.kO
               : "subscription" === t
-                ? h.r3
+                ? S.r3
                 : {
                       key: null,
-                      renderStep: (e) => (0, l.jsx)(N.e, { paymentModalStepProps: e, defaultStep: s.pn.REVIEW }),
+                      renderStep: (e) => (0, l.jsx)(I.e, { paymentModalStepProps: e, defaultStep: s.pn.REVIEW }),
                   };
     }
     getAddPaymentStepConfig(e) {
         let { isGift: t } = e,
             { allowGiftCustomization: n } = this.internalCheckoutFlowControls;
-        if (this.checkoutFlow !== m.C.ORB_CHECKOUT)
+        if (this.checkoutFlow !== E.C.ORB_CHECKOUT)
             return {
                 key: s.pn.ADD_PAYMENT_STEPS,
                 renderStep: (e) =>
@@ -111,7 +111,7 @@ class R {
             return {
                 key: s.pn.GIFT_CUSTOMIZATION,
                 renderStep: (e) => (0, l.jsx)(r, { ...e }),
-                options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => S.intl.string(S.t["W685+b"]) },
+                options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => N.intl.string(N.t["W685+b"]) },
             };
     }
     getReviewStepConfig() {
@@ -119,7 +119,7 @@ class R {
         return {
             key: s.pn.REVIEW,
             renderStep: (t) => (0, l.jsx)(e, { ...t }),
-            options: { useBreadcrumbLabel: () => S.intl.string(S.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => N.intl.string(N.t.QBnNHq) },
         };
     }
     createDefinedStepConfigsArray(e) {
@@ -130,18 +130,18 @@ class R {
             { CUSTOM_CONFIRM_STEP_CONFIG: n, STEPS_BEFORE_CHECKOUT: l = [] } = this.tenantCheckoutFlowConfig,
             { excludePaymentAuthSteps: r } = this.internalCheckoutFlowControls,
             i = this.getPredicateStepConfig(),
-            a = this.getGiftCustomizationStepConfig({ isGift: t }),
-            o = this.getAddPaymentStepConfig({ isGift: t }),
+            o = this.getGiftCustomizationStepConfig({ isGift: t }),
+            a = this.getAddPaymentStepConfig({ isGift: t }),
             u = this.getReviewStepConfig(),
-            c = this.createDefinedStepConfigsArray([i, ...(null != a ? [a] : []), ...l, o, ...(r ? [] : h.PL), u]);
+            c = this.createDefinedStepConfigsArray([i, ...(null != o ? [o] : []), ...l, a, ...(r ? [] : S.PL), u]);
         return null != n && c.push({ key: s.pn.CONFIRM, renderStep: n.renderStep, options: n.options }), c;
     }
     getApplicationId(e) {
-        return this.checkoutFlow === m.C.ORB_CHECKOUT && null != e
+        return this.checkoutFlow === E.C.ORB_CHECKOUT && null != e
             ? (0, c.P)(e)
-            : this.checkoutFlow === m.C.COLLECTIBLES_CHECKOUT
-              ? f.FYj
-              : this.checkoutFlow === m.C.PREMIUM_CHECKOUT
+            : this.checkoutFlow === E.C.COLLECTIBLES_CHECKOUT
+              ? p.FYj
+              : this.checkoutFlow === E.C.PREMIUM_CHECKOUT
                 ? A.tv
                 : void 0;
     }
@@ -152,29 +152,29 @@ class R {
             skuProductLine: l,
             applicationId: r,
             discoverySessionId: i,
-            analyticsLocation: a,
-            analyticsLocations: o,
+            analyticsLocation: o,
+            analyticsLocations: a,
             analyticsObject: s,
             analyticsSourceLocation: u,
             isGift: c,
-            eligibleForTrial: C,
+            eligibleForTrial: h,
         } = e;
-        d.default.track(f.HAw.PAYMENT_FLOW_CANCELED, {
+        d.default.track(p.HAw.PAYMENT_FLOW_CANCELED, {
             load_id: t,
             discovery_session_id: i,
-            payment_type: f.frM[this.checkoutFlowConfiguration.purchaseType],
+            payment_type: p.frM[this.checkoutFlowConfiguration.purchaseType],
             is_gift: c,
             sku_id: n,
             sku_product_line: l,
             application_id: r,
-            location: a ?? s,
-            location_stack: o,
+            location: o ?? s,
+            location_stack: a,
             source: u,
-            eligible_for_trial: C,
+            eligible_for_trial: h,
             payment_modal_version: "v2",
-            checkout_design: E.r.UNIFIED,
+            checkout_design: C.r.UNIFIED,
             checkout_flow: this.checkoutFlow,
-            ...(this.checkoutFlow === m.C.PREMIUM_CHECKOUT ? { subscription_type: f.rzx.PREMIUM } : {}),
+            ...(this.checkoutFlow === E.C.PREMIUM_CHECKOUT ? { subscription_type: p.rzx.PREMIUM } : {}),
             ...this.override_analytic_params,
         });
     }
@@ -188,51 +188,51 @@ class R {
                 checkoutConfiguration: {
                     skuId: c,
                     skuProductLine: d,
-                    discoverySessionId: m,
-                    applicationId: E,
-                    activeSubscription: p,
+                    discoverySessionId: E,
+                    applicationId: C,
+                    activeSubscription: m,
                 },
-                unifiedCheckoutProviderProps: { analyticsLocations: _, analyticsSourceLocation: h },
-                forwardedPaymentModalProps: { analyticsObject: N, ...f } = {},
+                unifiedCheckoutProviderProps: { analyticsLocations: _, analyticsSourceLocation: S },
+                forwardedPaymentModalProps: { analyticsObject: I, ...p } = {},
                 tenantParams: A,
             } = e,
-            S = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
-            T = arguments.length > 2 ? arguments[2] : void 0,
-            g = arguments.length > 3 ? arguments[3] : void 0,
-            R = { current: g ?? (0, i.A)() },
-            x = { current: null },
-            { modalKey: P } = T,
-            O = this.generateRenderHeader(),
-            j = E ?? this.getApplicationId(c),
-            v = !!(null != t && t.isGift),
-            M = !1,
-            L = {
-                ...f,
+            N = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
+            g = arguments.length > 2 ? arguments[2] : void 0,
+            y = arguments.length > 3 ? arguments[3] : void 0,
+            R = { current: y ?? (0, i.A)() },
+            P = { current: null },
+            { modalKey: O } = g,
+            v = this.generateRenderHeader(),
+            x = C ?? this.getApplicationId(c),
+            U = !!(null != t && t.isGift),
+            L = !1,
+            j = {
+                ...p,
                 checkoutFlow: this.checkoutFlow,
                 checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                 tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
-                stepConfigs: this.generateCheckoutStepConfigs({ isGift: v }),
+                stepConfigs: this.generateCheckoutStepConfigs({ isGift: U }),
                 onComplete: (e) => {
-                    null != s && s(e), (M = !0);
+                    null != s && s(e), (L = !0);
                 },
                 onClose: u,
-                renderHeader: O,
+                renderHeader: v,
                 skuId: c ?? null,
                 tenantParams: A ?? {},
                 loadId: R.current,
                 onOrderCreated: function (e) {
-                    (R.current = e.id), (x.current = e);
+                    (R.current = e.id), (P.current = e);
                 },
-                discoverySessionId: m,
-                activeSubscription: p ?? null,
-                applicationId: j,
+                discoverySessionId: E,
+                activeSubscription: m ?? null,
+                applicationId: x,
                 analyticsLocations: _,
-                analyticsObject: N,
-                analyticsSourceLocation: h,
+                analyticsObject: I,
+                analyticsSourceLocation: S,
                 giftContextProps: t,
             };
-        if ("modal" === S)
-            return (0, a.openModalLazy)(
+        if ("modal" === N)
+            return (0, o.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
                         n.e("11005"),
@@ -241,42 +241,42 @@ class R {
                         n.e("33319"),
                         n.e("8430"),
                     ]).then(n.bind(n, 427325));
-                    return (t) => (0, l.jsx)(e, { ...L, renderModalProps: t });
+                    return (t) => (0, l.jsx)(e, { ...j, renderModalProps: t });
                 },
                 {
-                    ...T,
+                    ...g,
                     onCloseRequest: () => {
-                        null != T.onCloseRequest && T.onCloseRequest(M, R.current),
-                            T.skipCloseModalOnCloseRequest || (0, a.closeModal)(P);
+                        null != g.onCloseRequest && g.onCloseRequest(L, R.current),
+                            g.skipCloseModalOnCloseRequest || (0, o.closeModal)(O);
                     },
                     onCloseCallback: () => {
-                        M ||
-                            ((0, C.S)({ checkoutSucceeded: M, order: x.current }),
+                        L ||
+                            ((0, h.S)({ checkoutSucceeded: L, order: P.current }),
                             this.trackPaymentFlowCanceled({
                                 loadId: R.current,
                                 skuId: c,
                                 skuProductLine: d,
-                                applicationId: j,
-                                discoverySessionId: m,
-                                analyticsLocation: f.analyticsLocation,
+                                applicationId: x,
+                                discoverySessionId: E,
+                                analyticsLocation: p.analyticsLocation,
                                 analyticsLocations: _,
-                                analyticsObject: N,
-                                analyticsSourceLocation: h,
-                                isGift: v,
-                                eligibleForTrial: null != f.trialId,
+                                analyticsObject: I,
+                                analyticsSourceLocation: S,
+                                isGift: U,
+                                eligibleForTrial: null != p.trialId,
                             })),
-                            null != T.onCloseCallback && T.onCloseCallback(M),
-                            null != u && u(M, c);
+                            null != g.onCloseCallback && g.onCloseCallback(L),
+                            null != u && u(L, c);
                     },
-                    modalKey: P,
+                    modalKey: O,
                 },
             );
         {
-            let e = f.paymentModalOnClose ?? u,
-                t = { transitionState: o.ip.ENTERED, onClose: () => (null != e && e(!1), Promise.resolve()) };
+            let e = p.paymentModalOnClose ?? u,
+                t = { transitionState: a.ip.ENTERED, onClose: () => (null != e && e(!1), Promise.resolve()) };
             return (0, l.jsx)(r.Suspense, {
-                fallback: (0, l.jsx)(I.KT, {}),
-                children: (0, l.jsx)(y, { ...L, paymentModalOnClose: e, renderModalProps: t }),
+                fallback: (0, l.jsx)(f.KT, {}),
+                children: (0, l.jsx)(T, { ...j, paymentModalOnClose: e, renderModalProps: t }),
             });
         }
     }
@@ -288,12 +288,3 @@ class R {
         return this.renderCheckoutInstance(e, "standalone", { modalKey: "standalone-checkout" }, t);
     }
 }
-let x =
-    29845 == n.j
-        ? r.memo(function (e) {
-              let { checkoutFlow: t, params: n } = e,
-                  l = r.useMemo(() => new R({ checkoutFlow: t }), [t]),
-                  [i] = r.useState(() => l.getStandaloneLoadId());
-              return l.renderStandaloneCheckout(n, i);
-          })
-        : null;
