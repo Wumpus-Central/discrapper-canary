@@ -4920,7 +4920,6 @@ img.thumbnail__0f2e8 {
 .heroHeadingContainer__02f2d,
 .planComparisonTableContainer__02f2d,
 .premiumTierCardsContainer__02f2d,
-.promoBannerContainer__02f2d,
 .whatsNewSectionContainer__02f2d {
     display: flex;
     justify-content: center;
@@ -4934,14 +4933,8 @@ img.thumbnail__0f2e8 {
 
 .bestOfNitroSectionContainer__02f2d,
 .planComparisonTableContainer__02f2d,
-.premiumTierCardsContainer__02f2d,
-.promoBannerContainer__02f2d {
+.premiumTierCardsContainer__02f2d {
     margin-top: 164px
-}
-
-.promoBannerContainer__02f2d {
-    max-width: 1052px;
-    z-index: 1
 }
 
 .bottomOfPageVisibilitySensor__02f2d {

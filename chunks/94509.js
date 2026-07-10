@@ -8,7 +8,6 @@ e.exports = {
     qY: "heroHeadingContainer__02f2d",
     aC: "planComparisonTableContainer__02f2d",
     s5: "premiumTierCardsContainer__02f2d",
-    Hz: "promoBannerContainer__02f2d",
     So: "whatsNewSectionContainer__02f2d",
     _Z: "bottomOfPageVisibilitySensor__02f2d",
     XG: "scroller__02f2d",

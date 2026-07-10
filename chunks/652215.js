@@ -2951,7 +2951,6 @@ var iX =
         (ed.SECURE_FRAMES_VOICE_BOTTOM_SHEET = "Secure Frames Voice Bottom Sheet"),
         (ed.SECURE_FRAMES_VERIFIED_DEVICES = "Secure Frames Verified Devices"),
         (ed.SECURE_FRAMES = "Secure Frames"),
-        (ed.REVERSE_TRIAL_BANNER = "Reverse Trial Banner"),
         (ed.WEB_SETTING_TREE_TOOL = "Web Setting Tree Tool"),
         (ed.THIRD_PARTY_ACCESS = "Third Party Access"),
         (ed.EDIT_CUSTOM_STATUS_MODAL = "Edit Custom Status Modal"),
