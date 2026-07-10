@@ -28,8 +28,8 @@ let N = (0, n(600975).C)({
     treatments: [{ id: 1, label: "Show scores in QS results", config: { showScores: !0 } }],
 });
 var C = n(12351),
-    R = n(915089),
-    O = n(734057),
+    O = n(915089),
+    R = n(734057),
     L = n(458294),
     D = n(71393),
     y = n(290863),
@@ -165,13 +165,13 @@ class z extends r.Component {
         });
     }
 }
-let q = E.Ay.connectStores([v.Ay, O.A], (e) => {
+let q = E.Ay.connectStores([v.Ay, R.A], (e) => {
         let { channel: t } = e;
         return {
             unread: v.Ay.hasUnread(t.id),
             mentions: v.Ay.getMentionCount(t.id),
             isMentionLowImportance: v.Ay.getIsMentionLowImportance(t.id),
-            category: O.A.getChannel(t.parent_id),
+            category: R.A.getChannel(t.parent_id),
         };
     })(z),
     Z = E.Ay.connectStores([M.Ay], (e) => {
@@ -193,9 +193,9 @@ let q = E.Ay.connectStores([v.Ay, O.A], (e) => {
             { mentions: v.Ay.getMentionCount(t.id), status: n }
         );
     })(x.nG),
-    J = E.Ay.connectStores([O.A, v.Ay, y.A], (e) => {
+    J = E.Ay.connectStores([R.A, v.Ay, y.A], (e) => {
         let { user: t } = e,
-            n = O.A.getDMFromUserId(t.id);
+            n = R.A.getDMFromUserId(t.id);
         return {
             mentions: null != n ? v.Ay.getMentionCount(n) : 0,
             status: y.A.getStatus(t.id),
@@ -212,7 +212,7 @@ function ee(e, t, n) {
 class et extends r.PureComponent {
     scrollerRef = r.createRef();
     inputRef = r.createRef();
-    _listId = (0, R.Ld)();
+    _listId = (0, O.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
         g.A.disable(), g.A.enableTemp(m.w);
@@ -497,14 +497,14 @@ class et extends r.PureComponent {
                         n.e("85927"),
                         n.e("834"),
                         n.e("2368"),
-                        n.e("42842"),
                         n.e("33115"),
                         n.e("6338"),
                         n.e("18573"),
+                        n.e("78157"),
                         n.e("55936"),
                         n.e("85404"),
                         n.e("44057"),
-                        n.e("17879"),
+                        n.e("1453"),
                         n.e("88774"),
                         n.e("10120"),
                         n.e("62175"),
@@ -526,7 +526,7 @@ class et extends r.PureComponent {
                         n.e("58529"),
                         n.e("58038"),
                         n.e("62531"),
-                        n.e("44974"),
+                        n.e("22103"),
                         n.e("6174"),
                         n.e("93103"),
                         n.e("28367"),
@@ -611,9 +611,9 @@ class et extends r.PureComponent {
                         n.e("2564"),
                         n.e("95152"),
                         n.e("71477"),
+                        n.e("73401"),
                         n.e("19558"),
                         n.e("58946"),
-                        n.e("86023"),
                         n.e("14285"),
                         n.e("48330"),
                         n.e("40153"),
@@ -628,7 +628,7 @@ class et extends r.PureComponent {
                         n.e("2698"),
                         n.e("37021"),
                         n.e("81314"),
-                        n.e("27012"),
+                        n.e("91913"),
                         n.e("71430"),
                         n.e("501"),
                         n.e("86243"),

@@ -1,7 +1,5 @@
 e.exports = {
     wG: "loader__640e4",
-    FG: "contentWrapper__640e4",
-    Xn: "shaker__640e4",
     X9: "customHeaderForMana__640e4",
     t4: "errorBody__640e4",
     rN: "promotionBodyWrapper__640e4",
