@@ -22,10 +22,10 @@ var i = n(627968),
     S = n(652215),
     N = n(49999),
     C = n(375708),
-    R = n(870433);
+    O = n(870433);
 n(323874), n(14289), n(35956);
-var O = n(503698),
-    L = n.n(O),
+var R = n(503698),
+    L = n.n(R),
     D = n(562708),
     y = n(877624),
     v = n(17928),
@@ -85,8 +85,8 @@ function X(e) {
             featureCards: f,
             changeLogId: m,
             button: g,
-            body: R,
-            disclaimer: O,
+            body: O,
+            disclaimer: R,
             disclaimerExtra: M,
         } = e,
         { onClose: q, transitionState: X } = o,
@@ -168,7 +168,7 @@ function X(e) {
         ),
         r.useEffect(() => {
             if (Y.A.getLayers().includes(S.zgK.COMPONENT_PLAYGROUND)) return;
-            (0, p.Vh)(s.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, { snowflakeId: n });
+            (0, p.Vh)(s.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, { snowflakeId: n });
             let e = Date.now();
             return (
                 T.default.track(S.HAw.CHANGE_LOG_OPENED, { change_log_id: m }),
@@ -177,7 +177,9 @@ function X(e) {
                         change_log_id: m,
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                     }),
-                        (0, p.qr)(s.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, { dismissAction: N.i.DISMISS }),
+                        (0, p.qr)(s.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, n, {
+                            dismissAction: N.i.DISMISS,
+                        }),
                         x.h.dispatch({
                             type: "PREMIUM_MARKETING_ANNOUNCEMENT_MODAL_DISMISSED",
                             promotionId: n,
@@ -297,9 +299,9 @@ function X(e) {
                                     }),
                                 ],
                             }),
-                            null != R &&
-                                "" !== R &&
-                                (0, i.jsx)(P.D, { variant: "heading-lg/semibold", className: $.G3, children: R }),
+                            null != O &&
+                                "" !== O &&
+                                (0, i.jsx)(P.D, { variant: "heading-lg/semibold", className: $.G3, children: O }),
                             f.length > 0 &&
                                 (0, i.jsx)("div", {
                                     className: $.IS,
@@ -313,13 +315,13 @@ function X(e) {
                         className: $.xQ,
                         children: [
                             g(),
-                            null != O &&
-                                "" !== O &&
+                            null != R &&
+                                "" !== R &&
                                 (0, i.jsxs)(U.E, {
                                     variant: "text-xs/medium",
                                     color: "text-subtle",
                                     className: $.ed,
-                                    children: [O, M?.()],
+                                    children: [R, M?.()],
                                 }),
                         ],
                     }),
@@ -333,14 +335,14 @@ function Q(e) {
         r = l.m.fromBinary((0, a.A)(n));
     if ("announcementModalVariant1" !== r.properties.oneofKind) return null;
     {
-        let { isDismissed: e } = (0, E.u$)(s.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, t);
+        let { isDismissed: e } = (0, E.u$)(s.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, t);
         return !i && e ? null : (i && (r.properties.announcementModalVariant1.dismissKey = ""), r);
     }
 }
 function J(e) {
     let { componentId: t, promotionId: n, promotion: r, renderModalProps: a, properties: l } = e,
         { location: E } = (0, d.p)(),
-        { analyticsLocations: O } = (0, _.Ay)(u.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
+        { analyticsLocations: R } = (0, _.Ay)(u.A.PREMIUM_MARKETING_ANNOUNCEMENT_MODAL),
         L = (0, c.Ay)(),
         D = (0, o.q)(L);
     if ("announcementModalVariant1" === l.properties.oneofKind) {
@@ -358,11 +360,11 @@ function J(e) {
                 u = `AnnouncementModalVariant1_${t}`,
                 { onClose: _ } = l,
                 E = a.button?.copy ?? C.intl.string(C.t.YScQSF),
-                O = a.button?.buttonAction,
+                R = a.button?.buttonAction,
                 L =
-                    O === h.dz.OPEN_MARKETING_PAGE
+                    R === h.dz.OPEN_MARKETING_PAGE
                         ? "jump_to_mkt_button"
-                        : O === h.dz.OPEN_SOCIAL_LAYER_STOREFRONT
+                        : R === h.dz.OPEN_SOCIAL_LAYER_STOREFRONT
                           ? "jump_to_slayer_storefront_button"
                           : "get_nitro_button",
                 D = (0, g.h)({
@@ -380,7 +382,7 @@ function J(e) {
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, i.jsx)(f.Anchor, { className: R.$T, href: y.url, children: y.linkText }),
+                                      (0, i.jsx)(f.Anchor, { className: O.$T, href: y.url, children: y.linkText }),
                                   ],
                               })
                         : void 0,
@@ -391,7 +393,7 @@ function J(e) {
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
                                       "\xa0",
-                                      (0, i.jsx)(f.Anchor, { className: R.$T, href: b.url, children: b.linkText }),
+                                      (0, i.jsx)(f.Anchor, { className: O.$T, href: b.url, children: b.linkText }),
                                   ],
                               })
                         : void 0,
@@ -425,7 +427,7 @@ function J(e) {
                                               children: [
                                                   "\xa0",
                                                   (0, i.jsx)(f.Anchor, {
-                                                      className: R.$T,
+                                                      className: O.$T,
                                                       href: t.url,
                                                       children: t.linkText,
                                                   }),
@@ -451,8 +453,8 @@ function J(e) {
                                     target: u,
                                 });
                                 try {
-                                    (O === h.dz.OPEN_MARKETING_PAGE || O === h.dz.OPEN_SOCIAL_LAYER_STOREFRONT) &&
-                                        (await (0, p.qr)(s.M.PREMIUM_MARKETING_MOMENT_ANNOUNCEMENT_UPSELL, n, {
+                                    (R === h.dz.OPEN_MARKETING_PAGE || R === h.dz.OPEN_SOCIAL_LAYER_STOREFRONT) &&
+                                        (await (0, p.qr)(s.M.PREMIUM_MARKETING_MOMENT_DESKTOP_ANNOUNCEMENT_MODAL, n, {
                                             dismissAction: N.i.TAKE_ACTION,
                                         }));
                                 } catch (e) {
@@ -474,7 +476,7 @@ function J(e) {
             promotion: r,
             content: l.properties.announcementModalVariant1,
             renderModalProps: a,
-            analyticsLocations: O,
+            analyticsLocations: R,
             analyticsLocation: E,
             isLightTheme: D,
         });
