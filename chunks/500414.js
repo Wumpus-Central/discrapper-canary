@@ -6533,7 +6533,7 @@ function oH(e) {
         g = (0, c.bG)([M.default], () => M.default.getId()),
         p = (0, c.bG)([ay.Ay], () => ay.Ay.getGuildScheduledEvent(d.guild_scheduled_event?.id), [d]);
     function A() {
-        null != d.channel && aN.Ay.transitionToInviteSync(d);
+        null != d.channel && aN.Ay.transitionToInvite(d, { forceTransition: !0 });
     }
     let x = function () {
             let { autoJoin: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},

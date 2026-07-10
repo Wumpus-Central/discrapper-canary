@@ -65,7 +65,7 @@ async function W(e, t) {
             n = new Set(t?.roles ?? []);
         d = r.roles.some((e) => !n.has(e.id));
     }
-    l && !d ? o.Ay.transitionToInviteSync(r) : await j(r, n, i);
+    l && !d ? o.Ay.transitionToInvite(r, { forceTransition: !0 }) : await j(r, n, i);
 }
 async function Y(e, t) {
     function i() {
