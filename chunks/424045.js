@@ -134,7 +134,7 @@ n.r(R),
         CircleCheckIcon: () => uU.y,
         CircleErrorIcon: () => uw.E,
         CircleInformationIcon: () => uG.m,
-        CircleMinusIcon: () => ux.W,
+        CircleMinusIcon: () => ux,
         CirclePlayIcon: () => uk.S,
         CirclePlusIcon: () => uF.U,
         CircleQuestionIcon: () => ix.c,
@@ -1364,7 +1364,7 @@ if (
     n.e("7451").then(n.t.bind(n, 121014, 19));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ej.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 576259, Version Hash: 4775d5729ab71f52cb7eba77c2946036c62e7867`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 576327, Version Hash: c8fe3736e4dfe93244c5f33d80ab6744026e6f0d`,
 ),
     v.A.setTags({ appContext: G.QCW }),
     ep.A.initBasic(),
@@ -10018,9 +10018,41 @@ var ug = n(845798),
     uP = n(320448),
     uU = n(628284),
     uw = n(695366),
-    uG = n(885574),
-    ux = n(702860),
-    uk = n(65154),
+    uG = n(885574);
+let ux = (e) => {
+    let {
+            size: t = "md",
+            width: n,
+            height: i,
+            secondaryColor: r = "transparent",
+            secondaryColorClass: a = "",
+            color: s = iG.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: l = "",
+            ...o
+        } = e,
+        d = (0, d6.J)(t),
+        c = d?.width ?? n,
+        u = d?.height ?? i;
+    return (0, O.jsxs)("svg", {
+        ...(0, d3.A)(o),
+        xmlns: "http://www.w3.org/2000/svg",
+        width: c,
+        height: u,
+        fill: "none",
+        viewBox: "0 0 24 24",
+        children: [
+            (0, O.jsx)("circle", { cx: "12", cy: "12", r: "10", fill: "string" == typeof r ? r : r.css, className: a }),
+            (0, O.jsx)("path", {
+                fill: "string" == typeof s ? s : s.css,
+                fillRule: "evenodd",
+                d: "M12 23a11 11 0 1 0 0-22 11 11 0 0 0 0 22ZM7 11a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2H7Z",
+                clipRule: "evenodd",
+                className: l,
+            }),
+        ],
+    });
+};
+var uk = n(65154),
     uF = n(245604),
     uV = n(285796);
 let uB = (e) => {
@@ -18636,7 +18668,7 @@ let gv = "isHideDevBanner",
                     className: tl()(gy.Wz, gy.mr),
                     children: [
                         (0, O.jsx)(gD, { className: gy.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "576259" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "576327" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -19031,7 +19063,7 @@ function g4(e) {
 }
 var g5 = n(757780),
     g7 = n(178347),
-    g8 = n(19394),
+    g8 = n(75061),
     g9 = n(504337),
     Se = n(629016),
     St = n(235986),

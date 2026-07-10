@@ -263,8 +263,8 @@
     white-space: nowrap
 }
 
-.button__2ab1b:not(.selected__2ab1b):focus-visible,
-.button__2ab1b:not(.selected__2ab1b):hover {
+.button__2ab1b:focus-visible,
+.button__2ab1b:hover {
     background-image: linear-gradient(var(--background-mod-muted), var(--background-mod-muted))
 }
 
@@ -290,8 +290,29 @@
     position: absolute
 }
 
+.full-motion .item_ded7b4 {
+    transition: transform .24s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.full-motion .item_ded7b4:focus-visible,
+.full-motion .item_ded7b4:hover {
+    transform: scale(1.08)
+}
+
+.full-motion .item_ded7b4:active {
+    transform: scale(.985)
+}
+
+.belowLayer_ded7b4 {
+    inset-block-start: 50%;
+    inset-inline-start: 50%;
+    position: absolute;
+    z-index: -1
+}
+
 .userContainer__38ccf {
-    position: absolute
+    position: absolute;
+    z-index: 0
 }
 
 .dim__38ccf {
@@ -327,14 +348,19 @@
 .editBadge__38ccf {
     inset-block-end: 0;
     inset-inline-end: 0;
-    opacity: 0;
-    transition: opacity .1s ease-in-out
+    opacity: 0
 }
 
-.trigger__38ccf.menuOpen__38ccf .editBadge__38ccf,
+.full-motion .editBadge__38ccf {
+    transform: scale(.4);
+    transition: transform .18s cubic-bezier(.34, 1.56, .64, 1), opacity .18s cubic-bezier(.34, 1.56, .64, 1)
+}
+
+.trigger__38ccf.isStatusMenuOpen__38ccf .editBadge__38ccf,
 .trigger__38ccf:focus-visible .editBadge__38ccf,
 .trigger__38ccf:hover .editBadge__38ccf {
-    opacity: 1
+    opacity: 1;
+    transform: scale(1)
 }
 
 .duck__2dee0 {

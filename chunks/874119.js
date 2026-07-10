@@ -6,5 +6,5 @@ e.exports = {
     qS: "badge__38ccf",
     Af: "guildRoomStatusBadge__38ccf",
     Gk: "editBadge__38ccf",
-    MO: "menuOpen__38ccf",
+    Zu: "isStatusMenuOpen__38ccf",
 };

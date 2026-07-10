@@ -1,4 +1,4 @@
-n.d(t, { A: () => D });
+n.d(t, { A: () => w });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -8,17 +8,17 @@ var i = n(627968),
     c = n(17928),
     d = n(717421),
     u = n(939249),
-    p = n(22231),
-    h = n(717558),
+    h = n(22231),
+    p = n(717558),
     m = n(85448),
     A = n(734057),
     x = n(287809),
-    g = n(977997),
-    f = n(531685),
+    f = n(977997),
+    g = n(531685),
     C = n(562153),
     j = n(446243),
-    y = n(920639),
-    v = n(558076),
+    v = n(920639),
+    y = n(558076),
     E = n(360729),
     N = n(996752),
     I = n(610274),
@@ -29,28 +29,28 @@ var i = n(627968),
     R = n(375708),
     P = n(874119);
 function O(e) {
-    let { userId: t, channelId: n, x: a, y: v, statusId: E, numericAvatarSize: N, avatarSize: O, experimental: L } = e,
-        D = (0, c.bG)([x.default], () => x.default.getUser(t)),
-        w = (0, c.bG)([x.default], () => x.default.getCurrentUser()?.id === t),
+    let { userId: t, channelId: n, x: a, y, statusId: E, numericAvatarSize: N, avatarSize: O, experimental: L } = e,
+        w = (0, c.bG)([x.default], () => x.default.getUser(t)),
+        D = (0, c.bG)([x.default], () => x.default.getCurrentUser()?.id === t),
         [M, U] = l.useState(!1),
         V = (0, c.bG)([A.A], () => A.A.getChannel(n)?.guild_id),
-        k = (0, c.bG)([g.A], () => g.A.getVoiceState(V, t)),
-        B = (0, h.A)({ userId: t }),
-        G = (0, c.bG)([f.A], () => f.A.isFocused()),
-        H = (0, C.tx)(V, n, D),
+        k = (0, c.bG)([f.A], () => f.A.getVoiceState(V, t)),
+        B = (0, p.A)({ userId: t }),
+        G = (0, c.bG)([g.A], () => g.A.isFocused()),
+        H = (0, C.tx)(V, n, w),
         { seats: F } = S.iX[o.I.DEFAULT],
-        z = F.find((e) => e.position.x === a && e.position.y === v),
-        W = (0, d.z)({ x: a, y: v, config: { ...r.config.default, duration: 250 } }),
+        z = F.find((e) => e.position.x === a && e.position.y === y),
+        W = (0, d.z)({ x: a, y: y, config: { ...r.config.default, duration: 250 } }),
         Y = l.useCallback(() => {
-            null != V && (0, y.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "clicked" });
+            null != V && (0, v.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "clicked" });
         }, [t, V, n]),
         K = l.useCallback(() => {
-            null != V && (0, y.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "hovered" });
+            null != V && (0, v.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "hovered" });
         }, [t, V, n]);
-    if (null == D || null == V) return null;
+    if (null == w || null == V) return null;
     let X = (0, i.jsx)(m.A, {
-            userId: D.id,
-            src: D.getAvatarURL(V, N, B && G),
+            userId: w.id,
+            src: w.getAvatarURL(V, N, B && G),
             size: O,
             muted: k?.isVoiceMuted() ?? !1,
             deafen: k?.isVoiceDeafened() ?? !1,
@@ -78,10 +78,10 @@ function O(e) {
                         className: s()(P.qS, P.Af),
                         children: (0, i.jsx)($, { size: "sm", color: "currentColor" }),
                     }),
-                w &&
+                D &&
                     (0, i.jsx)("div", {
                         className: s()(P.qS, P.Gk),
-                        children: (0, i.jsx)(p.R, { size: "xs", color: "currentColor" }),
+                        children: (0, i.jsx)(h.R, { size: "xs", color: "currentColor" }),
                     }),
             ],
         });
@@ -89,11 +89,10 @@ function O(e) {
         "aria-label": H,
         className: P.f1,
         style: Z,
-        children: w
+        children: D
             ? (0, i.jsxs)(_.T, {
                   isOpen: M,
                   onOpenChange: U,
-                  radius: N + 16,
                   children: [
                       (0, i.jsx)(_.T.Trigger, {
                           children: (e) => {
@@ -104,7 +103,7 @@ function O(e) {
                                   shouldShow: !M,
                                   children: (0, i.jsx)(u.D, {
                                       ...l,
-                                      className: s()(P.hZ, { [P.MO]: M }),
+                                      className: s()(P.hZ, { [P.Zu]: M }),
                                       innerRef: (e) => {
                                           t.current = e;
                                       },
@@ -118,6 +117,7 @@ function O(e) {
                           },
                       }),
                       (0, i.jsx)(_.T.Popup, {
+                          elevation: "below",
                           "aria-label": R.intl.string(b.default.LTAf2V),
                           children: I.x.map((e) => {
                               let t = e.icon;
@@ -171,10 +171,10 @@ function L(e) {
         }),
     });
 }
-function D(e) {
+function w(e) {
     let { channelId: t, roomWidth: n } = e,
         l = (0, c.bG)([A.A], () => A.A.getChannel(t)?.guild_id),
-        a = (0, c.bG)([v.A], () => v.A.getRoomUsers(t)),
+        a = (0, c.bG)([y.A], () => y.A.getRoomUsers(t)),
         { numericAvatarSize: s, avatarSize: r } = (0, N.F)(n);
     return 0 === a.size || null == l
         ? null

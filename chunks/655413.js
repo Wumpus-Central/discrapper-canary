@@ -9,27 +9,27 @@ var l = n(237140),
     c = n(375708),
     d = n(189690);
 function u(e) {
-    let { name: t, status: n, shouldShow: u = !0, children: p } = e,
+    let { name: t, status: n, shouldShow: u = !0, children: h } = e,
         {
-            tooltipId: h,
+            tooltipId: p,
             isVisible: m,
             targetElementRef: A,
             trigger: x,
-        } = (0, s.D)({ children: p, shouldShow: u, asContainer: !0, containerTag: "div" }),
-        g = (0, a.j)({ shouldShow: m }),
-        f = n?.icon,
+        } = (0, s.D)({ children: h, shouldShow: u, asContainer: !0, containerTag: "div" }),
+        f = (0, a.j)({ shouldShow: m }),
+        g = n?.icon,
         C = (0, i.jsxs)("div", {
             className: d.Qs,
             children: [
-                (0, i.jsx)(r.E, { variant: "text-sm/medium", lineClamp: 1, children: t }),
+                (0, i.jsx)(r.E, { variant: "text-md/medium", color: "text-strong", lineClamp: 1, children: t }),
                 null != n &&
-                    null != f &&
+                    null != g &&
                     (0, i.jsxs)("div", {
                         className: d.h5,
                         children: [
-                            (0, i.jsx)(f, { size: "xs", className: d.I8 }),
+                            (0, i.jsx)(g, { size: "xs", className: d.I8 }),
                             (0, i.jsx)(r.E, {
-                                variant: "text-sm/normal",
+                                variant: "text-xs/normal",
                                 color: "text-subtle",
                                 lineClamp: 1,
                                 className: d.Rh,
@@ -42,12 +42,12 @@ function u(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             x,
-            g((e, t) =>
+            f((e, t) =>
                 t
                     ? (0, i.jsx)(l.R, {
                           isVisible: m,
                           targetElementRef: A,
-                          id: h,
+                          id: p,
                           content: C,
                           position: "top",
                           animationStyle: e,

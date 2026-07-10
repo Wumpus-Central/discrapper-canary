@@ -1,81 +1,144 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => j });
 var i = n(627968),
     l = n(64700),
-    a = n(580929),
-    s = n(621466),
-    r = n(982147),
-    o = n(922016),
-    c = n(170709),
-    d = n(573228);
-let u = { north: 0, east: 90, south: 180, west: 270 },
-    p = { tension: 280, friction: 18 },
-    h = { tension: 320, friction: 30, clamp: !0 },
-    m = l.createContext(null);
-function A() {
-    let e = l.useContext(m);
+    a = n(503698),
+    s = n.n(a),
+    r = n(580929),
+    o = n(621466),
+    c = n(982147),
+    d = n(922016),
+    u = n(82495),
+    h = n(170709),
+    p = n(573228);
+let m = { north: 0, east: 90, south: 180, west: 270 },
+    A = { tension: 280, friction: 18 },
+    x = { tension: 320, friction: 30, clamp: !0 },
+    f = l.createContext(null);
+function g() {
+    let e = l.useContext(f);
     if (null == e) throw Error("GuildRoomRadialMenu compound components must be rendered within <GuildRoomRadialMenu>");
     return e;
 }
-function x(e) {
-    let { children: t, onExited: n, ariaLabel: s } = e,
-        { isOpen: o, menuId: c, radius: u, startAngleDeg: m, centerSingleItem: x } = A(),
-        g = l.useRef(null),
-        f = l.Children.toArray(t).filter(l.isValidElement),
-        C = f.length,
-        j = x && 1 === C,
-        y = l.useRef(o),
-        v = l.useRef(n);
+function C(e) {
+    let { children: t, onExited: n, ariaLabel: a, dismissable: s = !1 } = e,
+        { isOpen: o, setOpen: d, triggerRef: h, menuId: m, spacing: f, startAngleDeg: C, centerSingleItem: j } = g(),
+        v = l.useCallback(() => {
+            s && d(!1);
+        }, [s, d]),
+        y = (0, u.A)(null, v, h),
+        E = l.useCallback(
+            (e) => {
+                s && "Escape" === e.key && d(!1);
+            },
+            [s, d],
+        ),
+        N = l.Children.toArray(t).filter(l.isValidElement),
+        I = N.length,
+        T = j && 1 === I,
+        _ = l.useRef(o),
+        S = l.useRef(n);
     l.useEffect(() => {
-        y.current = o;
+        _.current = o;
     }, [o]),
         l.useEffect(() => {
-            v.current = n;
+            S.current = n;
         }, [n]);
-    let [E] = (0, r.m)(
-        C,
-        (e) => {
-            let t,
-                n = j
-                    ? { x: 0, y: 0 }
-                    : { x: u * Math.sin((t = ((m + (360 / C) * e) * Math.PI) / 180)), y: -u * Math.cos(t) };
-            return {
-                from: { x: 0, y: 0, opacity: 0, scale: 0.5 },
-                to: o ? { x: n.x, y: n.y, opacity: 1, scale: 1 } : { x: 0, y: 0, opacity: 0, scale: 0.5 },
-                config: o ? p : h,
-                onRest: (t) => {
-                    !0 !== t.finished || y.current || 0 !== e || v.current();
-                },
+    let b = l.useRef([]),
+        [R, P] = l.useState([]);
+    l.useLayoutEffect(() => {
+        let e = b.current.slice(0, I),
+            t = () => {
+                P((t) => {
+                    let n = e.map((e) => ({ width: e?.offsetWidth ?? 0, height: e?.offsetHeight ?? 0 }));
+                    return t.length === n.length &&
+                        n.every((e, n) => t[n]?.width === e.width && t[n]?.height === e.height)
+                        ? t
+                        : n;
+                });
             };
-        },
-        "respect-motion-settings",
-        [o, C, u, m, j],
-    );
+        t();
+        let n = new ResizeObserver(t);
+        for (let t of e) null != t && n.observe(t);
+        return () => n.disconnect();
+    }, [I]);
+    let [O, L] = l.useState(0);
+    l.useLayoutEffect(() => {
+        let e = h.current;
+        if (null == e) return;
+        let t = () => {
+            let t = Math.max(e.offsetWidth, e.offsetHeight) / 2;
+            L((e) => (e === t ? e : t));
+        };
+        t();
+        let n = new ResizeObserver(t);
+        return n.observe(e), () => n.disconnect();
+    }, [h]);
+    let w = O + f,
+        [D] = (0, c.m)(
+            I,
+            (e) => {
+                var t, n;
+                let i,
+                    l,
+                    a,
+                    s,
+                    r = R[e] ?? { width: 0, height: 0 },
+                    c = T
+                        ? { x: 0, y: 0 }
+                        : ((l = Math.sin((i = ((C + (360 / I) * e) * Math.PI) / 180))),
+                          {
+                              x:
+                                  (s =
+                                      w +
+                                      ((a = -Math.cos(i)),
+                                      (t = r.width / 2),
+                                      (n = r.height / 2),
+                                      Math.min(0 === l ? 1 / 0 : t / Math.abs(l), 0 === a ? 1 / 0 : n / Math.abs(a)))) *
+                                  l,
+                              y: s * a,
+                          });
+                return {
+                    from: { x: 0, y: 0, opacity: 0, scale: 0.5 },
+                    to: o ? { x: c.x, y: c.y, opacity: 1, scale: 1 } : { x: 0, y: 0, opacity: 0, scale: 0.5 },
+                    config: o ? A : x,
+                    onRest: (t) => {
+                        !0 !== t.finished || _.current || 0 !== e || S.current();
+                    },
+                };
+            },
+            "respect-motion-settings",
+            [o, I, w, C, T, R],
+        );
     return (
         l.useEffect(() => {
-            g.current?.focus({ preventScroll: !0 });
-        }, []),
+            y.current?.focus({ preventScroll: !0 });
+        }, [y]),
         l.useEffect(() => {
-            o || 0 !== C || v.current();
-        }, [o, C]),
+            o || 0 !== I || S.current();
+        }, [o, I]),
         (0, i.jsx)("div", {
-            ref: g,
-            id: c,
+            ref: y,
+            id: m,
             role: "menu",
-            "aria-label": s,
+            "aria-label": a,
             tabIndex: -1,
-            className: d.E,
-            children: f.map((e, t) => {
-                let n = E[t];
+            className: p.EQ,
+            onKeyDown: E,
+            children: N.map((e, t) => {
+                let n = D[t];
                 return (0, i.jsx)(
-                    a.animated.div,
+                    r.animated.div,
                     {
-                        className: d.D,
+                        ref: (e) => {
+                            b.current[t] = e;
+                        },
+                        className: p.D5,
                         style:
                             null == n
                                 ? {}
                                 : {
                                       opacity: `${n.opacity}`,
-                                      transform: (0, a.to)(
+                                      transform: (0, r.to)(
                                           [n.x, n.y, n.scale],
                                           (e, t, n) => `translate(-50%, -50%) translate(${e}px, ${t}px) scale(${n})`,
                                       ),
@@ -88,46 +151,46 @@ function x(e) {
         })
     );
 }
-let g = Object.assign(
+let j = Object.assign(
     function (e) {
         let {
                 isOpen: t,
                 onOpenChange: n,
                 defaultOpen: a = !1,
-                radius: s = 56,
+                spacing: s = 16,
                 startPosition: r = "north",
                 centerSingleItem: o = !1,
                 children: c,
             } = e,
             d = l.useRef(null),
-            p = l.useId(),
-            [h, A] = l.useState(a),
-            x = void 0 !== t,
-            g = x ? t : h,
-            f = l.useCallback(
+            u = l.useId(),
+            [h, p] = l.useState(a),
+            A = void 0 !== t,
+            x = A ? t : h,
+            g = l.useCallback(
                 (e) => {
-                    x || A(e), n?.(e);
+                    A || p(e), n?.(e);
                 },
-                [x, n],
+                [A, n],
             ),
             C = l.useMemo(
                 () => ({
-                    isOpen: g,
-                    setOpen: f,
+                    isOpen: x,
+                    setOpen: g,
                     triggerRef: d,
-                    menuId: p,
-                    radius: s,
-                    startAngleDeg: u[r],
+                    menuId: u,
+                    spacing: s,
+                    startAngleDeg: m[r],
                     centerSingleItem: o,
                 }),
-                [g, f, p, s, r, o],
+                [x, g, u, s, r, o],
             );
-        return (0, i.jsx)(m.Provider, { value: C, children: c });
+        return (0, i.jsx)(f.Provider, { value: C, children: c });
     },
     {
         Trigger: function (e) {
             let { children: t } = e,
-                { isOpen: n, setOpen: i, triggerRef: l, menuId: a } = A();
+                { isOpen: n, setOpen: i, triggerRef: l, menuId: a } = g();
             return t({
                 ref: l,
                 onClick: () => i(!n),
@@ -137,40 +200,48 @@ let g = Object.assign(
             });
         },
         Popup: function (e) {
-            let { children: t, "aria-label": n } = e,
-                { isOpen: a, setOpen: r, triggerRef: c } = A(),
-                [d, u] = l.useState(a),
-                p = l.useRef(a);
-            a && !d && u(!0),
+            let { children: t, elevation: n = "above", "aria-label": a } = e,
+                { isOpen: s, setOpen: r, triggerRef: c } = g(),
+                [u, h] = l.useState(s),
+                m = l.useRef(s);
+            s && !u && h(!0),
                 l.useEffect(() => {
-                    let e = p.current;
-                    if (((p.current = a), e && !a)) {
+                    let e = m.current;
+                    if (((m.current = s), e && !s)) {
                         let e = c.current;
-                        (0, s.vq)(e, HTMLElement) && e.focus({ preventScroll: !0 });
+                        (0, o.vq)(e, HTMLElement) && e.focus({ preventScroll: !0 });
                     }
-                }, [a, c]);
-            let h = l.useCallback(() => u(!1), []);
-            return (0, i.jsx)(o.Y, {
-                targetElementRef: c,
-                shouldShow: d,
-                position: "center",
-                animation: o.Y.Animation.NONE,
-                nudgeAlignIntoViewport: !1,
-                autoInvert: !1,
-                spacing: 0,
-                onRequestClose: () => r(!1),
-                renderPopout: () => (0, i.jsx)(x, { onExited: h, ariaLabel: n, children: t }),
-                children: () => null,
-            });
+                }, [s, c]);
+            let A = l.useCallback(() => h(!1), []);
+            return "below" === n
+                ? u
+                    ? (0, i.jsx)("div", {
+                          className: p.Fn,
+                          children: (0, i.jsx)(C, { onExited: A, ariaLabel: a, dismissable: !0, children: t }),
+                      })
+                    : null
+                : (0, i.jsx)(d.Y, {
+                      targetElementRef: c,
+                      shouldShow: u,
+                      position: "center",
+                      animation: d.Y.Animation.NONE,
+                      nudgeAlignIntoViewport: !1,
+                      autoInvert: !1,
+                      spacing: 0,
+                      onRequestClose: () => r(!1),
+                      renderPopout: () => (0, i.jsx)(C, { onExited: A, ariaLabel: a, children: t }),
+                      children: () => null,
+                  });
         },
         Item: function (e) {
-            let { closeOnClick: t = !0, onClick: n, ...l } = e,
-                { setOpen: a } = A();
-            return (0, i.jsx)(c.A, {
-                ...l,
+            let { closeOnClick: t = !0, onClick: n, className: l, ...a } = e,
+                { setOpen: r } = g();
+            return (0, i.jsx)(h.A, {
+                ...a,
+                className: s()([p.AS, l]),
                 role: "menuitem",
                 onClick: (e) => {
-                    n?.(e), t && a(!1);
+                    n?.(e), t && r(!1);
                 },
             });
         },
