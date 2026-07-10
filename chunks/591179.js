@@ -1,14 +1,15 @@
-i.d(n, { E: () => u, X: () => s });
-let t = (0, i(945810).mj)({
+"use strict";
+n.d(t, { E: () => a, X: () => r });
+let i = (0, n(945810).mj)({
     name: "2026-03-wysiwyg-user-profile-editing",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function s(e) {
-    let { enabled: n } = t.useConfig({ location: e });
-    return n;
+function r(e) {
+    let { enabled: t } = i.useConfig({ location: e });
+    return t;
 }
-function u(e) {
-    return t.getConfig({ location: e }).enabled;
+function a(e) {
+    return i.getConfig({ location: e }).enabled;
 }

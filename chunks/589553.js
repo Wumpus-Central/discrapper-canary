@@ -1,9 +1,10 @@
-a.d(t, { A: () => i });
-var s = a(439818),
-    n = a(696016);
-function i(e, t) {
-    let a = (0, s.A)((0, n.cM)(e.createdAt)),
-        i = (0, s.A)(null != e.name && "" !== e.name ? e.name : a),
-        r = "" !== i ? i : a;
-    return `${r}.${t}`;
+"use strict";
+n.d(t, { A: () => a });
+var i = n(439818),
+    r = n(696016);
+function a(e, t) {
+    let n = (0, i.A)((0, r.cM)(e.createdAt)),
+        a = (0, i.A)(null != e.name && "" !== e.name ? e.name : n),
+        s = "" !== a ? a : n;
+    return `${s}.${t}`;
 }

@@ -1,4 +1,5 @@
-n.d(t, { NJ: () => l });
+"use strict";
+n.d(t, { NJ: () => r });
 let i = { DARK: "dark", LIGHT: "light", MIDNIGHT: "midnight", DARKER: "darker" },
-    l = i;
+    r = i;
 i.MIDNIGHT, i.DARK, i.DARKER, i.DARK;

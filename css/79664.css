@@ -86,7 +86,7 @@
     position: relative
 }
 
-.heroDisplayContainer__3a1f6 {
+.heroDisplayContainer__3a1f6.heroDisplayContainer__3a1f6 {
     -webkit-mask-image: linear-gradient(180deg, #000 0, transparent);
     mask-image: linear-gradient(180deg, #000 0, transparent);
     max-height: 190px;

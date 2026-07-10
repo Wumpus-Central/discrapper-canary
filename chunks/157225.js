@@ -1,26 +1,27 @@
-n.d(t, { N: () => r });
+"use strict";
+n.d(t, { N: () => l });
 var i = n(627968);
 n(64700);
-var l = n(661531),
-    s = n(996682),
-    a = n(27989);
-let r = (e) => {
+var r = n(661531),
+    a = n(996682),
+    s = n(27989);
+let l = (e) => {
     let {
             size: t = "md",
             width: n,
-            height: r,
-            color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            height: l,
+            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: d = "",
             ...c
         } = e,
-        u = (0, a.J)(t),
-        h = u?.width ?? n,
-        p = u?.height ?? r;
+        u = (0, s.J)(t),
+        _ = u?.width ?? n,
+        E = u?.height ?? l;
     return (0, i.jsx)("svg", {
-        ...(0, s.A)(c),
+        ...(0, a.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: h,
-        height: p,
+        width: _,
+        height: E,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {
