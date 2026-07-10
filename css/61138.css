@@ -4785,11 +4785,12 @@ img.thumbnail__0f2e8 {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
-    overflow: hidden
+    overflow: hidden;
+    transform: translateZ(0)
 }
 
 .nowPlayingColumn__133bf {
-    background: var(--background-base-lower);
+    background: var(--background-gradient-chat, var(--background-base-lower));
     flex: 0 1 30%;
     max-width: 420px;
     min-width: 360px
@@ -4843,8 +4844,7 @@ img.thumbnail__0f2e8 {
     flex-direction: row;
     height: 100%;
     overflow: hidden;
-    position: relative;
-    transform: translateZ(0)
+    position: relative
 }
 
 .tabBody__133bf:before {
