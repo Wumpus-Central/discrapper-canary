@@ -1,4 +1,4 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => N });
 var i = n(627968),
     l = n(64700),
     a = n(17928),
@@ -8,81 +8,82 @@ var i = n(627968),
     c = n(97808),
     d = n(778712),
     u = n(834730),
-    p = n(241326),
-    h = n(46054),
+    h = n(241326),
+    p = n(46054),
     m = n(734057),
     A = n(287809),
     x = n(562153),
-    g = n(446243),
-    f = n(996752),
-    C = n(189090),
+    f = n(446243),
+    g = n(920639),
+    C = n(996752),
+    j = n(189090),
     y = n(375708),
-    j = n(599459),
+    v = n(599459),
     E = n(739549);
-function v(e) {
-    let { channelId: t, note: n, roomWidth: v } = e,
-        [N, I] = (0, l.useState)(!1),
+function N(e) {
+    let { channelId: t, note: n, roomWidth: N } = e,
+        [I, T] = (0, l.useState)(!1),
         _ = (0, l.useRef)(null),
-        T = (0, f.F)(v).numericAvatarSize / 2,
-        S = (0, a.bG)([A.default], () => A.default.getUser(n.createdBy)),
+        S = (0, C.F)(N).numericAvatarSize / 2,
+        b = (0, a.bG)([A.default], () => A.default.getUser(n.createdBy)),
         R = (0, a.bG)([m.A], () => m.A.getChannel(t)?.guild_id),
-        b = (0, x.tx)(R, t, S);
-    return null == S || null == R
+        P = (0, x.tx)(R, t, b);
+    return null == b || null == R
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
                   (0, i.jsx)(o.D, {
                       innerRef: _,
-                      className: j.kL,
+                      className: v.kL,
                       onClick: () => {
-                          I(!N);
+                          I || (0, g.Ql)({ channelId: t, interactionType: "note_opened" }), T(!I);
                       },
                       style: { left: `${n.position.x}%`, top: `${n.position.y}%` },
                       children: (0, i.jsx)("img", {
-                          className: j.N4,
+                          className: v.N4,
                           src: E.A,
-                          alt: y.intl.string(C.default["Vj+S0/"]),
-                          style: { width: T },
+                          alt: y.intl.string(j.default["Vj+S0/"]),
+                          style: { width: S },
                       }),
                   }),
                   (0, i.jsxs)(s.x, {
-                      shouldShow: N,
+                      shouldShow: I,
                       onRequestClose: () => {
-                          I(!1);
+                          T(!1);
                       },
                       closeOnClickOutside: !0,
                       targetElementRef: _,
                       children: [
                           (0, i.jsxs)("div", {
-                              className: j.oO,
+                              className: v.oO,
                               children: [
                                   (0, i.jsxs)("div", {
-                                      className: j.wx,
+                                      className: v.wx,
                                       children: [
                                           (0, i.jsxs)("div", {
-                                              className: j.kQ,
+                                              className: v.kQ,
                                               children: [
                                                   (0, i.jsx)(c.eu, {
-                                                      "aria-label": b,
-                                                      src: S.getAvatarURL(R, 24),
+                                                      "aria-label": P,
+                                                      src: b.getAvatarURL(R, 24),
                                                       size: d._3.SIZE_24,
                                                   }),
-                                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: b }),
+                                                  (0, i.jsx)(u.E, { variant: "text-md/normal", children: P }),
                                               ],
                                           }),
                                           (0, i.jsx)(o.D, {
                                               onClick: () => {
-                                                  null != R && (0, g.yF)(R, t, n.objectId);
+                                                  null != R && (0, f.yF)(R, t, n.objectId);
                                               },
-                                              className: j.Kk,
-                                              children: (0, i.jsx)(p.u, { size: "sm", color: "currentColor" }),
+                                              className: v.Kk,
+                                              children: (0, i.jsx)(h.u, { size: "sm", color: "currentColor" }),
                                           }),
                                       ],
                                   }),
                                   (0, i.jsx)(u.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
-                                      children: h.A.parseTopic(n.content, !0, { channelId: t }),
+                                      children: p.A.parseTopic(n.content, !0, { channelId: t }),
                                   }),
                               ],
                           }),

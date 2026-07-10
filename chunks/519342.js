@@ -17,8 +17,8 @@ var i = n(627968),
     g = n(531685),
     C = n(562153),
     j = n(446243),
-    v = n(920639),
-    y = n(558076),
+    y = n(920639),
+    v = n(558076),
     E = n(360729),
     N = n(996752),
     I = n(610274),
@@ -29,7 +29,7 @@ var i = n(627968),
     R = n(375708),
     P = n(874119);
 function O(e) {
-    let { userId: t, channelId: n, x: a, y, statusId: E, numericAvatarSize: N, avatarSize: O, experimental: L } = e,
+    let { userId: t, channelId: n, x: a, y: v, statusId: E, numericAvatarSize: N, avatarSize: O, experimental: L } = e,
         w = (0, c.bG)([x.default], () => x.default.getUser(t)),
         D = (0, c.bG)([x.default], () => x.default.getCurrentUser()?.id === t),
         [M, U] = l.useState(!1),
@@ -39,13 +39,13 @@ function O(e) {
         G = (0, c.bG)([g.A], () => g.A.isFocused()),
         H = (0, C.tx)(V, n, w),
         { seats: F } = S.iX[o.I.DEFAULT],
-        z = F.find((e) => e.position.x === a && e.position.y === y),
-        W = (0, d.z)({ x: a, y: y, config: { ...r.config.default, duration: 250 } }),
+        z = F.find((e) => e.position.x === a && e.position.y === v),
+        W = (0, d.z)({ x: a, y: v, config: { ...r.config.default, duration: 250 } }),
         Y = l.useCallback(() => {
-            null != V && (0, v.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "clicked" });
+            null != V && (0, y.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "clicked" });
         }, [t, V, n]),
         K = l.useCallback(() => {
-            null != V && (0, v.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "hovered" });
+            null != V && (0, y.EB)({ guildId: V, channelId: n, targetUserId: t, interactionType: "hovered" });
         }, [t, V, n]);
     if (null == w || null == V) return null;
     let X = (0, i.jsx)(m.A, {
@@ -174,7 +174,7 @@ function L(e) {
 function w(e) {
     let { channelId: t, roomWidth: n } = e,
         l = (0, c.bG)([A.A], () => A.A.getChannel(t)?.guild_id),
-        a = (0, c.bG)([y.A], () => y.A.getRoomUsers(t)),
+        a = (0, c.bG)([v.A], () => v.A.getRoomUsers(t)),
         { numericAvatarSize: s, avatarSize: r } = (0, N.F)(n);
     return 0 === a.size || null == l
         ? null
