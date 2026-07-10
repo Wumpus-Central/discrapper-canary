@@ -1296,6 +1296,7 @@ var B =
         (((T = {})[(T.SOURCE_UNSPECIFIED = 0)] = "SOURCE_UNSPECIFIED"),
         (T[(T.SOURCE_NITRO = 1)] = "SOURCE_NITRO"),
         (T[(T.SOURCE_THIRDPARTY_CROISSANT = 2)] = "SOURCE_THIRDPARTY_CROISSANT"),
+        (T[(T.SOURCE_BOT = 3)] = "SOURCE_BOT"),
         T);
 class et extends N.G {
     constructor() {
