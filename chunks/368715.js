@@ -91,7 +91,7 @@ let y = function (t) {
     };
 var N = n(17928),
     O = n(859703),
-    Q = n(795965);
+    Q = n(630037);
 let R = function (t) {
     let {
             quest: e,
@@ -108,14 +108,14 @@ let R = function (t) {
             () => ({ isClaiming: O.A.isClaimingReward(c) || O.A.isFetchingRewardCode(c) }),
             [c],
         ),
-        d = null != C ? (0, a.Ut)(C) : null,
+        d = null != C && (0, a.P0)(C),
         A = (0, Q.D)({
             quest: e,
             questContent: n,
             sourceQuestContent: o,
             questContentPosition: u,
             questContentRowIndex: r,
-            experimentLocation: d,
+            shouldRedirectToQuestHome: d,
         });
     return (0, s.jsx)(i.$, {
         variant: (0, a.wX)(C),
@@ -142,7 +142,7 @@ var f = n(64700),
     b = n(901406),
     k = n(862611),
     V = n(284846),
-    W = n(833416);
+    W = n(263752);
 function z(t) {
     let {
             quest: e,

@@ -1,7 +1,7 @@
 n.d(e, { A: () => q });
 var s = n(627968),
-    o = n(64700),
-    u = n(17928),
+    u = n(64700),
+    o = n(17928),
     i = n(661531),
     l = n(990078),
     c = n(242644),
@@ -10,34 +10,34 @@ var s = n(627968),
     d = n(347135),
     C = n(801365),
     f = n(792620),
-    p = n(795965),
-    S = n(793574),
-    m = n(662388),
-    A = n(371912),
-    h = n(758836),
-    x = n(375708);
-function g(t) {
-    let { quest: e, onClaimRewardClick: n, size: o = "md" } = t,
-        p = (0, d.LS)(e),
-        S = (0, u.bG)([a.Ay], () => a.Ay.useReducedMotion),
-        m = null != (0, C._Z)(e.config),
-        A = (0, f.vv)(e),
-        h =
+    S = n(630037),
+    p = n(793574),
+    A = n(662388),
+    h = n(371912),
+    m = n(758836),
+    g = n(375708);
+function x(t) {
+    let { quest: e, onClaimRewardClick: n, size: u = "md" } = t,
+        S = (0, d.LS)(e),
+        p = (0, o.bG)([a.Ay], () => a.Ay.useReducedMotion),
+        A = null != (0, C._Z)(e.config),
+        h = (0, f.vv)(e),
+        m =
             e.userStatus?.claimedAt != null
-                ? m
-                    ? x.intl.string(x.t.WYchde)
-                    : x.intl.string(x.t.vTgCWx)
-                : x.intl.string(x.t.cfY4PE),
-        g =
+                ? A
+                    ? g.intl.string(g.t.WYchde)
+                    : g.intl.string(g.t.vTgCWx)
+                : g.intl.string(g.t.cfY4PE),
+        x =
             e.userStatus?.completedAt == null
-                ? p
-                    ? x.intl.string(x.t.NJ6Bnm)
-                    : A
-                      ? x.intl.string(x.t.USNO1K)
+                ? S
+                    ? g.intl.string(g.t.NJ6Bnm)
+                    : h
+                      ? g.intl.string(g.t.USNO1K)
                       : void 0
                 : void 0;
     return (0, s.jsx)(l.m, {
-        text: g,
+        text: x,
         children: (0, s.jsx)("div", {
             children: (0, s.jsx)(r.$, {
                 variant: "secondary",
@@ -56,25 +56,23 @@ function g(t) {
                                 },
                             },
                         };
-                })(e, S),
+                })(e, p),
                 onClick: n,
-                text: h,
+                text: m,
                 disabled: e.userStatus?.completedAt == null,
-                size: o,
+                size: u,
             }),
         }),
     });
 }
 function k(t) {
-    let { experimentLocation: e, ...n } = t,
-        o = (0, p.D)({
-            quest: n.quest,
-            questContent: n.questContent,
-            sourceQuestContent: n.sourceQuestContent,
-            experimentLocation: e,
-            onCloseModal: n.onClose,
-        });
-    return (0, s.jsx)(g, { ...n, onClaimRewardClick: o });
+    let e = (0, S.D)({
+        quest: t.quest,
+        questContent: t.questContent,
+        sourceQuestContent: t.sourceQuestContent,
+        onCloseModal: t.onClose,
+    });
+    return (0, s.jsx)(x, { ...t, onClaimRewardClick: e });
 }
 function v(t) {
     let e = (function (t) {
@@ -82,18 +80,18 @@ function v(t) {
                 quest: e,
                 questContent: n,
                 sourceQuestContent: s,
-                onCloseModal: u,
+                onCloseModal: o,
                 shouldShowShopIfAlreadyClaimed: i,
             } = t,
-            l = (0, A.ix)({ quest: e, questContent: n, sourceQuestContent: s });
-        return o.useCallback(
+            l = (0, h.ix)({ quest: e, questContent: n, sourceQuestContent: s });
+        return u.useCallback(
             (t) => {
                 (0, C.ks)(e.config) && e.userStatus?.claimedAt != null && i
-                    ? (u?.(t),
-                      (0, m.Cz)({ tab: h.G2.ORBS, analyticsLocations: [], analyticsSource: S.A.QUEST_HOME_PAGE }))
-                    : ((0, C.K9)(e.config) && u?.(t), l());
+                    ? (o?.(t),
+                      (0, A.Cz)({ tab: m.G2.ORBS, analyticsLocations: [], analyticsSource: p.A.QUEST_HOME_PAGE }))
+                    : ((0, C.K9)(e.config) && o?.(t), l());
             },
-            [e.config, e.userStatus?.claimedAt, l, i, u],
+            [e.config, e.userStatus?.claimedAt, l, i, o],
         );
     })({
         quest: t.quest,
@@ -102,9 +100,9 @@ function v(t) {
         onCloseModal: t.onClose,
         shouldShowShopIfAlreadyClaimed: !0,
     });
-    return (0, s.jsx)(g, { ...t, onClaimRewardClick: e });
+    return (0, s.jsx)(x, { ...t, onClaimRewardClick: e });
 }
 function q(t) {
-    let { experimentLocation: e, ...n } = t;
-    return null != e ? (0, s.jsx)(k, { ...n, experimentLocation: e }) : (0, s.jsx)(v, { ...n });
+    let { shouldRedirectToQuestHome: e = !0, ...n } = t;
+    return e ? (0, s.jsx)(k, { ...n }) : (0, s.jsx)(v, { ...n });
 }

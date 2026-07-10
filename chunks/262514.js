@@ -20,9 +20,9 @@ var n = s(627968),
     v = s(144779),
     A = s(409626),
     _ = s(106799),
-    S = s(287809),
-    q = s(859703),
-    I = s(104886),
+    q = s(287809),
+    I = s(859703),
+    S = s(104886),
     y = s(112142),
     b = s(3738),
     p = s(347135),
@@ -43,7 +43,7 @@ var n = s(627968),
     G = s(646764),
     z = s(398025),
     K = s(617986),
-    $ = s(795965),
+    $ = s(630037),
     H = s(190107),
     Y = s(375708),
     V = s(562296),
@@ -65,7 +65,7 @@ function J(e) {
         ea = en === Q.MA.NITRO && ei,
         el = (0, M.Ic)(t),
         er = (0, p.In)(t),
-        eo = (0, j.bG)([S.default], () => S.default.getCurrentUser()),
+        eo = (0, j.bG)([q.default], () => q.default.getCurrentUser()),
         ec = (0, k.mq)(t.config, eo),
         eu = (0, k.mH)(t.config, eo),
         ed = t.userStatus?.enrolledAt != null,
@@ -127,14 +127,14 @@ function J(e) {
                 });
         }, [eg]),
         e_ = (0, j.bG)([g.Ay], () => g.Ay.useReducedMotion),
-        eS = i.useMemo(() => (0, M.Ic)(t) && !(0, M.GR)(t.userStatus), [t]),
-        eq = (0, p.do)({ quest: t, content: s, ctaContent: L.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
-        eI = (0, w.wr)(t),
+        eq = i.useMemo(() => (0, M.Ic)(t) && !(0, M.GR)(t.userStatus), [t]),
+        eI = (0, p.do)({ quest: t, content: s, ctaContent: L.Cy.OPEN_GAME_LINK, sourceQuestContent: o }),
+        eS = (0, w.wr)(t),
         ey = i.useCallback(() => {
-            eS
-                ? eq()
+            eq
+                ? eI()
                 : ((0, K.mA)({ fromContent: s, questId: t.id }),
-                  (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "quest_embed_card_footer")
+                  (0, S.E5)(S.kI.STEP_2_CLICKED_INTERNAL, "quest_embed_card_footer")
                       ? (0, N.r)({
                             type: v.F.CLICK_INTERNAL,
                             adCreativeType: d.p.QUEST,
@@ -151,8 +151,8 @@ function J(e) {
                             questContentCTA: L.Cy.LEARN_MORE,
                             sourceQuestContent: o,
                         }));
-        }, [eS, eq, t.id, s, r, o]),
-        eb = (0, j.bG)([q.A], () => null != q.A.questEnrollmentBlockedUntil, []),
+        }, [eq, eI, t.id, s, r, o]),
+        eb = (0, j.bG)([I.A], () => null != I.A.questEnrollmentBlockedUntil, []),
         ep = y.t.useConfig({ location: H.rE.EMBED_DESKTOP });
     return (0, n.jsxs)("div", {
         className: X.kL,
@@ -266,7 +266,7 @@ function J(e) {
                           children: [
                               (0, n.jsx)(f.$, {
                                   variant: "secondary",
-                                  text: eS ? eI : Y.intl.string(Y.t.LLLLPD),
+                                  text: eq ? eS : Y.intl.string(Y.t.LLLLPD),
                                   fullWidth: !0,
                                   onClick: ey,
                               }),
@@ -306,14 +306,8 @@ function et(e) {
 }
 function es(e) {
     let { quest: t, questContent: s, questContentPosition: i, sourceQuestContent: a } = e,
-        l = (0, j.bG)([q.A], () => q.A.isClaimingReward(t.id) || q.A.isFetchingRewardCode(t.id)),
-        r = (0, $.D)({
-            quest: t,
-            questContent: s,
-            questContentPosition: i,
-            sourceQuestContent: a,
-            experimentLocation: H.rE.EMBED_DESKTOP,
-        });
+        l = (0, j.bG)([I.A], () => I.A.isClaimingReward(t.id) || I.A.isFetchingRewardCode(t.id)),
+        r = (0, $.D)({ quest: t, questContent: s, questContentPosition: i, sourceQuestContent: a });
     return (0, n.jsx)(f.$, {
         fullWidth: !0,
         variant: "primary",
@@ -324,7 +318,7 @@ function es(e) {
 }
 function en(e) {
     let { quest: t, progressState: s, questContent: i, questContentPosition: a, sourceQuestContent: l } = e,
-        r = (0, j.bG)([q.A], () => q.A.isEnrolling(t.id)),
+        r = (0, j.bG)([I.A], () => I.A.isEnrolling(t.id)),
         o = (0, U.vv)(t),
         c = (0, U.Cr)(t),
         u = (0, M.Ic)(t),

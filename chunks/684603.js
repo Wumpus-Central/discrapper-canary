@@ -7,8 +7,8 @@ var n,
     o = s(323889),
     u = s(17928),
     c = s(366010),
-    A = s(534514),
-    C = s(834730),
+    C = s(534514),
+    A = s(834730),
     T = s(821609),
     d = s(408278),
     I = s(509434),
@@ -32,13 +32,13 @@ var n,
         (n[(n.T1_COMPACT = 1)] = "T1_COMPACT"),
         (n[(n.T2_HERO_IMAGE = 2)] = "T2_HERO_IMAGE"),
         n);
-let p = (0, V.mj)({
+let y = (0, V.mj)({
     name: "2026-07-activity-entrypoint-ui",
     kind: "user",
     defaultConfig: { variant: 0 },
     variations: { 0: { variant: 0 }, 1: { variant: 1 }, 2: { variant: 2 } },
 });
-var y = s(112142),
+var p = s(112142),
     R = s(3738),
     q = s(347135),
     k = s(46948),
@@ -56,7 +56,7 @@ var y = s(112142),
     K = s(847641),
     $ = s(311243),
     J = s(617986),
-    X = s(795965),
+    X = s(630037),
     B = s(190107),
     Z = s(652215),
     tt = s(375708),
@@ -75,14 +75,14 @@ function ts(t) {
             (0, i.jsxs)("div", {
                 className: te.UD,
                 children: [
-                    (0, i.jsx)(A.D, {
+                    (0, i.jsx)(C.D, {
                         variant: "heading-md/semibold",
                         color: "text-strong",
                         children: l
                             ? tt.intl.string(tt.t.XBboAK)
                             : tt.intl.formatToPlainString(tt.t.EQa7os, { questName: e.config.messages.questName }),
                     }),
-                    (0, i.jsx)(C.E, {
+                    (0, i.jsx)(A.E, {
                         variant: "text-xs/normal",
                         color: "text-default",
                         children: l
@@ -103,12 +103,12 @@ function tn(t) {
         tr = a.useCallback(() => ta(!0), []),
         tl = a.useCallback(() => ta(!1), []),
         { launchInGameActivity: to } = (0, q.zW)(s),
-        tu = y.t.useConfig({ location: B.rE.ACTIVITY_PANEL }),
+        tu = p.t.useConfig({ location: B.rE.ACTIVITY_PANEL }),
         tc = (0, H.Pd)(s),
-        tA = a.useCallback((t) => {
+        tC = a.useCallback((t) => {
             t.stopPropagation();
         }, []),
-        tC = a.useCallback(() => {
+        tA = a.useCallback(() => {
             null != s &&
                 ((0, Y.E5)(Y.kI.STEP_2_CLICKED_INTERNAL, "quest_activity_panel_item")
                     ? (0, x.r)({
@@ -147,16 +147,11 @@ function tn(t) {
                   }),
                 (0, J.mA)({ fromContent: F.uF.ACTIVITY_PANEL, questId: s.id });
         }, [s.id, V, W]),
-        td = (0, X.D)({
-            quest: s,
-            questContent: F.uF.ACTIVITY_PANEL,
-            sourceQuestContent: F.uF.ACTIVITY_PANEL,
-            experimentLocation: B.rE.ACTIVITY_PANEL,
-        }),
+        td = (0, X.D)({ quest: s, questContent: F.uF.ACTIVITY_PANEL, sourceQuestContent: F.uF.ACTIVITY_PANEL }),
         tI = s.userStatus?.enrolledAt != null,
         tE = s.userStatus?.completedAt != null,
         tm = (0, q.fc)(s),
-        tN = p.useConfig({ location: B.rE.ACTIVITY_PANEL }).variant,
+        tN = y.useConfig({ location: B.rE.ACTIVITY_PANEL }).variant,
         t_ = tN === S.T1_COMPACT,
         tx = tN === S.T2_HERO_IMAGE,
         tL = t_ || tx,
@@ -203,8 +198,8 @@ function tn(t) {
         }),
         tV = tx ? (0, k.tW)(s, k.fY.HERO_IMAGE)?.url : null,
         tS = (0, k.tW)(s, k.fY.GAME_TILE, th).url,
-        tp = tx && null != tV,
-        ty = null != s.config.ctaConfig ? (0, D.Jx)(s.config) : "",
+        ty = tx && null != tV,
+        tp = null != s.config.ctaConfig ? (0, D.Jx)(s.config) : "",
         tR = (0, q.do)({
             quest: s,
             content: F.uF.ACTIVITY_PANEL,
@@ -241,7 +236,7 @@ function tn(t) {
             icon: (0, J.Oz)(s),
         }),
         tD =
-            null != ("" !== ty ? ty : null)
+            null != ("" !== tp ? tp : null)
                 ? (0, i.jsx)(d.K, {
                       variant: "secondary",
                       size: "sm",
@@ -270,14 +265,14 @@ function tn(t) {
                 e.current = t;
             },
             className: l()(te.iE, { [te.tJ]: tI }),
-            onClick: tA,
-            onKeyPress: tA,
+            onClick: tC,
+            onKeyPress: tC,
             onFocus: tr,
             onMouseEnter: tr,
             onBlur: tl,
             onMouseLeave: tl,
             children: [
-                tp &&
+                ty &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)("img", { className: te.km, alt: "", src: tV }),
@@ -285,7 +280,7 @@ function tn(t) {
                         ],
                     }),
                 (0, i.jsxs)("div", {
-                    className: l()(te.CU, { [te.eF]: tp }),
+                    className: l()(te.CU, { [te.eF]: ty }),
                     children: [
                         !tL && (0, i.jsx)("div", { className: te.Wp, children: tM }),
                         tL && (0, i.jsx)("div", { className: te.FG, children: tG }),
@@ -297,7 +292,7 @@ function tn(t) {
                                     (0, i.jsxs)("div", {
                                         className: te.l3,
                                         children: [
-                                            (0, i.jsx)(A.D, {
+                                            (0, i.jsx)(C.D, {
                                                 variant: "heading-sm/semibold",
                                                 color: "text-strong",
                                                 children: tj
@@ -320,7 +315,7 @@ function tn(t) {
                                                           rewardWithArticleHook: () => tF,
                                                       }),
                                             }),
-                                            (0, i.jsx)(C.E, {
+                                            (0, i.jsx)(A.E, {
                                                 variant: "text-xs/medium",
                                                 color: "text-muted",
                                                 children: tY,
@@ -409,7 +404,7 @@ function tn(t) {
                                         size: "sm",
                                         fullWidth: !0,
                                         text: tt.intl.string(tt.t.VN1Ajl),
-                                        onClick: tC,
+                                        onClick: tA,
                                     }),
                                 tE &&
                                     tL &&

@@ -27,8 +27,8 @@ var s = n(627968),
     g = n(24001),
     x = n(104886),
     F = n(3738),
-    B = n(46948),
-    k = n(561844),
+    k = n(46948),
+    B = n(561844),
     v = n(590202),
     q = n(792620),
     j = n(814793),
@@ -36,7 +36,7 @@ var s = n(627968),
     P = n(646764),
     G = n(398025),
     Q = n(617986),
-    O = n(795965),
+    O = n(630037),
     D = n(190107),
     K = n(652215),
     w = n(818348),
@@ -55,12 +55,7 @@ function z(e) {
             name: Z,
         } = e,
         $ = (0, l.bG)([y.A], () => y.A.getChannel(z?.channelId) ?? null),
-        ee = (0, O.D)({
-            quest: t,
-            questContent: g.uF.MEMBERS_LIST,
-            sourceQuestContent: g.uF.MEMBERS_LIST,
-            experimentLocation: D.rE.MEMBERS_LIST,
-        }),
+        ee = (0, O.D)({ quest: t, questContent: g.uF.MEMBERS_LIST, sourceQuestContent: g.uF.MEMBERS_LIST }),
         et = t?.userStatus?.claimedAt != null,
         en = t?.userStatus?.enrolledAt != null,
         es = t?.userStatus?.completedAt != null,
@@ -114,7 +109,7 @@ function z(e) {
                   sourceQuestContent: g.uF.MEMBERS_LIST,
                   trackGuildAndChannelMetadata: !0,
               })
-            : (0, k.Y5)({
+            : (0, B.Y5)({
                   questId: t.id,
                   questContent: g.uF.MEMBERS_LIST,
                   questContentCTA: v.Cy.LEARN_MORE,
@@ -135,7 +130,7 @@ function z(e) {
                             sourceQuestContent: g.uF.MEMBERS_LIST,
                             trackGuildAndChannelMetadata: !0,
                         })
-                      : (0, k.Y5)({
+                      : (0, B.Y5)({
                             questId: t.id,
                             questContent: g.uF.MEMBERS_LIST,
                             questContentCTA: v.Cy.WATCH_STREAM,
@@ -158,7 +153,7 @@ function z(e) {
                                             sourceQuestContent: g.uF.MEMBERS_LIST,
                                             trackGuildAndChannelMetadata: !0,
                                         })
-                                      : (0, k.Y5)({
+                                      : (0, B.Y5)({
                                             questId: t.id,
                                             questContent: g.uF.MEMBERS_LIST,
                                             questContentCTA: v.Cy.WATCH_STREAM_CONFIRM,
@@ -248,7 +243,7 @@ function z(e) {
                                                       sourceQuestContent: g.uF.MEMBERS_LIST,
                                                       trackGuildAndChannelMetadata: !0,
                                                   })
-                                                : (0, k.Y5)({
+                                                : (0, B.Y5)({
                                                       questId: t.id,
                                                       questContent: g.uF.MEMBERS_LIST,
                                                       questContentCTA: v.Cy.OPEN_DISCLOSURE,
@@ -301,7 +296,7 @@ function z(e) {
                                                 gamePublisher: t.config.messages.gamePublisher,
                                             }),
                                             className: U.TW,
-                                            src: (0, B.tW)(t, B.fY.GAME_TILE, ei).url,
+                                            src: (0, k.tW)(t, k.fY.GAME_TILE, ei).url,
                                         }),
                                     "reward" === eL.tileAssetType &&
                                         (0, s.jsx)(P.A, {
