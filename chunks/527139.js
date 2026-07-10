@@ -23,9 +23,9 @@ var p = i(587895),
     A = i(403362),
     h = i(635344),
     j = i(735321),
-    T = i(606758),
+    T = i(384377),
     N = i(492280),
-    v = i(432585),
+    v = i(284513),
     _ = i(598748),
     S = i(141628),
     O = i(17928),
@@ -33,8 +33,8 @@ var p = i(587895),
     C = i(287809),
     R = i(183555),
     b = i(375708),
-    D = i(923608);
-function L(e) {
+    L = i(923608);
+function D(e) {
     let t = (0, O.bG)([C.default], () => C.default.getCurrentUser());
     return null == t ? null : (0, n.jsx)(G, { ...e, userId: t.id });
 }
@@ -45,7 +45,7 @@ function G(e) {
     return null == r
         ? null
         : (0, n.jsx)("div", {
-              className: D.kL,
+              className: L.kL,
               children: (0, n.jsx)(v.kH, {
                   ...s,
                   surface: _.m.ADD_WIDGET_PREVIEW,
@@ -54,7 +54,7 @@ function G(e) {
               }),
           });
 }
-function w(e) {
+function P(e) {
     let { applicationId: t, size: i = "default" } = e,
         { trackUserProfileAction: s } = (0, R.NJ)(),
         r = (0, E.h)(t),
@@ -68,7 +68,7 @@ function w(e) {
     return "default" !== i || null == r
         ? null
         : (0, n.jsxs)("div", {
-              className: D.qr,
+              className: L.qr,
               children: [
                   (0, n.jsx)(S.A, { size: "xs" }),
                   (0, n.jsx)(g.E, {
@@ -80,12 +80,12 @@ function w(e) {
                               : c
                                 ? b.intl.format(b.t.RNWFOQ, { onConnect: I })
                                 : b.intl.string(b.t["9TX4UT"])
-                          : (0, n.jsx)("div", { className: D.bg }),
+                          : (0, n.jsx)("div", { className: L.bg }),
                   }),
               ],
           });
 }
-function P(e) {
+function w(e) {
     let { applicationId: t } = e,
         i = (0, E.h)(t),
         { hasAlreadyLinked: l, fetched: s } = (0, x.RD)(i);
@@ -98,7 +98,7 @@ function P(e) {
                   ? l
                       ? b.intl.format(b.t.wiyuG9, { applicationName: i.name })
                       : b.intl.string(b.t["9TX4UT"])
-                  : (0, n.jsx)("div", { className: D.bg }),
+                  : (0, n.jsx)("div", { className: L.bg }),
           });
 }
 var y = i(518477),
@@ -134,6 +134,11 @@ let F = {
                 applicationName: p.A.getApplication(e.applicationId)?.name ?? "",
             }),
     },
+    [a.x.PERSONAL]: {
+        placeholder: () => ({ variant: "grid", applicationIds: [] }),
+        icon: () => null,
+        getAriaLabel: () => "",
+    },
 };
 function U(e) {
     let t,
@@ -148,8 +153,8 @@ function U(e) {
         { placeholder: S, getAriaLabel: O, icon: k } = F[i.type],
         C = I.useConfig({ location: m.A.USER_PROFILE_APPLICATION_WIDGET }).enabled,
         R = i.type === a.x.APPLICATION,
-        D = R ? i.applicationId : void 0,
-        G = (0, E.h)(D),
+        L = R ? i.applicationId : void 0,
+        G = (0, E.h)(L),
         { hasAlreadyLinked: U, canStartAuthorization: W, startAuthorization: H } = (0, x.RD)(G),
         B = R && !U && W,
         { analyticsLocations: X } = (0, f.Ay)(m.A.USER_PROFILE_APPLICATION_WIDGET),
@@ -190,7 +195,7 @@ function U(e) {
                                     applicationIds: e.applicationIds,
                                 });
                             case "application-widget":
-                                return (0, n.jsx)(L, { applicationId: e.applicationId, size: p });
+                                return (0, n.jsx)(D, { applicationId: e.applicationId, size: p });
                             default:
                                 return (0, A.xb)(e);
                         }
@@ -221,14 +226,14 @@ function U(e) {
                             }),
                             C &&
                                 "application-widget" === z.variant &&
-                                (0, n.jsx)(P, { applicationId: z.applicationId }),
+                                (0, n.jsx)(w, { applicationId: z.applicationId }),
                         ],
                     }),
                 ],
             }),
             !C &&
                 ("application-widget" === (t = S(i)).variant
-                    ? (0, n.jsx)(w, { applicationId: t.applicationId, size: p })
+                    ? (0, n.jsx)(P, { applicationId: t.applicationId, size: p })
                     : null),
         ],
     });

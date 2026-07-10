@@ -7,4 +7,5 @@ var i,
         (i.PLAYED_GAMES = "played_games"),
         (i.FAVORITE_GAMES = "favorite_games"),
         (i.APPLICATION = "application"),
+        (i.PERSONAL = "personal"),
         i);
