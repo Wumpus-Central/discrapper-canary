@@ -6,9 +6,9 @@ var i = n(627968),
     s = n.n(a),
     l = n(17928),
     o = n(492518),
-    d = n(32731),
-    c = n(287809),
-    u = n(299679),
+    d = n(287809),
+    c = n(299679),
+    u = n(840411),
     _ = n(909536),
     E = n(561794),
     A = n(862772),
@@ -47,12 +47,12 @@ function H(e) {
             skuPreviewStyle: l,
             setIsHoveringOrFocusing: o,
             onClick: d,
-            "aria-label": c,
+            "aria-label": u,
             wishlistId: _,
             children: E,
         } = e,
         { trackUserProfileWishlistAction: A } = (0, L.NJ)(),
-        f = (0, u.Ar)(),
+        f = (0, c.Ar)(),
         p = (0, S.A)(() => (0, h.A)()),
         { handleVisibilityChange: T } = (0, b.G)(p),
         m = (0, I.K)(T, 0.5, f?.surface != null),
@@ -89,7 +89,7 @@ function H(e) {
             skuPreviewStyle: s()(F.ev, l),
             onHoverOrFocusChange: o,
             onClick: g,
-            "aria-label": c,
+            "aria-label": u,
             children: E,
         }),
     });
@@ -191,30 +191,11 @@ function Z(e) {
             isLoading: I,
             recommendations: f,
         } = e,
-        p = (0, l.bG)([c.default], () => c.default.getUser(t?.userId)),
+        p = (0, l.bG)([d.default], () => d.default.getUser(t?.userId)),
         T = (0, _.Gh)("add_to_wishlist_grid_suggested_nitro"),
         m = r.useMemo(() => new Set(t?.items.map((e) => e.skuId) ?? []), [t]),
         g = T && !m.has(z.pe.TIER_2),
-        S = r.useMemo(
-            () =>
-                g
-                    ? new d.A({
-                          id: z.pe.TIER_2,
-                          productLine: G.EZt.PREMIUM,
-                          name: k.intl.string(k.t.lG6a5x),
-                          features: new Set(),
-                          genres: new Set(),
-                          manifests: [],
-                          availableRegions: [],
-                          locales: [],
-                          bundledSkuIds: [],
-                          selectedOptions: [],
-                          eligibleOffers: [],
-                          prices: {},
-                      })
-                    : null,
-            [g],
-        ),
+        S = r.useMemo(() => (g ? (0, u.rI)() : null), [g]),
         N = f
             .filter((e) => !m.has(e.id))
             .slice(0, null != S ? Math.max(0, A - 1) : A)
@@ -229,7 +210,7 @@ function Z(e) {
                 children: C.map((e, r) => {
                     let { sku: s, itemSource: l } = e;
                     return (0, i.jsx)(
-                        u.dB,
+                        c.dB,
                         {
                             newValue: { positionInSection: r, skuId: s.id, itemSource: l, productLine: s.productLine },
                             children: (0, i.jsx)($, {

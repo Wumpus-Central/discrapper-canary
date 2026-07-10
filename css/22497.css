@@ -1,0 +1,133 @@
+.singleItemInfo__08054 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-width: 0
+}
+
+.singleItemName__08054 {
+    cursor: pointer;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.singleItemName__08054:focus-visible,
+.singleItemName__08054:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--text-default)
+}
+
+.itemIcon_d9866f {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.itemIcon_d9866f.hasTooltip_d9866f {
+    pointer-events: auto
+}
+
+.itemIconBackground_d9866f {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-round);
+    padding: 2px
+}
+
+.container__73abe {
+    box-shadow: 0 0 16px 0 rgba(0, 0, 0, .08);
+    box-sizing: border-box;
+    display: flex;
+    position: relative;
+    --custom-premium-backdrop-opacity: 0.2;
+    --custom-premium-backdrop-inset: 0
+}
+
+.card__73abe,
+.container__73abe {
+    border-radius: var(--radius-md)
+}
+
+.card__73abe {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    justify-content: center
+}
+
+.card__73abe:after {
+    border: 1px solid var(--border-muted)
+}
+
+.custom-user-profile-theme.theme-light .card__73abe {
+    background-color: var(--opacity-white-24)
+}
+
+.custom-user-profile-theme.theme-dark .card__73abe {
+    background-color: var(--background-mod-normal)
+}
+
+.cardPreview__73abe {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    --custom-profile-frame-preview-padding-block: 8px;
+    --custom-profile-frame-preview-padding-inline: 16px
+}
+
+.scaledSkuPreview__73abe {
+    transform: scale(.613);
+    transform-origin: center
+}
+
+.scaledSkuPreview__73abe.avatarDecoration__73abe {
+    height: auto;
+    width: auto
+}
+
+.scaledSkuPreview__73abe.bundle__73abe,
+.scaledSkuPreview__73abe.nameplate__73abe,
+.scaledSkuPreview__73abe.profileEffect__73abe,
+.scaledSkuPreview__73abe.profileFrame__73abe {
+    transform: scale(1)
+}
+
+.user-profile-sidebar-redesign .scaledSkuPreview__73abe.nameplate__73abe {
+    transform: scale(.92)
+}
+
+.container__06b03 {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px
+}
+
+.user-profile-sidebar-redesign .container__06b03 {
+    padding: var(--space-8)
+}
+
+.header__06b03 {
+    align-items: center;
+    display: flex;
+    justify-content: space-between
+}
+
+.cardsContainer__06b03 {
+    --custom-wishlist-breadcrumb-card-size: 90px;
+    display: flex;
+    gap: calc(50% - var(--custom-wishlist-breadcrumb-card-size)*3/2)
+}
+
+.user-profile-sidebar-redesign .cardsContainer__06b03 {
+    --custom-wishlist-breadcrumb-card-size: 78px
+}
+
+.orbsRewardOfferNotice__06b03 {
+    margin: 0 -12px -12px
+}
+
+.user-profile-sidebar-redesign .orbsRewardOfferNotice__06b03 {
+    margin: 0 calc(var(--space-8)*-1) calc(var(--space-8)*-1)
+}
