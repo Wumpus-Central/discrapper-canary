@@ -75,7 +75,14 @@ class a {
     foldResourceEntries(e) {
         for (let t of e)
             !(function (e, t) {
-                if ("script" !== t.initiatorType) return;
+                if (
+                    !(
+                        "script" === t.initiatorType ||
+                        (("link" === t.initiatorType || "preload" === t.initiatorType) &&
+                            /\.m?js(?:[?#]|$)/.test(t.name))
+                    )
+                )
+                    return;
                 let n = i(e, t.name);
                 (n.downloadMs += t.responseEnd - t.startTime),
                     (n.transferSizeBytes += t.transferSize),
