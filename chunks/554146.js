@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { M: () => s, V: () => a });
+n.d(t, { M: () => a, V: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {})[(i.HUB_WAITLIST_UPSELL = 0)] = "HUB_WAITLIST_UPSELL"),
         (i[(i.APPLICATION_COMMAND_TOOLTIP = 1)] = "APPLICATION_COMMAND_TOOLTIP"),
         (i[(i.HUB_EVENT_HEADER_UPSELL = 2)] = "HUB_EVENT_HEADER_UPSELL"),
@@ -640,8 +640,9 @@ var i,
         (i[(i.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK = 788)] = "AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK"),
         (i[(i.AUTOCLIPPING_VIDEO_CALL_TILE = 789)] = "AUTOCLIPPING_VIDEO_CALL_TILE"),
         (i[(i.YOU_BAR_DM_SWIPE_COACHMARK = 790)] = "YOU_BAR_DM_SWIPE_COACHMARK"),
+        (i[(i.TOPICAL_NAVIGATION_HEADER_COACHMARK = 791)] = "TOPICAL_NAVIGATION_HEADER_COACHMARK"),
         i),
-    a =
+    s =
         (((r = {})[(r.DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE = 0)] =
             "DISABLE_UNSAFE_COMMUNITY_PERMISSIONS_NOTICE"),
         (r[(r.CLYDE_GUILD_NOTICE_NUX = 1)] = "CLYDE_GUILD_NOTICE_NUX"),
