@@ -224,12 +224,18 @@ class U extends a.PureComponent {
                                         (0, r.jsx)("div", {
                                             className: P.km,
                                             "aria-hidden": !0,
-                                            children: (0, r.jsx)(I.$, { buttonRef: _, size: d, variant: o, text: C }),
+                                            children: (0, r.jsx)(I.$, {
+                                                buttonRef: _,
+                                                size: d,
+                                                variant: o,
+                                                text: C,
+                                                tabIndex: -1,
+                                            }),
                                         }),
                                         (0, r.jsx)(E.m, {
                                             text: N,
                                             children: (0, r.jsx)("div", {
-                                                style: null != u ? { minWidth: u } : { visibility: "hidden" },
+                                                style: null != u ? { minWidth: u } : { opacity: 0 },
                                                 children: (0, r.jsx)(I.$, {
                                                     size: d,
                                                     variant: o,
