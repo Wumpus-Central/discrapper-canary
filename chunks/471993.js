@@ -15,8 +15,8 @@ function E(e, t, E) {
     if (u.isPlatformEmbedded)
         (0, r.openModalLazy)(async () => {
             let { default: e } = await Promise.all([
-                n.e("4615"),
-                n.e("81218"),
+                n.e("64379"),
+                n.e("17918"),
                 n.e("76171"),
                 n.e("86672"),
                 n.e("58337"),
@@ -27,8 +27,8 @@ function E(e, t, E) {
                 n.e("44727"),
                 n.e("59778"),
                 n.e("25241"),
-                n.e("28724"),
-                n.e("82013"),
+                n.e("6565"),
+                n.e("14304"),
                 n.e("76229"),
                 n.e("91782"),
                 n.e("90088"),

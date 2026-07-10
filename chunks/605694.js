@@ -28,7 +28,7 @@ var i = n(627968),
     T = n(183555),
     w = n(623280),
     R = n(375708),
-    S = n(439907);
+    S = n(40355);
 function y(e) {
     let {
         isCurrentUser: t,

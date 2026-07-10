@@ -80,7 +80,7 @@ var w = n(43105),
     eR = n(403362),
     eO = n(652215),
     eL = n(375708),
-    eD = n(727019);
+    eD = n(621035);
 function ey(e, t) {
     return 0 === t.length
         ? null
@@ -213,8 +213,8 @@ function eM(e) {
 var eP = n(97483),
     eU = n(49999),
     ew = n(202541),
-    eG = n(574004),
-    ex = n(901255),
+    eG = n(335993),
+    ex = n(959495),
     ek = n(988572);
 let eF = { analyticsSource: { page: eO.liQ.GUILD_CHANNEL, section: eO.JJy.CHANNEL_LIST, object: eO.ZSU.CHANNEL } };
 function eV(e) {
@@ -319,9 +319,9 @@ function eV(e) {
                           e &&
                               (0, p.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      n.e("41160"),
-                                      n.e("78775"),
-                                      n.e("26366"),
+                                      n.e("43880"),
+                                      n.e("94635"),
+                                      n.e("94494"),
                                       n.e("36946"),
                                       n.e("92639"),
                                       n.e("40963"),
@@ -460,8 +460,8 @@ let e4 = new e6(e2.h, {
         e3[t] = Date.now();
     },
 });
-var e5 = n(531685),
-    e7 = n(583613);
+var e7 = n(531685),
+    e5 = n(583613);
 let e8 = "app-download-item",
     e9 = "add-server-item";
 function te() {
@@ -474,12 +474,12 @@ function tt(e) {
         (e !== e8 && e !== e9 && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
-let tn = (0, e7.L_)((e, t, n) => ["null", ...t, ...e, e9, eO.sFm.E3_SERVER_DISCOVERY_BADGE, e8]),
+let tn = (0, e5.L_)((e, t, n) => ["null", ...t, ...e, e9, eO.sFm.E3_SERVER_DISCOVERY_BADGE, e8]),
     ti = a.forwardRef(function (e, t) {
         let n = (0, E.yK)([ez.Ay, e1.A, eo.default], () =>
                 tn(ez.Ay.getGuildFolders(), e1.A.getUnreadPrivateChannelIds(), eo.default.getStoreChangeSentinel()),
             ),
-            i = (0, E.bG)([e5.A], () => e5.A.isFocused()),
+            i = (0, E.bG)([e7.A], () => e7.A.isFocused()),
             a = (0, E.bG)([e0.A], () => e0.A.getExpandedFolders());
         return (0, r.jsx)(eJ.A, {
             ...e,
@@ -684,7 +684,7 @@ class tL extends a.PureComponent {
         let { controller: t } = this.state;
         e(),
             t
-                .update({ immediate: !e5.A.isFocused(), height: 1, opacity: 1, scale: 1, config: tO })
+                .update({ immediate: !e7.A.isFocused(), height: 1, opacity: 1, scale: 1, config: tO })
                 .start()
                 .then(() => this.setState({ animating: !1 }));
     }
@@ -695,7 +695,7 @@ class tL extends a.PureComponent {
     componentWillLeave(e) {
         let { controller: t } = this.state;
         this.setState({ animating: !0 }, () =>
-            t.update({ immediate: !e5.A.isFocused(), height: 0, opacity: 0, scale: 0, config: tO }).start().then(e),
+            t.update({ immediate: !e7.A.isFocused(), height: 0, opacity: 0, scale: 0, config: tO }).start().then(e),
         );
     }
     componentWillUnmount() {
@@ -718,11 +718,11 @@ class tL extends a.PureComponent {
         null != i
             ? (0, td.L3)(e, async () => {
                   let { default: e } = await Promise.all([
-                      n.e("10570"),
-                      n.e("52760"),
-                      n.e("62458"),
-                      n.e("93909"),
-                      n.e("98273"),
+                      n.e("71406"),
+                      n.e("41831"),
+                      n.e("18078"),
+                      n.e("88429"),
+                      n.e("94881"),
                       n.e("26132"),
                       n.e("46652"),
                       n.e("93103"),
@@ -736,7 +736,7 @@ class tL extends a.PureComponent {
                       n.e("89673"),
                       n.e("68403"),
                       n.e("88342"),
-                      n.e("52168"),
+                      n.e("29787"),
                       n.e("89421"),
                       n.e("98965"),
                       n.e("82073"),
@@ -910,7 +910,7 @@ function ty() {
 }
 var tv = n(32880),
     tb = n(939249),
-    tM = n(322644);
+    tM = n(547732);
 function tP(e) {
     let {
             children: t,
@@ -947,7 +947,7 @@ function tP(e) {
         children: E,
     });
 }
-var tU = n(194019);
+var tU = n(530787);
 let tw = a.forwardRef(function (e, t) {
         let {
                 id: n,
@@ -1035,7 +1035,7 @@ var tk = n(245604),
     tK = n(295868),
     t$ = n(66834),
     tz = n(174459),
-    tq = n(40354);
+    tq = n(787426);
 function tZ(e) {
     let t = a.useRef(null),
         n = e.map((e) => e[0]);
@@ -1157,15 +1157,15 @@ function t2(e) {
     });
 }
 var t3 = n(819638),
-    t6 = n(29774);
+    t6 = n(266062);
 let t4 = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
-function t5(e) {
+function t7(e) {
     (0, td.L3)(e, async () => {
         let { default: e } = await n.e("17288").then(n.bind(n, 4571));
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }
-function t7(e) {
+function t5(e) {
     let { disableTooltip: t, lastTargetNode: n } = e,
         i = (0, E.yK)([e$.A], () => e$.A.getGuildsArray()),
         s = (0, E.bG)([eN.default], () => eN.default.getCurrentUser()),
@@ -1196,7 +1196,7 @@ function t7(e) {
                             : tF.A.openCreateGuildModal({ location: "Guild List" });
                     },
                     selected: o,
-                    onContextMenu: t5,
+                    onContextMenu: t7,
                     tooltip: eL.intl.string(eL.t.l5WIbf),
                     icon: tk.U,
                 }),
@@ -1209,7 +1209,7 @@ function t7(e) {
 var t8 = n(565787),
     t9 = n(791606),
     ne = n(486020),
-    nt = n(227947);
+    nt = n(962795);
 function nn(e) {
     let [t, i] = a.useState(!1),
         s = (0, u.Vd)(`guild-${e.id}`);
@@ -1326,7 +1326,7 @@ var nN = n(531260),
     nb = n(674378),
     nM = n(394953),
     nP = n(235079),
-    nU = n(403178);
+    nU = n(30186);
 let nw = { origin: { x: -16, y: 0 }, targetWidth: 48, targetHeight: 48, offset: { x: 0, y: 0 } };
 function nG(e) {
     let { selected: t, user: n, badge: i, link: s, showProgressBadge: l } = e,
@@ -1439,7 +1439,7 @@ function nx() {
         })
     );
 }
-var nk = n(236913);
+var nk = n(473201);
 function nF(e) {
     let { fullWidth: t } = e;
     return (0, r.jsx)(K.c, { children: (0, r.jsx)("div", { className: l()(nk.t, { [nk.I]: t }) }) });
@@ -1448,7 +1448,7 @@ var nV = n(349288),
     nB = n(695366),
     nH = n(919638),
     nj = n(818348),
-    nW = n(278332);
+    nW = n(585212);
 function nY() {
     let e = (0, E.bG)([nH.A, e$.A], () => nH.A.unavailableGuilds.filter((e) => null == e$.A.getGuild(e)).length),
         t = (0, u.Vd)("unavailable-guilds-button");
@@ -1479,7 +1479,7 @@ var nK = n(312742),
     n0 = n(187322),
     n1 = n(140735),
     n2 = n(548118),
-    n3 = n(287555);
+    n3 = n(273923);
 function n6(e) {
     let { guildId: t, animate: n } = e,
         i = (0, E.bG)([e$.A], () => e$.A.getGuild(t), [t]),
@@ -1520,7 +1520,7 @@ function n4(e) {
         children: [!s && o, d],
     });
 }
-function n5(e) {
+function n7(e) {
     let {
             folderNode: t,
             expanded: n,
@@ -1592,13 +1592,13 @@ function n5(e) {
         }),
     });
 }
-var n7 = n(573435),
-    n8 = n(16910);
+var n5 = n(573435),
+    n8 = n(643918);
 function n9(e) {
     let { className: t, isFolder: n } = e,
         i = (0, g.r)(f.A.modules.guildbar.AVATAR_SIZE);
-    return (0, r.jsx)(n7.Ay, {
-        mask: n7.Ay.Masks.SQUIRCLE,
+    return (0, r.jsx)(n5.Ay, {
+        mask: n5.Ay.Masks.SQUIRCLE,
         className: l()(t, n8.OL, { [n8.lQ]: n }),
         width: i,
         height: i,
@@ -1606,7 +1606,7 @@ function n9(e) {
     });
 }
 var ie = n(114329),
-    it = n(900434);
+    it = n(620370);
 let ii = (0, nQ.xI)(nz.A.FOLDER_ITEM_ANIMATION_DURATION),
     ir = (0, ts.animated)(T.B),
     ia = a.memo(function (e) {
@@ -1694,7 +1694,7 @@ let ii = (0, nQ.xI)(nz.A.FOLDER_ITEM_ANIMATION_DURATION),
                             "data-dnd-name": W,
                             children: V
                                 ? (0, r.jsx)(n9, { isFolder: !0 })
-                                : (0, r.jsx)(n5, {
+                                : (0, r.jsx)(n7, {
                                       folderNode: o,
                                       expanded: _,
                                       sorting: m,
@@ -2311,219 +2311,219 @@ let iY = { analyticsSource: { page: eO.liQ.GUILD_CHANNEL, section: eO.JJy.CHANNE
 function iK(e, t) {
     (0, td.L3)(e, async () => {
         let { default: e } = await Promise.all([
-            n.e("79070"),
-            n.e("37215"),
-            n.e("92120"),
-            n.e("10273"),
-            n.e("35273"),
-            n.e("52760"),
-            n.e("56205"),
-            n.e("81576"),
+            n.e("26142"),
+            n.e("84287"),
+            n.e("1780"),
+            n.e("47173"),
+            n.e("60361"),
+            n.e("41831"),
+            n.e("51437"),
+            n.e("87960"),
+            n.e("21293"),
+            n.e("93200"),
+            n.e("41625"),
+            n.e("90629"),
+            n.e("8886"),
+            n.e("6212"),
+            n.e("78279"),
+            n.e("78220"),
+            n.e("11262"),
+            n.e("16227"),
+            n.e("37520"),
+            n.e("12410"),
+            n.e("38759"),
+            n.e("37634"),
+            n.e("812"),
+            n.e("89209"),
+            n.e("86832"),
+            n.e("76342"),
+            n.e("60988"),
+            n.e("69273"),
+            n.e("72210"),
+            n.e("3155"),
+            n.e("82104"),
+            n.e("41711"),
+            n.e("49623"),
+            n.e("35316"),
+            n.e("38838"),
+            n.e("45214"),
+            n.e("99253"),
+            n.e("17202"),
+            n.e("90862"),
+            n.e("97189"),
+            n.e("16918"),
+            n.e("33730"),
+            n.e("24059"),
+            n.e("42306"),
+            n.e("11291"),
+            n.e("96846"),
+            n.e("19709"),
+            n.e("4251"),
+            n.e("47412"),
+            n.e("65327"),
+            n.e("96490"),
+            n.e("85484"),
+            n.e("51772"),
+            n.e("6605"),
+            n.e("54483"),
+            n.e("62461"),
+            n.e("25677"),
+            n.e("73679"),
+            n.e("73178"),
+            n.e("333"),
+            n.e("97638"),
+            n.e("22995"),
+            n.e("59096"),
+            n.e("55953"),
+            n.e("56386"),
+            n.e("51943"),
+            n.e("90072"),
+            n.e("88016"),
+            n.e("84133"),
+            n.e("13627"),
+            n.e("57940"),
+            n.e("58171"),
+            n.e("44511"),
+            n.e("39375"),
+            n.e("47944"),
+            n.e("84473"),
+            n.e("70990"),
+            n.e("15130"),
+            n.e("74051"),
+            n.e("50541"),
+            n.e("32697"),
+            n.e("64622"),
+            n.e("47728"),
+            n.e("31270"),
+            n.e("6514"),
+            n.e("8641"),
+            n.e("6247"),
+            n.e("70298"),
+            n.e("82041"),
+            n.e("97238"),
+            n.e("30541"),
+            n.e("74187"),
+            n.e("62279"),
+            n.e("67454"),
+            n.e("42157"),
+            n.e("85148"),
+            n.e("4676"),
+            n.e("53727"),
+            n.e("57034"),
+            n.e("85948"),
+            n.e("12940"),
+            n.e("52443"),
+            n.e("11266"),
+            n.e("12124"),
+            n.e("18712"),
+            n.e("60654"),
+            n.e("70179"),
+            n.e("97690"),
+            n.e("87103"),
+            n.e("52865"),
+            n.e("57215"),
+            n.e("22535"),
+            n.e("31481"),
+            n.e("83140"),
+            n.e("18670"),
+            n.e("33238"),
+            n.e("31591"),
+            n.e("39111"),
+            n.e("58530"),
+            n.e("35426"),
+            n.e("71505"),
+            n.e("69487"),
+            n.e("87550"),
+            n.e("20631"),
+            n.e("8736"),
+            n.e("61285"),
+            n.e("97242"),
+            n.e("98795"),
+            n.e("65123"),
+            n.e("23549"),
+            n.e("83566"),
+            n.e("69722"),
+            n.e("80083"),
+            n.e("28510"),
+            n.e("78104"),
+            n.e("8502"),
+            n.e("29483"),
+            n.e("39680"),
+            n.e("21194"),
+            n.e("99272"),
+            n.e("20993"),
+            n.e("34161"),
+            n.e("69164"),
+            n.e("92116"),
+            n.e("84200"),
+            n.e("33217"),
+            n.e("25610"),
+            n.e("42548"),
+            n.e("80050"),
+            n.e("37502"),
+            n.e("68316"),
+            n.e("46819"),
+            n.e("81619"),
+            n.e("17738"),
+            n.e("31463"),
+            n.e("57328"),
+            n.e("44135"),
+            n.e("26858"),
+            n.e("82393"),
+            n.e("39328"),
             n.e("48845"),
-            n.e("58800"),
-            n.e("19353"),
-            n.e("74213"),
-            n.e("88950"),
-            n.e("19204"),
-            n.e("41183"),
-            n.e("57760"),
-            n.e("66238"),
-            n.e("43363"),
-            n.e("68352"),
-            n.e("71906"),
-            n.e("81127"),
-            n.e("20538"),
-            n.e("56844"),
-            n.e("36621"),
-            n.e("42676"),
-            n.e("10198"),
-            n.e("9212"),
-            n.e("75193"),
-            n.e("35442"),
-            n.e("38739"),
-            n.e("27956"),
-            n.e("80943"),
-            n.e("46903"),
-            n.e("31880"),
-            n.e("42141"),
-            n.e("77086"),
-            n.e("53385"),
-            n.e("30810"),
-            n.e("41842"),
-            n.e("17829"),
-            n.e("10038"),
-            n.e("11586"),
-            n.e("5111"),
-            n.e("7458"),
-            n.e("44791"),
-            n.e("92678"),
-            n.e("41117"),
-            n.e("5307"),
-            n.e("4728"),
-            n.e("67831"),
-            n.e("34418"),
-            n.e("71436"),
-            n.e("59132"),
-            n.e("15553"),
-            n.e("78771"),
-            n.e("85753"),
-            n.e("38413"),
-            n.e("68463"),
-            n.e("67962"),
-            n.e("37965"),
-            n.e("45522"),
-            n.e("11411"),
-            n.e("856"),
-            n.e("57009"),
-            n.e("97446"),
-            n.e("49251"),
-            n.e("48632"),
-            n.e("47336"),
-            n.e("35837"),
-            n.e("30088"),
-            n.e("18292"),
-            n.e("19"),
-            n.e("69547"),
-            n.e("97735"),
-            n.e("62092"),
-            n.e("64949"),
-            n.e("51706"),
-            n.e("31182"),
-            n.e("16315"),
-            n.e("52845"),
-            n.e("38821"),
-            n.e("36178"),
-            n.e("3740"),
-            n.e("20614"),
-            n.e("64197"),
-            n.e("89313"),
-            n.e("61255"),
-            n.e("52250"),
-            n.e("61625"),
-            n.e("81942"),
-            n.e("65509"),
-            n.e("41891"),
-            n.e("19983"),
-            n.e("99326"),
-            n.e("18893"),
-            n.e("19436"),
-            n.e("75580"),
-            n.e("43615"),
-            n.e("18306"),
-            n.e("53176"),
-            n.e("78092"),
-            n.e("45563"),
-            n.e("16034"),
-            n.e("67388"),
-            n.e("76647"),
-            n.e("96126"),
-            n.e("81463"),
-            n.e("24826"),
-            n.e("9420"),
-            n.e("29549"),
-            n.e("12667"),
-            n.e("59835"),
-            n.e("57173"),
-            n.e("47080"),
-            n.e("1434"),
-            n.e("74998"),
-            n.e("87751"),
-            n.e("37415"),
-            n.e("52610"),
-            n.e("83650"),
-            n.e("91377"),
-            n.e("20083"),
-            n.e("93534"),
-            n.e("41367"),
-            n.e("22368"),
-            n.e("55101"),
-            n.e("4646"),
-            n.e("57323"),
-            n.e("34079"),
-            n.e("8273"),
-            n.e("97198"),
-            n.e("42714"),
-            n.e("92283"),
-            n.e("33566"),
-            n.e("92424"),
-            n.e("13558"),
-            n.e("52487"),
-            n.e("65352"),
-            n.e("82090"),
-            n.e("2312"),
-            n.e("69217"),
-            n.e("75125"),
-            n.e("88244"),
-            n.e("51316"),
-            n.e("88968"),
-            n.e("46849"),
-            n.e("5194"),
-            n.e("68455"),
-            n.e("37934"),
-            n.e("80926"),
-            n.e("59748"),
-            n.e("41603"),
-            n.e("31343"),
-            n.e("51486"),
-            n.e("27647"),
-            n.e("72648"),
-            n.e("71115"),
-            n.e("78182"),
-            n.e("97206"),
-            n.e("97300"),
-            n.e("92333"),
-            n.e("35007"),
-            n.e("80445"),
-            n.e("23151"),
-            n.e("5473"),
-            n.e("537"),
-            n.e("36157"),
-            n.e("62125"),
-            n.e("33911"),
-            n.e("73969"),
-            n.e("75413"),
-            n.e("64033"),
-            n.e("4615"),
-            n.e("27565"),
-            n.e("28802"),
-            n.e("84317"),
-            n.e("10992"),
-            n.e("57079"),
-            n.e("40952"),
-            n.e("62458"),
-            n.e("9743"),
-            n.e("76615"),
-            n.e("1637"),
-            n.e("99828"),
-            n.e("23878"),
-            n.e("845"),
-            n.e("130"),
-            n.e("74025"),
-            n.e("88583"),
-            n.e("24333"),
-            n.e("68206"),
-            n.e("40063"),
-            n.e("13718"),
-            n.e("57443"),
-            n.e("48519"),
-            n.e("78181"),
-            n.e("69328"),
-            n.e("42119"),
-            n.e("65007"),
-            n.e("50290"),
-            n.e("44937"),
-            n.e("34221"),
-            n.e("22148"),
-            n.e("84882"),
-            n.e("60568"),
-            n.e("98923"),
-            n.e("70158"),
-            n.e("52757"),
-            n.e("54330"),
-            n.e("4937"),
-            n.e("21858"),
-            n.e("54386"),
-            n.e("20966"),
+            n.e("34383"),
+            n.e("83185"),
+            n.e("79247"),
+            n.e("41069"),
+            n.e("37261"),
+            n.e("69337"),
+            n.e("62965"),
+            n.e("47587"),
+            n.e("32317"),
+            n.e("84209"),
+            n.e("78777"),
+            n.e("64379"),
+            n.e("79465"),
+            n.e("83314"),
+            n.e("32129"),
+            n.e("85776"),
+            n.e("83671"),
+            n.e("63980"),
+            n.e("18078"),
+            n.e("73099"),
+            n.e("47199"),
+            n.e("78381"),
+            n.e("62280"),
+            n.e("78230"),
+            n.e("11002"),
+            n.e("47170"),
+            n.e("39361"),
+            n.e("15079"),
+            n.e("70613"),
+            n.e("25870"),
+            n.e("76831"),
+            n.e("37870"),
+            n.e("3515"),
+            n.e("77335"),
+            n.e("8177"),
+            n.e("41027"),
+            n.e("37351"),
+            n.e("22671"),
+            n.e("36518"),
+            n.e("79785"),
+            n.e("46757"),
+            n.e("90324"),
+            n.e("20578"),
+            n.e("36592"),
+            n.e("10027"),
+            n.e("92430"),
+            n.e("54453"),
+            n.e("79254"),
+            n.e("38977"),
+            n.e("20802"),
+            n.e("91474"),
+            n.e("17566"),
             n.e("23924"),
             n.e("42205"),
             n.e("55675"),
@@ -2541,21 +2541,21 @@ function iK(e, t) {
             n.e("68261"),
             n.e("7167"),
             n.e("11301"),
-            n.e("96643"),
+            n.e("12721"),
             n.e("84569"),
             n.e("60235"),
             n.e("61737"),
             n.e("92789"),
-            n.e("43716"),
+            n.e("21335"),
             n.e("77333"),
-            n.e("2773"),
+            n.e("47834"),
             n.e("11735"),
             n.e("85927"),
             n.e("834"),
             n.e("2368"),
             n.e("42842"),
             n.e("33115"),
-            n.e("36845"),
+            n.e("6338"),
             n.e("18573"),
             n.e("55936"),
             n.e("85404"),
@@ -2569,8 +2569,8 @@ function iK(e, t) {
             n.e("34303"),
             n.e("97270"),
             n.e("45959"),
-            n.e("50741"),
-            n.e("95569"),
+            n.e("73122"),
+            n.e("8304"),
             n.e("93159"),
             n.e("71202"),
             n.e("8739"),
@@ -2597,7 +2597,7 @@ function iK(e, t) {
             n.e("52511"),
             n.e("40402"),
             n.e("7575"),
-            n.e("31549"),
+            n.e("53930"),
             n.e("42724"),
             n.e("93766"),
             n.e("13823"),
@@ -2636,8 +2636,8 @@ function iK(e, t) {
             n.e("52548"),
             n.e("17989"),
             n.e("89421"),
-            n.e("54574"),
-            n.e("80012"),
+            n.e("35027"),
+            n.e("67861"),
             n.e("1518"),
             n.e("37977"),
             n.e("49653"),
@@ -2675,7 +2675,7 @@ function iK(e, t) {
             n.e("40153"),
             n.e("95752"),
             n.e("3332"),
-            n.e("63645"),
+            n.e("30788"),
             n.e("8362"),
             n.e("41678"),
             n.e("72401"),
@@ -2684,7 +2684,7 @@ function iK(e, t) {
             n.e("2698"),
             n.e("37021"),
             n.e("81314"),
-            n.e("23397"),
+            n.e("27012"),
             n.e("71430"),
             n.e("501"),
             n.e("86243"),
@@ -2712,16 +2712,16 @@ function iK(e, t) {
             n.e("62718"),
             n.e("89916"),
             n.e("1812"),
-            n.e("83154"),
+            n.e("60773"),
             n.e("92128"),
             n.e("9004"),
-            n.e("33667"),
+            n.e("18113"),
             n.e("8018"),
             n.e("92295"),
             n.e("49145"),
             n.e("41807"),
             n.e("68763"),
-            n.e("12405"),
+            n.e("79548"),
             n.e("99549"),
             n.e("58273"),
             n.e("20930"),
@@ -2770,7 +2770,7 @@ function iK(e, t) {
             n.e("95602"),
             n.e("46313"),
             n.e("41786"),
-            n.e("72974"),
+            n.e("34409"),
             n.e("22547"),
             n.e("29569"),
             n.e("36002"),
@@ -3058,13 +3058,13 @@ let i$ = a.memo(function (e) {
         ],
     });
 });
-var iz = n(435168);
+var iz = n(182240);
 let iq = a.memo(function (e) {
     let { guildNode: t, lowerBadge: n } = e,
         i = t.id,
         s = (0, E.bG)([e$.A], () => e$.A.getGuild(i)),
         l = iu(s),
-        o = (0, E.bG)([e5.A], () => e5.A.isFocused()),
+        o = (0, E.bG)([e7.A], () => e7.A.isFocused()),
         d = (0, E.bG)([nH.A], () => nH.A.isUnavailable(i)),
         c = (0, q.A)((e) => e.guildId),
         u = iC(i),
@@ -3125,12 +3125,12 @@ function i4(e, t) {
         return (n) => (0, r.jsx)(e, { ...n, guild: t });
     });
 }
-function i5(e) {
+function i7(e) {
     let { guildNode: t } = e,
         n = t.id,
         i = (0, E.bG)([ic.A], () => ic.A.getRequest(n)),
         a = (0, E.bG)([ic.A], () => ic.A.getJoinRequestGuild(n), [n]),
-        s = (0, E.bG)([e5.A], () => e5.A.isFocused()),
+        s = (0, E.bG)([e7.A], () => e7.A.isFocused()),
         l = (0, E.bG)([eQ.A], () => eQ.A.getGuildId());
     return null == a
         ? null
@@ -3149,7 +3149,7 @@ function i5(e) {
               route: eO.BVt.GUILD_MEMBER_VERIFICATION(n),
           });
 }
-var i7 = n(220319);
+var i5 = n(785439);
 function i8(e) {
     let { onActivate: t, children: n } = e,
         i = a.useRef(null),
@@ -3164,7 +3164,7 @@ function i8(e) {
             s && s !== o && (t(), d.current?.ref?.current?.layerRef?.current?.updatePosition());
         }, [d, s, o, t]),
         (0, r.jsxs)("div", {
-            className: i7.kL,
+            className: i5.kL,
             children: [
                 (0, r.jsx)(iZ.Y, {
                     ref: d,
@@ -3172,13 +3172,13 @@ function i8(e) {
                     shouldShow: s,
                     renderPopout: () =>
                         (0, r.jsxs)("div", {
-                            className: i7.jC,
+                            className: i5.jC,
                             children: [
                                 (0, r.jsxs)("div", {
-                                    className: i7.Bm,
+                                    className: i5.Bm,
                                     children: [
                                         (0, r.jsxs)("div", {
-                                            className: i7.q3,
+                                            className: i5.q3,
                                             children: [
                                                 (0, r.jsx)(iX.D, {
                                                     variant: "heading-md/medium",
@@ -3200,14 +3200,14 @@ function i8(e) {
                                         }),
                                     ],
                                 }),
-                                (0, r.jsx)("div", { className: i7.ed }),
+                                (0, r.jsx)("div", { className: i5.ed }),
                             ],
                         }),
                     position: "right",
                     animationPosition: "right",
                     align: "top",
                     spacing: 16,
-                    children: (e) => (0, r.jsx)("div", { ...e, className: i7.Ne, ref: i }),
+                    children: (e) => (0, r.jsx)("div", { ...e, className: i5.Ne, ref: i }),
                 }),
                 n,
             ],
@@ -3253,13 +3253,13 @@ function i9(e) {
                   },
                   folderButtonSize: "icon",
                   folderButtonContent: (0, r.jsx)("div", {
-                      className: i7.rH,
+                      className: i5.rH,
                       children: (0, r.jsx)(iJ.Q, { size: "sm", color: "currentColor" }),
                   }),
                   renderChildNode: function (e, t, n) {
                       return e.type !== eX.PJ.GUILD
                           ? null
-                          : (0, r.jsx)(i5, { guildNode: e, "aria-setsize": n, "aria-posinset": t }, e.id);
+                          : (0, r.jsx)(i7, { guildNode: e, "aria-setsize": n, "aria-posinset": t }, e.id);
                   },
               }),
           });
@@ -3268,7 +3268,7 @@ function re(e) {
     let { guildId: t } = e,
         n = a.useMemo(() => (0, eX.EL)(t), [t]),
         i = (0, E.bG)([e$.A], () => e$.A.getGuild(t)),
-        s = (0, E.bG)([e5.A], () => e5.A.isFocused()),
+        s = (0, E.bG)([e7.A], () => e7.A.isFocused()),
         l =
             t ===
             (0, q.A)((e) => {
@@ -3280,20 +3280,20 @@ function re(e) {
         ? null
         : (0, r.jsx)(i$, { guildNode: n, guild: i, animatable: s, selected: l, draggable: !1, mediaState: o });
 }
-var rt = n(397009);
+var rt = n(803921);
 let rn = (0, v.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("47546"),
-                n.e("92424"),
-                n.e("12766"),
-                n.e("19983"),
-                n.e("99326"),
-                n.e("20538"),
-                n.e("18893"),
-                n.e("56844"),
-                n.e("90943"),
-                n.e("34716"),
+                n.e("98594"),
+                n.e("78104"),
+                n.e("66622"),
+                n.e("62279"),
+                n.e("67454"),
+                n.e("37634"),
+                n.e("42157"),
+                n.e("812"),
+                n.e("7927"),
+                n.e("7580"),
                 n.e("81647"),
                 n.e("76602"),
                 n.e("91763"),
@@ -3320,8 +3320,8 @@ let rn = (0, v.Fe)({
                 n.e("85802"),
                 n.e("41348"),
                 n.e("53402"),
-                n.e("2179"),
-                n.e("3886"),
+                n.e("46240"),
+                n.e("81505"),
                 n.e("8066"),
                 n.e("96296"),
             ]).then(n.bind(n, 153571)),
@@ -3491,7 +3491,7 @@ function rl(e) {
             }),
             d,
             (0, r.jsx)(nY, {}),
-            i ? null : (0, r.jsx)(t7, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
+            i ? null : (0, r.jsx)(t5, { disableTooltip: s.length > 0, lastTargetNode: o[o.length - 1] }),
             i ? null : t,
             n ? null : (0, r.jsx)(tx, {}),
         ],

@@ -40,7 +40,7 @@ let k = (0, _.v)((e, n) => ({
 }));
 var D = t(331322),
     w = t(775602),
-    B = t(656557);
+    B = t(826733);
 function G(e) {
     let { withHeader: n = !0, size: t = 15 } = e,
         i = (0, o.bG)([w.Ay], () => w.Ay.useReducedMotion);
@@ -141,7 +141,7 @@ var eN = t(922016),
     eM = t(849077),
     eC = t(652215),
     eR = t(375708),
-    eL = t(655794);
+    eL = t(285618);
 let e_ = {
     [eM.Th.MENTION]: [eM.kR.SETTINGS],
     [eM.Th.REPLY]: [eM.kR.SETTINGS],
@@ -329,7 +329,7 @@ function eB(e) {
 var eG = t(97808),
     eK = t(573435),
     ez = t(190460),
-    eX = t(388275);
+    eX = t(282291);
 function eY(e) {
     let {
             children: n,
@@ -853,7 +853,7 @@ let eJ = (0, i.memo)(
                               async () => {
                                   let { default: e } = await Promise.all([
                                       t.e("93336"),
-                                      t.e("3869"),
+                                      t.e("26250"),
                                       t.e("48118"),
                                   ]).then(t.bind(t, 594005));
                                   return (n) => (0, s.jsx)(e, { ...n, channel: h, message: c, isUnread: a });
@@ -880,8 +880,8 @@ var eq = t(735438),
     e2 = t(821609),
     e4 = t(475825),
     e8 = t(928039),
-    e9 = t(625494);
-let e7 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
+    e7 = t(625494);
+let e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e6 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e5 = (0, _.v)((e, n) => ({
         messageCategoryOpenStates: e6,
@@ -898,11 +898,11 @@ let e7 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.
             let s = n();
             s.hasUserToggledSection ||
                 (s.lastInitializedWithUnreads !== t &&
-                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e6 : e7 }));
+                    e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? e6 : e9 }));
         },
     }));
-var ne = t(405198),
-    nn = t(16051);
+var ne = t(756195),
+    nn = t(645875);
 function nt(e) {
     e.stopPropagation();
 }
@@ -1010,10 +1010,10 @@ function nl(e) {
             p.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            e9._.subscribe(eC.jej.SCROLL_PAGE_DOWN, n),
-            e9._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
+            e7._.subscribe(eC.jej.SCROLL_PAGE_DOWN, n),
+            e7._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
             () => {
-                e9._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, n), e9._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
+                e7._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, n), e7._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -1160,7 +1160,7 @@ function nl(e) {
         })
     );
 }
-var nr = t(756695);
+var nr = t(873111);
 let no = [],
     nc = {
         controller: new r.Controller({ value: 1, immediate: !0 }),

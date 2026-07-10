@@ -23,7 +23,7 @@ var i = n(64700),
     T = n(758836),
     L = n(652215),
     P = n(202541),
-    g = n(69626),
+    g = n(625265),
     S = n(375708);
 function h(t) {
     return null != t ? S.intl.format(S.t["4kp0AB"], { itemName: t }) : null;

@@ -36,9 +36,9 @@ var i = n(627968),
     G = n(5867),
     x = n(652215),
     k = n(806931),
-    F = n(157690),
-    V = n(429904),
-    B = n(794005);
+    F = n(970682),
+    V = n(27600),
+    B = n(604949);
 function H(e) {
     let { channel: t, isLoading: n } = e,
         [a, E] = r.useState(!1),

@@ -120,7 +120,7 @@ class _ extends i.EventEmitter {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: u,
                 getOptions: _,
-            } = await Promise.all([n.e("3325"), n.e("50839"), n.e("84806")]).then(n.bind(n, 961349));
+            } = await Promise.all([n.e("84253"), n.e("73220"), n.e("84806")]).then(n.bind(n, 961349));
         if (null == this.props.editorRef.current) return;
         let E = _(this.props),
             A = this.props.editorRef.current.getSlateEditor();

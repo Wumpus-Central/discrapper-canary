@@ -7,7 +7,7 @@ var r = n(503698),
     s = n(580929),
     l = n(866323),
     o = n(150591),
-    d = n(377023);
+    d = n(75967);
 function c(e) {
     let {
         variant: t = "default",

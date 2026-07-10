@@ -37,8 +37,8 @@ var l = t(627968),
     U = t(984624),
     V = t(394412),
     B = t(267102),
-    H = t(526292),
-    w = t(396495),
+    w = t(526292),
+    H = t(396495),
     Y = t(123973),
     K = t(447404),
     F = t(246356),
@@ -71,7 +71,7 @@ var l = t(627968),
     ex = t(652215),
     eg = t(806931),
     eI = t(49999),
-    ef = t(354944);
+    ef = t(56640);
 function eT(e, n) {
     ei.Ay.isVideoEnabled() !== e && ((0, O.X)(f.A.VOICE_CONTROL_TRAY, O.O.CAMERA, e), e ? (0, ep.A)(t, n) : t());
     function t() {
@@ -91,7 +91,7 @@ function ev(e) {
             if ((s?.(), !a)) return (0, eC.A)();
             (0, eE.A)(g, n.id, h);
         }, [g, n.id, a, s, h]),
-        f = (0, H.k0)(),
+        f = (0, w.k0)(),
         [v, j] = i.useState(!1);
     function _() {
         ((0, O.X)(c, O.O.STREAM, !0), a) ? I() : (0, eC.A)();
@@ -111,7 +111,7 @@ function ev(e) {
                             if (n === d.M.TRIAL_NUX_STREAM_COACH_MARK)
                                 return (
                                     j(!0),
-                                    (0, l.jsx)(w.b, {
+                                    (0, l.jsx)(H.b, {
                                         buttonRef: p,
                                         dismissed: !1,
                                         onDismiss: () => {
@@ -363,8 +363,8 @@ let eS = function (e) {
         D = (0, R.A)(),
         k = (0, u.bG)([y.default], () => null != y.default.getAwaitingRemoteSessionInfo()),
         U = null != D,
-        H = (0, u.bG)([es.A], () => (D?.channelId ?? es.A.getVoiceChannelId()) === n.id),
-        w = (0, u.bG)([g.Ay], () => g.Ay.getCurrentEmbeddedActivity()),
+        w = (0, u.bG)([es.A], () => (D?.channelId ?? es.A.getVoiceChannelId()) === n.id),
+        H = (0, u.bG)([g.Ay], () => g.Ay.getCurrentEmbeddedActivity()),
         { reachedLimit: K, limit: z } = (0, eo.A)(n),
         { analyticsLocations: J } = (0, T.Ay)(f.A.VOICE_CONTROL_TRAY),
         q = (0, Y.Ay)(n),
@@ -373,7 +373,7 @@ let eS = function (e) {
         et = (0, B.Us)(),
         el = (0, u.bG)([P.A], () => P.A.isVisible(n.id)),
         { experimental: ed } = G.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
-    return H
+    return w
         ? (0, l.jsx)(T.f5, {
               value: J,
               children: (0, l.jsxs)(x.A, {
@@ -509,7 +509,7 @@ let eS = function (e) {
                                     })
                                   : null,
                               (0, l.jsx)(e_, {
-                                  connectedEmbeddedActivity: w,
+                                  connectedEmbeddedActivity: H,
                                   currentUser: E,
                                   channel: n,
                                   onDisconnectCall: s,

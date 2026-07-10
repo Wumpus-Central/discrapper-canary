@@ -4,7 +4,7 @@ var a = n(627968),
     l = n.n(r),
     i = n(457287),
     s = n(375708),
-    u = n(398859);
+    u = n(97803);
 function o(e) {
     let { className: t, currencies: n, onChange: r, selectedCurrency: o, ...c } = e;
     return (0, a.jsx)(i.f, {

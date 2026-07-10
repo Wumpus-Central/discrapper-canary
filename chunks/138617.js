@@ -4,7 +4,7 @@ n.d(t, {
     Sk: () => nl,
     C: () => ne,
     v7: () => nr,
-    Zx: () => t7,
+    Zx: () => t5,
     L0: () => na,
     N_: () => nn,
     MD: () => no,
@@ -41,23 +41,23 @@ var i = n(627968),
     O = n(750506),
     L = n(60809),
     D = n(375708),
-    y = n(429856);
+    y = n(131552);
 let v = { width: 500, height: L.$V },
     b = (0, R.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("46494"),
-                n.e("28596"),
-                n.e("27647"),
-                n.e("52760"),
-                n.e("15080"),
-                n.e("62458"),
-                n.e("93909"),
-                n.e("93326"),
-                n.e("47570"),
-                n.e("79711"),
-                n.e("89028"),
-                n.e("27152"),
+                n.e("58846"),
+                n.e("99796"),
+                n.e("31463"),
+                n.e("41831"),
+                n.e("65264"),
+                n.e("18078"),
+                n.e("88429"),
+                n.e("42430"),
+                n.e("38450"),
+                n.e("94539"),
+                n.e("10720"),
+                n.e("38916"),
                 n.e("97270"),
                 n.e("93103"),
                 n.e("34552"),
@@ -79,7 +79,7 @@ let v = { width: 500, height: L.$V },
                 n.e("76428"),
                 n.e("27773"),
                 n.e("52229"),
-                n.e("38887"),
+                n.e("61268"),
                 n.e("18024"),
                 n.e("22261"),
                 n.e("78195"),
@@ -89,11 +89,11 @@ let v = { width: 500, height: L.$V },
                 n.e("37065"),
                 n.e("22094"),
                 n.e("61764"),
-                n.e("15086"),
+                n.e("59848"),
                 n.e("68974"),
                 n.e("56385"),
                 n.e("91220"),
-                n.e("11584"),
+                n.e("89203"),
                 n.e("35621"),
             ]).then(n.bind(n, 854379)),
         webpackId: 854379,
@@ -148,7 +148,7 @@ var U = n(861382),
     J = n(939249),
     ee = n(802019),
     et = n(649671),
-    en = n(932390);
+    en = n(282214);
 let ei = [16, 8, 8, 8];
 function er(e) {
     let {
@@ -232,7 +232,7 @@ function er(e) {
 var ea = n(524007),
     es = n(73510),
     el = n(652215),
-    eo = n(155633),
+    eo = n(13297),
     ed = n(911385);
 let ec = [8, 8, 0, 8],
     eu = G().debounce(() => {
@@ -520,15 +520,15 @@ var eP = n(931664),
     e3 = n(463930),
     e6 = n(935063),
     e4 = n(73392),
-    e5 = n(650019),
-    e7 = n(763754),
+    e7 = n(650019),
+    e5 = n(763754),
     e8 = n(967144),
     e9 = n(118517),
     te = n(976860),
     tt = n(747926),
     tn = n(232835),
     ti = n(285796),
-    tr = n(688288);
+    tr = n(630816);
 function ta(e) {
     let { onClick: t, "aria-label": n } = e;
     return (0, i.jsx)(J.D, {
@@ -538,7 +538,7 @@ function ta(e) {
         children: (0, i.jsx)(ti.a, { size: "md", color: "currentColor", className: tr.u }),
     });
 }
-var ts = n(776380);
+var ts = n(1468);
 let tl = "channel-reply-bar-a11y-description";
 function to(e) {
     let { channel: t, message: n, replyChainLength: a } = e,
@@ -591,10 +591,10 @@ function td(e) {
             colorRoleName: p,
             authorId: T,
             displayNameStyles: m,
-        } = (0, e7.Ay)(d),
+        } = (0, e5.Ay)(d),
         g = (0, e8.gn)(A, T, f),
         S = (0, e4.a)({ displayNameStyles: m }),
-        N = (0, e5.A)(_, d.attachments),
+        N = (0, e7.A)(_, d.attachments),
         C =
             ((t = o.id),
             (n = d.id),
@@ -723,7 +723,7 @@ function td(e) {
 }
 var tc = n(749314),
     tu = n(148355),
-    t_ = n(901664);
+    t_ = n(74995);
 let tE = r.memo(function (e) {
     let { channelId: t, chatInputType: n } = e,
         [a, s] = r.useState(null),
@@ -775,7 +775,7 @@ var tA = n(612394);
 n(321073);
 var th = n(442433);
 n(827669);
-var tI = n(851006);
+var tI = n(448702);
 function tf(e) {
     let t,
         a,
@@ -865,7 +865,7 @@ function tC() {
         ],
     });
 }
-var tR = n(883407);
+var tR = n(278351);
 function tO(e) {
     let { error: t } = e;
     return (0, i.jsxs)("div", {
@@ -884,7 +884,7 @@ function tO(e) {
 }
 var tL = n(25201),
     tD = n(926321),
-    ty = n(716141);
+    ty = n(221933);
 function tv(e) {
     var t, n;
     let { channelId: r } = e,
@@ -912,7 +912,7 @@ function tv(e) {
 }
 var tb = n(575293),
     tM = n(151282),
-    tP = n(706140);
+    tP = n(1372);
 function tU(e) {
     let { pendingScheduledMessage: t } = e,
         { channelId: n, scheduledTimestamp: r } = t;
@@ -943,7 +943,7 @@ function tU(e) {
         }),
     });
 }
-var tw = n(871655);
+var tw = n(266599);
 function tG(e) {
     let { bars: t } = e,
         n = t.stacked.map((e, t) => (0, i.jsx)("div", { children: e }, t)),
@@ -966,7 +966,7 @@ var tx = n(123583),
     tj = n(252263),
     tW = n(8455),
     tY = n(67259),
-    tK = n(238565);
+    tK = n(355026);
 function t$(e) {
     let { thread: t, pendingScheduledMessage: n } = e,
         a = (0, tW.Vp)({ location: "ThreadsAlsoSendToChannelArea" }),
@@ -1049,7 +1049,7 @@ var tq = n(822610),
     t0 = n(375499),
     t1 = n(334295),
     t2 = n(307731),
-    t3 = n(903846);
+    t3 = n(128934);
 function t6(e) {
     let { getSlateEditor: t, onInsertEmoji: n, type: a, channel: s } = e,
         l = t(),
@@ -1097,8 +1097,8 @@ function t6(e) {
           });
 }
 var t4 = n(263582),
-    t5 = n(698279);
-function t7(e, t, a, s, l) {
+    t7 = n(698279);
+function t5(e, t, a, s, l) {
     let [o, d] = r.useState(!1),
         c = r.useCallback(
             (r, u, _, E, h, I) => {
@@ -1110,18 +1110,18 @@ function t7(e, t, a, s, l) {
                     d(!1),
                         (0, A.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
-                                n.e("66237"),
-                                n.e("59748"),
-                                n.e("80926"),
-                                n.e("99326"),
-                                n.e("20538"),
-                                n.e("82090"),
-                                n.e("19983"),
-                                n.e("18893"),
-                                n.e("28802"),
-                                n.e("97300"),
-                                n.e("44794"),
-                                n.e("17103"),
+                                n.e("41185"),
+                                n.e("68316"),
+                                n.e("37502"),
+                                n.e("67454"),
+                                n.e("37634"),
+                                n.e("21194"),
+                                n.e("62279"),
+                                n.e("42157"),
+                                n.e("83314"),
+                                n.e("39328"),
+                                n.e("64801"),
+                                n.e("12815"),
                                 n.e("49681"),
                                 n.e("81647"),
                                 n.e("76602"),
@@ -1257,13 +1257,13 @@ function nt(e) {
 }
 function nn(e, t, n) {
     let i = r.useCallback(() => {
-            t || (0, ep.r$)(t5.kx.EMOJI, e, n);
+            t || (0, ep.r$)(t7.kx.EMOJI, e, n);
         }, [t, e, n]),
         a = r.useCallback(() => {
-            !t && e.gifs?.allowSending && (0, ep.r$)(t5.kx.GIF, e, n);
+            !t && e.gifs?.allowSending && (0, ep.r$)(t7.kx.GIF, e, n);
         }, [t, e, n]),
         s = r.useCallback(() => {
-            !t && e.stickers?.allowSending && (0, ep.r$)(t5.kx.STICKER, e, n);
+            !t && e.stickers?.allowSending && (0, ep.r$)(t7.kx.STICKER, e, n);
         }, [t, e, n]);
     (0, e$.Vo)({ event: el.jej.TOGGLE_EMOJI_POPOUT, handler: i }),
         (0, e$.Vo)({ event: el.jej.TOGGLE_GIF_PICKER, handler: a }),
@@ -1452,17 +1452,17 @@ let nc = r.memo(
             { fontSize: e3 } = (0, E.cf)([T.Ay], () => ({ fontSize: T.Ay.fontSize })),
             e6 = (0, E.bG)([eH.A], () => eH.A.isEnabled());
         nn(D, eB, L.id);
-        let { eventEmitter: e4, handleEditorSelectionChanged: e5 } = ni(eE, a, l),
-            e7 = r.useRef(a);
-        e7.current = a;
+        let { eventEmitter: e4, handleEditorSelectionChanged: e7 } = ni(eE, a, l),
+            e5 = r.useRef(a);
+        e5.current = a;
         let e8 = r.useCallback(
                 (e, t, n) => {
-                    "/" === t && "" === e7.current && D.commands?.enabled && e4.emit("command-sentinel-typed"),
+                    "/" === t && "" === e5.current && D.commands?.enabled && e4.emit("command-sentinel-typed"),
                         x?.(e, t, n);
                 },
                 [x, D.commands?.enabled, e4],
             ),
-            { submitting: e9, submit: te, handleSubmit: tt } = t7(H, D, eE, eg, L.id),
+            { submitting: e9, submit: te, handleSubmit: tt } = t5(H, D, eE, eg, L.id),
             { autocompleteRef: tn, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: tr } = nr(),
             ta = t8(te, D, eE),
             ts = t9(eE),
@@ -1627,7 +1627,7 @@ let nc = r.memo(
                           showAllButtons: !eP && !eb,
                           expressionButtonsHidden: eb,
                       }),
-            t5 = tj
+            t7 = tj
                 ? (0, i.jsx)(tZ.A, {
                       type: D,
                       textValue: a,
@@ -1718,7 +1718,7 @@ let nc = r.memo(
                                                         onTab: tI,
                                                         onEnter: tp,
                                                         onMoveSelection: tT,
-                                                        onSelectionChanged: e5,
+                                                        onSelectionChanged: e7,
                                                         onMaybeShowAutocomplete: ti,
                                                         onHideAutocomplete: tr,
                                                         promptToUpload: j,
@@ -1770,7 +1770,7 @@ let nc = r.memo(
                                     position: ee,
                                 }),
                                 (0, i.jsx)(eM, { textValue: a, editorHeight: tA, channelId: L.id }),
-                                t5,
+                                t7,
                                 et,
                             ],
                         }),

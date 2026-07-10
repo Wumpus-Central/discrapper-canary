@@ -26,9 +26,9 @@ var l = n(627968),
     T = n(359800),
     I = n(206828),
     _ = n(769015),
-    R = n(559965),
+    R = n(774418),
     k = n(375708),
-    M = n(215965);
+    M = n(27549);
 function w(e) {
     let t,
         { application: n, size: i = "md", analyticsLocation: s = m.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
@@ -60,7 +60,7 @@ function w(e) {
 }
 var L = n(652215);
 n(253913);
-var D = n(45342);
+var D = n(939422);
 let P = h.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
     O = "create-game-invite-post";
 function F(e) {

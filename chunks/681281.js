@@ -8,31 +8,31 @@ var i = n(627968),
     c = n(778712),
     d = n(834730),
     u = n(548411),
-    p = n(939249),
-    h = n(22231),
+    h = n(939249),
+    p = n(22231),
     m = n(192308),
     A = n(254138),
     x = n(661531),
-    g = n(730134),
-    f = n(440594),
+    f = n(730134),
+    g = n(440594),
     C = n(793574),
-    y = n(429913),
-    j = n(47167),
-    E = n(882840),
-    v = n(713654),
+    j = n(429913),
+    y = n(47167),
+    v = n(882840),
+    E = n(713654),
     N = n(611371),
     I = n(769015),
-    _ = n(446243),
-    T = n(920639),
+    T = n(446243),
+    _ = n(920639),
     S = n(360729),
-    R = n(508654),
-    b = n(974930),
+    b = n(508654),
+    R = n(974930),
     P = n(961314),
     O = n(58736),
     L = n(742589),
-    D = n(376352),
-    M = n(353428),
-    w = n(46054),
+    w = n(376352),
+    D = n(353428),
+    M = n(46054),
     U = n(527549),
     V = n(665691),
     k = n(241756),
@@ -42,9 +42,9 @@ var i = n(627968),
     F = n(136523),
     z = n(806931),
     W = n(375708),
-    Y = n(189090),
-    K = n(188628),
-    X = n(168147);
+    Y = n(662731),
+    K = n(82644),
+    X = n(992595);
 function Z(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, k.A)(n, t, l);
@@ -52,7 +52,7 @@ function Z(e) {
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(g.A, { className: K.my, size: c._3.SIZE_24, user: t, animate: !1 }),
+                  (0, i.jsx)(f.A, { className: K.my, size: c._3.SIZE_24, user: t, animate: !1 }),
                   (0, i.jsx)(d.E, { variant: "text-md/medium", color: a, lineClamp: 1, children: s }),
               ],
           });
@@ -60,8 +60,8 @@ function Z(e) {
 function q(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
-        s = (0, R.Qs)(a.id),
-        r = null != s ? (0, b.G3)(s) : null,
+        s = (0, b.Qs)(a.id),
+        r = null != s ? (0, R.G3)(s) : null,
         o = null != s;
     if (l?.type === z.lp.ACTIVITY)
         null != n &&
@@ -73,7 +73,7 @@ function q(e) {
                         className: K.W$,
                         variant: "text-md/normal",
                         color: "none",
-                        children: (0, f.A)(n.name),
+                        children: (0, g.A)(n.name),
                     }),
                 ],
             }));
@@ -84,15 +84,15 @@ function q(e) {
             children: [
                 (0, i.jsx)(O.Ay.Divider, { className: K.yF }),
                 (0, i.jsx)(Z, { user: e, channel: a, stream: n, color: "text-strong" }),
-                (0, i.jsx)(D.F, { user: e, stream: n, channel: a }),
+                (0, i.jsx)(w.F, { user: e, stream: n, channel: a }),
             ],
         });
     } else o && (t = (0, i.jsx)(P.A, { guildEvent: s, recurrenceId: r }));
     return (0, i.jsx)("div", { className: K.kL, children: t });
 }
 function $(e) {
-    let { channel: t, guild: a, appContext: c, inCall: g, isChatOpen: f, exitFullScreen: I, guildRoomVisible: R } = e,
-        { focusedParticipant: b } = (0, r.cf)(
+    let { channel: t, guild: a, appContext: c, inCall: f, isChatOpen: g, exitFullScreen: I, guildRoomVisible: b } = e,
+        { focusedParticipant: R } = (0, r.cf)(
             [B.A],
             () => ({
                 focusedParticipant: B.A.getSelectedParticipant(t.id),
@@ -101,15 +101,15 @@ function $(e) {
             [t.id],
         ),
         { enabled: P } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
-        D = P && !R,
-        k = (0, j.Ay)(t),
-        Z = D ? W.intl.string(Y.default.f7g0DK) : R ? `${k} \xb7 ${W.intl.string(Y.default.wRLmM0)}` : k,
-        $ = D ? u.Z : (0, v.gU)(t),
-        [Q] = (0, y.A)(b?.type === z.lp.ACTIVITY ? [b.applicationId] : []),
+        w = P && !b,
+        k = (0, y.Ay)(t),
+        Z = w ? W.intl.string(Y.default.f7g0DK) : b ? `${k} \xb7 ${W.intl.string(Y.default.wRLmM0)}` : k,
+        $ = w ? u.Z : (0, E.gU)(t),
+        [Q] = (0, j.A)(R?.type === z.lp.ACTIVITY ? [R.applicationId] : []),
         J = W.intl.string(W.t.BVZqJl);
     t.isDM() ? (J = W.intl.string(W.t.jN2DfZ)) : t.isGroupDM() && (J = W.intl.string(W.t["e5y+gm"]));
-    let ee = (0, E.l)(t),
-        et = t.isGuildVoice() && g && null != ee && ee.length > 0,
+    let ee = (0, v.l)(t),
+        et = t.isGuildVoice() && f && null != ee && ee.length > 0,
         en = (0, G.Ay)(t),
         ei = et
             ? (0, i.jsx)("div", {
@@ -120,7 +120,7 @@ function $(e) {
                       delay: 500,
                       position: "bottom",
                       shouldShow: en,
-                      children: (0, i.jsxs)(p.D, {
+                      children: (0, i.jsxs)(h.D, {
                           className: s()(K.WH, { [K.BI]: en }),
                           onClick: en
                               ? function () {
@@ -137,10 +137,10 @@ function $(e) {
                               (0, i.jsx)(d.E, {
                                   variant: "text-xs/normal",
                                   className: s()(K.Gh, X.PT, { [K.BI]: en }),
-                                  children: w.A.parseVoiceChannelStatus(ee, !0, { channelId: t.id }),
+                                  children: M.A.parseVoiceChannelStatus(ee, !0, { channelId: t.id }),
                               }),
                               en &&
-                                  (0, i.jsx)(h.R, {
+                                  (0, i.jsx)(p.R, {
                                       size: "custom",
                                       color: "currentColor",
                                       className: s()(K.rD, K.BI),
@@ -154,10 +154,10 @@ function $(e) {
             : null,
         el = (0, V.bG)({ channelId: t.id }),
         ea = l.useCallback(() => {
-            D &&
-                ((0, _.zD)(t.id),
-                (0, T.yt)({ channelId: t.id, guildId: t.guild_id, location: C.A.CHANNEL_CALL, guildRoomOpen: !0 }));
-        }, [D, t.id, t.guild_id]);
+            w &&
+                ((0, T.zD)(t.id),
+                (0, _.yt)({ channelId: t.id, guildId: t.guild_id, location: C.A.CHANNEL_CALL, guildRoomOpen: !0 }));
+        }, [w, t.id, t.guild_id]);
     return (0, i.jsxs)("div", {
         className: K.SC,
         children: [
@@ -171,24 +171,24 @@ function $(e) {
                 toolbar: (0, i.jsx)(H.A, {
                     channel: t,
                     appContext: c,
-                    inCall: g,
-                    isChatOpen: f,
+                    inCall: f,
+                    isChatOpen: g,
                     exitFullScreen: I,
                     focusedApplication: Q,
                     shouldShowHeaderParticipants: !0,
-                    guildRoomVisible: R,
+                    guildRoomVisible: b,
                 }),
                 children: [
                     (0, i.jsx)(O.Ay.Title, {
                         wrapperClassName: K.DD,
-                        onClick: D ? ea : void 0,
+                        onClick: w ? ea : void 0,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 null != $
                                     ? (0, i.jsx)(O.Ay.ChannelIcon, {
                                           icon: $,
                                           "aria-label": J,
-                                          color: D ? "white" : void 0,
+                                          color: w ? "white" : void 0,
                                       })
                                     : null,
                                 Z,
@@ -206,8 +206,8 @@ function $(e) {
                             ],
                         }),
                     }),
-                    (0, i.jsx)(M.i$, { channel: t, guild: a }),
-                    (0, i.jsx)(q, { focusedApplication: Q, focusedParticipant: b, channel: t }),
+                    (0, i.jsx)(D.i$, { channel: t, guild: a }),
+                    (0, i.jsx)(q, { focusedApplication: Q, focusedParticipant: R, channel: t }),
                 ],
             }),
             (0, i.jsx)(U.A, { channelId: t.id }),

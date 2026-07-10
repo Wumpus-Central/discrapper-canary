@@ -19,9 +19,9 @@ var i = n(627968),
     T = n(58703),
     m = n(403362),
     g = n(922016),
-    S = n(732085);
+    S = n(433781);
 let N = r.lazy(() =>
-    Promise.all([n.e("30171"), n.e("46054")])
+    Promise.all([n.e("17179"), n.e("46054")])
         .then(n.bind(n, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
@@ -56,7 +56,7 @@ function C(e) {
 var R = n(97808),
     O = n(778712),
     L = n(342296),
-    D = n(44796);
+    D = n(812924);
 function y(e) {
     let { user: t, guildId: n } = e,
         a = r.useRef(null);

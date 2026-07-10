@@ -17,7 +17,7 @@ var i = n(627968),
 let f = { mass: 1, tension: 800, friction: 32 },
     p = { mass: 1, tension: 1200, friction: 48 };
 var T = n(818348),
-    m = n(77006);
+    m = n(824078);
 let g = r.createContext(null),
     S = T.FX;
 function N(e) {

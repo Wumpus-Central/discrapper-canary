@@ -37,7 +37,7 @@ var S = n(503698),
     _ = n(939249),
     F = n(215566),
     L = n(375708),
-    O = n(213659);
+    O = n(508891);
 function G(e) {
     let { node: t, isLast: n } = e,
         r = t.useTitle(),
@@ -91,7 +91,7 @@ function X(e) {
         }),
     });
 }
-var q = n(454298);
+var q = n(441562);
 function z(e) {
     let { icon: t, label: n, onClick: r } = e;
     return (0, l.jsx)(E.K, { onClick: r, icon: t, size: "sm", variant: "icon-only", "aria-label": n });
@@ -186,7 +186,7 @@ var es = n(284009),
     eo = n(319354),
     ec = n(717421),
     ed = n(885386),
-    eh = n(571902);
+    eh = n(429566);
 function em(e) {
     let { category: t, onClick: n, active: s, dismissibleBadge: i } = e,
         { useTitle: a, useSubnavLabel: u, key: o, usePersistentBadge: c } = t,
@@ -435,7 +435,7 @@ function ex(e) {
         })
     );
 }
-var ey = n(598371);
+var ey = n(585635);
 let ef = "refresh_sm";
 function ej(e) {
     let { onClick: t, active: n, node: s, dismissibleBadge: i, panelKey: u, listItemProps: o, children: c } = e,
@@ -566,7 +566,7 @@ function ev(e) {
 }
 var eA = n(826673),
     ep = n(49999),
-    eb = n(455999);
+    eb = n(443263);
 function eS(e) {
     let { currentPanelKey: t, root: n, onClose: s, footer: i, emptyState: a, searchBar: u } = e,
         o = B.A.useField("showNavigationMobile"),
@@ -792,7 +792,7 @@ function eC(e) {
 }
 var eE = n(823092),
     ek = n(581298),
-    eM = n(16756);
+    eM = n(910772);
 function eI(e) {
     let {
             partialRoot: t,
@@ -939,12 +939,12 @@ var eK = n(280450),
     eH = n(915089),
     eQ = n(206845),
     eY = n(19575),
-    eZ = n(775960);
+    eZ = n(763224);
 function eJ() {
     let e = (0, eH.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "575551",
-        r = "01c6f48b2cdba23118e02f3651701d8ec3ff2b02".substring(0, 7),
+        n = "576520",
+        r = "0a09508c0f35b4bbb6974e6d313814e03f7808ef".substring(0, 7),
         s = eW.A?.app.getVersion(),
         i = eW.A?.app.getBuildNumber(),
         u = eW.A?.app.getAppArch(),
@@ -1029,7 +1029,7 @@ function eJ() {
         })
     );
 }
-var e0 = n(792537);
+var e0 = n(779801);
 function e1(e) {
     let { onClose: t } = e;
     return (0, l.jsx)(eF.W, {
@@ -1055,7 +1055,7 @@ function e1(e) {
         }),
     });
 }
-function e2() {
+function e7() {
     let e = r.useRef(null);
     return (0, l.jsxs)("div", {
         children: [
@@ -1112,10 +1112,10 @@ function e2() {
         ],
     });
 }
-var e5 = n(402651),
-    e7 = n(669067),
-    e9 = n(830543),
-    e3 = n(725305);
+var e2 = n(402651),
+    e9 = n(669067),
+    e5 = n(830543),
+    e3 = n(466745);
 let e8 = new Set([eP.X.PROFILE_PANEL, eP.X.SUBSCRIPTIONS_PANEL, eP.X.FAMILY_CENTER_PANEL, eP.X.POGGERMODE_PANEL]),
     e4 = new Map([
         [eP.X.CONNECTIONS_PANEL, s.ImpressionNames.USER_SETTINGS_CONNECTIONS],
@@ -1130,12 +1130,12 @@ function e6(e) {
         [m, g] = r.useState(!1);
     return (r.useLayoutEffect(() => {
         function e() {
-            null == eB.default.getCurrentUser() && (g(!0), (0, e9.default)());
+            null == eB.default.getCurrentUser() && (g(!0), (0, e5.default)());
         }
         return (
             eK.default.addChangeListener(e),
             () => {
-                eK.default.removeChangeListener(e), e5.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
+                eK.default.removeChangeListener(e), e2.A.resetState(), d.A.resetState(), u.A.close(), (0, c.ZQ)();
             }
         );
     }, []),
@@ -1145,17 +1145,17 @@ function e6(e) {
               partialRoot: e_.D,
               searchBar: te,
               emptyState: tt,
-              sidebarFooter: e2,
+              sidebarFooter: e7,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e7._)(e);
+                  e8.has(e) || (0, e9._)(e);
                   let t = e4.get(e);
                   null != t &&
                       (0, o.x)({
                           type: s.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e5.A.getField("source") },
+                          properties: { source: e2.A.getField("source") },
                       }),
-                      e5.A.setState({ source: void 0 });
+                      e2.A.setState({ source: void 0 });
               },
               target: t,
               defaultTarget: eP.X.ACCOUNT_PANEL,

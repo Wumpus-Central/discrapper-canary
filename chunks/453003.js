@@ -87,7 +87,7 @@ function Z(e) {
 }
 var $ = n(878831),
     Q = n(768349),
-    ee = n(378);
+    ee = n(193018);
 function et(e) {
     let { presenceActivity: t, remoteJoinPlatform: n, isGameLaunchable: i } = e,
         r = (function (e) {

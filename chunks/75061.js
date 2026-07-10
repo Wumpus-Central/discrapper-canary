@@ -44,9 +44,9 @@ var i,
     W = n(922016),
     Y = n(827827),
     K = n(481045),
-    $ = n(900640),
+    $ = n(395277),
     z = n(375708),
-    q = n(159143);
+    q = n(982375);
 function Z(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)("div", {
@@ -497,7 +497,7 @@ var eB = n(769015),
     eZ = n(929921),
     eX = n(650338),
     eQ = n(753070),
-    eJ = n(521920);
+    eJ = n(194368);
 function e0(e) {
     let { className: t, color: n, ...i } = e;
     return (0, r.jsx)(x.E, { className: l()({ [eJ.Q]: null == n }, t), color: n, ...i });
@@ -507,8 +507,8 @@ var e1 = n(95701),
     e3 = n(280450),
     e6 = n(734057),
     e4 = n(184989),
-    e5 = n(71393),
-    e7 = n(451409),
+    e7 = n(71393),
+    e5 = n(451409),
     e8 = n(576705),
     e9 = n(290863),
     te = n(994500),
@@ -546,10 +546,10 @@ var tl = n(994314),
     tL = n(532624),
     tD = n(350535),
     ty = n(572164),
-    tv = n(794981);
+    tv = n(646693);
 function tb(e) {
     (0, tC.L3)(e, async () => {
-        let { default: e } = await n.e("40638").then(n.bind(n, 785114));
+        let { default: e } = await n.e("40638").then(n.bind(n, 562733));
         return (t) => (0, r.jsx)(e, { ...t });
     });
 }
@@ -612,7 +612,7 @@ let tk = (0, ed.mj)({
 });
 var tF = n(823748),
     tV = n(522055),
-    tB = n(76660);
+    tB = n(576709);
 function tH(e) {
     let { title: t, body: n, ctaText: i, runningGameId: a, targetElementRef: s, onClick: l, onClose: o } = e,
         d = (0, _.bG)([tV.A], () => null != a && tV.A.getGlobalCatalogGame(a)?.can_market === !0, [a]);
@@ -662,7 +662,7 @@ var tY = n(453774),
     tK = n(44724),
     t$ = n(153488),
     tz = n(942370),
-    tq = n(215917);
+    tq = n(610861);
 function tZ(e, t, n) {
     return (
         null != e &&
@@ -740,15 +740,15 @@ let tX = a.memo(function (e) {
             Y = a.useCallback(() => {
                 (0, tc.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("4615"),
-                        n.e("81218"),
+                        n.e("64379"),
+                        n.e("17918"),
                         n.e("76171"),
                         n.e("86672"),
                         n.e("38601"),
                         n.e("36946"),
                         n.e("44727"),
-                        n.e("28724"),
-                        n.e("82013"),
+                        n.e("6565"),
+                        n.e("14304"),
                         n.e("76229"),
                     ]).then(n.bind(n, 477156));
                     return (t) =>
@@ -764,7 +764,7 @@ let tX = a.memo(function (e) {
             $ = a.useCallback(() => {
                 (0, tG.pK)({ gameApplicationId: u?.id, buttonVariant: "admin" }),
                     (0, tc.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("99681"), n.e("37084"), n.e("74132")]).then(
+                        let { default: e } = await Promise.all([n.e("42209"), n.e("37084"), n.e("74132")]).then(
                             n.bind(n, 279871),
                         );
                         return (t) => (0, r.jsx)(e, { gameName: K, gameApplicationId: u?.id, ...t });
@@ -977,7 +977,7 @@ function t0(e) {
 var t1 = n(428689),
     t2 = n(409626),
     t3 = n(692969),
-    t6 = n(686926);
+    t6 = n(673294);
 function t4(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(I.D, {
@@ -991,8 +991,8 @@ function t4(e) {
         }),
     });
 }
-var t5 = n(788077),
-    t7 = n(559753);
+var t7 = n(16590),
+    t5 = n(118902);
 function t8(e) {
     let { isStreaming: t, isCurrentlyRunningGame: n, onClickNotSharing: i } = e,
         a = (0, _.bG)([tL.Ay], () => tL.Ay.getKeybindForAction(G.hCu.SAVE_CLIP)),
@@ -1010,17 +1010,17 @@ function t8(e) {
               ? (0, r.jsx)(x.E, {
                     variant: "text-xs/medium",
                     color: "text-subtle",
-                    className: t7.En,
+                    className: t5.En,
                     tag: "div",
-                    children: z.intl.format(t5.default.ESZwQX, {
+                    children: z.intl.format(t7.default.ESZwQX, {
                         keybind: s,
-                        keybindHook: () => (0, r.jsx)(tS.e, { shortcut: s, className: t7.oH, keyClassName: t7.Bj }),
+                        keybindHook: () => (0, r.jsx)(tS.e, { shortcut: s, className: t5.oH, keyClassName: t5.Bj }),
                     }),
                 })
               : null
         : (0, r.jsx)(x.E, { variant: "text-xs/medium", color: "text-subtle", children: z.intl.string(z.t.W4N1ru) });
 }
-var t9 = n(984470);
+var t9 = n(379414);
 function ne(e) {
     let { name: t, applicationId: n } = e,
         i = (0, t3.A)({
@@ -1116,8 +1116,8 @@ let nr = {
     "1121201675240210523": "884849473329692723",
     "1402418594532298837": "560127830160048128",
 };
-var na = n(41959),
-    ns = n(503432),
+var na = n(911070),
+    ns = n(490696),
     nl = n(268920),
     no = n(633217);
 function nd(e) {
@@ -1514,11 +1514,11 @@ let nf = (0, N.A)(function (e) {
         T = (0, _.bG)([tt.A, e6.A], () => e6.A.getChannel(tt.A.getVoiceChannelId())),
         m = (0, _.bG)([L.Ay], () => L.Ay.getConnectedActivityChannelId()),
         g = (0, _.bG)([e6.A], () => e6.A.getChannel(m)),
-        S = (0, _.bG)([e5.A], () => e5.A.getGuild(g?.guild_id)),
+        S = (0, _.bG)([e7.A], () => e7.A.getGuild(g?.guild_id)),
         [N, R] = (0, _.yK)([e2.A], () => [e2.A.getCurrentUserActiveStream(), e2.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
         D = (0, _.bG)([eb.A], () => eb.A.getConnectedFrame()),
-        b = (0, _.bG)([e5.A, e8.A], () => null == T || ej.vz(T, e5.A, e8.A, !1)),
+        b = (0, _.bG)([e7.A, e8.A], () => null == T || ej.vz(T, e7.A, e8.A, !1)),
         [P] = (0, eA.A)([
             (function () {
                 if (null != R && null != R.id) return R.id;
@@ -1530,7 +1530,7 @@ let nf = (0, N.A)(function (e) {
         ]),
         w =
             ((0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
-            (0, _.bG)([e7.Ay], () => (0, eW.A)(e7.Ay) && (0, ta.isWindows)()) || !1),
+            (0, _.bG)([e5.Ay], () => (0, eW.A)(e5.Ay) && (0, ta.isWindows)()) || !1),
         x = (0, _.bG)([e9.A], () => (null != c ? e9.A.findActivity(c, (e) => e.type === G.$pd.PLAYING) : null)),
         k = null != N && N.ownerId === c && N.state !== G.XYD.ENDED,
         F = (0, _.bG)([tn.default, te.A], () => (null != g ? (0, ef.m1)(g, tn.default, te.A) : void 0)),

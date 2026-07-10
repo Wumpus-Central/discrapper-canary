@@ -1,0 +1,23 @@
+.externalLink__900c6 {
+    width: 100%
+}
+
+.theme-dark .container__900c6 {
+    background-color: var(--primary-630)
+}
+
+.theme-light .container__900c6 {
+    background-color: hsl(var(--primary-100-hsl)/.6)
+}
+
+.currency__900c6 {
+    color: var(--text-default);
+    font-size: 14px;
+    margin-top: 12px
+}
+
+.currency__900c6 .currencyDropdown__900c6 {
+    flex-grow: 1;
+    margin-inline-start: 4px;
+    width: 80px
+}

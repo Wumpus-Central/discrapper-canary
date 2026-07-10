@@ -7,9 +7,9 @@ var i = n(503698),
     s = n(834730),
     o = n(688810),
     u = n(139286),
-    c = n(322798),
+    c = n(360615),
     d = n(375708),
-    p = n(670152);
+    p = n(44168);
 function m(e) {
     let { giftsToNextTier: t, nextTierName: n, nextTierIcon: i, analyticsLocations: m, className: C } = e,
         { analyticsLocations: h } = (0, o.Ay)();

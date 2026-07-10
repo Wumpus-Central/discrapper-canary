@@ -2,9 +2,9 @@ n.d(t, { A: () => h });
 var r = n(627968),
     l = n(64700),
     i = n(717421),
-    u = n(17928),
-    a = n(287809),
-    s = n(801365),
+    s = n(17928),
+    u = n(287809),
+    a = n(801365),
     o = n(503698),
     c = n.n(o),
     d = n(580929),
@@ -15,22 +15,22 @@ var r = n(627968),
     p = n(646764);
 n(795068);
 var S = n(190107),
-    C = n(63507);
+    C = n(777555);
 let v = { duration: 250 },
     A = function (e) {
         let {
                 currentPx: t,
                 indicator: n,
-                isAnimated: u,
-                quest: a,
-                sourceQuestContent: s,
+                isAnimated: s,
+                quest: u,
+                sourceQuestContent: a,
                 expansionSpring: o,
                 onClick: S,
                 onMouseEnter: A,
                 onMouseLeave: g,
             } = e,
             { label: h, targetSec: I, leftPx: T, rightPx: D, index: R } = n,
-            x = a.userStatus?.completedAt != null,
+            x = u.userStatus?.completedAt != null,
             [L, O] = l.useState(!1),
             P = T - 4,
             N = t >= P ? Math.min(1, (t - P) / (D - P)) : 0,
@@ -57,8 +57,8 @@ let v = { duration: 250 },
         return (0, r.jsxs)(d.animated.div, {
             className: c()(C.ck, { [C.a]: k && L, [C.C9]: !k && L }),
             style: {
-                left: u ? o.to((e) => T - e) : T,
-                "--custom-indicator-size": u ? o.to((e) => `${26 + 2 * e}px`) : "26px",
+                left: s ? o.to((e) => T - e) : T,
+                "--custom-indicator-size": s ? o.to((e) => `${26 + 2 * e}px`) : "26px",
                 "--custom-indicator-fill": b.to((e) => e),
             },
             onMouseDown: y,
@@ -72,9 +72,9 @@ let v = { duration: 250 },
                     onMouseLeave: g,
                     children: (0, r.jsx)(p.A, {
                         fullWidth: !0,
-                        quest: a,
+                        quest: u,
                         questContent: m.uF.VIDEO_MODAL,
-                        sourceQuestContent: s,
+                        sourceQuestContent: a,
                         autoplay: !1,
                     }),
                 }),
@@ -107,7 +107,7 @@ let v = { duration: 250 },
     g = { tension: 500, friction: 30, clamp: !0 };
 function h(e) {
     let { targetSec: t, quest: n, sourceQuestContent: o, questConfig: c, clickable: d = !1 } = e,
-        E = (0, u.bG)([a.default], () => a.default.getCurrentUser()),
+        E = (0, s.bG)([u.default], () => u.default.getCurrentUser()),
         f = l.useMemo(() => c?.features.includes(S.Li.FULL_EPISODE_VIDEO_QUEST) === !0, [c?.features]),
         [_, m] = l.useState(null),
         p = l.useRef(null),
@@ -125,15 +125,15 @@ function h(e) {
             [v],
         ),
         I = l.useMemo(() => [{ index: 0, timeSec: t, widthPx: 32, gapPx: 4, align: "end", clickable: d }], [t, d]),
-        T = l.useMemo(() => (f ? (0, s.mq)(c, E) : void 0), [c, f, E]),
+        T = l.useMemo(() => (f ? (0, a.mq)(c, E) : void 0), [c, f, E]),
         D = l.useCallback(
             (e, l, i) => {
-                let u = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: T };
+                let s = { leftPx: e.leftPx, rightPx: e.rightPx, targetSec: t, index: e.index, label: T };
                 return (0, r.jsx)(
                     A,
                     {
                         currentPx: l,
-                        indicator: u,
+                        indicator: s,
                         isAnimated: _ === e.index,
                         expansionSpring: C,
                         quest: n,

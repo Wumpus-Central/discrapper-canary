@@ -67,7 +67,7 @@ var O = n(730852),
     er = n(202541),
     ea = n(355097),
     es = n(375708),
-    el = n(846775);
+    el = n(448759);
 function eo(e) {
     let { dismissibleContent: t, noticeType: r } = e;
     return (0, i.jsx)(et.Ay, {
@@ -91,7 +91,7 @@ function eo(e) {
                                 onClick: () => {
                                     (0, f.openModalLazy)(async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("22979"),
+                                            n.e("17951"),
                                             n.e("44602"),
                                             n.e("25280"),
                                         ]).then(n.bind(n, 987482));
@@ -165,7 +165,7 @@ function eo(e) {
                                             { ticket: t, challenge: r } = await e();
                                         (0, f.openModalLazy)(async () => {
                                             let { RegisterWebAuthnCredentialModal: e } = await Promise.all([
-                                                n.e("69734"),
+                                                n.e("6022"),
                                                 n.e("4736"),
                                                 n.e("19631"),
                                                 n.e("40114"),
@@ -302,7 +302,7 @@ var eA = n(264779),
     eh = n(962644),
     eI = n(287809),
     ef = n(428262),
-    ep = n(376783);
+    ep = n(946319);
 function eT(e) {
     let { dismissibleContent: t } = e,
         n = (0, eA.Cp)(),
@@ -361,7 +361,7 @@ var em = n(532205),
     eM = n(834409),
     eP = n(903093),
     eU = n(746080),
-    ew = n(903232);
+    ew = n(500928);
 function eG(e) {
     let { onDismiss: t } = e,
         a = (0, c.bG)([ev.A], () => ev.A.getGuildId()),
@@ -381,8 +381,8 @@ function eG(e) {
                 : (0, f.openModalLazy)(async () => {
                       let e = { source: eM.Eo.NAGBAR, alertType: (0, eP.$5)(u) },
                           { default: t } = await Promise.all([
-                              n.e("81576"),
-                              n.e("50290"),
+                              n.e("87960"),
+                              n.e("36518"),
                               n.e("40258"),
                               n.e("73669"),
                               n.e("46313"),
@@ -490,9 +490,9 @@ var eq = n(503698),
     e2 = n(513461),
     e3 = n(709977),
     e6 = n(212455),
-    e4 = n(336414),
-    e5 = n(202873);
-let e7 = function () {
+    e4 = n(182430),
+    e7 = n(580537);
+let e5 = function () {
     let e = (0, c.bG)([ev.A], () => ev.A.getGuildId(), []),
         t = (0, c.bG)([eD.A], () => eD.A.getGuild(e), [e]),
         r = (0, c.bG)([e6.A], () => (null != e ? e6.A.getRequest(e) : null), [e]),
@@ -503,7 +503,7 @@ let e7 = function () {
         o = null,
         d = null,
         u = null,
-        E = [e4.lm, e5.lm];
+        E = [e4.lm, e7.lm];
     switch (l) {
         case e2.B5.SUBMITTED:
             (o = es.intl.string(es.t["5iLvSx"])),
@@ -523,7 +523,7 @@ let e7 = function () {
                 (d = es.intl.string(es.t["8RrsHr"])),
                 (u = () => {
                     (0, f.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("4399"), n.e("14382")]).then(n.bind(n, 463325));
+                        let { default: e } = await Promise.all([n.e("25099"), n.e("14382")]).then(n.bind(n, 463325));
                         return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
                     });
                 }),
@@ -545,7 +545,7 @@ let e7 = function () {
     });
 };
 var e8 = n(477155),
-    e9 = n(830237);
+    e9 = n(22877);
 function te(e) {
     let { buttonText: t, onGoBack: n, onDismiss: r, showCloseButton: a } = e;
     return (0, i.jsxs)(A.$T, {
@@ -561,7 +561,7 @@ var tt = n(468689),
     ti = n(862482),
     tr = n(66834),
     ta = n(385648),
-    ts = n(741306);
+    ts = n(484154);
 let tl = function () {
     let e = (0, c.bG)([ev.A], () => ev.A.getGuildId(), []),
         t = (0, c.bG)([eD.A], () => eD.A.getGuild(e), [e]),
@@ -576,7 +576,7 @@ let tl = function () {
         }
     };
     return (0, i.jsxs)("div", {
-        className: eZ()(ts.lm, e5.lm),
+        className: eZ()(ts.lm, e7.lm),
         children: [
             (0, i.jsxs)(ti.$n, {
                 look: ti.$n.Looks.OUTLINED,
@@ -607,8 +607,8 @@ let tl = function () {
 };
 var to = n(801644),
     td = n(74848),
-    tc = n(477480),
-    tu = n(889072);
+    tc = n(602339),
+    tu = n(111344);
 let t_ = {
     "--custom-notice-background": "var(--background-feedback-warning)",
     "--custom-notice-text": "var(--text-strong)",
@@ -650,8 +650,8 @@ var tA = n(234419),
     tI = n(367727),
     tf = n(635995),
     tp = n(88001),
-    tT = n(963458),
-    tm = n(669827);
+    tT = n(466919),
+    tm = n(375043);
 function tg(e) {
     let { premiumSubscription: t } = e,
         a = t?.id,
@@ -672,8 +672,8 @@ function tg(e) {
                 s(),
                 (0, f.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("57443"),
-                        n.e("5040"),
+                        n.e("3515"),
+                        n.e("44616"),
                         n.e("74630"),
                         n.e("48948"),
                         n.e("85579"),
@@ -715,8 +715,8 @@ function tO() {
                       onClick: () => {
                           (0, f.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("91203"),
-                                  n.e("59172"),
+                                  n.e("33111"),
+                                  n.e("22255"),
                                   n.e("55925"),
                                   n.e("18413"),
                                   n.e("37381"),
@@ -741,7 +741,7 @@ var tL = n(825484),
     tM = n(354583),
     tP = n(366098),
     tU = n(418208),
-    tw = n(171846);
+    tw = n(992262);
 function tG(e) {
     if (!e && (0, tU.Cf)())
         return void tD.A.showAgeVerificationGetStartedModal({ entryPoint: ty.q1.STAGE_CHANNEL_RAISE_HAND });
@@ -915,7 +915,7 @@ function t4(e) {
         ],
     });
 }
-function t5(e) {
+function t7(e) {
     let { noticeType: t } = e;
     return (0, i.jsxs)(A.$T, {
         color: A.Hv.DANGER,
@@ -935,7 +935,7 @@ function t5(e) {
         ],
     });
 }
-function t7(e) {
+function t5(e) {
     return (0, tJ.isWindows)() && d().satisfies(M.A?.os.release, t0.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
@@ -954,10 +954,10 @@ function t8(e) {
     return (
         !0 === l
             ? ((t = es.intl.string(es.t.ppW3ri)),
-              (n = (0, i.jsx)(A.eC, { href: t7(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
+              (n = (0, i.jsx)(A.eC, { href: t5(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
             : 0 === o
               ? ((t = es.intl.string(es.t.j4gGA4)),
-                (n = (0, i.jsx)(A.eC, { href: t7(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
+                (n = (0, i.jsx)(A.eC, { href: t5(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
               : t$.Ay.supports(t2.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (d = !0),
@@ -1044,7 +1044,7 @@ let ne = r.memo(function () {
         case ei.kqX.LURKING_GUILD:
             return (0, i.jsx)(tl, {});
         case ei.kqX.PENDING_MEMBER:
-            return (0, i.jsx)(e7, {});
+            return (0, i.jsx)(e5, {});
         case ei.kqX.INVITED_TO_SPEAK:
             return (0, i.jsx)(tk, {});
         case ei.kqX.GUILD_RAID_NOTIFICATION:
@@ -1254,7 +1254,7 @@ let ne = r.memo(function () {
         case ei.kqX.NO_INPUT_DEVICES_DETECTED:
             return (0, i.jsx)(t4, { noticeType: a.type });
         case ei.kqX.VIDEO_BACKGROUND_UNAVAILABLE:
-            return (0, i.jsx)(t5, { noticeType: a.type });
+            return (0, i.jsx)(t7, { noticeType: a.type });
         case ei.kqX.HARDWARE_MUTE:
             if (null != a.metadata) {
                 let { vendor: e, model: t } = a.metadata;
@@ -1323,65 +1323,65 @@ let ne = r.memo(function () {
                         onClick: async () => {
                             try {
                                 let { openIAPPurchaseModal: e } = await Promise.all([
-                                    n.e("42676"),
-                                    n.e("10198"),
-                                    n.e("9212"),
-                                    n.e("75193"),
-                                    n.e("35442"),
-                                    n.e("38739"),
-                                    n.e("27956"),
-                                    n.e("80943"),
-                                    n.e("46903"),
-                                    n.e("31880"),
-                                    n.e("42141"),
-                                    n.e("77086"),
-                                    n.e("53385"),
-                                    n.e("30810"),
-                                    n.e("41842"),
-                                    n.e("17829"),
-                                    n.e("10038"),
-                                    n.e("11586"),
-                                    n.e("5111"),
-                                    n.e("7458"),
-                                    n.e("44791"),
-                                    n.e("92678"),
-                                    n.e("41117"),
-                                    n.e("5307"),
-                                    n.e("4728"),
-                                    n.e("67831"),
-                                    n.e("19353"),
-                                    n.e("34418"),
-                                    n.e("71436"),
-                                    n.e("59132"),
-                                    n.e("15553"),
-                                    n.e("66238"),
-                                    n.e("78771"),
-                                    n.e("85753"),
-                                    n.e("38413"),
-                                    n.e("68463"),
-                                    n.e("67962"),
-                                    n.e("37965"),
-                                    n.e("45522"),
-                                    n.e("11411"),
-                                    n.e("856"),
-                                    n.e("57009"),
-                                    n.e("97446"),
-                                    n.e("81127"),
-                                    n.e("49251"),
-                                    n.e("48632"),
-                                    n.e("47336"),
-                                    n.e("35837"),
-                                    n.e("30088"),
-                                    n.e("18292"),
-                                    n.e("19"),
-                                    n.e("69547"),
-                                    n.e("97735"),
-                                    n.e("62092"),
-                                    n.e("64949"),
-                                    n.e("51706"),
-                                    n.e("31182"),
-                                    n.e("16315"),
-                                    n.e("52845"),
+                                    n.e("86832"),
+                                    n.e("76342"),
+                                    n.e("60988"),
+                                    n.e("69273"),
+                                    n.e("72210"),
+                                    n.e("3155"),
+                                    n.e("82104"),
+                                    n.e("41711"),
+                                    n.e("49623"),
+                                    n.e("35316"),
+                                    n.e("38838"),
+                                    n.e("45214"),
+                                    n.e("99253"),
+                                    n.e("17202"),
+                                    n.e("90862"),
+                                    n.e("97189"),
+                                    n.e("16918"),
+                                    n.e("33730"),
+                                    n.e("24059"),
+                                    n.e("42306"),
+                                    n.e("11291"),
+                                    n.e("96846"),
+                                    n.e("19709"),
+                                    n.e("4251"),
+                                    n.e("47412"),
+                                    n.e("65327"),
+                                    n.e("41625"),
+                                    n.e("96490"),
+                                    n.e("85484"),
+                                    n.e("51772"),
+                                    n.e("6605"),
+                                    n.e("11262"),
+                                    n.e("54483"),
+                                    n.e("62461"),
+                                    n.e("25677"),
+                                    n.e("73679"),
+                                    n.e("73178"),
+                                    n.e("333"),
+                                    n.e("97638"),
+                                    n.e("22995"),
+                                    n.e("59096"),
+                                    n.e("55953"),
+                                    n.e("56386"),
+                                    n.e("38759"),
+                                    n.e("51943"),
+                                    n.e("90072"),
+                                    n.e("88016"),
+                                    n.e("84133"),
+                                    n.e("13627"),
+                                    n.e("57940"),
+                                    n.e("58171"),
+                                    n.e("44511"),
+                                    n.e("39375"),
+                                    n.e("47944"),
+                                    n.e("84473"),
+                                    n.e("70990"),
+                                    n.e("15130"),
+                                    n.e("74051"),
+                                    n.e("50541"),
                                     n.e("23924"),
                                     n.e("42205"),
                                     n.e("55675"),
@@ -1392,21 +1392,21 @@ let ne = r.memo(function () {
                                     n.e("68261"),
                                     n.e("7167"),
                                     n.e("11301"),
-                                    n.e("96643"),
+                                    n.e("12721"),
                                     n.e("84569"),
                                     n.e("60235"),
                                     n.e("61737"),
                                     n.e("92789"),
-                                    n.e("43716"),
+                                    n.e("21335"),
                                     n.e("77333"),
-                                    n.e("2773"),
+                                    n.e("47834"),
                                     n.e("11735"),
                                     n.e("85927"),
                                     n.e("834"),
                                     n.e("2368"),
                                     n.e("42842"),
                                     n.e("33115"),
-                                    n.e("36845"),
+                                    n.e("6338"),
                                     n.e("18573"),
                                     n.e("55936"),
                                     n.e("85404"),
@@ -1420,8 +1420,8 @@ let ne = r.memo(function () {
                                     n.e("34303"),
                                     n.e("97270"),
                                     n.e("45959"),
-                                    n.e("50741"),
-                                    n.e("95569"),
+                                    n.e("73122"),
+                                    n.e("8304"),
                                     n.e("93159"),
                                     n.e("71202"),
                                     n.e("8739"),
@@ -1439,8 +1439,8 @@ let ne = r.memo(function () {
                                     n.e("23532"),
                                     n.e("52557"),
                                     n.e("55654"),
-                                    n.e("68574"),
-                                    n.e("86026"),
+                                    n.e("83161"),
+                                    n.e("63645"),
                                     n.e("5636"),
                                     n.e("32085"),
                                     n.e("24038"),
@@ -1546,7 +1546,7 @@ let ne = r.memo(function () {
                         noticeType: ei.kqX.VIDEO_UNSUPPORTED_BROWSER,
                         onClick: () => {
                             (0, f.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("22979"), n.e("44602"), n.e("25280")]).then(
+                                let { default: e } = await Promise.all([n.e("17951"), n.e("44602"), n.e("25280")]).then(
                                     n.bind(n, 987482),
                                 );
                                 return (t) => (0, i.jsx)(e, { source: "Video unsupported browser", ...t });
@@ -1568,7 +1568,7 @@ let ne = r.memo(function () {
                         noticeType: ei.kqX.DISPATCH_ERROR,
                         onClick: () =>
                             (0, f.openModalLazy)(async () => {
-                                let { default: e } = await Promise.all([n.e("32899"), n.e("88014")]).then(
+                                let { default: e } = await Promise.all([n.e("91139"), n.e("88014")]).then(
                                     n.bind(n, 627261),
                                 );
                                 return (t) => (0, i.jsx)(e, { ...t });
@@ -1659,29 +1659,29 @@ let ne = r.memo(function () {
                             t9(a.metadata?.premiumSubscription?.currentPeriodEnd),
                                 (0, f.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("42676"),
-                                        n.e("10198"),
-                                        n.e("9212"),
-                                        n.e("75193"),
-                                        n.e("35442"),
-                                        n.e("38739"),
-                                        n.e("97735"),
-                                        n.e("19"),
-                                        n.e("62092"),
-                                        n.e("27956"),
-                                        n.e("64949"),
-                                        n.e("38413"),
-                                        n.e("67831"),
-                                        n.e("48632"),
-                                        n.e("47336"),
+                                        n.e("86832"),
+                                        n.e("76342"),
+                                        n.e("60988"),
+                                        n.e("69273"),
+                                        n.e("72210"),
+                                        n.e("3155"),
+                                        n.e("39375"),
+                                        n.e("58171"),
+                                        n.e("47944"),
+                                        n.e("82104"),
+                                        n.e("84473"),
+                                        n.e("25677"),
+                                        n.e("65327"),
+                                        n.e("90072"),
+                                        n.e("88016"),
                                         n.e("10471"),
                                         n.e("68261"),
                                         n.e("11301"),
-                                        n.e("96643"),
+                                        n.e("12721"),
                                         n.e("61737"),
-                                        n.e("43716"),
+                                        n.e("21335"),
                                         n.e("77333"),
-                                        n.e("2773"),
+                                        n.e("47834"),
                                         n.e("11735"),
                                         n.e("85927"),
                                         n.e("2368"),
@@ -1692,7 +1692,7 @@ let ne = r.memo(function () {
                                         n.e("23532"),
                                         n.e("52557"),
                                         n.e("55654"),
-                                        n.e("68574"),
+                                        n.e("83161"),
                                         n.e("14794"),
                                     ]).then(n.bind(n, 174705));
                                     return (t) =>
@@ -1894,8 +1894,8 @@ let ne = r.memo(function () {
                         onClick: () => {
                             (0, f.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("91203"),
-                                    n.e("59172"),
+                                    n.e("33111"),
+                                    n.e("22255"),
                                     n.e("55925"),
                                     n.e("18413"),
                                     n.e("37381"),

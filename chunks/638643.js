@@ -25,8 +25,8 @@ async function p(t) {
         (0, l.openModalLazy)(
             async () => {
                 let { GuildSubscriptionSelectionModal: t } = await Promise.all([
-                    e.e("71906"),
-                    e.e("67525"),
+                    e.e("12410"),
+                    e.e("2373"),
                     e.e("8555"),
                     e.e("20287"),
                     e.e("30476"),

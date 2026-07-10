@@ -10,8 +10,8 @@ var l = n(627968),
     d = n(262427),
     p = n(396583),
     m = n(421108),
-    h = n(920948),
-    C = n(719831);
+    C = n(920948),
+    h = n(82199);
 function E(e) {
     let {
             className: t,
@@ -26,19 +26,19 @@ function E(e) {
         } = e,
         y = () =>
             (0, l.jsx)(d.A, {
-                className: a()(C.Xx, t),
+                className: a()(h.Xx, t),
                 gradientColor: p,
                 ...(null != r ? { customGraphic: r } : { Icon: n, iconSize: i }),
                 ...f,
                 children: (0, l.jsxs)("div", {
-                    className: C.Yu,
+                    className: h.Yu,
                     children: [
                         (0, l.jsx)(o.E, {
                             variant: "text-xs/semibold",
                             color: "currentColor",
-                            children: "string" == typeof E ? (0, h.U)(E) : E,
+                            children: "string" == typeof E ? (0, C.U)(E) : E,
                         }),
-                        (0, l.jsx)("div", { className: C.HF, children: A }),
+                        (0, l.jsx)("div", { className: h.HF, children: A }),
                     ],
                 }),
             });
@@ -56,7 +56,7 @@ function A(e) {
                 ? (0, l.jsx)(o.E, {
                       variant: "text-xs/medium",
                       color: "currentColor",
-                      children: "string" == typeof t ? (0, h.U)(t) : t,
+                      children: "string" == typeof t ? (0, C.U)(t) : t,
                   })
                 : null,
         ...n,

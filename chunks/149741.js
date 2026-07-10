@@ -78,7 +78,7 @@ var w = n(172218),
     eS = n(562153),
     ep = n(193663),
     eN = n(576420),
-    ex = n(540695);
+    ex = n(760023);
 function eT(e) {
     let {
             listItemId: t,
@@ -365,8 +365,8 @@ function e4(e) {
               return (0, i.jsx)(es.A, { game: n, size: l, unknownGameIconFallback: u ?? d });
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
-let e5 = F._3.SIZE_32,
-    e6 = [ee.iq, ee.tR, ee.K7, ee.sp, ee.MK];
+let e6 = F._3.SIZE_32,
+    e5 = [ee.iq, ee.tR, ee.K7, ee.sp, ee.MK];
 function e9(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
@@ -447,7 +447,7 @@ function e9(e) {
         ],
     });
 }
-function e7(e) {
+function e8(e) {
     let {
             user: t,
             activities: n,
@@ -464,7 +464,7 @@ function e7(e) {
             avatarDecorationSrc: m,
             avatarSrc: I,
             eventHandlers: E,
-        } = (0, ec.A)({ userId: g, size: e5, animateOnHover: !0, guildId: null }),
+        } = (0, ec.A)({ userId: g, size: e6, animateOnHover: !0, guildId: null }),
         A = r.useMemo(() => {
             let e = h ?? "no-group",
                 t = l ?? "no-relationship",
@@ -507,7 +507,7 @@ function e7(e) {
                 return (0, i.jsx)(ee.mG, {
                     location: ee.N5.FRIENDS_POPOUT,
                     className: ex.cV,
-                    children: e6.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
+                    children: e5.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
                 });
             }
             if ((0, X.A)({ activities: n, status: p, applicationStream: N, voiceChannel: S })) {
@@ -560,7 +560,7 @@ function e7(e) {
         ),
     };
 }
-function e8(e) {
+function e7(e) {
     return (0, s.bG)([em.A, eE.Ay], () => {
         let t = em.A.getDMFromUserId(e) ?? null;
         return null != t && eE.Ay.hasUnread(t);
@@ -594,7 +594,7 @@ let te = r.memo((e) => {
             currentUserPlayingActivities: C,
             renderSubtext: R,
             renderUserContextMenu: D,
-        } = e7({
+        } = e8({
             user: t,
             activities: n,
             relationshipType: E,
@@ -605,7 +605,7 @@ let te = r.memo((e) => {
             onFriendVisible: g,
             friendGroupId: m,
         }),
-        b = e8(t.id),
+        b = e7(t.id),
         { guildId: j, channelId: k } = (0, s.cf)([eA.A, em.A], () => {
             let e = eA.A.getVoiceChannelId() ?? eA.A.getChannelId();
             return { guildId: null != e ? em.A.getChannel(e)?.guild_id : null, channelId: e };
@@ -677,7 +677,7 @@ let te = r.memo((e) => {
         onContextMenu: D,
         avatar: (0, i.jsx)(G.eu, {
             ...p,
-            size: e5,
+            size: e6,
             src: S,
             isMobile: _,
             isTyping: !1,
@@ -729,7 +729,7 @@ let tt = r.memo((e) => {
             status: x,
             renderSubtext: T,
             renderUserContextMenu: _,
-        } = e7({
+        } = e8({
             user: t,
             activities: n,
             relationshipType: l,
@@ -740,7 +740,7 @@ let tt = r.memo((e) => {
             onFriendVisible: c,
             friendGroupId: h,
         }),
-        y = e8(t.id),
+        y = e7(t.id),
         v = (0, el.A)({ userId: t.id, guildId: null }),
         C = eS.Ay.useName(null, null, t),
         [R, D] = r.useState(!1),
@@ -810,7 +810,7 @@ let tt = r.memo((e) => {
         onContextMenu: _,
         avatar: (0, i.jsx)(G.eu, {
             ...I,
-            size: e5,
+            size: e6,
             src: m,
             isMobile: p,
             isTyping: !1,
@@ -916,7 +916,7 @@ let tr = (0, tl.v)()(
         partialize: (e) => ({ showSuggestions: e.showSuggestions }),
     }),
 );
-var ts = n(188644);
+var ts = n(894564);
 function ta(e) {
     let { title: t, count: n, isCollapsed: l, canCollapse: r, onToggle: s, rightAccessory: a } = e,
         u = l && null != n ? `${t} (${n})` : t,
@@ -1063,8 +1063,8 @@ function tk(e, t) {
         i = r.useCallback(() => l(t), [t]);
     return (0, t_.RT)(e, t, l, tj), [n, i];
 }
-var tM = n(21197),
-    tO = n(39389);
+var tM = n(499214),
+    tO = n(150045);
 function tw(e) {
     let {
             groupId: t,
@@ -1731,7 +1731,7 @@ var tP = n(687966),
     tQ = n(427262),
     tq = n(589051),
     tJ = n(545807),
-    t0 = n(528697);
+    t0 = n(340281);
 let t1 = r.memo(function (e) {
     let { startTimestampMs: t } = e,
         n = (0, tJ.A)(),
@@ -1972,7 +1972,7 @@ function t4(e) {
                         l = !0 === E[t],
                         r = !0 === f[t];
                     return (0, i.jsx)(
-                        t5,
+                        t6,
                         {
                             tab: t,
                             label: eX.intl.formatToPlainString(n, {}),
@@ -1988,7 +1988,7 @@ function t4(e) {
         ],
     });
 }
-function t5(e) {
+function t6(e) {
     let {
             tab: t,
             label: n,
@@ -2011,10 +2011,10 @@ function t5(e) {
     });
 }
 t3.displayName = "OverlayVoiceCallElapsedTime";
-var t6 = n(141157),
+var t5 = n(141157),
     t9 = n(645959),
-    t7 = n(812993),
-    t8 = n(602853),
+    t8 = n(812993),
+    t7 = n(602853),
     ne = n(713654),
     nt = n(636537),
     nn = n(439372),
@@ -2240,7 +2240,7 @@ var ng = n(172491),
     nk = n(861464),
     nM = n(465364),
     nO = n(427358),
-    nw = n(7434);
+    nw = n(830666);
 function nF(e) {
     let { icon: t, ...n } = e;
     switch (t) {
@@ -2621,7 +2621,7 @@ function nK(e) {
     }, [e]);
 }
 function nz(e) {
-    return (0, i.jsx)(t7.hV, { count: e });
+    return (0, i.jsx)(t8.hV, { count: e });
 }
 function nX(e) {
     let { channelId: t, listItemId: n, mentionCount: l, unread: r } = e,
@@ -2773,8 +2773,8 @@ function nZ(e) {
             }
         }, [n]),
         N = nh(n, !1),
-        x = (0, t8.r)(eQ.A.colors.TEXT_STRONG),
-        T = (0, t8.r)(eQ.A.colors.TEXT_MUTED),
+        x = (0, t7.r)(eQ.A.colors.TEXT_STRONG),
+        T = (0, t7.r)(eQ.A.colors.TEXT_MUTED),
         _ = d || u > 0 ? "text-strong" : "text-muted",
         y = d || u > 0 ? x : T,
         v = r.useCallback(
@@ -2900,7 +2900,7 @@ function n0() {
         [l, a] = r.useState(""),
         d = l.trim().toLowerCase(),
         c =
-            ((e = (0, t6.Dz)()),
+            ((e = (0, t5.Dz)()),
             (0, s.yK)([t9.A, em.A], () => {
                 let t = [];
                 for (let e of t9.A.getPrivateChannelIds()) {
@@ -3187,11 +3187,11 @@ var n1 = n(776096),
     n3 = n(607567),
     n2 = n(377802),
     n4 = n(342952),
-    n5 = n(676923),
-    n6 = n(342296),
+    n6 = n(676923),
+    n5 = n(342296),
     n9 = n(481947),
-    n7 = n(260466);
-let n8 = r.memo(function (e) {
+    n8 = n(567346);
+let n7 = r.memo(function (e) {
     let { channelId: t, guildId: n, userId: l, onDoubleClick: u, onContextMenu: o } = e,
         d = r.useRef(null),
         [c, h] = r.useState(!1),
@@ -3217,7 +3217,7 @@ let n8 = r.memo(function (e) {
             [t, o, g, m],
         );
     return (0, ty.Vq)(g) && null != m
-        ? (0, i.jsx)(n6.A, {
+        ? (0, i.jsx)(n5.A, {
               targetElementRef: d,
               user: g,
               guildId: n ?? void 0,
@@ -3230,14 +3230,14 @@ let n8 = r.memo(function (e) {
                   (0, i.jsx)(A.D, {
                       ...e,
                       innerRef: d,
-                      className: n7.gD,
+                      className: n8.gD,
                       onDoubleClick: u,
                       onContextMenu: x,
                       onClick: (e) => {
                           e.preventDefault(), e.stopPropagation(), h(!0);
                       },
                       children: (0, i.jsxs)("div", {
-                          className: n7.h6,
+                          className: n8.h6,
                           children: [
                               (0, i.jsx)(G.eu, {
                                   src: g.getAvatarURL(n ?? void 0, 24),
@@ -3245,7 +3245,7 @@ let n8 = r.memo(function (e) {
                                   "aria-label": N,
                               }),
                               (0, i.jsxs)(p.E, {
-                                  className: n7.rg,
+                                  className: n8.rg,
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
                                   children: [
@@ -3253,21 +3253,21 @@ let n8 = r.memo(function (e) {
                                           userName: N,
                                           displayNameStyles: I,
                                           effectDisplayType: ei.G.STATIC,
-                                          textClassName: n7.m2,
+                                          textClassName: n8.m2,
                                       }),
                                       (0, i.jsx)(eo.Ay, { userId: l, disableGuildProfile: !0 }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: n7.ZA,
+                                  className: n8.ZA,
                                   onDoubleClick: u,
                                   children: (0, i.jsx)(n9.Kc, {
                                       guildId: n ?? void 0,
                                       user: g,
                                       video: m.selfVideo,
                                       isStreaming: E,
-                                      className: n7.ZA,
-                                      iconClassName: n7.Ow,
+                                      className: n8.ZA,
+                                      iconClassName: n8.Ow,
                                       isWatching: !1,
                                       localMute: !1,
                                       localVideoDisabled: !1,
@@ -3278,7 +3278,7 @@ let n8 = r.memo(function (e) {
                                       disabled: !1,
                                   }),
                               }),
-                              null != S ? (0, i.jsx)(es.A, { game: S, size: es.M.XSMALL, className: n7.IV }) : null,
+                              null != S ? (0, i.jsx)(es.A, { game: S, size: es.M.XSMALL, className: n8.IV }) : null,
                           ],
                       }),
                   }),
@@ -3316,7 +3316,7 @@ function ln(e) {
     return 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: n7.X0,
+              className: n8.X0,
               children: (0, i.jsx)(n4.A, {
                   users: l,
                   guildId: n ?? void 0,
@@ -3415,10 +3415,10 @@ function ll(e) {
             }),
             [n],
         ),
-        L = (0, t8.r)(eQ.A.colors.STATUS_POSITIVE),
-        G = (0, t8.r)(eQ.A.colors.STATUS_DANGER),
-        U = (0, t8.r)(eQ.A.colors.TEXT_STRONG),
-        P = (0, t8.r)(eQ.A.colors.TEXT_MUTED),
+        L = (0, t7.r)(eQ.A.colors.STATUS_POSITIVE),
+        G = (0, t7.r)(eQ.A.colors.STATUS_DANGER),
+        U = (0, t7.r)(eQ.A.colors.TEXT_STRONG),
+        P = (0, t7.r)(eQ.A.colors.TEXT_MUTED),
         V = f ? L : F > 0 ? U : P,
         {
             Component: H,
@@ -3430,7 +3430,7 @@ function ll(e) {
             n = f ? H : nN._;
         return (0, i.jsx)("div", {
             onDoubleClick: lt,
-            children: (0, i.jsx)(n5.S, {
+            children: (0, i.jsx)(n6.S, {
                 tooltipText: e,
                 onClick: f ? b : D,
                 onMouseEnter: Y,
@@ -3468,9 +3468,9 @@ function ll(e) {
                 secondaryText:
                     null != T
                         ? (0, i.jsxs)("div", {
-                              className: n7.z2,
+                              className: n8.z2,
                               children: [
-                                  (0, i.jsx)(tP._, { size: "xxs", color: "currentColor", className: n7.AE }),
+                                  (0, i.jsx)(tP._, { size: "xxs", color: "currentColor", className: n8.AE }),
                                   (0, i.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: T }),
                               ],
                           })
@@ -3482,7 +3482,7 @@ function ll(e) {
                         case !x:
                             return e
                                 ? (0, i.jsxs)("div", {
-                                      className: n7.YT,
+                                      className: n8.YT,
                                       onDoubleClick: lt,
                                       children: [z(), (0, i.jsx)(e_.j, { tab: o.x.VOICE, targetId: n })],
                                   })
@@ -3492,7 +3492,7 @@ function ll(e) {
                                 children: [
                                     d
                                         ? (0, i.jsxs)("div", {
-                                              className: n7.YT,
+                                              className: n8.YT,
                                               onDoubleClick: lt,
                                               children: [z(), (0, i.jsx)(e_.j, { tab: o.x.VOICE, targetId: n })],
                                           })
@@ -3507,10 +3507,10 @@ function ll(e) {
             }),
             d && N.length > 0
                 ? (0, i.jsx)("div", {
-                      className: n7.Nz,
+                      className: n8.Nz,
                       children: N.slice(0, 25).map((e) =>
                           (0, i.jsx)(
-                              n8,
+                              n7,
                               { channelId: n, guildId: E, userId: e.user.id, onDoubleClick: lt, onContextMenu: g },
                               e.user.id,
                           ),
@@ -3547,7 +3547,7 @@ function lu() {
         a = n.trim().toLowerCase(),
         [d, c] = r.useState(() => new Set()),
         h = (0, s.bG)([tA], () => tA.getCollapsedSectionOverridesForTab(o.x.VOICE), []),
-        g = (0, t6.qZ)(),
+        g = (0, t5.qZ)(),
         m = r.useMemo(() => {
             let e = new Map();
             for (let t of g) e.set(t.channel.id, t.voiceStates);
@@ -3564,12 +3564,12 @@ function lu() {
         }, []),
         S = r.useMemo(() => new Set(g.map((e) => e.channel.id)), [g]),
         [p, _] = r.useState([]);
-    (0, t_.RT)(n, g, _, t6.MV);
+    (0, t_.RT)(n, g, _, t5.MV);
     let v = r.useRef(null),
         C = (0, y.A)("friends-widget-voice", v),
         [R, b] = (0, s.bG)([tS.A], () => tS.A.getFavoriteTargetIdsForTab(o.x.VOICE), [], j.D),
         k = r.useMemo(() => R.filter((e) => S.has(e)), [R, S]),
-        { friendVoiceChannelIds: M, recentVoiceChannelIds: O } = (0, t6.S4)(),
+        { friendVoiceChannelIds: M, recentVoiceChannelIds: O } = (0, t5.S4)(),
         w = r.useMemo(() => M.filter((e) => S.has(e)), [M, S]),
         F = r.useMemo(() => O.filter((e) => S.has(e)), [O, S]),
         L = (0, s.bG)([eA.A], () => eA.A.getVoiceChannelId(), []),
@@ -3890,7 +3890,7 @@ var lo = n(308368),
     lS = n(34307),
     lp = n(381941),
     lN = n(731854),
-    lx = n(540514);
+    lx = n(952866);
 function lT() {
     let { onPrimaryAction: e, onContextMenu: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = (0, d.b4)(),
@@ -4185,8 +4185,8 @@ let l_ = r.memo(function (e) {
                             e.event,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("10570"),
-                                    n.e("98273"),
+                                    n.e("71406"),
+                                    n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -4195,13 +4195,13 @@ let l_ = r.memo(function (e) {
                                     n.e("85968"),
                                     n.e("89673"),
                                     n.e("68403"),
-                                    n.e("52168"),
+                                    n.e("29787"),
                                     n.e("82073"),
                                     n.e("97558"),
                                     n.e("91994"),
                                     n.e("76665"),
                                     n.e("76273"),
-                                    n.e("95264"),
+                                    n.e("72883"),
                                     n.e("81609"),
                                     n.e("96443"),
                                     n.e("23490"),
@@ -4252,11 +4252,11 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("10570"),
-                                    n.e("52760"),
-                                    n.e("62458"),
-                                    n.e("93909"),
-                                    n.e("98273"),
+                                    n.e("71406"),
+                                    n.e("41831"),
+                                    n.e("18078"),
+                                    n.e("88429"),
+                                    n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93103"),
@@ -4270,7 +4270,7 @@ let l_ = r.memo(function (e) {
                                     n.e("89673"),
                                     n.e("68403"),
                                     n.e("88342"),
-                                    n.e("52168"),
+                                    n.e("29787"),
                                     n.e("89421"),
                                     n.e("98965"),
                                     n.e("82073"),
@@ -4290,7 +4290,7 @@ let l_ = r.memo(function (e) {
                                     n.e("9291"),
                                     n.e("7059"),
                                     n.e("8829"),
-                                    n.e("95264"),
+                                    n.e("72883"),
                                     n.e("81609"),
                                     n.e("98199"),
                                     n.e("41175"),
@@ -4356,7 +4356,7 @@ let l_ = r.memo(function (e) {
                                           n.e("50033"),
                                           n.e("43266"),
                                           n.e("81609"),
-                                          n.e("56985"),
+                                          n.e("79366"),
                                       ]).then(n.bind(n, 95616));
                                       return (n) => (0, i.jsx)(e, { ...n, channel: t, widgetType: ez.uss.FRIENDS });
                                   })
@@ -4372,7 +4372,7 @@ let l_ = r.memo(function (e) {
                                           n.e("43266"),
                                           n.e("9004"),
                                           n.e("44058"),
-                                          n.e("13758"),
+                                          n.e("91377"),
                                           n.e("81609"),
                                           n.e("66540"),
                                           n.e("54036"),
@@ -4392,7 +4392,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("41443"),
+                                    n.e("62867"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93103"),
@@ -4425,7 +4425,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: l } = await Promise.all([
-                                    n.e("98273"),
+                                    n.e("94881"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),

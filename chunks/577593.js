@@ -37,9 +37,9 @@ var l = i(627968),
     F = i(687966),
     G = i(177953),
     B = i(203363),
-    V = i(543572),
+    V = i(321191),
     z = i(375708),
-    w = i(585235);
+    w = i(935059);
 function Y(e) {
     let { icon: s, title: i, description: n } = e;
     return (0, l.jsxs)("div", {
@@ -91,7 +91,7 @@ var K = i(734057),
     Q = i(194261),
     Z = i(9578),
     q = i(900179),
-    $ = i(199428);
+    $ = i(913476);
 function ee(e) {
     let { termsOfServiceUrl: s, privacyPolicyUrl: i } = e;
     return null == s && null == i
@@ -125,7 +125,7 @@ var ei = i(308244),
     en = i(280645),
     et = i(347805),
     ed = i(518477),
-    er = i(354724);
+    er = i(142948);
 function ea(e) {
     let { userId: s } = e,
         i = (0, p.g)(),
@@ -141,7 +141,7 @@ function ea(e) {
         }),
     });
 }
-var ec = i(26988);
+var ec = i(741036);
 function eo(e) {
     let { user: s, displayProfile: i, guildId: n, onClose: t } = e,
         d = (0, _.bG)([V.A], () => V.A.getUserProfile(s.id)?.application),
@@ -183,8 +183,8 @@ var eu = i(652215),
     eN = i(353394),
     ev = i(64622),
     eE = i(986712),
-    ey = i(862997),
-    eT = i(2074);
+    ey = i(437781),
+    eT = i(928666);
 function eO(e) {
     let { user: s, currentUser: i, guildId: n, onClose: t } = e,
         { live: d, recent: r, stream: a } = (0, ep.A)(s.id),
@@ -445,7 +445,7 @@ function eW(e) {
                     }),
     });
 }
-var eX = i(837604);
+var eX = i(551652);
 function eJ(e) {
     let { section: s, user: i, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return s === ed.RP.ACTIVITY
@@ -535,7 +535,7 @@ function eQ(e) {
 }
 var eZ = i(186272),
     eq = i(996988),
-    e$ = i(978036);
+    e$ = i(872116);
 function e0(e) {
     let {
             user: s,
@@ -691,8 +691,8 @@ function e0(e) {
 }
 var e5 = i(480335),
     e3 = i(713517),
-    e9 = i(35241);
-function e7(e) {
+    e1 = i(35241);
+function e9(e) {
     let {
             user: s,
             guildId: i,
@@ -747,7 +747,7 @@ function e7(e) {
                             themeType: eq.d.MODAL,
                             ref: P?.profileEffect != null ? k : void 0,
                             children: [
-                                (0, l.jsx)(C.A, { children: (0, l.jsx)(e9.A, { user: s }) }),
+                                (0, l.jsx)(C.A, { children: (0, l.jsx)(e1.A, { user: s }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
                                         (0, l.jsx)(N.A, { user: s, displayProfile: P, themeType: eq.d.MODAL }),
@@ -833,19 +833,19 @@ function e7(e) {
         }),
     });
 }
-var e1 = i(503698),
-    e2 = i.n(e1),
-    e8 = i(628284),
+var e7 = i(503698),
+    e2 = i.n(e7),
+    e6 = i(628284),
     e4 = i(331322),
-    e6 = i(632738),
+    e8 = i(632738),
     se = i(994500),
     ss = i(47675),
     si = i(249790),
     sl = i(254828),
     sn = i(783123),
     st = i(463156),
-    sd = i(864823),
-    sr = i(707972);
+    sd = i(449572),
+    sr = i(337796);
 function sa(e) {
     let {
             user: s,
@@ -864,8 +864,8 @@ function sa(e) {
         { analyticsLocations: f } = (0, x.Ay)([...I, g ? u.A.BLOCKED_PROFILE_MODAL : u.A.IGNORED_PROFILE_MODAL]),
         N = (0, j.pb)({ layout: "MODAL_V2", userId: s.id, guildId: p, channelId: n, messageId: t, roleId: r }),
         v = [
-            { icon: e8.y, description: z.intl.string(z.t.kcuWva) },
-            { icon: e8.y, description: z.intl.string(g ? z.t.QxrDY1 : z.t.W6fjkS) },
+            { icon: e6.y, description: z.intl.string(z.t.kcuWva) },
+            { icon: e6.y, description: z.intl.string(g ? z.t.QxrDY1 : z.t.W6fjkS) },
         ],
         y = (0, m.Ay)(s.id, p),
         T = h.Ay.getName(y?.guildId, n, s),
@@ -920,7 +920,7 @@ function sa(e) {
                                     children: v.map((e, s) => {
                                         let { icon: i, description: n } = e;
                                         return (0, l.jsx)(
-                                            e6.PQ,
+                                            e8.PQ,
                                             {
                                                 icon: i,
                                                 title: n,
@@ -975,7 +975,7 @@ function so(e) {
     return d && !s
         ? (0, l.jsx)(sa, { onHide: r, ...i })
         : n.isNonUserBot()
-          ? (0, l.jsx)(e7, { ...i })
+          ? (0, l.jsx)(e9, { ...i })
           : n.bot
             ? (0, l.jsx)(e0, { ...i })
             : (0, l.jsx)(sc.A, { ...i });

@@ -49,7 +49,7 @@ var T = n(562708),
     k = n(962125),
     F = n(428262),
     V = n(240864),
-    B = n(416316);
+    B = n(711548);
 let H = r.forwardRef(function (e, t) {
         let {
                 categories: n,
@@ -200,7 +200,7 @@ let H = r.forwardRef(function (e, t) {
 var W = n(942381),
     Y = n(602034),
     K = n(892547),
-    $ = n(90547);
+    $ = n(387187);
 let z = r.forwardRef(function (e, t) {
     let {
             store: n,
@@ -254,7 +254,7 @@ let z = r.forwardRef(function (e, t) {
         })
     );
 });
-var q = n(645324);
+var q = n(456908);
 function Z(e) {
     let {
             categories: t,
@@ -472,7 +472,7 @@ var ey = n(837381),
     eP = n(652215),
     eU = n(698279),
     ew = n(375708),
-    eG = n(930155);
+    eG = n(917419);
 let ex = [8, 8, 8, 8];
 function ek(e) {
     let { icon: t, isSelected: n, onClick: r, listItemProps: a } = e;
@@ -591,7 +591,7 @@ var eH = n(554146),
     e0 = n(531685),
     e1 = n(723702),
     e2 = n(350535),
-    e3 = n(578078);
+    e3 = n(319518);
 function e6(e) {
     let { soundboardSound: t, closePicker: r } = e,
         a = (0, u.RQ)((e) => e.searchQuery),
@@ -614,7 +614,7 @@ function e6(e) {
     function _() {
         r(),
             (0, eW.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("92000"), n.e("60841"), n.e("46327"), n.e("12618")]).then(
+                let { default: e } = await Promise.all([n.e("14144"), n.e("72425"), n.e("46327"), n.e("12618")]).then(
                     n.bind(n, 29681),
                 );
                 return (t) => (0, i.jsx)(e, { ...t });
@@ -646,18 +646,18 @@ function e6(e) {
           });
 }
 var e4 = n(805945),
-    e5 = n(890856),
-    e7 = n(307301),
+    e7 = n(890856),
+    e5 = n(307301),
     e8 = n(468689);
 function e9(e) {
     e8.A.open(e, eP.BEX.SOUNDBOARD),
         (0, eW.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
-                n.e("43363"),
-                n.e("98923"),
-                n.e("95339"),
-                n.e("71906"),
-                n.e("8848"),
+                n.e("16227"),
+                n.e("10027"),
+                n.e("99819"),
+                n.e("12410"),
+                n.e("7792"),
                 n.e("8555"),
                 n.e("83952"),
                 n.e("20287"),
@@ -673,8 +673,8 @@ function e9(e) {
             return (n) => (0, i.jsx)(t, { ...n, guildId: e });
         });
 }
-var te = n(14870),
-    tt = n(256611);
+var te = n(757718),
+    tt = n(508387);
 function tn(e) {
     let { guild: t, focused: n, onSelectItem: r, ...a } = e,
         { canCreateExpressions: l } = (0, ef.nr)(t);
@@ -683,13 +683,13 @@ function tn(e) {
         shouldShow: !l,
         children: (0, i.jsx)("li", {
             className: te.H,
-            children: (0, i.jsxs)(e5.s, {
+            children: (0, i.jsxs)(e7.s, {
                 ...a,
                 "aria-label": ew.intl.formatToPlainString(ew.t.c1qVYh, { guildName: t.name }),
                 className: s()(tt.n4, { [tt.in]: n, [tt.r9]: !l }),
                 onClick: () => (null != r ? r() : e9(t.id)),
                 children: [
-                    (0, i.jsx)(e7.j, { size: "sm", color: "currentColor" }),
+                    (0, i.jsx)(e5.j, { size: "sm", color: "currentColor" }),
                     (0, i.jsx)(e$.E, {
                         variant: "text-xs/semibold",
                         color: l ? "currentColor" : "text-muted",
@@ -746,7 +746,7 @@ function ti(e) {
             });
     }
 }
-var tr = n(728950);
+var tr = n(965238);
 let ta = 32 + et.kg - 8,
     ts = {
         [e_.Cx.SEARCH]: d.A.SOUNDBOARD_SEARCH_RESULTS_SECTION,
@@ -1173,7 +1173,7 @@ function tu(e) {
             [ek, eF, eV, ex.length],
         ),
         e4 = r.useCallback((e) => eb((0, eI.lG)(e, eS, H, a, U)), [a, H, eS, U]),
-        e5 = r.useCallback(
+        e7 = r.useCallback(
             (e) => {
                 (0, y.L3)(e, async () => {
                     let { default: e } = await n.e("11562").then(n.bind(n, 666801));
@@ -1182,7 +1182,7 @@ function tu(e) {
             },
             [U],
         ),
-        e7 = r.useCallback(
+        e5 = r.useCallback(
             () =>
                 O
                     ? (0, i.jsx)(J.Gq, {
@@ -1195,11 +1195,11 @@ function tu(e) {
                     : (0, i.jsx)(R.D, {
                           tabIndex: 0,
                           className: tr.Jm,
-                          onClick: e5,
+                          onClick: e7,
                           "aria-label": ew.intl.string(ew.t.kbFsAD),
                           children: (0, i.jsx)(tc, { className: tr.By }),
                       }),
-            [O, e5],
+            [O, e7],
         ),
         e8 = r.useCallback(
             (e) =>
@@ -1301,7 +1301,7 @@ function tu(e) {
                     renderSectionFooter: e3,
                     renderSection: e1,
                     renderCategoryList: e8,
-                    renderHeaderAccessories: e7,
+                    renderHeaderAccessories: e5,
                     rowHeight: 48,
                     sectionHeaderHeight: eJ,
                     sectionFooterHeight: e0,
@@ -1317,7 +1317,7 @@ function tu(e) {
         })
     );
 }
-var t_ = n(740712);
+var t_ = n(367720);
 function tE(e) {
     let {
             guildId: t,

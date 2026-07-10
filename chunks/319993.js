@@ -45,7 +45,7 @@ var k = n(375708),
         i),
     V = n(202541),
     B = n(652215),
-    H = n(589812);
+    H = n(532340);
 function j(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: i } = e,
         s = a.useCallback(async () => {
@@ -199,7 +199,7 @@ function W(e) {
               ],
           });
 }
-var Y = n(14870);
+var Y = n(757718);
 function K() {
     let { volume: e, onVolumeChange: t } = (function () {
         let [e, t] = a.useState(R.HO.getSetting());

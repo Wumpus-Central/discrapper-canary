@@ -42,7 +42,7 @@ var n = s(627968),
     F = s(339984),
     K = s(202541),
     W = s(375708),
-    z = s(545819);
+    z = s(941531);
 function J(e) {
     let {
         icon: t,
@@ -223,9 +223,9 @@ function X(e) {
             (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        s.e("27565"),
-                        s.e("36698"),
-                        s.e("56989"),
+                        s.e("79465"),
+                        s.e("21866"),
+                        s.e("50985"),
                         s.e("63232"),
                         s.e("29666"),
                         s.e("93513"),
@@ -405,7 +405,7 @@ function es(e) {
                           onUpsellClick: function () {
                               (0, a.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      s.e("85029"),
+                                      s.e("2125"),
                                       s.e("66901"),
                                       s.e("40716"),
                                   ]).then(s.bind(s, 629959));

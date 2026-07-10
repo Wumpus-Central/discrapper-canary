@@ -3,17 +3,17 @@ var n = i(627968);
 i(64700);
 var l = i(398590),
     s = i(114212),
-    a = i(345942),
-    r = i(183555),
-    d = i(913453),
-    o = i(51943),
+    r = i(345942),
+    a = i(183555),
+    o = i(913453),
+    d = i(51943),
     c = i(782505),
     u = i(515054),
-    g = i(63060);
+    g = i(851284);
 function m(e) {
     let { user: t, onClose: i } = e,
-        { trackUserProfileAction: m } = (0, r.NJ)(),
-        { mutualGuilds: h, isFetching: x } = (0, d.A)(t);
+        { trackUserProfileAction: m } = (0, a.NJ)(),
+        { mutualGuilds: h, isFetching: x } = (0, o.A)(t);
     return (0, n.jsx)(u.K, {
         className: g.XG,
         fade: !0,
@@ -34,15 +34,15 @@ function m(e) {
                   )
                 : (null != h || x) && h?.length !== 0
                   ? h?.map((e) => {
-                        let { guild: s, nick: r } = e;
+                        let { guild: s, nick: a } = e;
                         return (0, n.jsx)(
-                            o.A,
+                            d.A,
                             {
                                 user: t,
                                 guild: s,
-                                nick: r,
+                                nick: a,
                                 onSelect: () => {
-                                    m({ action: "PRESS_MUTUAL_GUILD" }), (0, a.u)(s.id), i(), (0, l.jH)();
+                                    m({ action: "PRESS_MUTUAL_GUILD" }), (0, r.u)(s.id), i(), (0, l.jH)();
                                 },
                             },
                             s.id,

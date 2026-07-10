@@ -10,8 +10,8 @@ var l = n(627968),
     d = n(31823),
     p = n(426398),
     m = n(655857),
-    h = n(427675),
-    C = n(6938),
+    C = n(427675),
+    h = n(6938),
     E = n(590180),
     A = n(469778),
     f = n(937008),
@@ -30,22 +30,22 @@ function _() {
     });
 }
 var g = n(121005),
-    v = n(800471),
-    x = n(169801),
+    x = n(800471),
+    v = n(169801),
     N = n(534479),
     b = n(652215),
     R = n(202541);
 function M(e) {
     let { handleStepChange: t } = e,
-        n = (0, C.t4)((e) => e.selectedSkuId),
+        n = (0, h.t4)((e) => e.selectedSkuId),
         { paymentSources: s, hasFetchedPaymentSources: o } = (0, p.jm)(),
         { application: m } = (0, d.V)(),
         A = (0, u.Hp)(),
-        y = (0, h.gU)(),
-        S = (0, h.Hu)(),
+        y = (0, C.gU)(),
+        S = (0, C.Hu)(),
         { isGift: P } = (0, f.Pv)(),
         [T, I] = i.useState(!0),
-        [g, v] = (0, a.yK)([E.A], () => [E.A.isFetchingCategories, E.A.error]);
+        [g, x] = (0, a.yK)([E.A], () => [E.A.isFetchingCategories, E.A.error]);
     return (i.useEffect(() => {
         let e = null != m;
         S && o && e && I(g);
@@ -66,12 +66,12 @@ function M(e) {
         ? (0, l.jsx)(N.A, {})
         : A
           ? (0, l.jsx)(c.oO, {})
-          : null != v
+          : null != x
             ? (0, l.jsx)(_, {})
             : null;
 }
 function O(e) {
-    let { subscriptionTier: t, initialPlanId: n, handleStepChange: d, continueSessionToInitialStep: h } = e,
+    let { subscriptionTier: t, initialPlanId: n, handleStepChange: d, continueSessionToInitialStep: C } = e,
         { hasPaymentSources: E } = (0, p.jm)(),
         {
             selectedSkuId: y,
@@ -79,7 +79,7 @@ function O(e) {
             activeSubscription: P,
             defaultPlanId: T,
             startedPaymentFlowWithPaymentSources: I,
-        } = (0, C.t4)((e) => ({
+        } = (0, h.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
             activeSubscription: e.activeSubscription,
@@ -90,7 +90,7 @@ function O(e) {
         b = (0, g.A)(),
         { hasFetchedRelatedSubscriptionPlans: M, subscriptionPriceOptionsLoading: O } = (0, m.Jn)(),
         { isGift: j } = (0, f.Pv)(),
-        L = (0, x.A)({ isGift: j, skuId: y }),
+        L = (0, v.A)({ isGift: j, skuId: y }),
         w = !b || !M || O,
         D = (0, a.bG)([A.A], () => A.A.applicationIdsFetched.has(R.tv));
     return ((0, o.A)(
@@ -102,19 +102,19 @@ function O(e) {
     ),
     i.useEffect(() => {
         if ((D || (0, s.LM)(R.tv), w || _)) return;
-        let e = (0, v.vT)({ isTrial: L, isGift: j, selectedSkuId: y, startedPaymentFlowWithPaymentSources: I });
-        null != h
-            ? d(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: h })
+        let e = (0, x.vT)({ isTrial: L, isGift: j, selectedSkuId: y, startedPaymentFlowWithPaymentSources: I });
+        null != C
+            ? d(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: C })
             : null != n
               ? n !== R.gD.PREMIUM_GROUP_MONTH || E
                   ? d(r.pn.REVIEW)
                   : d(r.pn.ADD_PAYMENT_STEPS)
               : e
-                ? (S((0, v.xT)(y, P, T)), d(r.pn.REVIEW))
+                ? (S((0, x.xT)(y, P, T)), d(r.pn.REVIEW))
                 : null != t
                   ? d(r.pn.PLAN_SELECT)
                   : d(r.pn.SKU_SELECT);
-    }, [h, P, _, D, n, w, d, t, y, S, L, T, j, I, E]),
+    }, [C, P, _, D, n, w, d, t, y, S, L, T, j, I, E]),
     w)
         ? (0, l.jsx)(N.A, {})
         : _
@@ -124,7 +124,7 @@ function O(e) {
 var j = n(891197),
     L = n(69494),
     w = n(482132),
-    D = n(520171);
+    D = n(293035);
 function k() {
     return (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(L.A, {}), (0, l.jsx)(w.dZ, { children: (0, l.jsx)(j.N, { className: D.D }) })],
@@ -135,7 +135,7 @@ var U = n(830382),
     F = n(534514),
     B = n(834730),
     Y = n(349288),
-    H = n(236540);
+    H = n(94204);
 function W(e) {
     let { className: t, isEmailResent: n, resendEmail: i } = e;
     return (0, l.jsx)("div", {
@@ -170,7 +170,7 @@ function V() {
     let e = i.useMemo(() => [{ variant: "primary", text: I.intl.string(I.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(G.H, { actions: e });
 }
-var K = n(411097);
+var K = n(599961);
 function Z() {
     let [e, t] = i.useState(!1);
     async function n() {

@@ -11,7 +11,7 @@ var i,
     u = n.n(c),
     _ = n(844222),
     E = n(451988),
-    A = n(242057),
+    A = n(10185),
     h = (((i = h || {})[(i.TRANSLATE = 1)] = "TRANSLATE"), (i[(i.SCALE = 2)] = "SCALE"), (i[(i.FADE = 3)] = "FADE"), i);
 let I = Object.freeze({ 1: A.Tl, 2: A.hs, 3: A.Rv }),
     f = Object.freeze({ top: A.ZR, bottom: A.XI, left: A.Hn, right: A.sS, center: A.pm, window_center: A.pm });
@@ -44,7 +44,7 @@ function p(e) {
     );
 }
 p.Types = h;
-var T = n(783755),
+var T = n(677771),
     m = (((r = m || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
 let g = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
 class S extends s.Component {

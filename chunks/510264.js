@@ -15,7 +15,7 @@ let d = "dmSettingsUpsellLastShown",
             null == t || i - t > 6048e5
                 ? (s.w.set(d, i),
                   (0, l.openModalLazy)(async () => {
-                      let { default: t } = await Promise.all([n.e("3793"), n.e("73084"), n.e("62684")]).then(
+                      let { default: t } = await Promise.all([n.e("26065"), n.e("73084"), n.e("62684")]).then(
                           n.bind(n, 228855),
                       );
                       return (n) => (0, a.jsx)(t, { ...n, guildId: e });

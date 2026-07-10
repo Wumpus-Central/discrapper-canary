@@ -2,9 +2,9 @@ n.d(t, { A: () => k });
 var r = n(627968),
     l = n(64700),
     i = n(942381),
-    u = n(876230),
-    a = n(645577),
-    s = n(408278),
+    s = n(876230),
+    u = n(645577),
+    a = n(408278),
     o = n(789645),
     c = n(613373),
     d = n(931853),
@@ -26,8 +26,8 @@ var r = n(627968),
     x = n(979204),
     L = n(190107),
     O = n(375708),
-    P = n(111846),
-    N = n(311872);
+    P = n(924838),
+    N = n(25920);
 function k(e) {
     let t,
         {
@@ -58,28 +58,28 @@ function k(e) {
         Z = (0, p.Kr)((e) => e.muted),
         J = (0, p.Kr)((e) => e.setVolume),
         ee = (0, p.Kr)((e) => e.setMuted),
-        et = (0, a.g)(G, W, H.progressSeconds),
+        et = (0, u.g)(G, W, H.progressSeconds),
         [en] = l.useState(() => E.A.getEffectiveConnectionSpeed()),
         er = Math.max(W.maxTimestampSec, H.progressSeconds),
         el = G ? void 0 : (0, A.vd)(er, W.duration),
-        { videoAsset: ei, videoAssetType: eu } = (0, T.A)(K, en, et, M, !1),
-        ea = l.useCallback(
+        { videoAsset: ei, videoAssetType: es } = (0, T.A)(K, en, et, M, !1),
+        eu = l.useCallback(
             (e) => {
                 let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
-                return t || null != eu
-                    ? n === u.Q6.PAUSED && (r === u.KB.FOCUS || r === u.KB.PICTURE_IN_PICTURE)
+                return t || null != es
+                    ? n === s.Q6.PAUSED && (r === s.KB.FOCUS || r === s.KB.PICTURE_IN_PICTURE)
                         ? O.intl.string(O.t.w6PeBF)
                         : (0, d.u)({ hasVideoAsset: t, playerState: n, pauseReason: r })
                     : (0, f.isWeb)()
                       ? O.intl.string(O.t["E1du/q"])
                       : O.intl.string(O.t["rStN/7"]);
             },
-            [eu],
+            [es],
         ),
-        es = (0, l.useRef)(null),
+        ea = (0, l.useRef)(null),
         [eo, ec] = l.useState(null),
         ed = l.useCallback((e) => {
-            (es.current = e), ec(e);
+            (ea.current = e), ec(e);
         }, []),
         eE = l.useMemo(() => (0, C.L)({ quest: B, location: L.rE.VIDEO_MODAL }), [B]),
         ef = (0, l.useRef)(0),
@@ -103,15 +103,15 @@ function k(e) {
             questId: B.id,
             isQuestCompleted: G,
             videoRef: K,
-            hlsRef: es,
+            hlsRef: ea,
             videoSessionId: F,
-            videoAssetId: eu,
+            videoAssetId: es,
             sourceQuestContent: w,
             logger: eE,
             isFullEpisodeVideoQuest: q,
             listenForHlsErrors: !1,
         });
-    (0, R.A)({ videoAssetUrl: ei?.url, videoRef: K, hls: eo, videoAssetType: eu });
+    (0, R.A)({ videoAssetUrl: ei?.url, videoRef: K, hls: eo, videoAssetType: es });
     let eO =
             ((t = (0, p.Kr)((e) => e.transcript)),
             (l.useEffect(() => {
@@ -137,19 +137,19 @@ function k(e) {
         eQ = l.useCallback(
             (e, t) => {
                 switch ((ek(e, t), e)) {
-                    case u.Q6.PLAYING:
+                    case s.Q6.PLAYING:
                         K.current?.paused === !0 && eS(eU.current), (eU.current = null);
                         break;
-                    case u.Q6.PAUSED: {
+                    case s.Q6.PAUSED: {
                         let e = (function (e) {
                             switch (e) {
-                                case u.KB.USER:
+                                case s.KB.USER:
                                     return m.Yg.PAUSE_BUTTON;
-                                case u.KB.FOCUS:
+                                case s.KB.FOCUS:
                                     return m.Yg.LOST_FOCUS;
-                                case u.KB.VISIBILITY:
+                                case s.KB.VISIBILITY:
                                     return m.Yg.MODAL_CLOSED;
-                                case u.KB.PICTURE_IN_PICTURE:
+                                case s.KB.PICTURE_IN_PICTURE:
                                     return m.Yg.PICTURE_IN_PICTURE;
                                 default:
                                     return null;
@@ -157,7 +157,7 @@ function k(e) {
                         })(t);
                         null != e && ((eU.current = e), eC(e));
                     }
-                    case u.Q6.ENDED:
+                    case s.Q6.ENDED:
                 }
             },
             [ek, eS, eC],
@@ -230,7 +230,7 @@ function k(e) {
                     className: N.A,
                     children: [
                         (0, r.jsx)(I.A, {}),
-                        (0, r.jsx)(s.K, {
+                        (0, r.jsx)(a.K, {
                             "data-testid": "video-quest-close-btn",
                             variant: "overlay-secondary",
                             icon: o.P,
@@ -254,7 +254,7 @@ function k(e) {
         persistPlayhead: !1,
         pauseOnLostVisibility: !G,
         autoFocus: y,
-        getPlaybackBlockedMessage: ea,
+        getPlaybackBlockedMessage: eu,
         orientation: Q,
         videoUrlOverride: M,
         src: ei?.url,

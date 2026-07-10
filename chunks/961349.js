@@ -82,7 +82,7 @@ function _(e) {
 }
 var L = n(827669),
     R = n(73510),
-    k = n(495204);
+    k = n(905636);
 let x = { results: { entries: [] } };
 function Y() {
     (0, p.openModalLazy)(async () => {
@@ -187,7 +187,7 @@ var v = n(735438),
     U = n(166862),
     j = n(545152),
     H = n(768038),
-    W = n(229853),
+    W = n(2717),
     b = n(911385);
 let P = { results: { choices: [] } },
     Q = { results: { choices: [], isLoading: !0 } },
@@ -413,7 +413,7 @@ var ei = n(478437),
     eM = n(71393),
     eI = n(174459),
     eN = n(652215),
-    eE = n(965819);
+    eE = n(111995);
 function eS(e, t) {
     return (0, m.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
 }
@@ -639,7 +639,7 @@ let eY = new ex(eT.h, {
 var ev = n(95561),
     eB = n(235986),
     eG = n(59318),
-    eU = n(596843);
+    eU = n(331691);
 let ej = { results: { command: null, integrations: [], isLoading: !1 } };
 function eH(e, t, n) {
     let l;
@@ -1066,7 +1066,7 @@ let e1 = { results: { command: null, stickers: [] } };
 function e2(e, t) {
     return (0, m.jsx)(T.A, { sticker: e, isInteracting: t, size: 40 });
 }
-let e4 = {
+let e6 = {
     stores: [eg.A],
     matches: (e, t, n, l, i) =>
         i.commands !== a.Ze.DISABLED &&
@@ -1163,9 +1163,9 @@ let e4 = {
         );
     },
 };
-var e6 = n(59892),
-    e8 = n(186693),
-    e7 = n(262234),
+var e4 = n(59892),
+    e7 = n(186693),
+    e8 = n(262234),
     e3 = n(717470),
     e5 = n(977936),
     e9 = n(849455),
@@ -1322,7 +1322,7 @@ let tm = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
         [a.DB.COMMAND_OPTIONS]: K,
         [a.DB.CHOICES]: F,
         [a.DB.EMOJIS_AND_STICKERS]: ef,
-        [a.DB.STICKERS]: e4,
+        [a.DB.STICKERS]: e6,
         [a.DB.GIFS]: eW,
         [a.DB.LEGACY_COMMANDS]: e$,
         [a.DB.MENTIONS]: eX,
@@ -1387,10 +1387,10 @@ let tm = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                 let l = tu()(),
                     i = (function () {
                         let e = e_.default.locale;
-                        if ("en-US" === e) return e6;
-                        if ("en-GB" === e) return e6.GB;
-                        if ("de" === e) return e8;
-                        if ("fr" === e) return e7;
+                        if ("en-US" === e) return e4;
+                        if ("en-GB" === e) return e4.GB;
+                        if ("de" === e) return e7;
+                        if ("fr" === e) return e8;
                         if ("ja" === e) return e3;
                         else if ("nl" === e) return e5;
                         else if ("ru" === e) return e9;

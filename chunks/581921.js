@@ -10,11 +10,11 @@ var a = s(289873),
     d = s(174459),
     u = s(975571),
     m = s(962644),
-    x = s(35587),
-    g = s(412260),
+    g = s(35587),
+    x = s(412260),
     p = s(772167),
-    h = s(881373);
-function N(e) {
+    f = s(881373);
+function h(e) {
     let { promotion: t, analyticsLocations: s } = e;
     return (0, i.jsx)(p.wx, {
         recurrence: t,
@@ -24,21 +24,21 @@ function N(e) {
         analyticsLocations: s,
     });
 }
-var f = s(652215),
-    A = s(778414),
+var N = s(652215),
+    A = s(962995),
     j = s(375708),
-    E = s(738894);
-let C = {
-        "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: h.aW }, body: A.default.mH30Yx },
+    C = s(75662);
+let E = {
+        "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: f.aW }, body: A.default.mH30Yx },
         "Logitech 5%": {
             title: A.default.zeBjoX,
-            titleParams: { discountPercent: h.y$ },
+            titleParams: { discountPercent: f.y$ },
             body: A.default.fC4abC,
             bodyParams: { months: 6 },
         },
         "Logitech PRO Series Sim": {
             title: A.default.pSBCjv,
-            titleParams: { discountPercent: h.K2 },
+            titleParams: { discountPercent: f.K2 },
             body: A.default.lsRjfl,
         },
     },
@@ -47,13 +47,13 @@ let C = {
             modalTitle: A.default["2I7nK+"],
             modalSubtitle: {
                 message: A.default.W8jOD0,
-                values: { termsUrl: u.A.getArticleURL(f.MVz.LOGITECH_PROMOTION) },
+                values: { termsUrl: u.A.getArticleURL(N.MVz.LOGITECH_PROMOTION) },
             },
             landingUrl: "https://www.logitech.com/",
         },
     };
 function R(e, t) {
-    let s = C[e.outboundTitle];
+    let s = E[e.outboundTitle];
     return {
         id: e.id,
         partnerId: e.partnerId ?? "",
@@ -69,12 +69,12 @@ function R(e, t) {
 function _(e) {
     let { partnerId: t, transitionState: s, onClose: c } = e,
         d = b[t],
-        [u, m] = (0, r.yK)([g.A], () => {
-            let { recurring: e, oneTime: s } = g.A.getPromotionsByPartner(t);
-            return [e.filter((e) => null != C[e.outboundTitle]), s.filter((e) => null != C[e.outboundTitle])];
+        [u, m] = (0, r.yK)([x.A], () => {
+            let { recurring: e, oneTime: s } = x.A.getPromotionsByPartner(t);
+            return [e.filter((e) => null != E[e.outboundTitle]), s.filter((e) => null != E[e.outboundTitle])];
         }),
-        { promotionsLoaded: h, claimedOutboundPromotionCodeMap: f } = (0, x.y7)();
-    if (!h) return (0, i.jsx)(a.y, {});
+        { promotionsLoaded: f, claimedOutboundPromotionCodeMap: N } = (0, g.y7)();
+    if (!f) return (0, i.jsx)(a.y, {});
     let _ = d?.modalSubtitle != null ? j.intl.format(d.modalSubtitle.message, d.modalSubtitle.values) : void 0,
         v = null == d ? t : j.intl.string(d.modalTitle);
     return (0, i.jsx)(n.Modal, {
@@ -84,7 +84,7 @@ function _(e) {
         transitionState: s,
         onClose: c,
         children: (0, i.jsxs)("div", {
-            className: E.kL,
+            className: C.kL,
             children: [
                 u.length > 0 &&
                     (0, i.jsxs)(i.Fragment, {
@@ -95,13 +95,13 @@ function _(e) {
                                 children: j.intl.string(A.default["9Y2p6p"]),
                             }),
                             (0, i.jsx)("div", {
-                                className: E.kR,
+                                className: C.kR,
                                 children: u.map((e) =>
                                     (0, i.jsx)(
                                         p.wx,
                                         {
                                             recurrence: {
-                                                ...R(e, f[e.id] ?? null),
+                                                ...R(e, N[e.id] ?? null),
                                                 asset: (0, p.Cf)()[e.partnerId ?? ""]?.asset ?? "",
                                             },
                                             showPartnerImage: !0,
@@ -116,7 +116,7 @@ function _(e) {
                     }),
                 m.length > 0 &&
                     (0, i.jsxs)("div", {
-                        className: E.E7,
+                        className: C.E7,
                         children: [
                             (0, i.jsx)(l.E, {
                                 variant: "text-md/medium",
@@ -124,12 +124,12 @@ function _(e) {
                                 children: j.intl.string(A.default.Wm58LR),
                             }),
                             (0, i.jsx)("div", {
-                                className: E.kR,
+                                className: C.kR,
                                 children: m.map((e) =>
                                     (0, i.jsx)(
-                                        N,
+                                        h,
                                         {
-                                            promotion: R(e, f[e.id] ?? null),
+                                            promotion: R(e, N[e.id] ?? null),
                                             analyticsLocations: [o.A.THIRD_PARTY_PROMOTIONS_MODAL],
                                         },
                                         e.id,
@@ -144,7 +144,7 @@ function _(e) {
 }
 function v(e) {
     let { partnerId: t, analyticsLocations: a } = e;
-    d.default.track(f.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: [t], partner_id: t, location_stack: a }),
+    d.default.track(N.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { partner_ids: [t], partner_id: t, location_stack: a }),
         m.Ay.fetchActivePromotions(),
         (0, c.openModalLazy)(async () => {
             let { ThirdPartyPromotionsModal: e } = await Promise.resolve().then(s.bind(s, 581921));

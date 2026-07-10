@@ -9,20 +9,20 @@ var i = s(627968),
     d = s(793574),
     u = s(742589),
     m = s(876587),
-    x = s(65470),
-    g = s(400669),
+    g = s(65470),
+    x = s(400669),
     p = s(909536),
-    h = s(280450),
-    N = s(287809),
-    f = s(428262),
+    f = s(280450),
+    h = s(287809),
+    N = s(428262),
     A = s(652215),
     j = s(202541),
-    E = s(375708),
-    C = s(547876);
-let b = n.Ay.connectStores([N.default], () => ({ user: N.default.getCurrentUser() }))(function (e) {
+    C = s(375708),
+    E = s(50596);
+let b = n.Ay.connectStores([h.default], () => ({ user: h.default.getCurrentUser() }))(function (e) {
     let { user: t } = e,
-        s = (0, n.bG)([h.default], () => h.default.isAuthenticated()),
-        N = (0, f.TW)(t, j.PremiumTypes.TIER_2),
+        s = (0, n.bG)([f.default], () => f.default.isAuthenticated()),
+        h = (0, N.TW)(t, j.PremiumTypes.TIER_2),
         b = (0, o.Ay)(),
         R = (0, p.Gh)("nitro_home_header"),
         _ = a.useRef(null);
@@ -38,25 +38,25 @@ let b = n.Ay.connectStores([N.default], () => ({ user: N.default.getCurrentUser(
                             className: e,
                             toolbar: R
                                 ? (0, i.jsxs)("div", {
-                                      className: C.fI,
+                                      className: E.fI,
                                       children: [
-                                          (0, i.jsx)(g.l, {
+                                          (0, i.jsx)(x.l, {
                                               ref: _,
                                               size: "sm",
                                               variant: "secondary",
                                               location: d.A.PREMIUM_WISHLIST_NITRO_MEMBER_HUB,
                                           }),
-                                          (0, i.jsx)(x.A, { variant: "secondary", size: "sm" }),
+                                          (0, i.jsx)(g.A, { variant: "secondary", size: "sm" }),
                                       ],
                                   })
                                 : void 0,
                             role: "navigation",
                             children: [
                                 (0, i.jsx)(u.A.Icon, { icon: r.t, "aria-hidden": !0 }),
-                                (0, i.jsx)(u.A.Title, { children: E.intl.string(E.t.Ipxkog) }),
+                                (0, i.jsx)(u.A.Title, { children: C.intl.string(C.t.Ipxkog) }),
                             ],
                         }),
-                        R && N && (0, i.jsx)(m.O, { targetElementRef: _, body: E.intl.string(E.t.EqUw7K) }),
+                        R && h && (0, i.jsx)(m.O, { targetElementRef: _, body: C.intl.string(C.t.EqUw7K) }),
                     ],
                 }),
         }),
