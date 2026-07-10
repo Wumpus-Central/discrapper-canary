@@ -2155,7 +2155,7 @@ let t5 = 498 + tJ.as.MEDIUM,
                                                         persistSearch: !0,
                                                     })
                                                   : null,
-                                              K === eE.kx.EMOJI
+                                              K === eE.kx.EMOJI || P.expressionPicker?.onlyEmojis === !0
                                                   ? (0, i.jsx)(S.A, {
                                                         hasTabWrapper: !0,
                                                         persistSearch: !0,

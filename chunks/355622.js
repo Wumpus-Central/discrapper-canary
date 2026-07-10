@@ -308,6 +308,7 @@ let c = {
             disableAutoFocus: !0,
             showCharacterCount: !0,
             layout: 1,
+            expressionPicker: { onlyEmojis: !0 },
         },
         SHARE_CUSTOM_CLIENT_THEME_INPUT: {
             analyticsName: "share_custom_client_theme_input",
