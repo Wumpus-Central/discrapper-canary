@@ -1312,16 +1312,14 @@ function nN(e) {
         { createMultipleConfettiAt: r } = s.useContext(nm.x),
         o = (0, g.bG)([P.Ay], () => P.Ay.useReducedMotion),
         { isPlaying: c, playSound: d } = (function (e) {
-            let { isPlaying: t, playSound: n, preloadSound: l } = (0, nv.A)(null != e ? (0, nf.A)(e.soundId) : null);
-            return (
-                s.useEffect(() => {
-                    null != e && l();
-                }, [e, l]),
-                {
-                    isPlaying: t,
-                    playSound: s.useCallback(() => !!n({ volume: (0, nj.A)(e?.volume ?? 1) }), [n, e?.volume]),
-                }
-            );
+            let { isPlaying: t, playSound: n } = (0, nv.A)(null != e ? (0, nf.A)(e.soundId) : null);
+            return {
+                isPlaying: t,
+                playSound: s.useCallback(async () => {
+                    let t = (0, nj.A)(e?.volume ?? 1);
+                    return !!(await n({ volume: t }));
+                }, [n, e?.volume]),
+            };
         })(a);
     (0, D.Ay)(() => {
         (0, nh.E7)();
