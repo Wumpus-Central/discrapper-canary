@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eb });
+n.d(t, { A: () => eM });
 var i,
     r,
     a = n(627968),
@@ -110,16 +110,17 @@ var H = n(224640),
     $ = n(97483),
     z = n(921853),
     q = n(695515),
-    Z = n(10005),
-    X = n(453322),
-    Q = n(834981),
-    J = n(22071),
-    ee = n(709854);
-function et() {
+    Z = n(794364),
+    X = n(10005),
+    Q = n(453322),
+    J = n(834981),
+    ee = n(22071),
+    et = n(709854);
+function en() {
     return (0, a.jsx)(c.E, {
         variant: "text-md/normal",
         color: "text-subtle",
-        className: ee.Q,
+        className: et.Q,
         children: C.intl.format(N.default.ifObbX, {
             handleAgeVerifyHook: () =>
                 P.A.showAgeVerificationGetStartedModal({ entryPoint: E.q1.PARENTAL_CONSENT_LOCKOUT }),
@@ -127,17 +128,17 @@ function et() {
     });
 }
 n(321073);
-var en = n(191627),
-    ei = n(503698),
-    er = n.n(ei),
-    ea = n(778712),
-    es = n(97808),
-    el = n(939249),
-    eo = n(947641),
-    ed = n(789645),
-    ec = n(486020),
-    eu = n(923531);
-let e_ = () => ({
+var ei = n(191627),
+    er = n(503698),
+    ea = n.n(er),
+    es = n(778712),
+    el = n(97808),
+    eo = n(939249),
+    ed = n(947641),
+    ec = n(789645),
+    eu = n(486020),
+    e_ = n(923531);
+let eE = () => ({
     seconds: C.intl.string(N.default.M4NOO3),
     minutes: N.default["9nem85"],
     hours: N.default.sJjWRY,
@@ -145,9 +146,9 @@ let e_ = () => ({
     days: N.default.tVHevX,
     date: N.default.q6jzya,
 });
-var eE = n(477480),
-    eA = n(343768);
-function eh(e) {
+var eA = n(477480),
+    eh = n(343768);
+function eI(e) {
     var t;
     let {
             request: n,
@@ -166,33 +167,33 @@ function eh(e) {
         { isConnected: p, isResolved: T } = (function (e) {
             let t = (0, b.bG)([q.A], () => q.A.getLinkedUsers()[e]?.link_status),
                 [n, i] = s.useState(() =>
-                    t === en.Ef.ACTIVE ? "connected" : null == t || t === en.Ef.PENDING ? null : "declined",
+                    t === ei.Ef.ACTIVE ? "connected" : null == t || t === ei.Ef.PENDING ? null : "declined",
                 ),
                 [r, a] = s.useState(t);
             t !== r &&
                 (a(t),
-                t === en.Ef.ACTIVE
+                t === ei.Ef.ACTIVE
                     ? i("connected")
-                    : t === en.Ef.PENDING
+                    : t === ei.Ef.PENDING
                       ? i(null)
                       : null != t
                         ? i("declined")
-                        : null != r && r !== en.Ef.ACTIVE && i("declined"));
+                        : null != r && r !== ei.Ef.ACTIVE && i("declined"));
             let l = "connected" === n,
                 o = "declined" === n;
             return { isConnected: l, isDeclined: o, isResolved: l || o };
         })(n.parent_id),
-        m = ((t = n.created_at), (0, eu.mV)(Date.parse(t), e_)),
-        g = ec.Ay.getUserAvatarURL({ id: n.parent_id, avatar: f }, !1, (0, ea.FT)(ea._3.SIZE_40));
+        m = ((t = n.created_at), (0, e_.mV)(Date.parse(t), eE)),
+        g = eu.Ay.getUserAvatarURL({ id: n.parent_id, avatar: f }, !1, (0, es.FT)(es._3.SIZE_40));
     return (0, a.jsxs)("div", {
-        className: eA.nM,
+        className: eh.nM,
         children: [
             (0, a.jsx)("div", {
-                className: eA.R3,
-                children: (0, a.jsx)(es.eu, { src: g, size: ea._3.SIZE_40, "aria-label": h }),
+                className: eh.R3,
+                children: (0, a.jsx)(el.eu, { src: g, size: es._3.SIZE_40, "aria-label": h }),
             }),
             (0, a.jsxs)("div", {
-                className: eA.zH,
+                className: eh.zH,
                 children: [
                     (0, a.jsx)(c.E, {
                         variant: "text-md/normal",
@@ -217,35 +218,35 @@ function eh(e) {
                       children: C.intl.string(p ? N.default.YQP5dE : N.default["2HvOvh"]),
                   })
                 : (0, a.jsxs)("div", {
-                      className: eA.o1,
+                      className: eh.o1,
                       children: [
                           !i &&
-                              (0, a.jsx)(el.D, {
-                                  "aria-label": C.intl.formatToPlainString(eE.default.jc1Ip7, {
+                              (0, a.jsx)(eo.D, {
+                                  "aria-label": C.intl.formatToPlainString(eA.default.jc1Ip7, {
                                       name: n.parent_username,
                                   }),
-                                  className: er()(eA.hP, eA.xG),
+                                  className: ea()(eh.hP, eh.xG),
                                   onClick: () => !d && u(n.parent_id),
                                   children: r
                                       ? (0, a.jsx)(l.y, { type: l.y.Type.SPINNING_CIRCLE_SIMPLE })
-                                      : (0, a.jsx)(eo.r, { className: eA.gE, color: "currentColor" }),
+                                      : (0, a.jsx)(ed.r, { className: eh.gE, color: "currentColor" }),
                               }),
-                          (0, a.jsx)(el.D, {
-                              "aria-label": C.intl.formatToPlainString(eE.default["4GtllP"], {
+                          (0, a.jsx)(eo.D, {
+                              "aria-label": C.intl.formatToPlainString(eA.default["4GtllP"], {
                                   name: n.parent_username,
                               }),
-                              className: er()(eA.hP, eA.rr),
+                              className: ea()(eh.hP, eh.rr),
                               onClick: () => !d && _(n.parent_id),
                               children: o
                                   ? (0, a.jsx)(l.y, { type: l.y.Type.SPINNING_CIRCLE_SIMPLE })
-                                  : (0, a.jsx)(ed.P, { className: eA.gE, color: "currentColor" }),
+                                  : (0, a.jsx)(ec.P, { className: eh.gE, color: "currentColor" }),
                           }),
                       ],
                   }),
         ],
     });
 }
-function eI(e) {
+function ef(e) {
     let { pendingRequests: t, linkedUsersProcessed: n } = e,
         {
             seenRequests: i,
@@ -258,14 +259,14 @@ function eI(e) {
             handleDecline: _,
         } = (function (e) {
             let { pendingRequests: t, linkedUsersProcessed: n, onActionError: i } = e,
-                r = (0, Q.xr)(),
+                r = (0, J.xr)(),
                 [a, l] = s.useState(null),
                 {
                     acceptLinkRequest: o,
                     declineLinkRequest: d,
                     isAcceptLoading: c,
                     isDeclineLoading: u,
-                } = (0, Z.A)({
+                } = (0, X.A)({
                     onSuccess: () => l(null),
                     onError: () => {
                         l(null), i();
@@ -327,16 +328,16 @@ function eI(e) {
             pendingRequests: t,
             linkedUsersProcessed: n,
             onActionError: () => {
-                (0, Y.P0)((0, K.o)(C.intl.string(eE.default.Wu8BK2), $.Ck.FAILURE));
+                (0, Y.P0)((0, K.o)(C.intl.string(eA.default.Wu8BK2), $.Ck.FAILURE));
             },
         });
     return 0 === i.length
         ? null
         : (0, a.jsx)("div", {
-              className: eA.Nr,
+              className: eh.Nr,
               children: i.map((e) =>
                   (0, a.jsx)(
-                      eh,
+                      eI,
                       {
                           request: e,
                           hasMaxConnections: r,
@@ -351,29 +352,29 @@ function eI(e) {
               ),
           });
 }
-var ef = n(231723),
-    ep = n(818348),
-    eT = n(925660);
-let em = "https://support.discord.com/hc/articles/14155060633623";
-var eg = n(430651);
-let eS = {
+var ep = n(231723),
+    eT = n(818348),
+    em = n(925660);
+let eg = "https://support.discord.com/hc/articles/14155060633623";
+var eS = n(430651);
+let eN = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
                 i = s.useCallback(async () => {
                     await t({ type: y.Empty }), window.location.reload();
                 }, [t]);
             return (0, a.jsxs)("div", {
-                className: eg.kL,
+                className: eS.kL,
                 children: [
                     (0, a.jsx)(d.D, {
                         variant: "heading-lg/bold",
-                        className: eg.DD,
+                        className: eS.DD,
                         children: C.intl.string(N.default.v52itt),
                     }),
                     (0, a.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: "text-muted",
-                        className: eg.h_,
+                        className: eS.h_,
                         children: C.intl.string(N.default["5am8D3"]),
                     }),
                     (0, a.jsx)(o.B, {
@@ -428,9 +429,12 @@ let eS = {
             var t;
             let n,
                 i,
-                { configData: r, onSubmit: l, disabled: d, transitionState: _ = ef.ip.ENTERED } = e,
-                { getLinkCode: E } = (0, Z.A)(),
-                A = s.useMemo(() => {
+                { configData: r, onSubmit: l, disabled: d, transitionState: E = ep.ip.ENTERED } = e,
+                { getLinkCode: A } = (0, X.A)();
+            (0, _.Ay)(() => {
+                (0, Z._z)();
+            });
+            let h = s.useMemo(() => {
                     let e;
                     return {
                         link_code: "string" == typeof (e = r ?? {}).link_code ? e.link_code : "",
@@ -438,20 +442,20 @@ let eS = {
                         pending_requests: Array.isArray(e.pending_requests) ? e.pending_requests : [],
                     };
                 }, [r]),
-                h = (0, Q.VT)(),
-                I = (0, Q.Du)(),
-                f = (0, b.bG)([q.A], () => q.A.getLinkedUsers()),
-                p = (0, b.bG)([q.A], () => q.A.getAreLinkedUsersProcessed()),
-                T =
-                    ((t = A.pending_requests),
+                I = (0, J.VT)(),
+                f = (0, J.Du)(),
+                p = (0, b.bG)([q.A], () => q.A.getLinkedUsers()),
+                T = (0, b.bG)([q.A], () => q.A.getAreLinkedUsersProcessed()),
+                m =
+                    ((t = h.pending_requests),
                     (n = (0, b.bG)([q.A], () => q.A.getLinkedUsers())),
                     (i = (0, b.bG)([U.default], () => U.default.getCurrentUser()?.id)),
                     s.useMemo(() => {
-                        if (!p) return t;
+                        if (!T) return t;
                         let e = new Map(t.map((e) => [e.parent_id, e])),
                             r = [];
                         for (let t of Object.values(n)) {
-                            if (null == t || t.link_status !== en.Ef.PENDING || t.requestor_id === i) continue;
+                            if (null == t || t.link_status !== ei.Ef.PENDING || t.requestor_id === i) continue;
                             let n = U.default.getUser(t.user_id),
                                 a = e.get(t.user_id);
                             r.push({
@@ -462,91 +466,91 @@ let eS = {
                             });
                         }
                         return r;
-                    }, [p, n, i, t])),
-                m = p ? Object.values(f).some((e) => null != e) : A.pending_requests.length > 0,
-                g = p ? h : A.pending_requests.length,
-                S = (0, b.bG)([q.A], () => q.A.getLinkCode()),
-                R = (0, b.bG)([q.A], () => q.A.getLinkCodeExpiresAt()),
-                O = S ?? A.link_code,
-                L = R ?? Date.parse(A.link_code_expires_at),
-                D = s.useCallback(async () => {
+                    }, [T, n, i, t])),
+                g = T ? Object.values(p).some((e) => null != e) : h.pending_requests.length > 0,
+                S = T ? I : h.pending_requests.length,
+                R = (0, b.bG)([q.A], () => q.A.getLinkCode()),
+                O = (0, b.bG)([q.A], () => q.A.getLinkCodeExpiresAt()),
+                L = R ?? h.link_code,
+                D = O ?? Date.parse(h.link_code_expires_at),
+                M = s.useCallback(async () => {
                     try {
                         await l({ type: y.Empty });
                     } catch {
                         (0, Y.P0)((0, K.o)(C.intl.string(N.default["+QRSxc"]), $.Ck.FAILURE));
                     }
                 }, [l]),
-                [M, P] = s.useState(m);
-            m && !M && P(!0);
-            let [G, x] = s.useState(!1),
-                k = s.useCallback(() => {
-                    x(!1), E();
-                }, [E]);
-            (0, X.A)(k);
-            let F = !M || G,
-                V = F
-                    ? C.intl.format(N.default["6GaRTu"], { link: em })
-                    : C.intl.format(N.default["Ke+kz5"], { pendingCount: g, link: em });
+                [P, G] = s.useState(g);
+            g && !P && G(!0);
+            let [x, k] = s.useState(!1),
+                F = s.useCallback(() => {
+                    k(!1), A();
+                }, [A]);
+            (0, Q.A)(F);
+            let V = !P || x,
+                B = V
+                    ? C.intl.format(N.default["6GaRTu"], { link: eg })
+                    : C.intl.format(N.default["Ke+kz5"], { pendingCount: S, link: eg });
             return (0, a.jsxs)(H.d, {
-                transitionState: _,
-                onClose: ep.tE,
+                transitionState: E,
+                onClose: eT.tE,
                 dismissable: !1,
                 size: "md",
                 "aria-label": C.intl.string(N.default.dMMSA0),
                 children: [
-                    G &&
+                    x &&
                         (0, a.jsx)("div", {
-                            className: eT.g,
+                            className: em.g,
                             children: (0, a.jsx)(u.$, {
                                 variant: "secondary",
                                 size: "sm",
                                 icon: z.n,
                                 text: C.intl.string(N.default.CLAQas),
-                                onClick: () => x(!1),
+                                onClick: () => k(!1),
                             }),
                         }),
-                    (0, a.jsx)(j.rQ, { alignCenter: !0, title: C.intl.string(N.default.dMMSA0), subtitle: V }),
+                    (0, a.jsx)(j.rQ, { alignCenter: !0, title: C.intl.string(N.default.dMMSA0), subtitle: B }),
                     (0, a.jsxs)(w.c, {
                         children: [
-                            F &&
+                            V &&
                                 (0, a.jsx)(o.B, {
                                     direction: "vertical",
                                     align: "center",
                                     gap: 16,
-                                    children: (0, a.jsx)(J.r, { linkCode: O, expiresAt: L, onRefresh: E }),
+                                    children: (0, a.jsx)(ee.r, { linkCode: L, expiresAt: D, onRefresh: A }),
                                 }),
                             (0, a.jsx)("div", {
-                                hidden: F,
-                                children: (0, a.jsx)(eI, { pendingRequests: T, linkedUsersProcessed: p }),
+                                hidden: V,
+                                children: (0, a.jsx)(ef, { pendingRequests: m, linkedUsersProcessed: T }),
                             }),
                         ],
                     }),
                     (0, a.jsx)(W.H, {
                         actionsFullWidth: !0,
                         actions:
-                            M && !G
+                            P && !x
                                 ? [
                                       {
                                           text: C.intl.string(N.default["RD76/V"]),
                                           variant: "secondary",
                                           onClick: () => {
-                                              x(!0);
+                                              k(!0);
                                           },
                                       },
                                       {
                                           text: C.intl.string(N.default.OaHZUf),
                                           variant: "primary",
-                                          onClick: D,
-                                          disabled: !I || d,
+                                          onClick: M,
+                                          disabled: !f || d,
                                       },
                                   ]
                                 : void 0,
                     }),
-                    (0, a.jsx)(et, {}),
+                    (0, a.jsx)(en, {}),
                     (0, a.jsx)(c.E, {
                         variant: "text-md/normal",
                         color: "text-subtle",
-                        className: eT.r,
+                        className: em.r,
                         children: C.intl.format(N.default["0DHxym"], {
                             handleLogOut: () => (0, v.k)("safety_flows_parental_consent_connection"),
                         }),
@@ -555,10 +559,10 @@ let eS = {
             });
         },
     },
-    eN = (e) => {
+    eC = (e) => {
         let { onSubmit: t, disabled: n, transitionState: i } = e,
             { task: r } = S(),
-            s = eS[r.ui_component.component.type];
+            s = eN[r.ui_component.component.type];
         return null == s
             ? null
             : (0, a.jsx)(s, {
@@ -571,22 +575,22 @@ let eS = {
                   transitionState: i,
               });
     };
-var eC = n(754302),
-    eR = n(910356);
-let eO = {
+var eR = n(754302),
+    eO = n(910356);
+let eL = {
         [R.EMAIL_VERIFICATION]: C.intl.string(N.default.HC4IiR),
         [R.REFRESH_APP]: C.intl.string(N.default.SzfxQ3),
         [R.AGE_VERIFICATION]: C.intl.string(N.default["dSkE/A"]),
         [R.PARENTAL_CONSENT_CONNECTION]: C.intl.string(N.default.dMMSA0),
     },
-    eL = function () {
+    eD = function () {
         let { task: e } = S(),
             t = e.flow_context.tasks.findIndex((t) => t.task_type === e.task_type);
         return (0, a.jsxs)(o.B, {
             direction: "vertical",
             justify: "space-between",
             padding: F,
-            className: eR.k,
+            className: eO.k,
             children: [
                 (0, a.jsxs)(o.B, {
                     direction: "vertical",
@@ -594,7 +598,7 @@ let eO = {
                     children: [
                         (0, a.jsx)(d.D, {
                             variant: "display-md",
-                            className: eR.D,
+                            className: eO.D,
                             children: C.intl.string(N.default["/OpRAP"]),
                         }),
                         (0, a.jsx)(o.B, {
@@ -603,9 +607,9 @@ let eO = {
                             gap: 0,
                             children: e.flow_context.tasks.map((e, n) =>
                                 (0, a.jsx)(
-                                    eC.B,
+                                    eR.B,
                                     {
-                                        title: eO[e.task_type] ?? "",
+                                        title: eL[e.task_type] ?? "",
                                         listType: "numbered",
                                         index: n,
                                         color: n === t ? "text-strong" : n < t ? "feedback-positive" : "text-muted",
@@ -627,9 +631,9 @@ let eO = {
             ],
         });
     };
-var eD = n(818604);
-let ey = n(843020);
-function ev(e) {
+var ey = n(818604);
+let ev = n(843020);
+function eb(e) {
     let { task: t, handleSubmit: n, disabled: i, transitionState: r } = e,
         [l, o] = s.useState(t),
         d = s.useMemo(() => ({ task: l, setTask: o }), [l, o]);
@@ -639,10 +643,10 @@ function ev(e) {
     let c = D.has(l.task_type);
     return (0, a.jsxs)(g.Provider, {
         value: d,
-        children: [!c && (0, a.jsx)(eL, {}), (0, a.jsx)(eN, { onSubmit: n, disabled: i, transitionState: r })],
+        children: [!c && (0, a.jsx)(eD, {}), (0, a.jsx)(eC, { onSubmit: n, disabled: i, transitionState: r })],
     });
 }
-let eb = function (e) {
+let eM = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, r] = s.useState(null),
         [I, f] = s.useState(!0),
@@ -691,38 +695,38 @@ let eb = function (e) {
     let U = s.useMemo(() => i?.task_type === R.AGE_VERIFICATION, [i]),
         w = null != i && null === p && D.has(i.task_type);
     return (0, a.jsxs)("div", {
-        className: eD.Tp,
+        className: ey.Tp,
         children: [
-            (0, a.jsx)("img", { className: eD.xX, src: ey, alt: "" }),
+            (0, a.jsx)("img", { className: ey.xX, src: ev, alt: "" }),
             U
                 ? (0, a.jsx)(A.default, {
-                      transitionState: t ?? ef.ip.ENTERED,
+                      transitionState: t ?? ep.ip.ENTERED,
                       entryPoint: E.q1.SAFETY_FLOWS,
-                      onClose: ep.tE,
+                      onClose: eT.tE,
                       onComplete: async () => {
                           await P({ type: y.Empty });
                       },
                       dismissable: !1,
                   })
                 : w && null != i
-                  ? (0, a.jsx)(ev, { task: i, handleSubmit: P, disabled: S, transitionState: t ?? ef.ip.ENTERED })
+                  ? (0, a.jsx)(eb, { task: i, handleSubmit: P, disabled: S, transitionState: t ?? ep.ip.ENTERED })
                   : (0, a.jsx)("div", {
-                        className: eD.nA,
+                        className: ey.nA,
                         children: I
                             ? (0, a.jsx)(l.y, { type: l.y.Type.SPINNING_CIRCLE })
                             : (0, a.jsx)("div", {
-                                  className: eD.kL,
+                                  className: ey.kL,
                                   children: (0, a.jsxs)(o.B, {
                                       direction: "horizontal",
                                       justify: "start",
-                                      className: eD.rf,
+                                      className: ey.rf,
                                       children: [
                                           null !== p &&
                                               (0, a.jsxs)(o.B, {
                                                   direction: "vertical",
                                                   justify: "space-between",
                                                   align: "center",
-                                                  className: eD.Nj,
+                                                  className: ey.Nj,
                                                   padding: 16,
                                                   children: [
                                                       (0, a.jsxs)(o.B, {
@@ -766,7 +770,7 @@ let eb = function (e) {
                                               }),
                                           null === p &&
                                               null != i &&
-                                              (0, a.jsx)(ev, { task: i, handleSubmit: P, disabled: S }),
+                                              (0, a.jsx)(eb, { task: i, handleSubmit: P, disabled: S }),
                                       ],
                                   }),
                               }),

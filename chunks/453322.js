@@ -18,12 +18,12 @@ function d(e) {
     }, [e]);
     let c = i.useRef(null);
     i.useEffect(() => {
-        if (n) {
-            if (null == c.current) {
-                c.current = t;
-                return;
-            }
-            t > c.current && ((c.current = t), d.current());
+        if (!n) return;
+        if (null == c.current) {
+            c.current = t;
+            return;
         }
+        let e = t > c.current;
+        (c.current = t), e && d.current();
     }, [n, t]);
 }
