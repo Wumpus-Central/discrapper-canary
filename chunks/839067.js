@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => a });
 var i = n(17928),
-    r = n(228366);
-let a = null;
+    l = n(228366);
+let r = null;
 class s extends i.Ay.Store {
     static displayName = "ApplicationStoreLocationStore";
     getCurrentPath() {
-        return null != a ? a.pathname : null;
+        return null != r ? r.pathname : null;
     }
     getCurrentRoute() {
         var e;
         let t;
-        return (t = null != (e = a) && null != e.search ? e.search : ""), null != e ? `${e.pathname}${t}` : null;
+        return (t = null != (e = r) && null != e.search ? e.search : ""), null != e ? `${e.pathname}${t}` : null;
     }
     reset() {
         throw Error("Should not reset the store this way outside of a test environment");
     }
 }
-let l = new s(r.h, {
+let a = new s(l.h, {
     APPLICATION_STORE_LOCATION_CHANGE: function (e) {
         let { location: t } = e;
-        a = { ...t };
+        r = { ...t };
     },
     APPLICATION_STORE_RESET_NAVIGATION: function () {
-        a = null;
+        r = null;
     },
 });

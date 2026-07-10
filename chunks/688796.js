@@ -1,39 +1,38 @@
-"use strict";
-n.d(t, { G: () => u, default: () => _ });
-var i = n(627968);
-n(64700);
-var r = n(192308),
-    a = n(87719),
-    s = n(81456),
-    l = n(831318),
-    o = n(202541),
-    d = n(339984),
-    c = n(375708);
-function u(e) {
-    let { uploadType: t } = e;
+A.d(n, { G: () => d, default: () => u });
+var e = A(627968);
+A(64700);
+var i = A(192308),
+    l = A(87719),
+    r = A(81456),
+    s = A(831318),
+    a = A(202541),
+    o = A(339984),
+    c = A(375708);
+function d(t) {
+    let { uploadType: n } = t;
     return (
-        (0, r.openModalLazy)(async () => {
-            let { default: e } = await Promise.resolve().then(n.bind(n, 688796));
-            return (n) => (0, i.jsx)(e, { uploadType: t, onSecondaryClick: r.closeAllModals, ...n });
+        (0, i.openModalLazy)(async () => {
+            let { default: t } = await Promise.resolve().then(A.bind(A, 688796));
+            return (A) => (0, e.jsx)(t, { uploadType: n, onSecondaryClick: i.closeAllModals, ...A });
         }),
         !0
     );
 }
-function _(e) {
-    let { uploadType: t, onClose: n, onSecondaryClick: r, ...u } = e,
-        _ = t === d.HL.AVATAR || t === d.HL.BANNER,
-        E = (0, s.A)(t === d.HL.AVATAR ? o.e.ANIMATED_AVATAR_MODAL_UPSELL : o.e.ANIMATED_BANNER_MODAL_UPSELL);
-    return _
-        ? (0, i.jsx)(l.A, {
-              title: t === d.HL.AVATAR ? c.intl.string(c.t.X7tO60) : c.intl.string(c.t.zXPa2C),
-              subtitle: t === d.HL.AVATAR ? c.intl.string(c.t.ifCRdB) : c.intl.string(c.t.yQAnf4),
-              graphic: E,
+function u(t) {
+    let { uploadType: n, onClose: A, onSecondaryClick: i, ...d } = t,
+        u = n === o.HL.AVATAR || n === o.HL.BANNER,
+        L = (0, r.A)(n === o.HL.AVATAR ? a.e.ANIMATED_AVATAR_MODAL_UPSELL : a.e.ANIMATED_BANNER_MODAL_UPSELL);
+    return u
+        ? (0, e.jsx)(s.A, {
+              title: n === o.HL.AVATAR ? c.intl.string(c.t.X7tO60) : c.intl.string(c.t.zXPa2C),
+              subtitle: n === o.HL.AVATAR ? c.intl.string(c.t.ifCRdB) : c.intl.string(c.t.yQAnf4),
+              graphic: L,
               onSecondaryClick: () => {
-                  r?.(), (0, a.x)(n);
+                  i?.(), (0, l.x)(A);
               },
               secondaryCTA: c.intl.string(c.t.PcTCB7),
-              onClose: n,
-              ...u,
+              onClose: A,
+              ...d,
           })
         : null;
 }

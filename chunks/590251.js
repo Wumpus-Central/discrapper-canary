@@ -1,27 +1,26 @@
-"use strict";
 n.d(t, { a: () => d });
 var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(821466);
+    l = n(64700),
+    r = n(503698),
+    s = n.n(r),
+    a = n(183834);
 let o = Object.freeze({ XSMALL: 0.8, SMALL: 1, MEDIUM: 2, LARGE: 4 });
-class d extends r.Component {
+class d extends l.Component {
     static StrokeSizes = o;
     static defaultProps = { strokeSize: o.MEDIUM };
     renderCircle() {
-        let { strokeSize: e, percent: t, colorOverride: n, background: r, ringColorOverrideClassName: a } = this.props,
+        let { strokeSize: e, percent: t, colorOverride: n, background: l, ringColorOverrideClassName: r } = this.props,
             o = Math.min(Math.max(t, 0), 100),
             d = (20 - e) / 2,
             c = d * Math.PI * 2;
         return (0, i.jsxs)("svg", {
             viewBox: "0 0 20 20",
-            className: l.n1,
+            className: a.n1,
             children: [
-                (0, i.jsx)("circle", { className: void 0 !== a ? a : l.cj, cx: 10, cy: 10, r: 10 }),
-                (0, i.jsx)("circle", { className: s()(l.rh, r), cx: 10, cy: 10, r: (20 - 2 * e) / 2 }),
+                (0, i.jsx)("circle", { className: void 0 !== r ? r : a.cj, cx: 10, cy: 10, r: 10 }),
+                (0, i.jsx)("circle", { className: s()(a.rh, l), cx: 10, cy: 10, r: (20 - 2 * e) / 2 }),
                 (0, i.jsx)("circle", {
-                    className: l.iv,
+                    className: a.iv,
                     cx: 10,
                     cy: 10,
                     r: d,
@@ -37,11 +36,11 @@ class d extends r.Component {
     render() {
         let { className: e, children: t } = this.props;
         return (0, i.jsxs)("div", {
-            className: s()(l.G3, e),
+            className: s()(a.G3, e),
             children: [
                 this.renderCircle(),
                 null != t
-                    ? (0, i.jsx)("div", { className: s()(l.Bd, this.props.overlayClassName), children: t })
+                    ? (0, i.jsx)("div", { className: s()(a.Bd, this.props.overlayClassName), children: t })
                     : null,
             ],
         });

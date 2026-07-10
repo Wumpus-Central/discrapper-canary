@@ -1,159 +1,158 @@
-"use strict";
-n.d(t, { A: () => L });
-var i = n(923457),
-    r = n(228366),
-    a = n(717398),
-    s = n(636537),
-    l = n(765178),
-    o = n(157559),
-    d = n(913122),
-    c = n(652215),
-    u = n(375708);
-function _(e) {
-    let t = new d.LG(e).getAnyErrorMessage();
-    o.A.show({ title: u.intl.string(u.t["328j/I"]), body: null != t ? t : u.intl.string(u.t.fEptJP) });
+t.d(n, { A: () => g });
+var r = t(923457),
+    i = t(228366),
+    o = t(717398),
+    c = t(636537),
+    a = t(765178),
+    l = t(157559),
+    u = t(913122),
+    s = t(652215),
+    d = t(375708);
+function f(e) {
+    let n = new u.LG(e).getAnyErrorMessage();
+    l.A.show({ title: d.intl.string(d.t["328j/I"]), body: null != n ? n : d.intl.string(d.t.fEptJP) });
 }
-async function E(e) {
-    let { userId: t, applicationId: n, onSuccess: i } = e;
+async function A(e) {
+    let { userId: n, applicationId: t, onSuccess: r } = e;
     try {
-        await s.Bo.del({ url: c.Rsh.USER_GAME_RELATIONSHIP(t, n), oldFormErrors: !0, rejectWithError: !1 }), i();
+        await c.Bo.del({ url: s.Rsh.USER_GAME_RELATIONSHIP(n, t), oldFormErrors: !0, rejectWithError: !1 }), r();
     } catch (e) {
-        _(e);
+        f(e);
     }
 }
-let A = async function (e) {
-        let { userId: t, applicationId: n } = e;
-        await E({
-            userId: t,
-            applicationId: n,
+let R = async function (e) {
+        let { userId: n, applicationId: t } = e;
+        await A({
+            userId: n,
+            applicationId: t,
             onSuccess: () => {
-                l.O.announce(u.intl.string(u.t.zRf8cO));
+                a.O.announce(d.intl.string(d.t.zRf8cO));
             },
         });
     },
-    h = function (e) {
-        let { userId: t, applicationId: n } = e;
+    E = function (e) {
+        let { userId: n, applicationId: t } = e;
         return (function (e) {
-            let { userId: t, applicationId: n, onSuccess: i, type: r } = e;
-            return s.Bo.put({
-                url: c.Rsh.USER_GAME_RELATIONSHIP(t, n),
-                body: { type: r },
+            let { userId: n, applicationId: t, onSuccess: r, type: i } = e;
+            return c.Bo.put({
+                url: s.Rsh.USER_GAME_RELATIONSHIP(n, t),
+                body: { type: i },
                 oldFormErrors: !0,
                 rejectWithError: !1,
             })
                 .then(() => {
-                    i();
+                    r();
                 })
-                .catch((e) => (_(e), Promise.reject(e)));
+                .catch((e) => (f(e), Promise.reject(e)));
         })({
-            userId: t,
-            applicationId: n,
-            type: c.eA$.FRIEND,
+            userId: n,
+            applicationId: t,
+            type: s.eA$.FRIEND,
             onSuccess: () => {
-                l.O.announce(u.intl.string(u.t.taJiuc));
+                a.O.announce(d.intl.string(d.t.taJiuc));
             },
         });
     },
-    I = async function (e) {
-        let { userId: t, applicationId: n } = e;
-        await E({
-            userId: t,
-            applicationId: n,
+    S = async function (e) {
+        let { userId: n, applicationId: t } = e;
+        await A({
+            userId: n,
+            applicationId: t,
             onSuccess: () => {
-                l.O.announce(u.intl.string(u.t.XMf21q));
+                a.O.announce(d.intl.string(d.t.XMf21q));
             },
         });
     };
-var f = n(207560);
-let p = (0, n(945810).mj)({
+var I = t(207560);
+let h = (0, t(945810).mj)({
     kind: "user",
     name: "2025-10-friend-request-alerts-v2",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var T = n(994500),
-    m = n(627968);
-n(64700);
-var g = n(192308),
-    S = n(174459),
-    N = n(646363);
-function C(e) {
-    let { onConfirm: t, onFinally: i } = e;
-    S.default.track(c.HAw.OPEN_MODAL, { type: N.C }),
-        (0, g.openModalLazy)(async () => {
-            let { default: e } = await n.e("52049").then(n.bind(n, 691464));
-            return (n) => {
-                let { onClose: r, ...a } = n;
-                return (0, m.jsx)(e, {
-                    onConfirm: t,
+var C = t(994500),
+    _ = t(627968);
+t(64700);
+var p = t(192308),
+    y = t(174459),
+    T = t(646363);
+function m(e) {
+    let { onConfirm: n, onFinally: r } = e;
+    y.default.track(s.HAw.OPEN_MODAL, { type: T.C }),
+        (0, p.openModalLazy)(async () => {
+            let { default: e } = await t.e("52049").then(t.bind(t, 469083));
+            return (t) => {
+                let { onClose: i, ...o } = t;
+                return (0, _.jsx)(e, {
+                    onConfirm: n,
                     onClose: async () => {
-                        await r(), i?.();
+                        await i(), r?.();
                     },
-                    ...a,
+                    ...o,
                 });
             };
         });
 }
-function R(e) {
-    let { userId: t, applicationId: n, location: i, confirmStrangerRequest: r = !1 } = e;
-    return null != n
-        ? h({ userId: t, applicationId: n })
-        : a.A.acceptFriendRequest({ userId: t, confirmStrangerRequest: r, context: { location: i } });
+function N(e) {
+    let { userId: n, applicationId: t, location: r, confirmStrangerRequest: i = !1 } = e;
+    return null != t
+        ? E({ userId: n, applicationId: t })
+        : o.A.acceptFriendRequest({ userId: n, confirmStrangerRequest: i, context: { location: r } });
 }
-function O(e, t) {
-    return e?.body?.code === c.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION
-        ? (r.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: t.userId, isStranger: !0 }),
-          C({
+function O(e, n) {
+    return e?.body?.code === s.t02.RELATIONSHIP_INVALID_NO_CONFIRMATION
+        ? (i.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: n.userId, isStranger: !0 }),
+          m({
               onConfirm: () => {
-                  R({ ...t, confirmStrangerRequest: !0 }), t.onConfirm?.();
+                  N({ ...n, confirmStrangerRequest: !0 }), n.onConfirm?.();
               },
               onCancel: () => {
-                  t.onCancel?.();
+                  n.onCancel?.();
               },
           }),
           !0)
-        : (e?.ok && r.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: t.userId, isStranger: !1 }), !1);
+        : (e?.ok && i.h.dispatch({ type: "UPDATE_STRANGER_STATUS", userId: n.userId, isStranger: !1 }), !1);
 }
-let L = {
+let g = {
     removeFriend: function (e) {
-        let { userId: t, applicationId: n, location: i } = e;
-        null != n ? A({ userId: t, applicationId: n }) : a.A.removeFriend(t, { location: i });
+        let { userId: n, applicationId: t, location: r } = e;
+        null != t ? R({ userId: n, applicationId: t }) : o.A.removeFriend(n, { location: r });
     },
     cancelFriendRequest: function (e) {
-        let { userId: t, applicationId: n, location: i } = e;
-        return null != n ? I({ userId: t, applicationId: n }) : a.A.cancelFriendRequest(t, { location: i });
+        let { userId: n, applicationId: t, location: r } = e;
+        return null != t ? S({ userId: n, applicationId: t }) : o.A.cancelFriendRequest(n, { location: r });
     },
-    acceptFriendRequest: R,
+    acceptFriendRequest: N,
     maybeConfirmFriendRequestAccept: function (e) {
-        let { userId: t, applicationId: n, location: r, onConfirm: a, onCancel: s, onFinally: l } = e,
-            o = (0, f.To)(i.p.FRIEND_REQUEST_STRANGER_CONFIRMATION),
-            d = p.getConfig({ location: "maybeConfirmFriendRequestAccept" }).enabled,
-            c = T.A.isStranger(t);
-        return null == n && (o || d) && !1 !== c
-            ? c
-                ? void C({
+        let { userId: n, applicationId: t, location: i, onConfirm: o, onCancel: c, onFinally: a } = e,
+            l = (0, I.To)(r.p.FRIEND_REQUEST_STRANGER_CONFIRMATION),
+            u = h.getConfig({ location: "maybeConfirmFriendRequestAccept" }).enabled,
+            s = C.A.isStranger(n);
+        return null == t && (l || u) && !1 !== s
+            ? s
+                ? void m({
                       onConfirm: () => {
-                          R({ userId: t, applicationId: n, location: r, confirmStrangerRequest: !0 }), a?.();
+                          N({ userId: n, applicationId: t, location: i, confirmStrangerRequest: !0 }), o?.();
                       },
                       onCancel: () => {
-                          s?.();
+                          c?.();
                       },
                       onFinally: () => {
-                          l?.();
+                          a?.();
                       },
                   })
-                : void R({ userId: t, applicationId: n, location: r })
+                : void N({ userId: n, applicationId: t, location: i })
                       .then((e) => {
-                          O(e, { userId: t, applicationId: n, location: r, onConfirm: a, onCancel: s }) || a?.();
+                          O(e, { userId: n, applicationId: t, location: i, onConfirm: o, onCancel: c }) || o?.();
                       })
                       .catch((e) => {
-                          O(e, { userId: t, applicationId: n, location: r, onConfirm: a, onCancel: s });
+                          O(e, { userId: n, applicationId: t, location: i, onConfirm: o, onCancel: c });
                       })
                       .finally(() => {
-                          l?.();
+                          a?.();
                       })
-            : R({ userId: t, applicationId: n, location: r, confirmStrangerRequest: !0 }).then(() => {
-                  a?.(), l?.();
+            : N({ userId: n, applicationId: t, location: i, confirmStrangerRequest: !0 }).then(() => {
+                  o?.(), a?.();
               });
     },
 };

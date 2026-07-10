@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { p: () => s });
-var i = n(976860),
+n.d(t, { p: () => a });
+var l = n(976860),
     r = n(734057),
-    a = n(332456);
-function s(e) {
-    let t = (0, a.C)(r.A.getChannel(e), !0),
-        n = t?.location ?? (0, i.PR)();
+    i = n(332456);
+function a(e) {
+    let t = (0, i.C)(r.A.getChannel(e), !0),
+        n = t?.location ?? (0, l.PR)();
     return { ...(t ?? {}), ...(null != n ? { location: n } : {}) };
 }

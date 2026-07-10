@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { k: () => u });
-var i = n(627968),
+n.d(t, { k: () => d });
+var a = n(627968),
     r = n(64700),
-    a = n(408278),
-    s = n(241326),
-    l = n(990078),
-    o = n(609174),
-    d = n(192308),
-    c = n(375708);
-function u(e) {
-    let { onBeforeDelete: t, onAfterDelete: u, variant: _ = "overlay-secondary" } = e,
-        E = (0, o.Y_)(),
-        A = r.useCallback(
+    l = n(408278),
+    i = n(241326),
+    s = n(990078),
+    u = n(609174),
+    c = n(192308),
+    o = n(375708);
+function d(e) {
+    let { onBeforeDelete: t, onAfterDelete: d, variant: f = "overlay-secondary" } = e,
+        p = (0, u.Y_)(),
+        m = r.useCallback(
             (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
                     (function (e) {
-                        let { clips: t, onBeforeDelete: r, onAfterDelete: a } = e;
-                        (0, d.openModalLazy)(
+                        let { clips: t, onBeforeDelete: r, onAfterDelete: l } = e;
+                        (0, c.openModalLazy)(
                             async () => {
                                 let { default: e } = await n.e("13367").then(n.bind(n, 223818));
                                 return (n) =>
-                                    (0, i.jsx)(e, {
+                                    (0, a.jsx)(e, {
                                         clips: t,
                                         ...n,
                                         onBeforeDelete: r,
                                         onAfterDelete: async () => {
-                                            await n.onClose(), a?.();
+                                            await n.onClose(), l?.();
                                         },
                                     });
                             },
                             { stackingBehavior: "stack" },
                         );
-                    })({ clips: [E], onAfterDelete: u, onBeforeDelete: t });
+                    })({ clips: [p], onAfterDelete: d, onBeforeDelete: t });
             },
-            [E, u, t],
+            [p, d, t],
         );
-    return (0, i.jsx)(l.m, {
-        text: c.intl.string(c.t.oyYWHE),
+    return (0, a.jsx)(s.m, {
+        text: o.intl.string(o.t.oyYWHE),
         position: "top",
-        children: (0, i.jsx)(a.K, {
-            onClick: A,
-            icon: s.u,
-            "aria-label": c.intl.string(c.t.oyYWHE),
-            variant: _,
+        children: (0, a.jsx)(l.K, {
+            onClick: m,
+            icon: i.u,
+            "aria-label": o.intl.string(o.t.oyYWHE),
+            variant: f,
             size: "sm",
         }),
     });

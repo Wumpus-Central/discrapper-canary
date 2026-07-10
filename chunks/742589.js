@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => T, I: () => h });
+n.d(t, { A: () => T, I: () => C });
 var i = n(627968);
 n(64700);
-var r = n(607399),
-    a = n(793574),
+var l = n(607399),
+    r = n(793574),
     s = n(688810),
-    l = n(268218),
+    a = n(268218),
     o = n(335180),
     d = n(723702),
     c = n(19575),
     u = n(58736),
-    _ = n(746080),
+    A = n(746080),
     E = n(546930);
-let A = (0, l.Fe)({
+let h = (0, a.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("57234"),
@@ -33,79 +32,79 @@ let A = (0, l.Fe)({
     name: "Search",
     renderLoader: o.O7,
 });
-async function h(e) {
+async function C(e) {
     if (!e && (0, d.isMac)() && d.isPlatformEmbedded) {
         let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
         "Minimize" === e ? c.Ay.minimize() : "Maximize" === e && c.Ay.maximize();
     }
 }
-function I(e) {
+function g(e) {
     let {
         children: t,
         className: n,
-        channelId: a,
+        channelId: r,
         guildId: s,
-        innerClassname: l,
+        innerClassname: a,
         transparent: o = !1,
         hidden: d = !1,
         toolbar: c,
-        mobileToolbar: I,
-        "aria-label": f,
-        "aria-labelledby": p,
+        mobileToolbar: g,
+        "aria-label": _,
+        "aria-labelledby": I,
         scrollable: T,
-        role: m,
-        hideSearch: g,
+        role: N,
+        hideSearch: p,
         disableDoubleClick: S,
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
-        innerClassName: l,
+        innerClassName: a,
         toolbar: (function () {
             if (null == c) return null;
-            let e = null != a && !g;
-            return r.Fr
-                ? I
+            let e = null != r && !p;
+            return l.Fr
+                ? g
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           c,
-                          e && !(0, _.jq)(a)
-                              ? (0, i.jsx)(A, { guildId: s, channelId: a, className: E.$P }, s ?? a)
+                          e && !(0, A.jq)(r)
+                              ? (0, i.jsx)(h, { guildId: s, channelId: r, className: E.$P }, s ?? r)
                               : null,
                       ],
                   });
         })(),
         transparent: o,
         hidden: d,
-        onDoubleClick: () => h(S),
-        "aria-label": f,
-        "aria-labelledby": p,
-        role: m,
+        onDoubleClick: () => C(S),
+        "aria-label": _,
+        "aria-labelledby": I,
+        role: N,
         scrollable: T,
         children: t,
     });
 }
-function f(e) {
-    let { children: t, className: n, "aria-label": r, "aria-labelledby": a, role: s, disableDoubleClick: l } = e;
+function _(e) {
+    let { children: t, className: n, "aria-label": l, "aria-labelledby": r, role: s, disableDoubleClick: a } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
-        onDoubleClick: () => h(l),
-        "aria-label": r,
-        "aria-labelledby": a,
+        onDoubleClick: () => C(a),
+        "aria-label": l,
+        "aria-labelledby": r,
         role: s,
         children: t,
     });
 }
-function p(e) {
+function I(e) {
     let { isAuthenticated: t = !0, ...n } = e,
-        { analyticsLocations: r } = (0, s.Ay)(a.A.HEADER_BAR);
+        { analyticsLocations: l } = (0, s.Ay)(r.A.HEADER_BAR);
     return (0, i.jsx)(s.f5, {
-        value: r,
-        children: t ? (0, i.jsx)(I, { ...n, className: n.className }) : (0, i.jsx)(f, { ...n, className: n.className }),
+        value: l,
+        children: t ? (0, i.jsx)(g, { ...n, className: n.className }) : (0, i.jsx)(_, { ...n, className: n.className }),
     });
 }
-(p.Title = u.Ay.Title),
-    (p.Icon = u.Ay.Icon),
-    (p.ChannelIcon = u.Ay.ChannelIcon),
-    (p.Divider = u.Ay.Divider),
-    (p.Caret = u.Ay.Caret);
-let T = p;
+(I.Title = u.Ay.Title),
+    (I.Icon = u.Ay.Icon),
+    (I.ChannelIcon = u.Ay.ChannelIcon),
+    (I.Divider = u.Ay.Divider),
+    (I.Caret = u.Ay.Caret);
+let T = I;
