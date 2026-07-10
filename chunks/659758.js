@@ -1,57 +1,86 @@
-n.d(t, { A: () => C, e: () => v }), n(321073);
+n.d(t, { A: () => M, e: () => T }), n(321073);
 var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    o = n(554146),
-    a = n(661531),
-    c = n(403581),
-    d = n(404374),
-    u = n(131607),
-    h = n(960851),
-    m = n(552736),
-    p = n(422936),
-    b = n(234419),
-    f = n(603488),
-    S = n(105390),
-    x = n(49999),
-    j = n(788868),
-    g = n(938783);
-function v() {
+    o = n(877624),
+    a = n(17928),
+    c = n(554146),
+    d = n(661531),
+    u = n(403581),
+    h = n(404374),
+    m = n(826673),
+    p = n(367727),
+    b = n(131607),
+    S = n(960851),
+    f = n(552736),
+    x = n(422936),
+    j = n(234419),
+    g = n(549996),
+    C = n(603488),
+    N = n(964661),
+    _ = n(374403),
+    v = n(105390),
+    A = n(617617),
+    E = n(49999),
+    R = n(202541),
+    I = n(938783);
+function T() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        n = (0, b.V)(),
-        l = (0, p.O)(),
-        r = (0, h.cg)(),
-        a = null != (0, m.A)(),
-        c = r || a,
-        d = n?.trial_id === j.Dw,
-        g = [];
-    c && g.push(o.M.BOGO_2025_NITRO_TAB_BADGE);
-    let [v, C] = (0, u.kn)(g, void 0, !0);
+        n = (0, j.V)(),
+        l = (0, x.O)(),
+        r = (0, S.cg)(),
+        d = null != (0, f.A)(),
+        u = r || d,
+        h = n?.trial_id === R.Dw,
+        I = (0, g.c)(o.C.PREMIUM_TAB),
+        T = I?.properties.properties.oneofKind === "premiumTab" ? I.properties.properties.premiumTab : null,
+        M = (0, _.Q)(),
+        O = I?.promotionId ?? "",
+        y = null != T && null != M,
+        P = (0, a.bG)([A.A], () => (0, m.u$)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, O).isDismissed),
+        F =
+            y && null != I && null != T
+                ? (0, i.jsx)(N.A, {
+                      componentId: I.id,
+                      badgeCopy: T.badgeLabel,
+                      acknowledgedBadgeCopy: T.acknowledgedBadgeLabel,
+                      isDismissed: P,
+                  })
+                : null,
+        D = [];
+    u && D.push(c.M.BOGO_2025_NITRO_TAB_BADGE);
+    let [U, w] = (0, b.kn)(D, void 0, !0);
     return (
         s.useEffect(() => {
-            !0 === t && v === o.M.BOGO_2025_NITRO_TAB_BADGE && C(x.i.AUTO_DISMISS);
-        }, [C, t, v]),
-        c
-            ? (e = (0, i.jsx)(f.A, {}))
-            : null != l
-              ? (e = (0, i.jsx)(S.fY, { isTabSelected: t, userDiscount: l, includesAmountOff: !1 }))
-              : null == n || d || (e = (0, i.jsx)(S.Ag, { isTabSelected: t, trialOffer: n })),
+            !0 === t &&
+                (U === c.M.BOGO_2025_NITRO_TAB_BADGE && w(E.i.AUTO_DISMISS),
+                y &&
+                    !P &&
+                    (0, p.qr)(c.M.PREMIUM_TAB_MARKETING_MOMENT_OFFER_BADGE, O, { dismissAction: E.i.AUTO_DISMISS }));
+        }, [w, t, U, y, P, O]),
+        null != F
+            ? (e = F)
+            : u
+              ? (e = (0, i.jsx)(C.A, {}))
+              : null != l
+                ? (e = (0, i.jsx)(v.fY, { isTabSelected: t, userDiscount: l, includesAmountOff: !1 }))
+                : null == n || h || (e = (0, i.jsx)(v.Ag, { isTabSelected: t, trialOffer: n })),
         e
     );
 }
-function C(e) {
+function M(e) {
     let { decoration: t, label: n, isSelected: s } = e,
-        l = (0, h.cg)(),
+        l = (0, S.cg)(),
         o =
-            v(s) ??
+            T(s) ??
             t ??
-            (0, i.jsx)(c.t, { size: "sm", color: s ? a.A.unsafe_rawColors.WHITE.css : d.k0.PREMIUM_TIER_2 });
+            (0, i.jsx)(u.t, { size: "sm", color: s ? d.A.unsafe_rawColors.WHITE.css : h.k0.PREMIUM_TIER_2 });
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsxs)("div", { className: r()(g.gj, { [g.wH]: s && !l }), children: [n, o] }),
-            (0, i.jsx)("div", { className: r()(g.Tp, { [g._I]: !l && s }) }),
+            (0, i.jsxs)("div", { className: r()(I.gj, { [I.wH]: s && !l }), children: [n, o] }),
+            (0, i.jsx)("div", { className: r()(I.Tp, { [I._I]: !l && s }) }),
         ],
     });
 }
