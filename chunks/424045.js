@@ -1364,7 +1364,7 @@ if (
     n.e("7451").then(n.t.bind(n, 121014, 19));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ej.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 576452, Version Hash: 9f02000e7edba73ce392fef6698080e910f83ee8`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 576503, Version Hash: 3013a6cd5e481df7bd85d3f0892184ac6873f582`,
 ),
     v.A.setTags({ appContext: G.QCW }),
     ep.A.initBasic(),
@@ -17011,9 +17011,8 @@ let TW = (0, k.mj)({
 var TY = n(398523),
     TK = n(881373),
     T$ = n(727949),
-    Tz = n(898850),
-    Tq = n(566829);
-let TZ = (e) => {
+    Tz = n(566829);
+let Tq = (e) => {
     let { isSelected: t, discountOffer: n } = e,
         [i, r] = (0, ia.kn)([aQ.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
     return (eE.useEffect(() => {
@@ -17026,9 +17025,9 @@ let TZ = (e) => {
               offerExpiresAt: null,
           })
         : (0, O.jsxs)("div", {
-              className: tl()(Tq.bv, Tq.Hf),
+              className: tl()(Tz.bv, Tz.Hf),
               children: [
-                  (0, O.jsx)(u$.O, { size: "custom", width: 12, height: 12, color: "currentColor", className: Tq.aW }),
+                  (0, O.jsx)(u$.O, { size: "custom", width: 12, height: 12, color: "currentColor", className: Tz.aW }),
                   (0, O.jsx)(ra.E, {
                       variant: "eyebrow",
                       color: "text-subtle",
@@ -17037,7 +17036,8 @@ let TZ = (e) => {
               ],
           });
 };
-var TX = n(920050),
+var TZ = n(962008),
+    TX = n(920050),
     TQ = n(989349),
     TJ = n.n(TQ),
     T0 = n(983060),
@@ -17321,7 +17321,7 @@ function mT(e) {
 var mm = n(818724);
 function mg(e) {
     let { targetElementRef: t, premiumSubscription: n, dismissPopover: i, children: r } = e,
-        a = (0, Tz.q)(n),
+        a = (0, TZ.q)(n),
         { analyticsLocations: s } = (0, a1.Ay)(nT.A.HOME_PAGE_PREMIUM_TAB);
     return null == a
         ? r
@@ -17752,7 +17752,7 @@ function mF(e) {
         }),
         el = f?.trial_id === o3.Dw,
         eo = (0, TC.TF)({ location: "NitroTabButton" }),
-        ec = (0, Tz.q)(E, eo === TC.Iz.NITRO_TAB_POPOVER),
+        ec = (0, TZ.q)(E, eo === TC.Iz.NITRO_TAB_POPOVER),
         eu = aQ.M.MONTHLY_TO_YEARLY_UPSELL_NITRO_TAB_POPOVER,
         e_ = [],
         eA = [];
@@ -17898,7 +17898,7 @@ function mF(e) {
                         (ex = J === Tg.F.TOOLTIP && !p.hasAcknowledged()))
                       : null == f || el
                         ? z
-                            ? ((n = (0, O.jsx)(TZ, { isSelected: s, discountOffer: T })), (i = 8))
+                            ? ((n = (0, O.jsx)(Tq, { isSelected: s, discountOffer: T })), (i = 8))
                             : (H && ef === aQ.M.PREMIUM_ORBS_UPSELL_POPOVER) ||
                                 ($ && ef === aQ.M.PREMIUM_ORBS_REWARDS_INTRO_POPOVER) ||
                                 (K && eO === aQ.M.PREMIUM_ORBS_REWARDS_DROP_POPOVER)
@@ -18668,7 +18668,7 @@ let gv = "isHideDevBanner",
                     className: tl()(gy.Wz, gy.mr),
                     children: [
                         (0, O.jsx)(gD, { className: gy.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "576452" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "576503" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -24555,7 +24555,7 @@ let CC = (0, tB.Fe)({
                 n.e("40647"),
                 n.e("80960"),
                 n.e("37011"),
-                n.e("2369"),
+                n.e("24750"),
                 n.e("20538"),
                 n.e("56844"),
                 n.e("36621"),
@@ -29507,7 +29507,7 @@ let DG = (0, n4.Fe)({
                 n.e("99865"),
                 n.e("10807"),
                 n.e("77847"),
-                n.e("2369"),
+                n.e("24750"),
                 n.e("80960"),
                 n.e("39664"),
                 n.e("48627"),
@@ -30171,7 +30171,7 @@ let DG = (0, n4.Fe)({
                 n.e("51830"),
                 n.e("84807"),
                 n.e("84186"),
-                n.e("2369"),
+                n.e("24750"),
                 n.e("80960"),
                 n.e("81118"),
                 n.e("47008"),
@@ -30679,7 +30679,7 @@ let DG = (0, n4.Fe)({
                 n.e("99865"),
                 n.e("10807"),
                 n.e("77847"),
-                n.e("2369"),
+                n.e("24750"),
                 n.e("80960"),
                 n.e("39664"),
                 n.e("48627"),
@@ -40354,7 +40354,7 @@ let wh = (0, tB.Fe)({
             n.e("90797"),
             n.e("86381"),
             n.e("25441"),
-            n.e("24750"),
+            n.e("87466"),
             n.e("10385"),
             n.e("66606"),
             n.e("3370"),
@@ -41411,7 +41411,7 @@ let Gp = (0, n4.Fe)({
                 n.e("40647"),
                 n.e("80960"),
                 n.e("37011"),
-                n.e("2369"),
+                n.e("24750"),
                 n.e("20538"),
                 n.e("56844"),
                 n.e("36621"),
