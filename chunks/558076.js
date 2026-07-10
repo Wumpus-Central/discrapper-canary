@@ -109,16 +109,11 @@ let S = new g(r.h, {
         let { roomId: t, background: n, position: i, statusId: r, statusText: s } = e;
         if (null == _[t]) return !1;
         let l = a.default.getId();
-        if ((null != n && (_[t] = { ..._[t], background: n }), null != i || null != r || null != s)) {
+        if ((null != n && (_[t] = { ..._[t], background: n }), null != i || null != r)) {
             let e = E[t].get(l);
             if (null != e) {
                 let n = new Map(E[t]);
-                n.set(l, {
-                    userId: l,
-                    position: i ?? e.position,
-                    statusId: r ?? e.statusId,
-                    statusText: s ?? e.statusText,
-                }),
+                n.set(l, { ...e, position: i ?? e.position, statusId: r ?? e.statusId, statusText: s ?? e.statusText }),
                     (E[t] = n);
             }
         }

@@ -56,16 +56,14 @@ async function I(e, t, n) {
     let i = d.A.getRoom(t),
         s = d.A.getRoomUsers(t);
     try {
-        a.h.dispatch({
-            type: "GUILD_ROOM_LOCAL_UPDATE",
-            roomId: t,
-            background: n.background,
-            position: n.user_position,
-            statusId: n.user_status_id,
-            statusText: n.user_status_text,
-        });
-        let i = await r.Bo.post({ url: _.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
-            s = (0, u.S)(i.body);
+        let i = { type: "GUILD_ROOM_LOCAL_UPDATE", roomId: t };
+        n?.background != null && (i.background = n.background),
+            n?.user_position != null && (i.position = n.user_position),
+            n?.user_status_id != null && (i.statusId = n.user_status_id),
+            n?.user_status_text != null && (i.statusText = n.user_status_text),
+            a.h.dispatch(i);
+        let s = await r.Bo.post({ url: _.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
+            d = (0, u.S)(s.body);
         if (
             e !== t &&
             (n?.user_position != null &&
@@ -89,7 +87,7 @@ async function I(e, t, n) {
                 }),
             n?.user_position != null)
         ) {
-            let i = s.users.get(l.default.getId());
+            let i = d.users.get(l.default.getId());
             null != i &&
                 (0, o.Yv)({
                     guildId: e,
