@@ -31,50 +31,45 @@ function E(e) {
             style: h,
         } = e,
         I = r ? 50 : l().random(40, 50);
-    return (
-        !r && n
-            ? (t = (0, i.jsxs)(i.Fragment, {
-                  children: [
-                      (0, i.jsx)(u, {}),
-                      (0, i.jsx)(o.H, {
-                          className: d.wx,
-                          children: (0, i.jsx)(_, { width: c, opacity: E, className: d.__invalid_username }),
-                      }),
-                  ],
-              }))
-            : r &&
-              (t = (0, i.jsxs)(i.Fragment, {
-                  children: [
-                      (0, i.jsx)(_, { width: I, className: a()({ [d.ce]: !0, [d.R]: !n }) }),
-                      (0, i.jsx)(o.H, { className: d.wx, children: (0, i.jsx)(_, { width: c, opacity: E }) }),
-                  ],
-              })),
-        (0, i.jsxs)("div", {
-            "aria-hidden": !0,
-            className: a()(A, { [d.iE]: !0, [d.oE]: r, [d.E]: !r }),
-            style: h,
-            children: [
-                (0, i.jsxs)("div", {
-                    className: d.PG,
-                    children: [
-                        t,
-                        (0, i.jsx)("div", {
-                            className: d.Qs,
-                            children: Array(l().random(3, 8))
-                                .fill(null)
-                                .map(() => l().random(30, 80))
-                                .map((e, t) => (0, i.jsx)(_, { width: e, opacity: 0.06 }, t)),
-                        }),
-                    ],
+    !r && n
+        ? (t = (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)(u, {}),
+                  (0, i.jsx)(o.H, {
+                      className: d.wx,
+                      children: (0, i.jsx)(_, { width: c, opacity: E, className: d.__invalid_username }),
+                  }),
+              ],
+          }))
+        : r &&
+          (t = (0, i.jsxs)(i.Fragment, {
+              children: [
+                  (0, i.jsx)(_, { width: I, className: a()({ [d.ce]: !0, [d.R]: !n }) }),
+                  (0, i.jsx)(o.H, { className: d.wx, children: (0, i.jsx)(_, { width: c, opacity: E }) }),
+              ],
+          }));
+    let f = (0, i.jsxs)(i.Fragment, {
+        children: [
+            t,
+            (0, i.jsx)("div", {
+                className: d.Qs,
+                children: (0, i.jsx)(_, { width: l().random(120, 320), opacity: 0.06 }),
+            }),
+        ],
+    });
+    return (0, i.jsxs)("div", {
+        "aria-hidden": !0,
+        className: a()(A, { [d.iE]: !0, [d.oE]: r, [d.E]: !r }),
+        style: h,
+        children: [
+            r ? (0, i.jsx)("div", { className: d.PG, children: f }) : f,
+            null != s &&
+                (0, i.jsx)("div", {
+                    className: d.Dq,
+                    children: (0, i.jsx)("div", { className: d.oh, style: { opacity: 0.03, ...s } }),
                 }),
-                null != s &&
-                    (0, i.jsx)("div", {
-                        className: d.Dq,
-                        children: (0, i.jsx)("div", { className: d.oh, style: { opacity: 0.03, ...s } }),
-                    }),
-            ],
-        })
-    );
+        ],
+    });
 }
 let A = 44,
     h = 22,
