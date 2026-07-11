@@ -59,5 +59,6 @@ let l = {
             { name: "RAFTERS_SEAT_2", position: i[r.I.DEFAULT][19] },
             { name: "RAFTERS_SEAT_3", position: i[r.I.DEFAULT][20] },
         ],
+        plants: [{ x: 45.57, y: 50.62 }],
     },
 };
