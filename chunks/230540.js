@@ -1,4 +1,4 @@
-n.d(t, { default: () => nr });
+n.d(t, { default: () => ns });
 var i,
     r = n(627968),
     s = n(64700),
@@ -16,8 +16,8 @@ var i,
     R = n(652165),
     p = n(287809),
     g = n(174459),
-    A = n(662388),
-    v = n(440938),
+    v = n(662388),
+    A = n(440938),
     N = n(298072),
     C = n(993408),
     _ = n(503089),
@@ -263,8 +263,8 @@ var eo =
     eR = n(320095),
     ep = n(963852),
     eg = n(763754),
-    eA = n(20851),
-    ev = n(986687),
+    ev = n(20851),
+    eA = n(986687),
     eN = n(101058),
     eC = n(84540),
     e_ = n(836602),
@@ -348,7 +348,7 @@ function eL(e) {
                 outline: !0,
                 "aria-hidden": !0,
                 children: [
-                    (0, r.jsx)(eA.A, { className: eO.G5, author: (0, eg.p_)(n), message: n }, n.id),
+                    (0, r.jsx)(ev.A, { className: eO.G5, author: (0, eg.p_)(n), message: n }, n.id),
                     (0, r.jsxs)("div", {
                         className: eO.lG,
                         children: [
@@ -372,8 +372,8 @@ function eb(e) {
         x = m === L.R.PROFILE_EFFECT,
         { firstAvatarDecoration: h, firstProfileEffect: E, firstNameplate: R, firstProfileFrame: p } = (0, K.f5)(t),
         g = d?.type === L.R.AVATAR_DECORATION ? d : h,
-        A = d?.type === L.R.PROFILE_EFFECT ? d : E,
-        v = d?.type === L.R.PROFILE_FRAME ? d : p,
+        v = d?.type === L.R.PROFILE_EFFECT ? d : E,
+        A = d?.type === L.R.PROFILE_FRAME ? d : p,
         N = d?.type === L.R.NAMEPLATE ? d : R;
     if (
         (s.useEffect(() => {
@@ -389,15 +389,15 @@ function eb(e) {
         className: f ? eO.RA : eO.hZ,
         children: (0, r.jsxs)(r.Fragment, {
             children: [
-                (0, r.jsx)(ev.A, {
+                (0, r.jsx)(eA.A, {
                     ...c,
                     pendingAvatar: o,
                     user: n,
                     canUsePremiumCustomization: l,
                     pendingAvatarDecoration: g,
-                    pendingProfileEffect: A,
+                    pendingProfileEffect: v,
                     profileEffectRestartKey: i,
-                    pendingProfileFrame: v,
+                    pendingProfileFrame: A,
                     disabledInputs: !0,
                     hideMessageInput: !x,
                     hideCustomStatus: !0,
@@ -463,7 +463,7 @@ function eF(e) {
         l = (0, eN.V7)({ userId: t.id, image: i });
     return (0, r.jsx)("div", {
         className: ew.k,
-        children: (0, r.jsx)(ev.A, {
+        children: (0, r.jsx)(eA.A, {
             ...s,
             pendingAvatar: l,
             user: t,
@@ -604,8 +604,8 @@ var eZ = n(990078),
     e4 = n(736653),
     e9 = n(44120),
     e5 = n(465794),
-    e7 = n(757036),
-    e3 = n(761705),
+    e3 = n(757036),
+    e7 = n(761705),
     e6 = n(449410),
     e8 = n(580630),
     te = n(4227),
@@ -702,7 +702,7 @@ function tR(e) {
 }
 var tp = n(219103),
     tg = n(469215);
-function tA(e) {
+function tv(e) {
     let {
             product: t,
             hasShopDiscount: n,
@@ -738,7 +738,7 @@ function tA(e) {
         ],
     });
 }
-var tv = n(403581),
+var tA = n(403581),
     tN = n(532794),
     tC = n(202541),
     t_ = n(447806);
@@ -768,7 +768,7 @@ function tO(e) {
             (0, r.jsx)(eZ.m, {
                 text: w.intl.string(w.t.MPFyJ5),
                 "aria-label": w.intl.string(w.t.X3Ekj8),
-                children: (0, r.jsx)(tv.t, { size: "md", color: "currentColor", className: tj.o }),
+                children: (0, r.jsx)(tA.t, { size: "md", color: "currentColor", className: tj.o }),
             }),
             (0, r.jsx)(M.E, {
                 variant: "text-xs/medium",
@@ -820,7 +820,7 @@ function tb(e) {
                     (0, r.jsxs)("div", {
                         className: tk.pw,
                         children: [
-                            (0, r.jsx)(tA, {
+                            (0, r.jsx)(tv, {
                                 product: l,
                                 discount: s,
                                 hasShopDiscount: n,
@@ -873,8 +873,8 @@ function tU(e) {
             onTrackClick: h,
             canGiftProduct: E,
         } = e,
-        { cardId: p, sessionId: g, tilePosition: N } = (0, v.uM)() ?? {},
-        _ = (0, e7.L)(tC.PremiumTypes.TIER_2),
+        { cardId: p, sessionId: g, tilePosition: N } = (0, A.uM)() ?? {},
+        _ = (0, e3.L)(tC.PremiumTypes.TIER_2),
         I = (0, C.xM)(t),
         O = (0, eW.Do)("CollectiblesShopProductDetailsModal") && i.type === L.R.PROFILE_FRAME,
         T = eI.Ay.canUseShopDiscounts(t) || O,
@@ -903,7 +903,7 @@ function tU(e) {
         Q = K && W ? Z.filter((e) => e.currency !== tT.Yr.DISCORD_ORB) : Z,
         ee = (0, ti.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
         et = s.useMemo(() => Z.some((e) => e.currency === tT.Yr.DISCORD_ORB), [Z]);
-    (0, e3.W)({ disableFetch: !et });
+    (0, e7.W)({ disableFetch: !et });
     let en = s.useCallback(() => {
         h(es.sH.BUY_WITH_FIAT),
             (0, e9.A)({
@@ -957,7 +957,7 @@ function tU(e) {
                         (0, R.B4)({
                             skuId: i.skuId,
                             onComplete: (e) => {
-                                (0, A.gB)(),
+                                (0, v.gB)(),
                                     x(),
                                     (0, tD.A)({
                                         product: i,
@@ -1087,7 +1087,7 @@ function tU(e) {
                             loadingFinishedLabel: w.intl.string(w.t.Pg1UP5),
                             onClick: async () => {
                                 h(es.sH.ADD_TO_COLLECTION),
-                                    await (0, A.iJ)(i.skuId),
+                                    await (0, v.iJ)(i.skuId),
                                     x(),
                                     (0, tD.A)({
                                         product: i,
@@ -1270,30 +1270,31 @@ function t2(e) {
 var t4 = n(139146),
     t9 = n(976860),
     t5 = n(975732),
-    t7 = n(50920),
-    t3 = n(668953),
-    t6 = n(881636),
-    t8 = n(428445);
-function ne(e) {
+    t3 = n(50920),
+    t7 = n(23161),
+    t6 = n(668953),
+    t8 = n(881636),
+    ne = n(428445);
+function nt(e) {
     let { goPrev: t, goNext: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: t8.Y,
+                className: ne.Y,
                 children: (0, r.jsx)(tG.K, {
                     "aria-label": w.intl.string(w.t["3NdvMK"]),
                     onClick: t,
-                    icon: t3.f,
+                    icon: t6.f,
                     variant: "overlay-secondary",
                     size: "sm",
                 }),
             }),
             (0, r.jsx)("div", {
-                className: t8.K,
+                className: ne.K,
                 children: (0, r.jsx)(tG.K, {
                     "aria-label": w.intl.string(w.t.RYIeOX),
                     onClick: n,
-                    icon: t6.u,
+                    icon: t8.u,
                     variant: "overlay-secondary",
                     size: "sm",
                 }),
@@ -1301,8 +1302,8 @@ function ne(e) {
         ],
     });
 }
-var nt = n(742441);
-function nn(e) {
+var nn = n(742441);
+function ni(e) {
     let {
             user: t,
             productRecord: n,
@@ -1321,28 +1322,30 @@ function nn(e) {
         } = e,
         R = eK(n),
         p = (0, tz.x)("CollectiblesShopProductDetailsModal"),
-        A = (0, C.aw)(l),
-        N = A ? l.items.length : 0,
+        v = (0, C.aw)(l),
+        N = v ? l.items.length : 0,
         _ = tK.useConfig({ location: "CollectiblesShopProductDetailsModal" }).showCollectionButton,
         I = (function () {
-            let e = (0, t7.a)("CollectiblesPdpNavigateToCollection"),
-                { sessionId: t } = (0, v.uM)() ?? {};
+            let e = (0, t3.a)("CollectiblesPdpNavigateToCollection"),
+                { sessionId: t } = (0, A.uM)() ?? {},
+                n = (0, t7.v)((e) => e.reset);
             return s.useCallback(
-                (n, i) => {
+                (i, r) => {
                     if (
                         (g.default.track(j.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                             collectibles_shop_session_id: t,
-                            sku_id: n.skuId,
-                            cta_name: i,
+                            sku_id: i.skuId,
+                            cta_name: r,
                         }),
                         (0, t5.closeUserProfileModal)(),
-                        e && !0 !== n.isOrbsExclusive)
+                        e && !0 !== i.isOrbsExclusive)
                     )
-                        return void (0, t9.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n.skuId));
-                    let r = !0 === n.isOrbsExclusive ? es.G2.ORBS : es.G2.CATALOG;
-                    (0, t9.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(r)}&${es.P1}=${n.skuId}`);
+                        return void (0, t9.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
+                    n();
+                    let s = !0 === i.isOrbsExclusive ? es.G2.ORBS : es.G2.CATALOG;
+                    (0, t9.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)}&${es.P1}=${i.skuId}`);
                 },
-                [e, t],
+                [e, t, n],
             );
         })(),
         O = s.useCallback(() => {
@@ -1382,13 +1385,13 @@ function nn(e) {
             null != e && ((e.style.animation = "none"), e.offsetHeight, (e.style.animation = ""));
         }, [c]),
         (0, r.jsxs)("div", {
-            className: D()(nt.i1, (0, es.EZ)(l.skuId) ? nt.bF : l.type === L.R.AVATAR_DECORATION ? nt.Jq : nt.eF),
+            className: D()(nn.i1, (0, es.EZ)(l.skuId) ? nn.bF : l.type === L.R.AVATAR_DECORATION ? nn.Jq : nn.eF),
             style: null != m ? { backgroundImage: `url(${m})` } : void 0,
             onKeyDown: P,
             children: [
                 (p || _) &&
                     (0, r.jsx)("div", {
-                        className: nt.GV,
+                        className: nn.GV,
                         children: (0, r.jsx)(eZ.m, {
                             text: w.intl.string(w.t["Hr/q/6"]),
                             children: (0, r.jsx)(eQ.$, {
@@ -1401,7 +1404,7 @@ function nn(e) {
                         }),
                     }),
                 (0, r.jsx)("div", {
-                    className: nt.KR,
+                    className: nn.KR,
                     ref: S,
                     children: (0, r.jsx)(R.RightPreview, {
                         user: t,
@@ -1413,9 +1416,9 @@ function nn(e) {
                         isOrbCheckoutModalOpen: d,
                     }),
                 }),
-                A && N > 1 && (0, r.jsx)(ne, { goPrev: k, goNext: b }),
+                v && N > 1 && (0, r.jsx)(nt, { goPrev: k, goNext: b }),
                 (0, r.jsxs)("div", {
-                    className: nt.VG,
+                    className: nn.VG,
                     children: [
                         (0, r.jsx)(t4.R, {
                             product: n,
@@ -1446,8 +1449,8 @@ function nn(e) {
         })
     );
 }
-var ni = n(460510);
-let nr = function (e) {
+var nr = n(460510);
+let ns = function (e) {
     let {
             transitionState: t,
             onClose: n,
@@ -1484,13 +1487,13 @@ let nr = function (e) {
             sku_id: K.skuId,
             product_type: q,
         }),
-            (0, A.RD)(K.skuId);
+            (0, v.RD)(K.skuId);
     }, [S, W, K.skuId, q]);
-    let { cardId: Z, sessionId: J, tilePosition: Q } = (0, v.uM)() ?? {},
+    let { cardId: Z, sessionId: J, tilePosition: Q } = (0, A.uM)() ?? {},
         ee = s.useMemo(() => (0, O.v8)(i), [i]),
         et = (function (e) {
             let { skuId: t, productSkuIds: n, analyticsLocations: i } = e,
-                { cardId: r, sessionId: l } = (0, v.uM)() ?? {},
+                { cardId: r, sessionId: l } = (0, A.uM)() ?? {},
                 a = (0, I.o)(),
                 c = (0, C.xM)(a);
             return s.useCallback(
@@ -1555,12 +1558,12 @@ let nr = function (e) {
             paddingSize: "sm",
             "aria-label": es,
             children: (0, r.jsx)("div", {
-                className: ni.C,
+                className: nr.C,
                 children: (0, r.jsxs)("div", {
-                    className: ni.j,
+                    className: nr.j,
                     children: [
                         (0, r.jsx)(tw, { ...el }),
-                        (0, r.jsx)(nn, { ...el, isClosing: ei, isOrbCheckoutModalOpen: en, pdpBackground: Y }),
+                        (0, r.jsx)(ni, { ...el, isClosing: ei, isOrbCheckoutModalOpen: en, pdpBackground: Y }),
                     ],
                 }),
             }),
