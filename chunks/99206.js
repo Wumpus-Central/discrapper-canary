@@ -1,4 +1,3 @@
-"use strict";
-n.d(t, { J: () => r });
-var i,
-    r = (((i = {}).MY_GAMES = "MY_GAMES"), (i.OVERLAY = "OVERLAY"), (i.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"), i);
+e.d(Y, { J: () => E });
+var t,
+    E = (((t = {}).MY_GAMES = "MY_GAMES"), (t.OVERLAY = "OVERLAY"), (t.ACTIVITY_PRIVACY = "ACTIVITY_PRIVACY"), t);
