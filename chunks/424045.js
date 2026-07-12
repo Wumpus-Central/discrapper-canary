@@ -1364,7 +1364,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ej.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 576925, Version Hash: bb1e123f98962526fc61cfd84dc7453e3c820664`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 577007, Version Hash: 22ded246e51f137f6e4b22903fd38c06a1837bb8`,
 ),
     v.A.setTags({ appContext: G.QCW }),
     ep.A.initBasic(),
@@ -18675,7 +18675,7 @@ let gv = "isHideDevBanner",
                     className: tl()(gy.Wz, gy.mr),
                     children: [
                         (0, R.jsx)(gD, { className: gy.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "576925" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "577007" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -39391,7 +39391,7 @@ let wh = (0, tB.Fe)({
             n.e("73515"),
             n.e("6129"),
             n.e("66721"),
-            n.e("40854"),
+            n.e("70843"),
             n.e("37757"),
             n.e("28626"),
             n.e("59569"),
@@ -40060,6 +40060,7 @@ let wh = (0, tB.Fe)({
             n.e("54103"),
             n.e("18233"),
             n.e("33448"),
+            n.e("607"),
             n.e("3710"),
             n.e("32207"),
             n.e("27779"),
@@ -40077,7 +40078,6 @@ let wh = (0, tB.Fe)({
             n.e("29413"),
             n.e("38042"),
             n.e("38260"),
-            n.e("607"),
             n.e("46039"),
             n.e("29961"),
             n.e("22744"),
@@ -40200,6 +40200,7 @@ let wh = (0, tB.Fe)({
             n.e("13052"),
             n.e("20643"),
             n.e("87791"),
+            n.e("84794"),
             n.e("64926"),
             n.e("78377"),
             n.e("70272"),
@@ -40247,7 +40248,6 @@ let wh = (0, tB.Fe)({
             n.e("84050"),
             n.e("78"),
             n.e("25246"),
-            n.e("84794"),
             n.e("16799"),
             n.e("52694"),
             n.e("77298"),

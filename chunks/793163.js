@@ -1,44 +1,62 @@
-i.d(t, { A: () => p });
-var a = i(627968);
-i(64700);
-var e = i(503698),
-    s = i.n(e),
-    r = i(123292),
-    l = i(935462),
-    c = i(825484),
-    d = i(375708),
-    o = i(788920);
+e.d(t, { A: () => p });
+var i = e(627968);
+e(64700);
+var a = e(503698),
+    s = e.n(a),
+    r = e(123292),
+    l = e(935462),
+    d = e(825484),
+    c = e(375708),
+    o = e(788920);
 let p = function (n) {
-    let { parentComponent: t, transitionState: i, onBackToStart: e, onCancel: p, footerRightSlot: h, children: u } = n,
-        g =
-            h ??
+    let {
+            parentComponent: t,
+            transitionState: e,
+            onBackToStart: a,
+            onCancel: p,
+            footerRightSlot: u,
+            hideFooter: h = !1,
+            children: g,
+        } = n,
+        j =
+            u ??
             (null != p
-                ? (0, a.jsx)(r.Q, { variant: "secondary", text: d.intl.string(d.t["4gTnU0"]), onClick: p })
-                : null);
-    return (0, a.jsxs)(l.EO, {
+                ? (0, i.jsx)(r.Q, { variant: "secondary", text: c.intl.string(c.t["4gTnU0"]), onClick: p })
+                : null),
+        x = !h,
+        m = x || null != j;
+    return (0, i.jsxs)(l.EO, {
         "data-migration-pending": !0,
-        transitionState: i,
+        transitionState: e,
         className: s()(o.zr, o.rh),
         parentComponent: t,
         size: l.rI.MEDIUM,
         children: [
-            (0, a.jsx)(l.$m, {
+            (0, i.jsx)(l.$m, {
                 "data-migration-pending": !0,
                 className: s()(o.Qs, o.WM),
                 scrollbarType: "none",
-                children: u,
+                children: g,
             }),
-            (0, a.jsx)(l.jl, {
-                "data-migration-pending": !0,
-                children: (0, a.jsxs)(c.e, {
-                    justify: "space-between",
-                    fullWidthContainer: !0,
-                    children: [
-                        (0, a.jsx)(r.Q, { variant: "secondary", text: d.intl.string(d.t.fjKFae), onClick: e }),
-                        g,
-                    ],
-                }),
-            }),
+            m
+                ? (0, i.jsx)(l.jl, {
+                      "data-migration-pending": !0,
+                      children: (0, i.jsxs)(d.e, {
+                          justify: x ? "space-between" : "end",
+                          fullWidthContainer: !0,
+                          children: [
+                              x
+                                  ? (0, i.jsx)(r.Q, {
+                                        variant: "secondary",
+                                        text: c.intl.string(c.t.fjKFae),
+                                        onClick: a,
+                                    })
+                                  : null,
+                              j,
+                          ],
+                      }),
+                  })
+                : null,
         ],
     });
 };

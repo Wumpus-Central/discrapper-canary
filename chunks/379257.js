@@ -49,7 +49,7 @@ let h = {
                 )
             )
                 return !1;
-            let { api_url: e, session_token: t, interview_id: s, consent_id: l } = _;
+            let { api_url: e, session_token: t, interview_id: s, consent_id: l, method: o } = _;
             return (
                 (0, a.openModalLazy)(async () => {
                     let { default: a } = await Promise.all([
@@ -59,9 +59,11 @@ let h = {
                         n.e("62041"),
                         n.e("10849"),
                         n.e("35431"),
-                        n.e("46883"),
+                        n.e("70843"),
                         n.e("44381"),
                         n.e("35956"),
+                        n.e("607"),
+                        n.e("84794"),
                         n.e("69464"),
                         n.e("38394"),
                     ]).then(n.bind(n, 832417));
@@ -71,6 +73,7 @@ let h = {
                             sessionToken: t,
                             consentId: l,
                             interviewId: s,
+                            initialMethod: o,
                             entryPoint: r,
                             ...h,
                             ...n,
@@ -103,7 +106,7 @@ let h = {
             ? (0, a.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
-                          n.e("40854"),
+                          n.e("70843"),
                           n.e("54398"),
                           n.e("607"),
                           n.e("84794"),
@@ -118,7 +121,7 @@ let h = {
               ? (0, a.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("40854"),
+                            n.e("70843"),
                             n.e("607"),
                             n.e("84794"),
                             n.e("99487"),
@@ -130,7 +133,7 @@ let h = {
               : (0, a.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("40854"),
+                            n.e("70843"),
                             n.e("34763"),
                             n.e("61268"),
                             n.e("607"),

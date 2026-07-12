@@ -6,11 +6,11 @@ var i = n(636537),
     s = n(280450),
     l = n(652215);
 async function o(e) {
-    let { method: t, classificationId: n } = e;
-    return (0, a.qn)() ? await c({ classificationId: n, method: t }) : await d(t);
+    let { method: t, classificationId: n, vendor: i } = e;
+    return (0, a.qn)() ? await c({ classificationId: n, method: t }) : await d(t, i);
 }
-async function d(e) {
-    return (await i.Bo.post({ url: l.Rsh.VERIFY_AGE, body: { method: e }, rejectWithError: !0 })).body;
+async function d(e, t) {
+    return (await i.Bo.post({ url: l.Rsh.VERIFY_AGE, body: { method: e, vendor: t }, rejectWithError: !0 })).body;
 }
 async function c(e) {
     let { classificationId: t, method: n } = e,

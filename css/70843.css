@@ -169,6 +169,16 @@
     width: 16px
 }
 
+.incodeElement__07ac3 {
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.incodeElement__07ac3 .IncodeSpinnerFullScreen {
+    min-height: 600px
+}
+
 .dataAssurance__2a048 {
     background-color: var(--background-feedback-info);
     border: 1px solid var(--border-muted);

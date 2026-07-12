@@ -52,16 +52,33 @@
     --surface-neutral-0: var(--modal-background);
     --surface-neutral-50: var(--modal-background);
     --color-white: var(--modal-background);
-    min-height: 700px;
-    width: 700px
+    max-width: 700px;
+    min-height: 600px;
+    width: 100%
 }
 
+.captureWrapper__8dc44 {
+    max-width: 700px;
+    position: relative;
+    width: 100%
+}
+
+.incodeLoadingOverlay__8dc44 {
+    background: var(--modal-background);
+    inset: 0;
+    position: absolute
+}
+
+.incodeLoadingOverlay__8dc44,
 .incodeStatusContainer__8dc44 {
     align-items: center;
     display: flex;
+    justify-content: center
+}
+
+.incodeStatusContainer__8dc44 {
     flex-direction: column;
     gap: var(--space-16);
-    justify-content: center;
     padding: var(--space-24)
 }
 
