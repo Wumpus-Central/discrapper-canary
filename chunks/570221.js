@@ -1,13 +1,26 @@
 "use strict";
-n.d(t, { A: () => a, Y: () => s });
+n.d(t, { A: () => s, Y: () => a });
 var i = n(315069),
     r = n(874638);
-class s extends i.A {
+class a extends i.A {
     total;
     subtotal;
     currency;
     tax;
     invoiceItems;
+    static createFromServer(e) {
+        return new a({
+            total: e.total,
+            subtotal: e.subtotal,
+            tax: e.tax,
+            currency: e.currency,
+            invoiceItems: e.invoice_items.map((e) => ({
+                skuId: e.sku_id,
+                quantity: e.quantity,
+                description: e.description,
+            })),
+        });
+    }
     static createInvoiceFromOrder(e) {
         let t = e.billing_facet,
             n = null != t ? t.invoice_preview : null;
@@ -24,7 +37,7 @@ class s extends i.A {
                       };
             })
             .filter((e) => null != e);
-        return new s({ total: n.total, subtotal: n.subtotal, tax: n.tax, currency: n.currency, invoiceItems: i });
+        return new a({ total: n.total, subtotal: n.subtotal, tax: n.tax, currency: n.currency, invoiceItems: i });
     }
     constructor(e) {
         super(),
@@ -42,7 +55,7 @@ class s extends i.A {
         return null == t || null == t.unitPrice ? null : t.unitPrice.amount;
     }
 }
-class a extends s {
+class s extends a {
     id;
     invoiceItems;
     taxInclusive;
@@ -52,7 +65,7 @@ class a extends s {
     orbsReward;
     checkoutContext;
     static createInvoiceFromServer(e) {
-        return new a({
+        return new s({
             id: e.id,
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.total,
@@ -68,7 +81,7 @@ class a extends s {
         });
     }
     static createFromOTPPreview(e) {
-        return new a({
+        return new s({
             id: "",
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.amount,
