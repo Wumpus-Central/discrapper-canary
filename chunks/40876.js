@@ -549,6 +549,10 @@ let r = {
         inlineRequire: () => n(450827).A,
         neverLoadBeforeConnectionOpen: !0,
     },
+    UserProfileModalManager: {
+        actions: ["USER_PROFILE_MODAL_OPEN", "USER_PROFILE_MODAL_CLOSE"],
+        inlineRequire: () => n(403777).A,
+    },
     UserSettingsManager: {
         actions: ["POST_CONNECTION_OPEN", "OVERLAY_INITIALIZE", "USER_SETTINGS_PROTO_UPDATE"],
         inlineRequire: () => n(281084).A,
@@ -883,7 +887,7 @@ let r = {
             "LOGOUT",
             "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS",
         ],
-        inlineRequire: () => n(516207).A,
+        inlineRequire: () => n(838460).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     SentryExperimentFeatureFlagManager: {

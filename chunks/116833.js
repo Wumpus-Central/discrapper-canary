@@ -53,7 +53,7 @@ let s = {
         6: () =>
             Promise.all([n.e("31837"), n.e("15130"), n.e("58529"), n.e("88990"), n.e("59880")]).then(n.bind(n, 275256)),
         7: () => Promise.all([n.e("98508"), n.e("58407")]).then(n.bind(n, 939034)),
-        8: () => Promise.all([n.e("59012"), n.e("54282")]).then(n.bind(n, 140049)),
+        8: () => Promise.all([n.e("9795"), n.e("54282")]).then(n.bind(n, 140049)),
         9: () =>
             Promise.all([
                 n.e("69487"),

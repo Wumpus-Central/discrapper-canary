@@ -1,26 +1,25 @@
 "use strict";
-n.d(t, { A: () => T, n: () => h });
+n.d(t, { A: () => p, n: () => A });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    a = n(228366),
-    s = n(272355),
-    l = n(267102),
-    o = n(287809),
-    d = n(207803),
-    c = n(958805),
-    u = n(591179),
-    _ = n(485745),
-    E = n(652215);
-let A = new Set();
-function h(e, t) {
+    a = n(439372),
+    s = n(267102),
+    l = n(287809),
+    o = n(207803),
+    d = n(958805),
+    c = n(591179),
+    u = n(485745),
+    _ = n(652215);
+let E = new Set();
+function A(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-async function I(e) {
+async function h(e) {
     let {
             userId: t,
             tabSection: a,
-            scrollTarget: s,
+            scrollTarget: h,
             guildId: I,
             originGuildId: f,
             channelId: p,
@@ -29,20 +28,27 @@ async function I(e) {
             onModalOpen: g,
             ...S
         } = e,
-        N = o.default.getUser(t);
+        N = l.default.getUser(t);
     if (null == N) return;
-    let C = o.default.getCurrentUser();
+    let C = l.default.getCurrentUser();
     if (null == C) return;
-    let O = h(t, I);
-    A.add(
+    let O = A(t, I);
+    E.add(
         await (0, r.openModalLazy)(
             async () => {
                 let e = (
                     await Promise.all([
                         n.e("4803"),
+                        n.e("9795"),
+                        n.e("35538"),
+                        n.e("88804"),
+                        n.e("25336"),
+                        n.e("18185"),
                         n.e("70843"),
                         n.e("69944"),
-                        n.e("59012"),
+                        n.e("89001"),
+                        n.e("75029"),
+                        n.e("28794"),
                         n.e("91555"),
                         n.e("47173"),
                         n.e("60361"),
@@ -131,7 +137,9 @@ async function I(e) {
                         n.e("25677"),
                         n.e("73679"),
                         n.e("73178"),
+                        n.e("35126"),
                         n.e("333"),
+                        n.e("28443"),
                         n.e("97638"),
                         n.e("22995"),
                         n.e("59096"),
@@ -222,16 +230,17 @@ async function I(e) {
                         n.e("58529"),
                         n.e("58038"),
                         n.e("62531"),
-                        n.e("22103"),
+                        n.e("99081"),
                         n.e("6174"),
                         n.e("93103"),
                         n.e("34552"),
-                        n.e("9233"),
+                        n.e("7170"),
+                        n.e("36877"),
                         n.e("72963"),
-                        n.e("21402"),
                         n.e("8757"),
                         n.e("7575"),
-                        n.e("24303"),
+                        n.e("36594"),
+                        n.e("21930"),
                         n.e("85968"),
                         n.e("88599"),
                         n.e("75842"),
@@ -245,27 +254,39 @@ async function I(e) {
                         n.e("53984"),
                         n.e("43780"),
                         n.e("54625"),
+                        n.e("71133"),
                         n.e("28662"),
                         n.e("77084"),
                         n.e("76273"),
                         n.e("23532"),
+                        n.e("96137"),
                         n.e("52557"),
                         n.e("55654"),
                         n.e("76428"),
+                        n.e("27773"),
                         n.e("48900"),
                         n.e("35485"),
+                        n.e("82069"),
                         n.e("83161"),
+                        n.e("46800"),
                         n.e("38513"),
                         n.e("63645"),
+                        n.e("71234"),
                         n.e("63123"),
+                        n.e("6306"),
                         n.e("24038"),
+                        n.e("20282"),
+                        n.e("54282"),
                         n.e("37687"),
                         n.e("52229"),
                         n.e("95340"),
-                        n.e("27048"),
+                        n.e("38755"),
+                        n.e("88469"),
+                        n.e("80239"),
                         n.e("60177"),
                         n.e("77473"),
                         n.e("63618"),
+                        n.e("76087"),
                         n.e("1462"),
                         n.e("28752"),
                         n.e("2329"),
@@ -274,12 +295,14 @@ async function I(e) {
                         n.e("40362"),
                         n.e("25279"),
                         n.e("88003"),
+                        n.e("31445"),
                         n.e("78412"),
                         n.e("88990"),
                         n.e("9793"),
                         n.e("30938"),
                         n.e("43549"),
                         n.e("54067"),
+                        n.e("27355"),
                         n.e("97288"),
                         n.e("10575"),
                         n.e("19666"),
@@ -287,7 +310,6 @@ async function I(e) {
                         n.e("54630"),
                         n.e("42489"),
                         n.e("21574"),
-                        n.e("31445"),
                         n.e("59880"),
                         n.e("6723"),
                         n.e("9729"),
@@ -296,19 +318,17 @@ async function I(e) {
                         n.e("21856"),
                         n.e("5563"),
                         n.e("27323"),
-                        n.e("69747"),
                         n.e("65826"),
                         n.e("49520"),
                         n.e("14461"),
                         n.e("72883"),
-                        n.e("54241"),
                         n.e("20683"),
                         n.e("25486"),
-                        n.e("21930"),
+                        n.e("3930"),
                         n.e("49644"),
                         n.e("3663"),
-                        n.e("20009"),
                         n.e("72877"),
+                        n.e("46430"),
                         n.e("11133"),
                         n.e("89523"),
                         n.e("29260"),
@@ -317,86 +337,78 @@ async function I(e) {
                         n.e("4098"),
                         n.e("755"),
                         n.e("42191"),
+                        n.e("63333"),
                         n.e("13708"),
                         n.e("97069"),
                         n.e("607"),
-                        n.e("63333"),
                         n.e("32207"),
                         n.e("29413"),
                         n.e("38042"),
                         n.e("41786"),
                         n.e("22067"),
+                        n.e("53683"),
                         n.e("55266"),
                         n.e("94138"),
-                        n.e("72103"),
-                        n.e("46430"),
+                        n.e("93461"),
+                        n.e("48407"),
+                        n.e("96574"),
                         n.e("38090"),
                         n.e("49333"),
                         n.e("17460"),
                         n.e("86262"),
+                        n.e("87791"),
                         n.e("3168"),
                         n.e("27752"),
-                        n.e("69073"),
                         n.e("58262"),
                         n.e("49490"),
                         n.e("90779"),
                         n.e("4374"),
                         n.e("86546"),
                         n.e("82969"),
+                        n.e("1430"),
                         n.e("39808"),
                         n.e("31616"),
                         n.e("95841"),
-                        n.e("48407"),
+                        n.e("20491"),
                         n.e("54791"),
                         n.e("37065"),
                         n.e("36926"),
                         n.e("43256"),
-                        n.e("66147"),
                         n.e("41384"),
                         n.e("86507"),
-                        n.e("156"),
+                        n.e("19119"),
+                        n.e("46004"),
                         n.e("73566"),
-                        n.e("45419"),
-                        n.e("20491"),
                         n.e("80262"),
                         n.e("36973"),
-                        n.e("87791"),
-                        n.e("78377"),
                         n.e("70272"),
-                        n.e("53683"),
                         n.e("84601"),
                         n.e("47339"),
-                        n.e("19075"),
-                        n.e("92638"),
-                        n.e("92992"),
+                        n.e("62871"),
+                        n.e("74857"),
+                        n.e("36637"),
                         n.e("86470"),
                         n.e("53308"),
                         n.e("55552"),
-                        n.e("78421"),
                         n.e("54876"),
                         n.e("79211"),
                         n.e("84050"),
-                        n.e("90590"),
+                        n.e("78"),
                         n.e("14501"),
-                        n.e("36467"),
                         n.e("27880"),
                         n.e("67685"),
-                        n.e("17298"),
                         n.e("8032"),
                         n.e("77970"),
                         n.e("14248"),
-                        n.e("78"),
                         n.e("75514"),
-                        n.e("55482"),
+                        n.e("89543"),
                         n.e("72163"),
                         n.e("57931"),
                         n.e("71367"),
                         n.e("75072"),
-                        n.e("32498"),
                         n.e("17583"),
                         n.e("36674"),
                         n.e("9856"),
-                        n.e("31694"),
                         n.e("63363"),
                         n.e("49282"),
                         n.e("35683"),
@@ -411,7 +423,7 @@ async function I(e) {
                         guildId: I,
                         originGuildId: f ?? I,
                         initialTabSection: a,
-                        initialScrollTarget: s,
+                        initialScrollTarget: h,
                         channelId: p,
                         customStatusPrompt: m,
                         ...t,
@@ -420,30 +432,25 @@ async function I(e) {
             },
             {
                 modalKey: O,
-                contextKey: (0, r.modalContextFromAppContext)(T ?? (0, l.zd)() ?? E.BRT.APP),
+                contextKey: (0, r.modalContextFromAppContext)(T ?? (0, s.zd)() ?? _.BRT.APP),
                 onCloseRequest: () => {
-                    let e = !(0, u.E)("UserProfileModalManager");
-                    t === C.id && (0, _.b)(e)
-                        ? (0, d.VQ)()
-                        : ((0, r.closeModal)(O), A.delete(O), c.A.clearPendingWidgets(), e || (0, d.XQ)());
+                    let e = !(0, c.E)("UserProfileModalManager");
+                    t === C.id && (0, u.b)(e)
+                        ? (0, o.VQ)()
+                        : ((0, r.closeModal)(O), E.delete(O), d.A.clearPendingWidgets(), e || (0, o.XQ)());
                 },
             },
         ),
     ),
         g?.();
 }
-function f() {
-    if (0 !== A.size) {
-        for (let e of A) (0, r.closeModal)(e);
-        A.clear(), c.A.clearPendingWidgets(), (0, u.E)("UserProfileModalManager") && (0, d.XQ)();
+function I() {
+    if (0 !== E.size) {
+        for (let e of E) (0, r.closeModal)(e);
+        E.clear(), d.A.clearPendingWidgets(), (0, c.E)("UserProfileModalManager") && (0, o.XQ)();
     }
 }
-class p extends s.A {
-    _initialize() {
-        a.h.subscribe("USER_PROFILE_MODAL_OPEN", I), a.h.subscribe("USER_PROFILE_MODAL_CLOSE", f);
-    }
-    _terminate() {
-        a.h.unsubscribe("USER_PROFILE_MODAL_OPEN", I), a.h.unsubscribe("USER_PROFILE_MODAL_CLOSE", f);
-    }
+class f extends a.A {
+    actions = { USER_PROFILE_MODAL_OPEN: h, USER_PROFILE_MODAL_CLOSE: I };
 }
-let T = new p();
+let p = new f();

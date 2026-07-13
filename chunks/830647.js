@@ -3,7 +3,7 @@ var l = n(627968),
     i = n(64700),
     s = n(503698),
     r = n.n(s),
-    a = n(835245),
+    a = n(132500),
     o = n(494012),
     u = n(113325),
     c = n(331322),
@@ -19,8 +19,8 @@ var x = n(289873),
     v = n(793574),
     C = n(688810),
     I = n(206828),
-    j = n(294323),
-    S = n(201718),
+    S = n(294323),
+    j = n(201718),
     _ = n(47675),
     N = n(633075),
     b = n(321191),
@@ -51,12 +51,12 @@ var x = n(289873),
     q = n(775602),
     J = n(587895),
     ee = n(713517),
-    et = n(117218),
+    et = n(993046),
     en = n(363195),
     el = n(627001),
     ei = n(532423),
     es = n(317560),
-    er = n(533406),
+    er = n(99161),
     ea = n(366523),
     eo = n(652215),
     eu = n(202541),
@@ -91,8 +91,8 @@ function ef(e) {
         v = (0, A.bG)([en.A], () => (0, Y.M)(en.A.theme)),
         C = (0, A.bG)([q.Ay], () => q.Ay.useReducedMotion),
         { isHoveringOrFocusing: I } = (0, ee.A)(E),
-        { guildId: j } = (0, P.nG)(s.applicationId),
-        S = (0, A.bG)([J.A], () => J.A.getApplication(s.applicationId)),
+        { guildId: S } = (0, P.nG)(s.applicationId),
+        j = (0, A.bG)([J.A], () => J.A.getApplication(s.applicationId)),
         { primaryIconAsset: _, primaryIconLabel: N } = i.useMemo(() => (0, P.Cv)(s, s.applicationId), [s]),
         {
             priceComponent: b,
@@ -199,10 +199,10 @@ function ef(e) {
                     (0, er.a)(
                         s,
                         { isGift: !o, giftRecipient: a, giftingOrigin: eu.vQ.GUILD_CHANNEL },
-                        { analyticsLocations: h, guildId: j },
+                        { analyticsLocations: h, guildId: S },
                     );
             },
-            [s, a, o, h, j, x],
+            [s, a, o, h, S, x],
         );
     return (0, l.jsx)(Z.vN, {
         children: (0, l.jsxs)(X.s, {
@@ -211,7 +211,7 @@ function ef(e) {
             ref: E,
             "aria-label": s.name,
             children: [
-                (0, l.jsx)(el.P, { spec: em, application: S }),
+                (0, l.jsx)(el.P, { spec: em, application: j }),
                 c && !o && u === w.uS.WISHLIST
                     ? (0, l.jsx)(ei.n, { spec: em, user: a, guildId: m ?? void 0, channelId: g ?? void 0 })
                     : null,
@@ -323,8 +323,8 @@ function eC(e) {
     });
 }
 var eI = n(910200),
-    ej = n(360469),
-    eS = n(518477),
+    eS = n(360469),
+    ej = n(518477),
     e_ = n(932231);
 let eN = `vc-gifting-${(0, a.A)()}`,
     eb = Object.freeze([]);
@@ -351,7 +351,7 @@ function ey(e) {
 function eT(e) {
     let { application: t } = e;
     if (null == t) return null;
-    let n = t.getIconURL(ej.iu.SMALL);
+    let n = t.getIconURL(eS.iu.SMALL);
     return (0, l.jsxs)(c.B, {
         direction: "horizontal",
         gap: 4,
@@ -466,7 +466,7 @@ function eO(e) {
 }
 function eL(e) {
     let { className: t, userId: n, applicationId: s, channel: r, onClose: a, canShowCTA: o, onDismissCTA: u } = e;
-    (0, S.P)(n);
+    (0, j.P)(n);
     let { analyticsLocations: d } = (0, C.Ay)(v.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
         m = (0, A.bG)([F.default], () => F.default.getUser(n)),
         p = i.useMemo(() => new N.R({ applicationId: s }), [s]),
@@ -487,7 +487,7 @@ function eL(e) {
                     application: c,
                     applicationWidgetConfig: d,
                     profileApplicationWidget: m,
-                } = (0, j.A)(r ? t : void 0, r ? n : void 0),
+                } = (0, S.A)(r ? t : void 0, r ? n : void 0),
                 {
                     fetched: p,
                     hasAlreadyLinked: g,
@@ -503,7 +503,7 @@ function eL(e) {
                     let e = new N.R({ applicationId: n });
                     (0, y.Y5)(e),
                         (0, _.un)({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                        setTimeout(() => (0, D.XA)(eS.jM.WIDGET_ADDED), 700);
+                        setTimeout(() => (0, D.XA)(ej.jM.WIDGET_ADDED), 700);
                 }, [x, n, t, s]);
             return r && !u && p && null != d
                 ? !g && h
@@ -615,7 +615,7 @@ function eM(e) {
             hasBothSources: f,
         } = ek({ userId: n, applicationId: s, channel: r, numItems: 8 }),
         E = "loading" === p || 0 === g.length || null == u,
-        [I, j] = i.useMemo(() => {
+        [I, S] = i.useMemo(() => {
             if (null == u || 0 === g.length) return [null, []];
             let e = g.length > 7 ? g.slice(0, 7) : g,
                 t = (h[e[0].id] ?? {})[n] === L.j.WISHLIST;
@@ -653,7 +653,7 @@ function eM(e) {
                 }),
             ];
         }, [u, g, h, n, d, r.guild_id, r.id, f, o, a]),
-        S = (0, U.F)(d ? "vc_purchase_recommendations" : "vc_gift_recommendations", { applicationId: s });
+        j = (0, U.F)(d ? "vc_purchase_recommendations" : "vc_gift_recommendations", { applicationId: s });
     return (0, l.jsxs)(ey, {
         className: t,
         "aria-labelledby": eN,
@@ -670,9 +670,9 @@ function eM(e) {
                       direction: "vertical",
                       gap: 12,
                       children: [
-                          null != S && (0, l.jsx)(eI.O0, { Icon: S.Icon, text: S.text, endDatetime: S.endsAt }),
+                          null != j && (0, l.jsx)(eI.O0, { Icon: j.Icon, text: j.text, endDatetime: j.endsAt }),
                           I,
-                          (0, l.jsx)("div", { className: e_.aS, children: j }),
+                          (0, l.jsx)("div", { className: e_.aS, children: S }),
                       ],
                   }),
             (0, l.jsx)(eR, { application: m, onClose: a }),
