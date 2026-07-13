@@ -456,7 +456,7 @@ function e1(e) {
 var e2 = s(315629),
     e3 = s(65470),
     e6 = s(797221);
-let e8 = function (e) {
+let e9 = function (e) {
     let { className: t, location: s, analyticsLocation: i } = e,
         { analyticsLocations: a } = (0, C.Ay)(s);
     return (0, o.jsx)(C.f5, {
@@ -493,7 +493,7 @@ let e8 = function (e) {
         }),
     });
 };
-var e9 = s(877624);
+var e8 = s(877624);
 let e7 =
     "https://cdn.discordapp.com/assets/content/b56ad561e631257c1b2d6df674de1baa304710fe81885084e07c119b5a87127e.png";
 function e5(e) {
@@ -1069,8 +1069,8 @@ let t6 = function (e) {
         ],
     });
 };
-var t8 = s(607470);
-let t9 =
+var t9 = s(607470);
+let t8 =
         "https://cdn.discordapp.com/assets/content/a3e8e17987398023e2afd61ec5078a9bce18b2832f2f1775a1ba3c033ce13270.webm",
     t7 = function (e) {
         let {
@@ -1110,16 +1110,16 @@ let t9 =
                                 className: n,
                             })
                           : (0, o.jsx)(
-                                t8.A,
+                                t9.A,
                                 {
                                     muted: !0,
                                     autoPlay: !0,
                                     playsInline: !0,
                                     loop: !0,
                                     className: n,
-                                    children: (0, o.jsx)("source", { src: t9 }),
+                                    children: (0, o.jsx)("source", { src: t8 }),
                                 },
-                                t9,
+                                t8,
                             ),
                   }),
               });
@@ -1483,7 +1483,7 @@ function sx(e) {
         } = sf(),
         { treatment: f, isInNitroHomeHeaderTreatment: h } = V("subscriber_home_hero"),
         { analyticsLocations: N } = (0, C.Ay)(j.A.PREMIUM_MARKETING_HERO_CTA),
-        A = (0, tu.c)(e9.C.MARKETING_PAGE_BANNER),
+        A = (0, tu.c)(e8.C.MARKETING_PAGE_BANNER),
         E = (0, tr.cg)(),
         b = null != d && d.status === ey.Dmq.CANCELED,
         R = h && !b,
@@ -2007,8 +2007,8 @@ var sY = s(462887),
     s2 = s(192444),
     s3 = s(617986),
     s6 = s(892227),
-    s8 = s(81466),
-    s9 = s(318254),
+    s9 = s(81466),
+    s8 = s(318254),
     s7 = s(490285),
     s5 = s(875679);
 let s4 = function () {
@@ -2028,7 +2028,7 @@ let s4 = function () {
                         (0, o.jsxs)("div", {
                             className: s5.Pf,
                             children: [
-                                (0, o.jsx)(s8.C, { size: "sm", color: ea.A.colors.TEXT_DEFAULT }),
+                                (0, o.jsx)(s9.C, { size: "sm", color: ea.A.colors.TEXT_DEFAULT }),
                                 (0, o.jsx)(ec.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
@@ -2051,7 +2051,7 @@ let s4 = function () {
                         (0, o.jsxs)("div", {
                             className: s5.Pf,
                             children: [
-                                (0, o.jsx)(s9.C, { size: "sm", color: ea.A.colors.TEXT_DEFAULT }),
+                                (0, o.jsx)(s8.C, { size: "sm", color: ea.A.colors.TEXT_DEFAULT }),
                                 (0, o.jsx)(ec.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
@@ -2170,7 +2170,7 @@ function im(e) {
 var ig = s(562819),
     ix = s(892035),
     ip = s(793943),
-    ih = s(818724),
+    ih = s(241988),
     iN = s(655752),
     iA = s(764231),
     ij = s(627380),
@@ -2286,8 +2286,13 @@ function iT() {
                               title: s.title,
                               description: s.body,
                               pillText: s.badge,
-                              primaryAsset: ih,
-                              primaryAssetClassName: is.lH,
+                              primaryAsset: (0, o.jsx)("img", {
+                                  src: ih,
+                                  alt: "",
+                                  "aria-hidden": !0,
+                                  style: { width: 157 },
+                                  draggable: !1,
+                              }),
                               ctaIcon: ed.t,
                               ctaIconPosition: "start",
                               ctaText: s.cta,
@@ -2774,7 +2779,7 @@ let iV = "/assets/cd2be35d285d4675.svg",
                                   (0, o.jsx)(iH, { glowingPerkId: A }),
                                   (0, o.jsx)(e1, { glowingPerkId: A, glowingSectionId: N }),
                                   (0, o.jsx)(iL, { glowingPerkId: A }),
-                                  (0, o.jsx)(e8, {
+                                  (0, o.jsx)(e9, {
                                       className: iG.Zy,
                                       location: j.A.PREMIUM_MARKETING_GIFT_SECTION,
                                       analyticsLocation: { page: ey.liQ.NITRO_HOME, section: ey.JJy.GIFT_BANNER },
@@ -2928,7 +2933,7 @@ let i3 = function () {
     });
 };
 var i6 = s(296725);
-let i8 = d.forwardRef((e, t) => {
+let i9 = d.forwardRef((e, t) => {
     let { analyticsLocations: s } = (0, C.Ay)(j.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, o.jsx)(C.f5, {
         value: s,
@@ -2950,8 +2955,8 @@ let i8 = d.forwardRef((e, t) => {
         }),
     });
 });
-i8.displayName = "PremiumMarketingFooter";
-var i9 = s(939249);
+i9.displayName = "PremiumMarketingFooter";
+var i8 = s(939249);
 let i7 = function (e) {
     let { navBarSections: t, activeSectionId: s, isAnimationComplete: i } = e,
         a = {
@@ -2984,7 +2989,7 @@ let i7 = function (e) {
                                     let t = s === e.id,
                                         i = a[e.id];
                                     return (0, o.jsxs)(
-                                        i9.D,
+                                        i8.D,
                                         {
                                             role: "tab",
                                             "aria-selected": t,
@@ -3290,7 +3295,7 @@ let a_ = d.memo(
             ),
             g = (0, iW.b)(),
             p = !c && g.length > 0,
-            f = (0, tu.c)(e9.C.MARKETING_PAGE_BANNER),
+            f = (0, tu.c)(e8.C.MARKETING_PAGE_BANNER),
             h = null != f && "marketingPageBanner" === f.properties.properties.oneofKind,
             N = (0, ag.ar)() && !h,
             A = (0, to.O)(),
@@ -3921,7 +3926,7 @@ let aW = () => {
                     },
                     children: (0, o.jsx)("div", { ref: n, className: az._Z }),
                 }),
-                (0, o.jsx)(i8, { ref: l }),
+                (0, o.jsx)(i9, { ref: l }),
                 (0, o.jsx)(i1, { isVisible: !p && !h && b, subscriptionTier: P, isEligibleForBogoPromotion: y }),
                 (0, o.jsx)(iJ, { className: az.MF }),
             ],
@@ -4022,12 +4027,12 @@ let a3 = function (e) {
     });
 };
 var a6 = s(900797),
-    a8 = s(847374),
-    a9 = s(812993),
+    a9 = s(847374),
+    a8 = s(812993),
     a7 = s(464769);
 function a5(e) {
     let { className: t } = e;
-    return (0, o.jsx)(a9.Lp, { className: m()(a7.T, t), text: ex.intl.string(ex.t.EYxi0o) });
+    return (0, o.jsx)(a8.Lp, { className: m()(a7.T, t), text: ex.intl.string(ex.t.EYxi0o) });
 }
 var a4 = s(904788),
     ne = s(507553),
@@ -4040,14 +4045,14 @@ function na(e, t, s) {
 var nn = s(446278);
 function nl(e) {
     let { isShowingAll: t, onClick: s } = e;
-    return (0, o.jsxs)(i9.D, {
+    return (0, o.jsxs)(i8.D, {
         onClick: s,
         className: nn.customButton,
         children: [
             t ? ex.intl.string(ex.t.maZaN3) : ex.intl.string(ex.t["37C26f"]),
             t
                 ? (0, o.jsx)(a6.t, { size: "md", color: "currentColor", className: nn.arrow })
-                : (0, o.jsx)(a8.a, { size: "md", color: "currentColor", className: nn.arrow }),
+                : (0, o.jsx)(a9.a, { size: "md", color: "currentColor", className: nn.arrow }),
         ],
     });
 }
@@ -4439,7 +4444,7 @@ let nC = () => {
             T = (0, sj.Gh)("premium-marketing-settings-page"),
             P = v ?? !1,
             y = (0, x.bG)([aY.A], () => {
-                let e = aY.A.getMarketingComponentByType(e9.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
+                let e = aY.A.getMarketingComponentByType(e8.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
                 return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
                     ? null
                     : e.properties.properties.billingSettingsNitroGiftBanner;
