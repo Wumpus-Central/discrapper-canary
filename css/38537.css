@@ -158,6 +158,15 @@
     position: relative
 }
 
+.clickableGameIcon__8c6c2 {
+    border-radius: var(--radius-sm);
+    cursor: pointer
+}
+
+.clickableGameIcon__8c6c2:hover .gameIcon__8c6c2 {
+    opacity: .85
+}
+
 .gameIcon__8c6c2 {
     border-radius: var(--radius-sm);
     height: 32px;
