@@ -5,6 +5,4 @@ e.exports = {
     tg: "errorNotice__7ec3a",
     QW: "unifiedCheckoutLoadingContainer__7ec3a",
     v$: "badgeBannerContainer__7ec3a",
-    CC: "badgeBannerContainerWithShopUpsell__7ec3a",
-    RV: "badgeBannerContainerNoShopUpsell__7ec3a",
 };

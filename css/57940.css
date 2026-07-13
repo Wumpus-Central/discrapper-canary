@@ -100,13 +100,5 @@
 }
 
 .badgeBannerContainer__7ec3a {
-    margin-inline: var(--space-24)
-}
-
-.badgeBannerContainerWithShopUpsell__7ec3a {
-    margin-top: var(--space-16)
-}
-
-.badgeBannerContainerNoShopUpsell__7ec3a {
-    margin-top: var(--space-4)
+    margin: 0 var(--space-24)
 }
