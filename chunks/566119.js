@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { RQ: () => l, b: () => o, gP: () => s });
-var i = n(174459),
-    r = n(652215);
-function a(e, t) {
-    i.default.track(r.HAw.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED, { cta_type: e, program_state: t });
-}
-function s() {
-    a("balance_popover_upsell");
-}
-function l() {
-    a("balance_popover_next_drop");
+a.d(r, { RQ: () => c, b: () => _, gP: () => o });
+var t = a(174459),
+    s = a(652215);
+function n(e, r) {
+    t.default.track(s.HAw.PREMIUM_TENURE_REWARDS_ORBS_CTA_CLICKED, { cta_type: e, program_state: r });
 }
 function o() {
-    a("balance_popover_helpdesk");
+    n("balance_popover_upsell");
+}
+function c() {
+    n("balance_popover_next_drop");
+}
+function _() {
+    n("balance_popover_helpdesk");
 }

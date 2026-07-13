@@ -1,57 +1,56 @@
-"use strict";
-n.d(t, { A: () => g });
-var i = n(627968);
-n(64700);
-var r = n(284009),
-    a = n.n(r),
-    s = n(17928),
-    l = n(980707),
-    o = n(477782),
-    d = n(820284),
-    c = n(688810),
-    u = n(270816),
-    _ = n(287809),
-    E = n(855187),
-    A = n(625903),
-    h = n(474397),
-    I = n(780964),
-    f = n(766075),
-    p = n(652215),
-    T = n(375708),
-    m = n(731854);
-function g(e) {
-    let { onClose: t, onSelect: n, minimal: r = !1, appContext: g, onInteraction: S } = e,
-        { analyticsLocations: N } = (0, c.Ay)(),
-        C = (0, s.bG)([_.default], () => {
-            let e = _.default.getCurrentUser();
-            return a()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
+t.d(n, { A: () => f });
+var i = t(627968);
+t(64700);
+var r = t(284009),
+    c = t.n(r),
+    s = t(17928),
+    d = t(980707),
+    a = t(477782),
+    o = t(820284),
+    l = t(688810),
+    u = t(270816),
+    p = t(287809),
+    A = t(855187),
+    h = t(625903),
+    v = t(474397),
+    b = t(780964),
+    g = t(766075),
+    C = t(652215),
+    T = t(375708),
+    U = t(731854);
+function f(e) {
+    let { onClose: n, onSelect: t, minimal: r = !1, appContext: f, onInteraction: x } = e,
+        { analyticsLocations: j } = (0, l.Ay)(),
+        y = (0, s.bG)([p.default], () => {
+            let e = p.default.getCurrentUser();
+            return c()(null != e, "VideoDeviceMenu: currentUser cannot be undefined"), e;
         }),
-        O = (0, u.H)({ deviceType: m.oh.VIDEO_INPUT, analyticsLocations: N, asSubmenu: r }),
-        R = (0, E.A)(C.id, g),
-        L = (function (e) {
-            let { analyticsLocations: t } = (0, c.Ay)();
-            return (0, i.jsx)(o.Dr, {
+        E = (0, u.H)({ deviceType: U.oh.VIDEO_INPUT, analyticsLocations: j, asSubmenu: r }),
+        O = (0, A.A)(y.id, f),
+        S = (function (e) {
+            let { analyticsLocations: n } = (0, l.Ay)();
+            return (0, i.jsx)(a.Dr, {
                 id: "video-settings",
                 label: T.intl.string(T.t.LKzQSF),
                 action: () => {
-                    (0, f.openUserSettings)(I.X.CAMERA_CATEGORY, { analyticsLocations: t }),
-                        (0, h.A)(e, e === p.BRT.POPOUT);
+                    (0, g.openUserSettings)(b.X.CAMERA_CATEGORY, { analyticsLocations: n }),
+                        (0, v.A)(e, e === C.BRT.POPOUT);
                 },
-                icon: A.Z,
-                leadingAccessory: { type: "icon", icon: A.Z },
+                icon: h.Z,
+                leadingAccessory: { type: "icon", icon: h.Z },
             });
-        })(g);
-    return (0, i.jsx)(d.A, {
-        object: p.ZSU.CONTEXT_MENU,
-        children: (0, i.jsxs)(l.W, {
+        })(f);
+    return (0, i.jsx)(o.A, {
+        object: C.ZSU.CONTEXT_MENU,
+        children: (0, i.jsxs)(d.W, {
             "data-menu-migrated": !0,
-            onClose: t,
+            onClose: n,
             navId: "video-device-context",
             variant: "fixed",
             "aria-label": T.intl.string(T.t.F122Gz),
-            onSelect: n,
-            onInteraction: S,
-            children: [O, (0, i.jsxs)(o.rX, { children: [R, r ? L : null] })],
+            onSelect: t,
+            onInteraction: x,
+            children: [E, (0, i.jsxs)(a.rX, { children: [O, r ? S : null] })],
         }),
     });
 }

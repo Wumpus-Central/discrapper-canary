@@ -1,90 +1,89 @@
-"use strict";
-n.d(t, { A: () => G });
+n.d(t, { A: () => L });
 var i = n(627968),
-    r = n(64700),
+    l = n(64700),
     a = n(562708),
     s = n(17928),
-    l = n(636537),
+    r = n(636537),
     o = n(192308),
     d = n(830215),
     c = n(398590),
     u = n(631670),
-    _ = n(475743),
-    E = n(775121),
-    A = n(139286),
-    h = n(80556),
-    I = n(557722),
-    f = n(363195),
-    p = n(870570),
-    T = n(446868),
-    m = n(503698),
-    g = n.n(m),
-    S = n(607399),
-    N = n(821609),
-    C = n(331322),
-    O = n(534514),
-    R = n(834730),
-    L = n(700525),
-    D = n(975571),
-    y = n(652215),
-    v = n(375708),
-    b = n(72828);
-let M = D.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
-class P extends r.PureComponent {
-    static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
+    h = n(475743),
+    m = n(775121),
+    p = n(139286),
+    g = n(80556),
+    f = n(557722),
+    A = n(363195),
+    x = n(870570),
+    v = n(446868),
+    C = n(503698),
+    E = n.n(C),
+    T = n(607399),
+    _ = n(821609),
+    I = n(331322),
+    j = n(534514),
+    N = n(834730),
+    S = n(700525),
+    y = n(975571),
+    b = n(652215),
+    M = n(375708),
+    R = n(72828);
+let k = y.A.getArticleURL(b.MVz.VERIFICATION_FAQ);
+class w extends l.PureComponent {
+    static defaultProps = { types: [b.Fz7.CAPTCHA], onCaptchaVerify: b.tEg, onLogout: b.tEg };
     renderFields() {
-        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: r } = this.props;
+        let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === y.Fz7.CAPTCHA
-                    ? (0, i.jsx)(L.A, { onVerify: r, theme: n }, t)
-                    : (0, i.jsx)(N.$, { onClick: () => this.handleClick(e), text: T.A.getButtonTitle(e) }, e),
+                e === b.Fz7.CAPTCHA
+                    ? (0, i.jsx)(S.A, { onVerify: l, theme: n }, t)
+                    : (0, i.jsx)(_.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, i.jsxs)(C.B, {
+        return (0, i.jsxs)(I.B, {
             gap: 16,
-            className: b.Ot,
+            className: R.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, i.jsxs)(C.B, {
+                (0, i.jsxs)(I.B, {
                     gap: 16,
                     fullWidth: !1,
-                    className: g()(b.kL, { [b.Fr]: S.Fr }),
+                    className: E()(R.kL, { [R.Fr]: T.Fr }),
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsxs)(C.B, {
+                        (0, i.jsxs)(I.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
-                                (0, i.jsx)("div", { className: b.Sl }),
-                                (0, i.jsxs)(C.B, {
-                                    className: b.FS,
+                                (0, i.jsx)("div", { className: R.Sl }),
+                                (0, i.jsxs)(I.B, {
+                                    className: R.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(O.D, {
+                                        (0, i.jsx)(j.D, {
                                             variant: "heading-xl/normal",
-                                            children: v.intl.string(v.t.Iz0kDg),
+                                            children: M.intl.string(M.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(R.E, {
+                                        (0, i.jsx)(N.E, {
                                             variant: "text-md/normal",
-                                            children: v.intl.format(v.t["0rqMV5"], { helpCenterURL: M }),
+                                            children: M.intl.format(M.t["0rqMV5"], { helpCenterURL: k }),
                                         }),
                                     ],
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(C.B, {
+                        (0, i.jsx)(I.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -93,33 +92,33 @@ class P extends r.PureComponent {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(C.B, {
+                (0, i.jsxs)(I.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(R.E, {
+                        (0, i.jsx)(N.E, {
                             variant: "text-sm/normal",
-                            className: b.qr,
-                            children: v.intl.string(v.t.qqYun3),
+                            className: R.qr,
+                            children: M.intl.string(M.t.qqYun3),
                         }),
-                        (0, i.jsxs)(C.B, {
+                        (0, i.jsxs)(I.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(R.E, {
+                                (0, i.jsx)(N.E, {
                                     variant: "text-sm/semibold",
-                                    className: b.qr,
-                                    children: v.intl.format(v.t.WL51ZR, { supportURL: D.A.getSubmitRequestURL() }),
+                                    className: R.qr,
+                                    children: M.intl.format(M.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
                                 }),
-                                (0, i.jsx)("div", { className: g()(b.qr, b.mf), children: "\u2022" }),
-                                (0, i.jsx)(R.E, {
+                                (0, i.jsx)("div", { className: E()(R.qr, R.mf), children: "\u2022" }),
+                                (0, i.jsx)(N.E, {
                                     variant: "text-sm/semibold",
-                                    className: b.qr,
-                                    children: v.intl.format(v.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
+                                    className: R.qr,
+                                    children: M.intl.format(M.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
                                 }),
                             ],
                         }),
@@ -133,14 +132,14 @@ class P extends r.PureComponent {
         t?.(e);
     };
 }
-var U = n(87404),
-    w = n(53516);
-function G() {
-    let { action: e, theme: t } = (0, s.cf)([p.A, f.A], () => ({ action: p.A.getAction(), theme: f.A.theme })),
-        m = T.A.getVerificationTypes(e),
-        [g, S] = r.useState(0),
-        N = (0, _.A)(m);
-    function C() {
+var O = n(87404),
+    P = n(53516);
+function L() {
+    let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
+        C = v.A.getVerificationTypes(e),
+        [E, T] = l.useState(0),
+        _ = (0, h.A)(C);
+    function I() {
         (0, u.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
@@ -149,62 +148,62 @@ function G() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: U.H1, Layer: h.Ay },
+                { modalKey: O.H1, Layer: g.Ay },
             );
     }
     return (
-        (0, A.A)(
+        (0, p.A)(
             {
                 type: a.ImpressionTypes.MODAL,
                 name: a.ImpressionNames.USER_ACTION_REQUIRED,
-                properties: { verification_type: m[0], verification_types: m },
+                properties: { verification_type: C[0], verification_types: C },
             },
             {},
-            [m.toString()],
+            [C.toString()],
         ),
-        r.useEffect(
+        l.useEffect(
             () => (
-                E.A.disable(),
+                m.A.disable(),
                 () => {
-                    E.A.enable();
+                    m.A.enable();
                 }
             ),
             [],
         ),
-        r.useEffect(() => {
-            N?.[0] === y.Fz7.PHONE &&
-                m?.[0] === y.Fz7.EMAIL &&
+        l.useEffect(() => {
+            _?.[0] === b.Fz7.PHONE &&
+                C?.[0] === b.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("31910"), n.e("10919")]).then(n.bind(n, 556506));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                title: v.intl.string(v.t.KLnLIP),
-                                body: v.intl.string(v.t.XGbCq3),
-                                confirmText: v.intl.string(v.t["3oK4qw"]),
+                                title: M.intl.string(M.t.KLnLIP),
+                                body: M.intl.string(M.t.XGbCq3),
+                                confirmText: M.intl.string(M.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: U.Pr, Layer: h.Ay, onCloseCallback: C },
+                    { modalKey: O.Pr, Layer: g.Ay, onCloseCallback: I },
                 );
-        }, [m, N]),
-        (0, i.jsx)(P, {
-            types: m,
-            captchaKey: g,
+        }, [C, _]),
+        (0, i.jsx)(w, {
+            types: C,
+            captchaKey: E,
             onCaptchaVerify: function (e) {
-                l.Bo.post({
-                    url: y.Rsh.CAPTCHA,
+                r.Bo.post({
+                    url: b.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
                 }).then(c.jH, () => {
-                    S((e) => e + 1);
+                    T((e) => e + 1);
                 });
             },
             theme: t,
             onClick: (e) => {
-                e === y.Fz7.EMAIL_OR_PHONE || e === y.Fz7.EMAIL || e === y.Fz7.REVERIFY_EMAIL
-                    ? C()
+                e === b.Fz7.EMAIL_OR_PHONE || e === b.Fz7.EMAIL || e === b.Fz7.REVERIFY_EMAIL
+                    ? I()
                     : (0, o.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
@@ -217,9 +216,9 @@ function G() {
                                   n.e("84704"),
                               ]).then(n.bind(n, 615715));
                               return (t) =>
-                                  (0, i.jsx)(e, { layerContext: h.OH, reason: I.d.USER_ACTION_REQUIRED, ...t });
+                                  (0, i.jsx)(e, { layerContext: g.OH, reason: f.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: w.V, Layer: h.Ay },
+                          { modalKey: P.V, Layer: g.Ay },
                       );
             },
             onLogout: function () {
@@ -228,15 +227,15 @@ function G() {
                         let { ConfirmModal: e } = await Promise.resolve().then(n.bind(n, 732159));
                         return (t) =>
                             (0, i.jsx)(e, {
-                                title: v.intl.string(v.t["2jxGer"]),
-                                subtitle: v.intl.string(v.t.SUnWBB),
-                                confirmText: v.intl.string(v.t["2jxGer"]),
-                                cancelText: v.intl.string(v.t["ETE/oC"]),
+                                title: M.intl.string(M.t["2jxGer"]),
+                                subtitle: M.intl.string(M.t.SUnWBB),
+                                confirmText: M.intl.string(M.t["2jxGer"]),
+                                cancelText: M.intl.string(M.t["ETE/oC"]),
                                 onConfirm: () => d.A.logout("verification"),
                                 ...t,
                             });
                     },
-                    { Layer: h.Ay },
+                    { Layer: g.Ay },
                 );
             },
         })

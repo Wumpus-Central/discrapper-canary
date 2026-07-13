@@ -1,53 +1,52 @@
-"use strict";
-n.d(t, { A: () => y });
-var i = n(627968),
-    r = n(64700),
-    a = n(735438),
-    s = n.n(a),
+n.d(t, { A: () => I });
+var r = n(627968),
+    i = n(64700),
+    s = n(735438),
+    o = n.n(s),
     l = n(258873),
-    o = n(622242),
-    d = n(731738),
-    c = n(70298),
-    u = n(821609),
-    _ = n(825484),
-    E = n(17928),
-    A = n(148810),
-    h = n(521502),
-    I = n(380610),
-    f = n(807393),
-    p = n(976860),
-    T = n(174459),
-    m = n(38405),
-    g = n(19575),
-    S = n(721668),
-    N = n(652215),
-    C = n(375708),
-    O = n(772620);
-function R() {
-    let [e, t] = r.useState(!1);
-    if (null == (0, E.bG)([h.A], () => ((0, I.kK)() ? h.A.getCurrentBuildOverride().overrides?.discord_web : null)))
+    a = n(622242),
+    c = n(731738),
+    u = n(70298),
+    d = n(821609),
+    h = n(825484),
+    f = n(17928),
+    p = n(148810),
+    m = n(521502),
+    g = n(380610),
+    A = n(807393),
+    v = n(976860),
+    y = n(174459),
+    x = n(38405),
+    w = n(19575),
+    E = n(721668),
+    C = n(652215),
+    N = n(375708),
+    b = n(772620);
+function O() {
+    let [e, t] = i.useState(!1);
+    if (null == (0, f.bG)([m.A], () => ((0, g.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
     async function n() {
         try {
-            t(!0), await (0, A.iD)(), window.location.reload(!0);
+            t(!0), await (0, p.iD)(), window.location.reload(!0);
         } catch (e) {
             t(!1);
         }
     }
-    return (0, i.jsx)(u.$, {
+    return (0, r.jsx)(d.$, {
         variant: "primary",
         size: "md",
-        text: C.intl.string(C.t["/Nz9rY"]),
+        text: N.intl.string(N.t["/Nz9rY"]),
         onClick: n,
         loading: e,
     });
 }
-let L = s().throttle(
+let _ = o().throttle(
     (e) => {
-        f.A.increment(
+        A.A.increment(
             {
-                name: d.K.APP_CRASHED,
-                tags: [`reason:${l.J.UNHANDLED_JS_ERROR}`, `level:${o.k.FATAL}`, `modded_client:${e}`],
+                name: c.K.APP_CRASHED,
+                tags: [`reason:${l.J.UNHANDLED_JS_ERROR}`, `level:${a.k.FATAL}`, `modded_client:${e}`],
             },
             !0,
         );
@@ -55,28 +54,28 @@ let L = s().throttle(
     100,
     { trailing: !1 },
 );
-class D extends r.PureComponent {
+class D extends i.PureComponent {
     state = { error: null, info: null };
     discordErrorsSet = !1;
     componentDidCatch(e, t) {
         this.triggerSoftCrash(e, t);
     }
     triggerSoftCrash(e, t) {
-        let n = (0, p.JK)().location;
+        let n = (0, v.JK)().location;
         this.setState({ error: e, info: t });
-        let i = (0, c.b)(),
-            r = m.A.captureCrash(e, { extra: t });
-        T.default.track(N.HAw.APP_CRASHED, {
+        let r = (0, u.b)(),
+            i = x.A.captureCrash(e, { extra: t });
+        y.default.track(C.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: r,
-            uses_client_mods: i,
+            sentry_issue_id: i,
+            uses_client_mods: r,
             error_level: "fatal",
         }),
-            L(i),
-            g.Ay.cleanupDisplaySleep();
+            _(r),
+            w.Ay.cleanupDisplaySleep();
     }
     _handleSubmitReport() {
         location.reload(!0);
@@ -96,31 +95,31 @@ class D extends r.PureComponent {
     render() {
         let { children: e, renderCustomMessage: t } = this.props;
         if (null !== this.state.error) {
-            let e = (0, i.jsxs)("div", {
+            let e = (0, r.jsxs)("div", {
                     children: [
-                        (0, i.jsx)("p", { children: C.intl.string(C.t.tx8CkI) }),
-                        (0, i.jsx)("p", { children: C.intl.string(C.t.CvQlAH) }),
+                        (0, r.jsx)("p", { children: N.intl.string(N.t.tx8CkI) }),
+                        (0, r.jsx)("p", { children: N.intl.string(N.t.CvQlAH) }),
                     ],
                 }),
-                n = (0, i.jsxs)(_.e, {
+                n = (0, r.jsxs)(h.e, {
                     children: [
-                        (0, i.jsx)(u.$, {
+                        (0, r.jsx)(d.$, {
                             variant: "primary",
                             size: "md",
-                            text: C.intl.string(C.t["+hivLW"]),
+                            text: N.intl.string(N.t["+hivLW"]),
                             onClick: this._handleSubmitReport,
                         }),
-                        (0, i.jsx)(R, {}),
+                        (0, r.jsx)(O, {}),
                     ],
                 });
-            return (0, i.jsx)(S.A, {
-                title: C.intl.string(C.t["3h+n+8"]),
+            return (0, r.jsx)(E.A, {
+                title: N.intl.string(N.t["3h+n+8"]),
                 note: null != t ? t() : e,
                 action: n,
-                className: O.W,
+                className: b.W,
             });
         }
         return e;
     }
 }
-let y = D;
+let I = D;

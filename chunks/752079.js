@@ -1,38 +1,37 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(627968),
-    r = n(64700),
-    a = n(17928),
-    s = n(775602),
-    l = n(607470);
-let o =
+c.d(s, { A: () => u });
+var a = c(627968),
+    r = c(64700),
+    o = c(17928),
+    t = c(775602),
+    n = c(607470);
+let d =
         "https://cdn.discordapp.com/assets/content/615334270467aa3d5adc86cc67efee89f8380a87b945a96e89ec2eb37c27993d.png",
-    d = function (e) {
-        let { className: t, animationState: n = "on" } = e,
-            d = (0, a.bG)([s.Ay], () => s.Ay.useReducedMotion),
-            [c, u] = (0, r.useState)(!1),
-            _ = (0, r.useRef)(null),
-            E = "on" === n || ("on_hover" === n && c);
+    u = function (e) {
+        let { className: s, animationState: c = "on" } = e,
+            u = (0, o.bG)([t.Ay], () => t.Ay.useReducedMotion),
+            [i, p] = (0, r.useState)(!1),
+            l = (0, r.useRef)(null),
+            E = "on" === c || ("on_hover" === c && i);
         return (
             (0, r.useEffect)(() => {
-                null !== _.current && (E ? _.current.play() : ((_.current.currentTime = 0), _.current.pause()));
+                null !== l.current && (E ? l.current.play() : ((l.current.currentTime = 0), l.current.pause()));
             }, [E]),
-            (0, i.jsx)("div", {
-                onMouseEnter: "on_hover" === n ? () => u(!0) : void 0,
-                onMouseLeave: "on_hover" === n ? () => u(!1) : void 0,
-                children: d
-                    ? (0, i.jsx)("img", { src: o, className: t, alt: "Orb" })
-                    : (0, i.jsxs)(l.A, {
-                          className: t,
+            (0, a.jsx)("div", {
+                onMouseEnter: "on_hover" === c ? () => p(!0) : void 0,
+                onMouseLeave: "on_hover" === c ? () => p(!1) : void 0,
+                children: u
+                    ? (0, a.jsx)("img", { src: d, className: s, alt: "Orb" })
+                    : (0, a.jsxs)(n.A, {
+                          className: s,
                           autoPlay: !0,
                           loop: !0,
-                          ref: _,
+                          ref: l,
                           children: [
-                              (0, i.jsx)("source", {
+                              (0, a.jsx)("source", {
                                   src: "https://cdn.discordapp.com/assets/content/ccaa60fae2114887bfa2e413be11d62c6d194139ee0f33671825ff06a1050692.webm",
                                   type: "video/webm",
                               }),
-                              (0, i.jsx)("img", { src: o, className: t, alt: "Orb" }),
+                              (0, a.jsx)("img", { src: d, className: s, alt: "Orb" }),
                           ],
                       }),
             })

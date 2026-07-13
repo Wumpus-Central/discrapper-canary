@@ -1,122 +1,121 @@
-"use strict";
-n.d(t, { A: () => h });
-var i = n(788733),
-    r = n(82149),
-    a = n(573648),
-    s = n(541806),
-    l = n(90644),
-    o = n(652215),
-    d = n(141639),
-    c = n(61330),
-    u = n(287743);
-let _ = new Set([o.fg2.LEAGUE_OF_LEGENDS, o.fg2.ROBLOX, o.fg2.TWITCH, o.fg2.YOUTUBE]);
-var E = n(190915),
-    A = n(375708);
-function h(e) {
-    let t = (0, u.A)(e.session_id),
-        n = (function (e) {
-            let t = (0, u.A)(e.session_id);
-            if (null != t) return t;
-            if ((0, l.A)(e)) return a.A.get(o.fg2.SPOTIFY);
-            if ((0, s.A)(e)) return a.A.get(o.fg2.CRUNCHYROLL);
-            if ((0, c.A)(e)) return a.A.get(o.fg2.XBOX);
-            if ((0, d.A)(e)) return a.A.get(o.fg2.PLAYSTATION);
-            if (e?.platform === o.yTV.META_QUEST || (0, i.A)(e)) return a.A.get(o.fg2.META_QUEST_OR_HORIZON);
-            let n = a.A.find((t) => {
-                let { name: n } = t;
-                return n === e.name;
+e.d(n, { A: () => f });
+var i = e(788733),
+    l = e(82149),
+    a = e(573648),
+    r = e(541806),
+    s = e(90644),
+    o = e(652215),
+    c = e(141639),
+    u = e(61330),
+    d = e(287743);
+let A = new Set([o.fg2.LEAGUE_OF_LEGENDS, o.fg2.ROBLOX, o.fg2.TWITCH, o.fg2.YOUTUBE]);
+var x = e(190915),
+    p = e(375708);
+function f(t) {
+    let n = (0, d.A)(t.session_id),
+        e = (function (t) {
+            let n = (0, d.A)(t.session_id);
+            if (null != n) return n;
+            if ((0, s.A)(t)) return a.A.get(o.fg2.SPOTIFY);
+            if ((0, r.A)(t)) return a.A.get(o.fg2.CRUNCHYROLL);
+            if ((0, u.A)(t)) return a.A.get(o.fg2.XBOX);
+            if ((0, c.A)(t)) return a.A.get(o.fg2.PLAYSTATION);
+            if (t?.platform === o.yTV.META_QUEST || (0, i.A)(t)) return a.A.get(o.fg2.META_QUEST_OR_HORIZON);
+            let e = a.A.find((n) => {
+                let { name: e } = n;
+                return e === t.name;
             });
-            return null != n && _.has(n.type) ? n : null;
-        })(e),
-        h = n?.icon,
-        I = n?.name ?? "";
-    if (e.type === o.$pd.PLAYING && n?.type === o.fg2.XBOX)
+            return null != e && A.has(e.type) ? e : null;
+        })(t),
+        f = e?.icon,
+        _ = e?.name ?? "";
+    if (t.type === o.$pd.PLAYING && e?.type === o.fg2.XBOX)
         return {
-            text: A.intl.formatToPlainString(A.t.A17aM8, { platform: A.intl.string(A.t.Nfvo72) }),
-            platformIcon: h,
-            platformLabel: I,
+            text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.Nfvo72) }),
+            platformIcon: f,
+            platformLabel: _,
         };
-    if (e.type === o.$pd.PLAYING && n?.type === o.fg2.PLAYSTATION)
+    if (t.type === o.$pd.PLAYING && e?.type === o.fg2.PLAYSTATION)
         return {
-            text: A.intl.formatToPlainString(A.t.A17aM8, { platform: A.intl.string(A.t.fFl4jo) }),
-            platformIcon: h,
-            platformLabel: I,
+            text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.fFl4jo) }),
+            platformIcon: f,
+            platformLabel: _,
         };
-    if (e.type === o.$pd.PLAYING && n?.type === o.fg2.META_QUEST_OR_HORIZON)
+    if (t.type === o.$pd.PLAYING && e?.type === o.fg2.META_QUEST_OR_HORIZON)
         return {
-            text: A.intl.formatToPlainString(A.t.A17aM8, {
-                platform: (0, i.A)(e) ? A.intl.string(A.t.BrHQaq) : A.intl.string(A.t.p6vL0e),
+            text: p.intl.formatToPlainString(p.t.A17aM8, {
+                platform: (0, i.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
-            platformIcon: h,
-            platformLabel: I,
+            platformIcon: f,
+            platformLabel: _,
         };
-    if (e.type === o.$pd.WATCHING && n?.type === o.fg2.META_QUEST_OR_HORIZON)
+    if (t.type === o.$pd.WATCHING && e?.type === o.fg2.META_QUEST_OR_HORIZON)
         return {
-            text: A.intl.formatToPlainString(A.t.ENbTKQ, {
-                platform: (0, i.A)(e) ? A.intl.string(A.t.BrHQaq) : A.intl.string(A.t.p6vL0e),
+            text: p.intl.formatToPlainString(p.t.ENbTKQ, {
+                platform: (0, i.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
-            platformIcon: h,
-            platformLabel: I,
+            platformIcon: f,
+            platformLabel: _,
         };
-    if (e.type === o.$pd.STREAMING && n?.type === o.fg2.TWITCH)
+    if (t.type === o.$pd.STREAMING && e?.type === o.fg2.TWITCH)
         return {
-            text: A.intl.formatToPlainString(A.t["4CQq9Q"], { name: A.intl.string(A.t.q4pBG3) }),
-            platformIcon: h,
-            platformLabel: I,
+            text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.q4pBG3) }),
+            platformIcon: f,
+            platformLabel: _,
         };
-    if (e.type === o.$pd.STREAMING && n?.type === o.fg2.YOUTUBE)
+    if (t.type === o.$pd.STREAMING && e?.type === o.fg2.YOUTUBE)
         return {
-            text: A.intl.formatToPlainString(A.t["4CQq9Q"], { name: A.intl.string(A.t.aS6cK4) }),
-            platformIcon: h,
-            platformLabel: I,
+            text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.aS6cK4) }),
+            platformIcon: f,
+            platformLabel: _,
         };
-    if (null != t) {
-        let n,
-            i = (0, E.A)(t, e);
-        switch (e.type) {
+    if (null != n) {
+        let e,
+            i = (0, x.A)(n, t);
+        switch (t.type) {
             case o.$pd.PLAYING:
-                n = A.t.A17aM8;
+                e = p.t.A17aM8;
                 break;
             case o.$pd.WATCHING:
-                n = A.t.ENbTKQ;
+                e = p.t.ENbTKQ;
                 break;
             case o.$pd.LISTENING:
-                n = A.t.EcHzWI;
+                e = p.t.EcHzWI;
                 break;
             case o.$pd.COMPETING:
-                n = A.t.ikpHeS;
+                e = p.t.ikpHeS;
                 break;
             case o.$pd.STREAMING:
-                n = A.t.Dzgz4u;
+                e = p.t.Dzgz4u;
         }
-        if (void 0 !== n)
-            return { text: A.intl.formatToPlainString(n, { platform: i }), platformIcon: h, platformLabel: I };
+        if (void 0 !== e)
+            return { text: p.intl.formatToPlainString(e, { platform: i }), platformIcon: f, platformLabel: _ };
     }
-    return e.type === o.$pd.PLAYING
-        ? { text: A.intl.string(A.t.BMTj28), platformIcon: h, platformLabel: I }
-        : e.type === o.$pd.STREAMING
-          ? { text: A.intl.string(A.t["Jpkr/q"]), platformIcon: h, platformLabel: I }
-          : (0, r.Cy)(e)
-            ? { text: A.intl.formatToPlainString(A.t.pW3Ip3, { name: e.name }) }
-            : e.type === o.$pd.LISTENING && null != e.details
-              ? { text: A.intl.formatToPlainString(A.t["b+lA5+"], { name: e.name }), platformIcon: h, platformLabel: I }
-              : e.type === o.$pd.LISTENING
-                ? { text: A.intl.string(A.t.dBISa6), platformIcon: h, platformLabel: I }
-                : e.type === o.$pd.WATCHING && null != e.details
+    return t.type === o.$pd.PLAYING
+        ? { text: p.intl.string(p.t.BMTj28), platformIcon: f, platformLabel: _ }
+        : t.type === o.$pd.STREAMING
+          ? { text: p.intl.string(p.t["Jpkr/q"]), platformIcon: f, platformLabel: _ }
+          : (0, l.Cy)(t)
+            ? { text: p.intl.formatToPlainString(p.t.pW3Ip3, { name: t.name }) }
+            : t.type === o.$pd.LISTENING && null != t.details
+              ? { text: p.intl.formatToPlainString(p.t["b+lA5+"], { name: t.name }), platformIcon: f, platformLabel: _ }
+              : t.type === o.$pd.LISTENING
+                ? { text: p.intl.string(p.t.dBISa6), platformIcon: f, platformLabel: _ }
+                : t.type === o.$pd.WATCHING && null != t.details
                   ? {
-                        text: A.intl.formatToPlainString(A.t.mqdfDc, { name: e.name }),
-                        platformIcon: h,
-                        platformLabel: I,
+                        text: p.intl.formatToPlainString(p.t.mqdfDc, { name: t.name }),
+                        platformIcon: f,
+                        platformLabel: _,
                     }
-                  : e.type === o.$pd.WATCHING
-                    ? { text: A.intl.string(A.t.GpNXjC), platformIcon: h, platformLabel: I }
-                    : e.type === o.$pd.COMPETING && null != e.details
+                  : t.type === o.$pd.WATCHING
+                    ? { text: p.intl.string(p.t.GpNXjC), platformIcon: f, platformLabel: _ }
+                    : t.type === o.$pd.COMPETING && null != t.details
                       ? {
-                            text: A.intl.formatToPlainString(A.t.oHF7Ch, { name: e.name }),
-                            platformIcon: h,
-                            platformLabel: I,
+                            text: p.intl.formatToPlainString(p.t.oHF7Ch, { name: t.name }),
+                            platformIcon: f,
+                            platformLabel: _,
                         }
-                      : e.type === o.$pd.COMPETING
-                        ? { text: A.intl.string(A.t.OzCsIA), platformIcon: h, platformLabel: I }
-                        : { text: void 0, platformIcon: h, platformLabel: I };
+                      : t.type === o.$pd.COMPETING
+                        ? { text: p.intl.string(p.t.OzCsIA), platformIcon: f, platformLabel: _ }
+                        : { text: void 0, platformIcon: f, platformLabel: _ };
 }
