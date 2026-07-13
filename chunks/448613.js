@@ -1,30 +1,31 @@
-n.d(t, { p: () => d });
-var l = n(308528),
+"use strict";
+n.d(t, { p: () => u });
+var i = n(308528),
     r = n(493336),
-    i = n(355622),
-    a = n(428249),
-    s = n(451909),
+    a = n(355622),
+    s = n(428249),
+    l = n(451909),
     o = n(734057),
-    u = n(806150),
+    d = n(806150),
     c = n(381941);
-async function d(e) {
-    let { userId: t, content: n, location: d, openChannel: f = !0, whenReady: h = !1, entry: A, nonce: m } = e,
-        { valid: S, failureReason: g } = await (0, u.i)({ type: i.oU.NORMAL, content: n, channel: null });
-    if (!S) throw Error(g);
-    let x = f ? await l.A.openPrivateChannel({ recipientIds: t, location: d }) : await l.A.getOrEnsurePrivateChannel(t),
-        T = o.A.getChannel(x);
+async function u(e) {
+    let { userId: t, content: n, location: u, openChannel: _ = !0, whenReady: E = !1, entry: A, nonce: h } = e,
+        { valid: I, failureReason: f } = await (0, d.i)({ type: a.oU.NORMAL, content: n, channel: null });
+    if (!I) throw Error(f);
+    let p = _ ? await i.A.openPrivateChannel({ recipientIds: t, location: u }) : await i.A.getOrEnsurePrivateChannel(t),
+        T = o.A.getChannel(p);
     if (null == T) throw Error("Failed to open private channel");
     if (null != A)
-        (0, a.d)({
+        (0, s.d)({
             channel: T,
             content: n,
             entry: A,
-            whenReady: h,
+            whenReady: E,
             doNotNotifyOnError: !1,
             location: c.Hx.USER_PROFILE,
         });
     else {
-        let e = s.Ay.parse(T, n);
-        return r.A.sendMessage(T.id, e, h, { location: c.Hx.USER_PROFILE, nonce: m });
+        let e = l.Ay.parse(T, n);
+        return r.A.sendMessage(T.id, e, E, { location: c.Hx.USER_PROFILE, nonce: h });
     }
 }

@@ -1,11 +1,12 @@
-n.d(e, { T: () => u });
+"use strict";
+n.d(t, { T: () => o });
 var i = n(64700),
-    l = n(735438),
-    o = n(96203),
-    r = n(760716),
-    s = n(652215);
-function u(t) {
-    let e = (0, o.A)({ userId: t }),
-        n = (0, r.i)((t) => t.recommendationApplicationIds);
-    return i.useMemo(() => (0, l.uniq)([s.FYj, ...e, ...(n ?? [])]).sort(), [e, n]);
+    r = n(735438),
+    a = n(96203),
+    s = n(760716),
+    l = n(652215);
+function o(e) {
+    let t = (0, a.A)({ userId: e }),
+        n = (0, s.i)((e) => e.recommendationApplicationIds);
+    return i.useMemo(() => (0, r.uniq)([l.FYj, ...t, ...(n ?? [])]).sort(), [t, n]);
 }

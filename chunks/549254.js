@@ -1,11 +1,12 @@
-o.d(e, { U: () => c });
-var t = o(627968);
-o(64700);
-let n =
+"use strict";
+n.d(t, { U: () => o });
+var i = n(627968);
+n(64700);
+let r =
     "https://cdn.discordapp.com/assets/content/068d7e953bf2dd5c6e2e63bb703245f76c75d991e7f3d14d3216f6e8175d7c79.riv";
-var a = o(502377),
-    d = o(799226);
-let i = {
+var a = n(502377),
+    s = n(799226);
+let l = {
     "Tab Gradient Dawn": {
         Color_GradientCenter: "color",
         Color_InnerRing: "color",
@@ -16,19 +17,19 @@ let i = {
     },
     "Nitro VFX": {},
 };
-function c(r) {
-    let { artboard: e = "Tab Gradient Dawn", stateMachine: o, ...c } = r,
-        { status: s, buffer: b } = (0, d.CE)(n),
-        l = (0, d.m2)(n);
-    return s === d.BW.Loading
+function o(e) {
+    let { artboard: t = "Tab Gradient Dawn", stateMachine: n, ...o } = e,
+        { status: d, buffer: c } = (0, s.CE)(r),
+        u = (0, s.m2)(r);
+    return d === s.BW.Loading
         ? null
-        : (0, t.jsx)(a.w, {
-              ...(l ? { key: "override" } : {}),
-              buffer: b,
-              artboard: e,
-              stateMachine: o,
-              artboardProperties: i,
-              ...c,
+        : (0, i.jsx)(a.w, {
+              ...(u ? { key: "override" } : {}),
+              buffer: c,
+              artboard: t,
+              stateMachine: n,
+              artboardProperties: l,
+              ...o,
           });
 }
-c.riveSrc = n;
+o.riveSrc = r;

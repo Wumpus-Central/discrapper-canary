@@ -1,16 +1,17 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(627968),
     r = n(64700),
-    l = n(503698),
-    s = n.n(l),
-    a = n(207757);
+    a = n(503698),
+    s = n.n(a),
+    l = n(207757);
 let o = r.forwardRef(function (e, t) {
-    let { children: n, className: r, style: l, noBorder: o = !1, participantUserId: c } = e;
+    let { children: n, className: r, style: a, noBorder: o = !1, participantUserId: d } = e;
     return (0, i.jsx)("div", {
-        className: s()(r, a.V, { [a.E]: o }),
-        style: l,
+        className: s()(r, l.V, { [l.E]: o }),
+        style: a,
         ref: t,
-        "data-selenium-video-tile": c,
+        "data-selenium-video-tile": d,
         children: n,
     });
 });

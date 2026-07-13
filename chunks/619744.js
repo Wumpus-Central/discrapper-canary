@@ -1,48 +1,49 @@
-n.d(t, { k: () => d });
-var l = n(627968),
-    a = n(64700),
-    r = n(408278),
-    i = n(241326),
-    s = n(990078),
-    u = n(609174),
-    c = n(192308),
-    o = n(375708);
-function d(e) {
-    let { onBeforeDelete: t, onAfterDelete: d, variant: p = "overlay-secondary" } = e,
-        f = (0, u.Y_)(),
-        m = a.useCallback(
+"use strict";
+n.d(t, { k: () => u });
+var i = n(627968),
+    r = n(64700),
+    a = n(408278),
+    s = n(241326),
+    l = n(990078),
+    o = n(609174),
+    d = n(192308),
+    c = n(375708);
+function u(e) {
+    let { onBeforeDelete: t, onAfterDelete: u, variant: _ = "overlay-secondary" } = e,
+        E = (0, o.Y_)(),
+        A = r.useCallback(
             (e) => {
                 e.stopPropagation(),
                     e.preventDefault(),
                     (function (e) {
-                        let { clips: t, onBeforeDelete: a, onAfterDelete: r } = e;
-                        (0, c.openModalLazy)(
+                        let { clips: t, onBeforeDelete: r, onAfterDelete: a } = e;
+                        (0, d.openModalLazy)(
                             async () => {
                                 let { default: e } = await n.e("13367").then(n.bind(n, 223818));
                                 return (n) =>
-                                    (0, l.jsx)(e, {
+                                    (0, i.jsx)(e, {
                                         clips: t,
                                         ...n,
-                                        onBeforeDelete: a,
+                                        onBeforeDelete: r,
                                         onAfterDelete: async () => {
-                                            await n.onClose(), r?.();
+                                            await n.onClose(), a?.();
                                         },
                                     });
                             },
                             { stackingBehavior: "stack" },
                         );
-                    })({ clips: [f], onAfterDelete: d, onBeforeDelete: t });
+                    })({ clips: [E], onAfterDelete: u, onBeforeDelete: t });
             },
-            [f, d, t],
+            [E, u, t],
         );
-    return (0, l.jsx)(s.m, {
-        text: o.intl.string(o.t.oyYWHE),
+    return (0, i.jsx)(l.m, {
+        text: c.intl.string(c.t.oyYWHE),
         position: "top",
-        children: (0, l.jsx)(r.K, {
-            onClick: m,
-            icon: i.u,
-            "aria-label": o.intl.string(o.t.oyYWHE),
-            variant: p,
+        children: (0, i.jsx)(a.K, {
+            onClick: A,
+            icon: s.u,
+            "aria-label": c.intl.string(c.t.oyYWHE),
+            variant: _,
             size: "sm",
         }),
     });

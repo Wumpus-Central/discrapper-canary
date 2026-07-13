@@ -1,31 +1,32 @@
-i.d(t, { f: () => E });
-var n = i(627968);
-i(64700);
-var l = i(661531),
-    a = i(996682),
-    r = i(27989);
-let E = (e) => {
+"use strict";
+n.d(t, { f: () => l });
+var i = n(627968);
+n(64700);
+var r = n(661531),
+    a = n(996682),
+    s = n(27989);
+let l = (e) => {
     let {
             size: t = "md",
-            width: i,
-            height: E,
-            color: s = l.A.colors.INTERACTIVE_ICON_DEFAULT,
+            width: n,
+            height: l,
+            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: d = "",
-            ...h
+            ...c
         } = e,
-        c = (0, r.J)(t),
-        o = c?.width ?? i,
-        u = c?.height ?? E;
-    return (0, n.jsx)("svg", {
-        ...(0, a.A)(h),
+        u = (0, s.J)(t),
+        _ = u?.width ?? n,
+        E = u?.height ?? l;
+    return (0, i.jsx)("svg", {
+        ...(0, a.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: u,
+        width: _,
+        height: E,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, n.jsx)("path", {
+        children: (0, i.jsx)("path", {
             d: "M3 3a1 1 0 0 0 0 2h18a1 1 0 0 0 0-2H3ZM19 14a1 1 0 0 1 1 1v3h3a1 1 0 1 1 0 2h-3v3a1 1 0 1 1-2 0v-3h-3a1 1 0 1 1 0-2h3v-3a1 1 0 0 1 1-1ZM2 8a1 1 0 0 1 1-1h18a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1ZM3 11a1 1 0 1 0 0 2h11a1 1 0 0 0 0-2H3ZM2 16a1 1 0 0 1 1-1h8a1 1 0 0 1 0 2H3a1 1 0 0 1-1-1ZM3 19a1 1 0 1 0 0 2h8a1 1 0 0 0 0-2H3Z",
-            fill: "string" == typeof s ? s : s.css,
+            fill: "string" == typeof o ? o : o.css,
             className: d,
         }),
     });

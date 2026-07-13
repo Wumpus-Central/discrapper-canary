@@ -1,46 +1,47 @@
+"use strict";
 let i;
-n.d(e, { A: () => d });
-var l = n(17928),
-    o = n(228366),
-    r = n(773669);
-function s(t, e) {
-    if (0 === t.length) throw Error("No user IDs provided");
-    return [...t, ...e].join(",");
+n.d(t, { A: () => u });
+var r = n(17928),
+    a = n(228366),
+    s = n(773669);
+function l(e, t) {
+    if (0 === e.length) throw Error("No user IDs provided");
+    return [...e, ...t].join(",");
 }
-let u = {};
-function a() {
-    if (i === r.default.locale) return !1;
-    (u = {}), (i = r.default.locale);
+let o = {};
+function d() {
+    if (i === s.default.locale) return !1;
+    (o = {}), (i = s.default.locale);
 }
-class c extends l.Ay.Store {
+class c extends r.Ay.Store {
     initialize() {
-        this.waitFor(r.default), this.syncWith([r.default], a), (i = r.default.locale);
+        this.waitFor(s.default), this.syncWith([s.default], d), (i = s.default.locale);
     }
-    getRecommendations(t, e) {
-        if (0 !== t.length && 0 !== e.length) return u[s(t, e)];
+    getRecommendations(e, t) {
+        if (0 !== e.length && 0 !== t.length) return o[l(e, t)];
     }
 }
-let d = new c(o.h, {
+let u = new c(a.h, {
     LOGOUT: function () {
-        u = {};
+        o = {};
     },
-    WISHLIST_RECOMMENDATIONS_FETCH_START: function (t) {
-        let { userIds: e, applicationIds: n } = t;
-        if (0 === e.length || 0 === n.length) return !1;
-        let i = s(e, n);
-        u = { ...u, [i]: { state: "loading" } };
+    WISHLIST_RECOMMENDATIONS_FETCH_START: function (e) {
+        let { userIds: t, applicationIds: n } = e;
+        if (0 === t.length || 0 === n.length) return !1;
+        let i = l(t, n);
+        o = { ...o, [i]: { state: "loading" } };
     },
-    WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: function (t) {
-        let { userIds: e, applicationIds: n, data: i } = t;
-        if (0 === e.length || 0 === n.length) return !1;
-        let l = s(e, n);
-        u = { ...u, [l]: { state: "success", data: i, fetchedAt: Date.now() } };
+    WISHLIST_RECOMMENDATIONS_FETCH_SUCCESS: function (e) {
+        let { userIds: t, applicationIds: n, data: i } = e;
+        if (0 === t.length || 0 === n.length) return !1;
+        let r = l(t, n);
+        o = { ...o, [r]: { state: "success", data: i, fetchedAt: Date.now() } };
     },
-    WISHLIST_RECOMMENDATIONS_FETCH_FAILURE: function (t) {
-        let { userIds: e, applicationIds: n } = t;
-        if (0 === e.length || 0 === n.length) return !1;
-        let i = s(e, n);
-        if (u[i]?.state === "success") return !1;
-        u = { ...u, [i]: { state: "error", fetchedAt: Date.now() } };
+    WISHLIST_RECOMMENDATIONS_FETCH_FAILURE: function (e) {
+        let { userIds: t, applicationIds: n } = e;
+        if (0 === t.length || 0 === n.length) return !1;
+        let i = l(t, n);
+        if (o[i]?.state === "success") return !1;
+        o = { ...o, [i]: { state: "error", fetchedAt: Date.now() } };
     },
 });

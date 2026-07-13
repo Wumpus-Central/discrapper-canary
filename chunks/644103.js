@@ -1,6 +1,7 @@
-n.d(t, { Y: () => l, v: () => s });
+"use strict";
+n.d(t, { Y: () => r, v: () => a });
 let i = new Set();
-function l(e) {
+function r(e) {
     return (
         i.add(e),
         () => {
@@ -8,6 +9,6 @@ function l(e) {
         }
     );
 }
-function s(e) {
+function a(e) {
     if (0 !== i.size) for (let t of i) t(e);
 }

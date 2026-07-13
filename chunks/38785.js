@@ -1,59 +1,49 @@
-n.d(t, { T_: () => x, Ed: () => p, yg: () => N });
+n.d(t, { T_: () => y, Ed: () => f });
 var l = n(627968),
     r = n(64700),
     i = n(503698),
-    o = n.n(i);
-if (29845 == n.j) var s = n(815390);
-var a = n(683071),
-    u = n(725836);
+    o = n.n(i),
+    s = n(683071),
+    a = n(725836);
 n(321073);
-var c = n(525723),
-    d = n(901930),
-    C = n(6938),
+var u = n(525723),
+    c = n(901930),
+    d = n(6938),
     E = n(900730),
-    m = n(426398),
+    C = n(426398),
     h = n(375708),
     _ = n(169797),
-    S = n(270537),
-    I = n(652215),
-    f = n(327105),
-    A = n(312867);
-function p(e) {
+    m = n(270537);
+n(652215);
+var S = n(327105),
+    I = n(312867);
+function f(e) {
     let { className: t } = e;
-    return (0, l.jsx)(_.DJ, { className: o()(A.g4, t) });
+    return (0, l.jsx)(_.DJ, { className: o()(I.g4, t) });
 }
-function N() {
-    return (0, l.jsx)(_.Jg, {
-        transitionState: s.i.ENTERED,
-        onClose: I.tEg,
-        size: "md",
-        isModalContentLoading: !0,
-        children: (0, l.jsx)(p, {}),
-    });
-}
-function g(e) {
+function p(e) {
     return null != e && "object" == typeof e && "message" in e && "type" in e
-        ? (0, l.jsx)(a.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
+        ? (0, l.jsx)(s.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
         : (0, l.jsx)(r.Fragment, { children: e.directContent }, e.key);
 }
-function T(e) {
+function A(e) {
     return null == e || "" === e;
 }
-function P(e) {
+function N(e) {
     let { children: t, showUpperNoticesAboveGlobalNotices: n = !1 } = e,
         {
             errorMessage: i,
             warningMessage: o,
-            richNotices: s,
+            richNotices: a,
         } = (function () {
             let e,
-                { errorMessage: t } = (0, d.j)({}),
+                { errorMessage: t } = (0, c.j)({}),
                 n =
-                    ((e = (0, C.t4)((e) => e.selectedSkuId)),
-                    (0, c.vw)({ skuId: e }) ? h.intl.format(h.t.fsOXXO, {}) : null),
+                    ((e = (0, d.t4)((e) => e.selectedSkuId)),
+                    (0, u.vw)({ skuId: e }) ? h.intl.format(h.t.fsOXXO, {}) : null),
                 i = (function () {
-                    let e = (0, C.t4)((e) => e.paymentSourceId),
-                        t = (0, m.kc)(),
+                    let e = (0, d.t4)((e) => e.paymentSourceId),
+                        t = (0, C.kc)(),
                         {
                             relocationCountry: n,
                             relocationCurrencyCode: i,
@@ -90,31 +80,31 @@ function P(e) {
                 }, [i]),
             };
         })(),
-        u = r.useRef(null);
+        _ = r.useRef(null);
     return (
         r.useEffect(() => {
-            T(i) || null == u.current || u.current.scrollIntoView({ behavior: "smooth" });
+            A(i) || null == _.current || _.current.scrollIntoView({ behavior: "smooth" });
         }, [i]),
         r.useMemo(() => {
-            if (!(!T(i) || !T(o) || s.length > 0 || null != t)) return null;
+            if (!(!A(i) || !A(o) || a.length > 0 || null != t)) return null;
             let e = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    T(i) ? null : (0, l.jsx)(a.w, { type: "critical", children: i }),
-                    T(o) ? null : (0, l.jsx)(a.w, { type: "warning", children: o }),
-                    s.map(g),
+                    A(i) ? null : (0, l.jsx)(s.w, { type: "critical", children: i }),
+                    A(o) ? null : (0, l.jsx)(s.w, { type: "warning", children: o }),
+                    a.map(p),
                 ],
             });
             return (0, l.jsx)("div", {
-                ref: u,
-                className: A.dD,
+                ref: _,
+                className: I.dD,
                 children: n
                     ? (0, l.jsxs)(l.Fragment, { children: [t, e] })
                     : (0, l.jsxs)(l.Fragment, { children: [e, t] }),
             });
-        }, [i, o, s, t, n])
+        }, [i, o, a, t, n])
     );
 }
-function y(e) {
+function g(e) {
     return r.useMemo(
         () =>
             null == e
@@ -122,73 +112,73 @@ function y(e) {
                 : Array.isArray(e)
                   ? 0 === e.length
                       ? null
-                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => g(e)) })
+                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => p(e)) })
                   : null != e
-                    ? g(e)
+                    ? p(e)
                     : null,
         [e],
     );
 }
-function R(e) {
+function T(e) {
     let { upperInlineNoticeProps: t, shouldShowGlobalNotices: n, showUpperNoticesAboveGlobalNotices: i } = e,
-        o = y(t);
+        o = g(t);
     return r.useMemo(
         () =>
             null != o || n
                 ? n
                     ? null != o
-                        ? (0, l.jsx)(P, { showUpperNoticesAboveGlobalNotices: i, children: o })
-                        : (0, l.jsx)(P, {})
-                    : (0, l.jsx)("div", { className: A.dD, children: o })
+                        ? (0, l.jsx)(N, { showUpperNoticesAboveGlobalNotices: i, children: o })
+                        : (0, l.jsx)(N, {})
+                    : (0, l.jsx)("div", { className: I.dD, children: o })
                 : null,
         [n, o, i],
     );
 }
-function x(e) {
+function y(e) {
     let {
             upperInlineNoticeProps: t,
             planSelectContent: n,
             purchaseItemContent: r,
             subscriptionDetailsContent: i,
             isStepLoading: s,
-            paymentMethodContent: a,
+            paymentMethodContent: u,
             invoiceSummaryContent: c,
             promotionalNoticeContent: d,
-            legalContent: C,
-            invoiceTotalDueLabel: E = h.intl.string(f.default.R0cZsM),
-            invoiceTotalDueValue: m,
-            shouldShowGlobalNotices: _,
-            showUpperNoticesAboveGlobalNotices: I,
+            legalContent: E,
+            invoiceTotalDueLabel: C = h.intl.string(S.default.R0cZsM),
+            invoiceTotalDueValue: _,
+            shouldShowGlobalNotices: p,
+            showUpperNoticesAboveGlobalNotices: A,
             footerInlineNoticeProps: N,
-            className: g,
+            className: y,
         } = e,
-        T = y(N);
+        R = g(N);
     return s
-        ? (0, l.jsx)(p, { className: g })
+        ? (0, l.jsx)(f, { className: y })
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: o()(g, { [A.pg]: null == c }),
+                      className: o()(y, { [I.pg]: null == c }),
                       children: [
-                          (0, l.jsx)(R, {
+                          (0, l.jsx)(T, {
                               upperInlineNoticeProps: t,
-                              shouldShowGlobalNotices: _,
-                              showUpperNoticesAboveGlobalNotices: I,
+                              shouldShowGlobalNotices: p,
+                              showUpperNoticesAboveGlobalNotices: A,
                           }),
                           n,
-                          null != n && null != r && (0, l.jsx)("div", { className: A.ls }),
+                          null != n && null != r && (0, l.jsx)("div", { className: I.ls }),
                           r,
-                          null != i && (0, l.jsx)("div", { className: A.P3, children: i }),
-                          (0, l.jsx)("div", { className: A.Jv, children: a }),
-                          null != c && (0, l.jsx)("div", { className: A.ZF, children: c }),
+                          null != i && (0, l.jsx)("div", { className: I.P3, children: i }),
+                          (0, l.jsx)("div", { className: I.Jv, children: u }),
+                          null != c && (0, l.jsx)("div", { className: I.ZF, children: c }),
                       ],
                   }),
-                  (0, l.jsxs)(u.bx, {
+                  (0, l.jsxs)(a.bx, {
                       children: [
-                          null != E && null != m && (0, l.jsx)(S.Qf, { className: A.NR, label: E, value: m }),
-                          null != d ? (0, l.jsx)("div", { className: A.uh, children: d }) : null,
-                          C,
-                          null != T ? (0, l.jsx)("div", { className: A.Uu, children: T }) : null,
+                          null != C && null != _ && (0, l.jsx)(m.Qf, { className: I.NR, label: C, value: _ }),
+                          null != d ? (0, l.jsx)("div", { className: I.uh, children: d }) : null,
+                          E,
+                          null != R ? (0, l.jsx)("div", { className: I.Uu, children: R }) : null,
                       ],
                   }),
               ],

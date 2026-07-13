@@ -1,44 +1,45 @@
+"use strict";
 n.d(t, { A: () => o });
 var i = n(17928),
-    l = n(228366);
-let s = { gameUpsellsDismissal: {} },
-    a = { ...s };
-class r extends i.Ay.PersistedStore {
+    r = n(228366);
+let a = { gameUpsellsDismissal: {} },
+    s = { ...a };
+class l extends i.Ay.PersistedStore {
     static displayName = "GameUpsellStore";
     static persistKey = "GameUpsellStore";
     initialize(e) {
-        a = e ?? a;
+        s = e ?? s;
     }
     getState() {
-        return a;
+        return s;
     }
     getGameUpsellDismissal(e, t) {
-        return a.gameUpsellsDismissal[t]?.[e] ?? null;
+        return s.gameUpsellsDismissal[t]?.[e] ?? null;
     }
     getAllGameUpsellDismissals(e) {
-        return a.gameUpsellsDismissal[e] ?? null;
+        return s.gameUpsellsDismissal[e] ?? null;
     }
 }
-let o = new r(l.h, {
+let o = new l(r.h, {
     LOGOUT: function () {
-        a = { ...s };
+        s = { ...a };
     },
     GAME_UPSELL_DISMISS: function (e) {
         let { applicationIds: t, dismissedAt: n, dismissibleContent: i } = e;
         if (0 === t.length) return !1;
-        let l = { ...a, gameUpsellsDismissal: { ...a.gameUpsellsDismissal, [i]: { ...a.gameUpsellsDismissal[i] } } };
+        let r = { ...s, gameUpsellsDismissal: { ...s.gameUpsellsDismissal, [i]: { ...s.gameUpsellsDismissal[i] } } };
         for (let e of t) {
-            let t = a.gameUpsellsDismissal[i]?.[e],
-                s = null != t ? t.timesDismissed + 1 : 1;
-            l.gameUpsellsDismissal[i][e] = { dismissedAt: n, timesDismissed: s };
+            let t = s.gameUpsellsDismissal[i]?.[e],
+                a = null != t ? t.timesDismissed + 1 : 1;
+            r.gameUpsellsDismissal[i][e] = { dismissedAt: n, timesDismissed: a };
         }
-        a = l;
+        s = r;
     },
     GAME_UPSELL_DISMISS_CLEAR: function (e) {
         let { applicationId: t, dismissibleContent: n } = e,
-            i = a.gameUpsellsDismissal[n];
+            i = s.gameUpsellsDismissal[n];
         if (null == i || null == i[t]) return;
-        let l = { ...i };
-        delete l[t], (a = { gameUpsellsDismissal: { ...a.gameUpsellsDismissal, [n]: l } });
+        let r = { ...i };
+        delete r[t], (s = { gameUpsellsDismissal: { ...s.gameUpsellsDismissal, [n]: r } });
     },
 });
