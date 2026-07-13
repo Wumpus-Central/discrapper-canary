@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => f }), n(938796);
+n.d(t, { A: () => A }), n(938796);
 var i = n(989349),
     r = n.n(i),
-    s = n(665260),
-    a = n(315069),
-    o = n(395671),
-    l = n(384726),
-    u = n(575593);
+    a = n(665260),
+    s = n(315069),
+    l = n(395671),
+    o = n(384726),
+    d = n(575593);
 function c(e) {
     if (null != e)
         return {
@@ -15,7 +15,7 @@ function c(e) {
             videoPath: e.video_path,
         };
 }
-function d(e) {
+function u(e) {
     return {
         src: e.src,
         loop: e.loop,
@@ -33,8 +33,8 @@ function d(e) {
     };
 }
 let _ = new Set(["500428425362931713", "451550535720501248", "471376328319303681", "466696214818193408"]);
-var h = n(652215);
-class f extends a.A {
+var E = n(652215);
+class A extends s.A {
     id;
     type;
     applicationId;
@@ -80,11 +80,11 @@ class f extends a.A {
     previewAssetPaths;
     static createFromServer(e) {
         let { price: t } = e;
-        return new f({
+        return new A({
             id: e.id,
             type: e.type,
             applicationId: e.application_id,
-            application: null != e.application ? o.Ay.createFromServer(e.application) : null,
+            application: null != e.application ? l.Ay.createFromServer(e.application) : null,
             eligiblePaymentGateways: e.eligible_payment_gateways ?? null,
             googleSkuIds: e.google_sku_ids ?? null,
             productLine: e.product_line,
@@ -113,7 +113,7 @@ class f extends a.A {
                           premium: t.premium,
                       }
                     : null,
-            prices: (0, l.A)(e.prices),
+            prices: (0, o.A)(e.prices),
             premium: e.premium ?? !1,
             showAgeGate: e.show_age_gate || !1,
             restricted: e.restricted || !1,
@@ -124,7 +124,7 @@ class f extends a.A {
             externalPurchaseUrl: e.external_purchase_url,
             deleted: e.deleted ?? !1,
             bundledSkuIds: e.bundled_sku_ids ?? [],
-            bundledSkus: e.bundled_skus?.map((e) => f.createFromServer(e)) ?? [],
+            bundledSkus: e.bundled_skus?.map((e) => A.createFromServer(e)) ?? [],
             tenantMetadata: (function (e) {
                 if (null != e)
                     return {
@@ -154,7 +154,7 @@ class f extends a.A {
                                     item: (function (e) {
                                         if (null != e)
                                             switch (e.type) {
-                                                case u.R.AVATAR_DECORATION:
+                                                case d.R.AVATAR_DECORATION:
                                                     return {
                                                         id: e.id,
                                                         type: e.type,
@@ -162,7 +162,7 @@ class f extends a.A {
                                                         assets: c(e.assets),
                                                         label: e.label,
                                                     };
-                                                case u.R.NAMEPLATE:
+                                                case d.R.NAMEPLATE:
                                                     return {
                                                         id: e.id,
                                                         type: e.type,
@@ -171,7 +171,7 @@ class f extends a.A {
                                                         label: e.label,
                                                         palette: e.palette,
                                                     };
-                                                case u.R.PROFILE_EFFECT:
+                                                case d.R.PROFILE_EFFECT:
                                                     return {
                                                         id: e.id,
                                                         type: e.type,
@@ -182,9 +182,9 @@ class f extends a.A {
                                                         staticFrameSrc: e.staticFrameSrc,
                                                         thumbnailPreviewSrc: e.thumbnailPreviewSrc,
                                                         reducedMotionSrc: e.reducedMotionSrc,
-                                                        effects: e.effects?.map(d),
+                                                        effects: e.effects?.map(u),
                                                     };
-                                                case u.R.PROFILE_FRAME:
+                                                case d.R.PROFILE_FRAME:
                                                     return {
                                                         id: e.id,
                                                         type: e.type,
@@ -215,6 +215,7 @@ class f extends a.A {
                                             };
                                     })(e.variant),
                                     optionSelectorDisplayValue: e.option_selector_display_value,
+                                    sourceType: e.source_type,
                                 };
                         })(e.collectibles),
                     };
@@ -288,7 +289,7 @@ class f extends a.A {
     }
     get supportedOperatingSystems() {
         let e = null != this.systemRequirements ? Object.keys(this.systemRequirements) : [];
-        return e.length > 0 ? e : [h.uje.WINDOWS];
+        return e.length > 0 ? e : [E.uje.WINDOWS];
     }
     get isOnSale() {
         return null != this.price && null != this.price.saleAmount;
@@ -296,11 +297,11 @@ class f extends a.A {
     isGiftable() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.price;
         return (
-            this.type === h.Puh.DURABLE_PRIMARY &&
+            this.type === E.Puh.DURABLE_PRIMARY &&
             this.available &&
             this.requiresPayment &&
             null != e &&
-            h.Ly6.has(e.currency) &&
+            E.Ly6.has(e.currency) &&
             null == this.externalPurchaseUrl
         );
     }
@@ -328,23 +329,23 @@ class f extends a.A {
         return _.has(this.id);
     }
     get available() {
-        return (0, s.Lt)(this.flags, h.d68.AVAILABLE) || null != this.externalPurchaseUrl;
+        return (0, a.Lt)(this.flags, E.d68.AVAILABLE) || null != this.externalPurchaseUrl;
     }
     isAvailableForDistribution() {
         return (
             this.available &&
             null != this.getPrice() &&
             null == this.externalPurchaseUrl &&
-            (!this.premium || (0, s.Lt)(this.flags, h.d68.PREMIUM_AND_DISTRIBUTION))
+            (!this.premium || (0, a.Lt)(this.flags, E.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     isAvailable() {
-        return (0, s.Lt)(this.flags, h.d68.AVAILABLE);
+        return (0, a.Lt)(this.flags, E.d68.AVAILABLE);
     }
     isPremiumPerk() {
         return (
             this.premium &&
-            ((0, s.Lt)(this.flags, h.d68.PREMIUM_PURCHASE) || (0, s.Lt)(this.flags, h.d68.PREMIUM_AND_DISTRIBUTION))
+            ((0, a.Lt)(this.flags, E.d68.PREMIUM_PURCHASE) || (0, a.Lt)(this.flags, E.d68.PREMIUM_AND_DISTRIBUTION))
         );
     }
     hasFeature(e) {
