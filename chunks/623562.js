@@ -116,7 +116,7 @@ async function g(e, t, n) {
     }
 }
 function S(e, t, n) {
-    d.X.trackEntrypointImpression({ channel: e, conversationCount: n }),
+    d.X.trackEntrypointImpression({ channelId: e.id, conversationCount: n }),
         A.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
         a.h.dispatch({
             type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION",

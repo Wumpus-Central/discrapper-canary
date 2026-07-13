@@ -123,9 +123,9 @@ function H(e) {
                     }),
                     s.current === e && (s.current = null),
                     e === O.A.getSelectedConversationId(t.id) &&
-                        (c(!0), U.X.trackFocusModeImpression({ channel: t, conversationId: e })));
+                        (c(!0), U.X.trackFocusModeImpression({ channelId: t.id, conversationId: e })));
             },
-            [t, n, c, a],
+            [t.id, t.guild_id, n, c, a],
         ),
         u = o.useMemo(
             () => ({ bannerMeasurementRef: i, conversationJumpInProgressRef: s, selectAndFocusConversation: d }),
@@ -235,7 +235,7 @@ function ek(e) {
         }, []),
         p = o.useCallback(() => {
             U.X.trackThumbsDownReasonSelected({
-                channel: t,
+                channelId: t.id,
                 conversationId: n.id,
                 isFocusMode: l,
                 reasons: Array.from(s),
@@ -243,7 +243,7 @@ function ek(e) {
             }),
                 (0, ey.P0)((0, eb.o)(eR.intl.string(eM.default.xrEgG0), ev.Ck.SUCCESS)),
                 i();
-        }, [t, n.id, l, s, c, m, i]);
+        }, [t.id, n.id, l, s, c, m, i]);
     return (0, r.jsxs)("div", {
         className: eD.oO,
         children: [
@@ -346,13 +346,13 @@ function eG(e) {
         p = o.useCallback(() => c(!1), []),
         A = o.useCallback(() => {
             (0, G.oq)(t.id, n.id, "up"),
-                U.X.trackThumbsClicked({ channel: t, conversationId: n.id, isThumbsUp: !0, isFocusMode: g });
-        }, [t, n.id, g]),
+                U.X.trackThumbsClicked({ channelId: t.id, conversationId: n.id, isThumbsUp: !0, isFocusMode: g });
+        }, [t.id, n.id, g]),
         f = o.useCallback(() => {
             (0, G.oq)(t.id, n.id, "down"),
                 c(!0),
-                U.X.trackThumbsClicked({ channel: t, conversationId: n.id, isThumbsUp: !1, isFocusMode: g });
-        }, [t, n.id, g]),
+                U.X.trackThumbsClicked({ channelId: t.id, conversationId: n.id, isThumbsUp: !1, isFocusMode: g });
+        }, [t.id, n.id, g]),
         C = o.useCallback(
             () => (0, r.jsx)(ek, { channel: t, conversation: n, isFocusMode: g, onClose: p }),
             [t, n, g, p],
@@ -2261,7 +2261,7 @@ function lf(e) {
                 if (null != h && !c.current) {
                     if (
                         ((c.current = !0),
-                        U.X.trackFocusModeDismissed({ channel: t, conversationId: h, dismissReason: e }),
+                        U.X.trackFocusModeDismissed({ channelId: t.id, conversationId: h, dismissReason: e }),
                         "return" === e)
                     ) {
                         let e = O.A.getConversationMetadata(t.id, h)?.conversation;
@@ -2274,7 +2274,7 @@ function lf(e) {
                     l(e), a(!1), (c.current = !1);
                 }
             },
-            [t, a, l, u, h],
+            [t.id, a, l, u, h],
         );
     !(function (e, t) {
         let { isFocused: n } = (0, w.D7)(),
@@ -2756,20 +2756,22 @@ function lG(e) {
     }, [t.id]);
     let T = o.useCallback(
             (e) => {
-                null != e && e !== i && U.X.trackPreviewImpression({ channel: t, conversationId: e, isFocusMode: a }),
+                null != e &&
+                    e !== i &&
+                    U.X.trackPreviewImpression({ channelId: t.id, conversationId: e, isFocusMode: a }),
                     v(e),
                     null != e && e !== i && (0, G.qC)(t.id, t.guild_id, e);
             },
-            [t, a, i],
+            [t.id, t.guild_id, a, i],
         ),
         M = o.useCallback(() => {
             v(null), E();
         }, [E]),
         R = o.useCallback(
             (e) => {
-                U.X.trackTopicsUnitClicked({ channel: t, conversationId: e, isFocusMode: a }), s(e), E();
+                U.X.trackTopicsUnitClicked({ channelId: t.id, conversationId: e, isFocusMode: a }), s(e), E();
             },
-            [t, E, a, s],
+            [t.id, E, a, s],
         ),
         D = o.useCallback(() => (null != N ? (0, r.jsx)(lP, { channel: t, conversationId: N }) : null), [t, N]),
         L = o.useCallback(
@@ -2781,8 +2783,9 @@ function lG(e) {
             [n, C, E],
         ),
         k = o.useCallback(() => {
-            x(!0), U.X.trackTopicsUnitImpression({ channel: t, conversationIds: _.map((e) => e.id), isFocusMode: a });
-        }, [t, _, a]);
+            x(!0),
+                U.X.trackTopicsUnitImpression({ channelId: t.id, conversationIds: _.map((e) => e.id), isFocusMode: a });
+        }, [t.id, _, a]);
     return 0 === l.length
         ? null
         : (0, r.jsx)("div", {
