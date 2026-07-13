@@ -1,14 +1,14 @@
 "use strict";
-n.d(t, { e: () => k }), n(321073);
+n.d(t, { e: () => G }), n(321073);
 var i,
     r = n(627968),
-    s = n(64700),
-    a = n(919523),
-    o = n(503698),
-    l = n.n(o),
-    u = n(562708),
+    a = n(64700),
+    s = n(919523),
+    l = n(503698),
+    o = n.n(l),
+    d = n(562708),
     c = n(17928),
-    d = n(116833);
+    u = n(116833);
 n(938796);
 var _ =
         (((i = {})[(i.MOBILE_DARK_GRADIENT_THEME_ENABLED = 4)] = "MOBILE_DARK_GRADIENT_THEME_ENABLED"),
@@ -17,106 +17,106 @@ var _ =
         (i[(i.INCREASED_CONTRAST_ENABLED = 32)] = "INCREASED_CONTRAST_ENABLED"),
         (i[(i.REDUCE_SATURATION_ENABLED = 64)] = "REDUCE_SATURATION_ENABLED"),
         i),
-    h = n(460890),
-    f = n(38021),
-    p = n(818348);
-function E(e) {
+    E = n(460890),
+    A = n(38021),
+    h = n(818348);
+function I(e) {
     let {
             children: t,
-            theme: n = p.NJ.DARK,
+            theme: n = h.NJ.DARK,
             primaryColor: i = null,
-            secondaryColor: a = null,
-            gradient: o = null,
-            flags: l = 0,
-            contrast: u = 1,
+            secondaryColor: s = null,
+            gradient: l = null,
+            flags: o = 0,
+            contrast: d = 1,
             saturation: c = 1,
-            density: d = "compact",
+            density: u = "compact",
             disableAdaptiveTheme: _ = !1,
-            reduceAdaptiveTheme: h = !1,
+            reduceAdaptiveTheme: E = !1,
         } = e,
-        E = s.useMemo(
+        I = a.useMemo(
             () =>
-                (0, f.dI)({
+                (0, A.dI)({
                     theme: n,
                     primaryColor: i,
-                    secondaryColor: a,
-                    gradient: o,
-                    flags: l,
-                    contrast: u,
+                    secondaryColor: s,
+                    gradient: l,
+                    flags: o,
+                    contrast: d,
                     saturation: c,
-                    density: d,
+                    density: u,
                     disableAdaptiveTheme: _,
-                    reduceAdaptiveTheme: h,
+                    reduceAdaptiveTheme: E,
                 }),
-            [n, i, a, o, l, u, c, d, _, h],
+            [n, i, s, l, o, d, c, u, _, E],
         );
-    return (0, r.jsx)(f.Dx.Provider, { value: E, children: t });
+    return (0, r.jsx)(A.Dx.Provider, { value: I, children: t });
 }
-var m = n(775602),
-    g = n(989395),
-    A = n(71855),
-    I = n(267102),
-    T = n(652215);
+var f = n(775602),
+    p = n(989395),
+    T = n(71855),
+    m = n(267102),
+    g = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
-var y = n(534409);
+var N = n(534409);
 let C = (0, n(945810).mj)({
     name: "2026-05-mana-type-consolidation",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var N = n(750506),
-    v = n(869146),
-    R = n(773669),
-    O = n(363195),
-    b = n(531685),
-    D = n(19575),
-    L = n(418842),
-    w = n(597619),
-    M = n(571247),
-    P = n(375708);
-let x = { Modal: u.ImpressionTypes.MODAL };
-function k(e) {
+var O = n(750506),
+    R = n(869146),
+    L = n(773669),
+    D = n(363195),
+    y = n(531685),
+    v = n(19575),
+    b = n(418842),
+    M = n(597619),
+    P = n(571247),
+    U = n(375708);
+let w = { Modal: d.ImpressionTypes.MODAL };
+function G(e) {
     let { windowKey: t, themeOverride: n, children: i } = e,
-        o = null != t,
-        [u] = s.useState(() => D.Ay.getEnableHardwareAcceleration()),
+        l = null != t,
+        [d] = a.useState(() => v.Ay.getEnableHardwareAcceleration()),
         {
-            locale: f,
-            theme: p,
-            focused: k,
-            mainWindowVisible: U,
-            currentWindow: G,
+            locale: A,
+            theme: h,
+            focused: G,
+            mainWindowVisible: x,
+            currentWindow: k,
             fontScale: F,
             fontScaleClass: V,
             keyboardModeEnabled: B,
-            saturation: j,
-            desaturateUserColors: H,
-            useForcedColors: Y,
-            systemForcedColors: W,
+            saturation: H,
+            desaturateUserColors: j,
+            useForcedColors: W,
+            systemForcedColors: Y,
             useReducedMotion: K,
             alwaysShowLinkDecorations: $,
             highContrastMode: z,
-        } = (0, c.cf)([R.default, m.Ay, O.A, v.A, b.A], () => ({
-            locale: R.default.locale,
-            theme: n ?? O.A.theme,
-            focused: o ? v.A.getWindowFocused(t) : b.A.isFocused(),
-            mainWindowVisible: b.A.isVisible(),
-            currentWindow: o ? (v.A.getWindow(t) ?? window) : window,
-            fontScale: m.Ay.fontScale,
-            fontScaleClass: m.Ay.fontScaleClass,
-            keyboardModeEnabled: m.Ay.keyboardModeEnabled,
-            saturation: m.Ay.saturation,
-            desaturateUserColors: m.Ay.desaturateUserColors,
-            useForcedColors: m.Ay.useForcedColors,
-            systemForcedColors: m.Ay.systemForcedColors,
-            useReducedMotion: m.Ay.useReducedMotion,
-            alwaysShowLinkDecorations: m.Ay.alwaysShowLinkDecorations,
-            highContrastMode: m.Ay.isHighContrastModeEnabled,
+        } = (0, c.cf)([L.default, f.Ay, D.A, R.A, y.A], () => ({
+            locale: L.default.locale,
+            theme: n ?? D.A.theme,
+            focused: l ? R.A.getWindowFocused(t) : y.A.isFocused(),
+            mainWindowVisible: y.A.isVisible(),
+            currentWindow: l ? (R.A.getWindow(t) ?? window) : window,
+            fontScale: f.Ay.fontScale,
+            fontScaleClass: f.Ay.fontScaleClass,
+            keyboardModeEnabled: f.Ay.keyboardModeEnabled,
+            saturation: f.Ay.saturation,
+            desaturateUserColors: f.Ay.desaturateUserColors,
+            useForcedColors: f.Ay.useForcedColors,
+            systemForcedColors: f.Ay.systemForcedColors,
+            useReducedMotion: f.Ay.useReducedMotion,
+            alwaysShowLinkDecorations: f.Ay.alwaysShowLinkDecorations,
+            highContrastMode: f.Ay.isHighContrastModeEnabled,
         })),
         q = (function (e, t) {
-            let [n, i] = s.useState(0),
-                r = (0, I.aL)();
-            s.useEffect(() => {
+            let [n, i] = a.useState(0),
+                r = (0, m.aL)();
+            a.useEffect(() => {
                 function e() {
                     return i((e) => e + 1);
                 }
@@ -124,134 +124,134 @@ function k(e) {
                     return i((e) => Math.max(0, e - 1));
                 }
                 return (
-                    r.subscribe(T.jej.POPOUT_SHOW, e),
-                    r.subscribe(T.jej.POPOUT_HIDE, t),
+                    r.subscribe(g.jej.POPOUT_SHOW, e),
+                    r.subscribe(g.jej.POPOUT_HIDE, t),
                     () => {
-                        r.unsubscribe(T.jej.POPOUT_SHOW, e), r.unsubscribe(T.jej.POPOUT_HIDE, t);
+                        r.unsubscribe(g.jej.POPOUT_SHOW, e), r.unsubscribe(g.jej.POPOUT_HIDE, t);
                     }
                 );
             }, [r]);
-            let [a, o] = s.useState(!1);
+            let [s, l] = a.useState(!1);
             return (
-                s.useLayoutEffect(() => {
+                a.useLayoutEffect(() => {
                     function i(e) {
-                        (!t || n > 0) && a
-                            ? o(!1)
-                            : (!a && n > 0) ||
+                        (!t || n > 0) && s
+                            ? l(!1)
+                            : (!s && n > 0) ||
                               (e instanceof KeyboardEvent &&
                                   (e.ctrlKey || e.altKey || e.shiftKey || e.metaKey || S.indexOf(e.key) >= 0)) ||
-                              o((e) => !e);
+                              l((e) => !e);
                     }
-                    let r = a ? "keyup" : "mousemove";
+                    let r = s ? "keyup" : "mousemove";
                     return t && e.addEventListener(r, i), () => e?.removeEventListener(r, i);
-                }, [e, a, n, t]),
-                t && 0 === n && a
+                }, [e, s, n, t]),
+                t && 0 === n && s
             );
-        })(G, __OVERLAY__ || k),
+        })(k, __OVERLAY__ || G),
         Z = 0;
-    1 !== j && (Z |= _.REDUCE_SATURATION_ENABLED);
-    let X = (0, L.C)(),
-        Q = (0, y.qK)("RootThemeContextProvider"),
-        J = (0, y.k5)("RootThemeContextProvider"),
-        ee = (0, y.lV)("RootThemeContextProvider"),
+    1 !== H && (Z |= _.REDUCE_SATURATION_ENABLED);
+    let X = (0, b.C)(),
+        Q = (0, N.qK)("RootThemeContextProvider"),
+        J = (0, N.k5)("RootThemeContextProvider"),
+        ee = (0, N.lV)("RootThemeContextProvider"),
         et = C.useConfig({ location: "RootThemeContextProvider" }).enabled,
-        en = (0, A.m2)({ isPopoutWindow: o }),
+        en = (0, T.m2)({ isPopoutWindow: l }),
         ei = (function (e) {
-            let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: o, locale: l } = e,
-                u = s.useContext(g.A),
-                c = s.useCallback(
+            let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: l, locale: o } = e,
+                d = a.useContext(p.A),
+                c = a.useCallback(
                     (e) => {
                         let { componentName: t, payload: n } = e;
-                        u(
+                        d(
                             {
-                                type: n.impressionType ?? x[t],
+                                type: n.impressionType ?? w[t],
                                 name: n.impression?.impressionName,
                                 properties: n.impression?.impressionProperties,
                             },
                             { disableTrack: n.disableTrack },
                         );
                     },
-                    [u],
+                    [d],
                 ),
-                _ = s.useCallback(
+                _ = a.useCallback(
                     () => ({
                         i18n: {
-                            CANCEL: P.intl.string(P.t["ETE/oC"]),
-                            BACK: P.intl.string(P.t["13/7kX"]),
-                            NEXT: P.intl.string(P.t.PDTjLN),
-                            SUBMIT: P.intl.string(P.t.geKm7t),
-                            SPINNER_LOADING_LABEL: P.intl.string(P.t.ZTNur7),
-                            BUTTON_LOADING_STARTED_LABEL: P.intl.string(P.t.pfChQr),
-                            BUTTON_LOADING_FINISHED_LABEL: P.intl.string(P.t.SVParY),
-                            CLOSE_BUTTON_LABEL: P.intl.string(P.t.cpT0Cq),
-                            PLAY_BUTTON_LABEL: P.intl.string(P.t.RscU7I),
-                            PAUSE_BUTTON_LABEL: P.intl.string(P.t.ZcgDJX),
-                            NEW: P.intl.string(P.t.y2b7CA),
-                            BETA: P.intl.string(P.t.oW0eUd),
-                            EARLY_ACCESS: P.intl.string(P.t.EYxi0o),
-                            BILLING_TRIAL_FREE_TRIAL_TEXT: P.intl.string(P.t.IBYG5U),
-                            MODAL_DONT_SHOW_AGAIN: P.intl.string(M.default.m3Vfcs),
-                            LISTBOX_EMPTY_STATE: P.intl.string(M.default.db85vU),
+                            CANCEL: U.intl.string(U.t["ETE/oC"]),
+                            BACK: U.intl.string(U.t["13/7kX"]),
+                            NEXT: U.intl.string(U.t.PDTjLN),
+                            SUBMIT: U.intl.string(U.t.geKm7t),
+                            SPINNER_LOADING_LABEL: U.intl.string(U.t.ZTNur7),
+                            BUTTON_LOADING_STARTED_LABEL: U.intl.string(U.t.pfChQr),
+                            BUTTON_LOADING_FINISHED_LABEL: U.intl.string(U.t.SVParY),
+                            CLOSE_BUTTON_LABEL: U.intl.string(U.t.cpT0Cq),
+                            PLAY_BUTTON_LABEL: U.intl.string(U.t.RscU7I),
+                            PAUSE_BUTTON_LABEL: U.intl.string(U.t.ZcgDJX),
+                            NEW: U.intl.string(U.t.y2b7CA),
+                            BETA: U.intl.string(U.t.oW0eUd),
+                            EARLY_ACCESS: U.intl.string(U.t.EYxi0o),
+                            BILLING_TRIAL_FREE_TRIAL_TEXT: U.intl.string(U.t.IBYG5U),
+                            MODAL_DONT_SHOW_AGAIN: U.intl.string(P.default.m3Vfcs),
+                            LISTBOX_EMPTY_STATE: U.intl.string(P.default.db85vU),
                             LISTBOX_EMPTY_STATE_WITH_QUERY: (e) =>
-                                P.intl.formatToPlainString(M.default.bPKiId, { query: e }),
-                            KEY_CTRL_A11Y_LABEL: P.intl.string(P.t.jm6v8i),
-                            KEY_CMD_A11Y_LABEL: P.intl.string(P.t.pYkiQq),
-                            KEY_ALT_A11Y_LABEL: P.intl.string(P.t.R2n7d3),
-                            KEY_OPTION_A11Y_LABEL: P.intl.string(P.t.FMYSJY),
-                            KEY_SHIFT: P.intl.string(P.t["L+jWo5"]),
-                            KEY_SHIFT_A11Y_LABEL: P.intl.string(P.t["q+/2+S"]),
-                            KEY_UP_A11Y_LABEL: P.intl.string(P.t.HxzHDb),
-                            KEY_DOWN_A11Y_LABEL: P.intl.string(P.t["a+iRlH"]),
-                            KEY_LEFT_A11Y_LABEL: P.intl.string(P.t.xFjIVC),
-                            KEY_RIGHT_A11Y_LABEL: P.intl.string(P.t["BT3jf/"]),
-                            KEY_PAGEUP: P.intl.string(P.t.VdCWGI),
-                            KEY_PAGEDOWN: P.intl.string(P.t.gpSh3U),
-                            KEY_ANY: P.intl.string(P.t.CkGpcV),
-                            KEY_ENTER: P.intl.string(P.t.SUweGy),
-                            KEY_ENTER_A11Y_LABEL: P.intl.string(P.t.yLNala),
-                            KEY_RETURN_A11Y_LABEL: P.intl.string(P.t.V7nPj0),
-                            KEY_ESCAPE: P.intl.string(P.t.cQmsQF),
-                            KEY_ESCAPE_A11Y_LABEL: P.intl.string(P.t["2qsw5/"]),
-                            KEY_BACKSPACE: P.intl.string(P.t["L+36+h"]),
-                            KEY_BACKSPACE_A11Y_LABEL: P.intl.string(P.t["9c/Ikv"]),
-                            KEY_DELETE_A11Y_LABEL: P.intl.string(P.t.BTFDmq),
-                            DATE_INPUT_OPEN_CALENDAR_LABEL: P.intl.string(M.default.I8kUqR),
-                            CALENDAR_PREVIOUS_MONTH_LABEL: P.intl.string(M.default.raS6yf),
-                            CALENDAR_NEXT_MONTH_LABEL: P.intl.string(M.default["/cp93l"]),
-                            INLINE_NOTICE_GENERIC_ERROR: P.intl.string(P.t["rTU7/z"]),
+                                U.intl.formatToPlainString(P.default.bPKiId, { query: e }),
+                            KEY_CTRL_A11Y_LABEL: U.intl.string(U.t.jm6v8i),
+                            KEY_CMD_A11Y_LABEL: U.intl.string(U.t.pYkiQq),
+                            KEY_ALT_A11Y_LABEL: U.intl.string(U.t.R2n7d3),
+                            KEY_OPTION_A11Y_LABEL: U.intl.string(U.t.FMYSJY),
+                            KEY_SHIFT: U.intl.string(U.t["L+jWo5"]),
+                            KEY_SHIFT_A11Y_LABEL: U.intl.string(U.t["q+/2+S"]),
+                            KEY_UP_A11Y_LABEL: U.intl.string(U.t.HxzHDb),
+                            KEY_DOWN_A11Y_LABEL: U.intl.string(U.t["a+iRlH"]),
+                            KEY_LEFT_A11Y_LABEL: U.intl.string(U.t.xFjIVC),
+                            KEY_RIGHT_A11Y_LABEL: U.intl.string(U.t["BT3jf/"]),
+                            KEY_PAGEUP: U.intl.string(U.t.VdCWGI),
+                            KEY_PAGEDOWN: U.intl.string(U.t.gpSh3U),
+                            KEY_ANY: U.intl.string(U.t.CkGpcV),
+                            KEY_ENTER: U.intl.string(U.t.SUweGy),
+                            KEY_ENTER_A11Y_LABEL: U.intl.string(U.t.yLNala),
+                            KEY_RETURN_A11Y_LABEL: U.intl.string(U.t.V7nPj0),
+                            KEY_ESCAPE: U.intl.string(U.t.cQmsQF),
+                            KEY_ESCAPE_A11Y_LABEL: U.intl.string(U.t["2qsw5/"]),
+                            KEY_BACKSPACE: U.intl.string(U.t["L+36+h"]),
+                            KEY_BACKSPACE_A11Y_LABEL: U.intl.string(U.t["9c/Ikv"]),
+                            KEY_DELETE_A11Y_LABEL: U.intl.string(U.t.BTFDmq),
+                            DATE_INPUT_OPEN_CALENDAR_LABEL: U.intl.string(P.default.I8kUqR),
+                            CALENDAR_PREVIOUS_MONTH_LABEL: U.intl.string(P.default.raS6yf),
+                            CALENDAR_NEXT_MONTH_LABEL: U.intl.string(P.default["/cp93l"]),
+                            INLINE_NOTICE_GENERIC_ERROR: U.intl.string(U.t["rTU7/z"]),
                             STEP_INDICATOR: (e, t) =>
-                                P.intl.formatToPlainString(M.default["v2YSk/"], { stepNumber: e, stepCount: t }),
-                            SELECT_PLACEHOLDER: P.intl.string(M.default["A+pfVR"]),
-                            CLEAR_SELECTION: P.intl.string(M.default.JA5C7L),
-                            SELECTED_TAGS_HEADING: P.intl.string(M.default.VMNfsY),
-                            PERCENT_COMPLETE: (e) => P.intl.formatToPlainString(M.default["2L/ygS"], { percent: e }),
+                                U.intl.formatToPlainString(P.default["v2YSk/"], { stepNumber: e, stepCount: t }),
+                            SELECT_PLACEHOLDER: U.intl.string(P.default["A+pfVR"]),
+                            CLEAR_SELECTION: U.intl.string(P.default.JA5C7L),
+                            SELECTED_TAGS_HEADING: U.intl.string(P.default.VMNfsY),
+                            PERCENT_COMPLETE: (e) => U.intl.formatToPlainString(P.default["2L/ygS"], { percent: e }),
                         },
-                        locale: l,
+                        locale: o,
                         theme: t,
                         saturation: n,
-                        defaultLayerContext: N.uY,
+                        defaultLayerContext: O.uY,
                         experiments: { enabledExperiments: i },
                         trackImpression: c,
                         isWindowFocused: () => r,
-                        isMainWindowVisible: () => o,
-                        dynamicGraphicComponents: d.Q,
+                        isMainWindowVisible: () => l,
+                        dynamicGraphicComponents: u.Q,
                     }),
-                    [t, n, i, c, r, o, l],
+                    [t, n, i, c, r, l, o],
                 ),
-                [h, f] = s.useState(_);
+                [E, A] = a.useState(_);
             return (
-                s.useLayoutEffect(() => {
+                a.useLayoutEffect(() => {
                     function e() {
-                        f(_);
+                        A(_);
                     }
-                    (0, a.waitForAllDefaultIntlMessagesLoaded)().then(e), P.intl.onLocaleChange(e);
+                    (0, s.waitForAllDefaultIntlMessagesLoaded)().then(e), U.intl.onLocaleChange(e);
                 }, [_]),
-                h
+                E
             );
         })({
-            theme: p,
-            saturation: j,
-            enabledExperiments: s.useMemo(() => {
+            theme: h,
+            saturation: H,
+            enabledExperiments: a.useMemo(() => {
                 let e = [];
                 return (
                     Q && e.push("refresh-fast-follow-avatars"),
@@ -261,39 +261,40 @@ function k(e) {
                     e
                 );
             }, [Q, J, ee, et]),
-            focused: k,
-            mainWindowVisible: U,
-            locale: f,
+            focused: G,
+            mainWindowVisible: x,
+            locale: A,
         });
-    return (0, r.jsx)(h.GE, {
+    return (0, r.jsx)(E.GE, {
         value: ei,
-        children: (0, r.jsx)(E, {
-            theme: p,
+        children: (0, r.jsx)(I, {
+            theme: h,
             flags: Z,
-            saturation: j,
+            saturation: H,
             density: X,
-            children: (0, r.jsx)(w.fs, {
-                lang: f,
-                theme: p,
+            children: (0, r.jsx)(M.fs, {
+                lang: A,
+                theme: h,
                 density: X,
-                focused: k,
+                focused: G,
                 fontScale: F,
                 fontScaleClass: V,
                 keyboardModeEnabled: B,
                 mouseMode: q,
-                saturation: j,
-                desaturateUserColors: H,
-                useForcedColors: Y,
-                systemForcedColors: W,
+                saturation: H,
+                desaturateUserColors: j,
+                useForcedColors: W,
+                systemForcedColors: Y,
                 useReducedMotion: K,
                 alwaysShowLinkDecorations: $,
-                hardwareAccelerationEnabled: u,
+                hardwareAccelerationEnabled: d,
                 highContrastMode: z,
-                isPopoutWindow: o,
-                rootClassName: l()(en, {
+                isPopoutWindow: l,
+                rootClassName: o()(en, {
                     "refresh-fast-follow-avatars": Q,
                     "refresh-fast-follow-guild-bg": J,
                     "refresh-fast-follow-distinct-borders": ee,
+                    "mana-type-consolidation": et,
                 }),
                 children: i,
             }),
