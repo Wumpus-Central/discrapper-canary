@@ -8339,6 +8339,24 @@ let { Themes: c } = d.zv,
                         return "text-xs/medium";
                     },
                 },
+                JUMP_TO_PRESENT_BOTTOM_SPACING: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 12;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 8;
+                        return 12;
+                    },
+                },
+                JUMP_TO_PRESENT_BUTTON_SIZE: { resolve: () => 40 },
+                JUMP_TO_PRESENT_ICON_SIZE: { resolve: () => 20 },
+                JUMP_TO_PRESENT_RIGHT_SPACING: {
+                    resolve(e) {
+                        let { enabledExperiments: t } = e;
+                        if (0 === t.length) return 12;
+                        for (let e of t) if ("mobile-visual-refresh" === e) return 16;
+                        return 12;
+                    },
+                },
                 MEDIA_KEYBOARD_BAR_BORDER_RADIUS: {
                     resolve(e) {
                         let { enabledExperiments: t } = e;
@@ -8769,8 +8787,8 @@ let { Themes: c } = d.zv,
     },
     {
         Layout: C,
-        Space: R,
-        SpacePx: O,
+        Space: O,
+        SpacePx: R,
     } = {
         Layout: {
             SPACE_0: 0,
@@ -9015,14 +9033,14 @@ let { Themes: c } = d.zv,
         spacing: o()(S, (e) => `${e}px`),
         layout: o()(C, (e) => ("number" == typeof e ? `${e}px` : e)),
         space: {
-            ...o()(R, (e) => ({
+            ...o()(O, (e) => ({
                 css: e.css,
                 resolve(t) {
                     let { density: n } = t;
                     return e.resolve(n);
                 },
             })),
-            ...o()(O, (e) => `${e}px`),
+            ...o()(R, (e) => `${e}px`),
         },
     };
 function y(e, t) {

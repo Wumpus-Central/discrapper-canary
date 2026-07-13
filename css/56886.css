@@ -9538,6 +9538,10 @@
     --mobile-input-field-text-style-lg: text-md/medium;
     --mobile-input-field-text-style-md: text-sm/medium;
     --mobile-input-field-text-style-sm: text-xs/medium;
+    --mobile-jump-to-present-bottom-spacing: 12px;
+    --mobile-jump-to-present-button-size: 40px;
+    --mobile-jump-to-present-icon-size: 20px;
+    --mobile-jump-to-present-right-spacing: 12px;
     --mobile-media-keyboard-bar-border-radius: 2147483647px;
     --mobile-media-keyboard-bar-border-width: 0px;
     --mobile-media-keyboard-bar-buttons-margin-horizontal: 24px;
@@ -9675,6 +9679,8 @@
     --mobile-input-field-text-style-lg: text-md/normal;
     --mobile-input-field-text-style-md: text-md/normal;
     --mobile-input-field-text-style-sm: text-xs/normal;
+    --mobile-jump-to-present-bottom-spacing: 8px;
+    --mobile-jump-to-present-right-spacing: 16px;
     --mobile-media-keyboard-bar-border-radius: 16px;
     --mobile-media-keyboard-bar-border-width: 1px;
     --mobile-media-keyboard-bar-buttons-margin-horizontal: 0px;
