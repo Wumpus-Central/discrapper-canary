@@ -16,3 +16,5 @@ function s(e, t) {
 function a() {
     l && speechSynthesis.cancel();
 }
+sis.cancel();
+}
