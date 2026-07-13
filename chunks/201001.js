@@ -8,31 +8,34 @@ var i = n(627968),
     o = n.n(l),
     d = n(187322),
     c = n(936005),
-    u = n(154327),
-    _ = n(518898),
-    E = n(715828),
-    A = n(484702),
-    h = n(403431);
-let I = Object.freeze({ spacerTop: 0, totalHeight: 0, items: [], isSidebarVisible: !1 });
-var f = n(789279),
-    p = n(448539),
+    u = n(448539),
+    _ = n(154327),
+    E = n(518898),
+    A = n(715828),
+    h = n(484702),
+    I = n(403431);
+let f = Object.freeze({ spacerTop: 0, totalHeight: 0, items: [], isSidebarVisible: !1 });
+var p = n(789279),
     T = n(584648),
     m = n(751591),
     g = n(45596);
 function S(e, t, n, a) {
     let l = (0, c.A)(e),
         S = new Map(),
-        N = new a((e) => {
-            e.forEach((e) => {
-                let { target: t } = e;
-                S.get(t)?.(e);
-            });
-        });
+        N =
+            "u" < typeof document
+                ? u.F
+                : new a((e) => {
+                      e.forEach((e) => {
+                          let { target: t } = e;
+                          S.get(t)?.(e);
+                      });
+                  });
     return r.forwardRef(function (a, c) {
         let C,
-            R,
+            O,
             {
-                className: O,
+                className: R,
                 onScroll: L,
                 onResize: D = null,
                 onContentResize: y = null,
@@ -69,8 +72,8 @@ function S(e, t, n, a) {
             ea = r.useRef(null),
             es = r.useRef(null),
             [el, eo] = r.useState(!1),
-            { scrollerRef: ed, scrollerState: ec, getScrollerState: eu } = (0, u.A)();
-        (0, _.A)({ scrollerRef: ed, className: O, specs: l, orientation: "vertical", dir: v });
+            { scrollerRef: ed, scrollerState: ec, getScrollerState: eu } = (0, _.A)();
+        (0, E.A)({ scrollerRef: ed, className: R, specs: l, orientation: "vertical", dir: v });
         let {
                 spacerTop: e_,
                 totalHeight: eE,
@@ -93,24 +96,24 @@ function S(e, t, n, a) {
                         getScrollerState: u,
                         getAnchorId: _,
                     } = e,
-                    f = (0, A.A)(),
-                    p = (0, r.useRef)(I),
-                    [T] = (0, r.useState)(() => new E.A()),
+                    E = (0, h.A)(),
+                    p = (0, r.useRef)(f),
+                    [T] = (0, r.useState)(() => new A.A()),
                     {
                         dirty: m,
                         chunkStart: g,
                         chunkEnd: S,
                         forceUpdateOnChunkChange: N,
-                    } = (0, h.A)({ chunkSize: o, getScrollerState: u, forceUpdate: f }),
+                    } = (0, I.A)({ chunkSize: o, getScrollerState: u, forceUpdate: E }),
                     { items: C } = p.current,
-                    R = null,
-                    { scrollTop: O } = u();
+                    O = null,
+                    { scrollTop: R } = u();
                 for (let e of C) {
-                    if (0 === O) break;
+                    if (0 === R) break;
                     if ("footer" === e.type || "header" === e.type || null == e.anchorId) continue;
                     let t = "row" === e.type ? e.row : void 0;
-                    if (e.offsetTop >= O) {
-                        R = { id: e.anchorId, section: e.section, row: t, scrollOffset: e.offsetTop - O };
+                    if (e.offsetTop >= R) {
+                        O = { id: e.anchorId, section: e.section, row: t, scrollOffset: e.offsetTop - R };
                         break;
                     }
                 }
@@ -137,7 +140,7 @@ function S(e, t, n, a) {
                     );
                 return (
                     (0, r.useLayoutEffect)(() => void (p.current = D)),
-                    { ...D, listComputer: T, forceUpdateOnChunkChange: N, anchor: R, isSidebarVisible: L }
+                    { ...D, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
                 );
             })({
                 sections: b,
@@ -152,7 +155,7 @@ function S(e, t, n, a) {
                 getScrollerState: eu,
                 getAnchorId: W,
             }),
-            eT = (0, f.A)(ed),
+            eT = (0, p.A)(ed),
             em = r.useRef(D),
             eg = r.useRef(y);
         r.useLayoutEffect(() => {
@@ -166,21 +169,21 @@ function S(e, t, n, a) {
                 [ef, ec],
             ),
             eN = r.useCallback(() => eS(), [eS]);
-        (0, p.A)({ ref: ed, onUpdate: eN, key: "container", resizeObserver: N, listenerMap: S }),
-            (0, p.A)({ ref: es, onUpdate: () => eg.current?.(), key: "content", resizeObserver: N, listenerMap: S });
+        (0, u.A)({ ref: ed, onUpdate: eN, key: "container", resizeObserver: N, listenerMap: S }),
+            (0, u.A)({ ref: es, onUpdate: () => eg.current?.(), key: "content", resizeObserver: N, listenerMap: S });
         let eC =
                 ((C = r.useRef(eA)),
                 r.useEffect(() => {
                     C.current = eA;
                 }, [eA]),
                 r.useCallback(() => C.current, [])),
-            eR =
-                ((R = r.useRef(b)),
+            eO =
+                ((O = r.useRef(b)),
                 r.useEffect(() => {
-                    R.current = b;
+                    O.current = b;
                 }, [b]),
                 r.useCallback((e) => {
-                    let { current: t } = R,
+                    let { current: t } = O,
                         n = 0;
                     for (let i = 0; i < t.length; i++) {
                         let r = t[i];
@@ -195,7 +198,7 @@ function S(e, t, n, a) {
                 getScrollerNode: () => ed.current,
                 getScrollerState: eu,
                 getItems: eC,
-                getSectionRowFromIndex: eR,
+                getSectionRowFromIndex: eO,
                 ...((e = (0, T.A)(ed, eu, eT)),
                 (t = (e, t) => eI.computeScrollPosition(e, t)),
                 {
@@ -216,8 +219,8 @@ function S(e, t, n, a) {
                     },
                 }),
             };
-        }, [ed, eu, eR, eC, eI, eT]);
-        let eO = r.useCallback(
+        }, [ed, eu, eO, eC, eI, eT]);
+        let eR = r.useCallback(
             (e) => {
                 eS(1),
                     null == ea.current ? eo(!0) : clearTimeout(ea.current),
@@ -263,8 +266,8 @@ function S(e, t, n, a) {
             }),
             (0, i.jsxs)("div", {
                 ref: ed,
-                onScroll: eO,
-                className: s()(O, { [e]: !0, [t]: $, [n]: z, [g.qw]: el }),
+                onScroll: eR,
+                className: s()(R, { [e]: !0, [t]: $, [n]: z, [g.qw]: el }),
                 style: (0, m.Ay)(Z),
                 ...er,
                 children: [
