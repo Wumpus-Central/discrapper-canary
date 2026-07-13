@@ -17,18 +17,18 @@ var n = a(627968),
     o = a(430993),
     c = a(696208),
     u = a(629584),
-    d = a(834730),
-    f = a(192308),
-    h = a(821609),
-    p = a(77729),
+    f = a(834730),
+    d = a(192308);
+if (88245 != a.j) var h = a(821609);
+var p = a(77729),
     b = a(231545),
     x = a(140791);
 let m = [
         { name: "View", value: "view" },
         { name: "Edit", value: "edit" },
     ],
-    y = [117, 117, 105, 100];
-async function A(e) {
+    v = [117, 117, 105, 100];
+async function y(e) {
     let { default: t } = await a.e("25777").then(a.t.bind(a, 293384, 19)),
         n = t.createFile(!1),
         r = new Promise((e, t) => {
@@ -49,25 +49,25 @@ async function A(e) {
     }
     return null;
 }
-function E(e) {
+function A(e) {
     let {
             filename: t,
             initialJson: a,
             fileBuffer: i,
-            boxStart: f,
+            boxStart: d,
             boxSize: h,
             hdrSize: p,
-            transitionState: A,
-            onClose: E,
+            transitionState: y,
+            onClose: A,
         } = e,
-        v = r.useRef(null),
+        E = r.useRef(null),
         [w, S] = r.useState("view"),
         [g, C] = r.useState(() => JSON.parse(a)),
         [N, T] = r.useState(!1),
         [j, O] = r.useState(null);
     return (0, n.jsxs)(l.d, {
-        transitionState: A,
-        onClose: E,
+        transitionState: y,
+        onClose: A,
         size: "xl",
         "aria-label": "Clip metadata",
         children: [
@@ -80,7 +80,7 @@ function E(e) {
                     onChange: (e) =>
                         (function (e) {
                             if ("view" === e) {
-                                let e = v.current?.value ?? a;
+                                let e = E.current?.value ?? a;
                                 try {
                                     C(JSON.parse(e));
                                 } catch (e) {
@@ -97,7 +97,7 @@ function E(e) {
                         autoCapitalize: "off",
                         autoComplete: "off",
                         spellCheck: "false",
-                        ref: v,
+                        ref: E,
                         defaultValue: a,
                         onInput: N ? void 0 : () => T(!0),
                         onChange: null != j ? () => O(null) : void 0,
@@ -108,21 +108,21 @@ function E(e) {
                     }),
                     "view" === w && (0, n.jsx)(b.A, { data: g }),
                     null != j &&
-                        (0, n.jsx)(d.E, { variant: "text-sm/medium", color: "text-feedback-critical", children: j }),
+                        (0, n.jsx)(f.E, { variant: "text-sm/medium", color: "text-feedback-critical", children: j }),
                 ],
             }),
             (0, n.jsx)(c.H, {
                 actionsFullWidth: !0,
                 actions:
                     "view" === w
-                        ? [{ text: "Close", onClick: E, variant: "primary" }]
+                        ? [{ text: "Close", onClick: A, variant: "primary" }]
                         : [
-                              { text: "Cancel", onClick: E, variant: "secondary" },
+                              { text: "Cancel", onClick: A, variant: "secondary" },
                               {
                                   text: "Save as...",
                                   onClick: function () {
                                       let e,
-                                          a = v.current?.value ?? "";
+                                          a = E.current?.value ?? "";
                                       try {
                                           e = JSON.parse(a);
                                       } catch (e) {
@@ -143,7 +143,7 @@ function E(e) {
                                                       );
                                                   let l = new Uint8Array(i);
                                                   new DataView(l.buffer).setUint32(0, i, !1),
-                                                      l.set(y, 4),
+                                                      l.set(v, 4),
                                                       l.set(new Uint8Array(e, t + 8, n - 8), 8),
                                                       l.set(r, n);
                                                   let s = new Uint8Array(e, 0, t),
@@ -155,14 +155,14 @@ function E(e) {
                                                       c.set(o, s.length + l.length),
                                                       c.buffer
                                                   );
-                                              })(i, f, h, p, s);
+                                              })(i, d, h, p, s);
                                           (n = new Blob([o], { type: "video/mp4" })),
                                               (a = URL.createObjectURL(n)),
                                               ((r = document.createElement("a")).href = a),
                                               (r.download = t),
                                               r.click(),
                                               URL.revokeObjectURL(a),
-                                              E();
+                                              A();
                                       } catch (e) {
                                           O(e instanceof Error ? e.message : String(e));
                                       }
@@ -175,14 +175,14 @@ function E(e) {
         ],
     });
 }
-async function v(e, t) {
+async function E(e, t) {
     try {
-        let a = await A(e);
+        let a = await y(e);
         if (null == a)
             return void (0, i.A)({ title: "No metadata found", subtitle: `No clip metadata UUID box found in ${t}` });
         let r = JSON.stringify(a.metadata, null, 2);
-        (0, f.openModal)((i) =>
-            (0, n.jsx)(E, {
+        (0, d.openModal)((i) =>
+            (0, n.jsx)(A, {
                 ...i,
                 filename: t,
                 initialJson: r,
@@ -198,13 +198,13 @@ async function v(e, t) {
 }
 async function w(e) {
     let t = await e.arrayBuffer();
-    await v(t, e.name);
+    await E(t, e.name);
 }
 async function S(e) {
     try {
         let { data: t, filename: a } = await p.A.clips.loadClip(e),
             n = t.buffer.slice(t.byteOffset, t.byteOffset + t.byteLength);
-        await v(n, a);
+        await E(n, a);
     } catch (e) {
         (0, i.A)({ title: "Failed to load clip", subtitle: e instanceof Error ? e.message : String(e) });
     }

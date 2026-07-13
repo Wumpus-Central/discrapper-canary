@@ -32,7 +32,8 @@ function _(e) {
                           let { default: e } = await Promise.all([
                               n.e("77791"),
                               n.e("28152"),
-                              n.e("19119"),
+                              n.e("156"),
+                              n.e("32498"),
                               n.e("14565"),
                           ]).then(n.bind(n, 839785));
                           return (n) => (0, i.jsx)(e, { entry: c, user: t, onAction: E, onOpenGameSettings: A, ...n });

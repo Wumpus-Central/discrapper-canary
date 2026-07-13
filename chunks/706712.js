@@ -1,15 +1,15 @@
-n.d(t, { Ay: () => R, DQ: () => C, Dj: () => j, F5: () => T, Jc: () => E, L6: () => x, ZX: () => _, km: () => v });
+n.d(t, { Ay: () => R, DQ: () => C, Dj: () => T, F5: () => j, Jc: () => E, L6: () => x, ZX: () => _, km: () => v });
 var i = n(627968),
     s = n(64700),
     r = n(503698),
     l = n.n(r),
-    a = n(17928),
-    o = n(990078),
-    d = n(834730),
-    u = n(821609),
-    c = n(150934),
-    h = n(364522),
-    m = n(964486),
+    a = n(17928);
+if (88245 != n.j) var o = n(990078);
+if (88245 != n.j) var d = n(834730);
+if (88245 != n.j) var u = n(821609);
+if (88245 != n.j) var c = n(150934);
+if (88245 != n.j) var h = n(364522);
+var m = n(964486),
     g = n(617710),
     p = n(127819),
     f = n(505206);
@@ -47,7 +47,7 @@ function v(e, t) {
         o,
     ];
 }
-function T(e) {
+function j(e) {
     let t = s.useRef(Array(I).fill(0)),
         n = s.useRef(performance.now()),
         i = s.useRef(0),
@@ -83,7 +83,7 @@ function T(e) {
         ]
     );
 }
-function j(e, t) {
+function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = s.useRef(Array(I).fill(0)),
         r = s.useRef(performance.now()),
@@ -161,11 +161,11 @@ function y(e) {
             renderedFrameCount: A,
             bufferFramecountRef: S,
             frameCheckerEffect: I,
-        } = j(n, r),
-        [y, w, b] = T(t),
+        } = T(n, r),
+        [y, b, w] = j(t),
         [N, _] = v(y, I),
         R = performance.now() - l.current < E,
-        O = w(c, S.current);
+        O = b(c, S.current);
     (0, m.Ay)(
         () => (
             N(),
@@ -175,8 +175,8 @@ function y(e) {
         ),
     );
     let M = s.useCallback(() => {
-        g(), b(), N();
-    }, [g, b, N]);
+        g(), w(), N();
+    }, [g, w, N]);
     return (0, i.jsxs)("div", {
         className: p.st,
         children: [
@@ -295,7 +295,7 @@ function y(e) {
         ],
     });
 }
-function w(e) {
+function b(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: r } = e,
         [l, a] = s.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
         d = s.useRef(null);
@@ -332,7 +332,7 @@ function w(e) {
         })
     );
 }
-function b(e) {
+function w(e) {
     let { socket: t } = e,
         n = t.dispatcher.getDispatchTimings(),
         [r, a] = s.useState(!1);
@@ -495,8 +495,8 @@ function R() {
                 className: p.nd,
                 children: [
                     (0, i.jsx)(y, { socket: e, isAverageFrameTime: t }),
-                    (0, i.jsx)(w, { socket: e, isAverageFrameTime: t, onToggleAverageFrameTime: n }),
-                    (0, i.jsx)(b, { socket: e }),
+                    (0, i.jsx)(b, { socket: e, isAverageFrameTime: t, onToggleAverageFrameTime: n }),
+                    (0, i.jsx)(w, { socket: e }),
                     (0, i.jsx)(N, { socket: e }),
                 ],
             }),

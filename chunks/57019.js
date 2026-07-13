@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { Fn: () => h, Gt: () => f, Ru: () => m });
+n.d(t, { Fn: () => h, Gt: () => m, Ru: () => f });
 var i = n(64700),
     r = n(717421),
-    s = n(518009),
-    a = n(626584),
-    o = n(567249),
-    l = n(287809),
-    u = n(531685),
-    c = n(365971),
+    l = n(518009),
+    s = n(626584),
+    a = n(567249),
+    o = n(287809),
+    c = n(531685),
+    u = n(365971),
     d = n(392164);
-let _ = new a.A("NotificationLayoutManager");
+let A = new s.A("NotificationLayoutManager");
 class h {
     resizeObserver;
     listeners = new Map();
@@ -50,13 +49,13 @@ class h {
         for (let i of this.items) {
             let r = this.listeners.get(i.notification.id);
             if (null == r) continue;
-            let { offsetHeight: s } = r.element;
-            (r.top !== t || r.height !== s || r.index !== n) && (e = !0),
+            let { offsetHeight: l } = r.element;
+            (r.top !== t || r.height !== l || r.index !== n) && (e = !0),
                 (r.top = t),
-                (r.height = s),
+                (r.height = l),
                 (r.index = n),
-                0 === t && (this.matchHeight !== s && (e = !0), (this.matchHeight = s)),
-                (t += s + 8),
+                0 === t && (this.matchHeight !== l && (e = !0), (this.matchHeight = l)),
+                (t += l + 8),
                 n++;
         }
         e && this.broadcastLayoutUpdates();
@@ -87,76 +86,76 @@ class h {
         return this.listeners.get(e);
     }
 }
-let f = i.createContext(new h(!0));
-function p(e, t, n) {
+let m = i.createContext(new h(!0));
+function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
-let E = { mass: 0.8, friction: 25, tension: 320 };
-function m(e, t, n) {
-    let [a, h] = (0, r.z)(
+let p = { mass: 0.8, friction: 25, tension: 320 };
+function f(e, t, n) {
+    let [s, h] = (0, r.z)(
             () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
             void 0,
             [],
         ),
-        m = i.useRef(h),
-        g = i.useContext(f),
-        A = i.useMemo(() => {
+        f = i.useRef(h),
+        E = i.useContext(m),
+        b = i.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
-                    ? g.unsubscribe(e)
-                    : g.subscribe(e, n, (n) => {
-                          let { locked: i, matchHeight: r, height: s, top: a, index: h } = n;
-                          if (l.default.getCurrentUser()?.isStaff()) {
-                              let t = o.A.getWindow(d.f),
-                                  n = null != t ? u.A.windowSize((0, c.Q2)(t)) : void 0;
-                              _.info(
+                    ? E.unsubscribe(e)
+                    : E.subscribe(e, n, (n) => {
+                          let { locked: i, matchHeight: r, height: l, top: s, index: h } = n;
+                          if (o.default.getCurrentUser()?.isStaff()) {
+                              let t = a.A.getWindow(d.f),
+                                  n = null != t ? c.A.windowSize((0, u.Q2)(t)) : void 0;
+                              A.info(
                                   "Notification layout update",
-                                  { id: e, locked: i, matchHeight: r, height: s, top: a, index: h },
+                                  { id: e, locked: i, matchHeight: r, height: l, top: s, index: h },
                                   n,
                               );
                           }
-                          let { current: f } = m,
-                              g = {
+                          let { current: m } = f,
+                              E = {
                                   opacity: i && h > 4 ? 0 : i ? Math.min(1 - h / 4, 1) : 1,
                                   scale: i ? Math.min(1 - h / 4, 1) : 1,
-                                  transform: p(h, i, a),
+                                  transform: g(h, i, s),
                                   contentOpacity: i && h > 0 ? 0 : 1,
-                                  height: i ? r : s,
+                                  height: i ? r : l,
                               };
-                          f({
+                          m({
                               from: t
                                   ? void 0
                                   : {
                                         opacity: 0,
                                         scale: 1.1,
-                                        transform: -((i ? r : s) * 1),
+                                        transform: -((i ? r : l) * 1),
                                         contentOpacity: 1,
-                                        height: i ? r : s,
+                                        height: i ? r : l,
                                     },
-                              to: g,
-                              config: E,
+                              to: E,
+                              config: p,
                           }),
                               (t = !0);
                       });
             };
-        }, [e, g]);
+        }, [e, E]);
     return (
         i.useLayoutEffect(() => {
-            if (t === s.wL.YEETED) {
-                let t = g.getLayoutSpecs(e);
+            if (t === l.wL.YEETED) {
+                let t = E.getLayoutSpecs(e);
                 if (null == t) return void n();
-                m.current({
+                f.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
-                        transform: p(t.index, g.locked, t.top) + (g.locked ? 0 : t.height / 2),
+                        transform: g(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
                     },
-                    config: E,
+                    config: p,
                 }),
                     setTimeout(n, 300);
             }
-        }, [t, n, e, g]),
-        { ref: A, springs: a }
+        }, [t, n, e, E]),
+        { ref: b, springs: s }
     );
 }

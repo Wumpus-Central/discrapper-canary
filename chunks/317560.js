@@ -1,18 +1,18 @@
-n.d(t, { R: () => a, j: () => o });
+n.d(t, { R: () => o, j: () => s });
 var l = n(627968),
     r = n(192308);
 let i = "social-layer-storefront-product-details-modal",
-    a = (e) => {
+    o = (e) => {
         let {
             customNavigateToSocialLayerStorefront: t,
-            skuId: a,
-            applicationId: o,
-            isStorefront: s,
+            skuId: o,
+            applicationId: s,
+            isStorefront: a,
             giftRecipient: u,
             giftingOrigin: c,
             analyticsLocations: d,
-            analyticsContext: m,
-            onClose: E,
+            analyticsContext: E,
+            onClose: C,
         } = e;
         (0, r.openModalLazy)(
             async () => {
@@ -44,15 +44,17 @@ let i = "social-layer-storefront-product-details-modal",
                     n.e("3131"),
                     n.e("47177"),
                     n.e("8563"),
-                    n.e("27272"),
                     n.e("36149"),
+                    n.e("69985"),
                     n.e("51778"),
                     n.e("21930"),
-                    n.e("24914"),
-                    n.e("42714"),
                     n.e("24265"),
+                    n.e("97198"),
+                    n.e("27272"),
+                    n.e("24914"),
                     n.e("68532"),
                     n.e("20382"),
+                    n.e("19736"),
                     n.e("73165"),
                     n.e("34268"),
                     n.e("63333"),
@@ -62,11 +64,11 @@ let i = "social-layer-storefront-product-details-modal",
                 return (n) =>
                     (0, l.jsx)(e, {
                         ...n,
-                        skuId: a,
-                        applicationId: o,
-                        isStorefront: s,
+                        skuId: o,
+                        applicationId: s,
+                        isStorefront: a,
                         analyticsLocations: d,
-                        analyticsContext: m,
+                        analyticsContext: E,
                         giftRecipient: u,
                         giftingOrigin: c,
                         customNavigateToSocialLayerStorefront: t,
@@ -74,13 +76,13 @@ let i = "social-layer-storefront-product-details-modal",
             },
             {
                 modalKey: i,
-                allowsNavigation: s,
+                allowsNavigation: a,
                 onCloseCallback: () => {
-                    E?.();
+                    C?.();
                 },
             },
         );
     };
-function o() {
+function s() {
     (0, r.hasModalOpen)(i) && (0, r.closeModal)(i);
 }

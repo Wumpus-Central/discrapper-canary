@@ -1,631 +1,468 @@
-var n,
-    r = i(31144),
-    o = i(248702),
-    a = i(115977),
-    s = i(899656),
-    l = i(458741),
-    c = i(321724),
-    d = i(868282),
-    u = i(242003),
-    h = i(307221),
-    p = i(976886);
-i(133237), i(257300);
-var f = i(209688);
-i(588233), i(171251), i(886421), i(799201), i(401959);
-var m = i(295985),
-    g = i(766200),
-    v = i(347989);
-function C(e, t, i) {
-    let n = e / 360,
-        r = t / 100,
-        o = i / 100,
+var i,
+    c = d(31144),
+    e = d(248702),
+    a = d(115977),
+    s = d(899656),
+    Z = d(458741),
+    n = d(321724),
+    b = d(868282),
+    m = d(242003),
+    o = d(307221),
+    u = d(976886);
+d(133237), d(257300);
+var h = d(209688);
+d(588233), d(171251), d(886421), d(799201), d(401959);
+var W = d(295985),
+    G = d(766200),
+    p = d(347989);
+function N(l, t, d) {
+    let i = l / 360,
+        c = t / 100,
+        e = d / 100,
         a,
         s,
-        l;
-    if (0 === r) a = s = l = o;
+        Z;
+    if (0 === c) a = s = Z = e;
     else {
-        let e = (e, t, i) => (
-                i < 0 && (i += 1),
-                i > 1 && --i,
-                i < 1 / 6 ? e + (t - e) * 6 * i : i < 0.5 ? t : i < 2 / 3 ? e + (t - e) * (2 / 3 - i) * 6 : e
+        let l = (l, t, d) => (
+                d < 0 && (d += 1),
+                d > 1 && --d,
+                d < 1 / 6 ? l + (t - l) * 6 * d : d < 0.5 ? t : d < 2 / 3 ? l + (t - l) * (2 / 3 - d) * 6 : l
             ),
-            t = o < 0.5 ? o * (1 + r) : o + r - o * r,
-            i = 2 * o - t;
-        (a = e(i, t, n + 1 / 3)), (s = e(i, t, n)), (l = e(i, t, n - 1 / 3));
+            t = e < 0.5 ? e * (1 + c) : e + c - e * c,
+            d = 2 * e - t;
+        (a = l(d, t, i + 1 / 3)), (s = l(d, t, i)), (Z = l(d, t, i - 1 / 3));
     }
-    let c = (e) => {
-        let t = Math.round(255 * e).toString(16);
+    let n = (l) => {
+        let t = Math.round(255 * l).toString(16);
         return 1 === t.length ? `0${t}` : t;
     };
-    return `#${c(a)}${c(s)}${c(l)}`;
+    return `#${n(a)}${n(s)}${n(Z)}`;
 }
-async function y() {
-    return (await f.t.get("/omni/asset/fetch-all")).data;
+async function M() {
+    return (await h.t.get("/omni/asset/fetch-all")).data;
 }
-var w = new Map();
-async function b(e) {
-    if (e.startsWith("data:")) return e;
-    let t = w.get(e);
+var X = new Map();
+async function y(l) {
+    if (l.startsWith("data:")) return l;
+    let t = X.get(l);
     if (t) return t;
-    let i = await (await fetch(e)).blob(),
-        n = await new Promise((e, t) => {
-            let n = new FileReader();
-            (n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(i);
+    let d = await (await fetch(l)).blob(),
+        i = await new Promise((l, t) => {
+            let i = new FileReader();
+            (i.onloadend = () => l(i.result)), (i.onerror = t), i.readAsDataURL(d);
         });
-    return w.set(e, n), n;
+    return X.set(l, i), i;
 }
-async function _() {
-    let e = await y();
-    if (!e.theme) throw Error("Theme URL not found in assets response");
-    let t = e.theme,
-        i;
+async function Y() {
+    let l = await M();
+    if (!l.theme) throw Error("Theme URL not found in assets response");
+    let t = l.theme,
+        d;
     if (t.startsWith("http://") || t.startsWith("https://")) {
-        let e = await fetch(t);
-        if (!e.ok) throw Error(`Failed to fetch theme: ${e.statusText}`);
-        i = await e.json();
-    } else i = (await f.t.get(t)).data;
-    let n = e["logo.png"] || e["logo.svg"] || e["logo.jpg"] || e["logo.jpeg"] || e["logo.webp"] || i.logo,
-        r = n;
-    return n && (r = await b(n)), { ...i, logo: r };
+        let l = await fetch(t);
+        if (!l.ok) throw Error(`Failed to fetch theme: ${l.statusText}`);
+        d = await l.json();
+    } else d = (await h.t.get(t)).data;
+    let i = l["logo.png"] || l["logo.svg"] || l["logo.jpg"] || l["logo.jpeg"] || l["logo.webp"] || d.logo,
+        c = i;
+    return i && (c = await y(i)), { ...d, logo: c };
 }
-async function S() {
-    let e = await _();
+async function r() {
+    let l = await Y();
     return (
-        e.main &&
-            (function (e, t) {
+        l.main &&
+            (function (l, t) {
                 if (typeof document > "u") return;
-                let i = (function (e) {
-                        let t = (function (e) {
-                            let t = e.replace("#", "");
+                let d = (function (l) {
+                        let t = (function (l) {
+                            let t = l.replace("#", "");
                             3 === t.length &&
                                 (t = t
                                     .split("")
-                                    .map((e) => e + e)
+                                    .map((l) => l + l)
                                     .join(""));
-                            let i = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(t);
-                            if (!i) return null;
-                            let n = Number.parseInt(i[1], 16) / 255,
-                                r = Number.parseInt(i[2], 16) / 255,
-                                o = Number.parseInt(i[3], 16) / 255,
-                                a = Math.max(n, r, o),
-                                s = Math.min(n, r, o),
-                                l = 0,
-                                c = 0,
-                                d = (a + s) / 2;
+                            let d = /^([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(t);
+                            if (!d) return null;
+                            let i = Number.parseInt(d[1], 16) / 255,
+                                c = Number.parseInt(d[2], 16) / 255,
+                                e = Number.parseInt(d[3], 16) / 255,
+                                a = Math.max(i, c, e),
+                                s = Math.min(i, c, e),
+                                Z = 0,
+                                n = 0,
+                                b = (a + s) / 2;
                             if (a !== s) {
-                                let e = a - s;
-                                switch (((c = d > 0.5 ? e / (2 - a - s) : e / (a + s)), a)) {
-                                    case n:
-                                        l = ((r - o) / e + 6 * (r < o)) / 6;
+                                let l = a - s;
+                                switch (((n = b > 0.5 ? l / (2 - a - s) : l / (a + s)), a)) {
+                                    case i:
+                                        Z = ((c - e) / l + 6 * (c < e)) / 6;
                                         break;
-                                    case r:
-                                        l = ((o - n) / e + 2) / 6;
+                                    case c:
+                                        Z = ((e - i) / l + 2) / 6;
                                         break;
-                                    case o:
-                                        l = ((n - r) / e + 4) / 6;
+                                    case e:
+                                        Z = ((i - c) / l + 4) / 6;
                                 }
                             }
-                            return { h: 360 * l, s: 100 * c, l: 100 * d };
-                        })(e);
-                        if (!t) throw Error(`Invalid color format: ${e}`);
+                            return { h: 360 * Z, s: 100 * n, l: 100 * b };
+                        })(l);
+                        if (!t) throw Error(`Invalid color format: ${l}`);
                         return {
-                            50: C(t.h, t.s, 95),
-                            200: C(t.h, t.s, 80),
-                            300: C(t.h, t.s, 65),
-                            400: C(t.h, t.s, Math.min(100, t.l + 10)),
-                            500: e,
-                            600: C(t.h, t.s, Math.max(0, t.l - 10)),
-                            900: C(t.h, t.s, 20),
+                            50: N(t.h, t.s, 95),
+                            200: N(t.h, t.s, 80),
+                            300: N(t.h, t.s, 65),
+                            400: N(t.h, t.s, Math.min(100, t.l + 10)),
+                            500: l,
+                            600: N(t.h, t.s, Math.max(0, t.l - 10)),
+                            900: N(t.h, t.s, 20),
                         };
-                    })(e),
-                    n = document.getElementById("incode-theme");
-                n || (((n = document.createElement("style")).id = "incode-theme"), document.head.appendChild(n));
-                let r = `
+                    })(l),
+                    i = document.getElementById("incode-theme");
+                i || (((i = document.createElement("style")).id = "incode-theme"), document.head.appendChild(i));
+                let c = `
     :root,
     :host {
-      --primitive-color-brand-50: ${i[50]};
-      --primitive-color-brand-200: ${i[200]};
-      --primitive-color-brand-300: ${i[300]};
-      --primitive-color-brand-400: ${i[400]};
-      --primitive-color-brand-500: ${i[500]};
-      --primitive-color-brand-600: ${i[600]};
-      --primitive-color-brand-900: ${i[900]};
+      --primitive-color-brand-50: ${d[50]};
+      --primitive-color-brand-200: ${d[200]};
+      --primitive-color-brand-300: ${d[300]};
+      --primitive-color-brand-400: ${d[400]};
+      --primitive-color-brand-500: ${d[500]};
+      --primitive-color-brand-600: ${d[600]};
+      --primitive-color-brand-900: ${d[900]};
       --button-primary-text-default: ${t || "#ffffff"};
     }
   `;
-                n.textContent = r;
-            })(e.main, e.buttonColor),
-        e
+                i.textContent = c;
+            })(l.main, l.buttonColor),
+        l
     );
 }
-var L,
-    E = () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("67862"),
-            i.e("84621"),
-            i.e("24493"),
-            i.e("20156"),
-        ])
-            .then(i.bind(i, 590327))
-            .then((e) => e.Id),
-    k = new Set(["IP_ADDRESS", "TRUST_GRAPH"]);
-function x(e) {
-    return "IP_ADDRESS" === e
+var T,
+    V = () =>
+        Promise.resolve()
+            .then(d.bind(d, 590327))
+            .then((l) => l.Id),
+    L = new Set(["IP_ADDRESS", "TRUST_GRAPH"]);
+function I(l) {
+    return "IP_ADDRESS" === l
         ? () =>
               Promise.resolve()
-                  .then(i.bind(i, 766200))
-                  .then((e) => e.noOpFlowModuleMachine)
-        : "TRUST_GRAPH" === e
+                  .then(d.bind(d, 766200))
+                  .then((l) => l.noOpFlowModuleMachine)
+        : "TRUST_GRAPH" === l
           ? () =>
-                i
+                d
                     .e("847")
-                    .then(i.bind(i, 279058))
-                    .then((e) => e.trustGraphMachine)
-          : "REDIRECT_TO_MOBILE" === e
+                    .then(d.bind(d, 279058))
+                    .then((l) => l.trustGraphMachine)
+          : "REDIRECT_TO_MOBILE" === l
             ? () =>
-                  i
+                  d
                       .e("81378")
-                      .then(i.bind(i, 749113))
-                      .then((e) => e.redirectToMobileMachine)
-            : "PHONE" === e
+                      .then(d.bind(d, 749113))
+                      .then((l) => l.redirectToMobileMachine)
+            : "PHONE" === l
               ? () =>
-                    i
+                    d
                         .e("26827")
-                        .then(i.bind(i, 158406))
-                        .then((e) => e.phoneMachine)
-              : "EMAIL" === e
+                        .then(d.bind(d, 158406))
+                        .then((l) => l.phoneMachine)
+              : "EMAIL" === l
                 ? () =>
-                      i
+                      d
                           .e("40761")
-                          .then(i.bind(i, 317760))
-                          .then((e) => e.emailMachine)
-                : "SELFIE" === e
+                          .then(d.bind(d, 317760))
+                          .then((l) => l.emailMachine)
+                : "SELFIE" === l
                   ? () =>
                         Promise.resolve()
-                            .then(i.bind(i, 835385))
-                            .then((e) => e.selfieMachine)
-                  : "AUTHENTICATION" === e
+                            .then(d.bind(d, 835385))
+                            .then((l) => l.selfieMachine)
+                  : "AUTHENTICATION" === l
                     ? () =>
-                          i
+                          d
                               .e("72307")
-                              .then(i.bind(i, 209054))
-                              .then((e) => e.authenticationMachine)
-                    : "ID" === e || "TUTORIAL_ID" === e || "SECOND_ID" === e
+                              .then(d.bind(d, 209054))
+                              .then((l) => l.authenticationMachine)
+                    : "ID" === l || "TUTORIAL_ID" === l || "SECOND_ID" === l
                       ? () =>
-                            i
-                                .e("49786")
-                                .then(i.bind(i, 438273))
-                                .then((e) => e.idCaptureMachine)
-                      : "ID_OCR" === e
+                            Promise.resolve()
+                                .then(d.bind(d, 438273))
+                                .then((l) => l.idCaptureMachine)
+                      : "ID_OCR" === l
                         ? () =>
-                              Promise.all([i.e("87601"), i.e("47898")])
-                                  .then(i.bind(i, 745345))
-                                  .then((e) => e.idOcrStateMachine)
-                        : "CPF_OCR" === e
+                              Promise.all([d.e("87601"), d.e("47898")])
+                                  .then(d.bind(d, 745345))
+                                  .then((l) => l.idOcrStateMachine)
+                        : "CPF_OCR" === l
                           ? () =>
-                                Promise.all([i.e("87601"), i.e("87168")])
-                                    .then(i.bind(i, 21603))
-                                    .then((e) => e.cpfOcrMachine)
-                          : "FACE_MATCH" === e
+                                Promise.all([d.e("87601"), d.e("87168")])
+                                    .then(d.bind(d, 21603))
+                                    .then((l) => l.cpfOcrMachine)
+                          : "FACE_MATCH" === l
                             ? () =>
-                                  i
+                                  d
                                       .e("54584")
-                                      .then(i.bind(i, 334891))
-                                      .then((e) => e.faceMatchMachine)
-                            : "CURP_VALIDATION" === e
+                                      .then(d.bind(d, 334891))
+                                      .then((l) => l.faceMatchMachine)
+                            : "CURP_VALIDATION" === l
                               ? () =>
-                                    i
+                                    d
                                         .e("90407")
-                                        .then(i.bind(i, 457274))
-                                        .then((e) => e.curpValidationMachine)
-                              : "GOVT_VALIDATION_PROVISIONING" === e
+                                        .then(d.bind(d, 457274))
+                                        .then((l) => l.curpValidationMachine)
+                              : "GOVT_VALIDATION_PROVISIONING" === l
                                 ? () =>
-                                      i
+                                      d
                                           .e("23907")
-                                          .then(i.bind(i, 457230))
-                                          .then((e) => e.governmentValidationMachine)
-                                : "GEOLOCATION" === e
+                                          .then(d.bind(d, 457230))
+                                          .then((l) => l.governmentValidationMachine)
+                                : "GEOLOCATION" === l
                                   ? () =>
-                                        i
+                                        d
                                             .e("72302")
-                                            .then(i.bind(i, 594461))
-                                            .then((e) => e.geolocationMachine)
-                                  : "EXTERNAL_VERIFICATION" === e
+                                            .then(d.bind(d, 594461))
+                                            .then((l) => l.geolocationMachine)
+                                  : "EXTERNAL_VERIFICATION" === l
                                     ? () =>
-                                          Promise.all([i.e("87601"), i.e("25526"), i.e("72245")])
-                                              .then(i.bind(i, 485108))
-                                              .then((e) => e.ekycMachine)
-                                    : "EKYB" === e
+                                          Promise.all([d.e("87601"), d.e("25526"), d.e("72245")])
+                                              .then(d.bind(d, 485108))
+                                              .then((l) => l.ekycMachine)
+                                    : "EKYB" === l
                                       ? () =>
-                                            Promise.all([i.e("25526"), i.e("79039")])
-                                                .then(i.bind(i, 449538))
-                                                .then((e) => e.ekybMachine)
-                                      : "DOCUMENT_CAPTURE" === e || "ADDRESS" === e
+                                            Promise.all([d.e("25526"), d.e("79039")])
+                                                .then(d.bind(d, 449538))
+                                                .then((l) => l.ekybMachine)
+                                      : "DOCUMENT_CAPTURE" === l || "ADDRESS" === l
                                         ? () =>
-                                              i
+                                              d
                                                   .e("87205")
-                                                  .then(i.bind(i, 118116))
-                                                  .then((e) => e.documentCaptureMachine)
-                                        : "COMBINED_CONSENT" === e
+                                                  .then(d.bind(d, 118116))
+                                                  .then((l) => l.documentCaptureMachine)
+                                        : "COMBINED_CONSENT" === l
                                           ? () =>
                                                 Promise.resolve()
-                                                    .then(i.bind(i, 778186))
-                                                    .then((e) => e.consentMachine)
-                                          : "MANDATORY_CONSENT" === e
+                                                    .then(d.bind(d, 778186))
+                                                    .then((l) => l.consentMachine)
+                                          : "MANDATORY_CONSENT" === l
                                             ? () =>
-                                                  i
+                                                  d
                                                       .e("30682")
-                                                      .then(i.bind(i, 916577))
-                                                      .then((e) => e.mandatoryConsentMachine)
-                                            : "SIGNATURE" === e
+                                                      .then(d.bind(d, 916577))
+                                                      .then((l) => l.mandatoryConsentMachine)
+                                            : "SIGNATURE" === l
                                               ? () =>
-                                                    i
+                                                    d
                                                         .e("58349")
-                                                        .then(i.bind(i, 792828))
-                                                        .then((e) => e.signatureMachine)
-                                              : "ANTIFRAUD" === e
+                                                        .then(d.bind(d, 792828))
+                                                        .then((l) => l.signatureMachine)
+                                              : "ANTIFRAUD" === l
                                                 ? () =>
-                                                      i
+                                                      d
                                                           .e("7078")
-                                                          .then(i.bind(i, 895173))
-                                                          .then((e) => e.antifraudMachine)
-                                                : "CUSTOM_FIELDS" === e
+                                                          .then(d.bind(d, 895173))
+                                                          .then((l) => l.antifraudMachine)
+                                                : "CUSTOM_FIELDS" === l
                                                   ? () =>
-                                                        Promise.all([i.e("52061"), i.e("36027")])
-                                                            .then(i.bind(i, 665846))
-                                                            .then((e) => e.customFieldsMachine)
-                                                  : "WATCHLIST" === e
+                                                        Promise.all([d.e("52061"), d.e("36027")])
+                                                            .then(d.bind(d, 665846))
+                                                            .then((l) => l.customFieldsMachine)
+                                                  : "WATCHLIST" === l
                                                     ? () =>
-                                                          Promise.all([i.e("96185"), i.e("13059")])
-                                                              .then(i.bind(i, 915438))
-                                                              .then((e) => e.watchlistMachine)
-                                                    : "WATCHLIST_BUSINESS" === e
+                                                          Promise.all([d.e("96185"), d.e("13059")])
+                                                              .then(d.bind(d, 915438))
+                                                              .then((l) => l.watchlistMachine)
+                                                    : "WATCHLIST_BUSINESS" === l
                                                       ? () =>
-                                                            i
+                                                            d
                                                                 .e("72994")
-                                                                .then(i.bind(i, 984441))
-                                                                .then((e) => e.watchlistForBusinessMachine)
-                                                      : "INCODE_WATCHLIST" === e
+                                                                .then(d.bind(d, 984441))
+                                                                .then((l) => l.watchlistForBusinessMachine)
+                                                      : "INCODE_WATCHLIST" === l
                                                         ? () =>
-                                                              Promise.all([i.e("96185"), i.e("9972")])
-                                                                  .then(i.bind(i, 442266))
-                                                                  .then((e) => e.customWatchlistMachine)
-                                                        : "AE_SIGNATURE" === e
+                                                              Promise.all([d.e("96185"), d.e("9972")])
+                                                                  .then(d.bind(d, 442266))
+                                                                  .then((l) => l.customWatchlistMachine)
+                                                        : "AE_SIGNATURE" === l
                                                           ? () =>
-                                                                Promise.all([i.e("26001"), i.e("8190")])
-                                                                    .then(i.bind(i, 203309))
-                                                                    .then((e) => e.aeSignatureMachine)
-                                                          : "QE_SIGNATURE" === e
+                                                                Promise.all([d.e("26001"), d.e("8190")])
+                                                                    .then(d.bind(d, 203309))
+                                                                    .then((l) => l.aeSignatureMachine)
+                                                          : "QE_SIGNATURE" === l
                                                             ? () =>
-                                                                  Promise.all([i.e("26001"), i.e("15828")])
-                                                                      .then(i.bind(i, 328351))
-                                                                      .then((e) => e.qeSignatureMachine)
-                                                            : "CROSS_DOCUMENT_DATA_MATCH" === e
+                                                                  Promise.all([d.e("26001"), d.e("15828")])
+                                                                      .then(d.bind(d, 328351))
+                                                                      .then((l) => l.qeSignatureMachine)
+                                                            : "CROSS_DOCUMENT_DATA_MATCH" === l
                                                               ? () =>
-                                                                    i
+                                                                    d
                                                                         .e("44541")
-                                                                        .then(i.bind(i, 189036))
-                                                                        .then((e) => e.crossDocumentDataMatchMachine)
-                                                              : "DYNAMIC_FORMS" === e
+                                                                        .then(d.bind(d, 189036))
+                                                                        .then((l) => l.crossDocumentDataMatchMachine)
+                                                              : "DYNAMIC_FORMS" === l
                                                                 ? () =>
                                                                       Promise.all([
-                                                                          i.e("87601"),
-                                                                          i.e("52061"),
-                                                                          i.e("52315"),
+                                                                          d.e("87601"),
+                                                                          d.e("52061"),
+                                                                          d.e("52315"),
                                                                       ])
-                                                                          .then(i.bind(i, 586966))
-                                                                          .then((e) => e.dynamicFormsMachine)
+                                                                          .then(d.bind(d, 586966))
+                                                                          .then((l) => l.dynamicFormsMachine)
                                                                 : void 0;
 }
-var I = {
+var z = {
     REDIRECT_TO_MOBILE: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("66850"),
-            i.e("11716"),
-            i.e("81378"),
-            i.e("24493"),
-            i.e("58875"),
-            i.e("69784"),
-        ])
-            .then(i.bind(i, 531147))
-            .then((e) => e.RedirectToMobile),
+        Promise.all([d.e("11716"), d.e("81378"), d.e("58875"), d.e("69784")])
+            .then(d.bind(d, 531147))
+            .then((l) => l.RedirectToMobile),
     PHONE: () =>
-        Promise.all([i.e("98936"), i.e("26725"), i.e("47673"), i.e("66850"), i.e("50894"), i.e("26827"), i.e("12224")])
-            .then(i.bind(i, 515907))
-            .then((e) => e.Phone),
+        Promise.all([d.e("26827"), d.e("12224")])
+            .then(d.bind(d, 515907))
+            .then((l) => l.Phone),
     EMAIL: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("40761"),
-            i.e("12880"),
-            i.e("79940"),
-        ])
-            .then(i.bind(i, 227663))
-            .then((e) => e.Email),
+        Promise.all([d.e("40761"), d.e("12880"), d.e("79940")])
+            .then(d.bind(d, 227663))
+            .then((l) => l.Email),
     SELFIE: () =>
         Promise.resolve()
-            .then(i.bind(i, 934281))
-            .then((e) => e.Selfie),
+            .then(d.bind(d, 934281))
+            .then((l) => l.Selfie),
     AUTHENTICATION: () =>
-        Promise.all([i.e("72307"), i.e("44950")])
-            .then(i.bind(i, 843893))
-            .then((e) => e.Authentication),
-    ID: E,
-    ID_CAPTURE: E,
-    TUTORIAL_ID: E,
-    SECOND_ID: E,
+        Promise.all([d.e("72307"), d.e("44950")])
+            .then(d.bind(d, 843893))
+            .then((l) => l.Authentication),
+    ID: V,
+    ID_CAPTURE: V,
+    TUTORIAL_ID: V,
+    SECOND_ID: V,
     FACE_MATCH: () =>
-        Promise.all([i.e("54584"), i.e("58875"), i.e("2239")])
-            .then(i.bind(i, 814338))
-            .then((e) => e.FaceMatch),
+        Promise.all([d.e("54584"), d.e("58875"), d.e("2239")])
+            .then(d.bind(d, 814338))
+            .then((l) => l.FaceMatch),
     CURP_VALIDATION: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("58941"),
-            i.e("87127"),
-            i.e("33144"),
-            i.e("11716"),
-            i.e("90407"),
-            i.e("44800"),
-        ])
-            .then(i.bind(i, 752387))
-            .then((e) => e.CurpValidation),
+        Promise.all([d.e("11716"), d.e("90407"), d.e("44800")])
+            .then(d.bind(d, 752387))
+            .then((l) => l.CurpValidation),
     GOVT_VALIDATION_PROVISIONING: () =>
-        Promise.all([i.e("98936"), i.e("47673"), i.e("50894"), i.e("11716"), i.e("23907"), i.e("51762")])
-            .then(i.bind(i, 161193))
-            .then((e) => e.GovernmentValidation),
+        Promise.all([d.e("11716"), d.e("23907"), d.e("51762")])
+            .then(d.bind(d, 161193))
+            .then((l) => l.GovernmentValidation),
     GEOLOCATION: () =>
-        Promise.all([i.e("72302"), i.e("84136")])
-            .then(i.bind(i, 328379))
-            .then((e) => e.Geolocation),
+        Promise.all([d.e("72302"), d.e("84136")])
+            .then(d.bind(d, 328379))
+            .then((l) => l.Geolocation),
     EXTERNAL_VERIFICATION: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("30606"),
-            i.e("87601"),
-            i.e("25526"),
-            i.e("72245"),
-            i.e("78970"),
-            i.e("43352"),
-        ])
-            .then(i.bind(i, 748043))
-            .then((e) => e.EkycModule),
+        Promise.all([d.e("87601"), d.e("25526"), d.e("72245"), d.e("78970"), d.e("43352")])
+            .then(d.bind(d, 748043))
+            .then((l) => l.EkycModule),
     EKYB: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("25526"),
-            i.e("79039"),
-            i.e("78970"),
-            i.e("35653"),
-            i.e("20113"),
-        ])
-            .then(i.bind(i, 253288))
-            .then((e) => e.EkybModule),
+        Promise.all([d.e("25526"), d.e("79039"), d.e("78970"), d.e("35653"), d.e("20113")])
+            .then(d.bind(d, 253288))
+            .then((l) => l.EkybModule),
     DOCUMENT_CAPTURE: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("87205"),
-            i.e("99104"),
-        ])
-            .then(i.bind(i, 997923))
-            .then((e) => e.DocumentCapture),
+        Promise.all([d.e("87205"), d.e("99104")])
+            .then(d.bind(d, 997923))
+            .then((l) => l.DocumentCapture),
     ADDRESS: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("87205"),
-            i.e("99104"),
-        ])
-            .then(i.bind(i, 997923))
-            .then((e) => e.DocumentCapture),
+        Promise.all([d.e("87205"), d.e("99104")])
+            .then(d.bind(d, 997923))
+            .then((l) => l.DocumentCapture),
     COMBINED_CONSENT: () =>
         Promise.resolve()
-            .then(i.bind(i, 225055))
-            .then((e) => e.Consent),
+            .then(d.bind(d, 225055))
+            .then((l) => l.Consent),
     MANDATORY_CONSENT: () =>
-        Promise.all([i.e("30682"), i.e("2895")])
-            .then(i.bind(i, 962098))
-            .then((e) => e.MandatoryConsent),
+        Promise.all([d.e("30682"), d.e("2895")])
+            .then(d.bind(d, 962098))
+            .then((l) => l.MandatoryConsent),
     SIGNATURE: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("58349"),
-            i.e("88680"),
-        ])
-            .then(i.bind(i, 947515))
-            .then((e) => e.Signature),
+        Promise.all([d.e("58349"), d.e("88680")])
+            .then(d.bind(d, 947515))
+            .then((l) => l.Signature),
     ID_OCR: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("87601"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("47898"),
-            i.e("72051"),
-        ])
-            .then(i.bind(i, 703198))
-            .then((e) => e.IdOcr),
+        Promise.all([d.e("87601"), d.e("47898"), d.e("72051")])
+            .then(d.bind(d, 703198))
+            .then((l) => l.IdOcr),
     CPF_OCR: () =>
-        Promise.all([i.e("98936"), i.e("51944"), i.e("87601"), i.e("87168"), i.e("71967")])
-            .then(i.bind(i, 761730))
-            .then((e) => e.CpfOcr),
+        Promise.all([d.e("87601"), d.e("87168"), d.e("71967")])
+            .then(d.bind(d, 761730))
+            .then((l) => l.CpfOcr),
     ANTIFRAUD: () =>
-        Promise.all([i.e("7078"), i.e("74432")])
-            .then(i.bind(i, 154211))
-            .then((e) => e.Antifraud),
+        Promise.all([d.e("7078"), d.e("74432")])
+            .then(d.bind(d, 154211))
+            .then((l) => l.Antifraud),
     CUSTOM_FIELDS: () =>
-        Promise.all([i.e("98936"), i.e("47673"), i.e("58941"), i.e("52061"), i.e("98808"), i.e("36027"), i.e("85041")])
-            .then(i.bind(i, 704584))
-            .then((e) => e.CustomFields),
+        Promise.all([d.e("52061"), d.e("98808"), d.e("36027"), d.e("85041")])
+            .then(d.bind(d, 704584))
+            .then((l) => l.CustomFields),
     WATCHLIST: () =>
-        Promise.all([i.e("98808"), i.e("96185"), i.e("13059"), i.e("68764")])
-            .then(i.bind(i, 640951))
-            .then((e) => e.Watchlist),
+        Promise.all([d.e("98808"), d.e("96185"), d.e("13059"), d.e("68764")])
+            .then(d.bind(d, 640951))
+            .then((l) => l.Watchlist),
     WATCHLIST_BUSINESS: () =>
-        Promise.all([i.e("98936"), i.e("26725"), i.e("98808"), i.e("72994"), i.e("35653"), i.e("56491")])
-            .then(i.bind(i, 221446))
-            .then((e) => e.WatchlistForBusiness),
+        Promise.all([d.e("98808"), d.e("72994"), d.e("35653"), d.e("56491")])
+            .then(d.bind(d, 221446))
+            .then((l) => l.WatchlistForBusiness),
     INCODE_WATCHLIST: () =>
-        Promise.all([i.e("98808"), i.e("96185"), i.e("9972"), i.e("73459")])
-            .then(i.bind(i, 716670))
-            .then((e) => e.CustomWatchlist),
+        Promise.all([d.e("98808"), d.e("96185"), d.e("9972"), d.e("73459")])
+            .then(d.bind(d, 716670))
+            .then((l) => l.CustomWatchlist),
     AE_SIGNATURE: () =>
-        Promise.all([i.e("51944"), i.e("26001"), i.e("67862"), i.e("61135"), i.e("27516")])
-            .then(i.bind(i, 607191))
-            .then((e) => e.AeSignature),
+        Promise.all([d.e("26001"), d.e("61135"), d.e("27516")])
+            .then(d.bind(d, 607191))
+            .then((l) => l.AeSignature),
     QE_SIGNATURE: () =>
-        Promise.all([i.e("51944"), i.e("26001"), i.e("67862"), i.e("61135"), i.e("46332")])
-            .then(i.bind(i, 666615))
-            .then((e) => e.QeSignature),
+        Promise.all([d.e("26001"), d.e("61135"), d.e("46332")])
+            .then(d.bind(d, 666615))
+            .then((l) => l.QeSignature),
     CROSS_DOCUMENT_DATA_MATCH: () =>
-        Promise.all([i.e("44541"), i.e("9576")])
-            .then(i.bind(i, 840219))
-            .then((e) => e.CrossDocumentDataMatch),
+        Promise.all([d.e("44541"), d.e("9576")])
+            .then(d.bind(d, 840219))
+            .then((l) => l.CrossDocumentDataMatch),
     DYNAMIC_FORMS: () =>
-        Promise.all([
-            i.e("98936"),
-            i.e("26725"),
-            i.e("47673"),
-            i.e("51944"),
-            i.e("66850"),
-            i.e("58941"),
-            i.e("50894"),
-            i.e("87127"),
-            i.e("49786"),
-            i.e("30606"),
-            i.e("87601"),
-            i.e("33144"),
-            i.e("6940"),
-            i.e("52061"),
-            i.e("87168"),
-            i.e("52315"),
-            i.e("12880"),
-            i.e("5761"),
-        ])
-            .then(i.bind(i, 660376))
-            .then((e) => e.DynamicForms),
+        Promise.all([d.e("87601"), d.e("52061"), d.e("87168"), d.e("52315"), d.e("12880"), d.e("5761")])
+            .then(d.bind(d, 660376))
+            .then((l) => l.DynamicForms),
 };
-function T() {
-    L ||
-        (L = Promise.all([i.e("26725"), i.e("87127"), i.e("14989")])
-            .then(i.bind(i, 783228))
-            .then((e) => e.HomeScreen)).catch(() => {
-            L = void 0;
+function w() {
+    T ||
+        (T = d
+            .e("14989")
+            .then(d.bind(d, 783228))
+            .then((l) => l.HomeScreen)).catch(() => {
+            T = void 0;
         });
 }
-async function M(e) {
-    await (0, v.T7)({ token: e.token }), (0, r.r)((0, r.i)(e.lang ? { lang: e.lang } : void 0));
+async function R(l) {
+    await (0, p.T7)({ token: l.token }), (0, c.r)((0, c.i)(l.lang ? { lang: l.lang } : void 0));
 }
-async function A(e) {
-    let { token: t, lang: i, flowManager: n } = e;
-    await M({ token: t, lang: i }), n.load();
+async function C(l) {
+    let { token: t, lang: d, flowManager: i } = l;
+    await R({ token: t, lang: d }), i.load();
 }
-async function R() {
+async function S() {
     try {
-        let e = await S(),
-            t = { logoSrc: e.logo, subtitle: e.subtitle, hideFooterBranding: e.hideFooterBranding };
-        return (0, a.t)(t), { theme: e, uiConfig: t };
+        let l = await r(),
+            t = { logoSrc: l.logo, subtitle: l.subtitle, hideFooterBranding: l.hideFooterBranding };
+        return (0, a.t)(t), { theme: l, uiConfig: t };
     } catch {
         return {};
     }
 }
-var O = ({ moduleKey: e, onNext: t }) =>
-        (0, o.v)("section", {
+var x = ({ moduleKey: l, onNext: t }) =>
+        (0, e.v)("section", {
             class: "IncodeUnsupportedModule",
             "aria-live": "polite",
-            children: (0, o.v)("div", {
+            children: (0, e.v)("div", {
                 class: "IncodeUnsupportedModuleContent",
                 children: [
-                    (0, o.v)("h2", { class: "IncodeUnsupportedModuleTitle", children: "Module not available" }),
-                    (0, o.v)("p", {
+                    (0, e.v)("h2", { class: "IncodeUnsupportedModuleTitle", children: "Module not available" }),
+                    (0, e.v)("p", {
                         class: "IncodeUnsupportedModuleMessage",
-                        children: ['The "', e, '" module is not yet supported in this version.'],
+                        children: ['The "', l, '" module is not yet supported in this version.'],
                     }),
-                    (0, o.v)(u.t, {
+                    (0, e.v)(m.t, {
                         onClick: t,
                         class: "IncodeUnsupportedModuleButton",
                         "data-testid": "unsupported-module-next-button",
@@ -634,880 +471,881 @@ var O = ({ moduleKey: e, onNext: t }) =>
                 ],
             }),
         }),
-    P = () => null,
-    D = () => Promise.resolve(P),
-    F = new WeakMap(),
-    N = new WeakMap();
-function U(e) {
-    if (e) return F.get(e);
+    g = () => null,
+    D = () => Promise.resolve(g),
+    j = new WeakMap(),
+    U = new WeakMap();
+function F(l) {
+    if (l) return j.get(l);
 }
-function H(e) {
-    if (!e) return { status: "idle" };
-    let t = U(e);
+function J(l) {
+    if (!l) return { status: "idle" };
+    let t = F(l);
     return t ? { status: "loaded", Component: t } : { status: "loading" };
 }
-function $(e) {
-    let { loader: t, onLoading: i, onLoaded: n, onError: r } = e,
-        [a, s] = (0, o.p)(() => H(t)),
-        l = (0, o.l)(t),
-        c = (0, o.l)(i),
-        d = (0, o.l)(n),
-        u = (0, o.l)(r);
+function O(l) {
+    let { loader: t, onLoading: d, onLoaded: i, onError: c } = l,
+        [a, s] = (0, e.p)(() => J(t)),
+        Z = (0, e.l)(t),
+        n = (0, e.l)(d),
+        b = (0, e.l)(i),
+        m = (0, e.l)(c);
     return (
-        (0, o._)(() => {
-            (c.current = i), (d.current = n), (u.current = r);
-        }, [i, n, r]),
-        l.current !== t && ((l.current = t), s(H(t))),
-        (0, o._)(() => {
+        (0, e._)(() => {
+            (n.current = d), (b.current = i), (m.current = c);
+        }, [d, i, c]),
+        Z.current !== t && ((Z.current = t), s(J(t))),
+        (0, e._)(() => {
             if (!t) return;
-            if (U(t)) return void d.current?.();
-            c.current?.();
-            let e = !1;
+            if (F(t)) return void b.current?.();
+            n.current?.();
+            let l = !1;
             return (
-                (function (e) {
-                    let t = F.get(e);
+                (function (l) {
+                    let t = j.get(l);
                     if (t) return Promise.resolve(t);
-                    let i = N.get(e);
-                    if (i) return i;
-                    let n = e()
-                        .then((t) => (F.set(e, t), N.delete(e), t))
+                    let d = U.get(l);
+                    if (d) return d;
+                    let i = l()
+                        .then((t) => (j.set(l, t), U.delete(l), t))
                         .catch((t) => {
-                            throw (N.delete(e), t);
+                            throw (U.delete(l), t);
                         });
-                    return N.set(e, n), n;
+                    return U.set(l, i), i;
                 })(t)
                     .then((t) => {
-                        e || (s({ status: "loaded", Component: t }), d.current?.());
+                        l || (s({ status: "loaded", Component: t }), b.current?.());
                     })
                     .catch((t) => {
-                        if (!e) {
-                            let e = t instanceof Error ? t.message : "Failed to load component";
-                            s({ status: "error", error: e }), u.current?.(e);
+                        if (!l) {
+                            let l = t instanceof Error ? t.message : "Failed to load component";
+                            s({ status: "error", error: l }), m.current?.(l);
                         }
                     }),
                 () => {
-                    e = !0;
+                    l = !0;
                 }
             );
         }, [t]),
         a
     );
 }
-function B(e, t) {
-    let [i, n] = (0, o.p)(!1);
+function k(l, t) {
+    let [d, i] = (0, e.p)(!1);
     return (
-        (0, o._)(() => {
-            if (!1 === e) return void n(!1);
-            let i = window.setTimeout(() => {
-                n(!0);
+        (0, e._)(() => {
+            if (!1 === l) return void i(!1);
+            let d = window.setTimeout(() => {
+                i(!0);
             }, t);
             return () => {
-                window.clearTimeout(i);
+                window.clearTimeout(d);
             };
-        }, [e, t]),
-        i
+        }, [l, t]),
+        d
     );
 }
-async function V(e) {
+async function E(l) {
     let t = globalThis.crypto?.subtle;
     if (!t) throw Error("SHA-1 is not available in this environment");
-    return Array.from(new Uint8Array(await t.digest("SHA-1", new TextEncoder().encode(e))), (e) =>
-        e.toString(16).padStart(2, "0"),
+    return Array.from(new Uint8Array(await t.digest("SHA-1", new TextEncoder().encode(l))), (l) =>
+        l.toString(16).padStart(2, "0"),
     ).join("");
 }
-async function z(e) {
-    if ("string" == typeof e.apiKey) return e.apiKey;
-    if ("string" == typeof e.clientId) return V(e.clientId);
+async function v(l) {
+    if ("string" == typeof l.apiKey) return l.apiKey;
+    if ("string" == typeof l.clientId) return E(l.clientId);
     throw Error("Flow self-loading mode requires apiKey or clientId");
 }
-async function j(e, t) {
-    return (0, v.DU)(
-        await z(e),
+async function K(l, t) {
+    return (0, p.DU)(
+        await v(l),
         {
-            configurationId: e.configurationId,
-            externalId: e.externalId,
-            externalCustomerId: e.externalCustomerId,
-            language: e.lang,
-            customFields: e.customFields,
-            uuid: e.uuid,
-            urlUuid: e.urlUuid,
-            interviewId: e.interviewId,
-            onUrlUuidRefreshed: e.onUrlUuidRefreshed,
+            configurationId: l.configurationId,
+            externalId: l.externalId,
+            externalCustomerId: l.externalCustomerId,
+            language: l.lang,
+            customFields: l.customFields,
+            uuid: l.uuid,
+            urlUuid: l.urlUuid,
+            interviewId: l.interviewId,
+            onUrlUuidRefreshed: l.onUrlUuidRefreshed,
         },
         t,
     );
 }
-function Z(e) {
-    return "string" == typeof e.token;
+function H(l) {
+    return "string" == typeof l.token;
 }
-var W = new Map();
-function G(e) {
-    return W.get(e) ?? null;
+var Q = new Map();
+function P(l) {
+    return Q.get(l) ?? null;
 }
-function K(e) {
-    let t = G(e);
-    return t && W.delete(e), t;
+function f(l) {
+    let t = P(l);
+    return t && Q.delete(l), t;
 }
-function q(e) {
-    e.getState().presentation.shouldPrefetchHome && T();
+function B(l) {
+    l.getState().presentation.shouldPrefetchHome && w();
 }
-function Y() {
-    "desktop" === (0, m.l3)() &&
+function A() {
+    "desktop" === (0, W.l3)() &&
         (function () {
-            if (n) return;
-            let e = I.REDIRECT_TO_MOBILE,
-                t = x("REDIRECT_TO_MOBILE"),
-                i = [];
-            e && i.push(e()),
-                t && i.push(t()),
-                (n = Promise.all(i)).catch(() => {
-                    n = void 0;
+            if (i) return;
+            let l = z.REDIRECT_TO_MOBILE,
+                t = I("REDIRECT_TO_MOBILE"),
+                d = [];
+            l && d.push(l()),
+                t && d.push(t()),
+                (i = Promise.all(d)).catch(() => {
+                    i = void 0;
                 });
         })();
 }
-var Q = (0, o.c)(() =>
-        Promise.all([i.e("26725"), i.e("87127"), i.e("14989")])
-            .then(i.bind(i, 783228))
-            .then((e) => ({ default: e.HomeScreen })),
+var _ = (0, e.c)(() =>
+        d
+            .e("14989")
+            .then(d.bind(d, 783228))
+            .then((l) => ({ default: l.HomeScreen })),
     ),
-    X = ({ config: e, onFinish: t, onError: i }) => {
-        var n, l;
-        let d,
-            { i18n: u } = (0, r.n)(),
-            f = (function (e) {
-                let { lang: t, disableDashboardTheme: i, enableHome: n, onError: r, useCPF: s } = e,
-                    l = Z(e) ? e.token : void 0,
-                    c = (0, o.l)(null),
-                    [d, u] = (0, o.p)(() => {
-                        let t = l ? G(l) : null;
-                        if (l && t?.status === "ready") {
-                            let e = K(l);
-                            if (e)
+    $ = ({ config: l, onFinish: t, onError: d }) => {
+        var i, Z;
+        let b,
+            { i18n: m } = (0, c.n)(),
+            h = (function (l) {
+                let { lang: t, disableDashboardTheme: d, enableHome: i, onError: c, useCPF: s } = l,
+                    Z = H(l) ? l.token : void 0,
+                    n = (0, e.l)(null),
+                    [b, m] = (0, e.p)(() => {
+                        let t = Z ? P(Z) : null;
+                        if (Z && t?.status === "ready") {
+                            let l = f(Z);
+                            if (l)
                                 return (
-                                    (c.current = e.flowManager),
-                                    q(e.flowManager),
-                                    Y(),
-                                    e.uiConfig && (0, a.t)(e.uiConfig),
-                                    { status: "ready", flowManager: e.flowManager }
+                                    (n.current = l.flowManager),
+                                    B(l.flowManager),
+                                    A(),
+                                    l.uiConfig && (0, a.t)(l.uiConfig),
+                                    { status: "ready", flowManager: l.flowManager }
                                 );
                         }
-                        let i = (function (e = {}) {
+                        let d = (function (l = {}) {
                             let t = {},
-                                i = e.isDesktop ?? "desktop" === (0, m.l3)(),
-                                { enableHome: n, ...r } = e;
-                            return (0, g.ET)({
-                                enableHome: n,
-                                getFlow: async (e) => {
-                                    let n = await (0, g.lv)(e, { ...r, isDesktop: i }),
-                                        o = (function (e) {
+                                d = l.isDesktop ?? "desktop" === (0, W.l3)(),
+                                { enableHome: i, ...c } = l;
+                            return (0, G.ET)({
+                                enableHome: i,
+                                getFlow: async (l) => {
+                                    let i = await (0, G.lv)(l, { ...c, isDesktop: d }),
+                                        e = (function (l) {
                                             let t = {};
-                                            for (let i of e) {
-                                                let e = i.key;
-                                                if (t[e]) continue;
-                                                let n = x(e);
-                                                n && (t[e] = n);
+                                            for (let d of l) {
+                                                let l = d.key;
+                                                if (t[l]) continue;
+                                                let i = I(l);
+                                                i && (t[l] = i);
                                             }
                                             return t;
-                                        })(n.flowModules ?? []);
-                                    for (let e of Object.keys(t)) delete t[e];
-                                    return Object.assign(t, o), n;
+                                        })(i.flowModules ?? []);
+                                    for (let l of Object.keys(t)) delete t[l];
+                                    return Object.assign(t, e), i;
                                 },
                                 lazyModules: t,
                             });
-                        })({ authHint: e.authHint, lang: e.lang, enableHome: e.enableHome, useCPF: e.useCPF });
+                        })({ authHint: l.authHint, lang: l.lang, enableHome: l.enableHome, useCPF: l.useCPF });
                         return (
-                            (c.current = i),
-                            q(i),
-                            Y(),
+                            (n.current = d),
+                            B(d),
+                            A(),
                             t?.status === "error"
-                                ? { status: "error", error: t.error ?? "Preload failed", flowManager: i }
-                                : { status: "initializing", flowManager: i }
+                                ? { status: "error", error: t.error ?? "Preload failed", flowManager: d }
+                                : { status: "initializing", flowManager: d }
                         );
                     }),
-                    h = (0, o.l)(!1);
+                    o = (0, e.l)(!1);
                 return (
-                    (0, o._)(() => {
-                        if ("initializing" !== d.status) return;
-                        let n = l ? G(l) : null;
-                        if (l && n?.status === "loading")
-                            return void n.readyPromise
+                    (0, e._)(() => {
+                        if ("initializing" !== b.status) return;
+                        let i = Z ? P(Z) : null;
+                        if (Z && i?.status === "loading")
+                            return void i.readyPromise
                                 .then(() => {
-                                    let e = K(l);
-                                    e &&
-                                        ((c.current = e.flowManager),
-                                        q(e.flowManager),
-                                        Y(),
-                                        e.uiConfig && (0, a.t)(e.uiConfig),
-                                        u({ status: "ready", flowManager: e.flowManager }));
+                                    let l = f(Z);
+                                    l &&
+                                        ((n.current = l.flowManager),
+                                        B(l.flowManager),
+                                        A(),
+                                        l.uiConfig && (0, a.t)(l.uiConfig),
+                                        m({ status: "ready", flowManager: l.flowManager }));
                                 })
-                                .catch((e) => {
-                                    let t = e instanceof Error ? e.message : "Preload failed",
-                                        i = e instanceof v.LJ ? e.status : void 0;
-                                    u({ status: "error", error: t, errorCode: i, flowManager: d.flowManager }),
-                                        r?.(t, i);
+                                .catch((l) => {
+                                    let t = l instanceof Error ? l.message : "Preload failed",
+                                        d = l instanceof p.LJ ? l.status : void 0;
+                                    m({ status: "error", error: t, errorCode: d, flowManager: b.flowManager }),
+                                        c?.(t, d);
                                 });
-                        if (h.current) return;
-                        h.current = !0;
-                        let o = new AbortController(),
-                            { signal: s } = o;
+                        if (o.current) return;
+                        o.current = !0;
+                        let e = new AbortController(),
+                            { signal: s } = e;
                         return (
                             (async () => {
                                 try {
-                                    let n;
-                                    if (Z(e))
-                                        (n = e.token),
-                                            e.urlUuid &&
-                                                (await (0, v.jq)(
+                                    let i;
+                                    if (H(l))
+                                        (i = l.token),
+                                            l.urlUuid &&
+                                                (await (0, p.jq)(
                                                     {
-                                                        urlUuid: e.urlUuid,
+                                                        urlUuid: l.urlUuid,
                                                         onboardingId: null,
-                                                        onRefreshed: e.onUrlUuidRefreshed,
+                                                        onRefreshed: l.onUrlUuidRefreshed,
                                                     },
                                                     s,
                                                 ));
                                     else if (
-                                        "string" == typeof e.configurationId &&
-                                        ("string" == typeof e.apiKey || "string" == typeof e.clientId)
+                                        "string" == typeof l.configurationId &&
+                                        ("string" == typeof l.apiKey || "string" == typeof l.clientId)
                                     )
-                                        n = (await j(e, s)).token;
+                                        i = (await K(l, s)).token;
                                     else throw Error("Flow requires token, or configurationId with apiKey or clientId");
-                                    await A({ token: n, lang: t, flowManager: d.flowManager });
-                                    let r = i
+                                    await C({ token: i, lang: t, flowManager: b.flowManager });
+                                    let c = d
                                             ? Promise.resolve()
-                                            : R().then((e) => {
-                                                  e.uiConfig && (0, a.t)(e.uiConfig);
+                                            : S().then((l) => {
+                                                  l.uiConfig && (0, a.t)(l.uiConfig);
                                               }),
-                                        o = d.flowManager.waitForReady();
-                                    await Promise.all([o, r]), u({ status: "ready", flowManager: d.flowManager });
-                                } catch (i) {
+                                        e = b.flowManager.waitForReady();
+                                    await Promise.all([e, c]), m({ status: "ready", flowManager: b.flowManager });
+                                } catch (d) {
                                     if (s.aborted) return;
-                                    let e = i instanceof Error ? i.message : "Failed to initialize SDK",
-                                        t = i instanceof v.LJ ? i.status : void 0;
-                                    u({ status: "error", error: e, errorCode: t, flowManager: d.flowManager }),
-                                        r?.(e, t);
+                                    let l = d instanceof Error ? d.message : "Failed to initialize SDK",
+                                        t = d instanceof p.LJ ? d.status : void 0;
+                                    m({ status: "error", error: l, errorCode: t, flowManager: b.flowManager }),
+                                        c?.(l, t);
                                 }
                             })(),
-                            () => o.abort()
+                            () => e.abort()
                         );
-                    }, [l, t, i, n, s, r, e, d]),
-                    d
+                    }, [Z, t, d, i, s, c, l, b]),
+                    b
                 );
-            })((0, o.d)(() => ({ ...e, onError: i }), [e, i])),
-            [C, y] = (0, s.o)(() => f.flowManager, { autoLoad: !1 }),
-            w = C.presentation.lazyModuleKey,
-            b = "ready" === C.status ? C.currentStep : void 0,
-            _ = (function (e) {
+            })((0, e.d)(() => ({ ...l, onError: d }), [l, d])),
+            [N, M] = (0, s.o)(() => h.flowManager, { autoLoad: !1 }),
+            X = N.presentation.lazyModuleKey,
+            y = "ready" === N.status ? N.currentStep : void 0,
+            Y = (function (l) {
                 let {
                         moduleKey: t,
-                        modules: i,
-                        headlessModuleKeys: n,
-                        onModuleLoading: r,
+                        modules: d,
+                        headlessModuleKeys: i,
+                        onModuleLoading: c,
                         onModuleLoaded: a,
                         onError: s,
-                    } = e,
-                    [l, c] = (0, o.p)(void 0),
-                    d = (function (e, t, i) {
-                        if (e) return t[e] ?? (i?.has(e) ? D : void 0);
-                    })(t, i, n),
-                    u = $({
-                        loader: d,
-                        onLoading: t ? () => r?.(t) : void 0,
+                    } = l,
+                    [Z, n] = (0, e.p)(void 0),
+                    b = (function (l, t, d) {
+                        if (l) return t[l] ?? (d?.has(l) ? D : void 0);
+                    })(t, d, i),
+                    m = O({
+                        loader: b,
+                        onLoading: t ? () => c?.(t) : void 0,
                         onLoaded: t ? () => a?.(t) : void 0,
-                        onError: t ? (e) => s?.(`Failed to load ${t}: ${e}`) : void 0,
+                        onError: t ? (l) => s?.(`Failed to load ${t}: ${l}`) : void 0,
                     });
                 return (
-                    (0, o._)(() => {
-                        t ? c(d ? void 0 : t) : c(void 0);
-                    }, [d, t]),
+                    (0, e._)(() => {
+                        t ? n(b ? void 0 : t) : n(void 0);
+                    }, [b, t]),
                     t
-                        ? l
-                            ? { status: "unsupported", moduleKey: l }
-                            : "idle" === u.status || "loading" === u.status
+                        ? Z
+                            ? { status: "unsupported", moduleKey: Z }
+                            : "idle" === m.status || "loading" === m.status
                               ? { status: "loading", moduleKey: t }
-                              : "error" === u.status
-                                ? { status: "error", moduleKey: t, error: u.error }
-                                : { status: "loaded", moduleKey: t, Component: u.Component }
+                              : "error" === m.status
+                                ? { status: "error", moduleKey: t, error: m.error }
+                                : { status: "loaded", moduleKey: t, Component: m.Component }
                         : { status: "idle" }
                 );
             })({
-                moduleKey: w,
-                modules: I,
-                onModuleLoading: e.onModuleLoading,
-                onModuleLoaded: e.onModuleLoaded,
-                onError: i,
+                moduleKey: X,
+                modules: z,
+                onModuleLoading: l.onModuleLoading,
+                onModuleLoaded: l.onModuleLoaded,
+                onError: d,
             });
-        !(function (e) {
-            let { moduleKey: t, modules: i } = e,
-                n = t ? i[t] : void 0,
-                r = $({ loader: n });
-            null != n && r.status;
-        })({ moduleKey: "ready" === C.status && C.homeScreen.visible ? b : void 0, modules: I });
-        let S = "loaded" === _.status,
-            L =
-                !0 === e.enableHome &&
-                "ready" === C.status &&
-                !0 !== C.flow.disableLaunchScreen &&
-                0 === C.currentStepIndex &&
-                !1 === C.homeScreen.visible &&
-                "loading" === _.status,
-            E = B(!0 === C.presentation.isAwaitingReady, 150),
-            M = B("ready" === C.status && ("idle" === _.status || "loading" === _.status || "error" === _.status), 150);
-        (n = C?.status === "ready" ? C.steps : []),
-            (l = C?.status === "ready" ? C.currentStepIndex : -1),
-            (d = (0, o.l)(new Set())),
-            (0, o._)(() => {
-                if (S && l < n.length - 1) {
-                    let t = n[l + 1];
-                    if (t && !d.current.has(t)) {
-                        var e;
-                        d.current.add(t);
-                        let i = I[t];
-                        i &&
-                            ((e = () => {
-                                i().catch(() => {
-                                    d.current.delete(t);
+        !(function (l) {
+            let { moduleKey: t, modules: d } = l,
+                i = t ? d[t] : void 0,
+                c = O({ loader: i });
+            null != i && c.status;
+        })({ moduleKey: "ready" === N.status && N.homeScreen.visible ? y : void 0, modules: z });
+        let r = "loaded" === Y.status,
+            T =
+                !0 === l.enableHome &&
+                "ready" === N.status &&
+                !0 !== N.flow.disableLaunchScreen &&
+                0 === N.currentStepIndex &&
+                !1 === N.homeScreen.visible &&
+                "loading" === Y.status,
+            V = k(!0 === N.presentation.isAwaitingReady, 150),
+            R = k("ready" === N.status && ("idle" === Y.status || "loading" === Y.status || "error" === Y.status), 150);
+        (i = N?.status === "ready" ? N.steps : []),
+            (Z = N?.status === "ready" ? N.currentStepIndex : -1),
+            (b = (0, e.l)(new Set())),
+            (0, e._)(() => {
+                if (r && Z < i.length - 1) {
+                    let t = i[Z + 1];
+                    if (t && !b.current.has(t)) {
+                        var l;
+                        b.current.add(t);
+                        let d = z[t];
+                        d &&
+                            ((l = () => {
+                                d().catch(() => {
+                                    b.current.delete(t);
                                 });
                             }),
                             "u" > typeof requestIdleCallback
                                 ? requestIdleCallback(() => {
-                                      e();
+                                      l();
                                   })
-                                : setTimeout(e, 0));
+                                : setTimeout(l, 0));
                     }
                 }
-            }, [n, l, I, S]),
-            (0, o._)(() => {
-                if (e.onFlowEvent) return y.subscribeFlowEvent(e.onFlowEvent);
-            }, [y, e.onFlowEvent]),
-            (0, o._)(() => {
-                C.presentation.shouldPrefetchHome && T();
-            }, [C.presentation.shouldPrefetchHome]),
-            (0, o._)(() => {
-                e.lang && u.language !== e.lang && u.changeLanguage(e.lang);
-            }, [e.lang, u]),
-            (0, o._)(() => {
-                if (C?.status !== "ready" || "REDIRECT_TO_MOBILE" === C.currentStep) return;
-                let t = (0, g.Ni)(C.flow);
+            }, [i, Z, z, r]),
+            (0, e._)(() => {
+                if (l.onFlowEvent) return M.subscribeFlowEvent(l.onFlowEvent);
+            }, [M, l.onFlowEvent]),
+            (0, e._)(() => {
+                N.presentation.shouldPrefetchHome && w();
+            }, [N.presentation.shouldPrefetchHome]),
+            (0, e._)(() => {
+                l.lang && m.language !== l.lang && m.changeLanguage(l.lang);
+            }, [l.lang, m]),
+            (0, e._)(() => {
+                if (N?.status !== "ready" || "REDIRECT_TO_MOBILE" === N.currentStep) return;
+                let t = (0, G.Ni)(N.flow);
                 t.length > 0 &&
-                    (e.onWasmWarmup?.(t),
-                    (function (e, t) {
-                        if ("REDIRECT_TO_MOBILE" === e.currentStep) return;
-                        let i = (0, g.Ni)(e.flow);
-                        if (i.length > 0) {
-                            let e = (0, h.l)({ ...(t ?? {}), pipelines: i }),
-                                n = { ...e, pipelines: e.pipelines ? [...e.pipelines] : void 0 };
-                            (0, h.i)(n),
-                                (0, p.n)(e)
-                                    .then(() => (0, h.t)(n))
-                                    .then(() => (0, h.o)(n))
-                                    .catch((e) => {
-                                        console.error("WASM warmup failed:", e);
+                    (l.onWasmWarmup?.(t),
+                    (function (l, t) {
+                        if ("REDIRECT_TO_MOBILE" === l.currentStep) return;
+                        let d = (0, G.Ni)(l.flow);
+                        if (d.length > 0) {
+                            let l = (0, o.l)({ ...(t ?? {}), pipelines: d }),
+                                i = { ...l, pipelines: l.pipelines ? [...l.pipelines] : void 0 };
+                            (0, o.i)(i),
+                                (0, u.n)(l)
+                                    .then(() => (0, o.t)(i))
+                                    .then(() => (0, o.o)(i))
+                                    .catch((l) => {
+                                        console.error("WASM warmup failed:", l);
                                     });
                         }
-                    })(C, e.wasmConfig));
-            }, [C, e]),
-            (0, o._)(() => {
-                C?.status === "finished" && t(C.finishStatus);
-            }, [C?.status, t, C]),
-            (0, o._)(() => {
-                C?.status === "error" && i && i(C.error, C.errorCode);
-            }, [C?.status, i, C]),
-            (0, o._)(() => {
-                C?.status === "ready" &&
-                    "ID" === C.currentStep &&
-                    C.steps.includes("TUTORIAL_ID") &&
-                    y.completeModule();
-            }, [C, y]);
-        let P = !(e.spinnerConfig?.title || e.spinnerConfig?.subtitle);
-        if ("error" === f.status)
-            return (0, o.v)("div", {
+                    })(N, l.wasmConfig));
+            }, [N, l]),
+            (0, e._)(() => {
+                N?.status === "finished" && t(N.finishStatus);
+            }, [N?.status, t, N]),
+            (0, e._)(() => {
+                N?.status === "error" && d && d(N.error, N.errorCode);
+            }, [N?.status, d, N]),
+            (0, e._)(() => {
+                N?.status === "ready" &&
+                    "ID" === N.currentStep &&
+                    N.steps.includes("TUTORIAL_ID") &&
+                    M.completeModule();
+            }, [N, M]);
+        let g = !(l.spinnerConfig?.title || l.spinnerConfig?.subtitle);
+        if ("error" === h.status)
+            return (0, e.v)("div", {
                 class: "IncodeFlow",
-                children: (0, o.v)("div", { children: ["Error: ", f.error] }),
+                children: (0, e.v)("div", { children: ["Error: ", h.error] }),
             });
-        if (C.homeScreen.visible || L)
-            return (0, o.v)("div", {
+        if (N.homeScreen.visible || T)
+            return (0, e.v)("div", {
                 class: "IncodeFlow",
-                children: (0, o.v)(o.o, {
+                children: (0, e.v)(e.o, {
                     fallback: null,
-                    children: (0, o.v)(Q, {
-                        isContinueLoading: C.homeScreen.isContinueLoading || L,
-                        onContinue: () => y.continueFromHome(),
+                    children: (0, e.v)(_, {
+                        isContinueLoading: N.homeScreen.isContinueLoading || T,
+                        onContinue: () => M.continueFromHome(),
                     }),
                 }),
             });
-        if ("initializing" === f.status)
-            return (0, o.v)("div", {
+        if ("initializing" === h.status)
+            return (0, e.v)("div", {
                 class: "IncodeFlow",
-                children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                children: (0, e.v)(n.t, { spinnerConfig: l.spinnerConfig, hideText: g }),
             });
-        if (C.presentation.isAwaitingReady)
-            return E
-                ? (0, o.v)("div", {
+        if (N.presentation.isAwaitingReady)
+            return V
+                ? (0, e.v)("div", {
                       class: "IncodeFlow",
-                      children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                      children: (0, e.v)(n.t, { spinnerConfig: l.spinnerConfig, hideText: g }),
                   })
-                : (0, o.v)("div", { class: "IncodeFlow" });
-        if ("error" === C.status)
-            return (0, o.v)("div", {
+                : (0, e.v)("div", { class: "IncodeFlow" });
+        if ("error" === N.status)
+            return (0, e.v)("div", {
                 class: "IncodeFlow",
-                children: (0, o.v)("div", { children: ["Error: ", C.error] }),
+                children: (0, e.v)("div", { children: ["Error: ", N.error] }),
             });
-        if ("finished" === C.status) return null;
-        if (C?.status === "ready") {
-            let { currentStep: t, config: n, flow: r } = C,
-                { flowId: a } = r;
-            if (!t || !n)
-                return (0, o.v)("div", {
+        if ("finished" === N.status) return null;
+        if (N?.status === "ready") {
+            let { currentStep: t, config: i, flow: c } = N,
+                { flowId: a } = c;
+            if (!t || !i)
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                    children: (0, e.v)(n.t, { spinnerConfig: l.spinnerConfig, hideText: g }),
                 });
-            if (k.has(t)) return (0, o.v)("div", { class: "IncodeFlow" });
-            if ("unsupported" === _.status)
-                return (0, o.v)("div", {
+            if (L.has(t)) return (0, e.v)("div", { class: "IncodeFlow" });
+            if ("unsupported" === Y.status)
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(O, { moduleKey: t, onNext: () => y.completeModule() }),
+                    children: (0, e.v)(x, { moduleKey: t, onNext: () => M.completeModule() }),
                 });
-            if ("idle" === _.status || "loading" === _.status || "error" === _.status)
-                return M
-                    ? (0, o.v)("div", {
+            if ("idle" === Y.status || "loading" === Y.status || "error" === Y.status)
+                return R
+                    ? (0, e.v)("div", {
                           class: "IncodeFlow",
-                          children: (0, o.v)(c.t, { spinnerConfig: e.spinnerConfig, hideText: P }),
+                          children: (0, e.v)(n.t, { spinnerConfig: l.spinnerConfig, hideText: g }),
                       })
-                    : (0, o.v)("div", { class: "IncodeFlow" });
-            let { Component: s } = _;
+                    : (0, e.v)("div", { class: "IncodeFlow" });
+            let { Component: s } = Y;
             if ("REDIRECT_TO_MOBILE" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeFlow(),
-                            onContinue: () => y.completeModule(),
-                            onError: i,
+                            config: i,
+                            onFinish: () => M.completeFlow(),
+                            onContinue: () => M.completeModule(),
+                            onError: d,
                         },
-                        `redirect-to-mobile-${C.currentStepIndex}`,
+                        `redirect-to-mobile-${N.currentStepIndex}`,
                     ),
                 });
             if ("SELFIE" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Selfie verification error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Selfie verification error");
                             },
                         },
-                        `selfie-${C.currentStepIndex}`,
+                        `selfie-${N.currentStepIndex}`,
                     ),
                 });
             if ("AUTHENTICATION" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: { ...n, authHint: e.authHint },
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Authentication error");
+                            config: { ...i, authHint: l.authHint },
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Authentication error");
                             },
                         },
-                        `authentication-${C.currentStepIndex}`,
+                        `authentication-${N.currentStepIndex}`,
                     ),
                 });
             if ("PHONE" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Phone verification error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Phone verification error");
                             },
                         },
-                        `phone-${C.currentStepIndex}`,
+                        `phone-${N.currentStepIndex}`,
                     ),
                 });
             if ("EMAIL" === t)
-                return n && "boolean" == typeof n.otpVerification && "number" == typeof n.otpExpirationInMinutes
-                    ? (0, o.v)("div", {
+                return i && "boolean" == typeof i.otpVerification && "number" == typeof i.otpExpirationInMinutes
+                    ? (0, e.v)("div", {
                           class: "IncodeFlow",
-                          children: (0, o.v)(
+                          children: (0, e.v)(
                               s,
                               {
-                                  config: n,
-                                  onFinish: () => y.completeModule(),
-                                  onError: (e) => {
-                                      i?.(e ?? "Email verification error");
+                                  config: i,
+                                  onFinish: () => M.completeModule(),
+                                  onError: (l) => {
+                                      d?.(l ?? "Email verification error");
                                   },
                               },
-                              `email-${C.currentStepIndex}`,
+                              `email-${N.currentStepIndex}`,
                           ),
                       })
-                    : (0, o.v)("div", {
+                    : (0, e.v)("div", {
                           class: "IncodeFlow",
-                          children: (0, o.v)("div", { children: "Error: Invalid email configuration" }),
+                          children: (0, e.v)("div", { children: "Error: Invalid email configuration" }),
                       });
             if ("ID" === t || "SECOND_ID" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: "SECOND_ID" === t ? { ...n, isSecondId: !0 } : n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "ID capture error");
+                            config: "SECOND_ID" === t ? { ...i, isSecondId: !0 } : i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "ID capture error");
                             },
                         },
-                        `id-${C.currentStepIndex}`,
+                        `id-${N.currentStepIndex}`,
                     ),
                 });
             if ("ID_OCR" === t) {
-                let e = C.steps.includes("SECOND_ID");
-                return (0, o.v)("div", {
+                let l = N.steps.includes("SECOND_ID");
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: { ...n, secondId: n.secondId ?? e, flowId: a },
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "ID OCR error");
+                            config: { ...i, secondId: i.secondId ?? l, flowId: a },
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "ID OCR error");
                             },
                         },
-                        `id-ocr-${C.currentStepIndex}`,
+                        `id-ocr-${N.currentStepIndex}`,
                     ),
                 });
             }
             if ("CPF_OCR" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "CPF OCR error");
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "CPF OCR error");
                             },
                         },
-                        `cpf-ocr-${C.currentStepIndex}`,
+                        `cpf-ocr-${N.currentStepIndex}`,
                     ),
                 });
             if ("FACE_MATCH" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Face match error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Face match error");
                             },
                         },
-                        `face-match-${C.currentStepIndex}`,
+                        `face-match-${N.currentStepIndex}`,
                     ),
                 });
             if ("CURP_VALIDATION" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "CURP validation error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "CURP validation error");
                             },
                         },
-                        `curp-validation-${C.currentStepIndex}`,
+                        `curp-validation-${N.currentStepIndex}`,
                     ),
                 });
             if ("GOVT_VALIDATION_PROVISIONING" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Government validation error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Government validation error");
                             },
                         },
-                        `govt-validation-${C.currentStepIndex}`,
+                        `govt-validation-${N.currentStepIndex}`,
                     ),
                 });
             if ("GEOLOCATION" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Geolocation error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Geolocation error");
                             },
                         },
-                        `geolocation-${C.currentStepIndex}`,
+                        `geolocation-${N.currentStepIndex}`,
                     ),
                 });
             if ("EXTERNAL_VERIFICATION" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: { flowId: C.flow.flowId },
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "External verification error");
+                            config: { flowId: N.flow.flowId },
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "External verification error");
                             },
                         },
-                        `ekyc-${C.currentStepIndex}`,
+                        `ekyc-${N.currentStepIndex}`,
                     ),
                 });
             if ("DOCUMENT_CAPTURE" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Document capture error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Document capture error");
                             },
                         },
-                        `document-capture-${C.currentStepIndex}`,
+                        `document-capture-${N.currentStepIndex}`,
                     ),
                 });
             if ("ADDRESS" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: { ...n, processingType: "addressStatement" },
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Address capture error");
+                            config: { ...i, processingType: "addressStatement" },
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Address capture error");
                             },
                         },
-                        `address-${C.currentStepIndex}`,
+                        `address-${N.currentStepIndex}`,
                     ),
                 });
             if ("SIGNATURE" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Signature capture error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Signature capture error");
                             },
                         },
-                        `signature-${C.currentStepIndex}`,
+                        `signature-${N.currentStepIndex}`,
                     ),
                 });
             if ("EKYB" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
                             config: {
                                 flowId: a,
-                                checkBusinessName: n.checkBusinessName,
-                                checkAddress: n.checkAddress,
-                                checkTaxId: n.checkTaxId,
-                                checkUniqueBeneficialOwner: n.checkUniqueBeneficialOwner,
+                                checkBusinessName: i.checkBusinessName,
+                                checkAddress: i.checkAddress,
+                                checkTaxId: i.checkTaxId,
+                                checkUniqueBeneficialOwner: i.checkUniqueBeneficialOwner,
                             },
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "eKYB verification error");
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "eKYB verification error");
                             },
                         },
-                        `ekyb-${C.currentStepIndex}`,
+                        `ekyb-${N.currentStepIndex}`,
                     ),
                 });
             if ("COMBINED_CONSENT" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Combined consent error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Combined consent error");
                             },
                         },
-                        `combined-consent-${C.currentStepIndex}`,
+                        `combined-consent-${N.currentStepIndex}`,
                     ),
                 });
             if ("MANDATORY_CONSENT" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Mandatory consent error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Mandatory consent error");
                             },
                         },
-                        `mandatory-consent-${C.currentStepIndex}`,
+                        `mandatory-consent-${N.currentStepIndex}`,
                     ),
                 });
             if ("AE_SIGNATURE" === t || "QE_SIGNATURE" === t) {
-                let e = "QE_SIGNATURE" === t ? "qe" : "ae";
-                return (0, o.v)("div", {
+                let l = "QE_SIGNATURE" === t ? "qe" : "ae";
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: { uploadDocument: n.uploadDocument, downloadDocument: n.downloadDocument },
-                            onFinish: () => y.completeModule(),
+                            config: { uploadDocument: i.uploadDocument, downloadDocument: i.downloadDocument },
+                            onFinish: () => M.completeModule(),
                             onError: (t) => {
-                                i?.(t ?? `${e.toUpperCase()} Signature error`);
+                                d?.(t ?? `${l.toUpperCase()} Signature error`);
                             },
                         },
-                        `${e}-signature-${C.currentStepIndex}`,
+                        `${l}-signature-${N.currentStepIndex}`,
                     ),
                 });
             }
             if ("ANTIFRAUD" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Antifraud check error");
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Antifraud check error");
                             },
                         },
-                        `antifraud-${C.currentStepIndex}`,
+                        `antifraud-${N.currentStepIndex}`,
                     ),
                 });
             if ("CUSTOM_FIELDS" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Custom fields error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Custom fields error");
                             },
                         },
-                        `custom-fields-${C.currentStepIndex}`,
+                        `custom-fields-${N.currentStepIndex}`,
                     ),
                 });
             if ("WATCHLIST" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Watchlist check error");
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Watchlist check error");
                             },
                         },
-                        `watchlist-${C.currentStepIndex}`,
+                        `watchlist-${N.currentStepIndex}`,
                     ),
                 });
             if ("WATCHLIST_BUSINESS" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Watchlist for business check error");
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Watchlist for business check error");
                             },
                         },
-                        `watchlist-for-business-${C.currentStepIndex}`,
+                        `watchlist-for-business-${N.currentStepIndex}`,
                     ),
                 });
             if ("INCODE_WATCHLIST" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            config: n,
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Custom watchlist check error");
+                            config: i,
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Custom watchlist check error");
                             },
                         },
-                        `incode-watchlist-${C.currentStepIndex}`,
+                        `incode-watchlist-${N.currentStepIndex}`,
                     ),
                 });
             if ("CROSS_DOCUMENT_DATA_MATCH" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Cross document data match error");
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Cross document data match error");
                             },
                         },
-                        `cross-document-data-match-${C.currentStepIndex}`,
+                        `cross-document-data-match-${N.currentStepIndex}`,
                     ),
                 });
             if ("DYNAMIC_FORMS" === t)
-                return (0, o.v)("div", {
+                return (0, e.v)("div", {
                     class: "IncodeFlow",
-                    children: (0, o.v)(
+                    children: (0, e.v)(
                         s,
                         {
                             config: {
-                                screens: n.screens.map((e) => ({
-                                    title: e.title,
-                                    hideTitle: e.hideTitle,
-                                    questions: e.questions.map((e) => ({
-                                        questionId: e.questionId,
-                                        question: e.question,
-                                        inputType: e.inputType,
-                                        isOptional: e.isOptional,
-                                        overrides: e.overrides ?? void 0,
-                                        isPredefined: e.isPredefined,
-                                        options: e.options,
+                                screens: i.screens.map((l) => ({
+                                    title: l.title,
+                                    hideTitle: l.hideTitle,
+                                    questions: l.questions.map((l) => ({
+                                        questionId: l.questionId,
+                                        question: l.question,
+                                        inputType: l.inputType,
+                                        isOptional: l.isOptional,
+                                        overrides: l.overrides ?? void 0,
+                                        isPredefined: l.isPredefined,
+                                        options: l.options,
                                     })),
                                 })),
                             },
-                            onFinish: () => y.completeModule(),
-                            onError: (e) => {
-                                i?.(e ?? "Dynamic forms error");
+                            onFinish: () => M.completeModule(),
+                            onError: (l) => {
+                                d?.(l ?? "Dynamic forms error");
                             },
                         },
-                        `dynamic-forms-${C.currentStepIndex}`,
+                        `dynamic-forms-${N.currentStepIndex}`,
                     ),
                 });
         }
         return null;
     };
-(0, d.t)(
-    ({ config: e, onFinish: t = () => {}, onError: i }) =>
-        (0, o.v)(l.t, { children: e ? (0, o.v)(X, { config: e, onFinish: t, onError: i }) : null }),
+(0, b.t)(
+    ({ config: l, onFinish: t = () => {}, onError: d }) =>
+        (0, e.v)(Z.t, { children: l ? (0, e.v)($, { config: l, onFinish: t, onError: d }) : null }),
     "incode-flow",
 );

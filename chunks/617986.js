@@ -262,7 +262,7 @@ function J(e, t, r, a) {
             n.e("79664"),
             n.e("63549"),
             n.e("11310"),
-            n.e("36877"),
+            n.e("21402"),
             n.e("36863"),
             n.e("77473"),
             n.e("24761"),
@@ -270,6 +270,7 @@ function J(e, t, r, a) {
             n.e("27323"),
             n.e("85350"),
             n.e("4369"),
+            n.e("20009"),
             n.e("71217"),
             n.e("967"),
             n.e("12466"),
@@ -308,7 +309,7 @@ function et(e, t, r) {
           }),
         (0, o.openModalLazy)(
             async () => {
-                let { default: a } = await Promise.all([n.e("99547"), n.e("78050"), n.e("132")]).then(
+                let { default: a } = await Promise.all([n.e("99547"), n.e("24922"), n.e("78050"), n.e("132")]).then(
                     n.bind(n, 348559),
                 );
                 return (n) => (0, i.jsx)(a, { ...n, questContent: t.content, quest: e, returnRef: r });

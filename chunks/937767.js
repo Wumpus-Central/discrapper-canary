@@ -1,21 +1,21 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
 var r = n(442433),
-    s = n(593284),
-    a = n(288539),
-    o = n(734057);
-let l = {
-    handleUserContextMenu(e, t, s, a) {
-        let l = o.A.getChannel(t);
-        null != l &&
-            (0, r.L3)(a, async () => {
+    a = n(593284),
+    s = n(288539),
+    l = n(734057);
+let o = {
+    handleUserContextMenu(e, t, a, s) {
+        let o = l.A.getChannel(t);
+        null != o &&
+            (0, r.L3)(s, async () => {
                 let { default: t } = await Promise.all([
                     n.e("31463"),
                     n.e("41831"),
                     n.e("65264"),
-                    n.e("18078"),
+                    n.e("62323"),
                     n.e("88429"),
                     n.e("94881"),
                     n.e("26692"),
@@ -62,6 +62,7 @@ let l = {
                     n.e("65826"),
                     n.e("49520"),
                     n.e("14461"),
+                    n.e("93014"),
                     n.e("7059"),
                     n.e("25486"),
                     n.e("22261"),
@@ -83,21 +84,21 @@ let l = {
                     n.e("17334"),
                     n.e("84841"),
                 ]).then(n.bind(n, 107632));
-                return (n) => (0, i.jsx)(t, { ...n, user: e, channel: l, guildId: s });
+                return (n) => (0, i.jsx)(t, { ...n, user: e, channel: o, guildId: a });
             });
     },
     react(e, t, n) {
-        let { userId: r, channelId: o, parsedUserId: l, roleId: u, roleName: c, viewingChannelId: d } = e;
-        return null == r && (null != u || "@everyone" === c || "@here" === c)
-            ? (0, i.jsx)(s.A, { inlinePreview: n.formatInline, ...e, children: t(e.content, n) }, n.key)
+        let { userId: r, channelId: l, parsedUserId: o, roleId: d, roleName: c, viewingChannelId: u } = e;
+        return null == r && (null != d || "@everyone" === c || "@here" === c)
+            ? (0, i.jsx)(a.A, { inlinePreview: n.formatInline, ...e, children: t(e.content, n) }, n.key)
             : (0, i.jsx)(
-                  a.A,
+                  s.A,
                   {
                       className: "mention",
                       userId: r,
-                      channelId: o,
-                      viewingChannelId: d,
-                      parsedUserId: l,
+                      channelId: l,
+                      viewingChannelId: u,
+                      parsedUserId: o,
                       content: t(e.content, n),
                       inlinePreview: n.noStyleAndInteraction,
                   },

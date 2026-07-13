@@ -1,87 +1,86 @@
-"use strict";
-n.d(t, { Df: () => D, LB: () => R });
+n.d(t, { Df: () => R, LB: () => _ });
 var i = n(367513),
-    r = n(720149),
-    s = n(334738),
-    a = n(313961),
-    o = n(267102),
-    l = n(118517),
-    u = n(853145),
-    c = n(138298),
+    r = n(493336),
+    l = n(334738),
+    s = n(313961),
+    a = n(267102),
+    o = n(118517),
+    c = n(853145),
+    u = n(138298),
     d = n(940382),
-    _ = n(931664),
+    A = n(931664),
     h = n(631576),
-    f = n(761640),
-    p = n(734057),
-    E = n(72314),
-    m = n(31717),
-    g = n(580745),
-    A = n(232835),
-    I = n(222823),
-    T = n(309010),
+    m = n(761640),
+    g = n(734057),
+    p = n(72314),
+    f = n(31717),
+    E = n(580745),
+    b = n(232835),
+    C = n(568548),
+    v = n(309010),
     S = n(967198),
     y = n(712687),
-    C = n(531685),
-    N = n(625494),
-    v = n(652215);
-function R(e) {
+    T = n(531685),
+    x = n(625494),
+    O = n(652215);
+function _(e) {
     return {
         binds: ["esc", "shift+pagedown"],
         comboKeysBindGlobal: !0,
         action(t) {
-            if (C.A.isElementFullScreen()) return !1;
-            if (N._.hasSubscribers(v.jej.CALL_DECLINE)) return N._.dispatch(v.jej.CALL_DECLINE), !1;
+            if (T.A.isElementFullScreen()) return !1;
+            if (x._.hasSubscribers(O.jej.CALL_DECLINE)) return x._.dispatch(O.jej.CALL_DECLINE), !1;
             if (y.A.close()) return !1;
-            if (N._.hasSubscribers(v.jej.MEDIA_MODAL_CLOSE)) return N._.dispatch(v.jej.MEDIA_MODAL_CLOSE), !1;
-            let n = (0, o.wp)(t);
-            if (n?.hasSubscribers(v.jej.POPOUT_CLOSE)) return n.dispatch(v.jej.POPOUT_CLOSE), !1;
-            if (N._.hasSubscribers(v.jej.CLOSE_GIF_PICKER)) return N._.dispatch(v.jej.CLOSE_GIF_PICKER), !1;
-            if (N._.hasSubscribers(v.jej.MODAL_CLOSE)) return N._.dispatch(v.jej.MODAL_CLOSE), !1;
-            if (N._.hasSubscribers(v.jej.CONVERSATIONS_FOCUS_MODE_CLOSE))
-                return N._.dispatch(v.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1;
-            if (N._.hasSubscribers(v.jej.SEARCH_RESULTS_CLOSE)) return N._.dispatch(v.jej.SEARCH_RESULTS_CLOSE), !1;
-            if (n?.hasSubscribers(v.jej.POPOUT_CLOSE_AFTER_MODALS))
-                return n.dispatch(v.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
+            if (x._.hasSubscribers(O.jej.MEDIA_MODAL_CLOSE)) return x._.dispatch(O.jej.MEDIA_MODAL_CLOSE), !1;
+            let n = (0, a.wp)(t);
+            if (n?.hasSubscribers(O.jej.POPOUT_CLOSE)) return n.dispatch(O.jej.POPOUT_CLOSE), !1;
+            if (x._.hasSubscribers(O.jej.CLOSE_GIF_PICKER)) return x._.dispatch(O.jej.CLOSE_GIF_PICKER), !1;
+            if (x._.hasSubscribers(O.jej.MODAL_CLOSE)) return x._.dispatch(O.jej.MODAL_CLOSE), !1;
+            if (x._.hasSubscribers(O.jej.CONVERSATIONS_FOCUS_MODE_CLOSE))
+                return x._.dispatch(O.jej.CONVERSATIONS_FOCUS_MODE_CLOSE), !1;
+            if (x._.hasSubscribers(O.jej.SEARCH_RESULTS_CLOSE)) return x._.dispatch(O.jej.SEARCH_RESULTS_CLOSE), !1;
+            if (n?.hasSubscribers(O.jej.POPOUT_CLOSE_AFTER_MODALS))
+                return n.dispatch(O.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
             let r = S.A.getGuildId(),
-                s = e ?? T.A.getChannelId(r),
-                l = p.A.getChannel(s),
-                u = f.Ay.getSection(s, l?.isDM()) === v.YvQ.SIDEBAR_CHAT ? f.Ay.getSidebarState(s) : null,
-                _ = u?.type === d.PE.VIEW_THREAD || u?.type === d.PE.VIEW_CHANNEL ? u.channelId : null;
-            if (!1 === O(s) || !1 === O(_)) return !1;
-            if (null != s && u?.type === d.PE.CREATE_THREAD) return c.A.closeChannelSidebar(s), !1;
-            let h = b(s),
-                m = b(_);
+                l = e ?? v.A.getChannelId(r),
+                o = g.A.getChannel(l),
+                c = m.Ay.getSection(l, o?.isDM()) === O.YvQ.SIDEBAR_CHAT ? m.Ay.getSidebarState(l) : null,
+                A = c?.type === d.PE.VIEW_THREAD || c?.type === d.PE.VIEW_CHANNEL ? c.channelId : null;
+            if (!1 === j(l) || !1 === j(A)) return !1;
+            if (null != l && c?.type === d.PE.CREATE_THREAD) return u.A.closeChannelSidebar(l), !1;
+            let h = I(l),
+                f = I(A);
             return (
-                null == s || h || m || null == u
-                    ? null != s && !h && !1 !== E.A.isAtBottom(s) && a.A.getChatOpen(s)
-                        ? i.A.updateChatOpen(s, !1)
-                        : N._.dispatch(v.jej.SCROLLTO_PRESENT)
-                    : c.A.closeChannelSidebar(s),
+                null == l || h || f || null == c
+                    ? null != l && !h && !1 !== p.A.isAtBottom(l) && s.A.getChatOpen(l)
+                        ? i.A.updateChatOpen(l, !1)
+                        : x._.dispatch(O.jej.SCROLLTO_PRESENT)
+                    : u.A.closeChannelSidebar(l),
                 !1
             );
         },
     };
 }
-function O(e) {
+function j(e) {
     if (null != e) {
-        if (g.A.isEditingAny(e)) return r.A.endEditMessage(e), !1;
-        if (null != u.A.getPendingReply(e)) return (0, l.Jx)(e), !1;
-        if (null != _.A.getStickerPreview(e, m.C.ChannelMessage)) return (0, h.x5)(e, m.C.ChannelMessage), !1;
+        if (E.A.isEditingAny(e)) return r.A.endEditMessage(e), !1;
+        if (null != c.A.getPendingReply(e)) return (0, o.Jx)(e), !1;
+        if (null != A.A.getStickerPreview(e, f.C.ChannelMessage)) return (0, h.x5)(e, f.C.ChannelMessage), !1;
     }
 }
-function b(e) {
+function I(e) {
     if (null == e) return !1;
     let t = !1;
     return (
-        A.A.getMessages(e).hasMoreAfter && (r.A.jumpToPresent(e, v.EMb), (t = !0)),
-        I.Ay.hasUnread(e) &&
-            ((0, s.ack)(e, {
-                object: v.ZSU.MARK_CHANNEL_AS_READ_KEYBIND,
-                objectType: v.AnalyticsObjectTypes.ACK_MANUAL,
+        b.A.getMessages(e).hasMoreAfter && (r.A.jumpToPresent(e, O.EMb), (t = !0)),
+        C.Ay.hasUnread(e) &&
+            ((0, l.ack)(e, {
+                object: O.ZSU.MARK_CHANNEL_AS_READ_KEYBIND,
+                objectType: O.AnalyticsObjectTypes.ACK_MANUAL,
             }),
             (t = !0)),
-        (0, s.fb)(e),
+        (0, l.fb)(e),
         t
     );
 }
-let D = R();
+let R = _();

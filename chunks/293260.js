@@ -14,7 +14,13 @@ let _ = "guild-connection-roles";
 function E(e) {
     (0, s.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("95820"), n.e("92837")]).then(n.bind(n, 480900));
+            let { default: t } = await Promise.all([
+                n.e("76649"),
+                n.e("95820"),
+                n.e("24922"),
+                n.e("50200"),
+                n.e("92837"),
+            ]).then(n.bind(n, 480900));
             return (n) => (0, i.jsx)(t, { ...n, guildId: e });
         },
         {

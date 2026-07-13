@@ -1,32 +1,32 @@
-i.d(s, { A: () => b });
-var n = i(627968);
+i.d(t, { A: () => S });
+var s = i(627968);
 i(64700);
-var t = i(661531),
-    a = i(3026),
-    l = i(462887),
-    r = i(778712),
+var n = i(661531),
+    l = i(3026),
+    r = i(462887),
+    a = i(778712),
     o = i(939249),
     d = i(781696),
-    u = i(97808),
-    c = i(834730),
-    f = i(442433),
-    A = i(548118),
-    m = i(562153),
-    h = i(939496),
-    v = i(518477),
-    g = i(996988),
+    c = i(97808),
+    u = i(834730),
+    g = i(442433),
+    m = i(548118),
+    h = i(562153),
+    f = i(939496),
+    A = i(518477),
+    p = i(996988),
     x = i(341934);
-let C = (0, r.FT)(r._3.SIZE_16);
-function b(e) {
-    let { user: s, guild: b, nick: M, onSelect: j } = e,
-        { theme: p, themeType: I } = (0, h.E)(),
-        E = s.hasAvatarForGuild(b.id);
-    return (0, n.jsxs)(o.D, {
-        focusProps: I === g.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+let I = (0, a.FT)(a._3.SIZE_16);
+function S(e) {
+    let { user: t, guild: S, nick: j, onSelect: v } = e,
+        { theme: E, themeType: y } = (0, f.E)(),
+        C = t.hasAvatarForGuild(S.id);
+    return (0, s.jsxs)(o.D, {
+        focusProps: y === p.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: x.nM,
-        onClick: j,
+        onClick: v,
         onContextMenu: function (e) {
-            (0, f.L3)(e, async () => {
+            (0, g.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     i.e("26142"),
                     i.e("25058"),
@@ -51,7 +51,9 @@ function b(e) {
                     i.e("38759"),
                     i.e("37634"),
                     i.e("812"),
-                    i.e("89209"),
+                    i.e("39476"),
+                    i.e("76649"),
+                    i.e("40821"),
                     i.e("32697"),
                     i.e("55532"),
                     i.e("34454"),
@@ -126,7 +128,7 @@ function b(e) {
                     i.e("92116"),
                     i.e("84200"),
                     i.e("33217"),
-                    i.e("47266"),
+                    i.e("73040"),
                     i.e("25610"),
                     i.e("42548"),
                     i.e("80050"),
@@ -155,7 +157,7 @@ function b(e) {
                     i.e("47587"),
                     i.e("32317"),
                     i.e("16747"),
-                    i.e("84209"),
+                    i.e("36081"),
                     i.e("78777"),
                     i.e("64379"),
                     i.e("79465"),
@@ -164,7 +166,7 @@ function b(e) {
                     i.e("85776"),
                     i.e("83671"),
                     i.e("63980"),
-                    i.e("18078"),
+                    i.e("62323"),
                     i.e("73099"),
                     i.e("47199"),
                     i.e("78381"),
@@ -301,7 +303,7 @@ function b(e) {
                     i.e("4744"),
                     i.e("2698"),
                     i.e("37021"),
-                    i.e("81314"),
+                    i.e("18465"),
                     i.e("71430"),
                     i.e("501"),
                     i.e("86243"),
@@ -324,7 +326,6 @@ function b(e) {
                     i.e("83952"),
                     i.e("93438"),
                     i.e("36227"),
-                    i.e("20287"),
                     i.e("95340"),
                     i.e("5557"),
                     i.e("62718"),
@@ -332,6 +333,7 @@ function b(e) {
                     i.e("60773"),
                     i.e("9004"),
                     i.e("58337"),
+                    i.e("20287"),
                     i.e("8018"),
                     i.e("92295"),
                     i.e("49145"),
@@ -351,27 +353,28 @@ function b(e) {
                     i.e("85350"),
                     i.e("3131"),
                     i.e("49520"),
+                    i.e("93014"),
                     i.e("57458"),
                     i.e("47177"),
                     i.e("38601"),
                     i.e("1243"),
                     i.e("8563"),
                     i.e("4369"),
-                    i.e("27272"),
                     i.e("36149"),
+                    i.e("69985"),
                     i.e("51778"),
                     i.e("26437"),
                     i.e("15920"),
                     i.e("20683"),
+                    i.e("24922"),
                     i.e("58164"),
-                    i.e("24914"),
-                    i.e("3930"),
                     i.e("22261"),
                     i.e("49644"),
-                    i.e("42714"),
                     i.e("24265"),
                     i.e("28136"),
                     i.e("3663"),
+                    i.e("97198"),
+                    i.e("27272"),
                     i.e("71470"),
                     i.e("27659"),
                     i.e("78195"),
@@ -379,8 +382,10 @@ function b(e) {
                     i.e("37490"),
                     i.e("21106"),
                     i.e("66580"),
+                    i.e("24914"),
                     i.e("68532"),
                     i.e("20382"),
+                    i.e("19736"),
                     i.e("65617"),
                     i.e("43116"),
                     i.e("32737"),
@@ -432,7 +437,7 @@ function b(e) {
                     i.e("41786"),
                     i.e("69369"),
                     i.e("30221"),
-                    i.e("33852"),
+                    i.e("11471"),
                     i.e("22266"),
                     i.e("10014"),
                     i.e("34409"),
@@ -446,6 +451,7 @@ function b(e) {
                     i.e("36002"),
                     i.e("60178"),
                     i.e("83477"),
+                    i.e("50200"),
                     i.e("43233"),
                     i.e("62213"),
                     i.e("63726"),
@@ -457,6 +463,7 @@ function b(e) {
                     i.e("56373"),
                     i.e("83827"),
                     i.e("98254"),
+                    i.e("86155"),
                     i.e("42749"),
                     i.e("56026"),
                     i.e("16301"),
@@ -466,7 +473,7 @@ function b(e) {
                     i.e("8364"),
                     i.e("1650"),
                     i.e("99108"),
-                    i.e("66147"),
+                    i.e("2521"),
                     i.e("89541"),
                     i.e("52823"),
                     i.e("56967"),
@@ -484,6 +491,7 @@ function b(e) {
                     i.e("61347"),
                     i.e("95841"),
                     i.e("91643"),
+                    i.e("85937"),
                     i.e("47011"),
                     i.e("42935"),
                     i.e("73091"),
@@ -497,6 +505,7 @@ function b(e) {
                     i.e("11802"),
                     i.e("16373"),
                     i.e("81398"),
+                    i.e("66147"),
                     i.e("24484"),
                     i.e("44943"),
                     i.e("32347"),
@@ -515,7 +524,6 @@ function b(e) {
                     i.e("84951"),
                     i.e("60165"),
                     i.e("72239"),
-                    i.e("97116"),
                     i.e("71167"),
                     i.e("12390"),
                     i.e("53203"),
@@ -525,14 +533,16 @@ function b(e) {
                     i.e("6410"),
                     i.e("39353"),
                     i.e("61309"),
+                    i.e("2098"),
                     i.e("94529"),
                     i.e("70272"),
                     i.e("53683"),
                     i.e("15799"),
                     i.e("68264"),
                     i.e("93213"),
-                    i.e("21300"),
+                    i.e("98919"),
                     i.e("66016"),
+                    i.e("97116"),
                     i.e("51162"),
                     i.e("18792"),
                     i.e("18489"),
@@ -543,6 +553,7 @@ function b(e) {
                     i.e("72238"),
                     i.e("22941"),
                     i.e("94832"),
+                    i.e("47285"),
                     i.e("37038"),
                     i.e("78294"),
                     i.e("81202"),
@@ -551,6 +562,7 @@ function b(e) {
                     i.e("71790"),
                     i.e("19148"),
                     i.e("65338"),
+                    i.e("60565"),
                     i.e("52191"),
                     i.e("14656"),
                     i.e("39855"),
@@ -561,49 +573,49 @@ function b(e) {
                     i.e("15046"),
                     i.e("65011"),
                 ]).then(i.bind(i, 860417));
-                return (s) => (0, n.jsx)(e, { ...s, guild: b });
+                return (t) => (0, s.jsx)(e, { ...t, guild: S });
             });
         },
         children: [
-            (0, n.jsx)(A.Ay, {
+            (0, s.jsx)(m.Ay, {
                 tabIndex: -1,
-                guild: b,
+                guild: S,
                 showBadge: !0,
-                className: null != b.icon ? x.Kk : x.lN,
-                badgeStrokeColor: (0, l.M)(p) ? t.A.unsafe_rawColors.PRIMARY_600.css : t.A.unsafe_rawColors.WHITE.css,
+                className: null != S.icon ? x.Kk : x.lN,
+                badgeStrokeColor: (0, r.M)(E) ? n.A.unsafe_rawColors.PRIMARY_600.css : n.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: d.oM.PRIMARY,
-                badgeTooltipDelay: v.In,
-                size: A.Ay.Sizes.MEDIUM,
+                badgeTooltipDelay: A.In,
+                size: m.Ay.Sizes.MEDIUM,
                 active: !0,
             }),
-            (0, n.jsxs)("div", {
+            (0, s.jsxs)("div", {
                 className: x.zH,
                 children: [
-                    (0, n.jsx)("div", { className: x.UU, children: b.name }),
-                    E &&
-                        (0, n.jsxs)("div", {
+                    (0, s.jsx)("div", { className: x.UU, children: S.name }),
+                    C &&
+                        (0, s.jsxs)("div", {
                             className: x.C9,
                             children: [
-                                (0, n.jsx)(u.eu, {
-                                    src: s.getAvatarURL(b.id, C),
-                                    size: r._3.SIZE_16,
+                                (0, s.jsx)(c.eu, {
+                                    src: t.getAvatarURL(S.id, I),
+                                    size: a._3.SIZE_16,
                                     className: x.my,
                                     "aria-hidden": !0,
                                 }),
-                                (0, n.jsx)(c.E, {
+                                (0, s.jsx)(u.E, {
                                     variant: "text-xs/medium",
-                                    children: (0, n.jsx)(a.A, {
-                                        delay: v.In,
-                                        children: M ?? m.Ay.getName(b.id, void 0, s),
+                                    children: (0, s.jsx)(l.A, {
+                                        delay: A.In,
+                                        children: j ?? h.Ay.getName(S.id, void 0, t),
                                     }),
                                 }),
                             ],
                         }),
-                    !E &&
-                        null != M &&
-                        (0, n.jsx)(c.E, {
+                    !C &&
+                        null != j &&
+                        (0, s.jsx)(u.E, {
                             variant: "text-xs/medium",
-                            children: (0, n.jsx)(a.A, { delay: v.In, children: M }),
+                            children: (0, s.jsx)(l.A, { delay: A.In, children: j }),
                         }),
                 ],
             }),

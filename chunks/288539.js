@@ -1,30 +1,30 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => m });
 var i = n(627968),
     r = n(64700),
-    s = n(607399),
-    a = n(17928),
-    o = n(442433),
-    l = n(793574),
-    u = n(688810),
+    a = n(607399),
+    s = n(17928),
+    l = n(442433),
+    o = n(793574),
+    d = n(688810),
     c = n(9588),
-    d = n(332173),
+    u = n(332173),
     _ = n(342296),
-    h = n(734057),
-    f = n(696451),
-    E = n(994500),
-    p = n(287809),
-    m = n(562153),
-    g = n(427262);
-function A(e) {
-    let { userId: t, className: s, children: a } = e,
-        l = r.useCallback(() => {
+    E = n(734057),
+    A = n(696451),
+    h = n(994500),
+    I = n(287809),
+    f = n(562153),
+    p = n(427262);
+function T(e) {
+    let { userId: t, className: a, children: s } = e,
+        o = r.useCallback(() => {
             (0, c.showInaccessibleLinkModal)({ kind: "user" });
         }, []),
-        u = r.useCallback(
+        d = r.useCallback(
             (e) => {
                 null != t &&
-                    (0, o.L3)(e, async () => {
+                    (0, l.L3)(e, async () => {
                         let { default: e } = await Promise.all([n.e("26132"), n.e("46652"), n.e("60829")]).then(
                             n.bind(n, 446828),
                         );
@@ -33,34 +33,34 @@ function A(e) {
             },
             [t],
         );
-    return (0, i.jsx)(d.A, { className: s, onClick: l, onContextMenu: u, children: a });
+    return (0, i.jsx)(u.A, { className: a, onClick: o, onContextMenu: d, children: s });
 }
-function I(e) {
+function m(e) {
     let {
             className: t,
             userId: c,
-            channelId: I,
-            parsedUserId: T,
+            channelId: m,
+            parsedUserId: g,
             content: S,
             inlinePreview: N = !1,
             viewingChannelId: C,
         } = e,
-        y = r.useRef(null),
-        { analyticsLocations: O } = (0, u.Ay)(l.A.USER_MENTION),
-        R = (0, a.bG)([p.default], () => p.default.getUser(c)),
-        v = (0, a.bG)([h.A], () => h.A.getChannel(I)),
-        b = null != v ? v.getGuildId() : null,
-        L =
-            N || null == R || null == I || null == v
+        O = r.useRef(null),
+        { analyticsLocations: R } = (0, d.Ay)(o.A.USER_MENTION),
+        L = (0, s.bG)([I.default], () => I.default.getUser(c)),
+        D = (0, s.bG)([E.A], () => E.A.getChannel(m)),
+        y = null != D ? D.getGuildId() : null,
+        v =
+            N || null == L || null == m || null == D
                 ? void 0
                 : (e) => {
-                      null != b
-                          ? (0, o.L3)(e, async () => {
+                      null != y
+                          ? (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("31463"),
                                     n.e("41831"),
                                     n.e("65264"),
-                                    n.e("18078"),
+                                    n.e("62323"),
                                     n.e("88429"),
                                     n.e("94881"),
                                     n.e("26692"),
@@ -107,6 +107,7 @@ function I(e) {
                                     n.e("65826"),
                                     n.e("49520"),
                                     n.e("14461"),
+                                    n.e("93014"),
                                     n.e("7059"),
                                     n.e("25486"),
                                     n.e("22261"),
@@ -129,16 +130,16 @@ function I(e) {
                                     n.e("84841"),
                                 ]).then(n.bind(n, 107632));
                                 return (t) =>
-                                    (0, i.jsx)(e, { ...t, viewingChannelId: C, user: R, channel: v, guildId: b });
+                                    (0, i.jsx)(e, { ...t, viewingChannelId: C, user: L, channel: D, guildId: y });
                             })
-                          : v.isDM() &&
-                            (0, o.L3)(e, async () => {
+                          : D.isDM() &&
+                            (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("71406"),
                                     n.e("31463"),
                                     n.e("41831"),
                                     n.e("65264"),
-                                    n.e("18078"),
+                                    n.e("62323"),
                                     n.e("88429"),
                                     n.e("94881"),
                                     n.e("26692"),
@@ -181,6 +182,7 @@ function I(e) {
                                     n.e("9291"),
                                     n.e("56753"),
                                     n.e("14461"),
+                                    n.e("93014"),
                                     n.e("7059"),
                                     n.e("8829"),
                                     n.e("72883"),
@@ -209,25 +211,25 @@ function I(e) {
                                     n.e("39778"),
                                     n.e("63071"),
                                 ]).then(n.bind(n, 385913));
-                                return (t) => (0, i.jsx)(e, { ...t, user: R, channel: v, targetIsUser: !0 });
+                                return (t) => (0, i.jsx)(e, { ...t, user: L, channel: D, targetIsUser: !0 });
                             });
                   },
-        D = g.Ay.useName(R),
-        w = (0, a.bG)([h.A, f.Ay, E.A], () => m.Ay.getNickname(b, I, R));
-    if (null == R) return (0, i.jsx)(A, { userId: T, className: t, children: S });
+        b = p.Ay.useName(L),
+        M = (0, s.bG)([E.A, A.Ay, h.A], () => f.Ay.getNickname(y, m, L));
+    if (null == L) return (0, i.jsx)(T, { userId: g, className: t, children: S });
     function P(e) {
-        return (0, i.jsx)(d.A, { ref: y, className: t, onContextMenu: L, ...e, children: `@${w ?? D}` });
+        return (0, i.jsx)(u.A, { ref: O, className: t, onContextMenu: v, ...e, children: `@${M ?? b}` });
     }
     return N
-        ? (0, i.jsx)(u.f5, { value: O, children: P() })
-        : (0, i.jsx)(u.f5, {
-              value: O,
+        ? (0, i.jsx)(d.f5, { value: R, children: P() })
+        : (0, i.jsx)(d.f5, {
+              value: R,
               children: (0, i.jsx)(_.A, {
-                  targetElementRef: y,
-                  user: R,
-                  guildId: b ?? void 0,
-                  channelId: I,
-                  position: s.Fr ? "top" : "right",
+                  targetElementRef: O,
+                  user: L,
+                  guildId: y ?? void 0,
+                  channelId: m,
+                  position: a.Fr ? "top" : "right",
                   clickTrap: !0,
                   children: (e) => P(e),
               }),

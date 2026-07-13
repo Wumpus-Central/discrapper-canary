@@ -1,19 +1,18 @@
-"use strict";
 var n = r(668413),
-    i = r(869639),
-    o = r(126331),
-    a = r(418227);
-t.exports = function (t) {
-    var e = a(
-        t,
-        function (t) {
-            var e = t.getSelection(),
-                r = e.getStartOffset(),
-                i = e.getStartKey(),
-                a = t.getCurrentContent().getBlockForKey(i).getText().slice(r);
-            return o(t, n.getForward(a).length || 1);
+    o = r(869639),
+    a = r(126331),
+    c = r(418227);
+e.exports = function (e) {
+    var t = c(
+        e,
+        function (e) {
+            var t = e.getSelection(),
+                r = t.getStartOffset(),
+                o = t.getStartKey(),
+                c = e.getCurrentContent().getBlockForKey(o).getText().slice(r);
+            return a(e, n.getForward(c).length || 1);
         },
         "forward",
     );
-    return e === t.getCurrentContent() ? t : i.push(t, e, "remove-range");
+    return t === e.getCurrentContent() ? e : o.push(e, t, "remove-range");
 };

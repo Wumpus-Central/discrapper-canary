@@ -1,0 +1,9 @@
+.nowPlayingAdd__1f52c {
+    align-items: center;
+    align-self: flex-start;
+    color: var(--text-muted);
+    display: flex;
+    font-size: 14px;
+    gap: 4px;
+    margin-inline-start: 0
+}

@@ -16,6 +16,7 @@ let o = "social-layer-storefront-item-claimed-successfully-modal",
                 let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([
                     n.e("90860"),
                     n.e("72963"),
+                    n.e("93014"),
                     n.e("72877"),
                     n.e("61684"),
                     n.e("80307"),

@@ -1,68 +1,67 @@
-"use strict";
-n.d(t, { F: () => l });
-var i = n(707040),
-    r = n.n(i),
-    s = n(64700),
-    a = n(218436);
-function o(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
-    return i;
+e.d(t, { F: () => f });
+var n = e(707040),
+    o = e.n(n),
+    u = e(64700),
+    a = e(218436);
+function i(r, t) {
+    (null == t || t > r.length) && (t = r.length);
+    for (var e = 0, n = Array(t); e < t; e++) n[e] = r[e];
+    return n;
 }
-function l(e, t, n) {
-    var i,
-        l =
-            (function (e) {
-                if (Array.isArray(e)) return e;
+function f(r, t, e) {
+    var n,
+        f =
+            (function (r) {
+                if (Array.isArray(r)) return r;
             })(
-                (i = (0, s.useState)(function () {
-                    return t(e);
+                (n = (0, u.useState)(function () {
+                    return t(r);
                 })),
             ) ||
-            (function (e) {
+            (function (r) {
                 var t,
-                    n,
-                    i = null == e ? null : ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
-                if (null != i) {
-                    var r = [],
-                        s = !0,
+                    e,
+                    n = null == r ? null : ("u" > typeof Symbol && r[Symbol.iterator]) || r["@@iterator"];
+                if (null != n) {
+                    var o = [],
+                        u = !0,
                         a = !1;
                     try {
-                        for (i = i.call(e); !(s = (t = i.next()).done) && (r.push(t.value), 2 !== r.length); s = !0);
-                    } catch (e) {
-                        (a = !0), (n = e);
+                        for (n = n.call(r); !(u = (t = n.next()).done) && (o.push(t.value), 2 !== o.length); u = !0);
+                    } catch (r) {
+                        (a = !0), (e = r);
                     } finally {
                         try {
-                            s || null == i.return || i.return();
+                            u || null == n.return || n.return();
                         } finally {
-                            if (a) throw n;
+                            if (a) throw e;
                         }
                     }
-                    return r;
+                    return o;
                 }
-            })(i) ||
-            (function (e) {
-                if (e) {
-                    if ("string" == typeof e) return o(e, 2);
-                    var t = Object.prototype.toString.call(e).slice(8, -1);
-                    if (("Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t))
-                        return Array.from(e);
-                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return o(e, 2);
+            })(n) ||
+            (function (r) {
+                if (r) {
+                    if ("string" == typeof r) return i(r, 2);
+                    var t = Object.prototype.toString.call(r).slice(8, -1);
+                    if (("Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t))
+                        return Array.from(r);
+                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return i(r, 2);
                 }
-            })(i) ||
+            })(n) ||
             (function () {
                 throw TypeError(
                     "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
                 );
             })(),
-        u = l[0],
-        c = l[1],
-        d = (0, s.useCallback)(
+        l = f[0],
+        c = f[1],
+        s = (0, u.useCallback)(
             function () {
-                var i = t(e);
-                !r()(u, i) && (c(i), n && n());
+                var n = t(r);
+                !o()(l, n) && (c(n), e && e());
             },
-            [u, e, n],
+            [l, r, e],
         );
-    return (0, a.E)(d), [u, d];
+    return (0, a.E)(s), [l, s];
 }
