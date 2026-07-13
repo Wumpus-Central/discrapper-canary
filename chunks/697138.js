@@ -1,58 +1,57 @@
-"use strict";
-n.d(t, { A: () => I });
-var i = n(627968),
-    r = n(64700),
-    a = n(919523),
-    s = n(621466),
+n.d(t, { A: () => g });
+var r = n(627968),
+    i = n(64700),
+    s = n(919523),
+    o = n(621466),
     l = n(17928),
-    o = n(844222),
-    d = n(174459),
-    c = n(775602),
-    u = n(264927),
-    _ = n(652215),
-    E = n(650583),
-    A = n(375708);
-function h(e) {
-    if (e.ctrlKey || e.altKey || e.metaKey || e.key !== E.dh.TAB || null == e.target) return;
+    a = n(844222),
+    c = n(174459),
+    u = n(775602),
+    d = n(264927),
+    h = n(652215),
+    f = n(650583),
+    p = n(375708);
+function m(e) {
+    if (e.ctrlKey || e.altKey || e.metaKey || e.key !== f.dh.TAB || null == e.target) return;
     let { target: t } = e,
-        n = (0, s.BF)(e)?.activeElement;
-    (0, s.vq)(t) &&
-        d.default.track(_.HAw.KEYBOARD_SHORTCUT_USED, {
+        n = (0, o.BF)(e)?.activeElement;
+    (0, o.vq)(t) &&
+        c.default.track(h.HAw.KEYBOARD_SHORTCUT_USED, {
             shortcut_name: "tab_navigation",
             source_class_list: null != n ? Array.from(n.classList) : [],
             location_object: t.tagName,
         });
 }
-function I(e) {
+function g(e) {
     let { children: t } = e,
-        n = (0, l.cf)([c.Ay], () => ({ enabled: c.Ay.useReducedMotion, rawValue: c.Ay.rawPrefersReducedMotion })),
-        s = (0, l.cf)([c.Ay], () => ({ enabled: c.Ay.useForcedColors, rawValue: c.Ay.systemForcedColors })),
-        d = (0, l.bG)([c.Ay], () => c.Ay.isHighContrastModeEnabled),
-        _ = (0, l.bG)([c.Ay], () => c.Ay.alwaysShowLinkDecorations),
-        E = (0, l.bG)([c.Ay], () => c.Ay.keyboardModeEnabled),
-        I = (0, l.bG)([c.Ay], () => c.Ay.isSwitchIconsEnabled),
-        f = r.useMemo(
+        n = (0, l.cf)([u.Ay], () => ({ enabled: u.Ay.useReducedMotion, rawValue: u.Ay.rawPrefersReducedMotion })),
+        o = (0, l.cf)([u.Ay], () => ({ enabled: u.Ay.useForcedColors, rawValue: u.Ay.systemForcedColors })),
+        c = (0, l.bG)([u.Ay], () => u.Ay.isHighContrastModeEnabled),
+        h = (0, l.bG)([u.Ay], () => u.Ay.alwaysShowLinkDecorations),
+        f = (0, l.bG)([u.Ay], () => u.Ay.keyboardModeEnabled),
+        g = (0, l.bG)([u.Ay], () => u.Ay.isSwitchIconsEnabled),
+        A = i.useMemo(
             () => ({
                 reducedMotion: n,
                 prefersCrossfades: !1,
-                forcedColors: s,
-                alwaysShowLinkDecorations: _,
-                highContrastModeEnabled: d,
-                keyboardModeEnabled: E,
-                switchIconsEnabled: I,
+                forcedColors: o,
+                alwaysShowLinkDecorations: h,
+                highContrastModeEnabled: c,
+                keyboardModeEnabled: f,
+                switchIconsEnabled: g,
             }),
-            [n, s, _, d, E, I],
+            [n, o, h, c, f, g],
         );
     return (
-        r.useEffect(
+        i.useEffect(
             () => (
-                (0, a.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, u.Z7)()),
-                A.intl.onLocaleChange(() => (0, u.Z7)()),
-                window.addEventListener("keydown", h),
-                () => window.removeEventListener("keydown", h)
+                (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, d.Z7)()),
+                p.intl.onLocaleChange(() => (0, d.Z7)()),
+                window.addEventListener("keydown", m),
+                () => window.removeEventListener("keydown", m)
             ),
             [],
         ),
-        (0, i.jsx)(o.C.Provider, { value: f, children: t })
+        (0, r.jsx)(a.C.Provider, { value: A, children: t })
     );
 }

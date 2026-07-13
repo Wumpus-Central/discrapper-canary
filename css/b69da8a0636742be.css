@@ -12,20 +12,8 @@
     gap: 8px
 }
 
-.progressBarTrack_b39700 {
-    background-color: var(--background-mod-normal);
-    flex: 1;
-    overflow: hidden
-}
-
-.progressBarFill_b39700,
-.progressBarTrack_b39700 {
-    border-radius: var(--radius-round);
-    height: 6px
-}
-
-.progressBarFill_b39700 {
-    background-color: var(--brand-500)
+.progressBar_b39700 {
+    flex: 1
 }
 
 .labels_b39700 {
@@ -53,26 +41,12 @@
     padding: 0 8px
 }
 
-.progressBarTrack_cda434 {
-    background-color: var(--background-mod-normal);
-    overflow: hidden
-}
-
-.progressBarFill_cda434,
-.progressBarTrack_cda434 {
-    border-radius: var(--radius-round);
-    height: 6px
-}
-
-.progressBarFill_cda434 {
-    background-color: var(--brand-500)
-}
-
 .labels_cda434 {
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+    margin-top: 5px;
     min-height: 16px
 }
 
@@ -92,7 +66,9 @@
 
 .progress_e6ca69 {
     box-sizing: border-box;
-    padding: 16px;
+    padding-inline: var(--space-16);
+    padding-inline-end: var(--space-16);
+    padding-bottom: var(--space-16);
     width: 100%
 }
 

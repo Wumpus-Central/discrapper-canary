@@ -1,194 +1,192 @@
-i.d(t, { default: () => B });
+i.d(t, { default: () => I });
 var l = i(627968),
     s = i(64700),
     r = i(70283),
-    n = i(534514),
+    n = i(297264),
     a = i(834730),
     c = i(189213),
-    d = i(17928),
-    o = i(597770),
+    o = i(17928),
+    d = i(597770),
     u = i(793574),
     m = i(688810),
     x = i(982240),
     h = i(975732),
-    j = i(287809),
-    g = i(751188),
-    v = i(503698),
-    f = i.n(v),
-    p = i(360615),
+    g = i(287809),
+    j = i(751188),
+    f = i(503698),
+    p = i.n(f),
+    v = i(914410),
+    T = i(360615),
     N = i(375708),
-    T = i(525897);
-function _(e) {
+    _ = i(525897);
+function M(e) {
     let { progress: t, currentTier: i, newTier: s, className: r } = e,
         n = (0, x.rL)(i ?? void 0),
         c = (0, x.rL)(s),
-        d = c > 0 ? Math.min(Math.max((t / c) * 100, 0), 100) : 100;
+        o = c > 0 ? Math.min(Math.max((t / c) * 100, 0), 100) : 100;
     return (0, l.jsxs)("div", {
-        className: f()(T.kL, r),
+        className: p()(_.kL, r),
         children: [
             (0, l.jsxs)("div", {
-                className: T.O3,
+                className: _.O3,
                 children: [
                     i?.simple_icon_url != null &&
-                        (0, l.jsx)("img", { src: i.simple_icon_url, alt: "", width: 24, height: 24, className: T.w5 }),
+                        (0, l.jsx)("img", { src: i.simple_icon_url, alt: "", width: 24, height: 24, className: _.w5 }),
                     (0, l.jsx)("div", {
-                        className: T.mv,
-                        children: (0, l.jsx)("div", { className: T.SX, style: { width: `${d}%` } }),
+                        className: _.hr,
+                        children: (0, l.jsx)(v.Ay, { variant: v.qP.BLUE, weight: v.fh.MEDIUM, progress: o }),
                     }),
                     null != s.simple_icon_url &&
-                        (0, l.jsx)("img", { src: s.simple_icon_url, alt: "", width: 24, height: 24, className: T.w5 }),
+                        (0, l.jsx)("img", { src: s.simple_icon_url, alt: "", width: 24, height: 24, className: _.w5 }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: T.WD,
+                className: _.WD,
                 children: [
                     (0, l.jsx)(a.E, {
                         variant: "text-xs/normal",
                         color: "text-muted",
-                        children: N.intl.format(p.default.QsbVMM, { count: n }),
+                        children: N.intl.format(T.default.QsbVMM, { count: n }),
                     }),
                     (0, l.jsx)(a.E, {
                         variant: "text-xs/normal",
                         color: "text-strong",
-                        children: N.intl.format(p.default.QsbVMM, { count: c }),
+                        children: N.intl.format(T.default.QsbVMM, { count: c }),
                     }),
                 ],
             }),
         ],
     });
 }
-var w = i(852406);
-function b(e) {
+var b = i(852406);
+function w(e) {
     let { progress: t, currentTier: i, nextTier: s, iconSize: r = 24, title: c } = e,
-        d = (0, x.rL)(s),
-        o = 100;
+        o = (0, x.rL)(s),
+        d = 100;
     return (
-        null != s && d > 0 && (o = Math.min(Math.max((t / d) * 100, 0), 100)),
+        null != s && o > 0 && (d = Math.min(Math.max((t / o) * 100, 0), 100)),
         (0, l.jsxs)("div", {
-            className: w.nM,
+            className: b.nM,
             children: [
                 i?.simple_icon_url != null &&
-                    (0, l.jsx)("img", { src: i.simple_icon_url, alt: "", width: r, height: r, className: w.w5 }),
+                    (0, l.jsx)("img", { src: i.simple_icon_url, alt: "", width: r, height: r, className: b.w5 }),
                 (0, l.jsxs)("div", {
-                    className: w.Qs,
+                    className: b.Qs,
                     children: [
                         null != c && (0, l.jsx)(n.D, { variant: "heading-md/semibold", children: c }),
+                        (0, l.jsx)(v.Ay, { variant: v.qP.BLUE, weight: v.fh.MEDIUM, progress: d }),
                         (0, l.jsx)("div", {
-                            className: w.mv,
-                            children: (0, l.jsx)("div", { className: w.SX, style: { width: `${o}%` } }),
-                        }),
-                        (0, l.jsx)("div", {
-                            className: w.WD,
+                            className: b.WD,
                             children:
                                 null != s &&
                                 (0, l.jsx)(a.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: N.intl.format(p.default.iIpfQe, { count: t, threshold: d }),
+                                    children: N.intl.format(T.default.iIpfQe, { count: t, threshold: o }),
                                 }),
                         }),
                     ],
                 }),
                 s?.simple_icon_url != null &&
-                    (0, l.jsx)("img", { src: s.simple_icon_url, alt: "", width: r, height: r, className: w.w5 }),
+                    (0, l.jsx)("img", { src: s.simple_icon_url, alt: "", width: r, height: r, className: b.w5 }),
             ],
         })
     );
 }
-var M = i(315693),
-    y = i(652215),
-    k = i(615876);
-function Q(e) {
-    let { progress: t, title: i, progressBarTitle: s, description: r, currentTier: c, nextTier: d } = e;
+var y = i(315693),
+    k = i(652215),
+    A = i(615876);
+function E(e) {
+    let { progress: t, title: i, progressBarTitle: s, description: r, currentTier: c, nextTier: o } = e;
     return (0, l.jsxs)("div", {
-        className: k.Qs,
+        className: A.Qs,
         children: [
             (0, l.jsx)("div", {
-                className: k.qB,
-                children: (0, l.jsx)(b, { progress: t, currentTier: c, nextTier: d, iconSize: 48, title: s }),
+                className: A.qB,
+                children: (0, l.jsx)(w, { progress: t, currentTier: c, nextTier: o, iconSize: 48, title: s }),
             }),
             (0, l.jsxs)("div", {
-                className: k.TA,
+                className: A.TA,
                 children: [
                     (0, l.jsx)(n.D, { variant: "heading-xxl/bold", children: i }),
-                    (0, l.jsx)(a.E, { variant: "text-md/normal", color: "text-muted", className: k.h_, children: r }),
+                    (0, l.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", className: A.h_, children: r }),
                 ],
             }),
         ],
     });
 }
-function A(e) {
+function B(e) {
     let { simulatedProgress: t, currentTier: i, newTier: s, nextTier: r, giftsToNextTier: c } = e,
-        d = null != r && null != c && c > 0;
+        o = null != r && null != c && c > 0;
     return (0, l.jsxs)("div", {
-        className: k.Qs,
+        className: A.Qs,
         children: [
             null != s.simple_icon_url &&
-                (0, l.jsx)("img", { src: s.simple_icon_url, alt: "", width: 140, height: 140, className: k.rF }),
+                (0, l.jsx)("img", { src: s.simple_icon_url, alt: "", width: 140, height: 140, className: A.rF }),
             (0, l.jsxs)("div", {
-                className: k.Mr,
+                className: A.Mr,
                 children: [
                     (0, l.jsx)(n.D, {
                         variant: "heading-xxl/bold",
-                        children: N.intl.format(p.default.k8MmO8, { tierName: s.name ?? "" }),
+                        children: N.intl.format(T.default.k8MmO8, { tierName: s.name ?? "" }),
                     }),
-                    (0, l.jsx)(_, { progress: t, currentTier: i, newTier: s, className: k.$c }),
-                    d &&
+                    (0, l.jsx)(M, { progress: t, currentTier: i, newTier: s, className: A.$c }),
+                    o &&
                         (0, l.jsx)(a.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            className: k.kA,
-                            children: N.intl.format(p.default["6QVlxw"], { count: c, nextTierName: r.name ?? "" }),
+                            className: A.kA,
+                            children: N.intl.format(T.default["6QVlxw"], { count: c, nextTierName: r.name ?? "" }),
                         }),
                 ],
             }),
         ],
     });
 }
-function C(e) {
+function D(e) {
     let { currentProgress: t } = e,
-        i = (0, d.bG)([x.Ay], () => x.Ay.getBadgeById(r.$.GIFTING)?.tiers);
+        i = (0, o.bG)([x.Ay], () => x.Ay.getBadgeById(r.$.GIFTING)?.tiers);
     if (null == i) return null;
-    let s = (0, M.XX)(i, t),
+    let s = (0, y.XX)(i, t),
         n = t + 1,
-        a = (0, M.XX)(i, n),
+        a = (0, y.XX)(i, n),
         c = a?.key !== s?.key,
-        o = (0, M.aZ)(i, n),
-        u = (0, M.cz)(i, n),
+        d = (0, y.aZ)(i, n),
+        u = (0, y.cz)(i, n),
         m = 1 === u;
     return c && null != a
-        ? (0, l.jsx)(A, { simulatedProgress: n, currentTier: s, newTier: a, nextTier: o, giftsToNextTier: u })
+        ? (0, l.jsx)(B, { simulatedProgress: n, currentTier: s, newTier: a, nextTier: d, giftsToNextTier: u })
         : m
-          ? (0, l.jsx)(Q, {
-                title: N.intl.formatToPlainString(p.default.KjdBPz, { nextTier: o?.name ?? "" }),
-                description: N.intl.string(p.default.oqDrEM),
-                progressBarTitle: N.intl.string(p.default["Ka5s+Q"]),
+          ? (0, l.jsx)(E, {
+                title: N.intl.formatToPlainString(T.default.KjdBPz, { nextTier: d?.name ?? "" }),
+                description: N.intl.string(T.default.oqDrEM),
+                progressBarTitle: N.intl.string(T.default["Ka5s+Q"]),
                 progress: n,
                 currentTier: a ?? void 0,
-                nextTier: o ?? void 0,
+                nextTier: d ?? void 0,
             })
-          : (0, l.jsx)(Q, {
-                title: N.intl.string(p.default["/rBQud"]),
-                description: N.intl.string(p.default.DDQMlx),
+          : (0, l.jsx)(E, {
+                title: N.intl.string(T.default["/rBQud"]),
+                description: N.intl.string(T.default.DDQMlx),
                 progressBarTitle:
-                    s?.name != null ? N.intl.formatToPlainString(p.default.bwyQt8, { tierName: s?.name }) : "",
+                    s?.name != null ? N.intl.formatToPlainString(T.default.bwyQt8, { tierName: s?.name }) : "",
                 progress: n,
                 currentTier: a ?? void 0,
-                nextTier: o ?? void 0,
+                nextTier: d ?? void 0,
             });
 }
-function B(e) {
+function I(e) {
     let { transitionState: t, onClose: i, currentProgress: r } = e,
         { analyticsLocations: n } = (0, m.Ay)(u.A.GIFTING_BADGE_POST_PURCHASE),
-        { openGiftModal: a } = (0, g.$)({
+        { openGiftModal: a } = (0, j.$)({
             giftRecipient: void 0,
             analyticsLocations: n,
-            analyticsObject: { object: y.ZSU.BUTTON_CTA, objectType: y.AnalyticsObjectTypes.GIFT },
+            analyticsObject: { object: k.ZSU.BUTTON_CTA, objectType: k.AnalyticsObjectTypes.GIFT },
             location: "gifting-badge-post-purchase",
         }),
-        d = s.useCallback(() => {
+        o = s.useCallback(() => {
             i();
-            let e = j.default.getCurrentUser();
+            let e = g.default.getCurrentUser();
             null != e && (0, h.openUserProfileModal)({ userId: e.id });
         }, [i]),
         x = s.useCallback(() => {
@@ -200,9 +198,9 @@ function B(e) {
         onClose: i,
         title: void 0,
         actions: [
-            { variant: "secondary", text: N.intl.string(p.default["sa/cfM"]), onClick: d },
-            { variant: "primary", text: N.intl.string(p.default.g86YiI), icon: o.o, onClick: x },
+            { variant: "secondary", text: N.intl.string(T.default["sa/cfM"]), onClick: o },
+            { variant: "primary", text: N.intl.string(T.default.g86YiI), icon: d.o, onClick: x },
         ],
-        children: (0, l.jsx)(C, { currentProgress: r }),
+        children: (0, l.jsx)(D, { currentProgress: r }),
     });
 }

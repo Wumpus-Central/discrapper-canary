@@ -22,7 +22,12 @@ function g() {
             if (e && null != S.current && null != (null != t ? (0, f.aZ)(t, S.current) : null)) {
                 let e = S.current;
                 (0, s.openModalLazy)(async () => {
-                    let { default: t } = await Promise.all([n.e("13396"), n.e("83703")]).then(n.bind(n, 855210));
+                    let { default: t } = await Promise.all([
+                        n.e("60856"),
+                        n.e("13396"),
+                        n.e("7319"),
+                        n.e("83703"),
+                    ]).then(n.bind(n, 855210));
                     return (n) => (0, l.jsx)(t, { ...n, currentProgress: e });
                 });
             }

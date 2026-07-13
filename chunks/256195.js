@@ -1,64 +1,63 @@
-"use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => E });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    a = n.n(r),
+    l = n.n(r),
     s = n(17928),
-    l = n(990078),
+    a = n(990078),
     o = n(821609),
-    d = n(408278),
-    c = n(622631),
-    u = n(401843),
-    _ = n(616356),
-    E = n(280450),
-    A = n(200749),
-    h = n(375708),
-    I = n(559216);
+    c = n(408278),
+    u = n(622631),
+    d = n(401843),
+    A = n(616356),
+    h = n(280450),
+    m = n(200749),
+    g = n(375708),
+    p = n(559216);
 let f = n(913516);
-function p(e) {
-    let { participant: t, width: n, noArt: r = !1, selected: p = !1 } = e,
-        T = n < 195,
-        m = (0, s.bG)([_.A, E.default], () =>
-            _.A.getAllActiveStreams().some((e) => {
+function E(e) {
+    let { participant: t, width: n, noArt: r = !1, selected: E = !1 } = e,
+        b = n < 195,
+        C = (0, s.bG)([A.A, h.default], () =>
+            A.A.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
-                return t !== E.default.getId();
+                return t !== h.default.getId();
             }),
         );
     return (0, i.jsx)("div", {
-        className: a()(I.Qs, I.FY),
-        children: (0, i.jsx)(A.A, {
-            className: I.FP,
+        className: l()(p.Qs, p.FY),
+        children: (0, i.jsx)(m.A, {
+            className: p.FP,
             artURL: f,
             noArt: r,
-            selected: p,
-            size: (0, A.J)(n),
-            header: T ? null : h.intl.string(h.t.epU4Ec),
-            description: p
+            selected: E,
+            size: (0, m.J)(n),
+            header: b ? null : g.intl.string(g.t.epU4Ec),
+            description: E
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: a()(I.t2, { [I.y8]: !T }),
+                      className: l()(p.t2, { [p.y8]: !b }),
                       children: [
                           (0, i.jsx)("div", {
-                              className: I.lO,
+                              className: p.lO,
                               children: (0, i.jsx)(o.$, {
                                   variant: "secondary",
-                                  size: T ? "sm" : "md",
-                                  text: n < 175 ? h.intl.string(h.t.I6JG46) : h.intl.string(h.t["7Xq/nV"]),
+                                  size: b ? "sm" : "md",
+                                  text: n < 175 ? g.intl.string(g.t.I6JG46) : g.intl.string(g.t["7Xq/nV"]),
                               }),
                           }),
-                          m
+                          C
                               ? (0, i.jsx)("div", {
-                                    className: a()(I.lO, I.EU),
-                                    children: (0, i.jsx)(l.m, {
-                                        text: h.intl.string(h.t.wCrzut),
-                                        children: (0, i.jsx)(d.K, {
+                                    className: l()(p.lO, p.EU),
+                                    children: (0, i.jsx)(a.m, {
+                                        text: g.intl.string(g.t.wCrzut),
+                                        children: (0, i.jsx)(c.K, {
                                             variant: "secondary",
-                                            size: T ? "sm" : "md",
-                                            icon: c.v,
-                                            "aria-label": h.intl.string(h.t.wCrzut),
+                                            size: b ? "sm" : "md",
+                                            icon: u.v,
+                                            "aria-label": g.intl.string(g.t.wCrzut),
                                             onClick: (e) => {
-                                                e.stopPropagation(), (0, u.A9)(t.stream, { forceMultiple: !0 });
+                                                e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 });
                                             },
                                         }),
                                     }),
