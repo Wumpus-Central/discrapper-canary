@@ -1,117 +1,116 @@
-"use strict";
-n.d(t, { m: () => L, A: () => w });
+n.d(t, { m: () => w, A: () => k });
 var i = n(627968),
-    r = n(64700),
-    s = n(17928),
-    a = n(785007),
-    o = n(534514),
-    l = n(661531),
-    u = n(331322),
-    c = n(228366),
+    s = n(64700),
+    r = n(17928);
+if (88245 != n.j) var l = n(785007);
+if (88245 != n.j) var a = n(534514);
+if (88245 != n.j) var c = n(661531);
+if (88245 != n.j) var o = n(331322);
+var u = n(228366),
     d = n(915089),
-    _ = n(450232),
+    m = n(450232),
     h = n(526162),
-    f = n(503698),
+    g = n(503698),
+    x = n.n(g),
+    f = n(735438),
     p = n.n(f),
-    E = n(735438),
-    m = n.n(E),
-    g = n(990078),
-    A = n(939249),
-    I = n(194261),
-    T = n(653523),
-    S = n(350972),
-    y = n(677056),
-    C = n(174197),
+    A = n(990078),
+    y = n(939249),
+    v = n(194261),
+    S = n(653523),
+    b = n(350972),
+    j = n(677056),
+    I = n(174197),
     N = n(652215),
-    v = n(375708),
-    R = n(588525);
-function O(e) {
+    E = n(375708),
+    C = n(588525);
+function T(e) {
     let {
             id: t,
             className: n,
-            style: s,
-            onSelect: a,
-            isSelected: o = !1,
-            tabIndex: l,
-            children: u,
-            locked: c = !1,
+            style: r,
+            onSelect: l,
+            isSelected: a = !1,
+            tabIndex: c,
+            children: o,
+            locked: u = !1,
             disabled: d = !1,
         } = e,
-        [_, h] = r.useState((0, C.gG)(t).name),
-        f = t === S.Ic.PIRATE;
-    return (0, i.jsx)(g.m, {
-        text: _,
+        [m, h] = s.useState((0, I.gG)(t).name),
+        g = t === b.Ic.PIRATE;
+    return (0, i.jsx)(A.m, {
+        text: m,
         onTooltipShow: () =>
-            f &&
+            g &&
             h(
-                m().sample([
-                    v.intl.string(v.t["EgWTY+"]),
-                    v.intl.string(v.t.umBn5f),
-                    v.intl.string(v.t.dG1wD1),
-                    v.intl.string(v.t.SesI4S),
-                    v.intl.string(v.t.RnMLvl),
-                ]) ?? v.intl.string(v.t["EgWTY+"]),
+                p().sample([
+                    E.intl.string(E.t["EgWTY+"]),
+                    E.intl.string(E.t.umBn5f),
+                    E.intl.string(E.t.dG1wD1),
+                    E.intl.string(E.t.SesI4S),
+                    E.intl.string(E.t.RnMLvl),
+                ]) ?? E.intl.string(E.t["EgWTY+"]),
             ),
         children: (0, i.jsxs)("div", {
-            className: R.Co,
-            style: s,
+            className: C.Co,
+            style: r,
             children: [
-                (0, i.jsx)(A.D, {
+                (0, i.jsx)(y.D, {
                     role: "radio",
-                    "aria-label": _,
-                    "aria-checked": o,
+                    "aria-label": m,
+                    "aria-checked": a,
                     "aria-disabled": d,
-                    tabIndex: l ?? (o ? 0 : -1),
-                    className: p()(R.Ni, { [R.wH]: o }, n),
-                    onClick: o ? N.tEg : () => a?.(t),
-                    children: u,
+                    tabIndex: c ?? (a ? 0 : -1),
+                    className: x()(C.Ni, { [C.wH]: a }, n),
+                    onClick: a ? N.tEg : () => l?.(t),
+                    children: o,
                 }),
-                o && (0, i.jsx)(T.H$, {}),
-                c &&
+                a && (0, i.jsx)(S.H$, {}),
+                u &&
                     (0, i.jsx)("div", {
-                        className: R.RK,
-                        children: (0, i.jsx)(I.X, { className: R.AA, color: "currentColor" }),
+                        className: C.RK,
+                        children: (0, i.jsx)(v.X, { className: C.AA, color: "currentColor" }),
                     }),
             ],
         }),
     });
 }
-function b(e) {
-    let { size: t = C.N8.SIZE_60, icon: n, isSelected: s, disabled: a, tabIndex: o, onSelect: l, locked: u } = e,
-        c = r.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
-    return (0, i.jsx)(O, {
-        style: c,
-        onSelect: a ? void 0 : l,
-        isSelected: s,
+function P(e) {
+    let { size: t = I.N8.SIZE_60, icon: n, isSelected: r, disabled: l, tabIndex: a, onSelect: c, locked: o } = e,
+        u = s.useMemo(() => ({ "--custom-in-app-icon-selection-size": `${t}px` }), [t]);
+    return (0, i.jsx)(T, {
+        style: u,
+        onSelect: l ? void 0 : c,
+        isSelected: r,
         id: n.id,
-        className: a ? R.r9 : void 0,
-        tabIndex: o,
-        locked: u,
-        disabled: a,
-        children: (0, i.jsx)(y.A, { id: n.id, size: t }),
+        className: l ? C.r9 : void 0,
+        tabIndex: a,
+        locked: o,
+        disabled: l,
+        children: (0, i.jsx)(j.A, { id: n.id, size: t }),
     });
 }
-var D = n(182686);
-function L(e) {
+var R = n(182686);
+function w(e) {
     let { disabled: t, size: n } = e,
-        [r] = (0, s.yK)([h.A], () => [h.A.getCurrentDesktopIcon()]);
+        [s] = (0, r.yK)([h.A], () => [h.A.getCurrentDesktopIcon()]);
     return (0, i.jsx)(i.Fragment, {
-        children: (0, C.v8)()
+        children: (0, I.v8)()
             .filter((e) => {
                 let { isHidden: t } = e;
                 return !t;
             })
-            .map((e, s) =>
+            .map((e, r) =>
                 (0, i.jsx)(
-                    b,
+                    P,
                     {
                         icon: e,
-                        isSelected: r === e.id,
+                        isSelected: s === e.id,
                         onSelect: (e) => {
-                            c.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
+                            u.h.dispatch({ type: "APP_ICON_UPDATED", id: e });
                         },
                         disabled: t,
-                        tabIndex: 0 !== s || t ? void 0 : 0,
+                        tabIndex: 0 !== r || t ? void 0 : 0,
                         locked: !1,
                         size: n,
                     },
@@ -120,51 +119,51 @@ function L(e) {
             ),
     });
 }
-function w(e) {
-    let { className: t, disabled: n, isEditor: r, renderCTAButtons: s, iconSize: c } = e,
+function k(e) {
+    let { className: t, disabled: n, isEditor: s, renderCTAButtons: r, iconSize: u } = e,
         h = (0, d.GV)(),
-        { ref: f, ...p } = (0, a._u)({ orientation: "horizontal", labelledBy: h });
+        { ref: g, ...x } = (0, l._u)({ orientation: "horizontal", labelledBy: h });
     return (0, i.jsx)("div", {
-        ...p,
-        ref: f,
+        ...x,
+        ref: g,
         children: (0, i.jsxs)("div", {
             className: t,
             children: [
                 (0, i.jsxs)("div", {
-                    className: D.wx,
+                    className: R.wx,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: D.so,
+                            className: R.so,
                             children: [
-                                !r &&
+                                !s &&
                                     (0, i.jsxs)("div", {
-                                        className: D.DD,
+                                        className: R.DD,
                                         children: [
-                                            (0, i.jsx)(o.D, {
-                                                className: D.Qw,
+                                            (0, i.jsx)(a.D, {
+                                                className: R.Qw,
                                                 variant: "heading-xl/normal",
                                                 color: "text-strong",
-                                                children: v.intl.string(v.t.NThqTw),
+                                                children: E.intl.string(E.t.NThqTw),
                                             }),
-                                            (0, i.jsx)(_.A, { color: l.A.colors.ICON_STRONG, size: "sm" }),
+                                            (0, i.jsx)(m.A, { color: c.A.colors.ICON_STRONG, size: "sm" }),
                                         ],
                                     }),
-                                (0, i.jsx)(o.D, {
+                                (0, i.jsx)(a.D, {
                                     variant: "text-sm/normal",
-                                    className: D.W$,
-                                    children: v.intl.string(v.t.IgENJo),
+                                    className: R.W$,
+                                    children: E.intl.string(E.t.IgENJo),
                                 }),
                             ],
                         }),
-                        s?.(),
+                        r?.(),
                     ],
                 }),
-                (0, i.jsx)(u.B, {
+                (0, i.jsx)(o.B, {
                     direction: "horizontal",
                     wrap: !0,
                     gap: 8,
                     style: { marginTop: 16 },
-                    children: (0, i.jsx)(L, { disabled: n, size: c }),
+                    children: (0, i.jsx)(w, { disabled: n, size: u }),
                 }),
             ],
         }),

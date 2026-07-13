@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { V: () => o });
-var i = n(64700),
-    r = n(190334),
-    s = n(87515);
-function a(e, t) {
-    (null == t || t > e.length) && (t = e.length);
-    for (var n = 0, i = Array(t); n < t; n++) i[n] = e[n];
-    return i;
+e.d(t, { V: () => i });
+var n = e(64700),
+    o = e(190334),
+    u = e(87515);
+function a(r, t) {
+    (null == t || t > r.length) && (t = r.length);
+    for (var e = 0, n = Array(t); e < t; e++) n[e] = r[e];
+    return n;
 }
-function o(e) {
+function i(r) {
     var t,
-        n = (0, r.u)().getMonitor(),
-        o =
-            (function (e) {
-                if (Array.isArray(e)) return e;
-            })((t = (0, s.F)(n, e))) ||
-            (function (e) {
+        e = (0, o.u)().getMonitor(),
+        i =
+            (function (r) {
+                if (Array.isArray(r)) return r;
+            })((t = (0, u.F)(e, r))) ||
+            (function (r) {
                 var t,
-                    n,
-                    i = null == e ? null : ("u" > typeof Symbol && e[Symbol.iterator]) || e["@@iterator"];
-                if (null != i) {
-                    var r = [],
-                        s = !0,
+                    e,
+                    n = null == r ? null : ("u" > typeof Symbol && r[Symbol.iterator]) || r["@@iterator"];
+                if (null != n) {
+                    var o = [],
+                        u = !0,
                         a = !1;
                     try {
-                        for (i = i.call(e); !(s = (t = i.next()).done) && (r.push(t.value), 2 !== r.length); s = !0);
-                    } catch (e) {
-                        (a = !0), (n = e);
+                        for (n = n.call(r); !(u = (t = n.next()).done) && (o.push(t.value), 2 !== o.length); u = !0);
+                    } catch (r) {
+                        (a = !0), (e = r);
                     } finally {
                         try {
-                            s || null == i.return || i.return();
+                            u || null == n.return || n.return();
                         } finally {
-                            if (a) throw n;
+                            if (a) throw e;
                         }
                     }
-                    return r;
+                    return o;
                 }
             })(t) ||
-            (function (e) {
-                if (e) {
-                    if ("string" == typeof e) return a(e, 2);
-                    var t = Object.prototype.toString.call(e).slice(8, -1);
-                    if (("Object" === t && e.constructor && (t = e.constructor.name), "Map" === t || "Set" === t))
-                        return Array.from(e);
-                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return a(e, 2);
+            (function (r) {
+                if (r) {
+                    if ("string" == typeof r) return a(r, 2);
+                    var t = Object.prototype.toString.call(r).slice(8, -1);
+                    if (("Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t))
+                        return Array.from(r);
+                    if ("Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t)) return a(r, 2);
                 }
             })(t) ||
             (function () {
@@ -51,15 +50,15 @@ function o(e) {
                     "Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.",
                 );
             })(),
-        l = o[0],
-        u = o[1];
+        f = i[0],
+        l = i[1];
     return (
-        (0, i.useEffect)(function () {
-            return n.subscribeToOffsetChange(u);
+        (0, n.useEffect)(function () {
+            return e.subscribeToOffsetChange(l);
         }),
-        (0, i.useEffect)(function () {
-            return n.subscribeToStateChange(u);
+        (0, n.useEffect)(function () {
+            return e.subscribeToStateChange(l);
         }),
-        l
+        f
     );
 }

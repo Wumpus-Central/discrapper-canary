@@ -1,28 +1,27 @@
-"use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => a });
 var i = n(487329),
     r = n(562153),
-    s = n(652215),
-    a = n(375708);
-function o(e, t, n, o) {
-    if (e.state === s.XYD.RECONNECTING) {
+    l = n(652215),
+    s = n(375708);
+function a(e, t, n, a) {
+    if (e.state === l.XYD.RECONNECTING) {
         let e = (0, i.B1)(i.iy.STREAM_RECONNECTING)?.errorCode;
         return {
-            mainText: a.intl.string(a.t["pdFFK+"]),
-            supportingText: a.intl.string(a.t["+PuO2N"]),
-            errorCodeText: a.intl.formatToPlainString(a.t.ejOT95, { errorCode: e }),
+            mainText: s.intl.string(s.t["pdFFK+"]),
+            supportingText: s.intl.string(s.t["+PuO2N"]),
+            errorCodeText: s.intl.formatToPlainString(s.t.ejOT95, { errorCode: e }),
         };
     }
-    return e.state === s.XYD.PAUSED
+    return e.state === l.XYD.PAUSED
         ? n
-            ? { mainText: a.intl.string(a.t["5q17w5"]), supportingText: a.intl.string(a.t.LV1NSN) }
+            ? { mainText: s.intl.string(s.t["5q17w5"]), supportingText: s.intl.string(s.t.LV1NSN) }
             : {
-                  mainText: a.intl.string(a.t["5q17w5"]),
-                  supportingText: a.intl.formatToPlainString(a.t.meVVlb, {
+                  mainText: s.intl.string(s.t["5q17w5"]),
+                  supportingText: s.intl.formatToPlainString(s.t.meVVlb, {
                       username: r.Ay.getName(e.guildId, e.channelId, t),
                   }),
               }
-        : o
-          ? { mainText: a.intl.string(a.t.JmaKtK), supportingText: a.intl.string(a.t["hC3+BD"]) }
+        : a
+          ? { mainText: s.intl.string(s.t.JmaKtK), supportingText: s.intl.string(s.t["hC3+BD"]) }
           : null;
 }

@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { A: () => i });
-let i = (0, n(945810).mj)({
+t.d(l, { A: () => s });
+let s = (0, t(945810).mj)({
     name: "2026-05-gdop-v2-upsell",
     kind: "user",
     defaultConfig: { enabled: !1 },

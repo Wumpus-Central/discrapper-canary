@@ -1,27 +1,26 @@
-"use strict";
-n.d(e, { pq: () => s, vF: () => l });
-var i = n(780755),
-    r = n(978862);
-let o = ["debug", "info", "warn", "error", "log", "assert", "trace"],
-    a = {};
-function s(t) {
-    if (!("console" in r.O)) return t();
-    let e = r.O.console,
-        n = {},
-        i = Object.keys(a);
+s.d(e, { pq: () => a, vF: () => c });
+var i = s(780755),
+    n = s(978862);
+let r = ["debug", "info", "warn", "error", "log", "assert", "trace"],
+    o = {};
+function a(t) {
+    if (!("console" in n.O)) return t();
+    let e = n.O.console,
+        s = {},
+        i = Object.keys(o);
     i.forEach((t) => {
-        let i = a[t];
-        (n[t] = e[t]), (e[t] = i);
+        let i = o[t];
+        (s[t] = e[t]), (e[t] = i);
     });
     try {
         return t();
     } finally {
         i.forEach((t) => {
-            e[t] = n[t];
+            e[t] = s[t];
         });
     }
 }
-let l = (0, r.B)("logger", function () {
+let c = (0, n.B)("logger", function () {
     let t = !1,
         e = {
             enable: () => {
@@ -34,15 +33,15 @@ let l = (0, r.B)("logger", function () {
         };
     return (
         i.T
-            ? o.forEach((n) => {
-                  e[n] = (...e) => {
+            ? r.forEach((s) => {
+                  e[s] = (...e) => {
                       t &&
-                          s(() => {
-                              r.O.console[n](`Sentry Logger [${n}]:`, ...e);
+                          a(() => {
+                              n.O.console[s](`Sentry Logger [${s}]:`, ...e);
                           });
                   };
               })
-            : o.forEach((t) => {
+            : r.forEach((t) => {
                   e[t] = () => void 0;
               }),
         e

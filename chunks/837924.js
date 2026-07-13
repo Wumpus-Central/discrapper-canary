@@ -1,49 +1,48 @@
-"use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => g });
 var i = n(627968);
 n(64700);
-var r = n(17928),
-    a = n(765379),
-    s = n(90644),
-    l = n(587895),
+var l = n(17928),
+    s = n(765379),
+    a = n(90644),
+    r = n(587895),
     o = n(429913),
     d = n(734057),
     c = n(71393),
     u = n(977997),
-    _ = n(17389),
-    E = n(428803),
-    A = n(652215);
-function h(e) {
-    let { user: t, currentUser: n, activity: h, className: I, onClose: f } = e,
-        { voiceGuild: p, voiceChannel: T } = (0, r.cf)([c.A, u.A, d.A], () => {
-            let e = (0, a.A)(h);
-            if (!e && h.type !== A.$pd.HANG_STATUS) return {};
+    h = n(17389),
+    m = n(428803),
+    p = n(652215);
+function g(e) {
+    let { user: t, currentUser: n, activity: g, className: f, onClose: A } = e,
+        { voiceGuild: x, voiceChannel: v } = (0, l.cf)([c.A, u.A, d.A], () => {
+            let e = (0, s.A)(g);
+            if (!e && g.type !== p.$pd.HANG_STATUS) return {};
             let n = e
-                    ? u.A.getVoiceStateForSession(t.id, h?.session_id)?.channelId
+                    ? u.A.getVoiceStateForSession(t.id, g?.session_id)?.channelId
                     : u.A.getVoiceStateForUser(t.id)?.channelId,
                 i = d.A.getChannel(n);
             return { voiceGuild: c.A.getGuild(i?.getGuildId()), voiceChannel: i };
         });
-    (0, o.h)(h?.application_id);
-    let m = (0, r.bG)([l.A], () =>
-        h?.application_id != null
-            ? l.A.getApplication(h.application_id)
-            : h?.name != null
-              ? l.A.getApplicationByName(h.name)
+    (0, o.h)(g?.application_id);
+    let E = (0, l.bG)([r.A], () =>
+        g?.application_id != null
+            ? r.A.getApplication(g.application_id)
+            : g?.name != null
+              ? r.A.getApplicationByName(g.name)
               : null,
     );
-    return h?.type === A.$pd.CUSTOM_STATUS || h?.type === A.$pd.HANG_STATUS
+    return g?.type === p.$pd.CUSTOM_STATUS || g?.type === p.$pd.HANG_STATUS
         ? null
-        : (0, s.A)(h)
-          ? (0, i.jsx)(E.A, { user: t, currentUser: n, activity: h, className: I, onClose: f })
-          : (0, i.jsx)(_.A, {
+        : (0, a.A)(g)
+          ? (0, i.jsx)(m.A, { user: t, currentUser: n, activity: g, className: f, onClose: A })
+          : (0, i.jsx)(h.A, {
                 user: t,
                 currentUser: n,
-                activity: h,
-                application: m,
-                voiceGuild: p,
-                voiceChannel: T,
-                className: I,
-                onClose: f,
+                activity: g,
+                application: E,
+                voiceGuild: x,
+                voiceChannel: v,
+                className: f,
+                onClose: A,
             });
 }

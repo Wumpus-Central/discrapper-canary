@@ -1,68 +1,67 @@
-"use strict";
-n.d(t, { A: () => S });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(939249),
-    o = n(22231),
-    d = n(688810),
-    c = n(532622),
-    u = n(271683),
-    _ = n(882840),
-    E = n(46054),
-    A = n(345640),
-    h = n(174459),
-    I = n(939496),
-    f = n(531648),
-    p = n(652215),
-    T = n(996988),
-    m = n(375708),
-    g = n(237770);
-function S(e) {
-    let { voiceChannel: t, onAction: n, onClose: a } = e,
-        { themeType: S } = (0, I.E)(),
-        { analyticsLocations: N } = (0, d.Ay)(),
-        C = (0, A.b)(t),
-        O = (0, c.Ay)(t, !0),
-        R = (0, _.l)(t),
-        L = r.useMemo(
-            () => (null == R || "" === R ? null : E.A.parseVoiceChannelStatus(R, !0, { channelId: t.id })),
-            [R, t.id],
+l.d(i, { A: () => v });
+var e = l(627968),
+    n = l(64700),
+    s = l(503698),
+    a = l.n(s),
+    d = l(939249),
+    o = l(22231),
+    r = l(688810),
+    c = l(532622),
+    h = l(271683),
+    x = l(882840),
+    u = l(46054),
+    g = l(345640),
+    A = l(174459),
+    p = l(939496),
+    m = l(531648),
+    _ = l(652215),
+    N = l(996988),
+    f = l(375708),
+    j = l(237770);
+function v(t) {
+    let { voiceChannel: i, onAction: l, onClose: s } = t,
+        { themeType: v } = (0, p.E)(),
+        { analyticsLocations: C } = (0, r.Ay)(),
+        E = (0, g.b)(i),
+        O = (0, c.Ay)(i, !0),
+        P = (0, x.l)(i),
+        b = n.useMemo(
+            () => (null == P || "" === P ? null : u.A.parseVoiceChannelStatus(P, !0, { channelId: i.id })),
+            [P, i.id],
         );
-    return (r.useEffect(() => {
-        null != L &&
-            h.default.track(p.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
-                channel_id: t.id,
-                guild_id: t.guild_id,
-                location_stack: N,
+    return (n.useEffect(() => {
+        null != b &&
+            A.default.track(_.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
+                channel_id: i.id,
+                guild_id: i.guild_id,
+                location_stack: C,
             });
-    }, [L, t.id, t.guild_id, N]),
-    O && C)
-        ? (0, i.jsxs)(l.D, {
-              className: g.vk,
-              onClick: (e) => {
-                  e.stopPropagation(),
-                      n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
-                      S === T.d.POPOUT && a?.(),
-                      (0, u.A)({ channel: t, sourceAnalyticsLocations: N });
+    }, [b, i.id, i.guild_id, C]),
+    O && E)
+        ? (0, e.jsxs)(d.D, {
+              className: j.vk,
+              onClick: (t) => {
+                  t.stopPropagation(),
+                      l({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
+                      v === N.d.POPOUT && s?.(),
+                      (0, h.A)({ channel: i, sourceAnalyticsLocations: C });
               },
               children: [
-                  (0, i.jsx)(f.A, {
-                      text: L ?? m.intl.string(m.t.Mgpxiw),
+                  (0, e.jsx)(m.A, {
+                      text: b ?? f.intl.string(f.t.Mgpxiw),
                       variant: "text-xs/normal",
                       color: "text-subtle",
-                      className: g.Qq,
+                      className: j.Qq,
                   }),
-                  (0, i.jsx)(o.R, {
+                  (0, e.jsx)(o.R, {
                       color: "currentColor",
                       size: "xxs",
-                      className: s()(g.rD, null != L ? g.R : void 0),
-                      "aria-label": m.intl.string(m.t.bt75uw),
+                      className: a()(j.rD, null != b ? j.R : void 0),
+                      "aria-label": f.intl.string(f.t.bt75uw),
                   }),
               ],
           })
-        : null != L
-          ? (0, i.jsx)(f.A, { text: L, variant: "text-xs/normal", color: "text-subtle", className: g.Qq })
+        : null != b
+          ? (0, e.jsx)(m.A, { text: b, variant: "text-xs/normal", color: "text-subtle", className: j.Qq })
           : null;
 }

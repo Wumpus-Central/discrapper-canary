@@ -1,6 +1,5 @@
-"use strict";
-function i(e) {
-    if (void 0 === e) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
-    return e;
+n.d(e, { A: () => r });
+function r(t) {
+    if (void 0 === t) throw ReferenceError("this hasn't been initialised - super() hasn't been called");
+    return t;
 }
-n.d(t, { A: () => i });

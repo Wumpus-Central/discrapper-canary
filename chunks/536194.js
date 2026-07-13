@@ -23,7 +23,7 @@ class r {
         return !1;
     }
     static isDisallowPopupsSet() {
-        return r.contains("--disallow-popups") || r.isEnvVariableTrue("DISCORD_DISALLOW_POPUPS");
+        return !!(r.contains("--disallow-popups") || r.isEnvVariableTrue("DISCORD_DISALLOW_POPUPS"));
     }
     static isDiscordTestSet() {
         return r.isEnvVariableTrue("DISCORD_TEST");

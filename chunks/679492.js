@@ -1,66 +1,65 @@
-"use strict";
-n.d(t, { Hl: () => c, NR: () => _, Pq: () => E, fC: () => u });
+n.d(e, { Hl: () => S, NR: () => d, Pq: () => A, fC: () => u });
 var i = n(627968),
-    r = n(64700),
-    a = n(284009),
-    s = n.n(a),
-    l = n(451988),
+    a = n(64700),
+    l = n(284009),
+    s = n.n(l),
+    r = n(451988),
     o = n(8925);
-let d = r.createContext(void 0);
-function c(e) {
-    let { value: t, children: n } = e;
-    return (0, i.jsx)(d.Provider, { value: t, children: n });
+let c = a.createContext(void 0);
+function S(t) {
+    let { value: e, children: n } = t;
+    return (0, i.jsx)(c.Provider, { value: e, children: n });
 }
 function u() {
-    let [e, t] = r.useState(null),
-        [n, i] = r.useState(null),
-        [a, s] = r.useState(null),
-        [d, c] = r.useState(r.createRef()),
-        u = r.useCallback((e) => {
-            t(e.interactionType), i(e.interactionSource), s(e.interactionSourceId);
+    let [t, e] = a.useState(null),
+        [n, i] = a.useState(null),
+        [l, s] = a.useState(null),
+        [c, S] = a.useState(a.createRef()),
+        u = a.useCallback((t) => {
+            e(t.interactionType), i(t.interactionSource), s(t.interactionSourceId);
         }, []),
-        _ = r.useCallback((e) => {
-            c(e);
+        d = a.useCallback((t) => {
+            S(t);
         }, []),
-        E = r.useCallback(() => {
+        A = a.useCallback(() => {
             u({ interactionType: null, interactionSource: null, interactionSourceId: null });
         }, [u]),
-        [A, h] = r.useState(!1),
-        [I, f] = r.useState(null),
-        [p] = r.useState(new l.Ep()),
-        T = r.useCallback(
-            (e) => {
-                f(e), h(!0), null === e ? p.stop() : p.start(o.ME, () => h(!1));
+        [T, C] = a.useState(!1),
+        [R, x] = a.useState(null),
+        [h] = a.useState(new r.Ep()),
+        p = a.useCallback(
+            (t) => {
+                x(t), C(!0), null === t ? h.stop() : h.start(o.ME, () => C(!1));
             },
-            [p],
+            [h],
         );
     return (
-        r.useEffect(() => {
-            p.stop();
-        }, [p]),
-        r.useMemo(
+        a.useEffect(() => {
+            h.stop();
+        }, [h]),
+        a.useMemo(
             () => ({
-                interactionType: e,
+                interactionType: t,
                 interactionSource: n,
-                interactionSourceId: a,
+                interactionSourceId: l,
                 onInteraction: u,
-                setInteractionToast: T,
-                resetInteraction: E,
-                showInteractionToast: A,
-                interactionTypeSent: I,
-                interactionPopoutTargetRef: d,
-                onInteractionPopoutTargetRefChange: _,
+                setInteractionToast: p,
+                resetInteraction: A,
+                showInteractionToast: T,
+                interactionTypeSent: R,
+                interactionPopoutTargetRef: c,
+                onInteractionPopoutTargetRefChange: d,
             }),
-            [u, T, n, a, A, e, I, E, d, _],
+            [u, p, n, l, T, t, R, A, c, d],
         )
     );
 }
-function _() {
-    return r.useContext(d);
+function d() {
+    return a.useContext(c);
 }
-function E() {
-    let e = _();
+function A() {
+    let t = d();
     return (
-        s()(null != e, "must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider"), e
+        s()(null != t, "must use useUserProfileInteractionContext within a UserProfileInteractionContextProvider"), t
     );
 }

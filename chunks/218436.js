@@ -1,4 +1,3 @@
-"use strict";
-n.d(t, { E: () => r });
-var i = n(64700),
-    r = "u" > typeof window ? i.useLayoutEffect : i.useEffect;
+e.d(t, { E: () => o });
+var n = e(64700),
+    o = "u" > typeof window ? n.useLayoutEffect : n.useEffect;

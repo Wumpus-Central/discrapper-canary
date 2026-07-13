@@ -1,51 +1,50 @@
-"use strict";
-n.d(t, { FT: () => u, RB: () => a, Zk: () => l });
-var i,
-    r = n(310784),
-    s = n.n(r),
-    a =
-        (((i = {}).THEME_BASE_MIX_AMOUNT = "--custom-theme-base-color-amount"),
-        (i.THEME_TEXT_MIX_AMOUNT = "--custom-theme-text-color-amount"),
-        (i.THEME_BASE_COLOR = "--custom-theme-base-color"),
-        (i.THEME_TEXT_COLOR = "--custom-theme-text-color"),
-        (i.THEME_BASE_COLOR_HSL = "--custom-theme-base-color-hsl"),
-        (i.LIGHT_THEME_BASE_COLOR = "--custom-theme-base-color-light"),
-        (i.LIGHT_THEME_TEXT_COLOR = "--custom-theme-text-color-light"),
-        (i.LIGHT_THEME_BASE_COLOR_HSL = "--custom-theme-base-color-light-hsl"),
-        (i.DARK_THEME_BASE_COLOR = "--custom-theme-base-color-dark"),
-        (i.DARK_THEME_TEXT_COLOR = "--custom-theme-text-color-dark"),
-        (i.DARK_THEME_BASE_COLOR_HSL = "--custom-theme-base-color-dark-hsl"),
-        i);
-function o(e) {
-    let { primaryColor: t, secondaryColor: n, isDarkTheme: i } = e,
+o.d(t, { FT: () => i, RB: () => n, Zk: () => c });
+var l,
+    r = o(310784),
+    s = o.n(r),
+    n =
+        (((l = {}).THEME_BASE_MIX_AMOUNT = "--custom-theme-base-color-amount"),
+        (l.THEME_TEXT_MIX_AMOUNT = "--custom-theme-text-color-amount"),
+        (l.THEME_BASE_COLOR = "--custom-theme-base-color"),
+        (l.THEME_TEXT_COLOR = "--custom-theme-text-color"),
+        (l.THEME_BASE_COLOR_HSL = "--custom-theme-base-color-hsl"),
+        (l.LIGHT_THEME_BASE_COLOR = "--custom-theme-base-color-light"),
+        (l.LIGHT_THEME_TEXT_COLOR = "--custom-theme-text-color-light"),
+        (l.LIGHT_THEME_BASE_COLOR_HSL = "--custom-theme-base-color-light-hsl"),
+        (l.DARK_THEME_BASE_COLOR = "--custom-theme-base-color-dark"),
+        (l.DARK_THEME_TEXT_COLOR = "--custom-theme-text-color-dark"),
+        (l.DARK_THEME_BASE_COLOR_HSL = "--custom-theme-base-color-dark-hsl"),
+        l);
+function a(e) {
+    let { primaryColor: t, secondaryColor: o, isDarkTheme: l } = e,
         r = s()(t),
-        a = s()(n),
-        [o, l] = r.luminance() > a.luminance() ? [r, a] : [a, r],
-        u = l.get("hsl.h");
-    (0 === u || Number.isNaN(u)) && (l = o);
-    let c = i ? o.set("hsl.s", 1) : l.set("hsl.s", 1),
-        d = c.get("hsl.h");
+        n = s()(o),
+        [a, c] = r.luminance() > n.luminance() ? [r, n] : [n, r],
+        i = c.get("hsl.h");
+    (0 === i || Number.isNaN(i)) && (c = a);
+    let u = l ? a.set("hsl.s", 1) : c.set("hsl.s", 1),
+        m = u.get("hsl.h");
     return (
-        (c = c.set("hsl.l", d >= 200 && d <= 300 ? (i ? 0.8 : 0.25) : i ? 0.95 : 0.15)),
-        { base: i ? l.set("hsl.s", 1).set("hsl.l", 0.05) : o.set("hsl.s", 1).set("hsl.l", 0.9), text: c }
+        (u = u.set("hsl.l", m >= 200 && m <= 300 ? (l ? 0.8 : 0.25) : l ? 0.95 : 0.15)),
+        { base: l ? c.set("hsl.s", 1).set("hsl.l", 0.05) : a.set("hsl.s", 1).set("hsl.l", 0.9), text: u }
     );
 }
-function l(e) {
-    let { enabled: t, primaryColor: n, secondaryColor: i, baseMixAmount: r = 50, textMixAmount: s = 38 } = e,
-        { base: a, text: l } = o({ primaryColor: n, secondaryColor: i, isDarkTheme: !0 }),
-        { base: c, text: d } = o({ primaryColor: n, secondaryColor: i, isDarkTheme: !1 });
+function c(e) {
+    let { enabled: t, primaryColor: o, secondaryColor: l, baseMixAmount: r = 50, textMixAmount: s = 38 } = e,
+        { base: n, text: c } = a({ primaryColor: o, secondaryColor: l, isDarkTheme: !0 }),
+        { base: u, text: m } = a({ primaryColor: o, secondaryColor: l, isDarkTheme: !1 });
     return {
         "--custom-theme-base-color-amount": `${t ? r : 0}%`,
         "--custom-theme-text-color-amount": `${t ? s : 0}%`,
-        "--custom-theme-base-color-light-hsl": u(c),
-        "--custom-theme-base-color-light": c.css(),
-        "--custom-theme-text-color-light": d.css(),
-        "--custom-theme-base-color-dark-hsl": u(a),
-        "--custom-theme-base-color-dark": a.css(),
-        "--custom-theme-text-color-dark": l.css(),
+        "--custom-theme-base-color-light-hsl": i(u),
+        "--custom-theme-base-color-light": u.css(),
+        "--custom-theme-text-color-light": m.css(),
+        "--custom-theme-base-color-dark-hsl": i(n),
+        "--custom-theme-base-color-dark": n.css(),
+        "--custom-theme-text-color-dark": c.css(),
     };
 }
-function u(e) {
-    let [t, n, i] = e.hsl();
-    return `${Number.isNaN(t) ? 0 : t} ${100 * n}% ${100 * i}%`;
+function i(e) {
+    let [t, o, l] = e.hsl();
+    return `${Number.isNaN(t) ? 0 : t} ${100 * o}% ${100 * l}%`;
 }

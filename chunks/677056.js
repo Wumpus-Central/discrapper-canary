@@ -1,13 +1,12 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
-var r = n(174197),
-    s = n(375708);
-function a(e) {
+var s = n(174197),
+    r = n(375708);
+function l(e) {
     let { id: t, size: n } = e,
-        a = (0, r.gG)(t);
-    return null == a
+        l = (0, s.gG)(t);
+    return null == l
         ? null
-        : (0, i.jsx)("img", { src: a.iconSource, width: n, alt: s.intl.string(s.t.N4YDao), draggable: !1 });
+        : (0, i.jsx)("img", { src: l.iconSource, width: n, alt: r.intl.string(r.t.N4YDao), draggable: !1 });
 }

@@ -1,77 +1,76 @@
-"use strict";
-n.d(t, { A: () => I });
-var i = n(64700),
-    r = n(503698),
-    s = n.n(r),
-    a = n(317097),
-    o = n(17928),
-    l = n(366010),
-    u = n(112834),
-    c = n(775602),
-    d = n(345815),
-    _ = n(590703),
-    h = n(543699),
-    f = n(702841),
-    p = n(374994),
-    E = n(661531),
-    m = n(996988);
-let g = {
-        [m.d.POPOUT]: "user-profile-popout",
-        [m.d.MODAL]: "user-profile-modal",
-        [m.d.MODAL_V2]: "user-profile-modal-v2",
-        [m.d.SIDEBAR]: "user-profile-sidebar",
-        [m.d.VIDEO_TILE_BACKGROUND]: "user-profile-video-tile-background",
+o.d(t, { A: () => M });
+var l = o(64700),
+    r = o(503698),
+    s = o.n(r),
+    n = o(317097),
+    a = o(17928),
+    c = o(366010),
+    i = o(112834),
+    u = o(775602),
+    m = o(345815),
+    h = o(590703),
+    E = o(543699),
+    d = o(702841),
+    _ = o(374994),
+    T = o(661531),
+    A = o(996988);
+let O = {
+        [A.d.POPOUT]: "user-profile-popout",
+        [A.d.MODAL]: "user-profile-modal",
+        [A.d.MODAL_V2]: "user-profile-modal-v2",
+        [A.d.SIDEBAR]: "user-profile-sidebar",
+        [A.d.VIDEO_TILE_BACKGROUND]: "user-profile-video-tile-background",
     },
-    A = Object.freeze({
+    g = Object.freeze({
         "--profile-gradient-primary-color": "var(--background-surface-high)",
         "--profile-gradient-secondary-color": "var(--background-surface-high)",
         "--profile-gradient-overlay-color": "rgba(0, 0, 0, 0)",
         "--profile-gradient-button-color": "var(--background-mod-subtle)",
         "--profile-gradient-modal-background-color": "var(--background-base-lower)",
     });
-function I(e) {
+function M(e) {
     let t,
-        { theme: n, themeType: r, primaryColor: m, secondaryColor: I, forceUserTheme: T = !1 } = e,
-        [S, y] = (0, o.yK)([c.Ay], () => [c.Ay.desaturateUserColors, c.Ay.syncProfileThemeWithUserTheme]),
+        { theme: o, themeType: r, primaryColor: A, secondaryColor: M, forceUserTheme: b = !1 } = e,
+        [R, f] = (0, a.yK)([u.Ay], () => [u.Ay.desaturateUserColors, u.Ay.syncProfileThemeWithUserTheme]),
         C =
-            ((t = (0, f.bG)([c.Ay], () => c.Ay.saturation)),
-            (0, i.useMemo)(() => {
-                if (null == n) return null;
-                let e = { theme: n, saturation: t };
+            ((t = (0, d.bG)([u.Ay], () => u.Ay.saturation)),
+            (0, l.useMemo)(() => {
+                if (null == o) return null;
+                let e = { theme: o, saturation: t };
                 return {
                     overlaySyncedWithUserTheme:
-                        E.A.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve(e).hex(),
-                    overlay: E.A.colors.PROFILE_GRADIENT_OVERLAY.resolve(e).hex(),
-                    sectionBox: E.A.colors.PROFILE_GRADIENT_SECTION_BOX.resolve(e).hex(),
-                    dividerOpacity: n === (0, p.$D)().DARK ? 0.24 : 0.12,
-                    rolePillBackgroundColor: E.A.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve(e).hex(),
+                        T.A.colors.PROFILE_GRADIENT_OVERLAY_SYNCED_WITH_USER_THEME.resolve(e).hex(),
+                    overlay: T.A.colors.PROFILE_GRADIENT_OVERLAY.resolve(e).hex(),
+                    sectionBox: T.A.colors.PROFILE_GRADIENT_SECTION_BOX.resolve(e).hex(),
+                    dividerOpacity: o === (0, _.$D)().DARK ? 0.24 : 0.12,
+                    rolePillBackgroundColor: T.A.colors.PROFILE_GRADIENT_ROLE_PILL_BACKGROUND.resolve(e).hex(),
                 };
-            }, [n, t])),
-        N = y || T ? C?.overlaySyncedWithUserTheme : C?.overlay;
+            }, [o, t])),
+        L = f || b ? C?.overlaySyncedWithUserTheme : C?.overlay;
     return {
-        profileThemeStyle: (0, i.useMemo)(() => {
-            if (null == m || null == I || null == C || null == N) return A;
+        profileThemeStyle: (0, l.useMemo)(() => {
+            if (null == A || null == M || null == C || null == L) return g;
             function e(e, t) {
-                return (0, a.$k)(e, S, null, t);
+                return (0, n.$k)(e, R, null, t);
             }
             return {
-                "--profile-gradient-primary-color": e(m),
-                "--profile-gradient-secondary-color": e(I),
-                "--profile-gradient-overlay-color": N,
-                "--profile-gradient-button-color": e((0, h.wg)(m)),
-                "--profile-gradient-modal-background-color": e((0, h.v2)(m, I, y || T ? n : void 0)),
-                ...(0, d.Zk)({
+                "--profile-gradient-primary-color": e(A),
+                "--profile-gradient-secondary-color": e(M),
+                "--profile-gradient-overlay-color": L,
+                "--profile-gradient-button-color": e((0, E.wg)(A)),
+                "--profile-gradient-modal-background-color": e((0, E.v2)(A, M, f || b ? o : void 0)),
+                ...(0, m.Zk)({
                     enabled: !0,
-                    primaryColor: m,
-                    secondaryColor: I,
-                    isDarkTheme: (0, l.M)(n),
+                    primaryColor: A,
+                    secondaryColor: M,
+                    isDarkTheme: (0, c.M)(o),
                     textMixAmount: 25,
                 }),
             };
-        }, [m, I, C, N, y, T, n, S]),
-        profileThemeClassName: s()((0, u.m)(n), null != r ? { [g[r]]: !0 } : void 0, {
-            [_.Gc]: null != m,
-            "custom-user-profile-theme": null != m,
+        }, [A, M, C, L, f, b, o, R]),
+        profileThemeClassName: s()((0, i.m)(o), null != r ? { [O[r]]: !0 } : void 0, {
+            [h.Gc]: null != A,
+            "custom-user-profile-theme": null != A,
         }),
     };
 }

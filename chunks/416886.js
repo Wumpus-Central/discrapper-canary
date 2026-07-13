@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { A: () => r });
-var i = n(682465);
-function r(e, t, n) {
+e.d(r, { A: () => n });
+var o = e(682465);
+function n(t, r, e) {
     return (
-        (t = (0, i.A)(t)) in e
-            ? Object.defineProperty(e, t, { value: n, enumerable: !0, configurable: !0, writable: !0 })
-            : (e[t] = n),
-        e
+        (r = (0, o.A)(r)) in t
+            ? Object.defineProperty(t, r, { value: e, enumerable: !0, configurable: !0, writable: !0 })
+            : (t[r] = e),
+        t
     );
 }

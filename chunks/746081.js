@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { m: () => a });
+n.d(e, { m: () => o });
 var i = n(64700),
-    r = n(310209);
-function a(e) {
-    let { wishlistAndRecommendations: t, skusToUserAndReason: n, userId: a, numItems: s } = e;
+    l = n(310209);
+function o(t) {
+    let { wishlistAndRecommendations: e, skusToUserAndReason: n, userId: o, numItems: r } = t;
     return {
         totalUnownedWishlistItemCount: i.useMemo(
-            () => t.filter((e) => null != n[e.id] && n[e.id][a] === r.j.WISHLIST).length,
-            [t, a, n],
+            () => e.filter((t) => null != n[t.id] && n[t.id][o] === l.j.WISHLIST).length,
+            [e, o, n],
         ),
-        slicedWishlistAndRecommendations: i.useMemo(() => t.slice(0, s), [t, s]),
+        slicedWishlistAndRecommendations: i.useMemo(() => e.slice(0, r), [e, r]),
     };
 }
