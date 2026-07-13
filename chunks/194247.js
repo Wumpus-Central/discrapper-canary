@@ -12,15 +12,15 @@ var l = n(627968),
     m = n(584160),
     h = n(169797),
     C = n(6938),
-    E = n(832286),
-    A = n(958340),
+    A = n(832286),
+    E = n(958340),
     f = n(166532),
     y = n(566980),
     S = n(615310),
     P = n(489254),
     T = n(251913),
-    _ = n(71393),
-    I = n(178368),
+    I = n(71393),
+    _ = n(178368),
     g = n(166403),
     x = n(473145),
     v = n(802790),
@@ -28,8 +28,8 @@ var l = n(627968),
     b = n(587491),
     R = n(285753),
     M = n(430993),
-    O = n(86379),
-    j = n(682174),
+    j = n(86379),
+    O = n(682174),
     L = n(655857),
     w = n(534479),
     k = n(121005),
@@ -51,19 +51,19 @@ function W(e) {
             intent: m,
             onSubscribeComplete: h,
         } = e,
-        [E, A] = i.useState(t),
+        [A, E] = i.useState(t),
         [f, y] = i.useState(!0),
         S = (0, a.A)(() => Date.now()),
-        P = (0, a.A)(() => (0, x.D$)(I.A.boostSlots).length),
+        P = (0, a.A)(() => (0, x.D$)(_.A.boostSlots).length),
         T = (0, C.t4)((e) => e.activeSubscription),
-        _ = (0, r.bG)([g.A], () => g.A.hasFetchedSubscriptions()),
+        I = (0, r.bG)([g.A], () => g.A.hasFetchedSubscriptions()),
         v = (0, r.bG)([G.A], () => G.A.defaultPaymentSourceId),
         N = null != T ? T.paymentSourceId : null,
-        b = (0, U._V)(null != N ? N : _ ? v : null);
+        b = (0, U._V)(null != N ? N : I ? v : null);
     return (0, l.jsx)(B.Provider, {
         value: {
-            numGuildBoostsToPurchase: E,
-            setNumGuildBoostsToPurchase: A,
+            numGuildBoostsToPurchase: A,
+            setNumGuildBoostsToPurchase: E,
             disablePremiumUpsell: n,
             closeGuildPerksModal: s,
             guildId: u,
@@ -130,27 +130,27 @@ function et(e) {
     let { handleStepChange: t } = e,
         n = (0, C.t4)((e) => e.activeSubscription),
         { guildId: r, analyticsLocation: a } = Y(),
-        o = (0, O.Hp)(),
+        o = (0, j.Hp)(),
         u = (0, k.A)(),
         { hasFetchedRelatedSubscriptionPlans: c, displayCurrency: d } = (0, L.Jn)(),
         { hasFetchedPremiumSubscriptionPlan: p } = $(),
         m = null != n && null != n.renewalMutations,
         h = null != n && n.isPausedOrPausePending && !n.isPausedAllowsUpdatesButNotResume,
-        E = !u || !c || !p || null == d || "" === d;
+        A = !u || !c || !p || null == d || "" === d;
     return ((0, s.Ay)(() => {
         m && D.default.track(Q.HAw.PREMIUM_GUILD_PENDING_MODAL, { location: a, guild_id: r });
     }),
     i.useEffect(() => {
-        E || o || h || m || t(f.pn.PLAN_SELECT);
-    }, [E, o, h, m, t]),
+        A || o || h || m || t(f.pn.PLAN_SELECT);
+    }, [A, o, h, m, t]),
     h)
         ? (0, l.jsx)(ee, { message: J.intl.string(J.t.mOWsF1) })
         : m
           ? (0, l.jsx)(ee, { message: J.intl.string(J.t.npfhh0) })
-          : E
+          : A
             ? (0, l.jsx)(w.A, {})
             : o
-              ? (0, l.jsx)(j.oO, {})
+              ? (0, l.jsx)(O.oO, {})
               : null;
 }
 var en = n(482132),
@@ -170,14 +170,14 @@ function er(e) {
             customCheckoutFlow: e.customCheckoutFlow,
             paymentSourceId: e.paymentSourceId,
         })),
-        m = (0, r.bG)([A.A], () => (null != n ? A.A.getGuild(n) : void 0), [n]),
-        h = null != n ? _.A.getGuild(n) : null,
-        E = (0, a.A)(() => (0, q.b2)(c)),
+        m = (0, r.bG)([E.A], () => (null != n ? E.A.getGuild(n) : void 0), [n]),
+        h = null != n ? I.A.getGuild(n) : null,
+        A = (0, a.A)(() => (0, q.b2)(c)),
         f = (0, r.bG)([Z.A], () => (null != u ? (0, q.c9)(u.planId) : null)),
         { paymentSources: y } = s,
         S = (0, el.g)(y, p),
         P = null != h ? h.name : null != m ? m.name : void 0,
-        T = E && null != f && !z.YV.has(f.id);
+        T = A && null != f && !z.YV.has(f.id);
     return (0, l.jsx)(en.dZ, {
         children: (0, l.jsx)(ei.W, {
             guild: h,
@@ -197,7 +197,7 @@ var ea = n(284009),
     eu = n(512950),
     ec = n(821609),
     ed = n(123292),
-    ep = n(529427),
+    ep = n(589078),
     em = n(87719);
 let eh = (0, n(240921).Ay)({
     name: "2026-05-boosting-pre-checkout-modal-refresh-monthly-rate",
@@ -207,15 +207,15 @@ let eh = (0, n(240921).Ay)({
 });
 n(321073);
 var eC = n(503698),
-    eE = n.n(eC),
-    eA = n(661531),
+    eA = n.n(eC),
+    eE = n(661531),
     ef = n(990078),
     ey = n(408278),
     eS = n(834040),
     eP = n(499373),
     eT = n(834730),
-    e_ = n(403581),
-    eI = n(663803),
+    eI = n(403581),
+    e_ = n(663803),
     eg = n(320448),
     ex = n(534514),
     ev = n(104510),
@@ -223,8 +223,8 @@ var eC = n(503698),
     eb = n(289873),
     eR = n(726656),
     eM = n(688810),
-    eO = n(531260),
-    ej = n(666646),
+    ej = n(531260),
+    eO = n(666646),
     eL = n(404374),
     ew = n(543767),
     ek = n(881489),
@@ -235,7 +235,7 @@ var eC = n(503698),
     eB = n(51465);
 function eY() {
     return (0, l.jsxs)("div", {
-        className: eE()(eB.dt, eB.dE),
+        className: eA()(eB.dt, eB.dE),
         children: [
             (0, l.jsx)("img", {
                 src: "https://cdn.discordapp.com/assets/content/0253ce7b3c383fba5cadfd162724ef1769e45a69203a87698bf89d6b87a53acd.svg",
@@ -250,7 +250,7 @@ function eH(e) {
     let { text: t, color: n } = e;
     return (0, l.jsxs)("div", {
         className: eB.dt,
-        children: [(0, l.jsx)(e_.t, { size: "md", className: eB.YW, color: n }), (0, l.jsx)("div", { children: t })],
+        children: [(0, l.jsx)(eI.t, { size: "md", className: eB.YW, color: n }), (0, l.jsx)("div", { children: t })],
     });
 }
 var eW = n(773669),
@@ -401,9 +401,9 @@ function tr(e) {
                     premiumSubscriptionPlan: a,
                     newAdditionalPlans: s,
                 } = e,
-                u = (0, r.bG)([_.A, A.A], () => {
-                    let e = _.A.getGuild(n);
-                    return null != e ? e : A.A.isGuildFetching(n) ? null : A.A.getGuild(n);
+                u = (0, r.bG)([I.A, E.A], () => {
+                    let e = I.A.getGuild(n);
+                    return null != e ? e : E.A.isGuildFetching(n) ? null : E.A.getGuild(n);
                 }, [n]),
                 c = a.interval,
                 d = a.intervalCount,
@@ -413,7 +413,7 @@ function tr(e) {
                 h = (0, ek.ds)();
             t = null != i ? (0, eq.Om)(i, s[0].quantity, s[0].planId) : s;
             let { analyticsLocations: C } = (0, eM.Ay)(),
-                [E, f] = (0, ew.YV)({
+                [A, f] = (0, ew.YV)({
                     subscriptionId: i?.id,
                     items: t,
                     renewal: !1,
@@ -433,8 +433,8 @@ function tr(e) {
                     analyticsLocation: o.A.GUILD_BOOSTING_REVIEW_RENEWAL,
                 });
             return (
-                (0, ej.OQ)({
-                    checkoutInvoicePreview: E,
+                (0, eO.OQ)({
+                    checkoutInvoicePreview: A,
                     checkoutInvoiceError: f,
                     renewalInvoicePreview: y,
                     renewalInvoiceError: S,
@@ -444,7 +444,7 @@ function tr(e) {
                     guildBoostingSubscriptionPlan: p,
                     isPrepaid: m,
                     isReverseTrial: h,
-                    checkoutInvoicePreview: E,
+                    checkoutInvoicePreview: A,
                     renewalInvoicePreview: y,
                     isSubscriptionUpdate: null != i,
                 }
@@ -458,15 +458,15 @@ function tr(e) {
         }),
         {
             isSubscriptionUpdate: C,
-            guild: E,
+            guild: A,
             isPrepaid: f,
             isReverseTrial: y,
             checkoutInvoicePreview: S,
             renewalInvoicePreview: P,
         } = h,
         T = (0, eQ.A)({ location: "GuildBoostReview", message: J.intl.string(e8.default["tK8A/8"]) });
-    if (null == S || null == P || null == E) return (0, l.jsx)(eX.Ed, {});
-    let I = (0, l.jsx)(ti, {
+    if (null == S || null == P || null == A) return (0, l.jsx)(eX.Ed, {});
+    let _ = (0, l.jsx)(ti, {
             isSubscriptionUpdate: C,
             premiumSubscription: a,
             checkoutInvoicePreview: S,
@@ -526,19 +526,19 @@ function tr(e) {
             es()(null != m, "Missing guild boosting invoice item");
             let h = p((e) => e.amount < 0),
                 C = null != h ? m.quantity - h.quantity : m.quantity,
-                E = l.invoiceItems.filter((e) => (0, eq.xq)(e.subscriptionPlanId)),
-                A = E.reduce((e, t) => e + t.amount, 0),
+                A = l.invoiceItems.filter((e) => (0, eq.xq)(e.subscriptionPlanId)),
+                E = A.reduce((e, t) => e + t.amount, 0),
                 f = (0, ew.sL)(m) * C,
                 y = (0, ez.$g)(f, l.currency),
                 S = (0, ez.CE)(y, c, d),
                 P = (0, ez.$g)(l.total, l.currency) + (l.currency !== e5.Yr.USD ? "*" : ""),
-                T = l.subtotal - f - A,
-                _ = m.discounts.map((e) => {
+                T = l.subtotal - f - E,
+                I = m.discounts.map((e) => {
                     let t = e.amount / m.quantity;
                     return { ...e, amount: t * C };
                 }),
-                I = _.find((e) => e.type === e$.iS.SUBSCRIPTION_PLAN),
-                g = _.find((e) => e.type === e$.iS.ENTITLEMENT),
+                _ = I.find((e) => e.type === e$.iS.SUBSCRIPTION_PLAN),
+                g = I.find((e) => e.type === e$.iS.ENTITLEMENT),
                 x = m.subscriptionPlanPrice * C;
             return {
                 addedQuantity: C,
@@ -549,10 +549,10 @@ function tr(e) {
                 formattedGuildBoostRate: S,
                 formattedOriginalAmountGuildBoostRate: (0, ez.CE)((0, ez.$g)(x, l.currency), c, d),
                 formattedTotal: P,
-                basePlanAdjustment: A,
-                basePlanInvoiceItems: E,
+                basePlanAdjustment: E,
+                basePlanInvoiceItems: A,
                 guildBoostingAdjustment: T,
-                subscriptionDiscount: I,
+                subscriptionDiscount: _,
                 entitlementDiscount: g,
                 originalAmount: x,
                 premiumSubscription: t,
@@ -587,13 +587,13 @@ function tr(e) {
                 target: { type: "boost", guild: e },
                 graphic: (0, l.jsx)(e1.a6, {}),
                 price: s,
-                PriceIcon: c ? e_.t : void 0,
+                PriceIcon: c ? eI.t : void 0,
                 priceTooltip: c ? J.intl.string(e8.default.YUNJJa) : void 0,
                 priceSubText: c ? o : void 0,
                 bottomSubText: n?.text ?? null,
             };
         })(
-            E,
+            A,
             N,
             (function (e) {
                 let { isPrepaid: t, isReverseTrial: n, premiumSubscription: l } = e;
@@ -605,7 +605,7 @@ function tr(e) {
         shouldShowGlobalNotices: !0,
         upperInlineNoticeProps: T,
         purchaseItemContent: M,
-        subscriptionDetailsContent: I,
+        subscriptionDetailsContent: _,
         paymentMethodContent: g,
         invoiceSummaryContent: b,
         legalContent: v,
@@ -687,7 +687,7 @@ function tc(e) {
         children: [
             (0, l.jsx)("div", {
                 className: ta.D0,
-                children: (0, l.jsx)(e_.t, {
+                children: (0, l.jsx)(eI.t, {
                     "aria-hidden": "true",
                     size: "custom",
                     width: 20,
@@ -715,8 +715,8 @@ function td(e) {
         existingSlotNotice: m,
         discountCallout: h,
         refreshDiscountCallout: C,
-        legacyPricingNotes: E,
-        refreshPricingNotes: A,
+        legacyPricingNotes: A,
+        refreshPricingNotes: E,
     } = e;
     return (0, l.jsxs)("div", {
         children: [
@@ -729,7 +729,7 @@ function td(e) {
                     (0, l.jsxs)("div", {
                         className: e9.E6,
                         children: [
-                            (0, l.jsx)(eI.l, {
+                            (0, l.jsx)(e_.l, {
                                 value: n,
                                 onChange: (e) => r(e),
                                 className: e9.__invalid_planSelector,
@@ -739,7 +739,7 @@ function td(e) {
                             (0, l.jsx)("div", { className: e9.$0, children: a }),
                         ],
                     }),
-                    (0, l.jsx)("div", { className: eE()(e9.QK, { [e9.S]: t }), children: s }),
+                    (0, l.jsx)("div", { className: eA()(e9.QK, { [e9.S]: t }), children: s }),
                 ],
             }),
             (0, l.jsx)("div", { className: e9.J3 }),
@@ -752,12 +752,12 @@ function td(e) {
                         children: J.intl.string(J.t.RtA7nR),
                     }),
                     (0, l.jsx)("div", {
-                        className: eE()(e9.__invalid_planSelectorSubtotalPrice, { [e9.S]: t }),
+                        className: eA()(e9.__invalid_planSelectorSubtotalPrice, { [e9.S]: t }),
                         children: o,
                     }),
                 ],
             }),
-            E.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t)),
+            A.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t)),
             h,
         ],
     });
@@ -777,8 +777,8 @@ function tp(e) {
         fractionalBanner: m,
         existingSlotNotice: h,
         discountCallout: C,
-        refreshDiscountCallout: E,
-        legacyPricingNotes: A,
+        refreshDiscountCallout: A,
+        legacyPricingNotes: E,
         refreshPricingNotes: f,
     } = e;
     return (0, l.jsxs)("div", {
@@ -815,10 +815,10 @@ function tp(e) {
                             (0, l.jsx)(eT.E, { variant: "text-md/medium", className: ta.ny, children: s }),
                         ],
                     }),
-                    (0, l.jsx)("div", { className: eE()(ta.El, { [e9.S]: t }), children: o }),
+                    (0, l.jsx)("div", { className: eA()(ta.El, { [e9.S]: t }), children: o }),
                 ],
             }),
-            E,
+            A,
             (0, l.jsxs)("div", {
                 className: ta.fh,
                 children: [
@@ -827,7 +827,7 @@ function tp(e) {
                         className: ta.O3,
                         children: J.intl.string(J.t.RtA7nR),
                     }),
-                    (0, l.jsx)("div", { className: eE()(ta.BU, { [e9.S]: t }), children: c }),
+                    (0, l.jsx)("div", { className: eA()(ta.BU, { [e9.S]: t }), children: c }),
                 ],
             }),
             f.map((e, t) => (0, l.jsx)(i.Fragment, { children: e }, t)),
@@ -839,7 +839,7 @@ function tm(e) {
     return (0, l.jsxs)("div", {
         className: e9.Mv,
         children: [
-            (0, l.jsx)(ev._, { className: e9.T5, color: eA.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+            (0, l.jsx)(ev._, { className: e9.T5, color: eE.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
             (0, l.jsxs)("div", {
                 children: [
                     J.intl.format(J.t.F8xlhr, { slotCount: t.length }),
@@ -854,7 +854,7 @@ function tm(e) {
                                   width: 20,
                                   height: 20,
                                   className: e9.Y5,
-                                  color: eA.A.unsafe_rawColors.YELLOW_300.css,
+                                  color: eE.A.unsafe_rawColors.YELLOW_300.css,
                               }),
                           })
                         : null,
@@ -877,7 +877,7 @@ function th(e) {
             showRefreshSubtotalRate: h = !1,
             refreshNextStepLabel: C = J.intl.string(J.t.QBnNHq),
         } = e,
-        E = (function (e) {
+        A = (function (e) {
             let t,
                 n,
                 {
@@ -895,19 +895,19 @@ function th(e) {
                     (0, r.bG)([G.A], () =>
                         t?.paymentSourceId != null ? G.A.getPaymentSource(t.paymentSourceId)?.country : null,
                     )),
-                E = a.interval,
-                A = a.intervalCount,
-                f = (0, r.bG)([Z.A], () => Z.A.getForSkuAndInterval((0, eq.mH)(z.pe.GUILD), E, A)),
+                A = a.interval,
+                E = a.intervalCount,
+                f = (0, r.bG)([Z.A], () => Z.A.getForSkuAndInterval((0, eq.mH)(z.pe.GUILD), A, E)),
                 y = (0, r.bG)([eV.default], () => eV.default.getCurrentUser()),
-                S = (0, eO.A)({ forceFetch: !1 });
+                S = (0, ej.A)({ forceFetch: !1 });
             es()(null != f, "Missing guildBoostingSubscriptionPlan");
             let P = [{ planId: f.id, quantity: 1 }],
                 T = c?.items.find(
                     (e) => e.planId === z.gD.PREMIUM_MONTH_TIER_2 || e.planId === z.gD.PREMIUM_YEAR_TIER_2,
                 );
             null != T && P.push(T);
-            let _ = c?.items.find((e) => e.planId === z.gD.PREMIUM_MONTH_GUILD || e.planId === z.gD.PREMIUM_YEAR_GUILD),
-                I = null == C || !z.uJ.has(C) || null == _,
+            let I = c?.items.find((e) => e.planId === z.gD.PREMIUM_MONTH_GUILD || e.planId === z.gD.PREMIUM_YEAR_GUILD),
+                _ = null == C || !z.uJ.has(C) || null == I,
                 { analyticsLocations: v } = (0, eM.Ay)(),
                 [N, b] = (0, ew.YV)({
                     subscriptionId: c?.id,
@@ -915,25 +915,25 @@ function th(e) {
                     renewal: !0,
                     paymentSourceId: c?.paymentSourceId,
                     currency: m.currency,
-                    preventFetch: I,
+                    preventFetch: _,
                     analyticsLocations: v,
                     analyticsLocation: o.A.GUILD_BOOSTING_PLAN_SELECT,
                 });
-            (0, ej.Tr)(N, b);
-            let R = !I && null == N && null == b;
+            (0, eO.Tr)(N, b);
+            let R = !_ && null == N && null == b;
             i.useLayoutEffect(() => {
                 u(R);
             }, [R, u]);
             let M = (0, eU.V)()?.subscription_trial?.sku_id === z.pe.TIER_2,
-                O = eq.Ay.hasBoostDiscount(y),
-                j = O && null != c && eq.Ay.isPremiumAtLeast(eq.Ay.getPremiumType(c.planId), z.PremiumTypes.TIER_1),
+                j = eq.Ay.hasBoostDiscount(y),
+                O = j && null != c && eq.Ay.isPremiumAtLeast(eq.Ay.getPremiumType(c.planId), z.PremiumTypes.TIER_1),
                 L = N?.findInvoiceItemByPlanId(f.id),
                 w =
                     null != L
                         ? { amount: L.amount, tax: 0, taxInclusive: !0, currency: N.currency }
-                        : eq.Ay.getPrice(f.id, O, !1, m),
+                        : eq.Ay.getPrice(f.id, j, !1, m),
                 k = s * w.amount,
-                D = (0, ek.ds)() && O && null != c,
+                D = (0, ek.ds)() && j && null != c,
                 U = (function (e) {
                     let t,
                         {
@@ -955,7 +955,7 @@ function th(e) {
                     existingAvailableSlotsCount: p.length,
                     fractionalPremiumState: S.fractionalState,
                     isReverseTrial: D,
-                    hasDiscountUpsell: j,
+                    hasDiscountUpsell: O,
                     withTrialOfferCopyVariant: M,
                 });
             "discount" === U.upsellVariant
@@ -973,7 +973,7 @@ function th(e) {
                 W =
                     D && null != c
                         ? (0, l.jsx)(tn, { text: tt(c.currentPeriodEnd) })
-                        : (0, l.jsx)("div", { className: eE()(e9.hA, e9.G3), children: J.intl.string(J.t.jNY1FO) }),
+                        : (0, l.jsx)("div", { className: eA()(e9.hA, e9.G3), children: J.intl.string(J.t.jNY1FO) }),
                 V =
                     D && null != c
                         ? (0, l.jsx)(tn, { text: tt(c.currentPeriodEnd), className: e9.jk })
@@ -995,7 +995,7 @@ function th(e) {
                               : t === z.WT.MONTH && 1 === n
                                 ? J.intl.string(J.t["6ZR3By"])
                                 : null;
-                      })({ intervalType: E, intervalCount: A }) ?? J.intl.string(J.t.K9Bmze))
+                      })({ intervalType: A, intervalCount: E }) ?? J.intl.string(J.t.K9Bmze))
                     : J.intl.string(J.t.K9Bmze),
                 X = R
                     ? (0, l.jsx)(eb.y, {})
@@ -1011,20 +1011,20 @@ function th(e) {
                                   : l === z.WT.MONTH && i > 1
                                     ? J.intl.formatToPlainString(J.t.xJvAFU, { price: r })
                                     : null;
-                        })({ intervalType: E, intervalCount: A, amount: w.amount, currency: w.currency }),
+                        })({ intervalType: A, intervalCount: E, amount: w.amount, currency: w.currency }),
                 ee = R
                     ? (0, l.jsx)(eb.y, {})
                     : (0, l.jsx)(eG.A, {
                           price: k,
                           currency: w.currency,
-                          intervalType: E,
-                          intervalCount: A,
+                          intervalType: A,
+                          intervalCount: E,
                           isPrepaidPaymentSource: B,
                       }),
                 et = R
                     ? (0, l.jsx)(eb.y, {})
                     : h && !B
-                      ? (0, ez.CE)((0, ez.$g)(k, w.currency), E, A)
+                      ? (0, ez.CE)((0, ez.$g)(k, w.currency), A, E)
                       : (0, ez.$g)(k, w.currency),
                 en = [],
                 el = [];
@@ -1075,27 +1075,27 @@ function th(e) {
             showRefreshSubtotalRate: h,
         });
     return (0, l.jsx)(m ? tp : td, {
-        isLoading: E.isLoading,
+        isLoading: A.isLoading,
         numGuildBoosts: n,
         setNumGuildBoosts: a,
-        planLabel: E.planLabel,
-        planPriceContent: E.planPriceContent,
-        subtotalContent: E.subtotalContent,
-        refreshSubtotalContent: E.refreshSubtotalContent,
-        legacyDescriptionContent: E.legacyDescriptionContent,
-        refreshDescriptionContent: E.refreshDescriptionContent,
-        fractionalBanner: E.fractionalBanner,
-        existingSlotNotice: E.existingSlotNotice,
-        discountCallout: E.discountCallout,
-        refreshDiscountCallout: E.refreshDiscountCallout,
-        legacyPricingNotes: E.legacyPricingNotes,
-        refreshPricingNotes: E.refreshPricingNotes,
+        planLabel: A.planLabel,
+        planPriceContent: A.planPriceContent,
+        subtotalContent: A.subtotalContent,
+        refreshSubtotalContent: A.refreshSubtotalContent,
+        legacyDescriptionContent: A.legacyDescriptionContent,
+        refreshDescriptionContent: A.refreshDescriptionContent,
+        fractionalBanner: A.fractionalBanner,
+        existingSlotNotice: A.existingSlotNotice,
+        discountCallout: A.discountCallout,
+        refreshDiscountCallout: A.refreshDiscountCallout,
+        legacyPricingNotes: A.legacyPricingNotes,
+        refreshPricingNotes: A.refreshPricingNotes,
         refreshNextStepLabel: C,
     });
 }
 let tC = z.gD.NONE_MONTH,
-    tE = [z.pe.GUILD];
-function tA(e) {
+    tA = [z.pe.GUILD];
+function tE(e) {
     let { handleClose: t, handleStepChange: n } = e,
         {
             numGuildBoostsToPurchase: i,
@@ -1108,20 +1108,20 @@ function tA(e) {
             paymentModalArgs: m,
             premiumSubscriptionPaymentSourceId: h,
         } = Y(),
-        { paymentSourceId: E, activeSubscription: y } = (0, C.t4)((e) => ({
+        { paymentSourceId: A, activeSubscription: y } = (0, C.t4)((e) => ({
             paymentSourceId: e.paymentSourceId,
             activeSubscription: e.activeSubscription,
         })),
         { displayCurrency: S } = (0, L.Jn)(),
         T = null != h || Object.keys(m.paymentSources).length > 0,
         g = (0, f.Ir)(T ? f.pn.REVIEW : f.pn.ADD_PAYMENT_STEPS),
-        v = (0, a.A)(() => (0, x.D$)(I.A.boostSlots)),
+        v = (0, a.A)(() => (0, x.D$)(_.A.boostSlots)),
         N = (0, P.n)("GuildBoostPurchaseModal"),
         b = eh.useConfig({ location: "GuildBoostPurchaseModal" }).enabled,
         R = N && b,
-        M = (0, r.bG)([A.A], () => (null != o ? A.A.getGuild(o) : void 0), [o]),
-        O = null != o ? _.A.getGuild(o) : null,
-        j = null == M && null == O,
+        M = (0, r.bG)([E.A], () => (null != o ? E.A.getGuild(o) : void 0), [o]),
+        j = null != o ? I.A.getGuild(o) : null,
+        O = null == M && null == j,
         w = null != y && y.isPurchasedExternally,
         k = Object.keys(m.paymentSources).length > 0,
         D = (0, r.bG)([Z.A], () => (null != y ? (0, q.c9)(y.planId) : null)),
@@ -1143,7 +1143,7 @@ function tA(e) {
             t(), null != u && u(), (0, em.e)();
         },
         priceOptions:
-            null != E ? { paymentSourceId: E, currency: null != S ? S : void 0 } : { currency: null != S ? S : void 0 },
+            null != A ? { paymentSourceId: A, currency: null != S ? S : void 0 } : { currency: null != S ? S : void 0 },
         isRefreshEnabled: N,
         showRefreshSubtotalRate: R,
         refreshNextStepLabel: g,
@@ -1161,8 +1161,8 @@ function tA(e) {
                   ],
               }))
             : null != o &&
-              !A.A.isGuildFetching(o) &&
-              j &&
+              !E.A.isGuildFetching(o) &&
+              O &&
               (G = (0, l.jsxs)(l.Fragment, {
                   children: [
                       (0, l.jsx)(eu.p, {
@@ -1202,7 +1202,7 @@ function tA(e) {
                                 forceDisableSubmitButton: p,
                                 numGuildBoostsToPurchase: i,
                                 isDisabledBecauseExternalSubscription: w,
-                                isMissingGuildInformation: j,
+                                isMissingGuildInformation: O,
                             }),
                             onClick: () => {
                                 c || (null != D && D.premiumSubscriptionType === z.PremiumTypes.TIER_2)
@@ -1221,8 +1221,8 @@ var tf = n(364840),
     tS = n(183623),
     tP = n(95635),
     tT = n(935462),
-    t_ = n(331322),
-    tI = n(532794),
+    tI = n(331322),
+    t_ = n(532794),
     tg = n(811611),
     tx = n(901017),
     tv = n(403052);
@@ -1236,13 +1236,13 @@ function tN(e) {
                 icon: ev._,
                 iconClassName: tv.pl,
                 description: J.intl.formatToPlainString(J.t.sQBgs2, { numFreeGuildSubscriptions: z.M4 }),
-                color: eA.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
+                color: eE.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             (0, l.jsx)(tx.A, {
                 icon: ev._,
                 iconClassName: tv.pl,
                 description: J.intl.formatToPlainString(J.t["1A6vXi"], { percent: (0, eZ.l9)(n, z.oX / 100) }),
-                color: eA.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
+                color: eE.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
             t ? (0, l.jsx)(tx.A, { icon: ty.n, iconClassName: tv.zO, description: J.intl.string(J.t.Z9b2x2) }) : null,
             (0, l.jsx)(tx.A, { icon: tS.F, iconClassName: tv.Kg, description: J.intl.string(J.t["8dqG5E"]) }),
@@ -1264,10 +1264,10 @@ function tb(e) {
         { analyticsLocations: p, sourceAnalyticsLocations: m } = (0, eM.Ay)(o.A.GUILD_BOOSTING_PREMIUM_UPSELL),
         h = null == t || null == t.premiumSubscriptionType,
         C = eq.Ay.getPrice(z.gD.PREMIUM_MONTH_TIER_2, !1, !1, d),
-        E = (0, ez.$g)(C.amount, C.currency),
-        A = (0, eU.V)(),
-        f = A?.trial_id,
-        y = A?.subscription_trial?.sku_id === z.pe.TIER_2;
+        A = (0, ez.$g)(C.amount, C.currency),
+        E = (0, eU.V)(),
+        f = E?.trial_id,
+        y = E?.subscription_trial?.sku_id === z.pe.TIER_2;
     return (
         i.useEffect(() => {
             D.default.track(Q.HAw.PREMIUM_UPSELL_VIEWED, { type: z.e.GUILD_PREMIUM_UPSELL_MODAL, location_stack: m });
@@ -1278,27 +1278,27 @@ function tb(e) {
                 (0, l.jsxs)(M.c, {
                     children: [
                         y && (0, l.jsx)(tg.Vq, { className: tv.Fg }),
-                        (0, l.jsx)("div", { className: eE()(tv.Tn, { [tv.NH]: y }) }),
+                        (0, l.jsx)("div", { className: eA()(tv.Tn, { [tv.NH]: y }) }),
                         (0, l.jsx)(eT.E, {
                             variant: "text-md/medium",
                             color: "interactive-text-default",
                             children:
                                 null != f
                                     ? J.intl.string(J.t.AoSzEr)
-                                    : J.intl.format(J.t["7vePZb"], { monthlyPrice: E }),
+                                    : J.intl.format(J.t["7vePZb"], { monthlyPrice: A }),
                         }),
                         (0, l.jsx)(tN, { shouldUpsellFromNoneTier: h }),
                     ],
                 }),
                 (0, l.jsx)(tf.j, {
-                    children: (0, l.jsxs)(t_.B, {
+                    children: (0, l.jsxs)(tI.B, {
                         direction: "horizontal",
                         align: "center",
                         justify: "space-between",
                         fullWidth: !0,
                         children: [
                             (0, l.jsx)(ed.Q, { text: J.intl.string(J.t["13/7kX"]), onClick: r, variant: "secondary" }),
-                            (0, l.jsxs)(t_.B, {
+                            (0, l.jsxs)(tI.B, {
                                 direction: "horizontal",
                                 align: "center",
                                 fullWidth: !1,
@@ -1314,7 +1314,7 @@ function tb(e) {
                                         type: "submit",
                                         onClick: () => {
                                             n(),
-                                                (0, tI.A)({
+                                                (0, t_.A)({
                                                     initialPlanId: null,
                                                     subscriptionTier: z.pe.TIER_2,
                                                     analyticsLocations: p,
@@ -1348,11 +1348,11 @@ function tR(e) {
         m = (0, r.bG)([Z.A], () => (null != d ? (0, q.c9)(d.planId) : null)),
         h = (0, r.bG)([Z.A], () => (null == m ? Z.A.get(tC) : m));
     es()(null != h, "Missing nextPremiumSubscriptionPlan"), es()(null != p && "" !== p, "Currency not defined");
-    let { paymentSources: E } = s,
-        A = null != d ? d.paymentSourceId : null,
-        y = Object.keys(E).length > 0,
+    let { paymentSources: A } = s,
+        E = null != d ? d.paymentSourceId : null,
+        y = Object.keys(A).length > 0,
         S = i.useCallback(() => n(f.pn.PLAN_SELECT), [n]),
-        P = i.useCallback(() => n(null != A || y ? f.pn.REVIEW : f.pn.ADD_PAYMENT_STEPS), [n, A, y]);
+        P = i.useCallback(() => n(null != E || y ? f.pn.REVIEW : f.pn.ADD_PAYMENT_STEPS), [n, E, y]);
     return (0, l.jsx)(tb, {
         premiumSubscriptionPlan: h,
         analyticsLocation: o,
@@ -1365,12 +1365,12 @@ function tR(e) {
     });
 }
 var tM = n(277984),
-    tO = n(364995),
-    tj = n(820739);
+    tj = n(364995),
+    tO = n(820739);
 async function tL(e, t) {
-    await (0, tj.CD)();
-    let n = (0, x.D$)(I.A.boostSlots);
-    return (0, tj.VA)(
+    await (0, tO.CD)();
+    let n = (0, x.D$)(_.A.boostSlots);
+    return (0, tO.VA)(
         e,
         n.map((e) => e.id),
         t,
@@ -1409,7 +1409,7 @@ function tk() {
     );
 }
 let tD = [
-        { key: f.pn.PLAN_SELECT, renderStep: (e) => (0, l.jsx)(tA, { ...e }), options: { renderHeader: !0 } },
+        { key: f.pn.PLAN_SELECT, renderStep: (e) => (0, l.jsx)(tE, { ...e }), options: { renderHeader: !0 } },
         {
             key: f.pn.PREMIUM_UPSELL,
             renderStep: (e) => (0, l.jsx)(tR, { ...e }),
@@ -1436,12 +1436,12 @@ let tD = [
                     { displayCurrency: m } = (0, L.Jn)();
                 if (null == s) throw new ep.vd({ message: "Missing guildId" });
                 es()(null != m && "" !== m, "Currency not defined");
-                let { paymentSources: E } = o,
-                    { newAdditionalPlans: A, currentPremiumSubscriptionPlan: S } = $(),
+                let { paymentSources: A } = o,
+                    { newAdditionalPlans: E, currentPremiumSubscriptionPlan: S } = $(),
                     P = (0, r.bG)([Z.A], () => (null == S ? Z.A.get(tC) : S));
                 es()(null != P, "Missing nextPremiumSubscriptionPlan");
                 let T = null != d ? { paymentSourceId: d, currency: m } : { currency: m },
-                    _ = (function (e) {
+                    I = (function (e) {
                         let { handleStepChange: t, handleClose: n, analyticsData: l } = e,
                             {
                                 guildId: r,
@@ -1455,12 +1455,12 @@ let tD = [
                                 intent: m,
                                 onSubscribeComplete: h,
                             } = Y(),
-                            { displayCurrency: E } = (0, L.Jn)(),
-                            { paymentSources: A, setIsSubmittingCurrentStep: S, isSubmittingCurrentStep: P } = a,
+                            { displayCurrency: A } = (0, L.Jn)(),
+                            { paymentSources: E, setIsSubmittingCurrentStep: S, isSubmittingCurrentStep: P } = a,
                             {
                                 activeSubscription: T,
-                                paymentSourceId: _,
-                                setPurchaseError: I,
+                                paymentSourceId: I,
+                                setPurchaseError: _,
                                 hasAcceptedTerms: g,
                                 setPurchaseState: x,
                             } = (0, C.t4)((e) => ({
@@ -1470,7 +1470,7 @@ let tD = [
                                 hasAcceptedTerms: e.hasAcceptedTerms,
                                 setPurchaseState: e.setPurchaseState,
                             })),
-                            v = (0, ej.sw)(),
+                            v = (0, eO.sw)(),
                             {
                                 newAdditionalPlans: N,
                                 currentPremiumSubscriptionPlan: b,
@@ -1480,10 +1480,10 @@ let tD = [
                                 location: "GuildBoostPurchaseModal",
                                 message: J.intl.string(e8.default["tK8A/8"]),
                             }),
-                            { checkoutPaymentSources: O } = (0, tO.t)(),
-                            j = (0, eQ.iB)({
-                                checkoutPaymentSources: O,
-                                paymentSourceId: _,
+                            { checkoutPaymentSources: j } = (0, tj.t)(),
+                            O = (0, eQ.iB)({
+                                checkoutPaymentSources: j,
+                                paymentSourceId: I,
                                 location: "GuildBoostPurchaseModal",
                             }),
                             w = i.useMemo(
@@ -1501,16 +1501,16 @@ let tD = [
                                 let { guild_id: e, ...t } = w;
                                 return t;
                             }, [w]),
-                            U = null != _ ? { paymentSourceId: _, currency: E ?? void 0 } : { currency: E ?? void 0 },
+                            U = null != I ? { paymentSourceId: I, currency: A ?? void 0 } : { currency: A ?? void 0 },
                             G = async () => {
                                 es()(null != N, "Missing newAdditionalPlans");
-                                let e = (0, el.W)(A, _);
-                                I(null);
+                                let e = (0, el.W)(E, I);
+                                _(null);
                                 let i = !1;
                                 try {
                                     x(y.h.PURCHASING),
                                         S(!0),
-                                        es()(null != _, "Missing paymentSourceId"),
+                                        es()(null != I, "Missing paymentSourceId"),
                                         es()(null != v, "Missing invoicePreview");
                                     let a = { amount: v.total, currency: v.currency },
                                         o = U.currency ?? v.currency,
@@ -1540,7 +1540,7 @@ let tD = [
                                     } else {
                                         let t = { items: (0, eq.aE)(T, N) };
                                         (t.currency = T.currency ?? o),
-                                            (t.paymentSource = null != s ? A[s] : void 0),
+                                            (t.paymentSource = null != s ? E[s] : void 0),
                                             null == t.paymentSource &&
                                                 (es()(null != e, "Missing paymentSource"),
                                                 (t.paymentSource = e),
@@ -1559,7 +1559,7 @@ let tD = [
                                         h?.();
                                 } catch (t) {
                                     x(y.h.FAIL),
-                                        I(t),
+                                        _(t),
                                         D.default.track(Q.HAw.PAYMENT_FLOW_FAILED, {
                                             ...k,
                                             payment_error_code: t?.code,
@@ -1569,7 +1569,7 @@ let tD = [
                                                         ? Q.kM_.STRIPE
                                                         : Q.kM_.BRAINTREE
                                                     : null,
-                                            payment_source_id: _,
+                                            payment_source_id: I,
                                             duration_ms: Date.now() - d,
                                         });
                                 } finally {
@@ -1579,12 +1579,12 @@ let tD = [
                         return {
                             text: J.intl.string(J.t.eUEeCt),
                             loading: P,
-                            disabled: null == _ || !g || null != M || j,
+                            disabled: null == I || !g || null != M || O,
                             onClick: G,
                             variant: "active",
                         };
                     })({ handleStepChange: t, handleClose: n, analyticsData: a }),
-                    I = i.useCallback(() => {
+                    _ = i.useCallback(() => {
                         t(f.pn.ADD_PAYMENT_STEPS), p(null);
                     }, [t, p]);
                 return (0, l.jsxs)(l.Fragment, {
@@ -1592,21 +1592,21 @@ let tD = [
                         (0, l.jsx)(en.dZ, {
                             children: (0, l.jsx)(tr, {
                                 guildId: s,
-                                paymentSources: E,
+                                paymentSources: A,
                                 priceOptions: T,
                                 currentPremiumSubscription: c,
                                 premiumSubscriptionPaymentSourceId: u,
                                 premiumSubscriptionPlan: P,
-                                newAdditionalPlans: A,
+                                newAdditionalPlans: E,
                                 paymentSourceId: d,
                                 setPaymentSourceId: p,
-                                onPaymentSourceAdd: I,
+                                onPaymentSourceAdd: _,
                             }),
                         }),
                         (0, l.jsx)(en.UX, {
                             children: (0, l.jsx)(h.lo, {
                                 onBackClick: () => t(f.pn.PLAN_SELECT),
-                                primaryButtonProps: _,
+                                primaryButtonProps: I,
                             }),
                         }),
                     ],
@@ -1633,15 +1633,15 @@ let tD = [
                         children: S,
                     } = e,
                     P = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
-                    T = (0, a.A)(() => n - (0, x.D$)(I.A.boostSlots).length);
+                    T = (0, a.A)(() => n - (0, x.D$)(_.A.boostSlots).length);
                 return (
                     (0, s.Ay)(() => {
-                        null != A.A.getGuild(t) || A.A.isGuildFetching(t) || (0, E.y)(t);
+                        null != E.A.getGuild(t) || E.A.isGuildFetching(t) || (0, A.y)(t);
                     }),
                     (0, l.jsx)(c.M, {
                         activeSubscription: P,
                         stepConfigs: f,
-                        skuIDs: tE,
+                        skuIDs: tA,
                         loadId: y,
                         unifiedCheckoutFlow: u.C.GUILD_BOOST_CHECKOUT,
                         children: (0, l.jsxs)(W, {
@@ -1677,7 +1677,7 @@ let tD = [
                           children: (e, n) =>
                               (0, l.jsx)(N.A, {
                                   transitionState: t.transitionState,
-                                  guild: _.A.getGuild(a),
+                                  guild: I.A.getGuild(a),
                                   guildBoostQuantity: r + s,
                                   isTransfer: !1,
                                   graphic: e,
@@ -1729,7 +1729,7 @@ function tW(e) {
 function tV(e) {
     let { handleClose: t } = e,
         { guildProductListing: i, guildId: r } = tH(),
-        a = (0, ej.sw)();
+        a = (0, eO.sw)();
     return (
         (0, s.Ay)(() => {
             var e;
@@ -1759,7 +1759,7 @@ var tK = n(939249),
 function tQ(e) {
     let { className: t, onClose: n } = e;
     return (0, l.jsx)(tK.D, {
-        className: eE()(tz.cG, t),
+        className: eA()(tz.cG, t),
         onClick: n,
         children: (0, l.jsx)(tZ.P, { size: "xs", color: "currentColor", className: tz.yP }),
     });
@@ -1767,7 +1767,7 @@ function tQ(e) {
 function tJ(e) {
     let { guildProductListing: t, onClose: n, className: i } = e;
     return (0, l.jsxs)(tT.rQ, {
-        className: eE()(tz.wx, t$.G, i),
+        className: eA()(tz.wx, t$.G, i),
         separator: !1,
         "data-migration-pending": !0,
         children: [
@@ -1816,7 +1816,7 @@ function nt(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(t4.Fk, { ref: n, className: t9.Lb, environment: t.current }),
-            (0, l.jsx)(t6.K, { options: i, className: eE()(t9.Oh, { [t9.R]: !r }) }),
+            (0, l.jsx)(t6.K, { options: i, className: eA()(t9.Oh, { [t9.R]: !r }) }),
         ],
     });
 }
@@ -1850,16 +1850,16 @@ function nm(e) {
         m = (0, nn.bG)([na.A], () => na.A.getProduct(r)),
         h = i.useRef(!1);
     es()(null != r, "Expected selectedSkuId"), es()(null != c, "Expected application");
-    let E = p[r];
-    es()(null != E, "Expected sku");
-    let A = null != u || null != a || null != s,
+    let A = p[r];
+    es()(null != A, "Expected sku");
+    let E = null != u || null != a || null != s,
         f =
             o.length > 0
                 ? J.intl.formatToPlainString(J.t.VuV3Td, { discountOfferAmount: o[0].discount.amount })
                 : void 0;
     return (i.useEffect(() => {
         null == m ||
-            A ||
+            E ||
             h.current ||
             ((h.current = !0),
             (0, nc.A)({
@@ -1869,8 +1869,8 @@ function nm(e) {
                 onCloseCallback: t,
                 purchaseType: t8.gs.FIAT,
             }));
-    }, [m, n, t, A, f]),
-    A)
+    }, [m, n, t, E, f]),
+    E)
         ? (0, l.jsx)(en.dZ, { children: (0, l.jsx)(np.A, {}) })
         : null;
 }
@@ -1889,7 +1889,7 @@ function nh(e) {
         p = i.useRef(null),
         m = (0, C.t4)((e) => e.selectedSkuId),
         h = (0, nn.bG)([na.A], () => na.A.getProduct(m)),
-        { confettiColors: E } = (0, ns.A)(h?.styles);
+        { confettiColors: A } = (0, ns.A)(h?.styles);
     return (
         i.useEffect(() => {
             t &&
@@ -1917,7 +1917,7 @@ function nh(e) {
                               confettiTarget: p.current,
                               confettiCanvas: e.confettiCanvas,
                               sprites: (0, nu.rA)(h?.categorySkuId),
-                              colors: E?.map((e) => e.toHexString()),
+                              colors: A?.map((e) => e.toHexString()),
                           }),
                   ],
               })
@@ -1925,15 +1925,15 @@ function nh(e) {
     );
 }
 var nC = n(70283),
-    nE = n(982240),
-    nA = n(662388),
+    nA = n(982240),
+    nE = n(662388),
     nf = n(993408),
     ny = n(575593),
     nS = n(452027),
     nP = n(922016),
     nT = n(778712),
-    n_ = n(986687),
-    nI = n(999291),
+    nI = n(986687),
+    n_ = n(999291),
     ng = n(903209),
     nx = n(674658),
     nv = n(898461),
@@ -1941,8 +1941,8 @@ var nC = n(70283),
     nb = n(892118),
     nR = n(536572),
     nM = n(456839),
-    nO = n(219103),
-    nj = n(525723),
+    nj = n(219103),
+    nO = n(525723),
     nL = n(780651);
 function nw(e) {
     let {
@@ -1956,35 +1956,35 @@ function nw(e) {
         { giftRecipient: c, giftRecipientError: d } = (0, t1.Pv)(),
         p = (0, r.bG)([eV.default], () => eV.default.getCurrentUser()),
         m = eq.Ay.canUseShopDiscounts(p),
-        h = (0, nI.Ay)(c?.id),
+        h = (0, n_.Ay)(c?.id),
         C = i.useRef(null),
-        [E, A] = i.useState(!1),
+        [A, E] = i.useState(!1),
         { product: f } = (0, nx.q)(t, !0),
         y = i.useMemo(() => (0, nf.fT)(f, m), [f, m]),
-        S = (0, nj.V_)(f);
+        S = (0, nO.V_)(f);
     if (null == f || 0 === f.items.length) return null;
     let [P] = f.items,
         T = (0, nR.VG)(f),
-        _ = null != c && c.id !== p?.id && f.type !== ny.R.BUNDLE && P.type !== ny.R.NAMEPLATE && !u;
+        I = null != c && c.id !== p?.id && f.type !== ny.R.BUNDLE && P.type !== ny.R.NAMEPLATE && !u;
     return (0, l.jsxs)("div", {
         className: s,
         children: [
             (0, l.jsx)("div", {
-                className: eE()(nL.QU, o),
+                className: eA()(nL.QU, o),
                 children: (0, l.jsx)(nS.D, {
                     label: J.intl.string(J.t.PpoJzt),
                     children:
-                        _ &&
+                        I &&
                         (0, l.jsx)(
                             nP.Y,
                             {
                                 targetElementRef: C,
                                 align: "center",
-                                shouldShow: E,
-                                onRequestClose: () => A(!1),
+                                shouldShow: A,
+                                onRequestClose: () => E(!1),
                                 preload: () => (0, ng.A)(c.id, c.getAvatarURL(null, 80)),
                                 renderPopout: (e) =>
-                                    (0, l.jsx)(n_.A, {
+                                    (0, l.jsx)(nI.A, {
                                         ...e,
                                         user: c,
                                         pendingAvatar: c.getAvatarURL(null, (0, nT.FT)(nT._3.SIZE_80)),
@@ -2002,10 +2002,10 @@ function nw(e) {
                                         className: nL.Nx,
                                         innerRef: C,
                                         onClick: (e) => {
-                                            A((e) => !e), t?.(e);
+                                            E((e) => !e), t?.(e);
                                         },
                                         onMouseDown: (e) => {
-                                            E ? e.stopPropagation() : n?.(e);
+                                            A ? e.stopPropagation() : n?.(e);
                                         },
                                         children: (0, l.jsx)(eT.E, {
                                             variant: "text-xs/medium",
@@ -2020,7 +2020,7 @@ function nw(e) {
                 }),
             }),
             (0, l.jsxs)("div", {
-                className: eE()(nL.i1, null != d ? nL.cN : nL.no),
+                className: eA()(nL.i1, null != d ? nL.cN : nL.no),
                 children: [
                     (0, l.jsxs)("div", {
                         className: nL.Ug,
@@ -2048,7 +2048,7 @@ function nw(e) {
                                     }),
                                 ],
                             }),
-                            (0, l.jsx)(nO.x, {
+                            (0, l.jsx)(nj.x, {
                                 priceAmount: n,
                                 priceCurrency: a,
                                 discount: y,
@@ -2145,7 +2145,7 @@ function nX(e) {
             t(),
                 (0, tF.closeAllModals)(),
                 null == n
-                    ? (0, nA.Cz)({ analyticsLocations: i, analyticsSource: o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
+                    ? (0, nE.Cz)({ analyticsLocations: i, analyticsSource: o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL })
                     : (0, nQ.pX)(`${Q.BVt.COLLECTIBLES_SHOP}#itemSkuId=${n}`);
         },
         textVariant: "text-sm/medium",
@@ -2198,7 +2198,7 @@ let n7 = {
                             giftingOrigin: m,
                             setValidatingGiftRecipient: h,
                         } = (0, t1.Pv)(),
-                        { selectedSkuId: E, checkoutInvoicePreview: A } = (0, C.t4)((e) => ({
+                        { selectedSkuId: A, checkoutInvoicePreview: E } = (0, C.t4)((e) => ({
                             selectedSkuId: e.selectedSkuId,
                             checkoutInvoicePreview: e.checkoutInvoicePreview,
                         })),
@@ -2207,13 +2207,13 @@ let n7 = {
                         S = nV(),
                         { analyticsLocations: P } = (0, eM.Ay)(o.A.COLLECTIBLES_GIFT_CUSTOMIZATION_MODAL),
                         T = (0, nK.F5)("CollectiblesPaymentModalGiftCustomizationStep"),
-                        { nextTier: _, giftsToNextTier: I } = (0, r.cf)([nE.Ay], () => ({
-                            nextTier: nE.Ay.getNextTier(nC.$.GIFTING),
-                            giftsToNextTier: nE.Ay.getRemainingToNextTier(nC.$.GIFTING),
+                        { nextTier: I, giftsToNextTier: _ } = (0, r.cf)([nA.Ay], () => ({
+                            nextTier: nA.Ay.getNextTier(nC.$.GIFTING),
+                            giftsToNextTier: nA.Ay.getRemainingToNextTier(nC.$.GIFTING),
                         })),
-                        g = T && null != _;
+                        g = T && null != I;
                     async function x(e, t) {
-                        h(!0), null != u && c(), (await (0, nA.JJ)(e.id, t)) || c(J.intl.string(J.t["4kgVqQ"])), h(!1);
+                        h(!0), null != u && c(), (await (0, nE.JJ)(e.id, t)) || c(J.intl.string(J.t["4kgVqQ"])), h(!1);
                     }
                     function v() {
                         return (0, l.jsx)(nq.A, {
@@ -2227,11 +2227,11 @@ let n7 = {
                     }
                     return (
                         (0, s.Ay)(() => {
-                            null != E &&
+                            null != A &&
                                 null != p &&
                                 (m !== z.vQ.DM_CHANNEL_WISHLIST &&
-                                    D.default.track(Q.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: E }),
-                                x(p, E));
+                                    D.default.track(Q.HAw.COLLECTIBLES_GIFTING_SHOP_ITEM_CLICKED, { sku_id: A }),
+                                x(p, A));
                         }),
                         {
                             renderLeftColumn: function () {
@@ -2241,16 +2241,16 @@ let n7 = {
                                 });
                             },
                             renderRightColumn: () => {
-                                let e = (0, nf.pA)({ invoicePreview: A, selectedSkuId: E, skusById: f });
+                                let e = (0, nf.pA)({ invoicePreview: E, selectedSkuId: A, skusById: f });
                                 return m === z.vQ.USER_PROFILE_WISHLIST || m === z.vQ.DM_CHANNEL_WISHLIST
                                     ? (0, l.jsxs)("div", {
                                           children: [
                                               (0, l.jsx)(n$.Z, { giftRecipient: p }),
                                               v(),
                                               null != e &&
-                                                  null != E &&
+                                                  null != A &&
                                                   (0, l.jsx)(nw, {
-                                                      skuId: E,
+                                                      skuId: A,
                                                       priceAmount: e.amount,
                                                       priceCurrency: e.currency,
                                                       className: nJ.uW,
@@ -2259,23 +2259,23 @@ let n7 = {
                                                   }),
                                               (0, l.jsx)("div", {
                                                   className: nJ.fi,
-                                                  children: (0, l.jsx)(nX, { handleClose: n, selectedSkuId: E }),
+                                                  children: (0, l.jsx)(nX, { handleClose: n, selectedSkuId: A }),
                                               }),
                                           ],
                                       })
                                     : (0, l.jsxs)("div", {
                                           children: [
                                               (0, l.jsx)(nG, {
-                                                  selectedSkuId: E,
+                                                  selectedSkuId: A,
                                                   recipients: S,
                                                   className: nJ.uh,
                                                   validateSelectedGift: x,
                                               }),
                                               v(),
                                               null != e &&
-                                                  null != E &&
+                                                  null != A &&
                                                   (0, l.jsx)(nw, {
-                                                      skuId: E,
+                                                      skuId: A,
                                                       priceAmount: e.amount,
                                                       priceCurrency: e.currency,
                                                       className: nJ.Ng,
@@ -2286,9 +2286,9 @@ let n7 = {
                             renderBottomContent: () =>
                                 g
                                     ? (0, l.jsx)(nZ.A, {
-                                          giftsToNextTier: I,
-                                          nextTierName: _.name ?? "",
-                                          nextTierIcon: _.simple_icon_url,
+                                          giftsToNextTier: _,
+                                          nextTierName: I.name ?? "",
+                                          nextTierIcon: I.simple_icon_url,
                                           analyticsLocations: P,
                                           className: nJ.qr,
                                       })
@@ -2431,8 +2431,8 @@ var n6 = n(354033),
     lm = n(780898),
     lh = n(344346),
     lC = n(837015),
-    lE = n(258915);
-function lA(e) {
+    lA = n(258915);
+function lE(e) {
     let { rewardSkuId: t, onClose: n, onRewardModalClose: a } = e,
         s = (0, r.bG)([eV.default], () => eV.default.getCurrentUser()),
         o = (0, r.bG)([nl.Ay], () => nl.Ay.useReducedMotion),
@@ -2442,8 +2442,8 @@ function lA(e) {
         [m, h] = i.useState(!1),
         C = d?.items[0],
         {
-            isNameplateReward: E,
-            nameplateData: A,
+            isNameplateReward: A,
+            nameplateData: E,
             rewardAvatarDecorationSrc: f,
         } = i.useMemo(
             () =>
@@ -2477,17 +2477,17 @@ function lA(e) {
     return (0, l.jsx)(en.UX, {
         children: (0, l.jsx)(tf.j, {
             children: (0, l.jsxs)("div", {
-                className: lE.W,
+                className: lA.W,
                 children: [
-                    E && null != A
+                    A && null != E
                         ? (0, l.jsx)("div", {
-                              className: lE.D,
+                              className: lA.D,
                               onMouseEnter: () => h(!0),
                               onMouseLeave: () => h(!1),
                               children: (0, l.jsx)(lh.a, {
                                   user: s,
                                   nameplate: null,
-                                  nameplateData: A,
+                                  nameplateData: E,
                                   showPlaceholderUser: !0,
                                   nameplatePreviewSize: "xsmall",
                                   isHighlighted: m,
@@ -2532,15 +2532,15 @@ function ly(e) {
             followupSKUInfo: m,
             continueSessionToInitialStep: h,
         } = e,
-        { paymentSources: E } = (0, ln.jm)(),
+        { paymentSources: A } = (0, ln.jm)(),
         {
-            activeSubscription: A,
+            activeSubscription: E,
             selectedSkuId: f,
             updatedSubscription: y,
             paymentSourceId: P,
             isPremiumGroupPurchase: T,
-            startingPremiumSubscriptionPlanId: _,
-            startingFractionalPremiumEndsAt: I,
+            startingPremiumSubscriptionPlanId: I,
+            startingFractionalPremiumEndsAt: _,
             checkoutInvoicePreview: g,
         } = (0, C.t4)((e) => ({
             activeSubscription: e.activeSubscription,
@@ -2559,8 +2559,8 @@ function ly(e) {
             giftRecipient: b,
             giftCode: R,
             hasSentMessage: M,
-            isSendingMessage: O,
-            sendGiftMessage: j,
+            isSendingMessage: j,
+            sendGiftMessage: O,
             claimableRewards: L,
             selectedGiftingPromotionReward: w,
             openGiftingBadgePostPurchaseModal: k,
@@ -2576,7 +2576,7 @@ function ly(e) {
                 ? null
                 : e.properties.properties.giftReminderNagbar;
         }),
-        W = (0, el.g)(E, P),
+        W = (0, el.g)(A, P),
         V = N && null != w && null != B && F,
         K = { selectedPlan: x, selectedSkuId: f, step: v };
     if (null == x) throw new lt.v({ message: "Expected plan to be selected", extraSentryInformation: K });
@@ -2642,8 +2642,8 @@ function ly(e) {
         );
     }, [T, y, z]),
         i.useEffect(() => {
-            !N || null == b || null == R || M || O || (0, lc.Ik)(b) || j({ onSubscriptionConfirmation: u });
-        }, [j, N, b, R, M, O, u]),
+            !N || null == b || null == R || M || j || (0, lc.Ik)(b) || O({ onSubscriptionConfirmation: u });
+        }, [O, N, b, R, M, j, u]),
         i.useEffect(() => {
             G &&
                 null != H &&
@@ -2655,19 +2655,19 @@ function ly(e) {
     else if (N) t = (0, l.jsx)(lo.fw, { planId: x.id, onClose: Z });
     else {
         let e =
-            _ === x.id
+            I === x.id
                 ? { postSuccessGuild: d }
                 : {
                       followupSKUInfo: m,
-                      startingPremiumSubscriptionPlanId: _,
-                      isDowngrade: null != A && (0, q.vT)(A, x.id, o),
+                      startingPremiumSubscriptionPlanId: I,
+                      isDowngrade: null != E && (0, q.vT)(E, x.id, o),
                   };
         t = (0, l.jsx)(lo.Ay, {
             planId: x.id,
             onClose: Z,
             paymentSourceType: W,
             hideClose: null != U,
-            startingFractionalPremiumEndsAt: I,
+            startingFractionalPremiumEndsAt: _,
             customCTAType: $,
             ...e,
         });
@@ -2676,7 +2676,7 @@ function ly(e) {
         children: [
             (0, l.jsxs)(en.dZ, { children: [(0, l.jsx)(np.A, {}), t] }),
             null != U && U,
-            V && null != w && (0, l.jsx)(lA, { rewardSkuId: w, onClose: Z, onRewardModalClose: k }),
+            V && null != w && (0, l.jsx)(lE, { rewardSkuId: w, onClose: Z, onRewardModalClose: k }),
         ],
     });
 }
@@ -2705,8 +2705,8 @@ let [lS, lP] = (0, F.A)(),
             options: { modalSizeGetter: () => "md" },
         },
     };
-var l_ = n(73825),
-    lI = n(960851),
+var lI = n(73825),
+    l_ = n(960851),
     lg = n(607399),
     lx = n(795791),
     lv = n(344159),
@@ -2714,8 +2714,8 @@ var l_ = n(73825),
     lb = n(811656),
     lR = n(187322),
     lM = n(890856),
-    lO = n(947641),
-    lj = n(713517),
+    lj = n(947641),
+    lO = n(713517),
     lL = n(929283),
     lw = n(761365),
     lk = n(267861);
@@ -2728,30 +2728,30 @@ function lD(e) {
             d(e);
         }, []),
         m = i.useMemo(() => ({ current: c }), [c]),
-        { isHoveringOrFocusing: h } = (0, lj.A)(m),
+        { isHoveringOrFocusing: h } = (0, lO.A)(m),
         C = !s && h,
-        { product: E } = (0, nx.q)(r);
-    if (null == E) return null;
-    let A = E.items[0];
-    return null == A
+        { product: A } = (0, nx.q)(r);
+    if (null == A) return null;
+    let E = A.items[0];
+    return null == E
         ? null
-        : ((0, nv.T)(A)
+        : ((0, nv.T)(E)
               ? ((n = ny.R.AVATAR_DECORATION),
-                (t = (0, l.jsx)(lL.i, { item: A, user: a, isHighlighted: C, avatarSize: nT._3.SIZE_96 })))
-              : (0, lC.F)(A) &&
+                (t = (0, l.jsx)(lL.i, { item: E, user: a, isHighlighted: C, avatarSize: nT._3.SIZE_96 })))
+              : (0, lC.F)(E) &&
                 ((n = ny.R.NAMEPLATE),
-                (t = (0, l.jsx)(lw.A, { nameplate: A, user: a, isHighlighted: C, size: "small" }))),
+                (t = (0, l.jsx)(lw.A, { nameplate: E, user: a, isHighlighted: C, size: "small" }))),
           (0, l.jsx)(lR.vN, {
               children: (0, l.jsxs)(lM.s, {
                   ref: p,
-                  "aria-label": E.name ?? "",
+                  "aria-label": A.name ?? "",
                   onClick: function () {
                       null == r || null == o || s || o(r);
                   },
-                  className: eE()(lk._x, { [lk.Vp]: !s, [lk.mr]: C, [lk.md]: u === r }),
+                  className: eA()(lk._x, { [lk.Vp]: !s, [lk.mr]: C, [lk.md]: u === r }),
                   children: [
                       (0, l.jsx)("div", {
-                          className: eE()(lk.VH, {
+                          className: eA()(lk.VH, {
                               [lk._Q]: n === ny.R.AVATAR_DECORATION,
                               [lk.M4]: n === ny.R.NAMEPLATE,
                           }),
@@ -2759,13 +2759,13 @@ function lD(e) {
                               null != t
                                   ? (0, l.jsxs)(l.Fragment, {
                                         children: [
-                                            (0, l.jsx)("div", { className: eE()(lk.i1, { [lk.Sf]: s }), children: t }),
+                                            (0, l.jsx)("div", { className: eA()(lk.i1, { [lk.Sf]: s }), children: t }),
                                             s &&
-                                                (0, l.jsx)(lO.r, {
+                                                (0, l.jsx)(lj.r, {
                                                     size: "custom",
                                                     width: 48,
                                                     height: 48,
-                                                    color: eA.A.colors.INTERACTIVE_TEXT_ACTIVE,
+                                                    color: eE.A.colors.INTERACTIVE_TEXT_ACTIVE,
                                                     className: lk.j0,
                                                 }),
                                         ],
@@ -2775,7 +2775,7 @@ function lD(e) {
                       (0, l.jsxs)("div", {
                           className: lk.tZ,
                           children: [
-                              (0, l.jsx)(ex.D, { variant: "heading-md/extrabold", children: E.name }),
+                              (0, l.jsx)(ex.D, { variant: "heading-md/extrabold", children: A.name }),
                               (0, l.jsx)(eT.E, {
                                   variant: "text-sm/normal",
                                   children: s ? J.intl.string(J.t["6cfuDj"]) : J.intl.string(J.t.QQsaCc),
@@ -2802,13 +2802,13 @@ function lF(e) {
         } = e,
         { paymentSources: h } = (0, ln.jm)(),
         C = (0, p.A)(),
-        { isGift: E, claimableRewards: A } = (0, t1.Pv)();
+        { isGift: A, claimableRewards: E } = (0, t1.Pv)();
     a = a ?? h;
     let {
             variant: y,
             text: P,
             onClick: T,
-            disabled: _,
+            disabled: I,
         } = (function (e) {
             let {
                     onStepChange: t,
@@ -2825,31 +2825,31 @@ function lF(e) {
                 m = (0, S.bB)(),
                 { hasEntitlements: h } = (0, lv.X)(n, l),
                 C = (null != c && null != c.paymentSourceId) || Object.keys(a).length > 0 || (h && !o);
-            var E = s ? J.intl.string(J.t.PDTjLN) : J.intl.string(J.t.XqMe3N),
-                A = f.pn.ADD_PAYMENT_STEPS;
+            var A = s ? J.intl.string(J.t.PDTjLN) : J.intl.string(J.t.XqMe3N),
+                E = f.pn.ADD_PAYMENT_STEPS;
             return (
-                C && (A = f.pn.REVIEW),
-                (0, lr.px)(d, l, i) && m !== f.pn.SELECT_FREE_SKU && (A = f.pn.SELECT_FREE_SKU),
-                { variant: "primary", text: E, onClick: () => t(A), disabled: u }
+                C && (E = f.pn.REVIEW),
+                (0, lr.px)(d, l, i) && m !== f.pn.SELECT_FREE_SKU && (E = f.pn.SELECT_FREE_SKU),
+                { variant: "primary", text: A, onClick: () => t(E), disabled: u }
             );
         })({
             onStepChange: t,
             selectedPlanId: (n = n ?? C?.id),
-            isGift: E,
-            claimableRewards: A,
+            isGift: A,
+            claimableRewards: E,
             paymentSources: a,
             shouldRenderUpdatedPaymentModal: c,
             isTrial: d,
             isNextDisabled: m,
         }),
-        I = i.useMemo(
+        _ = i.useMemo(
             () =>
                 null != n && u.includes(n)
-                    ? [{ variant: y, text: P, onClick: T, disabled: _ }]
+                    ? [{ variant: y, text: P, onClick: T, disabled: I }]
                     : [{ variant: "primary", text: J.intl.string(J.t.XqMe3N), disabled: !0 }],
-            [y, P, T, _, n, u],
+            [y, P, T, I, n, u],
         );
-    return (0, l.jsx)(lU.H, { leading: o && null != s ? (0, l.jsx)(lG.A, { onClick: s }) : void 0, actions: I });
+    return (0, l.jsx)(lU.H, { leading: o && null != s ? (0, l.jsx)(lG.A, { onClick: s }) : void 0, actions: _ });
 }
 var lB = n(328232);
 function lY(e) {
@@ -2863,31 +2863,31 @@ function lY(e) {
         h = (function (e, t) {
             if (null != e && 0 !== e.length) return null != t && e.includes(t) ? t : e[0];
         })(c, u),
-        [E, A] = i.useState(h),
+        [A, E] = i.useState(h),
         [y, P] = i.useState(!1);
     i.useEffect(() => {
-        y || null != u || null == h || (o(h), A(h));
+        y || null != u || null == h || (o(h), E(h));
     }, [h, y, u, o]);
     let T = { selectedPlan: a, selectedSkuId: n, step: s };
     if (null == a) throw new lt.v({ message: "Expected plan to be selected", extraSentryInformation: T });
     if (null == n) throw new lt.v({ message: "Expected selectedSkuId", extraSentryInformation: T });
     if (null == s) throw new lt.v({ message: "Step should be set", extraSentryInformation: T });
-    let _ = i.useMemo(() => null != E && (c ?? []).includes(E), [E, c]),
-        I = i.useMemo(() => 0 === m.length || null == E || !_, [m, E, _]);
+    let I = i.useMemo(() => null != A && (c ?? []).includes(A), [A, c]),
+        _ = i.useMemo(() => 0 === m.length || null == A || !I, [m, A, I]);
     function g(e) {
-        o(e), A(e), P(!0);
+        o(e), E(e), P(!0);
     }
     i.useEffect(() => {
         if (0 === m.length) {
-            A(void 0), o(void 0);
+            E(void 0), o(void 0);
             return;
         }
-        (null != E && _ && m.includes(E)) || null == E || (A(void 0), o(void 0));
-    }, [m, _, E, o]);
+        (null != A && I && m.includes(A)) || null == A || (E(void 0), o(void 0));
+    }, [m, I, A, o]);
     let x = m.map((e) =>
             (0, l.jsx)(
                 lD,
-                { skuId: e, claimed: null != c && !c.includes(e), user: d, onSelect: g, selectedSkuId: E },
+                { skuId: e, claimed: null != c && !c.includes(e), user: d, onSelect: g, selectedSkuId: A },
                 e,
             ),
         ),
@@ -2899,7 +2899,7 @@ function lY(e) {
                 showBackButton: !0,
                 planOptions: [a.id],
                 selectedPlanId: a.id,
-                isNextDisabled: I,
+                isNextDisabled: _,
             }),
         });
     return (0, l.jsxs)(l.Fragment, {
@@ -2910,7 +2910,7 @@ function lY(e) {
                 subtitle: J.intl.string(J.t.h2nMp0),
             }),
             (0, l.jsx)(M.c, {
-                children: (0, l.jsx)(t_.B, {
+                children: (0, l.jsx)(tI.B, {
                     direction: "vertical",
                     justify: "center",
                     align: "center",
@@ -2957,7 +2957,7 @@ function lX() {
               style: u,
               children: [
                   (0, l.jsx)("div", {
-                      className: eE()([lJ.my], { [lJ.R_]: c }),
+                      className: eA()([lJ.my], { [lJ.R_]: c }),
                       children: (0, l.jsx)(lQ.A, {
                           claimableRewards: t,
                           maxRewardImageSrc: n ?? "",
@@ -3530,7 +3530,7 @@ let l9 = function (e) {
     return null == n
         ? null
         : (0, l.jsxs)("div", {
-              className: eE()(l8.$6, t),
+              className: eA()(l8.$6, t),
               children: [
                   (0, l.jsx)("div", {
                       className: l8.H,
@@ -3572,7 +3572,7 @@ function ic(e) {
             selectedSkuId: d,
             priceOptions: m,
             activeSubscription: h,
-            defaultPlanId: E,
+            defaultPlanId: A,
         } = (0, C.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             priceOptions: e.checkoutPriceOptions,
@@ -3580,117 +3580,118 @@ function ic(e) {
             defaultPlanId: e.defaultPlanId,
         })),
         {
-            isPremium: A,
+            isPremium: E,
             isEligibleForTrial: y,
             isEligibleForDiscount: P,
             discountOffer: T,
-            userTrialOffer: _,
+            userTrialOffer: I,
         } = (0, lK.i)(),
-        I = (0, l2.YJ)(T),
+        _ = (0, l2.YJ)(T),
         g = (0, p.A)(),
         x = (0, S.bB)(),
         { isGift: v, giftRecipient: N, giftMessage: b, claimableRewards: R } = (0, t1.Pv)(),
         M = (0, lr.Mq)(g),
-        O = (0, nn.bG)([ls.A], () => {
+        j = (0, nn.bG)([ls.A], () => {
             let e = ls.A.getMarketingComponentByType(n9.C.GIFT_CUSTOMIZATION_BANNER);
             return null != e && "giftCustomizationBanner" === e.properties.properties.oneofKind;
         }),
-        j = v && M && null != R && R.length > 0 && O,
+        O = v && M && null != R && R.length > 0 && j,
         L = (0, nK.F5)("PremiumPaymentPlanSelectStep"),
-        { nextTier: w, giftsToNextTier: k } = (0, r.cf)([nE.Ay], () => ({
-            nextTier: nE.Ay.getNextTier(nC.$.GIFTING),
-            giftsToNextTier: nE.Ay.getRemainingToNextTier(nC.$.GIFTING),
+        { nextTier: w, giftsToNextTier: k } = (0, r.cf)([nA.Ay], () => ({
+            nextTier: nA.Ay.getNextTier(nC.$.GIFTING),
+            giftsToNextTier: nA.Ay.getRemainingToNextTier(nC.$.GIFTING),
         })),
         D = v && L && null != w,
-        U = null;
-    j
-        ? (U = (0, l.jsx)(lX, {}))
+        U = !(0, lN.tA)({ isGift: v, giftRecipient: N }),
+        G = null;
+    O
+        ? (G = (0, l.jsx)(lX, {}))
         : D &&
-          (U = (0, l.jsx)("div", {
-              className: iu.v$,
+          (G = (0, l.jsx)("div", {
+              className: eA()(iu.v$, U ? iu.CC : iu.RV),
               children: (0, l.jsx)(nZ.A, {
                   giftsToNextTier: k,
                   nextTierName: w.name ?? "",
                   nextTierIcon: w.simple_icon_url,
               }),
           }));
-    let G = (y || P) ?? !1,
-        F = (0, l0.Wi)(z.ZC),
-        B = G || F,
-        { monthlyDefaultSelected: Y } = lq.A.useConfig({
+    let F = (y || P) ?? !1,
+        B = (0, l0.Wi)(z.ZC),
+        Y = F || B,
+        { monthlyDefaultSelected: H } = lq.A.useConfig({
             location: `PremiumPaymentPlanSelectStep${v ? "" : " - DO NOT USE"}`,
         }),
-        H = (0, a.A)(Y),
-        W = i.useMemo(() => {
-            let e = E;
-            return v && H && null != d && (e = z.En[d]), (0, eq.Tm)({ skuId: d, isPremium: A, defaultPlanId: e });
-        }, [d, A, E, v, H]),
-        V = P && null != I && W.includes(I) ? I : W[0],
-        K = (0, nn.bG)([Z.A], () => Z.A.get(V)),
-        q = [{ planId: K?.id, quantity: 1 }],
-        [$, X] = i.useState(G),
-        [ee, et] = (0, ew.YV)({
-            items: q,
+        W = (0, a.A)(H),
+        V = i.useMemo(() => {
+            let e = A;
+            return v && W && null != d && (e = z.En[d]), (0, eq.Tm)({ skuId: d, isPremium: E, defaultPlanId: e });
+        }, [d, E, A, v, W]),
+        K = P && null != _ && V.includes(_) ? _ : V[0],
+        q = (0, nn.bG)([Z.A], () => Z.A.get(K)),
+        $ = [{ planId: q?.id, quantity: 1 }],
+        [X, ee] = i.useState(F),
+        [et, el] = (0, ew.YV)({
+            items: $,
             renewal: !1,
-            preventFetch: !B,
+            preventFetch: !Y,
             applyEntitlements: !0,
             trialId: u,
             paymentSourceId: m.paymentSourceId,
             currency: m.currency,
         });
     i.useEffect(() => {
-        G && X(ee?.subscriptionPeriodEnd == null);
-    }, [ee, G]),
+        F && ee(et?.subscriptionPeriodEnd == null);
+    }, [et, F]),
         (0, lW.A)(
             "Payment Modal Plan Select Step",
-            $,
+            X,
             5,
-            { proratedInvoicePreview: ee, proratedInvoiceError: et, isEligibleForOffer: G },
+            { proratedInvoicePreview: et, proratedInvoiceError: el, isEligibleForOffer: F },
             { tags: { app_context: "billing" } },
         );
-    let el = et?.message ?? J.intl.string(J.t.R0RpRX),
-        ei = G && null == et,
-        er = G && null != et,
-        ea = ei && null == h && ee?.subscriptionPeriodEnd == null;
-    (0, lZ.W)({ priceOptions: m, trialId: u, discountInvoicePreview: ee });
-    let eu = (0, io.i)({ planSkuId: K?.skuId, invoice: ee }),
-        { ref: ec, onTransitionEnd: ed } = (0, lV.A)({ isExpanded: null != eu, minHeightOverride: 0 }),
-        ep = i.useMemo(
-            () =>
-                v || K?.skuId !== z.pe.TIER_2 || _?.referrer_id == null
-                    ? (0, l.jsx)("div", { ref: ec, onTransitionEnd: ed, style: { overflow: "hidden" }, children: eu })
-                    : (0, l.jsx)(l9, { className: iu.ZB }),
-            [eu, v, K?.skuId, _?.referrer_id, ec, ed],
-        ),
+    let ei = el?.message ?? J.intl.string(J.t.R0RpRX),
+        er = F && null == el,
+        ea = F && null != el,
+        eu = er && null == h && et?.subscriptionPeriodEnd == null;
+    (0, lZ.W)({ priceOptions: m, trialId: u, discountInvoicePreview: et });
+    let ec = (0, io.i)({ planSkuId: q?.skuId, invoice: et }),
+        { ref: ed, onTransitionEnd: ep } = (0, lV.A)({ isExpanded: null != ec, minHeightOverride: 0 }),
         em = i.useMemo(
+            () =>
+                v || q?.skuId !== z.pe.TIER_2 || I?.referrer_id == null
+                    ? (0, l.jsx)("div", { ref: ed, onTransitionEnd: ep, style: { overflow: "hidden" }, children: ec })
+                    : (0, l.jsx)(l9, { className: iu.ZB }),
+            [ec, v, q?.skuId, I?.referrer_id, ed, ep],
+        ),
+        eh = i.useMemo(
             () => ({
-                planOptions: W,
+                planOptions: V,
                 selectedPlanId: g?.id,
                 planGroup: s,
-                subscriptionPeriodEnd: ee?.subscriptionPeriodEnd,
-                useCompactGiftComponents: j,
+                subscriptionPeriodEnd: et?.subscriptionPeriodEnd,
+                useCompactGiftComponents: O,
                 handleClose: c,
             }),
-            [W, g?.id, s, ee?.subscriptionPeriodEnd, j, c],
+            [V, g?.id, s, et?.subscriptionPeriodEnd, O, c],
         );
-    if (ea) return (0, l.jsx)(eX.Ed, { className: iu.QW });
-    es()(null != x, "Step should be set"), es()(W.length > 0, "Premium plan options should be set");
-    let eh = v
-        ? (0, l.jsx)(ie.$p, { ...em })
-        : (0, l.jsx)(il.X, { ...em, isInPlanSelectStep: !0, showPlanStatusSubText: !0 });
+    if (eu) return (0, l.jsx)(eX.Ed, { className: iu.QW });
+    es()(null != x, "Step should be set"), es()(V.length > 0, "Premium plan options should be set");
+    let eC = v
+        ? (0, l.jsx)(ie.$p, { ...eh })
+        : (0, l.jsx)(il.X, { ...eh, isInPlanSelectStep: !0, showPlanStatusSubText: !0 });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(is, { giftMessage: b }),
             !(v && (0, lc.Ik)(N)) && (0, l.jsx)(it.A, { isEligibleForTrial: y }),
             (0, l.jsxs)(en.dZ, {
                 children: [
-                    ep,
+                    em,
                     (0, l.jsx)(np.A, { className: iu.tg }),
-                    er ? (0, l.jsx)(eo.w, { type: "critical", children: el }) : eh,
-                    ei &&
+                    ea ? (0, l.jsx)(eo.w, { type: "critical", children: ei }) : eC,
+                    er &&
                         (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)("hr", { className: eE()(iu.IM, iu.Go) }),
+                                (0, l.jsx)("hr", { className: eA()(iu.IM, iu.Go) }),
                                 (0, l.jsx)(eT.E, {
                                     variant: "text-xs/normal",
                                     children: J.intl.format(J.t.BHtnqA, {
@@ -3703,13 +3704,13 @@ function ic(e) {
             }),
             (0, l.jsxs)(en.UX, {
                 children: [
-                    U,
+                    G,
                     (0, l.jsx)(lF, {
                         onStepChange: t,
                         onBackClick: () => t(f.pn.SKU_SELECT),
                         showBackButton: null == n && null == o,
-                        planOptions: W,
-                        shouldRenderUpdatedPaymentModal: ei,
+                        planOptions: V,
+                        shouldRenderUpdatedPaymentModal: er,
                         isTrial: y,
                     }),
                 ],
@@ -3744,7 +3745,7 @@ function iC(e) {
         { isGift: d, claimableRewards: p } = (0, t1.Pv)(),
         m = d && null != p && p.length > 0,
         h = (0, eU.V)(u);
-    return (0, l.jsx)(iE, {
+    return (0, l.jsx)(iA, {
         selectSku: (e) =>
             (function (e) {
                 let {
@@ -3794,7 +3795,7 @@ function iC(e) {
         showPromotionalGiftBanner: m,
     });
 }
-function iE(e) {
+function iA(e) {
     let { selectSku: t, isGift: n, priceOptions: i, showPromotionalGiftBanner: r, onSelectPremiumGroup: a } = e,
         s = (0, id.FY)({ isGift: n });
     return (0, l.jsxs)(l.Fragment, {
@@ -3826,7 +3827,7 @@ function iE(e) {
         ],
     });
 }
-var iA = n(825484),
+var iE = n(825484),
     iy = n(137728);
 function iS(e) {
     let { handleStepChange: t, handleClose: n } = e,
@@ -3852,7 +3853,7 @@ function iS(e) {
             premiumType: d,
             titleText: J.intl.string(J.t["7VcWW0"]),
             subtitleText: J.intl.format(J.t.Qk34Ik, { subscriptionName: c }),
-            footer: (0, l.jsxs)(iA.e, {
+            footer: (0, l.jsxs)(iE.e, {
                 direction: "horizontal-reverse",
                 align: "center",
                 children: [
@@ -3873,8 +3874,8 @@ function iS(e) {
 }
 var iP = n(242874),
     iT = n(573359),
-    i_ = n(75825),
-    iI = n(237412),
+    iI = n(75825),
+    i_ = n(237412),
     ig = n(865543);
 let ix = [
         {
@@ -3929,12 +3930,12 @@ let ix = [
                 } = (0, lK.i)(),
                 p = (0, nr.S3)(),
                 m = (0, S.bB)(),
-                { isGift: h, selectedGiftStyle: E, giftRecipient: A } = (0, t1.Pv)(),
+                { isGift: h, selectedGiftStyle: A, giftRecipient: E } = (0, t1.Pv)(),
                 y = p?.productLine === Q.EZt.COLLECTIBLES,
                 P = p?.productLine === Q.EZt.SOCIAL_LAYER_GAME_ITEM,
-                T = h && (0, lc.Ik)(A) && m === f.pn.CONFIRM && null != E && !y && !P,
-                _ = [f.pn.SKU_SELECT, f.pn.SELECT_FREE_SKU],
-                I = null != m && !_.includes(m) && null != n,
+                T = h && (0, lc.Ik)(E) && m === f.pn.CONFIRM && null != A && !y && !P,
+                I = [f.pn.SKU_SELECT, f.pn.SELECT_FREE_SKU],
+                _ = null != m && !I.includes(m) && null != n,
                 g = i.useCallback(() => t(!1), [t]);
             return i.useMemo(() => {
                 if (null == m) return;
@@ -3947,18 +3948,18 @@ let ix = [
                                   (0, l.jsx)("div", {
                                       "aria-hidden": !0,
                                       style: { display: "contents" },
-                                      children: (0, l.jsx)(i_.A, {
+                                      children: (0, l.jsx)(iI.A, {
                                           defaultAnimationState: iP.oA.LOOP,
-                                          giftStyle: E,
+                                          giftStyle: A,
                                           className: ig.qq,
                                       }),
                                   }),
                                   (0, l.jsx)(tT.s_, { onClick: g, className: ig.b, "data-migration-pending": !0 }),
                               ],
                           }))
-                        : I &&
+                        : _ &&
                           (es()(n in z.WN, `invalid sku id: ${n}`),
-                          (e = (0, l.jsx)(iI.A, {
+                          (e = (0, l.jsx)(i_.A, {
                               currentStep: m ?? void 0,
                               purchaseState: a,
                               premiumType: z.WN[n],
@@ -3966,7 +3967,7 @@ let ix = [
                               showTrialBadge: c,
                               showDiscountBadge: d,
                               isGift: h,
-                              giftRecipient: A,
+                              giftRecipient: E,
                               isEligibleForTrial: c,
                               enablePremiumBrandRefresh: o,
                               isDisplayingWowMomentConfirmation: s,
@@ -3974,7 +3975,7 @@ let ix = [
                           }))),
                     e
                 );
-            }, [E, g, a, n, m, c, d, T, I, h, A, o, s, u]);
+            }, [A, g, a, n, m, c, d, T, _, h, E, o, s, u]);
         },
         CHECKOUT_FLOW: u.C.PREMIUM_CHECKOUT,
         STEPS_BEFORE_CHECKOUT: ix,
@@ -3995,15 +3996,15 @@ let ix = [
                         loadId: m,
                         giftContextProps: h = { isGift: !1, giftRecipient: null },
                         renderModalProps: C,
-                        children: E,
+                        children: A,
                     } = e,
-                    A = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
-                    y = (0, lI.cg)() ? z.gD.PREMIUM_MONTH_TIER_2 : void 0,
+                    E = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
+                    y = (0, l_.cg)() ? z.gD.PREMIUM_MONTH_TIER_2 : void 0,
                     { isGift: S, giftRecipient: P } = h;
                 if (null != o && !Object.values(z.pe).includes(o))
                     throw Error("subscriptionTier must be a premium subscription");
                 let T = (0, lN.tA)({ giftRecipient: P, isGift: S ?? !1 }),
-                    _ = i.useMemo(
+                    I = i.useMemo(
                         () =>
                             T
                                 ? p.map((e) =>
@@ -4014,23 +4015,23 @@ let ix = [
                                 : p,
                         [p, T],
                     ),
-                    I = null != d ? d : A,
-                    x = !S && null != I && I.isPurchasedExternally && null != I.paymentGateway;
-                (0, lv.s)(I, () => C.onClose(), S ?? !1);
+                    _ = null != d ? d : E,
+                    x = !S && null != _ && _.isPurchasedExternally && null != _.paymentGateway;
+                (0, lv.s)(_, () => C.onClose(), S ?? !1);
                 let v = i.useMemo(() => [...z.oz], []);
                 return x
                     ? null
                     : (0, l.jsx)(c.M, {
                           loadId: m,
-                          activeSubscription: I,
-                          stepConfigs: _,
+                          activeSubscription: _,
+                          stepConfigs: I,
                           skuIDs: v,
                           isGift: S,
                           defaultPlanId: y ?? n,
                           referralCode: a,
                           referralTrialOfferId: s,
                           unifiedCheckoutFlow: u.C.PREMIUM_CHECKOUT,
-                          children: (0, l.jsx)(n5.Qt, { confirmationFooter: t, children: E }),
+                          children: (0, l.jsx)(n5.Qt, { confirmationFooter: t, children: A }),
                       });
             },
             TenantPaymentModalRenderer: (e) => {
@@ -4041,7 +4042,7 @@ let ix = [
                     } = e,
                     { onClose: a, renderPurchaseConfirmation: s, continueSessionToInitialStep: o } = t;
                 i.useEffect(() => {
-                    Z.A.isLoadedForPremiumSKUs() || t7.h.wait(() => (0, l_.zS)());
+                    Z.A.isLoadedForPremiumSKUs() || t7.h.wait(() => (0, lI.zS)());
                 }, []);
                 let { selectedSkuId: u, purchaseState: c } = (0, C.t4)((e) => ({
                         selectedSkuId: e.selectedSkuId,
@@ -4053,8 +4054,8 @@ let ix = [
                         selectedGiftingPromotionReward: m,
                         openGiftingBadgePostPurchaseModal: h,
                     } = (0, t1.Pv)(),
-                    E = i.useMemo(() => (p ? [f.pn.PLAN_SELECT] : []), [p]),
-                    A = i.useCallback(
+                    A = i.useMemo(() => (p ? [f.pn.PLAN_SELECT] : []), [p]),
+                    E = i.useCallback(
                         (e, t) => {
                             a(e, t), e && p && null == m && h();
                         },
@@ -4068,12 +4069,12 @@ let ix = [
                     shouldPrefetchWowMoment: T,
                     children: n({
                         ...t,
-                        onClose: A,
+                        onClose: E,
                         analyticsSubscriptionType: Q.rzx.PREMIUM,
                         shakeWhilePurchasing: !0,
                         planGroup: z.LE,
                         subscriptionTier: r,
-                        skipUnifiedHeaderForSteps: E,
+                        skipUnifiedHeaderForSteps: A,
                     }),
                 });
             },
@@ -4088,8 +4089,8 @@ var iN = n(143582),
     ib = n(241524),
     iR = n(19311),
     iM = n(4126);
-let iO = "(max-width: 485px)";
-var ij = n(702361),
+let ij = "(max-width: 485px)";
+var iO = n(702361),
     iL = n(938430);
 function iw(e) {
     let { step: t, onClose: n } = e,
@@ -4097,23 +4098,23 @@ function iw(e) {
     return t === f.pn.CONFIRM || t === f.pn.BENEFITS
         ? (0, l.jsx)("div", {})
         : (0, l.jsxs)("div", {
-              className: eE()(ij.N1, t$.G),
+              className: eA()(iO.N1, t$.G),
               children: [
                   !i &&
                       (0, l.jsx)("div", {
-                          className: ij.oZ,
+                          className: iO.oZ,
                           "aria-hidden": "true",
                           children: (0, l.jsx)("img", {
                               src: "/assets/6a6a49ffafe96618.svg",
                               alt: "",
-                              className: ij.F0,
+                              className: iO.F0,
                           }),
                       }),
                   (0, l.jsx)(tK.D, {
-                      className: ij.G3,
+                      className: iO.G3,
                       onClick: () => n(),
                       "aria-label": J.intl.string(J.t.cpT0Cq),
-                      children: (0, l.jsx)(tZ.P, { size: "md", color: "currentColor", className: ij.ut }),
+                      children: (0, l.jsx)(tZ.P, { size: "md", color: "currentColor", className: iO.ut }),
                   }),
               ],
           });
@@ -4123,7 +4124,7 @@ function ik(e) {
     return null == r
         ? null
         : (0, l.jsx)("div", {
-              className: ij.RP,
+              className: iO.RP,
               children: (0, l.jsxs)(iM.$K, {
                   children: [
                       (0, l.jsx)(iM.KF, { application: r, asset: t }),
@@ -4138,17 +4139,17 @@ function ik(e) {
 function iD(e) {
     let { tierName: t, onConfirm: n, subscription: i } = e;
     return (0, l.jsxs)("div", {
-        className: ij.NV,
+        className: iO.NV,
         children: [
             (0, l.jsx)("img", { src: iL, alt: "", width: 300, height: 126 }),
             (0, l.jsx)(ex.D, {
-                className: ij.i1,
+                className: iO.i1,
                 variant: "heading-xl/extrabold",
                 color: "text-strong",
                 children: J.intl.format(J.t.wLFT6z, { tier: t }),
             }),
             (0, l.jsx)(eT.E, {
-                className: ij.sT,
+                className: iO.sT,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: J.intl.format(J.t.OsAK9h, { timestamp: i?.currentPeriodEnd }),
@@ -4256,8 +4257,8 @@ function iq(e) {
         { subscriptionMetadataRequest: s } = iF(),
         { application: o } = (0, ni.V)(),
         u = (0, nr.S3)(),
-        c = (0, ib.A)(iO),
-        d = (0, r.bG)([_.A], () => _.A.getGuild(s?.guild_id)),
+        c = (0, ib.A)(ij),
+        d = (0, r.bG)([I.A], () => I.A.getGuild(s?.guild_id)),
         p = i.useCallback(() => t(f.pn.REVIEW), [t]);
     if (null == u) return null;
     let m = (0, iH.bg)(u.flags);
@@ -4311,13 +4312,13 @@ function i$(e) {
             updatedSubscription: e.updatedSubscription,
         })),
         d = (0, nr.S3)(),
-        p = (0, ib.A)(iO),
+        p = (0, ib.A)(ij),
         { createMultipleConfettiAt: m } = i.useContext(iz.x),
         h = d?.name ?? "";
-    function E() {
+    function A() {
         r(), a?.();
     }
-    let A = u === f.pn.CONFIRM,
+    let E = u === f.pn.CONFIRM,
         y = (0, iH.bg)(d?.flags ?? 0),
         S =
             null != s && s.benefits.length > 0
@@ -4327,8 +4328,8 @@ function i$(e) {
     return (
         P
             ? (t = p
-                  ? (0, l.jsx)(iZ, { tierName: h, onConfirm: E, subscription: c })
-                  : (0, l.jsx)(iD, { tierName: h, onConfirm: E, subscription: c }))
+                  ? (0, l.jsx)(iZ, { tierName: h, onConfirm: A, subscription: c })
+                  : (0, l.jsx)(iD, { tierName: h, onConfirm: A, subscription: c }))
             : p
               ? (t = (0, l.jsx)(iK, {
                     title: J.intl.format(J.t.ea6tZr, { tierName: h }),
@@ -4336,7 +4337,7 @@ function i$(e) {
                         null != s && s.benefits.length > 0
                             ? J.intl.formatToPlainString(J.t.HNepft, { benefits: S })
                             : null,
-                    onConfirm: E,
+                    onConfirm: A,
                     confirmCta: J.intl.string(J.t.nlkywz),
                 }))
               : ((t =
@@ -4353,13 +4354,13 @@ function i$(e) {
                           })
                         : (0, l.jsx)(w.A, {})),
                 (n = (0, l.jsx)(iR.Ay, {
-                    onPrimary: E,
+                    onPrimary: A,
                     primaryCTA: iR.ti.CONTINUE,
                     primaryText: J.intl.string(J.t["JtWl+a"]),
                 }))),
         i.useEffect(() => {
-            nl.Ay.useReducedMotion && A && m(window.innerWidth / 2, window.innerHeight / 2);
-        }, [m, A]),
+            nl.Ay.useReducedMotion && E && m(window.innerWidth / 2, window.innerHeight / 2);
+        }, [m, E]),
         (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsxs)(en.dZ, { children: [(0, l.jsx)(np.A, {}), t] }),
@@ -4383,33 +4384,33 @@ function iQ(e) {
         })),
         { hasFetchedRelatedSubscriptionPlans: u, subscriptionPriceOptionsLoading: c, displayCurrency: d } = (0, L.Jn)(),
         { setSubscriptionMetadataRequest: p, guildId: m, showBenefitsFirst: h } = iF(),
-        E = (0, O.Hp)(),
-        A = (0, k.A)(),
+        A = (0, j.Hp)(),
+        E = (0, k.A)(),
         y = (0, S.l)(),
         { isGift: P } = (0, t1.Pv)(),
         T = h ? f.pn.BENEFITS : f.pn.REVIEW,
-        [_, I] = i.useState(!A || !u || c);
+        [I, _] = i.useState(!E || !u || c);
     return (i.useEffect(() => {
-        I(!A || !u || c);
-    }, [c, u, A]),
+        _(!E || !u || c);
+    }, [c, u, E]),
     i.useEffect(() => {
         null != m && p({ guild_id: m });
     }, [m, p]),
     i.useEffect(() => {
         s(t);
         let e = null != t ? Z.A.get(t) : null;
-        _ ||
-            E ||
+        I ||
+            A ||
             (n((t) => {
                 let n = null != e ? (0, eq.y8)(e.id, !1, P, { paymentSourceId: o.paymentSourceId }) : void 0;
                 return { ...t, subscription_plan_id: e?.id, price: n?.amount, regular_price: e?.price, currency: d };
             }),
             null != e && (a(e?.skuId), y(T)));
-    }, [E, t, P, _, o, d, r, n, s, a, y, T]),
-    _)
+    }, [A, t, P, I, o, d, r, n, s, a, y, T]),
+    I)
         ? (0, l.jsx)(w.A, {})
-        : E
-          ? (0, l.jsx)(j.oO, {})
+        : A
+          ? (0, l.jsx)(O.oO, {})
           : null;
 }
 var iJ = n(427858),
@@ -4456,20 +4457,20 @@ let i2 = (e) => {
                         activeSubscription: e.activeSubscription,
                     })),
                     { subscriptionMetadataRequest: m, showBenefitsFirst: h } = iF(),
-                    E = h ? f.pn.BENEFITS : void 0,
-                    A = (0, p.A)(),
+                    A = h ? f.pn.BENEFITS : void 0,
+                    E = (0, p.A)(),
                     S = (0, nr.S3)();
-                if (null == A)
+                if (null == E)
                     throw new lt.v({
                         message: "Expected plan to be selected",
-                        extraSentryInformation: { selectedPlan: A },
+                        extraSentryInformation: { selectedPlan: E },
                     });
                 let P = i.useRef(null),
                     T = (0, iH.bg)(S?.flags ?? 0);
                 i.useEffect(() => {
                     null != c && null != P.current && P.current.scrollIntoView({ behavior: "smooth" });
                 }, [c]);
-                let _ = i.useCallback(() => {
+                let I = i.useCallback(() => {
                     t(f.pn.ADD_PAYMENT_STEPS);
                 }, [t]);
                 return o === y.h.PURCHASING
@@ -4480,16 +4481,16 @@ let i2 = (e) => {
                                   children:
                                       null == d
                                           ? (0, l.jsx)(i0._, {
-                                                selectedPlan: A,
-                                                verifiedPlanId: A.id,
+                                                selectedPlan: E,
+                                                verifiedPlanId: E.id,
                                                 planGroup: n,
-                                                handlePaymentSourceAdd: _,
+                                                handlePaymentSourceAdd: I,
                                                 metadata: T ? void 0 : m,
                                             })
                                           : (0, l.jsx)(iJ.A, {
-                                                selectedPlan: A,
-                                                verifiedPlanId: A.id,
-                                                handlePaymentSourceAdd: _,
+                                                selectedPlan: E,
+                                                verifiedPlanId: E.id,
+                                                handlePaymentSourceAdd: I,
                                                 planGroup: n,
                                                 hasOpenInvoice: null != r,
                                                 purchaseState: o,
@@ -4498,7 +4499,7 @@ let i2 = (e) => {
                               (0, l.jsx)(en.UX, {
                                   children: (0, l.jsx)(iX.U, {
                                       resolveTenantReviewButtonProps: i2,
-                                      onBack: () => null != E && t(E),
+                                      onBack: () => null != A && t(A),
                                       handleStepChange: t,
                                       postPurchaseStep: f.pn.CONFIRM,
                                       analyticsLocation: s,
@@ -4509,7 +4510,7 @@ let i2 = (e) => {
                                       metadata: T ? void 0 : m,
                                       backButtonEligible: !!h || void 0,
                                       disablePurchase: m?.guild_id == null && !T,
-                                      onPaymentSourceAdd: _,
+                                      onPaymentSourceAdd: I,
                                   }),
                               }),
                           ],
@@ -4565,16 +4566,16 @@ function re(e) {
         c = (0, r.bG)([g.A], () => g.A.hasFetchedMostRecentPremiumTypeSubscription()),
         d = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
         [p, m] = i.useState(!1),
-        [h, E] = i.useState(null),
-        [A, P] = i.useState(null),
-        [_, I] = i.useState(!1),
+        [h, A] = i.useState(null),
+        [E, P] = i.useState(null),
+        [I, _] = i.useState(!1),
         [x, v] = i.useState(!1);
     i.useEffect(() => {
         p ||
             (0, lc.GM)(t, !1, !0)
                 .then((e) => {
                     let t = i6.A.createFromServer(e);
-                    E(t), m(!0), I(t.promotion?.promotionType === i7.pt.THIRD_PARTY_DIRECT_FULFILLMENT);
+                    A(t), m(!0), _(t.promotion?.promotionType === i7.pt.THIRD_PARTY_DIRECT_FULFILLMENT);
                 })
                 .catch((e) => {
                     P(e), m(!0);
@@ -4582,14 +4583,14 @@ function re(e) {
             c || (0, tM.I8)();
     }, [t, c, p]);
     let N = (0, U._V)(),
-        { paymentSources: b, paymentSourceId: R, paymentAuthenticationState: M, setIsSubmittingCurrentStep: O } = N,
-        j = (0, S.l)(),
+        { paymentSources: b, paymentSourceId: R, paymentAuthenticationState: M, setIsSubmittingCurrentStep: j } = N,
+        O = (0, S.l)(),
         w = (0, S.bB)(),
         k = (0, C.t4)((e) => e.setPurchaseState),
         G = (0, C.t4)((e) => e.setPurchaseError),
         F = (0, C.t4)((e) => e.purchaseState),
         { displayCurrency: B } = (0, L.Jn)(),
-        Y = (0, ej.sw)(),
+        Y = (0, eO.sw)(),
         H = h?.subscriptionPlan,
         W = h?.promotion,
         V = h?.subscriptionTrial,
@@ -4615,7 +4616,7 @@ function re(e) {
         X = i.useCallback(async () => {
             let e = (0, el.W)(b, R);
             if (null == e) return !1;
-            O(!0), G(null), k(y.h.PURCHASING);
+            j(!0), G(null), k(y.h.PURCHASING);
             try {
                 return (
                     await i4.A.redeemGiftCode({ code: t, options: { paymentSource: e } }),
@@ -4635,24 +4636,24 @@ function re(e) {
                     !1
                 );
             } finally {
-                O(!1);
+                j(!1);
             }
-        }, [$, t, R, b, O, G, k]),
+        }, [$, t, R, b, j, G, k]),
         ee = i.useRef(!1),
         et = i.useCallback(() => {
             ee.current ||
                 ((ee.current = !0),
                 X()
                     .then((e) => {
-                        j(e ? f.pn.CONFIRM : f.pn.REVIEW);
+                        O(e ? f.pn.CONFIRM : f.pn.REVIEW);
                     })
                     .finally(() => {
                         ee.current = !1;
                     }));
-        }, [X, j]);
+        }, [X, O]);
     return (
         (0, T.QR)(M),
-        (0, T.b)(w, M, j, k, !0, et),
+        (0, T.b)(w, M, O, k, !0, et),
         (0, l.jsx)(i8.Provider, {
             value: {
                 code: t,
@@ -4660,9 +4661,9 @@ function re(e) {
                 plan: H,
                 promotion: W,
                 trial: V,
-                isDirectFulfillment: _,
+                isDirectFulfillment: I,
                 hasResolvedGiftCode: p,
-                giftCodeResolveError: A,
+                giftCodeResolveError: E,
                 hasFetchedMostRecentPremiumTypeSubscription: c,
                 recentSubscription: o,
                 premiumSubscription: d,
@@ -4685,7 +4686,7 @@ var rt = n(830215),
 function rr(e) {
     let { user: t, code: n, className: i } = e;
     return (0, l.jsx)(eT.E, {
-        className: eE()(i, rl.iZ),
+        className: eA()(i, rl.iZ),
         variant: "text-md/normal",
         children: J.intl.format(J.t["TcA3+W"], {
             avatarHook: function (e, n) {
@@ -4778,8 +4779,8 @@ function ro(e) {
             recentSubscription: h,
         } = i9(),
         C = (0, r.bG)([eV.default], () => eV.default.getCurrentUser()),
-        E = (0, O.Hp)(),
-        A = !d || !m,
+        A = (0, j.Hp)(),
+        E = !d || !m,
         y = (function (e) {
             let {
                 user: t,
@@ -4838,17 +4839,17 @@ function ro(e) {
                 : null;
         })({ user: C, giftCode: s, giftCodeResolveError: p, recentSubscription: h, plan: o, promotion: u, trial: c });
     return (i.useEffect(() => {
-        A ||
+        E ||
             D.default.track(Q.HAw.INBOUND_PROMOTION_ELIGIBILITY_CHECKED, {
-                is_eligible: null == y && !E,
-                error_code: null != y ? y.errorCode : E ? z.JR.BLOCKED_PAYMENT : null,
+                is_eligible: null == y && !A,
+                error_code: null != y ? y.errorCode : A ? z.JR.BLOCKED_PAYMENT : null,
                 promotion_id: s?.promotion?.id,
             });
-    }, [A, y, E, s]),
+    }, [E, y, A, s]),
     i.useEffect(() => {
-        A || null != y || E || t(f.pn.PROMOTION_INFO);
-    }, [A, y, E, t]),
-    A)
+        E || null != y || A || t(f.pn.PROMOTION_INFO);
+    }, [E, y, A, t]),
+    E)
         ? (0, l.jsx)(w.A, {})
         : null != y
           ? (0, l.jsx)(rs, {
@@ -4860,8 +4861,8 @@ function ro(e) {
                 user: C ?? void 0,
                 code: a,
             })
-          : E
-            ? (0, l.jsx)(j.oO, {})
+          : A
+            ? (0, l.jsx)(O.oO, {})
             : null;
 }
 function ru(e) {
@@ -4906,7 +4907,7 @@ var rd = n(732159),
     rm = n(262427),
     rh = n(299301),
     rC = n(134638);
-function rE(e) {
+function rA(e) {
     let {
             plan: t,
             renewalInvoicePreview: n,
@@ -4925,7 +4926,7 @@ function rE(e) {
         );
     if (null == n) return (0, l.jsx)(eX.Ed, {});
     let p = a
-            ? [{ key: "fractional-premium-notice", directContent: (0, l.jsx)(rA, { fractionalPremiumInfo: s }) }]
+            ? [{ key: "fractional-premium-notice", directContent: (0, l.jsx)(rE, { fractionalPremiumInfo: s }) }]
             : null,
         m = (0, l.jsx)(rf, { plan: t, renewalInvoicePreview: n }),
         h = (0, l.jsx)(ry, { renewalInvoicePreview: n, subscriptionTrial: r });
@@ -4946,7 +4947,7 @@ function rE(e) {
             }),
     });
 }
-function rA(e) {
+function rE(e) {
     let { fractionalPremiumInfo: t } = e,
         n = (0, eF.NQ)({ fractionalPremiumInfo: t, variant: eF.uA.TRIAL });
     return null != n && "" !== n ? (0, l.jsx)(eo.w, { type: "info", children: n }) : null;
@@ -4975,7 +4976,7 @@ let rS = [...z.oz],
             options: { renderHeader: !0, modalSizeGetter: () => "md" },
         },
     ],
-    r_ = {
+    rI = {
         CHECKOUT_FLOW: u.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT,
         CUSTOM_PREDICATE_STEP_CONFIG: {
             renderStep: (e) => (0, l.jsx)(ro, { ...e }),
@@ -4995,14 +4996,14 @@ let rS = [...z.oz],
                         redeemPromotion: d,
                         confirmedUpgrade: p,
                         setConfirmedUpgrade: m,
-                        handleClose: E,
+                        handleClose: A,
                     } = i9();
                 es()(null != a && null != s, "Missing plan or trial");
-                let { paymentSources: A, paymentSourceId: y, setPaymentSourceId: S, isSubmittingCurrentStep: P } = c,
+                let { paymentSources: E, paymentSourceId: y, setPaymentSourceId: S, isSubmittingCurrentStep: P } = c,
                     T = (0, r.bG)([g.A], () => g.A.getPremiumTypeSubscription()),
-                    { analyticsLocations: _ } = (0, eM.Ay)(),
-                    I = (0, C.t4)((e) => e.hasAcceptedTerms),
-                    x = (0, eO.A)(),
+                    { analyticsLocations: I } = (0, eM.Ay)(),
+                    _ = (0, C.t4)((e) => e.hasAcceptedTerms),
+                    x = (0, ej.A)(),
                     { immediateDelivery: v } = (0, e0.U)(),
                     [N, b] = (0, ew.YV)({
                         items: [{ planId: a.id, quantity: 1 }],
@@ -5010,11 +5011,11 @@ let rS = [...z.oz],
                         paymentSourceId: y,
                         code: n,
                         subscriptionId: T?.id,
-                        analyticsLocations: _,
+                        analyticsLocations: I,
                         analyticsLocation: Q.ThZ.INBOUND_PARTNER_PROMOTION_REDEMPTION_MODAL,
                     });
-                (0, ej.F0)(N, b);
-                let R = (0, ej.sw)(),
+                (0, eO.F0)(N, b);
+                let R = (0, eO.sw)(),
                     M = i.useCallback(async () => {
                         null == T || p || null == s || null == o
                             ? (await d()) && t(f.pn.CONFIRM)
@@ -5079,28 +5080,28 @@ let rS = [...z.oz],
                                   });
                               });
                     }, [t, T, p, s, o, a, u, R, d, m]),
-                    O = (0, ln.kc)(),
-                    j = (0, eQ.iB)({
-                        checkoutPaymentSources: O,
+                    j = (0, ln.kc)(),
+                    O = (0, eQ.iB)({
+                        checkoutPaymentSources: j,
                         paymentSourceId: y,
                         location: "InboundPromotionReviewStep",
                     }),
                     L = (0, V.Y)(),
-                    w = (0, el.W)(A, y),
+                    w = (0, el.W)(E, y),
                     k = i.useMemo(
                         () => ({
                             prependOption:
-                                0 === Object.keys(A).length ? { label: J.intl.string(J.t.iA5vA1), value: null } : null,
+                                0 === Object.keys(E).length ? { label: J.intl.string(J.t.iA5vA1), value: null } : null,
                             isTrial: !0,
                         }),
-                        [A],
+                        [E],
                     );
                 if (null != b && null == R)
                     return (0, l.jsx)(rs, {
                         title: J.intl.string(J.t.ARIsMA),
                         bodyText: J.intl.string(J.t["3u+6q7"]),
                         helpCenterLink: o?.inboundHelpCenterLink ?? "",
-                        handleClose: E,
+                        handleClose: A,
                         user: void 0,
                         code: n,
                     });
@@ -5127,18 +5128,18 @@ let rS = [...z.oz],
                             intervalCount: a.intervalCount,
                             startDate: (0, e6.de)({ renewalInvoice: R, isSubscriptionUpdate: !1 }),
                         },
-                        paymentSourceType: (0, el.W)(A, y)?.type ?? null,
+                        paymentSourceType: (0, el.W)(E, y)?.type ?? null,
                         immediateDelivery: v,
                     }),
                     B = null;
                 return (
-                    null == w ? (B = J.intl.string(J.t.L7jbQV)) : I || (B = J.intl.string(J.t.XdvBLS)),
+                    null == w ? (B = J.intl.string(J.t.L7jbQV)) : _ || (B = J.intl.string(J.t.XdvBLS)),
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsxs)(en.dZ, {
                                 children: [
                                     (0, l.jsx)(np.A, {}),
-                                    (0, l.jsx)(rE, {
+                                    (0, l.jsx)(rA, {
                                         plan: a,
                                         renewalInvoicePreview: R,
                                         subscriptionTrial: s,
@@ -5155,10 +5156,10 @@ let rS = [...z.oz],
                                     primaryButtonProps: {
                                         text: G,
                                         tooltipText: B ?? void 0,
-                                        disabled: null == w || !w.canRedeemTrial() || j || !I,
+                                        disabled: null == w || !w.canRedeemTrial() || O || !_,
                                         loading: P,
                                         onClick: () => {
-                                            if (null != w && I) return M();
+                                            if (null != w && _) return M();
                                         },
                                         variant: (0, iR.CY)(iR.ti.PURCHASE),
                                     },
@@ -5203,7 +5204,7 @@ let rS = [...z.oz],
                 ? (0, l.jsx)(h.s3, {
                       ...(0, m.uO)({ skuId: a, step: t, headerBadgePreset: t === f.pn.REVIEW ? "trial" : void 0 }),
                   })
-                : (0, l.jsx)(iI.A, {
+                : (0, l.jsx)(i_.A, {
                       enablePremiumBrandRefresh: !0,
                       forceBrandRefreshHeader: !0,
                       premiumType: n?.premiumSubscriptionType ?? z.PremiumTypes.TIER_2,
@@ -5219,7 +5220,7 @@ let rS = [...z.oz],
             options: { renderHeader: !0, modalSizeGetter: () => "md" },
         },
     };
-var rI = n(989553);
+var r_ = n(989553);
 function rg(e) {
     let { handleClose: t } = e,
         n = (0, C.t4)((e) => e.selectedSkuId),
@@ -5239,11 +5240,11 @@ function rg(e) {
         children: [
             (0, l.jsx)(np.A, {}),
             (0, l.jsxs)("div", {
-                className: rI.EL,
+                className: r_.EL,
                 children: [
-                    (0, l.jsx)(ex.D, { variant: "heading-xxl/bold", className: rI.RS, children: "Success!" }),
+                    (0, l.jsx)(ex.D, { variant: "heading-xxl/bold", className: r_.RS, children: "Success!" }),
                     (0, l.jsx)(eT.E, { variant: "text-md/normal", children: u }),
-                    (0, l.jsx)("div", { className: rI.yF }),
+                    (0, l.jsx)("div", { className: r_.yF }),
                     (0, l.jsx)(ec.$, { onClick: t, text: J.intl.string(J.t.cpT0Cq), fullWidth: !0 }),
                 ],
             }),
@@ -5276,7 +5277,7 @@ let rR = {
                         : void 0;
             async function m(e, t) {}
             let h = null == a || a.id === o?.id || t.length > z.Jo,
-                E = i.useMemo(() => ({ disabled: h }), [h]);
+                A = i.useMemo(() => ({ disabled: h }), [h]);
             return (0, l.jsx)(ep.Mw, {
                 onBackClick: e.handleClose,
                 paymentModalStepProps: e,
@@ -5310,7 +5311,7 @@ let rR = {
                         ],
                     });
                 },
-                primaryCTAButtonProps: E,
+                primaryCTAButtonProps: A,
             });
         },
         [f.pn.REVIEW]: tG.p,
@@ -5323,8 +5324,8 @@ let rR = {
     },
 };
 var rM = n(429913),
-    rO = n(733391),
-    rj = n(871123),
+    rj = n(733391),
+    rO = n(871123),
     rL = n(26594),
     rw = n(510022),
     rk = n(317560),
@@ -5359,8 +5360,8 @@ function rF(e) {
                           (0, l.jsx)("div", {
                               className: rG.KD,
                               children: (0, l.jsx)(rD.default, {
-                                  imageUrl: (0, rj.fq)(d) ?? void 0,
-                                  backgroundImageUrl: (0, rj.xf)(d),
+                                  imageUrl: (0, rO.fq)(d) ?? void 0,
+                                  backgroundImageUrl: (0, rO.xf)(d),
                                   altText: d.name,
                                   rewardGraphic: m?.graphic,
                               }),
@@ -5420,7 +5421,7 @@ function r3(e) {
         s = i.useCallback(() => {
             t();
             let e = rz.A.getStorefrontState(n.applicationId)?.activePage;
-            (0, rj.uV)({
+            (0, rO.uV)({
                 pathname: window.location.pathname,
                 search: window.location.search,
                 applicationId: n.applicationId,
@@ -5459,15 +5460,15 @@ let r1 = {
                             giftRecipient: p,
                             emojiConfetti: m,
                             soundEffect: h,
-                            setEmojiConfetti: E,
-                            setSoundEffect: A,
+                            setEmojiConfetti: A,
+                            setSoundEffect: E,
                             giftingOrigin: f,
                             additionalUserIds: y,
                         } = (0, t1.Pv)(),
                         S = (0, C.t4)((e) => e.selectedSkuId),
                         { application: P } = (0, ni.V)(),
                         T = (0, r.bG)([eV.default], () => eV.default.getCurrentUser()),
-                        _ =
+                        I =
                             ((t = T?.id),
                             (n = nV()),
                             (a = (function (e) {
@@ -5504,14 +5505,14 @@ let r1 = {
                                     ),
                                 [p, s, a, n],
                             )),
-                        I = (0, r.bG)([rx.A], () => (null != S ? rx.A.get(S) : null), [S]),
-                        { userPrice: g } = (0, rK.CD)({ sku: I, priceSetAssignmentPurchaseType: Q.lid.GIFT }),
-                        x = (0, r$.F)("gift_customization", { applicationId: P?.id, skuId: I?.id }),
-                        v = (0, rj.fq)(I),
-                        N = (0, rj.xf)(I);
+                        _ = (0, r.bG)([rx.A], () => (null != S ? rx.A.get(S) : null), [S]),
+                        { userPrice: g } = (0, rK.CD)({ sku: _, priceSetAssignmentPurchaseType: Q.lid.GIFT }),
+                        x = (0, r$.F)("gift_customization", { applicationId: P?.id, skuId: _?.id }),
+                        v = (0, rO.fq)(_),
+                        N = (0, rO.xf)(_);
                     async function b(e, t) {}
                     let R = (e) => {
-                            null != A && A(null == e ? void 0 : e);
+                            null != E && E(null == e ? void 0 : e);
                         },
                         M = () =>
                             (0, l.jsxs)("div", {
@@ -5522,7 +5523,7 @@ let r1 = {
                                             containerClassName: r2.T3,
                                             cardImage: v,
                                             cardBackgroundImage: N,
-                                            altText: I?.name ?? "",
+                                            altText: _?.name ?? "",
                                             shape: "square",
                                         }),
                                     (0, l.jsxs)("div", {
@@ -5530,20 +5531,20 @@ let r1 = {
                                         children: [
                                             (0, l.jsx)(rV.A, { sound: h, onSelect: R }),
                                             (0, l.jsx)(rW.A, {
-                                                setEmojiConfetti: E,
+                                                setEmojiConfetti: A,
                                                 emojiConfetti: null == m ? void 0 : m,
                                             }),
                                         ],
                                     }),
                                 ],
                             }),
-                        O = () =>
+                        j = () =>
                             (0, l.jsxs)("div", {
                                 className: r2.Tc,
                                 children: [
                                     null != p && (f === z.vQ.USER_PROFILE_WISHLIST || f === z.vQ.DM_CHANNEL_WISHLIST)
                                         ? (0, l.jsx)(n$.Z, { giftRecipient: p })
-                                        : (0, l.jsx)(nG, { selectedSkuId: S, validateSelectedGift: b, recipients: _ }),
+                                        : (0, l.jsx)(nG, { selectedSkuId: S, validateSelectedGift: b, recipients: I }),
                                     (0, l.jsx)(nq.A, {
                                         onTextChange: (e) => d?.(e),
                                         pendingText: c,
@@ -5552,7 +5553,7 @@ let r1 = {
                                         className: r2.iX,
                                         innerClassName: r2.pt,
                                     }),
-                                    null == I
+                                    null == _
                                         ? null
                                         : (0, l.jsxs)("div", {
                                               className: r2.AN,
@@ -5567,13 +5568,13 @@ let r1 = {
                                                           (0, l.jsx)("div", {
                                                               className: r2.Xb,
                                                               children:
-                                                                  null != I &&
+                                                                  null != _ &&
                                                                   null != v &&
                                                                   (0, l.jsx)(rX.A, {
                                                                       containerClassName: r2.Iy,
                                                                       cardImage: v,
                                                                       cardBackgroundImage: N,
-                                                                      altText: I.name,
+                                                                      altText: _.name,
                                                                       shape: "square",
                                                                   }),
                                                           }),
@@ -5583,7 +5584,7 @@ let r1 = {
                                                                   null != P && (0, l.jsx)(rJ.Q, { application: P }),
                                                                   (0, l.jsx)(eT.E, {
                                                                       variant: "text-sm/semibold",
-                                                                      children: I.name,
+                                                                      children: _.name,
                                                                   }),
                                                               ],
                                                           }),
@@ -5595,8 +5596,8 @@ let r1 = {
                                                   }),
                                               ],
                                           }),
-                                    null != I &&
-                                        (0, rj.Ri)(I) &&
+                                    null != _ &&
+                                        (0, rO.Ri)(_) &&
                                         (0, l.jsx)(eo.w, { type: "info", children: J.intl.string(J.t.lORYb6) }),
                                     null != x &&
                                         (0, l.jsx)(rU.O0, {
@@ -5605,15 +5606,15 @@ let r1 = {
                                             endDatetime: x.endsAt,
                                             tooltip: x.tooltip,
                                         }),
-                                    null != I && (0, l.jsx)(r3, { handleClose: u, sku: I, application: P }),
+                                    null != _ && (0, l.jsx)(r3, { handleClose: u, sku: _, application: P }),
                                 ],
                             });
                     return {
                         renderStepBody: function () {
-                            return (0, l.jsxs)("div", { className: r2.Du, children: [M(), O()] });
+                            return (0, l.jsxs)("div", { className: r2.Du, children: [M(), j()] });
                         },
                         getLeftColumnComponent: M,
-                        getRightColumnComponent: O,
+                        getRightColumnComponent: j,
                         onStepChange: o,
                         onBackClick: u,
                         disabled: null == p || p.id === T?.id || c.length > z.Jo,
@@ -5643,7 +5644,7 @@ let r1 = {
                             null == n ||
                             rv.A.isFetchingForSKU(n) ||
                             null != rx.A.get(n) ||
-                            (0, rO.Pp)(l.id, n);
+                            (0, rj.Pp)(l.id, n);
                     }, [l, n]);
                 })({ applicationId: a, skuId: o }),
                 (0, l.jsx)(c.M, {
@@ -5719,7 +5720,7 @@ function am() {
 }
 function ah() {
     let { immediateDelivery: e } = (0, e0.U)(),
-        { skuProductLine: t, skuId: n } = aE(),
+        { skuProductLine: t, skuId: n } = aA(),
         r = am(),
         a = (0, i.useMemo)(() => ({ type: rp.I0.OrbsRedemption, purchaseButtonText: r }), [r]);
     return t === Q.EZt.SOCIAL_LAYER_GAME_ITEM
@@ -5736,10 +5737,10 @@ let aC = (0, i.createContext)({
     skuApplicationId: void 0,
     analyticsSourceLocation: void 0,
 });
-function aE() {
+function aA() {
     return (0, i.useContext)(aC);
 }
-let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB },
+let aE = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB },
     af = {
         CHECKOUT_FLOW: ep.CL.ORB_CHECKOUT,
         CHECKOUT_STEPS: {
@@ -5747,7 +5748,7 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                 let { handleStepChange: t } = e,
                     { primaryButtonProps: n, ...r } = (function (e) {
                         let { handleStepChange: t } = e,
-                            { isRedeeming: n, skuId: r, skuApplicationId: a } = aE(),
+                            { isRedeeming: n, skuId: r, skuApplicationId: a } = aA(),
                             { enabled: s } = r6.A.useConfig({ location: "orb_checkout_review_step" }),
                             { invoicePreviewTotal: o, orderOrbPriceAmount: c } = (0, C.t4)((e) => {
                                 let t = null != e.orderRecord ? e.orderRecord.getInvoicePreview() : null;
@@ -5762,8 +5763,8 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                                 orbPriceAmount: p,
                                 orbBalanceToDisplay: m,
                                 onClickCheckout: h,
-                                showCollectiblesDiscountWarning: E,
-                                errorMessage: A,
+                                showCollectiblesDiscountWarning: A,
+                                errorMessage: E,
                             } = ((e) => {
                                 let { handleStepChange: t } = e,
                                     {
@@ -5774,7 +5775,7 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                                         skuApplicationId: s,
                                         skuProductLine: o,
                                         analyticsSourceLocation: c,
-                                    } = aE(),
+                                    } = aA(),
                                     { analyticsLocations: d } = (0, eM.Ay)(),
                                     { setPurchaseState: p, firstConstraintReasonCode: m } = (0, C.t4)((e) => ({
                                         setPurchaseState: e.setPurchaseState,
@@ -5784,8 +5785,8 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                                                 : null,
                                     })),
                                     h = (0, r5.gN)(),
-                                    E = (0, i.useRef)(h),
-                                    { emitOrbCheckoutPaymentFlowEvent: A } = (function (e) {
+                                    A = (0, i.useRef)(h),
+                                    { emitOrbCheckoutPaymentFlowEvent: E } = (function (e) {
                                         let {
                                                 skuId: t,
                                                 skuApplicationId: n,
@@ -5886,21 +5887,21 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                                     });
                                 (0, i.useEffect)(() => {
                                     null != l &&
-                                        null !== E.current &&
-                                        (A(Q.HAw.PAYMENT_FLOW_FAILED, l), (E.current = null));
-                                }, [l, A]);
+                                        null !== A.current &&
+                                        (E(Q.HAw.PAYMENT_FLOW_FAILED, l), (A.current = null));
+                                }, [l, E]);
                                 let S = (0, i.useCallback)(() => {
-                                        (E.current = h),
-                                            A(Q.HAw.PAYMENT_FLOW_COMPLETED),
+                                        (A.current = h),
+                                            E(Q.HAw.PAYMENT_FLOW_COMPLETED),
                                             r((e) => {
                                                 p(y.h.COMPLETED), t(f.pn.CONFIRM, { fulfillment: { entitlements: e } });
                                             });
-                                    }, [r, p, h, A, t]),
-                                    P = E.current ?? h,
+                                    }, [r, p, h, E, t]),
+                                    P = A.current ?? h,
                                     T = null != n ? n.orbPriceAmount : null;
                                 return {
                                     isStepLoading: null == n,
-                                    showCollectiblesDiscountWarning: (0, nj.vw)({ skuId: a, isOrbsPurchase: !0 }),
+                                    showCollectiblesDiscountWarning: (0, nO.vw)({ skuId: a, isOrbsPurchase: !0 }),
                                     errorMessage: (0, i.useMemo)(() => (0, an.$9)(l, m), [l, m]),
                                     orbPriceAmount: T,
                                     orbBalanceToDisplay: P,
@@ -5911,7 +5912,7 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                             {
                                 disabled: P,
                                 tooltipText: T,
-                                text: _,
+                                text: I,
                             } = (function (e) {
                                 let { orbBalance: t, orbPriceAmount: n, isInTestMode: l = !1 } = e,
                                     { disabled: r, tooltipText: a } = (0, i.useMemo)(
@@ -5925,33 +5926,33 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                                     );
                                 return { disabled: r, tooltipText: a, text: am() };
                             })({ orbBalance: m, orbPriceAmount: s ? o : p, isInTestMode: S }),
-                            I = (0, i.useMemo)(
-                                () => ({ onClick: h, loading: n, text: _, disabled: P, tooltipText: T }),
-                                [h, n, _, P, T],
+                            _ = (0, i.useMemo)(
+                                () => ({ onClick: h, loading: n, text: I, disabled: P, tooltipText: T }),
+                                [h, n, I, P, T],
                             ),
-                            g = E ? J.intl.format(J.t.fsOXXO, {}) : null,
+                            g = A ? J.intl.format(J.t.fsOXXO, {}) : null,
                             x = S ? J.intl.string(J.t.OvMyMd) : null;
                         return {
                             isStepLoading: d,
                             upperInlineNoticeProps: (0, i.useMemo)(() => {
-                                if (null != x || null != g || null != A) {
+                                if (null != x || null != g || null != E) {
                                     let e = [];
                                     return (
                                         null != x &&
                                             e.push({ type: "warning", message: x, key: "test-mode-warning-notice" }),
                                         null != g &&
                                             e.push({ type: "warning", message: g, key: "orb-checkout-warning-notice" }),
-                                        null != A &&
-                                            e.push({ type: "critical", message: A, key: "orb-checkout-error-notice" }),
+                                        null != E &&
+                                            e.push({ type: "critical", message: E, key: "orb-checkout-error-notice" }),
                                         e
                                     );
                                 }
                                 return null;
-                            }, [x, g, A]),
+                            }, [x, g, E]),
                             purchaseItemContent: (0, l.jsx)(ad, { skuId: r, orbPriceAmount: s ? c : p }),
                             paymentMethodContent: (0, l.jsx)(ap, { orbBalance: m }),
                             legalContent: (0, l.jsx)(ah, {}),
-                            primaryButtonProps: I,
+                            primaryButtonProps: _,
                             invoiceSummaryContent: null,
                             invoiceTotalDueLabel: null,
                             invoiceTotalDueValue: null,
@@ -5976,7 +5977,7 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                         orbRedemptionError: p,
                         onRedeemVirtualCurrency: m,
                         skuProductLine: h,
-                        skuApplicationId: E,
+                        skuApplicationId: A,
                     } = (function (e) {
                         let { skuId: t, loadId: n, onCheckoutSuccess: l, onSignFailure: a, order: s } = e,
                             o = (0, r.bG)([eV.default], () => eq.Ay.canUseShopDiscounts(eV.default.getCurrentUser())),
@@ -5997,8 +5998,8 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                             (0, r9.hD)("Orb price not found for product", { tags: { sku_id: t } });
                         let {
                                 redeemVirtualCurrency: C,
-                                isSubmitting: E,
-                                error: A,
+                                isSubmitting: A,
+                                error: E,
                             } = (0, at.Q)({ skuId: t, loadId: n, order: s, onSignFailure: a }),
                             f = (0, i.useCallback)(
                                 (e) => {
@@ -6015,11 +6016,11 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                             loadId: n,
                             orbProductContext: h,
                             onRedeemVirtualCurrency: f,
-                            isRedeeming: E,
-                            orbRedemptionError: A,
+                            isRedeeming: A,
+                            orbRedemptionError: E,
                         };
                     })({ skuId: t, loadId: n, order: o, onSignFailure: u }),
-                    A = (0, i.useMemo)(
+                    E = (0, i.useMemo)(
                         () => ({
                             orbProductContext: c,
                             isRedeeming: d,
@@ -6027,16 +6028,16 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                             onRedeemVirtualCurrency: m,
                             skuId: t,
                             skuProductLine: h,
-                            skuApplicationId: E,
+                            skuApplicationId: A,
                             analyticsSourceLocation: a,
                         }),
-                        [c, d, p, m, t, h, E, a],
+                        [c, d, p, m, t, h, A, a],
                     );
-                return (0, l.jsx)(aC.Provider, { value: A, children: s });
+                return (0, l.jsx)(aC.Provider, { value: E, children: s });
             },
             TenantPaymentModalRenderer: (e) => {
                 let { originalPaymentModalProps: t, renderPaymentModal: n } = e,
-                    { orbProductContext: l, skuProductLine: r } = aE(),
+                    { orbProductContext: l, skuProductLine: r } = aA(),
                     a = (function (e) {
                         let { orbProductContext: t, skuProductLine: n, overrideAnalyticParams: l } = e;
                         return {
@@ -6053,10 +6054,10 @@ let aA = { payment_gateway: e5.kM.VIRTUAL_CURRENCY, currency: Q.Yri.DISCORD_ORB 
                             ),
                             skipConfirm: !0,
                         };
-                    })({ orbProductContext: l, skuProductLine: r, overrideAnalyticParams: aA });
+                    })({ orbProductContext: l, skuProductLine: r, overrideAnalyticParams: aE });
                 return n({ ...t, ...a });
             },
-            overrideAnalyticParams: aA,
+            overrideAnalyticParams: aE,
         },
     };
 var ay = n(75304);
@@ -6089,7 +6090,7 @@ let aS = {
         implemented: !0,
         flowType: ay.C.INBOUND_PREMIUM_PROMOTION_CHECKOUT,
         purchaseType: Q.VVm.SUBSCRIPTION,
-        TENANT_CHECKOUT_FLOW_CONFIG: r_,
+        TENANT_CHECKOUT_FLOW_CONFIG: rI,
     },
     [ay.C.PREMIUM_APPS_OTP_CHECKOUT]: {
         implemented: !0,
