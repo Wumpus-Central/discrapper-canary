@@ -3,6 +3,7 @@ if (
     null == window.GLOBAL_ENV.API_VERSION &&
         null == window.GLOBAL_ENV.API_ENDPOINT &&
         null == window.GLOBAL_ENV.GATEWAY_ENDPOINT &&
+        null == window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT &&
         null == window.GLOBAL_ENV.WEBAPP_ENDPOINT &&
         null == window.GLOBAL_ENV.CDN_HOST &&
         null == window.GLOBAL_ENV.ASSET_ENDPOINT &&

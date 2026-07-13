@@ -1,52 +1,52 @@
 "use strict";
-n.d(t, { A: () => f }), n(938796);
+n.d(t, { A: () => A }), n(938796);
 var i = n(17928),
     r = n(228366),
-    s = n(842241),
-    a = n(652215);
-let o = new Map(),
-    l = new Map(),
-    u = {},
+    a = n(842241),
+    s = n(652215);
+let l = new Map(),
+    o = new Map(),
+    d = {},
     c = new Map();
-function d(e, t) {
+function u(e, t) {
     e = e ?? "";
-    let n = (0, s.y$)(e),
-        i = o.get(e),
-        r = null != i ? { state: a.elq.RESOLVING, ...i } : { state: a.elq.RESOLVING, code: n.baseCode };
-    t(r), (o = new Map(o)).set(e, r), r.guild?.id != null && (u = { ...u, [r.guild.id]: e });
+    let n = (0, a.y$)(e),
+        i = l.get(e),
+        r = null != i ? { state: s.elq.RESOLVING, ...i } : { state: s.elq.RESOLVING, code: n.baseCode };
+    t(r), (l = new Map(l)).set(e, r), r.guild?.id != null && (d = { ...d, [r.guild.id]: e });
 }
 function _(e) {
-    return d(e.code, (t) => {
-        t.state = "banned" in e && e.banned ? a.elq.BANNED : a.elq.EXPIRED;
+    return u(e.code, (t) => {
+        t.state = "banned" in e && e.banned ? s.elq.BANNED : s.elq.EXPIRED;
     });
 }
-class h extends i.Ay.Store {
+class E extends i.Ay.Store {
     static displayName = "InviteStore";
     getInvite(e) {
-        return o.get(e);
-    }
-    getInviteError(e) {
         return l.get(e);
     }
+    getInviteError(e) {
+        return o.get(e);
+    }
     getInvites() {
-        return o;
+        return l;
     }
     getInviteKeyForGuildId(e) {
-        return u[e];
+        return d[e];
     }
     getFriendMemberIds(e) {
         return c.get(e);
     }
 }
-let f = new h(r.h, {
+let A = new E(r.h, {
     INVITE_RESOLVE: function (e) {
         let { code: t } = e,
-            n = (0, s.y$)(t);
-        (o = new Map(o)).set(t, { code: n.baseCode, state: a.elq.RESOLVING });
+            n = (0, a.y$)(t);
+        (l = new Map(l)).set(t, { code: n.baseCode, state: s.elq.RESOLVING });
     },
     INVITE_RESOLVE_SUCCESS: function (e) {
-        return d(e.code, (t) => {
-            (t.state = a.elq.RESOLVED),
+        return u(e.code, (t) => {
+            (t.state = s.elq.RESOLVED),
                 (t.guild = e.invite.guild),
                 (t.channel = e.invite.channel),
                 (t.inviter = e.invite.inviter),
@@ -65,26 +65,27 @@ let f = new h(r.h, {
                 (t.profile = e.invite.profile),
                 (t.roles = e.invite.roles),
                 (t.target_channel_id = e.invite.target_channel_id),
-                (t.target_message_id = e.invite.target_message_id);
+                (t.target_message_id = e.invite.target_message_id),
+                (t.liveliness = e.invite.liveliness);
         });
     },
     INVITE_RESOLVE_FAILURE: _,
     INSTANT_INVITE_REVOKE_SUCCESS: _,
     FRIEND_INVITE_CREATE_SUCCESS: function (e) {
-        return d(e.invite.code, (t) => {
-            (t.state = a.elq.RESOLVED), (t.inviter = e.invite.inviter);
+        return u(e.invite.code, (t) => {
+            (t.state = s.elq.RESOLVED), (t.inviter = e.invite.inviter);
         });
     },
     FRIEND_INVITE_REVOKE_SUCCESS: function (e) {
         e.invites.forEach((e) =>
-            d(e.code, (e) => {
-                e.state = a.elq.EXPIRED;
+            u(e.code, (e) => {
+                e.state = s.elq.EXPIRED;
             }),
         );
     },
     INSTANT_INVITE_CREATE_SUCCESS: function (e) {
-        return d(e.invite.code, (t) => {
-            (t.state = a.elq.RESOLVED),
+        return u(e.invite.code, (t) => {
+            (t.state = s.elq.RESOLVED),
                 (t.guild = e.invite.guild),
                 (t.channel = e.invite.channel),
                 (t.inviter = e.invite.inviter),
@@ -101,13 +102,13 @@ let f = new h(r.h, {
         });
     },
     INVITE_ACCEPT: function (e) {
-        return d(e.code, (e) => {
-            e.state = a.elq.ACCEPTING;
+        return u(e.code, (e) => {
+            e.state = s.elq.ACCEPTING;
         });
     },
     INVITE_ACCEPT_SUCCESS: function (e) {
-        return d(e.code, (t) => {
-            (t.state = a.elq.ACCEPTED),
+        return u(e.code, (t) => {
+            (t.state = s.elq.ACCEPTED),
                 (t.guild = e.invite.guild),
                 (t.new_member = e.invite.new_member),
                 (t.channel = { ...t.channel, ...e.invite.channel });
@@ -115,25 +116,25 @@ let f = new h(r.h, {
     },
     INVITE_ACCEPT_FAILURE: function (e) {
         return (
-            l.set(e.code, e.error),
-            d(e.code, (e) => {
-                e.state = a.elq.ERROR;
+            o.set(e.code, e.error),
+            u(e.code, (e) => {
+                e.state = s.elq.ERROR;
             })
         );
     },
     INVITE_APP_OPENING: function (e) {
-        return d(e.code, (e) => {
-            e.state = a.elq.APP_OPENING;
+        return u(e.code, (e) => {
+            e.state = s.elq.APP_OPENING;
         });
     },
     INVITE_APP_OPENED: function (e) {
-        return d(e.code, (e) => {
-            e.state = a.elq.APP_OPENED;
+        return u(e.code, (e) => {
+            e.state = s.elq.APP_OPENED;
         });
     },
     INVITE_APP_NOT_OPENED: function (e) {
-        return d(e.code, (e) => {
-            e.state = a.elq.APP_NOT_OPENED;
+        return u(e.code, (e) => {
+            e.state = s.elq.APP_NOT_OPENED;
         });
     },
     INVITE_FRIEND_MEMBERS_FETCH_SUCCESS: function (e) {

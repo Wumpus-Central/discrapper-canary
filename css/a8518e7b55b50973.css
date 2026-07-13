@@ -1,0 +1,217 @@
+.authBox_fd23fc {
+    width: 960px
+}
+
+.createButton_fd23fc {
+    margin-top: 12px
+}
+
+.header_fd23fc {
+    margin-bottom: 32px;
+    text-align: center
+}
+
+.formContainer_fd23fc {
+    flex: 1 1 auto;
+    text-align: start
+}
+
+.card__03000 {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    padding: var(--space-16)
+}
+
+.header__03000 {
+    color: var(--text-default);
+    display: flex;
+    gap: var(--space-6)
+}
+
+.header__03000,
+.icon__03000 {
+    align-items: center
+}
+
+.icon__03000 {
+    display: inline-flex;
+    flex-shrink: 0
+}
+
+.bars__03000 {
+    gap: 2px;
+    height: 64px;
+    padding-top: var(--space-12);
+    width: 100%
+}
+
+.barColumn__03000,
+.bars__03000 {
+    align-items: flex-end;
+    display: flex;
+    position: relative
+}
+
+.barColumn__03000 {
+    flex: 1 1 0;
+    height: 100%;
+    min-width: 0
+}
+
+.bar__03000 {
+    background: var(--text-feedback-positive);
+    border-radius: var(--radius-xs);
+    min-height: 2px;
+    width: 100%
+}
+
+.nowMarker__03000 {
+    background: var(--text-muted);
+    bottom: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 1px
+}
+
+.nowMarker__03000:before {
+    background: var(--text-muted);
+    content: "";
+    height: 1px;
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    width: 5px
+}
+
+.hourLabels__03000 {
+    color: var(--text-muted);
+    height: 14px;
+    position: relative
+}
+
+.hourLabel__03000,
+.hourLabelStart__03000 {
+    position: absolute;
+    top: 0;
+    white-space: nowrap
+}
+
+.hourLabelStart__03000 {
+    inset-inline-start: 0
+}
+
+.hourLabelEnd__03000 {
+    inset-inline-end: 0;
+    position: absolute;
+    top: 0;
+    white-space: nowrap
+}
+
+.heading_fecfad {
+    margin-bottom: var(--space-8)
+}
+
+.items_fecfad {
+    align-items: flex-start;
+    display: flex;
+    gap: var(--space-12)
+}
+
+.item_fecfad {
+    flex: 1 1 0;
+    gap: var(--space-8);
+    min-width: 0
+}
+
+.iconBox_fecfad,
+.item_fecfad {
+    align-items: center;
+    display: flex
+}
+
+.iconBox_fecfad {
+    background: color-mix(in srgb, var(--liveliness-accent, var(--background-mod-subtle)) 14%, transparent);
+    border-radius: var(--radius-sm);
+    flex-shrink: 0;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
+.label_fecfad {
+    min-width: 0
+}
+
+.inviteCard_d17edb {
+    background: var(--modal-background);
+    border-radius: var(--custom-border-radius, var(--radius-md));
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+    overflow: hidden;
+    width: 480px
+}
+
+.inviteCardContentWrapper_d17edb {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0;
+    padding: var(--space-24) var(--space-24) 0
+}
+
+.inviteCardFooterWrapper_d17edb {
+    padding: var(--space-24)
+}
+
+.inviteCardFooterError_d17edb {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-12)
+}
+
+.splitRegisterModal_d17edb {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--legacy-elevation-high);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden
+}
+
+.splitRegisterModalLeft_d17edb {
+    flex: 0 1 480px
+}
+
+.splitRegisterModalLeftContent_d17edb {
+    background-color: var(--background-surface-higher);
+    box-sizing: border-box;
+    height: 100%;
+    overflow: hidden;
+    padding: var(--space-32);
+    position: relative
+}
+
+.splitRegisterModalRight_d17edb {
+    background-color: var(--modal-background);
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 1 400px;
+    flex-direction: column;
+    justify-content: center;
+    padding: var(--space-32)
+}
+
+.splitRegisterModalRight_d17edb .registerAuthBox_d17edb {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    width: 100%
+}

@@ -16,6 +16,29 @@
     justify-content: center
 }
 
+.qrLoginHorizontal_e16417 {
+    width: 100%
+}
+
+.qrCodeHorizontal_e16417 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-24);
+    width: 100%
+}
+
+.qrCodeHorizontal_e16417 .qrCodeContainer_e16417 {
+    flex-shrink: 0;
+    height: 164px;
+    margin-bottom: 0;
+    width: 164px
+}
+
+.qrCodeHorizontalText_e16417 {
+    text-align: start
+}
+
 .qrCode_e16417 {
     image-rendering: pixelated;
     position: absolute
@@ -70,7 +93,7 @@
 }
 
 @media (max-width:830px) {
-    .qrLogin_e16417 {
+    .qrLogin_e16417:not(.qrLoginHorizontal_e16417) {
         display: none
     }
 }
