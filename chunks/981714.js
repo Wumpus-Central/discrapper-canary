@@ -1556,21 +1556,31 @@ function n$(e) {
         g = (0, e3.Ay)(n),
         p = (0, e5.fF)(n),
         A = (0, e5.ZD)(n);
-    return n.type === ec.lAJ.THREAD_STARTER_MESSAGE && null != o && o.state === e$.a.LOADED
-        ? (0, r.jsx)(nJ, { ...e, viewingChannelId: n.channel_id, message: o.message, groupId: o.message.id })
-        : (0, r.jsx)(e8.A, {
-              ...a,
-              id: t,
-              compact: i,
-              className: d()(s, { [ny.iU]: !0, [ny.HJ]: !i, [ny.H4]: !0, [ny._A]: !0 }),
-              childrenHeader: nM({ messageProps: e, setPopout: u, messagePopouts: c, replyReference: l, author: g }),
-              childrenSystemMessage: (0, nW.A)(e),
-              childrenMessageContent: null,
-              "aria-labelledby": p,
-              "aria-describedby": A,
-              hasThread: !1,
-              author: g,
-          });
+    if (null != o)
+        switch (o.state) {
+            case e$.a.LOADED:
+                return (0, r.jsx)(nJ, {
+                    ...e,
+                    viewingChannelId: n.channel_id,
+                    message: o.message,
+                    groupId: o.message.id,
+                });
+            case e$.a.NOT_LOADED:
+            case e$.a.DELETED:
+        }
+    return (0, r.jsx)(e8.A, {
+        ...a,
+        id: t,
+        compact: i,
+        className: d()(s, { [ny.iU]: !0, [ny.HJ]: !i, [ny.H4]: !0, [ny._A]: !0 }),
+        childrenHeader: nM({ messageProps: e, setPopout: u, messagePopouts: c, replyReference: l, author: g }),
+        childrenSystemMessage: (0, nW.A)(e),
+        childrenMessageContent: null,
+        "aria-labelledby": p,
+        "aria-describedby": A,
+        hasThread: !1,
+        author: g,
+    });
 }
 function nJ(e) {
     let {

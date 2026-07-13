@@ -88,7 +88,19 @@ function m(e) {
                             : t.getPrice(_?.premiumType)) ?? null;
                     return { normalPrice: e, discountedPrice: null, discountPercent: null, userPrice: e };
                 }
-                let e = u.find((e) => e[o]?.type === A.Ns.DISCOUNT),
+                let e = u.find((e) => {
+                        let t = e[o];
+                        if (null == t) return !1;
+                        switch (t.type) {
+                            case A.Ns.DISCOUNT:
+                                return !0;
+                            case A.Ns.FIXED_PRICE:
+                            case A.Ns.ACTION:
+                                return !1;
+                            default:
+                                return t.type, !1;
+                        }
+                    }),
                     i = null != e ? e[o] : null,
                     s = null != i && null != r ? r : null,
                     c = null != i && i.amount > 0 ? i.amount : null;

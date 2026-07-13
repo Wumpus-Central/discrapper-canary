@@ -341,11 +341,13 @@ function tA(t) {
                 i = { v2: n };
             return t
                 .reduce((t, i) => {
-                    if (i.type !== tn.ZzC.USER) return t;
-                    let n = i.party.currentActivities;
-                    if (0 === n.length) return t;
-                    for (let i of n) i.application.id === e && null != i.activity && t.push(i);
-                    return t;
+                    if (i.type !== tn.ZzC.USER) return i.type, t;
+                    {
+                        let n = i.party.currentActivities;
+                        if (0 === n.length) return t;
+                        for (let i of n) i.application.id === e && null != i.activity && t.push(i);
+                        return t;
+                    }
                 }, [])
                 .filter((t) => {
                     let e = t.activityUser.id,

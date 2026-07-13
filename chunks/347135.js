@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     O9: () => ex,
-    Vn: () => eR,
+    Vn: () => eO,
     Wj: () => eM,
     mL: () => en,
     Cv: () => eY,
@@ -14,7 +14,7 @@ n.d(t, {
     zW: () => eW,
     NC: () => eE,
     j$: () => ev,
-    fc: () => eO,
+    fc: () => eR,
     p5: () => eK,
     SD: () => ef,
     aC: () => eF,
@@ -69,8 +69,8 @@ var T = n(27620),
     S = n(734057),
     N = n(30370),
     C = n(287809),
-    R = n(174459),
-    O = n(927813),
+    O = n(174459),
+    R = n(927813),
     L = n(403362),
     D = n(975571),
     y = n(252424),
@@ -224,16 +224,25 @@ function en() {
         o = (0, H.s)();
     return (
         s.useEffect(() => {
-            if (
-                "cache-only" !== e.fetchPolicy &&
-                ("cache-and-network" === e.fetchPolicy || ("cache-or-network" === e.fetchPolicy && 0 === l)) &&
-                o &&
-                !t &&
-                !a
-            ) {
+            let i;
+            switch (e.fetchPolicy) {
+                case "cache-only":
+                    return;
+                case "cache-or-network":
+                    i = 0 === l;
+                    break;
+                case "cache-and-network":
+                    i = !0;
+                    break;
+                default:
+                    e.fetchPolicy;
+                    return;
+            }
+            if (i && o && !t && !a) {
                 if ((n(!0), (0, x.N1)(), (0, v.isMac)() && "focused" !== f.A.getState())) return;
                 let { enableNewRequestBehavior: t } = V.A.getConfig({ location: "QuestHookUseQuests" });
-                if (!t) (0, x.r8)(P.p9.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
+                if (t) return;
+                (0, x.r8)(P.p9.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
             }
         }, [e.fetchPolicy, o, t, a, l, e.callerSource]),
         { quests: i, excludedQuests: r, isFetchingCurrentQuests: a, hasFetched: t }
@@ -249,7 +258,7 @@ function ei(e, t, n) {
         o = t.userStatus?.claimedAt != null,
         d = e.userStatus?.enrolledAt != null,
         c = t.userStatus?.enrolledAt != null,
-        u = 20 * O.A.Millis.MINUTE,
+        u = 20 * R.A.Millis.MINUTE,
         _ = eJ(e, u),
         E = eJ(t, u);
     if (s) {
@@ -516,7 +525,7 @@ function eN(e) {
 function eC(e) {
     return s.useMemo(() => (0, Z.YL)(e), [e]);
 }
-function eR(e) {
+function eO(e) {
     let t,
         n = eN(e),
         i = eC(e),
@@ -525,11 +534,11 @@ function eR(e) {
             s.useMemo(() => (0, Q.J$)(e), [e, t]));
     return n || i || r;
 }
-let eO = (e) => {
+let eR = (e) => {
     let t = s.useCallback(() => (0, Z.Yh)(e), [e]),
         [n, i] = s.useState(t()),
         r = s.useCallback(() => i(t()), [t]),
-        a = eR(e);
+        a = eO(e);
     return (
         s.useEffect(() => {
             if (
@@ -541,7 +550,7 @@ let eO = (e) => {
                 return void r();
             let t = window.setInterval(() => {
                 r();
-            }, +O.A.Millis.SECOND);
+            }, +R.A.Millis.SECOND);
             return () => {
                 clearInterval(t), r();
             };
@@ -632,7 +641,7 @@ function eM(e) {
 function eP(e) {
     let { quest: t } = e,
         { xboxAndPlaystationAccounts: n } = eb(),
-        i = eR(t),
+        i = eO(t),
         r = 0 === n.length;
     return (0, Z.g5)(t) && r && !i;
 }
@@ -657,13 +666,13 @@ function eG(e) {
     let t = e.userStatus?.enrolledAt != null,
         n = e.userStatus?.completedAt != null,
         i = e.userStatus?.claimedAt != null,
-        r = eO(e).percentComplete > 0;
+        r = eR(e).percentComplete > 0;
     return i ? 4 : n ? 3 : r && t ? 2 : 1 * !!t;
 }
 function ex(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, A.bG)([m.default], () => m.default.locale),
-        { percentComplete: i } = eO(e),
+        { percentComplete: i } = eR(e),
         r = eL(e),
         a = null != r ? r.percentComplete : i,
         s = 100 * a,
@@ -734,7 +743,7 @@ function ek(e, t) {
 }
 function eF(e) {
     let t = eL(e),
-        n = eO(e),
+        n = eR(e),
         [i] = ek(e, n),
         r = eT(e),
         a = e.userStatus?.enrolledAt != null,
@@ -838,12 +847,12 @@ function eX(e) {
         r = s.useRef(null),
         a = s.useRef(null);
     s.useEffect(() => {
-        R.default.track(w.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: r.current }),
+        O.default.track(w.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: r.current }),
             (r.current = t);
     }, [t]),
         s.useEffect(() => {
             let e = n.map((e) => e.filter);
-            R.default.track(w.HAw.QUEST_HOME_FILTERS_CHANGED, {
+            O.default.track(w.HAw.QUEST_HOME_FILTERS_CHANGED, {
                 filters: e,
                 previous_filters: a.current ?? [],
                 num_quests_visible: i,
@@ -879,4 +888,4 @@ function e1(e) {
         (0, T.hs)(i, { quest_id: e.id });
     }, [t, n, e.id]);
 }
-O.A.Millis.HOUR, O.A.Millis.MINUTE;
+R.A.Millis.HOUR, R.A.Millis.MINUTE;
