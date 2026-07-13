@@ -441,6 +441,7 @@ let r = {
             "GPLAY_PURCHASE_VERIFIED",
             "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
             "BILLING_USER_TRIAL_OFFER_ACKNOWLEDGED_SUCCESS",
+            "BILLING_REFERRAL_RESOLVE_SUCCESS",
             "VIRTUAL_CURRENCY_REDEEM_SUCCESS",
         ],
         inlineRequire: () => n(463398).A,
