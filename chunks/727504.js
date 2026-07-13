@@ -1,17 +1,18 @@
-t.d(n, { H: () => s }), t(632459);
-var a = t(243399),
-    r = t(206311),
-    i = t(120330);
-function u(e) {
-    let n = (0, i.xC)(e);
-    return (0, a.V1)(n.isInteger(), `${e} is not an integer`), n.toNumber();
+"use strict";
+r.d(t, { H: () => s }), r(632459);
+var n = r(243399),
+    i = r(206311),
+    o = r(120330);
+function a(e) {
+    let t = (0, o.xC)(e);
+    return (0, n.V1)(t.isInteger(), `${e} is not an integer`), t.toNumber();
 }
 function s(e) {
     if ("object" != typeof e) {
         if ("string" == typeof e) throw RangeError("Invalid duration format");
         throw TypeError("Invalid duration");
     }
-    let n = {
+    let t = {
         years: 0,
         months: 0,
         weeks: 0,
@@ -24,16 +25,16 @@ function s(e) {
         nanoseconds: 0,
     };
     if (
-        (void 0 !== e.days && (n.days = u(e.days)),
-        void 0 !== e.hours && (n.hours = u(e.hours)),
-        void 0 !== e.microseconds && (n.microseconds = u(e.microseconds)),
-        void 0 !== e.milliseconds && (n.milliseconds = u(e.milliseconds)),
-        void 0 !== e.minutes && (n.minutes = u(e.minutes)),
-        void 0 !== e.months && (n.months = u(e.months)),
-        void 0 !== e.nanoseconds && (n.nanoseconds = u(e.nanoseconds)),
-        void 0 !== e.seconds && (n.seconds = u(e.seconds)),
-        void 0 !== e.weeks && (n.weeks = u(e.weeks)),
-        void 0 !== e.years && (n.years = u(e.years)),
+        (void 0 !== e.days && (t.days = a(e.days)),
+        void 0 !== e.hours && (t.hours = a(e.hours)),
+        void 0 !== e.microseconds && (t.microseconds = a(e.microseconds)),
+        void 0 !== e.milliseconds && (t.milliseconds = a(e.milliseconds)),
+        void 0 !== e.minutes && (t.minutes = a(e.minutes)),
+        void 0 !== e.months && (t.months = a(e.months)),
+        void 0 !== e.nanoseconds && (t.nanoseconds = a(e.nanoseconds)),
+        void 0 !== e.seconds && (t.seconds = a(e.seconds)),
+        void 0 !== e.weeks && (t.weeks = a(e.weeks)),
+        void 0 !== e.years && (t.years = a(e.years)),
         void 0 === e.years &&
             void 0 === e.months &&
             void 0 === e.weeks &&
@@ -48,21 +49,21 @@ function s(e) {
         throw TypeError("Invalid duration format");
     if (
         !(function (e) {
-            let n = (function (e) {
-                for (let n of r.B) {
-                    if (e[n] < 0) return -1;
-                    if (e[n] > 0) return 1;
+            let t = (function (e) {
+                for (let t of i.B) {
+                    if (e[t] < 0) return -1;
+                    if (e[t] > 0) return 1;
                 }
                 return 0;
             })(e);
-            for (let t of r.B) {
-                let r = e[t];
-                if (((0, a.V1)(isFinite(Number(r)), `${t} is not finite`), (r < 0 && n > 0) || (r > 0 && n < 0)))
+            for (let r of i.B) {
+                let i = e[r];
+                if (((0, n.V1)(isFinite(Number(i)), `${r} is not finite`), (i < 0 && t > 0) || (i > 0 && t < 0)))
                     return !1;
             }
             return !0;
-        })(n)
+        })(t)
     )
         throw RangeError("Invalid duration format");
-    return n;
+    return t;
 }

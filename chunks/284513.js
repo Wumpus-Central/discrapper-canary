@@ -71,44 +71,49 @@ function O(e) {
             className: a,
             lineClamp: s,
             imagePosition: l = "right",
+            hideLabel: d = !1,
         } = e,
-        { resolveFieldValue: d, numberFormat: c } = eo();
+        { resolveFieldValue: c, numberFormat: u } = eo();
     if (null == t) return r ? (0, o.jsx)(N, { variant: n, className: a }) : null;
-    let u = d(t.fields.text, [p.STRING, p.NUMBER]),
-        _ = d(t.fields.label, [p.STRING, p.NUMBER]),
-        E = d(t.fields.icon, [p.MEDIA]);
-    if (null == u && null == _) return (0, o.jsx)(N, { variant: n, className: a });
-    let I = null != E ? (0, o.jsx)(g, { media: E.media, variant: n }) : null;
+    let _ = c(t.fields.text, [p.STRING, p.NUMBER]),
+        E = d ? null : c(t.fields.label, [p.STRING, p.NUMBER]),
+        I = c(t.fields.icon, [p.MEDIA]);
+    if (null == _ && null == E) return (0, o.jsx)(N, { variant: n, className: a });
+    let f = null != I ? (0, o.jsx)(g, { media: I.media, variant: n }) : null;
     return (0, o.jsxs)("div", {
         className: A()(C.k, a),
         children: [
-            null != I && "left" === l ? I : null,
+            null != f && "left" === l ? f : null,
             (0, o.jsxs)(h.E, {
                 variant: n,
                 color: i,
                 lineClamp: s,
                 children: [
-                    null == _ || "" === _.value
+                    null == E || "" === E.value
                         ? null
-                        : "number" == typeof _.value
-                          ? `${c.format(_.value)}: `
-                          : `${_.value}: `,
-                    null == u || "" === u.value ? "\u2013" : "number" == typeof u.value ? c.format(u.value) : u.value,
+                        : "number" == typeof E.value
+                          ? `${u.format(E.value)}: `
+                          : `${E.value}: `,
+                    null == _ || "" === _.value ? "\u2013" : "number" == typeof _.value ? u.format(_.value) : _.value,
                 ],
             }),
-            null != I && "right" === l ? I : null,
+            null != f && "right" === l ? f : null,
         ],
     });
 }
 var R = n(157841);
-function L() {
-    let { surfaceConfig: e } = eo();
+function L(e) {
+    let { variant: t = "default", textColor: n } = e,
+        { surfaceConfig: i } = eo(),
+        r = "badge" === t;
     return (0, o.jsx)("div", {
         className: R.z,
         children: (0, o.jsx)(O, {
-            component: e.components.stat,
+            component: i.components.stat,
             className: R.Q,
-            variant: "text-xs/semibold",
+            variant: r ? "text-xs/normal" : "text-xs/semibold",
+            color: n,
+            hideLabel: r,
             required: !0,
             imagePosition: "left",
             lineClamp: 1,
@@ -529,7 +534,7 @@ let ed = {
         [_.MINI_PROFILE_HERO_STAT]: () => (0, o.jsx)(W, {}),
         [_.MINI_PROFILE_CONTAINED_STAT]: () => (0, o.jsx)(H, {}),
     },
-    [u.m.ACTIVITY_ACCESSORY]: { [_.ACTIVITY_ACCESSORY_STAT]: () => (0, o.jsx)(L, {}) },
+    [u.m.ACTIVITY_ACCESSORY]: { [_.ACTIVITY_ACCESSORY_STAT]: (e) => (0, o.jsx)(L, { ...e }) },
     [u.m.ADD_WIDGET_PREVIEW]: {
         [_.ADD_WIDGET_PREVIEW_HERO]: (e) => (0, o.jsx)(x, { ...e }),
         [_.ADD_WIDGET_PREVIEW_CONTAINED]: (e) => (0, o.jsx)(P, { ...e }),

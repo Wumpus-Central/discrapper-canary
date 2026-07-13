@@ -1,73 +1,77 @@
 "use strict";
 n.d(t, {
-    $X: () => es,
-    K7: () => et,
-    MK: () => J,
-    N5: () => H,
-    R_: () => X,
-    Rq: () => eo,
-    Xr: () => en,
-    Xy: () => z,
-    Y8: () => ei,
-    Zc: () => Z,
-    er: () => K,
-    fM: () => $,
-    fg: () => er,
-    iT: () => eu,
-    iq: () => q,
-    mG: () => el,
-    sp: () => ee,
-    tR: () => Q,
-    zi: () => ea,
+    $X: () => eo,
+    K7: () => er,
+    MK: () => en,
+    N5: () => K,
+    R_: () => ee,
+    Rq: () => ec,
+    Xr: () => ea,
+    Xy: () => X,
+    Y8: () => es,
+    Yq: () => e_,
+    Zc: () => J,
+    er: () => q,
+    fM: () => Z,
+    fg: () => el,
+    iT: () => eA,
+    iq: () => Q,
+    mG: () => eE,
+    sp: () => ei,
+    tR: () => et,
+    zi: () => ed,
 });
 var i,
     r = n(627968),
-    s = n(64700),
-    a = n(503698),
-    o = n.n(a),
-    l = n(989349),
-    u = n.n(l),
-    c = n(681154),
-    d = n(974690),
-    _ = n(379834),
+    a = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    o = n(989349),
+    d = n.n(o),
+    c = n(284513),
+    u = n(598748),
+    _ = n(681154),
+    E = n(974690),
+    A = n(379834),
     h = n(990078),
-    f = n(834730),
-    p = n(983851),
-    E = n(661531),
-    m = n(183623),
-    g = n(323384),
-    A = n(687966),
-    I = n(177953),
-    T = n(432017),
-    S = n(246913),
-    y = n(291747),
-    C = n(417270),
-    N = n(768622),
-    v = n(369606),
-    R = n(825860),
-    O = n(605323),
+    I = n(834730),
+    f = n(983851),
+    p = n(661531),
+    T = n(183623),
+    m = n(323384),
+    g = n(687966),
+    S = n(177953),
+    N = n(432017),
+    C = n(246913),
+    O = n(291747),
+    R = n(417270),
+    L = n(768622),
+    D = n(369606),
+    y = n(825860),
+    v = n(605323),
     b = n(748562),
-    D = n(306788),
-    L = n(47167),
+    M = n(306788),
+    P = n(531913),
+    U = n(47167),
     w = n(927813),
-    M = n(403362),
-    P = n(935208),
-    x = n(20805),
-    k = n(202195),
-    U = n(751765),
-    G = n(299846),
-    F = n(693879);
+    G = n(403362),
+    x = n(935208),
+    k = n(20805),
+    F = n(202195),
+    V = n(583846),
+    B = n(299846),
+    H = n(693879);
 n(424994);
-var V = n(375708),
-    B = n(164123);
-let j = {
-    [c.ContentInventoryEntryType.TOP_ARTIST]: [ei],
-    [c.ContentInventoryEntryType.PLAYED_GAME]: [q, Z, z, es, Q, et, er, ee, J],
-    [c.ContentInventoryEntryType.TOP_GAME]: [en],
-    [c.ContentInventoryEntryType.WATCHED_MEDIA]: [ea, eo],
-    [c.ContentInventoryEntryType.LAUNCHED_ACTIVITY]: [q, Z, z, es, er, J],
+var j = n(375708),
+    W = n(164123);
+let Y = {
+    [_.ContentInventoryEntryType.TOP_ARTIST]: [es],
+    [_.ContentInventoryEntryType.PLAYED_GAME]: [Q, J, X, eo, et, er, el, ei, en],
+    [_.ContentInventoryEntryType.TOP_GAME]: [ea],
+    [_.ContentInventoryEntryType.WATCHED_MEDIA]: [ed, ec],
+    [_.ContentInventoryEntryType.LAUNCHED_ACTIVITY]: [Q, J, X, eo, el, en],
 };
-var H =
+var K =
     (((i = {})[(i.CARD = 0)] = "CARD"),
     (i[(i.POPOUT = 1)] = "POPOUT"),
     (i[(i.STREAMING_POPOUT = 2)] = "STREAMING_POPOUT"),
@@ -80,227 +84,249 @@ var H =
     (i[(i.APP_LAUNCHER = 9)] = "APP_LAUNCHER"),
     (i[(i.VOICE_USER_POPOUT = 10)] = "VOICE_USER_POPOUT"),
     i);
-let Y = s.createContext({});
-function W() {
-    return s.useContext(Y);
+let $ = a.createContext({});
+function z() {
+    return a.useContext($);
 }
-function K(e) {
+function q(e) {
     let { children: t, ...n } = e;
-    return (0, r.jsx)("div", { className: B.fC, ...n, children: t });
+    return (0, r.jsx)("div", { className: W.fC, ...n, children: t });
 }
-function $(e) {
-    let { Icon: t, text: n, iconColor: i, tooltipText: s, showTooltip: a } = e,
-        { defaultTextColor: o, defaultIconColor: l, location: u } = W();
+function Z(e) {
+    let { Icon: t, text: n, iconColor: i, tooltipText: a, showTooltip: s } = e,
+        { defaultTextColor: l, defaultIconColor: o, location: d } = z();
     return (0, r.jsx)(h.m, {
-        text: s,
-        shouldShow: a,
-        children: (0, r.jsxs)(K, {
+        text: a,
+        shouldShow: s,
+        children: (0, r.jsxs)(q, {
             children: [
-                (0, r.jsx)(t, { size: "xxs", color: i ?? l }),
-                (0, r.jsx)(f.E, {
+                (0, r.jsx)(t, { size: "xxs", color: i ?? o }),
+                (0, r.jsx)(I.E, {
                     variant: "text-xs/normal",
-                    color: o,
-                    className: B.KT,
-                    scaleFontToUserSetting: 5 === u,
+                    color: l,
+                    className: W.KT,
+                    scaleFontToUserSetting: 5 === d,
                     children: n,
                 }),
             ],
         }),
     });
 }
-function z(e) {
+function X(e) {
     let { entry: t } = e,
-        { channel: n } = (0, k.A)(t),
-        { location: i } = W(),
-        s = (0, L.Ay)(n);
-    return null == n || (0, M.S1)(i, [1, 2, 3, 4]) ? null : (0, r.jsx)($, { Icon: p.H, text: s });
+        { channel: n } = (0, F.A)(t),
+        { location: i } = z(),
+        a = (0, U.Ay)(n);
+    return null == n || (0, G.S1)(i, [1, 2, 3, 4]) ? null : (0, r.jsx)(Z, { Icon: f.H, text: a });
 }
-function q(e) {
+function Q(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: s, location: a } = W(),
-        o = (0, U.Hd)(t) && (0, M.S1)(a, [0, 4, 7, 9]),
-        l = o ? E.A.colors.TEXT_FEEDBACK_POSITIVE : s,
-        { streamPreviewUrl: u } = (0, k.A)(t),
-        c = null != u ? m.F : (0, x.yl)(t) ? g.k : A._;
-    return (0, r.jsxs)(K, {
+        { defaultTextColor: i, defaultIconColor: a, location: s } = z(),
+        l = (0, V.Hd)(t) && (0, G.S1)(s, [0, 4, 7, 9]),
+        o = l ? p.A.colors.TEXT_FEEDBACK_POSITIVE : a,
+        { streamPreviewUrl: d } = (0, F.A)(t),
+        c = null != d ? T.F : (0, k.yl)(t) ? m.k : g._;
+    return (0, r.jsxs)(q, {
         children: [
-            (0, r.jsx)(c, { size: "xxs", color: l }),
-            (0, r.jsx)(F.A, {
+            (0, r.jsx)(c, { size: "xxs", color: o }),
+            (0, r.jsx)(H.A, {
                 entry: t,
-                textColor: o ? "text-feedback-positive" : i,
+                textColor: l ? "text-feedback-positive" : i,
                 hovered: n,
-                scaleFontToUserSetting: 5 === a,
+                scaleFontToUserSetting: 5 === s,
             }),
         ],
     });
 }
-function Z(e) {
+function J(e) {
     let { entry: t } = e,
-        { defaultTextColor: n, defaultIconColor: i } = W(),
-        { state: s, party: a } = (0, G.u)(t),
-        o = (0, U.gF)(s, a);
-    return null == o
+        { defaultTextColor: n, defaultIconColor: i } = z(),
+        { state: a, party: s } = (0, B.u)(t),
+        l = (0, V.gF)(a, s);
+    return null == l
         ? null
-        : (0, r.jsxs)(K, {
+        : (0, r.jsxs)(q, {
               children: [
-                  (0, r.jsx)(I.n, { size: "xxs", color: i }),
-                  (0, r.jsx)(f.E, { variant: "text-xs/normal", color: n, lineClamp: 1, children: o }),
+                  (0, r.jsx)(S.n, { size: "xxs", color: i }),
+                  (0, r.jsx)(I.E, { variant: "text-xs/normal", color: n, lineClamp: 1, children: l }),
               ],
           });
 }
-function X(e) {
+function ee(e) {
     let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: s, location: a } = W(),
-        o = (0, U.Hd)(t) && (0, M.S1)(a, [0, 4]),
-        l = o ? E.A.colors.TEXT_FEEDBACK_POSITIVE : s;
+        { defaultTextColor: i, defaultIconColor: a, location: s } = z(),
+        l = (0, V.Hd)(t) && (0, G.S1)(s, [0, 4]),
+        o = l ? p.A.colors.TEXT_FEEDBACK_POSITIVE : a;
     return (0, r.jsxs)("div", {
-        className: B.fC,
+        className: W.fC,
         children: [
-            (0, r.jsx)(T.T, { size: "xxs", color: l }),
-            (0, r.jsx)(F.A, { entry: t, textColor: o ? "text-feedback-positive" : i, hovered: n }),
+            (0, r.jsx)(N.T, { size: "xxs", color: o }),
+            (0, r.jsx)(H.A, { entry: t, textColor: l ? "text-feedback-positive" : i, hovered: n }),
         ],
     });
 }
-function Q(e) {
-    let { entry: t } = e,
-        { location: n } = W(),
-        i = (0, M.S1)(n, [0, 3]) ? E.A.colors.STATUS_POSITIVE : void 0;
-    return (0, U.Rf)(t) ? (0, r.jsx)($, { Icon: S.P, text: V.intl.string(V.t.keY6mW), iconColor: i }) : null;
-}
-function J(e) {
-    let { entry: t } = e,
-        { location: n } = W();
-    if (!(0, U.L7)(t)) return null;
-    let i = (0, U.JM)(t),
-        { text: s, tooltipText: a } = (0, U.Pj)(t);
-    return null == s ? null : (0, r.jsx)($, { Icon: y.x, text: s, tooltipText: a, showTooltip: 0 === n && !i });
-}
-function ee(e) {
-    let { entry: t } = e,
-        { location: n } = W(),
-        i = 0 !== n,
-        s = (0, U.KH)(t);
-    if (null == s) return null;
-    let a = (0, U.us)(s);
-    return (0, r.jsx)($, { Icon: C.m, showTooltip: !i, tooltipText: a, text: i ? a : V.intl.string(V.t.adnLsB) });
-}
 function et(e) {
     let { entry: t } = e,
-        { location: n } = W(),
-        i = (0, U.iy)(t);
-    return (0, U.BZ)(t)
-        ? (0, r.jsx)($, {
-              Icon: N.g,
-              showTooltip: 0 === n,
-              text: V.intl.formatToPlainString(V.t["Klie/P"], { days: i }),
-              tooltipText: V.intl.formatToPlainString(V.t.PwMe0s, { days: i }),
-          })
-        : null;
+        { location: n } = z(),
+        i = (0, G.S1)(n, [0, 3]) ? p.A.colors.STATUS_POSITIVE : void 0;
+    return (0, V.Rf)(t) ? (0, r.jsx)(Z, { Icon: C.P, text: j.intl.string(j.t.keY6mW), iconColor: i }) : null;
 }
 function en(e) {
     let { entry: t } = e,
-        { location: n } = W(),
+        { location: n } = z();
+    if (!(0, V.L7)(t)) return null;
+    let i = (0, V.JM)(t),
+        { text: a, tooltipText: s } = (0, V.Pj)(t);
+    return null == a ? null : (0, r.jsx)(Z, { Icon: O.x, text: a, tooltipText: s, showTooltip: 0 === n && !i });
+}
+function ei(e) {
+    let { entry: t } = e,
+        { location: n } = z(),
         i = 0 !== n,
-        s = (0, U.ty)(t);
-    if (null == s) return null;
-    let a = i ? V.t.C0AxoR : V.t.SDRHgr;
-    return (0, r.jsx)($, {
-        Icon: v.O,
+        a = (0, V.KH)(t);
+    if (null == a) return null;
+    let s = (0, V.us)(a);
+    return (0, r.jsx)(Z, { Icon: R.m, showTooltip: !i, tooltipText: s, text: i ? s : j.intl.string(j.t.adnLsB) });
+}
+function er(e) {
+    let { entry: t } = e,
+        { location: n } = z(),
+        i = (0, V.iy)(t);
+    return (0, V.BZ)(t)
+        ? (0, r.jsx)(Z, {
+              Icon: L.g,
+              showTooltip: 0 === n,
+              text: j.intl.formatToPlainString(j.t["Klie/P"], { days: i }),
+              tooltipText: j.intl.formatToPlainString(j.t.PwMe0s, { days: i }),
+          })
+        : null;
+}
+function ea(e) {
+    let { entry: t } = e,
+        { location: n } = z(),
+        i = 0 !== n,
+        a = (0, V.ty)(t);
+    if (null == a) return null;
+    let s = i ? j.t.C0AxoR : j.t.SDRHgr;
+    return (0, r.jsx)(Z, {
+        Icon: D.O,
         text: (0, r.jsxs)(r.Fragment, {
             children: [
-                V.intl.string(V.t["/50eHi"]),
+                j.intl.string(j.t["/50eHi"]),
                 i ? " \u2014 " : ": ",
-                V.intl.format(a, { hours: Math.round(s / w.A.Seconds.HOUR) }),
+                j.intl.format(s, { hours: Math.round(a / w.A.Seconds.HOUR) }),
             ],
         }),
     });
 }
-function ei(e) {
-    let { entry: t } = e,
-        { location: n } = W(),
-        i = (0, U.Pv)(t, d.K.AGGREGATE_COUNT)?.count;
-    if (null == i) return null;
-    let s = (0, M.S1)(n, [1, 2, 5])
-        ? V.intl.formatToPlainString(V.t.HtifnG, { count: i })
-        : V.intl.formatToPlainString(V.t["jq/Bmu"], { count: i });
-    return (0, r.jsx)($, { Icon: v.O, text: s });
-}
-function er(e) {
-    let { entry: t } = e,
-        { location: n } = W();
-    if (3 === n) return null;
-    let i = (0, U.CZ)(t);
-    return null == i || i === _.m.TRENDING_TYPE_UNSPECIFIED
-        ? null
-        : (0, r.jsx)($, { Icon: R.Y, text: V.intl.string(V.t.kAlUsy) });
-}
 function es(e) {
     let { entry: t } = e,
-        { location: n } = W();
-    if (3 === n) return null;
-    let i = P.default.extractTimestamp(t.extra.application_id);
-    return u()().diff(u()(i), "days") > 7 ? null : (0, r.jsx)($, { Icon: O.f, text: V.intl.string(V.t.vYuyWf) });
+        { location: n } = z(),
+        i = (0, V.Pv)(t, E.K.AGGREGATE_COUNT)?.count;
+    if (null == i) return null;
+    let a = (0, G.S1)(n, [1, 2, 5])
+        ? j.intl.formatToPlainString(j.t.HtifnG, { count: i })
+        : j.intl.formatToPlainString(j.t["jq/Bmu"], { count: i });
+    return (0, r.jsx)(Z, { Icon: D.O, text: a });
 }
-function ea(e) {
-    let { entry: t, hovered: n } = e,
-        { defaultTextColor: i, defaultIconColor: s, location: a } = W(),
-        o = (0, U.Hd)(t) && 4 === a,
-        l = o ? E.A.colors.TEXT_FEEDBACK_POSITIVE : s;
-    return (0, r.jsxs)("div", {
-        className: B.fC,
-        children: [
-            (0, r.jsx)(b.U, { size: "xxs", color: l }),
-            (0, r.jsx)(F.A, { entry: t, textColor: o ? "text-feedback-positive" : i, hovered: n }),
-        ],
-    });
+function el(e) {
+    let { entry: t } = e,
+        { location: n } = z();
+    if (3 === n) return null;
+    let i = (0, V.CZ)(t);
+    return null == i || i === A.m.TRENDING_TYPE_UNSPECIFIED
+        ? null
+        : (0, r.jsx)(Z, { Icon: y.Y, text: j.intl.string(j.t.kAlUsy) });
 }
 function eo(e) {
     let { entry: t } = e,
-        n = (0, U.kR)(t.extra.media_assets_large_text);
-    return null == n ? null : (0, r.jsx)($, { Icon: D.K, text: n });
+        { location: n } = z();
+    if (3 === n) return null;
+    let i = x.default.extractTimestamp(t.extra.application_id);
+    return d()().diff(d()(i), "days") > 7 ? null : (0, r.jsx)(Z, { Icon: v.f, text: j.intl.string(j.t.vYuyWf) });
 }
-function el(e) {
+function ed(e) {
+    let { entry: t, hovered: n } = e,
+        { defaultTextColor: i, defaultIconColor: a, location: s } = z(),
+        l = (0, V.Hd)(t) && 4 === s,
+        o = l ? p.A.colors.TEXT_FEEDBACK_POSITIVE : a;
+    return (0, r.jsxs)("div", {
+        className: W.fC,
+        children: [
+            (0, r.jsx)(b.U, { size: "xxs", color: o }),
+            (0, r.jsx)(H.A, { entry: t, textColor: l ? "text-feedback-positive" : i, hovered: n }),
+        ],
+    });
+}
+function ec(e) {
+    let { entry: t } = e,
+        n = (0, V.kR)(t.extra.media_assets_large_text);
+    return null == n ? null : (0, r.jsx)(Z, { Icon: M.K, text: n });
+}
+function eu(e) {
+    let { userId: t, widgetApplicationId: n } = e,
+        { defaultTextColor: i } = z(),
+        a = (0, P.A)(t, n),
+        s = a.surfaceConfigs[u.m.ACTIVITY_ACCESSORY];
+    return null != s && a.hasIdentity
+        ? (0, r.jsx)(q, {
+              children: (0, r.jsx)(c.kH, {
+                  ...a,
+                  surface: u.m.ACTIVITY_ACCESSORY,
+                  surfaceConfig: s,
+                  layoutProps: { variant: "badge", textColor: i },
+              }),
+          })
+        : null;
+}
+function e_(e) {
+    let { entry: t } = e;
+    return "applicationWidgetPreview" in t && null != t.applicationWidgetPreview
+        ? (0, r.jsx)(eu, { userId: t.author_id, widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId })
+        : null;
+}
+function eE(e) {
     let t,
-        { location: n, children: i, className: s } = e;
+        { location: n, children: i, className: a } = e;
     return (
-        (t = (0, M.S1)(n, [1, 5, 6])
+        (t = (0, G.S1)(n, [1, 5, 6])
             ? {
                   defaultTextColor: "content-inventory-overlay-text-secondary",
-                  defaultIconColor: E.A.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
+                  defaultIconColor: p.A.colors.CONTENT_INVENTORY_OVERLAY_TEXT_SECONDARY,
               }
             : 2 === n
               ? { defaultTextColor: "interactive-text-default" }
               : 3 === n
                 ? { defaultTextColor: "text-muted" }
                 : 4 === n
-                  ? { defaultTextColor: "text-subtle", defaultIconColor: E.A.colors.TEXT_SUBTLE }
+                  ? { defaultTextColor: "text-subtle", defaultIconColor: p.A.colors.TEXT_SUBTLE }
                   : { defaultTextColor: "text-subtle" }),
-        (0, r.jsx)(Y.Provider, {
+        (0, r.jsx)($.Provider, {
             value: { location: n, ...t },
             children: (0, r.jsx)("div", {
-                className: o()(B.cV, { [B.u3]: 0 === n, [B.BQ]: (0, M.S1)(n, [1, 2, 10]), [B.DY]: 3 === n }, s),
+                className: l()(W.cV, { [W.u3]: 0 === n, [W.BQ]: (0, G.S1)(n, [1, 2, 10]), [W.DY]: 3 === n }, a),
                 children: i,
             }),
         })
     );
 }
-function eu(e) {
+function eA(e) {
     let { entry: t, location: n, className: i } = e,
-        s = (function (e) {
+        a = (function (e) {
             switch (e.content_type) {
-                case c.ContentInventoryEntryType.TOP_ARTIST:
-                    return j[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
-                case c.ContentInventoryEntryType.PLAYED_GAME:
-                    return j[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
-                case c.ContentInventoryEntryType.TOP_GAME:
-                    return j[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
-                case c.ContentInventoryEntryType.WATCHED_MEDIA:
-                    return j[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
-                case c.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
-                    return j[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+                case _.ContentInventoryEntryType.TOP_ARTIST:
+                    return Y[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+                case _.ContentInventoryEntryType.PLAYED_GAME:
+                    return Y[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+                case _.ContentInventoryEntryType.TOP_GAME:
+                    return Y[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+                case _.ContentInventoryEntryType.WATCHED_MEDIA:
+                    return Y[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
+                case _.ContentInventoryEntryType.LAUNCHED_ACTIVITY:
+                    return Y[e.content_type].map((t, n) => (0, r.jsx)(t, { entry: e }, n));
                 default:
                     return null;
             }
         })(t);
-    return null == s ? null : (0, r.jsx)(el, { location: n, className: i, children: s });
+    return null == a ? null : (0, r.jsx)(eE, { location: n, className: i, children: a });
 }

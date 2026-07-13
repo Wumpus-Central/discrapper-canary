@@ -1,51 +1,52 @@
-l.d(t, { A: () => c });
-var n = l(735438),
-    a = l(17928),
-    s = l(228366);
-let i = new Map();
-function r(e) {
+"use strict";
+n.d(t, { A: () => c });
+var i = n(735438),
+    r = n(17928),
+    a = n(228366);
+let s = new Map();
+function l(e) {
     let t = !1;
     return (
-        Object.entries((0, n.groupBy)(e, (e) => e.application_id))
+        Object.entries((0, i.groupBy)(e, (e) => e.application_id))
             .map((e) => {
-                let [t, l] = e;
+                let [t, n] = e;
                 return [
                     t,
-                    l
+                    n
                         .flatMap((e) => e.resolved_assets ?? [])
                         .filter((e) => {
-                            let l;
-                            return null == (l = i.get(t)?.[e.key]) || new Date(e.updated_at) > new Date(l.updated_at);
+                            let n;
+                            return null == (n = s.get(t)?.[e.key]) || new Date(e.updated_at) > new Date(n.updated_at);
                         }),
                 ];
             })
             .filter((e) => {
-                let [t, l] = e;
-                return l.length > 0;
+                let [t, n] = e;
+                return n.length > 0;
             })
             .forEach((e) => {
-                let [l, n] = e;
-                return (t = !0), i.set(l, { ...i.get(l), ...Object.fromEntries(n.map((e) => [e.key, e])) });
+                let [n, i] = e;
+                return (t = !0), s.set(n, { ...s.get(n), ...Object.fromEntries(i.map((e) => [e.key, e])) });
             }),
         t
     );
 }
-function u(e) {
-    return r(Object.values(e.configs).flat());
+function o(e) {
+    return l(Object.values(e.configs).flat());
 }
-class o extends a.Ay.Store {
+class d extends r.Ay.Store {
     static displayName = "ApplicationAssetsV2Store";
     getAssets(e) {
-        return i.get(e);
+        return s.get(e);
     }
 }
-let c = new o(s.h, {
+let c = new d(a.h, {
     LOGOUT: function () {
-        i.clear();
+        s.clear();
     },
     APPLICATION_WIDGET_CONFIG_FETCH_SUCCESS: function (e) {
-        return r(e.configs);
+        return l(e.configs);
     },
-    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: u,
-    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: u,
+    APPLICATION_WIDGET_CONFIG_FEATURED_FETCH_SUCCESS: o,
+    APPLICATION_WIDGET_CONFIG_DEVELOPER_FETCH_SUCCESS: o,
 });

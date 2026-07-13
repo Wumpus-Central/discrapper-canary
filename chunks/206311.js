@@ -1,5 +1,6 @@
-t.d(n, { B: () => a, u: () => r }), t(632459);
-let a = [
+"use strict";
+r.d(t, { B: () => n, u: () => i }), r(632459);
+let n = [
         "years",
         "months",
         "weeks",
@@ -11,7 +12,7 @@ let a = [
         "microseconds",
         "nanoseconds",
     ],
-    r = [
+    i = [
         {
             valueField: "years",
             styleSlot: "years",

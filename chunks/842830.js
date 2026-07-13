@@ -1,4 +1,5 @@
-t.d(n, { N: () => a });
-function a(e) {
+"use strict";
+function n(e) {
     return Intl.getCanonicalLocales(e);
 }
+r.d(t, { N: () => n });

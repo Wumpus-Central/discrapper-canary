@@ -1,9 +1,10 @@
-t.d(n, { A4: () => u, Nt: () => i, V1: () => r });
-var a = t(315847);
-function r(e, n, t = Error) {
-    if (!e) throw new t(n);
+"use strict";
+r.d(t, { A4: () => a, Nt: () => o, V1: () => i });
+var n = r(315847);
+function i(e, t, r = Error) {
+    if (!e) throw new r(t);
 }
-let i = (0, a.B)((...e) => new Intl.NumberFormat(...e), { strategy: a.W.variadic });
-(0, a.B)((...e) => new Intl.PluralRules(...e), { strategy: a.W.variadic }),
-    (0, a.B)((...e) => new Intl.Locale(...e), { strategy: a.W.variadic });
-let u = (0, a.B)((...e) => new Intl.ListFormat(...e), { strategy: a.W.variadic });
+let o = (0, n.B)((...e) => new Intl.NumberFormat(...e), { strategy: n.W.variadic });
+(0, n.B)((...e) => new Intl.PluralRules(...e), { strategy: n.W.variadic }),
+    (0, n.B)((...e) => new Intl.Locale(...e), { strategy: n.W.variadic });
+let a = (0, n.B)((...e) => new Intl.ListFormat(...e), { strategy: n.W.variadic });

@@ -1,1 +1,6 @@
-t.exports = { kL: "container__39f84", Qs: "content__39f84", NO: "viewMoreButton__39f84" };
+e.exports = {
+    kL: "container__39f84",
+    Qs: "content__39f84",
+    NO: "viewMoreButton__39f84",
+    O7: "viewMoreButtonCompact__39f84",
+};

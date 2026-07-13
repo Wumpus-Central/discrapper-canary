@@ -1,93 +1,117 @@
 "use strict";
-n.d(t, { A: () => y, n: () => S });
+n.d(t, { A: () => L, n: () => R });
 var i = n(627968),
     r = n(64700),
-    s = n(696292),
-    a = n(554146),
-    o = n(414499),
-    l = n(661531),
-    u = n(834730),
+    a = n(696292),
+    s = n(554146),
+    l = n(414499),
+    o = n(661531),
+    d = n(834730),
     c = n(812993),
-    d = n(737393),
+    u = n(737393),
     _ = n(627363),
-    h = n(131607),
-    f = n(932413),
-    p = n(939341),
-    E = n(263577),
-    m = n(506326),
-    g = n(868065),
-    A = n(375708),
-    I = n(383374),
-    T = n(352760);
-let S = [m.iq, m.Zc, m.Xy, m.$X, m.tR, m.K7, m.fg, m.sp, m.MK],
-    y = r.memo(function (e) {
-        let { entry: t, channel: n, selected: r, hovered: y, isFirstApplicationOccurrence: C } = e,
-            { largeImage: N } = (0, p.nO)({
+    E = n(131607),
+    A = n(932413),
+    h = n(975732),
+    I = n(964195),
+    f = n(939341),
+    p = n(263577),
+    T = n(506326),
+    m = n(868065),
+    g = n(424994),
+    S = n(518477),
+    N = n(375708),
+    C = n(383374),
+    O = n(352760);
+let R = [T.iq, T.Zc, T.Xy, T.$X, T.tR, T.K7, T.fg, T.sp, T.MK],
+    L = r.memo(function (e) {
+        let {
+                entry: t,
+                channel: n,
+                selected: r,
+                hovered: L,
+                isFirstApplicationOccurrence: D,
+                trackRankingItemInteraction: y,
+            } = e,
+            { largeImage: v } = (0, f.nO)({
                 entry: t,
                 showCoverImage: !1,
                 trackingSource: "memberlist_gaming_content_row",
             }),
-            { data: v } = (0, _.YY)(t.extra.application_id),
-            R = (0, d.JC)(v) && C,
-            O = R ? [a.M.CLOUD_PLAY_NEW_BADGE] : [],
-            [b] = (0, h.kn)(O);
-        return (0, i.jsxs)(g.Zp, {
+            { data: b } = (0, _.YY)(t.extra.application_id),
+            M = (0, u.JC)(b) && D,
+            P = M ? [s.M.CLOUD_PLAY_NEW_BADGE] : [],
+            [U] = (0, E.kn)(P);
+        return (0, i.jsxs)(m.Zp, {
             selected: r,
             usesCardRows: !0,
             children: [
-                (0, i.jsx)(f.A, {
+                (0, i.jsx)(A.A, {
                     applicationId: t.extra.application_id,
-                    questContent: s.u.MEMBERS_LIST_CARD,
+                    questContent: a.u.MEMBERS_LIST_CARD,
                     children: (e) =>
-                        (0, i.jsxs)(g.dM, {
+                        (0, i.jsxs)(m.dM, {
                             ref: e,
                             children: [
-                                (0, i.jsxs)(g.UA, {
+                                (0, i.jsxs)(m.UA, {
                                     children: [
-                                        (0, i.jsx)(g.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                                        (0, i.jsx)(g.ZB, { children: t.extra.game_name }),
-                                        (0, i.jsx)(m.mG, {
-                                            location: m.N5.CARD,
-                                            children: S.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: y }, n)),
+                                        (0, i.jsx)(m.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
+                                        (0, i.jsx)(m.ZB, { children: t.extra.game_name }),
+                                        (0, i.jsx)(T.mG, {
+                                            location: T.N5.CARD,
+                                            children: R.map((e, n) => (0, i.jsx)(e, { entry: t, hovered: L }, n)),
                                         }),
                                     ],
                                 }),
-                                (0, i.jsx)(E.V, {
-                                    alt: N?.text ?? N?.alt,
-                                    src: N?.src,
+                                (0, i.jsx)(p.V, {
+                                    alt: v?.text ?? v?.alt,
+                                    src: v?.src,
                                     size: 48,
-                                    className: T.xn,
-                                    showTooltip: N?.text != null,
+                                    className: O.xn,
+                                    showTooltip: v?.text != null,
                                 }),
                             ],
                         }),
                 }),
-                R &&
+                M &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(g.ik, {}),
-                            (0, i.jsxs)(g.dM, {
-                                className: I.D,
+                            (0, i.jsx)(m.ik, {}),
+                            (0, i.jsxs)(m.dM, {
+                                className: C.DK,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: I.t,
+                                        className: C.tJ,
                                         children: [
-                                            (0, i.jsx)(o.h, { color: l.A.colors.ICON_SUBTLE, size: "xxs" }),
-                                            (0, i.jsx)(u.E, {
+                                            (0, i.jsx)(l.h, { color: o.A.colors.ICON_SUBTLE, size: "xxs" }),
+                                            (0, i.jsx)(d.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-subtle",
-                                                children: A.intl.string(A.t["5HiF2i"]),
+                                                children: N.intl.string(N.t["5HiF2i"]),
                                             }),
                                         ],
                                     }),
-                                    b === a.M.CLOUD_PLAY_NEW_BADGE &&
+                                    U === s.M.CLOUD_PLAY_NEW_BADGE &&
                                         (0, i.jsx)(c.Lp, {
-                                            text: A.intl.string(A.t.y2b7CA),
-                                            color: l.A.colors.BACKGROUND_BRAND.css,
+                                            text: N.intl.string(N.t.y2b7CA),
+                                            color: o.A.colors.BACKGROUND_BRAND.css,
                                         }),
                                 ],
                             }),
                         ],
+                    }),
+                "applicationWidgetPreview" in t &&
+                    null != t.applicationWidgetPreview &&
+                    (0, i.jsx)(I.F, {
+                        userId: t.author_id,
+                        widgetApplicationId: t.applicationWidgetPreview.widgetApplicationId,
+                        hasWidget: t.applicationWidgetPreview.hasWidget,
+                        className: C.AB,
+                        compactViewMore: !0,
+                        onClickViewMore: () => {
+                            y(g.PA.APPLICATION_WIDGET_PREVIEW_VIEW_MORE),
+                                (0, h.openUserProfileModal)({ userId: t.author_id, tabSection: S.RP.WIDGETS });
+                        },
                     }),
             ],
         });

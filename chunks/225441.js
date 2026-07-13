@@ -1,5 +1,6 @@
-t.d(n, { P: () => a });
-let a = [
+"use strict";
+r.d(t, { P: () => n });
+let n = [
     "adlm",
     "ahom",
     "arab",

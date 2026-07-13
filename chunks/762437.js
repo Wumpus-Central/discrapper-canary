@@ -1,5 +1,6 @@
-t.d(n, { N: () => a });
-let a = {
+"use strict";
+r.d(t, { N: () => n });
+let n = {
     default: ":",
     localeData: {
         aa: { nu: ["latn"] },

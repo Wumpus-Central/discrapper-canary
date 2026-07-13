@@ -1,6 +1,7 @@
-t.d(n, { n: () => r });
-let a = new WeakMap();
-function r(e) {
-    let n = a.get(e);
-    return n || ((n = Object.create(null)), a.set(e, n)), n;
+"use strict";
+r.d(t, { n: () => i });
+let n = new WeakMap();
+function i(e) {
+    let t = n.get(e);
+    return t || ((t = Object.create(null)), n.set(e, t)), t;
 }
