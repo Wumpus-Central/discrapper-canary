@@ -208,7 +208,7 @@
 
 .displayName_a4e9ae {
     color: var(--text-default);
-    font-size: 2.75rem;
+    font-size: 44px;
     line-height: normal;
     max-width: 380px;
     overflow: hidden;
@@ -218,36 +218,36 @@
 
 @container premium-marketing-page-container (max-width: 720px) {
     .displayName_a4e9ae {
-        font-size: 2.625rem
+        font-size: 42px
     }
 }
 
 @container premium-marketing-page-container (max-width: 540px) {
     .displayName_a4e9ae {
-        font-size: 2.375rem
+        font-size: 38px
     }
 }
 
 .header__07389 {
-    font-size: 3.125rem;
+    font-size: 50px;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -.0625rem;
+    letter-spacing: -1px;
     line-height: 100%;
     text-transform: uppercase
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
     .header__07389.responsive__07389 {
-        font-size: 2.625rem;
-        letter-spacing: -.0525rem
+        font-size: 42px;
+        letter-spacing: -.84px
     }
 }
 
 @container premium-marketing-page-container (max-width: 540px) {
     .header__07389.responsive__07389 {
-        font-size: 2.375rem;
-        letter-spacing: -.0475rem
+        font-size: 38px;
+        letter-spacing: -.76px
     }
 }
 
@@ -628,7 +628,7 @@
 .treatmentAContentColumn__101ad .treatmentHeading__101ad,
 .treatmentCContentColumn__101ad .treatmentHeading__101ad,
 .treatmentLeftColumn__101ad .treatmentHeading__101ad {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 900;
     letter-spacing: normal;
     line-height: 100%
@@ -784,13 +784,13 @@
     }
 
     .treatmentBContentColumn__101ad .treatmentHeadingB__101ad {
-        font-size: 2.625rem
+        font-size: 42px
     }
 }
 
 @container premium-marketing-page-container (max-width: 960px) {
     .treatmentBContentColumn__101ad .treatmentHeadingB__101ad {
-        font-size: 2.25rem
+        font-size: 36px
     }
 }
 
