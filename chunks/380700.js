@@ -98,7 +98,7 @@ var ei = n(354328),
     er = n(356118),
     eo = n(619835),
     ec = n(641150),
-    ed = n(534514);
+    ed = n(297264);
 function eu() {
     let { itemTypeFilters: e, searchQuery: t } = (0, U.v)((e) => e),
         { totalCount: n, isFetchingResults: s } = (0, q.S)(),
@@ -213,7 +213,7 @@ function ek(e) {
     return (0, c.jsxs)("div", {
         className: eS.EF,
         ref: l,
-        children: [(0, c.jsx)(ef.A, { category: t, onArrowClick: i ? o : void 0 }), (0, c.jsx)(eO, { category: t })],
+        children: [(0, c.jsx)(ef.A, { category: t, onSelect: i ? o : void 0 }), (0, c.jsx)(eO, { category: t })],
     });
 }
 function eT(e) {

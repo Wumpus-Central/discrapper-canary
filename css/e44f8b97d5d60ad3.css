@@ -1,0 +1,71 @@
+.theme-dark .badge_dd79c2 {
+    background-color: var(--white);
+    color: var(--black)
+}
+
+.theme-light .badge_dd79c2 {
+    background-color: var(--black);
+    color: var(--white)
+}
+
+.catalogBanner__3f82e {
+    border-radius: var(--radius-xxl);
+    height: 180px;
+    overflow: hidden;
+    position: relative
+}
+
+.catalogBanner__3f82e.riveBanner__3f82e {
+    pointer-events: auto
+}
+
+.clickable__3f82e {
+    cursor: pointer
+}
+
+.bannerMedia__3f82e {
+    inset: 0;
+    position: absolute;
+    transform-origin: center
+}
+
+.full-motion .bannerMedia__3f82e {
+    transition: transform .3s ease
+}
+
+.full-motion .catalogBanner__3f82e:hover .bannerMedia__3f82e {
+    transform: scale(1.02)
+}
+
+.animationAsset__3f82e,
+.catalogBannerImage__3f82e {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: left;
+    object-position: left;
+    width: 100%
+}
+
+.animationAsset__3f82e {
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0
+}
+
+.limitedTimeBadge__3f82e {
+    top: 16px
+}
+
+.arrowButton__3f82e,
+.limitedTimeBadge__3f82e {
+    inset-inline-end: 20px;
+    position: absolute
+}
+
+.arrowButton__3f82e {
+    pointer-events: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1
+}
