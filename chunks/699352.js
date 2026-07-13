@@ -15,18 +15,17 @@ function r(e) {
         renderThreadAccessory: h,
         renderSuppressEmbeds: g,
         renderReactions: p,
-        forceAddReactions: A,
-        hideInviteEmbedBanner: x,
-        hideActivityInvite: f,
-        disableComponentInteractivity: E,
-        className: I,
+        hideInviteEmbedBanner: A,
+        hideActivityInvite: x,
+        disableComponentInteractivity: f,
+        className: E,
     } = e;
     return u
         ? null
         : (0, i.jsx)(l.A, {
               message: t,
               children: (0, i.jsx)(s.Ay, {
-                  className: I,
+                  className: E,
                   isInteracting: c,
                   message: t,
                   channel: n,
@@ -36,12 +35,11 @@ function r(e) {
                   isMessageSnapshot: m,
                   onMediaItemContextMenu: d,
                   renderThreadAccessory: h,
-                  disableComponentInteractivity: E,
+                  disableComponentInteractivity: f,
                   renderSuppressEmbeds: g,
-                  forceAddReactions: A,
                   renderReactions: p,
-                  hideInviteEmbedBanner: x,
-                  hideActivityInvite: f,
+                  hideInviteEmbedBanner: A,
+                  hideActivityInvite: x,
               }),
           });
 }

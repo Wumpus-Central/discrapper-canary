@@ -93,7 +93,7 @@ function N(e, t) {
     return (null == e && null == t) || e === t;
 }
 class T extends l.PureComponent {
-    state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length, isHovered: !1 };
+    state = { disableTransitionAppear: !0, reactionsCount: this.props.message.reactions.length };
     static getDerivedStateFromProps(e, t) {
         let n = e.message.reactions.length;
         return 0 === t.reactionsCount && n > 0
@@ -112,64 +112,53 @@ class T extends l.PureComponent {
                 isForumToolbar: u,
                 channel: g,
                 className: p,
-                forceAddReactions: A,
-                reactionClassName: x,
-                useChatFontScaling: f,
-                forceHideReactionCreates: E,
-                remainingReactions: v,
-                combinedReactions: N,
-                visibleReactionsCount: T,
+                reactionClassName: A,
+                useChatFontScaling: x,
+                forceHideReactionCreates: f,
+                remainingReactions: E,
+                combinedReactions: v,
+                visibleReactionsCount: N,
             } = this.props,
-            { disableTransitionAppear: y } = this.state,
-            S = f ? C : I,
-            b = T > 0;
-        if (!b && !A) return null;
-        let k = A || b;
-        return (0, i.jsxs)(a.F, {
-            component: "div",
-            className: r()(S.reactions, p),
-            transitionAppear: !y,
-            role: "group",
-            transitionLeave: !1,
-            id: (0, h.JH)(e),
-            onMouseEnter: () => this.setState({ isHovered: !0 }),
-            onMouseLeave: () => this.setState({ isHovered: !1 }),
-            children: [
-                (0, i.jsx)(_, {
-                    reactions: N,
-                    message: e,
-                    readOnly: n,
-                    isLurking: l,
-                    isPendingMember: s,
-                    isForumToolbar: u,
-                    useChatFontScaling: f,
-                    className: x,
-                }),
-                v > 0 &&
-                    (0, i.jsx)(o.D, {
-                        onClick: (t) => {
-                            t.stopPropagation(), (0, c.$)(e);
-                        },
-                        className: r()(S.reaction, x, S.remainingReactions),
-                        "aria-label": j.intl.string(j.t.lfIHs4),
-                        children: (0, i.jsxs)(d.E, {
-                            className: S.reactionInner,
-                            variant: "text-sm/normal",
-                            children: ["+", v],
-                        }),
-                    }),
-                !t &&
-                    !E &&
-                    (0, i.jsx)(m.t, {
-                        tabIndex: k || this.state.isHovered ? 0 : -1,
-                        message: e,
-                        channel: g,
-                        useChatFontScaling: f,
-                        isHovered: this.state.isHovered,
-                        className: r()({ [S.forceShow]: k }),
-                    }),
-            ],
-        });
+            { disableTransitionAppear: T } = this.state,
+            y = x ? C : I;
+        return N > 0
+            ? (0, i.jsxs)(a.F, {
+                  component: "div",
+                  className: r()(y.reactions, p),
+                  transitionAppear: !T,
+                  role: "group",
+                  transitionLeave: !1,
+                  id: (0, h.JH)(e),
+                  children: [
+                      (0, i.jsx)(_, {
+                          reactions: v,
+                          message: e,
+                          readOnly: n,
+                          isLurking: l,
+                          isPendingMember: s,
+                          isForumToolbar: u,
+                          useChatFontScaling: x,
+                          className: A,
+                      }),
+                      E > 0 &&
+                          (0, i.jsx)(o.D, {
+                              onClick: (t) => {
+                                  t.stopPropagation(), (0, c.$)(e);
+                              },
+                              className: r()(y.reaction, A, y.remainingReactions),
+                              "aria-label": j.intl.string(j.t.lfIHs4),
+                              children: (0, i.jsxs)(d.E, {
+                                  className: y.reactionInner,
+                                  variant: "text-sm/normal",
+                                  children: ["+", E],
+                              }),
+                          }),
+                      !t &&
+                          !f &&
+                          (0, i.jsx)(m.t, { message: e, channel: g, useChatFontScaling: x, className: y.forceShow }),
+                  ],
+              })
+            : null;
     }
 }
 let y = function (e) {

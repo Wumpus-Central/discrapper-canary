@@ -1,4 +1,4 @@
-t.d(s, { A: () => V, o: () => X });
+t.d(s, { A: () => F, o: () => $ });
 var l = t(627968),
     n = t(64700),
     a = t(503698),
@@ -6,40 +6,39 @@ var l = t(627968),
     r = t(989349),
     o = t.n(r),
     c = t(534890),
-    m = t(638916),
-    u = t(642846),
-    d = t(922016),
-    h = t(939249),
-    x = t(176781),
-    N = t(834730),
-    C = t(531142),
-    j = t(191023),
-    A = t(812282),
-    g = t(633018),
-    p = t(831544),
-    E = t(793574),
-    I = t(688810),
-    v = t(874357),
-    M = t(427930),
-    _ = t(387408),
-    S = t(427209),
-    L = t(650019),
-    f = t(969632),
-    k = t(9842),
+    u = t(638916),
+    h = t(642846),
+    m = t(922016),
+    d = t(939249),
+    C = t(176781),
+    x = t(834730),
+    N = t(531142),
+    A = t(191023),
+    g = t(812282),
+    p = t(633018),
+    E = t(831544),
+    j = t(793574),
+    M = t(688810),
+    _ = t(427930),
+    S = t(387408),
+    L = t(427209),
+    I = t(650019),
+    v = t(969632),
+    O = t(9842),
     D = t(68935),
-    T = t(486020),
-    y = t(58703),
-    R = t(403362),
-    O = t(860227),
-    P = t(438729),
-    J = t(943220),
-    b = t(943815),
-    w = t(838541),
-    U = t(652215),
-    z = t(375708),
-    G = t(334211),
-    B = t(992595);
-function H(e) {
+    P = t(486020),
+    R = t(58703),
+    T = t(403362),
+    f = t(860227),
+    y = t(438729),
+    k = t(943220),
+    J = t(943815),
+    U = t(838541),
+    w = t(652215),
+    b = t(375708),
+    z = t(334211),
+    G = t(992595);
+function V(e) {
     let { width: s = 12, height: t = 8, color: n = "currentColor", className: a, foreground: i } = e;
     return (0, l.jsx)("svg", {
         className: a,
@@ -53,7 +52,7 @@ function H(e) {
         }),
     });
 }
-function $(e) {
+function B(e) {
     let { width: s = 18, height: t = 18, className: n, foreground: a } = e;
     return (0, l.jsx)("svg", {
         className: n,
@@ -67,112 +66,110 @@ function $(e) {
         }),
     });
 }
-function X(e, s, t, n, a, r) {
+function $(e, s, t, n, a, r) {
     let o,
         c,
-        m,
         u,
-        d = (0, _.A)(e),
-        { trailingIconClass: h, leadingIconClass: x, iconSize: N } = r,
-        C = null == s || "" === s || (Array.isArray(s) && 0 === s.length),
-        E = (0, D.o6)(d).length > 0,
-        I = null != d.interaction,
-        L = d.hasFlag(U.pr7.IS_VOICE_MESSAGE),
-        k = d.isPoll(),
-        T = d.type === U.lAJ.POLL_RESULT;
+        h,
+        m = (0, S.A)(e),
+        { trailingIconClass: d, leadingIconClass: C, iconSize: x } = r,
+        N = null == s || "" === s || (Array.isArray(s) && 0 === s.length),
+        j = (0, D.o6)(m).length > 0,
+        M = null != m.interaction,
+        I = m.hasFlag(w.pr7.IS_VOICE_MESSAGE),
+        O = m.isPoll(),
+        P = m.type === w.lAJ.POLL_RESULT;
     return (
-        (0, M.A)(e) && (u = (0, l.jsx)(S.A, { size: "custom", className: x, width: N, height: N })),
+        (0, _.A)(e) && (h = (0, l.jsx)(L.A, { size: "custom", className: C, width: x, height: x })),
         t
-            ? (o = z.intl.string(z.t.XAkOo2))
+            ? (o = b.intl.string(b.t.XAkOo2))
             : n
-              ? (o = z.intl.string(z.t["G7p6v/"]))
-              : d.type === U.lAJ.CHANNEL_PINNED_MESSAGE
-                ? (o = z.intl.string(z.t.sCfDDl))
-                : d.type === U.lAJ.EMOJI_ADDED
-                  ? (c = (0, l.jsx)(v.HN, { message: d, rendered: s }))
-                  : C
-                    ? k
-                        ? (c = (0, l.jsx)("div", { className: i()(G.Io, B.PT), children: d?.poll?.question?.text }))
-                        : T
-                          ? (o = (0, f.Il)(d))
-                          : E
-                            ? (o = z.intl.string(z.t.kHdYCW))
+              ? (o = b.intl.string(b.t["G7p6v/"]))
+              : m.type === w.lAJ.CHANNEL_PINNED_MESSAGE
+                ? (o = b.intl.string(b.t.sCfDDl))
+                : N
+                  ? O
+                      ? (c = (0, l.jsx)("div", { className: i()(z.Io, G.PT), children: m?.poll?.question?.text }))
+                      : P
+                        ? (o = (0, v.Il)(m))
+                        : j
+                          ? (o = b.intl.string(b.t.kHdYCW))
+                          : M
+                            ? (o = b.intl.string(b.t["E+6SSY"]))
                             : I
-                              ? (o = z.intl.string(z.t["E+6SSY"]))
-                              : L
-                                ? (o = z.intl.string(z.t.XC3A52))
-                                : d.hasFlag(U.pr7.IS_COMPONENTS_V2)
-                                  ? (o = z.intl.string(z.t.Xxat6S))
-                                  : ((o = z.intl.string(z.t["6hGo0c"])),
-                                    (m = (0, l.jsx)(j.x, {
-                                        size: "custom",
-                                        color: "currentColor",
-                                        className: h,
-                                        width: N,
-                                        height: N,
-                                    })))
-                    : (c = (0, l.jsx)(P.Ay, { message: d, content: s, className: a, compact: !0 })),
-        E
-            ? (m = (0, l.jsx)(A.s, { size: "custom", color: "currentColor", className: h, width: N, height: N }))
-            : I
-              ? (m = (0, l.jsx)(g.k, { size: "custom", color: "currentColor", className: h, width: N, height: N }))
-              : L
-                ? (m = (0, l.jsx)(p.c, {
+                              ? (o = b.intl.string(b.t.XC3A52))
+                              : m.hasFlag(w.pr7.IS_COMPONENTS_V2)
+                                ? (o = b.intl.string(b.t.Xxat6S))
+                                : ((o = b.intl.string(b.t["6hGo0c"])),
+                                  (u = (0, l.jsx)(A.x, {
+                                      size: "custom",
+                                      color: "currentColor",
+                                      className: d,
+                                      width: x,
+                                      height: x,
+                                  })))
+                  : (c = (0, l.jsx)(y.Ay, { message: m, content: s, className: a, compact: !0 })),
+        j
+            ? (u = (0, l.jsx)(g.s, { size: "custom", color: "currentColor", className: d, width: x, height: x }))
+            : M
+              ? (u = (0, l.jsx)(p.k, { size: "custom", color: "currentColor", className: d, width: x, height: x }))
+              : I
+                ? (u = (0, l.jsx)(E.c, {
                       size: "custom",
                       color: "currentColor",
-                      className: h,
-                      width: (19 / 24) * N,
-                      height: N,
+                      className: d,
+                      width: (19 / 24) * x,
+                      height: x,
                   }))
-                : (d.attachments.length > 0 || d.embeds.length > 0) &&
-                  !T &&
-                  (m = (0, l.jsx)(j.x, { size: "custom", color: "currentColor", className: h, width: N, height: N })),
-        { contentPlaceholder: o, renderedContent: c, trailingIcon: m, leadingIcon: u }
+                : (m.attachments.length > 0 || m.embeds.length > 0) &&
+                  !P &&
+                  (u = (0, l.jsx)(A.x, { size: "custom", color: "currentColor", className: d, width: x, height: x })),
+        { contentPlaceholder: o, renderedContent: c, trailingIcon: u, leadingIcon: h }
     );
 }
-function V(e) {
+function F(e) {
     let s,
         {
             repliedAuthor: t,
             baseAuthor: a,
             baseMessage: r,
-            referencedMessage: j,
-            renderPopout: A,
-            isReplySpineClickable: g,
-            showReplySpine: p,
+            referencedMessage: A,
+            renderPopout: g,
+            isReplySpineClickable: p,
+            showReplySpine: E,
         } = e,
-        [v, M] = n.useState(!1),
-        _ = n.useMemo(() => (null != A && j.state === k.a.LOADED ? (e) => A(e, j.message) : void 0), [j, A]),
-        S = n.useCallback(() => M((e) => !e), []),
-        f = (function (e, s, t) {
+        [_, S] = n.useState(!1),
+        L = n.useMemo(() => (null != g && A.state === O.a.LOADED ? (e) => g(e, A.message) : void 0), [A, g]),
+        v = n.useCallback(() => S((e) => !e), []),
+        D = (function (e, s, t) {
             let {
                     referencedMessage: a,
                     channel: r,
                     compact: o,
-                    isReplyAuthorBlocked: h,
-                    repliedAuthor: x,
-                    showAvatarPopout: N,
-                    onClickAvatar: C,
-                    onContextMenu: j,
-                    onPopoutRequestClose: A,
+                    isReplyAuthorBlocked: d,
+                    repliedAuthor: C,
+                    showAvatarPopout: x,
+                    onClickAvatar: N,
+                    onContextMenu: A,
+                    onPopoutRequestClose: g,
                 } = e,
-                { analyticsLocations: g } = (0, I.Ay)(E.A.AVATAR),
-                p = n.useRef(null);
-            if (o || a.state !== k.a.LOADED || h)
-                return t === U.lAJ.CONTEXT_MENU_COMMAND
-                    ? (0, l.jsx)("div", { className: G.Do, children: (0, l.jsx)(c.o, { size: "xs" }) })
-                    : (0, l.jsx)("div", { className: G.Cz, children: (0, l.jsx)(H, { className: G.UE }) });
+                { analyticsLocations: p } = (0, M.Ay)(j.A.AVATAR),
+                E = n.useRef(null);
+            if (o || a.state !== O.a.LOADED || d)
+                return t === w.lAJ.CONTEXT_MENU_COMMAND
+                    ? (0, l.jsx)("div", { className: z.Do, children: (0, l.jsx)(c.o, { size: "xs" }) })
+                    : (0, l.jsx)("div", { className: z.Cz, children: (0, l.jsx)(V, { className: z.UE }) });
             if (
-                a.message.type === U.lAJ.USER_JOIN ||
-                a.message.type === U.lAJ.ROLE_SUBSCRIPTION_PURCHASE ||
-                a.message.type === U.lAJ.GUILD_GAMING_STATS_PROMPT
+                a.message.type === w.lAJ.USER_JOIN ||
+                a.message.type === w.lAJ.ROLE_SUBSCRIPTION_PURCHASE ||
+                a.message.type === w.lAJ.GUILD_GAMING_STATS_PROMPT
             )
-                return (0, l.jsx)($, { className: G.VJ });
-            if (a.message.type === U.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
-                return (0, l.jsx)(m.q, { size: "md", color: "currentColor", className: G.Cw });
-            if (a.message.type === U.lAJ.POLL_RESULT)
-                return (0, l.jsx)(u.Y, { className: G.Vs, width: w.eJ, height: w.eJ, size: "custom" });
-            let v = () => {
+                return (0, l.jsx)(B, { className: z.VJ });
+            if (a.message.type === w.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION)
+                return (0, l.jsx)(u.q, { size: "md", color: "currentColor", className: z.Cw });
+            if (a.message.type === w.lAJ.POLL_RESULT)
+                return (0, l.jsx)(h.Y, { className: z.Vs, width: U.eJ, height: U.eJ, size: "custom" });
+            let _ = () => {
                 var e, s;
                 return (
                     (e = a.message.author),
@@ -180,31 +177,31 @@ function V(e) {
                     (0, l.jsx)("img", {
                         alt: "",
                         src:
-                            x?.guildMemberAvatar != null && null != s
-                                ? (0, T.s7)({ guildId: s, userId: e.id, avatar: x.guildMemberAvatar })
+                            C?.guildMemberAvatar != null && null != s
+                                ? (0, P.s7)({ guildId: s, userId: e.id, avatar: C.guildMemberAvatar })
                                 : e.getAvatarURL(s, 16),
-                        onClick: C,
-                        onContextMenu: j,
-                        className: i()({ [G.mf]: !0, [G.vk]: null != C }),
-                        ref: p,
+                        onClick: N,
+                        onContextMenu: A,
+                        className: i()({ [z.mf]: !0, [z.vk]: null != N }),
+                        ref: E,
                     })
                 );
             };
-            return null != s && null != N
-                ? (0, l.jsx)(I.f5, {
-                      value: g,
-                      children: (0, l.jsx)(d.Y, {
-                          targetElementRef: p,
+            return null != s && null != x
+                ? (0, l.jsx)(M.f5, {
+                      value: p,
+                      children: (0, l.jsx)(m.Y, {
+                          targetElementRef: E,
                           renderPopout: s,
-                          shouldShow: N,
+                          shouldShow: x,
                           position: "right",
-                          onRequestClose: A,
-                          children: v,
+                          onRequestClose: g,
+                          children: _,
                       }),
                   })
-                : (0, l.jsx)(I.f5, { value: g, children: v() });
-        })(e, _, r.type),
-        D = (function (e, s) {
+                : (0, l.jsx)(M.f5, { value: p, children: _() });
+        })(e, L, r.type),
+        y = (function (e, s) {
             let {
                     baseMessage: t,
                     channel: n,
@@ -214,19 +211,19 @@ function V(e) {
                     onContextMenu: o,
                     onPopoutRequestClose: c,
                 } = e,
-                m = a?.state === k.a.LOADED ? a.message : void 0;
-            return null == m ||
-                m.type === U.lAJ.USER_JOIN ||
-                m.type === U.lAJ.ROLE_SUBSCRIPTION_PURCHASE ||
-                m.type === U.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION ||
-                m.type === U.lAJ.GUILD_GAMING_STATS_PROMPT ||
-                m.type === U.lAJ.POLL_RESULT
+                u = a?.state === O.a.LOADED ? a.message : void 0;
+            return null == u ||
+                u.type === w.lAJ.USER_JOIN ||
+                u.type === w.lAJ.ROLE_SUBSCRIPTION_PURCHASE ||
+                u.type === w.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION ||
+                u.type === w.lAJ.GUILD_GAMING_STATS_PROMPT ||
+                u.type === w.lAJ.POLL_RESULT
                 ? null
-                : (0, l.jsx)(J.A, {
-                      message: m,
+                : (0, l.jsx)(k.A, {
+                      message: u,
                       channel: n,
                       compact: !0,
-                      withMentionPrefix: null != m && !!t.mentions.includes(m.author.id),
+                      withMentionPrefix: null != u && !!t.mentions.includes(u.author.id),
                       showPopout: i,
                       renderPopout: s,
                       onClick: r,
@@ -234,37 +231,37 @@ function V(e) {
                       onPopoutRequestClose: c,
                       isRepliedMessage: !0,
                   });
-        })(e, _),
-        P = (function (e, s, t) {
+        })(e, L),
+        G = (function (e, s, t) {
             let {
                     baseMessage: n,
                     content: a,
                     referencedMessage: r,
                     isReplyAuthorBlocked: o,
                     isReplyAuthorIgnored: c,
-                    onClickReply: m,
+                    onClickReply: u,
                 } = e,
-                u = r.state !== k.a.DELETED ? m : void 0;
+                h = r.state !== O.a.DELETED ? u : void 0;
             switch (r.state) {
-                case k.a.LOADED: {
-                    let e = (0, L.A)(n.mediaMention, r.message.attachments);
+                case O.a.LOADED: {
+                    let e = (0, I.A)(n.mediaMention, r.message.attachments);
                     if (null != e)
-                        return (0, l.jsx)(h.D, {
-                            className: i()(G.$y, G.vk, { [G.FQ]: s }),
-                            onClick: u,
+                        return (0, l.jsx)(d.D, {
+                            className: i()(z.$y, z.vk, { [z.FQ]: s }),
+                            onClick: h,
                             onMouseEnter: t,
                             onMouseLeave: t,
                             children: (0, l.jsxs)("span", {
-                                className: G.wl,
+                                className: z.wl,
                                 children: [
-                                    e.isClip && (0, l.jsx)(x.x, { size: "xs", color: "currentColor", className: G.te }),
-                                    (0, l.jsx)(N.E, {
+                                    e.isClip && (0, l.jsx)(C.x, { size: "xs", color: "currentColor", className: z.te }),
+                                    (0, l.jsx)(x.E, {
                                         variant: "text-sm/semibold",
                                         color: "text-default",
-                                        className: G.CD,
-                                        children: e.title ?? z.intl.string(z.t.Cyxddp),
+                                        className: z.CD,
+                                        children: e.title ?? b.intl.string(b.t.Cyxddp),
                                     }),
-                                    (0, l.jsxs)(N.E, {
+                                    (0, l.jsxs)(x.E, {
                                         variant: "text-sm/normal",
                                         color: "text-link",
                                         children: ["@", e.timestamp],
@@ -273,67 +270,67 @@ function V(e) {
                             }),
                         });
                     let {
-                        contentPlaceholder: m,
-                        renderedContent: d,
-                        trailingIcon: j,
-                        leadingIcon: A,
-                    } = X(r.message, a, o, c, G.Io, {
-                        trailingIconClass: G.$4,
-                        leadingIconClass: G.Vs,
-                        iconSize: w.eJ,
+                        contentPlaceholder: u,
+                        renderedContent: m,
+                        trailingIcon: A,
+                        leadingIcon: g,
+                    } = $(r.message, a, o, c, z.Io, {
+                        trailingIconClass: z.$4,
+                        leadingIconClass: z.Vs,
+                        iconSize: U.eJ,
                     });
                     return (0, l.jsxs)(l.Fragment, {
                         children: [
-                            A,
-                            (0, l.jsx)(h.D, {
-                                className: i()(G.$y, G.vk, { [G.FQ]: s }),
-                                onClick: u,
+                            g,
+                            (0, l.jsx)(d.D, {
+                                className: i()(z.$y, z.vk, { [z.FQ]: s }),
+                                onClick: h,
                                 onMouseEnter: t,
                                 onMouseLeave: t,
-                                children: (0, l.jsx)(C.R, {
-                                    children: d ?? (0, l.jsx)("span", { className: G.MK, children: m }),
+                                children: (0, l.jsx)(N.R, {
+                                    children: m ?? (0, l.jsx)("span", { className: z.MK, children: u }),
                                 }),
                             }),
-                            j,
+                            A,
                         ],
                     });
                 }
-                case k.a.NOT_LOADED:
-                    return (0, l.jsx)(h.D, {
-                        className: i()(G.$y, G.vk),
-                        onClick: u,
-                        children: (0, l.jsx)("span", { className: G.MK, children: z.intl.string(z.t["1i+hMi"]) }),
+                case O.a.NOT_LOADED:
+                    return (0, l.jsx)(d.D, {
+                        className: i()(z.$y, z.vk),
+                        onClick: h,
+                        children: (0, l.jsx)("span", { className: z.MK, children: b.intl.string(b.t["1i+hMi"]) }),
                     });
-                case k.a.DELETED:
+                case O.a.DELETED:
                     return (0, l.jsx)("div", {
-                        className: G.$y,
-                        children: (0, l.jsx)("span", { className: G.MK, children: z.intl.string(z.t.mE3KJN) }),
+                        className: z.$y,
+                        children: (0, l.jsx)("span", { className: z.MK, children: b.intl.string(b.t.mE3KJN) }),
                     });
                 default:
-                    (0, R.xb)(r);
+                    (0, T.xb)(r);
             }
-        })(e, v, S),
-        B = n.useMemo(() => (e.compact ? (0, b.A)((0, y.i$)(o()(), "LT")) : null), [e.compact]);
-    null != t && null != a && (s = z.intl.formatToPlainString(z.t.RhbQ2K, { author: a?.nick, repliedAuthor: t?.nick }));
-    let V = r.type === U.lAJ.CONTEXT_MENU_COMMAND;
+        })(e, _, v),
+        F = n.useMemo(() => (e.compact ? (0, J.A)((0, R.i$)(o()(), "LT")) : null), [e.compact]);
+    null != t && null != a && (s = b.intl.formatToPlainString(b.t.RhbQ2K, { author: a?.nick, repliedAuthor: t?.nick }));
+    let H = r.type === w.lAJ.CONTEXT_MENU_COMMAND;
     return (0, l.jsxs)("div", {
-        id: (0, O.nS)(r),
-        className: i()(G.JZ, B, V ? G.C4 : { [G.NB]: !g && p }),
+        id: (0, f.nS)(r),
+        className: i()(z.JZ, F, H ? z.C4 : { [z.NB]: !p && E }),
         "aria-label": s,
         children: [
-            g &&
-                p &&
-                (0, l.jsx)(h.D, {
+            p &&
+                E &&
+                (0, l.jsx)(d.D, {
                     tag: "div",
-                    "aria-label": z.intl.string(z.t.dpjpOp),
-                    className: i()(G.Uo, { [G.xe]: v }),
+                    "aria-label": b.intl.string(b.t.dpjpOp),
+                    className: i()(z.Uo, { [z.xe]: _ }),
                     onClick: e.onClickReply,
-                    onMouseEnter: S,
-                    onMouseLeave: S,
+                    onMouseEnter: v,
+                    onMouseLeave: v,
                 }),
-            f,
             D,
-            P,
+            y,
+            G,
         ],
     });
 }

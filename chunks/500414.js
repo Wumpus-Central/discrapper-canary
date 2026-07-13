@@ -6955,7 +6955,6 @@ class dt extends s.Component {
             isLurking: s,
             isPendingMember: r,
             channel: a,
-            forceAddReactions: o,
         } = this.props;
         return n
             ? null
@@ -6966,7 +6965,6 @@ class dt extends s.Component {
                   disableReactionUpdates: i,
                   isLurking: s,
                   isPendingMember: r,
-                  forceAddReactions: o,
                   useChatFontScaling: !0,
               });
     }

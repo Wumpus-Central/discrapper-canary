@@ -1861,7 +1861,6 @@ let nZ = o.memo(function (e) {
                         handleContextMenu: R,
                         isInteracting: W,
                         isAutomodBlockedMessage: eC,
-                        forceAddReactions: i.type === ec.lAJ.EMOJI_ADDED,
                         hideInviteEmbedBanner: x,
                         hideActivityInvite: E,
                     }),

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(562708),
     r = n(765178),
     a = n(636537),
@@ -22,7 +22,7 @@ var i = n(562708),
     S = n(652215),
     N = n(375708);
 let C = new c.A("GuildSettingsActionCreators"),
-    O = {
+    R = {
         init(e, t, n, i) {
             s.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: t, subsection: i, location: n });
         },
@@ -160,8 +160,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("97238"),
                 n.e("30541"),
                 n.e("74187"),
-                n.e("62279"),
-                n.e("67454"),
+                n.e("8073"),
                 n.e("42157"),
                 n.e("85148"),
                 n.e("4676"),
@@ -207,9 +206,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("78104"),
                 n.e("8502"),
                 n.e("29483"),
-                n.e("39680"),
-                n.e("21194"),
-                n.e("99272"),
+                n.e("57236"),
                 n.e("20993"),
                 n.e("34161"),
                 n.e("69164"),
@@ -262,7 +259,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("70613"),
                 n.e("25870"),
                 n.e("76831"),
-                n.e("37870"),
+                n.e("9639"),
                 n.e("3515"),
                 n.e("37911"),
                 n.e("81788"),
@@ -774,7 +771,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 T.A.getGuild(e)?.features.has(S.GuildFeatures.COMMUNITY) &&
                     (t === S.BEX.GUILD_AUTOMOD && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_AUTOMOD)),
                     t === S.BEX.MEMBER_VERIFICATION && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
-                O.init(e, t, i, r),
+                R.init(e, t, i, r),
                 I.A.closeGuildSidebar(e),
                 (0, l.id)(S.zgK.GUILD_SETTINGS);
         },
@@ -857,8 +854,8 @@ let C = new c.A("GuildSettingsActionCreators"),
                     features: T,
                     systemChannelFlags: m,
                     preferredLocale: N,
-                    rulesChannelId: O,
-                    safetyAlertsChannelId: R,
+                    rulesChannelId: R,
+                    safetyAlertsChannelId: O,
                     ownerConfiguredContentLevel: L,
                     discoverySplash: D,
                     publicUpdatesChannelId: y,
@@ -885,11 +882,11 @@ let C = new c.A("GuildSettingsActionCreators"),
                     default_message_notifications: f,
                     explicit_content_filter: p,
                     system_channel_flags: m,
-                    rules_channel_id: O,
+                    rules_channel_id: R,
                     owner_configured_content_level: L,
                     discovery_splash: D,
                     public_updates_channel_id: y,
-                    safety_alerts_channel_id: R,
+                    safety_alerts_channel_id: O,
                     ...(null != v ? { premium_progress_bar_enabled: v } : null),
                     profile: null != b ? { tag: b.tag } : b,
                     moderator_reporting_enabled: M,
@@ -968,7 +965,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         deleteGuild: (e) =>
             a.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
-                O.close();
+                R.close();
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -981,7 +978,7 @@ let C = new c.A("GuildSettingsActionCreators"),
             }).then(() => {
                 r.O.announce(N.intl.string(N.t["7iPyVW"]));
             }),
-                O.close(),
+                R.close(),
                 t && n && (0, h.pX)(S.BVt.GUILD_DISCOVERY);
         },
         async updateMemberRoles(e, t, n, i, r) {
@@ -1035,7 +1032,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         async migratePermissions(e, t) {
             let { migratePin: n, migrateSlowmode: i } = t;
-            n && (await O.migratePinPermission(e)), i && (await O.migrateSlowmodePermission(e));
+            n && (await R.migratePinPermission(e)), i && (await R.migrateSlowmodePermission(e));
         },
     },
-    R = O;
+    O = R;

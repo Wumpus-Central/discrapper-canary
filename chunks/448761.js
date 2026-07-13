@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { M: () => s, l: () => r });
+n.d(t, { M: () => a, l: () => r });
 var i,
     r =
         (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"),
@@ -71,12 +71,12 @@ var i,
         (i[(i.FRIEND_REQUEST_ACCEPTED = 67)] = "FRIEND_REQUEST_ACCEPTED"),
         (i[(i.MEDIA_MENTION_MESSAGE = 68)] = "MEDIA_MENTION_MESSAGE"),
         i);
-let s = {
+let a = {
     UNDELETABLE: new Set([1, 2, 3, 4, 5, 21, 35, 56, 57, 64, 68]),
     GUILD_DISCOVERY_STATUS: new Set([14, 15, 16, 17]),
     USER_MESSAGE: new Set([0, 19, 20, 23, 26, 41, 45, 47, 68]),
-    NOTIFIABLE_SYSTEM_MESSAGE: new Set([7, 22, 35, 46, 63, 64]),
-    REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46, 63]),
+    NOTIFIABLE_SYSTEM_MESSAGE: new Set([7, 22, 35, 46, 64]),
+    REPLYABLE: new Set([0, 7, 19, 20, 23, 24, 25, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 45, 46]),
     FORWARDABLE: new Set([0, 19, 20, 23, 35]),
     REFERENCED_MESSAGE_AVAILABLE: new Set([19, 21, 23]),
     AVAILABLE_IN_GUILD_FEED: new Set([0, 19]),

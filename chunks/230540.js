@@ -602,8 +602,8 @@ var eZ = n(990078),
     e1 = n(825484),
     e2 = n(331322),
     e4 = n(736653),
-    e9 = n(44120),
-    e5 = n(465794),
+    e5 = n(44120),
+    e9 = n(465794),
     e3 = n(757036),
     e7 = n(761705),
     e6 = n(449410),
@@ -906,7 +906,7 @@ function tU(e) {
     (0, e7.W)({ disableFetch: !et });
     let en = s.useCallback(() => {
         h(es.sH.BUY_WITH_FIAT),
-            (0, e9.A)({
+            (0, e5.A)({
                 skuId: i.skuId,
                 analyticsLocations: m,
                 discoverySessionId: g,
@@ -915,7 +915,7 @@ function tU(e) {
     }, [m, x, i.skuId, h, g]);
     function er(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            i = (0, r.jsx)(e5.A, {
+            i = (0, r.jsx)(e9.A, {
                 subscriptionTier: tC.pe.TIER_2,
                 fullWidth: !0,
                 buttonTextOverride: e,
@@ -1231,7 +1231,7 @@ function t2(e) {
                     (0, t0.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("62279"),
+                                n.e("8073"),
                                 n.e("16747"),
                                 n.e("94635"),
                                 n.e("43880"),
@@ -1268,8 +1268,8 @@ function t2(e) {
     });
 }
 var t4 = n(139146),
-    t9 = n(976860),
-    t5 = n(975732),
+    t5 = n(976860),
+    t9 = n(975732),
     t3 = n(50920),
     t7 = n(23161),
     t6 = n(668953),
@@ -1337,13 +1337,13 @@ function ni(e) {
                             sku_id: i.skuId,
                             cta_name: r,
                         }),
-                        (0, t5.closeUserProfileModal)(),
+                        (0, t9.closeUserProfileModal)(),
                         e && !0 !== i.isOrbsExclusive)
                     )
-                        return void (0, t9.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
+                        return void (0, t5.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
                     n();
                     let s = !0 === i.isOrbsExclusive ? es.G2.ORBS : es.G2.CATALOG;
-                    (0, t9.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)}&${es.P1}=${i.skuId}`);
+                    (0, t5.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)}&${es.P1}=${i.skuId}`);
                 },
                 [e, t, n],
             );
