@@ -1,42 +1,42 @@
 "use strict";
-n.d(t, { R: () => a, X: () => s });
+n.d(t, { R: () => s, X: () => a });
 var i = n(64700);
 let r = ["mousemove", "mousedown", "keydown", "scroll", "touchstart", "pointerdown"];
-function s(e) {
+function a(e) {
     let [t, n] = i.useState(!1),
-        s = i.useRef(null),
-        a = i.useCallback(() => {
-            n(!1), null != s.current && clearTimeout(s.current), (s.current = setTimeout(() => n(!0), e));
+        a = i.useRef(null),
+        s = i.useCallback(() => {
+            n(!1), null != a.current && clearTimeout(a.current), (a.current = setTimeout(() => n(!0), e));
         }, [e]);
     return (
         i.useEffect(() => {
-            for (let e of r) window.addEventListener(e, a, { passive: !0, capture: !0 });
+            for (let e of r) window.addEventListener(e, s, { passive: !0, capture: !0 });
             return (
-                (s.current = setTimeout(() => n(!0), e)),
+                (a.current = setTimeout(() => n(!0), e)),
                 () => {
-                    for (let e of r) window.removeEventListener(e, a, { capture: !0 });
-                    null != s.current && clearTimeout(s.current);
+                    for (let e of r) window.removeEventListener(e, s, { capture: !0 });
+                    null != a.current && clearTimeout(a.current);
                 }
             );
-        }, [e, a]),
-        [t, a]
+        }, [e, s]),
+        [t, s]
     );
 }
-function a() {
-    let e = window,
-        [t, n] = i.useState(e.document.hasFocus());
+function s() {
+    let [e, t] = i.useState(!0);
     return (
         i.useEffect(() => {
-            let t = () => n(!0),
-                i = () => n(!1);
+            t(window.document.hasFocus());
+            let e = () => t(!0),
+                n = () => t(!1);
             return (
-                e.addEventListener("focus", t),
-                e.addEventListener("blur", i),
+                window.addEventListener("focus", e),
+                window.addEventListener("blur", n),
                 () => {
-                    e.removeEventListener("focus", t), e.removeEventListener("blur", i);
+                    window.removeEventListener("focus", e), window.removeEventListener("blur", n);
                 }
             );
-        }, [e]),
-        t
+        }, []),
+        e
     );
 }
