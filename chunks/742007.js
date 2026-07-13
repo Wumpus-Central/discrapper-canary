@@ -1,4 +1,5 @@
 e.exports = {
+    hl: "focusWithinWrapper_e12da8",
     Nr: "card_e12da8",
     r9: "disabled_e12da8",
     in: "focused_e12da8",
@@ -7,7 +8,8 @@ e.exports = {
     zV: "badgesTopLeft_e12da8",
     cH: "darkBadge_e12da8",
     Ad: "newBadge_e12da8",
-    _s: "durationBadge_e12da8",
+    E4: "topRightBadges_e12da8",
+    y8: "favoriteBadge_e12da8",
     Mw: "hoverButtons_e12da8",
     dH: "infoFade_e12da8",
     yu: "metadata_e12da8",
@@ -25,6 +27,7 @@ e.exports = {
     Mq: "restMetaHidden_e12da8",
     n_: "hoverOverlay_e12da8",
     f$: "hoverOverlayActive_e12da8",
+    hr: "progressBar_e12da8",
     z5: "progressTrack_e12da8",
     TE: "progressFill_e12da8",
     E_: "hoverCtas_e12da8",

@@ -17,7 +17,7 @@ let _ = r.forwardRef((e, t) => {
     let { children: n } = e,
         a = (0, l.Y_)();
     return (
-        r.useImperativeHandle(t, () => ({ releaseSource() {} }), []),
+        r.useImperativeHandle(t, () => ({ releaseSource() {}, seek() {} }), []),
         (0, i.jsxs)("div", {
             className: c.Q,
             children: [(0, i.jsx)("img", { alt: "", src: a.thumbnail, className: c.f, loading: "lazy" }), n],
@@ -29,17 +29,8 @@ let E = r.forwardRef((e, t) => {
     let { isPlaying: n = !1, scrubOnHover: u = !1, preload: _ = "metadata", onProgressChange: E, children: A } = e,
         h = (0, l.Y_)(),
         I = r.useRef(null),
-        f = (0, a.A)(h.editMetadata?.start ?? 0);
-    r.useImperativeHandle(
-        t,
-        () => ({
-            releaseSource() {
-                (0, o.A)(I.current);
-            },
-        }),
-        [],
-    );
-    let p = (0, r.useMemo)(
+        f = (0, a.A)(h.editMetadata?.start ?? 0),
+        p = (0, r.useMemo)(
             () =>
                 null == h || null == d.A.clips.getClipProtocolURLFromPath
                     ? null
@@ -56,8 +47,20 @@ let E = r.forwardRef((e, t) => {
                 t.currentTime = Math.max(0, f.current + ((i - n) * e) / 100);
             },
             [I, f, h],
-        ),
-        g = r.useCallback(
+        );
+    r.useImperativeHandle(
+        t,
+        () => ({
+            releaseSource() {
+                (0, o.A)(I.current);
+            },
+            seek(e) {
+                m(e);
+            },
+        }),
+        [m],
+    );
+    let g = r.useCallback(
             (e) => {
                 if (!u || null == I.current) return;
                 let t = I.current.getBoundingClientRect();

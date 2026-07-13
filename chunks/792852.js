@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { P: () => a });
+n.d(t, { P: () => s });
 var i = n(353640),
     r = n(111994);
-let s = {
+let a = {
         currentPage: r.fB.GALLERY,
         activeMainLink: r.oH.ALL_CLIPS,
         gameFacet: null,
@@ -16,9 +16,10 @@ let s = {
         query: "",
         sortOrder: r.mu.MOST_RECENT,
         pendingSearchFocus: !1,
+        pendingContentFocus: !1,
     },
-    a = (0, i.v)((e) => ({
-        ...s,
+    s = (0, i.v)((e) => ({
+        ...a,
         setCurrentPage: (t) => e({ currentPage: t }),
         setActiveMainLink: (t) => e({ activeMainLink: t, currentPage: t === r.oH.HOME ? r.fB.HOME : r.fB.GALLERY }),
         setGameFacet: (t) =>
@@ -48,6 +49,7 @@ let s = {
         setClipMethodFilter: (t) => e({ clipMethodFilter: t }),
         setQuery: (t) => e({ query: t }),
         setPendingSearchFocus: (t) => e({ pendingSearchFocus: t }),
+        setPendingContentFocus: (t) => e({ pendingContentFocus: t }),
         setSortOrder: (t) => e({ sortOrder: t }),
         clearFilters: () =>
             e({
@@ -59,5 +61,5 @@ let s = {
                 clipMethodFilter: "all",
                 query: "",
             }),
-        resetAll: () => e(s),
+        resetAll: () => e(a),
     }));

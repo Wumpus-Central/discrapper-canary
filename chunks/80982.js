@@ -49,13 +49,14 @@ function U(n) {
             clips: i,
             channelId: U,
             onShare: Y,
-            onEdit: Q,
-            onBeforeDelete: q,
-            onAfterDelete: z,
-            actionsDisabled: J = !1,
-            displayConfiguration: $ = o.I,
+            onSelectClip: Q,
+            onEdit: q,
+            onBeforeDelete: z,
+            onAfterDelete: J,
+            actionsDisabled: $ = !1,
+            displayConfiguration: nn = o.I,
         } = n,
-        nn = (function (n) {
+        ni = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
             return i.some((n) => !0 === n.isTemporary)
                 ? (0, t.jsx)(r.Dr, {
@@ -68,17 +69,20 @@ function U(n) {
                       },
                   })
                 : null;
-        })({ clips: i, actionsDisabled: J }),
-        ni = (function (n) {
-            let { clips: i, channelId: e, onShare: l, actionsDisabled: o = !1 } = n,
-                { analyticsLocations: c } = (0, X.Ay)(),
-                p = (0, u.bG)([M.Ay], () => i.some((n) => M.Ay.isClipExporting(n.id)));
-            async function f() {
-                (0, a.Z_)();
+        })({ clips: i, actionsDisabled: $ }),
+        ne = (function (n) {
+            let { clips: i, channelId: e, onShare: l, onSelectClip: o, actionsDisabled: c = !1 } = n,
+                { analyticsLocations: p } = (0, X.Ay)(),
+                f = (0, u.bG)([M.Ay], () => i.some((n) => M.Ay.isClipExporting(n.id)));
+            async function y() {
+                if (((0, a.Z_)(), null != o)) {
+                    o(), l?.();
+                    return;
+                }
                 let n = (0, W.t)(e);
                 (0, s.H1)(i.map((n) => n.id));
                 try {
-                    await (0, K.K)(i, { channelId: n ? e : void 0, analyticsLocations: c });
+                    await (0, K.K)(i, { channelId: n ? e : void 0, analyticsLocations: p });
                 } catch (n) {
                 } finally {
                     (0, s.H1)(null);
@@ -89,11 +93,11 @@ function U(n) {
                 id: "share",
                 label: d.intl.string(d.t.RDE0Sc),
                 leadingAccessory: { type: "icon", icon: L.l },
-                disabled: o && !p,
-                action: f,
+                disabled: c && !f,
+                action: y,
             });
-        })({ clips: i, channelId: U, onShare: Y, actionsDisabled: J }),
-        ne = (function (n) {
+        })({ clips: i, channelId: U, onShare: Y, onSelectClip: Q, actionsDisabled: $ }),
+        nt = (function (n) {
             let { clips: i, onEdit: e, actionsDisabled: l = !1 } = n;
             return i.length > 1
                 ? null
@@ -106,8 +110,8 @@ function U(n) {
                           (0, a.Z_)(), e?.();
                       },
                   });
-        })({ clips: i, onEdit: Q, actionsDisabled: J }),
-        nt = (function (n) {
+        })({ clips: i, onEdit: q, actionsDisabled: $ }),
+        nl = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
             return !0 === i[0].isFavorite
                 ? null
@@ -120,8 +124,8 @@ function U(n) {
                           (0, a.Z_)(), i.forEach((n) => (0, s.XK)(n));
                       },
                   });
-        })({ clips: i, actionsDisabled: J }),
-        nl = (function (n) {
+        })({ clips: i, actionsDisabled: $ }),
+        nr = (function (n) {
             let { clips: i, channelId: e } = n,
                 l = (0, u.bG)([F.Ay, T.A, H.default, S.A], () =>
                     F.Ay.getFlattenedGuildIds().some((n) => {
@@ -141,7 +145,7 @@ function U(n) {
                 action: c,
             });
         })({ clips: i, channelId: U }),
-        nr = (function (n) {
+        na = (function (n) {
             let { clips: i } = n,
                 e = i[0];
             return i.length > 1 || null == _.A.clipboard.copyFile
@@ -157,7 +161,7 @@ function U(n) {
                       },
                   });
         })({ clips: i }),
-        na = (function (n) {
+        no = (function (n) {
             let { clips: i } = n,
                 e = i[0];
             if (i.length > 1) return null;
@@ -210,7 +214,7 @@ function U(n) {
                 ],
             });
         })({ clips: i }),
-        no = (function (n) {
+        nc = (function (n) {
             let { clips: i, actionsDisabled: e = !1 } = n;
             return !0 !== i[0].isFavorite
                 ? null
@@ -224,8 +228,8 @@ function U(n) {
                           (0, a.Z_)(), i.forEach((n) => (0, s.XK)(n));
                       },
                   });
-        })({ clips: i, actionsDisabled: J }),
-        nc = (function (n) {
+        })({ clips: i, actionsDisabled: $ }),
+        ns = (function (n) {
             let { clips: i, onBeforeDelete: e, onAfterDelete: l, actionsDisabled: o = !1 } = n;
             return (0, t.jsx)(r.Dr, {
                 id: "clips-delete",
@@ -237,8 +241,8 @@ function U(n) {
                     (0, a.Z_)(), (0, C.A)(n, { clips: i, onBeforeDelete: e, onAfterDelete: l });
                 },
             });
-        })({ clips: i, onBeforeDelete: q, onAfterDelete: z, actionsDisabled: J }),
-        ns = (function (n) {
+        })({ clips: i, onBeforeDelete: z, onAfterDelete: J, actionsDisabled: $ }),
+        nd = (function (n) {
             let { clips: i } = n;
             return (0, t.jsx)(r.Dr, {
                 leadingAccessory: { type: "icon", icon: V.s },
@@ -249,7 +253,7 @@ function U(n) {
                 },
             });
         })({ clips: i }),
-        nd = (function (n) {
+        nu = (function (n) {
             let { clips: i } = n;
             return (0, u.bG)([y.A], () => y.A.isDeveloper)
                 ? (0, t.jsx)(r.Dr, {
@@ -262,7 +266,7 @@ function U(n) {
                   })
                 : null;
         })({ clips: i }),
-        nu = (function (n) {
+        np = (function (n) {
             let { clips: i } = n,
                 l = (0, u.bG)([y.A], () => y.A.isDeveloper);
             return i.length > 1 || !l
@@ -287,17 +291,17 @@ function U(n) {
                       },
                   });
         })({ clips: i }),
-        np = $.has(o.C.ADD_TO_LIBRARY),
-        nf = $.has(o.C.SHARE),
-        ny = $.has(o.C.EDIT),
-        ng = $.has(o.C.FAVORITE),
-        nh = $.has(o.C.EXPORT_TO_SOUNDBOARD),
-        nA = $.has(o.C.COPY_TO_CLIPBOARD),
-        nb = $.has(o.C.EXPORT_TO_FILE),
-        n_ = $.has(o.C.DELETE),
-        nx = $.has(o.C.SHOW_IN_FOLDER),
-        nD = $.has(o.C.OPEN_IN_INSPECTOR),
-        nC = $.has(o.C.CLIP_FEEDBACK);
+        nf = nn.has(o.C.ADD_TO_LIBRARY),
+        ny = nn.has(o.C.SHARE),
+        ng = nn.has(o.C.EDIT),
+        nh = nn.has(o.C.FAVORITE),
+        nA = nn.has(o.C.EXPORT_TO_SOUNDBOARD),
+        nb = nn.has(o.C.COPY_TO_CLIPBOARD),
+        n_ = nn.has(o.C.EXPORT_TO_FILE),
+        nx = nn.has(o.C.DELETE),
+        nD = nn.has(o.C.SHOW_IN_FOLDER),
+        nC = nn.has(o.C.OPEN_IN_INSPECTOR),
+        nE = nn.has(o.C.CLIP_FEEDBACK);
     return (0, t.jsxs)(l.W, {
         "data-menu-migrated-auto": !0,
         navId: "clips-more-options",
@@ -305,10 +309,10 @@ function U(n) {
         onClose: a.Z_,
         onSelect: a.Z_,
         children: [
-            (0, t.jsxs)(r.rX, { children: [np && nn, nf && ni, ny && ne] }),
-            (0, t.jsxs)(r.rX, { children: [ng && nt, nh && nl, nA && nr, nb && na] }),
-            (0, t.jsxs)(r.rX, { children: [nx && ns, nD && nd, nC && nu] }),
-            (0, t.jsxs)(r.rX, { children: [ng && no, n_ && nc] }),
+            (0, t.jsxs)(r.rX, { children: [nf && ni, ny && ne, ng && nt] }),
+            (0, t.jsxs)(r.rX, { children: [nh && nl, nA && nr, nb && na, n_ && no] }),
+            (0, t.jsxs)(r.rX, { children: [nD && nd, nC && nu, nE && np] }),
+            (0, t.jsxs)(r.rX, { children: [nh && nc, nx && ns] }),
         ],
     });
 }
