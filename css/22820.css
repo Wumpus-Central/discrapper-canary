@@ -3288,6 +3288,24 @@
     padding: 6px
 }
 
+.thumbnailButton__1692d {
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    display: inline-flex;
+    flex-shrink: 0
+}
+
+.thumbnailButton__1692d:focus-visible img,
+.thumbnailButton__1692d:hover img {
+    opacity: .85
+}
+
+.titleButton__1692d {
+    max-width: 100%;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
 .cloudPlaySection__1692d {
     justify-content: space-between
 }
