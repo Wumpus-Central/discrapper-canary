@@ -2668,7 +2668,8 @@ class iC extends nS {
             });
     };
     renderChannelInfo() {
-        return this.props.channelInfo;
+        let { channelInfo: e } = this.props;
+        return null == e ? null : (0, s.jsx)("div", { className: ed.yW, children: e });
     }
     getTooltipText = () => {
         let { connected: e } = this.props;
