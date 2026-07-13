@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { iQ: () => p, FH: () => m, P4: () => h, pd: () => f, ML: () => u, pX: () => I, hw: () => A }), n(321073);
+n.d(t, { pX: () => T, FH: () => I, P4: () => E, pd: () => A, ML: () => d, hw: () => p }), n(321073);
 var i = n(284009),
     r = n.n(i),
-    s = n(306173),
-    a = n(626584),
-    o = n(157016);
-let l = new a.A("libdiscoreExperiments"),
-    u = [],
+    a = n(306173),
+    s = n(626584),
+    l = n(157016);
+let o = new s.A("libdiscoreExperiments"),
+    d = [],
     c = Symbol("unknown");
-class d {
+class u {
     id;
     inner = null;
     cachedConfig = c;
     constructor(e, t) {
-        (this.id = e), u.push(this);
+        (this.id = e), d.push(this);
     }
     getEnabledFeatureName() {
         let e = this.getCachedConfig();
@@ -22,7 +22,7 @@ class d {
     getCachedConfig() {
         return (
             this.cachedConfig === c &&
-                ((0, s.xd)() ? (this.cachedConfig = (0, s.Ih)().getConfig(this.id)) : (this.cachedConfig = void 0)),
+                ((0, a.xd)() ? (this.cachedConfig = (0, a.Ih)().getConfig(this.id)) : (this.cachedConfig = void 0)),
             this.cachedConfig
         );
     }
@@ -36,7 +36,7 @@ class d {
             : this.inner.getConfig({ location: "default" });
     }
 }
-class _ extends d {
+class _ extends u {
     label;
     defaultValue;
     constructor(e, t, n = !1) {
@@ -53,7 +53,7 @@ class _ extends d {
         return null == e || -1 === e.treatmentId ? this.defaultValue : 1 === e.treatmentId;
     }
 }
-let h = new (class extends d {
+let E = new (class extends u {
         storeName;
         constructor(e, t, n) {
             super(e, n), (this.storeName = t);
@@ -71,7 +71,7 @@ let h = new (class extends d {
                         default:
                             return "typescript";
                     }
-                })()) || (0, o.O)()
+                })()) || (0, l.O)()
                 ? e
                 : "typescript";
         }
@@ -86,7 +86,7 @@ let h = new (class extends d {
             return [{ treatmentId: 0 }, { treatmentId: 1 }, { treatmentId: 2 }];
         }
     })("2026-01-libdiscore-batch-store-refactor", "batch-store-refactor"),
-    f = new (class extends d {
+    A = new (class extends u {
         MAX_EMISSIONS_PER_APP_LAUNCH = 5;
         emissionsCount = 0;
         getLabel() {
@@ -118,9 +118,8 @@ let h = new (class extends d {
                 (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e))
             );
         }
-    })("2025-09-libdiscore-telemetry"),
-    p = new _("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
-class E extends d {
+    })("2025-09-libdiscore-telemetry");
+class h extends u {
     label;
     treatmentCount;
     getLabel() {
@@ -133,15 +132,15 @@ class E extends d {
         super(e), (this.label = t), (this.treatmentCount = n);
     }
 }
-let m = new E("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
-new E("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+let I = new h("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
+new h("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
     new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target");
-let g = !1;
-function A() {
-    return g;
+let f = !1;
+function p() {
+    return f;
 }
-function I() {
-    (0, s.xd)() &&
-        (l.info("Clearing libdiscore experiment cache and disabling sync"), (g = !0), (0, s.Ih)().clearCache());
+function T() {
+    (0, a.xd)() &&
+        (o.info("Clearing libdiscore experiment cache and disabling sync"), (f = !0), (0, a.Ih)().clearCache());
 }

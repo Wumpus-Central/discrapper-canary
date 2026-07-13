@@ -1364,7 +1364,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new ej.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 577336, Version Hash: bfc255c1f299752b471eaacc3e5601351528fff3`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 577394, Version Hash: 0b7eb2d6ff8996c999356b144224f78b1920188d`,
 ),
     v.A.setTags({ appContext: G.QCW }),
     ep.A.initBasic(),
@@ -18663,7 +18663,7 @@ let gP = "isHideDevBanner",
                     className: tl()(gM.Wz, gM.mr),
                     children: [
                         (0, R.jsx)(gb, { className: gM.Kk }),
-                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "577336" }),
+                        tg.intl.format(tg.t.uyrfYF, { buildNumber: "577394" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -37535,21 +37535,7 @@ async function P1(e, t, n, i) {
                   })
                 : Promise.resolve([]),
         );
-    eQ.iQ.getCachedEnabled()
-        ? PK.verbose("loadLateLazyCache: not yielding to react")
-        : (PK.verbose("loadLateLazyCache: yielding to react"),
-          await (function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 4e3;
-              return new Promise((t) => {
-                  let n = setTimeout(() => {
-                      t();
-                  }, e);
-                  (0, ii.t)(() => {
-                      clearTimeout(n), t();
-                  });
-              });
-          })((0, H.isIOS)() ? 0 : void 0)),
-        PW.A.loadLazyCache.recordStart();
+    PW.A.loadLazyCache.recordStart();
     let o = OF.A.getSocket();
     P2(() => {
         let d = performance.now();
