@@ -1,13 +1,14 @@
-l.d(t, { A: () => a });
-var n = l(627968);
-l(64700);
-var i = l(201275),
-    s = l(657048),
-    r = l(63104);
-function a(e) {
-    let { guildId: t, role: l, size: a, className: o } = e,
-        d = (0, i.$7)({ guildId: t, roleId: l.id, size: a });
+"use strict";
+n.d(t, { A: () => l });
+var i = n(627968);
+n(64700);
+var r = n(201275),
+    a = n(657048),
+    s = n(63104);
+function l(e) {
+    let { guildId: t, role: n, size: l, className: o } = e,
+        d = (0, r.$7)({ guildId: t, roleId: n.id, size: l });
     return null != d
-        ? (0, n.jsx)(s.A, { className: o, ...d })
-        : (0, n.jsx)(r.A, { color: l.colorString, className: o, size: a });
+        ? (0, i.jsx)(a.A, { className: o, ...d })
+        : (0, i.jsx)(s.A, { color: n.colorString, className: o, size: l });
 }

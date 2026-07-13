@@ -1,11 +1,12 @@
+"use strict";
 n.d(t, { $: () => s });
 var i = n(989349),
-    l = n.n(i),
+    r = n.n(i),
     a = n(375708);
 function s(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.intl.string(a.t.Yl1D84),
-        i = l().duration(e, "seconds");
+        i = r().duration(e, "seconds");
     return i.days() > 0
         ? a.intl.formatToPlainString(t ? a.t.GBLpQ8 : a.t["k2UNz+"], { days: i.days() })
         : i.hours() > 0

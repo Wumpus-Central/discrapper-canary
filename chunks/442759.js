@@ -1,43 +1,44 @@
-s.d(e, { Ym: () => c, f5: () => i }), s(321073);
-var r = s(64700),
-    a = s(575593);
-s(375708);
-class c {
+"use strict";
+n.d(t, { Ym: () => a, f5: () => s }), n(321073);
+var i = n(64700),
+    r = n(575593);
+n(375708);
+class a {
     itemsByTypes;
-    constructor(t) {
-        this.itemsByTypes = this.sortByTypes(t);
+    constructor(e) {
+        this.itemsByTypes = this.sortByTypes(e);
     }
     get firstAvatarDecoration() {
-        return this.getFirstItemByType(a.R.AVATAR_DECORATION);
+        return this.getFirstItemByType(r.R.AVATAR_DECORATION);
     }
     get firstProfileEffect() {
-        return this.getFirstItemByType(a.R.PROFILE_EFFECT);
+        return this.getFirstItemByType(r.R.PROFILE_EFFECT);
     }
     get firstNameplate() {
-        return this.getFirstItemByType(a.R.NAMEPLATE);
+        return this.getFirstItemByType(r.R.NAMEPLATE);
     }
     get firstProfileFrame() {
-        return this.getFirstItemByType(a.R.PROFILE_FRAME);
+        return this.getFirstItemByType(r.R.PROFILE_FRAME);
     }
-    getFirstItemByType(t) {
-        let e = (this.itemsByTypes.get(t) ?? [])[0];
-        if (null != e) return e;
+    getFirstItemByType(e) {
+        let t = (this.itemsByTypes.get(e) ?? [])[0];
+        if (null != t) return t;
     }
-    sortByTypes(t) {
-        return t.reduce((t, e) => {
-            let s = t.get(e.type);
-            return null != s ? s.push(e) : t.set(e.type, [e]), t;
+    sortByTypes(e) {
+        return e.reduce((e, t) => {
+            let n = e.get(t.type);
+            return null != n ? n.push(t) : e.set(t.type, [t]), e;
         }, new Map());
     }
 }
-function i(t) {
-    return r.useMemo(() => {
-        let e = new c(t.items);
+function s(e) {
+    return i.useMemo(() => {
+        let t = new a(e.items);
         return {
-            firstProfileEffect: e.firstProfileEffect,
-            firstAvatarDecoration: e.firstAvatarDecoration,
-            firstNameplate: e.firstNameplate,
-            firstProfileFrame: e.firstProfileFrame,
+            firstProfileEffect: t.firstProfileEffect,
+            firstAvatarDecoration: t.firstAvatarDecoration,
+            firstNameplate: t.firstNameplate,
+            firstProfileFrame: t.firstProfileFrame,
         };
-    }, [t]);
+    }, [e]);
 }
