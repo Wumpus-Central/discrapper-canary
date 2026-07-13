@@ -1,8 +1,9 @@
+"use strict";
 var a, n, l, i;
 function s(e, t) {
     if (!1 === e || null == e) throw Error(t);
 }
-function h(e, t) {
+function o(e, t) {
     if (!e) {
         "u" > typeof console && console.warn(t);
         try {
@@ -10,7 +11,7 @@ function h(e, t) {
         } catch (e) {}
     }
 }
-function o(e) {
+function h(e) {
     let t = {};
     if (e) {
         let r = e.indexOf("#");
@@ -20,17 +21,17 @@ function o(e) {
     }
     return t;
 }
-function c(e, t, r) {
+function u(e, t, r) {
     return (
         void 0 === r && (r = "/"),
         (function (e, t, r, a) {
-            let n = f(("string" == typeof t ? o(t) : t).pathname || "/", r);
+            let n = f(("string" == typeof t ? h(t) : t).pathname || "/", r);
             if (null == n) return null;
             let l = (function e(t, r, a, n) {
                 void 0 === r && (r = []), void 0 === a && (a = []), void 0 === n && (n = "");
                 let l = (t, l, i) => {
-                    var h, o;
-                    let c,
+                    var o, h;
+                    let u,
                         d,
                         f = {
                             relativePath: void 0 === i ? t.path || "" : i,
@@ -63,14 +64,14 @@ function c(e, t, r) {
                             r.push({
                                 path: g,
                                 score:
-                                    ((h = g),
-                                    (o = t.index),
-                                    (d = (c = h.split("/")).length),
-                                    c.some(p) && (d += -2),
-                                    o && (d += 2),
-                                    c
+                                    ((o = g),
+                                    (h = t.index),
+                                    (d = (u = o.split("/")).length),
+                                    u.some(p) && (d += -2),
+                                    h && (d += 2),
+                                    u
                                         .filter((e) => !p(e))
-                                        .reduce((e, t) => e + (u.test(t) ? 3 : "" === t ? 1 : 10), d)),
+                                        .reduce((e, t) => e + (c.test(t) ? 3 : "" === t ? 1 : 10), d)),
                                 routesMeta: m,
                             });
                 };
@@ -86,11 +87,11 @@ function c(e, t, r) {
                                     i = a.replace(/\?$/, "");
                                 if (0 === n.length) return l ? [i, ""] : [i];
                                 let s = e(n.join("/")),
-                                    h = [];
+                                    o = [];
                                 return (
-                                    h.push(...s.map((e) => ("" === e ? i : [i, e].join("/")))),
-                                    l && h.push(...s),
-                                    h.map((e) => (t.startsWith("/") && "" === e ? "/" : e))
+                                    o.push(...s.map((e) => ("" === e ? i : [i, e].join("/")))),
+                                    l && o.push(...s),
+                                    o.map((e) => (t.startsWith("/") && "" === e ? "/" : e))
                                 );
                             })(e.path))
                                 l(e, t, r);
@@ -119,7 +120,7 @@ function c(e, t, r) {
                             .join("/");
                     } catch (t) {
                         return (
-                            h(
+                            o(
                                 !1,
                                 'The URL path "' +
                                     e +
@@ -139,27 +140,27 @@ function c(e, t, r) {
                         i = [];
                     for (let e = 0; e < a.length; ++e) {
                         let s = a[e],
-                            h = e === a.length - 1,
-                            o = "/" === l ? t : t.slice(l.length) || "/",
-                            c = d({ path: s.relativePath, caseSensitive: s.caseSensitive, end: h }, o),
-                            u = s.route;
+                            o = e === a.length - 1,
+                            h = "/" === l ? t : t.slice(l.length) || "/",
+                            u = d({ path: s.relativePath, caseSensitive: s.caseSensitive, end: o }, h),
+                            c = s.route;
                         if (
-                            (!c &&
-                                h &&
+                            (!u &&
+                                o &&
                                 r &&
                                 !a[a.length - 1].route.index &&
-                                (c = d({ path: s.relativePath, caseSensitive: s.caseSensitive, end: !1 }, o)),
-                            !c)
+                                (u = d({ path: s.relativePath, caseSensitive: s.caseSensitive, end: !1 }, h)),
+                            !u)
                         )
                             return null;
-                        Object.assign(n, c.params),
+                        Object.assign(n, u.params),
                             i.push({
                                 params: n,
-                                pathname: v([l, c.pathname]),
-                                pathnameBase: g(v([l, c.pathnameBase])),
-                                route: u,
+                                pathname: v([l, u.pathname]),
+                                pathnameBase: g(v([l, u.pathnameBase])),
+                                route: c,
                             }),
-                            "/" !== c.pathnameBase && (l = v([l, c.pathnameBase]));
+                            "/" !== u.pathnameBase && (l = v([l, u.pathnameBase]));
                     }
                     return i;
                 })(l[e], t, a);
@@ -168,7 +169,7 @@ function c(e, t, r) {
         })(e, t, r, !1)
     );
 }
-r.d(t, { HS: () => v, Oi: () => s, Rr: () => o, pX: () => b, pb: () => f, rc: () => a, tH: () => m, ue: () => c }),
+r.d(t, { HS: () => v, Oi: () => s, Rr: () => h, pX: () => b, pb: () => f, rc: () => a, tH: () => m, ue: () => u }),
     ((l = a || (a = {})).Pop = "POP"),
     (l.Push = "PUSH"),
     (l.Replace = "REPLACE"),
@@ -176,19 +177,19 @@ r.d(t, { HS: () => v, Oi: () => s, Rr: () => o, pX: () => b, pb: () => f, rc: ()
     (i.deferred = "deferred"),
     (i.redirect = "redirect"),
     (i.error = "error");
-let u = /^:[\w-]+$/,
+let c = /^:[\w-]+$/,
     p = (e) => "*" === e;
 function d(e, t) {
     var r, a, n;
     let l, i;
     "string" == typeof e && (e = { path: e, caseSensitive: !1, end: !0 });
-    let [s, o] =
+    let [s, h] =
             ((r = e.path),
             (a = e.caseSensitive),
             (n = e.end),
             void 0 === a && (a = !1),
             void 0 === n && (n = !0),
-            h(
+            o(
                 "*" === r || !r.endsWith("*") || r.endsWith("/*"),
                 'Route path "' +
                     r +
@@ -217,22 +218,22 @@ function d(e, t) {
                   ? (i += "\\/*$")
                   : "" !== r && "/" !== r && (i += "(?:(?=\\/|$))"),
             [new RegExp(i, a ? void 0 : "i"), l]),
-        c = t.match(s);
-    if (!c) return null;
-    let u = c[0],
-        p = u.replace(/(.)\/+$/, "$1"),
-        d = c.slice(1);
+        u = t.match(s);
+    if (!u) return null;
+    let c = u[0],
+        p = c.replace(/(.)\/+$/, "$1"),
+        d = u.slice(1);
     return {
-        params: o.reduce((e, t, r) => {
+        params: h.reduce((e, t, r) => {
             let { paramName: a, isOptional: n } = t;
             if ("*" === a) {
                 let e = d[r] || "";
-                p = u.slice(0, u.length - e.length).replace(/(.)\/+$/, "$1");
+                p = c.slice(0, c.length - e.length).replace(/(.)\/+$/, "$1");
             }
             let l = d[r];
             return n && !l ? (e[a] = void 0) : (e[a] = (l || "").replace(/%2F/g, "/")), e;
         }, {}),
-        pathname: u,
+        pathname: c,
         pathnameBase: p,
         pattern: e,
     };
