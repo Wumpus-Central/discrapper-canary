@@ -135,7 +135,8 @@ class h extends u {
 let I = new h("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
 new h("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
-    new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target");
+    new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
+    new _("2026-06-ios-ota-streaming", "iOS OTA Streaming Download");
 let f = !1;
 function p() {
     return f;
