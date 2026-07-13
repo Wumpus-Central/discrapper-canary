@@ -1,60 +1,60 @@
 "use strict";
-n.d(t, { A: () => ti, m: () => e5 }), n(323874), n(14289), n(35956), n(321073), n(142703);
+n.d(t, { A: () => ti, m: () => e7 }), n(323874), n(14289), n(35956), n(321073), n(142703);
 var i,
     r,
-    s,
     a,
-    o = n(284009),
-    l = n.n(o),
-    u = n(777915),
+    s,
+    l = n(284009),
+    o = n.n(l),
+    d = n(777915),
     c = n(61090),
-    d = n(158390),
+    u = n(158390),
     _ = n(731738),
-    h = n(70298),
-    f = n(17928),
-    p = n(636537),
-    E = n(228366),
-    m = n(766034),
-    g = n(314732),
-    A = n(214771),
-    I = n(937724),
-    T = n(626584),
+    E = n(70298),
+    A = n(17928),
+    h = n(636537),
+    I = n(228366),
+    f = n(766034),
+    p = n(314732),
+    T = n(214771),
+    m = n(937724),
+    g = n(626584),
     S = n(807393),
-    y = n(464578),
+    N = n(464578),
     C = n(111162),
-    N = n(174459),
-    v = n(353835),
-    R = n(927813),
-    O = n(723702),
-    b = n(38405),
-    D = n(175306);
+    O = n(174459),
+    R = n(353835),
+    L = n(927813),
+    D = n(723702),
+    y = n(38405),
+    v = n(175306);
 n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162);
-var L = n(536194),
-    w = n(19575);
-let M = null;
-function P() {
+var b = n(536194),
+    M = n(19575);
+let P = null;
+function U() {
     return (
-        null == M &&
-            (M = (function () {
+        null == P &&
+            (P = (function () {
                 if (null == window.DiscordNative || void 0 === window.Uint8Array || void 0 === window.TextDecoder)
                     return !1;
                 try {
-                    let e = w.Ay.requireModule("discord_zstd");
+                    let e = M.Ay.requireModule("discord_zstd");
                     if (null == e) return !1;
                     return !0;
                 } catch (e) {
                     if (e.message.includes("Cannot find"))
-                        return w.Ay.ensureModule("discord_zstd").catch((e) => {}), !1;
+                        return M.Ay.ensureModule("discord_zstd").catch((e) => {}), !1;
                     throw e;
                 }
             })()),
-        M
+        P
     );
 }
-let { NativeModules: x } = {},
-    k = {},
-    U = [];
-class G {
+let { NativeModules: w } = {},
+    G = {},
+    x = [];
+class k {
     _onDataReady;
     _gatewayEncoding;
     static canUse() {
@@ -69,12 +69,12 @@ class G {
         this._onDataReady = e;
     }
 }
-U.push(
-    class extends G {
+x.push(
+    class extends k {
         _decoder = null;
         _stream;
         static canUse() {
-            return P();
+            return U();
         }
         getAlgorithm() {
             return "zstd-stream";
@@ -88,8 +88,8 @@ U.push(
                     ? (this._decoder = new TextDecoder("utf-8"))
                     : (this._decoder = null),
                 (this._stream = (function () {
-                    if (!P()) return;
-                    let { createContext: e } = w.Ay.requireModule("discord_zstd");
+                    if (!U()) return;
+                    let { createContext: e } = M.Ay.requireModule("discord_zstd");
                     return e();
                 })());
         }
@@ -104,8 +104,8 @@ U.push(
         close() {}
     },
 ),
-    U.push(
-        class extends G {
+    x.push(
+        class extends k {
             _inflate;
             _pako = n(777915);
             _usesZstd = !1;
@@ -145,19 +145,19 @@ U.push(
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new T.A("GatewayCompressionHandler").error(
+                    return void new g.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
                 let { chunks: r } = i,
-                    s = r.length;
-                if (this._gatewayEncoding.wantsString()) t = s > 1 ? r.join("") : r[0];
-                else if (s > 1) {
+                    a = r.length;
+                if (this._gatewayEncoding.wantsString()) t = a > 1 ? r.join("") : r[0];
+                else if (a > 1) {
                     let e = 0;
-                    for (let t = 0; t < s; t++) e += r[t].length;
+                    for (let t = 0; t < a; t++) e += r[t].length;
                     let n = new Uint8Array(e),
                         i = 0;
-                    for (let e = 0; e < s; e++) {
+                    for (let e = 0; e < a; e++) {
                         let t = r[e];
                         n.set(t, i), (i += t.length);
                     }
@@ -167,8 +167,8 @@ U.push(
             }
         },
     ),
-    U.push(
-        class extends G {
+    x.push(
+        class extends k {
             _pako = n(777915);
             static canUse() {
                 return !0;
@@ -193,8 +193,8 @@ U.push(
             close() {}
         },
     ),
-    U.push(
-        class extends G {
+    x.push(
+        class extends k {
             _socketId;
             static canUse() {
                 return !1;
@@ -205,16 +205,16 @@ U.push(
             bindWebSocket(e) {
                 this.close(),
                     (this._socketId = e._socketId),
-                    P()
-                        ? (0, O.isAndroid)()
-                            ? k?.enableZstdStreamSupport(this._socketId)
-                            : x.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)
-                        : (0, O.isAndroid)()
-                          ? k?.enableZlibStreamSupport(this._socketId)
-                          : x.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
+                    U()
+                        ? (0, D.isAndroid)()
+                            ? G?.enableZstdStreamSupport(this._socketId)
+                            : w.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)
+                        : (0, D.isAndroid)()
+                          ? G?.enableZlibStreamSupport(this._socketId)
+                          : w.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
             }
             getAlgorithm() {
-                return P() ? "zstd-stream" : "zlib-stream";
+                return U() ? "zstd-stream" : "zlib-stream";
             }
             usesLegacyCompression() {
                 return !1;
@@ -227,13 +227,13 @@ U.push(
                 let e = this._socketId;
                 (this._socketId = null),
                     null !== e &&
-                        ((0, O.isAndroid)()
-                            ? k?.disableZlibStreamSupport(e)
-                            : x.DCDCompressionManager.disableZlibStreamSupport(e));
+                        ((0, D.isAndroid)()
+                            ? G?.disableZlibStreamSupport(e)
+                            : w.DCDCompressionManager.disableZlibStreamSupport(e));
             }
         },
     );
-class F extends G {
+class F extends k {
     static canUse() {
         return !0;
     }
@@ -250,16 +250,16 @@ class F extends G {
     close() {}
 }
 function V(e) {
-    if (L.P.isDiscordGatewayPlaintextSet()) return new F(e);
-    for (var t of U) if (t.canUse()) return new t(e);
+    if (b.P.isDiscordGatewayPlaintextSet()) return new F(e);
+    for (var t of x) if (t.canUse()) return new t(e);
     return new F(e);
 }
-U.push(F);
+x.push(F);
 let B = BigInt(0),
-    j = BigInt(8),
-    H = BigInt(16),
-    Y = BigInt(32),
-    W = BigInt(64),
+    H = BigInt(8),
+    j = BigInt(16),
+    W = BigInt(32),
+    Y = BigInt(64),
     K = BigInt(128),
     $ = BigInt(256),
     z = BigInt(65536),
@@ -273,20 +273,20 @@ let B = BigInt(0),
     en = BigInt("18446744073709551616"),
     ei = BigInt("340282366920938463463374607431768211455"),
     er = BigInt("340282366920938463463374607431768211456"),
-    es = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639935"),
-    ea = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639936");
-function eo(e, t) {
+    ea = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639935"),
+    es = BigInt("115792089237316195423570985008687907853269984665640564039457584007913129639936");
+function el(e, t) {
     let n = e.indexOf(t?.toLowerCase() ?? "");
     return -1 === n ? void 0 : n + 1;
 }
-let el = (0, n(945810).mj)({
+let eo = (0, n(945810).mj)({
     name: "2026-04-wetf-parser",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function eu(e) {
-    return el.getConfig({ location: e }).enabled;
+function ed(e) {
+    return eo.getConfig({ location: e }).enabled;
 }
 let ec = new (class {
         _stringEncoding;
@@ -300,6 +300,7 @@ let ec = new (class {
         _nanEncoding;
         _arrayEncoding;
         _useLegacyAtoms;
+        _initialPoolSize;
         _poolSize;
         _u;
         _v;
@@ -310,18 +311,19 @@ let ec = new (class {
         _encoder;
         constructor(e = {}) {
             if (
-                ((this._stringEncoding = eo(["string", "binary"], e.encoding?.string) ?? 1),
-                (this._keyEncoding = eo(["atom", "binary", "string"], e.encoding?.key) ?? 1),
-                (this._safeIntEncoding = eo(["bigint", "float"], e.encoding?.safeInt) ?? 1),
-                (this._safeBigIntEncoding = eo(["number", "bigint"], e.encoding?.safeBigInt) ?? 1),
-                (this._nullEncoding = eo(["atom", "nil"], e.encoding?.null) ?? 1),
-                (this._bufferEncoding = eo(["binary", "bitbinary", "string"], e.encoding?.buffer) ?? 1),
-                (this._undefinedEncoding = eo(["atom", "null", "ignore"], e.encoding?.undefined) ?? 1),
-                (this._infinityEncoding = eo(["atom", "null", "ignore"], e.encoding?.infinity) ?? 1),
-                (this._nanEncoding = eo(["atom", "null", "ignore"], e.encoding?.nan) ?? 1),
-                (this._arrayEncoding = eo(["list", "improperlist", "tuple"], e.encoding?.array) ?? 3),
+                ((this._stringEncoding = el(["string", "binary"], e.encoding?.string) ?? 1),
+                (this._keyEncoding = el(["atom", "binary", "string"], e.encoding?.key) ?? 1),
+                (this._safeIntEncoding = el(["bigint", "float"], e.encoding?.safeInt) ?? 1),
+                (this._safeBigIntEncoding = el(["number", "bigint"], e.encoding?.safeBigInt) ?? 1),
+                (this._nullEncoding = el(["atom", "nil"], e.encoding?.null) ?? 1),
+                (this._bufferEncoding = el(["binary", "bitbinary", "string"], e.encoding?.buffer) ?? 1),
+                (this._undefinedEncoding = el(["atom", "null", "ignore"], e.encoding?.undefined) ?? 1),
+                (this._infinityEncoding = el(["atom", "null", "ignore"], e.encoding?.infinity) ?? 1),
+                (this._nanEncoding = el(["atom", "null", "ignore"], e.encoding?.nan) ?? 1),
+                (this._arrayEncoding = el(["list", "improperlist", "tuple"], e.encoding?.array) ?? 3),
                 (this._useLegacyAtoms = !!e.useLegacyAtoms),
-                (this._poolSize = null != e.poolSize && e.poolSize > 0 ? e.poolSize : 1048576),
+                (this._initialPoolSize = null != e.poolSize && e.poolSize > 0 ? e.poolSize : 1048576),
+                (this._poolSize = this._initialPoolSize),
                 (this._u = new Uint8Array(this._poolSize)),
                 (this._v = new DataView(this._u.buffer)),
                 (this._i = 0),
@@ -344,6 +346,20 @@ let ec = new (class {
                 this._loop(e),
                 this._u.subarray(this._o, this._i)
             );
+        }
+        packToArrayBuffer(e) {
+            (this._i = 0), (this._o = 0), (this._r = 0);
+            try {
+                return this._expand(10), (this._u[this._i++] = 131), this._loop(e), this._u.buffer.slice(0, this._i);
+            } finally {
+                (this._i = 0),
+                    (this._o = 0),
+                    (this._r = 0),
+                    this._poolSize !== this._initialPoolSize &&
+                        ((this._poolSize = this._initialPoolSize),
+                        (this._u = new Uint8Array(this._poolSize)),
+                        (this._v = new DataView(this._u.buffer)));
+            }
         }
         _loop(e) {
             let t = typeof e;
@@ -372,13 +388,13 @@ let ec = new (class {
                 case "symbol": {
                     let n = "symbol" === t ? e.toString() : e;
                     if (2 === this._stringEncoding) {
-                        this._expand(2 * n.length + 5), (this._u[this._i++] = 109);
+                        this._expand(3 * n.length + 5), (this._u[this._i++] = 109);
                         let e = this._i;
                         this._i += 4;
                         let t = this._utf(n);
                         this._v.setUint32(e, t);
                     } else {
-                        this._expand(2 * n.length + 3), (this._u[this._i++] = 107);
+                        this._expand(3 * n.length + 3), (this._u[this._i++] = 107);
                         let e = this._i;
                         this._i += 2;
                         let t = this._utf(n);
@@ -475,20 +491,20 @@ let ec = new (class {
                             (this._u[this._i] = 110),
                             (this._u[this._i + 2] = +!!t),
                             this._v.setBigUint64(this._i + 3, n & et, !0),
-                            this._v.setBigUint64(this._i + 11, n >> W, !0);
+                            this._v.setBigUint64(this._i + 11, n >> Y, !0);
                         for (let e = 18; e > 10; e--)
                             if (0 !== this._u[this._i + e]) {
                                 (this._u[this._i + 1] = e - 2), (this._i += e + 1);
                                 break;
                             }
-                    } else if (n < ea) {
+                    } else if (n < es) {
                         this._expand(35), (this._u[this._i] = 110), (this._u[this._i + 2] = +!!t);
                         let e = n >> K,
                             i = n & ei;
                         this._v.setBigUint64(this._i + 3, i & et, !0),
-                            this._v.setBigUint64(this._i + 11, i >> W, !0),
+                            this._v.setBigUint64(this._i + 11, i >> Y, !0),
                             this._v.setBigUint64(this._i + 19, e & et, !0),
-                            this._v.setBigUint64(this._i + 27, e >> W, !0);
+                            this._v.setBigUint64(this._i + 27, e >> Y, !0);
                         for (let e = 34; e > 18; e--)
                             if (0 !== this._u[this._i + e]) {
                                 (this._u[this._i + 1] = e - 2), (this._i += e + 1);
@@ -497,19 +513,19 @@ let ec = new (class {
                     } else {
                         let e = n,
                             i = [];
-                        for (; e > es; ) {
-                            let t = e & es,
+                        for (; e > ea; ) {
+                            let t = e & ea,
                                 n = t >> K,
                                 r = t & ei;
-                            i.push(r & et, r >> W, n & et, n >> W), (e >>= $);
+                            i.push(r & et, r >> Y, n & et, n >> Y), (e >>= $);
                         }
                         if (e > ei) {
                             let t = e >> K,
                                 n = e & ei;
-                            i.push(n & et, n >> W, t & et, t >> W);
-                        } else e > et ? i.push(e & et, e >> W) : e > B && i.push(e);
+                            i.push(n & et, n >> Y, t & et, t >> Y);
+                        } else e > et ? i.push(e & et, e >> Y) : e > B && i.push(e);
                         let r = i[i.length - 1],
-                            s =
+                            a =
                                 8 * i.length -
                                 (r < X
                                     ? r < z
@@ -524,18 +540,18 @@ let ec = new (class {
                                           ? 3
                                           : 2
                                       : +(r < ee));
-                        this._expand(s + 6),
-                            s < 256
+                        this._expand(a + 6),
+                            a < 256
                                 ? ((this._u[this._i] = 110),
-                                  (this._u[this._i + 1] = s),
+                                  (this._u[this._i + 1] = a),
                                   (this._u[this._i + 2] = +!!t),
                                   (this._i += 3))
                                 : ((this._u[this._i] = 111),
-                                  this._v.setUint32(this._i + 1, s),
+                                  this._v.setUint32(this._i + 1, a),
                                   (this._u[this._i + 5] = +!!t),
                                   (this._i += 6));
                         for (let e = 0; e < i.length; e++) this._v.setBigUint64(this._i + 8 * e, i[e], !0);
-                        this._i += s;
+                        this._i += a;
                     }
                     break;
                 }
@@ -625,27 +641,27 @@ let ec = new (class {
                         this._i += 4;
                         for (let i = 0; i < t.length; i++) {
                             let r = t[i],
-                                s = e[r],
-                                a = this._notIgnoreOrNull(s);
-                            if (!0 !== a)
-                                if (null === a) s = null;
+                                a = e[r],
+                                s = this._notIgnoreOrNull(a);
+                            if (!0 !== s)
+                                if (null === s) a = null;
                                 else {
                                     n--;
                                     continue;
                                 }
-                            let o = r.length;
+                            let l = r.length;
                             if (1 === this._keyEncoding && this._useLegacyAtoms) {
-                                o < 256
-                                    ? (this._expand(o + 2), (this._u[this._i++] = 115), (this._u[this._i++] = o))
-                                    : (this._expand(o + 3),
+                                l < 256
+                                    ? (this._expand(l + 2), (this._u[this._i++] = 115), (this._u[this._i++] = l))
+                                    : (this._expand(l + 3),
                                       (this._u[this._i++] = 100),
-                                      (this._u[this._i++] = o >> 8),
-                                      (this._u[this._i++] = 255 & o));
-                                for (let e = 0; e < o; e++) this._u[this._i++] = r.charCodeAt(e);
+                                      (this._u[this._i++] = l >> 8),
+                                      (this._u[this._i++] = 255 & l));
+                                for (let e = 0; e < l; e++) this._u[this._i++] = r.charCodeAt(e);
                             } else {
-                                let e = 2 * o,
+                                let e = 2 * l,
                                     t = 0;
-                                this._expand(e + 5),
+                                this._expand(3 * l + 5),
                                     2 === this._keyEncoding
                                         ? ((this._u[this._i] = 109), (t = 4))
                                         : 3 === this._keyEncoding
@@ -662,10 +678,10 @@ let ec = new (class {
                                       ? ((this._u[n] = i >> 8), (this._u[n + 1] = 255 & i))
                                       : this._v.setUint32(n, i);
                             }
-                            this._loop(s);
+                            this._loop(a);
                         }
-                        let s = r !== this._r ? i - this._r : i;
-                        this._v.setUint32(s, n);
+                        let a = r !== this._r ? i - this._r : i;
+                        this._v.setUint32(a, n);
                     }
             }
         }
@@ -685,18 +701,18 @@ let ec = new (class {
             return !0;
         }
         _expand(e) {
-            if (this._i + e >= this._poolSize) {
-                let e;
-                0 === this._o
-                    ? ((this._poolSize *= 2), (e = this._u), (this._u = new Uint8Array(this._poolSize)))
-                    : ((e = this._u.subarray(this._o, this._i)),
-                      (this._u = new Uint8Array(this._poolSize)),
-                      (this._i = e.length),
-                      (this._r = this._o),
-                      (this._o = 0)),
-                    (this._v = new DataView(this._u.buffer)),
-                    this._u.set(e);
-            }
+            if (this._i + e <= this._poolSize) return;
+            let t = this._u.subarray(this._o, this._i),
+                n = t.length + e,
+                i = this._poolSize;
+            for (; i < n; ) i *= 2;
+            (this._poolSize = i),
+                (this._u = new Uint8Array(this._poolSize)),
+                (this._v = new DataView(this._u.buffer)),
+                this._u.set(t),
+                (this._i = t.length),
+                (this._r += this._o),
+                (this._o = 0);
         }
         _utf(e) {
             let t = e.length;
@@ -724,10 +740,11 @@ let ec = new (class {
             return (this._i += n), n;
         }
     })({
+        poolSize: 65536,
         encoding: { string: "binary", key: "binary", array: "list", null: "atom", undefined: "null" },
         useLegacyAtoms: !0,
     }),
-    ed = new (class {
+    eu = new (class {
         _nilDecoding;
         _stringDecoding;
         _binaryDecoding;
@@ -746,13 +763,13 @@ let ec = new (class {
         _atomTableUtf;
         constructor(e = {}) {
             let t;
-            (this._nilDecoding = eo(["null", "array"], e.decoding?.nil) ?? 1),
+            (this._nilDecoding = el(["null", "array"], e.decoding?.nil) ?? 1),
                 (this._stringDecoding =
-                    eo(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.string) ?? 1),
+                    el(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.string) ?? 1),
                 (this._binaryDecoding =
-                    eo(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.binary) ?? 4),
+                    el(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.binary) ?? 4),
                 (this._bitbinaryDecoding =
-                    eo(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.bitbinary) ?? 4),
+                    el(["utf8", "latin1", "buffer", "uint8array", "array"], e.decoding?.bitbinary) ?? 4),
                 (this._atomRegistration = !!(e.atomRegistration ?? !0)),
                 (this._d = new Uint8Array(0)),
                 (this._v = new DataView(this._d.buffer, this._d.byteOffset, this._d.length)),
@@ -767,7 +784,7 @@ let ec = new (class {
                 "object" == typeof navigator)
             ) {
                 const e = navigator.userAgent;
-                e.includes("Firefox") ? (this._T = 4) : e.includes("Chrome") && (this._T = 200);
+                e.includes("Firefox") ? (this._T = 4) : e.includes("Chrome") && (this._T = 16);
             }
             (this._atoms = e.atomTable ?? {
                 true: !0,
@@ -786,26 +803,28 @@ let ec = new (class {
             for (const [e, t] of Object.entries(this._atoms)) {
                 const n = i.encode(e);
                 let r = (this._atomTableLatin[e.length] ??= []),
-                    s = (this._atomTableUtf[n.length] ??= []);
+                    a = (this._atomTableUtf[n.length] ??= []);
                 for (let n = 0; n < e.length; n++) {
                     const i = e.charCodeAt(n);
                     r = r[i] ??= n === e.length - 1 ? t : [];
                 }
                 for (let e = 0; e < n.length; e++) {
                     const i = n[e];
-                    s = s[i] ??= e === n.length - 1 ? t : [];
+                    a = a[i] ??= e === n.length - 1 ? t : [];
                 }
             }
         }
         unpack(e) {
             let t = +(131 === e[0]);
-            return (
-                (this._i = t),
+            (this._i = t),
                 e.length <= this._sd.length
                     ? (this._sd.set(e), (this._d = this._sd), (this._v = this._sv))
-                    : ((this._d = e), (this._v = new DataView(e.buffer, e.byteOffset, e.length))),
-                this._loop()
-            );
+                    : ((this._d = e), (this._v = new DataView(e.buffer, e.byteOffset, e.length)));
+            try {
+                return this._loop();
+            } finally {
+                (this._d = this._sd), (this._v = this._sv);
+            }
         }
         _loop() {
             let e = this._d[this._i++];
@@ -876,8 +895,8 @@ let ec = new (class {
                     let i = this._d[this._i++];
                     if (t <= 4) {
                         let e = 0;
-                        return (
-                            (e =
+                        if (
+                            ((e =
                                 1 === t
                                     ? this._d[this._i]
                                     : 2 === t
@@ -886,8 +905,11 @@ let ec = new (class {
                                         ? (this._d[this._i + 2] << 16) + (this._d[this._i + 1] << 8) + this._d[this._i]
                                         : this._v.getUint32(this._i, !0)),
                             (this._i += t),
-                            1 === i ? -e : e
-                        );
+                            1 !== i)
+                        )
+                            return e;
+                        if (e < 0x80000000) return 0 === e ? 0 : -e;
+                        return (-e).toString();
                     }
                     if (t < 7 || (7 === t && this._d[this._i + 6] < 32)) {
                         let e = 0;
@@ -913,12 +935,12 @@ let ec = new (class {
                         let e = t;
                         for (n = B; e > 0; )
                             e >= 8
-                                ? ((n <<= W), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
+                                ? ((n <<= Y), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
                                 : e >= 4
-                                  ? ((n <<= Y), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
+                                  ? ((n <<= W), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
                                   : e >= 2
-                                    ? ((n <<= H), (n += BigInt(this._v.getUint16(this._i + (e -= 2), !0))))
-                                    : ((n <<= j), (n += BigInt(this._d[this._i])), e--);
+                                    ? ((n <<= j), (n += BigInt(this._v.getUint16(this._i + (e -= 2), !0))))
+                                    : ((n <<= H), (n += BigInt(this._d[this._i])), e--);
                     }
                     return (this._i += t), 1 === i && (n = -n), n.toString();
                 }
@@ -952,14 +974,14 @@ let ec = new (class {
             e in n || (n[e] = []);
             let i = n[e],
                 r = "",
-                s = this._i;
+                a = this._i;
             for (let n = 0; n < e; n++) {
-                let a = this._d[s++];
-                if (a in i) i = i[a];
+                let s = this._d[a++];
+                if (s in i) i = i[s];
                 else if (n === e - 1) {
-                    (r = t ? this._utf(e) : this._latin(e)), (i[a] = r);
+                    (r = t ? this._utf(e) : this._latin(e)), (i[s] = r);
                     break;
-                } else i = i[a] = [];
+                } else i = i[s] = [];
             }
             return r;
         }
@@ -993,16 +1015,19 @@ let ec = new (class {
     })({
         decoding: { binary: "utf8", string: "array", nil: "array" },
         atomTable: { nil: null, null: null, true: !0, false: !1 },
+        atomRegistration: !1,
     }),
     e_ = (function () {
         let e;
-        if (O.isPlatformEmbedded) {
+        if (D.isPlatformEmbedded) {
             try {
-                e = w.Ay.requireModule("discord_erlpack");
-            } catch (t) {
+                e = M.Ay.requireModule("discord_erlpack");
+            } catch {
                 try {
-                    e = w.Ay.requireModule("erlpack");
-                } catch (e) {}
+                    e = M.Ay.requireModule("erlpack");
+                } catch {
+                    e = void 0;
+                }
             }
             if (null != e)
                 return class {
@@ -1011,21 +1036,19 @@ let ec = new (class {
                         return null != e;
                     }
                     pack(t) {
-                        if ((null == this._useWetf && (this._useWetf = eu("EtfEncoding")), this._useWetf)) {
-                            let e = ec.pack(t);
-                            return e.buffer.slice(e.byteOffset, e.byteOffset + e.byteLength);
-                        }
-                        return e.pack(t).buffer;
+                        return (null == this._useWetf && (this._useWetf = ed("EtfEncoding")), this._useWetf)
+                            ? ec.packToArrayBuffer(t)
+                            : e.pack(t).buffer;
                     }
                     unpack(t) {
-                        if ((null == this._useWetf && (this._useWetf = eu("EtfEncoding")), this._useWetf)) {
+                        if ((null == this._useWetf && (this._useWetf = ed("EtfEncoding")), this._useWetf)) {
                             let e = t instanceof Uint8Array ? t : new Uint8Array(t);
                             try {
-                                return ed.unpack(e);
+                                return eu.unpack(e);
                             } catch (n) {
                                 throw (
-                                    (b.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                    new T.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                    (y.A.captureException(n, { tags: { app_context: "WetfParser" } }),
+                                    new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
                                         erlpackDataLength: e.length,
@@ -1039,7 +1062,7 @@ let ec = new (class {
                             return e.unpack(t);
                         } catch (e) {
                             throw (
-                                (new T.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                (new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                                     erlpackUnpackError: e,
                                     erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: null != t ? t.length : null,
@@ -1057,7 +1080,7 @@ let ec = new (class {
                 };
         }
     })();
-class eh {
+class eE {
     pack(e) {
         return JSON.stringify(e);
     }
@@ -1073,13 +1096,13 @@ class eh {
         return !0;
     }
 }
-let ef = void 0 !== e_ ? e_ : eh;
-L.P.isDiscordGatewayPlaintextSet() && (ef = eh);
-let ep = ef;
+let eA = void 0 !== e_ ? e_ : eE;
+b.P.isDiscordGatewayPlaintextSet() && (eA = eE);
+let eh = eA;
 n(423034);
-var eE = n(287809),
-    em = n(652215);
-function eg(e) {
+var eI = n(287809),
+    ef = n(652215);
+function ep(e) {
     try {
         var t;
         let n =
@@ -1099,7 +1122,7 @@ ${n}${t[r]}: ${t[r + 1].micros / 1e3}`),
     } catch (e) {}
     return null != e._trace ? e._trace.join(" -> ") : "???";
 }
-function eA(e) {
+function eT(e) {
     return {
         connectTime: e ?? 0,
         numEvents: 0,
@@ -1112,10 +1135,10 @@ function eA(e) {
     };
 }
 n(667532);
-var eI = n(877166),
-    eT = n(365971),
+var em = n(877166),
+    eg = n(365971),
     eS = n(735438),
-    ey =
+    eN =
         (((i = {}).LONGER_DISPATCH = "longer_dispatch"),
         (i.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
         (i.FIRED_DUE_TO_MAX_TIMEOUT = "fired_due_to_max_timeout"),
@@ -1127,45 +1150,45 @@ var eI = n(877166),
         (r.TIME_OVER_DEADLINE = "time_over_deadline"),
         (r.DEADLINE_INITIAL_TIME_REMAINING = "initial_time_of_deadline"),
         r),
-    eN =
-        (((s = {}).COUNT_DISPATCHES_LEFT_AFTER_YIELD = "count_dispatches_left_after_yield"),
-        (s.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = "count_flush_before_queue_empty"),
-        (s.COUNT_INITIAL_DISPATCHS_LENGTH = "count_initial_dispatches_length"),
-        s);
-let ev = Object.freeze({
+    eO =
+        (((a = {}).COUNT_DISPATCHES_LEFT_AFTER_YIELD = "count_dispatches_left_after_yield"),
+        (a.COUNT_FLUSH_BEFORE_QUEUE_EMPTY = "count_flush_before_queue_empty"),
+        (a.COUNT_INITIAL_DISPATCHS_LENGTH = "count_initial_dispatches_length"),
+        a);
+let eR = Object.freeze({
         time_to_fire_idle_callback: null,
         time_to_flush_all_work: null,
         time_over_deadline: null,
         initial_time_of_deadline: null,
     }),
-    eR = Object.freeze({
+    eL = Object.freeze({
         time_to_fire_idle_callback: [0, 0],
         time_to_flush_all_work: [0, 0],
         time_over_deadline: [0, 0],
         initial_time_of_deadline: [0, 0],
     }),
-    eO = Object.freeze({
+    eD = Object.freeze({
         count_flush_before_queue_empty: [0, 0],
         count_dispatches_left_after_yield: [0, 0],
         count_initial_dispatches_length: [0, 0],
     }),
-    eb = Object.freeze({
+    ey = Object.freeze({
         longer_dispatch: 0,
         exceeded_max_consecutive_flushes: 0,
         fired_due_to_max_timeout: 0,
         skip_idle_callback_due_to_backgrounded: 0,
     });
-class eD {
-    _timeTracking = (0, eS.cloneDeep)(ev);
-    _timingStats = (0, eS.cloneDeep)(eR);
-    _measurements = (0, eS.cloneDeep)(eO);
-    _eventCounts = (0, eS.cloneDeep)(eb);
+class ev {
+    _timeTracking = (0, eS.cloneDeep)(eR);
+    _timingStats = (0, eS.cloneDeep)(eL);
+    _measurements = (0, eS.cloneDeep)(eD);
+    _eventCounts = (0, eS.cloneDeep)(ey);
     _enabled = !1;
     reset() {
-        (this._timeTracking = (0, eS.cloneDeep)(ev)),
-            (this._timingStats = (0, eS.cloneDeep)(eR)),
-            (this._measurements = (0, eS.cloneDeep)(eO)),
-            (this._eventCounts = (0, eS.cloneDeep)(eb));
+        (this._timeTracking = (0, eS.cloneDeep)(eR)),
+            (this._timingStats = (0, eS.cloneDeep)(eL)),
+            (this._measurements = (0, eS.cloneDeep)(eD)),
+            (this._eventCounts = (0, eS.cloneDeep)(ey));
     }
     clearTime(e) {
         this._timeTracking[e] = null;
@@ -1220,17 +1243,17 @@ class eD {
         };
     }
 }
-let eL = (1e3 / 60) * 3,
-    ew = (1e3 / 60) * 3,
-    eM = 1e3 / 60 / 8,
-    eP = (1e3 / 60) * 12;
-class ex {
+let eb = (1e3 / 60) * 3,
+    eM = (1e3 / 60) * 3,
+    eP = 1e3 / 60 / 8,
+    eU = (1e3 / 60) * 12;
+class ew {
     _browserDeadlineMs;
     _deadlineMs;
     _startMs;
     _firedDueToMaxTimeout;
     constructor(e, t = !1) {
-        (this._deadlineMs = Math.max(eM, e)),
+        (this._deadlineMs = Math.max(eP, e)),
             (this._browserDeadlineMs = e),
             (this._firedDueToMaxTimeout = t),
             (this._startMs = performance.now());
@@ -1247,30 +1270,30 @@ class ex {
     }
     generateDeadlineMetrics() {
         return {
-            isDeadlineNotIdeal: this._browserDeadlineMs < eM,
+            isDeadlineNotIdeal: this._browserDeadlineMs < eP,
             deadlineMs: this._deadlineMs.toFixed(2),
             timeSinceStartMs: (performance.now() - this._startMs).toFixed(2),
         };
     }
 }
-let ek = new T.A("DispatcherWorkScheduler");
-class eU {
+let eG = new g.A("DispatcherWorkScheduler");
+class ex {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
-    _nextDispatchTimeout = eL;
+    _nextDispatchTimeout = eb;
     _workCallbackFn = null;
     _consecutiveFlushesBeforeQueueEmpty = 0;
     _isBackgrounded = !1;
     _enableRequestIdleCallback = !0;
     _criticalWorkScheduled = !1;
-    telemetry = new eD();
-    _logger = ek;
+    telemetry = new ev();
+    _logger = eG;
     _trackAppBackgrounded(e) {
         this._isBackgrounded === e ||
             ((this._isBackgrounded = e),
             this._isBackgrounded &&
                 this.hasWorkScheduled &&
-                (this.telemetry.track(ey.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
+                (this.telemetry.track(eN.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
     }
     _queueIdleCallback() {
         throw Error("Not implemented");
@@ -1284,24 +1307,24 @@ class eU {
     _processWorkCallback(e) {
         if (null == this._workCallbackFn) return;
         if (this._hasExceededMaxConsecutiveFlushes) {
-            ek.log("Unable to fully flush work queue after max retries, skipping future deadline."),
+            eG.log("Unable to fully flush work queue after max retries, skipping future deadline."),
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
-                this.telemetry.measure(eN.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
-                this.telemetry.track(ey.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
+                this.telemetry.measure(eO.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
+                this.telemetry.track(eN.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
-                (this._nextDispatchTimeout = eP);
+                (this._nextDispatchTimeout = eU);
             return;
         }
         let t = performance.now(),
             n = this._workCallbackFn(e),
             i = performance.now();
         this.clearWorkTimeout(),
-            i - t > ew ? (this._nextDispatchTimeout = eP) : (this._nextDispatchTimeout = eL),
+            i - t > eM ? (this._nextDispatchTimeout = eU) : (this._nextDispatchTimeout = eb),
             n
                 ? (this._consecutiveFlushesBeforeQueueEmpty > 0 &&
                       this.telemetry.measure(
-                          eN.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
+                          eO.COUNT_FLUSH_BEFORE_QUEUE_EMPTY,
                           parseInt(`${this._consecutiveFlushesBeforeQueueEmpty}`),
                       ),
                   (this._consecutiveFlushesBeforeQueueEmpty = 0),
@@ -1329,7 +1352,7 @@ class eU {
         null != this._flushTimeoutHandler &&
             (clearTimeout(this._flushTimeoutHandler), (this._flushTimeoutHandler = null)),
             this._clearIdleCallback(),
-            (this._nextDispatchTimeout = eL),
+            (this._nextDispatchTimeout = eb),
             (this._workCallbackFn = null);
     }
     requestWorkTimeout(e) {
@@ -1337,19 +1360,19 @@ class eU {
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
                 (this.telemetry.time(eC.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eP && this.telemetry.track(ey.LONGER_DISPATCH),
+                this._nextDispatchTimeout === eU && this.telemetry.track(eN.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
             this._flushTimeoutHandler = setTimeout(() => {
-                if ((l()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
-                    return this.telemetry.track(ey.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
+                if ((o()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
+                    return this.telemetry.track(eN.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
         }
     }
 }
-let eG =
+let ek =
         window.requestIdleCallback ??
         ((e) => {
             let t = Date.now();
@@ -1359,15 +1382,15 @@ let eG =
         }),
     eF = window.cancelIdleCallback ?? clearTimeout;
 function eV(e) {
-    return null == e ? new ex(eM, !0) : new ex(e.timeRemaining(), e.didTimeout);
+    return null == e ? new ew(eP, !0) : new ew(e.timeRemaining(), e.didTimeout);
 }
-class eB extends eU {
+class eB extends ex {
     _flushIdleMaxTimeoutHandler = null;
     constructor() {
         super(),
-            E.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
+            I.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
-                n === (0, eT.Xg)() && this._trackAppBackgrounded(!t);
+                n === (0, eg.Xg)() && this._trackAppBackgrounded(!t);
             });
     }
     _queueIdleCallback() {
@@ -1376,12 +1399,12 @@ class eB extends eU {
             this._scheduleRequestIdleCallback(
                 (e) => {
                     if (e?.didTimeout) {
-                        this.telemetry.track(ey.FIRED_DUE_TO_MAX_TIMEOUT),
+                        this.telemetry.track(eN.FIRED_DUE_TO_MAX_TIMEOUT),
                             this.telemetry.clearTime(eC.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._processWorkCallback();
                         return;
                     }
-                    if ((this.telemetry.timeEnd(eC.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? eM) < eM))
+                    if ((this.telemetry.timeEnd(eC.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? eP) < eP))
                         this.telemetry.time(eC.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._scheduleRequestIdleCallback(
                                 (e) => {
@@ -1405,7 +1428,7 @@ class eB extends eU {
             );
     }
     _scheduleRequestIdleCallback(e, t) {
-        (this._flushIdleHandler = eG((t) => {
+        (this._flushIdleHandler = ek((t) => {
             this._clearIdleCallback(), e(t);
         })),
             t?.timeout != null && this._scheduleMaxIdleCallback(t.timeout);
@@ -1422,10 +1445,10 @@ class eB extends eU {
                 (clearTimeout(this._flushIdleMaxTimeoutHandler), (this._flushIdleMaxTimeoutHandler = null));
     }
 }
-let ej = new T.A("GatewaySocket"),
-    eH = new Set(["INITIAL_GUILD", "READY"]),
-    eY = new Set(["READY", "INITIAL_GUILD"]),
-    eW = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
+let eH = new g.A("GatewaySocket"),
+    ej = new Set(["INITIAL_GUILD", "READY"]),
+    eW = new Set(["READY", "INITIAL_GUILD"]),
+    eY = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
     eK = new Set([
         "READY",
         "INITIAL_GUILD",
@@ -1452,7 +1475,7 @@ class ez {
     scheduler = new eB();
     queue = [];
     paused = !0;
-    resumeAnalytics = eA();
+    resumeAnalytics = eT();
     getDispatchHandler = null;
     constructor(e) {
         this.socket = e;
@@ -1476,7 +1499,7 @@ class ez {
         this.queue.push(i), this.maybePreload(i) || this.scheduleFlush(t);
     }
     maybePreload(e) {
-        if (this.paused && !eH.has(e.type)) return !1;
+        if (this.paused && !ej.has(e.type)) return !1;
         if (0 === e.status) {
             let t = this.getDispatchHandler(e.type)?.preload(e.data);
             if (((e.status = null == t ? 2 : 1), (e.preloadPromise = t), null != t))
@@ -1493,7 +1516,7 @@ class ez {
     }
     scheduleFlush(e) {
         !this.paused &&
-            (eY.has(e)
+            (eW.has(e)
                 ? (this.scheduler.clearWorkTimeout(), this.flush())
                 : this.scheduler.hasWorkScheduled || this.scheduler.requestWorkTimeout(this.flush),
             eK.has(e) && this.scheduler.markCriticalWorkScheduled());
@@ -1507,8 +1530,8 @@ class ez {
         let i = this.queue.splice(0, n),
             r = this.dispatchMultiple(i, e);
         r && this.scheduler.telemetry.timeEnd(eC.TIME_TO_QUEUE_EMPTY);
-        let s = performance.now() - t;
-        return s > ew && !r && ej.log(`Dispatched ${i.length} messages in ${s}ms`), r;
+        let a = performance.now() - t;
+        return a > eM && !r && eH.log(`Dispatched ${i.length} messages in ${a}ms`), r;
     };
     getDispatchTimings() {
         return e$;
@@ -1529,49 +1552,49 @@ class ez {
         if (0 === e.length) return !0;
         let n = "none",
             i = !1;
-        this.scheduler.telemetry.measure(eN.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
+        this.scheduler.telemetry.measure(eO.COUNT_INITIAL_DISPATCHS_LENGTH, e.length);
         try {
             let r = [];
-            this.socket.connectionState === D.A.RESUMING && f.Ay.Emitter.pause(150);
-            let s = 0;
+            this.socket.connectionState === v.A.RESUMING && A.Ay.Emitter.pause(150);
+            let a = 0;
             if (
-                (f.Ay.Emitter.batched(() => {
-                    for (let a = 0; a < e.length; a++) {
-                        let o = e[a];
-                        (n = o.type), (i = i || eW.has(o.type));
-                        let l = performance.now();
+                (A.Ay.Emitter.batched(() => {
+                    for (let s = 0; s < e.length; s++) {
+                        let l = e[s];
+                        (n = l.type), (i = i || eY.has(l.type));
+                        let o = performance.now();
                         if (
-                            (this.dispatchOne(o),
-                            (s = performance.now() - l),
+                            (this.dispatchOne(l),
+                            (a = performance.now() - o),
                             !(function (e, t) {
                                 let [n, i] = e$[e] ?? [0, 0];
                                 e$[e] = [(n * i + t) / (i + 1), i + 1];
-                            })(o.type, s),
+                            })(l.type, a),
                             (function (e, t, n) {
                                 if (null == n) return !1;
                                 let i = e[t],
                                     r = e.length - 1,
-                                    s = t < r ? e[t + 1] : null,
-                                    a = n?.timeRemaining() ?? 0,
-                                    o = null != n && a <= 0,
-                                    l = i.type === s?.type;
-                                return !!o && !l && t !== r;
-                            })(e, a, t))
+                                    a = t < r ? e[t + 1] : null,
+                                    s = n?.timeRemaining() ?? 0,
+                                    l = null != n && s <= 0,
+                                    o = i.type === a?.type;
+                                return !!l && !o && t !== r;
+                            })(e, s, t))
                         ) {
-                            (r = e.slice(a + 1)),
+                            (r = e.slice(s + 1)),
                                 null != t &&
                                     0 >= t.timeRemaining() &&
                                     this.scheduler.telemetry.timeTrack(eC.TIME_OVER_DEADLINE, t.timeSinceExpiration);
                             break;
                         }
                     }
-                    eI.A.flush();
+                    em.A.flush();
                 }),
-                i && f.Ay.Emitter.resume(),
+                i && A.Ay.Emitter.resume(),
                 r.length > 0)
             )
                 return (
-                    this.scheduler.telemetry.measure(eN.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
+                    this.scheduler.telemetry.measure(eO.COUNT_DISPATCHES_LEFT_AFTER_YIELD, r.length),
                     this.queue.unshift(...r),
                     this.scheduler.requestWorkTimeout(this.flush, !0),
                     !1
@@ -1583,84 +1606,84 @@ class ez {
     }
     dispatchOne(e) {
         var t, n;
-        let { data: i, type: r, compressionAnalytics: s, preloadedData: a } = e,
-            o = performance.now();
-        if (this.socket.connectionState === D.A.RESUMING) {
-            let e = o - this.resumeAnalytics.lastUpdateTime;
+        let { data: i, type: r, compressionAnalytics: a, preloadedData: s } = e,
+            l = performance.now();
+        if (this.socket.connectionState === v.A.RESUMING) {
+            let e = l - this.resumeAnalytics.lastUpdateTime;
             0 === this.resumeAnalytics.numEvents
                 ? (this.resumeAnalytics.initialWaitTime = e)
                 : e > this.resumeAnalytics.largestWaitTime && (this.resumeAnalytics.largestWaitTime = e),
                 (this.resumeAnalytics.totalWaitTime += e),
-                (this.resumeAnalytics.lastUpdateTime = o),
+                (this.resumeAnalytics.lastUpdateTime = l),
                 (this.resumeAnalytics.numEvents += 1);
         }
-        if ((eI.A.flush(r, i), "READY" === r)) {
+        if ((em.A.flush(r, i), "READY" === r)) {
             let e,
                 n,
-                l = (function (e) {
+                o = (function (e) {
                     let t = Date.now(),
                         {
                             guilds: n,
                             merged_presences: i,
                             merged_members: r,
-                            read_state: s,
-                            private_channels: a,
-                            user_guild_settings: o,
-                            user_settings: l,
-                            user_settings_proto: u,
+                            read_state: a,
+                            private_channels: s,
+                            user_guild_settings: l,
+                            user_settings: o,
+                            user_settings_proto: d,
                             experiments: c,
-                            guild_experiments: d,
+                            guild_experiments: u,
                             relationships: _,
-                            users: h,
-                            ...f
+                            users: E,
+                            ...A
                         } = e,
+                        h = [],
+                        I = [],
+                        f = [],
                         p = [],
-                        E = [],
+                        T = [],
                         m = [],
                         g = [],
-                        A = [],
-                        I = [],
-                        T = [],
                         S = [];
                     return (
                         n.forEach((e) => {
                             if (e.unavailable) return;
                             let { features: t, ...n } = e.properties ?? {},
-                                { threads: i, guild_scheduled_events: r, ...s } = e;
-                            p.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
-                                E.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
-                                m.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
-                                g.push(i),
-                                A.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                I.push(t),
-                                T.push(r),
-                                S.push(s, n);
+                                { threads: i, guild_scheduled_events: r, ...a } = e;
+                            h.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
+                                I.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
+                                f.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
+                                p.push(i),
+                                T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
+                                m.push(t),
+                                g.push(r),
+                                S.push(a, n);
                         }),
                         {
                             presences_size: JSON.stringify(i?.friends ?? []).length,
-                            users_size: JSON.stringify(h).length,
-                            read_states_size: JSON.stringify(s).length,
-                            private_channels_size: JSON.stringify(a).length,
-                            user_settings_size: JSON.stringify(l ?? "").length + (u ?? "").length,
-                            experiments_size: JSON.stringify(c ?? []).length + JSON.stringify(d ?? []).length,
-                            user_guild_settings_size: JSON.stringify(o).length,
+                            users_size: JSON.stringify(E).length,
+                            read_states_size: JSON.stringify(a).length,
+                            private_channels_size: JSON.stringify(s).length,
+                            user_settings_size: JSON.stringify(o ?? "").length + (d ?? "").length,
+                            experiments_size: JSON.stringify(c ?? []).length + JSON.stringify(u ?? []).length,
+                            user_guild_settings_size: JSON.stringify(l).length,
                             relationships_size: JSON.stringify(_).length,
-                            remaining_data_size: JSON.stringify(f ?? {}).length,
-                            guild_channels_size: JSON.stringify(p).length,
+                            remaining_data_size: JSON.stringify(A ?? {}).length,
+                            guild_channels_size: JSON.stringify(h).length,
                             guild_members_size: JSON.stringify(r ?? []).length,
                             guild_presences_size: JSON.stringify(i?.guilds ?? []).length,
-                            guild_roles_size: JSON.stringify(E).length,
-                            guild_emojis_size: JSON.stringify(m).length,
-                            guild_threads_size: JSON.stringify(g).length,
-                            guild_stickers_size: JSON.stringify(A).length,
-                            guild_events_size: JSON.stringify(T).length,
-                            guild_features_size: JSON.stringify(I).length,
+                            guild_roles_size: JSON.stringify(I).length,
+                            guild_emojis_size: JSON.stringify(f).length,
+                            guild_threads_size: JSON.stringify(p).length,
+                            guild_stickers_size: JSON.stringify(T).length,
+                            guild_events_size: JSON.stringify(g).length,
+                            guild_features_size: JSON.stringify(m).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
                     );
                 })(i);
-            this.getDispatchHandler(r)?.dispatch(i, r, a),
+            this.getDispatchHandler(r)?.dispatch(i, r, s),
                 (t = this.socket),
                 (e = (function (e) {
                     let { _trace: t } = e,
@@ -1677,8 +1700,8 @@ class ez {
                                 if (null != t && t.length > 0)
                                     for (let i = 0; i < t.length; i += 2) {
                                         let r = t[i],
-                                            s = t[i + 1];
-                                        n(r, s.micros), e(s.calls, n);
+                                            a = t[i + 1];
+                                        n(r, a.micros), e(a.calls, n);
                                     }
                             })(e, (e, t) => {
                                 "start_session" === e
@@ -1688,10 +1711,10 @@ class ez {
                     } catch (e) {}
                     return n;
                 })(i)),
-                null != s && c.A.addDetail("payload_size(kb)", Math.round(s.uncompressed_byte_size / 1024)),
+                null != a && c.A.addDetail("payload_size(kb)", Math.round(a.uncompressed_byte_size / 1024)),
                 c.A.addDetail("server_time(ms)", e.identify_total_server_duration_ms ?? 0),
                 (n = {
-                    ...s,
+                    ...a,
                     ...e,
                     ...(function (e) {
                         let { guilds: t } = e,
@@ -1704,16 +1727,16 @@ class ez {
                                 null != t &&
                                     null != t.forEach &&
                                     t.forEach((e) => {
-                                        i++, e.type === em.rbe.GUILD_CATEGORY && n++;
+                                        i++, e.type === ef.rbe.GUILD_CATEGORY && n++;
                                     });
                             }),
                             { num_guilds: t.length, num_guild_channels: i, num_guild_category_channels: n }
                         );
                     })(i),
-                    ...l,
-                    duration_ms_since_identify_start: o - t.identifyStartTime,
-                    duration_ms_since_connection_start: o - t.connectionStartTime,
-                    duration_ms_since_emit_start: Date.now() - o,
+                    ...o,
+                    duration_ms_since_identify_start: l - t.identifyStartTime,
+                    duration_ms_since_connection_start: l - t.connectionStartTime,
+                    duration_ms_since_emit_start: Date.now() - l,
                     is_reconnect: t.hasConnectedOnce,
                     is_fast_connect: t.isFastConnect,
                     did_force_clear_guild_hashes: t.didForceClearGuildHashes,
@@ -1722,15 +1745,15 @@ class ez {
                     had_cache_at_startup: t.analytics.hadCacheAtStartup ?? !1,
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
-                y.A.attachReadyPayloadProperties(n),
-                N.default.track(em.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
+                N.A.attachReadyPayloadProperties(n),
+                O.default.track(ef.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
         } else
             "RESUMED" === r
-                ? (this.getDispatchHandler(r)?.dispatch(i, r, a),
+                ? (this.getDispatchHandler(r)?.dispatch(i, r, s),
                   (n = this.resumeAnalytics),
-                  (!eE.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
-                      N.default.track(
-                          em.HAw.CONNECTION_RESUMED,
+                  (!eI.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
+                      O.default.track(
+                          ef.HAw.CONNECTION_RESUMED,
                           {
                               connect_time_ms: n.connectTime,
                               resume_time_ms: Math.floor(performance.now() - n.startTime),
@@ -1743,9 +1766,9 @@ class ez {
                           { logEventProperties: !0 },
                       ),
                   this.socket.handleResumeDispatched(),
-                  (this.resumeAnalytics = eA()))
-                : this.getDispatchHandler(r)?.dispatch(i, r, a);
-        this.socket.connectionState === D.A.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
+                  (this.resumeAnalytics = eT()))
+                : this.getDispatchHandler(r)?.dispatch(i, r, s);
+        this.socket.connectionState === v.A.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - l);
     }
     clear() {
         (this.paused = !1), (this.queue.length = 0);
@@ -1756,39 +1779,39 @@ var eq = n(143236),
     eZ = n(873985),
     eX = n(935208),
     eQ =
-        (((a = {})[(a.DISPATCH = 0)] = "DISPATCH"),
-        (a[(a.HEARTBEAT = 1)] = "HEARTBEAT"),
-        (a[(a.IDENTIFY = 2)] = "IDENTIFY"),
-        (a[(a.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
-        (a[(a.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
-        (a[(a.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
-        (a[(a.RESUME = 6)] = "RESUME"),
-        (a[(a.RECONNECT = 7)] = "RECONNECT"),
-        (a[(a.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
-        (a[(a.INVALID_SESSION = 9)] = "INVALID_SESSION"),
-        (a[(a.HELLO = 10)] = "HELLO"),
-        (a[(a.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
-        (a[(a.CALL_CONNECT = 13)] = "CALL_CONNECT"),
-        (a[(a.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
-        (a[(a.STREAM_CREATE = 18)] = "STREAM_CREATE"),
-        (a[(a.STREAM_DELETE = 19)] = "STREAM_DELETE"),
-        (a[(a.STREAM_WATCH = 20)] = "STREAM_WATCH"),
-        (a[(a.STREAM_PING = 21)] = "STREAM_PING"),
-        (a[(a.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
-        (a[(a.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
-        (a[(a.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
-        (a[(a.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
-        (a[(a.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
-        (a[(a.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
-        (a[(a.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
-        (a[(a.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
-        (a[(a.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
-        (a[(a.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
-        (a[(a.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
-        (a[(a.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
-        (a[(a.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
-        (a[(a.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
-        a);
+        (((s = {})[(s.DISPATCH = 0)] = "DISPATCH"),
+        (s[(s.HEARTBEAT = 1)] = "HEARTBEAT"),
+        (s[(s.IDENTIFY = 2)] = "IDENTIFY"),
+        (s[(s.PRESENCE_UPDATE = 3)] = "PRESENCE_UPDATE"),
+        (s[(s.VOICE_STATE_UPDATE = 4)] = "VOICE_STATE_UPDATE"),
+        (s[(s.VOICE_SERVER_PING = 5)] = "VOICE_SERVER_PING"),
+        (s[(s.RESUME = 6)] = "RESUME"),
+        (s[(s.RECONNECT = 7)] = "RECONNECT"),
+        (s[(s.REQUEST_GUILD_MEMBERS = 8)] = "REQUEST_GUILD_MEMBERS"),
+        (s[(s.INVALID_SESSION = 9)] = "INVALID_SESSION"),
+        (s[(s.HELLO = 10)] = "HELLO"),
+        (s[(s.HEARTBEAT_ACK = 11)] = "HEARTBEAT_ACK"),
+        (s[(s.CALL_CONNECT = 13)] = "CALL_CONNECT"),
+        (s[(s.GUILD_SUBSCRIPTIONS = 14)] = "GUILD_SUBSCRIPTIONS"),
+        (s[(s.STREAM_CREATE = 18)] = "STREAM_CREATE"),
+        (s[(s.STREAM_DELETE = 19)] = "STREAM_DELETE"),
+        (s[(s.STREAM_WATCH = 20)] = "STREAM_WATCH"),
+        (s[(s.STREAM_PING = 21)] = "STREAM_PING"),
+        (s[(s.STREAM_SET_PAUSED = 22)] = "STREAM_SET_PAUSED"),
+        (s[(s.REQUEST_GUILD_APPLICATION_COMMANDS = 24)] = "REQUEST_GUILD_APPLICATION_COMMANDS"),
+        (s[(s.REQUEST_FORUM_UNREADS = 28)] = "REQUEST_FORUM_UNREADS"),
+        (s[(s.REMOTE_COMMAND = 29)] = "REMOTE_COMMAND"),
+        (s[(s.GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH = 30)] = "GET_DELETED_ENTITY_IDS_NOT_MATCHING_HASH"),
+        (s[(s.REQUEST_SOUNDBOARD_SOUNDS = 31)] = "REQUEST_SOUNDBOARD_SOUNDS"),
+        (s[(s.REQUEST_LAST_MESSAGES = 34)] = "REQUEST_LAST_MESSAGES"),
+        (s[(s.SEARCH_RECENT_MEMBERS = 35)] = "SEARCH_RECENT_MEMBERS"),
+        (s[(s.GUILD_SUBSCRIPTIONS_BULK = 37)] = "GUILD_SUBSCRIPTIONS_BULK"),
+        (s[(s.GUILD_CHANNELS_RESYNC = 38)] = "GUILD_CHANNELS_RESYNC"),
+        (s[(s.REQUEST_CHANNEL_MEMBER_COUNT = 39)] = "REQUEST_CHANNEL_MEMBER_COUNT"),
+        (s[(s.QOS_HEARTBEAT = 40)] = "QOS_HEARTBEAT"),
+        (s[(s.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
+        (s[(s.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
+        s);
 class eJ extends eq.EventEmitter {
     presenceUpdate(e, t, n, i) {
         this.send(eQ.PRESENCE_UPDATE, { status: e, since: t, activities: n, afk: i });
@@ -1799,23 +1822,23 @@ class eJ extends eq.EventEmitter {
                 channelId: n = null,
                 selfMute: i = !1,
                 selfDeaf: r = !1,
-                selfVideo: s = !1,
-                preferredRegion: a = null,
-                preferredRegions: o = null,
-                videoStreamParameters: l = null,
-                flags: u = 0,
+                selfVideo: a = !1,
+                preferredRegion: s = null,
+                preferredRegions: l = null,
+                videoStreamParameters: o = null,
+                flags: d = 0,
             } = e,
-            c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: s, flags: u };
-        null != n && eZ.A.shouldIncludePreferredRegion() && ((c.preferred_region = a), (c.preferred_regions = o)),
-            null != l && (c.tracks = l?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
+            c = { guild_id: t, channel_id: n, self_mute: i, self_deaf: r, self_video: a, flags: d };
+        null != n && eZ.A.shouldIncludePreferredRegion() && ((c.preferred_region = s), (c.preferred_regions = l)),
+            null != o && (c.tracks = o?.map((e) => ({ type: e.type, rid: e.rid, quality: e.quality }))),
             this.send(eQ.VOICE_STATE_UPDATE, c);
     }
     voiceServerPing() {
         this.send(eQ.VOICE_SERVER_PING, null);
     }
     requestGuildMembers(e, t) {
-        let { query: n, limit: i, userIds: r, presences: s } = t;
-        this.send(eQ.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: s });
+        let { query: n, limit: i, userIds: r, presences: a } = t;
+        this.send(eQ.REQUEST_GUILD_MEMBERS, { guild_id: e, query: n, limit: i, user_ids: r, presences: a });
     }
     searchRecentMembers(e, t) {
         let { query: n, continuationToken: i } = t;
@@ -1826,10 +1849,10 @@ class eJ extends eq.EventEmitter {
             n = 0;
         eX.default.keys(e).forEach((i) => {
             let r = e[i],
-                s = JSON.stringify([i, r]).length;
-            n + s > 15360 && (this.send(eQ.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
+                a = JSON.stringify([i, r]).length;
+            n + a > 15360 && (this.send(eQ.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t }), (t = {}), (n = 0)),
                 (t[i] = r),
-                (n += s);
+                (n += a);
         }),
             n > 0 && this.send(eQ.GUILD_SUBSCRIPTIONS_BULK, { subscriptions: t });
     }
@@ -1890,16 +1913,16 @@ class eJ extends eq.EventEmitter {
 var e0 = n(33282),
     e1 = n(981133),
     e2 = n(751124);
-let e3 = new T.A("GatewaySocket"),
-    e6 = new ep(),
+let e3 = new g.A("GatewaySocket"),
+    e6 = new eh(),
     e4 = null;
-function e5(e) {
+function e7(e) {
     e4 = e;
 }
-function e7() {}
-let e8 = 30 * R.A.Millis.SECOND,
-    e9 = 3 * R.A.Millis.MINUTE,
-    te = +R.A.Millis.MINUTE;
+function e5() {}
+let e8 = 30 * L.A.Millis.SECOND,
+    e9 = 3 * L.A.Millis.MINUTE,
+    te = +L.A.Millis.MINUTE;
 function tt(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
@@ -1907,7 +1930,7 @@ let tn = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
 class ti extends eJ {
     gatewayBackoff;
     handleIdentify;
-    dispatchExceptionBackoff = new d.A(1e3, te);
+    dispatchExceptionBackoff = new u.A(1e3, te);
     dispatchSuccessTimer = 0;
     connectionState_;
     webSocket;
@@ -1946,8 +1969,8 @@ class ti extends eJ {
     constructor() {
         super(),
             (this.dispatcher = new ez(this)),
-            (this.gatewayBackoff = new d.A(1e3, 6e4)),
-            (this.connectionState_ = D.A.CLOSED),
+            (this.gatewayBackoff = new u.A(1e3, 6e4)),
+            (this.connectionState_ = v.A.CLOSED),
             (this.webSocket = null),
             (this.seq = 0),
             (this.sessionId = null),
@@ -1988,7 +2011,7 @@ class ti extends eJ {
             (this.heartbeatQOSState.upcomingState = e);
     }
     handleUpdateTimeSpentSessionId(e, t, n) {
-        this.connectionState_ === D.A.SESSION_ESTABLISHED &&
+        this.connectionState_ === v.A.SESSION_ESTABLISHED &&
             (this.send(eQ.UPDATE_TIME_SPENT_SESSION_ID, {
                 initialization_timestamp: e,
                 session_id: t,
@@ -2001,13 +2024,13 @@ class ti extends eJ {
         let i, r;
         if (!this.willReconnect()) return void e3.verbose("Skipping _connect because willReconnect is false");
         if (e0.j()) return void e3.info("Skipping _connect because socket is paused");
-        (this.connectionState = D.A.CONNECTING), (this.nextReconnectIsImmediate = !1);
-        let s = this.compressionHandler.getAlgorithm(),
-            a = e6.getName(),
-            o = this._getGatewayUrl(),
-            l = window.GLOBAL_ENV.API_VERSION;
+        (this.connectionState = v.A.CONNECTING), (this.nextReconnectIsImmediate = !1);
+        let a = this.compressionHandler.getAlgorithm(),
+            s = e6.getName(),
+            l = this._getGatewayUrl(),
+            o = window.GLOBAL_ENV.API_VERSION;
         c.A.mark("\uD83C\uDF10", "Socket._connect"),
-            e3.info(`[CONNECT] ${o}, encoding: ${a}, version: ${l}, compression: ${s ?? "none"}`),
+            e3.info(`[CONNECT] ${l}, encoding: ${s}, version: ${o}, compression: ${a ?? "none"}`),
             null !== this.webSocket &&
                 (e3.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
             (this.connectionStartTime = Date.now()),
@@ -2016,25 +2039,25 @@ class ti extends eJ {
                 this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
                     this.setResumeUrl(null);
             }, e8));
-        let u = new URL(o);
-        u.searchParams.append("encoding", a),
-            u.searchParams.append("v", l.toString()),
-            null != s && u.searchParams.append("compress", s),
+        let d = new URL(l);
+        d.searchParams.append("encoding", s),
+            d.searchParams.append("v", o.toString()),
+            null != a && d.searchParams.append("compress", a),
             !(function (e) {
                 let t,
-                    { gatewayURL: n, newCallback: i, onOpen: r, onMessage: s, onError: a, onClose: o } = e;
+                    { gatewayURL: n, newCallback: i, onOpen: r, onMessage: a, onError: s, onClose: l } = e;
                 e3.enableNativeLogger(!0);
-                let l = window._ws,
-                    u = !1,
+                let o = window._ws,
+                    d = !1,
                     c = !1,
-                    d = null,
+                    u = null,
                     _ = null;
-                if (((window._ws = null), null != l)) {
-                    t = l.ws;
-                    let e = l.state.userId,
+                if (((window._ws = null), null != o)) {
+                    t = o.ws;
+                    let e = o.state.userId,
                         i = null != e && null != e4 && e !== e4;
-                    if (l.state.gateway !== n)
-                        e3.verbose(`[FAST CONNECT] gatewayURL mismatch: ${l.state.gateway} !== ${n}`),
+                    if (o.state.gateway !== n)
+                        e3.verbose(`[FAST CONNECT] gatewayURL mismatch: ${o.state.gateway} !== ${n}`),
                             t.close(1e3),
                             (t = null);
                     else if (i)
@@ -2044,7 +2067,7 @@ class ti extends eJ {
                             t.close(1e3),
                             (t = null);
                     else {
-                        let e = { ...l.state };
+                        let e = { ...o.state };
                         null != e.messages &&
                             (e.messages = e.messages.map((e) =>
                                 null != e.data && "string" == typeof e.data
@@ -2055,29 +2078,29 @@ class ti extends eJ {
                                 ...e,
                                 messages: e.messages?.length,
                             }),
-                            (u = l.state.open),
-                            (c = l.state.identify),
-                            (d = l.state.messages),
-                            (_ = l.state.clientState);
+                            (d = o.state.open),
+                            (c = o.state.identify),
+                            (u = o.state.messages),
+                            (_ = o.state.clientState);
                     }
                 }
                 null == t && ((t = (0, e2.A)(n)).binaryType = "arraybuffer"),
                     i(t),
-                    u && r(c, _),
-                    null != d && d.forEach(s),
+                    d && r(c, _),
+                    null != u && u.forEach(a),
                     (t.onopen = () => r(c, _)),
-                    (t.onmessage = s),
-                    (t.onclose = o),
-                    (t.onerror = a);
+                    (t.onmessage = a),
+                    (t.onclose = l),
+                    (t.onerror = s);
             })({
-                gatewayURL: u.toString(),
+                gatewayURL: d.toString(),
                 newCallback: (e) => {
                     (this.webSocket = e), this.compressionHandler.bindWebSocket(e);
                 },
                 onOpen: (e) => {
                     c.A.mark(`\u{1F310}`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
-                    e3.info(`[CONNECTED] ${u.toString()} in ${t} ms`),
+                    e3.info(`[CONNECTED] ${d.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
                         e ? this._doFastConnectIdentify() : this._doResumeOrIdentify();
                 },
@@ -2086,50 +2109,50 @@ class ti extends eJ {
                     (t = this._handleClose.bind(this)),
                     (n = (e, t) => {
                         let n = Date.now(),
-                            { op: i, s: r, t: s, d: a } = e6.unpack(e);
+                            { op: i, s: r, t: a, d: s } = e6.unpack(e);
                         if (
                             (i !== eQ.DISPATCH && c.A.mark(`\u{1F310}`, `GatewaySocket.onMessage ${i} ${eQ[i]}`),
                             C.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
-                            i === eQ.DISPATCH && e.push(s), e.push(a), e3.verboseDangerously("<~", ...e);
+                            i === eQ.DISPATCH && e.push(a), e.push(s), e3.verboseDangerously("<~", ...e);
                         }
-                        let o = Date.now() - n;
+                        let l = Date.now() - n;
                         switch (
-                            ("READY" === s
-                                ? y.A.parseReady.set(n, o)
-                                : "READY_SUPPLEMENTAL" === s
-                                  ? y.A.parseReadySupplemental.set(n, o)
-                                  : o > 10 && c.A.mark("\uD83C\uDF10", "Parse " + s, o),
+                            ("READY" === a
+                                ? N.A.parseReady.set(n, l)
+                                : "READY_SUPPLEMENTAL" === a
+                                  ? N.A.parseReadySupplemental.set(n, l)
+                                  : l > 10 && c.A.mark("\uD83C\uDF10", "Parse " + a, l),
                             null != r && (this.seq = r),
                             i)
                         ) {
                             case eQ.HELLO:
-                                this._clearHelloTimeout(), this._handleHello(a);
+                                this._clearHelloTimeout(), this._handleHello(s);
                                 break;
                             case eQ.RECONNECT:
                                 this._handleReconnect();
                                 break;
                             case eQ.INVALID_SESSION:
-                                this._handleInvalidSession(a);
+                                this._handleInvalidSession(s);
                                 break;
                             case eQ.HEARTBEAT:
                                 this._handleHeartbeatReceive();
                                 break;
                             case eQ.HEARTBEAT_ACK:
-                                this._handleHeartbeatAck(a);
+                                this._handleHeartbeatAck(s);
                                 break;
                             case eQ.DISPATCH:
                                 this._handleDispatch(
-                                    a,
                                     s,
-                                    "READY" === s
+                                    a,
+                                    "READY" === a
                                         ? {
                                               compressed_byte_size: t,
                                               uncompressed_byte_size: tt(e),
                                               compression_algorithm: this.compressionHandler.getAlgorithm(),
                                               packing_algorithm: e6.getName(),
-                                              unpack_duration_ms: o,
+                                              unpack_duration_ms: l,
                                           }
                                         : null,
                                 );
@@ -2149,17 +2172,17 @@ class ti extends eJ {
                     }),
                     (r = !1),
                     (n) => {
-                        let s = n.data;
-                        null != n.raw_length ? (i += n.raw_length) : (i += tt(s));
+                        let a = n.data;
+                        null != n.raw_length ? (i += n.raw_length) : (i += tt(a));
                         try {
-                            e.feed(s);
+                            e.feed(a);
                         } catch (e) {
                             throw (r || ((r = !0), t(!1, 0, "A decompression error occurred")), e);
                         }
                     }),
                 onError: () => {
                     this.setResumeUrl(null),
-                        v.A.flushDNSCache(),
+                        R.A.flushDNSCache(),
                         this._handleClose(!1, 0, "An error with the websocket occurred");
                 },
                 onClose: (e) => {
@@ -2171,12 +2194,12 @@ class ti extends eJ {
     _handleHello(e) {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now() - this.connectionStartTime;
-        e3.verbose(`[HELLO] via ${eg(e)}, heartbeat interval: ${t}, took ${n} ms`), this._startHeartbeater();
+        e3.verbose(`[HELLO] via ${ep(e)}, heartbeat interval: ${t}, took ${n} ms`), this._startHeartbeater();
     }
     _handleReconnect() {
         e3.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup((e) => e.close(4e3)),
-            (this.connectionState = D.A.WILL_RECONNECT),
+            (this.connectionState = v.A.WILL_RECONNECT),
             this._connect();
     }
     _handleInvalidSession(e) {
@@ -2187,23 +2210,23 @@ class ti extends eJ {
         if ("READY" === t) {
             let t = e.session_id;
             this.sessionId = t;
-            let n = eg(e);
+            let n = ep(e);
             c.A.setServerTrace(n),
                 e3.info(`[READY] took ${i}ms, as ${t}`),
                 e3.verbose(`${n}`),
-                (this.connectionState = D.A.SESSION_ESTABLISHED),
+                (this.connectionState = v.A.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0),
                 this.setResumeUrl(e.resume_gateway_url);
         } else
             "READY_SUPPLEMENTAL" === t
                 ? (e3.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
-                  (this.connectionState = D.A.SESSION_ESTABLISHED),
+                  (this.connectionState = v.A.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0))
                 : "RESUMED" === t &&
-                  (e3.verbose(eg(e)),
-                  (this.connectionState = D.A.SESSION_ESTABLISHED),
+                  (e3.verbose(ep(e)),
+                  (this.connectionState = v.A.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0));
         this.dispatcher.receiveDispatch(e, t, n);
@@ -2236,20 +2259,20 @@ class ti extends eJ {
                 e3.verbose("Expedited heartbeat succeeded"));
     }
     _handleHeartbeatTimeout() {
-        this._cleanup((e) => e.close(4e3)), (this.connectionState = D.A.WILL_RECONNECT);
+        this._cleanup((e) => e.close(4e3)), (this.connectionState = v.A.WILL_RECONNECT);
         let e = this.gatewayBackoff.fail(() => this._connect());
         e3.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
     _handleClose(e, t, n) {
         if (((e = e || !1), this._cleanup(), this.emit("close", { code: t, reason: n }), 4004 === t))
             return (
-                (this.connectionState = D.A.CLOSED),
+                (this.connectionState = v.A.CLOSED),
                 e3.warn("[WS CLOSED] because of authentication failure, marking as closed."),
                 this._reset(e, t, n)
             );
         if (
             (this._tryDetectInvalidIOSToken(t, n, e),
-            (this.connectionState = D.A.WILL_RECONNECT),
+            (this.connectionState = v.A.WILL_RECONNECT),
             this.nextReconnectIsImmediate)
         )
             e3.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect();
@@ -2260,24 +2283,24 @@ class ti extends eJ {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, O.isIOS)() &&
+        (0, D.isIOS)() &&
             null != this.token &&
             1001 === e &&
             "Stream end encountered" === t &&
             ((this.iosGoingAwayEventCount += 1),
             3 === this.iosGoingAwayEventCount &&
-                p.Bo.get({ url: em.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
+                h.Bo.get({ url: ef.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
                     (e) => {
                         let { status: t } = e;
-                        N.default.track(em.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                        O.default.track(ef.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                     (e) => {
                         let { status: t } = e;
                         401 === t &&
-                            ((this.connectionState = D.A.CLOSED),
+                            ((this.connectionState = v.A.CLOSED),
                             e3.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
-                            N.default.track(em.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            O.default.track(ef.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                 ));
     }
@@ -2299,7 +2322,7 @@ class ti extends eJ {
     }
     _startHeartbeater() {
         let { heartbeatInterval: e } = this;
-        l()(null != e, "GatewaySocket: Heartbeat interval should never null here."),
+        o()(null != e, "GatewaySocket: Heartbeat interval should never null here."),
             null !== this.initialHeartbeatTimeout && clearTimeout(this.initialHeartbeatTimeout),
             null !== this.heartbeater && (clearInterval(this.heartbeater), (this.heartbeater = null)),
             (this.initialHeartbeatTimeout = setTimeout(
@@ -2323,17 +2346,17 @@ class ti extends eJ {
         null != this.helloTimeout && (clearTimeout(this.helloTimeout), (this.helloTimeout = null));
     }
     _cleanup(e) {
-        f.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
+        A.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout();
         let t = this.webSocket;
         (this.webSocket = null),
-            null != t && ((t.onopen = e7), (t.onmessage = e7), (t.onerror = e7), (t.onclose = e7), e?.(t)),
+            null != t && ((t.onopen = e5), (t.onmessage = e5), (t.onerror = e5), (t.onclose = e5), e?.(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
             (this.compressionHandler = V(e6));
     }
     _doResume() {
-        (this.connectionState = D.A.RESUMING),
-            (this.dispatcher.resumeAnalytics = eA(Date.now() - this.connectionStartTime)),
+        (this.connectionState = v.A.RESUMING),
+            (this.dispatcher.resumeAnalytics = eT(Date.now() - this.connectionStartTime)),
             e3.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
             this.send(eQ.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1);
     }
@@ -2341,15 +2364,15 @@ class ti extends eJ {
         (this.seq = 0), (this.sessionId = null);
         let e = this.handleIdentify();
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
-        this.connectionState = D.A.IDENTIFYING;
+        this.connectionState = v.A.IDENTIFYING;
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, I.O)() ? m.A.getCommittedVersions() : {},
-                (0, I.O)() ? A.A.getCommittedVersions() : {},
-                !!(0, I.O)() && g.A.canUseGuildVersions(),
+                (0, m.O)() ? f.A.getCommittedVersions() : {},
+                (0, m.O)() ? T.A.getCommittedVersions() : {},
+                !!(0, m.O)() && p.A.canUseGuildVersions(),
             ]),
-            s = r
+            a = r
                 ? {
                       guild_versions: n,
                       highest_last_message_id: i.highest_last_message_id,
@@ -2361,27 +2384,27 @@ class ti extends eJ {
                       initial_guild_id: i.initial_guild_id,
                   }
                 : { guild_versions: {} };
-        if (this.connectionState !== D.A.IDENTIFYING || this.identifyStartTime !== t)
+        if (this.connectionState !== v.A.IDENTIFYING || this.identifyStartTime !== t)
             return void e3.warn("Skipping identify because connectionState or identifyStartTime has changed");
-        let { token: a, properties: o = {}, presence: l } = e;
-        (this.token = a), e3.verbose("[IDENTIFY]");
+        let { token: s, properties: l = {}, presence: o } = e;
+        (this.token = s), e3.verbose("[IDENTIFY]");
         let c = {
-                token: a,
+                token: s,
                 capabilities: (function (e) {
                     let { useChannelObfuscation: t } = e;
                     return t ? 1767421 : 1734653;
                 })({ useChannelObfuscation: (0, e1.RK)("GatewaySocket") }),
-                properties: o,
-                presence: l,
+                properties: l,
+                presence: o,
                 compress: this.compressionHandler.usesLegacyCompression(),
-                client_state: s,
+                client_state: a,
             },
-            d = JSON.stringify(c);
-        (this.identifyUncompressedByteSize = d.length),
-            (this.identifyCompressedByteSize = u.deflate(d).length),
+            u = JSON.stringify(c);
+        (this.identifyUncompressedByteSize = u.length),
+            (this.identifyCompressedByteSize = d.deflate(u).length),
             (this.identifyCount += 1),
             this.send(eQ.IDENTIFY, c, !1),
-            N.default.track(em.HAw.SESSION_START_CLIENT, {});
+            O.default.track(ef.HAw.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -2389,7 +2412,7 @@ class ti extends eJ {
         if (null === e) return void this._handleClose(!0, 4004, "No connection info provided");
         let { token: t } = e;
         (this.token = t),
-            (this.connectionState = D.A.IDENTIFYING),
+            (this.connectionState = v.A.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
             e3.verbose("[IDENTIFY, fast-connect]"),
@@ -2422,25 +2445,25 @@ class ti extends eJ {
         return e3;
     }
     willReconnect() {
-        return this.connectionState === D.A.WILL_RECONNECT;
+        return this.connectionState === v.A.WILL_RECONNECT;
     }
     isClosed() {
-        return this.connectionState === D.A.CLOSED;
+        return this.connectionState === v.A.CLOSED;
     }
     isSessionEstablished() {
-        return this.connectionState === D.A.SESSION_ESTABLISHED || this.connectionState === D.A.RESUMING;
+        return this.connectionState === v.A.SESSION_ESTABLISHED || this.connectionState === v.A.RESUMING;
     }
     isConnected() {
         return (
-            this.connectionState === D.A.IDENTIFYING ||
-            this.connectionState === D.A.RESUMING ||
-            this.connectionState === D.A.SESSION_ESTABLISHED
+            this.connectionState === v.A.IDENTIFYING ||
+            this.connectionState === v.A.RESUMING ||
+            this.connectionState === v.A.SESSION_ESTABLISHED
         );
     }
     connect() {
         return this.isClosed()
             ? (e3.verbose(".connect() called, new state is WILL_RECONNECT"),
-              (this.connectionState = D.A.WILL_RECONNECT),
+              (this.connectionState = v.A.WILL_RECONNECT),
               this._connect(),
               !0)
             : (e3.error("Cannot start a new connection, connection state is not closed"), !1);
@@ -2448,10 +2471,10 @@ class ti extends eJ {
     resetSocketAndClearCacheOnError(e) {
         let { action: t, error: n, metricAction: i } = e;
         e3.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
-        let r = (0, h.b)();
+        let r = (0, E.b)();
         S.A.increment({ name: _.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
-            !1 !== e.sentry && b.A.captureException(n, { tags: { socketCrashedAction: t } }),
-            N.default.track(em.HAw.GATEWAY_SOCKET_RESET, {
+            !1 !== e.sentry && y.A.captureException(n, { tags: { socketCrashedAction: t } }),
+            O.default.track(ef.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 has_client_mods: r,
@@ -2460,7 +2483,7 @@ class ti extends eJ {
             this._cleanup((e) => e.close()),
             this._reset(!0, 1e3, "Resetting socket due to error."),
             this.dispatcher.clear(),
-            (this.connectionState = D.A.WILL_RECONNECT),
+            (this.connectionState = v.A.WILL_RECONNECT),
             this.dispatchExceptionBackoff.cancel(),
             0 === this.dispatchExceptionBackoff._fails
                 ? (e3.verbose("Triggering fast reconnect"),
@@ -2468,8 +2491,8 @@ class ti extends eJ {
                   setTimeout(() => this._connect(), 0))
                 : this.dispatchExceptionBackoff.fail(() => this._connect()),
             (this.didForceClearGuildHashes = !0),
-            E.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
-            E.h.dispatch({ type: "LIBDISCORE_RESET" }),
+            I.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
+            I.h.dispatch({ type: "LIBDISCORE_RESET" }),
             clearTimeout(this.dispatchSuccessTimer),
             (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * te));
     }
@@ -2487,7 +2510,7 @@ class ti extends eJ {
         e3.info(`Closing connection, current state is ${this.connectionState}`);
         let t = e ? 4e3 : void 0;
         this._cleanup((e) => e.close(t)),
-            (this.connectionState = D.A.CLOSED),
+            (this.connectionState = v.A.CLOSED),
             e ||
                 ((this.sessionId = null),
                 (this.token = null),
@@ -2531,7 +2554,7 @@ class ti extends eJ {
             (this.nextReconnectIsImmediate = !0),
             this.willReconnect()
                 ? this._connect()
-                : t && this.connectionState !== D.A.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
+                : t && this.connectionState !== v.A.SESSION_ESTABLISHED && this._handleClose(!0, 0, e);
     }
     send = (e, t, n) => {
         C.default.isLoggingGatewayEvents && e3.verboseDangerously("~>", e, eQ[e], t);
