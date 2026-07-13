@@ -1,18 +1,19 @@
-e.d(n, { A: () => M });
-var i = e(627968),
-    s = e(64700),
-    r = e(735438),
-    l = e(451988),
-    a = e(781696),
-    u = e(568602),
-    o = e(174459),
-    c = e(957565),
-    g = e(927813),
-    p = e(652215),
-    E = e(375708);
-let d = g.A.Millis.SECOND,
-    h = 2 * d,
-    S = g.A.Millis.HALF_SECOND,
+"use strict";
+n.d(t, { A: () => p });
+var i = n(627968),
+    r = n(64700),
+    a = n(735438),
+    s = n(451988),
+    l = n(781696),
+    o = n(568602),
+    d = n(174459),
+    c = n(957565),
+    u = n(927813),
+    _ = n(652215),
+    E = n(375708);
+let A = u.A.Millis.SECOND,
+    h = 2 * A,
+    I = u.A.Millis.HALF_SECOND,
     f = [
         () => E.intl.string(E.t.MSaeTe),
         () => E.intl.string(E.t.UmrCw7),
@@ -26,57 +27,57 @@ let d = g.A.Millis.SECOND,
         () => E.intl.string(E.t.bLXdcY),
         () => E.intl.string(E.t.gPg9fS),
     ];
-function M(t) {
-    let { text: n, copyValue: e, children: g, onCopy: E, "aria-label": M, delay: A = S, dataMeticulousIgnore: C } = t,
-        [b, k] = s.useState(0),
-        [w, x] = s.useState(!1),
-        [L, R] = s.useState(!1),
-        [T] = s.useState(() => new l.Ep()),
-        [m] = s.useState(() => new l.Ep());
+function p(e) {
+    let { text: t, copyValue: n, children: u, onCopy: E, "aria-label": p, delay: T = I, dataMeticulousIgnore: m } = e,
+        [g, S] = r.useState(0),
+        [N, C] = r.useState(!1),
+        [O, R] = r.useState(!1),
+        [L] = r.useState(() => new s.Ep()),
+        [D] = r.useState(() => new s.Ep());
     if (
-        (s.useEffect(
+        (r.useEffect(
             () => () => {
-                T.stop(), m.stop();
+                L.stop(), D.stop();
             },
-            [T, m],
+            [L, D],
         ),
         !c.p5)
     )
-        return (0, i.jsx)(i.Fragment, { children: g({}) });
-    let D = b >= f.length - 1,
-        I = w ? a.oM.GREEN : a.oM.PRIMARY;
-    return (0, i.jsx)(a.ST, {
+        return (0, i.jsx)(i.Fragment, { children: u({}) });
+    let y = g >= f.length - 1,
+        v = N ? l.oM.GREEN : l.oM.PRIMARY;
+    return (0, i.jsx)(l.ST, {
         text: (function () {
-            if (!w) return n;
-            let t = (0, r.clamp)(b - 1, 0, f.length - 1),
-                e = f[t] ?? f[0];
-            return (0, i.jsx)(u.b, { isShaking: D, children: e() });
+            if (!N) return t;
+            let e = (0, a.clamp)(g - 1, 0, f.length - 1),
+                n = f[e] ?? f[0];
+            return (0, i.jsx)(o.b, { isShaking: y, children: n() });
         })(),
-        delay: A,
-        "aria-label": M,
-        dataMeticulousIgnore: C,
-        color: I,
-        forceOpen: L,
-        onAnimationRest: function (t, n) {
-            !L && w && n.phase === p.lLE.LEAVE && x(!1);
+        delay: T,
+        "aria-label": p,
+        dataMeticulousIgnore: m,
+        color: v,
+        forceOpen: O,
+        onAnimationRest: function (e, t) {
+            !O && N && t.phase === _.lLE.LEAVE && C(!1);
         },
-        children: (t) => {
-            let { onClick: n, onMouseEnter: i, ...s } = t;
-            return g({
-                ...s,
+        children: (e) => {
+            let { onClick: t, onMouseEnter: i, ...r } = e;
+            return u({
+                ...r,
                 onClick: () => {
-                    n?.(),
+                    t?.(),
                         E?.(),
-                        (0, c.C)(e),
-                        o.default.track(p.HAw.TEXT_COPIED),
-                        L || k(b + 1),
+                        (0, c.C)(n),
+                        d.default.track(_.HAw.TEXT_COPIED),
+                        O || S(g + 1),
                         R(!0),
-                        x(!0),
-                        T.start(d, () => R(!1)),
-                        m.start(h, () => k(0));
+                        C(!0),
+                        L.start(A, () => R(!1)),
+                        D.start(h, () => S(0));
                 },
                 onMouseEnter: () => {
-                    w ? (T.stop(), R(!1)) : i?.();
+                    N ? (L.stop(), R(!1)) : i?.();
                 },
             });
         },

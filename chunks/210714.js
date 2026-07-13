@@ -1,32 +1,33 @@
-s.d(t, { D: () => w, d: () => m });
-var r = s(132500),
-    a = s(77729),
-    n = s(824579),
-    i = s(550568),
-    _ = s(174459),
-    d = s(612181),
-    c = s(19575),
-    o = s(464578),
-    l = s(652215);
-function p() {
+"use strict";
+n.d(t, { D: () => I, d: () => h });
+var i = n(132500),
+    r = n(77729),
+    a = n(824579),
+    s = n(550568),
+    l = n(174459),
+    o = n(612181),
+    d = n(19575),
+    c = n(464578),
+    u = n(652215);
+function _() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class u {
-    loadId = (0, r.A)();
+class E {
+    loadId = (0, i.A)();
     appUIViewed = !1;
     trackEvent(e) {
         let t = Date.now();
         requestIdleCallback(() => {
-            let s, r;
-            _.default.track(l.HAw.APP_UI_VIEWED, {
+            let n, i;
+            l.default.track(u.HAw.APP_UI_VIEWED, {
                 ...(function () {
                     let e = "--campaign-id=";
-                    for (let t of a.A?.processUtils?.getMainArgvSync?.() ?? [])
+                    for (let t of r.A?.processUtils?.getMainArgvSync?.() ?? [])
                         if (t.startsWith(e)) return { referrer: t.substr(e.length) };
                     return {};
                 })(),
-                ...((s = !1),
-                (r = {
+                ...((n = !1),
+                (i = {
                     total_compressed_byte_size: 0,
                     total_uncompressed_byte_size: 0,
                     total_transfer_byte_size: 0,
@@ -41,33 +42,33 @@ class u {
                     null != window.performance.getEntries &&
                     window.performance.getEntries().forEach((e) => {
                         let t = null != e.encodedBodySize ? e.encodedBodySize : e.decodedBodySize,
-                            a = null != e.decodedBodySize ? e.decodedBodySize : e.encodedBodySize,
-                            n = e.transferSize;
-                        null != a &&
+                            r = null != e.decodedBodySize ? e.decodedBodySize : e.encodedBodySize,
+                            a = e.transferSize;
+                        null != r &&
                             null != t &&
-                            ((s = !0),
-                            (r.total_compressed_byte_size += t),
-                            (r.total_uncompressed_byte_size += a),
-                            null != n && (r.total_uncompressed_byte_size += n),
+                            ((n = !0),
+                            (i.total_compressed_byte_size += t),
+                            (i.total_uncompressed_byte_size += r),
+                            null != a && (i.total_uncompressed_byte_size += a),
                             "resource" === e.entryType &&
                                 ("script" === e.initiatorType &&
                                     null != e.name &&
                                     null != e.name.match(/\.js/) &&
-                                    ((r.js_compressed_byte_size += t),
-                                    (r.js_uncompressed_byte_size += a),
-                                    null != n && (r.js_uncompressed_byte_size += n)),
+                                    ((i.js_compressed_byte_size += t),
+                                    (i.js_uncompressed_byte_size += r),
+                                    null != a && (i.js_uncompressed_byte_size += a)),
                                 "link" === e.initiatorType &&
                                     null != e.name &&
                                     null != e.name.match(/\.css/) &&
-                                    ((r.css_compressed_byte_size += t),
-                                    (r.css_uncompressed_byte_size += a),
-                                    null != n && (r.css_uncompressed_byte_size += n))));
+                                    ((i.css_compressed_byte_size += t),
+                                    (i.css_uncompressed_byte_size += r),
+                                    null != a && (i.css_uncompressed_byte_size += a))));
                     }),
-                s ? r : {}),
+                n ? i : {}),
                 load_id: this.loadId,
                 screen_name: e,
-                duration_ms_since_app_opened: t - p(),
-                app_hardware_acceleration_enabled: c.Ay.getEnableHardwareAcceleration(),
+                duration_ms_since_app_opened: t - _(),
+                app_hardware_acceleration_enabled: d.Ay.getEnableHardwareAcceleration(),
             });
         });
     }
@@ -77,35 +78,35 @@ class u {
         let e = window.location?.pathname,
             t = e?.startsWith("/channels/@me") ? "channels/@me" : e?.split("/")?.[1];
         requestIdleCallback(() => {
-            let e = p();
-            o.A.firstRenderAfterReadyPayload.record();
-            let s = o.A.serializeWebPerfStartupMetrics(e);
-            _.default.track(l.HAw.APP_WEB_PERF_STARTUP_METRICS, {
+            let e = _();
+            c.A.firstRenderAfterReadyPayload.record();
+            let n = c.A.serializeWebPerfStartupMetrics(e);
+            l.default.track(u.HAw.APP_WEB_PERF_STARTUP_METRICS, {
                 load_id: this.loadId,
                 url_root_path: t,
-                ...s,
-                ...(0, i.$)(),
+                ...n,
+                ...(0, s.$)(),
             });
             try {
-                c.Ay.appFirstRenderAfterReadyPayload((0, d.wR)());
+                d.Ay.appFirstRenderAfterReadyPayload((0, o.wR)());
             } catch (e) {}
-            (0, n.K)();
+            (0, a.K)();
         });
     }
     trackAppUIViewed(e) {
         if (!this.appUIViewed) {
             performance.mark(`trackAppUIViewed-${e}`), this.trackEvent(e);
             try {
-                c.Ay.appViewed();
+                d.Ay.appViewed();
             } catch (e) {}
             this.appUIViewed = !0;
         }
     }
 }
-let y = new u();
-function m(e) {
-    y.trackAppUIViewed(e);
+let A = new E();
+function h(e) {
+    A.trackAppUIViewed(e);
 }
-function w() {
-    y.trackTTI();
+function I() {
+    A.trackTTI();
 }

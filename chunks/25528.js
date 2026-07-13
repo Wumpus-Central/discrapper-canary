@@ -1,31 +1,22 @@
 "use strict";
-n.d(t, { Ay: () => f, F9: () => d, nn: () => h }), n(938796);
+n.d(t, { Ay: () => E, F9: () => u, nn: () => _ });
 var i = n(64700),
-    r = n(665260),
-    s = n(17928),
-    a = n(495544),
-    o = n(290863),
-    l = n(461213),
-    u = n(652215);
-let c = new Set([u.yTV.XBOX, u.yTV.PS4, u.yTV.PS5]);
-function d(e) {
-    return (
-        null != e &&
-        null != e.application_id &&
-        e.type === u.$pd.PLAYING &&
-        !(0, r.Lt)(e.flags ?? 0, u.jUm.EMBEDDED) &&
-        !c.has(e.platform ?? "")
+    r = n(17928),
+    a = n(778383),
+    s = n(280450),
+    l = n(290863),
+    o = n(461213),
+    d = n(652215);
+let c = new Set([d.yTV.XBOX, d.yTV.PS4, d.yTV.PS5]);
+function u(e) {
+    return (0, a.A)(e) && !c.has(e?.platform ?? "");
+}
+function _(e, t) {
+    return (s.default.getId() === e ? o.A.getActivities() : l.A.getActivities(e, t)).filter(u);
+}
+function E(e, t) {
+    let n = (0, r.bG)([o.A, l.A, s.default], () =>
+        s.default.getId() === e ? o.A.getActivities() : l.A.getActivities(e, t),
     );
-}
-function _(e) {
-    return e.filter((e) => d(e));
-}
-function h(e, t) {
-    return _(a.default.getId() === e ? l.A.getActivities() : o.A.getActivities(e, t));
-}
-function f(e, t) {
-    let n = (0, s.bG)([l.A, o.A, a.default], () =>
-        a.default.getId() === e ? l.A.getActivities() : o.A.getActivities(e, t),
-    );
-    return i.useMemo(() => _(n), [n]);
+    return i.useMemo(() => n.filter(u), [n]);
 }
