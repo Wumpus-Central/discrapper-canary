@@ -1,4 +1,4 @@
-t.d(i, { ModifyMosaicAttachmentModal: () => C, default: () => k }), t(323874), t(14289), t(35956), t(938796);
+t.d(i, { ModifyMosaicAttachmentModal: () => y, default: () => k }), t(323874), t(14289), t(35956), t(938796);
 var n = t(627968),
     s = t(64700),
     l = t(503698),
@@ -7,19 +7,20 @@ var n = t(627968),
     o = t(189213),
     c = t(331322),
     u = t(292666),
-    d = t(150934),
-    p = t(565150),
-    m = t(465856),
-    f = t(644447),
-    g = t(652215),
-    x = t(381941),
+    d = t(260598),
+    p = t(150934),
+    m = t(565150),
+    f = t(465856),
+    g = t(644447),
+    x = t(652215),
+    j = t(381941),
     h = t(650583),
-    j = t(375708),
-    v = t(910162);
-function b(e) {
-    return (0, n.jsx)("img", { src: e.src ?? void 0, className: v.imageFilePreviewImg, "aria-hidden": !0, alt: "" });
+    v = t(375708),
+    b = t(910162);
+function I(e) {
+    return (0, n.jsx)("img", { src: e.src ?? void 0, className: b.imageFilePreviewImg, "aria-hidden": !0, alt: "" });
 }
-function E(e) {
+function S(e) {
     let { file: i } = e,
         [t, l] = s.useState();
     return (
@@ -33,45 +34,45 @@ function E(e) {
                 }
             );
         }, [i]),
-        (0, n.jsx)(b, { src: t })
+        (0, n.jsx)(I, { src: t })
     );
 }
-function I(e) {
+function C(e) {
     let { upload: i } = e;
-    return i.item.platform !== p.xz.WEB
+    return i.item.platform !== m.xz.WEB
         ? null
         : i.isImage
-          ? (0, n.jsx)(E, { file: i.item.file })
-          : (0, n.jsx)("div", { className: a()(v.fileIcon, { [v[i.classification ?? ""]]: !0 }) });
+          ? (0, n.jsx)(S, { file: i.item.file })
+          : (0, n.jsx)("div", { className: a()(b.fileIcon, { [b[i.classification ?? ""]]: !0 }) });
 }
-function S(e) {
+function E(e) {
     let {
             preview: i,
             filename: t,
             description: l,
             spoiler: a,
             isImage: r,
-            isVideo: p,
-            disableFilename: m,
-            disableSpoiler: f,
-            transitionState: g,
-            onClose: v,
-            onSubmit: b,
+            isVideo: m,
+            disableFilename: f,
+            disableSpoiler: g,
+            transitionState: x,
+            onClose: b,
+            onSubmit: I,
         } = e,
-        [E, I] = s.useState(t ?? ""),
-        [S, k] = s.useState(l ?? ""),
-        [C, y] = s.useState(a),
-        R = s.useMemo(() => E.startsWith(x.MO), [E]),
-        L = () => {
-            b({ name: E, description: S, spoiler: C }), v();
+        [S, C] = s.useState(t ?? ""),
+        [E, k] = s.useState(l ?? ""),
+        [y, R] = s.useState(a),
+        L = s.useMemo(() => S.startsWith(j.MO), [S]),
+        M = () => {
+            I({ name: S, description: E, spoiler: y }), b();
         };
     return (0, n.jsx)(o.Modal, {
-        transitionState: g,
-        onClose: v,
-        title: j.intl.string(j.t.Y8ujqr),
+        transitionState: x,
+        onClose: b,
+        title: v.intl.string(v.t.Y8ujqr),
         actions: [
-            { variant: "secondary", text: j.intl.string(j.t["ETE/oC"]), onClick: v },
-            { variant: "primary", text: j.intl.string(j.t["TY+auE"]), onClick: L },
+            { variant: "secondary", text: v.intl.string(v.t["ETE/oC"]), onClick: b },
+            { variant: "primary", text: v.intl.string(v.t["TY+auE"]), onClick: M },
         ],
         children: (0, n.jsxs)(c.B, {
             gap: 24,
@@ -81,37 +82,34 @@ function S(e) {
                     children: [
                         i,
                         (0, n.jsx)(u.k, {
-                            label: j.intl.string(j.t.ILJuBq),
-                            value: E,
-                            onChange: I,
+                            label: v.intl.string(v.t.ILJuBq),
+                            value: S,
+                            onChange: C,
                             onKeyDown: (e) => {
-                                e.key === h.dh.ENTER && (e.preventDefault(), L());
+                                e.key === h.dh.ENTER && (e.preventDefault(), M());
                             },
-                            disabled: m,
+                            disabled: f,
                         }),
-                        r || p
-                            ? (0, n.jsx)(u.k, {
-                                  label: j.intl.string(j.t.eOB2eR),
-                                  placeholder: j.intl.string(j.t.RNH1jn),
-                                  value: S,
+                        r || m
+                            ? (0, n.jsx)(d.f, {
+                                  label: v.intl.string(v.t.eOB2eR),
+                                  placeholder: v.intl.string(v.t.RNH1jn),
+                                  value: E,
                                   onChange: k,
-                                  onKeyDown: (e) => {
-                                      e.key === h.dh.ENTER && (e.preventDefault(), L());
-                                  },
                               })
                             : null,
                     ],
                 }),
-                !0 !== f &&
-                    (0, n.jsx)(d.S, { checked: C || R, disabled: R, onChange: y, label: j.intl.string(j.t["gsI+xC"]) }),
+                !0 !== g &&
+                    (0, n.jsx)(p.S, { checked: y || L, disabled: L, onChange: R, label: v.intl.string(v.t["gsI+xC"]) }),
             ],
         }),
     });
 }
 function k(e) {
     let { upload: i, transitionState: t, disableSpoiler: s, onClose: l, onSubmit: a } = e;
-    return (0, n.jsx)(S, {
-        preview: (0, n.jsx)(I, { upload: i }),
+    return (0, n.jsx)(E, {
+        preview: (0, n.jsx)(C, { upload: i }),
         filename: i.filename,
         description: i.description,
         spoiler: i.spoiler,
@@ -123,16 +121,16 @@ function k(e) {
         onSubmit: a,
     });
 }
-function C(e) {
+function y(e) {
     let { item: i, transitionState: t, onClose: s, onSubmit: l } = e,
         a = i.originalItem,
         o = "IMAGE" === i.type,
-        c = o ? (0, n.jsx)(b, { src: (0, f.E)({ proxyURL: a.proxy_url, url: a.url }) }) : void 0;
-    return (0, n.jsx)(S, {
+        c = o ? (0, n.jsx)(I, { src: (0, g.E)({ proxyURL: a.proxy_url, url: a.url }) }) : void 0;
+    return (0, n.jsx)(E, {
         preview: c,
-        filename: (0, m.A)(a),
+        filename: (0, f.A)(a),
         description: a.description,
-        spoiler: (0, r.Lt)(a.flags ?? 0, g.sbO.IS_SPOILER),
+        spoiler: (0, r.Lt)(a.flags ?? 0, x.sbO.IS_SPOILER),
         isImage: o,
         isVideo: "VIDEO" === i.type,
         disableFilename: !0,

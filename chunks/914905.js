@@ -271,9 +271,13 @@ function P(e) {
                   return (n) => (0, i.jsx)(e, { ...n, channelId: t, clipId: S.id, onEdit: b });
               })
             : (0, d.openModalLazy)(async () => {
-                  let { default: e } = await Promise.all([n.e("57328"), n.e("68532"), n.e("70698")]).then(
-                      n.bind(n, 427281),
-                  );
+                  let { default: e } = await Promise.all([
+                      n.e("30593"),
+                      n.e("57328"),
+                      n.e("8891"),
+                      n.e("68532"),
+                      n.e("70698"),
+                  ]).then(n.bind(n, 427281));
                   return (n) =>
                       (0, i.jsx)(e, {
                           ...n,
