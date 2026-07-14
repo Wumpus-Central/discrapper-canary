@@ -145,11 +145,19 @@
 }
 
 .container_cc66e9 {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     width: 100%
+}
+
+.container_cc66e9,
+.textContainer_cc66e9 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.textContainer_cc66e9 {
+    gap: 8px
 }
 
 .container__9c1cb {
