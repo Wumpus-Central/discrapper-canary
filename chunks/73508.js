@@ -4,11 +4,10 @@ var i = n(439372),
     r = n(77729);
 n(36200);
 var a = n(19575);
-let s = [0, 0],
+let s = [],
     l = [];
 function o(e) {
-    for (let t of e) if (t[0] === s[0] && t[1] === s[1]) return !0;
-    return !1;
+    return e.some((e) => s.some((t) => t[0] === e[0] && t[1] === e[1]));
 }
 let d = !1;
 function c() {
@@ -26,9 +25,10 @@ class u extends i.A {
             try {
                 if (d || window.DiscordNative?.gpuSettings?.setChromiumSwitches == null) return;
                 let e = await r.A.processUtils.getSystemInfo();
-                for (let t of e.electronGPUInfo?.gpuDevice ?? []) !0 === t.active && (s = [t.vendorId, t.deviceId]);
-                for (let e of ((d = !0), l))
-                    o(e.gpus) && e.experiment.subscribe({ location: "GPU experiment subscription" }, c);
+                for (let t of ((s = (e.electronGPUInfo?.gpuDevice ?? []).map((e) => [e.vendorId, e.deviceId])),
+                (d = !0),
+                l))
+                    o(t.gpus) && t.experiment.subscribe({ location: "GPU experiment subscription" }, c);
                 c();
             } catch (e) {}
         },
