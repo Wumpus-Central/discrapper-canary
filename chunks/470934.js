@@ -1,26 +1,27 @@
-n.d(t, { A: () => d });
-var l = n(64700),
-    i = n(17928),
-    r = n(375708),
-    a = n(645619),
-    s = n(998418),
-    o = n(568065),
-    u = n(853513);
-function d(e, t, n) {
-    let d = (0, i.bG)([a.A], () => a.A.getStateForGuild(e)),
-        c = (0, s.Ay)(e, t);
-    return l.useMemo(() => {
-        if (null == d || c.type === o.b_.LEVEL_ACTIVATED) return { disabled: !0, reason: void 0 };
-        let { allPowerups: e, unlockedPowerups: l } = d,
-            i = n
-                ? Object.values(l).find((e) => e.sku?.dependent_sku_id === t.skuId)?.sku_id
-                : t.dependencies.find((e) => null == l[e]);
+d.d(n, { A: () => p });
+var t = d(64700),
+    u = d(17928),
+    l = d(375708),
+    i = d(645619),
+    a = d(998418),
+    r = d(568065),
+    s = d(853513);
+function p(e, n, d) {
+    let p = (0, u.bG)([i.A], () => i.A.getStateForGuild(e)),
+        o = (0, a.Ay)(e, n);
+    return t.useMemo(() => {
+        if (null == p || o.type === r.b_.LEVEL_ACTIVATED || o.type === r.b_.TIER_OVERRIDE_ACTIVATED)
+            return { disabled: !0, reason: void 0 };
+        let { allPowerups: e, unlockedPowerups: t } = p,
+            u = d
+                ? Object.values(t).find((e) => e.sku?.dependent_sku_id === n.skuId)?.sku_id
+                : n.dependencies.find((e) => null == t[e]);
         return {
-            disabled: null != i,
+            disabled: null != u,
             reason:
-                null != i && null != e[i]
-                    ? r.intl.formatToPlainString(n ? u.default.vCEBiS : u.default["1B8AZr"], { perk: e[i]?.title })
+                null != u && null != e[u]
+                    ? l.intl.formatToPlainString(d ? s.default.vCEBiS : s.default["1B8AZr"], { perk: e[u]?.title })
                     : void 0,
         };
-    }, [d, t.skuId, t.dependencies, n, c.type]);
+    }, [p, n.skuId, n.dependencies, d, o.type]);
 }
