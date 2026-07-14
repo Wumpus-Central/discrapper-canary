@@ -32,25 +32,24 @@ function v(e) {
                 n = d.A.getChannel(t)?.guild_id;
             e || null == n || (0, u.z5)(n, t);
         }, [t]),
-        (0, i.jsxs)("div", {
+        (0, i.jsx)("div", {
             className: y.kL,
-            children: [
-                (0, i.jsx)("img", { className: y.Sl, src: a, alt: "", ref: b }),
-                (0, i.jsxs)("div", {
-                    className: s()(y.hk, { [y.Nb]: _ }),
-                    style: { aspectRatio: E },
-                    children: [
-                        (0, i.jsx)(A.A, { channelId: t, plantConfig: N, roomWidth: I, roomHeight: T, aspectRatio: E }),
-                        v.map((e, n) =>
-                            (0, i.jsx)(x.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: I }, n),
-                        ),
-                        (0, i.jsx)(f.A, { channelId: t, roomWidth: I }),
-                        (0, i.jsx)(g.A, { channelId: t, popoutType: n, aspectRatio: E }),
-                        (0, i.jsx)(C.A, { channelId: t }),
-                        (0, i.jsx)(m.A, { channelId: t, roomWidth: I }),
-                    ],
-                }),
-            ],
+            ref: b,
+            children: (0, i.jsxs)("div", {
+                className: s()(y.hk, { [y.Nb]: _ }),
+                style: { aspectRatio: E },
+                children: [
+                    (0, i.jsx)("img", { className: y.Sl, src: a, alt: "" }),
+                    (0, i.jsx)(A.A, { channelId: t, plantConfig: N, roomWidth: I, roomHeight: T, aspectRatio: E }),
+                    v.map((e, n) =>
+                        (0, i.jsx)(x.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: I }, n),
+                    ),
+                    (0, i.jsx)(f.A, { channelId: t, roomWidth: I }),
+                    (0, i.jsx)(g.A, { channelId: t, popoutType: n, aspectRatio: E }),
+                    (0, i.jsx)(C.A, { channelId: t }),
+                    (0, i.jsx)(m.A, { channelId: t, roomWidth: I }),
+                ],
+            }),
         })
     );
 }
