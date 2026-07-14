@@ -1,31 +1,32 @@
-i.d(e, { A: () => u });
-var s = i(64700),
-    a = i(451988),
-    c = i(186295),
-    n = i(696016);
-let p = 0,
-    r = new a.Ep();
-function o(t) {
+"use strict";
+n.d(t, { A: () => c });
+var i = n(64700),
+    r = n(451988),
+    a = n(186295),
+    s = n(696016);
+let l = 0,
+    o = new r.Ep();
+function d(e) {
     try {
-        c.Ay.getMediaEngine().setClipsUIActive(t);
-    } catch (t) {
-        n.nx.error("Failed to push clips UI active state to native:", t);
+        a.Ay.getMediaEngine().setClipsUIActive(e);
+    } catch (e) {
+        s.nx.error("Failed to push clips UI active state to native:", e);
     }
 }
-function u() {
-    s.useEffect(
+function c() {
+    i.useEffect(
         () => (
             !(function () {
-                if (1 === (p += 1)) {
-                    if (r.isStarted()) return r.stop();
-                    o(!0);
+                if (1 === (l += 1)) {
+                    if (o.isStarted()) return o.stop();
+                    d(!0);
                 }
             })(),
             () =>
                 void (
-                    0 === (p = Math.max(0, p - 1)) &&
-                    r.start(250, () => {
-                        0 === p && o(!1);
+                    0 === (l = Math.max(0, l - 1)) &&
+                    o.start(250, () => {
+                        0 === l && d(!1);
                     })
                 )
         ),

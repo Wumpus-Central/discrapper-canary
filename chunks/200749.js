@@ -1,59 +1,60 @@
-n.d(t, { A: () => d, J: () => u });
+"use strict";
+n.d(t, { A: () => u, J: () => c });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    l = n.n(r),
+    a = n.n(r),
     s = n(834730),
-    a = n(821609),
+    l = n(821609),
     o = n(235986),
-    c = n(366594);
-function u(e) {
+    d = n(366594);
+function c(e) {
     return e < 400 ? "small" : e < 1e3 ? "medium" : "large";
 }
-function d(e) {
+function u(e) {
     let {
         onCTAClick: t,
         callToAction: n,
         header: r,
-        description: u,
-        errorCodeMessage: d,
-        size: A,
-        className: h,
-        artURL: m,
-        noArt: g = !1,
-        selected: p = !1,
+        description: c,
+        errorCodeMessage: u,
+        size: _,
+        className: E,
+        artURL: A,
+        noArt: h = !1,
+        selected: I = !1,
     } = e;
     return (0, i.jsxs)(o.A, {
-        className: h,
+        className: E,
         justify: o.A.Justify.CENTER,
         align: o.A.Align.CENTER,
         direction: o.A.Direction.VERTICAL,
         style: { padding: 4 },
         children: [
-            !g &&
-                null != m &&
-                (0, i.jsx)("div", { className: l()(c.art, c[A]), style: { backgroundImage: `url(${m})` } }),
+            !h &&
+                null != A &&
+                (0, i.jsx)("div", { className: a()(d.art, d[_]), style: { backgroundImage: `url(${A})` } }),
             null != r
-                ? (0, i.jsx)(s.E, { color: "none", variant: "text-md/semibold", className: c.header, children: r })
+                ? (0, i.jsx)(s.E, { color: "none", variant: "text-md/semibold", className: d.header, children: r })
                 : null,
-            null != d
+            null != u
                 ? (0, i.jsx)(s.E, {
-                      className: c.errorCodeMessage,
+                      className: d.errorCodeMessage,
                       variant: "text-sm/semibold",
                       color: "text-muted",
                       selectable: !0,
-                      children: d,
+                      children: u,
                   })
                 : null,
-            null != u && (null == d || "small" !== A)
-                ? (0, i.jsx)(s.E, { color: "none", className: c.description, variant: "text-sm/medium", children: u })
+            null != c && (null == u || "small" !== _)
+                ? (0, i.jsx)(s.E, { color: "none", className: d.description, variant: "text-sm/medium", children: c })
                 : null,
-            p || null == n
+            I || null == n
                 ? null
                 : (0, i.jsx)("div", {
-                      className: c.outerButton,
-                      children: (0, i.jsx)(a.$, {
-                          size: "small" === A ? "sm" : "md",
+                      className: d.outerButton,
+                      children: (0, i.jsx)(l.$, {
+                          size: "small" === _ ? "sm" : "md",
                           variant: "secondary",
                           onClick: (e) => {
                               e.stopPropagation(), t?.(e);

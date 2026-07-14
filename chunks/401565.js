@@ -1,77 +1,78 @@
-n.d(t, { A: () => f });
+"use strict";
+n.d(t, { A: () => A });
 var i = n(17928),
-    l = n(228366),
-    s = n(320095),
-    r = n(287809),
-    a = n(380335),
+    r = n(228366),
+    a = n(320095),
+    s = n(287809),
+    l = n(380335),
     o = n(157550);
-let u = {},
-    d = new Set();
-function c(e) {
-    return a.A.isMessageRequest(e) || o.A.isSpam(e);
+let d = {},
+    c = new Set();
+function u(e) {
+    return l.A.isMessageRequest(e) || o.A.isSpam(e);
 }
-function h(e, t) {
+function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    if (!c(e) || (null != t && e !== t?.channel_id)) return;
-    let i = null == t ? null : (0, s.rh)(t);
-    u[e] = { loaded: !0, error: n, message: i };
+    if (!u(e) || (null != t && e !== t?.channel_id)) return;
+    let i = null == t ? null : (0, a.rh)(t);
+    d[e] = { loaded: !0, error: n, message: i };
 }
-class g extends i.Ay.Store {
+class E extends i.Ay.Store {
     static displayName = "MessageRequestPreviewStore";
     initialize() {
-        this.waitFor(a.A, o.A, r.default);
+        this.waitFor(l.A, o.A, s.default);
     }
     shouldLoadMessageRequestPreview(e) {
-        return !d.has(e);
+        return !c.has(e);
     }
     getMessageRequestPreview(e) {
-        return e in u || (u[e] = { loaded: !1, error: !1, message: null }), u[e];
+        return e in d || (d[e] = { loaded: !1, error: !1, message: null }), d[e];
     }
 }
-let f = new g(l.h, {
+let A = new E(r.h, {
     CONNECTION_OPEN: function () {
-        (u = {}), d.clear();
+        (d = {}), c.clear();
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        c(t.id) && d.add(t.id);
+        u(t.id) && c.add(t.id);
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
-        for (let e of t) c(e.id) || (d.delete(e.id), delete u[e.id]);
+        for (let e of t) u(e.id) || (c.delete(e.id), delete d[e.id]);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        d.delete(t.id), delete u[t.id];
+        c.delete(t.id), delete d[t.id];
     },
     MESSAGE_CREATE: function (e) {
         if (e.isPushNotification) return !1;
-        h(e.message.channel_id, e.message);
+        _(e.message.channel_id, e.message);
     },
     MESSAGE_UPDATE: function (e) {
         let t = e.message.channel_id;
         if (null == t) return !1;
-        let n = u[t];
+        let n = d[t];
         if (null == n || null == n.message) return !1;
-        u[t] = { ...n, message: (0, s.IU)(n.message, e.message) };
+        d[t] = { ...n, message: (0, a.IU)(n.message, e.message) };
     },
     MESSAGE_DELETE: function (e) {
-        if (!c(e.channelId)) return !1;
-        u[e.channelId] = { loaded: !0, error: !1, message: null };
+        if (!u(e.channelId)) return !1;
+        d[e.channelId] = { loaded: !0, error: !1, message: null };
     },
     LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_SUCCESS: function (e) {
         let { requestedChannelIds: t, supplementalData: n } = e,
             i = new Set([...t]);
         for (let e of (n.forEach((e) => {
-            h(e.channel_id, e.message_preview), i.delete(e.channel_id);
+            _(e.channel_id, e.message_preview), i.delete(e.channel_id);
         }),
         Array.from(i)))
-            h(e, null);
+            _(e, null);
     },
     LOAD_MESSAGE_REQUESTS_SUPPLEMENTAL_DATA_ERROR: function (e) {
         let { requestedChannelIds: t } = e;
         t.forEach((e) => {
-            h(e, null, !0);
+            _(e, null, !0);
         });
     },
 });

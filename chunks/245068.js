@@ -1,77 +1,78 @@
-a.d(s, { X: () => j });
-var t = a(627968),
-    i = a(64700),
-    l = a(503698),
-    r = a.n(l),
-    d = a(17928),
-    c = a(462887),
-    n = a(778712),
-    u = a(736653),
-    o = a(775602),
-    h = a(442759),
-    m = a(344346),
-    v = a(139136),
-    p = a(929283),
-    g = a(806771),
-    A = a(180171),
-    f = a(989099);
-let j = i.memo(function (e) {
-    let { product: s, isHighlighted: a, user: i, forCollectedModal: l, staticPreviewClassName: j } = e,
-        { firstProfileEffect: x, firstAvatarDecoration: N, firstNameplate: y } = (0, h.f5)(s),
-        H = (0, d.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        S = (0, u.Ay)(),
-        b = (0, c.q)(S),
-        k = null != y && null != N && null != x,
-        w = k ? n._3.SIZE_72 : n._3.SIZE_80,
-        I = s.previewAssets?.fgStatic;
-    if (null != I) {
-        let e = a && !H,
-            i = s.previewAssets?.fgAnimated;
-        return (0, t.jsx)("div", {
-            className: g.EJ,
-            children: (0, t.jsx)("img", {
-                className: r()(g.d2, j, { [g.M2]: a }),
-                src: e && null != i ? i : I,
-                alt: s.name,
+"use strict";
+n.d(t, { X: () => T });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    l = n(17928),
+    o = n(462887),
+    d = n(778712),
+    c = n(736653),
+    u = n(775602),
+    _ = n(442759),
+    E = n(344346),
+    A = n(139136),
+    h = n(929283),
+    I = n(806771),
+    f = n(180171),
+    p = n(989099);
+let T = r.memo(function (e) {
+    let { product: t, isHighlighted: n, user: r, forCollectedModal: a, staticPreviewClassName: T } = e,
+        { firstProfileEffect: m, firstAvatarDecoration: g, firstNameplate: S } = (0, _.f5)(t),
+        N = (0, l.bG)([u.Ay], () => u.Ay.useReducedMotion),
+        C = (0, c.Ay)(),
+        O = (0, o.q)(C),
+        R = null != S && null != g && null != m,
+        L = R ? d._3.SIZE_72 : d._3.SIZE_80,
+        D = t.previewAssets?.fgStatic;
+    if (null != D) {
+        let e = n && !N,
+            r = t.previewAssets?.fgAnimated;
+        return (0, i.jsx)("div", {
+            className: I.EJ,
+            children: (0, i.jsx)("img", {
+                className: s()(I.d2, T, { [I.M2]: n }),
+                src: e && null != r ? r : D,
+                alt: t.name,
             }),
         });
     }
-    return (0, t.jsxs)("div", {
-        className: r()(g.kL, { [g.ib]: !k, [g.c$]: k }),
+    return (0, i.jsxs)("div", {
+        className: s()(I.kL, { [I.ib]: !R, [I.c$]: R }),
         children: [
-            null != x &&
-                (0, t.jsx)("div", {
-                    className: g.NM,
-                    children: (0, t.jsx)(v.A, {
-                        isHighlighted: a,
-                        skuId: x.skuId,
+            null != m &&
+                (0, i.jsx)("div", {
+                    className: I.NM,
+                    children: (0, i.jsx)(A.A, {
+                        isHighlighted: n,
+                        skuId: m.skuId,
                         removeSetHeight: !0,
-                        delayProfileEffectIntro: l,
-                        withScaleAnimation: l,
+                        delayProfileEffectIntro: a,
+                        withScaleAnimation: a,
                     }),
                 }),
-            k &&
-                (0, t.jsx)("div", {
-                    className: g.M4,
-                    children: (0, t.jsx)(m.A, {
-                        user: i,
-                        nameplate: y,
-                        isHighlighted: a,
-                        showPlaceholderUser: !a,
-                        pendingAvatarDecoration: N,
+            R &&
+                (0, i.jsx)("div", {
+                    className: I.M4,
+                    children: (0, i.jsx)(E.A, {
+                        user: r,
+                        nameplate: S,
+                        isHighlighted: n,
+                        showPlaceholderUser: !n,
+                        pendingAvatarDecoration: g,
                         hideDecorators: !0,
                     }),
                 }),
-            null != N &&
-                (0, t.jsx)("div", {
-                    className: g._P,
-                    children: (0, t.jsx)(p.i, {
-                        item: N,
-                        user: i,
-                        avatarSize: w,
-                        isHighlighted: a,
-                        avatarPlaceholderSrc: b ? f : A,
-                        className: g.my,
+            null != g &&
+                (0, i.jsx)("div", {
+                    className: I._P,
+                    children: (0, i.jsx)(h.i, {
+                        item: g,
+                        user: r,
+                        avatarSize: L,
+                        isHighlighted: n,
+                        avatarPlaceholderSrc: O ? p : f,
+                        className: I.my,
                     }),
                 }),
         ],
