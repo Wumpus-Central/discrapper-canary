@@ -838,9 +838,8 @@ let e$ = {
                 return { key: t.id, command: t, channel: i, guildId: i.guild_id, showImage: !0, section: n };
             },
             getQuery: (e) => {
-                let t = eV(e);
-                if ("mention" !== t.type) return e;
-                let n = eP.Ay.getName(l?.id, i.id, t.user);
+                let t = eV(e),
+                    n = eP.Ay.getName(l?.id, i.id, t.user);
                 return e.replace(eQ, `@${n}`);
             },
             key: "commands",

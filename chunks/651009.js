@@ -280,7 +280,7 @@ function eI(e) {
         ? a.days > 0
             ? (0, n.jsxs)(ej, { ...r, children: [c(), (0, n.jsx)(eA, { days: a.days })] })
             : (0, n.jsxs)(ej, { ...r, children: [c(), (0, n.jsx)(ev, { timeLeft: a })] })
-        : null != i && null == a
+        : null != i
           ? null
           : (0, n.jsx)(ej, { ...r, children: c() });
 }

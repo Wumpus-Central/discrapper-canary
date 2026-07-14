@@ -569,7 +569,7 @@ var lr = n(982168),
     la = n(722868),
     ls = n(822775),
     lo = n(982985),
-    ld = n(344565),
+    ld = n(174150),
     lu = n(34188),
     lc = n(662388),
     lg = n(23722),
@@ -873,7 +873,7 @@ var lw = n(580929),
     lU = n(408278),
     lF = n(890377),
     lB = n(789645),
-    lW = n(534514),
+    lW = n(297264),
     lH = n(821609),
     lz = n(403581),
     lK = n(194261),
@@ -2240,7 +2240,7 @@ function tw(e) {
         }),
     });
 }
-var tG = n(982599),
+var tG = n(576260),
     tV = n(347805),
     tU = n(629403),
     tF = n(612630),
@@ -2457,7 +2457,7 @@ function t8(e) {
         (0, t.jsx)(t9.b, { isShaking: n, intensity: 1.4, children: l })
     );
 }
-var t6 = n(515054),
+var t6 = n(841417),
     t4 = n(933832),
     ie = n(972213),
     il = n(97483),
@@ -3872,7 +3872,6 @@ function i4(e) {
                         n?.pronouns === "" &&
                         n?.banner === void 0 &&
                         n?.accentColor === void 0 &&
-                        n?.banner === void 0 &&
                         i.flags === i.publicFlags &&
                         (n?.badges == null || n?.badges?.length === 0)),
                     l?.id !== i.id && !t),

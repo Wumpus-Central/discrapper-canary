@@ -35,7 +35,7 @@ var n = l(627968),
     S = l(287809),
     P = l(58703),
     G = l(403362),
-    U = l(274372),
+    U = l(915725),
     z = l(372684),
     B = l(430795),
     $ = l(253799),
@@ -283,8 +283,7 @@ function Q(e) {
                                     ],
                                 }),
                             }),
-                        em.version >= 3 &&
-                            null != em.activity &&
+                        null != em.activity &&
                             (null != em.activity.state || null != em.activity.details) &&
                             (0, n.jsx)(A.D, {
                                 label: Y.intl.string(Y.t.aTpwmw),

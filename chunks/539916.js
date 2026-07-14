@@ -4,7 +4,7 @@ n.d(t, {
     D1: () => T,
     Ii: () => x,
     Kd: () => m,
-    Km: () => O,
+    Km: () => R,
     ME: () => N,
     Mc: () => L,
     QY: () => A,
@@ -24,7 +24,7 @@ n.d(t, {
     sd: () => p,
     tb: () => P,
     vK: () => G,
-    wZ: () => R,
+    wZ: () => O,
 }),
     n(321073);
 var i,
@@ -52,11 +52,11 @@ var S = (((i = {})[(i.CUSTOMIZE = 0)] = "CUSTOMIZE"), (i[(i.BROWSE = 1)] = "BROW
         (((a = {})[(a.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
         (a[(a.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
         a),
-    R =
+    O =
         (((s = {})[(s.APPLICATION = 0)] = "APPLICATION"),
         (s[(s.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
         s);
-function O(e) {
+function R(e) {
     if (e.options.length > 0) return !1;
     let { id: t, ...n } = L(),
         { id: i, ...r } = e;
@@ -158,7 +158,6 @@ function G(e) {
 }
 function x(e) {
     let t = [];
-    if (0 !== e.connection_type && 1 !== e.connection_type) return t.push("Invalid connection type"), t;
     switch (e.connection_type) {
         case 0:
             (0, d.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
@@ -171,7 +170,7 @@ function x(e) {
                 (0, d.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections");
             break;
         default:
-            e.connection_type;
+            return e.connection_type, t.push("Invalid connection type"), t;
     }
     return (
         null != e.description && e.description.length > p && t.push(`Description must be ${p} characters or less`), t

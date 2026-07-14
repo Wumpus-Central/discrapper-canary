@@ -29,7 +29,7 @@ var l,
     b = n(939249),
     L = n(346055),
     R = n(821609),
-    O = n(534514),
+    O = n(297264),
     k = n(155718),
     M = n(775602),
     U = n(721768),
@@ -3011,7 +3011,7 @@ function lI(e) {
                     : (0, r.jsxs)("div", {
                           children: [
                               (0, r.jsx)(lv, { context: t, entrypoint: n, onEmptyState: f }),
-                              d && "channel" === t.type && (0, r.jsx)(lS, { context: t, onEmptyState: E }),
+                              d && (0, r.jsx)(lS, { context: t, onEmptyState: E }),
                               u && (0, r.jsx)(lT, { context: t, entrypoint: n, onEmptyState: C }),
                               m && (0, r.jsx)(lP, { context: t, onEmptyState: y }),
                               v &&

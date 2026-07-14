@@ -8,7 +8,6 @@ function s() {
         t = e?.type === r.PE.VIEW_MESSAGE_REQUEST ? e : null;
     return {
         channelId: t?.channelId,
-        hasSingleMessageRequest:
-            t?.details != null && t.details.type === r.LU.MESSAGE_REQUEST && t.details.hasSingleMessageRequest,
+        hasSingleMessageRequest: t?.details != null && t.details.hasSingleMessageRequest,
     };
 }

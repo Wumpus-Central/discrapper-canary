@@ -1,49 +1,49 @@
-i.d(a, { default: () => m });
-var e = i(627968);
-i(64700);
-var n = i(503698),
-    l = i.n(n),
-    t = i(224640),
-    r = i(696208),
-    c = i(364522),
-    d = i(534514),
-    x = i(270003),
-    h = i(915089),
-    j = i(871194),
-    o = i(895600),
-    p = i(375708),
-    u = i(31208);
-function m(s) {
-    let { transitionState: a, onClose: i, guildTemplate: n } = s,
-        { form: m, preview: v, handleSubmit: C } = (0, j.A)(n, !1),
+a.d(i, { default: () => u });
+var e = a(627968);
+a(64700);
+var n = a(503698),
+    t = a.n(n),
+    l = a(224640),
+    r = a(696208),
+    d = a(364522),
+    c = a(297264),
+    x = a(270003),
+    h = a(915089),
+    j = a(871194),
+    o = a(895600),
+    p = a(375708),
+    m = a(31208);
+function u(s) {
+    let { transitionState: i, onClose: a, guildTemplate: n } = s,
+        { form: u, preview: v, handleSubmit: C } = (0, j.A)(n, !1),
         N = (0, h.GV)();
-    return (0, e.jsxs)(t.d, {
-        transitionState: a,
-        onClose: i,
+    return (0, e.jsxs)(l.d, {
+        transitionState: i,
+        onClose: a,
         size: "xxl",
         "aria-labelledby": N,
         children: [
             (0, e.jsxs)("div", {
-                className: u.jT,
+                className: m.jT,
                 children: [
                     (0, e.jsx)("div", {
-                        className: l()(u.jx, u.Iz),
+                        className: t()(m.jx, m.Iz),
                         children: (0, e.jsx)("div", {
-                            className: u.OQ,
+                            className: m.OQ,
                             children: (0, e.jsx)(o.A, { guildTemplate: n, headerId: N }),
                         }),
                     }),
                     (0, e.jsx)("div", {
-                        className: l()(u.jx, u.gy),
-                        children: (0, e.jsxs)(c.Ip, {
-                            className: u.KJ,
+                        className: t()(m.jx, m.gy),
+                        children: (0, e.jsxs)(d.Ip, {
+                            className: m.KJ,
                             children: [
-                                (0, e.jsx)(d.D, {
+                                (0, e.jsx)(c.D, {
                                     variant: "heading-xl/semibold",
-                                    className: u.wx,
+                                    className: m.wx,
                                     children: p.intl.string(p.t.UNFvtM),
                                 }),
-                                (0, e.jsxs)(x.n, { children: [m, v] }),
+                                (0, e.jsxs)(x.n, { children: [u, v] }),
                             ],
                         }),
                     }),
@@ -51,12 +51,12 @@ function m(s) {
             }),
             (0, e.jsx)(r.H, {
                 actions: [
-                    { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: i },
+                    { variant: "secondary", text: p.intl.string(p.t.cpT0Cq), onClick: a },
                     {
                         variant: "primary",
                         text: p.intl.string(p.t.CumH4u),
-                        onClick: async () => {
-                            null != (await C()) && i();
+                        onClick: () => {
+                            C();
                         },
                     },
                 ],

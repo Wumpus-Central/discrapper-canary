@@ -29,8 +29,8 @@ var i,
     R = n(64700),
     L = n(17928),
     G = n(834730),
-    D = n(534514),
-    O = n(913758),
+    D = n(297264),
+    O = n(555337),
     M = n(503698),
     k = n.n(M),
     U = n(735438),
@@ -17346,10 +17346,7 @@ function xE(e) {
     n.forEach((e) => {
         null != e.configuration.connectionMetadataField
             ? m.set(e.configuration.connectionMetadataField, e)
-            : null == e.configuration.value &&
-              null == e.configuration.operator &&
-              null == e.configuration.connectionMetadataField &&
-              (t = e);
+            : null == e.configuration.value && null == e.configuration.operator && (t = e);
     });
     let g = { configMetadataMap: m, onConfigurationChange: i, locked: l },
         x = null;

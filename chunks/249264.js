@@ -6,7 +6,7 @@ var n,
     a = i(503698),
     o = i.n(a);
 i(926675);
-var d = i(534514),
+var d = i(297264),
     c = i(939249),
     u = i(140735),
     g = i(834730),
@@ -27,9 +27,9 @@ var d = i(534514),
     C = i(492280),
     w = i(990078),
     R = i(789645),
-    O = i(147925);
+    k = i(147925);
 i(321073);
-var k = i(477782),
+var O = i(477782),
     y = i(980707),
     _ = i(922016),
     G = i(761915),
@@ -114,7 +114,7 @@ let Y = r.memo(function (e) {
                     a.type === V.RADIO &&
                         s.push(
                             (0, l.jsx)(
-                                k.iD,
+                                O.iD,
                                 {
                                     id: `${r}-none`,
                                     group: r,
@@ -131,7 +131,7 @@ let Y = r.memo(function (e) {
                             (a.type === V.RADIO
                                 ? s.push(
                                       (0, l.jsx)(
-                                          k.iD,
+                                          O.iD,
                                           {
                                               id: e,
                                               group: r,
@@ -144,14 +144,14 @@ let Y = r.memo(function (e) {
                                   )
                                 : s.push(
                                       (0, l.jsx)(
-                                          k.sL,
+                                          O.sL,
                                           { id: e, label: n.getText(), checked: t.includes(e), action: () => i(e, !1) },
                                           e,
                                       ),
                                   ));
                     }),
                     s);
-            return (0, l.jsx)(k.rX, { label: a.getLabel(), children: o }, r);
+            return (0, l.jsx)(O.rX, { label: a.getLabel(), children: o }, r);
         }),
     });
 });
@@ -328,7 +328,7 @@ function J(e) {
     return (0, l.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${t}` });
 }
 function Z() {
-    return (0, l.jsx)(O.A, { direction: O.A.Directions.LEFT, width: 12, height: 12, className: z.OW });
+    return (0, l.jsx)(k.A, { direction: k.A.Directions.LEFT, width: 12, height: 12, className: z.OW });
 }
 function $(e) {
     let {
@@ -457,14 +457,14 @@ function ed(e) {
         R = r.useCallback(() => {
             p({ action: "PRESS_ADD_COMMENTARY", widgetEdited: a }), j("editing");
         }, [a, p]),
-        O = r.useCallback(() => {
+        k = r.useCallback(() => {
             let e = E.trim(),
                 i = e !== (t ?? "").trim();
             (0, T.oc)(a, d, "" !== e ? e : void 0),
                 j("completed"),
                 i && p({ action: "COMMENTARY_EDITED", widgetEdited: a, gameId: d });
         }, [a, d, E, t, p]),
-        k = r.useCallback((e) => {
+        O = r.useCallback((e) => {
             v(e);
         }, []);
     return (
@@ -483,12 +483,12 @@ function ed(e) {
                           id: g,
                           value: E,
                           placeholder: C,
-                          onChange: k,
-                          onBlur: O,
+                          onChange: O,
+                          onBlur: k,
                           rows: 3,
-                          autoFocus: "editing" === A,
+                          autoFocus: !0,
                           onKeyDown: (e) => {
-                              "Enter" !== e.key || e.shiftKey || (e.preventDefault(), O());
+                              "Enter" !== e.key || e.shiftKey || (e.preventDefault(), k());
                           },
                           maxLength: 200,
                       }),
@@ -534,10 +534,10 @@ function ec(e) {
         { applicationId: I, comment: p, tags: A } = s,
         { coverImageUrl: E, gameName: S, isLoading: w } = (0, j.A)(I),
         R = { variant: "heading-sm/medium", color: "text-default" },
-        O = c && !u,
-        k = 1 === (0, T.cv)(a),
-        y = O && (0, T.y9)(a),
-        _ = O && !k,
+        k = c && !u,
+        O = 1 === (0, T.cv)(a),
+        y = k && (0, T.y9)(a),
+        _ = k && !O,
         { registerDragHandleRef: G } = (0, N.r)();
     if (w) return (0, l.jsx)(C.E, {});
     function L() {
@@ -589,7 +589,7 @@ function ec(e) {
                         }),
                     ],
                 }),
-                O &&
+                k &&
                     (0, l.jsx)(et.A, {
                         game: s,
                         widgetType: a,

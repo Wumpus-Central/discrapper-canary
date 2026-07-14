@@ -36,7 +36,7 @@ var n = l(627968),
     P = l(287809),
     G = l(58703),
     U = l(403362),
-    z = l(274372),
+    z = l(915725),
     B = l(372684),
     $ = l(430795),
     H = l(253799),
@@ -408,8 +408,7 @@ function eh(e) {
                                     ],
                                 }),
                             }),
-                        ep.version >= 3 &&
-                            null != ep.activity &&
+                        null != ep.activity &&
                             (null != ep.activity.state || null != ep.activity.details) &&
                             (0, n.jsx)(N.D, {
                                 label: ei.intl.string(ei.t.aTpwmw),

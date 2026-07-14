@@ -18160,7 +18160,7 @@ function xf() {
             return 10 * n5.A.Seconds.MINUTE;
         }, [t.config.taskConfigV2.tasks]),
         A = o.useMemo(() => hG.n.WATCH_VIDEO in t.config.taskConfigV2.tasks, [t.config.taskConfigV2.tasks]);
-    hL()(!1 !== t.preview && null != t.preview, "Preview config must have property preview: true");
+    hL()(!1 !== t.preview, "Preview config must have property preview: true");
     let k = t.config.taskConfigV2.tasks[hG.n.WATCH_VIDEO];
     return (0, r.jsxs)(g.Ip, {
         className: h6.kL,

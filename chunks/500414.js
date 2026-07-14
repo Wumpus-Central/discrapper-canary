@@ -709,7 +709,7 @@ function e3(e) {
         : null;
 }
 var e6 = n(778492),
-    e5 = n(534514),
+    e5 = n(297264),
     e4 = n(285796),
     e9 = n(857182),
     e7 = n(506774),
@@ -3049,9 +3049,7 @@ let sf = function (e) {
         : null != r && (0, ld.Xw)(r)
           ? (0, l.jsx)(sA, { sticker: r, channel: n, closePopout: i, refreshPositionKey: s })
           : a
-            ? null == r
-                ? (0, l.jsx)(sx, { channel: n, closePopout: i, sticker: t })
-                : (i(), null)
+            ? (0, l.jsx)(sx, { channel: n, closePopout: i, sticker: t })
             : (0, l.jsx)(l2.Y0, {});
 };
 var sE = n(76513);

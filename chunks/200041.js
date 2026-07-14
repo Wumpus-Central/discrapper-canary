@@ -2,60 +2,60 @@
 n.d(t, { A: () => c });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(459192),
-    l = n(834730);
+    a = n(503698),
+    s = n.n(a),
+    l = n(459192),
+    o = n(834730);
 n(851883);
-var u = n(124704);
+var d = n(124704);
 function c(e) {
     let {
             text: t,
             tooltipText: n,
-            textVariant: s = "text-xs/medium",
+            textVariant: a = "text-xs/medium",
             textClassName: c,
-            "aria-label": d,
+            "aria-label": u,
             icon: _,
-            canTruncate: h = !0,
-            hideTooltip: f = !1,
-            hideText: p = !1,
+            canTruncate: E = !0,
+            hideTooltip: A = !1,
+            hideText: h = !1,
         } = e,
-        E = r.useRef(null),
-        [m, g] = r.useState(!1),
-        A = { variant: s, color: "none", className: a()(h && u.ps, c) },
-        I = null != t && null == n && h,
-        T = !f && (null != n || I || p),
+        I = r.useRef(null),
+        [f, p] = r.useState(!1),
+        T = { variant: a, color: "none", className: s()(E && d.ps, c) },
+        m = null != t && null == n && E,
+        g = !A && (null != n || m || h),
         S = n ?? t ?? "",
-        y = s?.startsWith("text-sm") ? u.WV : u.Dk,
+        N = a?.startsWith("text-sm") ? d.WV : d.Dk,
         C = r.useCallback(() => {
-            if (I) {
-                let { current: e } = E;
-                g((null != e && e.offsetWidth < e.scrollWidth) || null != n || p);
-            } else g(!0);
-        }, [I, n, p]),
-        N = r.useCallback(() => {
-            g(!1);
+            if (m) {
+                let { current: e } = I;
+                p((null != e && e.offsetWidth < e.scrollWidth) || h);
+            } else p(!0);
+        }, [m, h]),
+        O = r.useCallback(() => {
+            p(!1);
         }, []);
-    return null == _ && p
+    return null == _ && h
         ? null
-        : T
-          ? (0, i.jsx)(o.u, {
+        : g
+          ? (0, i.jsx)(l.u, {
                 body: S,
                 asset: _,
                 assetSize: 16,
                 delay: 150,
-                shouldShow: m,
+                shouldShow: f,
                 asContainer: !0,
                 children: (0, i.jsxs)("div", {
-                    className: a()(u.kL, u.O1, y),
-                    "aria-label": d,
+                    className: s()(d.kL, d.O1, N),
+                    "aria-label": u,
                     onMouseEnter: C,
-                    onMouseLeave: N,
-                    children: [_, !p && (0, i.jsx)(l.E, { ref: E, ...A, children: t })],
+                    onMouseLeave: O,
+                    children: [_, !h && (0, i.jsx)(o.E, { ref: I, ...T, children: t })],
                 }),
             })
           : (0, i.jsxs)("div", {
-                className: a()(u.kL, u.O1, y),
-                children: [_, !p && (0, i.jsx)(l.E, { ...A, children: t })],
+                className: s()(d.kL, d.O1, N),
+                children: [_, !h && (0, i.jsx)(o.E, { ...T, children: t })],
             });
 }

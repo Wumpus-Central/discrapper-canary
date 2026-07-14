@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => x });
 var l = n(627968);
 n(64700);
 var i = n(17928),
@@ -16,16 +16,16 @@ var i = n(17928),
     A = n(652215),
     f = n(375708),
     C = n(782329);
-function E(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: E = !1 } = e,
-        x = h.default.cast(t),
+function x(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
+        E = h.default.cast(t),
         {
             joinRequest: S,
             isModmin: _,
             guildId: I,
             maxMembers: j,
         } = (0, i.cf)([m.A, d.A, u.A], () => {
-            let e = m.A.getRequest(x),
+            let e = m.A.getRequest(E),
                 t = d.A.getGuild(e?.guildId);
             return {
                 joinRequest: e,
@@ -36,7 +36,7 @@ function E(e) {
         }),
         y = (0, i.bG)([c.A], () => (null != I ? c.A.getMemberCount(I) : 0)),
         b = null != j && (y ?? 0) >= j,
-        { approveRequest: T, rejectRequest: N, submitting: v } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
+        { approveRequest: v, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
     return null != S && S.applicationStatus === g.B5.SUBMITTED && _
         ? (0, l.jsxs)("div", {
               className: C.U,
@@ -48,8 +48,8 @@ function E(e) {
                           variant: "active",
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
-                          loading: v,
-                          onClick: T,
+                          loading: T,
+                          onClick: v,
                           disabled: b,
                       }),
                   }),
@@ -58,7 +58,7 @@ function E(e) {
                       size: "sm",
                       text: f.intl.string(f.t.hDtbsz),
                       onClick: N,
-                      disabled: v || S.applicationStatus !== g.B5.SUBMITTED,
+                      disabled: T,
                   }),
                   n &&
                       (0, l.jsx)(a.$, {
@@ -69,7 +69,7 @@ function E(e) {
                           size: "sm",
                           text: f.intl.string(f.t.iXAna6),
                       }),
-                  E && (0, l.jsx)(r.Ay.Divider, {}),
+                  x && (0, l.jsx)(r.Ay.Divider, {}),
               ],
           })
         : null;

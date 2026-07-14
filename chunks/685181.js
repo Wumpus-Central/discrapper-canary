@@ -1,37 +1,37 @@
-n(321073);
-var t = n(91871),
-    a = n.n(t),
-    l = n(111956),
-    i = n.n(l);
-n(621466);
+t(321073);
+var n = t(91871),
+    a = t.n(n),
+    i = t(111956),
+    l = t.n(i);
+t(621466);
 let o = /[\u0300-\u036f]/g,
     s = null == String.prototype.normalize ? (e) => e : (e) => e.normalize("NFD").replace(o, "").normalize("NFC"),
     c =
         null == String.prototype.normalize
             ? (e) => e
             : function (e) {
-                  let r = n(209034),
-                      t = "";
+                  let r = t(209034),
+                      n = "";
                   return (
                       [...e.normalize("NFD")].forEach((e) => {
-                          t += r[e] ?? e;
+                          n += r[e] ?? e;
                       }),
-                      t.normalize("NFD").toLocaleLowerCase()
+                      n.normalize("NFD").toLocaleLowerCase()
                   );
               };
 function u(e, r) {
     if (e.score === r.score) {
-        let n = e.sortable ?? e.comparator?.toLocaleLowerCase() ?? "",
-            t = e.sortable ?? r.comparator?.toLocaleLowerCase() ?? "";
-        if (n < t) return -1;
-        if (n > t) return 1;
+        let t = e.sortable ?? e.comparator?.toLocaleLowerCase() ?? "",
+            n = e.sortable ?? r.comparator?.toLocaleLowerCase() ?? "";
+        if (t < n) return -1;
+        if (t > n) return 1;
     }
     return r.score - e.score;
 }
 let f = new Map(),
     p = new Map(),
     d = new Set(),
-    m = i()(
+    m = l()(
         () => {
             0 !== d.size &&
                 (d.forEach((e) => {
@@ -44,65 +44,65 @@ let f = new Map(),
         { leading: !0, trailing: !0 },
     );
 function h(e, r) {
-    let { query: n, limit: t, filters: l, blacklist: i, whitelist: o, boosters: p, boosterFallback: d } = r,
-        m = null != l && l.strict ? (l.guild ?? null) : null,
-        h = RegExp(`^${n.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&")}`, "i"),
-        v = RegExp(n.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&"), "i"),
+    let { query: t, limit: n, filters: i, blacklist: l, whitelist: o, boosters: p, boosterFallback: d } = r,
+        m = null != i && i.strict ? (i.guild ?? null) : null,
+        h = RegExp(`^${t.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&")}`, "i"),
+        v = RegExp(t.replace(/[-[\]/{}()*+?.\\^$|]/g, "\\$&"), "i"),
         b = [];
-    if ("" === n) return g(n, b, e);
-    let E = n.toLocaleLowerCase(),
+    if ("" === t) return g(t, b, e);
+    let E = t.toLocaleLowerCase(),
         k = c(E);
     f.forEach((e, r) => {
-        let t;
+        let n;
         if (
-            !(function (e, r, n, t, a) {
-                if (null != t && t.indexOf(e) >= 0) return !1;
+            !(function (e, r, t, n, a) {
+                if (null != n && n.indexOf(e) >= 0) return !1;
                 if (null != a && a.indexOf(e) >= 0) return !0;
-                if (null != n) {
-                    let { friends: e, staff: t, guild: a, provisional: l } = n;
+                if (null != t) {
+                    let { friends: e, staff: n, guild: a, provisional: i } = t;
                     return (
-                        (null == l || r.isProvisional === l) &&
+                        (null == i || r.isProvisional === i) &&
                         ((!0 === e && !0 === r.isFriend) ||
-                            (!0 === t && !0 === r.isStaff) ||
-                            (null != a && (null != r.nicknames[a] || null === r.nicknames[a])))
+                            (!0 === n && !0 === r.isStaff) ||
+                            (null != a && a in r.nicknames))
                     );
                 }
                 return !0;
-            })(r, e, l, i, o)
+            })(r, e, i, l, o)
         )
             return;
         let { username: u } = e;
-        if (r === n) {
+        if (r === t) {
             var f;
-            t = { id: r, username: u, comparator: r, score: ((f = p[r]), 10 * (f ?? d)) };
+            n = { id: r, username: u, comparator: r, score: ((f = p[r]), 10 * (f ?? d)) };
         } else {
-            let n = [e.username, e.friendNickname, e.globalName].filter((e) => null != e);
+            let t = [e.username, e.friendNickname, e.globalName].filter((e) => null != e);
             if (null != m) {
                 let r = e.nicknames[m];
-                null != r && n.push(r);
-            } else n.push(...Object.values(e.nicknames).filter((e) => null != e));
-            n.forEach((e) => {
-                var n, l, i, o;
+                null != r && t.push(r);
+            } else t.push(...Object.values(e.nicknames).filter((e) => null != e));
+            t.forEach((e) => {
+                var t, i, l, o;
                 let f,
                     m = s(e.toLocaleLowerCase());
                 h.test(e)
-                    ? (f = { comparator: e, score: ((n = p[r]), 10 * (n ?? d)) })
+                    ? (f = { comparator: e, score: ((t = p[r]), 10 * (t ?? d)) })
                     : v.test(e)
-                      ? (f = { comparator: e, score: ((l = p[r]), 5 * (l ?? d)) })
+                      ? (f = { comparator: e, score: ((i = p[r]), 5 * (i ?? d)) })
                       : a()(E, m)
-                        ? (f = { comparator: e, score: ((i = p[r]), +(i ?? d)) })
+                        ? (f = { comparator: e, score: ((l = p[r]), +(l ?? d)) })
                         : a()(k, c(m)) && (f = { comparator: e, score: ((o = p[r]), +(o ?? d)) }),
-                    null != f && (null == t || t.score < f.score) && (t = { ...f, id: r, username: u });
+                    null != f && (null == n || n.score < f.score) && (n = { ...f, id: r, username: u });
             });
         }
-        null != t && b.push(t);
+        null != n && b.push(n);
     }),
         b.sort(u),
-        b.length > t && (b.length = t),
-        g(n, b, e);
+        b.length > n && (b.length = n),
+        g(t, b, e);
 }
-function g(e, r, n) {
-    self.postMessage({ type: "USER_RESULTS", uuid: n, payload: { query: e, results: r } });
+function g(e, r, t) {
+    self.postMessage({ type: "USER_RESULTS", uuid: t, payload: { query: e, results: r } });
 }
 self.addEventListener("message", (e) => {
     let { data: r } = e;
@@ -111,8 +111,8 @@ self.addEventListener("message", (e) => {
         case "UPDATE_USERS":
             return (function (e) {
                 let { payload: r } = e,
-                    n = !1,
-                    t = new Set();
+                    t = !1,
+                    n = new Set();
                 r.forEach((e) => {
                     let r = f.get(e.id) ?? null,
                         a =
@@ -134,21 +134,21 @@ self.addEventListener("message", (e) => {
                             ((a.isFriend !== r?.isFriend ||
                                 a.friendNickname !== r?.friendNickname ||
                                 a.isStaff !== r?.isStaff) &&
-                                (n = !0),
+                                (t = !0),
                             Object.keys(a.nicknames).forEach((e) => {
-                                t.add(e);
+                                n.add(e);
                             }));
                 }),
                     p.forEach((e, r) => {
                         let { filters: a } = e;
-                        (null == a || a.friends === n || a.staff === n || t.has(a.guild)) && d.add(r);
+                        (null == a || a.friends === t || a.staff === t || n.has(a.guild)) && d.add(r);
                     }),
                     m();
             })(r);
         case "QUERY_SET":
             return (function (e) {
-                let { uuid: r, payload: n } = e;
-                p.set(r, n), h(r, n);
+                let { uuid: r, payload: t } = e;
+                p.set(r, t), h(r, t);
             })(r);
         case "QUERY_CLEAR":
             return (function (e) {
@@ -158,8 +158,8 @@ self.addEventListener("message", (e) => {
         case "REQUEST_DEBUG_STATE":
             return (function (e) {
                 let { uuid: r } = e,
-                    n = { type: "DEBUG_STATE", uuid: r, payload: { users: JSON.stringify(Object.fromEntries(f)) } };
-                self.postMessage(n);
+                    t = { type: "DEBUG_STATE", uuid: r, payload: { users: JSON.stringify(Object.fromEntries(f)) } };
+                self.postMessage(t);
             })(r);
     }
 });

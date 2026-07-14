@@ -659,14 +659,12 @@ class ea extends r.PureComponent {
         if (null == t || 0 === t.length) return null;
         let n = [],
             r = null;
+        for (let { rawName: i, rawValue: a, inline: s } of t)
+            s || null == r || (n.push(r), (r = null)),
+                null == r && (r = []),
+                r.push([this.props.renderTitle(e, i), this.props.renderDescription(e, a, !0)]),
+                (3 !== r.length && s) || (n.push(r), (r = null));
         return (
-            t.forEach((t) => {
-                let { rawName: i, rawValue: a, inline: s } = t;
-                s || null == r || (n.push(r), (r = null)),
-                    null == r && (r = []),
-                    r.push([this.props.renderTitle(e, i), this.props.renderDescription(e, a, !0)]),
-                    (3 !== r.length && s) || (n.push(r), (r = null));
-            }),
             null != r && n.push(r),
             (0, i.jsx)("div", {
                 className: p.j0,
