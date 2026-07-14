@@ -1,32 +1,33 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => I });
 var i = n(367513),
     r = n(587895),
-    s = n(568598),
-    a = n(709055),
+    a = n(568598),
+    s = n(313961),
+    l = n(709055),
     o = n(976860),
-    l = n(795816),
-    u = n(933958),
-    c = n(851907),
-    d = n(969151),
-    _ = n(108959),
-    h = n(5867),
-    f = n(652215);
-function p(e, t) {
-    let n = u.Ay.getSelfEmbeddedActivityForLocation(t);
+    d = n(795816),
+    c = n(933958),
+    u = n(851907),
+    _ = n(969151),
+    E = n(108959),
+    A = n(5867),
+    h = n(652215);
+function I(e, t) {
+    let n = c.Ay.getSelfEmbeddedActivityForLocation(t);
     if (null == n) return;
-    let p = r.A.getApplication(n.applicationId),
-        E = (0, d.H)(n.location),
-        m = (0, c.Ay)({ application: p, channelId: E });
-    null != m
-        ? (0, a.A)(m)
-        : null != E &&
-          ((0, o.pX)(f.BVt.CHANNEL(e, E)),
-          (0, _.A)(E)
+    let I = r.A.getApplication(n.applicationId),
+        f = (0, _.H)(n.location),
+        p = (0, u.Ay)({ application: I, channelId: f });
+    null != p
+        ? (0, l.A)(p)
+        : null != f &&
+          ((0, o.pX)(h.BVt.CHANNEL(e, f)),
+          (0, E.A)(f)
               ? (i.A.selectParticipant(
-                    E,
-                    (0, s.Qt)({ applicationId: n.applicationId, instanceId: n?.compositeInstanceId }),
+                    f,
+                    (0, a.Qt)({ applicationId: n.applicationId, instanceId: n?.compositeInstanceId }),
                 ),
-                i.A.updateLayout(E, f.DUB.NO_CHAT))
-              : (0, l.gk)(h.Gd.PANEL));
+                s.A.getLayout(f) !== h.DUB.FULL_SCREEN && i.A.updateLayout(f, h.DUB.NO_CHAT))
+              : (0, d.gk)(A.Gd.PANEL));
 }
