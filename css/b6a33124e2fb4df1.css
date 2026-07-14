@@ -9,13 +9,17 @@
 .card_e60808,
 .leftContent_e60808 {
     align-items: center;
-    display: flex
+    display: flex;
+    gap: var(--space-12)
 }
 
 .leftContent_e60808 {
     flex: 1;
-    gap: var(--space-12);
     min-width: 0
+}
+
+.textContent_e60808>* {
+    overflow-wrap: anywhere
 }
 
 .icon_e60808 {

@@ -11,21 +11,21 @@ var l = n(627968),
     m = n(174459),
     h = n(834730),
     p = n(289873),
-    x = n(628284),
-    g = n(821609),
-    A = n(375708),
-    f = n(221919);
+    g = n(628284),
+    x = n(821609),
+    f = n(375708),
+    A = n(221919);
 function C(e) {
     let { displayName: t, description: n, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;
     return (0, l.jsxs)("div", {
-        className: f.Nr,
+        className: A.Nr,
         children: [
             (0, l.jsxs)("div", {
-                className: f.hu,
+                className: A.hu,
                 children: [
-                    (0, l.jsx)("div", { className: f.Kk, children: i }),
+                    (0, l.jsx)("div", { className: A.Kk, children: i }),
                     (0, l.jsxs)("div", {
-                        className: f.P_,
+                        className: A.P_,
                         children: [
                             (0, l.jsx)(h.E, { variant: "text-md/medium", color: "text-strong", children: t }),
                             null != n &&
@@ -39,21 +39,21 @@ function C(e) {
                 ? (0, l.jsx)(p.y, {})
                 : r
                   ? (0, l.jsxs)("div", {
-                        className: f.ul,
+                        className: A.ul,
                         children: [
                             (0, l.jsx)(h.E, {
                                 variant: "text-md/medium",
                                 color: "text-feedback-positive",
-                                children: A.intl.string(A.t["LV+CXH"]),
+                                children: f.intl.string(f.t["LV+CXH"]),
                             }),
-                            (0, l.jsx)(x.y, { size: "custom", width: 20, height: 20, color: "var(--status-positive)" }),
+                            (0, l.jsx)(g.y, { size: "custom", width: 20, height: 20, color: "var(--status-positive)" }),
                         ],
                     })
-                  : (0, l.jsx)(g.$, {
+                  : (0, l.jsx)(x.$, {
                         variant: "primary",
                         size: "sm",
                         onClick: s,
-                        text: A.intl.string(A.t.S0W8Z5),
+                        text: f.intl.string(f.t.S0W8Z5),
                         disabled: !o,
                     }),
         ],
@@ -65,7 +65,7 @@ function v(e) {
         p = (0, a.bG)([u.A], () => (null != t.application_id ? u.A.getApplication(t.application_id) : null), [
             t.application_id,
         ]),
-        { analyticsLocations: x } = (0, o.Ay)(h);
+        { analyticsLocations: g } = (0, o.Ay)(h);
     i.useEffect(() => {
         null != p ||
             null == t.application_id ||
@@ -73,8 +73,8 @@ function v(e) {
             u.A.didFetchingApplicationFail(t.application_id) ||
             (0, c.TA)(t.application_id).catch(() => {});
     }, [p, t.application_id]);
-    let g = p?.name ?? A.intl.string(A.t.cgPbaZ),
-        { hasAlreadyLinked: f, canStartAuthorization: v, startAuthorization: _, fetched: N } = (0, s.RD)(p),
+    let x = p?.name ?? f.intl.string(f.t.cgPbaZ),
+        { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: _, fetched: N } = (0, s.RD)(p),
         y = (0, l.jsx)(d.A, { game: p, size: d.M.MEDIUM }),
         E = i.useCallback(() => {
             m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
@@ -83,14 +83,14 @@ function v(e) {
                 application_id: t.application_id ?? void 0,
                 location: h,
             }),
-                _({ analyticsLocations: x });
-        }, [_, n, t.application_id, h, x]);
+                _({ analyticsLocations: g });
+        }, [_, n, t.application_id, h, g]);
     return (0, l.jsx)(C, {
-        displayName: g,
+        displayName: x,
         description: t.description,
         icon: y,
         isLoading: !N,
-        isConnected: f,
+        isConnected: A,
         canConnect: v,
         onConnect: E,
     });
@@ -103,12 +103,25 @@ var _ = n(462887),
 function I(e) {
     let { connection: t, guildId: n, location: a } = e,
         o = (0, y.Ay)(),
-        s = (null != t.provider_id ? E.A.get(t.provider_id)?.name : null) ?? A.intl.string(A.t.NzCoRx),
+        s = (null != t.provider_id ? E.A.get(t.provider_id)?.name : null) ?? f.intl.string(f.t.NzCoRx),
+        c =
+            null != t.description && t.description.length > 0
+                ? t.description
+                : (function (e) {
+                      switch (e) {
+                          case j.fg2.TWITCH:
+                              return f.intl.string(f.t["D/wRWb"]);
+                          case j.fg2.YOUTUBE:
+                              return f.intl.string(f.t.TC0upt);
+                          default:
+                              return;
+                      }
+                  })(t.provider_id),
         {
-            hasConnection: c,
-            canConnect: u,
-            startConnection: d,
-            loading: h,
+            hasConnection: u,
+            canConnect: d,
+            startConnection: h,
+            loading: p,
         } = (function (e) {
             let { loading: t, hasConnection: n, canConnect: l, startConnection: a, account: r } = (0, w.X)(e);
             return {
@@ -129,15 +142,15 @@ function I(e) {
                 account: r,
             };
         })(t.provider_id),
-        p = i.useCallback(async () => {
+        g = i.useCallback(async () => {
             m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(n),
                 connection_type: "provider",
                 provider_id: t.provider_id ?? void 0,
                 location: a,
             }),
-                await d(a);
-        }, [d, n, t.provider_id, a]),
+                await h(a);
+        }, [h, n, t.provider_id, a]),
         x = i.useMemo(() => {
             if (null != t.provider_id) {
                 let e = E.A.get(t.provider_id),
@@ -148,12 +161,12 @@ function I(e) {
         }, [t.provider_id, o, s]);
     return (0, l.jsx)(C, {
         displayName: s,
-        description: t.description,
+        description: c,
         icon: x,
-        isLoading: h,
-        isConnected: c,
-        canConnect: u,
-        onConnect: p,
+        isLoading: p,
+        isConnected: u,
+        canConnect: d,
+        onConnect: g,
     });
 }
 var M = n(539916);

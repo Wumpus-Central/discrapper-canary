@@ -1,71 +1,71 @@
 "use strict";
 n.d(t, {
-    Bu: () => T,
-    D1: () => A,
-    Ii: () => U,
-    Kd: () => I,
-    Km: () => v,
-    ME: () => y,
-    Mc: () => R,
-    QY: () => f,
-    Q_: () => h,
-    SA: () => b,
+    Bu: () => g,
+    D1: () => T,
+    Ii: () => x,
+    Kd: () => m,
+    Km: () => O,
+    ME: () => N,
+    Mc: () => L,
+    QY: () => A,
+    Q_: () => E,
+    SA: () => y,
     SD: () => C,
-    Sq: () => x,
-    Uh: () => L,
-    a5: () => O,
-    fs: () => E,
-    hv: () => w,
-    iD: () => p,
+    Sq: () => w,
+    Uh: () => b,
+    a5: () => D,
+    fs: () => I,
+    hv: () => M,
+    iD: () => h,
     kq: () => _,
-    n4: () => G,
-    pA: () => m,
+    n4: () => k,
+    pA: () => f,
     qC: () => S,
-    sd: () => g,
-    tb: () => M,
-    vK: () => k,
-    wZ: () => N,
+    sd: () => p,
+    tb: () => P,
+    vK: () => G,
+    wZ: () => R,
 }),
     n(321073);
 var i,
     r,
-    s,
     a,
-    o = n(812729),
-    l = n.n(o),
-    u = n(240248),
+    s,
+    l = n(812729),
+    o = n.n(l),
+    d = n(240248),
     c = n(652215),
-    d = n(375708);
+    u = n(375708);
 let _ = 100,
-    h = 50,
-    f = 100,
-    p = 15,
     E = 50,
-    m = 10,
-    g = 100,
-    A = 4,
-    I = 1,
-    T = 13;
+    A = 100,
+    h = 15,
+    I = 50,
+    f = 10,
+    p = 100,
+    T = 4,
+    m = 1,
+    g = 13;
 var S = (((i = {})[(i.CUSTOMIZE = 0)] = "CUSTOMIZE"), (i[(i.BROWSE = 1)] = "BROWSE"), i),
-    y = (((r = {})[(r.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (r[(r.DROPDOWN = 1)] = "DROPDOWN"), r),
+    N = (((r = {})[(r.MULTIPLE_CHOICE = 0)] = "MULTIPLE_CHOICE"), (r[(r.DROPDOWN = 1)] = "DROPDOWN"), r),
     C =
-        (((s = {})[(s.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
-        (s[(s.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
-        s),
-    N =
-        (((a = {})[(a.APPLICATION = 0)] = "APPLICATION"),
-        (a[(a.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
-        a);
-function v(e) {
+        (((a = {})[(a.ONBOARDING_DEFAULT = 0)] = "ONBOARDING_DEFAULT"),
+        (a[(a.ONBOARDING_ADVANCED = 1)] = "ONBOARDING_ADVANCED"),
+        a),
+    R =
+        (((s = {})[(s.APPLICATION = 0)] = "APPLICATION"),
+        (s[(s.PROVIDER_CONNECTED_ACCOUNT = 1)] = "PROVIDER_CONNECTED_ACCOUNT"),
+        s);
+function O(e) {
     if (e.options.length > 0) return !1;
-    let { id: t, ...n } = R(),
+    let { id: t, ...n } = L(),
         { id: i, ...r } = e;
-    return l()(n, r);
+    return o()(n, r);
 }
-function R() {
+function L() {
     return {
         id: String(Date.now()),
-        title: d.intl.string(d.t.vY91C9),
+        title: u.intl.string(u.t.vY91C9),
         options: [],
         singleSelect: !1,
         required: !1,
@@ -73,10 +73,10 @@ function R() {
         type: 0,
     };
 }
-function O(e) {
+function D(e) {
     return { id: String(Date.now()), title: "", options: [], singleSelect: !1, required: !1, inOnboarding: e, type: 0 };
 }
-function b(e) {
+function y(e) {
     return {
         id: e.id,
         options: e.options.map((e) => ({
@@ -98,7 +98,7 @@ function b(e) {
         type: e.type,
     };
 }
-function D(e) {
+function v(e) {
     return {
         id: e.id,
         options: e.options.map((e) => ({
@@ -117,9 +117,9 @@ function D(e) {
         type: e.type,
     };
 }
-function L(e) {
+function b(e) {
     return {
-        prompts: e.prompts.map(D),
+        prompts: e.prompts.map(v),
         defaultChannelIds: e.default_channel_ids,
         responses: e.responses ?? [],
         mode: e.mode,
@@ -128,12 +128,13 @@ function L(e) {
         onboardingResponsesSeen: e.onboarding_responses_seen ?? {},
         belowRequirements: e.below_requirements,
         connections: e.connections ?? [],
+        additionalConnections: e.additional_connections ?? [],
     };
 }
-function w(e) {
+function M(e) {
     return null == e || (null == e.id && null == e.name);
 }
-let M = new Set([
+let P = new Set([
         c.fg2.PLAYSTATION_STAGING,
         c.fg2.CONTACTS,
         c.fg2.DOMAIN,
@@ -143,11 +144,11 @@ let M = new Set([
         c.fg2.LEAGUE_OF_LEGENDS,
         c.fg2.SKYPE,
     ]),
-    P = Object.values(c.fg2).filter((e) => !M.has(e));
-function x(e) {
+    U = Object.values(c.fg2).filter((e) => !P.has(e));
+function w(e) {
     return 0 === e.connection_type ? `app:${e.application_id}` : `provider:${e.provider_id}`;
 }
-function k(e) {
+function G(e) {
     let [t, n] = e.split(":");
     return "app" === t && void 0 !== n && "" !== n
         ? { type: 0, applicationId: n }
@@ -155,35 +156,35 @@ function k(e) {
           ? { type: 1, providerId: n }
           : null;
 }
-function U(e) {
+function x(e) {
     let t = [];
     if (0 !== e.connection_type && 1 !== e.connection_type) return t.push("Invalid connection type"), t;
     switch (e.connection_type) {
         case 0:
-            (0, u.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
-                (0, u.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections");
+            (0, d.uJ)(e.application_id) && t.push("Application ID is required for application connections"),
+                (0, d.uJ)(e.provider_id) || t.push("Platform ID not allowed for application connections");
             break;
         case 1:
-            (0, u.uJ)(e.provider_id)
+            (0, d.uJ)(e.provider_id)
                 ? t.push("Platform ID is required for platform connections")
-                : P.includes(e.provider_id) || t.push("Invalid platform ID"),
-                (0, u.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections");
+                : U.includes(e.provider_id) || t.push("Invalid platform ID"),
+                (0, d.uJ)(e.application_id) || t.push("Application ID not allowed for platform connections");
             break;
         default:
             e.connection_type;
     }
     return (
-        null != e.description && e.description.length > g && t.push(`Description must be ${g} characters or less`), t
+        null != e.description && e.description.length > p && t.push(`Description must be ${p} characters or less`), t
     );
 }
-function G(e) {
+function k(e) {
     let t = [],
         n = new Set();
     for (let [i, r] of e.entries()) {
-        let e = U(r);
+        let e = x(r);
         t.push(...e.map((e) => `Connection ${i + 1}: ${e}`));
-        let s = x(r);
-        n.has(s) && t.push("Duplicate connection configuration"), n.add(s);
+        let a = w(r);
+        n.has(a) && t.push("Duplicate connection configuration"), n.add(a);
     }
     return t;
 }

@@ -1,12 +1,13 @@
 .container_cb53a5 {
     background-color: var(--modal-background);
     border-radius: var(--radius-md);
-    height: 640px;
+    height: min(640px, 90vh);
     max-height: 640px;
+    max-width: 800px;
     position: absolute;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 800px;
+    width: min(800px, 90vw);
     z-index: 1
 }
 
@@ -22,7 +23,7 @@
     flex: 1;
     flex-direction: column;
     overflow: hidden;
-    padding: 80px 100px var(--space-40)
+    padding: 80px clamp(var(--space-16), 10vw, 100px) var(--space-40)
 }
 
 .loadingContainer_cb53a5 {
