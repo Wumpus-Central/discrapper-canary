@@ -23,9 +23,9 @@ var i = n(627968),
     N = n(996752),
     I = n(610274),
     T = n(655413),
-    _ = n(884863),
-    S = n(971954),
-    b = n(662731),
+    b = n(884863),
+    _ = n(971954),
+    S = n(662731),
     R = n(375708),
     P = n(621191);
 function O(e) {
@@ -38,7 +38,7 @@ function O(e) {
         B = (0, p.A)({ userId: t }),
         G = (0, c.bG)([f.A], () => f.A.isFocused()),
         H = (0, C.tx)(V, n, w),
-        { seats: F } = S.iX[o.I.DEFAULT],
+        { seats: F } = _.iX[o.I.DEFAULT],
         z = F.find((e) => e.position.x === a && e.position.y === v),
         W = (0, d.z)({ x: a, y: v, config: { ...r.config.default, duration: 250 } }),
         Y = l.useCallback(() => {
@@ -66,22 +66,22 @@ function O(e) {
             style: Z,
             children: (0, i.jsx)(u.D, { onMouseEnter: K, onClick: Y, children: X }),
         });
-    let q = I.x.find((e) => e.id === E),
-        Q = q?.icon,
-        $ = (0, i.jsxs)("div", {
+    let $ = I.x.find((e) => e.id === E),
+        q = $?.icon,
+        Q = (0, i.jsxs)("div", {
             className: P.R3,
             children: [
                 X,
-                null != q &&
-                    null != Q &&
+                null != $ &&
+                    null != q &&
                     (0, i.jsx)("div", {
-                        className: s()(P.qS, P.Af),
-                        children: (0, i.jsx)(Q, { size: "sm", color: "currentColor" }),
+                        className: s()(P.qS, P.Od),
+                        children: (0, i.jsx)(q, { size: "xxs", color: "currentColor" }),
                     }),
                 D &&
                     (0, i.jsx)("div", {
                         className: s()(P.qS, P.Gk),
-                        children: (0, i.jsx)(h.R, { size: "xs", color: "currentColor" }),
+                        children: (0, i.jsx)(h.R, { size: "xxs", color: "currentColor" }),
                     }),
             ],
         });
@@ -90,16 +90,16 @@ function O(e) {
         className: P.f1,
         style: Z,
         children: D
-            ? (0, i.jsxs)(_.T, {
+            ? (0, i.jsxs)(b.T, {
                   isOpen: M,
                   onOpenChange: U,
                   children: [
-                      (0, i.jsx)(_.T.Trigger, {
+                      (0, i.jsx)(b.T.Trigger, {
                           children: (e) => {
                               let { ref: t, onClick: n, ...l } = e;
                               return (0, i.jsx)(T.A, {
                                   name: H,
-                                  status: q,
+                                  status: $,
                                   shouldShow: !M,
                                   children: (0, i.jsx)(u.D, {
                                       ...l,
@@ -111,19 +111,20 @@ function O(e) {
                                       onClick: () => {
                                           n(), Y();
                                       },
-                                      children: $,
+                                      children: Q,
                                   }),
                               });
                           },
                       }),
-                      (0, i.jsx)(_.T.Popup, {
-                          "aria-label": R.intl.string(b.default.LTAf2V),
+                      (0, i.jsx)(b.T.Popup, {
+                          "aria-label": R.intl.string(S.default.LTAf2V),
                           children: I.x.map((e) => {
                               let t = e.icon;
                               return (0, i.jsx)(
-                                  _.T.Item,
+                                  b.T.Item,
                                   {
-                                      icon: null != t ? (0, i.jsx)(t, { size: "sm", color: "currentColor" }) : null,
+                                      text: R.intl.string(e.label),
+                                      icon: t,
                                       selected: E === e.id,
                                       onClick: () => {
                                           let t = E === e.id;
@@ -132,7 +133,6 @@ function O(e) {
                                               user_status_text: t ? "" : R.intl.string(e.label),
                                           });
                                       },
-                                      children: R.intl.string(e.label),
                                   },
                                   e.id,
                               );
@@ -142,8 +142,8 @@ function O(e) {
               })
             : (0, i.jsx)(T.A, {
                   name: H,
-                  status: q,
-                  children: (0, i.jsx)(u.D, { onMouseEnter: K, onClick: Y, children: $ }),
+                  status: $,
+                  children: (0, i.jsx)(u.D, { onMouseEnter: K, onClick: Y, children: Q }),
               }),
     });
 }

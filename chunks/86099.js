@@ -7,8 +7,8 @@ var i = n(627968),
     o = n(621466),
     c = n(982147),
     d = n(922016),
-    u = n(82495),
-    h = n(170709),
+    u = n(821609),
+    h = n(82495),
     p = n(170924);
 let m = { north: 0, east: 90, south: 180, west: 270 },
     A = { tension: 280, friction: 30 },
@@ -21,11 +21,11 @@ function f() {
 }
 function C(e) {
     let { children: t, onExited: n, ariaLabel: a, dismissable: s = !1 } = e,
-        { isOpen: o, setOpen: d, triggerRef: h, menuId: m, spacing: g, startAngleDeg: C, centerSingleItem: j } = f(),
+        { isOpen: o, setOpen: d, triggerRef: u, menuId: m, spacing: g, startAngleDeg: C, centerSingleItem: j } = f(),
         y = l.useCallback(() => {
             s && d(!1);
         }, [s, d]),
-        v = (0, u.A)(null, y, h),
+        v = (0, h.A)(null, y, u),
         E = l.useCallback(
             (e) => {
                 s && "Escape" === e.key && d(!1);
@@ -35,18 +35,18 @@ function C(e) {
         N = l.Children.toArray(t).filter(l.isValidElement),
         I = N.length,
         T = j && 1 === I,
-        _ = l.useRef(o),
-        S = l.useRef(n);
+        b = l.useRef(o),
+        _ = l.useRef(n);
     l.useEffect(() => {
-        _.current = o;
+        b.current = o;
     }, [o]),
         l.useEffect(() => {
-            S.current = n;
+            _.current = n;
         }, [n]);
-    let b = l.useRef([]),
+    let S = l.useRef([]),
         [R, P] = l.useState([]);
     l.useLayoutEffect(() => {
-        let e = b.current.slice(0, I),
+        let e = S.current.slice(0, I),
             t = () => {
                 P((t) => {
                     let n = e.map((e) => ({ width: e?.offsetWidth ?? 0, height: e?.offsetHeight ?? 0 }));
@@ -63,7 +63,7 @@ function C(e) {
     }, [I]);
     let [O, L] = l.useState(0);
     l.useLayoutEffect(() => {
-        let e = h.current;
+        let e = u.current;
         if (null == e) return;
         let t = () => {
             let t = Math.max(e.offsetWidth, e.offsetHeight) / 2;
@@ -72,7 +72,7 @@ function C(e) {
         t();
         let n = new ResizeObserver(t);
         return n.observe(e), () => n.disconnect();
-    }, [h]);
+    }, [u]);
     let w = O + g,
         [D] = (0, c.m)(
             I,
@@ -104,7 +104,7 @@ function C(e) {
                         : { x: 0, y: 0, opacityProgress: 0, scale: 0.5 },
                     config: o ? A : x,
                     onRest: (t) => {
-                        !0 !== t.finished || _.current || 0 !== e || S.current();
+                        !0 !== t.finished || b.current || 0 !== e || _.current();
                     },
                 };
             },
@@ -116,7 +116,7 @@ function C(e) {
             v.current?.focus({ preventScroll: !0 });
         }, [v]),
         l.useEffect(() => {
-            o || 0 !== I || S.current();
+            o || 0 !== I || _.current();
         }, [o, I]),
         (0, i.jsx)("div", {
             ref: v,
@@ -132,7 +132,7 @@ function C(e) {
                     r.animated.div,
                     {
                         ref: (e) => {
-                            b.current[t] = e;
+                            S.current[t] = e;
                         },
                         className: p.D5,
                         style:
@@ -236,15 +236,18 @@ let j = Object.assign(
                   });
         },
         Item: function (e) {
-            let { closeOnClick: t = !0, onClick: n, className: l, ...a } = e,
-                { setOpen: r } = f();
-            return (0, i.jsx)(h.A, {
-                ...a,
-                className: s()([p.AS, l]),
-                role: "menuitem",
-                onClick: (e) => {
-                    n?.(e), t && r(!1);
-                },
+            let { className: t, closeOnClick: n = !0, selected: l, onClick: a, ...r } = e,
+                { setOpen: o } = f();
+            return (0, i.jsx)("div", {
+                className: s()([p.AS, t]),
+                children: (0, i.jsx)(u.$, {
+                    variant: l ? "overlay-primary" : "overlay-secondary",
+                    size: "sm",
+                    onClick: (e) => {
+                        a?.(e), n && o(!1);
+                    },
+                    ...r,
+                }),
             });
         },
     },
