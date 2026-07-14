@@ -1,4 +1,4 @@
-n.d(t, { kO: () => q, r3: () => z, PL: () => $ });
+n.d(t, { kO: () => Z, r3: () => z, PL: () => $ });
 var l = n(627968),
     i = n(64700),
     r = n(166532),
@@ -10,10 +10,10 @@ var l = n(627968),
     d = n(31823),
     p = n(426398),
     m = n(655857),
-    C = n(427675),
-    h = n(6938),
-    E = n(590180),
-    A = n(469778),
+    h = n(427675),
+    C = n(6938),
+    A = n(590180),
+    E = n(469778),
     f = n(937008),
     y = n(20742),
     S = n(430993),
@@ -37,21 +37,21 @@ var g = n(121005),
     R = n(202541);
 function M(e) {
     let { handleStepChange: t } = e,
-        n = (0, h.t4)((e) => e.selectedSkuId),
+        n = (0, C.t4)((e) => e.selectedSkuId),
         { paymentSources: s, hasFetchedPaymentSources: o } = (0, p.jm)(),
         { application: m } = (0, d.V)(),
-        A = (0, u.Hp)(),
-        y = (0, C.gU)(),
-        S = (0, C.Hu)(),
+        E = (0, u.Hp)(),
+        y = (0, h.gU)(),
+        S = (0, h.Hu)(),
         { isGift: P } = (0, f.Pv)(),
         [T, I] = i.useState(!0),
-        [g, x] = (0, a.yK)([E.A], () => [E.A.isFetchingCategories, E.A.error]);
+        [g, x] = (0, a.yK)([A.A], () => [A.A.isFetchingCategories, A.A.error]);
     return (i.useEffect(() => {
         let e = null != m;
         S && o && e && I(g);
     }, [S, o, m, g]),
     i.useEffect(() => {
-        if (T || A || null == n) return;
+        if (T || E || null == n) return;
         let e = y[n];
         P &&
         (e?.productLine === b.EZt.COLLECTIBLES ||
@@ -61,78 +61,83 @@ function M(e) {
             : 0 === Object.keys(s).length
               ? t(r.pn.ADD_PAYMENT_STEPS)
               : t(r.pn.REVIEW);
-    }, [T, A, t, s, P, y, n]),
+    }, [T, E, t, s, P, y, n]),
     T)
         ? (0, l.jsx)(N.A, {})
-        : A
+        : E
           ? (0, l.jsx)(c.oO, {})
           : null != x
             ? (0, l.jsx)(_, {})
             : null;
 }
-function O(e) {
-    let { subscriptionTier: t, initialPlanId: n, handleStepChange: d, continueSessionToInitialStep: C } = e,
-        { hasPaymentSources: E } = (0, p.jm)(),
+function j(e) {
+    let { subscriptionTier: t, initialPlanId: n, handleStepChange: d, continueSessionToInitialStep: h } = e,
+        { hasPaymentSources: A, hasFetchedPaymentSources: y } = (0, p.jm)({ shouldAllowFetchPaymentSources: !0 }),
         {
-            selectedSkuId: y,
-            setSelectedPlanId: S,
-            activeSubscription: P,
-            defaultPlanId: T,
-            startedPaymentFlowWithPaymentSources: I,
-        } = (0, h.t4)((e) => ({
+            selectedSkuId: S,
+            setSelectedPlanId: P,
+            activeSubscription: T,
+            defaultPlanId: I,
+            startedPaymentFlowWithPaymentSources: _,
+        } = (0, C.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
             activeSubscription: e.activeSubscription,
             defaultPlanId: e.defaultPlanId,
             startedPaymentFlowWithPaymentSources: e.startedPaymentFlowWithPaymentSources,
         })),
-        _ = (0, u.Hp)(),
-        b = (0, g.A)(),
-        { hasFetchedRelatedSubscriptionPlans: M, subscriptionPriceOptionsLoading: O } = (0, m.Jn)(),
-        { isGift: j } = (0, f.Pv)(),
-        L = (0, v.A)({ isGift: j, skuId: y }),
-        w = !b || !M || O,
-        D = (0, a.bG)([A.A], () => A.A.applicationIdsFetched.has(R.tv));
+        b = (0, u.Hp)(),
+        M = (0, g.A)(),
+        { hasFetchedRelatedSubscriptionPlans: j, subscriptionPriceOptionsLoading: O } = (0, m.Jn)(),
+        { isGift: L } = (0, f.Pv)(),
+        w = (0, v.A)({ isGift: L, skuId: S }),
+        k = !M || !j || O || !y,
+        D = (0, a.bG)([E.A], () => E.A.applicationIdsFetched.has(R.tv));
     return ((0, o.A)(
         "Payment Modal",
-        w,
+        k,
         5,
-        { hasFetchedSubscriptions: b, hasFetchedSubscriptionPlans: M, subscriptionPriceOptionsLoading: O },
+        {
+            hasFetchedSubscriptions: M,
+            hasFetchedSubscriptionPlans: j,
+            subscriptionPriceOptionsLoading: O,
+            hasFetchedPaymentSources: y,
+        },
         { tags: { app_context: "billing" } },
     ),
     i.useEffect(() => {
-        if ((D || (0, s.LM)(R.tv), w || _)) return;
-        let e = (0, x.vT)({ isTrial: L, isGift: j, selectedSkuId: y, startedPaymentFlowWithPaymentSources: I });
-        null != C
-            ? d(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: C })
+        if ((D || (0, s.LM)(R.tv), k || b)) return;
+        let e = (0, x.vT)({ isTrial: w, isGift: L, selectedSkuId: S, startedPaymentFlowWithPaymentSources: _ });
+        null != h
+            ? d(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: h })
             : null != n
-              ? n !== R.gD.PREMIUM_GROUP_MONTH || E
+              ? n !== R.gD.PREMIUM_GROUP_MONTH || A
                   ? d(r.pn.REVIEW)
                   : d(r.pn.ADD_PAYMENT_STEPS)
               : e
-                ? (S((0, x.xT)(y, P, T)), d(r.pn.REVIEW))
+                ? (P((0, x.xT)(S, T, I)), d(r.pn.REVIEW))
                 : null != t
                   ? d(r.pn.PLAN_SELECT)
                   : d(r.pn.SKU_SELECT);
-    }, [C, P, _, D, n, w, d, t, y, S, L, T, j, I, E]),
-    w)
+    }, [h, T, b, D, n, k, d, t, S, P, w, I, L, _, A]),
+    k)
         ? (0, l.jsx)(N.A, {})
-        : _
+        : b
           ? (0, l.jsx)(c.oO, {})
           : null;
 }
-var j = n(891197),
+var O = n(891197),
     L = n(69494),
     w = n(482132),
-    D = n(293035);
-function k() {
+    k = n(293035);
+function D() {
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(L.A, {}), (0, l.jsx)(w.dZ, { children: (0, l.jsx)(j.N, { className: D.D }) })],
+        children: [(0, l.jsx)(L.A, {}), (0, l.jsx)(w.dZ, { children: (0, l.jsx)(O.N, { className: k.D }) })],
     });
 }
 var U = n(830382),
     G = n(696208),
-    F = n(534514),
+    F = n(297264),
     B = n(834730),
     Y = n(349288),
     H = n(94204);
@@ -171,7 +176,7 @@ function V() {
     return (0, l.jsx)(G.H, { actions: e });
 }
 var K = n(599961);
-function Z() {
+function q() {
     let [e, t] = i.useState(!1);
     async function n() {
         t(!0), await (0, U.lo)();
@@ -184,9 +189,9 @@ function Z() {
         ],
     });
 }
-let q = { key: null, renderStep: (e) => (0, l.jsx)(M, { ...e }), options: { modalSizeGetter: () => "md" } },
-    z = { key: null, renderStep: (e) => (0, l.jsx)(O, { ...e }) },
+let Z = { key: null, renderStep: (e) => (0, l.jsx)(M, { ...e }), options: { modalSizeGetter: () => "md" } },
+    z = { key: null, renderStep: (e) => (0, l.jsx)(j, { ...e }) },
     $ = [
-        { key: r.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(Z, {}) },
-        { key: r.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(k, {}), options: { renderHeader: !0 } },
+        { key: r.pn.AWAITING_PURCHASE_TOKEN_AUTH, renderStep: () => (0, l.jsx)(q, {}) },
+        { key: r.pn.AWAITING_AUTHENTICATION, renderStep: () => (0, l.jsx)(D, {}), options: { renderHeader: !0 } },
     ];

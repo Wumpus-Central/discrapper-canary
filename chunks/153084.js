@@ -1,85 +1,86 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => A });
 var l = n(17928),
     r = n(228366),
     i = n(158032),
-    a = n(830382),
-    o = n(136857),
-    s = n(739508),
+    o = n(830382),
+    s = n(136857),
+    a = n(739508),
     u = n(71532),
     c = n(652215),
     d = n(375708);
-let m = !1,
-    E = null,
-    p = null,
-    C = !1;
-function _() {
-    (m = !1), (p = null), (E = null), (C = !1);
+let E = !1,
+    C = null,
+    h = null,
+    _ = !1;
+function m() {
+    (E = !1), (h = null), (C = null), (_ = !1);
 }
-function h(e) {
+function S(e) {
     let { error: t } = e,
         { code: n, paymentId: l } = t;
-    if (n !== o.Ay.ErrorCodes.CONFIRMATION_REQUIRED && n !== o.Ay.ErrorCodes.AUTHENTICATION_REQUIRED)
-        return (m = !1), !1;
-    m || ((m = !0), (E = l), (C = !1), n === o.Ay.ErrorCodes.AUTHENTICATION_REQUIRED && A(l));
+    if (n !== s.Ay.ErrorCodes.CONFIRMATION_REQUIRED && n !== s.Ay.ErrorCodes.AUTHENTICATION_REQUIRED)
+        return (E = !1), !1;
+    E || ((E = !0), (C = l), (_ = !1), n === s.Ay.ErrorCodes.AUTHENTICATION_REQUIRED && I(l));
 }
-async function A(e) {
+async function I(e) {
     if (null == e) return;
     let { error: t } = await (0, u.ap)(e);
     if (null != t) {
         let e = Error(t);
-        (0, s.pM)(e, { extra: { authenticationError: t } });
+        (0, a.pM)(e, { extra: { authenticationError: t } });
     }
 }
-function N(e) {
+function p(e) {
     let { payment: t } = e,
         n = [c.__0.COMPLETED, c.__0.FAILED, c.__0.CANCELED];
-    if (!m || t.id !== E || !n.includes(t.status)) return !1;
-    if (((m = !1), (E = null), t.status === c.__0.FAILED)) {
+    if (!E || t.id !== C || !n.includes(t.status)) return !1;
+    if (((E = !1), (C = null), t.status === c.__0.FAILED)) {
         let e = null;
-        t.metadata?.billing_error_code === o.tG.BILLING_INSUFFICIENT_FUNDS && (e = o.tG.BILLING_INSUFFICIENT_FUNDS),
-            (p = new o.Ay(d.intl.string(d.t.khEaRI), e));
-    } else (p = null), r.h.wait(i.ET), r.h.wait(a.T3);
+        t.metadata?.billing_error_code === s.tG.BILLING_INSUFFICIENT_FUNDS && (e = s.tG.BILLING_INSUFFICIENT_FUNDS),
+            (h = new s.Ay(d.intl.string(d.t.khEaRI), e));
+    } else (h = null), r.h.wait(i.ET), r.h.wait(o.T3);
 }
-class T extends l.Ay.Store {
+class f extends l.Ay.Store {
     static displayName = "PaymentAuthenticationStore";
     get isAwaitingAuthentication() {
-        return m;
-    }
-    get error() {
-        return p;
-    }
-    get awaitingPaymentId() {
         return E;
     }
-    get wasCancelled() {
+    get error() {
+        return h;
+    }
+    get awaitingPaymentId() {
         return C;
     }
+    get wasCancelled() {
+        return _;
+    }
 }
-let I = new T(r.h, {
-    BILLING_SUBSCRIPTION_UPDATE_START: _,
-    PAYMENT_AUTHENTICATION_CLEAR_ERROR: _,
+let A = new f(r.h, {
+    BILLING_SUBSCRIPTION_UPDATE_START: m,
+    PAYMENT_AUTHENTICATION_CLEAR_ERROR: m,
     PAYMENT_AUTHENTICATION_CANCEL: function () {
-        (m = !1), (E = null), (p = null), (C = !0);
+        (E = !1), (C = null), (h = null), (_ = !0);
     },
-    PREMIUM_PAYMENT_ERROR_CLEAR: _,
-    PREMIUM_PAYMENT_MODAL_CLOSE: _,
-    PREMIUM_PAYMENT_MODAL_OPEN: _,
-    PREMIUM_PAYMENT_SUBSCRIBE_START: _,
-    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: _,
-    PREMIUM_PAYMENT_UPDATE_SUCCESS: _,
-    SKU_PURCHASE_MODAL_CLOSE: _,
-    SKU_PURCHASE_MODAL_OPEN: _,
-    SKU_PURCHASE_START: _,
-    SKU_PURCHASE_SUCCESS: _,
-    BILLING_SUBSCRIPTION_UPDATE_FAIL: h,
-    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: h,
-    PREMIUM_PAYMENT_UPDATE_FAIL: h,
-    SKU_PURCHASE_FAIL: h,
-    GIFT_CODE_REDEEM_FAILURE: h,
+    PREMIUM_PAYMENT_ERROR_CLEAR: m,
+    PREMIUM_PAYMENT_MODAL_CLOSE: m,
+    PREMIUM_PAYMENT_MODAL_OPEN: m,
+    CHECKOUT_MODAL_CLOSE: m,
+    PREMIUM_PAYMENT_SUBSCRIBE_START: m,
+    PREMIUM_PAYMENT_SUBSCRIBE_SUCCESS: m,
+    PREMIUM_PAYMENT_UPDATE_SUCCESS: m,
+    SKU_PURCHASE_MODAL_CLOSE: m,
+    SKU_PURCHASE_MODAL_OPEN: m,
+    SKU_PURCHASE_START: m,
+    SKU_PURCHASE_SUCCESS: m,
+    BILLING_SUBSCRIPTION_UPDATE_FAIL: S,
+    PREMIUM_PAYMENT_SUBSCRIBE_FAIL: S,
+    PREMIUM_PAYMENT_UPDATE_FAIL: S,
+    SKU_PURCHASE_FAIL: S,
+    GIFT_CODE_REDEEM_FAILURE: S,
     PAYMENT_AUTHENTICATION_ERROR: function (e) {
         let { error: t } = e;
-        (p = t), (m = !1);
+        (h = t), (E = !1);
     },
-    PAYMENT_UPDATE: N,
-    BILLING_PAYMENT_FETCH_SUCCESS: N,
+    PAYMENT_UPDATE: p,
+    BILLING_PAYMENT_FETCH_SUCCESS: p,
 });

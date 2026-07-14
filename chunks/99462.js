@@ -65,3 +65,5 @@ let d = (e) => {
         n = (0, i.A)(null != t ? t.getTime() : 0, 1e3);
     return null == t ? null : A(n, Number(e.discount.amount), (0, a.hm)(e));
 };
+(0, l.hm)(e);
+)}

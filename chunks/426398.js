@@ -1,12 +1,13 @@
-r.d(t, { _m: () => a, jm: () => o, kc: () => f, mz: () => d });
+r.d(t, { _m: () => o, jm: () => d, kc: () => p, mz: () => f });
 var n = r(64700),
     u = r(17928),
-    i = r(826469),
-    c = r(295405),
-    s = r(67480);
+    i = r(277984),
+    c = r(826469),
+    s = r(295405),
+    l = r(67480);
 r(428262);
-var l = r(6938);
-function a(e) {
+var a = r(6938);
+function o(e) {
     let {
         isGift: t,
         activeSubscription: r,
@@ -25,57 +26,63 @@ function a(e) {
     }
     return n;
 }
-function o() {
-    let {
-            defaultPaymentSourceId: e,
-            paymentSources: t,
-            hasFetchedPaymentSources: r,
-        } = (0, u.cf)([c.A], () => ({
-            defaultPaymentSourceId: c.A.defaultPaymentSourceId,
-            paymentSources: c.A.paymentSources,
-            hasFetchedPaymentSources: c.A.hasFetchedPaymentSources,
-        })),
-        { hasPaymentSources: i, defaultPaymentSource: s } = n.useMemo(
-            () => ({ hasPaymentSources: Object.keys(t).length > 0, defaultPaymentSource: null != e ? t[e] : null }),
-            [t, e],
-        );
-    return {
-        defaultPaymentSourceId: e,
-        paymentSources: t,
-        hasFetchedPaymentSources: r,
-        hasPaymentSources: i,
-        defaultPaymentSource: s,
-    };
-}
 function d(e) {
+    let t = null != e && e.shouldAllowFetchPaymentSources,
+        {
+            defaultPaymentSourceId: r,
+            paymentSources: c,
+            hasFetchedPaymentSources: l,
+        } = (0, u.cf)([s.A], () => ({
+            defaultPaymentSourceId: s.A.defaultPaymentSourceId,
+            paymentSources: s.A.paymentSources,
+            hasFetchedPaymentSources: s.A.hasFetchedPaymentSources,
+        })),
+        { hasPaymentSources: a, defaultPaymentSource: o } = n.useMemo(
+            () => ({ hasPaymentSources: Object.keys(c).length > 0, defaultPaymentSource: null != r ? c[r] : null }),
+            [c, r],
+        );
+    return (
+        n.useEffect(() => {
+            t && !l && (0, i.$o)();
+        }, [t, l]),
+        {
+            defaultPaymentSourceId: r,
+            paymentSources: c,
+            hasFetchedPaymentSources: l,
+            hasPaymentSources: a,
+            defaultPaymentSource: o,
+        }
+    );
+}
+function f(e) {
     let { skuId: t, isGift: r, activeSubscription: i } = e,
-        c = (0, u.bG)([s.A], () => s.A.get(t), [t]),
-        l = null != c ? c.eligiblePaymentGateways : null,
-        { defaultPaymentSourceId: d, paymentSources: f, hasFetchedPaymentSources: p, hasPaymentSources: h } = o();
+        c = (0, u.bG)([l.A], () => l.A.get(t), [t]),
+        s = null != c ? c.eligiblePaymentGateways : null,
+        { defaultPaymentSourceId: a, paymentSources: f, hasFetchedPaymentSources: p, hasPaymentSources: h } = d();
     return {
         initialCheckoutPaymentSourceId: n.useMemo(
             () =>
-                a({
+                o({
                     isGift: r,
                     activeSubscription: i,
-                    defaultPaymentSourceId: d,
-                    eligiblePaymentGateways: l,
+                    defaultPaymentSourceId: a,
+                    eligiblePaymentGateways: s,
                     paymentSources: f,
                 }) ?? null,
-            [r, i, d, l, f],
+            [r, i, a, s, f],
         ),
-        defaultPaymentSourceId: d,
-        eligiblePaymentGateways: l,
+        defaultPaymentSourceId: a,
+        eligiblePaymentGateways: s,
         hasFetchedPaymentSources: p,
         paymentSources: f,
         hasPaymentSources: h,
     };
 }
-function f() {
-    let e = (0, l.t4)((e) => e.checkoutInvoicePreview);
+function p() {
+    let e = (0, a.t4)((e) => e.checkoutInvoicePreview);
     return n.useMemo(() => {
         if (null == e) return [];
         let t = e.checkoutContext;
-        return null == t || null == t.payment_sources ? [] : t.payment_sources.map(i.A.createFromCheckoutContext);
+        return null == t || null == t.payment_sources ? [] : t.payment_sources.map(c.A.createFromCheckoutContext);
     }, [e]);
 }
