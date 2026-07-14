@@ -1,0 +1,15 @@
+.step__6c75d {
+    margin-bottom: var(--space-8)
+}
+
+.icon__6c75d {
+    flex-shrink: 0;
+    height: auto;
+    width: 120px
+}
+
+.details__6c75d {
+    flex: 1;
+    min-width: 0;
+    text-align: start
+}

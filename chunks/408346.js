@@ -166,6 +166,7 @@ function eo(e) {
                                         (0, f.openModalLazy)(async () => {
                                             let { RegisterWebAuthnCredentialModal: e } = await Promise.all([
                                                 n.e("6022"),
+                                                n.e("82721"),
                                                 n.e("4736"),
                                                 n.e("19631"),
                                                 n.e("40114"),
@@ -862,7 +863,7 @@ function tK(e) {
         ...e,
     });
 }
-var t$ = n(451409),
+var t$ = n(186295),
     tz = n(763827),
     tq = n(67480),
     tZ = n(147964),

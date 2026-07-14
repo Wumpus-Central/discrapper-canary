@@ -13,6 +13,7 @@ async function p() {
         (0, l.openModalLazy)(async () => {
             let { RegisterWebAuthnCredentialModal: l } = await Promise.all([
                 n.e("6022"),
+                n.e("82721"),
                 n.e("4736"),
                 n.e("40114"),
             ]).then(n.bind(n, 328009));
