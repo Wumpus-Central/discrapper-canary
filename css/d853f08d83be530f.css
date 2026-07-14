@@ -60,12 +60,13 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     gap: var(--space-16)
 }
 
 .heading_b558e5 {
-    flex: 1;
-    min-width: 0
+    flex: 1 1 auto;
+    min-width: min(100%, 28rem)
 }
 
 .headingActions_b558e5 {
