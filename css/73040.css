@@ -357,10 +357,7 @@
 }
 
 .image_fae5e9 {
-    -o-object-fit: contain;
-    object-fit: contain;
-    -o-object-position: center;
-    object-position: center;
+    inset: 0;
     position: absolute
 }
 
