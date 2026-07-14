@@ -1,20 +1,19 @@
 "use strict";
 n.d(t, {
-    Bm: () => b,
+    Bm: () => v,
+    m8: () => h,
     n6: () => m,
     Ig: () => f,
-    jS: () => E,
-    Mk: () => v,
-    m8: () => h,
-    d: () => y,
     OO: () => A,
-    MV: () => N,
-    Qj: () => D,
+    jS: () => E,
     ev: () => g,
     aD: () => S,
     uK: () => _,
+    Qj: () => L,
     lk: () => T,
+    Mk: () => y,
     sy: () => I,
+    d: () => D,
 });
 var i,
     r,
@@ -119,12 +118,6 @@ let g = (0, o.mj)({
             3: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !1, ctaOnHover: !0 },
             4: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !1 },
         },
-    }),
-    N = (0, o.mj)({
-        name: "2026-05-quest-tile-cta-refactor",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 (0, o.mj)({
     name: "2026-05-bounty-stale-refresh-quest-home",
@@ -132,35 +125,35 @@ let g = (0, o.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let C = (0, o.mj)({
+let N = (0, o.mj)({
         name: "2026-06-remove-quest-home-hero",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    O = new Date("2026-06-20T10:00:00-07:00"),
-    R = new Date("2026-06-23T10:00:00-07:00"),
-    L = 5 * d.A.Millis.MINUTE;
-function D() {
+    C = new Date("2026-06-20T10:00:00-07:00"),
+    O = new Date("2026-06-23T10:00:00-07:00"),
+    R = 5 * d.A.Millis.MINUTE;
+function L() {
     let [e, t] = s.useState(() => new Date());
     s.useEffect(() => {
-        let e = setInterval(() => t(new Date()), L);
+        let e = setInterval(() => t(new Date()), R);
         return () => clearInterval(e);
     }, []);
-    let n = e >= O && e < R,
-        { enabled: i } = C.useConfig({
+    let n = e >= C && e < O,
+        { enabled: i } = N.useConfig({
             location: n ? "remove-quest-home-hero-eligible" : "remove-quest-home-hero-ineligible",
         });
     return !!n && i;
 }
-var y =
+var D =
     (((a = {})[(a.CONTROL = 0)] = "CONTROL"),
     (a[(a.NEW_LAYOUT_WITH_SEARCH = 1)] = "NEW_LAYOUT_WITH_SEARCH"),
     (a[(a.LARGE_MASK_MARGIN = 2)] = "LARGE_MASK_MARGIN"),
     (a[(a.REMOVE_QUEST_TITLE_SUFFIX = 3)] = "REMOVE_QUEST_TITLE_SUFFIX"),
     (a[(a.REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER = 4)] = "REPLACE_QUEST_NAME_WITH_GAME_PUBLISHER"),
     a);
-let v = (0, o.mj)({
+let y = (0, o.mj)({
         name: "2026-06-quest-home-layout-visual-tweaks",
         kind: "user",
         defaultConfig: { enabled: !1, variant: 0 },
@@ -172,7 +165,7 @@ let v = (0, o.mj)({
             4: { enabled: !0, variant: 4 },
         },
     }),
-    b = (0, o.mj)({
+    v = (0, o.mj)({
         name: "2026-07-quest-bar-secondary-cta",
         kind: "user",
         defaultConfig: { enabled: !1, showPlayInstantlyLabel: !1 },
