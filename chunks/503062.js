@@ -1,51 +1,62 @@
-i.d(s, { A: () => N });
-var a = i(627968),
-    n = i(64700),
-    t = i(17928),
-    l = i(778712),
-    r = i(97808),
-    o = i(939249),
-    d = i(133171),
-    u = i(442433),
-    c = i(297413),
-    f = i(714114),
-    A = i(394871),
-    h = i(178418),
-    m = i(87664),
-    v = i(290863),
-    g = i(19575),
-    x = i(956705),
-    C = i(854627),
-    M = i(939496),
-    b = i(652215),
-    j = i(996988),
-    p = i(921519);
-let I = l._3.SIZE_40,
-    E = g.Ay.getEnableHardwareAcceleration();
-function N(e) {
-    let { user: s, status: l, guildId: g, channelId: N, onSelect: _ } = e,
-        { theme: k, themeType: y } = (0, M.E)(),
-        w = n.useMemo(() => s.isNonUserBot() || (0, h.c)(s, N), [s, N]),
-        { activities: F, isMobileOnline: S } = (0, t.cf)([v.A], () => ({
-            activities: v.A.getActivities(s.id),
-            isMobileOnline: v.A.isMobileOnline(s.id),
+i.d(s, { A: () => F });
+var n = i(627968),
+    a = i(64700),
+    t = i(503698),
+    l = i.n(t),
+    r = i(17928),
+    o = i(778712),
+    u = i(97808),
+    d = i(939249),
+    c = i(133171),
+    f = i(442433),
+    A = i(297413),
+    h = i(714114),
+    m = i(394871),
+    v = i(178418),
+    x = i(87664),
+    g = i(449582),
+    C = i(88686),
+    M = i(174755),
+    b = i(290863),
+    j = i(19575),
+    p = i(956705),
+    E = i(854627),
+    I = i(939496),
+    N = i(652215),
+    _ = i(996988),
+    k = i(921519);
+let S = o._3.SIZE_40,
+    y = j.Ay.getEnableHardwareAcceleration();
+function F(e) {
+    let { user: s, status: t, guildId: o, channelId: j, onSelect: F } = e,
+        { theme: L, themeType: w } = (0, I.E)(),
+        U = a.useMemo(() => s.isNonUserBot() || (0, v.c)(s, j), [s, j]),
+        { activities: D, isMobileOnline: R } = (0, r.cf)([b.A], () => ({
+            activities: b.A.getActivities(s.id),
+            isMobileOnline: b.A.isMobileOnline(s.id),
         })),
-        D = (0, m.A)(s.id),
-        { voiceChannel: L } = (0, f.Ay)({ userId: s.id, guildId: g }),
-        U = (0, x.r)("UserProfileMutualFriendRow"),
+        T = (0, x.A)(s.id),
+        { voiceChannel: P } = (0, h.Ay)({ userId: s.id, guildId: o }),
+        z = (0, p.r)("UserProfileMutualFriendRow"),
+        [H, O] = a.useState(!1),
         {
-            avatarSrc: P,
-            avatarDecorationSrc: z,
-            eventHandlers: R,
-        } = (0, C.A)({ userId: s.id, guildId: g, size: I, animateOnHover: !0 }),
-        T = E && U ? r.Js : r.eu;
-    return (0, a.jsxs)(o.D, {
-        ...(U ? R : {}),
-        focusProps: y === j.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
-        className: p.nM,
-        onClick: _,
+            avatarSrc: K,
+            avatarDecorationSrc: W,
+            eventHandlers: B,
+        } = (0, E.A)({ userId: s.id, guildId: o, size: S, animateOnHover: !H }),
+        V = y && z ? u.Js : u.eu,
+        Y = a.useRef(null),
+        Z = (0, g.r)({ user: s, guildId: o }),
+        G = z ? Z : null,
+        Q = a.useCallback(() => O(!0), []),
+        q = a.useCallback(() => O(!1), []);
+    return (0, n.jsxs)(d.D, {
+        ...(z ? { onMouseEnter: Q, onMouseLeave: q } : {}),
+        focusProps: w === _.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
+        className: l()(k.nM, { [k.EY]: null != G }),
+        onClick: F,
         onContextMenu: function (e) {
-            (0, u.L3)(e, async () => {
+            (0, f.L3)(e, async () => {
                 let { default: e } = await Promise.all([
                     i.e("71406"),
                     i.e("94881"),
@@ -71,31 +82,39 @@ function N(e) {
                     i.e("42191"),
                     i.e("32418"),
                 ]).then(i.bind(i, 668569));
-                return (i) => (0, a.jsx)(e, { ...i, user: s });
+                return (i) => (0, n.jsx)(e, { ...i, user: s });
             });
         },
         children: [
-            (0, a.jsx)(T, {
-                src: P,
-                avatarDecoration: U ? z : void 0,
-                "aria-label": s.username,
-                size: I,
-                status: w ? b.clD.UNKNOWN : l,
-                statusBackdropColor: w ? void 0 : (0, d.C$)(k),
-                isMobile: S,
-                className: p.my,
-            }),
-            (0, a.jsxs)("div", {
-                className: p.zH,
+            (0, n.jsx)(M.A, { nameplate: H ? G : null, hovered: H, content: Y, placement: C.u.MUTUAL_FRIENDS_LIST }),
+            (0, n.jsxs)("div", {
+                ref: Y,
+                className: k.Qs,
                 children: [
-                    (0, a.jsx)(c.A, {
-                        user: s,
-                        className: p.Tc,
-                        usernameClass: p.QC,
-                        discriminatorClass: p.D2,
-                        showGuildTag: U,
+                    (0, n.jsx)(V, {
+                        ...(z ? B : {}),
+                        src: K,
+                        avatarDecoration: z ? W : void 0,
+                        "aria-label": s.username,
+                        size: S,
+                        status: U ? N.clD.UNKNOWN : t,
+                        statusBackdropColor: U ? void 0 : (0, c.C$)(L),
+                        isMobile: R,
+                        className: k.my,
                     }),
-                    (0, a.jsx)(A.A, { user: s, activities: F, applicationStream: D, voiceChannel: L }),
+                    (0, n.jsxs)("div", {
+                        className: k.zH,
+                        children: [
+                            (0, n.jsx)(A.A, {
+                                user: s,
+                                className: k.Tc,
+                                usernameClass: k.QC,
+                                discriminatorClass: k.D2,
+                                showGuildTag: z,
+                            }),
+                            (0, n.jsx)(m.A, { user: s, activities: D, applicationStream: T, voiceChannel: P }),
+                        ],
+                    }),
                 ],
             }),
         ],

@@ -8,11 +8,22 @@
     line-height: 30px;
     margin-block: 1px;
     margin-inline: 12px 0;
-    padding: 4px
+    padding: 4px;
+    position: relative
 }
 
 .row__89036:hover {
     background-color: var(--user-profile-background-hover)
+}
+
+.row__89036.nameplated__89036 {
+    padding-inline-end: var(--space-32)
+}
+
+.content__89036 {
+    align-items: center;
+    display: flex;
+    min-width: 0
 }
 
 .avatar__89036 {

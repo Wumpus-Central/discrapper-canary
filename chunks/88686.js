@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { W: () => s, u: () => a });
+n.d(t, { W: () => a, u: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {}).None = "none"),
         (i.Crimson = "crimson"),
         (i.Berry = "berry"),
@@ -17,10 +17,11 @@ var i,
         (i.White = "white"),
         (i.Black = "black"),
         i),
-    a =
+    s =
         (((r = {}).ACCOUNT = "account"),
         (r.CHANNEL = "channel"),
         (r.MEMBER_LIST = "member_list"),
         (r.PREVIEW = "preview"),
         (r.MINI_PREVIEW = "mini_preview"),
+        (r.MUTUAL_FRIENDS_LIST = "mutual_friends_list"),
         r);
