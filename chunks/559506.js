@@ -1,19 +1,20 @@
-n.d(e, { A: () => u });
-var t = n(627968);
+"use strict";
+n.d(t, { A: () => d });
+var i = n(627968);
 n(64700);
-var i = n(17928),
-    s = n(683071),
-    c = n(321191),
+var r = n(17928),
+    a = n(683071),
+    s = n(321191),
     l = n(83931),
-    a = n(375708);
-function u(r) {
-    let { userId: e, className: n } = r,
-        u = (0, l.W)(e),
-        d = (0, i.bG)([c.A], () => c.A.getUserProfile(e)?.fetchError);
-    return u || null == d
+    o = n(375708);
+function d(e) {
+    let { userId: t, className: n } = e,
+        d = (0, l.W)(t),
+        c = (0, r.bG)([s.A], () => s.A.getUserProfile(t)?.fetchError);
+    return d || null == c
         ? null
-        : (0, t.jsx)("div", {
+        : (0, i.jsx)("div", {
               className: n,
-              children: (0, t.jsx)(s.w, { type: "warning", children: a.intl.string(a.t.L9wE7H) }),
+              children: (0, i.jsx)(a.w, { type: "warning", children: o.intl.string(o.t.L9wE7H) }),
           });
 }

@@ -1,10 +1,11 @@
+"use strict";
 n.d(t, { Q: () => d, U: () => c });
 var i = n(636537),
-    l = n(228366),
-    r = n(652215),
+    r = n(228366),
+    a = n(652215),
     s = n(375708);
-function a(e) {
-    return null != e && null != e.body && l.h.dispatch({ type: "UPDATE_CONSENTS", consents: { ...e.body } }), e.body;
+function l(e) {
+    return null != e && null != e.body && r.h.dispatch({ type: "UPDATE_CONSENTS", consents: { ...e.body } }), e.body;
 }
 function o(e) {
     throw Error(
@@ -16,15 +17,15 @@ function o(e) {
     );
 }
 function d() {
-    return i.Bo.get({ url: r.Rsh.SETTINGS_CONSENT, oldFormErrors: !0, rejectWithError: !1 }).then(a, (e) =>
+    return i.Bo.get({ url: a.Rsh.SETTINGS_CONSENT, oldFormErrors: !0, rejectWithError: !1 }).then(l, (e) =>
         Promise.reject(Error(e.body.message)),
     );
 }
 function c(e, t) {
     return i.Bo.post({
-        url: r.Rsh.SETTINGS_CONSENT,
+        url: a.Rsh.SETTINGS_CONSENT,
         body: { grant: e, revoke: t },
         oldFormErrors: !0,
         rejectWithError: !1,
-    }).then(a, o);
+    }).then(l, o);
 }

@@ -1,5 +1,6 @@
-a.d(o, { A: () => c });
-let c = (0, a(945810).mj)({
+"use strict";
+n.d(t, { A: () => i });
+let i = (0, n(945810).mj)({
     name: "2026-05-device-form-factor-indicators",
     kind: "user",
     defaultConfig: { showDeviceFormFactorIndicators: !1 },
