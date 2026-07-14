@@ -1,32 +1,31 @@
-"use strict";
 n.d(t, { A: () => o });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    a = n(186295),
+    l = n(186295),
     s = n(731854),
-    l = n(375708);
+    a = n(375708);
 function o(e) {
-    a.Ay.supports(s.O5.VIDEO)
+    l.Ay.supports(s.O5.VIDEO)
         ? (0, r.openModalLazy)(async () => {
               let { default: t } = await n.e("11487").then(n.bind(n, 792866));
               return (n) =>
                   (0, i.jsx)(t, {
                       ...n,
-                      header: l.intl.string(l.t["8jSzSe"]),
-                      body: l.intl.string(l.t.bhqSWl),
-                      confirmText: l.intl.string(l.t.BddRzS),
+                      header: a.intl.string(a.t["8jSzSe"]),
+                      body: a.intl.string(a.t.bhqSWl),
+                      confirmText: a.intl.string(a.t.BddRzS),
                       onConfirm: e,
                   });
           })
         : (0, r.openModalLazy)(async () => {
               let { default: t } = await n.e("11487").then(n.bind(n, 792866));
-              return (a) =>
+              return (l) =>
                   (0, i.jsx)(t, {
-                      ...a,
-                      header: l.intl.string(l.t.XLw6FF),
-                      body: l.intl.string(l.t.wVjKGi),
-                      confirmText: l.intl.string(l.t["BK8LK+"]),
+                      ...l,
+                      header: a.intl.string(a.t.XLw6FF),
+                      body: a.intl.string(a.t.wVjKGi),
+                      confirmText: a.intl.string(a.t["BK8LK+"]),
                       onConfirm: () => {
                           e?.(),
                               (0, r.openModalLazy)(async () => {

@@ -1,23 +1,22 @@
-"use strict";
-n.d(t, { b: () => o });
-var i = n(627968),
-    r = n(803805),
-    a = n(11187),
-    s = n(439401),
-    l = n(416620);
-let o = (e, t, n, o, d) => () => {
-    let c = t ?? n;
-    if (null == c) return null;
-    let { url: u, proxyURL: _, width: E, height: A } = c,
-        h = null != _ && "" !== _ ? _ : u,
-        I = (0, a.mW)({ providerName: d, thumbnail: o });
-    return (0, i.jsx)(s.A, {
-        width: E,
-        height: A,
-        src: h,
-        gifSrc: I,
-        url: null != e && "" !== e ? e : null != _ && "" !== _ ? _ : u,
-        format: null != n ? r.TL.VIDEO : r.TL.IMAGE,
-        className: l.jj,
+t.d(l, { b: () => o });
+var r = t(627968),
+    s = t(803805),
+    i = t(11187),
+    n = t(439401),
+    a = t(416620);
+let o = (e, l, t, o, d) => () => {
+    let u = l ?? t;
+    if (null == u) return null;
+    let { url: h, proxyURL: c, width: m, height: p } = u,
+        g = null != c && "" !== c ? c : h,
+        f = (0, i.mW)({ providerName: d, thumbnail: o });
+    return (0, r.jsx)(n.A, {
+        width: m,
+        height: p,
+        src: g,
+        gifSrc: f,
+        url: null != e && "" !== e ? e : null != c && "" !== c ? c : h,
+        format: null != t ? s.TL.VIDEO : s.TL.IMAGE,
+        className: a.jj,
     });
 };
