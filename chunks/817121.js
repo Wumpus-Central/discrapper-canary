@@ -1,4 +1,4 @@
-a.r(l), a.d(l, { manaCollection: () => av, playgroundConfig: () => ag });
+a.r(l), a.d(l, { manaCollection: () => aM, playgroundConfig: () => aT });
 var t = a(627968),
     o = a(64700),
     i = a(17928),
@@ -71,7 +71,7 @@ let x = {
     grayMedium: "gray-medium",
     grayDark: "gray-dark",
 };
-function h(e) {
+function y(e) {
     let { text: l, variant: a = "grayLight", icon: o, iconColor: i } = e,
         n = x[a],
         s =
@@ -84,7 +84,7 @@ function h(e) {
         children: [s, l],
     });
 }
-var y = a(759146);
+var h = a(759146);
 let v = ["blurple", "purple", "green", "orange", "yellow", "pink", "red", "gray"],
     g = ["Light", "Medium", "Dark"],
     f = {
@@ -93,7 +93,7 @@ let v = ["blurple", "purple", "green", "orange", "yellow", "pink", "red", "gray"
             {
                 name: "Chip",
                 id: "chip",
-                component: h,
+                component: y,
                 controls: {
                     text: { label: "Text", type: "text", defaultValue: "New" },
                     variant: {
@@ -134,19 +134,19 @@ let v = ["blurple", "purple", "green", "orange", "yellow", "pink", "red", "gray"
                 id: "chip-all-variants",
                 component: function () {
                     return (0, t.jsx)("div", {
-                        className: y.lx,
+                        className: h.lx,
                         children: g.map((e) =>
                             (0, t.jsxs)(
                                 "div",
                                 {
-                                    className: y.uW,
+                                    className: h.uW,
                                     children: [
-                                        (0, t.jsx)("h3", { className: y.Gf, children: e }),
+                                        (0, t.jsx)("h3", { className: h.Gf, children: e }),
                                         (0, t.jsx)("div", {
-                                            className: y.f2,
+                                            className: h.f2,
                                             children: v.map((l) => {
                                                 let a = `${l}${e}`;
-                                                return (0, t.jsx)(h, { text: l, variant: a }, a);
+                                                return (0, t.jsx)(y, { text: l, variant: a }, a);
                                             }),
                                         }),
                                     ],
@@ -336,8 +336,8 @@ let $ = {
                         showDisabledItems: p,
                         showColoredItems: m,
                         showLoading: x,
-                        showTrailingIndicator: h,
-                        dangerItemColor: y,
+                        showTrailingIndicator: y,
+                        dangerItemColor: h,
                     } = e,
                     [v, g] = o.useState(!0),
                     [f, V] = o.useState(!1),
@@ -404,7 +404,7 @@ let $ = {
                                                         id: "brand-item",
                                                         label: "Brand Item",
                                                         color: "brand",
-                                                        trailingIndicator: h ? { type: "icon", icon: B.I } : void 0,
+                                                        trailingIndicator: y ? { type: "icon", icon: B.I } : void 0,
                                                         action: () => {},
                                                     }),
                                                     (0, t.jsx)(A.Dr, {
@@ -558,7 +558,7 @@ let $ = {
                                         (0, t.jsx)(A.Dr, {
                                             id: "delete",
                                             label: "Delete Message",
-                                            color: y,
+                                            color: h,
                                             icon: u ? z.u : void 0,
                                             action: () => {},
                                         }),
@@ -1063,8 +1063,8 @@ var ec = a(27232),
     ep = a(175841),
     em = a(406810),
     ex = a(260981),
-    eh = a(540418),
-    ey = a(907085),
+    ey = a(540418),
+    eh = a(907085),
     ev = a(179820),
     eg = a(508770);
 let ef = {
@@ -1074,8 +1074,8 @@ let ef = {
         SparklesIcon: ep.B,
         ClockIcon: em.O,
         ExperimentalCommonIcon: ex.p,
-        ExperimentalRareIcon: eh.A,
-        ExperimentalEpicIcon: ey.b,
+        ExperimentalRareIcon: ey.A,
+        ExperimentalEpicIcon: eh.b,
         ExperimentalMythicIcon: ev.O,
     },
     eV = {
@@ -1534,10 +1534,10 @@ let ez = {
                     x = o.useCallback(() => {
                         c(b.map((e) => e.value));
                     }, [b]),
-                    h = o.useCallback(() => {
+                    y = o.useCallback(() => {
                         c([]);
                     }, []),
-                    y = o.useCallback(() => {
+                    h = o.useCallback(() => {
                         b.length > 0 && c([b[0].value]);
                     }, [b]);
                 return (0, t.jsxs)(D.B, {
@@ -1564,14 +1564,14 @@ let ez = {
                                     variant: "secondary",
                                     size: "sm",
                                     text: "Select First",
-                                    onClick: y,
+                                    onClick: h,
                                     disabled: l || 0 === b.length,
                                 }),
                                 (0, t.jsx)(C.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: "Clear All",
-                                    onClick: h,
+                                    onClick: y,
                                     disabled: l,
                                 }),
                             ],
@@ -1720,15 +1720,15 @@ function e3(e) {
             "aria-label": c,
         } = e,
         { i18n: m, locale: x } = (0, eQ.G9)(),
-        h = l?.start ?? null,
-        [y, v] = o.useState(h);
+        y = l?.start ?? null,
+        [h, v] = o.useState(y);
     return (
         o.useEffect(() => {
-            v(h);
-        }, [h]),
+            v(y);
+        }, [y]),
         (0, t.jsx)(eJ._e, {
             value: l,
-            focusedValue: y,
+            focusedValue: h,
             onFocusChange: v,
             onChange: a,
             minValue: i,
@@ -1805,8 +1805,8 @@ function e7(e) {
         } = e,
         { i18n: p } = (0, eQ.G9)(),
         { fieldProps: m } = (0, E.n)(c),
-        { disabled: x, errorMessage: h, required: y = !1 } = m,
-        v = { hasError: null != h && "" !== h },
+        { disabled: x, errorMessage: y, required: h = !1 } = m,
+        v = { hasError: null != y && "" !== y },
         {
             refs: g,
             floatingStyles: f,
@@ -1844,7 +1844,7 @@ function e7(e) {
                     value: l,
                     onChange: T,
                     isDisabled: x,
-                    isRequired: y,
+                    isRequired: h,
                     minValue: o,
                     maxValue: i,
                     placeholderValue: n,
@@ -1936,7 +1936,7 @@ let e8 = {
                     }, []),
                     m = (0, eM.Ec)((0, eM.Xj)()),
                     x = r ? m.subtract({ weeks: 1 }) : void 0,
-                    h = r ? m.add({ weeks: 2 }) : void 0;
+                    y = r ? m.add({ weeks: 2 }) : void 0;
                 return eA("DateRangePickerStory")
                     ? (0, t.jsxs)(D.B, {
                           direction: "vertical",
@@ -1951,7 +1951,7 @@ let e8 = {
                                   required: s,
                                   errorMessage: "" !== a ? a : void 0,
                                   minValue: x,
-                                  maxValue: h,
+                                  maxValue: y,
                                   helperText: (() => {
                                       if (null == d) return "";
                                       let e = (0, eD.default)(d.start.toDate((0, eM.Xj)()), "MMMM d, yyyy"),
@@ -2237,8 +2237,104 @@ var lu = a(404778),
     lb = a(661531),
     lp = a(307301),
     lm = a(892547),
-    lx = a(260598);
-let lh = [
+    lx = a(260598),
+    ly = a(284009),
+    lh = a.n(ly),
+    lv = a(612324);
+let lg = /^-?\d*$/,
+    lf = /^-?\d*\.?\d*$/;
+function lV(e) {
+    return null != e ? e.toString() : "";
+}
+function lC(e, l) {
+    let a = l ? parseFloat(e) : parseInt(e, 10);
+    return Number.isNaN(a) ? void 0 : a;
+}
+function lj(e) {
+    let l = e.toString(),
+        a = l.indexOf(".");
+    return -1 === a ? 0 : l.length - a - 1;
+}
+function lS(e) {
+    let {
+            name: l = "",
+            value: a,
+            onChange: i,
+            inputRef: n,
+            min: s,
+            max: r,
+            step: d = 1,
+            mode: u = "integer",
+            disabled: c,
+            readOnly: b,
+            ...p
+        } = e,
+        m = "decimal" === u;
+    lh()(m || Number.isInteger(d), 'NumberInput step must be an integer when mode is "integer"');
+    let x = o.useRef(null),
+        y = (0, lv.A)(n, x),
+        [h, v] = o.useState(() => lV(a));
+    h !== lV(a) && lC(h, m) !== a && v(lV(a)),
+        (function (e) {
+            let { name: l, disabled: a, readOnly: t, value: i, min: n, max: s, step: r, onChange: d, ref: u } = e;
+            o.useEffect(() => {
+                let e = u.current;
+                if (a || t || null == e) return;
+                let o = (e) => {
+                        var a;
+                        let t = i ?? 0,
+                            o = Math.max(lj(r), lj(t));
+                        d(
+                            ((a = Number((t + e * r).toFixed(o))), null != n && a < n ? n : null != s && a > s ? s : a),
+                            l,
+                        );
+                    },
+                    c = (e) => {
+                        switch (e.key) {
+                            case "ArrowUp":
+                                e.preventDefault(), o(1);
+                                break;
+                            case "ArrowDown":
+                                e.preventDefault(), o(-1);
+                        }
+                    },
+                    b = (l) => {
+                        document.activeElement === e && (l.preventDefault(), o(l.deltaY < 0 ? 1 : -1));
+                    };
+                return (
+                    e.addEventListener("keydown", c),
+                    e.addEventListener("wheel", b, { passive: !1 }),
+                    () => {
+                        e.removeEventListener("keydown", c), e.removeEventListener("wheel", b);
+                    }
+                );
+            }, [a, t, i, n, s, r, d, u, l]);
+        })({ name: l, disabled: c, readOnly: b, value: a, min: s, max: r, step: d, onChange: i, ref: x });
+    let g = o.useCallback(
+        (e, l) => {
+            (m ? lf : lg).test(e) && (v(e), i(lC(e, m), l));
+        },
+        [i, m],
+    );
+    return (0, t.jsx)(es.k, {
+        ...p,
+        name: l,
+        disabled: c,
+        readOnly: b,
+        role: "spinbutton",
+        "aria-valuenow": a,
+        "aria-valuemin": s,
+        "aria-valuemax": r,
+        onChange: g,
+        inputRef: y,
+        value: h,
+        min: s,
+        max: r,
+        type: "text",
+        inputMode: m ? "decimal" : "numeric",
+    });
+}
+let lk = [
         { id: "strength", label: "Strength", icon: lc.X },
         { id: "wisdom", label: "Wisdom", icon: { type: "role", color: lb.A.unsafe_rawColors.BRAND_500.css } },
         { id: "charisma", label: "Charisma" },
@@ -2246,7 +2342,7 @@ let lh = [
         { id: "dexterity", label: "Dexterity" },
         { id: "constitution", label: "Constitution" },
     ],
-    ly = {
+    lw = {
         title: "Input Components",
         stories: [
             {
@@ -2254,7 +2350,7 @@ let lh = [
                 component: function (e) {
                     let { leading: l, trailing: a, ...i } = e,
                         [n, s] = o.useState(""),
-                        [d, u] = o.useState(lh),
+                        [d, u] = o.useState(lk),
                         c = o.useCallback(
                             (e) => {
                                 u(d.filter((l) => !e.has(l.id)));
@@ -2288,7 +2384,7 @@ let lh = [
                                       text: "Reset Tags",
                                       size: "sm",
                                       variant: "secondary",
-                                      onClick: () => u(lh),
+                                      onClick: () => u(lk),
                                   })
                                 : null,
                         ],
@@ -2304,7 +2400,6 @@ let lh = [
                             { label: "Text", value: "text" },
                             { label: "Password", value: "password" },
                             { label: "Email", value: "email" },
-                            { label: "Number", value: "number" },
                         ],
                     },
                     label: { label: "Label", type: "text", defaultValue: "Example Label" },
@@ -2391,6 +2486,38 @@ let lh = [
                 },
             },
             {
+                name: "NumberInput",
+                id: "number-input",
+                component: function (e) {
+                    let [l, a] = o.useState(0);
+                    return (0, t.jsx)(lS, { ...e, value: l, onChange: a });
+                },
+                controls: {
+                    label: { label: "Label", type: "text", defaultValue: "Example Label" },
+                    hideLabel: { label: "Hide Label", type: "boolean", defaultValue: !1 },
+                    description: { label: "Description", type: "text", defaultValue: "This is an example description" },
+                    required: { label: "Required", type: "boolean", defaultValue: !1 },
+                    placeholder: { label: "Placeholder", type: "text", defaultValue: "Enter a number..." },
+                    error: { label: "Error Message", type: "text", defaultValue: void 0 },
+                    helperText: { label: "Helper Text", type: "text", defaultValue: void 0 },
+                    min: { label: "Min", type: "number", defaultValue: void 0 },
+                    max: { label: "Max", type: "number", defaultValue: void 0 },
+                    step: { label: "Step", type: "number", defaultValue: 1 },
+                    mode: {
+                        label: "Mode",
+                        type: "select",
+                        defaultValue: "integer",
+                        options: [
+                            { label: "Integer", value: "integer" },
+                            { label: "Decimal", value: "decimal" },
+                        ],
+                    },
+                    clearable: { label: "Clearable", type: "boolean", defaultValue: !1 },
+                    disabled: { label: "Disabled", type: "boolean", defaultValue: !1 },
+                    readOnly: { label: "Read Only", type: "boolean", defaultValue: !1 },
+                },
+            },
+            {
                 name: "Input Collection",
                 id: "input-collection",
                 component: function (e) {
@@ -2443,7 +2570,7 @@ let lh = [
                                     (0, t.jsx)(es.k, { ...x, trailing: lc.X }),
                                     (0, t.jsx)(es.k, {
                                         ...x,
-                                        leading: { type: "tags", label: "Tags", items: lh.slice(0, 3) },
+                                        leading: { type: "tags", label: "Tags", items: lk.slice(0, 3) },
                                     }),
                                 ],
                             }),
@@ -2484,27 +2611,27 @@ let lh = [
         ],
     };
 a(321073);
-var lv = a(102079),
-    lg = a(224640),
-    lf = a(430993),
-    lV = a(276293),
-    lC = a(189213),
-    lj = a(772707),
-    lS = a(347704),
-    lk = a(116833),
-    lw = a(521489),
-    lM = a(192308),
-    lT = a(783878),
-    lD = a(314116);
-let lE = "/assets/f66ae7bb8510ab4f.svg";
-function lL() {
+var lM = a(102079),
+    lT = a(224640),
+    lD = a(430993),
+    lE = a(276293),
+    lL = a(189213),
+    lI = a(772707),
+    lA = a(347704),
+    lN = a(116833),
+    lR = a(521489),
+    lP = a(192308),
+    lO = a(783878),
+    lB = a(314116);
+let lz = "/assets/f66ae7bb8510ab4f.svg";
+function lG() {
     return (0, t.jsx)(p.E, {
         variant: "text-sm/normal",
         color: "text-subtle",
         children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
     });
 }
-function lI(e) {
+function lF(e) {
     let { setIsSafetyAccepted: l, setIsHelmetSelected: a } = e,
         [i, n] = o.useState([]),
         s = [
@@ -2519,7 +2646,7 @@ function lI(e) {
         (0, t.jsx)(eB.$, { label: "Safety checklist", options: s, selectedValues: i, onChange: n })
     );
 }
-function lA(e) {
+function l$(e) {
     let { setIsPasscodeValid: l } = e,
         [a, i] = o.useState("");
     return (0, t.jsx)(es.k, {
@@ -2530,7 +2657,7 @@ function lA(e) {
         },
     });
 }
-function lN(e) {
+function l_(e) {
     let {
             callbackDelay: l,
             failOnNext: a,
@@ -2543,8 +2670,8 @@ function lN(e) {
         } = e,
         [c, b] = o.useState("intro"),
         [p, m] = o.useState(!1),
-        [x, h] = o.useState(!1),
-        [y, v] = o.useState(!1),
+        [x, y] = o.useState(!1),
+        [h, v] = o.useState(!1),
         [g, f] = o.useState(null),
         V = o.useCallback(async () => {
             if (
@@ -2577,7 +2704,7 @@ function lN(e) {
                     subtitle: "To verify your radness, we need to ask you a few deep and personal questions.",
                     notice: null != g ? { message: g.message, type: g.type } : void 0,
                 },
-                body: (0, t.jsx)(lL, {}),
+                body: (0, t.jsx)(lG, {}),
                 nextButtonProps: { text: "Verify" },
                 onNext: V,
             },
@@ -2590,14 +2717,14 @@ function lN(e) {
                     notice:
                         null != g
                             ? { message: g.message, type: g.type }
-                            : y
+                            : h
                               ? {
                                     message: "Great job, helmets are important for protecting your brain!",
                                     type: "warning",
                                 }
                               : void 0,
                 },
-                body: (0, t.jsx)(lI, { setIsSafetyAccepted: m, setIsHelmetSelected: v }),
+                body: (0, t.jsx)(lF, { setIsSafetyAccepted: m, setIsHelmetSelected: v }),
                 nextEnabled: p,
                 onNext: V,
             },
@@ -2608,15 +2735,15 @@ function lN(e) {
                     subtitle: "Enter your passcode to complete the radness verification process.",
                     notice: null != g ? { message: g.message, type: g.type } : void 0,
                 },
-                body: (0, t.jsx)(lA, { setIsPasscodeValid: h }),
+                body: (0, t.jsx)(l$, { setIsPasscodeValid: y }),
                 nextButtonProps: { text: "Verify passcode" },
                 nextEnabled: x,
             },
         ],
         S = j.slice(1).map((e) => e.stepKey);
-    return (0, t.jsx)(lS.t, { steps: j, currentStepKey: c, numberedSteps: S, onStepChange: b, onComplete: C, ...u });
+    return (0, t.jsx)(lA.t, { steps: j, currentStepKey: c, numberedSteps: S, onStepChange: b, onComplete: C, ...u });
 }
-let lR = {
+let lH = {
     title: "Modal",
     stories: [
         {
@@ -2625,7 +2752,7 @@ let lR = {
             docs: "https://design.discord.tools/components/web/modals/modal",
             component: function (e) {
                 let { showPreview: l, showInput: a, subtitleIcon: o, ...i } = e,
-                    n = o ? { text: i.subtitle ?? "Default subtitle", leadingIcon: lV.N } : i.subtitle;
+                    n = o ? { text: i.subtitle ?? "Default subtitle", leadingIcon: lE.N } : i.subtitle;
                 return (0, t.jsxs)(D.B, {
                     gap: 16,
                     align: "center",
@@ -2638,9 +2765,9 @@ let lR = {
                             variant: "primary",
                             text: "Open Modal",
                             onClick: () =>
-                                (0, lM.openModal)(
+                                (0, lP.openModal)(
                                     (e) =>
-                                        (0, t.jsx)(lC.Modal, {
+                                        (0, t.jsx)(lL.Modal, {
                                             ...e,
                                             ...i,
                                             title: i.title,
@@ -2676,7 +2803,7 @@ let lR = {
                                             children: (0, t.jsxs)(D.B, {
                                                 gap: 16,
                                                 children: [
-                                                    (0, t.jsx)(lT.Z, {
+                                                    (0, t.jsx)(lO.Z, {
                                                         maxOptionsVisible: 10,
                                                         label: "Example Select",
                                                         selectionMode: "multiple",
@@ -2763,7 +2890,7 @@ let lR = {
                             variant: "primary",
                             text: "Open Confirm Modal",
                             onClick: () =>
-                                (0, lD.A)({
+                                (0, lB.A)({
                                     ...r,
                                     subtitle: d,
                                     cancelText: "" === l ? void 0 : l,
@@ -2814,11 +2941,11 @@ let lR = {
             docs: "https://design.discord.tools/components/web/modals/expressive-modal",
             component: function (e) {
                 let { graphic: l, subtitleIcon: i, ...n } = e,
-                    s = i ? { text: n.subtitle ?? "Default subtitle", leadingIcon: lV.N } : n.subtitle,
+                    s = i ? { text: n.subtitle ?? "Default subtitle", leadingIcon: lE.N } : n.subtitle,
                     r = o.useMemo(() => {
                         switch (l) {
                             case 0:
-                                return { type: "image", src: lE };
+                                return { type: "image", src: lz };
                             case 1:
                                 return {
                                     type: "lottie",
@@ -2826,19 +2953,19 @@ let lR = {
                                     aspectRatio: "6/4",
                                 };
                             case 2:
-                                return { type: "rive", rive: lv.Q };
+                                return { type: "rive", rive: lM.Q };
                             case 3:
                                 return {
                                     type: "video",
                                     src: "https://cdn.discordapp.com/assets/content/06fafa729efafb6235e0ee9df9482566fa9e74b96a792a9265dca70113c71ab7.webm",
-                                    fallbackImageSrc: lE,
+                                    fallbackImageSrc: lz,
                                     loop: !0,
                                     loopAt: 2.5,
                                 };
                             case 4:
                                 return {
                                     type: "dynamic",
-                                    component: lk.DynamicGraphicComponent.DEMO,
+                                    component: lN.DynamicGraphicComponent.DEMO,
                                     aspectRatio: "6/4",
                                     props: { text: "Dynamic Content" },
                                 };
@@ -2858,9 +2985,9 @@ let lR = {
                             variant: "primary",
                             text: "Open ExpressiveModal",
                             onClick: () =>
-                                (0, lM.openModal)(
+                                (0, lP.openModal)(
                                     (e) =>
-                                        (0, t.jsx)(lj.k, {
+                                        (0, t.jsx)(lI.k, {
                                             ...e,
                                             ...n,
                                             title: n.title,
@@ -2932,7 +3059,7 @@ let lR = {
                 let { dynamicText: l, ...o } = e,
                     i = {
                         type: "dynamic",
-                        component: lk.DynamicGraphicComponent.DEMO,
+                        component: lN.DynamicGraphicComponent.DEMO,
                         aspectRatio: "6/4",
                         props: { text: l },
                     };
@@ -2949,7 +3076,7 @@ let lR = {
                             variant: "primary",
                             text: "Open Dynamic Graphic Modal",
                             onClick: () =>
-                                (0, lM.openModalLazy)(
+                                (0, lP.openModalLazy)(
                                     async () => {
                                         let { ExpressiveModal: e } = await a.e("4823").then(a.bind(a, 158954));
                                         return (l) =>
@@ -3028,8 +3155,8 @@ let lR = {
                             variant: "primary",
                             text: "Open Layer Modal",
                             onClick: () =>
-                                (0, lM.openModal)((e) =>
-                                    (0, t.jsx)(lw.N, {
+                                (0, lP.openModal)((e) =>
+                                    (0, t.jsx)(lR.N, {
                                         ...e,
                                         ...l,
                                         children: (0, t.jsx)(D.B, {
@@ -3071,8 +3198,8 @@ let lR = {
                             variant: "primary",
                             text: "Open MultiStepModal",
                             onClick: () =>
-                                (0, lM.openModal)((e) =>
-                                    (0, t.jsx)(lN, {
+                                (0, lP.openModal)((e) =>
+                                    (0, t.jsx)(l_, {
                                         ...e,
                                         callbackDelay: l,
                                         failOnNext: a,
@@ -3124,13 +3251,13 @@ let lR = {
                             variant: "primary",
                             text: "Open BaseModal",
                             onClick: () =>
-                                (0, lM.openModal)(
+                                (0, lP.openModal)(
                                     (e) =>
-                                        (0, t.jsx)(lg.d, {
+                                        (0, t.jsx)(lT.d, {
                                             ...e,
                                             ...o,
                                             "aria-label": "Base Modal Example",
-                                            children: (0, t.jsx)(lf.c, {
+                                            children: (0, t.jsx)(lD.c, {
                                                 children: (0, t.jsxs)(D.B, {
                                                     gap: 16,
                                                     children: [
@@ -3225,18 +3352,18 @@ let lR = {
         },
     ],
 };
-var lP = a(943854),
-    lO = a.n(lP),
-    lB = a(43105),
-    lz = a(338854),
-    lG = a(353795),
-    lF = a(312640),
-    l$ = a(798618),
-    l_ = a(916845),
-    lH = a(627330),
-    lq = a(375708),
-    lU = a(824078);
-function lX(e) {
+var lq = a(943854),
+    lU = a.n(lq),
+    lX = a(43105),
+    lW = a(338854),
+    lZ = a(353795),
+    lY = a(312640),
+    lK = a(798618),
+    lQ = a(916845),
+    lJ = a(627330),
+    l0 = a(375708),
+    l1 = a(824078);
+function l2(e) {
     let {
             steps: l,
             caretConfig: a = { align: "center" },
@@ -3255,23 +3382,23 @@ function lX(e) {
         o.useEffect(() => {
             n?.(m);
         }, [m, n]);
-    let h = l[m],
-        y = m + 1 === l.length,
+    let y = l[m],
+        h = m + 1 === l.length,
         v = o.useCallback(() => {
-            h?.onCta?.(), y ? s?.() : x((e) => e + 1);
-        }, [h, y, s]),
+            y?.onCta?.(), h ? s?.() : x((e) => e + 1);
+        }, [y, h, s]),
         g = o.useCallback(() => {
             s?.();
         }, [s]),
         f = o.useCallback(() => {
             s?.();
         }, [s]);
-    if (!d || null == h) return null;
+    if (!d || null == y) return null;
     let V = {
-            text: h.action?.text ?? (y ? lq.intl.string(lq.t.i4jeWR) : lq.intl.string(lq.t.PDTjLN)),
-            variant: h.action?.variant ?? "primary",
+            text: y.action?.text ?? (h ? l0.intl.string(l0.t.i4jeWR) : l0.intl.string(l0.t.PDTjLN)),
+            variant: y.action?.variant ?? "primary",
             onClick: v,
-            ...h.action,
+            ...y.action,
         },
         j = {
             targetElementRef: c.targetElementRef,
@@ -3280,36 +3407,36 @@ function lX(e) {
             position: u,
             shouldShow: d,
             onRequestClose: g,
-            gradientColor: h.gradientColor,
+            gradientColor: y.gradientColor,
             caretConfig: a,
             ...("edge" === c.alignmentStrategy
                 ? { alignmentStrategy: "edge", align: c.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, t.jsx)(lF.x, {
+    return (0, t.jsx)(lY.x, {
         ...j,
         children: (0, t.jsxs)("div", {
             ref: r,
             children: [
-                (0, t.jsx)(l_.q, { onClick: f, variant: null != h.gradientColor ? "color-mix" : void 0 }),
-                null != h.graphic &&
+                (0, t.jsx)(lQ.q, { onClick: f, variant: null != y.gradientColor ? "color-mix" : void 0 }),
+                null != y.graphic &&
                     (0, t.jsx)("div", {
-                        className: b()(lU.graphic, { [lU[`graphic--${i}`]]: null != i }),
-                        children: (0, t.jsx)(lG.v, {
-                            ...h.graphic,
-                            aspectRatio: h.graphic.aspectRatio ?? ("sm" === i ? "2/1" : "16/9"),
+                        className: b()(l1.graphic, { [l1[`graphic--${i}`]]: null != i }),
+                        children: (0, t.jsx)(lZ.v, {
+                            ...y.graphic,
+                            aspectRatio: y.graphic.aspectRatio ?? ("sm" === i ? "2/1" : "16/9"),
                         }),
                     }),
-                (0, t.jsx)(lH.D, { title: h.title, body: h.body, badge: h.badge, textLink: h.textLink }),
+                (0, t.jsx)(lJ.D, { title: y.title, body: y.body, badge: y.badge, textLink: y.textLink }),
                 (0, t.jsx)("div", {
-                    className: lU.actionBar,
+                    className: l1.actionBar,
                     children: (0, t.jsxs)("div", {
-                        className: lU.multistepActionLayout,
+                        className: l1.multistepActionLayout,
                         children: [
                             (0, t.jsx)(p.E, {
                                 variant: "text-xs/normal",
-                                className: lU.multistepIndicator,
-                                children: lq.intl.formatToPlainString(lq.t.rO31eY, {
+                                className: l1.multistepIndicator,
+                                children: l0.intl.formatToPlainString(l0.t.rO31eY, {
                                     count: m + 1,
                                     totalSteps: l.length,
                                 }),
@@ -3318,14 +3445,14 @@ function lX(e) {
                         ],
                     }),
                 }),
-                (0, t.jsx)(l$.F, {}),
+                (0, t.jsx)(lK.F, {}),
             ],
         }),
     });
 }
-let lW =
+let l4 =
         "https://cdn.discordapp.com/assets/content/26736d800236761a21973e6fe690dfd5fa484f664976b3bba91b98d5d47bb1f7.svg",
-    lZ = {
+    l3 = {
         title: "Popover",
         stories: [
             {
@@ -3350,7 +3477,7 @@ let lW =
                         style: { display: "flex", justifyContent: "center", alignItems: "center", minHeight: "400px" },
                         children: [
                             (0, t.jsx)(
-                                lB.A,
+                                lX.A,
                                 {
                                     ...c,
                                     position: u,
@@ -3366,7 +3493,7 @@ let lW =
                                               src:
                                                   "sm" === d
                                                       ? "https://cdn.discordapp.com/assets/content/7c8ee05f499cdf960d0b69208667276e8ca276aa2edcee6141d55e237d1ed5d2.svg"
-                                                      : lW,
+                                                      : l4,
                                           }
                                         : void 0,
                                     caretConfig: { align: n },
@@ -3483,7 +3610,7 @@ let lW =
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
-                                lz.H,
+                                lW.H,
                                 {
                                     ...n,
                                     targetElementRef: d,
@@ -3492,7 +3619,7 @@ let lW =
                                     title: "Video Popover Demo",
                                     body: "Click the video to view it in the media viewer!",
                                     assetUrl: i,
-                                    previewUrl: lO()(a) ? void 0 : a,
+                                    previewUrl: lU()(a) ? void 0 : a,
                                     badge: "new",
                                     action: l ? { text: "Learn More", onClick: () => r(!1) } : void 0,
                                 },
@@ -3529,7 +3656,7 @@ let lW =
                             {
                                 title: "Welcome to the Feature!",
                                 body: "This is the first step of our multi-step introduction.",
-                                asset: (0, t.jsx)("img", { src: lW, alt: "Step 1" }),
+                                asset: (0, t.jsx)("img", { src: l4, alt: "Step 1" }),
                                 badge: "new",
                                 action: { text: "Next" },
                                 gradientColor: "blue",
@@ -3547,7 +3674,7 @@ let lW =
                             {
                                 title: "Get Started!",
                                 body: "You're all set to begin using this awesome feature.",
-                                asset: (0, t.jsx)("img", { src: lW, alt: "Step 3" }),
+                                asset: (0, t.jsx)("img", { src: l4, alt: "Step 3" }),
                                 action: { text: "Get Started", variant: l ? "expressive" : void 0 },
                                 gradientColor: "nitro-pink",
                                 textLink: { text: "Learn More", link: "https://discord.com", external: !0 },
@@ -3556,7 +3683,7 @@ let lW =
                     return (0, t.jsxs)("div", {
                         children: [
                             (0, t.jsx)(
-                                lX,
+                                l2,
                                 {
                                     ...a,
                                     targetElementRef: s,
@@ -3592,8 +3719,8 @@ let lW =
             },
         ],
     };
-var lY = a(911608);
-let lK = {
+var l6 = a(911608);
+let l7 = {
     title: "ProgressBar",
     stories: [
         {
@@ -3604,8 +3731,8 @@ let lK = {
                     r = "" !== n ? n : void 0,
                     d = "" !== s ? s : "Progress";
                 return a
-                    ? (0, t.jsx)(lY.z, { isIndeterminate: !0, size: o, animate: i, valueLabel: r, "aria-label": d })
-                    : (0, t.jsx)(lY.z, { value: l, size: o, animate: i, valueLabel: r, "aria-label": d });
+                    ? (0, t.jsx)(l6.z, { isIndeterminate: !0, size: o, animate: i, valueLabel: r, "aria-label": d })
+                    : (0, t.jsx)(l6.z, { value: l, size: o, animate: i, valueLabel: r, "aria-label": d });
             },
             controls: {
                 value: { label: "Value", type: "slider", defaultValue: 50, minValue: 0, maxValue: 100 },
@@ -3628,8 +3755,8 @@ let lK = {
         },
     ],
 };
-var lQ = a(144228);
-let lJ = {
+var l8 = a(144228);
+let l5 = {
         title: "RadioGroup",
         stories: [
             {
@@ -3693,17 +3820,17 @@ let lJ = {
                         x = o.useCallback(() => {
                             b.length > 0 && c(b[0].value);
                         }, [b]),
-                        h = o.useCallback(() => {
+                        y = o.useCallback(() => {
                             b.length > 0 && c(b[b.length - 1].value);
                         }, [b]),
-                        y = o.useCallback(() => {
+                        h = o.useCallback(() => {
                             c(void 0);
                         }, []);
                     return (0, t.jsxs)(D.B, {
                         direction: "vertical",
                         gap: "md",
                         children: [
-                            (0, t.jsx)(lQ.z, { value: u, label: i, onChange: m, options: b, disabled: l }),
+                            (0, t.jsx)(l8.z, { value: u, label: i, onChange: m, options: b, disabled: l }),
                             (0, t.jsxs)(p.E, {
                                 variant: "text-sm/normal",
                                 children: ["Current selection: ", "string" == typeof u && "" !== u ? u : "None"],
@@ -3723,14 +3850,14 @@ let lJ = {
                                         variant: "secondary",
                                         size: "sm",
                                         text: "Select Last",
-                                        onClick: h,
+                                        onClick: y,
                                         disabled: l || 0 === b.length,
                                     }),
                                     (0, t.jsx)(C.$, {
                                         variant: "primary",
                                         size: "sm",
                                         text: "Clear",
-                                        onClick: y,
+                                        onClick: h,
                                         disabled: l,
                                     }),
                                 ],
@@ -3761,7 +3888,7 @@ let lJ = {
             },
         ],
     },
-    l0 = {
+    l9 = {
         title: "RangeCalendar",
         stories: [
             {
@@ -3857,10 +3984,10 @@ let lJ = {
             },
         ],
     };
-var l1 = a(593924),
-    l2 = a(844222),
-    l4 = a(692327);
-let l3 = Object.entries(l1)
+var ae = a(593924),
+    al = a(844222),
+    aa = a(692327);
+let at = Object.entries(ae)
     .filter((e) => {
         let l = e[1];
         return "function" == typeof l && "riveSrc" in l;
@@ -3870,11 +3997,11 @@ let l3 = Object.entries(l1)
         return { name: l, Component: a };
     })
     .sort((e, l) => e.name.localeCompare(l.name));
-var l6 = a(540637),
-    l7 = a(715022),
-    l8 = a(732771),
-    l5 = a(379649);
-let l9 = [
+var ao = a(540637),
+    ai = a(715022),
+    an = a(732771),
+    as = a(379649);
+let ar = [
         { label: "Aardvark", value: "aardvark", id: "aardvark", description: "This is an aardvark" },
         { label: "Cat", value: "cat", id: "cat", description: "This is a cat" },
         { label: "Dog", value: "dog", id: "dog" },
@@ -3882,22 +4009,22 @@ let l9 = [
         { label: "Panda", value: "panda", id: "panda" },
         { label: "Snake", value: "snake", id: "snake", disabled: !0 },
     ],
-    ae = [
+    ad = [
         {
             label: "Aardvark",
             value: "aardvark",
             id: "aardvark",
-            leading: lV.N,
+            leading: lE.N,
             trailing: { type: "badge", badgeType: "new" },
             description: "This is an aardvark",
         },
-        { label: "Cat", value: "cat", id: "cat", leading: lV.N, trailing: "20m", description: "This is a cat" },
-        { label: "Dog", value: "dog", id: "dog", leading: lV.N },
-        { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: l5 } },
-        { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: l5 } },
-        { label: "Snake", value: "snake", id: "snake", leading: lV.N, disabled: !0 },
+        { label: "Cat", value: "cat", id: "cat", leading: lE.N, trailing: "20m", description: "This is a cat" },
+        { label: "Dog", value: "dog", id: "dog", leading: lE.N },
+        { label: "Kangaroo", value: "kangaroo", id: "kangaroo", leading: { type: "image", src: as } },
+        { label: "Panda", value: "panda", id: "panda", leading: { type: "avatar", src: as } },
+        { label: "Snake", value: "snake", id: "snake", leading: lE.N, disabled: !0 },
     ],
-    al = [
+    au = [
         {
             label: "Domesticated",
             options: [
@@ -3915,7 +4042,7 @@ let l9 = [
             ],
         },
     ],
-    aa = {
+    ac = {
         title: "Select",
         stories: [
             {
@@ -3925,7 +4052,7 @@ let l9 = [
                     let { selectionMode: l, withLeadingAndTrailing: a, withGroups: i, ...n } = e,
                         [s, r] = o.useState(void 0),
                         [d, u] = o.useState([]),
-                        c = at(a, n.asyncOptions, i);
+                        c = ab(a, n.asyncOptions, i);
                     return "single" === l
                         ? (0, t.jsx)(ll.l, { ...n, selectionMode: l, options: c, onSelectionChange: r, value: s })
                         : (0, t.jsx)(ll.l, { ...n, selectionMode: l, options: c, onSelectionChange: u, value: d });
@@ -3981,10 +4108,10 @@ let l9 = [
                     let { selectionMode: l, withLeadingAndTrailing: a, asyncOptions: i, withGroups: n, ...s } = e,
                         [r, d] = o.useState(void 0),
                         [u, c] = o.useState([]),
-                        b = at(a, i, n);
+                        b = ab(a, i, n);
                     return "single" === l
-                        ? (0, t.jsx)(lT.Z, { ...s, selectionMode: l, onSelectionChange: d, value: r, options: b })
-                        : (0, t.jsx)(lT.Z, { ...s, selectionMode: l, onSelectionChange: c, value: u, options: b });
+                        ? (0, t.jsx)(lO.Z, { ...s, selectionMode: l, onSelectionChange: d, value: r, options: b })
+                        : (0, t.jsx)(lO.Z, { ...s, selectionMode: l, onSelectionChange: c, value: u, options: b });
                 },
                 controls: {
                     selectionMode: {
@@ -4042,29 +4169,29 @@ let l9 = [
                             placeholder: p,
                             ...m
                         } = e,
-                        { required: x, disabled: h } = m,
-                        y = at(c, m.asyncOptions, b),
+                        { required: x, disabled: y } = m,
+                        h = ab(c, m.asyncOptions, b),
                         [v, g] = o.useState(null);
-                    return (0, t.jsxs)(l8.iS, {
+                    return (0, t.jsxs)(an.iS, {
                         selectionMode: l,
                         onSelectionChange: g,
-                        options: y,
+                        options: h,
                         value: v,
                         ...m,
                         children: [
-                            (0, t.jsx)(l8.a3, {
+                            (0, t.jsx)(an.a3, {
                                 label: a,
                                 hideLabel: i,
                                 placeholder: p,
                                 required: x,
-                                disabled: h,
+                                disabled: y,
                                 description: n,
                                 helperText: s,
                                 errorMessage: r,
                                 successMessage: d,
                                 wrapTags: u,
                             }),
-                            (0, t.jsx)(l8.X2, {}),
+                            (0, t.jsx)(an.X2, {}),
                         ],
                     });
                 },
@@ -4117,12 +4244,12 @@ let l9 = [
                             withGroups: s,
                         } = e,
                         [r, d] = o.useState(null),
-                        { flatOptions: u, groups: c } = o.useMemo(() => (0, l7.yG)(al), []);
-                    return (0, t.jsx)(l6.q, {
+                        { flatOptions: u, groups: c } = o.useMemo(() => (0, ai.yG)(au), []);
+                    return (0, t.jsx)(ao.q, {
                         selectionMode: l,
                         required: a,
                         shouldFocusWrap: i,
-                        items: s ? u : n ? ae : l9,
+                        items: s ? u : n ? ad : ar,
                         groups: s ? c : void 0,
                         onSelectionChange: d,
                         selectedItems: r,
@@ -4150,10 +4277,10 @@ let l9 = [
             },
         ],
     };
-function at(e, l, a) {
+function ab(e, l, a) {
     let t = o.useRef(null);
     return o.useMemo(() => {
-        let o = a ? al : e ? ae : l9;
+        let o = a ? au : e ? ad : ar;
         return l
             ? (e) =>
                   new Promise(
@@ -4162,7 +4289,7 @@ function at(e, l, a) {
             : o;
     }, [e, l, a]);
 }
-let ao = {
+let ap = {
     title: "Switch",
     stories: [
         {
@@ -4198,9 +4325,9 @@ let ao = {
         },
     ],
 };
-var ai = a(340351),
-    an = a(11779);
-let as = {
+var am = a(340351),
+    ax = a(11779);
+let ay = {
         title: "TagGroup",
         stories: [
             {
@@ -4211,7 +4338,7 @@ let as = {
                         r = (0, i.bG)([n.default], () => n.default.getCurrentUser()),
                         d = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: an.r },
+                                { id: "strength", label: "Strength", icon: ax.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
@@ -4232,7 +4359,7 @@ let as = {
                         p = o.useCallback(() => {
                             c(d);
                         }, [d]),
-                        m = (0, t.jsx)(ai.C, {
+                        m = (0, t.jsx)(am.C, {
                             label: "Categories",
                             selectionMode: l,
                             layout: s,
@@ -4272,7 +4399,7 @@ let as = {
             },
         ],
     },
-    ar = [
+    ah = [
         "heading-sm/normal",
         "heading-sm/medium",
         "heading-sm/semibold",
@@ -4378,9 +4505,9 @@ let as = {
         "experimental/mono-sm/normal",
         "experimental/mono-sm/bold",
     ];
-var ad = a(364522),
-    au = a(653197);
-let ac = {
+var av = a(364522),
+    ag = a(653197);
+let af = {
     name: "Text",
     id: "text",
     component: p.E,
@@ -4389,7 +4516,7 @@ let ac = {
             label: "Variant",
             type: "select",
             defaultValue: "text-sm/normal",
-            options: Object.values(ar).map((e) => ({ label: e, value: e })),
+            options: Object.values(ah).map((e) => ({ label: e, value: e })),
         },
         color: {
             label: "Color",
@@ -4412,10 +4539,10 @@ let ac = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var ab = a(459192),
-    ap = a(990078),
-    am = a(557464);
-let ax = {
+var aV = a(459192),
+    aC = a(990078),
+    aj = a(557464);
+let aS = {
     title: "Tooltip",
     stories: [
         {
@@ -4438,7 +4565,7 @@ let ax = {
                         if ("center" !== n && null != n)
                             return "custom" === n ? { align: n, customOffset: s } : { align: n };
                     }, [n, s]);
-                return (0, t.jsx)(ap.m, {
+                return (0, t.jsx)(aC.m, {
                     text: l,
                     position: a,
                     align: i,
@@ -4513,12 +4640,12 @@ let ax = {
                         forceOpen: m,
                         ...x
                     } = e,
-                    h = o.useMemo(() => {
+                    y = o.useMemo(() => {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    y = o.useMemo(() => (i ? { type: "image", src: am.A, aspectRatio: "1/1" } : void 0), [i]);
-                return (0, t.jsx)(ab.u, {
+                    h = o.useMemo(() => (i ? { type: "image", src: aj.A, aspectRatio: "1/1" } : void 0), [i]);
+                return (0, t.jsx)(aV.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -4526,8 +4653,8 @@ let ax = {
                     padding: s,
                     delay: b,
                     spacing: p,
-                    caretConfig: h,
-                    asset: y,
+                    caretConfig: y,
+                    asset: h,
                     assetSize: n,
                     forceOpen: m,
                     ...x,
@@ -4602,27 +4729,27 @@ let ax = {
         },
     ],
 };
-var ah = a(508382),
-    ay = a(481224);
-let av = {
+var ak = a(508382),
+    aw = a(481224);
+let aM = {
         id: "mana",
         name: "Mana",
         groups: [
             {
                 title: "Text",
                 stories: [
-                    ac,
+                    af,
                     {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
-                            return (0, t.jsx)(ad.Ar, {
-                                className: au.H,
-                                children: Object.values(ar).map((l) =>
+                            return (0, t.jsx)(av.Ar, {
+                                className: ag.H,
+                                children: Object.values(ah).map((l) =>
                                     (0, t.jsxs)(
                                         V.Z,
                                         {
-                                            className: au.N,
+                                            className: ag.N,
                                             children: [
                                                 (0, t.jsx)(p.E, { ...e, variant: l, children: e.children }),
                                                 (0, t.jsx)(p.E, {
@@ -4648,16 +4775,16 @@ let av = {
             ez,
             eF,
             e8,
-            lJ,
-            l0,
-            ao,
-            lR,
-            ly,
-            aa,
-            lZ,
-            lK,
-            ax,
-            as,
+            l5,
+            l9,
+            ap,
+            lH,
+            lw,
+            ac,
+            l3,
+            l7,
+            aS,
+            ay,
             ld,
             {
                 title: "FloatingLayer",
@@ -4676,7 +4803,7 @@ let av = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(ah.Ow, {
+                            return (0, t.jsx)(ak.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -4688,7 +4815,7 @@ let av = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: ay.q,
+                                        className: aw.q,
                                         children: (0, t.jsx)(p.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -4752,13 +4879,13 @@ let av = {
                         id: "rive-all-animations",
                         component: function () {
                             let [e, l] = o.useState(!0),
-                                a = o.useContext(l2.C),
+                                a = o.useContext(al.C),
                                 [i, n] = o.useState(0);
-                            return (0, t.jsxs)(l2.C.Provider, {
+                            return (0, t.jsxs)(al.C.Provider, {
                                 value: { ...a, reducedMotion: { ...a.reducedMotion, enabled: e } },
                                 children: [
                                     (0, t.jsx)("div", {
-                                        className: l4.QT,
+                                        className: aa.QT,
                                         children: (0, t.jsxs)(D.B, {
                                             gap: 8,
                                             children: [
@@ -4777,16 +4904,16 @@ let av = {
                                     (0, t.jsx)(
                                         "div",
                                         {
-                                            className: l4.Vg,
-                                            children: l3.map((e) => {
+                                            className: aa.Vg,
+                                            children: at.map((e) => {
                                                 let { name: l, Component: a } = e;
                                                 return (0, t.jsxs)(
                                                     "div",
                                                     {
-                                                        className: l4.Hn,
+                                                        className: aa.Hn,
                                                         children: [
                                                             (0, t.jsx)("div", {
-                                                                className: l4.k$,
+                                                                className: aa.k$,
                                                                 children: (0, t.jsx)(a, {
                                                                     style: { width: "100%", height: "100%" },
                                                                 }),
@@ -4794,7 +4921,7 @@ let av = {
                                                             (0, t.jsx)(p.E, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-subtle",
-                                                                className: l4.Pf,
+                                                                className: aa.Pf,
                                                                 children: l,
                                                             }),
                                                         ],
@@ -4813,4 +4940,4 @@ let av = {
             },
         ],
     },
-    ag = { collections: [av, eu] };
+    aT = { collections: [aM, eu] };

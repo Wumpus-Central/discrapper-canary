@@ -20,7 +20,7 @@ var i = n(627968),
     m = n(823607),
     g = n(511274),
     S = n(375708),
-    N = n(609413);
+    N = n(311109);
 function C(e, t) {
     let n = r.useContext(p.cK);
     return (
@@ -98,7 +98,16 @@ function L(e) {
             ...w
         } = e,
         { fieldProps: G } = (0, E.n)(w),
-        x = (0, g.Y)({ validateOn: v, error: T, value: I, minLength: p, maxLength: _, defaultDirty: S }),
+        x = (0, g.Y)({
+            validateOn: v,
+            error: T,
+            value: I,
+            minLength: p,
+            maxLength: _,
+            min: null != w.min ? Number(w.min) : void 0,
+            max: null != w.max ? Number(w.max) : void 0,
+            defaultDirty: S,
+        }),
         { setShouldValidate: k } = x,
         F = C(I, f),
         V = "object" == typeof L && "type" in L && "tags" === L.type,
