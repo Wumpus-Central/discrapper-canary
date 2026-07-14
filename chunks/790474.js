@@ -269,14 +269,13 @@ function ef(e) {
 }
 var ex = n(575863);
 let ep = { offset: { left: 4, right: -12 } };
-function eN(e, t) {
-    p.A.fetchRecentMentions({
-        before: t,
-        limit: el.Ue3,
-        guildId: null != e && L.Ay.guildFilter !== el.KE7.ALL_SERVERS ? e.getGuildId() : null,
-        roles: L.Ay.roleFilter,
-        everyone: L.Ay.everyoneFilter,
-    });
+function eN(e, t, n) {
+    let s = t ? L.Ay.guildFilter : null,
+        l = t ? L.Ay.roleFilter : null,
+        a = t ? L.Ay.everyoneFilter : null,
+        i = null;
+    null != e && null != s && (i = s === el.KE7.ALL_SERVERS ? null : e.getGuildId()),
+        p.A.fetchRecentMentions({ before: n, limit: el.Ue3, guildId: i, roles: l, everyone: a });
 }
 function eE(e) {
     let { onJump: t } = e,
@@ -302,11 +301,11 @@ function eE(e) {
         f = (0, E.A)(u);
     r.useEffect(() => {
         L.Ay.hasLoadedEver
-            ? ((null != g && d !== g) || (null != m && o !== m) || (null != f && u !== f)) && eN(n)
-            : eN(n);
-    }, [g, d, m, o, f, u, n]),
+            ? ((null != g && d !== g) || (null != m && o !== m) || (null != f && u !== f)) && eN(n, !0)
+            : eN(n, !0);
+    }, [g, d, m, o, f, u, n, !0]),
         (0, N.Ay)(() => {
-            s?.some(S.$r) && (p.A.clearMentions(), eN(n));
+            s?.some(S.$r) && (p.A.clearMentions(), eN(n, !0));
         }),
         r.useEffect(
             () => () => {
@@ -329,7 +328,7 @@ function eE(e) {
         hasMore: l,
         analyticsName: "Recent Mentions",
         loadMore: function () {
-            eN(n, null != s && s.length > 0 ? s[s.length - 1].id : null);
+            eN(n, !0, null != s && s.length > 0 ? s[s.length - 1].id : null);
         },
         canCloseAllMessages: !0,
         renderHeader: x,
