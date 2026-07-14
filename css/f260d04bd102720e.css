@@ -23,6 +23,11 @@
     cursor: pointer
 }
 
+.clickable__3f82e:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 2px
+}
+
 .bannerMedia__3f82e {
     inset: 0;
     position: absolute;
@@ -64,8 +69,14 @@
 }
 
 .arrowButton__3f82e {
-    pointer-events: auto;
+    align-items: center;
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-round);
+    display: flex;
+    height: 32px;
+    justify-content: center;
     top: 50%;
     transform: translateY(-50%);
+    width: 32px;
     z-index: 1
 }

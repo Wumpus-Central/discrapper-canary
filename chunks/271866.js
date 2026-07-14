@@ -1,22 +1,21 @@
-"use strict";
-n.d(t, { SH: () => h, cL: () => A, q1: () => E });
+n.d(t, { SH: () => T, cL: () => d, q1: () => A });
 var i = n(228366),
-    r = n(795816),
-    a = n(627363),
+    l = n(795816),
+    r = n(627363),
     s = n(587895),
-    l = n(20015),
+    a = n(20015),
     o = n(793943),
-    d = n(395671),
+    E = n(395671),
     c = n(998218),
     u = n(110782),
     _ = n(652215);
-async function E(e, t) {
+async function A(e, t) {
     i.h.dispatch({ applicationId: e, type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START" });
     try {
-        if (!(await (0, r.Ir)(e))) throw Error("Do not have access!");
+        if (!(await (0, l.Ir)(e))) throw Error("Do not have access!");
         let n = s.A.getApplication(e);
-        null == n && (n = d.Ay.createFromServer(await a.Ay.fetchApplication(e)));
-        let o = (0, l.n)(n, _.gfo.EMBEDDED);
+        null == n && (n = E.Ay.createFromServer(await r.Ay.fetchApplication(e)));
+        let o = (0, a.n)(n, _.gfo.EMBEDDED);
         if (o && (null == t || !c.A.URL_REGEX.test(t))) throw Error("Invalid Origin URL for embedded application");
         return (
             o || u.Cd(n),
@@ -33,11 +32,11 @@ async function E(e, t) {
         );
     }
 }
-function A() {
+function d() {
     o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
         i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" });
 }
-function h() {
+function T() {
     o.fy.getState().activePanel === o.HP.APPLICATION_TEST_MODE_DEBUG && (0, o.Jp)(),
         i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" });
 }

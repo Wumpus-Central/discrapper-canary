@@ -1,32 +1,31 @@
-"use strict";
 n.d(t, { A: () => A });
 var i = n(64700),
-    r = n(17928),
-    a = n(87664),
+    l = n(17928),
+    r = n(87664),
     s = n(517164),
-    l = n(20805),
-    o = n(83971),
-    d = n(583846),
-    c = n(290863),
-    u = n(343129);
-let _ = [],
-    E = [];
+    u = n(20805),
+    c = n(83971),
+    a = n(583846),
+    d = n(290863),
+    h = n(343129);
+let o = [],
+    p = [];
 function A(e) {
-    let t = (0, a.A)(e),
-        n = (0, r.bG)([c.A], () => c.A.getActivities(e)),
-        A = (0, r.bG)([s.A], () => s.A.getUserOutbox(e)),
-        { live: h, recent: I } = (0, i.useMemo)(() => {
-            let e = (0, u.U)(n),
+    let t = (0, r.A)(e),
+        n = (0, l.bG)([d.A], () => d.A.getActivities(e)),
+        A = (0, l.bG)([s.A], () => s.A.getUserOutbox(e)),
+        { live: b, recent: g } = (0, i.useMemo)(() => {
+            let e = (0, h.U)(n),
                 t = A?.entries.filter(
                     (t) =>
-                        !(0, d.Hd)(t) &&
-                        ((0, l.Tq)(t)
-                            ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, o.qb)(t, e))
-                            : (0, l.Lf)(t)
-                              ? !e.some((e) => null != e && (0, o.SU)(t, e))
-                              : (0, l.$R)(t)),
+                        !(0, a.Hd)(t) &&
+                        ((0, u.Tq)(t)
+                            ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, c.qb)(t, e))
+                            : (0, u.Lf)(t)
+                              ? !e.some((e) => null != e && (0, c.SU)(t, e))
+                              : (0, u.$R)(t)),
                 );
-            return { live: 0 === e.length ? _ : e, recent: null == t || 0 === t.length ? E : t };
+            return { live: 0 === e.length ? o : e, recent: null == t || 0 === t.length ? p : t };
         }, [n, A?.entries]);
-    return { live: h, recent: I, stream: t, outbox: A };
+    return { live: b, recent: g, stream: t, outbox: A };
 }

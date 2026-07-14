@@ -1,198 +1,197 @@
-"use strict";
-n.d(t, { A: () => B });
-var i = n(627968),
-    r = n(64700),
-    a = n(990078),
-    s = n(939249),
-    l = n(365199),
-    o = n(661531),
-    d = n(922016),
-    c = n(980707),
-    u = n(477782),
-    _ = n(793574),
-    E = n(688810),
-    A = n(315246),
-    h = n(92240),
-    I = n(679492),
-    f = n(243949),
-    p = n(939496),
-    T = n(17928),
-    m = n(573648),
-    g = n(541806),
-    S = n(261020),
-    N = n(83971),
-    C = n(780964),
-    O = n(766075),
-    R = n(30370),
-    L = n(652215),
-    D = n(375708),
-    y = n(754495),
-    v = n(534465),
-    b = n(939075),
-    M = n(20805),
-    P = n(655116),
-    U = n(287809),
-    w = n(272984),
-    G = n(695311),
-    x = n(518477),
-    k = n(996988);
-function F(e) {
+e.d(n, { A: () => W });
+var i = e(627968),
+    l = e(64700),
+    a = e(990078),
+    r = e(939249),
+    s = e(365199),
+    o = e(661531),
+    c = e(922016),
+    u = e(980707),
+    d = e(477782),
+    A = e(793574),
+    x = e(688810),
+    p = e(315246),
+    f = e(92240),
+    _ = e(679492),
+    m = e(243949),
+    T = e(939496),
+    E = e(17928),
+    N = e(573648),
+    g = e(541806),
+    C = e(261020),
+    I = e(83971),
+    j = e(780964),
+    y = e(766075),
+    S = e(30370),
+    O = e(652215),
+    h = e(375708),
+    P = e(754495),
+    v = e(534465),
+    L = e(939075),
+    R = e(20805),
+    U = e(655116),
+    b = e(287809),
+    M = e(272984),
+    D = e(695311),
+    G = e(518477),
+    V = e(996988);
+function Y(t) {
     let {
-            children: t,
-            user: n,
+            children: n,
+            user: e,
             activity: a,
-            entry: s,
-            display: l,
+            entry: r,
+            display: s,
             onSelect: o,
-            onClose: F,
-            appContext: V,
-            targetElementRef: B,
-        } = e,
-        [H, j] = r.useState(!1),
-        { analyticsLocations: W } = (0, E.Ay)(_.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        Y = (0, h.A)({ display: l, user: n, activity: a, entry: s, analyticsLocations: W }),
-        K = (0, I.NR)(),
-        $ = r.useRef(null),
-        z = K?.interactionPopoutTargetRef ?? $,
-        q = (function (e) {
-            let { onAction: t } = e,
-                { themeType: n } = (0, p.E)(),
-                r = (0, f.A)({
-                    userId: e.user.id,
-                    tabSection: x.RP.ACTIVITY,
-                    label: D.intl.string(D.t.pD1L1u),
-                    onAction: () => t?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
+            onClose: Y,
+            appContext: k,
+            targetElementRef: W,
+        } = t,
+        [H, B] = l.useState(!1),
+        { analyticsLocations: w } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        z = (0, f.A)({ display: s, user: e, activity: a, entry: r, analyticsLocations: w }),
+        $ = (0, _.NR)(),
+        F = l.useRef(null),
+        X = $?.interactionPopoutTargetRef ?? F,
+        Q = (function (t) {
+            let { onAction: n } = t,
+                { themeType: e } = (0, T.E)(),
+                l = (0, m.A)({
+                    userId: t.user.id,
+                    tabSection: G.RP.ACTIVITY,
+                    label: h.intl.string(h.t.pD1L1u),
+                    onAction: () => n?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
                 });
             return [
-                n === k.d.POPOUT ? r : null,
-                (function (e) {
-                    let { user: t, entry: n, display: r, onAction: a, onClose: s } = e,
-                        l = (0, T.bG)([U.default], () => U.default.getCurrentUser()?.id === t.id),
-                        o = (0, T.bG)([P.A], () => P.A.hasConnectedAccount());
-                    if ("recent" !== r || !(0, N.F3)(n)) return null;
+                e === V.d.POPOUT ? l : null,
+                (function (t) {
+                    let { user: n, entry: e, display: l, onAction: a, onClose: r } = t,
+                        s = (0, E.bG)([b.default], () => b.default.getCurrentUser()?.id === n.id),
+                        o = (0, E.bG)([U.A], () => U.A.hasConnectedAccount());
+                    if ("recent" !== l || !(0, I.F3)(e)) return null;
                     if (!o)
-                        return (0, i.jsx)(u.Dr, {
+                        return (0, i.jsx)(d.Dr, {
                             id: "connect-spotify",
-                            label: D.intl.formatToPlainString(D.t.XWSHTb, { platform: w.HD }),
+                            label: h.intl.formatToPlainString(h.t.XWSHTb, { platform: M.HD }),
                             action: () => {
                                 a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                                    (0, O.openUserSettings)(C.X.CONNECTIONS_PANEL),
-                                    s?.();
+                                    (0, y.openUserSettings)(j.X.CONNECTIONS_PANEL),
+                                    r?.();
                             },
                         });
-                    if (l) return null;
-                    let d = (0, M.Tq)(n) ? n.extra.entries[0]?.media : n.extra.media;
-                    return null == d
+                    if (s) return null;
+                    let c = (0, R.Tq)(e) ? e.extra.entries[0]?.media : e.extra.media;
+                    return null == c
                         ? null
-                        : (0, i.jsx)(u.Dr, {
+                        : (0, i.jsx)(d.Dr, {
                               id: "play-on-spotify",
-                              label: D.intl.string(D.t.rRffNz),
+                              label: h.intl.string(h.t.rRffNz),
                               action: () => {
                                   a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
-                                      (0, S.n)(w.M0.TRACK, d.external_id);
+                                      (0, C.n)(M.M0.TRACK, c.external_id);
                               },
                           });
-                })(e),
-                (0, v.Ay)(e),
-                (0, v.gA)(e),
-                (function (e) {
-                    let { display: t, entry: n, onAction: r, onClose: a } = e,
-                        s = (0, M.yl)(n),
-                        l = (0, G.A)({ applicationId: s ? n.extra.application_id : void 0, onClose: a });
-                    return "recent" === t && s
-                        ? (0, i.jsx)(u.Dr, {
+                })(t),
+                (0, v.Ay)(t),
+                (0, v.gA)(t),
+                (function (t) {
+                    let { display: n, entry: e, onAction: l, onClose: a } = t,
+                        r = (0, R.yl)(e),
+                        s = (0, D.A)({ applicationId: r ? e.extra.application_id : void 0, onClose: a });
+                    return "recent" === n && r
+                        ? (0, i.jsx)(d.Dr, {
                               id: "view-activity",
-                              label: D.intl.string(D.t.GDWYR8),
+                              label: h.intl.string(h.t.GDWYR8),
                               action: () => {
-                                  r?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), l();
+                                  l?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), s();
                               },
                           })
                         : null;
-                })(e),
-                (0, b.A)(e),
-                (function (e) {
-                    let { activity: t, entry: n, display: r, onAction: a, onClose: s } = e,
-                        l = (0, T.bG)([R.A], () => null != R.A.getAccount(null, L.fg2.CRUNCHYROLL));
-                    if (!(0, g.A)(t) && !(0, N.CU)(n)) return null;
-                    if (!l)
-                        return (0, i.jsx)(u.Dr, {
+                })(t),
+                (0, L.A)(t),
+                (function (t) {
+                    let { activity: n, entry: e, display: l, onAction: a, onClose: r } = t,
+                        s = (0, E.bG)([S.A], () => null != S.A.getAccount(null, O.fg2.CRUNCHYROLL));
+                    if (!(0, g.A)(n) && !(0, I.CU)(e)) return null;
+                    if (!s)
+                        return (0, i.jsx)(d.Dr, {
                             id: "connect-crunchyroll",
-                            label: D.intl.formatToPlainString(D.t.XWSHTb, {
-                                platform: m.A.get(L.fg2.CRUNCHYROLL).name,
+                            label: h.intl.formatToPlainString(h.t.XWSHTb, {
+                                platform: N.A.get(O.fg2.CRUNCHYROLL).name,
                             }),
                             action: () => {
                                 a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
-                                    (0, O.openUserSettings)(C.X.CONNECTIONS_PANEL),
-                                    s?.();
+                                    (0, y.openUserSettings)(j.X.CONNECTIONS_PANEL),
+                                    r?.();
                             },
                         });
-                    if ("recent" !== r || !(0, N.CU)(n)) return null;
-                    let o = n.extra.url;
+                    if ("recent" !== l || !(0, I.CU)(e)) return null;
+                    let o = e.extra.url;
                     return null == o || "" === o
                         ? null
-                        : (0, i.jsx)(u.Dr, {
+                        : (0, i.jsx)(d.Dr, {
                               id: "watch-on-crunchyroll",
-                              label: D.intl.string(D.t.OpxQVH),
+                              label: h.intl.string(h.t.OpxQVH),
                               action: () => {
-                                  a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, S.C)(o);
+                                  a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, C.C)(o);
                               },
                           });
-                })(e),
-                (0, y.s)(e),
-            ].filter((e) => null != e);
-        })({ entry: s, activity: a, user: n, display: l, onClose: F, onAction: Y, isMenuOpen: H, appContext: V });
-    return 0 === q.length || n.bot
+                })(t),
+                (0, P.s)(t),
+            ].filter((t) => null != t);
+        })({ entry: r, activity: a, user: e, display: s, onClose: Y, onAction: z, isMenuOpen: H, appContext: k });
+    return 0 === Q.length || e.bot
         ? null
-        : (0, i.jsx)(d.Y, {
-              targetElementRef: B ?? z,
+        : (0, i.jsx)(c.Y, {
+              targetElementRef: W ?? X,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  Y({ action: "OPEN_MENU" }), j(!0);
+                  z({ action: "OPEN_MENU" }), B(!0);
               },
-              renderPopout: (e) => {
-                  let { closePopout: t } = e;
+              renderPopout: (t) => {
+                  let { closePopout: n } = t;
                   return (0, i.jsx)("div", {
-                      onClick: (e) => e.stopPropagation(),
-                      children: (0, i.jsx)(c.W, {
+                      onClick: (t) => t.stopPropagation(),
+                      children: (0, i.jsx)(u.W, {
                           "data-menu-migrated-auto": !0,
-                          navId: A.n,
+                          navId: p.n,
                           onClose: () => {
-                              t(), j(!1);
+                              n(), B(!1);
                           },
-                          "aria-label": D.intl.string(D.t.PlAQz1),
+                          "aria-label": h.intl.string(h.t.PlAQz1),
                           onSelect: o,
-                          children: (0, i.jsx)(u.rX, { children: q }),
+                          children: (0, i.jsx)(d.rX, { children: Q }),
                       }),
                   });
               },
-              children: t,
+              children: n,
           });
 }
-var V = n(514566);
-function B(e) {
-    let t = r.useRef(null);
-    return (0, i.jsx)(F, {
-        ...e,
-        targetElementRef: t,
-        children: (e) =>
+var k = e(514566);
+function W(t) {
+    let n = l.useRef(null);
+    return (0, i.jsx)(Y, {
+        ...t,
+        targetElementRef: n,
+        children: (t) =>
             (0, i.jsx)(a.m, {
-                targetElementRef: t,
-                text: D.intl.string(D.t["UKOtz+"]),
+                targetElementRef: n,
+                text: h.intl.string(h.t["UKOtz+"]),
                 ariaHidden: !0,
-                children: (0, i.jsx)(s.D, {
-                    ...e,
-                    innerRef: t,
-                    "aria-label": D.intl.string(D.t["UKOtz+"]),
-                    onClick: (t) => {
-                        t.stopPropagation(), e.onClick(t);
+                children: (0, i.jsx)(r.D, {
+                    ...t,
+                    innerRef: n,
+                    "aria-label": h.intl.string(h.t["UKOtz+"]),
+                    onClick: (n) => {
+                        n.stopPropagation(), t.onClick(n);
                     },
-                    onContextMenu: (t) => {
-                        t.preventDefault(), e.onClick(t);
+                    onContextMenu: (n) => {
+                        n.preventDefault(), t.onClick(n);
                     },
-                    className: V.He,
-                    children: (0, i.jsx)(l.j, { color: o.A.colors.INTERACTIVE_TEXT_DEFAULT, size: "xs" }),
+                    className: k.He,
+                    children: (0, i.jsx)(s.j, { color: o.A.colors.INTERACTIVE_TEXT_DEFAULT, size: "xs" }),
                 }),
             }),
     });

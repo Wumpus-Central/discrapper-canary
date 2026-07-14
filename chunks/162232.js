@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { A: () => c });
-var i = n(627968);
-n(64700);
-var r = n(97808),
-    a = n(778712),
-    s = n(854627),
-    l = n(19575),
-    o = n(375708);
-let d = l.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
-    c = function (e) {
+i.d(a, { A: () => c });
+var e = i(627968);
+i(64700);
+var r = i(97808),
+    n = i(778712),
+    s = i(854627),
+    l = i(19575),
+    d = i(375708);
+let u = l.Ay.getEnableHardwareAcceleration() ? r.Js : r.eu,
+    c = function (t) {
         let {
-                user: t,
-                guildId: n,
+                user: a,
+                guildId: i,
                 avatarDecorationOverride: r,
                 status: l,
-                avatarSize: c = a._3.SIZE_120,
-                "aria-hidden": u = !1,
-                className: _,
-                animateOnHover: E = !1,
-                questPreviewRewardAssetUrl: A = null,
-                decorationName: h,
-            } = e,
+                avatarSize: c = n._3.SIZE_120,
+                "aria-hidden": o = !1,
+                className: h,
+                animateOnHover: p = !1,
+                questPreviewRewardAssetUrl: g = null,
+                decorationName: _,
+            } = t,
             {
-                avatarDecorationSrc: I,
+                avatarDecorationSrc: b,
                 avatarSrc: f,
-                eventHandlers: p,
+                eventHandlers: k,
             } = (0, s.A)({
-                userId: t.id,
-                guildId: n,
+                userId: a.id,
+                guildId: i,
                 size: c,
                 showPending: !0,
                 avatarDecorationOverride: r,
-                animateOnHover: E,
+                animateOnHover: p,
             }),
-            T = (() => {
-                if (!u)
-                    return "string" == typeof h
-                        ? o.intl.formatToPlainString(o.t.Do2lxE, { a11y_text: h })
-                        : null === h
-                          ? o.intl.string(o.t["7hRBmC"])
-                          : o.intl.string(o.t.lqaIxI);
+            w = (() => {
+                if (!o)
+                    return "string" == typeof _
+                        ? d.intl.formatToPlainString(d.t.Do2lxE, { a11y_text: _ })
+                        : null === _
+                          ? d.intl.string(d.t["7hRBmC"])
+                          : d.intl.string(d.t.lqaIxI);
             })();
-        return (0, i.jsx)(d, {
-            avatarDecoration: I ?? A,
+        return (0, e.jsx)(u, {
+            avatarDecoration: b ?? g,
             src: f,
             size: c,
             status: l,
-            "aria-label": T,
-            "aria-hidden": u,
-            className: _,
-            ...p,
+            "aria-label": w,
+            "aria-hidden": o,
+            className: h,
+            ...k,
         });
     };

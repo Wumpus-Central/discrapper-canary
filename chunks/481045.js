@@ -1,54 +1,53 @@
-"use strict";
-n.d(t, { L7: () => T, qA: () => g });
-var i = n(627968),
-    r = n(17928),
-    a = n(939249),
-    s = n(320448),
-    l = n(661531),
-    o = n(834730),
-    d = n(885386),
-    c = n(780964),
-    u = n(766075),
-    _ = n(711014),
-    E = n(115063),
-    A = n(365258),
-    h = n(926418),
-    I = n(395277),
-    f = n(375708),
-    p = n(141710);
-function T() {
-    (0, u.openUserSettings)(c.X.ACTIVITY_PRIVACY_PANEL);
+e.d(i, { L7: () => g, qA: () => m });
+var n = e(627968),
+    r = e(17928);
+if (21552 == e.j) var s = e(939249);
+if (21552 == e.j) var l = e(320448);
+if (21552 == e.j) var a = e(661531);
+if (21552 == e.j) var c = e(834730);
+var d = e(885386),
+    o = e(780964),
+    u = e(766075),
+    f = e(711014),
+    C = e(115063),
+    h = e(365258),
+    j = e(926418),
+    x = e(395277),
+    p = e(375708),
+    v = e(141710);
+function g() {
+    (0, u.openUserSettings)(o.X.ACTIVITY_PRIVACY_PANEL);
 }
-function m(e) {
-    let { children: t, onClick: n } = e;
-    return (0, i.jsxs)(a.D, {
-        className: p.E1,
-        onClick: n,
+function k(t) {
+    let { children: i, onClick: e } = t;
+    return (0, n.jsxs)(s.D, {
+        className: v.E1,
+        onClick: e,
         children: [
-            (0, i.jsx)("div", { className: p.j3, children: t }),
-            (0, i.jsx)(s._, { color: l.A.colors.TEXT_SUBTLE, size: "xs" }),
+            (0, n.jsx)("div", { className: v.j3, children: i }),
+            (0, n.jsx)(l._, { color: a.A.colors.TEXT_SUBTLE, size: "xs" }),
         ],
     });
 }
-function g(e) {
-    let { onClosePopout: t } = e,
-        n = d.tz.useSetting(),
-        a = (0, r.bG)([_.Ay], () => _.Ay.getFlattenedGuildIds()),
-        s = (0, E.Kk)(),
-        l = a.filter((e) => !s.has(e)),
-        c = (0, A.AB)(l);
-    return 0 === a.length
+function m(t) {
+    let { onClosePopout: i } = t,
+        e = d.tz.useSetting(),
+        s = (0, r.bG)([f.Ay], () => f.Ay.getFlattenedGuildIds()),
+        l = (0, C.Kk)(),
+        a = s.filter((t) => !l.has(t)),
+        o = (0, h.AB)(a);
+    return 0 === s.length
         ? null
-        : (0, i.jsxs)(m, {
+        : (0, n.jsxs)(k, {
               onClick: () => {
-                  t(), T();
+                  i(), g();
               },
               children: [
-                  (0, i.jsx)(o.E, {
+                  (0, n.jsx)(c.E, {
                       variant: "text-sm/semibold",
-                      children: f.intl.string(n ? I.default["3GrhnF"] : I.default["54ycKJ"]),
+                      children: p.intl.string(e ? x.default["3GrhnF"] : x.default["54ycKJ"]),
                   }),
-                  (0, i.jsx)(h.l, { guildIds: c, prioritizeSelectedGuild: !0 }),
+                  (0, n.jsx)(j.l, { guildIds: o, prioritizeSelectedGuild: !0 }),
               ],
           });
 }

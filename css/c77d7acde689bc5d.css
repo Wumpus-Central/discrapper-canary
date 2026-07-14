@@ -256,8 +256,10 @@
 }
 
 .heroBlockContent__08415 {
+    box-sizing: border-box;
     max-width: 1080px;
     padding-bottom: 24px;
+    padding-inline: var(--custom-hero-content-inline-padding, 0);
     position: relative;
     width: 100%
 }

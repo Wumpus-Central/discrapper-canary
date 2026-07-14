@@ -1,9 +1,8 @@
-"use strict";
-r.d(t, { u: () => a });
-var n = r(64700),
-    i = r(321733),
-    o = r(75375);
+e.d(t, { u: () => a });
+var n = e(64700),
+    o = e(321733),
+    u = e(75375);
 function a() {
-    var e = (0, n.useContext)(o.M).dragDropManager;
-    return (0, i.V)(null != e, "Expected drag drop context"), e;
+    var r = (0, n.useContext)(u.M).dragDropManager;
+    return (0, o.V)(null != r, "Expected drag drop context"), r;
 }

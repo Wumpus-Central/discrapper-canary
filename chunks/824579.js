@@ -1,14 +1,13 @@
-"use strict";
-n.d(t, { K: () => s, t: () => a });
+n.d(t, { K: () => l, t: () => r });
 let i = { resolve: (e) => {} },
-    r = new Promise((e, t) => {
+    s = new Promise((e, t) => {
         i.resolve = e;
     });
-function a(e) {
-    r.then(() => {
+function r(e) {
+    s.then(() => {
         e();
     });
 }
-function s() {
+function l() {
     i.resolve(null);
 }

@@ -1,74 +1,73 @@
-"use strict";
-n.d(t, { A: () => m });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(17928),
-    o = n(778712),
-    d = n(97808),
-    c = n(297413),
-    u = n(966327),
-    _ = n(562819),
-    E = n(963977),
-    A = n(386467),
-    h = n(956705),
-    I = n(994500);
-n(427262);
-var f = n(19575),
-    p = n(463361);
-let T = f.Ay.getEnableHardwareAcceleration(),
-    m = function (e) {
+s.d(t, { A: () => y });
+var i = s(627968),
+    n = s(64700),
+    a = s(503698),
+    r = s.n(a),
+    l = s(17928),
+    o = s(778712),
+    u = s(97808),
+    c = s(297413),
+    h = s(966327),
+    d = s(562819),
+    A = s(963977),
+    m = s(386467),
+    p = s(956705),
+    N = s(994500);
+s(427262);
+var I = s(19575),
+    E = s(463361);
+let g = I.Ay.getEnableHardwareAcceleration(),
+    y = function (e) {
         let {
                 user: t,
-                hovered: n,
+                hovered: s,
                 subText: a,
-                showAccountIdentifier: f,
-                status: m,
-                isMobile: g,
-                isVR: S,
-                className: N,
+                showAccountIdentifier: I,
+                status: y,
+                isMobile: f,
+                isVR: v,
+                className: C,
             } = e,
-            C = (0, l.bG)([I.A], () => I.A.getNickname(t.id)),
-            O = r.useContext(A.A),
-            R = (0, h.r)("PeopleUserInfo"),
-            L = t.getAvatarURL(O, (0, o.FT)(o._3.SIZE_32), n),
+            L = (0, l.bG)([N.A], () => N.A.getNickname(t.id)),
+            D = n.useContext(m.A),
+            S = (0, p.r)("PeopleUserInfo"),
+            w = t.getAvatarURL(D, (0, o.FT)(o._3.SIZE_32), s),
             {
-                avatarDecorationSrc: D,
-                eventHandlers: { onMouseEnter: y, onMouseLeave: v },
-            } = (0, E.A)({ user: t, guildId: O, size: (0, _.Te)(o._3.SIZE_32), onlyAnimateOnHoverOrFocus: !0 });
-        r.useEffect(() => {
-            R && (n ? y() : v());
-        }, [n, R, y, v]);
-        let b = T ? d.Js : d.eu;
+                avatarDecorationSrc: _,
+                eventHandlers: { onMouseEnter: G, onMouseLeave: x },
+            } = (0, A.A)({ user: t, guildId: D, size: (0, d.Te)(o._3.SIZE_32), onlyAnimateOnHoverOrFocus: !0 });
+        n.useEffect(() => {
+            S && (s ? G() : x());
+        }, [s, S, G, x]);
+        let R = g ? u.Js : u.eu;
         return (0, i.jsxs)("div", {
-            className: s()(p.eF, N, { [p.yo]: n }),
+            className: r()(E.eF, C, { [E.yo]: s }),
             children: [
-                R
-                    ? (0, i.jsx)(b, {
-                          src: L,
+                S
+                    ? (0, i.jsx)(R, {
+                          src: w,
                           size: o._3.SIZE_32,
-                          status: m,
-                          isMobile: g,
-                          isVR: S,
-                          avatarDecoration: D,
+                          status: y,
+                          isMobile: f,
+                          isVR: v,
+                          avatarDecoration: _,
                           "aria-label": t.username,
-                          className: p.my,
+                          className: E.my,
                       })
-                    : (0, i.jsx)(u.A, { user: t, className: p.my, animate: n, status: m, isMobile: g, isVR: S }),
+                    : (0, i.jsx)(h.A, { user: t, className: E.my, animate: s, status: y, isMobile: f, isVR: v }),
                 (0, i.jsxs)("div", {
-                    className: p.Qq,
+                    className: E.Qq,
                     children: [
                         (0, i.jsx)(c.A, {
                             user: t,
-                            nick: C,
-                            botClass: p.AO,
-                            className: s()(p.xK, { [p.Nu]: t.hasUniqueUsername() }),
-                            usernameClass: p.Xh,
-                            discriminatorClass: p.D2,
-                            showAccountIdentifier: f,
+                            nick: L,
+                            botClass: E.AO,
+                            className: r()(E.xK, { [E.Nu]: t.hasUniqueUsername() }),
+                            usernameClass: E.Xh,
+                            discriminatorClass: E.D2,
+                            showAccountIdentifier: I,
                         }),
-                        (0, i.jsx)("div", { className: p.W$, children: a }),
+                        (0, i.jsx)("div", { className: E.W$, children: a }),
                     ],
                 }),
             ],

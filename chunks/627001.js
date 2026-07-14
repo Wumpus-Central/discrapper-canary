@@ -1,36 +1,35 @@
-"use strict";
-n.d(t, { P: () => E });
-var i = n(627968),
-    r = n(503698),
-    a = n.n(r),
-    s = n(990078),
-    l = n(240248),
-    o = n(561794),
-    d = n(360469),
-    c = n(375708),
-    u = n(831350);
-function _(e) {
-    let { spec: t, icon: n, tooltipText: r } = e,
-        d = !(0, l.uJ)(r),
-        c = (0, i.jsx)("div", {
-            className: a()(u.Fx, { [u.Y_]: d }),
-            style: { top: t.iconInset, insetInlineStart: t.iconInset },
-            children: n,
+t.d(s, { P: () => x });
+var i = t(627968),
+    n = t(503698),
+    a = t.n(n),
+    r = t(990078),
+    l = t(240248),
+    c = t(561794),
+    u = t(360469),
+    d = t(375708),
+    o = t(831350);
+function h(e) {
+    let { spec: s, icon: t, tooltipText: n } = e,
+        u = !(0, l.uJ)(n),
+        d = (0, i.jsx)("div", {
+            className: a()(o.Fx, { [o.Y_]: u }),
+            style: { top: s.iconInset, insetInlineStart: s.iconInset },
+            children: t,
         });
-    return d ? (0, i.jsx)(s.m, { text: r, position: "top", delay: o.Zh, children: c }) : c;
+    return u ? (0, i.jsx)(r.m, { text: n, position: "top", delay: c.Zh, children: d }) : d;
 }
-function E(e) {
-    let { spec: t, application: n } = e,
-        r = null != n ? n.getIconURL(d.iu.SMALL) : void 0;
-    return null == r
+function x(e) {
+    let { spec: s, application: t } = e,
+        n = null != t ? t.getIconURL(u.iu.SMALL) : void 0;
+    return null == n
         ? null
-        : (0, i.jsx)(_, {
-              spec: t,
+        : (0, i.jsx)(h, {
+              spec: s,
               icon: (0, i.jsx)("div", {
-                  className: u.In,
-                  style: { width: t.iconSize, height: t.iconSize },
-                  children: (0, i.jsx)("img", { src: r, alt: n?.name }),
+                  className: o.In,
+                  style: { width: s.iconSize, height: s.iconSize },
+                  children: (0, i.jsx)("img", { src: n, alt: t?.name }),
               }),
-              tooltipText: c.intl.string(c.t["4yiU7x"]),
+              tooltipText: d.intl.string(d.t["4yiU7x"]),
           });
 }

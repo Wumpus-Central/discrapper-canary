@@ -1,11 +1,10 @@
-"use strict";
-n.d(t, { K: () => r });
-var i = n(652215);
-function r(e, t, n, r) {
-    let a = n ?? t;
+c.d(u, { K: () => l });
+var i = c(652215);
+function l(n, u, c, l) {
+    let t = c ?? u;
     return (
-        (null != a && e.can(i.xBc.CREATE_INSTANT_INVITE, a)) ||
-        (null != t && null != t.vanityURLCode) ||
-        r?.invite_code != null
+        (null != t && n.can(i.xBc.CREATE_INSTANT_INVITE, t)) ||
+        (null != u && null != u.vanityURLCode) ||
+        l?.invite_code != null
     );
 }

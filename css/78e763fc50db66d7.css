@@ -11,12 +11,13 @@
 .mainContent__0f179 {
     align-items: center;
     display: flex;
-    flex-direction: column
+    flex-direction: column;
+    position: relative
 }
 
-.heroSlot__0f179,
-.mainContent__0f179 {
-    position: relative
+.heroSlot__0f179 {
+    position: relative;
+    --custom-hero-content-inline-padding: 20px
 }
 
 .breadcrumbAnchor__0f179 {
@@ -52,6 +53,7 @@
 .crumb__0f179 {
     align-items: center;
     color: var(--text-muted);
+    cursor: pointer;
     display: flex;
     font-weight: var(--font-weight-medium);
     gap: var(--space-10)
