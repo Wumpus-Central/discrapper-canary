@@ -7,4 +7,5 @@ e.exports = {
     Hw: "tierTimelineIcon_bf9073",
     hI: "tierTimelineText_bf9073",
     nU: "tierTimelineTextLine_bf9073",
+    Ks: "tierTimelineLockIcon_bf9073",
 };

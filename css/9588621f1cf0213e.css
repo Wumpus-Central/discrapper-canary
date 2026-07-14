@@ -492,6 +492,14 @@
     display: block
 }
 
+.tierTimelineLockIcon_bf9073 {
+    color: var(--text-muted);
+    height: 8px;
+    margin-inline-end: 2px;
+    vertical-align: -.25px;
+    width: 8px
+}
+
 .nextLevelRow_e54946 {
     align-items: center;
     display: flex;
