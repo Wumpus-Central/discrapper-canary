@@ -1,40 +1,42 @@
 "use strict";
-n.d(t, { A: () => u, v: () => o.nu });
+n.d(t, { A: () => d, v: () => l.nu });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    s = n.n(r),
-    a = n(709066),
-    o = n(705751),
-    l = n(786627);
-let u = function (e) {
+    a = n.n(r),
+    s = n(709066),
+    l = n(705751),
+    o = n(786627);
+let d = function (e) {
     let {
         name: t,
         discriminator: n,
         invertBotTagColor: r,
-        nameColor: o,
-        className: u,
+        nameColor: l,
+        className: d,
         botType: c,
-        usernameClass: d,
+        usernameClass: u,
         discriminatorClass: _,
-        botClass: h,
-        botVerified: f = !1,
-        style: p,
-        useRemSizes: E = !1,
-        usernameIcon: m,
+        botClass: E,
+        botVerified: A = !1,
+        style: h,
+        useRemSizes: I = !1,
+        usernameIcon: f,
+        guildTag: p,
     } = e;
     return (0, i.jsxs)("div", {
-        className: s()(u, l.oM),
-        style: p,
+        className: a()(d, o.oM),
+        style: h,
         children: [
             (0, i.jsxs)("span", {
-                className: s()(l.Xh, d),
-                style: null != o ? { color: o } : void 0,
-                children: [m, t],
+                className: a()(o.Xh, u),
+                style: null != l ? { color: l } : void 0,
+                children: [f, t],
             }),
+            p,
             null != n ? (0, i.jsxs)("span", { className: _ ?? void 0, children: ["#", n] }) : null,
             null != c
-                ? (0, i.jsx)(a.A, { type: c, invertColor: r, className: s()(h, l.Od), verified: f, useRemSizes: E })
+                ? (0, i.jsx)(s.A, { type: c, invertColor: r, className: a()(E, o.Od), verified: A, useRemSizes: I })
                 : null,
         ],
     });
