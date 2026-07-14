@@ -120,7 +120,7 @@
     margin-inline-start: 32px
 }
 
-@container premium-marketing-page-container (max-width: 960px) {
+@container premium-marketing-page-container (max-width: 720px) {
     .container__7137c {
         align-items: center;
         flex-direction: column;
