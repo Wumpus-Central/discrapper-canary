@@ -3953,6 +3953,7 @@ var rv =
         (ew.UPDATE_STREAMER_MODE_SETTINGS = "update_streamer_mode_settings"),
         (ew.INVITE_SUGGESTION_OPENED = "invite_suggestion_opened"),
         (ew.GUILD_CLICKED = "guild_clicked"),
+        (ew.HOME_DRAWER_GUILD_CLICKED = "home_drawer_guild_clicked"),
         (ew.GUILD_VIEWED = "guild_viewed"),
         (ew.GUILD_VIEWED_CLICKSTREAM = "guild_viewed_clickstream"),
         (ew.WAVE_CTA_CLICKED = "wave_cta_clicked"),
