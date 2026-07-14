@@ -2,47 +2,47 @@
 n.d(t, { Bq: () => Q, _U: () => ee, gU: () => J });
 var i = n(138134),
     r = n(622629),
-    s = n(922288),
-    a = n(986226),
-    o = n(669281),
-    l = n(778492),
-    u = n(278416),
+    a = n(922288),
+    s = n(986226),
+    l = n(669281),
+    o = n(778492),
+    d = n(278416),
     c = n(935063),
-    d = n(425557),
+    u = n(425557),
     _ = n(176781),
-    h = n(948428),
-    f = n(534890),
-    p = n(163328),
-    E = n(24825),
-    m = n(11779),
-    g = n(446057),
-    A = n(770880),
-    I = n(276293),
-    T = n(87221),
+    E = n(948428),
+    A = n(534890),
+    h = n(163328),
+    I = n(24825),
+    f = n(11779),
+    p = n(446057),
+    T = n(770880),
+    m = n(276293),
+    g = n(87221),
     S = n(781481),
-    y = n(760911),
+    N = n(760911),
     C = n(107086),
-    N = n(532590),
-    v = n(597050),
-    R = n(191023),
-    O = n(434831),
-    b = n(56059),
-    D = n(194261),
-    L = n(808107),
-    w = n(451394),
-    M = n(512474),
-    P = n(445567),
-    x = n(183623),
-    k = n(844972),
-    U = n(146151),
-    G = n(428689),
+    O = n(532590),
+    R = n(597050),
+    L = n(191023),
+    D = n(434831),
+    y = n(56059),
+    v = n(194261),
+    b = n(808107),
+    M = n(451394),
+    P = n(512474),
+    U = n(445567),
+    w = n(183623),
+    G = n(844972),
+    x = n(146151),
+    k = n(428689),
     F = n(983851),
     V = n(101277),
     B = n(678708),
-    j = n(855473),
-    H = n(740426),
-    Y = n(51758),
-    W = n(696451),
+    H = n(855473),
+    j = n(740426),
+    W = n(51758),
+    Y = n(696451),
     K = n(71393),
     $ = n(287809),
     z = n(148719),
@@ -62,18 +62,19 @@ function Q(e, t, n, i) {
             if ((0, z.A)(e)) return X.intl.string(X.t.jQ1plj);
             return X.intl.string(X.t.t1yj0N);
         case Z.rbe.GUILD_FORUM:
-            let s = e.isMediaChannel(),
-                a = e.isGameInvitesChannel();
-            if (r) return s ? X.intl.string(X.t["pZ/fYa"]) : X.intl.string(X.t.ibmpPi);
+            let a = e.isMediaChannel(),
+                s = e.isGameInvitesChannel();
+            if (r) return a ? X.intl.string(X.t["pZ/fYa"]) : X.intl.string(X.t.ibmpPi);
             if (e.isSpoilerChannel()) return X.intl.string(X.t.TDGaxd);
             if ((0, z.A)(e)) {
-                if (a) return X.intl.string(X.t.AwjsC9);
-                return s ? X.intl.string(X.t.gfVCfL) : X.intl.string(X.t.UbLM3J);
+                if (s) return X.intl.string(X.t.AwjsC9);
+                return a ? X.intl.string(X.t.gfVCfL) : X.intl.string(X.t.UbLM3J);
             }
-            if (a) return X.intl.string(X.t.BW4VHV);
-            return s ? X.intl.string(X.t.seKITE) : X.intl.string(X.t["0sDXdm"]);
+            if (s) return X.intl.string(X.t.BW4VHV);
+            return a ? X.intl.string(X.t.seKITE) : X.intl.string(X.t["0sDXdm"]);
         case Z.rbe.GUILD_MEDIA:
             if (r) return X.intl.string(X.t["pZ/fYa"]);
+            if (e.isSpoilerChannel()) return X.intl.string(X.t.vjYxox);
             if ((0, z.A)(e)) return X.intl.string(X.t.gfVCfL);
             return X.intl.string(X.t.seKITE);
         case Z.rbe.GUILD_STAGE_VOICE:
@@ -112,80 +113,81 @@ function J(e, t) {
         { locked: X = !1, video: Q = !1, stream: J = !1, hasActiveThreads: ee = !1, textFocused: et = !1 } = n;
     if (null == e) return null;
     null == t && (t = K.A.getGuild(e.getGuildId()));
-    let en = (0, Y.V)(t?.id, [K.A, $.default, W.Ay]);
+    let en = (0, W.V)(t?.id, [K.A, $.default, Y.Ay]);
     if (e.isModeratorReportChannel()) return i.i;
     if (e?.id === t?.rulesChannelId) return r.B;
     let ei = e.isNSFW();
     switch (e.type) {
         case Z.rbe.GUILD_ANNOUNCEMENT:
             if (ee)
-                if (ei) return s.M;
-                else if (e.isSpoilerChannel()) return a.u;
-                else if ((0, z.A)(e)) return o.X;
-                else return l.k;
-            if (ei) return s.M;
-            if (e.isSpoilerChannel()) return a.u;
-            if ((0, z.A)(e)) return o.X;
-            return l.k;
+                if (ei) return a.M;
+                else if (e.isSpoilerChannel()) return s.u;
+                else if ((0, z.A)(e)) return l.X;
+                else return o.k;
+            if (ei) return a.M;
+            if (e.isSpoilerChannel()) return s.u;
+            if ((0, z.A)(e)) return l.X;
+            return o.k;
         case Z.rbe.GUILD_STORE:
-            return u.g;
+            return d.g;
         case Z.rbe.DM:
         case Z.rbe.GROUP_DM:
             return c.X;
         case Z.rbe.PRIVATE_THREAD:
-            return d.t;
+            return u.t;
         case Z.rbe.MEDIA_THREAD:
             return _.x;
         case Z.rbe.ANNOUNCEMENT_THREAD:
         case Z.rbe.PUBLIC_THREAD:
-            if (ei) return h.m;
-            if (e.isForumPost()) return f.o;
-            return p.y;
+            if (ei) return E.m;
+            if (e.isForumPost()) return A.o;
+            return h.y;
         case Z.rbe.GUILD_TEXT:
-            if (null != e.linkedLobby) return E.x;
-            if (ei) return m.r;
-            if (e.isSpoilerChannel()) return g.n;
-            if ((0, z.A)(e)) return A.I;
-            return I.N;
+            if (null != e.linkedLobby) return I.x;
+            if (ei) return f.r;
+            if (e.isSpoilerChannel()) return p.n;
+            if ((0, z.A)(e)) return T.I;
+            return m.N;
         case Z.rbe.GUILD_FORUM:
             let er = e.isMediaChannel(),
-                es = e.isGameInvitesChannel();
-            if (ei) return er ? T.D : S.f;
-            if (e.isSpoilerChannel()) return y.H;
+                ea = e.isGameInvitesChannel();
+            if (ei) return er ? g.D : S.f;
+            if (e.isSpoilerChannel()) return N.H;
             if ((0, z.A)(e)) {
-                if (es) return C.s;
-                return er ? N.c : v.Q;
-            } else if (er) return R.x;
-            else if (es) return O.t;
-            else return b.b;
+                if (ea) return C.s;
+                return er ? O.c : R.Q;
+            } else if (er) return L.x;
+            else if (ea) return D.t;
+            else return y.b;
         case Z.rbe.GUILD_MEDIA:
-            if (ei) return T.D;
-            if ((0, z.A)(e)) return N.c;
-            return R.x;
+            if (ei) return g.D;
+            if (e.isSpoilerChannel()) return N.H;
+            if ((0, z.A)(e)) return O.c;
+            else return L.x;
         case Z.rbe.GUILD_STAGE_VOICE:
-            if (en) return (0, z.A)(e) ? D.X : L.D;
-            if (X) return D.X;
-            if ((0, z.A)(e)) return L.D;
-            else return w.q;
+            if (en) return (0, z.A)(e) ? v.X : b.D;
+            if (X) return v.X;
+            if ((0, z.A)(e)) return b.D;
+            else return M.q;
         case Z.rbe.GUILD_VOICE:
-            if (et) return f.o;
-            if (ei) return M.O;
-            if (e.isSpoilerChannel()) return P.P;
-            if (J) return x.F;
+            if (et) return A.o;
+            if (ei) return P.O;
+            if (e.isSpoilerChannel()) return U.P;
+            if (J) return w.F;
             if (en)
-                if ((0, z.A)(e)) return D.X;
-                else return Q ? k.k : U.t;
-            if (X) return D.X;
-            if ((0, z.A)(e)) return Q ? k.k : U.t;
-            else return Q ? G.n : F.H;
+                if ((0, z.A)(e)) return v.X;
+                else return Q ? G.k : x.t;
+            if (X) return v.X;
+            if ((0, z.A)(e)) return Q ? G.k : x.t;
+            else return Q ? k.n : F.H;
         case Z.rbe.GUILD_DIRECTORY:
             return V.P;
         case Z.rbe.GUILD_CATEGORY:
             return B.s;
         default:
             if (q.aQ.has(e.id)) {
-                if (e.id === q.T4.GUILD_HOME || e.id === q.T4.SERVER_GUIDE) return j.Z;
-                else if (e.id === q.T4.CHANNEL_BROWSER || e.id === q.T4.CUSTOMIZE_COMMUNITY) return H.k;
+                if (e.id === q.T4.GUILD_HOME || e.id === q.T4.SERVER_GUIDE) return H.Z;
+                else if (e.id === q.T4.CHANNEL_BROWSER || e.id === q.T4.CUSTOMIZE_COMMUNITY) return j.k;
             }
             return null;
     }
@@ -193,23 +195,25 @@ function J(e, t) {
 function ee(e) {
     switch (e) {
         case Z.rbe.GUILD_ANNOUNCEMENT:
-            return l.k;
+            return o.k;
         case Z.rbe.GUILD_STORE:
-            return u.g;
+            return d.g;
         case Z.rbe.DM:
         case Z.rbe.GROUP_DM:
             return c.X;
         case Z.rbe.PRIVATE_THREAD:
-            return d.t;
+            return u.t;
         case Z.rbe.ANNOUNCEMENT_THREAD:
         case Z.rbe.PUBLIC_THREAD:
-            return p.y;
+            return h.y;
         case Z.rbe.GUILD_TEXT:
+            return m.N;
         case Z.rbe.GUILD_FORUM:
+            return y.b;
         case Z.rbe.GUILD_MEDIA:
-            return I.N;
+            return L.x;
         case Z.rbe.GUILD_STAGE_VOICE:
-            return w.q;
+            return M.q;
         case Z.rbe.GUILD_VOICE:
             return F.H;
         case Z.rbe.GUILD_CATEGORY:
