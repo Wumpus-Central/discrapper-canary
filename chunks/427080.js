@@ -1,4 +1,4 @@
-l.d(n, { Ay: () => $, GI: () => L });
+l.d(n, { Ay: () => w, GI: () => F });
 var i = l(627968),
     s = l(64700),
     t = l(503698),
@@ -7,33 +7,34 @@ var i = l(627968),
     c = l(834730),
     u = l(781696),
     d = l(939249),
-    o = l(534514),
+    o = l(297264),
     m = l(821609),
     h = l(933832),
-    p = l(782603),
-    x = l(376728),
+    x = l(782603),
+    p = l(376728),
     v = l(730852),
     N = l(714991),
     j = l(529200),
     g = l(790535),
     I = l(734057),
-    f = l(71393),
-    C = l(860689),
-    A = l(707592),
-    y = l(698441),
-    k = l(435328),
-    E = l(408607),
-    _ = l(794782),
-    S = l(647090),
-    G = l(691012),
-    b = l(850183),
-    B = l(557582),
-    D = l(515115),
-    P = l(666394),
+    C = l(71393),
+    f = l(763827),
+    A = l(860689),
+    y = l(707592),
+    k = l(698441),
+    E = l(435328),
+    _ = l(408607),
+    S = l(794782),
+    G = l(974930),
+    b = l(691012),
+    B = l(850183),
+    D = l(557582),
+    P = l(515115),
+    T = l(666394),
     R = l(988794),
-    T = l(375708),
-    z = l(601961);
-function L(e, n) {
+    z = l(375708),
+    L = l(601961);
+function F(e, n) {
     switch (e?.entity_type) {
         case R.Ps.STAGE_INSTANCE:
             return (l) => {
@@ -49,21 +50,21 @@ function L(e, n) {
 }
 let U = s.memo(function (e) {
         let { guild: n, guildScheduledEvent: l, channel: t, isMember: a } = e,
-            m = (0, r.bG)([f.A], () => {
+            m = (0, r.bG)([C.A], () => {
                 if (null == n) return null;
-                let e = f.A.getGuild(n.id);
-                return null != e ? e : (0, C.fh)(n) ? n : (0, C.DY)(n);
+                let e = C.A.getGuild(n.id);
+                return null != e ? e : (0, A.fh)(n) ? n : (0, A.DY)(n);
             }, [n]),
-            h = (0, D.L)(l, t),
-            p = s.useCallback(
+            h = (0, P.L)(l, t),
+            x = s.useCallback(
                 (e) => {
-                    a && null != l && (e.stopPropagation(), (0, x.rq)(l));
+                    a && null != l && (e.stopPropagation(), (0, p.rq)(l));
                 },
                 [a, l],
             ),
             v = s.useCallback(
                 (e) => {
-                    L(l)(e);
+                    F(l)(e);
                 },
                 [l],
             );
@@ -71,36 +72,36 @@ let U = s.memo(function (e) {
         let g = h?.IconComponent,
             I = (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != g && (0, i.jsx)(g, { size: "xs", color: "currentColor", className: z.p }),
+                    null != g && (0, i.jsx)(g, { size: "xs", color: "currentColor", className: L.p }),
                     (0, i.jsx)(c.E, {
-                        className: z.I0,
+                        className: L.I0,
                         variant: "text-xs/normal",
-                        children: (0, k.l)(h?.locationName ?? "", !0),
+                        children: (0, E.l)(h?.locationName ?? "", !0),
                     }),
                 ],
             });
         return (0, i.jsxs)("div", {
-            className: z.Ix,
+            className: L.Ix,
             children: [
-                (0, i.jsx)(j.A.Icon, { guild: m, onClick: p }),
+                (0, i.jsx)(j.A.Icon, { guild: m, onClick: x }),
                 (0, i.jsxs)("div", {
-                    className: z.YG,
+                    className: L.YG,
                     children: [
                         (0, i.jsxs)("div", {
-                            className: z.Kp,
+                            className: L.Kp,
                             children: [
                                 (0, i.jsx)(N.A, {
                                     guild: m,
                                     tooltipPosition: "top",
                                     tooltipColor: u.ST.Colors.PRIMARY,
                                     size: 16,
-                                    className: z.n2,
+                                    className: L.n2,
                                 }),
                                 (0, i.jsx)(d.D, {
-                                    className: z.Nm,
-                                    onClick: p,
+                                    className: L.Nm,
+                                    onClick: x,
                                     children: (0, i.jsx)(o.D, {
-                                        className: a ? z.ht : z.J5,
+                                        className: a ? L.ht : L.J5,
                                         variant: "text-sm/medium",
                                         children: m.name,
                                     }),
@@ -108,10 +109,10 @@ let U = s.memo(function (e) {
                             ],
                         }),
                         (0, i.jsx)("div", {
-                            className: z.Nj,
+                            className: L.Nj,
                             children:
                                 a && [R.Ps.STAGE_INSTANCE, R.Ps.VOICE].includes(l?.entity_type)
-                                    ? (0, i.jsx)(d.D, { className: z.tR, onClick: v, children: I })
+                                    ? (0, i.jsx)(d.D, { className: L.tR, onClick: v, children: I })
                                     : I,
                         }),
                     ],
@@ -119,38 +120,42 @@ let U = s.memo(function (e) {
             ],
         });
     }),
-    w = s.memo(function (e) {
+    $ = s.memo(function (e) {
         let {
                 guildId: n,
                 guildScheduledEventId: l,
-                recurrenceId: s,
-                isActive: t,
-                isEnded: a,
-                isMember: c,
-                isExternal: u,
-                onAcceptInstantInvite: d,
-                onTransitionToInviteChannel: o,
+                channelId: s,
+                recurrenceId: t,
+                isActive: a,
+                isEnded: c,
+                isMember: u,
+                isExternal: d,
+                onAcceptInstantInvite: o,
+                onTransitionToInviteChannel: p,
             } = e,
-            x = (0, r.bG)([y.Ay], () => y.Ay.isInterestedInEventRecurrence(l, s), [l, s]);
-        function v(e) {
-            e.stopPropagation(), (0, P.A)(l, s, n);
+            v = (0, r.bG)([k.Ay], () => k.Ay.isInterestedInEventRecurrence(l, t), [l, t]),
+            N = (0, r.bG)([f.A], () => null != s && f.A.getChannelId() === s, [s]);
+        function j(e) {
+            e.stopPropagation(), (0, T.A)(l, t, n);
         }
-        function N(e) {
-            e.stopPropagation(), c ? t && o() : d();
+        function g(e) {
+            e.stopPropagation(), u ? a && p() : o();
         }
-        return c
-            ? t
-                ? u
-                    ? (0, i.jsx)(m.$, { text: T.intl.string(T.t.GoCQxU), variant: "secondary" })
-                    : (0, i.jsx)(m.$, { text: T.intl.string(T.t.XpeFYr), onClick: N, variant: "active" })
-                : a
-                  ? (0, i.jsx)(m.$, { text: T.intl.string(T.t.Pj7Xrv), variant: "secondary", disabled: !0 })
-                  : x
-                    ? (0, i.jsx)(m.$, { text: T.intl.string(T.t.DlcqlU), onClick: v, variant: "active", icon: h.A })
-                    : (0, i.jsx)(m.$, { text: T.intl.string(T.t.DlcqlU), onClick: v, variant: "secondary", icon: p.X })
-            : (0, i.jsx)(m.$, { text: T.intl.string(T.t.XpeFYr), onClick: N, variant: "active" });
+        return u
+            ? a
+                ? d
+                    ? (0, i.jsx)(m.$, { text: z.intl.string(z.t.GoCQxU), variant: "secondary" })
+                    : N
+                      ? (0, i.jsx)(m.$, { text: z.intl.string(z.t.aW2YlJ), onClick: g, variant: "active" })
+                      : (0, i.jsx)(m.$, { text: z.intl.string(z.t.XpeFYr), onClick: g, variant: "active" })
+                : c
+                  ? (0, i.jsx)(m.$, { text: z.intl.string(z.t.Pj7Xrv), variant: "secondary", disabled: !0 })
+                  : v
+                    ? (0, i.jsx)(m.$, { text: z.intl.string(z.t.DlcqlU), onClick: j, variant: "active", icon: h.A })
+                    : (0, i.jsx)(m.$, { text: z.intl.string(z.t.DlcqlU), onClick: j, variant: "secondary", icon: x.X })
+            : (0, i.jsx)(m.$, { text: z.intl.string(z.t.XpeFYr), onClick: g, variant: "active" });
     }),
-    $ = s.memo(function (e) {
+    w = s.memo(function (e) {
         let {
                 guildScheduledEvent: n,
                 guild: l,
@@ -160,42 +165,43 @@ let U = s.memo(function (e) {
                 onAcceptInstantInvite: u,
                 onTransitionToInviteChannel: o,
             } = e,
-            m = c ?? (null != n ? (0, S.G3)(n) : null),
-            h = n?.recurrence_rule == null || null == m || (0, S.p$)((0, _.Sn)(n?.recurrence_rule), m),
-            p = (0, E.A)(n),
-            x = s.useCallback(() => {
-                r && null != n && (0, A.uR)({ eventId: n.id, recurrenceId: m });
+            m = c ?? (null != n ? (0, G.G3)(n) : null),
+            h = n?.recurrence_rule == null || null == m || (0, G.p$)((0, S.Sn)(n?.recurrence_rule), m),
+            x = (0, _.A)(n),
+            p = s.useCallback(() => {
+                r && null != n && (0, y.uR)({ eventId: n.id, recurrenceId: m });
             }, [r, n, m]);
         if (null == n || !h) return null;
-        let v = (0, y.Fd)(n),
-            N = (0, y.AZ)(n),
+        let v = (0, k.Fd)(n),
+            N = (0, k.AZ)(n),
             g = n.entity_type === R.Ps.EXTERNAL;
         return (0, i.jsx)(j.A, {
-            className: a()({ [z.vk]: r }),
+            className: a()({ [L.vk]: r }),
             children: (0, i.jsxs)(d.D, {
-                onClick: x,
+                onClick: p,
                 children: [
-                    null != n.image && (0, i.jsx)(b.A, { source: (0, G.A)(n), className: z.vK }),
-                    (0, i.jsx)(B.Ay, {
+                    null != n.image && (0, i.jsx)(B.A, { source: (0, b.A)(n), className: L.vK }),
+                    (0, i.jsx)(D.Ay, {
                         name: n.name,
                         description: n.description ?? void 0,
-                        descriptionClassName: z.tj,
+                        descriptionClassName: L.tj,
                         guildId: n.guild_id,
-                        creator: p,
+                        creator: x,
                         guildEvent: n,
                         eventPreview: n,
                         recurrenceId: m,
                     }),
                     (0, i.jsxs)("div", {
-                        className: z.xQ,
+                        className: L.xQ,
                         children: [
                             (0, i.jsx)(U, { guild: l, channel: t, guildScheduledEvent: n, isMember: r }),
-                            (0, i.jsx)(w, {
+                            (0, i.jsx)($, {
                                 isActive: v,
                                 isEnded: N,
                                 isMember: r,
                                 guildId: n.guild_id,
                                 guildScheduledEventId: n.id,
+                                channelId: n.channel_id,
                                 recurrenceId: m,
                                 onAcceptInstantInvite: u,
                                 onTransitionToInviteChannel: o,
