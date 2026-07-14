@@ -9,9 +9,14 @@ var i = n(284009),
     d = n(952818),
     c = n(652896),
     u = n(280450),
-    _ = n(287809),
-    E = n(741394),
-    A = n(372684),
+    _ = n(741394);
+let E = (0, n(945810).mj)({
+    kind: "user",
+    name: "2026-07-autoclipping-default-override",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var A = n(372684),
     h = n(458977),
     I = n(696016),
     f = n(652215),
@@ -62,7 +67,7 @@ async function x() {
     if (G.clipsSettings.storageLocation === T && null != o.A && null != o.A.app) {
         try {
             let t = await o.A.app.getPath("videos");
-            e = (0, E.CN)(t, m);
+            e = (0, _.CN)(t, m);
         } catch (t) {
             I.nx.error("Failed to resolve videos path for default storage migration", t),
                 (e = await o.A.app.getPath("documents"));
@@ -100,7 +105,7 @@ class F extends s.Ay.DeviceSettingsStore {
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: w.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
         (e) => {
-            let t = n(451409).Ay.getHardwareEncoding();
+            let t = n(186295).Ay.getHardwareEncoding();
             return {
                 ...e,
                 clipsSettings: {
@@ -187,11 +192,7 @@ class F extends s.Ay.DeviceSettingsStore {
         return G.clipsSettings;
     }
     getEnableAutoclipping() {
-        let e;
-        return (
-            G.clipsSettings.enableAutoclipping ??
-            (null != (e = _.default.getCurrentUser()) && (e.isStaff() || e.isStaffPersonal()))
-        );
+        return G.clipsSettings.enableAutoclipping ?? E.getConfig({ location: "getAutoclippingDefault" }).enabled;
     }
     hasUserSetAutoclippingSettings() {
         return null != G.clipsSettings.enableAutoclipping;

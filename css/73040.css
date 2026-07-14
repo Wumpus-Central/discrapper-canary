@@ -275,7 +275,7 @@
     position: absolute
 }
 
-.guildRoomStatusBadge__38ccf {
+.statusBadge__38ccf {
     inset-block-start: 0;
     inset-inline-end: 0
 }
@@ -284,6 +284,13 @@
     inset-block-end: 0;
     inset-inline-end: 0;
     opacity: 0
+}
+
+.editBadge__38ccf,
+.statusBadge__38ccf {
+    height: 24px;
+    padding: 0;
+    width: 24px
 }
 
 .full-motion .editBadge__38ccf {

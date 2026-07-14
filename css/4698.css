@@ -2780,6 +2780,11 @@ img.thumbnail__0f2e8 {
     margin-inline-start: 5px
 }
 
+.guildTag_f4bc97 {
+    flex-shrink: 0;
+    margin-inline-start: var(--space-4)
+}
+
 @keyframes pulse__3b43f {
     0% {
         opacity: .7
