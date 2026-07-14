@@ -63,9 +63,8 @@
 }
 
 .container__3d96b {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%)
+    inset: 0;
+    position: absolute
 }
 
 .cursor__3d96b {

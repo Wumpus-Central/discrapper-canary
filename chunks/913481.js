@@ -8,14 +8,14 @@ var i = n(627968),
     c = n(446243),
     d = n(558076),
     u = n(967388),
-    p = n(996752),
-    h = n(189090),
+    h = n(996752),
+    p = n(662731),
     m = n(375708),
-    A = n(211178),
+    A = n(958250),
     x = n(739549);
 function g(e) {
     let { channelId: t, pendingNote: n, roomWidth: s, containerRef: d } = e,
-        u = (0, p.F)(s).numericAvatarSize / 2,
+        u = (0, h.F)(s).numericAvatarSize / 2,
         [g, f] = (0, r.z)(() => ({ x: -1 * u, y: -1 * u, config: { clamp: !0, tension: 300 } })),
         C = (0, l.useRef)(!1);
     return (
@@ -54,26 +54,25 @@ function g(e) {
         (0, i.jsx)(a.animated.div, {
             className: A.D,
             style: { left: g.x.to((e) => e - u / 2), top: g.y.to((e) => e - u / 2) },
-            children: (0, i.jsx)("img", { src: x.A, alt: m.intl.string(h.default["Vj+S0/"]), style: { width: u } }),
+            children: (0, i.jsx)("img", { src: x.A, alt: m.intl.string(p.default["Vj+S0/"]), style: { width: u } }),
         })
     );
 }
 function f(e) {
-    let { channelId: t, roomWidth: n, aspectRatio: a } = e,
-        r = (0, l.useRef)(null),
-        o = (0, s.bG)([d.A], () => d.A.getPendingNote(t)),
-        c = (0, s.bG)([d.A], () => d.A.getNotes(t));
-    return c.length > 0 || null != o
+    let { channelId: t, roomWidth: n } = e,
+        a = (0, l.useRef)(null),
+        r = (0, s.bG)([d.A], () => d.A.getPendingNote(t)),
+        o = (0, s.bG)([d.A], () => d.A.getNotes(t));
+    return o.length > 0 || null != r
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  null != o &&
+                  null != r &&
                       (0, i.jsx)("div", {
-                          ref: r,
+                          ref: a,
                           className: A.k,
-                          style: { width: n, aspectRatio: a, pointerEvents: null != o ? "auto" : "none" },
-                          children: (0, i.jsx)(g, { channelId: t, pendingNote: o, roomWidth: n, containerRef: r }),
+                          children: (0, i.jsx)(g, { channelId: t, pendingNote: r, roomWidth: n, containerRef: a }),
                       }),
-                  c.map((e) => (0, i.jsx)(u.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
+                  o.map((e) => (0, i.jsx)(u.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
               ],
           })
         : null;

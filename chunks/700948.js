@@ -47,7 +47,7 @@ function v(e) {
                         (0, i.jsx)(f.A, { channelId: t, roomWidth: I }),
                         (0, i.jsx)(g.A, { channelId: t, popoutType: n, aspectRatio: E }),
                         (0, i.jsx)(C.A, { channelId: t }),
-                        (0, i.jsx)(m.A, { channelId: t, roomWidth: I, aspectRatio: E }),
+                        (0, i.jsx)(m.A, { channelId: t, roomWidth: I }),
                     ],
                 }),
             ],
