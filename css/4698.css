@@ -2781,7 +2781,12 @@ img.thumbnail__0f2e8 {
 }
 
 .guildTag_f4bc97 {
+    background: unset;
+    border: 1px solid var(--user-profile-border);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
     flex-shrink: 0;
+    height: 20px;
     margin-inline-start: var(--space-4)
 }
 
