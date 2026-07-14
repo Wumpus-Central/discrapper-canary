@@ -1,7 +1,7 @@
 .forumPost__7d15e {
     background-color: var(--background-base-low);
-    border-radius: 8px;
-    margin: 0 0 16px
+    border-radius: 0;
+    margin: 0 0 2px
 }
 
 .forumPost__7d15e:hover {
@@ -10,6 +10,8 @@
 }
 
 .container__7d15e .forumPost__7d15e:last-of-type {
+    border-end-end-radius: var(--radius-sm);
+    border-end-start-radius: var(--radius-sm);
     margin-bottom: 0
 }
 
@@ -654,10 +656,9 @@
 }
 
 .messages__1ccd1 {
-    background-color: var(--background-surface-higher);
-    border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    padding: 16px;
+    padding-block-end: var(--space-16);
+    padding-block-start: 0;
+    padding-inline-end: var(--space-16);
     padding-inline-start: 0
 }
 
@@ -688,10 +689,6 @@
     pointer-events: none
 }
 
-.messages__1ccd1 .messageContainer__1ccd1:first-of-type .message__1ccd1 {
-    margin-top: 0
-}
-
 .divider__1ccd1 {
     margin-bottom: 16px;
     margin-top: 16px;
@@ -705,16 +702,16 @@
 }
 
 .channel__427f0 {
-    padding-bottom: 16px
+    background: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-16);
+    overflow: clip;
+    transition: box-shadow .1s ease-in-out
 }
 
-.buttonGroup__427f0,
-.collapseButton__427f0,
 .markReadButton__427f0 {
-    flex-shrink: 0
-}
-
-.markReadButton__427f0 {
+    flex-shrink: 0;
     margin-inline-start: 12px
 }
 
@@ -772,7 +769,7 @@
 }
 
 .scroller__2692d {
-    padding: 0 16px
+    padding: var(--space-16)
 }
 
 .expandedMarkAllReadContainer__2692d {
