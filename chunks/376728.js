@@ -33,8 +33,8 @@ var m = n(612200),
     S = n(392054),
     N = n(197111),
     C = n(507263),
-    R = n(202384),
-    O = n(51758),
+    O = n(202384),
+    R = n(51758),
     L = n(473529),
     D = n(707592),
     y = n(698441),
@@ -191,7 +191,7 @@ function e_(e, t) {
                                                                 commandOrigin: S.iw.CHAT,
                                                             }));
                                                 };
-                                            !u && (0, O.V)(t, [j.A, q.default, H.Ay]) ? (0, R.Ze)(t, s) : s();
+                                            !u && (0, R.V)(t, [j.A, q.default, H.Ay]) ? (0, O.Ze)(t, s) : s();
                                         });
                                 })
                               : (0, p.AX)(h) &&
@@ -310,7 +310,7 @@ let eI = {
     async getAllFriendInvites(e) {
         if ((await new Promise((e) => h.h.wait(() => e(null))), W.A.getFriendInvitesFetching()))
             return null != ec ? ec.then((e) => e.body) : Promise.reject(Error("Invalid friend invite fetch request"));
-        (ec = _.Bo.get({ url: ei.Rsh.FRIEND_INVITES, context: { location: e }, rejectWithError: !1 })),
+        (ec = _.Bo.get({ url: ei.Rsh.FRIEND_INVITES, context: { location: e }, rejectWithError: (0, _.fT)() })),
             h.h.dispatch({ type: "FRIEND_INVITES_FETCH_REQUEST", requestedAt: new Date() });
         let { body: t } = await ec;
         return (
@@ -319,7 +319,12 @@ let eI = {
     },
     createFriendInvite: (e, t) => (
         h.h.dispatch({ type: "FRIEND_INVITE_CREATE_REQUEST" }),
-        _.Bo.post({ url: ei.Rsh.FRIEND_INVITES, body: e ?? {}, context: { location: t }, rejectWithError: !1 }).then(
+        _.Bo.post({
+            url: ei.Rsh.FRIEND_INVITES,
+            body: e ?? {},
+            context: { location: t },
+            rejectWithError: (0, _.fT)(),
+        }).then(
             (e) => {
                 let { body: t } = e;
                 return h.h.dispatch({ type: "FRIEND_INVITE_CREATE_SUCCESS", invite: t }), t;
@@ -331,12 +336,12 @@ let eI = {
     ),
     revokeFriendInvites: () => (
         h.h.dispatch({ type: "FRIEND_INVITE_REVOKE_REQUEST" }),
-        _.Bo.del({ url: ei.Rsh.FRIEND_INVITES, context: { location }, rejectWithError: !1 }).then((e) => {
+        _.Bo.del({ url: ei.Rsh.FRIEND_INVITES, context: { location }, rejectWithError: (0, _.fT)() }).then((e) => {
             let { body: t } = e;
             h.h.dispatch({ type: "FRIEND_INVITE_REVOKE_SUCCESS", invites: t });
         })
     ),
-    revokeFriendInvite: (e) => _.Bo.del({ url: ei.Rsh.INVITE(e), rejectWithError: !1 }),
+    revokeFriendInvite: (e) => _.Bo.del({ url: ei.Rsh.INVITE(e), rejectWithError: (0, _.fT)() }),
     async fetchFriendMembers(e) {
         try {
             let { body: t } = await Q.A.get({
@@ -368,7 +373,7 @@ let eI = {
                 event: a.NetworkActionNames.INVITE_REVOKE,
                 properties: { uses: e.uses, max_uses: e.maxUses, max_age: e.maxAge, invite_type: e.type },
             },
-            rejectWithError: !1,
+            rejectWithError: (0, _.fT)(),
         }).then(() => {
             h.h.dispatch({ type: "INSTANT_INVITE_REVOKE_SUCCESS", code: t, channelId: n.id });
         });
@@ -403,7 +408,7 @@ let eI = {
                   context: g,
                   oldFormErrors: !0,
                   body: { session_id: I, invite_instance_id: c.invite_instance_id, received_installation_id: p },
-                  rejectWithError: !1,
+                  rejectWithError: (0, _.fT)(),
               }).then(
                   async (e) => {
                       null != p && this.clearReceivedInstallationIdForInviteCode(A),

@@ -10,7 +10,11 @@ async function d() {
     let e = a.A.lastFetched;
     if (!(null != e && Date.now() - e < o))
         try {
-            let e = await i.Bo.get({ url: l.Rsh.USER_ACTIVITY_STATISTICS, oldFormErrors: !0, rejectWithError: !1 });
+            let e = await i.Bo.get({
+                url: l.Rsh.USER_ACTIVITY_STATISTICS,
+                oldFormErrors: !0,
+                rejectWithError: (0, i.fT)(),
+            });
             r.h.dispatch({ type: "USER_ACTIVITY_STATISTICS_FETCH_SUCCESS", statistics: e.body });
         } catch (e) {
             return e;

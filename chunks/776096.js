@@ -33,7 +33,7 @@ let u = new c(r.h, {
     CONNECTION_OPEN: function () {
         return (
             Date.now() - o.lastFetched > 864e5 &&
-                a.Bo.get({ url: s.Rsh.GUILD_AFFINITIES, oldFormErrors: !0, rejectWithError: !1 }).then(
+                a.Bo.get({ url: s.Rsh.GUILD_AFFINITIES, oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then(
                     (e) => {
                         let {
                             body: { guild_affinities: t },

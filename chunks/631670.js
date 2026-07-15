@@ -32,13 +32,19 @@ function E() {
 }
 function A(e, t) {
     let n = t ? c.Rsh.DELETE_ACCOUNT : c.Rsh.DISABLE_ACCOUNT;
-    return i.Bo.post({ url: n, body: { password: e }, oldFormErrors: !0, rejectWithError: !1 }).then(() => {
+    return i.Bo.post({ url: n, body: { password: e }, oldFormErrors: !0, rejectWithError: (0, i.fT)() }).then(() => {
         d.A.logoutInternal(), (0, o.pX)(c.BVt.DEFAULT_LOGGED_OUT);
     });
 }
 async function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        n = await i.Bo.patch({ url: c.Rsh.ME, oldFormErrors: !0, body: e, headers: t.headers, rejectWithError: !1 }),
+        n = await i.Bo.patch({
+            url: c.Rsh.ME,
+            oldFormErrors: !0,
+            body: e,
+            headers: t.headers,
+            rejectWithError: (0, i.fT)(),
+        }),
         r = n.body;
     if (r.token) {
         let t = r.token;
@@ -107,7 +113,12 @@ function I(e) {
     );
 }
 function f(e) {
-    return i.Bo.post({ url: c.Rsh.USER_HARVEST, body: { backends: e }, oldFormErrors: !0, rejectWithError: !1 });
+    return i.Bo.post({
+        url: c.Rsh.USER_HARVEST,
+        body: { backends: e },
+        oldFormErrors: !0,
+        rejectWithError: (0, i.fT)(),
+    });
 }
 function p() {
     a.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });

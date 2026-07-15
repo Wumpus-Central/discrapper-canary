@@ -17,7 +17,7 @@ function o(e) {
     );
 }
 function d() {
-    return i.Bo.get({ url: a.Rsh.SETTINGS_CONSENT, oldFormErrors: !0, rejectWithError: !1 }).then(l, (e) =>
+    return i.Bo.get({ url: a.Rsh.SETTINGS_CONSENT, oldFormErrors: !0, rejectWithError: (0, i.fT)() }).then(l, (e) =>
         Promise.reject(Error(e.body.message)),
     );
 }
@@ -26,6 +26,6 @@ function c(e, t) {
         url: a.Rsh.SETTINGS_CONSENT,
         body: { grant: e, revoke: t },
         oldFormErrors: !0,
-        rejectWithError: !1,
+        rejectWithError: (0, i.fT)(),
     }).then(l, o);
 }

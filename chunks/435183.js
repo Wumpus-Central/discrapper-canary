@@ -140,7 +140,7 @@ async function A(e, t) {
                 theme_color: M,
             },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         }).then(
             (t) => {
                 r.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: e });
@@ -171,7 +171,11 @@ let I = {
     saveChannel: A,
     deleteChannel: h,
     updateVoiceChannelStatus: function (e, t) {
-        return i.Bo.put({ url: d.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e), body: { status: t }, rejectWithError: !1 });
+        return i.Bo.put({
+            url: d.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e),
+            body: { status: t },
+            rejectWithError: (0, i.fT)(),
+        });
     },
     removeLinkedLobby: function (e) {
         return i.Bo.del({ url: d.Rsh.CHANNEL_LINKED_LOBBY(e), rejectWithError: !0 });

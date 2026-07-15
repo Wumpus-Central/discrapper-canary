@@ -8,7 +8,7 @@ let r = {
             url: s.Rsh.CHANNEL_FOLLOWERS(t),
             body: { webhook_channel_id: e },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         }),
     async fetchChannelFollowerStats(e) {
         l.h.dispatch({ type: "CHANNEL_FOLLOWER_STATS_FETCH_START" });

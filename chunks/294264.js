@@ -1,15 +1,15 @@
-n.d(e, { default: () => j });
+n.d(e, { default: () => f });
 var a = n(627968),
     i = n(64700),
     r = n(17928),
     s = n(289873),
     d = n(935462),
-    l = n(534514),
+    l = n(297264),
     c = n(636537),
     o = n(228366),
     E = n(652215);
 async function u(t) {
-    let e = await c.Bo.get({ url: E.Rsh.STORE_EULA(t), oldFormErrors: !0, rejectWithError: !1 });
+    let e = await c.Bo.get({ url: E.Rsh.STORE_EULA(t), oldFormErrors: !0, rejectWithError: (0, c.fT)() });
     o.h.dispatch({ type: "EULA_FETCH_SUCCESS", eula: e.body });
 }
 var h = n(235986),
@@ -29,7 +29,7 @@ let A = new m(o.h, {
 });
 var S = n(375708),
     C = n(191315);
-function j(t) {
+function f(t) {
     let { eulaId: e, transitionState: n, onClose: c } = t,
         o = (0, r.bG)([A], () => A.getEULA(e));
     i.useEffect(() => {

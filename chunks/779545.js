@@ -39,7 +39,7 @@ let y = {
                 url: I.Rsh.GUILD_PRUNE(e),
                 query: { days: t, include_roles: l },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, Z.fT)(),
             })
         ).body.pruned;
     },
@@ -50,7 +50,7 @@ let y = {
             url: I.Rsh.GUILD_PRUNE_V2(e),
             query: { days: t, include_roles: l },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, Z.fT)(),
         });
     },
     prune: (e, t, l) =>
@@ -58,19 +58,19 @@ let y = {
             url: I.Rsh.GUILD_PRUNE(e),
             body: { days: t, compute_prune_count: !1, include_roles: l },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, Z.fT)(),
         }),
 };
 var _ = l(34457),
     w = l(317525);
-function U(e, t, l) {
+function T(e, t, l) {
     let n = [...l].sort().join(",");
     return `${e}:${t}:${n}`;
 }
-let T = (0, l(353640).v)((e) => ({
+let U = (0, l(353640).v)((e) => ({
     entries: {},
     setPreview(t, l, n, i, C) {
-        let s = U(t, l, n);
+        let s = T(t, l, n);
         e((e) => {
             let t = { ...e.entries },
                 l = {},
@@ -98,8 +98,8 @@ function F(e) {
         [o, c] = i.useState([]),
         { count: u, isLoading: m } =
             ((t = C.id),
-            (l = T((e) => {
-                let l = U(t, r, o),
+            (l = U((e) => {
+                let l = T(t, r, o),
                     n = e.entries[l];
                 return null != n && Date.now() - n.cachedAt < 36e5 ? n : null;
             })),
@@ -111,7 +111,7 @@ function F(e) {
             let n = e.prune.days,
                 i = e.prune.includeRoles,
                 s = Number(e.prune.pruneCount);
-            (t = e.guildId), (l = e.prune.isFinished), T.getState().setPreview(t, n, i, s, l);
+            (t = e.guildId), (l = e.prune.isFinished), U.getState().setPreview(t, n, i, s, l);
         }
         return (
             S.h.subscribe("GUILD_PRUNE_UPDATE", e),
@@ -124,7 +124,7 @@ function F(e) {
             null == u && y.updateEstimateV2(C.id, r, o);
         }, [C.id, r, o, u]);
     let H = i.useCallback(() => {
-            y.prune(C.id, r, o), a(), T.getState().clear();
+            y.prune(C.id, r, o), a(), U.getState().clear();
         }, [C.id, r, o, a]),
         x = (0, L.yK)([g.A, w.A], () => {
             let e = g.A.getHighestRole(C);

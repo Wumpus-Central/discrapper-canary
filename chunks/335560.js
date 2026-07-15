@@ -4,7 +4,7 @@ var i = n(636537),
     r = n(228366),
     a = n(439372),
     s = n(626584),
-    l = n(451409),
+    l = n(186295),
     o = n(873985),
     d = n(927813),
     c = n(723702),
@@ -38,7 +38,7 @@ class h extends a.A {
     _fetchAndScheduleRefetch = () => {
         var e;
         ((e = l.Ay.supports(u.O5.PORT_AWARE_LATENCY_TESTING) ? 2 : 1),
-        i.Bo.get({ url: `https:${window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT}?v=${e}`, rejectWithError: !1 }))
+        i.Bo.get({ url: `https:${window.GLOBAL_ENV.RTC_LATENCY_ENDPOINT}?v=${e}`, rejectWithError: (0, i.fT)() }))
             .then((e) => this._handleTestRegionsResponse(e.body))
             .catch((e) => A.warn(e)),
             (this.refetchTimeout = setTimeout(this._fetchAndScheduleRefetch, 360 * d.A.Millis.MINUTE));

@@ -10,11 +10,11 @@ let _ = {
             url: s.Rsh.MFA_TOTP_ENABLE,
             body: { code: r, secret: o },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, t.fT)(),
         }).then((e) => E.h.dispatch({ type: "MFA_ENABLE_SUCCESS", token: e.body.token, codes: e.body.backup_codes }));
     },
     disable() {
-        t.Bo.post({ url: s.Rsh.MFA_TOTP_DISABLE, oldFormErrors: !0, rejectWithError: !1 }).then((e) => {
+        t.Bo.post({ url: s.Rsh.MFA_TOTP_DISABLE, oldFormErrors: !0, rejectWithError: (0, t.fT)() }).then((e) => {
             let {
                 body: { token: r },
             } = e;
@@ -23,7 +23,7 @@ let _ = {
     },
     enableSMS: () => (
         E.h.dispatch({ type: "MFA_SMS_TOGGLE" }),
-        t.Bo.post({ url: s.Rsh.MFA_SMS_ENABLE, oldFormErrors: !0, rejectWithError: !1 }).then(
+        t.Bo.post({ url: s.Rsh.MFA_SMS_ENABLE, oldFormErrors: !0, rejectWithError: (0, t.fT)() }).then(
             (e) => (E.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e),
             (e) => {
                 throw (E.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e);
@@ -32,7 +32,12 @@ let _ = {
     ),
     disableSMS: (e) => (
         E.h.dispatch({ type: "MFA_SMS_TOGGLE" }),
-        t.Bo.post({ url: s.Rsh.MFA_SMS_DISABLE, body: { password: e }, oldFormErrors: !0, rejectWithError: !1 }).then(
+        t.Bo.post({
+            url: s.Rsh.MFA_SMS_DISABLE,
+            body: { password: e },
+            oldFormErrors: !0,
+            rejectWithError: (0, t.fT)(),
+        }).then(
             (e) => (E.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e),
             (e) => {
                 throw (E.h.dispatch({ type: "MFA_SMS_TOGGLE_COMPLETE" }), e);
@@ -44,7 +49,7 @@ let _ = {
             url: s.Rsh.MFA_SEND_VERIFICATION_KEY,
             body: { password: e },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, t.fT)(),
         }).then(
             (e) =>
                 E.h.dispatch({
@@ -61,7 +66,7 @@ let _ = {
             url: s.Rsh.MFA_CODES_VERIFICATION,
             body: { key: e, nonce: r ? _ : o, regenerate: r },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, t.fT)(),
         }).then(
             (r) => E.h.dispatch({ type: "MFA_VIEW_BACKUP_CODES", codes: r.body.backup_codes, key: e }),
             (e) => {

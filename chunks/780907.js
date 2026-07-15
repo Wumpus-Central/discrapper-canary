@@ -22,8 +22,8 @@ var i = n(488428),
     S = n(189081),
     N = n(340829),
     C = n(174459),
-    R = n(738533),
-    O = n(723702),
+    O = n(738533),
+    R = n(723702),
     L = n(499785),
     D = n(308368),
     y = n(59636),
@@ -91,8 +91,8 @@ function F(e) {
             let i = _.A.getApplication(t)?.parentId;
             return (
                 null != i &&
-                    R.A.waitParentConnected(i)
-                        .then(() => R.A.waitParentSubscribed(i, b.ZE4.ACTIVITY_JOIN))
+                    O.A.waitParentConnected(i)
+                        .then(() => O.A.waitParentSubscribed(i, b.ZE4.ACTIVITY_JOIN))
                         .then(() => {
                             d.h.dispatch({
                                 type: "ACTIVITY_JOIN",
@@ -105,10 +105,10 @@ function F(e) {
                         })
                         .catch(() => {}),
                 d.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
-                R.A.waitConnected(t).then(
+                O.A.waitConnected(t).then(
                     () => (
                         d.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: t }),
-                        R.A.waitSubscribed(t, b.ZE4.ACTIVITY_JOIN)
+                        O.A.waitSubscribed(t, b.ZE4.ACTIVITY_JOIN)
                     ),
                 )
             );
@@ -167,7 +167,7 @@ async function V(e) {
             retries: 3,
             body: { authorize: !0 },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, l.fT)(),
         })
             .then(
                 (e) => {
@@ -183,10 +183,10 @@ async function V(e) {
                     throw e;
                 },
             )
-            .then((t) => R.A.launchDispatchApplication(e, t, T.default.locale, s.getBranchName(), r));
+            .then((t) => O.A.launchDispatchApplication(e, t, T.default.locale, s.getBranchName(), r));
     } else {
         let e = _.A.getApplication(t);
-        A = null != e ? R.A.launch(e) : R.A.launchGame(t);
+        A = null != e ? O.A.launch(e) : O.A.launchGame(t);
     }
     let f = Error("game not found");
     return null != A
@@ -278,7 +278,7 @@ let H = {
                         event: r.NetworkActionNames.DETECTABLE_APPLICATIONS_FETCH,
                         properties: (t) => (0, o.e0)({ sent_etag: e, received_etag: t?.headers?.etag }),
                     },
-                    rejectWithError: !1,
+                    rejectWithError: (0, l.fT)(),
                 }).then(
                     (e) => {
                         let {
@@ -304,7 +304,7 @@ let H = {
                 url: b.Rsh.GAMES_BLOCKLIST,
                 headers: { "If-None-Match": e },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, l.fT)(),
             }).then(
                 (e) => {
                     let {
@@ -345,7 +345,7 @@ let H = {
                         event: r.NetworkActionNames.DETECTABLE_NON_GAMES_FETCH,
                         properties: (t) => (0, o.e0)({ sent_etag: e, received_etag: t?.headers?.etag }),
                     },
-                    rejectWithError: !1,
+                    rejectWithError: (0, l.fT)(),
                 }).then(
                     (e) => {
                         let {
@@ -380,7 +380,7 @@ let H = {
                 url: b.Rsh.UNVERIFIED_APPLICATIONS,
                 body: {
                     name: t,
-                    os: (0, O.getPlatformName)(),
+                    os: (0, R.getPlatformName)(),
                     icon: n,
                     distributor_application: null == r || "" === r ? null : { distributor: r, sku: a },
                     executable: o,
@@ -438,7 +438,7 @@ let H = {
             );
         d.h.dispatch({ type: "ACTIVITY_JOIN_LOADING", applicationId: i, remotePartyId: _ });
         try {
-            let e = (0, O.platformPrefersDeepLink)(),
+            let e = (0, R.platformPrefersDeepLink)(),
                 { secret: d, joinUrl: E } = await D.A.getJoinSecret(t, n, i, r, a);
             return (
                 null == _ &&

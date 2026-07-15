@@ -22,8 +22,8 @@ var i = n(562708),
     S = n(808728),
     N = n(71393),
     C = n(309010),
-    R = n(967198),
-    O = n(287809),
+    O = n(967198),
+    R = n(287809),
     L = n(174459),
     D = n(488926),
     y = n(499785),
@@ -50,11 +50,11 @@ let x = {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             { source: i, loadId: r, lurkLocation: l, autoNavigate: d = !0 } = t,
             c = t.lurker ?? !1,
-            u = O.default.getCurrentUser();
+            u = R.default.getCurrentUser();
         if (u?.hasFlag(b.nhx.QUARANTINED)) return (0, I.default)(), new Promise((e, t) => t(Error()));
         s.h.wait(() => s.h.dispatch({ type: "GUILD_JOIN", guildId: e, lurker: c, source: i, loadId: r }));
         try {
-            let t = R.A.getGuildId(),
+            let t = O.A.getGuildId(),
                 o = e === t && null != N.A.getGuild(e) ? C.A.getChannelId(e) : null,
                 u = await a.Bo.put({
                     url: b.Rsh.GUILD_JOIN(e),
@@ -68,7 +68,7 @@ let x = {
                     context: { source: i },
                     oldFormErrors: !0,
                     body: {},
-                    rejectWithError: !1,
+                    rejectWithError: (0, a.fT)(),
                 });
             if (
                 (null != u.body.join_request &&
@@ -100,7 +100,7 @@ let x = {
                 (t.body?.code === b.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                     (0, o.yO)(M.w_.JOIN_LARGE_GUILD_UNDERAGE),
                 t.body?.code === b.t02.TOO_MANY_USER_GUILDS &&
-                    ((0, h.Om)(O.default.getCurrentUser()) ? U(b.cZu) : U(b.qlD)),
+                    ((0, h.Om)(R.default.getCurrentUser()) ? U(b.cZu) : U(b.qlD)),
                 t.body?.code === b.t02.GUILD_AT_CAPACITY &&
                     v.A.show({ title: P.intl.string(P.t.ZZlox4), body: P.intl.string(P.t.ZUEGFn) }),
                 c && t.body?.code === b.t02.UNKNOWN_GUILD && w(e),
@@ -127,9 +127,19 @@ let x = {
         s.h.dispatch({ type: "GUILD_CREATE", guild: e });
     },
     setServerMute: (e, t, n) =>
-        a.Bo.patch({ url: b.Rsh.GUILD_MEMBER(e, t), body: { mute: n }, oldFormErrors: !0, rejectWithError: !1 }),
+        a.Bo.patch({
+            url: b.Rsh.GUILD_MEMBER(e, t),
+            body: { mute: n },
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        }),
     setServerDeaf: (e, t, n) =>
-        a.Bo.patch({ url: b.Rsh.GUILD_MEMBER(e, t), body: { deaf: n }, oldFormErrors: !0, rejectWithError: !1 }),
+        a.Bo.patch({
+            url: b.Rsh.GUILD_MEMBER(e, t),
+            body: { deaf: n },
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        }),
     setChannel(e, t, n) {
         a.Bo.patch({ url: b.Rsh.GUILD_MEMBER(e, t), body: { channel_id: n }, oldFormErrors: !0, rejectWithError: !0 });
     },
@@ -141,7 +151,7 @@ let x = {
             url: b.Rsh.GUILD_MEMBER(e, t),
             query: { reason: n, moderator_report_id: i },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, a.fT)(),
         }).then(() => {
             s.h.dispatch({ type: "GUILD_MEMBER_REMOVE_LOCAL", guildId: e, userId: t });
         }),
@@ -150,28 +160,28 @@ let x = {
             guildId: t,
             userId: n,
             communicationDisabledUntilTimestamp: r,
-            duration: a,
-            reason: s,
-            location: l,
-            moderatorReportId: o,
+            duration: s,
+            reason: l,
+            location: o,
+            moderatorReportId: d,
         } = e;
         return y.A.patch({
             url: b.Rsh.GUILD_MEMBER(t, n),
-            reason: s,
-            body: { communication_disabled_until: r, moderator_report_id: o },
+            reason: l,
+            body: { communication_disabled_until: r, moderator_report_id: d },
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.USER_COMMUNICATION_DISABLED_UPDATE,
                 properties: {
                     guild_id: t,
                     target_user_id: n,
-                    duration: null != a ? a : null,
-                    reason: null != s ? s : null,
+                    duration: null != s ? s : null,
+                    reason: null != l ? l : null,
                     communication_disabled_until: r,
-                    location: null != l ? l : null,
+                    location: null != o ? o : null,
                 },
             },
-            rejectWithError: !1,
+            rejectWithError: (0, a.fT)(),
         });
     },
     banUser: (e, t, n, i, r) =>
@@ -180,9 +190,9 @@ let x = {
             reason: i,
             body: { delete_message_seconds: n, moderator_report_id: r },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, a.fT)(),
         }),
-    unbanUser: (e, t) => a.Bo.del({ url: b.Rsh.GUILD_BAN(e, t), oldFormErrors: !0, rejectWithError: !1 }),
+    unbanUser: (e, t) => a.Bo.del({ url: b.Rsh.GUILD_BAN(e, t), oldFormErrors: !0, rejectWithError: (0, a.fT)() }),
     banMultipleUsers(e, t, n, i) {
         let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
         return a.Bo.post({
@@ -190,7 +200,7 @@ let x = {
             body: { user_ids: t, delete_message_seconds: n },
             reason: i,
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, a.fT)(),
         });
     },
     async startBulkBan(e, t, n, i) {
@@ -219,7 +229,12 @@ let x = {
                 permissions: D.x3,
             };
         try {
-            let t = await a.Bo.post({ url: b.Rsh.GUILD_ROLES(e), oldFormErrors: !0, body: d, rejectWithError: !1 }),
+            let t = await a.Bo.post({
+                    url: b.Rsh.GUILD_ROLES(e),
+                    oldFormErrors: !0,
+                    body: d,
+                    rejectWithError: (0, a.fT)(),
+                }),
                 n = t.body;
             return (
                 (n.permissions = r.iu(n.permissions)),
@@ -238,23 +253,38 @@ let x = {
                 url: b.Rsh.GUILD_ROLE(e, t),
                 body: { ...s, icon: l, unicode_emoji: r },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             });
         return _.A.checkGuildTemplateDirty(e), o;
     },
     updateRolePermissions: (e, t, n) =>
-        a.Bo.patch({ url: b.Rsh.GUILD_ROLE(e, t), body: { permissions: n }, oldFormErrors: !0, rejectWithError: !1 }),
+        a.Bo.patch({
+            url: b.Rsh.GUILD_ROLE(e, t),
+            body: { permissions: n },
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        }),
     deleteRole(e, t) {
         a.Bo.del({ url: b.Rsh.GUILD_ROLE(e, t), oldFormErrors: !0, rejectWithError: !0 }).then(() => {
             _.A.checkGuildTemplateDirty(e);
         });
     },
     async batchChannelUpdate(e, t) {
-        let n = await a.Bo.patch({ url: b.Rsh.GUILD_CHANNELS(e), body: t, oldFormErrors: !0, rejectWithError: !1 });
+        let n = await a.Bo.patch({
+            url: b.Rsh.GUILD_CHANNELS(e),
+            body: t,
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        });
         return _.A.checkGuildTemplateDirty(e), n;
     },
     async batchRoleUpdate(e, t) {
-        let n = await a.Bo.patch({ url: b.Rsh.GUILD_ROLES(e), body: t, oldFormErrors: !0, rejectWithError: !1 });
+        let n = await a.Bo.patch({
+            url: b.Rsh.GUILD_ROLES(e),
+            body: t,
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        });
         return _.A.checkGuildTemplateDirty(e), n;
     },
     requestMembers(e) {
@@ -334,7 +364,7 @@ let x = {
         null != t ? (0, p.pX)(b.BVt.CHANNEL(e, t.id)) : (0, p.pX)(b.BVt.FRIENDS);
     },
     async fetchApplications(e, t) {
-        let n = { url: b.Rsh.GUILD_APPLICATIONS(e), oldFormErrors: !0, rejectWithError: !1 };
+        let n = { url: b.Rsh.GUILD_APPLICATIONS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() };
         null != t && (n.query = { channel_id: t });
         let i = (await a.Bo.get(n)).body;
         s.h.dispatch({ type: "GUILD_APPLICATIONS_FETCH_SUCCESS", guildId: e, applications: i });
@@ -344,7 +374,12 @@ let x = {
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
             i = { limit: t };
         null != n && (i.after = n),
-            await a.Bo.get({ url: b.Rsh.GUILD_BANS(e), oldFormErrors: !0, query: i, rejectWithError: !1 }).then((t) => {
+            await a.Bo.get({
+                url: b.Rsh.GUILD_BANS(e),
+                oldFormErrors: !0,
+                query: i,
+                rejectWithError: (0, a.fT)(),
+            }).then((t) => {
                 s.h.dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: t.body, guildId: e });
             });
     },
@@ -353,43 +388,56 @@ let x = {
             r = { limit: i };
         null != n && n.length > 0 && (r.user_ids = n),
             null != t && t.trim().length > 0 && (r.query = t),
-            await a.Bo.get({ url: b.Rsh.GUILD_BANS_SEARCH(e), oldFormErrors: !0, query: r, rejectWithError: !1 }).then(
-                (t) => {
-                    s.h.dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: t.body, userIds: n, guildId: e });
-                },
-            );
+            await a.Bo.get({
+                url: b.Rsh.GUILD_BANS_SEARCH(e),
+                oldFormErrors: !0,
+                query: r,
+                rejectWithError: (0, a.fT)(),
+            }).then((t) => {
+                s.h.dispatch({ type: "GUILD_SETTINGS_LOADED_BANS_BATCH", bans: t.body, userIds: n, guildId: e });
+            });
     },
     async fetchGuildBans(e) {
-        await a.Bo.get({ url: b.Rsh.GUILD_BANS(e), oldFormErrors: !0, rejectWithError: !1 }).then((e) => {
+        await a.Bo.get({ url: b.Rsh.GUILD_BANS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then((e) => {
             s.h.dispatch({ type: "GUILD_SETTINGS_LOADED_BANS", bans: e.body });
         });
     },
     fetchGuildRoleConnectionsEligibility: (e, t) =>
-        a.Bo.get({ url: b.Rsh.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t), oldFormErrors: !0, rejectWithError: !1 }).then(
-            (e) => {
-                let { body: n } = e;
-                return (
-                    s.h.dispatch({
-                        type: "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS",
-                        roleId: t,
-                        roleConnectionEligibility: n,
-                    }),
-                    n
-                );
-            },
-        ),
+        a.Bo.get({
+            url: b.Rsh.GUILD_ROLE_CONNECTIONS_ELIGIBILITY(e, t),
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        }).then((e) => {
+            let { body: n } = e;
+            return (
+                s.h.dispatch({
+                    type: "GUILD_ROLE_CONNECTION_ELIGIBILITY_FETCH_SUCCESS",
+                    roleId: t,
+                    roleConnectionEligibility: n,
+                }),
+                n
+            );
+        }),
     async assignGuildRoleConnection(e, t) {
-        await a.Bo.post({ url: b.Rsh.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t), oldFormErrors: !0, rejectWithError: !1 });
+        await a.Bo.post({
+            url: b.Rsh.GUILD_ROLE_CONNECTIONS_ASSIGN(e, t),
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        });
     },
     async unassignGuildRoleConnection(e, t) {
-        await a.Bo.post({ url: b.Rsh.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t), oldFormErrors: !0, rejectWithError: !1 });
+        await a.Bo.post({
+            url: b.Rsh.GUILD_ROLE_CONNECTIONS_UNASSIGN(e, t),
+            oldFormErrors: !0,
+            rejectWithError: (0, a.fT)(),
+        });
     },
     getGuildRoleConnectionsConfigurations: async (e) =>
         (
             await a.Bo.get({
                 url: b.Rsh.GUILD_ROLE_CONNECTIONS_CONFIGURATIONS(e),
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             })
         ).body,
 };

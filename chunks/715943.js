@@ -1,30 +1,30 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(636537),
-    r = n(720149),
-    s = n(652215),
-    a = n(375708);
-let o = {
-    changeNickname: (e, t, n, o) =>
+    r = n(493336),
+    a = n(652215),
+    s = n(375708);
+let l = {
+    changeNickname: (e, t, n, l) =>
         i.Bo.patch({
-            url: s.Rsh.GUILD_MEMBER_NICK(e, n),
-            body: { nick: o },
+            url: a.Rsh.GUILD_MEMBER_NICK(e, n),
+            body: { nick: l },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         }).then(
             (e) => {
-                (o = e.body.nick),
+                (l = e.body.nick),
                     r.A.sendBotMessage(
                         t,
-                        null != o && "" !== o
-                            ? a.intl.formatToMarkdownString(a.t["gz+HRq"], { nick: o })
-                            : a.intl.string(a.t.Vhpd9A),
+                        null != l && "" !== l
+                            ? s.intl.formatToMarkdownString(s.t["gz+HRq"], { nick: l })
+                            : s.intl.string(s.t.Vhpd9A),
                     );
             },
             (e) => {
                 403 === e.status
-                    ? r.A.sendBotMessage(t, a.intl.formatToMarkdownString(a.t.Izf9jO, {}))
-                    : r.A.sendBotMessage(t, a.intl.string(a.t["5LO/Ss"]));
+                    ? r.A.sendBotMessage(t, s.intl.formatToMarkdownString(s.t.Izf9jO, {}))
+                    : r.A.sendBotMessage(t, s.intl.string(s.t["5LO/Ss"]));
             },
         ),
 };

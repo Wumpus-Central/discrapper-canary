@@ -15,7 +15,7 @@ let o = Object.freeze({}),
                     url: a.Rsh.GIFT_CODE_REDEEM(e),
                     body: { channel_id: u, payment_source_id: c?.id, gateway_checkout_context: await (0, l.ob)(c) },
                     oldFormErrors: !0,
-                    rejectWithError: !1,
+                    rejectWithError: (0, s.fT)(),
                 });
                 return (
                     r.h.dispatch({ type: "GIFT_CODE_REDEEM_SUCCESS", code: e, entitlement: t.body }),

@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => u });
-var i = n(735438),
+var i = n(435558),
     r = n.n(i),
     a = n(636537),
     s = n(228366),
@@ -11,7 +11,7 @@ let c = ["Spidey Bot", "Captain Hook"],
     u = {
         fetchForGuild(e) {
             s.h.dispatch({ type: "WEBHOOKS_FETCHING", guildId: e }),
-                a.Bo.get({ url: o.Rsh.GUILD_WEBHOOKS(e), oldFormErrors: !0, rejectWithError: !1 })
+                a.Bo.get({ url: o.Rsh.GUILD_WEBHOOKS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() })
                     .then((t) => {
                         let { body: n } = t;
                         return s.h.dispatch({ type: "WEBHOOKS_UPDATE", guildId: e, webhooks: n });
@@ -35,7 +35,12 @@ let c = ["Spidey Bot", "Captain Hook"],
         },
         create: (e, t, n) => (
             null == n && (n = c[r().random(0, c.length - 1)]),
-            a.Bo.post({ url: o.Rsh.CHANNEL_WEBHOOKS(t), body: { name: n }, oldFormErrors: !0, rejectWithError: !1 })
+            a.Bo.post({
+                url: o.Rsh.CHANNEL_WEBHOOKS(t),
+                body: { name: n },
+                oldFormErrors: !0,
+                rejectWithError: (0, a.fT)(),
+            })
                 .then((t) => {
                     let { body: n } = t;
                     return s.h.dispatch({ type: "WEBHOOK_CREATE", guildId: e, webhook: n }), n;
@@ -53,12 +58,14 @@ let c = ["Spidey Bot", "Captain Hook"],
                 })
         ),
         delete: (e, t) =>
-            a.Bo.del({ url: o.Rsh.WEBHOOK(t), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
+            a.Bo.del({ url: o.Rsh.WEBHOOK(t), oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then(() => {
                 s.h.dispatch({ type: "WEBHOOK_DELETE", guildId: e, webhookId: t });
             }),
         update: (e, t, n) =>
-            a.Bo.patch({ url: o.Rsh.WEBHOOK(t), body: n, oldFormErrors: !0, rejectWithError: !1 }).then((t) => {
-                let { body: n } = t;
-                return s.h.dispatch({ type: "WEBHOOK_UPDATE", guildId: e, webhook: n }), n;
-            }),
+            a.Bo.patch({ url: o.Rsh.WEBHOOK(t), body: n, oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then(
+                (t) => {
+                    let { body: n } = t;
+                    return s.h.dispatch({ type: "WEBHOOK_UPDATE", guildId: e, webhook: n }), n;
+                },
+            ),
     };
