@@ -29,24 +29,24 @@ var i = n(627968),
     y = n(778712),
     v = n(997990);
 function b(e) {
-    let { sku: t, isFocused: n, user: a } = e,
-        s = r.useMemo(() => (0, S.T)(t), [t]);
-    if (null == s) return null;
-    if ("bundle" === s.type) {
-        let e = s.previewAssets?.fgStatic != null;
+    let { sku: t, isFocused: n, user: a, guildId: s } = e,
+        l = r.useMemo(() => (0, S.T)(t), [t]);
+    if (null == l) return null;
+    if ("bundle" === l.type) {
+        let e = l.previewAssets?.fgStatic != null;
         return (0, i.jsx)("div", {
             className: e ? v.Nq : v.hT,
-            children: (0, i.jsx)(C.X, { product: s, isHighlighted: n, user: a }),
+            children: (0, i.jsx)(C.X, { product: l, isHighlighted: n, user: a }),
         });
     }
-    switch (s.item.type) {
+    switch (l.item.type) {
         case A.R.AVATAR_DECORATION:
-            return (0, i.jsx)(N.i, { user: a, avatarSize: y._3.SIZE_80, item: s.item, isHighlighted: n });
+            return (0, i.jsx)(N.i, { user: a, guildId: s, avatarSize: y._3.SIZE_80, item: l.item, isHighlighted: n });
         case A.R.PROFILE_EFFECT:
             return (0, i.jsx)("div", {
                 className: v.xC,
                 children: (0, i.jsx)(m.A, {
-                    skuId: s.item.skuId,
+                    skuId: l.item.skuId,
                     isHighlighted: n,
                     removeSetHeight: !0,
                     hideBackground: !0,
@@ -57,13 +57,19 @@ function b(e) {
                 className: v.M4,
                 children: (0, i.jsx)("div", {
                     className: v.N1,
-                    children: (0, i.jsx)(R.A, { user: a, nameplate: s.item, isHighlighted: n, size: "small" }),
+                    children: (0, i.jsx)(R.A, {
+                        user: a,
+                        guildId: s,
+                        nameplate: l.item,
+                        isHighlighted: n,
+                        size: "small",
+                    }),
                 }),
             });
         case A.R.PROFILE_FRAME:
             return (0, i.jsx)("div", {
                 className: v.pI,
-                children: (0, i.jsx)(g.A, { frame: s.item, transparentBackground: !0 }),
+                children: (0, i.jsx)(g.A, { frame: l.item, transparentBackground: !0 }),
             });
         default:
             return null;
@@ -96,10 +102,10 @@ function P(e) {
     });
 }
 function U(e) {
-    let { sku: t, isFocused: n, user: r, eventTargetRef: a, assetClassName: s, disableHover: l } = e;
+    let { sku: t, isFocused: n, user: r, guildId: a, eventTargetRef: s, assetClassName: l, disableHover: o } = e;
     switch (t.productLine) {
         case D.EZt.COLLECTIBLES:
-            return (0, i.jsx)(b, { sku: t, isFocused: n, user: r });
+            return (0, i.jsx)(b, { sku: t, isFocused: n, user: r, guildId: a });
         case D.EZt.SOCIAL_LAYER_GAME_ITEM:
             return (0, i.jsx)(M, { sku: t, isFocused: n });
         case D.EZt.APPLICATION:
@@ -107,7 +113,7 @@ function U(e) {
         case D.EZt.GUILD_ROLE:
             return null;
         case D.EZt.PREMIUM:
-            return (0, i.jsx)(P, { eventTargetRef: a, assetClassName: s, disableHover: l });
+            return (0, i.jsx)(P, { eventTargetRef: s, assetClassName: l, disableHover: o });
         case D.EZt.GUILD_PRODUCT:
             return null;
         default:
@@ -137,49 +143,51 @@ function H(e) {
     let {
             sku: t,
             user: n,
-            spec: a,
-            children: u,
-            cardStyle: A,
-            skuPreviewStyle: h,
-            skuAssetClassName: I,
-            disableHoverOrFocus: f,
-            disableRiveHover: p,
-            onHoverOrFocusChange: T,
-            onClick: m,
-            "aria-label": g,
+            guildId: a,
+            spec: u,
+            children: A,
+            cardStyle: h,
+            skuPreviewStyle: I,
+            skuAssetClassName: f,
+            disableHoverOrFocus: p,
+            disableRiveHover: T,
+            onHoverOrFocusChange: m,
+            onClick: g,
+            "aria-label": S,
         } = e,
-        S = r.useRef(null),
-        { isHoveringOrFocusing: N } = (0, E.A)(S),
-        C = r.useRef(T),
-        R = (0, c.bG)([_.A], () => _.A.getApplication(t.applicationId));
+        N = r.useRef(null),
+        { isHoveringOrFocusing: C } = (0, E.A)(N),
+        R = r.useRef(m),
+        O = (0, c.bG)([_.A], () => _.A.getApplication(t.applicationId));
     return (
         r.useEffect(() => {
-            C.current = T;
-        }, [T]),
+            R.current = m;
+        }, [m]),
         r.useEffect(() => {
-            C.current?.(N);
-        }, [N]),
+            R.current?.(C);
+        }, [C]),
         (0, i.jsxs)(l.s, {
-            ref: S,
-            className: s()(k.Nr, A),
-            onClick: m,
-            "aria-label": g,
-            style: V(a),
+            ref: N,
+            className: s()(k.Nr, h),
+            onClick: g,
+            "aria-label": S,
+            style: V(u),
             children: [
                 (0, i.jsx)(o.A, { children: (0, i.jsx)(d.H, { children: (0, w.TC)(t) }) }),
                 (0, i.jsx)("div", {
-                    className: s()(k.ev, h),
+                    className: s()(k.ev, I),
                     children: (0, i.jsx)(U, {
                         sku: t,
-                        isFocused: !f && N,
+                        isFocused: !p && C,
                         user: n,
-                        eventTargetRef: p ? void 0 : S,
-                        assetClassName: I,
-                        disableHover: p,
+                        guildId: a,
+                        eventTargetRef: T ? void 0 : N,
+                        assetClassName: f,
+                        disableHover: T,
                     }),
                 }),
-                (0, i.jsx)(G.P, { spec: a, application: R }),
-                u,
+                (0, i.jsx)(G.P, { spec: u, application: O }),
+                A,
             ],
         })
     );

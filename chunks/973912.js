@@ -38,54 +38,56 @@ function x(e) {
     let {
             sku: t,
             wishlistOwner: n,
-            style: a,
-            skuPreviewStyle: l,
-            setIsHoveringOrFocusing: o,
-            onClick: _,
-            "aria-label": E,
-            wishlistId: A,
-            children: h,
+            guildId: a,
+            style: l,
+            skuPreviewStyle: o,
+            setIsHoveringOrFocusing: _,
+            onClick: E,
+            "aria-label": A,
+            wishlistId: h,
+            children: I,
         } = e,
-        { trackUserProfileWishlistAction: I } = (0, S.NJ)(),
-        p = (0, d.Ar)(),
-        T = (0, f.A)(() => (0, c.A)()),
-        { handleVisibilityChange: m } = (0, O.G)(T),
-        g = (0, u.K)(m, 0.5, p?.surface != null),
-        C = r.useCallback(() => {
-            I({
-                wishlistId: A,
+        { trackUserProfileWishlistAction: p } = (0, S.NJ)(),
+        T = (0, d.Ar)(),
+        m = (0, f.A)(() => (0, c.A)()),
+        { handleVisibilityChange: g } = (0, O.G)(m),
+        C = (0, u.K)(g, 0.5, T?.surface != null),
+        R = r.useCallback(() => {
+            p({
+                wishlistId: h,
                 action: M.Mq.WISHLIST_ITEM_CLICKED,
                 skuId: t.id,
                 productLines: new Set([t.productLine]),
             }),
-                p?.surface != null &&
+                T?.surface != null &&
                     N.default.track(b.HAw.WISHLIST_ITEM_CLICKED, {
                         sku_id: t.id,
-                        wishlist_id: A,
-                        wishlist_owner_id: p.wishlistOwnerId,
-                        surface: p.surface,
-                        position_in_section: p.positionInSection,
-                        item_source: p.itemSource,
+                        wishlist_id: h,
+                        wishlist_owner_id: T.wishlistOwnerId,
+                        surface: T.surface,
+                        position_in_section: T.positionInSection,
+                        item_source: T.itemSource,
                         click_type: "add_to_wishlist",
                         product_line: t.productLine,
-                        card_id: T,
-                        impression_session_id: p.impressionSessionId,
-                        location_stack: p.analyticsLocations,
+                        card_id: m,
+                        impression_session_id: T.impressionSessionId,
+                        location_stack: T.analyticsLocations,
                     }),
-                _();
-        }, [_, t.id, t.productLine, I, A, p, T]);
+                E();
+        }, [E, t.id, t.productLine, p, h, T, m]);
     return (0, i.jsx)("div", {
-        ref: g,
+        ref: C,
         children: (0, i.jsx)(L.A, {
             sku: t,
             user: n,
+            guildId: a,
             spec: G,
-            cardStyle: s()(U.Nr, a),
-            skuPreviewStyle: s()(U.ev, l),
-            onHoverOrFocusChange: o,
-            onClick: C,
-            "aria-label": E,
-            children: h,
+            cardStyle: s()(U.Nr, l),
+            skuPreviewStyle: s()(U.ev, o),
+            onHoverOrFocusChange: _,
+            onClick: R,
+            "aria-label": A,
+            children: I,
         }),
     });
 }
@@ -175,25 +177,26 @@ function H(e) {
 }
 var j = n(817990);
 function W(e) {
-    let { wishlist: t, handleOpenUserProfileModal: n, analyticsLocations: r, className: a, items: c } = e,
-        u = (0, l.bG)([o.default], () => o.default.getUser(t?.userId));
+    let { wishlist: t, guildId: n, handleOpenUserProfileModal: r, analyticsLocations: a, className: c, items: u } = e,
+        _ = (0, l.bG)([o.default], () => o.default.getUser(t?.userId));
     return (0, i.jsx)("ul", {
-        className: s()(j.Vg, a),
-        children: c.map((e, a) => {
-            let { sku: s, itemSource: l } = e;
+        className: s()(j.Vg, c),
+        children: u.map((e, s) => {
+            let { sku: l, itemSource: o } = e;
             return (0, i.jsx)(
                 d.dB,
                 {
-                    newValue: { positionInSection: a, skuId: s.id, itemSource: l, productLine: s.productLine },
+                    newValue: { positionInSection: s, skuId: l.id, itemSource: o, productLine: l.productLine },
                     children: (0, i.jsx)(H, {
-                        sku: s,
+                        sku: l,
                         wishlistId: t?.id,
-                        wishlistOwner: u,
-                        handleOpenUserProfileModal: n,
-                        analyticsLocations: r,
+                        wishlistOwner: _,
+                        guildId: n,
+                        handleOpenUserProfileModal: r,
+                        analyticsLocations: a,
                     }),
                 },
-                s.id,
+                l.id,
             );
         }),
     });

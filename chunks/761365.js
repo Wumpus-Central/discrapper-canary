@@ -6,28 +6,29 @@ var i = n(627968),
     s = n(344346),
     l = n(101206);
 let o = r.memo(function (e) {
-    let { user: t, nameplate: n, isHighlighted: r, size: o = "default" } = e,
-        d = "small" === o ? 62 : 94,
-        c = "small" === o ? 72 : 110;
+    let { user: t, guildId: n, nameplate: r, isHighlighted: o, size: d = "default" } = e,
+        c = "small" === d ? 62 : 94,
+        u = "small" === d ? 72 : 110;
     return (0, i.jsx)("div", {
         className: l.Dz,
         children: (0, i.jsxs)("div", {
             className: l.ur,
             children: [
-                (0, i.jsx)(a._, { showStatus: !0, width: d, opacity: 0.7, size: o }),
-                (0, i.jsx)(a._, { showStatus: !0, width: c, opacity: 0.85, size: o }),
+                (0, i.jsx)(a._, { showStatus: !0, width: c, opacity: 0.7, size: d }),
+                (0, i.jsx)(a._, { showStatus: !0, width: u, opacity: 0.85, size: d }),
                 (0, i.jsx)(s.A, {
                     user: t,
-                    nameplate: n,
+                    guildId: n,
+                    nameplate: r,
                     className: l.tZ,
-                    isHighlighted: r,
-                    showPlaceholderUser: !r,
+                    isHighlighted: o,
+                    showPlaceholderUser: !o,
                     showStatus: !0,
-                    nameplatePreviewSize: "small" === o ? "small" : "default",
+                    nameplatePreviewSize: "small" === d ? "small" : "default",
                     hideDecorators: !0,
                 }),
-                (0, i.jsx)(a._, { showStatus: !0, width: c, opacity: 0.85, size: o }),
-                (0, i.jsx)(a._, { showStatus: !0, width: d, opacity: 0.7, size: o }),
+                (0, i.jsx)(a._, { showStatus: !0, width: u, opacity: 0.85, size: d }),
+                (0, i.jsx)(a._, { showStatus: !0, width: c, opacity: 0.7, size: d }),
             ],
         }),
     });
