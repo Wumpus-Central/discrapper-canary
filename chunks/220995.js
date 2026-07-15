@@ -5,11 +5,11 @@ var n = t(627968),
     a = t.n(s),
     r = t(580929),
     d = t(562708),
-    o = t(17928),
-    u = t(990078),
+    u = t(17928),
+    o = t(990078),
     c = t(192308),
-    m = t(717421),
-    A = t(922016),
+    A = t(717421),
+    m = t(922016),
     g = t(939249),
     h = t(283973),
     p = t(834730),
@@ -44,9 +44,9 @@ function k(e) {
         type: d.ImpressionTypes.VIEW,
         properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: M },
     });
-    let L = (0, o.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
-        F = (0, o.bG)([N.A], () => N.A.getGuild(i.guild_id)),
-        z = (0, o.bG)([v.Ay], () => v.Ay.useReducedMotion),
+    let L = (0, u.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, i), [i]),
+        F = (0, u.bG)([N.A], () => N.A.getGuild(i.guild_id)),
+        z = (0, u.bG)([v.Ay], () => v.Ay.useReducedMotion),
         [K, B] = l.useState(!1),
         Y = l.useRef(null),
         q = (0, E.M)(L ? k : Y),
@@ -78,11 +78,11 @@ function k(e) {
                         t.e("28136"),
                         t.e("16084"),
                         t.e("22547"),
-                    ]).then(t.bind(t, 1310));
+                    ]).then(t.bind(t, 778929));
                     return (t) => (0, n.jsx)(e, { ...t, guild: F, channel: i, source: j.PE1.VOICE_INVITE_SUGGESTIONS });
                 });
         }, [F, i]),
-        [ei, et] = (0, m.z)(() => ({
+        [ei, et] = (0, A.z)(() => ({
             from: { height: "0px" },
             to: { height: "32px" },
             config: { duration: 200, easing: P, clamp: !0 },
@@ -126,7 +126,7 @@ function k(e) {
             D(!1), H(!1), Z && (J(!1), k.current?.focus());
         }, [Z]);
     return L
-        ? (0, n.jsx)(A.Y, {
+        ? (0, n.jsx)(m.Y, {
               targetElementRef: k,
               shouldShow: w,
               position: "right",
@@ -183,7 +183,7 @@ function k(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, n.jsx)(u.m, {
+                                  (0, n.jsx)(o.m, {
                                       text: T.intl.string(T.t["EE+P0H"]),
                                       overflowOnly: !0,
                                       children: (0, n.jsx)(p.E, {

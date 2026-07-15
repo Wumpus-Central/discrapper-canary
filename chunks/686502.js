@@ -13,8 +13,8 @@ var i = n(627968),
     m = n(192308),
     A = n(231723),
     x = n(825484),
-    f = n(821609),
-    g = n(283973),
+    g = n(821609),
+    f = n(283973),
     C = n(834730),
     j = n(789645),
     y = n(964486),
@@ -23,9 +23,9 @@ var i = n(627968),
     N = n(793574),
     I = n(688810),
     T = n(975412),
-    _ = n(392054),
-    S = n(826673),
-    b = n(757293),
+    b = n(392054),
+    _ = n(826673),
+    S = n(757293),
     R = n(174459),
     P = n(272812),
     O = n(652215),
@@ -111,7 +111,7 @@ function V(e) {
                     n.e("28136"),
                     n.e("16084"),
                     n.e("22547"),
-                ]).then(n.bind(n, 1310));
+                ]).then(n.bind(n, 778929));
                 return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: O.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
             { contextKey: r ? A.KX : A.SY },
@@ -138,14 +138,14 @@ function V(e) {
                             justify: "center",
                             align: "center",
                             children: [
-                                (0, i.jsx)(f.$, {
+                                (0, i.jsx)(g.$, {
                                     variant: "secondary",
-                                    icon: g.R,
+                                    icon: f.R,
                                     text: L.intl.string(L.t["EE+P0H"]),
                                     onClick: p,
                                 }),
                                 o &&
-                                    (0, i.jsx)(f.$, {
+                                    (0, i.jsx)(g.$, {
                                         variant: "secondary",
                                         icon: u.k,
                                         text: L.intl.string(L.t.qnFavR),
@@ -191,7 +191,7 @@ function k(e) {
                                 activityItem: e,
                                 aspectRatio: E.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: w.KU,
-                                commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                commandOrigin: b.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),
@@ -205,10 +205,10 @@ function k(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, S.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
-                        (0, i.jsx)(b.A, {}),
+                        (0, i.jsx)(S.A, {}),
                         (0, i.jsx)(C.E, { variant: "text-sm/medium", children: L.intl.string(L.t["5E9SB9"]) }),
                     ],
                 }),

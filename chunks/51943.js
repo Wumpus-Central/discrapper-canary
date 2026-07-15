@@ -1,9 +1,9 @@
-i.d(s, { A: () => M });
+i.d(s, { A: () => C });
 var n = i(627968);
 i(64700);
 var a = i(661531),
-    t = i(3026),
-    l = i(462887),
+    l = i(3026),
+    t = i(462887),
     r = i(778712),
     o = i(939249),
     u = i(781696),
@@ -16,11 +16,11 @@ var a = i(661531),
     v = i(518477),
     x = i(996988),
     g = i(341934);
-let C = (0, r.FT)(r._3.SIZE_16);
-function M(e) {
-    let { user: s, guild: M, nick: b, onSelect: j } = e,
+let M = (0, r.FT)(r._3.SIZE_16);
+function C(e) {
+    let { user: s, guild: C, nick: b, onSelect: j } = e,
         { theme: p, themeType: E } = (0, m.E)(),
-        I = s.hasAvatarForGuild(M.id);
+        I = s.hasAvatarForGuild(C.id);
     return (0, n.jsxs)(o.D, {
         focusProps: E === x.d.MODAL_V2 ? { offset: { top: 4, right: 4, left: 4 } } : { offset: { right: 8 } },
         className: g.nM,
@@ -42,7 +42,7 @@ function M(e) {
                     i.e("90629"),
                     i.e("8886"),
                     i.e("6212"),
-                    i.e("78279"),
+                    i.e("660"),
                     i.e("78220"),
                     i.e("11262"),
                     i.e("16227"),
@@ -324,7 +324,7 @@ function M(e) {
                     i.e("95340"),
                     i.e("5557"),
                     i.e("62718"),
-                    i.e("89916"),
+                    i.e("67535"),
                     i.e("60773"),
                     i.e("9004"),
                     i.e("58337"),
@@ -338,7 +338,7 @@ function M(e) {
                     i.e("20930"),
                     i.e("24761"),
                     i.e("59957"),
-                    i.e("48382"),
+                    i.e("26001"),
                     i.e("30997"),
                     i.e("29666"),
                     i.e("56753"),
@@ -567,16 +567,16 @@ function M(e) {
                     i.e("15046"),
                     i.e("65011"),
                 ]).then(i.bind(i, 860417));
-                return (s) => (0, n.jsx)(e, { ...s, guild: M });
+                return (s) => (0, n.jsx)(e, { ...s, guild: C });
             });
         },
         children: [
             (0, n.jsx)(A.Ay, {
                 tabIndex: -1,
-                guild: M,
+                guild: C,
                 showBadge: !0,
-                className: null != M.icon ? g.Kk : g.lN,
-                badgeStrokeColor: (0, l.M)(p) ? a.A.unsafe_rawColors.PRIMARY_600.css : a.A.unsafe_rawColors.WHITE.css,
+                className: null != C.icon ? g.Kk : g.lN,
+                badgeStrokeColor: (0, t.M)(p) ? a.A.unsafe_rawColors.PRIMARY_600.css : a.A.unsafe_rawColors.WHITE.css,
                 badgeTooltipColor: u.oM.PRIMARY,
                 badgeTooltipDelay: v.In,
                 size: A.Ay.Sizes.MEDIUM,
@@ -585,22 +585,22 @@ function M(e) {
             (0, n.jsxs)("div", {
                 className: g.zH,
                 children: [
-                    (0, n.jsx)("div", { className: g.UU, children: M.name }),
+                    (0, n.jsx)("div", { className: g.UU, children: C.name }),
                     I &&
                         (0, n.jsxs)("div", {
                             className: g.C9,
                             children: [
                                 (0, n.jsx)(d.eu, {
-                                    src: s.getAvatarURL(M.id, C),
+                                    src: s.getAvatarURL(C.id, M),
                                     size: r._3.SIZE_16,
                                     className: g.my,
                                     "aria-hidden": !0,
                                 }),
                                 (0, n.jsx)(c.E, {
                                     variant: "text-xs/medium",
-                                    children: (0, n.jsx)(t.A, {
+                                    children: (0, n.jsx)(l.A, {
                                         delay: v.In,
-                                        children: b ?? h.Ay.getName(M.id, void 0, s),
+                                        children: b ?? h.Ay.getName(C.id, void 0, s),
                                     }),
                                 }),
                             ],
@@ -609,7 +609,7 @@ function M(e) {
                         null != b &&
                         (0, n.jsx)(c.E, {
                             variant: "text-xs/medium",
-                            children: (0, n.jsx)(t.A, { delay: v.In, children: b }),
+                            children: (0, n.jsx)(l.A, { delay: v.In, children: b }),
                         }),
                 ],
             }),

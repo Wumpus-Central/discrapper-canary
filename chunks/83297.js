@@ -10,7 +10,7 @@ var s = n(627968),
     u = n(998445),
     x = n(834730),
     m = n(27232),
-    h = n(534514),
+    h = n(297264),
     j = n(192308),
     f = n(939249),
     p = n(241541),
@@ -285,13 +285,13 @@ function eu(e) {
                 ? (0, j.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
                           n.e("92430"),
-                          n.e("80339"),
+                          n.e("54453"),
                           n.e("59957"),
                           n.e("28136"),
                           n.e("16084"),
                           n.e("36624"),
                           n.e("22547"),
-                      ]).then(n.bind(n, 1310));
+                      ]).then(n.bind(n, 778929));
                       return (t) => (0, s.jsx)(e, { ...t, guild: a, source: M.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, j.openModalLazy)(async () => {

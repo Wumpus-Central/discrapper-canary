@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R });
+n.d(t, { A: () => O });
 var i = n(562708),
     r = n(765178),
     a = n(636537),
@@ -22,7 +22,7 @@ var i = n(562708),
     S = n(652215),
     N = n(375708);
 let C = new c.A("GuildSettingsActionCreators"),
-    O = {
+    R = {
         init(e, t, n, i) {
             s.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: t, subsection: i, location: n });
         },
@@ -52,7 +52,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("30593"),
                 n.e("8886"),
                 n.e("6212"),
-                n.e("78279"),
+                n.e("660"),
                 n.e("78220"),
                 n.e("11262"),
                 n.e("16227"),
@@ -306,8 +306,8 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("7167"),
                 n.e("12721"),
                 n.e("84569"),
+                n.e("36850"),
                 n.e("60235"),
-                n.e("61737"),
                 n.e("21335"),
                 n.e("61060"),
                 n.e("77333"),
@@ -323,7 +323,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("44057"),
                 n.e("1453"),
                 n.e("88774"),
-                n.e("10120"),
+                n.e("21235"),
                 n.e("62175"),
                 n.e("31988"),
                 n.e("44571"),
@@ -508,7 +508,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("62718"),
                 n.e("76087"),
                 n.e("25279"),
-                n.e("89916"),
+                n.e("67535"),
                 n.e("88003"),
                 n.e("28752"),
                 n.e("60773"),
@@ -548,7 +548,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("20930"),
                 n.e("24761"),
                 n.e("59957"),
-                n.e("48382"),
+                n.e("26001"),
                 n.e("30997"),
                 n.e("29666"),
                 n.e("56753"),
@@ -777,7 +777,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 T.A.getGuild(e)?.features.has(S.GuildFeatures.COMMUNITY) &&
                     (t === S.BEX.GUILD_AUTOMOD && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_AUTOMOD)),
                     t === S.BEX.MEMBER_VERIFICATION && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
-                O.init(e, t, i, r),
+                R.init(e, t, i, r),
                 I.A.closeGuildSidebar(e),
                 (0, l.id)(S.zgK.GUILD_SETTINGS);
         },
@@ -860,8 +860,8 @@ let C = new c.A("GuildSettingsActionCreators"),
                     features: T,
                     systemChannelFlags: m,
                     preferredLocale: N,
-                    rulesChannelId: O,
-                    safetyAlertsChannelId: R,
+                    rulesChannelId: R,
+                    safetyAlertsChannelId: O,
                     ownerConfiguredContentLevel: L,
                     discoverySplash: D,
                     publicUpdatesChannelId: y,
@@ -888,11 +888,11 @@ let C = new c.A("GuildSettingsActionCreators"),
                     default_message_notifications: f,
                     explicit_content_filter: p,
                     system_channel_flags: m,
-                    rules_channel_id: O,
+                    rules_channel_id: R,
                     owner_configured_content_level: L,
                     discovery_splash: D,
                     public_updates_channel_id: y,
-                    safety_alerts_channel_id: R,
+                    safety_alerts_channel_id: O,
                     ...(null != v ? { premium_progress_bar_enabled: v } : null),
                     profile: null != b ? { tag: b.tag } : b,
                     moderator_reporting_enabled: M,
@@ -971,7 +971,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         deleteGuild: (e) =>
             a.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
-                O.close();
+                R.close();
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -984,7 +984,7 @@ let C = new c.A("GuildSettingsActionCreators"),
             }).then(() => {
                 r.O.announce(N.intl.string(N.t["7iPyVW"]));
             }),
-                O.close(),
+                R.close(),
                 t && n && (0, h.pX)(S.BVt.GUILD_DISCOVERY);
         },
         async updateMemberRoles(e, t, n, i, r) {
@@ -1038,7 +1038,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         async migratePermissions(e, t) {
             let { migratePin: n, migrateSlowmode: i } = t;
-            n && (await O.migratePinPermission(e)), i && (await O.migrateSlowmodePermission(e));
+            n && (await R.migratePinPermission(e)), i && (await R.migrateSlowmodePermission(e));
         },
     },
-    R = O;
+    O = R;

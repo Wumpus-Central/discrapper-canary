@@ -11,20 +11,20 @@ var l = n(627968),
     h = n(933832),
     m = n(192308),
     g = n(383669),
-    p = n(534514),
+    p = n(297264),
     A = n(444927),
     f = n(919796),
     C = n(793574),
     x = n(95561),
-    E = n(735438),
+    E = n(435558),
     S = n.n(E),
     _ = n(855687),
     I = n(143413),
-    j = n(495544),
+    j = n(280450),
     y = n(734057),
     b = n(808728),
-    N = n(498642),
-    v = n(71393),
+    v = n(498642),
+    N = n(71393),
     T = n(186111),
     M = n(232835),
     R = n(576705),
@@ -49,7 +49,7 @@ var U = n(363487),
     z = n(314307),
     W = n(936649),
     q = n(375708),
-    $ = n(458607);
+    $ = n(516847);
 function J(e) {
     let { className: t, iconUrl: n, icon: s, header: r, completed: o, onClick: c } = e,
         [m, g] = i.useState(!1),
@@ -92,7 +92,7 @@ function Z(e) {
         et,
         en,
         { channel: el } = e,
-        ei = (0, o.bG)([v.A], () => (null != el ? v.A.getGuild(el.getGuildId()) : null), [el]),
+        ei = (0, o.bG)([N.A], () => (null != el ? N.A.getGuild(el.getGuildId()) : null), [el]),
         es = null != ei && D.default.extractTimestamp(ei.id) < Date.now() - L.NOr,
         ea = (0, o.bG)([j.default], () => ei?.ownerId === j.default.getId(), [ei]),
         {
@@ -121,8 +121,8 @@ function Z(e) {
             guildPopulated:
                 ((s = (0, o.bG)([y.A], () => y.A.getChannel(ei?.systemChannelId))),
                 (d = (0, o.yK)([M.A], () => (null != s ? M.A.getMessages(s.id).toArray() : []))),
-                (0, o.bG)([N.A], () => {
-                    let e = N.A.getMemberCount(ei?.id) ?? 0,
+                (0, o.bG)([v.A], () => {
+                    let e = v.A.getMemberCount(ei?.id) ?? 0,
                         t = d.some((e) => e.type === L.lAJ.USER_JOIN);
                     return e > 1 || t;
                 }, [ei, d])),
@@ -138,7 +138,7 @@ function Z(e) {
                 )),
             guildPersonalized:
                 ((E = (0, o.bG)([T.A], () => T.A.hasLayers())),
-                (H = (0, o.bG)([v.A], () => v.A.getGuild(ei?.id))),
+                (H = (0, o.bG)([N.A], () => N.A.getGuild(ei?.id))),
                 H?.icon != null && !E),
             guildChannelCreated: (0, o.bG)([b.Ay], () => {
                 let e = b.Ay.getChannels(ei?.id),
@@ -168,14 +168,14 @@ function Z(e) {
                 null != ei &&
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("70158"),
-                            n.e("26903"),
+                            n.e("92430"),
+                            n.e("54453"),
                             n.e("59957"),
                             n.e("28136"),
                             n.e("16084"),
                             n.e("36624"),
                             n.e("22547"),
-                        ]).then(n.bind(n, 1310));
+                        ]).then(n.bind(n, 778929));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 ...t,
@@ -205,7 +205,7 @@ function Z(e) {
                 action: W.AG.DOWNLOAD,
             }),
                 (0, m.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("22979"), n.e("44602"), n.e("25280")]).then(
+                    let { default: e } = await Promise.all([n.e("17951"), n.e("44602"), n.e("25280")]).then(
                         n.bind(n, 987482),
                     );
                     return (t) => (0, l.jsx)(e, { source: L.JJy.CHANNEL_WELCOME_CTA, ...t });
@@ -223,7 +223,7 @@ function Z(e) {
                         action: W.AG.ADD_APP,
                     }),
                     (0, m.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("64640"), n.e("66003")]).then(n.bind(n, 258942));
+                        let { default: e } = await Promise.all([n.e("81056"), n.e("66003")]).then(n.bind(n, 258942));
                         return (t) =>
                             (0, l.jsx)(e, {
                                 guildId: ei.id ?? "",
@@ -276,7 +276,7 @@ function Z(e) {
                 opacities: en,
             }),
         [ey, eb] = i.useState([]),
-        eN = ey.length > 0;
+        ev = ey.length > 0;
     if (
         (i.useEffect(() => {
             (async () => {
@@ -289,15 +289,15 @@ function Z(e) {
         null == ei)
     )
         return null;
-    let ev = [];
+    let eN = [];
     !es &&
         (er &&
-            ev.push(
+            eN.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
+                        style: e_ ? { opacity: ej[eN.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/ea08bfae3e0ab96d.svg",
                             header: q.intl.string(q.t.q9n0Ta),
@@ -309,12 +309,12 @@ function Z(e) {
                 ),
             ),
         eo &&
-            ev.push(
+            eN.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
+                        style: e_ ? { opacity: ej[eN.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/428a003b3c729aa6.svg",
                             header: q.intl.string(q.t.c5kxPh),
@@ -326,12 +326,12 @@ function Z(e) {
                 ),
             ),
         ec &&
-            ev.push(
+            eN.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
+                        style: e_ ? { opacity: ej[eN.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/2ed198e767bd5423.svg",
                             header: q.intl.string(q.t["SoP7+l"]),
@@ -343,12 +343,12 @@ function Z(e) {
                 ),
             ),
         (0, K.isWeb)() &&
-            ev.push(
+            eN.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
+                        style: e_ ? { opacity: ej[eN.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl: "/assets/eea7561d0cfcff41.svg",
                             header: q.intl.string(q.t.pGVNI9),
@@ -359,16 +359,16 @@ function Z(e) {
                     "download",
                 ),
             ),
-        ev.push(
+        eN.push(
             (0, l.jsx)(
                 r.A.div,
                 {
                     className: $.cW,
-                    style: e_ ? { opacity: ej[ev.length] } : {},
+                    style: e_ ? { opacity: ej[eN.length] } : {},
                     children: (0, l.jsx)(J, {
                         iconUrl: g,
                         header: q.intl.string(q.t.IhHDEO),
-                        completed: eN,
+                        completed: ev,
                         onClick: eE,
                     }),
                 },
@@ -377,12 +377,12 @@ function Z(e) {
         ),
         ep &&
             G.getConfig({ location: "WelcomeArea" }).enabled &&
-            ev.push(
+            eN.push(
                 (0, l.jsx)(
                     r.A.div,
                     {
                         className: $.cW,
-                        style: e_ ? { opacity: ej[ev.length] } : {},
+                        style: e_ ? { opacity: ej[eN.length] } : {},
                         children: (0, l.jsx)(J, {
                             iconUrl:
                                 "https://cdn.discordapp.com/assets/content/4c6d9cf3ddf3b92b4cdc14d3f240caf669e515496180922dff9b608e4d42555d.svg",
@@ -414,13 +414,13 @@ function Z(e) {
                             }),
                             (0, l.jsxs)(u.E, {
                                 color: "text-default",
-                                className: a()({ [$.VA]: !0, [$.lg]: 0 === ev.length }),
+                                className: a()({ [$.VA]: !0, [$.lg]: 0 === eN.length }),
                                 variant: "text-sm/normal",
-                                children: [eT, " ", ev.length > 0 ? q.intl.format(q.t.UOtD32, { guideURL: eM }) : null],
+                                children: [eT, " ", eN.length > 0 ? q.intl.format(q.t.UOtD32, { guideURL: eM }) : null],
                             }),
                         ],
                     }),
-                    ev,
+                    eN,
                 ],
             }),
         }),

@@ -64,7 +64,7 @@ let E = [
                         n.e("28136"),
                         n.e("16084"),
                         n.e("22547"),
-                    ]).then(n.bind(n, 1310));
+                    ]).then(n.bind(n, 778929));
                     return (n) => (0, l.jsx)(i, { ...n, guild: e, channel: t, source: p.PE1.HUB_SIDEBAR });
                 }),
         },

@@ -5,11 +5,11 @@ var n = t(627968),
     a = t.n(s),
     r = t(284009),
     d = t.n(r),
-    o = t(562708),
-    u = t(17928),
+    u = t(562708),
+    o = t(17928),
     c = t(990078),
-    m = t(192308),
-    A = t(315710),
+    A = t(192308),
+    m = t(315710),
     g = t(834730),
     h = t(939249),
     p = t(177953),
@@ -46,7 +46,7 @@ var n = t(627968),
     $ = t(518229);
 let H = "VoiceInviteSuggestionsPopover";
 function W(e) {
-    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: u, closePopout: c } = e,
+    let { channel: i, forceOpen: s, onHover: r, setPopoutRef: o, closePopout: c } = e,
         f = l.useRef(null),
         v = (0, k.M)(f),
         x = (0, B.kt)({ channel: i }),
@@ -56,34 +56,34 @@ function W(e) {
         s && f.current?.focus();
     }, [s]),
         (0, O.A)({
-            name: o.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
-            type: o.ImpressionTypes.POPOUT,
+            name: u.ImpressionNames.VOICE_INVITE_SUGGESTIONS_POPOVER,
+            type: u.ImpressionTypes.POPOUT,
             properties: { voice_channel_id: i.id, voice_guild_id: i.guild_id, location_stack: _ },
         }),
         l.useEffect(() => {
-            u?.(f.current);
-        }, [u]),
+            o?.(f.current);
+        }, [o]),
         l.useEffect(() => {
             r?.(v);
         }, [r, v]);
     let E = l.useCallback(() => {
         let e = M.A.getGuild(i.guild_id);
         d()(null != e, "VoiceInviteSuggestionsPopover must be used in context of a guild"),
-            (0, m.openModalLazy)(async () => {
+            (0, A.openModalLazy)(async () => {
                 let { default: l } = await Promise.all([
                     t.e("92430"),
-                    t.e("80339"),
+                    t.e("54453"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
                     t.e("22547"),
-                ]).then(t.bind(t, 1310));
+                ]).then(t.bind(t, 778929));
                 return (t) => (0, n.jsx)(l, { ...t, guild: e, channel: i, source: I.PE1.VOICE_INVITE_SUGGESTIONS });
             }),
             c();
     }, [i, c]);
     return (
-        (0, A.tj)(f, { disable: !s }),
+        (0, m.tj)(f, { disable: !s }),
         (0, n.jsx)("div", {
             role: "dialog",
             tabIndex: -1,
@@ -132,9 +132,9 @@ function Z(e) {
     let { channel: i, user: t, ringingEnabled: s } = e,
         r = i.guild_id,
         d = l.useRef(null),
-        o = (0, u.bG)([U.Ay], () => U.Ay.getMember(r, t.id), [r, t.id]),
-        { isHoveringOrFocusing: m } = (0, k.A)(d),
-        [A, p] = l.useState(null),
+        u = (0, o.bG)([U.Ay], () => U.Ay.getMember(r, t.id), [r, t.id]),
+        { isHoveringOrFocusing: A } = (0, k.A)(d),
+        [m, p] = l.useState(null),
         {
             icon: T,
             iconColor: G,
@@ -147,7 +147,7 @@ function Z(e) {
             status: W,
             isMobileOnline: Z,
             activities: J,
-        } = (0, u.cf)(
+        } = (0, o.cf)(
             [z.A],
             () => ({
                 status: z.A.getStatus(t.id, r),
@@ -163,7 +163,7 @@ function Z(e) {
         { voiceChannel: ee } = (0, C.Ay)({ userId: t.id }),
         ei = (0, P.Ay)(ee),
         et = (0, f.S3)(I.clD.ONLINE),
-        en = "success" === A || "sending" === A,
+        en = "success" === m || "sending" === m,
         el = l.useCallback(
             (e) => {
                 e.stopPropagation(), D || B();
@@ -206,24 +206,24 @@ function Z(e) {
             avatarDecorationSrc: ea,
             avatarSrc: er,
             eventHandlers: ed,
-        } = (0, V.A)({ userId: t.id, size: v._3.SIZE_24, animateOnHover: !m, guildId: r });
-    if (null == o) return null;
-    let eo = K.Ay.getName(t),
-        eu = Y.intl.string(Y.t.jYnGPG),
+        } = (0, V.A)({ userId: t.id, size: v._3.SIZE_24, animateOnHover: !A, guildId: r });
+    if (null == u) return null;
+    let eu = K.Ay.getName(t),
+        eo = Y.intl.string(Y.t.jYnGPG),
         ec = W !== I.clD.OFFLINE ? W : void 0,
-        em = null != X.text,
-        eA = null != ee && null != ei;
+        eA = null != X.text,
+        em = null != ee && null != ei;
     return (0, n.jsxs)(h.D, {
         innerRef: d,
         tag: "li",
         className: a()(q.nM, { [q.vk]: !en }),
         "aria-disabled": en,
         onClick: es,
-        "aria-label": eu,
+        "aria-label": eo,
         children: [
             (0, n.jsx)(x.eu, {
                 className: q.my,
-                "aria-label": eo,
+                "aria-label": eu,
                 size: v._3.SIZE_24,
                 src: er,
                 avatarDecoration: ea,
@@ -234,12 +234,12 @@ function Z(e) {
             (0, n.jsxs)("div", {
                 className: q.VW,
                 children: [
-                    (0, n.jsx)(g.E, { variant: "text-sm/medium", className: q.UU, lineClamp: 1, children: eo }),
-                    (eA || em) &&
+                    (0, n.jsx)(g.E, { variant: "text-sm/medium", className: q.UU, lineClamp: 1, children: eu }),
+                    (em || eA) &&
                         (0, n.jsxs)("div", {
                             className: q.J2,
                             children: [
-                                eA
+                                em
                                     ? (0, n.jsx)(w.A, { size: "custom", color: et, channel: ee, className: q.RI })
                                     : null != Q
                                       ? (0, n.jsx)(b.A, { icon: Q, className: q.RI })
@@ -248,15 +248,15 @@ function Z(e) {
                                     variant: "text-xs/medium",
                                     color: "text-status-online",
                                     lineClamp: 1,
-                                    children: eA ? ei : X.text,
+                                    children: em ? ei : X.text,
                                 }),
                             ],
                         }),
                 ],
             }),
-            "sending" === A &&
+            "sending" === m &&
                 (0, n.jsx)("div", { className: q.r$, children: (0, n.jsx)(S.n, { dotRadius: 2, themed: !0 }) }),
-            "success" === A &&
+            "success" === m &&
                 (0, n.jsx)(g.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
@@ -264,7 +264,7 @@ function Z(e) {
                     lineClamp: 1,
                     children: Y.intl.string(Y.t["8BEiNn"]),
                 }),
-            null == A &&
+            null == m &&
                 !s &&
                 (0, n.jsx)("div", {
                     className: q.SB,
