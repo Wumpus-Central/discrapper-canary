@@ -369,17 +369,17 @@ async function Z(e) {
 }
 async function X(e) {
     let { clipsEnabled: t, guildId: n, trackAnalytics: i = !1 } = e,
-        a = !t && !(0, S.Fp)();
+        a = !t || (0, S.Fp)();
     await r.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
-        settings: { clipsEnabled: t, ...(a && { decoupledClipsEnabled: !1 }) },
+        settings: { clipsEnabled: t, ...(a && { decoupledClipsEnabled: t }) },
     }),
         i &&
             p.default.track(d.HAw.CLIPS_SETTINGS_UPDATED, {
                 ...g.lc("updateClipsEnabled"),
                 clips_enabled: t,
                 guild_id: n,
-                ...(a && { decoupled_clips_enabled: !1 }),
+                ...(a && { decoupled_clips_enabled: t }),
             });
 }
 function Q(e) {

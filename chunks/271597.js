@@ -32,6 +32,7 @@ function l() {
                     n.e("96268"),
                     n.e("1962"),
                     n.e("83518"),
+                    n.e("32736"),
                     n.e("74049"),
                     n.e("69201"),
                     n.e("52566"),
@@ -39,8 +40,8 @@ function l() {
                     n.e("89160"),
                     n.e("31782"),
                     n.e("20342"),
-                    n.e("7270"),
-                ]).then(n.bind(n, 10757));
+                    n.e("93834"),
+                ]).then(n.bind(n, 671884));
                 return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
             },
             { modalKey: s.nm },
