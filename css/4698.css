@@ -3599,6 +3599,10 @@ img.thumbnail__0f2e8 {
     }
 }
 
+.sideNavContent_dc2e0e:has([data-parental-consent-notice]) {
+    padding-top: var(--space-32)
+}
+
 .container_dc2e0e {
     align-items: stretch;
     display: flex;

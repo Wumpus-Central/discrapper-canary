@@ -1320,12 +1320,15 @@ function ne() {
             },
             t,
         );
-    return (0, l.jsx)(t7.w, {
-        type: "warning",
-        children:
-            0 === t
-                ? et.intl.format(ee.default.S5kmfO, { learnMoreHook: n })
-                : et.intl.format(ee.default["5jm+T3"], { count: t, learnMoreHook: n }),
+    return (0, l.jsx)("div", {
+        "data-parental-consent-notice": !0,
+        children: (0, l.jsx)(t7.w, {
+            type: "warning",
+            children:
+                0 === t
+                    ? et.intl.format(ee.default.S5kmfO, { learnMoreHook: n })
+                    : et.intl.format(ee.default["5jm+T3"], { count: t, learnMoreHook: n }),
+        }),
     });
 }
 var nt = n(847374),
