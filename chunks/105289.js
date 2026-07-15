@@ -919,7 +919,17 @@ let e7 = (e) => {
         }
         o.useEffect(() => {
             let e = t.effects;
-            e.length > 0 && f(e);
+            e.length > 0 &&
+                f(
+                    e.map((e) => ({
+                        ...e,
+                        name: e.name ?? (0, eP.XG)(e.src),
+                        randomizedSources: e.randomizedSources?.map((e) => ({
+                            ...e,
+                            filename: e.filename ?? (0, eP.XG)(e.src),
+                        })),
+                    })),
+                );
         }, [t.effects]),
             o.useEffect(() => {
                 let e = t.stillFrames;

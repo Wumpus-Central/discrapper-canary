@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => a, GT: () => l, Mz: () => u, fB: () => d, qH: () => o, rs: () => c }),
+n.d(t, { Ay: () => s, GT: () => o, Mz: () => d, XG: () => c, fB: () => _, qH: () => l, rs: () => u }),
     n(323874),
     n(14289),
     n(35956),
@@ -13,15 +13,15 @@ n.d(t, { Ay: () => a, GT: () => l, Mz: () => u, fB: () => d, qH: () => o, rs: ()
     n(65162);
 var i,
     r = n(115943),
-    s = n.n(r);
-async function a(e, t, n) {
+    a = n.n(r);
+async function s(e, t, n) {
     var i;
     return {
         src: e,
         base64: e,
         loop: !1,
         loopDelay: 0,
-        duration: Math.round(((i = await t.arrayBuffer()), s().decode(i)).frames.reduce((e, t) => e + t.delay, 0)),
+        duration: Math.round(((i = await t.arrayBuffer()), a().decode(i)).frames.reduce((e, t) => e + t.delay, 0)),
         start: 0,
         position: { x: 0, y: 0 },
         zIndex: 100 + n,
@@ -30,11 +30,11 @@ async function a(e, t, n) {
         name: t.name,
     };
 }
-var o = (((i = {}).THUMBNAIL = "Thumbnail"), (i.STATIC = "Static"), (i.REDUCED_MOTION = "Reduced Motion"), i);
-function l(e, t) {
+var l = (((i = {}).THUMBNAIL = "Thumbnail"), (i.STATIC = "Static"), (i.REDUCED_MOTION = "Reduced Motion"), i);
+function o(e, t) {
     return { name: t.name, src: URL.createObjectURL(t), base64: e };
 }
-function u(e, t) {
+function d(e, t) {
     if (null == e) return;
     let n = new FileReader();
     (n.onload = (e) => {
@@ -42,23 +42,26 @@ function u(e, t) {
     }),
         n.readAsDataURL(e);
 }
-let c = (e) =>
+function c(e) {
+    if (null == e) return "";
+    let t = e.split("/").pop() ?? e;
+    return t.endsWith(".png.png") ? t.replace(/\.png\.png$/, ".png") : t;
+}
+let u = (e) =>
     "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
     e
         .map((e) =>
             JSON.stringify(
                 {
-                    path: (function (e) {
-                        if (null == e) return "";
-                        let t = e.split("/").pop() ?? e;
-                        return t.endsWith(".png.png") ? t.replace(/\.png\.png$/, ".png") : t;
-                    })(e.name),
+                    path: c(e.name),
                     loop: e.loop,
                     start: e.start,
                     duration: e.duration,
                     loop_delay: e.loopDelay,
                     z_index: e.zIndex,
-                    ...(null != e.randomizedSources ? { randomized_paths: e.randomizedSources.map((e) => e.src) } : {}),
+                    ...(null != e.randomizedSources
+                        ? { randomized_paths: e.randomizedSources.map((e) => c(e.filename ?? e.src)) }
+                        : {}),
                 },
                 null,
                 4,
@@ -69,14 +72,14 @@ let c = (e) =>
         )
         .join(",\n") +
     "\n]";
-function d(e) {
+function _(e) {
     let t = (function (e) {
         let [t, n] = e.split(","),
             i = atob(n),
             r = t.split(";")[0],
-            s = new Uint8Array(i.length);
-        for (let e = 0; e < i.length; e++) s[e] = i.charCodeAt(e);
-        return new Blob([s], { type: r });
+            a = new Uint8Array(i.length);
+        for (let e = 0; e < i.length; e++) a[e] = i.charCodeAt(e);
+        return new Blob([a], { type: r });
     })(e);
     return URL.createObjectURL(t);
 }
