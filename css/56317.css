@@ -3847,7 +3847,7 @@ screen and (max-width:485px) {
     max-width: 352px
 }
 
-@media (max-height:550px) {
+@media (max-height:720px) {
     .headerGraphicContainer__8a031>* {
         max-height: 15vh
     }
