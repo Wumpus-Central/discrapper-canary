@@ -1,52 +1,72 @@
 "use strict";
-n.d(t, { $K: () => a, Ab: () => u, B1: () => d, CW: () => s, YW: () => f, ex: () => c, rb: () => h, v8: () => _ });
+n.d(t, {
+    $K: () => l,
+    Ab: () => c,
+    B1: () => E,
+    CW: () => s,
+    JQ: () => u,
+    YW: () => I,
+    ex: () => _,
+    rb: () => h,
+    v8: () => A,
+});
 var i = n(575593),
-    r = n(652215);
+    r = n(203632),
+    a = n(652215);
 function s(e) {
     let { product: t, hasShopDiscount: n } = e;
     return (
-        (t.prices[n ? r.lid.PREMIUM_TIER_2 : r.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
-            (e) => e.currency === r.Yri.DISCORD_ORB,
+        (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
+            (e) => e.currency === a.Yri.DISCORD_ORB,
         ) ?? null
     );
 }
-function a(e) {
+function l(e) {
     let { product: t, hasShopDiscount: n } = e;
     return (
-        (t.prices[n ? r.lid.PREMIUM_TIER_2 : r.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
-            (e) => e.currency !== r.Yri.DISCORD_ORB,
+        (t.prices[n ? a.lid.PREMIUM_TIER_2 : a.lid.DEFAULT]?.countryPrices?.prices?.slice(0, 2) ?? []).find(
+            (e) => e.currency !== a.Yri.DISCORD_ORB,
         ) ?? null
     );
 }
 function o(e) {
     return null != s({ product: e, hasShopDiscount: !1 });
 }
-function l(e) {
-    return null != a({ product: e, hasShopDiscount: !1 });
-}
-function u(e) {
-    if (null == e) return !1;
-    let t = o(e),
-        n = l(e);
-    return t && !n;
+function d(e) {
+    return null != l({ product: e, hasShopDiscount: !1 });
 }
 function c(e) {
+    if (null == e) return !1;
+    let t = o(e),
+        n = d(e);
+    return t && !n;
+}
+function u(e) {
+    return (
+        null != e &&
+        I(e) === i.R.PROFILE_EFFECT &&
+        e.items.some(
+            (e) => (0, r.C3)(e) && e.effects.some((e) => null != e.randomizedSources && e.randomizedSources.length > 0),
+        )
+    );
+}
+function _(e) {
     return e.filter((e) => {
         let t = o(e),
-            n = l(e);
+            n = d(e);
         return t && n;
     });
 }
-function d(e) {
+function E(e) {
     return e.type === i.R.VARIANTS_GROUP && null != e.variants && 0 !== e.variants.length;
 }
-function _(e) {
-    return d(e) ? e.variants.map((e) => e.skuId) : [e.skuId];
+function A(e) {
+    return E(e) ? e.variants.map((e) => e.skuId) : [e.skuId];
 }
 function h(e, t) {
-    return d(e) && null != t ? (e.variants[t] ?? e) : e;
+    return E(e) && null != t ? (e.variants[t] ?? e) : e;
 }
-function f(e) {
+function I(e) {
     if (null == e) return null;
     if (e.type === i.R.VARIANTS_GROUP) {
         if (null == e.variants || 0 === e.variants.length) return null;

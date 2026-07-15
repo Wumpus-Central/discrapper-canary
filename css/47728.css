@@ -13,23 +13,30 @@
 }
 
 .productCardBadge_b8a6bd {
+    flex: 1;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
     min-width: 0
 }
 
+.iconTextBadge_b8a6bd {
+    gap: 4px
+}
+
 .earlyAccessBadge_b8a6bd,
-.productCardBadge_b8a6bd {
-    flex: 1;
-    max-width: -moz-fit-content;
-    max-width: fit-content
+.iconTextBadge_b8a6bd {
+    align-items: center;
+    display: inline-flex
 }
 
 .earlyAccessBadge_b8a6bd {
-    align-items: center;
     border-radius: var(--radius-round);
     box-sizing: border-box;
-    display: inline-flex;
+    flex: 1;
     height: 20px;
     justify-content: center;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
     padding: 2px 8px
 }
 
