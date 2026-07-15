@@ -10,11 +10,11 @@ var i = l(64700),
     d = l(430825),
     h = l(375708);
 let p = "{value}",
-    S = { ORBS: a.C, TAG: r.g };
-function _(e) {
-    return null != e ? S[e] : void 0;
+    f = { ORBS: a.C, TAG: r.g };
+function S(e) {
+    return null != e ? f[e] : void 0;
 }
-function f(e, t) {
+function _(e, t) {
     return null == e ? null : e.includes(p) ? (null == t ? null : e.replaceAll(p, String(t))) : e;
 }
 function m(e, t) {
@@ -24,7 +24,7 @@ function m(e, t) {
             let e = r?.storefront?.promotions;
             return null == e ? null : (Object.values(e)[0] ?? null);
         }, [r]),
-        S =
+        f =
             "gift_customization" === e || "sku_gift_badge" === e || "vc_gift_recommendations" === e
                 ? o.QK.GIFT
                 : o.QK.SELF_PURCHASE,
@@ -38,8 +38,8 @@ function m(e, t) {
                         if (e?.amount != null && e.amount > 0) return e;
                     }
                     return null;
-                })(s.A.getRewardsForSkuId(a), S),
-            [a, S],
+                })(s.A.getRewardsForSkuId(a), f),
+            [a, f],
         );
     return i.useMemo(() => {
         if (null == p) return null;
@@ -48,25 +48,40 @@ function m(e, t) {
             case "storefront_banner": {
                 let e = p.storefront?.headerText;
                 if ((0, c.uJ)(e)) return null;
-                return { Icon: _(p.pdp?.icon ?? null), text: e, tooltip: null, endsAt: t, reward: null };
+                return {
+                    Icon: S(p.pdp?.icon ?? null),
+                    text: e,
+                    tooltip: null,
+                    endsAt: t,
+                    flavor: p.flavor,
+                    reward: null,
+                };
             }
             case "storefront_badge": {
                 let e = p.storefront?.headerText;
                 if ((0, c.uJ)(e)) return null;
-                return { Icon: _("TAG"), text: h.intl.string(d.default.hriMCc), tooltip: e, endsAt: t, reward: null };
+                return {
+                    Icon: S("TAG"),
+                    text: h.intl.string(d.default.hriMCc),
+                    tooltip: e,
+                    endsAt: t,
+                    flavor: p.flavor,
+                    reward: null,
+                };
             }
             case "pdp":
             case "card":
             case "gift_customization": {
                 if (null == m) return null;
                 let l = "gift_customization" === e ? p.checkout : p.pdp,
-                    i = f(l?.label ?? null, m.amount);
+                    i = _(l?.label ?? null, m.amount);
                 if ((0, c.uJ)(i)) return null;
                 return {
-                    Icon: _(l?.icon ?? null),
+                    Icon: S(l?.icon ?? null),
                     text: i,
-                    tooltip: f(l?.tooltip ?? null, m.amount),
+                    tooltip: _(l?.tooltip ?? null, m.amount),
                     endsAt: t,
+                    flavor: p.flavor,
                     reward: m,
                 };
             }
@@ -75,10 +90,11 @@ function m(e, t) {
                 let e = p.vcStream?.label;
                 if ((0, c.uJ)(e)) return null;
                 return {
-                    Icon: _(p.vcStream?.icon ?? null),
+                    Icon: S(p.vcStream?.icon ?? null),
                     text: e,
                     tooltip: p.vcStream?.tooltip ?? null,
                     endsAt: t,
+                    flavor: p.flavor,
                     reward: null,
                 };
             }
@@ -86,13 +102,14 @@ function m(e, t) {
             case "sku_gift_badge": {
                 if (null == m) return null;
                 let l = "sku_gift_badge" === e ? p.checkout : p.pdp,
-                    i = f(l?.label ?? null, m.amount);
+                    i = _(l?.label ?? null, m.amount);
                 if ((0, c.uJ)(i)) return null;
                 return {
-                    Icon: _("TAG"),
+                    Icon: S("TAG"),
                     text: h.intl.string(d.default.hriMCc),
-                    tooltip: f(l?.tooltip ?? null, m.amount),
+                    tooltip: _(l?.tooltip ?? null, m.amount),
                     endsAt: t,
+                    flavor: p.flavor,
                     reward: m,
                 };
             }
