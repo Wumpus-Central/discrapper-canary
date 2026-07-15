@@ -21,7 +21,7 @@
 
 .card__9ed47:after {
     border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
+    border-radius: inherit;
     content: "";
     inset: 0;
     position: absolute
