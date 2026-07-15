@@ -109,3 +109,12 @@
         grid-template-columns: repeat(4, 1fr)
     }
 }
+
+.marvelRivalsCopyright_b558e5 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: -12px;
+    margin-top: -12px
+}

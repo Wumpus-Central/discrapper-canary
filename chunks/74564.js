@@ -10,4 +10,5 @@ e.exports = {
     U9: "headingActions_b558e5",
     f$: "timeLeft_b558e5",
     $2: "cardGrid_b558e5",
+    Ok: "marvelRivalsCopyright_b558e5",
 };
