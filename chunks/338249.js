@@ -90,7 +90,7 @@ class G extends i.PureComponent {
             T.A.disable(),
             T.A.setLayout(u),
             T.A.enable(),
-            (0, C.d)("application_store");
+            (0, C.d0)("application_store");
     }
     componentWillUnmount() {
         null != this.stopListeningToHistory && this.stopListeningToHistory(),

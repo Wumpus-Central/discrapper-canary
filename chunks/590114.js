@@ -693,7 +693,7 @@ function tR(t) {
     });
 }
 n(321073);
-var tS = n(735438),
+var tS = n(435558),
     tP = n.n(tS),
     tj = n(408278),
     tw = n(661531),
@@ -902,7 +902,7 @@ let t2 = {
             v.intl.formatToPlainString(v.t["3VG9s1"], { percent: t, progress: e, total: n, timeRemaining: i }),
     },
 };
-function t3(t, e, n, i, l) {
+function t6(t, e, n, i, l) {
     let s = t2[e],
         r = null != s ? Object.keys(s) : [],
         { unit: a, time: o } = (0, tt.$l)(null != t ? t / 60 : null, r);
@@ -912,7 +912,7 @@ function t3(t, e, n, i, l) {
     }
     return null;
 }
-function t6(t) {
+function t3(t) {
     let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: r } = t,
         a = t4(s, n),
         o = t4(l, n);
@@ -925,7 +925,7 @@ function t6(t) {
         case w.OQC.ALLOCATING_DISK:
             return v.intl.formatToPlainString(v.t.XigoJ9, { percent: i });
         case w.OQC.PATCHING:
-            return t3(r, e, i, o, a);
+            return t6(r, e, i, o, a);
         case w.OQC.FINALIZING:
             return v.intl.formatToPlainString(v.t["6PHDUN"], { percent: i });
         case w.OQC.PAUSING:
@@ -935,7 +935,7 @@ function t6(t) {
         case w.OQC.POST_INSTALL_SCRIPTS:
             return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: a });
         case w.OQC.REPAIRING:
-            if (e === w.WTw.REPAIRING) return t3(r, e, i, o, a);
+            if (e === w.WTw.REPAIRING) return t6(r, e, i, o, a);
             return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: a });
     }
     throw Error("Invalid Dispatch stage");
@@ -1061,7 +1061,7 @@ class t7 extends l.PureComponent {
             c = te.uA(a ?? 0, s),
             d = (t[t.length - 1] / e) * 1e3,
             h = s - l,
-            u = t6({
+            u = t3({
                 type: r,
                 stage: i,
                 percent: Math.floor(o),
@@ -1087,7 +1087,7 @@ class t7 extends l.PureComponent {
             r = Math.floor(s);
         return this.renderBody({
             percent: s,
-            message: t6({ type: l, stage: i, percent: r, progress: n, total: e }),
+            message: t3({ type: l, stage: i, percent: r, progress: n, total: e }),
             foregroundColor: tw.A.unsafe_rawColors.BLUE_345.css,
         });
     }
@@ -1356,7 +1356,7 @@ class eo extends l.PureComponent {
 }
 var ec = n(665260),
     ed = n(939249),
-    eh = n(534514),
+    eh = n(297264),
     eu = n(331322),
     ep = n(243721),
     eA = n(404778),
@@ -1789,7 +1789,7 @@ function eK() {
 let eF = l.memo(function () {
     return (
         l.useEffect(() => {
-            (0, c.d)("application_library");
+            (0, c.d0)("application_library");
         }, []),
         (0, i.jsxs)("div", {
             className: eH.k,

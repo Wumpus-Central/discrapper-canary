@@ -2313,7 +2313,7 @@ function lS(e) {
         m = null != l,
         h = s && null != x && !m;
     (0, tK.Ay)(() => {
-        (0, lN.d)("family-center"), null != n && n();
+        (0, lN.d0)("family-center"), null != n && n();
     });
     let j = { isConsideredAdult: "adult" === l, numOfAcceptedRequests: r, selectedTab: u, selectedTeenId: c },
         f = i.useRef(j);

@@ -5114,7 +5114,7 @@ let r9 = (0, nT.Fe)({ createPromise: r5, webpackId: 67319, name: "StageChannelCa
 class de extends s.PureComponent {
     state = { topicExpanded: !1, threadSidebarWidth: void 0, isThreadSidebarFloating: !1 };
     componentDidMount() {
-        (0, sU.d)("guild_channel"), this.maybePreloadChannelCall();
+        (0, sU.d0)("guild_channel"), this.maybePreloadChannelCall();
     }
     componentDidUpdate(e) {
         null != this.props.channel &&

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { D: () => I, d: () => h });
+n.d(t, { DC: () => I, d0: () => h, y9: () => f });
 var i = n(132500),
     r = n(77729),
     a = n(824579),
@@ -83,6 +83,7 @@ class E {
             let n = c.A.serializeWebPerfStartupMetrics(e);
             l.default.track(u.HAw.APP_WEB_PERF_STARTUP_METRICS, {
                 load_id: this.loadId,
+                metric_name: "tti",
                 url_root_path: t,
                 ...n,
                 ...(0, s.$)(),
@@ -109,4 +110,7 @@ function h(e) {
 }
 function I() {
     A.trackTTI();
+}
+function f() {
+    return A.loadId;
 }

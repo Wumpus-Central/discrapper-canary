@@ -962,7 +962,7 @@ let tI = (0, b.A)(function (e) {
         n = (0, ef.W)();
     (0, I.Ay)(() => {
         C.I(e2.BVt.MESSAGE_REQUESTS),
-            (0, ea.d)("message-requests"),
+            (0, ea.d0)("message-requests"),
             eu.default.track(e2.HAw.MESSAGE_REQUESTS_VIEWED, { num_message_requests: n }),
             es.A.increment({ name: c.K.MESSAGE_REQUEST_VIEW });
     });
