@@ -36,8 +36,8 @@ var P = n(212407),
     D = n.n(S),
     B = n(939249),
     M = n(834730),
-    U = n(534514),
-    H = n(456839),
+    U = n(297264),
+    H = n(14702),
     w = n(375708),
     F = n(701180);
 function G(e) {
@@ -454,7 +454,7 @@ function eM() {
     });
 }
 var eU = n(17928),
-    eH = n(576052),
+    eH = n(132198),
     ew = n(83554);
 function eF(e) {
     let { user: t } = e,
@@ -602,12 +602,12 @@ var eZ = n(990078),
     e1 = n(825484),
     e2 = n(331322),
     e4 = n(736653),
-    e5 = n(44120),
-    e9 = n(465794),
+    e9 = n(44120),
+    e7 = n(465794),
     e3 = n(757036),
-    e7 = n(761705),
-    e6 = n(449410),
-    e8 = n(580630),
+    e5 = n(761705),
+    e8 = n(449410),
+    e6 = n(580630),
     te = n(4227),
     tt = n(940980),
     tn = n(466459),
@@ -690,7 +690,7 @@ function tR(e) {
             className: i,
             variant: s = "heading-md/semibold",
         } = e,
-        l = (0, e8.RS)(t, n);
+        l = (0, e6.RS)(t, n);
     return (0, r.jsxs)(M.E, {
         variant: s,
         className: D()(tE.v, i),
@@ -761,7 +761,7 @@ function tO(e) {
     let { product: t, onTrackClick: n } = e,
         i = (0, C.yt)(t, j.lid.PREMIUM_TIER_2);
     if (null == i) return null;
-    let s = (0, e8.RS)(i.amount, i.currency);
+    let s = (0, e6.RS)(i.amount, i.currency);
     return (0, r.jsxs)("div", {
         className: tj.k,
         children: [
@@ -851,7 +851,7 @@ var tP = n(525723),
 function tM(e) {
     let t = (0, ty.X)(e.selectedProduct),
         n = t && null != e.giftRecipient;
-    return (0, r.jsx)(e6.$, {
+    return (0, r.jsx)(e8.$, {
         isGifting: n,
         location: "CollectiblesShopProductDetailsModal",
         children: (0, r.jsx)(tU, { ...e, canGiftProduct: t }),
@@ -889,7 +889,7 @@ function tU(e) {
         G = (0, C.yt)(i, j.lid.DEFAULT),
         V = G?.amount === 0,
         z = s.useMemo(() => (0, C.fT)(i, T), [i, T]),
-        { prioritizeGifting: K, removeOrbsClaim: W } = (0, e6.q)(),
+        { prioritizeGifting: K, removeOrbsClaim: W } = (0, e8.q)(),
         Y = (0, tP.V_)(n),
         $ = null != Y,
         X = (0, tt.W)("CollectiblesShopProductDetailsModal"),
@@ -903,10 +903,10 @@ function tU(e) {
         Q = K && W ? Z.filter((e) => e.currency !== tT.Yr.DISCORD_ORB) : Z,
         ee = (0, ti.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
         et = s.useMemo(() => Z.some((e) => e.currency === tT.Yr.DISCORD_ORB), [Z]);
-    (0, e7.W)({ disableFetch: !et });
+    (0, e5.W)({ disableFetch: !et });
     let en = s.useCallback(() => {
         h(es.sH.BUY_WITH_FIAT),
-            (0, e5.A)({
+            (0, e9.A)({
                 skuId: i.skuId,
                 analyticsLocations: m,
                 discoverySessionId: g,
@@ -915,7 +915,7 @@ function tU(e) {
     }, [m, x, i.skuId, h, g]);
     function er(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            i = (0, r.jsx)(e9.A, {
+            i = (0, r.jsx)(e7.A, {
                 subscriptionTier: tC.pe.TIER_2,
                 fullWidth: !0,
                 buttonTextOverride: e,
@@ -1132,7 +1132,7 @@ function tU(e) {
                                         : ((n = $
                                               ? w.intl.formatToPlainString(w.t["5U5RB5"], { discountOfferAmount: Y })
                                               : w.intl.formatToPlainString(w.t["cNSL/j"], {
-                                                    price: (0, e8.$g)(e.amount, e.currency),
+                                                    price: (0, e6.$g)(e.amount, e.currency),
                                                 })),
                                           (0, r.jsxs)(e1.e, {
                                               wrap: !1,
@@ -1268,12 +1268,12 @@ function t2(e) {
     });
 }
 var t4 = n(139146),
-    t5 = n(976860),
-    t9 = n(975732),
+    t9 = n(976860),
+    t7 = n(975732),
     t3 = n(50920),
-    t7 = n(23161),
-    t6 = n(668953),
-    t8 = n(881636),
+    t5 = n(23161),
+    t8 = n(668953),
+    t6 = n(881636),
     ne = n(428445);
 function nt(e) {
     let { goPrev: t, goNext: n } = e;
@@ -1284,7 +1284,7 @@ function nt(e) {
                 children: (0, r.jsx)(tG.K, {
                     "aria-label": w.intl.string(w.t["3NdvMK"]),
                     onClick: t,
-                    icon: t6.f,
+                    icon: t8.f,
                     variant: "overlay-secondary",
                     size: "sm",
                 }),
@@ -1294,7 +1294,7 @@ function nt(e) {
                 children: (0, r.jsx)(tG.K, {
                     "aria-label": w.intl.string(w.t.RYIeOX),
                     onClick: n,
-                    icon: t8.u,
+                    icon: t6.u,
                     variant: "overlay-secondary",
                     size: "sm",
                 }),
@@ -1328,7 +1328,7 @@ function ni(e) {
         I = (function () {
             let e = (0, t3.a)("CollectiblesPdpNavigateToCollection"),
                 { sessionId: t } = (0, A.uM)() ?? {},
-                n = (0, t7.v)((e) => e.reset);
+                n = (0, t5.v)((e) => e.reset);
             return s.useCallback(
                 (i, r) => {
                     if (
@@ -1337,13 +1337,13 @@ function ni(e) {
                             sku_id: i.skuId,
                             cta_name: r,
                         }),
-                        (0, t9.closeUserProfileModal)(),
+                        (0, t7.closeUserProfileModal)(),
                         e && !0 !== i.isOrbsExclusive)
                     )
-                        return void (0, t5.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
+                        return void (0, t9.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
                     n();
                     let s = !0 === i.isOrbsExclusive ? es.G2.ORBS : es.G2.CATALOG;
-                    (0, t5.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)}&${es.P1}=${i.skuId}`);
+                    (0, t9.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)}&${es.P1}=${i.skuId}`);
                 },
                 [e, t, n],
             );

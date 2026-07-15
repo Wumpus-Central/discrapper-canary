@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(717558),
     N = n(964486),
     C = n(220839),
-    O = n(397244),
-    R = n(394871),
+    R = n(397244),
+    O = n(394871),
     L = n(580929),
     D = n(866323),
     y = n(449450);
@@ -146,7 +146,7 @@ function eN(e) {
     );
 }
 var eC = n(275883);
-function eO(e) {
+function eR(e) {
     let { dismissibleContent: t, backgroundColor: n, specialTextColor: r } = e,
         a = ep.A.useIsEligible(),
         s = (0, eE.JZ)(t),
@@ -217,10 +217,10 @@ function eO(e) {
           })
         : null;
 }
-function eR() {
+function eO() {
     return null == ef.A.coachmarkDismissibleContent
         ? null
-        : (0, i.jsx)(eO, {
+        : (0, i.jsx)(eR, {
               dismissibleContent: ef.A.coachmarkDismissibleContent,
               backgroundColor: ef.A.coachmarkBackgroundColor,
               specialTextColor: ef.A.coachmarkSpecialTextColor,
@@ -280,10 +280,10 @@ function e$(e) {
         C = r.useCallback(() => {
             p(!0);
         }, []),
-        O = r.useCallback(() => {
+        R = r.useCallback(() => {
             (0, T.hasAnyModalOpen)() || p(!1);
         }, []);
-    function R() {
+    function O() {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)("div", { className: eY.iA, children: (0, i.jsx)(a, { size: "xs", color: "currentColor" }) }),
@@ -313,7 +313,7 @@ function e$(e) {
             (t = N
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(I.D, { className: eY.ef, onClick: A, children: R() }),
+                          (0, i.jsx)(I.D, { className: eY.ef, onClick: A, children: O() }),
                           (0, i.jsx)(I.D, {
                               className: eY.ap,
                               "aria-label": F.intl.string(F.t.PdRCRg),
@@ -329,14 +329,14 @@ function e$(e) {
                         ...e,
                         onClick: C,
                         children: [
-                            R(),
+                            O(),
                             (0, i.jsx)("div", {
                                 className: eY.ap,
                                 children: (0, i.jsx)(ej._, { size: "xs", color: "currentColor" }),
                             }),
                         ],
                     })
-                  : (0, i.jsx)(I.D, { className: eY.ef, onClick: A, children: R() })),
+                  : (0, i.jsx)(I.D, { className: eY.ef, onClick: A, children: O() })),
             (0, i.jsx)("div", { ref: g, className: eY.jG, children: t })
         );
     }
@@ -344,14 +344,14 @@ function e$(e) {
         ? (0, i.jsx)("li", {
               className: eY.j$,
               onMouseEnter: C,
-              onMouseLeave: O,
+              onMouseLeave: R,
               children: (0, i.jsx)(h.Y, {
                   targetElementRef: u ?? g,
                   align: _,
                   spacing: 0,
                   renderPopout: d,
                   shouldShow: f,
-                  onRequestClose: O,
+                  onRequestClose: R,
                   children: L,
               }),
           })
@@ -659,8 +659,8 @@ function tS(e) {
 }
 var tN = n(480335),
     tC = n(577390),
-    tO = n(474257),
-    tR = n(31956),
+    tR = n(474257),
+    tO = n(31956),
     tL = n(744808),
     tD = n(645507),
     ty = n(131607),
@@ -849,8 +849,8 @@ var nt = n(983495),
     nS = n(385113),
     nN = n(352003),
     nC = n(429913),
-    nO = n(334074),
-    nR = n(633075),
+    nR = n(334074),
+    nO = n(633075),
     nL = n(667049),
     nD = n(280450),
     ny = n(90165),
@@ -868,7 +868,7 @@ function nM(e) {
                 }, []);
             let t = (0, c.bG)([nD.default], () => nD.default.getId()),
                 n = (0, nL.A)(t),
-                i = r.useMemo(() => n.filter((e) => e instanceof nR.R), [n]),
+                i = r.useMemo(() => n.filter((e) => e instanceof nO.R), [n]),
                 a = (0, nC.A)(e),
                 s = r.useMemo(() => a.filter(nv.Vq), [a]),
                 l = (0, c.cf)([ny.A], () => {
@@ -887,10 +887,10 @@ function nM(e) {
                         return null != n && e - n < 7776e6;
                     });
                 }, [s, i, l]),
-                { eligibleToShow: d, markAsDismissed: _ } = (0, nO.hj)({
+                { eligibleToShow: d, markAsDismissed: _ } = (0, nR.hj)({
                     applications: o,
                     dismissibleContent: u.M.APP_WIDGET_V2_PROFILE_UPSELL_COACHMARK,
-                    cooldownConfig: nO.SH,
+                    cooldownConfig: nR.SH,
                 });
             return {
                 eligibleApplications: r.useMemo(() => o.filter((e) => d.includes(e.id)), [o, d]),
@@ -922,6 +922,8 @@ function nM(e) {
                 n.e("42335"),
                 n.e("57507"),
                 n.e("16334"),
+                n.e("97189"),
+                n.e("16918"),
                 n.e("1744"),
                 n.e("71406"),
                 n.e("56985"),
@@ -951,8 +953,6 @@ function nM(e) {
                 n.e("99253"),
                 n.e("17202"),
                 n.e("90862"),
-                n.e("97189"),
-                n.e("16918"),
                 n.e("33730"),
                 n.e("24059"),
                 n.e("42306"),
@@ -993,7 +993,9 @@ function nM(e) {
                 n.e("84473"),
                 n.e("70990"),
                 n.e("15130"),
-                n.e("74051"),
+                n.e("57578"),
+                n.e("57016"),
+                n.e("65673"),
                 n.e("50541"),
                 n.e("62646"),
                 n.e("53702"),
@@ -1015,19 +1017,17 @@ function nM(e) {
                 n.e("84569"),
                 n.e("60235"),
                 n.e("61737"),
-                n.e("92789"),
                 n.e("21335"),
+                n.e("61060"),
                 n.e("77333"),
                 n.e("47834"),
                 n.e("11735"),
                 n.e("85927"),
                 n.e("834"),
                 n.e("2368"),
-                n.e("33115"),
                 n.e("6338"),
                 n.e("18573"),
                 n.e("78157"),
-                n.e("55936"),
                 n.e("85404"),
                 n.e("44057"),
                 n.e("1453"),
@@ -1037,12 +1037,15 @@ function nM(e) {
                 n.e("31988"),
                 n.e("44571"),
                 n.e("34303"),
+                n.e("40291"),
+                n.e("33115"),
                 n.e("97270"),
                 n.e("45959"),
                 n.e("73122"),
                 n.e("8304"),
                 n.e("93159"),
                 n.e("71202"),
+                n.e("55936"),
                 n.e("8739"),
                 n.e("42834"),
                 n.e("88131"),
@@ -1059,11 +1062,12 @@ function nM(e) {
                 n.e("7170"),
                 n.e("36877"),
                 n.e("72963"),
-                n.e("8757"),
                 n.e("7575"),
-                n.e("36594"),
+                n.e("54241"),
+                n.e("8757"),
+                n.e("24303"),
                 n.e("21930"),
-                n.e("89018"),
+                n.e("14761"),
                 n.e("85968"),
                 n.e("88599"),
                 n.e("75842"),
@@ -1075,18 +1079,20 @@ function nM(e) {
                 n.e("53984"),
                 n.e("43780"),
                 n.e("49736"),
-                n.e("76273"),
                 n.e("23532"),
                 n.e("52557"),
+                n.e("76273"),
                 n.e("55654"),
+                n.e("29963"),
                 n.e("83161"),
                 n.e("38513"),
                 n.e("63645"),
                 n.e("63123"),
                 n.e("24038"),
+                n.e("50097"),
+                n.e("88469"),
                 n.e("52229"),
                 n.e("95340"),
-                n.e("88469"),
                 n.e("3930"),
                 n.e("3663"),
                 n.e("46430"),
@@ -1107,7 +1113,7 @@ function nM(e) {
                 n.e("37065"),
                 n.e("43256"),
                 n.e("41384"),
-                n.e("5776"),
+                n.e("48461"),
                 n.e("19119"),
                 n.e("46004"),
                 n.e("73566"),
@@ -1419,8 +1425,8 @@ function n7(e) {
             [],
         );
     let C = (0, c.bG)([nr.A], () => nr.A.getStatus(t.id)),
-        O = n3(ni.CY.useSetting()),
-        R = (0, c.bG)([na.A], () => na.A.hidePersonalInformation),
+        R = n3(ni.CY.useSetting()),
+        O = (0, c.bG)([na.A], () => na.A.hidePersonalInformation),
         L = (0, tv.kB)(),
         D = ni.Q_.useSetting(),
         y = (function (e) {
@@ -1616,9 +1622,9 @@ function n7(e) {
         U = (0, tG.TW)(t),
         w = r.useRef(null),
         G = r.useRef(null),
-        x = (0, tO.A)(h?.profileFrame?.skuId, "UserProfileAccountPopout"),
+        x = (0, tR.A)(h?.profileFrame?.skuId, "UserProfileAccountPopout"),
         k = (0, tC.A)(h?.profileFrame?.skuId);
-    (0, tR.A)({ skuId: h?.profileFrame?.skuId, openedAt: o, context: p, analyticsLocations: I });
+    (0, tO.A)({ skuId: h?.profileFrame?.skuId, openedAt: o, context: p, analyticsLocations: I });
     let V = r.useRef((0, tM.A)((e) => e.shouldRenderTenureLevelUp)),
         B = r.useMemo(() => (0, tD.A)(), []),
         [H, W] = r.useState(() => tM.A.getState().shouldRenderTenureLevelUp);
@@ -1710,7 +1716,7 @@ function n7(e) {
                                             (0, i.jsx)(nn.A, {
                                                 userId: t.id,
                                                 userBio: h?.bio,
-                                                hidePersonalInformation: R,
+                                                hidePersonalInformation: O,
                                                 onClose: n,
                                             }),
                                             K &&
@@ -1750,7 +1756,7 @@ function n7(e) {
                                                                 (0, i.jsx)(e$, {
                                                                     action: "PRESS_SET_STATUS",
                                                                     label: (0, i.jsx)(nG, {}),
-                                                                    sublabel: null != O && O,
+                                                                    sublabel: null != R && R,
                                                                     icon: () =>
                                                                         (0, i.jsx)(ew.nW, { status: C, size: 12 }),
                                                                     trailing:
@@ -1907,8 +1913,8 @@ var iI = n(616356),
     iS = n(486020),
     iN = n(625494),
     iC = n(536194),
-    iO = n(19575),
-    iR = n(994314),
+    iR = n(19575),
+    iO = n(994314),
     iL = n(485599),
     iD = n(338854);
 function iy(e) {
@@ -2424,8 +2430,8 @@ function rA(e) {
         { showPTTIconIndicator: S } = io.A.useConfig({ location: "MicrophoneButton" }),
         N = (0, c.bG)([is.Ay], () => is.Ay.getMode() === id.TB.PUSH_TO_TALK),
         C = (0, c.bG)([is.Ay], () => is.Ay.getSettings().modeOptions.shortcut),
-        O = (0, c.bG)([ro], () => ro.getIsTutorialActive(rd.v.MUTE_TUTORIAL)),
-        R = (0, c.bG)([il.A], () => null != il.A.getChannelId()),
+        R = (0, c.bG)([ro], () => ro.getIsTutorialActive(rd.v.MUTE_TUTORIAL)),
+        O = (0, c.bG)([il.A], () => null != il.A.getChannelId()),
         { name: L } = (0, eL.x5)(id.oh.AUDIO_INPUT),
         { enabledInputProfiles: D } = (0, ii.d)({ location: "MicrophoneButton" }),
         y = r.useRef(null),
@@ -2445,11 +2451,11 @@ function rA(e) {
                 tooltipForceOpen: !0,
             }
           : { tooltipText: B };
-    let H = S && N && R,
+    let H = S && N && O,
         j = v ? nl.A.colors.ICON_VOICE_MUTED : "currentColor",
         W = r.useCallback(() => {
-            E(), O && ra.N(rd.v.MUTE_TUTORIAL);
-        }, [E, O]);
+            E(), R && ra.N(rd.v.MUTE_TUTORIAL);
+        }, [E, R]);
     return (0, i.jsxs)(P.f5, {
         value: U,
         children: [
@@ -2541,7 +2547,7 @@ function rA(e) {
             }),
             (0, i.jsx)(k.A, {
                 targetElementRef: y,
-                shouldShow: O,
+                shouldShow: R,
                 graphic: { type: "image", src: rE.A },
                 onRequestClose: () => {
                     ra.N(rd.v.MUTE_TUTORIAL);
@@ -2613,7 +2619,7 @@ function rC(e) {
         actions: [{ text: F.intl.string(F.t.eOoTMX), variant: "primary", onClick: o }],
     });
 }
-function rO(e) {
+function rR(e) {
     let t,
         n,
         {
@@ -2673,8 +2679,8 @@ function rO(e) {
         })
     );
 }
-var rR = n(489902);
-let rL = iO.Ay.getEnableHardwareAcceleration() ? E.Js : E.eu,
+var rO = n(489902);
+let rL = iR.Ay.getEnableHardwareAcceleration() ? E.Js : E.eu,
     rD = 2.5 * e5.A.Millis.SECOND,
     ry = 2 * e5.A.Millis.MINUTE,
     rv = 2 * e5.A.Millis.MINUTE,
@@ -2699,8 +2705,8 @@ function rM(e) {
         S = (0, iS.F_)({ avatarDecoration: f, size: (0, J.Te)(A._3.SIZE_32) }),
         N = (0, es.A)(),
         {
-            updateOpenPopoutRef: O,
-            highlightBadge: R,
+            updateOpenPopoutRef: R,
+            highlightBadge: O,
             setHighlightBadge: L,
         } = (function () {
             let e = r.useRef(null),
@@ -2748,11 +2754,11 @@ function rM(e) {
                       let { closePopout: n, setPopoutRef: r } = e;
                       return (0, i.jsx)(n7, {
                           currentUser: o,
-                          highlightBadge: R,
+                          highlightBadge: O,
                           openedAt: t,
                           onClose: n,
                           setPopoutRef: r,
-                          className: rR.dI,
+                          className: rO.dI,
                       });
                   },
                   position: "top",
@@ -2765,7 +2771,7 @@ function rM(e) {
                       u(), L(void 0);
                   },
                   children: (e) => {
-                      O(e);
+                      R(e);
                       let { onMouseEnter: t, onMouseDown: r, ...u } = e;
                       return (0, i.jsxs)("div", {
                           ref: m,
@@ -2775,7 +2781,7 @@ function rM(e) {
                           onClick: (t) => {
                               e.onClick?.(t), c?.(t);
                           },
-                          className: s()(rR.Q9, { [rR.ZQ]: null != E }),
+                          className: s()(rO.Q9, { [rO.ZQ]: null != E }),
                           children: [
                               (0, i.jsx)(I.D, {
                                   ...u,
@@ -2784,7 +2790,7 @@ function rM(e) {
                                   },
                                   "aria-label": F.intl.string(F.t["5fWB8U"]),
                                   focusProps: { ringTarget: m },
-                                  className: rR.$n,
+                                  className: rO.$n,
                                   "data-jump-section": p,
                               }),
                               (0, i.jsx)(rL, {
@@ -2794,10 +2800,10 @@ function rM(e) {
                                   status: l ? tI.clD.STREAMING : d,
                                   isSpeaking: n,
                                   voiceDb: a,
-                                  className: rR.my,
+                                  className: rO.my,
                                   "aria-hidden": !0,
                               }),
-                              (0, i.jsx)("div", { className: rR.oM, children: _(N) }),
+                              (0, i.jsx)("div", { className: rO.oM, children: _(N) }),
                           ],
                       });
                   },
@@ -2926,7 +2932,9 @@ class rP extends r.PureComponent {
                     n.e("84473"),
                     n.e("70990"),
                     n.e("15130"),
-                    n.e("74051"),
+                    n.e("57578"),
+                    n.e("57016"),
+                    n.e("65673"),
                     n.e("50541"),
                     n.e("32697"),
                     n.e("64622"),
@@ -2935,7 +2943,7 @@ class rP extends r.PureComponent {
                     n.e("6514"),
                     n.e("8641"),
                     n.e("6247"),
-                    n.e("70298"),
+                    n.e("66614"),
                     n.e("82041"),
                     n.e("97238"),
                     n.e("30541"),
@@ -3162,19 +3170,17 @@ class rP extends r.PureComponent {
                     n.e("84569"),
                     n.e("60235"),
                     n.e("61737"),
-                    n.e("92789"),
                     n.e("21335"),
+                    n.e("61060"),
                     n.e("77333"),
                     n.e("47834"),
                     n.e("11735"),
                     n.e("85927"),
                     n.e("834"),
                     n.e("2368"),
-                    n.e("33115"),
                     n.e("6338"),
                     n.e("18573"),
                     n.e("78157"),
-                    n.e("55936"),
                     n.e("85404"),
                     n.e("44057"),
                     n.e("1453"),
@@ -3184,12 +3190,15 @@ class rP extends r.PureComponent {
                     n.e("31988"),
                     n.e("44571"),
                     n.e("34303"),
+                    n.e("40291"),
+                    n.e("33115"),
                     n.e("97270"),
                     n.e("45959"),
                     n.e("73122"),
                     n.e("8304"),
                     n.e("93159"),
                     n.e("71202"),
+                    n.e("55936"),
                     n.e("8739"),
                     n.e("42834"),
                     n.e("88131"),
@@ -3213,15 +3222,16 @@ class rP extends r.PureComponent {
                     n.e("36877"),
                     n.e("72963"),
                     n.e("52511"),
-                    n.e("40402"),
                     n.e("7575"),
+                    n.e("40402"),
+                    n.e("54241"),
+                    n.e("24303"),
                     n.e("53930"),
-                    n.e("36594"),
                     n.e("42724"),
                     n.e("93766"),
                     n.e("13823"),
                     n.e("21930"),
-                    n.e("89018"),
+                    n.e("14761"),
                     n.e("39970"),
                     n.e("76418"),
                     n.e("40258"),
@@ -3313,34 +3323,36 @@ class rP extends r.PureComponent {
                     n.e("73384"),
                     n.e("82783"),
                     n.e("32209"),
-                    n.e("9371"),
-                    n.e("2362"),
                     n.e("23532"),
                     n.e("52557"),
-                    n.e("87478"),
-                    n.e("50033"),
+                    n.e("9371"),
+                    n.e("2362"),
                     n.e("55654"),
-                    n.e("39171"),
-                    n.e("74630"),
+                    n.e("29963"),
+                    n.e("87478"),
                     n.e("83161"),
-                    n.e("36564"),
-                    n.e("92513"),
-                    n.e("48948"),
+                    n.e("50033"),
                     n.e("38513"),
                     n.e("63645"),
+                    n.e("39171"),
+                    n.e("74630"),
+                    n.e("63123"),
+                    n.e("36564"),
+                    n.e("24038"),
+                    n.e("92513"),
+                    n.e("48948"),
                     n.e("63244"),
                     n.e("68214"),
                     n.e("44780"),
-                    n.e("63123"),
+                    n.e("50097"),
+                    n.e("88469"),
                     n.e("91450"),
-                    n.e("24038"),
                     n.e("83952"),
                     n.e("52229"),
                     n.e("3998"),
                     n.e("93438"),
                     n.e("36227"),
                     n.e("95340"),
-                    n.e("88469"),
                     n.e("5557"),
                     n.e("62718"),
                     n.e("89916"),
@@ -3677,18 +3689,18 @@ class rP extends r.PureComponent {
                 voiceChannel: l,
             } = this.props;
         if (null == r) return null;
-        if ((0, O.A)({ activities: t, status: a, applicationStream: n, voiceChannel: l }))
+        if ((0, R.A)({ activities: t, status: a, applicationStream: n, voiceChannel: l }))
             return (0, i.jsxs)(b.A, {
                 hoverText: s,
                 forceHover: e,
                 children: [
                     (0, i.jsx)(f.A, { children: t8.Ay.humanizeStatus(a) }),
-                    (0, i.jsx)(R.A, {
+                    (0, i.jsx)(O.A, {
                         user: r,
                         activities: t,
                         applicationStream: n,
                         voiceChannel: l,
-                        textClassName: rR.XD,
+                        textClassName: rO.XD,
                         hideTooltip: !0,
                     }),
                 ],
@@ -3703,7 +3715,7 @@ class rP extends r.PureComponent {
                   forceHover: e,
                   children: [
                       (0, i.jsx)(f.A, { children: t8.Ay.humanizeStatus(a) }),
-                      (0, i.jsx)(er.A, { activity: o, emojiClassName: rR.Zg, className: rR.WO }),
+                      (0, i.jsx)(er.A, { activity: o, emojiClassName: rO.Zg, className: rO.WO }),
                   ],
               })
             : null != a && a !== tI.clD.UNKNOWN && r.hasUniqueUsername()
@@ -3721,9 +3733,9 @@ class rP extends r.PureComponent {
             : (0, i.jsxs)(i.Fragment, {
                   children: [
                       (0, i.jsx)("div", {
-                          className: rR.eW,
+                          className: rO.eW,
                           children: (0, i.jsx)(iL.A, {
-                              className: s()({ [rR.e8]: null != e }),
+                              className: s()({ [rO.e8]: null != e }),
                               children: (0, i.jsx)(eo.A, {
                                   userName: n,
                                   displayNameStyles: e,
@@ -3734,8 +3746,8 @@ class rP extends r.PureComponent {
                           }),
                       }),
                       (0, i.jsx)("div", {
-                          className: rR.XP,
-                          children: (0, i.jsx)(iR.A, { children: this.renderStatus() }),
+                          className: rO.XP,
+                          children: (0, i.jsx)(iO.A, { children: this.renderStatus() }),
                       }),
                   ],
               });
@@ -3770,7 +3782,7 @@ class rP extends r.PureComponent {
                           children: (e) =>
                               (0, i.jsxs)("div", {
                                   ref: this.containerRef,
-                                  className: s()(rR.kL, { [rR.UG]: null != n, [rR.bc]: !r, [rR.G5]: a }),
+                                  className: s()(rO.kL, { [rO.UG]: null != n, [rO.bc]: !r, [rO.G5]: a }),
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
                                   children: [
@@ -3793,7 +3805,7 @@ class rP extends r.PureComponent {
                                   ],
                               }),
                       }),
-                      (0, i.jsx)(eR, {}),
+                      (0, i.jsx)(eO, {}),
                   ],
               });
     }
@@ -3823,12 +3835,12 @@ function rU(e) {
             deviceChangedTooltipType: S,
             shouldShowPTTJoinTooltip: N = !1,
             dismissTooltips: C,
-            speaking: O,
+            speaking: R,
         } = e,
-        R = (0, et.K)(m);
+        O = (0, et.K)(m);
     return (0, i.jsxs)("div", {
-        className: rR.Uo,
-        style: R,
+        className: rO.Uo,
+        style: O,
         children: [
             (0, i.jsx)(rA, {
                 accountContainerRef: g,
@@ -3840,14 +3852,14 @@ function rU(e) {
                 onMouseLeave: _,
                 onClick: A,
                 onContextMenu: h,
-                iconForeground: null != m ? rR.t4 : void 0,
+                iconForeground: null != m ? rO.t4 : void 0,
                 nameplate: m,
                 shouldShowSpeakingWhileMutedTooltip: o,
                 shouldShowInputDeviceChangedTooltip: !o && "input" === S,
                 shouldShowSpeakingWhilePTTTooltip: d,
                 shouldShowPTTJoinTooltip: N,
                 dismissTooltips: C,
-                speaking: O,
+                speaking: R,
             }),
             (0, i.jsx)(rn, {
                 selfDeaf: t,
@@ -3855,17 +3867,17 @@ function rU(e) {
                 onClick: E,
                 onContextMenu: I,
                 awaitingRemote: r,
-                iconForeground: null != m ? rR.t4 : void 0,
+                iconForeground: null != m ? rO.t4 : void 0,
                 nameplate: m,
                 shouldShowOutputDeviceChangedTooltip: "output" === S,
                 dismissTooltips: C,
             }),
-            (0, i.jsx)(rO, {
+            (0, i.jsx)(rR, {
                 webBuildOverride: c,
                 onClick: f,
                 onContextMenu: p,
                 dismissibleContents: T.settings,
-                iconForeground: null != m ? rR.t4 : void 0,
+                iconForeground: null != m ? rO.t4 : void 0,
                 nameplate: m,
             }),
         ],
@@ -3925,10 +3937,10 @@ function rG() {
         { mute: I, selfMute: f, suppress: p } = (0, ia.A)(h),
         { selfDeaf: m, deaf: g } = (0, ir.A)(h),
         C = (0, c.bG)([Y.A], () => ((0, K.kK)() ? Y.A.getCurrentBuildOverride().overrides?.discord_web : null)),
-        O = (0, c.bG)([is.Ay], () => is.Ay.getSpeakingWhileMuted()),
-        R = (0, c.bG)([$.A], () => $.A.isFullscreenInContext()),
+        R = (0, c.bG)([is.Ay], () => is.Ay.getSpeakingWhileMuted()),
+        O = (0, c.bG)([$.A], () => $.A.isFullscreenInContext()),
         L = (0, c.bG)([im.A], () => im.A.hasLayers()),
-        D = (0, T.useModalsStore)(T.hasAnyModalOpenSelector) || L || iC.P.isDisallowPopupsSet() || R,
+        D = (0, T.useModalsStore)(T.hasAnyModalOpenSelector) || L || iC.P.isDisallowPopupsSet() || O,
         y = (0, c.bG)([ed.default], () => null != ed.default.getAwaitingRemoteSessionInfo()),
         v = (0, c.bG)([ig.A], () => ig.A.getGuildId()),
         b = e?.avatarDecoration,
@@ -4083,7 +4095,7 @@ function rG() {
             serverMute: I,
             speaking: d,
             voiceDb: E,
-            speakingWhileMuted: O,
+            speakingWhileMuted: R,
             speakingWhilePTTInactive: el,
             status: s,
             streaming: a,

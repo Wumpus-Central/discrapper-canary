@@ -24,7 +24,7 @@ function N(e) {
     S.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
 }
 var C = n(912851);
-let O = {
+let R = {
     clearRemoteDisconnectVoiceChannelId() {
         S.h.dispatch({ type: "CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID" });
     },
@@ -32,7 +32,7 @@ let O = {
         S.h.dispatch({ type: "CLEAR_LAST_SESSION_VOICE_CHANNEL_ID" });
     },
 };
-var R = n(730852),
+var O = n(730852),
     L = n(785796),
     D = n(55619),
     y = n(246605),
@@ -352,8 +352,8 @@ var em = n(532205),
     eS = n(102609),
     eN = n(736056),
     eC = n(194261),
-    eO = n(548118),
-    eR = n(134413),
+    eR = n(548118),
+    eO = n(134413),
     eL = n(221950),
     eD = n(71393),
     ey = n(309010),
@@ -370,7 +370,7 @@ function eG(e) {
         l = a ?? null,
         o = (0, c.bG)([eD.A], () => (null != l ? eD.A.getGuild(l) : null), [l]),
         { shouldShowIncidentActions: d, incidentData: u, isUnderLockdown: _ } = (0, eb.Li)(l),
-        E = (0, eR.fw)(o?.id ?? ei.dJq),
+        E = (0, eO.fw)(o?.id ?? ei.dJq),
         h = r.useCallback(() => null != o && (0, eL.aZ)(o.id), [o]);
     if (null == o || null == u || !d) return null;
     let I = (e) => {
@@ -392,7 +392,7 @@ function eG(e) {
                       return (n) => (0, i.jsx)(t, { ...n, guildId: o.id, analyticsData: e });
                   });
         },
-        p = (0, i.jsx)(eO.Ay, { className: ew.$f, guild: o, size: eO.Ay.Sizes.MINI }),
+        p = (0, i.jsx)(eR.Ay, { className: ew.$f, guild: o, size: eR.Ay.Sizes.MINI }),
         T = (0, eP.ql)(u, o.name);
     if (null != (u.dmsDisabledUntil ?? u.invitesDisabledUntil) && _)
         return (0, i.jsxs)(A.$T, {
@@ -702,9 +702,9 @@ function tg(e) {
 var tS = n(754804),
     tN = n(378974),
     tC = n(340124),
-    tO = n(14594);
-function tR() {
-    let [e, t] = (0, eu.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tO.aH });
+    tR = n(14594);
+function tO() {
+    let [e, t] = (0, eu.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tR.aH });
     return e !== V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
         : (0, i.jsxs)(A.$T, {
@@ -1143,7 +1143,7 @@ let ne = r.memo(function () {
                 children: [
                     (0, i.jsx)(A.PM, {
                         onClick: () => {
-                            O.clearRemoteDisconnectVoiceChannelId(), t9();
+                            R.clearRemoteDisconnectVoiceChannelId(), t9();
                         },
                         noticeType: a.type,
                     }),
@@ -1151,7 +1151,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(A.Z_, {
                         onClick: () => {
                             let e = tz.A.getRemoteDisconnectVoiceChannelId();
-                            null != e && null != tv.A.getChannel(e) && R.default.selectVoiceChannel(e);
+                            null != e && null != tv.A.getChannel(e) && O.default.selectVoiceChannel(e);
                         },
                         noticeType: a.type,
                         children: es.intl.string(es.t.vD60Pv),
@@ -1164,7 +1164,7 @@ let ne = r.memo(function () {
                 children: [
                     (0, i.jsx)(A.PM, {
                         onClick: () => {
-                            O.clearLastSessionVoiceChannelId(), t9();
+                            R.clearLastSessionVoiceChannelId(), t9();
                         },
                         noticeType: a.type,
                     }),
@@ -1172,7 +1172,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(A.Z_, {
                         onClick: () => {
                             let e = tz.A.getLastSessionVoiceChannelId();
-                            null != e && null != tv.A.getChannel(e) && R.default.selectVoiceChannel(e);
+                            null != e && null != tv.A.getChannel(e) && O.default.selectVoiceChannel(e);
                         },
                         noticeType: a.type,
                         children: es.intl.string(es.t.vD60Pv),
@@ -1381,7 +1381,9 @@ let ne = r.memo(function () {
                                     n.e("84473"),
                                     n.e("70990"),
                                     n.e("15130"),
-                                    n.e("74051"),
+                                    n.e("57578"),
+                                    n.e("57016"),
+                                    n.e("65673"),
                                     n.e("50541"),
                                     n.e("23924"),
                                     n.e("42205"),
@@ -1396,19 +1398,17 @@ let ne = r.memo(function () {
                                     n.e("84569"),
                                     n.e("60235"),
                                     n.e("61737"),
-                                    n.e("92789"),
                                     n.e("21335"),
+                                    n.e("61060"),
                                     n.e("77333"),
                                     n.e("47834"),
                                     n.e("11735"),
                                     n.e("85927"),
                                     n.e("834"),
                                     n.e("2368"),
-                                    n.e("33115"),
                                     n.e("6338"),
                                     n.e("18573"),
                                     n.e("78157"),
-                                    n.e("55936"),
                                     n.e("85404"),
                                     n.e("44057"),
                                     n.e("1453"),
@@ -1418,12 +1418,15 @@ let ne = r.memo(function () {
                                     n.e("31988"),
                                     n.e("44571"),
                                     n.e("34303"),
+                                    n.e("40291"),
+                                    n.e("33115"),
                                     n.e("97270"),
                                     n.e("45959"),
                                     n.e("73122"),
                                     n.e("8304"),
                                     n.e("93159"),
                                     n.e("71202"),
+                                    n.e("55936"),
                                     n.e("8739"),
                                     n.e("42834"),
                                     n.e("88131"),
@@ -1439,11 +1442,13 @@ let ne = r.memo(function () {
                                     n.e("23532"),
                                     n.e("52557"),
                                     n.e("55654"),
+                                    n.e("29963"),
                                     n.e("83161"),
                                     n.e("38513"),
                                     n.e("63645"),
                                     n.e("63123"),
                                     n.e("24038"),
+                                    n.e("50097"),
                                     n.e("88469"),
                                     n.e("27355"),
                                     n.e("62075"),
@@ -1912,7 +1917,7 @@ let ne = r.memo(function () {
                 ],
             });
         case ei.kqX.IGNORE_USER_FEEDBACK_NAGBAR:
-            return (0, i.jsx)(tR, {});
+            return (0, i.jsx)(tO, {});
         case ei.kqX.PREMIUM_MARKETING_NAGBAR:
             return (0, i.jsx)(tS.A, {});
         case ei.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR:
