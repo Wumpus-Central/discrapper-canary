@@ -24,7 +24,7 @@ function N(e) {
     S.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
 }
 var C = n(912851);
-let R = {
+let O = {
     clearRemoteDisconnectVoiceChannelId() {
         S.h.dispatch({ type: "CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID" });
     },
@@ -32,7 +32,7 @@ let R = {
         S.h.dispatch({ type: "CLEAR_LAST_SESSION_VOICE_CHANNEL_ID" });
     },
 };
-var O = n(730852),
+var R = n(730852),
     L = n(785796),
     D = n(55619),
     y = n(246605),
@@ -352,8 +352,8 @@ var em = n(532205),
     eS = n(102609),
     eN = n(736056),
     eC = n(194261),
-    eR = n(548118),
-    eO = n(134413),
+    eO = n(548118),
+    eR = n(134413),
     eL = n(221950),
     eD = n(71393),
     ey = n(309010),
@@ -370,7 +370,7 @@ function eG(e) {
         l = a ?? null,
         o = (0, c.bG)([eD.A], () => (null != l ? eD.A.getGuild(l) : null), [l]),
         { shouldShowIncidentActions: d, incidentData: u, isUnderLockdown: _ } = (0, eb.Li)(l),
-        E = (0, eO.fw)(o?.id ?? ei.dJq),
+        E = (0, eR.fw)(o?.id ?? ei.dJq),
         h = r.useCallback(() => null != o && (0, eL.aZ)(o.id), [o]);
     if (null == o || null == u || !d) return null;
     let I = (e) => {
@@ -392,7 +392,7 @@ function eG(e) {
                       return (n) => (0, i.jsx)(t, { ...n, guildId: o.id, analyticsData: e });
                   });
         },
-        p = (0, i.jsx)(eR.Ay, { className: ew.$f, guild: o, size: eR.Ay.Sizes.MINI }),
+        p = (0, i.jsx)(eO.Ay, { className: ew.$f, guild: o, size: eO.Ay.Sizes.MINI }),
         T = (0, eP.ql)(u, o.name);
     if (null != (u.dmsDisabledUntil ?? u.invitesDisabledUntil) && _)
         return (0, i.jsxs)(A.$T, {
@@ -492,8 +492,8 @@ var eq = n(503698),
     e3 = n(709977),
     e6 = n(212455),
     e4 = n(182430),
-    e7 = n(580537);
-let e5 = function () {
+    e5 = n(580537);
+let e7 = function () {
     let e = (0, c.bG)([ev.A], () => ev.A.getGuildId(), []),
         t = (0, c.bG)([eD.A], () => eD.A.getGuild(e), [e]),
         r = (0, c.bG)([e6.A], () => (null != e ? e6.A.getRequest(e) : null), [e]),
@@ -504,7 +504,7 @@ let e5 = function () {
         o = null,
         d = null,
         u = null,
-        E = [e4.lm, e7.lm];
+        E = [e4.lm, e5.lm];
     switch (l) {
         case e2.B5.SUBMITTED:
             (o = es.intl.string(es.t["5iLvSx"])),
@@ -577,7 +577,7 @@ let tl = function () {
         }
     };
     return (0, i.jsxs)("div", {
-        className: eZ()(ts.lm, e7.lm),
+        className: eZ()(ts.lm, e5.lm),
         children: [
             (0, i.jsxs)(ti.$n, {
                 look: ti.$n.Looks.OUTLINED,
@@ -702,9 +702,9 @@ function tg(e) {
 var tS = n(754804),
     tN = n(378974),
     tC = n(340124),
-    tR = n(14594);
-function tO() {
-    let [e, t] = (0, eu.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tR.aH });
+    tO = n(14594);
+function tR() {
+    let [e, t] = (0, eu.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tO.aH });
     return e !== V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
         : (0, i.jsxs)(A.$T, {
@@ -916,7 +916,7 @@ function t4(e) {
         ],
     });
 }
-function t7(e) {
+function t5(e) {
     let { noticeType: t } = e;
     return (0, i.jsxs)(A.$T, {
         color: A.Hv.DANGER,
@@ -936,7 +936,7 @@ function t7(e) {
         ],
     });
 }
-function t5(e) {
+function t7(e) {
     return (0, tJ.isWindows)() && d().satisfies(M.A?.os.release, t0.PH)
         ? `ms-settings:sound-properties?endpointId=${e}`
         : "ms-settings:sound";
@@ -955,10 +955,10 @@ function t8(e) {
     return (
         !0 === l
             ? ((t = es.intl.string(es.t.ppW3ri)),
-              (n = (0, i.jsx)(A.eC, { href: t5(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
+              (n = (0, i.jsx)(A.eC, { href: t7(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
             : 0 === o
               ? ((t = es.intl.string(es.t.j4gGA4)),
-                (n = (0, i.jsx)(A.eC, { href: t5(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
+                (n = (0, i.jsx)(A.eC, { href: t7(s), noticeType: r, children: es.intl.string(es.t.QghSIq) })))
               : t$.Ay.supports(t2.O5.LOOPBACK)
                 ? ((t = es.intl.string(es.t.dNAJ18)),
                   (d = !0),
@@ -1045,7 +1045,7 @@ let ne = r.memo(function () {
         case ei.kqX.LURKING_GUILD:
             return (0, i.jsx)(tl, {});
         case ei.kqX.PENDING_MEMBER:
-            return (0, i.jsx)(e5, {});
+            return (0, i.jsx)(e7, {});
         case ei.kqX.INVITED_TO_SPEAK:
             return (0, i.jsx)(tk, {});
         case ei.kqX.GUILD_RAID_NOTIFICATION:
@@ -1143,7 +1143,7 @@ let ne = r.memo(function () {
                 children: [
                     (0, i.jsx)(A.PM, {
                         onClick: () => {
-                            R.clearRemoteDisconnectVoiceChannelId(), t9();
+                            O.clearRemoteDisconnectVoiceChannelId(), t9();
                         },
                         noticeType: a.type,
                     }),
@@ -1151,7 +1151,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(A.Z_, {
                         onClick: () => {
                             let e = tz.A.getRemoteDisconnectVoiceChannelId();
-                            null != e && null != tv.A.getChannel(e) && O.default.selectVoiceChannel(e);
+                            null != e && null != tv.A.getChannel(e) && R.default.selectVoiceChannel(e);
                         },
                         noticeType: a.type,
                         children: es.intl.string(es.t.vD60Pv),
@@ -1164,7 +1164,7 @@ let ne = r.memo(function () {
                 children: [
                     (0, i.jsx)(A.PM, {
                         onClick: () => {
-                            R.clearLastSessionVoiceChannelId(), t9();
+                            O.clearLastSessionVoiceChannelId(), t9();
                         },
                         noticeType: a.type,
                     }),
@@ -1172,7 +1172,7 @@ let ne = r.memo(function () {
                     (0, i.jsx)(A.Z_, {
                         onClick: () => {
                             let e = tz.A.getLastSessionVoiceChannelId();
-                            null != e && null != tv.A.getChannel(e) && O.default.selectVoiceChannel(e);
+                            null != e && null != tv.A.getChannel(e) && R.default.selectVoiceChannel(e);
                         },
                         noticeType: a.type,
                         children: es.intl.string(es.t.vD60Pv),
@@ -1255,7 +1255,7 @@ let ne = r.memo(function () {
         case ei.kqX.NO_INPUT_DEVICES_DETECTED:
             return (0, i.jsx)(t4, { noticeType: a.type });
         case ei.kqX.VIDEO_BACKGROUND_UNAVAILABLE:
-            return (0, i.jsx)(t7, { noticeType: a.type });
+            return (0, i.jsx)(t5, { noticeType: a.type });
         case ei.kqX.HARDWARE_MUTE:
             if (null != a.metadata) {
                 let { vendor: e, model: t } = a.metadata;
@@ -1385,10 +1385,9 @@ let ne = r.memo(function () {
                                     n.e("57016"),
                                     n.e("65673"),
                                     n.e("50541"),
-                                    n.e("23924"),
                                     n.e("42205"),
                                     n.e("55675"),
-                                    n.e("48226"),
+                                    n.e("27962"),
                                     n.e("10471"),
                                     n.e("64827"),
                                     n.e("63232"),
@@ -1917,7 +1916,7 @@ let ne = r.memo(function () {
                 ],
             });
         case ei.kqX.IGNORE_USER_FEEDBACK_NAGBAR:
-            return (0, i.jsx)(tO, {});
+            return (0, i.jsx)(tR, {});
         case ei.kqX.PREMIUM_MARKETING_NAGBAR:
             return (0, i.jsx)(tS.A, {});
         case ei.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR:

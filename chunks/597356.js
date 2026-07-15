@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.mergeClasses = void 0);
-var n = i(r(471171)),
-    o = i(r(415955)),
+var n = i(r(43646)),
+    o = i(r(480664)),
     a =
         Object.assign ||
         function (e) {
@@ -14,7 +14,7 @@ var n = i(r(471171)),
 function i(e) {
     return e && e.__esModule ? e : { default: e };
 }
-var l = (t.mergeClasses = function (e) {
+var u = (t.mergeClasses = function (e) {
     var t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [],
         r = (e.default && (0, o.default)(e.default)) || {};
     return (
@@ -31,4 +31,4 @@ var l = (t.mergeClasses = function (e) {
         r
     );
 });
-t.default = l;
+t.default = u;

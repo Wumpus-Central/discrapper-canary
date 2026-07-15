@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => S });
-var i = n(296489),
+var i = n(277057),
     r = n.n(i),
     a = n(192308),
     s = n(228366),
@@ -26,8 +26,8 @@ function S(e) {
             onClose: S,
             onComplete: N,
             onSubscriptionConfirmation: C,
-            analyticsLocations: R,
-            analyticsObject: O,
+            analyticsLocations: O,
+            analyticsObject: R,
             analyticsLocation: L,
             analyticsSourceLocation: D,
             confirmationFooter: y,
@@ -150,10 +150,9 @@ function S(e) {
         n.e("57016"),
         n.e("65673"),
         n.e("50541"),
-        n.e("23924"),
         n.e("42205"),
         n.e("55675"),
-        n.e("48226"),
+        n.e("27962"),
         n.e("36167"),
         n.e("10471"),
         n.e("64827"),
@@ -276,7 +275,7 @@ function S(e) {
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
                 checkoutConfiguration: { applicationId: k, skuId: Y ?? null },
                 forwardedPaymentModalProps: {
-                    analyticsObject: O,
+                    analyticsObject: R,
                     initialPlanId: t,
                     analyticsLocation: L,
                     followupSKUInfo: i,
@@ -303,7 +302,7 @@ function S(e) {
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
-                                            analyticsLocations: R ?? [],
+                                            analyticsLocations: O ?? [],
                                             purchaseType: m.gs.PROMOTIONAL,
                                             overrideGradientColor: "nitro-pink",
                                         });
@@ -316,7 +315,7 @@ function S(e) {
                                 : n();
                         })(e, X),
                 },
-                unifiedCheckoutProviderProps: { analyticsSourceLocation: D, analyticsLocations: R },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: D, analyticsLocations: O },
                 checkoutHandlers: { onClose: S, onComplete: N },
                 giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
                 tenantParams: {

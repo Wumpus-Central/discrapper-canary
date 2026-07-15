@@ -15,16 +15,16 @@ var n = (function () {
         };
     })(),
     o = r(64700),
-    a = u(o),
-    i = u(r(205662)),
-    l = u(r(879378)),
-    s = (function (e) {
+    a = s(o),
+    i = s(r(205662)),
+    u = s(r(64015)),
+    l = (function (e) {
         if (e && e.__esModule) return e;
         var t = {};
         if (null != e) for (var r in e) Object.prototype.hasOwnProperty.call(e, r) && (t[r] = e[r]);
         return (t.default = e), t;
     })(r(401919));
-function u(e) {
+function s(e) {
     return e && e.__esModule ? e : { default: e };
 }
 var p = (t.Saturation = (function (e) {
@@ -39,7 +39,7 @@ var p = (t.Saturation = (function (e) {
         return (
             (r.handleChange = function (e) {
                 "function" == typeof r.props.onChange &&
-                    r.throttle(r.props.onChange, s.calculateChange(e, r.props.hsl, r.container), e);
+                    r.throttle(r.props.onChange, l.calculateChange(e, r.props.hsl, r.container), e);
             }),
             (r.handleMouseDown = function (e) {
                 r.handleChange(e);
@@ -49,7 +49,7 @@ var p = (t.Saturation = (function (e) {
             (r.handleMouseUp = function () {
                 r.unbindEventListeners();
             }),
-            (r.throttle = (0, l.default)(function (e, t, r) {
+            (r.throttle = (0, u.default)(function (e, t, r) {
                 e(t, r);
             }, 50)),
             r
@@ -90,9 +90,9 @@ var p = (t.Saturation = (function (e) {
                         r = t.color,
                         n = t.white,
                         o = t.black,
-                        l = t.pointer,
-                        s = t.circle,
-                        u = (0, i.default)(
+                        u = t.pointer,
+                        l = t.circle,
+                        s = (0, i.default)(
                             {
                                 default: {
                                     color: {
@@ -122,14 +122,14 @@ var p = (t.Saturation = (function (e) {
                                         transform: "translate(-2px, -2px)",
                                     },
                                 },
-                                custom: { color: r, white: n, black: o, pointer: l, circle: s },
+                                custom: { color: r, white: n, black: o, pointer: u, circle: l },
                             },
                             { custom: !!this.props.style },
                         );
                     return a.default.createElement(
                         "div",
                         {
-                            style: u.color,
+                            style: s.color,
                             ref: function (t) {
                                 return (e.container = t);
                             },
@@ -144,14 +144,14 @@ var p = (t.Saturation = (function (e) {
                         ),
                         a.default.createElement(
                             "div",
-                            { style: u.white, className: "saturation-white" },
-                            a.default.createElement("div", { style: u.black, className: "saturation-black" }),
+                            { style: s.white, className: "saturation-white" },
+                            a.default.createElement("div", { style: s.black, className: "saturation-black" }),
                             a.default.createElement(
                                 "div",
-                                { style: u.pointer },
+                                { style: s.pointer },
                                 this.props.pointer
                                     ? a.default.createElement(this.props.pointer, this.props)
-                                    : a.default.createElement("div", { style: u.circle }),
+                                    : a.default.createElement("div", { style: s.circle }),
                             ),
                         ),
                     );

@@ -493,15 +493,15 @@ let e9 = function (e) {
         }),
     });
 };
-var e8 = s(877624);
-let e7 =
+var e7 = s(877624);
+let e8 =
     "https://cdn.discordapp.com/assets/content/b56ad561e631257c1b2d6df674de1baa304710fe81885084e07c119b5a87127e.png";
 function e5(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: a, width: n = 288, height: l = 192 } = e;
     return (0, o.jsx)("img", {
         style: { width: n, height: l },
-        src: e7,
-        srcSet: `${e7} 1x, https://cdn.discordapp.com/assets/content/0d8192495ed73de2381103f061bb6a13f481d93f60e26090c2776f6329bd1bc3.png 2x`,
+        src: e8,
+        srcSet: `${e8} 1x, https://cdn.discordapp.com/assets/content/0d8192495ed73de2381103f061bb6a13f481d93f60e26090c2776f6329bd1bc3.png 2x`,
         alt: t,
         "aria-label": s,
         "aria-hidden": i,
@@ -1070,9 +1070,9 @@ let t3 = function (e) {
     });
 };
 var t9 = s(607470);
-let t8 =
+let t7 =
         "https://cdn.discordapp.com/assets/content/a3e8e17987398023e2afd61ec5078a9bce18b2832f2f1775a1ba3c033ce13270.webm",
-    t7 = function (e) {
+    t8 = function (e) {
         let {
             supportHEVCAlpha: t,
             isMotionReduced: s,
@@ -1117,9 +1117,9 @@ let t8 =
                                     playsInline: !0,
                                     loop: !0,
                                     className: n,
-                                    children: (0, o.jsx)("source", { src: t8 }),
+                                    children: (0, o.jsx)("source", { src: t7 }),
                                 },
-                                t8,
+                                t7,
                             ),
                   }),
               });
@@ -1145,7 +1145,7 @@ let t8 =
             h = (0, tJ.TM)();
         return (0, o.jsxs)(o.Fragment, {
             children: [
-                (0, o.jsx)(t7, {
+                (0, o.jsx)(t8, {
                     supportHEVCAlpha: h,
                     isMotionReduced: f,
                     containerVisibilityPercentage: t,
@@ -1483,7 +1483,7 @@ function sx(e) {
         } = sf(),
         { treatment: f, isInNitroHomeHeaderTreatment: h } = V("subscriber_home_hero"),
         { analyticsLocations: N } = (0, C.Ay)(j.A.PREMIUM_MARKETING_HERO_CTA),
-        A = (0, tu.c)(e8.C.MARKETING_PAGE_BANNER),
+        A = (0, tu.c)(e7.C.MARKETING_PAGE_BANNER),
         E = (0, tr.cg)(),
         b = null != d && d.status === ey.Dmq.CANCELED,
         R = h && !b,
@@ -1589,10 +1589,9 @@ function sx(e) {
                                                             s.e("84473"),
                                                             s.e("69425"),
                                                             s.e("16581"),
-                                                            s.e("23924"),
                                                             s.e("42205"),
                                                             s.e("55675"),
-                                                            s.e("48226"),
+                                                            s.e("27962"),
                                                             s.e("64827"),
                                                             s.e("68261"),
                                                             s.e("7167"),
@@ -1803,10 +1802,9 @@ let sS = function (e) {
                                 s.e("84473"),
                                 s.e("69425"),
                                 s.e("16581"),
-                                s.e("23924"),
                                 s.e("42205"),
                                 s.e("55675"),
-                                s.e("48226"),
+                                s.e("27962"),
                                 s.e("64827"),
                                 s.e("68261"),
                                 s.e("7167"),
@@ -2014,8 +2012,8 @@ var sY = s(462887),
     s6 = s(617986),
     s3 = s(892227),
     s9 = s(81466),
-    s8 = s(318254),
-    s7 = s(490285),
+    s7 = s(318254),
+    s8 = s(490285),
     s5 = s(875679);
 let s4 = function () {
     let { passesGeneralUIInvariant: e, programReward: t } = (0, Q.F)({ location: "NitroOrbsWhatsNewCardFooter" });
@@ -2038,14 +2036,14 @@ let s4 = function () {
                                 (0, o.jsx)(ec.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
-                                    children: ex.intl.string(s7.default.H2M13c),
+                                    children: ex.intl.string(s8.default.H2M13c),
                                 }),
                             ],
                         }),
                         (0, o.jsx)(ec.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: ex.intl.format(s7.default.xedPIb, { days: s }),
+                            children: ex.intl.format(s8.default.xedPIb, { days: s }),
                         }),
                     ],
                 }),
@@ -2057,18 +2055,18 @@ let s4 = function () {
                         (0, o.jsxs)("div", {
                             className: s5.Pf,
                             children: [
-                                (0, o.jsx)(s8.C, { size: "sm", color: ea.A.colors.TEXT_DEFAULT }),
+                                (0, o.jsx)(s7.C, { size: "sm", color: ea.A.colors.TEXT_DEFAULT }),
                                 (0, o.jsx)(ec.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
-                                    children: ex.intl.string(s7.default.F7Bhsg),
+                                    children: ex.intl.string(s8.default.F7Bhsg),
                                 }),
                             ],
                         }),
                         (0, o.jsx)(ec.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: ex.intl.format(s7.default.UDwsvL, { orbsCount: t.total_rewarded_from_program }),
+                            children: ex.intl.format(s8.default.UDwsvL, { orbsCount: t.total_rewarded_from_program }),
                         }),
                     ],
                 }),
@@ -2088,12 +2086,12 @@ function ii(e) {
                     ? null
                     : {
                           id: ev.NITRO_ORBS_REWARDS_CARD_ID,
-                          title: ex.intl.string(s7.default.hx5AFp),
-                          description: ex.intl.format(s7.default.wq3CF2, { orbsCount: a.reward_amount }),
+                          title: ex.intl.string(s8.default.hx5AFp),
+                          description: ex.intl.format(s8.default.wq3CF2, { orbsCount: a.reward_amount }),
                           primaryAsset: "/assets/8f530451dce1ccc0.svg",
                           primaryAssetClassName: m()(is.lH, is.yK),
                           footerContent: (0, o.jsx)(s4, {}),
-                          ctaText: ex.intl.string(s7.default.BxjHiu),
+                          ctaText: ex.intl.string(s8.default.BxjHiu),
                           onCtaClick: () => (0, y.pX)(ey.BVt.COLLECTIBLES_SHOP_WITH_TAB(ie.G2.ORBS)),
                       },
             [i, a],
@@ -2962,8 +2960,8 @@ let i9 = d.forwardRef((e, t) => {
     });
 });
 i9.displayName = "PremiumMarketingFooter";
-var i8 = s(939249);
-let i7 = function (e) {
+var i7 = s(939249);
+let i8 = function (e) {
     let { navBarSections: t, activeSectionId: s, isAnimationComplete: i } = e,
         a = {
             [i$.HOME]: ex.intl.string(ex.t.uGRXjS),
@@ -2995,7 +2993,7 @@ let i7 = function (e) {
                                     let t = s === e.id,
                                         i = a[e.id];
                                     return (0, o.jsxs)(
-                                        i8.D,
+                                        i7.D,
                                         {
                                             role: "tab",
                                             "aria-selected": t,
@@ -3264,7 +3262,7 @@ let ab = function (e) {
         "aria-hidden": !0,
         className: aE.YU,
         children: [
-            (0, o.jsx)(t7, {
+            (0, o.jsx)(t8, {
                 supportHEVCAlpha: i,
                 isMotionReduced: s,
                 containerVisibilityPercentage: t,
@@ -3301,7 +3299,7 @@ let a_ = d.memo(
             ),
             g = (0, iW.b)(),
             p = !c && g.length > 0,
-            f = (0, tu.c)(e8.C.MARKETING_PAGE_BANNER),
+            f = (0, tu.c)(e7.C.MARKETING_PAGE_BANNER),
             h = null != f && "marketingPageBanner" === f.properties.properties.oneofKind,
             N = (0, ag.ar)() && !h,
             A = (0, to.O)(),
@@ -3594,7 +3592,7 @@ let aB = function (e) {
                         c &&
                             i.push({
                                 id: 28,
-                                label: ex.intl.string(s7.default["20tmSN"]),
+                                label: ex.intl.string(s8.default["20tmSN"]),
                                 tier0ColumnData: { includes: !1 },
                                 tier2ColumnData: { includes: !0 },
                             })),
@@ -3879,7 +3877,7 @@ let aW = () => {
             "data-cy": "tier-0-marketing-page",
             children: [
                 (0, o.jsx)(iJ, { className: az.yH }),
-                (0, o.jsx)(i7, { navBarSections: w, activeSectionId: H, isAnimationComplete: c }),
+                (0, o.jsx)(i8, { navBarSections: w, activeSectionId: H, isAnimationComplete: c }),
                 (0, o.jsxs)("div", {
                     className: az.Qr,
                     children: [
@@ -4034,11 +4032,11 @@ let a6 = function (e) {
 };
 var a3 = s(900797),
     a9 = s(847374),
-    a8 = s(812993),
-    a7 = s(464769);
+    a7 = s(812993),
+    a8 = s(464769);
 function a5(e) {
     let { className: t } = e;
-    return (0, o.jsx)(a8.Lp, { className: m()(a7.T, t), text: ex.intl.string(ex.t.EYxi0o) });
+    return (0, o.jsx)(a7.Lp, { className: m()(a8.T, t), text: ex.intl.string(ex.t.EYxi0o) });
 }
 var a4 = s(904788),
     ne = s(507553),
@@ -4051,7 +4049,7 @@ function na(e, t, s) {
 var nn = s(446278);
 function nl(e) {
     let { isShowingAll: t, onClick: s } = e;
-    return (0, o.jsxs)(i8.D, {
+    return (0, o.jsxs)(i7.D, {
         onClick: s,
         className: nn.customButton,
         children: [
@@ -4450,7 +4448,7 @@ let nC = () => {
             T = (0, sj.Gh)("premium-marketing-settings-page"),
             P = v ?? !1,
             y = (0, x.bG)([aY.A], () => {
-                let e = aY.A.getMarketingComponentByType(e8.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
+                let e = aY.A.getMarketingComponentByType(e7.C.BILLING_SETTINGS_NITRO_GIFT_BANNER);
                 return null == e || "billingSettingsNitroGiftBanner" !== e.properties.properties.oneofKind
                     ? null
                     : e.properties.properties.billingSettingsNitroGiftBanner;

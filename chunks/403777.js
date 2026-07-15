@@ -32,7 +32,7 @@ async function h(e) {
     if (null == N) return;
     let C = l.default.getCurrentUser();
     if (null == C) return;
-    let R = A(t, I);
+    let O = A(t, I);
     E.add(
         await (0, r.openModalLazy)(
             async () => {
@@ -178,10 +178,9 @@ async function h(e) {
                         n.e("44671"),
                         n.e("53417"),
                         n.e("23549"),
-                        n.e("23924"),
                         n.e("42205"),
                         n.e("55675"),
-                        n.e("48226"),
+                        n.e("27962"),
                         n.e("36167"),
                         n.e("68201"),
                         n.e("34786"),
@@ -352,8 +351,8 @@ async function h(e) {
                         n.e("607"),
                         n.e("32207"),
                         n.e("29413"),
-                        n.e("38042"),
                         n.e("41786"),
+                        n.e("38042"),
                         n.e("22067"),
                         n.e("53683"),
                         n.e("55266"),
@@ -440,13 +439,13 @@ async function h(e) {
                     });
             },
             {
-                modalKey: R,
+                modalKey: O,
                 contextKey: (0, r.modalContextFromAppContext)(T ?? (0, s.zd)() ?? _.BRT.APP),
                 onCloseRequest: () => {
                     let e = !(0, c.E)("UserProfileModalManager");
                     t === C.id && (0, u.b)(e)
                         ? (0, o.VQ)()
-                        : ((0, r.closeModal)(R), E.delete(R), d.A.clearPendingWidgets(), e || (0, o.XQ)());
+                        : ((0, r.closeModal)(O), E.delete(O), d.A.clearPendingWidgets(), e || (0, o.XQ)());
                 },
             },
         ),

@@ -288,23 +288,23 @@ var eO = n(875317),
     e0 = n(885631),
     e1 = n(156867),
     e3 = n(83297),
-    e2 = n(562708),
-    e6 = n(702841),
+    e6 = n(562708),
+    e2 = n(702841),
     e8 = n(139286),
     e7 = n(468689),
     e4 = n(375708),
     e5 = n(330766);
 function e9(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        s = (0, e6.bG)([V.A, eN.default], () => {
+        s = (0, e2.bG)([V.A, eN.default], () => {
             let e = eN.default.getCurrentUser(),
                 n = V.A.getGuild(t);
             return null != n && (0, eI.bM)(n, e);
         });
     return (
         (0, e8.A)({
-            type: e2.ImpressionTypes.POPOUT,
-            name: e2.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
+            type: e6.ImpressionTypes.POPOUT,
+            name: e6.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: s },
         }),
         (0, l.jsx)(A.A, {
@@ -497,7 +497,7 @@ let td = r.memo(function (e) {
         })(),
     });
 });
-var tu = n(735438),
+var tu = n(435558),
     tc = n.n(tu),
     tA = n(862482),
     tE = n(939249),
@@ -757,8 +757,8 @@ var tQ = n(503698),
     t0 = n(81466),
     t1 = n(116085),
     t3 = n(597601),
-    t2 = n(451394),
-    t6 = n(104171),
+    t6 = n(451394),
+    t2 = n(104171),
     t8 = n(47167),
     t7 = n(713654),
     t4 = n(976860),
@@ -1045,7 +1045,7 @@ function nS(e) {
             height: 14,
             className: nE.uE,
         }),
-        locationIcon: (0, l.jsx)(t2.q, {
+        locationIcon: (0, l.jsx)(t6.q, {
             size: "custom",
             color: "currentColor",
             width: 16,
@@ -1092,7 +1092,7 @@ function np(e) {
                       ? (0, l.jsxs)("div", {
                             className: tq()(nE.fI, nE.pF),
                             children: [
-                                (0, l.jsx)(t6.Ay, { guildId: a, users: o, showUserPopout: !0, size: t6.DN.SIZE_16 }),
+                                (0, l.jsx)(t2.Ay, { guildId: a, users: o, showUserPopout: !0, size: t2.DN.SIZE_16 }),
                                 (0, l.jsx)(tn.E, {
                                     color: "none",
                                     variant: "text-xs/normal",
@@ -1418,19 +1418,19 @@ class n0 extends d.Ay.Store {
 }
 let n1 = new n0(I.h);
 var n3 = n(731667);
-function n2() {
+function n6() {
     return !0;
 }
-class n6 extends d.Ay.Store {
+class n2 extends d.Ay.Store {
     static displayName = "InviteNoticeStore";
     initialize() {
-        this.waitFor(R.A), this.syncWith([R.A], n2);
+        this.waitFor(R.A), this.syncWith([R.A], n6);
     }
     channelNoticePredicate(e, t) {
         return Date.now() - t >= H.D2K && R.A.can(H.xBc.ADMINISTRATOR, e);
     }
 }
-let n8 = new n6(I.h),
+let n8 = new n2(I.h),
     n7 = "lastHiddenChannelNotice",
     n4 = [
         { type: H.n5X.CLAN_ADMIN_UPSELL, dismissibleContentType: u.M.CHANNEL_LIST_CLAN_ADMIN_UPSELL },
@@ -1835,17 +1835,15 @@ class iA extends r.PureComponent {
                     n.e("20802"),
                     n.e("91474"),
                     n.e("17566"),
-                    n.e("23924"),
                     n.e("42205"),
                     n.e("55675"),
-                    n.e("25845"),
-                    n.e("19402"),
+                    n.e("5581"),
                     n.e("49681"),
-                    n.e("22687"),
+                    n.e("69047"),
                     n.e("96382"),
                     n.e("62052"),
-                    n.e("63202"),
-                    n.e("82596"),
+                    n.e("71657"),
+                    n.e("22218"),
                     n.e("10471"),
                     n.e("64827"),
                     n.e("63232"),
@@ -2061,9 +2059,9 @@ class iA extends r.PureComponent {
                     n.e("1888"),
                     n.e("77602"),
                     n.e("10262"),
+                    n.e("41786"),
                     n.e("95602"),
                     n.e("46313"),
-                    n.e("41786"),
                     n.e("34409"),
                     n.e("22547"),
                     n.e("29569"),
@@ -2463,7 +2461,7 @@ function iE(e) {
                 (N.current = !0));
         }, [A, b, I, E, g]);
     let e3 = (0, en.JZ)(u.M.PREMIUM_TUTORIAL_SERVER_MENU_TOOLTIP),
-        e2 =
+        e6 =
             ((T = (0, d.bG)([V.A], () => V.A.getGuild(O))),
             (p = (0, eh._Y)(O)),
             (M =
@@ -2517,7 +2515,7 @@ function iE(e) {
             );
         }, []),
     });
-    let e6 = (0, d.bG)([e$.A], () => e$.A.getChannelId()),
+    let e2 = (0, d.bG)([e$.A], () => e$.A.getChannelId()),
         e8 = (0, d.bG)([eq.A], () => eq.A.desyncedVoiceStatesCount),
         e7 = (0, ev.A)(O),
         e4 = (function (e) {
@@ -2550,7 +2548,7 @@ function iE(e) {
         e4 && td.push(u.M.GUILD_THEME_MEMBER_COACHMARK),
         te && td.push(u.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         ti && td.push(u.M.GAME_SERVER_PRICING_CHANGE_COACHMARK),
-        e2 && td.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
+        e6 && td.push(u.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL);
     let [tu, tc] = (0, ei.kn)(td, eE.m.GUILD_HEADER_TOOLTIPS),
         [tA, tE] = (0, ey.vB)(tt && e5 && !1 === e7 && !(0, el.ai)(O), eE.m.GUILD_HEADER_TOOLTIPS),
         [th, tg] = (0, ei.D8)(
@@ -2587,7 +2585,7 @@ function iE(e) {
         selectedChannel: eF,
         selectedVoiceChannelId: v,
         voiceStates: y,
-        rtcConnectedChannelId: e6,
+        rtcConnectedChannelId: e2,
         rtcDesyncedVoiceStatesCount: e8,
         isUnavailable: w,
         user: k,

@@ -1,7 +1,0 @@
-r.exports = function (r, p, a) {
-    var h = -1,
-        n = r.length;
-    p < 0 && (p = -p > n ? 0 : n + p), (a = a > n ? n : a) < 0 && (a += n), (n = p > a ? 0 : (a - p) >>> 0), (p >>>= 0);
-    for (var s = Array(n); ++h < n; ) s[h] = r[h + p];
-    return s;
-};

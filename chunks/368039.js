@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.autoprefix = void 0);
 var n,
-    o = (n = r(471171)) && n.__esModule ? n : { default: n },
+    o = (n = r(43646)) && n.__esModule ? n : { default: n },
     a =
         Object.assign ||
         function (e) {
@@ -52,7 +52,7 @@ var n,
             return r || { extend: e };
         },
     },
-    l = (t.autoprefix = function (e) {
+    u = (t.autoprefix = function (e) {
         var t = {};
         return (
             (0, o.default)(e, function (e, r) {
@@ -66,4 +66,4 @@ var n,
             t
         );
     });
-t.default = l;
+t.default = u;

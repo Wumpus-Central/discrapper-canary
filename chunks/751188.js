@@ -110,10 +110,9 @@ function o(e) {
                 n.e("22929"),
                 n.e("80866"),
                 n.e("34797"),
-                n.e("23924"),
                 n.e("42205"),
                 n.e("55675"),
-                n.e("48226"),
+                n.e("27962"),
                 n.e("36167"),
                 n.e("10471"),
                 n.e("64827"),
@@ -378,10 +377,9 @@ function E(e) {
                 n.e("80866"),
                 n.e("51372"),
                 n.e("49409"),
-                n.e("23924"),
                 n.e("42205"),
                 n.e("55675"),
-                n.e("48226"),
+                n.e("27962"),
                 n.e("36167"),
                 n.e("10471"),
                 n.e("64827"),
@@ -546,8 +544,8 @@ function h(e) {
         S = (0, a.tA)({ isGift: !0, giftRecipient: t }),
         N = T && null != t,
         C = m && null == t,
-        R = N || C,
-        O = S && null != t;
+        O = N || C,
+        R = S && null != t;
     return {
         openGiftModal: i.useCallback(() => {
             null != f
@@ -562,7 +560,7 @@ function h(e) {
                       giftMessage: I,
                   })
                 : g
-                  ? O
+                  ? R
                       ? o({
                             giftRecipient: t,
                             analyticsLocations: n,
@@ -593,7 +591,7 @@ function h(e) {
                             giftMessage: I,
                             giftingOrigin: A.vQ.GUILD_CHANNEL,
                         })
-                      : O && null != t
+                      : R && null != t
                         ? o({
                               giftRecipient: t,
                               analyticsLocations: n,
@@ -610,8 +608,8 @@ function h(e) {
                               analyticsObject: c ?? s,
                               giftMessage: I,
                           });
-        }, [g, N, C, O, t, n, h, s, l, c, I, f]),
-        shouldShowWishlistModal: O,
-        shouldShowGiftSelectionModal: R,
+        }, [g, N, C, R, t, n, h, s, l, c, I, f]),
+        shouldShowWishlistModal: R,
+        shouldShowGiftSelectionModal: O,
     };
 }

@@ -1,71 +1,71 @@
 "use strict";
-n.d(t, { Tu: () => f, z8: () => g }), n(321073);
+n.d(t, { Tu: () => A, z8: () => p }), n(321073);
 var i,
-    r = n(33851),
-    s = n.n(r),
-    a = n(713402),
-    o = n(694318),
-    l = n(287809),
-    u = n(157347),
+    r = n(811315),
+    a = n.n(r),
+    s = n(713402),
+    l = n(694318),
+    o = n(287809),
+    d = n(157347),
     c = n(70738),
-    d = n(166233),
+    u = n(166233),
     _ = n(230959);
-let h = Date.now();
-var f =
+let E = Date.now();
+var A =
     (((i = {}).NEW_GUILD_MEMBER = "NEW_GUILD_MEMBER"),
     (i.CURRENT_GUILD_MEMBER = "CURRENT_GUILD_MEMBER"),
     (i.INCLUDED_IN_SEARCH_RESULTS = "INCLUDED_IN_SEARCH_RESULTS"),
     i);
-function p(e) {
+function h(e) {
     let t = [e.isCurrentGuildMemberByTimestamp ? "CURRENT_GUILD_MEMBER" : "NEW_GUILD_MEMBER"];
     return e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t;
 }
-function E(e) {
+function I(e) {
     return e.sort;
 }
-function m() {
-    return new a.J(p, E);
+function f() {
+    return new s.J(h, I);
 }
-class g {
+class p {
     guildId;
     _membersMap;
     newMemberTimestamp = Date.now();
     constructor(e) {
-        (this.guildId = e), (this._membersMap = m());
+        (this.guildId = e), (this._membersMap = f());
     }
     reset() {
-        this._membersMap.clear(), (this._membersMap = m()), this.resetNewMemberTimestamp();
+        this._membersMap.clear(), (this._membersMap = f()), this.resetNewMemberTimestamp();
     }
     resetNewMemberTimestamp() {
         this.newMemberTimestamp = Date.now();
     }
     enhanceNewMember(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-            i = (0, u.vn)(e.joinedAt),
+            i = (0, d.vn)(e.joinedAt),
             {
                 hasUnusualDmActivity: r,
-                hasUnusualAccountActivity: s,
-                sourceInviteCode: a,
-                joinSourceType: o,
-                inviterId: d,
-                integrationType: h,
-                joinSourceApplicationId: f,
-                joinSourceChannelId: p,
+                hasUnusualAccountActivity: a,
+                sourceInviteCode: s,
+                joinSourceType: l,
+                inviterId: u,
+                integrationType: E,
+                joinSourceApplicationId: A,
+                joinSourceChannelId: h,
             } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
-            E = l.default.getUser(e.userId);
+            I = o.default.getUser(e.userId);
         return {
             hasUnusualDmActivity: r,
-            hasUnusualAccountActivity: s,
-            sourceInviteCode: a,
-            joinSourceType: o,
-            inviterId: d,
-            integrationType: h,
-            joinSourceApplicationId: f,
-            joinSourceChannelId: p,
+            hasUnusualAccountActivity: a,
+            sourceInviteCode: s,
+            joinSourceType: l,
+            inviterId: u,
+            integrationType: E,
+            joinSourceApplicationId: A,
+            joinSourceChannelId: h,
             ...e,
             isCurrentGuildMemberByTimestamp: i <= this.newMemberTimestamp,
             isIncludedInSearchResults: !1,
-            user: E,
+            user: I,
             sort: (0, _.R)(e, t.selectedSort ?? c.mF.ORDER_BY_UNSPECIFIED),
             joinedAtTimestamp: i,
             ...n,
@@ -76,19 +76,19 @@ class g {
             sourceInviteCode: n,
             joinSourceType: i,
             inviterId: r,
-            integrationType: s,
-            joinSourceApplicationId: a,
-            joinSourceChannelId: l,
-        } = (0, d.Oe)(this.guildId)[e] ?? {};
+            integrationType: a,
+            joinSourceApplicationId: s,
+            joinSourceChannelId: o,
+        } = (0, u.Oe)(this.guildId)[e] ?? {};
         return {
             sourceInviteCode: n ?? null,
             joinSourceType: i ?? null,
             inviterId: r ?? null,
-            integrationType: s ?? null,
-            joinSourceApplicationId: a ?? null,
-            joinSourceChannelId: l ?? null,
-            hasUnusualDmActivity: null != t && new Date(t).getTime() >= h - c.tX,
-            hasUnusualAccountActivity: (0, o.cx)(e),
+            integrationType: a ?? null,
+            joinSourceApplicationId: s ?? null,
+            joinSourceChannelId: o ?? null,
+            hasUnusualDmActivity: null != t && new Date(t).getTime() >= E - c.tX,
+            hasUnusualAccountActivity: (0, l.cx)(e),
         };
     }
     createMember(e) {
@@ -100,27 +100,27 @@ class g {
             i = { ...t },
             r = !1,
             {
-                sourceInviteCode: a,
-                hasUnusualDmActivity: o,
-                hasUnusualAccountActivity: l,
-                joinSourceType: u,
+                sourceInviteCode: s,
+                hasUnusualDmActivity: l,
+                hasUnusualAccountActivity: o,
+                joinSourceType: d,
                 inviterId: c,
-                integrationType: d,
+                integrationType: u,
                 joinSourceApplicationId: _,
-                joinSourceChannelId: h,
+                joinSourceChannelId: E,
             } = this._computeMemberSupplementals(n.userId, i.unusualDMActivityUntil ?? n.unusualDMActivityUntil);
-        for (let e in (n.sourceInviteCode !== a && (i.sourceInviteCode = a),
-        n.hasUnusualDmActivity !== o && (i.hasUnusualDmActivity = o),
-        n.hasUnusualAccountActivity !== l && (i.hasUnusualAccountActivity = l),
-        n.joinSourceType !== u && (i.joinSourceType = u),
+        for (let e in (n.sourceInviteCode !== s && (i.sourceInviteCode = s),
+        n.hasUnusualDmActivity !== l && (i.hasUnusualDmActivity = l),
+        n.hasUnusualAccountActivity !== o && (i.hasUnusualAccountActivity = o),
+        n.joinSourceType !== d && (i.joinSourceType = d),
         n.joinSourceApplicationId !== _ && (i.joinSourceApplicationId = _),
-        n.joinSourceChannelId !== h && (i.joinSourceChannelId = h),
+        n.joinSourceChannelId !== E && (i.joinSourceChannelId = E),
         n.inviterId !== c && (i.inviterId = c),
-        n.integrationType !== d && (i.integrationType = d),
+        n.integrationType !== u && (i.integrationType = u),
         i)) {
             let t = i[e],
-                a = n[e];
-            s()(t, a) || ((n[e] = t), (r = !0));
+                s = n[e];
+            a()(t, s) || ((n[e] = t), (r = !0));
         }
         return this._membersMap.set(n.userId, n) || r;
     }

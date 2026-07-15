@@ -25,7 +25,7 @@ var n,
     N = a(915725),
     A = a(372684),
     k = a(430795),
-    D = a(452082),
+    D = a(899396),
     I = a(227628),
     T = a(468550);
 let R = (0, a(353640).v)(() => ({ enabled: !1, pending: null, lastResult: null }));
@@ -757,7 +757,7 @@ var eI = a(132500),
     eK = a(900686),
     eY = a(986687),
     eq = a(780385),
-    eJ = a(735438),
+    eJ = a(435558),
     eQ = a.n(eJ),
     eX = a(855915),
     eZ = a(480335);
@@ -4954,7 +4954,7 @@ function lJ() {
     });
 }
 a(172879);
-var lQ = a(985623),
+var lQ = a(64015),
     lX = a.n(lQ),
     lZ = a(990078),
     l0 = a(874804),
@@ -7885,7 +7885,7 @@ let rR = {
     "discord_common/js/shared/animations/app/gifts/seasonal/coffee/coffee-loop.lottiejson": () =>
         a.e("17095").then(a.t.bind(a, 367327, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/gift_icon/seasonal-gifting-wumpus-action.lottiejson":
-        () => a.e("27568").then(a.t.bind(a, 801952, 19)),
+        () => a.e("27568").then(a.t.bind(a, 579571, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/gift_icon/seasonal-gifting-wumpus-loop.lottiejson":
         () => a.e("25676").then(a.t.bind(a, 322151, 19)),
     "discord_common/js/shared/animations/app/gifts/seasonal/marketing/seasonal_wumpus/seasonal-wumpus-action.lottiejson":
@@ -8264,10 +8264,10 @@ let rP = {
                     a.e("91474"),
                     a.e("17566"),
                     a.e("49681"),
-                    a.e("22687"),
+                    a.e("69047"),
                     a.e("96382"),
-                    a.e("63202"),
-                    a.e("82596"),
+                    a.e("71657"),
+                    a.e("22218"),
                     a.e("9004"),
                     a.e("49145"),
                     a.e("30997"),

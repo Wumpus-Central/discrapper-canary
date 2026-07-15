@@ -1,20 +1,20 @@
-s.d(t, { A: () => o });
-var l = s(64700),
-    r = s(155999),
-    n = s.n(r),
-    a = s(17928),
-    i = s(590180);
+n.d(t, { A: () => o });
+var s = n(64700),
+    l = n(24055),
+    r = n.n(l),
+    a = n(17928),
+    i = n(590180);
 function o() {
     let e = (0, a.bG)([i.A], () => i.A.products);
-    return (0, l.useCallback)(
+    return (0, s.useCallback)(
         (t) =>
-            n()(
+            r()(
                 t
                     .map((t) => {
-                        let s = e.get(t);
-                        return null != s && null != s.variantGroupStoreListingId
-                            ? i.A.getProductByStoreListingId(s.variantGroupStoreListingId)
-                            : s;
+                        let n = e.get(t);
+                        return null != n && null != n.variantGroupStoreListingId
+                            ? i.A.getProductByStoreListingId(n.variantGroupStoreListingId)
+                            : n;
                     })
                     .filter((e) => null != e),
                 "storeListingId",

@@ -1,8 +1,8 @@
 r.d(t, { default: () => g });
 var s = r(627968),
     n = r(64700),
-    l = r(224640),
-    i = r(20742),
+    i = r(224640),
+    l = r(20742),
     a = r(430993),
     d = r(834730),
     o = r(289873),
@@ -23,7 +23,7 @@ function g(e) {
                     expiresAt: h.A.getLinkCodeExpiresAt(),
                 })),
                 [r, s] = n.useState(!1),
-                [l, i] = n.useState(() => {
+                [i, l] = n.useState(() => {
                     let e = h.A.getLinkCodeExpiresAt();
                     return null != h.A.getLinkCode() && null != e && e > Date.now();
                 }),
@@ -33,17 +33,17 @@ function g(e) {
                     s(!1),
                         (0, k.HB)()
                             .then(() => {
-                                e === a.current && (s(!1), i(!0));
+                                e === a.current && (s(!1), l(!0));
                             })
                             .catch(() => {
                                 if (e !== a.current) return;
                                 let t = h.A.getLinkCodeExpiresAt();
-                                null != h.A.getLinkCode() && null != t && t > Date.now() ? i(!0) : s(!0);
+                                null != h.A.getLinkCode() && null != t && t > Date.now() ? l(!0) : s(!0);
                             });
                 }, []);
             return ((0, c.Ay)(d), r)
                 ? { state: "error" }
-                : l
+                : i
                   ? null != e && null != t
                       ? { state: "gate", linkCode: e, expiresAt: t, refresh: d }
                       : { state: "error" }
@@ -54,33 +54,37 @@ function g(e) {
         n.useEffect(() => {
             "error" === L.state && (g?.(), r());
         }, [L.state, r, g]),
-        (0, s.jsxs)(l.d, {
+        (0, s.jsxs)(i.d, {
             transitionState: t,
             onClose: r,
             size: "md",
             "aria-label": A.intl.string(f.default.vELYWk),
             children: [
-                (0, s.jsx)(i.rQ, { alignCenter: !0, title: A.intl.string(f.default.vELYWk) }),
+                (0, s.jsx)(l.rQ, {
+                    alignCenter: !0,
+                    title: A.intl.string(f.default.vELYWk),
+                    subtitle:
+                        "gate" === L.state
+                            ? (0, s.jsx)(d.E, {
+                                  variant: "text-md/normal",
+                                  color: "text-muted",
+                                  className: C.h_,
+                                  children: A.intl.format(f.default.pDByAB, {
+                                      link: "https://support.discord.com/hc/articles/14155060633623",
+                                  }),
+                              })
+                            : void 0,
+                }),
                 (0, s.jsx)(a.c, {
                     children:
                         "gate" === L.state
-                            ? (0, s.jsxs)("div", {
+                            ? (0, s.jsx)("div", {
                                   className: C.kL,
-                                  children: [
-                                      (0, s.jsx)(d.E, {
-                                          className: C.h_,
-                                          variant: "text-md/normal",
-                                          color: "text-muted",
-                                          children: A.intl.format(f.default.pDByAB, {
-                                              link: "https://support.discord.com/hc/articles/14155060633623",
-                                          }),
-                                      }),
-                                      (0, s.jsx)(x.r, {
-                                          linkCode: L.linkCode,
-                                          expiresAt: L.expiresAt,
-                                          onRefresh: L.refresh,
-                                      }),
-                                  ],
+                                  children: (0, s.jsx)(x.r, {
+                                      linkCode: L.linkCode,
+                                      expiresAt: L.expiresAt,
+                                      onRefresh: L.refresh,
+                                  }),
                               })
                             : (0, s.jsx)("div", { className: C.Lq, children: (0, s.jsx)(o.y, {}) }),
                 }),

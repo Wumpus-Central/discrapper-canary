@@ -1,5 +1,0 @@
-var r = n(876666),
-    s = n(924986);
-p.exports = function (p, h) {
-    return p && p.length ? s(p, r(h, 2)) : [];
-};

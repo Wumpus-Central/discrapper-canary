@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => O });
+n.d(t, { A: () => R });
 var i = n(562708),
     r = n(765178),
     a = n(636537),
@@ -22,7 +22,7 @@ var i = n(562708),
     S = n(652215),
     N = n(375708);
 let C = new c.A("GuildSettingsActionCreators"),
-    R = {
+    O = {
         init(e, t, n, i) {
             s.h.dispatch({ type: "GUILD_SETTINGS_INIT", guildId: e, section: t, subsection: i, location: n });
         },
@@ -286,19 +286,17 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("20802"),
                 n.e("91474"),
                 n.e("17566"),
-                n.e("23924"),
                 n.e("42205"),
                 n.e("55675"),
-                n.e("48226"),
+                n.e("27962"),
                 n.e("36167"),
-                n.e("19402"),
-                n.e("71763"),
+                n.e("60955"),
                 n.e("49681"),
-                n.e("22687"),
+                n.e("69047"),
                 n.e("96382"),
                 n.e("62052"),
-                n.e("63202"),
-                n.e("82596"),
+                n.e("71657"),
+                n.e("22218"),
                 n.e("34786"),
                 n.e("97452"),
                 n.e("10471"),
@@ -640,6 +638,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("75627"),
                 n.e("10262"),
                 n.e("29413"),
+                n.e("41786"),
                 n.e("38042"),
                 n.e("38260"),
                 n.e("29961"),
@@ -647,7 +646,6 @@ let C = new c.A("GuildSettingsActionCreators"),
                 n.e("15172"),
                 n.e("95602"),
                 n.e("46313"),
-                n.e("41786"),
                 n.e("69369"),
                 n.e("30221"),
                 n.e("11471"),
@@ -779,7 +777,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 T.A.getGuild(e)?.features.has(S.GuildFeatures.COMMUNITY) &&
                     (t === S.BEX.GUILD_AUTOMOD && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_AUTOMOD)),
                     t === S.BEX.MEMBER_VERIFICATION && ((t = S.BEX.SAFETY), (r = S.nd0.SAFETY_DM_AND_SPAM_PROTECTION))),
-                R.init(e, t, i, r),
+                O.init(e, t, i, r),
                 I.A.closeGuildSidebar(e),
                 (0, l.id)(S.zgK.GUILD_SETTINGS);
         },
@@ -862,8 +860,8 @@ let C = new c.A("GuildSettingsActionCreators"),
                     features: T,
                     systemChannelFlags: m,
                     preferredLocale: N,
-                    rulesChannelId: R,
-                    safetyAlertsChannelId: O,
+                    rulesChannelId: O,
+                    safetyAlertsChannelId: R,
                     ownerConfiguredContentLevel: L,
                     discoverySplash: D,
                     publicUpdatesChannelId: y,
@@ -890,11 +888,11 @@ let C = new c.A("GuildSettingsActionCreators"),
                     default_message_notifications: f,
                     explicit_content_filter: p,
                     system_channel_flags: m,
-                    rules_channel_id: R,
+                    rules_channel_id: O,
                     owner_configured_content_level: L,
                     discovery_splash: D,
                     public_updates_channel_id: y,
-                    safety_alerts_channel_id: O,
+                    safety_alerts_channel_id: R,
                     ...(null != v ? { premium_progress_bar_enabled: v } : null),
                     profile: null != b ? { tag: b.tag } : b,
                     moderator_reporting_enabled: M,
@@ -973,7 +971,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         deleteGuild: (e) =>
             a.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
-                R.close();
+                O.close();
             }),
         async leaveGuild(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
@@ -986,7 +984,7 @@ let C = new c.A("GuildSettingsActionCreators"),
             }).then(() => {
                 r.O.announce(N.intl.string(N.t["7iPyVW"]));
             }),
-                R.close(),
+                O.close(),
                 t && n && (0, h.pX)(S.BVt.GUILD_DISCOVERY);
         },
         async updateMemberRoles(e, t, n, i, r) {
@@ -1040,7 +1038,7 @@ let C = new c.A("GuildSettingsActionCreators"),
         },
         async migratePermissions(e, t) {
             let { migratePin: n, migrateSlowmode: i } = t;
-            n && (await R.migratePinPermission(e)), i && (await R.migrateSlowmodePermission(e));
+            n && (await O.migratePinPermission(e)), i && (await O.migrateSlowmodePermission(e));
         },
     },
-    O = R;
+    R = O;
