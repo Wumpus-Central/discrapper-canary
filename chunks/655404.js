@@ -22,8 +22,8 @@ var i,
     S = n(807393),
     N = n(464578),
     C = n(111162),
-    O = n(174459),
-    R = n(353835),
+    R = n(174459),
+    O = n(353835),
     L = n(927813),
     D = n(723702),
     y = n(38405),
@@ -36,6 +36,12 @@ class U {
     fallbackTripped = !1;
     shouldUseAltGateway() {
         return !this.fallbackTripped && null != M && P;
+    }
+    isAssignedToAltGateway() {
+        return null != M && P;
+    }
+    getDidFallBack() {
+        return this.fallbackTripped;
     }
     getAltGatewayUrl() {
         return this.shouldUseAltGateway() ? M : null;
@@ -1158,9 +1164,9 @@ function eC(e) {
     };
 }
 n(667532);
-var eO = n(877166),
-    eR = n(365971),
-    eL = n(735438),
+var eR = n(877166),
+    eO = n(365971),
+    eL = n(435558),
     eD =
         (((i = {}).LONGER_DISPATCH = "longer_dispatch"),
         (i.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
@@ -1413,7 +1419,7 @@ class eK extends eH {
         super(),
             I.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
-                n === (0, eR.Xg)() && this._trackAppBackgrounded(!t);
+                n === (0, eO.Xg)() && this._trackAppBackgrounded(!t);
             });
     }
     _queueIdleCallback() {
@@ -1611,7 +1617,7 @@ class eJ {
                             break;
                         }
                     }
-                    eO.A.flush();
+                    eR.A.flush();
                 }),
                 i && A.Ay.Emitter.resume(),
                 r.length > 0)
@@ -1640,7 +1646,7 @@ class eJ {
                 (this.resumeAnalytics.lastUpdateTime = l),
                 (this.resumeAnalytics.numEvents += 1);
         }
-        if ((eO.A.flush(r, i), "READY" === r)) {
+        if ((eR.A.flush(r, i), "READY" === r)) {
             let e,
                 n,
                 o = (function (e) {
@@ -1769,13 +1775,13 @@ class eJ {
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
                 N.A.attachReadyPayloadProperties(n),
-                O.default.track(eS.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
+                R.default.track(eS.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
         } else
             "RESUMED" === r
                 ? (this.getDispatchHandler(r)?.dispatch(i, r, s),
                   (n = this.resumeAnalytics),
                   (!eg.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
-                      O.default.track(
+                      R.default.track(
                           eS.HAw.CONNECTION_RESUMED,
                           {
                               connect_time_ms: n.connectTime,
@@ -1934,8 +1940,8 @@ class e6 extends e0.EventEmitter {
     }
 }
 var e4 = n(33282),
-    e7 = n(981133),
-    e5 = n(751124);
+    e5 = n(981133),
+    e7 = n(751124);
 let e8 = new g.A("GatewaySocket"),
     e9 = new em(),
     te = null;
@@ -1982,6 +1988,8 @@ class to extends e6 {
     resumeUrl = null;
     iosGoingAwayEventCount = 0;
     altGateway = new U();
+    failedConnectAttempts = 0;
+    receivedHelloThisAttempt = !1;
     dispatcher;
     heartbeatQOSState = { currentPayload: null, upcomingState: null };
     get connectionState() {
@@ -2014,7 +2022,9 @@ class to extends e6 {
             (this.hasConnectedOnce = !1),
             (this.isFastConnect = !1),
             (this.identifyCount = 0),
-            (this.iosGoingAwayEventCount = 0);
+            (this.iosGoingAwayEventCount = 0),
+            (this.failedConnectAttempts = 0),
+            (this.receivedHelloThisAttempt = !1);
     }
     addAnalytics(e) {
         this.analytics = { ...this.analytics, ...e };
@@ -2053,7 +2063,8 @@ class to extends e6 {
             s = e9.getName(),
             l = this._getGatewayUrl(),
             o = window.GLOBAL_ENV.API_VERSION;
-        c.A.mark("\uD83C\uDF10", "Socket._connect"),
+        (this.receivedHelloThisAttempt = !1),
+            c.A.mark("\uD83C\uDF10", "Socket._connect"),
             e8.info(`[CONNECT] ${l}, encoding: ${s}, version: ${o}, compression: ${a ?? "none"}`),
             null !== this.webSocket &&
                 (e8.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
@@ -2108,7 +2119,7 @@ class to extends e6 {
                             (_ = o.state.clientState);
                     }
                 }
-                null == t && ((t = (0, e5.A)(n)).binaryType = "arraybuffer"),
+                null == t && ((t = (0, e7.A)(n)).binaryType = "arraybuffer"),
                     i(t),
                     d && r(c, _),
                     null != u && u.forEach(a),
@@ -2206,7 +2217,7 @@ class to extends e6 {
                     }),
                 onError: () => {
                     this.setResumeUrl(null),
-                        R.A.flushDNSCache(),
+                        O.A.flushDNSCache(),
                         this._handleClose(!1, 0, "An error with the websocket occurred");
                 },
                 onClose: (e) => {
@@ -2216,9 +2227,27 @@ class to extends e6 {
             });
     }
     _handleHello(e) {
-        let t = (this.heartbeatInterval = e.heartbeat_interval),
-            n = Date.now() - this.connectionStartTime;
-        e8.verbose(`[HELLO] via ${eN(e)}, heartbeat interval: ${t}, took ${n} ms`), this._startHeartbeater();
+        var t, n;
+        let i = (this.heartbeatInterval = e.heartbeat_interval),
+            r = Date.now() - this.connectionStartTime;
+        e8.verbose(`[HELLO] via ${eN(e)}, heartbeat interval: ${i}, took ${r} ms`),
+            (t = this.altGateway),
+            (n = this._getGatewayUrl()),
+            R.default.track(
+                eS.HAw.GATEWAY_CONNECTED,
+                {
+                    num_failed_connect_attempts: this.failedConnectAttempts,
+                    gateway_url: n,
+                    assigned_to_alt_gateway: t.isAssignedToAltGateway(),
+                    did_fall_back_from_alt_gateway: t.getDidFallBack(),
+                    is_reconnect: this.hasConnectedOnce,
+                    is_fast_connect: this.isFastConnect,
+                },
+                { logEventProperties: !0 },
+            ),
+            (this.receivedHelloThisAttempt = !0),
+            (this.failedConnectAttempts = 0),
+            this._startHeartbeater();
     }
     _handleReconnect() {
         e8.verbose("[RECONNECT] gateway requested I reconnect."),
@@ -2310,6 +2339,7 @@ class to extends e6 {
         if (
             (this._tryDetectInvalidIOSToken(t, n, e),
             (this.connectionState = w.A.WILL_RECONNECT),
+            this.receivedHelloThisAttempt || (this.failedConnectAttempts += 1),
             this._maybeFallBackFromAltGateway(),
             this.nextReconnectIsImmediate)
         )
@@ -2330,7 +2360,7 @@ class to extends e6 {
                 h.Bo.get({ url: eS.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
                     (e) => {
                         let { status: t } = e;
-                        O.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                        R.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                     (e) => {
                         let { status: t } = e;
@@ -2338,7 +2368,7 @@ class to extends e6 {
                             ((this.connectionState = w.A.CLOSED),
                             e8.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
-                            O.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            R.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                 ));
     }
@@ -2431,7 +2461,7 @@ class to extends e6 {
                 capabilities: (function (e) {
                     let { useChannelObfuscation: t } = e;
                     return t ? 1767421 : 1734653;
-                })({ useChannelObfuscation: (0, e7.RK)("GatewaySocket") }),
+                })({ useChannelObfuscation: (0, e5.RK)("GatewaySocket") }),
                 properties: l,
                 presence: o,
                 compress: this.compressionHandler.usesLegacyCompression(),
@@ -2442,7 +2472,7 @@ class to extends e6 {
             (this.identifyCompressedByteSize = d.deflate(u).length),
             (this.identifyCount += 1),
             this.send(e3.IDENTIFY, c, !1),
-            O.default.track(eS.HAw.SESSION_START_CLIENT, {});
+            R.default.track(eS.HAw.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -2513,7 +2543,7 @@ class to extends e6 {
         let r = (0, E.b)();
         S.A.increment({ name: _.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
             !1 !== e.sentry && y.A.captureException(n, { tags: { socketCrashedAction: t } }),
-            O.default.track(eS.HAw.GATEWAY_SOCKET_RESET, {
+            R.default.track(eS.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 has_client_mods: r,

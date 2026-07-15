@@ -3681,6 +3681,7 @@ var rv =
         (ew.LOGIN_VIEWED = "login_viewed"),
         (ew.READY_PAYLOAD_RECEIVED = "ready_payload_received"),
         (ew.CONNECTION_RESUMED = "connection_resumed"),
+        (ew.GATEWAY_CONNECTED = "gateway_connected"),
         (ew.FORCED_UPDATE_PASSWORD_SUCCEEDED = "force_update_password_succeeded"),
         (ew.MOBILE_OTA_CHECK_ATTEMPT = "mobile_ota_check_attempt"),
         (ew.MOBILE_OTA_ASSET_DOWNLOAD_ATTEMPT = "mobile_ota_asset_download_attempt"),
