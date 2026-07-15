@@ -1,139 +1,140 @@
-n.d(t, { q: () => ew, A: () => eN });
-var r = n(627968),
-    i = n(64700),
-    s = n(503698),
-    o = n.n(s),
+"use strict";
+n.d(t, { q: () => eg, A: () => eC });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    s = n.n(a),
     l = n(284009),
-    a = n.n(l),
-    c = n(936504),
-    u = n(121894),
-    d = n(337836),
-    h = n(43990),
-    f = n(825437),
-    p = n(17928),
-    m = n(192308),
-    g = n(231723),
-    A = n(187322),
-    v = n(638495),
-    y = n(965830),
-    x = n(318009),
-    w = n(92960),
-    E = n(14214),
-    C = n(775602),
-    N = n(697138),
-    b = n(933958),
+    o = n.n(l),
+    d = n(936504),
+    c = n(121894),
+    u = n(337836),
+    _ = n(43990),
+    E = n(825437),
+    A = n(17928),
+    h = n(192308),
+    I = n(231723),
+    f = n(187322),
+    p = n(638495),
+    T = n(965830),
+    m = n(318009),
+    g = n(92960),
+    S = n(14214),
+    N = n(775602),
+    C = n(697138),
+    R = n(933958),
     O = n(793574),
-    _ = n(688810),
+    L = n(688810),
     D = n(590703),
-    I = n(681582),
-    T = n(573435),
-    j = n(71855),
-    k = n(203480),
-    S = n(670735),
-    L = n(549205),
-    P = n(750506),
-    M = n(267102),
-    R = n(435558),
-    U = n.n(R),
-    K = n(580929),
-    G = n(258873),
-    F = n(622242),
-    V = n(731738),
-    B = n(834730),
-    H = n(780907),
-    W = n(684013),
-    Y = n(964486),
-    z = n(807393),
-    J = n(976860),
-    X = n(287809),
-    $ = n(144400),
-    Z = n(927813),
-    q = n(777334),
-    Q = n(41984),
+    y = n(681582),
+    v = n(573435),
+    b = n(71855),
+    M = n(203480),
+    P = n(670735),
+    U = n(549205),
+    w = n(750506),
+    G = n(267102),
+    x = n(435558),
+    k = n.n(x),
+    F = n(580929),
+    V = n(258873),
+    B = n(622242),
+    H = n(731738),
+    j = n(834730),
+    W = n(780907),
+    Y = n(684013),
+    K = n(964486),
+    $ = n(807393),
+    z = n(976860),
+    q = n(287809),
+    Z = n(144400),
+    X = n(927813),
+    Q = n(777334),
+    J = n(41984),
     ee = n(302614),
     et = n(489277),
     en = n(28528),
-    er = n(672396),
-    ei = n(652215),
-    es = n(375708),
-    eo = n(481234);
-let el = U().throttle(
+    ei = n(672396),
+    er = n(652215),
+    ea = n(375708),
+    es = n(481234);
+let el = k().throttle(
         () => {
-            z.A.increment(
-                { name: V.K.APP_CRASHED, tags: [`reason:${G.J.UNHANDLED_JS_ERROR}`, `level:${F.k.FATAL}`] },
+            $.A.increment(
+                { name: H.K.APP_CRASHED, tags: [`reason:${V.J.UNHANDLED_JS_ERROR}`, `level:${B.k.FATAL}`] },
                 !0,
             );
         },
         100,
         { trailing: !1 },
     ),
-    ea = 10 * Z.A.Millis.SECOND;
-function ec(e) {
-    let { error: t, onLock: n, onReload: s, onDisable: o, onCrashDisabled: l } = e,
-        a = i.useMemo(() => new K.SpringValue(1), []),
-        c = i.useRef(null),
-        [u, d] = i.useState(!1),
-        [h, f] = i.useState(!1),
-        m = (0, p.bG)([X.default], () => X.default.getCurrentUser());
-    (0, Y.Ay)(
+    eo = 10 * X.A.Millis.SECOND;
+function ed(e) {
+    let { error: t, onLock: n, onReload: a, onDisable: s, onCrashDisabled: l } = e,
+        o = r.useMemo(() => new F.SpringValue(1), []),
+        d = r.useRef(null),
+        [c, u] = r.useState(!1),
+        [_, E] = r.useState(!1),
+        h = (0, A.bG)([q.default], () => q.default.getCurrentUser());
+    (0, K.Ay)(
         () => (
-            (c.current = setTimeout(A, ea)),
-            W.A.track(ei.HAw.NOTIFICATION_VIEWED, { notif_type: er.KS.OverlayCrashed }),
+            (d.current = setTimeout(f, eo)),
+            Y.A.track(er.HAw.NOTIFICATION_VIEWED, { notif_type: ei.KS.OverlayCrashed }),
             () => {
-                null != c.current && clearTimeout(c.current);
+                null != d.current && clearTimeout(d.current);
             }
         ),
     );
-    let g = (m?.isStaff() ?? !1) || (m?.isStaffPersonal() ?? !1),
-        A = i.useCallback(() => {
-            a.set(0), null != c.current && clearTimeout(c.current), (c.current = null), n?.(), l?.();
-        }, [a, n, l]),
-        v = i.useCallback(
+    let I = (h?.isStaff() ?? !1) || (h?.isStaffPersonal() ?? !1),
+        f = r.useCallback(() => {
+            o.set(0), null != d.current && clearTimeout(d.current), (d.current = null), n?.(), l?.();
+        }, [o, n, l]),
+        p = r.useCallback(
             (e) => {
-                h ||
-                    (f(!0),
+                _ ||
+                    (E(!0),
                     n?.(),
-                    W.A.track(
-                        ei.HAw.NOTIFICATION_CLICKED,
-                        { notif_type: er.KS.OverlayCrashed, action_type: "reload" },
+                    Y.A.track(
+                        er.HAw.NOTIFICATION_CLICKED,
+                        { notif_type: ei.KS.OverlayCrashed, action_type: "reload" },
                         !0,
                     ),
                     e.stopPropagation(),
-                    setTimeout(() => s?.(), 200));
+                    setTimeout(() => a?.(), 200));
             },
-            [n, s, h],
+            [n, a, _],
         ),
-        y = i.useCallback(
+        T = r.useCallback(
             (e) => {
-                e.stopPropagation(), e.shiftKey ? (d(!0), null != c.current && clearTimeout(c.current)) : d(!1);
+                e.stopPropagation(), e.shiftKey ? (u(!0), null != d.current && clearTimeout(d.current)) : u(!1);
             },
-            [d],
+            [u],
         ),
-        x = i.useCallback(
+        m = r.useCallback(
             (e) => {
-                e.stopPropagation(), n?.(), o?.();
+                e.stopPropagation(), n?.(), s?.();
             },
-            [o, n],
+            [s, n],
         ),
-        w = (0, p.bG)([et.A], () => et.A.getFocusedRunningGame()),
-        E = u
-            ? (0, r.jsxs)("div", {
+        g = (0, A.bG)([et.A], () => et.A.getFocusedRunningGame()),
+        S = c
+            ? (0, i.jsxs)("div", {
                   children: [
-                      (0, r.jsx)(B.E, {
+                      (0, i.jsx)(j.E, {
                           variant: "text-md/semibold",
                           color: "text-strong",
-                          children: es.intl.string(es.t.mn4eXC),
+                          children: ea.intl.string(ea.t.mn4eXC),
                       }),
-                      (0, r.jsxs)("div", {
-                          className: eo.Xh,
+                      (0, i.jsxs)("div", {
+                          className: es.Xh,
                           children: [
-                              (0, r.jsx)(B.E, { variant: "text-sm/normal", color: "text-subtle", children: t.message }),
-                              (0, r.jsx)(B.E, {
+                              (0, i.jsx)(j.E, { variant: "text-sm/normal", color: "text-subtle", children: t.message }),
+                              (0, i.jsx)(j.E, {
                                   variant: "text-xxs/normal",
                                   color: "text-subtle",
-                                  children: (0, r.jsx)("code", {
-                                      className: eo.aY,
-                                      children: (0, r.jsx)("pre", { children: t.stack }),
+                                  children: (0, i.jsx)("code", {
+                                      className: es.aY,
+                                      children: (0, i.jsx)("pre", { children: t.stack }),
                                   }),
                               }),
                           ],
@@ -141,96 +142,96 @@ function ec(e) {
                   ],
               })
             : null,
-        C = u ? null : es.intl.string(es.t.oEJEFq);
-    return (0, r.jsx)(en.$, {
-        title: es.intl.string(es.t.U38qZj),
-        body: E,
-        hint: g ? C : void 0,
-        confirmText: es.intl.string(es.t.a3HlgJ),
-        cancelText: null != w ? es.intl.string(es.t.qIYnPo) : void 0,
-        icon: (0, r.jsx)($.A, { width: 40, height: 40, className: eo.Lo }),
-        onNotificationClick: y,
-        onConfirmClick: v,
-        onCancelClick: null != w ? x : void 0,
+        N = c ? null : ea.intl.string(ea.t.oEJEFq);
+    return (0, i.jsx)(en.$, {
+        title: ea.intl.string(ea.t.U38qZj),
+        body: S,
+        hint: I ? N : void 0,
+        confirmText: ea.intl.string(ea.t.a3HlgJ),
+        cancelText: null != g ? ea.intl.string(ea.t.qIYnPo) : void 0,
+        icon: (0, i.jsx)(Z.A, { width: 40, height: 40, className: es.Lo }),
+        onNotificationClick: T,
+        onConfirmClick: p,
+        onCancelClick: null != g ? m : void 0,
         onDismissClick: n,
         expand: !0,
         locked: !0,
         notificationId: "overlay-crashed",
         index: 0,
-        status: ei.yFH.ACTIVE,
+        status: er.yFH.ACTIVE,
         containerRef: null,
-        contentOpacity: a,
-        className: eo.Pl,
-        wrapperClassName: eo.fl,
+        contentOpacity: o,
+        className: es.Pl,
+        wrapperClassName: es.fl,
     });
 }
-class eu extends i.PureComponent {
+class ec extends r.PureComponent {
     state = { error: null, showError: !0, info: null };
     pid = null;
     componentDidCatch(e, t) {
-        let n = (0, J.JK)().location;
+        let n = (0, z.JK)().location;
         this.setState({ error: e, info: t });
-        let r = et.A.getTargetPID();
-        W.A.setOverlayCrashed(r, e), W.A.setInputLocked(!0, r);
-        let i = (0, q.St)(e, Q.Ue.OutOfProcess, { extra: { info: t, location: n } });
-        W.A.track(ei.HAw.APP_CRASHED, {
+        let i = et.A.getTargetPID();
+        Y.A.setOverlayCrashed(i, e), Y.A.setInputLocked(!0, i);
+        let r = (0, Q.St)(e, J.Ue.OutOfProcess, { extra: { info: t, location: n } });
+        Y.A.track(er.HAw.APP_CRASHED, {
             path: n.pathname,
             extra: t,
             error_message: e.message,
             error_stack: e.stack,
-            sentry_issue_id: i,
+            sentry_issue_id: r,
             error_level: "fatal",
         }),
             el(),
-            (this.pid = r);
+            (this.pid = i);
     }
     render() {
         let { children: e, className: t } = this.props,
-            { error: n, showError: i } = this.state;
+            { error: n, showError: r } = this.state;
         return null != n
-            ? i
-                ? (0, r.jsx)(ee.A, {
-                      className: eo.wz,
-                      children: (0, r.jsx)(ec, {
+            ? r
+                ? (0, i.jsx)(ee.A, {
+                      className: es.wz,
+                      children: (0, i.jsx)(ed, {
                           error: n,
                           onLock: () => {
                               let e = this.pid ?? et.A.getTargetPID();
-                              W.A.setInputLocked(!0, e), this.setState({ showError: !1 });
+                              Y.A.setInputLocked(!0, e), this.setState({ showError: !1 });
                           },
                           onDisable: () => {
                               let e = et.A.getFocusedRunningGame();
-                              null != e && H.Ay.toggleOverlay(e, !1, !1);
+                              null != e && W.Ay.toggleOverlay(e, !1, !1);
                           },
                           onCrashDisabled: () => {
                               let e = this.pid ?? et.A.getTargetPID();
-                              W.A.updateOverlayState(e, Q.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
+                              Y.A.updateOverlayState(e, J.AR.OVERLAY_CRASHED_DISABLED, "OOPOverlayErrorBoundary"),
                                   this.setState({ showError: !1 });
                           },
                           onReload: () => {
-                              W.A.setReloadOverlay(et.A.getTargetPID()), this.setState({ showError: !1 });
+                              Y.A.setReloadOverlay(et.A.getTargetPID()), this.setState({ showError: !1 });
                           },
                       }),
                   })
                 : null
-            : (0, r.jsx)("div", { className: t, children: e });
+            : (0, i.jsx)("div", { className: t, children: e });
     }
 }
-var ed = n(97469),
-    eh = n(258599),
-    ef = n(597619),
-    ep = n(723702),
-    em = n(677134),
-    eg = n(19575),
-    eA = n(346142),
-    ev = n(869146),
-    ey = n(392164),
-    ex = n(612802);
-function ew(e) {
+var eu = n(97469),
+    e_ = n(258599),
+    eE = n(597619),
+    eA = n(723702),
+    eh = n(677134),
+    eI = n(19575),
+    ef = n(346142),
+    ep = n(869146),
+    eT = n(392164),
+    em = n(612802);
+function eg(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
-    return t && ep.isPlatformEmbedded && !n;
+    return t && eA.isPlatformEmbedded && !n;
 }
-class eE extends i.Component {
-    rootRef = i.createRef();
+class eS extends r.Component {
+    rootRef = r.createRef();
     _cleanupWindowActionCreators = void 0;
     _combokeys = null;
     static defaultProps = { withTitleBar: !0 };
@@ -240,18 +241,18 @@ class eE extends i.Component {
         null == t.querySelector("title") && null != t.head && t.head.appendChild(t.createElement("title")),
             this.updateTitle(),
             this.updateClientTheme(),
-            (0, eA.M)(e),
+            (0, ef.M)(e),
             e.addEventListener("blur", this.handleBlur),
-            ep.isPlatformEmbedded
-                ? t.addEventListener("contextmenu", em.contextMenuCallbackNative, !1)
-                : t.addEventListener("contextmenu", em.contextMenuCallbackWeb, !1),
+            eA.isPlatformEmbedded
+                ? t.addEventListener("contextmenu", eh.contextMenuCallbackNative, !1)
+                : t.addEventListener("contextmenu", eh.contextMenuCallbackWeb, !1),
             e.addEventListener("beforeunload", this.beforeUnload),
             this.registerPopoutGlobalKeybinds();
     }
     beforeUnload = (e) => {
         let { onBeforeUnload: t } = this.props,
             n = () => {
-                ev.A.unmountWindow(this.props.windowKey), ep.isPlatformEmbedded && eg.Ay.close(this.props.windowKey);
+                ep.A.unmountWindow(this.props.windowKey), eA.isPlatformEmbedded && eI.Ay.close(this.props.windowKey);
             };
         null != t ? t({ e, unmountWindow: n }) : n();
     };
@@ -264,10 +265,10 @@ class eE extends i.Component {
             t = e.document;
         this.unregisterPopoutGlobalKeybinds(),
             e.removeEventListener("blur", this.handleBlur),
-            ep.isPlatformEmbedded
-                ? t.removeEventListener("contextmenu", em.contextMenuCallbackNative)
-                : t.removeEventListener("contextmenu", em.contextMenuCallbackWeb),
-            (0, u.r)(() => m.useModalsStore.setState((e) => ({ ...e, [g.KX]: [] }))),
+            eA.isPlatformEmbedded
+                ? t.removeEventListener("contextmenu", eh.contextMenuCallbackNative)
+                : t.removeEventListener("contextmenu", eh.contextMenuCallbackWeb),
+            (0, c.r)(() => h.useModalsStore.setState((e) => ({ ...e, [I.KX]: [] }))),
             e.removeEventListener("beforeunload", this.beforeUnload);
     }
     updateTitle() {
@@ -278,15 +279,15 @@ class eE extends i.Component {
     updateClientTheme() {
         let { clientThemesCSS: e, guestWindow: t } = this.props,
             n = t.document,
-            r = n.head;
-        a()(null != r, "Window document head was null");
-        let i = r.querySelector(`style[${D.Vg}]`);
-        if (null != i) {
-            i.textContent = e;
+            i = n.head;
+        o()(null != i, "Window document head was null");
+        let r = i.querySelector(`style[${D.Vg}]`);
+        if (null != r) {
+            r.textContent = e;
             return;
         }
-        let s = n.createElement("style");
-        s.setAttribute(D.Vg, "true"), (s.textContent = e), r.appendChild(s);
+        let a = n.createElement("style");
+        a.setAttribute(D.Vg, "true"), (a.textContent = e), i.appendChild(a);
     }
     handleBlur = () => {
         this.props.onBlur?.();
@@ -294,8 +295,8 @@ class eE extends i.Component {
     registerPopoutGlobalKeybinds() {
         let { guestWindow: e, channelId: t } = this.props,
             n = e.document;
-        for (let e of ((this._combokeys = (0, L.I)(n.documentElement)),
-        [E.VT, E.rR, (0, w.LB)(t), ...(this.props.keybinds ?? [])]))
+        for (let e of ((this._combokeys = (0, U.I)(n.documentElement)),
+        [S.VT, S.rR, (0, g.LB)(t), ...(this.props.keybinds ?? [])]))
             if (e.comboKeysBindGlobal)
                 for (let t of e.binds)
                     this._combokeys.bindGlobal(t, (t, n) => ("function" == typeof e.action && e.action(t, n), !1));
@@ -308,63 +309,63 @@ class eE extends i.Component {
                 forcedColors: e,
                 children: t,
                 windowKey: n,
-                isFullScreen: i,
-                withTitleBar: s,
+                isFullScreen: r,
+                withTitleBar: a,
                 guestWindow: l,
-                clientThemesClassName: a,
-                contentClassName: u,
-                themeOverride: p,
-                titleBarTheme: m,
-                hideModals: g = !1,
-                appContext: y,
+                clientThemesClassName: o,
+                contentClassName: c,
+                themeOverride: A,
+                titleBarTheme: h,
+                hideModals: I = !1,
+                appContext: T,
             } = this.props,
-            w = ew({ withTitleBar: s, isFullScreen: i }),
-            E = n === ey.f,
-            C = E ? eu : S.A;
-        return (0, r.jsx)(c.Kd, {
-            children: (0, r.jsx)(
-                eh.e,
+            g = eg({ withTitleBar: a, isFullScreen: r }),
+            S = n === eT.f,
+            N = S ? ec : P.A;
+        return (0, i.jsx)(d.Kd, {
+            children: (0, i.jsx)(
+                e_.e,
                 {
                     windowKey: n,
-                    themeOverride: p,
-                    children: (0, r.jsx)(N.A, {
-                        children: (0, r.jsxs)(A.xp, {
+                    themeOverride: A,
+                    children: (0, i.jsx)(C.A, {
+                        children: (0, i.jsxs)(f.xp, {
                             containerRef: this.rootRef,
                             children: [
-                                (0, r.jsx)(eC, {
+                                (0, i.jsx)(eN, {
                                     guestWindow: l,
-                                    className: o()(a, { overlay: E }),
-                                    children: (0, r.jsxs)(C, {
+                                    className: s()(o, { overlay: S }),
+                                    children: (0, i.jsxs)(N, {
                                         children: [
-                                            (0, r.jsx)(T.Al, {}),
-                                            (0, r.jsx)(M.Wr, {
-                                                appContext: y ?? ei.BRT.POPOUT,
+                                            (0, i.jsx)(v.Al, {}),
+                                            (0, i.jsx)(G.Wr, {
+                                                appContext: T ?? er.BRT.POPOUT,
                                                 renderWindow: l,
-                                                children: (0, r.jsx)(I.l, {
-                                                    children: (0, r.jsxs)(P.Yf, {
+                                                children: (0, i.jsx)(y.l, {
+                                                    children: (0, i.jsxs)(w.Yf, {
                                                         children: [
-                                                            (0, r.jsxs)("div", {
-                                                                className: ex.SW,
+                                                            (0, i.jsxs)("div", {
+                                                                className: em.SW,
                                                                 children: [
-                                                                    w &&
-                                                                        (0, r.jsx)(h.N, {
-                                                                            theme: m,
+                                                                    g &&
+                                                                        (0, i.jsx)(_.N, {
+                                                                            theme: h,
                                                                             children: (e) =>
-                                                                                (0, r.jsx)(j.cq, {
+                                                                                (0, i.jsx)(b.cq, {
                                                                                     windowKey: n,
-                                                                                    className: o()(e, ex.uv),
+                                                                                    className: s()(e, em.uv),
                                                                                 }),
                                                                         }),
-                                                                    (0, r.jsx)("div", {
-                                                                        className: o()(ex.Qs, u),
+                                                                    (0, i.jsx)("div", {
+                                                                        className: s()(em.Qs, c),
                                                                         children: t,
                                                                     }),
                                                                 ],
                                                             }),
-                                                            !g && (0, r.jsx)(v.b, {}),
-                                                            (0, r.jsx)(x.A, {}),
-                                                            (0, r.jsx)(d.P, {}),
-                                                            (0, r.jsx)(P.C8, {}),
+                                                            !I && (0, i.jsx)(p.b, {}),
+                                                            (0, i.jsx)(m.A, {}),
+                                                            (0, i.jsx)(u.P, {}),
+                                                            (0, i.jsx)(w.C8, {}),
                                                         ],
                                                     }),
                                                 }),
@@ -372,7 +373,7 @@ class eE extends i.Component {
                                         ],
                                     }),
                                 }),
-                                (0, r.jsx)(f.Ut, {}),
+                                (0, i.jsx)(E.Ut, {}),
                             ],
                         }),
                     }),
@@ -382,56 +383,56 @@ class eE extends i.Component {
         });
     }
 }
-let eC = i.forwardRef(function (e, t) {
-        let { guestWindow: n, className: s, children: l } = e,
-            { lang: c, style: u, className: d } = (0, ef.xb)();
-        i.useEffect(() => {
+let eN = r.forwardRef(function (e, t) {
+        let { guestWindow: n, className: a, children: l } = e,
+            { lang: d, style: c, className: u } = (0, eE.xb)();
+        r.useEffect(() => {
             let e = n.document.documentElement;
-            a()(null != e, "Window document element was null"), e.setAttribute("style", u);
-        }, [n, u]),
-            i.useEffect(() => {
+            o()(null != e, "Window document element was null"), e.setAttribute("style", c);
+        }, [n, c]),
+            r.useEffect(() => {
                 let e = n.document.documentElement;
-                a()(null != e, "Window document element was null"), e.setAttribute("lang", c);
-            }, [n, c]);
-        let h = o()(d, s, "in-popout");
+                o()(null != e, "Window document element was null"), e.setAttribute("lang", d);
+            }, [n, d]);
+        let _ = s()(u, a, "in-popout");
         return (
-            i.useLayoutEffect(() => {
+            r.useLayoutEffect(() => {
                 let e = n.document.documentElement;
-                a()(null != e, "Window document element was null"), e.setAttribute("class", h);
-            }, [n, h]),
-            (0, r.jsx)("div", { "data-popout-root": !0, ref: t, children: l })
+                o()(null != e, "Window document element was null"), e.setAttribute("class", _);
+            }, [n, _]),
+            (0, i.jsx)("div", { "data-popout-root": !0, ref: t, children: l })
         );
     }),
-    eN = i.forwardRef(function (e, t) {
-        let { guestWindow: n, isFullScreen: i } = (0, p.cf)([ev.A], () => ({
-            guestWindow: ev.A.getWindow(e.windowKey),
-            isFullScreen: ev.A.isWindowFullScreen(e.windowKey),
+    eC = r.forwardRef(function (e, t) {
+        let { guestWindow: n, isFullScreen: r } = (0, A.cf)([ep.A], () => ({
+            guestWindow: ep.A.getWindow(e.windowKey),
+            isFullScreen: ep.A.isWindowFullScreen(e.windowKey),
         }));
-        a()(null != n, "Missing guestWindow reference");
-        let { forcedColors: s, connectedEmbeddedActivity: o } = (0, p.cf)([C.Ay, b.Ay], () => ({
-            forcedColors: C.Ay.useForcedColors ? "yes" : "no",
-            connectedEmbeddedActivity: b.Ay.getCurrentEmbeddedActivity(),
+        o()(null != n, "Missing guestWindow reference");
+        let { forcedColors: a, connectedEmbeddedActivity: s } = (0, A.cf)([N.Ay, R.Ay], () => ({
+            forcedColors: N.Ay.useForcedColors ? "yes" : "no",
+            connectedEmbeddedActivity: R.Ay.getCurrentEmbeddedActivity(),
         }));
-        (0, k.A)(n, !1);
-        let { analyticsLocations: l } = (0, _.Ay)(O.A.POPOUT_WINDOW),
-            { clientThemesClassName: c, clientThemesCSS: u } = (0, D.Ay)(),
-            d = (0, ed.NC)(),
-            h = e.themeOverride ?? d;
+        (0, M.A)(n, !1);
+        let { analyticsLocations: l } = (0, L.Ay)(O.A.POPOUT_WINDOW),
+            { clientThemesClassName: d, clientThemesCSS: c } = (0, D.Ay)(),
+            u = (0, eu.NC)(),
+            _ = e.themeOverride ?? u;
         return null == n
             ? null
-            : (0, r.jsx)(y.W, {
-                  children: (0, r.jsx)(_.f5, {
+            : (0, i.jsx)(T.W, {
+                  children: (0, i.jsx)(L.f5, {
                       value: l,
-                      children: (0, r.jsx)(eE, {
+                      children: (0, i.jsx)(eS, {
                           ref: t,
                           ...e,
-                          titleBarTheme: h,
+                          titleBarTheme: _,
                           guestWindow: n,
-                          isFullScreen: i,
-                          forcedColors: s,
-                          connectedEmbeddedActivity: o,
-                          clientThemesClassName: c,
-                          clientThemesCSS: u,
+                          isFullScreen: r,
+                          forcedColors: a,
+                          connectedEmbeddedActivity: s,
+                          clientThemesClassName: d,
+                          clientThemesCSS: c,
                       }),
                   }),
               });

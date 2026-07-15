@@ -1,5 +1,6 @@
-t.d(s, { G: () => l, r: () => n });
-let i = (0, t(945810).mj)({
+"use strict";
+n.d(t, { G: () => a, r: () => r });
+let i = (0, n(945810).mj)({
     name: "2026-04-consistent-profiles",
     kind: "user",
     defaultConfig: { enabled: !1, showMutualFriendsNameplate: !1 },
@@ -8,11 +9,11 @@ let i = (0, t(945810).mj)({
         2: { enabled: !0, showMutualFriendsNameplate: !0 },
     },
 });
-function n(e) {
-    let { enabled: s } = i.useConfig({ location: e });
-    return s;
+function r(e) {
+    let { enabled: t } = i.useConfig({ location: e });
+    return t;
 }
-function l(e) {
-    let { showMutualFriendsNameplate: s } = i.useConfig({ location: e });
-    return s;
+function a(e) {
+    let { showMutualFriendsNameplate: t } = i.useConfig({ location: e });
+    return t;
 }

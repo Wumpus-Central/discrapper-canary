@@ -1,41 +1,42 @@
-n.d(t, { A: () => u });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
-var l = n(503698),
-    s = n.n(l),
-    r = n(51183),
-    a = n(208971),
+var r = n(503698),
+    a = n.n(r),
+    s = n(51183),
+    l = n(208971),
     o = n(729688);
-function u(e) {
+function d(e) {
     let {
             activity: t,
             className: n,
-            emojiClassName: l,
-            textClassName: u,
-            placeholderText: d,
-            soloEmojiClassName: c,
-            animate: h = !0,
-            hideTooltip: g = !1,
-            hideEmoji: f = !1,
-            children: A,
+            emojiClassName: r,
+            textClassName: d,
+            placeholderText: c,
+            soloEmojiClassName: u,
+            animate: _ = !0,
+            hideTooltip: E = !1,
+            hideEmoji: A = !1,
+            children: h,
         } = e,
-        E = (0, a.G)(t?.state);
+        I = (0, l.G)(t?.state);
     if (null == t) return null;
-    let { emoji: I } = t,
-        p = null != E && "" !== E ? E : d;
+    let { emoji: f } = t,
+        p = null != I && "" !== I ? I : c;
     return (0, i.jsxs)("div", {
-        className: s()(o.__invalid_container, n),
+        className: a()(o.__invalid_container, n),
         children: [
-            f || null == I
+            A || null == f
                 ? null
-                : (0, i.jsx)(r.A, {
-                      emoji: I,
-                      className: s()(o.Z, l, null != c ? { [c]: null == p || "" === p } : null),
-                      animate: h,
-                      hideTooltip: g,
+                : (0, i.jsx)(s.A, {
+                      emoji: f,
+                      className: a()(o.Z, r, null != u ? { [u]: null == p || "" === p } : null),
+                      animate: _,
+                      hideTooltip: E,
                   }),
-            null != p && p.length > 0 ? (0, i.jsx)("span", { className: u, children: p }) : null,
-            A,
+            null != p && p.length > 0 ? (0, i.jsx)("span", { className: d, children: p }) : null,
+            h,
         ],
     });
 }

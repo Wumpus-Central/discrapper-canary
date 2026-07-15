@@ -1,70 +1,71 @@
-n.d(r, { A: () => v });
-var t = n(627968),
-    l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    o = n(86182),
-    s = n(875741),
-    u = n(486020),
-    d = n(101928),
-    c = n(920601),
-    m = n(939496),
-    h = n(41551);
-let v = Object.assign(
-    l.forwardRef(function (e, r) {
+"use strict";
+n.d(t, { A: () => A });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    l = n(86182),
+    o = n(875741),
+    d = n(486020),
+    c = n(101928),
+    u = n(920601),
+    _ = n(939496),
+    E = n(41551);
+let A = Object.assign(
+    r.forwardRef(function (e, t) {
         let {
                 user: n,
-                displayProfile: l,
-                themeType: i,
-                profileFrameSkuIdOverride: v,
-                className: f,
-                innerClassName: C,
-                style: y,
-                pendingThemeColors: A,
-                themeOverride: p,
-                children: x,
-                isPrivate: N = !1,
-                forceShowPremium: R = !1,
-                forceUserTheme: b = !1,
+                displayProfile: r,
+                themeType: a,
+                profileFrameSkuIdOverride: A,
+                className: h,
+                innerClassName: I,
+                style: f,
+                pendingThemeColors: p,
+                themeOverride: T,
+                children: m,
+                isPrivate: g = !1,
+                forceShowPremium: S = !1,
+                forceUserTheme: N = !1,
             } = e,
             {
-                theme: j,
-                primaryColor: T,
-                secondaryColor: w,
-            } = (0, d.A)({ user: n, displayProfile: l, pendingThemeColors: A, isPreview: R, forceUserTheme: b }),
-            { profileThemeStyle: I, profileThemeClassName: k } = (0, c.A)({
-                theme: p ?? j,
-                themeType: i,
-                primaryColor: T,
-                secondaryColor: w,
-                forceUserTheme: b,
+                theme: C,
+                primaryColor: R,
+                secondaryColor: O,
+            } = (0, c.A)({ user: n, displayProfile: r, pendingThemeColors: p, isPreview: S, forceUserTheme: N }),
+            { profileThemeStyle: L, profileThemeClassName: D } = (0, u.A)({
+                theme: T ?? C,
+                themeType: a,
+                primaryColor: R,
+                secondaryColor: O,
+                forceUserTheme: N,
             }),
-            { profileFrameStyle: D, profileFrameClassName: E } = (0, s.A)(void 0 !== v ? v : l?.profileFrame?.skuId),
-            K = (0, u.VI)(l?.banner);
-        return (0, t.jsx)("div", {
-            className: a()(h.A7, k, E, f, N && h.Gw, K && "has-animated-banner"),
-            style: { ...I, ...D, ...y },
-            ref: r,
-            children: (0, t.jsx)("div", {
-                className: a()(h.vW, C),
-                children: (0, t.jsx)(o.w, {
-                    theme: p ?? j,
-                    children: (0, t.jsx)(m.U, {
-                        themeType: i,
-                        theme: p ?? j,
-                        primaryColor: T,
-                        secondaryColor: w,
+            { profileFrameStyle: y, profileFrameClassName: v } = (0, o.A)(void 0 !== A ? A : r?.profileFrame?.skuId),
+            b = (0, d.VI)(r?.banner);
+        return (0, i.jsx)("div", {
+            className: s()(E.A7, D, v, h, g && E.Gw, b && "has-animated-banner"),
+            style: { ...L, ...y, ...f },
+            ref: t,
+            children: (0, i.jsx)("div", {
+                className: s()(E.vW, I),
+                children: (0, i.jsx)(l.w, {
+                    theme: T ?? C,
+                    children: (0, i.jsx)(_.U, {
+                        themeType: a,
+                        theme: T ?? C,
+                        primaryColor: R,
+                        secondaryColor: O,
                         userId: n.id,
-                        children: x,
+                        children: m,
                     }),
                 }),
             }),
         });
     }),
     {
-        Overlay: l.forwardRef(function (e, r) {
-            let { children: n, className: l } = e;
-            return (0, t.jsx)("div", { ref: r, className: a()(h.Lw, l), children: n });
+        Overlay: r.forwardRef(function (e, t) {
+            let { children: n, className: r } = e;
+            return (0, i.jsx)("div", { ref: t, className: s()(E.Lw, r), children: n });
         }),
     },
 );
