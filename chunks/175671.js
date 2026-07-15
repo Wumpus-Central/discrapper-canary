@@ -163,6 +163,7 @@ function y(e) {
                 containerClassName: o,
                 autoPlay: l,
                 animated: d,
+                freeze: !0,
                 responsive: s,
                 renderAccessory: e,
                 tabIndex: d ? 0 : -1,
