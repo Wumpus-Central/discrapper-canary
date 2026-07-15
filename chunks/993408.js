@@ -1,149 +1,151 @@
 "use strict";
 n.d(t, {
-    $W: () => W,
-    $b: () => J,
-    Br: () => O,
-    Bs: () => ec,
-    CE: () => ed,
+    $W: () => K,
+    $b: () => ee,
+    Br: () => D,
+    Bs: () => eu,
+    CE: () => e_,
     D0: () => S,
-    Dm: () => B,
-    G0: () => v,
-    HF: () => et,
-    MG: () => X,
-    P_: () => G,
-    R8: () => b,
-    V6: () => el,
-    WD: () => x,
-    WU: () => ee,
-    Wj: () => z,
-    XS: () => U,
+    Dm: () => H,
+    G0: () => R,
+    HF: () => en,
+    MG: () => Q,
+    P_: () => F,
+    R8: () => y,
+    V6: () => ed,
+    WD: () => G,
+    WU: () => et,
+    Wj: () => q,
+    XS: () => k,
     Zu: () => eo,
-    aT: () => en,
-    aw: () => ei,
+    aT: () => ei,
+    aw: () => er,
     b_: () => C,
-    bf: () => eu,
-    c7: () => ea,
+    bf: () => ec,
+    c7: () => el,
+    es: () => U,
     f6: () => j,
-    fT: () => P,
-    gA: () => R,
-    hU: () => Q,
-    l8: () => D,
-    oj: () => er,
+    fT: () => w,
+    gA: () => L,
+    hU: () => J,
+    l8: () => v,
+    oj: () => ea,
     pA: () => es,
     ps: () => Y,
-    rr: () => M,
-    sz: () => Z,
-    tt: () => k,
-    wo: () => q,
-    x9: () => H,
-    xM: () => N,
-    yt: () => w,
-    zd: () => K,
+    rr: () => P,
+    sz: () => X,
+    tt: () => x,
+    wo: () => Z,
+    x9: () => W,
+    xM: () => O,
+    yt: () => M,
+    zd: () => $,
 }),
     n(321073);
 var i,
     r = n(735438),
-    s = n(575593),
-    a = n(441574),
-    o = n(968671),
-    l = n(349871),
-    u = n(723702),
+    a = n(575593),
+    s = n(441574),
+    l = n(968671),
+    o = n(349871),
+    d = n(723702),
     c = n(428262),
-    d = n(580630),
+    u = n(580630),
     _ = n(898461),
-    h = n(837015),
-    f = n(203632),
-    p = n(892118),
-    E = n(719986),
-    m = n(623373),
-    g = n(758836),
-    A = n(652215),
-    I = n(818348),
-    T = n(375708),
+    E = n(837015),
+    A = n(203632),
+    h = n(892118),
+    I = n(719986),
+    f = n(623373),
+    p = n(758836),
+    T = n(652215),
+    m = n(818348),
+    g = n(375708),
     S = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
-let y = { nitro: "nitro", thirdparty: "xbox" };
+let N = { nitro: "nitro", thirdparty: "xbox" };
 function C(e) {
-    return null != e ? y[e] : null;
+    return null != e ? N[e] : null;
 }
-function N(e) {
+function O(e) {
     if (!c.Ay.canUseShopDiscounts(e)) return null;
     if (c.Ay.canUseCollectibles(e)) return "nitro";
-    let t = (0, l.kQ)(e?.perks, a.bb.SHOP_DISCOUNTS);
-    return t?.includes(a.g$.SOURCE_NITRO)
+    let t = (0, o.kQ)(e?.perks, s.bb.SHOP_DISCOUNTS);
+    return t?.includes(s.g$.SOURCE_NITRO)
         ? "nitro"
-        : (0, o.f0)("getShopDiscountSource") && t?.includes(a.g$.SOURCE_THIRDPARTY_CROISSANT)
+        : (0, l.f0)("getShopDiscountSource") && t?.includes(s.g$.SOURCE_THIRDPARTY_CROISSANT)
           ? "thirdparty"
           : null;
 }
-function v(e) {
+function R(e) {
     return e?.premiumType != null;
 }
-function R(e) {
-    return e?.purchaseType === A.zF_.PREMIUM_PURCHASE;
-}
-function O(e, t, n) {
-    return w(e, n ? (t ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.MOBILE) : t ? A.lid.PREMIUM_TIER_2 : A.lid.DEFAULT);
-}
-function b(e, t, n) {
-    let i = O(e, t, n);
-    return null == i ? "" : (0, d.$g)(i?.amount, i?.currency);
-}
-function D(e) {
-    return (0, u.isAndroid)() || (0, u.isIOS)()
-        ? e
-            ? A.lid.MOBILE_PREMIUM_TIER_2
-            : A.lid.MOBILE
-        : e
-          ? A.lid.PREMIUM_TIER_2
-          : A.lid.DEFAULT;
-}
 function L(e) {
-    let t = e.bundledProducts;
-    if (null == t) return 0;
-    let n = D(!1);
-    return t.reduce((e, t) => {
-        let i = w(t, n);
-        return e + (i?.amount ?? 0);
+    return e?.purchaseType === T.zF_.PREMIUM_PURCHASE;
+}
+function D(e, t, n) {
+    return M(e, n ? (t ? T.lid.MOBILE_PREMIUM_TIER_2 : T.lid.MOBILE) : t ? T.lid.PREMIUM_TIER_2 : T.lid.DEFAULT);
+}
+function y(e, t, n) {
+    let i = D(e, t, n);
+    return null == i ? "" : (0, u.$g)(i?.amount, i?.currency);
+}
+function v(e, t) {
+    return ((0, d.isAndroid)() || (0, d.isIOS)()) && t !== m.Yr.DISCORD_ORB
+        ? e
+            ? T.lid.MOBILE_PREMIUM_TIER_2
+            : T.lid.MOBILE
+        : e
+          ? T.lid.PREMIUM_TIER_2
+          : T.lid.DEFAULT;
+}
+function b(e, t) {
+    let n = e.bundledProducts;
+    if (null == n) return 0;
+    let i = v(!1, t);
+    return n.reduce((e, n) => {
+        let r = M(n, i, t);
+        return e + (r?.amount ?? 0);
     }, 0);
 }
-function w(e, t) {
-    let n = e.prices[t] ?? null;
-    return null != n ? n.countryPrices?.prices?.[0] : null;
+function M(e, t, n) {
+    let i = e.prices[t]?.countryPrices?.prices;
+    return null == i ? null : ((null == n ? i[0] : i.find((e) => e.currency === n)) ?? null);
 }
-let M = { original: -1, discountPercentage: -1 };
-function P(e, t) {
-    if (null == e) return M;
-    let n = L(e);
-    if (n <= 0) return M;
-    let i = w(e, D(t));
-    return null == i ? M : { original: n, discountPercentage: Math.round(((n - i.amount) / n) * 100) };
+let P = { original: -1, discountPercentage: -1 },
+    U = 5;
+function w(e, t, n) {
+    if (null == e) return P;
+    let i = b(e, n);
+    if (i <= 0) return P;
+    let r = M(e, v(t, n), n);
+    return null == r ? P : { original: i, discountPercentage: Math.round(((i - r.amount) / i) * 100) };
 }
-function x(e, t) {
+function G(e, t) {
     let { hasShopDiscount: n, discount: i } = t,
-        r = w(e, A.lid.DEFAULT);
+        r = M(e, T.lid.DEFAULT);
     if (null == r) return null;
     if (r.amount <= 0) return { defaultPrice: r, showDefaultPriceOnly: !0 };
-    let s = w(e, A.lid.PREMIUM_TIER_2),
-        a = ei(e) && n ? { ...r, amount: i.original } : r,
-        o = n && null != s,
-        l = o ? s : a;
+    let a = M(e, T.lid.PREMIUM_TIER_2),
+        s = er(e) && n ? { ...r, amount: i.original } : r,
+        l = n && null != a,
+        o = l ? a : s;
     return {
         defaultPrice: r,
-        originalPrice: a,
-        premiumPrice: s,
-        finalPrice: l,
-        showDiscountPrice: o,
-        finalPriceIsDifferent: l.amount !== a.amount,
+        originalPrice: s,
+        premiumPrice: a,
+        finalPrice: o,
+        showDiscountPrice: l,
+        finalPriceIsDifferent: o.amount !== s.amount,
         showDefaultPriceOnly: !1,
     };
 }
-function k(e) {
-    return w(e, A.lid.DEFAULT)?.amount === 0;
+function x(e) {
+    return M(e, T.lid.DEFAULT)?.amount === 0;
 }
-function U(e) {
+function k(e) {
     return e.reduce(
         (e, t) =>
-            null != t && t.type === s.R.VARIANTS_GROUP && null != t.variants
+            null != t && t.type === a.R.VARIANTS_GROUP && null != t.variants
                 ? (0, r.concat)(
                       e,
                       t.variants.map((e) => ({
@@ -156,170 +158,170 @@ function U(e) {
         [],
     );
 }
-function G(e, t) {
-    let n = (0, r.flatMap)([...e.values()], "products");
-    return (0, r.uniqBy)(t ? U(n) : n, "storeListingId");
-}
 function F(e, t) {
-    if (t === s.R.AVATAR_DECORATION) {
+    let n = (0, r.flatMap)([...e.values()], "products");
+    return (0, r.uniqBy)(t ? k(n) : n, "storeListingId");
+}
+function V(e, t) {
+    if (t === a.R.AVATAR_DECORATION) {
         let t = (0, r.flatMap)([...e.values()], "items").filter(_.T);
         return (0, r.uniqBy)(t, "skuId");
     }
-    if (t === s.R.NAMEPLATE) {
-        let t = (0, r.flatMap)([...e.values()], "items").filter(h.F);
+    if (t === a.R.NAMEPLATE) {
+        let t = (0, r.flatMap)([...e.values()], "items").filter(E.F);
         return (0, r.uniqBy)(t, "skuId");
     }
-    if (t === s.R.PROFILE_EFFECT) {
-        let t = (0, r.flatMap)([...e.values()], "items").filter(f.C3);
+    if (t === a.R.PROFILE_EFFECT) {
+        let t = (0, r.flatMap)([...e.values()], "items").filter(A.C3);
         return (0, r.uniqBy)(t, "skuId");
     }
-    if (t === s.R.PROFILE_FRAME) {
-        let t = (0, r.flatMap)([...e.values()], "items").filter(p.s);
+    if (t === a.R.PROFILE_FRAME) {
+        let t = (0, r.flatMap)([...e.values()], "items").filter(h.s);
         return (0, r.uniqBy)(t, "skuId");
     }
     return [];
 }
-function V(e, t) {
-    let n = G(e, !0);
-    if (t === s.R.AVATAR_DECORATION) {
+function B(e, t) {
+    let n = F(e, !0);
+    if (t === a.R.AVATAR_DECORATION) {
         let e = (0, r.flatMap)(n, "items").filter(_.T);
         return (0, r.uniqBy)(e, "skuId");
     }
-    if (t === s.R.NAMEPLATE) {
-        let e = (0, r.flatMap)(n, "items").filter(h.F);
+    if (t === a.R.NAMEPLATE) {
+        let e = (0, r.flatMap)(n, "items").filter(E.F);
         return (0, r.uniqBy)(e, "skuId");
     }
-    if (t === s.R.PROFILE_EFFECT) {
-        let e = (0, r.flatMap)(n, "items").filter(f.C3);
+    if (t === a.R.PROFILE_EFFECT) {
+        let e = (0, r.flatMap)(n, "items").filter(A.C3);
         return (0, r.uniqBy)(e, "skuId");
     }
-    if (t === s.R.PROFILE_FRAME) {
-        let e = (0, r.flatMap)(n, "items").filter(p.s);
+    if (t === a.R.PROFILE_FRAME) {
+        let e = (0, r.flatMap)(n, "items").filter(h.s);
         return (0, r.uniqBy)(e, "skuId");
     }
     return [];
 }
-function B(e) {
+function H(e) {
     switch (e) {
-        case s.R.AVATAR_DECORATION:
-            return T.intl.string(T.t["7v0T9P"]);
-        case s.R.PROFILE_EFFECT:
-            return T.intl.string(T.t.wR5wOo);
-        case s.R.NAMEPLATE:
-            return T.intl.string(T.t.x5CoXR);
-        case s.R.PROFILE_FRAME:
-            return T.intl.string(T.t.GWrZOd);
+        case a.R.AVATAR_DECORATION:
+            return g.intl.string(g.t["7v0T9P"]);
+        case a.R.PROFILE_EFFECT:
+            return g.intl.string(g.t.wR5wOo);
+        case a.R.NAMEPLATE:
+            return g.intl.string(g.t.x5CoXR);
+        case a.R.PROFILE_FRAME:
+            return g.intl.string(g.t.GWrZOd);
         default:
             return null;
     }
 }
 function j(e) {
-    return null != e ? E.M.fromServer(e) : void 0;
-}
-function H(e) {
-    return F(e, s.R.AVATAR_DECORATION);
-}
-function Y(e, t) {
-    return (0, r.uniqBy)([...H(e), ...V(t, s.R.AVATAR_DECORATION)], "skuId");
+    return null != e ? I.M.fromServer(e) : void 0;
 }
 function W(e) {
-    return F(e, s.R.NAMEPLATE);
+    return V(e, a.R.AVATAR_DECORATION);
 }
-function K(e, t) {
-    return (0, r.uniqBy)([...W(e), ...V(t, s.R.NAMEPLATE)], "skuId");
+function Y(e, t) {
+    return (0, r.uniqBy)([...W(e), ...B(t, a.R.AVATAR_DECORATION)], "skuId");
 }
-function $(e) {
-    return F(e, s.R.PROFILE_EFFECT);
+function K(e) {
+    return V(e, a.R.NAMEPLATE);
+}
+function $(e, t) {
+    return (0, r.uniqBy)([...K(e), ...B(t, a.R.NAMEPLATE)], "skuId");
 }
 function z(e) {
-    return V(e, s.R.PROFILE_EFFECT);
+    return V(e, a.R.PROFILE_EFFECT);
 }
-function q(e, t) {
-    return (0, r.uniqBy)([...$(e), ...z(t)], "skuId");
+function q(e) {
+    return B(e, a.R.PROFILE_EFFECT);
 }
 function Z(e, t) {
-    let n = $(t),
-        i = z(e).filter((e) => {
+    return (0, r.uniqBy)([...z(e), ...q(t)], "skuId");
+}
+function X(e, t) {
+    let n = z(t),
+        i = q(e).filter((e) => {
             let { skuId: t } = e;
             return !n.some((e) => e.skuId === t);
         });
     return { purchased: n, shopPreviews: i };
 }
-function X(e, t) {
-    return (0, r.uniqBy)([...F(e, s.R.PROFILE_FRAME), ...V(t, s.R.PROFILE_FRAME)], "skuId");
+function Q(e, t) {
+    return (0, r.uniqBy)([...V(e, a.R.PROFILE_FRAME), ...B(t, a.R.PROFILE_FRAME)], "skuId");
 }
-function Q(e) {
-    return e.applicationId === A.FYj;
+function J(e) {
+    return e.applicationId === T.FYj;
 }
-let J = (e) => 3.8 * e;
-function ee(e) {
+let ee = (e) => 3.8 * e;
+function et(e) {
     let t = new Date(),
         n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
     return Math.floor((Date.UTC(e.getFullYear(), e.getMonth(), e.getDate()) - n) / 864e5);
 }
-function et(e) {
-    return null != e && ee(e) <= g.x3;
-}
 function en(e) {
-    let t = g.Tq[e];
-    return null != t && new Date().getTime() < t;
+    return null != e && et(e) <= p.x3;
 }
 function ei(e) {
-    return e?.type === s.R.BUNDLE;
+    let t = p.Tq[e];
+    return null != t && new Date().getTime() < t;
 }
 function er(e) {
-    if (null != e) return e.type === s.R.BUNDLE ? s.R.BUNDLE : e.items?.[0]?.type;
+    return e?.type === a.R.BUNDLE;
+}
+function ea(e) {
+    if (null != e) return e.type === a.R.BUNDLE ? a.R.BUNDLE : e.items?.[0]?.type;
 }
 function es(e) {
     let { invoicePreview: t, selectedSkuId: n, skusById: i } = e,
         r = t?.invoiceItems?.[0]?.unitPrice,
-        s = null != r ? { amount: r.amount, currency: r.currency } : void 0;
-    if (null == s && null != n) {
+        a = null != r ? { amount: r.amount, currency: r.currency } : void 0;
+    if (null == a && null != n) {
         let e = i[n];
-        e?.price != null && (s = { amount: e.price.amount, currency: e.price.currency });
+        e?.price != null && (a = { amount: e.price.amount, currency: e.price.currency });
     }
-    return s;
+    return a;
 }
-function ea(e, t, n) {
-    if (ei(e)) return L(e);
-    let i = w(e, t ? (n ? A.lid.MOBILE : A.lid.DEFAULT) : n ? A.lid.MOBILE_PREMIUM_TIER_2 : A.lid.PREMIUM_TIER_2);
+function el(e, t, n) {
+    if (er(e)) return b(e);
+    let i = M(e, t ? (n ? T.lid.MOBILE : T.lid.DEFAULT) : n ? T.lid.MOBILE_PREMIUM_TIER_2 : T.lid.PREMIUM_TIER_2);
     return i?.amount;
 }
 function eo(e) {
     let { product: t, isPartiallyOwnedBundle: n, isPurchased: i } = e;
-    return !n && !(g.Dp.ORB_PROFILE_BADGE === t?.skuId && i);
+    return !n && !(p.Dp.ORB_PROFILE_BADGE === t?.skuId && i);
 }
-function el(e, t) {
+function ed(e, t) {
     switch (e) {
-        case s.R.AVATAR_DECORATION:
+        case a.R.AVATAR_DECORATION:
             return "avatar decoration";
-        case s.R.PROFILE_EFFECT:
+        case a.R.PROFILE_EFFECT:
             return "profile effect";
-        case s.R.NAMEPLATE:
+        case a.R.NAMEPLATE:
             return "nameplate";
-        case s.R.PROFILE_FRAME:
+        case a.R.PROFILE_FRAME:
             return "profile frame";
-        case s.R.BUNDLE:
+        case a.R.BUNDLE:
             return "bundle";
-        case s.R.EXTERNAL_SKU:
-            if (t === g.Dp.FRACTIONAL_PREMIUM) return "3-day nitro credit";
-            if (t === g.Dp.FRACTIONAL_PREMIUM_1_DAY) return "1-day nitro credit";
-            if (t === g.Dp.ORB_PROFILE_BADGE) return "orb profile badge";
+        case a.R.EXTERNAL_SKU:
+            if (t === p.Dp.FRACTIONAL_PREMIUM) return "3-day nitro credit";
+            if (t === p.Dp.FRACTIONAL_PREMIUM_1_DAY) return "1-day nitro credit";
+            if (t === p.Dp.ORB_PROFILE_BADGE) return "orb profile badge";
             return "unknown";
-        case s.R.VARIANTS_GROUP:
+        case a.R.VARIANTS_GROUP:
             return "variants group";
         default:
             return "unknown";
     }
 }
-function eu(e, t, n) {
+function ec(e, t, n) {
     return e.sort((e, i) => {
-        let r = n ? (0, m.CW)({ product: e, hasShopDiscount: t }) : O(e, t, !1),
-            s = n ? (0, m.CW)({ product: i, hasShopDiscount: t }) : O(i, t, !1);
-        return (r?.amount ?? 0) - (s?.amount ?? 0);
+        let r = n ? (0, f.CW)({ product: e, hasShopDiscount: t }) : D(e, t, !1),
+            a = n ? (0, f.CW)({ product: i, hasShopDiscount: t }) : D(i, t, !1);
+        return (r?.amount ?? 0) - (a?.amount ?? 0);
     });
 }
-function ec(e, t) {
+function eu(e, t) {
     if (0 === t.length || 0 === e.length) return e;
     let n = t.map((e) => e.discountId);
     return e.sort((e, t) => {
@@ -327,7 +329,7 @@ function ec(e, t) {
         return (t.eligibleOffers?.some((e) => n.includes(e)) ?? !1) - i;
     });
 }
-function ed(e) {
+function e_(e) {
     return e.filter((e) => !e.isCategoryReward);
 }
-I.Yr.KZT, I.Yr.NGN, I.Yr.EGP;
+m.Yr.KZT, m.Yr.NGN, m.Yr.EGP;
