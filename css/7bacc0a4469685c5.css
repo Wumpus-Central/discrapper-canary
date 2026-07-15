@@ -25,7 +25,12 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-between
+}
+
+.closeButton__16960 {
+    margin-bottom: -50%;
+    margin-top: -50%;
     margin-inline-end: calc(var(--space-4)*-1)
 }
 

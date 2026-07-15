@@ -542,7 +542,7 @@ let tc = 90 * to.A.Millis.DAY,
         name: "2026-07-smag-wishlist-recommendations-dismiss-threshold",
         kind: "user",
         defaultConfig: { minItemsToDismiss: 1 },
-        variations: { 0: { minItemsToDismiss: 1 }, 1: { minItemsToDismiss: 3 } },
+        variations: { 0: { minItemsToDismiss: 1 }, 1: { minItemsToDismiss: 3 }, 2: { minItemsToDismiss: 10 } },
     });
 var tm = i(294085);
 function tf(e) {
@@ -626,7 +626,11 @@ function tx(e) {
                               color: "text-subtle",
                               children: F.intl.string(F.t["+GB8Kt"]),
                           }),
-                          o && (0, n.jsx)(tt.J, { size: "xs", onClick: d }),
+                          o &&
+                              (0, n.jsx)("div", {
+                                  className: tm.b,
+                                  children: (0, n.jsx)(tt.J, { size: "xs", onClick: d }),
+                              }),
                       ],
                   }),
                   (0, n.jsx)(ti.dB, {
