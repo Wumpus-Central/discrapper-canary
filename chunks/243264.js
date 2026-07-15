@@ -21,6 +21,10 @@ class o extends i.Ay.Store {
             if (null != n) return n;
         }
     }
+    shouldSuppressFetch(e) {
+        let t = (0, a.C7)(e);
+        return !(null == t || s.has(t) || l.has(t)) && (0, a.bC)(t, (e) => s.get(e));
+    }
     isFetching(e) {
         let t = (0, a.C7)(e);
         return null != t && l.has(t);

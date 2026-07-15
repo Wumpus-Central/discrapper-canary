@@ -1,32 +1,34 @@
 "use strict";
-n.d(t, { YK: () => h, fo: () => d, J$: () => f, Mg: () => _ });
+n.d(t, { YK: () => E, fo: () => u, J$: () => A, Mg: () => _ });
 var i = n(64700),
     r = n(17928),
-    s = n(636537),
-    a = n(228366),
+    a = n(636537),
+    s = n(228366),
+    l = n(243264),
     o = n(929396),
-    l = n(652215);
-async function u(e) {
+    d = n(652215);
+async function c(e) {
     let t = (0, o.C7)(e);
     if (null != t) {
-        a.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH", query: t });
+        if (l.A.shouldSuppressFetch(t))
+            return void s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: t, results: [] });
+        s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH", query: t });
         try {
-            let { body: e } = await s.Bo.get({ url: l.Rsh.GAMES_AUTOCOMPLETE, query: { q: t }, rejectWithError: !1 }),
+            let { body: e } = await a.Bo.get({ url: d.Rsh.GAMES_AUTOCOMPLETE, query: { q: t }, rejectWithError: !1 }),
                 n = (e ?? []).map((e) => ({ id: String(e.id), name: e.name, icon: e.icon }));
-            a.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: t, results: n });
+            s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: t, results: n });
         } catch (e) {
-            throw (a.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: t }), e);
+            throw (s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: t }), e);
         }
     }
 }
-var c = n(243264);
-let d = 200,
+let u = 200,
     _ = 500,
-    h = (0, r.UT)(c.A, {
-        getQueryId: (e) => l.fic.GAME_AUTOCOMPLETE((0, o.C7)(e)),
-        get: (e) => c.A.getResults(e) ?? null,
-        load: (e) => u(e),
-        getIsLoading: (e) => c.A.isFetching(e),
+    E = (0, r.UT)(l.A, {
+        getQueryId: (e) => d.fic.GAME_AUTOCOMPLETE((0, o.C7)(e)),
+        get: (e) => l.A.getResults(e) ?? null,
+        load: (e) => c(e),
+        getIsLoading: (e) => l.A.isFetching(e),
         retryConfig: {
             retryableErrors: function (e) {
                 let t = e.status;
@@ -36,20 +38,20 @@ let d = 200,
         staleAfter: 3600,
         failureStaleAfter: 60,
     });
-function f(e) {
+function A(e) {
     let t = (0, o.C7)(e),
         n = (function (e) {
             let [t, n] = i.useState(e),
                 r = i.useRef(t),
-                s = i.useRef(0);
+                a = i.useRef(0);
             return (
                 i.useEffect(() => {
                     if (e === r.current) return;
                     function t() {
-                        (s.current = Date.now()), (r.current = e), n(e);
+                        (a.current = Date.now()), (r.current = e), n(e);
                     }
                     if (null == e || null == r.current) return void t();
-                    let i = setTimeout(t, Math.min(d, Math.max(0, _ - (Date.now() - s.current))));
+                    let i = setTimeout(t, Math.min(u, Math.max(0, _ - (Date.now() - a.current))));
                     return () => {
                         clearTimeout(i);
                     };
@@ -57,10 +59,10 @@ function f(e) {
                 t
             );
         })(t),
-        { data: r, error: s, isLoading: a } = h(n),
-        [l, u] = i.useState(null);
+        { data: r, error: a, isLoading: s } = E(n),
+        [l, d] = i.useState(null);
     return (
-        null == t ? null != l && u(null) : null != r && r !== l && u(r),
-        { results: null != t ? (r ?? l) : null, isLoading: a || n !== t, error: n === t ? s : null }
+        null == t ? null != l && d(null) : null != r && r !== l && d(r),
+        { results: null != t ? (r ?? l) : null, isLoading: s || n !== t, error: n === t ? a : null }
     );
 }
