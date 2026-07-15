@@ -88,9 +88,10 @@ function b(e) {
                 : b > 0
                   ? R.intl.formatToPlainString(R.t.qH8uFW, { count: b })
                   : R.intl.string(R.t.YSRIqa),
-        { analyticsLocations: U } = (0, A.Ay)(E.A.CHARACTER_COUNT);
-    if (!(0, y.A)({ type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: a })) return null;
-    let w = b >= 0;
+        { analyticsLocations: U } = (0, A.Ay)(E.A.CHARACTER_COUNT),
+        { isVisible: w } = (0, y.A)({ type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: a });
+    if (!w) return null;
+    let G = b >= 0;
     return (0, i.jsx)(A.f5, {
         value: U,
         children: (0, i.jsxs)("div", {
@@ -99,7 +100,7 @@ function b(e) {
                 (0, i.jsxs)("div", {
                     className: v.SW,
                     children: [
-                        O && w
+                        O && G
                             ? (0, i.jsx)(d.m, {
                                   text: R.intl.formatToPlainString(R.t.vcvHa0, { maxLength: g }),
                                   position: "top",
@@ -115,7 +116,7 @@ function b(e) {
                                       variant: "text-sm/semibold",
                                       tabularNumbers: !0,
                                       "aria-hidden": !0,
-                                      color: w ? "text-default" : "text-feedback-critical",
+                                      color: G ? "text-default" : "text-feedback-critical",
                                       children: b,
                                   }),
                               }),

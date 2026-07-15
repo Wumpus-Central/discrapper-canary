@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(135621),
-    s = n(287809),
-    a = n(428262),
-    o = n(652215);
-function l(e) {
-    let { type: t, textValue: n, maxCharacterCount: l, showRemainingCharsAfterCount: u } = e,
-        c = (0, i.bG)([s.default], () => a.Ay.canUseIncreasedMessageLength(s.default.getCurrentUser())),
-        d = (0, r.A)(),
+    a = n(287809),
+    s = n(428262),
+    l = n(652215);
+function o(e) {
+    let { type: t, textValue: n, maxCharacterCount: o, showRemainingCharsAfterCount: d } = e,
+        c = (0, i.bG)([a.default], () => s.Ay.canUseIncreasedMessageLength(a.default.getCurrentUser())),
+        u = (0, r.A)(),
         _ = n.length,
-        h = null != t.upsellLongMessages && _ > o.uvi && c,
-        f = null != t.upsellLongMessages && !c,
-        p = (l ?? d) - _,
-        E = p > (u ?? l ?? d / 10);
-    return (h && p >= 0) || !E || (f && !E);
+        E = null != t.upsellLongMessages && _ > l.uvi && c,
+        A = null != t.upsellLongMessages && !c,
+        h = (o ?? u) - _,
+        I = h > (d ?? o ?? u / 10);
+    return { isVisible: (E && h >= 0) || !I, showsUpsell: A && !I };
 }

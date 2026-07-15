@@ -1854,6 +1854,14 @@ a-rp {
     --custom-channel-textarea-editor-min-height: calc(var(--custom-channel-textarea-text-area-height) + var(--chat-markup-line-height))
 }
 
+.charCountShowing__74017 .inner__74017 {
+    min-height: calc(var(--custom-channel-textarea-text-area-height) + var(--space-32))
+}
+
+.charCountUpsellShowing__74017 .inner__74017 {
+    min-height: calc(var(--custom-channel-textarea-text-area-height)*2)
+}
+
 .innerDisabled__74017 {
     cursor: not-allowed
 }

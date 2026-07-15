@@ -4,7 +4,7 @@ n.d(t, {
     Sk: () => nl,
     C: () => ne,
     v7: () => nr,
-    Zx: () => t5,
+    Zx: () => t7,
     L0: () => na,
     N_: () => nn,
     MD: () => no,
@@ -62,8 +62,8 @@ let v = { width: 500, height: L.$V },
                 n.e("93103"),
                 n.e("34552"),
                 n.e("71210"),
-                n.e("88342"),
                 n.e("32191"),
+                n.e("88342"),
                 n.e("71273"),
                 n.e("89421"),
                 n.e("37977"),
@@ -79,8 +79,8 @@ let v = { width: 500, height: L.$V },
                 n.e("76428"),
                 n.e("27773"),
                 n.e("52229"),
-                n.e("61268"),
                 n.e("18024"),
+                n.e("61268"),
                 n.e("22261"),
                 n.e("78195"),
                 n.e("41701"),
@@ -127,7 +127,7 @@ let v = { width: 500, height: L.$V },
         });
     });
 var U = n(861382),
-    w = n(735438),
+    w = n(435558),
     G = n.n(w),
     x = n(537652),
     k = n(155718),
@@ -520,8 +520,8 @@ var eP = n(931664),
     e3 = n(463930),
     e6 = n(935063),
     e4 = n(73392),
-    e7 = n(650019),
-    e5 = n(763754),
+    e5 = n(650019),
+    e7 = n(763754),
     e8 = n(967144),
     e9 = n(118517),
     te = n(976860),
@@ -591,10 +591,10 @@ function td(e) {
             colorRoleName: p,
             authorId: T,
             displayNameStyles: m,
-        } = (0, e5.Ay)(d),
+        } = (0, e7.Ay)(d),
         g = (0, e8.gn)(A, T, f),
         S = (0, e4.a)({ displayNameStyles: m }),
-        N = (0, e7.A)(_, d.attachments),
+        N = (0, e5.A)(_, d.attachments),
         C =
             ((t = o.id),
             (n = d.id),
@@ -1097,8 +1097,8 @@ function t6(e) {
           });
 }
 var t4 = n(263582),
-    t7 = n(698279);
-function t5(e, t, a, s, l) {
+    t5 = n(698279);
+function t7(e, t, a, s, l) {
     let [o, d] = r.useState(!1),
         c = r.useCallback(
             (r, u, _, E, h, I) => {
@@ -1110,7 +1110,7 @@ function t5(e, t, a, s, l) {
                     d(!1),
                         (0, A.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
-                                n.e("41185"),
+                                n.e("20469"),
                                 n.e("76649"),
                                 n.e("68316"),
                                 n.e("37502"),
@@ -1127,7 +1127,7 @@ function t5(e, t, a, s, l) {
                                 n.e("21921"),
                                 n.e("40402"),
                                 n.e("39970"),
-                                n.e("72789"),
+                                n.e("95170"),
                                 n.e("79049"),
                                 n.e("65437"),
                                 n.e("79745"),
@@ -1259,13 +1259,13 @@ function nt(e) {
 }
 function nn(e, t, n) {
     let i = r.useCallback(() => {
-            t || (0, ep.r$)(t7.kx.EMOJI, e, n);
+            t || (0, ep.r$)(t5.kx.EMOJI, e, n);
         }, [t, e, n]),
         a = r.useCallback(() => {
-            !t && e.gifs?.allowSending && (0, ep.r$)(t7.kx.GIF, e, n);
+            !t && e.gifs?.allowSending && (0, ep.r$)(t5.kx.GIF, e, n);
         }, [t, e, n]),
         s = r.useCallback(() => {
-            !t && e.stickers?.allowSending && (0, ep.r$)(t7.kx.STICKER, e, n);
+            !t && e.stickers?.allowSending && (0, ep.r$)(t5.kx.STICKER, e, n);
         }, [t, e, n]);
     (0, e$.Vo)({ event: el.jej.TOGGLE_EMOJI_POPOUT, handler: i }),
         (0, e$.Vo)({ event: el.jej.TOGGLE_GIF_PICKER, handler: a }),
@@ -1454,17 +1454,17 @@ let nc = r.memo(
             { fontSize: e3 } = (0, E.cf)([T.Ay], () => ({ fontSize: T.Ay.fontSize })),
             e6 = (0, E.bG)([eH.A], () => eH.A.isEnabled());
         nn(D, eB, L.id);
-        let { eventEmitter: e4, handleEditorSelectionChanged: e7 } = ni(eE, a, l),
-            e5 = r.useRef(a);
-        e5.current = a;
+        let { eventEmitter: e4, handleEditorSelectionChanged: e5 } = ni(eE, a, l),
+            e7 = r.useRef(a);
+        e7.current = a;
         let e8 = r.useCallback(
                 (e, t, n) => {
-                    "/" === t && "" === e5.current && D.commands?.enabled && e4.emit("command-sentinel-typed"),
+                    "/" === t && "" === e7.current && D.commands?.enabled && e4.emit("command-sentinel-typed"),
                         x?.(e, t, n);
                 },
                 [x, D.commands?.enabled, e4],
             ),
-            { submitting: e9, submit: te, handleSubmit: tt } = t5(H, D, eE, eg, L.id),
+            { submitting: e9, submit: te, handleSubmit: tt } = t7(H, D, eE, eg, L.id),
             { autocompleteRef: tn, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: tr } = nr(),
             ta = t8(te, D, eE),
             ts = t9(eE),
@@ -1552,10 +1552,15 @@ let nc = r.memo(
             tV = (eB && !((eG || eV) && e$)) || (e9 && D.submit?.useDisabledStylesOnSubmit),
             tB = null;
         null != eU ? (tB = M?.(eU, ew, tw.g$)) : (!eB || eY) && (tB = b?.(tF, tw.g$));
-        let tH = (0, t4.A)({ type: D, textValue: a, maxCharacterCount: $, showRemainingCharsAfterCount: z }),
-            tj = e0 && null != l && !eB && D.showCharacterCount && null == eU,
-            tW = e0 && !__OVERLAY__ && null != l && null == eU && D.toolbarType !== eQ.O1.NONE && !eB,
-            tY = (function (e) {
+        let { isVisible: tH, showsUpsell: tj } = (0, t4.A)({
+                type: D,
+                textValue: a,
+                maxCharacterCount: $,
+                showRemainingCharsAfterCount: z,
+            }),
+            tW = e0 && null != l && !eB && D.showCharacterCount && null == eU,
+            tY = e0 && !__OVERLAY__ && null != l && null == eU && D.toolbarType !== eQ.O1.NONE && !eB,
+            tK = (function (e) {
                 let {
                         channel: t,
                         type: n,
@@ -1611,13 +1616,13 @@ let nc = r.memo(
                 selectedAutocompleteInputType: tD,
                 selectedAutocompleteInputError: ty,
             }),
-            tK = 0 === a.trim().length,
-            t$ = null != G ? [X, tl].filter(Boolean).join(" ") : X,
-            tJ = D.layout === eQ.wt.INLINE,
-            t0 = D.layout === eQ.wt.FLUSH,
-            t1 = (0, i.jsx)("div", { ref: eu, className: tw.BW }),
-            t2 = tP ? (0, i.jsx)(P, { align: "right", positionTargetRef: eu, channel: L }) : null,
-            t3 =
+            t$ = 0 === a.trim().length,
+            tJ = null != G ? [X, tl].filter(Boolean).join(" ") : X,
+            t0 = D.layout === eQ.wt.INLINE,
+            t1 = D.layout === eQ.wt.FLUSH,
+            t2 = (0, i.jsx)("div", { ref: eu, className: tw.BW }),
+            t3 = tP ? (0, i.jsx)(P, { align: "right", positionTargetRef: eu, channel: L }) : null,
+            t5 =
                 null != w
                     ? w()
                     : (0, i.jsx)(tx.A, {
@@ -1625,11 +1630,11 @@ let nc = r.memo(
                           disabled: eB,
                           channel: L,
                           handleSubmit: tt,
-                          isEmpty: tK,
+                          isEmpty: t$,
                           showAllButtons: !eP && !eb,
                           expressionButtonsHidden: eb,
                       }),
-            t7 = tj
+            nc = tW
                 ? (0, i.jsx)(tZ.A, {
                       type: D,
                       textValue: a,
@@ -1647,29 +1652,30 @@ let nc = r.memo(
                 children: (0, i.jsxs)(g.f5, {
                     value: eo,
                     children: [
-                        tW && eq
+                        tY && eq
                             ? (0, i.jsx)(t6, { getSlateEditor: eS, onInsertEmoji: ts, type: D, channel: L })
-                            : tW
+                            : tY
                               ? (0, i.jsx)(tX.A, { ref: eg, getSlateEditor: eS, containerRef: em, options: D.markdown })
                               : null,
                         (0, i.jsxs)("div", {
                             ref: ed,
                             className: s()(o, {
                                 [tw.gM]: !0,
-                                [tw.Bz]: tH && tj,
+                                [tw.Bz]: tH && tW,
+                                [tw.Qv]: tj && tW,
                                 [tw.h9]: tV,
                                 [tw.mr]: W,
                                 [tw.Wn]: u.Fr,
-                                [tw.Ls]: tJ,
-                                [tw.AH]: t0,
+                                [tw.Ls]: t0,
+                                [tw.AH]: t1,
                                 [tw.z3]: null != v,
                             }),
                             children: [
-                                tJ || t0 ? null : (0, i.jsx)(tG, { bars: tY }),
+                                t0 || t1 ? null : (0, i.jsx)(tG, { bars: tK }),
                                 (0, i.jsxs)("div", {
                                     ref: em,
                                     onScroll: t_,
-                                    className: s()(c, { [tw.xx]: !0, [tw.k6]: !en, [tw.Ri]: tY.stacked.length > 0 }),
+                                    className: s()(c, { [tw.xx]: !0, [tw.k6]: !en, [tw.Ri]: tK.stacked.length > 0 }),
                                     children: [
                                         (0, i.jsx)(tE, { channelId: L.id, chatInputType: D }),
                                         D.hideAttachmentArea
@@ -1686,7 +1692,7 @@ let nc = r.memo(
                                             }),
                                             onMouseDown: tR,
                                             children: [
-                                                t2,
+                                                t3,
                                                 tB,
                                                 (0, i.jsx)(h.vN, {
                                                     ringTarget: ed,
@@ -1709,7 +1715,7 @@ let nc = r.memo(
                                                         uploadPromptCharacterCount: el.CS1,
                                                         maxCharacterCount: $ ?? e2,
                                                         allowNewLines: q,
-                                                        "aria-describedby": t$,
+                                                        "aria-describedby": tJ,
                                                         onChange: e8,
                                                         onResize: th,
                                                         onBlur: F,
@@ -1720,7 +1726,7 @@ let nc = r.memo(
                                                         onTab: tI,
                                                         onEnter: tp,
                                                         onMoveSelection: tT,
-                                                        onSelectionChanged: e7,
+                                                        onSelectionChanged: e5,
                                                         onMaybeShowAutocomplete: ti,
                                                         onHideAutocomplete: tr,
                                                         promptToUpload: j,
@@ -1739,8 +1745,8 @@ let nc = r.memo(
                                                         showValueWhenDisabled: es,
                                                     }),
                                                 }),
-                                                t3,
-                                                t1,
+                                                t5,
+                                                t2,
                                             ],
                                         }),
                                     ],
@@ -1767,12 +1773,12 @@ let nc = r.memo(
                                     onVisibilityChange: tM,
                                     editorScrollerRef: em,
                                     editorHeight: tA,
-                                    barsHeight: 40 * tY.floating.length,
+                                    barsHeight: 40 * tK.floating.length,
                                     setValue: (e, t) => e8?.(null, e, t),
                                     position: ee,
                                 }),
                                 (0, i.jsx)(eM, { textValue: a, editorHeight: tA, channelId: L.id }),
-                                t7,
+                                nc,
                                 et,
                             ],
                         }),
