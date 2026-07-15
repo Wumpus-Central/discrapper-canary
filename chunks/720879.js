@@ -1,108 +1,107 @@
-"use strict";
 n.d(t, { L: () => c, A: () => u });
-var i = n(627968),
-    r = n(64700),
-    a = n(844222),
+var a = n(627968),
+    l = n(64700),
+    r = n(844222),
     s = n(775602),
-    l = n(350535),
-    o = n(642481),
-    d = n(650583);
+    i = n(350535),
+    d = n(642481),
+    o = n(650583);
 function c(e) {
     let {
             children: t,
             targetElementRef: n,
             estimatedTooltipHeight: c,
             delay: u = 300,
-            onShow: _,
+            onShow: f,
             title: E,
-            body: A,
-            graphic: h,
-            size: I = "md",
-            actions: f,
-            gradientColor: p,
+            body: m,
+            graphic: g,
+            size: p = "md",
+            actions: b,
+            gradientColor: _,
         } = e,
-        T = r.useContext(a.C),
-        [m, g] = r.useState("closed"),
-        S = r.useRef(null),
-        N = r.useRef(!1),
-        C = "opening-mouse" === m || "open-mouse" === m,
-        R = "opening-keyboard" === m || "open-keyboard" === m,
-        O = "open-mouse" === m || "open-keyboard" === m,
-        L = (T.keyboardModeEnabled || R) && null != f,
-        [D, y] = r.useState(0),
-        v = (function (e) {
+        h = l.useContext(r.C),
+        [A, R] = l.useState("closed"),
+        x = l.useRef(null),
+        N = l.useRef(!1),
+        v = "opening-mouse" === A || "open-mouse" === A,
+        I = "opening-keyboard" === A || "open-keyboard" === A,
+        T = "open-mouse" === A || "open-keyboard" === A,
+        j = (h.keyboardModeEnabled || I) && null != b,
+        [C, S] = l.useState(0),
+        y = (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 200,
                 n = arguments.length > 2 ? arguments[2] : void 0,
-                [i, a] = r.useState("top");
+                [a, r] = l.useState("top");
             return (
-                r.useEffect(() => {
-                    if (null == e.current) return void a("top");
+                l.useEffect(() => {
+                    if (null == e.current) return void r("top");
                     let n = e.current.getBoundingClientRect(),
-                        i = window.innerWidth,
-                        r = window.innerHeight,
-                        s = { top: n.top, bottom: r - n.bottom, left: n.left, right: i - n.right },
-                        l = ["top", "bottom", "right", "left"];
-                    for (let e of l) if (s[e] >= t) return void a(e);
-                    a(l.reduce((e, t) => (s[t] > s[e] ? t : e), "top"));
+                        a = window.innerWidth,
+                        l = window.innerHeight,
+                        s = { top: n.top, bottom: l - n.bottom, left: n.left, right: a - n.right },
+                        i = ["top", "bottom", "right", "left"];
+                    for (let e of i) if (s[e] >= t) return void r(e);
+                    r(i.reduce((e, t) => (s[t] > s[e] ? t : e), "top"));
                 }, [e, t, n]),
-                i
+                a
             );
-        })(n, c, m),
-        b = r.useCallback(() => {
-            null != S.current && (clearTimeout(S.current), (S.current = null));
+        })(n, c, A),
+        D = l.useCallback(() => {
+            null != x.current && (clearTimeout(x.current), (x.current = null));
         }, []),
-        M = r.useCallback(
+        M = l.useCallback(
             (e) => {
-                e && (N.current = !0), b(), g("closing");
+                e && (N.current = !0), D(), R("closing");
             },
-            [b],
+            [D],
         );
-    r.useEffect(() => b, [b]);
-    let P = r.useCallback(() => {
-            ("closed" === m || "closing" === m) && (b(), g("opening-mouse"));
-        }, [b, m]),
-        U = r.useCallback(() => {
-            C && M(!1);
-        }, [M, C]),
-        w = r.useCallback(() => {
-            if (N.current || !s.Ay.keyboardModeEnabled || ("closed" !== m && "closing" !== m)) {
+    l.useEffect(() => D, [D]);
+    let O = l.useCallback(() => {
+            ("closed" === A || "closing" === A) && (D(), R("opening-mouse"));
+        }, [D, A]),
+        P = l.useCallback(() => {
+            v && M(!1);
+        }, [M, v]),
+        U = l.useCallback(() => {
+            if (N.current || !s.Ay.keyboardModeEnabled || ("closed" !== A && "closing" !== A)) {
                 N.current = !1;
                 return;
             }
-            b(), g("opening-keyboard");
-        }, [b, m]),
-        G = r.useCallback(() => {
-            (L && "opening-keyboard" !== m) || M(!1);
-        }, [M, m, L]);
-    r.useEffect(() => {
-        if ("opening-mouse" === m)
+            D(), R("opening-keyboard");
+        }, [D, A]),
+        B = l.useCallback(() => {
+            (j && "opening-keyboard" !== A) || M(!1);
+        }, [M, A, j]);
+    l.useEffect(() => {
+        if ("opening-mouse" === A)
             return (
-                (S.current = window.setTimeout(() => {
-                    (S.current = null), g("open-mouse"), _?.();
+                (x.current = window.setTimeout(() => {
+                    (x.current = null), R("open-mouse"), f?.();
                 }, u)),
-                b
+                D
             );
-    }, [m, u, _, b]),
-        r.useEffect(() => {
-            if ("opening-keyboard" === m)
+    }, [A, u, f, D]),
+        l.useEffect(() => {
+            if ("opening-keyboard" === A)
                 return (
-                    (S.current = window.setTimeout(() => {
-                        (S.current = null), g("open-keyboard"), _?.();
+                    (x.current = window.setTimeout(() => {
+                        (x.current = null), R("open-keyboard"), f?.();
                     }, u)),
-                    b
+                    D
                 );
-        }, [m, u, _, b]),
-        r.useEffect(() => {
-            if ("closing" === m)
+        }, [A, u, f, D]),
+        l.useEffect(() => {
+            if ("closing" === A)
                 return (
-                    (S.current = window.setTimeout(() => {
-                        (S.current = null), g("closed");
+                    (x.current = window.setTimeout(() => {
+                        (x.current = null), R("closed");
                     }, 200)),
-                    b
+                    D
                 );
-        }, [m, b]),
-        r.useEffect(() => {
-            if (O)
+        }, [A, D]),
+        l.useEffect(() => {
+            if (T)
                 return (
                     document.addEventListener("keydown", e, !0),
                     () => {
@@ -110,50 +109,50 @@ function c(e) {
                     }
                 );
             function e(e) {
-                e.key === d.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), M(!0));
+                e.key === o.dh.ESCAPE && (e.preventDefault(), e.stopPropagation(), M(!0));
             }
-        }, [O, M]);
-    let x = r.useMemo(
+        }, [T, M]);
+    let k = l.useMemo(
             () =>
-                null == f
-                    ? f
-                    : f.map((e) => ({
+                null == b
+                    ? b
+                    : b.map((e) => ({
                           ...e,
                           onClick: (t) => {
                               e.onClick?.(t), M(!1);
                           },
                       })),
-            [f, M],
+            [b, M],
         ),
-        k = r.useCallback((e) => {
-            y(e);
+        G = l.useCallback((e) => {
+            S(e);
         }, []);
-    return (0, i.jsxs)("div", {
-        onMouseEnter: P,
-        onMouseLeave: U,
-        onFocus: w,
-        onBlur: G,
+    return (0, a.jsxs)("div", {
+        onMouseEnter: O,
+        onMouseLeave: P,
+        onFocus: U,
+        onBlur: B,
         children: [
             t,
-            (0, i.jsx)(o.j, {
+            (0, a.jsx)(d.j, {
                 targetElementRef: n,
-                shouldShow: O,
-                position: v,
+                shouldShow: T,
+                position: y,
                 align: "center",
                 title: E,
-                body: A,
-                graphic: h,
-                size: I,
-                actions: x,
-                gradientColor: p,
-                showCloseButton: L,
-                shouldTrapFocus: L,
-                returnRef: L ? n : void 0,
+                body: m,
+                graphic: g,
+                size: p,
+                actions: k,
+                gradientColor: _,
+                showCloseButton: j,
+                shouldTrapFocus: j,
+                returnRef: j ? n : void 0,
                 isCaretHoverable: !0,
-                caretConfig: { align: "custom", customOffset: D },
-                onNudgeChange: k,
+                caretConfig: { align: "custom", customOffset: C },
+                onNudgeChange: G,
                 onRequestClose: (e) => {
-                    M(null != e && (0, l.sg)(e));
+                    M(null != e && (0, i.sg)(e));
                 },
             }),
         ],
