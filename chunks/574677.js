@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, {
     O9: () => ex,
-    Vn: () => eO,
+    Vn: () => eR,
     Wj: () => eM,
     mL: () => en,
     Cv: () => eY,
@@ -14,7 +14,7 @@ n.d(t, {
     zW: () => eW,
     NC: () => eE,
     j$: () => ev,
-    fc: () => eR,
+    fc: () => eO,
     p5: () => eK,
     SD: () => ef,
     aC: () => eF,
@@ -49,7 +49,7 @@ var i,
     r,
     a,
     s = n(64700),
-    l = n(735438),
+    l = n(435558),
     o = n(889137),
     d = n(323889),
     c = n(412703),
@@ -69,8 +69,8 @@ var T = n(27620),
     S = n(734057),
     N = n(30370),
     C = n(287809),
-    O = n(174459),
-    R = n(927813),
+    R = n(174459),
+    O = n(927813),
     L = n(403362),
     D = n(975571),
     y = n(252424),
@@ -86,9 +86,63 @@ var P = n(24001),
     x = n(340124),
     k = n(859703),
     F = n(192444),
-    V = n(302654),
-    B = n(945810);
-(0, B.mj)({
+    V = n(945810);
+(0, V.mj)({
+    name: "2026-07-bounties-vertical-scroll",
+    kind: "user",
+    defaultConfig: {
+        enabled: !1,
+        verticalScrollEnabled: !1,
+        scrollAffordanceVariant: "none",
+        autoScrollDelayMs: 3e3,
+        peekFraction: 0,
+        ctaTimerMilliSeconds: 0,
+    },
+    variations: {
+        1: {
+            enabled: !0,
+            verticalScrollEnabled: !1,
+            scrollAffordanceVariant: "none",
+            autoScrollDelayMs: 3e3,
+            peekFraction: 0,
+            ctaTimerMilliSeconds: 0,
+        },
+        2: {
+            enabled: !0,
+            verticalScrollEnabled: !0,
+            scrollAffordanceVariant: "none",
+            autoScrollDelayMs: 3e3,
+            peekFraction: 0,
+            ctaTimerMilliSeconds: 0,
+        },
+        3: {
+            enabled: !0,
+            verticalScrollEnabled: !0,
+            scrollAffordanceVariant: "indicator",
+            autoScrollDelayMs: 3e3,
+            peekFraction: 0,
+            ctaTimerMilliSeconds: 0,
+        },
+        4: {
+            enabled: !0,
+            verticalScrollEnabled: !0,
+            scrollAffordanceVariant: "auto",
+            autoScrollDelayMs: 3e3,
+            peekFraction: 0,
+            ctaTimerMilliSeconds: 0,
+        },
+        5: {
+            enabled: !0,
+            verticalScrollEnabled: !0,
+            scrollAffordanceVariant: "peek",
+            autoScrollDelayMs: 3e3,
+            peekFraction: 0.12,
+            ctaTimerMilliSeconds: 0,
+        },
+    },
+});
+var B = n(302654);
+(0, V.mj)({
     name: "2026-03-quest-home-bounties",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -106,7 +160,7 @@ var W = n(971649),
     Z = n(792620),
     X = n(814793),
     Q = n(753386);
-(0, B.mj)({
+(0, V.mj)({
     name: "2026-05-bounties-stage-1",
     kind: "user",
     defaultConfig: {
@@ -200,7 +254,7 @@ var W = n(971649),
         },
     },
 }),
-    (0, B.mj)({
+    (0, V.mj)({
         name: "2026-06-bounty-use-video-modal-mobile-placement-experiment",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -240,7 +294,7 @@ function en() {
             }
             if (i && o && !t && !a) {
                 if ((n(!0), (0, x.N1)(), (0, v.isMac)() && "focused" !== f.A.getState())) return;
-                let { enableNewRequestBehavior: t } = V.A.getConfig({ location: "QuestHookUseQuests" });
+                let { enableNewRequestBehavior: t } = B.A.getConfig({ location: "QuestHookUseQuests" });
                 if (t) return;
                 (0, x.r8)(P.p9.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
             }
@@ -258,7 +312,7 @@ function ei(e, t, n) {
         o = t.userStatus?.claimedAt != null,
         d = e.userStatus?.enrolledAt != null,
         c = t.userStatus?.enrolledAt != null,
-        u = 20 * R.A.Millis.MINUTE,
+        u = 20 * O.A.Millis.MINUTE,
         _ = eJ(e, u),
         E = eJ(t, u);
     if (s) {
@@ -525,7 +579,7 @@ function eN(e) {
 function eC(e) {
     return s.useMemo(() => (0, Z.YL)(e), [e]);
 }
-function eO(e) {
+function eR(e) {
     let t,
         n = eN(e),
         i = eC(e),
@@ -534,11 +588,11 @@ function eO(e) {
             s.useMemo(() => (0, Q.J$)(e), [e, t]));
     return n || i || r;
 }
-let eR = (e) => {
+let eO = (e) => {
     let t = s.useCallback(() => (0, Z.Yh)(e), [e]),
         [n, i] = s.useState(t()),
         r = s.useCallback(() => i(t()), [t]),
-        a = eO(e);
+        a = eR(e);
     return (
         s.useEffect(() => {
             if (
@@ -550,7 +604,7 @@ let eR = (e) => {
                 return void r();
             let t = window.setInterval(() => {
                 r();
-            }, +R.A.Millis.SECOND);
+            }, +O.A.Millis.SECOND);
             return () => {
                 clearInterval(t), r();
             };
@@ -641,7 +695,7 @@ function eM(e) {
 function eP(e) {
     let { quest: t } = e,
         { xboxAndPlaystationAccounts: n } = eb(),
-        i = eO(t),
+        i = eR(t),
         r = 0 === n.length;
     return (0, Z.g5)(t) && r && !i;
 }
@@ -666,13 +720,13 @@ function eG(e) {
     let t = e.userStatus?.enrolledAt != null,
         n = e.userStatus?.completedAt != null,
         i = e.userStatus?.claimedAt != null,
-        r = eR(e).percentComplete > 0;
+        r = eO(e).percentComplete > 0;
     return i ? 4 : n ? 3 : r && t ? 2 : 1 * !!t;
 }
 function ex(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = (0, A.bG)([m.default], () => m.default.locale),
-        { percentComplete: i } = eR(e),
+        { percentComplete: i } = eO(e),
         r = eL(e),
         a = null != r ? r.percentComplete : i,
         s = 100 * a,
@@ -743,7 +797,7 @@ function ek(e, t) {
 }
 function eF(e) {
     let t = eL(e),
-        n = eR(e),
+        n = eO(e),
         [i] = ek(e, n),
         r = eT(e),
         a = e.userStatus?.enrolledAt != null,
@@ -847,12 +901,12 @@ function eX(e) {
         r = s.useRef(null),
         a = s.useRef(null);
     s.useEffect(() => {
-        O.default.track(w.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: r.current }),
+        R.default.track(w.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: r.current }),
             (r.current = t);
     }, [t]),
         s.useEffect(() => {
             let e = n.map((e) => e.filter);
-            O.default.track(w.HAw.QUEST_HOME_FILTERS_CHANGED, {
+            R.default.track(w.HAw.QUEST_HOME_FILTERS_CHANGED, {
                 filters: e,
                 previous_filters: a.current ?? [],
                 num_quests_visible: i,
@@ -888,4 +942,4 @@ function e1(e) {
         (0, T.hs)(i, { quest_id: e.id });
     }, [t, n, e.id]);
 }
-R.A.Millis.HOUR, R.A.Millis.MINUTE;
+O.A.Millis.HOUR, O.A.Millis.MINUTE;
