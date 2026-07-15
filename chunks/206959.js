@@ -27,7 +27,7 @@ let C = [
     { name: "H264", encode: !0, decode: !0 },
     { name: "VP8", encode: !0, decode: !0 },
 ];
-function O(e, t) {
+function R(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = t.concat(C),
         r = [];
@@ -45,7 +45,7 @@ function O(e, t) {
     }
     return r;
 }
-function R(e) {
+function O(e) {
     let t = [],
         n = e.has(N.fd.SIGNAL_AV1_ENCODE),
         i = e.has(N.fd.SIGNAL_AV1_DECODE);
@@ -552,12 +552,12 @@ class H extends g.A {
                 n.on(c.yq.Stats, n.handleStats),
                     n.conn.setOnVideoCallback(n.handleVideo),
                     i.getCodecCapabilities((t) => {
-                        let i = R(n.experimentFlags);
+                        let i = O(n.experimentFlags);
                         (n.codecs = [
                             { type: "audio", name: N.UK.OPUS, priority: 1, payloadType: 120 },
                             ...(function (e, t) {
                                 let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                                return O(L(e), t, n);
+                                return R(L(e), t, n);
                             })(t, i).map((e, t) => {
                                 let n = 101 + 2 * t;
                                 return {
@@ -617,13 +617,13 @@ class H extends g.A {
                     n.getCodecCapabilities((i) => {
                         (this.onVideoCodecsCallbackAt = performance.now()),
                             this.logger.info(`Available engine codecs: ${JSON.stringify(i)}`);
-                        let r = R(this.experimentFlags);
+                        let r = O(this.experimentFlags);
                         this.logger.info(`Experimental codecs: ${JSON.stringify(r)}`);
                         let o = L(i),
                             d = this.lastOverrideCodecDenylist.length > 0;
                         this.codecs = [
                             { type: "audio", name: N.UK.OPUS, priority: 1, payloadType: 120 },
-                            ...O(o, r, d).map((e, t) => {
+                            ...R(o, r, d).map((e, t) => {
                                 let n = 101 + 2 * t;
                                 return {
                                     type: "video",
@@ -2271,105 +2271,66 @@ class er extends o.A {
     setClipBufferLength(e) {
         (0, y.lE)().setClipBufferLength?.(e);
     }
-    saveClip(e) {
-        let { filepath: t, metadata: n, thumbnailMs: i, startMs: r, endMs: a, trimStartMs: s, trimEndMs: l } = e,
-            o = (0, y.lE)();
-        return null == o.setClipBufferLength || (null == o.saveClip && null == o.saveClipWithTime)
-            ? Promise.reject("unsupported")
-            : new Promise((e, d) => {
-                  let c = (t, n, i, r) => {
-                          let a;
-                          try {
-                              a = JSON.parse("" !== n ? n : "{}");
-                          } catch {
-                              a = {};
-                          }
-                          let s = { duration: t, clipStats: a };
-                          return (
-                              void 0 !== i && i.length > 0 && (s.thumbnail = i),
-                              void 0 !== r && r.length > 0 && (s.metadata = r),
-                              e(s)
-                          );
-                      },
-                      u = (e) => {
-                          try {
-                              let t = JSON.parse("" !== e ? e : "{}");
-                              return d(t);
-                          } catch {
-                              return d({ errorMessage: "clip save failed", errorAt: "unknown" });
-                          }
-                      };
-                  null != o.saveClipWithTime
-                      ? o.saveClipWithTime(
-                            t,
-                            n,
-                            void 0 === r ? null : r,
-                            void 0 === a ? null : a,
-                            void 0 === s ? null : s,
-                            void 0 === l ? null : l,
-                            (e, t, n) => c(e, t, void 0, n),
-                            u,
-                            i,
-                        )
-                      : (0, y.$b)(k.CLIPS_THUMBNAIL)
-                        ? o.saveClip(t, n, (e, t, n) => c(e, n, t, void 0), u, i)
-                        : o.saveClip(t, n, (e, t, n) => c(e, n, t, void 0), u);
-              });
+    getSystemSteadyClockNowMs() {
+        return (0, y.lE)().getSystemSteadyClockNowMs?.() ?? null;
     }
-    saveClipForUser(e) {
-        let {
-                userID: t,
-                filepath: n,
-                metadata: i,
-                thumbnailMs: r,
-                startMs: a,
-                endMs: s,
-                trimStartMs: l,
-                trimEndMs: o,
-            } = e,
-            d = (0, y.lE)();
-        return null == d.saveClipForUser && null == d.saveClipForUserWithTime
-            ? Promise.reject("unsupported")
-            : new Promise((e, c) => {
-                  let u = (t, n, i, r) => {
-                          let a;
-                          try {
-                              a = JSON.parse("" !== n ? n : "{}");
-                          } catch {
-                              a = {};
-                          }
-                          let s = { duration: t, clipStats: a };
-                          return (
-                              void 0 !== i && i.length > 0 && (s.thumbnail = i),
-                              void 0 !== r && r.length > 0 && (s.metadata = r),
-                              e(s)
-                          );
-                      },
-                      _ = (e) => {
-                          try {
-                              let t = JSON.parse("" !== e ? e : "{}");
-                              return c(t);
-                          } catch {
-                              return c({ errorMessage: "clip save failed", errorAt: "unknown" });
-                          }
-                      };
-                  null != d.saveClipForUserWithTime
-                      ? d.saveClipForUserWithTime(
-                            t,
-                            n,
-                            i,
-                            void 0 === a ? null : a,
-                            void 0 === s ? null : s,
-                            void 0 === l ? null : l,
-                            void 0 === o ? null : o,
-                            (e, t, n) => u(e, t, void 0, n),
-                            _,
-                            r,
-                        )
-                      : (0, y.$b)(k.CLIPS_THUMBNAIL)
-                        ? d.saveClipForUser(t, n, i, (e, t, n) => u(e, n, t, void 0), _, r)
-                        : d.saveClipForUser(t, n, i, (e, t, n) => u(e, n, t, void 0), _);
-              });
+    saveClipEx(e) {
+        let t = (0, y.lE)();
+        return new Promise((n, i) => {
+            let r = (e, t, i, r) => {
+                    let a;
+                    try {
+                        a = JSON.parse("" !== t ? t : "{}");
+                    } catch {
+                        a = {};
+                    }
+                    let s = { duration: e, clipStats: a };
+                    return (
+                        void 0 !== i && i.length > 0 && (s.thumbnail = i),
+                        void 0 !== r && r.length > 0 && (s.metadata = r),
+                        n(s)
+                    );
+                },
+                a = (e) => {
+                    try {
+                        let t = JSON.parse("" !== e ? e : "{}");
+                        return i(t);
+                    } catch {
+                        return i({ errorMessage: "clip save failed", errorAt: "unknown" });
+                    }
+                };
+            if (null != t.saveClipEx) return void t.saveClipEx(e, r, a);
+            let {
+                    filepath: s,
+                    metadata: l,
+                    thumbnailMs: o,
+                    startMs: d,
+                    endMs: c,
+                    trimStartMs: u,
+                    trimEndMs: _,
+                    userId: E,
+                } = e,
+                A = null != E;
+            if (
+                A
+                    ? null == t.saveClipForUser && null == t.saveClipForUserWithTime
+                    : null == t.setClipBufferLength || (null == t.saveClip && null == t.saveClipWithTime)
+            )
+                return void i("unsupported");
+            let h = (e, t, n) => r(e, n, t, void 0),
+                I = (e, t, n) => r(e, t, void 0, n);
+            A
+                ? null != t.saveClipForUserWithTime
+                    ? t.saveClipForUserWithTime(E, s, l, d ?? null, c ?? null, u ?? null, _ ?? null, I, a, o)
+                    : (0, y.$b)(k.CLIPS_THUMBNAIL)
+                      ? t.saveClipForUser?.(E, s, l, h, a, o)
+                      : t.saveClipForUser?.(E, s, l, h, a)
+                : null != t.saveClipWithTime
+                  ? t.saveClipWithTime(s, l, d ?? null, c ?? null, u ?? null, _ ?? null, I, a, o)
+                  : (0, y.$b)(k.CLIPS_THUMBNAIL)
+                    ? t.saveClip?.(s, l, h, a, o)
+                    : t.saveClip?.(s, l, h, a);
+        });
     }
     updateClipMetadata(e, t) {
         let n = (0, y.lE)();

@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(972347),
     r = n(459838),
-    s = n(731854);
-function a(e) {
+    a = n(731854);
+function s(e) {
     return null;
 }
-function o(e) {
+function l(e) {
     return null;
 }
-class l extends i.A {
-    Video = a;
-    Camera = o;
+class o extends i.A {
+    Video = s;
+    Camera = l;
     destroy() {
         this.emit(r.bg.Destroy), this.removeAllListeners();
     }
@@ -20,7 +20,7 @@ class l extends i.A {
         return __OVERLAY__;
     }
     supports(e) {
-        return e === s.O5.AUTO_ENABLE && __OVERLAY__;
+        return e === a.O5.AUTO_ENABLE && __OVERLAY__;
     }
     connect(e, t, n) {
         throw Error("NOT_IMPLEMENTED");
@@ -45,7 +45,7 @@ class l extends i.A {
     }
     setVideoInputDevice(e) {}
     getVideoInputDeviceId() {
-        return s.qe;
+        return a.qe;
     }
     setAsyncVideoInputDeviceInit(e) {}
     getCodecCapabilities(e) {
@@ -55,7 +55,7 @@ class l extends i.A {
         return Promise.reject(Error("getCodecSurvey is not implemented for MediaEngineDummy"));
     }
     getAudioSubsystem() {
-        return s.rB.STANDARD;
+        return a.rB.STANDARD;
     }
     getAudioLayer() {
         return "";
@@ -66,7 +66,7 @@ class l extends i.A {
         return !1;
     }
     setDesktopSource(e) {
-        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.x.DEFAULT;
+        arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.x.DEFAULT;
     }
     setSoundshareSource(e, t, n) {}
     getDesktopSource() {
@@ -91,10 +91,10 @@ class l extends i.A {
     }
     setClipsUIActive(e) {}
     setClipBufferLength(e) {}
-    saveClip(e) {
-        return Promise.reject(Error("UNSUPPORTED"));
+    getSystemSteadyClockNowMs() {
+        return null;
     }
-    saveClipForUser(e) {
+    saveClipEx(e) {
         return Promise.reject(Error("UNSUPPORTED"));
     }
     updateClipMetadata(e, t) {
