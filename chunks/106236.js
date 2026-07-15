@@ -242,43 +242,20 @@ class T extends r.PureComponent {
     unscaleValue(e) {
         return (e * this.state.range) / 100 + this.state.min;
     }
-    commitValue = (e, t) => {
-        let { asValueChanges: n, onValueChange: i } = this.props,
-            r = {};
-        (r.value = e),
-            null != t && ((r.closestMarkerIndex = t), (r.newClosestIndex = t)),
-            this.setState(r),
-            e !== this.state.value && (n?.(e), i?.(e));
-    };
     moveGrabber = (e) => {
         let { sortedMarkers: t, value: n, min: i, max: r, closestMarkerIndex: a } = this.state,
-            { stickToMarkers: s } = this.props;
-        if (s) {
+            { asValueChanges: s, onValueChange: l, stickToMarkers: d } = this.props,
+            c = {};
+        if (d) {
             let i = a ?? t.indexOf(n);
             if (i < 0) return;
-            let r = o().clamp(i + e, 0, t.length - 1),
+            let r = i + e,
                 s = t[r];
             if (null == s) return;
-            this.commitValue(s, r);
-        } else this.commitValue(o().clamp(n + e, i, r));
+            (c.value = s), (c.closestMarkerIndex = r), (c.newClosestIndex = r);
+        } else c.value = o().clamp(n + e, i, r);
+        this.setState(c), c.value !== this.state.value && (s?.(c.value), l?.(c.value));
     };
-    moveGrabberToEdge = (e) => {
-        let { sortedMarkers: t, min: n, max: i } = this.state,
-            { stickToMarkers: r } = this.props;
-        if (r) {
-            if (0 === t.length) return;
-            let n = "min" === e ? 0 : t.length - 1,
-                i = t[n];
-            if (null == i) return;
-            this.commitValue(i, n);
-        } else this.commitValue("min" === e ? n : i);
-    };
-    getKeyboardPageStep() {
-        let { keyboardPageStep: e, stickToMarkers: t, keyboardStep: n = 1 } = this.props;
-        if (t) return e ?? Math.max(1, Math.round(this.state.sortedMarkers.length / 10));
-        let { min: i, max: r } = this.state;
-        return e ?? Math.max(n, (r - i) / 10);
-    }
     focus() {
         this.containerRef.current?.focus();
     }
@@ -334,16 +311,7 @@ class T extends r.PureComponent {
         }
         l.includes(a)
             ? (e.preventDefault(), e.stopPropagation(), this.moveGrabber(-r))
-            : s.includes(a)
-              ? (e.preventDefault(), e.stopPropagation(), this.moveGrabber(r))
-              : "Home" === a
-                ? (e.preventDefault(), e.stopPropagation(), this.moveGrabberToEdge("min"))
-                : "End" === a
-                  ? (e.preventDefault(), e.stopPropagation(), this.moveGrabberToEdge("max"))
-                  : "PageUp" === a
-                    ? (e.preventDefault(), e.stopPropagation(), this.moveGrabber(this.getKeyboardPageStep()))
-                    : "PageDown" === a &&
-                      (e.preventDefault(), e.stopPropagation(), this.moveGrabber(-this.getKeyboardPageStep()));
+            : s.includes(a) && (e.preventDefault(), e.stopPropagation(), this.moveGrabber(r));
     };
     handleMouseDown = (e) => {
         if (this.props.disabled) return;
