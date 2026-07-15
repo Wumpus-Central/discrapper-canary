@@ -4122,18 +4122,6 @@ html .tabBadge_e6b769 {
     padding: var(--space-16) var(--space-16) 0
 }
 
-.message__95796 {
-    margin: var(--space-12) 0;
-    overflow: hidden
-}
-
-.loading__95796 {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: var(--space-48)
-}
-
 .hasMore__95796 {
     margin-bottom: var(--space-16)
 }

@@ -1,0 +1,18 @@
+.scroller_f6bd5f {
+    padding: var(--space-16) var(--space-16) 0
+}
+
+.status_f6bd5f {
+    align-items: center;
+    background-color: rgba(0, 255, 0, .03);
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    padding: var(--space-8);
+    padding-inline-start: 70px
+}
+
+.error_f6bd5f {
+    background-color: rgba(255, 0, 0, .05)
+}

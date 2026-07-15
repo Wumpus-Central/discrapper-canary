@@ -3,6 +3,7 @@ e.exports = {
     yZ: "collapsed__996b5",
     Kk: "icon__996b5",
     YT: "iconClickable__996b5",
+    ai: "chevron__996b5",
     yP: "channelNameSection__996b5",
     lz: "channelNameHeading__996b5",
     Ru: "channelNameClickable__996b5",
