@@ -1,4 +1,4 @@
-n.d(t, { default: () => nr });
+n.d(t, { default: () => ns });
 var i,
     r = n(627968),
     s = n(64700),
@@ -609,8 +609,8 @@ var eq = n(990078),
     e0 = n(825484),
     e1 = n(331322),
     e2 = n(736653),
-    e9 = n(44120),
-    e4 = n(465794),
+    e4 = n(44120),
+    e9 = n(465794),
     e7 = n(757036),
     e3 = n(761705),
     e5 = n(449410),
@@ -917,7 +917,7 @@ function tU(e) {
     (0, e3.W)({ disableFetch: !ee });
     let et = s.useCallback(() => {
         f(es.sH.BUY_WITH_FIAT),
-            (0, e9.A)({
+            (0, e4.A)({
                 skuId: i.skuId,
                 analyticsLocations: m,
                 discoverySessionId: g,
@@ -926,7 +926,7 @@ function tU(e) {
     }, [m, h, i.skuId, f, g]);
     function en(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            i = (0, r.jsx)(e4.A, {
+            i = (0, r.jsx)(e9.A, {
                 subscriptionTier: tN.pe.TIER_2,
                 fullWidth: !0,
                 buttonTextOverride: e,
@@ -1282,33 +1282,34 @@ function t1(e) {
     });
 }
 var t2 = n(139146),
+    t4 = n(60465),
     t9 = n(976860),
-    t4 = n(975732),
-    t7 = n(50920),
-    t3 = n(23161),
-    t5 = n(668953),
-    t6 = n(881636),
-    t8 = n(428445);
-function ne(e) {
+    t7 = n(975732),
+    t3 = n(50920),
+    t5 = n(23161),
+    t6 = n(668953),
+    t8 = n(881636),
+    ne = n(428445);
+function nt(e) {
     let { goPrev: t, goNext: n } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)("div", {
-                className: t8.Y,
+                className: ne.Y,
                 children: (0, r.jsx)(tF.K, {
                     "aria-label": w.intl.string(w.t["3NdvMK"]),
                     onClick: t,
-                    icon: t5.f,
+                    icon: t6.f,
                     variant: "overlay-secondary",
                     size: "sm",
                 }),
             }),
             (0, r.jsx)("div", {
-                className: t8.K,
+                className: ne.K,
                 children: (0, r.jsx)(tF.K, {
                     "aria-label": w.intl.string(w.t.RYIeOX),
                     onClick: n,
-                    icon: t6.u,
+                    icon: t8.u,
                     variant: "overlay-secondary",
                     size: "sm",
                 }),
@@ -1316,8 +1317,8 @@ function ne(e) {
         ],
     });
 }
-var nt = n(742441);
-function nn(e) {
+var nn = n(742441);
+function ni(e) {
     let {
             user: t,
             productRecord: n,
@@ -1340,9 +1341,9 @@ function nn(e) {
         N = v ? l.items.length : 0,
         I = tz.useConfig({ location: "CollectiblesShopProductDetailsModal" }).showCollectionButton,
         _ = (function () {
-            let e = (0, t7.a)("CollectiblesPdpNavigateToCollection"),
+            let e = (0, t3.a)("CollectiblesPdpNavigateToCollection"),
                 { sessionId: t } = (0, A.uM)() ?? {},
-                n = (0, t3.v)((e) => e.reset);
+                n = (0, t5.v)((e) => e.reset);
             return s.useCallback(
                 (i, r) => {
                     if (
@@ -1351,7 +1352,8 @@ function nn(e) {
                             sku_id: i.skuId,
                             cta_name: r,
                         }),
-                        (0, t4.closeUserProfileModal)(),
+                        (0, t7.closeUserProfileModal)(),
+                        (0, t4.p)(),
                         e && !0 !== i.isOrbsExclusive)
                     )
                         return void (0, t9.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
@@ -1399,13 +1401,13 @@ function nn(e) {
             null != e && ((e.style.animation = "none"), e.offsetHeight, (e.style.animation = ""));
         }, [c]),
         (0, r.jsxs)("div", {
-            className: B()(nt.i1, (0, es.EZ)(l.skuId) ? nt.bF : l.type === L.R.AVATAR_DECORATION ? nt.Jq : nt.eF),
+            className: B()(nn.i1, (0, es.EZ)(l.skuId) ? nn.bF : l.type === L.R.AVATAR_DECORATION ? nn.Jq : nn.eF),
             style: null != m ? { backgroundImage: `url(${m})` } : void 0,
             onKeyDown: y,
             children: [
                 (p || I) &&
                     (0, r.jsx)("div", {
-                        className: nt.GV,
+                        className: nn.GV,
                         children: (0, r.jsx)(eq.m, {
                             text: w.intl.string(w.t["Hr/q/6"]),
                             children: (0, r.jsx)(eJ.$, {
@@ -1418,7 +1420,7 @@ function nn(e) {
                         }),
                     }),
                 (0, r.jsx)("div", {
-                    className: nt.KR,
+                    className: nn.KR,
                     ref: S,
                     children: (0, r.jsx)(R.RightPreview, {
                         user: t,
@@ -1430,9 +1432,9 @@ function nn(e) {
                         isOrbCheckoutModalOpen: d,
                     }),
                 }),
-                v && N > 1 && (0, r.jsx)(ne, { goPrev: T, goNext: b }),
+                v && N > 1 && (0, r.jsx)(nt, { goPrev: T, goNext: b }),
                 (0, r.jsxs)("div", {
-                    className: nt.VG,
+                    className: nn.VG,
                     children: [
                         (0, r.jsx)(t2.R, {
                             product: n,
@@ -1463,8 +1465,8 @@ function nn(e) {
         })
     );
 }
-var ni = n(460510);
-let nr = function (e) {
+var nr = n(460510);
+let ns = function (e) {
     let {
             transitionState: t,
             onClose: n,
@@ -1572,12 +1574,12 @@ let nr = function (e) {
             paddingSize: "sm",
             "aria-label": es,
             children: (0, r.jsx)("div", {
-                className: ni.C,
+                className: nr.C,
                 children: (0, r.jsxs)("div", {
-                    className: ni.j,
+                    className: nr.j,
                     children: [
                         (0, r.jsx)(tH, { ...el }),
-                        (0, r.jsx)(nn, { ...el, isClosing: ei, isOrbCheckoutModalOpen: en, pdpBackground: Y }),
+                        (0, r.jsx)(ni, { ...el, isClosing: ei, isOrbCheckoutModalOpen: en, pdpBackground: Y }),
                     ],
                 }),
             }),
