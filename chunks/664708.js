@@ -239,29 +239,32 @@ function q(e) {
     let {
             controlBarAnimationSpring: t,
             attachment: n,
-            isActive: r,
-            durationSeconds: a,
-            guildId: s,
-            channelId: l,
-            messageId: o,
-            hidden: _ = !1,
+            isActive: a,
+            durationSeconds: s,
+            guildId: l,
+            channelId: o,
+            messageId: _,
+            hidden: E = !1,
         } = e,
-        { enableMediaComments: E } = M.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
-        A = (0, c.Lt)(n.flags ?? 0, R.sbO.HAS_TIMELINE_COMMENTS),
-        h = (0, u.bG)([C.A], () => C.A.getMessage(l, o), [l, o]),
-        { data: I } = O(n, l, s, h?.author.id, E && A && r);
-    return !E || null == I || a <= 0
+        { enableMediaComments: A } = M.useConfig({ location: "ClipEmbedMediaMentionTimeline" }),
+        h = (0, c.Lt)(n.flags ?? 0, R.sbO.HAS_TIMELINE_COMMENTS),
+        I = (0, u.bG)([C.A], () => C.A.getMessage(o, _), [o, _]),
+        { data: f } = O(n, o, l, I?.author.id, A && h && a);
+    return (r.useEffect(() => {
+        a && O.refetch(n, o, l, I?.author.id, A && h && a);
+    }, [a, n, o, l, I?.author.id, A, h]),
+    !A || null == f || s <= 0)
         ? null
         : (0, i.jsx)(d.animated.div, {
               className: z.IO,
-              inert: _,
+              inert: E,
               style: {
-                  opacity: r ? (0, d.to)(t.to({ range: [0.5, 1], output: [0, 1] }), (e) => (_ ? 0 : `${e}`)) : 1,
-                  transform: r
+                  opacity: a ? (0, d.to)(t.to({ range: [0.5, 1], output: [0, 1] }), (e) => (E ? 0 : `${e}`)) : 1,
+                  transform: a
                       ? (0, d.to)([t.to({ range: [0, 1], output: [96, 0] })], (e) => `translateY(${e}px)`)
                       : "translateY(60px)",
               },
-              children: I.map((e) => (0, i.jsx)(Z, { message: e, durationSeconds: a }, e.id)),
+              children: f.map((e) => (0, i.jsx)(Z, { message: e, durationSeconds: s }, e.id)),
           });
 }
 function Z(e) {
