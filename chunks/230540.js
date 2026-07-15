@@ -1501,9 +1501,9 @@ let ns = function (e) {
                 a = (0, I.o)(),
                 c = (0, C.xM)(a);
             return s.useCallback(
-                (e) => {
+                (e, s) => {
                     g.default.track(j.HAw.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, {
-                        sku_id: t,
+                        sku_id: s ?? t,
                         cta: e,
                         shop_session_id: l,
                         card_id: r,

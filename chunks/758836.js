@@ -458,6 +458,7 @@ var x =
     (l.BUNDLE_VIEW_AVATAR_DECORATION = "bundle_view_avatar_decoration"),
     (l.BUNDLE_VIEW_PROFILE_EFFECT = "bundle_view_profile_effect"),
     (l.BUNDLE_VIEW_NAMEPLATE = "bundle_view_nameplate"),
+    (l.BUNDLE_VIEW_PRODUCT = "bundle_view_product"),
     (l.FULL_PROFILE_PREVIEW = "full_profile_preview"),
     (l.FULL_PROFILE_PREVIEW_BUTTON = "full_profile_preview_button"),
     (l.VIEW_DETAILS = "view_details"),
