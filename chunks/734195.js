@@ -17,15 +17,15 @@ var a = t(627968),
     S = t(71393),
     g = t(287809),
     A = t(174459),
-    _ = t(871162),
-    p = t(248778),
+    p = t(871162),
+    _ = t(248778),
     I = t(750656);
 let D = [...I.re, ...I.gz];
 function j() {
-    let e = (0, p.ux)("effect-order");
+    let e = (0, _.ux)("effect-order");
     return l.useMemo(() => (e ? D : I.re), [e]);
 }
-let C = [
+let v = [
         o.x.DEFAULT,
         o.x.ZILLA_SLAB,
         o.x.CHERRY_BOMB,
@@ -35,10 +35,10 @@ let C = [
         o.x.PIXELIFY,
         o.x.SINISTRE,
     ],
-    v = [...C, ...I._k];
+    C = [...v, ...I._k];
 function L() {
-    let e = (0, p.ux)("font-order");
-    return l.useMemo(() => (e ? v : C), [e]);
+    let e = (0, _.ux)("font-order");
+    return l.useMemo(() => (e ? C : v), [e]);
 }
 var T = t(945096),
     y = t(898985),
@@ -47,8 +47,8 @@ var T = t(945096),
     k = t(84540),
     w = t(652215),
     F = t(836602),
-    R = t(696451),
-    O = t(427262),
+    O = t(696451),
+    R = t(427262),
     P = t(403581),
     Y = t(661531),
     B = t(48736),
@@ -384,7 +384,7 @@ function eA(e) {
                     ef.h.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_EFFECT_SEEN", effectId: e });
                 }, []),
             }),
-        u = (0, p.ux)("DisplayNameStylesEffectSelection"),
+        u = (0, _.ux)("DisplayNameStylesEffectSelection"),
         x = Math.ceil(d.length / 2);
     return (0, a.jsxs)("div", {
         className: r,
@@ -403,7 +403,7 @@ function eA(e) {
                 children: d.map((e) => {
                     let s = o.has(e);
                     return (0, a.jsx)(
-                        e_,
+                        ep,
                         {
                             effectId: e,
                             selected: e === t,
@@ -420,7 +420,7 @@ function eA(e) {
         ],
     });
 }
-function e_(e) {
+function ep(e) {
     let { effectId: s, selected: t, showNewDot: l, isFlywheelEnabled: n, onClick: r } = e,
         d = (0, y._)(s),
         o = I.gz.includes(s);
@@ -446,7 +446,7 @@ function e_(e) {
         ],
     });
 }
-var ep = t(885574),
+var e_ = t(885574),
     eI = t(73392),
     eD = t(699006);
 function ej(e) {
@@ -463,7 +463,7 @@ function ej(e) {
             }),
         E = t !== o.x.DEFAULT,
         h = (0, T.Xr)(r),
-        N = (0, p.ux)("DisplayNameStylesFontSelection"),
+        N = (0, _.ux)("DisplayNameStylesFontSelection"),
         S = Math.ceil(m.length / (N ? 3 : 2));
     return (0, a.jsxs)("div", {
         className: d,
@@ -523,7 +523,7 @@ function ej(e) {
                 (0, a.jsxs)("div", {
                     className: eD.Lb,
                     children: [
-                        (0, a.jsx)(ep.m, { size: "lg" }),
+                        (0, a.jsx)(e_.m, { size: "lg" }),
                         (0, a.jsx)(eu.E, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
@@ -534,8 +534,8 @@ function ej(e) {
         ],
     });
 }
-var eC = t(821609),
-    ev = t(908803),
+var ev = t(821609),
+    eC = t(908803),
     eL = t(87719),
     eT = t(465794),
     ey = t(757036),
@@ -544,11 +544,11 @@ var eC = t(821609),
 function ek(e) {
     let { onApply: s, onSurpriseMe: t, onClose: l, canApply: n } = e,
         i = (0, ey.L)(eb.PremiumTypes.TIER_2),
-        r = (0, a.jsx)(eC.$, {
+        r = (0, a.jsx)(ev.$, {
             variant: "secondary",
             size: "md",
             onClick: t,
-            icon: { type: "rive", asset: ev.m, riveProps: { dataBinding: { fill: Y.A.colors.ICON_STRONG } } },
+            icon: { type: "rive", asset: eC.m, riveProps: { dataBinding: { fill: Y.A.colors.ICON_STRONG } } },
             text: en.intl.string(el.default.NOGFds),
         }),
         d = (0, a.jsxs)("div", {
@@ -558,7 +558,7 @@ function ek(e) {
                 (0, a.jsx)(K.m, {
                     text: en.intl.string(el.default.cVTpnj),
                     shouldShow: !n,
-                    children: (0, a.jsx)(eC.$, {
+                    children: (0, a.jsx)(ev.$, {
                         onClick: s,
                         disabled: !n,
                         text: en.intl.string(en.t["1Qm822"]),
@@ -610,8 +610,8 @@ function ek(e) {
 }
 var ew = t(366010),
     eF = t(43990),
-    eR = t(629584),
-    eO = t(943255),
+    eO = t(629584),
+    eR = t(943255),
     eP = t(575181),
     eY = t(736653),
     eB = t(780898),
@@ -643,12 +643,12 @@ function e0(e) {
         [E, h] = (0, l.useState)(x),
         S = (0, e$.Ay)(s.id, null),
         { bannerSrc: g } = (0, eX.A)({ displayProfile: S, size: 413, canAnimate: !1 }),
-        _ = (0, c.cf)([F.A], () => F.A.getPendingChanges(t?.id)),
-        p = (0, eJ.V7)({ userId: s.id, image: _.pendingAvatar }),
+        p = (0, c.cf)([F.A], () => F.A.getPendingChanges(t?.id)),
+        _ = (0, eJ.V7)({ userId: s.id, image: p.pendingAvatar }),
         { userNameplate: I, guildNameplate: D, pendingNameplate: j } = (0, N.rv)(s, t?.id),
-        C = (0, eB.WK)(D);
+        v = (0, eB.WK)(D);
     E && !x ? (f = w.NJ8.DARK) : !E && x && (f = w.NJ8.LIGHT);
-    let v = (0, l.useCallback)(() => {
+    let C = (0, l.useCallback)(() => {
             A.default.track(w.HAw.DISPLAY_NAME_STYLES_CLOSED), m();
         }, [m]),
         L = (0, l.useCallback)((e) => {
@@ -665,7 +665,7 @@ function e0(e) {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: eQ.bV,
-                children: (0, a.jsx)(u.s_, { "data-migration-pending": !0, onClick: v, innerClassName: eQ.b }),
+                children: (0, a.jsx)(u.s_, { "data-migration-pending": !0, onClick: C, innerClassName: eQ.b }),
             }),
             null != g &&
                 (0, a.jsx)(eV.A, {
@@ -686,8 +686,8 @@ function e0(e) {
                             (0, a.jsx)(eW.A, {
                                 user: s,
                                 guild: t,
-                                ..._,
-                                pendingAvatar: p,
+                                ...p,
+                                pendingAvatar: _,
                                 pendingGlobalName: n,
                                 pendingDisplayNameStyles: T.displayNameStyles,
                                 canUsePremiumCustomization: !0,
@@ -711,13 +711,16 @@ function e0(e) {
                                 hideGuildTag: !0,
                                 className: eQ.OT,
                                 previewGuildId: t?.id,
+                                avatarDecorationOverride: p.pendingAvatarDecoration,
+                                avatarOverride: _,
                             }),
                             (0, a.jsx)(eG.A, {
                                 user: s,
                                 guildId: t?.id,
                                 nameplate: j,
-                                nameplateData: null == j ? (C ?? I) : void 0,
+                                nameplateData: null == j ? (v ?? I) : void 0,
                                 pendingGlobalName: n,
+                                pendingAvatarDecoration: p.pendingAvatarDecoration,
                                 pendingDisplayNameStyles: T.displayNameStyles,
                                 isHighlighted: !0,
                                 className: eQ.qF,
@@ -744,7 +747,7 @@ function e0(e) {
 function e1(e) {
     let { darkPreview: s, onToggleTheme: t } = e,
         l = s ? w.NJ8.DARK : w.NJ8.LIGHT;
-    return (0, a.jsx)(eR.I, {
+    return (0, a.jsx)(eO.I, {
         className: eQ.xr,
         optionClassName: eQ.$C,
         options: [
@@ -752,7 +755,7 @@ function e1(e) {
                 name: "",
                 tooltip: en.intl.string(en.t.b8Cei3),
                 value: w.NJ8.DARK,
-                icon: eO.Z,
+                icon: eR.Z,
                 className: l === w.NJ8.DARK ? eQ.iB : void 0,
             },
             {
@@ -774,18 +777,18 @@ function e1(e) {
 var e8 = t(511698);
 function e9(e) {
     let s,
-        { transitionState: t, analyticsLocations: n, guildId: I, onClose: D, returnRef: C } = e,
-        v = (0, c.bG)([g.default], () => g.default.getCurrentUser()),
+        { transitionState: t, analyticsLocations: n, guildId: I, onClose: D, returnRef: v } = e,
+        C = (0, c.bG)([g.default], () => g.default.getCurrentUser()),
         P =
-            ((s = O.Ay.useName(v)),
-            (0, c.bG)([F.A, R.Ay], () => {
+            ((s = R.Ay.useName(C)),
+            (0, c.bG)([F.A, O.Ay], () => {
                 let e = F.A.getPendingChanges(I);
-                return null != I ? (e.pendingNickname ?? R.Ay.getNick(I, v?.id)) : e.pendingGlobalName;
-            }, [I, v]) ??
+                return null != I ? (e.pendingNickname ?? O.Ay.getNick(I, C?.id)) : e.pendingGlobalName;
+            }, [I, C]) ??
                 s ??
                 ""),
         Y = (0, c.bG)([S.A], () => S.A.getGuild(I)),
-        { userDisplayNameStyles: B, guildDisplayNameStyles: G, pendingDisplayNameStyles: U } = (0, N.B0)(v, I),
+        { userDisplayNameStyles: B, guildDisplayNameStyles: G, pendingDisplayNameStyles: U } = (0, N.B0)(C, I),
         z = void 0 !== U ? U : (G ?? B),
         [H, K] = l.useState(z?.fontId ?? o.x.DEFAULT),
         [W, J] = l.useState(z?.effectId ?? d.z.SOLID),
@@ -803,7 +806,7 @@ function e9(e) {
     let { analyticsLocations: ea } = (0, E.Ay)(n, x.A.EDIT_DISPLAY_NAME_STYLES_MODAL),
         ei = l.useMemo(() => ($ ? et : [q]), [$, et, q]),
         er = l.useMemo(() => H !== z?.fontId || W !== z?.effectId || !(0, m.v)(ei, z?.colors ?? []), [z, H, W, ei]),
-        ed = (0, p.ux)("DisplayNameStylesModal"),
+        ed = (0, _.ux)("DisplayNameStylesModal"),
         eo = L(),
         ec = j(),
         eu = (function (e) {
@@ -853,11 +856,11 @@ function e9(e) {
             },
             [$, W, es, Q],
         );
-    return null == v
+    return null == C
         ? null
         : (0, a.jsx)(E.f5, {
               value: ea,
-              children: (0, a.jsx)(_.l.Provider, {
+              children: (0, a.jsx)(p.l.Provider, {
                   value: { overrideSettings: !0 },
                   children: (0, a.jsxs)(u.EO, {
                       "data-migration-pending": !0,
@@ -865,7 +868,7 @@ function e9(e) {
                       size: u.rI.LARGE,
                       parentComponent: "DisplayNameStylesModal",
                       className: i()(e8.CR, { [e8.st]: ed }),
-                      returnRef: C,
+                      returnRef: v,
                       children: [
                           (0, a.jsxs)(u.$m, {
                               "data-migration-pending": !0,
@@ -905,7 +908,7 @@ function e9(e) {
                                       ],
                                   }),
                                   (0, a.jsx)(e0, {
-                                      user: v,
+                                      user: C,
                                       guild: Y,
                                       displayName: P,
                                       selectedFontId: H,
