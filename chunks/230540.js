@@ -19,12 +19,12 @@ var i,
     v = n(662388),
     A = n(440938),
     N = n(298072),
-    C = n(993408),
-    I = n(503089),
+    I = n(993408),
+    C = n(503089),
     _ = n(331884),
     j = n(652215),
-    O = n(623373),
-    k = n(536572),
+    k = n(623373),
+    O = n(536572),
     T = n(177366),
     L = n(575593);
 function b(e, t) {
@@ -33,60 +33,63 @@ function b(e, t) {
 var y = n(212407),
     P = n(935094),
     S = n(503698),
-    B = n.n(S),
-    D = n(939249),
+    D = n.n(S),
+    B = n(939249),
     U = n(834730),
     M = n(297264),
     H = n(14702),
-    w = n(375708),
-    F = n(701180);
-function G(e) {
+    w = n(758836),
+    F = n(375708),
+    G = n(701180);
+function V(e) {
     let { name: t, typeLabel: n } = e;
     return (0, r.jsxs)(U.E, {
         variant: "text-sm/medium",
-        className: F.mC,
+        className: G.mC,
         "aria-live": "polite",
         children: [
-            (0, r.jsx)("span", { className: F.kx, children: t }),
-            null != n && (0, r.jsx)("span", { className: F.FP, children: n }),
+            (0, r.jsx)("span", { className: G.kx, children: t }),
+            null != n && (0, r.jsx)("span", { className: G.FP, children: n }),
         ],
     });
 }
-let V = { [L.R.AVATAR_DECORATION]: !0, [L.R.PROFILE_FRAME]: !0 };
-function z(e) {
-    let { item: t, index: n, isSelected: i, setSelected: l, label: a } = e,
-        c = s.useMemo(() => ({ skuId: t.skuId, type: t.type, items: [t] }), [t]),
-        o = s.useCallback(() => l(n), [l, n]),
-        u = !0 === V[t.type];
-    return (0, r.jsx)(D.D, {
+let z = { [L.R.AVATAR_DECORATION]: !0, [L.R.PROFILE_FRAME]: !0 };
+function K(e) {
+    let { item: t, index: n, isSelected: i, setSelected: l, label: a, trackedSkuId: c, onTrackClick: o } = e,
+        u = s.useMemo(() => ({ skuId: t.skuId, type: t.type, items: [t] }), [t]),
+        d = s.useCallback(() => {
+            o(w.sH.BUNDLE_VIEW_PRODUCT, c), l(n);
+        }, [o, c, l, n]),
+        m = !0 === z[t.type];
+    return (0, r.jsx)(B.D, {
         tag: "div",
         role: "radio",
         "aria-checked": i,
         tabIndex: i ? 0 : -1,
-        className: B()(F.xn, { [F.Y4]: i, [F.u8]: u }),
-        onClick: o,
+        className: D()(G.xn, { [G.Y4]: i, [G.u8]: m }),
+        onClick: d,
         "aria-label": a,
-        children: (0, r.jsx)("div", { className: F.Yf, children: (0, r.jsx)(H.O, { product: c }) }),
+        children: (0, r.jsx)("div", { className: G.Yf, children: (0, r.jsx)(H.O, { product: u }) }),
     });
 }
-var K = n(442759),
-    W = n(344346),
-    Y = n(139136),
-    $ = n(395744),
-    X = n(929283),
-    q = n(719201);
-function Z(e) {
+var W = n(442759),
+    Y = n(344346),
+    $ = n(139136),
+    X = n(395744),
+    q = n(929283),
+    Z = n(719201);
+function J(e) {
     let { item: t, user: n, bundleFirstAvatarDecoration: i, isBundle: s } = e;
     switch (t.type) {
         case L.R.AVATAR_DECORATION:
             return (0, r.jsx)("div", {
-                className: q.h1,
-                children: (0, r.jsx)(X.i, { user: n, item: t, isHighlighted: !0 }),
+                className: Z.h1,
+                children: (0, r.jsx)(q.i, { user: n, item: t, isHighlighted: !0 }),
             });
         case L.R.PROFILE_EFFECT:
             return (0, r.jsx)("div", {
-                className: s ? q.sm : q.VY,
-                children: (0, r.jsx)(Y.A, {
+                className: s ? Z.sm : Z.VY,
+                children: (0, r.jsx)($.A, {
                     skuId: t.skuId,
                     removeSetHeight: !0,
                     isHighlighted: !0,
@@ -94,12 +97,12 @@ function Z(e) {
                 }),
             });
         case L.R.PROFILE_FRAME:
-            return (0, r.jsx)("div", { className: s ? q.ob : q.fE, children: (0, r.jsx)($.A, { frame: t }) });
+            return (0, r.jsx)("div", { className: s ? Z.ob : Z.fE, children: (0, r.jsx)(X.A, { frame: t }) });
         case L.R.NAMEPLATE:
             return (0, r.jsx)("div", {
-                className: q.Dz,
-                children: (0, r.jsx)(W.A, {
-                    className: q.M4,
+                className: Z.Dz,
+                children: (0, r.jsx)(Y.A, {
+                    className: Z.M4,
                     nameplate: t,
                     user: n,
                     nameplatePreviewSize: "large",
@@ -112,58 +115,57 @@ function Z(e) {
             return null;
     }
 }
-function J(e) {
+function Q(e) {
     let { user: t, selectedProduct: n, previewingProduct: i, selectedBundleSlide: s } = e,
         l = i ?? n,
-        { firstAvatarDecoration: a } = (0, K.f5)(l),
+        { firstAvatarDecoration: a } = (0, W.f5)(l),
         c = l.items[s] ?? l.items[0];
     return null == c
         ? null
-        : (0, r.jsx)(Z, { item: c, user: t, bundleFirstAvatarDecoration: a, isBundle: (0, C.aw)(l) });
+        : (0, r.jsx)(J, { item: c, user: t, bundleFirstAvatarDecoration: a, isBundle: (0, I.aw)(l) });
 }
-var Q = n(846957);
-function ee(e) {
+var ee = n(846957);
+function et(e) {
     let { selectedProduct: t, previewingProduct: n } = e;
-    return (0, r.jsx)(Q.B, { product: n ?? t });
+    return (0, r.jsx)(ee.B, { product: n ?? t });
 }
-var et = n(975571);
-function en(e) {
+var en = n(975571);
+function ei(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t) return w.intl.formatToPlainString(w.t["/0Yndu"], { num: e.bundledProducts?.length });
+    if (t) return F.intl.formatToPlainString(F.t["/0Yndu"], { num: e.bundledProducts?.length });
     let n = e.bundledProducts ?? [],
         i = [],
         r = !1;
     for (let e of n)
         switch (e.type) {
             case L.R.AVATAR_DECORATION:
-                i.push(w.intl.formatToPlainString(w.t.Ntv9Jt, { itemName: e.name }));
+                i.push(F.intl.formatToPlainString(F.t.Ntv9Jt, { itemName: e.name }));
                 break;
             case L.R.PROFILE_EFFECT:
-                i.push(w.intl.formatToPlainString(w.t["3Y8q7a"], { itemName: e.name }));
+                i.push(F.intl.formatToPlainString(F.t["3Y8q7a"], { itemName: e.name }));
                 break;
             case L.R.NAMEPLATE:
-                i.push(w.intl.formatToPlainString(w.t["2keXky"], { itemName: e.name })), (r = !0);
+                i.push(F.intl.formatToPlainString(F.t["2keXky"], { itemName: e.name })), (r = !0);
         }
     if (r) {
         let e = i.join(", ").replace(/, ([^,]*)$/, " & $1");
-        return w.intl.formatToPlainString(w.t.Ofrqj6, { joinedItems: e });
+        return F.intl.formatToPlainString(F.t.Ofrqj6, { joinedItems: e });
     }
     let s = i.join(" & ");
-    return w.intl.formatToPlainString(w.t.Ofrqj6, { joinedItems: s });
+    return F.intl.formatToPlainString(F.t.Ofrqj6, { joinedItems: s });
 }
 n(321073);
-var ei = n(740076),
-    er = n(661847),
-    es = n(758836),
+var er = n(740076),
+    es = n(661847),
     el = n(630709);
 function ea(e) {
     let { skuId: t } = e;
-    return (0, es.EZ)(t)
+    return (0, w.EZ)(t)
         ? (0, r.jsx)(U.E, {
               variant: "text-sm/normal",
               className: el.CU,
-              children: w.intl.format(w.t.Q1scdE, {
-                  helpdeskArticle: et.A.getArticleURL(j.MVz.FRACTIONAL_PREMIUM_ABOUT),
+              children: F.intl.format(F.t.Q1scdE, {
+                  helpdeskArticle: en.A.getArticleURL(j.MVz.FRACTIONAL_PREMIUM_ABOUT),
               }),
           })
         : null;
@@ -177,30 +179,30 @@ function ec(e) {
             return (0, s.useMemo)(() => {
                 if (null != e && null != e.summary && "" !== e.summary) {
                     if (e.type === L.R.BUNDLE && e.summary.includes("{joinedItems}")) {
-                        let n = en(e, t);
+                        let n = ei(e, t);
                         return e.summary.replace("{joinedItems}", n);
                     }
                     return e.summary;
                 }
                 switch (e?.type) {
                     case L.R.AVATAR_DECORATION:
-                        return w.intl.string(w.t["3lv7q2"]);
+                        return F.intl.string(F.t["3lv7q2"]);
                     case L.R.PROFILE_EFFECT:
-                        return w.intl.string(w.t.VhJL72);
+                        return F.intl.string(F.t.VhJL72);
                     case L.R.NAMEPLATE:
-                        return w.intl.string(w.t.ik37EZ);
+                        return F.intl.string(F.t.ik37EZ);
                     case L.R.PROFILE_FRAME:
-                        return w.intl.string(w.t.fWzWPp);
+                        return F.intl.string(F.t.fWzWPp);
                     case L.R.BUNDLE:
-                        return en(e, t);
+                        return ei(e, t);
                     default:
                         return "";
                 }
             }, [e, t]);
         })(u, !1),
-        { disabledReason: m } = (0, ei.I)(i.skuId),
+        { disabledReason: m } = (0, er.I)(i.skuId),
         x = (0, N.Q)(t),
-        h = (0, O.B1)(t),
+        h = (0, k.B1)(t),
         f = h ? t.variants[a ?? x] : null,
         E = s.useRef(null);
     return (
@@ -227,13 +229,13 @@ function ec(e) {
                                     color: "text-subtle",
                                     className: el.a9,
                                     lineClamp: 1,
-                                    children: w.intl.format(w.t.EcaRWt, {
+                                    children: F.intl.format(F.t.EcaRWt, {
                                         value: (0, r.jsx)("span", { className: el.I8, children: f.variantLabel }),
                                     }),
                                 }),
                             (0, r.jsx)("div", {
                                 className: el._x,
-                                children: (0, r.jsx)(er.A, {
+                                children: (0, r.jsx)(es.A, {
                                     skuId: t.skuId,
                                     onVariantEnter: c,
                                     onVariantExit: o,
@@ -266,11 +268,11 @@ var eo =
     ev = n(20851),
     eA = n(986687),
     eN = n(101058),
-    eC = n(836602),
-    eI = n(428262),
+    eI = n(836602),
+    eC = n(428262),
     e_ = n(780898),
     ej = n(180129);
-function eO(e) {
+function ek(e) {
     let { user: t, innerClassName: n } = e;
     return (0, r.jsx)("div", {
         className: ej.mV,
@@ -282,29 +284,29 @@ function eO(e) {
                 status: j.clD.ONLINE,
             }),
             name: t.name,
-            innerClassName: B()(ej.$L, n),
+            innerClassName: D()(ej.$L, n),
         }),
     });
 }
-function ek(e) {
+function eO(e) {
     let { user: t, nameplate: n, avatarDecoration: i } = e,
         s = (0, e_.Ov)();
     return (0, r.jsx)("div", {
         className: ej.nJ,
         role: "img",
-        "aria-label": w.intl.string(w.t.SZeUdR),
+        "aria-label": F.intl.string(F.t.SZeUdR),
         children: (0, r.jsxs)(em.M, {
             children: [
-                (0, r.jsx)(eO, { user: s.mallow, innerClassName: ej.ab }),
+                (0, r.jsx)(ek, { user: s.mallow, innerClassName: ej.ab }),
                 (0, r.jsxs)(U.E, {
                     variant: "text-sm/semibold",
                     className: ej.OS,
-                    children: [w.intl.string(w.t["yzW/fZ"]), " - 3"],
+                    children: [F.intl.string(F.t["yzW/fZ"]), " - 3"],
                 }),
-                (0, r.jsx)(eO, { user: s.phibi, innerClassName: ej.e9 }),
+                (0, r.jsx)(ek, { user: s.phibi, innerClassName: ej.e9 }),
                 (0, r.jsx)("div", {
                     className: ej.mV,
-                    children: (0, r.jsx)(W.A, {
+                    children: (0, r.jsx)(Y.A, {
                         className: ej.M4,
                         innerClassName: ej.e9,
                         user: t,
@@ -316,14 +318,14 @@ function ek(e) {
                         hideDecorators: !0,
                     }),
                 }),
-                (0, r.jsx)(eO, { user: s.locke, innerClassName: ej.e9 }),
+                (0, r.jsx)(ek, { user: s.locke, innerClassName: ej.e9 }),
                 (0, r.jsxs)(U.E, {
                     variant: "text-sm/semibold",
                     className: ej.OS,
-                    children: [w.intl.string(w.t["NG43/6"]), " - 12"],
+                    children: [F.intl.string(F.t["NG43/6"]), " - 12"],
                 }),
-                (0, r.jsx)(eO, { user: s.boom, innerClassName: ej.bD }),
-                (0, r.jsx)(eO, { user: s.cherry, innerClassName: ej.bD }),
+                (0, r.jsx)(ek, { user: s.boom, innerClassName: ej.bD }),
+                (0, r.jsx)(ek, { user: s.cherry, innerClassName: ej.bD }),
             ],
         }),
     });
@@ -333,14 +335,14 @@ function eT(e) {
         i = (function (e) {
             let { author: t } = e;
             return (0, eR.rh)({
-                ...(0, ep.Ay)({ author: t, channelId: "1337", content: w.intl.string(w.t.d5YwK5) }),
+                ...(0, ep.Ay)({ author: t, channelId: "1337", content: F.intl.string(F.t.d5YwK5) }),
                 state: j.cmJ.SENT,
                 id: "0",
             });
         })({ author: t });
     return (0, r.jsx)("div", {
         role: "img",
-        "aria-label": w.intl.string(w.t["TN+ZvB"]),
+        "aria-label": F.intl.string(F.t["TN+ZvB"]),
         children: (0, r.jsx)(em.M, {
             children: (0, r.jsxs)(ex.Z, {
                 className: ej.f7,
@@ -366,14 +368,14 @@ function eT(e) {
 }
 function eL(e) {
     let { product: t, user: n, activeBundleSlide: i } = e,
-        s = eI.Ay.canUsePremiumProfileCustomization(n),
-        { pendingAvatar: l, ...a } = (0, u.cf)([eC.A], () => eC.A.getPendingChanges()),
+        s = eC.Ay.canUsePremiumProfileCustomization(n),
+        { pendingAvatar: l, ...a } = (0, u.cf)([eI.A], () => eI.A.getPendingChanges()),
         c = (0, eN.V7)({ userId: n.id, image: l }),
         o = t.type === L.R.BUNDLE ? t.items[i ?? 0] : void 0,
         d = o?.type ?? t.type,
         m = d === L.R.AVATAR_DECORATION,
         x = d === L.R.PROFILE_EFFECT,
-        { firstAvatarDecoration: h, firstProfileEffect: f, firstNameplate: E, firstProfileFrame: R } = (0, K.f5)(t),
+        { firstAvatarDecoration: h, firstProfileEffect: f, firstNameplate: E, firstProfileFrame: R } = (0, W.f5)(t),
         p = o?.type === L.R.AVATAR_DECORATION ? o : h,
         g = o?.type === L.R.PROFILE_EFFECT ? o : f,
         v = o?.type === L.R.PROFILE_FRAME ? o : R,
@@ -381,7 +383,7 @@ function eL(e) {
     if (d === L.R.NAMEPLATE && null != A)
         return (0, r.jsx)("div", {
             className: ej.Zj,
-            children: (0, r.jsx)(ek, { user: n, nameplate: A, avatarDecoration: p }),
+            children: (0, r.jsx)(eO, { user: n, nameplate: A, avatarDecoration: p }),
         });
     return (0, r.jsx)("div", {
         className: m ? ej.RA : ej.hZ,
@@ -416,31 +418,31 @@ function eb(e) {
 var ey = n(478016),
     eP = n(661531),
     eS = n(224016),
-    eB = n(913521);
-function eD() {
-    let e = [w.t.E1NP2x, w.t.kpMomJ, w.t.xT1Vfn, w.t.myyAEr, w.t.zTk8Ul];
+    eD = n(913521);
+function eB() {
+    let e = [F.t.E1NP2x, F.t.kpMomJ, F.t.xT1Vfn, F.t.myyAEr, F.t.zTk8Ul];
     return (0, r.jsxs)("div", {
-        className: eB.kL,
+        className: eD.kL,
         children: [
             (0, r.jsx)("img", {
                 src: "https://cdn.discordapp.com/assets/content/81644099db353c3ea7cefa334f8d298d06b768a68a349de663d2151fd01eddc7.png",
                 alt: "",
-                className: eB.ym,
+                className: eD.ym,
             }),
             (0, r.jsx)(eS.A, { color: "white" }),
             (0, r.jsx)("div", {
-                className: eB.PX,
+                className: eD.PX,
                 children: e.map((e, t) =>
                     (0, r.jsxs)(
                         "div",
                         {
-                            className: eB.UJ,
+                            className: eD.UJ,
                             children: [
                                 (0, r.jsx)(ey.U, { color: eP.A.colors.WHITE }),
                                 (0, r.jsx)(U.E, {
                                     variant: "text-sm/medium",
                                     color: "text-overlay-light",
-                                    children: w.intl.string(e),
+                                    children: F.intl.string(e),
                                 }),
                             ],
                         },
@@ -456,8 +458,8 @@ var eU = n(17928),
     eH = n(83554);
 function ew(e) {
     let { user: t } = e,
-        n = eI.Ay.canUsePremiumProfileCustomization(t),
-        { pendingAvatar: i, ...s } = (0, eU.cf)([eC.A], () => eC.A.getPendingChanges()),
+        n = eC.Ay.canUsePremiumProfileCustomization(t),
+        { pendingAvatar: i, ...s } = (0, eU.cf)([eI.A], () => eI.A.getPendingChanges()),
         l = (0, eN.V7)({ userId: t.id, image: i });
     return (0, r.jsx)("div", {
         className: eH.k,
@@ -475,83 +477,98 @@ function ew(e) {
 var eF = n(197952);
 function eG(e) {
     let { user: t, productRecord: n, isClosing: i, isOrbCheckoutModalOpen: s } = e;
-    return n.skuId === es.Dp.ORB_PROFILE_BADGE
+    return n.skuId === w.Dp.ORB_PROFILE_BADGE
         ? i || s
             ? null
             : (0, r.jsx)(ew, { user: t })
-        : (0, es.EZ)(n.skuId)
-          ? (0, r.jsx)(eD, {})
-          : (0, r.jsx)(Q.B, { product: n, className: eF.M });
+        : (0, w.EZ)(n.skuId)
+          ? (0, r.jsx)(eB, {})
+          : (0, r.jsx)(ee.B, { product: n, className: eF.M });
 }
 let eV = {
-    [eo.COLLECTIBLE]: { LeftPreview: J, Info: ec, RightPreview: eb },
+    [eo.COLLECTIBLE]: { LeftPreview: Q, Info: ec, RightPreview: eb },
     [eo.BUNDLE]: {
-        LeftPreview: J,
+        LeftPreview: Q,
         Info: function (e) {
-            let { productRecord: t, productName: n, selectedBundleSlide: i, setSelectedBundleSlide: l } = e,
-                a = t.items,
-                c = t.bundledProducts,
-                o = c?.[i]?.name,
-                u = a[i]?.type,
-                d = null != u ? (0, C.Dm)(u) : null,
-                m = w.intl.string(w.t.cTbdgu),
-                x = s.useRef(null),
-                h = s.useCallback(
+            let {
+                    productRecord: t,
+                    productName: n,
+                    selectedBundleSlide: i,
+                    setSelectedBundleSlide: l,
+                    onTrackClick: a,
+                } = e,
+                c = t.items,
+                o = t.bundledProducts,
+                u = o?.[i]?.name,
+                d = c[i]?.type,
+                m = null != d ? (0, I.Dm)(d) : null,
+                x = F.intl.string(F.t.cTbdgu),
+                h = s.useRef(null),
+                f = s.useCallback(
                     (e) => {
-                        a.length <= 1 ||
+                        c.length <= 1 ||
                             ("ArrowLeft" === e.key || "ArrowUp" === e.key
-                                ? (e.preventDefault(), l((e) => (e - 1 + a.length) % a.length))
+                                ? (e.preventDefault(), l((e) => (e - 1 + c.length) % c.length))
                                 : "ArrowRight" === e.key || "ArrowDown" === e.key
-                                  ? (e.preventDefault(), l((e) => (e + 1) % a.length))
+                                  ? (e.preventDefault(), l((e) => (e + 1) % c.length))
                                   : "Home" === e.key
                                     ? (e.preventDefault(), l(0))
-                                    : "End" === e.key && (e.preventDefault(), l(a.length - 1)));
+                                    : "End" === e.key && (e.preventDefault(), l(c.length - 1)));
                     },
-                    [a.length, l],
+                    [c.length, l],
                 );
             s.useEffect(() => {
-                let e = x.current;
+                let e = h.current;
                 if (null == e || !e.contains(document.activeElement)) return;
                 let t = e.querySelectorAll('[role="radio"]');
                 t[i]?.focus();
             }, [i]);
-            let f = s.useRef(null);
+            let E = s.useRef(null);
             return (
                 s.useLayoutEffect(() => {
-                    null != f.current && ((f.current.tabIndex = -1), f.current.focus());
+                    null != E.current && ((E.current.tabIndex = -1), E.current.focus());
                 }, []),
                 (0, r.jsxs)("div", {
-                    className: F.Qf,
+                    className: G.Qf,
                     children: [
-                        (0, r.jsx)(M.D, { ref: f, variant: "heading-xl/bold", className: F.R_, title: n, children: n }),
+                        (0, r.jsx)(M.D, { ref: E, variant: "heading-xl/bold", className: G.R_, title: n, children: n }),
                         (0, r.jsx)(U.E, {
                             variant: "text-sm/medium",
                             color: "text-default",
-                            children: w.intl.format(w.t["1tUCAO"], { count: a.length }),
+                            children: F.intl.format(F.t["1tUCAO"], { count: c.length }),
                         }),
                         (0, r.jsxs)("div", {
-                            className: F.hZ,
+                            className: G.hZ,
                             children: [
                                 (0, r.jsx)("div", {
-                                    className: F.vg,
+                                    className: G.vg,
                                     children: (0, r.jsx)("div", {
-                                        ref: x,
-                                        className: F.hK,
+                                        ref: h,
+                                        className: G.hK,
                                         role: "radiogroup",
-                                        "aria-label": m,
+                                        "aria-label": x,
                                         tabIndex: -1,
-                                        onKeyDown: h,
-                                        children: a.map((e, t) => {
-                                            let n = c?.[t]?.name ?? e.skuId;
+                                        onKeyDown: f,
+                                        children: c.map((e, t) => {
+                                            let n = o?.[t]?.name ?? e.skuId,
+                                                s = o?.[t]?.skuId ?? e.skuId;
                                             return (0, r.jsx)(
-                                                z,
-                                                { item: e, index: t, isSelected: t === i, setSelected: l, label: n },
+                                                K,
+                                                {
+                                                    item: e,
+                                                    index: t,
+                                                    isSelected: t === i,
+                                                    setSelected: l,
+                                                    label: n,
+                                                    trackedSkuId: s,
+                                                    onTrackClick: a,
+                                                },
                                                 e.skuId,
                                             );
                                         }),
                                     }),
                                 }),
-                                null != o && (0, r.jsx)(G, { name: o, typeLabel: d }),
+                                null != u && (0, r.jsx)(V, { name: u, typeLabel: m }),
                             ],
                         }),
                     ],
@@ -560,21 +577,21 @@ let eV = {
         },
         RightPreview: eb,
     },
-    [eo.EXTERNAL_ORB_BADGE]: { LeftPreview: ee, Info: ec, RightPreview: eG },
-    [eo.EXTERNAL_FRACTIONAL_NITRO]: { LeftPreview: ee, Info: ec, RightPreview: eG },
-    [eo.EXTERNAL_GENERIC]: { LeftPreview: ee, Info: ec, RightPreview: eG },
+    [eo.EXTERNAL_ORB_BADGE]: { LeftPreview: et, Info: ec, RightPreview: eG },
+    [eo.EXTERNAL_FRACTIONAL_NITRO]: { LeftPreview: et, Info: ec, RightPreview: eG },
+    [eo.EXTERNAL_GENERIC]: { LeftPreview: et, Info: ec, RightPreview: eG },
 };
 function ez(e) {
     var t;
     return eV[
         ((t = e),
-        (0, es.pQ)(t.skuId)
-            ? t.skuId === es.Dp.ORB_PROFILE_BADGE
+        (0, w.pQ)(t.skuId)
+            ? t.skuId === w.Dp.ORB_PROFILE_BADGE
                 ? "EXTERNAL_ORB_BADGE"
-                : (0, es.EZ)(t.skuId)
+                : (0, w.EZ)(t.skuId)
                   ? "EXTERNAL_FRACTIONAL_NITRO"
                   : "EXTERNAL_GENERIC"
-            : (0, C.aw)(t)
+            : (0, I.aw)(t)
               ? "BUNDLE"
               : "COLLECTIBLE")
     ];
@@ -592,7 +609,7 @@ function eX(e) {
             null != a &&
             !n.hideBadge &&
             null == n.badgeOverride &&
-            (0, O.JQ)({ skuId: a.skuId, type: a.type, items: [a] });
+            (0, k.JQ)({ skuId: a.skuId, type: a.type, items: [a] });
     return (
         (t = l
             ? (0, r.jsx)(eW.A, { location: "CollectiblesShopProductDetailsModal" })
@@ -627,19 +644,19 @@ function ts(e) {
         ? (0, r.jsx)(eq.m, {
               position: "top",
               align: "left",
-              text: w.intl.string(w.t.y1VWkZ),
+              text: F.intl.string(F.t.y1VWkZ),
               children: (0, r.jsxs)("div", {
-                  className: B()(tr.GX, t),
+                  className: D()(tr.GX, t),
                   children: [
                       (0, r.jsx)("span", {
                           className: tr.P0,
                           children: (0, r.jsx)(ti.m, { size: "md", color: "currentColor", className: tr.G }),
                       }),
-                      (0, r.jsx)(U.E, { variant: "text-md/semibold", children: w.intl.string(w.t.BEjTij) }),
+                      (0, r.jsx)(U.E, { variant: "text-md/semibold", children: F.intl.string(F.t.BEjTij) }),
                   ],
               }),
           })
-        : (0, r.jsx)(U.E, { variant: "text-md/semibold", className: t, children: w.intl.string(w.t["6cfuDj"]) });
+        : (0, r.jsx)(U.E, { variant: "text-md/semibold", className: t, children: F.intl.string(F.t["6cfuDj"]) });
 }
 var tl = n(878112),
     ta = n(572595),
@@ -653,18 +670,18 @@ let tu = function (e) {
         ? (0, r.jsx)(eJ.$, {
               variant: s,
               onClick: () => {
-                  i?.(es.sH.USE_NOW), l();
+                  i?.(w.sH.USE_NOW), l();
               },
               loading: a,
-              text: w.intl.string(w.t.MAS7uK),
+              text: F.intl.string(F.t.MAS7uK),
               fullWidth: !0,
           })
         : (0, r.jsx)(eJ.$, {
               variant: s,
               onClick: () => {
-                  i?.(es.sH.EDIT_PROFILE), o(), n?.();
+                  i?.(w.sH.EDIT_PROFILE), o(), n?.();
               },
-              text: w.intl.string(w.t["2p2aYz"]),
+              text: F.intl.string(F.t["2p2aYz"]),
               fullWidth: !0,
           });
 };
@@ -679,8 +696,8 @@ let tm = function (e) {
                 (0, r.jsx)(U.E, {
                     variant: "text-xs/semibold",
                     color: "text-strong",
-                    children: w.intl.format(w.t["3cglst"], {
-                        articleURL: et.A.getArticleURL(j.MVz.SHOP_FRAMES_EARLY_ACCESS),
+                    children: F.intl.format(F.t["3cglst"], {
+                        articleURL: en.A.getArticleURL(j.MVz.SHOP_FRAMES_EARLY_ACCESS),
                     }),
                 }),
                 n,
@@ -700,9 +717,9 @@ function tE(e) {
         l = (0, e6.RS)(t, n);
     return (0, r.jsxs)(U.E, {
         variant: s,
-        className: B()(tf.v, i),
+        className: D()(tf.v, i),
         children: [
-            (0, r.jsx)(th.A, { children: w.intl.format(w.t["2CEGln"], { price: l }) }),
+            (0, r.jsx)(th.A, { children: F.intl.format(F.t["2CEGln"], { price: l }) }),
             (0, r.jsx)("span", { "aria-hidden": !0, children: l }),
         ],
     });
@@ -721,25 +738,25 @@ function tg(e) {
             discountIconDisplayMode: o,
             discountIconSize: u = "md",
         } = e,
-        d = (0, C.WD)(t, { hasShopDiscount: n, discount: s });
+        d = (0, I.WD)(t, { hasShopDiscount: n, discount: s });
     if (null == d) return null;
     let { defaultPrice: m, showDefaultPriceOnly: x } = d;
     if (x)
         return (0, r.jsx)("div", {
-            className: B()(tp.kG, l),
+            className: D()(tp.kG, l),
             children: (0, r.jsx)(tR.x, { priceAmount: m.amount, priceCurrency: m.currency }),
         });
     let { showDiscountPrice: h, originalPrice: f, finalPrice: E } = d;
     return (0, r.jsxs)("div", {
-        className: B()(tp.kG, l),
+        className: D()(tp.kG, l),
         children: [
             c ? null : (0, r.jsx)(tE, { price: f, className: tp.q9 }),
             (0, r.jsx)(tR.x, {
                 priceAmount: E.amount,
                 priceCurrency: E.currency,
                 discount: s,
-                className: B()({ [tp.q9]: null == a }),
-                discountIconConfig: h && null != o ? { displayMode: o, source: i ?? C.D0.NITRO, size: u } : void 0,
+                className: D()({ [tp.q9]: null == a }),
+                discountIconConfig: h && null != o ? { displayMode: o, source: i ?? I.D0.NITRO, size: u } : void 0,
                 discountOfferAmount: a,
             }),
         ],
@@ -748,17 +765,16 @@ function tg(e) {
 var tv = n(403581),
     tA = n(532794),
     tN = n(202541),
-    tC = n(447806);
-function tI(e) {
+    tI = n(447806);
+function tC(e) {
     let { text: t, onTrackClick: n } = e,
         { analyticsLocations: i } = (0, h.Ay)(),
         l = s.useRef(null);
-    return (0, r.jsx)(D.D, {
-        className: tC.F,
+    return (0, r.jsx)(B.D, {
+        className: tI.F,
         innerRef: l,
         onClick: () => {
-            n?.(es.sH.SUBSCRIBE_NOW),
-                (0, tA.A)({ subscriptionTier: tN.pe.TIER_2, analyticsLocations: i, returnRef: l });
+            n?.(w.sH.SUBSCRIBE_NOW), (0, tA.A)({ subscriptionTier: tN.pe.TIER_2, analyticsLocations: i, returnRef: l });
         },
         children: t,
     });
@@ -766,45 +782,45 @@ function tI(e) {
 var t_ = n(805961);
 function tj(e) {
     let { product: t, onTrackClick: n } = e,
-        i = (0, C.yt)(t, j.lid.PREMIUM_TIER_2);
+        i = (0, I.yt)(t, j.lid.PREMIUM_TIER_2);
     if (null == i) return null;
     let s = (0, e6.RS)(i.amount, i.currency);
     return (0, r.jsxs)("div", {
         className: t_.k,
         children: [
             (0, r.jsx)(eq.m, {
-                text: w.intl.string(w.t.MPFyJ5),
-                "aria-label": w.intl.string(w.t.X3Ekj8),
+                text: F.intl.string(F.t.MPFyJ5),
+                "aria-label": F.intl.string(F.t.X3Ekj8),
                 children: (0, r.jsx)(tv.t, { size: "md", color: "currentColor", className: t_.o }),
             }),
             (0, r.jsx)(U.E, {
                 variant: "text-xs/medium",
-                children: w.intl.format(w.t.Sv8iic, {
+                children: F.intl.format(F.t.Sv8iic, {
                     price: s,
-                    subscribeNowHook: (e) => (0, r.jsx)(tI, { text: e, onTrackClick: n }),
+                    subscribeNowHook: (e) => (0, r.jsx)(tC, { text: e, onTrackClick: n }),
                 }),
             }),
         ],
     });
 }
-var tO = n(818348),
-    tk = n(752274);
+var tk = n(818348),
+    tO = n(752274);
 function tT(e) {
     let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: i, discount: s } = e,
-        l = n ? w.intl.string(w.t.wu4gyV) : w.intl.string(w.t.eFNRzU),
+        l = n ? F.intl.string(F.t.wu4gyV) : F.intl.string(F.t.eFNRzU),
         a = n || !i;
     return (0, r.jsxs)("div", {
-        className: tk.eg,
+        className: tO.eg,
         children: [
             (0, r.jsx)("div", {
-                className: tk.zR,
-                children: (0, r.jsx)(U.E, { variant: "text-xs/normal", className: a ? tk.r9 : void 0, children: l }),
+                className: tO.zR,
+                children: (0, r.jsx)(U.E, { variant: "text-xs/normal", className: a ? tO.r9 : void 0, children: l }),
             }),
             (0, r.jsx)(tR.x, {
                 priceAmount: t.amount,
                 priceCurrency: t.currency,
                 discount: s,
-                className: a ? tk.r9 : void 0,
+                className: a ? tO.r9 : void 0,
             }),
         ],
     });
@@ -824,13 +840,13 @@ function tL(e) {
         d = null != u;
     return 0 === t.length
         ? null
-        : t[0].currency === tO.Yr.DISCORD_ORB
+        : t[0].currency === tk.Yr.DISCORD_ORB
           ? (0, r.jsx)(tT, { orbPrice: t[0], isProductDisabled: o, hasSufficientOrbs: a, discount: s })
           : (0, r.jsxs)("div", {
-                className: tk.eg,
+                className: tO.eg,
                 children: [
                     (0, r.jsxs)("div", {
-                        className: tk.pw,
+                        className: tO.pw,
                         children: [
                             (0, r.jsx)(tg, {
                                 product: l,
@@ -846,11 +862,11 @@ function tL(e) {
                         ],
                     }),
                     t.length > 1 &&
-                        t[1].currency === tO.Yr.DISCORD_ORB &&
+                        t[1].currency === tk.Yr.DISCORD_ORB &&
                         (0, r.jsx)(tR.x, {
                             priceAmount: t[1].amount,
                             priceCurrency: t[1].currency,
-                            className: o || !a ? tk.r9 : void 0,
+                            className: o || !a ? tO.r9 : void 0,
                         }),
                 ],
             });
@@ -859,8 +875,8 @@ var tb = n(525723),
     ty = n(347722),
     tP = n(57020),
     tS = n(61750),
-    tB = n(237309);
-function tD(e) {
+    tD = n(237309);
+function tB(e) {
     let t = (0, ty.X)(e.selectedProduct),
         n = t && null != e.giftRecipient;
     return (0, r.jsx)(e5.$, {
@@ -886,52 +902,52 @@ function tU(e) {
             canGiftProduct: E,
         } = e,
         { cardId: p, sessionId: g, tilePosition: N } = (0, A.uM)() ?? {},
-        I = (0, e7.L)(tN.PremiumTypes.TIER_2),
-        _ = (0, C.xM)(t),
-        O = (0, eK.Do)("CollectiblesShopProductDetailsModal") && i.type === L.R.PROFILE_FRAME,
-        k = eI.Ay.canUseShopDiscounts(t) || O,
+        C = (0, e7.L)(tN.PremiumTypes.TIER_2),
+        _ = (0, I.xM)(t),
+        k = (0, eK.Do)("CollectiblesShopProductDetailsModal") && i.type === L.R.PROFILE_FRAME,
+        O = eC.Ay.canUseShopDiscounts(t) || k,
         T = (0, tt.h)(n),
         { isPurchased: b, isPartiallyOwnedBundle: y } = (0, tt.h)(i),
-        { isDisabled: P } = (0, ei.I)(i.skuId),
-        S = (0, C.Zu)({ product: i, isPartiallyOwnedBundle: y, isPurchased: b }),
-        D = (0, u.bG)([e8.A], () => e8.A.isClaiming === i?.skuId),
+        { isDisabled: P } = (0, er.I)(i.skuId),
+        S = (0, I.Zu)({ product: i, isPartiallyOwnedBundle: y, isPurchased: b }),
+        B = (0, u.bG)([e8.A], () => e8.A.isClaiming === i?.skuId),
         M = (0, e2.Ay)(),
         H = (0, eZ.M)(M),
-        F = (0, C.G0)(i),
-        G = (0, C.yt)(i, j.lid.DEFAULT),
-        V = G?.amount === 0,
-        { prioritizeGifting: z, removeOrbsClaim: K } = (0, e5.q)(),
-        W = (0, tb.V_)(n),
-        Y = null != W,
-        $ = (0, te.W)("CollectiblesShopProductDetailsModal"),
-        X = c === es.G2.ORBS && a ? tx.Hi.ORBS : $ ? tx.Hi.FIAT : void 0,
-        { checkoutEligiblePrices: q, hasSufficientOrbs: Z } = (0, tP.F)({
+        G = (0, I.G0)(i),
+        V = (0, I.yt)(i, j.lid.DEFAULT),
+        z = V?.amount === 0,
+        { prioritizeGifting: K, removeOrbsClaim: W } = (0, e5.q)(),
+        Y = (0, tb.V_)(n),
+        $ = null != Y,
+        X = (0, te.W)("CollectiblesShopProductDetailsModal"),
+        q = c === w.G2.ORBS && a ? tx.Hi.ORBS : X ? tx.Hi.FIAT : void 0,
+        { checkoutEligiblePrices: Z, hasSufficientOrbs: J } = (0, tP.F)({
             product: i,
-            hasShopDiscount: k,
-            hasDiscountOffer: Y,
-            prioritizedCurrency: X,
+            hasShopDiscount: O,
+            hasDiscountOffer: $,
+            prioritizedCurrency: q,
         }),
-        J = z && K ? q.filter((e) => e.currency !== tO.Yr.DISCORD_ORB) : q,
-        Q = (0, tn.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
-        ee = s.useMemo(() => q.some((e) => e.currency === tO.Yr.DISCORD_ORB), [q]);
-    (0, e3.W)({ disableFetch: !ee });
-    let et = s.useCallback(() => {
-        f(es.sH.BUY_WITH_FIAT),
+        Q = K && W ? Z.filter((e) => e.currency !== tk.Yr.DISCORD_ORB) : Z,
+        ee = (0, tn.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
+        et = s.useMemo(() => Z.some((e) => e.currency === tk.Yr.DISCORD_ORB), [Z]);
+    (0, e3.W)({ disableFetch: !et });
+    let en = s.useCallback(() => {
+        f(w.sH.BUY_WITH_FIAT),
             (0, e4.A)({
                 skuId: i.skuId,
                 analyticsLocations: m,
                 discoverySessionId: g,
-                onClose: (e) => (e ? h() : (0, tO.tE)()),
+                onClose: (e) => (e ? h() : (0, tk.tE)()),
             });
     }, [m, h, i.skuId, f, g]);
-    function en(e) {
+    function ei(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             i = (0, r.jsx)(e9.A, {
                 subscriptionTier: tN.pe.TIER_2,
                 fullWidth: !0,
                 buttonTextOverride: e,
                 onClick: () => {
-                    f(es.sH.UNLOCK_WITH_NITRO), (0, ta.M)();
+                    f(w.sH.UNLOCK_WITH_NITRO), (0, ta.M)();
                 },
                 onSubscribeModalClose: () => {
                     (0, ta.t)({
@@ -951,10 +967,10 @@ function tU(e) {
             });
         return t ? (0, r.jsx)(tm, { analyticsLocations: m, children: i }) : i;
     }
-    function er(e, t) {
-        let n = P ? w.intl.string(w.t.cTdr3x) : w.intl.string(w.t.zqh7ZM),
-            s = !Z || P,
-            l = w.intl.formatToPlainString(w.t.yi41qQ, { orbPrice: e.amount }),
+    function es(e, t) {
+        let n = P ? F.intl.string(F.t.cTdr3x) : F.intl.string(F.t.zqh7ZM),
+            s = !J || P,
+            l = F.intl.formatToPlainString(F.t.yi41qQ, { orbPrice: e.amount }),
             a = s ? `${l}, ${n}` : l;
         return (0, r.jsx)(eq.m, {
             position: "top",
@@ -964,7 +980,7 @@ function tU(e) {
             children: (0, r.jsx)(eJ.$, {
                 variant: t ? "primary" : "secondary",
                 onClick: function () {
-                    f(es.sH.BUY_WITH_ORBS),
+                    f(w.sH.BUY_WITH_ORBS),
                         (0, R.B4)({
                             skuId: i.skuId,
                             onComplete: (e) => {
@@ -974,7 +990,7 @@ function tU(e) {
                                         product: i,
                                         analyticsLocations: m,
                                         itemConsumed: e?.entitlements?.[0]?.consumed,
-                                        purchaseType: es.gs.ORB,
+                                        purchaseType: w.gs.ORB,
                                     });
                             },
                             analyticsLocations: m,
@@ -983,9 +999,9 @@ function tU(e) {
                 },
                 disabled: s,
                 "aria-label": a,
-                text: w.intl.format(w.t.JC15qj, {
+                text: F.intl.format(F.t.JC15qj, {
                     orbPrice: e.amount,
-                    orbIconHook: () => (0, r.jsx)(eQ.C, { className: tB.fN, size: "sm", color: "currentColor" }),
+                    orbIconHook: () => (0, r.jsx)(eQ.C, { className: tD.fN, size: "sm", color: "currentColor" }),
                 }),
                 fullWidth: !0,
             }),
@@ -995,7 +1011,7 @@ function tU(e) {
             (0, r.jsx)(tl.A, {
                 primary: !0,
                 fullWidth: !0,
-                fullWidthLabel: w.intl.string(w.t.ilhtIa),
+                fullWidthLabel: F.intl.string(F.t.ilhtIa),
                 product: i,
                 onSuccess: h,
                 giftRecipient: o,
@@ -1004,18 +1020,18 @@ function tU(e) {
             }),
         ea = function (e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-            return (0, r.jsx)(eJ.$, { variant: "secondary", onClick: et, text: e, fullWidth: t });
+            return (0, r.jsx)(eJ.$, { variant: "secondary", onClick: en, text: e, fullWidth: t });
         },
         ec = () =>
             (0, r.jsxs)("div", {
-                className: tB.pq,
+                className: tD.pq,
                 children: [
-                    (0, r.jsx)(U.E, { variant: "text-md/semibold", children: w.intl.string(w.t.rt69oo) }),
+                    (0, r.jsx)(U.E, { variant: "text-md/semibold", children: F.intl.string(F.t.rt69oo) }),
                     !b &&
                         (0, r.jsx)(U.E, {
-                            className: B()(tB.ed, !H && tB.un),
+                            className: D()(tD.ed, !H && tD.un),
                             variant: "text-xxs/normal",
-                            children: w.intl.string(w.t.nKdAlO),
+                            children: F.intl.string(F.t.nKdAlO),
                         }),
                 ],
             }),
@@ -1024,30 +1040,30 @@ function tU(e) {
                 ? (0, r.jsx)(tL, {
                       prices: e,
                       product: i,
-                      hasShopDiscount: k,
+                      hasShopDiscount: O,
                       discountSource: _,
-                      discount: (0, C.fT)(i, k, e[0]?.currency),
-                      hasSufficientOrbs: Z,
+                      discount: (0, I.fT)(i, O, e[0]?.currency),
+                      hasSufficientOrbs: J,
                       isProductDisabled: P,
-                      discountOfferAmount: W,
+                      discountOfferAmount: Y,
                       onTrackClick: f,
                   })
                 : null;
     return (0, r.jsxs)("div", {
-        className: tB.iw,
+        className: tD.iw,
         children: [
             (() => {
                 let e = T.isPurchased || T.isPartiallyOwnedBundle;
-                if (!z) return e ? (0, r.jsx)(ts, { className: tB.On, isPartiallyPurchased: y }) : F ? ec() : eo(J);
-                if (F && !e) return ec();
-                let t = J.find((e) => e.currency !== tO.Yr.DISCORD_ORB);
+                if (!K) return e ? (0, r.jsx)(ts, { className: tD.On, isPartiallyPurchased: y }) : G ? ec() : eo(Q);
+                if (G && !e) return ec();
+                let t = Q.find((e) => e.currency !== tk.Yr.DISCORD_ORB);
                 return eo(null == t ? [] : [t]);
             })(),
             (0, r.jsx)(e1.B, {
                 direction: "vertical",
                 gap: 8,
                 children: (() => {
-                    if (F && !I && !V) return en(w.intl.string(w.t.sEAnVH));
+                    if (G && !C && !z) return ei(F.intl.string(F.t.sEAnVH));
                     if (!S)
                         return E
                             ? (0, r.jsx)(tl.A, {
@@ -1062,7 +1078,7 @@ function tU(e) {
                             : null;
                     if (b)
                         return E
-                            ? z
+                            ? K
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           el(),
@@ -1090,59 +1106,59 @@ function tU(e) {
                                       ],
                                   })
                             : (0, r.jsx)(tu, { product: i, onSuccess: h, onTrackClick: f });
-                    if (Q) return en(w.intl.string(w.t["9wfL34"]), !0);
-                    if (F)
+                    if (ee) return ei(F.intl.string(F.t["9wfL34"]), !0);
+                    if (G)
                         return (0, r.jsx)(eJ.$, {
-                            loading: D,
-                            loadingStartedLabel: w.intl.string(w.t["TYw+9s"]),
-                            loadingFinishedLabel: w.intl.string(w.t.Pg1UP5),
+                            loading: B,
+                            loadingStartedLabel: F.intl.string(F.t["TYw+9s"]),
+                            loadingFinishedLabel: F.intl.string(F.t.Pg1UP5),
                             onClick: async () => {
-                                f(es.sH.ADD_TO_COLLECTION),
+                                f(w.sH.ADD_TO_COLLECTION),
                                     await (0, v.iJ)(i.skuId),
                                     h(),
                                     (0, tS.A)({
                                         product: i,
                                         analyticsLocations: m,
-                                        purchaseType: es.gs.PREMIUM_PURCHASE,
+                                        purchaseType: w.gs.PREMIUM_PURCHASE,
                                     });
                             },
-                            text: w.intl.string(w.t.zp6caO),
+                            text: F.intl.string(F.t.zp6caO),
                             fullWidth: !0,
                         });
-                    if (z) {
+                    if (K) {
                         let e, t;
                         return (
-                            (e = J.find((e) => e.currency !== tO.Yr.DISCORD_ORB)),
-                            (t = J.find((e) => e.currency === tO.Yr.DISCORD_ORB)),
+                            (e = Q.find((e) => e.currency !== tk.Yr.DISCORD_ORB)),
+                            (t = Q.find((e) => e.currency === tk.Yr.DISCORD_ORB)),
                             null != e && null != t
                                 ? (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           (0, r.jsxs)(e1.B, {
                                               direction: "horizontal",
                                               gap: 8,
-                                              children: [el(), ea(w.intl.string(w.t.pi7PDT), !1)],
+                                              children: [el(), ea(F.intl.string(F.t.pi7PDT), !1)],
                                           }),
-                                          er(t, !1),
+                                          es(t, !1),
                                       ],
                                   })
                                 : (0, r.jsxs)(r.Fragment, {
                                       children: [
                                           el(),
-                                          null != e ? ea(w.intl.string(w.t.pxocaf)) : null != t ? er(t, !1) : null,
+                                          null != e ? ea(F.intl.string(F.t.pxocaf)) : null != t ? es(t, !1) : null,
                                       ],
                                   })
                         );
                     }
                     return (0, r.jsx)(r.Fragment, {
-                        children: q.map((e, t) => {
+                        children: Z.map((e, t) => {
                             let n,
                                 l = 0 === t,
                                 a =
-                                    e.currency === tO.Yr.DISCORD_ORB
-                                        ? er(e, l)
-                                        : ((n = Y
-                                              ? w.intl.formatToPlainString(w.t["5U5RB5"], { discountOfferAmount: W })
-                                              : w.intl.formatToPlainString(w.t["cNSL/j"], {
+                                    e.currency === tk.Yr.DISCORD_ORB
+                                        ? es(e, l)
+                                        : ((n = $
+                                              ? F.intl.formatToPlainString(F.t["5U5RB5"], { discountOfferAmount: Y })
+                                              : F.intl.formatToPlainString(F.t["cNSL/j"], {
                                                     price: (0, e6.$g)(e.amount, e.currency),
                                                 })),
                                           (0, r.jsxs)(e0.e, {
@@ -1151,7 +1167,7 @@ function tU(e) {
                                               children: [
                                                   (0, r.jsx)(eJ.$, {
                                                       variant: l ? "primary" : "secondary",
-                                                      onClick: et,
+                                                      onClick: en,
                                                       text: n,
                                                       fullWidth: !0,
                                                   }),
@@ -1179,7 +1195,7 @@ function tH(e) {
     let { productRecord: t, selectedProduct: n, previewingProduct: i, user: s, selectedBundleSlide: l } = e,
         a = ez(t);
     return (0, r.jsxs)("div", {
-        className: B()(tM.wd, { [tM.E7]: null != a.LeftPreview }),
+        className: D()(tM.wd, { [tM.E7]: null != a.LeftPreview }),
         children: [
             (0, r.jsx)("div", {
                 className: tM.dL,
@@ -1197,7 +1213,7 @@ function tH(e) {
                     }),
                 }),
             (0, r.jsx)("div", { className: tM.F_, children: (0, r.jsx)(a.Info, { ...e }) }),
-            (0, r.jsx)(tD, { ...e }),
+            (0, r.jsx)(tB, { ...e }),
         ],
     });
 }
@@ -1221,11 +1237,11 @@ function tZ(e) {
     let { skuId: t, tab: n, onTrackClick: i } = e,
         l = s.useCallback(() => {
             g.default.track(j.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
-                i?.(es.sH.COPY_LINK),
-                (0, tX.C)((0, tq.o)(t, n), () => (0, tK.P0)((0, tW.o)(w.intl.string(w.t["L/PwZf"]), tY.Ck.SUCCESS)));
+                i?.(w.sH.COPY_LINK),
+                (0, tX.C)((0, tq.o)(t, n), () => (0, tK.P0)((0, tW.o)(F.intl.string(F.t["L/PwZf"]), tY.Ck.SUCCESS)));
         }, [t, n, i]);
     return (0, r.jsx)(tF.K, {
-        "aria-label": w.intl.string(w.t.WqhZss),
+        "aria-label": F.intl.string(F.t.WqhZss),
         onClick: l,
         icon: t$.q,
         variant: "overlay-secondary",
@@ -1239,7 +1255,7 @@ function t1(e) {
     let { skuId: t, product: i, productName: l, tab: a, onTrackClick: c } = e,
         o = s.useCallback(() => {
             g.default.track(j.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: t }),
-                c?.(es.sH.SHARE_LINK),
+                c?.(w.sH.SHARE_LINK),
                 ((e) => {
                     let { skuId: t, product: i, productName: s, tab: l, source: a } = e;
                     (0, tQ.openModalLazy)(
@@ -1270,10 +1286,10 @@ function t1(e) {
                 })({ skuId: t, product: i, productName: l, tab: a, source: "collectibles-shop-pdp" });
         }, [t, i, l, a, c]);
     return (0, r.jsx)(eq.m, {
-        text: w.intl.string(w.t.RDE0Sc),
+        text: F.intl.string(F.t.RDE0Sc),
         ariaHidden: !0,
         children: (0, r.jsx)(tF.K, {
-            "aria-label": w.intl.string(w.t.Ej3B3Y),
+            "aria-label": F.intl.string(F.t.Ej3B3Y),
             onClick: o,
             icon: tJ.A,
             variant: "overlay-secondary",
@@ -1297,7 +1313,7 @@ function nt(e) {
             (0, r.jsx)("div", {
                 className: ne.Y,
                 children: (0, r.jsx)(tF.K, {
-                    "aria-label": w.intl.string(w.t["3NdvMK"]),
+                    "aria-label": F.intl.string(F.t["3NdvMK"]),
                     onClick: t,
                     icon: t6.f,
                     variant: "overlay-secondary",
@@ -1307,7 +1323,7 @@ function nt(e) {
             (0, r.jsx)("div", {
                 className: ne.K,
                 children: (0, r.jsx)(tF.K, {
-                    "aria-label": w.intl.string(w.t.RYIeOX),
+                    "aria-label": F.intl.string(F.t.RYIeOX),
                     onClick: n,
                     icon: t8.u,
                     variant: "overlay-secondary",
@@ -1337,9 +1353,9 @@ function ni(e) {
         } = e,
         R = ez(n),
         p = (0, tV.x)("CollectiblesShopProductDetailsModal"),
-        v = (0, C.aw)(l),
+        v = (0, I.aw)(l),
         N = v ? l.items.length : 0,
-        I = tz.useConfig({ location: "CollectiblesShopProductDetailsModal" }).showCollectionButton,
+        C = tz.useConfig({ location: "CollectiblesShopProductDetailsModal" }).showCollectionButton,
         _ = (function () {
             let e = (0, t3.a)("CollectiblesPdpNavigateToCollection"),
                 { sessionId: t } = (0, A.uM)() ?? {},
@@ -1358,14 +1374,14 @@ function ni(e) {
                     )
                         return void (0, t9.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
                     n();
-                    let s = !0 === i.isOrbsExclusive ? es.G2.ORBS : es.G2.CATALOG;
-                    (0, t9.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)}&${es.P1}=${i.skuId}`);
+                    let s = !0 === i.isOrbsExclusive ? w.G2.ORBS : w.G2.CATALOG;
+                    (0, t9.pX)(`${j.BVt.COLLECTIBLES_SHOP_WITH_TAB(s)}&${w.P1}=${i.skuId}`);
                 },
                 [e, t, n],
             );
         })(),
-        O = s.useCallback(() => {
-            E(es.sH.GO_TO_COLLECTION), f(), _(x, "go_to_collection_button");
+        k = s.useCallback(() => {
+            E(w.sH.GO_TO_COLLECTION), f(), _(x, "go_to_collection_button");
         }, [x, f, E, _]),
         T = s.useCallback(() => {
             N <= 1 || o((e) => (e - 1 + N) % N);
@@ -1387,35 +1403,35 @@ function ni(e) {
             [N, T, b],
         ),
         P = s.useCallback(() => {
-            E(es.sH.CLOSE_DETAIL), f();
+            E(w.sH.CLOSE_DETAIL), f();
         }, [E, f]),
         S = s.useRef(null),
-        D = s.useRef(!0);
+        B = s.useRef(!0);
     return (
         s.useLayoutEffect(() => {
-            if (D.current) {
-                D.current = !1;
+            if (B.current) {
+                B.current = !1;
                 return;
             }
             let e = S.current;
             null != e && ((e.style.animation = "none"), e.offsetHeight, (e.style.animation = ""));
         }, [c]),
         (0, r.jsxs)("div", {
-            className: B()(nn.i1, (0, es.EZ)(l.skuId) ? nn.bF : l.type === L.R.AVATAR_DECORATION ? nn.Jq : nn.eF),
+            className: D()(nn.i1, (0, w.EZ)(l.skuId) ? nn.bF : l.type === L.R.AVATAR_DECORATION ? nn.Jq : nn.eF),
             style: null != m ? { backgroundImage: `url(${m})` } : void 0,
             onKeyDown: y,
             children: [
-                (p || I) &&
+                (p || C) &&
                     (0, r.jsx)("div", {
                         className: nn.GV,
                         children: (0, r.jsx)(eq.m, {
-                            text: w.intl.string(w.t["Hr/q/6"]),
+                            text: F.intl.string(F.t["Hr/q/6"]),
                             children: (0, r.jsx)(eJ.$, {
                                 variant: "overlay-secondary",
                                 size: "sm",
                                 icon: tw.f,
                                 text: x.name,
-                                onClick: O,
+                                onClick: k,
                             }),
                         }),
                     }),
@@ -1447,13 +1463,13 @@ function ni(e) {
                             ? (0, r.jsx)(t1, {
                                   skuId: l.skuId,
                                   product: l,
-                                  productName: (0, k.VG)(l),
+                                  productName: (0, O.VG)(l),
                                   tab: h,
                                   onTrackClick: E,
                               })
                             : (0, r.jsx)(tZ, { skuId: l.skuId, tab: h, onTrackClick: E }),
                         (0, r.jsx)(tF.K, {
-                            "aria-label": w.intl.string(w.t.cpT0Cq),
+                            "aria-label": F.intl.string(F.t.cpT0Cq),
                             onClick: P,
                             icon: tG.d,
                             variant: "overlay-secondary",
@@ -1474,8 +1490,8 @@ let ns = function (e) {
             category: l,
             returnRef: L,
             analyticsSource: S,
-            analyticsLocations: B,
-            shouldCheckoutWithOrbs: D,
+            analyticsLocations: D,
+            shouldCheckoutWithOrbs: B,
             tab: U,
             giftRecipient: M,
             giftingOrigin: H,
@@ -1485,16 +1501,16 @@ let ns = function (e) {
         { previewingVariantIndex: G } = F,
         V = (0, N.Q)(i),
         z = b(i, G),
-        K = (0, O.rb)(i, V);
+        K = (0, k.rb)(i, V);
     a()(null != K, "Selected product should not be null");
-    let { analyticsLocations: W } = (0, h.Ay)([...B, x.A.COLLECTIBLES_SHOP_DETAILS_MODAL]);
+    let { analyticsLocations: W } = (0, h.Ay)([...D, x.A.COLLECTIBLES_SHOP_DETAILS_MODAL]);
     (0, T.Yr)(K.skuId);
     let Y = (0, y.U1)(l),
         [$, X] = s.useState(0);
     s.useEffect(() => {
         null != w && (0, E.A)(w.id, w.getAvatarURL(void 0, 80));
     }, [w]);
-    let q = s.useMemo(() => (0, C.V6)(i.type, i.skuId), [i.type, i.skuId]);
+    let q = s.useMemo(() => (0, I.V6)(i.type, i.skuId), [i.type, i.skuId]);
     s.useEffect(() => {
         g.default.track(j.HAw.OPEN_MODAL, {
             type: j.JJy.COLLECTIBLES_SHOP_DETAILS_MODAL,
@@ -1506,12 +1522,12 @@ let ns = function (e) {
             (0, v.RD)(K.skuId);
     }, [S, W, K.skuId, q]);
     let { cardId: Z, sessionId: J, tilePosition: Q } = (0, A.uM)() ?? {},
-        ee = s.useMemo(() => (0, O.v8)(i), [i]),
+        ee = s.useMemo(() => (0, k.v8)(i), [i]),
         et = (function (e) {
             let { skuId: t, productSkuIds: n, analyticsLocations: i } = e,
                 { cardId: r, sessionId: l } = (0, A.uM)() ?? {},
                 a = (0, _.o)(),
-                c = (0, C.xM)(a);
+                c = (0, I.xM)(a);
             return s.useCallback(
                 (e, s) => {
                     g.default.track(j.HAw.SHOP_PRODUCT_DETAIL_PAGE_CLICKED, {
@@ -1521,7 +1537,7 @@ let ns = function (e) {
                         card_id: r,
                         product_sku_ids: n,
                         location_stack: i,
-                        discount_source: (0, C.b_)(c),
+                        discount_source: (0, I.b_)(c),
                     });
                 },
                 [t, i, r, n, l, c],
@@ -1541,9 +1557,9 @@ let ns = function (e) {
     });
     let en = (0, R.o6)(),
         ei = t === d.ip.EXITING,
-        er = (0, I.c)("product_details_modal");
+        er = (0, C.c)("product_details_modal");
     if (null == w || (i.skuId === o.j.PREMIUM_TIER_2_1_DAY && !er)) return null;
-    let es = (0, k.VG)(i),
+    let es = (0, O.VG)(i),
         el = {
             user: w,
             productRecord: i,
@@ -1556,7 +1572,7 @@ let ns = function (e) {
             selectedBundleSlide: $,
             setSelectedBundleSlide: X,
             tab: U,
-            shouldCheckoutWithOrbs: D,
+            shouldCheckoutWithOrbs: B,
             giftRecipient: M?.id !== w.id ? M : void 0,
             giftingOrigin: M?.id !== w.id ? H : void 0,
             analyticsLocations: W,
