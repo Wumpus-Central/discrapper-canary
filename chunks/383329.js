@@ -1,48 +1,46 @@
-a.d(l, { R: () => b });
-var t = a(64700),
-    u = a(735438),
-    i = a.n(u),
-    s = a(17928),
-    n = a(22574),
-    r = a(929396),
-    o = a(471677),
-    d = a(735321),
-    m = a(760751),
-    c = a(282435);
-function p(e) {
-    return c.Bf.get(e) ?? 0;
+l.d(a, { R: () => h });
+var o = l(64700),
+    r = l(735438),
+    t = l.n(r),
+    n = l(17928),
+    i = l(929396),
+    c = l(471677),
+    m = l(735321),
+    u = l(760751),
+    s = l(282435);
+function d(e) {
+    return s.Bf.get(e) ?? 0;
 }
-function b() {
-    let { query: e, selectedGameIds: l } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        a = (0, s.bG)([m.A], () => m.A.games),
-        u = t.useMemo(
+function h() {
+    let { query: e, selectedGameIds: a } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        l = (0, n.bG)([u.A], () => u.A.games),
+        r = o.useMemo(
             () =>
-                i()(a)
-                    .filter((e) => (0, d.XX)(e))
+                t()(l)
+                    .filter((e) => (0, m.XX)(e))
                     .map((e) => ({ id: e.id, value: e.id, label: e.name }))
                     .sortBy((e) => {
-                        let { value: l } = e;
-                        return p(l);
+                        let { value: a } = e;
+                        return d(a);
                     })
                     .reverse()
                     .value(),
-            [a],
+            [l],
         ),
-        c = t.useCallback((e, l) => p(l.item.value) - p(e.item.value), []),
-        b = t.useMemo(() => ({ baseSort: c, keys: ["label"] }), [c]),
-        { enabled: v } = n.A.useConfig({ location: "useProfileSortedGames" }),
-        { results: f, error: h } = (0, o.J$)(v ? (e ?? null) : null),
-        k = v && null == h && null != f,
-        g = t.useMemo(() => new Set((f ?? []).filter((e) => (0, r.qS)(e)).map((e) => e.id)), [f]),
-        C = t.useMemo(
+        s = o.useCallback((e, a) => d(a.item.value) - d(e.item.value), []),
+        h = o.useMemo(() => ({ baseSort: s, keys: ["label"] }), [s]),
+        p = (e?.trim().length ?? 0) > 0,
+        { results: f } = (0, c.J$)(e ?? null),
+        v = o.useMemo(() => new Set((f ?? []).filter((e) => (0, i.qS)(e)).map((e) => e.id)), [f]),
+        b = o.useMemo(
             () => [
-                ...(f ?? []).filter((e) => g.has(e.id)).map((e) => ({ id: e.id, value: e.id, label: e.name })),
-                ...(l ?? [])
-                    .filter((e) => !g.has(e))
-                    .map((e) => ({ id: e, value: e, label: m.A.getDetectableGame(e)?.name ?? "" })),
+                ...(f ?? []).filter((e) => v.has(e.id)).map((e) => ({ id: e.id, value: e.id, label: e.name })),
+                ...(a ?? [])
+                    .filter((e) => !v.has(e))
+                    .map((e) => ({ id: e, value: e, label: u.A.getDetectableGame(e)?.name ?? "" })),
             ],
-            [f, g, l],
+            [f, v, a],
         ),
-        M = t.useCallback((e) => e.filter((e) => g.has(e.value)), [g]);
-    return { options: k ? C : u, matchSorterOptions: b, customMatchSorter: k ? M : void 0, isServerSearchActive: k };
+        g = o.useCallback((e) => e.filter((e) => v.has(e.value)), [v]);
+    return { options: p ? b : r, matchSorterOptions: h, customMatchSorter: p ? g : void 0 };
 }

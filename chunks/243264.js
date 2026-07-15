@@ -1,54 +1,49 @@
 "use strict";
-n.d(t, { A: () => c });
+n.d(t, { A: () => d });
 var i = n(17928),
     r = n(228366),
-    s = n(929396);
-let a = new Map(),
-    o = new Set(),
+    a = n(929396);
+let s = new Map(),
     l = new Set();
-class u extends i.Ay.Store {
+class o extends i.Ay.Store {
     static displayName = "GameAutocompleteStore";
     getResults(e) {
-        let t = (0, s.C7)(e);
-        return null == t ? void 0 : a.get(t);
+        let t = (0, a.C7)(e);
+        return null == t ? void 0 : s.get(t);
     }
     getClosestResults(e) {
-        let t = (0, s.C7)(e);
+        let t = (0, a.C7)(e);
         if (null == t) return;
-        let n = a.get(t);
+        let n = s.get(t);
         if (null != n) return n;
         for (let e = t.length - 1; e >= 1; e--) {
-            let n = a.get(t.slice(0, e));
+            let n = s.get(t.slice(0, e));
             if (null != n) return n;
         }
     }
     isFetching(e) {
-        let t = (0, s.C7)(e);
-        return null != t && o.has(t);
-    }
-    didFetchFail(e) {
-        let t = (0, s.C7)(e);
+        let t = (0, a.C7)(e);
         return null != t && l.has(t);
     }
 }
-let c = new u(r.h, {
+let d = new o(r.h, {
     LOGOUT: function () {
-        (a = new Map()), (o = new Set()), (l = new Set());
+        (s = new Map()), (l = new Set());
     },
     GAME_AUTOCOMPLETE_FETCH: function (e) {
         let { query: t } = e;
-        o.add(t), l.delete(t);
+        l.add(t);
     },
     GAME_AUTOCOMPLETE_FETCH_SUCCESS: function (e) {
         let { query: t, results: n } = e;
-        for (o.delete(t), l.delete(t), a.delete(t), a.set(t, n); a.size > 100; ) {
-            let e = a.keys().next().value;
+        for (l.delete(t), s.delete(t), s.set(t, n); s.size > 100; ) {
+            let e = s.keys().next().value;
             if (null == e) break;
-            a.delete(e);
+            s.delete(e);
         }
     },
     GAME_AUTOCOMPLETE_FETCH_FAILURE: function (e) {
         let { query: t } = e;
-        o.delete(t), l.add(t);
+        l.delete(t);
     },
 });

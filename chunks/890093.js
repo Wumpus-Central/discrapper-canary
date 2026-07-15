@@ -119,8 +119,8 @@ function w(e) {
     return { applicationIds: l, games: d, onAddGame: r };
 }
 var R = i(600761),
-    O = i(667049),
-    k = i(579950),
+    k = i(667049),
+    O = i(579950),
     y = i(605694),
     _ = i(192308),
     G = i(821609),
@@ -236,7 +236,7 @@ function ei() {
         let t = (0, a.bG)([z.default], () => z.default.getCurrentUser()),
             i = (0, u.A)(e),
             { tokens: n, fetched: l } = (0, H.j)(e),
-            r = (0, O.A)(t?.id),
+            r = (0, k.A)(t?.id),
             o = null == t || null == e || null == n || !l,
             d = s.useMemo(
                 () =>
@@ -283,7 +283,8 @@ function eI(e) {
         { trackUserProfileEditAction: d } = (0, D.NJ)(),
         [c, u] = s.useState(""),
         g = s.useRef(""),
-        { options: m, matchSorterOptions: f, isServerSearchActive: x } = (0, ex.R)({ query: c }),
+        { options: m, matchSorterOptions: f } = (0, ex.R)({ query: c }),
+        x = c.trim().length > 0,
         { applicationIds: h, onAddGame: I } = w(t),
         p = s.useCallback(
             (e) => {
@@ -463,12 +464,12 @@ function eR(e) {
               }),
           });
 }
-var eO = i(635694);
-function ek(e) {
+var ek = i(635694);
+function eO(e) {
     let { onClick: t, expanded: i } = e;
     return (0, n.jsx)(em.D, {
         onClick: t,
-        className: eO.x,
+        className: ek.x,
         "aria-expanded": i,
         children: (0, n.jsx)(d.E, {
             variant: "text-sm/medium",
@@ -513,7 +514,7 @@ function eL(e) {
         g = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(eG, { ...e, games: c }),
-                u && (0, n.jsx)(ek, { expanded: o, onClick: () => d((e) => !e) }),
+                u && (0, n.jsx)(eO, { expanded: o, onClick: () => d((e) => !e) }),
             ],
         });
     return i && !s
@@ -679,7 +680,7 @@ function eQ(e) {
         g = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(eq, { ...e, games: c }),
-                u && (0, n.jsx)(ek, { expanded: o, onClick: () => d((e) => !e) }),
+                u && (0, n.jsx)(eO, { expanded: o, onClick: () => d((e) => !e) }),
             ],
         });
     return i && !s
@@ -736,7 +737,7 @@ function eZ(e) {
     });
 }
 var e$ = i(661531),
-    e0 = i(534514),
+    e0 = i(297264),
     e1 = i(915089),
     e8 = i(5477);
 function e2(e) {
@@ -889,7 +890,7 @@ function e4(e) {
     return (0, n.jsx)(eE, { widgetType: t.type, children: (0, n.jsx)(e9, { widget: t, ...i }) });
 }
 var te = i(576260),
-    tt = i(138063),
+    tt = i(841417),
     ti = i(725386),
     tn = i(657855),
     ts = i(215538);
@@ -968,8 +969,8 @@ function to() {
 }
 function td(e) {
     let { user: t, guildId: i, channelId: l } = e,
-        r = (0, O.A)(t.id),
-        o = (0, k.A)(t.id),
+        r = (0, k.A)(t.id),
+        o = (0, O.A)(t.id),
         d = (function () {
             let [e, t] = (0, a.yK)([x.A], () => [x.A.ipCountryCode, x.A.ipCountryCodeRequest]),
                 i = (0, m.Z)();

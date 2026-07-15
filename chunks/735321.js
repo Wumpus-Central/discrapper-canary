@@ -1,66 +1,64 @@
 "use strict";
 n.d(t, {
-    BF: () => T,
-    FM: () => m,
-    L: () => E,
-    R_: () => L,
-    Un: () => w,
-    XX: () => F,
-    Y5: () => N,
-    cv: () => I,
-    ef: () => M,
-    ew: () => D,
-    g1: () => k,
-    jg: () => G,
-    mS: () => A,
-    nS: () => U,
-    oc: () => b,
-    qA: () => v,
-    s1: () => R,
-    tg: () => O,
-    uA: () => P,
-    y9: () => g,
+    BF: () => g,
+    FM: () => f,
+    L: () => I,
+    R_: () => b,
+    Un: () => M,
+    XX: () => x,
+    Y5: () => O,
+    cv: () => m,
+    ef: () => P,
+    ew: () => v,
+    g1: () => G,
+    mS: () => T,
+    oc: () => y,
+    qA: () => R,
+    s1: () => L,
+    tg: () => D,
+    uA: () => U,
+    y9: () => p,
 });
-var i = n(853811),
+var i = n(822963),
     r = n(381438),
-    s = n(926675),
-    a = n(761915),
-    o = n(223273),
-    l = n(569926),
-    u = n(287809),
+    a = n(926675),
+    s = n(761915),
+    l = n(223273),
+    o = n(569926),
+    d = n(287809),
     c = n(289173),
-    d = n(841595),
+    u = n(321191),
     _ = n(958805),
-    h = n(61881),
-    f = n(229231),
-    p = n(375708);
-function E(e) {
-    return f.Ok[e.type](e);
+    E = n(61881),
+    A = n(229231),
+    h = n(375708);
+function I(e) {
+    return A.Ok[e.type](e);
 }
-function m(e, t) {
+function f(e, t) {
     let { showEditingControls: n } = t,
         i = e.games.length > 0;
     if (n && i)
-        return 1 === s.u[e.type] ? p.intl.string(p.t.wiXdEa) : p.intl.format(p.t["zR1+0/"], { numGames: s.u[e.type] });
+        return 1 === a.u[e.type] ? h.intl.string(h.t.wiXdEa) : h.intl.format(h.t["zR1+0/"], { numGames: a.u[e.type] });
 }
-function g(e) {
-    return f._u.includes(e);
+function p(e) {
+    return A._u.includes(e);
 }
-function A(e) {
-    return f.gk.includes(e);
+function T(e) {
+    return A.gk.includes(e);
 }
-function I(e) {
-    return e in s.u ? s.u[e] : 0;
+function m(e) {
+    return e in a.u ? a.u[e] : 0;
 }
-function T() {
-    let e = u.default.getCurrentUser(),
-        t = null != e ? d.A.getUserProfile(e.id) : null;
+function g() {
+    let e = d.default.getCurrentUser(),
+        t = null != e ? u.A.getUserProfile(e.id) : null;
     return t?.widgets ?? [];
 }
 function S() {
-    return h.A.hasPendingChanges() ? (h.A.getPendingWidgets() ?? []) : T();
+    return E.A.hasPendingChanges() ? (E.A.getPendingWidgets() ?? []) : g();
 }
-function y(e) {
+function N(e) {
     return (
         S()
             .filter(c.fu)
@@ -76,59 +74,59 @@ function C(e) {
         return (i[n] = e), i;
     }
 }
-function N(e) {
+function O(e) {
     let t = S();
     null == t.find((t) => t.getUniqueKey() === e.getUniqueKey()) && _.A.setPendingWidgets([e, ...t]);
 }
-function v(e) {
+function R(e) {
     let t = S().filter((t) => t.getUniqueKey() !== e.getUniqueKey());
     _.A.setPendingWidgets(t);
 }
-function R(e, t, n) {
-    let i = Object.values(a.X).length;
+function L(e, t, n) {
+    let i = Object.values(s.X).length;
     if (n.length > i) return;
-    let r = y(e);
+    let r = N(e);
     if (null == r) return;
-    let s = r.games.find((e) => e.applicationId === t);
-    if (null == s) return;
-    let o = { ...s, tags: n },
-        l = r.games.map((e) => (e.applicationId === t ? o : e)),
-        u = C(new c.Yy({ ...r, games: l }));
-    _.A.setPendingWidgets(u);
+    let a = r.games.find((e) => e.applicationId === t);
+    if (null == a) return;
+    let l = { ...a, tags: n },
+        o = r.games.map((e) => (e.applicationId === t ? l : e)),
+        d = C(new c.Yy({ ...r, games: o }));
+    _.A.setPendingWidgets(d);
 }
-function O(e, t, n) {
-    let i = y(e);
+function D(e, t, n) {
+    let i = N(e);
     if (null == i) return;
     let r = i.games.find((e) => e.applicationId === t);
     if (null == r || null == r.tags || 0 === r.tags.length) return;
-    let s = r.tags.filter((e) => e !== n);
-    R(i.type, t, s.length > 0 ? s : []);
+    let a = r.tags.filter((e) => e !== n);
+    L(i.type, t, a.length > 0 ? a : []);
 }
-function b(e, t, n) {
-    let i = y(e);
+function y(e, t, n) {
+    let i = N(e);
     if (null == i) return;
     let r = i.games.find((e) => e.applicationId === t);
     if (null == r || n === r.comment) return;
-    let s = { ...r, comment: n },
-        a = i.games.map((e) => (e.applicationId === t ? s : e)),
-        o = C(new c.Yy({ ...i, games: a }));
-    _.A.setPendingWidgets(o);
+    let a = { ...r, comment: n },
+        s = i.games.map((e) => (e.applicationId === t ? a : e)),
+        l = C(new c.Yy({ ...i, games: s }));
+    _.A.setPendingWidgets(l);
 }
-function D(e) {
+function v(e) {
     let t,
         { widgetType: n, game: i, ignoreMaxGames: r = !1 } = e,
-        s = y(n),
-        a = I(n);
-    if (null != s) {
-        let e = s.games?.length ?? 0;
-        if ((!r && e >= a) || (s.games ?? []).some((e) => e.applicationId === i.applicationId)) return;
+        a = N(n),
+        s = m(n);
+    if (null != a) {
+        let e = a.games?.length ?? 0;
+        if ((!r && e >= s) || (a.games ?? []).some((e) => e.applicationId === i.applicationId)) return;
     }
-    let o = { applicationId: i.applicationId, comment: i.comment, tags: i.tags };
-    t = null != s ? [o, ...(s.games ?? [])] : [o];
-    let u = C(new c.Yy({ ...(s ?? { type: n }), games: t }));
-    _.A.setPendingWidgets(u), l.I.fetchMany([i.applicationId]);
+    let l = { applicationId: i.applicationId, comment: i.comment, tags: i.tags };
+    t = null != a ? [l, ...(a.games ?? [])] : [l];
+    let d = C(new c.Yy({ ...(a ?? { type: n }), games: t }));
+    _.A.setPendingWidgets(d), o.I.fetchMany([i.applicationId]);
 }
-function L(e, t) {
+function b(e, t) {
     if (e === t) return;
     let n = S();
     if (e < 0 || e >= n.length || t < 0 || t >= n.length) return;
@@ -136,39 +134,39 @@ function L(e, t) {
         [r] = i.splice(e, 1);
     i.splice(t, 0, r), _.A.setPendingWidgets(i);
 }
-function w(e, t, n) {
-    let i = y(e);
+function M(e, t, n) {
+    let i = N(e);
     if (null == i || null == i.games || t === n) return;
     let r = [...i.games];
     if (t < 0 || t >= r.length || n < 0 || n >= r.length) return;
-    let [s] = r.splice(t, 1);
-    r.splice(n, 0, s);
-    let a = C(new c.Yy({ ...i, games: r }));
-    _.A.setPendingWidgets(a);
+    let [a] = r.splice(t, 1);
+    r.splice(n, 0, a);
+    let s = C(new c.Yy({ ...i, games: r }));
+    _.A.setPendingWidgets(s);
 }
-function M(e, t) {
-    let n = y(e);
+function P(e, t) {
+    let n = N(e);
     if (null == n) return;
     let i = (null != n.games ? n.games : []).filter((e) => e.applicationId !== t),
         r = C(new c.Yy({ ...n, games: i }));
     _.A.setPendingWidgets(r);
 }
-function P(e) {
-    let t = I(e.type);
+function U(e) {
+    let t = m(e.type);
     return e.games.length >= t;
 }
-function x(e) {
+function w(e) {
     return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
 }
-function k(e, t, n) {
+function G(e, t, n) {
     return (
         e.length === t.length &&
         e.every((e, i) =>
             (function (e, t, n) {
-                if (e.applicationId !== t.applicationId || (g(n) && x(e.comment) !== x(t.comment))) return !1;
-                if (A(n)) {
-                    let n = x(e.tags),
-                        i = x(t.tags);
+                if (e.applicationId !== t.applicationId || (p(n) && w(e.comment) !== w(t.comment))) return !1;
+                if (T(n)) {
+                    let n = w(e.tags),
+                        i = w(t.tags);
                     if (
                         (null === n) != (null === i) ||
                         (null !== n && null !== i && (n.length !== i.length || !n.every((e, t) => e === i[t])))
@@ -180,15 +178,11 @@ function k(e, t, n) {
         )
     );
 }
-function U(e) {
-    return e?.themes != null && e.themes.includes(o.q0.EROTIC);
-}
-function G(e) {
+function x(e) {
     return (
-        null != e.content_classification &&
-        (0, i.U1)({ type: i.fS.MINIMAL, data: e.content_classification }) === r.Y.ADULT
+        !(e?.themes != null && e.themes.includes(l.q0.EROTIC)) &&
+        (null == e.content_classification ||
+            (0, i.U1)({ type: i.fS.MINIMAL, data: e.content_classification }) !== r.Y.ADULT) &&
+        !a.Z.has(e.id)
     );
-}
-function F(e) {
-    return !U(e) && !G(e) && !s.Z.has(e.id);
 }

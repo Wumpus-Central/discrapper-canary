@@ -1,21 +1,18 @@
 "use strict";
-n.d(t, { q: () => c });
+n.d(t, { q: () => d });
 var i = n(111956),
     r = n.n(i),
-    s = n(22574),
     a = n(243264),
-    o = n(929396),
+    s = n(929396),
     l = n(471677);
-let u = r()(
+let o = r()(
     (e) => {
         l.YK.fetchMany([e]);
     },
     l.fo,
     { leading: !0, maxWait: l.Mg },
 );
-function c(e, t) {
-    let { enabled: n } = s.A.getConfig({ location: t });
-    if (!n) return null;
-    let i = (0, o.C7)(e);
-    return null == i || (u(i), a.A.didFetchFail(i)) ? null : (a.A.getClosestResults(i) ?? []).filter(o.qS);
+function d(e) {
+    let t = (0, s.C7)(e);
+    return null == t ? null : (o(t), (a.A.getClosestResults(t) ?? []).filter(s.qS));
 }

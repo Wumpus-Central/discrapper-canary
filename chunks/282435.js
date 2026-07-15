@@ -1,6 +1,5 @@
-"use strict";
-n.d(t, { Bf: () => s, aA: () => i, cG: () => r });
-let i = [
+l.d(a, { Bf: () => t, aA: () => o, cG: () => r });
+let o = [
         { name: "Soul", color: "#ff1c90" },
         { name: "Volcano", color: "#e81d1e" },
         { name: "Marsh", color: "#e86e1d" },
@@ -115,4 +114,4 @@ let i = [
         "1272842103910699040",
         "1276737795012165766",
     ],
-    s = new Map(r.map((e, t, n) => [e, n.length - t]));
+    t = new Map(r.map((e, a, l) => [e, l.length - a]));
