@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => q });
+n.d(t, { A: () => Z });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(316770),
     N = n(735438),
     C = n(3026),
-    O = n(834730),
-    R = n(778712),
+    R = n(834730),
+    O = n(778712),
     L = n(562153),
     D = n(996988),
     y = n(242697);
@@ -85,7 +85,7 @@ function M(e) {
                               s && r === d
                                   ? (0, i.jsx)("div", {
                                         className: y.mB,
-                                        children: (0, i.jsx)(O.E, {
+                                        children: (0, i.jsx)(R.E, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
                                             children: (0, i.jsx)(C.A, { children: l > 99 ? ">99" : `+${l}` }),
@@ -95,7 +95,7 @@ function M(e) {
                                         text: L.Ay.getName(n.guild_id, n.id, a),
                                         children: (0, i.jsx)("img", {
                                             className: y.my,
-                                            src: a.getAvatarURL(n.guild_id, (0, R.FT)(R._3.SIZE_80)),
+                                            src: a.getAvatarURL(n.guild_id, (0, O.FT)(O._3.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),
@@ -110,27 +110,28 @@ var P = n(939249),
     w = n(532622),
     G = n(271683),
     x = n(882840),
-    k = n(46054),
-    F = n(345640),
-    V = n(174459),
-    B = n(531648),
-    H = n(652215),
-    j = n(375708),
-    W = n(237770);
-function Y(e) {
+    k = n(208971),
+    F = n(46054),
+    V = n(345640),
+    B = n(174459),
+    H = n(531648),
+    j = n(652215),
+    W = n(375708),
+    Y = n(237770);
+function K(e) {
     let { voiceChannel: t, onAction: n, onClose: a } = e,
         { themeType: l } = (0, T.E)(),
         { analyticsLocations: o } = (0, E.Ay)(),
-        d = (0, F.b)(t),
+        d = (0, V.b)(t),
         c = (0, w.Ay)(t, !0),
-        u = (0, x.l)(t),
+        u = (0, k.G)((0, x.l)(t)),
         _ = r.useMemo(
-            () => (null == u || "" === u ? null : k.A.parseVoiceChannelStatus(u, !0, { channelId: t.id })),
+            () => (null == u || "" === u ? null : F.A.parseVoiceChannelStatus(u, !0, { channelId: t.id })),
             [u, t.id],
         );
     return (r.useEffect(() => {
         null != _ &&
-            V.default.track(H.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
+            B.default.track(j.HAw.VOICE_CHANNEL_TOPIC_VIEWED, {
                 channel_id: t.id,
                 guild_id: t.guild_id,
                 location_stack: o,
@@ -138,7 +139,7 @@ function Y(e) {
     }, [_, t.id, t.guild_id, o]),
     c && d)
         ? (0, i.jsxs)(P.D, {
-              className: W.vk,
+              className: Y.vk,
               onClick: (e) => {
                   e.stopPropagation(),
                       n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
@@ -146,37 +147,37 @@ function Y(e) {
                       (0, G.A)({ channel: t, sourceAnalyticsLocations: o });
               },
               children: [
-                  (0, i.jsx)(B.A, {
-                      text: _ ?? j.intl.string(j.t.Mgpxiw),
+                  (0, i.jsx)(H.A, {
+                      text: _ ?? W.intl.string(W.t.Mgpxiw),
                       variant: "text-xs/normal",
                       color: "text-subtle",
-                      className: W.Qq,
+                      className: Y.Qq,
                   }),
                   (0, i.jsx)(U.R, {
                       color: "currentColor",
                       size: "xxs",
-                      className: s()(W.rD, null != _ ? W.R : void 0),
-                      "aria-label": j.intl.string(j.t.bt75uw),
+                      className: s()(Y.rD, null != _ ? Y.R : void 0),
+                      "aria-label": W.intl.string(W.t.bt75uw),
                   }),
               ],
           })
         : null != _
-          ? (0, i.jsx)(B.A, { text: _, variant: "text-xs/normal", color: "text-subtle", className: W.Qq })
+          ? (0, i.jsx)(H.A, { text: _, variant: "text-xs/normal", color: "text-subtle", className: Y.Qq })
           : null;
 }
-var K = n(70963),
-    $ = n(269587),
-    z = n(514566);
-function q(e) {
+var $ = n(70963),
+    z = n(269587),
+    q = n(514566);
+function Z(e) {
     let { user: t, currentUser: n, voiceChannel: a, className: N, onClose: C } = e,
-        { themeType: O } = (0, T.E)(),
-        { analyticsLocations: R } = (0, E.Ay)(_.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        { themeType: R } = (0, T.E)(),
+        { analyticsLocations: O } = (0, E.Ay)(_.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
         L = (0, f.A)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: a.id,
             user: t,
-            analyticsLocations: R,
+            analyticsLocations: O,
         }),
         y = (0, p.A)({ userId: t.id, onAction: L }),
         v = (0, l.bG)([h.A], () => h.A.getGuild(a.guild_id)),
@@ -185,21 +186,21 @@ function q(e) {
         U = r.useId();
     function w() {
         return (0, i.jsx)("div", {
-            className: z.o1,
-            children: (0, i.jsx)(K.Ay, { channel: a, onAction: L, onClose: C }),
+            className: q.o1,
+            children: (0, i.jsx)($.Ay, { channel: a, onAction: L, onClose: C }),
         });
     }
     let G =
         a.isDM() || a.isGroupDM()
-            ? j.intl.string(j.t["9FaEzi"])
+            ? W.intl.string(W.t["9FaEzi"])
             : a.isGuildStageVoice()
-              ? j.intl.string(j.t.QygGCN)
-              : j.intl.string(j.t.msxteM);
+              ? W.intl.string(W.t.QygGCN)
+              : W.intl.string(W.t.msxteM);
     return (0, i.jsx)(E.f5, {
-        value: R,
+        value: O,
         children: (0, i.jsxs)(m.A, {
             ref: y,
-            className: s()(z.Nr, N),
+            className: s()(q.Nr, N),
             onAction: L,
             onClose: C,
             "aria-labelledby": U,
@@ -208,31 +209,31 @@ function q(e) {
                     text: G,
                     tags: (() => {
                         if (t.id !== n.id) return null;
-                        let e = a.isDM() || a.isGroupDM() ? j.intl.string(j.t["+DsWbX"]) : j.intl.string(j.t.xOVEjc);
+                        let e = a.isDM() || a.isGroupDM() ? W.intl.string(W.t["+DsWbX"]) : W.intl.string(W.t.xOVEjc);
                         return (0, i.jsx)(o.m, { text: e, children: (0, i.jsx)(d.m, { size: "xxs" }) });
                     })(),
-                    contextMenu: (0, i.jsx)($.A, { display: "voice", user: t, onClose: C }),
+                    contextMenu: (0, i.jsx)(z.A, { display: "voice", user: t, onClose: C }),
                 }),
                 (0, i.jsx)(c.A, { children: (0, i.jsx)(u.H, { id: U, children: `${G}, ${P}` }) }),
                 (0, i.jsx)("div", {
-                    className: z.rf,
+                    className: q.rf,
                     children: (0, i.jsxs)("div", {
-                        className: z.Qs,
+                        className: q.Qs,
                         children: [
                             (0, i.jsx)(M, { users: b, channel: a }),
                             (0, i.jsxs)("div", {
-                                className: z.zH,
+                                className: q.zH,
                                 children: [
                                     (0, i.jsx)(S.A, { channel: a, guild: v, onAction: L, onClose: C }),
-                                    a.isGuildVoice() && (0, i.jsx)(Y, { voiceChannel: a, onAction: L, onClose: C }),
-                                    O === D.d.MODAL_V2 && w(),
+                                    a.isGuildVoice() && (0, i.jsx)(K, { voiceChannel: a, onAction: L, onClose: C }),
+                                    R === D.d.MODAL_V2 && w(),
                                 ],
                             }),
-                            O === D.d.MODAL && w(),
+                            R === D.d.MODAL && w(),
                         ],
                     }),
                 }),
-                O !== D.d.MODAL && O !== D.d.MODAL_V2 && w(),
+                R !== D.d.MODAL && R !== D.d.MODAL_V2 && w(),
             ],
         }),
     });

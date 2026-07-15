@@ -1,4 +1,4 @@
-n.d(e, { default: () => tm });
+n.d(e, { default: () => tg });
 var l = n(627968),
     r = n(64700),
     i = n(503698),
@@ -252,49 +252,51 @@ function Q(t) {
 var V = n(685396),
     X = n(231723),
     Z = n(480335),
-    W = n(999291),
-    tt = n(718019),
-    te = n(413492),
-    tn = n(915614),
-    tl = n(946356),
-    tr = n(878555),
-    ti = n(983495),
-    ta = n(562153),
-    ts = n(996988),
-    to = n(823788);
-function tu(t) {
+    W = n(208971),
+    tt = n(999291),
+    te = n(718019),
+    tn = n(413492),
+    tl = n(915614),
+    tr = n(946356),
+    ti = n(878555),
+    ta = n(983495),
+    ts = n(562153),
+    to = n(996988),
+    tu = n(823788);
+function td(t) {
     let { user: e, previewText: n, previewEmoji: r, previewStatus: i, placeHolderText: a, transitionState: s } = t,
-        o = (0, W.Ay)(e.id),
-        u =
+        o = (0, tt.Ay)(e.id),
+        u = (0, W.G)(n),
+        d =
             (null != n && "" !== n) || null != r
-                ? f.intl.formatToPlainString(f.t.UpF5Qa, { emoji: r?.name ?? "", status: n })
+                ? f.intl.formatToPlainString(f.t.UpF5Qa, { emoji: r?.name ?? "", status: u })
                 : f.intl.formatToPlainString(f.t.IKBvFl, { placeholder: a ?? "" });
     return (0, l.jsx)("div", {
         role: "img",
-        "aria-label": u,
-        children: (0, l.jsxs)(tl.A, {
+        "aria-label": d,
+        children: (0, l.jsxs)(tr.A, {
             user: e,
             displayProfile: o,
-            themeType: ts.d.POPOUT,
-            className: to.ti,
+            themeType: to.d.POPOUT,
+            className: tu.ti,
             "aria-hidden": "true",
             children: [
                 (0, l.jsxs)("header", {
                     children: [
-                        (0, l.jsx)(tn.A, { user: e, displayProfile: o, themeType: ts.d.POPOUT }),
+                        (0, l.jsx)(tl.A, { user: e, displayProfile: o, themeType: to.d.POPOUT }),
                         (0, l.jsx)("div", {
                             inert: !0,
-                            children: (0, l.jsx)(tt.A, {
+                            children: (0, l.jsx)(te.A, {
                                 user: e,
                                 displayProfile: o,
-                                themeType: ts.d.POPOUT,
+                                themeType: to.d.POPOUT,
                                 previewStatus: i,
-                                className: to.my,
+                                className: tu.my,
                             }),
                         }),
-                        (0, l.jsx)(ti.A, {
+                        (0, l.jsx)(ta.A, {
                             user: e,
-                            themeType: ts.d.POPOUT,
+                            themeType: to.d.POPOUT,
                             previewText: n,
                             previewEmoji: r,
                             placeholderText: a,
@@ -304,23 +306,23 @@ function tu(t) {
                 }),
                 o?.profileEffect != null && (0, l.jsx)(Z.A, { skuId: o.profileEffect.skuId }),
                 (0, l.jsx)("div", {
-                    className: to.QV,
+                    className: tu.QV,
                     inert: !0,
-                    children: (0, l.jsx)(tr.Ay, {
+                    children: (0, l.jsx)(ti.Ay, {
                         user: e,
-                        displayName: ta.Ay.getName(null, null, e),
+                        displayName: ts.Ay.getName(null, null, e),
                         pronouns: o?.pronouns,
-                        trailing: (0, l.jsx)(te.A, { displayProfile: o, themeType: ts.d.POPOUT }),
+                        trailing: (0, l.jsx)(tn.A, { displayProfile: o, themeType: to.d.POPOUT }),
                     }),
                 }),
             ],
         }),
     });
 }
-var td = n(307731),
-    th = n(320523);
-let tc = "CLEAR_AFTER";
-function tm(t) {
+var th = n(307731),
+    tc = n(320523);
+let tm = "CLEAR_AFTER";
+function tg(t) {
     let { transitionState: e, onClose: n, sourceAnalyticsLocations: i = [], prompt: d = null } = t,
         { analyticsLocations: h } = (0, b.Ay)(i, E.A.CUSTOM_STATUS_MODAL),
         m = (0, o.bG)([M.default], () => M.default.getCurrentUser() ?? null),
@@ -368,7 +370,7 @@ function tm(t) {
             I.current?.focus(), I.current?.setSelection(x.length, x.length);
         });
     let te = () => {
-            j !== tc &&
+            j !== tm &&
                 (!(function (t) {
                     let {
                             text: e,
@@ -418,25 +420,25 @@ function tm(t) {
     return (0, l.jsxs)(s.Modal, {
         title: f.intl.string(f.t.Zx4jzN),
         actionBarInput: (0, l.jsx)("div", {
-            className: th.l3,
+            className: tc.l3,
             children: (0, l.jsx)(u.Te, {
                 "aria-label": f.intl.formatToPlainString(f.t.NFJUPa, {
-                    value: j === tc ? f.intl.string(f.t.E45wvP) : J(j),
+                    value: j === tm ? f.intl.string(f.t.E45wvP) : J(j),
                 }),
                 maxVisibleItems: $.SX.length + 1,
                 value: j,
                 options: [
-                    { value: tc, key: tc, label: f.intl.string(f.t.E45wvP), disabled: !0 },
+                    { value: tm, key: tm, label: f.intl.string(f.t.E45wvP), disabled: !0 },
                     ...$.SX.map((t) => ({ value: t, key: t, label: J(t) })),
                 ],
                 onChange: (t) => v(t),
-                optionClassName: th.Pl,
+                optionClassName: tc.Pl,
                 renderOptionLabel: (t) => {
                     let { value: e, label: n, disabled: r } = t;
                     return (0, l.jsx)("span", {
-                        className: a()(th.j3, r ? th.r9 : void 0),
+                        className: a()(tc.j3, r ? tc.r9 : void 0),
                         children:
-                            e === tc
+                            e === tm
                                 ? n
                                 : (function (t) {
                                       switch (t) {
@@ -470,8 +472,8 @@ function tm(t) {
         children: [
             null != m &&
                 (0, l.jsx)("div", {
-                    className: th.q5,
-                    children: (0, l.jsx)(tu, {
+                    className: tc.q5,
+                    children: (0, l.jsx)(td, {
                         user: m,
                         previewText: x,
                         previewEmoji: y,
@@ -480,22 +482,22 @@ function tm(t) {
                     }),
                 }),
             (0, l.jsxs)("div", {
-                className: th.eH,
+                className: tc.eH,
                 children: [
                     (0, l.jsx)(g.E, {
                         tag: "label",
                         htmlFor: tl,
                         variant: "heading-md/semibold",
-                        className: th.wW,
+                        className: tc.wW,
                         children: tn,
                     }),
                     (0, l.jsxs)("div", {
-                        className: th.Kf,
+                        className: tc.Kf,
                         ref: W,
                         children: [
-                            (0, l.jsx)("span", { ref: z, className: th._D, "aria-hidden": "true" }),
+                            (0, l.jsx)("span", { ref: z, className: tc._D, "aria-hidden": "true" }),
                             (0, l.jsx)("div", {
-                                className: th.S0,
+                                className: tc.S0,
                                 children: (0, l.jsx)(w.Y, {
                                     targetElementRef: H,
                                     renderPopout: function (t) {
@@ -516,7 +518,7 @@ function tm(t) {
                                                     ),
                                                     l && e();
                                             },
-                                            pickerIntention: td.EmojiIntention.STATUS,
+                                            pickerIntention: th.EmojiIntention.STATUS,
                                             onNavigateAway: n,
                                         });
                                     },
@@ -535,7 +537,7 @@ function tm(t) {
                                                           currentValue: y.name,
                                                       })
                                                     : f.intl.string(f.t.psHnw8),
-                                            className: th.Z8,
+                                            className: tc.Z8,
                                             spriteSize: 24,
                                             tabIndex: 0,
                                             renderButtonContents:
@@ -543,7 +545,7 @@ function tm(t) {
                                                     ? null
                                                     : () =>
                                                           (0, l.jsx)(O.A, {
-                                                              className: th.Zg,
+                                                              className: tc.Zg,
                                                               emojiId: y.id,
                                                               emojiName: y.name,
                                                               animated: !!y.animated,
@@ -565,18 +567,18 @@ function tm(t) {
                                 onKeyDown: function (t) {
                                     "Enter" === t.key && (t.preventDefault(), t.shiftKey || te());
                                 },
-                                className: th.hF,
+                                className: tc.hF,
                                 inputRef: I,
                                 id: tl,
                             }),
                             (x.length > 0 || null != y) &&
                                 (0, l.jsx)(N.D, {
                                     "aria-label": f.intl.string(f.t.wfYTHe),
-                                    className: th.mt,
+                                    className: tc.mt,
                                     onClick: function () {
                                         T(""), A(null);
                                     },
-                                    children: (0, l.jsx)(D.a, { size: "md", color: "currentColor", className: th.hj }),
+                                    children: (0, l.jsx)(D.a, { size: "md", color: "currentColor", className: tc.hj }),
                                 }),
                         ],
                     }),

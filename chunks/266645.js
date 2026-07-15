@@ -63,7 +63,7 @@ function g(e) {
         if (l) {
             let t = a.getAttribute(f);
             if (null == t || "" === t) return;
-            e.preventDefault(), e.clipboardData.setData("text/plain", (0, h.K)(t));
+            e.preventDefault(), e.clipboardData.setData("text/plain", (0, h.KW)(t));
             return;
         }
         e.preventDefault(),
@@ -78,7 +78,7 @@ function g(e) {
                             if (t.nodeType === Node.TEXT_NODE) return t.textContent ?? "";
                             if (t.nodeType !== Node.ELEMENT_NODE) return "";
                             let i = t.getAttribute(f);
-                            if (null != i) return (0, h.K)(i);
+                            if (null != i) return (0, h.KW)(i);
                             let r = t.tagName.toUpperCase();
                             if ("IMG" === r) {
                                 let e = t.getAttribute("alt");
@@ -100,7 +100,7 @@ function g(e) {
                     let t = e.getAttribute(f);
                     if (null == t || "" === t) return;
                     let n = e.ownerDocument ?? document;
-                    e.parentNode?.replaceChild(n.createTextNode((0, h.K)(t)), e);
+                    e.parentNode?.replaceChild(n.createTextNode((0, h.KW)(t)), e);
                 }),
                 (n = document.createElement("div")).appendChild(t),
                 n.innerHTML),

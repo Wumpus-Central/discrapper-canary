@@ -47,7 +47,7 @@ let _ = (0, o.A)(
                             if (null != s) {
                                 let n, i;
                                 (n = `@${t}`),
-                                    (i = (0, T.K)(e)),
+                                    (i = (0, T.KW)(e)),
                                     h._.dispatchToLastSubscribed(S.jej.INSERT_TEXT, { plainText: n, rawText: i }),
                                     null != s && m.A.startTyping(s);
                             }

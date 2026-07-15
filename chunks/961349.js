@@ -387,7 +387,7 @@ let en = {
             i = t[n];
         return (
             l.addMentionGame({ id: i.id, name: i.name, icon: i.icon }),
-            l.replaceInlineInput("gameMentionInput", el(i.name), (0, L.K)(i.id)),
+            l.replaceInlineInput("gameMentionInput", el(i.name), (0, L.KW)(i.id)),
             { type: a.kc.GAME_MENTION, metadata: { gameId: i.id } }
         );
     },
@@ -1054,7 +1054,7 @@ let eX = {
         } else if (null != M)
             return (
                 p.addMentionGame({ id: M.id, name: M.name, icon: M.icon }),
-                p.insertText(`@${M.name}`, (0, L.K)(M.id)),
+                p.insertText(`@${M.name}`, (0, L.KW)(M.id)),
                 { type: a.kc.GAME_MENTION, metadata: { gameId: M.id } }
             );
         return { type: I };
