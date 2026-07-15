@@ -139,7 +139,20 @@ async function k(e) {
                                   applicationAudio: t.boolean(),
                                   voiceAudio: t.boolean(),
                                   soundboardAudio: t.boolean(),
-                                  crop: t.object().keys({ preset: t.string().allow("original", "9:16", "16:9") }),
+                                  crop: t
+                                      .object()
+                                      .keys({
+                                          preset: t.string().allow("original", "9:16", "16:9"),
+                                          bounds: t
+                                              .object()
+                                              .keys({
+                                                  x: t.number(),
+                                                  y: t.number(),
+                                                  width: t.number(),
+                                                  height: t.number(),
+                                                  aspectRatio: t.number(),
+                                              }),
+                                      }),
                               }),
                           createdAt: t
                               .number()
@@ -815,12 +828,15 @@ async function eN(e) {
             throw Error("discord_clips module failed to load");
         let { filepath: n, ...i } = e;
         await eu(e.id, i);
-        let r = e.editMetadata ?? {
-            start: 0,
-            end: e.length / 1e3,
-            applicationAudio: !0,
-            voiceAudio: !0,
-            soundboardAudio: !0,
+        let r = {
+            ...(e.editMetadata ?? {
+                start: 0,
+                end: e.length / 1e3,
+                applicationAudio: !0,
+                voiceAudio: !0,
+                soundboardAudio: !0,
+            }),
+            crop: (0, R._1)(e.editMetadata?.crop) ?? void 0,
         };
         if (t.hasExportClipToFile() && (0, O.qi)("exportClip")) {
             let n = await a.A.app.getPath("temp"),
