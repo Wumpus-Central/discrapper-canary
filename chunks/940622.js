@@ -1,17 +1,17 @@
 "use strict";
-n.d(t, { C: () => E, JE: () => h, NE: () => f, VU: () => m, bA: () => A, eo: () => g, mb: () => p }),
+n.d(t, { C: () => I, JE: () => E, NE: () => A, VU: () => f, bA: () => m, eo: () => T, lM: () => p, mb: () => h }),
     n(323874),
     n(14289),
     n(35956);
 var i = n(64700),
-    r = n(735438),
-    s = n(353640),
-    a = n(121894),
-    o = n(816866),
-    l = n(87558),
-    u = n(875741),
-    c = n(559474);
-function d(e) {
+    r = n(435558),
+    a = n(353640),
+    s = n(121894),
+    l = n(816866),
+    o = n(87558),
+    d = n(875741),
+    c = n(779982);
+function u(e) {
     null != e.previewSrc && URL.revokeObjectURL(e.previewSrc),
         Object.values(e.layerSrcByLayerId).forEach((e) => URL.revokeObjectURL(e));
 }
@@ -19,7 +19,7 @@ function _(e) {
     let { collectionAssets: t, avatarDecorationAssets: n, profileFrameAssets: i, previewProfileEffectSkuId: r } = e;
     return Object.keys(t).length > 0 || Object.keys(n).length > 0 || Object.keys(i).length > 0 || null != r;
 }
-let h = (0, s.v)((e) => ({
+let E = (0, a.v)((e) => ({
     previewEnabled: !1,
     collectionAssets: {},
     avatarDecorationAssets: {},
@@ -33,17 +33,17 @@ let h = (0, s.v)((e) => ({
     setHeroLogoMaxHeight: (t) => e({ heroLogoMaxHeight: t }),
     setHeroResponsive: (t) => e({ heroResponsive: t }),
     upsertCollectionAsset: (t, n) =>
-        (0, a.r)(() => {
+        (0, s.r)(() => {
             e((e) => {
                 let i = e.collectionAssets[t];
                 null != i && URL.revokeObjectURL(i.src);
                 let r = URL.createObjectURL(n),
-                    s = { ...e.collectionAssets };
-                return (s[t] = { type: t, name: n.name, src: r }), { ...e, collectionAssets: s, previewEnabled: !0 };
+                    a = { ...e.collectionAssets };
+                return (a[t] = { type: t, name: n.name, src: r }), { ...e, collectionAssets: a, previewEnabled: !0 };
             });
         }),
     deleteCollectionAsset: (t) =>
-        (0, a.r)(() => {
+        (0, s.r)(() => {
             e((e) => {
                 let n = e.collectionAssets[t];
                 if (null == n) return e;
@@ -53,7 +53,7 @@ let h = (0, s.v)((e) => ({
             });
         }),
     upsertAvatarDecorationAsset: (t) =>
-        (0, a.r)(() => {
+        (0, s.r)(() => {
             e((e) => {
                 let n = e.avatarDecorationAssets[t.name];
                 null != n && URL.revokeObjectURL(n.src);
@@ -71,27 +71,27 @@ let h = (0, s.v)((e) => ({
             });
         }),
     deleteAvatarDecorationAsset: (t) =>
-        (0, a.r)(() => {
+        (0, s.r)(() => {
             e((e) => {
                 let n = e.avatarDecorationAssets[t];
                 if (null == n) return e;
                 URL.revokeObjectURL(n.src);
                 let { [t]: i, ...r } = e.avatarDecorationAssets,
-                    s = e.previewAvatarDecorationKey === t;
+                    a = e.previewAvatarDecorationKey === t;
                 return {
                     ...e,
                     avatarDecorationAssets: r,
-                    previewAvatarDecorationKey: s ? null : e.previewAvatarDecorationKey,
+                    previewAvatarDecorationKey: a ? null : e.previewAvatarDecorationKey,
                     previewEnabled: _({ ...e, avatarDecorationAssets: r }),
                 };
             });
         }),
     upsertProfileFrame: (t, n) =>
-        (0, a.r)(() => {
+        (0, s.r)(() => {
             e((e) => {
                 let i = e.profileFrameAssets[t];
                 return (
-                    null != i && d(i),
+                    null != i && u(i),
                     {
                         ...e,
                         profileFrameAssets: { ...e.profileFrameAssets, [t]: n },
@@ -102,28 +102,28 @@ let h = (0, s.v)((e) => ({
             });
         }),
     deleteProfileFrame: (t) =>
-        (0, a.r)(() => {
+        (0, s.r)(() => {
             e((e) => {
                 let n = e.profileFrameAssets[t];
                 if (null == n) return e;
-                d(n);
+                u(n);
                 let { [t]: i, ...r } = e.profileFrameAssets,
-                    s = e.previewProfileFrameKey === t;
+                    a = e.previewProfileFrameKey === t;
                 return {
                     ...e,
                     profileFrameAssets: r,
-                    previewProfileFrameKey: s ? null : e.previewProfileFrameKey,
+                    previewProfileFrameKey: a ? null : e.previewProfileFrameKey,
                     previewEnabled: _({ ...e, profileFrameAssets: r }),
                 };
             });
         }),
     clearAssets: () =>
-        (0, a.r)(() => {
+        (0, s.r)(() => {
             e(
                 (e) => (
                     Object.values(e.collectionAssets).forEach((e) => URL.revokeObjectURL(e.src)),
                     Object.values(e.avatarDecorationAssets).forEach((e) => URL.revokeObjectURL(e.src)),
-                    Object.values(e.profileFrameAssets).forEach(d),
+                    Object.values(e.profileFrameAssets).forEach(u),
                     {
                         collectionAssets: {},
                         avatarDecorationAssets: {},
@@ -139,20 +139,20 @@ let h = (0, s.v)((e) => ({
             );
         }),
     setPreviewProfileEffectSkuId: (t) =>
-        (0, a.r)(() =>
+        (0, s.r)(() =>
             e((e) => ({
                 previewProfileEffectSkuId: t,
                 previewEnabled: null != t || _({ ...e, previewProfileEffectSkuId: t }),
             })),
         ),
     setPreviewAvatarDecorationKey: (t) =>
-        (0, a.r)(() => e((e) => ({ previewAvatarDecorationKey: t, previewEnabled: null != t || _(e) }))),
+        (0, s.r)(() => e((e) => ({ previewAvatarDecorationKey: t, previewEnabled: null != t || _(e) }))),
     setPreviewProfileFrameKey: (t) =>
-        (0, a.r)(() => e((e) => ({ previewProfileFrameKey: t, previewEnabled: null != t || _(e) }))),
+        (0, s.r)(() => e((e) => ({ previewProfileFrameKey: t, previewEnabled: null != t || _(e) }))),
 }));
-function f() {
-    let e = h((e) => e.collectionAssets),
-        t = h((e) => e.avatarDecorationAssets);
+function A() {
+    let e = E((e) => e.collectionAssets),
+        t = E((e) => e.avatarDecorationAssets);
     return i.useMemo(
         () => ({
             collectionAssets: Object.values(e).sort((e, t) => e.name.localeCompare(t.name)),
@@ -161,41 +161,49 @@ function f() {
         [e, t],
     );
 }
-function p(e) {
-    return h((t) => (t.previewEnabled ? t.collectionAssets[e]?.src : null));
+function h(e) {
+    return E((t) => (t.previewEnabled ? t.collectionAssets[e]?.src : null));
 }
-function E(e) {
-    let { previewEnabled: t, previewProfileEffectSkuId: n } = h(),
-        s = (0, o.ZK)(t ? n : null);
+function I(e) {
+    let { previewEnabled: t, previewProfileEffectSkuId: n } = E(),
+        a = (0, l.ZK)(t ? n : null);
     return i.useMemo(() => {
-        if (null == s || null == e) return null;
-        let { effects: t, stillFrames: n } = s,
+        if (null == a || null == e) return null;
+        let { effects: t, stillFrames: n } = a,
             i = null != n && Object.keys(n).length > 0;
         if (0 === t.length && !i) return null;
-        let a = (0, r.cloneDeep)(e);
+        let s = (0, r.cloneDeep)(e);
         return (
-            (a.title = s.name),
-            (a.effects = t.map((e) => {
+            (s.title = a.name),
+            (s.effects = t.map((e) => {
                 let { base64: t, ...n } = e;
                 return n;
             })),
             i &&
-                ((a.reducedMotionSrc = n[l.qH.REDUCED_MOTION]?.src ?? ""),
-                (a.staticFrameSrc = n[l.qH.STATIC]?.src ?? ""),
-                (a.thumbnailPreviewSrc = n[l.qH.THUMBNAIL]?.src ?? "")),
-            a
+                ((s.reducedMotionSrc = n[o.qH.REDUCED_MOTION]?.src ?? ""),
+                (s.staticFrameSrc = n[o.qH.STATIC]?.src ?? ""),
+                (s.thumbnailPreviewSrc = n[o.qH.THUMBNAIL]?.src ?? "")),
+            s
         );
-    }, [s, e]);
+    }, [a, e]);
 }
-function m() {
-    return h((e) =>
+function f() {
+    return E((e) =>
         e.previewEnabled && null != e.previewAvatarDecorationKey
             ? (e.avatarDecorationAssets[e.previewAvatarDecorationKey]?.src ?? null)
             : null,
     );
 }
-function g() {
-    let e = h((e) =>
+function p() {
+    let e = E((e) =>
+        e.previewEnabled && null != e.previewProfileFrameKey
+            ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
+            : null,
+    );
+    return i.useMemo(() => (null == e ? null : (0, d.i)(e)), [e]);
+}
+function T() {
+    let e = E((e) =>
         e.previewEnabled && null != e.previewProfileFrameKey
             ? (e.profileFrameAssets[e.previewProfileFrameKey] ?? null)
             : null,
@@ -209,10 +217,10 @@ function g() {
             let r = new Image();
             (r.src = i), (t[n.id] = r);
         }
-        return { layers: e.layers, layerData: t, css: (0, u.i)(e) };
+        return { layers: e.layers, layerData: t, css: (0, d.i)(e) };
     }, [e]);
 }
-function A() {
-    let e = h((e) => e.profileFrameAssets);
+function m() {
+    let e = E((e) => e.profileFrameAssets);
     return i.useMemo(() => Object.values(e).sort((e, t) => e.key.localeCompare(t.key)), [e]);
 }
