@@ -15,4 +15,5 @@ f.exports = {
     EL: "confirmation_cd2ff7",
     L1: "seasonalConfirmationPadding_cd2ff7",
     PN: "giftCodeSection_cd2ff7",
+    pP: "giftingBadgeFooter_cd2ff7",
 };

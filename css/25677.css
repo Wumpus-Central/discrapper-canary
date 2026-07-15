@@ -122,3 +122,7 @@
 .giftCodeSection_cd2ff7 {
     flex-direction: column
 }
+
+.giftingBadgeFooter_cd2ff7 {
+    padding-bottom: var(--space-8)
+}
