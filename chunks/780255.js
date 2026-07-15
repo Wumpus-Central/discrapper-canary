@@ -1,0 +1,18 @@
+_.exports = {
+    KQ: "messagesPopoutWrap__432f4",
+    wx: "header__432f4",
+    gn: "titleContainer__432f4",
+    qr: "footer__432f4",
+    sw: "loadingMore__432f4",
+    u9: "hasMore__432f4",
+    m4: "messagesPopout__432f4",
+    Uc: "messageGroupWrapper__432f4",
+    i0: "messageGroupCozy__432f4",
+    zC: "emptyPlaceholder__432f4",
+    Sl: "image__432f4",
+    k$: "loadingPlaceholder__432f4",
+    rf: "body__432f4",
+    uu: "actionButtons__432f4",
+    UD: "buttonContainer__432f4",
+    PP: "protip__432f4",
+};

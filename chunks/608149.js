@@ -7,4 +7,6 @@ e.exports = {
     M: "clickableMessageBackground__4ad69",
     tq: "deletedMessage__4ad69",
     fy: "deleteIcon__4ad69",
+    wx: "header__4ad69",
+    gn: "titleContainer__4ad69",
 };

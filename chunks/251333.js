@@ -1,4 +1,4 @@
-t.d(s, { $: () => eD, J: () => ep });
+t.d(s, { $: () => ep, J: () => eb });
 var a = t(627968),
     n = t(64700),
     l = t(503698),
@@ -12,23 +12,23 @@ var a = t(627968),
     x = t(17928),
     g = t(305866),
     v = t(606096),
-    j = t(922016),
-    h = t(689175),
-    A = t(695366),
-    f = t(661531),
-    N = t(534514),
-    E = t(241326),
-    b = t(939249),
-    p = t(933832),
-    D = t(22231),
+    j = t(661531),
+    h = t(834730),
+    A = t(922016),
+    f = t(689175),
+    E = t(695366),
+    N = t(297264),
+    b = t(241326),
+    p = t(939249),
+    D = t(933832),
+    T = t(22231),
     _ = t(99677),
     I = t(406810),
     C = t(442433),
-    T = t(928039),
-    R = t(139286),
-    S = t(636922),
-    k = t(194085),
-    y = t(835835),
+    R = t(928039),
+    S = t(139286),
+    k = t(636922),
+    y = t(194085),
     M = t(885386),
     O = t(576705),
     L = t(174459),
@@ -40,14 +40,14 @@ var a = t(627968),
     F = t(756377);
 t(321073);
 var U = t(216623);
-function K() {
+function V() {
     return q.A.getSavedMessages().map((e) => e.saveData);
 }
-var V = t(320448),
-    X = t(534890),
+var X = t(320448),
+    K = t(534890),
     J = t(187322),
-    Y = t(778712),
-    Z = t(47167),
+    Z = t(778712),
+    Y = t(47167),
     B = t(713654),
     H = t(598104),
     W = t(548118),
@@ -64,7 +64,7 @@ function et(e) {
             "data-recents-channel": s.id,
             children: [
                 (0, a.jsx)(ea, { channel: s }),
-                s.isPrivate() ? null : (0, a.jsx)(V._, { size: "xxs" }),
+                s.isPrivate() ? null : (0, a.jsx)(X._, { size: "xxs" }),
                 (0, a.jsx)(en, { channel: s }),
                 t,
             ],
@@ -77,13 +77,13 @@ function ea(e) {
     return null != t
         ? (0, a.jsx)(W.Ay, { className: ee.Kk, guild: t, size: W.Ay.Sizes.SMALLER, "aria-hidden": !0 })
         : s.isGroupDM()
-          ? (0, a.jsx)(H.A, { channel: s, size: Y._3.SIZE_24, "aria-hidden": !0 })
-          : (0, a.jsx)("div", { className: i()(ee.Kk, ee.ro), children: (0, a.jsx)(X.o, { size: "xxs" }) });
+          ? (0, a.jsx)(H.A, { channel: s, size: Z._3.SIZE_24, "aria-hidden": !0 })
+          : (0, a.jsx)("div", { className: i()(ee.Kk, ee.ro), children: (0, a.jsx)(K.o, { size: "xxs" }) });
 }
 function en(e) {
     let { channel: s } = e,
         t = (0, x.bG)([$.A], () => $.A.getGuild(s.guild_id)),
-        n = (0, Z.Ay)(s, !1),
+        n = (0, Y.Ay)(s, !1),
         l = (0, B.gU)(s, t),
         i = s.isPrivate() || null == l,
         r = s.isDM() ? Q.intl.formatToPlainString(Q.t.smD7XV, { username: n }) : n;
@@ -96,32 +96,31 @@ function en(e) {
     });
 }
 var el = t(403581),
-    ei = t(834730),
-    er = t(862482),
-    ec = t(192308),
-    ed = t(404374),
-    eo = t(725807),
-    eu = t(428262),
-    em = t(226017),
-    ex = t(652215),
-    eg = t(202541),
-    ev = t(398610),
-    ej = t(936037);
-function eh() {
-    return (0, em.A)()
+    ei = t(862482),
+    er = t(192308),
+    ec = t(404374),
+    ed = t(725807),
+    eo = t(428262),
+    eu = t(226017),
+    em = t(652215),
+    ex = t(202541),
+    eg = t(398610),
+    ev = t(936037);
+function ej() {
+    return (0, eu.A)()
         ? (0, a.jsx)("div", {
-              className: ev.do,
+              className: eg.do,
               children: (0, a.jsxs)("div", {
-                  className: ev.U6,
+                  className: eg.U6,
                   children: [
-                      (0, a.jsx)("img", { src: "/assets/29e2479161d09050.png", className: ev.Sl, alt: "" }),
+                      (0, a.jsx)("img", { src: "/assets/29e2479161d09050.png", className: eg.Sl, alt: "" }),
                       (0, a.jsx)(N.D, {
-                          className: ev.wx,
+                          className: eg.wx,
                           variant: "heading-xl/semibold",
                           color: "text-default",
                           children: Q.intl.string(Q.t.erEf2g),
                       }),
-                      (0, a.jsx)(ei.E, {
+                      (0, a.jsx)(h.E, {
                           variant: "text-md/medium",
                           color: "text-muted",
                           children: Q.intl.string(Q.t.NaRCXT),
@@ -130,34 +129,34 @@ function eh() {
               }),
           })
         : (0, a.jsxs)("div", {
-              className: ev.do,
+              className: eg.do,
               children: [
                   (0, a.jsxs)("div", {
-                      className: ev.U6,
+                      className: eg.U6,
                       children: [
-                          (0, a.jsx)("img", { src: ej, className: ev.Sl, alt: "" }),
+                          (0, a.jsx)("img", { src: ev, className: eg.Sl, alt: "" }),
                           (0, a.jsx)(N.D, {
-                              className: ev.wx,
+                              className: eg.wx,
                               variant: "heading-xl/semibold",
                               color: "text-default",
                               children: Q.intl.string(Q.t.w4DRbZ),
                           }),
-                          (0, a.jsx)(ei.E, {
+                          (0, a.jsx)(h.E, {
                               variant: "text-md/medium",
                               color: "text-muted",
                               children: Q.intl.string(Q.t.F6u3E3),
                           }),
                       ],
                   }),
-                  (0, a.jsx)(eA, {}),
+                  (0, a.jsx)(eh, {}),
               ],
           });
 }
-function eA() {
-    let e = (0, eu.Dd)(eg.PremiumTypes.TIER_2),
+function eh() {
+    let e = (0, eo.Dd)(ex.PremiumTypes.TIER_2),
         s = n.useCallback(
             () =>
-                (0, ec.openModalLazy)(async () => {
+                (0, er.openModalLazy)(async () => {
                     let { default: e } = await t.e("22540").then(t.bind(t, 530951));
                     return (s) => (0, a.jsx)(e, { ...s });
                 }),
@@ -165,37 +164,37 @@ function eA() {
         ),
         l = Q.intl.format(Q.t.qXh3fo, { nitroTierName: e, onClick: s });
     return (0, a.jsxs)("div", {
-        className: ev.Zj,
+        className: eg.Zj,
         children: [
-            (0, a.jsx)(el.t, { size: "md", color: ed.k0.PREMIUM_TIER_2 }),
-            (0, a.jsx)(ei.E, { variant: "text-xs/medium", color: "text-strong", className: ev.tD, children: l }),
-            (0, a.jsx)(eo.A, {
-                className: ev.Oy,
-                size: er.lO.TINY,
-                shinyButtonClassName: ev.Oy,
-                subscriptionTier: eg.pe.TIER_2,
-                premiumModalAnalyticsLocation: { section: ex.JJy.FOR_LATER_POPOUT_UPSELL },
+            (0, a.jsx)(el.t, { size: "md", color: ec.k0.PREMIUM_TIER_2 }),
+            (0, a.jsx)(h.E, { variant: "text-xs/medium", color: "text-strong", className: eg.tD, children: l }),
+            (0, a.jsx)(ed.A, {
+                className: eg.Oy,
+                size: ei.lO.TINY,
+                shinyButtonClassName: eg.Oy,
+                subscriptionTier: ex.pe.TIER_2,
+                premiumModalAnalyticsLocation: { section: em.JJy.FOR_LATER_POPOUT_UPSELL },
             }),
         ],
     });
 }
-var ef = t(953424);
-function eN(e) {
+var eA = t(953424);
+function ef(e) {
     let { reminder: s, throttledNow: t } = e,
         { dueInText: n, isOverdue: l } = (0, z.Ce)({ dueAt: s?.saveData.dueAt, now: t, type: z.kh.SHORT });
     if (null == s.saveData.dueAt) return null;
     let i = l ? "text-feedback-critical" : "text-default";
     return (0, a.jsxs)("div", {
-        className: ef.k,
+        className: eA.k,
         children: [
             (0, a.jsx)("div", {
-                className: ef.K,
+                className: eA.K,
                 children: (0, a.jsx)(I.O, {
                     size: "xxs",
                     color:
                         "text-feedback-critical" === i
-                            ? f.A.colors.TEXT_FEEDBACK_CRITICAL
-                            : f.A.colors.INTERACTIVE_TEXT_ACTIVE,
+                            ? j.A.colors.TEXT_FEEDBACK_CRITICAL
+                            : j.A.colors.INTERACTIVE_TEXT_ACTIVE,
                 }),
             }),
             (0, a.jsx)(N.D, { variant: "text-md/semibold", color: i, children: n }),
@@ -203,23 +202,36 @@ function eN(e) {
     });
 }
 var eE = t(608149);
-function eb(e) {
+function eN(e) {
     let { closePopout: s } = e;
     return (0, a.jsx)(g.l, {
         "aria-label": Q.intl.string(Q.t["2pAkDA"]),
         children: (0, a.jsxs)("div", {
             className: eE.jC,
             children: [
-                (0, a.jsx)(y.Y9, { icon: v.c, title: Q.intl.string(Q.t["2pAkDA"]) }),
-                (0, a.jsx)(ep, { closePopout: s }),
+                (0, a.jsx)("div", {
+                    className: eE.wx,
+                    children: (0, a.jsxs)("div", {
+                        className: eE.gn,
+                        children: [
+                            (0, a.jsx)(v.c, { color: j.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+                            (0, a.jsx)(h.E, {
+                                variant: "text-lg/semibold",
+                                color: "interactive-text-active",
+                                children: Q.intl.string(Q.t["2pAkDA"]),
+                            }),
+                        ],
+                    }),
+                }),
+                (0, a.jsx)(eb, { closePopout: s }),
             ],
         }),
     });
 }
-function ep(e) {
+function eb(e) {
     let { closePopout: s } = e,
         t = (function () {
-            let [e, s] = n.useState(K),
+            let [e, s] = n.useState(V),
                 t = n.useRef(q.A.getIsStale());
             return (
                 n.useEffect(() => {
@@ -228,7 +240,7 @@ function ep(e) {
                         let a = q.A.getLastChanged();
                         if (e !== a) {
                             if (((e = a), t.current && !q.A.getIsStale())) {
-                                (t.current = !1), s(K());
+                                (t.current = !1), s(V());
                                 return;
                             }
                             s((e) => {
@@ -253,7 +265,7 @@ function ep(e) {
                 e
             );
         })();
-    return ((0, R.A)(
+    return ((0, S.A)(
         {
             type: u.ImpressionTypes.POPOUT,
             name: u.ImpressionNames.FOR_LATER_LIST_VIEWED,
@@ -263,10 +275,10 @@ function ep(e) {
         [t.length],
     ),
     0 === t.length)
-        ? (0, a.jsx)(eh, {})
-        : (0, a.jsx)(e_, { savedMessageKeys: t, closePopout: s });
+        ? (0, a.jsx)(ej, {})
+        : (0, a.jsx)(eD, { savedMessageKeys: t, closePopout: s });
 }
-function eD(e) {
+function ep(e) {
     let { onOpen: s, onClose: t, children: l, popoutPosition: i, popoutAlign: r } = e,
         [c, d] = n.useState(!1),
         o = n.useRef(null),
@@ -277,20 +289,20 @@ function eD(e) {
             d(!c), c ? t?.() : s?.();
         }, [t, s, c]);
     n.useEffect(
-        () => (P._.subscribe(ex.jej.TOGGLE_FOR_LATER, m), () => void P._.unsubscribe(ex.jej.TOGGLE_FOR_LATER, m)),
+        () => (P._.subscribe(em.jej.TOGGLE_FOR_LATER, m), () => void P._.unsubscribe(em.jej.TOGGLE_FOR_LATER, m)),
         [m],
     );
     let g = (0, x.bG)([q.A], () => q.A.hasOverdueReminder(), []);
-    return (0, a.jsx)(j.Y, {
+    return (0, a.jsx)(A.Y, {
         targetElementRef: o,
-        animation: j.Y.Animation.NONE,
+        animation: A.Y.Animation.NONE,
         position: i,
         align: r,
         autoInvert: !1,
         shouldShow: c,
         onRequestClose: u,
         renderPopout: function () {
-            return (0, a.jsx)(eb, { closePopout: u });
+            return (0, a.jsx)(eN, { closePopout: u });
         },
         ignoreModalClicks: !0,
         children: (e, s) => {
@@ -299,10 +311,10 @@ function eD(e) {
         },
     });
 }
-function e_(e) {
+function eD(e) {
     let { savedMessageKeys: s, closePopout: t } = e,
         l = n.useRef(null),
-        i = (0, T.A)("for-later", l),
+        i = (0, R.A)("for-later", l),
         [r, c] = n.useState(new Date());
     return (
         n.useEffect(() => {
@@ -316,14 +328,14 @@ function e_(e) {
             children: (0, a.jsx)(m.PR, {
                 children: (e) => {
                     let { ref: n, ...i } = e;
-                    return (0, a.jsx)(h.Ch, {
+                    return (0, a.jsx)(f.Ch, {
                         ref: (e) => {
                             (l.current = e), (n.current = e?.getScrollerNode() ?? null);
                         },
                         className: eE.VB,
                         ...i,
                         children: s.map((e) =>
-                            (0, a.jsx)(eC, { savedMessageKey: e, closePopout: t, throttledNow: r }, e.messageId),
+                            (0, a.jsx)(e_, { savedMessageKey: e, closePopout: t, throttledNow: r }, e.messageId),
                         ),
                     });
                 },
@@ -331,14 +343,14 @@ function e_(e) {
         })
     );
 }
-function eI(e) {
+function eT(e) {
     let { savedMessage: s, closePopout: t, throttledNow: l } = e,
         r = (0, z.vr)(s),
         c = n.useCallback(
             async (e) => {
                 await (0, z.le)(s, r),
                     e.shiftKey || t(),
-                    L.default.track(ex.HAw.FOR_LATER_SAVED_MESSAGE_JUMP, {
+                    L.default.track(em.HAw.FOR_LATER_SAVED_MESSAGE_JUMP, {
                         channel_id: s.saveData.channelId,
                         message_id: s.saveData.messageId,
                         message_author_id: s.message?.author.id,
@@ -348,16 +360,16 @@ function eI(e) {
             },
             [t, s, r],
         ),
-        d = (0, x.bG)([O.A], () => !!(r?.type === ex.rbe.UNKNOWN || r?.isPrivate()) || O.A.can(ex.xBc.VIEW_CHANNEL, r));
+        d = (0, x.bG)([O.A], () => !!(r?.type === em.rbe.UNKNOWN || r?.isPrivate()) || O.A.can(em.xBc.VIEW_CHANNEL, r));
     return null != r && null != s.message && d
         ? (0, a.jsxs)("div", {
               className: eE.zC,
               children: [
-                  (0, a.jsx)(b.D, { className: eE.M, onClick: c, "aria-label": Q.intl.string(Q.t["+TSRGD"]) }),
-                  null != s.saveData.dueAt ? (0, a.jsx)(eN, { reminder: s, throttledNow: l }) : null,
+                  (0, a.jsx)(p.D, { className: eE.M, onClick: c, "aria-label": Q.intl.string(Q.t["+TSRGD"]) }),
+                  null != s.saveData.dueAt ? (0, a.jsx)(ef, { reminder: s, throttledNow: l }) : null,
                   (0, a.jsx)(et, { channel: r }),
                   (0, a.jsx)(
-                      S.A,
+                      k.A,
                       {
                           message: s.message,
                           channel: r,
@@ -369,9 +381,9 @@ function eI(e) {
                       },
                       s.message.id,
                   ),
-                  (0, a.jsx)(k.Ay, {
+                  (0, a.jsx)(y.Ay, {
                       className: eE.S3,
-                      children: (0, a.jsx)(eT, { savedMessage: s, jumpToMessage: c }),
+                      children: (0, a.jsx)(eI, { savedMessage: s, jumpToMessage: c }),
                   }),
               ],
           })
@@ -380,20 +392,20 @@ function eI(e) {
               children: [
                   (0, a.jsx)("div", {
                       className: eE.fy,
-                      children: (0, a.jsx)(A.E, { size: "xxs", color: f.A.colors.INTERACTIVE_TEXT_ACTIVE }),
+                      children: (0, a.jsx)(E.E, { size: "xxs", color: j.A.colors.INTERACTIVE_TEXT_ACTIVE }),
                   }),
                   (0, a.jsx)(N.D, {
                       variant: "text-md/semibold",
                       color: "text-default",
                       children: null != s.saveData.dueAt ? Q.intl.string(Q.t["wuQm+j"]) : Q.intl.string(Q.t.o572Fe),
                   }),
-                  (0, a.jsx)(k.Ay, {
+                  (0, a.jsx)(y.Ay, {
                       className: eE.S3,
                       children: (0, a.jsx)(
-                          k.qv,
+                          y.qv,
                           {
                               label: Q.intl.string(Q.t.SvXS1Z),
-                              icon: E.u,
+                              icon: b.u,
                               dangerous: !0,
                               onClick: () => (0, G.x)(s.saveData),
                           },
@@ -403,22 +415,22 @@ function eI(e) {
               ],
           });
 }
-function eC(e) {
+function e_(e) {
     let { savedMessageKey: s, closePopout: t, throttledNow: n } = e,
         l = (0, x.bG)([q.A], () => q.A.getSavedMessage(s.channelId, s.messageId));
-    return null == l ? null : (0, a.jsx)(eI, { savedMessage: l, closePopout: t, throttledNow: n });
+    return null == l ? null : (0, a.jsx)(eT, { savedMessage: l, closePopout: t, throttledNow: n });
 }
-function eT(e) {
+function eI(e) {
     let { savedMessage: s, jumpToMessage: n } = e;
     return (c()(null != s.message, "Saved message must be cached for For Later action buttons"),
     null != s.saveData.dueAt)
         ? (0, a.jsxs)(a.Fragment, {
               children: [
                   (0, a.jsx)(
-                      k.qv,
+                      y.qv,
                       {
                           label: Q.intl.string(Q.t.yjGtdJ),
-                          icon: p.A,
+                          icon: D.A,
                           onClick: () =>
                               (0, G.Y)({
                                   channelId: s.saveData.channelId,
@@ -429,10 +441,10 @@ function eT(e) {
                       "mark-complete",
                   ),
                   (0, a.jsx)(
-                      k.qv,
+                      y.qv,
                       {
                           label: Q.intl.string(Q.t.vrbqs1),
-                          icon: D.R,
+                          icon: T.R,
                           onClick: (e) =>
                               (0, C.L3)(e, async () => {
                                   let { MessageReminderEditMenu: e } = await t.e("75133").then(t.bind(t, 195404));
@@ -442,14 +454,14 @@ function eT(e) {
                       },
                       "edit-reminder",
                   ),
-                  (0, a.jsx)(k.$$, {}),
+                  (0, a.jsx)(y.$$, {}),
                   (0, a.jsx)(
-                      k.qv,
+                      y.qv,
                       { label: Q.intl.string(Q.t["+TSRGD"]), icon: _.t, onClick: (e) => n(e) },
                       "jump-to-message",
                   ),
                   (0, a.jsx)(
-                      k.qv,
+                      y.qv,
                       { label: Q.intl.string(Q.t.SvXS1Z), icon: v.c, onClick: () => (0, G.x)(s.saveData) },
                       "remove-reminder",
                   ),
@@ -458,7 +470,7 @@ function eT(e) {
         : (0, a.jsxs)(a.Fragment, {
               children: [
                   (0, a.jsx)(
-                      k.qv,
+                      y.qv,
                       {
                           label: Q.intl.string(Q.t.mJ3P0N),
                           icon: I.O,
@@ -472,12 +484,12 @@ function eT(e) {
                       "create-reminder",
                   ),
                   (0, a.jsx)(
-                      k.qv,
+                      y.qv,
                       { label: Q.intl.string(Q.t["+TSRGD"]), icon: _.t, onClick: (e) => n(e) },
                       "jump-to-message",
                   ),
                   (0, a.jsx)(
-                      k.qv,
+                      y.qv,
                       { label: Q.intl.string(Q.t.SvXS1Z), icon: v.c, onClick: () => (0, G.x)(s.saveData) },
                       "remove-bookmark",
                   ),

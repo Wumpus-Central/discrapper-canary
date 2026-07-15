@@ -15,4 +15,6 @@ e.exports = {
     so: "scores_b18605",
     a7: "scoreItem_b18605",
     FR: "conversationMeta_b18605",
+    wx: "header_b18605",
+    gn: "titleContainer_b18605",
 };

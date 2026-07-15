@@ -104,6 +104,19 @@
     margin: 4px 0 8px
 }
 
+.header_b18605 {
+    background-color: var(--background-surface-high);
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 16px;
+    position: relative
+}
+
+.titleContainer_b18605 {
+    align-items: center;
+    display: flex;
+    gap: 8px
+}
+
 .container__00de6 {
     display: flex;
     flex: 0 0 auto;

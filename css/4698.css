@@ -4102,46 +4102,6 @@ html .tabBadge_e6b769 {
     margin-inline-start: auto
 }
 
-.jumpButton_ed0c8c {
-    align-items: center;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
-    background-color: var(--background-surface-high);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-xs);
-    box-shadow: var(--shadow-medium);
-    box-sizing: border-box;
-    color: var(--control-secondary-text-default);
-    cursor: pointer;
-    font-weight: var(--font-weight-semibold);
-    height: auto;
-    inset-inline-end: var(--space-8);
-    padding: var(--space-4) var(--space-8);
-    position: absolute;
-    text-align: center;
-    top: var(--space-8);
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
-    z-index: 2
-}
-
-.jumpButton_ed0c8c .text_ed0c8c {
-    color: var(--text-default)
-}
-
-.jumpButton_ed0c8c:hover .text_ed0c8c {
-    color: var(--interactive-text-hover)
-}
-
-.jumpButton_ed0c8c:active .text_ed0c8c {
-    color: var(--interactive-text-active)
-}
-
-.jumpButton_ed0c8c:hover {
-    background-color: var(--background-surface-higher)
-}
-
 .recentMentionsPopout__95796 {
     max-height: 70vh;
     max-width: 600px;
@@ -4155,53 +4115,23 @@ html .tabBadge_e6b769 {
 }
 
 .scroller__95796 {
-    padding: 0 16px
-}
-
-.container__95796 {
-    margin-bottom: 16px
-}
-
-.closeButton__95796 {
-    flex-shrink: 0;
-    margin-inline-start: 12px
-}
-
-.messageContainer__95796 {
-    background-color: var(--background-surface-higher);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    padding: 16px;
-    padding-inline-start: 0;
-    position: relative
-}
-
-.jumpMessageButton__95796 {
-    inset-inline-end: 16px;
-    opacity: 0;
-    top: 19px
-}
-
-.messageContainer__95796:focus-within .jumpMessageButton__95796,
-.messageContainer__95796:hover .jumpMessageButton__95796 {
-    opacity: 1
+    padding: var(--space-16) var(--space-16) 0
 }
 
 .message__95796 {
-    overflow: hidden;
-    padding-inline-end: 0
+    margin: var(--space-12) 0;
+    overflow: hidden
 }
 
-.messageContainer__95796 .message__95796:first-of-type {
-    margin-top: 0
+.loading__95796 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: var(--space-48)
 }
 
-.enable-forced-colors .messageContainer__95796 {
-    border: 2px solid CanvasText
-}
-
-.checkbox__95796 {
-    flex-grow: 0
+.hasMore__95796 {
+    margin-bottom: var(--space-16)
 }
 
 .container__9497c {
