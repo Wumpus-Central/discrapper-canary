@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { A: () => f });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(615300),
-    o = n(837381),
-    d = n(187322),
-    c = n(939249),
-    u = n(442433),
-    _ = n(688810),
-    E = n(595623),
-    A = n(22212);
-n(646363);
-var h = n(828066);
-class I extends r.PureComponent {
+s.d(t, { A: () => I });
+var i = s(627968),
+    n = s(64700),
+    a = s(503698),
+    r = s.n(a),
+    l = s(615300),
+    o = s(837381),
+    u = s(187322),
+    h = s(939249),
+    c = s(442433),
+    d = s(688810),
+    A = s(595623),
+    m = s(22212);
+s(646363);
+var p = s(828066);
+class N extends n.PureComponent {
     state = {
         height: new l.A.Value(this.props.height ?? 61),
         opacity: new l.A.Value(1),
@@ -36,45 +35,45 @@ class I extends r.PureComponent {
             ]).start(e);
     }
     handleMouseEnter = () => {
-        let { isFocused: e, isActive: t, onOtherHover: n } = this.props,
+        let { isFocused: e, isActive: t, onOtherHover: s } = this.props,
             { isContextMenuActive: i } = this.state;
-        this.setState({ hovered: e }), !e || t || i || n?.();
+        this.setState({ hovered: e }), !e || t || i || s?.();
     };
     handleMouseLeave = () => {
         this.setState({ hovered: !1 });
     };
     handleContextMenu = (e, t) => {
-        let { analyticsLocations: r } = this.props;
+        let { analyticsLocations: n } = this.props;
         this.setState({ isContextMenuActive: !0 }),
-            (0, u.L3)(
+            (0, c.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("71406"),
-                        n.e("94881"),
-                        n.e("26132"),
-                        n.e("46652"),
-                        n.e("93190"),
-                        n.e("34552"),
-                        n.e("8757"),
-                        n.e("85968"),
-                        n.e("89673"),
-                        n.e("68403"),
-                        n.e("29787"),
-                        n.e("82073"),
-                        n.e("97558"),
-                        n.e("91994"),
-                        n.e("76665"),
-                        n.e("76273"),
-                        n.e("24198"),
-                        n.e("32418"),
-                    ]).then(n.bind(n, 668569));
+                        s.e("71406"),
+                        s.e("94881"),
+                        s.e("26132"),
+                        s.e("46652"),
+                        s.e("93190"),
+                        s.e("34552"),
+                        s.e("8757"),
+                        s.e("85968"),
+                        s.e("89673"),
+                        s.e("68403"),
+                        s.e("29787"),
+                        s.e("82073"),
+                        s.e("97558"),
+                        s.e("91994"),
+                        s.e("76665"),
+                        s.e("76273"),
+                        s.e("24198"),
+                        s.e("32418"),
+                    ]).then(s.bind(s, 668569));
                     function a() {
-                        (0, A.Jo)({ targetUserId: t.id, tab: E.Ay.getState().section });
+                        (0, m.Jo)({ targetUserId: t.id, tab: A.Ay.getState().section });
                     }
-                    return (n) => {
-                        let s = (0, i.jsx)(e, { ...n, user: t, onInteraction: a });
-                        return null == r ? s : (0, i.jsx)(_.f5, { value: r, children: s });
+                    return (s) => {
+                        let r = (0, i.jsx)(e, { ...s, user: t, onInteraction: a });
+                        return null == n ? r : (0, i.jsx)(d.f5, { value: n, children: r });
                     };
                 },
                 {
@@ -85,59 +84,59 @@ class I extends r.PureComponent {
             );
     };
     render() {
-        let { height: e, opacity: t, hovered: n, isContextMenuActive: r } = this.state,
+        let { height: e, opacity: t, hovered: s, isContextMenuActive: n } = this.state,
             {
                 children: a,
-                user: u,
-                onClick: _,
-                isActive: E,
-                className: A,
-                activeClassName: I,
-                noBorder: f,
-                ariaLabel: p,
+                user: c,
+                onClick: d,
+                isActive: A,
+                className: m,
+                activeClassName: N,
+                noBorder: I,
+                ariaLabel: E,
             } = this.props;
         return (0, i.jsxs)(i.Fragment, {
             children: [
-                f ? null : (0, i.jsx)("div", { className: s()(h.yF, { [h._]: E || r || n }) }),
+                I ? null : (0, i.jsx)("div", { className: r()(p.yF, { [p._]: A || n || s }) }),
                 (0, i.jsx)(o.tG, {
-                    id: u.id,
+                    id: c.id,
                     children: (o) => {
-                        let { role: f, ...T } = o,
-                            m = s()(A, h.Vg, null != I ? { [I]: E || r } : null, { [h.vu]: E || r });
-                        return null != p
+                        let { role: I, ...g } = o,
+                            y = r()(m, p.Vg, null != N ? { [N]: A || n } : null, { [p.vu]: A || n });
+                        return null != E
                             ? (0, i.jsxs)(l.A.div, {
-                                  role: f,
-                                  className: m,
-                                  onContextMenu: (e) => this.handleContextMenu(e, u),
+                                  role: I,
+                                  className: y,
+                                  onContextMenu: (e) => this.handleContextMenu(e, c),
                                   onMouseEnter: this.handleMouseEnter,
                                   onMouseLeave: this.handleMouseLeave,
                                   style: { height: e, opacity: t },
                                   children: [
-                                      (0, i.jsx)(d.vN, {
+                                      (0, i.jsx)(u.vN, {
                                           offset: { left: -8, right: -8 },
-                                          children: (0, i.jsx)(c.D, {
+                                          children: (0, i.jsx)(h.D, {
                                               tag: "div",
-                                              "aria-label": p,
-                                              className: h.J5,
-                                              onClick: _ ?? void 0,
-                                              ...T,
+                                              "aria-label": E,
+                                              className: p.J5,
+                                              onClick: d ?? void 0,
+                                              ...g,
                                           }),
                                       }),
-                                      (0, i.jsx)("div", { className: h.u4, children: a(n || E || r, T.tabIndex) }),
+                                      (0, i.jsx)("div", { className: p.u4, children: a(s || A || n, g.tabIndex) }),
                                   ],
                               })
-                            : (0, i.jsx)(d.vN, {
+                            : (0, i.jsx)(u.vN, {
                                   offset: { left: -8, right: -8 },
                                   children: (0, i.jsx)(l.A.div, {
-                                      className: m,
-                                      onContextMenu: (e) => this.handleContextMenu(e, u),
+                                      className: y,
+                                      onContextMenu: (e) => this.handleContextMenu(e, c),
                                       onMouseEnter: this.handleMouseEnter,
                                       onMouseLeave: this.handleMouseLeave,
-                                      onClick: _ ?? void 0,
+                                      onClick: d ?? void 0,
                                       style: { height: e, opacity: t },
-                                      role: f,
-                                      ...T,
-                                      children: a(n || E || r, T.tabIndex),
+                                      role: I,
+                                      ...g,
+                                      children: a(s || A || n, g.tabIndex),
                                   }),
                               });
                     },
@@ -146,4 +145,4 @@ class I extends r.PureComponent {
         });
     }
 }
-let f = I;
+let I = N;

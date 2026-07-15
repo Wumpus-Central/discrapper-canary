@@ -1,31 +1,30 @@
-"use strict";
-let i, r, a, s, l, o;
-n.d(t, { A: () => j }), n(938796);
-var d = n(735438),
-    c = n.n(d),
-    u = n(989349),
-    _ = n.n(u),
-    E = n(371444),
-    A = n(602137),
-    h = n(17928),
-    I = n(636537),
-    f = n(228366),
-    p = n(7584),
-    T = n(815807),
+let r, l, i, a, u, o;
+n.d(t, { A: () => W }), n(938796);
+var s = n(435558),
+    d = n.n(s),
+    E = n(989349),
+    _ = n.n(E),
+    c = n(371444),
+    T = n(602137),
+    S = n(17928),
+    N = n(636537),
+    h = n(228366),
+    I = n(7584),
+    f = n(815807),
     m = n(95701),
-    g = n(671759),
-    S = n(889227),
-    N = n(860689),
-    C = n(734057),
-    O = n(652215),
-    R = n(37411);
-let L = O.XlH.CLOSED,
-    D = {},
-    y = {},
-    v = !1,
-    b = !1,
-    M = null,
-    P = [
+    A = n(671759),
+    C = n(889227),
+    p = n(860689),
+    L = n(734057),
+    g = n(652215),
+    y = n(37411);
+let v = g.XlH.CLOSED,
+    H = {},
+    O = {},
+    R = !1,
+    U = !1,
+    G = null,
+    j = [
         "name",
         "type",
         "topic_",
@@ -49,69 +48,69 @@ let L = O.XlH.CLOSED,
         "iconEmoji",
         "themeColor",
     ];
-function U(e, t, n) {
+function D(e, t, n) {
     switch (e) {
         case "topic_":
             return t ?? "";
         case "defaultAutoArchiveDuration":
-            return t ?? R.cM;
+            return t ?? y.cM;
         case "defaultSortOrder":
-            return t ?? A.T.LATEST_ACTIVITY;
+            return t ?? T.T.LATEST_ACTIVITY;
         case "defaultForumLayout":
-            if (n === O.rbe.GUILD_MEDIA) return E.C.GRID;
-            if (null == t || t === E.C.DEFAULT) return E.C.LIST;
+            if (n === g.rbe.GUILD_MEDIA) return c.C.GRID;
+            if (null == t || t === c.C.DEFAULT) return c.C.LIST;
             return t;
         case "rateLimitPerUser_":
         case "defaultThreadRateLimitPerUser":
             return t ?? 0;
         case "defaultReactionEmoji":
             if (null == t) return null;
-            if ((0, T.is)(t.emojiId)) return { emojiId: t.emojiId };
-            let i = t.emojiName;
-            return null == i || "" === i ? null : { emojiName: p.Ay.translateInlineEmojiToSurrogates(i) };
+            if ((0, f.is)(t.emojiId)) return { emojiId: t.emojiId };
+            let r = t.emojiName;
+            return null == r || "" === r ? null : { emojiName: I.Ay.translateInlineEmojiToSurrogates(r) };
         default:
             return t;
     }
 }
-function w(e) {
-    (i = e.section),
-        (r = e.subsection),
-        null != s &&
-            i === O.p_A.INSTANT_INVITES &&
-            ((v = !0),
-            I.Bo.get({ url: O.Rsh.INSTANT_INVITES(s.id), oldFormErrors: !0, rejectWithError: !0 }).then(
+function b(e) {
+    (r = e.section),
+        (l = e.subsection),
+        null != a &&
+            r === g.p_A.INSTANT_INVITES &&
+            ((R = !0),
+            N.Bo.get({ url: g.Rsh.INSTANT_INVITES(a.id), oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
-                    (v = !1), f.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body });
+                    (R = !1), h.h.dispatch({ type: "CHANNEL_SETTINGS_LOADED_INVITES", invites: e.body });
                 },
-                () => (v = !1),
+                () => (R = !1),
             ));
 }
-function G() {
-    (b = !1), (L = O.XlH.CLOSED), (i = null), (s = a = null), (l = null), (y = {});
+function M() {
+    (U = !1), (v = g.XlH.CLOSED), (r = null), (a = i = null), (u = null), (O = {});
 }
-let x = c().debounce(() => {
-    if (null == s || null == a) return !1;
-    let e = s.toJS(),
-        t = a.toJS(),
+let P = d().debounce(() => {
+    if (null == a || null == i) return !1;
+    let e = a.toJS(),
+        t = i.toJS(),
         n = e.type;
-    P.every((i) => {
-        let r = e[i],
-            a = t[i],
-            s = U(i, r, n),
-            l = U(i, a, n);
-        return c().isEqual(s, l);
+    j.every((r) => {
+        let l = e[r],
+            i = t[r],
+            a = D(r, l, n),
+            u = D(r, i, n);
+        return d().isEqual(a, u);
     }) &&
-        s !== a &&
-        ((s = a), H.emitChange());
+        a !== i &&
+        ((a = i), k.emitChange());
 }, 500);
-function k(e) {
-    return new g.A({
+function w(e) {
+    return new A.A({
         code: e.code,
         temporary: e.temporary,
         revoked: e.revoked,
-        inviter: null != e.inviter ? new S.A(e.inviter) : null,
+        inviter: null != e.inviter ? new C.A(e.inviter) : null,
         channel: (0, m.OY)(e.channel),
-        guild: null != e.guild ? (0, N.DY)(e.guild) : null,
+        guild: null != e.guild ? (0, p.DY)(e.guild) : null,
         uses: e.uses,
         maxUses: e.max_uses,
         maxAge: e.max_age,
@@ -120,107 +119,107 @@ function k(e) {
         roles: e.roles,
     });
 }
-function F(e) {
+function V(e) {
     return (
         !!(function (e) {
-            if (null == a || a.id !== e) return !1;
-            if (a === s) {
-                let t = C.A.getChannel(e);
+            if (null == i || i.id !== e) return !1;
+            if (i === a) {
+                let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                (s = a = t), (l = C.A.getChannel(s.parent_id));
+                (a = i = t), (u = L.A.getChannel(a.parent_id));
             } else {
-                let t = C.A.getChannel(e);
+                let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                (a = t),
-                    null != s &&
-                        ((s = s
-                            .set("permissionOverwrites", a.permissionOverwrites)
-                            .set("availableTags", a.availableTags)),
-                        (l = C.A.getChannel(s.parent_id)));
+                (i = t),
+                    null != a &&
+                        ((a = a
+                            .set("permissionOverwrites", i.permissionOverwrites)
+                            .set("availableTags", i.availableTags)),
+                        (u = L.A.getChannel(a.parent_id)));
             }
             return !0;
         })(e) &&
-        null != s &&
-        (null != o && null == s.permissionOverwrites[o] && (o = s.getGuildId()), !0)
+        null != a &&
+        (null != o && null == a.permissionOverwrites[o] && (o = a.getGuildId()), !0)
     );
 }
-function V(e) {
+function B(e) {
     let { channelId: t } = e;
-    return F(t);
+    return V(t);
 }
-class B extends h.Ay.Store {
+class F extends S.Ay.Store {
     static displayName = "ChannelSettingsStore";
     initialize() {
-        this.waitFor(C.A);
+        this.waitFor(L.A);
     }
     hasChanges() {
-        return s !== a;
+        return a !== i;
     }
     isOpen() {
-        return b;
+        return U;
     }
     getSection() {
-        return i;
+        return r;
     }
     getInvites() {
-        return { invites: y, loading: v };
+        return { invites: O, loading: R };
     }
     showNotice() {
         return this.hasChanges();
     }
     getChannel() {
-        return s;
+        return a;
     }
     getFormState() {
-        return L;
+        return v;
     }
     getCategory() {
-        return l;
+        return u;
     }
     getProps() {
         return {
-            submitting: L === O.XlH.SUBMITTING,
-            errors: D,
-            channel: s,
-            section: i,
-            subsection: r,
-            invites: y,
+            submitting: v === g.XlH.SUBMITTING,
+            errors: H,
+            channel: a,
+            section: r,
+            subsection: l,
+            invites: O,
             selectedOverwriteId: o,
             hasChanges: this.hasChanges(),
-            analyticsLocation: M,
+            analyticsLocation: G,
         };
     }
 }
-let H = new B(f.h, {
+let k = new F(h.h, {
         CHANNEL_SETTINGS_INIT: function (e) {
-            let t = C.A.getChannel(e.channelId);
-            if (null == t) return G();
-            (L = O.XlH.OPEN),
-                (s = a = t),
-                (M = "location" in e && null != e.location ? e.location : null),
-                (r = "subsection" in e ? e.subsection : null),
-                null != s && (s = s.set("nsfw", s.isNSFW())),
-                (l = C.A.getChannel(s.parent_id)),
-                (o = s.getGuildId());
-            let n = s.isModeratorReportChannel() ? O.p_A.PERMISSIONS : O.p_A.OVERVIEW;
-            return (D = {}), w({ type: "CHANNEL_SETTINGS_SET_SECTION", section: i ?? n, subsection: r }), !0;
+            let t = L.A.getChannel(e.channelId);
+            if (null == t) return M();
+            (v = g.XlH.OPEN),
+                (a = i = t),
+                (G = "location" in e && null != e.location ? e.location : null),
+                (l = "subsection" in e ? e.subsection : null),
+                null != a && (a = a.set("nsfw", a.isNSFW())),
+                (u = L.A.getChannel(a.parent_id)),
+                (o = a.getGuildId());
+            let n = a.isModeratorReportChannel() ? g.p_A.PERMISSIONS : g.p_A.OVERVIEW;
+            return (H = {}), b({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: l }), !0;
         },
         CHANNEL_SETTINGS_SUBMIT: function () {
-            (L = O.XlH.SUBMITTING), (D = {});
+            (v = g.XlH.SUBMITTING), (H = {});
         },
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: function () {
-            (a = s), (L = O.XlH.OPEN);
+            (i = a), (v = g.XlH.OPEN);
         },
         CHANNEL_SETTINGS_SUBMIT_FAILURE: function (e) {
-            (L = O.XlH.OPEN),
-                (D = Object.keys(e.errors ?? {}).reduce((t, n) => {
-                    let i = e.errors[n];
-                    return (0, d.isArray)(i) ? (t[n] = i.join("\n")) : (t[n] = i), t;
+            (v = g.XlH.OPEN),
+                (H = Object.keys(e.errors ?? {}).reduce((t, n) => {
+                    let r = e.errors[n];
+                    return (0, s.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t;
                 }, {}));
         },
-        CHANNEL_SETTINGS_CLOSE: G,
-        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: V,
-        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: V,
+        CHANNEL_SETTINGS_CLOSE: M,
+        CHANNEL_PERMISSIONS_PUT_OVERWRITE_SUCCESS: B,
+        CHANNEL_PERMISSIONS_DELETE_OVERWRITE_SUCCESS: B,
         CHANNEL_SETTINGS_OVERWRITE_SELECT: function (e) {
             let { overwriteId: t } = e;
             o = t;
@@ -229,84 +228,84 @@ let H = new B(f.h, {
             let {
                 name: t,
                 channelType: n,
-                topic: i,
-                bitrate: r,
-                userLimit: a,
-                nsfw: l,
+                topic: r,
+                bitrate: l,
+                userLimit: i,
+                nsfw: u,
                 flags: o,
-                rateLimitPerUser: d,
-                defaultThreadRateLimitPerUser: c,
-                autoArchiveDuration: u,
+                rateLimitPerUser: s,
+                defaultThreadRateLimitPerUser: d,
+                autoArchiveDuration: E,
                 locked: _,
-                invitable: E,
-                defaultAutoArchiveDuration: A,
-                template: h,
-                defaultReactionEmoji: I,
-                rtcRegion: f,
-                videoQualityMode: p,
-                availableTags: T,
+                invitable: c,
+                defaultAutoArchiveDuration: T,
+                template: S,
+                defaultReactionEmoji: N,
+                rtcRegion: h,
+                videoQualityMode: I,
+                availableTags: f,
                 defaultSortOrder: m,
-                defaultForumLayout: g,
-                defaultTagSetting: S,
-                iconEmoji: N,
-                themeColor: C,
+                defaultForumLayout: A,
+                defaultTagSetting: C,
+                iconEmoji: p,
+                themeColor: L,
             } = e;
-            if (null == s) return !1;
-            null != t && (s = s.set("name", t)),
-                null != i && (s = s.set("topic", i)),
-                null != r && (s = s.set("bitrate", r)),
-                null != a && (s = s.set("userLimit", a)),
-                null != l && (s = s.set("nsfw", l)),
-                null != o && (s = s.set("flags", o)),
-                null != d && (s = s.set("rateLimitPerUser", d)),
-                null != c && (s = s.set("defaultThreadRateLimitPerUser", c)),
-                null != u && (s = s.set("threadMetadata", { ...s.threadMetadata, autoArchiveDuration: u })),
-                null != _ && (s = s.set("threadMetadata", { ...s.threadMetadata, locked: _ })),
-                null != E && (s = s.set("threadMetadata", { ...s.threadMetadata, invitable: E })),
-                null != A && (s = s.set("defaultAutoArchiveDuration", A)),
-                null != h && (s = s.set("template", h)),
-                null != n && (s = s.set("type", n)),
-                void 0 !== f && (s = s.set("rtcRegion", f)),
-                null != p && (s = s.set("videoQualityMode", p)),
-                void 0 !== I && (s = s.set("defaultReactionEmoji", I)),
-                null != T && (s = s.set("availableTags", T)),
-                null != m && (s = s.set("defaultSortOrder", m)),
-                null != S && (s = s.set("defaultTagSetting", S)),
-                null != g && (s = s.set("defaultForumLayout", g)),
-                void 0 !== N && (s = s.set("iconEmoji", N)),
-                null != C && (s = s.set("themeColor", C)),
-                x();
+            if (null == a) return !1;
+            null != t && (a = a.set("name", t)),
+                null != r && (a = a.set("topic", r)),
+                null != l && (a = a.set("bitrate", l)),
+                null != i && (a = a.set("userLimit", i)),
+                null != u && (a = a.set("nsfw", u)),
+                null != o && (a = a.set("flags", o)),
+                null != s && (a = a.set("rateLimitPerUser", s)),
+                null != d && (a = a.set("defaultThreadRateLimitPerUser", d)),
+                null != E && (a = a.set("threadMetadata", { ...a.threadMetadata, autoArchiveDuration: E })),
+                null != _ && (a = a.set("threadMetadata", { ...a.threadMetadata, locked: _ })),
+                null != c && (a = a.set("threadMetadata", { ...a.threadMetadata, invitable: c })),
+                null != T && (a = a.set("defaultAutoArchiveDuration", T)),
+                null != S && (a = a.set("template", S)),
+                null != n && (a = a.set("type", n)),
+                void 0 !== h && (a = a.set("rtcRegion", h)),
+                null != I && (a = a.set("videoQualityMode", I)),
+                void 0 !== N && (a = a.set("defaultReactionEmoji", N)),
+                null != f && (a = a.set("availableTags", f)),
+                null != m && (a = a.set("defaultSortOrder", m)),
+                null != C && (a = a.set("defaultTagSetting", C)),
+                null != A && (a = a.set("defaultForumLayout", A)),
+                void 0 !== p && (a = a.set("iconEmoji", p)),
+                null != L && (a = a.set("themeColor", L)),
+                P();
         },
-        CHANNEL_SETTINGS_SET_SECTION: w,
+        CHANNEL_SETTINGS_SET_SECTION: b,
         CHANNEL_SETTINGS_LOADED_INVITES: function (e) {
-            (y = {}),
+            (O = {}),
                 e.invites.forEach((e) => {
-                    y[e.code] = k(e);
+                    O[e.code] = w(e);
                 });
         },
         CHANNEL_UPDATES: function (e) {
             let { channels: t } = e;
-            if (null == s) return !1;
+            if (null == a) return !1;
             let n = !1;
-            for (let e of t) n = F(e.id) || n;
+            for (let e of t) n = V(e.id) || n;
             return n;
         },
         THREAD_UPDATE: function (e) {
             let { channel: t } = e;
-            return null != s && F(t.id);
+            return null != a && V(t.id);
         },
         CHANNEL_DELETE: function (e) {
             let {
                 channel: { id: t },
             } = e;
-            if (null == s || s.id !== t) return !1;
-            L = O.XlH.CLOSED;
+            if (null == a || a.id !== t) return !1;
+            v = g.XlH.CLOSED;
         },
         INSTANT_INVITE_REVOKE_SUCCESS: function (e) {
-            (y = { ...y }), delete y[e.code];
+            (O = { ...O }), delete O[e.code];
         },
         INSTANT_INVITE_CREATE_SUCCESS: function (e) {
-            y = { ...y, [e.invite.code]: k(e.invite) };
+            O = { ...O, [e.invite.code]: w(e.invite) };
         },
     }),
-    j = H;
+    W = 21552 == n.j ? k : null;

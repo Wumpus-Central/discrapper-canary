@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(64700),
-    r = n(440745),
-    a = n.n(r),
+n.d(t, { A: () => o });
+var a = n(64700),
+    l = n(440745),
+    r = n.n(l),
     s = n(317097),
-    l = n(17928),
-    o = n(775602);
-let d = function (e) {
-    let t = (0, l.bG)([o.Ay], () => (o.Ay.desaturateUserColors ? o.Ay.saturation : 1));
-    return (0, i.useMemo)(() => {
-        let { h: n, s: i, l: r } = a()((0, s.Hl)(e)).toHsl(),
-            l = a()({ h: n, s: i * t, l: r });
-        return { hex: l.toHexString(), hsl: l.toHslString() };
+    i = n(17928),
+    d = n(775602);
+let o = function (e) {
+    let t = (0, i.bG)([d.Ay], () => (d.Ay.desaturateUserColors ? d.Ay.saturation : 1));
+    return (0, a.useMemo)(() => {
+        let { h: n, s: a, l } = r()((0, s.Hl)(e)).toHsl(),
+            i = r()({ h: n, s: a * t, l });
+        return { hex: i.toHexString(), hsl: i.toHslString() };
     }, [e, t]);
 };

@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => l });
 var i = n(64700),
     r = n(77157);
-function a(e) {
+function l(e) {
     let t = (0, r.A)(e),
-        [n, a] = i.useState(e),
-        [s, l] = i.useState(null != e && null == t);
-    return n !== e && (a(e), l(null != e && null == t)), s;
+        [n, l] = i.useState(e),
+        [s, c] = i.useState(null != e && null == t);
+    return n !== e && (l(e), c(null != e && null == t)), s;
 }

@@ -1,41 +1,40 @@
-"use strict";
-n.d(t, { _: () => o });
-var i = n(627968),
-    r = n(296489),
-    a = n.n(r),
+n.d(t, { _: () => d });
+var a = n(627968),
+    l = n(277057),
+    r = n.n(l),
     s = n(192308);
-let l = null;
-function o() {
+let i = null;
+function d() {
     let {
         initialBadgeId: e,
         targetUserId: t,
-        targetUsername: r,
-        viewingCurrentUserBadges: o,
-        stackingBehavior: d,
+        targetUsername: l,
+        viewingCurrentUserBadges: d,
+        stackingBehavior: o,
     } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    null != l && (0, s.closeModalInAllContexts)(l);
-    let c = a()("badge-directory-modal");
+    null != i && (0, s.closeModalInAllContexts)(i);
+    let c = r()("badge-directory-modal");
     return (
-        (l = c),
+        (i = c),
         (0, s.openModalLazy)(
             async () => {
-                let { default: a } = await Promise.all([n.e("58877"), n.e("91844"), n.e("28971")]).then(
+                let { default: r } = await Promise.all([n.e("58877"), n.e("91844"), n.e("28971")]).then(
                     n.bind(n, 546214),
                 );
                 return (n) =>
-                    (0, i.jsx)(a, {
+                    (0, a.jsx)(r, {
                         ...n,
                         initialBadgeId: e,
                         targetUserId: t,
-                        targetUsername: r,
-                        viewingCurrentUserBadges: o,
+                        targetUsername: l,
+                        viewingCurrentUserBadges: d,
                     });
             },
             {
                 modalKey: c,
-                stackingBehavior: d ?? "stack",
+                stackingBehavior: o ?? "stack",
                 onCloseCallback: () => {
-                    l === c && (l = null);
+                    i === c && (i = null);
                 },
             },
         )

@@ -1,20 +1,19 @@
-"use strict";
-n.d(t, { m: () => l });
-var i = n(636537),
-    r = n(228366),
-    a = n(287809),
-    s = n(652215);
-async function l(e, t) {
+e.d(r, { m: () => s });
+var i = e(636537),
+    d = e(228366),
+    u = e(287809),
+    a = e(652215);
+async function s(t, r) {
     try {
-        let n = await i.Bo.put({
-            url: s.Rsh.USER_SET_GUILD_IDENTITY,
-            body: { identity_guild_id: e, identity_enabled: t },
+        let e = await i.Bo.put({
+            url: a.Rsh.USER_SET_GUILD_IDENTITY,
+            body: { identity_guild_id: t, identity_enabled: r },
             rejectWithError: !1,
         });
         return (
-            n.ok && r.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...a.default.getCurrentUser(), ...n.body } }), n
+            e.ok && d.h.dispatch({ type: "CURRENT_USER_UPDATE", user: { ...u.default.getCurrentUser(), ...e.body } }), e
         );
-    } catch (e) {
-        return e;
+    } catch (t) {
+        return t;
     }
 }

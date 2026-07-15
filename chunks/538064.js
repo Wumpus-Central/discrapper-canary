@@ -1,15 +1,14 @@
-"use strict";
-n.d(t, { Ft: () => l, Jt: () => a, eY: () => o, pf: () => s });
-var i = n(228366),
-    r = n(265059);
-function a(e) {
+l.d(t, { Ft: () => r, Jt: () => s, eY: () => o, pf: () => a });
+var i = l(228366),
+    n = l(265059);
+function s(e) {
     i.h.dispatch({ type: "DEV_TOOLS_SETTINGS_UPDATE", settings: e });
 }
-function s() {
-    a({ displayTools: !r.A.displayTools });
+function a() {
+    s({ displayTools: !n.A.displayTools });
 }
-function l(e, t) {
-    a({ displayTools: !0, lastOpenTabId: e, lastOpenSubTabId: t });
+function r(e, t) {
+    s({ displayTools: !0, lastOpenTabId: e, lastOpenSubTabId: t });
 }
 function o() {
     i.h.dispatch({ type: "ANALYTICS_LOG_CLEAR" });
