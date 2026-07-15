@@ -1,114 +1,114 @@
-n.d(t, { r: () => N });
-var s = n(627968),
-    i = n(64700),
-    l = n(17928),
-    a = n(834730),
-    r = n(496431),
-    o = n(765548),
-    u = n(414121),
-    c = n(287809),
-    d = n(765178),
-    h = n(451988),
-    m = n(990078),
-    p = n(408278),
-    f = n(933832),
-    g = n(624479),
-    A = n(957565),
-    x = n(375708),
-    C = n(572336);
-function E(e) {
+r.d(t, { r: () => L });
+var s = r(627968),
+    n = r(64700),
+    l = r(17928),
+    a = r(834730),
+    i = r(496431),
+    u = r(765548),
+    c = r(414121),
+    d = r(287809),
+    f = r(765178),
+    o = r(451988),
+    x = r(990078),
+    m = r(408278),
+    h = r(933832),
+    j = r(624479),
+    k = r(957565),
+    p = r(375708),
+    v = r(572336);
+function g(e) {
     let { url: t } = e,
-        [n, l] = i.useState(!1),
-        [a] = i.useState(() => new h.Ep());
-    i.useEffect(() => () => a.stop(), [a]);
-    let [r, o] = i.useState(t);
-    t !== r && (o(t), l(!1));
-    let u = i.useCallback(() => {
-            (0, A.C)(t, () => {
-                l(!0), d.O.announce(x.intl.string(x.t["+5kSoW"])), a.start(1e3, () => l(!1));
+        [r, l] = n.useState(!1),
+        [a] = n.useState(() => new o.Ep());
+    n.useEffect(() => () => a.stop(), [a]);
+    let [i, u] = n.useState(t);
+    t !== i && (u(t), l(!1));
+    let c = n.useCallback(() => {
+            (0, k.C)(t, () => {
+                l(!0), f.O.announce(p.intl.string(p.t["+5kSoW"])), a.start(1e3, () => l(!1));
             });
         }, [t, a]),
-        c = x.intl.string(n ? x.t["+5kSoW"] : x.t.WqhZss);
+        d = p.intl.string(r ? p.t["+5kSoW"] : p.t.WqhZss);
     return (0, s.jsxs)("div", {
-        className: C.nM,
+        className: v.nM,
         children: [
             (0, s.jsx)("input", {
-                className: C.nf,
+                className: v.nf,
                 type: "text",
                 value: t,
                 readOnly: !0,
-                "aria-label": x.intl.string(x.t.WqhZss),
+                "aria-label": p.intl.string(p.t.WqhZss),
                 onFocus: (e) => e.currentTarget.select(),
             }),
-            A.p5 &&
-                (0, s.jsx)(m.m, {
-                    text: c,
-                    children: (0, s.jsx)(p.K, {
+            k.p5 &&
+                (0, s.jsx)(x.m, {
+                    text: d,
+                    children: (0, s.jsx)(m.K, {
                         size: "md",
                         variant: "secondary",
-                        "aria-label": c,
-                        icon: n ? f.A : g.T,
-                        onClick: u,
+                        "aria-label": d,
+                        icon: r ? h.A : j.T,
+                        onClick: c,
                     }),
                 }),
         ],
     });
 }
-var v = n(191627),
-    T = n(602339),
-    _ = n(294051);
-function N(e) {
+var A = r(191627),
+    b = r(602339),
+    E = r(294051);
+function L(e) {
     let t,
-        n,
-        { linkCode: d, expiresAt: h, onRefresh: m } = e,
-        p = (0, l.bG)([c.default], () => c.default.getCurrentUser()?.id),
-        f = (0, o.A)(m),
-        { days: g, hours: A, minutes: C, seconds: N } = (0, r.A)(h);
+        r,
+        { linkCode: f, expiresAt: o, onRefresh: x } = e,
+        m = (0, l.bG)([d.default], () => d.default.getCurrentUser()?.id),
+        h = (0, u.A)(x),
+        { days: j, hours: k, minutes: v, seconds: L } = (0, i.A)(o);
     if (
-        (i.useEffect(() => {
-            let e = h - Date.now();
-            if (e <= 0) return void f();
-            let t = setTimeout(f, e);
+        (n.useEffect(() => {
+            let e = o - Date.now();
+            if (e <= 0) return void h();
+            let t = setTimeout(h, e);
             return () => clearTimeout(t);
-        }, [h, f]),
-        null == p)
+        }, [o, h]),
+        null == m)
     )
         return null;
-    let j = (0, v.jZ)(p, d),
-        S = x.intl.string(T.default.RfkLDs);
+    let N = (0, A.jZ)(m, f),
+        S = p.intl.string(b.default.RfkLDs);
     return (0, s.jsxs)("div", {
-        className: _.kL,
+        className: E.kL,
         children: [
             (0, s.jsxs)("div", {
-                className: _.Nr,
+                className: E.Nr,
                 children: [
                     (0, s.jsxs)("div", {
-                        className: _.wx,
+                        className: E.wx,
                         children: [
                             (0, s.jsx)(a.E, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: x.intl.string(T.default["ovecl/"]),
+                                children: p.intl.string(b.default.pojgfk),
                             }),
                             (0, s.jsx)(a.E, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                children: `${S} ${((n = Math.floor((t = Math.max(0, 86400 * g + 3600 * A + 60 * C + N)) / 60)), `${n}:${String(t % 60).padStart(2, "0")}`)}`,
+                                children: `${S} ${((r = Math.floor((t = Math.max(0, 86400 * j + 3600 * k + 60 * v + L)) / 60)), `${r}:${String(t % 60).padStart(2, "0")}`)}`,
                             }),
                         ],
                     }),
-                    (0, s.jsx)(u.Lx, { size: 200, text: j, ariaLabel: x.intl.string(T.default.Mi60fm) }),
+                    (0, s.jsx)(c.Lx, { size: 200, text: N, ariaLabel: p.intl.string(b.default.Mi60fm) }),
                 ],
             }),
             (0, s.jsx)("div", {
-                className: _.yF,
+                className: E.yF,
                 children: (0, s.jsx)(a.E, {
                     variant: "text-sm/normal",
                     color: "text-muted",
-                    children: x.intl.string(T.default.TGr8Ws),
+                    children: p.intl.string(b.default.TGr8Ws),
                 }),
             }),
-            (0, s.jsx)(E, { url: j }),
+            (0, s.jsx)(g, { url: N }),
         ],
     });
 }

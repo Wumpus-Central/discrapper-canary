@@ -50,7 +50,7 @@ var D = n(834981),
     F = n(548411),
     M = n(661531),
     G = n(834730),
-    V = n(534514),
+    V = n(297264),
     w = n(10005),
     z = n(153739),
     H = n(284009),
@@ -404,19 +404,19 @@ let e3 = function (e) {
         ],
     });
 };
-var e9 = n(459192),
-    e1 = n(494596);
-let e2 = function (e) {
+var e2 = n(459192),
+    e9 = n(494596);
+let e1 = function (e) {
     let { userId: t, dmsSent: n, callCount: i } = e,
         r = (0, d.bG)([eK.default], () => eK.default.getUser(t));
     return void 0 === r
         ? null
-        : (0, l.jsx)(e9.u, {
+        : (0, l.jsx)(e2.u, {
               title: r.username,
               body: (0, el.fq)(n, i),
               asContainer: !0,
               children: (0, l.jsx)("div", {
-                  className: e1.k,
+                  className: e9.k,
                   children: (0, l.jsx)(eW.H, { user: r, avatarSize: P._3.SIZE_40 }),
               }),
           });
@@ -450,7 +450,7 @@ let e8 = function () {
                                             })
                                           : e.map((e) =>
                                                 (0, l.jsx)(
-                                                    e2,
+                                                    e1,
                                                     { userId: e.user_id, dmsSent: e.dms_sent, callCount: e.call_count },
                                                     e.user_id,
                                                 ),
@@ -479,7 +479,7 @@ let e8 = function () {
                                             let t = y.A.getGuild(e.guild_id),
                                                 n = t?.name ?? "Unknown Server";
                                             return (0, l.jsx)(
-                                                e9.u,
+                                                e2.u,
                                                 {
                                                     title: n,
                                                     body: (0, el.fq)(e.messages_sent, e.call_count) ?? null,
@@ -1175,7 +1175,15 @@ function t$() {
                     n.e("89419"),
                     n.e("94570"),
                 ]).then(n.bind(n, 414833));
-                return (n) => (0, l.jsx)(e, { ...n, onLoadError: t });
+                return (n) =>
+                    (0, l.jsx)(e, {
+                        ...n,
+                        onLoadError: t,
+                        title: et.intl.string(ee.default.aCUVfL),
+                        body: et.intl.format(ee.default["2O6ltn"], {
+                            link: "https://support.discord.com/hc/articles/14155060633623",
+                        }),
+                    });
             }),
                 b.default.track(L.HAw.FAMILY_CENTER_ACTION, { action: C.qb.ShowQRCodeModal });
         }, [t]),
@@ -1221,7 +1229,7 @@ function t3() {
                   : (0, l.jsx)(tJ, {}),
           });
 }
-let t9 = function () {
+let t2 = function () {
     let e = (0, _.A)(),
         t = (0, ei.y)(et.intl.string(ee.default["T7GyW+"]), et.intl.string(ee.default.goKE2b)),
         n = (0, ei.y)(
@@ -1262,17 +1270,17 @@ let t9 = function () {
         ],
     });
 };
-var t1 = n(299628),
-    t2 = n(445220);
+var t9 = n(299628),
+    t1 = n(445220);
 let t5 = function (e) {
     let { icon: t, iconClassName: n, header: i, description: r } = e;
     return (0, l.jsxs)("div", {
-        className: s()(t2.kL, e4.a),
+        className: s()(t1.kL, e4.a),
         children: [
             (0, l.jsx)("div", {
-                className: t2.n1,
+                className: t1.n1,
                 children: (0, l.jsx)(t, {
-                    className: s()(t2.Kk, n),
+                    className: s()(t1.Kk, n),
                     size: "custom",
                     width: 20,
                     height: 20,
@@ -1283,7 +1291,7 @@ let t5 = function (e) {
                 children: [
                     (0, l.jsx)(V.D, {
                         variant: "heading-md/bold",
-                        className: t2.wx,
+                        className: t1.wx,
                         children: (0, l.jsx)(ed.F, { children: i }),
                     }),
                     (0, l.jsx)(G.E, { variant: "text-sm/medium", color: "text-muted", children: r }),
@@ -1767,7 +1775,7 @@ let nP = function () {
                       ? null
                       : (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)("div", { className: nU.vK, children: (0, l.jsx)(t9, {}) }),
+                                (0, l.jsx)("div", { className: nU.vK, children: (0, l.jsx)(t2, {}) }),
                                 (0, l.jsxs)("div", {
                                     className: nU.yk,
                                     children: [
@@ -1790,7 +1798,7 @@ let nP = function () {
                                 }),
                             ],
                         }),
-                  e ? (0, l.jsx)(tr, {}) : (0, l.jsx)(t1.A, { showSectionDescriptions: !0 }),
+                  e ? (0, l.jsx)(tr, {}) : (0, l.jsx)(t9.A, { showSectionDescriptions: !0 }),
                   (0, l.jsx)(nD, {}),
               ],
           });
@@ -1933,15 +1941,15 @@ function n0(e) {
     });
 }
 var n3 = n(615300),
-    n9 = n(187322),
-    n1 = n(975732),
-    n2 = n(789392);
+    n2 = n(187322),
+    n9 = n(975732),
+    n1 = n(789392);
 let n5 = function (e) {
     let { userId: t, children: n, isLast: r, className: a } = e,
         [d, c] = i.useState(!1),
         { analyticsLocations: u } = (0, v.Ay)(),
         o = i.useCallback(() => {
-            (0, n1.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: u });
+            (0, n9.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: u });
         }, [t, u]);
     function x() {
         c(!0);
@@ -1952,11 +1960,11 @@ let n5 = function (e) {
     return (0, l.jsx)(nF.tG, {
         id: t,
         children: (e) =>
-            (0, l.jsx)(n9.vN, {
+            (0, l.jsx)(n2.vN, {
                 offset: { left: -8, right: -8 },
                 children: (0, l.jsx)(n3.A.div, {
                     style: { opacity: 1 },
-                    className: s()(n2.KG, a, { [n2.HV]: r, [n2.vu]: d }),
+                    className: s()(n1.KG, a, { [n1.HV]: r, [n1.vu]: d }),
                     onMouseEnter: x,
                     onMouseLeave: m,
                     onClick: o,
