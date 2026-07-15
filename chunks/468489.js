@@ -1,4 +1,5 @@
 _.exports = {
+    BK: "text-sm/medium__250d5",
     zI: "cardBody__250d5",
     cG: "mainCard__250d5",
     jI: "mainCardTextOnly__250d5 mainCard__250d5",
@@ -11,7 +12,7 @@ _.exports = {
     v: "smallCardImage__250d5",
     KX: "mainTitle__250d5",
     _N: "smallTitle__250d5",
-    h_: "description__250d5",
+    h_: "description__250d5 text-sm/medium__250d5",
     fm: "descriptionFade__250d5",
     _d: "embedContentArea__250d5",
     Tu: "embedAuthorRow__250d5",

@@ -25,7 +25,7 @@ function c(e) {
               ? (h = o.intl.format(o.t.NkR7BU, { price: m }))
               : i === s.WT.MONTH && d > 1 && (h = o.intl.format(o.t.CNAGg4, { price: m, intervalCount: d })),
         (0, l.jsx)("div", {
-            className: r()(u.S, c),
+            className: r()(u.zz, c),
             "data-testid": `PricePerInterval-${n}`,
             children: null == i || p ? (0, l.jsx)("strong", { children: m }) : h,
         })

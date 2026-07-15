@@ -8,7 +8,7 @@ var i = t(503698),
     o = t(39584);
 function d(e) {
     let { className: n, onClick: t, children: i } = e;
-    return (0, l.jsx)(s.Anchor, { onClick: t, className: r()(o.n, n), children: i });
+    return (0, l.jsx)(s.Anchor, { onClick: t, className: r()(o.nf, n), children: i });
 }
 let c = function (e) {
     let { className: n, onClick: t } = e;

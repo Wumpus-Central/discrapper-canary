@@ -1,6 +1,7 @@
 e.exports = {
+    yk: "text-xs/semibold_c9e42f",
     xd: "settingsWrapper_c9e42f",
-    x6: "button_c9e42f",
+    x6: "button_c9e42f text-xs/semibold_c9e42f",
     lm: "notice_c9e42f",
     Xz: "osx_c9e42f",
     pS: "linux_c9e42f",

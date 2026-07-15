@@ -1,4 +1,5 @@
 e.exports = {
+    oU: "text-md/medium__0aee3",
     KQ: "messagesPopoutWrap__0aee3",
     m4: "messagesPopout__0aee3",
     xc: "ungroupedPadding__0aee3",

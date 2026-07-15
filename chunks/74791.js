@@ -1,4 +1,5 @@
-e.exports = {
+a.exports = {
+    Dm: "text-sm/semibold__9271d",
     GI: "spine__9271d",
     E_: "systemMessageSpine__9271d",
     E: "cozy__9271d",
@@ -6,7 +7,7 @@ e.exports = {
     og: "systemMessageContainer__9271d",
     kq: "topLine__9271d",
     UU: "name__9271d",
-    lO: "cta__9271d",
+    lO: "cta__9271d text-sm/semibold__9271d",
     sb: "bottomLine__9271d",
     vE: "timestamp__9271d",
 };

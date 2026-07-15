@@ -1,4 +1,5 @@
 e.exports = {
+    Xw: "text-md/medium_e335a7",
     Zz: "paymentBanner_e335a7",
     Sh: "paymentBannerIcon_e335a7",
     Cy: "paymentBannerText_e335a7",
@@ -14,7 +15,7 @@ e.exports = {
     dd: "duplicateHeader_e335a7",
     KF: "billingInformation_e335a7",
     O: "cardText_e335a7",
-    wb: "noItemsCard_e335a7",
+    wb: "noItemsCard_e335a7 text-md/medium_e335a7",
     pV: "noItemsIcon_e335a7",
     oU: "duplicateSubscriptionsBanner_e335a7",
     dk: "duplicateSubscriptionsBannerText_e335a7",

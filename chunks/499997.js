@@ -1,4 +1,5 @@
 e.exports = {
+    oU: "text-md/medium_bfe55a",
     zr: "root_bfe55a",
     N7: "idle_bfe55a",
     Yj: "gradientContainer_bfe55a",

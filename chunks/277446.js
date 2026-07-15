@@ -1,8 +1,10 @@
-e.exports = {
+_.exports = {
+    YS: "text-xs/medium_cf09d8",
+    oU: "text-md/medium_cf09d8",
     iE: "wrapper_cf09d8",
     _X: "wrapperAudio_cf09d8 wrapper_cf09d8",
     CX: "wrapperControlsHidden_cf09d8 wrapper_cf09d8",
-    ub: "wrapperPaused_cf09d8 wrapper_cf09d8",
+    bQ: "wrapperPaused_cf09d8 wrapper_cf09d8",
     sw: "wrapperPlaying_cf09d8 wrapper_cf09d8",
     mE: "wrapperMediaMosaic_cf09d8",
     mr: "newMosaicStyle_cf09d8",
@@ -19,7 +21,7 @@ e.exports = {
     xe: "metadataContent_cf09d8",
     kH: "metadataDownload_cf09d8",
     XR: "metadataIcon_cf09d8",
-    fL: "metadataSize_cf09d8",
+    fL: "metadataSize_cf09d8 text-xs/medium_cf09d8",
     s4: "playCenter_cf09d8",
     kO: "playPausePop_cf09d8",
     PK: "playPausePopIcon_cf09d8",

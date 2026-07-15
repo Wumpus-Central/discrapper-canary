@@ -1,4 +1,5 @@
 e.exports = {
+    oo: "text-xxs/semibold__5dec7",
     nd: "panel__5dec7",
     rf: "body__5dec7",
     cm: "gameWrapper__5dec7",

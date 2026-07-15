@@ -1,4 +1,5 @@
 a.exports = {
+    U7: "text-sm/medium_faa96b",
     kL: "container_faa96b",
     r$: "dots_faa96b",
     nT: "isOpen_faa96b",

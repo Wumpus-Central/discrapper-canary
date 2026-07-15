@@ -1,4 +1,5 @@
 e.exports = {
+    Mz: "text-md/semibold__22234",
     Qs: "content__22234",
     bQ: "contentNoMedia__22234 content__22234",
     UY: "contentWithMedia__22234 content__22234",
@@ -7,9 +8,9 @@ e.exports = {
     HU: "contentWideWithMedia__22234 contentWithMedia__22234 content__22234",
     II: "contentWideNoMedia__22234 contentNoMedia__22234 content__22234",
     il: "mediaContainer__22234",
-    DD: "title__22234",
-    Av: "titleCenter__22234 title__22234",
-    gH: "titleLeft__22234 title__22234",
+    DD: "title__22234 text-md/semibold__22234",
+    Av: "titleCenter__22234 title__22234 text-md/semibold__22234",
+    gH: "titleLeft__22234 title__22234 text-md/semibold__22234",
     rf: "body__22234",
     IF: "bodyCenter__22234 body__22234",
     If: "bodyLeft__22234 body__22234",

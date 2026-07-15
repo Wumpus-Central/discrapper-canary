@@ -1,4 +1,5 @@
 _.exports = {
+    YS: "text-xs/medium__5126c",
     M1: "ephemeral__5126c",
     SH: "nitroMessage__5126c",
     DX: "automodMessage__5126c",
@@ -10,7 +11,7 @@ _.exports = {
     iU: "message__5126c",
     t6: "guildOfficialMessageContent__5126c",
     m5: "quotedChatMessage__5126c",
-    lA: "jump__5126c",
+    lA: "jump__5126c text-xs/medium__5126c",
     Uo: "buttons__5126c",
     Mc: "buttonsInner__5126c",
     HJ: "cozyMessage__5126c",

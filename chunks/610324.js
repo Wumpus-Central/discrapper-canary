@@ -1,4 +1,5 @@
 _.exports = {
+    oU: "text-md/medium__60626",
     kL: "container__60626",
     do: "emptyContainer__60626",
     DD: "title__60626",
@@ -8,7 +9,7 @@ _.exports = {
     Pc: "listRowCircle__60626",
     f0: "listRow__60626",
     fv: "interactiveRow__60626",
-    sY: "listName__60626",
+    sY: "listName__60626 text-md/medium__60626",
     uY: "listAvatar__60626",
     XU: "listDiscriminator__60626",
     u1: "spinner__60626",

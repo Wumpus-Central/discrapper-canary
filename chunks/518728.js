@@ -1,4 +1,5 @@
 _.exports = {
+    yk: "text-xs/semibold_a66361",
     zr: "root_a66361",
     aV: "infoText_a66361",
     OQ: "ctaContainer_a66361",
@@ -6,5 +7,5 @@ _.exports = {
     lI: "ctaButton_a66361",
     vb: "premiumShine_a66361",
     PC: "premiumIcon_a66361",
-    U_: "ctaButtonText_a66361",
+    U_: "ctaButtonText_a66361 text-xs/semibold_a66361",
 };

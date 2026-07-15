@@ -1,5 +1,6 @@
 t.exports = {
-    I6: "inputWrapper_f08f8d",
+    Wj: "text-md/normal_f08f8d",
+    I6: "inputWrapper_f08f8d text-md/normal_f08f8d",
     mq: "hasStaticToolbar_f08f8d",
     XG: "scroller_f08f8d",
     RZ: "editorContainer_f08f8d",

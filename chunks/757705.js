@@ -1,8 +1,9 @@
 _.exports = {
+    G9: "text-xs/normal__58471",
     hQ: "contentContainer__58471",
     s: "assetContainer__58471",
     Cb: "orbAsset__58471",
-    CU: "learnMoreLink__58471",
+    CU: "learnMoreLink__58471 text-xs/normal__58471",
     K: "balanceText__58471",
     y$: "rewardsContainer__58471",
     E2: "balanceContainer__58471",
