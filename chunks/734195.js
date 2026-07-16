@@ -430,9 +430,10 @@ function ep(e) {
         children: [
             (0, a.jsx)(eS.A, {
                 userName: d.name,
-                effectDisplayType: eN.G.STATIC,
+                effectDisplayType: eN.G.ANIMATED,
                 displayNameStyles: d.previewStyles,
                 textClassName: eg.tr,
+                loop: !0,
                 inProfile: !0,
             }),
             l && (0, a.jsx)("div", { className: ec.s1, "aria-hidden": !0 }),
