@@ -33,16 +33,17 @@ function D() {
             churnUserDiscountOffer: p,
             isFetchingChurnDiscountOffer: E,
             planId: D,
+            fullPrice: j,
         } = (0, x.X)(),
-        j = (0, o.bG)([d.default], () => {
+        S = (0, o.bG)([d.default], () => {
             let t = d.default.getCurrentUser();
             return a()(null != t, "ProfileItem: currentUser cannot be undefined"), t;
         });
     r.useEffect(() => {
-        (0, c.A)(j.id, j.getAvatarURL(null, 80));
-    }, [j]);
-    let S = (0, f.A)(),
-        A = "US" === S.ipCountryCode && "CA" === S.ipSubdivisionCode;
+        (0, c.A)(S.id, S.getAvatarURL(null, 80));
+    }, [S]);
+    let A = (0, f.A)(),
+        N = "US" === A.ipCountryCode && "CA" === A.ipSubdivisionCode;
     if (E)
         return (0, i.jsx)(s.Modal, {
             transitionState: t,
@@ -52,33 +53,33 @@ function D() {
                 e();
             },
         });
-    let N = (0, m.Zb)(D),
-        L = N ? y.intl.string(C.default.z2vO3h) : y.intl.string(y.t.PWq8TL),
-        T = N ? y.intl.formatToPlainString(C.default.stVlc6, { cooldownMonths: P.wl }) : y.intl.string(y.t.SOC4ML),
-        b = [];
+    let L = (0, m.Zb)(D),
+        T = L ? y.intl.string(C.default.z2vO3h) : y.intl.string(y.t.PWq8TL),
+        b = L ? y.intl.formatToPlainString(C.default.stVlc6, { cooldownMonths: P.wl }) : y.intl.string(y.t.SOC4ML),
+        M = [];
     return (
-        null != p
-            ? b.push({
+        null != p && null != j
+            ? M.push({
                   text: y.intl.string(y.t.zrCzVB),
                   onClick: () => l(h.g.CONFIRM_DISCOUNT),
                   variant: "secondary",
                   icon: u.t,
               })
-            : b.push({ text: y.intl.string(y.t.rzVN6j), onClick: () => e(), variant: "secondary" }),
-        b.push({
-            text: A ? y.intl.string(y.t.PfnxqD) : y.intl.string(y.t["3PatSz"]),
+            : M.push({ text: y.intl.string(y.t.rzVN6j), onClick: () => e(), variant: "secondary" }),
+        M.push({
+            text: N ? y.intl.string(y.t.PfnxqD) : y.intl.string(y.t["3PatSz"]),
             onClick: () => l(h.g.CONFIRM),
             variant: "primary",
         }),
         (0, i.jsx)(s.Modal, {
             transitionState: t,
-            title: L,
-            subtitle: T,
-            actions: b,
+            title: T,
+            subtitle: b,
+            actions: M,
             preview: null !== p && (0, i.jsx)(v, { churnUserDiscountOffer: p }),
             onClose: async () => e(),
             children: (0, i.jsx)(g.l, {
-                currentUser: j,
+                currentUser: S,
                 premiumType: n,
                 onClose: e,
                 isDowngrade: !1,
