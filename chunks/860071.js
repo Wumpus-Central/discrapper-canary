@@ -2,7 +2,7 @@
 n.d(t, { A: () => T }), n(321073);
 var i = n(17928),
     r = n(228366),
-    a = n(735438),
+    a = n(435558),
     s = n.n(a),
     l = n(451988);
 class o {
@@ -171,9 +171,9 @@ let T = new p(r.h, {
         );
     },
     CONVERSATION_FETCH_SUCCESS: function (e) {
-        let { channelId: t, messages: n } = e,
-            i = c.A.getChannel(t);
-        return null != i && null != i.guild_id && h(i.guild_id, n);
+        let { channelId: t, messages: n, messageReferences: i } = e,
+            r = c.A.getChannel(t);
+        return null != r && null != r.guild_id && h(r.guild_id, n.concat(i));
     },
     CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { channelId: t, rawConversations: n } = e,

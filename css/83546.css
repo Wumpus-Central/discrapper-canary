@@ -1,0 +1,43 @@
+.seasonalGiftBoxHeaderIcon_daa077 {
+    align-self: center;
+    bottom: -11px;
+    position: absolute;
+    width: 260px;
+    z-index: 1
+}
+
+.container_daa077 {
+    align-items: center;
+    background-image: unset;
+    background-size: unset;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.closeButton_daa077 {
+    margin: var(--modal-vertical-padding) var(--modal-horizontal-padding);
+    margin-inline-start: auto
+}
+
+.gradientOuterBorder__8f49b {
+    align-items: center;
+    background: linear-gradient(90deg, #9b1da5, #1e2353 120%);
+    border-radius: var(--radius-sm);
+    display: flex;
+    margin-bottom: var(--space-16);
+    padding: 2px
+}
+
+.gradientInnerBorder__8f49b {
+    align-items: center;
+    background: var(--background-base-low);
+    border-radius: calc(var(--radius-sm) - 2px);
+    display: flex;
+    padding: var(--space-12) var(--space-16)
+}
+
+.svgCopy__8f49b {
+    display: block
+}

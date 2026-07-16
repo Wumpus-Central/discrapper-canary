@@ -1,12 +1,11 @@
 n.d(t, { CL: () => o.C, Mw: () => r.M, UnifiedCheckoutFlowManagerSingletons: () => _, XZ: () => o.X, vd: () => i.v });
 var o = n(75304),
     l = n(675219),
-    i = n(71804);
-n(584160);
-var r = n(684477);
+    i = n(71804),
+    r = n(684477);
 let C = null,
-    a = null,
     u = null,
+    a = null,
     c = null,
     s = null,
     d = null,
@@ -20,12 +19,12 @@ let C = null,
         },
         [o.C.COLLECTIBLES_CHECKOUT]: {
             get: function () {
-                return null == a && (a = new l.od({ checkoutFlow: o.C.COLLECTIBLES_CHECKOUT })), a;
+                return null == u && (u = new l.od({ checkoutFlow: o.C.COLLECTIBLES_CHECKOUT })), u;
             },
         },
         [o.C.SLAYER_STOREFRONT_CHECKOUT]: {
             get: function () {
-                return null == u && (u = new l.od({ checkoutFlow: o.C.SLAYER_STOREFRONT_CHECKOUT })), u;
+                return null == a && (a = new l.od({ checkoutFlow: o.C.SLAYER_STOREFRONT_CHECKOUT })), a;
             },
         },
         [o.C.PREMIUM_APPS_OTP_CHECKOUT]: {

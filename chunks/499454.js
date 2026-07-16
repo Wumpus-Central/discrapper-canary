@@ -21,9 +21,9 @@ function _(e) {
             let { default: e } = await Promise.all([
                 n.e("73646"),
                 n.e("10471"),
-                n.e("834"),
                 n.e("98329"),
                 n.e("63645"),
+                n.e("834"),
                 n.e("7200"),
             ]).then(n.bind(n, 361845));
             return (n) =>

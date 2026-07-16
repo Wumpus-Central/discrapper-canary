@@ -153,8 +153,8 @@ let y = new D(l.h, {
     SEARCH_MESSAGES_SUCCESS: N,
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: N,
     CONVERSATION_FETCH_SUCCESS: function (e) {
-        let { messages: t } = e;
-        return g(t, (e) => m(e));
+        let { messages: t, messageReferences: n } = e;
+        return g(t.concat(n), (e) => m(e));
     },
     CONVERSATIONS_FETCH_SUCCESS: function (e) {
         let { rawConversations: t } = e;

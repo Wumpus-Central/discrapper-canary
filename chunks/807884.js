@@ -2,7 +2,7 @@ n.d(l, { A: () => o });
 var t = n(17928),
     i = n(828488),
     a = n(256331),
-    s = n(958720);
+    s = n(619065);
 function r(e, l) {
     return (
         e === l ||
@@ -11,8 +11,8 @@ function r(e, l) {
             e.color === l.color &&
             e.conversation.color === l.conversation.color &&
             e.conversation.conversation === l.conversation.conversation &&
-            e.message.conversationId === l.message.conversationId &&
-            e.message.moderationLabel === l.message.moderationLabel)
+            e.messageMetadata.conversationId === l.messageMetadata.conversationId &&
+            e.messageMetadata.moderationLabel === l.messageMetadata.moderationLabel)
     );
 }
 function o(e, l) {
@@ -22,9 +22,9 @@ function o(e, l) {
         () => {
             if (!n || !a.A.isHighlightingEnabled()) return null;
             let t = s.A.getMessageMetadata(e, l);
-            if (null == t) return null;
+            if (t?.conversationId == null) return null;
             let i = s.A.getConversationMetadata(e, t.conversationId);
-            return null == i ? null : { conversation: i, message: t, color: i.color };
+            return null == i ? null : { conversation: i, messageMetadata: t, color: i.color };
         },
         [e, l, n],
         r,

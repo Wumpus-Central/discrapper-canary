@@ -10,7 +10,7 @@ n.r(t),
     n(938796),
     n(205816),
     n(321073);
-var i = n(735438),
+var i = n(435558),
     r = n(665260),
     a = n(155718),
     s = n(807605),
@@ -225,8 +225,8 @@ function B(e) {
     return t.forEach((e) => b(e, !0)), !1;
 }
 function H(e) {
-    let { messages: t } = e;
-    return t.forEach((e) => b(e, !0)), !1;
+    let { messages: t, messageReferences: n } = e;
+    return t.concat(n).forEach((e) => b(e, !0)), !1;
 }
 function j(e) {
     let { rawConversations: t } = e;

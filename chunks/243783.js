@@ -688,7 +688,7 @@ let tk = r.memo(function (e) {
             })
         );
     }, tT.sP);
-var tO = n(111956),
+var tO = n(649852),
     tG = n.n(tO),
     tU = n(311283),
     tw = n(473935),
@@ -2125,7 +2125,7 @@ function ll(e) {
     });
 }
 n(30146);
-var li = n(735438),
+var li = n(435558),
     ls = n.n(li);
 let la = { tension: 240, friction: 30 },
     lr = { tension: 320, friction: 28 },
@@ -2780,7 +2780,7 @@ function lG(e) {
                     e !== i &&
                     U.X.trackPreviewImpression({ channelId: t.id, conversationId: e, isFocusMode: o }),
                     v(e),
-                    null != e && e !== i && (0, G.qC)(t.id, t.guild_id, e);
+                    null != e && e !== i && (0, G.qC)(t.id, t.guild_id, e, { previewLimit: 4 });
             },
             [t.id, t.guild_id, o, i],
         ),
@@ -5578,7 +5578,7 @@ function rb(e) {
 }
 var rv = n(640708),
     rN = n(378570),
-    rT = n(229701),
+    rT = n(452082),
     rM = n(327337);
 function rR(e) {
     let { channelId: t, warningId: l, senderId: i } = e,

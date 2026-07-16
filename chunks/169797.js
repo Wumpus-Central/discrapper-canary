@@ -1,19 +1,19 @@
-t.d(n, { DJ: () => T, Jg: () => I, KT: () => A, lo: () => N, oH: () => w, s3: () => y });
+t.d(n, { DJ: () => I, Jg: () => T, KT: () => w, lo: () => A, oH: () => E, s3: () => y });
 var l = t(627968),
     i = t(64700),
-    r = t(503698),
-    s = t.n(r),
-    a = t(20742),
-    o = t(364840),
-    d = t(331322),
-    c = t(224640),
-    u = t(430993),
+    s = t(503698),
+    r = t.n(s),
+    o = t(20742),
+    a = t(364840),
+    c = t(331322),
+    u = t(224640),
+    d = t(430993),
     x = t(289873),
     j = t(231723),
     h = t(632088),
-    g = t(500380),
-    m = t(423764),
-    C = t(683433),
+    m = t(500380),
+    C = t(423764),
+    g = t(683433),
     p = t(981036),
     v = t(725836),
     f = t(520149),
@@ -23,117 +23,111 @@ function y(e) {
     let {
             gradientColor: n,
             title: t,
-            headerBadgeVariant: r = "expressive",
-            headerBadgeText: s,
-            headerBadgeIcon: o,
-            countryCode: d,
-            relocationCountryCode: c,
-            ...u
+            headerBadgeVariant: s = "expressive",
+            headerBadgeText: r,
+            headerBadgeIcon: a,
+            countryCode: c,
+            relocationCountryCode: u,
+            ...d
         } = e,
-        { checkoutHeaderConfigs: x } = (0, v.ck)(),
-        j = i.useCallback(
-            () => (null == d ? null : (0, l.jsx)("img", { alt: "", className: b.bI, src: (0, g.t)(d) })),
-            [d],
+        x = i.useCallback(
+            () => (null == c ? null : (0, l.jsx)("img", { alt: "", className: b.bI, src: (0, m.t)(c) })),
+            [c],
         ),
-        h = i.useMemo(() => {
-            if (null != s || null != x.headerBadgeText)
-                return {
-                    icon: x.headerBadgeIcon ?? o,
-                    type: { text: x.headerBadgeText ?? s ?? "" },
-                    variant: x.headerBadgeVariant ?? r,
-                };
-        }, [s, o, x.headerBadgeText, x.headerBadgeIcon, r, x.headerBadgeVariant]),
-        C = null != d && null != c,
-        p = i.useMemo(() => {
-            if (!C && null != d) return { text: (0, m.j7)((0, m.ni)(d)), leadingIcon: j };
-        }, [C, d, j]);
+        j = i.useMemo(() => {
+            if (null != r) return { icon: a, type: { text: r ?? "" }, variant: s };
+        }, [r, a, s]),
+        h = null != c && null != u,
+        g = i.useMemo(() => {
+            if (!h && null != c) return { text: (0, C.j7)((0, C.ni)(c)), leadingIcon: x };
+        }, [h, c, x]);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(a.rQ, {
-                ...u,
-                badge: h,
+            (0, l.jsx)(o.rQ, {
+                ...d,
+                badge: j,
                 badgePosition: "end",
                 gradientColor: n,
                 titleTextVariant: "heading-lg/semibold",
                 alignCenter: !1,
                 title: t,
-                subtitle: p,
+                subtitle: g,
             }),
-            C && (0, l.jsx)(f.w, { countryCode: d, relocationCountryCode: c }),
+            h && (0, l.jsx)(f.w, { countryCode: c, relocationCountryCode: u }),
         ],
     });
 }
-let B = { top: 16, bottom: 8 };
-function N(e) {
+let N = { top: 16, bottom: 8 };
+function A(e) {
     let { onBackClick: n, primaryButtonProps: t, portalClassName: i } = e,
-        { variant: r } = t,
-        { setCheckoutFooterContentNode: a } = (0, v.ck)();
-    return (0, l.jsxs)(o.j, {
+        { variant: s } = t,
+        { setCheckoutFooterContentNode: o } = (0, v.ck)();
+    return (0, l.jsxs)(a.j, {
         children: [
-            (0, l.jsx)("div", { ref: a, className: s()(b.K4, i) }),
-            (0, l.jsxs)(d.B, {
+            (0, l.jsx)("div", { ref: o, className: r()(b.K4, i) }),
+            (0, l.jsxs)(c.B, {
                 direction: "horizontal",
                 align: "center",
                 justify: null != n ? "space-between" : "end",
                 fullWidth: !0,
-                padding: B,
+                padding: N,
                 children: [
-                    null != n ? (0, l.jsx)(C.A, { onClick: n }) : null,
-                    (0, l.jsx)(p.p, { ...t, variant: r ?? "active", autoFocus: !0 }),
+                    null != n ? (0, l.jsx)(g.A, { onClick: n }) : null,
+                    (0, l.jsx)(p.p, { ...t, variant: s ?? "active", autoFocus: !0 }),
                 ],
             }),
         ],
     });
 }
-function T(e) {
+function I(e) {
     let { className: n } = e;
     return (0, l.jsx)("div", {
-        className: s()(b.g4, n),
+        className: r()(b.g4, n),
         children: (0, l.jsx)(x.y, { type: x.y.Type.PULSING_ELLIPSIS, itemClassName: b.Je }),
     });
 }
-function I(e) {
-    let { children: n, size: t = "md", maxHeight: i = "viewport", isModalContentLoading: r, ...s } = e;
+function T(e) {
+    let { children: n, size: t = "md", maxHeight: i = "viewport", isModalContentLoading: s, ...r } = e;
     return (0, l.jsx)(v.e0, {
-        children: (0, l.jsx)(c.d, {
+        children: (0, l.jsx)(u.d, {
             size: t,
-            ...s,
+            ...r,
             maxHeight: i,
             contentOutsideContainer: (0, l.jsx)(h.A, {}),
-            children: r ? (0, l.jsx)(T, {}) : n,
+            children: s ? (0, l.jsx)(I, {}) : n,
         }),
     });
 }
-function A() {
-    return (0, l.jsx)(I, { transitionState: j.ip.ENTERED, onClose: k.tEg, size: "md", isModalContentLoading: !0 });
+function w() {
+    return (0, l.jsx)(T, { transitionState: j.ip.ENTERED, onClose: k.tEg, size: "md", isModalContentLoading: !0 });
 }
-function w(e) {
+function E(e) {
     let {
         title: n,
         gradientColor: t = "purple",
         countryCode: i,
-        relocationCountryCode: r,
-        headerBadgeText: s,
-        headerBadgeIcon: a,
-        onBackClick: o,
-        primaryButtonProps: d,
+        relocationCountryCode: s,
+        headerBadgeText: r,
+        headerBadgeIcon: o,
+        onBackClick: a,
+        primaryButtonProps: c,
         children: x,
         ...j
     } = e;
     return (0, l.jsx)(v.e0, {
-        children: (0, l.jsxs)(c.d, {
+        children: (0, l.jsxs)(u.d, {
             ...j,
             children: [
                 (0, l.jsx)(y, {
                     gradientColor: t,
                     title: n,
                     countryCode: i,
-                    relocationCountryCode: r,
-                    headerBadgeText: s,
-                    headerBadgeIcon: a,
+                    relocationCountryCode: s,
+                    headerBadgeText: r,
+                    headerBadgeIcon: o,
                 }),
-                (0, l.jsx)(u.c, { children: x }),
-                (0, l.jsx)(N, { onBackClick: o, primaryButtonProps: d }),
+                (0, l.jsx)(d.c, { children: x }),
+                (0, l.jsx)(A, { onBackClick: a, primaryButtonProps: c }),
             ],
         }),
     });

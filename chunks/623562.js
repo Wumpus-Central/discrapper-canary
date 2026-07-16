@@ -78,7 +78,8 @@ function f() {
 }
 function p(e, t, n) {
     let i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
-    a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }), g(e, t, n, { full: !0 });
+    a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: n }),
+        g(e, t, n, { includeReactions: !0, includeMessageReferences: !0 });
     let r = c.A.getConversationMetadata(e, n);
     i &&
         r?.conversation.startMessageId != null &&
@@ -90,16 +91,17 @@ function T(e, t) {
 function m(e, t, n) {
     a.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
 }
-async function g(e, t, n) {
-    let { full: i = !1, previewLimit: s = 4 } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+async function g(e, t, n, i) {
     if (!(0, o.Lc)(t, "fetch_conversation")) return;
-    let l = c.A.getConversationMetadata(e, n);
-    if ((i ? l?.fullyHydrated !== !0 : l?.hydratedMessages == null) && !c.A.isConversationFetchPending(n, i)) {
-        a.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n, full: i });
+    let { previewLimit: s, includeMessageReferences: l, includeReactions: d } = i ?? {},
+        u = null == s,
+        _ = c.A.getConversationMetadata(e, n);
+    if ((u ? _?.fullyHydrated !== !0 : _?.hydratedMessages == null) && !c.A.isConversationFetchPending(n, u)) {
+        a.h.dispatch({ type: "CONVERSATION_FETCH_START", channelId: e, conversationId: n, full: u });
         try {
             let t = await r.Bo.get({
                 url: h.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, n),
-                query: i ? {} : { limit: s },
+                query: { limit: s, include_ancestors: l, include_reactions: d },
                 oldFormErrors: !0,
                 rejectWithError: !0,
             });
@@ -108,10 +110,11 @@ async function g(e, t, n) {
                 channelId: e,
                 conversationId: n,
                 messages: t.body.messages,
-                fullyHydrated: i,
+                messageReferences: t.body.ancestors,
+                fullyHydrated: u,
             });
-        } catch {
-            a.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n, full: i });
+        } catch (t) {
+            a.h.dispatch({ type: "CONVERSATION_FETCH_FAILURE", channelId: e, conversationId: n, full: u });
         }
     }
 }
