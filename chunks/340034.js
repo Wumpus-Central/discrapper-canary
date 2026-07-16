@@ -1,4 +1,4 @@
-n.d(t, { PI: () => P, W9: () => f, l$: () => y });
+n.d(t, { PI: () => P, W9: () => y, l$: () => S });
 var l = n(627968);
 n(64700);
 var i = n(683071),
@@ -11,12 +11,12 @@ var i = n(683071),
     d = n(6938),
     p = n(881489),
     m = n(531506),
-    C = n(458785),
+    C = n(692440),
     h = n(299301),
     E = n(888751),
-    A = n(375708),
-    S = n(327105);
-function f(e) {
+    f = n(375708),
+    A = n(327105);
+function y(e) {
     let {
             invoiceSummaryTypeWithPreview: t,
             subscriptionPlan: n,
@@ -36,9 +36,9 @@ function f(e) {
                   subscriptionTrial: i,
               }).lineItems;
     let d = (0, a.lp)(o, { manualLineItems: u, includeTaxLineItem: !0 });
-    return (0, l.jsx)(c.Vm, { label: A.intl.string(S.default.eoXh7B), lineItems: d, currency: o.currency });
+    return (0, l.jsx)(c.Vm, { label: f.intl.string(A.default.eoXh7B), lineItems: d, currency: o.currency });
 }
-function y(e) {
+function S(e) {
     let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: a } = e,
         { fractionalPremiumBannerMessage: s } = (function (e) {
             let { fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: l, subscriptionPeriodEnd: i } = e,
@@ -62,36 +62,36 @@ function P(e) {
             activeSubscription: c,
             invoiceSummaryTypeWithPreview: p,
             overrideRenewalDate: m,
-            fractionalPremiumInfo: A,
-            isInvoiceBilledImmediately: S = !0,
+            fractionalPremiumInfo: f,
+            isInvoiceBilledImmediately: A = !0,
         } = e,
-        { immediateDelivery: f } = (0, o.U)(),
-        { discountOffer: y, premiumGroupDiscountOffer: P } = (0, s.i)(),
-        { checkoutReviewButtonLabel: T, unifiedCheckoutFlow: _ } = (0, d.t4)((e) => ({
+        { immediateDelivery: y } = (0, o.U)(),
+        { discountOffer: S, premiumGroupDiscountOffer: P } = (0, s.i)(),
+        { checkoutReviewButtonLabel: I, unifiedCheckoutFlow: _ } = (0, d.t4)((e) => ({
             checkoutReviewButtonLabel: e.checkoutReviewButtonLabel,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         }));
     if (p.type === h.N$.LOADING) return null;
-    let { invoicePreview: I } = p,
-        g = ("renewalInvoicePreview" in p ? p.renewalInvoicePreview : null) ?? I,
-        { renewalPrice: v, multiPeriodDiscountAttributes: x } = (0, E.Go)(g, n, P ?? y),
+    let { invoicePreview: T } = p,
+        g = ("renewalInvoicePreview" in p ? p.renewalInvoicePreview : null) ?? T,
+        { renewalPrice: x, multiPeriodDiscountAttributes: v } = (0, E.Go)(g, n, P ?? S),
         N = {
-            purchaseButtonText: T,
-            totalDue: S ? I.total : 0,
-            renewalPrice: v,
-            multiPeriodDiscountAttributes: x,
-            currency: I.currency,
+            purchaseButtonText: I,
+            totalDue: A ? T.total : 0,
+            renewalPrice: x,
+            multiPeriodDiscountAttributes: v,
+            currency: T.currency,
             interval: n.interval,
             intervalCount: n.intervalCount,
             startDate: (0, C.de)({
                 overrideRenewalDate: m,
-                currentInvoice: I.id !== g.id ? I : void 0,
+                currentInvoice: A ? T : void 0,
                 renewalInvoice: g,
                 isSubscriptionUpdate: null != c,
-                fractionalPremiumInfo: A,
+                fractionalPremiumInfo: f,
             }),
         },
-        R = ((e) => {
+        M = ((e) => {
             let { isGift: t, isTrial: n, unifiedCheckoutFlow: l } = e;
             return l === r.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT
                 ? u.I0.SubscriptionApplication
@@ -101,5 +101,5 @@ function P(e) {
                     ? u.I0.SubscriptionTrial
                     : u.I0.Subscription;
         })({ isGift: i, isTrial: t, unifiedCheckoutFlow: _ });
-    return (0, l.jsx)(u._P, { variant: { type: R, ...N }, paymentSourceType: a, immediateDelivery: f });
+    return (0, l.jsx)(u._P, { variant: { type: M, ...N }, paymentSourceType: a, immediateDelivery: y });
 }
