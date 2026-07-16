@@ -843,11 +843,11 @@ async function eN(e) {
                 i = a.A.fileManager.join(n, "Discord Clips"),
                 s = `${crypto.randomUUID()}-${Date.now()}.mp4`,
                 l = a.A.fileManager.join(i, s),
-                o = await t.exportClipToFile(e.filepath, l, r);
+                { filepath: o, formattedForUpload: d } = await t.exportClipToFile(e.filepath, l, r);
             try {
                 let t = await a.A.clips.loadClip(o),
                     n = new Blob([t.data], { type: "video/mp4" });
-                if (e.type === R.nQ.SCREENSHOT) return n;
+                if (e.type === R.nQ.SCREENSHOT || d) return n;
                 return B(n);
             } finally {
                 await eC(o);

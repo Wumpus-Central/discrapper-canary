@@ -10,13 +10,13 @@ var i,
     c = n(459838),
     u = n(70909);
 n(321073);
-var _ = n(119479),
+var _ = n(404144),
     E = n.n(_),
-    A = n(415955),
+    A = n(480664),
     h = n.n(A),
-    I = n(128080),
+    I = n(811315),
     f = n.n(I),
-    p = n(264968),
+    p = n(119469),
     T = n.n(p),
     m = n(141697),
     g = n(904986);
@@ -2382,8 +2382,10 @@ class er extends o.A {
                       e,
                       t,
                       n,
-                      (e) => {
-                          "string" != typeof e ? a("unsupported: native exportClipToFile returned non-string") : r(e);
+                      (e, t) => {
+                          "string" != typeof e
+                              ? a("unsupported: native exportClipToFile returned non-string")
+                              : r({ filepath: e, formattedForUpload: !0 === t });
                       },
                       a,
                   );
