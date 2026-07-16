@@ -1961,7 +1961,7 @@ function nf(e) {
         { data: s } = (0, y.YY)(t.extra.application_id),
         { analyticsLocations: l } = (0, ne.Ay)(L.A.CLOUD_PLAY_POPOVER),
         o = (0, R.Ay)({ application: s, analyticsLocations: l }),
-        d = (0, eJ.JZ)(eA.M.CLOUD_PLAY_NEW_BADGE),
+        d = (0, eJ.HX)(eA.M.CLOUD_PLAY_NEW_BADGE),
         c = null != o && !d && n,
         { activeEntryId: u, setActiveEntryId: _ } = nI(),
         E = u === t.id,
@@ -1979,9 +1979,7 @@ function nf(e) {
         );
     let [p, T] = r.useState(!1);
     return (
-        r.useEffect(() => {
-            f && !p && T(!0);
-        }, [f, p]),
+        f && !p && T(!0),
         (0, nt.A)(
             {
                 name: t9.ImpressionNames.CLOUD_PLAY_CTA,
