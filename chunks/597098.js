@@ -10,7 +10,7 @@ var i = n(435558),
     c = n(209489),
     u = n(998218),
     _ = n(835517);
-let E = [128, 256, 384, 512, 768, 1024, 1536, 2048, 3072, 4096];
+let E = [128, 192, 256, 320, 384, 512, 640, 768, 1024, 1280, 1536, 2048, 3072, 4096];
 var A = n(652215);
 let h = /\.webp($|\?|#)/i,
     I = /\.avif($|\?|#)/i,
@@ -141,16 +141,23 @@ function N(e) {
             })("ImageLoaderUtils.getSrcWithWidthAndHeight")
                 ? { width: s, height: o }
                 : (function (e) {
-                      let { targetWidth: t, targetHeight: n, sourceWidth: i, sourceHeight: r } = e,
-                          a = Math.max(t, n);
-                      if (a <= 0) return { width: t, height: n };
-                      let s = E.find((e) => a <= e) ?? E[E.length - 1];
-                      if (null != i && null != r && Math.max(i, r) <= s) return { width: i, height: r };
-                      let l = s / a,
-                          o = Math.max(1, Math.round(t * l)),
-                          d = Math.max(1, Math.round(n * l));
-                      return { width: null != i ? Math.min(o, i) : o, height: null != r ? Math.min(d, r) : d };
-                  })({ targetWidth: s, targetHeight: o, sourceWidth: i, sourceHeight: a });
+                      let { targetWidth: t, targetHeight: n, sourceWidth: i, sourceHeight: r, maxUpscale: a } = e,
+                          s = Math.max(t, n);
+                      if (s <= 0) return { width: t, height: n };
+                      let l = E.find((e) => s <= e) ?? E[E.length - 1];
+                      if (null != a && a > 1) {
+                          let e;
+                          for (let t of E)
+                              if (t <= s) e = t;
+                              else break;
+                          null != e && s <= e * a && (l = e);
+                      }
+                      if (null != i && null != r && Math.max(i, r) <= l) return { width: i, height: r };
+                      let o = l / s,
+                          d = Math.max(1, Math.round(t * o)),
+                          c = Math.max(1, Math.round(n * o));
+                      return { width: null != i ? Math.min(d, i) : d, height: null != r ? Math.min(c, r) : c };
+                  })({ targetWidth: s, targetHeight: o, sourceWidth: i, sourceHeight: a, maxUpscale: 1.1 });
             (e.width !== i || e.height !== a) && ((m.width = 0 | e.width), (m.height = 0 | e.height));
         }
         return r().isEmpty(m) || (T += "?" + l.stringify(m)), T;
