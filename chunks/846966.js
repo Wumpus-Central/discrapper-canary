@@ -34,12 +34,12 @@ function y(e) {
           ? "role_subscription_setting"
           : void 0;
 }
-var S = n(115036),
-    b = n(174459),
+var b = n(115036),
+    S = n(174459),
     T = n(272355),
     R = n(652215);
 function L(e, t) {
-    b.default.track(R.HAw.BROWSER_HANDOFF_SUCCEEDED, { authenticated: e, handoff_source: t });
+    S.default.track(R.HAw.BROWSER_HANDOFF_SUCCEEDED, { authenticated: e, handoff_source: t });
 }
 class O extends T.A {
     _initialize() {
@@ -63,7 +63,7 @@ class O extends T.A {
                           f.A.setFingerprint(i),
                           (0, _.mZ)(),
                           l === C.ROLE_SUBSCRIPTION &&
-                              b.default.track(R.HAw.MOBILE_WEB_HANDOFF_FAILURE, {
+                              S.default.track(R.HAw.MOBILE_WEB_HANDOFF_FAILURE, {
                                   reason: e.message ?? e.text,
                                   handoff_source: l,
                               });
@@ -75,8 +75,8 @@ class O extends T.A {
     }
     handleEnd = (e) => {
         let { handoffToken: t, fingerprint: n } = e,
-            i = S.A.key;
-        null != i && S.A.isHandoffAvailable()
+            i = b.A.key;
+        null != i && b.A.isHandoffAvailable()
             ? this.handleHandoff({ handoffKey: i, handoffToken: t, fingerprint: n, handoffSource: void 0 })
             : (f.A.setFingerprint(null), (0, _.J0)());
     };
@@ -477,8 +477,8 @@ async function eI() {
 }
 var eC = n(736056),
     ey = n(620233),
-    eS = n(122906),
-    eb = n(121623),
+    eb = n(122906),
+    eS = n(121623),
     eT = n(31008);
 function eR(e) {
     let { alt: t, ariaLabel: n, ariaHidden: i, role: l, width: s = 288, height: r = 162 } = e;
@@ -776,29 +776,29 @@ var tv = n(395671),
     tI = n(889227),
     tC = n(548118),
     ty = n(557582),
-    tS = n(167630),
-    tb = n(367048);
+    tb = n(167630),
+    tS = n(367048);
 function tT(e) {
     let { guildScheduledEvent: t, channel: n, onAcceptInvite: i, isSubmitting: l } = e;
     return (0, o.jsxs)("div", {
-        className: tb.s4,
+        className: tS.s4,
         children: [
             (0, o.jsx)(ty.Ay, {
                 name: t.name,
                 description: t.description ?? void 0,
                 headerVariant: "heading-md/medium",
-                descriptionClassName: tb.__invalid_channelDescription,
+                descriptionClassName: tS.__invalid_channelDescription,
                 guildId: t.guild_id,
                 guildEvent: t,
                 eventPreview: t,
             }),
             null != n &&
                 (0, o.jsx)("div", {
-                    className: tb.yW,
-                    children: (0, o.jsx)(tS.A, { guildScheduledEvent: t, channel: n }),
+                    className: tS.yW,
+                    children: (0, o.jsx)(tb.A, { guildScheduledEvent: t, channel: n }),
                 }),
             (0, o.jsx)("div", {
-                className: tb.xG,
+                className: tS.xG,
                 children: (0, o.jsx)(M.$, {
                     variant: "active",
                     size: "md",
@@ -817,34 +817,34 @@ function tR(e) {
     if (null == n) return null;
     let i = n.description ?? "";
     return (0, o.jsxs)("div", {
-        className: tb.kQ,
+        className: tS.kQ,
         children: [
-            (0, o.jsx)(ek.D, { className: tb.s7, variant: "text-sm/medium", children: z.intl.string(z.t.Eabu1z) }),
+            (0, o.jsx)(ek.D, { className: tS.s7, variant: "text-sm/medium", children: z.intl.string(z.t.Eabu1z) }),
             (0, o.jsxs)("div", {
-                className: tb.bo,
+                className: tS.bo,
                 children: [
                     (0, o.jsx)(tC.Ay, { guild: n, active: !0, size: tC.Ay.Sizes.MEDIUM }),
                     (0, o.jsxs)("div", {
-                        className: tb.bW,
+                        className: tS.bW,
                         children: [
                             (0, o.jsxs)(U.E, {
-                                className: tb.J5,
+                                className: tS.J5,
                                 color: "text-strong",
                                 variant: "text-sm/medium",
                                 tag: "span",
                                 children: [
                                     n.name,
-                                    (0, o.jsx)(tr.A, { guild: n, className: tb.n2, tooltipPosition: "left" }),
+                                    (0, o.jsx)(tr.A, { guild: n, className: tS.n2, tooltipPosition: "left" }),
                                 ],
                             }),
-                            (0, o.jsx)(tE, { invite: t, textClassName: tb.kS, className: tb.pe }),
+                            (0, o.jsx)(tE, { invite: t, textClassName: tS.kS, className: tS.pe }),
                         ],
                     }),
                 ],
             }),
             i.length > 0 &&
                 (0, o.jsx)("details", {
-                    className: tb.x_,
+                    className: tS.x_,
                     children: (0, o.jsx)(U.E, { color: "text-default", variant: "text-sm/normal", children: i }),
                 }),
         ],
@@ -947,9 +947,9 @@ function tW(e) {
         I = null != p,
         C = N || I || E,
         y = I || E,
-        S = (0, g.bG)([te.A], () => te.A.getInvite(te.A.getInviteKeyForGuildId(t.id) ?? n.code));
-    if (null == S) return null;
-    let b = (0, e5.oO)(S),
+        b = (0, g.bG)([te.A], () => te.A.getInvite(te.A.getInviteKeyForGuildId(t.id) ?? n.code));
+    if (null == b) return null;
+    let S = (0, e5.oO)(b),
         T = s ? "text-default" : "text-subtle";
     return (0, o.jsxs)("div", {
         className: tF.hn,
@@ -970,12 +970,12 @@ function tW(e) {
                         tooltipColor: tG.ST.Colors.PRIMARY,
                     }),
                     l &&
-                        b?.tag != null &&
-                        b?.badgeHash != null &&
+                        S?.tag != null &&
+                        S?.badgeHash != null &&
                         (0, o.jsx)(tV.o9, {
                             guildId: t.id,
-                            guildTag: b?.tag ?? void 0,
-                            guildBadge: b.badgeHash,
+                            guildTag: S?.tag ?? void 0,
+                            guildBadge: S.badgeHash,
                             inline: !1,
                         }),
                 ],
@@ -1226,7 +1226,7 @@ function t5(e) {
                 (null != n &&
                     1 === i &&
                     ((u.current = !0),
-                    b.default.track(R.HAw.INVITE_ACCEPT_BUTTON_RENDERED, {
+                    S.default.track(R.HAw.INVITE_ACCEPT_BUTTON_RENDERED, {
                         invite_code: n.code,
                         guild_id: n.guild?.id,
                         duration_ms_since_page_load: Math.round(performance.now()),
@@ -1310,7 +1310,7 @@ function nl(e) {
                               text: z.intl.string(z.t.j3cG2p),
                               fullWidth: !0,
                               onClick: () => {
-                                  b.default.track(R.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: i }),
+                                  S.default.track(R.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: i }),
                                       (0, w.pX)(R.BVt.LOGIN);
                               },
                           }),
@@ -1357,13 +1357,13 @@ function nl(e) {
                                       return "discord://";
                                   })(t)),
                                       (n = (0, eK.X7)(e)),
-                                      b.default.track(R.HAw.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
+                                      S.default.track(R.HAw.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
                                           detection_type: "mobile_button_clicked",
                                           device_type: h.Fr ? "mobile" : "tablet",
-                                          platform: b.default.getSuperProperties()?.os,
+                                          platform: S.default.getSuperProperties()?.os,
                                       }),
                                       null != n &&
-                                          b.default.track(R.HAw.DEEP_LINK_CLICKED, {
+                                          S.default.track(R.HAw.DEEP_LINK_CLICKED, {
                                               fingerprint: (0, eX.v)(n.fingerprint),
                                               attempt_id: n.attemptId,
                                               source: n.utmSource,
@@ -1578,8 +1578,8 @@ let ny = () => {
         ],
     });
 };
-var nS = n(229503);
-let nb = () =>
+var nb = n(229503);
+let nS = () =>
     (0, o.jsxs)(eO.B, {
         gap: 24,
         children: [
@@ -1596,7 +1596,7 @@ let nb = () =>
                         children: [
                             (0, o.jsx)(U.E, { variant: "text-md/semibold", children: z.intl.string(z.t.CfBo0z) }),
                             (0, o.jsxs)("ul", {
-                                className: nS.T,
+                                className: nb.T,
                                 children: [
                                     (0, o.jsx)("li", {
                                         children: (0, o.jsx)(U.E, {
@@ -1741,7 +1741,7 @@ let nL = (e) => {
                     transitionState: t,
                     onClose: n,
                     dismissable: !1,
-                    children: (0, o.jsx)(nb, {}),
+                    children: (0, o.jsx)(nS, {}),
                 });
         }
         let C = [
@@ -1759,7 +1759,7 @@ let nL = (e) => {
             {
                 stepKey: "tida",
                 modalProps: { title: z.intl.string(z.t.YignUm) },
-                body: (0, o.jsx)(nb, {}),
+                body: (0, o.jsx)(nS, {}),
                 nextButtonProps: { text: z.intl.string(z.t.D5Czbu) },
                 onNext: () => (N(), !1),
             },
@@ -2168,8 +2168,8 @@ let iN = "mweb_handoff_nonce",
     iI = "mweb_handoff_nonce_expiration",
     iC = +i_.A.Millis.MINUTE,
     iy = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
-    iS = new Set(["deep_link_failed"]),
-    ib = () => {
+    ib = new Set(["deep_link_failed"]),
+    iS = () => {
         iE.w.remove(iN), iE.w.remove(iI);
     },
     iT = () => {
@@ -2184,7 +2184,7 @@ let iN = "mweb_handoff_nonce",
             a = c.useCallback(
                 (e) => {
                     r(e),
-                        b.default.track(
+                        S.default.track(
                             R.HAw.MOBILE_WEB_HANDOFF_FAILURE,
                             { reason: e, fingerprint: (0, eX.v)(l) },
                             { fingerprint: l },
@@ -2199,7 +2199,7 @@ let iN = "mweb_handoff_nonce",
             c.useEffect(() => {
                 if (null != u) {
                     let e = iE.w.get(iI);
-                    (null == e || Date.now() >= e) && (a("nonce_expired"), ib());
+                    (null == e || Date.now() >= e) && (a("nonce_expired"), iS());
                 }
             }, [u, a]),
             c.useEffect(() => {
@@ -2210,7 +2210,7 @@ let iN = "mweb_handoff_nonce",
                     E.Bo.post({ url: R.Rsh.HANDOFF_EXCHANGE, body: { key: u, handoff_token: n }, rejectWithError: !0 })
                         .then((e) => f.A.loginToken(e.body.token, !1))
                         .then(() => {
-                            b.default.track(R.HAw.LOGIN_SUCCESSFUL, {
+                            S.default.track(R.HAw.LOGIN_SUCCESSFUL, {
                                 source: R.mdB.MOBILE_WEB_HANDOFF,
                                 is_new_user: !1,
                                 fingerprint: (0, eX.v)(l),
@@ -2226,7 +2226,7 @@ let iN = "mweb_handoff_nonce",
                             a("handoff_exchange");
                         })
                         .finally(() => {
-                            ib();
+                            iS();
                         });
             }, [n, u, s, l, a]),
             null == l)
@@ -2237,12 +2237,12 @@ let iN = "mweb_handoff_nonce",
                 ? (0, o.jsxs)(o.Fragment, {
                       children: [z.intl.string(z.t.uJ1JsY), (0, o.jsx)("br", {}), z.intl.string(z.t.GHVWAs)],
                   })
-                : iS.has(s)
+                : ib.has(s)
                   ? z.intl.string(z.t.EPt55r)
                   : iy.has(s)
                     ? z.intl.string(z.t.g87kTp)
                     : void 0;
-        return null != s && iS.has(s)
+        return null != s && ib.has(s)
             ? (0, o.jsx)("div", {
                   className: iv.Un,
                   children: (0, o.jsx)(U.E, {
@@ -2269,7 +2269,7 @@ let iN = "mweb_handoff_nonce",
                                   i.set("key", e),
                                   i.set("fingerprint", l),
                                   (t.search = i.toString()),
-                                  b.default.track(
+                                  S.default.track(
                                       R.HAw.DEEP_LINK_CLICKED,
                                       { fingerprint: (0, eX.v)(l), source: "mobile_web_handoff", destination: R.J$u },
                                       { fingerprint: l, flush: !0 },
@@ -2418,10 +2418,10 @@ function iB(e) {
         } = e,
         C = (0, g.bG)([e_.A], () => e_.A.getCountryCode()),
         y = (0, g.bG)([eq.default], () => eq.default.getLoginStatus()),
-        S = (0, g.bG)([iR.A], () => iR.A.getHasLoggedInAccounts()),
+        b = (0, g.bG)([iR.A], () => iR.A.getHasLoggedInAccounts()),
         T = c.useCallback(
             (e) => {
-                b.default.track(R.HAw.LOGIN_SUCCESSFUL, {
+                S.default.track(R.HAw.LOGIN_SUCCESSFUL, {
                     source: R.mdB.QR_CODE,
                     login_source: f,
                     gift_code_sku_id: l?.skuId ?? null,
@@ -2462,7 +2462,7 @@ function iB(e) {
     let B = (0, o.jsxs)("div", {
         className: iu.Eh,
         children: [
-            S &&
+            b &&
                 p &&
                 (0, o.jsx)("div", {
                     className: iu.AX,
@@ -2577,7 +2577,7 @@ function iB(e) {
                         (0, o.jsx)(c.Fragment, { children: B }, "form-wrapper"),
                     ],
                 })
-          : S && !p
+          : b && !p
             ? (0, o.jsx)(iG, { onDismiss: () => A(!0), embedded: r })
             : (0, o.jsxs)("div", {
                   children: [
@@ -2660,7 +2660,7 @@ function iq(e) {
     } = e;
     (0, iz.K)();
     let x = (0, g.bG)([eq.default], () => eq.default.isAuthenticated()),
-        p = (0, g.bG)([S.A], () => S.A.isHandoffAvailable()),
+        p = (0, g.bG)([b.A], () => b.A.isHandoffAvailable()),
         A = (0, g.bG)([eq.default], () => eq.default.getLoginStatus()),
         E = i?.skuId ?? null,
         j = (0, g.bG)([n3.A], () => (null != E ? n3.A.get(E) : null)),
@@ -2708,7 +2708,7 @@ function iq(e) {
                 }),
                 [v, N] = c.useState(""),
                 [I, C] = c.useState(!1),
-                [S, b] = c.useState(null),
+                [b, S] = c.useState(null),
                 [T, L] = c.useState(!1),
                 [O] = c.useState(() => new AbortController()),
                 [k, G] = c.useState({});
@@ -2780,19 +2780,19 @@ function iq(e) {
                             let { token: n } = await eA.A.verifyPhone(t, e, !1);
                             await f.A.authorizeIPAddress(n), M();
                         } catch (e) {
-                            null != e.body && null != e.body.message && b(e.body.message);
+                            null != e.body && null != e.body.message && S(e.body.message);
                         }
                     },
                     [A, _, M],
                 ),
                 H = c.useCallback(
                     async (e) => {
-                        b(null);
+                        S(null);
                         try {
                             let { token: t } = await eA.A.verifyPhone(A + _, e, !1);
                             r(R.BVt.RESET, { search: (0, d.stringify)({ token: t, from_login: "true" }) });
                         } catch (e) {
-                            null != e.body && null != e.body.message && b(e.body.message);
+                            null != e.body && null != e.body.message && S(e.body.message);
                         }
                     },
                     [A, _, r],
@@ -2867,7 +2867,7 @@ function iq(e) {
                 redirecting: x,
                 login: _,
                 password: v,
-                phoneVerifyError: S,
+                phoneVerifyError: b,
                 dismissedChooseAccount: T,
                 setDismissedChooseAccount: L,
                 errors: k,
@@ -2903,7 +2903,7 @@ function iq(e) {
         });
     (0, io.Ay)(() => {
         p && !x ? (0, _.ST)() : x && V(x, l, !0),
-            b.default.track(
+            S.default.track(
                 R.HAw.LOGIN_VIEWED,
                 {
                     location: null != t ? "Invite Login Page" : "Non-Invite Login Page",
@@ -3122,9 +3122,9 @@ function ld(e) {
     if ((x.h.dispatch({ type: "REGISTER" }), null != o)) {
         let e;
         (0, lc.A)(o, R.JJy.REGISTER),
-            b.default.track(R.HAw.AGE_GATE_ACTION, { source: i$.w_.REGISTER, action: i$.AM.AGE_GATE_SUBMITTED }),
+            S.default.track(R.HAw.AGE_GATE_ACTION, { source: i$.w_.REGISTER, action: i$.AM.AGE_GATE_SUBMITTED }),
             (e = lr()().diff(o, "years")) < 13 ||
-                b.default.track(R.HAw.USER_AGE_SUBMITTED, {
+                S.default.track(R.HAw.USER_AGE_SUBMITTED, {
                     age_bucket: e >= 13 && e <= 17 ? "13-17" : e >= 18 && e <= 22 ? "18-22" : "23+",
                 });
     }
@@ -3162,14 +3162,14 @@ function ld(e) {
                     type: "GUARDIAN_CONNECT_REQUIRED",
                     shouldShowGuardianConnect: !0 === e.body.show_guardian_connect,
                 }),
-                b.default.track(R.HAw.AGE_GATE_ACTION, { source: i$.w_.REGISTER, action: i$.AM.AGE_GATE_SUCCESS });
+                S.default.track(R.HAw.AGE_GATE_ACTION, { source: i$.w_.REGISTER, action: i$.AM.AGE_GATE_SUCCESS });
         },
         (e) => {
             if (e instanceof lo.CaptchaCancelError) throw e;
             let t = new F.A(e);
             throw (
                 (null != t.getFieldErrors("date_of_birth") && la.Xv(i$.w_.REGISTER),
-                b.default.track(R.HAw.REGISTER_SUBMIT_ERRORED, {
+                S.default.track(R.HAw.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage("email"),
                     phone_error_reason: t.getFirstFieldErrorMessage("phone_token"),
@@ -3314,13 +3314,13 @@ function lN(e) {
         [u, h] = c.useState(!1),
         [m, x] = c.useState(!1);
     async function f() {
-        S.length > 0 && !i9.A.wasRegistrationSuggestionFetched(S) && (await i5.A.fetchSuggestionsRegistration(S));
+        b.length > 0 && !i9.A.wasRegistrationSuggestionFetched(b) && (await i5.A.fetchSuggestionsRegistration(b));
     }
     function p(e) {
-        b.default.track(R.HAw.REGISTER_INPUT_FOCUS, { field: e });
+        S.default.track(R.HAw.REGISTER_INPUT_FOCUS, { field: e });
     }
     function A(e) {
-        b.default.track(R.HAw.REGISTER_INPUT_BLUR, { field: e });
+        S.default.track(R.HAw.REGISTER_INPUT_BLUR, { field: e });
     }
     let E = (0, g.bG)([li.A], () => li.A.getAuthenticationConsentRequired()),
         _ = (0, g.bG)([i9.A], () => i9.A.registrationUsernameSuggestion()),
@@ -3329,7 +3329,7 @@ function lN(e) {
         N = c.useRef(null),
         I = c.useRef(null),
         [C, y] = c.useState(t),
-        [S, T] = c.useState(""),
+        [b, T] = c.useState(""),
         [L, O] = c.useState(""),
         [k, w] = c.useState(""),
         [D, P] = c.useState(null),
@@ -3367,7 +3367,7 @@ function lN(e) {
                 await ld({
                     email: C,
                     username: L,
-                    globalName: S,
+                    globalName: b,
                     consent: B,
                     password: k,
                     invite: n?.code,
@@ -3383,7 +3383,7 @@ function lN(e) {
                 let e = (0, iW.W)(t);
                 $(e), s?.(e), "number" == typeof e.retry_after && q(e.retry_after);
             }
-        }, [i, l, n, C, s, d, _, L, S, k, D, B, q]),
+        }, [i, l, n, C, s, d, _, L, b, k, D, B, q]),
         ex = c.useCallback(
             (e) => {
                 if ((e?.preventDefault(), null == E)) return;
@@ -3425,7 +3425,7 @@ function lN(e) {
                         label: z.intl.string(z.t["9AjdkD"]),
                         className: X.SX,
                         name: "global_name",
-                        value: S,
+                        value: b,
                         onChange: T,
                         error: lg(et),
                         maxLength: 32,
@@ -3473,7 +3473,7 @@ function lN(e) {
                             (0, o.jsx)(lv, {
                                 username: L,
                                 suggestion: _,
-                                globalName: S,
+                                globalName: b,
                                 isUsernameFocused: m,
                                 onClickSuggestion: () => {
                                     v.current?.focus(), null != _ && _.length > 0 && O(_);
@@ -3543,7 +3543,7 @@ n(436317);
 var lI = n(292666),
     lC = n(713654),
     ly = n(131165);
-function lS(e) {
+function lb(e) {
     let { channel: t } = e,
         n = (0, lC._U)(t.type);
     return (0, o.jsxs)("div", {
@@ -3554,14 +3554,14 @@ function lS(e) {
         ],
     });
 }
-function lb(e) {
+function lS(e) {
     let { channel: t, guildScheduledEvent: n } = e;
     return (0, o.jsxs)("div", {
         className: ly.kL,
         children: [
             (0, o.jsx)(ty.Uq, { className: ly.II, guildId: n.guild_id, guildEvent: n, eventPreview: n }),
             (0, o.jsx)(ty.sC, { name: n.name, description: n.description, guildId: n.guild_id }),
-            null != t && n.channel_id === t.id ? (0, o.jsx)(lS, { channel: t }) : null,
+            null != t && n.channel_id === t.id ? (0, o.jsx)(lb, { channel: t }) : null,
         ],
     });
 }
@@ -3635,10 +3635,10 @@ function lL(e) {
                             placeholder: z.intl.string(z.t["09Q8yp"]),
                             onChange: i,
                             onFocus: () => {
-                                b.default.track(R.HAw.REGISTER_INPUT_FOCUS, { field: "username" });
+                                S.default.track(R.HAw.REGISTER_INPUT_FOCUS, { field: "username" });
                             },
                             onBlur: () => {
-                                b.default.track(R.HAw.REGISTER_INPUT_BLUR, { field: "username" });
+                                S.default.track(R.HAw.REGISTER_INPUT_BLUR, { field: "username" });
                             },
                         }),
                     }),
@@ -3697,7 +3697,7 @@ function lk(e) {
     h = i
         ? null
         : t?.guild_scheduled_event != null
-          ? (0, o.jsx)(lb, { channel: t.channel, guildScheduledEvent: t.guild_scheduled_event })
+          ? (0, o.jsx)(lS, { channel: t.channel, guildScheduledEvent: t.guild_scheduled_event })
           : (0, o.jsx)("div", { className: X.S3, children: (0, o.jsx)(im.A, { invite: t, inUnclaimedFlow: !0 }) });
     let [m, x] = c.useState(""),
         [f, p] = c.useState(null),
@@ -3705,7 +3705,7 @@ function lk(e) {
         [_, j] = c.useState(!1),
         [v, N] = c.useState({}),
         { username: I, global_name: C, date_of_birth: y } = v,
-        [S, T] = lf();
+        [b, T] = lf();
     c.useEffect(() => {
         null == f && u.current?.focus();
     }, [f, u]);
@@ -3760,10 +3760,10 @@ function lk(e) {
                                           placeholder: z.intl.string(z.t["09Q8yp"]),
                                           onChange: x,
                                           onFocus: () => {
-                                              b.default.track(R.HAw.REGISTER_INPUT_FOCUS, { field: "global_name" });
+                                              S.default.track(R.HAw.REGISTER_INPUT_FOCUS, { field: "global_name" });
                                           },
                                           onBlur: () => {
-                                              b.default.track(R.HAw.REGISTER_INPUT_BLUR, { field: "global_name" });
+                                              S.default.track(R.HAw.REGISTER_INPUT_BLUR, { field: "global_name" });
                                           },
                                       }),
                                       (0, o.jsx)(i7.A, {
@@ -3833,7 +3833,7 @@ function lP(e) {
         v = null != e.location ? (0, d.parse)(e.location.search) : {},
         [N, I] = c.useState(v.email ?? ""),
         [C, y] = c.useState({}),
-        S = (0, ic.A)(E),
+        b = (0, ic.A)(E),
         T = (function (e, t, n) {
             if (null != e) return "gift";
             if (null != t) return "guild_template";
@@ -3851,7 +3851,7 @@ function lP(e) {
         }, [E, h, p]);
     (0, io.Ay)(() => {
         k(),
-            b.default.track(
+            S.default.track(
                 R.HAw.REGISTER_VIEWED,
                 {
                     location: null != s ? "Invite Register Page" : "Non-Invite Register Page",
@@ -3864,8 +3864,8 @@ function lP(e) {
             (0, D.d0)("register");
     }),
         c.useEffect(() => {
-            E && !1 === S && ((0, lG.C)(lD.zY.ORGANIC_REGISTERED), k());
-        }, [E, S, k]);
+            E && !1 === b && ((0, lG.C)(lD.zY.ORGANIC_REGISTERED), k());
+        }, [E, b, k]);
     let P = lw.FULL;
     _ || null != C.date_of_birth ? (P = lw.AGE_GATE) : L && (P = lw.INVITE),
         (0, iL.A)(
@@ -4213,7 +4213,7 @@ class lK extends c.PureComponent {
             lQ.VP || eY.A.launch("discord://" + R.BVt.GUILD_TEMPLATE(this.props.code), () => void 0);
     }
     componentDidUpdate(e) {
-        this.props.code !== e.code && eb.A.resolveGuildTemplate(this.props.code);
+        this.props.code !== e.code && eS.A.resolveGuildTemplate(this.props.code);
     }
     handleContinue = () => {
         let { defaultRoute: e, transitionTo: t } = this.props;
@@ -4310,7 +4310,7 @@ function lX(e) {
 }
 function lq(e, t, n) {
     e.preventDefault(),
-        b.default.track(R.HAw.GUILD_TEMPLATE_APP_OPENED, {
+        S.default.track(R.HAw.GUILD_TEMPLATE_APP_OPENED, {
             guild_template_code: t,
             guild_template_name: n.name,
             guild_template_description: n.description,
@@ -4318,11 +4318,11 @@ function lq(e, t, n) {
         });
     let i = eq.default.getFingerprint(),
         l = null != i ? i : eq.default.getId();
-    eb.A.openMobileApp(n.state === iD.QB.RESOLVED ? t : void 0, l);
+    eS.A.openMobileApp(n.state === iD.QB.RESOLVED ? t : void 0, l);
 }
 function lY(e) {
     let { code: t } = e,
-        n = (0, g.bG)([eS.A], () => eS.A.getGuildTemplate(t));
+        n = (0, g.bG)([eb.A], () => eb.A.getGuildTemplate(t));
     return (c.useEffect(() => {
         (0, D.d0)("guild_template_mobile");
     }, []),
@@ -4778,7 +4778,7 @@ function sy(e) {
         ],
     });
 }
-function sS(e) {
+function sb(e) {
     let { invite: t, guild: n, liveliness: i, onLoginStart: l, location: s, transitionTo: r } = e;
     return (0, o.jsxs)("div", {
         className: sI.Nf,
@@ -4805,7 +4805,7 @@ function sS(e) {
         ],
     });
 }
-var sb = n(922016),
+var sS = n(922016),
     sT = n(408278),
     sR = n(625903),
     sL = n(966327),
@@ -4868,7 +4868,7 @@ function sB(e) {
         h = "" !== u ? z.intl.format(z.t["9sWQNT"], { usernameHook: () => u }) : z.intl.string(z.t["e/6Ogt"]),
         m = c.useCallback(() => {
             r ||
-                b.default.track(R.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
+                S.default.track(R.HAw.INVITE_ACCEPT_JOIN_SETTINGS_EXPANDED, {
                     guild_id: n.id,
                     invite_code: t.code,
                     location: "invite_web_redesign",
@@ -4925,9 +4925,9 @@ function sB(e) {
                                           ? void 0
                                           : () => (0, o.jsx)(sL.A, { "aria-hidden": !0, size: ti._3.SIZE_16, user: d }),
                               }),
-                              (0, o.jsx)(sb.Y, {
+                              (0, o.jsx)(sS.Y, {
                                   targetElementRef: s,
-                                  animation: sb.Y.Animation.NONE,
+                                  animation: sS.Y.Animation.NONE,
                                   position: "top",
                                   align: "right",
                                   shouldShow: r,
@@ -5004,7 +5004,7 @@ function sQ(e) {
         t.liveliness?.msg_activity_bins != null &&
         null == t.guild_scheduled_event &&
         (l4.getConfig({ location: "InviteRegister.hasLiveliness" }), r)
-        ? (0, o.jsx)(sS, {
+        ? (0, o.jsx)(sb, {
               invite: t,
               guild: s,
               liveliness: t.liveliness,
@@ -5031,7 +5031,7 @@ function sz(e) {
                   (0, o.jsxs)(G.Ay, {
                       children: [
                           null != c
-                              ? (0, o.jsx)(lb, { channel: t.channel, guildScheduledEvent: c })
+                              ? (0, o.jsx)(lS, { channel: t.channel, guildScheduledEvent: c })
                               : (0, o.jsx)(im.A, { invite: t }),
                           null != s &&
                               (0, o.jsx)("div", {
@@ -5083,7 +5083,7 @@ function sK(e) {
                               children: (0, o.jsx)(M.$, {
                                   text: z.intl.string(z.t.UQvCf7),
                                   onClick: function () {
-                                      b.default.track(R.HAw.INVITE_CTA_CLICKED, {
+                                      S.default.track(R.HAw.INVITE_CTA_CLICKED, {
                                           action: "open_app",
                                           invite_code: t.code,
                                           guild_id: t.guild?.id,
@@ -5099,7 +5099,7 @@ function sK(e) {
                               children: (0, o.jsx)(M.$, {
                                   text: z.intl.string(z.t["2ixEBi"]),
                                   onClick: function () {
-                                      b.default.track(R.HAw.INVITE_CTA_CLICKED, {
+                                      S.default.track(R.HAw.INVITE_CTA_CLICKED, {
                                           action: "continue_in_browser",
                                           invite_code: t.code,
                                           guild_id: t.guild?.id,
@@ -5254,7 +5254,7 @@ let s2 = nK(iq),
                 [r, i],
             ),
             v = c.useCallback(() => {
-                b.default.track(R.HAw.INVITE_CTA_CLICKED, {
+                S.default.track(R.HAw.INVITE_CTA_CLICKED, {
                     action: "accept_invite",
                     invite_code: r?.code,
                     guild_id: r?.guild?.id,
@@ -5277,7 +5277,7 @@ let s2 = nK(iq),
                 if (
                     (null != e &&
                         x.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: eq.default.getId() }),
-                    b.default.track(R.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 }),
+                    S.default.track(R.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 }),
                     (0, D.d0)("invite"),
                     lQ.VP || eY.A.launch("discord://" + R.BVt.INVITE(t), () => void 0),
                     !l && h)
@@ -5307,7 +5307,7 @@ let s2 = nK(iq),
                         let e = eq.default.getFingerprint();
                         if (null != e) {
                             let i = (0, eX.d)(e);
-                            b.default.track(R.HAw.INVITE_LOGIN_SUCCESSFUL, {
+                            S.default.track(R.HAw.INVITE_LOGIN_SUCCESSFUL, {
                                 invite_code: (0, e$.m0)(n),
                                 guild_id: t?.guild?.id,
                                 channel_id: t?.channel?.id,
@@ -5346,7 +5346,7 @@ let s2 = nK(iq),
                         null == t ||
                             (l !== u &&
                                 (l === R.fAW.OPEN
-                                    ? b.default.track(
+                                    ? S.default.track(
                                           R.HAw.INVITE_APP_INVOKED,
                                           {
                                               invite_code: (0, e$.m0)(n),
@@ -5360,7 +5360,7 @@ let s2 = nK(iq),
                                           { flush: !0 },
                                       )
                                     : l === R.fAW.OPEN_FAIL &&
-                                      b.default.track(R.HAw.INVITE_APP_INVOKE_FAILED, {
+                                      S.default.track(R.HAw.INVITE_APP_INVOKE_FAILED, {
                                           invite_code: (0, e$.m0)(n),
                                           reason: "rpc_failed",
                                           invite_type: null != t.type ? to.Xd[t.type] : void 0,
@@ -5406,7 +5406,7 @@ let s2 = nK(iq),
                     : (0, o.jsx)(sQ, {
                           invite: r,
                           onLoginStart: function () {
-                              b.default.track(R.HAw.INVITE_LOGIN, {
+                              S.default.track(R.HAw.INVITE_LOGIN, {
                                   invite_code: r?.code,
                                   guild_id: r?.guild?.id,
                                   channel_id: r?.channel?.id,
@@ -5423,7 +5423,7 @@ let s2 = nK(iq),
     }),
     s8 = nK(function (e) {
         let t = {
-            guildTemplate: (0, g.bG)([eS.A], () => eS.A.getGuildTemplate(e.code)),
+            guildTemplate: (0, g.bG)([eb.A], () => eb.A.getGuildTemplate(e.code)),
             nativeAppState: (0, g.bG)([n4.A], () => n4.A.getState(e.code)),
             authenticated: (0, g.bG)([eq.default], () => eq.default.isAuthenticated()),
             defaultRoute: (0, g.bG)([eh.A], () => eh.A.defaultRoute),
@@ -5440,14 +5440,14 @@ let s2 = nK(iq),
                 null != e &&
                     x.h.dispatch({ type: "SET_ANALYTICS_TOKEN", analyticsToken: e, userId: eq.default.getId() }),
                     (0, D.d0)("invite_mobile"),
-                    b.default.track(R.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 });
+                    S.default.track(R.HAw.INVITE_VIEWED, { invite_code: t }, { flush: !0 });
             }, []),
             (0, o.jsx)(t9, {
                 invite: i,
                 onAcceptInvite: function (e) {
                     let n, l, s, r;
                     e?.preventDefault(),
-                        b.default.track(
+                        S.default.track(
                             R.HAw.INVITE_APP_OPENED,
                             {
                                 invite_code: (0, e$.m0)(t),
@@ -5576,7 +5576,7 @@ let s2 = nK(iq),
                 n(R.BVt.LOGIN, { source: "verify_email" });
             }, [n]),
             a = c.useCallback(() => {
-                b.default.track(R.HAw.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: s.current }),
+                S.default.track(R.HAw.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: s.current }),
                     (0, s0.A)("verify_email");
             }, []);
         return "failed" === i
@@ -5703,7 +5703,7 @@ let s2 = nK(iq),
                 return "discord://";
             })(r)),
                 null != (t = (0, eK.X7)(e)) &&
-                    b.default.track(R.HAw.DEEP_LINK_CLICKED, {
+                    S.default.track(R.HAw.DEEP_LINK_CLICKED, {
                         fingerprint: (0, eX.v)(t.fingerprint),
                         attempt_id: t.attemptId,
                         source: t.utmSource,
@@ -5847,14 +5847,14 @@ let s2 = nK(iq),
             a = c.useRef(!1),
             u = c.useCallback(async (e) => {
                 try {
-                    b.default.track(R.HAw.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_page" }),
+                    S.default.track(R.HAw.ONE_TIME_LOGIN_ATTEMPTED, { source: "web_page" }),
                         await f.A.oneTimeLogin(e),
                         r("login_success"),
-                        b.default.track(R.HAw.LOGIN_SUCCESSFUL, { source: "web_page", login_method: "one_time_login" }),
+                        S.default.track(R.HAw.LOGIN_SUCCESSFUL, { source: "web_page", login_method: "one_time_login" }),
                         n.g.location.assign(R.BVt.APP);
                 } catch (t) {
                     let e = t instanceof Error ? t.message : "Unknown error";
-                    b.default.track(R.HAw.ONE_TIME_LOGIN_ERROR, {
+                    S.default.track(R.HAw.ONE_TIME_LOGIN_ERROR, {
                         source: "web_page",
                         error_reason: "api_error",
                         error_message: e,
@@ -5867,7 +5867,7 @@ let s2 = nK(iq),
                     n = `discord://login/one-time?token=${encodeURIComponent(e)}`;
                 eY.A.launch(n, (e) => {
                     e
-                        ? (b.default.track(R.HAw.DEEP_LINK_CLICKED, {
+                        ? (S.default.track(R.HAw.DEEP_LINK_CLICKED, {
                               source: "web_page",
                               destination: "discord://login/one-time",
                               deep_link_provider: "protocol",
@@ -5891,7 +5891,7 @@ let s2 = nK(iq),
                             })
                                 .then((n) => {
                                     n
-                                        ? (b.default.track(R.HAw.DEEP_LINK_CLICKED, {
+                                        ? (S.default.track(R.HAw.DEEP_LINK_CLICKED, {
                                               source: "web_page",
                                               destination: "one_time_login_modal",
                                               deep_link_provider: "rpc",
@@ -5912,11 +5912,11 @@ let s2 = nK(iq),
             (c.useEffect(() => {
                 let e = null != l && "string" == typeof l,
                     t = h.Fr ? "mobile" : h.v1 ? "tablet" : (0, ne.isDesktop)() ? "desktop_app" : "web";
-                if ((b.default.track(R.HAw.ONE_TIME_LOGIN_PAGE_VIEWED, { has_token: e, device_type: t }), !e))
+                if ((S.default.track(R.HAw.ONE_TIME_LOGIN_PAGE_VIEWED, { has_token: e, device_type: t }), !e))
                     return void r("error");
                 if (h.Fr || h.v1) {
-                    let e = b.default.getSuperProperties()?.os;
-                    b.default.track(R.HAw.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
+                    let e = S.default.getSuperProperties()?.os;
+                    S.default.track(R.HAw.ONE_TIME_LOGIN_APP_DETECTION_ATTEMPTED, {
                         detection_type: "mobile_ui_shown",
                         device_type: t,
                         platform: e,
@@ -5937,7 +5937,7 @@ let s2 = nK(iq),
                 subtitle: z.intl.string(z.t["5/lR0g"]),
                 buttonText: z.intl.string(z.t["2ixEBi"]),
                 buttonOnClick: () => {
-                    b.default.track(R.HAw.ONE_TIME_LOGIN_CONTINUE_IN_BROWSER_CLICKED, { previous_status: s }), u(l);
+                    S.default.track(R.HAw.ONE_TIME_LOGIN_CONTINUE_IN_BROWSER_CLICKED, { previous_status: s }), u(l);
                 },
             });
         if ("app_launch_not_supported" === s)
@@ -5954,7 +5954,7 @@ let s2 = nK(iq),
                 subtitle: z.intl.string(z.t["S+YjYJ"]),
                 buttonText: z.intl.string(z.t.j3cG2p),
                 buttonOnClick: () => {
-                    b.default.track(R.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: e }),
+                    S.default.track(R.HAw.ONE_TIME_LOGIN_BACK_TO_LOGIN_CLICKED, { error_reason: e }),
                         (0, w.pX)(R.BVt.LOGIN);
                 },
             });
@@ -5963,6 +5963,8 @@ let s2 = nK(iq),
     });
 class rm extends c.PureComponent {
     state = { splash: null, redirectTo: null, backgroundId: null };
+    hasTriggeredInviteResolve = !1;
+    experimentFallbackTimeout = null;
     static getDerivedStateFromProps(e, t) {
         let { invite: n, location: i } = e,
             { backgroundId: l } = t,
@@ -5985,24 +5987,36 @@ class rm extends c.PureComponent {
         null != e &&
             (!t && n && f.A.getExperiments(!0),
             null != eq.default.getInstallationForTracking() && (0, ey.Tv)(null),
-            b.default.track(
+            S.default.track(
                 R.HAw.INVITE_OPENED,
                 { invite_code: (0, e$.m0)(e), load_time: nP.getTimeSinceNavigationStart() },
                 { flush: !0 },
             )),
-            t && this.resolveInvite(),
+            t
+                ? this.maybeResolveInvite()
+                : null != e && (this.experimentFallbackTimeout = setTimeout(this.maybeResolveInvite, 2e3)),
             this.resolveGiftCode(),
             this.resolveGuildTemplate(),
             k.initialize(),
             (0, D.DC)();
     }
     componentDidUpdate(e) {
-        !e.hasLoadedExperiments && this.props.hasLoadedExperiments && this.resolveInvite(),
+        !e.hasLoadedExperiments && this.props.hasLoadedExperiments && this.maybeResolveInvite(),
             e.invite?.state !== this.props.invite?.state && this.maybeFetchApplicationSplash();
     }
     componentWillUnmount() {
-        k.terminate();
+        null != this.experimentFallbackTimeout &&
+            (clearTimeout(this.experimentFallbackTimeout), (this.experimentFallbackTimeout = null)),
+            k.terminate();
     }
+    maybeResolveInvite = () => {
+        this.hasTriggeredInviteResolve ||
+            null == this.props.inviteKey ||
+            ((this.hasTriggeredInviteResolve = !0),
+            null != this.experimentFallbackTimeout &&
+                (clearTimeout(this.experimentFallbackTimeout), (this.experimentFallbackTimeout = null)),
+            this.resolveInvite());
+    };
     maybeFetchApplicationSplash() {
         let { invite: e } = this.props;
         if (e?.state === R.elq.RESOLVED) {
@@ -6020,7 +6034,7 @@ class rm extends c.PureComponent {
         let { invite: t } = await A.Ay.resolveInvite(e, R.S3d.INVITE, { withGames: !0 });
         if (null != t && (el(t), null != t.type && to.uR.has(t.type))) {
             if ("denied" === (await eI()))
-                return void b.default.track(R.HAw.INVITE_APP_INVOKE_FAILED, {
+                return void S.default.track(R.HAw.INVITE_APP_INVOKE_FAILED, {
                     invite_code: (0, e$.m0)(e),
                     reason: "lna_denied",
                     invite_type: to.Xd[t.type],
@@ -6031,13 +6045,13 @@ class rm extends c.PureComponent {
     resolveGuildTemplate() {
         let { guildTemplateCode: e } = this.props;
         null != e &&
-            (b.default.track(
+            (S.default.track(
                 R.HAw.GUILD_TEMPLATE_OPENED,
                 { guild_template_code: e, load_time: nP.getTimeSinceNavigationStart() },
                 { flush: !0 },
             ),
-            eb.A.resolveGuildTemplate(e),
-            eb.A.openNativeAppModal(e));
+            eS.A.resolveGuildTemplate(e),
+            eS.A.openNativeAppModal(e));
     }
     resolveGiftCode() {
         let { giftCode: e } = this.props;
@@ -6157,7 +6171,7 @@ class rm extends c.PureComponent {
         });
     }
 }
-let rg = g.Ay.connectStores([eq.default, te.A, nk.A, eC.A, eS.A], (e) => {
+let rg = g.Ay.connectStores([eq.default, te.A, nk.A, eC.A, eb.A], (e) => {
     let { match: t, location: n } = e,
         i = t?.params?.inviteCode,
         l = null != i ? (0, e$.fB)(i, n.search) : void 0,
@@ -6170,7 +6184,7 @@ let rg = g.Ay.connectStores([eq.default, te.A, nk.A, eC.A, eS.A], (e) => {
         guildTemplateCode: r,
         gift: null != s ? nk.A.get(s) : null,
         invite: null != l ? te.A.getInvite(l) : null,
-        guildTemplate: null != r ? eS.A.getGuildTemplate(r) : null,
+        guildTemplate: null != r ? eb.A.getGuildTemplate(r) : null,
         hasLoadedExperiments: eC.A.hasLoadedExperiments,
     };
 })(rm);
