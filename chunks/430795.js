@@ -5,32 +5,32 @@ n.d(t, {
     h$: () => er,
     YP: () => J,
     Uh: () => et,
-    Fb: () => eT,
-    VO: () => eN,
-    uL: () => eD,
+    Fb: () => em,
+    VO: () => eR,
+    uL: () => ev,
     GS: () => ei,
     fd: () => Q,
-    Ts: () => ev,
-    e6: () => eL,
-    H1: () => eR,
-    l0: () => eM,
+    Ts: () => eM,
+    e6: () => ey,
+    H1: () => eL,
+    l0: () => eU,
     yd: () => ed,
     YV: () => eA,
     Su: () => eI,
     yO: () => X,
-    $N: () => eb,
+    $N: () => eP,
     YK: () => ef,
     eQ: () => Z,
-    PW: () => ey,
-    w7: () => eP,
-    K7: () => eg,
+    PW: () => eb,
+    w7: () => ew,
+    K7: () => eS,
     HU: () => en,
     Mt: () => ee,
-    oH: () => eS,
+    oH: () => eC,
     Yy: () => eu,
     Vp: () => eh,
     XK: () => e_,
-    mN: () => eO,
+    mN: () => eD,
 }),
     n(321073);
 var i = n(636537),
@@ -407,7 +407,7 @@ function et(e) {
 }
 function en(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { storageLocation: e } }),
-        eT(e).catch((e) => {
+        em(e).catch((e) => {
             U.nx.error("Failed to load clips directory after storage location change", e);
         });
 }
@@ -551,7 +551,7 @@ async function eo(e) {
         n = [...Object.values(C.Ay.getClips()), ...C.Ay.getClipCandidates()].filter((e) => (0, N.Fk)(e.filepath, t));
     for (let t of (0, N.SF)(n, U.CN, e))
         try {
-            await eS(t, !1);
+            await eC(t, !1);
         } catch (e) {
             U.nx.error("Failed to evict transient clip", e);
         }
@@ -612,7 +612,7 @@ async function ed(e) {
                 let t = n.sort((e, t) => e.createdAt - t.createdAt).slice(0, i);
                 for (let n of (U.nx.info(`Deleting ${t.length} temporary clips to stay within limit of ${e}`), t))
                     try {
-                        await eS(n, !1);
+                        await eC(n, !1);
                     } catch (e) {
                         U.nx.error("Failed to delete temporary clip", e);
                     }
@@ -620,7 +620,7 @@ async function ed(e) {
         }
         let e = await el({ clipMethod: t, request: n, timeline: i, decision: a, isCandidate: s, gameSessionId: l });
         if (s && null != e.gameSessionId && C.Ay.getCurrentClipsSession()?.id !== e.gameSessionId) {
-            r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), eS(e);
+            r.h.dispatch({ type: "CLIPS_SAVE_CLIP_ERROR" }), eC(e);
             return;
         }
         r.h.dispatch({ type: "CLIPS_SAVE_CLIP", clip: e }), (0, N.C5)(t) && (await eo(e.id)), ea(e);
@@ -753,27 +753,38 @@ async function ep(e) {
     }
     return n;
 }
-async function eT(e) {
+let eT = !1;
+async function em(e) {
     if (!(0, T.isDesktop)() || a.A.clips?.loadClipsDirectory == null) return;
     let t = await ep(e);
     if ((0, N.rX)()) {
         let n = (0, N.xT)(e);
         await a.A.fileManager.createDirectoryIfNotExists(n, !0), t.push(...(await ep(n)));
     }
+    if (!eT) {
+        eT = !0;
+        let e = t;
+        for (let n of ((t = []), e))
+            n.isCandidate
+                ? eN(n).catch((e) => {
+                      U.nx.error(`Failed to cleanup old clip candidate ${n.id}`, e);
+                  })
+                : t.push(n);
+    }
     r.h.dispatch({ type: "CLIPS_LOAD_DIRECTORY_SUCCESS", clips: t });
 }
-async function em(e) {
+async function eg(e) {
     let { storageLocation: t } = C.Ay.getSettings(),
         n = a.A.fileManager.join(t, a.A.fileManager.basename(e.filepath));
     return await a.A.clips.moveClip(e.filepath, n), n;
 }
-async function eg(e, t, n) {
+async function eS(e, t, n) {
     let i = e,
         a = { isCandidate: !1, audioEvents: n },
         { storageLocation: s } = C.Ay.getSettings();
     if ((0, N.rX)() && (0, N.Fk)(e.filepath, s))
         try {
-            let t = await em(e);
+            let t = await eg(e);
             i = { ...e, filepath: t };
         } catch (e) {
             U.nx.error("Clip promotion failed: failed to move the clip out of transient storage", e);
@@ -792,33 +803,37 @@ async function eg(e, t, n) {
         clip_auto_clip_score: t,
     });
 }
-async function eS(e) {
+async function eN(e) {
+    if (!(0, T.isDesktop)() || a.A.clips?.deleteClip == null) return !1;
+    let { filepath: t, id: n } = e,
+        i = (await a.A.clips.deleteClip(t)) ?? { ok: !0 };
+    if (!i.ok) {
+        let { reason: e, recoverable: t } = i;
+        if ((m.A.captureException(Error(`deleteClip failed (${e})`)), !t))
+            return U.nx.warn(`deleteClip: dropping unrecoverable clip record ${n} (${e})`), !1;
+        throw Error(`deleteClip failed for ${n} (${e})`);
+    }
+    return !0;
+}
+async function eC(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     if (!(0, T.isDesktop)() || a.A.clips?.deleteClip == null) return;
-    let { filepath: n, id: i } = e,
-        s = (await a.A.clips.deleteClip(n)) ?? { ok: !0 };
-    if (!s.ok) {
-        let { reason: e, recoverable: t } = s;
-        if ((m.A.captureException(Error(`deleteClip failed (${e})`)), !t)) {
-            U.nx.warn(`deleteClip: dropping unrecoverable clip record ${i} (${e})`),
-                r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n });
-            return;
-        }
-        throw Error(`deleteClip failed for ${i} (${e})`);
-    }
-    r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n }),
-        t &&
-            p.default.track(d.HAw.CLIP_DELETED, {
-                ...g.lc("deleteClip"),
-                ...g.Zy(e),
-                application_name: e.applicationName,
-                application_id: e.applicationId,
-                clip_uuid: e.id,
-            });
+    let { filepath: n, id: i } = e;
+    (await eN(e))
+        ? (r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n }),
+          t &&
+              p.default.track(d.HAw.CLIP_DELETED, {
+                  ...g.lc("deleteClip"),
+                  ...g.Zy(e),
+                  application_name: e.applicationName,
+                  application_id: e.applicationId,
+                  clip_uuid: e.id,
+              }))
+        : r.h.dispatch({ type: "CLIPS_DELETE_CLIP", id: i, filepath: n });
 }
-async function eN(e) {
+async function eR(e) {
     try {
-        eR([e.id]);
+        eL([e.id]);
         let t = I.Ay.getMediaEngine();
         if (
             (0, O.qi)("exportClip") &&
@@ -850,32 +865,32 @@ async function eN(e) {
                 if (e.type === R.nQ.SCREENSHOT || d) return n;
                 return B(n);
             } finally {
-                await eC(o);
+                await eO(o);
             }
         }
         let s = await t.exportClip(e.filepath, r);
         if (e.type === R.nQ.SCREENSHOT) return s;
         return B(s);
     } finally {
-        eR(null);
+        eL(null);
     }
 }
-async function eC(e) {
+async function eO(e) {
     if ((0, T.isDesktop)())
         try {
             await a.A.clips.deleteClip(e);
         } catch {}
 }
-function eR(e) {
+function eL(e) {
     r.h.dispatch({ type: "CLIPS_SET_EXPORTING", clipIds: e });
 }
-function eO(e) {
+function eD(e) {
     r.h.dispatch({ type: "CLIPS_SET_AUTO_STASH_ENABLED", enabled: e });
 }
-function eL(e) {
+function ey(e) {
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { maxAutoClips: e } });
 }
-function eD(e) {
+function ev(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     r.h.dispatch({ type: "CLIPS_SETTINGS_UPDATE", settings: { enableAutoclipping: e } }),
         t &&
@@ -884,21 +899,21 @@ function eD(e) {
                 autoclips_enabled: e,
             });
 }
-function ey(e) {
+function eb(e) {
     r.h.dispatch({
         type: "CLIPS_SETTINGS_UPDATE",
         settings: { clipSignals: { ...C.Ay.getSettings().clipSignals, ...e } },
     });
 }
-function ev(e, t) {
+function eM(e, t) {
     r.h.dispatch({ type: "CLIPS_SIGNAL_CREATED", signal: e, timestamp: t });
 }
-function eb(e) {
+function eP(e) {
     r.h.dispatch({ type: "CLIPS_ML_DETECTION", detections: e });
 }
-function eM() {
-    ev({ type: R.Gy.MANUAL });
+function eU() {
+    eM({ type: R.Gy.MANUAL });
 }
-async function eP(e) {
+async function ew(e) {
     await eu(e, { isTemporary: !1 }, !0);
 }
