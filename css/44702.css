@@ -460,6 +460,14 @@
     width: 784px
 }
 
+.authBox__921c5.transparent__921c5 {
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    width: 100%
+}
+
 .centeringWrapper__921c5 {
     text-align: center;
     width: 100%

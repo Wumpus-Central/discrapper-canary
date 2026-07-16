@@ -1,7 +1,8 @@
-e.exports = {
+_.exports = {
     ie: "discordLogo__921c5",
     sL: "authBox__921c5",
     PR: "authBoxExpanded__921c5 authBox__921c5",
+    JO: "transparent__921c5",
     f4: "centeringWrapper__921c5",
     DD: "title__921c5",
     Sv: "subText__921c5",

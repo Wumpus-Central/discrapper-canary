@@ -17,8 +17,8 @@
 }
 
 .card__03000 {
-    background: var(--background-mod-subtle);
-    border: 1px solid var(--border-subtle);
+    background: var(--background-mod-muted);
+    border: 1px solid var(--border-muted);
     border-radius: var(--radius-md);
     box-sizing: border-box;
     padding: var(--space-16)
@@ -42,7 +42,7 @@
 
 .bars__03000 {
     gap: 2px;
-    height: 64px;
+    height: 56px;
     padding-top: var(--space-12);
     width: 100%
 }
@@ -61,7 +61,7 @@
 }
 
 .bar__03000 {
-    background: var(--text-feedback-positive);
+    background: var(--text-status-online);
     border-radius: var(--radius-xs);
     min-height: 2px;
     width: 100%
@@ -204,7 +204,6 @@
     display: flex;
     flex: 0 1 400px;
     flex-direction: column;
-    justify-content: center;
     padding: var(--space-32)
 }
 
@@ -214,4 +213,17 @@
     box-shadow: none;
     padding: 0;
     width: 100%
+}
+
+@media (max-width:899px) {
+    .splitRegisterModal_d17edb {
+        flex-direction: column;
+        max-width: 100%;
+        width: 480px
+    }
+
+    .splitRegisterModalLeft_d17edb,
+    .splitRegisterModalRight_d17edb {
+        flex: 0 0 auto
+    }
 }

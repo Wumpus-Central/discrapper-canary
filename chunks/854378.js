@@ -1,128 +1,128 @@
 "use strict";
 n.d(t, {
-    $v: () => O,
-    Ay: () => G,
-    CK: () => M,
-    F4: () => b,
-    KE: () => U,
-    ME: () => w,
-    R1: () => x,
-    _V: () => v,
-    eB: () => L,
-    eu: () => R,
+    $v: () => D,
+    Ay: () => k,
+    CK: () => P,
+    F4: () => y,
+    KE: () => x,
+    ME: () => M,
+    R1: () => w,
+    _V: () => O,
+    eB: () => b,
+    eu: () => L,
     hE: () => C,
-    pd: () => D,
-    tK: () => N,
-    xt: () => k,
+    pd: () => v,
+    tK: () => R,
+    xt: () => G,
 });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    s = n.n(r),
-    a = n(97808),
-    o = n(534514),
-    l = n(834730),
-    u = n(778712),
+    a = n.n(r),
+    s = n(97808),
+    l = n(297264),
+    o = n(834730),
+    d = n(778712),
     c = n(292666),
-    d = n(821609),
+    u = n(821609),
     _ = n(43990),
-    h = n(571694),
-    f = n(47891),
-    p = n(235986),
-    E = n(915089),
-    m = n(548118),
-    g = n(53505),
-    A = n(975571),
-    I = n(652215),
-    T = n(375708),
+    E = n(571694),
+    A = n(47891),
+    h = n(235986),
+    I = n(915089),
+    f = n(548118),
+    p = n(53505),
+    T = n(975571),
+    m = n(652215),
+    g = n(375708),
     S = n(337321);
-let y = a.eu;
+let N = s.eu;
 function C(e) {
-    let { className: t, id: n, children: r, variant: a = "heading-xl/semibold" } = e;
-    return (0, i.jsx)(o.D, { variant: a, color: "text-strong", className: s()(S.DD, t), id: n, children: r });
-}
-function N(e) {
-    let { className: t, children: n } = e;
-    return (0, i.jsx)(l.E, { variant: "text-md/normal", color: "text-default", className: t, children: n });
-}
-function v(e) {
-    let { className: t, src: n } = e;
-    return (0, i.jsx)("img", { alt: "", src: n, className: s()(S.Sl, t) });
+    let { className: t, id: n, children: r, variant: s = "heading-xl/semibold" } = e;
+    return (0, i.jsx)(l.D, { variant: s, color: "text-strong", className: a()(S.DD, t), id: n, children: r });
 }
 function R(e) {
-    let { className: t, src: n, size: r } = e;
-    return (0, i.jsx)(y, { src: n, size: r, className: s()(S.yt, t), "aria-hidden": !0 });
+    let { className: t, children: n } = e;
+    return (0, i.jsx)(o.E, { variant: "text-md/normal", color: "text-default", className: t, children: n });
 }
 function O(e) {
-    let { guild: t, size: n, animate: r = !1, className: s } = e;
-    return (0, i.jsx)(m.Ay, { active: !0, guild: t, size: n, animate: r, className: s });
+    let { className: t, src: n } = e;
+    return (0, i.jsx)("img", { alt: "", src: n, className: a()(S.Sl, t) });
 }
-function b(e) {
-    let { className: t, channel: n, size: r } = e;
-    return (0, i.jsx)(y, { src: (0, h.Y)(n), size: r, className: s()(S.TP, t), "aria-hidden": !0 });
+function L(e) {
+    let { className: t, src: n, size: r } = e;
+    return (0, i.jsx)(N, { src: n, size: r, className: a()(S.yt, t), "aria-hidden": !0 });
 }
 function D(e) {
+    let { guild: t, size: n, animate: r = !1, className: a } = e;
+    return (0, i.jsx)(f.Ay, { active: !0, guild: t, size: n, animate: r, className: a });
+}
+function y(e) {
+    let { className: t, channel: n, size: r } = e;
+    return (0, i.jsx)(N, { src: (0, E.Y)(n), size: r, className: a()(S.TP, t), "aria-hidden": !0 });
+}
+function v(e) {
     let {
             label: t,
             error: n,
             placeholder: r,
-            value: s,
-            className: a,
-            setRef: o,
-            type: l = "text",
-            onChange: u,
-            autoComplete: d,
+            value: a,
+            className: s,
+            setRef: l,
+            type: o = "text",
+            onChange: d,
+            autoComplete: u,
             autoFocus: _,
-            maxLength: h,
-            spellCheck: f,
-            name: p,
-            description: m,
-            required: g,
-            onFocus: A,
-            onBlur: I,
+            maxLength: E,
+            spellCheck: A,
+            name: h,
+            description: f,
+            required: p,
+            onFocus: T,
+            onBlur: m,
         } = e,
-        T = (0, E.GV)(),
+        g = (0, I.GV)(),
         S = (0, i.jsx)(c.k, {
-            name: p,
-            type: l,
-            value: s,
-            inputRef: o,
+            name: h,
+            type: o,
+            value: a,
+            inputRef: l,
             placeholder: r,
             "aria-label": t,
-            onChange: u,
-            autoComplete: d,
+            onChange: d,
+            autoComplete: u,
             autoFocus: _,
-            maxLength: h,
-            spellCheck: f,
-            id: T,
-            onFocus: A,
-            onBlur: I,
+            maxLength: E,
+            spellCheck: A,
+            id: g,
+            onFocus: T,
+            onBlur: m,
             label: t,
             error: n,
-            required: g,
-            description: m,
+            required: p,
+            description: f,
         });
-    return null != a ? (0, i.jsx)("div", { className: a, children: S }) : S;
+    return null != s ? (0, i.jsx)("div", { className: s, children: S }) : S;
 }
-function L(e) {
+function b(e) {
     let { className: t, children: n } = e;
-    return (0, i.jsx)("div", { className: s()(S.om, t), children: n });
-}
-function w(e) {
-    let { className: t, children: n } = e;
-    return (0, i.jsx)(l.E, { variant: "text-xs/normal", className: s()(S.Sv, t), children: n });
+    return (0, i.jsx)("div", { className: a()(S.om, t), children: n });
 }
 function M(e) {
-    let { className: t } = e;
-    return (0, i.jsx)(p.A, {
-        direction: p.A.Direction.VERTICAL,
-        align: p.A.Align.CENTER,
-        className: t,
-        children: (0, i.jsx)(f.A, { className: S.$$ }),
-    });
+    let { className: t, children: n } = e;
+    return (0, i.jsx)(o.E, { variant: "text-xs/normal", className: a()(S.Sv, t), children: n });
 }
 function P(e) {
-    return (0, i.jsx)(l.E, {
+    let { className: t } = e;
+    return (0, i.jsx)(h.A, {
+        direction: h.A.Direction.VERTICAL,
+        align: h.A.Align.CENTER,
+        className: t,
+        children: (0, i.jsx)(A.A, { className: S.$$ }),
+    });
+}
+function U(e) {
+    return (0, i.jsx)(o.E, {
         tag: "span",
         className: e?.className,
         variant: "text-sm/normal",
@@ -130,55 +130,55 @@ function P(e) {
         children: e?.children,
     });
 }
-function x(e) {
+function w(e) {
     let t,
-        { online: n, total: r, className: a, flat: o, textClassName: l, renderText: u = P } = e;
+        { online: n, total: r, className: s, flat: l, textClassName: o, renderText: d = U } = e;
     return null == r
         ? null
         : (null != n &&
               n > 0 &&
               (t = (0, i.jsxs)("div", {
-                  className: s()(S.Io, S.L1, o && S.Z6),
+                  className: a()(S.Io, S.L1, l && S.Z6),
                   children: [
                       (0, i.jsx)("i", { className: S._o }),
-                      u({ className: l, children: T.intl.format(T.t["LC+S+m"], { membersOnline: n }) }),
+                      d({ className: o, children: g.intl.format(g.t["LC+S+m"], { membersOnline: n }) }),
                   ],
               })),
-          (0, i.jsxs)(p.A, {
-              justify: p.A.Justify.CENTER,
-              className: a,
+          (0, i.jsxs)(h.A, {
+              justify: h.A.Justify.CENTER,
+              className: s,
               children: [
                   t,
                   (0, i.jsxs)("div", {
-                      className: s()(S.Io, o && S.Z6),
+                      className: a()(S.Io, l && S.Z6),
                       children: [
                           (0, i.jsx)("i", { className: S.jk }),
-                          u({ className: l, children: T.intl.format(T.t.zRl6XR, { count: r }) }),
+                          d({ className: o, children: g.intl.format(g.t.zRl6XR, { count: r }) }),
                       ],
                   }),
               ],
           }));
 }
-function k(e) {
+function G(e) {
     let { user: t } = e;
     return null == t
         ? null
         : (0, i.jsxs)("div", {
               className: S.l1,
               children: [
-                  (0, i.jsx)(l.E, {
+                  (0, i.jsx)(o.E, {
                       tag: "span",
                       variant: "text-md/normal",
                       color: "text-default",
-                      children: T.intl.string(T.t["/8WWvE"]),
+                      children: g.intl.string(g.t["/8WWvE"]),
                   }),
-                  (0, i.jsx)(R, {
+                  (0, i.jsx)(L, {
                       className: S.yj,
                       src: t.getAvatarURL(void 0, 24),
-                      size: u._3.SIZE_24,
+                      size: d._3.SIZE_24,
                       "aria-label": t.username,
                   }),
-                  (0, i.jsx)(l.E, {
+                  (0, i.jsx)(o.E, {
                       className: S.pp,
                       tag: "span",
                       variant: "text-md/semibold",
@@ -188,50 +188,51 @@ function k(e) {
               ],
           });
 }
-function U(e) {
+function x(e) {
     let { className: t } = e;
-    return (0, i.jsxs)(L, {
+    return (0, i.jsxs)(b, {
         className: t,
         children: [
-            (0, i.jsx)(d.$, {
-                text: T.intl.format(T.t.JoS1i3, { platform: (0, g.Vf)() }),
+            (0, i.jsx)(u.$, {
+                text: g.intl.format(g.t.JoS1i3, { platform: (0, p.Vf)() }),
                 variant: "secondary",
                 fullWidth: !0,
-                onClick: () => window.open((0, g.SU)()),
+                onClick: () => window.open((0, p.SU)()),
             }),
-            (0, i.jsx)(w, {
+            (0, i.jsx)(M, {
                 className: S.UM,
-                children: T.intl.format(T.t.wO1VBk, {
-                    supportedBrowserURL: A.A.getArticleURL(I.MVz.SUPPORTED_BROWSERS),
+                children: g.intl.format(g.t.wO1VBk, {
+                    supportedBrowserURL: T.A.getArticleURL(m.MVz.SUPPORTED_BROWSERS),
                 }),
             }),
         ],
     });
 }
-null == y && (y = () => null), (O.Sizes = m.Ay.Sizes), (b.Sizes = u._3);
-let G = function (e) {
+null == N && (N = () => null), (D.Sizes = f.Ay.Sizes), (y.Sizes = d._3);
+let k = function (e) {
     let {
         className: t,
         contentClassName: n,
         tag: r = "section",
-        onSubmit: a,
-        children: o,
-        expanded: l = !1,
-        theme: u = I.NJ8.DARK,
+        onSubmit: s,
+        children: l,
+        expanded: o = !1,
+        theme: d = m.NJ8.DARK,
         style: c,
+        transparent: u = !1,
     } = e;
     return (0, i.jsx)(_.N, {
-        theme: u,
+        theme: d,
         disableAdaptiveTheme: !0,
         children: (e) =>
             (0, i.jsxs)(r, {
-                "data-theme": u,
-                onSubmit: a,
+                "data-theme": d,
+                onSubmit: s,
                 style: c,
-                className: s()(l ? S.PR : S.sL, e, t),
+                className: a()(o ? S.PR : S.sL, u && S.JO, e, t),
                 children: [
                     (0, i.jsx)("div", { className: S.ie }),
-                    (0, i.jsx)("div", { className: s()(S.f4, n), children: o }),
+                    (0, i.jsx)("div", { className: a()(S.f4, n), children: l }),
                 ],
             }),
     });

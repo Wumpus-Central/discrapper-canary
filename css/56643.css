@@ -16,12 +16,32 @@
 }
 
 .content__7c901 {
-    display: flex;
-    flex-direction: column;
     margin-top: 24px;
     padding-top: 0;
     padding-inline: 24px;
     padding-bottom: 24px
+}
+
+.content__7c901,
+.embeddedContent__7c901 {
+    display: flex;
+    flex-direction: column
+}
+
+.embeddedContent__7c901 {
+    margin-top: var(--space-20);
+    padding: 0;
+    text-align: start
+}
+
+.embeddedFooter__7c901 {
+    margin-top: var(--space-16)
+}
+
+.embeddedBackLink__7c901 {
+    display: flex;
+    justify-content: center;
+    margin-top: var(--space-12)
 }
 
 .smsInputContainer__7c901 {
