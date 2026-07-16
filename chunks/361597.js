@@ -188,42 +188,42 @@ function en(e) {
     let Z = y?.discount?.planIds,
         q = null != y && l.some((e) => Z?.includes(e)) && null != y.discount,
         z = null != S && l.includes(S) ? (0, k.y8)(S, !1, P, K) : void 0,
-        X = V?.id != null && l.includes(V.id);
+        X = null != V ? V.id : void 0,
+        J = null != X && l.includes(X);
     i.useEffect(() => {
-        if (!X) {
-            let e = !P && null != S && l.includes(S) ? S : null;
-            if (null == w || P) d(e ?? l[0]);
-            else if (null != w) {
-                let e = l.find((e) => e !== w.id);
-                null != e && d(e);
-            }
+        if (J) return void d(X, { shouldUpdateQuantity: !1 });
+        let e = !P && null != S && l.includes(S) ? S : null;
+        if (null == w || P) d(e ?? l[0]);
+        else if (null != w) {
+            let e = l.find((e) => e !== w.id);
+            null != e && d(e);
         }
-    }, [X, P, l, w, d, S]),
+    }, [J, P, l, w, d, X, S]),
         i.useEffect(() => {
             M && null != x && x.length > 0 && v(x[0]);
         }, [x, v, M]);
-    let { ref: J, ...ee } = (0, o._u)(),
-        en = V?.id != null ? (0, k.y8)(V.id, !1, P, K) : void 0,
-        { ipCountryCode: el } = (0, F.A)(),
-        ei = "HR" === el && null != en && en.currency === $.Yr.EUR,
-        er = (0, k.J$)(K.paymentSourceId),
-        ea = !P && (q || (null != U && A && null != r)),
-        { copy: es } = et();
+    let { ref: ee, ...en } = (0, o._u)(),
+        el = V?.id != null ? (0, k.y8)(V.id, !1, P, K) : void 0,
+        { ipCountryCode: ei } = (0, F.A)(),
+        er = "HR" === ei && null != el && el.currency === $.Yr.EUR,
+        ea = (0, k.J$)(K.paymentSourceId),
+        es = !P && (q || (null != U && A && null != r)),
+        { copy: eo } = et();
     return {
         skuId: c,
         selectedPlan: V,
-        selectedPlanPrice: en,
+        selectedPlanPrice: el,
         premiumSubscriptionPlan: w,
         premiumSubscription: E,
         thePriceOptions: K,
         hasSeenCollectiblesInSkuSelect: b,
-        shouldShowTrialOrDiscountLayout: ea,
-        shouldShowHRKEuroWarning: ei,
-        shouldShowTotalInSubscriptionFlow: !A && !q && X && u,
-        canContinue: X,
-        isPrepaid: er,
-        radioGroupRef: J,
-        radioGroupProps: ee,
+        shouldShowTrialOrDiscountLayout: es,
+        shouldShowHRKEuroWarning: er,
+        shouldShowTotalInSubscriptionFlow: !A && !q && J && u,
+        canContinue: J,
+        isPrepaid: ea,
+        radioGroupRef: ee,
+        radioGroupProps: en,
         isGift: P,
         giftRecipient: I,
         customGiftMessage: T,
@@ -232,7 +232,7 @@ function en(e) {
         isEligibleForBOGOPromotion: W,
         isEligibleForTrial: A,
         userTrialOffer: f,
-        trialPeriodCopy: es,
+        trialPeriodCopy: eo,
         isPlansEligibleForDiscount: q,
         discountedPlanRegularPrice: z,
     };

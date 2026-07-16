@@ -1,34 +1,33 @@
-"use strict";
-n.d(t, { A: () => E });
+n.d(t, { A: () => g });
 var i = n(17928),
-    r = n(616356),
-    a = n(186295),
-    s = n(532624),
-    l = n(350535),
+    l = n(616356),
+    s = n(186295),
+    r = n(532624),
+    a = n(350535),
     o = n(915725),
-    d = n(572164),
-    c = n(652215),
-    u = n(16590),
-    _ = n(375708);
-function E() {
-    let e = (0, d.Et)(),
+    u = n(572164),
+    d = n(652215),
+    c = n(16590),
+    h = n(375708);
+function g() {
+    let e = (0, u.Et)(),
         t = (0, i.bG)([o.Ay], () => o.Ay.getLastClipsError()),
         n = (0, i.bG)(
-            [a.Ay, r.A],
-            () => a.Ay.hasClipsSource() || r.A.getCurrentUserActiveStream()?.state === c.XYD.ACTIVE,
+            [s.Ay, l.A],
+            () => s.Ay.hasClipsSource() || l.A.getCurrentUserActiveStream()?.state === d.XYD.ACTIVE,
         ),
-        E = (0, i.bG)([s.Ay], () => s.Ay.getKeybindForAction(c.hCu.SAVE_CLIP));
+        g = (0, i.bG)([r.Ay], () => r.Ay.getKeybindForAction(d.hCu.SAVE_CLIP));
     return {
         tooltip:
             null != t
                 ? t
                 : e && !n
-                  ? _.intl.string(u.default["+QNUov"])
+                  ? h.intl.string(c.default["+QNUov"])
                   : e
-                    ? null != E
-                        ? _.intl.formatToPlainString(_.t.HIMcv1, { hotkey: l.dI(E?.shortcut, !0) })
-                        : _.intl.string(_.t.s52pju)
-                    : _.intl.string(u.default.Jc3hn1),
+                    ? null != g
+                        ? h.intl.formatToPlainString(h.t.HIMcv1, { hotkey: a.dI(g?.shortcut, !0) })
+                        : h.intl.string(h.t.s52pju)
+                    : h.intl.string(c.default.Jc3hn1),
         clipsInitError: t,
         clipsEnabled: e,
         clipsSourceAttached: n,

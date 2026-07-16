@@ -1,100 +1,99 @@
-"use strict";
-n.d(t, { A: () => p });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(43990),
-    o = n(17928),
-    d = n(770178),
-    c = n(363195),
-    u = n(746002),
-    _ = n(855915),
-    E = n(940622),
-    A = n(875741),
-    h = n(325409);
-function I(e) {
-    let { skuId: t, layer: n, data: r, fadeIn: a, containerWidth: l, containerHeight: o } = e,
-        d = r?.src ?? (0, u.getCollectiblesItemAssetUrl)({ skuId: t, assetFormat: "static", assetId: n.id });
+l.d(a, { A: () => y });
+var t = l(627968),
+    r = l(64700),
+    s = l(503698),
+    n = l.n(s),
+    i = l(43990),
+    u = l(17928),
+    d = l(770178),
+    c = l(363195),
+    o = l(746002),
+    h = l(855915),
+    m = l(940622),
+    f = l(875741),
+    g = l(325409);
+function p(e) {
+    let { skuId: a, layer: l, data: r, fadeIn: s, containerWidth: i, containerHeight: u } = e,
+        d = r?.src ?? (0, o.getCollectiblesItemAssetUrl)({ skuId: a, assetFormat: "static", assetId: l.id });
     if (null == d) return null;
-    let c = s()(h.S_, {
-        [h.Wm]: "front" === n.order,
-        [h.aX]: "back" === n.order,
-        [h.Mn]: "top" === n.anchor,
-        [h.sQ]: "bottom" === n.anchor,
-        [h.gX]: "center" === n.anchor,
-        [h.no]: !0 === n.responsive,
-        [h.qG]: !0 === a,
+    let c = n()(g.S_, {
+        [g.Wm]: "front" === l.order,
+        [g.aX]: "back" === l.order,
+        [g.Mn]: "top" === l.anchor,
+        [g.sQ]: "bottom" === l.anchor,
+        [g.gX]: "center" === l.anchor,
+        [g.no]: !0 === l.responsive,
+        [g.qG]: !0 === s,
     });
-    switch (n.type) {
+    switch (l.type) {
         case "staple":
-            return (0, i.jsxs)(i.Fragment, {
+            return (0, t.jsxs)(t.Fragment, {
                 children: [
-                    (0, i.jsx)("div", { className: s()(h.zu, c) }),
-                    (0, i.jsx)("img", { src: d, alt: "", "aria-hidden": !0, className: s()(c, h.im) }),
+                    (0, t.jsx)("div", { className: n()(g.zu, c) }),
+                    (0, t.jsx)("img", { src: d, alt: "", "aria-hidden": !0, className: n()(c, g.im) }),
                 ],
             });
         case "rail":
-            return (0, i.jsx)("div", { role: "img", style: { backgroundImage: `url(${d})` }, className: s()(c, h.H$) });
+            return (0, t.jsx)("div", { role: "img", style: { backgroundImage: `url(${d})` }, className: n()(c, g.H$) });
         case "border":
-            return (0, i.jsx)("div", {
+            return (0, t.jsx)("div", {
                 role: "img",
                 "aria-hidden": !0,
-                className: s()(c, h.PQ),
+                className: n()(c, g.PQ),
                 children: Array.from(
                     {
                         length: (function (e) {
-                            let { data: t, containerWidth: n, containerHeight: i } = e;
-                            if (null == t || 0 === t.naturalWidth || null == n || null == i) return 5;
-                            let r = n * (t.naturalHeight / t.naturalWidth);
-                            return r <= 0 ? 5 : Math.ceil(i / r) + 1;
-                        })({ data: r, containerWidth: l, containerHeight: o }),
+                            let { data: a, containerWidth: l, containerHeight: t } = e;
+                            if (null == a || 0 === a.naturalWidth || null == l || null == t) return 5;
+                            let r = l * (a.naturalHeight / a.naturalWidth);
+                            return r <= 0 ? 5 : Math.ceil(t / r) + 1;
+                        })({ data: r, containerWidth: i, containerHeight: u }),
                     },
-                    (e, t) => (0, i.jsx)("img", { src: d, alt: "", "aria-hidden": !0 }, t),
+                    (e, a) => (0, t.jsx)("img", { src: d, alt: "", "aria-hidden": !0 }, a),
                 ),
             });
         default:
-            return n.type, null;
+            return l.type, null;
     }
 }
-function f(e) {
+function b(e) {
     let {
-            skuId: t,
-            label: n,
-            layers: a,
-            layerData: l,
-            fadeIn: o,
+            skuId: a,
+            label: l,
+            layers: s,
+            layerData: i,
+            fadeIn: u,
             themeClass: c,
-            profileFrameClassName: u,
-            profileFrameStyle: _,
-            className: E,
+            profileFrameClassName: o,
+            profileFrameStyle: h,
+            className: m,
         } = e,
-        A = r.useRef(null),
-        [f, p] = r.useState(null),
-        [T, m] = r.useState(null),
-        g = r.useCallback((e) => {
-            p(Math.round(e.contentRect.width)), m(Math.round(e.contentRect.height));
+        f = r.useRef(null),
+        [b, y] = r.useState(null),
+        [j, k] = r.useState(null),
+        x = r.useCallback((e) => {
+            y(Math.round(e.contentRect.width)), k(Math.round(e.contentRect.height));
         }, []);
     return (
-        (0, d.g)(A, g, [], {
+        (0, d.g)(f, x, [], {
             fireOnMount: !0,
-            enabled: a.some((e) => {
-                let { type: t } = e;
-                return "border" === t;
+            enabled: s.some((e) => {
+                let { type: a } = e;
+                return "border" === a;
             }),
         }),
-        (0, i.jsx)("div", {
-            className: s()(h.uF, c, u, E),
-            style: _,
-            "aria-label": n,
+        (0, t.jsx)("div", {
+            className: n()(g.uF, c, o, m),
+            style: h,
+            "aria-label": l,
             role: "img",
-            children: (0, i.jsx)("div", {
-                ref: A,
-                className: h.hH,
-                children: a.map((e) =>
-                    (0, i.jsx)(
-                        I,
-                        { skuId: t, layer: e, data: l[e.id], fadeIn: o, containerWidth: f, containerHeight: T },
+            children: (0, t.jsx)("div", {
+                ref: f,
+                className: g.hH,
+                children: s.map((e) =>
+                    (0, t.jsx)(
+                        p,
+                        { skuId: a, layer: e, data: i[e.id], fadeIn: u, containerWidth: b, containerHeight: j },
                         e.id,
                     ),
                 ),
@@ -102,38 +101,38 @@ function f(e) {
         })
     );
 }
-function p(e) {
-    let { frame: t, className: n, filterLayer: a, fadeIn: s = !0 } = e,
-        d = (0, o.bG)([c.A], () => c.A.theme),
-        u = (0, E.eo)(),
-        h = (0, A.i)(t),
-        { profileFrameStyle: I, profileFrameClassName: p } = u?.css ?? h,
-        T = u?.layers ?? t.layers,
-        m = null == a ? T : T.filter(a),
-        g = m
+function y(e) {
+    let { frame: a, className: l, filterLayer: s, fadeIn: n = !0 } = e,
+        d = (0, u.bG)([c.A], () => c.A.theme),
+        o = (0, m.eo)(),
+        g = (0, f.i)(a),
+        { profileFrameStyle: p, profileFrameClassName: y } = o?.css ?? g,
+        j = o?.layers ?? a.layers,
+        k = null == s ? j : j.filter(s),
+        x = k
             .map((e) => {
-                let { id: t } = e;
-                return t;
+                let { id: a } = e;
+                return a;
             })
             .join("\0"),
-        S = r.useMemo(() => m, [T, g]),
-        { layerData: N, loaded: C } = (0, _.A)({ skuId: t.skuId, layers: null != u ? void 0 : S }),
-        R = u?.layerData ?? N,
-        O = null != u || C;
-    return 0 !== S.length && O
-        ? (0, i.jsx)(l.N, {
+        I = r.useMemo(() => k, [j, x]),
+        { layerData: N, loaded: v } = (0, h.A)({ skuId: a.skuId, layers: null != o ? void 0 : I }),
+        A = o?.layerData ?? N,
+        C = null != o || v;
+    return 0 !== I.length && C
+        ? (0, t.jsx)(i.N, {
               theme: d,
               children: (e) =>
-                  (0, i.jsx)(f, {
-                      skuId: t.skuId,
-                      label: t.label,
-                      layers: S,
-                      layerData: R,
-                      fadeIn: s,
+                  (0, t.jsx)(b, {
+                      skuId: a.skuId,
+                      label: a.label,
+                      layers: I,
+                      layerData: A,
+                      fadeIn: n,
                       themeClass: e,
-                      profileFrameClassName: p,
-                      profileFrameStyle: I,
-                      className: n,
+                      profileFrameClassName: y,
+                      profileFrameStyle: p,
+                      className: l,
                   }),
           })
         : null;

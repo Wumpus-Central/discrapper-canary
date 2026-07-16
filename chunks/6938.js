@@ -297,7 +297,11 @@ function L(e) {
             selectedSkuId: void 0,
             selectedPlanId: void 0,
             setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: S }),
-            setSelectedPlanId: (t) => e({ selectedPlanId: t ?? void 0, quantity: S }),
+            setSelectedPlanId: function (t) {
+                let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
+                    i = t ?? void 0;
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: S }) : e({ selectedPlanId: i });
+            },
             quantity: S,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,

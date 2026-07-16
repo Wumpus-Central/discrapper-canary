@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { A: () => c }), n(134528), n(947204);
+n.d(t, { A: () => d }), n(134528), n(947204);
 var i = n(627968),
-    r = n(64700),
-    a = n(546738),
-    s = n(661531),
-    l = n(602853);
+    l = n(64700),
+    s = n(546738),
+    r = n(661531),
+    a = n(602853);
 let o = 1e3 / 30;
-class d {
+class u {
     getSource;
     getConverter;
     color = "#000";
@@ -24,151 +23,151 @@ class d {
     }
     getValues(e, t, n) {
         let i = this.getSource(),
-            r = this.getConverter(),
-            a = i.length,
-            s = Array(n),
-            l = 0,
+            l = this.getConverter(),
+            s = i.length,
+            r = Array(n),
+            a = 0,
             o = 0;
-        if (a >= 2) {
+        if (s >= 2) {
             let t = i.at(0),
                 n = i.at(1);
             if (null != t && null != n) {
                 let i = n.time - t.time;
-                i > 0 && t.time - e < 1.5 * i && (o = null != r ? r(t.value) : t.value);
+                i > 0 && t.time - e < 1.5 * i && (o = null != l ? l(t.value) : t.value);
             }
         }
-        let d = e;
+        let u = e;
         for (let e = 0; e < n; e++) {
-            for (; l < a; ) {
-                let e = i.at(l);
+            for (; a < s; ) {
+                let e = i.at(a);
                 if (null == e) {
-                    l++;
+                    a++;
                     continue;
                 }
-                if (e.time >= d) break;
-                (o = null != r ? r(e.value) : e.value), l++;
+                if (e.time >= u) break;
+                (o = null != l ? l(e.value) : e.value), a++;
             }
-            (s[e] = o), (d += t);
+            (r[e] = o), (u += t);
         }
-        return s;
+        return r;
     }
 }
-function c(e) {
-    let t = (0, r.useRef)(null),
-        [n, c] = (0, r.useState)(null),
-        u = (0, l.r)(s.A.colors.BACKGROUND_BASE_LOW).hsl(),
-        _ = (0, l.r)(s.A.colors.TEXT_DEFAULT).hsl(),
-        E = (0, l.r)(s.A.colors.BACKGROUND_MOD_MUTED).hsl(),
-        A = (0, l.r)(s.A.unsafe_rawColors.BRAND_500).hsl(),
-        h = e.windowMs,
-        I = (0, r.useRef)(e);
-    (0, r.useEffect)(() => {
-        I.current = e;
+function d(e) {
+    let t = (0, l.useRef)(null),
+        [n, d] = (0, l.useState)(null),
+        c = (0, a.r)(r.A.colors.BACKGROUND_BASE_LOW).hsl(),
+        h = (0, a.r)(r.A.colors.TEXT_DEFAULT).hsl(),
+        g = (0, a.r)(r.A.colors.BACKGROUND_MOD_MUTED).hsl(),
+        f = (0, a.r)(r.A.unsafe_rawColors.BRAND_500).hsl(),
+        A = e.windowMs,
+        E = (0, l.useRef)(e);
+    (0, l.useEffect)(() => {
+        E.current = e;
     }),
-        (0, r.useEffect)(() => {
+        (0, l.useEffect)(() => {
             let n = t.current;
             if (null == n) return;
             (n.width = e.width), (n.height = e.height);
-            let i = new a.TimelineGraphView(n, window.devicePixelRatio ?? 1);
-            (i.backgroundColor = u),
-                (i.textColor = _),
-                (i.gridColor = E),
+            let i = new s.TimelineGraphView(n, window.devicePixelRatio ?? 1);
+            (i.backgroundColor = c),
+                (i.textColor = h),
+                (i.gridColor = g),
                 (i.timeOptions = { timeStyle: "short" }),
                 (i.fontFamily = "gg sans"),
                 (i.fontSize = 11),
-                null != h && i.setScale(h / n.width);
-            let r = new d(
-                () => I.current.dataPoints,
-                () => I.current.converter,
+                null != A && i.setScale(A / n.width);
+            let l = new u(
+                () => E.current.dataPoints,
+                () => E.current.converter,
             );
-            r.setColor(A), i.addDataSeries(r), i.updateEndDate(), c(i);
-        }, [t, u, A, E, _, h, e.width, e.height]),
-        (0, r.useEffect)(() => {
+            l.setColor(f), i.addDataSeries(l), i.updateEndDate(), d(i);
+        }, [t, c, f, g, h, A, e.width, e.height]),
+        (0, l.useEffect)(() => {
             if (null == n) return;
             let e = 0,
                 i = 0,
-                r = (a) => {
-                    if (((e = requestAnimationFrame(r)), a - i < o)) return;
-                    (i = a), n.updateEndDate(), n.repaint();
-                    let s = I.current,
-                        l = s.markers,
-                        d = s.windowMs;
-                    if (null != l && l.length > 0 && null != d && null != t.current) {
+                l = (s) => {
+                    if (((e = requestAnimationFrame(l)), s - i < o)) return;
+                    (i = s), n.updateEndDate(), n.repaint();
+                    let r = E.current,
+                        a = r.markers,
+                        u = r.windowMs;
+                    if (null != a && a.length > 0 && null != u && null != t.current) {
                         let e = t.current,
                             n = e.getContext("2d");
                         if (null == n) return;
                         let i = Date.now(),
-                            r = window.devicePixelRatio ?? 1,
-                            a = e.height - Math.ceil(11 * r) - 4;
-                        for (let t of ((n.lineWidth = r), l)) {
-                            let r = i - t.time;
-                            if (r < 0 || r > d) continue;
-                            let s = e.width * (1 - r / d);
+                            l = window.devicePixelRatio ?? 1,
+                            s = e.height - Math.ceil(11 * l) - 4;
+                        for (let t of ((n.lineWidth = l), a)) {
+                            let l = i - t.time;
+                            if (l < 0 || l > u) continue;
+                            let r = e.width * (1 - l / u);
                             n.save(),
                                 (n.strokeStyle = t.color),
                                 n.beginPath(),
-                                n.moveTo(s, 0),
-                                n.lineTo(s, a),
+                                n.moveTo(r, 0),
+                                n.lineTo(r, s),
                                 n.stroke(),
                                 n.restore();
                         }
                     }
-                    let c = s.hoverSource?.time;
-                    if (null != c && null != d && null != t.current) {
+                    let d = r.hoverSource?.time;
+                    if (null != d && null != u && null != t.current) {
                         let e = t.current,
                             n = e.getContext("2d");
                         if (null == n) return;
-                        let i = Date.now() - c;
-                        if (i >= 0 && i <= d) {
+                        let i = Date.now() - d;
+                        if (i >= 0 && i <= u) {
                             let t = window.devicePixelRatio ?? 1,
-                                r = Math.round(e.width * (1 - i / d)),
-                                a = e.height - Math.ceil(11 * t) - 4;
+                                l = Math.round(e.width * (1 - i / u)),
+                                s = e.height - Math.ceil(11 * t) - 4;
                             n.save(),
-                                (n.strokeStyle = s.crosshairColor ?? _),
+                                (n.strokeStyle = r.crosshairColor ?? h),
                                 (n.lineWidth = t),
                                 n.beginPath(),
-                                n.moveTo(r, 0),
-                                n.lineTo(r, a),
+                                n.moveTo(l, 0),
+                                n.lineTo(l, s),
                                 n.stroke(),
                                 n.restore();
                         }
                     }
                 };
-            return (e = requestAnimationFrame(r)), () => cancelAnimationFrame(e);
-        }, [n, _]);
-    let f = { width: e.width, height: e.height },
-        { onHoverTime: p, onHoverClick: T } = e,
+            return (e = requestAnimationFrame(l)), () => cancelAnimationFrame(e);
+        }, [n, h]);
+    let I = { width: e.width, height: e.height },
+        { onHoverTime: p, onHoverClick: S } = e,
         m = (e) => {
-            if (null == h) return null;
+            if (null == A) return null;
             let t = e.currentTarget.getBoundingClientRect();
             if (t.width <= 0) return null;
             let n = Math.max(0, Math.min(1, (e.clientX - t.left) / t.width));
-            return Date.now() - (1 - n) * h;
+            return Date.now() - (1 - n) * A;
         },
-        g =
-            null != p && null != h
+        _ =
+            null != p && null != A
                 ? (e) => {
                       let t = m(e);
                       null != t && p(t);
                   }
                 : void 0,
-        S =
-            null != T && null != h
+        C =
+            null != S && null != A
                 ? (e) => {
                       let t = m(e);
-                      null != t && T(t);
+                      null != t && S(t);
                   }
                 : void 0;
     return (0, i.jsx)(
         "canvas",
         {
-            style: f,
+            style: I,
             width: e.width,
             height: e.height,
             ref: t,
-            onPointerMove: g,
+            onPointerMove: _,
             onPointerLeave: null != p ? () => p(null) : void 0,
-            onPointerDown: S,
+            onPointerDown: C,
         },
         "canvas",
     );

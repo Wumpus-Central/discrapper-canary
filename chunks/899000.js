@@ -1,16 +1,15 @@
-"use strict";
-n.d(t, { Ay: () => g, Qu: () => m, yn: () => p });
+n.d(t, { Ay: () => v, Qu: () => C, yn: () => E });
 var i = n(17928),
     r = n(459838),
-    a = n(228366),
+    l = n(228366),
     s = n(540999),
-    l = n(186295);
+    a = n(186295);
 let o = [
         ["codecH264", "H264"],
         ["codecH265", "H265"],
         ["codecAv1", "AV1"],
     ],
-    d = [
+    c = [
         ["encNvidiaDx11", "nvidia-dx11"],
         ["encNvidiaCuda", "nvidia-cuda"],
         ["encAmdDx11", "amd-dx11"],
@@ -20,7 +19,7 @@ let o = [
         ["encWmfGpu", "wmf-gpu"],
         ["encWmfDx11", "wmf-dx11"],
     ],
-    c = [
+    u = [
         ["capGraphicsCapture", "deny-graphics-capture", "whenFalse"],
         ["capDxgi", "deny-dxgi", "whenFalse"],
         ["capGdi", "deny-gdi", "whenFalse"],
@@ -29,7 +28,7 @@ let o = [
         ["bypassHybridGpuFpsRestriction", "bypass-hybrid-gpu-fps", "whenTrue"],
         ["allowHdr", "deny-hdr", "whenFalse"],
     ],
-    u = {
+    d = {
         codecH264: !0,
         codecH265: !0,
         codecAv1: !0,
@@ -50,8 +49,8 @@ let o = [
         allowHdr: !0,
         alwaysShowCapturePreview: !1,
     },
-    _ = { ...u };
-function E(e, t) {
+    A = { ...d };
+function h(e, t) {
     return t
         .filter((t) => {
             let [n] = t;
@@ -63,36 +62,36 @@ function E(e, t) {
         })
         .join(",");
 }
-let A = !1;
-function h() {
-    if (A) return !0;
-    if (!l.Ay.isEnabled()) return !1;
+let m = !1;
+function g() {
+    if (m) return !0;
+    if (!a.Ay.isEnabled()) return !1;
     try {
-        let e = l.Ay.getMediaEngine();
+        let e = a.Ay.getMediaEngine();
         return (
             e.on(r.bg.Connection, () => {
-                s.A.isDeveloper && I();
+                s.A.isDeveloper && p();
             }),
             e.once(r.bg.Destroy, () => {
-                A = !1;
+                m = !1;
             }),
-            (A = !0),
+            (m = !0),
             !0
         );
     } catch {
         return !1;
     }
 }
-function I() {
-    if (s.A.isDeveloper && h())
+function p() {
+    if (s.A.isDeveloper && g())
         try {
             var e;
             let t =
-                ((e = _),
+                ((e = A),
                 {
-                    overrideDeniedVideoCodecs: E(e, o),
-                    overrideDeniedVideoEncoders: E(e, d),
-                    captureOverrides: c
+                    overrideDeniedVideoCodecs: h(e, o),
+                    overrideDeniedVideoEncoders: h(e, c),
+                    captureOverrides: u
                         .filter((t) => {
                             let [n, , i] = t;
                             return "whenFalse" === i ? !e[n] : !!e[n];
@@ -103,7 +102,7 @@ function I() {
                         })
                         .join(","),
                 });
-            l.Ay.getMediaEngine().eachConnection((e) => {
+            a.Ay.getMediaEngine().eachConnection((e) => {
                 e.setAudioVideoOverridesTransport(t);
             });
         } catch {}
@@ -113,33 +112,33 @@ class f extends i.Ay.DeviceSettingsStore {
     static persistKey = "AudioVideoOverridesStore";
     initialize(e) {
         this.waitFor(s.A),
-            (_ = null != e ? { ...u, ...e } : { ...u }),
-            I(),
-            A ||
-                l.Ay.addChangeListener(function e() {
-                    h() && (I(), l.Ay.removeChangeListener(e));
+            (A = null != e ? { ...d, ...e } : { ...d }),
+            p(),
+            m ||
+                a.Ay.addChangeListener(function e() {
+                    g() && (p(), a.Ay.removeChangeListener(e));
                 });
     }
     getUserAgnosticState() {
-        return _;
+        return A;
     }
     get alwaysShowCapturePreview() {
-        return s.A.isDeveloper && _.alwaysShowCapturePreview;
+        return s.A.isDeveloper && A.alwaysShowCapturePreview;
     }
     getSnapshot() {
-        return _;
+        return A;
     }
 }
-function p(e) {
-    a.h.dispatch({ type: "AUDIO_VIDEO_OVERRIDES_UPDATE", partial: e });
+function E(e) {
+    l.h.dispatch({ type: "AUDIO_VIDEO_OVERRIDES_UPDATE", partial: e });
 }
-let T = new f(a.h, {
+let b = new f(l.h, {
     AUDIO_VIDEO_OVERRIDES_UPDATE: function (e) {
         if (!s.A.isDeveloper) return !1;
-        (_ = { ..._, ...e.partial }), I();
+        (A = { ...A, ...e.partial }), p();
     },
 });
-function m() {
-    return (0, i.bG)([T, s.A], () => s.A.isDeveloper && T.alwaysShowCapturePreview);
+function C() {
+    return (0, i.bG)([b, s.A], () => s.A.isDeveloper && b.alwaysShowCapturePreview);
 }
-let g = T;
+let v = 88245 != n.j ? b : null;
