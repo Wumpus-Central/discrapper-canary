@@ -1,0 +1,6002 @@
+[
+  {
+    "kind": "user",
+    "name": "2025-01-allow-nonstaff-to-preview-app-collections",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-04-desktop-refresh-fast-follows",
+    "defaultConfig": {
+      "largerGuildIcons": false,
+      "darkerGuildListBackground": false,
+      "distinctBorders": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "largerGuildIcons": true,
+        "darkerGuildListBackground": false,
+        "distinctBorders": false
+      },
+      "2": {
+        "largerGuildIcons": false,
+        "darkerGuildListBackground": true,
+        "distinctBorders": false
+      },
+      "3": {
+        "largerGuildIcons": true,
+        "darkerGuildListBackground": true,
+        "distinctBorders": false
+      },
+      "4": {
+        "largerGuildIcons": false,
+        "darkerGuildListBackground": false,
+        "distinctBorders": true
+      },
+      "5": {
+        "largerGuildIcons": true,
+        "darkerGuildListBackground": false,
+        "distinctBorders": true
+      }
+    }
+  },
+  {
+    "name": "2025-04-native-markdown",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-05-search-results-feedback",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-08-browser-hevc",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-08-voice-user-affinity",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "sortType": "vc_probability"
+      },
+      "2": {
+        "enabled": true,
+        "sortType": "communication_probability"
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-09-agc2-v2",
+    "defaultConfig": {
+      "noiseCancellationDuringProcessing": false,
+      "noiseCancellationConfig": {
+        "useAGC2": false
+      }
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "noiseCancellationDuringProcessing": true,
+        "noiseCancellationConfig": {
+          "useAGC2": false
+        }
+      },
+      "2": {
+        "noiseCancellationDuringProcessing": true,
+        "noiseCancellationConfig": null,
+        "vadKrispActivationThreshold": 0.5
+      },
+      "3": {
+        "noiseCancellationDuringProcessing": true,
+        "noiseCancellationConfig": null,
+        "vadKrispActivationThreshold": 0.7
+      },
+      "4": {
+        "noiseCancellationDuringProcessing": true,
+        "noiseCancellationConfig": null,
+        "vadKrispActivationThreshold": 0.8
+      },
+      "5": {
+        "noiseCancellationDuringProcessing": true,
+        "noiseCancellationConfig": null,
+        "vadKrispActivationThreshold": 0.9
+      },
+      "6": {
+        "noiseCancellationDuringProcessing": true,
+        "noiseCancellationConfig": null,
+        "vadKrispActivationThreshold": 0.95
+      }
+    }
+  },
+  {
+    "name": "2025-09-image-attachment-mezzanine-v2",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "maxFileSizeBytes": 524288
+      },
+      "2": {
+        "enabled": true,
+        "maxFileSizeBytes": 262144
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-09-overlay-state-tracking",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-09-sensitive-content-self-harm",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-09-server-nsfw-level",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-09-threads-also-send-to-channel",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-09-video-qoe-metrics-tracking",
+    "kind": "user",
+    "defaultConfig": {
+      "externalAnalyticsEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "externalAnalyticsEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-10-ad-request-behavior-experiment",
+    "kind": "user",
+    "defaultConfig": {
+      "enableNewRequestBehavior": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableNewRequestBehavior": false
+      },
+      "2": {
+        "enableNewRequestBehavior": true
+      },
+      "3": {
+        "enableNewRequestBehavior": false
+      },
+      "4": {
+        "enableNewRequestBehavior": true
+      },
+      "5": {
+        "enableNewRequestBehavior": true
+      },
+      "6": {
+        "enableNewRequestBehavior": true
+      }
+    }
+  },
+  {
+    "name": "2025-10-collectibles-custom-cursors",
+    "kind": "user",
+    "defaultConfig": {
+      "enableCustomCursors": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableCustomCursors": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-10-desktop-communication-notifications-emoji",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-10-emoji-search-ranking-tweaks",
+    "kind": "user",
+    "defaultConfig": {
+      "boostFavorites": false,
+      "boostCapitalizedWords": false,
+      "boostAtEnd": false,
+      "boostsIgnoreDisambiguators": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "boostFavorites": true,
+        "boostCapitalizedWords": true,
+        "boostAtEnd": true,
+        "boostsIgnoreDisambiguators": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-10-force-sdr-emojis-stickers",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-10-friend-request-alerts-v2",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-10-friendship-anniversary-gifting",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      },
+      "2": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-10-gif-providers-multi-treatment",
+    "kind": "user",
+    "defaultConfig": {
+      "provider": "tenor",
+      "fallbackProvider": "tenor",
+      "enableMetrics": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "provider": "giphy",
+        "fallbackProvider": "tenor",
+        "enableMetrics": true
+      },
+      "2": {
+        "provider": "klipy",
+        "fallbackProvider": "tenor",
+        "enableMetrics": true
+      }
+    }
+  },
+  {
+    "name": "2025-10-go-live-auto-quality",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "allowAutoQuality": true,
+        "migrateAutoQuality": true
+      },
+      "2": {
+        "allowAutoQuality": true,
+        "defaultAutoQuality": true
+      }
+    }
+  },
+  {
+    "name": "2025-10-layer-system-v2",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-10-low-latency-rate-control",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-10-mana-date-inputs",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-10-payment-elements-launch",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-10-vad-before-processing",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-11-age-verification-expressive-everywhere",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-11-global-frame-pool-lock",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-11-hide-manual-link",
+    "defaultConfig": {
+      "isHidden": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "isHidden": true
+      }
+    }
+  },
+  {
+    "name": "2025-11-mana-context-menu",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-11-overlay-chat",
+    "kind": "user",
+    "defaultConfig": {
+      "hasChat": false,
+      "hasFriendList": false,
+      "showNowPlayingForDifferentGames": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "hasChat": true,
+        "hasFriendList": false,
+        "showNowPlayingForDifferentGames": false
+      },
+      "2": {
+        "hasChat": true,
+        "hasFriendList": true,
+        "showNowPlayingForDifferentGames": false
+      },
+      "3": {
+        "hasChat": true,
+        "hasFriendList": true,
+        "showNowPlayingForDifferentGames": true
+      }
+    }
+  },
+  {
+    "name": "2025-11-rtc-panel-entry-point-new-copy",
+    "kind": "user",
+    "defaultConfig": {
+      "altTitle": false,
+      "altBody": false,
+      "altCta": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "altTitle": true,
+        "altBody": false,
+        "altCta": true
+      }
+    }
+  },
+  {
+    "name": "2025-11-shockbyte-degraded",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-11-video-end-card-v2",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-09-ptt-education",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showPTTJoinTooltip": true,
+        "showPTTNoKeybindWarning": true,
+        "showPTTSpeakingIndicator": true
+      },
+      "2": {
+        "showPTTIconIndicator": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-game-invite-account-linking-entry-point",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-hdr-accessibility-setting",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-katsudon",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-12-mana-multistep-community-enabled",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-nitro-s-rewards",
+    "kind": "user",
+    "defaultConfig": {
+      "treatment": "control"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "treatment": "treatment_a"
+      },
+      "2": {
+        "treatment": "treatment_b"
+      },
+      "3": {
+        "treatment": "treatment_c"
+      },
+      "4": {
+        "treatment": "treatment_d"
+      }
+    }
+  },
+  {
+    "name": "2025-12-orb-redemption-thru-orders",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2025-12-proportional-vad-indicator",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      },
+      "2": {
+        "enabled": true,
+        "disableUI": true
+      },
+      "3": {
+        "enabled": true,
+        "disableUI": true,
+        "swallowVolumeOnlySpeakingEvents": true
+      },
+      "4": {
+        "enabled": true,
+        "disableUI": true,
+        "dontEmitVolumeOnlySpeakingEvents": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-quest-cta-refactor-rollout",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "enabledQuestStates": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "enabledQuestStates": null
+      },
+      "2": {
+        "enabled": true,
+        "enabledQuestStates": null
+      },
+      "3": {
+        "enabled": true,
+        "enabledQuestStates": null
+      },
+      "4": {
+        "enabled": true,
+        "enabledQuestStates": null
+      },
+      "5": {
+        "enabled": true,
+        "enabledQuestStates": null
+      },
+      "6": {
+        "enabled": true,
+        "enabledQuestStates": null
+      },
+      "7": {
+        "enabled": true,
+        "enabledQuestStates": null
+      }
+    }
+  },
+  {
+    "name": "2025-12-social-layer-storefront-activity-card-entrypoints-user-experiment",
+    "kind": "user",
+    "defaultConfig": {
+      "voiceChannelActivitiesEnabled": false,
+      "guildActivitiesEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "voiceChannelActivitiesEnabled": true,
+        "guildActivitiesEnabled": false
+      },
+      "2": {
+        "voiceChannelActivitiesEnabled": false,
+        "guildActivitiesEnabled": true
+      },
+      "3": {
+        "voiceChannelActivitiesEnabled": true,
+        "guildActivitiesEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-social-layer-storefront-wishlist-user-account-popout",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-windows-audio-effects",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "preferSystemEffects": true
+      }
+    }
+  },
+  {
+    "name": "2025-12-wmf-gpu-encode",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-bug-reporter",
+    "kind": "user",
+    "defaultConfig": {
+      "hasBugReporterAccess": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "hasBugReporterAccess": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-cms-layouts",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-01-family-center-v3",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-favorites-server",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "hasHigherPrivileges": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "hasHigherPrivileges": true
+      },
+      "2": {
+        "enabled": true,
+        "hasHigherPrivileges": false
+      }
+    }
+  },
+  {
+    "name": "2026-01-friends-in-server",
+    "kind": "user",
+    "defaultConfig": {
+      "guildFriendsEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "guildFriendsEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-haven-client",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-ios-push-notif-json-fix",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-less-personalized-ads",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-01-profile-updates-notification",
+    "defaultConfig": {
+      "showSettingsToggle": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showSettingsToggle": true
+      },
+      "2": {
+        "showSettingsToggle": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-system-service-performance-monitor",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-valentines-day-drop",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      },
+      "2": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-voice-dares-v0",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-01-wmf-gpu-encode-intel",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-activity-privacy-matching",
+    "kind": "user",
+    "defaultConfig": {
+      "copyChanges": false,
+      "upsell": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "copyChanges": true,
+        "upsell": false
+      },
+      "2": {
+        "copyChanges": true,
+        "upsell": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-android-app-upsell-banner",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-02-announcement-composer",
+    "defaultConfig": {
+      "announcementComposer": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "announcementComposer": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-boost-to-unlock-coachmark",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-boosting-refresh-modals",
+    "kind": "user",
+    "defaultConfig": {
+      "variant": "control"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "variant": "refresh"
+      },
+      "2": {
+        "variant": "refresh_expressive_cta"
+      }
+    }
+  },
+  {
+    "name": "2026-02-capture-target-window",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-client-heartbeat-skipped",
+    "kind": "user",
+    "defaultConfig": {
+      "logHeartbeatSkipped": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "logHeartbeatSkipped": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-02-content-classification-presence-filter",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-desktop-new-user-onboarding",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-expiring-powerup-coachmark",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-friends-list",
+    "kind": "user",
+    "defaultConfig": {
+      "hasFriendList": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "hasFriendList": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-game-server-tab-always-on",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-gift-cards",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-gifting-modal-redesign",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-go-live-hdr",
+    "kind": "user",
+    "defaultConfig": {
+      "hdrCaptureMode": "never"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "hdrCaptureMode": "always"
+      },
+      "2": {
+        "hdrCaptureMode": "permittedDevicesOnly"
+      }
+    }
+  },
+  {
+    "name": "2026-02-go-live-video-preset-resolution",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "videoPresetResolutionMax": null
+      }
+    }
+  },
+  {
+    "name": "2026-02-gsh-game-detection-upsell",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-join-game-community-cta",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-lazy-load-all-images",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-02-longer-group-dm-invites",
+    "defaultConfig": {
+      "inviteMaxAgeSeconds": 86400
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "inviteMaxAgeSeconds": 604800
+      }
+    }
+  },
+  {
+    "name": "2026-02-mana-playground-access",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-02-mobile-visual-refresh",
+    "defaultConfig": {
+      "enabled": false,
+      "chatInputFloating": false,
+      "chatInputLegacySendButton": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "chatInputFloating": false,
+        "chatInputLegacySendButton": false
+      },
+      "2": {
+        "enabled": true,
+        "chatInputFloating": true,
+        "chatInputLegacySendButton": false
+      },
+      "3": {
+        "enabled": true,
+        "chatInputFloating": true,
+        "chatInputLegacySendButton": false
+      },
+      "4": {
+        "enabled": true,
+        "chatInputFloating": true,
+        "chatInputLegacySendButton": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-mobile-volume-output-slider-removal",
+    "kind": "user",
+    "defaultConfig": {
+      "audioOutputPresent": true,
+      "nonContextualStreamOutputPresent": true,
+      "showTileVolumeIndicator": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "audioOutputPresent": false,
+        "nonContextualStreamOutputPresent": false,
+        "showTileVolumeIndicator": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-mute-tutorial",
+    "kind": "user",
+    "defaultConfig": {
+      "muteTutorialEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "muteTutorialEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-new-video-quest-progress-bar-styling",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-non-dm-gifting-modal-redesign",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-premium-offer-reminder-xp",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-private-channel-hiding",
+    "kind": "user",
+    "defaultConfig": {
+      "enableObfuscation": false,
+      "enableIntegrityCheck": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableObfuscation": true,
+        "enableIntegrityCheck": false
+      },
+      "2": {
+        "enableObfuscation": true,
+        "enableIntegrityCheck": true
+      },
+      "3": {
+        "enableObfuscation": false,
+        "enableIntegrityCheck": false
+      }
+    }
+  },
+  {
+    "name": "2026-02-private-profiles",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-process-boost-on-voice",
+    "kind": "user",
+    "defaultConfig": {
+      "processPriority": null,
+      "threadPriorityConfiguration": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "processPriority": null,
+        "threadPriorityConfiguration": 0
+      },
+      "2": {
+        "processPriority": null,
+        "threadPriorityConfiguration": 1
+      },
+      "3": {
+        "processPriority": null,
+        "threadPriorityConfiguration": 2
+      },
+      "4": {
+        "processPriority": null,
+        "threadPriorityConfiguration": 3
+      }
+    }
+  },
+  {
+    "name": "2026-02-pubsub-bulk-ban-users",
+    "kind": "user",
+    "defaultConfig": {
+      "usePubSub": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "usePubSub": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-referral-reminder-dc",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-silence-warning-aggression",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "resetSilenceWarningOnDeviceChange": true
+      },
+      "2": {
+        "resetSilenceWarningAfterNMinutes": 10
+      },
+      "3": {
+        "enableHardwareSilenceWarning": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-sticker-padding",
+    "kind": "user",
+    "defaultConfig": {
+      "padding": 2
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "padding": 1
+      }
+    }
+  },
+  {
+    "name": "2026-02-voice-channel-link-click",
+    "kind": "user",
+    "defaultConfig": {
+      "navigateOnly": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "navigateOnly": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-wgc-dirty-regions",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-02-wgc-dirty-regions-all",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-age-verification-google-wallet",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-app-guild-validation",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-application-widget-v2-add-tweak",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-arborium-highlight",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "preferNative": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "preferNative": false
+      },
+      "2": {
+        "enabled": true,
+        "preferNative": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-audio-effects-probe",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "probeAudioEffects": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-block-purchases",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-bogo-promotion-gate-v2",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-03-bogo-promotion-marketing-materials-v2",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-03-boosting-settings-refresh",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-browser-inverted-wants",
+    "defaultConfig": {
+      "invertWants": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "invertWants": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-churro",
+    "defaultConfig": {
+      "allowPlayStationStaging": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "allowPlayStationStaging": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-clips-experiment",
+    "defaultConfig": {
+      "enableClips": false,
+      "ignorePlatformRestriction": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableClips": true,
+        "ignorePlatformRestriction": false
+      },
+      "2": {
+        "enableClips": true,
+        "ignorePlatformRestriction": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-collectibles-profile-frames",
+    "kind": "user",
+    "defaultConfig": {
+      "enableProfileFrames": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableProfileFrames": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-content-inventory-memberlist-and-ranker",
+    "defaultConfig": {
+      "enabled": true,
+      "impressionCappingEnabled": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-conversation-highlighting-utility",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": false
+      },
+      "2": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-crepe",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-croissant",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-debug-experiment",
+    "kind": "user",
+    "defaultConfig": {},
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {},
+      "2": {}
+    }
+  },
+  {
+    "name": "2026-03-denormalized-perks-access-read",
+    "kind": "user",
+    "defaultConfig": 0,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": 1,
+      "2": 2
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-file-upload-powerup-holdout",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-friend-is-online-v3",
+    "defaultConfig": {
+      "showSettingsToggle": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showSettingsToggle": true
+      },
+      "2": {
+        "showSettingsToggle": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-friend-request-message",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-icymi-desktop",
+    "kind": "user",
+    "defaultConfig": {
+      "icymiDesktopEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "icymiDesktopEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-icymi-staff-debugging-utility",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-image-load-metrics",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": false
+      },
+      "2": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-ios-audio-interrupt-handling",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-kaomoji-picker",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-krisp-stats-collection",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableStats": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-l-3pp",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-mac-new-updater",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-media-play-metrics",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-message-bookmarks",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "inInbox": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "inInbox": true
+      },
+      "2": {
+        "enabled": true,
+        "inInbox": false
+      }
+    }
+  },
+  {
+    "name": "2026-03-mobile-quest-home-red-dot-notification",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-mobile-web-invite-server-profile",
+    "kind": "installation",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-muted-video-quest-new-defaults",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "variant": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "variant": 1
+      },
+      "2": {
+        "enabled": true,
+        "variant": 2
+      }
+    }
+  },
+  {
+    "name": "2026-03-new-server-boost-system-messages",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "showCta": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showCta": true
+      },
+      "2": {
+        "enabled": true,
+        "showCta": false
+      }
+    }
+  },
+  {
+    "name": "2026-03-overlay-default-keybind",
+    "kind": "user",
+    "defaultConfig": {
+      "keybindOverride": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "keybindOverride": "ctrl+tab"
+      },
+      "2": {
+        "keybindOverride": "alt+x"
+      },
+      "3": {
+        "keybindOverride": "ctrl+l"
+      }
+    }
+  },
+  {
+    "name": "2026-03-private-profiles-strict",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      },
+      "2": {
+        "enabled": true
+      },
+      "3": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-private-profiles-strict-gb",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      },
+      "2": {
+        "enabled": true
+      },
+      "3": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-quest-home-bounties",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-quest-reload-video-on-obscured",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-requiremodule-caching-redux",
+    "kind": "user",
+    "defaultConfig": {
+      "moduleCacheEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "moduleCacheEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-shop-fiat-prioritization",
+    "kind": "user",
+    "defaultConfig": {
+      "prioritizeFiat": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "prioritizeFiat": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-soundmoji-rendering",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-soundmoji-sending",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "showSoundmojiInEmojiPicker": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showSoundmojiInEmojiPicker": false
+      },
+      "2": {
+        "enabled": true,
+        "showSoundmojiInEmojiPicker": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-03-stage-voice-panel",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-steelseries-3p-recurring",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-video-capture-device-no-reuse",
+    "kind": "user",
+    "defaultConfig": {
+      "overrideDeviceReuse": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "overrideDeviceReuse": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-video-quest-player-refactor",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-wishlisting-nitro",
+    "kind": "user",
+    "defaultConfig": {
+      "isEnabled": false,
+      "isRoadblocksEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "isEnabled": true,
+        "isRoadblocksEnabled": false
+      },
+      "2": {
+        "isEnabled": true,
+        "isRoadblocksEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-03-wysiwyg-user-profile-editing",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-badge-discovery",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-boosting-pre-checkout-modal-refresh-v2",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-browser-transceiver-padding-removal",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-channel-pinning",
+    "kind": "user",
+    "defaultConfig": {
+      "canPinEverywhere": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "canPinEverywhere": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-04-clips-v3-runtime",
+    "defaultConfig": {
+      "enableClipsV3": false,
+      "enableClipsV3ML": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableClipsV3": true,
+        "enableClipsV3ML": false
+      },
+      "2": {
+        "enableClipsV3": true,
+        "enableClipsV3ML": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-collectibles-profile-frames-purchase",
+    "kind": "user",
+    "defaultConfig": {
+      "bucket": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "bucket": 1
+      },
+      "2": {
+        "bucket": 2
+      }
+    }
+  },
+  {
+    "name": "2026-04-composed-quest-player",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-consistent-profiles",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "showMutualFriendsNameplate": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showMutualFriendsNameplate": false
+      },
+      "2": {
+        "enabled": true,
+        "showMutualFriendsNameplate": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-croissant-reheat",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-desktop-notification-center",
+    "kind": "user",
+    "defaultConfig": {
+      "notificationCenterVariant": null,
+      "entrypoint": null,
+      "filterStyle": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "notificationCenterVariant": "popout",
+        "entrypoint": "title-bar-left",
+        "filterStyle": "dropdown"
+      },
+      "2": {
+        "notificationCenterVariant": "popout",
+        "entrypoint": "server-rail-top",
+        "filterStyle": "dropdown"
+      },
+      "3": {
+        "notificationCenterVariant": "sidebar",
+        "entrypoint": "server-rail-top",
+        "filterStyle": "dropdown"
+      }
+    }
+  },
+  {
+    "name": "2026-04-desktop-tti-dnstcp-warmup",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-desktop-tti-early-update-check",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-desktop-tti-update-backoff",
+    "kind": "user",
+    "defaultConfig": {
+      "maxBackoffMs": 30000
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "maxBackoffMs": 20000
+      },
+      "2": {
+        "maxBackoffMs": 10000
+      },
+      "3": {
+        "maxBackoffMs": 3000
+      }
+    }
+  },
+  {
+    "name": "2026-04-desktop-tti-v8-cache",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-disable-hook-frame-pacer",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-ensure-received-messages-added-in-order",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-game-account-linking-post-game-close",
+    "kind": "user",
+    "defaultConfig": {
+      "allowAccountLinkingUpsellPostGameClose": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "allowAccountLinkingUpsellPostGameClose": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-gift-promotion-reminder",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-gifting-badge",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-04-hide-view-full-profile-button",
+    "defaultConfig": {
+      "showButton": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showButton": false
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-04-http-request-sample",
+    "defaultConfig": {
+      "sampleRate": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "sampleRate": 0.0001
+      }
+    }
+  },
+  {
+    "name": "2026-04-icymi-staff-only",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-inappropriate-conversations-default-on",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-inappropriate-conversations-prescan",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-kestrel",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "threshold": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "threshold": 15
+      },
+      "2": {
+        "enabled": true,
+        "threshold": 20
+      },
+      "3": {
+        "enabled": true,
+        "threshold": 25
+      }
+    }
+  },
+  {
+    "name": "2026-04-mobile-boost-progress-bar",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-mobile-quest-orb-reward-modal-cta-priority",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "variant": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "variant": 1
+      },
+      "2": {
+        "enabled": true,
+        "variant": 2
+      }
+    }
+  },
+  {
+    "name": "2026-04-new-games-coachmark",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-one-day-fractional-nitro",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-04-overlay-fps-limit",
+    "kind": "user",
+    "defaultConfig": {
+      "overlayFPSLimit": true,
+      "mainWindowFPSLimit": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "overlayFPSLimit": 60,
+        "mainWindowFPSLimit": true
+      },
+      "2": {
+        "overlayFPSLimit": 30,
+        "mainWindowFPSLimit": true
+      },
+      "3": {
+        "overlayFPSLimit": 30,
+        "mainWindowFPSLimit": 30
+      }
+    }
+  },
+  {
+    "name": "2026-04-overlay-streamer-mode",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-premium-group-gift-selection-upsell",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-04-premium-group-primary-reminder-nagbar",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-04-profile-frame-gifting",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-profile-frames-ea-marketing",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-quest-heartbeat-executable-fingerprint",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-quests-premium-orb-multiplier-marketing",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-riot-social-sdk-migration",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-04-safety-flows",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-scheduled-messages-ui-backup",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-04-server-boost-copy-1440p",
+    "kind": "user",
+    "defaultConfig": {
+      "streamQualityMarketingResolution": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "streamQualityMarketingResolution": "1440p"
+      }
+    }
+  },
+  {
+    "name": "2026-04-slayer-storefront-orbs",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      },
+      "2": {
+        "enabled": true
+      },
+      "3": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-04-topical-navigation-staff-control",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-04-upcoming-server-event",
+    "defaultConfig": {
+      "showSettingsToggle": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showSettingsToggle": true
+      },
+      "2": {
+        "showSettingsToggle": true
+      },
+      "3": {
+        "showSettingsToggle": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-04-user-profile-performance-analytics",
+    "defaultConfig": {
+      "performanceAnalyticsEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "performanceAnalyticsEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-user-settings-redesign-4c",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-valorant-social-sdk",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-04-video-hook-dx12",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-04-wetf-parser",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-age-restricted-application-commands",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-app-store-overlay-feature-gate",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-auto-clips-review",
+    "defaultConfig": {
+      "enableAutoClipsReview": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableAutoClipsReview": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-av1-bitrate-tuning",
+    "kind": "user",
+    "defaultConfig": {
+      "bitrate": 3500000
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "bitrate": 3000000
+      },
+      "2": {
+        "bitrate": 2500000
+      }
+    }
+  },
+  {
+    "name": "2026-05-badge-discovery-milestone-2",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-block-user-feedback",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-boosting-pre-checkout-modal-refresh-monthly-rate",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-bounties-stage-1",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "verticalScrollEnabled": false,
+      "loopingEnabled": false,
+      "ctaTimerMilliSeconds": 3000,
+      "rewardTimerSeconds": 15,
+      "orbAmount": 50
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "verticalScrollEnabled": false,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 50
+      },
+      "2": {
+        "enabled": true,
+        "verticalScrollEnabled": false,
+        "loopingEnabled": true,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 50
+      },
+      "3": {
+        "enabled": true,
+        "verticalScrollEnabled": false,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 30
+      },
+      "4": {
+        "enabled": true,
+        "verticalScrollEnabled": false,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 0,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 50
+      },
+      "5": {
+        "enabled": true,
+        "verticalScrollEnabled": false,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 25,
+        "orbAmount": 50
+      },
+      "6": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 50
+      },
+      "7": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "loopingEnabled": true,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 50
+      },
+      "8": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 30
+      },
+      "9": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 0,
+        "rewardTimerSeconds": 15,
+        "orbAmount": 50
+      },
+      "10": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "loopingEnabled": false,
+        "ctaTimerMilliSeconds": 3000,
+        "rewardTimerSeconds": 25,
+        "orbAmount": 50
+      }
+    }
+  },
+  {
+    "name": "2026-05-bounty-stale-refresh-quest-home",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-clips-media-comments",
+    "defaultConfig": {
+      "enableMediaComments": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableMediaComments": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-clips-scrub-preview-frontend",
+    "defaultConfig": {
+      "enableScrubPreview": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableScrubPreview": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-collectibles-collection-page",
+    "kind": "user",
+    "defaultConfig": {
+      "useIndexPage": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "useIndexPage": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-device-form-factor-indicators",
+    "kind": "user",
+    "defaultConfig": {
+      "showDeviceFormFactorIndicators": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showDeviceFormFactorIndicators": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-dice-roll-slash-command",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-disable-camera-simulcast",
+    "kind": "user",
+    "defaultConfig": {
+      "enableSimulcast": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableSimulcast": false
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-distributed-clips",
+    "defaultConfig": {
+      "enableDistributedClips": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableDistributedClips": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-dm-header-activity",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-dvp-for-attachments",
+    "kind": "user",
+    "defaultConfig": {
+      "useDiscordVideoPlayer": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "useDiscordVideoPlayer": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-expiring-boosts",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-frictionless-gdms",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-game-mentions-v2",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "showNewTag": false,
+      "combineMentionAutocomplete": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showNewTag": true,
+        "combineMentionAutocomplete": false
+      },
+      "2": {
+        "enabled": true,
+        "showNewTag": false,
+        "combineMentionAutocomplete": false
+      },
+      "3": {
+        "enabled": true,
+        "showNewTag": false,
+        "combineMentionAutocomplete": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-gdop-v2-upsell",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-global-soundboard-wheel-popout",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-ignore-user-feedback",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "shouldGetShorterIgnoreDuration": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "shouldGetShorterIgnoreDuration": false
+      },
+      "2": {
+        "enabled": true,
+        "shouldGetShorterIgnoreDuration": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-ios-video-stabilization",
+    "defaultConfig": {
+      "mode": "off"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "mode": "standard"
+      },
+      "2": {
+        "mode": "low_latency"
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-kontrolfreek-deprecated-ff",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-logitech-ss-reheat-ff",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-mana-type-consolidation",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-mobile-lurker-server-preview",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "stickyLurk": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "stickyLurk": false
+      },
+      "2": {
+        "enabled": true,
+        "stickyLurk": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-nitro-home-header",
+    "kind": "user",
+    "defaultConfig": {
+      "treatment": "control"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "treatment": "treatment_a"
+      },
+      "2": {
+        "treatment": "treatment_b"
+      },
+      "3": {
+        "treatment": "treatment_c"
+      }
+    }
+  },
+  {
+    "name": "2026-05-orbs-purchase-upsell-banner",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-orbs-shop-upsell-banner",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-05-quest-home-tile-redesign",
+    "kind": "user",
+    "defaultConfig": {
+      "useNewLayoutWithSearch": false,
+      "useNewTile": false,
+      "useLargeFeaturedTiles": false,
+      "ctaOnHover": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "useNewLayoutWithSearch": true,
+        "useNewTile": false,
+        "useLargeFeaturedTiles": false,
+        "ctaOnHover": false
+      },
+      "2": {
+        "useNewLayoutWithSearch": true,
+        "useNewTile": true,
+        "useLargeFeaturedTiles": true,
+        "ctaOnHover": true
+      },
+      "3": {
+        "useNewLayoutWithSearch": true,
+        "useNewTile": true,
+        "useLargeFeaturedTiles": false,
+        "ctaOnHover": true
+      },
+      "4": {
+        "useNewLayoutWithSearch": true,
+        "useNewTile": true,
+        "useLargeFeaturedTiles": true,
+        "ctaOnHover": false
+      }
+    }
+  },
+  {
+    "name": "2026-05-riot-social-sdk-migration-all-regions",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-05-riot-social-sdk-migration-us--canada",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-05-screenshare-picker-wgc",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-server-theme-user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-slayer-storefront-hide-leaderboard",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-social-layer-storefront-game-shops-dropdown",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-spatial-audio-for-voice",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-05-steelseries-higher-discount-ff",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-use-ad-analytics-interface",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "maxStep": -1
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "maxStep": 0
+      },
+      "2": {
+        "enabled": true,
+        "maxStep": 1
+      },
+      "3": {
+        "enabled": true,
+        "maxStep": 2
+      },
+      "4": {
+        "enabled": true,
+        "maxStep": 3
+      },
+      "5": {
+        "enabled": true,
+        "maxStep": 4
+      }
+    }
+  },
+  {
+    "name": "2026-05-user-settings-redesign-4d",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-05-valorant-social-sdk-all-regions",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-05-valorant-social-sdk-us--canada",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-age-verification-incode",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-android-two-week-trials",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "trialCTAEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "trialCTAEnabled": true
+      },
+      "2": {
+        "enabled": true,
+        "trialCTAEnabled": false
+      }
+    }
+  },
+  {
+    "name": "2026-06-annual-plan-checkout-copy",
+    "kind": "user",
+    "defaultConfig": 0,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": 1,
+      "2": 2,
+      "3": 3,
+      "4": 4
+    }
+  },
+  {
+    "name": "2026-06-application-widget-profile-popout-preload",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-av1-encode-linux",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-battlenet-social-sdk-migration",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      }
+    }
+  },
+  {
+    "name": "2026-06-bounty-use-video-modal-mobile-placement-experiment",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": false
+      },
+      "2": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-bulk-nitro-gifting",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-06-chat-bar-customization",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-clickstream-analytics",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-clips-editor-v2",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-clips-league-events",
+    "defaultConfig": {
+      "enableLeagueEvents": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableLeagueEvents": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-clips-secondary-entrypoints",
+    "defaultConfig": {
+      "enableOverlayEntrypoint": false,
+      "enableGamePanelEntrypoint": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableOverlayEntrypoint": true,
+        "enableGamePanelEntrypoint": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-clips-settings-redesign",
+    "defaultConfig": {
+      "enableRedesign": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableRedesign": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-content-classification-embedded-activity-filter",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-desktop-tti-http-cdt",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-desktop-tti-splash-asset",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-dont-badge-muted-vcs",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-emoji-frecent-test",
+    "kind": "user",
+    "defaultConfig": {
+      "maxFrequentEmojis": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "maxFrequentEmojis": 9
+      },
+      "2": {
+        "maxFrequentEmojis": 18
+      }
+    }
+  },
+  {
+    "name": "2026-06-expressive-button-test",
+    "kind": "user",
+    "defaultConfig": {
+      "buttonStyle": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "buttonStyle": 1
+      },
+      "2": {
+        "buttonStyle": 2
+      }
+    }
+  },
+  {
+    "name": "2026-06-family-center-connection-prereq",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-friendship-anniversary-backend-persistence",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "guild",
+    "name": "2026-06-game-invites-channel",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-game-profile-in-quickswitcher",
+    "defaultConfig": {
+      "enabled": false,
+      "alternatePosition": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "alternatePosition": false
+      },
+      "2": {
+        "enabled": true,
+        "alternatePosition": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-game-profile-share-link",
+    "defaultConfig": {
+      "enabled": false,
+      "showSmallEmbed": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showSmallEmbed": true
+      },
+      "2": {
+        "enabled": true,
+        "showSmallEmbed": false
+      }
+    }
+  },
+  {
+    "name": "2026-06-gdm-invite-embed",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-gifting-badge-desktop",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-gummy-bears",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-gummy-viewers",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-improved-shop-loading",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-jellybean",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "largeGiftButton": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "largeGiftButton": false
+      },
+      "2": {
+        "enabled": true,
+        "largeGiftButton": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-livestream-entrypoint-v2",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "redirectToQuestHome": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "redirectToQuestHome": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-magic-scoring",
+    "defaultConfig": {
+      "enableSteamTimeline": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableSteamTimeline": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-ml-offer-creation-ui-upgrade",
+    "kind": "user",
+    "defaultConfig": {
+      "badgeStyle": null,
+      "surface": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "badgeStyle": null,
+        "surface": null
+      },
+      "2": {
+        "badgeStyle": null,
+        "surface": null
+      },
+      "3": {
+        "badgeStyle": null,
+        "surface": null
+      },
+      "4": {
+        "badgeStyle": null,
+        "surface": null
+      }
+    }
+  },
+  {
+    "name": "2026-06-mobile-server-tag",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-monthly-to-yearly-upsells",
+    "kind": "user",
+    "defaultConfig": 0,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": 1,
+      "2": 2,
+      "3": 3
+    }
+  },
+  {
+    "name": "2026-06-nitro-basic-card-color",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-06-nitro-gifting-price-copy-tweaks",
+    "kind": "user",
+    "defaultConfig": {
+      "showGiftPrice": true,
+      "useNewCopy": false,
+      "monthlyDefaultSelected": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showGiftPrice": false,
+        "useNewCopy": false,
+        "monthlyDefaultSelected": false
+      },
+      "2": {
+        "showGiftPrice": true,
+        "useNewCopy": true,
+        "monthlyDefaultSelected": false
+      },
+      "3": {
+        "showGiftPrice": true,
+        "useNewCopy": true,
+        "monthlyDefaultSelected": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-non-friend-messages-requests-in-uk",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-notify-friends-on-profile-update",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-orbs-holdout",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-otp-orders-phase-1",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-pix-for-otp",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-polls-click-to-profile",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-post-call-survey-assets",
+    "defaultConfig": {
+      "surveyEmojiKind": "face"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "surveyEmojiKind": "face-refresh"
+      }
+    }
+  },
+  {
+    "name": "2026-06-quest-fetch-reconnect-jitter",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "questFetchJitterMs": null,
+        "questHomeHeroJitterMs": null
+      }
+    }
+  },
+  {
+    "name": "2026-06-quest-home-layout-visual-tweaks",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "variant": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "variant": 1
+      },
+      "2": {
+        "enabled": true,
+        "variant": 2
+      },
+      "3": {
+        "enabled": true,
+        "variant": 3
+      },
+      "4": {
+        "enabled": true,
+        "variant": 4
+      }
+    }
+  },
+  {
+    "name": "2026-06-remove-quest-home-hero",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-remove-wishlist-dm-sidebar-side-copy",
+    "kind": "user",
+    "defaultConfig": {
+      "shouldHideSideText": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "shouldHideSideText": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-server-boost-bar-nudge",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-server-ladder",
+    "kind": "user",
+    "defaultConfig": {
+      "bitrate": 9000000,
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "bitrate": 3500000,
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-server-setup-boost-cta",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "guild",
+    "name": "2026-06-server-theme-apex-shadow",
+    "defaultConfig": {
+      "enabled": false,
+      "inExperiment": false,
+      "gatesApex": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "inExperiment": true,
+        "gatesApex": false
+      },
+      "2": {
+        "enabled": false,
+        "inExperiment": true,
+        "gatesApex": true
+      },
+      "3": {
+        "enabled": true,
+        "inExperiment": true,
+        "gatesApex": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-similar-games-desktop",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "dense": true
+      },
+      "2": {
+        "enabled": true,
+        "dense": false
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-similar-games-mobile",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "dense": true
+      },
+      "2": {
+        "enabled": true,
+        "dense": false
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-soundboard-frequently-used",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-soundboard-picker-height",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-systemwide-echo-cancellation-for-people-who-refuse-to-wear-headphones",
+    "defaultConfig": {
+      "echoReferenceMode": "mix"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "echoReferenceMode": "auto"
+      }
+    }
+  },
+  {
+    "kind": "guild",
+    "name": "2026-06-topical-navigation-guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-upscale-small-captured-frames",
+    "kind": "user",
+    "defaultConfig": {
+      "minCaptureWidth": 0,
+      "minCaptureHeight": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "minCaptureWidth": 130,
+        "minCaptureHeight": 130
+      }
+    }
+  },
+  {
+    "name": "2026-06-use-new-badge-image-source",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-user-profile-sidebar-redesign",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-web-translate-dom-guard",
+    "kind": "installation",
+    "defaultConfig": {
+      "enabled": true
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": false
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-06-web-vitals-monitoring",
+    "defaultConfig": {
+      "enabled": false,
+      "sampleRate": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "sampleRate": 0.05
+      },
+      "2": {
+        "enabled": true,
+        "sampleRate": 1
+      }
+    }
+  },
+  {
+    "name": "2026-06-wishlist-pdp-gift-button-priority",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "prioritizeGifting": true,
+        "removeOrbsClaim": false
+      },
+      "2": {
+        "prioritizeGifting": true,
+        "removeOrbsClaim": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-wmf-cpu-encode-intel",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-06-wysiwyg-show-dns-to-non-nitro",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-activity-entrypoint-ui",
+    "kind": "user",
+    "defaultConfig": {
+      "variant": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "variant": 1
+      },
+      "2": {
+        "variant": 2
+      }
+    }
+  },
+  {
+    "name": "2026-07-ad-recheck-interval-experiment",
+    "kind": "user",
+    "defaultConfig": {
+      "enableFastAdRecheck": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableFastAdRecheck": false
+      },
+      "2": {
+        "enableFastAdRecheck": true
+      },
+      "3": {
+        "enableFastAdRecheck": true
+      },
+      "4": {
+        "enableFastAdRecheck": true
+      },
+      "5": {
+        "enableFastAdRecheck": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-attachment-image-ladder",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-07-autoclipping-default-override",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-07-autoclipping-marketing",
+    "defaultConfig": {
+      "enableMarketing": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableMarketing": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-aws-gateway",
+    "kind": "user",
+    "defaultConfig": {
+      "enableAltGateway": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enableAltGateway": false
+      },
+      "2": {
+        "enableAltGateway": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-bounties-vertical-scroll",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "verticalScrollEnabled": false,
+      "scrollAffordanceVariant": "none",
+      "autoScrollLeadMs": 3000,
+      "autoScrollEndCardMs": 5000,
+      "peekFraction": 0,
+      "ctaTimerMilliSeconds": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "verticalScrollEnabled": false,
+        "scrollAffordanceVariant": "none",
+        "autoScrollLeadMs": 3000,
+        "autoScrollEndCardMs": 5000,
+        "peekFraction": 0,
+        "ctaTimerMilliSeconds": 0
+      },
+      "2": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "scrollAffordanceVariant": "none",
+        "autoScrollLeadMs": 3000,
+        "autoScrollEndCardMs": 5000,
+        "peekFraction": 0,
+        "ctaTimerMilliSeconds": 0
+      },
+      "3": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "scrollAffordanceVariant": "indicator",
+        "autoScrollLeadMs": 3000,
+        "autoScrollEndCardMs": 5000,
+        "peekFraction": 0,
+        "ctaTimerMilliSeconds": 0
+      },
+      "4": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "scrollAffordanceVariant": "auto",
+        "autoScrollLeadMs": 3000,
+        "autoScrollEndCardMs": 5000,
+        "peekFraction": 0,
+        "ctaTimerMilliSeconds": 0
+      },
+      "5": {
+        "enabled": true,
+        "verticalScrollEnabled": true,
+        "scrollAffordanceVariant": "peek",
+        "autoScrollLeadMs": 3000,
+        "autoScrollEndCardMs": 5000,
+        "peekFraction": 0.12,
+        "ctaTimerMilliSeconds": 0
+      }
+    }
+  },
+  {
+    "name": "2026-07-collectibles-pdp-collection-button",
+    "kind": "user",
+    "defaultConfig": {
+      "showCollectionButton": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showCollectionButton": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-collectibles-promotion-endpoint-reference",
+    "kind": "user",
+    "defaultConfig": {
+      "useEndpoint": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "useEndpoint": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-hotwheels-clickable-game-icon",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-invite-server-liveliness",
+    "kind": "installation",
+    "defaultConfig": {
+      "enabled": false,
+      "variant": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "variant": "chart"
+      },
+      "2": {
+        "enabled": true,
+        "variant": "highlights"
+      }
+    }
+  },
+  {
+    "name": "2026-07-mkl-zen-cpu-dispatch-override",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-monthly-to-yearly-upsell-copy",
+    "kind": "user",
+    "defaultConfig": 0,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": 1,
+      "2": 2,
+      "3": 3
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-07-parental-consent-warning-fetch",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-premium-group-expansion-announcement",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
+    "name": "2026-07-quest-bar-secondary-cta",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "showPlayInstantlyLabel": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showPlayInstantlyLabel": false
+      },
+      "2": {
+        "enabled": true,
+        "showPlayInstantlyLabel": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-reject-with-error-kill-switch",
+    "kind": "user",
+    "defaultConfig": {
+      "migrationKilled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "migrationKilled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
+    "name": "2026-07-rtc-panel-game-card",
+    "defaultConfig": {
+      "improvedGameCard": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "improvedGameCard": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-server-tag-game-profiles-desktop",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-shop-this-look",
+    "kind": "user",
+    "defaultConfig": {
+      "shopThisLookEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "shopThisLookEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-smag-dm-sidebar-nitro-recommendation",
+    "kind": "user",
+    "defaultConfig": {
+      "isEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "isEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-smag-wishlist-nitro-first-slot",
+    "kind": "user",
+    "defaultConfig": {
+      "isEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "isEnabled": true
+      }
+    }
+  },
+  {
+    "name": "2026-07-smag-wishlist-recommendations-dismiss-threshold",
+    "kind": "user",
+    "defaultConfig": {
+      "minItemsToDismiss": 1
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "minItemsToDismiss": 3
+      },
+      "2": {
+        "minItemsToDismiss": 10
+      }
+    }
+  },
+  {
+    "name": "2026-07-windows-camera-mic-permissions",
+    "kind": "user",
+    "defaultConfig": {
+      "checkPermissionsEnabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "checkPermissionsEnabled": true
+      }
+    }
+  }
+]
