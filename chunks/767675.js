@@ -3,12 +3,12 @@ var n = r(627968),
     i = r(64700),
     a = r(979186);
 r(321073), r(667532);
-var s = r(735438),
+var s = r(435558),
     l = r.n(s),
     o = r(17928),
     d = r(97808),
     u = r(778712),
-    c = r(534514),
+    c = r(297264),
     m = r(233545),
     p = r(83257),
     h = r(361739),
@@ -21,8 +21,8 @@ var s = r(735438),
     v = r(763827),
     C = r(412780),
     E = r(994500),
-    x = r(287809),
-    D = r(427262),
+    D = r(287809),
+    x = r(427262),
     S = r(289873),
     R = r(331322),
     j = r(503698),
@@ -32,7 +32,7 @@ var s = r(735438),
     k = r(761508),
     B = r(684339),
     w = r(51092),
-    T = r(451409);
+    T = r(186295);
 r(134528), r(947204);
 var G = r(796873),
     L = r.n(G),
@@ -246,6 +246,7 @@ let er = {
         audioJitterTarget: !0,
         audioJitterTargetSamples: !0,
         audioPlayoutUnderruns: !0,
+        consecutiveStaticColorFrames: !0,
         decryptAttempts: !0,
         decryptDuration: !0,
         decryptInvalidNonceCount: !0,
@@ -267,12 +268,12 @@ let er = {
         sumOfSquaredFramesDurations: !0,
         targetWindowElevated: !0,
         timestamp: !0,
+        totalDecodeTime: !0,
         type: !0,
         videoJitterBuffer: !0,
         videoJitterDelay: !0,
         videoJitterTarget: !0,
         voiceActivityDetectorProcessTime: !0,
-        consecutiveStaticColorFrames: !0,
     },
     en = {
         accelerateRate: X,
@@ -398,11 +399,11 @@ function ep(e) {
         } = e,
         [h, y] = i.useState("0"),
         g = (0, o.bG)([v.A], () => (u ? v.A.getGuildId() : null)),
-        A = (0, o.bG)([x.default], () => (u && null != s ? x.default.getUser(s) : null)),
+        A = (0, o.bG)([D.default], () => (u && null != s ? D.default.getUser(s) : null)),
         F = (0, o.bG)([b.Ay], () => (u && null != g && null != s ? b.Ay.getNick(g, s) : null));
     if (null == t || (u && null == s) || 0 === t.length) return (0, n.jsx)(S.y, { type: S.y.Type.SPINNING_CIRCLE });
     let E = d;
-    u && null != A && (E = `${d} \u{2014} ${F ?? D.Ay.getName(A)}`);
+    u && null != A && (E = `${d} \u{2014} ${F ?? x.Ay.getName(A)}`);
     let j = t.map((e, t) => {
             let r, i;
             return (0, n.jsx)(
@@ -695,8 +696,8 @@ class eE extends i.PureComponent {
               });
     }
 }
-var ex = r(967198),
-    eD = r(116956),
+var eD = r(967198),
+    ex = r(116956),
     eS = r(351906),
     eR = r(562153),
     ej = r(917592);
@@ -711,8 +712,8 @@ class eN extends i.PureComponent {
             }),
             o = l().map(a.receiverReports, (e) => {
                 let t = Array.isArray(e.bitrate) ? e.bitrate.at(-1)?.value : e.bitrate,
-                    r = x.default.getUser(e.id);
-                var n = eR.Ay.getNickname(ex.A.getGuildId(), void 0, r);
+                    r = D.default.getUser(e.id);
+                var n = eR.Ay.getNickname(eD.A.getGuildId(), void 0, r);
                 return (
                     null == n && (n = null != r ? r.username : e.id),
                     { displayName: n, bitrate: t / 1e3, lost: (100 * e.fractionLost) / 256 }
@@ -759,12 +760,12 @@ class eN extends i.PureComponent {
         });
     }
 }
-let eP = o.Ay.connectStores([C.Ay, v.A, eS.A, eD.A], (e) => {
+let eP = o.Ay.connectStores([C.Ay, v.A, eS.A, ex.A], (e) => {
     let { context: t, index: r } = e,
         n = C.Ay.getAllStats(t)[r],
         i =
             t === eo.x.STREAM
-                ? Object.values(eD.A.getRTCConnections()).find(
+                ? Object.values(ex.A.getRTCConnections()).find(
                       (e) => e.getMediaEngineConnectionId() === n.mediaEngineConnectionId,
                   )
                 : null,
@@ -814,7 +815,7 @@ function ek(e, t, r, i, a) {
         let t = [];
         Object.keys(c).forEach((s) => {
             var l;
-            let o = x.default.getUser(s),
+            let o = D.default.getUser(s),
                 p = b.Ay.getNick(a, s),
                 h = (0, C.Xi)(e, s, r);
             null != c[s] &&
@@ -835,7 +836,7 @@ function ek(e, t, r, i, a) {
                                                   "aria-label": o.username,
                                                   className: W.my,
                                               }),
-                                              (0, n.jsx)("span", { className: W.Xh, children: p ?? D.Ay.getName(o) }),
+                                              (0, n.jsx)("span", { className: W.Xh, children: p ?? x.Ay.getName(o) }),
                                           ],
                                       }),
                                   }),
@@ -918,7 +919,7 @@ function eB() {
                                       (0, n.jsx)(c.D, {
                                           className: W.HA,
                                           variant: "heading-lg/semibold",
-                                          children: (0, y.m1)(l, x.default, E.A),
+                                          children: (0, y.m1)(l, D.default, E.A),
                                       }),
                               },
                           ]

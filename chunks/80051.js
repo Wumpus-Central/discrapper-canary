@@ -1,53 +1,53 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(847374),
-    l = n(177953),
-    u = n(367513),
+    a = n(503698),
+    s = n.n(a),
+    l = n(847374),
+    o = n(177953),
+    d = n(367513),
     c = n(204651),
-    d = n(375708),
+    u = n(375708),
     _ = n(139352);
+function E(e) {
+    let { className: t, isVertical: n } = e;
+    return (0, i.jsxs)("div", {
+        className: _.zc,
+        children: [
+            (0, i.jsx)(l.a, { size: "md", color: "currentColor", className: s()(n ? _.pL : _.RJ, t) }),
+            (0, i.jsx)(o.n, { size: "md", color: "currentColor", className: s()(_.ol, t) }),
+        ],
+    });
+}
+function A(e) {
+    let { className: t, isVertical: n } = e;
+    return (0, i.jsxs)("div", {
+        className: _.zc,
+        children: [
+            (0, i.jsx)(l.a, { size: "md", color: "currentColor", className: s()(n ? _.iy : _.Yr, t) }),
+            n && (0, i.jsx)(o.n, { size: "md", color: "currentColor", className: s()(_.ol, t) }),
+        ],
+    });
+}
 function h(e) {
-    let { className: t, isVertical: n } = e;
-    return (0, i.jsxs)("div", {
-        className: _.zc,
-        children: [
-            (0, i.jsx)(o.a, { size: "md", color: "currentColor", className: a()(n ? _.pL : _.RJ, t) }),
-            (0, i.jsx)(l.n, { size: "md", color: "currentColor", className: a()(_.ol, t) }),
-        ],
-    });
-}
-function f(e) {
-    let { className: t, isVertical: n } = e;
-    return (0, i.jsxs)("div", {
-        className: _.zc,
-        children: [
-            (0, i.jsx)(o.a, { size: "md", color: "currentColor", className: a()(n ? _.iy : _.Yr, t) }),
-            n && (0, i.jsx)(l.n, { size: "md", color: "currentColor", className: a()(_.ol, t) }),
-        ],
-    });
-}
-function p(e) {
-    let { channelId: t, className: n, isParticipantsOpen: s, isVertical: o = !1, hideTooltip: l = !1 } = e,
-        p = r.useCallback(
+    let { channelId: t, className: n, isParticipantsOpen: a, isVertical: l = !1, hideTooltip: o = !1 } = e,
+        h = r.useCallback(
             (e) => {
                 let { className: t } = e;
-                return s
-                    ? (0, i.jsx)(f, { className: t, isVertical: o })
-                    : (0, i.jsx)(h, { className: t, isVertical: o });
+                return a
+                    ? (0, i.jsx)(A, { className: t, isVertical: l })
+                    : (0, i.jsx)(E, { className: t, isVertical: l });
             },
-            [s, o],
+            [a, l],
         );
     return (0, i.jsx)(c.A, {
-        label: s ? d.intl.string(d.t.QJMRUB) : d.intl.string(d.t.vZiwmG),
-        className: a()(_.N9, n),
-        onClick: function () {
-            u.A.toggleParticipants(t, !s);
+        label: a ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
+        className: s()(_.N9, n),
+        onClick: function (e) {
+            e.stopPropagation(), d.A.toggleParticipants(t, !a);
         },
-        iconComponent: p,
-        shouldShowTooltip: !l,
+        iconComponent: h,
+        shouldShowTooltip: !o,
     });
 }

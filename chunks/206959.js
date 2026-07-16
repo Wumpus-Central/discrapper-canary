@@ -197,6 +197,7 @@ function w(e, t, n, i) {
         minPlayoutDelay: e.minPlayoutDelay,
         renderDelay: e.renderDelay,
         averageDecodeTime: e.decode,
+        totalDecodeTime: e.totalDecode,
         resolution: { height: e.height, width: e.width },
         decoderImplementationName: e.decoderImplementationName,
         framesDecoded: e.framesDecoded,

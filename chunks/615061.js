@@ -61,7 +61,7 @@ function D(e) {
     R[e]--, 0 === R[e] && O?.(e, !1);
 }
 var y = n(143236),
-    v = n(223926),
+    v = n(737005),
     b = n.n(v),
     M = n(731854);
 let P = null != navigator.mediaDevices && null != navigator.mediaDevices.enumerateDevices,
@@ -372,9 +372,9 @@ class z extends y.EventEmitter {
     }
 }
 n(142703);
-var q = n(473318),
+var q = n(434933),
     Z = n.n(q),
-    X = n(128080),
+    X = n(811315),
     Q = n.n(X),
     J = n(201327);
 let ee = new j();
@@ -938,6 +938,7 @@ class eI extends S.A {
                             null == e.framesDecoded || null == e.totalDecodeTime
                                 ? void 0
                                 : ((1e3 * e.totalDecodeTime) / e.framesDecoded).toFixed(1),
+                        totalDecodeTime: null != e.totalDecodeTime ? 1e3 * e.totalDecodeTime : void 0,
                         firCount: e.firCount,
                         pliCount: e.pliCount,
                         freezeCount: e.freezeCount,
@@ -1242,9 +1243,9 @@ class eI extends S.A {
     getMLSPairwiseFingerprint(e, t, n) {}
 }
 n(775443);
-var ef = n(267721),
+var ef = n(800754),
     ep = n.n(ef),
-    eT = n(909203),
+    eT = n(226782),
     em = n.n(eT),
     eg = n(316179);
 let eS = new g.Vy("SDP");
@@ -1839,9 +1840,9 @@ class eG extends y.EventEmitter {
     };
 }
 n(667532);
-var ex = n(837385),
+var ex = n(429874),
     ek = n.n(ex),
-    eF = n(415955),
+    eF = n(480664),
     eV = n.n(eF);
 n(323874), n(14289), n(35956);
 var eB =
@@ -2750,7 +2751,7 @@ class e4 extends y.EventEmitter {
         });
     };
 }
-class e7 extends y.EventEmitter {
+class e5 extends y.EventEmitter {
     id;
     stream;
     pool;
@@ -2761,7 +2762,7 @@ class e7 extends y.EventEmitter {
             video: { ...e, frameRate: 30 },
         };
         if (navigator.mediaDevices?.getDisplayMedia != null)
-            return new e7(await navigator.mediaDevices.getDisplayMedia(i), n);
+            return new e5(await navigator.mediaDevices.getDisplayMedia(i), n);
         throw Error("UNKNOWN");
     }
     constructor(e, t) {
@@ -2795,10 +2796,10 @@ class e7 extends y.EventEmitter {
         );
     }
 }
-class e5 {
+class e7 {
     pool = {};
     async acquire(e, t) {
-        let n = await e7.get(e, t, this);
+        let n = await e5.get(e, t, this);
         return (this.pool[n.id] = n), n;
     }
     get(e) {
@@ -2915,7 +2916,7 @@ class tr extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e5();
+    desktopInputPool = new e7();
     enablePromise = null;
     dave = null;
     transientKeys = null;
