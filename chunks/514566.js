@@ -26,6 +26,7 @@ e.exports = {
     FH: "voiceChannelText__39ec2",
     Ow: "voiceIcon__39ec2",
     CT: "voiceChannelHeading__39ec2",
+    J5: "guildName__39ec2",
     Ph: "voiceChannelDivider__39ec2",
     NS: "voiceChannelOverflowCount__39ec2",
     He: "contextMenu__39ec2",

@@ -57,6 +57,7 @@ function S(e) {
                       onClick: (e) => {
                           e.stopPropagation(), (0, A.u)(n.id), r?.({ action: "OPEN_VOICE_GUILD" }), S?.();
                       },
+                      className: g.J5,
                   }),
         ],
     });
