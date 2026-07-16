@@ -5,7 +5,7 @@ n.d(e, {
     WC: () => g,
     YN: () => D,
     dm: () => T,
-    fO: () => f,
+    fO: () => O,
     gr: () => A,
     xR: () => h,
 });
@@ -39,7 +39,7 @@ function _(t, e) {
 function g(t, e) {
     let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
     if ((l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_EDIT", prompts: e }), n)) {
-        let n = e.map((n) => O(t, e, n));
+        let n = e.map((n) => f(t, e, n));
         l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_ERRORS", errors: n });
     }
 }
@@ -71,7 +71,7 @@ function h(t, e) {
     if (0 === E.length) return null;
     let S = E.filter((t) => t.inOnboarding),
         m = E.filter((t) => !0 !== t.inOnboarding),
-        _ = E.map((e) => (i.some((t) => t.id === e.id) ? O(t, E, e) : null));
+        _ = E.map((e) => (i.some((t) => t.id === e.id) ? f(t, E, e) : null));
     if (_.filter(c.Vq).length > 0)
         throw (
             (l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_SAVE_FAILED", errors: _ }),
@@ -118,9 +118,9 @@ async function A(t, e) {
     }
 }
 async function D(t, e) {
-    await i.Bo.put({ url: E.Rsh.GUILD_ONBOARDING(t), body: e, rejectWithError: !1 });
+    await i.Bo.put({ url: E.Rsh.GUILD_ONBOARDING(t), body: e, rejectWithError: (0, i.fT)() });
 }
-function O(t, e, n) {
+function f(t, e, n) {
     let i = { optionErrors: [] },
         l = !1;
     return (
@@ -129,11 +129,11 @@ function O(t, e, n) {
         n.inOnboarding &&
             e.filter((t) => t.inOnboarding).length > I.D1 &&
             ((i.config = N.intl.formatToPlainString(N.t["cTb/rg"], { numQuestions: I.D1 })), (l = !0)),
-        (i.optionErrors = n.options.map((i) => f(t, e, n, i))),
+        (i.optionErrors = n.options.map((i) => O(t, e, n, i))),
         (l = l || i.optionErrors.some((t) => null != t)) ? i : null
     );
 }
-function f(t, e, n, i) {
+function O(t, e, n, i) {
     if (n.singleSelect) {
         let t = new Set(i.roleIds ?? []);
         for (let i of e)

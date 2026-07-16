@@ -17,52 +17,52 @@ var i = l(627968),
     S = l(555337),
     L = l(636537),
     N = l(228366);
-let E = null,
-    f = null,
-    C = !1;
-class O extends o.Ay.Store {
+let f = null,
+    E = null,
+    T = !1;
+class C extends o.Ay.Store {
     static displayName = "GuildSettingsOnboardingAllowedApplicationsStore";
     getAllowedApplicationIds(t) {
-        return E === t ? f : null;
+        return f === t ? E : null;
     }
     isFetching(t) {
-        return E === t && C;
+        return f === t && T;
     }
     hasCachedData(t) {
-        return E === t && null !== f;
+        return f === t && null !== E;
     }
 }
-let T = new O(N.h, {
+let O = new C(N.h, {
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START: function (t) {
         let { guildId: e } = t;
-        (E = e), (C = !0), (f = []);
+        (f = e), (T = !0), (E = []);
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_SUCCESS: function (t) {
         let { guildId: e, applicationIds: l } = t;
-        E === e && ((f = l), (C = !1));
+        f === e && ((E = l), (T = !1));
     },
     GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_FAILURE: function (t) {
         let { guildId: e } = t;
-        E === e && ((f = []), (C = !1));
+        f === e && ((E = []), (T = !1));
     },
     GUILD_SETTINGS_CLOSE: function () {
-        (E = null), (f = null), (C = !1);
+        (f = null), (E = null), (T = !1);
     },
 });
 var v = l(652215);
 async function m(t) {
-    let e = T.getAllowedApplicationIds(t);
+    let e = O.getAllowedApplicationIds(t);
     if (null !== e) return Promise.resolve(e);
-    if (T.isFetching(t))
+    if (O.isFetching(t))
         return new Promise((e) => {
-            T.addChangeListener(function l() {
-                let i = T.getAllowedApplicationIds(t);
-                null !== i && (T.removeChangeListener(l), e(i));
+            O.addChangeListener(function l() {
+                let i = O.getAllowedApplicationIds(t);
+                null !== i && (O.removeChangeListener(l), e(i));
             });
         });
     N.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_ALLOWED_APPLICATIONS_FETCH_START", guildId: t });
     try {
-        let e = await L.Bo.get({ url: v.Rsh.GUILD_ONBOARDING_ALLOWED_APPLICATIONS(t), rejectWithError: !1 });
+        let e = await L.Bo.get({ url: v.Rsh.GUILD_ONBOARDING_ALLOWED_APPLICATIONS(t), rejectWithError: (0, L.fT)() });
         if (e.ok && e.body?.application_ids) {
             let l = e.body.application_ids.map((t) => String(t));
             return (
@@ -92,41 +92,41 @@ var x = l(923121),
     y = l(886106);
 function b(t) {
     let { transitionState: e, onClose: l, connection: L, index: N } = t,
-        E = (0, A.Ay)(),
-        f = null != L && null != N,
-        C = S.A.getGuildId(),
-        O = (0, o.bG)([T], () => T.getAllowedApplicationIds(C) ?? [], [C]);
+        f = (0, A.Ay)(),
+        E = null != L && null != N,
+        T = S.A.getGuildId(),
+        C = (0, o.bG)([O], () => O.getAllowedApplicationIds(T) ?? [], [T]);
     n.useEffect(() => {
-        null != C && m(C);
-    }, [C]),
+        null != T && m(T);
+    }, [T]),
         n.useEffect(() => {
-            for (let t of O)
+            for (let t of C)
                 null != _.A.getApplication(t) || _.A.isFetchingApplication(t) || (0, h.TA)(t).catch(() => {});
-        }, [O]);
+        }, [C]);
     let v = (0, o.yK)([_.A], () => {
             let t = [];
-            for (let e of O) {
+            for (let e of C) {
                 let l = _.A.getApplication(e);
                 null != l && t.push(l);
             }
             return t;
-        }, [O]),
+        }, [C]),
         [b, P] = n.useState(() => (null != L ? (0, G.Sq)(L) : void 0)),
         [j, F] = n.useState(L?.description ?? ""),
         [U, R] = n.useState([]),
         W = n.useMemo(() => {
             let t = [];
             for (let e of I.A.filter((t) => t.enabled && !G.tb.has(t.type))) {
-                let l = "light" === E ? e.icon?.lightPNG : e.icon?.darkPNG;
+                let l = "light" === f ? e.icon?.lightPNG : e.icon?.darkPNG;
                 t.push({ label: e.name, value: `provider:${e.type}`, icon: l });
             }
             for (let e of v) t.push({ label: e.name, value: `app:${e.id}`, icon: e.getIconURL(128) });
-            for (let e of O)
+            for (let e of C)
                 null == _.A.getApplication(e) &&
                     _.A.isFetchingApplication(e) &&
                     t.push({ label: "Loading...", value: `app:${e}`, icon: void 0 });
             return t.sort((t, e) => t.label.localeCompare(e.label)), t;
-        }, [v, O, E]),
+        }, [v, C, f]),
         B = n.useCallback(() => {
             if (null == b || "" === b) return void R(["Please select a connection"]);
             let t = (0, G.vK)(b);
@@ -139,8 +139,8 @@ function b(t) {
                     ...(null != t.providerId && { provider_id: t.providerId }),
                 },
                 n = (0, G.Ii)(i);
-            n.length > 0 ? R(n) : (f ? (0, x.yM)(N, i) : (0, x.sF)(i), l());
-        }, [b, j, f, N, l]),
+            n.length > 0 ? R(n) : (E ? (0, x.yM)(N, i) : (0, x.sF)(i), l());
+        }, [b, j, E, N, l]),
         k = n.useCallback(
             (t) => ({
                 id: t.value,
@@ -152,16 +152,16 @@ function b(t) {
         );
     return (0, i.jsx)(a.Modal, {
         transitionState: e,
-        title: f ? D.intl.string(D.t.yqegs1) : D.intl.string(D.t.B6qOe2),
+        title: E ? D.intl.string(D.t.yqegs1) : D.intl.string(D.t.B6qOe2),
         onClose: l,
         actions: [
             { variant: "secondary", text: D.intl.string(D.t["ETE/oC"]), onClick: l },
-            { variant: "primary", text: f ? D.intl.string(D.t["R3BPH+"]) : D.intl.string(D.t.qMOnJu), onClick: B },
+            { variant: "primary", text: E ? D.intl.string(D.t["R3BPH+"]) : D.intl.string(D.t.qMOnJu), onClick: B },
         ],
         children: (0, i.jsxs)("div", {
             className: y.Qs,
             children: [
-                !f &&
+                !E &&
                     (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)(c.E, {

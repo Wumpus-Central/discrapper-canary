@@ -818,11 +818,16 @@ let C = new c.A("GuildSettingsActionCreators"),
                 url: S.Rsh.GUILD_MFA(t),
                 body: { level: n },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             }).then((e) => s.h.dispatch({ type: "GUILD_SETTINGS_SET_MFA_SUCCESS", level: e.body.level }));
         },
         updateIcon(e, t) {
-            a.Bo.patch({ url: S.Rsh.GUILD(e), body: { icon: t }, oldFormErrors: !0, rejectWithError: !1 }).then(
+            a.Bo.patch({
+                url: S.Rsh.GUILD(e),
+                body: { icon: t },
+                oldFormErrors: !0,
+                rejectWithError: (0, a.fT)(),
+            }).then(
                 () => {
                     s.h.dispatch({ type: "GUILD_SETTINGS_UPDATE", icon: t }), u.A.checkGuildTemplateDirty(e);
                 },
@@ -912,7 +917,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 body: G,
                 headers: k,
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             }).then(
                 (t) => {
                     s.h.dispatch({ type: "GUILD_SETTINGS_SUBMIT_SUCCESS", guild: t.body }),
@@ -933,14 +938,14 @@ let C = new c.A("GuildSettingsActionCreators"),
                 url: S.Rsh.GUILD(e),
                 body: { verification_level: t.verificationLevel, explicit_content_filter: t.explicitContentFilter },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             }).then((t) => (u.A.checkGuildTemplateDirty(e), t)),
         updateGuildPremiumProgressBar: (e, t) =>
             a.Bo.patch({
                 url: S.Rsh.GUILD(e),
                 body: { premium_progress_bar_enabled: t },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             }).then((t) => (u.A.checkGuildTemplateDirty(e), t)),
         transferOwnership(e, t) {
             let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
@@ -953,7 +958,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                     event: i.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP,
                     properties: { guild_id: e, verification_type: n },
                 },
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             });
         },
         sendTransferOwnershipPincode(e) {
@@ -965,11 +970,11 @@ let C = new c.A("GuildSettingsActionCreators"),
                     event: i.NetworkActionNames.GUILD_TRANSFER_OWNERSHIP_SEND_CODE,
                     properties: { guild_id: e, is_resend: t },
                 },
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             });
         },
         deleteGuild: (e) =>
-            a.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: !1 }).then(() => {
+            a.Bo.post({ url: S.Rsh.GUILD_DELETE(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() }).then(() => {
                 R.close();
             }),
         async leaveGuild(e) {
@@ -979,7 +984,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                 url: S.Rsh.GUILD_LEAVE(e),
                 body: { lurking: n || p.Ay.isCurrentUserGuest(e) },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             }).then(() => {
                 r.O.announce(N.intl.string(N.t["7iPyVW"]));
             }),
@@ -993,7 +998,7 @@ let C = new c.A("GuildSettingsActionCreators"),
                       url: S.Rsh.GUILD_MEMBER(e, t),
                       body: { roles: n },
                       oldFormErrors: !0,
-                      rejectWithError: !1,
+                      rejectWithError: (0, a.fT)(),
                   }),
                   i.forEach((n) => s.h.dispatch({ type: "GUILD_ROLE_MEMBER_ADD", guildId: e, roleId: n, userId: t })),
                   r.forEach((n) =>
@@ -1001,29 +1006,31 @@ let C = new c.A("GuildSettingsActionCreators"),
                   ));
         },
         bulkAddMemberRoles: (e, t, n) =>
-            a.Bo.patch({ url: S.Rsh.GUILD_ROLE_MEMBERS(e, t), body: { member_ids: n }, rejectWithError: !1 }).then(
-                (n) => {
-                    s.h.dispatch({ type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: e, roleId: t, added: n.body });
-                },
-            ),
+            a.Bo.patch({
+                url: S.Rsh.GUILD_ROLE_MEMBERS(e, t),
+                body: { member_ids: n },
+                rejectWithError: (0, a.fT)(),
+            }).then((n) => {
+                s.h.dispatch({ type: "GUILD_ROLE_MEMBER_BULK_ADD", guildId: e, roleId: t, added: n.body });
+            }),
         enableIntegration: (e, t, n) =>
             a.Bo.post({
                 url: S.Rsh.GUILD_INTEGRATIONS(e),
                 body: { type: t, id: n },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             }),
         disableIntegration: (e, t) =>
-            a.Bo.del({ url: S.Rsh.GUILD_INTEGRATION(e, t), oldFormErrors: !0, rejectWithError: !1 }),
+            a.Bo.del({ url: S.Rsh.GUILD_INTEGRATION(e, t), oldFormErrors: !0, rejectWithError: (0, a.fT)() }),
         updateIntegration: (e, t, n, i, r) =>
             a.Bo.patch({
                 url: S.Rsh.GUILD_INTEGRATION(e, t),
                 body: { expire_behavior: n, expire_grace_period: i, enable_emoticons: r },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, a.fT)(),
             }),
         syncIntegration(e, t) {
-            a.Bo.post({ url: S.Rsh.GUILD_INTEGRATION_SYNC(e, t), oldFormErrors: !0, rejectWithError: !1 });
+            a.Bo.post({ url: S.Rsh.GUILD_INTEGRATION_SYNC(e, t), oldFormErrors: !0, rejectWithError: (0, a.fT)() });
         },
         async migratePinPermission(e) {
             await a.Bo.post({ url: S.Rsh.GUILD_MIGRATE_PIN_PERMISSION(e), rejectWithError: !0 }).then(() =>

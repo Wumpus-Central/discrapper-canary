@@ -26,7 +26,7 @@ let T = {
                 url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
                 query: { with_guild: s, invite_code: null != n ? (0, u.m0)(n) : void 0 },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, i.fT)(),
             });
             if (null == t.body) throw t;
             let { body: a } = t;
@@ -53,7 +53,7 @@ let T = {
             url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { form_fields: t, enabled: n, bulk_action: a },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         });
         r.h.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -74,7 +74,7 @@ let T = {
             url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         });
         r.h.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -95,7 +95,7 @@ let T = {
             url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         });
     },
     submitVerificationForm: async function (e, t) {
@@ -105,7 +105,7 @@ let T = {
             let { body: a } = await i.Bo.put({
                 url: f.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 body: { version: t.version, form_fields: t.formFields },
-                rejectWithError: !1,
+                rejectWithError: (0, i.fT)(),
             });
             return (
                 r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: a }),

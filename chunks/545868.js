@@ -26,7 +26,7 @@ function E(e, t) {
     if (!n || null == _.get(i))
         return (
             _.set(i, !0),
-            a.Bo.get({ url: d.Rsh.GUILD_ROLE_MEMBER_IDS(e, t), rejectWithError: !1 }).then(
+            a.Bo.get({ url: d.Rsh.GUILD_ROLE_MEMBER_IDS(e, t), rejectWithError: (0, a.fT)() }).then(
                 (t) => (l.A.requestMembersById(e, t.body, !1), t.body.length),
             )
         );

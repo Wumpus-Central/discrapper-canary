@@ -22,7 +22,7 @@ function _(e, t) {
           ? Promise.resolve(null)
           : null == s || _ || t
             ? (n.h.dispatch({ type: "GUILD_PROFILE_FETCH", guildId: e }),
-              l.Bo.get({ url: h.Rsh.GUILD_PROFILE(e), rejectWithError: !1 })
+              l.Bo.get({ url: h.Rsh.GUILD_PROFILE(e), rejectWithError: (0, l.fT)() })
                   .then((t) => {
                       let r = (0, a.wr)(t.body);
                       return n.h.dispatch({ type: "GUILD_PROFILE_FETCH_SUCCESS", guildId: e, profile: r }), r;
@@ -37,7 +37,7 @@ function E(e, t) {
     return c.A.getIsUpdating(e)
         ? Promise.resolve(null)
         : (n.h.dispatch({ type: "GUILD_PROFILE_UPDATE", guildId: e, updates: t }),
-          l.Bo.patch({ url: h.Rsh.GUILD_PROFILE(e), body: (0, a.ow)(t), rejectWithError: !1 })
+          l.Bo.patch({ url: h.Rsh.GUILD_PROFILE(e), body: (0, a.ow)(t), rejectWithError: (0, l.fT)() })
               .then((t) => {
                   let r = (0, a.wr)(t.body);
                   return n.h.dispatch({ type: "GUILD_PROFILE_UPDATE_SUCCESS", guildId: e, profile: r }), r;
@@ -48,7 +48,7 @@ function E(e, t) {
               }));
 }
 async function L(e) {
-    let t = await l.Bo.get({ url: h.Rsh.GUILD_TOP_GAMES(e), rejectWithError: !1 });
+    let t = await l.Bo.get({ url: h.Rsh.GUILD_TOP_GAMES(e), rejectWithError: (0, l.fT)() });
     return (0, a.MU)(t.body.top_games);
 }
 function d(e, t) {
