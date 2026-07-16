@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => g });
 var i = n(627968),
     l = n(17928),
     a = n(939249),
@@ -10,39 +10,40 @@ var i = n(627968),
     u = n(734057),
     p = n(309010),
     h = n(920639),
-    m = n(652215),
-    A = n(496978);
-let x = function (e) {
-    let { channelId: t, popoutType: n, width: x, height: g } = e,
-        f = (0, o.Us)(),
-        C = (0, l.bG)([r.A], () => r.A.getSelectedParticipant(t)),
+    m = n(889426),
+    A = n(652215),
+    x = n(496978);
+let g = function (e) {
+    let { channelId: t, popoutType: n, width: g, height: f } = e,
+        C = (0, o.Us)(),
+        y = (0, l.bG)([r.A], () => r.A.getSelectedParticipant(t)),
         j = (0, l.bG)([u.A], () => u.A.getChannel(t)),
-        y = (0, l.bG)([p.A], () => null != j && p.A.getVoiceChannelId() === j.id),
+        v = (0, l.bG)([p.A], () => null != j && p.A.getVoiceChannelId() === j.id),
         {
-            participants: v,
-            layout: E,
-            pariticipantsOpen: N,
+            participants: E,
+            layout: N,
+            participantsOpen: I,
         } = (0, l.cf)([r.A], () => {
-            let e = null != j ? r.A.getLayout(j.id, f) : m.DUB.NORMAL;
+            let e = null != j ? r.A.getLayout(j.id, C) : A.DUB.NORMAL;
             return {
                 participants: r.A.getParticipants(t),
-                layout: f === m.BRT.POPOUT && e !== m.DUB.FULL_SCREEN ? m.DUB.NO_CHAT : e,
-                pariticipantsOpen: r.A.getParticipantsOpen(t),
+                layout: C === A.BRT.POPOUT && e !== A.DUB.FULL_SCREEN ? A.DUB.NO_CHAT : e,
+                participantsOpen: r.A.getParticipantsOpen(t),
             };
         }),
-        I = (0, l.yK)([r.A], () => [...r.A.getStreamParticipants(t), ...r.A.getVideoParticipants(t)]);
-    if (null == C || null == j) return null;
-    let T = (e, n) => {
+        T = (0, l.yK)([r.A], () => [...r.A.getStreamParticipants(t), ...r.A.getVideoParticipants(t)]);
+    if (null == y || null == j) return null;
+    let _ = (e, n) => {
         n.preventDefault(),
             n.stopPropagation(),
-            C?.id === e.id
+            y?.id === e.id
                 ? (s.A.selectParticipant(j.id, null),
                   (0, h.n0)({ interactionType: "call_tile_collapsed", channelId: t }))
                 : s.A.selectParticipant(j.id, e.id);
     };
     return (0, i.jsx)(a.D, {
-        style: { width: x, height: g },
-        className: A.L,
+        style: { width: g, height: f },
+        className: x.L,
         onClick: () => {
             s.A.selectParticipant(j.id, null), (0, h.n0)({ interactionType: "call_tile_collapsed", channelId: t });
         },
@@ -50,18 +51,28 @@ let x = function (e) {
             timeout: 2e3,
             children: (e) =>
                 (0, i.jsx)(c.A, {
-                    onSelectParticipant: T,
-                    selectedParticipant: C,
+                    onSelectParticipant: _,
+                    selectedParticipant: y,
                     popoutType: n,
                     channel: j,
-                    width: x,
-                    height: g,
-                    inCall: y,
-                    participants: v,
-                    layout: E,
-                    filteredParticipants: I,
+                    width: g,
+                    height: f,
+                    inCall: v,
+                    participants: E,
+                    layout: N,
+                    filteredParticipants: T,
                     idle: e.idle,
-                    showParticipants: N,
+                    showParticipants: I,
+                    onContextMenuParticipant: (e, n, i, l) =>
+                        (0, m.A)({
+                            participant: e,
+                            event: n,
+                            minimalContextMenu: i,
+                            entrypoint: l,
+                            channelId: t,
+                            appContext: C,
+                            location: "GuildRoomVideoOverlay",
+                        }),
                 }),
         }),
     });
