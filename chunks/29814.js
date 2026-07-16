@@ -1,6 +1,6 @@
 "use strict";
-n.d(t, { A: () => eC }), n(321073);
-var i = n(735438),
+n.d(t, { Ay: () => eC }), n(321073);
+var i = n(435558),
     r = n.n(i),
     a = n(791332),
     s = n.n(a),
@@ -469,29 +469,34 @@ let e_ = {
                 let t = /^<@!?(\d+)>|^(@(?:everyone|here))/.exec(e);
                 return null == t ? null : t;
             },
-            parse(e, t, n) {
-                let i, r;
-                if (n.returnMentionIds)
-                    return null == e[1] ? { type: "mention", text: e[0] } : { type: "mention", id: e[1] };
-                let a = I.default.getUser(e[1]),
-                    s = _.A.getChannel(n.channelId);
-                null != a &&
-                    ((r = a.id),
-                    (i = a.toString()),
-                    null != s && (i = p.Ay.getNickname(s.getGuildId(), n.channelId, a) ?? T.Ay.getName(a)));
-                let l = e[1],
-                    o = null != l && M.Ut1.test(l.trim()),
-                    d = o && n.unknownUserMentionPlaceholder ? `@${P.intl.string(P.t.sKdZ6U)}` : e[0];
-                return {
-                    userId: r,
-                    channelId: n.channelId,
-                    viewingChannelId: n.viewingChannelId,
-                    guildId: s?.getGuildId(),
-                    parsedUserId: o ? l : null,
-                    roleName: e[2],
-                    content: [{ type: "text", content: null != i ? `@${i}` : d }],
-                };
-            },
+            parse: (e, t, n) =>
+                n.returnMentionIds
+                    ? null == e[1]
+                        ? { type: "mention", text: e[0] }
+                        : { type: "mention", id: e[1] }
+                    : (function (e, t) {
+                          let n,
+                              i,
+                              { fullMatch: r, id: a, everyoneOrHere: s } = e,
+                              l = I.default.getUser(a),
+                              o = _.A.getChannel(t.channelId);
+                          null != l &&
+                              ((i = l.id),
+                              (n = l.toString()),
+                              null != o && (n = p.Ay.getNickname(o.getGuildId(), t.channelId, l) ?? T.Ay.getName(l)));
+                          let d = null != a && M.Ut1.test(a.trim()),
+                              c = d && t.unknownUserMentionPlaceholder ? `@${P.intl.string(P.t.sKdZ6U)}` : r;
+                          return {
+                              type: "mention",
+                              userId: i,
+                              channelId: t.channelId,
+                              viewingChannelId: t.viewingChannelId,
+                              guildId: o?.getGuildId(),
+                              parsedUserId: d ? a : null,
+                              roleName: s,
+                              content: [{ type: "text", content: null != n ? `@${n}` : c }],
+                          };
+                      })({ fullMatch: e[0], id: e[1], everyoneOrHere: e[2] }, n),
         },
         silentPrefix: {
             order: b.Ay.order,
@@ -512,18 +517,21 @@ let e_ = {
                 /^<\/((?:[-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?(?: [-_\p{Letter}\p{Number}\p{sc=Deva}\p{sc=Thai}]{1,32})?):(\d+)>/u.exec(
                     e,
                 ),
-            parse(e, t, n) {
-                if (n.returnMentionIds) return { type: "commandMention", id: e[2] };
-                let [, ...i] = e[1].split(" "),
-                    r = `${e[2]}${[...i].map((e) => `${en.v4}${e}`).join("")}`;
-                return {
-                    channelId: n.channelId,
-                    commandId: e[2],
-                    commandName: e[1],
-                    commandKey: r,
-                    content: [{ type: "text", content: `${e[1]}` }],
-                };
-            },
+            parse: (e, t, n) =>
+                n.returnMentionIds
+                    ? { type: "commandMention", id: e[2] }
+                    : (function (e, t, n) {
+                          let [, ...i] = e.split(" "),
+                              r = `${t}${[...i].map((e) => `${en.v4}${e}`).join("")}`;
+                          return {
+                              type: "commandMention",
+                              channelId: n.channelId,
+                              commandId: t,
+                              commandName: e,
+                              commandKey: r,
+                              content: [{ type: "text", content: `${e}` }],
+                          };
+                      })(e[1], e[2], n),
         },
         timestampMentionInput: {
             order: s().defaultRules.text.order,
@@ -535,30 +543,30 @@ let e_ = {
             order: s().defaultRules.text.order,
             requiredFirstCharacters: ["<"],
             match: (e, t) => (t.allowGameMentions ? ei.P7.exec(e) : null),
-            parse(e, t, n) {
-                let i,
-                    r = e[1],
-                    a = n.mentionGames?.get(r),
-                    s = E.A.getDetectableGame(r);
-                if (!0 !== n.returnMentionIds && null == a && null == s)
-                    return { type: "text", content: `@${P.intl.string(P.t["11pdXZ"])}` };
-                let l = a?.name ?? s?.name ?? P.intl.string(P.t["11pdXZ"]),
-                    d = (0, o.A)(r, a?.icon, { size: 32 });
-                return (
-                    null != d
-                        ? (i = d)
-                        : s?.icon != null && (i = f.Ay.getApplicationIconURL({ id: s.id, icon: s.icon, size: 32 })),
-                    {
-                        type: "gameMention",
-                        gameId: r,
-                        channelId: n.channelId,
-                        gameName: a?.name,
-                        gameIcon: a?.icon,
-                        icon: i,
-                        displayName: l,
-                    }
-                );
-            },
+            parse: (e, t, n) =>
+                (function (e, t) {
+                    let n,
+                        i = t.mentionGames?.get(e),
+                        r = E.A.getDetectableGame(e);
+                    if (!0 !== t.returnMentionIds && null == i && null == r)
+                        return { type: "text", content: `@${P.intl.string(P.t["11pdXZ"])}` };
+                    let a = i?.name ?? r?.name ?? P.intl.string(P.t["11pdXZ"]),
+                        s = (0, o.A)(e, i?.icon, { size: 32 });
+                    return (
+                        null != s
+                            ? (n = s)
+                            : r?.icon != null && (n = f.Ay.getApplicationIconURL({ id: r.id, icon: r.icon, size: 32 })),
+                        {
+                            type: "gameMention",
+                            gameId: e,
+                            channelId: t.channelId,
+                            gameName: i?.name,
+                            gameIcon: i?.icon,
+                            icon: n,
+                            displayName: a,
+                        }
+                    );
+                })(e[1], n),
         },
         emoji: {
             order: b.Ay.order,

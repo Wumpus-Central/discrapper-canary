@@ -15,7 +15,7 @@ var r = t(627968),
     k = t(429128);
 let m = RegExp(`https?://${window.GLOBAL_ENV.CDN_HOST ?? ""}`);
 function j(e) {
-    return "string" == typeof e.content ? e.content : y(e.content);
+    return "string" == typeof e.content ? e.content : R(e.content);
 }
 let x = {
         ...c().defaultRules,
@@ -54,7 +54,7 @@ let x = {
             },
         },
         inlineCode: {
-            ...g.A.RULES.inlineCode,
+            ...g.Ay.RULES.inlineCode,
             order: 6,
             react: (e, l, t) => (0, r.jsx)("code", { className: f.hQ, children: j(e) }, t.key),
         },
@@ -96,11 +96,11 @@ let x = {
             },
         },
     },
-    R = c().parserFor(x),
-    y = c().reactFor(c().ruleOutput(x, "react"));
+    y = c().parserFor(x),
+    R = c().reactFor(c().ruleOutput(x, "react"));
 class w extends n.PureComponent {
     static rules = x;
-    static defaultProps = { parser: R, output: y };
+    static defaultProps = { parser: y, output: R };
     render() {
         let { className: e, children: l, state: t, parser: n, output: a } = this.props,
             u = a(

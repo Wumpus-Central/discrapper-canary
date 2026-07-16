@@ -17,7 +17,7 @@ var i = n(435558),
     u = n(29814);
 n(46054);
 var _ = n(551965);
-let E = (0, _.A)([u.A.PROFILE_BIO_RULES, (0, c.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
+let E = (0, _.A)([u.Ay.PROFILE_BIO_RULES, (0, c.A)({ enableBuildOverrides: !1, mustConfirmExternalLink: !0 })]),
     A = new (s())({ max: 2e3 }),
     h = d.aV(E),
     I;

@@ -5,12 +5,12 @@ var i = n(627968),
     r = n.n(s),
     a = n(707554),
     o = n(834730),
-    d = n(735438),
+    d = n(435558),
     c = n.n(d),
     u = n(223637),
     m = n(29814),
     h = n(46054);
-let g = c().omit(m.A.RULES, ["codeBlock", "heading"]),
+let g = c().omit(m.Ay.RULES, ["codeBlock", "heading"]),
     p = {
         ...u.A,
         parse: function (e, t, n) {

@@ -84,14 +84,14 @@ let f = /^[a-z0-9_+\-.#]+$/i,
     S = new Set(["*", "_", "~", "|", "\\"]),
     N = {},
     C = {};
-for (let e in E.A.RULES) {
+for (let e in E.Ay.RULES) {
     if (!(e in T))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = T[e];
-    "skip" !== t.type && (N[e] = R(E.A.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (C[e] = R("text" === e ? A.Ay : E.A.RULES[e]));
+    "skip" !== t.type && (N[e] = R(E.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (C[e] = R("text" === e ? A.Ay : E.Ay.RULES[e]));
 }
 function R(e) {
     r()(null != e.parse, "Slate: rule must have a parse function");
