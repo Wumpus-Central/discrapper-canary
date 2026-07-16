@@ -1,6 +1,8 @@
 _.exports = {
     jE: "modalContent__57752",
     oW: "editingContainer__57752",
+    xi: "keyboardHint__57752",
+    p0: "keyboardHintDisabled__57752",
     Un: "errorContainer__57752",
     Sl: "image__57752",
     hh: "rotationSupported__57752",

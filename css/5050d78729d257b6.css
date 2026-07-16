@@ -91,6 +91,25 @@
     }
 }
 
+.keyboardHint__57752 {
+    align-items: center;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: calc(var(--space-4)*-1);
+    padding-top: var(--space-8);
+    row-gap: 0;
+    transition: opacity 50ms ease-in
+}
+
+.keyboardHint__57752.keyboardHintDisabled__57752 {
+    opacity: .3;
+    transition: opacity .15s ease-out
+}
+
 .errorContainer__57752 {
     align-items: center;
     display: flex;
