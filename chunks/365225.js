@@ -18,8 +18,8 @@ var r = s(627968),
     w = s(275538),
     E = s(163050),
     R = s(139286),
-    S = s(15552),
-    P = s(854378),
+    P = s(15552),
+    S = s(854378),
     x = s(952116),
     k = s(572469),
     y = s(557722),
@@ -146,7 +146,7 @@ class G extends n.PureComponent {
                   })
                 : (0, p.A)({ title: I.intl.string(I.t.f5Pi7A), subtitle: I.intl.format(I.t["6u5hQ9"], { email: e }) });
         } catch (e) {
-            let t = (0, S.p)(e);
+            let t = (0, P.p)(e);
             this.setState({ errors: t });
         }
     };
@@ -155,7 +155,7 @@ class G extends n.PureComponent {
             e = !this.hasError("email") && this.hasError("password");
         return (0, r.jsx)("div", {
             className: O.Eh,
-            children: (0, r.jsxs)(P.eB, {
+            children: (0, r.jsxs)(S.eB, {
                 children: [
                     (0, r.jsx)(b.A, {
                         alpha2: t.alpha2,
@@ -173,7 +173,7 @@ class G extends n.PureComponent {
                         autoFocus: !e,
                         required: !0,
                     }),
-                    (0, r.jsx)(P.pd, {
+                    (0, r.jsx)(S.pd, {
                         label: I.intl.string(I.t["CIGa+7"]),
                         error: this.renderError("password"),
                         onChange: (t) => this.setState({ password: t }),
@@ -246,7 +246,6 @@ class G extends n.PureComponent {
                 this.handleReset();
             },
             width: "100%",
-            headerAlignStart: !0,
         });
     }
     renderDisabledAccount() {
@@ -316,7 +315,7 @@ class G extends n.PureComponent {
         try {
             await m.A.login({ login: this.getFullLogin(), password: e, undelete: s, isMultiAccount: !0 });
         } catch (e) {
-            let t = (0, S.p)(e);
+            let t = (0, P.p)(e);
             this.setState({ errors: t });
         }
     };
