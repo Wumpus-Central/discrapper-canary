@@ -2953,6 +2953,7 @@ let sp = (e) => {
                                         expressionSourceGuild: t,
                                         hasJoinedExpressionSourceGuild: f,
                                         isDisplayingJoinGuildButtonInPopout: L,
+                                        closePopout: r,
                                     }),
                                     !f &&
                                         (0, l.jsxs)(l.Fragment, {

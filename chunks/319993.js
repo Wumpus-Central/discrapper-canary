@@ -188,6 +188,7 @@ function W(e) {
                                               expressionSourceGuild: B,
                                               hasJoinedExpressionSourceGuild: f,
                                               isDisplayingJoinGuildButtonInPopout: G,
+                                              closePopout: u,
                                           }),
                                       }),
                                       (0, r.jsx)(j, { buttonType: L, discoverableGuildId: p?.id, closePopout: u }),

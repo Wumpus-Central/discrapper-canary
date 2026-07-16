@@ -97,7 +97,7 @@ function L(e) {
 var k = n(891734),
     M = n(202384),
     P = n(698405),
-    V = n(735438),
+    V = n(435558),
     w = n.n(V),
     U = n(702841),
     G = n(3137),
@@ -172,6 +172,7 @@ function ep(e) {
                               expressionSourceGuild: n,
                               hasJoinedExpressionSourceGuild: l,
                               isDisplayingJoinGuildButtonInPopout: r.type === eo.u.JOIN_GUILD,
+                              closePopout: a,
                           }),
                       }),
                       d &&
