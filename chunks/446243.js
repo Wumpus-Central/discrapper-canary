@@ -1,14 +1,14 @@
 "use strict";
 n.d(t, {
     Xh: () => m,
-    z5: () => R,
+    z5: () => O,
     HW: () => N,
     x2: () => h,
     zK: () => C,
     Ix: () => S,
     zD: () => p,
     tB: () => L,
-    yF: () => O,
+    yF: () => R,
     AQ: () => D,
     TJ: () => f,
 });
@@ -29,19 +29,18 @@ async function A(e, t, n) {
             c = await r.Bo.post({ url: _.Rsh.GUILD_ROOM_CONNECT(e, t), body: { position: d }, rejectWithError: !0 }),
             A = (0, u.S)(c.body);
         if ((a.h.dispatch({ type: "GUILD_ROOM_CONNECT", room: A, guildId: e, pendingPosition: d }), t !== e)) {
-            (0, o.E2)({ guildId: e, channelId: t });
-            let i = A.users.get(l.default.getId());
-            if (null != i) {
+            (0, o.E2)({ guildId: e, channelId: t }), (0, s.hs)(i.w.GUILD_ROOM_JOINED);
+            let r = A.users.get(l.default.getId());
+            if (null != r) {
                 for (let e of [
-                    { updateType: "position", updateReason: "default", position: i.position },
-                    { updateType: "status_id", updateReason: "default", statusId: i.statusId },
-                    { updateType: "status_text", updateReason: "default", statusText: i.statusText },
+                    { updateType: "position", updateReason: "default", position: r.position },
+                    { updateType: "status_id", updateReason: "default", statusId: r.statusId },
+                    { updateType: "status_text", updateReason: "default", statusText: r.statusText },
                 ])
                     (0, o.U8)({ channelId: t, update: e });
-                (0, o.Yv)({ guildId: e, channelId: t, actualSeatPosition: i.position, targetSeatPosition: n });
+                (0, o.Yv)({ guildId: e, channelId: t, actualSeatPosition: r.position, targetSeatPosition: n });
             }
         }
-        (0, s.hs)(i.w.GUILD_ROOM_JOINED);
     } catch (n) {
         a.h.dispatch({ type: "GUILD_ROOM_CONNECT_FAILURE", guildId: e, roomId: t });
     }
@@ -138,11 +137,11 @@ async function C(e, t, n, i) {
         a.h.dispatch({ type: "GUILD_ROOM_NOTE_CREATE_COMPLETE", roomId: t });
     }
 }
-async function O(e, t, n) {
+async function R(e, t, n) {
     await g(e, t, n, { object_type: c.N.NOTE }),
         t !== e && (0, o.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t });
 }
-async function R(e, t) {
+async function O(e, t) {
     let n = await r.Bo.get({ url: _.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
         i = (0, u.S)(n.body);
     a.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
