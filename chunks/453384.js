@@ -3,14 +3,14 @@ var r = a(627968),
     t = a(64700),
     i = a(503698),
     l = a.n(i),
-    o = a(580929),
-    n = a(717421),
+    n = a(580929),
+    o = a(717421),
     c = a(834730),
     d = a(398025),
     h = a(419367),
     m = a(375708),
     u = a(337689);
-let k = t.forwardRef((s, e) => {
+let k = t.forwardRef(function (s, e) {
     let {
             percentComplete: a,
             size: i = 42,
@@ -18,22 +18,22 @@ let k = t.forwardRef((s, e) => {
             overlayText: p,
             overlayTextVariant: x = "text-lg/medium",
             children: v,
-            useAltStyle: g = !1,
+            useAltStyle: f = !1,
         } = s,
-        { strokeWidth: f } = "small" === k ? { strokeWidth: 3 } : { strokeWidth: 4 },
+        { strokeWidth: g } = "small" === k ? { strokeWidth: 3 } : { strokeWidth: 4 },
         N = i / 2,
-        j = i / 2 - f / 2,
+        j = i / 2 - g / 2,
         y = 2 * Math.PI * j,
         b = y - a * y,
         w = t.useMemo(() => ({ strokeDasharray: `${y} ${y}`, strokeDashoffset: b }), [y, b]),
-        { progressTextAnimation: W } = (0, n.z)({ progressTextAnimation: +(null != p && 1 !== a), config: h.N }),
+        { progressTextAnimation: W } = (0, o.z)({ progressTextAnimation: +(null != p && 1 !== a), config: h.N }),
         q = Math.round(100 * a),
-        M = t.useMemo(() => (g ? "rgba(123, 194, 112, 1)" : "var(--status-positive)"), [g]),
-        B = t.useMemo(() => (g ? "rgba(108, 111, 124, 0.24)" : "var(--background-mod-strong)"), [g]);
+        M = t.useMemo(() => (f ? "rgba(123, 194, 112, 1)" : "var(--status-positive)"), [f]),
+        B = t.useMemo(() => (f ? "rgba(108, 111, 124, 0.24)" : "var(--background-mod-strong)"), [f]);
     return (0, r.jsxs)("div", {
         className: u.A7,
         ref: e,
-        style: { width: i, height: i, padding: f + 2 },
+        style: { width: i, height: i, padding: g + 2 },
         role: "progressbar",
         "aria-valuenow": q,
         "aria-valuemin": 0,
@@ -44,8 +44,8 @@ let k = t.forwardRef((s, e) => {
                 className: u.vW,
                 children: [
                     v,
-                    (0, r.jsxs)(o.animated.div, {
-                        style: { opacity: (0, d.a)(W), inset: f },
+                    (0, r.jsxs)(n.animated.div, {
+                        style: { opacity: (0, d.a)(W), inset: g },
                         className: l()(u.rD, u.qk),
                         children: [
                             (0, r.jsx)("div", { className: l()(u.rD, u.LU) }),
@@ -58,10 +58,10 @@ let k = t.forwardRef((s, e) => {
                 className: u.hr,
                 viewBox: `0 0 ${i} ${i}`,
                 children: [
-                    !g &&
+                    !f &&
                         (0, r.jsx)("circle", {
                             className: u.qB,
-                            strokeWidth: f,
+                            strokeWidth: g,
                             fill: "transparent",
                             r: j,
                             cx: N,
@@ -70,7 +70,7 @@ let k = t.forwardRef((s, e) => {
                         }),
                     (0, r.jsx)("circle", {
                         className: u.qB,
-                        strokeWidth: f,
+                        strokeWidth: g,
                         fill: "transparent",
                         r: j,
                         cx: N,
@@ -78,9 +78,9 @@ let k = t.forwardRef((s, e) => {
                         stroke: B,
                     }),
                     (0, r.jsx)("circle", {
-                        className: l()(u.qB, { [u.ee]: g }),
-                        strokeWidth: f,
-                        strokeLinecap: g ? "round" : void 0,
+                        className: l()(u.qB, { [u.ee]: f }),
+                        strokeWidth: g,
+                        strokeLinecap: f ? "round" : void 0,
                         fill: "transparent",
                         r: j,
                         cx: N,

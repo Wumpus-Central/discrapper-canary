@@ -7,10 +7,10 @@ var r = n(17928),
     d = n(742023),
     s = n(401843),
     u = n(616356),
-    o = n(495544),
+    o = n(280450),
     c = n(513963),
-    A = n(951829),
-    f = n(375708);
+    f = n(951829),
+    A = n(375708);
 function p(e, t) {
     let n,
         p,
@@ -31,11 +31,11 @@ function p(e, t) {
     return b
         ? (0, i.jsx)(a.sL, {
               id: "self-stream-hide",
-              label: f.intl.string(f.t.aol7iW),
+              label: A.intl.string(A.t.aol7iW),
               checked: !h,
-              action: () => {
+              action: function () {
                   if (S || h) return m(!h);
-                  (0, l.openModal)((e) => (0, i.jsx)(c.A, { ...e, type: A.f.STREAM, onConfirm: () => m(!h) }));
+                  (0, l.openModal)((e) => (0, i.jsx)(c.A, { ...e, type: f.f.STREAM, onConfirm: () => m(!h) }));
               },
           })
         : null;

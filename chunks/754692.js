@@ -86,7 +86,7 @@ function p(e) {
         m = T ? _.D : "div";
     return (0, i.jsxs)(m, {
         className: u()(I.kL, T && I.b),
-        onClick: () => {
+        onClick: function () {
             T && c();
         },
         children: [

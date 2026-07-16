@@ -15,20 +15,20 @@ function m(e) {
     let { channel: n, themeable: t, whichPopoutIsOpen: m, setWhichPopoutIsOpen: C } = e,
         E = (0, i.useRef)(null),
         p = (0, a.bG)([o.A], () => null != o.A.getPendingNote(n.id)),
-        x = (0, a.bG)([o.A], () => o.A.getNotes(n.id).length >= 20),
-        g = () => {
-            m === d.P.GUILD_ROOM_NOTE ? C?.(void 0) : C?.(d.P.GUILD_ROOM_NOTE);
-        },
-        I = () => {
-            C?.(void 0);
-        };
+        x = (0, a.bG)([o.A], () => o.A.getNotes(n.id).length >= 20);
+    function g() {
+        m === d.P.GUILD_ROOM_NOTE ? C?.(void 0) : C?.(d.P.GUILD_ROOM_NOTE);
+    }
+    function f() {
+        C?.(void 0);
+    }
     return (0, l.jsx)(r.Y, {
         targetElementRef: E,
         position: "top",
         align: "center",
         spacing: 16,
         shouldShow: m === d.P.GUILD_ROOM_NOTE,
-        renderPopout: () => (0, l.jsx)(c.A, { channel: n, onClose: I }),
+        renderPopout: () => (0, l.jsx)(c.A, { channel: n, onClose: f }),
         children: () =>
             (0, l.jsx)(u.l, {
                 ref: E,

@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(280450),
     O = n(183555),
     L = n(679492),
-    D = n(922016),
-    y = n(403777),
+    y = n(922016),
+    D = n(403777),
     v = n(462887),
     b = n(334295),
     M = n(363195),
@@ -57,21 +57,7 @@ function W(e) {
         h = (0, o.bG)([M.A], () => M.A.theme),
         I = (0, v.M)(h) ? !(0, v.M)(A) : (0, v.M)(A),
         f = r.useRef(null);
-    r.useEffect(() => {
-        d?.(f?.current);
-    }, [f, d]),
-        r.useEffect(() => {
-            function e(e) {
-                e.key === B.dh.ESCAPE && (e.stopPropagation(), _());
-            }
-            return (
-                document.addEventListener("keydown", e),
-                () => {
-                    document.removeEventListener("keydown", e);
-                }
-            );
-        }, [u, _]);
-    let p = async (e) => {
+    async function p(e) {
         if (null == e) return;
         s === k.dS.AVATAR
             ? c({ action: "SEND_REACT_AVATAR" })
@@ -120,17 +106,33 @@ ${a}`;
             });
         } catch (e) {}
         E(k.AQ.REACT);
-    };
-    return (0, i.jsx)(b.A, {
-        headerClassName: I ? j.X : void 0,
-        guildId: n ?? void 0,
-        closePopout: V.tE,
-        onSelectEmoji: async (e) => {
-            let { emoji: t, willClose: n } = e;
-            await p(t), n && (_(), u?.());
-        },
-        pickerIntention: F.EmojiIntention.PROFILE,
-    });
+    }
+    return (
+        r.useEffect(() => {
+            d?.(f?.current);
+        }, [f, d]),
+        r.useEffect(() => {
+            function e(e) {
+                e.key === B.dh.ESCAPE && (e.stopPropagation(), _());
+            }
+            return (
+                document.addEventListener("keydown", e),
+                () => {
+                    document.removeEventListener("keydown", e);
+                }
+            );
+        }, [u, _]),
+        (0, i.jsx)(b.A, {
+            headerClassName: I ? j.X : void 0,
+            guildId: n ?? void 0,
+            closePopout: V.tE,
+            onSelectEmoji: async (e) => {
+                let { emoji: t, willClose: n } = e;
+                await p(t), n && (_(), u?.());
+            },
+            pickerIntention: F.EmojiIntention.PROFILE,
+        })
+    );
 }
 var Y = n(478437),
     K = n(305866),
@@ -166,59 +168,59 @@ function ee(e) {
             },
             [A],
         );
+    async function C(e) {
+        if (null == e) return;
+        l === k.dS.AVATAR
+            ? u({ action: "SEND_REPLY_AVATAR" })
+            : l === k.dS.STATUS
+              ? u({ action: "SEND_REPLY_CUSTOM_STATUS" })
+              : u({ action: "SEND_REPLY_ACTIVITY" });
+        let n = (function (e) {
+            let { input: t, username: n, sourceType: i, sourceDetails: r } = e;
+            switch (i) {
+                case k.dS.ACTIVITY:
+                    let a = H.intl.formatToPlainString(H.t.WmvMCo, { username: n }),
+                        s = `
+> ${r}`;
+                    return null != r
+                        ? `${G.c5}${a}*${s}
+${t}`
+                        : `${G.c5}${a}*
+${t}`;
+                case k.dS.AVATAR:
+                    let l = H.intl.formatToPlainString(H.t.lpaBsB, { username: n });
+                    return `${G.c5}${l}*
+${t}`;
+                case k.dS.STATUS:
+                    let o = H.intl.formatToPlainString(H.t.lFXgFV, { username: n }),
+                        d = `
+> ${r}`;
+                    return null != r
+                        ? `${G.c5}${o}*${d}
+${t}`
+                        : `${G.c5}${o}*
+${t}`;
+                default:
+                    (0, P.xb)(i);
+            }
+        })({ input: e, username: U.Ay.getName(t), sourceType: l, sourceDetails: o });
+        h(null);
+        try {
+            await (0, w.p)({
+                userId: t.id,
+                content: n,
+                location: "UserProfileReplyPopout",
+                openChannel: !1,
+                whenReady: !1,
+                entry: E,
+            });
+        } catch (e) {}
+        h(k.AQ.REPLY);
+    }
     r.useEffect(() => {
         d?.(S?.current);
     }, [S, d]);
-    let C = async (e) => {
-            if (null == e) return;
-            l === k.dS.AVATAR
-                ? u({ action: "SEND_REPLY_AVATAR" })
-                : l === k.dS.STATUS
-                  ? u({ action: "SEND_REPLY_CUSTOM_STATUS" })
-                  : u({ action: "SEND_REPLY_ACTIVITY" });
-            let n = (function (e) {
-                let { input: t, username: n, sourceType: i, sourceDetails: r } = e;
-                switch (i) {
-                    case k.dS.ACTIVITY:
-                        let a = H.intl.formatToPlainString(H.t.WmvMCo, { username: n }),
-                            s = `
-> ${r}`;
-                        return null != r
-                            ? `${G.c5}${a}*${s}
-${t}`
-                            : `${G.c5}${a}*
-${t}`;
-                    case k.dS.AVATAR:
-                        let l = H.intl.formatToPlainString(H.t.lpaBsB, { username: n });
-                        return `${G.c5}${l}*
-${t}`;
-                    case k.dS.STATUS:
-                        let o = H.intl.formatToPlainString(H.t.lFXgFV, { username: n }),
-                            d = `
-> ${r}`;
-                        return null != r
-                            ? `${G.c5}${o}*${d}
-${t}`
-                            : `${G.c5}${o}*
-${t}`;
-                    default:
-                        (0, P.xb)(i);
-                }
-            })({ input: e, username: U.Ay.getName(t), sourceType: l, sourceDetails: o });
-            h(null);
-            try {
-                await (0, w.p)({
-                    userId: t.id,
-                    content: n,
-                    location: "UserProfileReplyPopout",
-                    openChannel: !1,
-                    whenReady: !1,
-                    entry: E,
-                });
-            } catch (e) {}
-            h(k.AQ.REPLY);
-        },
-        R = { [Q.h5]: l === k.dS.STATUS, [Q.my]: l === k.dS.AVATAR, [Q.Eb]: l === k.dS.ACTIVITY };
+    let R = { [Q.h5]: l === k.dS.STATUS, [Q.my]: l === k.dS.AVATAR, [Q.Eb]: l === k.dS.ACTIVITY };
     return (0, i.jsx)(K.l, {
         ref: S,
         onKeyDown: N,
@@ -280,11 +282,11 @@ function en(e) {
             interactionSourceId: _,
             interactionPopoutTargetRef: E,
         } = (0, L.Pq)(),
-        A = [et.d.MODAL, et.d.MODAL_V2].includes(a) ? (0, y.n)(t.id, n) : void 0,
+        A = [et.d.MODAL, et.d.MODAL_V2].includes(a) ? (0, D.n)(t.id, n) : void 0,
         h = c === o.sourceType && d === k.AQ.REACT,
         I = c === o.sourceType && d === k.AQ.REPLY,
         f = (h || I) && _ === o.sourceId;
-    return (0, i.jsx)(D.Y, {
+    return (0, i.jsx)(y.Y, {
         targetElementRef: E ?? void 0,
         renderPopout: (e) => {
             let { setPopoutRef: l } = e;
@@ -314,7 +316,7 @@ function en(e) {
         children: l,
     });
 }
-var ei = n(990078),
+var ei = n(866665),
     er = n(22231),
     ea = n(241326),
     es = n(101555),
@@ -489,8 +491,8 @@ let e_ = r.forwardRef(function (e, t) {
             N = 1.25 * (null != n),
             C = 36 + N,
             R = 144 + N,
-            D = r.useRef(null),
             y = r.useRef(null),
+            D = r.useRef(null),
             v = r.useRef(null),
             b = r.useRef(C),
             M = r.useRef(R),
@@ -503,7 +505,7 @@ let e_ = r.forwardRef(function (e, t) {
             [W] = r.useState(() => new d.Ep());
         r.useEffect(() => () => W.stop(), [W]),
             r.useEffect(() => {
-                g?.onInteractionPopoutTargetRefChange(D);
+                g?.onInteractionPopoutTargetRefChange(y);
             }, [g]);
         let [Y, K] = (0, h.z)(() => ({ maxHeight: `${b.current}px`, config: { clamp: !0, duration: 150 } }));
         function $(e) {
@@ -518,8 +520,8 @@ let e_ = r.forwardRef(function (e, t) {
                 j ? x(!e) : W.start(e ? 300 : 150, () => x(!e)));
         }
         r.useLayoutEffect(() => {
-            if ((w(!0), null == y.current || null == v.current || !B)) return;
-            let e = y.current.getBoundingClientRect().height,
+            if ((w(!0), null == D.current || null == v.current || !B)) return;
+            let e = D.current.getBoundingClientRect().height,
                 t = v.current.getBoundingClientRect().height;
             V(t > e),
                 (b.current = e),
@@ -542,7 +544,7 @@ let e_ = r.forwardRef(function (e, t) {
                       })
                     : null,
             X = null == q || "" === a ? Z : q,
-            Q = (0, i.jsxs)("div", { ref: y, className: ec.Qs, children: [z, X] }),
+            Q = (0, i.jsxs)("div", { ref: D, className: ec.Qs, children: [z, X] }),
             J = (0, i.jsxs)("div", { ref: v, className: s()(ec.Qs, ec.m2), children: [z, X] }),
             ee = (0, i.jsx)("div", {
                 ref: t,
@@ -562,7 +564,7 @@ let e_ = r.forwardRef(function (e, t) {
                   children: [
                       et,
                       (0, i.jsxs)("div", {
-                          ref: D,
+                          ref: y,
                           className: s()(ec.kL, u),
                           onMouseEnter: () => {
                               S({ action: "HOVER_CUSTOM_STATUS" }), $(!0);
@@ -594,13 +596,13 @@ let e_ = r.forwardRef(function (e, t) {
                   children: [
                       et,
                       (0, i.jsxs)("div", {
-                          ref: D,
+                          ref: y,
                           className: s()(ec.kL, u),
                           onFocus: () => {
                               A(!0), $(!0);
                           },
                           onBlur: (e) => {
-                              D.current?.contains(e.relatedTarget) || (A(!1), $(!1));
+                              y.current?.contains(e.relatedTarget) || (A(!1), $(!1));
                           },
                           onMouseEnter: () => {
                               S({ action: "HOVER_CUSTOM_STATUS" }), A(!0), $(!0);

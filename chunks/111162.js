@@ -1,52 +1,52 @@
 "use strict";
-let i, r, s, a;
-n.r(t), n.d(t, { default: () => v }), n(938796);
-var o = n(158390),
-    l = n(247775),
-    u = n(17928),
-    c = n(636537),
-    d = n(506774),
-    _ = n(228366),
-    h = n(926919),
-    f = n(927813),
-    p = n(38405),
-    E = n(652215);
-let m =
-        ((i = `${location.protocol}//${location.host}/__development/source_maps`),
-        (r = null),
-        (s = new o.A(5 * f.A.Millis.SECOND, +f.A.Millis.MINUTE, !0)),
-        (a = () => {
-            c.Bo.put({ url: i, headers: { Authorization: l.getToken() }, oldFormErrors: !0, rejectWithError: !0 }).then(
+n.r(t), n.d(t, { default: () => S }), n(938796);
+var i = n(158390),
+    r = n(247775),
+    a = n(17928),
+    s = n(636537),
+    l = n(506774),
+    o = n(228366),
+    d = n(926919),
+    c = n(927813),
+    u = n(38405),
+    _ = n(652215);
+let E = (() => {
+        let e = `${location.protocol}//${location.host}/__development/source_maps`,
+            t = null,
+            n = new i.A(5 * c.A.Millis.SECOND, +c.A.Millis.MINUTE, !0);
+        function a() {
+            s.Bo.put({ url: e, headers: { Authorization: r.getToken() }, oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
                     401 === e.status || 403 === e.status
-                        ? ((r = null), (0, h.x)({ sourceMapsEnabled: !1 }))
+                        ? ((t = null), (0, d.x)({ sourceMapsEnabled: !1 }))
                         : 200 !== e.status
-                          ? (r = setTimeout(a, s.fail()))
-                          : (s.succeed(),
-                            (r = setTimeout(a, e.body.sourceMapCookieTTLSeconds * f.A.Millis.SECOND * 0.75)));
+                          ? (t = setTimeout(a, n.fail()))
+                          : (n.succeed(),
+                            (t = setTimeout(a, e.body.sourceMapCookieTTLSeconds * c.A.Millis.SECOND * 0.75)));
                 },
                 () => {
-                    r = setTimeout(a, s.fail());
+                    t = setTimeout(a, n.fail());
                 },
             );
-        }),
-        {
-            set: (e) => {
-                e !== (null != r) &&
-                    (e
-                        ? (r = setTimeout(a, 0))
-                        : (clearTimeout(r),
-                          (r = null),
-                          c.Bo.del({
-                              url: i,
-                              headers: { Authorization: l.getToken() },
+        }
+        return {
+            set: function (n) {
+                n !== (null != t) &&
+                    (n
+                        ? (t = setTimeout(a, 0))
+                        : (clearTimeout(t),
+                          (t = null),
+                          s.Bo.del({
+                              url: e,
+                              headers: { Authorization: r.getToken() },
                               oldFormErrors: !0,
                               rejectWithError: !0,
                           })));
             },
-        }),
-    g = "DeveloperOptionsStore",
-    A = {
+        };
+    })(),
+    A = "DeveloperOptionsStore",
+    h = {
         trace: !1,
         canary: !1,
         logGatewayEvents: !1,
@@ -66,22 +66,22 @@ let m =
         alertStartupMetrics: !1,
         logQuestEvents: !1,
     },
-    I = { ...A },
-    T = "DeveloperOptionsRoutingKey",
-    S = [];
-function y(e) {
-    (I = { ...A, ...I, ...e }), m.set(I.sourceMapsEnabled), d.w.set(g, I);
+    I = { ...h },
+    f = "DeveloperOptionsRoutingKey",
+    p = [];
+function T(e) {
+    (I = { ...h, ...I, ...e }), E.set(I.sourceMapsEnabled), l.w.set(A, I);
 }
-function C(e) {
-    (S = e), d.w.set(T, S);
+function m(e) {
+    (p = e), l.w.set(f, p);
 }
-class N extends u.Ay.Store {
+class g extends a.Ay.Store {
     static displayName = "DeveloperOptionsStore";
     initialize() {
-        let e = d.w.get(g);
-        null != e && (I = { ...A, ...e });
-        let t = d.w.get(T);
-        null != t && (S = t);
+        let e = l.w.get(A);
+        null != e && (I = { ...h, ...e });
+        let t = l.w.get(f);
+        null != t && (p = t);
     }
     get isTracingRequests() {
         return I.trace;
@@ -146,27 +146,27 @@ class N extends u.Ay.Store {
         );
     }
     get routingKeyTags() {
-        return S;
+        return p;
     }
     getRoutingKeyHeaderValue() {
-        return 0 === S.length ? null : S.join(",");
+        return 0 === p.length ? null : p.join(",");
     }
 }
-let v = new N(_.h, {
+let S = new g(o.h, {
     LOGOUT: function (e) {
-        y(A), C([]);
+        T(h), m([]);
     },
     CONNECTION_OPEN: function (e) {
-        let t = ((e.user.flags ?? 0) & E.nhx.STAFF) === E.nhx.STAFF,
+        let t = ((e.user.flags ?? 0) & _.nhx.STAFF) === _.nhx.STAFF,
             n = t || null != e.user.personal_connection_id;
-        t && m.set(I.sourceMapsEnabled), p.A.setTags({ isStaff: n.toString() });
+        t && E.set(I.sourceMapsEnabled), u.A.setTags({ isStaff: n.toString() });
     },
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
         let { settings: t } = e;
-        y(t);
+        T(t);
     },
     DEVELOPER_OPTIONS_SET_ROUTING_KEY: function (e) {
         let { tags: t } = e;
-        C(t);
+        m(t);
     },
 });

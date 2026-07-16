@@ -111,7 +111,7 @@ let w = function (e) {
         : (0, a.jsx)(v.f5, {
               value: N,
               children: (0, a.jsx)("form", {
-                  onSubmit: (e) => {
+                  onSubmit: function (e) {
                       e.preventDefault();
                       let a = w !== h,
                           i = void 0 !== b;

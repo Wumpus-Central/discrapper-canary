@@ -16,9 +16,9 @@ function A(t, n, A) {
         b = (0, l.bG)([o.Ay], () => o.Ay.getGuildScheduledEvent(t), [t]),
         E = y(b);
     if (null == t || !E || !g || b?.entity_type === u.Ps.EXTERNAL) return null;
-    let h = () => {
+    function h() {
         A?.isGuildStageVoice() ? (0, c.OE)(A) : null != t && d.default.endEvent(t, n.id), (0, a.closeAllModals)();
-    };
+    }
     return (0, e.jsx)(r.Dr, {
         id: p.intl.string(p.t.qaYzPA),
         label: p.intl.string(p.t.qaYzPA),

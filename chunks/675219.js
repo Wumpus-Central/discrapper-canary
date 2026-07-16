@@ -12,16 +12,16 @@ var l = n(627968),
     C = n(75304),
     h = n(145659),
     _ = n(241440),
-    m = n(194247),
-    S = n(982291),
+    S = n(157432),
+    m = n(982291),
     I = n(291767),
-    p = n(331611),
-    f = n(169797),
+    f = n(331611),
+    p = n(169797),
     A = n(652215);
 n(322076);
 var N = n(202541),
-    T = n(375708);
-let g = {
+    g = n(375708);
+let T = {
         [C.C.ORB_CHECKOUT]: { allowGiftCustomization: !1, excludePaymentAuthSteps: !0, predicateStepType: "unified" },
         [C.C.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
         [C.C.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
@@ -40,8 +40,10 @@ let g = {
                 let { UnifiedCheckoutInstance: t } = e;
                 return { default: t };
             }),
-    ),
-    R = (e) => (0, l.jsx)(y, { ...e });
+    );
+function R(e) {
+    return (0, l.jsx)(y, { ...e });
+}
 class P {
     checkoutFlow;
     checkoutFlowConfiguration;
@@ -50,7 +52,7 @@ class P {
     override_analytic_params;
     constructor({ checkoutFlow: e }) {
         this.checkoutFlow = e;
-        const t = m.Y[e];
+        const t = S.Y[e];
         if (
             !(function (e, t) {
                 return null != t && t.implemented && t.flowType === e;
@@ -59,7 +61,7 @@ class P {
             throw Error(`Checkout flow ${e} is not implemented`);
         (this.checkoutFlowConfiguration = t),
             (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG),
-            (this.internalCheckoutFlowControls = g[e]),
+            (this.internalCheckoutFlowControls = T[e]),
             (this.override_analytic_params =
                 this.tenantCheckoutFlowConfig.TENANT_PROVIDER_CONFIGS.overrideAnalyticParams);
     }
@@ -85,7 +87,7 @@ class P {
                 ? I.r3
                 : {
                       key: null,
-                      renderStep: (e) => (0, l.jsx)(p.e, { paymentModalStepProps: e, defaultStep: u.pn.REVIEW }),
+                      renderStep: (e) => (0, l.jsx)(f.e, { paymentModalStepProps: e, defaultStep: u.pn.REVIEW }),
                   };
     }
     getAddPaymentStepConfig(e) {
@@ -95,7 +97,7 @@ class P {
             return {
                 key: u.pn.ADD_PAYMENT_STEPS,
                 renderStep: (e) =>
-                    (0, l.jsx)(S.c, {
+                    (0, l.jsx)(m.c, {
                         checkoutFlow: this.checkoutFlow,
                         paymentModalStepProps: e,
                         returnStep: u.pn.REVIEW,
@@ -112,7 +114,7 @@ class P {
             return {
                 key: u.pn.GIFT_CUSTOMIZATION,
                 renderStep: (e) => (0, l.jsx)(r, { ...e }),
-                options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => T.intl.string(T.t["W685+b"]) },
+                options: { modalSizeGetter: () => "xl", useBreadcrumbLabel: () => g.intl.string(g.t["W685+b"]) },
             };
     }
     getReviewStepConfig() {
@@ -120,7 +122,7 @@ class P {
         return {
             key: u.pn.REVIEW,
             renderStep: (t) => (0, l.jsx)(e, { ...t }),
-            options: { useBreadcrumbLabel: () => T.intl.string(T.t.QBnNHq) },
+            options: { useBreadcrumbLabel: () => g.intl.string(g.t.QBnNHq) },
         };
     }
     createDefinedStepConfigsArray(e) {
@@ -191,30 +193,30 @@ class P {
                     skuProductLine: E,
                     discoverySessionId: C,
                     applicationId: h,
-                    activeSubscription: m,
+                    activeSubscription: S,
                 },
-                unifiedCheckoutProviderProps: { analyticsLocations: S, analyticsSourceLocation: I },
-                forwardedPaymentModalProps: { analyticsObject: p, ...A } = {},
+                unifiedCheckoutProviderProps: { analyticsLocations: m, analyticsSourceLocation: I },
+                forwardedPaymentModalProps: { analyticsObject: f, ...A } = {},
                 tenantParams: N,
             } = e,
-            T = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
-            g = arguments.length > 2 ? arguments[2] : void 0,
+            g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
+            T = arguments.length > 2 ? arguments[2] : void 0,
             y = arguments.length > 3 ? arguments[3] : void 0,
             P = { current: y ?? (0, i.A)() },
             O = { current: null },
-            { modalKey: v } = g,
+            { modalKey: v } = T,
             x = this.generateRenderHeader(),
             U = h ?? this.getApplicationId(d),
             L = !!(null != t && t.isGift),
-            w = !1,
-            j = {
+            j = !1,
+            w = {
                 ...A,
                 checkoutFlow: this.checkoutFlow,
                 checkoutFlowConfiguration: this.checkoutFlowConfiguration,
                 tenantCheckoutFlowConfig: this.tenantCheckoutFlowConfig,
                 stepConfigs: this.generateCheckoutStepConfigs({ isGift: L }),
                 onComplete: (e) => {
-                    null != u && u(e), (w = !0);
+                    null != u && u(e), (j = !0);
                 },
                 onClose: c,
                 renderHeader: x,
@@ -225,14 +227,14 @@ class P {
                     (P.current = e.id), (O.current = e);
                 },
                 discoverySessionId: C,
-                activeSubscription: m ?? null,
+                activeSubscription: S ?? null,
                 applicationId: U,
-                analyticsLocations: S,
-                analyticsObject: p,
+                analyticsLocations: m,
+                analyticsObject: f,
                 analyticsSourceLocation: I,
                 giftContextProps: t,
             };
-        if ("modal" === T)
+        if ("modal" === g)
             return (0, o.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
@@ -243,18 +245,18 @@ class P {
                         n.e("14648"),
                         n.e("8430"),
                     ]).then(n.bind(n, 427325));
-                    return (t) => (0, l.jsx)(e, { ...j, renderModalProps: t });
+                    return (t) => (0, l.jsx)(e, { ...w, renderModalProps: t });
                 },
                 {
-                    ...g,
+                    ...T,
                     onCloseRequest: () => {
-                        null != g.onCloseRequest && g.onCloseRequest(w, P.current),
-                            g.skipCloseModalOnCloseRequest || (0, o.closeModal)(v);
+                        null != T.onCloseRequest && T.onCloseRequest(j, P.current),
+                            T.skipCloseModalOnCloseRequest || (0, o.closeModal)(v);
                     },
                     onCloseCallback: () => {
-                        a.h.dispatch({ type: "CHECKOUT_MODAL_CLOSE", didSucceed: w }),
-                            w ||
-                                ((0, _.S)({ checkoutSucceeded: w, order: O.current }),
+                        a.h.dispatch({ type: "CHECKOUT_MODAL_CLOSE", didSucceed: j }),
+                            j ||
+                                ((0, _.S)({ checkoutSucceeded: j, order: O.current }),
                                 this.trackPaymentFlowCanceled({
                                     loadId: P.current,
                                     skuId: d,
@@ -262,14 +264,14 @@ class P {
                                     applicationId: U,
                                     discoverySessionId: C,
                                     analyticsLocation: A.analyticsLocation,
-                                    analyticsLocations: S,
-                                    analyticsObject: p,
+                                    analyticsLocations: m,
+                                    analyticsObject: f,
                                     analyticsSourceLocation: I,
                                     isGift: L,
                                     eligibleForTrial: null != A.trialId,
                                 })),
-                            null != g.onCloseCallback && g.onCloseCallback(w),
-                            null != c && c(w, d);
+                            null != T.onCloseCallback && T.onCloseCallback(j),
+                            null != c && c(j, d);
                     },
                     modalKey: v,
                 },
@@ -278,8 +280,8 @@ class P {
             let e = A.paymentModalOnClose ?? c,
                 t = { transitionState: s.ip.ENTERED, onClose: () => (null != e && e(!1), Promise.resolve()) };
             return (0, l.jsx)(r.Suspense, {
-                fallback: (0, l.jsx)(f.KT, {}),
-                children: (0, l.jsx)(R, { ...j, paymentModalOnClose: e, renderModalProps: t }),
+                fallback: (0, l.jsx)(p.KT, {}),
+                children: (0, l.jsx)(R, { ...w, paymentModalOnClose: e, renderModalProps: t }),
             });
         }
     }

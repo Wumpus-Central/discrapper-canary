@@ -4,7 +4,7 @@ var i = n(627968),
     a = n(503698),
     r = n.n(a),
     s = n(17928),
-    u = n(990078),
+    u = n(866665),
     o = n(460905),
     c = n(110384),
     d = n(365199),
@@ -60,7 +60,7 @@ function I(t) {
                       delay: 0,
                       ariaHidden: !0,
                       children: (0, i.jsx)(S.$n, {
-                          onClick: () => {
+                          onClick: function () {
                               j(I),
                                   n === f.dS.AVATAR
                                       ? k({ action: "PRESS_REACT_AVATAR" })
@@ -82,7 +82,7 @@ function I(t) {
                       delay: 0,
                       ariaHidden: !0,
                       children: (0, i.jsx)(S.$n, {
-                          onClick: () => {
+                          onClick: function () {
                               j(I),
                                   n === f.dS.AVATAR
                                       ? k({ action: "PRESS_REPLY_AVATAR" })

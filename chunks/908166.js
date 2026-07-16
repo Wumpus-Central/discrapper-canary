@@ -2,7 +2,7 @@ n.d(t, { x: () => a });
 var l = n(64700),
     i = n(655857),
     r = n(6938);
-let a = () => {
+function a() {
     let { displayCurrency: e } = (0, i.Jn)(),
         {
             selectedSkuId: t,
@@ -21,4 +21,4 @@ let a = () => {
         createSetupIntent: l.useCallback(() => s(u, { forceRecreate: !0 }), [s, u]),
         createSetupIntentDeduped: l.useCallback(() => s(u), [s, u]),
     };
-};
+}

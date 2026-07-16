@@ -135,8 +135,9 @@ let k = a.Ay.connectStores([m.A, l.Ay, L.A, g.A, C.A, O.Ay, R.A, _.A, S.Ay, A.A]
         maxY: k.height,
         theme: g.A.theme,
         dockedRect: R.A.getDockedRect(t?.id ?? ""),
-        getDockedRectPositionY: (e) =>
-            U && (0, T.q)({ withTitleBar: i, isFullScreen: x }) ? e - (0, E.LI)({ isPopoutWindow: U }) : e,
+        getDockedRectPositionY: function (e) {
+            return U && (0, T.q)({ withTitleBar: i, isFullScreen: x }) ? e - (0, E.LI)({ isPopoutWindow: U }) : e;
+        },
         appContext: F,
         roundCorners: !X,
         windowSize: k,

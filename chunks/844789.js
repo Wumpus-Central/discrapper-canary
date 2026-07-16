@@ -11,7 +11,7 @@ var l,
     m = n(383233),
     h = n(298236),
     p = n(953756),
-    x = n(735438),
+    x = n(435558),
     f = n(862482),
     g = n(980707),
     j = n(477782),
@@ -745,7 +745,7 @@ function e5(e) {
                 ];
             })(e.type, t, n);
         },
-        renderIcon: (e, t) => {
+        renderIcon: function (e, t) {
             let n = t === eh.PILL_ICON_SIZE;
             if (e?.type === B.iw.USER) {
                 let l = ee.default.getUser(e.value);
@@ -766,7 +766,7 @@ function e5(e) {
                     : (0, i.jsx)(eX.i, { size: "custom", color: n.colorString ?? U.TpD, height: t, width: t });
             }
         },
-        renderOptionLabel: (e) => {
+        renderOptionLabel: function (e) {
             let t = null;
             if (e.type === B.iw.USER) {
                 let n = ee.default.getUser(e.value);
@@ -1005,7 +1005,7 @@ var to = n(534890),
     tc = n(460905),
     td = n(109112),
     tm = n(664121),
-    th = n(534514),
+    th = n(297264),
     tp = n(602853),
     tx = n(222713),
     tf = n(783465),
@@ -1267,7 +1267,7 @@ var tb = n(665260),
     tP = n(294520),
     tk = n(448381),
     tM = n(144165),
-    tU = n(990078),
+    tU = n(866665),
     tD = n(891694),
     tw = n(552437);
 function tF(e) {
@@ -1412,7 +1412,7 @@ function t$(e) {
     return (0, i.jsx)("div", { className: u()({ [tq.f]: n === d.C8.LARGE, [tq.y]: t }) });
 }
 var tJ = n(46054),
-    tZ = n(465364),
+    tZ = n(521981),
     tQ = n(85092);
 let t0 = {
         SIZE: { default: void 0, reduced: tQ.k2 },
@@ -1463,9 +1463,8 @@ function ne(e) {
         { gifAutoPlay: o } = (0, tK.X)(),
         [c, d] = s.useState(n),
         [m, h] = s.useState(n);
-    n !== c && (d(n), h(n));
-    let p = (e) =>
-        "IMAGE" !== r
+    function p(e) {
+        return "IMAGE" !== r
             ? (0, i.jsx)(tF, {
                   className: t7.Dg,
                   media: t,
@@ -1495,15 +1494,19 @@ function ne(e) {
                   reducedSizeAltTextButton: !0,
                   srcIsAnimated: a,
               });
-    return n
-        ? (0, i.jsx)(tS.Ay, {
-              type: tS.Ay.Types.ATTACHMENT,
-              reason: tE.Oc.SPOILER,
-              obscured: m,
-              onToggleObscurity: () => h((e) => !e),
-              children: (e) => p(e),
-          })
-        : p(!1);
+    }
+    return (
+        n !== c && (d(n), h(n)),
+        n
+            ? (0, i.jsx)(tS.Ay, {
+                  type: tS.Ay.Types.ATTACHMENT,
+                  reason: tE.Oc.SPOILER,
+                  obscured: m,
+                  onToggleObscurity: () => h((e) => !e),
+                  children: (e) => p(e),
+              })
+            : p(!1)
+    );
 }
 var nt = n(901252);
 function nn() {

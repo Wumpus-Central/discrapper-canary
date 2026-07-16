@@ -1,41 +1,41 @@
-t.d(l, { W: () => f });
-var n = t(627968),
-    a = t(64700),
-    u = t(17928),
-    i = t(691540),
-    r = t(857250),
-    s = t(97483),
-    d = t(192308),
-    c = t(730852),
-    o = t(734057),
-    p = t(624458),
-    h = t(513461),
-    R = t(375708);
-function f(e, l, f, y) {
-    let [k, C] = a.useState(!1),
-        b = (0, u.bG)([o.A], () => o.A.getChannel(y)),
-        w = a.useCallback(() => {
-            (0, i.P0)((0, r.o)(R.intl.string(R.t.R0RpRX), s.Ck.FAILURE));
+n.d(l, { W: () => R });
+var t = n(627968),
+    u = n(64700),
+    a = n(17928),
+    i = n(691540),
+    r = n(857250),
+    s = n(97483),
+    c = n(192308),
+    d = n(730852),
+    o = n(734057),
+    p = n(624458),
+    f = n(513461),
+    h = n(375708);
+function R(e, l, R, y) {
+    let [k, C] = u.useState(!1),
+        b = (0, a.bG)([o.A], () => o.A.getChannel(y)),
+        w = u.useCallback(() => {
+            (0, i.P0)((0, r.o)(h.intl.string(h.t.R0RpRX), s.Ck.FAILURE));
         }, []),
-        A = a.useCallback(async () => {
-            if (!k && null != e && null != l && null != f) {
-                if (null != b) return void c.default.selectPrivateChannel(b.id);
+        A = u.useCallback(async () => {
+            if (!k && null != e && null != l && null != R) {
+                if (null != b) return void d.default.selectPrivateChannel(b.id);
                 C(!0);
                 try {
-                    await p.A.createOrEnterJoinRequestInterview(f);
+                    await p.A.createOrEnterJoinRequestInterview(R);
                 } catch {
                     w();
                 } finally {
                     C(!1);
                 }
             }
-        }, [e, f, b, w, k, l]);
+        }, [e, R, b, w, k, l]);
     return {
-        approveRequest: async () => {
-            if (!k && null != e && null != l && null != f) {
+        approveRequest: async function n() {
+            if (!k && null != e && null != l && null != R) {
                 C(!0);
                 try {
-                    await p.A.updateGuildJoinRequest(e, l, f, h.B5.APPROVED);
+                    await p.A.updateGuildJoinRequest(e, l, R, f.B5.APPROVED);
                 } catch {
                     w();
                 } finally {
@@ -43,14 +43,14 @@ function f(e, l, f, y) {
                 }
             }
         },
-        rejectRequest: () => {
+        rejectRequest: function () {
             null != e &&
                 null != l &&
-                null != f &&
-                (0, d.openModalLazy)(async () => {
-                    let { default: a } = await t.e("70685").then(t.bind(t, 867276));
-                    return (t) =>
-                        (0, n.jsx)(a, { modalProps: t, guildId: e, userId: l, guildJoinRequestId: f, onError: w });
+                null != R &&
+                (0, c.openModalLazy)(async () => {
+                    let { default: u } = await n.e("70685").then(n.bind(n, 867276));
+                    return (n) =>
+                        (0, t.jsx)(u, { modalProps: n, guildId: e, userId: l, guildJoinRequestId: R, onError: w });
                 });
         },
         submitting: k,

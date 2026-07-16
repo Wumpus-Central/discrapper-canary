@@ -3,8 +3,8 @@ var n = l(627968),
     s = l(64700),
     i = l(562708),
     r = l(189213),
-    a = l(17928),
-    u = l(894778),
+    u = l(17928),
+    a = l(894778),
     o = l(287809),
     A = l(174459),
     d = l(975571),
@@ -20,35 +20,35 @@ function b(e) {
         [g, h] = s.useState(null),
         [G, w] = s.useState(!1),
         y = s.useRef(null),
-        N = (0, a.bG)([o.default], () => o.default.getCurrentUser()),
+        N = (0, u.bG)([o.default], () => o.default.getCurrentUser()),
         S = s.useRef(null);
+    async function k(e) {
+        if ((e.preventDefault(), null != b)) {
+            w(!0);
+            try {
+                await c.n7(b, _.JJy.CLAIM_ACCOUNT_MODAL);
+            } catch (e) {
+                null != e.body && null != e.body.date_of_birth
+                    ? (a.A.flowStep(C.do.ANY, C.Ot.AGE_GATE_UNDERAGE),
+                      c.Xv(p.w_.CLAIM_ACCOUNT),
+                      c.$2(p.w_.CLAIM_ACCOUNT),
+                      l())
+                    : e?.body?.username != null
+                      ? h(E.intl.string(E.t["TGg/2k"]))
+                      : h(e?.body.message);
+            }
+            w(!1);
+        }
+    }
     s.useEffect(() => {
-        u.A.flowStep(C.do.ANY, C.Ot.AGE_GATE), A.default.track(_.HAw.OPEN_MODAL, { type: "Claim Age Gate" });
+        a.A.flowStep(C.do.ANY, C.Ot.AGE_GATE), A.default.track(_.HAw.OPEN_MODAL, { type: "Claim Age Gate" });
     }, []),
         s.useEffect(() => {
             N?.nsfwAllowed != null && l();
         }, [N, l]);
-    let k = async (e) => {
-            if ((e.preventDefault(), null != b)) {
-                w(!0);
-                try {
-                    await c.n7(b, _.JJy.CLAIM_ACCOUNT_MODAL);
-                } catch (e) {
-                    null != e.body && null != e.body.date_of_birth
-                        ? (u.A.flowStep(C.do.ANY, C.Ot.AGE_GATE_UNDERAGE),
-                          c.Xv(p.w_.CLAIM_ACCOUNT),
-                          c.$2(p.w_.CLAIM_ACCOUNT),
-                          l())
-                        : e?.body?.username != null
-                          ? h(E.intl.string(E.t["TGg/2k"]))
-                          : h(e?.body.message);
-                }
-                w(!1);
-            }
-        },
-        O = s.useCallback(() => {
-            S.current?.focus();
-        }, [S]);
+    let O = s.useCallback(() => {
+        S.current?.focus();
+    }, [S]);
     return (0, n.jsx)("form", {
         onSubmit: k,
         children: (0, n.jsx)(r.Modal, {

@@ -4,10 +4,10 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(735438),
+    l = n(435558),
     o = n(834730),
     d = n(17928),
-    c = n(990078),
+    c = n(866665),
     u = n(672979),
     _ = n(87664),
     E = n(834757),
@@ -77,8 +77,8 @@ var C = n(748562),
     R = n(47167),
     O = n(734057),
     L = n(864436),
-    D = n(200041),
-    y = n(375708);
+    y = n(200041),
+    D = n(375708);
 function v(e) {
     let {
             stream: t,
@@ -95,10 +95,10 @@ function v(e) {
         E = (0, d.bG)([O.A], () => O.A.getChannel(t.channelId)),
         A = (0, R.Ay)(E),
         h = n?.name === "" ? null : n?.name,
-        I = null != h ? h : y.intl.string(y.t.eXan7B),
+        I = null != h ? h : D.intl.string(D.t.eXan7B),
         f = null != A ? `${I} (${A})` : I,
         p = _ ? f : I;
-    return (0, i.jsx)(D.A, {
+    return (0, i.jsx)(y.A, {
         icon: l ? void 0 : (0, i.jsx)(L.A, { icon: C.U, className: s }),
         text: p,
         tooltipText: c ? void 0 : f,
@@ -168,13 +168,13 @@ function k(e) {
         _ = (0, R.Ay)(t),
         E =
             t.isDM() || t.isGroupDM()
-                ? y.intl.string(y.t["9FaEzi"])
+                ? D.intl.string(D.t["9FaEzi"])
                 : t.isGuildStageVoice()
-                  ? y.intl.string(y.t.QygGCN)
-                  : y.intl.string(y.t.msxteM),
+                  ? D.intl.string(D.t.QygGCN)
+                  : D.intl.string(D.t.msxteM),
         A = null != _ ? `${E} (${_})` : E,
         h = c ? A : E;
-    return (0, i.jsx)(D.A, {
+    return (0, i.jsx)(y.A, {
         icon: (0, i.jsx)(x.A, { size: "custom", color: u, channel: t, className: s()(p.Kk, a) }),
         text: h,
         tooltipText: o ? void 0 : A,
@@ -216,7 +216,7 @@ function B(e) {
     (0, _.A)(t?.id);
     let O = a?.discoverable !== !1 ? a : null,
         L = (0, E.AO)(O),
-        D = r.useMemo(() => {
+        y = r.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: t } = e;
                 return t === G.$pd.CUSTOM_STATUS;
@@ -225,8 +225,8 @@ function B(e) {
             let t = e.state?.trim() ?? null;
             return null == ("" === t ? null : t) && null == e.emoji ? null : e;
         }, [n]),
-        y = (0, A.Uk)("ActivityStatus"),
-        b = r.useMemo(() => (null != D, null), [D, y]),
+        D = (0, A.Uk)("ActivityStatus"),
+        b = r.useMemo(() => (null != y, null), [y, D]),
         M = r.useMemo(
             () =>
                 (0, l.uniqWith)(
@@ -245,14 +245,14 @@ function B(e) {
         w = n?.find((e) => e.name === L?.name),
         x = t?.bot === !0,
         B = (0, d.bG)([m.A], () => m.A.isBlockedOrIgnored(t?.id)),
-        H = D?.state != null,
+        H = y?.state != null,
         j = null != O,
         W = !j && null != o,
         Y = M.length + (j || W ? 1 : 0),
         K = Y > 1,
-        $ = D?.state != null && "xs" === f;
+        $ = y?.state != null && "xs" === f;
     if (B) return null;
-    let z = function () {
+    function z() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = !0 === e || R;
         if (null != O)
@@ -287,7 +287,7 @@ function B(e) {
                     hideTooltip: t,
                 })
               : null;
-    };
+    }
     function q() {
         return (0, i.jsx)(F, {
             textVariant: `text-${f}/medium`,
@@ -335,7 +335,7 @@ function B(e) {
                   null == b
                       ? null
                       : (0, i.jsx)(T, {
-                            customStatusActivity: D,
+                            customStatusActivity: y,
                             textSize: f,
                             animateEmoji: g,
                             hideEmoji: C,
@@ -354,11 +354,11 @@ function B(e) {
               className: X,
               children: [
                   Z(),
-                  null != D && Y > 0 && (0, i.jsx)(V, { textVariant: `text-${f}/normal`, className: h }),
-                  null == D
+                  null != y && Y > 0 && (0, i.jsx)(V, { textVariant: `text-${f}/normal`, className: h }),
+                  null == y
                       ? null
                       : (0, i.jsx)(P, {
-                            customStatusActivity: D,
+                            customStatusActivity: y,
                             textSize: f,
                             animateEmoji: g,
                             hideEmoji: C,

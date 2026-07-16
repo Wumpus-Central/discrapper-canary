@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { m: () => y, default: () => L });
+n.d(t, { m: () => D, default: () => L });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -28,13 +28,13 @@ function L(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: A } = e,
         h = (0, g.C5)(t),
         [I, m] = r.useState(0),
-        [S, L] = (0, o.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } })),
-        y = (e) => {
-            A(),
-                m(1),
-                null != h &&
-                    T.default.track(N.HAw.QUEST_SURVEY_SUBMITTED, { ...v(h, n), choice: e.text, choice_id: e.key });
-        };
+        [S, L] = (0, o.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } }));
+    function D(e) {
+        A(),
+            m(1),
+            null != h &&
+                T.default.track(N.HAw.QUEST_SURVEY_SUBMITTED, { ...v(h, n), choice: e.text, choice_id: e.key });
+    }
     async function b(e) {
         1 === e && (await L({ width: "100%" }), s());
     }
@@ -76,7 +76,7 @@ function L(e) {
                             (0, i.jsx)(d.$m, {
                                 "data-migration-pending": !0,
                                 className: R.jE,
-                                children: n.choices.map((e) => (0, i.jsx)(D, { choice: e, onClick: y }, e.key)),
+                                children: n.choices.map((e) => (0, i.jsx)(y, { choice: e, onClick: D }, e.key)),
                             }),
                         ],
                     }),
@@ -120,7 +120,7 @@ function L(e) {
         })
     );
 }
-function D(e) {
+function y(e) {
     let { className: t, choice: n, onClick: r } = e;
     return (0, i.jsxs)(A.D, {
         className: s()(R.z5, t),
@@ -128,7 +128,7 @@ function D(e) {
         children: [(0, i.jsx)(_.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(h._, {})],
     });
 }
-function y(e) {
+function D(e) {
     let t = !1;
     (0, I.openModalLazy)(
         async () => {

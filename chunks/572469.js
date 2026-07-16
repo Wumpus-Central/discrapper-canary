@@ -471,12 +471,12 @@ function $(e) {
             embedded: u = !1,
         } = e,
         [h, m] = l.useState(t.methods[0]?.type ?? "select"),
-        [p, j] = l.useState(h),
-        b = async (e) => {
-            let { mfaType: s, data: l } = e;
-            await n({ mfaType: s, data: l, ticket: t.ticket }), null != o && o();
-        },
-        y = { mfaChallenge: t, finish: b, setSlide: m, onClose: r, headerAlignStart: d };
+        [p, j] = l.useState(h);
+    async function b(e) {
+        let { mfaType: s, data: l } = e;
+        await n({ mfaType: s, data: l, ticket: t.ticket }), null != o && o();
+    }
+    let y = { mfaChallenge: t, finish: b, setSlide: m, onClose: r, headerAlignStart: d };
     return (0, s.jsxs)(f.Provider, {
         value: u,
         children: [

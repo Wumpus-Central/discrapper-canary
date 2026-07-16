@@ -31,8 +31,8 @@ function N(e) {
             alignmentStrategy: R = "trigger-center",
             caretConfig: O,
             hasVideo: L = !1,
-            gradientColor: D,
-            gradientOffsetBottom: y = 0.4,
+            gradientColor: y,
+            gradientOffsetBottom: D = 0.4,
             onPositionChange: v,
             onNudgeChange: b,
             scrollBehavior: M = "sticky",
@@ -68,7 +68,7 @@ function N(e) {
     let X = (function (e) {
             let { shouldShow: t, caretPosition: n, onExitComplete: i } = e,
                 { reducedMotion: a } = r.useContext(h.C),
-                { config: s, ...l } = ((e, t) => {
+                { config: s, ...l } = (function (e, t) {
                     let n = { opacity: 0, transform: "" },
                         i = { opacity: 0, transform: "" };
                     if (t)
@@ -166,7 +166,7 @@ function N(e) {
         closeOnClickOutside: G,
         ignoreModalClicks: w,
         scrollBehavior: M,
-        renderPopout: (e) => {
+        renderPopout: function (e) {
             let { setPopoutRef: n, position: r, nudge: a, ...c } = e;
             return (
                 q(r),
@@ -177,7 +177,7 @@ function N(e) {
                         ...c,
                         setDialogRef: n,
                         modal: P,
-                        className: s()(null != D ? m.popoverContentWithGradient : m.popover, {
+                        className: s()(null != y ? m.popoverContentWithGradient : m.popover, {
                             [m["popover--video"]]: L,
                         }),
                         returnRef: U,
@@ -194,10 +194,10 @@ function N(e) {
                             "--custom-popover-width": "240px",
                         },
                         children:
-                            null != D
+                            null != y
                                 ? (0, i.jsx)(d.h, {
-                                      offsetBottom: y,
-                                      color: D,
+                                      offsetBottom: D,
+                                      color: y,
                                       className: m.popoverGradientWrapper,
                                       children: u,
                                   })

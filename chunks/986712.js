@@ -5,7 +5,7 @@ var i = n(627968),
     a = n(503698),
     s = n.n(a),
     l = n(17928),
-    o = n(990078),
+    o = n(866665),
     d = n(885574),
     c = n(140735),
     u = n(707554),
@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(834730),
     O = n(778712),
     L = n(562153),
-    D = n(996988),
-    y = n(242697);
+    y = n(996988),
+    D = n(242697);
 let v = [
         [{ top: 15, left: 15, width: 28, height: 28 }],
         [
@@ -66,12 +66,12 @@ let v = [
 function M(e) {
     let { users: t, channel: n } = e,
         { themeType: r } = (0, T.E)(),
-        a = r === D.d.MODAL_V2 ? b : v,
+        a = r === y.d.MODAL_V2 ? b : v,
         s = t.length > 4,
         l = t.length - 4 + 1,
         d = l >= 10 ? 3 : 1;
     return (0, i.jsx)("div", {
-        className: y.kL,
+        className: D.kL,
         children: a[(0, N.clamp)(t.length - 1, 0, a.length - 1)].map((e, r) => {
             let a = t[r];
             return null == a
@@ -79,12 +79,12 @@ function M(e) {
                 : (0, i.jsx)(
                       "div",
                       {
-                          className: y.n1,
+                          className: D.n1,
                           style: e,
                           children:
                               s && r === d
                                   ? (0, i.jsx)("div", {
-                                        className: y.mB,
+                                        className: D.mB,
                                         children: (0, i.jsx)(R.E, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
@@ -94,7 +94,7 @@ function M(e) {
                                   : (0, i.jsx)(o.m, {
                                         text: L.Ay.getName(n.guild_id, n.id, a),
                                         children: (0, i.jsx)("img", {
-                                            className: y.my,
+                                            className: D.my,
                                             src: a.getAvatarURL(n.guild_id, (0, O.FT)(O._3.SIZE_80)),
                                             alt: "",
                                         }),
@@ -143,7 +143,7 @@ function K(e) {
               onClick: (e) => {
                   e.stopPropagation(),
                       n({ action: "PRESS_VOICE_CHANNEL_STATUS" }),
-                      l === D.d.POPOUT && a?.(),
+                      l === y.d.POPOUT && a?.(),
                       (0, G.A)({ channel: t, sourceAnalyticsLocations: o });
               },
               children: [
@@ -179,7 +179,7 @@ function Z(e) {
             user: t,
             analyticsLocations: O,
         }),
-        y = (0, p.A)({ userId: t.id, onAction: L }),
+        D = (0, p.A)({ userId: t.id, onAction: L }),
         v = (0, l.bG)([h.A], () => h.A.getGuild(a.guild_id)),
         b = (0, I.A)(a),
         P = (0, A.Ay)(a),
@@ -199,7 +199,7 @@ function Z(e) {
     return (0, i.jsx)(E.f5, {
         value: O,
         children: (0, i.jsxs)(m.A, {
-            ref: y,
+            ref: D,
             className: s()(q.Nr, N),
             onAction: L,
             onClose: C,
@@ -207,7 +207,7 @@ function Z(e) {
             children: [
                 (0, i.jsx)(g.A, {
                     text: G,
-                    tags: (() => {
+                    tags: (function () {
                         if (t.id !== n.id) return null;
                         let e = a.isDM() || a.isGroupDM() ? W.intl.string(W.t["+DsWbX"]) : W.intl.string(W.t.xOVEjc);
                         return (0, i.jsx)(o.m, { text: e, children: (0, i.jsx)(d.m, { size: "xxs" }) });
@@ -226,14 +226,14 @@ function Z(e) {
                                 children: [
                                     (0, i.jsx)(S.A, { channel: a, guild: v, onAction: L, onClose: C }),
                                     a.isGuildVoice() && (0, i.jsx)(K, { voiceChannel: a, onAction: L, onClose: C }),
-                                    R === D.d.MODAL_V2 && w(),
+                                    R === y.d.MODAL_V2 && w(),
                                 ],
                             }),
-                            R === D.d.MODAL && w(),
+                            R === y.d.MODAL && w(),
                         ],
                     }),
                 }),
-                R !== D.d.MODAL && R !== D.d.MODAL_V2 && w(),
+                R !== y.d.MODAL && R !== y.d.MODAL_V2 && w(),
             ],
         }),
     });

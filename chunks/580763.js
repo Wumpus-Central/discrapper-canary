@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(82149),
     O = n(92240),
     L = n(257367),
-    D = n(160376),
-    y = n(53257),
+    y = n(160376),
+    D = n(53257),
     v = n(975732),
     b = n(939496),
     M = n(964195),
@@ -145,8 +145,8 @@ function eo(e) {
               ),
           });
 }
-var ed = n(990078),
-    ec = n(323384),
+var ed = n(323384),
+    ec = n(866665),
     eu = n(808666),
     e_ = n(687966),
     eE = n(780907),
@@ -161,7 +161,7 @@ function ef(e) {
         d = (0, eA.d)(n?.application_id);
     if (null == o && null != n && (0, _.A)(n))
         return (0, i.jsx)(Y.FD, {
-            icon: ec.k,
+            icon: ed.k,
             text: q.intl.string(q.t.RscU7I),
             fullWidth: s !== ea.d.MODAL_V2,
             onClick: (e) => {
@@ -174,7 +174,7 @@ function ef(e) {
         f = s !== ea.d.MODAL_V2;
     return (0, i.jsx)("div", {
         className: f ? es.Ij : void 0,
-        children: (0, i.jsx)(ed.m, {
+        children: (0, i.jsx)(ec.m, {
             text: A,
             asContainer: !h,
             children: (0, i.jsx)(Y.FD, {
@@ -246,8 +246,8 @@ function eO(e) {
           });
 }
 var eL = n(378570),
-    eD = n(790535),
-    ey = n(233993),
+    ey = n(790535),
+    eD = n(233993),
     ev = n(734057),
     eb = n(576705),
     eM = n(977997);
@@ -258,7 +258,7 @@ function eP(e) {
         { channelId: l, guildId: o } = (0, R.UW)(t) ?? {},
         d = (0, P.bG)([eM.A], () => null != l && eM.A.isInChannel(l), [l]),
         c = (0, P.bG)([ev.A], () => (null != l ? ev.A.getChannel(l) : null), [l]),
-        u = (0, P.bG)([eb.A], () => null != c && eb.A.can(ey.Gk, c), [c]);
+        u = (0, P.bG)([eb.A], () => null != c && eb.A.can(eD.Gk, c), [c]);
     return (0, R.Cy)(t) && u && null != o && null != l
         ? (0, i.jsx)(Y.FD, {
               text: q.intl.string(q.t.ZYO5OK),
@@ -267,7 +267,7 @@ function eP(e) {
               onClick: (e) => {
                   e.stopPropagation(),
                       n?.({ action: "PRESS_STAGE_CHANNEL_LISTEN_BUTTON" }),
-                      eD.CH(o, l),
+                      ey.CH(o, l),
                       (0, eL.iN)(l),
                       r?.();
               },
@@ -314,7 +314,7 @@ function ex(e) {
                       onClose: a,
                   })
                 : null,
-        L = (() => {
+        L = (function () {
             if (d)
                 return N && n?.type === eg.$pd.PLAYING && s?.id != null
                     ? (0, i.jsx)(Z, { applicationId: s.id, onAction: r, onClose: a })
@@ -393,7 +393,7 @@ function eZ(e) {
         j = (0, O.A)({ display: "live", user: t, activity: r, entry: H, analyticsLocations: V }),
         W = (0, L.A)({ userId: t.id, onAction: j }),
         Y = (0, f.Ay)(U),
-        K = (0, D.A)(r),
+        K = (0, y.A)(r),
         $ = null != K.text && "" !== K.text,
         { largeImage: Z, smallImage: X } = (0, p.XN)(r, a, "user_profile_activity_card"),
         Q = (function (e) {
@@ -440,8 +440,8 @@ function eZ(e) {
                   })
                 : (0, i.jsx)(eH.Q, { variant: "heading-sm/semibold", text: r.name, id: k });
     }
-    let ee = () =>
-        r.type === eg.$pd.HANG_STATUS
+    function ee() {
+        return r.type === eg.$pd.HANG_STATUS
             ? null
             : (0, A.A)(r) && null != P
               ? (0, i.jsx)(eH.A, {
@@ -462,6 +462,7 @@ function eZ(e) {
                         href: r.state_url,
                         children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.state }),
                     });
+    }
     function et() {
         if (r.type === eg.$pd.WATCHING) return null;
         if ((0, E.A)(r))
@@ -599,8 +600,8 @@ function eZ(e) {
                                                           children: [J(), ee(), et()],
                                                       }),
                                                 !t.bot && (0, i.jsx)(ek.A, { user: t, activity: r, className: es.jp }),
-                                                (() => {
-                                                    if (!(0, y.A)(r)) return null;
+                                                (function () {
+                                                    if (!(0, D.A)(r)) return null;
                                                     let { start: e, end: t } = r.timestamps;
                                                     return (0, i.jsx)(eW.A, { start: e, end: t });
                                                 })(),

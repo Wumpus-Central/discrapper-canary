@@ -1,21 +1,21 @@
-i.d(t, { A: () => k });
+i.d(t, { A: () => v });
 var e = i(627968),
     l = i(64700),
     o = i(17928),
-    r = i(922016),
-    a = i(980707),
+    a = i(922016),
+    r = i(980707),
     c = i(477782),
     d = i(365199),
     s = i(793574),
-    p = i(688810),
-    u = i(173936),
+    u = i(688810),
+    p = i(173936),
     A = i(735991),
     g = i(287809),
-    m = i(957565),
-    I = i(342384),
-    P = i(20015),
-    _ = i(652215),
-    f = i(189213),
+    f = i(957565),
+    m = i(342384),
+    I = i(20015),
+    P = i(652215),
+    _ = i(189213),
     O = i(192308),
     h = i(331322),
     C = i(928658),
@@ -26,16 +26,16 @@ var e = i(627968),
 let E = "useReportAppItemModal";
 var R = i(50268),
     j = i(239211),
-    v = i(399476),
-    M = i(183555),
-    S = i(841595),
-    U = i(993401);
-function k(n) {
-    let { user: t, guildId: i, viewProfileItem: k } = n,
+    M = i(399476),
+    S = i(183555),
+    U = i(321191),
+    k = i(993401);
+function v(n) {
+    let { user: t, guildId: i, viewProfileItem: v } = n,
         D = l.useRef(null),
-        { trackUserProfileAction: L } = (0, M.NJ)(),
-        { analyticsLocations: B, newestAnalyticsLocation: w } = (0, p.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
-        G = (0, o.bG)([S.A], () => S.A.getUserProfile(t.id)),
+        { trackUserProfileAction: L } = (0, S.NJ)(),
+        { analyticsLocations: B, newestAnalyticsLocation: w } = (0, u.Ay)(s.A.USER_PROFILE_OVERFLOW_MENU),
+        G = (0, o.bG)([U.A], () => U.A.getUserProfile(t.id)),
         K = G?.application,
         V = (0, j.A)({
             user: t,
@@ -44,7 +44,7 @@ function k(n) {
             onBlock: () => L({ action: "BLOCK", analyticsLocations: B }),
             onUnblock: () => L({ action: "UNBLOCK", analyticsLocations: B }),
         }),
-        W = (0, v.A)({
+        W = (0, M.A)({
             user: t,
             guildId: i,
             location: w,
@@ -59,21 +59,17 @@ function k(n) {
                       id: "report-app",
                       color: i.color,
                       label: y.intl.string(y.t.NgA5vp),
-                      action: () => {
-                          var n, l;
-                          let o;
-                          return (
-                              (n = t),
-                              (l = i),
-                              (o = () => {
-                                  (0, O.closeModal)(E), l.onSubmit?.();
-                              }),
-                              void (0, O.openModalLazy)(
+                      action: () =>
+                          (function (n, t) {
+                              function i() {
+                                  (0, O.closeModal)(E), t.onSubmit?.();
+                              }
+                              (0, O.openModalLazy)(
                                   async () => {
                                       await N.Ay.fetchApplication(n);
-                                      let t = b.A.getApplication(n);
+                                      let l = b.A.getApplication(n);
                                       return (n) =>
-                                          (0, e.jsx)(f.Modal, {
+                                          (0, e.jsx)(_.Modal, {
                                               title: y.intl.string(y.t.Bd10bR),
                                               actions: [],
                                               ...n,
@@ -84,7 +80,7 @@ function k(n) {
                                                           title: y.intl.string(y.t.eyEkG1),
                                                           description: y.intl.string(y.t.ptItsj),
                                                           onButtonPress: () =>
-                                                              (0, C.NW)(l.user, l.guildId, o, l.appContext),
+                                                              (0, C.NW)(t.user, t.guildId, i, t.appContext),
                                                       }),
                                                       (0, e.jsx)(x.PQ, {
                                                           variant: "clickable",
@@ -92,12 +88,12 @@ function k(n) {
                                                           description: y.intl.string(y.t.UGg603),
                                                           onButtonPress: () => {
                                                               (0, C.r3)({
-                                                                  application: t,
-                                                                  entrypoint: l.entrypoint ?? "user_profile",
-                                                                  contextualGuildId: l.guildId,
-                                                                  contextualChannelId: l.channelId,
-                                                                  onSubmit: o,
-                                                                  appContext: l.appContext,
+                                                                  application: l,
+                                                                  entrypoint: t.entrypoint ?? "user_profile",
+                                                                  contextualGuildId: t.guildId,
+                                                                  contextualChannelId: t.channelId,
+                                                                  onSubmit: i,
+                                                                  appContext: t.appContext,
                                                               });
                                                           },
                                                       }),
@@ -106,9 +102,8 @@ function k(n) {
                                           });
                                   },
                                   { modalKey: E },
-                              )
-                          );
-                      },
+                              );
+                          })(t, i),
                   });
         })({
             applicationId: K?.id,
@@ -123,14 +118,14 @@ function k(n) {
             onSuccess: () => L({ action: "COPY_APP_ID", analyticsLocations: B }),
         }),
         Y = [
-            [k],
+            [v],
             [W, V, q],
             [
                 (function (n) {
                     let { application: t, label: i, onSuccess: l, showIconFirst: o } = n;
-                    if (__OVERLAY__ || !m.p5 || null == t) return null;
-                    let r = g.default.getCurrentUser(),
-                        a = (0, A.EF)(t),
+                    if (__OVERLAY__ || !f.p5 || null == t) return null;
+                    let a = g.default.getCurrentUser(),
+                        r = (0, A.EF)(t),
                         d = `copy-app-link-${t.id}`;
                     return (0, e.jsx)(
                         c.Dr,
@@ -139,14 +134,14 @@ function k(n) {
                             label: i,
                             action: function () {
                                 if (null == t) return;
-                                let n = (0, P.n)(t, _.gfo.EMBEDDED)
-                                    ? (0, I.W)({ applicationId: t.id, referrerId: r?.id })
-                                    : (0, I.V)({ id: t.id, ...a });
-                                null != n && (0, m.C)(n, l);
+                                let n = (0, I.n)(t, P.gfo.EMBEDDED)
+                                    ? (0, m.W)({ applicationId: t.id, referrerId: a?.id })
+                                    : (0, m.V)({ id: t.id, ...r });
+                                null != n && (0, f.C)(n, l);
                             },
-                            icon: o ? void 0 : u.q,
-                            iconLeft: o ? u.q : void 0,
-                            leadingAccessory: { type: "icon", icon: u.q },
+                            icon: o ? void 0 : p.q,
+                            iconLeft: o ? p.q : void 0,
+                            leadingAccessory: { type: "icon", icon: p.q },
                         },
                         d,
                     );
@@ -160,11 +155,11 @@ function k(n) {
         ];
     return Y.every((n) => n.every((n) => null == n))
         ? null
-        : (0, e.jsx)(r.Y, {
+        : (0, e.jsx)(a.Y, {
               targetElementRef: D,
               renderPopout: (n) => {
                   let { closePopout: t } = n;
-                  return (0, e.jsx)(a.W, {
+                  return (0, e.jsx)(r.W, {
                       "data-menu-migrated": !0,
                       navId: "user-bot-profile-overflow-menu",
                       onSelect: void 0,
@@ -174,7 +169,7 @@ function k(n) {
                   });
               },
               children: (n) =>
-                  (0, e.jsx)(U.br, {
+                  (0, e.jsx)(k.br, {
                       buttonRef: D,
                       action: "PRESS_OPTIONS",
                       icon: d.j,

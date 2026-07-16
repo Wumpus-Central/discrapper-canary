@@ -531,7 +531,7 @@ function eB(e) {
         size: "md",
         text: O.intl.string(ew.default.rjuKse),
         icon: eS.t,
-        onClick: () => {
+        onClick: function () {
             if (null == i) return;
             let e = i.subscription,
                 t = i.id,
@@ -587,7 +587,7 @@ function eJ(e) {
         variant: "secondary",
         size: "md",
         text: O.intl.string(ew.default["eYHh+z"]),
-        onClick: () => {
+        onClick: function () {
             if (null == i || !s.isDM())
                 return void eD.A.captureMessage("CancelInviteButton onClick: unexpected state", {
                     extra: {
@@ -1196,14 +1196,7 @@ function t1(e) {
             analyticsObject: { page: s, section: r, object: b.ZSU.BUTTON_CTA, objectType: b.AnalyticsObjectTypes.GIFT },
             location: "gift-intent-card",
         });
-    a.useEffect(() => {
-        (0, tz.x)({
-            name: tw.ImpressionNames.GIFT_INTENT_CARD,
-            type: tw.ImpressionTypes.VIEW,
-            properties: { gift_intent_type: t, num_friend_anniversaries: tX.Ay.getFriendAnniversaries().length },
-        });
-    }, [t]);
-    let A = () => {
+    function A() {
         switch (t) {
             case e4.np.FRIEND_ANNIVERSARY:
                 return O.intl.string(O.t.ilhtIa);
@@ -1212,121 +1205,130 @@ function t1(e) {
             default:
                 return (0, tK.yE)(t);
         }
-    };
-    return (0, l.jsx)("div", {
-        ref: o,
-        className: tY.Qs,
-        children: (0, l.jsxs)("div", {
-            className: tY.gx,
-            children: [
-                (0, l.jsxs)("div", {
-                    className: tY.ou,
-                    children: [
-                        (0, l.jsxs)("div", {
-                            className: tY.HD,
-                            children: [
-                                (0, l.jsx)(t0, { user: i, ariaLabel: i.username, showCutout: null != m }),
-                                null != m &&
-                                    (0, l.jsx)(tJ.A, {
-                                        className: tY.GM,
-                                        user: m,
-                                        "aria-label": i.username,
-                                        size: tF._3.SIZE_24,
-                                    }),
-                            ],
-                        }),
-                        (0, l.jsxs)("div", {
-                            className: tY.FS,
-                            children: [
-                                (0, l.jsx)(L.E, {
-                                    variant: "text-md/medium",
-                                    color: "text-strong",
-                                    lineClamp: 3,
-                                    children: (() => {
-                                        switch (t) {
-                                            case e4.np.FRIEND_ANNIVERSARY:
-                                                return O.intl.string(O.t.CeQIwZ);
-                                            case e4.np.UNSPECIFIED:
-                                                return;
-                                            default:
-                                                return (0, tK.yE)(t);
-                                        }
-                                    })(),
-                                }),
-                                (0, l.jsxs)("div", {
-                                    className: tY.jA,
-                                    children: [
-                                        (0, l.jsx)(tV.$, { size: "xs" }),
-                                        (0, l.jsx)(L.E, {
-                                            className: tY.Tm,
-                                            variant: "text-md/normal",
-                                            color: "text-subtle",
-                                            lineClamp: 1,
-                                            children: (() => {
-                                                switch (t) {
-                                                    case e4.np.FRIEND_ANNIVERSARY:
-                                                        return O.intl.formatToPlainString(O.t.PpG27s, {
-                                                            numberOfYears: h,
-                                                        });
-                                                    case e4.np.UNSPECIFIED:
-                                                        return;
-                                                    default:
-                                                        return (0, tK.yE)(t);
-                                                }
-                                            })(),
+    }
+    return (
+        a.useEffect(() => {
+            (0, tz.x)({
+                name: tw.ImpressionNames.GIFT_INTENT_CARD,
+                type: tw.ImpressionTypes.VIEW,
+                properties: { gift_intent_type: t, num_friend_anniversaries: tX.Ay.getFriendAnniversaries().length },
+            });
+        }, [t]),
+        (0, l.jsx)("div", {
+            ref: o,
+            className: tY.Qs,
+            children: (0, l.jsxs)("div", {
+                className: tY.gx,
+                children: [
+                    (0, l.jsxs)("div", {
+                        className: tY.ou,
+                        children: [
+                            (0, l.jsxs)("div", {
+                                className: tY.HD,
+                                children: [
+                                    (0, l.jsx)(t0, { user: i, ariaLabel: i.username, showCutout: null != m }),
+                                    null != m &&
+                                        (0, l.jsx)(tJ.A, {
+                                            className: tY.GM,
+                                            user: m,
+                                            "aria-label": i.username,
+                                            size: tF._3.SIZE_24,
                                         }),
-                                    ],
-                                }),
-                            ],
-                        }),
-                    ],
-                }),
-                (0, l.jsxs)("div", {
-                    className: tY.UD,
-                    children: [
-                        (0, l.jsx)(u.$, {
-                            size: "sm",
-                            variant: "secondary",
-                            text: O.intl.string(O.t.nffuyb),
-                            "aria-label": O.intl.string(O.t.nffuyb),
-                            onClick: (e) => {
-                                e.stopPropagation(),
-                                    X.default.track(b.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                ],
+                            }),
+                            (0, l.jsxs)("div", {
+                                className: tY.FS,
+                                children: [
+                                    (0, l.jsx)(L.E, {
+                                        variant: "text-md/medium",
+                                        color: "text-strong",
+                                        lineClamp: 3,
+                                        children: (function () {
+                                            switch (t) {
+                                                case e4.np.FRIEND_ANNIVERSARY:
+                                                    return O.intl.string(O.t.CeQIwZ);
+                                                case e4.np.UNSPECIFIED:
+                                                    return;
+                                                default:
+                                                    return (0, tK.yE)(t);
+                                            }
+                                        })(),
+                                    }),
+                                    (0, l.jsxs)("div", {
+                                        className: tY.jA,
+                                        children: [
+                                            (0, l.jsx)(tV.$, { size: "xs" }),
+                                            (0, l.jsx)(L.E, {
+                                                className: tY.Tm,
+                                                variant: "text-md/normal",
+                                                color: "text-subtle",
+                                                lineClamp: 1,
+                                                children: (function () {
+                                                    switch (t) {
+                                                        case e4.np.FRIEND_ANNIVERSARY:
+                                                            return O.intl.formatToPlainString(O.t.PpG27s, {
+                                                                numberOfYears: h,
+                                                            });
+                                                        case e4.np.UNSPECIFIED:
+                                                            return;
+                                                        default:
+                                                            return (0, tK.yE)(t);
+                                                    }
+                                                })(),
+                                            }),
+                                        ],
+                                    }),
+                                ],
+                            }),
+                        ],
+                    }),
+                    (0, l.jsxs)("div", {
+                        className: tY.UD,
+                        children: [
+                            (0, l.jsx)(u.$, {
+                                size: "sm",
+                                variant: "secondary",
+                                text: O.intl.string(O.t.nffuyb),
+                                "aria-label": O.intl.string(O.t.nffuyb),
+                                onClick: (e) => {
+                                    e.stopPropagation(),
+                                        X.default.track(b.HAw.GIFT_INTENT_CARD_SECONDARY_CTA_CLICKED, {
+                                            gift_intent_type: t,
+                                            cta_type: "send_message",
+                                            location_stack: x,
+                                        }),
+                                        (0, d.openModalLazy)(async () => {
+                                            let { default: e } = await Promise.all([n.e("22638"), n.e("95501")]).then(
+                                                n.bind(n, 367516),
+                                            );
+                                            return (n) =>
+                                                (0, l.jsx)(e, { ...n, giftIntentType: t, analyticsLocationHistory: x });
+                                        });
+                                },
+                            }),
+                            (0, l.jsx)(u.$, {
+                                size: "sm",
+                                variant: "expressive",
+                                text: A(),
+                                icon: tB.o,
+                                "aria-label": A(),
+                                onClick: function (e) {
+                                    e.stopPropagation();
+                                    let n = tZ.A.getUserAffinity(i.id);
+                                    X.default.track(b.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
                                         gift_intent_type: t,
-                                        cta_type: "send_message",
+                                        affinity: n?.dmProbability,
                                         location_stack: x,
                                     }),
-                                    (0, d.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([n.e("22638"), n.e("95501")]).then(
-                                            n.bind(n, 367516),
-                                        );
-                                        return (n) =>
-                                            (0, l.jsx)(e, { ...n, giftIntentType: t, analyticsLocationHistory: x });
-                                    });
-                            },
-                        }),
-                        (0, l.jsx)(u.$, {
-                            size: "sm",
-                            variant: "expressive",
-                            text: A(),
-                            icon: tB.o,
-                            "aria-label": A(),
-                            onClick: function (e) {
-                                e.stopPropagation();
-                                let n = tZ.A.getUserAffinity(i.id);
-                                X.default.track(b.HAw.GIFT_INTENT_ACTION_BUTTON_CLICKED, {
-                                    gift_intent_type: t,
-                                    affinity: n?.dmProbability,
-                                    location_stack: x,
-                                }),
-                                    f();
-                            },
-                        }),
-                    ],
-                }),
-            ],
-        }),
-    });
+                                        f();
+                                },
+                            }),
+                        ],
+                    }),
+                ],
+            }),
+        })
+    );
 }
 var t2 = n(871237),
     t3 = n(905792);
@@ -3728,7 +3730,7 @@ let s7 = Object.freeze({
                 message: t,
                 compact: n,
                 guildName: s,
-                onClick: () => {
+                onClick: function () {
                     null != i && em.A.open(i, b.BEX.ACCESS, b.nd0.ACCESS_DISCOVERABLE);
                 },
                 onClickGuild: a,

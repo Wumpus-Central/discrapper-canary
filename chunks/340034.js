@@ -91,7 +91,7 @@ function P(e) {
                 fractionalPremiumInfo: f,
             }),
         },
-        M = ((e) => {
+        M = (function (e) {
             let { isGift: t, isTrial: n, unifiedCheckoutFlow: l } = e;
             return l === r.C.PREMIUM_APPS_SUBSCRIPTION_CHECKOUT
                 ? u.I0.SubscriptionApplication

@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(735438),
+    l = n(435558),
     o = n.n(l),
     d = n(615300),
     c = n(621466),
@@ -38,8 +38,8 @@ function C(e) {
 var R = n(174459),
     O = n(927813),
     L = n(824744),
-    D = n(475815),
-    y = n(953584),
+    y = n(475815),
+    D = n(953584),
     v = n(122641),
     b = n(692051),
     M = n(375708),
@@ -119,13 +119,13 @@ async function F(e) {
             let n = !1,
                 i = !1,
                 l = null,
-                o = null,
-                d = () => {
-                    n || ((n = !0), clearTimeout(c), null != o && clearTimeout(o), t(x));
-                },
-                c = setTimeout(() => {
-                    G.warn("Timeout after", 5e3, "ms, moov atom not found"), d();
-                }, 5e3);
+                o = null;
+            function d() {
+                n || ((n = !0), clearTimeout(c), null != o && clearTimeout(o), t(x));
+            }
+            let c = setTimeout(() => {
+                G.warn("Timeout after", 5e3, "ms, moov atom not found"), d();
+            }, 5e3);
             (s.onReady = (e) => {
                 if (n) return;
                 (n = !0), clearTimeout(c), null != o && clearTimeout(o);
@@ -386,8 +386,8 @@ class V {
         this.stopTracking();
     }
 }
-var B = n(990078),
-    H = n(834730),
+var B = n(834730),
+    H = n(866665),
     j = n(624479),
     W = n(789645),
     Y = n(957565),
@@ -466,11 +466,11 @@ function Z(e) {
             (0, i.jsxs)("div", {
                 className: K.wx,
                 children: [
-                    (0, i.jsx)(H.E, { variant: "text-md/bold", color: "none", children: "Stats for Nerds" }),
+                    (0, i.jsx)(B.E, { variant: "text-md/bold", color: "none", children: "Stats for Nerds" }),
                     (0, i.jsxs)("div", {
                         className: K.Pz,
                         children: [
-                            (0, i.jsx)(B.m, {
+                            (0, i.jsx)(H.m, {
                                 text: u ? q : z,
                                 children: (0, i.jsx)(_.D, {
                                     className: K.cL,
@@ -480,7 +480,7 @@ function Z(e) {
                                     children: (0, i.jsx)(j.T, { size: "md", color: "currentColor" }),
                                 }),
                             }),
-                            (0, i.jsx)(B.m, {
+                            (0, i.jsx)(H.m, {
                                 text: $,
                                 children: (0, i.jsx)(_.D, {
                                     className: K.b,
@@ -652,7 +652,7 @@ function el(e) {
         n = t % 60;
     return `${(t - n) / 60}:${String(n).padStart(2, "0")}`;
 }
-let eo = (e) => {
+function eo(e) {
     let { current: t, duration: n } = e,
         r = null != t ? el(t) : ei,
         a = null != n ? el(n) : ei;
@@ -667,7 +667,7 @@ let eo = (e) => {
             ],
         })
     );
-};
+}
 class ed extends r.Component {
     static defaultProps = { disabled: !1 };
     state = { translateY: new d.A.Value(0) };
@@ -1102,14 +1102,14 @@ class eA extends r.PureComponent {
             { type: i, src: r } = this.props;
         if (
             i === ea.VIDEO &&
-            (y.Ay.addChangeListener(this.handleStatsStoreChange),
+            (D.Ay.addChangeListener(this.handleStatsStoreChange),
             (this._hasStatsListener = !0),
-            y.Ay.isVideoStatsEnabled(r) && !this.state.showStats)
+            D.Ay.isVideoStatsEnabled(r) && !this.state.showStats)
         )
             try {
                 this.toggleStats();
             } catch (e) {
-                y.Ay.setVideoStats(r, !1);
+                D.Ay.setVideoStats(r, !1);
             }
         let { current: a } = this.mediaRef;
         null != a && (t && (a.muted = t), e && (this.play(!0), this.handleUIUpdate()), (a.volume = n));
@@ -1121,8 +1121,8 @@ class eA extends r.PureComponent {
         } = this;
         if (a !== e.src && s === ea.VIDEO) {
             null != this._statsCollector && this._statsCollector.resetCodecInfo(this.props.fileSizeBytes),
-                y.Ay.clearVideoStats(e.src);
-            let t = y.Ay.isVideoStatsEnabled(a);
+                D.Ay.clearVideoStats(e.src);
+            let t = D.Ay.isVideoStatsEnabled(a);
             _ !== t && (t ? this.toggleStats() : _ && this.toggleStats());
         }
         let { current: E } = this.mediaRef,
@@ -1132,13 +1132,13 @@ class eA extends r.PureComponent {
             ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && A?.pop(l))
             : !l && t.playing && (E.pause(), A?.pop(l), n?.()),
             l && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability();
-        let h = (0, D.qf)(E.parentNode, E);
+        let h = (0, y.qf)(E.parentNode, E);
         o && !t.fullscreen && null != h
-            ? ((0, D.tl)(h), h.addEventListener(D.Wb, this.handleFullScreenExit))
+            ? ((0, y.tl)(h), h.addEventListener(y.Wb, this.handleFullScreenExit))
             : !o &&
               t.fullscreen &&
               null != h &&
-              (h.removeEventListener(D.Wb, this.handleFullScreenExit), (0, D.sP)(h, h.ownerDocument)),
+              (h.removeEventListener(y.Wb, this.handleFullScreenExit), (0, y.sP)(h, h.ownerDocument)),
             c === v.A.Types.DURATION && t.dragging !== v.A.Types.DURATION && l
                 ? E.pause()
                 : c !== v.A.Types.DURATION && t.dragging === v.A.Types.DURATION && l && E.play(),
@@ -1149,13 +1149,13 @@ class eA extends r.PureComponent {
         (this._unmounted = !0),
             null != this._statsCollector && (this._statsCollector.destroy(), (this._statsCollector = null)),
             this._hasStatsListener &&
-                (y.Ay.removeChangeListener(this.handleStatsStoreChange),
+                (D.Ay.removeChangeListener(this.handleStatsStoreChange),
                 (this._hasStatsListener = !1),
-                this.props.type === ea.VIDEO && y.Ay.clearVideoStats(this.props.src));
+                this.props.type === ea.VIDEO && D.Ay.clearVideoStats(this.props.src));
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, D.qf)(e.parentNode, e);
-        null != t && (t.removeEventListener(D.Wb, this.handleFullScreenExit), (0, D.sP)(t));
+        let t = (0, y.qf)(e.parentNode, e);
+        null != t && (t.removeEventListener(y.Wb, this.handleFullScreenExit), (0, y.sP)(t));
     }
     play() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
@@ -1185,8 +1185,8 @@ class eA extends r.PureComponent {
     handleFullScreenExit = () => {
         let { current: e } = this.mediaRef;
         if (null == e) return;
-        let t = (0, D.qf)(e.parentNode, e);
-        (null != t && (0, D._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
+        let t = (0, y.qf)(e.parentNode, e);
+        (null != t && (0, y._U)(t, t?.ownerDocument)) || this.setState({ fullscreen: !1 });
     };
     toggleFullscreen = () => {
         if (null != this.props.onFullscreenChange) return void this.props.onFullscreenChange(!this.state.fullscreen);
@@ -1358,7 +1358,7 @@ class eA extends r.PureComponent {
             null != this._statsCollector && this._statsCollector.stopTracking(),
                 (this._isUpdatingStats = !0),
                 this.setState({ showStats: !1 }, () => {
-                    (this._isUpdatingStats = !1), this._unmounted || y.Ay.setVideoStats(this.props.src, !1);
+                    (this._isUpdatingStats = !1), this._unmounted || D.Ay.setVideoStats(this.props.src, !1);
                 });
         else if (null != t && (0, c.vq)(t, HTMLVideoElement))
             try {
@@ -1366,14 +1366,14 @@ class eA extends r.PureComponent {
                     this._statsCollector.startTracking(this.handleStatsUpdate),
                     (this._isUpdatingStats = !0),
                     this.setState({ showStats: !0, videoStats: this._statsCollector.getStats() }, () => {
-                        (this._isUpdatingStats = !1), this._unmounted || y.Ay.setVideoStats(this.props.src, !0);
+                        (this._isUpdatingStats = !1), this._unmounted || D.Ay.setVideoStats(this.props.src, !0);
                     });
             } catch (e) {
                 null != this._statsCollector && (this._statsCollector.destroy(), (this._statsCollector = null)),
                     (this._isUpdatingStats = !1),
-                    this._unmounted || y.Ay.setVideoStats(this.props.src, !1);
+                    this._unmounted || D.Ay.setVideoStats(this.props.src, !1);
             }
-        else y.Ay.setVideoStats(n, !1);
+        else D.Ay.setVideoStats(n, !1);
     };
     handleStatsUpdate = (e) => {
         this.setState({ videoStats: e });
@@ -1382,7 +1382,7 @@ class eA extends r.PureComponent {
         let { src: e, type: t } = this.props;
         t !== ea.VIDEO ||
             this._isUpdatingStats ||
-            (y.Ay.isVideoStatsEnabled(e) !== this.state.showStats && this.toggleStats());
+            (D.Ay.isVideoStatsEnabled(e) !== this.state.showStats && this.toggleStats());
     };
     renderVideo() {
         let { alt: e, src: t, poster: n, forceExternal: r, responsive: a, mediaLayoutType: s } = this.props,
@@ -1501,7 +1501,7 @@ class eA extends r.PureComponent {
                                 iconClassName: et.pd,
                                 guestWindow: window,
                                 onClick: this.toggleFullscreen,
-                                node: (0, D.qf)(e?.parentNode, e),
+                                node: (0, y.qf)(e?.parentNode, e),
                             })
                           : null,
               })
@@ -1537,7 +1537,7 @@ class eA extends r.PureComponent {
                 renderOverlayContent: c,
             } = this.props,
             { fullscreen: u, hideControls: _, playing: E } = this.state,
-            A = et.ub;
+            A = et.bQ;
         if ((t === ea.AUDIO ? (A = et._X) : _ ? (A = et.CX) : E && (A = et.sw), r && t === ea.VIDEO)) {
             let t = this.getWidth();
             return (0, i.jsxs)("div", {

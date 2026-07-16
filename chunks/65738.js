@@ -95,18 +95,18 @@ let k = { earn: { name: "earn", start: 0, duration: 180 }, spend: { name: "spend
 var p = n(462887),
     S = n(736653),
     y = n(743383);
-let O = { width: 60, height: 60 },
-    D = (e) => {
-        let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: a, play: r, getDuration: s } = e,
-            i = s(),
-            u = null != i ? 1e3 * i : 3e3;
+let O = { width: 60, height: 60 };
+function D(e) {
+    let { currentAnimationType: t, animationTypeRef: n, onSetAnimationDurationMS: a, play: r, getDuration: s } = e,
+        i = s(),
+        u = null != i ? 1e3 * i : 3e3;
+    (0, l.useEffect)(() => {
+        null !== t && t !== n.current && ((n.current = t), r());
+    }, [t, r, n]),
         (0, l.useEffect)(() => {
-            null !== t && t !== n.current && ((n.current = t), r());
-        }, [t, r, n]),
-            (0, l.useEffect)(() => {
-                a(u);
-            }, [a, u]);
-    };
+            a(u);
+        }, [a, u]);
+}
 function M(e) {
     var t;
     let r,

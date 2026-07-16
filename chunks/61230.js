@@ -1,39 +1,39 @@
-n.d(l, { A: () => O, T: () => G });
-var t = n(627968),
-    i = n(64700),
-    a = n(17928),
-    s = n(451988),
-    r = n(922016),
-    o = n(714114),
-    c = n(323073),
-    d = n(10862),
-    u = n(734057),
-    m = n(576705),
-    h = n(342952),
-    g = n(834730),
-    x = n(778712),
-    A = n(821609),
-    p = n(693879),
-    j = n(607407),
-    v = n(34337),
-    N = n(790535),
-    f = n(575731),
-    C = n(616356),
-    I = n(977997),
-    b = n(47167),
-    y = n(475889),
-    E = n(262763),
-    _ = n(402216),
-    M = n(375708),
-    R = n(255201);
-let w = function (e) {
-    let { channel: l } = e,
-        n = (0, a.bG)([I.A], () => I.A.isInChannel(l.id)),
-        i = (0, f.A)(l),
-        s = (0, b.Ay)(l),
-        r = (0, y.H)(l),
-        o = (0, a.bG)([C.A], () => C.A.getAllApplicationStreamsForChannel(l.id)[0]);
-    return (0, t.jsxs)(v.Uq, {
+l.d(n, { A: () => G, T: () => O });
+var t = l(627968),
+    i = l(64700),
+    a = l(17928),
+    s = l(451988),
+    r = l(922016),
+    o = l(714114),
+    c = l(323073),
+    d = l(10862),
+    u = l(734057),
+    m = l(576705),
+    h = l(342952),
+    g = l(834730),
+    x = l(778712),
+    A = l(821609),
+    v = l(693879),
+    p = l(607407),
+    j = l(34337),
+    f = l(790535),
+    N = l(575731),
+    I = l(616356),
+    C = l(977997),
+    b = l(47167),
+    y = l(475889),
+    E = l(262763),
+    M = l(402216),
+    _ = l(375708),
+    R = l(255201);
+let S = function (e) {
+    let { channel: n } = e,
+        l = (0, a.bG)([C.A], () => C.A.isInChannel(n.id)),
+        i = (0, N.A)(n),
+        s = (0, b.Ay)(n),
+        r = (0, y.H)(n),
+        o = (0, a.bG)([I.A], () => I.A.getAllApplicationStreamsForChannel(n.id)[0]);
+    return (0, t.jsxs)(j.Uq, {
         className: R.jC,
         children: [
             (0, t.jsxs)("div", {
@@ -47,7 +47,7 @@ let w = function (e) {
                                 height: 20,
                                 width: 20,
                                 color: "currentColor",
-                                channel: l,
+                                channel: n,
                                 style: { flexShrink: 0 },
                             }),
                             (0, t.jsx)("div", {
@@ -64,7 +64,7 @@ let w = function (e) {
                     null != r &&
                         (0, t.jsx)("span", {
                             className: R.j2,
-                            children: (0, t.jsx)(p.z, { entry: { start: r }, textColor: "text-feedback-positive" }),
+                            children: (0, t.jsx)(v.z, { entry: { start: r }, textColor: "text-feedback-positive" }),
                         }),
                 ],
             }),
@@ -75,29 +75,29 @@ let w = function (e) {
                         (0, t.jsxs)("div", {
                             className: R.yt,
                             children: [
-                                (0, t.jsx)(j.A, { stream: o, className: R.Rh, noText: !0 }),
-                                (0, t.jsx)(_.Ay, { size: _.Ay.Sizes.SMALL, className: R.wI }),
+                                (0, t.jsx)(p.A, { stream: o, className: R.Rh, noText: !0 }),
+                                (0, t.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: R.wI }),
                             ],
                         }),
                     (0, t.jsx)(h.A, {
                         users: i,
-                        guildId: l.guild_id,
-                        channelId: l.id,
+                        guildId: n.guild_id,
+                        channelId: n.id,
                         size: x._3.SIZE_24,
                         maxUsers: 8,
-                        "aria-label": M.intl.string(M.t["jNqDh/"]),
+                        "aria-label": _.intl.string(_.t["jNqDh/"]),
                     }),
                     (0, t.jsx)(A.$, {
-                        variant: n ? "secondary" : "active",
+                        variant: l ? "secondary" : "active",
                         size: "sm",
-                        text: n ? M.intl.string(M.t["3xjX0U"]) : M.intl.string(M.t.VJlc0S),
+                        text: l ? _.intl.string(_.t["3xjX0U"]) : _.intl.string(_.t.VJlc0S),
                         fullWidth: !0,
-                        onClick: () => {
-                            l.isGuildStageVoice()
-                                ? (0, N.av)(l)
+                        onClick: function () {
+                            n.isGuildStageVoice()
+                                ? (0, f.av)(n)
                                 : E.A.handleVoiceConnect({
-                                      channel: l,
-                                      connected: n,
+                                      channel: n,
+                                      connected: l,
                                       needSubscriptionToAccess: !1,
                                       routeDirectlyToChannel: !0,
                                       bypassChangeModal: !0,
@@ -109,10 +109,10 @@ let w = function (e) {
         ],
     });
 };
-var S = n(652215),
-    T = n(129728);
-function G(e) {
-    let { channel: l, children: n, childWrapperClassName: a } = e,
+var T = l(652215),
+    w = l(129728);
+function O(e) {
+    let { channel: n, children: l, childWrapperClassName: a } = e,
         o = i.useRef(null),
         [c, d] = i.useState(!1),
         u = i.useRef(
@@ -127,9 +127,9 @@ function G(e) {
         );
     i.useEffect(() => {
         let e = u.current,
-            l = m.current;
+            n = m.current;
         return () => {
-            e.cancel(), l.cancel();
+            e.cancel(), n.cancel();
         };
     }, []);
     let h = i.useCallback(() => {
@@ -147,25 +147,25 @@ function G(e) {
         position: "right",
         shouldShow: c,
         renderPopout: () =>
-            (0, t.jsx)("div", { onMouseEnter: h, onMouseLeave: g, children: (0, t.jsx)(w, { channel: l }) }),
-        children: () => (0, t.jsx)("div", { className: a, ref: o, onMouseEnter: h, onMouseLeave: g, children: n }),
+            (0, t.jsx)("div", { onMouseEnter: h, onMouseLeave: g, children: (0, t.jsx)(S, { channel: n }) }),
+        children: () => (0, t.jsx)("div", { className: a, ref: o, onMouseEnter: h, onMouseLeave: g, children: l }),
     });
 }
-function O(e) {
-    let { guild: l, message: n } = e,
-        { voiceState: i, voiceChannel: s } = (0, o.Ay)({ userId: n.author.id, guildId: l.id }),
-        r = (0, a.bG)([u.A], () => u.A.getChannel(n.channel_id)?.isVocal()),
+function G(e) {
+    let { guild: n, message: l } = e,
+        { voiceState: i, voiceChannel: s } = (0, o.Ay)({ userId: l.author.id, guildId: n.id }),
+        r = (0, a.bG)([u.A], () => u.A.getChannel(l.channel_id)?.isVocal()),
         h = (0, a.bG)([m.A], () => {
             if (null == s) return !1;
             let e = (0, c.r9)() && (0, c.UK)(s.id);
-            return (s.isPrivate() || (m.A.can(S.xBc.VIEW_CHANNEL, s) && m.A.can(S.xBc.CONNECT, s))) && !e;
+            return (s.isPrivate() || (m.A.can(T.xBc.VIEW_CHANNEL, s) && m.A.can(T.xBc.CONNECT, s))) && !e;
         });
     return null != i && null != s && s.isGuildVocal() && h && !r
-        ? (0, t.jsx)(G, {
+        ? (0, t.jsx)(O, {
               channel: s,
-              childWrapperClassName: T.y,
+              childWrapperClassName: w.y,
               children: (0, t.jsx)(d.A, {
-                  className: T.B,
+                  className: w.B,
                   size: "custom",
                   color: "currentColor",
                   width: 20,

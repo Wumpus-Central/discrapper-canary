@@ -1,4 +1,4 @@
-n.d(t, { default: () => S });
+n.d(e, { default: () => S });
 var s = n(627968),
     l = n(64700),
     r = n(106778),
@@ -6,8 +6,8 @@ var s = n(627968),
     i = n(772707),
     o = n(116833),
     c = n(793574),
-    d = n(688810),
-    u = n(206835),
+    u = n(688810),
+    d = n(206835),
     f = n(212739),
     p = n(428262),
     m = n(298072),
@@ -24,17 +24,17 @@ var v = n(450481),
     C = n(623373),
     b = n(536572),
     g = n(524246),
-    L = n(534514),
+    L = n(297264),
     R = n(834730),
     j = n(821609),
     T = n(403581),
     k = n(532794),
-    O = n(788868),
+    O = n(202541),
     y = n(375708),
     I = n(939052);
-let N = () => {
-    let { analyticsLocations: e } = (0, d.Ay)(),
-        t = l.useRef(null);
+let N = function () {
+    let { analyticsLocations: t } = (0, u.Ay)(),
+        e = l.useRef(null);
     return (0, s.jsxs)("div", {
         className: I.kL,
         children: [
@@ -56,13 +56,13 @@ let N = () => {
                 ],
             }),
             (0, s.jsx)(j.$, {
-                buttonRef: t,
+                buttonRef: e,
                 size: "sm",
                 variant: "secondary",
                 icon: T.t,
                 text: y.intl.string(y.t["8x0jKT"]),
                 onClick: function () {
-                    (0, k.A)({ subscriptionTier: O.pe.TIER_2, analyticsLocations: e, returnRef: t });
+                    (0, k.A)({ subscriptionTier: O.pe.TIER_2, analyticsLocations: t, returnRef: e });
                 },
             }),
         ],
@@ -73,9 +73,9 @@ var P = n(14368),
     D = n(184264),
     F = n(758836),
     w = n(700797);
-let S = (e) => {
+let S = (t) => {
     let {
-            transitionState: t,
+            transitionState: e,
             product: n,
             onClose: l,
             analyticsLocations: L,
@@ -85,20 +85,20 @@ let S = (e) => {
             purchaseType: k = F.gs.FIAT,
             overrideGraphic: O,
             overrideGradientColor: I,
-        } = e,
+        } = t,
         S = (0, m.Q)(n),
         G = (0, C.rb)(n, S),
-        { analyticsLocations: M } = (0, d.Ay)([...L, c.A.COLLECTIBLES_COLLECTED_MODAL]),
-        { hasRequiredProductItems: V } = (function (e) {
-            var t;
+        { analyticsLocations: M } = (0, u.Ay)([...L, c.A.COLLECTIBLES_COLLECTED_MODAL]),
+        { hasRequiredProductItems: V } = (function (t) {
+            var e;
             let n,
                 {
                     firstProfileEffect: s,
                     firstAvatarDecoration: l,
                     firstNameplate: r,
                     firstProfileFrame: a,
-                } = (0, x.f5)(e),
-                i = (0, E.aw)(e);
+                } = (0, x.f5)(t),
+                i = (0, E.aw)(t);
             return {
                 firstAvatarDecoration: l,
                 firstProfileEffect: s,
@@ -106,13 +106,13 @@ let S = (e) => {
                 isBundle: i,
                 firstProfileFrame: a,
                 hasRequiredProductItems: i
-                    ? (function (e) {
-                          let { firstAvatarDecoration: t, firstProfileEffect: n, firstNameplate: s } = e;
-                          return (null != t && null != n && null == s) || (null != t && null != n && null != s);
+                    ? (function (t) {
+                          let { firstAvatarDecoration: e, firstProfileEffect: n, firstNameplate: s } = t;
+                          return (null != e && null != n && null == s) || (null != e && null != n && null != s);
                       })(
-                          ((t = e.items),
+                          ((e = t.items),
                           {
-                              firstProfileEffect: (n = new x.Ym(t)).firstProfileEffect,
+                              firstProfileEffect: (n = new x.Ym(e)).firstProfileEffect,
                               firstAvatarDecoration: n.firstAvatarDecoration,
                               firstNameplate: n.firstNameplate,
                           }),
@@ -120,7 +120,7 @@ let S = (e) => {
                     : null != l || null != s || null != r || null != a,
             };
         })(G),
-        B = (0, u.A)({ analyticsLocations: M }),
+        B = (0, d.A)({ analyticsLocations: M }),
         K = y.intl.string(y.t.eZrmtq),
         {
             environment: $,
@@ -146,7 +146,7 @@ let S = (e) => {
             shouldShowPromotionalExperience: T,
             promotionalRewardCollectedText: K,
         }),
-        ee = (0, D.aG)({
+        tt = (0, D.aG)({
             product: G,
             onClose: l,
             analyticsLocations: M,
@@ -156,43 +156,43 @@ let S = (e) => {
             canUseNow: Z,
             openProfileSettings: B,
         }),
-        et = (0, p.nK)(),
-        en = (0, f.O)(),
-        es = h.useConfig({ location: "CollectiblesCollectedModal" }).enabled && k === F.gs.ORB && !et && !en,
-        el = "6/4";
+        te = (0, p.nK)(),
+        tn = (0, f.O)(),
+        ts = h.useConfig({ location: "CollectiblesCollectedModal" }).enabled && k === F.gs.ORB && !te && !tn,
+        tl = "6/4";
     switch (G.type) {
         case a.R.NAMEPLATE:
         case a.R.AVATAR_DECORATION:
         case a.R.BUNDLE:
-            el = "16/9";
+            tl = "16/9";
             break;
         case a.R.PROFILE_EFFECT:
         case a.R.PROFILE_FRAME:
         default:
-            el = "6/4";
+            tl = "6/4";
     }
-    let { confettiColors: er } = (0, A.A)(G.styles),
-        ea = O ?? {
+    let { confettiColors: tr } = (0, A.A)(G.styles),
+        ta = O ?? {
             type: "dynamic",
             component: o.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
-            aspectRatio: el,
+            aspectRatio: tl,
             props: { product: G, forCollectedModal: !0 },
         };
-    return (0, s.jsx)(d.f5, {
+    return (0, s.jsx)(u.f5, {
         value: M,
         children: (0, s.jsxs)("div", {
             ref: q,
             children: [
                 (0, s.jsx)(r.Fk, { ref: z, className: w.L, environment: $ }),
                 (0, s.jsx)(i.k, {
-                    graphic: ea,
+                    graphic: ta,
                     title: J,
                     subtitle: X ?? void 0,
                     onClose: l,
-                    transitionState: t,
-                    actions: ee,
+                    transitionState: e,
+                    actions: tt,
                     gradientColor: I ?? void 0,
-                    children: es && (0, s.jsx)(N, {}),
+                    children: ts && (0, s.jsx)(N, {}),
                 }),
                 null != H
                     ? (0, s.jsx)(_.K, { options: H })
@@ -200,7 +200,7 @@ let S = (e) => {
                           confettiTarget: q.current,
                           confettiCanvas: Q,
                           sprites: (0, P.rA)(G.categorySkuId),
-                          colors: er?.map((e) => e.toHexString()),
+                          colors: tr?.map((t) => t.toHexString()),
                       }),
             ],
         }),

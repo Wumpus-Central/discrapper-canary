@@ -3562,33 +3562,33 @@ let rA = s.memo(function (e) {
             );
         })({ embeddedActivity: A, joinability: T, currentEmbeddedActivity: E, channel: m }),
         b = s.useId(),
-        k = null != I && I.isLaunching && I.componentId === b,
-        L = async () => {
-            eV.default.track(W.HAw.ACTIVITY_INSTANCE_EMBED_CLICKED, {
-                application_id: n.id,
-                channel_id: i,
-                channel_type: m?.type,
-                is_activity_start: y,
-                cta: "Play",
-            }),
-                y
-                    ? await (0, rr.A)({
-                          targetApplicationId: n.id,
-                          channelId: i,
-                          locationObject: u.location,
-                          analyticsLocations: d,
-                          componentId: b,
-                          commandOrigin: ro.iw.ACTIVITY_INSTANCE_EMBED,
-                      })
-                    : await (0, rs.A)({
-                          applicationId: A.applicationId,
-                          activityChannelId: i,
-                          locationObject: u.location,
-                          analyticsLocations: d,
-                          componentId: b,
-                      });
-        },
-        R = S.disabled ? J.intl.string(J.t.JBnc7N) : J.intl.string(J.t.cX9uLZ),
+        k = null != I && I.isLaunching && I.componentId === b;
+    async function L() {
+        eV.default.track(W.HAw.ACTIVITY_INSTANCE_EMBED_CLICKED, {
+            application_id: n.id,
+            channel_id: i,
+            channel_type: m?.type,
+            is_activity_start: y,
+            cta: "Play",
+        }),
+            y
+                ? await (0, rr.A)({
+                      targetApplicationId: n.id,
+                      channelId: i,
+                      locationObject: u.location,
+                      analyticsLocations: d,
+                      componentId: b,
+                      commandOrigin: ro.iw.ACTIVITY_INSTANCE_EMBED,
+                  })
+                : await (0, rs.A)({
+                      applicationId: A.applicationId,
+                      activityChannelId: i,
+                      locationObject: u.location,
+                      analyticsLocations: d,
+                      componentId: b,
+                  });
+    }
+    let R = S.disabled ? J.intl.string(J.t.JBnc7N) : J.intl.string(J.t.cX9uLZ),
         P = (0, ee.F)(N, () => {
             eV.default.track(W.HAw.ACTIVITY_INSTANCE_EMBED_CLICKED, {
                 application_id: n.id,
@@ -6538,24 +6538,24 @@ function oF(e) {
     function A() {
         null != d.channel && aT.Ay.transitionToInvite(d, { forceTransition: !0 });
     }
-    let x = function () {
-            let { autoJoin: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-                n = null == m && r?.guild != null ? aM.DY(r.guild) : m;
-            (0, aL.g)({ guild: n, isMember: null != m, analyticsLocations: u }) === aL.W.PROCEED &&
-                aT.Ay.acceptInviteAndTransitionToInviteChannel({
-                    inviteKey: t,
-                    context: i("Invite Button Embed", t),
-                    autoJoin: e,
-                });
-        },
-        E = (0, l.jsx)(a6, {
-            onTransitionToInviteChannel: A,
-            onAcceptInstantInvite: x,
-            currentUserId: g,
-            guild: m,
-            invite: d,
-            message: n,
-        });
+    function x() {
+        let { autoJoin: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+            n = null == m && r?.guild != null ? aM.DY(r.guild) : m;
+        (0, aL.g)({ guild: n, isMember: null != m, analyticsLocations: u }) === aL.W.PROCEED &&
+            aT.Ay.acceptInviteAndTransitionToInviteChannel({
+                inviteKey: t,
+                context: i("Invite Button Embed", t),
+                autoJoin: e,
+            });
+    }
+    let E = (0, l.jsx)(a6, {
+        onTransitionToInviteChannel: A,
+        onAcceptInstantInvite: x,
+        currentUserId: g,
+        guild: m,
+        invite: d,
+        message: n,
+    });
     switch (d.state) {
         case W.elq.RESOLVING:
             E = (0, l.jsx)(aU, {});

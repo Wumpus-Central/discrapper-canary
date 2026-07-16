@@ -1,10 +1,10 @@
 n.d(t, { t: () => C });
 var l = n(64700),
-    i = n(424266),
+    i = n(800754),
     s = n.n(i),
     a = n(913122),
     r = n(928658),
-    o = n(841595),
+    o = n(321191),
     c = n(903209),
     d = n(885386),
     u = n(174459),
@@ -20,7 +20,7 @@ function C(e) {
         [S, _] = l.useState(!1),
         [I, j] = l.useState(!1),
         [y, b] = l.useState(!1),
-        [N, v] = l.useState(!1),
+        [v, N] = l.useState(!1),
         [T, M] = l.useState(!1),
         R = S || I || y,
         D = l.useCallback(
@@ -28,7 +28,7 @@ function C(e) {
                 if (!R) {
                     _(!0);
                     try {
-                        await (0, h.RK)(e), v(!0), i?.();
+                        await (0, h.RK)(e), N(!0), i?.();
                     } catch (t) {
                         let e = new a.LG(t);
                         x?.(e);
@@ -74,20 +74,41 @@ function C(e) {
         ),
         P = l.useCallback(
             async (e) => {
-                if (R) return;
-                if (null != t && null == o.A.getMutualGuilds(t.id)) {
-                    b(!0);
-                    try {
-                        await (0, c.A)(t.id, t.getAvatarURL(void 0, 80), {
-                            withMutualGuilds: !0,
-                            withMutualFriendsCount: !0,
-                        });
-                    } catch (e) {
-                    } finally {
-                        b(!1);
+                if (!R) {
+                    if (null != t && null == o.A.getMutualGuilds(t.id)) {
+                        b(!0);
+                        try {
+                            await (0, c.A)(t.id, t.getAvatarURL(void 0, 80), {
+                                withMutualGuilds: !0,
+                                withMutualFriendsCount: !0,
+                            });
+                        } catch (e) {
+                        } finally {
+                            b(!1);
+                        }
                     }
+                    !(function (e) {
+                        let { channelId: t, onConfirm: l, onCancel: i } = e;
+                        u.default.track(A.HAw.OPEN_MODAL, { type: p.PY, channel_id: t }),
+                            (0, g.openModalLazy)(async () => {
+                                let { default: e } = await n.e("61841").then(n.bind(n, 987176));
+                                return (t) => (0, m.jsx)(e, { onConfirm: l, onDismiss: i, ...t });
+                            });
+                    })({
+                        channelId: e,
+                        onConfirm: l,
+                        onCancel: function () {
+                            let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
+                            u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
+                                action: p.LD.DISMISS_CONFIRMATION_PROMPT,
+                                channel_id: e,
+                                mutual_guild_ids: n ?? [],
+                                other_user_id: t?.id,
+                            });
+                        },
+                    });
                 }
-                let l = async () => {
+                async function l() {
                     let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
                     u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
                         action: p.LD.ACCEPT_CONFIRMATION_PROMPT,
@@ -96,45 +117,25 @@ function C(e) {
                         other_user_id: t?.id,
                     }),
                         await D(e);
-                };
-                !(function (e) {
-                    let { channelId: t, onConfirm: l, onCancel: i } = e;
-                    u.default.track(A.HAw.OPEN_MODAL, { type: p.PY, channel_id: t }),
-                        (0, g.openModalLazy)(async () => {
-                            let { default: e } = await n.e("61841").then(n.bind(n, 987176));
-                            return (t) => (0, m.jsx)(e, { onConfirm: l, onDismiss: i, ...t });
-                        });
-                })({
-                    channelId: e,
-                    onConfirm: l,
-                    onCancel: () => {
-                        let n = null != t ? o.A.getMutualGuilds(t.id)?.map((e) => e.guild.id) : [];
-                        u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                            action: p.LD.DISMISS_CONFIRMATION_PROMPT,
-                            channel_id: e,
-                            mutual_guild_ids: n ?? [],
-                            other_user_id: t?.id,
-                        });
-                    },
-                });
+                }
             },
             [D, R, t],
         ),
         O = l.useCallback(
             (e, t, l) => {
-                let i = (n, i) => {
-                        i && d.WY.updateSetting(n),
-                            n && null != t && (0, r.tJ)(t),
-                            D(e.id),
-                            u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
-                                action: p.LD.ACCEPT_HAM_CONFIRMATION_PROMPT,
-                                channel_id: e.id,
-                                is_dont_show_again_checked: i,
-                                non_spam_retraining_opt_in: n,
-                            }),
-                            null != l && l();
-                    },
-                    s = d.WY.getSetting();
+                function i(n, i) {
+                    i && d.WY.updateSetting(n),
+                        n && null != t && (0, r.tJ)(t),
+                        D(e.id),
+                        u.default.track(A.HAw.MESSAGE_REQUEST_ACTION, {
+                            action: p.LD.ACCEPT_HAM_CONFIRMATION_PROMPT,
+                            channel_id: e.id,
+                            is_dont_show_again_checked: i,
+                            non_spam_retraining_opt_in: n,
+                        }),
+                        null != l && l();
+                }
+                let s = d.WY.getSetting();
                 null == s
                     ? (function (e) {
                           let { onConfirm: t, onCancel: l } = e;
@@ -164,7 +165,7 @@ function C(e) {
         isAcceptLoading: S,
         isRejectLoading: I,
         isUserProfileLoading: y,
-        isOptimisticAccepted: N,
+        isOptimisticAccepted: v,
         isOptimisticRejected: T,
     };
 }

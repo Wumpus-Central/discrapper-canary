@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(428678),
     O = n(661531),
     L = n(549254),
-    D = n(445529),
-    y = n(778712),
+    y = n(445529),
+    D = n(778712),
     v = n(192308),
     b = n(834730),
     M = n(789645),
@@ -82,8 +82,8 @@ var ef = n(824994),
     eR = n(616356),
     eO = n(290863),
     eL = n(568548),
-    eD = n(741961),
-    ey = n(543465),
+    ey = n(741961),
+    eD = n(543465),
     ev = n(287809),
     eb = n(19575),
     eM = n(330076);
@@ -190,7 +190,7 @@ function eB(e) {
             hoverGradientEnd: R,
             ...O
         } = e,
-        { width: L, ref: y } = (0, w.Ay)(),
+        { width: L, ref: D } = (0, w.Ay)(),
         v = r.useRef(null),
         b = r.useRef(null),
         M = (0, E.A)(m, v);
@@ -202,7 +202,7 @@ function eB(e) {
         "aria-posinset": p,
         "aria-setsize": T,
         ref: M,
-        children: (0, i.jsxs)(D.H, {
+        children: (0, i.jsxs)(y.H, {
             as: "div",
             selected: n,
             className: s()(o, eM.bG, eM.$J, { [eM.Q2]: n }),
@@ -223,7 +223,7 @@ function eB(e) {
                     ...O,
                     children: [
                         (0, i.jsx)(B.A, {
-                            ref: g ? y : void 0,
+                            ref: g ? D : void 0,
                             muted: !1,
                             avatar: (0, i.jsx)(a, {
                                 size: "refresh_sm",
@@ -261,10 +261,10 @@ function eH(e) {
         [ec, eu] = r.useState(!1),
         [eA, eh] = r.useState(!1),
         eR = r.useRef(null),
-        [eO, eD] = r.useState(!1),
+        [eO, ey] = r.useState(!1),
         ev = (0, _.K)(
             r.useCallback((e) => {
-                eD(e);
+                ey(e);
             }, []),
         ),
         eb = r.useRef(null),
@@ -280,15 +280,15 @@ function eH(e) {
             avatarSrc: eW,
             avatarDecorationSrc: eY,
             eventHandlers: eK,
-        } = (0, eC.A)({ userId: l?.id, size: y._3.SIZE_32, animateOnHover: !(a || k || ec || eA) }),
+        } = (0, eC.A)({ userId: l?.id, size: D._3.SIZE_32, animateOnHover: !(a || k || ec || eA) }),
         [e$, ez] = r.useState({ maskImage: "none" }),
         eq = r.useRef(null),
         eZ = t.isMultiUserDM(),
         eX = t.isSystemDM(),
         eQ = !eZ && !eX && t.type === el.rbe.DM,
         eJ = eQ && l?.primaryGuild != null,
-        e0 = (0, f.bG)([ey.Ay], () => ey.Ay.isChannelMuted(t.getGuildId(), t.id)),
-        e1 = (0, f.bG)([ey.Ay], () => ey.Ay.isMessagesFavorite(t.id)),
+        e0 = (0, f.bG)([eD.Ay], () => eD.Ay.isChannelMuted(t.getGuildId(), t.id)),
+        e1 = (0, f.bG)([eD.Ay], () => eD.Ay.isMessagesFavorite(t.id)),
         { ignored: e2, blocked: e3 } = (0, f.cf)([ei.A], () => ({
             ignored: ei.A.isIgnored(t.getRecipientId()),
             blocked: ei.A.isBlocked(t.getRecipientId()),
@@ -325,7 +325,7 @@ function eH(e) {
     function to(e) {
         e.target === e.currentTarget && eR.current?.click();
     }
-    let td = (e) => {
+    function td(e) {
         let r =
             "contextmenu" === e.type
                 ? c.ImpressionNames.DM_LIST_RIGHT_CLICK_MENU_SHOWN
@@ -436,7 +436,7 @@ function eH(e) {
                       },
                       { impressionName: r, onClose: () => eh(!1) },
                   );
-    };
+    }
     function tc(e) {
         e.preventDefault(), e.stopPropagation();
         let r = ed.intl.formatToPlainString(ed.t.hJ5Ap4, { name: e8 }),
@@ -556,7 +556,7 @@ function eH(e) {
                     "aria-posinset": L,
                     children: [
                         e7 ? (0, i.jsx)("div", { className: s()(eM.dM, { [eM.SU]: e5 }) }) : null,
-                        (0, i.jsxs)(D.H, {
+                        (0, i.jsxs)(y.H, {
                             className: s()(eM.bG, { [eM.Q2]: a || eA }),
                             as: "div",
                             onClick: to,
@@ -580,8 +580,8 @@ function eH(e) {
                                     ...r,
                                     children: (0, i.jsx)(B.A, {
                                         ref: tE,
-                                        avatar: (() => {
-                                            let e = y._3.SIZE_32;
+                                        avatar: (function () {
+                                            let e = D._3.SIZE_32;
                                             if (t.isMultiUserDM())
                                                 if (t.recipients.length >= 2 && null == t.icon)
                                                     return (0, i.jsx)(eS.A, {
@@ -609,7 +609,7 @@ function eH(e) {
                                                 l.isSystemUser() || (n = (0, G.A)(I) ? el.clD.STREAMING : S),
                                                 (0, i.jsx)(eP, {
                                                     ...eK,
-                                                    size: y._3.SIZE_32,
+                                                    size: D._3.SIZE_32,
                                                     src: eW,
                                                     avatarDecoration: eY,
                                                     status: n,
@@ -726,11 +726,11 @@ let ej = function (e) {
         { voiceChannel: o } = (0, k.Ay)({ userId: s }),
         d = (0, ec.r)({ user: a }),
         c = (0, f.bG)(
-            [ev.default, eD.A],
+            [ev.default, ey.A],
             () =>
                 t.isMultiUserDM()
-                    ? ea.default.keys(eD.A.getTypingUsers(t.id)).some((e) => e !== ev.default.getCurrentUser()?.id)
-                    : null != a && eD.A.isTyping(t.id, t.getRecipientId()),
+                    ? ea.default.keys(ey.A.getTypingUsers(t.id)).some((e) => e !== ev.default.getCurrentUser()?.id)
+                    : null != a && ey.A.isTyping(t.id, t.getRecipientId()),
             [t, a],
         );
     return t.isMultiUserDM()

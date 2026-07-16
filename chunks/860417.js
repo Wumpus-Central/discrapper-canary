@@ -13,16 +13,16 @@ var n = t(627968),
     A = t(769591),
     E = t(36942),
     _ = t(260509),
-    S = t(495544),
+    S = t(280450),
     p = t(287809),
     b = t(346247),
     N = t(810263),
     L = t(911612),
     x = t(664967),
     y = t(64700),
-    G = t(458294),
-    M = t(567035),
-    f = t(375708),
+    f = t(458294),
+    G = t(567035),
+    M = t(375708),
     j = t(507238),
     D = t(832712),
     m = t(568873),
@@ -31,9 +31,9 @@ var n = t(627968),
     R = t(652215);
 function T() {
     return [
-        { setting: R.orn.ALL_MESSAGES, label: f.intl.string(f.t["n/bTaY"]) },
-        { setting: R.orn.ONLY_MENTIONS, label: f.intl.format(f.t.L2hmYy, {}) },
-        { setting: R.orn.NO_MESSAGES, label: f.intl.string(f.t.CtVGyQ) },
+        { setting: R.orn.ALL_MESSAGES, label: M.intl.string(M.t["n/bTaY"]) },
+        { setting: R.orn.ONLY_MENTIONS, label: M.intl.format(M.t.L2hmYy, {}) },
+        { setting: R.orn.NO_MESSAGES, label: M.intl.string(M.t.CtVGyQ) },
     ];
 }
 t(938796);
@@ -55,7 +55,7 @@ var v = t(585510),
     z = t(576705),
     Z = t(887501),
     K = t(684407),
-    q = t(158304),
+    q = t(682455),
     $ = t(267102),
     ee = t(488995),
     ei = t(153594),
@@ -126,19 +126,19 @@ function en(e) {
                             children: [
                                 (0, n.jsx)(o.sL, {
                                     id: "suppress-everyone",
-                                    label: f.intl.format(f.t.OWiWAp, {}),
+                                    label: M.intl.format(M.t.OWiWAp, {}),
                                     action: () => u({ suppress_everyone: !i }, I.G_.suppressEveryone(!i)),
                                     checked: i,
                                 }),
                                 (0, n.jsx)(o.sL, {
                                     id: "suppress-roles",
-                                    label: f.intl.string(f.t["O/QdoD"]),
+                                    label: M.intl.string(M.t["O/QdoD"]),
                                     action: () => u({ suppress_roles: !t }, I.G_.suppressRoles(!t)),
                                     checked: t,
                                 }),
                                 (0, n.jsx)(o.sL, {
                                     id: "suppress-highlights",
-                                    label: f.intl.string(f.t.gPuteJ),
+                                    label: M.intl.string(M.t.gPuteJ),
                                     action: () => {
                                         u(
                                             { notify_highlights: d ? R.guM.ENABLED : R.guM.DISABLED },
@@ -153,7 +153,7 @@ function en(e) {
                         (0, n.jsx)(o.rX, {
                             children: (0, n.jsx)(o.sL, {
                                 id: "mobile-push",
-                                label: f.intl.string(f.t.h1DL66),
+                                label: M.intl.string(M.t.h1DL66),
                                 action: () => u({ mobile_push: !s }, I.G_.mobilePush(!s)),
                                 checked: s,
                             }),
@@ -169,12 +169,12 @@ function en(e) {
             null != es
                 ? (0, n.jsx)(o.Dr, {
                       id: "guild-notifications",
-                      label: f.intl.string(f.t.h850Ss),
+                      label: M.intl.string(M.t.h850Ss),
                       subtext: er,
                       action: () =>
                           (0, a.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("26543"),
+                                  t.e("95889"),
                                   t.e("1772"),
                                   t.e("35321"),
                                   t.e("42865"),
@@ -222,7 +222,7 @@ function en(e) {
             }
             return (0, n.jsx)(o.Dr, {
                 id: "guild-settings",
-                label: f.intl.string(f.t["154/bL"]),
+                label: M.intl.string(M.t["154/bL"]),
                 action: () => d(),
                 children: ((i = z.A.getGuildPermissionProps(e)),
                 (t = (0, Z.b)(e.id).length > 0),
@@ -242,7 +242,7 @@ function en(e) {
                         case R.BEX.DELETE:
                             return null;
                         case R.BEX.COMMUNITY:
-                            return (0, n.jsx)(o.Dr, { id: t, action: () => d(t), label: f.intl.string(f.t.nRtNqn) }, t);
+                            return (0, n.jsx)(o.Dr, { id: t, action: () => d(t), label: M.intl.string(M.t.nRtNqn) }, t);
                         case R.BEX.APP_DIRECTORY:
                             return (0, n.jsx)(
                                 o.Dr,
@@ -259,7 +259,7 @@ function en(e) {
                                     },
                                     leadingAccessory: { type: "icon", icon: F.t },
                                     iconLeft: F.t,
-                                    label: f.intl.string(f.t.AKcFUj),
+                                    label: M.intl.string(M.t.AKcFUj),
                                 },
                                 t,
                             );
@@ -282,28 +282,28 @@ function en(e) {
         }),
         ex = (0, L.A)(eu),
         ey = (0, h.A)(eu.id),
-        eG = (0, N.A)(eu),
-        eM =
+        ef = (0, N.A)(eu),
+        eG =
             ((i = { section: R.JJy.GUILD_LIST }),
             (ea = eu.id),
-            (ed = (0, r.bG)([G.default], () => G.default.getGuildHasUnreadIgnoreMuted(ea), [ea])),
+            (ed = (0, r.bG)([f.default], () => f.default.getGuildHasUnreadIgnoreMuted(ea), [ea])),
             (0, n.jsx)(o.Dr, {
                 id: "mark-guild-read",
-                label: f.intl.string(f.t.e6RscS),
+                label: M.intl.string(M.t.e6RscS),
                 icon: void 0,
-                action: () => (0, M.A)([ea], i.section),
+                action: () => (0, G.A)([ea], i.section),
                 disabled: !ed,
             })),
-        ef = (0, E.A)(eu.id),
+        eM = (0, E.A)(eu.id),
         ej =
             ((s = eu.id),
             (0, n.jsxs)(o.Dr, {
                 id: "notification",
-                label: f.intl.string(f.t.HcoRu0),
+                label: M.intl.string(M.t.HcoRu0),
                 action: function () {
                     (0, a.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            t.e("26543"),
+                            t.e("95889"),
                             t.e("1772"),
                             t.e("35321"),
                             t.e("42865"),
@@ -319,15 +319,15 @@ function en(e) {
                             [s, l] = y.useState(!1),
                             a = (0, r.bG)([O.Ay], () => O.Ay.getGuildUnreadSetting(e)),
                             d = (0, r.bG)([O.Ay], () => O.Ay.getMessageNotifications(e)),
-                            c = s ? B.N9.CUSTOM : (0, B.jU)(a, d),
-                            u = (i) => {
-                                l(!1);
-                                let t = { message_notifications: i };
-                                i === R.orn.ALL_MESSAGES &&
-                                    a !== C.e.ALL_MESSAGES &&
-                                    (t.flags = (0, k.md)(O.Ay.getGuildFlags(e), H.n3.UNREADS_ALL_MESSAGES)),
-                                    D.A.updateGuildNotificationSettings(e, t, I.G_.notifications(i));
-                            };
+                            c = s ? B.N9.CUSTOM : (0, B.jU)(a, d);
+                        function u(i) {
+                            l(!1);
+                            let t = { message_notifications: i };
+                            i === R.orn.ALL_MESSAGES &&
+                                a !== C.e.ALL_MESSAGES &&
+                                (t.flags = (0, k.md)(O.Ay.getGuildFlags(e), H.n3.UNREADS_ALL_MESSAGES)),
+                                D.A.updateGuildNotificationSettings(e, t, I.G_.notifications(i));
+                        }
                         function g(i) {
                             l(!1);
                             let t = O.Ay.getGuildFlags(e);
@@ -348,11 +348,11 @@ function en(e) {
                             if (i && null != t)
                                 return (0, n.jsxs)(o.Dr, {
                                     id: "activity_alerts",
-                                    label: f.intl.string(f.t.D9yVAH),
+                                    label: M.intl.string(M.t.D9yVAH),
                                     children: [
                                         (0, n.jsx)(o.sL, {
                                             id: "activity_alerts_in_app",
-                                            label: f.intl.string(f.t.u6dc5B),
+                                            label: M.intl.string(M.t.u6dc5B),
                                             checked: !t.disableRaidAlertNag,
                                             action: () =>
                                                 (0, X.TG)(
@@ -365,7 +365,7 @@ function en(e) {
                                         }),
                                         (0, n.jsx)(o.sL, {
                                             id: "activity_alerts_push",
-                                            label: f.intl.string(f.t.P8MG6q),
+                                            label: M.intl.string(M.t.P8MG6q),
                                             checked: !t.disableRaidAlertPush,
                                             action: () =>
                                                 (0, X.TG)(
@@ -387,21 +387,21 @@ function en(e) {
                                             id: "everything",
                                             group: "notification-preset",
                                             checked: c === B.N9.ALL_MESSAGES,
-                                            label: f.intl.string(f.t.hZrr6k),
+                                            label: M.intl.string(M.t.hZrr6k),
                                             action: () => ((0, P.i)(e, B.N9.ALL_MESSAGES), l(!1)),
                                         }),
                                         (0, n.jsx)(o.iD, {
                                             id: "essentials",
                                             group: "notification-preset",
                                             checked: c === B.N9.MENTIONS,
-                                            label: f.intl.string(f.t.y59NJm),
+                                            label: M.intl.string(M.t.y59NJm),
                                             action: () => ((0, P.i)(e, B.N9.MENTIONS), l(!1)),
                                         }),
                                         (0, n.jsx)(o.iD, {
                                             id: "nothing",
                                             group: "notification-preset",
                                             checked: c === B.N9.NOTHING,
-                                            label: f.intl.string(f.t["pGn/bJ"]),
+                                            label: M.intl.string(M.t["pGn/bJ"]),
                                             action: () => ((0, P.i)(e, B.N9.NOTHING), l(!1)),
                                         }),
                                         (0, n.jsx)(o.iD, {
@@ -409,7 +409,7 @@ function en(e) {
                                             group: "notification-preset",
                                             checked: c === B.N9.CUSTOM,
                                             action: () => (t(!0), l(!0)),
-                                            label: f.intl.string(f.t["32yow9"]),
+                                            label: M.intl.string(M.t["32yow9"]),
                                         }),
                                     ],
                                 }),
@@ -426,20 +426,20 @@ function en(e) {
                                                             id: "unread_setting_all_messages",
                                                             group: "unread_setting",
                                                             checked: a === C.e.ALL_MESSAGES,
-                                                            label: f.intl.string(f.t["HVah/3"]),
+                                                            label: M.intl.string(M.t["HVah/3"]),
                                                             action: () => g(C.e.ALL_MESSAGES),
                                                         }),
                                                         (0, n.jsx)(o.iD, {
                                                             id: "unread_setting_mention_only",
                                                             group: "unread_setting",
                                                             checked: a === C.e.ONLY_MENTIONS,
-                                                            label: f.intl.string(f.t["tu+ZWJ"]),
+                                                            label: M.intl.string(M.t["tu+ZWJ"]),
                                                             action: () => g(C.e.ONLY_MENTIONS),
                                                             disabled:
                                                                 a !== C.e.ONLY_MENTIONS && d === R.orn.ALL_MESSAGES,
                                                             subtext:
                                                                 a !== C.e.ONLY_MENTIONS && d === R.orn.ALL_MESSAGES
-                                                                    ? f.intl.string(f.t.eP8yWU)
+                                                                    ? M.intl.string(M.t.eP8yWU)
                                                                     : void 0,
                                                         }),
                                                     ],
@@ -450,30 +450,30 @@ function en(e) {
                                                 o.Dr,
                                                 {
                                                     id: "push_settings",
-                                                    label: f.intl.string(f.t.HcoRu0),
+                                                    label: M.intl.string(M.t.HcoRu0),
                                                     children: [
                                                         (0, n.jsx)(o.iD, {
                                                             group: "notification-preset",
                                                             id: "push_settings_everything",
-                                                            label: f.intl.string(f.t["HVah/3"]),
+                                                            label: M.intl.string(M.t["HVah/3"]),
                                                             checked: d === R.orn.ALL_MESSAGES,
                                                             action: () => u(R.orn.ALL_MESSAGES),
                                                             subtext:
                                                                 a !== C.e.ALL_MESSAGES && d !== R.orn.ALL_MESSAGES
-                                                                    ? f.intl.string(f.t.idXSbI)
+                                                                    ? M.intl.string(M.t.idXSbI)
                                                                     : void 0,
                                                         }),
                                                         (0, n.jsx)(o.iD, {
                                                             group: "notification-preset",
                                                             id: "push_settings_everything_mention",
                                                             checked: d === R.orn.ONLY_MENTIONS,
-                                                            label: f.intl.string(f.t["tu+ZWJ"]),
+                                                            label: M.intl.string(M.t["tu+ZWJ"]),
                                                             action: () => u(R.orn.ONLY_MENTIONS),
                                                         }),
                                                         (0, n.jsx)(o.iD, {
                                                             group: "notification-preset",
                                                             id: "push_settings_everything_nothing",
-                                                            label: f.intl.string(f.t.X4wWUi),
+                                                            label: M.intl.string(M.t.X4wWUi),
                                                             checked: d === R.orn.NO_MESSAGES,
                                                             action: () => u(R.orn.NO_MESSAGES),
                                                         }),
@@ -503,7 +503,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "mention",
                                         checked: g.suppressEveryone,
-                                        label: f.intl.format(f.t.OWiWAp, {}),
+                                        label: M.intl.format(M.t.OWiWAp, {}),
                                         action: () =>
                                             en(
                                                 u,
@@ -514,7 +514,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "roles",
                                         checked: g.suppressRoles,
-                                        label: f.intl.string(f.t["O/QdoD"]),
+                                        label: M.intl.string(M.t["O/QdoD"]),
                                         action: () =>
                                             en(
                                                 u,
@@ -524,7 +524,7 @@ function en(e) {
                                     }),
                                     (0, n.jsx)(o.sL, {
                                         id: "hightlight",
-                                        label: f.intl.string(f.t.gPuteJ),
+                                        label: M.intl.string(M.t.gPuteJ),
                                         checked: g.highligths === R.guM.ENABLED,
                                         action: () =>
                                             en(
@@ -543,7 +543,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "event",
                                         checked: g.muteScheduledEvents,
-                                        label: f.intl.string(f.t.ONG3Yz),
+                                        label: M.intl.string(M.t.ONG3Yz),
                                         action: () =>
                                             en(
                                                 u,
@@ -554,7 +554,7 @@ function en(e) {
                                     (0, n.jsx)(o.sL, {
                                         id: "mobile_push",
                                         checked: g.mobilePush,
-                                        label: f.intl.string(f.t.h1DL66),
+                                        label: M.intl.string(M.t.h1DL66),
                                         action: () =>
                                             en(u, { mobile_push: !g.mobilePush }, I.G_.mobilePush(!g.mobilePush)),
                                     }),
@@ -588,7 +588,7 @@ function en(e) {
               "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: c.Z_,
-              "aria-label": f.intl.string(f.t.HpQykc),
+              "aria-label": M.intl.string(M.t.HpQykc),
               onSelect: eg,
               children: [
                   (0, n.jsxs)(o.rX, {
@@ -596,11 +596,11 @@ function en(e) {
                           e_,
                           (0, n.jsx)(o.Dr, {
                               id: "privacy",
-                              label: f.intl.string(f.t.IlFwwR),
+                              label: M.intl.string(M.t.IlFwwR),
                               action: () =>
                                   (0, a.openModalLazy)(async () => {
                                       let { default: e } = await Promise.all([
-                                          t.e("14898"),
+                                          t.e("43453"),
                                           t.e("5871"),
                                           t.e("7408"),
                                           t.e("71492"),
@@ -620,25 +620,25 @@ function en(e) {
                       : (0, n.jsx)(o.rX, {
                             children: (0, n.jsx)(o.Dr, {
                                 id: "leave-guild",
-                                label: f.intl.string(f.t.Dv8gFT),
+                                label: M.intl.string(M.t.Dv8gFT),
                                 action: eI,
                                 color: "danger",
                             }),
                         }),
-                  (0, n.jsx)(o.rX, { children: eG }),
+                  (0, n.jsx)(o.rX, { children: ef }),
               ],
           })
         : (0, n.jsxs)(d.W, {
               "data-menu-migrated": !0,
               navId: "guild-context",
               onClose: c.Z_,
-              "aria-label": f.intl.string(f.t.HpQykc),
+              "aria-label": M.intl.string(M.t.HpQykc),
               onSelect: eg,
               children: [
-                  (0, n.jsx)(o.rX, { children: eM }),
+                  (0, n.jsx)(o.rX, { children: eG }),
                   (0, n.jsx)(o.rX, { children: e_ }),
                   (0, n.jsxs)(o.rX, {
-                      children: [ep, em || __OVERLAY__ ? null : eb, em && !__OVERLAY__ ? ej : null, eS, ef],
+                      children: [ep, em || __OVERLAY__ ? null : eb, em && !__OVERLAY__ ? ej : null, eS, eM],
                   }),
                   (0, n.jsxs)(o.rX, {
                       children: [
@@ -647,11 +647,11 @@ function en(e) {
                               ? null
                               : (0, n.jsx)(o.Dr, {
                                     id: "privacy",
-                                    label: f.intl.string(f.t.BayiAo),
+                                    label: M.intl.string(M.t.BayiAo),
                                     action: () =>
                                         (0, a.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                t.e("14898"),
+                                                t.e("43453"),
                                                 t.e("5871"),
                                                 t.e("7408"),
                                                 t.e("71492"),
@@ -673,14 +673,14 @@ function en(e) {
                           !eE &&
                               (0, n.jsx)(o.Dr, {
                                   id: "leave-guild",
-                                  label: f.intl.string(f.t.J2TBi3),
+                                  label: M.intl.string(M.t.J2TBi3),
                                   action: eI,
                                   color: "danger",
                               }),
                       ],
                   }),
                   (0, n.jsx)(o.rX, { children: eO }),
-                  (0, n.jsx)(o.rX, { children: eG }),
+                  (0, n.jsx)(o.rX, { children: ef }),
               ],
           });
 }

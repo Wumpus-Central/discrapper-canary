@@ -2,7 +2,7 @@
 n.d(t, { A: () => F, Y: () => k });
 var i = n(627968),
     r = n(64700),
-    a = n(735438),
+    a = n(435558),
     s = n.n(a),
     l = n(317097),
     o = n(17928),
@@ -22,11 +22,11 @@ var i = n(627968),
     S = n(545868),
     N = n(332173),
     C = n(176201),
-    O = n(676608),
-    R = n(342296),
+    R = n(676608),
+    O = n(342296),
     L = n(260509),
-    D = n(734057),
-    y = n(696451),
+    y = n(734057),
+    D = n(696451),
     v = n(317525),
     b = n(71393),
     M = n(287809),
@@ -39,11 +39,11 @@ function x(e) {
         d = r.useRef(null),
         c = (0, o.bG)([b.A], () => b.A.getGuild(a)?.ownerId, [a]),
         u = (0, o.bG)([M.default], () => M.default.getUser(t.userId), [t.userId]),
-        _ = (0, o.bG)([D.A], () => D.A.getChannel(s), [s]);
+        _ = (0, o.bG)([y.A], () => y.A.getChannel(s), [s]);
     return null == u || null == _
         ? null
         : (0, i.jsx)(
-              R.A,
+              O.A,
               {
                   targetElementRef: d,
                   userId: t.userId,
@@ -97,11 +97,11 @@ function x(e) {
                                           n.e("98965"),
                                           n.e("82073"),
                                           n.e("97558"),
-                                          n.e("91994"),
                                           n.e("54625"),
+                                          n.e("91994"),
                                           n.e("71133"),
-                                          n.e("76665"),
                                           n.e("28662"),
+                                          n.e("76665"),
                                           n.e("35313"),
                                           n.e("39171"),
                                           n.e("36564"),
@@ -110,10 +110,10 @@ function x(e) {
                                           n.e("45996"),
                                           n.e("792"),
                                           n.e("92822"),
-                                          n.e("61268"),
                                           n.e("23427"),
                                           n.e("49145"),
                                           n.e("29422"),
+                                          n.e("61268"),
                                           n.e("9291"),
                                           n.e("56753"),
                                           n.e("65826"),
@@ -168,8 +168,8 @@ function k(e) {
             let e = b.A.getGuild(a);
             return null == e ? null : (0, L.af)(e);
         }, [a]),
-        A = (0, o.yK)([y.Ay, M.default], () => {
-            let e = y.Ay.getMembers(a),
+        A = (0, o.yK)([D.Ay, M.default], () => {
+            let e = D.Ay.getMembers(a),
                 t = null == n || n === E ? e : e.filter((e) => e.roles.includes(n));
             return s()(t)
                 .filter((e) => null != M.default.getUser(e.userId))
@@ -217,44 +217,45 @@ function F(e) {
         { analyticsLocations: E } = (0, p.Ay)(f.A.ROLE_MENTION),
         A = (0, o.bG)([I.Ay], () => I.Ay.roleStyle),
         h = (0, o.bG)([v.A], () => (null == s || null == t ? null : v.A.getRole(s, t))),
-        T = (0, O.jV)(s, h),
+        T = (0, R.jV)(s, h),
         m = !c && null != h && !(0, C.Qv)(h),
         g = m && "dot" === A,
-        R = m && "username" === A,
+        O = m && "username" === A,
         L = T && null != h ? h.colorStrings : null,
-        D = r.useRef(null),
-        y = (e) =>
-            (0, i.jsxs)(N.A, {
-                ref: D,
-                className: w.Dz,
-                color: R ? h.color : null,
-                roleColors: R ? L : null,
-                ...e,
-                children: [
-                    g &&
-                        null != h.color &&
-                        (0, i.jsx)(u.W, {
-                            color: (0, l.Hl)(h.color),
-                            colors: L,
-                            className: G.m,
-                            background: !1,
-                            tooltip: !1,
-                        }),
-                    d,
-                ],
-            });
+        y = r.useRef(null);
+    function D(e) {
+        return (0, i.jsxs)(N.A, {
+            ref: y,
+            className: w.Dz,
+            color: O ? h.color : null,
+            roleColors: O ? L : null,
+            ...e,
+            children: [
+                g &&
+                    null != h.color &&
+                    (0, i.jsx)(u.W, {
+                        color: (0, l.Hl)(h.color),
+                        colors: L,
+                        className: G.m,
+                        background: !1,
+                        tooltip: !1,
+                    }),
+                d,
+            ],
+        });
+    }
     return c || null == n || null == s || (null == t && "@everyone" !== a)
-        ? (0, i.jsx)(p.f5, { value: E, children: y() })
+        ? (0, i.jsx)(p.f5, { value: E, children: D() })
         : (0, i.jsx)(p.f5, {
               value: E,
               children: (0, i.jsx)(_.Y, {
-                  targetElementRef: D,
+                  targetElementRef: y,
                   preload: async () => {
                       null != t && (await (0, S.a)(s, t));
                   },
                   renderPopout: (e) => (0, i.jsx)(k, { guildId: s, channelId: n, roleId: t, popoutProps: e }),
                   position: "right",
-                  children: y,
+                  children: D,
               }),
           });
 }

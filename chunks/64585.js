@@ -1,4 +1,4 @@
-n.d(t, { A: () => O }), n(321073);
+n.d(t, { A: () => m }), n(321073);
 var i = n(228366),
     l = n(272355),
     r = n(400492),
@@ -23,21 +23,16 @@ function N() {
         t = u.A.comboSoundsEnabled;
     return !!e && !!t && null != d.Ay.getChannelId();
 }
-let p = () => {
+function p() {
     if (0 === _.length || !N() || g) return;
     g = !0;
     let [e, t] = _[_.length - 1];
     (0, r.Ak)(e, t), (I = setTimeout(S, 1e3));
-};
+}
 function S() {
     _.pop(), (g = !1), p();
 }
-let L = function (e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
-        n = o.A.isConnected();
-    _.push([e, t * (n ? 0.1 : 1)]), p();
-};
-class m extends l.A {
+class L extends l.A {
     _initialize() {
         A.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
@@ -77,7 +72,12 @@ class m extends l.A {
         n && l >= 7 ? C || (h.loop(), (C = !0)) : T();
     }
     playAchievementUnlockSound() {
-        N() && L("poggermode_achievement_unlock");
+        N() &&
+            (function (e) {
+                let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
+                    n = o.A.isConnected();
+                _.push([e, t * (n ? 0.1 : 1)]), p();
+            })("poggermode_achievement_unlock");
     }
 }
-let O = new m();
+let m = new L();

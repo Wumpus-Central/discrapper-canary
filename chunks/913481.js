@@ -8,38 +8,38 @@ var i = n(627968),
     c = n(446243),
     d = n(558076),
     u = n(967388),
-    h = n(996752),
-    p = n(662731),
+    p = n(996752),
+    h = n(662731),
     m = n(375708),
     A = n(958250),
     x = n(739549);
 function g(e) {
     let { channelId: t, pendingNote: n, roomWidth: s, containerRef: d } = e,
-        u = (0, h.F)(s).numericAvatarSize / 2,
+        u = (0, p.F)(s).numericAvatarSize / 2,
         [g, f] = (0, r.z)(() => ({ x: -1 * u, y: -1 * u, config: { clamp: !0, tension: 300 } })),
         C = (0, l.useRef)(!1);
     return (
         (0, l.useEffect)(() => {
-            let e = d.current,
-                i = (e) => {
-                    f({ x: e.offsetX, y: e.offsetY });
-                },
-                l = (i) => {
-                    if (C.current || null == n) return;
-                    i.stopPropagation();
-                    let l = i.offsetX,
-                        a = i.offsetY,
-                        s = o.A.getChannel(t)?.guild_id;
-                    null != s &&
-                        ((0, c.zK)(s, t, n, {
-                            x: (100 * l) / (e?.clientWidth ?? 1),
-                            y: (100 * a) / (e?.clientHeight ?? 1),
-                        }),
-                        (C.current = !0));
-                },
-                a = (e) => {
-                    "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (0, c.HW)(t));
-                };
+            let e = d.current;
+            function i(e) {
+                f({ x: e.offsetX, y: e.offsetY });
+            }
+            function l(i) {
+                if (C.current || null == n) return;
+                i.stopPropagation();
+                let l = i.offsetX,
+                    a = i.offsetY,
+                    s = o.A.getChannel(t)?.guild_id;
+                null != s &&
+                    ((0, c.zK)(s, t, n, {
+                        x: (100 * l) / (e?.clientWidth ?? 1),
+                        y: (100 * a) / (e?.clientHeight ?? 1),
+                    }),
+                    (C.current = !0));
+            }
+            function a(e) {
+                "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (0, c.HW)(t));
+            }
             return (
                 e?.addEventListener("mousemove", i),
                 e?.addEventListener("click", l),
@@ -54,7 +54,7 @@ function g(e) {
         (0, i.jsx)(a.animated.div, {
             className: A.D,
             style: { left: g.x.to((e) => e - u / 2), top: g.y.to((e) => e - u / 2) },
-            children: (0, i.jsx)("img", { src: x.A, alt: m.intl.string(p.default["Vj+S0/"]), style: { width: u } }),
+            children: (0, i.jsx)("img", { src: x.A, alt: m.intl.string(h.default["Vj+S0/"]), style: { width: u } }),
         })
     );
 }

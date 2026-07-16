@@ -170,8 +170,8 @@ let G = (0, k.S)() || !1,
         });
     });
 var K = n(451988),
-    F = n(990078),
-    X = n(319060),
+    F = n(319060),
+    X = n(866665),
     z = n(403581),
     W = n(952270),
     Y = n(1215),
@@ -188,7 +188,7 @@ var K = n(451988),
     ts = n(32880),
     tr = n(465797),
     ta = n(953727);
-let to = (t) => {
+let to = function (t) {
     let { id: e, startColor: n, stopColor: l, color: s, stop: r } = t;
     return (0, i.jsxs)("linearGradient", {
         id: e,
@@ -316,7 +316,7 @@ class tA extends l.PureComponent {
             s = this.getIsRecentlySynced();
         (tu.has(l.type) || s) && (e.id, this.getStop(l, s));
         let r = s ? th : tp[l.type];
-        return (0, i.jsx)(F.m, { text: this.getTooltip(l, s), children: (0, i.jsx)(r, { className: n }) });
+        return (0, i.jsx)(X.m, { text: this.getTooltip(l, s), children: (0, i.jsx)(r, { className: n }) });
     }
 }
 let tm = y.Ay.connectStores([tr.A], (t) => {
@@ -324,13 +324,13 @@ let tm = y.Ay.connectStores([tr.A], (t) => {
     return { cloudSyncState: tr.A.getState(e.id, e.branchId) };
 })(tA);
 var tg = n(855189);
-let tx = (0, tn.xI)(X.A.GAME_LIST_ROW_MIN_HEIGHT),
-    tf = (0, tn.xI)(X.A.GAME_LIST_LINKED_TO_GLOW_DURATION),
+let tx = (0, tn.xI)(F.A.GAME_LIST_ROW_MIN_HEIGHT),
+    tf = (0, tn.xI)(F.A.GAME_LIST_LINKED_TO_GLOW_DURATION),
     ty = Object.freeze({ [w.DpB.PLATFORM]: "Platform", [w.DpB.LAST_PLAYED]: "Last Played", [w.DpB.NAME]: "Name" });
 function tI(t) {
     let { flag: e, icon: n, item: l, tooltip: s } = t,
         r = l.libraryApplication.hasFlag(e);
-    return (0, i.jsx)(F.m, { text: s, children: (0, i.jsx)(n, { className: h()(tg.up, { [tg.R]: !r }) }) });
+    return (0, i.jsx)(X.m, { text: s, children: (0, i.jsx)(n, { className: h()(tg.up, { [tg.R]: !r }) }) });
 }
 let tN = [
     {
@@ -352,7 +352,7 @@ let tN = [
                                 children: t.libraryApplication.getBranchedName(t.application),
                             }),
                             t.libraryApplication.hasFlag(w.hM6.PREMIUM)
-                                ? (0, i.jsx)(F.m, {
+                                ? (0, i.jsx)(X.m, {
                                       text: v.intl.string(v.t.tG2SzG),
                                       children: (0, i.jsx)(z.t, {
                                           size: "md",
@@ -857,7 +857,7 @@ function t0(t) {
 let t1 = [tw.A.unsafe_rawColors.BLUE_345.css, tw.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
     t5 = (t) => {
         let { tooltip: e, onClick: n, icon: l } = t;
-        return (0, i.jsx)(F.m, {
+        return (0, i.jsx)(X.m, {
             text: e,
             children: (0, i.jsx)(tj.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
         });
@@ -873,7 +873,7 @@ function t4(t, e) {
             return (0, tz.Xq)(t, { useKibibytes: !0 });
     }
 }
-let t2 = {
+let t6 = {
     [w.WTw.INSTALLING]: {
         [tt.pJ.NONE]: (t, e, n, i) => v.intl.formatToPlainString(v.t.JfJt9d, { percent: t, progress: e, total: n }),
         [tt.pJ.SECONDS]: (t, e, n, i) =>
@@ -902,8 +902,8 @@ let t2 = {
             v.intl.formatToPlainString(v.t["3VG9s1"], { percent: t, progress: e, total: n, timeRemaining: i }),
     },
 };
-function t6(t, e, n, i, l) {
-    let s = t2[e],
+function t2(t, e, n, i, l) {
+    let s = t6[e],
         r = null != s ? Object.keys(s) : [],
         { unit: a, time: o } = (0, tt.$l)(null != t ? t / 60 : null, r);
     if (null != s && null != a) {
@@ -925,7 +925,7 @@ function t3(t) {
         case w.OQC.ALLOCATING_DISK:
             return v.intl.formatToPlainString(v.t.XigoJ9, { percent: i });
         case w.OQC.PATCHING:
-            return t6(r, e, i, o, a);
+            return t2(r, e, i, o, a);
         case w.OQC.FINALIZING:
             return v.intl.formatToPlainString(v.t["6PHDUN"], { percent: i });
         case w.OQC.PAUSING:
@@ -935,7 +935,7 @@ function t3(t) {
         case w.OQC.POST_INSTALL_SCRIPTS:
             return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: a });
         case w.OQC.REPAIRING:
-            if (e === w.WTw.REPAIRING) return t6(r, e, i, o, a);
+            if (e === w.WTw.REPAIRING) return t2(r, e, i, o, a);
             return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: a });
     }
     throw Error("Invalid Dispatch stage");
@@ -1374,7 +1374,7 @@ var ec = n(665260),
     eP = n(29160),
     ej = n(834911);
 let ew = Math.ceil(2 * Math.PI * 20),
-    e_ = (t) => {
+    e_ = function (t) {
         let e,
             n,
             l,
@@ -1382,7 +1382,7 @@ let ew = Math.ceil(2 * Math.PI * 20),
             { total: r, used: a } = t,
             o = Math.max(0, Math.min(1, a / r)),
             c = `${Math.floor(100 * o)}%`;
-        return (0, i.jsx)(F.m, {
+        return (0, i.jsx)(X.m, {
             text: v.intl.formatToPlainString(v.t["2eoRMh"], { used: c }),
             children: (0, i.jsxs)("div", {
                 className: ej.iE,

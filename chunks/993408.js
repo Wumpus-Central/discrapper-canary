@@ -2,16 +2,16 @@
 n.d(t, {
     $W: () => K,
     $b: () => ee,
-    Br: () => D,
+    Br: () => y,
     Bs: () => eu,
     CE: () => e_,
     D0: () => S,
     Dm: () => H,
-    G0: () => R,
+    G0: () => O,
     HF: () => en,
     MG: () => Q,
     P_: () => F,
-    R8: () => y,
+    R8: () => D,
     V6: () => ed,
     WD: () => G,
     WU: () => et,
@@ -37,13 +37,13 @@ n.d(t, {
     tt: () => x,
     wo: () => Z,
     x9: () => W,
-    xM: () => O,
+    xM: () => R,
     yt: () => M,
     zd: () => $,
 }),
     n(321073);
 var i,
-    r = n(735438),
+    r = n(435558),
     a = n(575593),
     s = n(441574),
     l = n(968671),
@@ -66,7 +66,7 @@ let N = { nitro: "nitro", thirdparty: "xbox" };
 function C(e) {
     return null != e ? N[e] : null;
 }
-function O(e) {
+function R(e) {
     if (!c.Ay.canUseShopDiscounts(e)) return null;
     if (c.Ay.canUseCollectibles(e)) return "nitro";
     let t = (0, o.kQ)(e?.perks, s.bb.SHOP_DISCOUNTS);
@@ -76,17 +76,17 @@ function O(e) {
           ? "thirdparty"
           : null;
 }
-function R(e) {
+function O(e) {
     return e?.premiumType != null;
 }
 function L(e) {
     return e?.purchaseType === T.zF_.PREMIUM_PURCHASE;
 }
-function D(e, t, n) {
+function y(e, t, n) {
     return M(e, n ? (t ? T.lid.MOBILE_PREMIUM_TIER_2 : T.lid.MOBILE) : t ? T.lid.PREMIUM_TIER_2 : T.lid.DEFAULT);
 }
-function y(e, t, n) {
-    let i = D(e, t, n);
+function D(e, t, n) {
+    let i = y(e, t, n);
     return null == i ? "" : (0, u.$g)(i?.amount, i?.currency);
 }
 function v(e, t) {
@@ -253,7 +253,9 @@ function Q(e, t) {
 function J(e) {
     return e.applicationId === T.FYj;
 }
-let ee = (e) => 3.8 * e;
+function ee(e) {
+    return 3.8 * e;
+}
 function et(e) {
     let t = new Date(),
         n = Date.UTC(t.getFullYear(), t.getMonth(), t.getDate());
@@ -316,8 +318,8 @@ function ed(e, t) {
 }
 function ec(e, t, n) {
     return e.sort((e, i) => {
-        let r = n ? (0, f.CW)({ product: e, hasShopDiscount: t }) : D(e, t, !1),
-            a = n ? (0, f.CW)({ product: i, hasShopDiscount: t }) : D(i, t, !1);
+        let r = n ? (0, f.CW)({ product: e, hasShopDiscount: t }) : y(e, t, !1),
+            a = n ? (0, f.CW)({ product: i, hasShopDiscount: t }) : y(i, t, !1);
         return (r?.amount ?? 0) - (a?.amount ?? 0);
     });
 }

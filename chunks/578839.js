@@ -22,7 +22,7 @@ var s = l(627968),
     C = l(821609),
     p = l(192308),
     E = l(297264),
-    _ = l(781696),
+    _ = l(900002),
     y = l(736653),
     G = l(548118),
     D = l(107773),
@@ -339,7 +339,7 @@ function ey(e) {
         g = null == n.description || 0 === n.description.length;
     return (0, s.jsxs)(q.D, {
         className: ep.G9,
-        onClick: (e) => {
+        onClick: function (e) {
             null != l &&
                 (e.shiftKey
                     ? (0, $.bN)(l.guild_id, l.id)

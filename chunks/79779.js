@@ -1,4 +1,4 @@
-n.d(e, { default: () => k });
+n.d(e, { default: () => f });
 var i = n(627968),
     a = n(64700),
     s = n(562708),
@@ -12,13 +12,13 @@ var i = n(627968),
     g = n(181658),
     d = n(375708),
     h = n(661965);
-function k(t) {
+function f(t) {
     let {
             transitionState: e,
             onFormSubmit: n,
-            onResend: k,
-            onSuccess: C,
-            onClose: f,
+            onResend: f,
+            onSuccess: k,
+            onClose: C,
             headerText: m,
             confirmButtonText: x,
             confirmButtonVariant: S = "primary",
@@ -28,23 +28,23 @@ function k(t) {
         [E, j] = a.useState(""),
         [v, M] = a.useState(!1),
         [P, R] = a.useState(null),
-        T = a.useRef(null),
-        D = async (t) => {
-            t.preventDefault(), R(null), A(!0);
-            try {
-                let t = await n(E);
-                null != C && C(t), f();
-            } catch (t) {
-                R(new g.A(t).getAnyErrorMessage());
-            } finally {
-                A(!1);
-            }
-        };
+        T = a.useRef(null);
+    async function D(t) {
+        t.preventDefault(), R(null), A(!0);
+        try {
+            let t = await n(E);
+            null != k && k(t), C();
+        } catch (t) {
+            R(new g.A(t).getAnyErrorMessage());
+        } finally {
+            A(!1);
+        }
+    }
     async function I() {
         if (!v) {
             M(!0);
             try {
-                await k(), (0, o.P0)((0, u.o)(d.intl.string(d.t["84yeoz"]), c.Ck.SUCCESS));
+                await f(), (0, o.P0)((0, u.o)(d.intl.string(d.t["84yeoz"]), c.Ck.SUCCESS));
             } catch (e) {
                 let t = new g.A(e).getAnyErrorMessage();
                 null != t && (0, o.P0)((0, u.o)(t, c.Ck.FAILURE));
@@ -63,10 +63,10 @@ function k(t) {
             title: m,
             subtitle: d.intl.string(d.t.SZJowy),
             actions: [
-                { text: d.intl.string(d.t["ETE/oC"]), onClick: f, variant: "secondary", disabled: L },
+                { text: d.intl.string(d.t["ETE/oC"]), onClick: C, variant: "secondary", disabled: L },
                 { text: x, variant: S, loading: L, type: "submit" },
             ],
-            onClose: f,
+            onClose: C,
             children: (0, i.jsxs)(p.B, {
                 gap: 8,
                 children: [

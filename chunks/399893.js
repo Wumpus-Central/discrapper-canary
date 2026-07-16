@@ -13,8 +13,8 @@ var l = n(627968),
     b = n(492462),
     h = n(17928),
     x = n(77729),
-    A = n(47167),
-    f = n(451909),
+    f = n(47167),
+    A = n(451909),
     p = n(71393),
     v = n(994500),
     y = n(287809),
@@ -73,7 +73,7 @@ function tt(t) {
                 ? (0, l.jsx)(d.Dr, {
                       id: T.intl.string(T.t.b8606G),
                       label: T.intl.string(T.t.b8606G),
-                      action: () => {
+                      action: function () {
                           null != n &&
                               null != o &&
                               (function (t, e, n, l) {
@@ -107,7 +107,7 @@ function tt(t) {
                 let t = new Date(c?.scheduled_start_time ?? x);
                 if (new Date() > t) return null;
             }
-            let A = (t) => {
+            function f(t) {
                 (0, F.openModal)((r) =>
                     (0, l.jsx)(B.ConfirmModal, {
                         ...r,
@@ -122,11 +122,11 @@ function tt(t) {
                             (0, l.jsx)(H.E, { variant: "text-md/normal", children: T.intl.format(T.t.ZcpcyO, {}) }),
                     }),
                 );
-            };
+            }
             return (0, l.jsx)(d.Dr, {
                 id: T.intl.string(T.t.B9sJLX),
                 label: T.intl.string(T.t.B9sJLX),
-                action: a ? void 0 : () => A(),
+                action: a ? void 0 : () => f(),
                 color: "danger",
                 children:
                     a &&
@@ -135,14 +135,14 @@ function tt(t) {
                             (0, l.jsx)(d.Dr, {
                                 id: T.intl.string(T.t.tqClly),
                                 label: T.intl.string(T.t.tqClly),
-                                action: () => A(),
+                                action: () => f(),
                                 disabled: c?.is_canceled,
                                 color: "danger",
                             }),
                             (0, l.jsx)(d.Dr, {
                                 id: T.intl.string(T.t.wr33rW),
                                 label: T.intl.string(T.t.wr33rW),
-                                action: () => A(!0),
+                                action: () => f(!0),
                                 color: "danger",
                             }),
                         ],
@@ -159,7 +159,7 @@ function tt(t) {
                 b = (0, D.nh)(e, a);
             if (!c || null == b || null == o) return null;
             let x = null != o.recurrence_rule && !s,
-                A = (t) => {
+                f = (t) => {
                     (null == a || t) && !s
                         ? (0, F.openModalLazy)(async () => {
                               let { default: t } = await Promise.all([
@@ -170,7 +170,7 @@ function tt(t) {
                                   n.e("6212"),
                                   n.e("79465"),
                                   n.e("8886"),
-                                  n.e("47266"),
+                                  n.e("15574"),
                                   n.e("8676"),
                                   n.e("73515"),
                                   n.e("6129"),
@@ -225,7 +225,7 @@ function tt(t) {
             return (0, l.jsx)(d.Dr, {
                 id: T.intl.string(T.t.Rgy2dU),
                 label: T.intl.string(T.t.Rgy2dU),
-                action: x ? void 0 : () => A(!0),
+                action: x ? void 0 : () => f(!0),
                 children:
                     x &&
                     (0, l.jsxs)(l.Fragment, {
@@ -233,13 +233,13 @@ function tt(t) {
                             (0, l.jsx)(d.Dr, {
                                 id: T.intl.string(T.t.wmVmXN),
                                 label: T.intl.string(T.t.wmVmXN),
-                                action: () => A(!1),
+                                action: () => f(!1),
                                 disabled: m?.is_canceled || b.startTime.getTime() < Date.now(),
                             }),
                             (0, l.jsx)(d.Dr, {
                                 id: T.intl.string(T.t.BW1Qoh),
                                 label: T.intl.string(T.t.BW1Qoh),
-                                action: () => A(!0),
+                                action: () => f(!0),
                                 disabled: new Date(o.scheduled_start_time).getTime() < Date.now(),
                             }),
                         ],
@@ -350,7 +350,7 @@ function tt(t) {
                     ? u.entity_metadata.location
                     : null != n && null != o
                       ? T.intl.formatToPlainString(T.t["2t8L04"], {
-                            channelName: (0, A.m1)(n, y.default, v.A),
+                            channelName: (0, f.m1)(n, y.default, v.A),
                             guildName: o.name,
                         })
                       : T.intl.string(T.t.VSgOVg);
@@ -358,7 +358,7 @@ function tt(t) {
                 k = null != u.scheduled_end_time ? m()(u.scheduled_end_time) : g,
                 N =
                     null != u.description && "" !== u.description
-                        ? f.Ay.unparse(u.description, n?.id ?? S.dJq, !0)
+                        ? A.Ay.unparse(u.description, n?.id ?? S.dJq, !0)
                         : "",
                 I = (0, G.Sn)(u.recurrence_rule),
                 X = null != I ? (0, _.X7)(I) : null,
@@ -425,7 +425,7 @@ function tt(t) {
                 ],
             });
         })(o, te.id, tt, g),
-        tA = (function (t) {
+        tf = (function (t) {
             let { guildEventId: e, guildId: n, recurrenceId: i } = t,
                 r = (0, h.bG)([K.A], () => K.A.isLurking(n), [n]),
                 a = (0, h.bG)([z.default], () => z.default.getId()),
@@ -479,7 +479,7 @@ function tt(t) {
             "aria-label": T.intl.string(T.t.liqwPJ),
             onSelect: ti,
             children: [
-                (0, l.jsxs)(d.rX, { children: [tx, !tl && to, ts, !tl && tu, ta, td, tc, tl && tA] }),
+                (0, l.jsxs)(d.rX, { children: [tx, !tl && to, ts, !tl && tu, ta, td, tc, tl && tf] }),
                 !tl && (0, l.jsx)(d.rX, { children: tm }),
                 null != tg && (0, l.jsx)(d.rX, { children: tg }),
                 (0, l.jsxs)(d.rX, { children: [tb, th] }),

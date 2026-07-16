@@ -5103,7 +5103,7 @@ function a9(e) {
                 {
                     text: m,
                     icon: aZ.w,
-                    onClick: () => {
+                    onClick: function () {
                         null != l &&
                             (0, ic.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e("33847"), n.e("2504")]).then(
@@ -5131,7 +5131,7 @@ function a9(e) {
                 {
                     text: o,
                     icon: a4.N,
-                    onClick: () => {
+                    onClick: function () {
                         null != l &&
                             (0, ic.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([n.e("97660"), n.e("40243")]).then(
@@ -5162,7 +5162,7 @@ function a9(e) {
                     {
                         text: u,
                         icon: tX.u,
-                        onClick: () => {
+                        onClick: function () {
                             null != c &&
                                 null != o &&
                                 a3.A.confirmDelete(c, o, !1, { isFlagResolved: d, moderatorReportChannelId: i.id });
@@ -5190,7 +5190,7 @@ function a9(e) {
                     {
                         text: r ? eR.intl.string(a2.default["6uMZbv"]) : eR.intl.string(a2.default["Sgg/uI"]),
                         icon: a7.O,
-                        onClick: () => {
+                        onClick: function () {
                             null != n && (0, a8.R)({ guildId: t.guild_id, userId: n.id, modReportId: t.id });
                         },
                         disabled: r,

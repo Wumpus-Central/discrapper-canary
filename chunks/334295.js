@@ -765,102 +765,98 @@ function tV(e) {
     }
 }
 let tB = (e) => {
-        let { fade: t, surrogate: n, onClick: i, delay: r, index: s } = e,
-            l = (0, eM.rm)(`item-${s}`),
-            o = eA.Ay.getURL(tk + n),
-            d = (0, tf.z)({ opacity: 1, from: { opacity: +!t }, delay: r }, "animate-always");
-        return (0, a.jsx)(H.D, {
-            ...l,
-            role: "option",
-            "aria-selected": 0 === s,
-            onClick: () => i(n),
-            className: tG.B6,
-            children: (0, a.jsx)(th.animated.div, {
-                "aria-label": tV(n),
-                className: tG.g4,
-                style: { backgroundImage: `url("${o}")`, ...d },
+    let { fade: t, surrogate: n, onClick: i, delay: r, index: s } = e,
+        l = (0, eM.rm)(`item-${s}`),
+        o = eA.Ay.getURL(tk + n),
+        d = (0, tf.z)({ opacity: 1, from: { opacity: +!t }, delay: r }, "animate-always");
+    return (0, a.jsx)(H.D, {
+        ...l,
+        role: "option",
+        "aria-selected": 0 === s,
+        onClick: () => i(n),
+        className: tG.B6,
+        children: (0, a.jsx)(th.animated.div, {
+            "aria-label": tV(n),
+            className: tG.g4,
+            style: { backgroundImage: `url("${o}")`, ...d },
+        }),
+    });
+};
+function tH(e) {
+    let { id: t, selectedSurrogate: n, onClick: i } = e,
+        r = (0, tP.A)("diversity"),
+        l = (0, tf.z)({ height: (tF + 14) * (eJ.W$.length + 1), from: { height: tF + 14 }, config: { duration: 125 } }),
+        o = s.useRef(r);
+    s.useEffect(() => {
+        o.current.focusFirstVisibleItem();
+    }, []);
+    let d = ["", ...eJ.W$];
+    return (
+        eb().remove(d, (e) => e === n),
+        d.unshift(n),
+        (0, a.jsx)(eM.hD, {
+            navigator: r,
+            children: (0, a.jsx)(eM.PR, {
+                children: (e) => {
+                    let { ref: n, ...r } = e;
+                    return (0, a.jsx)(th.animated.div, {
+                        ...r,
+                        id: t,
+                        ref: n,
+                        className: tG.J6,
+                        style: l,
+                        role: "listbox",
+                        children: d.map((e, t) =>
+                            (0, a.jsx)(tB, { index: t, fade: 0 !== t, delay: 20 * t, surrogate: e, onClick: i }, t),
+                        ),
+                    });
+                },
             }),
-        });
-    },
-    tH = (e) => {
-        let { id: t, selectedSurrogate: n, onClick: i } = e,
-            r = (0, tP.A)("diversity"),
-            l = (0, tf.z)({
-                height: (tF + 14) * (eJ.W$.length + 1),
-                from: { height: tF + 14 },
-                config: { duration: 125 },
+        })
+    );
+}
+let tj = function (e) {
+    let { searchBarRef: t, selectedSurrogate: n, className: i } = e,
+        r = eA.Ay.getURL(tk + n),
+        [l, d] = s.useState(!1),
+        c = (0, tM.A)(null, () => d(!1)),
+        u = s.useRef(null);
+    return (0, a.jsxs)("div", {
+        ref: c,
+        className: o()(tG.fx, i),
+        children: [
+            (0, a.jsx)(H.D, {
+                innerRef: u,
+                className: tG.Dj,
+                onClick: function () {
+                    d(!0);
+                },
+                "aria-label": et.intl.formatToPlainString(et.t["2SfnMp"], { skinTone: tV(n) }),
+                "aria-haspopup": !0,
+                "aria-expanded": l,
+                "aria-controls": tx,
+                tabIndex: l ? -1 : 0,
+                children: (0, a.jsx)("div", { className: tG.g4, style: { backgroundImage: `url("${r}")` } }),
             }),
-            o = s.useRef(r);
-        s.useEffect(() => {
-            o.current.focusFirstVisibleItem();
-        }, []);
-        let d = ["", ...eJ.W$];
-        return (
-            eb().remove(d, (e) => e === n),
-            d.unshift(n),
-            (0, a.jsx)(eM.hD, {
-                navigator: r,
-                children: (0, a.jsx)(eM.PR, {
-                    children: (e) => {
-                        let { ref: n, ...r } = e;
-                        return (0, a.jsx)(th.animated.div, {
-                            ...r,
-                            id: t,
-                            ref: n,
-                            className: tG.J6,
-                            style: l,
-                            role: "listbox",
-                            children: d.map((e, t) =>
-                                (0, a.jsx)(tB, { index: t, fade: 0 !== t, delay: 20 * t, surrogate: e, onClick: i }, t),
-                            ),
-                        });
-                    },
-                }),
-            })
-        );
-    },
-    tj = function (e) {
-        let { searchBarRef: t, selectedSurrogate: n, className: i } = e,
-            r = eA.Ay.getURL(tk + n),
-            [l, d] = s.useState(!1),
-            c = (0, tM.A)(null, () => d(!1)),
-            u = s.useRef(null);
-        return (0, a.jsxs)("div", {
-            ref: c,
-            className: o()(tG.fx, i),
-            children: [
-                (0, a.jsx)(H.D, {
-                    innerRef: u,
-                    className: tG.Dj,
-                    onClick: function () {
-                        d(!0);
-                    },
-                    "aria-label": et.intl.formatToPlainString(et.t["2SfnMp"], { skinTone: tV(n) }),
-                    "aria-haspopup": !0,
-                    "aria-expanded": l,
-                    "aria-controls": tx,
-                    tabIndex: l ? -1 : 0,
-                    children: (0, a.jsx)("div", { className: tG.g4, style: { backgroundImage: `url("${r}")` } }),
-                }),
-                l
-                    ? (0, a.jsx)("div", {
-                          onKeyDown: function (e) {
-                              e.key === tw.dh.ESCAPE
-                                  ? (e.stopPropagation(), d(!1), null != u.current && u.current.focus())
-                                  : "Tab" === e.key && d(!1);
+            l
+                ? (0, a.jsx)("div", {
+                      onKeyDown: function (e) {
+                          e.key === tw.dh.ESCAPE
+                              ? (e.stopPropagation(), d(!1), null != u.current && u.current.focus())
+                              : "Tab" === e.key && d(!1);
+                      },
+                      children: (0, a.jsx)(tH, {
+                          id: tx,
+                          selectedSurrogate: n,
+                          onClick: function (e) {
+                              (0, I.dK)(e), d(!1), t.current?.focus();
                           },
-                          children: (0, a.jsx)(tH, {
-                              id: tx,
-                              selectedSurrogate: n,
-                              onClick: function (e) {
-                                  (0, I.dK)(e), d(!1), t.current?.focus();
-                              },
-                          }),
-                      })
-                    : null,
-            ],
-        });
-    };
+                      }),
+                  })
+                : null,
+        ],
+    });
+};
 var tW = n(942381),
     tY = n(602034),
     tK = n(892547);
@@ -1656,7 +1652,7 @@ let nP = (0, ec.xI)(A.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 sectionMarginBottom: en,
                 sectionHeaderHeight: ei,
                 sectionFooterHeight: es,
-            } = ((e) => {
+            } = (function (e) {
                 let {
                         collapsedSections: t,
                         diversitySurrogate: n,
@@ -1989,7 +1985,7 @@ var nH = n(506774),
     nq = n(542863);
 let nZ = "premiumRetentionEmojiPickerNotice",
     nX = nH.w.get(nZ),
-    nQ = (e) => {
+    nQ = function (e) {
         let { closePopout: t, channel: n } = e,
             [i, r] = s.useState(!1),
             { subscription: l, hasFetchedSubscriptions: o } = (0, _.cf)([nz.A], () => ({
@@ -2163,7 +2159,7 @@ let n6 = c()(eu.bo, 200),
                             E = 0;
                         if (null != f && null != l) {
                             let f = Math.floor(l / (d + 2 * o)),
-                                C = 3 * f;
+                                O = 3 * f;
                             function I(a, l) {
                                 let o = new Map(),
                                     c = i.has(l.sectionId),
@@ -2173,11 +2169,11 @@ let n6 = c()(eu.bo, 200),
                                     }),
                                     I = A.concat(h),
                                     p = l.guild,
-                                    T = I.length > C && null != p && l.isNitroLocked,
+                                    T = I.length > O && null != p && l.isNitroLocked,
                                     m = T && !R.has(p.id);
-                                m && I.splice(C - 1);
+                                m && I.splice(O - 1);
                                 let N = Math.ceil((T ? I.length + 1 : I.length) / f),
-                                    O = [];
+                                    C = [];
                                 for (let e = 0; e < N; e++) {
                                     let t = e * f,
                                         n = t + f,
@@ -2195,9 +2191,9 @@ let n6 = c()(eu.bo, 200),
                                                     ? (0, eu.DA)(g, S, e.id ?? e.uniqueName ?? e.name)
                                                     : ez.tm.NONE,
                                         }));
-                                    if ((O.push(i), !c)) {
+                                    if ((C.push(i), !c)) {
                                         if (T && e === N - 1) {
-                                            let t = O[e];
+                                            let t = C[e];
                                             t.push({
                                                 type: 1,
                                                 guildId: p.id,
@@ -2247,7 +2243,7 @@ let n6 = c()(eu.bo, 200),
                                 }
                                 for (let e of A)
                                     if (e === ez.R2.CUSTOM) {
-                                        let n = (n) => {
+                                        function C(n) {
                                             let i = D.get(n);
                                             if (null == i) return;
                                             let a = i.filter(
@@ -2278,9 +2274,9 @@ let n6 = c()(eu.bo, 200),
                                                 count: a.length,
                                                 isNitroLocked: l,
                                             });
-                                        };
-                                        if ((null != h && n(h.id), (0, ef.isExternalEmojiAllowedForIntention)(r)))
-                                            for (let e of N) (null == h || h.id !== e) && n(e);
+                                        }
+                                        if ((null != h && C(h.id), (0, ef.isExternalEmojiAllowedForIntention)(r)))
+                                            for (let e of N) (null == h || h.id !== e) && C(e);
                                     } else if (e === ez.R2.TOP_GUILD_EMOJI) {
                                         if (null != h) {
                                             let { allEmojis: t } = (0, eh.W)({ topEmojis: g, newlyAddedEmojis: S });

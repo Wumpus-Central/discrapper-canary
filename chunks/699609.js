@@ -181,16 +181,16 @@ function Z() {
             }
         })(s),
         y = s === V.BEX.ROLE_SUBSCRIPTIONS ? B.intl.string(B.t.hZUCzd) : B.intl.string(B.t["/djIh7"]),
-        D = n === Y.VV.GUILD_ONBOARDING,
-        v = (e) => {
-            let { backToSettings: n } = e;
-            null != t &&
-                (O.A.isFullServerPreview(t) && (0, T.pX)(V.BVt.CHANNEL(t)),
-                h.Ay.shouldShowOnboarding(t) && (A.A.finishOnboarding(t), (0, I.Jg)(t)),
-                (0, R.rf)(t),
-                n && p.A.open(t, s),
-                s === V.BEX.ROLE_SUBSCRIPTIONS && (0, f.Fx)(t));
-        };
+        D = n === Y.VV.GUILD_ONBOARDING;
+    function v(e) {
+        let { backToSettings: n } = e;
+        null != t &&
+            (O.A.isFullServerPreview(t) && (0, T.pX)(V.BVt.CHANNEL(t)),
+            h.Ay.shouldShowOnboarding(t) && (A.A.finishOnboarding(t), (0, I.Jg)(t)),
+            (0, R.rf)(t),
+            n && p.A.open(t, s),
+            s === V.BEX.ROLE_SUBSCRIPTIONS && (0, f.Fx)(t));
+    }
     return (0, i.jsxs)(c.$T, {
         color: c.Hv.BRAND,
         className: $.lm,

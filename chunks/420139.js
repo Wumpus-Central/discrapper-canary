@@ -76,23 +76,23 @@ function D(e) {
               )
             : n(e, s.currency, l);
     }
-    let K = (e) => {
-            (0, C.c_)(e.id, (0, b.MP)(t)).then(() => {
-                H(e, void 0, Y);
-            }),
-                "function" == typeof i && i(e.id);
-        },
-        W = () => {
-            (0, d.openModalLazy)(
-                async () => (e) => (0, n.jsx)(E.default, { ...e, onAddPaymentSource: K, analyticsLocation: a }),
-                {
-                    onCloseCallback: () => {
-                        (0, A.ET)();
-                    },
-                    onCloseRequest: v.tEg,
+    function K(e) {
+        (0, C.c_)(e.id, (0, b.MP)(t)).then(() => {
+            H(e, void 0, Y);
+        }),
+            "function" == typeof i && i(e.id);
+    }
+    let W = () => {
+        (0, d.openModalLazy)(
+            async () => (e) => (0, n.jsx)(E.default, { ...e, onAddPaymentSource: K, analyticsLocation: a }),
+            {
+                onCloseCallback: () => {
+                    (0, A.ET)();
                 },
-            );
-        };
+                onCloseRequest: v.tEg,
+            },
+        );
+    };
     if (t.isPurchasedExternally) {
         let e;
         return (

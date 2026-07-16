@@ -12,7 +12,7 @@ var n = e(627968),
     C = e(517164),
     A = e(780964),
     f = e(766075),
-    h = e(495544),
+    h = e(280450),
     x = e(591179),
     _ = e(975732),
     m = e(353394),
@@ -34,7 +34,7 @@ function R(t) {
                     return (0, n.jsx)(
                         o.Anchor,
                         {
-                            onClick: () => {
+                            onClick: function () {
                                 S?.({ action: "PRESS_CLEAR_HISTORY_DISCLAIMER" }),
                                     null != s
                                         ? s()

@@ -55,9 +55,9 @@ var S = i(503698),
     U = i(939249),
     v = i(834730),
     y = i(365199),
-    G = i(289873),
-    f = i(761508),
-    p = i(534514),
+    f = i(289873),
+    G = i(761508),
+    p = i(297264),
     _ = i(548118),
     O = i(682557),
     b = i(375708),
@@ -107,7 +107,7 @@ function B(t) {
         [u, m] = n.useState(0);
     return (
         (e = o
-            ? (0, l.jsx)("div", { className: k.do, children: (0, l.jsx)(G.y, {}) })
+            ? (0, l.jsx)("div", { className: k.do, children: (0, l.jsx)(f.y, {}) })
             : 0 === u
               ? 0 === d.length
                   ? (0, l.jsxs)("div", {
@@ -144,19 +144,19 @@ function B(t) {
                     subtitle: b.intl.string(b.t.pYFZ9p),
                 }),
                 (0, l.jsx)(E.c, {
-                    controls: (0, l.jsxs)(f.V, {
+                    controls: (0, l.jsxs)(G.V, {
                         className: k.$H,
                         selectedItem: u,
                         onItemSelect: m,
                         type: "top",
                         look: "brand",
                         children: [
-                            (0, l.jsx)(f.V.Item, {
+                            (0, l.jsx)(G.V.Item, {
                                 className: I()(k.YU, { [k.xR]: 0 === u }),
                                 id: 0,
                                 children: b.intl.string(b.t.FTe8HS),
                             }),
-                            (0, l.jsx)(f.V.Item, {
+                            (0, l.jsx)(G.V.Item, {
                                 className: I()(k.YU, { [k.xR]: 1 === u }),
                                 id: 1,
                                 children: b.intl.string(b.t.epOumr),
@@ -390,23 +390,23 @@ function td(t) {
         [A, E] = n.useState(null),
         [N, T] = n.useState(null),
         [U, v] = n.useState(null),
-        [y, G] = n.useState(""),
-        [f, p] = n.useState(g ?? P.mU.UNCATEGORIZED),
+        [y, f] = n.useState(""),
+        [G, p] = n.useState(g ?? P.mU.UNCATEGORIZED),
         [_, O] = n.useState(!1),
         { availableGuilds: b, addedGuilds: k, loading: D } = C(x, e);
+    async function L() {
+        let t = U;
+        if (!_) {
+            if (null == A || null == S) return;
+            let e = await a.A.createGuildFromTemplate(A, N, S);
+            v((t = (0, d.Y1)(e)));
+        }
+        null != t && (await c.WD(e, t.id, y, G), h(P.m8.CONFIRMATION));
+    }
     n.useEffect(() => {
         h(o);
     }, [h, o]);
-    let L = async () => {
-            let t = U;
-            if (!_) {
-                if (null == A || null == S) return;
-                let e = await a.A.createGuildFromTemplate(A, N, S);
-                v((t = (0, d.Y1)(e)));
-            }
-            null != t && (await c.WD(e, t.id, y, f), h(P.m8.CONFIRMATION));
-        },
-        H = null;
+    let H = null;
     switch (j) {
         case P.m8.CHOOSE_GUILD:
             H = (0, l.jsx)(B, {
@@ -446,8 +446,8 @@ function td(t) {
             H = (0, l.jsx)(Z, {
                 directoryChannelId: e,
                 description: y,
-                onDescriptionChange: G,
-                categoryId: f,
+                onDescriptionChange: f,
+                categoryId: G,
                 onCategoryIdChange: p,
                 onSubmit: L,
                 onBack: () => h(_ ? P.m8.CHOOSE_GUILD : P.m8.CUSTOMIZE_NEW_GUILD),

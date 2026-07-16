@@ -1198,7 +1198,7 @@ function tN() {
         onReset: function () {
             tC.A.init();
         },
-        onSave: () => {
+        onSave: function () {
             null != i && null != n && tC.A.saveWebhook(i.id, n);
         },
     });

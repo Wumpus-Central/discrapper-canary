@@ -223,10 +223,10 @@ function w(e) {
                 let t = e.getStateDuration();
                 a.stateEndTime = t > 0 ? a.now + t : 0;
             }
-            let s = () => {
-                    null != e && (clearTimeout(e), (e = null));
-                },
-                u = M.states[t.current];
+            function s() {
+                null != e && (clearTimeout(e), (e = null));
+            }
+            let u = M.states[t.current];
             return (
                 null != u && r(u),
                 (function n(l) {

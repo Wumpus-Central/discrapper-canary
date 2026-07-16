@@ -58,9 +58,9 @@ let O = {
         PARENTAL_CONSENT_CONNECTION: "parental_consent_connection",
     },
     L = new Set(Object.values(O)),
-    D = new Set([10]);
+    y = new Set([10]);
 C.intl.string(N.default["Qm6K/s"]), C.intl.string(N.default["dSkE/A"]), C.intl.string(N.default.dMMSA0);
-var y = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"), r),
+var D = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"), r),
     v = n(627575),
     b = n(17928),
     M = n(155718),
@@ -361,7 +361,7 @@ let eN = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
                 i = s.useCallback(async () => {
-                    await t({ type: y.Empty }), window.location.reload();
+                    await t({ type: D.Empty }), window.location.reload();
                 }, [t]);
             return (0, a.jsxs)("div", {
                 className: eS.kL,
@@ -403,9 +403,9 @@ let eN = {
                             n?.ageVerificationStatus === M.Tk.UNVERIFIED
                                 ? P.A.showAgeVerificationGetStartedModal({
                                       entryPoint: E.q1.SAFETY_FLOWS,
-                                      onClose: () => t({ type: y.Empty }),
+                                      onClose: () => t({ type: D.Empty }),
                                   })
-                                : t({ type: y.Empty });
+                                : t({ type: D.Empty });
                         },
                     },
                 ],
@@ -472,10 +472,10 @@ let eN = {
                 R = (0, b.bG)([q.A], () => q.A.getLinkCode()),
                 O = (0, b.bG)([q.A], () => q.A.getLinkCodeExpiresAt()),
                 L = R ?? h.link_code,
-                D = O ?? Date.parse(h.link_code_expires_at),
+                y = O ?? Date.parse(h.link_code_expires_at),
                 M = s.useCallback(async () => {
                     try {
-                        await l({ type: y.Empty });
+                        await l({ type: D.Empty });
                     } catch {
                         (0, Y.P0)((0, K.o)(C.intl.string(N.default["+QRSxc"]), $.Ck.FAILURE));
                     }
@@ -517,7 +517,7 @@ let eN = {
                                     direction: "vertical",
                                     align: "center",
                                     gap: 16,
-                                    children: (0, a.jsx)(ee.r, { linkCode: L, expiresAt: D, onRefresh: A }),
+                                    children: (0, a.jsx)(ee.r, { linkCode: L, expiresAt: y, onRefresh: A }),
                                 }),
                             (0, a.jsx)("div", {
                                 hidden: V,
@@ -533,7 +533,7 @@ let eN = {
                                       {
                                           text: C.intl.string(N.default["RD76/V"]),
                                           variant: "secondary",
-                                          onClick: () => {
+                                          onClick: function () {
                                               k(!0);
                                           },
                                       },
@@ -583,7 +583,7 @@ let eL = {
         [R.AGE_VERIFICATION]: C.intl.string(N.default["dSkE/A"]),
         [R.PARENTAL_CONSENT_CONNECTION]: C.intl.string(N.default.dMMSA0),
     },
-    eD = function () {
+    ey = function () {
         let { task: e } = S(),
             t = e.flow_context.tasks.findIndex((t) => t.task_type === e.task_type);
         return (0, a.jsxs)(o.B, {
@@ -631,7 +631,7 @@ let eL = {
             ],
         });
     };
-var ey = n(561452);
+var eD = n(561452);
 let ev = n(843020);
 function eb(e) {
     let { task: t, handleSubmit: n, disabled: i, transitionState: r } = e,
@@ -640,10 +640,10 @@ function eb(e) {
     s.useEffect(() => {
         o(t);
     }, [t]);
-    let c = D.has(l.task_type);
+    let c = y.has(l.task_type);
     return (0, a.jsxs)(g.Provider, {
         value: d,
-        children: [!c && (0, a.jsx)(eD, {}), (0, a.jsx)(eC, { onSubmit: n, disabled: i, transitionState: r })],
+        children: [!c && (0, a.jsx)(ey, {}), (0, a.jsx)(eC, { onSubmit: n, disabled: i, transitionState: r })],
     });
 }
 let eM = function (e) {
@@ -680,7 +680,7 @@ let eM = function (e) {
                         let t = { task_id: i.task_id, flow_id: i.flow_context.flow_id, data: e };
                         await m(t), M();
                     } catch (e) {
-                        if (D.has(i.task_type)) throw e;
+                        if (y.has(i.task_type)) throw e;
                         g(C.intl.string(N.default["+QRSxc"]));
                     } finally {
                         b(!1);
@@ -693,40 +693,40 @@ let eM = function (e) {
         M();
     });
     let U = s.useMemo(() => i?.task_type === R.AGE_VERIFICATION, [i]),
-        w = null != i && null === p && D.has(i.task_type);
+        w = null != i && null === p && y.has(i.task_type);
     return (0, a.jsxs)("div", {
-        className: ey.Tp,
+        className: eD.Tp,
         children: [
-            (0, a.jsx)("img", { className: ey.xX, src: ev, alt: "" }),
+            (0, a.jsx)("img", { className: eD.xX, src: ev, alt: "" }),
             U
                 ? (0, a.jsx)(A.default, {
                       transitionState: t ?? ep.ip.ENTERED,
                       entryPoint: E.q1.SAFETY_FLOWS,
                       onClose: eT.tE,
                       onComplete: async () => {
-                          await P({ type: y.Empty });
+                          await P({ type: D.Empty });
                       },
                       dismissable: !1,
                   })
                 : w && null != i
                   ? (0, a.jsx)(eb, { task: i, handleSubmit: P, disabled: S, transitionState: t ?? ep.ip.ENTERED })
                   : (0, a.jsx)("div", {
-                        className: ey.nA,
+                        className: eD.nA,
                         children: I
                             ? (0, a.jsx)(l.y, { type: l.y.Type.SPINNING_CIRCLE })
                             : (0, a.jsx)("div", {
-                                  className: ey.kL,
+                                  className: eD.kL,
                                   children: (0, a.jsxs)(o.B, {
                                       direction: "horizontal",
                                       justify: "start",
-                                      className: ey.rf,
+                                      className: eD.rf,
                                       children: [
                                           null !== p &&
                                               (0, a.jsxs)(o.B, {
                                                   direction: "vertical",
                                                   justify: "space-between",
                                                   align: "center",
-                                                  className: ey.Nj,
+                                                  className: eD.Nj,
                                                   padding: 16,
                                                   children: [
                                                       (0, a.jsxs)(o.B, {

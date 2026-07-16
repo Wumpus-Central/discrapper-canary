@@ -258,16 +258,16 @@ function ex(e) {
         r = (0, c.bG)([P.A], () => P.A.getChannel(l?.channelId)),
         [o, d] = (0, eu.zP)(r),
         u = (0, em.aL)(),
-        m = null != a && null != l && a.state !== B.XYD.ENDED && a.ownerId === l.ownerId,
-        A = (e) => {
-            null != l &&
-                (i?.(),
-                eo.default.selectVoiceChannel(l.channelId),
-                m || (0, ed.Nl)(l, { forceMultiple: e }),
-                u.dispatch(B.jej.POPOUT_CLOSE),
-                ep._.dispatch(B.jej.MODAL_CLOSE),
-                ec.A.popAll());
-        };
+        m = null != a && null != l && a.state !== B.XYD.ENDED && a.ownerId === l.ownerId;
+    function A(e) {
+        null != l &&
+            (i?.(),
+            eo.default.selectVoiceChannel(l.channelId),
+            m || (0, ed.Nl)(l, { forceMultiple: e }),
+            u.dispatch(B.jej.POPOUT_CLOSE),
+            ep._.dispatch(B.jej.MODAL_CLOSE),
+            ec.A.popAll());
+    }
     if (null == l) return null;
     let p = (0, eu.CT)(d);
     return (
@@ -336,7 +336,7 @@ let ey = (0, m.A)((e) => {
         direction: V,
         wrap: F ? x.A.Wrap.WRAP : x.A.Wrap.NO_WRAP,
         className: a()(m, eg.jx, F ? eg.Vd : eg.xM),
-        children: (() => {
+        children: (function () {
             if (!(0, b.Ay)(t)) {
                 if ((0, L.A)(t))
                     return (0, n.jsx)(M, { platform: A.A.get(B.fg2.XBOX), variant: j, onAction: T, icon: o.Y });

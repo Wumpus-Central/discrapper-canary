@@ -3,8 +3,8 @@ var i = n(627968),
     e = n(64700),
     s = n(732159),
     a = n(702841),
-    r = n(834730),
-    o = n(289873),
+    o = n(834730),
+    r = n(289873),
     u = n(493336),
     c = n(468689),
     d = n(734057),
@@ -38,23 +38,23 @@ function A(t) {
         transitionState: A,
         onClose: F,
         variant: "primary",
-        children: (0, i.jsx)(r.E, {
+        children: (0, i.jsx)(o.E, {
             variant: "text-md/normal",
             className: x.YK,
             children: v
-                ? (0, i.jsx)(o.y, {})
+                ? (0, i.jsx)(r.y, {})
                 : null != j && null != j.guildsFollowing && j.guildsFollowing > 0
                   ? (0, i.jsxs)(i.Fragment, {
                         children: [
-                            (0, i.jsx)(r.E, {
+                            (0, i.jsx)(o.E, {
                                 className: x.YK,
                                 variant: "text-sm/normal",
                                 children: C.intl.format(C.t.GCGrNP, { numGuildsFollowing: j.guildsFollowing }),
                             }),
-                            (0, i.jsx)(r.E, {
+                            (0, i.jsx)(o.E, {
                                 variant: "text-sm/normal",
                                 children: C.intl.format(C.t.IMhGZz, {
-                                    onClick: () => {
+                                    onClick: function () {
                                         null != G && null != F && (F(), c.A.open(G, p.BEX.ANALYTICS));
                                     },
                                 }),

@@ -10,12 +10,12 @@ var i = t(477782),
     u = t(652215),
     d = t(375708);
 function A(e, n, t, A) {
-    let h = { streamUserId: t, channel: e, applicationId: A, appContext: (0, r.Us)() },
-        m = () => {
-            null != n &&
-                e.type === u.rbe.GUILD_VOICE &&
-                (0, o.X)({ guild: n, source: u.PE1.VOICE_CHANNEL_CALL_MENU_ITEM, ...h });
-        };
+    let h = { streamUserId: t, channel: e, applicationId: A, appContext: (0, r.Us)() };
+    function m() {
+        null != n &&
+            e.type === u.rbe.GUILD_VOICE &&
+            (0, o.X)({ guild: n, source: u.PE1.VOICE_CHANNEL_CALL_MENU_ITEM, ...h });
+    }
     return null != A
         ? (0, l.jsx)(i.Dr, {
               id: "invite-to-stream",

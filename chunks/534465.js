@@ -32,8 +32,8 @@ function A(e) {
         ? (0, i.jsx)(a.Dr, {
               id: "game-detection-report-issue",
               label: _.intl.string(_.t.qP2cXd),
-              action: () =>
-                  (0, r.openModalLazy)(async () => {
+              action: function () {
+                  return (0, r.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
                           n.e("30593"),
                           n.e("56600"),
@@ -48,7 +48,8 @@ function A(e) {
                           return (n) => (0, i.jsx)(e, { ...n, detectedActivity: t, onSubmitted: () => {} });
                       }
                       return (t) => (0, i.jsx)(e, { ...t, onSubmitted: () => {} });
-                  }),
+                  });
+              },
           })
         : A;
 }

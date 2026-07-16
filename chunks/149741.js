@@ -1832,7 +1832,7 @@ function t2(e) {
                                         displayNameStyles: g,
                                         effectDisplayType: ei.G.ANIMATED,
                                     }),
-                                    (() => {
+                                    (function () {
                                         switch (_.type) {
                                             case "activity":
                                                 return (0, i.jsxs)("div", {

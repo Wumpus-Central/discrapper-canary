@@ -16,7 +16,7 @@ var m = r(111159),
     p = r(769015);
 r(393431), r(532706), r(42231), r(232424), r(949626), r(767709), r(65162);
 var x = r(229659),
-    v = r(952432);
+    v = r(938800);
 class w {
     value = null;
     pinnedState = !1;
@@ -161,8 +161,9 @@ function A(e) {
         m = Math.round(e.height * u);
     s.useEffect(() => {
         let e = 0,
-            l = 0,
-            s = (u) => {
+            l = 0;
+        return (
+            (e = requestAnimationFrame(function s(u) {
                 if (((e = requestAnimationFrame(s)), u - l < k)) return;
                 l = u;
                 let d = t.current;
@@ -257,8 +258,9 @@ function A(e) {
                         color: a,
                         bottomReserve: 0,
                     });
-            };
-        return (e = requestAnimationFrame(s)), () => cancelAnimationFrame(e);
+            })),
+            () => cancelAnimationFrame(e)
+        );
     }, [r, n, a]);
     let { hoverStore: p, windowMs: x } = e,
         w =

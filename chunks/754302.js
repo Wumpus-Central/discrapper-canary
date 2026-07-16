@@ -26,7 +26,7 @@ function u(e) {
     return (0, i.jsxs)("div", {
         className: d.Hn,
         children: [
-            (() => {
+            (function () {
                 if ("numbered" === _ && null != A)
                     if (E)
                         return (0, i.jsx)("div", {

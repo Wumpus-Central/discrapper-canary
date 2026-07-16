@@ -645,7 +645,9 @@ let e_ = new eE(s.h, {
                         ? (0, $.jsx)(t3, { game: t })
                         : (0, $.jsx)("img", { src: i(513653), className: t5.Kk, alt: "" }),
                 title: s,
-                hint: () => (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 }),
+                hint: function () {
+                    return (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
+                },
                 ...a,
                 onNotificationShow: (t) => {
                     n(), r || (0, t2.Dr)(tQ.M.OVERLAY_OOP_WELCOME_NUX), a.onNotificationShow?.(t);

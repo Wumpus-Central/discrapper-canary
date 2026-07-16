@@ -1384,146 +1384,133 @@ let n7 = s.memo(function (e) {
 var n5 = t(946116),
     n4 = t(562845),
     n9 = t(519094);
-let n8 = (e) => {
-        let { searchQuery: n, setSearchQuery: t, handleClearSearch: i, handleSearchKeyPress: s } = e,
-            { ref: a, width: d } = (0, nH.Ay)(),
-            o = null != d && d <= 800;
-        return (0, l.jsxs)("div", {
-            ref: a,
-            className: n9.wx,
-            children: [
-                (0, l.jsx)("img", {
-                    alt: "",
-                    className: n9.F0,
-                    src: o ? "/assets/4d020fd7fc4ea501.svg" : "/assets/8f5262bfaa479264.svg",
-                }),
-                (0, l.jsx)("div", {
-                    className: n9.AZ,
-                    children: (0, l.jsxs)("div", {
-                        className: r()(n9.VW, { [n9.eO]: o }),
-                        children: [
-                            (0, l.jsx)(S.D, {
-                                variant: "heading-xl/semibold",
-                                className: n9.dc,
-                                children: z.intl.string(z.t.IT7qoC),
-                            }),
-                            (0, l.jsx)(y.E, {
-                                variant: "text-md/normal",
-                                className: n9.R_,
-                                children: z.intl.string(z.t["5PoYts"]),
-                            }),
-                            (0, l.jsx)(f.N, {
-                                theme: W.NJ.LIGHT,
-                                children: (e) =>
-                                    (0, l.jsx)("div", {
-                                        className: r()(n9.MT, e),
-                                        children: (0, l.jsx)(nU.I, {
-                                            query: n,
-                                            "aria-label": z.intl.string(z.t.nL2wKD),
-                                            placeholder: z.intl.string(z.t.nL2wKD),
-                                            onChange: t,
-                                            onClear: i,
-                                            onKeyDown: s,
-                                        }),
+function n8(e) {
+    let { searchQuery: n, setSearchQuery: t, handleClearSearch: i, handleSearchKeyPress: s } = e,
+        { ref: a, width: d } = (0, nH.Ay)(),
+        o = null != d && d <= 800;
+    return (0, l.jsxs)("div", {
+        ref: a,
+        className: n9.wx,
+        children: [
+            (0, l.jsx)("img", {
+                alt: "",
+                className: n9.F0,
+                src: o ? "/assets/4d020fd7fc4ea501.svg" : "/assets/8f5262bfaa479264.svg",
+            }),
+            (0, l.jsx)("div", {
+                className: n9.AZ,
+                children: (0, l.jsxs)("div", {
+                    className: r()(n9.VW, { [n9.eO]: o }),
+                    children: [
+                        (0, l.jsx)(S.D, {
+                            variant: "heading-xl/semibold",
+                            className: n9.dc,
+                            children: z.intl.string(z.t.IT7qoC),
+                        }),
+                        (0, l.jsx)(y.E, {
+                            variant: "text-md/normal",
+                            className: n9.R_,
+                            children: z.intl.string(z.t["5PoYts"]),
+                        }),
+                        (0, l.jsx)(f.N, {
+                            theme: W.NJ.LIGHT,
+                            children: (e) =>
+                                (0, l.jsx)("div", {
+                                    className: r()(n9.MT, e),
+                                    children: (0, l.jsx)(nU.I, {
+                                        query: n,
+                                        "aria-label": z.intl.string(z.t.nL2wKD),
+                                        placeholder: z.intl.string(z.t.nL2wKD),
+                                        onChange: t,
+                                        onClear: i,
+                                        onKeyDown: s,
                                     }),
+                                }),
+                        }),
+                    ],
+                }),
+            }),
+        ],
+    });
+}
+let n6 = function (e) {
+    let {
+        channel: n,
+        directoryEntries: t,
+        handleCreateOrAddGuild: i,
+        searchQuery: a,
+        setSearchQuery: r,
+        handleClearSearch: d,
+        handleSearchKeyPress: o,
+        currentCategoryId: c,
+        handleSelectCategory: u,
+        categoryCounts: h,
+        allEntriesCount: m,
+        isLoading: A,
+    } = e;
+    return (0, l.jsx)("div", {
+        className: n4.$$,
+        children: (0, l.jsxs)(nG.Gt, {
+            className: n4.XG,
+            children: [
+                (0, l.jsx)(n8, { searchQuery: a, setSearchQuery: r, handleClearSearch: d, handleSearchKeyPress: o }),
+                (0, l.jsx)(nG.Ch, {
+                    orientation: "horizontal",
+                    children: (0, l.jsxs)(nF.V, {
+                        className: n9.$H,
+                        type: "top",
+                        look: "brand",
+                        selectedItem: c,
+                        onItemSelect: function (e) {
+                            u(e);
+                        },
+                        children: [
+                            (0, l.jsx)(
+                                nF.V.Item,
+                                { className: n9.YU, id: n5.mU.ALL, children: `${z.intl.string(z.t.hEAa2a)} (${m})` },
+                                n5.mU.ALL,
+                            ),
+                            (0, n5.g2)(n.id).map((e) => {
+                                let { value: n, label: t } = e;
+                                return (0, l.jsx)(
+                                    nF.V.Item,
+                                    { className: n9.YU, id: n, children: `${t} ${null != h[n] ? `(${h[n]})` : ""}` },
+                                    n,
+                                );
                             }),
                         ],
                     }),
                 }),
-            ],
-        });
-    },
-    n6 = function (e) {
-        let {
-            channel: n,
-            directoryEntries: t,
-            handleCreateOrAddGuild: i,
-            searchQuery: a,
-            setSearchQuery: r,
-            handleClearSearch: d,
-            handleSearchKeyPress: o,
-            currentCategoryId: c,
-            handleSelectCategory: u,
-            categoryCounts: h,
-            allEntriesCount: m,
-            isLoading: A,
-        } = e;
-        return (0, l.jsx)("div", {
-            className: n4.$$,
-            children: (0, l.jsxs)(nG.Gt, {
-                className: n4.XG,
-                children: [
-                    (0, l.jsx)(n8, {
-                        searchQuery: a,
-                        setSearchQuery: r,
-                        handleClearSearch: d,
-                        handleSearchKeyPress: o,
-                    }),
-                    (0, l.jsx)(nG.Ch, {
-                        orientation: "horizontal",
-                        children: (0, l.jsxs)(nF.V, {
-                            className: n9.$H,
-                            type: "top",
-                            look: "brand",
-                            selectedItem: c,
-                            onItemSelect: function (e) {
-                                u(e);
-                            },
-                            children: [
-                                (0, l.jsx)(
-                                    nF.V.Item,
-                                    {
-                                        className: n9.YU,
-                                        id: n5.mU.ALL,
-                                        children: `${z.intl.string(z.t.hEAa2a)} (${m})`,
-                                    },
-                                    n5.mU.ALL,
-                                ),
-                                (0, n5.g2)(n.id).map((e) => {
-                                    let { value: n, label: t } = e;
-                                    return (0, l.jsx)(
-                                        nF.V.Item,
-                                        {
-                                            className: n9.YU,
-                                            id: n,
-                                            children: `${t} ${null != h[n] ? `(${h[n]})` : ""}`,
-                                        },
-                                        n,
-                                    );
-                                }),
-                            ],
-                        }),
-                    }),
-                    A && null == t
-                        ? (0, l.jsx)(x.y, { className: n4.u1 })
-                        : t?.map((e, n) =>
-                              (0, l.jsxs)(
-                                  s.Fragment,
-                                  {
-                                      children: [
-                                          void 0 !== e.header
-                                              ? (0, l.jsx)(y.E, {
-                                                    variant: "text-md/semibold",
-                                                    className: n9.bV,
-                                                    children: e.header,
-                                                })
-                                              : null,
-                                          (0, l.jsxs)("div", {
-                                              className: n4.vY,
-                                              children: [
-                                                  e.entries.map((e) => (0, l.jsx)(n7, { entry: e }, e.guildId)),
-                                                  e.appendEndCard && null != i ? (0, l.jsx)(n2, { onClick: i }) : null,
-                                              ],
-                                          }),
-                                      ],
-                                  },
-                                  n,
-                              ),
+                A && null == t
+                    ? (0, l.jsx)(x.y, { className: n4.u1 })
+                    : t?.map((e, n) =>
+                          (0, l.jsxs)(
+                              s.Fragment,
+                              {
+                                  children: [
+                                      void 0 !== e.header
+                                          ? (0, l.jsx)(y.E, {
+                                                variant: "text-md/semibold",
+                                                className: n9.bV,
+                                                children: e.header,
+                                            })
+                                          : null,
+                                      (0, l.jsxs)("div", {
+                                          className: n4.vY,
+                                          children: [
+                                              e.entries.map((e) => (0, l.jsx)(n7, { entry: e }, e.guildId)),
+                                              e.appendEndCard && null != i ? (0, l.jsx)(n2, { onClick: i }) : null,
+                                          ],
+                                      }),
+                                  ],
+                              },
+                              n,
                           ),
-                ],
-            }),
-        });
-    };
+                      ),
+            ],
+        }),
+    });
+};
 var te = t(370876),
     tn = t(349288),
     tt = t(364522),
@@ -2670,9 +2657,9 @@ function lC() {
     let [e, n] = (0, s.useState)(window.innerWidth >= 1132);
     return (
         (0, s.useEffect)(() => {
-            let e = () => {
+            function e() {
                 n(window.innerWidth >= 1132);
-            };
+            }
             return e(), window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
         }, []),
         e

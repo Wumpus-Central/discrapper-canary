@@ -532,7 +532,7 @@ let tI = tu().debounce(tg.Ay.trackWithMetadata, 500),
                   "data-migration-pending": !0,
                   className: t_.HM,
                   size: tc.$n.Sizes.SMALL,
-                  onClick: () => {
+                  onClick: function () {
                       null != a &&
                           ed.default.track(P.HAw.CHANNEL_NOTICE_CTA_CLICKED, {
                               source: u,

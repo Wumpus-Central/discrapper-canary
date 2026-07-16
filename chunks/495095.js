@@ -11,14 +11,14 @@ var l = t(627968),
     A = t(138617),
     h = t(7584),
     m = t(446243),
-    C = t(189090),
+    C = t(662731),
     E = t(375708),
-    p = t(927066);
+    p = t(691053);
 function x(e) {
     let { channel: n, onClose: t } = e,
         [x, g] = (0, i.useState)(""),
-        [I, f] = (0, i.useState)(""),
-        [T, v] = (0, i.useState)((0, d.x7)("")),
+        [f, I] = (0, i.useState)(""),
+        [v, T] = (0, i.useState)((0, d.x7)("")),
         [j, _] = (0, i.useState)(!1);
     return (0, l.jsxs)(s.l, {
         className: p.kL,
@@ -42,13 +42,13 @@ function x(e) {
                 innerClassName: p.Kf,
                 maxCharacterCount: 512,
                 showRemainingCharsAfterCount: 10,
-                onChange: (e, n, t) => {
-                    f(n), v(t), g(h.Ay.translateInlineEmojiToSurrogates(n));
+                onChange: function (e, n, t) {
+                    I(n), T(t), g(h.Ay.translateInlineEmojiToSurrogates(n));
                 },
                 placeholder: E.intl.string(C.default.IAcEEn),
                 channel: n,
-                textValue: I,
-                richValue: T,
+                textValue: f,
+                richValue: v,
                 type: u.oU.GUILD_ROOM,
                 onFocus: () => {
                     _(!0);
@@ -57,15 +57,16 @@ function x(e) {
                     _(!1);
                 },
                 focused: j,
-                onSubmit: () =>
-                    0 === x.trim().length
+                onSubmit: function () {
+                    return 0 === x.trim().length
                         ? new Promise((e) => {
                               e({ shouldClear: !1, shouldRefocus: !0 });
                           })
                         : ((0, m.Ix)(n.id, x),
                           new Promise((e) => {
                               e({ shouldClear: !0, shouldRefocus: !1 }), t();
-                          })),
+                          }));
+                },
                 disableThemedBackground: !0,
                 showValueWhenDisabled: !0,
             }),

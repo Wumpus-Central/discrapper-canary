@@ -202,7 +202,7 @@ function U(t) {
                           })
                       );
                   })({ eligibleRecipients: w }),
-                  children: ((t) => {
+                  children: (function (t) {
                       let { eligibleRecipients: e } = t;
                       return (0, n.jsx)(M.A, {
                           users: Array.from(e.values()),

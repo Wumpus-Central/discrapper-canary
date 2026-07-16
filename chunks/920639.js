@@ -38,21 +38,18 @@ function _(e, t) {
             voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length,
             voice_media_session_id: n,
         });
-    let i = () => {
-            s.A.removeChangeListener(r), clearTimeout(a);
-        },
-        r = () => {
-            let n = s.A.getMediaSessionId();
-            null != n &&
-                (i(),
-                t({
-                    voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length,
-                    voice_media_session_id: n,
-                }));
-        },
-        a = setTimeout(() => {
-            i(), t({ voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length });
-        }, 2500);
+    function i() {
+        s.A.removeChangeListener(r), clearTimeout(a);
+    }
+    function r() {
+        let n = s.A.getMediaSessionId();
+        null != n &&
+            (i(),
+            t({ voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length, voice_media_session_id: n }));
+    }
+    let a = setTimeout(() => {
+        i(), t({ voice_state_count: Object.keys(l.A.getVoiceStatesForChannel(e)).length });
+    }, 2500);
     s.A.addChangeListener(r);
 }
 function E(e) {

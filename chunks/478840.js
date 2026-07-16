@@ -10,7 +10,7 @@ function c(e, t, n) {
     if (null == e || e.length < 1) return null;
     let i = (function (e) {
             let { colors: t, saturationFactor: n = 1, shouldProcessMobileColors: i = !1 } = e,
-                c = ((e) => {
+                c = (function (e) {
                     let { colors: t, saturationFactor: n = 1 } = e;
                     if (null == t || t.length < 1) return null;
                     let i = (0, r.h6)(t),
@@ -32,7 +32,7 @@ function c(e, t, n) {
                                 saturationFactor: n,
                             }) ?? o,
                         h = (0, r.lZ)({ foreground: l()(i), background: l()(s), ratio: 7, saturationFactor: n }),
-                        g = (0, r.lZ)({ foreground: l()(i), background: l()(u), ratio: 7, saturationFactor: n });
+                        p = (0, r.lZ)({ foreground: l()(i), background: l()(u), ratio: 7, saturationFactor: n });
                     return {
                         LIGHT: {
                             accentColor: h?.hex(),
@@ -41,7 +41,7 @@ function c(e, t, n) {
                             opacity: c?.saturation < 0.1 ? 0.35 : 0.1,
                         },
                         DARK: {
-                            accentColor: g?.hex(),
+                            accentColor: p?.hex(),
                             backgroundColor: (0, r.WN)({ colorRGB: m, saturationFactor: n }),
                             highlightColor: o?.toHexString(),
                             opacity: c?.saturation < 0.1 ? 0.5 : 0.2,

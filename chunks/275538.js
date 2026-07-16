@@ -7,7 +7,7 @@ var s,
     o = n(702841),
     c = n(765178),
     d = n(289873),
-    u = n(534514),
+    u = n(297264),
     h = n(834730),
     p = n(123292),
     m = n(331322),
@@ -377,13 +377,13 @@ function X(e) {
                                 M.warn(s("received unsupported message"));
                         }
                     }
-                    let x = async () => {
+                    async function x() {
                         (l = await D.generateRsaKeyPair()), (o = await D.serializePublicKey(l));
                         let e = await D.publicKeyFingerprint(l);
                         r(`connected, handshaking with fingerprint: ${e}`),
                             i.send(JSON.stringify({ op: "init", encoded_public_key: o })),
                             (d.current = l);
-                    };
+                    }
                     function I(e) {
                         r(`disconnected, code: ${e.code} ${e.reason}`), p();
                     }

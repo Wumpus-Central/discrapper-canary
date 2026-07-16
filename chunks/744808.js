@@ -43,7 +43,7 @@ function I(e) {
                 className: s()(c, h.PQ),
                 children: Array.from(
                     {
-                        length: ((e) => {
+                        length: (function (e) {
                             let { data: t, containerWidth: n, containerHeight: i } = e;
                             if (null == t || 0 === t.naturalWidth || null == n || null == i) return 5;
                             let r = n * (t.naturalHeight / t.naturalWidth);

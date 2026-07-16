@@ -6,7 +6,7 @@ var a = n(627968),
     r = n(17928),
     o = n(783878),
     c = n(834730),
-    u = n(773812),
+    u = n(144228),
     d = n(260598),
     m = n(587895),
     g = n(429913),
@@ -156,7 +156,7 @@ function y(e) {
         transitionState: n,
         onClose: t,
         trackingProps: { impression: { impressionName: l.ImpressionNames.GAME_DETECTION_REPORT_MODAL } },
-        children: (() => {
+        children: (function () {
             switch (h) {
                 case "issue_selection":
                     return (0, a.jsxs)("div", {

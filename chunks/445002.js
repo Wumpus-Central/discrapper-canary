@@ -1,14 +1,14 @@
 i.d(t, { default: () => M });
 var l = i(627968),
-    a = i(64700),
-    n = i(132500),
+    n = i(64700),
+    a = i(132500),
     s = i(830917),
     r = i(189213),
     u = i(270003),
     g = i(452027),
     o = i(17928),
-    d = i(750943),
-    c = i(691540),
+    c = i(750943),
+    d = i(691540),
     f = i(857250),
     m = i(97483),
     p = i(292666),
@@ -48,13 +48,13 @@ function P(e) {
                 className: U.rA,
                 children:
                     t ??
-                    (0, l.jsx)(d.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.qOsjZh) }),
+                    (0, l.jsx)(c.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.qOsjZh) }),
             }),
             (0, l.jsx)("div", {
                 className: U.F_,
                 children:
                     t ??
-                    (0, l.jsx)(d.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.YC5NAI) }),
+                    (0, l.jsx)(c.X, { size: "lg", color: "currentColor", "aria-label": B.intl.string(B.t.YC5NAI) }),
             }),
         ],
     });
@@ -67,30 +67,30 @@ async function O(e) {
     return (0, z.bX)(l, e.name, "image/png");
 }
 function M(e) {
-    let { transitionState: t, onClose: i, guildId: s, sticker: d } = e,
-        M = (0, o.bG)([x.Ay], () => (d?.tags != null ? x.Ay.getCustomEmojiById(d.tags) : null)),
+    let { transitionState: t, onClose: i, guildId: s, sticker: c } = e,
+        M = (0, o.bG)([x.Ay], () => (c?.tags != null ? x.Ay.getCustomEmojiById(c.tags) : null)),
         X = _.default.getCurrentUser()?.isStaff() ? L.Ny : 524288,
-        [H, V] = a.useState(null),
-        [Z, q] = a.useState(d?.name ?? ""),
-        [Y, W] = a.useState({ file: null, filename: (0, T.sL)(d) ?? "" }),
-        J = a.useRef(null),
-        [Q, $] = a.useState(M?.id),
-        [ee, et] = a.useState(M?.name ?? (d?.tags != null ? (S.Ay.getByName(d.tags)?.surrogates ?? d.tags) : void 0)),
-        [ei, el] = a.useState(d?.description ?? ""),
-        [ea, en] = a.useState(!1),
-        [es, er] = a.useState(null),
+        [H, V] = n.useState(null),
+        [Z, q] = n.useState(c?.name ?? ""),
+        [Y, W] = n.useState({ file: null, filename: (0, T.sL)(c) ?? "" }),
+        J = n.useRef(null),
+        [Q, $] = n.useState(M?.id),
+        [ee, et] = n.useState(M?.name ?? (c?.tags != null ? (S.Ay.getByName(c.tags)?.surrogates ?? c.tags) : void 0)),
+        [ei, el] = n.useState(c?.description ?? ""),
+        [en, ea] = n.useState(!1),
+        [es, er] = n.useState(null),
         eu = (0, o.bG)([y.A], () => y.A.getGuild(s)),
         eg = eu?.features.has(N.GuildFeatures.PARTNERED) || eu?.features.has(N.GuildFeatures.VERIFIED),
-        eo = null != d,
-        ed = eo || Y?.file != null,
-        ec = 0 === ei.length || (ei.length >= 2 && ei.length <= 100),
+        eo = null != c,
+        ec = eo || Y?.file != null,
+        ed = 0 === ei.length || (ei.length >= 2 && ei.length <= 100),
         ef =
-            !ea &&
+            !en &&
             es?.isBlocking !== !0 &&
             Z.length >= 2 &&
-            (null != Q || null != ee || (d?.tags != null && d?.tags !== "")) &&
-            ed &&
-            ec;
+            (null != Q || null != ee || (c?.tags != null && c?.tags !== "")) &&
+            ec &&
+            ed;
     async function em(e) {
         if (null == e) return;
         let t = e.type?.split(";")[0];
@@ -122,61 +122,61 @@ function M(e) {
                 });
             let e = new FileReader();
             e.addEventListener("load", () => {
-                V({ id: (0, n.A)(), formatType: l, content: e.result }), er(null);
+                V({ id: (0, a.A)(), formatType: l, content: e.result }), er(null);
             }),
                 e.readAsText(i);
         } else {
             let e = await (0, z.We)(i);
-            V({ id: (0, n.A)(), formatType: l, content: e }), er(null);
+            V({ id: (0, a.A)(), formatType: l, content: e }), er(null);
         }
         (J.current = E.A.fromBlob(b.f.STICKER, e)), W({ file: i, filename: i.name });
     }
-    let ep = async (e) => {
-            e.preventDefault();
-            let t = Q ?? ee ?? d?.tags ?? "";
-            try {
-                if ((en(!0), eo)) await (0, R.MO)(s, d?.id ?? "", { name: Z, tags: t, description: ei });
-                else {
-                    var l;
-                    let e = new FormData();
-                    e.append("name", Z),
-                        e.append("tags", t),
-                        e.append("description", ei),
-                        Y?.file != null && e.append("file", Y.file),
-                        (l = Y.file?.type ?? ""),
-                        w.default.track(N.HAw.STICKER_UPLOAD_STARTED, { filetype: l });
-                    let i = (await J.current?.getOriginalMd5()) ?? null;
-                    await (0, R.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
-                        K(!0),
-                        (0, c.P0)((0, f.o)(B.intl.string(B.t.QR85gd), m.Ck.SUCCESS));
-                }
-                i();
-            } catch (e) {
-                er({ message: e.body.message, isBlocking: !1 }), K(!1, e.body.message);
-            } finally {
-                en(!1);
+    async function ep(e) {
+        e.preventDefault();
+        let t = Q ?? ee ?? c?.tags ?? "";
+        try {
+            if ((ea(!0), eo)) await (0, R.MO)(s, c?.id ?? "", { name: Z, tags: t, description: ei });
+            else {
+                var l;
+                let e = new FormData();
+                e.append("name", Z),
+                    e.append("tags", t),
+                    e.append("description", ei),
+                    Y?.file != null && e.append("file", Y.file),
+                    (l = Y.file?.type ?? ""),
+                    w.default.track(N.HAw.STICKER_UPLOAD_STARTED, { filetype: l });
+                let i = (await J.current?.getOriginalMd5()) ?? null;
+                await (0, R.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
+                    K(!0),
+                    (0, d.P0)((0, f.o)(B.intl.string(B.t.QR85gd), m.Ck.SUCCESS));
             }
-        },
-        ej = ((e) => {
-            let { sticker: t, previewData: i, onStickerError: a } = e;
+            i();
+        } catch (e) {
+            er({ message: e.body.message, isBlocking: !1 }), K(!1, e.body.message);
+        } finally {
+            ea(!1);
+        }
+    }
+    let ej = (function (e) {
+            let { sticker: t, previewData: i, onStickerError: n } = e;
             if (null != t) return (0, l.jsx)(D.A, { size: 160, sticker: t });
             if (null == i) return null;
-            let { id: n, formatType: s, content: r } = i;
+            let { id: a, formatType: s, content: r } = i;
             return (0, l.jsx)(
                 D.A,
                 {
                     assetData: r,
                     fileUri: r,
                     size: 160,
-                    sticker: { name: n, description: "", id: n, pack_id: "", format_type: s },
-                    onError: a,
+                    sticker: { name: a, description: "", id: a, pack_id: "", format_type: s },
+                    onError: n,
                 },
-                n,
+                a,
             );
         })({
-            sticker: d,
+            sticker: c,
             previewData: H,
-            onStickerError: a.useCallback(() => {
+            onStickerError: n.useCallback(() => {
                 er({ message: B.intl.string(B.t["/WIYNX"]), isBlocking: !0 });
             }, []),
         }),

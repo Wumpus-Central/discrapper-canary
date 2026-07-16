@@ -18,7 +18,7 @@ var n = e(627968),
     h = e(628284),
     U = e(192308),
     V = e(935462),
-    v = e(534514),
+    v = e(297264),
     x = e(364522),
     b = e(292666),
     K = e(452027),
@@ -349,7 +349,7 @@ let Ah = [
     },
 ];
 var AU = e(500770),
-    AV = e(990078),
+    AV = e(866665),
     Av = e(529689),
     Ax = e(289873),
     Ab = e(939249),
@@ -581,7 +581,7 @@ function AY(A) {
                             (0, n.jsx)(AR.Ay, {
                                 ref: f,
                                 tabIndex: 0,
-                                onChange: (A, t) => {
+                                onChange: function (A, t) {
                                     null != t && (p(t.name), m(A), s(A, Ay));
                                 },
                                 "aria-label": o,
@@ -610,7 +610,7 @@ function AY(A) {
                                 text: G.intl.string(G.t.WxqWU0),
                                 children: (0, n.jsx)(Ab.D, {
                                     className: AB.xA,
-                                    onClick: () => {
+                                    onClick: function () {
                                         l === Ay && s(t[0].data, t[0].name), m(null), p(null);
                                     },
                                     "aria-label": G.intl.formatToPlainString(G.t.Z43V9S, { filename: C }),
@@ -836,7 +836,7 @@ function tr(A) {
                 errorMessage: d,
                 children: (0, n.jsx)(tt, {
                     role: u,
-                    onRemove: () => {
+                    onRemove: function () {
                         s()(null != a, "productId cannot be null"),
                             s()(null != u, "no role attached"),
                             (function (A) {
@@ -1038,10 +1038,7 @@ function tc(A) {
                   })
                 : i();
         }, [i, AL]);
-    r.useEffect(() => {
-        (0, U.updateModal)(tl.DG, (A) => (0, n.jsx)(tm, { guildId: t, productId: C, ...A }), AB);
-    }, [t, AB, C]);
-    let Ay = async (A) => {
+    async function Ay(A) {
         let e = (0, Aq.ig)({ newRoleParams: AK });
         if ((Aa(e), null != e)) return;
         let n = await Ac(A);
@@ -1052,48 +1049,52 @@ function tc(A) {
             }
             AF(void 0), p(n.id), "published" in A && !0 === A.published && i();
         }
-    };
+    }
     r.useEffect(() => {
-        null != AV &&
-            (function (A, t, r) {
-                switch (A.code) {
-                    case S.t02.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
-                        Az(G.intl.string(G.t["04e8bO"]), G.t.uVN1Y5);
-                        break;
-                    case S.t02.TWO_FA_NOT_ENABLED:
-                        Az(G.intl.string(G.t["/yBjZy"]), G.t.kZ6Tgg);
-                        break;
-                    case S.t02.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
-                        Az(G.intl.string(G.t.MeXDxg), G.t["5q146K"]);
-                        break;
-                    case S.t02.MONETIZATION_TERMS_NOT_ACCEPTED:
-                        (0, U.openModalLazy)(async () => {
-                            let { default: A } = await Promise.all([
-                                e.e("79086"),
-                                e.e("92513"),
-                                e.e("12390"),
-                                e.e("91826"),
-                            ]).then(e.bind(e, 431913));
-                            return (e) => (0, n.jsx)(A, { guildId: t, ...e });
-                        });
-                        break;
-                    case S.t02.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
-                        Az(G.intl.string(G.t["4hWo0C"]), G.t.Zkhwex);
-                        break;
-                    case S.t02.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
-                        let l, a;
-                        null != r
-                            ? ((l = G.t.j2VMk6), (a = { url: S.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(r) }))
-                            : (l = G.t.ZVV1gg),
-                            Az(G.intl.string(G.t["+CT/gV"]), l, a);
-                        break;
-                    default:
-                        let i =
-                            A.getFirstFieldErrorMessage(["published"]) ?? (A.hasFieldErrors?.() ? void 0 : A.message);
-                        null != i && Az(G.intl.string(G.t.bvWf8T), i);
-                }
-            })(AV, t, W?.team?.id);
-    }, [AV, t, W]),
+        (0, U.updateModal)(tl.DG, (A) => (0, n.jsx)(tm, { guildId: t, productId: C, ...A }), AB);
+    }, [t, AB, C]),
+        r.useEffect(() => {
+            null != AV &&
+                (function (A, t, r) {
+                    switch (A.code) {
+                        case S.t02.TOO_MANY_PUBLISHED_PRODUCT_LISTINGS:
+                            Az(G.intl.string(G.t["04e8bO"]), G.t.uVN1Y5);
+                            break;
+                        case S.t02.TWO_FA_NOT_ENABLED:
+                            Az(G.intl.string(G.t["/yBjZy"]), G.t.kZ6Tgg);
+                            break;
+                        case S.t02.GUILD_PRODUCT_LISTING_CANNOT_PUBLISH_WITHOUT_BENEFIT:
+                            Az(G.intl.string(G.t.MeXDxg), G.t["5q146K"]);
+                            break;
+                        case S.t02.MONETIZATION_TERMS_NOT_ACCEPTED:
+                            (0, U.openModalLazy)(async () => {
+                                let { default: A } = await Promise.all([
+                                    e.e("79086"),
+                                    e.e("92513"),
+                                    e.e("12390"),
+                                    e.e("91826"),
+                                ]).then(e.bind(e, 431913));
+                                return (e) => (0, n.jsx)(A, { guildId: t, ...e });
+                            });
+                            break;
+                        case S.t02.CREATOR_MONETIZATION_PAYMENT_TEAM_REQUIRED:
+                            Az(G.intl.string(G.t["4hWo0C"]), G.t.Zkhwex);
+                            break;
+                        case S.t02.CREATOR_MONETIZATION_PAYMENT_ACCOUNT_VERIFICATION_REQUIRED:
+                            let l, a;
+                            null != r
+                                ? ((l = G.t.j2VMk6), (a = { url: S.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(r) }))
+                                : (l = G.t.ZVV1gg),
+                                Az(G.intl.string(G.t["+CT/gV"]), l, a);
+                            break;
+                        default:
+                            let i =
+                                A.getFirstFieldErrorMessage(["published"]) ??
+                                (A.hasFieldErrors?.() ? void 0 : A.message);
+                            null != i && Az(G.intl.string(G.t.bvWf8T), i);
+                    }
+                })(AV, t, W?.team?.id);
+        }, [AV, t, W]),
         r.useEffect(() => {
             AL && AW(void 0);
         }, [AL]);

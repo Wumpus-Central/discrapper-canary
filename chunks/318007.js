@@ -4,7 +4,7 @@ n(64700);
 var i = n(503698),
     r = n.n(i),
     a = n(289873),
-    s = n(937008),
+    s = n(951305),
     o = n(650588),
     u = n(45938),
     c = n(242874),
@@ -19,11 +19,11 @@ function C(e) {
             emojiConfetti: C,
             soundEffect: h,
             setEmojiConfetti: E,
-            setSoundEffect: A,
+            setSoundEffect: f,
         } = (0, s.Pv)(),
-        f = (0, u.lo)(n, t),
-        y = f === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        S = f !== u.tB.DEFAULT;
+        A = (0, u.lo)(n, t),
+        y = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        S = A !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
             S &&
@@ -50,8 +50,8 @@ function C(e) {
                                 children: [
                                     (0, l.jsx)(o.A, {
                                         sound: h,
-                                        onSelect: (e) => {
-                                            null != A && A(null == e ? void 0 : e);
+                                        onSelect: function (e) {
+                                            null != f && f(null == e ? void 0 : e);
                                         },
                                     }),
                                     (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == C ? void 0 : C }),

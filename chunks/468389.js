@@ -18,8 +18,8 @@ var l = e(17928),
     _ = e(280450),
     b = e(734057),
     C = e(629016),
-    S = e(498642),
-    f = e(71393),
+    f = e(498642),
+    S = e(71393),
     h = e(480595),
     T = e(576705),
     m = e(290863),
@@ -78,7 +78,7 @@ function w(i, t) {
         ]),
         ie = i?.id,
         il = (0, l.yK)(
-            [b.A, f.A, S.A, g.A, v.Ay, L.A, T.A, h.A, O.A, G.Ay],
+            [b.A, S.A, f.A, g.A, v.Ay, L.A, T.A, h.A, O.A, G.Ay],
             () => [
                 ...Z.map((i) =>
                     (0, J.A)({
@@ -89,8 +89,8 @@ function w(i, t) {
                         currentUser: B,
                         isEmbedded: (0, R.A)(i),
                         ChannelStore: b.A,
-                        GuildStore: f.A,
-                        GuildMemberCountStore: S.A,
+                        GuildStore: S.A,
+                        GuildMemberCountStore: f.A,
                         RelationshipStore: g.A,
                         SelectedChannelStore: v.Ay,
                         VoiceStateStore: L.A,
@@ -111,7 +111,7 @@ function w(i, t) {
                                 currentUser: B,
                                 isActivitiesEnabledForCurrentPlatform: (0, V.A)(),
                                 ChannelStore: b.A,
-                                GuildStore: f.A,
+                                GuildStore: S.A,
                                 VoiceStateStore: L.A,
                                 PermissionStore: T.A,
                             }) === $.Gy.CAN_JOIN
@@ -129,12 +129,12 @@ function w(i, t) {
         ),
         io = (0, A.p)();
     if (!W && i?.type !== Q.rbe.GUILD_VOICE) return null;
-    let is = (e, n) => {
+    function is(e, n) {
         null != i
             ? o.A.sendActivityInvite({ type: e, channelId: i.id, activity: n, location: Q.ThZ.CONTEXT_MENU })
             : null != t &&
               o.A.sendActivityInviteUser({ type: e, userId: t.id, activity: n, location: Q.ThZ.CONTEXT_MENU });
-    };
+    }
     async function iA(i) {
         let e = (0, M.A)(i, Q.jUm.EMBEDDED),
             n = v.Ay.getVoiceChannelId(),
@@ -190,9 +190,9 @@ function w(i, t) {
                                 label: q.intl.string(q.t["3fRySx"]),
                                 subtext: A.name,
                                 action: () => {
-                                    ((l, d) => {
+                                    !(function (l, d) {
                                         let o = b.A.getChannel(l),
-                                            s = null == o ? void 0 : f.A.getGuild(o.guild_id);
+                                            s = null == o ? void 0 : S.A.getGuild(o.guild_id);
                                         if (null != o && null != s) {
                                             if (null != t)
                                                 return U.Ue({
@@ -238,8 +238,8 @@ function w(i, t) {
                                                     },
                                                     { modalKey: "use-activity-items-embedded-invite-modal" },
                                                 );
-                                            if (i?.id != null)
-                                                return U.tk({
+                                            i?.id != null &&
+                                                U.tk({
                                                     activityChannelId: o.id,
                                                     invitedChannelId: i.id,
                                                     applicationId: d,

@@ -16,8 +16,8 @@ var i = n(627968),
     v = n(545868),
     A = n(164956),
     N = n(976860),
-    j = n(426660),
-    f = n(71393),
+    f = n(426660),
+    j = n(71393),
     _ = n(486020),
     E = n(998304),
     b = n(669953),
@@ -186,9 +186,9 @@ function M(e) {
 }
 var U = n(201991),
     B = n(702841),
-    K = n(990078),
-    W = n(364522),
-    X = n(548411),
+    K = n(364522),
+    W = n(548411),
+    X = n(866665),
     z = n(408213),
     J = n(386784),
     Z = n(403362),
@@ -219,8 +219,8 @@ function ei(e) {
         v = a?.options.filter((e) => h.includes(e.id)),
         A = (0, D.a)(v),
         N = (0, D.vV)(v),
-        j = 0 === h.length,
-        { helpText: f, helpTextAdditional: _ } = (0, Q.A)({
+        f = 0 === h.length,
+        { helpText: j, helpTextAdditional: _ } = (0, Q.A)({
             guild: n,
             prompt: a,
             selectedRoleIds: A,
@@ -235,7 +235,7 @@ function ei(e) {
         children: (0, i.jsxs)("div", {
             className: et.mK,
             children: [
-                (0, i.jsxs)(W.Ip, {
+                (0, i.jsxs)(K.Ip, {
                     className: et.gT,
                     children: [
                         (0, i.jsxs)("div", {
@@ -303,7 +303,7 @@ function ei(e) {
                                     size: "md",
                                     text: q.intl.string(q.t["13/7kX"]),
                                     onClick: () => m(h.length),
-                                    icon: X.Z,
+                                    icon: W.Z,
                                     iconPosition: "start",
                                 }),
                         }),
@@ -314,17 +314,17 @@ function ei(e) {
                                     className: et.BK,
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: [f, " ", _],
+                                    children: [j, " ", _],
                                 }),
-                                (0, i.jsx)(K.m, {
+                                (0, i.jsx)(X.m, {
                                     asContainer: !0,
                                     text: p ? q.intl.string(q.t.dA1dSf) : null,
                                     children: (0, i.jsx)(P.$, {
-                                        variant: j ? "secondary" : "primary",
+                                        variant: f ? "secondary" : "primary",
                                         size: "md",
                                         text: l
                                             ? `${q.intl.string(q.t["8SuVoE"])} \u{1F389}`
-                                            : j
+                                            : f
                                               ? q.intl.string(q.t["5Wxrcd"])
                                               : q.intl.string(q.t.PDTjLN),
                                         onClick: () => (l ? g() : x(h.length)),
@@ -362,8 +362,8 @@ function es(e) {
         v = a?.options.filter((e) => h.includes(e.id)),
         A = (0, D.a)(v),
         N = (0, D.vV)(v),
-        j = 0 === h.length,
-        { helpText: f, helpTextAdditional: _ } = (0, Q.A)({
+        f = 0 === h.length,
+        { helpText: j, helpTextAdditional: _ } = (0, Q.A)({
             guild: n,
             prompt: a,
             selectedRoleIds: A,
@@ -375,7 +375,7 @@ function es(e) {
         children: (0, i.jsxs)("div", {
             className: et.mK,
             children: [
-                (0, i.jsxs)(W.Ip, {
+                (0, i.jsxs)(K.Ip, {
                     className: et.gT,
                     children: [
                         (0, i.jsxs)("div", {
@@ -440,7 +440,7 @@ function es(e) {
                                     size: "md",
                                     text: q.intl.string(q.t["13/7kX"]),
                                     onClick: () => m(h.length),
-                                    icon: X.Z,
+                                    icon: W.Z,
                                     iconPosition: "start",
                                 }),
                         }),
@@ -451,17 +451,17 @@ function es(e) {
                                     className: et.BK,
                                     variant: "text-xs/normal",
                                     color: "text-muted",
-                                    children: [f, " ", _],
+                                    children: [j, " ", _],
                                 }),
-                                (0, i.jsx)(K.m, {
+                                (0, i.jsx)(X.m, {
                                     asContainer: !0,
                                     text: p ? q.intl.string(q.t.dA1dSf) : null,
                                     children: (0, i.jsx)(P.$, {
-                                        variant: j ? "secondary" : "primary",
+                                        variant: f ? "secondary" : "primary",
                                         size: "md",
                                         text: l
                                             ? `${q.intl.string(q.t["8SuVoE"])} \u{1F389}`
-                                            : j
+                                            : f
                                               ? q.intl.string(q.t["5Wxrcd"])
                                               : q.intl.string(q.t.PDTjLN),
                                         onClick: () => (l ? g() : x(h.length)),
@@ -504,7 +504,7 @@ function el(e) {
     let v = n[l],
         A = l + 1 >= n.length && !(0, D.L1)(t, x),
         N = n[0].required;
-    function j(e) {
+    function f(e) {
         !c &&
             (R.default.track($.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, y.H$)(t.id),
@@ -523,7 +523,7 @@ function el(e) {
                 })),
             l + 1 < n.length ? o(l + 1) : (0, D.L1)(t, x) && o("rules");
     }
-    function f(e) {
+    function j(e) {
         !c &&
             (R.default.track($.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, y.H$)(t.id),
@@ -561,8 +561,8 @@ function el(e) {
                 hasConnections: g.length > 0,
                 isSubmitting: u,
                 selectOption: r,
-                gotoPrevPrompt: f,
-                gotoNextPrompt: j,
+                gotoPrevPrompt: j,
+                gotoNextPrompt: f,
                 completeOnboarding: h,
             });
         case V.ME.DROPDOWN:
@@ -576,8 +576,8 @@ function el(e) {
                 hasConnections: g.length > 0,
                 isSubmitting: u,
                 selectOption: r,
-                gotoPrevPrompt: f,
-                gotoNextPrompt: j,
+                gotoPrevPrompt: j,
+                gotoNextPrompt: f,
                 completeOnboarding: h,
             });
         default:
@@ -602,7 +602,7 @@ function eo(e) {
         v = (0, B.bG)([p.A], () => p.A.get(t.id)),
         A = s.useRef(null),
         N = s.useRef(null),
-        j = s.useCallback(async () => {
+        f = s.useCallback(async () => {
             if (null != v && null != u) {
                 h(!0);
                 try {
@@ -611,12 +611,12 @@ function eo(e) {
                 l();
             }
         }, [t.id, v, u, m, l]);
-    function f(e) {
+    function j(e) {
         let [t] = e;
         t.isIntersecting && x(!0);
     }
     return (s.useEffect(() => {
-        let e = new IntersectionObserver(f, { root: A.current, rootMargin: "0px", threshold: 0 }),
+        let e = new IntersectionObserver(j, { root: A.current, rootMargin: "0px", threshold: 0 }),
             t = N.current;
         return (
             null != t && null != t.lastElementChild && e.observe(t.lastElementChild),
@@ -685,7 +685,7 @@ function eo(e) {
                                           variant: "secondary",
                                           size: "md",
                                           text: q.intl.string(q.t["13/7kX"]),
-                                          onClick: () => {
+                                          onClick: function () {
                                               !a &&
                                                   (R.default.track($.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                                                       ...(0, y.H$)(t.id),
@@ -705,7 +705,7 @@ function eo(e) {
                                                       })),
                                                   r(o);
                                           },
-                                          icon: X.Z,
+                                          icon: W.Z,
                                           iconPosition: "start",
                                       }),
                               }),
@@ -722,7 +722,7 @@ function eo(e) {
                                           variant: "primary",
                                           size: "md",
                                           text: `${q.intl.string(q.t["8SuVoE"])} \u{1F389}`,
-                                          onClick: j,
+                                          onClick: f,
                                           disabled: !m || g,
                                           loading: g,
                                       }),
@@ -751,7 +751,7 @@ function ec(e) {
         L = s.useCallback(() => {
             b.A.completeOnboarding(t, P);
         }, [t, P]),
-        R = (0, o.bG)([f.A], () => f.A.getGuild(t)),
+        R = (0, o.bG)([j.A], () => j.A.getGuild(t)),
         w = s.useMemo(() => (null == R ? null : _.Ay.getGuildSplashURL({ id: R.id, splash: R.splash })), [R]),
         H = (0, h.S)(w),
         V = s.useRef(null),
@@ -808,7 +808,7 @@ function ec(e) {
               children: [
                   null != w
                       ? (0, i.jsx)(g.A, { className: ed.xX, src: w, width: I, height: k, imageClassName: ed.Iv })
-                      : (0, i.jsx)(j.A, {}),
+                      : (0, i.jsx)(f.A, {}),
                   null != H &&
                       (0, i.jsx)("div", {
                           className: ed.D7,

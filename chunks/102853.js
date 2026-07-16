@@ -135,71 +135,71 @@ function H(e) {
         : eE
           ? eu || en || null == n || (t = B.intl.formatToPlainString(B.t.SqJBnN, { name: n.name }))
           : (t = B.intl.string(B.t["0OiwfH"]));
-    let eh = H?.launchId ?? n?.session_id,
-        eI = async (e, t) => {
-            if (null == eh || null == X) return;
-            let n = (0, f.A)(t, F.jUm.EMBEDDED),
-                i = M.Ay.getVoiceChannelId(),
-                r = E.A.getChannel(i);
-            await s.Ay.join({
-                userId: e.id,
-                sessionId: eh,
-                applicationId: X,
-                channelId: i,
-                messageId: null,
-                intent: V.W9.PLAY,
-                embedded: n,
-                locationObject: ec.location,
-                analyticsLocations: z,
-            }),
-                n ||
-                    (0, T.A)({
-                        type: F.UqL.JOIN,
-                        userId: e.id,
-                        guildId: r?.guild_id,
-                        channelId: i,
-                        channelType: r?.type,
-                        applicationId: X,
-                        partyId: null != t ? t?.party?.id : "",
-                        locationObject: ec.location,
-                        analyticsLocations: z,
-                    });
-        },
-        ef = async () => {
-            let e = !1;
-            async function t() {
-                let e;
-                Z(!0),
-                    null != n &&
-                        (e = await a.A.sendActivityInviteUser({
-                            type: F.xL.JOIN_REQUEST,
-                            userId: j.id,
-                            activity: n,
-                            location: F.ThZ.USER_ACTIVITY_ACTIONS,
-                        })),
-                    null != e && l.default.selectPrivateChannel(e.id);
+    let eh = H?.launchId ?? n?.session_id;
+    async function eI(e, t) {
+        if (null == eh || null == X) return;
+        let n = (0, f.A)(t, F.jUm.EMBEDDED),
+            i = M.Ay.getVoiceChannelId(),
+            r = E.A.getChannel(i);
+        await s.Ay.join({
+            userId: e.id,
+            sessionId: eh,
+            applicationId: X,
+            channelId: i,
+            messageId: null,
+            intent: V.W9.PLAY,
+            embedded: n,
+            locationObject: ec.location,
+            analyticsLocations: z,
+        }),
+            n ||
+                (0, T.A)({
+                    type: F.UqL.JOIN,
+                    userId: e.id,
+                    guildId: r?.guild_id,
+                    channelId: i,
+                    channelType: r?.type,
+                    applicationId: X,
+                    partyId: null != t ? t?.party?.id : "",
+                    locationObject: ec.location,
+                    analyticsLocations: z,
+                });
+    }
+    async function ef() {
+        let e = !1;
+        async function t() {
+            let e;
+            Z(!0),
+                null != n &&
+                    (e = await a.A.sendActivityInviteUser({
+                        type: F.xL.JOIN_REQUEST,
+                        userId: j.id,
+                        activity: n,
+                        location: F.ThZ.USER_ACTIVITY_ACTIONS,
+                    })),
+                null != e && l.default.selectPrivateChannel(e.id);
+        }
+        if (Q && !es) {
+            if (null == X) return;
+            if (eo !== h.o.CAN_JOIN) return t();
+            if (
+                (e = await (0, c.A)({
+                    applicationId: X,
+                    activityChannelId: et,
+                    locationObject: ec.location,
+                    analyticsLocations: z,
+                }))
+            )
+                return void Y?.();
+        }
+        if (!e) {
+            if (eo === h.o.CAN_JOIN) {
+                W?.(), eI(j, n), Y?.();
+                return;
             }
-            if (Q && !es) {
-                if (null == X) return;
-                if (eo !== h.o.CAN_JOIN) return t();
-                if (
-                    (e = await (0, c.A)({
-                        applicationId: X,
-                        activityChannelId: et,
-                        locationObject: ec.location,
-                        analyticsLocations: z,
-                    }))
-                )
-                    return void Y?.();
-            }
-            if (!e) {
-                if (eo === h.o.CAN_JOIN) {
-                    W?.(), eI(j, n), Y?.();
-                    return;
-                }
-                await t();
-            }
-        };
+            await t();
+        }
+    }
     if (
         (eo === h.o.CANNOT_JOIN && !$) ||
         (eo === h.o.CANNOT_JOIN && (0, S.n)(ea, F.gfo.EMBEDDED)) ||

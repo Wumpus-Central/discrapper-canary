@@ -1,19 +1,19 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => d });
 var i = n(627968),
     r = n(64700),
-    s = n(735438),
-    a = n(607470),
-    o = n(860923),
-    l = n(933971);
-let u = () => {
+    a = n(435558),
+    s = n(607470),
+    l = n(860923),
+    o = n(933971);
+let d = function () {
     let e = r.useRef(null),
-        t = (0, o.A)(),
-        [n, u] = r.useState(!1),
-        [c, d] = r.useState([0, 0]),
-        [_, h] = r.useState(0.5),
-        [f, p] = r.useState(0),
-        [E, m] = r.useState(!1);
+        t = (0, l.A)(),
+        [n, d] = r.useState(!1),
+        [c, u] = r.useState([0, 0]),
+        [_, E] = r.useState(0.5),
+        [A, h] = r.useState(0),
+        [I, f] = r.useState(!1);
     return (
         r.useEffect(() => {
             let t = null,
@@ -22,11 +22,11 @@ let u = () => {
                 if (!1 === n) {
                     let e = 1e4 * Math.random() + 5e3;
                     t = window.setTimeout(() => {
-                        u(!0),
-                            d([(0, s.random)(128, 1792), (0, s.random)(64, 360)]),
-                            h((0, s.random)(0.15, 0.5)),
-                            p((0, s.random)(-15, 15)),
-                            m(Math.random() > 0.5);
+                        d(!0),
+                            u([(0, a.random)(128, 1792), (0, a.random)(64, 360)]),
+                            E((0, a.random)(0.15, 0.5)),
+                            h((0, a.random)(-15, 15)),
+                            f(Math.random() > 0.5);
                     }, e);
                 }
                 return (
@@ -37,14 +37,14 @@ let u = () => {
                 );
             }
         }, [n]),
-        (0, i.jsx)(a.A, {
+        (0, i.jsx)(s.A, {
             ref: e,
-            className: l.d,
-            style: { transform: `translate(${c[0]}px, ${c[1]}px) scale(${E ? -1 * _ : _}, ${_}) rotate(${f}deg)` },
+            className: o.d,
+            style: { transform: `translate(${c[0]}px, ${c[1]}px) scale(${I ? -1 * _ : _}, ${_}) rotate(${A}deg)` },
             src: t?.misc["shooting-star"],
             loop: !1,
             onEnded: () => {
-                u(!1);
+                d(!1);
             },
         })
     );

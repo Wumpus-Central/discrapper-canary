@@ -19,7 +19,7 @@ var i = s(627968),
     N = s.n(I),
     x = s(778712),
     b = s(97808),
-    E = s(534514),
+    E = s(297264),
     C = s(834730),
     M = s(534890),
     v = s(308528),
@@ -72,7 +72,7 @@ function R(e) {
 var U = s(88001),
     w = s(652215),
     D = s(807735);
-let T = (e) => {
+function T(e) {
     let { onInvite: t, onClose: s, subscriptionId: n, ...o } = e,
         [f, m] = a.useState([]),
         [I, N] = a.useState(""),
@@ -194,7 +194,7 @@ let T = (e) => {
                 actions: [],
                 ...o,
             });
-};
+}
 function z(e) {
     let { onClose: t, inviteUsersResult: s, ...a } = e;
     return (0, i.jsx)(n.k, {

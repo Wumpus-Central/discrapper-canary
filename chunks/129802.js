@@ -7,8 +7,8 @@ var n = a(627968),
     o = a(17928),
     d = a(499979),
     s = a(192308),
-    m = a(568602),
-    c = a(834730),
+    c = a(568602),
+    m = a(834730),
     g = a(691885),
     f = a(260598),
     y = a(684013),
@@ -249,9 +249,9 @@ function X(e) {
         [el, ei] = l.useState(et),
         [er, eu] = l.useState(!1),
         [eo, ed] = l.useState(!1),
-        [es, em] = l.useState(!1),
+        [es, ec] = l.useState(!1),
         {
-            nativeState: ec,
+            nativeState: em,
             breadcrumbs: [eg],
         } =
             ((0, v.Ay)(
@@ -296,9 +296,9 @@ function X(e) {
     async function ep() {
         ed(!0), await (0, d.yy)(500), ed(!1);
     }
-    let ev = async () => {
+    async function ev() {
         if (null === V && 0 === Q.length) {
-            em(!0), ep();
+            ec(!0), ep();
             return;
         }
         eu(!0);
@@ -317,8 +317,8 @@ function X(e) {
                 return !0;
             }),
             o = E.A.getRecentActions(10),
-            m = A.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
-            c =
+            c = A.A.getRecentExperimentBuckets(_.A.getAllExperimentAssignments(), new Date(Date.now() - 7776e6)),
+            m =
                 t?.fullscreenHistory == null
                     ? null
                     : Object.entries(t.fullscreenHistory)
@@ -342,13 +342,13 @@ function X(e) {
                 game_pid: t?.pid,
                 recent_overlay_flux_actions: o,
                 overlay_module_state: t?.state,
-                overlay_native_state: JSON.stringify(ec),
+                overlay_native_state: JSON.stringify(em),
                 overlay_module_oop_initialization_state: JSON.stringify(l),
                 overlay_module_error_message: R.A.errorMessage,
                 overlay_module_breadcrumbs: JSON.stringify(u),
-                fullscreen_history_for_pid: c,
+                fullscreen_history_for_pid: m,
                 media_session_id: b.A.getMediaSessionId(),
-                recent_experiment_buckets: JSON.stringify(m),
+                recent_experiment_buckets: JSON.stringify(c),
                 location: M,
             };
         await N.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
@@ -362,7 +362,7 @@ function X(e) {
                 },
                 { contextKey: (0, s.modalContextFromAppContext)(L) },
             );
-    };
+    }
     return (
         (0, v.Ay)(() => {
             N.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: M });
@@ -381,10 +381,10 @@ function X(e) {
                     (0, n.jsxs)("div", {
                         className: z.DB,
                         children: [
-                            (0, n.jsx)(m.b, {
+                            (0, n.jsx)(c.b, {
                                 isShaking: eo,
                                 intensity: 1.5,
-                                children: (0, n.jsx)(c.E, {
+                                children: (0, n.jsx)(m.E, {
                                     variant: "text-md/medium",
                                     color: es ? "text-feedback-critical" : "text-strong",
                                     children: K.intl.string(K.t.Trx7eJ),
@@ -397,13 +397,13 @@ function X(e) {
                                 options: ef,
                                 value: V,
                                 onSelectionChange: function (e) {
-                                    Y(e), em(!1), ed(!1);
+                                    Y(e), ec(!1), ed(!1);
                                 },
                                 selectionMode: "single",
                                 fullWidth: !0,
                             }),
                             es &&
-                                (0, n.jsx)(c.E, {
+                                (0, n.jsx)(m.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-feedback-critical",
                                     children: K.intl.string(K.t["5cqa9J"]),
@@ -413,7 +413,7 @@ function X(e) {
                     (0, n.jsxs)("div", {
                         className: z.DB,
                         children: [
-                            (0, n.jsx)(c.E, {
+                            (0, n.jsx)(m.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 children: K.intl.string(K.t.iZufAY),
@@ -426,7 +426,7 @@ function X(e) {
                                 placeholder: K.intl.string(K.t["68mJXW"]),
                                 onChange: ee,
                             }),
-                            (0, n.jsx)(c.E, {
+                            (0, n.jsx)(m.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
                                 children: K.intl.string(K.t.TzkM2a),
@@ -437,7 +437,7 @@ function X(e) {
                     (0, n.jsxs)("div", {
                         className: z.DB,
                         children: [
-                            (0, n.jsx)(c.E, {
+                            (0, n.jsx)(m.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
                                 children: K.intl.string(K.t["8+SU+a"]),

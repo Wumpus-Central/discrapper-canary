@@ -9,8 +9,8 @@ var n = t(627968),
     u = t(292666),
     d = t(260598),
     p = t(150934),
-    m = t(565150),
-    f = t(465856),
+    f = t(565150),
+    m = t(465856),
     g = t(644447),
     x = t(652215),
     j = t(381941),
@@ -39,7 +39,7 @@ function S(e) {
 }
 function C(e) {
     let { upload: i } = e;
-    return i.item.platform !== m.xz.WEB
+    return i.item.platform !== f.xz.WEB
         ? null
         : i.isImage
           ? (0, n.jsx)(S, { file: i.item.file })
@@ -52,8 +52,8 @@ function E(e) {
             description: l,
             spoiler: a,
             isImage: r,
-            isVideo: m,
-            disableFilename: f,
+            isVideo: f,
+            disableFilename: m,
             disableSpoiler: g,
             transitionState: x,
             onClose: b,
@@ -62,10 +62,10 @@ function E(e) {
         [S, C] = s.useState(t ?? ""),
         [E, k] = s.useState(l ?? ""),
         [y, R] = s.useState(a),
-        L = s.useMemo(() => S.startsWith(j.MO), [S]),
-        M = () => {
-            I({ name: S, description: E, spoiler: y }), b();
-        };
+        L = s.useMemo(() => S.startsWith(j.MO), [S]);
+    function M() {
+        I({ name: S, description: E, spoiler: y }), b();
+    }
     return (0, n.jsx)(o.Modal, {
         transitionState: x,
         onClose: b,
@@ -88,9 +88,9 @@ function E(e) {
                             onKeyDown: (e) => {
                                 e.key === h.dh.ENTER && (e.preventDefault(), M());
                             },
-                            disabled: f,
+                            disabled: m,
                         }),
-                        r || m
+                        r || f
                             ? (0, n.jsx)(d.f, {
                                   label: v.intl.string(v.t.eOB2eR),
                                   placeholder: v.intl.string(v.t.RNH1jn),
@@ -128,7 +128,7 @@ function y(e) {
         c = o ? (0, n.jsx)(I, { src: (0, g.E)({ proxyURL: a.proxy_url, url: a.url }) }) : void 0;
     return (0, n.jsx)(E, {
         preview: c,
-        filename: (0, f.A)(a),
+        filename: (0, m.A)(a),
         description: a.description,
         spoiler: (0, r.Lt)(a.flags ?? 0, x.sbO.IS_SPOILER),
         isImage: o,

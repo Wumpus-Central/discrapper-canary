@@ -3,8 +3,8 @@ var i = t(627968),
     l = t(64700),
     a = t(189213),
     o = t(17928),
-    d = t(821609),
-    u = t(292666),
+    u = t(821609),
+    d = t(292666),
     r = t(922016),
     s = t(285796),
     m = t(696986),
@@ -12,9 +12,9 @@ var i = t(627968),
     g = t(565645),
     j = t(964486),
     h = t(375499),
-    p = t(267889),
-    C = t(159273),
-    f = t(808728),
+    p = t(334295),
+    f = t(159273),
+    C = t(808728),
     v = t(919577),
     k = t(307731),
     x = t(650583),
@@ -27,18 +27,18 @@ function y(e) {
         [T, R] = l.useState(I?.name ?? ""),
         [D, F] = l.useState(null != I ? { id: I.emojiId, name: I.emojiName } : null),
         [M, w] = l.useState(I?.moderated),
-        B = (0, o.bG)([C.Ay], () => (D?.id != null ? C.Ay.getUsableCustomEmojiById(D.id) : null)),
-        H = I?.name !== T || I?.emojiId !== D?.id || I?.emojiName !== D?.name || M !== I?.moderated,
-        Y = () => {
-            if (null != T && H) {
-                if (S) {
-                    v.A.updateForumTag({ id: I.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t();
-                    return;
-                }
-                v.A.createForumTag({ name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t();
+        B = (0, o.bG)([f.Ay], () => (D?.id != null ? f.Ay.getUsableCustomEmojiById(D.id) : null)),
+        H = I?.name !== T || I?.emojiId !== D?.id || I?.emojiName !== D?.name || M !== I?.moderated;
+    function Y() {
+        if (null != T && H) {
+            if (S) {
+                v.A.updateForumTag({ id: I.id, name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t();
+                return;
             }
-        },
-        O = l.useCallback((e) => R(e), []),
+            v.A.createForumTag({ name: T, emojiId: D?.id, emojiName: D?.name, moderated: M }, y), t();
+        }
+    }
+    let O = l.useCallback((e) => R(e), []),
         P = l.useRef(null);
     return (
         (0, j.Ay)(() => {
@@ -66,10 +66,10 @@ function y(e) {
                 },
             ],
             actionBarInput: S
-                ? (0, i.jsx)(d.$, {
+                ? (0, i.jsx)(u.$, {
                       variant: "critical-secondary",
                       text: N.intl.string(N.t.huYSMr),
-                      onClick: () => {
+                      onClick: function () {
                           S && (v.A.deleteForumTag(y, I.id), t());
                       },
                   })
@@ -77,7 +77,7 @@ function y(e) {
             children: [
                 (0, i.jsx)("div", {
                     className: b.Kf,
-                    children: (0, i.jsx)(u.k, {
+                    children: (0, i.jsx)(d.k, {
                         inputRef: P,
                         maxLength: 20,
                         value: T,
@@ -92,7 +92,7 @@ function y(e) {
                                     targetElementRef: E,
                                     renderPopout: function (e) {
                                         let { closePopout: n } = e,
-                                            l = f.Ay.getDefaultChannel(A);
+                                            l = C.Ay.getDefaultChannel(A);
                                         return (0, i.jsx)(p.A, {
                                             guildId: A,
                                             closePopout: n,

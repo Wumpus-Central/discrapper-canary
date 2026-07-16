@@ -2,15 +2,15 @@ n.d(e, { default: () => k });
 var i = n(627968),
     _ = n(64700),
     E = n(24001),
-    C = n(347135),
+    C = n(574677),
     l = n(717200),
     a = n(323889),
     s = n(412703),
     u = n(928264),
     I = n(141628),
     r = n(975807),
-    A = n(274670),
-    o = n(144779),
+    o = n(274670),
+    A = n(144779),
     T = n(793574),
     N = n(409626),
     d = n(692969),
@@ -19,19 +19,19 @@ var i = n(627968),
     L = n(18437),
     h = n(590202),
     q = n(971649),
-    p = n(792620),
-    O = n(108811),
-    g = n(284846),
-    f = n(976019),
+    f = n(792620),
+    p = n(108811),
+    O = n(284846),
+    g = n(976019),
     S = n(190107),
     G = n(375708),
     U = n(233952);
 function m(t) {
     let { quest: e, sourceQuestContent: n } = t,
-        { hasAlreadyLinked: C, canStartAuthorization: l, startAuthorization: m, fetched: k } = (0, g.U)(e),
+        { hasAlreadyLinked: C, canStartAuthorization: l, startAuthorization: m, fetched: k } = (0, O.U)(e),
         v = (0, L.Ut)(),
         D = (0, q.go)(),
-        y = (0, p.xc)(e),
+        y = (0, f.xc)(e),
         H = (0, d.A)({
             applicationId: y,
             location: S.rE.QUEST_INSTRUCTIONS,
@@ -42,7 +42,7 @@ function m(t) {
         b = P ? R : S.qh.IN_GAME,
         B = k && (null != b || C),
         K = G.intl.string(!0 === C ? G.t["2+opCy"] : G.t.dp0CUb),
-        V = (() => {
+        V = (function () {
             if (!0 !== C) return G.intl.string(G.t.Z1T4zl);
             let t = e.config.messages.gameTitle;
             return null != H
@@ -62,8 +62,8 @@ function m(t) {
                 F(t);
                 let i = t === S.qh.IN_GAME ? h.Cy.SELECT_IN_GAME_AUTH_METHOD : h.Cy.SELECT_WEB_AUTH_METHOD;
                 (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
-                    ? (0, A.r)({
-                          type: o.F.CLICK_INTERNAL,
+                    ? (0, o.r)({
+                          type: A.F.CLICK_INTERNAL,
                           adCreativeType: a.p.QUEST,
                           adCreativeId: e.id,
                           questContentCTA: i,
@@ -79,19 +79,19 @@ function m(t) {
                       });
             },
         };
-    return (0, i.jsx)(O.A, {
+    return (0, i.jsx)(p.A, {
         heading: K,
         subtitle: V,
         methodSelect: P ? [x] : void 0,
-        ctaButton: (() => {
+        ctaButton: (function () {
             if (!k || !0 === C || null == b) return;
             if (b === S.qh.WEB)
                 return {
                     text: G.intl.string(G.t.T0zC77),
                     onClick: () => {
                         (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
-                            ? (0, A.r)({
-                                  type: o.F.CLICK_INTERNAL,
+                            ? (0, o.r)({
+                                  type: A.F.CLICK_INTERNAL,
                                   adCreativeType: a.p.QUEST,
                                   adCreativeId: e.id,
                                   questContentCTA: h.Cy.START_WEB_AUTHORIZATION,
@@ -118,8 +118,8 @@ function m(t) {
                         href: i,
                         onConfirm: () => {
                             (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_achievement_in_game_left_panel")
-                                ? (0, A.r)({
-                                      type: o.F.CLICK_INTERNAL,
+                                ? (0, o.r)({
+                                      type: A.F.CLICK_INTERNAL,
                                       adCreativeType: a.p.QUEST,
                                       adCreativeId: e.id,
                                       questContentCTA: h.Cy.OPEN_ACCOUNT_LINK_INSTRUCTIONS,
@@ -142,7 +142,7 @@ function m(t) {
             !0 === B &&
             (0, i.jsx)("div", {
                 className: U.X,
-                children: (0, i.jsx)(f.A, {
+                children: (0, i.jsx)(g.A, {
                     quest: e,
                     hasAlreadyLinked: C,
                     onClickGameTitle: H,

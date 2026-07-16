@@ -2,7 +2,7 @@ n.d(t, { default: () => tu });
 var l,
     i = n(627968),
     r = n(64700),
-    s = n(735438),
+    s = n(435558),
     a = n(17928),
     d = n(935462),
     u = n(430690),
@@ -13,8 +13,8 @@ var l,
     h = n(376728),
     m = n(775602),
     v = n(21161),
-    E = n(503698),
-    f = n.n(E),
+    f = n(503698),
+    E = n.n(f),
     j = n(460890),
     y = n(939249),
     A = n(252316);
@@ -37,7 +37,7 @@ function N(e) {
                     "aria-current": a ? "step" : void 0,
                     "aria-disabled": !0 === e.disabled || void 0,
                     children: [
-                        (0, i.jsx)("div", { className: f()(A.hr, { [A.YD]: a }) }),
+                        (0, i.jsx)("div", { className: E()(A.hr, { [A.YD]: a }) }),
                         (0, i.jsx)(g.E, {
                             color: a ? "text-brand" : "text-muted",
                             variant: "text-xs/normal",
@@ -175,8 +175,8 @@ function eh(e) {
 }
 var em = n(734057),
     ev = n(994500),
-    eE = n(287809),
-    ef = n(770666),
+    ef = n(287809),
+    eE = n(770666),
     ej = n(232246),
     ey = n(530209),
     eA = n(825484),
@@ -299,7 +299,7 @@ function e_(e) {
         options: c.map((e) => ({
             id: e.id,
             value: e.id,
-            label: (0, $.m1)(e, eE.default, ev.A, !0),
+            label: (0, $.m1)(e, ef.default, ev.A, !0),
             leading: (function (e, t) {
                 let n = em.A.getChannel(e);
                 if (null == n) return null;
@@ -366,9 +366,9 @@ function ek(e) {
 function eD(e) {
     let { guildId: t, guildEvent: n, onChange: l } = e,
         s = (0, a.bG)([b.A], () => b.A.getGuild(t), [t]),
-        d = (0, ef.A)(t, void 0),
-        u = (0, ef.A)(t, eu.rbe.GUILD_VOICE),
-        c = (0, ef.A)(t, eu.rbe.GUILD_STAGE_VOICE),
+        d = (0, eE.A)(t, void 0),
+        u = (0, eE.A)(t, eu.rbe.GUILD_VOICE),
+        c = (0, eE.A)(t, eu.rbe.GUILD_STAGE_VOICE),
         o = L(t, eu.rbe.GUILD_VOICE),
         x = (0, ej.A)(s),
         g = s?.features.has(eu.GuildFeatures.COMMUNITY),
@@ -425,7 +425,7 @@ function eL(e) {
         h = (0, a.bG)([k.A], () => k.A.can(eu.xBc.MANAGE_CHANNELS, c)),
         m = c?.features.has(eu.GuildFeatures.COMMUNITY),
         v = eR(s, l),
-        E = m && !eG(u) && 0 === o.length && h && null != u;
+        f = m && !eG(u) && 0 === o.length && h && null != u;
     return (0, i.jsxs)("div", {
         className: eT.kL,
         children: [
@@ -442,7 +442,7 @@ function eL(e) {
             }),
             (0, i.jsx)(eD, { guildId: t, guildEvent: l, onChange: s }),
             (0, i.jsx)(ek, { guildId: t, guildEvent: l, isFocusReady: d, onChange: s }),
-            E
+            f
                 ? (0, i.jsx)(eI, {
                       onClick: function () {
                           v(eS.Ps.STAGE_INSTANCE),
@@ -455,7 +455,7 @@ function eL(e) {
                                       n.e("3589"),
                                       n.e("92513"),
                                       n.e("2329"),
-                                      n.e("89916"),
+                                      n.e("67535"),
                                       n.e("88003"),
                                       n.e("60773"),
                                       n.e("8018"),
@@ -488,11 +488,11 @@ function eF(e) {
         c = r.useMemo(() => (0, M.hQ)(l, n), [l, n]),
         { channel_id: o, name: x, image: h, description: m } = c,
         v = (0, a.bG)([em.A], () => em.A.getChannel(o), [o]),
-        E = (0, a.bG)([b.A], () => b.A.getGuild(n), [n]),
-        f = (0, P.oF)(c),
+        f = (0, a.bG)([b.A], () => b.A.getGuild(n), [n]),
+        E = (0, P.oF)(c),
         j = (0, a.bG)(
-            [eE.default],
-            () => (null != l.creatorId ? eE.default.getUser(l.creatorId) : eE.default.getCurrentUser()),
+            [ef.default],
+            () => (null != l.creatorId ? ef.default.getUser(l.creatorId) : ef.default.getCurrentUser()),
             [l.creatorId],
         ),
         y = (0, a.bG)([eP.A], () => eP.A.isLurking(n), [n]),
@@ -501,15 +501,15 @@ function eF(e) {
     r.useEffect(() => {
         u && null != N.current && ((N.current.tabIndex = -1), N.current.focus());
     }, [u]);
-    let p = (0, eM.gU)(v, E);
+    let p = (0, eM.gU)(v, f);
     return (0, i.jsxs)("div", {
         className: ez.Qs,
         children: [
             (0, i.jsx)(eU.A, {
                 className: ez.B0,
-                guild: E,
+                guild: f,
                 channel: v,
-                location: f ?? void 0,
+                location: E ?? void 0,
                 creator: j,
                 name: x,
                 description: m,
@@ -538,8 +538,8 @@ function eF(e) {
                                 ? ec.intl.string(ec.t.KDPFi9)
                                 : ec.intl.format(ec.t.f55NX0, {
                                       channelName: A ?? "",
-                                      channelHook: () =>
-                                          (0, i.jsxs)("div", {
+                                      channelHook: function () {
+                                          return (0, i.jsxs)("div", {
                                               className: ez.HA,
                                               children: [
                                                   null != p
@@ -557,9 +557,10 @@ function eF(e) {
                                                             width: 18,
                                                             className: ez.NR,
                                                         }),
-                                                  A ?? f,
+                                                  A ?? E,
                                               ],
-                                          }),
+                                          });
+                                      },
                                   }),
                     }),
                     null != d &&
@@ -597,8 +598,8 @@ function eK(e) {
             entityType: h,
             channelId: m,
             description: v,
-            name: E,
-            image: f,
+            name: f,
+            image: E,
             scheduledEndTime: j,
             scheduledStartTime: y,
             recurrenceRule: A,
@@ -680,13 +681,13 @@ function eK(e) {
                             },
                             placeholder: ec.intl.string(ec.t["6/yars"]),
                             maxLength: eS.t_,
-                            value: E,
+                            value: f,
                             autoComplete: "off",
                             inputRef: G,
                         }),
                         (0, i.jsx)(eY.A, {
                             className: eW.kz,
-                            onScheduleChange: (e) => {
+                            onScheduleChange: function (e) {
                                 let { startDate: t, endDate: n } = e,
                                     l = { scheduledStartTime: t?.toISOString(), scheduledEndTime: n?.toISOString() };
                                 null != t &&
@@ -733,13 +734,13 @@ function eK(e) {
                                     tabIndex: -1,
                                     className: eW.aN,
                                     children:
-                                        null != f
+                                        null != E
                                             ? (0, i.jsxs)(i.Fragment, {
                                                   children: [
                                                       (0, i.jsx)(eB.A, {
                                                           className: eW.km,
                                                           iconWrapperClassName: eW.WR,
-                                                          image: f,
+                                                          image: E,
                                                           makeURL: (e) =>
                                                               null == e
                                                                   ? null
@@ -836,7 +837,7 @@ function tn(e) {
         h = null == x || null == c,
         m = (0, e8.A)(x ?? ""),
         v = c?.maxAge ?? te.value,
-        E = c?.maxUses ?? tt.value;
+        f = c?.maxUses ?? tt.value;
     return (0, i.jsxs)("div", {
         className: e6.kL,
         children: [
@@ -895,7 +896,7 @@ function tn(e) {
                             variant: "text-xs/normal",
                             color: "text-default",
                             className: e6.x6,
-                            children: (0, I.Be)(v, E),
+                            children: (0, I.Be)(v, f),
                         }),
                 ],
             }),
@@ -953,8 +954,8 @@ function td(e) {
             formErrors: g,
             transitionState: h,
             loading: v,
-            error: E,
-            onChange: f,
+            error: f,
+            onChange: E,
             onSave: j,
             onClose: y,
             createdEvent: A,
@@ -1053,7 +1054,7 @@ function td(e) {
                                         guildEvent: n,
                                         validationErrorMessage: g.entity,
                                         isSlideReady: L,
-                                        onChange: f,
+                                        onChange: E,
                                     }),
                                 }),
                                 (0, i.jsx)(u.q, {
@@ -1062,8 +1063,8 @@ function td(e) {
                                         guildEvent: n,
                                         guildEventId: l,
                                         guildId: t,
-                                        onChange: f,
-                                        error: E,
+                                        onChange: E,
+                                        error: f,
                                         validationErrorMessage: g.schedule,
                                         isSlideReady: L,
                                     }),
@@ -1074,7 +1075,7 @@ function td(e) {
                                         guildId: t,
                                         guildEvent: n,
                                         guildEventId: l,
-                                        error: E,
+                                        error: f,
                                         isSlideReady: L,
                                     }),
                                 }),
@@ -1132,13 +1133,13 @@ function tu(e) {
         c = (0, a.bG)([C.Ay], () => C.Ay.getDefaultChannel(t), [t]),
         o = (0, M.UZ)(u, c),
         [m, v] = r.useState(o),
-        [E] = r.useState((0, M.lc)(u)),
-        [f, j] = r.useState(null),
+        [f] = r.useState((0, M.lc)(u)),
+        [E, j] = r.useState(null),
         [y, { loading: A, error: N }] = (0, S.A)(async () => {
             var e;
             let n, i;
-            if (null != f) return;
-            if (E && null != l) return await G.default.saveEvent(l, m, t), d();
+            if (null != E) return;
+            if (f && null != l) return await G.default.saveEvent(l, m, t), d();
             let r = await G.default.createGuildEvent(m, t);
             return (
                 (e = r.body),
@@ -1174,19 +1175,19 @@ function tu(e) {
                             : null != r && r.isBefore(F()())
                               ? ec.intl.string(ec.t.ViDcm2)
                               : void 0;
-                })(m, E),
+                })(m, f),
                 topic: (function (e) {
                     let { name: t } = e;
                     return null == t || "" === t.trim() ? "Topic must be specified." : void 0;
                 })(m),
             }),
-            [m, E],
+            [m, f],
         );
     return (0, i.jsx)(td, {
         guildId: t,
         guildEvent: m,
         guildEventId: l,
-        isEdit: E,
+        isEdit: f,
         formErrors: p,
         transitionState: s,
         loading: A,
@@ -1200,7 +1201,7 @@ function tu(e) {
             v((t) => ({ ...t, ...e }));
         },
         onSave: function () {
-            null != m.recurrenceRule && E && (0, V.DS)(u, m)
+            null != m.recurrenceRule && f && (0, V.DS)(u, m)
                 ? (0, x.openModalLazy)(async () => {
                       let { ConfirmModal: e } = await n.e("4823").then(n.bind(n, 158954));
                       return (t) =>
@@ -1220,6 +1221,6 @@ function tu(e) {
                 : y();
         },
         onClose: d,
-        createdEvent: f,
+        createdEvent: E,
     });
 }

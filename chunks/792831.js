@@ -1,21 +1,13 @@
 "use strict";
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var i,
     r = n(627968);
 n(64700);
 var a = n(503698),
     s = n.n(a),
     l = n(953727),
-    o = n(89406),
-    d =
-        (((i = {}).LEFT = "LEFT"),
-        (i.RIGHT = "RIGHT"),
-        (i.UP = "UP"),
-        (i.DOWN = "DOWN"),
-        (i.UP_LEFT = "UP_LEFT"),
-        (i.DOWN_RIGHT = "DOWN_RIGHT"),
-        i);
-let c = (e) => {
+    o = n(89406);
+function d(e) {
     let {
         width: t = 24,
         height: n = 24,
@@ -62,6 +54,13 @@ let c = (e) => {
             }),
         ],
     });
-};
-c.Directions = d;
-let u = c;
+}
+d.Directions =
+    (((i = {}).LEFT = "LEFT"),
+    (i.RIGHT = "RIGHT"),
+    (i.UP = "UP"),
+    (i.DOWN = "DOWN"),
+    (i.UP_LEFT = "UP_LEFT"),
+    (i.DOWN_RIGHT = "DOWN_RIGHT"),
+    i);
+let c = d;

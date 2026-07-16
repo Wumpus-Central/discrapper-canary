@@ -5,7 +5,7 @@ var s,
     a = i(17928),
     l = i(821609),
     u = i(935462),
-    o = i(534514),
+    o = i(297264),
     c = i(289873),
     d = i(793574),
     m = i(688810),
@@ -17,11 +17,11 @@ var s,
     x = i(287809),
     I = i(174459),
     j = i(428262),
-    S = i(564064),
+    S = i(662388),
     k = i(993408),
     C = i(821701),
-    y = i(841702),
-    f = i(727170),
+    f = i(841702),
+    y = i(727170),
     N = i(503698),
     _ = i.n(N),
     E = i(778712),
@@ -148,141 +148,141 @@ function et(e) {
         children: t,
     });
 }
-let ei = (e) => {
-        let {
-                user: t,
-                avatarDecoration: i,
-                innerRef: s,
-                section: a,
+function ei(e) {
+    let {
+            user: t,
+            avatarDecoration: i,
+            innerRef: s,
+            section: a,
+            canUsePremiumCollectibles: l,
+            isSelected: u = !1,
+            ...o
+        } = e,
+        c = n.useRef(null),
+        { isHoveringOrFocusing: d } = (0, V.A)(s ?? c),
+        { avatarDecorationSrc: m } = (0, Y.A)({
+            user: t,
+            avatarDecorationOverride: i,
+            size: 80,
+            onlyAnimateOnHoverOrFocus: !d,
+        });
+    return (0, r.jsxs)(et, {
+        innerRef: s ?? c,
+        isSelected: u,
+        ...o,
+        children: [
+            null != m && (0, r.jsx)("img", { className: Q.Pw, src: m, alt: i.label }),
+            (0, r.jsx)(L.A, {
+                skuId: i.skuId,
                 canUsePremiumCollectibles: l,
-                isSelected: u = !1,
-                ...o
-            } = e,
-            c = n.useRef(null),
-            { isHoveringOrFocusing: d } = (0, V.A)(s ?? c),
-            { avatarDecorationSrc: m } = (0, Y.A)({
-                user: t,
-                avatarDecorationOverride: i,
-                size: 80,
-                onlyAnimateOnHoverOrFocus: !d,
-            });
-        return (0, r.jsxs)(et, {
-            innerRef: s ?? c,
-            isSelected: u,
-            ...o,
-            children: [
-                null != m && (0, r.jsx)("img", { className: Q.Pw, src: m, alt: i.label }),
-                (0, r.jsx)(L.A, {
-                    skuId: i.skuId,
-                    canUsePremiumCollectibles: l,
-                    isPurchaseSection: a === q.PURCHASE,
-                    isPremiumSection: a === q.PREMIUM_PURCHASE,
-                }),
-            ],
-        });
-    },
-    es = (e) => {
-        let {
-                user: t,
-                guild: i,
-                pendingAvatarDecoration: s,
-                selectedAvatarDecorationRef: n,
-                onSelect: a,
-                onOpenShop: l,
-            } = e,
-            u = B(),
-            c = j.Ay.canUseCollectibles(t);
-        return (0, r.jsx)(G.f, {
-            fade: !0,
-            className: Q.p_,
-            columns: 3,
-            sections: u.map((e) => {
-                let { items: t } = e;
-                return t.length;
+                isPurchaseSection: a === q.PURCHASE,
+                isPremiumSection: a === q.PREMIUM_PURCHASE,
             }),
-            sectionGutter: 16,
-            itemGutter: 12,
-            paddingHorizontal: 12,
-            paddingVertical: 0,
-            removeEdgeItemGutters: !0,
-            renderItem: (e, o, d, m) => {
-                let { section: h, items: p } = u[e],
-                    g = p[o];
-                if (g === F)
-                    return (0, r.jsxs)(
-                        et,
-                        {
-                            style: { ...d },
-                            isSelected: null === s,
-                            onSelect: () => a(null),
-                            children: [
-                                (0, r.jsx)(z.K, { size: "md", color: "currentColor", className: Q.Kk }),
-                                (0, r.jsx)(H.E, {
-                                    variant: "text-xs/normal",
-                                    color: "text-strong",
-                                    children: (0, $.uZ)(t, i) ? O.intl.string(O.t.CHf9iJ) : O.intl.string(O.t.PoWNfe),
-                                }),
-                            ],
-                        },
-                        m,
-                    );
-                if (g === W)
-                    return (0, r.jsxs)(
-                        et,
-                        {
-                            style: d,
-                            onSelect: l,
-                            children: [
-                                (0, r.jsx)(U.U, {
-                                    size: "custom",
-                                    width: 23,
-                                    height: 23,
-                                    color: "currentColor",
-                                    className: Q.sV,
-                                }),
-                                (0, r.jsx)(H.E, {
-                                    variant: "text-xs/normal",
-                                    color: "text-strong",
-                                    children: O.intl.string(O.t.pWG4ze),
-                                }),
-                            ],
-                        },
-                        m,
-                    );
-                if ((0, K.T)(g)) {
-                    let e = s?.skuId === g.skuId;
-                    return (0, r.jsx)(
-                        ei,
-                        {
-                            style: { ...d },
-                            user: t,
-                            avatarDecoration: g,
-                            section: h,
-                            innerRef: e ? n : void 0,
-                            canUsePremiumCollectibles: c,
-                            isSelected: e,
-                            onSelect: () => a(g),
-                        },
-                        m,
-                    );
-                }
-                return null;
-            },
-            renderSection: (e, t) => {
-                let { header: i } = u[e];
-                return (0, r.jsx)("div", {
-                    className: Q.so,
-                    style: { ...t, position: "absolute" },
-                    children: (0, r.jsx)(o.D, { variant: "heading-md/semibold", children: i }),
-                });
-            },
-            getSectionHeight: (e) => u[e].height,
-            getItemKey: (e, t) => u[e].items[t].skuId,
-            getItemHeight: ee,
-        });
-    };
+        ],
+    });
+}
+let es = function (e) {
+    let {
+            user: t,
+            guild: i,
+            pendingAvatarDecoration: s,
+            selectedAvatarDecorationRef: n,
+            onSelect: a,
+            onOpenShop: l,
+        } = e,
+        u = B(),
+        c = j.Ay.canUseCollectibles(t);
+    return (0, r.jsx)(G.f, {
+        fade: !0,
+        className: Q.p_,
+        columns: 3,
+        sections: u.map((e) => {
+            let { items: t } = e;
+            return t.length;
+        }),
+        sectionGutter: 16,
+        itemGutter: 12,
+        paddingHorizontal: 12,
+        paddingVertical: 0,
+        removeEdgeItemGutters: !0,
+        renderItem: (e, o, d, m) => {
+            let { section: h, items: p } = u[e],
+                g = p[o];
+            if (g === F)
+                return (0, r.jsxs)(
+                    et,
+                    {
+                        style: { ...d },
+                        isSelected: null === s,
+                        onSelect: () => a(null),
+                        children: [
+                            (0, r.jsx)(z.K, { size: "md", color: "currentColor", className: Q.Kk }),
+                            (0, r.jsx)(H.E, {
+                                variant: "text-xs/normal",
+                                color: "text-strong",
+                                children: (0, $.uZ)(t, i) ? O.intl.string(O.t.CHf9iJ) : O.intl.string(O.t.PoWNfe),
+                            }),
+                        ],
+                    },
+                    m,
+                );
+            if (g === W)
+                return (0, r.jsxs)(
+                    et,
+                    {
+                        style: d,
+                        onSelect: l,
+                        children: [
+                            (0, r.jsx)(U.U, {
+                                size: "custom",
+                                width: 23,
+                                height: 23,
+                                color: "currentColor",
+                                className: Q.sV,
+                            }),
+                            (0, r.jsx)(H.E, {
+                                variant: "text-xs/normal",
+                                color: "text-strong",
+                                children: O.intl.string(O.t.pWG4ze),
+                            }),
+                        ],
+                    },
+                    m,
+                );
+            if ((0, K.T)(g)) {
+                let e = s?.skuId === g.skuId;
+                return (0, r.jsx)(
+                    ei,
+                    {
+                        style: { ...d },
+                        user: t,
+                        avatarDecoration: g,
+                        section: h,
+                        innerRef: e ? n : void 0,
+                        canUsePremiumCollectibles: c,
+                        isSelected: e,
+                        onSelect: () => a(g),
+                    },
+                    m,
+                );
+            }
+            return null;
+        },
+        renderSection: (e, t) => {
+            let { header: i } = u[e];
+            return (0, r.jsx)("div", {
+                className: Q.so,
+                style: { ...t, position: "absolute" },
+                children: (0, r.jsx)(o.D, { variant: "heading-md/semibold", children: i }),
+            });
+        },
+        getSectionHeight: (e) => u[e].height,
+        getItemKey: (e, t) => u[e].items[t].skuId,
+        getItemHeight: ee,
+    });
+};
 var er = i(652215),
-    en = i(788868),
+    en = i(202541),
     ea = i(556826);
 function el(e) {
     let {
@@ -294,8 +294,8 @@ function el(e) {
             initialSelectedDecoration: x,
             guild: I,
         } = e,
-        y = (0, a.bG)([v.Ay], () => (null != I ? v.Ay.getMember(I.id, t.id) : null)),
-        N = null != y ? y.avatarDecoration : t.avatarDecoration,
+        f = (0, a.bG)([v.Ay], () => (null != I ? v.Ay.getMember(I.id, t.id) : null)),
+        N = null != f ? f.avatarDecoration : t.avatarDecoration,
         { pendingAvatarDecoration: _, setPendingAvatarDecoration: E } = (0, A.A)({
             analyticsLocations: c,
             guildId: I?.id,
@@ -315,14 +315,14 @@ function el(e) {
         T = (0, g.lw)({
             pendingValue: D,
             userValue: t?.avatarDecoration,
-            guildValue: y?.avatarDecoration,
+            guildValue: f?.avatarDecoration,
             guildId: I?.id,
         }),
         { product: R, purchase: w } = (0, C.A)(D?.skuId),
         M = null != w ? (0, k.gA)(w) : (0, k.G0)(R),
         z = j.Ay.canUseCollectibles(t),
         H = n.useRef(null),
-        U = (0, f.A)(c),
+        U = (0, y.A)(c),
         G = void 0 === _ ? D?.skuId === N?.skuId : D?.skuId === _?.skuId,
         V = n.useCallback(
             (e) => {
@@ -419,7 +419,7 @@ function eu(e) {
         } = e,
         p = (0, a.bG)([x.default], () => x.default.getCurrentUser()),
         { analyticsLocations: g } = (0, m.Ay)(i, d.A.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: A, purchases: v, isFetchingCategories: j, isFetchingPurchases: S } = (0, y.Ay)(),
+        { categories: A, purchases: v, isFetchingCategories: j, isFetchingPurchases: S } = (0, f.Ay)(),
         k = j || (S && 0 === v.size);
     return (
         n.useEffect(() => {

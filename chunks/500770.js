@@ -7,7 +7,7 @@ var l = n(503698),
     a = n(834730),
     o = n(935286),
     d = n(939249),
-    c = n(534514),
+    c = n(297264),
     u = n(346055),
     m = n(696986),
     h = n(890856),
@@ -56,7 +56,7 @@ function C(e) {
         ? (0, i.jsx)("div", { className: E.dO, children: l })
         : (0, i.jsx)(d.D, {
               className: s()(E.dO, E.hY),
-              onClick: (e) => {
+              onClick: function (e) {
                   e.stopPropagation(), null != t && t();
               },
               children: l,

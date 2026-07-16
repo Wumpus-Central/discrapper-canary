@@ -162,20 +162,20 @@ function ec(e) {
         let { targetRef: t, onShouldClose: l, topThreshold: n = 40, bottomThreshold: s = 60, enabled: r = !0 } = e;
         i.useEffect(() => {
             if (!r || t?.current == null) return;
-            let e = null,
-                i = (i) => {
-                    if (t?.current == null || !(0, eu.vq)(i.target, HTMLElement)) return;
-                    let r = i.target;
-                    if (!r.contains(t.current)) return;
-                    let o = r.scrollTop;
-                    if (null === e) {
-                        e = o;
-                        return;
-                    }
-                    let a = o - e,
-                        u = Math.abs(a);
-                    ((a < 0 && u > n) || (a > 0 && u > s)) && l();
-                };
+            let e = null;
+            function i(i) {
+                if (t?.current == null || !(0, eu.vq)(i.target, HTMLElement)) return;
+                let r = i.target;
+                if (!r.contains(t.current)) return;
+                let o = r.scrollTop;
+                if (null === e) {
+                    e = o;
+                    return;
+                }
+                let a = o - e,
+                    u = Math.abs(a);
+                ((a < 0 && u > n) || (a > 0 && u > s)) && l();
+            }
             return (
                 document.addEventListener("scroll", i, { passive: !0, capture: !0 }),
                 () => {
@@ -337,7 +337,7 @@ function eI(e) {
         ],
     });
 }
-var ej = l(990078),
+var ej = l(866665),
     eb = l(775602),
     e_ = l(468689),
     eS = l(685073),
@@ -830,8 +830,8 @@ function e1(e) {
             ],
         });
 }
-var e9 = l(97808),
-    e6 = l(778712),
+var e6 = l(97808),
+    e9 = l(778712),
     e5 = l(463930),
     e3 = l(730134),
     e8 = l(63152),
@@ -843,7 +843,7 @@ var e9 = l(97808),
     tl = l(562153),
     tn = l(19575),
     ti = l(32746);
-let ts = tn.Ay.getEnableHardwareAcceleration() ? e9.Js : e3.A;
+let ts = tn.Ay.getEnableHardwareAcceleration() ? e6.Js : e3.A;
 function tr(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
@@ -857,7 +857,7 @@ function tr(e) {
             avatarDecorationSrc: m,
             avatarSrc: p,
             eventHandlers: f,
-        } = (0, e7.A)({ userId: s?.id, guildId: t, size: e6._3.SIZE_40, animateOnHover: !d });
+        } = (0, e7.A)({ userId: s?.id, guildId: t, size: e9._3.SIZE_40, animateOnHover: !d });
     return null == l || null == a || null == s
         ? null
         : (0, n.jsxs)("div", {
@@ -894,7 +894,7 @@ function tr(e) {
                               user: s,
                               src: p,
                               avatarDecoration: m,
-                              size: e6._3.SIZE_40,
+                              size: e9._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),

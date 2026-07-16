@@ -2,15 +2,15 @@ n.r(t), n.d(t, { default: () => Y });
 var s = n(627968),
     a = n(64700),
     i = n(580929),
-    r = n(837381),
-    u = n(323889),
+    u = n(837381),
+    r = n(323889),
     l = n(17928),
     d = n(821609),
     c = n(462887),
     o = n(717421),
     C = n(866323),
     E = n(192308),
-    T = n(534514),
+    T = n(297264),
     S = n(939249),
     M = n(834730),
     I = n(290136),
@@ -21,8 +21,8 @@ var s = n(627968),
     m = n(775602),
     p = n(274670),
     R = n(144779),
-    N = n(267102),
-    f = n(363195),
+    f = n(267102),
+    N = n(363195),
     y = n(734057),
     g = n(24001),
     x = n(104886),
@@ -59,13 +59,13 @@ function z(e) {
         et = t?.userStatus?.claimedAt != null,
         en = t?.userStatus?.enrolledAt != null,
         es = t?.userStatus?.completedAt != null,
-        ea = (0, l.bG)([f.A], () => f.A.getState().theme),
+        ea = (0, l.bG)([N.A], () => N.A.getState().theme),
         ei = (0, c.M)(ea) ? w.NJ.DARK : w.NJ.LIGHT,
-        er = (0, l.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        { ref: eu, height: el } = (0, h.Ay)(),
-        [ed, ec] = a.useState(er),
-        eo = (0, N.aL)(),
-        eC = (0, r.KF)();
+        eu = (0, l.bG)([m.Ay], () => m.Ay.useReducedMotion),
+        { ref: er, height: el } = (0, h.Ay)(),
+        [ed, ec] = a.useState(eu),
+        eo = (0, f.aL)(),
+        eC = (0, u.KF)();
     a.useEffect(() => {
         let e = eC.current;
         return (
@@ -102,7 +102,7 @@ function z(e) {
         (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
             ? (0, p.r)({
                   type: R.F.CLICK_INTERNAL,
-                  adCreativeType: u.p.QUEST,
+                  adCreativeType: r.p.QUEST,
                   adCreativeId: t.id,
                   questContentCTA: v.Cy.LEARN_MORE,
                   surfaceId: g.uF.MEMBERS_LIST,
@@ -118,57 +118,57 @@ function z(e) {
               }),
             (0, Q.mA)({ fromContent: g.uF.MEMBERS_LIST, questId: t.id });
     }
-    let e_ = () => {
-            (0, j.Ll)(z, $) && null != $
-                ? ((0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
-                      ? (0, p.r)({
-                            type: R.F.CLICK_INTERNAL,
-                            adCreativeType: u.p.QUEST,
-                            adCreativeId: t.id,
-                            questContentCTA: v.Cy.WATCH_STREAM,
-                            surfaceId: g.uF.MEMBERS_LIST,
-                            sourceQuestContent: g.uF.MEMBERS_LIST,
-                            trackGuildAndChannelMetadata: !0,
-                        })
-                      : (0, B.Y5)({
-                            questId: t.id,
-                            questContent: g.uF.MEMBERS_LIST,
-                            questContentCTA: v.Cy.WATCH_STREAM,
-                            trackGuildAndChannelMetadata: !0,
-                            sourceQuestContent: g.uF.MEMBERS_LIST,
-                        }),
-                  (0, E.openModalLazy)(async () => {
-                      let { default: e } = await n.e("72879").then(n.bind(n, 48274));
-                      return (n) =>
-                          (0, s.jsx)(e, {
-                              username: Z ?? "",
-                              onConfirm: () => (
-                                  (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
-                                      ? (0, p.r)({
-                                            type: R.F.CLICK_INTERNAL,
-                                            adCreativeType: u.p.QUEST,
-                                            adCreativeId: t.id,
-                                            questContentCTA: v.Cy.WATCH_STREAM_CONFIRM,
-                                            surfaceId: g.uF.MEMBERS_LIST,
-                                            sourceQuestContent: g.uF.MEMBERS_LIST,
-                                            trackGuildAndChannelMetadata: !0,
-                                        })
-                                      : (0, B.Y5)({
-                                            questId: t.id,
-                                            questContent: g.uF.MEMBERS_LIST,
-                                            questContentCTA: v.Cy.WATCH_STREAM_CONFIRM,
-                                            trackGuildAndChannelMetadata: !0,
-                                            sourceQuestContent: g.uF.MEMBERS_LIST,
-                                        }),
-                                  A.default.selectVoiceChannel($.id),
-                                  (0, L.Nl)(z)
-                              ),
-                              ...n,
-                          });
-                  }))
-                : eI();
-        },
-        eA = (0, F.NA)({ quest: t }),
+    function e_() {
+        (0, j.Ll)(z, $) && null != $
+            ? ((0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
+                  ? (0, p.r)({
+                        type: R.F.CLICK_INTERNAL,
+                        adCreativeType: r.p.QUEST,
+                        adCreativeId: t.id,
+                        questContentCTA: v.Cy.WATCH_STREAM,
+                        surfaceId: g.uF.MEMBERS_LIST,
+                        sourceQuestContent: g.uF.MEMBERS_LIST,
+                        trackGuildAndChannelMetadata: !0,
+                    })
+                  : (0, B.Y5)({
+                        questId: t.id,
+                        questContent: g.uF.MEMBERS_LIST,
+                        questContentCTA: v.Cy.WATCH_STREAM,
+                        trackGuildAndChannelMetadata: !0,
+                        sourceQuestContent: g.uF.MEMBERS_LIST,
+                    }),
+              (0, E.openModalLazy)(async () => {
+                  let { default: e } = await n.e("72879").then(n.bind(n, 48274));
+                  return (n) =>
+                      (0, s.jsx)(e, {
+                          username: Z ?? "",
+                          onConfirm: () => (
+                              (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
+                                  ? (0, p.r)({
+                                        type: R.F.CLICK_INTERNAL,
+                                        adCreativeType: r.p.QUEST,
+                                        adCreativeId: t.id,
+                                        questContentCTA: v.Cy.WATCH_STREAM_CONFIRM,
+                                        surfaceId: g.uF.MEMBERS_LIST,
+                                        sourceQuestContent: g.uF.MEMBERS_LIST,
+                                        trackGuildAndChannelMetadata: !0,
+                                    })
+                                  : (0, B.Y5)({
+                                        questId: t.id,
+                                        questContent: g.uF.MEMBERS_LIST,
+                                        questContentCTA: v.Cy.WATCH_STREAM_CONFIRM,
+                                        trackGuildAndChannelMetadata: !0,
+                                        sourceQuestContent: g.uF.MEMBERS_LIST,
+                                    }),
+                              A.default.selectVoiceChannel($.id),
+                              (0, L.Nl)(z)
+                          ),
+                          ...n,
+                      });
+              }))
+            : eI();
+    }
+    let eA = (0, F.NA)({ quest: t }),
         eL = (function () {
             if (es && !et)
                 return {
@@ -216,7 +216,7 @@ function z(e) {
         },
         children: (0, s.jsxs)("div", {
             ref: (e) => {
-                eu.current = e;
+                er.current = e;
             },
             className: U.kL,
             style: { borderRadius: eM },
@@ -236,7 +236,7 @@ function z(e) {
                                             (0, x.E5)(x.kI.STEP_2_CLICKED_INTERNAL, "quest_members_list_popout")
                                                 ? (0, p.r)({
                                                       type: R.F.CLICK_INTERNAL,
-                                                      adCreativeType: u.p.QUEST,
+                                                      adCreativeType: r.p.QUEST,
                                                       adCreativeId: t.id,
                                                       questContentCTA: v.Cy.OPEN_DISCLOSURE,
                                                       surfaceId: g.uF.MEMBERS_LIST,

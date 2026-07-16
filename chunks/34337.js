@@ -44,18 +44,18 @@ var i,
     R = n(192308),
     O = n(267102),
     L = n(619517),
-    D = n(256905),
-    y = n(536763),
+    y = n(256905),
+    D = n(536763),
     v = n(218394);
 class b extends a.PureComponent {
     static defaultProps = { shouldLink: !0, autoPlay: !1, animated: !1 };
     onMouseEnter = (e) => {
         let { src: t, width: n, height: i, onMouseEnter: r, handlePreloadImage: a } = this.props;
-        (r?.(e), null != a) ? a() : (0, y.A)({ src: t, width: n, height: i, options: this.props });
+        (r?.(e), null != a) ? a() : (0, D.A)({ src: t, width: n, height: i, options: this.props });
     };
     modalContext = (0, R.modalContextFromAppContext)(this.props.appContext);
     onCloseImage = () => {
-        (0, R.closeModal)(D.K, this.modalContext);
+        (0, R.closeModal)(y.K, this.modalContext);
     };
     onZoom = (e, t) => {
         let { zoomThumbnailPlaceholder: n, trigger: i } = t;
@@ -76,7 +76,7 @@ class b extends a.PureComponent {
             originalContentType: f,
         } = this.props;
         (0, c.vq)(e.currentTarget) && e.currentTarget.blur(),
-            (0, D.R)({
+            (0, y.R)({
                 onClose: this.onCloseImage,
                 items: [
                     {
@@ -160,7 +160,7 @@ class H extends a.PureComponent {
 }
 var j = n(248643),
     W = n(156828),
-    Y = n(990078),
+    Y = n(866665),
     K = n(408278),
     $ = n(900797),
     z = n(847374),
@@ -570,8 +570,8 @@ var eS = n(863922),
     eR = n(442433),
     eO = n(640708),
     eL = n(941971),
-    eD = n(707539),
-    ey = n(576705),
+    ey = n(707539),
+    eD = n(576705),
     ev = n(568548),
     eb = n(340833),
     eM = n(913642),
@@ -597,7 +597,7 @@ let eV = (0, ex.A)(function (e) {
                   }),
               });
     }),
-    eB = (e) => {
+    eB = function (e) {
         let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: a = 2, guildId: s } = e,
             { totalSize: l, knownSize: o } = t;
         if (l < i) return null;
@@ -664,12 +664,12 @@ var eY = n(652215),
 function ez(e) {
     let { summary: t, channel: i, members: s, guildId: l, unread: o, onClick: d } = e,
         [c, E] = a.useState(!1),
-        A = (0, eD.aK)(eP.default.extractTimestamp(t.startId)),
+        A = (0, ey.aK)(eP.default.extractTimestamp(t.startId)),
         h = (0, u.bG)([eN.A], () => eN.A.summaryFeedback(t));
     function I(e, n) {
         e.stopPropagation(), (0, eU.A)({ summary: t, channel: i, rating: n });
     }
-    let p = ey.A.can(eY.xBc.MANAGE_MESSAGES, i);
+    let p = eD.A.can(eY.xBc.MANAGE_MESSAGES, i);
     return (0, r.jsxs)(f.D, {
         className: e$.kL,
         onClick: d,
@@ -951,8 +951,8 @@ function tE(e) {
             backgroundFillColor: R,
             lastActiveFillColor: O,
             activeFillColor: L,
-            lastInactiveFillColor: D,
-            inactiveFillColor: y,
+            lastInactiveFillColor: y,
+            inactiveFillColor: D,
         } = (function (e, t) {
             let n = (0, e8.r)(e7.A.colors.BACKGROUND_MOD_MUTED).hex(),
                 i = (0, e8.r)(e7.A.colors.INTERACTIVE_TEXT_DEFAULT).hex(),
@@ -1020,7 +1020,7 @@ function tE(e) {
                             constrainMin: !0,
                         });
                     r.fill();
-                    let [_, E] = t_(D, y, n, S.current);
+                    let [_, E] = t_(y, D, n, S.current);
                     s = s || E;
                     let [A, I] = t_(O, L, n, S.current);
                     s = s || I;
@@ -1046,7 +1046,7 @@ function tE(e) {
                     null != e && cancelAnimationFrame(e);
                 }
             );
-        }, [h, N, T, I, o, d, c, u, C, R, O, L, D, y]);
+        }, [h, N, T, I, o, d, c, u, C, R, O, L, y, D]);
     let [, M] = (function (e) {
         let { ref: t, onDrag: n, onDragStart: i, onDragEnd: r } = e,
             [s, l] = a.useState(!1);
@@ -1118,8 +1118,8 @@ let tf = a.memo(function (e) {
         S = (0, u.bG)([e1.Ay], () => e1.Ay.getPlaybackRate(e1.k0.VOICE_MESSAGE)),
         [N, C] = a.useState(g > 0),
         [R, O] = a.useState(g),
-        [L, D] = a.useState(c),
-        [y, v] = a.useState(!1),
+        [L, y] = a.useState(c),
+        [D, v] = a.useState(!1),
         [b, M] = a.useState(!1),
         [P, U] = a.useState(!1),
         [w, G] = a.useState(!1),
@@ -1134,7 +1134,7 @@ let tf = a.memo(function (e) {
         }, []),
         W = a.useCallback((e) => {
             let t = e.currentTarget.duration;
-            isNaN(t) || D(t);
+            isNaN(t) || y(t);
         }, []),
         Y = a.useCallback(
             (e) => {
@@ -1172,8 +1172,8 @@ let tf = a.memo(function (e) {
             [s],
         ),
         X = a.useCallback(() => {
-            v(!y), o?.(!y);
-        }, [y, o]),
+            v(!D), o?.(!D);
+        }, [D, o]),
         Q = a.useCallback(() => {
             U(!0);
         }, []),
@@ -1264,7 +1264,7 @@ let tf = a.memo(function (e) {
                       onEnded: $,
                       onLoadedMetadata: W,
                       onError: q,
-                      muted: y,
+                      muted: D,
                       volume: F,
                       playbackRate: S,
                   }),
@@ -1277,7 +1277,7 @@ let tf = a.memo(function (e) {
                   onEnded: $,
                   onLoadedMetadata: W,
                   onError: q,
-                  muted: y,
+                  muted: D,
                   volume: F,
                   playbackRate: S,
                   playing: b && !P,
@@ -1332,7 +1332,7 @@ let tf = a.memo(function (e) {
                 iconClassName: tA._j,
                 iconColor: "currentColor",
                 sliderWrapperClassName: tA.MQ,
-                muted: y,
+                muted: D,
                 value: (0, e5.M)(F, 1),
                 minValue: 0,
                 maxValue: 1,
@@ -1360,12 +1360,12 @@ function tL(e) {
         e?.(t), (0, tg.ls)(t);
     };
 }
-function tD(e) {
+function ty(e) {
     return (t) => {
         e?.(t), (0, tg.y5)(t);
     };
 }
-function ty(e) {
+function tD(e) {
     let { altText: t, altButtonRef: n } = e;
     return (0, r.jsxs)("div", {
         role: "dialog",
@@ -1403,7 +1403,7 @@ function tv(e) {
               children: (0, r.jsx)(E.Y, {
                   targetElementRef: u,
                   animation: E.Y.Animation.FADE,
-                  renderPopout: () => (0, r.jsx)(ty, { altText: t, altButtonRef: u }),
+                  renderPopout: () => (0, r.jsx)(tD, { altText: t, altButtonRef: u }),
                   children: (e) =>
                       (0, r.jsx)(A.vN, {
                           offset: 4,
@@ -1439,7 +1439,7 @@ function tb(e) {
             ...I
         } = e,
         f = tL(t),
-        p = tD(n);
+        p = ty(n);
     (i = null == i ? tg.v1 : i), (s = null == s ? tg.uj : s);
     let [T, m] = a.useState(!0),
         g = A === tS.dG.MOSAIC || !0 === E,
@@ -1494,7 +1494,7 @@ function tP(e) {
             ...d
         } = e,
         c = tL(t),
-        u = tD(i);
+        u = ty(i);
     return (
         (n = null == n ? tg.v1 : n),
         (0, r.jsxs)(a.Fragment, {
@@ -1519,7 +1519,7 @@ function tP(e) {
 function tU(e) {
     let { onVolumeChange: t, volume: n, onMute: i, ...a } = e,
         s = tL(t),
-        l = tD(i);
+        l = ty(i);
     return (n = null == n ? tg.v1 : n), (0, r.jsx)(tf, { ...a, onVolumeChange: s, onMute: l, volume: n });
 }
 function tw(e) {
@@ -1553,7 +1553,7 @@ function tw(e) {
                     children: (0, r.jsx)(E.Y, {
                         targetElementRef: T,
                         animation: E.Y.Animation.FADE,
-                        renderPopout: () => (0, r.jsx)(ty, { altText: t, altButtonRef: T }),
+                        renderPopout: () => (0, r.jsx)(tD, { altText: t, altButtonRef: T }),
                         children: (e) =>
                             (0, r.jsx)(A.vN, {
                                 offset: 4,
@@ -1747,14 +1747,14 @@ function tj(e) {
                 channel_type: t.type,
             });
     }, [O, L, t.guild_id, t.id, t.type]);
-    let D = (0, u.bG)(
+    let y = (0, u.bG)(
             [tp.default],
             () => O?.map((e) => e.people?.map((e) => tp.default.getUser(e) ?? null).filter(ek.Vq)) ?? [],
             [O],
             tW,
         ),
-        y = (0, u.bG)([eN.A], () => eN.A.visibleSummaryIndex()) ?? -1,
-        v = O?.[y]?.topic;
+        D = (0, u.bG)([eN.A], () => eN.A.visibleSummaryIndex()) ?? -1,
+        v = O?.[D]?.topic;
     null == v && null == o && O?.length >= 1 && (v = O[0]?.topic);
     let b = a.useMemo(
             () =>
@@ -1876,8 +1876,8 @@ function tj(e) {
             [j],
         );
     let W = a.useMemo(
-            () => (0, r.jsx)(eq, { channel: t, summaries: O, summariesMembers: D, selectTopic: B, setOpen: H }),
-            [O, D, B, H, t],
+            () => (0, r.jsx)(eq, { channel: t, summaries: O, summariesMembers: y, selectTopic: B, setOpen: H }),
+            [O, y, B, H, t],
         ),
         Y = a.useCallback(() => {
             let e = ev.Ay.ackMessageId(t.id);
@@ -2022,8 +2022,8 @@ function tY(e) {
         O = (0, u.bG)([eN.A], () => eN.A.visibleSummaryIndex()) ?? -1,
         L = p?.[O]?.topic;
     null == L && null == s && p?.length >= 1 && (L = p[0]?.topic);
-    let D = a.useMemo(() => d().get(p, O - 1), [O, p]),
-        y = a.useMemo(() => d().get(p, O + 1), [O, p]),
+    let y = a.useMemo(() => d().get(p, O - 1), [O, p]),
+        D = a.useMemo(() => d().get(p, O + 1), [O, p]),
         v = a.useMemo(
             () =>
                 d().debounce((e) => {
@@ -2194,7 +2194,7 @@ function tY(e) {
                                       (0, r.jsx)(f.D, {
                                           "aria-label": ec.intl.string(ec.t["4huCnC"]),
                                           onClick: H,
-                                          className: l()(tR.ZMY, tR.vzA, { [tR.jfO]: null == y }),
+                                          className: l()(tR.ZMY, tR.vzA, { [tR.jfO]: null == D }),
                                           children: (0, r.jsx)(tT.A, {
                                               width: 16,
                                               height: 16,
@@ -2204,7 +2204,7 @@ function tY(e) {
                                       (0, r.jsx)(f.D, {
                                           "aria-label": ec.intl.string(ec.t["58KOoF"]),
                                           onClick: B,
-                                          className: l()(tR.ZMY, tR.mtW, { [tR.jfO]: null == D }),
+                                          className: l()(tR.ZMY, tR.mtW, { [tR.jfO]: null == y }),
                                           children: (0, r.jsx)(tT.A, {
                                               width: 16,
                                               height: 16,

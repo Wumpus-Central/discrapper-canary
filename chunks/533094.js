@@ -121,7 +121,7 @@ function ef(e) {
                             icon: ed.t,
                             size: "md",
                             text: s.cta,
-                            onClick: () => {
+                            onClick: function () {
                                 i(eg.i.TAKE_ACTION),
                                     (0, P.A)({ subscription: t, initialPlanId: s.yearlyPlanId, analyticsLocations: a });
                             },
@@ -522,7 +522,7 @@ var e4 = s(502572),
     td = s(234419),
     tu = s(549996),
     tm = s(172218);
-let tg = function () {
+function tg() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         [t, s] = (0, d.useState)(1),
         i = (0, d.useMemo)(() => ({ threshold: Array.from({ length: 101 }, (e, t) => t / 100) }), []);
@@ -536,7 +536,7 @@ let tg = function () {
         ),
         visibilityPercentage: t,
     };
-};
+}
 var tx = s(382996);
 let tp = function (e) {
     let { text: t } = e;
@@ -675,7 +675,7 @@ var tk = s(989349),
     tU = s.n(tk),
     tG = s(496431),
     tw = s(116689);
-let tB = (e) => {
+let tB = function (e) {
     let { expiresAt: t, className: s } = e,
         i = (0, tG.A)(tU()(t).toDate(), 1e3);
     if (null == i) return null;
@@ -2684,18 +2684,17 @@ function iH(e, t, s, i) {
                         c ||
                         ((l.current = !0), d.disconnect(), t.target.scrollIntoView(s));
                 }),
-                u = performance.now(),
-                m = () => {
-                    if (c || performance.now() - u > 5e3) return;
-                    let t = e();
-                    null != t
-                        ? t.offsetHeight > 0
-                            ? ((l.current = !0), t.scrollIntoView(s))
-                            : d.observe(t)
-                        : (o = requestAnimationFrame(m));
-                };
+                u = performance.now();
             return (
-                m(),
+                !(function t() {
+                    if (c || performance.now() - u > 5e3) return;
+                    let i = e();
+                    null != i
+                        ? i.offsetHeight > 0
+                            ? ((l.current = !0), i.scrollIntoView(s))
+                            : d.observe(i)
+                        : (o = requestAnimationFrame(t));
+                })(),
                 () => {
                     (c = !0), null != o && cancelAnimationFrame(o), d.disconnect();
                 }
@@ -3851,11 +3850,10 @@ let aW = () => {
     d.useEffect(() => {
         if (r) return void u(!0);
         let e = s.current;
-        if (null == e) return;
-        let t = (t) => {
+        if (null != e) return e.addEventListener("animationend", t), () => e.removeEventListener("animationend", t);
+        function t(t) {
             t.target === e && u(!0);
-        };
-        return e.addEventListener("animationend", t), () => e.removeEventListener("animationend", t);
+        }
     }, [r]);
     let [p, f] = d.useState(!1),
         [h, N] = d.useState(!1),

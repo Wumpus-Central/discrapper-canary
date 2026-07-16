@@ -2,9 +2,9 @@ t.r(e), t.d(e, { default: () => P });
 var a,
     o = t(627968);
 t(64700);
-var i = t(284009),
-    l = t.n(i),
-    n = t(492462),
+var n = t(284009),
+    i = t.n(n),
+    l = t(492462),
     c = (((a = {}).OAUTH_REDIRECT = "oauth_redirect"), a),
     s = t(333748),
     u = t(13202),
@@ -19,8 +19,8 @@ var i = t(284009),
     I = t(998218),
     k = t(652215),
     L = t(231723);
-let m = new w.A("LinkAuthorize");
-async function E(r, e, t, a) {
+let f = new w.A("LinkAuthorize");
+async function m(r, e, t, a) {
     let o = null;
     try {
         let { body: r } = await h.A.authorize(a, { twoWayLinkType: u.I.WEB });
@@ -28,60 +28,60 @@ async function E(r, e, t, a) {
     } catch (r) {
         throw Error(`error at authorize with code ${r?.body?.code ?? 0}`);
     }
-    let i = null;
+    let n = null;
     try {
-        l()(null != o, "No URL in authorize response");
+        i()(null != o, "No URL in authorize response");
         let { state: r } = (0, p.vA)(o);
-        l()(null != r, "Authorize URL state query parameter must be present"), (i = r);
+        i()(null != r, "Authorize URL state query parameter must be present"), (n = r);
     } catch (r) {
         throw Error("error at authorize parsing callback params");
     }
     try {
-        let o = await h.A.completeTwoWayLink(a, r, e, i, t);
+        let o = await h.A.completeTwoWayLink(a, r, e, n, t);
         return o?.body?.redirect;
     } catch (r) {
         throw Error(`error at callback with code ${r?.body?.code ?? 0}`);
     }
 }
-function f(r) {
+function E(r) {
     let { platformType: e } = r;
     (0, d.A)();
     let t = (0, T._)(window.location.search),
-        { code: a, token_redirect_uri: i } = n.parse(window.location.search),
-        l = async (r) => {
-            let { location: t } = r;
-            if (null == t) return;
-            let { error: o } = n.parse(t),
-                l = null;
-            if (null == o && null != a)
-                try {
-                    l = await E(t, a, i, e);
-                } catch (e) {
-                    m.error("Error Creating Discord link", e?.message);
-                    let r = I.A.toURLSafe(t);
-                    if (null == r) return;
-                    r.searchParams.delete("code"),
-                        r.searchParams.set("error", "two_way_link_error"),
-                        r.searchParams.set("error_description", e?.message ?? "unknown_error"),
-                        (t = r.toString());
-                }
-            window.location = null == l || l === c.OAUTH_REDIRECT ? t : l;
-        };
+        { code: a, token_redirect_uri: n } = l.parse(window.location.search);
+    async function i(r) {
+        let { location: t } = r;
+        if (null == t) return;
+        let { error: o } = l.parse(t),
+            i = null;
+        if (null == o && null != a)
+            try {
+                i = await m(t, a, n, e);
+            } catch (e) {
+                f.error("Error Creating Discord link", e?.message);
+                let r = I.A.toURLSafe(t);
+                if (null == r) return;
+                r.searchParams.delete("code"),
+                    r.searchParams.set("error", "two_way_link_error"),
+                    r.searchParams.set("error_description", e?.message ?? "unknown_error"),
+                    (t = r.toString());
+            }
+        window.location = null == i || i === c.OAUTH_REDIRECT ? t : i;
+    }
     return (0, o.jsx)(y.$, {
         removeChildWrapper: !0,
         children: (0, o.jsx)(_.OAuth2AuthorizeModal, {
             transitionState: L.ip.ENTERED,
             ...t,
             showLogout: !0,
-            callback: l,
+            callback: i,
         }),
     });
 }
 let P = (0, A.C)(function (r) {
     let { match: e } = r,
         t = e.params.type,
-        { client_id: a = "" } = n.parse(window.location.search),
-        i = t === k.fg2.PLAYSTATION && a === s.i.PLAYSTATION_APPLICATION_ID,
-        l = t === k.fg2.PLAYSTATION_STAGING && a === s.i.PLAYSTATION_STAGING_APPLICATION_ID;
-    return i || l ? (0, o.jsx)(f, { platformType: t }) : null;
+        { client_id: a = "" } = l.parse(window.location.search),
+        n = t === k.fg2.PLAYSTATION && a === s.i.PLAYSTATION_APPLICATION_ID,
+        i = t === k.fg2.PLAYSTATION_STAGING && a === s.i.PLAYSTATION_STAGING_APPLICATION_ID;
+    return n || i ? (0, o.jsx)(E, { platformType: t }) : null;
 });

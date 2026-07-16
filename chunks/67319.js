@@ -254,7 +254,7 @@ let eI = l.memo(function (e) {
                     n !== i && s(n),
                     [
                         i,
-                        (e) => {
+                        function (e) {
                             null != t && (s(e), (0, eu.b6)(t, eE.xBc.REQUEST_TO_SPEAK, e));
                         },
                     ]
@@ -1340,7 +1340,7 @@ var t8 = n(639622);
 function ne(e) {
     return e.type === z.wY.VOICE;
 }
-let nt = (0, ts.A)((e) => {
+let nt = (0, ts.A)(function (e) {
     let t,
         n,
         { channel: s, width: a, onScroll: c, popoutType: d } = e,
@@ -1461,7 +1461,9 @@ let nt = (0, ts.A)((e) => {
                         )
                   : null;
         },
-        sectionHeight: (e) => 48,
+        sectionHeight: function (e) {
+            return 48;
+        },
         renderRow: function (e) {
             let { section: t, row: n } = e,
                 a = I[t][n];
@@ -1499,12 +1501,16 @@ let nt = (0, ts.A)((e) => {
                     return null;
             }
         },
-        rowHeight: (e) => (null == I[e][0] ? 0 : 0 === e ? O / tF + 8 : 1 === e ? (L ? 0 : b) : 98 * !U),
+        rowHeight: function (e) {
+            return null == I[e][0] ? 0 : 0 === e ? O / tF + 8 : 1 === e ? (L ? 0 : b) : 98 * !U;
+        },
         renderFooter: function (e) {
             let { section: t } = e;
             return R(t) ? (0, i.jsx)("div", { className: t8.jH }, "bottom-spacer") : null;
         },
-        footerHeight: (e) => (1 === e ? 8 : 0 === e ? 12 : 88 * !!R(e)),
+        footerHeight: function (e) {
+            return 1 === e ? 8 : 0 === e ? 12 : 88 * !!R(e);
+        },
         className: t8.XG,
         chunkSize: 60,
         onScroll: c,
@@ -2238,9 +2244,9 @@ function id(e) {
                     [_, I, C, c],
                 );
             l.useEffect(() => {
-                let e = () => {
+                function e() {
                     null != C && ((0, ia._U)(C, E) || A !== eE.DUB.FULL_SCREEN || y(A)());
-                };
+                }
                 return (
                     E.addEventListener(ia.Wb, e),
                     () => {

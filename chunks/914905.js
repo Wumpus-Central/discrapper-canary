@@ -22,11 +22,11 @@ var i = n(627968),
     S = n(515718),
     N = n(851023),
     C = n(215497),
-    O = n(375708),
-    R = n(16590),
+    R = n(375708),
+    O = n(16590),
     L = n(443024);
-let D = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
-function y(e) {
+let y = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
+function D(e) {
     let { alt: t, spoiler: n, renderContent: a, size: l } = e,
         [o, d] = r.useState(!1);
     return (0, i.jsx)(m.Bs.Provider, {
@@ -47,12 +47,12 @@ function y(e) {
                             className: L.tags,
                             children: [
                                 null != t && "" !== t
-                                    ? (0, i.jsx)("span", { className: L.altTag, children: O.intl.string(O.t.QEW81z) })
+                                    ? (0, i.jsx)("span", { className: L.altTag, children: R.intl.string(R.t.QEW81z) })
                                     : null,
                                 o && n
                                     ? (0, i.jsx)("span", {
                                           className: L.altTag,
-                                          children: O.intl.string(O.t["F+x38C"]),
+                                          children: R.intl.string(R.t["F+x38C"]),
                                       })
                                     : null,
                             ],
@@ -68,7 +68,7 @@ function v(e) {
         [_, E] = r.useState({ width: 0, height: 0 }),
         A = l === C.L.SMALL;
     r.useEffect(() => {
-        if (null == t || !1 === D.includes(t.type)) return;
+        if (null == t || !1 === y.includes(t.type)) return;
         let e = URL.createObjectURL(t);
         u(e);
         let n = new Image();
@@ -111,11 +111,11 @@ function v(e) {
                     shouldHideMediaOptions: !0,
                 });
         }, [c]),
-        f = t?.name != null ? t.name : O.intl.string(O.t.lduvqL),
+        f = t?.name != null ? t.name : R.intl.string(R.t.lduvqL),
         p =
             null != n && "" !== n
-                ? O.intl.formatToPlainString(O.t["8TRAzR"], { filename: f, alt: n })
-                : O.intl.formatToPlainString(O.t.lXoOEZ, { filename: f });
+                ? R.intl.formatToPlainString(R.t["8TRAzR"], { filename: f, alt: n })
+                : R.intl.formatToPlainString(R.t.lXoOEZ, { filename: f });
     return (0, i.jsx)("div", {
         onMouseEnter: d,
         className: s()(L.mediaContainer, { [L.imageSmall]: A }),
@@ -124,7 +124,7 @@ function v(e) {
             className: L.clickableMedia,
             "aria-label": p,
             tabIndex: -1,
-            children: (0, i.jsx)(y, { size: l, alt: n, spoiler: a, renderContent: h }),
+            children: (0, i.jsx)(D, { size: l, alt: n, spoiler: a, renderContent: h }),
         }),
     });
 }
@@ -156,7 +156,7 @@ function b(e) {
             onMouseEnter: o,
             className: L.mediaContainer,
             children: [
-                (0, i.jsx)(y, {
+                (0, i.jsx)(D, {
                     size: l,
                     alt: n,
                     spoiler: a,
@@ -217,7 +217,7 @@ function M(e) {
                 children: (0, i.jsx)("div", {
                     className: L.tags,
                     children: t.spoiler
-                        ? (0, i.jsx)("span", { className: L.altTag, children: O.intl.string(O.t["F+x38C"]) })
+                        ? (0, i.jsx)("span", { className: L.altTag, children: R.intl.string(R.t["F+x38C"]) })
                         : null,
                 }),
             });
@@ -234,14 +234,14 @@ function P(e) {
             hideFileName: m = !1,
             clip: S,
         } = e,
-        D = null != S,
-        y = p === C.L.SMALL,
+        y = null != S,
+        D = p === C.L.SMALL,
         v = (0, l.bG)([g.A], () => g.A.getChannel(t)?.guild_id);
     function b() {
         h.A.remove(t, o.id, a);
     }
-    let P = (e) => {
-        (e.stopPropagation(), D)
+    function P(e) {
+        (e.stopPropagation(), y)
             ? (0, d.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
                       n.e("50884"),
@@ -288,49 +288,49 @@ function P(e) {
                           },
                       });
               });
-    };
+    }
     return (0, i.jsxs)(C.A, {
         actions: (0, i.jsxs)(r.Fragment, {
             children: [
                 T
                     ? (0, i.jsx)(N.A, {
-                          className: s()({ [L.action]: y }),
-                          tooltip: D ? O.intl.string(O.t.MYgdY2) : O.intl.string(O.t.cuurzA),
+                          className: s()({ [L.action]: D }),
+                          tooltip: y ? R.intl.string(R.t.MYgdY2) : R.intl.string(R.t.cuurzA),
                           onClick: () => h.A.update(t, o.id, a, { spoiler: !o.spoiler }),
                           children: o.spoiler
                               ? (0, i.jsx)(c.G, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: s()({ [L.actionBarIcon]: y }),
+                                    className: s()({ [L.actionBarIcon]: D }),
                                 })
                               : (0, i.jsx)(u.b, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: s()({ [L.actionBarIcon]: y }),
+                                    className: s()({ [L.actionBarIcon]: D }),
                                 }),
                       })
                     : null,
                 T
                     ? (0, i.jsx)(N.A, {
-                          className: s()({ [L.action]: y }),
-                          tooltip: D ? O.intl.string(R.default.V8YlF7) : O.intl.string(O.t.Y8ujqr),
+                          className: s()({ [L.action]: D }),
+                          tooltip: y ? R.intl.string(O.default.V8YlF7) : R.intl.string(R.t.Y8ujqr),
                           onClick: P,
                           children: (0, i.jsx)(_.R, {
                               size: "xs",
                               color: "currentColor",
-                              className: s()({ [L.actionBarIcon]: y }),
+                              className: s()({ [L.actionBarIcon]: D }),
                           }),
                       })
                     : null,
                 (0, i.jsx)(N.A, {
-                    className: s()({ [L.action]: y }),
-                    tooltip: D ? O.intl.string(O.t.MskAXa) : O.intl.string(O.t.vN7REz),
+                    className: s()({ [L.action]: D }),
+                    tooltip: y ? R.intl.string(R.t.MskAXa) : R.intl.string(R.t.vN7REz),
                     onClick: b,
                     dangerous: !0,
                     children: (0, i.jsx)(E.u, {
                         size: "md",
                         color: "currentColor",
-                        className: s()({ [L.actionBarIcon]: y }),
+                        className: s()({ [L.actionBarIcon]: D }),
                     }),
                 }),
             ],
@@ -341,7 +341,7 @@ function P(e) {
         handleEditModal: P,
         keyboardModeEnabled: I,
         size: p,
-        className: s()({ [L.attachmentItemSmall]: y }),
+        className: s()({ [L.attachmentItemSmall]: D }),
         children: [
             (0, i.jsx)(M, { upload: o, size: p, clip: S, guildId: v }),
             !m &&
@@ -351,7 +351,7 @@ function P(e) {
                     children: (0, i.jsx)(A.E, {
                         className: L.filename,
                         variant: "text-sm/normal",
-                        children: null != f ? f : D ? S.name : o.filename,
+                        children: null != f ? f : y ? S.name : o.filename,
                     }),
                 }),
         ],

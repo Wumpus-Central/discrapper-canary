@@ -3,7 +3,7 @@ var r = n(627968);
 n(64700);
 var i = n(922016),
     c = n(283354);
-let a = (t) => {
+let a = function (t) {
     let { entry: e, hideEditButton: n, children: a, onRequestOpen: l, onRequestClose: o, targetElementRef: E } = t;
     return (0, r.jsx)(i.Y, {
         targetElementRef: E,

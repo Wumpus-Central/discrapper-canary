@@ -46,10 +46,10 @@ function u() {
 }
 var _ = n(747556),
     E = n(993673);
-let A = (e, t, n) => {
+function A(e, t, n) {
     let i = (t ? (n ? 372 : 272) : 200) / 2 - 8;
     return Math.max(-i, Math.min(i, e));
-};
+}
 function h(e) {
     let { caretConfig: t } = e,
         { position: n, align: r, customOffset: a } = t,
@@ -94,13 +94,13 @@ function f(e) {
     )
         return null;
     let L = (0, o.Pv)(p, T),
-        D = u ?? a.current;
+        y = u ?? a.current;
     return (0, i.jsx)(o.Ow, {
         className: c.BM,
         open: n,
         spacing: m,
         placement: L,
-        reference: D,
+        reference: y,
         ownerDocument: R,
         autoUpdate: null != N,
         renderLayer: (e) => {

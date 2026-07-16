@@ -80,7 +80,7 @@ class C {
                         r.bomb_planted !== t.bomb_planted) &&
                         (Object.assign(t, r), n.push({ ...r, timestamp_ms: i }));
                 }
-                let s = (e) => {
+                function s(e) {
                     for (;;) {
                         let n = 1 / 0,
                             s = null;
@@ -97,7 +97,7 @@ class C {
                             ? a({ in_proper_game: !1, bomb_planted: !1, spectating: !1 }, n)
                             : a({ in_proper_game: !1, in_game_guess: !1, bomb_planted: !1, spectating: !1 }, n);
                     }
-                };
+                }
                 for (let n of [...e].sort((e, t) => e.timestamp_ms - t.timestamp_ms)) {
                     switch ((s(n.timestamp_ms), O(n.name))) {
                         case "round":
@@ -433,16 +433,17 @@ function j(e, t, n, i) {
             let s = o?.[i.filepath],
                 l = {};
             if (null != s) {
-                let t = 1e3 * Math.floor(a / 1e3),
-                    i = (i) =>
-                        W(
-                            i.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
-                            e,
-                            n,
-                        );
+                let t = 1e3 * Math.floor(a / 1e3);
+                function d(i) {
+                    return W(
+                        i.map((e) => ({ ...e, timestamp_ms: e.timestamp_ms + t })),
+                        e,
+                        n,
+                    );
+                }
                 for (let e in s.audioModelDataPerUser) {
                     let t = s.audioModelDataPerUser[e];
-                    l[e] = { laughterData: i(t.laughterData), shoutingData: i(t.shoutingData), rmsData: i(t.rmsData) };
+                    l[e] = { laughterData: d(t.laughterData), shoutingData: d(t.shoutingData), rmsData: d(t.rmsData) };
                 }
             } else
                 for (let i in t.audioModelDataPerUser) {
@@ -453,7 +454,7 @@ function j(e, t, n, i) {
                         rmsData: W(r.rmsData, e, n),
                     };
                 }
-            let d = (function (e) {
+            let c = (function (e) {
                     let t = Number.MAX_VALUE,
                         n = -Number.MAX_VALUE;
                     for (let i in e) {
@@ -490,24 +491,24 @@ function j(e, t, n, i) {
                     }
                     return s;
                 })(l),
-                c = Object.keys(d),
-                u = [],
+                u = Object.keys(c),
                 _ = [],
-                E = [];
-            for (let e of c) {
-                let t = d[e];
-                u.push(t.laughterData.map((e) => e.value)),
-                    _.push(t.shoutingData.map((e) => e.value)),
-                    E.push(t.rmsData.map((e) => e.value));
+                E = [],
+                A = [];
+            for (let e of u) {
+                let t = c[e];
+                _.push(t.laughterData.map((e) => e.value)),
+                    E.push(t.shoutingData.map((e) => e.value)),
+                    A.push(t.rmsData.map((e) => e.value));
             }
-            let A = c.length > 0 ? d[c[0]] : void 0;
+            let h = u.length > 0 ? c[u[0]] : void 0;
             return {
-                userIds: c,
-                pLaughter: u,
-                pShouting: _,
-                rms: E,
-                gridStartMs: A?.laughterData[0]?.timestamp_ms,
-                chunkCount: A?.laughterData.length ?? 0,
+                userIds: u,
+                pLaughter: _,
+                pShouting: E,
+                rms: A,
+                gridStartMs: h?.laughterData[0]?.timestamp_ms,
+                chunkCount: h?.laughterData.length ?? 0,
             };
         }
         let { startMs: s, endMs: l } = H(i),
@@ -777,24 +778,24 @@ function j(e, t, n, i) {
                       ]
                     : [{ ...a, quota: n }, s],
             o = [],
-            d = new Set(),
-            c = (e) => {
-                let t = e.ranked.find(
-                    (t) =>
-                        !d.has(t) &&
-                        e.eligible(t) &&
-                        !((e) => {
-                            let { startMs: t, endMs: n } = H(e.clip);
-                            for (let e of o) {
-                                let { startMs: i, endMs: r } = H(e.clip);
-                                if (Math.min(n, r) - Math.max(t, i) >= 5e3) return !0;
-                            }
-                            return !1;
-                        })(t),
-                );
-                return null != t && ((t.selectedVia = e.axis), o.push(t), d.add(t), !0);
-            },
-            u = l.map((e) => e.quota),
+            d = new Set();
+        function c(e) {
+            let t = e.ranked.find(
+                (t) =>
+                    !d.has(t) &&
+                    e.eligible(t) &&
+                    !(function (e) {
+                        let { startMs: t, endMs: n } = H(e.clip);
+                        for (let e of o) {
+                            let { startMs: i, endMs: r } = H(e.clip);
+                            if (Math.min(n, r) - Math.max(t, i) >= 5e3) return !0;
+                        }
+                        return !1;
+                    })(t),
+            );
+            return null != t && ((t.selectedVia = e.axis), o.push(t), d.add(t), !0);
+        }
+        let u = l.map((e) => e.quota),
             _ = !0;
         for (; o.length < n && _; ) {
             _ = !1;

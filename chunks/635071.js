@@ -11,9 +11,9 @@ var r,
     A = n(939249),
     m = n(545442),
     p = n(775602),
-    h = n(793574),
-    S = n(688810),
-    f = n(922301),
+    f = n(793574),
+    h = n(688810),
+    S = n(922301),
     y = n(660184),
     I = n(73392),
     v = n(386467),
@@ -51,7 +51,7 @@ function j(e) {
         U = t.useRef(null),
         W = t.useContext(v.A),
         $ = r?.guild_id ?? W,
-        { analyticsLocations: Z } = (0, S.Ay)(h.A.USERNAME),
+        { analyticsLocations: Z } = (0, h.Ay)(f.A.USERNAME),
         K = j ? "@" : "",
         { nick: Y, colorString: q, colorStrings: J, colorRoleName: Q, displayNameStyles: X } = l,
         ee = (0, o.bG)([p.Ay], () => p.Ay.roleStyle),
@@ -77,7 +77,7 @@ function j(e) {
         em = (0, c.CR)(K + Y),
         ep = {
             className: a()(M.oF, en, { [eA]: eo, [M.IW]: "username" === ee && null != q }),
-            style: (() => {
+            style: (function () {
                 if (el)
                     return eo && null != J
                         ? { ...ec, textDecorationColor: J?.primaryColor ?? void 0 }
@@ -91,7 +91,7 @@ function j(e) {
                 ? (0, u.jsx)(y.A, {
                       userName: em,
                       displayNameStyles: X,
-                      effectDisplayType: ea ? f.G.ANIMATED : f.G.PLAIN,
+                      effectDisplayType: ea ? S.G.ANIMATED : S.G.PLAIN,
                       loop: !0,
                       shouldUnderlineOnHover: null != k,
                       textClassName: M.Mu,
@@ -100,7 +100,7 @@ function j(e) {
             "data-text": K + Y,
             "data-username-has-gradient": !!ei || void 0,
         },
-        eh = t.useMemo(
+        ef = t.useMemo(
             () =>
                 D
                     ? null
@@ -113,12 +113,12 @@ function j(e) {
                       }),
             [b, l.primaryGuild, $, n.author.id, D],
         ),
-        eS = s ?? n.author,
-        ef =
+        eh = s ?? n.author,
+        eS =
             null != z && null != O
                 ? (0, u.jsx)(g.A, {
                       targetElementRef: U,
-                      user: eS,
+                      user: eh,
                       guildId: $,
                       channelId: n.channel_id,
                       renderPopout: z,
@@ -127,7 +127,7 @@ function j(e) {
                       position: i.Fr ? "window_center" : "right",
                       avatarUrl:
                           null != l.guildMemberAvatar && null != $
-                              ? (0, x.s7)({ guildId: $, userId: eS.id, avatar: l.guildMemberAvatar, size: 80 })
+                              ? (0, x.s7)({ guildId: $, userId: eh.id, avatar: l.guildMemberAvatar, size: 80 })
                               : void 0,
                       onRequestClose: P,
                       clickTrap: O,
@@ -142,24 +142,24 @@ function j(e) {
                                       ...ep,
                                       className: a()(ep.className, M.vk, F),
                                   }),
-                                  eh,
+                                  ef,
                               ],
                           });
                       },
                   })
                 : (0, u.jsxs)(u.Fragment, {
-                      children: [(0, u.jsx)(A.D, { ...ep, className: a()(ep.className, F) }), eh],
+                      children: [(0, u.jsx)(A.D, { ...ep, className: a()(ep.className, F) }), ef],
                   }),
         ey = null != H ? H[0] : null,
         eI = null != H ? H[1] : null;
-    return (0, u.jsxs)(S.f5, {
+    return (0, u.jsxs)(h.f5, {
         value: Z,
         children: [
             null != ey && !w && b ? (0, u.jsxs)(u.Fragment, { children: [" ", ey, " "] }) : null,
             "dot" === ee
                 ? (0, u.jsx)(m.W, { color: q, colors: ei ? J : null, name: Q, className: M.m4, hoverOverride: ea })
                 : null,
-            ef,
+            eS,
             null != eI ? eI : null,
             null == ey || w || b ? null : ey,
         ],

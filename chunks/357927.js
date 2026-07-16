@@ -749,7 +749,7 @@ function tl() {
         [i] = (0, ti.A)([ts(e, t)]);
     return { runningGame: t ?? void 0, runningGameApplication: i ?? void 0 };
 }
-var tr = i(990078),
+var tr = i(866665),
     ta = i(478016),
     to = i(31300),
     tu = i(780907),
@@ -884,33 +884,31 @@ let tL = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
         }, [l, s]);
         let h = !(0, tv.supportsLegacy)(),
             T = !(0, tv.supportsOutOfProcess)(),
-            { legacyEnabled: x, oopEnabled: f } = (0, g.cf)([tE.default], () => tE.default.getGlobalEnabledStatus()),
-            N = (t, i) => {
-                if (null == e) return;
-                let n = !1,
-                    s = !1;
-                switch (i) {
-                    case tA.OverlayToggledClientSettingType.LEGACY_GAME:
-                        d(t), tu.Ay.toggleOverlay(e, t, a), (n = !t && u);
-                        break;
-                    case tA.OverlayToggledClientSettingType.OOP_GAME:
-                        o(t), tu.Ay.toggleOverlay(e, u, t), (s = !t && a);
-                        break;
-                    case tA.OverlayToggledClientSettingType.LEGACY:
-                        td.A.setEnabled(t, f), (0, tA.Q3)(t, tA.OverlayToggledClientSettingType.LEGACY, e.id ?? null);
-                        break;
-                    case tA.OverlayToggledClientSettingType.OOP:
-                        td.A.setEnabled(x, t), (0, tA.Q3)(t, tA.OverlayToggledClientSettingType.OOP, e.id ?? null);
-                }
-                (n || s) &&
-                    tp(
-                        n
-                            ? tA.OverlayToggledClientSettingType.LEGACY_GAME
-                            : tA.OverlayToggledClientSettingType.OOP_GAME,
-                        e.id ?? null,
-                    );
-            },
-            _ = h && T,
+            { legacyEnabled: x, oopEnabled: f } = (0, g.cf)([tE.default], () => tE.default.getGlobalEnabledStatus());
+        function N(t, i) {
+            if (null == e) return;
+            let n = !1,
+                s = !1;
+            switch (i) {
+                case tA.OverlayToggledClientSettingType.LEGACY_GAME:
+                    d(t), tu.Ay.toggleOverlay(e, t, a), (n = !t && u);
+                    break;
+                case tA.OverlayToggledClientSettingType.OOP_GAME:
+                    o(t), tu.Ay.toggleOverlay(e, u, t), (s = !t && a);
+                    break;
+                case tA.OverlayToggledClientSettingType.LEGACY:
+                    td.A.setEnabled(t, f), (0, tA.Q3)(t, tA.OverlayToggledClientSettingType.LEGACY, e.id ?? null);
+                    break;
+                case tA.OverlayToggledClientSettingType.OOP:
+                    td.A.setEnabled(x, t), (0, tA.Q3)(t, tA.OverlayToggledClientSettingType.OOP, e.id ?? null);
+            }
+            (n || s) &&
+                tp(
+                    n ? tA.OverlayToggledClientSettingType.LEGACY_GAME : tA.OverlayToggledClientSettingType.OOP_GAME,
+                    e.id ?? null,
+                );
+        }
+        let _ = h && T,
             I = !x && !f,
             C = !a && !x && u && !h,
             b = !u && !f && a && !T,
@@ -922,7 +920,7 @@ let tL = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
             L = n?.overlayMethod === th.Ue.Hook,
             P = n?.state === th.AR.OVERLAY_CRASHED || n?.state === th.AR.OVERLAY_CRASHED_DISABLED,
             G = !a && !u,
-            [M, U] = (() => {
+            [M, U] = (function () {
                 switch (!0) {
                     case v && R:
                         return [
@@ -1080,7 +1078,7 @@ let tL = (0, a.E2)(u.X.OVERLAY_CURRENT_GAME, {
                           checked: (a && f) || (u && x),
                           disabled: _,
                           onChange: (t) => {
-                              ((t, i) => {
+                              !(function (t, i) {
                                   if (null == e) return;
                                   let n = !1,
                                       s = !1;
@@ -4554,7 +4552,7 @@ function r9(e) {
         A = m ? en.D : "div";
     return (0, E.jsxs)(A, {
         className: e6()(r8.kL, m && r8.b),
-        onClick: () => {
+        onClick: function () {
             m && o();
         },
         children: [
@@ -11097,7 +11095,7 @@ var AV = i(465932),
     AY = i(815332),
     AH = i(162093),
     AK = i(969389);
-let AW = (e) => {
+function AW(e) {
     let { transitionState: t, groupListing: i, listing: n, subscription: s, onClose: l } = e,
         r = (0, sZ.GV)(),
         { analyticsLocations: a } = (0, nZ.Ay)(e1.A.GUILD_ROLE_SUBSCRIPTION_CANCELLATION_MODAL),
@@ -11151,7 +11149,7 @@ let AW = (e) => {
             ],
         }),
     });
-};
+}
 var AZ = i(319225),
     Aq = i(746080),
     AQ = i(47685);
@@ -14436,37 +14434,36 @@ function S3(e) {
         ],
     });
 }
-let S6 = () => {
-        let e = tN.A.getArticleURL(U.MVz.PS_CONNECTION);
-        return (0, E.jsx)(S3, {
-            title: j.intl.string(j.t.v20wwm),
-            body: j.intl.format(j.t.lTZBit, { help_article: e }),
-            img: (0, E.jsx)("img", { src: "/assets/88954903b6a5b9cc.svg", width: "82", height: "auto", alt: "" }),
-            newIndicatorDismissibleContent: eU.M.PS_ONE_WAY_RECONNECT,
-            onClick: () => (0, SP.A)({ platformType: U.fg2.PLAYSTATION, location: "PS two way upsell" }),
-        });
-    },
-    S4 = "/assets/9df988a227916145.png",
-    S5 = () =>
-        (0, E.jsx)(S3, {
-            title: j.intl.string(SK.default["9cLtDI"]),
-            body: j.intl.format(SK.default["D+kUbg"], {
-                learnMoreLink: tN.A.getArticleURL(U.MVz.XBOX_GAME_PASS_PERKS),
-            }),
-            img: (0, E.jsx)("img", { src: S4, width: "auto", height: "45", alt: "" }),
-            newIndicatorDismissibleContent: eU.M.XBOX_PERKS_RECONNECT_UPSELL,
-            onClick: () => (0, SP.A)({ platformType: U.fg2.XBOX, location: "Xbox perks reconnect upsell" }),
-        }),
-    S7 = () => {
-        let e = tN.A.getArticleURL(U.MVz.XBOX_CONNECTION);
-        return (0, E.jsx)(S3, {
-            title: j.intl.string(j.t["2okkZV"]),
-            body: j.intl.format(j.t.OnERSS, { help_article: e }),
-            img: (0, E.jsx)("img", { src: S4, width: "auto", height: "45", alt: "" }),
-            newIndicatorDismissibleContent: eU.M.XBOX_ONE_WAY_RECONNECT,
-            onClick: () => (0, SP.A)({ platformType: U.fg2.XBOX, location: "Xbox two way upsell" }),
-        });
-    };
+function S6() {
+    let e = tN.A.getArticleURL(U.MVz.PS_CONNECTION);
+    return (0, E.jsx)(S3, {
+        title: j.intl.string(j.t.v20wwm),
+        body: j.intl.format(j.t.lTZBit, { help_article: e }),
+        img: (0, E.jsx)("img", { src: "/assets/88954903b6a5b9cc.svg", width: "82", height: "auto", alt: "" }),
+        newIndicatorDismissibleContent: eU.M.PS_ONE_WAY_RECONNECT,
+        onClick: () => (0, SP.A)({ platformType: U.fg2.PLAYSTATION, location: "PS two way upsell" }),
+    });
+}
+let S4 = "/assets/9df988a227916145.png";
+function S5() {
+    return (0, E.jsx)(S3, {
+        title: j.intl.string(SK.default["9cLtDI"]),
+        body: j.intl.format(SK.default["D+kUbg"], { learnMoreLink: tN.A.getArticleURL(U.MVz.XBOX_GAME_PASS_PERKS) }),
+        img: (0, E.jsx)("img", { src: S4, width: "auto", height: "45", alt: "" }),
+        newIndicatorDismissibleContent: eU.M.XBOX_PERKS_RECONNECT_UPSELL,
+        onClick: () => (0, SP.A)({ platformType: U.fg2.XBOX, location: "Xbox perks reconnect upsell" }),
+    });
+}
+function S7() {
+    let e = tN.A.getArticleURL(U.MVz.XBOX_CONNECTION);
+    return (0, E.jsx)(S3, {
+        title: j.intl.string(j.t["2okkZV"]),
+        body: j.intl.format(j.t.OnERSS, { help_article: e }),
+        img: (0, E.jsx)("img", { src: S4, width: "auto", height: "45", alt: "" }),
+        newIndicatorDismissibleContent: eU.M.XBOX_ONE_WAY_RECONNECT,
+        onClick: () => (0, SP.A)({ platformType: U.fg2.XBOX, location: "Xbox two way upsell" }),
+    });
+}
 var S8 = i(783419),
     S9 = i(534952),
     Te = i(230451),
@@ -16382,7 +16379,7 @@ function x5(e) {
     let t = null == e ? x4 : x4.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
-var x7 = i(371912),
+var x7 = i(764336),
     x8 = i(674253);
 function x9(e) {
     let { preset: t, onShuffle: i } = e,
@@ -16529,24 +16526,24 @@ function pu(e) {
         })(),
         A = S.useRef(null);
     ps(A, nw._F.TRY_IT_OUT);
-    let { analyticsLocations: h, sourceAnalyticsLocations: T } = (0, nZ.Ay)(e1.A.USER_SETTINGS_TRY_OUT_PREMIUM),
-        x = (e) => {
-            e &&
-                (d?.startsWith("https:") === !0
-                    ? fetch(d)
-                          .then((e) => e.blob())
-                          .then((e) => (0, pi.We)(e))
-                          .then((e) => {
-                              (0, TQ.p)({ avatar: u, themeColors: o, banner: e });
-                          })
-                          .catch(() => {
-                              (0, TQ.p)({ avatar: u, themeColors: o });
-                          })
-                    : null != d
-                      ? (0, TQ.p)({ avatar: u, themeColors: o, banner: d })
-                      : (0, TQ.p)({ avatar: u, themeColors: o }),
-                G.default.track(U.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: c }));
-        };
+    let { analyticsLocations: h, sourceAnalyticsLocations: T } = (0, nZ.Ay)(e1.A.USER_SETTINGS_TRY_OUT_PREMIUM);
+    function x(e) {
+        e &&
+            (d?.startsWith("https:") === !0
+                ? fetch(d)
+                      .then((e) => e.blob())
+                      .then((e) => (0, pi.We)(e))
+                      .then((e) => {
+                          (0, TQ.p)({ avatar: u, themeColors: o, banner: e });
+                      })
+                      .catch(() => {
+                          (0, TQ.p)({ avatar: u, themeColors: o });
+                      })
+                : null != d
+                  ? (0, TQ.p)({ avatar: u, themeColors: o, banner: d })
+                  : (0, TQ.p)({ avatar: u, themeColors: o }),
+            G.default.track(U.HAw.TRY_IT_OUT_PRESET_SELECTED, { preset: c }));
+    }
     S.useEffect(() => {
         i &&
             G.default.track(U.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -19531,7 +19528,7 @@ function Iv(e) {
                     ? (0, E.jsx)("div", {
                           className: IC.vM,
                           children: (0, E.jsx)(en.D, {
-                              onClick: () => {
+                              onClick: function () {
                                   s((e) => e + 5);
                               },
                               className: IC.Qf,

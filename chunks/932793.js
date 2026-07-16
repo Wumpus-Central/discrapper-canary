@@ -2,16 +2,16 @@ t.d(a, { m: () => y });
 var n,
     s = t(627968),
     l = t(64700),
-    r = t(503698),
-    i = t.n(r),
+    i = t(503698),
+    r = t.n(i),
     o = t(862482),
-    d = t(534514),
-    h = t(292666),
-    c = t(939249),
+    d = t(297264),
+    c = t(292666),
+    h = t(939249),
     g = t(921853),
     u = t(320448);
 t(321073);
-var p = t(735438),
+var p = t(435558),
     P = t.n(p),
     m = (((n = {}).PAGE = "PAGE"), (n.GAP = "GAP"), (n.BACK = "BACK"), (n.NEXT = "NEXT"), n);
 class k extends l.PureComponent {
@@ -33,19 +33,19 @@ class k extends l.PureComponent {
         let { totalPageCount: e, maxVisiblePages: a, selectedPage: t } = this.props,
             n = Math.ceil(a / 2),
             s = Math.floor(a / 2),
-            [l, r] = t <= n ? [1, a] : t > e - s ? [e - a + 1, e] : [t - n + 1, t + s];
-        return [Math.max(l, 1), Math.min(r, e)];
+            [l, i] = t <= n ? [1, a] : t > e - s ? [e - a + 1, e] : [t - n + 1, t + s];
+        return [Math.max(l, 1), Math.min(i, e)];
     }
     getPageList() {
         let { totalPageCount: e, selectedPage: a, hideMaxPage: t } = this.props,
             [n, s] = this.getNeighborBounds(),
             l = { type: "BACK", key: "back", disabled: 1 === a, selected: !1, navigateToPage: this.handleBackward },
-            r = { type: "NEXT", key: "next", disabled: a === e, selected: !1, navigateToPage: this.handleForward },
-            i = [],
+            i = { type: "NEXT", key: "next", disabled: a === e, selected: !1, navigateToPage: this.handleForward },
+            r = [],
             o = [];
         return (
             n > 1 &&
-                ((i = [
+                ((r = [
                     { type: "PAGE", key: "page-1", targetPage: 1, navigateToPage: () => this.handleJump(1) },
                     { type: "GAP", key: "left-gap" },
                 ]),
@@ -57,7 +57,7 @@ class k extends l.PureComponent {
                 (s -= 2)),
             [
                 l,
-                ...i,
+                ...r,
                 ...P()
                     .range(n, s + 1)
                     .map((e) => ({
@@ -69,7 +69,7 @@ class k extends l.PureComponent {
                         navigateToPage: () => this.handleJump(e),
                     })),
                 ...o,
-                r,
+                i,
             ]
         );
     }
@@ -81,7 +81,7 @@ class k extends l.PureComponent {
 var N = t(375708),
     x = t(374089);
 function C(e) {
-    let { page: a, totalPageCount: t, disabled: n, onPageChange: r } = e,
+    let { page: a, totalPageCount: t, disabled: n, onPageChange: i } = e,
         [o, g] = l.useState(!1),
         [u, p] = l.useState(null),
         P = null != u && u >= 1 && u <= t;
@@ -95,7 +95,7 @@ function C(e) {
           ? (0, s.jsx)("div", {
                 className: x.mF,
                 children: (0, s.jsx)(
-                    h.k,
+                    c.k,
                     {
                         type: "number",
                         autoFocus: !0,
@@ -107,8 +107,8 @@ function C(e) {
                         onBlur: () => {
                             g(!1), p(null);
                         },
-                        onKeyUp: (e) => {
-                            "Enter" === e.key && null != u && P && (r(u), g(!1), p(null));
+                        onKeyUp: function (e) {
+                            "Enter" === e.key && null != u && P && (i(u), g(!1), p(null));
                         },
                         disabled: n,
                     },
@@ -116,11 +116,11 @@ function C(e) {
                 ),
             })
           : (0, s.jsx)(
-                c.D,
+                h.D,
                 {
                     onClick: () => g(!0),
                     children: (0, s.jsx)(d.D, {
-                        className: i()(x.hJ, x.rQ),
+                        className: r()(x.hJ, x.rQ),
                         "aria-hidden": !0,
                         variant: "heading-sm/semibold",
                         children: "\u2026",
@@ -135,9 +135,9 @@ function y(e) {
             totalCount: t,
             pageSize: n,
             maxVisiblePages: l,
-            disablePaginationGap: r,
+            disablePaginationGap: i,
             onPageChange: d,
-            hideMaxPage: h = !1,
+            hideMaxPage: c = !1,
             className: p,
             renderPageWrapper: P,
         } = e,
@@ -146,7 +146,7 @@ function y(e) {
         totalPageCount: y,
         selectedPage: a,
         maxVisiblePages: l,
-        hideMaxPage: h,
+        hideMaxPage: c,
         onPageChange: function (e) {
             null != d && d(e);
         },
@@ -154,7 +154,7 @@ function y(e) {
             let { pages: a, hasMultiplePages: t } = e;
             return t
                 ? (0, s.jsx)("div", {
-                      className: i()(x.Ug, p),
+                      className: r()(x.Ug, p),
                       children: (0, s.jsx)("nav", {
                           className: x.DU,
                           children: a.map((e) => {
@@ -189,9 +189,9 @@ function y(e) {
                                       let a;
                                       return (
                                           (a = (0, s.jsx)(
-                                              c.D,
+                                              h.D,
                                               {
-                                                  className: i()(x.hJ, { [x.Xs]: e.selected }),
+                                                  className: r()(x.hJ, { [x.Xs]: e.selected }),
                                                   onClick: e.selected ? void 0 : e.navigateToPage,
                                                   "aria-label": N.intl.formatToPlainString(N.t.IGMs8S, {
                                                       pageNumber: e.targetPage,
@@ -206,7 +206,7 @@ function y(e) {
                                   case m.GAP:
                                       return (0, s.jsx)(
                                           C,
-                                          { page: e, totalPageCount: y, disabled: !!r, onPageChange: d },
+                                          { page: e, totalPageCount: y, disabled: !!i, onPageChange: d },
                                           e.key,
                                       );
                                   case m.NEXT:

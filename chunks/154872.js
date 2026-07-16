@@ -53,7 +53,7 @@ let m = r.memo(function (e) {
         onMouseDown: function (e) {
             o && 0 === e.button && (e.preventDefault(), (m.current = !0), S({ x: e.clientX, y: e.clientY }));
         },
-        onMouseUp: (e) => {
+        onMouseUp: function (e) {
             if (!o) {
                 if (0 === e.button) {
                     p.l.markActionPerformed(p.N.ZOOM_IN_IMAGE_PRESSED), d(!0);
@@ -100,7 +100,7 @@ let R = r.memo(function (e) {
     var t, n, r, l, I;
     let f,
         { media: p, obscured: T = !1, maxWidth: N, maxHeight: R, onContextMenu: O } = e,
-        { width: L, height: D, url: y, proxyUrl: v, alt: b, type: M, maxWidth: P, maxHeight: U, ...w } = p,
+        { width: L, height: y, url: D, proxyUrl: v, alt: b, type: M, maxWidth: P, maxHeight: U, ...w } = p,
         { zoomed: G } = (0, h.Q)(),
         x = (function (e) {
             if (e?.identifier?.type !== "attachment" || null == e.message) return null;
@@ -110,12 +110,12 @@ let R = r.memo(function (e) {
         })(p.sourceMetadata),
         k =
             ((t = G),
-            (n = y),
+            (n = D),
             (r = v),
             (l = p.contentType),
             (I = p.originalContentType),
             t && A.A.isDiscordAssetUrl(n, l, I) ? (0, c.XW)(n, l, I) : (0, _.E)({ proxyURL: r, url: n })),
-        F = null != L && 0 !== L && null != D && 0 !== D;
+        F = null != L && 0 !== L && null != y && 0 !== y;
     if ("VIDEO" === M && F && null != v) {
         let e = p.poster ?? C(v);
         if (null == e) return null;
@@ -141,12 +141,12 @@ let R = r.memo(function (e) {
             ...w,
             src: k,
             width: L,
-            height: D,
+            height: y,
             maxWidth: N,
             maxHeight: R,
             poster: e,
             naturalWidth: L,
-            naturalHeight: D,
+            naturalHeight: y,
             volume: E.v1,
             autoMute: p.autoMute ?? E.uj,
             onVolumeChange: E.ls,
@@ -165,7 +165,7 @@ let R = r.memo(function (e) {
                       ...w,
                       src: k,
                       width: L,
-                      height: D,
+                      height: y,
                       maxWidth: N,
                       maxHeight: R,
                       useFullWidth: !0,

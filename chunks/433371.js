@@ -1408,49 +1408,49 @@ function nf(e) {
         } = e,
         A = { start: i.connectedSince },
         h = s;
+    function I() {
+        d()(null != a, "Channel cannot be null during navigation click"),
+            g.A.channelListScrollTo(a.guild_id ?? G.ME, a.id),
+            !E &&
+                ((0, e2.gV)(a.type) &&
+                    m.A.selectParticipant(
+                        a.id,
+                        (0, eh.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
+                    ),
+                (0, e2.pQ)(a.type) && (0, O.gk)(na.Gd.PANEL));
+    }
     null != l && null != a
         ? ((t = G.BVt.CHANNEL(l.id, a.id)), (h = `${h} / ${l.name}`))
         : null != a && (t = G.BVt.CHANNEL(G.ME, a.id));
-    let I = () => {
-            d()(null != a, "Channel cannot be null during navigation click"),
-                g.A.channelListScrollTo(a.guild_id ?? G.ME, a.id),
-                !E &&
-                    ((0, e2.gV)(a.type) &&
-                        m.A.selectParticipant(
-                            a.id,
-                            (0, eh.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
-                        ),
-                    (0, e2.pQ)(a.type) && (0, O.gk)(na.Gd.PANEL));
-        },
-        f = (0, r.jsxs)(r.Fragment, {
-            children: [
-                (0, r.jsx)(eH.A, { className: nd.Gt, game: n, size: eH.M.SMALL, ref: u }),
-                (0, r.jsx)(ea, {
-                    popoutTargetRef: _,
-                    isForceShowSharingPopout: o,
-                    setIsForceShowSharingPopout: c,
-                    children: (0, r.jsxs)("div", {
-                        className: nd.pq,
-                        children: [
-                            (0, r.jsx)(eq.A, {
-                                href: t,
-                                onClick: function () {
-                                    I(), E && p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
-                                },
-                                children: (0, r.jsx)(td.A, { className: nd._W, children: n.name }),
-                            }),
-                            null != a && (0, e2.pQ)(a.type)
-                                ? (0, r.jsx)(eq.A, {
-                                      href: t,
-                                      onClick: I,
-                                      children: (0, r.jsx)(to.A, { className: nd.Ix, children: h }),
-                                  })
-                                : (0, r.jsx)(nI, { timestamps: A }),
-                        ],
-                    }),
+    let f = (0, r.jsxs)(r.Fragment, {
+        children: [
+            (0, r.jsx)(eH.A, { className: nd.Gt, game: n, size: eH.M.SMALL, ref: u }),
+            (0, r.jsx)(ea, {
+                popoutTargetRef: _,
+                isForceShowSharingPopout: o,
+                setIsForceShowSharingPopout: c,
+                children: (0, r.jsxs)("div", {
+                    className: nd.pq,
+                    children: [
+                        (0, r.jsx)(eq.A, {
+                            href: t,
+                            onClick: function () {
+                                I(), E && p.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
+                            },
+                            children: (0, r.jsx)(td.A, { className: nd._W, children: n.name }),
+                        }),
+                        null != a && (0, e2.pQ)(a.type)
+                            ? (0, r.jsx)(eq.A, {
+                                  href: t,
+                                  onClick: I,
+                                  children: (0, r.jsx)(to.A, { className: nd.Ix, children: h }),
+                              })
+                            : (0, r.jsx)(nI, { timestamps: A }),
+                    ],
                 }),
-            ],
-        });
+            }),
+        ],
+    });
     return (0, r.jsx)("div", { className: nd.cm, children: f });
 }
 function np(e) {

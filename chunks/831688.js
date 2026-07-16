@@ -310,12 +310,13 @@ function eN(e) {
         let e = o ? K.v.BURST : K.v.NORMAL;
         (0, ef.$)(n, { emoji: t, reactionType: e });
     }
-    let j = "string" == typeof s ? "" === s.trim() : null == s,
-        I = () =>
-            j || null == s || null == u
-                ? null
-                : (0, i.jsx)(Y.E, { variant: "text-sm/normal", className: eE.Of, "aria-label": u, children: s }),
-        T = (0, m.bG)([ee.default], () => ee.default.getCurrentUser()),
+    let j = "string" == typeof s ? "" === s.trim() : null == s;
+    function I() {
+        return j || null == s || null == u
+            ? null
+            : (0, i.jsx)(Y.E, { variant: "text-sm/normal", className: eE.Of, "aria-label": u, children: s });
+    }
+    let T = (0, m.bG)([ee.default], () => ee.default.getCurrentUser()),
         R = (0, et.TW)(T);
     function b() {
         return (

@@ -39,7 +39,7 @@ let o = `
             (0, r.jsx)(l.vN, {
                 children: (0, r.jsx)("textarea", {
                     ...d,
-                    ref: (e) => {
+                    ref: function (e) {
                         (c.current = e), "function" == typeof t ? t(c.current) : null != t && (t.current = e);
                     },
                     style: { ...n, height: _ },

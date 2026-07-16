@@ -1,55 +1,57 @@
 "use strict";
-n.d(t, { a: () => f, default: () => p });
+n.d(t, { a: () => A, default: () => h });
 var i = n(627968),
     r = n(64700),
-    s = n(189213),
-    a = n(150934),
-    o = n(834730),
-    l = n(817281),
-    u = n(429913),
+    a = n(189213),
+    s = n(150934),
+    l = n(834730),
+    o = n(817281),
+    d = n(429913),
     c = n(174459),
-    d = n(19575),
+    u = n(19575),
     _ = n(652215),
-    h = n(375708);
-let f = "Activity Encourages Hardware Acceleration";
-function p(e) {
-    let { applicationId: t, transitionState: n, onClose: p } = e,
-        [E, m] = r.useState(!1),
-        [g] = (0, u.A)([t]),
-        A = g?.name ?? "This Activity";
-    r.useEffect(() => {
-        c.default.track(_.HAw.OPEN_MODAL, { type: f });
-    }, []);
-    let I = async () => {
+    E = n(375708);
+let A = "Activity Encourages Hardware Acceleration";
+function h(e) {
+    let { applicationId: t, transitionState: n, onClose: h } = e,
+        [I, f] = r.useState(!1),
+        [p] = (0, d.A)([t]),
+        T = p?.name ?? "This Activity";
+    async function m() {
         let e = "temporary";
-        E && ((e = "permanent"), l.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
-            c.default.track(_.HAw.MODAL_DISMISSED, { type: f, dismiss_type: e }),
-            await p();
-    };
-    async function T() {
-        c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
-            d.Ay.setEnableHardwareAcceleration(!0),
-            await I();
+        I && ((e = "permanent"), o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+            c.default.track(_.HAw.MODAL_DISMISSED, { type: A, dismiss_type: e }),
+            await h();
     }
-    return (0, i.jsx)(s.Modal, {
-        size: "md",
-        transitionState: n,
-        onClose: I,
-        "aria-label": h.intl.string(h.t.NQkK4l),
-        title: h.intl.string(h.t.NQkK4l),
-        actionBarInput: (0, i.jsx)(a.S, {
-            checked: E,
-            onChange: () => m(!E),
-            label: h.intl.string(h.t["5E9SB9"]),
-            labelType: "secondary",
-        }),
-        actions: [
-            { variant: "secondary", text: h.intl.string(h.t["Ibf5/h"]), onClick: I },
-            { variant: "primary", text: h.intl.string(h.t["/wlDqi"]), onClick: T },
-        ],
-        children: (0, i.jsx)(o.E, {
-            variant: "text-md/normal",
-            children: h.intl.format(h.t.B9eiaK, { applicationName: A }),
-        }),
-    });
+    async function g() {
+        c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
+            u.Ay.setEnableHardwareAcceleration(!0),
+            await m();
+    }
+    return (
+        r.useEffect(() => {
+            c.default.track(_.HAw.OPEN_MODAL, { type: A });
+        }, []),
+        (0, i.jsx)(a.Modal, {
+            size: "md",
+            transitionState: n,
+            onClose: m,
+            "aria-label": E.intl.string(E.t.NQkK4l),
+            title: E.intl.string(E.t.NQkK4l),
+            actionBarInput: (0, i.jsx)(s.S, {
+                checked: I,
+                onChange: () => f(!I),
+                label: E.intl.string(E.t["5E9SB9"]),
+                labelType: "secondary",
+            }),
+            actions: [
+                { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: m },
+                { variant: "primary", text: E.intl.string(E.t["/wlDqi"]), onClick: g },
+            ],
+            children: (0, i.jsx)(l.E, {
+                variant: "text-md/normal",
+                children: E.intl.format(E.t.B9eiaK, { applicationName: T }),
+            }),
+        })
+    );
 }

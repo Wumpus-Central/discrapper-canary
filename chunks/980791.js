@@ -176,7 +176,7 @@ function B(e) {
                                 (0, n.jsx)(c.$, {
                                     variant: "primary",
                                     text: S,
-                                    onClick: () => {
+                                    onClick: function () {
                                         r()(null != j, "Guild ID must not be null on click"),
                                             g.A.hasSeenCreatorOnboardingForGuild(j) || (0, G.G)(j),
                                             C.A.open(j, d, void 0, m),

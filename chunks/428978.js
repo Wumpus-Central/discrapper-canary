@@ -50,7 +50,7 @@ function p(t) {
                   : {
                         variant: "secondary",
                         icon: o ? a.A : u.q,
-                        onClick: (t) => {
+                        onClick: function (t) {
                             e?.(t, () => {
                                 h(!0), d.start(1e3, () => h(!1));
                             });

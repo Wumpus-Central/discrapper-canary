@@ -1,7 +1,7 @@
 "use strict";
 n.d(t, { FV: () => h, Ff: () => f, Fk: () => I, JZ: () => T, oV: () => A, se: () => p }), n(321073);
 var i = n(64700),
-    r = n(735438),
+    r = n(435558),
     a = n.n(r),
     s = n(741918),
     l = n(118057),
@@ -10,31 +10,31 @@ var i = n(64700),
     c = n(319060),
     u = n(60587),
     _ = n(652215);
-let E = (0, d.xI)(c.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT),
-    A = (e) => {
-        let {
-                gridWrapperRef: t,
-                containerWidth: n,
-                showingEmptyState: r,
-                listPaddingLeft: s = E,
-                listScrollbarWidth: l = 8,
-            } = e,
-            [o, d] = i.useState(void 0),
-            c = i.useCallback(() => {
-                if (null == t.current) return null;
-                d(t.current.offsetWidth - s - l);
-            }, [t, s, l]);
-        return (
-            i.useLayoutEffect(() => {
-                c();
-            }, [n, c, r]),
-            i.useEffect(() => {
-                let e = a().debounce(c, 250);
-                return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-            }, [c]),
-            o
-        );
-    };
+let E = (0, d.xI)(c.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT);
+function A(e) {
+    let {
+            gridWrapperRef: t,
+            containerWidth: n,
+            showingEmptyState: r,
+            listPaddingLeft: s = E,
+            listScrollbarWidth: l = 8,
+        } = e,
+        [o, d] = i.useState(void 0),
+        c = i.useCallback(() => {
+            if (null == t.current) return null;
+            d(t.current.offsetWidth - s - l);
+        }, [t, s, l]);
+    return (
+        i.useLayoutEffect(() => {
+            c();
+        }, [n, c, r]),
+        i.useEffect(() => {
+            let e = a().debounce(c, 250);
+            return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
+        }, [c]),
+        o
+    );
+}
 function h(e) {
     let { activeCategoryIndex: t, listRef: n, searchQuery: r } = e,
         a = i.useRef(r),

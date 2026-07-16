@@ -4,7 +4,7 @@ var s = i(627968),
     l = i(503698),
     a = i.n(l),
     r = i(665260),
-    o = i(990078),
+    o = i(866665),
     d = i(939249),
     u = i(22231),
     m = i(241326),
@@ -356,7 +356,7 @@ let k = function (e) {
     function _() {
         F(!1);
     }
-    let D = function () {
+    function D() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         return (0, s.jsx)(b, {
             ...c,
@@ -380,7 +380,7 @@ let k = function (e) {
             onVideoControlsHide: _,
             forcePlaceholder: W && A,
         });
-    };
+    }
     return (0, s.jsx)("div", {
         style: m ? { minWidth: 0, width: `${c.maxWidth}px` } : void 0,
         className: a()(L.wO, { [L.xV]: O, [L.D$]: o, [L.UI]: E, [L.JP]: E && k }),

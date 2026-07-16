@@ -398,7 +398,7 @@ let ep = "url(#gradient)",
         }, [t]);
         let p = (0, N.Ay)(),
             h = (0, _.q)(p),
-            j = ((e) => {
+            j = (function (e) {
                 switch (e) {
                     case e_.NITRO_GEM:
                     case e_.AVATAR_DECO:
@@ -409,7 +409,7 @@ let ep = "url(#gradient)",
                         return;
                 }
             })(o),
-            g = ((e, t) => {
+            g = (function (e, t) {
                 switch (e) {
                     case e_.NITRO_LOGO:
                         return t ? "0.3" : "0.2";
@@ -421,7 +421,7 @@ let ep = "url(#gradient)",
             })(o, h),
             f =
                 c ??
-                ((e, t) => {
+                (function (e, t) {
                     switch (t) {
                         case e_.NITRO_GEM:
                         case e_.AVATAR_DECO:
@@ -553,7 +553,7 @@ let ef = function (e) {
             percentage: l ?? c,
             initialPercentage: l ?? d,
             progressCircleVariation: u,
-            children: (() => {
+            children: (function () {
                 switch (u) {
                     case 0:
                         return (0, n.jsx)(eu, {
@@ -755,7 +755,7 @@ function ek(e) {
                     variant: "heading-md/normal",
                     color: "text-overlay-light",
                     className: eD.KB,
-                    children: (() => {
+                    children: (function () {
                         if (r) return eA.intl.format(eA.t["2CGBri"], { remainingTime: u, price: p });
                         if (o && null != l && t.metadata?.active_discount_expires_at != null) {
                             let e = (0, V.$g)(m.amount, m.currency);

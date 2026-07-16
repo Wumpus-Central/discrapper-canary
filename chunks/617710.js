@@ -81,14 +81,13 @@ class M extends b {
     }
     didCommit = (function (e) {
         let t,
-            n = [],
-            i = function () {
-                for (var r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
-                let l = Date.now();
-                for (null != t && (clearTimeout(t), (t = null)); n.length > 0 && n[0] <= l; ) n.shift();
-                n.length < 5 ? (n.push(l + 2e4), e(...a)) : (t = setTimeout(() => i(...a), n[0] - l));
-            };
-        return i;
+            n = [];
+        return function i() {
+            for (var r = arguments.length, a = Array(r), s = 0; s < r; s++) a[s] = arguments[s];
+            let l = Date.now();
+            for (null != t && (clearTimeout(t), (t = null)); n.length > 0 && n[0] <= l; ) n.shift();
+            n.length < 5 ? (n.push(l + 2e4), e(...a)) : (t = setTimeout(() => i(...a), n[0] - l));
+        };
     })(this.emitPresenceUpdate.bind(this));
     emitPresenceUpdate(e) {
         let { status: t, since: n, activities: i, afk: r } = e;

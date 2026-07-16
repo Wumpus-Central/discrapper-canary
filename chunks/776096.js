@@ -5,10 +5,10 @@ var i = n(17928),
     a = n(636537),
     s = n(652215),
     l = n(71393);
-let o = {},
-    d = () => {
-        o = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
-    };
+let o = {};
+function d() {
+    o = { guildAffinitiesByGuildId: {}, guildAffinities: [], lastFetched: 0 };
+}
 d();
 class c extends i.Ay.PersistedStore {
     static displayName = "GuildAffinitiesStore";

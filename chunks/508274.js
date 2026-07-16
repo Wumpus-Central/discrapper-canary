@@ -3,8 +3,8 @@ var t = n(627968),
     s = n(64700),
     r = n(503698),
     i = n.n(r),
-    a = n(837381),
-    o = n(887129),
+    o = n(837381),
+    a = n(887129),
     c = n(741918),
     d = n(317097),
     u = n(187322),
@@ -14,14 +14,14 @@ var t = n(627968),
     m = n(933832),
     x = n(22231),
     b = n(292666),
-    j = n(714385),
-    f = n(971745),
+    f = n(714385),
+    j = n(971745),
     k = n(284059),
     C = n(652215),
     v = n(375708),
     I = n(670989);
 let N = s.lazy(() =>
-        Promise.all([n.e("63241"), n.e("22687"), n.e("46859"), n.e("85787"), n.e("87680")]).then(n.bind(n, 148259)),
+        Promise.all([n.e("63241"), n.e("69047"), n.e("46859"), n.e("85787"), n.e("87680")]).then(n.bind(n, 148259)),
     ),
     y = () => Promise.resolve();
 function A(e) {
@@ -30,34 +30,34 @@ function A(e) {
             listItemId: n,
             isDefault: s = !1,
             isCustom: r = !1,
-            isSelected: o = !1,
+            isSelected: a = !1,
             disabled: c = !1,
             style: h = {},
             onClick: p,
             isGradient: b = !1,
-            "aria-label": j,
-            gradientColors: f,
+            "aria-label": f,
+            gradientColors: j,
             gradientDegrees: N = 180,
         } = e,
-        y = (0, a.rm)(n ?? `color-${l}`),
+        y = (0, o.rm)(n ?? `color-${l}`),
         A = {};
     A =
-        b && null != f && f.length > 0
-            ? { background: (0, k.r)(f, N) }
+        b && null != j && j.length > 0
+            ? { background: (0, k.r)(j, N) }
             : { backgroundColor: null != l ? (0, d.Hl)(l) : h.backgroundColor };
-    let $ = b ? f?.[0] : l,
+    let $ = b ? j?.[0] : l,
         L = !1;
     return (
-        r && !o ? (L = !0) : (r || o) && (L = (0, d.OK)($ ?? C.TGz) > 0.2),
+        r && !a ? (L = !0) : (r || a) && (L = (0, d.OK)($ ?? C.TGz) > 0.2),
         (0, t.jsx)(u.vN, {
             offset: -2,
             children: (0, t.jsxs)("button", {
                 type: "button",
                 className: i()(I.iH, { [I.r9]: c, [I.Ay]: s, [I.Ie]: r, [I.dw]: null == l && !b, [I.hb]: b }),
                 disabled: c,
-                onClick: () => p?.(b ? f : l),
+                onClick: () => p?.(b ? j : l),
                 style: { ...h, ...A },
-                "aria-label": j ?? (b ? v.intl.string(v.t.XpWmJz) : A.backgroundColor),
+                "aria-label": f ?? (b ? v.intl.string(v.t.XpWmJz) : A.backgroundColor),
                 ...y,
                 children: [
                     r
@@ -72,7 +72,7 @@ function A(e) {
                     (function () {
                         let e = 16,
                             l = 16;
-                        if (((r || s) && ((e = "38%"), (l = "auto")), o))
+                        if (((r || s) && ((e = "38%"), (l = "auto")), a))
                             return (0, t.jsx)(m.A, {
                                 size: "custom",
                                 width: e,
@@ -116,8 +116,8 @@ let S = s.memo(function (e) {
     let {
             value: n,
             eagerUpdate: r = !1,
-            onChange: a,
-            onClose: o,
+            onChange: o,
+            onClose: a,
             suggestedColors: c,
             middle: u,
             footer: g,
@@ -125,7 +125,7 @@ let S = s.memo(function (e) {
             wrapperComponentType: x,
             className: k,
         } = e,
-        C = (0, f.A)(),
+        C = (0, j.A)(),
         y = null == (l = n) ? null : "string" == typeof l ? ((0, d.qt)(l) ? (0, d.LX)(l) : null) : l,
         A = y ?? 0,
         $ = (0, d.Hl)(A),
@@ -136,7 +136,14 @@ let S = s.memo(function (e) {
         if (!(0, d.qt)(l)) return void T((e) => ({ ...e, input: l }));
         let n = (0, d.LX)(l),
             t = (0, d.tf)(n);
-        T({ current: n, pending: { hex: l, hsl: t }, input: l }), a(n);
+        T({ current: n, pending: { hex: l, hsl: t }, input: l }), o(n);
+    }
+    async function z() {
+        if (null != C)
+            try {
+                let { sRGBHex: e } = await C.open();
+                H(e);
+            } catch {}
     }
     s.useEffect(() => {
         if (null == y || y === S.current) return;
@@ -144,19 +151,12 @@ let S = s.memo(function (e) {
             l = (0, d.tf)(y);
         T({ current: y, pending: { hex: e, hsl: l }, input: e });
     }, [y, S]),
-        s.useEffect(() => o, [o]);
-    let z = async () => {
-            if (null != C)
-                try {
-                    let { sRGBHex: e } = await C.open();
-                    H(e);
-                } catch {}
-        },
-        w = s.useCallback(
+        s.useEffect(() => a, [a]);
+    let w = s.useCallback(
             (e) => {
-                T((l) => ({ ...l, pending: e, input: e.hex })), r && a((0, d.LX)(e.hex));
+                T((l) => ({ ...l, pending: e, input: e.hex })), r && o((0, d.LX)(e.hex));
             },
-            [r, a],
+            [r, o],
         ),
         D = (0, t.jsxs)(t.Fragment, {
             children: [
@@ -166,7 +166,7 @@ let S = s.memo(function (e) {
                         onChange: w,
                         onChangeComplete: (e) => {
                             let { hex: l } = e;
-                            a((0, d.LX)(l));
+                            o((0, d.LX)(l));
                         },
                         color: S.pending.hsl,
                     }),
@@ -178,7 +178,7 @@ let S = s.memo(function (e) {
                     maxLength: 6,
                     leading: "#",
                     trailing:
-                        m && null != C ? { icon: j.d, onClick: z, "aria-label": v.intl.string(v.t["0dU9Ny"]) } : void 0,
+                        m && null != C ? { icon: f.d, onClick: z, "aria-label": v.intl.string(v.t["0dU9Ny"]) } : void 0,
                 }),
                 null != c &&
                     c.length > 0 &&
@@ -217,68 +217,69 @@ function T(e) {
             renderCustomButton: m,
             colorContainerClassName: x,
             isGradient: b,
-            renderGradientCustomButton: j,
-            gradientDegrees: f,
+            renderGradientCustomButton: f,
+            gradientDegrees: j,
             gradientWidth: k,
             allowBlackCustomColor: C,
         } = e,
-        v = "100%" === k,
-        N = (e) =>
-            (0, t.jsx)("div", {
-                className: I._D,
-                children: b
-                    ? e.map((e) => {
-                          let l = e.colors.join("-"),
-                              n = u?.join("-") === l;
-                          return (0, t.jsx)(
-                              A,
-                              {
-                                  listItemId: `gradient-${l}`,
-                                  gradientColors: e.colors,
-                                  color: 0,
-                                  isSelected: n,
-                                  onClick: () => g(e.colors),
-                                  disabled: h,
-                                  isGradient: !0,
-                                  "aria-label": e.name,
-                                  gradientDegrees: f,
-                              },
-                              l,
-                          );
-                      })
-                    : e.map((e) =>
-                          (0, t.jsx)(
-                              A,
-                              {
-                                  listItemId: `preset-${e}`,
-                                  color: e,
-                                  isSelected: e === d,
-                                  onClick: g,
-                                  disabled: h,
-                                  isGradient: !1,
-                              },
-                              e,
-                          ),
+        v = "100%" === k;
+    function N(e) {
+        return (0, t.jsx)("div", {
+            className: I._D,
+            children: b
+                ? e.map((e) => {
+                      let l = e.colors.join("-"),
+                          n = u?.join("-") === l;
+                      return (0, t.jsx)(
+                          A,
+                          {
+                              listItemId: `gradient-${l}`,
+                              gradientColors: e.colors,
+                              color: 0,
+                              isSelected: n,
+                              onClick: () => g(e.colors),
+                              disabled: h,
+                              isGradient: !0,
+                              "aria-label": e.name,
+                              gradientDegrees: j,
+                          },
+                          l,
+                      );
+                  })
+                : e.map((e) =>
+                      (0, t.jsx)(
+                          A,
+                          {
+                              listItemId: `preset-${e}`,
+                              color: e,
+                              isSelected: e === d,
+                              onClick: g,
+                              disabled: h,
+                              isGradient: !1,
+                          },
+                          e,
                       ),
-            }),
-        $ = r.slice(0, r.length / 2),
+                  ),
+        });
+    }
+    let $ = r.slice(0, r.length / 2),
         L = r.slice(r.length / 2, r.length),
-        S = (0, o.Ay)({
+        S = (0, a.Ay)({
             id: "color-picker",
             isEnabled: !0,
             orientation: c.Gl.HORIZONTAL,
             scrollToStart: y,
             scrollToEnd: y,
         });
-    return (0, t.jsx)(a.hD, {
+    return (0, t.jsx)(o.hD, {
         navigator: S,
-        children: (0, t.jsx)(a.PR, {
+        children: (0, t.jsx)(o.PR, {
             children: (e) => {
-                let { ref: a, ...o } = e;
+                let { ref: o, ...a } = e;
                 return (0, t.jsxs)("div", {
                     className: i()(I.kL, l, { [I.D7]: b, [I.Sk]: b && v }),
-                    ref: a,
-                    ...o,
+                    ref: o,
+                    ...a,
                     children: [
                         !b &&
                             (0, t.jsxs)(t.Fragment, {
@@ -299,7 +300,7 @@ function T(e) {
                                     }),
                                 ],
                             }),
-                        b && null != j && (0, t.jsx)("div", { children: j() }),
+                        b && null != f && (0, t.jsx)("div", { children: f() }),
                         (0, t.jsxs)("div", { children: [N($), N(L)] }),
                     ],
                 });

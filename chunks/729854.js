@@ -7,7 +7,7 @@ var i = n(627968),
     l = n(192308),
     o = n(968309),
     d = n(826673),
-    c = n(451409),
+    c = n(186295),
     u = n(174459),
     _ = n(17928),
     E = n(643501),
@@ -42,13 +42,14 @@ let T = "game_console_alert_modal",
                       function n() {
                           (0, d.Dr)(s.M.CONSOLE_PTT_DISABLE_ALERT), e();
                       }
-                      let r = (e) =>
-                          (0, i.jsx)(a.Modal, {
+                      function r(e) {
+                          return (0, i.jsx)(a.Modal, {
                               ...e,
                               title: t,
                               subtitle: p.intl.string(p.t.bL21zs),
                               actions: [{ text: p.intl.string(p.t.BddRzS), onClick: n }],
                           });
+                      }
                       (0, l.hasModalOpen)(m)
                           ? (0, l.updateModal)(m, (e) => r(e))
                           : (0, l.openModalLazy)(async () => (e) => r(e), { modalKey: m });

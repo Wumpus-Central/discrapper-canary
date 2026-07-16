@@ -98,7 +98,7 @@ let T = {
             rejectWithError: (0, i.fT)(),
         });
     },
-    submitVerificationForm: async function (e, t) {
+    submitVerificationForm: async function e(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 200;
         if (c.A.isFullServerPreview(e)) return void (0, d.Z$)(e, { memberOptions: { isPending: !1 } });
         try {

@@ -6,8 +6,8 @@ var l = t(17928),
     o = t(477782),
     s = t(742023),
     a = t(827343),
-    A = t(495544),
-    r = t(394459),
+    A = t(280450),
+    r = t(186295),
     u = t(652215),
     b = t(731854),
     c = t(513963),
@@ -35,7 +35,7 @@ function D(e) {
               id: "self-video-hide",
               label: p.intl.string(p.t.MH8ESU),
               checked: !D,
-              action: () => {
+              action: function () {
                   if (E || D) return h(!D);
                   (0, d.openModal)((e) => (0, n.jsx)(c.A, { ...e, type: f.f.VIDEO, onConfirm: () => h(!D) }));
               },

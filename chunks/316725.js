@@ -1,40 +1,40 @@
-i.r(t), i.d(t, { default: () => D });
-var n = i(627968),
-    l = i(64700),
-    s = i(503698),
-    r = i.n(s),
-    a = i(834730),
-    u = i(289873),
-    d = i(429913),
-    o = i(561794),
-    c = i(862772),
-    I = i(310209),
-    g = i(174459),
-    p = i(871123),
-    h = i(453774),
-    S = i(31969),
-    f = i(435558),
-    m = i.n(f),
-    x = i(17928),
-    _ = i(52133),
-    T = i(793574),
-    v = i(688810),
-    E = i(661492),
-    C = i(212387),
-    j = i(662349),
-    R = i(532423),
-    A = i(287809),
-    O = i(403362),
-    k = i(317560),
-    N = i(99161),
-    H = i(202541),
-    b = i(699976),
-    L = i(375708);
+n.r(t), n.d(t, { default: () => D });
+var i = n(627968),
+    l = n(64700),
+    s = n(503698),
+    r = n.n(s),
+    a = n(834730),
+    u = n(289873),
+    d = n(429913),
+    o = n(561794),
+    c = n(862772),
+    I = n(310209),
+    g = n(174459),
+    p = n(871123),
+    h = n(453774),
+    S = n(31969),
+    f = n(435558),
+    m = n.n(f),
+    x = n(17928),
+    _ = n(52133),
+    T = n(793574),
+    v = n(688810),
+    E = n(661492),
+    C = n(212387),
+    j = n(662349),
+    R = n(532423),
+    A = n(287809),
+    O = n(403362),
+    k = n(317560),
+    N = n(99161),
+    H = n(202541),
+    b = n(699976),
+    L = n(375708);
 let y = b.Z.SIZE_90;
 function F(e) {
     let {
             sku: t,
-            source: i,
+            source: n,
             application: s,
             guildId: r,
             showIcons: a,
@@ -89,7 +89,7 @@ function F(e) {
             );
         }, [t, G, g, F]),
         { label: B, icon: U } = (0, j.h)({ wishlistOwner: G, isOwned: !1, shortText: !0 });
-    return (0, n.jsxs)(C.A, {
+    return (0, i.jsxs)(C.A, {
         sku: t,
         user: G,
         spec: I,
@@ -97,41 +97,42 @@ function F(e) {
         "aria-label": L.intl.formatToPlainString(L.t.ZBB4Ty, { productName: (0, E.T)(t) }),
         onHoverOrFocusChange: S,
         children: [
-            (0, n.jsx)(j.A, { spec: I, onClick: w, isHoveringOrFocusing: h, label: B, icon: U }),
-            a && i === o.uS.WISHLIST && M.length > 0
-                ? (0, n.jsx)(R.X, { spec: I, users: M, guildId: r ?? void 0, channelId: u ?? void 0 })
+            (0, i.jsx)(j.A, { spec: I, onClick: w, isHoveringOrFocusing: h, label: B, icon: U }),
+            a && n === o.uS.WISHLIST && M.length > 0
+                ? (0, i.jsx)(R.X, { spec: I, users: M, guildId: r ?? void 0, channelId: u ?? void 0 })
                 : null,
         ],
     });
 }
-var G = i(278416),
-    M = i(459192),
-    P = i(866665),
-    w = i(262427),
-    B = i(500524);
+var G = n(278416),
+    M = n(459192),
+    P = n(866665),
+    w = n(262427),
+    B = n(500524);
 function U(e) {
-    let { className: t, Icon: i = G.g, iconSize: l = "xxs", gradientColor: s = "green", text: u, tooltip: d, ...o } = e,
-        c = () =>
-            (0, n.jsx)(w.A, {
-                className: r()(B.K, t, { [B.e]: null == u }),
-                Icon: i,
-                iconSize: l,
-                gradientColor: s,
-                ...o,
-                children: null != u && (0, n.jsx)(a.E, { variant: "text-sm/bold", color: "currentColor", children: u }),
-            });
+    let { className: t, Icon: n = G.g, iconSize: l = "xxs", gradientColor: s = "green", text: u, tooltip: d, ...o } = e;
+    function c() {
+        return (0, i.jsx)(w.A, {
+            className: r()(B.K, t, { [B.e]: null == u }),
+            Icon: n,
+            iconSize: l,
+            gradientColor: s,
+            ...o,
+            children: null != u && (0, i.jsx)(a.E, { variant: "text-sm/bold", color: "currentColor", children: u }),
+        });
+    }
     return null != d && "object" == typeof d
-        ? (0, n.jsx)(M.u, { assetSize: 48, asContainer: !0, element: "div", ...d, children: c() })
+        ? (0, i.jsx)(M.u, { assetSize: 48, asContainer: !0, element: "div", ...d, children: c() })
         : null != d && "string" == typeof d
-          ? (0, n.jsx)(P.m, { text: d, asContainer: !0, tag: "div", children: c() })
+          ? (0, i.jsx)(P.m, { text: d, asContainer: !0, tag: "div", children: c() })
           : c();
 }
-var W = i(652215),
-    q = i(499362);
+var W = n(652215),
+    q = n(499362);
 function D(e) {
     let {
             className: t,
-            applicationId: i,
+            applicationId: n,
             userIds: s,
             location: f,
             guildId: m,
@@ -139,7 +140,7 @@ function D(e) {
             numWishlistItems: _ = 2,
             cardSpec: T,
         } = e,
-        v = (0, d.h)(i),
+        v = (0, d.h)(n),
         E = (0, h.A)(v?.id),
         C = l.useMemo(() => (E?.id != null ? [E.id] : []), [E]),
         {
@@ -152,26 +153,26 @@ function D(e) {
         H = l.useMemo(() => {
             let e = k && N;
             return R.map((t) => {
-                let i = Object.entries(A[t.id] ?? {})
+                let n = Object.entries(A[t.id] ?? {})
                     .filter((e) => {
-                        let [t, i] = e;
-                        return i === I.j.WISHLIST && O.has(t);
+                        let [t, n] = e;
+                        return n === I.j.WISHLIST && O.has(t);
                     })
                     .map((e) => {
                         let [t] = e;
                         return t;
                     });
-                return (0, n.jsx)(
+                return (0, i.jsx)(
                     F,
                     {
                         sku: t,
-                        source: i.length > 0 ? o.uS.WISHLIST : o.uS.POPULAR,
+                        source: n.length > 0 ? o.uS.WISHLIST : o.uS.POPULAR,
                         application: E,
                         showIcons: e,
                         guildId: m,
                         channelId: x,
                         userIdsForGifting: s,
-                        userIdsForRecommendation: i,
+                        userIdsForRecommendation: n,
                         spec: T,
                     },
                     t.id,
@@ -187,27 +188,27 @@ function D(e) {
                 location: f,
             });
     }, [m, x, R, f]);
-    let b = (0, S.F)("storefront_badge", { applicationId: i }),
+    let b = (0, S.F)("storefront_badge", { applicationId: n }),
         y = "loading" === j || 0 === R.length;
     return "error" === j && 0 === R.length
         ? null
-        : (0, n.jsxs)("div", {
+        : (0, i.jsxs)("div", {
               className: r()(q.kL, t),
               children: [
-                  (0, n.jsxs)("div", {
+                  (0, i.jsxs)("div", {
                       className: q.wx,
                       children: [
-                          (0, n.jsx)(a.E, {
+                          (0, i.jsx)(a.E, {
                               variant: "text-xs/medium",
                               color: "text-muted",
                               children: k && !N ? L.intl.string(L.t["7lZ31J"]) : L.intl.string(L.t.BCi1gT),
                           }),
-                          null != b && (0, n.jsx)(U, { Icon: b.Icon, text: b.text, tooltip: b.tooltip }),
+                          null != b && (0, i.jsx)(U, { Icon: b.Icon, text: b.text, tooltip: b.tooltip }),
                       ],
                   }),
-                  (0, n.jsx)("div", {
+                  (0, i.jsx)("div", {
                       className: q.ld,
-                      children: y ? (0, n.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, className: q.u1 }) : H,
+                      children: y ? (0, i.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, className: q.u1 }) : H,
                   }),
               ],
           });

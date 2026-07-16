@@ -18,27 +18,27 @@ function c(t) {
             onClose: d,
             headerText: m,
             confirmButtonText: h,
-            confirmButtonVariant: A = "primary",
-            subtitle: f,
+            confirmButtonVariant: f = "primary",
+            subtitle: A,
         } = t,
         [y, g] = s.useState(!1),
         [b, k] = s.useState(""),
         [v, C] = s.useState(null),
-        E = s.useRef(null),
-        x = async (t) => {
-            if ((t.preventDefault(), C(null), g(!0), !1 === p.test(b))) {
-                C(o.intl.string(o.t.hML7Gw)), g(!1);
-                return;
-            }
-            try {
-                let t = null != n ? await n(b) : void 0;
-                null != c && (null != t ? c({ response: t, email: b }) : c(b)), d();
-            } catch (t) {
-                C(new u.A(t).getAnyErrorMessage());
-            } finally {
-                g(!1);
-            }
-        };
+        E = s.useRef(null);
+    async function x(t) {
+        if ((t.preventDefault(), C(null), g(!0), !1 === p.test(b))) {
+            C(o.intl.string(o.t.hML7Gw)), g(!1);
+            return;
+        }
+        try {
+            let t = null != n ? await n(b) : void 0;
+            null != c && (null != t ? c({ response: t, email: b }) : c(b)), d();
+        } catch (t) {
+            C(new u.A(t).getAnyErrorMessage());
+        } finally {
+            g(!1);
+        }
+    }
     return (0, i.jsx)("form", {
         onSubmit: x,
         children: (0, i.jsx)(a.Modal, {
@@ -48,10 +48,10 @@ function c(t) {
                 impressionType: r.ImpressionTypes.MODAL,
             },
             title: m,
-            subtitle: f,
+            subtitle: A,
             actions: [
                 { text: o.intl.string(o.t["ETE/oC"]), onClick: d, variant: "secondary", disabled: y },
-                { text: h, variant: A, loading: y, type: "submit" },
+                { text: h, variant: f, loading: y, type: "submit" },
             ],
             onClose: d,
             children: (0, i.jsx)(l.k, {

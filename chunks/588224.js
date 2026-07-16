@@ -20,7 +20,7 @@ var n = t(627968),
     S = t(481947),
     _ = t(616356),
     E = t(280450),
-    N = t(451409),
+    N = t(186295),
     y = t(576705),
     C = t(290863),
     b = t(528767),
@@ -66,19 +66,19 @@ let w = l.memo((e) => {
             [s, f],
         ),
         Y = (0, r.bG)([b.A], () => b.A.getSessionById(a)),
-        q = G.Ay.useName(l),
-        $ = (0, r.bG)([T.A], () => T.A.getVoicePlatformForChannel(s.id, f), [s.id, f]),
+        $ = G.Ay.useName(l),
+        q = (0, r.bG)([T.A], () => T.A.getVoicePlatformForChannel(s.id, f), [s.id, f]),
         H = (0, x.uy)(s.id, f);
     return (0, n.jsx)(v.A, {
         shakeLocation: k.uD.VOICE_USER,
         isShaking: w,
         children: (0, n.jsx)(O.Ay, {
             ...e,
-            nick: d ?? q,
+            nick: d ?? $,
             canDrag: e.canDrag && !D,
             disconnected: H,
             otherClientSessionType: Y?.clientInfo?.os,
-            voicePlatform: $,
+            voicePlatform: q,
             localMute: S && !I,
             localVideoDisabled: C,
             mute: i || S,
@@ -155,7 +155,7 @@ let D = [],
                 );
             });
         (0, m.A)(B);
-        let Y = (() => {
+        let Y = (function () {
             if (null == G || 0 === G.length) return null;
             let e = o && G.length > c + 1 ? G.slice(0, c) : G,
                 i = g.A.getGuildRingingUsers(s.id),

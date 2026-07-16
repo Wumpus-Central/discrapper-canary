@@ -37,7 +37,7 @@ function f(t) {
                       className: L.xF,
                       children: (0, n.jsx)(c.Q, {
                           text: _.intl.string(_.t.WUHdZV),
-                          onClick: () => {
+                          onClick: function () {
                               if (null == R) return;
                               let t = { section: e, page: s, object: E.ZSU.UPSELL_HEADER };
                               null != f
@@ -89,7 +89,7 @@ var v = s(287809),
     P = s(174459),
     S = s(428262),
     y = s(339984),
-    G = s(788868),
+    G = s(202541),
     C = s(582602);
 function M(t) {
     let { analyticsSection: e, type: s } = t,

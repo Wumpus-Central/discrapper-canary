@@ -6,8 +6,8 @@ var s = n(627968),
     i = n(126031),
     o = n(702841),
     u = n(653887),
-    c = n(990078),
-    d = n(297264),
+    c = n(297264),
+    d = n(866665),
     g = n(881636),
     E = n(661531),
     _ = n(775602),
@@ -40,7 +40,7 @@ function I(e) {
                       tabIndex: 0,
                       "aria-label": t.name,
                       onClick: n,
-                      onKeyDown: (e) => {
+                      onKeyDown: function (e) {
                           null != n && ("Enter" === e.key || " " === e.key) && (e.preventDefault(), n());
                       },
                   }
@@ -50,7 +50,7 @@ function I(e) {
         className: a()(O.sW, { [O.by]: x, [O.vk]: null != n }),
         ...f,
         children: [
-            (0, s.jsx)(i.s, { children: (0, s.jsx)(d.D, { variant: "heading-lg/semibold", children: t.name }) }),
+            (0, s.jsx)(i.s, { children: (0, s.jsx)(c.D, { variant: "heading-lg/semibold", children: t.name }) }),
             (0, s.jsx)("div", {
                 className: O.Db,
                 children: x
@@ -76,7 +76,7 @@ function I(e) {
             null != n &&
                 (0, s.jsx)("div", {
                     className: O.IG,
-                    children: (0, s.jsx)(c.m, {
+                    children: (0, s.jsx)(d.m, {
                         text: p.intl.string(p.t["o1ol+T"]),
                         children: (0, s.jsx)(g.u, {
                             "aria-hidden": "true",

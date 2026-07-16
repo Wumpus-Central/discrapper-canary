@@ -1384,7 +1384,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 579929, Version Hash: 7b334e9d7579949b2604a114d7197979a643ba66`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 579941, Version Hash: e7cef2ea462b5cc6ddecfda90199f7b97ebd946f`,
 ),
     v.A.setTags({ appContext: F.QCW }),
     em.A.initBasic(),
@@ -1578,7 +1578,7 @@ function ty(e) {
             }),
     });
 }
-let tD = (e) => {
+function tD(e) {
     let { focused: t, windowKey: n, frame: i, themeOverride: r, hasOpenLayer: a, children: s } = e;
     return (0, O.jsx)(tu.N, {
         theme: r,
@@ -1622,7 +1622,7 @@ let tD = (e) => {
                 ],
             }),
     });
-};
+}
 var tv = n(531685),
     tb = n(690521),
     tM = n(975571),
@@ -5120,7 +5120,7 @@ function ln(e) {
                 }),
             });
 }
-let li = (e) => {
+let li = function (e) {
     let { partySize: t, members: n, minAvatarsShown: i = 1, maxAvatarsShown: r = 2, guildId: a, overflowRef: s } = e,
         { unknownSize: l, totalSize: o, knownSize: d } = t;
     if (o < i) return null;
@@ -17048,7 +17048,7 @@ var T$ = n(398523),
     Tz = n(881373),
     Tq = n(727949),
     TZ = n(961773);
-let TX = (e) => {
+let TX = function (e) {
     let { isSelected: t, discountOffer: n } = e,
         [i, r] = (0, il.kn)([a0.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
     return (eh.useEffect(() => {
@@ -17989,7 +17989,7 @@ function mW(e) {
         nitroHoverGradient: !0,
         text: (0, O.jsx)(dq.A, { children: h ? tN.intl.string(tN.t["4gwVVn"]) : tN.intl.string(tN.t.Ipxkog) }),
         locationState: d,
-        onClick: () => {
+        onClick: function () {
             if (null != r && "" !== r) {
                 let e = new URL(o, window.location.origin);
                 e.searchParams.set(mE.x, r), (0, oO.pX)(`${e.pathname}?${e.searchParams.toString()}`);
@@ -18661,9 +18661,9 @@ let gM = "isHideDevBanner",
         let [e, t] = (0, eh.useState)(ew.w.get(gM, "false")?.toString() === "true"),
             n = (0, eu.bG)([gy.A], () => ((0, gD.kK)() ? gy.A.getCurrentBuildOverride().overrides?.discord_web : null));
         if (e) return null;
-        let i = () => {
+        function i() {
             ew.w.set(gM, !0), t(!0);
-        };
+        }
         function r() {
             return (0, O.jsx)(tc.D, {
                 onClick: i,
@@ -18682,7 +18682,7 @@ let gM = "isHideDevBanner",
                     className: td()(gb.Wz, gb.mr),
                     children: [
                         (0, O.jsx)(gv, { className: gb.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "579929" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "579941" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -18740,7 +18740,7 @@ function g$() {
                 .slice(0, 4)
                 .concat(...Array(c > 0 ? c : 0).fill(null))
                 .map((e, t) =>
-                    ((e, t, n) => {
+                    (function (e, t, n) {
                         if (null == e) return (0, O.jsx)("div", { className: gK.WK }, `no-clip-${n}`);
                         let i = "auto" === e.clipMethod,
                             r = t && s.length > 4,
@@ -25072,8 +25072,8 @@ let CO = (0, tj.Fe)({
                 n.e("31189"),
                 n.e("84042"),
                 n.e("70961"),
-                n.e("98537"),
                 n.e("82830"),
+                n.e("98537"),
                 n.e("46855"),
                 n.e("59228"),
                 n.e("52566"),
@@ -33864,59 +33864,58 @@ let bn =
             null != m && null != (0, DZ.Ay)({ application: m, channelId: u })
                 ? (S = Dq.KX)
                 : g.context === F.BRT.POPOUT && (S = Dq.KX);
-            let N = !1,
-                C = (n) => {
-                    let { clientId: i, location: r } = n;
-                    if (null == i || i === t) {
-                        if (((N = !0), null == r)) {
-                            T(new Dy.A({ errorCode: F.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")),
-                                g.lock();
-                            return;
-                        }
-                        (e(r), null == s || null == m)
-                            ? g.lock()
-                            : null == new URL(r).searchParams.get("error")
-                              ? (0, tW.openModal)(
-                                    (e) => (0, O.jsx)(vJ.Sm, { application: m, ...e }),
-                                    {
-                                        onCloseCallback: () => {
-                                            g.lock();
-                                        },
-                                    },
-                                    S,
-                                )
-                              : (0, tW.openModal)(
-                                    (e) => (0, O.jsx)(vJ.xb, { ...e }),
-                                    {
-                                        onCloseCallback: () => {
-                                            g.lock();
-                                        },
-                                    },
-                                    S,
-                                );
+            let N = !1;
+            function C(n) {
+                let { clientId: i, location: r } = n;
+                if (null == i || i === t) {
+                    if (((N = !0), null == r)) {
+                        T(new Dy.A({ errorCode: F.Lw6.OAUTH2_ERROR }, "OAuth2 Error: No location provided")), g.lock();
+                        return;
                     }
-                },
-                { cleanup: R } = (function (e, t) {
-                    function n() {
-                        (0, tW.closeModal)(e) &&
-                            (0, tW.openModal)((e) =>
-                                (0, O.jsx)(vQ.f, {
-                                    ...e,
-                                    title: tN.intl.string(tN.t.j2d6Km),
-                                    subtitle: tN.intl.string(tN.t["4LKmN5"]),
-                                    actions: [{ text: tN.intl.string(tN.t.cpT0Cq), onClick: e.onClose }],
-                                }),
+                    (e(r), null == s || null == m)
+                        ? g.lock()
+                        : null == new URL(r).searchParams.get("error")
+                          ? (0, tW.openModal)(
+                                (e) => (0, O.jsx)(vJ.Sm, { application: m, ...e }),
+                                {
+                                    onCloseCallback: () => {
+                                        g.lock();
+                                    },
+                                },
+                                S,
+                            )
+                          : (0, tW.openModal)(
+                                (e) => (0, O.jsx)(vJ.xb, { ...e }),
+                                {
+                                    onCloseCallback: () => {
+                                        g.lock();
+                                    },
+                                },
+                                S,
                             );
+                }
+            }
+            let { cleanup: R } = (function (e, t) {
+                function n() {
+                    (0, tW.closeModal)(e) &&
+                        (0, tW.openModal)((e) =>
+                            (0, O.jsx)(vQ.f, {
+                                ...e,
+                                title: tN.intl.string(tN.t.j2d6Km),
+                                subtitle: tN.intl.string(tN.t["4LKmN5"]),
+                                actions: [{ text: tN.intl.string(tN.t.cpT0Cq), onClick: e.onClose }],
+                            }),
+                        );
+                }
+                return (
+                    t?.addEventListener("abort", n),
+                    {
+                        cleanup: function () {
+                            t?.removeEventListener("abort", n);
+                        },
                     }
-                    return (
-                        t?.addEventListener("abort", n),
-                        {
-                            cleanup: function () {
-                                t?.removeEventListener("abort", n);
-                            },
-                        }
-                    );
-                })(p, f);
+                );
+            })(p, f);
             (0, tW.openModal)(
                 (e) =>
                     (0, O.jsx)(vX.OAuth2AuthorizeModal, {
@@ -42005,8 +42004,8 @@ let Gv = (0, n7.Fe)({
                 n.e("84042"),
                 n.e("70961"),
                 n.e("11531"),
-                n.e("98537"),
                 n.e("82830"),
+                n.e("98537"),
                 n.e("46855"),
                 n.e("59228"),
                 n.e("52566"),

@@ -5,10 +5,10 @@ var i = s(627968),
     a = s.n(r),
     l = s(889137),
     c = s(17928),
-    d = s(873298),
-    o = s(821609),
-    E = s(534514),
-    u = s(939249),
+    o = s(873298),
+    d = s(821609),
+    u = s(297264),
+    E = s(939249),
     m = s(285796),
     _ = s(707554),
     A = s(364522),
@@ -45,7 +45,7 @@ function z() {
         })),
         t = (0, c.bG)([O.A], () => {
             let e = O.A.settings.appearance?.theme;
-            return `default ${e === d.Sx.LIGHT ? V.NJ8.LIGHT : V.NJ8.DARK}`;
+            return `default ${e === o.Sx.LIGHT ? V.NJ8.LIGHT : V.NJ8.DARK}`;
         });
     return (0, n.useCallback)(
         (s) => {
@@ -94,7 +94,7 @@ function Q() {
                         }),
                     ],
                 }),
-                (0, i.jsx)(o.$, {
+                (0, i.jsx)(d.$, {
                     variant: "secondary",
                     size: "sm",
                     text: K.intl.string($.default.eGxkmm),
@@ -119,7 +119,7 @@ function ei() {
             className: es.mR,
             children: [
                 (0, i.jsx)(P.A, { className: es.PC, size: "md" }),
-                (0, i.jsx)(E.D, {
+                (0, i.jsx)(u.D, {
                     variant: "heading-md/bold",
                     color: "text-overlay-light",
                     children: K.intl.string(K.t.POSLGY),
@@ -134,14 +134,14 @@ function en(e) {
     return (0, i.jsxs)("div", {
         className: es.nV,
         children: [
-            (0, i.jsx)(u.D, {
+            (0, i.jsx)(E.D, {
                 className: es.VV,
-                onClick: () => {
+                onClick: function () {
                     null != t && t(et.i.DISMISS), s(V.HAw.CLIENT_THEME_PREVIEW_CLOSED), (0, L.D)();
                 },
                 children: (0, i.jsx)(m.a, { size: "md", color: "currentColor", className: es.P0 }),
             }),
-            (0, i.jsx)(E.D, { variant: "heading-lg/extrabold", children: K.intl.string(K.t["xSR+a/"]) }),
+            (0, i.jsx)(u.D, { variant: "heading-lg/extrabold", children: K.intl.string(K.t["xSR+a/"]) }),
         ],
     });
 }
@@ -150,25 +150,25 @@ function er(e) {
         { analyticsLocations: n } = (0, f.Ay)(I.A.CLIENT_THEMES_EDITOR),
         [r, a] = (0, c.yK)([D.default, b.A], () => [b.A.gradientPreset, H.Ay.isPremium(D.default.getCurrentUser())]),
         l = (0, v.V)(),
-        o = (0, H.FY)({
+        d = (0, H.FY)({
             intervalType: l?.subscription_trial?.interval,
             intervalCount: l?.subscription_trial?.interval_count,
         }),
-        E = a
+        u = a
             ? K.intl.string(K.t.IJI7yk)
             : l?.subscription_trial?.sku_id === U.pe.TIER_2
-              ? o
+              ? d
               : K.intl.string(K.t.mr4K7D);
     return (0, i.jsx)(N.A, {
         subscriptionTier: U.pe.TIER_2,
-        defaultTextOverride: E,
+        defaultTextOverride: u,
         premiumModalAnalyticsLocation: { object: V.ZSU.BUTTON_CTA, objectType: V.AnalyticsObjectTypes.BUY },
-        onSubscribeModalClose: (e) => {
+        onSubscribeModalClose: function (e) {
             e &&
                 (t?.(),
                 null != s && s(et.i.PRIMARY),
                 null != r &&
-                    ((0, Z.X8)({ isPersisted: !0, themeName: d.ju[r.id], analyticsLocations: n }),
+                    ((0, Z.X8)({ isPersisted: !0, themeName: o.ju[r.id], analyticsLocations: n }),
                     (0, T.u_)({ backgroundGradientPresetId: r.id, theme: r.theme }),
                     (0, y.XG)()));
         },
@@ -178,9 +178,9 @@ function er(e) {
 function ea(e) {
     let { markAsDismissed: t, isCoachmark: s } = e,
         { isPreview: r } = (0, c.cf)([b.A], () => ({ isPreview: b.A.isPreview })),
-        [a, d] = n.useState(!1),
-        E = z(),
-        u = (0, R.St)("client_themes_editor_footer"),
+        [a, o] = n.useState(!1),
+        u = z(),
+        E = (0, R.St)("client_themes_editor_footer"),
         m = (0, p.X)(
             { no: K.t["3D5yo/"], "sv-SE": K.t["3D5yo/"], uk: K.t["3D5yo/"], de: K.t["3D5yo/"] },
             K.t["dqH+qr"],
@@ -191,7 +191,7 @@ function ea(e) {
             .otherwise(() => K.intl.string(K.t.Olc2K3)),
         A = (0, i.jsx)(er, {
             onSubscribeSuccess: () => {
-                d(!0);
+                o(!0);
             },
             markAsDismissed: t,
         });
@@ -199,7 +199,7 @@ function ea(e) {
         className: es.N3,
         children: [
             r &&
-                (u
+                (E
                     ? (0, i.jsxs)("div", {
                           className: es.rV,
                           children: [
@@ -212,11 +212,11 @@ function ea(e) {
                           ],
                       })
                     : A),
-            (0, i.jsx)(o.$, {
+            (0, i.jsx)(d.$, {
                 fullWidth: !0,
-                onClick: () => {
+                onClick: function () {
                     null != t && t(et.i.DISMISS),
-                        E(V.HAw.CLIENT_THEME_PREVIEW_CLOSED),
+                        u(V.HAw.CLIENT_THEME_PREVIEW_CLOSED),
                         (0, L.D)(),
                         s || (0, M.openUserSettings)(C.X.APPEARANCE_THEME_CATEGORY);
                 },
@@ -229,21 +229,21 @@ function ea(e) {
 function el(e) {
     let { markAsDismissed: t, showClientThemesCoachmark: s, iconSize: r = ee.ni.SIZE_60 } = e,
         { analyticsLocations: l } = (0, f.Ay)(I.A.CLIENT_THEMES_EDITOR),
-        d = (0, c.bG)([g.A], () => g.A.hasLayers()),
-        { isPreview: o, shouldEditorAnimate: E } = (0, c.cf)([b.A, x.Ay], () => ({
+        o = (0, c.bG)([g.A], () => g.A.hasLayers()),
+        { isPreview: d, shouldEditorAnimate: u } = (0, c.cf)([b.A, x.Ay], () => ({
             isPreview: b.A.isPreview,
             shouldEditorAnimate: s && !x.Ay.useReducedMotion,
         })),
-        u = (0, S.fy)().activePanel === S.HP.CLIENT_THEMES,
+        E = (0, S.fy)().activePanel === S.HP.CLIENT_THEMES,
         m = z();
     n.useEffect(() => m(V.HAw.CLIENT_THEME_PREVIEW_VIEWED), [m]),
         n.useEffect(() => {
-            o &&
+            d &&
                 k.default.track(V.HAw.PREMIUM_UPSELL_VIEWED, {
                     type: U.e.PREMIUM_CLIENT_THEME_TRY_IT_OUT,
                     location_stack: l,
                 });
-        }, [o, l]);
+        }, [d, l]);
     let T = (() => {
             let e = (0, c.bG)([b.A], () => b.A.gradientPreset),
                 t = (0, c.bG)([w.Ay], () => w.Ay.useSystemTheme === W.Q_.ON),
@@ -257,10 +257,10 @@ function el(e) {
                 }, [e, s])
             );
         })(),
-        p = (0, h.A)(null, o ? T : V.tEg);
+        p = (0, h.A)(null, d ? T : V.tEg);
     n.useEffect(() => {
-        if (o && !u) return T;
-    }, [o, u, T]);
+        if (d && !E) return T;
+    }, [d, E, T]);
     let v = n.useMemo(
         () => ({
             "--custom-client-themes-editor-content-width": `${3 * r + 48}px`,
@@ -268,14 +268,14 @@ function el(e) {
         }),
         [r],
     );
-    return d
+    return o
         ? null
         : (0, i.jsx)(f.f5, {
               value: l,
               children: (0, i.jsx)("div", {
                   ref: p,
                   "data-app-right-panel": !0,
-                  className: a()(es.HS, E ? es.hP : null),
+                  className: a()(es.HS, u ? es.hP : null),
                   style: v,
                   children: (0, i.jsxs)(_.F, {
                       children: [
@@ -286,7 +286,7 @@ function el(e) {
                               children: (0, i.jsxs)(Z.Ay, {
                                   type: Z.v0.EDITOR,
                                   children: [
-                                      !o && (0, i.jsx)(Z.Ay.Basic, { className: es.Gg, iconSize: r }),
+                                      !d && (0, i.jsx)(Z.Ay.Basic, { className: es.Gg, iconSize: r }),
                                       (0, i.jsx)(Z.Ay.Gradient, { className: es.Gg, isCoachmark: s, iconSize: r }),
                                   ],
                               }),

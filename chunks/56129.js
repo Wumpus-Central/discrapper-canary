@@ -26,8 +26,8 @@ var r = n(503698),
     R = n(128286),
     O = n(80051),
     L = n(970636),
-    D = n(451409),
-    y = n(646865),
+    y = n(186295),
+    D = n(646865),
     v = n(795816),
     b = n(104171),
     M = n(47294),
@@ -58,8 +58,8 @@ function F(e) {
             embeddedActivity: O,
         } = e,
         b = (0, f.Us)() === P.BRT.POPOUT,
-        w = (0, s.bG)([D.Ay], () => D.Ay.isVideoEnabled()),
-        k = (0, s.bG)([D.Ay], () => Object.values(D.Ay.getVideoDevices())[0]),
+        w = (0, s.bG)([y.Ay], () => y.Ay.isVideoEnabled()),
+        k = (0, s.bG)([y.Ay], () => Object.values(y.Ay.getVideoDevices())[0]),
         F = !1 === (k?.disabled ?? !0),
         V = (0, _.A)([n])[0],
         B = (0, h.Ay)(t),
@@ -121,12 +121,12 @@ function F(e) {
                         basis: "50%",
                         align: I.A.Align.CENTER,
                         children: [
-                            b || (0, y.f)()
+                            b || (0, D.f)()
                                 ? null
                                 : (0, i.jsx)(R.A, {
                                       className: G.BD,
                                       popoutOpen: !1,
-                                      onOpenPopout: () => {
+                                      onOpenPopout: function () {
                                           (0, A.X)(j, A.O.POPOUT, !0),
                                               null != t &&
                                                   (0, M.A)({

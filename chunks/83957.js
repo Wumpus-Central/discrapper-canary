@@ -1538,7 +1538,7 @@ function tJ(e) {
                 : eg.intl.string(eg.t.FeUKeA)
             : eg.intl.string(eg.t.uQn9B8);
     }
-    let p = () => {
+    function p() {
         if (g)
             return (
                 (0, Z.YX)(em.uss.QUICK_ACTIONS, {
@@ -1549,7 +1549,7 @@ function tJ(e) {
                 (0, tN.A)(u, !1)
             );
         m();
-    };
+    }
     function f(e) {
         return (t) => {
             e(t), (0, Z.YX)(em.uss.QUICK_ACTIONS, { type: Z.Z5.SCREEN_SHARE, value: Z.IP.SETTINGS_OPENED });
@@ -2498,7 +2498,7 @@ let n$ = c.memo(function (e) {
         }, [T]),
         b = (0, l.jsx)("div", {
             className: nQ.St,
-            children: (() => {
+            children: (function () {
                 let e = T?.isPrivate() ?? !1;
                 if ("CHANNEL_TYPE" === r && !e) {
                     let e = (0, tg.gU)(T, v);

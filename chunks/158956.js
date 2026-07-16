@@ -6,8 +6,8 @@ var i = e(627968),
     s = e(783878),
     o = e(331322),
     c = e(834730),
-    d = e(47167),
-    u = e(734057),
+    u = e(47167),
+    d = e(734057),
     h = e(808728),
     g = e(994500),
     p = e(287809),
@@ -32,7 +32,7 @@ function C(t) {
     return (0, i.jsx)(s.Z, {
         required: !0,
         value: e?.id,
-        options: a.map((t) => ({ id: t.id, value: t.id, label: (0, d.m1)(t, p.default, g.A, !0) })),
+        options: a.map((t) => ({ id: t.id, value: t.id, label: (0, u.m1)(t, p.default, g.A, !0) })),
         onSelectionChange: function (t) {
             l(a.find((n) => n.id === t) ?? void 0);
         },
@@ -41,10 +41,10 @@ function C(t) {
     });
 }
 function m(t) {
-    let { action: n, triggerType: e, guildId: s, isEdit: d, onEditChannel: h, onClose: g, transitionState: p } = t,
+    let { action: n, triggerType: e, guildId: s, isEdit: u, onEditChannel: h, onClose: g, transitionState: p } = t,
         [m, k] = l.useState(n.metadata.channelId),
         [v, b] = l.useState(null),
-        j = (0, r.bG)([u.A], () => u.A.getChannel(m), [m]),
+        j = (0, r.bG)([d.A], () => d.A.getChannel(m), [m]),
         y = (0, x.x)(n.type, n, e);
     if (null == y) return null;
     let { headerText: A } = y;
@@ -62,8 +62,8 @@ function m(t) {
                 variant: "secondary",
             },
             {
-                text: d ? f.intl.string(f.t.bt75uw) : f.intl.string(f.t["R3BPH+"]),
-                onClick: () => {
+                text: u ? f.intl.string(f.t.bt75uw) : f.intl.string(f.t["R3BPH+"]),
+                onClick: function () {
                     null == m ? b(f.intl.string(f.t.lM1NLh)) : h(m);
                 },
             },

@@ -1,4 +1,4 @@
-n.d(t, { Fu: () => _, GZ: () => u, __: () => d, rn: () => A });
+n.d(t, { Fu: () => _, GZ: () => u, __: () => T, rn: () => A });
 var i = n(496431),
     l = n(773669),
     r = n(975571),
@@ -29,7 +29,7 @@ function u(e, t, n, i) {
             throw Error(`Unsupported subscription tier: ${e}`);
     }
 }
-let _ = (e) => {
+function _(e) {
     let t = e.expires_at,
         n = (0, i.A)(null != t ? Date.parse(t) : 0, 1e3),
         l = e?.subscription_trial?.sku_id;
@@ -44,7 +44,7 @@ let _ = (e) => {
               }),
               r.A.getArticleURL(e.trial_id === o.yo ? E.MVz.NITRO_TRIAL_FOR_ALL : E.MVz.PREMIUM_TRIAL),
           );
-};
+}
 function A(e, t, n) {
     let i = new Intl.NumberFormat(l.default.locale, {
         style: "percent",
@@ -60,8 +60,8 @@ function A(e, t, n) {
                 discountPercentage: i,
             });
 }
-let d = (e) => {
+function T(e) {
     let t = e.expiresAt,
         n = (0, i.A)(null != t ? t.getTime() : 0, 1e3);
     return null == t ? null : A(n, Number(e.discount.amount), (0, a.hm)(e));
-};
+}

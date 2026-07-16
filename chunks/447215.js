@@ -45,38 +45,38 @@ function x(e) {
         t.useCallback(
             (e) => (t, i) => {
                 let o = e?.colorStrings,
-                    c = L && null != o && null != o.primaryColor && null != o.secondaryColor,
-                    p = (l, n) => {
-                        if (!M || null == D || null != x)
-                            return (0, r.jsx)(s.V, {
-                                ...(null != l ? l : {}),
-                                ref: P,
-                                onContextMenu: S,
-                                name: (0, u.O)(t) ?? "",
-                                colorString: e?.colorString ?? null,
-                                roleName: e?.colorRoleName,
-                                colorStrings: c ? o : null,
-                                "aria-label": A,
-                                className: N,
-                                displayInline: j,
-                            });
-                        {
-                            let e = v?.animate || n?.isShown ? h.G.ANIMATED : h.G.PLAIN;
-                            return (0, r.jsx)(a.Anchor, {
-                                ...(null != l ? l : {}),
-                                ref: P,
-                                onContextMenu: S,
-                                "aria-label": A,
-                                children: (0, r.jsx)(f.A, {
-                                    userName: (0, u.O)(t) ?? "",
-                                    displayNameStyles: D,
-                                    effectDisplayType: e,
-                                    shouldUnderlineOnHover: !0,
-                                    loop: !0,
-                                }),
-                            });
-                        }
-                    };
+                    c = L && null != o && null != o.primaryColor && null != o.secondaryColor;
+                function p(l, n) {
+                    if (!M || null == D || null != x)
+                        return (0, r.jsx)(s.V, {
+                            ...(null != l ? l : {}),
+                            ref: P,
+                            onContextMenu: S,
+                            name: (0, u.O)(t) ?? "",
+                            colorString: e?.colorString ?? null,
+                            roleName: e?.colorRoleName,
+                            colorStrings: c ? o : null,
+                            "aria-label": A,
+                            className: N,
+                            displayInline: j,
+                        });
+                    {
+                        let e = v?.animate || n?.isShown ? h.G.ANIMATED : h.G.PLAIN;
+                        return (0, r.jsx)(a.Anchor, {
+                            ...(null != l ? l : {}),
+                            ref: P,
+                            onContextMenu: S,
+                            "aria-label": A,
+                            children: (0, r.jsx)(f.A, {
+                                userName: (0, u.O)(t) ?? "",
+                                displayNameStyles: D,
+                                effectDisplayType: e,
+                                shouldUnderlineOnHover: !0,
+                                loop: !0,
+                            }),
+                        });
+                    }
+                }
                 return (0, r.jsx)(
                     d.f5,
                     {

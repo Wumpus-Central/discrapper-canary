@@ -53,7 +53,7 @@ function i(e) {
             versionKey: b,
             onComplete:
                 null != p
-                    ? () => {
+                    ? function () {
                           null != p && (m(p), S(!0));
                       }
                     : void 0,

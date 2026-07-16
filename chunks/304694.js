@@ -1,4 +1,4 @@
-t.d(n, { A: () => d });
+t.d(n, { A: () => o });
 var e = t(627968);
 t(64700);
 var l = t(477782),
@@ -6,13 +6,15 @@ var l = t(477782),
     s = t(928658),
     c = t(446600),
     r = t(375708);
-function d(i) {
+function o(i) {
     let n = c.A.isLive(i.id);
     return i.isGuildStageVoice() && n
         ? (0, e.jsx)(l.Dr, {
               id: "report-stage",
               label: r.intl.string(r.t.JGj6Ci),
-              action: () => (0, s.pb)(i),
+              action: function () {
+                  return (0, s.pb)(i);
+              },
               icon: a.i,
               leadingAccessory: { type: "icon", icon: a.i },
               color: "danger",

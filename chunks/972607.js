@@ -1,169 +1,170 @@
-n.d(t, { A: () => F });
-var s = n(627968),
-    l = n(64700),
-    i = n(503698),
-    a = n.n(i),
-    r = n(435558),
-    c = n.n(r),
-    d = n(17928),
-    u = n(364840),
-    C = n(821609),
-    o = n(862482),
+n.d(t, { A: () => H });
+var l = n(627968),
+    i = n(64700),
+    r = n(503698),
+    a = n.n(r),
+    s = n(435558),
+    o = n.n(s),
+    u = n(17928),
+    c = n(364840),
+    d = n(821609),
+    p = n(862482),
     m = n(109802),
-    L = n(452027),
-    g = n(778712),
-    h = n(297264),
-    M = n(289873),
-    H = n(783878),
-    x = n(398590),
-    E = n(717398),
-    p = n(966327),
-    f = n(769015),
-    N = n(242874),
-    _ = n(380619),
-    A = n(219271),
-    I = n(427358),
+    C = n(452027),
+    h = n(778712),
+    E = n(297264),
+    f = n(289873),
+    A = n(783878),
+    y = n(398590),
+    S = n(717398),
+    P = n(966327),
+    I = n(769015),
+    _ = n(242874),
+    T = n(380619),
+    g = n(219271),
+    x = n(427358),
     v = n(7133),
-    j = n(994500),
-    T = n(351906),
+    N = n(994500),
+    M = n(351906),
     R = n(287809),
-    P = n(957565),
-    U = n(45938),
-    k = n(428262),
-    Z = n(427262),
-    b = n(951305),
-    w = n(482132),
+    b = n(957565),
+    j = n(45938),
+    O = n(428262),
+    L = n(427262),
+    w = n(951305),
+    k = n(482132),
     D = n(652215),
-    O = n(202541),
-    S = n(375708),
-    y = n(340188);
-function F(e) {
+    U = n(202541),
+    G = n(375708),
+    F = n(340188);
+function H(e) {
     let {
             giftCode: t,
             application: n,
-            sku: i,
-            subscriptionPlan: r,
-            selectedGiftStyle: c,
-            onClose: H,
-            hasSentMessage: E,
-            giftRecipient: N,
-            giftMessageError: A,
-            isSendingMessage: I,
+            sku: r,
+            subscriptionPlan: s,
+            selectedGiftStyle: o,
+            onClose: A,
+            hasSentMessage: S,
+            giftRecipient: _,
+            giftMessageError: g,
+            isSendingMessage: x,
         } = e,
-        [j, R] = l.useState(m.e.Modes.DEFAULT),
-        F = (0, d.bG)([T.A], () => T.A.enabled),
-        W = E || (null != c && null != N),
-        K = i?.productLine === D.EZt.COLLECTIBLES,
+        [N, R] = i.useState(m.e.Modes.DEFAULT),
+        H = (0, u.bG)([M.A], () => M.A.enabled),
+        Y = S || (null != o && null != _),
+        W = r?.productLine === D.EZt.COLLECTIBLES,
         {
-            selectedGiftingPromotionReward: Q,
-            openGiftingBadgePostPurchaseModal: q,
-            canShowGiftingBadgePostPurchase: B,
-        } = (0, b.Pv)(),
-        z = (0, _.Mq)(r),
-        X = B && null == Q,
-        V = () => (null != r ? r.skuId : null != i ? i.id : null),
-        $ = () => {
-            let e;
-            return null != A
-                ? S.intl.string(S.t.qB8aya)
-                : null == r
-                  ? null
-                  : ((e =
-                        r.interval === O.WT.MONTH ? (W ? S.t["4ZJ+7Z"] : S.t["P+z55d"]) : W ? S.t.p0pZXP : S.t.bXqk3o),
-                    S.intl.format(e, { skuName: (0, k.RH)(r.id), intervalCount: r.intervalCount }));
-        };
-    return I
-        ? (0, s.jsxs)("div", {
-              className: y.EL,
+            selectedGiftingPromotionReward: V,
+            openGiftingBadgePostPurchaseModal: K,
+            canShowGiftingBadgePostPurchase: Z,
+        } = (0, w.Pv)(),
+        q = (0, T.Mq)(s),
+        z = Z && null == V;
+    function Q() {
+        return null != s ? s.skuId : null != r ? r.id : null;
+    }
+    function $() {
+        let e;
+        return null != g
+            ? G.intl.string(G.t.qB8aya)
+            : null == s
+              ? null
+              : ((e = s.interval === U.WT.MONTH ? (Y ? G.t["4ZJ+7Z"] : G.t["P+z55d"]) : Y ? G.t.p0pZXP : G.t.bXqk3o),
+                G.intl.format(e, { skuName: (0, O.RH)(s.id), intervalCount: s.intervalCount }));
+    }
+    return x
+        ? (0, l.jsxs)("div", {
+              className: F.EL,
               children: [
                   null != n
-                      ? (0, s.jsx)(f.A, { game: n, className: y.__invalid_icon, size: f.M.LARGE, skuId: V() })
+                      ? (0, l.jsx)(I.A, { game: n, className: F.__invalid_icon, size: I.M.LARGE, skuId: Q() })
                       : null,
-                  (0, s.jsx)(M.y, { type: M.t.PULSING_ELLIPSIS }),
+                  (0, l.jsx)(f.y, { type: f.t.PULSING_ELLIPSIS }),
               ],
           })
-        : (0, s.jsxs)(s.Fragment, {
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, s.jsxs)("div", {
-                      className: a()(y.EL, { [y.L1]: z && null != Q }),
+                  (0, l.jsxs)("div", {
+                      className: a()(F.EL, { [F.L1]: q && null != V }),
                       children: [
                           null != n
-                              ? (0, s.jsx)(f.A, { game: n, className: y.__invalid_icon, size: f.M.LARGE, skuId: V() })
+                              ? (0, l.jsx)(I.A, { game: n, className: F.__invalid_icon, size: I.M.LARGE, skuId: Q() })
                               : null,
-                          (0, s.jsx)(h.D, {
+                          (0, l.jsx)(E.D, {
                               variant: "heading-lg/semibold",
-                              className: a()({ [y.wx]: null == c && !K, [y.$A]: null != c && !K }),
+                              className: a()({ [F.wx]: null == o && !W, [F.$A]: null != o && !W }),
                               children:
-                                  null != N || (E && null == A)
-                                      ? S.intl.string(S.t.zOmK9N)
-                                      : null != A
-                                        ? S.intl.string(S.t.d1lrmU)
-                                        : S.intl.string(S.t["/s1xR7"]),
+                                  null != _ || (S && null == g)
+                                      ? G.intl.string(G.t.zOmK9N)
+                                      : null != g
+                                        ? G.intl.string(G.t.d1lrmU)
+                                        : G.intl.string(G.t["/s1xR7"]),
                           }),
-                          (E && null != N && null == A) || W
-                              ? (0, s.jsxs)(s.Fragment, {
+                          (S && null != _ && null == g) || Y
+                              ? (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        (0, s.jsxs)("div", {
-                                            className: y.jx,
+                                        (0, l.jsxs)("div", {
+                                            className: F.jx,
                                             children: [
-                                                (0, s.jsx)(p.A, { user: N, size: g._3.SIZE_40 }),
-                                                (0, s.jsxs)("div", {
-                                                    className: y.gn,
+                                                (0, l.jsx)(P.A, { user: _, size: h._3.SIZE_40 }),
+                                                (0, l.jsxs)("div", {
+                                                    className: F.gn,
                                                     children: [
-                                                        (0, s.jsx)(h.D, {
+                                                        (0, l.jsx)(E.D, {
                                                             variant: "heading-md/semibold",
-                                                            children: Z.Ay.getName(N),
+                                                            children: L.Ay.getName(_),
                                                         }),
-                                                        (0, s.jsxs)("div", {
-                                                            className: y.Ik,
-                                                            children: [" ", Z.Ay.getUserTag(N)],
+                                                        (0, l.jsxs)("div", {
+                                                            className: F.Ik,
+                                                            children: [" ", L.Ay.getUserTag(_)],
                                                         }),
                                                     ],
                                                 }),
                                             ],
                                         }),
-                                        (0, s.jsx)("div", { className: y._c, children: $() }),
+                                        (0, l.jsx)("div", { className: F._c, children: $() }),
                                     ],
                                 })
-                              : (0, s.jsxs)(s.Fragment, {
+                              : (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        (0, s.jsx)("div", { className: y.I0, children: $() }),
-                                        null == A &&
-                                            (0, s.jsx)(G, {
+                                        (0, l.jsx)("div", { className: F.I0, children: $() }),
+                                        null == g &&
+                                            (0, l.jsx)(B, {
                                                 giftCode: t,
                                                 onClose: () => {
-                                                    H(), (0, x.bz)(), X && q();
+                                                    A(), (0, y.bz)(), z && K();
                                                 },
                                             }),
-                                        (0, s.jsx)("div", { className: y.yF }),
-                                        (() => {
+                                        (0, l.jsx)("div", { className: F.yF }),
+                                        (function () {
                                             let e;
                                             if (null == t) return null;
-                                            switch (j) {
+                                            switch (N) {
                                                 case m.e.Modes.SUCCESS:
-                                                    e = S.intl.string(S.t.XVvPjU);
+                                                    e = G.intl.string(G.t.XVvPjU);
                                                     break;
                                                 case m.e.Modes.ERROR:
-                                                    e = S.intl.string(S.t.i4GM3L);
+                                                    e = G.intl.string(G.t.i4GM3L);
                                                     break;
                                                 default:
-                                                    e = S.intl.string(S.t.OpuAlK);
+                                                    e = G.intl.string(G.t.OpuAlK);
                                             }
-                                            return (0, s.jsxs)("div", {
-                                                className: y.PN,
+                                            return (0, l.jsxs)("div", {
+                                                className: F.PN,
                                                 children: [
                                                     null != t &&
-                                                        (0, s.jsx)(L.D, {
-                                                            label: S.intl.string(S.t["/dG4NA"]),
-                                                            children: (0, s.jsx)(m.e, {
-                                                                hideMessage: F ? S.intl.string(S.t["0RLn47"]) : null,
-                                                                value: (0, U.Zq)(t),
-                                                                mode: j,
+                                                        (0, l.jsx)(C.D, {
+                                                            label: G.intl.string(G.t["/dG4NA"]),
+                                                            children: (0, l.jsx)(m.e, {
+                                                                hideMessage: H ? G.intl.string(G.t["0RLn47"]) : null,
+                                                                value: (0, j.Zq)(t),
+                                                                mode: N,
                                                                 text: e,
                                                                 onCopy: (e) => {
-                                                                    null != i &&
-                                                                        (0, U.AK)(new v.A({ code: t, maxUses: 1 }), i),
-                                                                        (0, P.C)(
+                                                                    null != r &&
+                                                                        (0, j.AK)(new v.A({ code: t, maxUses: 1 }), r),
+                                                                        (0, b.C)(
                                                                             e,
                                                                             () => R(m.e.Modes.SUCCESS),
                                                                             () => R(m.e.Modes.ERROR),
@@ -172,15 +173,15 @@ function F(e) {
                                                                             R(m.e.Modes.DEFAULT);
                                                                         }, 1500);
                                                                 },
-                                                                supportsCopy: P.p5,
-                                                                className: y.__invalid_copyInput,
-                                                                buttonColor: o.XD.LINK,
-                                                                buttonLook: o.pR.LINK,
+                                                                supportsCopy: b.p5,
+                                                                className: F.__invalid_copyInput,
+                                                                buttonColor: p.XD.LINK,
+                                                                buttonLook: p.pR.LINK,
                                                             }),
                                                         }),
-                                                    (0, s.jsx)("div", {
-                                                        className: y.W$,
-                                                        children: S.intl.string(S.t.QWKUpn),
+                                                    (0, l.jsx)("div", {
+                                                        className: F.W$,
+                                                        children: G.intl.string(G.t.QWKUpn),
                                                     }),
                                                 ],
                                             });
@@ -189,17 +190,17 @@ function F(e) {
                                 }),
                       ],
                   }),
-                  X &&
-                      (0, s.jsx)(w.UX, {
-                          children: (0, s.jsx)(u.j, {
-                              children: (0, s.jsx)("div", {
-                                  className: y.pP,
-                                  children: (0, s.jsx)(C.$, {
+                  z &&
+                      (0, l.jsx)(k.UX, {
+                          children: (0, l.jsx)(c.j, {
+                              children: (0, l.jsx)("div", {
+                                  className: F.pP,
+                                  children: (0, l.jsx)(d.$, {
                                       variant: "primary",
                                       fullWidth: !0,
-                                      text: S.intl.string(S.t.PDTjLN),
+                                      text: G.intl.string(G.t.PDTjLN),
                                       onClick: () => {
-                                          H(), q();
+                                          A(), K();
                                       },
                                   }),
                               }),
@@ -208,70 +209,70 @@ function F(e) {
               ],
           });
 }
-function G(e) {
+function B(e) {
     let { giftCode: t, onClose: n } = e;
-    l.useEffect(() => {
-        E.A.fetchRelationships(), (0, A.u)();
+    i.useEffect(() => {
+        S.A.fetchRelationships(), (0, g.u)();
     }, []);
-    let [i, a] = l.useState(),
-        [r, u] = l.useState(!1),
-        [o, m] = l.useState(!1),
-        { userAffinities: L, isLoading: h } = (0, d.cf)([I.A], () => ({
-            userAffinities: I.A.getUserAffinitiesMap(),
-            isLoading: I.A.isFetching(),
+    let [r, a] = i.useState(),
+        [s, c] = i.useState(!1),
+        [p, m] = i.useState(!1),
+        { userAffinities: C, isLoading: E } = (0, u.cf)([x.A], () => ({
+            userAffinities: x.A.getUserAffinitiesMap(),
+            isLoading: x.A.isFetching(),
         })),
-        M = Array.from(L.keys()).sort((e, t) => I.A.compare(e, t)),
-        x = (0, d.bG)([j.A], () => j.A.getFriendIDs()),
-        f = c().difference(x, M),
-        _ = [...M, ...f],
-        v = (0, d.bG)([R.default], () => R.default.filter((e) => _.includes(e.id) && !e.bot), [_]);
+        f = Array.from(C.keys()).sort((e, t) => x.A.compare(e, t)),
+        y = (0, u.bG)([N.A], () => N.A.getFriendIDs()),
+        I = o().difference(y, f),
+        T = [...f, ...I],
+        v = (0, u.bG)([R.default], () => R.default.filter((e) => T.includes(e.id) && !e.bot), [T]);
     if (null == v || 0 === v.length) return null;
-    let T = c().sortBy(v, (e) => _.indexOf(e.id));
-    return (0, s.jsxs)("div", {
-        className: y.vt,
+    let M = o().sortBy(v, (e) => T.indexOf(e.id));
+    return (0, l.jsxs)("div", {
+        className: F.vt,
         children: [
-            (0, s.jsxs)("div", {
-                className: y.AQ,
+            (0, l.jsxs)("div", {
+                className: F.AQ,
                 children: [
-                    (0, s.jsx)(H.Z, {
+                    (0, l.jsx)(A.Z, {
                         selectionMode: "single",
-                        label: S.intl.string(S.t.MJw05f),
-                        placeholder: S.intl.string(S.t.J019jZ),
-                        loading: h,
-                        value: i,
+                        label: G.intl.string(G.t.MJw05f),
+                        placeholder: G.intl.string(G.t.J019jZ),
+                        loading: E,
+                        value: r,
                         onSelectionChange: (e) => {
-                            a(e), u(!1);
+                            a(e), c(!1);
                         },
-                        options: T.map((e) => ({
+                        options: M.map((e) => ({
                             id: e.id,
                             value: e,
-                            label: `${Z.Ay.getUserTag(e)}`,
-                            leading: (0, s.jsx)(p.A, { user: e, size: g._3.SIZE_20 }),
+                            label: `${L.Ay.getUserTag(e)}`,
+                            leading: (0, l.jsx)(P.A, { user: e, size: h._3.SIZE_20 }),
                         })),
                     }),
-                    (0, s.jsx)("div", {
-                        className: y.Qg,
-                        children: (0, s.jsx)(C.$, {
-                            disabled: null == i,
-                            loading: o,
+                    (0, l.jsx)("div", {
+                        className: F.Qg,
+                        children: (0, l.jsx)(d.$, {
+                            disabled: null == r,
+                            loading: p,
                             onClick: () => {
                                 m(!0),
-                                    (0, N.UN)(i, t)
+                                    (0, _.UN)(r, t)
                                         .then(() => {
                                             n();
                                         })
                                         .catch(() => {
-                                            u(!0), m(!1);
+                                            c(!0), m(!1);
                                         });
                             },
-                            text: S.intl.string(S.t["+EgwQn"]),
+                            text: G.intl.string(G.t["+EgwQn"]),
                         }),
                     }),
                 ],
             }),
-            (0, s.jsx)("div", {
-                className: r ? y.Sc : y.W$,
-                children: r ? S.intl.string(S.t.jo5Vbl) : S.intl.string(S.t["8/N3v3"]),
+            (0, l.jsx)("div", {
+                className: s ? F.Sc : F.W$,
+                children: s ? G.intl.string(G.t.jo5Vbl) : G.intl.string(G.t["8/N3v3"]),
             }),
         ],
     });

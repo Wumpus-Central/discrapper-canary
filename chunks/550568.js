@@ -109,11 +109,12 @@ class a {
     afterFold() {
         (function (e, t) {
             if (e.scripts.size <= t) return !1;
-            let n = Array.from(e.scripts.values()).sort(
-                    (e, t) => e.downloadMs + e.totalEvalMs - (t.downloadMs + t.totalEvalMs),
-                ),
-                i = e.scripts.size - t;
-            for (let t = 0; t < i; t++) e.scripts.delete(n[t].url);
+            function n(e) {
+                return e.downloadMs + e.totalEvalMs;
+            }
+            let i = Array.from(e.scripts.values()).sort((e, t) => n(e) - n(t)),
+                r = e.scripts.size - t;
+            for (let t = 0; t < r; t++) e.scripts.delete(i[t].url);
             return !0;
         })(this.state, this.maxUrls) &&
             !this.warnedEviction &&
@@ -163,17 +164,20 @@ function d() {
     if (null == s || l) return {};
     (l = !0), s.drainPending();
     let e = s.snapshot();
+    function t(e) {
+        return e.downloadMs + e.totalEvalMs;
+    }
     s.stop(), (s = null);
-    let t = [...e.scripts]
-        .filter((e) => e.downloadMs + e.totalEvalMs >= 32)
-        .sort((e, t) => t.downloadMs + t.totalEvalMs - (e.downloadMs + e.totalEvalMs))
+    let n = [...e.scripts]
+        .filter((e) => t(e) >= 32)
+        .sort((e, n) => t(n) - t(e))
         .slice(0, 20);
     return {
         script_cost_loaf_supported: e.loafSupported,
         script_cost_unattributed_eval_ms: Math.round(e.unattributedEvalMs),
         script_cost_total_count: e.totalScriptsObserved,
-        script_cost_reported_count: t.length,
-        script_cost_url: t.map((e) =>
+        script_cost_reported_count: n.length,
+        script_cost_url: n.map((e) =>
             (function (e) {
                 if (e.startsWith("<")) return e;
                 try {
@@ -184,11 +188,11 @@ function d() {
                 }
             })(e.url),
         ),
-        script_cost_download_ms: t.map((e) => Math.round(e.downloadMs)),
-        script_cost_transfer_size_bytes: t.map((e) => e.transferSizeBytes),
-        script_cost_from_cache: t.map((e) => e.fromCache),
-        script_cost_initial_eval_ms: t.map((e) => Math.round(e.initialEvalMs)),
-        script_cost_total_eval_ms: t.map((e) => Math.round(e.totalEvalMs)),
-        script_cost_eval_attributed: t.map((e) => e.evalAttributed),
+        script_cost_download_ms: n.map((e) => Math.round(e.downloadMs)),
+        script_cost_transfer_size_bytes: n.map((e) => e.transferSizeBytes),
+        script_cost_from_cache: n.map((e) => e.fromCache),
+        script_cost_initial_eval_ms: n.map((e) => Math.round(e.initialEvalMs)),
+        script_cost_total_eval_ms: n.map((e) => Math.round(e.totalEvalMs)),
+        script_cost_eval_attributed: n.map((e) => e.evalAttributed),
     };
 }

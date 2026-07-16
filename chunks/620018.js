@@ -4,17 +4,17 @@ var l = n(627968),
     s = n(503698),
     r = n.n(s),
     a = n(364522),
-    u = n(534514),
+    u = n(297264),
     c = n(123292),
     d = n(935208),
-    o = n(735438),
+    o = n(435558),
     m = n.n(o),
     g = n(17928),
     h = n(919796),
     v = n(927813),
     p = n(285059),
     f = n(698441),
-    A = n(647090),
+    A = n(974930),
     E = n(890856),
     y = n(834730),
     C = n(408278),
@@ -146,7 +146,7 @@ function P(t) {
             return {
                 recurrenceStartTimes: r,
                 canViewMoreRecurrences: u,
-                updateRecurrenceStartTimes: () => {
+                updateRecurrenceStartTimes: function () {
                     if (null == n || null == l) return;
                     let t = (0, A.X7)(n),
                         e = r[r.length - 1];

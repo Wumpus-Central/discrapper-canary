@@ -7,10 +7,10 @@ var l = n(627968),
 let o = "social-layer-storefront-item-claimed-successfully-modal",
     u = (e) => {
         let { sku: t, application: u, analyticsLocations: c, entitlement: d } = e,
-            p = !1,
-            m = (e) => {
-                p = e.shouldIgnoreCloseRequest;
-            };
+            p = !1;
+        function m(e) {
+            p = e.shouldIgnoreCloseRequest;
+        }
         (0, i.openModalLazy)(
             async () => {
                 let { SocialLayerStorefrontItemClaimedSuccessfullyModal: e } = await Promise.all([

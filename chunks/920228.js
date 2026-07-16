@@ -2,39 +2,39 @@
 n.d(t, { A: () => r });
 var i = n(64700);
 function r(e) {
-    let { videoRef: t, enabled: n, onPipPause: r, onHiddenPause: s } = e,
-        a = i.useRef(r),
-        o = i.useRef(s),
-        l = i.useRef(!1);
+    let { videoRef: t, enabled: n, onPipPause: r, onHiddenPause: a } = e,
+        s = i.useRef(r),
+        l = i.useRef(a),
+        o = i.useRef(!1);
     i.useEffect(() => {
-        (a.current = r), (o.current = s);
-    }, [r, s]),
+        (s.current = r), (l.current = a);
+    }, [r, a]),
         i.useEffect(() => {
             if (!n) return;
             let e = t.current;
-            if (null == e) return;
+            if (null != e)
+                return (
+                    e.addEventListener("enterpictureinpicture", i),
+                    e.addEventListener("play", r),
+                    e.addEventListener("pause", a),
+                    () => {
+                        e.removeEventListener("enterpictureinpicture", i),
+                            e.removeEventListener("play", r),
+                            e.removeEventListener("pause", a);
+                    }
+                );
             function i() {
-                l.current || a.current();
+                o.current || s.current();
             }
-            let r = () => {
+            function r() {
                 document.pictureInPictureElement === e
-                    ? a.current()
+                    ? s.current()
                     : "hidden" === document.visibilityState
-                      ? o.current()
-                      : (l.current = !1);
-            };
-            function s() {
-                l.current = !0;
+                      ? l.current()
+                      : (o.current = !1);
             }
-            return (
-                e.addEventListener("enterpictureinpicture", i),
-                e.addEventListener("play", r),
-                e.addEventListener("pause", s),
-                () => {
-                    e.removeEventListener("enterpictureinpicture", i),
-                        e.removeEventListener("play", r),
-                        e.removeEventListener("pause", s);
-                }
-            );
+            function a() {
+                o.current = !0;
+            }
         }, [t, n]);
 }

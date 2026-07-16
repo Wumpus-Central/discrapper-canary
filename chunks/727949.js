@@ -39,7 +39,7 @@ function p(e) {
         ? (0, s.qr)(r.M.REFERRAL_PROGRAM_POPOVER_V2, e, { dismissAction: _.i.INDIRECT_ACTION })
         : (0, a.Dr)(r.M.REFERRAL_PROGRAM_POPOVER);
 }
-let T = () => {
+function T() {
     let e,
         t = (0, u.m)(!1),
         n = (0, i.bG)([d.A], () => d.A.getReferralsRemaining()),
@@ -50,4 +50,4 @@ let T = () => {
             : !(0, a.k8)(r.M.REFERRAL_PROGRAM_POPOVER)),
         t && e && null != n && n > 0
     );
-};
+}

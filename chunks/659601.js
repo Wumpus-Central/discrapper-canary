@@ -21,15 +21,15 @@ self.addEventListener("message", (e) => {
                     y = h ? (15 & e[5]) / 15 : 1,
                     O = (e[5] >> 4) / 15,
                     m = h ? 6 : 5,
-                    w = 0,
-                    x = (r, t, o) => {
-                        let a = [];
-                        for (let l = 0; l < t; l++)
-                            for (let f = +!l; f * t < r * (t - l); f++)
-                                a.push((((e[m + (w >> 1)] >> ((1 & w++) << 2)) & 15) / 7.5 - 1) * o);
-                        return a;
-                    },
-                    j = x(v, g, ((s >> 18) & 31) / 31 / 2),
+                    w = 0;
+                function x(r, t, o) {
+                    let a = [];
+                    for (let l = 0; l < t; l++)
+                        for (let f = +!l; f * t < r * (t - l); f++)
+                            a.push((((e[m + (w >> 1)] >> ((1 & w++) << 2)) & 15) / 7.5 - 1) * o);
+                    return a;
+                }
+                let j = x(v, g, ((s >> 18) & 31) / 31 / 2),
                     k = x(3, 3, (((p >> 3) & 63) / 63) * t),
                     P = x(3, 3, (((p >> 9) & 63) / 63) * t),
                     A = h ? x(5, 5, O) : [],

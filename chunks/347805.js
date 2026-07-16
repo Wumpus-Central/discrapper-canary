@@ -34,7 +34,7 @@ function m(e) {
                       let l = e.currentTarget.value;
                       (h ?? "") !== l && (p?.(), s.A.updateNote(m, l));
                   },
-                  onKeyPress: (e) => {
+                  onKeyPress: function (e) {
                       e.key === c.dh.ENTER
                           ? e.shiftKey
                               ? (e.currentTarget.value.match(/\n/g) ?? []).length >= 5 && e.preventDefault()

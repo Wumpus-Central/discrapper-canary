@@ -27,7 +27,7 @@ function h(e, t, h) {
         id: "report-stream-problem",
         color: "danger",
         label: A.intl.string(A.t.sdnCxV),
-        action: () => {
+        action: function () {
             h?.(),
                 null != e &&
                     (0, l.openModalLazy)(async () => {

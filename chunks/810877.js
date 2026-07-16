@@ -14,20 +14,20 @@ var i = n(830917),
     h = n(307731),
     E = n(652215),
     j = n(375708),
-    N = n(264572).Buffer;
-function f(e, t, n, i) {
+    f = n(264572).Buffer;
+function N(e, t, n, i) {
     return (
         m.default.track(E.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { guild_id: n, file_size: t, upload_id: i }),
         u.o.TOO_BIG
     );
 }
-let p = async (e) => {
+async function p(e) {
     let { data: t, file: n, guildId: p, uploadId: A, roles: I, image: S, hideErrorModal: C, analyticsLocation: v } = e,
         _ = d.A.fromBlob(c.f.EMOJI, n),
         T = g.Ay.sanitizeEmojiName(n.name.split(".")[0]);
     if (g.Ay.isFileTooBig(n)) {
         if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
-            return f(n.name, n.size, p, A);
+            return N(n.name, n.size, p, A);
         else if (null != S) {
             var b, y;
             let e;
@@ -35,7 +35,7 @@ let p = async (e) => {
             try {
                 e = g.Ay.isDataTooBig(t);
             } catch (e) {
-                return f(n.name, n.size, p, A);
+                return N(n.name, n.size, p, A);
             }
             if (
                 ((b = t),
@@ -49,7 +49,7 @@ let p = async (e) => {
                 }),
                 e)
             )
-                return f(n.name, n.size, p, A);
+                return N(n.name, n.size, p, A);
         }
     }
     try {
@@ -73,7 +73,7 @@ let p = async (e) => {
                       : null != i.image || i.code === E.t02.INVALID_FILE_ASSET_SIZE
                         ? (m.default.track(E.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
                               guild_id: p,
-                              file_size: N.byteLength(t),
+                              file_size: f.byteLength(t),
                               upload_id: A,
                           }),
                           (e = j.intl.formatToPlainString(j.t.kIO9jy, { maxSize: h.EMOJI_MAX_FILESIZE_KB })),
@@ -85,4 +85,4 @@ let p = async (e) => {
             n
         );
     }
-};
+}

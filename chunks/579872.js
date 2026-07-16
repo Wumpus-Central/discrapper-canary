@@ -1,49 +1,49 @@
 "use strict";
-n.d(t, { A: () => a }), n(321073);
+n.d(t, { A: () => s }), n(321073);
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    s = n(375708);
-let a = {
+    a = n(375708);
+let s = {
     show(e) {
         let {
             title: t,
-            body: a,
-            confirmText: o,
-            confirmVariant: l = "primary",
-            cancelText: u,
+            body: s,
+            confirmText: l,
+            confirmVariant: o = "primary",
+            cancelText: d,
             onConfirm: c,
-            onCancel: d,
+            onCancel: u,
             onCloseCallback: _,
-            contextKey: h,
+            contextKey: E,
         } = e;
         (0, r.openModalLazy)(
             async () => {
                 let { Modal: e } = await Promise.resolve().then(n.bind(n, 189213));
-                return (n) => {
+                return function (n) {
                     let r = [];
                     return (
-                        null != u &&
-                            "" !== u &&
+                        null != d &&
+                            "" !== d &&
                             r.push({
-                                text: u,
+                                text: d,
                                 onClick: async () => {
-                                    d?.(), await n.onClose();
+                                    u?.(), await n.onClose();
                                 },
                                 variant: "secondary",
                             }),
                         r.push({
-                            text: null != o ? o : s.intl.string(s.t.BddRzS),
+                            text: null != l ? l : a.intl.string(a.t.BddRzS),
                             onClick: async () => {
                                 c?.(), await n.onClose();
                             },
-                            variant: l,
+                            variant: o,
                         }),
-                        (0, i.jsx)(e, { ...n, size: "sm", title: t, subtitle: a, actions: r })
+                        (0, i.jsx)(e, { ...n, size: "sm", title: t, subtitle: s, actions: r })
                     );
                 };
             },
-            { onCloseCallback: _, contextKey: h },
+            { onCloseCallback: _, contextKey: E },
         );
     },
     close() {},
@@ -53,7 +53,7 @@ let a = {
                 onConfirm() {
                     t(!0);
                 },
-                cancelText: s.intl.string(s.t["ETE/oC"]),
+                cancelText: a.intl.string(a.t["ETE/oC"]),
                 onCancel() {
                     t(!1);
                 },

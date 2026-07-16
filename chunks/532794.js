@@ -29,8 +29,8 @@ function S(e) {
             analyticsLocations: R,
             analyticsObject: O,
             analyticsLocation: L,
-            analyticsSourceLocation: D,
-            confirmationFooter: y,
+            analyticsSourceLocation: y,
+            confirmationFooter: D,
             isGift: v = !1,
             giftMessage: b,
             giftStyle: M,
@@ -61,9 +61,9 @@ function S(e) {
                   }, p.K)
                 : (0, a.closeModal)(W));
     }
-    let Z = (e) => {
+    function Z(e) {
         (0, o.ET)(), (0, l.ET)(), (0, d.z)(), e && null != C && C();
-    };
+    }
     function X() {
         return (0, a.closeModal)(W);
     }
@@ -287,10 +287,16 @@ function S(e) {
                     subscriptionTier: U,
                     skipConfirm: !!j,
                     paymentModalOnClose: (e) =>
-                        ((e, t) => {
-                            if (z) return;
-                            (z = !0), I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED);
-                            let n = async () => {
+                        (function (e, t) {
+                            z ||
+                                ((z = !0),
+                                I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
+                                A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
+                                    ? setTimeout(() => {
+                                          n();
+                                      }, p.K)
+                                    : n());
+                            async function n() {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
@@ -306,19 +312,14 @@ function S(e) {
                                             overrideGradientColor: "nitro-pink",
                                         });
                                 }
-                            };
-                            A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
-                                ? setTimeout(() => {
-                                      n();
-                                  }, p.K)
-                                : n();
+                            }
                         })(e, X),
                 },
-                unifiedCheckoutProviderProps: { analyticsSourceLocation: D, analyticsLocations: R },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: R },
                 checkoutHandlers: { onClose: S, onComplete: N },
                 giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
                 tenantParams: {
-                    confirmationFooter: y,
+                    confirmationFooter: D,
                     defaultPlanId: void 0,
                     referralCode: null,
                     referralTrialOfferId: F,

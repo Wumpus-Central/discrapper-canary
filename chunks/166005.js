@@ -3,15 +3,15 @@ var t = n(627968),
     i = n(64700),
     r = n(503698),
     s = n.n(r),
-    o = n(835245),
+    o = n(132500),
     a = n(837381),
     d = n(887129),
     u = n(17928),
     c = n(661531),
-    x = n(990078),
-    g = n(602853),
-    h = n(545442),
-    m = n(173936),
+    x = n(602853),
+    g = n(545442),
+    h = n(173936),
+    m = n(866665),
     f = n(834730),
     j = n(939249),
     b = n(789645),
@@ -44,7 +44,7 @@ function W(e) {
         j = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
         b = (0, k.X_)(n, l, l.colorStrings),
         R = l.tags?.guild_connections === null,
-        C = (0, g.r)(J).hex(),
+        C = (0, x.r)(J).hex(),
         v = l.colorString ?? C;
     return (0, t.jsxs)("div", {
         ref: r,
@@ -52,10 +52,10 @@ function W(e) {
         style: d,
         children: [
             "dot" === j
-                ? (0, t.jsx)(h.W, { className: O.m4, color: v, background: !1, colors: b, tooltip: !1 })
-                : (0, t.jsx)(h.R, { color: v, colors: b }),
-            R && (0, t.jsx)(m.q, { className: O.AP, size: "custom", width: 12, height: 12, color: "currentColor" }),
-            (0, t.jsx)(x.m, {
+                ? (0, t.jsx)(g.W, { className: O.m4, color: v, background: !1, colors: b, tooltip: !1 })
+                : (0, t.jsx)(g.R, { color: v, colors: b }),
+            R && (0, t.jsx)(h.q, { className: O.AP, size: "custom", width: 12, height: 12, color: "currentColor" }),
+            (0, t.jsx)(m.m, {
                 text: l.name,
                 overflowOnly: !0,
                 ariaHidden: !0,
@@ -78,20 +78,20 @@ function X(e) {
     let { role: l, canRemove: n, onRemoveRole: r, onContextMenu: s, ...o } = e,
         { tabIndex: d, ...u } = (0, a.rm)(l.id),
         c = (0, M.GV)(),
-        g = i.useCallback(
+        x = i.useCallback(
             (e) => {
                 e.preventDefault(), e.stopPropagation(), r?.(l);
             },
             [r, l],
         ),
-        h = n
-            ? (0, t.jsx)(x.m, {
+        g = n
+            ? (0, t.jsx)(m.m, {
                   text: H.intl.string(H.t["T+3Adg"]),
                   spacing: 4,
                   ariaHidden: !0,
                   children: (0, t.jsx)(j.D, {
                       "aria-label": H.intl.formatToPlainString(H.t.QrxwhY, { roleName: l.name }),
-                      onClick: g,
+                      onClick: x,
                       className: O.DT,
                       tabIndex: d,
                       children: (0, t.jsx)(b.P, { size: "xxs", color: "currentColor" }),
@@ -105,7 +105,7 @@ function X(e) {
             onContextMenu: s,
             className: O.b6,
             "aria-labelledby": c,
-            children: (0, t.jsx)(W, { role: l, className: n ? O.nO : void 0, trailing: h, labelId: c, ...o }),
+            children: (0, t.jsx)(W, { role: l, className: n ? O.nO : void 0, trailing: g, labelId: c, ...o }),
         }),
     });
 }
@@ -128,9 +128,9 @@ function $(e) {
     let { userId: l, guild: n, showLabel: r = !1, onAddRole: o, buttonRef: a } = e,
         d = (0, u.bG)([G.default], () => G.default.getCurrentUser()),
         c = null != d ? T.HJ(n, d.id) : null,
-        g = (0, u.bG)([L.Ay], () => L.Ay.getMember(n.id, l)),
-        h = g?.roles ?? [],
-        m = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
+        x = (0, u.bG)([L.Ay], () => L.Ay.getMember(n.id, l)),
+        g = x?.roles ?? [],
+        h = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
         b = i.useRef(null),
         R = a ?? b,
         A = i.useCallback(
@@ -143,7 +143,7 @@ function $(e) {
             [n.id, l, o],
         );
     function p(e) {
-        return !(0, P.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === h.indexOf(e.id);
+        return !(0, P.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === g.indexOf(e.id);
     }
     return (0, t.jsx)(C.Y, {
         targetElementRef: R,
@@ -151,10 +151,10 @@ function $(e) {
         align: "center",
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, t.jsx)(z.A, { guild: n, roleStyle: m, roleFilter: p, onSelect: A, onClose: l });
+            return (0, t.jsx)(z.A, { guild: n, roleStyle: h, roleFilter: p, onSelect: A, onClose: l });
         },
         children: (e) =>
-            (0, t.jsx)(x.m, {
+            (0, t.jsx)(m.m, {
                 text: H.intl.string(H.t.e3Wlyw),
                 shouldShow: !r,
                 ariaHidden: !0,
@@ -286,7 +286,7 @@ function F(e) {
     let { isExpanded: l, overflowCount: n, onClick: i, buttonRef: r } = e,
         o = l ? H.intl.string(H.t.XnXtCt) : H.intl.string(H.t.DY6n4q),
         a = l ? H.intl.string(H.t.XnXtCt) : H.intl.formatToPlainString(H.t.zr0Y5R, { numberOfItems: n });
-    return (0, t.jsx)(x.m, {
+    return (0, t.jsx)(m.m, {
         text: o,
         ariaHidden: !0,
         children: (0, t.jsx)(j.D, {
@@ -300,11 +300,11 @@ function F(e) {
         }),
     });
 }
-let K = (e) => {
+function K(e) {
     if (null == e) return 0;
     let { width: l } = e.getBoundingClientRect();
     return l > 0 ? l + 4 : 0;
-};
+}
 function V(e) {
     let {
             userId: l,

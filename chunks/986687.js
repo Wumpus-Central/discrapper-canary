@@ -7,16 +7,16 @@ var l = a(627968),
     d = a(778712),
     o = a(346055),
     u = a(480335),
-    c = a(474257),
+    c = a(372320),
     m = a(744808),
     g = a(999291),
     p = a(101928),
     h = a(854627),
     v = a(946356),
     y = a(983495),
-    x = a(696451),
-    A = a(919395),
-    f = a(97808),
+    f = a(696451),
+    x = a(919395),
+    A = a(97808),
     P = a(133171),
     j = a(939249),
     I = a(403581),
@@ -46,7 +46,7 @@ let B = function (e) {
 var U = a(252732),
     V = a(339984),
     _ = a(430770);
-let z = T.Ay.getEnableHardwareAcceleration() ? f.Js : f.eu;
+let z = T.Ay.getEnableHardwareAcceleration() ? A.Js : A.eu;
 function E(e) {
     let {
             user: i,
@@ -62,8 +62,8 @@ function E(e) {
             isTryItOut: v,
             onUpsellClick: y,
         } = e,
-        x = r.useRef(null),
-        { analyticsLocations: A, newestAnalyticsLocation: f } = (0, N.Ay)(),
+        f = r.useRef(null),
+        { analyticsLocations: x, newestAnalyticsLocation: A } = (0, N.Ay)(),
         T = (0, t.bG)([D.A], () => D.A.getStatus(i.id)),
         k = null == a || n?.canUsePremiumProfileCustomization || o,
         O = (0, l.jsx)(z, {
@@ -80,22 +80,22 @@ function E(e) {
         ? (0, l.jsx)("div", { className: _.my, children: O })
         : k
           ? (0, l.jsx)(b.Y, {
-                targetElementRef: x,
+                targetElementRef: f,
                 renderPopout: (e) => {
                     let { closePopout: i } = e;
                     return (0, l.jsx)(B, {
                         onClose: i,
                         onChangeAvatar: () =>
-                            (0, U.XD)({ uploadType: V.HL.AVATAR, guildId: a?.id, analyticsSource: f, isTryItOut: v }),
+                            (0, U.XD)({ uploadType: V.HL.AVATAR, guildId: a?.id, analyticsSource: A, isTryItOut: v }),
                         onChangeAvatarDecoration: () => {
-                            (0, w.L)({ guild: null == a ? void 0 : a, analyticsLocations: A });
+                            (0, w.L)({ guild: null == a ? void 0 : a, analyticsLocations: x });
                         },
                     });
                 },
                 children: (e) =>
                     (0, l.jsxs)(j.D, {
                         ...e,
-                        innerRef: x,
+                        innerRef: f,
                         className: s()(_.my, _.vk),
                         children: [
                             O,
@@ -112,7 +112,7 @@ function E(e) {
                 ],
             });
 }
-var R = a(534514),
+var R = a(297264),
     L = a(702211),
     F = a(915614),
     G = a(996988),
@@ -144,7 +144,7 @@ function Y(e) {
         children:
             !o &&
             (0, l.jsxs)(j.D, {
-                onClick: () => {
+                onClick: function () {
                     m || p
                         ? (0, U.XD)({ uploadType: V.HL.BANNER, analyticsSource: c, guildId: r, isTryItOut: d })
                         : u?.();
@@ -185,9 +185,9 @@ function K(e) {
             hideBioSection: h,
             shouldOpenBadgeTooltip: v,
         } = e,
-        y = (0, t.bG)([x.Ay], () => (null == r ? null : x.Ay.getMember(r.id, i.id))),
-        A = (0, t.bG)([X.A], () => X.A.hidePersonalInformation),
-        f = a?.getPreviewBio(o),
+        y = (0, t.bG)([f.Ay], () => (null == r ? null : f.Ay.getMember(r.id, i.id))),
+        x = (0, t.bG)([X.A], () => X.A.hidePersonalInformation),
+        A = a?.getPreviewBio(o),
         P = u ?? a?.pronouns,
         j = (0, U.eh)({ pendingNickname: s, pendingGlobalName: d, user: i, guildMember: y }),
         I = (0, Z.gS)(p);
@@ -200,7 +200,7 @@ function K(e) {
                 guildId: r?.id,
                 displayName: j,
                 pendingDisplayNameStyles: g,
-                usernameIcon: (() => {
+                usernameIcon: (function () {
                     if (null != y) {
                         if (null !== n && (null != y.avatar || null != n))
                             return (0, l.jsx)(W.A, { user: i, nickname: j });
@@ -217,9 +217,9 @@ function K(e) {
                 }),
             }),
             !h &&
-                null != f &&
-                "" !== f &&
-                (0, l.jsx)(Q.A, { userId: i.id, userBio: f, hidePersonalInformation: A, viewFullBioDisabled: !0 }),
+                null != A &&
+                "" !== A &&
+                (0, l.jsx)(Q.A, { userId: i.id, userBio: A, hidePersonalInformation: x, viewFullBioDisabled: !0 }),
         ],
     });
 }
@@ -249,7 +249,7 @@ function er(e) {
             guild: a,
             canUsePremiumCustomization: r,
             onUpsellClick: n,
-            pendingBanner: f,
+            pendingBanner: A,
             pendingAccentColor: P,
             pendingBio: j,
             pendingPronouns: I,
@@ -279,8 +279,8 @@ function er(e) {
             interactive: J = !0,
         } = e,
         $ = (0, g.Ay)(i.id, a?.id),
-        ee = (0, t.bG)([x.Ay], () => (null != a ? x.Ay.getMember(a.id, i.id) : null)),
-        er = (0, A.lw)({
+        ee = (0, t.bG)([f.Ay], () => (null != a ? f.Ay.getMember(a.id, i.id) : null)),
+        er = (0, x.lw)({
             pendingValue: C,
             userValue: i?.avatarDecoration,
             guildValue: ee?.avatarDecoration,
@@ -294,7 +294,7 @@ function er(e) {
             size: d._3.SIZE_80,
             showPending: !0,
         }),
-        et = (0, A.lw)({
+        et = (0, x.lw)({
             pendingValue: T,
             userValue: $?._userProfile?.profileEffect,
             guildValue: $?._guildMemberProfile?.profileEffect,
@@ -302,7 +302,7 @@ function er(e) {
         }),
         ed = q
             ? void 0
-            : (0, A.lw)({
+            : (0, x.lw)({
                   pendingValue: O,
                   userValue: $?._userProfile?.profileFrame,
                   guildValue: $?._guildMemberProfile?.profileFrame,
@@ -327,7 +327,7 @@ function er(e) {
                             displayProfile: $,
                             guildId: a?.id,
                             canUsePremiumCustomization: r,
-                            pendingBanner: f,
+                            pendingBanner: A,
                             pendingAccentColor: P,
                             isTryItOut: L,
                             disabledInputs: F,

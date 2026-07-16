@@ -195,20 +195,20 @@ function W(e, t) {
             r = e(M, { skipExtensionCheck: void 0, analyticsLocations: i, messageId: y, channelId: v });
         if (null != r && r(t)) return;
     }
-    let V = () => {
-            (U &&
-                p.A.trackAnnouncementMessageLinkClicked({
-                    messageId: w,
-                    channelId: v,
-                    guildId: P,
-                    sourceChannelId: G,
-                    sourceGuildId: x,
-                }),
-            null != E)
-                ? E()
-                : (0, d.A)(M);
-        },
-        B = O ?? (() => {});
+    function V() {
+        (U &&
+            p.A.trackAnnouncementMessageLinkClicked({
+                messageId: w,
+                channelId: v,
+                guildId: P,
+                sourceChannelId: G,
+                sourceGuildId: x,
+            }),
+        null != E)
+            ? E()
+            : (0, d.A)(M);
+    }
+    let B = O ?? (() => {});
     if (null !== I.isBlockedDomain(M)) {
         t?.preventDefault(), _.show(M);
         return;

@@ -1,21 +1,21 @@
-l.d(t, { t: () => c });
-var s = l(96337),
-    n = l(997101),
-    a = l(626584);
-let r = new Set(s.A.map((e) => e.alpha2)),
-    i = [`${n.d.AN}`, `${n.d.MI}`, `${n.d.TP}`],
-    d = new a.A("GetFlagEmoji"),
-    c = (e) => {
-        if (null == e) return "";
-        try {
-            if (i.includes(e) || !r.has(e)) return l(874629)("./1f30e.svg");
-            let t = e
-                .toUpperCase()
-                .split("")
-                .map((e) => (127397 + e.charCodeAt(0)).toString(16))
-                .join("-");
-            return l(874629)(`./${t}.svg`);
-        } catch (e) {
-            return d.error("Error getting flag emoji: ", e), "";
-        }
-    };
+n.d(t, { t: () => o });
+var l = n(96337),
+    r = n(997101),
+    a = n(626584);
+let i = new Set(l.A.map((e) => e.alpha2)),
+    s = [`${r.d.AN}`, `${r.d.MI}`, `${r.d.TP}`],
+    u = new a.A("GetFlagEmoji");
+function o(e) {
+    if (null == e) return "";
+    try {
+        if (s.includes(e) || !i.has(e)) return n(874629)("./1f30e.svg");
+        let t = e
+            .toUpperCase()
+            .split("")
+            .map((e) => (127397 + e.charCodeAt(0)).toString(16))
+            .join("-");
+        return n(874629)(`./${t}.svg`);
+    } catch (e) {
+        return u.error("Error getting flag emoji: ", e), "";
+    }
+}

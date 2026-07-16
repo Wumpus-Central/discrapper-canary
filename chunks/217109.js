@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => v, JZ: () => g, Mm: () => h, Wk: () => A, hi: () => p, oP: () => E });
+n.d(t, { Ay: () => A, JZ: () => g, Mm: () => h, Wk: () => v, hi: () => p, oP: () => E });
 var r = n(627968),
     l = n(64700),
     a = n(503698),
@@ -99,7 +99,7 @@ function g() {
 function E(e, t, n, r) {
     return null == t || null == n ? e : r ? e.slice(0, n) : e.slice(n * t, n * (t + 1));
 }
-function A(e, t, n) {
+function v(e, t, n) {
     let {
             paginationStrategy: r = o.oV.PAGINATE,
             perPage: a,
@@ -131,7 +131,7 @@ function A(e, t, n) {
         }
     );
 }
-let v = (e) => {
+let A = function (e) {
     let { columns: t = 3, paginationOptions: n, children: a } = e,
         i = Math.max(1, Math.min(h, Math.floor(t))),
         c = l.Children.count(a),
@@ -140,16 +140,16 @@ let v = (e) => {
             page: u,
             pages: m,
             paginate: g,
-            showPagination: v,
+            showPagination: A,
             paginationPosition: x,
             truncate: T,
             perPage: S,
             setPage: y,
-        } = A(c, n, o),
+        } = v(c, n, o),
         j = l.useMemo(() => E(l.Children.toArray(a), g ? u : void 0, S, T), [u, S, a, g, T]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            v && "top" === x && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
+            A && "top" === x && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
             (0, r.jsx)(f.Provider, {
                 value: n,
                 children: (0, r.jsx)("div", {
@@ -158,7 +158,7 @@ let v = (e) => {
                     children: (0, r.jsx)("div", { className: s()(d.grid, d[`columns${i}`]), children: j }),
                 }),
             }),
-            v && "bottom" === x && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
+            A && "bottom" === x && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
         ],
     });
 };

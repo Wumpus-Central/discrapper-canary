@@ -57,16 +57,17 @@ function p(t) {
 function N(t) {
     let { Icon: e, children: n, endDatetime: s, ...o } = t,
         [c, i] = l.useState(() => (0, h.Z)(s));
-    (0, m.A)(() => {
-        let t = (0, h.Z)(s);
-        i((e) => (null == t ? null : null != e && (0, d.A)(e, t) ? e : t));
-    }, 1e3);
-    let a = () =>
-        (0, r.jsxs)("div", {
+    function a() {
+        return (0, r.jsxs)("div", {
             className: f.lt,
             children: [null != e && (0, r.jsx)(e, { size: "xs", color: "currentColor" }), n],
         });
-    return null != c
+    }
+    return ((0, m.A)(() => {
+        let t = (0, h.Z)(s);
+        i((e) => (null == t ? null : null != e && (0, d.A)(e, t) ? e : t));
+    }, 1e3),
+    null != c)
         ? c.days > 0
             ? (0, r.jsxs)(p, { ...o, children: [a(), (0, r.jsx)(g, { days: c.days })] })
             : (0, r.jsxs)(p, { ...o, children: [a(), (0, r.jsx)(k, { timeLeft: c })] })

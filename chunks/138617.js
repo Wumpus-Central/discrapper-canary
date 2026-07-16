@@ -281,13 +281,13 @@ let ec = [8, 8, 0, 8],
                 },
                 scrollOffset: 20,
                 searchQuery: "",
-            }),
-            C = (e) => {
-                let t = I.length,
-                    n = f.reduce((e, t) => e + t.data.length, 0) - 7 * !!p;
-                p && e + 420 > 48 * t + 56 * n - 512 && g(), N(e), eu(), (o.current = e);
-            },
-            R = r.useRef(C);
+            });
+        function C(e) {
+            let t = I.length,
+                n = f.reduce((e, t) => e + t.data.length, 0) - 7 * !!p;
+            p && e + 420 > 48 * t + 56 * n - 512 && g(), N(e), eu(), (o.current = e);
+        }
+        let R = r.useRef(C);
         r.useEffect(() => {
             R.current = C;
         }),

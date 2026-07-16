@@ -3,10 +3,10 @@ var l = n(627968),
     i = n(64700),
     s = n(503698),
     r = n.n(s),
-    a = n(735438),
+    a = n(435558),
     o = n(451988),
-    u = n(990078),
-    c = n(939249),
+    u = n(939249),
+    c = n(866665),
     d = n(408278),
     m = n(92259),
     p = n(106236),
@@ -142,7 +142,7 @@ let j = i.memo(function (e) {
               onClick: I,
               children: [
                   (M || $) &&
-                      (0, l.jsx)(c.D, {
+                      (0, l.jsx)(u.D, {
                           onClick: I,
                           onMouseEnter: B,
                           onMouseLeave: Y,
@@ -150,7 +150,7 @@ let j = i.memo(function (e) {
                               ref: W,
                               className: C.Wc,
                               style: Z,
-                              onPointerDown: (e) => {
+                              onPointerDown: function (e) {
                                   S(e) && e.currentTarget.setPointerCapture(e.pointerId);
                               },
                               onMouseDown: Q,
@@ -173,7 +173,7 @@ let j = i.memo(function (e) {
                           (M || $) &&
                               (0, l.jsxs)(l.Fragment, {
                                   children: [
-                                      (0, l.jsx)(u.m, {
+                                      (0, l.jsx)(c.m, {
                                           text: E.intl.string(E.t.M6Cmwy),
                                           position: "top",
                                           children: (0, l.jsx)(d.K, {
@@ -196,7 +196,7 @@ let j = i.memo(function (e) {
                                       }),
                                   ],
                               }),
-                          (0, l.jsx)(u.m, {
+                          (0, l.jsx)(c.m, {
                               text: E.intl.string(E.t["9hMafy"]),
                               position: "top",
                               children: (0, l.jsx)(d.K, {

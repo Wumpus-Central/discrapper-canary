@@ -99,7 +99,7 @@ n(508300);
 var O = n(607470);
 n(516653);
 var L = n(375708);
-function D(e) {
+function y(e) {
     let {
             poster: t,
             src: n,
@@ -139,7 +139,7 @@ function D(e) {
           })
         : (0, i.jsx)("img", { alt: "", src: t, width: a, height: s });
 }
-function y(e) {
+function D(e) {
     let {
         src: t,
         poster: n,
@@ -170,7 +170,7 @@ function y(e) {
                 dataSafeSrc: t,
                 children(e) {
                     let { src: n, size: l, animating: c, alt: u } = e;
-                    return (0, i.jsx)(D, {
+                    return (0, i.jsx)(y, {
                         alt: u,
                         className: o,
                         poster: n,
@@ -260,7 +260,7 @@ function Q(e) {
     } catch (e) {
         return null;
     }
-    let a = ((e, t) => {
+    let a = (function (e, t) {
         let { host: n, pathname: i } = t,
             r = [];
         if ((null != i && (r = i.split("/")), "PlayStation" === e)) {
@@ -315,8 +315,8 @@ function ei(e) {
             onControlsHide: R,
             onControlsShow: O,
             onVolumeChange: L,
-            onMute: D,
-            href: y,
+            onMute: y,
+            href: D,
             placeholder: v,
             placeholderVersion: M,
             sourceMetadata: P,
@@ -365,7 +365,7 @@ function ei(e) {
                 volume: g,
                 onPlay: S,
                 onPause: N,
-                onMute: D,
+                onMute: y,
                 onControlsHide: R,
                 onControlsShow: O,
                 sourceMetadata: P,
@@ -426,7 +426,7 @@ function ei(e) {
                     children: f
                         ? (0, i.jsx)(b.A, {
                               onPlay: null != d ? k : null,
-                              externalURL: y,
+                              externalURL: D,
                               renderLinkComponent: I,
                               messageId: P?.message?.id,
                               channelId: P?.message?.channel_id,
@@ -456,7 +456,7 @@ function er(e) {
         placeholderVersion: f,
         sourceMetadata: T,
     } = e;
-    return (0, i.jsx)(y, {
+    return (0, i.jsx)(D, {
         className: s()(p.pu, t),
         original: n,
         poster: (0, V.E)(o),

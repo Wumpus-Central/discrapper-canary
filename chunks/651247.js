@@ -5,15 +5,15 @@ var i,
     l = n(17928),
     a = n(821609),
     u = n(935462),
-    o = n(534514),
+    o = n(297264),
     c = n(289873),
     d = n(793574),
     p = n(688810),
     m = n(571827),
     g = n(725807),
     h = n(919395),
-    x = n(84540),
-    f = n(287809),
+    f = n(84540),
+    x = n(287809),
     I = n(174459),
     A = n(428262),
     C = n(662388),
@@ -41,9 +41,9 @@ let F = function (e) {
             pendingProfileEffect: m,
             pendingDisplayNameStyles: g,
             pendingThemeColors: h,
-            pendingAccentColor: x,
+            pendingAccentColor: f,
         } = (0, l.cf)([S.A], () => S.A.getPendingChanges(i?.id)),
-        f = A.Ay.canUsePremiumProfileCustomization(t),
+        x = A.Ay.canUsePremiumProfileCustomization(t),
         I = (0, N.A)() && null != o ? P.Ay.parse(void 0, o).content : o;
     return (0, s.jsxs)("div", {
         className: b.i,
@@ -60,10 +60,10 @@ let F = function (e) {
                 pendingAvatar: (0, E.V7)({ userId: t.id, image: d }),
                 pendingAvatarDecoration: p,
                 pendingThemeColors: h,
-                pendingAccentColor: x,
+                pendingAccentColor: f,
                 pendingProfileEffect: m,
                 pendingDisplayNameStyles: g,
-                canUsePremiumCustomization: f,
+                canUsePremiumCustomization: x,
                 disabledInputs: !0,
                 hideCustomStatus: !0,
             }),
@@ -126,7 +126,9 @@ let W = { skuId: "None" },
     };
 var Y = n(665411),
     q = n(900183);
-let Q = () => 80;
+function Q() {
+    return 80;
+}
 function ee(e) {
     let { children: t, className: n, isSelected: i, ...r } = e;
     return (0, s.jsx)(T.D, {
@@ -156,7 +158,7 @@ function et(e) {
         ],
     });
 }
-let en = (e) => {
+let en = function (e) {
     let { user: t, guild: n, pendingProfileFrame: i, selectedProfileFrameRef: r, onSelect: l, onOpenShop: a } = e,
         u = Z(),
         c = null != i,
@@ -310,15 +312,15 @@ function ea(e) {
             onClose: m,
         } = e,
         { pendingProfileFrame: g } = (0, h.Tu)(n?.id),
-        f = r.useMemo(() => (0, j.MG)(l, i), [i, l]),
+        x = r.useMemo(() => (0, j.MG)(l, i), [i, l]),
         [I, y] = r.useState(() => (null != p ? p : void 0 !== g ? g : (a ?? null))),
         P = r.useMemo(
             () =>
-                f.find((e) => {
+                x.find((e) => {
                     let { skuId: t } = e;
                     return t === I?.skuId;
                 }) ?? null,
-            [I, f],
+            [I, x],
         ),
         { product: v, purchase: E } = (0, k.A)(P?.skuId),
         S = r.useRef(null),
@@ -370,7 +372,7 @@ function ea(e) {
             (0, s.jsx)(el, {
                 user: t,
                 onApply: function () {
-                    (0, x.p)({ guildId: n?.id, profileFrame: I ?? null }), m();
+                    (0, f.p)({ guildId: n?.id, profileFrame: I ?? null }), m();
                 },
                 onClose: m,
                 onOpenShop: M,
@@ -385,9 +387,9 @@ function ea(e) {
 }
 function eu(e) {
     let { transitionState: t, analyticsLocations: n, guild: i, onClose: a, initialSelectedProfileFrame: o } = e,
-        { categories: m, purchases: g, isFetchingCategories: x, isFetchingPurchases: A } = (0, y.Ay)(),
-        C = x || (A && 0 === g.size),
-        j = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
+        { categories: m, purchases: g, isFetchingCategories: f, isFetchingPurchases: A } = (0, y.Ay)(),
+        C = f || (A && 0 === g.size),
+        j = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
         { analyticsLocations: k } = (0, p.Ay)(n, d.A.EDIT_PROFILE_FRAME_MODAL),
         P = (0, h.Xf)({ user: j, guildId: i?.id });
     return (

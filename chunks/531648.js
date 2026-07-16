@@ -14,10 +14,11 @@ function u(e) {
         { themeType: u } = (0, o.E)(),
         _ = "string" == typeof t ? t.trim() : t;
     if (null == _ || "" === _) return null;
-    let E = () =>
-        u === d.d.MODAL || u === d.d.MODAL_V2
+    function E() {
+        return u === d.d.MODAL || u === d.d.MODAL_V2
             ? (0, i.jsx)(s, { color: "text-default", ...l, children: _ })
             : (0, i.jsx)(s, { color: "text-default", ...l, children: (0, i.jsx)(r.A, { children: _ }) });
+    }
     return null != n
         ? (0, i.jsx)(a.D, {
               onClick: (e) => {

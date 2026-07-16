@@ -47,31 +47,34 @@ function c(e) {
     let t = e.split("/").pop() ?? e;
     return t.endsWith(".png.png") ? t.replace(/\.png\.png$/, ".png") : t;
 }
-let u = (e) =>
-    "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
-    e
-        .map((e) =>
-            JSON.stringify(
-                {
-                    path: c(e.name),
-                    loop: e.loop,
-                    start: e.start,
-                    duration: e.duration,
-                    loop_delay: e.loopDelay,
-                    z_index: e.zIndex,
-                    ...(null != e.randomizedSources
-                        ? { randomized_paths: e.randomizedSources.map((e) => c(e.filename ?? e.src)) }
-                        : {}),
-                },
-                null,
-                4,
+function u(e) {
+    return (
+        "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
+        e
+            .map((e) =>
+                JSON.stringify(
+                    {
+                        path: c(e.name),
+                        loop: e.loop,
+                        start: e.start,
+                        duration: e.duration,
+                        loop_delay: e.loopDelay,
+                        z_index: e.zIndex,
+                        ...(null != e.randomizedSources
+                            ? { randomized_paths: e.randomizedSources.map((e) => c(e.filename ?? e.src)) }
+                            : {}),
+                    },
+                    null,
+                    4,
+                )
+                    .split("\n")
+                    .map((e) => " ".repeat(22) + e)
+                    .join("\n"),
             )
-                .split("\n")
-                .map((e) => " ".repeat(22) + e)
-                .join("\n"),
-        )
-        .join(",\n") +
-    "\n]";
+            .join(",\n") +
+        "\n]"
+    );
+}
 function _(e) {
     let t = (function (e) {
         let [t, n] = e.split(","),

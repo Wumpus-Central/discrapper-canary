@@ -18,7 +18,7 @@ function u(e) {
         actions: [
             {
                 text: c.intl.string(o.default.ctefO2),
-                onClick: () => {
+                onClick: function () {
                     h && a.w.set(d, !0), n(), u();
                 },
             },

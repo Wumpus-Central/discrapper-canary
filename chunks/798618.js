@@ -48,11 +48,11 @@ function d() {
 }
 var c = n(795127),
     u = n(638671);
-let _ = function (e) {
+function _(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 240,
         n = t / 2 - 12;
     return Math.max(-n, Math.min(n, e));
-};
+}
 function E(e) {
     let { className: t } = e,
         n = r.useContext(l.e);

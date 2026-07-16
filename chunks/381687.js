@@ -574,7 +574,7 @@ let eG = s.forwardRef(function (e, t) {
                                         }),
                                         onSelect: (e) => {
                                             let { searchAutocompleteSelectAction: t } = e;
-                                            return ((e) => {
+                                            return (function (e) {
                                                 let { selectedChannel: t, searchAutocompleteSelectAction: l } = e;
                                                 (0, D.rE)({ searchContext: r, searchAutocompleteSelectAction: l });
                                                 let n = eu.LWr.FILTER_IN,

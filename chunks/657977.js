@@ -350,6 +350,51 @@ function tg(t) {
         G = null != d ? d.label() : f.intl.string(f.t.xod367),
         [X, Z] = r.useState(G),
         { ref: W, width: tt } = (0, C.Ay)(G);
+    function te() {
+        j !== tm &&
+            (!(function (t) {
+                let {
+                        text: e,
+                        emojiInfo: n,
+                        clearAfter: l,
+                        analyticsContext: r,
+                        createdAtMs: i,
+                        prompt: a,
+                        analyticsLocations: s,
+                    } = t,
+                    o = e.trim();
+                if (!(o.length > 0) && null == n) return k.G2.updateSetting(void 0);
+                k.G2.updateSetting({
+                    text: o.length > 0 ? o : "",
+                    expiresAtMs:
+                        null != l && l !== $.yt.DONT_CLEAR
+                            ? String(
+                                  L()()
+                                      .add(
+                                          l === $.yt.TODAY
+                                              ? Y.A.Millis.DAY
+                                              : (F()("number" == typeof l, "Invalid custom status clear timeout"), l),
+                                          "ms",
+                                      )
+                                      .toDate()
+                                      .getTime(),
+                              )
+                            : "0",
+                    emojiId: null != n && null != n.id ? n.id : "0",
+                    emojiName: null != n ? n.name : "",
+                    createdAtMs: String(i ?? L()().toDate().getTime()),
+                }),
+                    _.default.track(B.HAw.CUSTOM_STATUS_UPDATED, {
+                        location: null != r ? r.location : null,
+                        emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
+                        text_len: o.length,
+                        clear_after: null != l ? `${l}` : null,
+                        prompt_type: a?.value,
+                        location_stack: s,
+                    });
+            })({ text: x, emojiInfo: y, clearAfter: j, prompt: d, analyticsLocations: h }),
+            n());
+    }
     r.useEffect(() => {
         let t = z.current;
         if (null == tt || null == t) return;
@@ -369,53 +414,7 @@ function tg(t) {
         (0, P.Ay)(() => {
             I.current?.focus(), I.current?.setSelection(x.length, x.length);
         });
-    let te = () => {
-            j !== tm &&
-                (!(function (t) {
-                    let {
-                            text: e,
-                            emojiInfo: n,
-                            clearAfter: l,
-                            analyticsContext: r,
-                            createdAtMs: i,
-                            prompt: a,
-                            analyticsLocations: s,
-                        } = t,
-                        o = e.trim();
-                    if (!(o.length > 0) && null == n) return k.G2.updateSetting(void 0);
-                    k.G2.updateSetting({
-                        text: o.length > 0 ? o : "",
-                        expiresAtMs:
-                            null != l && l !== $.yt.DONT_CLEAR
-                                ? String(
-                                      L()()
-                                          .add(
-                                              l === $.yt.TODAY
-                                                  ? Y.A.Millis.DAY
-                                                  : (F()("number" == typeof l, "Invalid custom status clear timeout"),
-                                                    l),
-                                              "ms",
-                                          )
-                                          .toDate()
-                                          .getTime(),
-                                  )
-                                : "0",
-                        emojiId: null != n && null != n.id ? n.id : "0",
-                        emojiName: null != n ? n.name : "",
-                        createdAtMs: String(i ?? L()().toDate().getTime()),
-                    }),
-                        _.default.track(B.HAw.CUSTOM_STATUS_UPDATED, {
-                            location: null != r ? r.location : null,
-                            emoji_type: null == n ? null : null != n.id ? "custom" : "unicode",
-                            text_len: o.length,
-                            clear_after: null != l ? `${l}` : null,
-                            prompt_type: a?.value,
-                            location_stack: s,
-                        });
-                })({ text: x, emojiInfo: y, clearAfter: j, prompt: d, analyticsLocations: h }),
-                n());
-        },
-        tn = f.intl.string(f.t.rp0ahn),
+    let tn = f.intl.string(f.t.rp0ahn),
         tl = "custom-status-input";
     return (0, l.jsxs)(s.Modal, {
         title: f.intl.string(f.t.Zx4jzN),

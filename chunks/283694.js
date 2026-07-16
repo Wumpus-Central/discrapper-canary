@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { marketingCollection: () => e5, playgroundConfig: () => te });
+n.r(t), n.d(t, { marketingCollection: () => e9, playgroundConfig: () => te });
 var o,
     l,
     a,
@@ -297,7 +297,7 @@ let j = "playground-announcement-modal",
                     variant: "expressive",
                     size: "md",
                     text: "Open Announcement Modal",
-                    onClick: () => {
+                    onClick: function () {
                         let t,
                             l,
                             a,
@@ -344,7 +344,7 @@ let j = "playground-announcement-modal",
                                     n.e("64622"),
                                     n.e("78340"),
                                     n.e("96137"),
-                                    n.e("18997"),
+                                    n.e("79630"),
                                     n.e("20287"),
                                     n.e("18024"),
                                     n.e("3131"),
@@ -921,14 +921,14 @@ function e4(e) {
     }
     return t;
 }
-function e9(e, t) {
+function e5(e, t) {
     return { title: e, stories: [...t].sort((e, t) => e.name.localeCompare(t.name)) };
 }
-let e5 = {
+let e9 = {
         id: "marketing",
         name: "Marketing",
         groups: [
-            e9("Premium Surfaces", [
+            e5("Premium Surfaces", [
                 w,
                 $,
                 eR,
@@ -1204,7 +1204,7 @@ let e5 = {
                     },
                 },
             ]),
-            e9("Gifting Surfaces", [
+            e5("Gifting Surfaces", [
                 {
                     name: "Billing Settings Gift Banner",
                     id: "billing-settings-nitro-gift-banner",
@@ -1764,4 +1764,4 @@ let e5 = {
                   });
         },
     },
-    te = { playgroundBaseUrl: "marketing", collections: [e5] };
+    te = { playgroundBaseUrl: "marketing", collections: [e9] };

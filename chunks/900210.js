@@ -26,11 +26,11 @@ let m = new d(a.h, {
             l = c(n, i);
         delete s[t]?.[l];
     },
-    BURST_REACTION_EFFECT_PLAY: (e) => {
+    BURST_REACTION_EFFECT_PLAY: function (e) {
         let { channelId: t, messageId: n, emoji: i, key: l } = e,
             a = c(n, i);
         if (
-            ((e, t) => {
+            (function (e, t) {
                 let n;
                 switch (e) {
                     case "HOVER":

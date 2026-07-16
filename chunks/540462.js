@@ -515,12 +515,12 @@ class eX extends l.PureComponent {
                 (i?.id === e.id ? j.A.selectParticipant(n.id, null) : j.A.selectParticipant(n.id, e.id));
     };
     handleOpenPopout = () => {
-        let { channel: e, connectedEmbeddedActivity: t } = this.props,
-            n = async () => {
-                t?.applicationId != null && (await (0, P.od)(t.applicationId, e.id));
-                let n = e.getGuildId();
-                null == n || eC.Ay.isCurrentUserGuest(n) || (0, J.pX)((0, eT.vJ)(n)), $.openChannelCallPopout(e);
-            };
+        let { channel: e, connectedEmbeddedActivity: t } = this.props;
+        async function n() {
+            t?.applicationId != null && (await (0, P.od)(t.applicationId, e.id));
+            let n = e.getGuildId();
+            null == n || eC.Ay.isCurrentUserGuest(n) || (0, J.pX)((0, eT.vJ)(n)), $.openChannelCallPopout(e);
+        }
         null == t || (0, S.f)() ? n() : (0, L.A)({ onConfirm: n });
     };
     handleStayOnTop = (e) => {
@@ -858,7 +858,7 @@ let eZ = function (e) {
         let e = !1,
             t = null;
         return (
-            (async () => {
+            (async function () {
                 v &&
                     P === eG._Of.VIDEO &&
                     ((t = await eS.Ay.blockDisplaySleep()), e && null != t && eS.Ay.unblockDisplaySleep(t));

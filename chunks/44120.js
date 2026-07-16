@@ -1,19 +1,19 @@
-n.d(o, { A: () => c });
-var t = n(627968);
-n(64700);
-var a = n(192308),
-    l = n(228366),
-    i = n(391048),
-    s = n(636099),
-    r = n(529427),
-    d = n(662388),
-    p = n(287809),
-    u = n(166532);
-let C = new Set([u.pn.REVIEW, u.pn.CONFIRM, u.pn.GIFT_CUSTOMIZATION]);
+o.d(n, { A: () => c });
+var t = o(627968);
+o(64700);
+var a = o(192308),
+    l = o(228366),
+    i = o(391048),
+    s = o(636099),
+    u = o(529427),
+    r = o(662388),
+    d = o(287809),
+    p = o(166532);
+let C = new Set([p.pn.REVIEW, p.pn.CONFIRM, p.pn.GIFT_CUSTOMIZATION]);
 function c(e) {
-    let o,
+    let n,
         {
-            discoverySessionId: u,
+            discoverySessionId: p,
             skuId: c,
             analyticsLocations: h,
             analyticsObject: f,
@@ -25,45 +25,45 @@ function c(e) {
             onComplete: E,
         } = e,
         O = k ? "gift-payment-modal" : "payment-modal",
-        w = p.default.getCurrentUser();
+        w = d.default.getCurrentUser();
     w?.verified
         ? (l.h.wait(() => {
               l.h.dispatch({ type: "PAYMENT_MODAL_OPEN" });
           }),
           (function (e) {
               let {
-                  discoverySessionId: o,
-                  skuId: n,
+                  discoverySessionId: n,
+                  skuId: o,
                   analyticsLocations: t,
                   analyticsObject: a,
                   onStepChange: l,
                   modalKey: i,
                   isGift: s = !1,
-                  giftMessage: d,
-                  giftingOrigin: p,
-                  giftRecipient: u,
+                  giftMessage: r,
+                  giftingOrigin: d,
+                  giftRecipient: p,
                   onClose: C,
                   onCloseCallback: c,
                   onCloseRequest: h,
                   onComplete: f,
               } = e;
-              r.UnifiedCheckoutFlowManagerSingletons[r.CL.COLLECTIBLES_CHECKOUT]
+              u.UnifiedCheckoutFlowManagerSingletons[u.CL.COLLECTIBLES_CHECKOUT]
                   .get()
                   .openCheckoutModal({
                       unifiedCheckoutProviderProps: { analyticsLocations: t },
-                      checkoutConfiguration: { skuId: n, discoverySessionId: o },
-                      giftContextProps: { isGift: s, giftMessage: d, giftingOrigin: p, giftRecipient: u },
+                      checkoutConfiguration: { skuId: o, discoverySessionId: n },
+                      giftContextProps: { isGift: s, giftMessage: r, giftingOrigin: d, giftRecipient: p },
                       checkoutHandlers: { onClose: C, onComplete: f },
                       forwardedPaymentModalProps: { onStepChange: l, analyticsObject: a },
                       modalAPIOptions: { modalKey: i, onCloseCallback: c, onCloseRequest: h },
                   });
           })({
-              discoverySessionId: u,
+              discoverySessionId: p,
               skuId: c,
               analyticsLocations: h,
               analyticsObject: f,
               onStepChange: function (e) {
-                  o = e;
+                  n = e;
               },
               modalKey: O,
               isGift: k,
@@ -72,25 +72,25 @@ function c(e) {
               giftRecipient: M,
               onClose: P,
               onCloseCallback: function (e) {
-                  (0, i.ET)(), (0, s.z)(), e && (0, d.gB)();
+                  (0, i.ET)(), (0, s.z)(), e && (0, r.gB)();
               },
-              onCloseRequest: () => {
-                  null != o && C.has(o) && (0, a.closeModal)(O);
+              onCloseRequest: function () {
+                  null != n && C.has(n) && (0, a.closeModal)(O);
               },
-              onComplete: () => {
+              onComplete: function () {
                   null != E && E();
               },
           }))
         : (0, a.openModalLazy)(async () => {
-              let { default: e } = await Promise.all([n.e("54681"), n.e("74913"), n.e("12206"), n.e("90406")]).then(
-                  n.bind(n, 661925),
+              let { default: e } = await Promise.all([o.e("54681"), o.e("74913"), o.e("12206"), o.e("90406")]).then(
+                  o.bind(o, 661925),
               );
-              return (o) => {
-                  let { onClose: n, ...a } = o;
+              return (n) => {
+                  let { onClose: o, ...a } = n;
                   return (0, t.jsx)(e, {
                       ...a,
                       onClose: () => {
-                          n(), P?.(!1);
+                          o(), P?.(!1);
                       },
                   });
               };

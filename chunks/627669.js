@@ -2313,36 +2313,36 @@ function lR(e) {
                     s = l_.get(i);
                 if (null != s) return s;
                 {
-                    let e = ((e, t, n, l) => {
+                    let e = (function (e, t, n) {
                         if (0 === n) return [];
                         if (1 === n) return [{ width: e, height: t, top: 0, left: 0, position: lI }];
                         if (2 === n) {
-                            let n = Math.ceil((e - l) / 2);
+                            let n = Math.ceil((e - 4) / 2);
                             return [
                                 { top: 0, left: 0, position: lI, width: n, height: t },
-                                { top: 0, left: n + l, position: lI, width: n, height: t },
+                                { top: 0, left: n + 4, position: lI, width: n, height: t },
                             ];
                         }
                         if (3 === n) {
-                            let n = Math.ceil((e - l) / 2),
-                                i = Math.ceil((t - l) / 2);
+                            let n = Math.ceil((e - 4) / 2),
+                                l = Math.ceil((t - 4) / 2);
                             return [
                                 { top: 0, left: 0, position: lI, width: n, height: t },
-                                { top: 0, left: n + l, position: lI, width: n, height: i },
-                                { top: i + l, left: n + l, position: lI, width: n, height: i },
+                                { top: 0, left: n + 4, position: lI, width: n, height: l },
+                                { top: l + 4, left: n + 4, position: lI, width: n, height: l },
                             ];
                         }
                         {
-                            let n = Math.ceil((e - l) / 2),
-                                i = Math.ceil((t - l) / 2);
+                            let n = Math.ceil((e - 4) / 2),
+                                l = Math.ceil((t - 4) / 2);
                             return [
-                                { top: 0, left: 0, position: lI, width: n, height: i },
-                                { top: i + l, left: 0, position: lI, width: n, height: i },
-                                { top: 0, left: n + l, position: lI, width: n, height: i },
-                                { top: i + l, left: n + l, position: lI, width: n, height: i },
+                                { top: 0, left: 0, position: lI, width: n, height: l },
+                                { top: l + 4, left: 0, position: lI, width: n, height: l },
+                                { top: 0, left: n + 4, position: lI, width: n, height: l },
+                                { top: l + 4, left: n + 4, position: lI, width: n, height: l },
                             ];
                         }
-                    })(n, l, t, 4);
+                    })(n, l, t);
                     return l_.set(i, e), e;
                 }
             })({ numAttachments: t, containerWidth: n, containerHeight: l }),
@@ -2385,7 +2385,7 @@ function lz(e) {
         ),
     });
 }
-let lU = (e) => {
+function lU(e) {
     let { parentChannel: t } = e,
         { textAreaState: l } = (0, eb.kU)((e) => {
             let { textAreaState: t } = e;
@@ -2522,75 +2522,74 @@ let lU = (e) => {
                     (e.currentTarget.value = null);
             },
             [t, c],
-        ),
-        x = (e) => {
-            e.stopPropagation(),
-                c?.upload != null &&
-                    (0, tN.openModalLazy)(async () => {
-                        let e = c.upload;
-                        J()(null != e, "upload should not be null");
-                        let { default: l } = await n.e("70698").then(n.bind(n, 427281));
-                        return (n) =>
-                            (0, i.jsx)(l, {
-                                ...n,
-                                upload: e,
-                                onSubmit: (n) => {
-                                    let { name: l, description: i, spoiler: s } = n;
-                                    n8.A.update(t.id, e.id, n5.oU.CREATE_FORUM_POST.drafts.type, {
-                                        filename: l,
-                                        description: i,
-                                        spoiler: s,
-                                    });
-                                },
-                                disableSpoiler: !0,
-                            });
-                    });
-        },
-        g = (0, i.jsx)(lS.A, {
-            color: f.XD.CUSTOM,
-            className: lO.zL,
-            innerClassName: lO.Nr,
-            onChange: h,
-            multiple: !1,
-            "aria-hidden": !0,
-            filters: lF,
-            "aria-describedby": lG,
-            "aria-label": u ? eJ.intl.string(eJ.t.MxJI3f) : eJ.intl.string(eJ.t.Cbiofa),
-            children: u
-                ? (0, i.jsxs)(i.Fragment, {
-                      children: [
-                          (0, i.jsx)(lz, { mediaAttachments: o, containerWidth: m.width, containerHeight: m.height }),
-                          (0, i.jsxs)("div", {
-                              className: r()(lO.On, { [lO.bP]: o?.length > 2 }),
-                              children: [
-                                  (0, i.jsx)(b.E, {
-                                      variant: "text-xs/medium",
-                                      color: "text-default",
-                                      children: eJ.intl.string(eJ.t.MxJI3f),
-                                  }),
-                                  null == c &&
-                                      (0, i.jsx)(nW.R, { size: "xs", color: "currentColor", className: lO.IZ }),
-                              ],
-                          }),
-                      ],
-                  })
-                : (0, i.jsxs)(i.Fragment, {
-                      children: [
-                          (0, i.jsx)(li.X, {
-                              size: "custom",
-                              width: 39,
-                              height: 39,
-                              color: "currentColor",
-                              className: lO.T3,
-                          }),
-                          (0, i.jsx)(b.E, {
-                              variant: "text-xs/normal",
-                              color: "text-muted",
-                              children: eJ.intl.string(eJ.t.Cbiofa),
-                          }),
-                      ],
-                  }),
-        });
+        );
+    function x(e) {
+        e.stopPropagation(),
+            c?.upload != null &&
+                (0, tN.openModalLazy)(async () => {
+                    let e = c.upload;
+                    J()(null != e, "upload should not be null");
+                    let { default: l } = await n.e("70698").then(n.bind(n, 427281));
+                    return (n) =>
+                        (0, i.jsx)(l, {
+                            ...n,
+                            upload: e,
+                            onSubmit: (n) => {
+                                let { name: l, description: i, spoiler: s } = n;
+                                n8.A.update(t.id, e.id, n5.oU.CREATE_FORUM_POST.drafts.type, {
+                                    filename: l,
+                                    description: i,
+                                    spoiler: s,
+                                });
+                            },
+                            disableSpoiler: !0,
+                        });
+                });
+    }
+    let g = (0, i.jsx)(lS.A, {
+        color: f.XD.CUSTOM,
+        className: lO.zL,
+        innerClassName: lO.Nr,
+        onChange: h,
+        multiple: !1,
+        "aria-hidden": !0,
+        filters: lF,
+        "aria-describedby": lG,
+        "aria-label": u ? eJ.intl.string(eJ.t.MxJI3f) : eJ.intl.string(eJ.t.Cbiofa),
+        children: u
+            ? (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      (0, i.jsx)(lz, { mediaAttachments: o, containerWidth: m.width, containerHeight: m.height }),
+                      (0, i.jsxs)("div", {
+                          className: r()(lO.On, { [lO.bP]: o?.length > 2 }),
+                          children: [
+                              (0, i.jsx)(b.E, {
+                                  variant: "text-xs/medium",
+                                  color: "text-default",
+                                  children: eJ.intl.string(eJ.t.MxJI3f),
+                              }),
+                              null == c && (0, i.jsx)(nW.R, { size: "xs", color: "currentColor", className: lO.IZ }),
+                          ],
+                      }),
+                  ],
+              })
+            : (0, i.jsxs)(i.Fragment, {
+                  children: [
+                      (0, i.jsx)(li.X, {
+                          size: "custom",
+                          width: 39,
+                          height: 39,
+                          color: "currentColor",
+                          className: lO.T3,
+                      }),
+                      (0, i.jsx)(b.E, {
+                          variant: "text-xs/normal",
+                          color: "text-muted",
+                          children: eJ.intl.string(eJ.t.Cbiofa),
+                      }),
+                  ],
+              }),
+    });
     return (0, i.jsx)("div", {
         className: lO.iT,
         style: m,
@@ -2625,7 +2624,7 @@ let lU = (e) => {
                   })
                 : g,
     });
-};
+}
 var lH = n(451909),
     lB = n(375199),
     lV = n(141268),
@@ -2720,7 +2719,7 @@ let ia = function (e) {
 };
 var ir = n(770178),
     io = n(765548);
-let ic = () => {
+let ic = function () {
     let [e, t] = s.useState(400),
         n = (0, io.A)((e) => {
             t(e.target.clientWidth);
@@ -3731,17 +3730,17 @@ var i5 = n(994500),
         (((l = {})[(l.THREE_BY_TWO = 2 / 3)] = "THREE_BY_TWO"),
         (l[(l.SIXTEEN_BY_NINE = 9 / 16)] = "SIXTEEN_BY_NINE"),
         l);
-let i7 = { columns: 1, columnWidth: 450 },
-    i6 = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i3.THREE_BY_TWO,
-            n = e - 2,
-            l = Math.ceil(n * t);
-        return [n, l];
-    },
-    i9 = function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i3.THREE_BY_TWO;
-        return 60 + i6(e - 24, t)[1] + 24 + 36;
-    };
+let i7 = { columns: 1, columnWidth: 450 };
+function i6(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i3.THREE_BY_TWO,
+        n = e - 2,
+        l = Math.ceil(n * t);
+    return [n, l];
+}
+function i9(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i3.THREE_BY_TWO;
+    return 60 + i6(e - 24, t)[1] + 24 + 36;
+}
 var se = n(313880),
     st = n(15175);
 let sn = s.memo(function (e) {

@@ -785,11 +785,10 @@ function ta(e) {
             (e, t, l) =>
                 new Promise((e) => {
                     A.current?.scrollRowIntoView(t);
-                    let n = 0,
-                        i = () => {
-                            null != document.querySelector(l) || n >= 10 ? e() : (n++, requestAnimationFrame(i));
-                        };
-                    requestAnimationFrame(i);
+                    let n = 0;
+                    requestAnimationFrame(function t() {
+                        null != document.querySelector(l) || n >= 10 ? e() : (n++, requestAnimationFrame(t));
+                    });
                 }),
             [],
         ),
@@ -2498,8 +2497,9 @@ function lh(e) {
     i.useEffect(() => {
         if (!eP) return;
         let e = 0,
-            t = 0,
-            l = () => {
+            t = 0;
+        return (
+            (t = requestAnimationFrame(function l() {
                 let n = eL.current?.querySelector('[role="grid"] [role="button"]');
                 if (null != n) {
                     n.focus(), eE(!1);
@@ -2510,8 +2510,9 @@ function lh(e) {
                     return;
                 }
                 eE(!1);
-            };
-        return (t = requestAnimationFrame(l)), () => cancelAnimationFrame(t);
+            })),
+            () => cancelAnimationFrame(t)
+        );
     }, [eP, eE]);
     let eS = (0, e6.P)(
         (e) =>
@@ -2586,7 +2587,7 @@ function lh(e) {
         );
     }, [eH, a, ep]),
         i.useEffect(() => {
-            let e = (e) => {
+            function e(e) {
                 if (
                     ("f" !== e.key && "F" !== e.key) ||
                     e.altKey ||
@@ -2599,7 +2600,7 @@ function lh(e) {
                 e.preventDefault(), e.stopPropagation();
                 let t = e6.P.getState();
                 t.currentPage === K.fB.HOME && t.setActiveMainLink(K.oH.ALL_CLIPS), t.setPendingSearchFocus(!0);
-            };
+            }
             return document.addEventListener("keydown", e, !0), () => document.removeEventListener("keydown", e, !0);
         }, [ep]),
         i.useEffect(

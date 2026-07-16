@@ -12,9 +12,9 @@ var o = a(512750),
     m = a(498642),
     x = a(317525),
     b = a(71393),
-    k = a(853513),
-    p = a(375708),
-    f = a(898190),
+    f = a(853513),
+    k = a(375708),
+    p = a(898190),
     g = a(490557),
     h = a(193157),
     v = a(568065),
@@ -31,20 +31,20 @@ function C(t) {
             onDeactivate: x,
             ...b
         } = t,
-        [f, g] = l.useState(!1);
+        [p, g] = l.useState(!1);
     return (0, i.jsxs)(n.Modal, {
         ...b,
         size: e,
-        title: p.intl.formatToPlainString(k.default.iEBw1M, { perk: a }),
-        subtitle: p.intl.formatToPlainString(k.default["7o0K+2"], { perk: a }),
+        title: k.intl.formatToPlainString(f.default.iEBw1M, { perk: a }),
+        subtitle: k.intl.formatToPlainString(f.default["7o0K+2"], { perk: a }),
         actions: [
-            { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: b.onClose },
+            { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: b.onClose },
             {
                 variant: "critical-primary",
-                text: p.intl.string(k.default.PYPdl4),
+                text: k.intl.string(f.default.PYPdl4),
                 loading: m,
                 onClick: x,
-                disabled: null != d && !f,
+                disabled: null != d && !p,
             },
         ],
         children: [
@@ -55,7 +55,7 @@ function C(t) {
                     (0, i.jsx)(r.E, {
                         color: "text-feedback-critical",
                         variant: "eyebrow",
-                        children: p.intl.string(k.default.OVt5CC),
+                        children: k.intl.string(f.default.OVt5CC),
                     }),
                     (0, i.jsx)(r.E, { className: j.i4, tag: "span", variant: "text-sm/medium", children: o }),
                 ],
@@ -70,7 +70,7 @@ function C(t) {
             null != d &&
                 (0, i.jsx)("div", {
                     className: j.ud,
-                    children: (0, i.jsx)(s.S, { checked: f, onChange: g, label: d, labelType: "secondary" }),
+                    children: (0, i.jsx)(s.S, { checked: p, onChange: g, label: d, labelType: "secondary" }),
                 }),
         ],
     });
@@ -82,7 +82,7 @@ function E(t) {
         s,
         E,
         { guildId: S, powerup: y, ...A } = t,
-        { onDeactivate: T, error: w, isLoading: P } = (0, f.A)(S, y),
+        { onDeactivate: T, error: w, isLoading: P } = (0, p.A)(S, y),
         { onClose: N } = A,
         L = l.useCallback(
             (t) => {
@@ -114,23 +114,23 @@ function E(t) {
                     case o.aN:
                         t =
                             s > 0
-                                ? p.intl.formatToPlainString(k.default["4jSvr1"], { perk: y.title, memberCount: s })
-                                : p.intl.formatToPlainString(k.default.cavtEo, { perk: y.title });
+                                ? k.intl.formatToPlainString(f.default["4jSvr1"], { perk: y.title, memberCount: s })
+                                : k.intl.formatToPlainString(f.default.cavtEo, { perk: y.title });
                         break;
                     case o.FB:
-                        t = n ? p.intl.string(k.default.hN75yb) : p.intl.string(k.default.Du91Rb);
+                        t = n ? k.intl.string(f.default.hN75yb) : k.intl.string(f.default.Du91Rb);
                         break;
                     case o.OJ:
                     case o.jF:
                     case o.Ht:
                     case o.tv:
-                        t = p.intl.string(k.default.Vf2ZcR);
+                        t = k.intl.string(f.default.Vf2ZcR);
                         break;
                     default:
-                        t = p.intl.formatToPlainString(k.default["4jSvr1"], { perk: y.title, memberCount: e ?? 0 });
+                        t = k.intl.formatToPlainString(f.default["4jSvr1"], { perk: y.title, memberCount: e ?? 0 });
                 }
                 let a = [{ text: t, critical: y.skuId === o.FB }];
-                return n && y.skuId === o.YG && a.push({ text: p.intl.string(k.default.M4XL5n), critical: !0 }), a;
+                return n && y.skuId === o.YG && a.push({ text: k.intl.string(f.default.M4XL5n), critical: !0 }), a;
             }, [y, s, e, n])),
             l.useMemo(
                 () =>
@@ -156,7 +156,7 @@ function E(t) {
         (0, i.jsx)(C, {
             size: y.type === v.o9.LEVEL ? "md" : "sm",
             title: y.title,
-            body: (() => {
+            body: (function () {
                 switch (y.type) {
                     case v.o9.LEVEL:
                         return (0, i.jsx)(h.A, { powerup: y });

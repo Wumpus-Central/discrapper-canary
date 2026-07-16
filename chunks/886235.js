@@ -11,9 +11,9 @@ var i = n(627968),
     m = n(665260),
     g = n(17928),
     h = n(661531),
-    x = n(990078),
-    A = n(778712),
-    p = n(834730),
+    x = n(778712),
+    A = n(834730),
+    p = n(866665),
     f = n(885574),
     b = n(192308),
     j = n(297264),
@@ -67,9 +67,9 @@ function F(e) {
                       (0, i.jsx)(B.D, {
                           className: K.yt,
                           onClick: c,
-                          children: (0, i.jsx)(x.m, {
+                          children: (0, i.jsx)(p.m, {
                               text: V.intl.string(V.t.DY6n4q),
-                              children: (0, i.jsxs)(p.E, {
+                              children: (0, i.jsxs)(A.E, {
                                   variant: "text-xs/medium",
                                   color: "text-strong",
                                   children: ["+", o],
@@ -161,13 +161,13 @@ function eo(e) {
                 align: P.A.Align.CENTER,
                 className: es.Qq,
                 children: [
-                    null != n && (0, i.jsx)(L.A, { user: n, size: A._3.SIZE_24, className: es.my }),
+                    null != n && (0, i.jsx)(L.A, { user: n, size: x._3.SIZE_24, className: es.my }),
                     (0, i.jsxs)("div", {
                         children: [
                             null != n && (0, i.jsx)(O.A, { discriminatorClass: es.D2, user: n }),
                             l &&
                                 null != s &&
-                                (0, i.jsx)(p.E, {
+                                (0, i.jsx)(A.E, {
                                     variant: "text-xs/normal",
                                     color: "text-default",
                                     children: (0, M.m1)(s, X.default, J.A, !0),
@@ -189,14 +189,14 @@ function eo(e) {
                 basis: 0,
                 align: P.A.Align.CENTER,
                 className: es.Qq,
-                children: (0, i.jsx)(p.E, { className: es.r9, variant: "text-sm/normal", children: c }),
+                children: (0, i.jsx)(A.E, { className: es.r9, variant: "text-sm/normal", children: c }),
             }),
             (0, i.jsx)(P.A, {
                 grow: 2,
                 basis: 0,
                 align: P.A.Align.CENTER,
                 className: a()(es.Qq, es.sA),
-                children: (0, i.jsx)(p.E, { className: es.qW, variant: "text-sm/normal", children: d }),
+                children: (0, i.jsx)(A.E, { className: es.qW, variant: "text-sm/normal", children: d }),
             }),
             null != m &&
                 (0, i.jsx)(P.A, {
@@ -226,19 +226,19 @@ function ec(e) {
         inviter: t.inviter,
         showChannel: n,
         channel: d,
-        inviteSource: (0, i.jsx)(p.E, { className: es.Rg, variant: "text-sm/normal", children: a ? "..." : t.code }),
+        inviteSource: (0, i.jsx)(A.E, { className: es.Rg, variant: "text-sm/normal", children: a ? "..." : t.code }),
         inviteSourceTrailingContent:
             !a && (0, m.Lt)(t.flags ?? 0, u.Q.IS_APPLICATION_BYPASS)
                 ? (0, i.jsxs)("div", {
                       className: es.XH,
                       children: [
-                          (0, i.jsx)(p.E, {
+                          (0, i.jsx)(A.E, {
                               className: es.Qq,
                               variant: "text-xs/normal",
                               color: "text-muted",
                               children: V.intl.string(V.t["1i1bUl"]),
                           }),
-                          (0, i.jsx)(x.m, {
+                          (0, i.jsx)(p.m, {
                               text: V.intl.string(V.t["jvd/LF"]),
                               children: (0, i.jsx)(f.m, { size: "xxs", color: "currentColor", className: es.G }),
                           }),
@@ -268,14 +268,14 @@ function ed(e) {
             className: es._z,
             children: [
                 (0, i.jsx)(G.A, { game: r, size: G.M.XXSMALL }),
-                (0, i.jsx)(p.E, { className: es.PD, variant: "text-sm/normal", children: r?.name }),
+                (0, i.jsx)(A.E, { className: es.PD, variant: "text-sm/normal", children: r?.name }),
             ],
         }),
         uses: V.intl.string(V.t.jHpxwo),
         expiresAt: V.intl.string(V.t.PqEzn8),
         roles: [],
         guildId: l.guild_id,
-        onRevokeInvite: () => {
+        onRevokeInvite: function () {
             c && null != r
                 ? (0, b.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e("10527"), n.e("73380")]).then(n.bind(n, 106895));
@@ -297,7 +297,7 @@ function eu(e) {
         loading: x = !1,
     } = e;
     o()(null != s, "guild is required");
-    let A = (0, w.Ay)(),
+    let p = (0, w.Ay)(),
         f = (0, $.Fi)(s),
         I = (0, $.Wr)(s),
         S = l.useMemo(
@@ -338,7 +338,7 @@ function eu(e) {
                         "div",
                         {
                             children: (0, i.jsxs)(T.pp, {
-                                theme: A,
+                                theme: p,
                                 children: [
                                     (0, i.jsx)(T.G8, {
                                         darkSrc: n(774125),
@@ -364,7 +364,7 @@ function eu(e) {
                                     grow: 4,
                                     basis: 0,
                                     className: er.Gf,
-                                    children: (0, i.jsx)(p.E, {
+                                    children: (0, i.jsx)(A.E, {
                                         variant: "text-md/medium",
                                         children: V.intl.string(V.t.EgHyKy),
                                     }),
@@ -373,7 +373,7 @@ function eu(e) {
                                     basis: 0,
                                     grow: 3,
                                     className: er.Gf,
-                                    children: (0, i.jsx)(p.E, {
+                                    children: (0, i.jsx)(A.E, {
                                         variant: "text-md/medium",
                                         children: y.length > 0 ? V.intl.string(V.t.l7VISQ) : V.intl.string(V.t.LBlFEN),
                                     }),
@@ -381,7 +381,7 @@ function eu(e) {
                                 (0, i.jsx)(P.A.Child, {
                                     grow: 1,
                                     basis: 0,
-                                    children: (0, i.jsx)(p.E, {
+                                    children: (0, i.jsx)(A.E, {
                                         variant: "text-md/medium",
                                         children: V.intl.string(V.t.erWrmA),
                                     }),
@@ -389,7 +389,7 @@ function eu(e) {
                                 (0, i.jsx)(P.A.Child, {
                                     grow: 2,
                                     basis: 0,
-                                    children: (0, i.jsx)(p.E, {
+                                    children: (0, i.jsx)(A.E, {
                                         variant: "text-md/medium",
                                         children: V.intl.string(V.t["1aM27d"]),
                                     }),
@@ -397,7 +397,7 @@ function eu(e) {
                                 (0, i.jsx)(P.A.Child, {
                                     grow: 2,
                                     basis: 0,
-                                    children: (0, i.jsx)(p.E, {
+                                    children: (0, i.jsx)(A.E, {
                                         variant: "text-md/medium",
                                         children: V.intl.string(V.t["LPJmL/"]),
                                     }),
@@ -421,7 +421,7 @@ function eu(e) {
                 return (0, i.jsxs)("div", {
                     className: es.o1,
                     children: [
-                        (0, i.jsx)(p.E, {
+                        (0, i.jsx)(A.E, {
                             className: er.SX,
                             variant: "text-sm/normal",
                             color: "text-subtle",
@@ -450,7 +450,7 @@ function eu(e) {
                                                 height: 20,
                                                 color: h.A.unsafe_rawColors.YELLOW_300.css,
                                             }),
-                                            (0, i.jsx)(p.E, {
+                                            (0, i.jsx)(A.E, {
                                                 variant: "text-sm/normal",
                                                 children: V.intl.string(V.t["2LLbj9"]),
                                             }),
@@ -502,8 +502,8 @@ function eu(e) {
                 }
             }
         },
-        rowHeight: (e, t) =>
-            0 === e
+        rowHeight: function (e, t) {
+            return 0 === e
                 ? 64
                 : 1 === e
                   ? 109
@@ -513,7 +513,8 @@ function eu(e) {
                       ? 0 === O.length && 0 === t && x
                           ? 62
                           : 62 * (null != O[t])
-                      : 0,
+                      : 0;
+        },
         sectionHeight: function (e) {
             return 3 === e ? (0 !== O.length || x ? 28 : 240) : 0;
         },

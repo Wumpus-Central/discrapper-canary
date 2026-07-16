@@ -6,7 +6,7 @@ var i = s(580929),
     l = s(602853),
     n = s(805901),
     d = s(834730),
-    c = s(534514),
+    c = s(297264),
     o = s(935462),
     m = s(915089),
     x = s(375708),
@@ -78,14 +78,14 @@ let u = (e) => {
             ],
         });
     },
-    j = (e) => {
+    j = function (e) {
         let t,
             s,
             i,
             { guildChecklist: r, transitionState: l, onClose: n } = e,
             j = (0, m.GV)(),
             { retentionHealthy: v, engagementHealthy: b, healthScore: N } = r,
-            { avg_nonnew_participators: g, avg_nonnew_communicators: p, perc_ret_w1_intentful: _ } = N;
+            { avg_nonnew_participators: g, avg_nonnew_communicators: p, perc_ret_w1_intentful: f } = N;
         if (
             (!b &&
                 null != g &&
@@ -125,9 +125,9 @@ let u = (e) => {
                         }),
                     ],
                 })),
-            !v && null != _)
+            !v && null != f)
         ) {
-            let e = Math.floor(100 * _);
+            let e = Math.floor(100 * f);
             t = (0, a.jsxs)("div", {
                 className: h.cl,
                 children: [

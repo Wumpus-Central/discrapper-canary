@@ -151,33 +151,27 @@ function I(e) {
         }, [w, S, I?.restrictedSchedule?.rules]),
         ee = r.useMemo(() => (0, f.d)(D, X, Y), [Y, X, D]),
         et = (0, f.yN)(B) > (0, f.yN)(z),
-        en = (0, f.yN)(B) !== (0, f.yN)(z),
-        el = async () => {
-            F(!0);
+        en = (0, f.yN)(B) !== (0, f.yN)(z);
+    async function el() {
+        F(!0);
+        try {
+            let e = { label: "", start_time: (0, f.v9)(B), end_time: (0, f.v9)(z), days: Array.from(D), enabled: L };
+            w ? await (0, x.Um)(s, S.ruleId, e) : await (0, x.qP)(s, e), n();
+        } finally {
+            F(!1);
+        }
+    }
+    async function er() {
+        if (w) {
+            K(!0);
             try {
-                let e = {
-                    label: "",
-                    start_time: (0, f.v9)(B),
-                    end_time: (0, f.v9)(z),
-                    days: Array.from(D),
-                    enabled: L,
-                };
-                w ? await (0, x.Um)(s, S.ruleId, e) : await (0, x.qP)(s, e), n();
+                await (0, x.CS)(s, S.ruleId), n();
             } finally {
-                F(!1);
+                K(!1);
             }
-        },
-        er = async () => {
-            if (w) {
-                K(!0);
-                try {
-                    await (0, x.CS)(s, S.ruleId), n();
-                } finally {
-                    K(!1);
-                }
-            }
-        },
-        ei = {
+        }
+    }
+    let ei = {
             startTime: (0, f.fU)(B),
             endTime: (0, f.fU)(z),
             timeHook: (e, t) =>

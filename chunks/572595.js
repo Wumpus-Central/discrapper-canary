@@ -14,8 +14,8 @@ let o = "collectibles shop product details modal",
             analyticsSource: d,
             analyticsLocations: p,
             returnRef: C,
-            tab: I,
-            giftRecipient: f,
+            tab: f,
+            giftRecipient: I,
             giftingOrigin: g,
             cardId: x,
             sessionId: m,
@@ -105,7 +105,7 @@ let o = "collectibles shop product details modal",
                     n.e("92116"),
                     n.e("84200"),
                     n.e("33217"),
-                    n.e("73040"),
+                    n.e("15574"),
                     n.e("25610"),
                     n.e("42548"),
                     n.e("80050"),
@@ -306,15 +306,15 @@ let o = "collectibles shop product details modal",
                             analyticsSource: d,
                             analyticsLocations: p,
                             returnRef: C,
-                            tab: I,
-                            giftRecipient: f,
+                            tab: f,
+                            giftRecipient: I,
                             giftingOrigin: g,
                         }),
                     });
             },
             { modalKey: o },
         );
-    },
-    c = () => {
-        (0, i.closeModal)(o);
     };
+function c() {
+    (0, i.closeModal)(o);
+}

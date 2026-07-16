@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => E, O0: () => f });
+n.d(t, { Ay: () => E, O0: () => A });
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -6,7 +6,7 @@ var l = n(627968),
     s = n(278416),
     o = n(834730),
     u = n(459192),
-    c = n(990078),
+    c = n(866665),
     d = n(262427),
     p = n(396583),
     m = n(421108),
@@ -14,41 +14,42 @@ var l = n(627968),
     h = n(82199);
 function E(e) {
     let {
-            className: t,
-            Icon: n = s.g,
-            iconSize: i,
-            customGraphic: r,
-            gradientColor: p = "green",
-            tooltip: m,
-            text: E,
-            trailing: A,
-            ...f
-        } = e,
-        y = () =>
-            (0, l.jsx)(d.A, {
-                className: a()(h.Xx, t),
-                gradientColor: p,
-                ...(null != r ? { customGraphic: r } : { Icon: n, iconSize: i }),
-                ...f,
-                children: (0, l.jsxs)("div", {
-                    className: h.Yu,
-                    children: [
-                        (0, l.jsx)(o.E, {
-                            variant: "text-xs/semibold",
-                            color: "currentColor",
-                            children: "string" == typeof E ? (0, C.U)(E) : E,
-                        }),
-                        (0, l.jsx)("div", { className: h.HF, children: A }),
-                    ],
-                }),
-            });
+        className: t,
+        Icon: n = s.g,
+        iconSize: i,
+        customGraphic: r,
+        gradientColor: p = "green",
+        tooltip: m,
+        text: E,
+        trailing: f,
+        ...A
+    } = e;
+    function y() {
+        return (0, l.jsx)(d.A, {
+            className: a()(h.Xx, t),
+            gradientColor: p,
+            ...(null != r ? { customGraphic: r } : { Icon: n, iconSize: i }),
+            ...A,
+            children: (0, l.jsxs)("div", {
+                className: h.Yu,
+                children: [
+                    (0, l.jsx)(o.E, {
+                        variant: "text-xs/semibold",
+                        color: "currentColor",
+                        children: "string" == typeof E ? (0, C.U)(E) : E,
+                    }),
+                    (0, l.jsx)("div", { className: h.HF, children: f }),
+                ],
+            }),
+        });
+    }
     return null != m && "object" == typeof m
         ? (0, l.jsx)(u.u, { assetSize: 48, asContainer: !0, element: "div", ...m, children: y() })
         : null != m && "string" == typeof m
           ? (0, l.jsx)(c.m, { text: m, asContainer: !0, tag: "div", children: y() })
           : y();
 }
-function A(e) {
+function f(e) {
     let { trailingText: t, ...n } = e;
     return (0, l.jsx)(E, {
         trailing:
@@ -62,7 +63,7 @@ function A(e) {
         ...n,
     });
 }
-function f(e) {
+function A(e) {
     let { text: t, endDatetime: n, ...r } = e,
         [a, s] = i.useState(() => (0, m.u)(n));
     return ((0, p.A)(() => {
@@ -70,5 +71,5 @@ function f(e) {
     }, 1e3),
     null != n && null == a)
         ? null
-        : (0, l.jsx)(A, { text: t, trailingText: null != a ? a : void 0, ...r });
+        : (0, l.jsx)(f, { text: t, trailingText: null != a ? a : void 0, ...r });
 }

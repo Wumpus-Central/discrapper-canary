@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(267102),
     O = n(926972),
     L = n(333216),
-    D = n(256449),
-    y = n(750385),
+    y = n(256449),
+    D = n(750385),
     v = n(649852),
     b = n.n(v),
     M = n(942381),
@@ -83,7 +83,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
             a = r.useRef(null),
             [l, o] = r.useState(!0),
             d = k.bM.useStore((e) => e.activeCategoryIndex),
-            c = (0, D.pD)(n),
+            c = (0, y.pD)(n),
             {
                 firstStandardStickerCategoryIndex: u,
                 firstStandardStickerCategoryOffsetTop: _,
@@ -180,7 +180,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 null != e &&
                                     ((o = e.id), (g = e.name), (S = (0, i.jsx)(el.A, { guild: e, isSelected: I })));
                             } else if (m) {
-                                let e = y.A.getStickerPack(f.id);
+                                let e = D.A.getStickerPack(f.id);
                                 null != e &&
                                     ((g = e.name),
                                     (S = (0, i.jsx)(eu.A, {
@@ -284,8 +284,8 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     };
 var eO = n(297264),
     eL = n(834730),
-    eD = n(422936),
-    ey = n(811611),
+    ey = n(422936),
+    eD = n(811611),
     ev = n(821609),
     eb = n(403581);
 function eM(e) {
@@ -320,9 +320,9 @@ var eP = n(823894),
     ew = n(83148);
 function eG(e) {
     let { className: t, onClose: n } = e;
-    (0, D.XQ)();
+    (0, y.XQ)();
     let { analyticsLocations: a } = (0, x.Ay)(G.A.EMPTY_STATE),
-        l = (0, u.yK)([y.A], () => eP.vX.map((e) => y.A.getStickerById(e)));
+        l = (0, u.yK)([D.A], () => eP.vX.map((e) => D.A.getStickerById(e)));
     r.useEffect(() => {
         Y.default.track(e_.HAw.PREMIUM_UPSELL_VIEWED, {
             type: eU.e.EMPTY_STICKER_PICKER_UPSELL,
@@ -331,13 +331,13 @@ function eG(e) {
         });
     }, [a]);
     let o = (0, H.V)(),
-        d = (0, eD.O)(),
+        d = (0, ey.O)(),
         c = null != o || null != d;
     return (0, i.jsxs)("div", {
         className: s()(ew.p$, t, { [ew.Hz]: c }),
         children: [
             c
-                ? (0, i.jsx)(ey.Ay, {
+                ? (0, i.jsx)(eD.Ay, {
                       discountOffer: d,
                       trialOffer: o,
                       onClose: n,
@@ -488,7 +488,7 @@ let e0 = (0, K.xI)(P.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
                     null != r &&
                         ((t = eA.intl.format(eA.t.cZOkbs, { source: r.name })), (n = (0, i.jsx)(el.A, { guild: r })));
                 } else if ((0, ec.FD)(e)) {
-                    let r = y.A.getStickerPack(e.pack_id);
+                    let r = D.A.getStickerPack(e.pack_id);
                     null != r &&
                         ((t = eA.intl.format(eA.t.cZOkbs, { source: r.name })),
                         (n = (0, i.jsx)(eu.A, { size: e1, sticker: (0, ec.Id)(r), disableAnimation: !0 })));
@@ -546,16 +546,16 @@ let te = r.memo(function (e) {
             currentUser: O,
             checkSendability: L = !0,
         } = e,
-        { location: D } = (0, w.p)(),
-        y = S + 2 * g,
+        { location: y } = (0, w.p)(),
+        D = S + 2 * g,
         v = r.useMemo(
             () => ({
                 gridColumnGap: c,
-                gridTemplateColumns: `repeat(auto-fill, ${y}px)`,
-                height: y,
-                paddingRight: t ? void 0 : y,
+                gridTemplateColumns: `repeat(auto-fill, ${D}px)`,
+                height: D,
+                paddingRight: t ? void 0 : D,
             }),
-            [t, c, y],
+            [t, c, D],
         ),
         b = r.useMemo(() => ({ width: S, height: S, padding: g }), [g, S]),
         [M, P] = (0, e4.A)(null, 300);
@@ -569,7 +569,7 @@ let te = r.memo(function (e) {
                 m = (0, l.throttle)(() => {
                     _?.current === !0 || h?.current === !0 || d || I?.(e);
                 }, 250),
-                { ref: g, tabIndex: y, onFocus: v, ...U } = o?.(e.columnIndex, p) ?? {};
+                { ref: g, tabIndex: D, onFocus: v, ...U } = o?.(e.columnIndex, p) ?? {};
             switch (e.type) {
                 case ee.op.CREATE_STICKER:
                     return (0, i.jsx)(
@@ -580,14 +580,14 @@ let te = r.memo(function (e) {
                                 "aria-label": e.name,
                                 className: s()(e9.wP, T, { [e9.Kj]: d }),
                                 innerRef: g,
-                                tabIndex: y,
+                                tabIndex: D,
                                 onFocus: v ?? m,
                                 onMouseMove: m,
-                                onClick: () => {
+                                onClick: function () {
                                     e.type === ee.op.CREATE_STICKER &&
                                         (Y.default.track(e_.HAw.OPEN_MODAL, {
                                             type: e_.JJy.CREATE_STICKER_MODAL,
-                                            location: D,
+                                            location: y,
                                         }),
                                         (0, E.openModalLazy)(async () => {
                                             let { default: t } = await Promise.all([
@@ -636,10 +636,10 @@ let te = r.memo(function (e) {
                         (0, i.jsxs)(A.D, {
                             className: s()(e9.yI, T, { [e9.PV]: d, [e9.TV]: M === e.sticker.id }),
                             innerRef: g,
-                            tabIndex: y,
+                            tabIndex: D,
                             onFocus: v ?? m,
                             onMouseMove: m,
-                            onClick: (t) => {
+                            onClick: function (t) {
                                 if (_?.current === !0 || h?.current === !0) return;
                                 let n = t.altKey;
                                 n && e.type === ee.op.STICKER && !(0, ec.o1)(e.sticker.id) && P(e.sticker.id),
@@ -747,15 +747,15 @@ let tm = r.forwardRef(function (e, t) {
         [S, N] = k.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], M.x),
         { analyticsLocations: C } = (0, x.Ay)(G.A.STICKER_PICKER),
         R = (0, F.RQ)((e) => e.searchQuery),
-        O = (0, u.bG)([y.A], () => y.A.getPremiumPacks()),
+        O = (0, u.bG)([D.A], () => D.A.getPremiumPacks()),
         {
             renderRow: L,
-            renderSection: D,
+            renderSection: y,
             renderSectionFooter: v,
             sectionFooterHeight: b,
             renderSectionHeader: P,
             sectionHeaderHeight: U,
-        } = ((e) => {
+        } = (function (e) {
             let {
                     collapsedStickersCategories: t,
                     gridWidth: n,
@@ -849,7 +849,7 @@ let tm = r.forwardRef(function (e, t) {
                     [A, l, o, d, c, _, E, g, S, n, a, f, p, m],
                 ),
                 L = r.useCallback((e, t) => (0, i.jsx)("div", { children: t }, e), []),
-                D = r.useCallback(
+                y = r.useCallback(
                     function (e) {
                         let { isStickerPack: n = !0 } =
                                 arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
@@ -899,7 +899,7 @@ let tm = r.forwardRef(function (e, t) {
                                         }),
                                         icon: (0, i.jsx)(ei.G, { size: "xs", color: "currentColor" }),
                                         isCollapsed: t.has(n.id),
-                                        onClick: () => D(n.id, { isStickerPack: !1 }),
+                                        onClick: () => y(n.id, { isStickerPack: !1 }),
                                         children: n.name,
                                     },
                                     `header-${n.id}`,
@@ -914,7 +914,7 @@ let tm = r.forwardRef(function (e, t) {
                                         }),
                                         icon: (0, i.jsx)(er.O, { size: "xs", color: "currentColor" }),
                                         isCollapsed: t.has(n.id),
-                                        onClick: () => D(n.id, { isStickerPack: !1 }),
+                                        onClick: () => y(n.id, { isStickerPack: !1 }),
                                         children: n.name,
                                     },
                                     `header-${n.id}`,
@@ -932,14 +932,14 @@ let tm = r.forwardRef(function (e, t) {
                                         }),
                                         icon: (0, i.jsx)(el.A, { guild: e, height: 16, width: 16 }),
                                         isCollapsed: t.has(e.id),
-                                        onClick: () => D(e.id),
+                                        onClick: () => y(e.id),
                                         children: e.name,
                                     },
                                     `h${e.id}`,
                                 );
                             }
                             case ee.Z2.PACK: {
-                                let e = y.A.getStickerPack(n.id);
+                                let e = D.A.getStickerPack(n.id);
                                 if (null == e) return null;
                                 return (0, i.jsx)(
                                     eV.A,
@@ -954,7 +954,7 @@ let tm = r.forwardRef(function (e, t) {
                                             sticker: (0, ec.Id)(e),
                                         }),
                                         isCollapsed: t.has(e.id),
-                                        onClick: () => D(e.id),
+                                        onClick: () => y(e.id),
                                         children: e.name,
                                     },
                                     `h${e.id}`,
@@ -962,7 +962,7 @@ let tm = r.forwardRef(function (e, t) {
                             }
                         }
                     },
-                    [t, h, D, I],
+                    [t, h, y, I],
                 ),
                 b = r.useCallback(
                     (e) => {
@@ -1084,7 +1084,7 @@ let tm = r.forwardRef(function (e, t) {
                               listPadding: null != s ? tI : th,
                               onScroll: B,
                               renderRow: L,
-                              renderSection: null == s ? D : void 0,
+                              renderSection: null == s ? y : void 0,
                               renderSectionHeader: P,
                               renderSectionFooter: v,
                               rowCount: A,
@@ -1113,7 +1113,7 @@ var tN = n(602034),
     tR = n(337485);
 let tO = r.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: a, channel: s } = e,
-        l = (0, D.ZO)(s),
+        l = (0, y.ZO)(s),
         o = r.useRef(null),
         { searchQuery: d, isSearchSuggestion: c } = (0, F.RQ)(
             (e) => ({ searchQuery: e.searchQuery, isSearchSuggestion: e.isSearchSuggestion }),
@@ -1162,8 +1162,8 @@ let tO = r.forwardRef(function (e, t) {
 });
 n(321073);
 var tL = n(768038),
-    tD = n(789645),
-    ty = n(964486),
+    ty = n(789645),
+    tD = n(964486),
     tv = n(428262),
     tb = n(217653),
     tM = n(939383);
@@ -1181,11 +1181,11 @@ function tU(e) {
         });
     }, [n]);
     let a = (0, r.useRef)(null);
-    (0, ty.Ay)(() => {
+    (0, tD.Ay)(() => {
         a.current?.focus();
     });
     let l = (0, H.V)(),
-        o = (0, eD.O)(),
+        o = (0, ey.O)(),
         d = l?.subscription_trial?.sku_id === eU.pe.TIER_0,
         c = null != l || null != o;
     return (0, i.jsxs)("div", {
@@ -1195,7 +1195,7 @@ function tU(e) {
         className: s()(tb.VL, { [tb.Hz]: c }),
         children: [
             c
-                ? (0, i.jsx)(ey.Ay, {
+                ? (0, i.jsx)(eD.Ay, {
                       trialOffer: l,
                       discountOffer: o,
                       onClose: tP,
@@ -1229,7 +1229,7 @@ function tU(e) {
                 className: tb.kz,
                 onClick: tP,
                 "aria-label": eA.intl.string(eA.t.cpT0Cq),
-                children: (0, i.jsx)(tD.P, { size: "md", color: "currentColor" }),
+                children: (0, i.jsx)(ty.P, { size: "md", color: "currentColor" }),
             }),
         ],
     });
@@ -1257,7 +1257,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             [T, m] = (0, F.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], M.x),
             g = r.useRef("");
         r.useImperativeHandle(t, () => ({ onPickerOpen: eh }));
-        let S = (0, D.pD)(s),
+        let S = (0, y.pD)(s),
             N = 0 === S.filter((e) => e.type !== ee.Z2.EMPTY_GUILD_UPSELL).length,
             C = (0, V.oV)({
                 gridWrapperRef: h,
@@ -1290,9 +1290,9 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                     })(T, L, s),
                 [T, L, s],
             ),
-            b = (0, D.Gc)(),
-            P = (0, D.UT)(),
-            U = (0, u.cf)([y.A], () => y.A.getAllGuildStickers()),
+            b = (0, y.Gc)(),
+            P = (0, y.UT)(),
+            U = (0, u.cf)([D.A], () => D.A.getAllGuildStickers()),
             { sendable: K = [], sendableWithPremium: $ = [] } = v ?? {},
             z = K.length + $.length,
             q = r.useCallback(
@@ -1308,7 +1308,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 stickersGrid: es,
                 gutterWidth: el,
                 columnCounts: eo,
-            } = (0, D._c)({
+            } = (0, y._c)({
                 filteredStickers: v,
                 stickersCategories: S,
                 collapsedStickersCategories: O,
@@ -1427,7 +1427,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
         function eh() {
             let e = s.getGuildId(),
                 t = [];
-            null !== e && (t = y.A.getStickersByGuildId(e) ?? []);
+            null !== e && (t = D.A.getStickersByGuildId(e) ?? []);
             let n = 0;
             null != U &&
                 [...U.values()].forEach((e) => {
@@ -1503,7 +1503,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     }),
     tK = r.forwardRef(function (e, t) {
         return (
-            (0, D.XQ)(),
+            (0, y.XQ)(),
             (0, i.jsx)("div", {
                 className: tw.iE,
                 id: eP.GX,
@@ -1940,9 +1940,9 @@ let t5 = 498 + tJ.as.MEDIUM,
                 orientation: "left" === w ? T.R.HORIZONTAL_RIGHT : T.R.HORIZONTAL_LEFT,
             }),
             K = (0, F.RQ)((e) => e.activeView),
-            $ = (0, D.ZO)(M),
+            $ = (0, y.ZO)(M),
             { renderWindow: z, windowDispatch: q } = r.useContext(R.Ay),
-            Z = (0, u.bG)([y.A], () => !y.A.hasLoadedStickerPacks),
+            Z = (0, u.bG)([D.A], () => !D.A.hasLoadedStickerPacks),
             X = (0, O.tj)({ location: "expression_picker" }),
             Q = tZ.useConfig({ location: "expression_picker" }).enabled,
             J = (0, u.bG)([tz.A], () => tz.A.isOpen()),

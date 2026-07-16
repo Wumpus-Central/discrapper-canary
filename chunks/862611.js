@@ -5,12 +5,12 @@ var i,
     a = n(323889),
     s = n(17928),
     o = n(453903),
-    u = n(990078),
-    c = n(462887),
-    d = n(834730),
-    f = n(939249),
-    m = n(789645),
-    g = n(192308),
+    u = n(462887),
+    c = n(834730),
+    d = n(939249),
+    f = n(789645),
+    m = n(192308),
+    g = n(866665),
     E = n(922016),
     A = n(775602),
     C = n(274670),
@@ -43,7 +43,7 @@ function Q(e) {
         i,
         { quest: l, onClose: a } = e,
         o = (0, s.bG)([L.A], () => L.A.getState().theme),
-        u = (0, c.M)(o) ? b.NJ8.DARK : b.NJ8.LIGHT;
+        m = (0, u.M)(o) ? b.NJ8.DARK : b.NJ8.LIGHT;
     return (0, r.jsxs)("div", {
         className: j.N1,
         children: [
@@ -53,12 +53,12 @@ function Q(e) {
                     (0, r.jsx)("img", {
                         className: j.rC,
                         alt: l.config.messages.gameTitle,
-                        src: (0, O.tW)(l, O.fY.GAME_TILE, u).url,
+                        src: (0, O.tW)(l, O.fY.GAME_TILE, m).url,
                     }),
                     (0, r.jsxs)("div", {
                         className: j.if,
                         children: [
-                            (0, r.jsx)(d.E, {
+                            (0, r.jsx)(c.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-strong",
                                 children:
@@ -76,7 +76,7 @@ function Q(e) {
                                         U.t["D+DkEH"]),
                                     U.intl.string(i)),
                             }),
-                            (0, r.jsx)(d.E, {
+                            (0, r.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 children: U.intl.string(U.t.VgN1Bn),
@@ -85,18 +85,18 @@ function Q(e) {
                     }),
                 ],
             }),
-            (0, r.jsx)(f.D, {
+            (0, r.jsx)(d.D, {
                 className: j.b,
                 "aria-label": U.intl.string(U.t.cpT0Cq),
                 onClick: a,
-                children: (0, r.jsx)(m.P, { size: "md", color: "currentColor" }),
+                children: (0, r.jsx)(f.P, { size: "md", color: "currentColor" }),
             }),
         ],
     });
 }
-let F = (e) => {
-    let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: c, onGameProfileModalClose: d } = e,
-        m = (0, M.Ut)(),
+function F(e) {
+    let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: u, onGameProfileModalClose: c } = e,
+        f = (0, M.Ut)(),
         E = (0, k.go)(),
         p = (0, s.bG)([A.Ay], () => A.Ay.useReducedMotion),
         I = l.useRef(null),
@@ -111,7 +111,7 @@ let F = (e) => {
                   surfaceId: G.uF.SPONSORED_QUEST_SHEET,
                   sourceQuestContent: o,
               })
-            : m({
+            : f({
                   questId: t.id,
                   questContent: G.uF.SPONSORED_QUEST_SHEET,
                   questContentCTA: y.Cy.GAME_STORE_OPEN_GAME_LINK,
@@ -130,13 +130,13 @@ let F = (e) => {
                       sourceQuestContent: o,
                       impressionId: E,
                   })
-                : m({
+                : f({
                       questId: t.id,
                       questContent: G.uF.SPONSORED_QUEST_SHEET,
                       questContentCTA: y.Cy.GAME_PROFILE_OPEN,
                       sourceQuestContent: o,
                   }),
-            await (0, g.openModalLazy)(
+            await (0, m.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("50884"),
@@ -409,9 +409,9 @@ let F = (e) => {
                             ...t,
                         });
                 },
-                { onCloseCallback: d },
+                { onCloseCallback: c },
             ),
-            c());
+            u());
     }
     let N = l.useCallback(
             (e) => {
@@ -428,9 +428,9 @@ let F = (e) => {
         v = l.useCallback(() => {
             null == I.current || p || (I.current.style.transform = "rotateX(0deg) rotateY(0deg)");
         }, [p]);
-    return (0, r.jsx)(u.m, {
+    return (0, r.jsx)(g.m, {
         text: i.name,
-        children: (0, r.jsx)(f.D, {
+        children: (0, r.jsx)(d.D, {
             className: j.zR,
             onClick: L,
             onMouseMove: N,
@@ -447,7 +447,7 @@ let F = (e) => {
             }),
         }),
     });
-};
+}
 function X() {
     return (0, r.jsxs)("svg", {
         xmlns: "http://www.w3.org/2000/svg",
@@ -489,7 +489,7 @@ function K(e) {
     } = e;
     (0, p.A)(i), (0, R.x)(i);
     let f = (0, s.bG)([h.A], () => i.some((e) => h.A.isFetching(e))),
-        m = (0, s.bG)([h.A], () => i.some((e) => h.A.didFetchingFail(e))),
+        g = (0, s.bG)([h.A], () => i.some((e) => h.A.didFetchingFail(e))),
         E = (0, s.yK)([h.A], () =>
             i
                 .map((e) => h.A.getGame(e))
@@ -539,19 +539,19 @@ function K(e) {
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
         }, [C.length]),
         S = !f && 0 === C.length,
-        T = m || S;
+        T = g || S;
     if (
         (l.useEffect(() => {
             if (T) {
-                let e = m ? w.FETCH_FAILED : w.NO_GAMES_AVAILABLE;
+                let e = g ? w.FETCH_FAILED : w.NO_GAMES_AVAILABLE;
                 v.default.track(b.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     a(),
-                    (0, g.openModalLazy)(async () => {
+                    (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e("91646").then(n.bind(n, 659309));
                         return (t) => (0, r.jsx)(e, { ...t });
                     });
             }
-        }, [T, m, t.id, a]),
+        }, [T, g, t.id, a]),
         f && !T)
     ) {
         let e = Math.min(i.length, 10);

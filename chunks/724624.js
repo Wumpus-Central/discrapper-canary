@@ -549,35 +549,35 @@ let tj = function (t) {
             let t = U.filter((t) => (0, j.I5)(t)).length,
                 e = U.length,
                 l = _.length,
-                i = "CONFIRM" === N[0] ? F : () => P(N[N.indexOf(y) - 1]),
-                s = async () => {
-                    if ((M(!1), null != w && U?.length !== 0)) {
-                        r()(
-                            !U.some((t) => t.isOnCooldown()),
-                            "Cannot use a premium guild subscription slot while on cooldown",
-                        );
-                        try {
-                            await Promise.all(
+                i = "CONFIRM" === N[0] ? F : () => P(N[N.indexOf(y) - 1]);
+            async function s() {
+                if ((M(!1), null != w && U?.length !== 0)) {
+                    r()(
+                        !U.some((t) => t.isOnCooldown()),
+                        "Cannot use a premium guild subscription slot while on cooldown",
+                    );
+                    try {
+                        await Promise.all(
+                            U.map((t) => {
+                                let { premiumGuildSubscription: e } = t;
+                                return null != e ? (0, u.jZ)(e.guildId, e.id) : Promise.resolve();
+                            }),
+                        ),
+                            await (0, u.VA)(
+                                w.id,
                                 U.map((t) => {
-                                    let { premiumGuildSubscription: e } = t;
-                                    return null != e ? (0, u.jZ)(e.guildId, e.id) : Promise.resolve();
+                                    let { id: e } = t;
+                                    return e;
                                 }),
+                                f === th.Pn.PERK,
                             ),
-                                await (0, u.VA)(
-                                    w.id,
-                                    U.map((t) => {
-                                        let { id: e } = t;
-                                        return e;
-                                    }),
-                                    f === th.Pn.PERK,
-                                ),
-                                P("SUCCESS");
-                        } catch (t) {
-                            M(!0);
-                        }
+                            P("SUCCESS");
+                    } catch (t) {
+                        M(!0);
                     }
-                },
-                o = R ? K.intl.string(K.t["PR0n//"]) : K.intl.string(K.t["7KP/fI"]);
+                }
+            }
+            let o = R ? K.intl.string(K.t["PR0n//"]) : K.intl.string(K.t["7KP/fI"]);
             return R || "control" === S
                 ? R && "control" !== S
                     ? (0, n.jsx)(tx, {

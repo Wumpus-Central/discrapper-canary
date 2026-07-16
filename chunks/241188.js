@@ -484,7 +484,7 @@ function e_(e) {
               children: (0, a.jsxs)("div", {
                   className: ew.wx,
                   children: [
-                      (() => {
+                      (function () {
                           if ("guild" === n && null != h)
                               return (0, a.jsx)(ek.Ay, {
                                   guild: h,
@@ -534,7 +534,7 @@ function e_(e) {
                                       ],
                                   }),
                               }),
-                              (() => {
+                              (function () {
                                   let e = (function () {
                                       switch (t.data.kind) {
                                           case "message":

@@ -695,11 +695,11 @@ let tY = new O.Vy("LegacyOverlayNotificationsStore"),
     tX = 8 * Q.A.Millis.SECOND,
     tJ = 30 * Q.A.Millis.SECOND,
     tQ = Object.freeze({ priority: 0, duration: tZ, expirationExternallyManaged: !1, type: 0 }),
-    tq = [],
-    t$ = (e, t, n) => {
-        let i = t ? ey.yFH.TIMED_OUT : ey.yFH.DISMISSED;
-        return setTimeout(() => R.A.updateNotificationStatus(e, i), null != n ? n : tZ);
-    };
+    tq = [];
+function t$(e, t, n) {
+    let i = t ? ey.yFH.TIMED_OUT : ey.yFH.DISMISSED;
+    return setTimeout(() => R.A.updateNotificationStatus(e, i), null != n ? n : tZ);
+}
 function t0(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : ey.yFH.DISMISSED;
     if (null == e) return !1;

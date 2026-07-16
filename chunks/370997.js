@@ -348,7 +348,7 @@ function eT(e) {
                               },
                           })
                         : null),
-                    (() => {
+                    (function () {
                         let e = [];
                         for (let t of c)
                             e.push(...(0, X.rY)(t, c)),

@@ -2,27 +2,27 @@
 n.d(t, { A: () => c });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(939249),
-    l = n(860923),
-    u = n(335827);
-let c = (e) => {
+    a = n(503698),
+    s = n.n(a),
+    l = n(939249),
+    o = n(860923),
+    d = n(335827);
+let c = function (e) {
     let {
             id: t,
             occupant: n,
-            x: s,
+            x: a,
             y: c,
-            assetKey: d,
+            assetKey: u,
             onClick: _,
-            skipNewUserEducation: h = !1,
-            shadowPosition: f,
+            skipNewUserEducation: E = !1,
+            shadowPosition: A,
         } = e,
-        p = (0, l.A)(),
-        E = r.useMemo(() => p?.seats[d], [p, d]),
-        m = r.useMemo(() => E?.seat, [E]),
-        g = r.useMemo(() => E?.shadow, [E]);
-    return (0, i.jsx)(o.D, {
+        h = (0, o.A)(),
+        I = r.useMemo(() => h?.seats[u], [h, u]),
+        f = r.useMemo(() => I?.seat, [I]),
+        p = r.useMemo(() => I?.shadow, [I]);
+    return (0, i.jsx)(l.D, {
         "aria-label": "claim seat",
         onClick:
             null != _
@@ -30,25 +30,25 @@ let c = (e) => {
                       e.preventDefault(), e.stopPropagation(), _(t);
                   }
                 : void 0,
-        className: a()(u.am, { [u.Sf]: null != n }),
-        style: { transform: `translate(${s}px, ${c}px)` },
+        className: s()(d.am, { [d.Sf]: null != n }),
+        style: { transform: `translate(${a}px, ${c}px)` },
         children: (0, i.jsxs)("div", {
-            className: u.LU,
+            className: d.LU,
             children: [
-                null != g &&
-                    null != f &&
+                null != p &&
+                    null != A &&
                     (0, i.jsx)("img", {
-                        className: a()(u.Sl, u.r7),
-                        style: { transform: `translate(${f.x}px, ${f.y}px)` },
-                        src: E?.shadow,
+                        className: s()(d.Sl, d.r7),
+                        style: { transform: `translate(${A.x}px, ${A.y}px)` },
+                        src: I?.shadow,
                         alt: "",
                     }),
-                null != m &&
+                null != f &&
                     (0, i.jsx)("img", {
                         onDragStart: (e) => e.preventDefault(),
-                        className: a()(u.Sl, { [u.Sf]: null != n, [u.cb]: h }),
+                        className: s()(d.Sl, { [d.Sf]: null != n, [d.cb]: E }),
                         style: { animationDelay: `${5500 + 150 * t}ms` },
-                        src: E?.seat,
+                        src: I?.seat,
                         alt: "",
                     }),
             ],

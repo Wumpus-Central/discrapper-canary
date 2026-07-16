@@ -1353,7 +1353,7 @@ function nG(e) {
             children: (0, r.jsx)(F.j, {
                 onMouseEnter: () => d(!0),
                 onMouseLeave: () => d(!1),
-                onClick: () => {
+                onClick: function () {
                     if (!__OVERLAY__ && (null != E && clearTimeout(E), A(setTimeout(T, 500)), I(h + 1), 15 === h)) {
                         T();
                         let e = !nE.w.get(eO.wqg);
