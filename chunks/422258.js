@@ -1,14 +1,16 @@
 "use strict";
 n.d(t, {
-    JD: () => P,
+    JD: () => x,
     Jz: () => O,
+    O8: () => U,
     S_: () => L,
     fv: () => b,
+    hR: () => w,
     i_: () => D,
     od: () => v,
-    tV: () => U,
+    tV: () => k,
     w6: () => y,
-    zN: () => M,
+    zN: () => G,
 });
 var i = n(435558),
     r = n.n(i),
@@ -169,7 +171,31 @@ function v(e) {
 function b(e) {
     D(e);
 }
-function M(e) {
+function M(e, t) {
+    return null != e && e.type === a.Ip.CATEGORY && e.collapsed !== t && ((e.collapsed = t), !0);
+}
+function P(e) {
+    o.wc.updateAsync(
+        "favorites",
+        (t) => {
+            if (!e(t)) return !1;
+        },
+        o.Sb.FREQUENT_USER_ACTION,
+        N,
+    );
+}
+function U(e, t) {
+    let n = E.A.getFavorite(e);
+    null != n && n.type === a.Ip.CATEGORY && P((n) => M(n.favoriteChannels[e], t));
+}
+function w(e) {
+    P((t) => {
+        let n = !1;
+        for (let i in t.favoriteChannels) M(t.favoriteChannels[i], e) && (n = !0);
+        return n;
+    });
+}
+function G(e) {
     0 !== e.length &&
         o.wc.updateAsync(
             "favorites",
@@ -186,7 +212,7 @@ function M(e) {
             N,
         );
 }
-function P(e, t) {
+function x(e, t) {
     o.wc.updateAsync(
         "favorites",
         (n) => {
@@ -196,7 +222,7 @@ function P(e, t) {
         N,
     );
 }
-function U(e) {
+function k(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "settings_page";
     o.wc.updateAsync(
         "favorites",
