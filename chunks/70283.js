@@ -23,4 +23,5 @@ var i,
         (i[(i.STREAMING = 19)] = "STREAMING"),
         (i[(i.GAME_TIME = 20)] = "GAME_TIME"),
         (i[(i.GAME_VARIETY = 21)] = "GAME_VARIETY"),
+        (i[(i.STAFF = 22)] = "STAFF"),
         i);

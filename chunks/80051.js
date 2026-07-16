@@ -44,8 +44,8 @@ function h(e) {
     return (0, i.jsx)(c.A, {
         label: a ? u.intl.string(u.t.QJMRUB) : u.intl.string(u.t.vZiwmG),
         className: s()(_.N9, n),
-        onClick: function () {
-            d.A.toggleParticipants(t, !a);
+        onClick: function (e) {
+            e.stopPropagation(), d.A.toggleParticipants(t, !a);
         },
         iconComponent: h,
         shouldShowTooltip: !o,

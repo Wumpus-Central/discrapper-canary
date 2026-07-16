@@ -2,6 +2,9 @@
 n.d(t, { ie: () => l, w0: () => a });
 var i = n(70283);
 let r = {
+    staff: 22,
+    staff_hidden: 22,
+    staff_personal: 22,
     premium: 1,
     premium_tenure_1_month_v2: 1,
     premium_tenure_3_month_v2: 1,
