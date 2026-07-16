@@ -56,9 +56,10 @@ function D() {
     let L = (0, m.Zb)(D),
         T = L ? y.intl.string(C.default.z2vO3h) : y.intl.string(y.t.PWq8TL),
         b = L ? y.intl.formatToPlainString(C.default.stVlc6, { cooldownMonths: P.wl }) : y.intl.string(y.t.SOC4ML),
-        M = [];
+        M = [],
+        I = null != p && null != j;
     return (
-        null != p && null != j
+        I
             ? M.push({
                   text: y.intl.string(y.t.zrCzVB),
                   onClick: () => l(h.g.CONFIRM_DISCOUNT),
@@ -76,7 +77,7 @@ function D() {
             title: T,
             subtitle: b,
             actions: M,
-            preview: null !== p && (0, i.jsx)(v, { churnUserDiscountOffer: p }),
+            preview: I && (0, i.jsx)(v, { churnUserDiscountOffer: p }),
             onClose: async () => e(),
             children: (0, i.jsx)(g.l, {
                 currentUser: S,
