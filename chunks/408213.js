@@ -1,64 +1,64 @@
 "use strict";
-n.d(t, { Ay: () => A });
+n.d(t, { Ay: () => T });
 var i = n(636537),
     r = n(228366),
-    s = n(157559),
-    a = n(442433),
-    o = n(913122),
-    l = n(9994),
-    u = n(529942),
+    a = n(157559),
+    s = n(442433),
+    l = n(913122),
+    o = n(9994),
+    d = n(529942),
     c = n(164956),
-    d = n(842241),
+    u = n(842241),
     _ = n(696451),
-    h = n(299091),
-    f = n(287809),
-    p = n(174459),
-    E = n(513461),
-    m = n(652215),
-    g = n(375708);
-let A = {
+    E = n(299091),
+    A = n(287809),
+    h = n(174459),
+    I = n(513461),
+    f = n(652215),
+    p = n(375708);
+let T = {
     fetchVerificationForm: async function e(e, t) {
-        let n = t ?? h.A.getInviteKeyForGuildId(e),
-            s = f.default.getCurrentUser(),
-            a = !_.Ay.isMember(e, s?.id);
+        let n = t ?? E.A.getInviteKeyForGuildId(e),
+            a = A.default.getCurrentUser(),
+            s = !_.Ay.isMember(e, a?.id);
         try {
             let t = await i.Bo.get({
-                url: m.Rsh.GUILD_MEMBER_VERIFICATION(e),
-                query: { with_guild: a, invite_code: null != n ? (0, d.m0)(n) : void 0 },
+                url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
+                query: { with_guild: s, invite_code: null != n ? (0, u.m0)(n) : void 0 },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, i.fT)(),
             });
             if (null == t.body) throw t;
-            let { body: s } = t;
+            let { body: a } = t;
             return (
                 r.h.dispatch({
                     type: "MEMBER_VERIFICATION_FORM_UPDATE",
                     guildId: e,
                     form: {
-                        version: s.version,
-                        description: s.description,
-                        formFields: s.form_fields,
-                        guild: s.guild,
-                        profile: null != s.profile ? (0, l.wr)(s.profile) : null,
+                        version: a.version,
+                        description: a.description,
+                        formFields: a.form_fields,
+                        guild: a.guild,
+                        profile: null != a.profile ? (0, o.wr)(a.profile) : null,
                     },
                 }),
-                s
+                a
             );
         } catch (t) {
             r.h.dispatch({ type: "MEMBER_VERIFICATION_FORM_FETCH_FAIL", guildId: e });
         }
     },
-    updateVerificationForm: async function e(e, t, n, s) {
-        let { body: a } = await i.Bo.patch({
-            url: m.Rsh.GUILD_MEMBER_VERIFICATION(e),
-            body: { form_fields: t, enabled: n, bulk_action: s },
+    updateVerificationForm: async function e(e, t, n, a) {
+        let { body: s } = await i.Bo.patch({
+            url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
+            body: { form_fields: t, enabled: n, bulk_action: a },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         });
         r.h.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
             guildId: e,
-            form: { version: a.version, description: a.description, formFields: a.form_fields },
+            form: { version: s.version, description: s.description, formFields: s.form_fields },
         });
     },
     updateVerificationFormFieldsLocal: function (e, t) {
@@ -71,10 +71,10 @@ let A = {
     },
     updateVerificationFormDescription: async function e(e, t) {
         let { body: n } = await i.Bo.patch({
-            url: m.Rsh.GUILD_MEMBER_VERIFICATION(e),
+            url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         });
         r.h.dispatch({
             type: "MEMBER_VERIFICATION_FORM_UPDATE",
@@ -92,24 +92,24 @@ let A = {
     },
     enableVerificationForm: async function e(e, t) {
         await i.Bo.patch({
-            url: m.Rsh.GUILD_MEMBER_VERIFICATION(e),
+            url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, i.fT)(),
         });
     },
     submitVerificationForm: async function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 200;
-        if (c.A.isFullServerPreview(e)) return void (0, u.Z$)(e, { memberOptions: { isPending: !1 } });
+        if (c.A.isFullServerPreview(e)) return void (0, d.Z$)(e, { memberOptions: { isPending: !1 } });
         try {
-            let { body: s } = await i.Bo.put({
-                url: m.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+            let { body: a } = await i.Bo.put({
+                url: f.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 body: { version: t.version, form_fields: t.formFields },
-                rejectWithError: !1,
+                rejectWithError: (0, i.fT)(),
             });
             return (
-                r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: s }),
-                (0, E.j5)(t.formFields) &&
+                r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: a }),
+                (0, I.j5)(t.formFields) &&
                     -1 !== n &&
                     setTimeout(() => {
                         var t;
@@ -117,25 +117,25 @@ let A = {
                             (t = e), void r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_SHOW", guildId: t })
                         );
                     }, n),
-                s
+                a
             );
         } catch (t) {
             let { status: e } = t;
             switch (e) {
                 case 429:
                     throw (
-                        ((0, a.Z_)(),
-                        s.A.show({
-                            title: g.intl.string(g.t.MmIrpf),
-                            body: g.intl.string(g.t.yjpDQ3),
-                            confirmText: g.intl.string(g.t.XNGT1O),
+                        ((0, s.Z_)(),
+                        a.A.show({
+                            title: p.intl.string(p.t.MmIrpf),
+                            body: p.intl.string(p.t.yjpDQ3),
+                            confirmText: p.intl.string(p.t.XNGT1O),
                         }),
-                        { ...t, message: g.intl.string(g.t.yjpDQ3) })
+                        { ...t, message: p.intl.string(p.t.yjpDQ3) })
                     );
                 case 403:
-                    throw { ...t, message: g.intl.string(g.t["8T1rxN"]) };
+                    throw { ...t, message: p.intl.string(p.t["8T1rxN"]) };
                 default:
-                    throw { ...t, message: new o.LG(t)?.getAnyErrorMessage() ?? g.intl.string(g.t.R0RpRX) };
+                    throw { ...t, message: new l.LG(t)?.getAnyErrorMessage() ?? p.intl.string(p.t.R0RpRX) };
             }
         }
     },
@@ -143,14 +143,14 @@ let A = {
         r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_COACHMARK_CLEAR" });
     },
     reportApplication: function (e) {
-        let { guild: t, guildJoinRequest: n, guildJoinRequestUser: i, reason: r, reasonOther: s, responses: a } = e;
-        p.default.track(m.HAw.GUILD_MEMBER_APPLICATION_REPORTED, {
+        let { guild: t, guildJoinRequest: n, guildJoinRequestUser: i, reason: r, reasonOther: a, responses: s } = e;
+        h.default.track(f.HAw.GUILD_MEMBER_APPLICATION_REPORTED, {
             application_id: n.joinRequestId,
             applicant_id: i.id,
             guild_id: t.id,
             reason: r,
-            reason_other: s,
-            responses: a,
+            reason_other: a,
+            responses: s,
         });
     },
 };

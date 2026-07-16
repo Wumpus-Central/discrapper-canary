@@ -1,28 +1,28 @@
 "use strict";
-n.d(t, { Je: () => a, OH: () => l, fx: () => o, zf: () => u });
+n.d(t, { Je: () => s, OH: () => o, fx: () => l, zf: () => d });
 var i = n(636537),
     r = n(228366),
-    s = n(652215);
-function a(e) {
-    return i.Bo.get({ url: s.Rsh.GUILD_VANITY_URL(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
+    a = n(652215);
+function s(e) {
+    return i.Bo.get({ url: a.Rsh.GUILD_VANITY_URL(e), oldFormErrors: !0, rejectWithError: !0 }).then((e) => {
         let {
             body: { code: t, uses: n, error: i },
         } = e;
         r.h.dispatch({ type: "GUILD_SETTINGS_SET_VANITY_URL", code: t, uses: n, error: i });
     });
 }
-function o() {
+function l() {
     r.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_RESET" });
 }
-function l(e) {
+function o(e) {
     r.h.dispatch({ type: "GUILD_SETTINGS_VANITY_URL_SET", code: e });
 }
-function u(e, t, n) {
+function d(e, t, n) {
     return i.Bo.patch({
-        url: s.Rsh.GUILD_VANITY_URL(e),
+        url: a.Rsh.GUILD_VANITY_URL(e),
         body: { code: t },
         oldFormErrors: !0,
-        rejectWithError: !1,
+        rejectWithError: (0, i.fT)(),
     }).then(
         (e) => {
             let {
