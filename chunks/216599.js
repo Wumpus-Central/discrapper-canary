@@ -7,13 +7,13 @@ var s = i(627968),
     c = i(17928),
     d = i(661531),
     o = i(444550),
-    m = i(990078),
-    x = i(462887),
-    u = i(27192),
-    h = i(534514),
-    g = i(834730),
-    j = i(452027),
-    N = i(150934),
+    m = i(462887),
+    x = i(27192),
+    u = i(297264),
+    h = i(834730),
+    g = i(452027),
+    j = i(150934),
+    N = i(866665),
     p = i(885574),
     v = i(545442),
     f = i(628284),
@@ -21,7 +21,7 @@ var s = i(627968),
     E = i(47167),
     C = i(915089),
     S = i(468689),
-    A = i(913758),
+    A = i(555337),
     I = i(636042),
     M = i(376092),
     L = i(363195),
@@ -46,8 +46,8 @@ function V(e) {
         className: a()(H.wJ, { [H.wH]: l }),
         "aria-current": !!l && "step",
         children: [
-            (0, s.jsx)(g.E, { className: H.BM, variant: "text-sm/normal", "aria-hidden": !0, children: t + 1 }),
-            (0, s.jsx)(g.E, { variant: "text-md/normal", className: H.Fb, children: i }),
+            (0, s.jsx)(h.E, { className: H.BM, variant: "text-sm/normal", "aria-hidden": !0, children: t + 1 }),
+            (0, s.jsx)(h.E, { variant: "text-md/normal", className: H.Fb, children: i }),
         ],
     });
 }
@@ -62,7 +62,7 @@ let W = (e) => {
             overviewFooter: o,
             onNextPressed: m,
             onPrevPressed: x,
-            onComplete: u,
+            onComplete: h,
             sequencerClassName: g,
             initialStep: j = 0,
             forceStep: N,
@@ -93,7 +93,7 @@ let W = (e) => {
             (0, s.jsxs)("div", {
                 className: H.A0,
                 children: [
-                    (0, s.jsx)(h.D, { id: A, variant: "heading-xl/semibold", className: H.wx, children: i }),
+                    (0, s.jsx)(u.D, { id: A, variant: "heading-xl/semibold", className: H.wx, children: i }),
                     (0, s.jsx)("ol", {
                         className: H.Ji,
                         children: n.map((e, t) =>
@@ -133,7 +133,7 @@ let W = (e) => {
                                 type: "submit",
                                 loading: p,
                                 onClick: function () {
-                                    _ ? (u(), v && c()) : (m?.(), S(I + 1));
+                                    _ ? (h(), v && c()) : (m?.(), S(I + 1));
                                 },
                                 disabled: M.disableNextStep,
                             }),
@@ -170,9 +170,9 @@ function X(e) {
             theme: d,
         } = e,
         o = (0, c.bG)([P.A], () => P.A.getGuild(t.id), [t.id]),
-        m = null != o && o.verificationLevel > q.PvD.NONE,
-        u = o?.explicitContentFilter === q.gh6.ALL_MEMBERS,
-        p = (0, x.M)(d) ? "/assets/0280ce34b0947c59.svg" : "/assets/5b151d831c679fdf.svg";
+        x = null != o && o.verificationLevel > q.PvD.NONE,
+        N = o?.explicitContentFilter === q.gh6.ALL_MEMBERS,
+        p = (0, m.M)(d) ? "/assets/0280ce34b0947c59.svg" : "/assets/5b151d831c679fdf.svg";
     return (0, s.jsxs)("div", {
         className: K.kL,
         children: [
@@ -180,13 +180,13 @@ function X(e) {
                 className: K.Qs,
                 children: [
                     (0, s.jsx)("img", { alt: "", src: p, width: 80 }),
-                    (0, s.jsx)(h.D, {
+                    (0, s.jsx)(u.D, {
                         variant: "heading-xl/semibold",
                         className: K.wx,
                         id: r,
                         children: B.intl.string(B.t.QrjLYl),
                     }),
-                    (0, s.jsx)(g.E, {
+                    (0, s.jsx)(h.E, {
                         color: "none",
                         variant: "text-md/normal",
                         className: K.ab,
@@ -196,10 +196,10 @@ function X(e) {
             }),
             (0, s.jsx)("div", {
                 className: K.Zd,
-                children: (0, s.jsx)(j.D, {
+                children: (0, s.jsx)(g.D, {
                     label: B.intl.string(B.t.x4hbeZ),
-                    description: m ? B.intl.string(B.t.k5crqq) : B.intl.string(B.t.fHiGA0),
-                    children: (0, s.jsx)(N.S, {
+                    description: x ? B.intl.string(B.t.k5crqq) : B.intl.string(B.t.fHiGA0),
+                    children: (0, s.jsx)(j.S, {
                         disabled: a,
                         checked: t.verificationLevel > q.PvD.NONE,
                         onChange: i,
@@ -209,10 +209,10 @@ function X(e) {
             }),
             (0, s.jsx)("div", {
                 className: K.Zd,
-                children: (0, s.jsx)(j.D, {
+                children: (0, s.jsx)(g.D, {
                     label: B.intl.string(B.t.COu4bk),
-                    description: u ? B.intl.string(B.t.qgQLpg) : B.intl.string(B.t.b0MaDV),
-                    children: (0, s.jsx)(N.S, {
+                    description: N ? B.intl.string(B.t.qgQLpg) : B.intl.string(B.t.b0MaDV),
+                    children: (0, s.jsx)(j.S, {
                         disabled: n,
                         checked: t.explicitContentFilter === q.gh6.ALL_MEMBERS,
                         onChange: l,
@@ -232,26 +232,26 @@ function $(e) {
         publicUpdatesChannel: r,
         headerId: c,
         theme: d,
-        guildId: m,
+        guildId: x,
     } = e;
     l.useEffect(() => {
-        (0, O.sx)({ fromStep: z.pj.SAFETY_CHECK, toStep: z.pj.BASICS, guildId: m });
-    }, [m]);
-    let u = (0, x.M)(d) ? "/assets/83bf855b8ecf7f86.svg" : "/assets/b7c8acc24afa8e98.svg";
+        (0, O.sx)({ fromStep: z.pj.SAFETY_CHECK, toStep: z.pj.BASICS, guildId: x });
+    }, [x]);
+    let g = (0, m.M)(d) ? "/assets/83bf855b8ecf7f86.svg" : "/assets/b7c8acc24afa8e98.svg";
     return (0, s.jsxs)("div", {
         className: K.kL,
         children: [
             (0, s.jsxs)("div", {
                 className: K.Qs,
                 children: [
-                    (0, s.jsx)("img", { alt: "", src: u, width: 80 }),
-                    (0, s.jsx)(h.D, {
+                    (0, s.jsx)("img", { alt: "", src: g, width: 80 }),
+                    (0, s.jsx)(u.D, {
                         variant: "heading-xl/semibold",
                         className: K.wx,
                         id: c,
                         children: B.intl.string(B.t.YtXpEh),
                     }),
-                    (0, s.jsx)(g.E, {
+                    (0, s.jsx)(h.E, {
                         color: "none",
                         variant: "text-md/normal",
                         className: K.ab,
@@ -298,7 +298,7 @@ function ee(e) {
             headerId: f,
             theme: b,
         } = e,
-        E = (0, x.M)(b) ? Z : Q;
+        E = (0, m.M)(b) ? Z : Q;
     return (
         l.useEffect(() => {
             (0, O.sx)({ fromStep: z.pj.BASICS, toStep: z.pj.FINISH, guildId: t.id });
@@ -310,13 +310,13 @@ function ee(e) {
                     className: K.Qs,
                     children: [
                         (0, s.jsx)("img", { alt: "", src: E, width: 80 }),
-                        (0, s.jsx)(h.D, {
+                        (0, s.jsx)(u.D, {
                             variant: "heading-xl/semibold",
                             className: K.wx,
                             id: f,
                             children: B.intl.string(B.t["Pj/s/a"]),
                         }),
-                        (0, s.jsx)(g.E, {
+                        (0, s.jsx)(h.E, {
                             color: "none",
                             variant: "text-md/normal",
                             className: K.ab,
@@ -326,21 +326,21 @@ function ee(e) {
                 }),
                 (0, s.jsx)("div", {
                     className: K.Zd,
-                    children: (0, s.jsx)(m.m, {
+                    children: (0, s.jsx)(N.m, {
                         text: o ? B.intl.string(B.t.PHjrpp) : null,
                         "aria-label": !!o && B.intl.string(B.t.PHjrpp),
                         children: (0, s.jsx)("div", {
-                            children: (0, s.jsx)(u.Kj, {
-                                type: u.Or.ROW,
+                            children: (0, s.jsx)(x.Kj, {
+                                type: x.Or.ROW,
                                 disabled: o,
                                 value: t.defaultMessageNotifications === q.orn.ONLY_MENTIONS,
                                 onChange: (e, t) => c(t),
                                 className: a()({ [K.r9]: o }),
-                                children: (0, s.jsx)(g.E, {
+                                children: (0, s.jsx)(h.E, {
                                     variant: "text-sm/normal",
                                     children: B.intl.format(B.t.K8Eg4P, {
                                         infoHook: () =>
-                                            (0, s.jsx)(m.m, {
+                                            (0, s.jsx)(N.m, {
                                                 text: B.intl.string(B.t["3h2WyM"]),
                                                 children: (0, s.jsx)("span", {
                                                     tabIndex: 0,
@@ -360,21 +360,21 @@ function ee(e) {
                         }),
                     }),
                 }),
-                (0, s.jsx)(m.m, {
+                (0, s.jsx)(N.m, {
                     text: v ? B.intl.string(B.t.PHjrpp) : null,
                     "aria-label": !!v && B.intl.string(B.t.PHjrpp),
                     children: (0, s.jsx)("div", {
                         className: K.nj,
-                        children: (0, s.jsx)(u.Kj, {
+                        children: (0, s.jsx)(x.Kj, {
                             disabled: v,
                             value: n,
                             onChange: (e, t) => d(t),
                             className: a()({ [K.r9]: v }),
-                            children: (0, s.jsx)(g.E, {
+                            children: (0, s.jsx)(h.E, {
                                 variant: "text-sm/normal",
                                 children: B.intl.format(B.t.v8qCoG, {
                                     infoHook: () =>
-                                        (0, s.jsx)(m.m, {
+                                        (0, s.jsx)(N.m, {
                                             text: B.intl.string(B.t["+Iyaif"]),
                                             "aria-label": B.intl.string(B.t["+Iyaif"]),
                                             children: (0, s.jsx)(p.m, {
@@ -390,13 +390,13 @@ function ee(e) {
                 }),
                 (0, s.jsx)("div", {
                     className: K.Zd,
-                    children: (0, s.jsx)(j.D, {
+                    children: (0, s.jsx)(g.D, {
                         label: B.intl.string(B.t["k+b2Cf"]),
                         description: B.intl.format(B.t["BwbW/Q"], {
                             communityGuidelines: w.A.getArticleURL(q.MVz.PUBLIC_GUILD_GUILDLINES),
                             typesOfGuilds: w.A.getArticleURL(q.MVz.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                         }),
-                        children: (0, s.jsx)(N.S, { checked: i, onChange: r, label: B.intl.string(B.t["9AG3wI"]) }),
+                        children: (0, s.jsx)(j.S, { checked: i, onChange: r, label: B.intl.string(B.t["9AG3wI"]) }),
                     }),
                 }),
             ],
@@ -412,7 +412,7 @@ function et(e) {
             className: K.xf,
             children: [
                 (0, s.jsx)(v.W, { className: K.m4, color: l.toString(), background: !1, tooltip: !1 }),
-                (0, s.jsx)(g.E, {
+                (0, s.jsx)(h.E, {
                     className: K.S3,
                     variant: "text-sm/medium",
                     color: "interactive-text-active",
@@ -427,7 +427,7 @@ function ei(e) {
     return (0, s.jsxs)("div", {
         className: K.CZ,
         children: [
-            (0, s.jsx)(g.E, {
+            (0, s.jsx)(h.E, {
                 className: K.qd,
                 variant: "text-xs/semibold",
                 color: "text-muted",
@@ -442,7 +442,7 @@ function ei(e) {
                             className: K.ce,
                             children: [
                                 (0, s.jsx)("div", { className: K.dT }),
-                                (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-default", children: i(e) }),
+                                (0, s.jsx)(h.E, { variant: "text-sm/normal", color: "text-default", children: i(e) }),
                             ],
                         },
                         t,
@@ -460,7 +460,7 @@ function es(e) {
         (0, s.jsxs)("div", {
             className: K.CZ,
             children: [
-                (0, s.jsx)(g.E, { className: K.qd, variant: "text-xs/semibold", color: "text-muted", children: l }),
+                (0, s.jsx)(h.E, { className: K.qd, variant: "text-xs/semibold", color: "text-muted", children: l }),
                 (0, s.jsx)("div", {
                     className: K.lM,
                     children: t.map((e, t) =>
@@ -470,7 +470,7 @@ function es(e) {
                                 className: K.ce,
                                 children: [
                                     (0, s.jsx)("div", { className: K.xE }),
-                                    (0, s.jsx)(g.E, { variant: "text-sm/normal", color: "text-muted", children: i(e) }),
+                                    (0, s.jsx)(h.E, { variant: "text-sm/normal", color: "text-muted", children: i(e) }),
                                 ],
                             },
                             t,
@@ -506,7 +506,7 @@ function el(e) {
 }
 function en(e) {
     let { guild: t, policyAccepted: i, onAcceptPolicy: n, headerId: a, theme: r } = e,
-        c = (0, x.M)(r) ? Z : Q;
+        c = (0, m.M)(r) ? Z : Q;
     l.useEffect(() => {
         (0, O.sx)({ fromStep: z.pj.BASICS, toStep: z.pj.FINISH, guildId: t.id });
     }, [t.id]);
@@ -527,7 +527,7 @@ function en(e) {
                 className: K.Qs,
                 children: [
                     (0, s.jsx)("img", { alt: "", src: c, width: 80 }),
-                    (0, s.jsx)(h.D, {
+                    (0, s.jsx)(u.D, {
                         variant: "heading-xl/semibold",
                         className: K.dc,
                         id: a,
@@ -537,7 +537,7 @@ function en(e) {
             }),
             (0, s.jsx)("div", {
                 className: K.yN,
-                children: (0, s.jsxs)(j.D, {
+                children: (0, s.jsxs)(g.D, {
                     label: B.intl.string(B.t["0q344R"]),
                     children: [
                         (0, s.jsxs)("div", {
@@ -549,11 +549,11 @@ function en(e) {
                                     color: d.A.unsafe_rawColors.GREEN_360.css,
                                     secondaryColor: d.A.unsafe_rawColors.WHITE.css,
                                 }),
-                                (0, s.jsx)(g.E, {
+                                (0, s.jsx)(h.E, {
                                     variant: "text-md/normal",
                                     children: B.intl.format(B.t.K8Eg4P, {
                                         infoHook: () =>
-                                            (0, s.jsx)(m.m, {
+                                            (0, s.jsx)(N.m, {
                                                 text: B.intl.string(B.t["3h2WyM"]),
                                                 children: (0, s.jsx)("span", {
                                                     tabIndex: 0,
@@ -580,7 +580,7 @@ function en(e) {
                                     color: d.A.unsafe_rawColors.GREEN_360.css,
                                     secondaryColor: d.A.unsafe_rawColors.WHITE.css,
                                 }),
-                                (0, s.jsx)(g.E, { variant: "text-md/normal", children: B.intl.string(B.t.LfeFFr) }),
+                                (0, s.jsx)(h.E, { variant: "text-md/normal", children: B.intl.string(B.t.LfeFFr) }),
                                 (0, s.jsx)(et, { guild: t }),
                             ],
                         }),
@@ -590,13 +590,13 @@ function en(e) {
             }),
             (0, s.jsx)("div", {
                 className: K.yN,
-                children: (0, s.jsx)(j.D, {
+                children: (0, s.jsx)(g.D, {
                     label: B.intl.string(B.t["k+b2Cf"]),
                     description: B.intl.format(B.t["BwbW/Q"], {
                         communityGuidelines: w.A.getArticleURL(q.MVz.PUBLIC_GUILD_GUILDLINES),
                         typesOfGuilds: w.A.getArticleURL(q.MVz.FRIEND_COMMUNITY_DISCOVERABLE_GUILD_TYPES),
                     }),
-                    children: (0, s.jsx)(N.S, { label: B.intl.string(B.t["9AG3wI"]), checked: i, onChange: n }),
+                    children: (0, s.jsx)(j.S, { label: B.intl.string(B.t["9AG3wI"]), checked: i, onChange: n }),
                 }),
             }),
         ],

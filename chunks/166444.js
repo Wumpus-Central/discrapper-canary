@@ -6,9 +6,9 @@ var i = n(627968),
 if (21552 == n.j) var s = n(837381);
 var u = n(17928);
 if (21552 == n.j) var o = n(3026);
-var c = n(990078),
-    d = n(97808),
-    g = n(778712);
+var c = n(97808),
+    d = n(778712),
+    g = n(866665);
 if (21552 == n.j) var h = n(834730);
 if (21552 == n.j) var f = n(187322);
 var m = n(25639),
@@ -32,8 +32,8 @@ var m = n(25639),
     I = n(66933),
     L = n(652215),
     G = n(790782),
-    U = n(687977),
-    k = n(426263);
+    U = n(907305),
+    k = n(645591);
 let H = {
     SELECTED: k.J1,
     CONNECTED: k.d4,
@@ -45,13 +45,13 @@ let H = {
 function O(e) {
     e.preventDefault(), e.stopPropagation();
 }
-let P = _.Ay.getEnableHardwareAcceleration() ? d.Js : d.eu;
+let P = _.Ay.getEnableHardwareAcceleration() ? c.Js : c.eu;
 function B(e) {
-    let { channel: t, size: n = g._3.SIZE_20, className: a } = e;
+    let { channel: t, size: n = d._3.SIZE_20, className: a } = e;
     return (0, i.jsx)(y.A, { className: a, channel: t, "aria-hidden": !0, size: n });
 }
 function V(e) {
-    let { channel: t, size: n = g._3.SIZE_20, className: a } = e,
+    let { channel: t, size: n = d._3.SIZE_20, className: a } = e,
         l = (0, u.bG)([C.default], () => C.default.getUser(t?.recipients[0])),
         r = (0, u.bG)(
             [R.A],
@@ -87,12 +87,12 @@ let F = a.memo(function (e) {
                 hasActiveThreads: s,
                 hasUsersInVoiceChannel: o,
             } = e,
-            d = (0, u.bG)([M.A], () => M.A.getGuild(a.guild_id), [a.guild_id]),
-            { enableWaveformIcon: g } = (0, A.b)(a.guild_id, "ChannelItemIcon"),
+            c = (0, u.bG)([M.A], () => M.A.getGuild(a.guild_id), [a.guild_id]),
+            { enableWaveformIcon: d } = (0, A.b)(a.guild_id, "ChannelItemIcon"),
             h = (0, u.bG)([m.A], () => m.A.getAnimationStyle(a.id), [a.id]),
             f = a.type === L.rbe.GUILD_VOICE,
             x = null;
-        if (g && f && !l && o)
+        if (d && f && !l && o)
             x = (0, i.jsx)(E.A, {
                 color: "currentColor",
                 className: r()(k.Kk, t),
@@ -115,13 +115,13 @@ let F = a.memo(function (e) {
                     default:
                         return (0, v.gU)(e, t, n);
                 }
-            })(a, d, { locked: l, hasActiveThreads: s });
+            })(a, c, { locked: l, hasActiveThreads: s });
             if (null == e) return null;
             x = (0, i.jsx)(e, { color: "currentColor", className: r()(k.Kk, t) });
         }
-        let S = (0, v.Bq)(a, d, l, s),
+        let S = (0, v.Bq)(a, c, l, s),
             D = `${S} icon`;
-        return (0, i.jsx)(c.m, {
+        return (0, i.jsx)(g.m, {
             text: S,
             delay: 500,
             children: (0, i.jsx)("div", { role: "img", "aria-label": D, className: r()(k.zc, n), children: x }),

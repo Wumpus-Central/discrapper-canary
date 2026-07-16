@@ -15,7 +15,7 @@ var l,
     j = s(331322),
     _ = s(462887),
     g = s(862482),
-    f = s(534514),
+    f = s(297264),
     A = s(834730),
     E = s(289873),
     C = s(228366),
@@ -48,9 +48,9 @@ var l,
     $ = s(412260),
     q = s(103411),
     J = s(190187),
-    Q = s(990078),
-    X = s(778712),
-    ee = s(97808),
+    Q = s(778712),
+    X = s(97808),
+    ee = s(866665),
     et = s(192308),
     es = s(930861),
     el = s(854627),
@@ -514,7 +514,7 @@ var ej = s(170236),
         l);
 function eg(e) {
     let { avatarDecorationLegacyAssetId: t, avatarDecorationSkuId: s, avatarDecoAssetDescription: l } = e,
-        r = i.useMemo(() => (0, ec.A)({ legacyAssetId: t, skuId: s, size: X._3.SIZE_120, canAnimate: !1 }), [t, s]);
+        r = i.useMemo(() => (0, ec.A)({ legacyAssetId: t, skuId: s, size: Q._3.SIZE_120, canAnimate: !1 }), [t, s]);
     return (0, n.jsx)("div", {
         className: ej.Q7,
         children: (0, n.jsx)("div", {
@@ -583,12 +583,12 @@ var eA = s(375708),
     eC = s(694354);
 function eT(e) {
     let { userRecord: t, placement: s } = e,
-        { avatarSrc: l, eventHandlers: i } = (0, el.A)({ userId: t?.id, size: X._3.SIZE_32, animateOnHover: !0 }),
+        { avatarSrc: l, eventHandlers: i } = (0, el.A)({ userId: t?.id, size: Q._3.SIZE_32, animateOnHover: !0 }),
         r = null != t,
         a = r
-            ? (0, n.jsx)(ee.eu, { src: l, "aria-label": t.username, size: X._3.SIZE_32, ...i })
+            ? (0, n.jsx)(X.eu, { src: l, "aria-label": t.username, size: Q._3.SIZE_32, ...i })
             : (0, n.jsx)(f.D, { variant: "heading-md/semibold", className: eC.n5, children: s });
-    return (0, n.jsx)(Q.m, {
+    return (0, n.jsx)(ee.m, {
         text: eA.intl.string(eA.t.UnKHdo),
         shouldShow: !r,
         children: (0, n.jsx)("div", { className: eC.Lg, children: a }),

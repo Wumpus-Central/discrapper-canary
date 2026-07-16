@@ -1,10 +1,10 @@
 n.d(t, { A: () => C });
 var r = n(627968),
     l = n(64700),
-    i = n(990078),
-    a = n(691540),
+    i = n(691540),
     s = n(857250),
     u = n(97483),
+    a = n(866665),
     o = n(408278),
     c = n(173936),
     d = n(24001),
@@ -27,14 +27,14 @@ function C(e) {
                     impressionId: v,
                     sourceQuestContent: C,
                 }),
-                (0, a.P0)((0, s.o)(S.intl.string(S.t["+5kSoW"]), u.Ck.SUCCESS)));
+                (0, i.P0)((0, s.o)(S.intl.string(S.t["+5kSoW"]), u.Ck.SUCCESS)));
         }, [v, A, n.id, C]);
     return A
         ? (0, r.jsx)("div", {
               "data-testid": "video-quest-share-btn",
               "data-quest-id": n.id,
               style: { marginLeft: t ? "auto" : void 0, pointerEvents: "auto" },
-              children: (0, r.jsx)(i.m, {
+              children: (0, r.jsx)(a.m, {
                   text: S.intl.string(S.t.WmfZHZ),
                   children: (0, r.jsx)(o.K, {
                       variant: "overlay-secondary",

@@ -249,9 +249,9 @@ n(340287);
 var eA = n(554146),
     eh = n(661531),
     eI = n(342952),
-    ef = n(990078),
-    ep = n(315710),
-    eT = n(43990),
+    ef = n(315710),
+    ep = n(43990),
+    eT = n(866665),
     em = n(276293),
     eg = n(935063),
     eS = n(789645),
@@ -362,7 +362,7 @@ function ez(e) {
             shouldShow: l,
             disablePointerEvents: !1,
             renderPopout: () =>
-                (0, i.jsx)(eT.N, {
+                (0, i.jsx)(ep.N, {
                     theme: s,
                     children: (e) =>
                         (0, i.jsx)("div", {
@@ -382,7 +382,7 @@ function ez(e) {
                         }),
                 }),
             children: () =>
-                (0, i.jsx)(ef.m, {
+                (0, i.jsx)(eT.m, {
                     text: ed.intl.string(ed.t.lfIHs4),
                     children: (0, i.jsx)("div", {
                         ref: u,
@@ -805,7 +805,7 @@ function tK(e) {
         n = r.useRef(null),
         a = r.useId();
     return (
-        (0, ep.tj)(n),
+        (0, ef.tj)(n),
         (0, i.jsx)(tY.Provider, {
             value: a,
             children: (0, i.jsx)("div", {
@@ -825,7 +825,7 @@ function t$(e) {
         { primaryColor: s, secondaryColor: l } = (0, X.A)(n);
     return (
         null != n && (a.background = `linear-gradient(45deg, ${s}, ${l})`),
-        (0, i.jsx)(eT.N, {
+        (0, i.jsx)(ep.N, {
             theme: eW.NJ8.DARK,
             disableAdaptiveTheme: !0,
             children: (e) => (0, i.jsx)("div", { className: eE()(tj.ZK, e, r), style: a, children: t }),
@@ -881,7 +881,7 @@ function tq(e) {
                           })
                         : n;
                 return (0, i.jsx)(
-                    ef.m,
+                    eT.m,
                     {
                         "aria-label": r ? ed.intl.string(ed.t.d6DpXI) : (n ?? !1),
                         __unsupportedReactNodeAsText: a,
@@ -1146,7 +1146,7 @@ function tq(e) {
                         autoFocus: !1,
                         renderAttachButton: N
                             ? () =>
-                                  (0, i.jsx)(ef.m, {
+                                  (0, i.jsx)(eT.m, {
                                       text: H,
                                       children: (0, i.jsx)(u.D, {
                                           className: tj.wD,
@@ -1214,7 +1214,7 @@ let tZ = (e) => {
                 ? (0, i.jsx)(
                       "div",
                       {
-                          children: (0, i.jsx)(ef.m, {
+                          children: (0, i.jsx)(eT.m, {
                               asContainer: !0,
                               text: ed.intl.formatToPlainString(ed.t.kilW3l, { emojiName: t.name }),
                               position: "top",

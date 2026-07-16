@@ -14,10 +14,10 @@ var l = n(627968),
     x = n(713654),
     p = n(503698),
     A = n.n(p),
-    f = n(990078),
-    C = n(957485),
-    j = n(97808),
-    b = n(778712),
+    f = n(957485),
+    C = n(97808),
+    j = n(778712),
+    b = n(866665),
     N = n(939249),
     v = n(285796),
     E = n(475825),
@@ -86,7 +86,7 @@ var K = n(488926),
     ei = n(187322),
     es = n(847374);
 n(321073);
-var ea = n(735438),
+var ea = n(435558),
     er = n.n(ea),
     eo = n(136722),
     ed = n(113325),
@@ -172,9 +172,9 @@ function eT(e) {
             theme: x,
             roleStyle: p,
             onContextMenu: A,
-            "aria-label": C,
+            "aria-label": f,
         } = e,
-        j = (0, eE.X_)(a.id, s, s?.colorStrings);
+        C = (0, eE.X_)(a.id, s, s?.colorStrings);
     return o
         ? (0, l.jsx)("div", { className: ey.rz })
         : (0, l.jsx)(em.V.Item, {
@@ -183,7 +183,7 @@ function eT(e) {
               selectedItem: d,
               onItemSelect: c,
               itemType: u,
-              "aria-label": null != g ? `${C}, ${g}` : C,
+              "aria-label": null != g ? `${f}, ${g}` : f,
               onContextMenu: A,
               children: (0, l.jsxs)("div", {
                   className: ey.yl,
@@ -191,16 +191,16 @@ function eT(e) {
                       "dot" === p
                           ? (0, l.jsx)(ef.W, {
                                 color: t ?? void 0,
-                                colors: j,
+                                colors: C,
                                 className: ey.m4,
                                 background: !1,
                                 tooltip: !1,
                             })
-                          : (0, l.jsx)(ef.R, { color: t ?? null, colors: j, className: ey.Ni }),
+                          : (0, l.jsx)(ef.R, { color: t ?? null, colors: C, className: ey.Ni }),
                       (function () {
                           if (!h) return null;
                           let e = (0, eu.M)(x) ? n(454554) : n(470474);
-                          return (0, l.jsx)(f.m, { text: g, children: (0, l.jsx)(ev, { className: ey.s2, src: e }) });
+                          return (0, l.jsx)(b.m, { text: g, children: (0, l.jsx)(ev, { className: ey.s2, src: e }) });
                       })(),
                       (0, l.jsx)("div", { className: ey.dD, children: r }),
                       m && null != s ? (0, l.jsx)(eS, { guild: a, role: s }) : null,
@@ -223,7 +223,7 @@ var eI = n(736653),
     eV = n(427262),
     eB = n(652215),
     eH = n(375708),
-    eF = n(508573),
+    eF = n(967829),
     ez = n.n(eF),
     eZ = n(66834),
     eW = n(17586),
@@ -361,9 +361,9 @@ function eQ(e) {
                 className: eW.BP,
                 children: [
                     i.hasAvatarForGuild(t)
-                        ? (0, l.jsx)(j.eu, {
+                        ? (0, l.jsx)(C.eu, {
                               className: eW.PX,
-                              size: b._3.SIZE_16,
+                              size: j._3.SIZE_16,
                               src: i.getAvatarURL(void 0, 16),
                               "aria-label": i.username,
                           })
@@ -374,7 +374,7 @@ function eQ(e) {
         (0, l.jsxs)("div", {
             className: A()(eY.uN, eW.mG),
             children: [
-                (0, l.jsx)(j.eu, { size: b._3.SIZE_32, src: s, "aria-label": i.username, className: eW.RJ }),
+                (0, l.jsx)(C.eu, { size: j._3.SIZE_32, src: s, "aria-label": i.username, className: eW.RJ }),
                 (0, l.jsxs)("div", {
                     className: eW.F0,
                     children: [(0, l.jsx)(a.E, { className: eW.F0, variant: "text-md/normal", children: d }), c],
@@ -545,7 +545,7 @@ function eK() {
                     `${d}-${e.id}`,
                 ),
             ),
-        C = er()(g)
+        b = er()(g)
             .sortBy((e) => e.username.toLowerCase())
             .map((e) => {
                 let t = e.getAvatarURL(u.id, 24);
@@ -561,8 +561,8 @@ function eK() {
                         children: (0, l.jsxs)("div", {
                             className: eW.mG,
                             children: [
-                                (0, l.jsx)(j.eu, {
-                                    size: b._3.SIZE_20,
+                                (0, l.jsx)(C.eu, {
+                                    size: j._3.SIZE_20,
                                     src: t,
                                     "aria-label": e.username,
                                     className: eW.bE,
@@ -616,7 +616,7 @@ function eK() {
                         }),
                 })),
                 f,
-                C,
+                b,
                 (0, l.jsxs)(i.Fragment, {
                     children: [
                         (0, l.jsx)(em.V.Separator, { style: { marginTop: 20, marginBottom: 14 } }),
@@ -747,7 +747,7 @@ function ti(e) {
                     (c =
                         (d = n[h]).rowType === tt.T6.ROLE && d.tags?.guild_connections === null
                             ? (0, l.jsx)(P.A, { className: tl.a, color: d.colorString, size: 20 })
-                            : (0, l.jsx)(C.i, { size: "custom", className: tl.a, color: d.colorString, height: 20 })),
+                            : (0, l.jsx)(f.i, { size: "custom", className: tl.a, color: d.colorString, height: 20 })),
                         (o = (0, l.jsxs)(l.Fragment, {
                             children: [
                                 c,
@@ -764,7 +764,7 @@ function ti(e) {
                     (d = i[h]),
                         (o = (0, l.jsxs)(l.Fragment, {
                             children: [
-                                (0, l.jsx)(j.eu, { src: d.avatarURL, size: b._3.SIZE_20, "aria-hidden": !0 }),
+                                (0, l.jsx)(C.eu, { src: d.avatarURL, size: j._3.SIZE_20, "aria-hidden": !0 }),
                                 (0, l.jsx)(a.E, { variant: "text-sm/normal", children: d.name }),
                                 d.bot && (0, l.jsx)(U.A, { verified: d.verifiedBot }),
                                 (0, l.jsx)(a.E, {
@@ -798,7 +798,7 @@ function ti(e) {
                                     children: ee.vV(d.rowType),
                                 }),
                                 d.rowType !== tt.T6.EMPTY_STATE &&
-                                    (0, l.jsx)(f.m, {
+                                    (0, l.jsx)(b.m, {
                                         asContainer: !0,
                                         text: s ?? r(d.rowType, d.disabled),
                                         children: (0, l.jsx)(N.D, {
@@ -889,7 +889,7 @@ function ts(e) {
                         className: tl.MJ,
                         children: [
                             (0, l.jsx)(a.E, { variant: "text-md/semibold", children: eH.intl.string(eH.t["7BWDRb"]) }),
-                            (0, l.jsx)(f.m, {
+                            (0, l.jsx)(b.m, {
                                 text: eH.intl.string(eH.t.arRuES),
                                 shouldShow: !u,
                                 children: (0, l.jsx)(T.$, {
@@ -904,7 +904,7 @@ function ts(e) {
                                                 n.e("37398"),
                                                 n.e("11585"),
                                                 n.e("92513"),
-                                                n.e("89916"),
+                                                n.e("67535"),
                                                 n.e("20379"),
                                                 n.e("19193"),
                                                 n.e("58608"),
@@ -1025,7 +1025,7 @@ function ta(e) {
                                                             n.e("21293"),
                                                             n.e("37398"),
                                                             n.e("92513"),
-                                                            n.e("89916"),
+                                                            n.e("67535"),
                                                             n.e("20379"),
                                                             n.e("19193"),
                                                             n.e("68083"),
@@ -1358,7 +1358,7 @@ function t4(e) {
         },
         onMouseEnter: () => m(i),
         onMouseLeave: () => m(!1),
-        children: (0, l.jsx)(f.m, {
+        children: (0, l.jsx)(b.m, {
             text: d,
             asContainer: !0,
             shouldShow: null != d,

@@ -16,9 +16,9 @@ var i = n(627968),
     I = n(607399),
     f = n(17928),
     p = n(3026),
-    T = n(990078),
-    m = n(97808),
-    g = n(939249),
+    T = n(97808),
+    m = n(939249),
+    g = n(866665),
     S = n(821609),
     N = n(366605),
     C = n(952270),
@@ -87,12 +87,12 @@ var ef = n(824994),
     ev = n(287809),
     eb = n(19575),
     eM = n(330076);
-let eP = eb.Ay.getEnableHardwareAcceleration() ? m.Js : m.eu,
+let eP = eb.Ay.getEnableHardwareAcceleration() ? T.Js : T.eu,
     eU = { offset: { top: 2, bottom: 2, right: 4 } };
 function ew(e) {
     let { nameplate: t, icon: n, forceShow: r = !1, reducedClickTarget: a = !1, visibleElementRef: l, ...o } = e,
         d = (0, eu.K)(t);
-    return (0, i.jsx)(g.D, {
+    return (0, i.jsx)(m.D, {
         className: s()(eM.b, { [eM.DQ]: null != t, [eM.by]: r, [eM.wY]: a }),
         style: d,
         ...o,
@@ -112,7 +112,7 @@ function eG(e) {
     let { onClick: t, channelName: n, showNameplate: r } = e;
     return (0, i.jsx)("div", {
         className: eM.KQ,
-        children: (0, i.jsx)(T.m, {
+        children: (0, i.jsx)(g.m, {
             text: ed.intl.formatToPlainString(ed.t.m0zYbV, { username: n }),
             children: (0, i.jsx)(S.$, {
                 size: "sm",
@@ -341,7 +341,7 @@ function eH(e) {
                               n.e("93190"),
                               n.e("91763"),
                               n.e("38730"),
-                              n.e("18997"),
+                              n.e("79630"),
                               n.e("34971"),
                               n.e("14461"),
                               n.e("42339"),
@@ -388,13 +388,13 @@ function eH(e) {
                               n.e("98965"),
                               n.e("82073"),
                               n.e("97558"),
-                              n.e("91994"),
                               n.e("54625"),
+                              n.e("91994"),
                               n.e("71133"),
                               n.e("76665"),
                               n.e("35313"),
                               n.e("76273"),
-                              n.e("18997"),
+                              n.e("79630"),
                               n.e("36564"),
                               n.e("34971"),
                               n.e("52229"),

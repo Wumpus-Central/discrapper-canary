@@ -3,9 +3,9 @@ var i = l(627968);
 l(64700);
 var s = l(503698),
     n = l.n(s),
-    a = l(17928),
-    d = l(990078);
-if (/^(14256|21552)$/.test(l.j)) var r = l(297264);
+    a = l(17928);
+if (/^(14256|21552)$/.test(l.j)) var d = l(297264);
+var r = l(866665);
 if (/^(14256|21552)$/.test(l.j)) var c = l(939249);
 var o = l(672979),
     p = l(90644),
@@ -88,7 +88,7 @@ function T(e) {
             l
                 ? (0, i.jsx)("div", {
                       className: I.N1,
-                      children: (0, i.jsx)(r.D, {
+                      children: (0, i.jsx)(d.D, {
                           variant: "text-xs/medium",
                           color: "text-muted",
                           children: N(t.type),
@@ -99,7 +99,7 @@ function T(e) {
                 className: I.Wh,
                 children: [
                     null != y
-                        ? (0, i.jsx)(d.m, {
+                        ? (0, i.jsx)(r.m, {
                               text: s?.large_text ?? null,
                               position: "top",
                               children: (0, i.jsx)(c.D, {
@@ -118,7 +118,7 @@ function T(e) {
                         children: [
                             null != o &&
                                 o.length > 0 &&
-                                (0, i.jsx)(r.D, {
+                                (0, i.jsx)(d.D, {
                                     variant: "heading-sm/medium",
                                     color: "text-strong",
                                     lineClamp: 1,
@@ -157,10 +157,10 @@ function S(e) {
         l = (0, a.bG)([m.A], () => (null != t.applicationId ? m.A.getApplication(t.applicationId) : null), [
             t.applicationId,
         ]),
-        { assets: s, isGame: n, isEmbedded: r } = t;
+        { assets: s, isGame: n, isEmbedded: d } = t;
     if (null == s || (null == s.large_image && null == s.small_image))
-        return r && null != t.embeddedIconUrl
-            ? (0, i.jsx)(d.m, {
+        return d && null != t.embeddedIconUrl
+            ? (0, i.jsx)(r.m, {
                   text: t.embeddedApplicationName,
                   position: "top",
                   asContainer: !0,

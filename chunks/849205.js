@@ -4,12 +4,12 @@ var t = l(627968),
     s = l(702841),
     r = l(312640),
     a = l(798618),
-    c = l(990078),
-    o = l(97808),
-    d = l(778712),
-    u = l(140735),
-    h = l(939249),
-    x = l(834730),
+    c = l(97808),
+    o = l(778712),
+    d = l(140735),
+    u = l(939249),
+    h = l(834730),
+    x = l(866665),
     m = l(254138),
     A = l(661531),
     g = l(926418),
@@ -67,17 +67,17 @@ function D(e) {
         Y = S ?? b.Ay.getName(D),
         Z =
             null != D &&
-            (0, t.jsx)(o.eu, {
+            (0, t.jsx)(c.eu, {
                 status: M,
                 isMobile: U,
                 isVR: L,
-                size: d._3.SIZE_20,
+                size: o._3.SIZE_20,
                 "aria-label": b.Ay.getName(D),
                 src: D.getAvatarURL(void 0, 20),
             });
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(u.A, { children: I.intl.string(I.t.EJRzg7) }),
+            (0, t.jsx)(d.A, { children: I.intl.string(I.t.EJRzg7) }),
             null != D &&
                 !l &&
                 (0, t.jsxs)("div", {
@@ -87,7 +87,7 @@ function D(e) {
                             ref: O,
                             children:
                                 null != e.handleClick
-                                    ? (0, t.jsx)(h.D, {
+                                    ? (0, t.jsx)(u.D, {
                                           tag: "div",
                                           onClick: e.handleClick,
                                           onContextMenu: e.handleContextMenu,
@@ -116,13 +116,13 @@ function D(e) {
                                             (0, t.jsxs)("div", {
                                                 className: _.qc,
                                                 children: [
-                                                    (0, t.jsx)(x.E, {
+                                                    (0, t.jsx)(h.E, {
                                                         variant: "text-md/semibold",
                                                         color: "text-strong",
                                                         className: _.rX,
                                                         children: R,
                                                     }),
-                                                    (0, t.jsx)(x.E, {
+                                                    (0, t.jsx)(h.E, {
                                                         variant: "text-xs/semibold",
                                                         color: "text-muted",
                                                         className: _.FQ,
@@ -140,7 +140,7 @@ function D(e) {
                                                         {
                                                             className: _.BZ,
                                                             children: [
-                                                                (0, t.jsx)(x.E, {
+                                                                (0, t.jsx)(h.E, {
                                                                     variant: "text-sm/medium",
                                                                     className: _.Vk,
                                                                     children: n,
@@ -175,13 +175,13 @@ function D(e) {
                     children: [
                         X
                             ? (0, t.jsx)("span", { className: y, children: Y })
-                            : (0, t.jsx)(c.m, {
+                            : (0, t.jsx)(x.m, {
                                   text: R,
                                   position: "bottom",
                                   children: (0, t.jsx)("span", { className: y, children: Y }),
                               }),
                         G &&
-                            (0, t.jsx)(c.m, {
+                            (0, t.jsx)(x.m, {
                                 text: I.intl.string(I.t.QyZ4Td),
                                 children: (0, t.jsx)(m.m, {
                                     size: "xs",

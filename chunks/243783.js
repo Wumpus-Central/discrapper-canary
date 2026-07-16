@@ -202,9 +202,9 @@ function eh(e, t, n) {
 }
 var em = n(232835),
     eg = n(625494),
-    ep = n(990078),
-    eA = n(446576),
-    ef = n(26430),
+    ep = n(446576),
+    eA = n(26430),
+    ef = n(866665),
     eC = n(939249),
     ex = n(53788),
     eE = n(922016),
@@ -367,12 +367,12 @@ function eG(e) {
             () => (0, a.jsx)(ek, { channel: t, conversation: n, isFocusMode: g, onClose: p }),
             [t, n, g, p],
         ),
-        x = g ? eA.g : ef._,
+        x = g ? ep.g : eA._,
         E = g ? eR.intl.string(eM.default.pDD8E1) : eR.intl.string(eM.default["o+pmGy"]),
         S = g ? eR.intl.string(eM.default.XaJ3qC) : eR.intl.string(eM.default.pU5Dut),
         _ = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(ep.m, {
+                (0, a.jsx)(ef.m, {
                     text: eR.intl.string(eM.default.sBwxOY),
                     children: (0, a.jsx)(eC.D, {
                         "aria-label": eR.intl.string(eM.default.vjJjMc),
@@ -393,7 +393,7 @@ function eG(e) {
                     children: () =>
                         (0, a.jsx)("div", {
                             ref: u,
-                            children: (0, a.jsx)(ep.m, {
+                            children: (0, a.jsx)(ef.m, {
                                 text: eR.intl.string(eM.default.tbhdqW),
                                 children: (0, a.jsx)(eC.D, {
                                     "aria-label": eR.intl.string(eM.default.TGK5M0),
@@ -404,7 +404,7 @@ function eG(e) {
                             }),
                         }),
                 }),
-                (0, a.jsx)(ep.m, {
+                (0, a.jsx)(ef.m, {
                     text: E,
                     children: (0, a.jsx)(eC.D, {
                         "aria-label": S,
@@ -590,7 +590,7 @@ var tC = n(754459),
     tj = n.n(tI),
     ty = n(231483),
     tb = n(975571),
-    tv = n(465364),
+    tv = n(521981),
     tN = n(164664),
     tT = n(438729),
     tM = n(606049),
@@ -4009,7 +4009,7 @@ var se = n(825484),
 function so(e) {
     let { channel: t, children: n, className: l, editable: i, location: s } = e;
     return i
-        ? (0, a.jsx)(ep.m, {
+        ? (0, a.jsx)(ef.m, {
               position: "bottom",
               text: eR.intl.string(eR.t["0qPSMV"]),
               children: (0, a.jsxs)(eC.D, {
@@ -5056,7 +5056,7 @@ var aV = n(930390),
     a0 = n(400528);
 function a1(e) {
     let { text: t, icon: n, onClick: l, disabled: i, submitting: s } = e;
-    return (0, a.jsx)(ep.m, {
+    return (0, a.jsx)(ef.m, {
         __unsupportedReactNodeAsText: t ?? void 0,
         children: (0, a.jsx)(a_.K, {
             icon: n,
@@ -5379,7 +5379,7 @@ function rd(e) {
                                 : !v &&
                                   (!o || j) &&
                                   (!d || !j) &&
-                                  (0, a.jsx)(ep.m, {
+                                  (0, a.jsx)(ef.m, {
                                       text: eR.intl.string(eR.t.F7oeDv),
                                       children: (0, a.jsx)(eT.$, {
                                           icon: O,
@@ -5393,7 +5393,7 @@ function rd(e) {
                                           },
                                       }),
                                   }),
-                            (0, a.jsx)(ep.m, {
+                            (0, a.jsx)(ef.m, {
                                 text: eR.intl.string(eR.t.WqhZss),
                                 children: x
                                     ? (0, a.jsx)(eT.$, {
@@ -5412,7 +5412,7 @@ function rd(e) {
                                       }),
                             }),
                             !n &&
-                                (0, a.jsx)(ep.m, {
+                                (0, a.jsx)(ef.m, {
                                     text: eR.intl.string(eR.t.nFP4oa),
                                     children: (0, a.jsx)(a_.K, {
                                         icon: aI.D,

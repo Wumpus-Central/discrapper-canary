@@ -1,58 +1,58 @@
 "use strict";
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(990078),
+    a = n(503698),
+    s = n.n(a),
     l = n(27232),
-    u = n(505930),
+    o = n(505930),
+    d = n(866665),
     c = n(939249),
-    d = n(497685),
+    u = n(497685),
     _ = n(996566),
-    h = n(625494),
-    f = n(652215),
-    p = n(650583),
-    E = n(375708),
-    m = n(280312);
-let g = r.memo(function (e) {
-    let { width: t, height: n, src: s, gifSrc: g, url: A, format: I, className: T } = e,
-        [S, y] = r.useState(!1),
-        C = (0, _.km)((0, d.xo)(A)),
-        N = C ? E.intl.string(E.t["5/NS74"]) : E.intl.string(E.t.nIH0v8),
-        v = C ? l.G : u.y;
-    function R(e) {
+    E = n(625494),
+    A = n(652215),
+    h = n(650583),
+    I = n(375708),
+    f = n(280312);
+let p = r.memo(function (e) {
+    let { width: t, height: n, src: a, gifSrc: p, url: T, format: m, className: g } = e,
+        [S, N] = r.useState(!1),
+        C = (0, _.km)((0, u.xo)(T)),
+        R = C ? I.intl.string(I.t["5/NS74"]) : I.intl.string(I.t.nIH0v8),
+        O = C ? l.G : o.y;
+    function L(e) {
         e.preventDefault(),
             e.stopPropagation(),
-            y(!0),
+            N(!0),
             C
-                ? (0, d.Tr)(A)
-                : ((0, d.wg)({ url: A, src: s, gifSrc: g, width: t, height: n, format: I }),
-                  h._.dispatch(f.jej.FAVORITE_GIF));
+                ? (0, u.Tr)(T)
+                : ((0, u.wg)({ url: T, src: a, gifSrc: p, width: t, height: n, format: m }),
+                  E._.dispatch(A.jej.FAVORITE_GIF));
     }
     return (
         r.useEffect(() => {
             if (!S) return;
             let e = setTimeout(() => {
-                y(!1);
+                N(!1);
             }, 500);
             return () => clearTimeout(e);
         }, [S]),
-        (0, i.jsx)(o.m, {
-            text: N,
+        (0, i.jsx)(d.m, {
+            text: R,
             children: (0, i.jsx)(c.D, {
-                "aria-label": N,
+                "aria-label": R,
                 ignoreKeyPress: !0,
-                className: a()(T, m.jj, { [m.wH]: C, [m.TV]: S }),
+                className: s()(g, f.jj, { [f.wH]: C, [f.TV]: S }),
                 onMouseDown: (e) => e.preventDefault(),
-                onClick: R,
+                onClick: L,
                 onKeyDown: function (e) {
-                    (e.key === p.dh.ENTER || e.key === p.dh.SPACE) && R(e);
+                    (e.key === h.dh.ENTER || e.key === h.dh.SPACE) && L(e);
                 },
                 onDoubleClick: (e) => e.preventDefault(),
-                children: (0, i.jsx)(v, {
+                children: (0, i.jsx)(O, {
                     color: "currentColor",
-                    className: m.Kk,
+                    className: f.Kk,
                     size: "custom",
                     width: 20,
                     height: 20,

@@ -6,15 +6,15 @@ var l = n(627968),
     a = n(989349),
     c = n.n(a),
     u = n(661531),
-    o = n(990078),
-    d = n(834730),
-    m = n(81466),
-    x = n(406810),
-    g = n(812993),
+    o = n(834730),
+    d = n(81466),
+    m = n(406810),
+    x = n(812993),
+    g = n(866665),
     h = n(602853),
     f = n(722260),
     N = n(492260),
-    A = n(647090),
+    A = n(974930),
     E = n(604701),
     v = n(988794),
     j = n(375708),
@@ -39,17 +39,17 @@ function I(t) {
     }
 }
 function C() {
-    return (0, l.jsx)(g.Lp, {
+    return (0, l.jsx)(x.Lp, {
         className: T.Ad,
         color: u.A.unsafe_rawColors.BRAND_260.css,
-        text: (0, l.jsx)(d.E, { className: T.rm, variant: "text-xs/bold", children: j.intl.string(j.t.y2b7CA) }),
+        text: (0, l.jsx)(o.E, { className: T.rm, variant: "text-xs/bold", children: j.intl.string(j.t.y2b7CA) }),
     });
 }
 function L(t) {
     let { children: e, className: n, tooltipText: r } = t;
     return (0, l.jsx)("div", {
         className: s()(T.cd, n),
-        children: (0, l.jsx)(o.m, {
+        children: (0, l.jsx)(g.m, {
             position: "right",
             text: r,
             shouldShow: null != r,
@@ -70,7 +70,7 @@ function p(t) {
             status: n,
             eventType: i,
             className: a,
-            liveText: o,
+            liveText: x,
             textVariant: g = "text-sm/semibold",
             isNew: N,
             recurrenceRule: I,
@@ -81,7 +81,7 @@ function p(t) {
         w = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
         S = (0, h.r)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
         b = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
-    null == o && (o = i === v.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
+    null == x && (x = i === v.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
     let y = (0, f.A)(_, D),
         { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = p,
         K = P;
@@ -101,7 +101,7 @@ function p(t) {
                         ? j.intl.format(j.t.vHYgJW, {
                               start: n,
                               startHook: (t) =>
-                                  (0, l.jsx)(d.E, {
+                                  (0, l.jsx)(o.E, {
                                       color: "text-feedback-positive",
                                       variant: "text-sm/semibold",
                                       className: T.Py,
@@ -113,7 +113,7 @@ function p(t) {
                 default:
                     return e;
             }
-        })(R, K, o, k, V),
+        })(R, K, x, k, V),
         {
             Icon: W,
             iconColor: H,
@@ -131,7 +131,7 @@ function p(t) {
                             endDateTimeString: s,
                             startDateTimeString: a,
                         } = t,
-                        c = m.C,
+                        c = d.C,
                         u = l,
                         o = "text-default";
                     switch (n) {
@@ -139,7 +139,7 @@ function p(t) {
                             (u = r), (o = null != s ? void 0 : "text-feedback-positive");
                             break;
                         case 4:
-                            c = x.O;
+                            c = m.O;
                             break;
                         case 2:
                         case 1:
@@ -200,8 +200,8 @@ function p(t) {
             (0, l.jsxs)("div", {
                 className: T.Zy,
                 children: [
-                    (0, l.jsx)(d.E, { color: O, variant: g, children: z }),
-                    null != B && (0, l.jsx)(d.E, { color: "text-default", variant: "text-xs/normal", children: B }),
+                    (0, l.jsx)(o.E, { color: O, variant: g, children: z }),
+                    null != B && (0, l.jsx)(o.E, { color: "text-default", variant: "text-xs/normal", children: B }),
                 ],
             }),
         ],

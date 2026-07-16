@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(735438),
+    l = n(435558),
     o = n.n(l),
     d = n(607399),
     c = n(621466),
@@ -27,7 +27,7 @@ var i = n(627968),
     L = n(333216),
     D = n(256449),
     y = n(750385),
-    v = n(111956),
+    v = n(649852),
     b = n.n(v),
     M = n(942381),
     P = n(319060),
@@ -37,7 +37,7 @@ var i = n(627968),
     x = n(688810),
     k = n(850992),
     F = n(151271),
-    V = n(464651),
+    V = n(887695),
     B = n(87719),
     H = n(234419),
     j = n(885386),
@@ -56,9 +56,9 @@ var Q = n(361670),
     ee = n(194004),
     et = n(788413),
     en = n(60587),
-    ei = n(990078),
-    er = n(27232),
-    ea = n(406810),
+    ei = n(27232),
+    er = n(406810),
+    ea = n(866665),
     es = n(797285),
     el = n(724511),
     eo = n(802019),
@@ -135,7 +135,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             "aria-label": eA.intl.string(eA.t.y3LQCG),
                                             className: s()(eh._0, eh.dC, { [eh.k1]: !c && 0 === t, [eh.ls]: !E }),
                                             onClick: l,
-                                            children: (0, i.jsx)(er.G, {
+                                            children: (0, i.jsx)(ei.G, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 className: eh.AB,
@@ -157,7 +157,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                             "aria-label": eA.intl.string(eA.t.RxAmVC),
                                             className: s()(eh._0, eh.dC, eh.ls, { [eh.k1]: !c && t === _ }),
                                             onClick: l,
-                                            children: (0, i.jsx)(ea.O, {
+                                            children: (0, i.jsx)(er.O, {
                                                 size: "custom",
                                                 color: "currentColor",
                                                 className: eh.AB,
@@ -193,7 +193,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                                 r.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsx)(ei.m, {
+                                        (0, i.jsx)(ea.m, {
                                             position: "right",
                                             text: g,
                                             children: (0, i.jsx)("div", {
@@ -282,7 +282,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 }),
         });
     };
-var eO = n(534514),
+var eO = n(297264),
     eL = n(834730),
     eD = n(422936),
     ey = n(811611),
@@ -512,14 +512,14 @@ let e0 = (0, K.xI)(P.A.EXPRESSION_PICKER_CONSTANTS_EXPRESSION_PICKER_INSPECTOR_B
 var e3 = n(140735),
     e6 = n(442433),
     e4 = n(304072),
-    e7 = n(194261),
-    e5 = n(429631);
+    e5 = n(194261),
+    e7 = n(429631);
 let e8 = function (e) {
     let { size: t } = e;
     return (0, i.jsx)("div", {
-        className: e5.G,
+        className: e7.G,
         style: { width: t, height: t },
-        children: (0, i.jsx)(e7.X, { size: "xxs", color: "currentColor", className: e5.I }),
+        children: (0, i.jsx)(e5.X, { size: "xxs", color: "currentColor", className: e7.I }),
     });
 };
 var e9 = n(584176);
@@ -897,7 +897,7 @@ let tm = r.forwardRef(function (e, t) {
                                         "aria-label": eA.intl.formatToPlainString(eA.t["7lLCjZ"], {
                                             categoryName: n.name,
                                         }),
-                                        icon: (0, i.jsx)(er.G, { size: "xs", color: "currentColor" }),
+                                        icon: (0, i.jsx)(ei.G, { size: "xs", color: "currentColor" }),
                                         isCollapsed: t.has(n.id),
                                         onClick: () => D(n.id, { isStickerPack: !1 }),
                                         children: n.name,
@@ -912,7 +912,7 @@ let tm = r.forwardRef(function (e, t) {
                                         "aria-label": eA.intl.formatToPlainString(eA.t["7lLCjZ"], {
                                             categoryName: n.name,
                                         }),
-                                        icon: (0, i.jsx)(ea.O, { size: "xs", color: "currentColor" }),
+                                        icon: (0, i.jsx)(er.O, { size: "xs", color: "currentColor" }),
                                         isCollapsed: t.has(n.id),
                                         onClick: () => D(n.id, { isStickerPack: !1 }),
                                         children: n.name,
@@ -1841,8 +1841,8 @@ function t2(e) {
 var t3 = n(49999),
     t6 = n(307731),
     t4 = n(645264);
-let t7 = 498 + tJ.as.MEDIUM,
-    t5 = r.memo(function (e) {
+let t5 = 498 + tJ.as.MEDIUM,
+    t7 = r.memo(function (e) {
         let { isActive: t, className: n, viewType: r, autoFocus: a = !1, "aria-controls": l, ...o } = e;
         return (0, i.jsx)(A.D, {
             role: "tab",
@@ -2034,7 +2034,7 @@ let t7 = 498 + tJ.as.MEDIUM,
         let ep = "left" === w ? "right" : "left",
             eT = null != G ? G : "left" === w ? t4.sj : t4.Jg,
             em = en
-                ? (0, i.jsx)(t5, {
+                ? (0, i.jsx)(t7, {
                       id: tJ.g9,
                       "aria-controls": tJ.ni,
                       "aria-selected": K === eE.kx.GIF,
@@ -2044,7 +2044,7 @@ let t7 = 498 + tJ.as.MEDIUM,
                   })
                 : null,
             eg = ei
-                ? (0, i.jsx)(t5, {
+                ? (0, i.jsx)(t7, {
                       id: eP.LD,
                       "aria-controls": eP.GX,
                       "aria-selected": K === eE.kx.STICKER,
@@ -2054,7 +2054,7 @@ let t7 = 498 + tJ.as.MEDIUM,
                       children: (0, i.jsx)("div", { className: t4.dG, children: eA.intl.string(eA.t.nf1s3u) }),
                   })
                 : null,
-            eS = (0, i.jsx)(t5, {
+            eS = (0, i.jsx)(t7, {
                 id: tJ.k1,
                 "aria-controls": tJ.Do,
                 "aria-selected": K === eE.kx.EMOJI,
@@ -2102,7 +2102,7 @@ let t7 = 498 + tJ.as.MEDIUM,
                                                                 eS,
                                                                 X &&
                                                                     eI &&
-                                                                    (0, i.jsx)(t5, {
+                                                                    (0, i.jsx)(t7, {
                                                                         id: tJ.N6,
                                                                         "aria-controls": tJ.AA,
                                                                         "aria-selected": K === eE.kx.SOUNDBOARD,
@@ -2122,7 +2122,7 @@ let t7 = 498 + tJ.as.MEDIUM,
                                                                         }),
                                                                     }),
                                                                 ef
-                                                                    ? (0, i.jsx)(t5, {
+                                                                    ? (0, i.jsx)(t7, {
                                                                           id: tJ.W3,
                                                                           "aria-controls": tJ.pE,
                                                                           "aria-selected": K === eE.kx.KAOMOJI,
@@ -2161,7 +2161,7 @@ let t7 = 498 + tJ.as.MEDIUM,
                                                         persistSearch: !0,
                                                         channel: M,
                                                         containerWidth: W,
-                                                        emojiSize: null != W && W < t7 ? tJ.as.MEDIUM : tJ.as.LARGE,
+                                                        emojiSize: null != W && W < t5 ? tJ.as.MEDIUM : tJ.as.LARGE,
                                                         pickerIntention:
                                                             P.expressionPicker?.emojiIntention ??
                                                             t6.EmojiIntention.CHAT,
