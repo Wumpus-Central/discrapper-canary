@@ -12835,7 +12835,7 @@ let Eh = (0, a.zD)(u.X.HIGHLIGHT_MANA_COMPONENTS, {
     EE = (0, a.zD)(u.X.HIGHLIGHT_MANA_TEXT, {
         useTitle: () => "Mana Text Migration Highlighter",
         useSubtitle: () =>
-            "Outlines Mana Text/Heading components in green and all other rendered text in red, to spot text not yet migrated to Mana.",
+            "Outlines Mana Text/Heading components in green, text composing a variant (experiment-reachable but not migrated) in yellow, and all other rendered text in red.",
         useValue: () => (0, EA.A)("highlight_mana_text"),
         setValue: (e) => {
             (0, Em.L)("highlight_mana_text", e);

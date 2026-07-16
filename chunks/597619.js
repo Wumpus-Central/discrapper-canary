@@ -1,58 +1,74 @@
 "use strict";
-n.d(t, { xb: () => m, fs: () => g });
+n.d(t, { xb: () => f, fs: () => p });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(607399),
-    l = n(17928),
-    u = n(112834),
+    a = n(503698),
+    s = n.n(a),
+    l = n(607399),
+    o = n(17928),
+    d = n(112834),
     c = n(964486),
-    d = n(775602),
+    u = n(775602),
     _ = n(723702),
-    h = n(354328),
-    f = n(742023),
-    p = n(19575);
-let E = r.createContext({ lang: "", style: "", className: "", focused: !1 });
-function m() {
-    let e = r.useContext(E);
+    E = n(354328),
+    A = n(742023),
+    h = n(19575);
+let I = r.createContext({ lang: "", style: "", className: "", focused: !1 });
+function f() {
+    let e = r.useContext(I);
     if (void 0 === e) throw Error("useRootElementContext must be used within a RootElementContextProvider");
     return e;
 }
-function g(e) {
+function p(e) {
     let t,
         {
-            rootClassName: n,
-            lang: s,
-            theme: m,
-            density: g,
-            focused: A,
-            fontScale: I,
-            fontScaleClass: T,
-            mouseMode: S,
-            keyboardModeEnabled: y,
-            saturation: C,
-            desaturateUserColors: N,
-            useForcedColors: v,
-            systemForcedColors: R,
-            useReducedMotion: O,
-            alwaysShowLinkDecorations: b,
-            hardwareAccelerationEnabled: D,
-            highContrastMode: L,
-            isPopoutWindow: w,
-            children: M,
+            rootClassName: a,
+            lang: f,
+            theme: p,
+            density: T,
+            focused: m,
+            fontScale: g,
+            fontScaleClass: S,
+            mouseMode: N,
+            keyboardModeEnabled: C,
+            saturation: R,
+            desaturateUserColors: O,
+            useForcedColors: L,
+            systemForcedColors: y,
+            useReducedMotion: D,
+            alwaysShowLinkDecorations: v,
+            hardwareAccelerationEnabled: b,
+            highContrastMode: M,
+            isPopoutWindow: P,
+            children: U,
         } = e,
-        P = window.CSS.supports("selector(::-webkit-scrollbar)"),
-        x = (0, l.bG)([d.Ay], () => d.Ay.zoom),
-        k = w ? "" : `--custom-zoom: ${x};`,
-        U = (0, h.A)("highlight_mana_buttons"),
-        G = (0, h.A)("highlight_mana_components"),
-        F = (0, h.A)("highlight_mana_text"),
-        V = (0, h.A)("highlight_void_toggleables"),
-        B = (0, h.A)("highlight_void_buttons"),
-        j = (0, l.bG)([f.Ay], () => f.Ay.hdrDynamicRange),
-        H = `font-size: ${I}%; --saturation-factor: ${C}; dynamic-range-limit: ${j}; ${k}`,
-        Y = a()(
+        w = window.CSS.supports("selector(::-webkit-scrollbar)"),
+        G = (0, o.bG)([u.Ay], () => u.Ay.zoom),
+        x = P ? "" : `--custom-zoom: ${G};`,
+        k = (0, E.A)("highlight_mana_buttons"),
+        F = (0, E.A)("highlight_mana_components"),
+        V = (0, E.A)("highlight_mana_text"),
+        B = (0, E.A)("highlight_void_toggleables"),
+        H = (0, E.A)("highlight_void_buttons");
+    r.useEffect(() => {
+        if (!V) return;
+        let e = () => {},
+            t = !1;
+        return (
+            n
+                .e("89064")
+                .then(n.bind(n, 977691))
+                .then((n) => {
+                    t || (e = n.startComposedHighlight());
+                }),
+            () => {
+                (t = !0), e();
+            }
+        );
+    }, [V]);
+    let j = (0, o.bG)([A.Ay], () => A.Ay.hdrDynamicRange),
+        W = `font-size: ${g}%; --saturation-factor: ${R}; dynamic-range-limit: ${j}; ${x}`,
+        Y = s()(
             ((t = ""),
             (0, _.isWindows)()
                 ? (t = "platform-win")
@@ -62,40 +78,40 @@ function g(e) {
                     ? (t = "platform-linux")
                     : (0, _.isWeb)() && (t = "platform-web"),
             __OVERLAY__ ? `${t} platform-overlay` : t),
-            (0, u.m)(m),
-            `density-${g}`,
-            T,
+            (0, d.m)(p),
+            `density-${T}`,
+            S,
             {
-                "low-saturation": C <= 0.4,
-                "keyboard-mode": y,
-                "decorate-links": b,
-                "no-webkit-scrollbar": !P,
-                "has-webkit-scrollbar": P,
-                "mouse-mode": S,
-                "reduce-motion": O,
-                "full-motion": !O,
-                "is-mobile": o.Fr,
-                "app-focused": A,
-                "desaturate-user-colors": N,
-                "disable-forced-colors": !v && "active" === R,
-                "enable-forced-colors": v,
+                "low-saturation": R <= 0.4,
+                "keyboard-mode": C,
+                "decorate-links": v,
+                "no-webkit-scrollbar": !w,
+                "has-webkit-scrollbar": w,
+                "mouse-mode": N,
+                "reduce-motion": D,
+                "full-motion": !D,
+                "is-mobile": l.Fr,
+                "app-focused": m,
+                "desaturate-user-colors": O,
+                "disable-forced-colors": !L && "active" === y,
+                "enable-forced-colors": L,
                 "visual-refresh": !0,
-                "hardware-acceleration-disabled": !D,
+                "hardware-acceleration-disabled": !b,
                 "visual-refresh-chat-input": !1,
-                "highlight-mana-buttons": U,
-                "highlight-mana-components": G,
-                "highlight-mana-text": F,
-                "highlight-void-toggleables": V,
-                "highlight-void-buttons": B,
-                "high-contrast-mode": L,
+                "highlight-mana-buttons": k,
+                "highlight-mana-components": F,
+                "highlight-mana-text": V,
+                "highlight-void-toggleables": B,
+                "highlight-void-buttons": H,
+                "high-contrast-mode": M,
             },
-            n,
+            a,
         ),
-        W = r.useMemo(() => ({ lang: s, style: H, className: Y, focused: A }), [s, H, Y, A]);
+        K = r.useMemo(() => ({ lang: f, style: W, className: Y, focused: m }), [f, W, Y, m]);
     return (
         (0, c.Ay)(() => {
-            p.Ay.setTrafficLightPosition({ x: 9, y: 9 });
+            h.Ay.setTrafficLightPosition({ x: 9, y: 9 });
         }),
-        (0, i.jsx)(E.Provider, { value: W, children: M })
+        (0, i.jsx)(I.Provider, { value: K, children: U })
     );
 }
