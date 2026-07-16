@@ -29,10 +29,7 @@ function S(e, t) {
 async function _(e, t, n) {
     let I = [];
     try {
-        let i = await T.Bo.get({
-            url: l.Rsh.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
-            rejectWithError: (0, T.fT)(),
-        });
+        let i = await T.Bo.get({ url: l.Rsh.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n), rejectWithError: !1 });
         i.ok && (I = i.body.permissions);
     } catch (T) {
         if (404 !== T.status)

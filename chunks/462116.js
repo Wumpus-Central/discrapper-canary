@@ -37,7 +37,7 @@ async function R(t, e, l, u) {
             dms_disabled_until: l ? d : null,
             lockdown_duration_hours: a ? i : null,
         },
-        rejectWithError: (0, r.fT)(),
+        rejectWithError: !1,
     });
 }
 async function h(t, e, l) {
@@ -47,12 +47,12 @@ async function h(t, e, l) {
         : await r.Bo.post({
               url: I.Rsh.GUILD_INCIDENT_REPORT_FALSE_ALARM(t),
               body: { alert_message_id: e, reason: l },
-              rejectWithError: (0, r.fT)(),
+              rejectWithError: !1,
           });
 }
 async function E(t) {
     let e = d.A.getGuild(t);
     return null == (null != e ? _(e) : null)
         ? null
-        : await r.Bo.post({ url: I.Rsh.GUILD_INCIDENT_REPORT_RAID(t), rejectWithError: (0, r.fT)() });
+        : await r.Bo.post({ url: I.Rsh.GUILD_INCIDENT_REPORT_RAID(t), rejectWithError: !1 });
 }

@@ -10001,7 +10001,7 @@ function d5(e, t) {
         url: t(e),
         query: { start: i.toISOString(), end: n.toISOString(), interval: 2 },
         oldFormErrors: !0,
-        rejectWithError: (0, ex.fT)(),
+        rejectWithError: !1,
     });
 }
 var d6 = n(914609),

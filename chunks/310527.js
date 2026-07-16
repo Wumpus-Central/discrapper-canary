@@ -22,7 +22,7 @@ function d(e, t, n) {
         url: a.Rsh.GUILD_VANITY_URL(e),
         body: { code: t },
         oldFormErrors: !0,
-        rejectWithError: (0, i.fT)(),
+        rejectWithError: !1,
     }).then(
         (e) => {
             let {

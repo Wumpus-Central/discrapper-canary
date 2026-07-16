@@ -63,7 +63,7 @@ async function O(t, e, n) {
                 url: I.Rsh.NEW_MEMBER_ACTION(t, e),
                 body: _,
                 oldFormErrors: !0,
-                rejectWithError: (0, i.fT)(),
+                rejectWithError: !1,
             }),
             E = (0, s.kk)(n.body);
         return (
@@ -100,7 +100,7 @@ async function m(t, e, n) {
                 url: I.Rsh.RESOURCE_CHANNEL(t, e),
                 body: { icon: n },
                 oldFormErrors: !0,
-                rejectWithError: (0, i.fT)(),
+                rejectWithError: !1,
             }),
             E = (0, s.RR)(_.body);
         return r.h.dispatch({ type: "GUILD_RESOURCE_CHANNEL_UPDATE_SUCCESS", guildId: t, resourceChannel: E }), _.body;
@@ -119,7 +119,7 @@ function L(t, e) {
             ? (o.A.show({ title: T.intl.string(T.t["6nCZyG"]), body: T.intl.string(T.t.JuhUTS) }),
               N.A.addBreadcrumb({ message: "Error saving home settings" }),
               Promise.reject())
-            : f(t, e)
+            : b(t, e)
         : Promise.resolve();
 }
 function M(t, e) {
@@ -127,9 +127,9 @@ function M(t, e) {
     return e && !(0, s.Ic)(n)
         ? void o.A.show({ title: T.intl.string(T.t["6nCZyG"]), body: T.intl.string(T.t.JuhUTS) })
         : (r.h.dispatch({ type: "GUILD_HOME_SETTINGS_TOGGLE_ENABLED", guildId: t, enabled: e }),
-          f(t, { ...n, enabled: e }));
+          b(t, { ...n, enabled: e }));
 }
-async function f(t, e) {
+async function b(t, e) {
     r.h.dispatch({ type: "GUILD_HOME_SETTINGS_UPDATE_START" });
     let n = l.A.getPendingData();
     try {
@@ -137,7 +137,7 @@ async function f(t, e) {
                 url: I.Rsh.GUILD_HOME_SETTINGS(t),
                 body: (0, s.Y4)(t, e),
                 oldFormErrors: !0,
-                rejectWithError: (0, i.fT)(),
+                rejectWithError: !1,
             }),
             E = (0, s.Xu)(_.body);
         return (
@@ -146,7 +146,7 @@ async function f(t, e) {
                 let [n, _] = e;
                 null == _ ||
                     (null != _.iconData
-                        ? b(t, n, _).finally(() => {
+                        ? f(t, n, _).finally(() => {
                               D(n);
                           })
                         : D(n));
@@ -172,7 +172,7 @@ async function f(t, e) {
             });
     }
 }
-async function b(t, e, n) {
+async function f(t, e, n) {
     let { iconData: _, isUrl: E, emoji: i } = n;
     if (null != i) return;
     let r = null != _ && E ? await g(_) : _;

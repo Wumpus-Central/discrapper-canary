@@ -11,7 +11,7 @@ async function o(e) {
             url: l.Rsh.GUILD_INTEGRATIONS(e),
             query: { include_applications: !0, include_role_connections_metadata: !0 },
             oldFormErrors: !0,
-            rejectWithError: (0, i.fT)(),
+            rejectWithError: !1,
         })
     ).body.map((e) => ({
         ...e,

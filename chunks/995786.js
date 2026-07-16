@@ -75,29 +75,25 @@ function T(e) {
 async function m(e) {
     let t = f(e);
     return _(
-        (await i.Bo.post({ url: h.Rsh.GUILD_AUTOMOD_VALIDATE_RULE(e.guildId), body: t, rejectWithError: (0, i.fT)() }))
-            .body,
+        (await i.Bo.post({ url: h.Rsh.GUILD_AUTOMOD_VALIDATE_RULE(e.guildId), body: t, rejectWithError: !1 })).body,
     );
 }
 async function g(e) {
     let t = f(e);
     return (
         delete t.id,
-        T((await i.Bo.post({ url: h.Rsh.GUILD_AUTOMOD_RULES(e.guildId), body: t, rejectWithError: (0, i.fT)() })).body)
+        T((await i.Bo.post({ url: h.Rsh.GUILD_AUTOMOD_RULES(e.guildId), body: t, rejectWithError: !1 })).body)
     );
 }
 async function S(e) {
     let t = f(e);
-    return T(
-        (await i.Bo.patch({ url: h.Rsh.GUILD_AUTOMOD_RULE(e.guildId, e.id), body: t, rejectWithError: (0, i.fT)() }))
-            .body,
-    );
+    return T((await i.Bo.patch({ url: h.Rsh.GUILD_AUTOMOD_RULE(e.guildId, e.id), body: t, rejectWithError: !1 })).body);
 }
 async function N(e, t) {
-    return await i.Bo.del({ url: h.Rsh.GUILD_AUTOMOD_RULE(t, e), rejectWithError: (0, i.fT)() }), !0;
+    return await i.Bo.del({ url: h.Rsh.GUILD_AUTOMOD_RULE(t, e), rejectWithError: !1 }), !0;
 }
 async function C(e) {
-    let t = await i.Bo.get({ url: h.Rsh.GUILD_AUTOMOD_RULES(e), rejectWithError: (0, i.fT)() });
+    let t = await i.Bo.get({ url: h.Rsh.GUILD_AUTOMOD_RULES(e), rejectWithError: !1 });
     return Array.isArray(t.body) ? t.body.map(T) : [];
 }
 async function R(e, t, n) {
@@ -105,7 +101,7 @@ async function R(e, t, n) {
         (await i.Bo.post({
             url: h.Rsh.GUILD_AUTOMOD_ALERT_ACTION(t.guild_id),
             body: { message_id: e, channel_id: t.id, alert_action_type: n },
-            rejectWithError: (0, i.fT)(),
+            rejectWithError: !1,
         }));
 }
 function O(e, t, n) {
