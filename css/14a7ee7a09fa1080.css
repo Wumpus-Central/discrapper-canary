@@ -214,7 +214,8 @@
 }
 
 .detailCloseButton__6db38 {
-    align-self: flex-end
+    align-self: flex-end;
+    margin-inline-end: calc(var(--space-8)*-1)
 }
 
 .badgeGraphic__6db38 {
