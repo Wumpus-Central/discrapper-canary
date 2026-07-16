@@ -624,6 +624,7 @@ function eA(e, t) {
         placement: e,
         fetchedAt: Date.now(),
         responseTtlSeconds: t / 1e3,
+        fromExpirationClear: !0,
     });
 }
 async function eh(e, t, n) {
