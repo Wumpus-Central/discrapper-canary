@@ -27,7 +27,7 @@ n.d(t, {
     re: () => tI,
     nB: () => eX,
     pb: () => ek,
-    Zb: () => e7,
+    Zb: () => e5,
     Pr: () => eG,
     nK: () => tU,
     Tm: () => eJ,
@@ -41,7 +41,7 @@ n.d(t, {
     L_: () => tF,
     Uf: () => ta,
     sS: () => ts,
-    ji: () => e5,
+    ji: () => e7,
     Q8: () => tn,
     Mn: () => eK,
     m6: () => eY,
@@ -687,7 +687,7 @@ function eZ(e) {
                     return eL.intl.format(eL.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case N.Dmq.PAST_DUE:
                     return eL.intl.format(eL.t["d+0vwo"], {
-                        endDate: (0, eg.i$)(e5(t).expiresDate, "LL"),
+                        endDate: (0, eg.i$)(e7(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -722,7 +722,7 @@ function eZ(e) {
                     return eL.intl.format(eL.t["6RTdZA"], { resumeDate: t.pauseEndsAt });
                 case N.Dmq.PAST_DUE:
                     return eL.intl.format(eL.t["d+0vwo"], {
-                        endDate: (0, eg.i$)(e5(t).expiresDate, "LL"),
+                        endDate: (0, eg.i$)(e7(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -764,7 +764,7 @@ function eZ(e) {
                     });
                 case N.Dmq.PAST_DUE:
                     return eL.intl.format(eL.t["d+0vwo"], {
-                        endDate: (0, eg.i$)(e5(t).expiresDate, "LL"),
+                        endDate: (0, eg.i$)(e7(t).expiresDate, "LL"),
                         onClick: () => {
                             (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                         },
@@ -864,6 +864,8 @@ function eJ(e) {
         case C.pe.TIER_2:
             a = [C.gD.PREMIUM_YEAR_TIER_2, C.gD.PREMIUM_MONTH_TIER_2];
             break;
+        case C.pe.GUILD:
+            return [];
         default:
             throw Error(`Unexpected SKU: ${t}`);
     }
@@ -914,10 +916,10 @@ function e6(e) {
 function e4(e) {
     return e3(e) || e6(e);
 }
-function e7(e) {
+function e5(e) {
     return null != e && e === C.gD.PREMIUM_GROUP_MONTH;
 }
-function e5(e) {
+function e7(e) {
     if (e.isPurchasedViaApple && e.metadata?.apple_grace_period_expires_date != null) {
         let t = c()(e.metadata.apple_grace_period_expires_date);
         return { days: c().duration(t.diff(e.currentPeriodStart)).days(), expiresDate: t };
@@ -1048,7 +1050,7 @@ function ta(e) {
         case N.Dmq.PAST_DUE:
             if (n.isBoostOnly)
                 return eL.intl.format(eL.t["d+0vwo"], {
-                    endDate: (0, eg.i$)(e5(n).expiresDate, "LL"),
+                    endDate: (0, eg.i$)(e7(n).expiresDate, "LL"),
                     onClick: () => {
                         (0, E.A)("https://support.discord.com/hc/articles/23082866222871");
                     },
@@ -1523,7 +1525,7 @@ let tK = Object.freeze({
                       })
                     : eL.intl.format(eL.t["V8+l6k"], { resumeDate: e.pauseEndsAt });
         if (e.status === N.Dmq.PAST_DUE) {
-            let t = e5(e).expiresDate;
+            let t = e7(e).expiresDate;
             return (e.isPurchasedViaGoogle &&
                 e.metadata?.google_grace_period_expires_date != null &&
                 (t = c()(e.metadata.google_grace_period_expires_date)),

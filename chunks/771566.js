@@ -1,20 +1,20 @@
-n.d(t, { Rs: () => F, fw: () => K, Ay: () => G });
+n.d(t, { Rs: () => F, fw: () => W, Ay: () => G });
 var s,
     l = n(627968),
     i = n(64700),
     a = n(284009),
     r = n.n(a),
-    c = n(17928),
-    d = n(834730),
+    d = n(17928),
+    c = n(834730),
     u = n(38021),
     C = n(821609),
     o = n(830382),
-    m = n(71804),
-    L = n(6938),
-    g = n(937008),
-    M = n(972607),
-    H = n(419212),
-    h = n(97352),
+    L = n(71804),
+    m = n(6938),
+    g = n(951305),
+    h = n(972607),
+    M = n(419212),
+    H = n(97352),
     x = n(67480),
     E = n(975571),
     f = n(428262),
@@ -52,7 +52,7 @@ function v(e) {
         }),
     });
 }
-function T(e) {
+function j(e) {
     let { color: t = "white", className: n } = e;
     return (0, l.jsx)("svg", {
         className: n,
@@ -67,22 +67,22 @@ function T(e) {
         }),
     });
 }
-var R = n(776043);
-let j = function (e) {
+var T = n(776043);
+let R = function (e) {
     let { type: t, theme: n } = e;
     return (0, l.jsx)("div", {
-        className: R.Eq,
+        className: T.Eq,
         children: (0, l.jsx)("div", {
-            className: R.v9,
+            className: T.v9,
             children: (function (e, t) {
                 let n = (0, _.M)(t) ? "white" : "black";
                 switch (e) {
                     case A.Or.PREMIUM_UPDATED:
-                        return (0, l.jsx)(T, { color: n, className: R.gd });
+                        return (0, l.jsx)(j, { color: n, className: T.gd });
                     case A.Or.PREMIUM_ACTIVATED:
-                        return (0, l.jsx)(I, { color: n, className: R.gd });
+                        return (0, l.jsx)(I, { color: n, className: T.gd });
                     case A.Or.PREMIUM_PAYMENT_STARTED:
-                        return (0, l.jsx)(v, { color: n, className: R.gd });
+                        return (0, l.jsx)(v, { color: n, className: T.gd });
                     default:
                         return null;
                 }
@@ -102,7 +102,7 @@ var P = n(151595),
 function y(e) {
     let t,
         { planId: n, startingPremiumSubscriptionPlanId: s, paymentSourceType: i } = e,
-        [a, u] = (0, c.yK)([h.A], () => [h.A.get(s), h.A.get(n)]);
+        [a, u] = (0, d.yK)([H.A], () => [H.A.get(s), H.A.get(n)]);
     if ((r()(null != a && null != u, "Missing startingPlan or newPlan"), U.LE.indexOf(s) < U.LE.indexOf(n)))
         switch (n) {
             case U.gD.PREMIUM_MONTH_TIER_1:
@@ -134,7 +134,7 @@ function y(e) {
                 });
                 break;
             default:
-                throw new m.v({ message: `Unexpected planId: ${n}`, extraSentryInformation: { planId: n } });
+                throw new L.v({ message: `Unexpected planId: ${n}`, extraSentryInformation: { planId: n } });
         }
     else if (a.skuId === U.pe.TIER_2 && u.skuId === U.pe.TIER_1) t = D.intl.string(D.t.PNX4NM);
     else
@@ -151,7 +151,7 @@ function y(e) {
             default:
                 throw Error(`Unexpected skuId: ${u.skuId}`);
         }
-    return (0, l.jsx)(d.E, {
+    return (0, l.jsx)(c.E, {
         variant: "text-md/medium",
         color: "interactive-text-default",
         className: S.Qq,
@@ -165,30 +165,30 @@ function G(e) {
         {
             planId: s,
             startingPremiumSubscriptionPlanId: a,
-            onClose: m,
+            onClose: L,
             followupSKUInfo: g,
-            isDowngrade: M,
-            hideClose: H,
+            isDowngrade: h,
+            hideClose: M,
             postSuccessGuild: _,
             paymentSourceType: I,
             startingFractionalPremiumEndsAt: v,
-            customCTAType: T,
+            customCTAType: j,
         } = e,
-        R = (0, c.bG)([N.A], () => N.A.isDisplayingWowMomentConfirmation),
+        T = (0, d.bG)([N.A], () => N.A.isDisplayingWowMomentConfirmation),
         {
             isPremiumGroupPurchase: F,
             customCheckoutFlow: G,
-            startingIsInPastDueCheckout: K,
-        } = (0, L.t4)((e) => ({
+            startingIsInPastDueCheckout: W,
+        } = (0, m.t4)((e) => ({
             isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
             customCheckoutFlow: e.customCheckoutFlow,
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
-        { theme: W } = (0, u.wR)(),
-        Q = (0, c.bG)([x.A], () => (null != g ? x.A.get(g.id) : null)),
+        { theme: K } = (0, u.wR)(),
+        Q = (0, d.bG)([x.A], () => (null != g ? x.A.get(g.id) : null)),
         q = (0, p.b2)(v),
-        B = G === b.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
-    function z(e) {
+        z = G === b.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
+    function B(e) {
         return F
             ? D.intl.formatToPlainString(w.default.pDiwHe, { premiumGroupProductName: (0, k.DP)(), totalSeats: k.LM })
             : e.skuId === U.pe.TIER_0
@@ -209,33 +209,33 @@ function G(e) {
             let { applicationId: e, id: t } = g;
             (0, o.EX)(e, t).catch(Z.FXj);
         }, [g, Q]),
-        K)
+        W)
     )
-        t = (0, l.jsx)(d.E, {
+        t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: S.Qq,
             children: D.intl.string(O.default["t+xzd8"]),
         });
-    else if ("deeplink_to_desktop_app" === T || G === b.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
-        t = (0, l.jsx)(d.E, {
+    else if ("deeplink_to_desktop_app" === j || G === b.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
+        t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: S.Qq,
             children: (0, l.jsxs)("p", { children: [D.intl.string(D.t.bIVRSQ), " ", D.intl.string(D.t["0UJqOy"])] }),
         });
     else if (null != Q)
-        t = (0, l.jsx)(d.E, {
+        t = (0, l.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
             className: S.Qq,
             children: D.intl.format(D.t["tsQOs+"], { skuName: Q.name }),
         });
-    else if (q && !M) {
-        let e = h.A.get(s);
+    else if (q && !h) {
+        let e = H.A.get(s);
         r()(null != e, "Missing plan"),
             e.skuId === U.pe.TIER_0
-                ? (t = (0, l.jsxs)(d.E, {
+                ? (t = (0, l.jsxs)(c.E, {
                       variant: "text-md/medium",
                       color: "interactive-text-default",
                       className: S.Qq,
@@ -249,7 +249,7 @@ function G(e) {
                       ],
                   }))
                 : (e.skuId === U.pe.TIER_1 || e.skuId === U.pe.TIER_2) &&
-                  (t = (0, l.jsxs)(d.E, {
+                  (t = (0, l.jsxs)(c.E, {
                       variant: "text-md/medium",
                       color: "interactive-text-default",
                       className: S.Qq,
@@ -264,17 +264,17 @@ function G(e) {
                   }));
     } else if (null != a) t = (0, l.jsx)(y, { planId: s, startingPremiumSubscriptionPlanId: a });
     else if (null != _) {
-        let e = h.A.get(s);
+        let e = H.A.get(s);
         r()(null != e, "Missing plan"),
             (t = (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(d.E, {
+                    (0, l.jsx)(c.E, {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
                         className: S.Qq,
-                        children: z(e),
+                        children: B(e),
                     }),
-                    (0, l.jsx)(d.E, {
+                    (0, l.jsx)(c.E, {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
                         className: S.Qq,
@@ -283,76 +283,77 @@ function G(e) {
                 ],
             }));
     } else {
-        let e = h.A.get(s);
+        let e = H.A.get(s);
         r()(null != e, "Missing plan"),
-            (t = (0, l.jsx)(d.E, {
+            (t = (0, l.jsx)(c.E, {
                 variant: "text-md/medium",
                 color: "interactive-text-default",
                 className: S.Qq,
-                children: z(e),
+                children: B(e),
             }));
     }
-    let V = f.Ay.getPremiumType(s);
-    r()(null != V, "premium type should not be null in purchase confirmation");
-    let [X, Y] = i.useState(!1),
+    let [X, V] = i.useState(!1),
         $ = i.useCallback(() => {
-            null != m && (m(), G === b.uH.MOBILE_WEB_REDIRECT_CHECKOUT && Y(!0));
-        }, [m, G]);
-    function J() {
+            null != L && (L(), G === b.uH.MOBILE_WEB_REDIRECT_CHECKOUT && V(!0));
+        }, [L, G]);
+    function Y() {
         return Z.NcF.has(I ?? Z.hes.UNKNOWN)
             ? A.Ay.Types.PREMIUM_PAYMENT_STARTED
             : null != a
               ? A.Ay.Types.PREMIUM_UPDATED
               : A.Ay.Types.PREMIUM_ACTIVATED;
     }
-    return ((n = F
-        ? D.intl.string(w.default.clIveA)
-        : "deeplink_to_desktop_app" === T || G === b.uH.MOBILE_WEB_REDIRECT_CHECKOUT
-          ? D.intl.string(D.t.sRApon)
-          : null != Q
-            ? D.intl.formatToPlainString(D.t["1qGgm4"], { skuName: Q.name })
-            : M
-              ? D.intl.string(D.t.QJ9EyM)
-              : null != _
-                ? D.intl.string(D.t.ta3cXY)
-                : D.intl.string(D.t.TkTvBz)),
-    R)
-        ? (0, l.jsx)(P.A, { type: J(), text: t, buttonText: n, hideClose: H || B, onClose: $, buttonLoading: X })
-        : (0, l.jsxs)("div", {
-              className: S.EL,
-              children: [
-                  (0, l.jsx)(j, { type: J(), theme: W }),
-                  t,
-                  H || B
-                      ? null
-                      : (0, l.jsx)("div", {
-                            "data-button-hoisted-classname-wrapper": !0,
-                            className: S.x6,
-                            children: (0, l.jsx)(C.$, { variant: "primary", text: n, onClick: $, loading: X }),
-                        }),
-              ],
-          });
+    if (
+        ((n = F
+            ? D.intl.string(w.default.clIveA)
+            : "deeplink_to_desktop_app" === j || G === b.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+              ? D.intl.string(D.t.sRApon)
+              : null != Q
+                ? D.intl.formatToPlainString(D.t["1qGgm4"], { skuName: Q.name })
+                : h
+                  ? D.intl.string(D.t.QJ9EyM)
+                  : null != _
+                    ? D.intl.string(D.t.ta3cXY)
+                    : D.intl.string(D.t.TkTvBz)),
+        T)
+    )
+        return (0, l.jsx)(P.A, { type: Y(), text: t, buttonText: n, hideClose: M || z, onClose: $, buttonLoading: X });
+    let J = (0, f.z4)(s);
+    return (0, l.jsxs)("div", {
+        className: S.EL,
+        children: [
+            !J && (0, l.jsx)(R, { type: Y(), theme: K }),
+            t,
+            M || z
+                ? null
+                : (0, l.jsx)("div", {
+                      "data-button-hoisted-classname-wrapper": !0,
+                      className: S.x6,
+                      children: (0, l.jsx)(C.$, { variant: "primary", text: n, onClick: $, loading: X }),
+                  }),
+        ],
+    });
 }
-function K(e) {
+function W(e) {
     let { planId: t, onClose: n } = e,
         {
             giftRecipient: s,
             selectedGiftStyle: i,
             hasSentMessage: a,
-            giftMessageError: d,
+            giftMessageError: c,
             isSendingMessage: u,
         } = (0, g.Pv)(),
-        C = (0, c.bG)([h.A], () => h.A.get(t));
+        C = (0, d.bG)([H.A], () => H.A.get(t));
     r()(null != C, "Missing plan");
-    let o = (0, c.bG)([H.A], () => H.A.getGiftCode(C.skuId));
-    return (0, l.jsx)(M.A, {
+    let o = (0, d.bG)([M.A], () => M.A.getGiftCode(C.skuId));
+    return (0, l.jsx)(h.A, {
         giftCode: o,
         subscriptionPlan: C,
         onClose: n,
         selectedGiftStyle: i,
         hasSentMessage: a,
         giftRecipient: s,
-        giftMessageError: d,
+        giftMessageError: c,
         isSendingMessage: u,
     });
 }
