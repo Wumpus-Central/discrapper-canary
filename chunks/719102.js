@@ -157,7 +157,7 @@ function D(i) {
             onClick: Y,
             "aria-label": Z
                 ? y.intl.formatToPlainString(y.t["8uYD+I"], { username: f.username })
-                : y.intl.formatToPlainString(y.t.ZBB4Ty, { productName: (0, m.TC)(u) }),
+                : y.intl.formatToPlainString(y.t.ZBB4Ty, { productName: (0, m.T)(u) }),
             onHoverOrFocusChange: F,
             children: [
                 g && S === w.uS.WISHLIST

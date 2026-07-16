@@ -119,7 +119,7 @@ function k(e) {
         }, [t, n, f, l, c]),
         m = r.useMemo(() => s()({ [U.zW]: a || f }, o), [a, f, o]);
     return (0, i.jsxs)(x, {
-        "aria-label": P.intl.formatToPlainString(P.t.xRjJBe, { productName: (0, C.TC)(t) }),
+        "aria-label": P.intl.formatToPlainString(P.t.xRjJBe, { productName: (0, C.T)(t) }),
         sku: t,
         wishlistOwner: d,
         skuPreviewStyle: m,

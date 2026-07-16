@@ -8,7 +8,7 @@ var l = n(627968),
     u = n(113325),
     c = n(331322),
     d = n(834730),
-    m = n(534514),
+    m = n(297264),
     p = n(821609),
     g = n(509434);
 if (/^(14256|21552)$/.test(n.j)) var h = n(141628);
@@ -312,7 +312,7 @@ function eC(e) {
         user: n,
         spec: ev,
         onClick: f,
-        "aria-label": ec.intl.formatToPlainString(ec.t.ZBB4Ty, { productName: (0, ex.TC)(t) }),
+        "aria-label": ec.intl.formatToPlainString(ec.t.ZBB4Ty, { productName: (0, ex.T)(t) }),
         onHoverOrFocusChange: g,
         children: [
             (0, l.jsx)(eE.A, { spec: ev, onClick: x, isHoveringOrFocusing: p, label: A, icon: E }),

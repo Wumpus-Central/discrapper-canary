@@ -1,27 +1,26 @@
 "use strict";
-n.d(t, { TC: () => o, qq: () => l });
+n.d(t, { T: () => l, q: () => o });
 var i = n(575593),
     r = n(993408),
-    s = n(772427);
-n(872472);
-var a = n(375708);
-function o(e) {
+    a = n(772427),
+    s = n(375708);
+function l(e) {
     var t = e.name;
     switch (e.tenantMetadata?.collectibles?.type) {
         case i.R.AVATAR_DECORATION:
-            return a.intl.formatToPlainString(a.t.lvBzLi, { product: t });
+            return s.intl.formatToPlainString(s.t.lvBzLi, { product: t });
         case i.R.PROFILE_EFFECT:
-            return a.intl.formatToPlainString(a.t.eR7moP, { product: t });
+            return s.intl.formatToPlainString(s.t.eR7moP, { product: t });
         case i.R.NAMEPLATE:
-            return a.intl.formatToPlainString(a.t.YFOwHj, { product: t });
+            return s.intl.formatToPlainString(s.t.YFOwHj, { product: t });
         default:
             return t;
     }
 }
-function l(e) {
+function o(e) {
     return (
         !(0, r.G0)(e) &&
         e.type !== i.R.EXTERNAL_SKU &&
-        (e.type !== i.R.PROFILE_FRAME || !!(0, s.QW)("isWishlistableCollectiblesProduct"))
+        (e.type !== i.R.PROFILE_FRAME || !!(0, a.QW)("isWishlistableCollectiblesProduct"))
     );
 }

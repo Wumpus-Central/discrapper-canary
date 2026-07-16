@@ -173,7 +173,7 @@ function H(e) {
             "aria-label": S,
             style: V(u),
             children: [
-                (0, i.jsx)(o.A, { children: (0, i.jsx)(d.H, { children: (0, w.TC)(t) }) }),
+                (0, i.jsx)(o.A, { children: (0, i.jsx)(d.H, { children: (0, w.T)(t) }) }),
                 (0, i.jsx)("div", {
                     className: s()(k.ev, I),
                     children: (0, i.jsx)(U, {

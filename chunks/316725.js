@@ -13,14 +13,14 @@ var n = i(627968),
     p = i(871123),
     h = i(453774),
     S = i(31969),
-    f = i(735438),
+    f = i(435558),
     m = i.n(f),
     x = i(17928),
     _ = i(52133),
     T = i(793574),
     v = i(688810),
-    C = i(661492),
-    E = i(212387),
+    E = i(661492),
+    C = i(212387),
     j = i(662349),
     R = i(532423),
     A = i(287809),
@@ -89,12 +89,12 @@ function F(e) {
             );
         }, [t, G, g, F]),
         { label: B, icon: U } = (0, j.h)({ wishlistOwner: G, isOwned: !1, shortText: !0 });
-    return (0, n.jsxs)(E.A, {
+    return (0, n.jsxs)(C.A, {
         sku: t,
         user: G,
         spec: I,
         onClick: P,
-        "aria-label": L.intl.formatToPlainString(L.t.ZBB4Ty, { productName: (0, C.TC)(t) }),
+        "aria-label": L.intl.formatToPlainString(L.t.ZBB4Ty, { productName: (0, E.T)(t) }),
         onHoverOrFocusChange: S,
         children: [
             (0, n.jsx)(j.A, { spec: I, onClick: w, isHoveringOrFocusing: h, label: B, icon: U }),
@@ -106,7 +106,7 @@ function F(e) {
 }
 var G = i(278416),
     M = i(459192),
-    P = i(990078),
+    P = i(866665),
     w = i(262427),
     B = i(500524);
 function U(e) {
@@ -140,13 +140,13 @@ function D(e) {
             cardSpec: T,
         } = e,
         v = (0, d.h)(i),
-        C = (0, h.A)(v?.id),
-        E = l.useMemo(() => (C?.id != null ? [C.id] : []), [C]),
+        E = (0, h.A)(v?.id),
+        C = l.useMemo(() => (E?.id != null ? [E.id] : []), [E]),
         {
             status: j,
             recommendations: R,
             skusToUserAndReason: A,
-        } = (0, c.XQ)({ applicationIds: E, numItems: _, userIds: s }),
+        } = (0, c.XQ)({ applicationIds: C, numItems: _, userIds: s }),
         O = l.useMemo(() => new Set(s), [s]),
         { hasWishlist: k, hasPopular: N } = l.useMemo(() => (0, p.wH)(R, A, O), [R, A, O]),
         H = l.useMemo(() => {
@@ -166,7 +166,7 @@ function D(e) {
                     {
                         sku: t,
                         source: i.length > 0 ? o.uS.WISHLIST : o.uS.POPULAR,
-                        application: C,
+                        application: E,
                         showIcons: e,
                         guildId: m,
                         channelId: x,
@@ -177,7 +177,7 @@ function D(e) {
                     t.id,
                 );
             });
-        }, [k, N, R, A, C, m, x, s, T, O]);
+        }, [k, N, R, A, E, m, x, s, T, O]);
     l.useEffect(() => {
         0 !== R.length &&
             g.default.track(W.HAw.COMMERCE_SHOP_GIFTING_BREADCRUMB_VIEWED, {

@@ -165,7 +165,7 @@ function V(e) {
             specificProductOrVariant: m,
             isPurchased: f,
         } = (0, y.z)({ userId: a, product: i, location: s, onError: l }),
-        x = (0, T.qq)(m),
+        x = (0, T.q)(m),
         h = f && !o,
         I = !x || h,
         p = Y(x && h ? M.intl.string(M.t.nKA6v8) : void 0);
@@ -304,7 +304,7 @@ function es(e) {
                 disableHoverOrFocus: c,
                 onHoverOrFocusChange: x,
                 onClick: w,
-                "aria-label": M.intl.formatToPlainString(M.t.ZBB4Ty, { productName: (0, T.TC)(t.sku) }),
+                "aria-label": M.intl.formatToPlainString(M.t.ZBB4Ty, { productName: (0, T.T)(t.sku) }),
                 children: [
                     S,
                     (0, n.jsx)(Q.A, { spec: en, onClick: G ? k : w, isHoveringOrFocusing: f, label: _, icon: L }),
