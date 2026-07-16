@@ -1,0 +1,20 @@
+.gradientOuterBorder__8f49b {
+    align-items: center;
+    background: linear-gradient(90deg, #9b1da5, #1e2353 120%);
+    border-radius: var(--radius-sm);
+    display: flex;
+    margin-bottom: var(--space-16);
+    padding: 2px
+}
+
+.gradientInnerBorder__8f49b {
+    align-items: center;
+    background: var(--background-base-low);
+    border-radius: calc(var(--radius-sm) - 2px);
+    display: flex;
+    padding: var(--space-12) var(--space-16)
+}
+
+.svgCopy__8f49b {
+    display: block
+}

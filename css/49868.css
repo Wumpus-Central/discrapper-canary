@@ -1,0 +1,22 @@
+.seasonalGiftBoxHeaderIcon_daa077 {
+    align-self: center;
+    bottom: -11px;
+    position: absolute;
+    width: 260px;
+    z-index: 1
+}
+
+.container_daa077 {
+    align-items: center;
+    background-image: unset;
+    background-size: unset;
+    border-radius: 4px 4px 0 0;
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.closeButton_daa077 {
+    margin: var(--modal-vertical-padding) var(--modal-horizontal-padding);
+    margin-inline-start: auto
+}

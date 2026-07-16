@@ -1,0 +1,48 @@
+.tier2Animation__387d4 {
+    position: relative
+}
+
+.panningAnimation__387d4 {
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 22px;
+    overflow: hidden
+}
+
+.panningAnimationInner__387d4 {
+    background-size: 100% 100%;
+    filter: saturate(var(--saturation-factor, 1));
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.tier2Background__387d4 {
+    background-image: url(/assets/083b1bde1c6b39a3.svg);
+    opacity: .2
+}
+
+.tier2Foreground__387d4 {
+    background-image: url(/assets/ae4a4071a85dcaa6.svg)
+}
+
+.guildWrapper__387d4 {
+    position: relative
+}
+
+.guildBackground__387d4 {
+    top: 0;
+    inset-inline: 0;
+    bottom: 0
+}
+
+.guildBackground__387d4,
+.guildStar__387d4 {
+    position: absolute
+}
+
+.sequencedAnimation__387d4 {
+    filter: saturate(var(--saturation-factor, 1))
+}

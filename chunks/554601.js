@@ -549,17 +549,17 @@ function eJ(e) {
                                                         n.e("86832"),
                                                         n.e("76342"),
                                                         n.e("60988"),
-                                                        n.e("69273"),
-                                                        n.e("72210"),
-                                                        n.e("3155"),
-                                                        n.e("82104"),
-                                                        n.e("41711"),
+                                                        n.e("20950"),
+                                                        n.e("56372"),
+                                                        n.e("71441"),
                                                         n.e("49623"),
                                                         n.e("35316"),
                                                         n.e("38838"),
                                                         n.e("45214"),
                                                         n.e("99253"),
-                                                        n.e("17202"),
+                                                        n.e("47754"),
+                                                        n.e("33526"),
+                                                        n.e("89510"),
                                                         n.e("90862"),
                                                         n.e("90266"),
                                                         n.e("15476"),
@@ -571,15 +571,18 @@ function eJ(e) {
                                                         n.e("31837"),
                                                         n.e("42306"),
                                                         n.e("11291"),
-                                                        n.e("96846"),
+                                                        n.e("83893"),
+                                                        n.e("83133"),
+                                                        n.e("63051"),
+                                                        n.e("84873"),
                                                         n.e("19709"),
-                                                        n.e("4251"),
-                                                        n.e("47412"),
+                                                        n.e("67458"),
+                                                        n.e("58427"),
+                                                        n.e("28646"),
                                                         n.e("65327"),
                                                         n.e("41625"),
-                                                        n.e("96490"),
-                                                        n.e("85484"),
-                                                        n.e("51772"),
+                                                        n.e("7959"),
+                                                        n.e("61783"),
                                                         n.e("6605"),
                                                         n.e("11262"),
                                                         n.e("54483"),
@@ -610,10 +613,12 @@ function eJ(e) {
                                                         n.e("46461"),
                                                         n.e("47944"),
                                                         n.e("64509"),
-                                                        n.e("83546"),
+                                                        n.e("49868"),
+                                                        n.e("90072"),
                                                         n.e("72651"),
                                                         n.e("29363"),
-                                                        n.e("88016"),
+                                                        n.e("80822"),
+                                                        n.e("50336"),
                                                         n.e("74907"),
                                                         n.e("84133"),
                                                         n.e("13627"),
@@ -621,93 +626,83 @@ function eJ(e) {
                                                         n.e("78179"),
                                                         n.e("48157"),
                                                         n.e("44511"),
-                                                        n.e("3942"),
+                                                        n.e("37271"),
+                                                        n.e("82781"),
                                                         n.e("39932"),
                                                         n.e("70990"),
                                                         n.e("15130"),
                                                         n.e("80816"),
                                                         n.e("57578"),
                                                         n.e("57016"),
-                                                        n.e("65673"),
-                                                        n.e("50541"),
+                                                        n.e("45826"),
                                                         n.e("60654"),
                                                         n.e("24007"),
                                                         n.e("42205"),
                                                         n.e("55675"),
                                                         n.e("27962"),
                                                         n.e("36167"),
-                                                        n.e("10471"),
                                                         n.e("64827"),
+                                                        n.e("10471"),
                                                         n.e("63232"),
-                                                        n.e("68261"),
                                                         n.e("7167"),
-                                                        n.e("12721"),
                                                         n.e("84569"),
+                                                        n.e("61060"),
+                                                        n.e("54484"),
                                                         n.e("36850"),
                                                         n.e("60235"),
-                                                        n.e("21335"),
-                                                        n.e("61060"),
                                                         n.e("77333"),
-                                                        n.e("47834"),
-                                                        n.e("11735"),
-                                                        n.e("85927"),
-                                                        n.e("2368"),
                                                         n.e("6338"),
+                                                        n.e("47834"),
                                                         n.e("18573"),
                                                         n.e("78157"),
-                                                        n.e("85404"),
                                                         n.e("44057"),
-                                                        n.e("1453"),
+                                                        n.e("53782"),
                                                         n.e("88774"),
-                                                        n.e("21235"),
-                                                        n.e("62175"),
                                                         n.e("31988"),
                                                         n.e("44571"),
                                                         n.e("34303"),
                                                         n.e("40291"),
+                                                        n.e("2368"),
                                                         n.e("33115"),
-                                                        n.e("45959"),
                                                         n.e("73122"),
                                                         n.e("8304"),
                                                         n.e("93159"),
-                                                        n.e("71202"),
                                                         n.e("55936"),
-                                                        n.e("8739"),
+                                                        n.e("89088"),
                                                         n.e("42834"),
-                                                        n.e("88131"),
-                                                        n.e("43430"),
                                                         n.e("94723"),
                                                         n.e("62931"),
+                                                        n.e("45959"),
                                                         n.e("58529"),
                                                         n.e("58038"),
+                                                        n.e("71202"),
                                                         n.e("62531"),
-                                                        n.e("24322"),
+                                                        n.e("52846"),
                                                         n.e("6174"),
                                                         n.e("46070"),
                                                         n.e("90365"),
-                                                        n.e("89088"),
+                                                        n.e("66707"),
                                                         n.e("52548"),
                                                         n.e("17989"),
                                                         n.e("77084"),
-                                                        n.e("23532"),
-                                                        n.e("52557"),
-                                                        n.e("55654"),
                                                         n.e("29963"),
-                                                        n.e("96137"),
-                                                        n.e("83161"),
                                                         n.e("38513"),
                                                         n.e("63645"),
+                                                        n.e("23532"),
+                                                        n.e("96137"),
+                                                        n.e("52557"),
                                                         n.e("63123"),
+                                                        n.e("834"),
+                                                        n.e("24038"),
+                                                        n.e("55654"),
+                                                        n.e("50097"),
+                                                        n.e("23164"),
                                                         n.e("48900"),
                                                         n.e("35485"),
                                                         n.e("82069"),
-                                                        n.e("834"),
-                                                        n.e("24038"),
                                                         n.e("37687"),
                                                         n.e("46800"),
                                                         n.e("71234"),
-                                                        n.e("50097"),
-                                                        n.e("88469"),
                                                         n.e("6306"),
                                                         n.e("20282"),
                                                         n.e("54282"),
@@ -721,19 +716,18 @@ function eJ(e) {
                                                         n.e("23276"),
                                                         n.e("35996"),
                                                         n.e("76087"),
+                                                        n.e("91824"),
                                                         n.e("25279"),
-                                                        n.e("88003"),
                                                         n.e("28752"),
                                                         n.e("31445"),
+                                                        n.e("26931"),
                                                         n.e("78412"),
-                                                        n.e("31018"),
                                                         n.e("88990"),
                                                         n.e("9793"),
                                                         n.e("43549"),
                                                         n.e("11301"),
-                                                        n.e("27355"),
                                                         n.e("48720"),
-                                                        n.e("97288"),
+                                                        n.e("88003"),
                                                         n.e("10575"),
                                                         n.e("19666"),
                                                         n.e("54630"),
@@ -748,6 +742,7 @@ function eJ(e) {
                                                         n.e("81987"),
                                                         n.e("21856"),
                                                         n.e("5563"),
+                                                        n.e("97288"),
                                                         n.e("26437"),
                                                         n.e("24922"),
                                                         n.e("78050"),
@@ -839,7 +834,7 @@ function e1(e) {
         t
     );
 }
-function e2(e) {
+function e8(e) {
     let { application: t, context: n, name: l, iconURL: i, scrollerRef: s, sectionName: a } = e,
         c = (0, eg.q)((0, eI.Ay)()),
         d = o.useRef(null),
@@ -931,10 +926,10 @@ function e2(e) {
         })
     );
 }
-var e8 = n(34188),
-    e3 = n(700623),
-    e4 = n(177953),
-    e7 = n(825484),
+var e2 = n(34188),
+    e7 = n(700623),
+    e3 = n(177953),
+    e4 = n(825484),
     e5 = n(512950),
     e6 = n(900797),
     e9 = n(847374),
@@ -1192,7 +1187,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e8.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e2.U, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1205,7 +1200,7 @@ function tT(e) {
                       ? (0, r.jsxs)("div", {
                             className: tv.wi,
                             children: [
-                                (0, r.jsx)(e3.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
+                                (0, r.jsx)(e7.d, { size: "sm", color: e_.A.colors.ICON_MUTED }),
                                 (0, r.jsx)(T.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
@@ -1273,7 +1268,7 @@ function tR(e) {
         className: tv.I8,
         "aria-label": n > 0 ? et.intl.formatToPlainString(et.t["p/YmkR"], { count: n }) : et.intl.string(et.t.s1vQIL),
         children: [
-            (0, r.jsx)(e4.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
+            (0, r.jsx)(e3.n, { size: "xs", color: e_.A.colors.INTERACTIVE_TEXT_DEFAULT }),
             (0, r.jsx)(T.E, {
                 variant: "text-sm/semibold",
                 color: "interactive-text-default",
@@ -1309,7 +1304,7 @@ function tO(e) {
     }, [n, a, d, u]),
     (0, I.$B)(n) && (0, I.Ag)(n))
         ? null != a && null != d
-            ? (0, r.jsxs)(e7.e, {
+            ? (0, r.jsxs)(e4.e, {
                   fullWidth: !0,
                   children: [
                       (0, r.jsx)(tI, { context: t, application: n, sectionName: l, primaryEntryPointCommand: a }),
@@ -1418,7 +1413,7 @@ function tH(e) {
             role: "region",
             "aria-label": et.intl.formatToPlainString(et.t["4OP4Uk"], { applicationName: N }),
             children: [
-                (0, r.jsx)(e2, { application: a, context: t, name: N, iconURL: h, scrollerRef: d, sectionName: l }),
+                (0, r.jsx)(e8, { application: a, context: t, name: N, iconURL: h, scrollerRef: d, sectionName: l }),
                 null != h && (0, r.jsx)(j.A, { src: h, className: tM.Z }),
                 (0, r.jsx)(f.A, { size: 54 }),
                 (0, r.jsx)(c ? tD : tS, { context: t, application: a, sectionName: l, hasCommands: u }),
@@ -1492,17 +1487,17 @@ var tQ = n(111042),
     tJ = n(111162),
     t0 = n(403362),
     t1 = n(179771),
-    t2 = n(824552),
-    t8 = n(168186),
-    t3 = n(594061),
-    t4 = n(935208),
-    t7 = n(630248),
+    t8 = n(824552),
+    t2 = n(168186),
+    t7 = n(594061),
+    t3 = n(935208),
+    t4 = n(630248),
     t5 = n(355097);
 function t6(e, t) {
     o.useEffect(() => {
-        t3.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t7.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t7.A], () => t7.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t4.A], () => t4.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1513,11 +1508,11 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t4.default.extractTimestamp(e.id);
+                let t = t3.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t8.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -1531,7 +1526,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t4.default.extractTimestamp(t.id);
+            let n = t3.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1934,7 +1929,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t4.default.extractTimestamp(n);
+                        return -t3.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2153,10 +2148,10 @@ var nZ = n(984516),
     nJ = n(935573),
     n0 = n(651753),
     n1 = n(485845),
-    n2 = n(994369),
-    n8 = n(240591),
-    n3 = n(46477);
-function n4(e, t) {
+    n8 = n(994369),
+    n2 = n(240591),
+    n7 = n(46477);
+function n3(e, t) {
     var n, l;
     let i = t.limit ?? 1 / 0,
         s = ((n = e), (l = t.filterPredicates ?? []), n.filter((e) => l.every((t) => t(e))));
@@ -2206,9 +2201,9 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n7(e, t) {
-    let n = t7.A.getScoreWithoutLoadingLatest(e.id);
-    return t7.A.getScoreWithoutLoadingLatest(t.id) - n;
+function n4(e, t) {
+    let n = t4.A.getScoreWithoutLoadingLatest(e.id);
+    return t4.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function n5(e, t) {
     let n = (0, I.lq)(e),
@@ -2412,7 +2407,7 @@ function lm(e) {
                             includeNonEmbeddedApps: a,
                         } = e,
                         r = "channel" === t.type ? t.channel : void 0,
-                        c = (0, n8.MW)(r, [k.kc.CHAT]).hasBaseAccessPermissions,
+                        c = (0, n2.MW)(r, [k.kc.CHAT]).hasBaseAccessPermissions,
                         d = (0, g.SD)(t, c, i),
                         u = (0, g.A4)(c, i),
                         m = o.useCallback(
@@ -2454,10 +2449,10 @@ function lm(e) {
                     var e, i, a, r, o, d, u;
                     let m, p, h, A, f;
                     if (!s) return [];
-                    return n4(c, {
+                    return n3(c, {
                         limit: l,
                         filterPredicates: [
-                            ((m = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [k.kc.CHAT])),
+                            ((m = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [k.kc.CHAT])),
                             (p = {}),
                             (e) => {
                                 let { context: n, userId: l, roleIds: i, isImpersonating: s } = m;
@@ -2467,8 +2462,8 @@ function lm(e) {
                                             isGuildInstalled: r,
                                             isUserInstalled: o,
                                         } = (0, g.Sx)(t, e.applicationId),
-                                        c = n?.guild_id != null ? n3.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                        d = n?.guild_id != null ? n3._W(a?.permissions, n, n.guild_id) : null;
+                                        c = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                        d = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
                                     p[e.applicationId] = {
                                         descriptor: a,
                                         applicationAllowedForUser: c,
@@ -2485,13 +2480,13 @@ function lm(e) {
                                     isUserInstalled: d,
                                 } = p[e.applicationId];
                                 return (
-                                    n3.zl(e, m, {
+                                    n7.zl(e, m, {
                                         applicationAllowedForUser: o,
                                         applicationAllowedForChannel: r,
                                         commandBotId: a?.botId,
                                         isGuildInstalled: c,
                                         isUserInstalled: d,
-                                    }) === n3.CA.ALLOWED
+                                    }) === n7.CA.ALLOWED
                                 );
                             }),
                         ],
@@ -2591,10 +2586,10 @@ function lm(e) {
                                     }),
                             );
                     } else a && (u = m);
-                    return n4(u, {
+                    return n3(u, {
                         limit: i,
                         filterPredicates: [
-                            ((d = (0, n8.Bh)("channel" === t.type ? t.channel : void 0, [
+                            ((d = (0, n2.Bh)("channel" === t.type ? t.channel : void 0, [
                                 k.kc.CHAT,
                                 k.kc.PRIMARY_ENTRY_POINT,
                             ])),
@@ -2606,20 +2601,20 @@ function lm(e) {
                                         isGuildInstalled: o,
                                         isUserInstalled: c,
                                     } = (0, g.Sx)(t, e.id),
-                                    u = n?.guild_id != null ? n3.we(a?.permissions, n.guild_id, l, i, s) : null,
-                                    m = n?.guild_id != null ? n3._W(a?.permissions, n, n.guild_id) : null;
+                                    u = n?.guild_id != null ? n7.we(a?.permissions, n.guild_id, l, i, s) : null,
+                                    m = n?.guild_id != null ? n7._W(a?.permissions, n, n.guild_id) : null;
                                 return (
                                     null == r ||
                                     !(r.length > 0) ||
                                     r.some(
                                         (e) =>
-                                            n3.zl(e, d, {
+                                            n7.zl(e, d, {
                                                 applicationAllowedForUser: u,
                                                 applicationAllowedForChannel: m,
                                                 commandBotId: a?.botId,
                                                 isGuildInstalled: o,
                                                 isUserInstalled: c,
-                                            }) === n3.CA.ALLOWED,
+                                            }) === n7.CA.ALLOWED,
                                     )
                                 );
                             }),
@@ -2638,7 +2633,7 @@ function lm(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n7, n5],
+                        sortComparers: [n4, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -2676,7 +2671,7 @@ function lm(e) {
                             excludeAppsWithCustomInstallUrl: !0,
                             excludeNonEmbeddedApps: a,
                             excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                            source: n2.V.APP_LAUNCHER,
+                            source: n8.V.APP_LAUNCHER,
                         }),
                         totalPages:
                             n0.A.getSearchResults({
@@ -2688,7 +2683,7 @@ function lm(e) {
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n2.V.APP_LAUNCHER,
+                                source: n8.V.APP_LAUNCHER,
                             })?.totalPages ?? 0,
                     }),
                     [n, r, c, a],
@@ -2707,7 +2702,7 @@ function lm(e) {
                                     excludeAppsWithCustomInstallUrl: !0,
                                     excludeNonEmbeddedApps: a,
                                     excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                    source: n2.V.APP_LAUNCHER,
+                                    source: n8.V.APP_LAUNCHER,
                                 })?.results ?? [],
                         ),
                     [m, r, n, c, a],
@@ -2735,7 +2730,7 @@ function lm(e) {
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
                                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: !0,
-                                source: n2.V.APP_LAUNCHER,
+                                source: n8.V.APP_LAUNCHER,
                             },
                         });
                     },
@@ -3127,7 +3122,7 @@ function lv(e) {
                         } = e,
                         s = (0, A.bG)([ne.default], () => ne.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === ne.FetchState.NOT_FETCHED && t2.A.fetch();
+                        i && s === ne.FetchState.NOT_FETCHED && t8.A.fetch();
                     }, [i, s]);
                     let a = (0, A.yK)([ne.default], () =>
                             i

@@ -24,8 +24,8 @@ var i = n(684013),
 function C(e) {
     return (0, f.U5)(e, "OverlayTextChatAutomaticLifecycleManager");
 }
-let O = new Map(),
-    R = null,
+let R = new Map(),
+    O = null,
     L = !1;
 async function D() {
     try {
@@ -45,15 +45,15 @@ async function D() {
                 n.e("23045"),
                 n.e("35027"),
                 n.e("37977"),
-                n.e("86672"),
-                n.e("54625"),
                 n.e("77084"),
+                n.e("54625"),
+                n.e("86672"),
                 n.e("96137"),
                 n.e("35485"),
-                n.e("18997"),
                 n.e("82069"),
                 n.e("46800"),
                 n.e("6306"),
+                n.e("18997"),
                 n.e("80239"),
                 n.e("28752"),
                 n.e("78412"),
@@ -72,7 +72,7 @@ async function D() {
                 n.e("31616"),
                 n.e("10147"),
                 n.e("60249"),
-                n.e("72922"),
+                n.e("50541"),
                 n.e("61750"),
                 n.e("96232"),
             ]).then(n.bind(n, 191701))
@@ -84,12 +84,12 @@ async function D() {
 function y(e) {
     let { channelId: t, guildId: n, messageId: i } = e;
     if (!p.default.isAnyOverlayRendering() || null == o.A.getChannel(t) || d.A.isReady(t)) return;
-    let r = O.get(t);
+    let r = R.get(t);
     null != r && clearTimeout(r);
     let s = setTimeout(() => {
-        O.delete(t), d.A.isReady(t) || a.A.fetchMessages({ guildId: n, channelId: t, messageId: i });
+        R.delete(t), d.A.isReady(t) || a.A.fetchMessages({ guildId: n, channelId: t, messageId: i });
     }, 1e3);
-    O.set(t, s);
+    R.set(t, s);
 }
 async function v(e) {
     let t = await D();
@@ -100,11 +100,11 @@ function b() {
     !(function () {
         if (!p.default.isAnyOverlayRendering()) return;
         let e = A.A.getSelectedChannelId();
-        if (null == e || e === R) return;
+        if (null == e || e === O) return;
         let t = o.A.getChannel(e);
         null != t &&
             (0, l.pQ)(t.type) &&
-            ((R = e), y({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
+            ((O = e), y({ channelId: e, guildId: t?.getGuildId?.() ?? t?.guild_id ?? null, messageId: null }));
     })();
 }
 function M(e) {
@@ -136,8 +136,8 @@ function U(e) {
 }
 function w(e) {
     let { channelId: t } = e,
-        n = O.get(t);
-    null != n && (clearTimeout(n), O.delete(t)),
+        n = R.get(t);
+    null != n && (clearTimeout(n), R.delete(t)),
         setTimeout(() => {
             let e = A.A.getSelectedChannelId();
             if ((null == e && (L = !1), null == e || e === t)) return;
@@ -146,7 +146,7 @@ function w(e) {
         }, 0);
 }
 function G() {
-    for (let [e, t] of O) clearTimeout(t), O.delete(e);
+    for (let [e, t] of R) clearTimeout(t), R.delete(e);
     L = !1;
 }
 function x(e) {
