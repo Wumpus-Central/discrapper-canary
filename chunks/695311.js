@@ -1,28 +1,29 @@
-e.d(n, { A: () => x });
-var i = e(17928),
-    l = e(688810),
-    a = e(211401),
-    r = e(500049),
-    s = e(975412),
-    o = e(355622),
-    c = e(267102),
-    u = e(734057),
-    d = e(309010),
-    A = e(652215);
-function x(t) {
-    let { applicationId: n, onClose: e } = t,
-        { newestAnalyticsLocation: x } = (0, l.Ay)(),
-        p = (0, i.bG)([u.A, d.Ay], () => u.A.getChannel(d.Ay.getChannelId())),
-        f = (0, c.Us)() === A.BRT.POPOUT;
+"use strict";
+n.d(t, { A: () => E });
+var i = n(17928),
+    r = n(688810),
+    a = n(211401),
+    s = n(500049),
+    l = n(975412),
+    o = n(355622),
+    d = n(267102),
+    c = n(734057),
+    u = n(309010),
+    _ = n(652215);
+function E(e) {
+    let { applicationId: t, onClose: n } = e,
+        { newestAnalyticsLocation: E } = (0, r.Ay)(),
+        A = (0, i.bG)([c.A, u.Ay], () => c.A.getChannel(u.Ay.getChannelId())),
+        h = (0, d.Us)() === _.BRT.POPOUT;
     return () => {
-        e?.(),
-            null == p || p?.isVocal()
-                ? (0, s.A)({
-                      context: null != p ? { type: "channel", channel: p } : { type: "contextless" },
-                      analyticsLocation: x,
-                      openInPopout: f,
-                      initialState: { applicationId: n },
+        n?.(),
+            null == A || A?.isVocal()
+                ? (0, l.A)({
+                      context: null != A ? { type: "channel", channel: A } : { type: "contextless" },
+                      analyticsLocation: E,
+                      openInPopout: h,
+                      initialState: { applicationId: t },
                   })
-                : (0, a.R)(r.s4.TEXT, o.oU.NORMAL, { applicationId: n }, p.id);
+                : (0, a.R)(s.s4.TEXT, o.oU.NORMAL, { applicationId: t }, A.id);
     };
 }

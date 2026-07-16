@@ -1,24 +1,25 @@
-n.d(t, { A: () => u });
+"use strict";
+n.d(t, { A: () => d });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    l = n.n(r),
-    a = n(866665),
-    s = n(939249),
+    a = n.n(r),
+    s = n(866665),
+    l = n(939249),
     o = n(642070);
-function u(e) {
-    let { onClick: t, icon: n, tooltip: r, className: u } = e,
-        d = n({ color: "currentColor", size: "custom", width: 20, height: 20 });
-    return (0, i.jsx)(a.m, {
+function d(e) {
+    let { onClick: t, icon: n, tooltip: r, className: d } = e,
+        c = n({ color: "currentColor", size: "custom", width: 20, height: 20 });
+    return (0, i.jsx)(s.m, {
         text: r,
         position: "bottom",
-        children: (0, i.jsx)(s.D, {
+        children: (0, i.jsx)(l.D, {
             onClick: (e) => {
                 t(e);
             },
             "aria-label": r,
-            className: l()(o.x, u),
-            children: (0, i.jsx)("div", { className: o.h, children: d }),
+            className: a()(o.x, d),
+            children: (0, i.jsx)("div", { className: o.h, children: c }),
         }),
     });
 }

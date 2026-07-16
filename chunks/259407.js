@@ -1,18 +1,19 @@
-t.d(l, { A: () => m, m: () => u });
-var r,
-    s = t(627968),
-    i = t(64700),
-    n = t(998218),
-    a = t(652215),
-    o = t(472840);
+"use strict";
+n.d(t, { A: () => E, m: () => c });
+var i,
+    r = n(627968),
+    a = n(64700),
+    s = n(998218),
+    l = n(652215),
+    o = n(472840);
 let d = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
-var u = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
-let h = {
+var c = (((i = {}).YOUTUBE = "YouTube"), (i.TIKTOK = "TikTok"), (i.TWITCH = "Twitch"), i);
+let u = {
         YouTube: {
-            params: { autoplay: "1", auto_play: "1", pageType: a.NzX },
+            params: { autoplay: "1", auto_play: "1", pageType: l.NzX },
             dynamicParams: (e) => {
-                let { autoMute: l } = e;
-                return { mute: l ? "1" : void 0 };
+                let { autoMute: t } = e;
+                return { mute: t ? "1" : void 0 };
             },
         },
         TikTok: { params: { utm_source: "discord.gg" } },
@@ -30,61 +31,61 @@ let h = {
             },
             params: { autoplay: "true" },
             dynamicParams: (e) => {
-                let { autoMute: l } = e;
-                return { muted: l ? "true" : void 0 };
+                let { autoMute: t } = e;
+                return { muted: t ? "true" : void 0 };
             },
         },
     },
-    c = i.forwardRef(function (e, l) {
-        let { allowFullScreen: t, ...r } = e,
-            i = t ? `${d} allow-fullscreen` : d;
-        return (0, s.jsx)("iframe", {
-            ref: l,
+    _ = a.forwardRef(function (e, t) {
+        let { allowFullScreen: n, ...i } = e,
+            a = n ? `${d} allow-fullscreen` : d;
+        return (0, r.jsx)("iframe", {
+            ref: t,
             className: o.Qu,
-            allow: t ? "autoplay; fullscreen" : "autoplay",
+            allow: n ? "autoplay; fullscreen" : "autoplay",
             frameBorder: 0,
             scrolling: "no",
-            sandbox: i,
-            allowFullScreen: t,
-            ...r,
+            sandbox: a,
+            allowFullScreen: n,
+            ...i,
         });
     });
-function m(e) {
-    var l;
-    let t,
-        { provider: r, src: a, autoMute: o, ...d } = e,
-        u = h[r],
-        m = i.useRef(null);
-    (l = "TikTok" === r),
-        (t = i.useCallback(
+function E(e) {
+    var t;
+    let n,
+        { provider: i, src: l, autoMute: o, ...d } = e,
+        c = u[i],
+        E = a.useRef(null);
+    (t = "TikTok" === i),
+        (n = a.useCallback(
             (e) => {
                 e.data["x-tiktok-player"] &&
                     "https://www.tiktok.com" === e.origin &&
                     "onPlayerReady" === e.data.type &&
-                    (o && m.current?.contentWindow?.postMessage({ type: "mute", "x-tiktok-player": !0 }, e.origin),
-                    m.current?.contentWindow?.postMessage({ type: "play", "x-tiktok-player": !0 }, e.origin));
+                    (o && E.current?.contentWindow?.postMessage({ type: "mute", "x-tiktok-player": !0 }, e.origin),
+                    E.current?.contentWindow?.postMessage({ type: "play", "x-tiktok-player": !0 }, e.origin));
             },
-            [o, m],
+            [o, E],
         )),
-        i.useEffect(() => {
-            if (l) return window.addEventListener("message", t), () => window.removeEventListener("message", t);
-        }, [l, t]);
-    let p = (function (e, l, t) {
-        let r = n.A.toURLSafe(e ?? "");
-        if (null === r) return "";
-        if (null == l) return r.toString();
-        if (null != l.stripParams) for (let e of l.stripParams) r.searchParams.delete(e);
-        if (null != l.params) for (let e in l.params) r.searchParams.set(e, l.params[e]);
-        if (null != l.appendParams)
-            for (let e in l.appendParams) for (let t of l.appendParams[e]) r.searchParams.append(e, t);
-        if (null != l.dynamicParams) {
-            let e = l.dynamicParams(t);
-            for (let l in e) {
-                let t = e[l];
-                null != t && r.searchParams.set(l, t);
+        a.useEffect(() => {
+            if (t) return window.addEventListener("message", n), () => window.removeEventListener("message", n);
+        }, [t, n]);
+    let A = (function (e, t, n) {
+        let i = s.A.toURLSafe(e ?? "");
+        if (null === i) return "";
+        if (null == t) return i.toString();
+        if (null != t.stripParams) for (let e of t.stripParams) i.searchParams.delete(e);
+        if (null != t.params) for (let e in t.params) i.searchParams.set(e, t.params[e]);
+        if (null != t.appendParams)
+            for (let e in t.appendParams) for (let n of t.appendParams[e]) i.searchParams.append(e, n);
+        if (null != t.dynamicParams) {
+            let e = t.dynamicParams(n);
+            for (let t in e) {
+                let n = e[t];
+                null != n && i.searchParams.set(t, n);
             }
         }
-        return r.toString();
-    })(a, u, { autoMute: o });
-    return (0, s.jsx)(c, { ref: m, src: p, ...d });
+        return i.toString();
+    })(l, c, { autoMute: o });
+    return (0, r.jsx)(_, { ref: E, src: A, ...d });
 }

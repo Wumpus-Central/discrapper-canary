@@ -1,14 +1,15 @@
-n.d(t, { A: () => h });
+"use strict";
+n.d(t, { A: () => A });
 var i = n(17928),
-    l = n(228366),
-    r = n(734057),
+    r = n(228366),
+    a = n(734057),
     s = n(650048),
-    a = n(71393),
+    l = n(71393),
     o = n(309010),
     d = n(645959),
     c = n(652215);
 let u = (window?.location?.pathname ?? "").startsWith(c.BVt.ACTIVITIES) ? c.BVt.ACTIVITIES : null;
-function A(e) {
+function _(e) {
     let { link: t } = e;
     if (u === t) return !1;
     u = t;
@@ -16,22 +17,22 @@ function A(e) {
 class E extends i.Ay.Store {
     static displayName = "AppViewStore";
     initialize() {
-        this.waitFor(s.A, d.A, o.Ay, a.A, r.A);
+        this.waitFor(s.A, d.A, o.Ay, l.A, a.A);
     }
     getHomeLink() {
         return u ?? s.A.fallbackRoute;
     }
 }
-let h = new E(l.h, {
+let A = new E(r.h, {
     OVERLAY_INITIALIZE: function () {
         let e = d.A.getPrivateChannelIds(),
             t = o.Ay.getChannelId(c.ME);
         (null != t || null != e[0]) && (u = c.BVt.CHANNEL(c.ME, t ?? e[0]));
     },
-    APP_VIEW_SET_HOME_LINK: A,
+    APP_VIEW_SET_HOME_LINK: _,
     APPLICATION_STORE_LOCATION_CHANGE: function (e) {
         let { location: t } = e;
-        A({ link: t.pathname, type: "APP_VIEW_SET_HOME_LINK" });
+        _({ link: t.pathname, type: "APP_VIEW_SET_HOME_LINK" });
     },
     APPLICATION_STORE_RESET_NAVIGATION: function () {
         if (null == u || !u.startsWith(c.BVt.APPLICATION_STORE)) return !1;

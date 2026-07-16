@@ -1,16 +1,17 @@
+"use strict";
 n.d(t, { s: () => s });
 var i = n(493336),
-    l = n(568548),
-    r = n(309010);
+    r = n(568548),
+    a = n(309010);
 let s = {
     binds: ["shift+pageup"],
     comboKeysBindGlobal: !0,
     action() {
-        let e = r.Ay.getChannelId();
+        let e = a.Ay.getChannelId();
         if (null != e) {
-            let t = l.Ay.ackMessageId(e);
+            let t = r.Ay.ackMessageId(e);
             null != t &&
-                l.Ay.getOldestUnreadTimestamp(e) > 0 &&
+                r.Ay.getOldestUnreadTimestamp(e) > 0 &&
                 i.A.jumpToMessage({ channelId: e, messageId: t, offset: 1, context: "Keyboard Shortcut" });
         }
         return !1;
