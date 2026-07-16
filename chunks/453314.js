@@ -11,9 +11,9 @@ var i = n(627968),
     u = n.n(c),
     _ = n(224640),
     E = n(17928),
-    A = n(990078),
-    h = n(349288),
-    I = n(834730),
+    A = n(349288),
+    h = n(834730),
+    I = n(866665),
     f = n(187322),
     p = n(475825),
     T = n(442433),
@@ -142,7 +142,7 @@ function $() {
             (0, i.jsx)("div", { className: K.lv, children: H.intl.string(H.t.bpbATE) }),
             (0, i.jsx)("div", {
                 className: K.PA,
-                children: (0, i.jsx)(h.Anchor, {
+                children: (0, i.jsx)(A.Anchor, {
                     href: w.A.getArticleURL(B.MVz.QUICK_SWITCHER_TUTORIAL),
                     children: H.intl.string(H.t["4iPfEO"]),
                 }),
@@ -156,7 +156,7 @@ class z extends r.Component {
         let e = D.A.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(x.c3, {
             ...this.props,
-            children: (0, i.jsx)(I.E, {
+            children: (0, i.jsx)(h.E, {
                 variant: "text-sm/medium",
                 color: "none",
                 className: K.MD,
@@ -204,7 +204,7 @@ let q = E.Ay.connectStores([v.Ay, O.A], (e) => {
     })(x.KJ);
 function ee(e, t, n) {
     return (0, i.jsx)(
-        A.m,
+        I.m,
         { __unsupportedReactNodeAsText: n, children: (0, i.jsx)("span", { className: K.ZT, children: t }) },
         e,
     );
@@ -386,7 +386,7 @@ class et extends r.PureComponent {
                         n.e("39111"),
                         n.e("58530"),
                         n.e("35426"),
-                        n.e("51893"),
+                        n.e("78481"),
                         n.e("69487"),
                         n.e("87550"),
                         n.e("20631"),
@@ -592,7 +592,7 @@ class et extends r.PureComponent {
                         n.e("53984"),
                         n.e("43780"),
                         n.e("20590"),
-                        n.e("84871"),
+                        n.e("4848"),
                         n.e("65437"),
                         n.e("80830"),
                         n.e("79745"),
@@ -1087,7 +1087,7 @@ class et extends r.PureComponent {
             o = s && !l ? H.intl.string(H.t["5qyruI"]) : void 0,
             d =
                 s && l
-                    ? (0, i.jsx)(I.E, {
+                    ? (0, i.jsx)(h.E, {
                           variant: "text-sm/medium",
                           color: "none",
                           className: K.MD,
@@ -1096,7 +1096,7 @@ class et extends r.PureComponent {
                     : null,
             c = l ? void 0 : H.intl.string(H.t["9CHfCO"]),
             u = l
-                ? (0, i.jsx)(I.E, {
+                ? (0, i.jsx)(h.E, {
                       variant: "text-sm/medium",
                       color: "none",
                       className: K.MD,

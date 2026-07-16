@@ -1,26 +1,25 @@
 "use strict";
 n.d(t, {
-    QA: () => ea,
-    Df: () => Q,
-    z6: () => en,
-    cf: () => X,
-    ii: () => Z,
-    zg: () => el,
-    hJ: () => J,
-    q$: () => es,
+    QA: () => er,
+    Df: () => X,
+    z6: () => et,
+    cf: () => Z,
+    hJ: () => Q,
+    zg: () => es,
+    q$: () => ea,
     mA: () => Y.m,
-    Zc: () => et,
-    gC: () => eo,
-    Fy: () => ed,
+    Zc: () => ee,
+    gC: () => el,
+    Fy: () => eo,
     _x: () => q,
-    d5: () => er,
+    d5: () => ei,
     f7: () => $,
-    m6: () => ee,
-    e0: () => ec,
+    m6: () => J,
+    e0: () => ed,
     rx: () => z,
-    Q_: () => e_,
-    l9: () => ei,
-    Oz: () => eu,
+    Q_: () => eu,
+    l9: () => en,
+    Oz: () => ec,
 }),
     n(323874),
     n(14289),
@@ -154,50 +153,18 @@ function q(e) {
             n.e("73"),
             n.e("72877"),
             n.e("62875"),
+            n.e("89393"),
             n.e("967"),
             n.e("6286"),
             n.e("12466"),
             n.e("94704"),
-            n.e("78872"),
+            n.e("73551"),
             n.e("34853"),
         ]).then(n.bind(n, 205604));
         return (n) => (0, i.jsx)(e, { ...n, initialQuest: t, sourceQuestContent: r });
     });
 }
-function Z(e) {
-    let { quest: t, sourceQuestContent: r } = e;
-    (0, o.openModalLazy)(async () => {
-        let { default: e } = await Promise.all([
-            n.e("31591"),
-            n.e("69487"),
-            n.e("8736"),
-            n.e("79664"),
-            n.e("22989"),
-            n.e("1656"),
-            n.e("11310"),
-            n.e("13823"),
-            n.e("92583"),
-            n.e("36863"),
-            n.e("54625"),
-            n.e("35485"),
-            n.e("63618"),
-            n.e("24761"),
-            n.e("32606"),
-            n.e("85350"),
-            n.e("73"),
-            n.e("62875"),
-            n.e("68904"),
-            n.e("967"),
-            n.e("6286"),
-            n.e("12466"),
-            n.e("43019"),
-            n.e("78872"),
-            n.e("54738"),
-        ]).then(n.bind(n, 624937));
-        return (n) => (0, i.jsx)(e, { ...n, initialQuest: t, sourceQuestContent: r });
-    });
-}
-function X(e, t, r) {
+function Z(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: a } = await Promise.all([
             n.e("69487"),
@@ -221,7 +188,7 @@ function X(e, t, r) {
         return (n) => (0, i.jsx)(a, { ...n, initialQuest: e, location: t, sourceQuestContent: r });
     });
 }
-function Q(e, t, r) {
+function X(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: a } = await Promise.all([
             n.e("8641"),
@@ -252,7 +219,7 @@ function Q(e, t, r) {
         return (n) => (0, i.jsx)(a, { ...n, initialQuest: e, sourceQuestContent: r, location: t });
     });
 }
-function J(e, t, r, a) {
+function Q(e, t, r, a) {
     (0, o.openModalLazy)(async () => {
         let { default: s } = await Promise.all([
             n.e("59511"),
@@ -278,13 +245,13 @@ function J(e, t, r, a) {
         return (n) => (0, i.jsx)(s, { ...n, initialQuest: e, sourceQuestContent: r, location: t, preview: a });
     });
 }
-function ee(e, t, r) {
+function J(e, t, r) {
     (0, o.openModalLazy)(async () => {
         let { default: a } = await n.e("81169").then(n.bind(n, 124232));
         return (n) => (0, i.jsx)(a, { ...n, quest: e, location: t, sourceQuestContent: r });
     });
 }
-function et(e, t, r) {
+function ee(e, t, r) {
     let { ctaContent: s } = t;
     (0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "open_disclosure_modal")
         ? (0, h.r)({
@@ -339,7 +306,7 @@ function et(e, t, r) {
             },
         );
 }
-function en(e) {
+function et(e) {
     let t,
         n = (0, U.L)({ quest: e });
     if (Math.random() > 0.01) return;
@@ -364,7 +331,7 @@ function en(e) {
         });
     n.log(`Showing survey ${i.id}`), (0, H.m)({ questId: e.id, survey: i });
 }
-function ei() {
+function en() {
     return Promise.all([
         n.e("69487"),
         n.e("87550"),
@@ -391,7 +358,7 @@ function ei() {
         n.e("97199"),
     ]).then(n.bind(n, 834135));
 }
-function er(e) {
+function ei(e) {
     let {
         quest: t,
         questContent: n,
@@ -400,7 +367,7 @@ function er(e) {
         autoplay: l = !0,
         skipEnrollmentCheck: c = !1,
     } = e;
-    if ((0, x.K$)(t)) return void ed(t);
+    if ((0, x.K$)(t)) return void eo(t);
     let u = (0, r.A)();
     if (!c && t.userStatus?.enrolledAt == null && !(0, F.Ic)(t)) {
         L.A.isEnrolling(t.id) ||
@@ -427,7 +394,7 @@ function er(e) {
     let T = performance.now();
     (0, o.openModalLazy)(
         async () => {
-            let { default: e } = await ei();
+            let { default: e } = await en();
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
@@ -445,7 +412,7 @@ function er(e) {
         },
     );
 }
-function ea(e) {
+function er(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" === t || "iOS" === t) {
@@ -467,7 +434,7 @@ function ea(e) {
             t || (0, T.bG)({ pathname: W.BVt.QUEST_HOME, hash: e });
         });
 }
-function es(e) {
+function ea(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" === t || "iOS" === t) {
@@ -489,7 +456,7 @@ function es(e) {
             t || (0, T.bG)({ pathname: W.BVt.QUEST_HOME, hash: e });
         });
 }
-function el(e) {
+function es(e) {
     let t = (function (e) {
             let t = platform.os?.family;
             if ("Android" !== t && "iOS" !== t) return "discord://";
@@ -511,7 +478,7 @@ function el(e) {
             e || (0, T.bG)({ pathname: W.BVt.QUEST_HOME });
         });
 }
-function eo(e, t) {
+function el(e, t) {
     (0, o.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
             n.e("36861"),
@@ -525,7 +492,7 @@ function eo(e, t) {
         return (n) => (0, i.jsx)(r, { ...n, multiplier: e, orbMultiplierEligibility: t });
     });
 }
-function ed(e) {
+function eo(e) {
     (0, o.openModalLazy)(async () => {
         let { default: t } = await Promise.all([
             n.e("37757"),
@@ -538,7 +505,7 @@ function ed(e) {
         return (n) => (0, i.jsx)(t, { ...n, questId: e.id });
     });
 }
-async function ec(e, t) {
+async function ed(e, t) {
     let { type: n } = await (0, O.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
@@ -548,7 +515,7 @@ async function ec(e, t) {
     });
     switch (n) {
         case O.WM.SUCCESS:
-            er({
+            ei({
                 quest: e,
                 questContent: t.questContent,
                 sourceQuestContent: t.sourceQuestContent,
@@ -563,10 +530,10 @@ async function ec(e, t) {
         case O.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
-function eu(e) {
+function ec(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if ((0, V.vA)(e)) return e.config.features.includes(j.Li.CLOUD_GAMING_ACTIVITY) ? (t ? void 0 : c.h) : u._;
 }
-function e_(e) {
+function eu(e) {
     if ((0, x.K$)(e)) return _.u;
 }
