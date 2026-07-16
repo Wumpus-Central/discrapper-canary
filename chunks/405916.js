@@ -1,96 +1,95 @@
-"use strict";
-n.d(t, { E: () => v });
+n.d(t, { E: () => R });
 var i = n(627968),
     r = n(64700),
-    a = n(17928),
+    l = n(17928),
     s = n(477782),
-    l = n(183623),
+    a = n(183623),
     o = n(959988),
-    d = n(827343),
-    c = n(401843),
-    u = n(725792),
-    _ = n(338771),
-    E = n(929921),
-    A = n(186295),
-    h = n(723702),
-    I = n(74329),
+    c = n(827343),
+    u = n(401843),
+    d = n(725792),
+    A = n(338771),
+    h = n(929921),
+    m = n(186295),
+    g = n(723702),
+    p = n(74329),
     f = n(192308),
-    p = n(231723),
-    T = n(212245),
-    m = n(327649),
-    g = n(734057),
+    E = n(231723),
+    b = n(212245),
+    C = n(327649),
+    v = n(734057),
     S = n(71393),
-    N = n(309010),
-    C = n(287809),
-    R = n(652215),
+    y = n(309010),
+    T = n(287809),
+    x = n(652215),
     O = n(753070),
-    L = n(731854),
-    D = n(375708),
-    y = n(818348);
-function v(e) {
+    _ = n(731854),
+    j = n(375708),
+    I = n(818348);
+function R(e) {
     let {
             stream: t,
-            handleGoLive: v,
-            showReportOption: b = !1,
-            disableChangeWindows: M = !1,
-            minimal: P = !1,
-            appContext: U = R.BRT.APP,
+            handleGoLive: R,
+            showReportOption: D = !1,
+            disableChangeWindows: N = !1,
+            minimal: M = !1,
+            appContext: L = x.BRT.APP,
         } = e,
-        { desktopSourceId: w, lastPickedContent: G } = (0, a.cf)([u.Ay, A.Ay], () => {
-            let { desktopSource: e } = A.Ay.getGoLiveSource() ?? {},
-                t = u.Ay.getLastPickedContent();
+        { desktopSourceId: k, lastPickedContent: w } = (0, l.cf)([d.Ay, m.Ay], () => {
+            let { desktopSource: e } = m.Ay.getGoLiveSource() ?? {},
+                t = d.Ay.getLastPickedContent();
             return { desktopSourceId: e?.id, lastPickedContent: t };
         }),
-        x = (0, a.bG)([E.A], () => E.A.getState().soundshareEnabled),
-        k = A.Ay.supports(L.O5.DESKTOP_CAPTURE_APPLICATIONS),
-        F = (0, a.bG)([A.Ay], () => A.Ay.supports(L.O5.SOUNDSHARE)),
-        V = (0, a.bG)([A.Ay], () => A.Ay.supportsScreenSoundshare()),
-        B = (function (e, t) {
-            let { preset: l, resolution: o, fps: c, soundshareEnabled: u } = (0, a.cf)([E.A], () => E.A.getState()),
-                _ = (0, a.bG)([A.Ay], () => A.Ay.getGoLiveSource()),
-                h = (0, a.bG)([C.default], () => C.default.getCurrentUser()),
-                I = (0, a.bG)([S.A], () => S.A.getGuild(e?.guildId)?.premiumTier),
-                { location: y } = (0, T.p)(),
-                v = (0, a.bG)([N.A, g.A], () => g.A.getChannel(N.A.getVoiceChannelId())),
-                b = r.useCallback(
-                    (e, r, a, s) => {
+        P = (0, l.bG)([h.A], () => h.A.getState().soundshareEnabled),
+        U = m.Ay.supports(_.O5.DESKTOP_CAPTURE_APPLICATIONS),
+        G = (0, l.bG)([m.Ay], () => m.Ay.supports(_.O5.SOUNDSHARE)),
+        z = (0, l.bG)([m.Ay], () => m.Ay.supportsScreenSoundshare()),
+        V = (function (e, t) {
+            let { preset: a, resolution: o, fps: u, soundshareEnabled: d } = (0, l.cf)([h.A], () => h.A.getState()),
+                A = (0, l.bG)([m.Ay], () => m.Ay.getGoLiveSource()),
+                g = (0, l.bG)([T.default], () => T.default.getCurrentUser()),
+                p = (0, l.bG)([S.A], () => S.A.getGuild(e?.guildId)?.premiumTier),
+                { location: I } = (0, b.p)(),
+                R = (0, l.bG)([y.A, v.A], () => v.A.getChannel(y.A.getVoiceChannelId())),
+                D = r.useCallback(
+                    (e, r, l, s) => {
                         if (e) {
-                            if (null != _) {
+                            if (null != A) {
                                 let e = {
-                                    qualityOptions: { preset: O.jQ.PRESET_CUSTOM, resolution: r, frameRate: a },
-                                    context: L.x.STREAM,
+                                    qualityOptions: { preset: O.jQ.PRESET_CUSTOM, resolution: r, frameRate: l },
+                                    context: _.x.STREAM,
                                 };
-                                null != _.desktopSource
-                                    ? (e.desktopSettings = { sourceId: _.desktopSource.id, sound: u })
-                                    : null != _.cameraSource &&
+                                null != A.desktopSource
+                                    ? (e.desktopSettings = { sourceId: A.desktopSource.id, sound: d })
+                                    : null != A.cameraSource &&
                                       (e.cameraSettings = {
-                                          videoDeviceGuid: _.cameraSource.videoDeviceGuid,
-                                          audioDeviceGuid: _.cameraSource.audioDeviceGuid,
-                                          sound: u,
+                                          videoDeviceGuid: A.cameraSource.videoDeviceGuid,
+                                          audioDeviceGuid: A.cameraSource.audioDeviceGuid,
+                                          sound: d,
                                       }),
-                                    d.A.setGoLiveSource(e);
+                                    c.A.setGoLiveSource(e);
                             }
                         } else {
-                            var l;
-                            (l = { ...y, object: R.ZSU.RADIO_ITEM, objectType: s }),
+                            var a;
+                            (a = { ...I, object: x.ZSU.RADIO_ITEM, objectType: s }),
                                 (0, f.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([n.e("93475"), n.e("18630")]).then(
                                             n.bind(n, 826789),
                                         );
-                                        return (t) => (0, i.jsx)(e, { ...t, analyticsSource: l });
+                                        return (t) => (0, i.jsx)(e, { ...t, analyticsSource: a });
                                     },
-                                    { contextKey: t === R.BRT.POPOUT ? p.KX : p.SY },
+                                    { contextKey: t === x.BRT.POPOUT ? E.KX : E.SY },
                                 );
                         }
                     },
-                    [t, y, u, _],
+                    [t, I, d, A],
                 );
             if (null == e) return null;
-            let M = l === O.jQ.PRESET_DOCUMENTS ? O.kn.FPS_30 : c,
-                P = O.ce.map((e) => {
+            let N = a === O.jQ.PRESET_DOCUMENTS ? O.kn.FPS_30 : u,
+                M = O.ce.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        a = (0, m.A)(O.jQ.PRESET_CUSTOM, o, t, h, I, v);
+                        l = (0, C.A)(O.jQ.PRESET_CUSTOM, o, t, g, p, R);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -98,15 +97,15 @@ function v(e) {
                             id: `stream-settings-fps-${t}`,
                             label: n,
                             subtext: r,
-                            checked: t === c,
-                            action: () => b(a, o, t, R.AnalyticsObjectTypes.RESOLUTION),
+                            checked: t === u,
+                            action: () => D(l, o, t, x.AnalyticsObjectTypes.RESOLUTION),
                         },
                         `stream-settings-fps-${t}`,
                     );
                 }),
-                U = O.Jk.map((e) => {
+                L = O.Jk.map((e) => {
                     let { value: t, label: n, subtext: r } = e,
-                        a = (0, m.A)(O.jQ.PRESET_CUSTOM, t, M, h, I, v);
+                        l = (0, C.A)(O.jQ.PRESET_CUSTOM, t, N, g, p, R);
                     return (0, i.jsx)(
                         s.iD,
                         {
@@ -115,83 +114,83 @@ function v(e) {
                             label: n,
                             subtext: r,
                             checked: t === o,
-                            action: () => b(a, t, M, R.AnalyticsObjectTypes.RESOLUTION),
+                            action: () => D(l, t, N, x.AnalyticsObjectTypes.RESOLUTION),
                         },
                         `stream-settings-resolution-${t}`,
                     );
                 });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(s.rX, { label: D.intl.string(D.t.SkkeIt), children: P }),
-                    (0, i.jsx)(s.rX, { label: D.intl.string(D.t.rHyPXg), children: U }),
+                    (0, i.jsx)(s.rX, { label: j.intl.string(j.t.SkkeIt), children: M }),
+                    (0, i.jsx)(s.rX, { label: j.intl.string(j.t.rHyPXg), children: L }),
                 ],
             });
-        })(t, U),
-        H = (0, I.A)(t, U, y.FX),
-        j = null != w && F && (!w.startsWith("screen") || V),
-        W = (0, a.bG)([A.Ay], () => A.Ay.getUseSystemScreensharePicker() && (0, h.isLinux)()),
-        Y = r.useCallback(() => {
-            w?.startsWith("prepicked:")
-                ? A.Ay.getMediaEngine().eachConnection((e) => {
-                      e.context === L.x.STREAM && e.presentDesktopSourcePicker("window");
+        })(t, L),
+        F = (0, p.A)(t, L, I.FX),
+        H = null != k && G && (!k.startsWith("screen") || z),
+        K = (0, l.bG)([m.Ay], () => m.Ay.getUseSystemScreensharePicker() && (0, g.isLinux)()),
+        B = r.useCallback(() => {
+            k?.startsWith("prepicked:")
+                ? m.Ay.getMediaEngine().eachConnection((e) => {
+                      e.context === _.x.STREAM && e.presentDesktopSourcePicker("window");
                   })
-                : v();
-        }, [w, v]),
-        K = w?.startsWith("prepicked:") ?? !1,
-        $ = (0, h.isMac)() && h.isPlatformEmbedded && K && (G?.windows.length ?? 0) > 0,
-        z = (0, h.isMac)() && h.isPlatformEmbedded && K && (G?.applications.length ?? 0) > 0,
-        q = $
-            ? D.intl.string(D.t.qDK8gQ)
-            : z
-              ? D.intl.string(D.t["3m8w+Q"])
-              : P
-                ? D.intl.string(D.t.eAktHv)
-                : D.intl.string(D.t.qntSal),
-        Z = r.useCallback(() => {
-            let { preset: e, resolution: t, fps: n } = E.A.getState(),
-                i = { qualityOptions: { preset: e, resolution: t, frameRate: n }, context: L.x.STREAM };
-            null != w && (i.desktopSettings = { sourceId: w, sound: !x }),
-                (0, c.Xd)({ preset: e, resolution: t, frameRate: n, soundshareEnabled: !x }),
-                d.A.setGoLiveSource(i);
-        }, [w, x]);
+                : R();
+        }, [k, R]),
+        W = k?.startsWith("prepicked:") ?? !1,
+        J = (0, g.isMac)() && g.isPlatformEmbedded && W && (w?.windows.length ?? 0) > 0,
+        q = (0, g.isMac)() && g.isPlatformEmbedded && W && (w?.applications.length ?? 0) > 0,
+        Y = J
+            ? j.intl.string(j.t.qDK8gQ)
+            : q
+              ? j.intl.string(j.t["3m8w+Q"])
+              : M
+                ? j.intl.string(j.t.eAktHv)
+                : j.intl.string(j.t.qntSal),
+        X = r.useCallback(() => {
+            let { preset: e, resolution: t, fps: n } = h.A.getState(),
+                i = { qualityOptions: { preset: e, resolution: t, frameRate: n }, context: _.x.STREAM };
+            null != k && (i.desktopSettings = { sourceId: k, sound: !P }),
+                (0, u.Xd)({ preset: e, resolution: t, frameRate: n, soundshareEnabled: !P }),
+                c.A.setGoLiveSource(i);
+        }, [k, P]);
     if (null == t)
         return (0, i.jsx)(s.Dr, {
             id: "share-your-screen",
-            label: D.intl.string(D.t.fjBNo1),
-            icon: l.F,
-            leadingAccessory: { type: "icon", icon: l.F },
-            action: v,
+            label: j.intl.string(j.t.fjBNo1),
+            icon: a.F,
+            leadingAccessory: { type: "icon", icon: a.F },
+            action: R,
         });
-    let X = h.isPlatformEmbedded
-            ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: D.intl.string(D.t.ytAD9d), children: B })
+    let Q = g.isPlatformEmbedded
+            ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: j.intl.string(j.t.ytAD9d), children: V })
             : null,
-        Q = j
+        Z = H
             ? (0, i.jsx)(s.sL, {
                   id: "stream-settings-audio-enable",
-                  label: P ? D.intl.string(D.t.af2Tw1) : D.intl.string(D.t.ZJEHt7),
-                  checked: x,
-                  action: Z,
+                  label: M ? j.intl.string(j.t.af2Tw1) : j.intl.string(j.t.ZJEHt7),
+                  checked: P,
+                  action: X,
               })
             : null,
-        J =
-            !k || M || W
+        $ =
+            !U || N || K
                 ? null
                 : (0, i.jsx)(s.Dr, {
                       id: "change-windows",
-                      label: q,
-                      icon: l.F,
-                      leadingAccessory: { type: "icon", icon: l.F },
-                      action: Y,
+                      label: Y,
+                      icon: a.F,
+                      leadingAccessory: { type: "icon", icon: a.F },
+                      action: B,
                   }),
         ee = (0, i.jsx)(s.Dr, {
             id: "stop-streaming",
             color: "danger",
-            label: D.intl.string(D.t.S5anIc),
+            label: j.intl.string(j.t.S5anIc),
             icon: o.G,
             leadingAccessory: { type: "icon", icon: o.G },
-            action: () => (0, _.A)(t),
+            action: () => (0, A.A)(t),
         });
-    return P
-        ? (0, i.jsxs)(i.Fragment, { children: [ee, J, X, Q] })
-        : (0, i.jsxs)(i.Fragment, { children: [X, b ? H : null, Q, J, ee] });
+    return M
+        ? (0, i.jsxs)(i.Fragment, { children: [ee, $, Q, Z] })
+        : (0, i.jsxs)(i.Fragment, { children: [Q, D ? F : null, Z, $, ee] });
 }

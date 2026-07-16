@@ -1,174 +1,173 @@
-"use strict";
-n.d(t, { b: () => M, default: () => P });
-var i = n(627968),
-    r = n(64700),
-    a = n(503698),
-    s = n.n(a),
-    l = n(189213),
-    o = n(17928),
-    d = n(462887),
-    c = n(192308),
-    u = n(331322),
-    _ = n(939249),
-    E = n(478016),
-    A = n(834730),
-    h = n(442433),
-    I = n(66834),
-    f = n(736653),
-    p = n(573648),
-    T = n(104171),
-    m = n(95561),
-    g = n(889227),
-    S = n(280450),
-    N = n(696451),
-    C = n(317525),
-    R = n(174459),
-    O = n(975571),
-    L = n(967740),
-    D = n(652215),
-    y = n(375708),
-    v = n(967671),
-    b = n(227568);
-function M(e, t) {
+l.d(t, { b: () => G, default: () => L });
+var n = l(627968),
+    i = l(64700),
+    s = l(503698),
+    r = l.n(s),
+    a = l(189213),
+    o = l(17928),
+    d = l(462887),
+    c = l(192308),
+    u = l(331322),
+    f = l(939249),
+    p = l(478016),
+    m = l(834730),
+    x = l(442433),
+    g = l(66834),
+    A = l(736653),
+    h = l(573648),
+    j = l(104171),
+    v = l(95561),
+    N = l(889227),
+    b = l(280450),
+    _ = l(696451),
+    C = l(317525),
+    y = l(174459),
+    E = l(975571),
+    k = l(967740),
+    I = l(652215),
+    S = l(375708),
+    R = l(967671),
+    w = l(227568);
+function G(e, t) {
     (0, c.openModalLazy)(async () => {
-        let { default: r } = await Promise.all([
-            n.e("29205"),
-            n.e("10931"),
-            n.e("73435"),
-            n.e("79816"),
-            n.e("53984"),
-            n.e("38042"),
-            n.e("17460"),
-            n.e("69178"),
-            n.e("73566"),
-            n.e("53203"),
-            n.e("49282"),
-            n.e("80971"),
-        ]).then(n.bind(n, 488358));
-        return (n) => (0, i.jsx)(r, { role: e, guildId: t, ...n });
+        let { default: i } = await Promise.all([
+            l.e("29205"),
+            l.e("10931"),
+            l.e("73435"),
+            l.e("79816"),
+            l.e("53984"),
+            l.e("38042"),
+            l.e("17460"),
+            l.e("69178"),
+            l.e("73566"),
+            l.e("53203"),
+            l.e("49282"),
+            l.e("80971"),
+        ]).then(l.bind(l, 488358));
+        return (l) => (0, n.jsx)(i, { role: e, guildId: t, ...l });
     });
 }
-let P = function (e) {
-    let { guildId: t, transitionState: a, onClose: c } = e,
-        P = (0, o.bG)([C.A], () => C.A.getSortedRoles(t)),
-        U = (0, o.bG)([S.default], () => S.default.getId()),
-        w = (0, o.bG)([N.Ay], () => N.Ay.getMember(t, U)),
-        [G, x] = r.useState([]),
-        k = (0, f.Ay)();
+let L = function (e) {
+    let { guildId: t, transitionState: s, onClose: c } = e,
+        L = (0, o.bG)([C.A], () => C.A.getSortedRoles(t)),
+        U = (0, o.bG)([b.default], () => b.default.getId()),
+        z = (0, o.bG)([_.Ay], () => _.Ay.getMember(t, U)),
+        [M, T] = i.useState([]),
+        V = (0, A.Ay)();
     if (
-        (r.useEffect(() => {
-            0 !== G.length &&
-                R.default.track(D.HAw.PASSPORT_ENTRY_VIEWED, {
-                    role_ids: G.map((e) => {
+        (i.useEffect(() => {
+            0 !== M.length &&
+                y.default.track(I.HAw.PASSPORT_ENTRY_VIEWED, {
+                    role_ids: M.map((e) => {
                         let { role_id: t } = e;
                         return t;
                     }),
-                    ...(0, m.H$)(t),
+                    ...(0, v.H$)(t),
                 });
-        }, [t, G]),
-        r.useEffect(() => {
-            I.A.getGuildRoleConnectionsConfigurations(t).then((e) => x(e));
+        }, [t, M]),
+        i.useEffect(() => {
+            g.A.getGuildRoleConnectionsConfigurations(t).then((e) => T(e));
         }, [t]),
-        null == w)
+        null == z)
     )
         return null;
-    let F = P.filter((e) => null === e.tags.guild_connections);
-    return (0, i.jsx)(l.Modal, {
-        transitionState: a,
-        title: y.intl.string(y.t.ghtnss),
+    let O = L.filter((e) => null === e.tags.guild_connections);
+    return (0, n.jsx)(a.Modal, {
+        transitionState: s,
+        title: S.intl.string(S.t.ghtnss),
         onClose: c,
-        subtitle: y.intl.format(y.t["Y+TsEV"], { helpdeskArticleUrl: O.A.getArticleURL(D.MVz.CONNECTION_DETAILS) }),
+        subtitle: S.intl.format(S.t["Y+TsEV"], { helpdeskArticleUrl: E.A.getArticleURL(I.MVz.CONNECTION_DETAILS) }),
         actions: [],
-        children: (0, i.jsx)(u.B, {
+        children: (0, n.jsx)(u.B, {
             padding: { top: 8 },
-            children: F.map((e) => {
-                let a = w.roles.includes(e.id),
-                    l = (function (e) {
-                        let n = G.find((t) => {
-                            let { role_id: n } = t;
-                            return n === e;
+            children: O.map((e) => {
+                let s = z.roles.includes(e.id),
+                    a = (function (e) {
+                        let l = M.find((t) => {
+                            let { role_id: l } = t;
+                            return l === e;
                         });
-                        if (null == n) return [];
-                        let r = {};
-                        for (let e of n.rules.flat()) {
-                            let a;
+                        if (null == l) return [];
+                        let i = {};
+                        for (let e of l.rules.flat()) {
+                            let s;
                             if (null != e.application_id) {
-                                let r = n.applications?.[e.application_id];
-                                a =
-                                    r?.bot != null
-                                        ? (0, i.jsx)("img", {
-                                              src: new g.A(r.bot).getAvatarURL(t, 24),
+                                let i = l.applications?.[e.application_id];
+                                s =
+                                    i?.bot != null
+                                        ? (0, n.jsx)("img", {
+                                              src: new N.A(i.bot).getAvatarURL(t, 24),
                                               alt: "",
-                                              className: s()(v.ZN, b.my),
+                                              className: r()(R.ZN, w.my),
                                           })
                                         : null;
                             } else {
-                                let t = p.A.get(e.connection_type);
+                                let t = h.A.get(e.connection_type);
                                 if (null == t) continue;
-                                a = (0, i.jsx)("img", {
-                                    src: (0, d.q)(k) ? t.icon.lightSVG : t.icon.darkSVG,
+                                s = (0, n.jsx)("img", {
+                                    src: (0, d.q)(V) ? t.icon.lightSVG : t.icon.darkSVG,
                                     alt: "",
-                                    className: b.my,
+                                    className: w.my,
                                 });
                             }
-                            null != a && (r[`${e.connection_type}:${e.application_id}`] = a);
+                            null != s && (i[`${e.connection_type}:${e.application_id}`] = s);
                         }
-                        return Object.values(r);
+                        return Object.values(i);
                     })(e.id);
-                return (0, i.jsxs)(
-                    _.D,
+                return (0, n.jsxs)(
+                    f.D,
                     {
-                        className: s()(v.L5, a ? v.xN : null),
-                        onClick: a ? void 0 : () => M(e, t),
-                        onContextMenu: a
-                            ? (r) => {
-                                  var a;
+                        className: r()(R.L5, s ? R.xN : null),
+                        onClick: s ? void 0 : () => G(e, t),
+                        onContextMenu: s
+                            ? (i) => {
+                                  var s;
                                   return (
-                                      (a = e.id),
-                                      void (0, h.L3)(r, async () => {
-                                          let { default: e } = await n.e("68001").then(n.bind(n, 699896));
-                                          return (n) =>
-                                              (0, i.jsx)(e, {
-                                                  ...n,
-                                                  roleId: a,
-                                                  onLeaveRole: () => I.A.unassignGuildRoleConnection(t, a),
+                                      (s = e.id),
+                                      void (0, x.L3)(i, async () => {
+                                          let { default: e } = await l.e("68001").then(l.bind(l, 699896));
+                                          return (l) =>
+                                              (0, n.jsx)(e, {
+                                                  ...l,
+                                                  roleId: s,
+                                                  onLeaveRole: () => g.A.unassignGuildRoleConnection(t, s),
                                               });
                                       })
                                   );
                               }
                             : void 0,
                         children: [
-                            a
-                                ? (0, i.jsx)("div", {
-                                      className: v.UA,
-                                      children: (0, i.jsx)(E.U, { size: "xs", color: "currentColor" }),
+                            s
+                                ? (0, n.jsx)("div", {
+                                      className: R.UA,
+                                      children: (0, n.jsx)(p.U, { size: "xs", color: "currentColor" }),
                                   })
                                 : null,
-                            (0, i.jsx)(L.A, { guildId: t, role: e, size: 24 }),
-                            (0, i.jsxs)("div", {
-                                className: v.fk,
+                            (0, n.jsx)(k.A, { guildId: t, role: e, size: 24 }),
+                            (0, n.jsxs)("div", {
+                                className: R.fk,
                                 children: [
-                                    (0, i.jsx)(A.E, {
+                                    (0, n.jsx)(m.E, {
                                         variant: "text-md/medium",
                                         color: "text-strong",
-                                        className: v.CF,
+                                        className: R.CF,
                                         children: e.name,
                                     }),
                                     void 0 !== e.description
-                                        ? (0, i.jsx)(A.E, {
+                                        ? (0, n.jsx)(m.E, {
                                               variant: "text-xs/normal",
                                               color: "text-default",
-                                              className: v.Xr,
+                                              className: R.Xr,
                                               children: e.description,
                                           })
                                         : null,
                                 ],
                             }),
-                            (0, i.jsx)(T.Ay, {
+                            (0, n.jsx)(j.Ay, {
                                 showUserPopout: !1,
                                 guildId: t,
-                                users: l.map(() => null),
-                                renderUser: (e, t, n) => (0, i.jsx)(r.Fragment, { children: l[n] }, n),
+                                users: a.map(() => null),
+                                renderUser: (e, t, l) => (0, n.jsx)(i.Fragment, { children: a[l] }, l),
                                 max: 3,
                             }),
                         ],

@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { DC: () => I, d0: () => h, y9: () => f });
-var i = n(132500),
-    r = n(77729),
-    a = n(824579),
-    s = n(550568),
-    l = n(174459),
-    o = n(612181),
-    d = n(19575),
-    c = n(464578),
-    u = n(652215);
-function _() {
+s.d(t, { DC: () => w, d0: () => m, y9: () => b });
+var r = s(132500),
+    n = s(77729),
+    a = s(824579),
+    i = s(550568),
+    d = s(174459),
+    _ = s(612181),
+    c = s(19575),
+    o = s(464578),
+    l = s(652215);
+function p() {
     return window.GLOBAL_ENV.HTML_TIMESTAMP;
 }
-class E {
-    loadId = (0, i.A)();
+class u {
+    loadId = (0, r.A)();
     appUIViewed = !1;
     trackEvent(e) {
         let t = Date.now();
         requestIdleCallback(() => {
-            let n, i;
-            l.default.track(u.HAw.APP_UI_VIEWED, {
+            let s, r;
+            d.default.track(l.HAw.APP_UI_VIEWED, {
                 ...(function () {
                     let e = "--campaign-id=";
-                    for (let t of r.A?.processUtils?.getMainArgvSync?.() ?? [])
+                    for (let t of n.A?.processUtils?.getMainArgvSync?.() ?? [])
                         if (t.startsWith(e)) return { referrer: t.substr(e.length) };
                     return {};
                 })(),
-                ...((n = !1),
-                (i = {
+                ...((s = !1),
+                (r = {
                     total_compressed_byte_size: 0,
                     total_uncompressed_byte_size: 0,
                     total_transfer_byte_size: 0,
@@ -42,33 +41,33 @@ class E {
                     null != window.performance.getEntries &&
                     window.performance.getEntries().forEach((e) => {
                         let t = null != e.encodedBodySize ? e.encodedBodySize : e.decodedBodySize,
-                            r = null != e.decodedBodySize ? e.decodedBodySize : e.encodedBodySize,
+                            n = null != e.decodedBodySize ? e.decodedBodySize : e.encodedBodySize,
                             a = e.transferSize;
-                        null != r &&
+                        null != n &&
                             null != t &&
-                            ((n = !0),
-                            (i.total_compressed_byte_size += t),
-                            (i.total_uncompressed_byte_size += r),
-                            null != a && (i.total_uncompressed_byte_size += a),
+                            ((s = !0),
+                            (r.total_compressed_byte_size += t),
+                            (r.total_uncompressed_byte_size += n),
+                            null != a && (r.total_uncompressed_byte_size += a),
                             "resource" === e.entryType &&
                                 ("script" === e.initiatorType &&
                                     null != e.name &&
                                     null != e.name.match(/\.js/) &&
-                                    ((i.js_compressed_byte_size += t),
-                                    (i.js_uncompressed_byte_size += r),
-                                    null != a && (i.js_uncompressed_byte_size += a)),
+                                    ((r.js_compressed_byte_size += t),
+                                    (r.js_uncompressed_byte_size += n),
+                                    null != a && (r.js_uncompressed_byte_size += a)),
                                 "link" === e.initiatorType &&
                                     null != e.name &&
                                     null != e.name.match(/\.css/) &&
-                                    ((i.css_compressed_byte_size += t),
-                                    (i.css_uncompressed_byte_size += r),
-                                    null != a && (i.css_uncompressed_byte_size += a))));
+                                    ((r.css_compressed_byte_size += t),
+                                    (r.css_uncompressed_byte_size += n),
+                                    null != a && (r.css_uncompressed_byte_size += a))));
                     }),
-                n ? i : {}),
+                s ? r : {}),
                 load_id: this.loadId,
                 screen_name: e,
-                duration_ms_since_app_opened: t - _(),
-                app_hardware_acceleration_enabled: d.Ay.getEnableHardwareAcceleration(),
+                duration_ms_since_app_opened: t - p(),
+                app_hardware_acceleration_enabled: c.Ay.getEnableHardwareAcceleration(),
             });
         });
     }
@@ -78,18 +77,18 @@ class E {
         let e = window.location?.pathname,
             t = e?.startsWith("/channels/@me") ? "channels/@me" : e?.split("/")?.[1];
         requestIdleCallback(() => {
-            let e = _();
-            c.A.firstRenderAfterReadyPayload.record();
-            let n = c.A.serializeWebPerfStartupMetrics(e);
-            l.default.track(u.HAw.APP_WEB_PERF_STARTUP_METRICS, {
+            let e = p();
+            o.A.firstRenderAfterReadyPayload.record();
+            let s = o.A.serializeWebPerfStartupMetrics(e);
+            d.default.track(l.HAw.APP_WEB_PERF_STARTUP_METRICS, {
                 load_id: this.loadId,
                 metric_name: "tti",
                 url_root_path: t,
-                ...n,
-                ...(0, s.$)(),
+                ...s,
+                ...(0, i.$)(),
             });
             try {
-                d.Ay.appFirstRenderAfterReadyPayload((0, o.wR)());
+                c.Ay.appFirstRenderAfterReadyPayload((0, _.wR)());
             } catch (e) {}
             (0, a.K)();
         });
@@ -98,19 +97,19 @@ class E {
         if (!this.appUIViewed) {
             performance.mark(`trackAppUIViewed-${e}`), this.trackEvent(e);
             try {
-                d.Ay.appViewed();
+                c.Ay.appViewed();
             } catch (e) {}
             this.appUIViewed = !0;
         }
     }
 }
-let A = new E();
-function h(e) {
-    A.trackAppUIViewed(e);
+let y = new u();
+function m(e) {
+    y.trackAppUIViewed(e);
 }
-function I() {
-    A.trackTTI();
+function w() {
+    y.trackTTI();
 }
-function f() {
-    return A.loadId;
+function b() {
+    return y.loadId;
 }

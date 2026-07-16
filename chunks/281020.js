@@ -1,12 +1,11 @@
-"use strict";
-n.d(t, { M8: () => a, gk: () => r, zi: () => s });
+n.d(t, { M8: () => o, gk: () => r, zi: () => l });
 var i = n(228366);
 function r(e, t) {
     i.h.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_STARTED", applicationId: e, accountLinkCallbacks: t });
 }
-function a(e) {
+function o(e) {
     i.h.dispatch({ type: "ACCOUNT_LINK_AUTHORIZATION_COMPLETED", applicationId: e });
 }
-function s(e) {
+function l(e) {
     i.h.dispatch({ type: "ACCOUNT_LINK_DEVTOOLS_SET_GLOBALLY_DISBLED_FLOWS", flows: e });
 }

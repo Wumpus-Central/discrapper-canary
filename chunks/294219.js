@@ -1,21 +1,20 @@
-"use strict";
-n.d(t, { G: () => o }), n(321073);
-var i = n(64700),
-    r = n(149995),
-    a = n(398523),
-    s = n(881373),
-    l = n(852218);
+i.d(t, { G: () => o }), i(321073);
+var r = i(64700),
+    n = i(149995),
+    s = i(398523),
+    a = i(881373),
+    l = i(852218);
 function o(e, t) {
-    let n = t?.isLockedCardView,
-        { enabled: o } = a.Ay.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
-        d = (0, s.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled,
-        c = (0, r.Zk)({ location: "useRecurring3PModalEligiblePartnerIds" });
-    return i.useMemo(() => {
+    let i = t?.isLockedCardView,
+        { enabled: o } = s.Ay.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
+        d = (0, a.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled,
+        c = (0, n.Zk)({ location: "useRecurring3PModalEligiblePartnerIds" });
+    return r.useMemo(() => {
         let t = [];
         return (
-            o && (t.push(l.KS), (n && c) || t.push(l.Cs)),
+            o && (t.push(l.KS), (i && c) || t.push(l.Cs)),
             d && t.push(l.XY),
             null != e ? e.filter((e) => t.includes(e)) : t
         );
-    }, [o, d, c, e, n]);
+    }, [o, d, c, e, i]);
 }

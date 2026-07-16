@@ -1,18 +1,17 @@
-"use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i = n(64700),
-    r = n(625494),
-    a = n(652215);
-function s(e, t) {
+    l = n(625494),
+    s = n(652215);
+function a(e, t) {
     i.useEffect(() => {
         function n(e) {
             let { timestampMs: n } = e;
             null != t.current && (t.current.seek(n / 1e3), t.current.play());
         }
         return (
-            r._.subscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, n),
+            l._.subscribeKeyed(s.zOV.CLIP_SEEK_VIDEO, e, n),
             () => {
-                r._.unsubscribeKeyed(a.zOV.CLIP_SEEK_VIDEO, e, n);
+                l._.unsubscribeKeyed(s.zOV.CLIP_SEEK_VIDEO, e, n);
             }
         );
     }, [e, t]);
