@@ -1,4 +1,5 @@
 .phoneField_a0c54f {
+    align-items: start;
     display: grid;
     gap: var(--space-8);
     grid-template-columns: 5fr 6fr;
