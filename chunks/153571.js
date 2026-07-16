@@ -15,7 +15,7 @@ var o = n(627968),
     C = n(394953),
     f = n(355216),
     A = n(625864),
-    j = n(990078),
+    j = n(866665),
     b = n(375708);
 function E(e) {
     let { children: t } = e,
@@ -46,7 +46,7 @@ function m(e) {
                 : { badge: o, unreadChannelsCount: n.length, badgeDimensions: i };
         })(N),
         L = k === x.U5.LEGACY ? l.K : c.X,
-        P = (0, r.bG)([g.A], () => g.A.getChannelId()),
+        P = (0, r.bG)([g.Ay], () => g.Ay.getChannelId()),
         S = i.useMemo(() => {
             if (k === x.U5.SIDEBAR) return I.BVt.CHANNEL(I.gNP, P);
         }, [k, P]);

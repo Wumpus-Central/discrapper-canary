@@ -1,70 +1,70 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var i = n(17928),
     r = n(228366),
-    s = n(95701),
-    a = n(583613),
-    o = n(734057),
-    l = n(568548),
-    u = n(309010),
+    a = n(95701),
+    s = n(583613),
+    l = n(734057),
+    o = n(568548),
+    d = n(309010),
     c = n(645959);
-let d = [],
+let u = [],
     _ = new Set();
-function h() {
-    let e = c.A.getPrivateChannelIds().filter((e) => l.Ay.getMentionCount(e) > 0);
-    return e.length > 20 && (e.length = 20), !(0, a.in)(e, d) && ((d = e), (_ = new Set(e)), !0);
+function E() {
+    let e = c.A.getPrivateChannelIds().filter((e) => o.Ay.getMentionCount(e) > 0);
+    return e.length > 20 && (e.length = 20), !(0, s.in)(e, u) && ((u = e), (_ = new Set(e)), !0);
 }
-function f() {
-    return h();
+function A() {
+    return E();
 }
-function p(e) {
+function h(e) {
     let { channelId: t } = e,
-        n = o.A.getChannel(t);
-    return null != n && !!(0, s.Gw)(n.type) && h();
+        n = l.A.getChannel(t);
+    return null != n && !!(0, a.Gw)(n.type) && E();
 }
-class E extends i.Ay.Store {
+class I extends i.Ay.Store {
     static displayName = "PrivateChannelReadStateStore";
     initialize() {
-        this.waitFor(c.A, o.A, u.A, l.Ay);
+        this.waitFor(c.A, l.A, d.Ay, o.Ay);
     }
     getUnreadPrivateChannelIds() {
-        return d;
+        return u;
     }
 }
-let m = new E(r.h, {
-    CONNECTION_OPEN: f,
-    OVERLAY_INITIALIZE: f,
-    MESSAGE_CREATE: p,
-    MESSAGE_ACK: p,
+let f = new I(r.h, {
+    CONNECTION_OPEN: A,
+    OVERLAY_INITIALIZE: A,
+    MESSAGE_CREATE: h,
+    MESSAGE_ACK: h,
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e,
-            n = o.A.getChannel(t);
-        return null != n && !!(0, s.Gw)(n.type) && h();
+            n = l.A.getChannel(t);
+        return null != n && !!(0, a.Gw)(n.type) && E();
     },
     CHANNEL_DELETE: function (e) {
         let {
             channel: { id: t },
         } = e;
-        return !!_.has(t) && h();
+        return !!_.has(t) && E();
     },
     WINDOW_FOCUS: function () {
-        let e = o.A.getChannel(u.A.getChannelId());
-        return null != e && !!(0, s.Gw)(e.type) && h();
+        let e = l.A.getChannel(d.Ay.getChannelId());
+        return null != e && !!(0, a.Gw)(e.type) && E();
     },
     CHANNEL_CREATE: function (e) {
         let {
                 channel: { id: t },
             } = e,
-            n = o.A.getChannel(t);
-        return null != n && !!(0, s.Gw)(n.type) && h();
+            n = l.A.getChannel(t);
+        return null != n && !!(0, a.Gw)(n.type) && E();
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
         for (let { id: e } of t) {
-            let t = o.A.getChannel(e);
-            null != t && (0, s.Gw)(t.type) && (n = !0);
+            let t = l.A.getChannel(e);
+            null != t && (0, a.Gw)(t.type) && (n = !0);
         }
-        return !!n && h();
+        return !!n && E();
     },
 });

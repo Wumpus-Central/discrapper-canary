@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { M$: () => D, Fv: () => O, kF: () => C, Oc: () => R, GY: () => L }), n(667532);
+n.d(t, { M$: () => y, Fv: () => O, kF: () => C, Oc: () => R, GY: () => L }), n(667532);
 var i = n(310953),
     r = n(473529),
     a = n(519059),
@@ -73,7 +73,7 @@ let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) 
             if (null != S.A.getGuildId()) e = h.ME;
             else {
                 let t = S.A.getLastSelectedGuildId();
-                null != t && ((e = t), (0, A.i)(t, g.A.getChannelId(t)));
+                null != t && ((e = t), (0, A.i)(t, g.Ay.getChannelId(t)));
             }
             return null != e && (0, m.u)(e), !1;
         },
@@ -83,7 +83,7 @@ let C = { binds: ["alt+down"], comboKeysBindGlobal: !0, action: () => (p(), !1) 
         comboKeysBindGlobal: !0,
         action: () => ((0, T.OE)("keybind"), !1),
     },
-    D = {
+    y = {
         binds: (0, N.isMac)() || (0, N.isMacWeb)() ? ["mod+]"] : ["alt+right"],
         comboKeysBindGlobal: !0,
         action: () => ((0, T.Qb)("keybind"), !1),

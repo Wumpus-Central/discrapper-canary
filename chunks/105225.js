@@ -1,4 +1,4 @@
-t.d(n, { Ay: () => eS, SZ: () => eT, rP: () => ev });
+t.d(n, { Ay: () => eS, SZ: () => ev, rP: () => eT });
 var l = t(627968),
     i = t(64700),
     s = t(503698),
@@ -18,8 +18,8 @@ var l = t(627968),
     g = t(933958),
     I = t(967812),
     f = t(793574),
-    T = t(688810),
-    v = t(313961),
+    v = t(688810),
+    T = t(313961),
     j = t(829773),
     _ = t(329072),
     N = t(183184),
@@ -54,7 +54,7 @@ var l = t(627968),
     en = t(970636),
     et = t(616356),
     el = t(470710),
-    ei = t(451409),
+    ei = t(186295),
     es = t(309010),
     ea = t(287809),
     er = t(151476),
@@ -72,15 +72,15 @@ var l = t(627968),
     eg = t(806931),
     eI = t(49999),
     ef = t(56640);
-function eT(e, n) {
+function ev(e, n) {
     ei.Ay.isVideoEnabled() !== e && ((0, O.X)(f.A.VOICE_CONTROL_TRAY, O.O.CAMERA, e), e ? (0, ep.A)(t, n) : t());
     function t() {
         return C.A.setVideoEnabled(e);
     }
 }
-function ev(e) {
+function eT(e) {
     let { channel: n, currentUser: t, exitFullScreen: s, canGoLive: a, hasPermission: r, disabled: o } = e,
-        { parentAnalyticsLocation: c, analyticsLocations: h } = (0, T.Ay)(),
+        { parentAnalyticsLocation: c, analyticsLocations: h } = (0, v.Ay)(),
         m = (0, B.Us)(),
         C = (0, u.yK)([et.A], () => et.A.getAllActiveStreams()),
         E = C.find((e) => e.ownerId === t.id),
@@ -92,7 +92,7 @@ function ev(e) {
             (0, eE.A)(g, n.id, h);
         }, [g, n.id, a, s, h]),
         f = (0, w.k0)(),
-        [v, j] = i.useState(!1);
+        [T, j] = i.useState(!1);
     function _() {
         ((0, O.X)(c, O.O.STREAM, !0), a) ? I() : (0, eC.A)();
     }
@@ -166,7 +166,7 @@ function ev(e) {
                                         : null,
                                     popoutOpen: n,
                                     shouldShowTooltip: !n,
-                                    renderNUXHighlight: v,
+                                    renderNUXHighlight: T,
                                     buttonRef: p,
                                     onClick: null != E ? N : _,
                                 });
@@ -190,8 +190,8 @@ function ej(e) {
 }
 let e_ = i.memo(function (e) {
     let { currentUser: n, onDisconnectCall: t, channel: s, connectedEmbeddedActivity: a } = e,
-        { parentAnalyticsLocation: r } = (0, T.Ay)(),
-        o = (0, u.bG)([v.A], () => v.A.getSelectedParticipant(s.id)),
+        { parentAnalyticsLocation: r } = (0, v.Ay)(),
+        o = (0, u.bG)([T.A], () => T.A.getSelectedParticipant(s.id)),
         { reducedMotion: d } = i.useContext(h.C),
         [C, x] = i.useState(!1),
         g = o?.id,
@@ -307,7 +307,7 @@ let e_ = i.memo(function (e) {
 function eN(e) {
     let { channel: n, cameraUnavailable: t, hasCameraPermission: s, currentUser: a } = e,
         r = (0, B.Us)(),
-        { parentAnalyticsLocation: o } = (0, T.Ay)(),
+        { parentAnalyticsLocation: o } = (0, v.Ay)(),
         { reachedLimit: c, limit: d } = (0, eo.A)(n),
         A = i.useCallback(() => {
             (0, O.X)(o, O.O.JOIN_VIDEO_CALL),
@@ -357,16 +357,16 @@ let eS = function (e) {
             return o()(null != e, "CenterControlTray: currentUser cannot be undefined"), e;
         }),
         { cameraUnavailable: p, enabled: I } = (0, er.A)(),
-        v = (0, ec.A)(n),
+        T = (0, ec.A)(n),
         { suppress: O, selfMute: S, mute: b } = (0, eu.A)(n),
         { canGoLive: L } = (0, u.cf)([ei.Ay], () => ({ canGoLive: (0, M.A)(ei.Ay) })),
         D = (0, R.A)(),
         k = (0, u.bG)([y.default], () => null != y.default.getAwaitingRemoteSessionInfo()),
         U = null != D,
-        w = (0, u.bG)([es.A], () => (D?.channelId ?? es.A.getVoiceChannelId()) === n.id),
+        w = (0, u.bG)([es.Ay], () => (D?.channelId ?? es.Ay.getVoiceChannelId()) === n.id),
         H = (0, u.bG)([g.Ay], () => g.Ay.getCurrentEmbeddedActivity()),
         { reachedLimit: K, limit: z } = (0, eo.A)(n),
-        { analyticsLocations: J } = (0, T.Ay)(f.A.VOICE_CONTROL_TRAY),
+        { analyticsLocations: J } = (0, v.Ay)(f.A.VOICE_CONTROL_TRAY),
         q = (0, Y.Ay)(n),
         $ = i.useRef(null),
         ee = i.useRef(null),
@@ -374,7 +374,7 @@ let eS = function (e) {
         el = (0, u.bG)([P.A], () => P.A.isVisible(n.id)),
         { experimental: ed } = G.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
     return w
-        ? (0, l.jsx)(T.f5, {
+        ? (0, l.jsx)(v.f5, {
               value: J,
               children: (0, l.jsxs)(x.A, {
                   section: ex.JJy.VOICE_CONTROL_TRAY,
@@ -451,10 +451,10 @@ let eS = function (e) {
                                                   return (0, l.jsx)(en.A, {
                                                       ref: ee,
                                                       centerButton: !0,
-                                                      hasPermission: v,
+                                                      hasPermission: T,
                                                       enabled: I,
                                                       cameraUnavailable: p,
-                                                      onChange: eT,
+                                                      onChange: ev,
                                                       onCameraUnavailable: em.A,
                                                       channelLimitReached: K,
                                                       channelLimit: z,
@@ -470,12 +470,12 @@ let eS = function (e) {
                                         className: ef.qi,
                                         children: [
                                             !U &&
-                                                (0, l.jsx)(ev, {
+                                                (0, l.jsx)(eT, {
                                                     channel: n,
                                                     currentUser: E,
                                                     exitFullScreen: r,
                                                     canGoLive: L,
-                                                    hasPermission: v,
+                                                    hasPermission: T,
                                                 }),
                                             !U &&
                                                 (0, l.jsx)(ej, {
@@ -519,8 +519,8 @@ let eS = function (e) {
                   ],
               }),
           })
-        : (0, l.jsx)(T.f5, {
+        : (0, l.jsx)(v.f5, {
               value: J,
-              children: (0, l.jsx)(eN, { channel: n, cameraUnavailable: p, hasCameraPermission: v, currentUser: E }),
+              children: (0, l.jsx)(eN, { channel: n, cameraUnavailable: p, hasCameraPermission: T, currentUser: E }),
           });
 };

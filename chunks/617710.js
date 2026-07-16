@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => e9 });
-var i = n(735438),
+var i = n(435558),
     r = n.n(i),
     a = n(17928),
     s = n(506774),
@@ -13,7 +13,7 @@ var i = n(735438),
     E = n(280450),
     A = n(470710),
     h = n(734057),
-    I = n(451409),
+    I = n(186295),
     f = n(763827),
     p = n(873985),
     T = n(309010),
@@ -25,9 +25,9 @@ var i = n(735438),
     R = n(183636),
     O = n(174459),
     L = n(209489),
-    D = n(364711),
-    y = n(812729),
-    v = n.n(y);
+    y = n(655404),
+    D = n(812729),
+    v = n.n(D);
 class b {
     alwaysUpdateState;
     dirty = !1;
@@ -111,7 +111,7 @@ var P = n(665260),
     k = n(652215),
     F = n(469177);
 let V = new d.A("ConnectionStore"),
-    B = new D.A(),
+    B = new y.A(),
     H = new M(B),
     j = new (class extends b {
         socket;
@@ -296,7 +296,7 @@ function eL(e, t) {
         n
     );
 }
-function eD(e) {
+function ey(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -359,7 +359,7 @@ function eD(e) {
               hasThreadsSubscription: e.has_threads_subscription,
           };
 }
-function ey(e) {
+function eD(e) {
     return "partial" !== e.data_mode
         ? {
               id: e.id,
@@ -625,7 +625,7 @@ eV(
             a.Ay.Emitter.batched(() => {
                 var t;
                 let n,
-                    i = ((t = B.identifyStartTime), (n = ey(e)), (eC = { guild: e, identifyTime: t }), n);
+                    i = ((t = B.identifyStartTime), (n = eD(e)), (eC = { guild: e, identifyTime: t }), n);
                 null != eu.default.getCurrentUser() &&
                     (eH({ type: "GUILD_CREATE", guild: i }),
                     eH({
@@ -770,9 +770,9 @@ eV(
                                           });
                                       let d =
                                               l?.map((e, t) =>
-                                                  !0 === e.unavailable ? e : ((e.members = eL(eR, s?.[t])), eD(e)),
+                                                  !0 === e.unavailable ? e : ((e.members = eL(eR, s?.[t])), ey(e)),
                                               ) ?? [],
-                                          c = eO(t, l, (e) => eD(e));
+                                          c = eO(t, l, (e) => ey(e));
                                       return (
                                           null != c && d.push(c),
                                           { ...o, users: i, presences: [], guilds: d, private_channels: a ?? [] }
@@ -1052,7 +1052,7 @@ eV(
         (e) => {
             if (e.unavailable) eH({ type: "GUILD_UNAVAILABLE", guildId: e.id });
             else {
-                let t = ey(e);
+                let t = eD(e);
                 eH({ type: "GUILD_CREATE", guild: t }),
                     eH({
                         type: "VOICE_STATE_UPDATES",
@@ -1969,7 +1969,7 @@ let eX = new d.A("ConnectionStore"),
 async function e3(e) {
     (eQ = Date.now()), (eJ = e.sessionId), H.handleConnectionOpen();
     let t = {},
-        n = T.A.getVoiceChannelId();
+        n = T.Ay.getVoiceChannelId();
     if (null != n) {
         let e = s.w.get("discord_watchdog_restart_timestamp"),
             i = null != e && Date.now() - parseInt(e, 10) < 6e4;
@@ -1992,18 +1992,18 @@ function e6() {
 function e4() {
     return j.update(), !1;
 }
-function e7() {
+function e5() {
     return H.update(), !1;
 }
-function e5(e) {
+function e7(e) {
     B.isSessionEstablished() && B.streamDelete(e);
 }
 class e8 extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.A, m.A, g.A, _.A),
+        this.waitFor(E.default, A.A, h.A, I.Ay, f.A, p.A, T.Ay, m.A, g.A, _.A),
             this.syncWith([I.Ay], e4),
-            this.syncWith([m.A], e7);
+            this.syncWith([m.A], e5);
     }
     getSocket() {
         return B;
@@ -2160,7 +2160,7 @@ let e9 = new e8(l.h, {
                 (e = g.A.getAllActiveStreamKeys().find((e) => (0, c.Iy)(e).ownerId === E.default.getId())),
                     g.A.getAllActiveStreamKeys()
                         .filter((t) => t !== e)
-                        .forEach((e) => e5(e));
+                        .forEach((e) => e7(e));
             }
             B.streamWatch(t);
         }
@@ -2168,7 +2168,7 @@ let e9 = new e8(l.h, {
     },
     STREAM_STOP: function (e) {
         let { streamKey: t } = e;
-        return e5(t), e6(), !1;
+        return e7(t), e6(), !1;
     },
     STREAM_SET_PAUSED: function (e) {
         let { streamKey: t, paused: n } = e;

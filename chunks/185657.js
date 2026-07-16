@@ -48,15 +48,15 @@ function O(e, t) {
 function L(e) {
     return O(1e6 - Math.max(0, Math.min(1e6, Math.round(1e6 * e))), 7);
 }
-let D = new Map();
-function y() {
+let y = new Map();
+function D() {
     let e = new Map();
     for (let t of o.A.getGroups())
         for (let n of t.userIds) {
             let i = e.get(n);
             null == i && ((i = []), e.set(n, i)), i.push(t.id);
         }
-    D = e;
+    y = e;
 }
 function v() {
     let e = A.A.getPrimaryActivity();
@@ -114,7 +114,7 @@ function M(e) {
                         d,
                         _,
                         { userId: h, user: T, activities: S, nickname: C, affinity: R } = e,
-                        { category: O, displayActivities: y } =
+                        { category: O, displayActivities: D } =
                             ((t = A.A.getPrimaryActivity()),
                             (n = i),
                             (r = t?.name != null && null != n),
@@ -132,21 +132,21 @@ function M(e) {
                                     : a === N.clD.ONLINE || a === N.clD.IDLE || a === N.clD.DND
                                       ? { category: "ONLINE", displayActivities: o }
                                       : { category: "OFFLINE", displayActivities: o }),
-                        v = "IN_GAME" === O ? (y[0]?.name ?? null) : null,
-                        M = D.get(h) ?? [],
+                        v = "IN_GAME" === O ? (D[0]?.name ?? null) : null,
+                        M = y.get(h) ?? [],
                         [P] = m.A.isFavorite(p.x.FRIENDS, h),
-                        U = E.A.getVoiceChannelId() ?? E.A.getChannelId(),
+                        U = E.Ay.getVoiceChannelId() ?? E.Ay.getChannelId(),
                         w = null != U ? c.A.getChannel(U)?.guild_id : null,
                         G = u.A.getStatus(h),
                         x = G === N.clD.ONLINE,
-                        k = y.some(b),
+                        k = D.some(b),
                         F = G === N.clD.DND || G === N.clD.IDLE,
                         V = f.Ay.getName(w, U, T);
                     return {
                         id: h,
                         userId: h,
                         user: T,
-                        activities: y,
+                        activities: D,
                         nickname: C,
                         category: "FRIEND",
                         activityCategory: P ? null : O,
@@ -208,7 +208,7 @@ function M(e) {
     return null == t ? R.delete(e) : R.set(e, t);
 }
 function P() {
-    R.clear(), y(), v();
+    R.clear(), D(), v();
     let e = !1;
     for (let [t, n] of _.A.getMutableRelationships().entries())
         (n === N.eA$.PENDING_INCOMING || n === N.eA$.PENDING_OUTGOING) && (e = M(t) || e);
@@ -219,7 +219,7 @@ function P() {
 class U extends a.Ay.Store {
     static displayName = "FriendsWidgetFriendsStore";
     initialize() {
-        this.waitFor(c.A, o.A, m.A, u.A, _.A, E.A, A.A, d.A, h.default, I.A), P();
+        this.waitFor(c.A, o.A, m.A, u.A, _.A, E.Ay, A.A, d.A, h.default, I.A), P();
     }
     getRows(e) {
         return [R.values(e), R.version];
@@ -290,22 +290,22 @@ let G = new U(
                   return t;
               }),
               CREATE_FRIEND_GROUP: w(function (e) {
-                  return y(), !1;
+                  return D(), !1;
               }),
               DELETE_FRIEND_GROUP: w(function (e) {
-                  y();
+                  D();
                   let t = !1;
                   for (let e of _.A.getFriendIDs()) t = M(e) || t;
                   return t;
               }),
               ADD_USERS_TO_GROUP: w(function (e) {
-                  y();
+                  D();
                   let t = !1;
                   for (let n of e.userIds) t = M(n) || t;
                   return t;
               }),
               REMOVE_USERS_FROM_GROUP: w(function (e) {
-                  y();
+                  D();
                   let t = !1;
                   for (let n of e.userIds) t = M(n) || t;
                   return t;
@@ -326,7 +326,7 @@ let G = new U(
               }),
               LOGOUT: w(function () {
                   let e = R.size() > 0;
-                  return R.clear(), (i = void 0), (D = new Map()), e;
+                  return R.clear(), (i = void 0), (y = new Map()), e;
               }),
           },
 );

@@ -19,8 +19,8 @@ function E(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: r } = e,
         a = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: r }),
         o = (0, l.bG)([m.A], () => m.A.getGuildId() ?? void 0),
-        h = (0, l.bG)([d.A, c.A, u.A], () => {
-            let e = d.A.getChannel(u.A.getChannelId());
+        h = (0, l.bG)([d.A, c.A, u.Ay], () => {
+            let e = d.A.getChannel(u.Ay.getChannelId());
             return null != e && (e.isPrivate() || c.A.can(A.xBc.SEND_MESSAGES, e));
         }, []),
         p = (0, s.V1)(e, o) && h;

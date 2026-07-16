@@ -1,15 +1,15 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => E });
 var i = n(228366),
     r = n(730852),
-    s = n(439372),
-    a = n(976860),
-    o = n(345942),
-    l = n(941327),
-    u = n(309010),
+    a = n(439372),
+    s = n(976860),
+    l = n(345942),
+    o = n(186295),
+    d = n(309010),
     c = n(967198),
-    d = n(652215);
-class _ extends s.A {
+    u = n(652215);
+class _ extends a.A {
     actions = {
         GUILD_CREATE: this.handleGuildCreate,
         CHANNEL_CREATE: this.handleChannelCreate,
@@ -17,18 +17,18 @@ class _ extends s.A {
     };
     handleGuildCreate(e) {
         let { guild: t } = e,
-            n = u.A.getChannelId(d.ME),
-            i = u.A.getVoiceChannelId();
-        t.id === n && (0, o.u)(t.id),
-            t.id === i && !1 !== t.unavailable && null == i && r.default.selectVoiceChannel((0, u.c)(t.id));
+            n = d.Ay.getChannelId(u.ME),
+            i = d.Ay.getVoiceChannelId();
+        t.id === n && (0, l.u)(t.id),
+            t.id === i && !1 !== t.unavailable && null == i && r.default.selectVoiceChannel((0, d.cX)(t.id));
     }
     handleChannelCreate(e) {
         let { channel: t } = e;
-        if (t.type !== d.rbe.GROUP_DM) return;
+        if (t.type !== u.rbe.GROUP_DM) return;
         let n = t.originChannelId,
-            i = u.A.getChannelId(d.eGj);
-        null == c.A.getGuildId() && null != n && n === i && (0, a.pX)(d.BVt.CHANNEL(d.ME, t.id)),
-            null != n && n === u.A.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, l.Ay.isVideoEnabled());
+            i = d.Ay.getChannelId(u.eGj);
+        null == c.A.getGuildId() && null != n && n === i && (0, s.pX)(u.BVt.CHANNEL(u.ME, t.id)),
+            null != n && n === d.Ay.getVoiceChannelId() && r.default.selectVoiceChannel(t.id, o.Ay.isVideoEnabled());
     }
     handleLogout() {
         i.h.dispatch({
@@ -41,4 +41,4 @@ class _ extends s.A {
         });
     }
 }
-let h = new _();
+let E = new _();

@@ -12,8 +12,8 @@ var l = e(17928),
     r = e(655116),
     u = e(160768),
     I = e(341335),
-    N = e(286617),
-    y = e(533207),
+    y = e(286617),
+    N = e(533207),
     E = e(881335),
     _ = e(280450),
     b = e(734057),
@@ -78,7 +78,7 @@ function w(i, t) {
         ]),
         ie = i?.id,
         il = (0, l.yK)(
-            [b.A, f.A, S.A, g.A, v.A, L.A, T.A, h.A, O.A, G.Ay],
+            [b.A, f.A, S.A, g.A, v.Ay, L.A, T.A, h.A, O.A, G.Ay],
             () => [
                 ...Z.map((i) =>
                     (0, J.A)({
@@ -92,7 +92,7 @@ function w(i, t) {
                         GuildStore: f.A,
                         GuildMemberCountStore: S.A,
                         RelationshipStore: g.A,
-                        SelectedChannelStore: v.A,
+                        SelectedChannelStore: v.Ay,
                         VoiceStateStore: L.A,
                         PermissionStore: T.A,
                         LocalActivityStore: h.A,
@@ -124,7 +124,7 @@ function w(i, t) {
         ia = (0, l.yK)([C.A], () => F.map((i) => !C.A.getParty(i.party?.id)?.has(t?.id ?? Q.dJq)), [F, t]),
         id = (0, l.yK)(
             [r.A, _.default],
-            () => Z.map((i) => (i.type === Q.$pd.LISTENING && null != t ? (0, N.A)(r.A, _.default, t, i) : void 0)),
+            () => Z.map((i) => (i.type === Q.$pd.LISTENING && null != t ? (0, y.A)(r.A, _.default, t, i) : void 0)),
             [t, Z],
         ),
         io = (0, A.p)();
@@ -137,7 +137,7 @@ function w(i, t) {
     };
     async function iA(i) {
         let e = (0, M.A)(i, Q.jUm.EMBEDDED),
-            n = v.A.getVoiceChannelId(),
+            n = v.Ay.getVoiceChannelId(),
             l = b.A.getChannel(n);
         await s.Ay.join({
             userId: t.id,
@@ -210,7 +210,7 @@ function w(i, t) {
                                                             e.e("92430"),
                                                             e.e("62461"),
                                                             e.e("54453"),
-                                                            e.e("73040"),
+                                                            e.e("15574"),
                                                             e.e("37687"),
                                                             e.e("78412"),
                                                             e.e("59957"),
@@ -353,7 +353,7 @@ function w(i, t) {
                             d.Dr,
                             {
                                 id: `spotify-sync-${e.session_id}`,
-                                action: () => (0, y.A)(a, X.Qp.USER_ACTIVITY_SYNC),
+                                action: () => (0, N.A)(a, X.Qp.USER_ACTIVITY_SYNC),
                                 label: q.intl.string(q.t.gXYoq2),
                                 subtext: s
                                     ? (0, I.A)(

@@ -22,28 +22,28 @@ var i = n(811315),
 let S = null,
     N = [],
     C = new Map(),
-    O = new Map(),
-    R = new Set([m.LWr.FILTER_FROM, m.LWr.FILTER_IN, m.LWr.FILTER_MENTIONS]);
+    R = new Map(),
+    O = new Set([m.LWr.FILTER_FROM, m.LWr.FILTER_IN, m.LWr.FILTER_MENTIONS]);
 function L(e) {
     let t = (0, f.bS)(e),
-        n = O.get(t) ?? { results: [], context: l.A.getUserSearchContext(b.bind(null, e)) };
-    return O.set(t, n), n;
+        n = R.get(t) ?? { results: [], context: l.A.getUserSearchContext(b.bind(null, e)) };
+    return R.set(t, n), n;
 }
-function D(e) {
+function y(e) {
     let { searchContext: t, query: n, mode: i, tokens: r, cursorScope: a, autocompletes: s } = e;
     return L(t), { searchContext: t, query: n, mode: i, tokens: r, cursorScope: a, autocompletes: s };
 }
-function y(e) {
+function D(e) {
     return null != e && (e === m.LWr.FILTER_FROM || e === m.LWr.FILTER_MENTIONS);
 }
 function v(e) {
-    let t = e.type === m.o$q.FILTER && y(e.filter);
+    let t = e.type === m.o$q.FILTER && D(e.filter);
     return e.type === m.o$q.FILTER_ALL || t;
 }
 function b(e, t) {
     let { results: n } = t,
         i = (0, f.bS)(e),
-        r = O.get(i),
+        r = R.get(i),
         a = C.get(i);
     if (null == r || null == a || !v(a.mode)) return;
     r.results = (function (e) {
@@ -60,7 +60,7 @@ function b(e, t) {
     })(n, a.mode.type === m.o$q.FILTER ? 10 : 3);
     let { query: s, mode: l, tokens: o, cursorScope: d } = a,
         c = U(e, l, o),
-        u = D({ searchContext: e, query: s, mode: l, tokens: o, cursorScope: d, autocompletes: c });
+        u = y({ searchContext: e, query: s, mode: l, tokens: o, cursorScope: d, autocompletes: c });
     C.set(i, u), k.emitChange();
 }
 function M(e) {
@@ -72,12 +72,12 @@ function P(e) {
     let s = null,
         l = n?.getFullMatch()?.trim() ?? "",
         o = 0 === l.length;
-    if ((0, f._B)(i) && y(t) && !o) s = L(i).results;
+    if ((0, f._B)(i) && D(t) && !o) s = L(i).results;
     else {
         let e = T.Ay[t]?.getAutocompletions;
         s = null != e ? e({ query: l, searchContext: i, maxResults: r, tokens: a }) : [];
     }
-    if (null != s && y(t) && (0, T.WL)(l)) {
+    if (null != s && D(t) && (0, T.WL)(l)) {
         let e = E.default.getCurrentUser();
         null != e &&
             (s = s.filter((t) => {
@@ -99,7 +99,7 @@ function U(e, t, n) {
             let s = [];
             return (
                 (0, p.u_)(e, [_.A])
-                    .filter((e) => R.has(e))
+                    .filter((e) => O.has(e))
                     .forEach((t) => {
                         if (null == t) return;
                         let i = P({ filter: t, currentToken: r, searchContext: e, maxResults: 3, tokens: n });
@@ -119,13 +119,13 @@ function G(e) {
         n = C.get(t);
     if (null == n) return !1;
     let { query: i, mode: r, tokens: a, cursorScope: s } = n,
-        l = D({ searchContext: e, query: i, mode: r, tokens: a, cursorScope: s, autocompletes: U(e, r, a) });
+        l = y({ searchContext: e, query: i, mode: r, tokens: a, cursorScope: s, autocompletes: U(e, r, a) });
     C.set(t, l);
 }
 class x extends a.Ay.Store {
     static displayName = "SearchAutocompleteStore";
     initialize() {
-        this.waitFor(o.A, d.Ay, c.A, u.A, _.A, E.default);
+        this.waitFor(o.A, d.Ay, c.A, u.Ay, _.A, E.default);
     }
     getState(e) {
         let t = (0, f.bS)(e);
@@ -176,16 +176,16 @@ let k = new x(s.h, {
                         (d = !1);
                 } else e.context.clearQuery(), (t = U(n, s, i));
             } else {
-                let e = O.get(l);
+                let e = R.get(l);
                 null != e && (e.context.clearQuery(), (e.results = [])), (t = U(n, s, i));
             }
-            let c = D({ searchContext: n, query: a, mode: s, tokens: i, cursorScope: r, autocompletes: t });
+            let c = y({ searchContext: n, query: a, mode: s, tokens: i, cursorScope: r, autocompletes: t });
             return C.set(l, c), d;
         },
         SEARCH_EDITOR_STATE_CLEAR: function (e) {
             let { id: t } = e,
-                n = O.get(t);
-            null != n && (n.context.destroy(), (n.results = []), O.delete(t)), C.delete(t), (S = null);
+                n = R.get(t);
+            null != n && (n.context.destroy(), (n.results = []), R.delete(t)), C.delete(t), (S = null);
         },
         CHANNEL_CREATE: w,
         CHANNEL_DELETE: w,

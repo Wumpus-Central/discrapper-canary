@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { i$: () => r, oE: () => s });
+n.d(t, { i$: () => r, oE: () => a });
 var i = n(309010);
 function r() {
-    return i.A.getChannelId() ?? void 0;
+    return i.Ay.getChannelId() ?? void 0;
 }
-function s(e, t) {
+function a(e, t) {
     return !0;
 }

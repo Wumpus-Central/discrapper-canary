@@ -42,7 +42,7 @@ function _(e) {
             if (n?.hasSubscribers(O.jej.POPOUT_CLOSE_AFTER_MODALS))
                 return n.dispatch(O.jej.POPOUT_CLOSE_AFTER_MODALS), !1;
             let r = S.A.getGuildId(),
-                l = e ?? v.A.getChannelId(r),
+                l = e ?? v.Ay.getChannelId(r),
                 o = g.A.getChannel(l),
                 c = m.Ay.getSection(l, o?.isDM()) === O.YvQ.SIDEBAR_CHAT ? m.Ay.getSidebarState(l) : null,
                 A = c?.type === d.PE.VIEW_THREAD || c?.type === d.PE.VIEW_CHANNEL ? c.channelId : null;

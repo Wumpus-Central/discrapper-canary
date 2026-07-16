@@ -507,7 +507,7 @@ function eT(e) {
         ],
     });
 }
-var ev = n(735438),
+var ev = n(435558),
     eS = n(403581),
     eO = n(331322),
     eR = n(508770),
@@ -691,7 +691,7 @@ var eK = n(989349),
     eX = n.n(eK),
     eW = n(607399),
     eQ = n(144165),
-    eY = n(534514),
+    eY = n(297264),
     eq = n(532794),
     e$ = n(58703),
     e0 = n(975571),
@@ -701,8 +701,8 @@ var eK = n(989349),
     e7 = n(664654),
     e6 = n(212737),
     e9 = n(465794),
-    e4 = n(378135),
-    e5 = n(202541),
+    e5 = n(378135),
+    e4 = n(202541),
     e8 = n(613444),
     te = n(954457);
 class tt extends a.Component {
@@ -724,7 +724,7 @@ class tt extends a.Component {
             (this.trialEndsAt = e.trialEndsAt),
             (this.analyticsLocations = e.analyticsLocations),
             (this.compact = !0 === e.compact),
-            (this.offerExpired = (0, e4.P)(this.trialOffer)),
+            (this.offerExpired = (0, e5.P)(this.trialOffer)),
             (this.isSender = this.currentUser.id === this.trialOffer.referrer_id);
     }
     getSystemMessageHeader() {
@@ -759,7 +759,7 @@ class tt extends a.Component {
                 this.currentUser.id !== this.trialOffer.user_id ||
                 (0, e1.TW)(this.currentUser) ||
                 !this.currentUser.verified ||
-                (0, e4.P)(this.trialOffer),
+                (0, e5.P)(this.trialOffer),
             t = this.renderExpirationDate();
         return (0, l.jsxs)("div", {
             className: e8.UD,
@@ -773,7 +773,7 @@ class tt extends a.Component {
                         onClick: () => {
                             (0, eq.A)({
                                 initialPlanId: null,
-                                subscriptionTier: e5.pe.TIER_2,
+                                subscriptionTier: e4.pe.TIER_2,
                                 analyticsLocations: this.analyticsLocations,
                                 trialId: this.trialOffer.trial_id,
                                 referralTrialOfferId: this.trialOffer.id,
@@ -830,7 +830,7 @@ class tt extends a.Component {
             t = (0, l.jsxs)(l.Fragment, {
                 children: [
                     (0, l.jsx)(e9.A, {
-                        subscriptionTier: e5.pe.TIER_2,
+                        subscriptionTier: e4.pe.TIER_2,
                         buttonTextOverride: O.intl.string(O.t.O0etsF),
                         size: "md",
                         variantOverride: "expressive",
@@ -1136,7 +1136,7 @@ var ty = n(470710),
     tU = n(309010),
     tb = n(977997),
     tP = n(562153),
-    tG = n(465364),
+    tG = n(521981),
     tH = n(782603),
     tw = n(562708),
     tF = n(778712),
@@ -1205,9 +1205,9 @@ function t1(e) {
     }, [t]);
     let A = () => {
         switch (t) {
-            case e5.np.FRIEND_ANNIVERSARY:
+            case e4.np.FRIEND_ANNIVERSARY:
                 return O.intl.string(O.t.ilhtIa);
-            case e5.np.UNSPECIFIED:
+            case e4.np.UNSPECIFIED:
                 return;
             default:
                 return (0, tK.yE)(t);
@@ -1244,9 +1244,9 @@ function t1(e) {
                                     lineClamp: 3,
                                     children: (() => {
                                         switch (t) {
-                                            case e5.np.FRIEND_ANNIVERSARY:
+                                            case e4.np.FRIEND_ANNIVERSARY:
                                                 return O.intl.string(O.t.CeQIwZ);
-                                            case e5.np.UNSPECIFIED:
+                                            case e4.np.UNSPECIFIED:
                                                 return;
                                             default:
                                                 return (0, tK.yE)(t);
@@ -1264,11 +1264,11 @@ function t1(e) {
                                             lineClamp: 1,
                                             children: (() => {
                                                 switch (t) {
-                                                    case e5.np.FRIEND_ANNIVERSARY:
+                                                    case e4.np.FRIEND_ANNIVERSARY:
                                                         return O.intl.formatToPlainString(O.t.PpG27s, {
                                                             numberOfYears: h,
                                                         });
-                                                    case e5.np.UNSPECIFIED:
+                                                    case e4.np.UNSPECIFIED:
                                                         return;
                                                     default:
                                                         return (0, tK.yE)(t);
@@ -1346,28 +1346,28 @@ function t7(e) {
 }
 var t6 = n(438729),
     t9 = n(862482),
-    t4 = n(725807),
-    t5 = n(335364);
+    t5 = n(725807),
+    t4 = n(335364);
 function t8(e) {
     let { message: t, channel: n } = e,
         i = null != n.guild_id ? b.JJy.TEXT_IN_VOICE : b.JJy.CHANNEL_TEXT_AREA;
     return (0, l.jsx)(I.A, {
-        contentClassName: t5.o9,
-        iconContainerClassName: t5.zc,
-        iconNode: (0, l.jsx)(tH.X, { colorClass: t5.Kk }),
+        contentClassName: t4.o9,
+        iconContainerClassName: t4.zc,
+        iconNode: (0, l.jsx)(tH.X, { colorClass: t4.Kk }),
         children: (0, l.jsxs)("div", {
-            className: t5.kL,
+            className: t4.kL,
             children: [
                 (0, l.jsxs)("div", {
                     children: [
                         (0, l.jsx)(L.E, { variant: "text-sm/medium", children: t.content }),
                         (0, l.jsxs)("div", {
-                            className: t5.C5,
+                            className: t4.C5,
                             children: [
-                                (0, l.jsx)(eS.t, { size: "xs", colorClass: t5.bu }),
+                                (0, l.jsx)(eS.t, { size: "xs", colorClass: t4.bu }),
                                 (0, l.jsx)(L.E, {
                                     variant: "text-xs/medium",
-                                    className: t5.vp,
+                                    className: t4.vp,
                                     children: O.intl.string(O.t["BMw+7I"]),
                                 }),
                             ],
@@ -1375,11 +1375,11 @@ function t8(e) {
                     ],
                 }),
                 (0, l.jsx)("div", {
-                    className: t5.UD,
-                    children: (0, l.jsx)(t4.A, {
+                    className: t4.UD,
+                    children: (0, l.jsx)(t5.A, {
                         showGradient: !0,
-                        iconClassName: t5.PC,
-                        subscriptionTier: e5.pe.TIER_2,
+                        iconClassName: t4.PC,
+                        subscriptionTier: e4.pe.TIER_2,
                         textOptions: { textOverride: O.intl.string(O.t.Y2WKTl) },
                         size: t9.$n.Sizes.SMALL,
                         premiumModalAnalyticsLocation: { section: i, object: b.ZSU.MESSAGE },
@@ -1390,9 +1390,9 @@ function t8(e) {
     });
 }
 var ne = n(837381),
-    nt = n(990078),
-    nn = n(933832),
-    ni = n(138134),
+    nt = n(933832),
+    nn = n(138134),
+    ni = n(866665),
     ns = n(231483),
     nl = n(123292),
     na = n(709066),
@@ -1411,7 +1411,7 @@ var ne = n(837381),
 function nE(e) {
     let { channel: t, onClick: n, beforeTransition: i, className: s, openChatWithoutConnecting: a } = e,
         r = (0, c.bG)([v.default, nA.A], () => (null == t ? "" : (0, nh.m1)(t, v.default, nA.A)), [t]);
-    return (0, l.jsx)(nt.m, {
+    return (0, l.jsx)(ni.m, {
         "data-pending-richtooltip-migration": !0,
         __unsupportedReactNodeAsText: r,
         position: "top",
@@ -1559,9 +1559,9 @@ function nF(e) {
         case nr.G.DELETE_USER_MESSAGE:
             return (0, l.jsx)(th.u, { size: "xs", color: "currentColor", className: nM.yr });
         case nr.G.SET_COMPLETED:
-            return (0, l.jsx)(nn.A, { size: "xs", color: "currentColor", className: eh()(nM.yr, nM.r0) });
+            return (0, l.jsx)(nt.A, { size: "xs", color: "currentColor", className: eh()(nM.yr, nM.r0) });
         case nr.G.SUBMIT_FEEDBACK:
-            return (0, l.jsx)(ni.i, { size: "xs", color: "currentColor", className: nM.yr });
+            return (0, l.jsx)(nn.i, { size: "xs", color: "currentColor", className: nM.yr });
         default:
             return null;
     }
@@ -1591,7 +1591,7 @@ function nV(e) {
                 return l;
             }
         })(t, i, n);
-        return (0, l.jsx)(nt.m, { text: s, children: nF(e) });
+        return (0, l.jsx)(ni.m, { text: s, children: nF(e) });
     } catch (e) {
         return null;
     }
@@ -1916,11 +1916,11 @@ function n7(e) {
     switch (i) {
         case E.ZA:
         case nZ.W.RAID:
-            return (0, l.jsx)(n5, { message: t, compact: n });
+            return (0, l.jsx)(n4, { message: t, compact: n });
         case nZ.W.MENTION_RAID:
             return (0, l.jsx)(n8, { message: t, compact: n });
         case nZ.W.ACTIVITY_ALERTS_ENABLED:
-            return (0, l.jsx)(n4, { message: t, compact: n });
+            return (0, l.jsx)(n5, { message: t, compact: n });
         case nZ.W.INTERACTION_BLOCKED:
             return (0, l.jsx)(n9, { compact: n });
         default:
@@ -1969,7 +1969,7 @@ function n9(e) {
         }),
     });
 }
-function n4(e) {
+function n5(e) {
     let { message: t, compact: n } = e,
         i = v.default.getUser((0, E.ZD)(t)),
         s = tk.A.getBasicChannel(t.channel_id)?.guild_id,
@@ -2055,7 +2055,7 @@ function n4(e) {
         }),
     });
 }
-function n5(e) {
+function n4(e) {
     let { message: t, compact: n } = e,
         { joinAttempts: i, raidDatetime: s, dmsSent: r, raidType: o, resolvedReason: d } = (0, E.Bk)(t),
         u = (0, c.bG)([tk.A], () => tk.A.getChannel(t.channel_id), [t.channel_id]),
@@ -2945,7 +2945,7 @@ function i9(e) {
         children: r,
     });
 }
-function i4(e) {
+function i5(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         s = (0, k.Ay)(t),
         a = i(s),
@@ -2959,7 +2959,7 @@ function i4(e) {
         children: r,
     });
 }
-function i5(e) {
+function i4(e) {
     let { message: t, compact: n, usernameHook: i } = e,
         s = (0, k.Ay)(t),
         a = i(s),
@@ -3661,7 +3661,7 @@ let s7 = Object.freeze({
                 { author: s } = t,
                 r = t.getChannelId(),
                 o = a.useCallback(() => {
-                    if (tU.A.getChannelId() !== r) {
+                    if (tU.Ay.getChannelId() !== r) {
                         let e = tk.A.getChannel(r);
                         null != e && (0, N.uh)(e.guild_id, e.id);
                     }
@@ -3899,7 +3899,7 @@ let s7 = Object.freeze({
                 a = (0, c.bG)([ed.Ay], () => ed.Ay.getActiveEventByChannel(n.id), [n.id]);
             return (0, l.jsxs)(l.Fragment, {
                 children: [
-                    (0, l.jsx)(i4, { message: t, compact: i, usernameHook: s }),
+                    (0, l.jsx)(i5, { message: t, compact: i, usernameHook: s }),
                     null != a && a.name === t.content ? (0, l.jsx)(eu.A, { code: `${n.guild_id}-${a.id}` }) : null,
                 ],
             });
@@ -3942,7 +3942,7 @@ let s7 = Object.freeze({
         [b.lAJ.STAGE_TOPIC]: function (e) {
             let { message: t, channel: n, compact: i } = e,
                 s = (0, p.P)({ user: t.author, channelId: n.id, guildId: n.guild_id, messageId: t.id });
-            return (0, l.jsx)(i5, { message: t, compact: i, usernameHook: s });
+            return (0, l.jsx)(i4, { message: t, compact: i, usernameHook: s });
         },
         [b.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION]: function (e) {
             let { message: t, channel: n, compact: i } = e,

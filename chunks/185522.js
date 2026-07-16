@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(158390),
     r = n(439372),
-    s = n(734057),
-    a = n(568548),
-    o = n(309010),
-    l = n(935208),
-    u = n(828488),
-    c = n(775632),
-    d = n(958720),
+    a = n(734057),
+    s = n(568548),
+    l = n(309010),
+    o = n(935208),
+    d = n(828488),
+    c = n(623562),
+    u = n(619065),
     _ = n(575279);
-class h extends r.A {
+class E extends r.A {
     visibleTopMessageId = null;
     backoffStateByChannel = new Map();
     actions = {
@@ -19,10 +19,10 @@ class h extends r.A {
         },
         UPDATE_VISIBLE_MESSAGES: (e) => {
             let { topVisibleMessage: t } = e,
-                n = o.A.getChannelId();
+                n = l.Ay.getChannelId();
             if (null == n) return;
-            let i = s.A.getChannel(n)?.guild_id;
-            if (null == i || !(0, u.Lc)(i, "visible_messages")) return;
+            let i = a.A.getChannel(n)?.guild_id;
+            if (null == i || !(0, d.Lc)(i, "visible_messages")) return;
             let r = this.visibleTopMessageId !== t;
             (this.visibleTopMessageId = t ?? null),
                 this.isBackoffPending(n) ||
@@ -43,10 +43,10 @@ class h extends r.A {
         LOGOUT: () => this.reset(),
     };
     fetchForViewport(e, t, n) {
-        let i = d.A.getChannelConversations(e),
+        let i = u.A.getChannelConversations(e),
             r = this.hasMoreConversations(e, "before"),
-            s = this.hasMoreConversations(e, "after");
-        if (null == i || (0 === i.length && s))
+            a = this.hasMoreConversations(e, "after");
+        if (null == i || (0 === i.length && a))
             return void (0, c.WF)({
                 channelId: e,
                 guildId: t,
@@ -55,26 +55,26 @@ class h extends r.A {
                 limit: 25,
                 isJump: !0,
             });
-        let o = this.visibleTopMessageId ?? a.Ay.lastMessageId(e);
-        if (null == o || null == i || 0 === i.length) return;
-        let l = null == this.visibleTopMessageId;
-        if (this.isAnchorOutsideBuffer(i, o) && (!l || n))
-            return void (0, c.WF)({ channelId: e, guildId: t, direction: "around", anchor: o, limit: 25, isJump: !0 });
-        if (l) {
-            s && (0, c.WF)({ channelId: e, guildId: t, direction: "after", anchor: i[i.length - 1].id, limit: 25 });
+        let l = this.visibleTopMessageId ?? s.Ay.lastMessageId(e);
+        if (null == l || null == i || 0 === i.length) return;
+        let o = null == this.visibleTopMessageId;
+        if (this.isAnchorOutsideBuffer(i, l) && (!o || n))
+            return void (0, c.WF)({ channelId: e, guildId: t, direction: "around", anchor: l, limit: 25, isJump: !0 });
+        if (o) {
+            a && (0, c.WF)({ channelId: e, guildId: t, direction: "after", anchor: i[i.length - 1].id, limit: 25 });
             return;
         }
-        let { above: u, below: _ } = this.countBuffer(e, o);
-        u < 10 && _ < 10 && r && s
-            ? (0, c.WF)({ channelId: e, guildId: t, direction: "around", anchor: o, limit: 25 })
-            : u < 10 && r
+        let { above: d, below: _ } = this.countBuffer(e, l);
+        d < 10 && _ < 10 && r && a
+            ? (0, c.WF)({ channelId: e, guildId: t, direction: "around", anchor: l, limit: 25 })
+            : d < 10 && r
               ? (0, c.WF)({ channelId: e, guildId: t, direction: "before", anchor: i[0].id, limit: 25 })
               : _ < 10 &&
-                s &&
+                a &&
                 (0, c.WF)({ channelId: e, guildId: t, direction: "after", anchor: i[i.length - 1].id, limit: 25 });
     }
     hasMoreConversations(e, t) {
-        let n = d.A.getEdgeMarker(e, t);
+        let n = u.A.getEdgeMarker(e, t);
         return "before" === t ? null == n : null == n || Date.now() - n > _.sE;
     }
     isBackoffPending(e) {
@@ -97,9 +97,9 @@ class h extends r.A {
         this.backoffStateByChannel.get(e)?.backoff.cancel(), this.backoffStateByChannel.delete(e);
     }
     retryAfterBackoff(e) {
-        if (o.A.getChannelId() !== e) return;
-        let t = s.A.getChannel(e)?.guild_id;
-        null != t && (0, u.Lc)(t, "backoff_retry") && this.fetchForViewport(e, t, !0);
+        if (l.Ay.getChannelId() !== e) return;
+        let t = a.A.getChannel(e)?.guild_id;
+        null != t && (0, d.Lc)(t, "backoff_retry") && this.fetchForViewport(e, t, !0);
     }
     reset() {
         for (let { backoff: e } of ((this.visibleTopMessageId = null), this.backoffStateByChannel.values())) e.cancel();
@@ -108,18 +108,18 @@ class h extends r.A {
     isAnchorOutsideBuffer(e, t) {
         let n = e[0],
             i = e[e.length - 1];
-        return 0 > l.default.compare(t, n.startMessageId) || l.default.compare(t, i.endMessageId) > 0;
+        return 0 > o.default.compare(t, n.startMessageId) || o.default.compare(t, i.endMessageId) > 0;
     }
     countBuffer(e, t) {
-        let n = d.A.getChannelConversations(e);
+        let n = u.A.getChannelConversations(e);
         if (null == n) return { above: 0, below: 0 };
         let i = 0,
             r = 0;
         for (let e of n) {
-            let n = l.default.compare(e.startMessageId, t);
+            let n = o.default.compare(e.startMessageId, t);
             n < 0 ? i++ : n > 0 && r++;
         }
         return { above: i, below: r };
     }
 }
-let f = new h();
+let A = new E();

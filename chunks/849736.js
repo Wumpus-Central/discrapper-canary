@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, {
     J7: () => g,
-    Nx: () => D,
+    Nx: () => y,
     OE: () => v,
     SA: () => S,
     Tf: () => C,
-    b3: () => y,
+    b3: () => D,
     b6: () => L,
     e7: () => N,
     gt: () => O,
@@ -123,13 +123,13 @@ function L(e, t, n) {
         : ((d.allow = a.TF(d.allow, t)), (d.deny = a.WQ(d.deny, t))),
         l.A.updatePermissionOverwrite(e.id, d);
 }
-async function D(e, t, n, i) {
+async function y(e, t, n, i) {
     if ("" === t) return;
-    u.A.getVoiceChannelId() !== e.id && (0, A.cy)(e);
+    u.Ay.getVoiceChannelId() !== e.id && (0, A.cy)(e);
     let r = await (0, I.yG)(e.id, t, n, i);
     return N(e, !1, !0), r;
 }
-async function y(e, t, n) {
+async function D(e, t, n) {
     if ("" !== t) return await (0, I.RY)(e.id, t, n);
 }
 async function v(e) {

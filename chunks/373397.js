@@ -8,17 +8,17 @@ var l = t(627968),
     o = t(267102),
     u = t(742023),
     c = t(652215),
-    A = t(495544),
+    A = t(280450),
     b = t(734057),
     p = t(994500),
     k = t(309010),
     f = t(375708);
 function C(n) {
     let { user: e, context: C } = n,
-        m = (0, i.bG)([A.default], () => A.default.getId() === e.id),
-        h = (0, i.bG)([p.A], () => p.A.isBlocked(e.id)),
-        v = (0, i.bG)([k.A, b.A], () => k.A.getVoiceChannelId() === b.A.getDMFromUserId(e.id)),
-        { runVoiceCallAction: y } = (function (n) {
+        h = (0, i.bG)([A.default], () => A.default.getId() === e.id),
+        m = (0, i.bG)([p.A], () => p.A.isBlocked(e.id)),
+        y = (0, i.bG)([k.Ay, b.A], () => k.Ay.getVoiceChannelId() === b.A.getDMFromUserId(e.id)),
+        { runVoiceCallAction: v } = (function (n) {
             let { userId: e, onClose: i } = n,
                 a = (0, o.aL)(),
                 A = d.useCallback(() => {
@@ -38,7 +38,7 @@ function C(n) {
                 }, [b, A]);
             return { startCall: A, runVoiceCallAction: p };
         })({ userId: e.id });
-    return m || C === c.BRT.POPOUT || v || e.bot || e.isProvisional
+    return h || C === c.BRT.POPOUT || y || e.bot || e.isProvisional
         ? null
-        : (0, l.jsx)(a.Dr, { id: "call", label: f.intl.string(f.t["ZeP+kK"]), action: y, disabled: h });
+        : (0, l.jsx)(a.Dr, { id: "call", label: f.intl.string(f.t["ZeP+kK"]), action: v, disabled: m });
 }

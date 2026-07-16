@@ -3,7 +3,7 @@ var t = l(64700),
     d = l(136722),
     s = l(17928),
     i = l(95561),
-    r = l(837152),
+    r = l(311964),
     u = l(885437),
     a = l(973854),
     A = l(815706),
@@ -42,9 +42,9 @@ class D extends t.Component {
         return null;
     }
 }
-let L = s.Ay.connectStores([o.A, g.A, E.A, _.default, I.default, c.Ay, h.A, p.Ay], () => {
+let L = s.Ay.connectStores([o.A, g.Ay, E.A, _.default, I.default, c.Ay, h.A, p.Ay], () => {
     let e = o.A.getGuildId(),
-        n = g.A.getChannelId(e),
+        n = g.Ay.getChannelId(e),
         l = E.A.getGuild(e),
         t = _.default.getCurrentUser(),
         s = c.Ay.getChannels(l?.id)[c.I6] ?? [],

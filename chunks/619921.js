@@ -17,7 +17,7 @@ function _(e) {
 class E extends i.Ay.Store {
     static displayName = "AppViewStore";
     initialize() {
-        this.waitFor(s.A, d.A, o.A, l.A, a.A);
+        this.waitFor(s.A, d.A, o.Ay, l.A, a.A);
     }
     getHomeLink() {
         return u ?? s.A.fallbackRoute;
@@ -26,7 +26,7 @@ class E extends i.Ay.Store {
 let A = new E(r.h, {
     OVERLAY_INITIALIZE: function () {
         let e = d.A.getPrivateChannelIds(),
-            t = o.A.getChannelId(c.ME);
+            t = o.Ay.getChannelId(c.ME);
         (null != t || null != e[0]) && (u = c.BVt.CHANNEL(c.ME, t ?? e[0]));
     },
     APP_VIEW_SET_HOME_LINK: _,

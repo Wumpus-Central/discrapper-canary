@@ -6602,7 +6602,7 @@ let ot = (0, d.animated)(S),
                                             let e;
                                             return (
                                                 I.A.jumpToPresent(s.id, (0, lQ.h)("renderStream.jumpToPresent")),
-                                                (e = rK.A.getChannelId()),
+                                                (e = rK.Ay.getChannelId()),
                                                 void (s.id === e && (0, rN.iN)(s.id))
                                             );
                                         },

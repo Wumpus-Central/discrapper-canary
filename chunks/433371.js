@@ -25,9 +25,9 @@ var i,
     R = n(646865),
     O = n(795816),
     L = n(933958),
-    D = n(379848),
-    y = n(832248),
-    v = n(371912),
+    y = n(379848),
+    D = n(832248),
+    v = n(764336),
     b = n(885386),
     M = n(843010),
     P = n(461213),
@@ -312,7 +312,7 @@ function ea(e) {
                 r = b.tz.useSetting(),
                 a = (0, M.G)(),
                 s = (0, _.bG)([P.A], () => P.A.getStatus()),
-                { isOpen: l } = (0, y.A)();
+                { isOpen: l } = (0, D.A)();
             if (((n && i) || t) && !a && !l && !__OVERLAY__) {
                 if (!r && s === G.clD.INVISIBLE) return t ? en.ActivityAndStatus : en.ActivityAndStatusNux;
                 if (!r) return t ? en.Activity : en.ActivityNux;
@@ -324,7 +324,7 @@ function ea(e) {
         n && U.default.track(G.HAw.OPEN_POPOUT, { type: "SharingPrivacyPopout" });
     }, [n]);
     let d = n || l ? [] : [E.M.SHARE_ACTIVITY_COACHMARK_V2];
-    return (0, r.jsx)(D.Ay, {
+    return (0, r.jsx)(y.Ay, {
         contentTypes: d,
         children: (e) => {
             let { visibleContent: a, markAsDismissed: l } = e,
@@ -371,8 +371,8 @@ var eu = n(472636),
     eR = n(430795),
     eO = n(118328),
     eL = n(253146);
-let eD = 2 * eS.A.Millis.WEEK;
-function ey(e) {
+let ey = 2 * eS.A.Millis.WEEK;
+function eD(e) {
     let { targetElementRef: t, markAsDismissed: n } = e,
         i = (0, eC.Et)(),
         a = (0, _.bG)([eN.Ay], () => eN.Ay.getEnableAutoclipping()),
@@ -544,8 +544,8 @@ var to = n(994314),
     tR = n(442433),
     tO = n(42473),
     tL = n(186111),
-    tD = n(532624),
-    ty = n(350535),
+    ty = n(532624),
+    tD = n(350535),
     tv = n(646693);
 function tb(e) {
     (0, tR.L3)(e, async () => {
@@ -578,9 +578,9 @@ let tP = function () {
         n = (0, tS.bG)([tL.A], () => tL.A.hasLayers()),
         i = (0, eC.Et)(),
         s = (0, tS.bG)([eN.Ay], () => eN.Ay.getIsAtMaxSaveClipOperations()),
-        l = (0, tS.bG)([tD.Ay], () => tD.Ay.getKeybindForAction(G.hCu.SAVE_CLIP));
+        l = (0, tS.bG)([ty.Ay], () => ty.Ay.getKeybindForAction(G.hCu.SAVE_CLIP));
     if (!i || null == l || n) return null;
-    let o = ty.dI(l.shortcut, !0);
+    let o = tD.dI(l.shortcut, !0);
     return (0, r.jsxs)(r.Fragment, {
         children: [
             (0, r.jsx)(tM, { keybindString: o, targetElementRef: e }),
@@ -589,7 +589,7 @@ let tP = function () {
                 disabled: s,
                 tooltipText:
                     null != l
-                        ? z.intl.formatToPlainString(z.t.HIMcv1, { hotkey: ty.dI(l?.shortcut, !0) })
+                        ? z.intl.formatToPlainString(z.t.HIMcv1, { hotkey: tD.dI(l?.shortcut, !0) })
                         : z.intl.string(z.t.s52pju),
                 onClick: () => {
                     (0, eR.l0)(), (0, eI.X)(t, eI.O.CLIP);
@@ -695,8 +695,8 @@ let tX = a.memo(function (e) {
                 hasAlreadyLinked: C,
                 connectionApp: O,
             } = e,
-            { parentAnalyticsLocation: L, analyticsLocations: D } = (0, es.Ay)(),
-            y = (0, tY.A)(f?.id),
+            { parentAnalyticsLocation: L, analyticsLocations: y } = (0, es.Ay)(),
+            D = (0, tY.A)(f?.id),
             v = tZ(f, I, E),
             { enabled: b } = tk.useConfig({ location: "activity-panel" }),
             M = (0, tF.Bp)("activity-panel"),
@@ -755,11 +755,11 @@ let tX = a.memo(function (e) {
                         (0, r.jsx)(e, {
                             ...t,
                             sourcePID: u?.pid,
-                            selectSource: null != tn.A.getVoiceChannelId(),
-                            analyticsLocations: D,
+                            selectSource: null != tn.Ay.getVoiceChannelId(),
+                            analyticsLocations: y,
                         });
                 });
-            }, [u, D]),
+            }, [u, y]),
             K = f?.name ?? u?.name ?? "",
             $ = a.useCallback(() => {
                 (0, tG.pK)({ gameApplicationId: u?.id, buttonVariant: "admin" }),
@@ -773,8 +773,8 @@ let tX = a.memo(function (e) {
             q = a.useCallback(() => {
                 d()(null != s, "Received null guildId"),
                     (0, tG.pK)({ gameApplicationId: u?.id, buttonVariant: "member" }),
-                    (0, tw.A)({ analyticsLocations: D, analyticsLocation: p.location, guildId: s });
-            }, [s, D, p.location, u?.id]),
+                    (0, tw.A)({ analyticsLocations: y, analyticsLocation: p.location, guildId: s });
+            }, [s, y, p.location, u?.id]),
             Z = a.useRef(null),
             [X, Q] = a.useState(!1);
         a.useEffect(
@@ -786,7 +786,7 @@ let tX = a.memo(function (e) {
             a.useEffect(() => {
                 C && (Q(!1), null != Z.current && (clearTimeout(Z.current), (Z.current = null)));
             }, [C]);
-        let J = null == y || null == f ? null : (0, r.jsx)(t0, { applicationId: y.id }),
+        let J = null == D || null == f ? null : (0, r.jsx)(t0, { applicationId: D.id }),
             ee = F
                 ? (0, r.jsx)(tJ, {
                       tooltipText: z.intl.formatToPlainString(tB.default.YhnUVO, { gameName: K }),
@@ -883,7 +883,7 @@ let tX = a.memo(function (e) {
                     : (0, r.jsx)(tQ, {
                           runningGame: u,
                           startAuthorization: function () {
-                              S({ analyticsLocations: D }) === tz._M.RPC &&
+                              S({ analyticsLocations: y }) === tz._M.RPC &&
                                   (Q(!0),
                                   null != Z.current && clearTimeout(Z.current),
                                   (Z.current = setTimeout(() => {
@@ -1001,8 +1001,8 @@ var t7 = n(16590),
     t8 = n(118902);
 function t9(e) {
     let { isStreaming: t, isCurrentlyRunningGame: n, onClickNotSharing: i } = e,
-        a = (0, _.bG)([tD.Ay], () => tD.Ay.getKeybindForAction(G.hCu.SAVE_CLIP)),
-        s = null != a && a.shortcut.length > 0 ? ty.dI(a.shortcut, !0) : null,
+        a = (0, _.bG)([ty.Ay], () => ty.Ay.getKeybindForAction(G.hCu.SAVE_CLIP)),
+        s = null != a && a.shortcut.length > 0 ? tD.dI(a.shortcut, !0) : null,
         l = (0, eC.Et)(),
         o = (0, eC.XT)(),
         d = b.tz.useSetting(),
@@ -1383,7 +1383,7 @@ function nh(e) {
                 })
             );
         case 4:
-            return (0, r.jsx)(ey, { targetElementRef: A, markAsDismissed: n });
+            return (0, r.jsx)(eD, { targetElementRef: A, markAsDismissed: n });
         default:
             return null;
     }
@@ -1539,20 +1539,20 @@ let nm = (0, N.A)(function (e) {
             let s = n - r.endedAt;
             return { previouslyRunningGame: r, isWithinThreshold: t && s < eB };
         })({ enabled: h || I }),
-        T = (0, _.bG)([tn.A, e4.A], () => e4.A.getChannel(tn.A.getVoiceChannelId())),
+        T = (0, _.bG)([tn.Ay, e4.A], () => e4.A.getChannel(tn.Ay.getVoiceChannelId())),
         m = (0, _.bG)([L.Ay], () => L.Ay.getConnectedActivityChannelId()),
         g = (0, _.bG)([e4.A], () => e4.A.getChannel(m)),
         S = (0, _.bG)([e7.A], () => e7.A.getGuild(g?.guild_id)),
         [N, R] = (0, _.yK)([e3.A], () => [e3.A.getCurrentUserActiveStream(), e3.A.getStreamerActiveStreamMetadata()]),
         O = (0, _.bG)([L.Ay], () => L.Ay.getCurrentEmbeddedActivity()),
-        D = (0, _.bG)([eM.A], () => eM.A.getConnectedFrame()),
+        y = (0, _.bG)([eM.A], () => eM.A.getConnectedFrame()),
         b = (0, _.bG)([e7.A, e9.A], () => null == T || eW.vz(T, e7.A, e9.A, !1)),
         [P] = (0, eA.A)([
             (function () {
                 if (null != R && null != R.id) return R.id;
                 if (null != A) return A.id;
                 if (null != O) return O.applicationId;
-                if (null != D) return D.applicationId;
+                if (null != y) return y.applicationId;
                 if (null != f && null != f.id) return f.id;
             })(),
         ]),
@@ -1644,12 +1644,12 @@ let nm = (0, N.A)(function (e) {
                             [eN.Ay],
                             () => !eN.Ay.hasUserSetAutoclippingSettings() && !eN.Ay.getEnableAutoclipping(),
                         ),
-                        r = (0, y.A)((e) => e.isOpen),
+                        r = (0, D.A)((e) => e.isOpen),
                         a = (0, M.G)(),
                         s = !e && t && n && i && !r && !a,
                         [l, o] = (0, ep.Wl)(
                             s ? E.M.AUTOCLIPPING_ACCOUNT_PANEL_COACHMARK : null,
-                            { cooldownDurationMs: eD },
+                            { cooldownDurationMs: ey },
                             er.m.ACCOUNT_NAME_ZONE,
                             !0,
                         );
@@ -1720,16 +1720,16 @@ let nm = (0, N.A)(function (e) {
                             activityPopoutTargetRef: s,
                             isActivityPopoutOpen: j,
                         })
-                      : null != D &&
+                      : null != y &&
                           null != P &&
                           (function (e) {
                               let { application: t, frame: n } = e;
                               return null != t && null != n && n.applicationId === t.id;
-                          })({ application: P, frame: D })
+                          })({ application: P, frame: y })
                         ? (0, r.jsx)(np, {
                               application: P,
                               accountLinkUpsellTargetRef: o,
-                              frame: D,
+                              frame: y,
                               isActivityPopoutOpen: j,
                           })
                         : k
@@ -1741,7 +1741,7 @@ let nm = (0, N.A)(function (e) {
                           : null != eu
                             ? eE(P, eu, { isGameRunning: !1 })
                             : null,
-            [R, x, P, F, g, O, D, S, j, B, k, el, eu, eE, A, V],
+            [R, x, P, F, g, O, y, S, j, B, k, el, eu, eE, A, V],
         );
     return null == eh
         ? null
@@ -1763,7 +1763,7 @@ let nm = (0, N.A)(function (e) {
                           activity: x,
                           application: P,
                           embeddedActivity: O,
-                          frame: D,
+                          frame: y,
                           analyticsContext: n,
                           inviteButtonRef: d,
                           accountLinkButtonRef: et,

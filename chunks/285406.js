@@ -71,7 +71,7 @@ let E = [
     ],
     x = function (e) {
         let { guild: t, channel: n } = e,
-            s = (0, i.bG)([h.A], () => null != n && h.A.getChannelId() === n.id),
+            s = (0, i.bG)([h.Ay], () => null != n && h.Ay.getChannelId() === n.id),
             r = (0, i.bG)([A.A, m.Ay], () => {
                 if (null == n) return 0;
                 let e = m.Ay.ackMessageId(n.id);

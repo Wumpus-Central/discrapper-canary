@@ -23,7 +23,7 @@ var i = s(627968),
     E = s(688810),
     _ = s(952818),
     w = s(885386),
-    N = s(451409),
+    N = s(186295),
     I = s(763827),
     O = s(287809),
     R = s(157257),
@@ -287,7 +287,7 @@ async function eC(e) {
         { windowSources: x, screenSources: h, cameraSources: p }
     );
 }
-var eA = s(735438),
+var eA = s(435558),
     ey = s.n(eA),
     eE = s(72978),
     e_ = s(91777),
@@ -436,7 +436,7 @@ function eP() {
         })
     );
 }
-var eF = s(534514),
+var eF = s(297264),
     ek = s(66455),
     eZ = s(775602),
     eH = s(120559);
@@ -1613,7 +1613,7 @@ function tc(e) {
     return e === eO.on.RESOLUTION_SOURCE ? ec.intl.string(ec.t.XjXqzh) : `${e}p`;
 }
 function to() {
-    let e = (0, u.bG)([tr.A, $.A], () => $.A.getChannel(tr.A.getVoiceChannelId())),
+    let e = (0, u.bG)([tr.Ay, $.A], () => $.A.getChannel(tr.Ay.getVoiceChannelId())),
         t = e?.getGuildId();
     return (0, u.bG)([ee.A], () => (null != t ? ee.A.getGuild(t)?.premiumTier : null));
 }
@@ -1628,7 +1628,7 @@ let tu = (e) => {
 var tf = s(837859);
 function th(e) {
     let t = (0, u.bG)([O.default], () => O.default.getCurrentUser()),
-        s = (0, u.bG)([tr.A, $.A], () => $.A.getChannel(tr.A.getVoiceChannelId())),
+        s = (0, u.bG)([tr.Ay, $.A], () => $.A.getChannel(tr.Ay.getVoiceChannelId())),
         i = s?.getGuildId(),
         l = (0, u.bG)([ee.A], () => (null != i ? ee.A.getGuild(i)?.premiumTier : null));
     return (0, tf.Ay)(e, t, l);
@@ -1673,7 +1673,7 @@ function tS(e) {
             },
             x,
         ] = eb(),
-        p = (0, u.bG)([tr.A], () => tr.A.getVoiceChannelId()),
+        p = (0, u.bG)([tr.Ay], () => tr.Ay.getVoiceChannelId()),
         m = (0, u.bG)([$.A, tl.A], () => {
             if (null == p) return !0;
             let e = $.A.getChannel(p),

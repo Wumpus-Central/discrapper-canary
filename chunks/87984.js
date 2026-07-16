@@ -13,13 +13,13 @@ var s = l(627968),
     f = l(688810),
     x = l(480335),
     h = l(577390),
-    I = l(474257),
+    I = l(372320),
     j = l(31956),
     P = l(744808),
     O = l(915089),
     m = l(713517),
-    g = l(645507),
-    y = l(267102),
+    y = l(645507),
+    g = l(267102),
     T = l(71393),
     v = l(562153),
     C = l(183555),
@@ -40,7 +40,7 @@ var s = l(627968),
     q = l(468689),
     z = l(474397),
     B = l(378570),
-    H = l(495544),
+    H = l(280450),
     W = l(309010),
     D = l(993401),
     K = l(652215),
@@ -50,10 +50,10 @@ var s = l(627968),
 function J(e) {
     let { user: i, guildId: l, channelId: n, onClose: d, appContext: o } = e,
         { newestAnalyticsLocation: t } = (0, f.Ay)(),
-        a = (0, y.aL)(),
+        a = (0, g.aL)(),
         u = (0, r.bG)([H.default], () => H.default.getId() === i?.id),
         c = (0, V.q)(l ?? null),
-        p = (0, r.bG)([W.A], () => n ?? W.A.getChannelId(l, !0), [n, l]);
+        p = (0, r.bG)([W.Ay], () => n ?? W.Ay.getChannelId(l, !0), [n, l]);
     return null == l || !c || u
         ? null
         : (0, s.jsx)(D.br, {
@@ -70,7 +70,7 @@ function J(e) {
               },
           });
 }
-var Q = l(700174),
+var Q = l(851471),
     Z = l(983495),
     ee = l(364522),
     ei = l(695366),
@@ -94,8 +94,8 @@ var Q = l(700174),
     eP = l(442228),
     eO = l(192867),
     em = l(403369),
-    eg = l(360563),
-    ey = l(996988),
+    ey = l(360563),
+    eg = l(996988),
     eT = l(656884);
 function ev(e) {
     let {
@@ -132,7 +132,7 @@ function ev(e) {
                 pronouns: n?.pronouns,
                 onClose: u,
                 usernameIcon: i.hasAvatarForGuild(d?.id) && (0, s.jsx)(eO.A, { user: i, nickname: c }),
-                trailing: (0, s.jsx)(et.A, { displayProfile: n, themeType: ey.d.POPOUT, onClose: u }),
+                trailing: (0, s.jsx)(et.A, { displayProfile: n, themeType: eg.d.POPOUT, onClose: u }),
             }),
             p === K.eA$.PENDING_INCOMING &&
                 (0, s.jsx)(S.A.Overlay, {
@@ -153,7 +153,7 @@ function ev(e) {
                 ),
             ),
             (0, s.jsx)(eA.A, { user: i }),
-            !h && (0, s.jsx)(eg.A, { user: i, onOpenProfile: (e) => t?.({ tabSection: e }) }),
+            !h && (0, s.jsx)(ey.A, { user: i, onOpenProfile: (e) => t?.({ tabSection: e }) }),
             n?.private && (0, s.jsx)(S.A.Overlay, { children: (0, s.jsx)(ep.A, { username: c }) }),
             h && (0, s.jsx)(ea.A, { isPremiumUser: j, onInteraction: u }),
             i.isProvisional
@@ -192,7 +192,7 @@ function eE(e) {
             onClickContainer: ee,
         } = e,
         { analyticsLocations: ei } = (0, f.Ay)([...D, A.A.USER_PROFILE_POPOUT]),
-        el = (0, y.aL)(),
+        el = (0, g.aL)(),
         es = (0, C.pb)({ layout: "POPOUT", userId: i.id, guildId: L, channelId: M, messageId: V, roleId: q }),
         en = (0, r.bG)([T.A], () => (null != L ? T.A.getGuild(L) : null)),
         ed = n.useMemo(() => (null != L ? { [L]: [i.id] } : {}), [L, i.id]);
@@ -210,7 +210,7 @@ function eE(e) {
     }, [er, H, ec?.skuId]);
     let ef = n.useRef(null),
         ex = i.id === l.id,
-        eh = n.useMemo(() => (0, g.A)(), []);
+        eh = n.useMemo(() => (0, y.A)(), []);
     function eI(e) {
         B?.(),
             el.dispatch(K.jej.POPOUT_CLOSE),
@@ -248,7 +248,7 @@ function eE(e) {
                             children: (0, s.jsxs)(S.A, {
                                 user: i,
                                 displayProfile: eo,
-                                themeType: ey.d.POPOUT,
+                                themeType: eg.d.POPOUT,
                                 className: eT.BK,
                                 isPrivate: eo?.private === !0,
                                 children: [
@@ -265,7 +265,7 @@ function eE(e) {
                                                 onClose: B,
                                                 appContext: X,
                                             }),
-                                            (0, s.jsx)(G.A, { themeType: ey.d.POPOUT, user: i }),
+                                            (0, s.jsx)(G.A, { themeType: eg.d.POPOUT, user: i }),
                                             !ex &&
                                                 (0, s.jsx)(Q.yo, {
                                                     user: i,
@@ -295,7 +295,7 @@ function eE(e) {
                                                 user: i,
                                                 displayProfile: eo,
                                                 guildId: L,
-                                                themeType: ey.d.POPOUT,
+                                                themeType: eg.d.POPOUT,
                                             }),
                                             (0, s.jsx)(b.A, { userId: i.id, className: eT.oR, onClose: B }),
                                             (0, s.jsx)(_.A, {
@@ -303,7 +303,7 @@ function eE(e) {
                                                 displayProfile: eo,
                                                 guildId: L,
                                                 channelId: M,
-                                                themeType: ey.d.POPOUT,
+                                                themeType: eg.d.POPOUT,
                                                 onOpenProfile: W ? void 0 : eI,
                                             }),
                                             (0, s.jsx)(Z.A, {
@@ -311,7 +311,7 @@ function eE(e) {
                                                 user: i,
                                                 guildId: L,
                                                 channelId: M,
-                                                themeType: ey.d.POPOUT,
+                                                themeType: eg.d.POPOUT,
                                                 onCloseProfile: B,
                                                 prompt: eh,
                                             }),

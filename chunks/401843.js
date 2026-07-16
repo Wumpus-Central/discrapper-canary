@@ -1,11 +1,11 @@
 "use strict";
 n.d(t, {
-    A9: () => y,
+    A9: () => D,
     Ho: () => v,
     Nl: () => b,
     TZ: () => L,
     Tp: () => U,
-    XI: () => R,
+    XI: () => O,
     Xd: () => G,
     Xi: () => P,
     a8: () => w,
@@ -37,11 +37,11 @@ n(387755), n(308528);
 var N = n(367513);
 n(730852);
 var C = n(652215),
-    O = n(325278);
-function R(e, t, n) {
+    R = n(325278);
+function O(e, t, n) {
     l.h.dispatch({
         type: "STREAM_START",
-        streamType: null != e ? O.U4.GUILD : O.U4.CALL,
+        streamType: null != e ? R.U4.GUILD : R.U4.CALL,
         guildId: e,
         channelId: t,
         appContext: __OVERLAY__ ? C.BRT.OVERLAY : C.BRT.APP,
@@ -52,14 +52,14 @@ function L(e, t) {
     let n = (0, d._z)(e);
     l.h.dispatch({ type: "STREAM_SET_PAUSED", streamKey: n, paused: t });
 }
-function D(e, t) {
+function y(e, t) {
     let n = h.A.getChannel(t);
     return r()(null != n, "Cannot join a null voice channel"), !p.A.isInChannel(t) && (0, T.Pd)(n, p.A, I.A);
 }
-function y(e, t) {
+function D(e, t) {
     if (null != o.default.getRemoteSessionId()) return;
     let { guildId: n, channelId: i } = e;
-    if (null != n && D(n, i)) return;
+    if (null != n && y(n, i)) return;
     let r = (0, d._z)(e),
         a =
             t?.forceMultiple ||
@@ -75,10 +75,10 @@ function v(e, t) {
 }
 function b(e, t) {
     let { guildId: n, channelId: i } = e;
-    if (null != n && D(n, i)) return;
-    y(e, t);
+    if (null != n && y(n, i)) return;
+    D(e, t);
     let r = u.A.getWindowOpen(C.MLl.CHANNEL_CALL_POPOUT),
-        a = f.A.getVoiceChannelId();
+        a = f.Ay.getVoiceChannelId();
     (r && a === i) || (0, c.A)(e);
 }
 function M(e) {
@@ -93,7 +93,7 @@ function P(e) {
 }
 async function U(e, t, n) {
     if (!_.A.shouldFetchPreview(e, t, n)) return;
-    let i = (0, d._z)({ streamType: null != e ? O.U4.GUILD : O.U4.CALL, guildId: e, channelId: t, ownerId: n });
+    let i = (0, d._z)({ streamType: null != e ? R.U4.GUILD : R.U4.CALL, guildId: e, channelId: t, ownerId: n });
     l.h.dispatch({ type: "STREAM_PREVIEW_FETCH_START", streamKey: i });
     try {
         let e = await s.Bo.get({

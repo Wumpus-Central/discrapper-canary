@@ -1,9 +1,9 @@
 "use strict";
 let i;
-n.d(t, { Ay: () => eD, zy: () => eh, XA: () => eI, L3: () => em, X3: () => eT }), n(321073), n(667532);
+n.d(t, { Ay: () => ey, zy: () => eh, XA: () => eI, L3: () => em, X3: () => eT }), n(321073), n(667532);
 var r = n(91871),
     a = n.n(r),
-    s = n(735438),
+    s = n(435558),
     l = n.n(s),
     o = n(896170),
     d = n(329308),
@@ -38,11 +38,11 @@ var I = n(626584),
     S = n(796774),
     N = n(209932),
     C = n(147472),
-    O = n(361670),
-    R = n(931959),
+    R = n(361670),
+    O = n(931959),
     L = n(750385),
-    D = n(194004),
-    y = n(695633),
+    y = n(194004),
+    D = n(695633),
     v = n(152007),
     b = n(594061),
     M = n(95701),
@@ -266,7 +266,7 @@ function eC(e) {
         E
     );
 }
-function eO(e, t, n) {
+function eR(e, t, n) {
     let i = 0,
         r = null;
     for (let a of t) {
@@ -275,7 +275,7 @@ function eO(e, t, n) {
     }
     return null != r && (r.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(r), 1)), i;
 }
-function eR(e, t) {
+function eO(e, t) {
     let n = _.A.getChannel(e);
     return null == e || null == n
         ? []
@@ -317,7 +317,7 @@ let eL = (0, z.L_)((e, t, n) => {
             { channelsByRecipientId: i, recipientsById: r, recipients: a }
         );
     }),
-    eD = {
+    ey = {
         queryFriends(e) {
             let { query: t, limit: n = 10, _fuzzy: i = !0, filter: r } = e;
             return eC({
@@ -360,7 +360,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 null != e && t.push({ userId: e.id, nick: null });
             } else {
                 if (0 === i.length && s) {
-                    let e = eR(o.id, r);
+                    let e = eO(o.id, r);
                     if (e.length > 0) return e;
                 }
                 (t = x.Ay.getMembers(d.guild_id).filter(eS)), a && X.A.requestMembers(d.guild_id, i, r);
@@ -385,7 +385,7 @@ let eL = (0, z.L_)((e, t, n) => {
             } = e;
             if (null == F.A.getGuild(t)) return [];
             if (0 === n.length && a) {
-                let e = eR(W.A.getChannelId(t), i);
+                let e = eO(W.Ay.getChannelId(t), i);
                 if (e.length > 0) return e;
             }
             let o = x.Ay.getMembers(t).filter(eS);
@@ -458,15 +458,15 @@ let eL = (0, z.L_)((e, t, n) => {
                 null != s
                     ? l()(G.Ay.getChannels(s)[h])
                           .map((e) => e.channel)
-                          .concat(S ? (m ? _.A.getAllThreadsForGuild(s) : y.A.computeAllActiveJoinedThreads(s)) : [])
+                          .concat(S ? (m ? _.A.getAllThreadsForGuild(s) : D.A.computeAllActiveJoinedThreads(s)) : [])
                           .value()
                     : l()(_.A.loadAllGuildAndPrivateChannelsFromDisk())
                           .values()
-                          .concat(S ? y.A.computeAllActiveJoinedThreads() : [])
+                          .concat(S ? D.A.computeAllActiveJoinedThreads() : [])
                           .value();
             let N = {},
                 C = [],
-                O = w.A.getMaxScore();
+                R = w.A.getMaxScore();
             for (let e of r) {
                 if (
                     ((t = e.type),
@@ -483,7 +483,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 let r = [...g],
                     l = (0, u.m1)(e, K.default, j.A).toLocaleLowerCase(),
                     o = T && a === e.id,
-                    c = o ? 10 : eO(l, r, d);
+                    c = o ? 10 : eR(l, r, d);
                 if (0 !== c) {
                     if (r.length > 0) {
                         for (let t of [
@@ -507,7 +507,7 @@ let eL = (0, z.L_)((e, t, n) => {
                             })(e, N),
                         ]) {
                             if (null == t || "" === t) continue;
-                            let e = eO(t, r, !1);
+                            let e = eR(t, r, !1);
                             0 !== e && (c += 0.5 * e);
                         }
                         c = Math.min(6, c);
@@ -519,7 +519,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         h === G.I6 && (0, M.ay)(i) && (c = Math.max(c - 1, 0.5)),
                         e.isThread() && (e.isActiveThread() || (c -= 3), v.A.hasJoined(e.id) || (c -= 5)),
                         (c = Math.min(
-                            c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / O, 1),
+                            c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / R, 1),
                             c >= 7 ? 10 : 7,
                         )),
                         C.push({
@@ -697,7 +697,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 }
             return d.sort(c.A), d.length > n && (d.length = n), d;
         },
-        getRecentlyTalked: eR,
+        getRecentlyTalked: eO,
         queryMentionResults(e) {
             let {
                     query: t,
@@ -774,9 +774,9 @@ let eL = (0, z.L_)((e, t, n) => {
                 d &&
                 (m < h && a()(g, ec().test) && (N.push(ec()), (m += 1)),
                 r && m < h && a()(g, eu().test) && (N.push(eu()), (m += 1)));
-            let O = p.r.getConfig({ location: "mention autocomplete" });
+            let R = p.r.getConfig({ location: "mention autocomplete" });
             return (
-                O.enabled && !O.combineMentionAutocomplete && C(e_?.()), C(eE?.()), { users: T, globals: N, roles: S }
+                R.enabled && !R.combineMentionAutocomplete && C(e_?.()), C(eE?.()), { users: T, globals: N, roles: S }
             );
         },
         queryGuildMentionResults(e) {
@@ -942,19 +942,19 @@ let eL = (0, z.L_)((e, t, n) => {
                         let u = 0,
                             _ = null,
                             E = L.A.getStickerById(o);
-                        if (null == E || !i(E, (0, O.W$)(E, r, n))) return;
+                        if (null == E || !i(E, (0, R.W$)(E, r, n))) return;
                         for (let n of l) {
                             let { type: i, value: r } = n,
                                 a = (function (e) {
                                     switch (e) {
-                                        case D.cG.STICKER_NAME:
+                                        case y.cG.STICKER_NAME:
                                             return 11;
-                                        case D.cG.CORRELATED_EMOJI:
+                                        case y.cG.CORRELATED_EMOJI:
                                             return 6;
-                                        case D.cG.TAG:
+                                        case y.cG.TAG:
                                             return 1;
-                                        case D.cG.GUILD_NAME:
-                                        case D.cG.PACK_NAME:
+                                        case y.cG.GUILD_NAME:
+                                        case y.cG.PACK_NAME:
                                             return 8;
                                         default:
                                             return 1;
@@ -966,13 +966,13 @@ let eL = (0, z.L_)((e, t, n) => {
                                     ? (s = 10 * a)
                                     : d.test(r)
                                       ? (s = 7 * a)
-                                      : (i === D.cG.GUILD_NAME || i === D.cG.PACK_NAME || i === D.cG.STICKER_NAME) &&
+                                      : (i === y.cG.GUILD_NAME || i === y.cG.PACK_NAME || i === y.cG.STICKER_NAME) &&
                                         c.test(r) &&
                                         (s = 5 * a)
                                 : r === e && ((s = 10 * a), (_ = r)),
                                 s > u && ((u = s), (_ = r));
                         }
-                        let A = R.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
+                        let A = O.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
                         null != A && (u *= A / 100),
                             u > 0 &&
                                 null != _ &&

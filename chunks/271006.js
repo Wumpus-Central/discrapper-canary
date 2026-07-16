@@ -8,27 +8,27 @@ var i = n(627968),
     c = n(17928),
     d = n(866323),
     u = n(175841),
-    h = n(734057),
-    p = n(309010),
+    p = n(734057),
+    h = n(309010),
     m = n(927813),
     A = n(935208),
     x = n(446243),
     g = n(872772),
     f = n(360729),
     C = n(884863),
-    j = n(662731),
-    y = n(375708),
+    y = n(662731),
+    j = n(375708),
     v = n(755873),
     E = n(880872),
     N = n(849351),
     I = n(572316),
     T = n(192063);
-let b = {
-        0: { src: I.A, alt: j.default.IrukuA },
-        1: { src: N.A, alt: j.default.yITFQ7 },
-        2: { src: E.A, alt: j.default.uUhyVw },
+let _ = {
+        0: { src: I.A, alt: y.default.IrukuA },
+        1: { src: N.A, alt: y.default.yITFQ7 },
+        2: { src: E.A, alt: y.default.uUhyVw },
     },
-    _ = 30 * m.A.Millis.MINUTE,
+    b = 30 * m.A.Millis.MINUTE,
     S = m.A.Millis.HOUR;
 function R(e) {
     let t = (function (e) {
@@ -36,14 +36,14 @@ function R(e) {
     })(e);
     if (null == t) return { stage: 0, timeUntilNextStage: null };
     let n = Date.now() - t;
-    return n < _
-        ? { stage: 0, timeUntilNextStage: _ - n }
+    return n < b
+        ? { stage: 0, timeUntilNextStage: b - n }
         : n < S
           ? { stage: 1, timeUntilNextStage: S - n }
           : { stage: 2, timeUntilNextStage: null };
 }
 function P(e) {
-    let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: h, plantWidth: p } = e,
+    let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: p, plantWidth: h } = e,
         [m, A] = l.useState(R(a).stage),
         f = l.useRef([]),
         E = l.useCallback(
@@ -85,7 +85,7 @@ function P(e) {
             clearTimeout(n);
         };
     }, [a, m, I]);
-    let _ = l.useCallback(() => {
+    let b = l.useCallback(() => {
         a?.objectId != null && (0, x.Xh)(t, n, a.objectId, { object_type: g.N.PLANT });
     }, [a, t, n]);
     return (0, i.jsxs)(C.T, {
@@ -95,30 +95,30 @@ function P(e) {
                 children: (e) => {
                     let { ref: t, onClick: n, ...l } = e;
                     return (0, i.jsxs)(o.D, {
-                        className: s()(v.CV, v.AA, h && v.r9),
-                        style: { left: `${c.x}%`, bottom: `${c.y}%`, width: `${p}px` },
+                        className: s()(v.CV, v.AA, p && v.r9),
+                        style: { left: `${c.x}%`, bottom: `${c.y}%`, width: `${h}px` },
                         innerRef: (e) => {
                             t.current = e;
                         },
-                        onClick: h ? void 0 : n,
-                        "aria-disabled": h,
+                        onClick: p ? void 0 : n,
+                        "aria-disabled": p,
                         ...l,
                         children: [
                             N((e, t) => {
-                                let { src: n, alt: l } = b[t],
+                                let { src: n, alt: l } = _[t],
                                     a = t === m;
                                 return (0, i.jsx)(r.animated.img, {
                                     className: s()(v.zs, { [v.tB]: !a }),
                                     style: { opacity: e.opacity },
                                     src: n,
-                                    alt: y.intl.string(l),
+                                    alt: j.intl.string(l),
                                     draggable: !1,
                                 });
                             }),
                             (0, i.jsx)("img", {
                                 className: v.tB,
                                 src: T.A,
-                                alt: y.intl.string(j.default.cPQCeg),
+                                alt: j.intl.string(y.default.cPQCeg),
                                 draggable: !1,
                             }),
                         ],
@@ -126,12 +126,12 @@ function P(e) {
                 },
             }),
             (0, i.jsx)(C.T.Popup, {
-                "aria-label": y.intl.string(j.default.B0gnKP),
+                "aria-label": j.intl.string(y.default.B0gnKP),
                 children: (0, i.jsx)(C.T.Item, {
                     icon: u.B,
-                    text: y.intl.string(j.default.aduS3B),
+                    text: j.intl.string(y.default.aduS3B),
                     selected: !1,
-                    onClick: _,
+                    onClick: b,
                 }),
             }),
         ],
@@ -143,21 +143,21 @@ function O(e) {
         className: v.CV,
         style: { left: `${t.x}%`, bottom: `${t.y}%`, width: `${n}px` },
         children: [
-            (0, i.jsx)("img", { className: v.zs, src: I.A, alt: y.intl.string(j.default.IrukuA), draggable: !1 }),
-            (0, i.jsx)("img", { className: v.tB, src: T.A, alt: y.intl.string(j.default.cPQCeg), draggable: !1 }),
+            (0, i.jsx)("img", { className: v.zs, src: I.A, alt: j.intl.string(y.default.IrukuA), draggable: !1 }),
+            (0, i.jsx)("img", { className: v.tB, src: T.A, alt: j.intl.string(y.default.cPQCeg), draggable: !1 }),
         ],
     });
 }
 function L(e) {
     let { channelId: t, plants: n, plantConfig: a, roomWidth: s, roomHeight: r, aspectRatio: o } = e,
-        d = (0, c.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
+        d = (0, c.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
         u = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
         { experimental: m } = f.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
-        A = (0, c.bG)([p.A], () => p.A.getVoiceChannelId() === t),
+        A = (0, c.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === t),
         x = (s / r > o ? r * o : s) * 0.0625;
     return (l.useEffect(() => {
         m &&
-            Object.values(b).forEach((e) => {
+            Object.values(_).forEach((e) => {
                 let { src: t } = e;
                 new Image().src = t;
             });

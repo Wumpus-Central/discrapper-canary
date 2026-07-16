@@ -5,7 +5,7 @@ var i = n(17928),
     s = n(309010),
     a = n(652215);
 function o() {
-    let e = s.A.getVoiceChannelId();
+    let e = s.Ay.getVoiceChannelId();
     if (null == e) return !1;
     let t = r.A.getChannel(e);
     if (null == t) return !1;
@@ -13,8 +13,8 @@ function o() {
     return null != n && n.features.has(a.GuildFeatures.HUB);
 }
 function c(e) {
-    return (0, i.bG)([s.A, r.A, l.A], () => {
-        let t = s.A.getVoiceChannelId();
+    return (0, i.bG)([s.Ay, r.A, l.A], () => {
+        let t = s.Ay.getVoiceChannelId();
         if (null == t) return !1;
         let n = r.A.getChannel(t);
         if (null == n) return !1;

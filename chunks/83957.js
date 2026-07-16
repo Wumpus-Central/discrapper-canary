@@ -118,7 +118,7 @@ var j = n(149741),
     Z = n(810412),
     F = n(702841),
     H = n(459838),
-    Y = n(990078),
+    Y = n(866665),
     X = n(358618),
     W = n(983851),
     B = n(622631),
@@ -588,7 +588,7 @@ function eX(e) {
             let e = L.A.getWidget(a);
             return !!(0, eR.dO)(e) && !d && (e.meta.showAllStreams ?? !0);
         }, [a, d]),
-        T = (0, y.bG)([P.A], () => P.A.getVoiceChannelId()),
+        T = (0, y.bG)([P.Ay], () => P.Ay.getVoiceChannelId()),
         C = (0, y.bG)([k.A], () => k.A.getChannel(T)),
         j = (0, y.bG)([D.default], () => D.default.getId()),
         {
@@ -1122,14 +1122,14 @@ function e$(e) {
 var e0 = n(417098),
     e1 = n(55619),
     e2 = n(734066);
-let e3 = (0, n(945810).mj)({
+let e6 = (0, n(945810).mj)({
     kind: "user",
     name: "2026-06-clips-secondary-entrypoints",
     defaultConfig: { enableOverlayEntrypoint: !1 },
     variations: { 1: { enableOverlayEntrypoint: !0 } },
 });
 var e5 = n(351906),
-    e6 = n(377802),
+    e3 = n(377802),
     e4 = n(348858),
     e8 = n(523875),
     e9 = n(416696),
@@ -1675,7 +1675,7 @@ function t$(e) {
 function t0(e) {
     let { voiceChannel: t, locked: n } = e,
         i = c.useRef(null),
-        r = (0, y.bG)([P.A], () => P.A.getVoiceChannelId() === t?.id);
+        r = (0, y.bG)([P.Ay], () => P.Ay.getVoiceChannelId() === t?.id);
     function s() {
         (0, Z.YX)(em.uss.QUICK_ACTIONS, { type: Z.Z5.CALL_BUTTON, value: Z.IP.DISABLED, userId: D.default.getId() }),
             r && tl.default.disconnect();
@@ -1701,7 +1701,7 @@ function t0(e) {
     let {
             Component: h,
             events: { onMouseEnter: m, onMouseLeave: g },
-        } = (0, e6.O)(),
+        } = (0, e3.O)(),
         p = tW(n),
         f = (0, tz.qZ)(),
         x = r ? h : ti._;
@@ -1790,7 +1790,7 @@ function t2(e) {
         ],
     });
 }
-function t3(e) {
+function t6(e) {
     let { voiceChannel: t } = e,
         n = t?.id,
         i = (0, y.cf)([a.A], () => ({ quality: a.A.getQuality(), state: a.A.getState(), lastPing: a.A.getLastPing() })),
@@ -1870,14 +1870,14 @@ function t5(e) {
         })
     );
 }
-var t6 = n(423005);
+var t3 = n(423005);
 let t4 = c.memo(function () {
     let e = (0, y.bG)([e5.A], () => e5.A.enabled),
         t = (0, u.Mn)("StreamerModeNotice");
     return e && t
         ? (0, l.jsxs)(e0.$T, {
               color: e0.Hv.STREAMER_MODE,
-              className: t6.$X,
+              className: t3.$X,
               children: [
                   (0, l.jsx)(E.E, {
                       tag: "span",
@@ -1886,7 +1886,7 @@ let t4 = c.memo(function () {
                       children: eg.intl.string(eg.t.q9K7jp),
                   }),
                   (0, l.jsx)(e0.Z_, {
-                      className: t6.lI,
+                      className: t3.lI,
                       onClick: () => e1.A.setEnabled(!1),
                       noticeType: em.kqX.STREAMER_MODE,
                       children: eg.intl.string(eg.t.R9GHya),
@@ -1897,20 +1897,20 @@ let t4 = c.memo(function () {
 });
 function t8(e) {
     let { locked: t } = e,
-        n = (0, y.bG)([P.A], () => P.A.getVoiceChannelId()),
-        { enableOverlayEntrypoint: i } = e3.useConfig({ location: "QuickActionsWidget" }),
+        n = (0, y.bG)([P.Ay], () => P.Ay.getVoiceChannelId()),
+        { enableOverlayEntrypoint: i } = e6.useConfig({ location: "QuickActionsWidget" }),
         r = (0, e2.sw)(),
         s = (0, y.bG)([k.A], () => k.A.getChannel(n)),
         a = null != s;
     return (0, l.jsxs)("div", {
-        className: m()({ [t6.KE]: !0, [t6.xt]: t }),
+        className: m()({ [t3.KE]: !0, [t3.xt]: t }),
         children: [
             (0, l.jsx)(t4, {}),
             (0, l.jsxs)("div", {
-                className: t6.Pm,
+                className: t3.Pm,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: t6.qi,
+                        className: t3.qi,
                         children: [
                             (0, l.jsx)(tq, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(tK, { voiceChannel: s, locked: t }),
@@ -1918,7 +1918,7 @@ function t8(e) {
                         ],
                     }),
                     (0, l.jsxs)("div", {
-                        className: t6.qi,
+                        className: t3.qi,
                         children: [
                             (0, l.jsx)(tJ, { voiceChannel: s, locked: t }),
                             (0, l.jsx)(t$, { voiceChannel: s, locked: t }),
@@ -1926,12 +1926,12 @@ function t8(e) {
                         ],
                     }),
                     (0, l.jsx)("div", {
-                        className: m()(t6.qi, a && t6.SV),
+                        className: m()(t3.qi, a && t3.SV),
                         children: (0, l.jsx)(t0, { voiceChannel: s, locked: t }),
                     }),
                 ],
             }),
-            a && (0, l.jsx)("div", { className: t6.Pm, children: (0, l.jsx)(t3, { voiceChannel: s, locked: t }) }),
+            a && (0, l.jsx)("div", { className: t3.Pm, children: (0, l.jsx)(t6, { voiceChannel: s, locked: t }) }),
         ],
     });
 }
@@ -2692,9 +2692,9 @@ let n$ = c.memo(function (e) {
 var n0 = n(493336),
     n1 = n(928078),
     n2 = n(355622),
-    n3 = n(232835),
+    n6 = n(232835),
     n5 = n(576705),
-    n6 = n(625494),
+    n3 = n(625494),
     n4 = n(827280);
 function n8(e) {
     let t,
@@ -2718,7 +2718,7 @@ function n8(e) {
         );
     return ((t = u?.id ?? null),
     (n = c.useRef(new Set())),
-    (i = (0, y.bG)([n3.A], () => (null != t ? n3.A.getMessages(t) : null), [t])),
+    (i = (0, y.bG)([n6.A], () => (null != t ? n6.A.getMessages(t) : null), [t])),
     (r = (0, y.bG)([n5.A], () => n5.A.can(em.xBc.READ_MESSAGE_HISTORY, u), [u])),
     (s = i?.first() ?? null),
     (a = null != u && null == s && null != i && !i.loadingMore && !i.ready && !i.hasFetched && r),
@@ -2728,7 +2728,7 @@ function n8(e) {
     c.useEffect(() => {
         if (null == o) return;
         let e = d.requestAnimationFrame(() => {
-            n6._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
+            n3._.dispatchToLastSubscribed(em.jej.TEXTAREA_FOCUS, { channelId: o });
         });
         return () => d.cancelAnimationFrame(e);
     }, [o, d]),
@@ -3022,7 +3022,7 @@ let io = c.memo(function (e) {
         );
     };
 function ih(e) {
-    let t = (0, y.bG)([P.A, k.A], () => k.A.getChannel(P.A.getVoiceChannelId())),
+    let t = (0, y.bG)([P.Ay, k.A], () => k.A.getChannel(P.Ay.getVoiceChannelId())),
         n = 2 * e.padding + 2 * e.borderWidth,
         i = t?.id,
         [r, s] = (0, y.bG)(

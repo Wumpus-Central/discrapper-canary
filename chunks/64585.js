@@ -9,19 +9,19 @@ var i = n(228366),
     c = n(741961),
     u = n(3137),
     A = n(559908),
-    h = n(652215);
-let E = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
+    E = n(652215);
+let h = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
     C = !1,
     g = !1,
     _ = [],
     I = null;
 function T() {
-    E.stop(), (C = !1);
+    h.stop(), (C = !1);
 }
 function N() {
     let e = u.A.isEnabled(),
         t = u.A.comboSoundsEnabled;
-    return !!e && !!t && null != d.A.getChannelId();
+    return !!e && !!t && null != d.Ay.getChannelId();
 }
 let p = () => {
     if (0 === _.length || !N() || g) return;
@@ -57,7 +57,7 @@ class m extends l.A {
     }
     setVolume(e) {
         let { state: t } = e;
-        t === h.S7L.RTC_CONNECTED ? (E.volume = 0.1) : (E.volume = 1);
+        t === E.S7L.RTC_CONNECTED ? (h.volume = 0.1) : (h.volume = 1);
     }
     handleTypingStop(e) {
         let { userId: t } = e;
@@ -68,13 +68,13 @@ class m extends l.A {
     }
     startAudio() {
         if (!N()) return;
-        let e = d.A.getChannelId();
+        let e = d.Ay.getChannelId();
         if (null == e) return;
         let t = a.default.getId(),
             n = c.A.isTyping(e, t),
             i = A.Ay.getUserCombo(t, e),
             l = i?.multiplier ?? 1;
-        n && l >= 7 ? C || (E.loop(), (C = !0)) : T();
+        n && l >= 7 ? C || (h.loop(), (C = !0)) : T();
     }
     playAchievementUnlockSound() {
         N() && L("poggermode_achievement_unlock");

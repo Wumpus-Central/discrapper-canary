@@ -1,4 +1,4 @@
-o.r(s), o.d(s, { default: () => S });
+o.r(s), o.d(s, { default: () => M });
 var t = o(627968),
     n = o(64700),
     i = o(503698),
@@ -6,11 +6,11 @@ var t = o(627968),
     l = o(877227),
     a = o(17928),
     r = o(319354),
-    u = o(990078),
-    d = o(782603),
-    p = o(661531),
-    h = o(331322),
-    m = o(696986),
+    u = o(782603),
+    d = o(661531),
+    p = o(331322),
+    h = o(696986),
+    m = o(866665),
     x = o(939249),
     f = o(573435),
     A = o(418842),
@@ -21,38 +21,38 @@ var t = o(627968),
     g = o(355216),
     E = o(625864),
     O = o(652215),
-    P = o(375708),
-    R = o(393058);
-let v = { cozy: 0, default: 0, compact: 0 },
-    z = { cozy: 0, default: 0, compact: 0 },
-    B = { cozy: 95, default: 84, compact: 72 };
-function M(e) {
+    y = o(375708),
+    P = o(393058);
+let R = { cozy: 0, default: 0, compact: 0 },
+    v = { cozy: 0, default: 0, compact: 0 },
+    z = { cozy: 95, default: 84, compact: 72 };
+function B(e) {
     let { onClick: s, selectedOverride: o = !1, popoutProps: i, ref: l, focusSectionProps: a } = e,
         [j, C] = n.useState(!1),
         E = (0, N.lI)(),
         O = o || E,
-        M = o || O,
-        S = (0, t.jsx)(d.X, {
-            className: R.Kk,
-            color: j || M ? p.A.colors.ICON_STRONG : p.A.colors.ICON_MUTED,
+        B = o || O,
+        M = (0, t.jsx)(u.X, {
+            className: P.Kk,
+            color: j || B ? d.A.colors.ICON_STRONG : d.A.colors.ICON_MUTED,
             size: "sm",
         }),
-        { badge: _, badgeType: b } = (0, g.ux)({ isSelected: O }),
-        y = (0, k.isDesktop)(),
+        { badge: S, badgeType: _ } = (0, g.ux)({ isSelected: O }),
+        b = (0, k.isDesktop)(),
         D = (0, A.C)(),
-        I = (0, k.isMac)() ? v[D] : y ? z[D] : B[D];
-    return (0, t.jsxs)(h.B, {
+        I = (0, k.isMac)() ? R[D] : b ? v[D] : z[D];
+    return (0, t.jsxs)(p.B, {
         gap: 0,
         direction: "horizontal",
         children: [
-            (0, t.jsx)(m.h, { size: I, horizontal: !0 }),
-            (0, t.jsx)(u.m, {
+            (0, t.jsx)(h.h, { size: I, horizontal: !0 }),
+            (0, t.jsx)(m.m, {
                 asContainer: !0,
-                shouldShow: !M,
-                text: P.intl.string(P.t.HcoRu0),
+                shouldShow: !B,
+                text: y.intl.string(y.t.HcoRu0),
                 children: (0, t.jsxs)(x.D, {
                     innerRef: l,
-                    className: R.OV,
+                    className: P.OV,
                     ...a,
                     ...i,
                     onMouseEnter: () => {
@@ -66,38 +66,38 @@ function M(e) {
                     },
                     children: [
                         (0, t.jsx)("div", {
-                            className: c()(R.P0, null),
+                            className: c()(P.P0, null),
                             children:
-                                "unread" === b
+                                "unread" === _
                                     ? (0, t.jsxs)(t.Fragment, {
                                           children: [
                                               (0, t.jsx)(f.Ay, {
                                                   width: r.E.sm,
                                                   height: r.E.sm,
                                                   mask: f.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                                                  children: S,
+                                                  children: M,
                                               }),
-                                              (0, t.jsx)("div", { className: R.Zm }),
+                                              (0, t.jsx)("div", { className: P.Zm }),
                                           ],
                                       })
-                                    : S,
+                                    : M,
                         }),
-                        _,
+                        S,
                     ],
                 }),
             }),
         ],
     });
 }
-function S() {
+function M() {
     let { focusSectionProps: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         s = n.useRef(null),
         { notificationCenterVariant: o } = (0, C.X8)({ location: "NotificationsInboxButton" }),
-        i = (0, a.bG)([j.A], () => j.A.getChannelId()),
+        i = (0, a.bG)([j.Ay], () => j.Ay.getChannelId()),
         c = n.useMemo(() => O.BVt.CHANNEL(O.gNP, i ?? void 0), [i]),
         r = (0, g.HN)();
     return o === C.U5.SIDEBAR
-        ? (0, t.jsx)(M, {
+        ? (0, t.jsx)(B, {
               onClick: () => {
                   r(), (0, l.pX)(c);
               },
@@ -110,7 +110,7 @@ function S() {
                 popoutAlign: "left",
                 spacing: 2,
                 children: (o, n, i) =>
-                    (0, t.jsx)(M, {
+                    (0, t.jsx)(B, {
                         ref: s,
                         selectedOverride: n,
                         onClick: () => {

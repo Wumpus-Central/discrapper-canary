@@ -32,7 +32,7 @@ var l = i(627968),
     U = i(834730),
     b = i(351906),
     D = i(364522),
-    M = i(534514),
+    M = i(297264),
     k = i(534890),
     F = i(687966),
     G = i(177953),
@@ -145,7 +145,7 @@ var ec = i(741036);
 function eo(e) {
     let { user: s, displayProfile: i, guildId: n, onClose: t } = e,
         d = (0, _.bG)([V.A], () => V.A.getUserProfile(s.id)?.application),
-        r = (0, _.bG)([K.A, W.A], () => K.A.getChannel(W.A.getChannelId()));
+        r = (0, _.bG)([K.A, W.Ay], () => K.A.getChannel(W.Ay.getChannelId()));
     return (0, l.jsxs)(D.Ip, {
         fade: !0,
         className: ec.XG,
@@ -354,7 +354,7 @@ var eF = i(163126),
     eG = i(913453),
     eB = i(229187),
     eV = i(975732),
-    ez = i(201934);
+    ez = i(503062);
 function ew(e) {
     let { user: s, guildId: i, channelId: t, onClose: d } = e,
         { mutualFriends: r } = (0, eG.A)(s),
@@ -691,8 +691,8 @@ function e0(e) {
 }
 var e5 = i(480335),
     e3 = i(713517),
-    e1 = i(35241);
-function e9(e) {
+    e9 = i(35241);
+function e1(e) {
     let {
             user: s,
             guildId: i,
@@ -747,7 +747,7 @@ function e9(e) {
                             themeType: eq.d.MODAL,
                             ref: P?.profileEffect != null ? k : void 0,
                             children: [
-                                (0, l.jsx)(C.A, { children: (0, l.jsx)(e1.A, { user: s }) }),
+                                (0, l.jsx)(C.A, { children: (0, l.jsx)(e9.A, { user: s }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
                                         (0, l.jsx)(N.A, { user: s, displayProfile: P, themeType: eq.d.MODAL }),
@@ -975,7 +975,7 @@ function so(e) {
     return d && !s
         ? (0, l.jsx)(sa, { onHide: r, ...i })
         : n.isNonUserBot()
-          ? (0, l.jsx)(e9, { ...i })
+          ? (0, l.jsx)(e1, { ...i })
           : n.bot
             ? (0, l.jsx)(e0, { ...i })
             : (0, l.jsx)(sc.A, { ...i });

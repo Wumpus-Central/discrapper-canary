@@ -24,7 +24,7 @@ let E = [],
 function I(e) {
     let { channelId: t, participant: n, popoutType: l, maxHeight: E } = e,
         I = (0, p.Us)(),
-        T = (0, a.bG)([g.A], () => g.A.getVoiceChannelId() === t),
+        T = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t),
         _ = (0, a.bG)([m.A], () => m.A.getChannel(t)),
         b = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
         [S, R] = (0, a.yK)([f.A, A.A, x.A, d.default], () => (0, u.eo)(_, f.A, A.A, x.A, d.default));
@@ -63,7 +63,7 @@ function T(e) {
     let { channelId: t, popoutType: n, aspectRatio: s } = e,
         r = (0, l.useRef)(null),
         [o, d] = (0, l.useState)({ top: 0, maxHeight: 0 }),
-        u = (0, a.bG)([g.A], () => g.A.getVoiceChannelId()),
+        u = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
         { streamParticipants: p, videoParticipants: h } = (0, a.cf)([c.A], () => ({
             streamParticipants: c.A.getStreamParticipants(t),
             videoParticipants: u === t ? c.A.getVideoParticipants(t) : E,

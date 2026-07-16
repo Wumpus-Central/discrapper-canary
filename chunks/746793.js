@@ -3,10 +3,10 @@ var n = t(627968),
     s = t(64700),
     l = t(935462),
     a = t(331322),
-    r = t(534514),
+    r = t(297264),
     c = t(171835),
     o = t(6938),
-    d = t(937008),
+    d = t(951305),
     u = t(532794),
     h = t(70283),
     m = t(17928),
@@ -17,14 +17,14 @@ var n = t(627968),
     j = t(672525),
     f = t(503698),
     S = t.n(f),
-    N = t(791282),
+    N = t(588234),
     A = t.n(N),
     T = t(132500),
     L = t(172218),
     _ = t(834730),
     O = t(123292),
-    C = t(140735),
-    y = t(192308),
+    y = t(140735),
+    C = t(192308),
     v = t(43990),
     k = t(444927),
     b = t(793574),
@@ -77,7 +77,7 @@ function Z(i) {
     let { wishlistInDmLength: e } = i;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(C.A, { children: z.intl.string(z.t.pfChQr) }),
+            (0, n.jsx)(y.A, { children: z.intl.string(z.t.pfChQr) }),
             (0, n.jsx)("div", {
                 className: S()(J.Md, J.e6),
                 children: Array.from({ length: e }, (i, e) => (0, n.jsx)(F.O, {}, `placeholder-${e}`)),
@@ -95,9 +95,9 @@ function q(i) {
             analyticsLocations: c,
             includedSources: o,
         } = i,
-        d = (0, m.bG)([U.A, B.A], () => B.A.getChannel(U.A.getChannelId())),
+        d = (0, m.bG)([U.Ay, B.A], () => B.A.getChannel(U.Ay.getChannelId())),
         u = s.useCallback(() => {
-            r?.(), (0, y.closeAllModals)();
+            r?.(), (0, C.closeAllModals)();
         }, [r]);
     return (0, n.jsx)("ul", {
         className: S()(J.Md, J.e6),
@@ -193,8 +193,8 @@ function ii(i) {
         })({ totalUnownedWishlistItemCount: a, wishlistInDmLength: G.pl, displayItems: r, recipientName: N }),
         _ = l?.getBannerURL({ canAnimate: !1, size: 713 }),
         O = a > G.pl,
-        C = s.useMemo(() => (O ? r.slice(0, G.pl) : r), [r, O]),
-        [y, R] = s.useState(!1),
+        y = s.useMemo(() => (O ? r.slice(0, G.pl) : r), [r, O]),
+        [C, R] = s.useState(!1),
         H = s.useCallback(
             (i) => {
                 if (i && !f && r.length > 0) {
@@ -220,7 +220,7 @@ function ii(i) {
             },
             [f, r, e.id, u],
         ),
-        D = (0, L.K)(H, void 0, !f && !y),
+        D = (0, L.K)(H, void 0, !f && !C),
         F = s.useMemo(
             () =>
                 new Set(
@@ -267,7 +267,7 @@ function ii(i) {
                                                             analyticsLocations: u,
                                                         },
                                                         children: (0, n.jsx)(q, {
-                                                            items: C,
+                                                            items: y,
                                                             giftRecipient: e,
                                                             defaultWishlistId: o,
                                                             onOpenWishlist: j,

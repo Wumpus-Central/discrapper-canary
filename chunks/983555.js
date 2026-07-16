@@ -25,8 +25,8 @@ var i = n(607399),
     R = n(971276),
     O = n(216934),
     L = n(976860),
-    D = n(832163),
-    y = n(788995),
+    y = n(832163),
+    D = n(788995),
     v = n(432e3);
 n(809733);
 var b = n(280450),
@@ -127,7 +127,7 @@ function $(e) {
                           application_id: a,
                           device_platform: i.Fr ? "mobile_web" : "desktop_web",
                           guild_id: l,
-                          channel_id: G.A.getChannelId(),
+                          channel_id: G.Ay.getChannelId(),
                       }),
                       n
                           .e("38042")
@@ -232,7 +232,7 @@ function $(e) {
         return (e) => {
             e?.preventDefault();
             let [t, i] = T.code.split("-"),
-                r = D.A.getGuildIdFromApplicationId(i);
+                r = y.A.getGuildIdFromApplicationId(i);
             if (null != r)
                 return (
                     n
@@ -388,5 +388,5 @@ function $(e) {
                 )
               : t || null == (0, v.m)(e)
                 ? void 0
-                : (t) => (t?.preventDefault(), y.A.show(e), !0);
+                : (t) => (t?.preventDefault(), D.A.show(e), !0);
 }

@@ -3,7 +3,7 @@ var n = i(627968),
     e = i(64700),
     s = i(189213),
     l = i(260598),
-    o = i(720149),
+    o = i(493336),
     c = i(622142),
     r = i(309010),
     d = i(174459),
@@ -32,7 +32,7 @@ function p(t) {
         ),
         G = e.useCallback(async () => {
             if (null != m) {
-                let t = r.A.getChannelId();
+                let t = r.Ay.getChannelId();
                 null != t &&
                     ("" !== _ &&
                         (await o.A.sendMessage(

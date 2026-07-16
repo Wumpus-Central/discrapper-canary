@@ -14,8 +14,8 @@ var r = n(627968),
     m = n(723702),
     g = n(19575),
     A = n(9302),
-    v = n(365971),
-    y = n(777334),
+    y = n(365971),
+    v = n(777334),
     x = n(41984);
 n(321073);
 var w = n(503698),
@@ -174,7 +174,7 @@ var es = n(518009),
     em = n(652215),
     eg = n(685411);
 let eA = [],
-    ev = i.memo(function (e) {
+    ey = i.memo(function (e) {
         let {
                 widget: t,
                 renderWidget: n,
@@ -187,16 +187,16 @@ let eA = [],
             } = e,
             g = (0, s.bG)([h.A], () => h.A.getWidgetConfig(t.type), [t.type]),
             A = (0, eh.RE)(t.id, eh.X1),
-            y = (0, ef.A)(),
+            v = (0, ef.A)(),
             [w, C] = i.useState(() => d?.stores ?? eA);
         (0, l.Ay)(() => {
             C(d?.stores ?? eA);
         });
-        let N = (0, s.bG)(w, () => d?.shouldRender({ widget: t, locked: y }) ?? !0, [d, y, t]),
+        let N = (0, s.bG)(w, () => d?.shouldRender({ widget: t, locked: v }) ?? !0, [d, v, t]),
             b = (0, ep.A)(),
-            O = (0, s.bG)([p.A], () => p.A.windowSize((0, v.Q2)(b))),
+            O = (0, s.bG)([p.A], () => p.A.windowSize((0, y.Q2)(b))),
             _ = i.useCallback((e, t, n, r, i) => {
-                let s = p.A.windowSize((0, v.Q2)((0, ep.b)())),
+                let s = p.A.windowSize((0, y.Q2)((0, ep.b)())),
                     l = (0, ec.NO)(n, s),
                     a = (0, ec.R9)(r, s);
                 (0, ea.uD)(t), (0, ea.Ju)({ widgetId: t, anchor: l, size: a });
@@ -221,8 +221,8 @@ let eA = [],
             P = i.useMemo(() => (0, ec.fd)(k, O), [k, O]),
             M = (0, ec.Nv)(S, O),
             { resizeX: R, resizeY: U, dragAnywhere: K, constrainAutoSizeToExplicitResizeEvents: G } = g ?? {},
-            F = !y,
-            V = T || !y,
+            F = !v,
+            V = T || !v,
             B = i.useMemo(() => ({ minX: 0, minY: 0, maxX: O.width, maxY: O.height }), [O]),
             H = i.useCallback(
                 (e) => n({ ...e, widget: t, dragging: null != e.dragOperation, className: f }),
@@ -248,7 +248,7 @@ let eA = [],
                   container: B,
                   minSize: L ?? { width: 0, height: 0 },
                   hidden: !V,
-                  locked: y,
+                  locked: v,
                   resizeX: R ?? !1,
                   resizeY: U ?? !1,
                   style: { zIndex: j },
@@ -265,19 +265,19 @@ let eA = [],
               })
             : null;
     });
-var ey = n(83957),
+var ev = n(83957),
     ex = n(644434);
 function ew(e) {
     return e.widget.id;
 }
 function eE(e, t, n, i) {
-    return n === es.wL.YEETED ? null : (0, r.jsx)(ev, { ...t, transitionState: n, cleanUp: i }, e);
+    return n === es.wL.YEETED ? null : (0, r.jsx)(ey, { ...t, transitionState: n, cleanUp: i }, e);
 }
 let eC = [],
     eN = i.memo(function (e) {
         let { className: t } = e,
             n = (0, ep.A)(),
-            o = (0, s.bG)([p.A], () => p.A.windowSize((0, v.Q2)(n))),
+            o = (0, s.bG)([p.A], () => p.A.windowSize((0, y.Q2)(n))),
             l = (0, s.bG)(
                 [h.A, eo.A],
                 () => {
@@ -287,7 +287,7 @@ let eC = [],
                     for (let n of e.widgets) {
                         let e = h.A.getWidget(n);
                         if (null == e) continue;
-                        let r = ey.A[e.type];
+                        let r = ev.A[e.type];
                         null != r &&
                             (null == r.predicate || r.predicate()) &&
                             (eo.A.isOverlayWidgetDisabled(e.type) || t.push({ widget: e, ...r }));
@@ -328,7 +328,7 @@ var eT = n(302614),
     eK = n(923779);
 let eG = i.memo(function () {
     let [e, t] = (0, s.yK)([eL.A], () => [eL.A.enabled, eL.A.keepOpen]),
-        n = (0, s.bG)([f.A], () => f.A.getVoiceChannelId()),
+        n = (0, s.bG)([f.Ay], () => f.Ay.getVoiceChannelId()),
         i = (0, s.bG)([M.A], () => M.A.getChannel(n), [n]),
         o = i?.getGuildId();
     return e && null != i
@@ -489,13 +489,13 @@ function eQ() {
         m,
         g,
         A,
-        y,
+        v,
         x,
         w,
         E = (0, ep.A)(),
         C = (0, s.bG)([G.default], () => G.default.incompatibleApp),
         N = (0, s.bG)([p.A], () => {
-            let e = (0, v.Q2)(E),
+            let e = (0, y.Q2)(E),
                 t = p.A.windowSize(e);
             return t.height < 360 || t.width < 640;
         }, [E]),
@@ -509,7 +509,7 @@ function eQ() {
         }, [])),
         (u = (0, s.bG)([eO.A], () => eO.A.isInputLocked(a), [a])),
         (d = (0, s.bG)([p.A], () => {
-            let e = (0, v.Q2)(n);
+            let e = (0, y.Q2)(n);
             return p.A.isVisible(e) && p.A.isFocused(e);
         }, [n])),
         (h = i.useRef([])),
@@ -556,14 +556,14 @@ function eQ() {
         (0, l.Ay)(() => {
             (0, B.E)();
         }),
-        (y = (0, ep.A)()),
+        (v = (0, ep.A)()),
         (e = () => {
             o.A.overlayReady(eb.A.getTargetPID()),
-                y.addEventListener("keydown", e$, !0),
-                y.addEventListener("keyup", e$);
+                v.addEventListener("keydown", e$, !0),
+                v.addEventListener("keyup", e$);
         }),
         (t = () => {
-            y.removeEventListener("keydown", e$, !0), y.removeEventListener("keyup", e$);
+            v.removeEventListener("keydown", e$, !0), v.removeEventListener("keyup", e$);
         }),
         (x = i.useRef({ mount: e, unmount: t })),
         i.useEffect(() => {
@@ -581,7 +581,7 @@ function eQ() {
         ((w = i.useRef(null)),
         (0, l.Ay)(() => {
             let e = (0, el.qv)(),
-                t = f.A.getVoiceChannelId(),
+                t = f.Ay.getVoiceChannelId(),
                 n = M.A.getChannel(t),
                 r = null != n ? R.A.getGuild(n.guild_id) : null,
                 i = null != P.A.getCurrentUserActiveStream(),
@@ -672,7 +672,7 @@ async function e8(e, t) {
         try {
             await g.Ay.isAlwaysOnTop(t);
         } catch (e) {
-            e6.error("Window does not exist while trying to show inactive", e), (0, y.pj)(e, x.Ue.OutOfProcess);
+            e6.error("Window does not exist while trying to show inactive", e), (0, v.pj)(e, x.Ue.OutOfProcess);
         }
         for (let i = 0; i < r; i++)
             try {
@@ -684,7 +684,7 @@ async function e8(e, t) {
                     let t = (n / 2) * Math.pow(2, i + 1);
                     e6.error(`Failed to show inactive, retrying in ${t}ms`, e),
                         await new Promise((e) => setTimeout(e, t));
-                } else throw ((0, y.pj)(e, x.Ue.OutOfProcess), e);
+                } else throw ((0, v.pj)(e, x.Ue.OutOfProcess), e);
             }
     }
 }
@@ -717,11 +717,11 @@ let e9 = i.memo(function (e) {
                 c = (0, s.bG)([u.A], () => u.A.getWindow(e)),
                 d = (0, s.bG)([eb.A], () => eb.A.getFocusedPID()),
                 g = i.useMemo(() => !m.isPlatformEmbedded || (null != d && d !== A.UNSET_PID), [d]),
-                [y, w] = i.useState(!1),
+                [v, w] = i.useState(!1),
                 E = i.useRef(!1),
                 C = i.useCallback(() => {
                     let e = eb.A.getTargetPID(),
-                        n = null != f.A.getVoiceChannelId();
+                        n = null != f.Ay.getVoiceChannelId();
                     o.A.track(em.HAw.OVERLAY_INITIALIZED, {
                         voice_widget_connected: n,
                         text_widget_connected: eb.A.isPinned(em.uss.TEXT),
@@ -778,11 +778,11 @@ let e9 = i.memo(function (e) {
                 (0, l.l0)(() => {
                     clearInterval(b.current), (N.current = !0);
                 }),
-                (n = (0, s.bG)([p.A], () => p.A.windowSize(null != c ? (0, v.Q2)(c) : void 0))),
+                (n = (0, s.bG)([p.A], () => p.A.windowSize(null != c ? (0, y.Q2)(c) : void 0))),
                 (r = (0, s.bG)([eb.A], () => eb.A.getFocusedWindowHandle())),
                 i.useEffect(() => {
                     let e, t;
-                    if (null != c && y && c.innerHeight === n.height && c.innerWidth === n.width)
+                    if (null != c && v && c.innerHeight === n.height && c.innerWidth === n.width)
                         return (
                             (e = c.requestAnimationFrame(() => {
                                 e = c.requestAnimationFrame(() => {
@@ -796,12 +796,12 @@ let e9 = i.memo(function (e) {
                                 c.cancelAnimationFrame(e), c.clearTimeout(t);
                             }
                         );
-                }, [y, c, d, r, n]),
-                y
+                }, [v, c, d, r, n]),
+                v
             );
         })(c, ex.G),
-        y = (0, s.bG)([eb.A], () => eb.A.getFocusedPID()),
-        w = (0, s.bG)([eO.A], () => eO.A.isInputLocked(y), [y]);
+        v = (0, s.bG)([eb.A], () => eb.A.getFocusedPID()),
+        w = (0, s.bG)([eO.A], () => eO.A.isInputLocked(v), [v]);
     return g
         ? (0, r.jsxs)(d.A, {
               themeOverride: em.NJ8.MIDNIGHT,

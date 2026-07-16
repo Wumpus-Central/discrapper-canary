@@ -14,7 +14,7 @@ function u(e) {
         [_, E] = r.useState(null),
         A = r.useRef(new Set()),
         [h, I] = r.useState(!1),
-        f = (0, s.bG)([l.A], () => l.A.getCurrentlySelectedChannelId()),
+        f = (0, s.bG)([l.Ay], () => l.Ay.getCurrentlySelectedChannelId()),
         p = r.useCallback((e) => {
             A.current.delete(e), I(A.current.size > 0);
         }, []),

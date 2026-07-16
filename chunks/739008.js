@@ -15,7 +15,7 @@ let u = {
         let e = o.A.getGuildId();
         if (null == e || !a.default.getGuildHasUnreadIgnoreMuted(e)) return;
         (0, r.A)([e]);
-        let t = l.A.getChannelId(e);
+        let t = l.Ay.getChannelId(e);
         null == t ||
             (s.A.getMessages(t).hasMoreAfter ? i.A.jumpToPresent(t, c.EMb) : d._.dispatch(c.jej.SCROLLTO_PRESENT));
     },

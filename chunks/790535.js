@@ -1,100 +1,100 @@
 "use strict";
-n.d(t, { CH: () => R, jA: () => D, cy: () => O, av: () => b });
+n.d(t, { CH: () => L, jA: () => v, cy: () => y, av: () => D });
 var i = n(66834),
     r = n(730852),
-    s = n(401843),
-    a = n(389234),
-    o = n(271004),
-    l = n(616356),
-    u = n(734057),
+    a = n(401843),
+    s = n(389234),
+    l = n(271004),
+    o = n(616356),
+    d = n(734057),
     c = n(71393),
-    d = n(576705),
+    u = n(576705),
     _ = n(309010),
-    h = n(993838),
-    f = n(506774),
-    p = n(228366),
-    E = n(272355),
-    m = n(495544),
-    g = n(312006),
-    A = n(516607);
-class I extends E.A {
+    E = n(993838),
+    A = n(506774),
+    h = n(228366),
+    I = n(272355),
+    f = n(280450),
+    p = n(312006),
+    T = n(516607);
+class m extends I.A {
     _initialize() {
-        p.h.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+        h.h.subscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
     _terminate() {
-        p.h.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
+        h.h.unsubscribe("VOICE_STATE_UPDATES", this.handleVoiceStateUpdates);
     }
     handleVoiceStateUpdates = (e) => {
         let { voiceStates: t } = e;
         t.forEach((e) => {
-            if (null == e.channelId || e.userId !== m.default.getId() || (this.terminate(), f.w.get(A.zh, !1))) return;
-            let t = _.A.getVoiceChannelId();
-            null != t && e.channelId === t && g.Ay.isAudienceMember(e.userId, t) && (f.w.set(A.zh, !0), h.H2(t));
+            if (null == e.channelId || e.userId !== f.default.getId() || (this.terminate(), A.w.get(T.zh, !1))) return;
+            let t = _.Ay.getVoiceChannelId();
+            null != t && e.channelId === t && p.Ay.isAudienceMember(e.userId, t) && (A.w.set(T.zh, !0), E.H2(t));
         });
     };
 }
-let T = new I();
+let g = new m();
 var S = n(233993),
-    y = n(967198),
+    N = n(967198),
     C = n(403362);
-class N extends E.A {
+class R extends I.A {
     _initialize() {
-        p.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            p.h.subscribe("LOGOUT", this.handleLogout);
+        h.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            h.h.subscribe("LOGOUT", this.handleLogout);
     }
     _terminate() {
-        p.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            p.h.unsubscribe("LOGOUT", this.handleLogout);
+        h.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            h.h.unsubscribe("LOGOUT", this.handleLogout);
     }
     handleVoiceChannelSelect = (e) => {
         let { channelId: t, guildId: n } = e;
         if (null != t) {
-            let e = u.A.getChannel(t);
+            let e = d.A.getChannel(t);
             if (null == e || e.isGuildStageVoice()) return;
         }
         this.terminate(), this.handleDisconnectFromStageChannel(null == t ? null : (n ?? null));
     };
     handleDisconnectFromStageChannel = (e) => {
-        let t = y.A.getGuildId();
-        (0, o.As)([t, e].filter(C.Vq));
+        let t = N.A.getGuildId();
+        (0, l.As)([t, e].filter(C.Vq));
     };
     handleLogout = () => {
         this.terminate(), this.handleDisconnectFromStageChannel(null);
     };
 }
-let v = new N();
-function R(e, t) {
+let O = new R();
+function L(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (r) => {
-        let s = u.A.getChannel(t);
-        if (null != s) return O(s, n), r(s);
-        await (0, o.As)([e]),
+        let a = d.A.getChannel(t);
+        if (null != a) return y(a, n), r(a);
+        await (0, l.As)([e]),
             await i.A.joinGuild(e, { lurker: !0 }),
             c.A.addConditionalChangeListener(() => {
-                let e = u.A.getChannel(t);
-                return null == e || (O(e), v.initialize(), r(e), !1);
+                let e = d.A.getChannel(t);
+                return null == e || (y(e), O.initialize(), r(e), !1);
             });
     });
 }
-function O(e) {
+function y(e) {
     var t;
     let n = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        i = _.A.getVoiceChannelId();
+        i = _.Ay.getVoiceChannelId();
     if (
-        (!n && ((t = i), !d.A.can(S.Gk, e) || (h.j6(e.id) && t !== e.id && (h.W0(e, () => b(e, !0)), 1)))) ||
-        (T.initialize(), r.default.selectVoiceChannel(e.id), (i = _.A.getVoiceChannelId()) !== e.id)
+        (!n && ((t = i), !u.A.can(S.Gk, e) || (E.j6(e.id) && t !== e.id && (E.W0(e, () => D(e, !0)), 1)))) ||
+        (g.initialize(), r.default.selectVoiceChannel(e.id), (i = _.Ay.getVoiceChannelId()) !== e.id)
     )
         return !1;
-    let a = l.A.getAllApplicationStreamsForChannel(e.id);
-    return a.length > 0 && (0, s.A9)(a[0], { noFocus: !1 }), !0;
+    let s = o.A.getAllApplicationStreamsForChannel(e.id);
+    return s.length > 0 && (0, a.A9)(s[0], { noFocus: !1 }), !0;
 }
-function b(e) {
+function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        r = _.A.getVoiceChannelId();
-    (!i && r !== e.id && (0, a.H)(e) && h.E9(e, () => b(e, t, n, !0))) || (O(e, t) && D(e, r));
+        r = _.Ay.getVoiceChannelId();
+    (!i && r !== e.id && (0, s.H)(e) && E.E9(e, () => D(e, t, n, !0))) || (y(e, t) && v(e, r));
 }
-function D(e, t) {
-    h.jA(e, t);
+function v(e, t) {
+    E.jA(e, t);
 }

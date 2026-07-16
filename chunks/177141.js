@@ -25,8 +25,8 @@ var i = n(989349),
     R = n(652896),
     O = n(585510),
     L = n(610136),
-    D = n(229527),
-    y = n(93474),
+    y = n(229527),
+    D = n(93474),
     v = n(164956),
     b = n(857071),
     M = n(577517),
@@ -157,8 +157,8 @@ let eC = new eN(c.h, {
 var eR = n(696451),
     eO = n(317525),
     eL = n(71393),
-    eD = n(186295),
-    ey = n(803224),
+    ey = n(186295),
+    eD = n(803224),
     ev = n(576705),
     eb = n(362790),
     eM = n(763827),
@@ -374,7 +374,7 @@ let tl = {
             let { currentUser: t, selectedGuildId: n } = e;
             if (null == n) return !1;
             let i = eR.Ay.getMember(n, t.id);
-            return null != i && !i.isPending && (0, D.TR)(i);
+            return null != i && !i.isPending && (0, y.TR)(i);
         },
     },
     [ef.kqX.QUARANTINED]: {
@@ -416,11 +416,11 @@ let tl = {
     [ef.kqX.HARDWARE_MUTE]: {
         predicate: () =>
             eM.A.isConnected() &&
-            eD.Ay.isHardwareMute() &&
-            eD.Ay.isHardwareMuteNoticeEnabled() &&
+            ey.Ay.isHardwareMute() &&
+            ey.Ay.isHardwareMuteNoticeEnabled() &&
             !J.Ay.disableHardwareMuteSilenceAlert,
         metadata: () => {
-            let e = eD.Ay.getInputDeviceId(),
+            let e = ey.Ay.getInputDeviceId(),
                 t = el.A.getVendor(e),
                 n = el.A.getModel(e);
             if (null != t && null != n) return { vendor: t, model: n };
@@ -429,8 +429,8 @@ let tl = {
     [ef.kqX.PTT_NO_KEYBIND_WARNING]: {
         predicate: () =>
             !!eM.A.isConnected() &&
-            eD.Ay.getMode() === ef.TBI.PUSH_TO_TALK &&
-            !(eD.Ay.getSettings().modeOptions.shortcut.length > 0) &&
+            ey.Ay.getMode() === ef.TBI.PUSH_TO_TALK &&
+            !(ey.Ay.getSettings().modeOptions.shortcut.length > 0) &&
             !!en.A.getConfig({ location: "NoticeStore" }).showPTTNoKeybindWarning,
     },
     [ef.kqX.DISPATCH_ERROR]: {
@@ -468,7 +468,7 @@ let tl = {
         predicate: (e) => {
             let { voiceChannelId: t } = e;
             return (
-                null != t && eF.A.hasVideo(t) && !eD.Ay.supports(e0.O5.VIDEO) && !ta(ef.kqX.VIDEO_UNSUPPORTED_BROWSER)
+                null != t && eF.A.hasVideo(t) && !ey.Ay.supports(e0.O5.VIDEO) && !ta(ef.kqX.VIDEO_UNSUPPORTED_BROWSER)
             );
         },
     },
@@ -723,7 +723,7 @@ let tl = {
                 n = null != t ? eL.A.getGuild(t) : null;
             return (
                 (null != t &&
-                    null != y.A.getMentionRaidDetected(t) &&
+                    null != D.A.getMentionRaidDetected(t) &&
                     n?.features.has(ef.GuildFeatures.COMMUNITY) &&
                     !ta(ef.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION)) ||
                 !1
@@ -733,7 +733,7 @@ let tl = {
             let { selectedGuildId: t } = e,
                 n = { dismissUntil: r()().add(2, "hours").toDate() };
             if (null != t) {
-                let e = y.A.getMentionRaidDetected(t);
+                let e = D.A.getMentionRaidDetected(t);
                 null != e && (n.decisionId = e.decisionId);
             }
             return n;
@@ -794,7 +794,7 @@ let tl = {
                 ta(ef.kqX.SYSTEM_SERVICE_WARNING) ||
                 !(0, Q.yA)(N.Ay) ||
                 null == t ||
-                eD.Ay.getMode() !== ef.TBI.PUSH_TO_TALK
+                ey.Ay.getMode() !== ef.TBI.PUSH_TO_TALK
             )
                 return !1;
             let n = N.Ay.getVisibleGame();
@@ -804,7 +804,7 @@ let tl = {
     [ef.kqX.E2EE_UPDATE_REQUIRED]: {
         predicate: () => {
             if (ta(ef.kqX.E2EE_UPDATE_REQUIRED) || !eM.A.isConnected()) return !1;
-            let e = eD.Ay.getMediaEngine();
+            let e = ey.Ay.getMediaEngine();
             return 1 !== (e.getSupportedSecureFramesProtocolVersion?.() ?? 0);
         },
         metadata: () => ({ dismissUntil: r()().add(5, "days").toDate() }),
@@ -816,7 +816,7 @@ let tl = {
                 u.A?.process.platform !== "win32" ||
                 ta(ef.kqX.WINDOWS_MEDIA_PACK_REQUIRED) ||
                 eK.Ay.getEnableHardwareAcceleration()
-            ) && !1 === eD.Ay.isH264MfDecodeAvailable(),
+            ) && !1 === ey.Ay.isH264MfDecodeAvailable(),
     },
     [ef.kqX.RIOT_MIGRATION]: {
         predicate: () => {
@@ -853,7 +853,7 @@ function to() {
     if (null == e) return !1;
     let t = eB.A.getPremiumSubscription(),
         n = eU.A.getGuildId(),
-        i = eP.A.getVoiceChannelId(),
+        i = eP.Ay.getVoiceChannelId(),
         r = null != i ? eF.A.getVoiceStateForChannel(i) : null;
     for (let a of ts)
         if (
@@ -905,7 +905,7 @@ class tc extends s.Ay.Store {
                 eh.A,
                 S.A,
                 C.A,
-                y.A,
+                D.A,
                 L.A,
                 eR.Ay,
                 I.A,
@@ -913,8 +913,8 @@ class tc extends s.Ay.Store {
                 eL.A,
                 v.A,
                 b.A,
-                eD.Ay,
-                ey.A,
+                ey.Ay,
+                eD.A,
                 M.A,
                 eV.A,
                 ev.A,
@@ -924,7 +924,7 @@ class tc extends s.Ay.Store {
                 z.A,
                 eM.A,
                 N.Ay,
-                eP.A,
+                eP.Ay,
                 eU.A,
                 Z.A,
                 ew.A,

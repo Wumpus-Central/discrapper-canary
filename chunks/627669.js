@@ -4707,7 +4707,7 @@ function sk(e) {
                     observePostVisibilityAnalytics: m,
                     isShowingSearchResult: h,
                 } = e,
-                x = (0, g.bG)([td.A], () => td.A.getChannelId()),
+                x = (0, g.bG)([td.Ay], () => td.Ay.getChannelId()),
                 f = s.useCallback(
                     (e) => (n) => {
                         (t.current = n), (e.current = n?.getScrollerNode() ?? null);

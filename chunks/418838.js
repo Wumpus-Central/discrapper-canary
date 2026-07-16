@@ -33,7 +33,7 @@ function g(e) {
         g = (0, a.bG)([p.A], () => p.A.getChannel(o)),
         S = (0, a.bG)([L.A], () => L.A.getParticipant(o, E), [o, E]),
         D = null != g && null != S,
-        v = (0, a.bG)([C.A], () => C.A.getVoiceChannelId() === o);
+        v = (0, a.bG)([C.Ay], () => C.Ay.getVoiceChannelId() === o);
     s.useEffect(() => {
         (D && v) || c.close(t);
     }, [D, v, t]);
@@ -102,7 +102,7 @@ function g(e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("71406"),
                                                     n.e("41831"),
-                                                    n.e("18078"),
+                                                    n.e("62323"),
                                                     n.e("88429"),
                                                     n.e("94881"),
                                                     n.e("26132"),
@@ -168,7 +168,7 @@ function g(e) {
                                                 let { default: e } = await Promise.all([
                                                     n.e("71406"),
                                                     n.e("41831"),
-                                                    n.e("18078"),
+                                                    n.e("62323"),
                                                     n.e("88429"),
                                                     n.e("94881"),
                                                     n.e("26132"),
@@ -231,7 +231,7 @@ function g(e) {
                                                 async () => {
                                                     let { default: s } = await Promise.all([
                                                         n.e("41831"),
-                                                        n.e("18078"),
+                                                        n.e("62323"),
                                                         n.e("88429"),
                                                         n.e("94881"),
                                                         n.e("26132"),

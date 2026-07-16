@@ -526,7 +526,7 @@ function e7(e) {
             : ((e = Math.min(E.height * eZ.B5)) > E.width && (n = (e = E.width) / eZ.B5), (T = (E.width - e) / 2));
     }
     let R = h.get(a?.id ?? ""),
-        O = (0, m.bG)([ew.A], () => ew.A.getChannelId()),
+        O = (0, m.bG)([ew.Ay], () => ew.Ay.getChannelId()),
         M = (0, m.yK)(
             [X.Ay],
             () =>
@@ -5716,8 +5716,8 @@ let dn = (0, ep.A)(de),
         let i,
             { providedChannel: a } = e,
             [r, d] = s.useState(null),
-            o = (0, m.bG)([ew.A], () => ew.A.getChannelId()),
-            c = (0, m.bG)([ew.A], () => ew.A.getVoiceChannelId()),
+            o = (0, m.bG)([ew.Ay], () => ew.Ay.getChannelId()),
+            c = (0, m.bG)([ew.Ay], () => ew.Ay.getVoiceChannelId()),
             x = (0, m.bG)([ek.A], () => a ?? ek.A.getChannel(o), [o, a]),
             p = (0, to.DZ)(),
             f = (0, to.e4)(x, "ConnectedChannel"),
@@ -5732,7 +5732,7 @@ let dn = (0, ep.A)(de),
                 return e.length - n.length > 0;
             }, [o]),
             N = (0, ie.A)(),
-            T = (0, m.bG)([ew.A], () => (N?.channelId ?? ew.A.getVoiceChannelId()) === f?.id),
+            T = (0, m.bG)([ew.Ay], () => (N?.channelId ?? ew.Ay.getVoiceChannelId()) === f?.id),
             _ = (0, m.bG)([ej.Ay], () => (null != f ? ej.Ay.getSelfEmbeddedActivityForChannel(f.id) : null), [f]),
             S = (0, m.bG)([rH.A], () => rH.A.isConnected()),
             R = (0, eI.A)(S),
@@ -5797,7 +5797,7 @@ let dn = (0, ep.A)(de),
                 !0 === i),
             Y =
                 ((t = E?.id),
-                (0, m.bG)([ek.A, n$.A, ew.A], () => {
+                (0, m.bG)([ek.A, n$.A, ew.Ay], () => {
                     let e = n$.A.getGuild(t);
                     if (
                         !(
@@ -5808,7 +5808,7 @@ let dn = (0, ep.A)(de),
                     )
                         return !1;
                     let n = ek.A.getChannel(H);
-                    return H === ew.A.getChannelId(t) && null != n && n.getGuildId() === e.id && (0, rG.ke)(n.type);
+                    return H === ew.Ay.getChannelId(t) && null != n && n.getGuildId() === e.id && (0, rG.ke)(n.type);
                 })),
             { section: q, channelSidebarState: K } = (0, m.cf)(
                 [ib.Ay],
@@ -5832,7 +5832,7 @@ let dn = (0, ep.A)(de),
                     let { location: t } = e,
                         i = (0, ey.H)(t);
                     if (null == i || !(0, ev.A)(i)) return;
-                    ew.A.getVoiceChannelId() !== i && (await (0, e4.A)({ channelId: i }));
+                    ew.Ay.getVoiceChannelId() !== i && (await (0, e4.A)({ channelId: i }));
                     let l = ek.A.getChannel(i),
                         s = l?.guild_id;
                     setTimeout(() => {

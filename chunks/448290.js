@@ -18,8 +18,8 @@ function h(t, n) {
     d._.dispatchToLastSubscribed(A.jej.INSERT_TEXT, { plainText: i, rawText: r }), null != n && s.A.startTyping(n);
 }
 function T(t, n, e, s) {
-    let [d, o] = (0, r.yK)([u.A, l.A, c.A], () => {
-            let t = e ?? u.A.getChannelId(n),
+    let [d, o] = (0, r.yK)([u.Ay, l.A, c.A], () => {
+            let t = e ?? u.Ay.getChannelId(n),
                 i = l.A.getChannel(t);
             return [t, null != i && (i.isMultiUserDM() || c.A.can(A.xBc.SEND_MESSAGES, i))];
         }, [e, n]),

@@ -79,7 +79,7 @@ let N = {},
     C = {},
     R = {};
 function O() {
-    let e = g.A.getChannelId();
+    let e = g.Ay.getChannelId();
     if (null == e) return;
     let t = m.A.getChannel(e);
     if (null == t || null == t.guild_id) return;
@@ -101,7 +101,7 @@ class L extends A.Ay.PersistedStore {
     static displayName = "FavoritesSuggestionStore";
     static persistKey = "FavoritesSuggestionStore";
     initialize(e) {
-        if ((this.waitFor(m.A, g.A, S.Ay), this.syncWith([g.A], O), null == e)) return;
+        if ((this.waitFor(m.A, g.Ay, S.Ay), this.syncWith([g.Ay], O), null == e)) return;
         let { suggestedChannels: t, dismissedSuggestions: n, channelOpensByChannelId: i } = e;
         if (null != t) for (let e in t) N[e] = new Set(t[e]) ?? new Set();
         if (null != n) for (let e in n) C[e] = new Set(n[e]) ?? new Set();
@@ -114,30 +114,30 @@ class L extends A.Ay.PersistedStore {
         return { suggestedChannels: {}, dismissedSuggestions: {}, channelOpensByChannelId: {} };
     }
 }
-let D = new L(h.h, {
+let y = new L(h.h, {
         DISMISS_FAVORITE_SUGGESTION: function (e) {
             let { guildId: t, channelId: n } = e;
             return null == C[t] && (C[t] = new Set()), C[t].add(n), N[t].delete(n), !0;
         },
     }),
-    y = new Set();
+    D = new Set();
 class v extends A.Ay.PersistedStore {
     static displayName = "RecentlyActiveCollapseStore";
     static persistKey = "RecentlyActiveCollapseStore";
     initialize(e) {
-        y.clear(), e?.guilds.forEach((e) => y.add(e));
+        D.clear(), e?.guilds.forEach((e) => D.add(e));
     }
     isCollapsed(e) {
-        return y.has(e);
+        return D.has(e);
     }
     getState() {
-        return { guilds: y };
+        return { guilds: D };
     }
 }
 new v(h.h, {
     SET_RECENTLY_ACTIVE_COLLAPSED: function (e) {
         let { guildId: t, collapsed: n } = e;
-        n ? y.add(t) : y.delete(t);
+        n ? D.add(t) : D.delete(t);
     },
 });
 var b = n(395504),
@@ -287,7 +287,7 @@ class ed {
             (this.optInEnabled = (0, b.WW)(this.id)),
             (this.hideResourceChannels = (0, u.K)(this.id)),
             (this.favoriteChannelIds = new Set(S.Ay.getGuildFavorites(this.id) ?? [])),
-            (this.suggestedFavoriteChannelId = D.getSuggestedChannelId(this.id)),
+            (this.suggestedFavoriteChannelId = y.getSuggestedChannelId(this.id)),
             (this.collapsedCategoryIds = k.A.getCollapsedCategories());
         const i = m.A.getMutableGuildChannelsForGuild(this.id),
             a = V.A.getGuild(this.id);
@@ -334,8 +334,8 @@ class ed {
     }
     get initializationData() {
         return {
-            selectedChannel: m.A.getChannel(g.A.getChannelId()),
-            selectedVoiceChannelId: g.A.getVoiceChannelId(),
+            selectedChannel: m.A.getChannel(g.Ay.getChannelId()),
+            selectedVoiceChannelId: g.Ay.getVoiceChannelId(),
             activeJoinedRelevantThreads: w.A.getActiveJoinedRelevantThreadsForGuild(this.id),
             activeJoinedUnreadThreads: w.A.getActiveJoinedUnreadThreadsForGuild(this.id),
         };
@@ -443,7 +443,7 @@ class ed {
     getSectionRowsFromChannel(e) {
         let t = (function (e) {
             if (null == e) return null;
-            if (eD.has(e)) return e;
+            if (ey.has(e)) return e;
             let t = m.A.getChannel(e);
             return t?.isDirectory() ? q.n.GUILD_DIRECTORY : null;
         })(e);
@@ -666,7 +666,7 @@ class eE extends ec {
                 .map((e) => new em(this, e, t))
                 .keyBy((e) => e.id)
                 .value());
-        const n = D.getSuggestedChannelId(e.id),
+        const n = y.getSuggestedChannelId(e.id),
             i = m.A.getChannel(n);
         null != i &&
             null != n &&
@@ -678,7 +678,7 @@ class eE extends ec {
     }
     updateChannel(e, t) {
         let n = e.id in this.channels && S.Ay.isFavorite(e.guild_id, e.id),
-            i = D.getSuggestedChannelId(e.guild_id);
+            i = y.getSuggestedChannelId(e.guild_id);
         return (e.id !== i || n || (t = { ...t, activeJoinedRelevantThreads: {}, activeJoinedUnreadThreads: {} }),
         e.id in this.channels && this.channels[e.id].updateChannel(e, t))
             ? (this.invalidate(), !0)
@@ -1052,4 +1052,4 @@ function eL(e, t, n) {
         l = Array.from(a).sort((e, t) => K.default.compare(t, e));
     return !!((a.has(t.id) && l.indexOf(t.id) < ee) || H.Ay.hasRecentlyVisitedAndRead(t.id));
 }
-let eD = new Set(Object.values(q.n));
+let ey = new Set(Object.values(q.n));

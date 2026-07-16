@@ -805,7 +805,7 @@ class t2 extends r.Ay.Store {
             tG.A,
             tn.default,
             tK.A,
-            e5.A,
+            e5.Ay,
             tB.A,
             tF.A,
             tS.default,
@@ -1140,7 +1140,7 @@ let t9 = new t2(
                   }
                   if (
                       ((!tn.default.isInstanceLocked() || tn.default.isPinned(ey.uss.TEXT)) &&
-                          t === e5.A.getChannelId()) ||
+                          t === e5.Ay.getChannelId()) ||
                       tG.A.isNotificationDisabled(eO.KS.TextChat) ||
                       tF.A.disableNotifications ||
                       !(0, tA.lx)(n, t)
@@ -2278,7 +2278,7 @@ function il(e) {
             let { channelId: t } = e;
             return t;
         }),
-        A = (0, r.bG)([e5.A], () => e5.A.getVoiceChannelId()),
+        A = (0, r.bG)([e5.Ay], () => e5.Ay.getVoiceChannelId()),
         g = (0, r.bG)([nb.A], () => nb.A.getGuildVersion(t)),
         m = (0, r.bG)([nN.A], () => nN.A.version),
         f = (0, r.bG)([nR.default], () => nR.default.getGuildChangeSentinel(t)),
@@ -2580,8 +2580,8 @@ class i5 extends a.Component {
 }
 function i7(e) {
     let { channel: t, ...n } = e,
-        i = (0, r.bG)([e5.A, e3.A], () => {
-            let e = e5.A.getVoiceChannelId();
+        i = (0, r.bG)([e5.Ay, e3.A], () => {
+            let e = e5.Ay.getVoiceChannelId();
             return e3.A.getChannel(e);
         }),
         s = (0, r.bG)([e8.A], () => e8.A.getGuild(t.guild_id)),
@@ -2967,7 +2967,7 @@ class ss extends a.PureComponent {
 function sl(e) {
     let { contained: t = !1, ...n } = e,
         i = (0, r.bG)([nA.A], () => nA.A.getGuildId()),
-        s = (0, r.bG)([e5.A], () => e5.A.getChannelId(i)),
+        s = (0, r.bG)([e5.Ay], () => e5.Ay.getChannelId(i)),
         a = (0, r.bG)([e3.A], () => e3.A.getChannel(s)),
         o = (0, r.bG)([tt.Ay], () => tt.Ay.getOverlayChatKeybind()),
         d = null != o ? (0, ta.dI)(o.shortcut, !0) : "]",
@@ -3487,13 +3487,13 @@ class sX extends a.PureComponent {
     }
 }
 function sJ(e) {
-    let t = (0, r.bG)([e5.A, e3.A], () => e3.A.getChannel(e5.A.getVoiceChannelId())),
+    let t = (0, r.bG)([e5.Ay, e3.A], () => e3.A.getChannel(e5.Ay.getVoiceChannelId())),
         n = (0, tN.Ay)(t),
         i = (function () {
             let [e] = (0, r.bG)(
-                [nk.Ay, sx.A, e5.A, e3.A],
+                [nk.Ay, sx.A, e5.Ay, e3.A],
                 () => {
-                    let e = e3.A.getChannel(e5.A.getVoiceChannelId());
+                    let e = e3.A.getChannel(e5.Ay.getVoiceChannelId());
                     return null == e
                         ? [[], -1]
                         : e.isGuildStageVoice()
@@ -3723,7 +3723,7 @@ var s7 = n(528772),
     li = n(402622);
 function ls() {
     let [e, t] = (0, r.yK)([s7.A], () => [s7.A.enabled, s7.A.keepOpen]),
-        n = (0, r.bG)([e5.A], () => e5.A.getVoiceChannelId()),
+        n = (0, r.bG)([e5.Ay], () => e5.Ay.getVoiceChannelId()),
         i = (0, r.bG)([e3.A], () => e3.A.getChannel(n), [n]),
         s = i?.getGuildId();
     return e && null != i
@@ -3976,7 +3976,7 @@ function lh() {
         })),
         o = (0, r.bG)([ti.A], () => ti.A.windowSize()),
         d = (0, r.bG)([tt.Ay], () => tt.Ay.getOverlayKeybind()),
-        c = (0, r.bG)([e5.A], () => e5.A.getVoiceChannelId()),
+        c = (0, r.bG)([e5.Ay], () => e5.Ay.getVoiceChannelId()),
         u = (0, r.bG)([e3.A], () => e3.A.getChannel(c)),
         h = (0, r.bG)([e8.A], () => (null != u ? e8.A.getGuild(u.guild_id) : null)),
         p = (0, r.bG)([eQ.Ay, e4.A], () => (0, e$.A)(eQ.Ay, e4.A)),

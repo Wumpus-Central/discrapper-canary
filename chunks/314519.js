@@ -7,7 +7,7 @@ let s = {
     binds: ["shift+pageup"],
     comboKeysBindGlobal: !0,
     action() {
-        let e = a.A.getChannelId();
+        let e = a.Ay.getChannelId();
         if (null != e) {
             let t = r.Ay.ackMessageId(e);
             null != t &&

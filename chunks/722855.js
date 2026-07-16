@@ -2,68 +2,68 @@
 n.d(t, { A: () => C });
 var i = n(687123),
     r = n(508602),
-    s = n(720149),
-    a = n(155718),
-    o = n(439372),
-    l = n(292446),
-    u = n(626584),
+    a = n(493336),
+    s = n(155718),
+    l = n(439372),
+    o = n(292446),
+    d = n(626584),
     c = n(473503),
-    d = n(207560),
+    u = n(207560),
     _ = n(381689),
-    h = n(734057),
-    f = n(232835),
-    p = n(309010),
-    E = n(287809),
-    m = n(847599),
-    g = n(36149),
-    A = n(652215),
-    I = n(835002);
-let T = new u.A("AgeVerificationManager");
+    E = n(734057),
+    A = n(232835),
+    h = n(309010),
+    I = n(287809),
+    f = n(847599),
+    p = n(36149),
+    T = n(652215),
+    m = n(835002);
+let g = new d.A("AgeVerificationManager");
 function S(e) {
     let { channelId: t, message: n } = e,
-        i = f.A.getMessage(t, n.id);
+        i = A.A.getMessage(t, n.id);
     if (i?.embeds?.[0]?.type === r.A.AGE_VERIFICATION_SYSTEM_NOTIFICATION) {
-        let e = i.embeds[0].fields?.find((e) => e.rawName === g.uN.CONTENT_TYPE);
-        e?.rawValue === g.Wv.ERROR
-            ? (_.A.showFailedToast(I.OB.TIGGER_PAWTECT_ERROR), (0, m.Vh)(m.oQ.ERROR))
-            : e?.rawValue === g.Wv.VERIFIED_ADULT
-              ? (_.A.showSuccessToast(I.OB.TIGGER_PAWTECT_VERIFIED), (0, m.Vh)(m.oQ.VERIFIED_ADULT))
-              : e?.rawValue === g.Wv.VERIFIED_TEEN &&
-                (_.A.showSuccessToast(I.OB.TIGGER_PAWTECT_VERIFIED), (0, m.Vh)(m.oQ.VERIFIED_TEEN));
+        let e = i.embeds[0].fields?.find((e) => e.rawName === p.uN.CONTENT_TYPE);
+        e?.rawValue === p.Wv.ERROR
+            ? (_.A.showFailedToast(m.OB.TIGGER_PAWTECT_ERROR), (0, f.Vh)(f.oQ.ERROR))
+            : e?.rawValue === p.Wv.VERIFIED_ADULT
+              ? (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_ADULT))
+              : e?.rawValue === p.Wv.VERIFIED_TEEN &&
+                (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN));
     }
 }
-class y extends o.A {
+class N extends l.A {
     _previousAgeVerificationStatus = null;
     handlePostConnectionOpen = () => {
-        this._previousAgeVerificationStatus = E.default.getCurrentUser()?.ageVerificationStatus ?? null;
+        this._previousAgeVerificationStatus = I.default.getCurrentUser()?.ageVerificationStatus ?? null;
     };
     handleCurrentUserUpdate = (e) => {
         let { user: t } = e,
-            n = (0, E.transformUser)(t).ageVerificationStatus ?? null,
+            n = (0, I.transformUser)(t).ageVerificationStatus ?? null,
             r =
                 this._previousAgeVerificationStatus !== n &&
-                n === a.Tk.VERIFIED_ADULT &&
-                (0, d.d6)(i.t.AGE_GATED_SPACES);
+                n === s.Tk.VERIFIED_ADULT &&
+                (0, u.d6)(i.t.AGE_GATED_SPACES);
         try {
             if (r) {
-                let e = p.A.getChannelId(),
+                let e = h.Ay.getChannelId(),
                     t = !1;
                 if (
-                    (l.A.forEach((n) => {
+                    (o.A.forEach((n) => {
                         let { channelId: i } = n,
-                            r = h.A.getChannel(i);
-                        r?.nsfw && (l.A.clear(i), i === e && (t = !0));
+                            r = E.A.getChannel(i);
+                        r?.nsfw && (o.A.clear(i), i === e && (t = !0));
                     }),
                     t && null != e)
                 ) {
                     let t;
-                    s.A.fetchMessages({ channelId: e, limit: A.EMb }),
-                        (t = h.A.getChannel(e)),
-                        (t?.type === A.rbe.GUILD_FORUM || t?.type === A.rbe.GUILD_MEDIA) && (0, c.kB)(t);
+                    a.A.fetchMessages({ channelId: e, limit: T.EMb }),
+                        (t = E.A.getChannel(e)),
+                        (t?.type === T.rbe.GUILD_FORUM || t?.type === T.rbe.GUILD_MEDIA) && (0, c.kB)(t);
                 }
             }
         } catch (e) {
-            T.warn("Error clearing cache and refetching messages", e);
+            g.warn("Error clearing cache and refetching messages", e);
         } finally {
             this._previousAgeVerificationStatus = n;
         }
@@ -74,4 +74,4 @@ class y extends o.A {
         MESSAGE_CREATE: S,
     };
 }
-let C = new y();
+let C = new N();

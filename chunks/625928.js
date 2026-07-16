@@ -6,7 +6,7 @@ var i = n(627968),
     s = n.n(a),
     l = n(14877),
     o = n(17928),
-    d = n(990078),
+    d = n(866665),
     c = n(403581),
     u = n(834730),
     _ = n(140735),
@@ -30,10 +30,10 @@ function L() {
         return (t) => (0, i.jsx)(e, { ...t });
     });
 }
-function D(e) {
+function y(e) {
     let { className: t, iconOnly: n } = e,
-        a = (0, o.bG)([S.A, g.A], () => {
-            let e = g.A.getChannel(S.A.getChannelId());
+        a = (0, o.bG)([S.Ay, g.A], () => {
+            let e = g.A.getChannel(S.Ay.getChannelId());
             return e?.isPrivate() ? C.liQ.DM_CHANNEL : C.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: l } = (0, A.Ay)(E.A.PREMIUM_UPSELL);
@@ -68,7 +68,7 @@ function D(e) {
               })
     );
 }
-var y = n(263582),
+var D = n(263582),
     v = n(481395);
 function b(e) {
     let { type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: a, className: p } = e,
@@ -89,7 +89,7 @@ function b(e) {
                   ? R.intl.formatToPlainString(R.t.qH8uFW, { count: b })
                   : R.intl.string(R.t.YSRIqa),
         { analyticsLocations: U } = (0, A.Ay)(E.A.CHARACTER_COUNT),
-        { isVisible: w } = (0, y.A)({ type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: a });
+        { isVisible: w } = (0, D.A)({ type: t, textValue: n, maxCharacterCount: r, showRemainingCharsAfterCount: a });
     if (!w) return null;
     let G = b >= 0;
     return (0, i.jsx)(A.f5, {
@@ -124,7 +124,7 @@ function b(e) {
                 }),
                 (0, i.jsx)(_.A, { "aria-live": "polite", children: R.intl.format(R.t.qH8uFW, { count: b }) }),
                 L && !M
-                    ? (0, i.jsx)(D, { className: v.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: b })
+                    ? (0, i.jsx)(y, { className: v.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: b })
                     : null,
             ],
         }),

@@ -16,7 +16,7 @@ var i = l(503698),
     x = l(235986),
     g = l(25528),
     y = l(821609),
-    f = l(990078),
+    f = l(866665),
     v = l(309010),
     j = l(680724),
     N = l(309858),
@@ -26,7 +26,7 @@ function I(e) {
     let { userId: t, channel: l, onAction: i, variant: a = "primary" } = e,
         s = (0, N.u)(t, l),
         r = (0, c.bG)([j.A], () => j.A.isRequestOnCooldown(t)),
-        o = (0, c.bG)([v.A], () => v.A.getVoiceChannelId() === l.id, [l.id]);
+        o = (0, c.bG)([v.Ay], () => v.Ay.getVoiceChannelId() === l.id, [l.id]);
     if (null == s) return null;
     let [d, u] = r
         ? [!0, S.intl.string(T.default.mVFTUg)]
@@ -235,7 +235,7 @@ function ei(e) {
 }
 var ea = l(648246),
     es = l(183623),
-    er = l(845012),
+    er = l(622631),
     ec = l(982168),
     eo = l(730852),
     ed = l(401843),

@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     a = n.n(s),
-    r = n(735438),
+    r = n(435558),
     o = n(17928),
     c = n(506774),
     d = n(192308),
@@ -42,13 +42,13 @@ var i = n(627968),
     q = n(571909),
     K = n(284009),
     H = n.n(K),
-    F = n(990078),
-    Y = n(789645),
-    W = n(297152),
-    Q = n(939249),
-    X = n(778712),
-    Z = n(463930),
-    $ = n(834730),
+    F = n(789645),
+    Y = n(297152),
+    W = n(939249),
+    Q = n(778712),
+    X = n(463930),
+    Z = n(834730),
+    $ = n(866665),
     J = n(408278),
     ee = n(117723),
     et = n(243721),
@@ -93,12 +93,12 @@ var eT = n(818348),
     e_ = n(821182);
 let eI = l.memo(function (e) {
         let { toggleRequestToSpeakSidebar: t, chatOpen: n } = e,
-            l = (0, i.jsx)(ea.Ay.Icon, { icon: Y.P, tooltip: ex.intl.string(ex.t.cpT0Cq), onClick: t });
+            l = (0, i.jsx)(ea.Ay.Icon, { icon: F.P, tooltip: ex.intl.string(ex.t.cpT0Cq), onClick: t });
         return (0, i.jsxs)(ea.Ay, {
             toolbar: l,
             className: a()(e_.N1, { [e_.X_]: n }),
             children: [
-                (0, i.jsx)(ea.Ay.Icon, { icon: W.E, disabled: !0, "aria-label": ex.intl.string(ex.t.TYZgzW) }),
+                (0, i.jsx)(ea.Ay.Icon, { icon: Y.E, disabled: !0, "aria-label": ex.intl.string(ex.t.TYZgzW) }),
                 (0, i.jsx)(ea.Ay.Title, { children: ex.intl.string(ex.t.TYZgzW) }),
             ],
         });
@@ -169,14 +169,14 @@ let eI = l.memo(function (e) {
                     spacing: 16,
                     clickTrap: !0,
                     children: (e) =>
-                        (0, i.jsxs)(Q.D, {
+                        (0, i.jsxs)(W.D, {
                             innerRef: r,
                             className: e_.$u,
                             onContextMenu: E,
                             ...e,
                             children: [
                                 (0, i.jsx)(el.A, {
-                                    size: X._3.SIZE_40,
+                                    size: Q._3.SIZE_40,
                                     className: e_.RB,
                                     user: s.user,
                                     isMobile: h,
@@ -185,13 +185,13 @@ let eI = l.memo(function (e) {
                                 (0, i.jsxs)("div", {
                                     className: e_.kH,
                                     children: [
-                                        (0, i.jsx)(Z.g, {
+                                        (0, i.jsx)(X.g, {
                                             name: s.userNick,
                                             colorString: p?.colorString ?? null,
                                             colorStrings: g,
                                             className: e_.F8,
                                         }),
-                                        (0, i.jsx)($.E, {
+                                        (0, i.jsx)(Z.E, {
                                             variant: "text-xs/normal",
                                             color: "text-default",
                                             children: (function (e) {
@@ -214,7 +214,7 @@ let eI = l.memo(function (e) {
                 (0, i.jsxs)("div", {
                     className: e_.UD,
                     children: [
-                        (0, i.jsx)(F.m, {
+                        (0, i.jsx)($.m, {
                             text: f ? ex.intl.string(ex.t.h9rsTd) : ex.intl.string(ex.t.f0T7hI),
                             asContainer: !0,
                             children: (0, i.jsx)(J.K, {
@@ -227,7 +227,7 @@ let eI = l.memo(function (e) {
                                 "aria-label": f ? ex.intl.string(ex.t.h9rsTd) : ex.intl.string(ex.t.f0T7hI),
                             }),
                         }),
-                        (0, i.jsx)(F.m, {
+                        (0, i.jsx)($.m, {
                             text: ex.intl.string(ex.t.moABMy),
                             asContainer: !0,
                             children: (0, i.jsx)(J.K, {
@@ -235,7 +235,7 @@ let eI = l.memo(function (e) {
                                 onClick: function () {
                                     (0, eu.lL)(t, s.user.id, !0);
                                 },
-                                icon: Y.P,
+                                icon: F.P,
                                 variant: "secondary",
                             }),
                         }),
@@ -267,13 +267,13 @@ let eI = l.memo(function (e) {
             className: e_.y7,
             children: [
                 (0, i.jsx)(eS, {}),
-                (0, i.jsx)($.E, {
+                (0, i.jsx)(Z.E, {
                     className: e_.vo,
                     variant: "text-lg/semibold",
                     color: "text-strong",
                     children: ex.intl.string(ex.t["7R24mX"]),
                 }),
-                (0, i.jsx)($.E, {
+                (0, i.jsx)(Z.E, {
                     className: e_.XG,
                     variant: "text-sm/normal",
                     color: "text-default",
@@ -326,7 +326,7 @@ function eO(e) {
                     let { section: t } = e;
                     return 1 === t
                         ? (0, i.jsx)(
-                              $.E,
+                              Z.E,
                               {
                                   className: e_.Vu,
                                   variant: "text-xs/bold",
@@ -344,7 +344,7 @@ function eO(e) {
         ],
     });
 }
-var eR = n(534514),
+var eR = n(297264),
     eL = n(821609),
     eP = n(730852),
     eU = n(164617),
@@ -394,7 +394,7 @@ let eq = function (e) {
             (0, i.jsx)(eR.D, { className: eB.HA, variant: "heading-xxl/normal", children: d }),
             (0, i.jsx)("div", {
                 className: eB.Nu,
-                children: (0, i.jsx)($.E, {
+                children: (0, i.jsx)(Z.E, {
                     tag: "div",
                     color: "text-default",
                     variant: "heading-lg/normal",
@@ -434,7 +434,7 @@ var eK = n(661531),
     e1 = n(280056),
     e2 = n(204651),
     e5 = n(489643);
-function e4(e) {
+function e6(e) {
     let { width: t = 24, height: n = 24, isBadged: s = !1 } = e,
         [a] = l.useState(() => (0, e9.A)());
     return (0, i.jsxs)("svg", {
@@ -455,18 +455,18 @@ function e4(e) {
         ],
     });
 }
-function e3(e) {
+function e4(e) {
     let { className: t, numRequestToSpeak: n } = e,
         l = n > 0;
     return (0, i.jsxs)("div", {
         className: a()(e5.v, t),
         children: [
-            (0, i.jsx)(e4, { isBadged: l }),
-            l ? (0, i.jsx)($.E, { className: e5.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n }) : null,
+            (0, i.jsx)(e6, { isBadged: l }),
+            l ? (0, i.jsx)(Z.E, { className: e5.F, variant: "text-xs/semibold", children: n > 99 ? "99+" : n }) : null,
         ],
     });
 }
-function e6(e) {
+function e3(e) {
     let {
             toggleRequestToSpeakSidebar: t,
             showRequestToSpeakSidebar: n,
@@ -482,7 +482,7 @@ function e6(e) {
         onClick: c,
         label: n ? ex.intl.string(ex.t.gKGz7A) : ex.intl.string(ex.t.ImQ4dW),
         className: s,
-        iconComponent: () => (0, i.jsx)(e3, { numRequestToSpeak: a, className: s }),
+        iconComponent: () => (0, i.jsx)(e4, { numRequestToSpeak: a, className: s }),
         ...o,
     });
 }
@@ -513,7 +513,7 @@ function tn(e) {
             !l && d
                 ? (0, i.jsx)("div", {
                       className: a()(tt.x6, { [tt.vc]: c }),
-                      children: (0, i.jsx)(e6, {
+                      children: (0, i.jsx)(e3, {
                           toggleRequestToSpeakSidebar: function () {
                               c && eY.A.updateChatOpen(t.id, !1), (0, j.X)(r, j.O.OPEN_REQUEST_TO_SPEAK_SIDEBAR), n();
                           },
@@ -594,14 +594,14 @@ function ti(e) {
                     (0, i.jsxs)(ea.Ay.Title, {
                         children: [
                             (0, i.jsx)(eH.c, { size: "xs", color: eK.A.colors.TEXT_MUTED.css }),
-                            (0, i.jsx)($.E, {
+                            (0, i.jsx)(Z.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: tt.N_,
                                 children: ex.intl.format(ex.t.chmM9N, { count: d }),
                             }),
                             (0, i.jsx)(eF.n, { size: "xs", className: tt.Kk, color: "currentColor" }),
-                            (0, i.jsx)($.E, {
+                            (0, i.jsx)(Z.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
                                 className: tt.N_,
@@ -623,12 +623,12 @@ function ti(e) {
                           (0, i.jsxs)("div", {
                               className: tt.Qq,
                               children: [
-                                  (0, i.jsx)($.E, {
+                                  (0, i.jsx)(Z.E, {
                                       variant: "text-md/medium",
                                       color: "text-strong",
                                       children: p ? ex.intl.string(ex.t["T+zF9M"]) : ex.intl.string(ex.t["IZ+SVv"]),
                                   }),
-                                  (0, i.jsx)($.E, {
+                                  (0, i.jsx)(Z.E, {
                                       variant: "text-xs/medium",
                                       color: "text-default",
                                       children: p ? ex.intl.string(ex.t.Izgpmv) : ex.intl.string(ex.t["7FHbPG"]),
@@ -746,7 +746,7 @@ let tf = l.memo(function (e) {
             children: [
                 a ? (0, i.jsx)(td.K, { size: "lg", className: tm.Q6, color: eK.A.unsafe_rawColors.RED_400.css }) : null,
                 r ? (0, i.jsx)(tu.G, { size: "lg", className: tm.Q6 }) : null,
-                (0, i.jsx)($.E, {
+                (0, i.jsx)(Z.E, {
                     className: tm.Qq,
                     variant: "text-sm/normal",
                     color: "text-strong",
@@ -767,7 +767,7 @@ let tf = l.memo(function (e) {
                     className: tm.H,
                     children: [
                         h &&
-                            (0, i.jsx)(W.E, {
+                            (0, i.jsx)(Y.E, {
                                 size: "md",
                                 color: "currentColor",
                                 className: a()(tm.Kk, { [tm.MD]: u }),
@@ -863,7 +863,7 @@ let tj = l.memo(function (e) {
         channelId: s.id,
         clickTrap: !0,
         children: (e) =>
-            (0, i.jsx)(Q.D, {
+            (0, i.jsx)(W.D, {
                 innerRef: m,
                 className: a()(tm.iA, { [tm.wP]: x || c, [tm.fP]: x && c }),
                 onContextMenu: f,
@@ -898,7 +898,7 @@ var tv = n(844222),
     tw = n(616356),
     tM = n(977997),
     tk = n(312006),
-    tG = n(451409),
+    tG = n(186295),
     tD = n(636359);
 function tV(e) {
     let { aspectRatio: t, className: n, children: l, width: s, ...a } = e,
@@ -932,7 +932,7 @@ function tB(e) {
 }
 var tq = n(353256);
 let tK = function () {
-    return (0, i.jsx)(F.m, {
+    return (0, i.jsx)($.m, {
         text: ex.intl.string(ex.t.GMZqSi),
         children: (0, i.jsx)("div", {
             className: tq.k,
@@ -964,7 +964,7 @@ function tY(e) {
         channelId: s.id,
         clickTrap: !0,
         children: (e) =>
-            (0, i.jsx)(Q.D, {
+            (0, i.jsx)(W.D, {
                 innerRef: h,
                 onContextMenu: (e) => d(n, e),
                 ...e,
@@ -1198,7 +1198,7 @@ var t$ = n(847374),
     t1 = n(636585),
     t2 = n(486020),
     t5 = n(711865);
-function t4(e) {
+function t6(e) {
     let { channel: t, speaker: s, className: r } = e,
         o = l.useRef(null),
         { newestAnalyticsLocation: c } = (0, g.Ay)(),
@@ -1261,11 +1261,11 @@ function t4(e) {
         channelId: t.id,
         clickTrap: !0,
         children: (e) =>
-            (0, i.jsx)(F.m, {
+            (0, i.jsx)($.m, {
                 targetElementRef: o,
                 __unsupportedReactNodeAsText: s.userNick,
                 position: "bottom",
-                children: (0, i.jsx)(Q.D, {
+                children: (0, i.jsx)(W.D, {
                     ...e,
                     innerRef: o,
                     onClick: (t) => {
@@ -1274,7 +1274,7 @@ function t4(e) {
                     onContextMenu: x,
                     children: (0, i.jsx)(t0.eu, {
                         src: A ?? s.user.getAvatarURL(t.guild_id, 24),
-                        size: X._3.SIZE_24,
+                        size: Q._3.SIZE_24,
                         className: a()(t5.my, r),
                         "aria-label": s.userNick,
                         isSpeaking: h && !u.enabled,
@@ -1283,18 +1283,18 @@ function t4(e) {
             }),
     });
 }
-function t3(e) {
+function t4(e) {
     let { speakers: t, channel: n } = e;
     return (0, i.jsx)(t1.A, {
         className: t5.z,
         guildId: n.guild_id,
         users: t,
         max: 10,
-        renderUser: (e, t, l) => (0, i.jsx)(t4, { channel: n, speaker: e, className: t }, l),
+        renderUser: (e, t, l) => (0, i.jsx)(t6, { channel: n, speaker: e, className: t }, l),
         renderMoreUsers: (e, t, n) => (0, i.jsx)("div", { className: a()(t5.$U, t), children: e }, n),
     });
 }
-var t6 = n(947790);
+var t3 = n(947790);
 let t7 = l.memo(function (e) {
     let {
         label: t,
@@ -1306,17 +1306,17 @@ let t7 = l.memo(function (e) {
         channel: c,
         isStreamLive: d,
     } = e;
-    return (0, i.jsxs)(Q.D, {
+    return (0, i.jsxs)(W.D, {
         onClick: l,
-        className: a()(t6.kL, s),
+        className: a()(t3.kL, s),
         children: [
             null == o
-                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t6.Vo })
-                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t6.Vo }),
-            (0, i.jsxs)($.E, {
+                ? (0, i.jsx)(eF.n, { size: "custom", color: "currentColor", width: 20, height: 20, className: t3.Vo })
+                : (0, i.jsx)(eH.c, { size: "custom", color: "currentColor", width: 20, height: 20, className: t3.Vo }),
+            (0, i.jsxs)(Z.E, {
                 color: "text-strong",
                 variant: "text-md/semibold",
-                className: t6.Qq,
+                className: t3.Qq,
                 children: [t, " \u2014 ", n],
             }),
             r &&
@@ -1324,14 +1324,14 @@ let t7 = l.memo(function (e) {
                 null != o &&
                 o.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(t3, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
+                    children: [(0, i.jsx)(t4, { channel: c, speakers: o }), d && (0, i.jsx)(tJ.Ay, {})],
                 }),
             (0, i.jsx)(t$.a, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
                 height: 20,
-                className: a()(t6.mw, { [t6.VU]: r }),
+                className: a()(t3.mw, { [t3.VU]: r }),
             }),
         ],
     });
@@ -1624,7 +1624,7 @@ function nY(e) {
                               ? ex.intl.string(ex.t.hLbG5N)
                               : ex.intl.string(ex.t.e4WMvx);
                 })(a, c, d, u, A),
-                iconComponent: d ? ni._ : W.E,
+                iconComponent: d ? ni._ : Y.E,
                 onClick: () => {
                     (0, j.X)(n, j.O.REQUEST_TO_SPEAK, !a),
                         x(!0),
@@ -1661,7 +1661,7 @@ function nY(e) {
 }
 let nW = l.memo(function (e) {
     let { channel: t } = e,
-        n = (0, o.bG)([M.A], () => M.A.getVoiceChannelId() === t.id, [t.id]);
+        n = (0, o.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === t.id, [t.id]);
     return (0, i.jsxs)("div", {
         className: nH.kL,
         children: [
@@ -1809,7 +1809,7 @@ let nJ = l.memo(function (e) {
         { limit: x, reachedLimit: p } = (0, ny.A)(t),
         f = (0, o.bG)([nk.default], () => nk.default.getCurrentUser()),
         E = (0, o.bG)([tG.Ay], () => (0, nf.A)(tG.Ay)),
-        C = (0, o.bG)([M.A], () => M.A.getVoiceChannelId() === t.id, [t.id]),
+        C = (0, o.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === t.id, [t.id]),
         j = (0, o.bG)([m.A], () => m.A.getStreamParticipants(t.id)[0], [t.id]),
         N = (0, e7.qT)(t.id),
         S = x > 0,
@@ -2010,14 +2010,14 @@ function n2(e) {
     );
 }
 var n5 = n(104171),
-    n4 = n(81466),
-    n3 = n(823508);
-function n6(e) {
+    n6 = n(81466),
+    n4 = n(823508);
+function n3(e) {
     let { className: t, guildId: l } = e,
-        s = (0, n3.A)();
+        s = (0, n4.A)();
     return (0, i.jsx)(nS.A, {
         className: t,
-        icon: (0, i.jsx)(n4.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
+        icon: (0, i.jsx)(n6.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
         color: eK.A.unsafe_rawColors.BRAND_500.css,
         title: ex.intl.string(ex.t["60lJ0C"]),
         description: ex.intl.string(ex.t["EYn7/y"]),
@@ -2094,7 +2094,7 @@ function ie(e) {
         className: n7.P1,
         children: [
             (0, i.jsx)(n5.Ay, { className: n7.Ip, guildId: t.guild_id, users: l, size: n5.DN.SIZE_16 }),
-            (0, i.jsx)($.E, {
+            (0, i.jsx)(Z.E, {
                 variant: "text-sm/normal",
                 color: "text-default",
                 children: (function (e) {
@@ -2139,7 +2139,7 @@ function it(e) {
                                 variant: "heading-xxl/normal",
                                 children: ex.intl.string(ex.t.QGnDLs),
                             }),
-                            (0, i.jsx)($.E, {
+                            (0, i.jsx)(Z.E, {
                                 tag: "div",
                                 className: n7.VA,
                                 variant: "heading-lg/normal",
@@ -2149,7 +2149,7 @@ function it(e) {
                     }),
                     d ? null : (0, i.jsx)(nC.A, { channelId: t.id, showDismiss: !1 }),
                     s ? (0, i.jsx)(nT, { className: n7.fN, channel: t }) : null,
-                    c ? (0, i.jsx)(n6, { className: n7.fN, guildId: r }) : null,
+                    c ? (0, i.jsx)(n3, { className: n7.fN, guildId: r }) : null,
                     s ? (0, i.jsx)(n8, { className: a()({ [n7.fN]: !0 }), onClick: n }) : null,
                     (0, i.jsx)(ie, { channel: t }),
                 ],
@@ -2177,7 +2177,7 @@ function id(e) {
         } = e,
         { parentAnalyticsLocation: d } = (0, g.Ay)(),
         u = t.getGuildId(),
-        A = (0, o.bG)([M.A], () => M.A.getMostRecentSelectedTextChannelId(u), [u]),
+        A = (0, o.bG)([M.Ay], () => M.Ay.getMostRecentSelectedTextChannelId(u), [u]),
         x = L.default.getId(),
         p =
             !(0, o.bG)([m.A], () => m.A.isFullscreenInContext(n)) &&
@@ -2196,7 +2196,7 @@ function id(e) {
                     let l = e === eE._Of.VIDEO ? m.A.getLayout(t.id, n) : eE.DUB.MINIMUM;
                     return i && l !== eE.DUB.FULL_SCREEN && (l = eE.DUB.NO_CHAT), { currentLayout: l, mode: e };
                 }, [t, n]),
-                p = (0, o.bG)([M.A], () => M.A.getVoiceChannelId() === t.id, [t.id]);
+                p = (0, o.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === t.id, [t.id]);
             l.useEffect(() => {
                 u.current = x;
             });
@@ -2333,7 +2333,7 @@ function ih(e) {
         } = e,
         { analyticsLocations: C } = (0, g.Ay)(p.A.VOICE_CONTROL_TRAY),
         j = (0, N.Us)(),
-        S = (0, o.bG)([M.A], () => M.A.getVoiceChannelId() === n.id, [n.id]),
+        S = (0, o.bG)([M.Ay], () => M.Ay.getVoiceChannelId() === n.id, [n.id]),
         T = (0, o.bG)([w.A], () => w.A.can(eE.xBc.CONNECT, n)),
         _ = (0, V.E5)(n.id, z.ip.SPEAKER),
         I = (0, o.bG)([m.A], () => m.A.getSelectedParticipant(n.id)),

@@ -1064,9 +1064,9 @@ function nT(e) {
         u = (0, d.bG)([L.A], () => L.A.can(P.xBc.CONNECT, n)),
         c =
             ((t = n.id),
-            (0, d.bG)([t9.default, ne.A, nt.Ay], () => {
+            (0, d.bG)([t9.default, ne.Ay, nt.Ay], () => {
                 let e = t9.default.getId();
-                return ne.A.getVoiceChannelId() === t ? nt.Ay.getPermissionsForUser(e, t) : null;
+                return ne.Ay.getVoiceChannelId() === t ? nt.Ay.getPermissionsForUser(e, t) : null;
             }, [t])),
         A = e7.intl.string(e7.t.VJlc0S);
     switch (s) {
@@ -1340,7 +1340,7 @@ class nF extends r.PureComponent {
         });
     };
     handleClose = () => {
-        let e = ne.A.getChannelId(),
+        let e = ne.Ay.getChannelId(),
             t = e7.intl.formatToPlainString(e7.t.DEn7nu, { invitePeople: e7.intl.string(e7.t.Sd8Ixw) });
         this.props.markAsDismissed(eA.i.UNKNOWN), null != e && nV.A.sendBotMessage(e, t);
     };

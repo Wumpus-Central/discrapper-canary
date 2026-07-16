@@ -14,7 +14,7 @@ var d = t(91777),
     l = t(929921),
     c = t(734057),
     p = t(71393),
-    g = t(941327),
+    g = t(186295),
     h = t(309010),
     m = t(287809),
     S = t(723702),
@@ -22,15 +22,15 @@ var d = t(91777),
     E = t(327649),
     A = t(837859),
     w = t(725792),
-    I = t(830012),
-    y = t(753070),
+    y = t(830012),
+    I = t(753070),
     C = t(765682);
 let P = new Set(["356943187589201930"]),
     R = new Set(["1402418696126992445"]),
     v = new r.Vy("startStreamWithSource");
 async function b(e, n) {
     let t = m.default.getCurrentUser(),
-        r = h.A.getVoiceChannelId(),
+        r = h.Ay.getVoiceChannelId(),
         b = c.A.getChannel(r),
         D = b?.getGuildId(),
         O = p.A.getGuild(D)?.premiumTier;
@@ -45,15 +45,15 @@ async function b(e, n) {
     let { preset: k, resolution: T, fps: L, soundshareEnabled: W } = l.A.getState(),
         $ = n?.preset ?? k,
         { allowAutoQuality: j } = (0, f.eO)({ location: "startStreamWithSource" });
-    $ !== y.jQ.PRESET_AUTO || j || ($ = y.jQ.PRESET_VIDEO);
-    let G = $ === y.jQ.PRESET_AUTO ? y.jQ.PRESET_VIDEO : $,
+    $ !== I.jQ.PRESET_AUTO || j || ($ = I.jQ.PRESET_VIDEO);
+    let G = $ === I.jQ.PRESET_AUTO ? I.jQ.PRESET_VIDEO : $,
         [M, Q] = (0, A.Ay)(G, t, O) ?? [],
         U = M ?? n?.resolution ?? T,
         V = Q ?? n?.fps ?? L,
         N = n?.previewDisabled ?? u.uh.getSetting(),
         F = n?.soundshareEnabled ?? W;
     return (
-        (0, E.A)(G, U, V, t, O, b) || (($ = y.jQ.PRESET_VIDEO), (U = y.on.RESOLUTION_720), (V = y.kn.FPS_30)),
+        (0, E.A)(G, U, V, t, O, b) || (($ = I.jQ.PRESET_VIDEO), (U = I.on.RESOLUTION_720), (V = I.kn.FPS_30)),
         (0, a.Xd)({ preset: $, resolution: U, frameRate: V, soundshareEnabled: F }),
         (0, a.XI)(D, r, {
             ...(function (e) {
@@ -64,7 +64,7 @@ async function b(e, n) {
                 let a =
                         ((n = void 0),
                         (t = o.Ay.getRunningGames()),
-                        null == e ? n : t.find((n) => (0, I.A)(e.id, n.windowHandle))),
+                        null == e ? n : t.find((n) => (0, y.A)(e.id, n.windowHandle))),
                     d =
                         !(0, S.isWindows)() ||
                         null == a ||

@@ -42,7 +42,7 @@ let T = r().throttle(function () {
         )
             return void (0, f.a)(I.A.getHomeLink());
         let m = -1 === T ? p.YYv : t[T],
-            g = _.A.getChannelId(m);
+            g = _.Ay.getChannelId(m);
         (0, f.i)(m, g === m ? null : g, !1);
     }, p.ugG),
     m = {

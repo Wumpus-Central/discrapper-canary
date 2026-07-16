@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(652215),
     O = n(753070),
     L = n(731854),
-    D = n(375708),
-    y = n(818348);
+    y = n(375708),
+    D = n(818348);
 function v(e) {
     let {
             stream: t,
@@ -50,8 +50,8 @@ function v(e) {
                 _ = (0, a.bG)([A.Ay], () => A.Ay.getGoLiveSource()),
                 h = (0, a.bG)([C.default], () => C.default.getCurrentUser()),
                 I = (0, a.bG)([S.A], () => S.A.getGuild(e?.guildId)?.premiumTier),
-                { location: y } = (0, T.p)(),
-                v = (0, a.bG)([N.A, g.A], () => g.A.getChannel(N.A.getVoiceChannelId())),
+                { location: D } = (0, T.p)(),
+                v = (0, a.bG)([N.Ay, g.A], () => g.A.getChannel(N.Ay.getVoiceChannelId())),
                 b = r.useCallback(
                     (e, r, a, s) => {
                         if (e) {
@@ -72,7 +72,7 @@ function v(e) {
                             }
                         } else {
                             var l;
-                            (l = { ...y, object: R.ZSU.RADIO_ITEM, objectType: s }),
+                            (l = { ...D, object: R.ZSU.RADIO_ITEM, objectType: s }),
                                 (0, f.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([n.e("93475"), n.e("18630")]).then(
@@ -84,7 +84,7 @@ function v(e) {
                                 );
                         }
                     },
-                    [t, y, u, _],
+                    [t, D, u, _],
                 );
             if (null == e) return null;
             let M = l === O.jQ.PRESET_DOCUMENTS ? O.kn.FPS_30 : c,
@@ -122,12 +122,12 @@ function v(e) {
                 });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(s.rX, { label: D.intl.string(D.t.SkkeIt), children: P }),
-                    (0, i.jsx)(s.rX, { label: D.intl.string(D.t.rHyPXg), children: U }),
+                    (0, i.jsx)(s.rX, { label: y.intl.string(y.t.SkkeIt), children: P }),
+                    (0, i.jsx)(s.rX, { label: y.intl.string(y.t.rHyPXg), children: U }),
                 ],
             });
         })(t, U),
-        H = (0, I.A)(t, U, y.FX),
+        H = (0, I.A)(t, U, D.FX),
         j = null != w && F && (!w.startsWith("screen") || V),
         W = (0, a.bG)([A.Ay], () => A.Ay.getUseSystemScreensharePicker() && (0, h.isLinux)()),
         Y = r.useCallback(() => {
@@ -141,12 +141,12 @@ function v(e) {
         $ = (0, h.isMac)() && h.isPlatformEmbedded && K && (G?.windows.length ?? 0) > 0,
         z = (0, h.isMac)() && h.isPlatformEmbedded && K && (G?.applications.length ?? 0) > 0,
         q = $
-            ? D.intl.string(D.t.qDK8gQ)
+            ? y.intl.string(y.t.qDK8gQ)
             : z
-              ? D.intl.string(D.t["3m8w+Q"])
+              ? y.intl.string(y.t["3m8w+Q"])
               : P
-                ? D.intl.string(D.t.eAktHv)
-                : D.intl.string(D.t.qntSal),
+                ? y.intl.string(y.t.eAktHv)
+                : y.intl.string(y.t.qntSal),
         Z = r.useCallback(() => {
             let { preset: e, resolution: t, fps: n } = E.A.getState(),
                 i = { qualityOptions: { preset: e, resolution: t, frameRate: n }, context: L.x.STREAM };
@@ -157,18 +157,18 @@ function v(e) {
     if (null == t)
         return (0, i.jsx)(s.Dr, {
             id: "share-your-screen",
-            label: D.intl.string(D.t.fjBNo1),
+            label: y.intl.string(y.t.fjBNo1),
             icon: l.F,
             leadingAccessory: { type: "icon", icon: l.F },
             action: v,
         });
     let X = h.isPlatformEmbedded
-            ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: D.intl.string(D.t.ytAD9d), children: B })
+            ? (0, i.jsx)(s.Dr, { id: "stream-settings", label: y.intl.string(y.t.ytAD9d), children: B })
             : null,
         Q = j
             ? (0, i.jsx)(s.sL, {
                   id: "stream-settings-audio-enable",
-                  label: P ? D.intl.string(D.t.af2Tw1) : D.intl.string(D.t.ZJEHt7),
+                  label: P ? y.intl.string(y.t.af2Tw1) : y.intl.string(y.t.ZJEHt7),
                   checked: x,
                   action: Z,
               })
@@ -186,7 +186,7 @@ function v(e) {
         ee = (0, i.jsx)(s.Dr, {
             id: "stop-streaming",
             color: "danger",
-            label: D.intl.string(D.t.S5anIc),
+            label: y.intl.string(y.t.S5anIc),
             icon: o.G,
             leadingAccessory: { type: "icon", icon: o.G },
             action: () => (0, _.A)(t),

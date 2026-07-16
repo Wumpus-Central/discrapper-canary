@@ -13,7 +13,7 @@ var n = l(627968),
     h = l(369053),
     g = l(2110),
     p = l(815021),
-    _ = l(534514),
+    _ = l(297264),
     v = l(683071),
     j = l(235986),
     b = l(834981),
@@ -23,7 +23,7 @@ var n = l(627968),
     S = l(873298),
     E = l(885386),
     T = l(375708);
-let C = {
+let y = {
     getTitle: () => T.intl.string(T.t.vJOqMB),
     getDisabledTitle: () => T.intl.string(T.t["B5ZvY+"]),
     getDescription: () => T.intl.string(T.t["43UEUh"]),
@@ -32,16 +32,16 @@ let C = {
     onApply: () => E.he.updateSetting(S.he.NON_FRIENDS),
     predicate: () => E.he.getSetting() === S.he.DISABLED,
 };
-var y = l(444802);
+var C = l(444802);
 let k = {
     getTitle: () => T.intl.string(T.t.RVX1zT),
     getDisabledTitle: () => T.intl.string(T.t.SYkEBi),
     getDescription: () => T.intl.string(T.t.aqlmp8),
     eligibleReportSubtypes: [x.TS.SUB_GORE, x.TS.SUB_GLORIFYING_VIOLENCE],
     onApply: () =>
-        (0, y.qY)(
+        (0, C.qY)(
             (function () {
-                let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: l } = (0, y.T4)(),
+                let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: l } = (0, C.T4)(),
                     n = {};
                 return (
                     e === S.TO.SHOW && (n.goreContentGuilds = S.TO.BLUR),
@@ -52,7 +52,7 @@ let k = {
             })(),
         ),
     predicate: () => {
-        let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: l } = (0, y.T4)();
+        let { goreContentGuilds: e, goreContentFriendDm: t, goreContentNonFriendDm: l } = (0, C.T4)();
         return e === S.TO.SHOW || t === S.TO.SHOW || l === S.TO.SHOW;
     },
 };
@@ -91,7 +91,7 @@ let M = {
         },
     },
     D = {
-        [x.Wb.SAFETY_DM_SPAM_FILTER]: C,
+        [x.Wb.SAFETY_DM_SPAM_FILTER]: y,
         [x.Wb.SAFETY_SC_FILTERS_SEXUAL_MEDIA]: M,
         [x.Wb.SAFETY_SC_FILTERS_GRAPHIC_MEDIA]: k,
     };
@@ -266,7 +266,7 @@ let el = (e) => {
         buttonVariant: "application" === s.name && r ? "secondary" : "critical-primary",
     });
 };
-var en = l(735438),
+var en = l(435558),
     ea = l(660261);
 let ei = (e) => {
     let t = (0, en.flatMap)(e.history, (e) => {
@@ -373,17 +373,17 @@ let eS = ["cdn.discordapp.com", "media.discordapp.net"],
     eT = (0, N.m6)()
         ? /^https?:\/\/(?:(?:ptb\.|canary\.)?discord(?:app)?\.com|localhost(?::\d+)?|\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}(?::\d+)?)\/channels\/(?:@me|\d+)\/\d+\/\d+$/
         : /^https:\/\/(?:ptb\.|canary\.)?discord(?:app)?\.com\/channels\/(?:@me|\d+)\/\d+\/\d+$/;
-function eC(e) {
+function ey(e) {
     try {
         return new URL(e), !0;
     } catch {
         return !1;
     }
 }
-function ey(e) {
+function eC(e) {
     return (
         "" !== e &&
-        !!eC(e) &&
+        !!ey(e) &&
         !(function (e) {
             try {
                 let t = new URL(e);
@@ -410,7 +410,7 @@ let ek = (e) => {
             [j, b] = a.useState(null),
             [A, N] = a.useState(!1);
         a.useEffect(() => {
-            h(u?.value ?? ""), p(o?.value ?? ""), u?.value != null && "" !== u.value && N(ey(u.value));
+            h(u?.value ?? ""), p(o?.value ?? ""), u?.value != null && "" !== u.value && N(eC(u.value));
         }, [u, o]);
         let f = a.useCallback(
                 (e) => {
@@ -418,11 +418,11 @@ let ek = (e) => {
                         v(null), N(!1), p(""), b(null), d({ value: e, isValid: !1 });
                         return;
                     }
-                    if (!eC(e)) {
+                    if (!ey(e)) {
                         v(T.intl.string(T.t["24xrGb"])), N(!1), p(""), b(null), d({ value: e, isValid: !1 });
                         return;
                     }
-                    let t = ey(e);
+                    let t = eC(e);
                     N(t),
                         v(null),
                         t
@@ -1128,7 +1128,7 @@ let tN = (e) => {
 var tS = l(832712),
     tE = l(543465),
     tT = l(477427);
-let tC = (e) => {
+let ty = (e) => {
     let { user: t, channelId: l, reportId: i } = e,
         s = Z.A.getDMFromUserId(t.id),
         r = (0, G.bG)([Z.A], () => Z.A.getChannel(l), [l]),
@@ -1150,7 +1150,7 @@ let tC = (e) => {
         onButtonPress: x,
     });
 };
-var ty = l(144228),
+var tC = l(144228),
     tk = l(405977);
 let tI = (e) => {
     let { element: t, onChange: l, state: i } = e,
@@ -1176,7 +1176,7 @@ let tI = (e) => {
                 className: tk.P,
                 children: [r, t.should_submit_data && (0, n.jsx)("span", { className: tk.m, children: "*" })],
             }),
-            (0, n.jsx)(ty.z, { value: o, onChange: x, options: m }),
+            (0, n.jsx)(tC.z, { value: o, onChange: x, options: m }),
         ],
     });
 };
@@ -1202,7 +1202,7 @@ let tL = (e) => {
     let { application: t, reportId: l } = e,
         [i, s] = a.useState(!1),
         [r, d] = a.useState(!1),
-        o = (0, G.bG)([tw.A, Z.A], () => Z.A.getChannel(tw.A.getChannelId())?.guild_id),
+        o = (0, G.bG)([tw.Ay, Z.A], () => Z.A.getChannel(tw.Ay.getChannelId())?.guild_id),
         [c, m] = a.useState(null);
     a.useEffect(() => {
         null != c && (s(!0), d(!0));
@@ -1598,8 +1598,8 @@ let ls = (e) => {
             initialErrorMessage: S,
         } = e,
         E = la(t, "checkbox"),
-        C = la(t, "text_line_resource"),
-        y = li(t, "external_link"),
+        y = la(t, "text_line_resource"),
+        C = li(t, "external_link"),
         k = li(t, "free_text"),
         I = li(t, "dropdown"),
         M = la(t, "country_select"),
@@ -1795,7 +1795,7 @@ let ls = (e) => {
                 "data-migration-pending": !0,
                 className: ec.rf,
                 children: [
-                    null != C && (0, n.jsx)(t8, { element: C }),
+                    null != y && (0, n.jsx)(t8, { element: y }),
                     null != G && (0, n.jsx)(t0, { element: G }),
                     null != la(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
@@ -1845,7 +1845,7 @@ let ls = (e) => {
                                         "first_dm" === l.name ||
                                         "user" === l.name ||
                                         "report_to_mod_message" === l.name) &&
-                                    (0, n.jsx)(tC, {
+                                    (0, n.jsx)(ty, {
                                         user: "user" === l.name ? l.record : l.record.author,
                                         channelId: X,
                                         reportId: N,
@@ -1914,12 +1914,12 @@ let ls = (e) => {
                         null != k &&
                         k.length > 0 &&
                         (0, n.jsx)(eq, { elements: k, onChange: es, state: q }),
-                    ((null != t.children && t.children.length > 0) || (null != y && y.length > 0)) &&
+                    ((null != t.children && t.children.length > 0) || (null != C && C.length > 0)) &&
                         (0, n.jsxs)("div", {
                             className: ec.qI,
                             children: [
                                 (0, n.jsx)(eh, { node: t, onSelectChild: er, nodeMap: e.nodeMap }),
-                                null != y && y.length > 0 ? (0, n.jsx)(eK, { elements: y }) : null,
+                                null != C && C.length > 0 ? (0, n.jsx)(eK, { elements: C }) : null,
                             ],
                         }),
                     "" !== z
@@ -1954,7 +1954,7 @@ let ld = (e) => {
         b = (0, o.GV)(),
         { nodes: A, root_node_id: N, success_node_id: f, fail_node_id: S } = l,
         [E, T] = a.useState(N),
-        [C, y] = a.useState(void 0),
+        [y, C] = a.useState(void 0),
         [k, I] = a.useState(void 0),
         [M, D] = a.useState([]),
         [R, O] = a.useState(void 0),
@@ -1973,7 +1973,7 @@ let ld = (e) => {
         if (
             (D([...M, e]),
             null != a.key && _?.(a.key),
-            y(void 0),
+            C(void 0),
             I(void 0),
             t.name === x.t0.MESSAGE || t.name === x.t0.FIRST_DM)
         ) {
@@ -2008,7 +2008,7 @@ let ld = (e) => {
                     next_node: A[n].id,
                 });
             }
-            y(l?.multiSelect?.state), I(l?.textInput), T(n), D(e), _?.("..");
+            C(l?.multiSelect?.state), I(l?.textInput), T(n), D(e), _?.("..");
         },
         H = a.useCallback(
             (e, t) => {
@@ -2025,8 +2025,8 @@ let ld = (e) => {
                 if (n >= 0) {
                     let e = M.slice(0, n),
                         t = M[n];
-                    I(t?.textInput), y(t?.multiSelect?.state), D(e);
-                } else D([]), I(void 0), y(void 0);
+                    I(t?.textInput), C(t?.multiSelect?.state), D(e);
+                } else D([]), I(void 0), C(void 0);
                 U(t), T(l.id);
             },
             [A, M],
@@ -2078,7 +2078,7 @@ let ld = (e) => {
                                 onSelectChild: P,
                                 onNavigateBack: V,
                                 onNavigateToNode: H,
-                                multiSelect: C,
+                                multiSelect: y,
                                 textInput: k,
                                 successNodeId: f,
                                 failNodeId: S,

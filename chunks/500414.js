@@ -248,7 +248,7 @@ function em(e) {
         d = null != t && (0, E.Ag)(t),
         u = null != a && d && o,
         { analyticsLocations: m } = (0, f.Ay)(x.A.ACTIVITY_CUSTOM_LINK),
-        h = (0, c.bG)([ed.A], () => ed.A.getChannelId()),
+        h = (0, c.bG)([ed.Ay], () => ed.Ay.getChannelId()),
         g = (0, eu.et)(h),
         p = (0, c.bG)([ec.Ay], () => {
             if (null == h) return;
@@ -1553,11 +1553,11 @@ function n7(e) {
     });
 }
 var n8 = n(341662),
-    ie = n(990078),
-    it = n(890856),
-    ii = n(109112),
-    il = n(508770),
-    is = n(369606),
+    ie = n(890856),
+    it = n(109112),
+    ii = n(508770),
+    il = n(369606),
+    is = n(866665),
     ir = n(409626),
     ia = n(49491),
     io = n(692969),
@@ -1598,7 +1598,7 @@ function im(e) {
         );
     if (!u || null == i || null == c) return null;
     let h = null != d;
-    return (0, l.jsxs)(it.s, {
+    return (0, l.jsxs)(ie.s, {
         className: iu.E6,
         onClick: c,
         "aria-label": J.intl.formatToPlainString(J.t["8QLQB+"], { gameName: i.name }),
@@ -1620,7 +1620,7 @@ function im(e) {
                         : (0, l.jsx)("div", {
                               "aria-hidden": !0,
                               className: iu.EU,
-                              children: (0, l.jsx)(ii._, { size: "lg", color: "currentColor" }),
+                              children: (0, l.jsx)(it._, { size: "lg", color: "currentColor" }),
                           }),
                     (0, l.jsxs)("div", {
                         className: iu.pq,
@@ -1634,10 +1634,10 @@ function im(e) {
                             null != i.l30Rank &&
                                 (0, l.jsx)("div", {
                                     className: iu.k3,
-                                    children: (0, l.jsx)(il.E, {
+                                    children: (0, l.jsx)(ii.E, {
                                         variant: "default",
                                         type: { text: J.intl.formatToPlainString(J.t.ehZXlZ, { rank: i.l30Rank }) },
-                                        icon: is.O,
+                                        icon: il.O,
                                     }),
                                 }),
                         ],
@@ -1647,7 +1647,7 @@ function im(e) {
             (0, l.jsxs)("div", {
                 className: iu.o1,
                 children: [
-                    (0, l.jsx)(ie.m, {
+                    (0, l.jsx)(is.m, {
                         text: J.intl.string(J.t.WqhZss),
                         ariaHidden: !0,
                         children: (0, l.jsx)(ey.K, {
@@ -1679,7 +1679,7 @@ function ig(e) {
     let { gameId: t, sourceUserId: n } = e,
         { game: i, iconUrl: s, bannerUrl: r, openGameProfile: a, shouldRender: o } = ic({ gameId: t, sourceUserId: n });
     return o && null != i && null != a
-        ? (0, l.jsxs)(it.s, {
+        ? (0, l.jsxs)(ie.s, {
               className: ih.E6,
               onClick: a,
               "aria-label": J.intl.formatToPlainString(J.t["8QLQB+"], { gameName: i.name }),
@@ -1701,7 +1701,7 @@ function ig(e) {
                               : (0, l.jsx)("div", {
                                     "aria-hidden": !0,
                                     className: ih.EU,
-                                    children: (0, l.jsx)(ii._, { size: "lg", color: "currentColor" }),
+                                    children: (0, l.jsx)(it._, { size: "lg", color: "currentColor" }),
                                 }),
                           (0, l.jsxs)("div", {
                               className: ih.Qs,
@@ -1715,12 +1715,12 @@ function ig(e) {
                                   null != i.l30Rank &&
                                       (0, l.jsx)("div", {
                                           className: ih.k3,
-                                          children: (0, l.jsx)(il.E, {
+                                          children: (0, l.jsx)(ii.E, {
                                               variant: "default",
                                               type: {
                                                   text: J.intl.formatToPlainString(J.t.ehZXlZ, { rank: i.l30Rank }),
                                               },
-                                              icon: is.O,
+                                              icon: il.O,
                                           }),
                                       }),
                               ],
@@ -2336,7 +2336,7 @@ function lR(e) {
             let e = D.A.getChannel(t.channel_id),
                 n = nI.A.getGuild(e?.guild_id),
                 i = t.messageReference?.channel_id,
-                l = ed.A.getCurrentlySelectedChannelId(),
+                l = ed.Ay.getCurrentlySelectedChannelId(),
                 s = lI.Ay.getCurrentSidebarChannelId(t.messageReference?.channel_id),
                 r = l === i && s === e?.id;
             null == e ||
@@ -2987,7 +2987,7 @@ let sp = (e) => {
                                                         className: sm.LX,
                                                         children: e.map((e) =>
                                                             (0, l.jsx)(
-                                                                ie.m,
+                                                                is.m,
                                                                 {
                                                                     text: e.name,
                                                                     ...l2.Uk,
@@ -3087,7 +3087,7 @@ let sI = (0, l3.xI)(lQ.A.STICKERS_CONSTANTS_STICKER_DIMENSION),
                     targetElementRef: r,
                     children: (e) => {
                         let { onClick: n } = e;
-                        return (0, l.jsx)(ie.m, {
+                        return (0, l.jsx)(is.m, {
                             ...l2.Uk,
                             shouldShow: a,
                             __unsupportedReactNodeAsText: (0, l2.yR)(h),
@@ -3128,7 +3128,7 @@ var sv = n(406704),
     sb = n(456874),
     sk = n(707539),
     sL = n(80682),
-    sR = n(465364),
+    sR = n(521981),
     sP = n(805964),
     sM = n(943220),
     sD = n(288254),
@@ -3311,7 +3311,7 @@ var sF = n(383233),
 function s2(e) {
     let { guild: t, channel: n, message: i } = e,
         r = U.A.getGuildId(),
-        a = ed.A.getChannelId(r),
+        a = ed.Ay.getChannelId(r),
         o = s.useCallback(() => {
             eV.default.track(W.HAw.CHANNEL_LINK_PREVIEW_JOINED, {
                 author_id: i.author?.id,
@@ -4037,7 +4037,7 @@ function r2(e) {
         i = r1[t];
     if (null == i) throw Error(`Unexpected operating system: ${t}`);
     let s = i.icon;
-    return (0, l.jsx)(ie.m, { text: i.getLabel(), children: (0, l.jsx)(s, { className: n }) });
+    return (0, l.jsx)(is.m, { text: i.getLabel(), children: (0, l.jsx)(s, { className: n }) });
 }
 function r3(e) {
     let { systems: t, className: n, iconClassName: i } = e;
@@ -5475,7 +5475,7 @@ function a6(e) {
             ],
         })),
         S &&
-            (r = (0, l.jsx)(ie.m, {
+            (r = (0, l.jsx)(is.m, {
                 asContainer: !0,
                 text: J.intl.string(J.t["/FeTK6"]),
                 children: (0, l.jsx)(nb.m, { size: "md", color: "currentColor", className: iU.G }),
@@ -5605,7 +5605,7 @@ function oi(e) {
         );
     return null == I
         ? (0, l.jsx)(aU, {})
-        : (0, l.jsxs)(it.s, {
+        : (0, l.jsxs)(ie.s, {
               className: a()(on.Gg, { [on.vk]: h && u }),
               onClick: C,
               style: _,
@@ -6209,7 +6209,7 @@ function ow(e) {
                         "div",
                         {
                             className: oU.my,
-                            children: (0, l.jsx)(ie.m, {
+                            children: (0, l.jsx)(is.m, {
                                 text: ob.Ay.getName(n, i, e),
                                 asContainer: !0,
                                 tag: "div",
@@ -6320,7 +6320,7 @@ function oH(e) {
             return { label: l ? J.intl.format(o, { othersCount: a }) : J.intl.format(d, { othersCount: a }) };
         })({ currentUserId: (0, c.bG)([M.default], () => M.default.getId()), author: n.author, voiceStates: g }),
         I = (0, c.bG)([nI.A], () => null != nI.A.getGuild(u.id), [u.id]),
-        C = (0, c.bG)([ed.A], () => ed.A.getVoiceChannelId() === m.id, [m.id]),
+        C = (0, c.bG)([ed.Ay], () => ed.Ay.getVoiceChannelId() === m.id, [m.id]),
         v = (0, c.bG)([i9.Ay], () => a2([i9.Ay], t), [t]),
         _ = t.state === W.elq.ACCEPTING,
         { analyticsLocations: j } = (0, f.Ay)(x.A.INVITE_EMBED),

@@ -8,19 +8,19 @@ var l = n(665260),
     c = n(746080),
     d = n(652215);
 function u(e) {
-    let t = (0, i.bG)([a.A, r.A, s.Ay], () => {
+    let t = (0, i.bG)([a.A, r.Ay, s.Ay], () => {
             let t = a.A.getChannel(e);
             if (
                 null != t &&
                 (0, l.Lt)(t.flags, c.lx.IS_GUILD_RESOURCE_CHANNEL) &&
                 (function (e) {
-                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.A,
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : r.Ay,
                         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Ay,
                         l = e.guild_id;
                     return (
                         t.getChannelId(l) === c.VV.GUILD_HOME && n.getCurrentSidebarChannelId(c.VV.GUILD_HOME) === e.id
                     );
-                })(t, r.A, s.Ay)
+                })(t, r.Ay, s.Ay)
             )
                 return t.guild_id;
         }),

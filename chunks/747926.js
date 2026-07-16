@@ -36,7 +36,7 @@ function N(e, t, n) {
             null != n ? (0, A.N9)(e, { ...i, source: n }) : (0, A.iN)(e.id, i);
         return;
     }
-    let l = p.A.getChannelId();
+    let l = p.Ay.getChannelId();
     e.parent_id === l || (0, S.mP)(l) || (0, A.iN)(e.parent_id),
         (0, E.pX)(
             g.BVt.CHANNEL_THREAD_VIEW((0, d.j)(e), (0, S.mP)(l) ? S.VV.GUILD_HOME : e.parent_id, e.id),
@@ -52,7 +52,7 @@ function C(e, t, n) {
         r()(!__OVERLAY__, "Cannot create threads in the overlay."),
         (0, o.zV)(g.HAw.THREAD_CREATION_STARTED, { location: n, channel_id: e.id, guild_id: e.guild_id }),
         u.Uw.dispatch(g.jej.POPOUT_CLOSE),
-        p.A.getChannelId() !== e.id && (0, A.iN)(e.id),
+        p.Ay.getChannelId() !== e.id && (0, A.iN)(e.id),
         "" === f.A.getDraft(e.id, f.C.FirstThreadMessage))
     ) {
         let t = f.A.getDraft(e.id, f.C.ChannelMessage);

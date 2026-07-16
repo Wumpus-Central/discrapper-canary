@@ -13,7 +13,7 @@ var i = n(17928),
 function E(e) {
     let { applicationId: t, onClose: n } = e,
         { newestAnalyticsLocation: E } = (0, r.Ay)(),
-        A = (0, i.bG)([c.A, u.A], () => c.A.getChannel(u.A.getChannelId())),
+        A = (0, i.bG)([c.A, u.Ay], () => c.A.getChannel(u.Ay.getChannelId())),
         h = (0, d.Us)() === _.BRT.POPOUT;
     return () => {
         n?.(),

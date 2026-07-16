@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(309010),
     O = n(287809),
     L = n(795816),
-    D = n(933958),
-    y = n(851907),
+    y = n(933958),
+    D = n(851907),
     v = n(838274),
     b = n(536246),
     M = n(108959),
@@ -42,18 +42,18 @@ var i = n(627968),
 function H(e) {
     let { channel: t, isLoading: n } = e,
         [a, E] = r.useState(!1),
-        A = (0, l.bG)([D.Ay], () => D.Ay.getCurrentEmbeddedActivity()),
+        A = (0, l.bG)([y.Ay], () => y.Ay.getCurrentEmbeddedActivity()),
         v = A?.applicationId,
-        H = (0, l.bG)([D.Ay], () => null != v && D.Ay.isProxyTicketRefreshing(v), [v]),
-        j = (0, l.bG)([D.Ay], () => D.Ay.getActivityPanelMode()),
+        H = (0, l.bG)([y.Ay], () => null != v && y.Ay.isProxyTicketRefreshing(v), [v]),
+        j = (0, l.bG)([y.Ay], () => y.Ay.getActivityPanelMode()),
         W = (0, h.h)(v),
         Y = A?.launchId,
-        K = (0, l.bG)([R.A], () => R.A.getChannelId() === t?.id),
+        K = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
         { dockedRect: $, isHidden: z } = (0, l.cf)([C.A], () => {
             let e = C.A.pipWindow;
             return { dockedRect: null != e ? C.A.getDockedRect(e.id) : null, isHidden: C.A.isEmbeddedActivityHidden() };
         }),
-        q = (0, y.xi)({ channelId: t?.id }),
+        q = (0, D.xi)({ channelId: t?.id }),
         {
             activityParticipant: Z,
             selectedParticipant: X,
@@ -221,7 +221,7 @@ function H(e) {
 }
 let j = (e) => {
     let { channel: t, ...n } = e,
-        r = D.Ay.getCurrentEmbeddedActivity();
+        r = y.Ay.getCurrentEmbeddedActivity();
     (0, v.A)({ connectedEmbeddedActivity: r });
     let { analyticsLocations: a } = (0, A.Ay)(E.A.ACTIVITY_PIP);
     return (0, i.jsx)(A.f5, { value: a, children: (0, i.jsx)(H, { channel: t, isLoading: null == r, ...n }) });

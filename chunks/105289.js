@@ -8621,7 +8621,7 @@ let rZ = [
 ];
 function r0() {
     let [e, t] = o.useState(eo.lAJ.USER_JOIN),
-        a = (0, d.bG)([rq.A], () => rq.A.getChannelId(), []),
+        a = (0, d.bG)([rq.Ay], () => rq.Ay.getChannelId(), []),
         n = o.useCallback(() => {
             if (null == a || null == e) return;
             let t = (0, rK.Ay)({ channelId: a, content: "", type: e, state: eo.cmJ.SENT });
@@ -13939,7 +13939,7 @@ function cO(e) {
     });
 }
 function cw() {
-    let e = (0, d.bG)([rq.A], () => rq.A.getChannelId()),
+    let e = (0, d.bG)([rq.Ay], () => rq.Ay.getChannelId()),
         t = (0, d.bG)([a7.A], () => a7.A.getGuildId()),
         a = (0, d.bG)([a_.A], () => a_.A.getChannel(e)),
         n = (0, d.bG)([a9.A], () => a9.A.getGuild(t)),
@@ -14465,7 +14465,7 @@ function um() {
                           onClick: () => {
                               let e;
                               return (
-                                  (e = rq.A.getChannelId() ?? "21154681615024128"),
+                                  (e = rq.Ay.getChannelId() ?? "21154681615024128"),
                                   void (0, eW.openModalLazy)(
                                       async () => {
                                           let { default: t } = await Promise.all([

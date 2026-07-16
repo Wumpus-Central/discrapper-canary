@@ -18,8 +18,8 @@ var s = l(627968),
     I = l(999291),
     m = l(975732),
     O = l(718019),
-    g = l(915614),
-    y = l(946356),
+    y = l(915614),
+    g = l(946356),
     b = l(984545),
     C = l(587168),
     T = l(983495),
@@ -28,9 +28,9 @@ var s = l(627968),
     _ = l(696451),
     E = l(309010),
     L = l(351906),
-    k = l(841595),
+    k = l(321191),
     N = l(383199),
-    R = l(795873),
+    R = l(413492),
     G = l(559506),
     S = l(900179),
     w = l(646986),
@@ -58,7 +58,7 @@ function Y(e) {
         } = e,
         c = f.Ay.getName(r?.id, t, i),
         A = (0, n.bG)([k.A], () => k.A.getUserProfile(i.id)?.application),
-        p = (0, n.bG)([v.A, E.A], () => v.A.getChannel(E.A.getChannelId())),
+        p = (0, n.bG)([v.A, E.Ay], () => v.A.getChannel(E.Ay.getChannelId())),
         h = (0, n.bG)([_.Ay], () => _.Ay.isMember(r?.id, i.id)),
         P = (0, n.bG)([L.A], () => L.A.hidePersonalInformation);
     return (0, s.jsxs)(U.Ip, {
@@ -104,7 +104,7 @@ function Y(e) {
         ],
     });
 }
-var z = l(920947),
+var z = l(848674),
     Q = l(652215);
 function Z(e) {
     let {
@@ -156,7 +156,7 @@ function Z(e) {
                     (0, s.jsx)(a.A, {
                         children: (0, s.jsx)(t.H, { id: $, children: J.intl.format(J.t.KRe1Fk, { name: ee }) }),
                     }),
-                    (0, s.jsxs)(y.A, {
+                    (0, s.jsxs)(g.A, {
                         user: i,
                         displayProfile: M,
                         themeType: D.d.POPOUT,
@@ -184,7 +184,7 @@ function Z(e) {
                             (0, s.jsxs)("div", {
                                 className: X.wx,
                                 children: [
-                                    (0, s.jsx)(g.A, { user: i, displayProfile: M, guildId: U, themeType: D.d.POPOUT }),
+                                    (0, s.jsx)(y.A, { user: i, displayProfile: M, guildId: U, themeType: D.d.POPOUT }),
                                     (0, s.jsx)(O.A, {
                                         user: i,
                                         displayProfile: M,

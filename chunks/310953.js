@@ -15,7 +15,7 @@ function _(e) {
         i = arguments.length > 2 ? arguments[2] : void 0;
     return A(
         (0, a.ai)(e) ? (0, l.g)() : s.A.getGuildWithoutChangingGuildActionRows(e).guildChannels,
-        { currentVoiceChannelId: u.A.getVoiceChannelId(), selectedChannelId: u.A.getChannelId() },
+        { currentVoiceChannelId: u.Ay.getVoiceChannelId(), selectedChannelId: u.Ay.getChannelId() },
         { withVoiceChannels: t, withCurrentVoiceChannel: n },
         i,
     );
@@ -26,9 +26,9 @@ function E(e, t, n) {
         l = arguments.length > 4 ? arguments[4] : void 0,
         o = (0, r.bG)([c.default], () => c.default.getGuildChangeSentinel(e)),
         _ = (0, r.bG)([d.A], () => d.A.version),
-        { currentVoiceChannelId: E, selectedChannelId: h } = (0, r.cf)([u.A], () => ({
-            currentVoiceChannelId: u.A.getVoiceChannelId(),
-            selectedChannelId: u.A.getChannelId(),
+        { currentVoiceChannelId: E, selectedChannelId: h } = (0, r.cf)([u.Ay], () => ({
+            currentVoiceChannelId: u.Ay.getVoiceChannelId(),
+            selectedChannelId: u.Ay.getChannelId(),
         }));
     return (0, i.useMemo)(
         () =>

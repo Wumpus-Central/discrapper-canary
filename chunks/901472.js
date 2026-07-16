@@ -21,7 +21,7 @@ function c(e, t, l) {
     if (!(0, N.r)(e)) return Promise.resolve();
     let s = G.modViewPanel ?? M.g.INFO,
         g = G.sourceLocation ?? r.A.MEMBER_SAFETY_PAGE,
-        f = I.A.getCurrentlySelectedChannelId(),
+        f = I.Ay.getCurrentlySelectedChannelId(),
         R = null != f ? a.A.getChannel(f) : null;
     if (l !== o.VV.MEMBER_SAFETY && l !== (0, o.Gr)(o.VV.MEMBER_SAFETY, e) && (null == R || R.getGuildId() !== e)) {
         let t = _.Ay.getDefaultChannel(e);

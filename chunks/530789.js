@@ -25,8 +25,8 @@ var i = n(731738),
     R = n(944043),
     O = n(181370),
     L = n.n(O),
-    D = n(695515),
-    y = n(976860),
+    y = n(695515),
+    D = n(976860),
     v = n(378570),
     b = n(790535),
     M = n(446600),
@@ -94,7 +94,7 @@ function eh() {
         V.A.getDesktopType() === et.nRU.NEVER ||
         Y.A.getStatus() === et.clD.DND ||
         U.NO.getSetting() ||
-        D.A.isCurrentUserInRestrictedHours()
+        y.A.isCurrentUserInRestrictedHours()
     );
 }
 function eI(e) {
@@ -109,7 +109,7 @@ function ef(e) {
 class ep extends a.Ay.Store {
     static displayName = "NotificationStore";
     initialize() {
-        this.waitFor(h.A, x.A, D.A, k.A, g.A, F.A, V.A, B.A, H.Ay, j.A, W.A, Y.A, M.A, K.A, $.A, z.default, q.A);
+        this.waitFor(h.A, x.A, y.A, k.A, g.A, F.A, V.A, B.A, H.Ay, j.A, W.Ay, Y.A, M.A, K.A, $.A, z.default, q.A);
     }
 }
 new ep(
@@ -143,7 +143,7 @@ new ep(
               },
               WINDOW_FOCUS: function (e) {
                   if ((ec = e.focused)) {
-                      let e = W.A.getChannelId();
+                      let e = W.Ay.getChannelId();
                       null != e && eA.clearChannel(e);
                   }
               },
@@ -160,7 +160,7 @@ new ep(
                   let f = (0, R.lx)(r, t, !ec),
                       p = V.A.getNotifyMessagesInSelectedChannel() && (0, R.kY)(r, t);
                   if (!f && !p) return !1;
-                  if (D.A.isCurrentUserInRestrictedHours())
+                  if (y.A.isCurrentUserInRestrictedHours())
                       return (
                           N.A.increment({
                               name: i.K.NOTIFICATION_SOUND_PLAYBACK_ATTEMPT,
@@ -191,7 +191,7 @@ new ep(
                       !K.A.disableNotifications
                   )
                       return !1;
-                  let { icon: O, title: y, body: b, emoji: M } = (0, R.TB)(s, r, d),
+                  let { icon: O, title: D, body: b, emoji: M } = (0, R.TB)(s, r, d),
                       P = !(function (e) {
                           let t;
                           return (
@@ -205,7 +205,7 @@ new ep(
                           channelId: s.id,
                           message: r,
                           icon: O,
-                          title: y,
+                          title: D,
                           body: b,
                       }),
                       (0, C.n)(r, s.guild_id),
@@ -215,7 +215,7 @@ new ep(
                   eI(T),
                       ee.A.showNotification(
                           O,
-                          y,
+                          D,
                           b,
                           {
                               notif_type: "MESSAGE_CREATE",
@@ -508,7 +508,7 @@ new ep(
                               {
                                   overrideStreamerMode: !0,
                                   onClick: () => {
-                                      (0, y.pX)((0, w.settingsPathToRoute)(e ? er.od.WINDOWS : er.od.LINUX));
+                                      (0, D.pX)((0, w.settingsPathToRoute)(e ? er.od.WINDOWS : er.od.LINUX));
                                   },
                                   onShown: () => {
                                       s.w.set(ed, !0);

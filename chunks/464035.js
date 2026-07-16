@@ -10,7 +10,7 @@ var n = l(627968),
     c = l(331322),
     u = l(783878),
     g = l(834730),
-    m = l(534514),
+    m = l(297264),
     p = l(778492),
     x = l(935462),
     A = l(228366),
@@ -234,7 +234,7 @@ class D extends s.PureComponent {
     }
 }
 let B = r.Ay.connectStores(
-    [v.A, F.A, k.default, w.A, E.Ay, S.A, N.A],
+    [v.A, F.Ay, k.default, w.A, E.Ay, S.A, N.A],
     (e) => {
         let { channel: t } = e,
             l = v.A.getGuild(t.guild_id),
@@ -248,7 +248,7 @@ let B = r.Ay.connectStores(
                     });
                 return l.length > 0 && (e[t.id] = { guild: t, channels: l }), e;
             }, {}),
-            s = F.A.getLastChannelFollowingDestination();
+            s = F.Ay.getLastChannelFollowingDestination();
         return {
             guildToFollow: l,
             channelNameToFollow: (0, b.m1)(t, k.default, w.A),

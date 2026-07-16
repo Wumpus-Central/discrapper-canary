@@ -25,14 +25,14 @@ function b(e) {
         guild: j,
         canJoin: C,
         isAlreadyConnected: I,
-    } = (0, a.cf)([A.A, d.A, h.A, g.default, p.A, s.A, c.A], () => {
+    } = (0, a.cf)([A.A, d.A, h.Ay, g.default, p.A, s.A, c.A], () => {
         let n = A.A.getDiscoverableVoiceStateForUser(e);
         if (null == n) return x;
         let l = d.A.getChannel(n.channelId);
         if (null == l || !l.isVocal()) return x;
         let r = l.getGuildId?.() ?? null,
             a = null != r ? s.A.getGuild(r) : null,
-            t = h.A.getVoiceChannelId() === l.id,
+            t = h.Ay.getVoiceChannelId() === l.id,
             i = l.isPrivate() || c.A.can(m.xBc.CONNECT, l);
         return {
             channelId: l.id,

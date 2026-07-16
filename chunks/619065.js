@@ -91,7 +91,7 @@ function p(e) {
           };
 }
 var T = n(575279);
-let m = new (r())({ max: 10, dispose: D }),
+let m = new (r())({ max: 10, dispose: y }),
     g = new Map();
 function S(e, t) {
     let n = g.get(e);
@@ -151,19 +151,19 @@ function L(e, t) {
     }
     return n.messageMetadataByMessageId.delete(t);
 }
-function D(e) {
+function y(e) {
     return g.delete(e);
 }
-function y(e) {
+function D(e) {
     let t = m.has(e);
     m.del(e);
-    let n = D(e);
+    let n = y(e);
     return t || n;
 }
 class v extends a.Ay.Store {
     static displayName = "ConversationsStore";
     initialize() {
-        this.waitFor(d.default, c.A, I.A, u.A, _.A, E.default);
+        this.waitFor(d.default, c.A, I.A, u.A, _.Ay, E.default);
     }
     hasChannelData(e) {
         return m.has(e);
@@ -363,18 +363,18 @@ let b = new v(s.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return y(t.id);
+        return D(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if ("unavailable" in t && !0 === t.unavailable) return !1;
         let n = !1;
-        for (let e of m.keys()) m.peek(e)?.guildId === t.id && y(e) && (n = !0);
+        for (let e of m.keys()) m.peek(e)?.guildId === t.id && D(e) && (n = !0);
         return n;
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { channelId: t, jump: n } = e;
-        if (null == n || _.A.getChannelId() !== t) return !1;
+        if (null == n || _.Ay.getChannelId() !== t) return !1;
         let i = m.peek(t);
         return null != i && ((i.reachedOldest = null), (i.reachedNewest = null), !0);
     },

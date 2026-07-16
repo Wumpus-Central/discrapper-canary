@@ -31,8 +31,8 @@ var C = n(12351),
     R = n(915089),
     O = n(734057),
     L = n(458294),
-    D = n(71393),
-    y = n(290863),
+    y = n(71393),
+    D = n(290863),
     v = n(568548),
     b = n(309010),
     M = n(607567),
@@ -153,7 +153,7 @@ function $() {
 class z extends r.Component {
     static defaultProps = { unread: !1 };
     render() {
-        let e = D.A.getGuild(this.props.channel.guild_id);
+        let e = y.A.getGuild(this.props.channel.guild_id);
         return (0, i.jsx)(x.c3, {
             ...this.props,
             children: (0, i.jsx)(h.E, {
@@ -184,22 +184,22 @@ let q = E.Ay.connectStores([v.Ay, O.A], (e) => {
         let { guild: t } = e;
         return { unread: L.default.hasUnread(t.id) };
     })(x.OS),
-    Q = E.Ay.connectStores([v.Ay, y.A], (e) => {
+    Q = E.Ay.connectStores([v.Ay, D.A], (e) => {
         let { channel: t } = e,
             n = null,
-            i = y.A.getState().statuses;
+            i = D.A.getState().statuses;
         return (
             t.recipients?.some((e) => i[e] === B.clD.ONLINE) && (n = B.clD.ONLINE),
             { mentions: v.Ay.getMentionCount(t.id), status: n }
         );
     })(x.nG),
-    J = E.Ay.connectStores([O.A, v.Ay, y.A], (e) => {
+    J = E.Ay.connectStores([O.A, v.Ay, D.A], (e) => {
         let { user: t } = e,
             n = O.A.getDMFromUserId(t.id);
         return {
             mentions: null != n ? v.Ay.getMentionCount(n) : 0,
-            status: y.A.getStatus(t.id),
-            isMobile: y.A.isMobileOnline(t.id),
+            status: D.A.getStatus(t.id),
+            isMobile: D.A.isMobileOnline(t.id),
         };
     })(x.KJ);
 function ee(e, t, n) {
@@ -770,8 +770,8 @@ class et extends r.PureComponent {
                         n.e("14863"),
                         n.e("84951"),
                         n.e("60165"),
-                        n.e("71167"),
                         n.e("12390"),
+                        n.e("71167"),
                         n.e("13446"),
                         n.e("6410"),
                         n.e("61309"),
@@ -793,7 +793,7 @@ class et extends r.PureComponent {
             case S.rD.TEXT_CHANNEL:
             case S.rD.VOICE_CHANNEL:
                 let r = t.record,
-                    a = D.A.getGuild(r.getGuildId());
+                    a = y.A.getGuild(r.getGuildId());
                 if (null == a) return;
                 switch (r.type) {
                     case B.rbe.GUILD_TEXT:
@@ -937,7 +937,7 @@ class et extends r.PureComponent {
                         (0, i.jsx)(e, {
                             ...n,
                             channel: t.record,
-                            selected: b.A.getChannelId() === t.record.id,
+                            selected: b.Ay.getChannelId() === t.record.id,
                             onSelect: o.jD,
                         });
                 });

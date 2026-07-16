@@ -8,13 +8,13 @@ var i = n(627968),
     o = n(17928),
     d = n(305866),
     c = n(3026),
-    u = n(990078),
-    _ = n(862482),
-    E = n(834730),
-    A = n(939249),
-    h = n(297264),
-    I = n(821609),
-    f = n(847374),
+    u = n(862482),
+    _ = n(834730),
+    E = n(939249),
+    A = n(297264),
+    h = n(821609),
+    I = n(847374),
+    f = n(866665),
     p = n(66834),
     T = n(565645),
     m = n(793574),
@@ -25,8 +25,8 @@ var i = n(627968),
     R = n(836039),
     O = n(702841),
     L = n(71393),
-    D = n(159273),
-    y = n(770335),
+    y = n(159273),
+    D = n(770335),
     v = n(624793),
     b = n(652215),
     M = n(731383),
@@ -75,14 +75,14 @@ function et(e) {
                         justify: N.A.Justify.CENTER,
                         className: ee.bM,
                         children: [
-                            (0, i.jsx)(E.E, {
+                            (0, i.jsx)(_.E, {
                                 className: ee.__invalid_emojiName,
                                 variant: "text-md/semibold",
                                 children: u
                                     ? (0, i.jsx)("div", { className: ee.Gl, children: l })
                                     : (0, i.jsx)(c.A, { children: l }),
                             }),
-                            (0, i.jsx)(E.E, { variant: "text-sm/normal", children: Z.intl.string(Z.t.sXdH8c) }),
+                            (0, i.jsx)(_.E, { variant: "text-sm/normal", children: Z.intl.string(Z.t.sXdH8c) }),
                         ],
                     }),
                 ],
@@ -99,10 +99,10 @@ let en = (e) => {
             closePopout: l,
         } = e,
         { id: o, icon: d, name: u } = n,
-        _ = Y.Ay.getGuildIconURL({ id: o, icon: d, size: 32, canAnimate: !0 }),
+        h = Y.Ay.getGuildIconURL({ id: o, icon: d, size: 32, canAnimate: !0 }),
         I = (r = r ?? !0) || n.isDiscoverable();
     function f() {
-        n.isDiscoverable() ? (l(), (0, K.Z2)(o, {})) : r && (l(), (0, V.pX)(b.BVt.CHANNEL(o, B.A.getChannelId(o))));
+        n.isDiscoverable() ? (l(), (0, K.Z2)(o, {})) : r && (l(), (0, V.pX)(b.BVt.CHANNEL(o, B.Ay.getChannelId(o))));
     }
     let p = n.isDiscoverable() && null != n.presenceCount;
     return (0, i.jsxs)(N.A, {
@@ -114,11 +114,11 @@ let en = (e) => {
                 height: 32,
                 className: ee.__invalid_guildIconContainer,
                 children:
-                    null != _ && I
-                        ? (0, i.jsxs)(A.D, {
+                    null != h && I
+                        ? (0, i.jsxs)(E.D, {
                               "aria-label": u,
                               onClick: f,
-                              children: [(0, i.jsx)("img", { src: _, alt: "", className: ee.$f }), " :"],
+                              children: [(0, i.jsx)("img", { src: h, alt: "", className: ee.$f }), " :"],
                           })
                         : (0, i.jsx)(P.Ay, { size: P.Ay.Sizes.SMALL, className: ee.oi, guild: n }),
             }),
@@ -131,16 +131,16 @@ let en = (e) => {
                         children: [
                             (0, i.jsx)(U.A, { guild: n, className: ee.n2 }),
                             I
-                                ? (0, i.jsx)(A.D, {
+                                ? (0, i.jsx)(E.D, {
                                       onClick: f,
                                       className: ee.bM,
-                                      children: (0, i.jsx)(h.D, {
+                                      children: (0, i.jsx)(A.D, {
                                           className: ee.J5,
                                           variant: "heading-md/semibold",
                                           children: (0, i.jsx)(c.A, { children: u }),
                                       }),
                                   })
-                                : (0, i.jsx)(h.D, {
+                                : (0, i.jsx)(A.D, {
                                       variant: "heading-md/semibold",
                                       children: (0, i.jsx)(c.A, { children: u }),
                                   }),
@@ -152,30 +152,30 @@ let en = (e) => {
                             ? ((t = !a && !r),
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, i.jsx)(E.E, {
+                                      (0, i.jsx)(_.E, {
                                           variant: "text-xs/normal",
                                           color: "text-default",
                                           children: Z.intl.format(Z.t["LC+S+m"], { membersOnline: n.presenceCount }),
                                       }),
                                       (0, i.jsx)("div", { className: ee.zk }),
                                       t
-                                          ? (0, i.jsx)(A.D, {
+                                          ? (0, i.jsx)(E.D, {
                                                 className: ee.Ki,
                                                 onClick: f,
-                                                children: (0, i.jsx)(E.E, {
+                                                children: (0, i.jsx)(_.E, {
                                                     variant: "text-xs/normal",
                                                     color: "text-link",
                                                     children: Z.intl.string(Z.t.riu2R5),
                                                 }),
                                             })
-                                          : (0, i.jsx)(E.E, {
+                                          : (0, i.jsx)(_.E, {
                                                 variant: "text-xs/normal",
                                                 color: "text-default",
                                                 children: Z.intl.string(Z.t.inyJqO),
                                             }),
                                   ],
                               }))
-                            : (0, i.jsx)(E.E, {
+                            : (0, i.jsx)(_.E, {
                                   variant: "text-xs/normal",
                                   color: "text-default",
                                   children: Z.intl.string(Z.t.H29mx4),
@@ -197,14 +197,14 @@ function ei(e) {
             isFetching: E,
         } = (function (e) {
             let { emojiId: t, refreshPositionKey: n } = e,
-                { joinedEmojiSourceGuildRecord: i, emoji: a } = (0, O.cf)([D.Ay, L.A], () => {
+                { joinedEmojiSourceGuildRecord: i, emoji: a } = (0, O.cf)([y.Ay, L.A], () => {
                     var e, n;
                     let i;
                     return (
-                        (e = D.Ay),
+                        (e = y.Ay),
                         (n = L.A),
                         (i = null != t ? e.getCustomEmojiById(t) : null),
-                        i?.type === y.i.GUILD
+                        i?.type === D.i.GUILD
                             ? { emoji: i, joinedEmojiSourceGuildRecord: n.getGuild(i?.guildId) }
                             : { emoji: null, joinedEmojiSourceGuildRecord: null }
                     );
@@ -273,13 +273,13 @@ function er(e) {
         a,
         d,
         {
-            node: u,
-            sourceType: h,
+            node: A,
+            sourceType: f,
             expressionSourceApplication: C,
             expressionSourceGuild: O,
             joinedEmojiSourceGuildRecord: L,
-            closePopout: D,
-            onToggleShowMoreEmojis: y,
+            closePopout: y,
+            onToggleShowMoreEmojis: D,
             guildEmoji: P,
             demoMode: U = !1,
             nonce: V,
@@ -322,7 +322,7 @@ function er(e) {
     );
     let eu = H.A.getGuildId(),
         e_ = (0, z.O)({
-            sourceType: h,
+            sourceType: f,
             expressionSourceApplication: C,
             isPremium: K,
             hasJoinedEmojiSourceGuild: et,
@@ -333,7 +333,7 @@ function er(e) {
             isDiscoverable: ei,
             shouldHideRoleSubscriptionCTA: ed,
             onOpenPremiumSettings: () => {
-                D(),
+                y(),
                     W.default.track(b.HAw.PREMIUM_PROMOTION_OPENED, {
                         location_page: er.page,
                         location_section: er.section,
@@ -344,7 +344,7 @@ function er(e) {
         eE = et && el && !ed && ((K && es) || !K),
         eA = e_.emojiDescription,
         eh = (0, M.i)({
-            emojiId: u.emojiId,
+            emojiId: A.emojiId,
             currentGuildId: eu,
             popoutData: e_,
             emojiSourceGuildId: O?.id,
@@ -360,7 +360,7 @@ function er(e) {
         children: [
             ((a = async () => {
                 if (U || null == O || et) return;
-                D();
+                y();
                 let e = O.id;
                 try {
                     await p.A.joinGuild(e), p.A.transitionToGuildSync(e);
@@ -374,9 +374,9 @@ function er(e) {
                         children: [
                             (0, i.jsx)(T.A, {
                                 className: ee.P$,
-                                emojiId: u.emojiId,
-                                emojiName: u.name,
-                                animated: u.animated,
+                                emojiId: A.emojiId,
+                                emojiName: A.name,
+                                animated: A.animated,
                                 size: "jumbo",
                             }),
                             (0, i.jsxs)(N.A, {
@@ -384,11 +384,11 @@ function er(e) {
                                 justify: N.A.Justify.CENTER,
                                 className: ee.bM,
                                 children: [
-                                    (0, i.jsx)(E.E, {
+                                    (0, i.jsx)(_.E, {
                                         variant: "text-md/semibold",
-                                        children: (0, i.jsx)(c.A, { children: u.name }),
+                                        children: (0, i.jsx)(c.A, { children: A.name }),
                                     }),
-                                    null != eA && (0, i.jsx)(E.E, { variant: "text-sm/normal", children: eA }),
+                                    null != eA && (0, i.jsx)(_.E, { variant: "text-sm/normal", children: eA }),
                                 ],
                             }),
                         ],
@@ -397,10 +397,10 @@ function er(e) {
                         ? (0, i.jsx)(F.A, {
                               className: ee.lI,
                               subscriptionTier: J.pe.TIER_2,
-                              size: _.$n.Sizes.SMALL,
+                              size: u.$n.Sizes.SMALL,
                               fullWidth: !0,
                               textOptions: { textOverride: e_.text },
-                              onSubscribeModalClose: (e) => (e ? a() : D()),
+                              onSubscribeModalClose: (e) => (e ? a() : y()),
                               postSuccessGuild: d ? (O ?? void 0) : void 0,
                               premiumModalAnalyticsLocation: er,
                           })
@@ -408,7 +408,7 @@ function er(e) {
                           ? (0, i.jsx)("div", {
                                 "data-button-hoisted-classname-wrapper": !0,
                                 className: ee.lI,
-                                children: (0, i.jsx)(I.$, {
+                                children: (0, i.jsx)(h.$, {
                                     variant: "primary",
                                     size: "sm",
                                     text: e_.text,
@@ -423,7 +423,7 @@ function er(e) {
                             size: "sm",
                             fullWidth: !0,
                             onClick: () => {
-                                D(),
+                                y(),
                                     L?.id != null &&
                                         p.A.transitionToGuildSync(
                                             L.id,
@@ -443,7 +443,7 @@ function er(e) {
                 (0, i.jsxs)("div", {
                     className: ee.tl,
                     children: [
-                        (0, i.jsx)(E.E, {
+                        (0, i.jsx)(_.E, {
                             className: ee.YW,
                             variant: "text-sm/medium",
                             color: "text-subtle",
@@ -453,16 +453,16 @@ function er(e) {
                             expressionSourceGuild: O ?? v.GO.createFromGuildRecord(L),
                             hasJoinedExpressionSourceGuild: et,
                             isDisplayingJoinGuildButtonInPopout: eI,
-                            closePopout: D,
+                            closePopout: y,
                         }),
                         n &&
                             (0, i.jsxs)(i.Fragment, {
                                 children: [
                                     ((t = Z.intl.string(Z.t.pnsAS2)),
-                                    (0, i.jsx)(A.D, {
+                                    (0, i.jsx)(E.D, {
                                         onClick: function () {
                                             n &&
-                                                (y?.(),
+                                                (D?.(),
                                                 ep ||
                                                     U ||
                                                     W.default.track(b.HAw.EMOJI_UPSELL_POPOUT_MORE_EMOJIS_OPENED, eh),
@@ -471,14 +471,14 @@ function er(e) {
                                         className: ee.wK,
                                         children: (0, i.jsxs)(N.A, {
                                             children: [
-                                                (0, i.jsx)(E.E, {
+                                                (0, i.jsx)(_.E, {
                                                     className: ee.__invalid_showMoreEmojisLabel,
                                                     "aria-label": t,
                                                     variant: "text-xs/normal",
                                                     color: "none",
                                                     children: t,
                                                 }),
-                                                (0, i.jsx)(f.a, {
+                                                (0, i.jsx)(I.a, {
                                                     size: "md",
                                                     color: "currentColor",
                                                     className: s()(ee.ZB, { [ee.cP]: !ep }),
@@ -486,13 +486,13 @@ function er(e) {
                                             ],
                                         }),
                                     })),
-                                    null != u.emojiId &&
+                                    null != A.emojiId &&
                                         ep &&
                                         (0, i.jsx)(ea, {
-                                            emojiId: u.emojiId,
+                                            emojiId: A.emojiId,
                                             expressionSourceGuild: O,
                                             popoutData: e_,
-                                            onClose: D,
+                                            onClose: y,
                                             hasJoinedEmojiSourceGuild: et,
                                             isDisplayingButtonInTopSection: eI || ef,
                                         }),
@@ -524,7 +524,7 @@ let ea = (e) => {
                 ? null
                 : o.map((e) =>
                       (0, i.jsx)(
-                          u.m,
+                          f.m,
                           {
                               text: e.require_colons ? `:${e.name}:` : e.name,
                               ...X.Uk,
@@ -547,7 +547,7 @@ let ea = (e) => {
                               null != c &&
                                   (0, i.jsx)("div", {
                                       className: ee.vd,
-                                      children: (0, i.jsx)(E.E, {
+                                      children: (0, i.jsx)(_.E, {
                                           variant: "text-sm/medium",
                                           "aria-label": c,
                                           children: c,
@@ -559,7 +559,7 @@ let ea = (e) => {
                       ? (0, i.jsx)("div", {
                             "data-button-hoisted-classname-wrapper": !0,
                             className: ee.lI,
-                            children: (0, i.jsx)(I.$, {
+                            children: (0, i.jsx)(h.$, {
                                 variant: "primary",
                                 size: "sm",
                                 text: a.text,

@@ -34,8 +34,8 @@ let R = {
 };
 var O = n(730852),
     L = n(785796),
-    D = n(55619),
-    y = n(246605),
+    y = n(55619),
+    D = n(246605),
     v = n(271866),
     b = n(736653),
     M = n(77729),
@@ -355,8 +355,8 @@ var em = n(532205),
     eR = n(548118),
     eO = n(134413),
     eL = n(221950),
-    eD = n(71393),
-    ey = n(309010),
+    ey = n(71393),
+    eD = n(309010),
     ev = n(967198),
     eb = n(585510),
     eM = n(834409),
@@ -366,9 +366,9 @@ var em = n(532205),
 function eG(e) {
     let { onDismiss: t } = e,
         a = (0, c.bG)([ev.A], () => ev.A.getGuildId()),
-        s = (0, c.bG)([ey.A], () => (null != a ? ey.A.getChannelId(a) : null), [a]),
+        s = (0, c.bG)([eD.Ay], () => (null != a ? eD.Ay.getChannelId(a) : null), [a]),
         l = a ?? null,
-        o = (0, c.bG)([eD.A], () => (null != l ? eD.A.getGuild(l) : null), [l]),
+        o = (0, c.bG)([ey.A], () => (null != l ? ey.A.getGuild(l) : null), [l]),
         { shouldShowIncidentActions: d, incidentData: u, isUnderLockdown: _ } = (0, eb.Li)(l),
         E = (0, eO.fw)(o?.id ?? ei.dJq),
         h = r.useCallback(() => null != o && (0, eL.aZ)(o.id), [o]);
@@ -495,7 +495,7 @@ var eq = n(503698),
     e5 = n(580537);
 let e7 = function () {
     let e = (0, c.bG)([ev.A], () => ev.A.getGuildId(), []),
-        t = (0, c.bG)([eD.A], () => eD.A.getGuild(e), [e]),
+        t = (0, c.bG)([ey.A], () => ey.A.getGuild(e), [e]),
         r = (0, c.bG)([e6.A], () => (null != e ? e6.A.getRequest(e) : null), [e]),
         a = (0, eX.zy)(),
         s = (0, e0.B)(a.pathname, ei.BVt.CHANNEL(t?.id, eU.VV.GUILD_ONBOARDING))?.isExact === !0;
@@ -565,7 +565,7 @@ var tt = n(468689),
     ts = n(484154);
 let tl = function () {
     let e = (0, c.bG)([ev.A], () => ev.A.getGuildId(), []),
-        t = (0, c.bG)([eD.A], () => eD.A.getGuild(e), [e]),
+        t = (0, c.bG)([ey.A], () => ey.A.getGuild(e), [e]),
         [n, a] = r.useState(!1);
     if (null == t) return null;
     let s = async () => {
@@ -706,7 +706,7 @@ var tC = n(754804),
     tR = n(378974),
     tO = n(340124),
     tL = n(14594);
-function tD() {
+function ty() {
     let [e, t] = (0, eu.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tL.aH });
     return e !== V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
@@ -737,7 +737,7 @@ function tD() {
               ],
           });
 }
-var ty = n(825484),
+var tD = n(825484),
     tv = n(379257),
     tb = n(847599),
     tM = n(734057),
@@ -749,7 +749,7 @@ var ty = n(825484),
 function tk(e) {
     if (!e && (0, tG.Cf)())
         return void tv.A.showAgeVerificationGetStartedModal({ entryPoint: tb.q1.STAGE_CHANNEL_RAISE_HAND });
-    let t = ey.A.getVoiceChannelId();
+    let t = eD.Ay.getVoiceChannelId();
     if (null == t) return;
     let n = tM.A.getChannel(t);
     null != n && (0, tP.e7)(n, e);
@@ -785,7 +785,7 @@ function tV() {
               children: [
                   es.intl.string(es.t.Ul1RJQ),
                   (0, i.jsx)(tF, { channelId: e.id }),
-                  (0, i.jsxs)(ty.e, {
+                  (0, i.jsxs)(tD.e, {
                       size: "sm",
                       className: tx.GC,
                       children: [
@@ -1026,7 +1026,7 @@ let nn = r.memo(function () {
                     t = eN.A.getUserExperimentDescriptor(e.id);
                 null != t && (0, eS.LQ)(e.id, t),
                     (async () => {
-                        a.metadata?.id != null && (await (0, y.oX)(a.metadata?.id));
+                        a.metadata?.id != null && (await (0, D.oX)(a.metadata?.id));
                     })();
             }
         }, [a]),
@@ -1303,7 +1303,7 @@ let nn = r.memo(function () {
                     (0, i.jsx)(A.PM, { onClick: () => nt(), noticeType: ei.kqX.STREAMER_MODE }),
                     es.intl.string(es.t.iEgBXp),
                     (0, i.jsx)(A.Z_, {
-                        onClick: () => D.A.setEnabled(!1),
+                        onClick: () => y.A.setEnabled(!1),
                         noticeType: ei.kqX.STREAMER_MODE,
                         children: es.intl.string(es.t.R9GHya),
                     }),
@@ -1516,14 +1516,14 @@ let nn = r.memo(function () {
                     (0, i.jsx)(A.PM, {
                         noticeType: ei.kqX.SURVEY,
                         onClick: () => {
-                            (0, y.pX)(t, !0);
+                            (0, D.pX)(t, !0);
                         },
                     }),
                     n,
                     (0, i.jsx)(A.Z_, {
                         noticeType: ei.kqX.SURVEY,
                         onClick: () => {
-                            l ? (0, tR.K)(o) : window.open(s, "_blank"), (0, y.pX)(t, !1);
+                            l ? (0, tR.K)(o) : window.open(s, "_blank"), (0, D.pX)(t, !1);
                         },
                         children: r,
                     }),
@@ -2009,7 +2009,7 @@ let nn = r.memo(function () {
                 ],
             });
         case ei.kqX.IGNORE_USER_FEEDBACK_NAGBAR:
-            return (0, i.jsx)(tD, {});
+            return (0, i.jsx)(ty, {});
         case ei.kqX.PREMIUM_MARKETING_NAGBAR:
             return (0, i.jsx)(tC.A, {});
         case ei.kqX.PREMIUM_GROUP_PRIMARY_REMINDER_NAGBAR:

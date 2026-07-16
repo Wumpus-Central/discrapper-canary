@@ -1,20 +1,20 @@
 "use strict";
-n.d(t, { A: () => m });
+n.d(t, { A: () => f });
 var i = n(439372),
     r = n(734057),
-    s = n(309010),
-    a = n(557279),
-    o = n(617641),
-    l = n(627968);
+    a = n(309010),
+    s = n(557279),
+    l = n(617641),
+    o = n(627968);
 n(64700);
-var u = n(192308),
+var d = n(192308),
     c = n(892491),
-    d = n(544231),
+    u = n(544231),
     _ = n(665909);
-function h(e) {
-    let { channelId: t, warningId: i, senderId: r, warningType: s } = e;
-    (0, o.wv)({ location: "takeover-modal" }) &&
-        (0, u.openModalLazy)(
+function E(e) {
+    let { channelId: t, warningId: i, senderId: r, warningType: a } = e;
+    (0, l.wv)({ location: "takeover-modal" }) &&
+        (0, d.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("58846"),
@@ -34,17 +34,17 @@ function h(e) {
                     n.e("82911"),
                     n.e("40817"),
                 ]).then(n.bind(n, 511144));
-                return (n) => (0, l.jsx)(e, { channelId: t, warningId: i, senderId: r, warningType: s, modalProps: n });
+                return (n) => (0, o.jsx)(e, { channelId: t, warningId: i, senderId: r, warningType: a, modalProps: n });
             },
             {
                 backdropStyle: c.F.BLUR,
                 onCloseCallback: function () {
-                    (0, d.xi)(t, [i]),
+                    (0, u.xi)(t, [i]),
                         (0, _._$)({
                             channelId: t,
                             senderId: r,
                             warningId: i,
-                            warningType: s,
+                            warningType: a,
                             cta: _.Wm.USER_TAKEOVER_MODAL_DISMISS,
                             isNudgeWarning: !1,
                         });
@@ -52,28 +52,28 @@ function h(e) {
             },
         );
 }
-function f(e) {
+function A(e) {
     let { channelId: t } = e;
-    if (null == t || !(0, o.wv)({ location: "channel_select" }) || !(0, a.gz)()) return !1;
+    if (null == t || !(0, l.wv)({ location: "channel_select" }) || !(0, s.gz)()) return !1;
     let n = r.A.getChannel(t);
     if (null == n || !n.isDM()) return !1;
-    let i = (0, a.Di)(t);
-    return null != i && (h({ warningId: i.id, warningType: i.type, senderId: n.getRecipientId(), channelId: t }), !0);
+    let i = (0, s.Di)(t);
+    return null != i && (E({ warningId: i.id, warningType: i.type, senderId: n.getRecipientId(), channelId: t }), !0);
 }
-function E(e) {
+function h(e) {
     let { channels: t } = e;
-    if (!(0, o.wv)({ location: "channel_updates" }) || !(0, a.gz)()) return !1;
-    let n = s.A.getCurrentlySelectedChannelId();
+    if (!(0, l.wv)({ location: "channel_updates" }) || !(0, s.gz)()) return !1;
+    let n = a.Ay.getCurrentlySelectedChannelId();
     if (null == n) return !1;
     let i = t.find((e) => e.id === n);
     if (null == i) return !1;
-    let r = (0, a.Di)(i.id);
+    let r = (0, s.Di)(i.id);
     return (
         !!(null != r && i.isDM()) &&
-        (h({ warningId: r.id, warningType: r.type, senderId: i.getRecipientId(), channelId: i.id }), !0)
+        (E({ warningId: r.id, warningType: r.type, senderId: i.getRecipientId(), channelId: i.id }), !0)
     );
 }
-class p extends i.A {
-    actions = { CHANNEL_SELECT: f, CHANNEL_UPDATES: E };
+class I extends i.A {
+    actions = { CHANNEL_SELECT: A, CHANNEL_UPDATES: h };
 }
-let m = new p();
+let f = new I();

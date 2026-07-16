@@ -28,8 +28,8 @@ var p = n(265422),
     R = n(723702),
     O = n(186111),
     L = n(763827),
-    D = n(64460),
-    y = n(92960),
+    y = n(64460),
+    D = n(92960),
     v = n(739008),
     b = n(314519),
     M = n(837057),
@@ -126,10 +126,10 @@ let eu = {
     [g.IWg.MENTION_CHANNEL_NEXT]: ei.BD,
     [g.IWg.MENTION_CHANNEL_PREV]: ei.X8,
     [g.IWg.TOGGLE_PREVIOUS_GUILD]: s.Fv,
-    [g.IWg.JUMP_TO_GUILD]: D.J,
+    [g.IWg.JUMP_TO_GUILD]: y.J,
     [g.IWg.SUBMIT]: H.X,
     [g.IWg.TEXTAREA_FOCUS]: j.c,
-    [g.IWg.MARK_CHANNEL_READ]: y.Df,
+    [g.IWg.MARK_CHANNEL_READ]: D.Df,
     [g.IWg.MARK_SERVER_READ]: v.P,
     [g.IWg.TOGGLE_CHANNEL_PINS]: {
         binds: ["mod+p"],
@@ -152,7 +152,7 @@ let eu = {
             (!(function () {
                 let { notificationCenterVariant: e } = (0, z.GE)({ location: "TOGGLE_INBOX" });
                 if ("sidebar" !== e) return;
-                let t = E.A.getChannelId(),
+                let t = E.Ay.getChannelId(),
                     n = _.A.getChannel(t);
                 window.location.pathname.startsWith(g.BVt.CHANNEL(g.gNP)) && null != n
                     ? (0, p.i)(n.guild_id, t)
@@ -167,7 +167,7 @@ let eu = {
         comboKeysBindGlobal: !0,
         action() {
             let e = T.A.getGuildId(),
-                t = E.A.getChannelId(e),
+                t = E.Ay.getChannelId(e),
                 n = _.A.getChannel(t),
                 i = null != t && n?.isVocalThread() === !0 && J.A.getUserParticipantCount(t) > 0;
             if (null != t && null != n && (n.type === Z.r.GUILD_VOICE || i))
@@ -225,7 +225,7 @@ let eu = {
         binds: ["mod+shift+u"],
         comboKeysBindGlobal: !0,
         action() {
-            let e = _.A.getChannel(E.A.getChannelId());
+            let e = _.A.getChannel(E.Ay.getChannelId());
             return null == e || e.isManaged() || m._.dispatch(g.jej.UPLOAD_FILE, { channelId: e.id }), !1;
         },
     },
@@ -297,7 +297,7 @@ let eu = {
         binds: ["mod+shift+l"],
         comboKeysBindGlobal: !0,
         action() {
-            let e = E.A.getChannelId();
+            let e = E.Ay.getChannelId();
             if (null == e) return !1;
             let t = _.A.getChannel(e);
             if (null == t) return !1;

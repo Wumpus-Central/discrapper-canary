@@ -18,7 +18,7 @@ let g = function (e) {
         C = (0, o.Us)(),
         y = (0, l.bG)([r.A], () => r.A.getSelectedParticipant(t)),
         j = (0, l.bG)([u.A], () => u.A.getChannel(t)),
-        v = (0, l.bG)([p.A], () => null != j && p.A.getVoiceChannelId() === j.id),
+        v = (0, l.bG)([p.Ay], () => null != j && p.Ay.getVoiceChannelId() === j.id),
         {
             participants: E,
             layout: N,

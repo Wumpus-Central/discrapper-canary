@@ -37,8 +37,8 @@ let _ = (0, o.A)(
                     )),
                     (0, i.jsx)(r.Dr, { id: "game-profile-item", label: b.intl.string(b.t.f7aVGn), action: t })),
                 P = (function (e, t, n, a) {
-                    let [s, c] = (0, A.yK)([g.A, p.A, E.A], () => {
-                            let e = g.A.getChannelId(n),
+                    let [s, c] = (0, A.yK)([g.Ay, p.A, E.A], () => {
+                            let e = g.Ay.getChannelId(n),
                                 t = p.A.getChannel(e);
                             return [e, null != t && (t.isPrivate() || E.A.can(S.xBc.SEND_MESSAGES, t))];
                         }, [n]),

@@ -27,15 +27,15 @@ let T = {
             routeDirectlyToChannel: S = !1,
             bypassChangeModal: N,
             bypassBlockedWarningModal: C,
-            bypassGuildIdCheck: O = !1,
-            transitionExtras: R,
+            bypassGuildIdCheck: R = !1,
+            transitionExtras: O,
         } = e;
         t.isThread() &&
             (await u.A.unarchiveThreadIfNecessary(t.id),
             c.A.hasJoined(t.id) || (await u.A.joinThread(t, "Join Voice")));
         let L = s.default.getRemoteSessionId(),
-            D = A.A.getVoiceStateForSession(_.default.getId(), L),
-            y = D?.channelId === t.id || E.A.getChannelId() === A.A.getCurrentClientVoiceChannelId(t.guild_id),
+            y = A.A.getVoiceStateForSession(_.default.getId(), L),
+            D = y?.channelId === t.id || E.Ay.getChannelId() === A.A.getCurrentClientVoiceChannelId(t.guild_id),
             v = d.A.getBlockedUsersForVoiceChannel(t.id),
             b = d.A.getIgnoredUsersForVoiceChannel(t.id);
         return ((0, o.oE)(new Set([...v, ...b])) && (C = !0), C || g || T || (!(v.size > 0) && !(b.size > 0)))
@@ -63,7 +63,7 @@ let T = {
                   })
                 : (g || T || a.default.selectVoiceChannel(t.id),
                   !__OVERLAY__ &&
-                      (T || y || m || S) &&
+                      (T || D || m || S) &&
                       (function (e) {
                           let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                               n = arguments.length > 2 ? arguments[2] : void 0,
@@ -71,7 +71,7 @@ let T = {
                           if (null == i && !t)
                               throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
                           (0, l.pX)(f.BVt.CHANNEL(i, e.id), n);
-                      })(t, O, R),
+                      })(t, R, O),
                   !0)
             : new Promise((e) => {
                   (0, r.openModalLazy)(

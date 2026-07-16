@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => p });
+n.d(t, { A: () => h });
 var i = n(17928),
     r = n(228366),
-    s = n(761640),
-    a = n(309010),
-    o = n(168186);
-let l = {};
-function u() {
-    return (l = {}), !0;
+    a = n(761640),
+    s = n(309010),
+    l = n(168186);
+let o = {};
+function d() {
+    return (o = {}), !0;
 }
 function c(e) {
     return (
-        e in l ||
-            (l[e] = {
+        e in o ||
+            (o[e] = {
                 activeCommand: null,
                 activeCommandSection: null,
                 activeOptionName: null,
@@ -21,50 +21,50 @@ function c(e) {
                 initialValues: {},
                 commandOrigin: null,
             }),
-        l[e]
+        o[e]
     );
 }
-function d(e) {
+function u(e) {
     let {
             channelId: t,
             command: n,
             section: i,
             initialValues: r,
-            location: s,
-            triggerSection: a,
-            queryLength: l,
-            sectionName: u,
-            query: d,
+            location: a,
+            triggerSection: s,
+            queryLength: o,
+            sectionName: d,
+            query: u,
             searchResultsPosition: _,
-            source: h,
-            commandOrigin: f,
+            source: E,
+            commandOrigin: A,
         } = e,
-        p = c(t);
-    if (n?.id === p.activeCommand?.id) return !1;
-    (p.activeCommand = n),
-        (p.activeCommandSection = i),
-        (p.activeOptionName = null),
-        (p.preferredCommandId = null),
-        (p.initialValues = r ?? {}),
-        (p.commandOrigin = f ?? null),
-        (p.source = h);
-    let E = {};
+        h = c(t);
+    if (n?.id === h.activeCommand?.id) return !1;
+    (h.activeCommand = n),
+        (h.activeCommandSection = i),
+        (h.activeOptionName = null),
+        (h.preferredCommandId = null),
+        (h.initialValues = r ?? {}),
+        (h.commandOrigin = A ?? null),
+        (h.source = E);
+    let I = {};
     return (
         n?.options != null &&
             n.options.forEach((e) => {
-                E[e.name] = { isActive: !1, hasValue: !1, lastValidationResult: null, optionValue: null };
+                I[e.name] = { isActive: !1, hasValue: !1, lastValidationResult: null, optionValue: null };
             }),
-        (p.optionStates = E),
+        (h.optionStates = I),
         null != n &&
-            (0, o.my)({
+            (0, l.my)({
                 command: n,
-                location: s,
-                triggerSection: a,
-                queryLength: l,
-                sectionName: u,
-                query: d,
+                location: a,
+                triggerSection: s,
+                queryLength: o,
+                sectionName: d,
+                query: u,
                 searchResultsPosition: _,
-                source: h,
+                source: E,
             }),
         !0
     );
@@ -78,7 +78,7 @@ function _(e) {
         ((i.activeCommand = null), (i.activeOptionName = null), (i.preferredCommandId = n), (i.optionStates = {}), !0)
     );
 }
-function h(e) {
+function E(e) {
     let { channelId: t, changedOptionStates: n } = e,
         i = c(t),
         r = { ...i.optionStates };
@@ -116,16 +116,16 @@ function h(e) {
     }
     return (i.optionStates = r), !0;
 }
-class f extends i.Ay.Store {
+class A extends i.Ay.Store {
     static displayName = "ApplicationCommandStore";
     initialize() {
-        this.waitFor(s.Ay, a.A),
-            s.Ay.addChangeListener(() => {
-                let e = a.A.getChannelId();
-                if (null == e) return (l = {}), !0;
-                let t = s.Ay.getCurrentSidebarChannelId(e);
-                if (null != t && t in l) return !1;
-                l = e in l ? { [e]: l[e] } : {};
+        this.waitFor(a.Ay, s.Ay),
+            a.Ay.addChangeListener(() => {
+                let e = s.Ay.getChannelId();
+                if (null == e) return (o = {}), !0;
+                let t = a.Ay.getCurrentSidebarChannelId(e);
+                if (null != t && t in o) return !1;
+                o = e in o ? { [e]: o[e] } : {};
             });
     }
     getActiveCommand(e) {
@@ -164,24 +164,24 @@ class f extends i.Ay.Store {
         return { ...c(e) };
     }
 }
-let p = new f(r.h, {
-    CONNECTION_OPEN: u,
-    CHANNEL_SELECT: u,
-    LOGOUT: u,
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: d,
+let h = new A(r.h, {
+    CONNECTION_OPEN: d,
+    CHANNEL_SELECT: d,
+    LOGOUT: d,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: u,
     APPLICATION_COMMAND_SET_PREFERRED_COMMAND: _,
-    APPLICATION_COMMAND_UPDATE_OPTIONS: h,
+    APPLICATION_COMMAND_UPDATE_OPTIONS: E,
     APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function (e) {
-        let { channelId: t, preferredCommandId: n, command: i, section: r, location: s, changedOptionStates: a } = e,
-            o = d({
+        let { channelId: t, preferredCommandId: n, command: i, section: r, location: a, changedOptionStates: s } = e,
+            l = u({
                 type: "APPLICATION_COMMAND_SET_ACTIVE_COMMAND",
                 channelId: t,
                 command: i,
                 section: r,
-                location: s,
+                location: a,
             }),
-            l = _({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId: t, commandId: n }),
-            u = h({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId: t, changedOptionStates: a });
-        return o || l || u;
+            o = _({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId: t, commandId: n }),
+            d = E({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId: t, changedOptionStates: s });
+        return l || o || d;
     },
 });

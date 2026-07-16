@@ -1642,7 +1642,7 @@ class nJ extends i.PureComponent {
             switch (e.key) {
                 case nB.dh.ARROW_LEFT:
                     n === U.oU.SIDEBAR &&
-                        nj._.dispatch(eM.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: nE.A.getChannelId() });
+                        nj._.dispatch(eM.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: nE.Ay.getChannelId() });
                     return;
                 case nB.dh.ARROW_RIGHT:
                     n === U.oU.NORMAL &&

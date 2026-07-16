@@ -20,12 +20,12 @@ var n = l(627968),
     f = l(509434),
     I = l(656513),
     C = l(939249),
-    T = l(534514),
+    T = l(297264),
     _ = l(847374),
     E = l(661531),
     b = l(320448),
-    S = l(821609),
-    y = l(707554),
+    y = l(821609),
+    S = l(707554),
     P = l(892547),
     R = l(289873),
     D = l(331322),
@@ -275,7 +275,7 @@ function eT(e) {
         L = (0, z.A)(u);
     return (0, n.jsx)("div", {
         className: ej.Zy,
-        children: (0, n.jsx)(y.F, {
+        children: (0, n.jsx)(S.F, {
             component:
                 ((l =
                     null != (t = W.Ay.getApplicationIconURL({ id: u.id, icon: u.icon }))
@@ -451,7 +451,7 @@ function eT(e) {
                                   : null,
                             (0, n.jsx)("div", {
                                 className: ej.hU,
-                                children: (0, n.jsx)(S.$, {
+                                children: (0, n.jsx)(y.$, {
                                     variant: "critical-secondary",
                                     size: "sm",
                                     text: eu.intl.string(eu.t.xUqheM),
@@ -474,7 +474,7 @@ let e_ = (0, c.v)(() => ({ searchQuery: "" })),
             })),
             s = (0, m.bG)([Z.default], () => Z.default.locale),
             r = (0, m.bG)([k.Ay], () => k.Ay.getSelfEmbeddedActivities()),
-            a = (0, m.bG)([Y.A, K.A], () => Y.A.getChannel(K.A.getChannelId())),
+            a = (0, m.bG)([Y.A, K.Ay], () => Y.A.getChannel(K.Ay.getChannelId())),
             c = a?.getGuildId(),
             d = e_((e) => e.searchQuery);
         function u(e) {
@@ -513,7 +513,7 @@ let e_ = (0, c.v)(() => ({ searchQuery: "" })),
                   : l.filter((t) => t.application.name.toLowerCase().includes(e));
         }, [l, d]);
         return (0, n.jsx)(D.B, {
-            children: (0, n.jsx)(y.F, {
+            children: (0, n.jsx)(S.F, {
                 component: e
                     ? null
                     : (0, n.jsxs)(U.Z, {

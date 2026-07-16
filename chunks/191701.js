@@ -7,7 +7,7 @@ var n = i(284009),
     o = i(684013),
     u = i(587895),
     c = i(313961),
-    d = i(274372),
+    d = i(915725),
     A = i(952818),
     f = i(320095),
     p = i(944043),
@@ -105,7 +105,7 @@ var tu = i(387755),
     tL = i(753070),
     tx = i(783198),
     tD = i(941971),
-    tR = i(465364),
+    tR = i(521981),
     tk = i(976860),
     tU = i(400492),
     tM = i(625494),
@@ -196,14 +196,14 @@ var tQ = i(554146),
     t1 = i(263577),
     t2 = i(826673),
     t7 = i(308726),
-    t9 = i(46282),
-    t8 = i(360469),
+    t8 = i(46282),
+    t9 = i(360469),
     t5 = i(70617),
-    t3 = i(881732);
-function t6(t) {
+    t6 = i(881732);
+function t3(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
-    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t8.iu.LARGE), size: 40 });
+    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t9.iu.LARGE), size: 40 });
 }
 let t4 = 5 * k.A.Millis.SECOND,
     et = 8 * k.A.Millis.SECOND,
@@ -335,7 +335,7 @@ function em() {
                     return !1;
                 let { showNowPlayingForDifferentGames: s } = (0, V.NI)("nowPlayingNotification"),
                     c = P.A.isNotificationDisabledBySetting(M.M.NOW_PLAYING_DIFFERENT_GAMES),
-                    d = v.A.getVoiceChannelId(),
+                    d = v.Ay.getVoiceChannelId(),
                     f = x.A.getDiscoverableVoiceStateForUser(t)?.channelId;
                 if (null != d && null != f && d === f) return !1;
                 let p = (0, G.qv)();
@@ -350,7 +350,7 @@ function em() {
                                   if (P.A.isNotificationDisabled(H.KS.NowPlayingNotification)) return null;
                                   let n = L.default.getUser(t);
                                   if (null == n) return null;
-                                  let l = v.A.getCurrentlySelectedChannelId(),
+                                  let l = v.Ay.getCurrentlySelectedChannelId(),
                                       a = E.A.getChannel(l),
                                       r = u.A.getApplication(e),
                                       s = A.Ay.getRunningGames().find((t) => t.id === e),
@@ -548,7 +548,7 @@ class eE extends r.Ay.Store {
             T.A,
             h.A,
             A.Ay,
-            v.A,
+            v.Ay,
             O.A,
             b.A,
             L.default,
@@ -612,7 +612,7 @@ let e_ = new eE(s.h, {
                                     l("one-click-go-live");
                                 }
                                 o.A.updateNotificationStatus(e),
-                                    (0, t9.H)({
+                                    (0, t8.H)({
                                         pid: w.A.getTargetPID(),
                                         analyticsLocation: z.ThZ.OVERLAY_NUDGE,
                                         allowOneClickGoLive: !0,
@@ -634,7 +634,7 @@ let e_ = new eE(s.h, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: t3.kL,
+                                    className: t6.kL,
                                 }));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
@@ -642,7 +642,7 @@ let e_ = new eE(s.h, {
             return {
                 icon:
                     null != t
-                        ? (0, $.jsx)(t6, { game: t })
+                        ? (0, $.jsx)(t3, { game: t })
                         : (0, $.jsx)("img", { src: i(513653), className: t5.Kk, alt: "" }),
                 title: s,
                 hint: () => (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 }),

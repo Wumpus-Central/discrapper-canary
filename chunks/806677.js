@@ -1,13 +1,13 @@
 e.d(t, { default: () => is });
 var n = e(627968),
     s = e(64700),
-    l = e(791282),
+    l = e(588234),
     a = e.n(l),
     c = e(132500),
     r = e(172218),
     o = e(70283),
     d = e(331322),
-    u = e(534514),
+    u = e(297264),
     I = e(761508),
     h = e(224640),
     f = e(20742),
@@ -21,12 +21,12 @@ var n = e(627968),
     j = e(982240),
     N = e(171835),
     L = e(6938),
-    C = e(937008),
+    C = e(951305),
     E = e(532794),
     A = e(975732),
     k = e(299679),
-    O = e(561794),
-    y = e(862772),
+    y = e(561794),
+    O = e(862772),
     b = e(310209),
     w = e(719102),
     G = e(734057),
@@ -115,7 +115,7 @@ function Y(i) {
                 ),
             [t],
         ),
-        u = (0, g.bG)([v.A, G.A], () => G.A.getChannel(v.A.getChannelId())),
+        u = (0, g.bG)([v.Ay, G.A], () => G.A.getChannel(v.Ay.getChannelId())),
         I = r > t.length ? r - t.length + 1 : void 0,
         h = s.useCallback(() => {
             c?.(), (0, m.closeAllModals)();
@@ -131,7 +131,7 @@ function Y(i) {
                         newValue: {
                             positionInSection: s,
                             skuId: c.id,
-                            itemSource: r === O.uS.WISHLIST ? "organic" : "recommendation",
+                            itemSource: r === y.uS.WISHLIST ? "organic" : "recommendation",
                             productLine: c.productLine,
                         },
                         children: (0, n.jsx)(w.A, {
@@ -252,7 +252,7 @@ function ii(i) {
             defaultWishlistId: o,
             isWishlistLoaded: d,
         } = i,
-        u = (0, O.tA)({ isGift: !0, giftRecipient: t }),
+        u = (0, y.tA)({ isGift: !0, giftRecipient: t }),
         h = (d ? r : 0) > 0 ? X.intl.string(X.t["7lZ31J"]) : X.intl.string(X.t.BCi1gT),
         [f, m] = s.useState("Nitro"),
         _ = s.useRef(null),
@@ -363,12 +363,12 @@ function it(i) {
             skusToUserAndReason: d,
             status: u,
             defaultWishlistId: I,
-        } = (0, y.rg)({ userId: t.id, numItems: 12, source: O.B5.USER_PROFILE }),
+        } = (0, O.rg)({ userId: t.id, numItems: 12, source: y.B5.USER_PROFILE }),
         h = s.useMemo(
             () =>
                 a()(
                     r.map((i) => {
-                        let e = null != d[i.id] && d[i.id][t.id] === b.j.WISHLIST ? O.uS.WISHLIST : O.uS.POPULAR;
+                        let e = null != d[i.id] && d[i.id][t.id] === b.j.WISHLIST ? y.uS.WISHLIST : y.uS.POPULAR;
                         return null != i ? { sku: i, source: e } : null;
                     }),
                 ),

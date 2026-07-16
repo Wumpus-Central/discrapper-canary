@@ -19,7 +19,7 @@ let d = new Map(),
     T = !1,
     m = {};
 function g() {
-    let e = l.A.getVoiceChannelId();
+    let e = l.Ay.getVoiceChannelId();
     null != e && (p.delete(e), (f[e] = f[e] ?? !0));
 }
 function S(e) {
@@ -28,7 +28,7 @@ function S(e) {
 }
 class N extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.default, s.A, l.A), this.syncWith([l.A], g);
+        this.waitFor(a.default, s.A, l.Ay), this.syncWith([l.Ay], g);
     }
     getRoom(e) {
         return E[e] ?? c;

@@ -47,8 +47,8 @@ var q = r(783977),
     Q = r(778712),
     Y = r(351906),
     Z = r(5990),
-    K = r(990078),
-    X = r(939249),
+    K = r(939249),
+    X = r(866665),
     V = r(241326),
     J = r(97808),
     ee = r(276293),
@@ -94,7 +94,7 @@ var ef = r(768570),
     ep = r(611027);
 function eE(e) {
     let { icon: t, label: r, sublabel: l, onSelect: s, navId: a, index: i, selected: u } = e;
-    return (0, n.jsx)(X.D, {
+    return (0, n.jsx)(K.D, {
         className: ep.DB,
         onClick: function () {
             s({ searchAutocompleteSelectAction: ef.oi.CLICK, selectedIndex: i });
@@ -137,11 +137,11 @@ function em(e) {
 }
 function eR(e) {
     let { searchContext: t } = e;
-    return (0, n.jsx)(K.m, {
+    return (0, n.jsx)(X.m, {
         asContainer: !0,
         text: eo.intl.string(eo.t.dwAvX1),
         position: "left",
-        children: (0, n.jsx)(X.D, {
+        children: (0, n.jsx)(K.D, {
             onClick: () => W.A.clearSearchHistory(t),
             className: ep.Wf,
             title: eo.intl.string(eo.t.dwAvX1),
@@ -200,9 +200,9 @@ function eL(e) {
 }
 function e_(e) {
     let { user: t } = e,
-        { selectedGuildId: r, selectedChannelId: l } = (0, h.cf)([el.A, y.A], () => {
+        { selectedGuildId: r, selectedChannelId: l } = (0, h.cf)([el.A, y.Ay], () => {
             let e = el.A.getGuildId(),
-                t = y.A.getChannelId(e);
+                t = y.Ay.getChannelId(e);
             return { selectedGuildId: e, selectedChannelId: t };
         }),
         s = es.Ay.useName(r, l, t);
@@ -487,9 +487,9 @@ let eG = s.forwardRef(function (e, t) {
                                 });
                         }, [a, r, l, t]);
                     })({ setSearchQuery: a, searchContext: r, mode: u }),
-                    d = (0, h.yK)([Y.A, y.A, eD], () => {
+                    d = (0, h.yK)([Y.A, y.Ay, eD], () => {
                         if (Y.A.hidePersonalInformation) return ew;
-                        let e = (0, C.Jl)(r, y.A);
+                        let e = (0, C.Jl)(r, y.Ay);
                         if (null == e) return ew;
                         let t = eD.getHistory(e);
                         if (null == t) return ew;
@@ -517,7 +517,7 @@ let eG = s.forwardRef(function (e, t) {
                         d = null != h && (0, O.If)(h) ? h : null,
                         f = c ?? o ?? d,
                         p = s.channel,
-                        E = f === eu.LWr.FILTER_IN && null != p && p.id === y.A.getChannelId(),
+                        E = f === eu.LWr.FILTER_IN && null != p && p.id === y.Ay.getChannelId(),
                         g = (0, C.bS)(r);
                     (0, D.kc)({
                         searchContext: r,
@@ -971,9 +971,9 @@ let eG = s.forwardRef(function (e, t) {
     }),
     eQ = s.forwardRef(function (e, t) {
         let { searchContext: r, navId: l, onSelectedIndexChanged: s } = e,
-            [a, i] = (0, h.yK)([U.A, y.A, L.A], () => {
+            [a, i] = (0, h.yK)([U.A, y.Ay, L.A], () => {
                 let e = U.A.getState(r),
-                    t = y.A.getChannelId();
+                    t = y.Ay.getChannelId();
                 return [e, L.A.getChannel(t)];
             });
         return (0, C.av)(a.mode.filter)
@@ -1107,7 +1107,7 @@ class eJ extends s.PureComponent {
     handleFocusSearch = (e) => {
         let { prefillCurrentChannel: t } = e;
         if (!t) return void this.focusEditor();
-        let r = y.A.getChannelId(),
+        let r = y.Ay.getChannelId(),
             l = L.A.getChannel(r);
         if (null == l) return void this.focusEditor();
         let { searchContext: n } = this.props;
@@ -1385,8 +1385,8 @@ function e0(e) {
             let e = v.A.getTotalCount(l);
             return { hasResults: null != e && e > 0, isSearching: v.A.getIsFetching(l) };
         }),
-        p = (0, h.bG)([x.Ay, y.A, L.A], () => {
-            let e = y.A.getCurrentlySelectedChannelId(),
+        p = (0, h.bG)([x.Ay, y.Ay, L.A], () => {
+            let e = y.Ay.getCurrentlySelectedChannelId(),
                 t = L.A.getChannel(e);
             return x.Ay.getSection(e, t?.isDM()) === eu.YvQ.SEARCH;
         });

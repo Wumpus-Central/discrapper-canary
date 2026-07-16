@@ -12,7 +12,7 @@ var l = t(17928),
     A = t(375708);
 function b(i, n) {
     let t = (0, l.bG)([d.A], () => d.A.can(u.xBc.CONNECT, i), [i]),
-        b = (0, l.bG)([o.A], () => o.A.getVoiceChannelId()),
+        b = (0, l.bG)([o.Ay], () => o.Ay.getVoiceChannelId()),
         p = (0, r.mz)(n),
         h = b === i.id;
     return i.isGuildVocal() && t && null != p && !h

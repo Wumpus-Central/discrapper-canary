@@ -1,24 +1,24 @@
 "use strict";
-n.d(t, { Ay: () => _, ek: () => h, vI: () => f });
+n.d(t, { Ay: () => _, ek: () => E, vI: () => A });
 var i = n(64700),
     r = n(353640),
-    s = n(121894),
-    a = n(17928),
-    o = n(576705),
-    l = n(309010),
-    u = n(233993),
+    a = n(121894),
+    s = n(17928),
+    l = n(576705),
+    o = n(309010),
+    d = n(233993),
     c = n(505543);
-let d = (0, r.v)((e) => ({ isOnStartStageScreen: !0 })),
-    _ = d;
-function h(e) {
-    (0, s.r)(() => d.setState({ isOnStartStageScreen: e }));
+let u = (0, r.v)((e) => ({ isOnStartStageScreen: !0 })),
+    _ = u;
+function E(e) {
+    (0, a.r)(() => u.setState({ isOnStartStageScreen: e }));
 }
-function f(e) {
-    let t = (0, a.bG)([l.A], () => l.A.getVoiceChannelId() === e.id),
-        n = (0, a.bG)([o.A], () => o.A.can(u.QY, e), [e]),
+function A(e) {
+    let t = (0, s.bG)([o.Ay], () => o.Ay.getVoiceChannelId() === e.id),
+        n = (0, s.bG)([l.A], () => l.A.can(d.QY, e), [e]),
         r = (0, c.A)(e.id),
-        s = n && !r;
+        a = n && !r;
     i.useEffect(() => {
-        t ? s || h(!1) : h(s);
-    }, [t, s]);
+        t ? a || E(!1) : E(a);
+    }, [t, a]);
 }

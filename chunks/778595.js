@@ -36,8 +36,8 @@ var d = n(17928),
     S = n(308528),
     O = n(297413),
     Z = n(966327),
-    z = n(287809),
-    y = n(375708),
+    y = n(287809),
+    z = n(375708),
     B = n(269098);
 function L(e) {
     let { color: i, className: n } = e;
@@ -102,8 +102,8 @@ let ei = (0, o.A)(
                 } = e,
                 ec = (0, V.A)({ userId: ee.id, guildId: null }),
                 eu = (0, F.A)(ee, null, ei.id, en),
-                eh = (0, d.bG)([_.A, I.A], () => {
-                    let e = _.A.getVoiceChannelId();
+                eh = (0, d.bG)([_.Ay, I.A], () => {
+                    let e = _.Ay.getVoiceChannelId();
                     return I.A.getChannel(e);
                 }),
                 { enabled: eA } = C.A.useExperiment({ guildId: eh?.guild_id, location: "GroupDMUserContextMenu" }),
@@ -117,7 +117,7 @@ let ei = (0, o.A)(
                 eI =
                     ((i = ee.id),
                     (n = ei.id),
-                    (a = (0, d.bG)([z.default], () => z.default.getCurrentUser(), [])),
+                    (a = (0, d.bG)([y.default], () => y.default.getCurrentUser(), [])),
                     null == (o = (0, d.bG)([I.A], () => I.A.getChannel(n), [n])) ||
                     o.isOwner(i) ||
                     null == a ||
@@ -126,7 +126,7 @@ let ei = (0, o.A)(
                         ? null
                         : (0, s.jsx)(t.Dr, {
                               id: "remove",
-                              label: y.intl.string(y.t["n5zMI+"]),
+                              label: z.intl.string(z.t["n5zMI+"]),
                               action: () => S.A.removeRecipient(n, i),
                               color: "danger",
                           })),
@@ -140,35 +140,35 @@ let ei = (0, o.A)(
                 eb = (0, q.A)({ user: ee }),
                 eX = (0, N.A)({ user: ee, location: "GroupDMUserContextMenu" }),
                 ek = (0, W.A)({ user: ee, location: "GroupDMUserContextMenu" }),
-                eT = (0, p.A)({ id: ee.id, label: y.intl.string(y.t["/AXYnE"]) }),
+                eT = (0, p.A)({ id: ee.id, label: z.intl.string(z.t["/AXYnE"]) }),
                 eG = (0, $.A)(ee.id),
                 eD = (0, x.A)(ee.id),
                 eR = (0, m.A)(ei.id),
                 eS = (0, v.A)(ee),
                 eO = (0, j.A)(ee.id),
                 eZ = (0, A.A)(ei.id, ee.id),
-                ez = (0, E.A)({
+                ey = (0, E.A)({
                     commandType: c.kc.USER,
                     commandTargetId: ee.id,
                     channel: ei,
                     guildId: void 0,
                     onHeightUpdate: ea,
                 }),
-                ey =
-                    null == (h = (0, d.bG)([z.default], () => z.default.getCurrentUser())) ||
+                ez =
+                    null == (h = (0, d.bG)([y.default], () => y.default.getCurrentUser())) ||
                     ei.ownerId !== h.id ||
                     ee.id === h.id
                         ? null
                         : (0, s.jsx)(t.Dr, {
                               id: "make-dm-owner",
                               color: "danger",
-                              label: y.intl.string(y.t["6t3CyN"]),
+                              label: z.intl.string(z.t["6t3CyN"]),
                               action: () => {
                                   (0, T.openModal)((e) =>
                                       (0, s.jsx)(X.ConfirmModal, {
-                                          title: y.intl.string(y.t.WZoUsm),
-                                          confirmText: y.intl.string(y.t["cY+Oob"]),
-                                          cancelText: y.intl.string(y.t["ETE/oC"]),
+                                          title: z.intl.string(z.t.WZoUsm),
+                                          confirmText: z.intl.string(z.t["cY+Oob"]),
+                                          cancelText: z.intl.string(z.t["ETE/oC"]),
                                           onConfirm: () => S.A.setDMOwner(ei.id, ee.id),
                                           ...e,
                                           children: (0, s.jsxs)("div", {
@@ -196,7 +196,7 @@ let ei = (0, o.A)(
                                                   }),
                                                   (0, s.jsx)(D.E, {
                                                       variant: "text-md/normal",
-                                                      children: y.intl.format(y.t.gsBb3F, {
+                                                      children: z.intl.format(z.t.gsBb3F, {
                                                           usernameHook: (e, i) =>
                                                               (0, s.jsx)(
                                                                   O.A,
@@ -229,7 +229,7 @@ let ei = (0, o.A)(
                 "data-menu-migrated": !0,
                 navId: "user-context",
                 onClose: l.Z_,
-                "aria-label": y.intl.string(y.t.liqwPJ),
+                "aria-label": z.intl.string(z.t.liqwPJ),
                 onSelect: el,
                 onInteraction: eo,
                 children: [
@@ -241,7 +241,7 @@ let ei = (0, o.A)(
                                     children: [et && ec, es && eu, ej, eg, !eL && ex, et && ep, et && ev, eG],
                                 }),
                                 ed && (0, s.jsx)(t.rX, { children: eC }),
-                                eP && (0, s.jsxs)(t.rX, { children: [!eL && eI, ey] }),
+                                eP && (0, s.jsxs)(t.rX, { children: [!eL && eI, ez] }),
                                 (0, s.jsx)(t.rX, { children: et && ew }),
                                 er && (0, s.jsxs)(t.rX, { children: [eZ, eR, eD] }),
                                 (0, s.jsxs)(t.rX, {
@@ -250,7 +250,7 @@ let ei = (0, o.A)(
                                         ed && eM,
                                         ed && eU,
                                         ed && eO,
-                                        ez,
+                                        ey,
                                         et && ef,
                                         eE,
                                         eN,

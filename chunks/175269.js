@@ -61,8 +61,8 @@ let V = (0, u.A)(
                 ed = (0, X.A)(Y.id, en),
                 es = (0, B.A)(Y.id),
                 eo = (0, _.A)({ user: Y, context: en }),
-                eu = (0, l.bG)([U.A, b.A], () => {
-                    let e = U.A.getVoiceChannelId();
+                eu = (0, l.bG)([U.Ay, b.A], () => {
+                    let e = U.Ay.getVoiceChannelId();
                     return b.A.getChannel(e);
                 }),
                 { enabled: eA } = E.A.useExperiment({ guildId: eu?.guild_id, location: "ThreadUserContextMenu" }),

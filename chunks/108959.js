@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(478437),
-    r = n(495544),
-    s = n(734057),
-    a = n(309010),
-    o = n(977997);
-function l(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : s.A,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : a.A,
-        l = t.getChannel(e),
-        u = n.getVoiceChannelId();
+    r = n(280450),
+    a = n(734057),
+    s = n(309010),
+    l = n(977997);
+function o(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : a.A,
+        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : s.Ay,
+        o = t.getChannel(e),
+        d = n.getVoiceChannelId();
     return (
-        null != l &&
-        (l.type === i.r.GUILD_VOICE ||
-            (!!l.isPrivate() && (l.id === u || null != o.A.getVoiceStatesForChannel(l.id)[r.default.getId()])))
+        null != o &&
+        (o.type === i.r.GUILD_VOICE ||
+            (!!o.isPrivate() && (o.id === d || null != l.A.getVoiceStatesForChannel(o.id)[r.default.getId()])))
     );
 }

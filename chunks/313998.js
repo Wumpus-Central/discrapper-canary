@@ -1,4 +1,4 @@
-e.d(i, { A: () => j, g: () => R }), e(321073);
+e.d(i, { A: () => R, g: () => y }), e(321073);
 var t = e(627968);
 e(64700);
 var l = e(503698),
@@ -24,13 +24,13 @@ var l = e(503698),
     C = e(49999),
     G = e(375708),
     T = e(295573);
-function R(n, i) {
-    let e = (0, a.bG)([b.A], () => b.A.getVoiceChannelId()),
+function y(n, i) {
+    let e = (0, a.bG)([b.Ay], () => b.Ay.getVoiceChannelId()),
         t = (0, a.bG)([I.A], () => I.A.getChannel(e)?.getGuildId() ?? void 0),
         { enabled: l } = N.A.useExperiment({ guildId: t, location: i });
     return l ? e : n;
 }
-function j(n, i) {
+function R(n, i) {
     let [e, l] = (0, a.yK)(
             [p.A],
             () => [null != i ? p.A.getParticipants(i) : null, null != i ? p.A.getParticipant(i, n.id) : null],
@@ -39,13 +39,13 @@ function j(n, i) {
         _ = (0, a.bG)([I.A], () => I.A.getChannel(i)),
         x = (0, m.oP)(n, "context_menu", i),
         { enabled: b } = N.A.useExperiment({ guildId: _?.guild_id, location: "useRingHangupItem" }),
-        R = !x || e?.length === 0 || null == i,
-        j = _?.guild_id != null,
-        k = b && j,
-        y = null == l,
+        y = !x || e?.length === 0 || null == i,
+        R = _?.guild_id != null,
+        f = b && R,
+        k = null == l,
         D = null != l && l.type === v.lp.USER && l.ringing,
         O = [];
-    k && !R && (y || D) && O.push(d.M.RING_USER_TO_VC_NEW_BADGE);
+    f && !y && (k || D) && O.push(d.M.RING_USER_TO_VC_NEW_BADGE);
     let [U, w] = (0, h.kn)(O),
         H = U === d.M.RING_USER_TO_VC_NEW_BADGE,
         { analyticsLocations: M } = (0, o.Ay)();
@@ -56,21 +56,21 @@ function j(n, i) {
                 name: u.ImpressionNames.RING_TO_GUILD_VC_MENU_ITEM_SHOWN,
                 properties: { voice_channel_id: i, voice_guild_id: _?.guild_id, location_stack: M },
             },
-            { disableTrack: R || !k },
+            { disableTrack: y || !f },
             [n.id],
         ),
-        R)
+        y)
     )
         return null;
-    if (y) {
-        let e = j ? G.intl.string(G.t["3Hv9qQ"]) : G.intl.string(G.t.RDheZm);
+    if (k) {
+        let e = R ? G.intl.string(G.t["3Hv9qQ"]) : G.intl.string(G.t.RDheZm);
         return (0, t.jsx)(r.Dr, {
             id: "ring",
             label: e,
             badge: H ? "new" : void 0,
-            subtext: k ? (0, t.jsx)(f, { channel: _ }) : null,
+            subtext: f ? (0, t.jsx)(j, { channel: _ }) : null,
             action: () => {
-                H && w(C.i.TAKE_ACTION), g.A.ring(i, [n.id], "user_context_menu"), k && null != i && (0, E.iN)(i);
+                H && w(C.i.TAKE_ACTION), g.A.ring(i, [n.id], "user_context_menu"), f && null != i && (0, E.iN)(i);
             },
         });
     }
@@ -79,11 +79,11 @@ function j(n, i) {
               id: "stop-ringing",
               label: G.intl.string(G.t.ygslb0),
               badge: H ? "new" : void 0,
-              subtext: k
+              subtext: f
                   ? (0, t.jsx)(c.E, {
                         variant: "text-xs/medium",
                         className: s()(T.W$, T.DF),
-                        children: G.intl.format(G.t.dwfzZi, { channelName: (0, t.jsx)(f, { channel: _ }) }),
+                        children: G.intl.format(G.t.dwfzZi, { channelName: (0, t.jsx)(j, { channel: _ }) }),
                     })
                   : null,
               action: () => {
@@ -92,7 +92,7 @@ function j(n, i) {
           })
         : null;
 }
-function f(n) {
+function j(n) {
     let { channel: i } = n,
         e = (0, x.Ay)(i);
     return (0, t.jsxs)("div", {
