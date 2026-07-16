@@ -1,11 +1,12 @@
-n.d(t, { Cw: () => A, Ld: () => T, UD: () => _, aZ: () => d, jo: () => I, uO: () => u });
+"use strict";
+n.d(t, { Cw: () => E, Ld: () => A, UD: () => _, aZ: () => h, jo: () => I, uO: () => u });
 var i = n(228366),
-    l = n(468689),
-    r = n(976860),
+    r = n(468689),
+    a = n(976860),
     s = n(71393),
-    a = n(134413),
+    l = n(134413),
     o = n(11541),
-    E = n(652215),
+    d = n(652215),
     c = n(746080);
 async function u(e) {
     await i.h.dispatch({ type: "INITIALIZE_MEMBER_SAFETY_STORE", guildId: e });
@@ -13,24 +14,24 @@ async function u(e) {
 function _(e) {
     i.h.dispatch({ type: "MEMBER_SAFETY_NEW_MEMBER_TIMESTAMP_REFRESH", guildId: e });
 }
-function A(e, t) {
-    let { continuationToken: n, ...l } = t;
-    i.h.dispatch({ type: "MEMBER_SAFETY_PAGINATION_UPDATE", guildId: e, pagination: l });
+function E(e, t) {
+    let { continuationToken: n, ...r } = t;
+    i.h.dispatch({ type: "MEMBER_SAFETY_PAGINATION_UPDATE", guildId: e, pagination: r });
 }
-async function T(e, t) {
+async function A(e, t) {
     await i.h.dispatch({ type: "MEMBER_SAFETY_SEARCH_STATE_UPDATE", guildId: e, searchState: t });
 }
-function d(e) {
-    let t = (0, a.Ml)(e),
+function h(e) {
+    let t = (0, l.Ml)(e),
         n = s.A.getGuild(e);
     return (
         !!t &&
         null != n &&
-        (n.features.has(E.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) ||
-        n.features.has(E.GuildFeatures.COMMUNITY) ||
-        n.features.has(E.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
-            ? (0, r.pX)(E.BVt.CHANNEL(e, c.VV.MEMBER_SAFETY))
-            : l.A.open(n.id, E.BEX.MEMBERS),
+        (n.features.has(d.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) ||
+        n.features.has(d.GuildFeatures.COMMUNITY) ||
+        n.features.has(d.GuildFeatures.ENABLED_MODERATION_EXPERIENCE_FOR_NON_COMMUNITY)
+            ? (0, a.pX)(d.BVt.CHANNEL(e, c.VV.MEMBER_SAFETY))
+            : r.A.open(n.id, d.BEX.MEMBERS),
         !0)
     );
 }

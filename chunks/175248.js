@@ -1,65 +1,66 @@
-n.d(t, { E: () => T, QuestRewardModalUnverified: () => g });
-var r = n(627968),
-    s = n(64700),
-    i = n(772707),
-    l = n(17928),
-    u = n(289873),
-    a = n(885574),
-    o = n(834730),
+"use strict";
+n.d(t, { E: () => p, QuestRewardModalUnverified: () => f });
+var i = n(627968),
+    r = n(64700),
+    a = n(772707),
+    s = n(17928),
+    l = n(289873),
+    o = n(885574),
+    d = n(834730),
     c = n(192308),
-    d = n(830215),
-    A = n(287809),
-    C = n(710969),
-    f = n(375708),
-    E = n(105247),
-    _ = n(661965);
-function g(e) {
+    u = n(830215),
+    _ = n(287809),
+    E = n(710969),
+    A = n(375708),
+    h = n(105247),
+    I = n(661965);
+function f(e) {
     let { transitionState: t, onClose: n } = e,
-        c = (0, l.bG)([A.default], () => A.default.getCurrentUser()?.email),
-        [g, T] = s.useState({ status: "unknown" });
-    s.useEffect(() => {
-        T({ status: "loading" }),
-            d.A.verifyResend().then(
-                () => T({ status: "success" }),
+        c = (0, s.bG)([_.default], () => _.default.getCurrentUser()?.email),
+        [f, p] = r.useState({ status: "unknown" });
+    r.useEffect(() => {
+        p({ status: "loading" }),
+            u.A.verifyResend().then(
+                () => p({ status: "success" }),
                 (e) => {
-                    T({ status: "error" }), (0, C.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } });
+                    p({ status: "error" }), (0, E.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } });
                 },
             );
     }, []);
-    let m =
-        "error" === g.status
-            ? f.intl.string(f.t.vjying)
-            : "success" === g.status
-              ? f.intl.format(f.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
+    let T =
+        "error" === f.status
+            ? A.intl.string(A.t.vjying)
+            : "success" === f.status
+              ? A.intl.format(A.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
               : void 0;
-    return (0, r.jsxs)(i.k, {
+    return (0, i.jsxs)(a.k, {
         transitionState: t,
         onClose: n,
-        graphic: "loading" === g.status ? void 0 : { type: "image", src: _ },
-        title: "loading" === g.status ? void 0 : f.intl.string(f.t.c8eASM),
-        subtitle: m,
+        graphic: "loading" === f.status ? void 0 : { type: "image", src: I },
+        title: "loading" === f.status ? void 0 : A.intl.string(A.t.c8eASM),
+        subtitle: T,
         actions:
-            "loading" === g.status ? void 0 : [{ variant: "secondary", text: f.intl.string(f.t.cpT0Cq), onClick: n }],
+            "loading" === f.status ? void 0 : [{ variant: "secondary", text: A.intl.string(A.t.cpT0Cq), onClick: n }],
         children: [
-            "loading" === g.status && (0, r.jsx)(u.y, {}),
-            "success" === g.status &&
-                (0, r.jsxs)("div", {
-                    className: E.d,
+            "loading" === f.status && (0, i.jsx)(l.y, {}),
+            "success" === f.status &&
+                (0, i.jsxs)("div", {
+                    className: h.d,
                     children: [
-                        (0, r.jsx)(a.m, { size: "xs", color: "currentColor", className: E.q }),
-                        (0, r.jsx)(o.E, {
+                        (0, i.jsx)(o.m, { size: "xs", color: "currentColor", className: h.q }),
+                        (0, i.jsx)(d.E, {
                             variant: "text-sm/normal",
                             color: "text-default",
-                            children: f.intl.string(f.t.yb7itQ),
+                            children: A.intl.string(A.t.yb7itQ),
                         }),
                     ],
                 }),
         ],
     });
 }
-function T() {
+function p() {
     (0, c.openModalLazy)(async () => {
         let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 175248));
-        return (t) => (0, r.jsx)(e, { ...t });
+        return (t) => (0, i.jsx)(e, { ...t });
     });
 }
