@@ -4,7 +4,7 @@ var i = n(64700),
     r = n(488430),
     a = n(719986),
     s = n(940622),
-    l = n(779982);
+    l = n(25176);
 function o(e) {
     let t = (0, s.mb)(l.RN.HERO_LOGO),
         n = (0, s.mb)(l.RN.HERO_BANNER_STATIC),

@@ -10,7 +10,7 @@ var i = n(64700),
     l = n(816866),
     o = n(87558),
     d = n(875741),
-    c = n(779982);
+    c = n(25176);
 function u(e) {
     null != e.previewSrc && URL.revokeObjectURL(e.previewSrc),
         Object.values(e.layerSrcByLayerId).forEach((e) => URL.revokeObjectURL(e));

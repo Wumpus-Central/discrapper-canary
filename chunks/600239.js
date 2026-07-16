@@ -3,8 +3,8 @@ var n = a(627968);
 a(64700);
 var l = a(189213),
     s = a(834730),
-    i = a(534514),
-    r = a(559474),
+    i = a(297264),
+    r = a(25176),
     o = a(997946);
 let d = "shop-assets-preview-instructions-modal",
     c = "shop-pfx-preview-instructions-modal";
