@@ -8,7 +8,7 @@ var a = t(627968),
     d = t(661531),
     m = t(462887),
     o = t(939249),
-    x = t(534514),
+    x = t(297264),
     u = t(628284),
     h = t(289873),
     j = t(683071),
@@ -28,7 +28,8 @@ var a = t(627968),
     A = t(228366),
     D = t(652215);
 async function R(e) {
-    let s = (await y.Bo.get({ url: D.Rsh.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e), rejectWithError: !1 })).body;
+    let s = (await y.Bo.get({ url: D.Rsh.GUILD_ROLE_SUBSCRIPTION_LISTING_TEMPLATES(e), rejectWithError: (0, y.fT)() }))
+        .body;
     null != s.templates &&
         A.h.dispatch({ type: "GUILD_ROLE_SUBSCRIPTIONS_FETCH_TEMPLATES", templates: s.templates, guildId: e });
 }

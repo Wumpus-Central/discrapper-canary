@@ -3,7 +3,7 @@ var r = s(627968),
     n = s(64700),
     i = s(503698),
     l = s.n(i),
-    a = s(735438),
+    a = s(435558),
     d = s.n(a),
     u = s(192308),
     c = s(292666),
@@ -34,7 +34,7 @@ let U = (e, t, s) => (
             url: T.Rsh.UNRESOLVED_GUILD_TEMPLATE(e),
             body: { name: t, icon: s },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, v.fT)(),
         }).then(
             (t) => {
                 let s = t.body;

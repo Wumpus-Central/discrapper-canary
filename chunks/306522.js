@@ -10,7 +10,7 @@ async function o(t, e, n) {
             await r.Bo.patch({
                 url: c.Rsh.GUILD_PRODUCT_LISTINGS(t, e),
                 body: { ...h, image_name: o, price_tier: i, create_new_role: s, unlink_role: l },
-                rejectWithError: !1,
+                rejectWithError: (0, r.fT)(),
             })
         ).body;
     } catch (t) {
@@ -19,21 +19,21 @@ async function o(t, e, n) {
 }
 async function s(t, e) {
     try {
-        await r.Bo.del({ url: c.Rsh.GUILD_PRODUCT_LISTINGS(t, e), rejectWithError: !1 });
+        await r.Bo.del({ url: c.Rsh.GUILD_PRODUCT_LISTINGS(t, e), rejectWithError: (0, r.fT)() });
     } catch (t) {
         throw new a.LG(t);
     }
 }
 async function l(t) {
     try {
-        return (await (0, i.aP)({ url: c.Rsh.GUILD_PRODUCT_LISTINGS(t), rejectWithError: !1 })).body.listings;
+        return (await (0, i.aP)({ url: c.Rsh.GUILD_PRODUCT_LISTINGS(t), rejectWithError: (0, r.fT)() })).body.listings;
     } catch (t) {
         throw new a.LG(t);
     }
 }
 async function h(t, e) {
     try {
-        return (await (0, i.aP)({ url: c.Rsh.GUILD_PRODUCT_LISTINGS(t, e), rejectWithError: !1 })).body;
+        return (await (0, i.aP)({ url: c.Rsh.GUILD_PRODUCT_LISTINGS(t, e), rejectWithError: (0, r.fT)() })).body;
     } catch (t) {
         throw new a.LG(t);
     }
@@ -41,7 +41,9 @@ async function h(t, e) {
 async function u(t) {
     let { guildId: e, productId: n, attachmentId: i } = t;
     try {
-        return (await r.Bo.post({ url: c.Rsh.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, n, i), rejectWithError: !1 })).body;
+        return (
+            await r.Bo.post({ url: c.Rsh.GUILD_PRODUCT_ATTACHMENT_DOWNLOAD(e, n, i), rejectWithError: (0, r.fT)() })
+        ).body;
     } catch (t) {
         throw new a.LG(t);
     }
