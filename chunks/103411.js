@@ -6,3 +6,5 @@ function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     return (0, r.i)(e), (0, i.bG)([l.A], () => l.A.getIsEligibleToSendReferrals());
 }
+Referrals();
+)}
