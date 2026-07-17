@@ -199,10 +199,10 @@
 }
 
 .marketingPageHeading_a98bec {
-    font-size: 64px;
+    font-size: 4rem;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -1.28px;
+    letter-spacing: -.08rem;
     line-height: 82%;
     text-transform: uppercase
 }
@@ -225,25 +225,25 @@
 }
 
 .header_a98bec {
-    font-size: 58px;
+    font-size: 3.625rem;
     font-style: italic;
     font-weight: 900;
-    letter-spacing: -1.16px;
+    letter-spacing: -.0725rem;
     line-height: 100%;
     text-transform: uppercase
 }
 
 @container premium-marketing-page-container (max-width: 960px) {
     .header_a98bec {
-        font-size: 48px;
-        letter-spacing: -.96px
+        font-size: 3rem;
+        letter-spacing: -.06rem
     }
 }
 
 @container premium-marketing-page-container (max-width: 720px) {
     .header_a98bec {
-        font-size: 38px;
-        letter-spacing: -.76px
+        font-size: 2.375rem;
+        letter-spacing: -.0475rem
     }
 }
 
