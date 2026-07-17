@@ -1,4 +1,4 @@
-n.d(t, { default: () => e3 });
+n.d(t, { default: () => e4 });
 var i = n(627968),
     s = n(64700),
     r = n(562708),
@@ -280,8 +280,9 @@ function eg(e) {
                     null != t && (o.set(e, t), u.push(t));
                 }),
                 (t.current = new IntersectionObserver(
-                    (t) => {
+                    function (t) {
                         if (
+                            null == e ||
                             (t.forEach((t) => {
                                 let { isIntersecting: i, target: l } = t;
                                 if (l === s) {
@@ -623,25 +624,26 @@ function ej(e) {
             if (((a.current = !1), null == t || !r.has(t))) return;
             let e = r.get(t);
             if (null == e) return;
-            let n = () => {
-                    a.current = !1;
-                    let t = l.get(e.sidebarItemKey);
-                    null != t &&
-                        t.forEach((e) => {
-                            (0, ev.Dr)(e, { dismissAction: eS.i.AUTO, forceTrack: !0 });
-                        });
+            function n() {
+                if (null == e) return;
+                a.current = !1;
+                let t = l.get(e.sidebarItemKey);
+                null != t &&
+                    t.forEach((e) => {
+                        (0, ev.Dr)(e, { dismissAction: eS.i.AUTO, forceTrack: !0 });
+                    });
+            }
+            let s = _.A.subscribe(
+                (e) => {
+                    let { currentPanelKey: t } = e;
+                    return t;
                 },
-                s = _.A.subscribe(
-                    (e) => {
-                        let { currentPanelKey: t } = e;
-                        return t;
-                    },
-                    (t) => {
-                        let s = null != t && null != i ? i.entry(t)?.parentSidebarItemKey : null;
-                        null != s && (s === e.sidebarItemKey ? (a.current = !0) : a.current && n());
-                    },
-                    { equalityFn: (e, t) => e === t, fireImmediately: !0 },
-                );
+                (t) => {
+                    let s = null != t && null != i ? i.entry(t)?.parentSidebarItemKey : null;
+                    null != s && (s === e.sidebarItemKey ? (a.current = !0) : a.current && n());
+                },
+                { equalityFn: (e, t) => e === t, fireImmediately: !0 },
+            );
             return () => {
                 s(), a.current && n();
             };
@@ -943,8 +945,8 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "580394",
-        s = "bbd7d217f28780890b1a5f831dc8cc1d62d706e7".substring(0, 7),
+        n = "580395",
+        s = "f70a523618199177e3d1be9718caf0f2c0f0de7a".substring(0, 7),
         r = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
@@ -1117,11 +1119,11 @@ var e5 = n(402651),
     e9 = n(830543),
     e6 = n(466745);
 let e8 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
-    e4 = new Map([
+    e3 = new Map([
         [eD.X.CONNECTIONS_PANEL, r.ImpressionNames.USER_SETTINGS_CONNECTIONS],
         [eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS],
     ]);
-function e3(e) {
+function e4(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1148,7 +1150,7 @@ function e3(e) {
               sidebarFooter: e2,
               onViewChange: function (e) {
                   e8.has(e) || (0, e7._)(e);
-                  let t = e4.get(e);
+                  let t = e3.get(e);
                   null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
