@@ -213,6 +213,7 @@ var i,
             "VIOLENT_EXTREMISM_SUPPORT_PROMOTION_OR_EMULATION_NON_DEDICATED_GUILD_SAFETY_DISPATCH"),
         (i[(i.CSAM_SMITE = 3e3)] = "CSAM_SMITE"),
         (i[(i.CSAM_SOLICITATION_OR_ADMISSION_SMITE = 3001)] = "CSAM_SOLICITATION_OR_ADMISSION_SMITE"),
+        (i[(i.CSAM_SOLICITATION_OR_ADMISSION_GUILD_SMITE = 3002)] = "CSAM_SOLICITATION_OR_ADMISSION_GUILD_SMITE"),
         (i[(i.CSAM_GUILD_SMITE = 3005)] = "CSAM_GUILD_SMITE"),
         (i[(i.SUSPICIOUS_LINK_SMITE = 3010)] = "SUSPICIOUS_LINK_SMITE"),
         (i[(i.INVESTMENT_AND_IDENTITY_SCAMS_SMITE = 3020)] = "INVESTMENT_AND_IDENTITY_SCAMS_SMITE"),
@@ -814,7 +815,7 @@ var i,
         (r[(r.GENERIC_MANUAL_SAFETY_ACTION = 13)] = "GENERIC_MANUAL_SAFETY_ACTION"),
         (r[(r.BANNED_USER_BACKFILL = 14)] = "BANNED_USER_BACKFILL"),
         r),
-    D =
+    y =
         (((a = {})[(a.ANNOTATION_UNSPECIFIED = 0)] = "ANNOTATION_UNSPECIFIED"),
         (a[(a.SPAMMER = 1)] = "SPAMMER"),
         (a[(a.SELF_DELETED = 2)] = "SELF_DELETED"),
@@ -824,7 +825,7 @@ var i,
         (a[(a.INACTIVITY_DELETED = 6)] = "INACTIVITY_DELETED"),
         (a[(a.GENERIC_DELETED = 7)] = "GENERIC_DELETED"),
         a);
-class y extends N.G {
+class D extends N.G {
     constructor() {
         super("discord_protos.safety_common.v1.NormalState", []);
     }
@@ -844,7 +845,7 @@ class y extends N.G {
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let v = new y();
+let v = new D();
 class b extends N.G {
     constructor() {
         super("discord_protos.safety_common.v1.RestrictedState", [
@@ -1056,7 +1057,7 @@ class F extends N.G {
                 name: "annotations",
                 kind: "enum",
                 repeat: 1,
-                T: () => ["discord_protos.safety_common.v1.SafetyAnnotations", D],
+                T: () => ["discord_protos.safety_common.v1.SafetyAnnotations", y],
             },
             { no: 3, name: "last_mutation_id", kind: "message", T: () => C.ol },
         ]);
@@ -2122,8 +2123,8 @@ class eL extends N.G {
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let eD = new eL();
-class ey extends N.G {
+let ey = new eL();
+class eD extends N.G {
     constructor() {
         super("discord_protos.users.v1.AnonymizationInfo", [
             {
@@ -2172,7 +2173,7 @@ class ey extends N.G {
         return !1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t;
     }
 }
-let ev = new ey();
+let ev = new eD();
 class eb extends N.G {
     constructor() {
         super("discord_protos.users.v1.UserData", [
@@ -2190,7 +2191,7 @@ class eb extends N.G {
             { no: 12, name: "restricted_schedule", kind: "message", T: () => ep },
             { no: 13, name: "age_assurance_data", kind: "message", T: () => eP },
             { no: 14, name: "perks", kind: "message", T: () => e2 },
-            { no: 15, name: "badges", kind: "message", T: () => eD },
+            { no: 15, name: "badges", kind: "message", T: () => ey },
             { no: 16, name: "country_data", kind: "message", T: () => e6 },
             { no: 17, name: "is_pending_required_action", kind: "scalar", T: 8 },
             { no: 18, name: "anonymization_info", kind: "message", T: () => ev },
@@ -2253,7 +2254,7 @@ class eb extends N.G {
                     r.perks = e2.internalBinaryRead(e, e.uint32(), n, r.perks);
                     break;
                 case 15:
-                    r.badges = eD.internalBinaryRead(e, e.uint32(), n, r.badges);
+                    r.badges = ey.internalBinaryRead(e, e.uint32(), n, r.badges);
                     break;
                 case 16:
                     r.countryData = e6.internalBinaryRead(e, e.uint32(), n, r.countryData);
@@ -2371,7 +2372,7 @@ class eb extends N.G {
             e.ageAssuranceData &&
                 eP.internalBinaryWrite(e.ageAssuranceData, t.tag(13, m.O0.LengthDelimited).fork(), n).join(),
             e.perks && e2.internalBinaryWrite(e.perks, t.tag(14, m.O0.LengthDelimited).fork(), n).join(),
-            e.badges && eD.internalBinaryWrite(e.badges, t.tag(15, m.O0.LengthDelimited).fork(), n).join(),
+            e.badges && ey.internalBinaryWrite(e.badges, t.tag(15, m.O0.LengthDelimited).fork(), n).join(),
             e.countryData && e6.internalBinaryWrite(e.countryData, t.tag(16, m.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.isPendingRequiredAction && t.tag(17, m.O0.Varint).bool(e.isPendingRequiredAction),
             e.anonymizationInfo &&
