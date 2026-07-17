@@ -10,8 +10,8 @@ var l = n(627968),
     d = n(31823),
     p = n(426398),
     m = n(655857),
-    C = n(427675),
-    h = n(6938),
+    h = n(427675),
+    C = n(316915),
     E = n(590180),
     f = n(469778),
     A = n(951305),
@@ -37,12 +37,12 @@ var g = n(121005),
     R = n(202541);
 function b(e) {
     let { handleStepChange: t } = e,
-        n = (0, h.t4)((e) => e.selectedSkuId),
+        n = (0, C.t4)((e) => e.selectedSkuId),
         { paymentSources: s, hasFetchedPaymentSources: o } = (0, p.jm)(),
         { application: m } = (0, d.V)(),
         f = (0, u.Hp)(),
-        S = (0, C.gU)(),
-        y = (0, C.Hu)(),
+        S = (0, h.gU)(),
+        y = (0, h.Hu)(),
         { isGift: P } = (0, A.Pv)(),
         [I, _] = i.useState(!0),
         [g, x] = (0, a.yK)([E.A], () => [E.A.isFetchingCategories, E.A.error]);
@@ -71,14 +71,14 @@ function b(e) {
             : null;
 }
 function j(e) {
-    let { subscriptionTier: t, initialPlanId: n, handleStepChange: d, continueSessionToInitialStep: C } = e,
+    let { subscriptionTier: t, initialPlanId: n, handleStepChange: d, continueSessionToInitialStep: h } = e,
         { hasPaymentSources: E, hasFetchedPaymentSources: S } = (0, p.jm)({ shouldAllowFetchPaymentSources: !0 }),
         {
             selectedSkuId: y,
             setSelectedPlanId: P,
             activeSubscription: I,
             defaultPlanId: _,
-        } = (0, h.t4)((e) => ({
+        } = (0, C.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setSelectedPlanId: e.setSelectedPlanId,
             activeSubscription: e.activeSubscription,
@@ -89,11 +89,11 @@ function j(e) {
         { hasFetchedRelatedSubscriptionPlans: b, subscriptionPriceOptionsLoading: j } = (0, m.Jn)(),
         { isGift: O } = (0, A.Pv)(),
         L = (0, v.A)({ isGift: O, skuId: y }),
-        k = !M || !b || j || !S,
-        w = (0, a.bG)([f.A], () => f.A.applicationIdsFetched.has(R.tv));
+        w = !M || !b || j || !S,
+        k = (0, a.bG)([f.A], () => f.A.applicationIdsFetched.has(R.tv));
     (0, o.A)(
         "Payment Modal",
-        k,
+        w,
         5,
         {
             hasFetchedSubscriptions: M,
@@ -103,13 +103,13 @@ function j(e) {
         },
         { tags: { app_context: "billing" } },
     );
-    let D = (0, h.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: L }));
+    let D = (0, C.t4)((e) => e.getIsInOneStepSubscriptionCheckout({ isTrial: L }));
     return (i.useEffect(() => {
-        w || (0, s.LM)(R.tv),
-            k ||
+        k || (0, s.LM)(R.tv),
+            w ||
                 T ||
-                (null != C
-                    ? d(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: C })
+                (null != h
+                    ? d(r.pn.ADD_PAYMENT_STEPS, { emitPaymentFlowLoadedEvent: !0, trackedFromStep: h })
                     : null != n
                       ? n !== R.gD.PREMIUM_GROUP_MONTH || E
                           ? d(r.pn.REVIEW)
@@ -119,8 +119,8 @@ function j(e) {
                         : null != t
                           ? d(r.pn.PLAN_SELECT)
                           : d(r.pn.SKU_SELECT));
-    }, [C, I, T, w, n, k, d, t, y, P, L, _, O, D, E]),
-    k)
+    }, [h, I, T, k, n, w, d, t, y, P, L, _, O, D, E]),
+    w)
         ? (0, l.jsx)(N.A, {})
         : T
           ? (0, l.jsx)(c.oO, {})
@@ -128,11 +128,11 @@ function j(e) {
 }
 var O = n(891197),
     L = n(69494),
-    k = n(482132),
-    w = n(293035);
+    w = n(482132),
+    k = n(293035);
 function D() {
     return (0, l.jsxs)(l.Fragment, {
-        children: [(0, l.jsx)(L.A, {}), (0, l.jsx)(k.dZ, { children: (0, l.jsx)(O.N, { className: w.D }) })],
+        children: [(0, l.jsx)(L.A, {}), (0, l.jsx)(w.dZ, { children: (0, l.jsx)(O.N, { className: k.D }) })],
     });
 }
 var U = n(830382),
@@ -184,8 +184,8 @@ function Z() {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(L.A, {}),
-            (0, l.jsx)(k.dZ, { children: (0, l.jsx)(W, { className: K.r, isEmailResent: e, resendEmail: n }) }),
-            (0, l.jsx)(k.UX, { children: (0, l.jsx)(V, {}) }),
+            (0, l.jsx)(w.dZ, { children: (0, l.jsx)(W, { className: K.r, isEmailResent: e, resendEmail: n }) }),
+            (0, l.jsx)(w.UX, { children: (0, l.jsx)(V, {}) }),
         ],
     });
 }

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y0: () => S, Ni: () => N, t4: () => O, Q9: () => C, y$: () => L });
+n.d(t, { y0: () => N, Ni: () => C, t4: () => R, Q9: () => O, y$: () => y });
 var i = n(942381),
     r = n(265690),
     a = n(315069),
@@ -204,20 +204,21 @@ function T(e) {
         : { isPremiumPurchase: (0, f.ys)(e), isPremiumGroupPurchase: e === p.gD.PREMIUM_GROUP_MONTH };
 }
 var m = n(504275),
-    g = n(219538);
-let S = 1,
-    [N, C] = (0, I.A)();
-function O(e) {
+    g = n(219538),
+    S = n(75304);
+let N = 1,
+    [C, O] = (0, I.A)();
+function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return C()(e, t);
+    return O()(e, t);
 }
-function R(e, t) {
+function L(e, t) {
     if (null == e) return null;
     if ("premium_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-function L(e) {
+function y(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -292,31 +293,50 @@ function L(e) {
                     e({ linkWalletEnabled: t });
                 },
             },
-            get: (e) => (null != r[e] ? r[e]() : null),
-            getIsInOneStepSubscriptionCheckout: (e) => {
-                let { isTrial: t, selectedSkuId: n } = e,
-                    { isGift: r, selectedSkuId: a, startedPaymentFlowWithPaymentSources: s } = i();
-                return (function (e) {
-                    let { isTrial: t, isGift: n, selectedSkuId: i, startedPaymentFlowWithPaymentSources: r } = e;
-                    return !t && !n && null != i && p.oz.includes(i) && !!r;
-                })({ isTrial: t, isGift: r, selectedSkuId: n ?? a, startedPaymentFlowWithPaymentSources: s });
+            ...{
+                getShouldDisallowPlanSelection: () => {
+                    let e = i().getTenantParams(S.C.PREMIUM_CHECKOUT);
+                    return null != e && (e.shouldDisallowPlanSelection ?? !1);
+                },
+                getIsInOneStepSubscriptionCheckout: (e) => {
+                    let { isTrial: t, selectedSkuId: n } = e,
+                        {
+                            isGift: r,
+                            selectedSkuId: a,
+                            startedPaymentFlowWithPaymentSources: s,
+                            getShouldDisallowPlanSelection: l,
+                        } = i();
+                    return (
+                        !!l() ||
+                        (function (e) {
+                            let {
+                                isTrial: t,
+                                isGift: n,
+                                selectedSkuId: i,
+                                startedPaymentFlowWithPaymentSources: r,
+                            } = e;
+                            return !t && !n && null != i && p.oz.includes(i) && !!r;
+                        })({ isTrial: t, isGift: r, selectedSkuId: n ?? a, startedPaymentFlowWithPaymentSources: s })
+                    );
+                },
             },
+            get: (e) => (null != r[e] ? r[e]() : null),
             contextMetadata: a,
             order: s,
             orderRecord: null != s ? _.createFromServer(s) : null,
             setOrder: (t) => e({ order: t, orderRecord: _.createFromServer(t) }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
-            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: S }),
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: N }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: S }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: N }) : e({ selectedPlanId: i });
             },
-            quantity: S,
+            quantity: N,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: R(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: L(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -326,7 +346,7 @@ function L(e) {
                     pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: R(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: L(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

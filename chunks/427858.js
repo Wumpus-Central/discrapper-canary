@@ -6,12 +6,12 @@ var l = n(627968),
     s = n(319668),
     o = n(426398),
     u = n(666646),
-    c = n(6938),
+    c = n(316915),
     d = n(951305),
     p = n(566980),
     m = n(222707),
-    C = n(340034),
-    h = n(216641),
+    h = n(340034),
+    C = n(216641),
     E = n(428262),
     f = n(615396),
     A = n(218075),
@@ -41,7 +41,7 @@ function L(e, t) {
         null != n ? e(n) : e(null);
     }, [e, n]);
 }
-function k(e) {
+function w(e) {
     let {
             premiumSubscription: t,
             priceOptions: n,
@@ -67,12 +67,12 @@ function k(e) {
         checkoutInvoiceError: e.checkoutInvoiceError,
     }));
     (0, u.Tr)(p, m);
-    let C = (0, E.J$)(n.paymentSourceId);
+    let h = (0, E.J$)(n.paymentSourceId);
     if (null != p) {
         let e = t.items.length > 1;
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(N._J, { invoice: p, isPrepaidPaymentSource: C }),
+                (0, l.jsx)(N._J, { invoice: p, isPrepaidPaymentSource: h }),
                 (0, l.jsx)(j, {
                     containerNode: s.current,
                     children: (0, l.jsx)(N.Hc, {
@@ -89,7 +89,7 @@ function k(e) {
     }
     return (0, l.jsx)(O, {});
 }
-function w(e) {
+function k(e) {
     let {
             premiumSubscription: t,
             newPlan: n,
@@ -102,7 +102,7 @@ function w(e) {
             setOverrideRenewalDate: p,
         } = e,
         { analyticsLocations: m } = (0, _.Ay)(),
-        h = (0, E.Pg)(t, n.id, 1, new Set(r)),
+        C = (0, E.Pg)(t, n.id, 1, new Set(r)),
         {
             proratedInvoicePreview: f,
             renewalInvoicePreview: A,
@@ -139,7 +139,7 @@ function w(e) {
                 checkoutInvoicePreview: d,
                 checkoutInvoiceError: p,
                 renewalInvoicePreview: m,
-                renewalInvoiceError: C,
+                renewalInvoiceError: h,
             } = (0, c.t4)((e) => ({
                 checkoutInvoicePreview: e.checkoutInvoicePreview,
                 checkoutInvoiceError: e.checkoutInvoiceError,
@@ -147,13 +147,13 @@ function w(e) {
                 renewalInvoiceError: e.renewalInvoiceError,
             }));
             return {
-                primaryInvoiceError: i.useMemo(() => p ?? C, [p, C]),
+                primaryInvoiceError: i.useMemo(() => p ?? h, [p, h]),
                 proratedInvoicePreview: d,
                 proratedInvoiceError: p,
                 renewalInvoicePreview: m,
-                renewalInvoiceError: C,
+                renewalInvoiceError: h,
             };
-        })({ premiumSubscription: t, newItems: h, priceOptions: a, preventFetch: o, analyticsLocations: m }),
+        })({ premiumSubscription: t, newItems: C, priceOptions: a, preventFetch: o, analyticsLocations: m }),
         { planSwitchNoticeCopy: P, overrideRenewalDate: g } = i.useMemo(() => {
             let e;
             return (null !== s &&
@@ -176,7 +176,7 @@ function w(e) {
     let M = (0, E.J$)(a.paymentSourceId);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(C.W9, {
+            (0, l.jsx)(h.W9, {
                 invoiceSummaryTypeWithPreview: {
                     type: S.N$.PREMIUM_SWITCH_PLAN,
                     invoicePreview: f,
@@ -212,8 +212,8 @@ function D(e) {
             setOverrideRenewalDate: p,
             unifiedSubscriptionDetailsNode: m,
         } = e,
-        { analyticsLocations: C } = (0, _.Ay)(),
-        { renewalInvoicePreview: h, renewalInvoiceError: f } = (0, c.t4)((e) => ({
+        { analyticsLocations: h } = (0, _.Ay)(),
+        { renewalInvoicePreview: C, renewalInvoiceError: f } = (0, c.t4)((e) => ({
             renewalInvoicePreview: e.renewalInvoicePreview,
             renewalInvoiceError: e.renewalInvoiceError,
         })),
@@ -230,27 +230,27 @@ function D(e) {
                         paymentSourceId: s.paymentSourceId,
                         currency: s.currency,
                         preventFetch: o,
-                        analyticsLocations: C,
+                        analyticsLocations: h,
                         analyticsLocation: "billing_switch_plan_renewal_mutation_renewal_invoice_preview",
                     },
                 },
                 shouldAllowNullState: !0,
             }),
-            [t, n.id, r, s.paymentSourceId, s.currency, o, C],
+            [t, n.id, r, s.paymentSourceId, s.currency, o, h],
         );
-    (0, T.E)(A), (0, u.F0)(h, f);
+    (0, T.E)(A), (0, u.F0)(C, f);
     let { renewalDate: S, planSwitchNoticeCopy: y } = i.useMemo(() => {
-        if (null == h) return { renewalDate: void 0, planSwitchNoticeCopy: null };
-        let e = h.subscriptionPeriodStart;
+        if (null == C) return { renewalDate: void 0, planSwitchNoticeCopy: null };
+        let e = C.subscriptionPeriodStart;
         return (
             a.fractionalState === M.xc.FP_SUB_PAUSED && (e = a.endsAt.toDate()),
             { renewalDate: e, planSwitchNoticeCopy: R.intl.format(R.t["+y0Tjy"], { renewalDate: e }) }
         );
-    }, [h, a.fractionalState, a.endsAt]);
+    }, [C, a.fractionalState, a.endsAt]);
     if ((L(d, { noticeCopy: y }), null != f)) return null;
-    if (null == h) return (0, l.jsx)(O, {});
+    if (null == C) return (0, l.jsx)(O, {});
     let P = (0, E.J$)(s.paymentSourceId),
-        { lineItems: I } = (0, v.Ig)(h, {
+        { lineItems: I } = (0, v.Ig)(C, {
             subscriptionTrial: null,
             includeTaxLineItem: !0,
             isPrepaidPaymentSource: P,
@@ -258,11 +258,11 @@ function D(e) {
         });
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(g.Vm, { label: R.intl.string(b.default.eoXh7B), lineItems: I, currency: h.currency }),
+            (0, l.jsx)(g.Vm, { label: R.intl.string(b.default.eoXh7B), lineItems: I, currency: C.currency }),
             (0, l.jsx)(j, {
                 containerNode: m.current,
                 children: (0, l.jsx)(N.Hc, {
-                    renewalInvoice: h,
+                    renewalInvoice: C,
                     isUpdate: !0,
                     fractionalPremiumInfo: a,
                     overrideRenewalDate: S,
@@ -317,18 +317,18 @@ function U(e) {
     let {
         resumeInvoicePreview: p,
         renewalInvoicePreview: m,
-        primaryInvoiceError: C,
+        primaryInvoiceError: h,
     } = (0, c.t4)((e) => ({
         resumeInvoicePreview: e.checkoutInvoicePreview,
         renewalInvoicePreview: e.renewalInvoicePreview,
         primaryInvoiceError: e.checkoutInvoiceError ?? e.renewalInvoiceError,
     }));
-    if ((L(o, { noticeCopy: i.useMemo(() => R.intl.string(R.t.spIYou), []) }), null != C)) return null;
+    if ((L(o, { noticeCopy: i.useMemo(() => R.intl.string(R.t.spIYou), []) }), null != h)) return null;
     if (null == p || null == m) return (0, l.jsx)(O, {});
-    let h = (0, E.J$)(n.paymentSourceId);
+    let C = (0, E.J$)(n.paymentSourceId);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(N._J, { invoice: p, isPrepaidPaymentSource: h }),
+            (0, l.jsx)(N._J, { invoice: p, isPrepaidPaymentSource: C }),
             (0, l.jsx)(j, {
                 containerNode: s.current,
                 children: (0, l.jsx)(N.Hc, { renewalInvoice: m, isUpdate: !0, fractionalPremiumInfo: a }),
@@ -355,7 +355,7 @@ function V(e) {
             unifiedPlainNoticeText: c,
             invoicePreview: d,
             invoicePreviewComponent: p,
-            shouldShowPlanSelectAndPromoBanner: h,
+            shouldShowPlanSelectAndPromoBanner: C,
             shouldRenderInvoicePreviewSubscriptionDetailsDirectly: f,
             newPlan: y,
             planId: P,
@@ -378,7 +378,7 @@ function V(e) {
                     }),
                 r &&
                     e.push({
-                        directContent: (0, l.jsx)(C.l$, { fractionalPremiumInfo: a }),
+                        directContent: (0, l.jsx)(h.l$, { fractionalPremiumInfo: a }),
                         key: "fractional-premium-notice",
                     }),
                 s && e.push({ type: "info", message: (0, m.Nn)(), key: "premium-group-purchase-notice" }),
@@ -389,16 +389,16 @@ function V(e) {
             );
         }, [M, s, o, u, r, a]),
         { priceOptions: O, planPricesLoading: L } = (0, E.Pr)(I, d, u),
-        k = (0, F.i)({ planSkuId: y.skuId, invoice: d }),
-        w = i.useMemo(() => (h && null != k ? k : null), [h, k]),
+        w = (0, F.i)({ planSkuId: y.skuId, invoice: d }),
+        k = i.useMemo(() => (C && null != w ? w : null), [C, w]),
         D = (0, W.G)(P),
         U = i.useMemo(() => (D ? (0, l.jsx)(B.a, {}) : null), [D]),
-        V = i.useMemo(() => (null != w ? w : null != U ? U : null), [w, U]),
+        V = i.useMemo(() => (null != k ? k : null != U ? U : null), [k, U]),
         K = (0, E.J$)(I.paymentSourceId),
         Z = null,
         q = null,
         z = M ? null : c;
-    h
+    C
         ? (q = (0, l.jsx)(H.X, {
               disabled: n,
               headingSubText: z,
@@ -468,32 +468,37 @@ function Z(e) {
             activeSubscription: e.activeSubscription,
         })),
         { isPremiumPurchase: H, isPremiumGroupPurchase: B } = (0, c.t4)((e) => e.get("selectedPlanAttributes")),
-        { defaultPlanId: Y, isInOneStepSubscriptionCheckout: W } = (0, c.t4)((e) => ({
+        {
+            defaultPlanId: Y,
+            isInOneStepSubscriptionCheckout: W,
+            shouldDisallowPlanSelection: Z,
+        } = (0, c.t4)((e) => ({
             defaultPlanId: e.defaultPlanId,
             isInOneStepSubscriptionCheckout: e.getIsInOneStepSubscriptionCheckout({ isTrial: !1 }),
+            shouldDisallowPlanSelection: e.getShouldDisallowPlanSelection(),
         })),
-        { isGift: Z } = (0, d.Pv)(),
-        q = (0, h.g)(g, N),
-        { showFractionalPremiumBanner: z, fractionalPremiumInfo: Q } = (0, m._V)({
+        { isGift: q } = (0, d.Pv)(),
+        z = (0, C.g)(g, N),
+        { showFractionalPremiumBanner: Q, fractionalPremiumInfo: $ } = (0, m._V)({
             premiumSubscription: F,
             selectedPlanId: n,
             planGroup: y,
-            isGift: Z,
+            isGift: q,
         }),
-        $ = I === p.h.PURCHASING || I === p.h.COMPLETED,
+        J = I === p.h.PURCHASING || I === p.h.COMPLETED,
         X = F?.isPausedAllowsResumeButNotUpdates,
-        J = i.useMemo(() => (0, E.Tm)({ skuId: v, isPremium: H, defaultPlanId: Y }), [v, Y, H]),
-        ee = i.useRef(null),
-        [et, en] = i.useState(null),
-        [el, ei] = i.useState(void 0),
-        er = i.useMemo(
-            () => ({ unifiedSubscriptionDetailsNode: ee, setUnifiedPlainNoticeText: en, setOverrideRenewalDate: ei }),
+        ee = i.useMemo(() => (0, E.Tm)({ skuId: v, isPremium: H, defaultPlanId: Y }), [v, Y, H]),
+        et = i.useRef(null),
+        [en, el] = i.useState(null),
+        [ei, er] = i.useState(void 0),
+        ea = i.useMemo(
+            () => ({ unifiedSubscriptionDetailsNode: et, setUnifiedPlainNoticeText: el, setOverrideRenewalDate: er }),
             [],
         ),
         {
-            content: ea,
-            isInvoiceBilledImmediately: es,
-            ...eo
+            content: es,
+            isInvoiceBilledImmediately: eo,
+            ...eu
         } = null != F
             ? (function (e, t, n) {
                   let { hasOpenInvoice: i, showResumeSubscriptionView: r, planId: a } = e,
@@ -507,7 +512,7 @@ function Z(e) {
                       } = t;
                   return i
                       ? {
-                            content: (0, l.jsx)(k, {
+                            content: (0, l.jsx)(w, {
                                 premiumSubscription: o,
                                 priceOptions: p,
                                 preventFetch: !1,
@@ -531,7 +536,7 @@ function Z(e) {
                           }
                         : (0, f.Ge)(o, a, c)
                           ? {
-                                content: (0, l.jsx)(w, {
+                                content: (0, l.jsx)(k, {
                                     premiumSubscription: o,
                                     newPlan: u,
                                     planGroup: c,
@@ -559,88 +564,89 @@ function Z(e) {
               })(
                   { hasOpenInvoice: P, showResumeSubscriptionView: X, planId: n },
                   {
-                      disabled: $,
+                      disabled: J,
                       premiumSubscription: F,
                       newPlan: r,
                       planGroup: y,
-                      fractionalPremiumInfo: Q,
+                      fractionalPremiumInfo: $,
                       priceOptions: M,
                   },
-                  er,
+                  ea,
               )
             : { content: null, isInvoiceBilledImmediately: !0, shouldRenderToUnifiedSubscriptionDetailsDirectly: !1 },
-        eu = F?.eligiblePaymentGateways,
-        ec = null != eu && eu.length > 0 && (null == N || null === q) && x ? A.fU.SELECT_PAYMENT_METHOD : void 0,
-        ed = null != F ? F.paymentSourceId : null,
-        ep = i.useMemo(
+        ec = F?.eligiblePaymentGateways,
+        ed = null != ec && ec.length > 0 && (null == N || null === z) && x ? A.fU.SELECT_PAYMENT_METHOD : void 0,
+        ep = null != F ? F.paymentSourceId : null,
+        em = i.useMemo(
             () => ({
                 paymentGatewayRestrictions: F?.eligiblePaymentGateways,
                 resolvePaymentSourceOptions: _
-                    ? (e) => e.map((e) => (e.id === ed ? { ...e, tooltipText: R.intl.string(b.default["hjsn+s"]) } : e))
+                    ? (e) => e.map((e) => (e.id === ep ? { ...e, tooltipText: R.intl.string(b.default["hjsn+s"]) } : e))
                     : void 0,
                 className: a()({ [K.E]: H }),
             }),
-            [F?.eligiblePaymentGateways, H, _, ed],
+            [F?.eligiblePaymentGateways, H, _, ep],
         ),
-        em = null != O || null != G,
+        eh = null != O || null != G,
         eC = i.useMemo(
             () =>
-                em
+                eh
                     ? (0, l.jsx)(s.N, {
                           label: R.intl.string(R.t["mmDvV+"]),
                           onPaymentSourceAdd: t,
-                          disabled: $,
-                          additionalPaymentSourceDropdownProps: ep,
+                          disabled: J,
+                          additionalPaymentSourceDropdownProps: em,
                           location: "PremiumSwitchPlanReview",
                           subscriptionPaymentSourceId: M.paymentSourceId,
                       })
                     : null,
-            [em, M.paymentSourceId, ep, t, $],
+            [eh, M.paymentSourceId, em, t, J],
         ),
-        eh = null != F && (0, f.Ge)(F, n, y) && null != T,
-        eE = i.useMemo(
+        eE = null != F && (0, f.Ge)(F, n, y),
+        ef = !X && W && !B && !_ && !Z,
+        eA = eE && null != T,
+        eS = i.useMemo(
             () =>
-                null == O || null == j || eh
+                null == O || null == j || eA
                     ? null
-                    : (0, l.jsx)(C.PI, {
-                          fractionalPremiumInfo: Q,
-                          overrideRenewalDate: el,
+                    : (0, l.jsx)(h.PI, {
+                          fractionalPremiumInfo: $,
+                          overrideRenewalDate: ei,
                           activeSubscription: F,
                           isTrial: !1,
                           plan: r,
-                          isGift: Z,
-                          paymentSourceType: q,
-                          isInvoiceBilledImmediately: es,
+                          isGift: q,
+                          paymentSourceType: z,
+                          isInvoiceBilledImmediately: eo,
                           invoiceSummaryTypeWithPreview: {
                               type: S.N$.PREMIUM_SWITCH_PLAN,
                               invoicePreview: O,
                               renewalInvoicePreview: j,
                           },
                       }),
-            [Q, O, j, eh, el, F, r, Z, q, es],
-        ),
-        ef = !X && W && !B && !_;
+            [$, O, j, eA, ei, F, r, q, z, eo],
+        );
     return (0, l.jsx)(V, {
         loading: L,
-        disabled: $,
+        disabled: J,
         isInPastDueCheckout: _,
-        showFractionalPremiumBanner: z,
-        fractionalPremiumInfo: Q,
+        showFractionalPremiumBanner: Q,
+        fractionalPremiumInfo: $,
         isPremiumGroupPurchase: B,
-        paymentRestrictionBannerType: ec,
+        paymentRestrictionBannerType: ed,
         invoiceError: T,
-        unifiedPlainNoticeText: et,
+        unifiedPlainNoticeText: en,
         invoicePreview: O,
-        invoicePreviewComponent: ea,
+        invoicePreviewComponent: es,
         shouldShowPlanSelectAndPromoBanner: ef,
-        shouldRenderInvoicePreviewSubscriptionDetailsDirectly: eo.shouldRenderToUnifiedSubscriptionDetailsDirectly,
+        shouldRenderInvoicePreviewSubscriptionDetailsDirectly: eu.shouldRenderToUnifiedSubscriptionDetailsDirectly,
         newPlan: r,
         planId: n,
         priceOptions: M,
-        premiumPlanOptions: J,
-        unifiedSubscriptionDetailsNode: ee,
-        isInvoiceBilledImmediately: es,
+        premiumPlanOptions: ee,
+        unifiedSubscriptionDetailsNode: et,
+        isInvoiceBilledImmediately: eo,
         paymentMethodContent: eC,
-        legalContent: eE,
+        legalContent: eS,
     });
 }

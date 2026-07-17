@@ -1,4 +1,4 @@
-n.d(t, { E: () => C, V: () => h });
+n.d(t, { E: () => h, V: () => C });
 var l = n(64700),
     i = n(284009),
     r = n.n(i),
@@ -8,9 +8,9 @@ var l = n(64700),
     u = n(800471),
     c = n(299301),
     d = n(97352),
-    p = n(6938),
+    p = n(316915),
     m = n(699595);
-function C(e) {
+function h(e) {
     let {
             fetchCheckoutInvoicePreviewRequest: t,
             fetchRenewalInvoicePreviewRequest: n,
@@ -27,8 +27,8 @@ function C(e) {
             (i || null != n) && a(n);
         }, [n, a, i]);
 }
-function h(e) {
-    let { selectedPlanId: t, priceOptions: n, trialId: i, metadata: C, isTrial: h = !1 } = e,
+function C(e) {
+    let { selectedPlanId: t, priceOptions: n, trialId: i, metadata: h, isTrial: C = !1 } = e,
         {
             selectedSkuId: E,
             contextMetadata: f,
@@ -95,11 +95,11 @@ function h(e) {
                               paymentSourceId: n.paymentSourceId,
                               currency: n.currency,
                               trialId: i,
-                              metadata: C ?? void 0,
+                              metadata: h ?? void 0,
                               loadId: f.loadId,
                           },
                       },
-            [R, v, j, n.paymentSourceId, n.currency, i, C, f.loadId, t, E, x],
+            [R, v, j, n.paymentSourceId, n.currency, i, h, f.loadId, t, E, x],
         ),
         L = l.useMemo(
             () =>
@@ -115,10 +115,10 @@ function h(e) {
                               trialId: i,
                               paymentSourceId: n.paymentSourceId,
                               currency: n.currency,
-                              metadata: C ?? void 0,
+                              metadata: h ?? void 0,
                           },
                       },
-            [v, j, R, i, C, g?.id, n.paymentSourceId, n.currency],
+            [v, j, R, i, h, g?.id, n.paymentSourceId, n.currency],
         );
     l.useEffect(() => {
         A(O);
@@ -126,15 +126,15 @@ function h(e) {
         l.useEffect(() => {
             S(L);
         }, [L, S]);
-    let k = l.useMemo(() => (h && null != y ? y : null), [h, y]),
-        { oneTimePurchaseNitroGiftInvoicePreview: w, proratedInvoicePreview: D } = l.useMemo(
+    let w = l.useMemo(() => (C && null != y ? y : null), [C, y]),
+        { oneTimePurchaseNitroGiftInvoicePreview: k, proratedInvoicePreview: D } = l.useMemo(
             () =>
                 v
                     ? { oneTimePurchaseNitroGiftInvoicePreview: y, proratedInvoicePreview: null }
                     : { oneTimePurchaseNitroGiftInvoicePreview: null, proratedInvoicePreview: y },
             [v, y],
         ),
-        { discountInvoiceError: U } = (0, m.W)({ priceOptions: n, trialId: i, metadata: C }),
+        { discountInvoiceError: U } = (0, m.W)({ priceOptions: n, trialId: i, metadata: h }),
         G = l.useMemo(() => P ?? _ ?? U, [P, _, U]);
     l.useEffect(() => {
         T(G);
@@ -146,19 +146,19 @@ function h(e) {
                 (0, c.yf)({
                     error: G,
                     isGift: v,
-                    oneTimePurchaseNitroGiftInvoicePreview: w,
-                    trialInvoicePreview: k,
+                    oneTimePurchaseNitroGiftInvoicePreview: k,
+                    trialInvoicePreview: w,
                     proratedInvoicePreview: D,
                     renewalInvoicePreview: I,
                     planSwitchLoading: H,
                 }),
-            [G, v, w, k, D, I, H],
+            [G, v, k, w, D, I, H],
         );
     return {
         checkoutInvoicePreview: y,
         invoiceSummaryTypeWithPreview: B,
-        oneTimePurchaseNitroGiftInvoicePreview: w,
-        trialInvoicePreview: k,
+        oneTimePurchaseNitroGiftInvoicePreview: k,
+        trialInvoicePreview: w,
         proratedInvoicePreview: D,
         renewalInvoicePreview: I,
         purchaseDisabled: M,

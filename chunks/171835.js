@@ -7,18 +7,18 @@ var l = n(627968),
     o = n(669874),
     u = n(426398),
     c = n(21713),
-    d = n(6938),
+    d = n(316915),
     p = n(864717),
     m = n(783327),
-    C = n(652215),
-    h = n(202541);
+    h = n(652215),
+    C = n(202541);
 function E(e) {
     let {
             stepConfigs: t,
             breadcrumbs: n,
             loadId: r,
             discoverySessionId: o,
-            purchaseType: u = C.VVm.SUBSCRIPTION,
+            purchaseType: u = h.VVm.SUBSCRIPTION,
             overrideCustomCheckoutFlow: c,
             ...d
         } = e,
@@ -38,7 +38,7 @@ function E(e) {
                 customCheckoutFlow: c ?? A,
                 unifiedCheckoutFlow: d.unifiedCheckoutFlow,
                 paymentGateway: d.paymentGateway,
-                applicationId: d.applicationId ?? h.tv,
+                applicationId: d.applicationId ?? C.tv,
                 tenantParamsMap: d.tenantParamsMap ?? {},
             }),
             [
@@ -73,8 +73,8 @@ function f(e) {
     let { errorHandlingBehavior: t = "rethrow", onErrorReported: n, skuIDs: a, children: s } = e,
         { paymentSources: p } = (0, u.jm)(),
         {
-            contextMetadata: C,
-            unifiedCheckoutFlow: h,
+            contextMetadata: h,
+            unifiedCheckoutFlow: C,
             purchaseType: E,
             isGift: f,
             selectedSkuId: A,
@@ -93,8 +93,8 @@ function f(e) {
         })),
         I = null != y && null != p[y] ? p[y]?.type : null,
         _ = i.useMemo(
-            () => ({ payment_source_id: y, payment_gateway: P, payment_source_type: I, checkout_flow: h }),
-            [y, P, I, h],
+            () => ({ payment_source_id: y, payment_gateway: P, payment_source_type: I, checkout_flow: C }),
+            [y, P, I, C],
         ),
         T = (0, r.Db)();
     return (0, l.jsx)(c.yv, {
@@ -103,7 +103,7 @@ function f(e) {
                 errorHandlingBehavior: t,
                 locationStack: T,
                 onErrorReported: n,
-                loadId: C.loadId,
+                loadId: h.loadId,
                 selectedSkuId: A ?? null,
                 selectedPlanId: S ?? null,
                 isGift: f,

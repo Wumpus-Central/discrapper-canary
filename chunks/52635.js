@@ -1,4 +1,4 @@
-n.d(t, { EB: () => h, T3: () => E });
+n.d(t, { EB: () => C, T3: () => E });
 var l = n(627968),
     i = n(64700),
     r = n(17928),
@@ -7,11 +7,11 @@ var l = n(627968),
     o = n(120700),
     u = n(818824),
     c = n(944355),
-    d = n(6938),
+    d = n(316915),
     p = n(67480),
-    m = n(937008),
-    C = n(652215);
-function h(e) {
+    m = n(951305),
+    h = n(652215);
+function C(e) {
     let {
             skuId: t,
             paymentSourceType: n = null,
@@ -19,7 +19,7 @@ function h(e) {
             isGift: o,
             checkoutLegalType: m = c.I0.GiftGameShop,
         } = e,
-        { immediateDelivery: h } = (0, u.U)(),
+        { immediateDelivery: C } = (0, u.U)(),
         E = (function (e) {
             let { skuId: t, purchaseButtonText: n, checkoutLegalType: l = c.I0.OrbsGameShop, isGift: i = !1 } = e,
                 { checkoutReviewButtonLabel: o } = (0, d.t4)((e) => ({
@@ -27,18 +27,18 @@ function h(e) {
                 })),
                 u = (0, r.bG)([p.A], () => p.A.get(t), [t]),
                 m = u?.productLine,
-                h = u?.applicationId,
-                E = (0, r.bG)([s.A], () => (m === C.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(h) : null), [h, m]),
-                { fetched: A, hasAlreadyLinked: S } = (0, a.RD)(E);
+                C = u?.applicationId,
+                E = (0, r.bG)([s.A], () => (m === h.EZt.SOCIAL_LAYER_GAME_ITEM ? s.A.getApplication(C) : null), [C, m]),
+                { fetched: f, hasAlreadyLinked: A } = (0, a.RD)(E);
             return {
                 type: l,
                 purchaseButtonText: n ?? o,
                 applicationName: E?.name,
-                applicationId: h,
-                shouldAppendDisclaimer: i || (A && !S),
+                applicationId: C,
+                shouldAppendDisclaimer: i || (f && !A),
             };
         })({ skuId: t, purchaseButtonText: i, isGift: o, checkoutLegalType: m });
-    return (0, l.jsx)(c._P, { variant: E, paymentSourceType: n, immediateDelivery: h });
+    return (0, l.jsx)(c._P, { variant: E, paymentSourceType: n, immediateDelivery: C });
 }
 function E(e) {
     let { paymentSourceType: t } = e,

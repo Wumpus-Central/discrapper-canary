@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => A, UX: () => S, dZ: () => y });
+n.d(t, { Ay: () => A, UX: () => y, dZ: () => S });
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -9,9 +9,9 @@ var l = n(627968),
     c = n(430690),
     d = n(529427),
     p = n(21713),
-    m = n(6938),
-    C = n(573359),
-    h = n(166532),
+    m = n(316915),
+    h = n(573359),
+    C = n(166532),
     E = n(615310),
     f = n(370353);
 function A(e) {
@@ -20,8 +20,8 @@ function A(e) {
             return { header: t, stepProps: n };
         })(e),
         { step: r, stepConfigs: s } = (0, E.Ay)(),
-        { setBodyNode: A, setFooterNode: y, setModalOverlayNode: S } = (0, p.Gm)(),
-        P = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        { setBodyNode: A, setFooterNode: S, setModalOverlayNode: y } = (0, p.Gm)(),
+        P = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
         { setReadySlideId: I, unifiedCheckoutFlow: _ } = (0, m.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -29,8 +29,8 @@ function A(e) {
         T = s.find((e) => e.key === r);
     if (
         (i.useEffect(() => {
-            S(null);
-        }, [r, S]),
+            y(null);
+        }, [r, y]),
         null == T)
     )
         throw new d.vd({
@@ -40,7 +40,7 @@ function A(e) {
     let g = T?.options?.hideSlider ?? !1,
         x = T?.options?.hideDefaultModalBody ?? !1,
         v = T?.options?.sliderBodyClassName,
-        N = r === h.pn.REVIEW,
+        N = r === C.pn.REVIEW,
         M = i.useCallback(
             (e, t) => {
                 t === r && A(e);
@@ -84,10 +84,10 @@ function A(e) {
                                             ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => y(e) }),
+                          (0, l.jsx)("div", { ref: (e) => S(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
-                                  S(e);
+                                  y(e);
                               },
                           }),
                       ],
@@ -95,12 +95,12 @@ function A(e) {
         ],
     });
 }
-function y(e) {
+function S(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, p.Gm)();
     return null == n ? null : s.createPortal(t, n);
 }
-function S(e) {
+function y(e) {
     let { children: t } = e,
         { footerNode: n } = (0, p.Gm)();
     return null == n ? null : s.createPortal(t, n);

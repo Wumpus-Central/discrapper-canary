@@ -1,4 +1,4 @@
-n.d(t, { Fe: () => v, kc: () => b });
+n.d(t, { Fe: () => v, kc: () => M });
 var l = n(627968),
     i = n(64700),
     r = n(17928),
@@ -7,20 +7,20 @@ var l = n(627968),
     o = n(463376),
     u = n(427675),
     c = n(580133),
-    d = n(6938),
+    d = n(316915),
     p = n(242874),
     m = n(573359),
     h = n(35587),
     C = n(75825),
-    A = n(237412),
-    E = n(45938),
-    f = n(951305),
-    y = n(166532),
-    S = n(615310),
+    E = n(237412),
+    f = n(45938),
+    A = n(951305),
+    S = n(166532),
+    y = n(615310),
     P = n(906234),
-    T = n(652215),
-    I = n(202541),
-    _ = n(375708),
+    I = n(652215),
+    _ = n(202541),
+    T = n(375708),
     g = n(865543);
 function x(e) {
     let { onClose: t } = e,
@@ -30,20 +30,20 @@ function x(e) {
         })),
         h = (0, r.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
         { isPremium: P, isPremiumGroupPurchase: x, isEligibleForTrial: v, isEligibleForDiscount: N } = (0, o.i)(),
-        b = (0, u.S3)(),
-        R = (0, S.bB)(),
-        { isGift: M, selectedGiftStyle: j, giftRecipient: O } = (0, f.Pv)(),
-        L = b?.productLine === T.EZt.COLLECTIBLES,
-        w = b?.productLine === T.EZt.SOCIAL_LAYER_GAME_ITEM,
-        D = M && (0, E.Ik)(O) && R === y.pn.CONFIRM && null != j && !L && !w,
-        k = [y.pn.SKU_SELECT, y.pn.SELECT_FREE_SKU],
-        U = null != R && !k.includes(R) && null != n,
+        M = (0, u.S3)(),
+        R = (0, y.bB)(),
+        { isGift: b, selectedGiftStyle: j, giftRecipient: O } = (0, A.Pv)(),
+        L = M?.productLine === I.EZt.COLLECTIBLES,
+        w = M?.productLine === I.EZt.SOCIAL_LAYER_GAME_ITEM,
+        k = b && (0, f.Ik)(O) && R === S.pn.CONFIRM && null != j && !L && !w,
+        D = [S.pn.SKU_SELECT, S.pn.SELECT_FREE_SKU],
+        U = null != R && !D.includes(R) && null != n,
         G = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
         if (null == R) return;
         let e = null;
         return (
-            D
+            k
                 ? (e = (0, l.jsxs)("div", {
                       className: g.kL,
                       children: [
@@ -61,25 +61,25 @@ function x(e) {
                   }))
                 : U &&
                   (e =
-                      n in I.WN
-                          ? (0, l.jsx)(A.A, {
+                      n in _.WN
+                          ? (0, l.jsx)(E.A, {
                                 currentStep: R ?? void 0,
                                 purchaseState: c,
-                                premiumType: I.WN[n],
+                                premiumType: _.WN[n],
                                 onClose: G,
                                 showTrialBadge: v,
                                 showDiscountBadge: N,
-                                isGift: M,
+                                isGift: b,
                                 giftRecipient: O,
                                 isEligibleForTrial: v,
                                 enablePremiumBrandRefresh: P,
                                 isDisplayingWowMomentConfirmation: h,
                                 isPremiumGroupPurchase: x,
                             })
-                          : (0, l.jsx)(a.rQ, { title: _.intl.string(_.t.q9EGps) })),
+                          : (0, l.jsx)(a.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [j, G, c, n, R, v, N, D, U, M, O, P, h, x]);
+    }, [j, G, c, n, R, v, N, k, U, b, O, P, h, x]);
 }
 function v(e) {
     let {
@@ -101,7 +101,7 @@ function v(e) {
             : a
               ? (i = "trial")
               : (s || u || c) &&
-                (l && null != t && (n = _.intl.formatToPlainString(_.t.iiLbvu, { percent: t })), (i = "promo")),
+                (l && null != t && (n = T.intl.formatToPlainString(T.t.iiLbvu, { percent: t })), (i = "promo")),
         null != e)
             ? e
             : null != n
@@ -113,7 +113,7 @@ function N() {
     let e = v();
     return (0, l.jsx)(c.f, { headerBadgeConfig: e });
 }
-function b(e) {
-    let { isGift: t } = (0, f.Pv)();
-    return e.step !== y.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
+function M(e) {
+    let { isGift: t } = (0, A.Pv)();
+    return e.step !== S.pn.PLAN_SELECT || t ? (0, l.jsx)(x, { ...e }) : (0, l.jsx)(N, {});
 }

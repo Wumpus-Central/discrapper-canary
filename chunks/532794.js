@@ -45,27 +45,28 @@ function S(e) {
             returnRef: B,
             subscription: H,
             skipConfirm: j,
-        } = e ?? {},
-        W = r()("payment-modal"),
-        Y = (0, f.mH)(U),
-        K = v || Y !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
-        $ = K?.rewardSkuIds[0] ?? null,
-        z = !1;
-    function q() {
-        z ||
-            ((z = !0),
+            shouldDisallowPlanSelection: W,
+        } = e,
+        Y = r()("payment-modal"),
+        K = (0, f.mH)(U),
+        $ = v || K !== (0, f.mH)(g.pe.TIER_2) ? null : h.A.getMarketingMomentPromotion(),
+        z = $?.rewardSkuIds[0] ?? null,
+        q = !1;
+    function Z() {
+        q ||
+            ((q = !0),
             I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
             A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
                 ? setTimeout(() => {
-                      (0, a.closeModal)(W);
+                      (0, a.closeModal)(Y);
                   }, p.K)
-                : (0, a.closeModal)(W));
+                : (0, a.closeModal)(Y));
     }
-    function Z(e) {
+    function X(e) {
         (0, o.ET)(), (0, l.ET)(), (0, d.z)(), e && null != C && C();
     }
-    function X() {
-        return (0, a.closeModal)(W);
+    function Q() {
+        return (0, a.closeModal)(Y);
     }
     return Promise.all([
         n.e("86832"),
@@ -191,7 +192,7 @@ function S(e) {
         n.e("93159"),
         n.e("55936"),
         n.e("89088"),
-        n.e("42834"),
+        n.e("69294"),
         n.e("94723"),
         n.e("62931"),
         n.e("45959"),
@@ -219,7 +220,7 @@ function S(e) {
         n.e("55654"),
         n.e("27773"),
         n.e("50097"),
-        n.e("23164"),
+        n.e("80445"),
         n.e("48900"),
         n.e("35485"),
         n.e("82069"),
@@ -271,7 +272,7 @@ function S(e) {
         .then((e) => {
             let { UnifiedCheckoutFlowManagerSingletons: n } = e;
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
-                checkoutConfiguration: { applicationId: k, skuId: Y ?? null },
+                checkoutConfiguration: { applicationId: k, skuId: K ?? null },
                 forwardedPaymentModalProps: {
                     analyticsObject: R,
                     initialPlanId: t,
@@ -287,8 +288,8 @@ function S(e) {
                     skipConfirm: !!j,
                     paymentModalOnClose: (e) =>
                         (function (e, t) {
-                            z ||
-                                ((z = !0),
+                            q ||
+                                ((q = !0),
                                 I._.dispatch(T.jej.WOW_MOMENT_CONFIRMATION_MODAL_CLOSED),
                                 A.A.isDisplayingWowMomentConfirmation && A.A.isAnimated
                                     ? setTimeout(() => {
@@ -299,10 +300,10 @@ function S(e) {
                                 if (
                                     (null != t && t(),
                                     s.h.dispatch({ type: "PREMIUM_PAYMENT_MODAL_CLOSE", didSucceed: e }),
-                                    e && null != $ && K.endDate >= new Date())
+                                    e && null != z && $.endDate >= new Date())
                                 ) {
-                                    await (0, u.RE)($);
-                                    let e = _.A.getProduct($);
+                                    await (0, u.RE)(z);
+                                    let e = _.A.getProduct(z);
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
@@ -312,7 +313,7 @@ function S(e) {
                                         });
                                 }
                             }
-                        })(e, X),
+                        })(e, Q),
                 },
                 unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: O },
                 checkoutHandlers: { onClose: S, onComplete: N },
@@ -324,12 +325,13 @@ function S(e) {
                     referralTrialOfferId: F,
                     subscriptionTier: U,
                     subscription: H,
+                    shouldDisallowPlanSelection: W,
                 },
                 modalAPIOptions: {
-                    modalKey: W,
+                    modalKey: Y,
                     skipCloseModalOnCloseRequest: !0,
-                    onCloseRequest: q,
-                    onCloseCallback: Z,
+                    onCloseRequest: Z,
+                    onCloseCallback: X,
                 },
             });
         });
