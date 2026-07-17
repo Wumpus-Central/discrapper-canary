@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { default: () => eK });
+n.r(t), n.d(t, { default: () => eB });
 var s = n(627968),
     a = n(64700),
     l = n(687966),
@@ -229,30 +229,29 @@ var W = n(503698),
     et = n(290136),
     en = n(131607),
     es = n(569926),
-    ea = n(95035),
-    el = n(403362),
-    ei = n(123917),
-    er = n(165655),
-    ed = n(922016),
-    ec = n(980707),
-    eo = n(477782),
-    eu = n(534890),
-    em = n(625903),
-    ex = n(365199),
-    ef = n(442433),
-    ej = n(281445);
-function eg(e, t) {
-    return null == e || e !== ej.X.SHOCKBYTE ? null : null != t ? `${t}/support` : null;
+    ea = n(403362),
+    el = n(123917),
+    ei = n(165655),
+    er = n(922016),
+    ed = n(980707),
+    ec = n(477782),
+    eo = n(534890),
+    eu = n(625903),
+    em = n(365199),
+    ex = n(442433),
+    ef = n(281445);
+function ej(e, t) {
+    return null == e || e !== ef.X.SHOCKBYTE ? null : null != t ? `${t}/support` : null;
 }
-var ev = n(843095),
-    eh = n(484875);
-let eE = { steps: { [$.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
-function eN(e) {
+var eg = n(843095),
+    ev = n(484875);
+let eh = { steps: { [$.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
+function eE(e) {
     let { guildId: t, instance: n } = e,
         l = a.useRef(null),
-        i = eg(n.providerType, n.gameServerPanelUrl);
+        i = ej(n.providerType, n.gameServerPanelUrl);
     return (0, g.A)(t)
-        ? (0, s.jsx)(ed.Y, {
+        ? (0, s.jsx)(er.Y, {
               targetElementRef: l,
               align: "top",
               position: "right",
@@ -260,35 +259,35 @@ function eN(e) {
               disablePointerEvents: !1,
               renderPopout: (e) => {
                   let { closePopout: a } = e;
-                  return (0, s.jsx)(ec.W, {
+                  return (0, s.jsx)(ed.W, {
                       "data-menu-migrated": !0,
                       navId: "game_server-popout-context-menu",
                       onClose: () => {
-                          (0, ef.Z_)(), a();
+                          (0, ex.Z_)(), a();
                       },
                       "aria-label": B.intl.string(w.default["yb+ork"]),
                       onSelect: void 0,
-                      children: (0, s.jsxs)(eo.rX, {
+                      children: (0, s.jsxs)(ec.rX, {
                           children: [
                               null != i &&
-                                  (0, s.jsx)(eo.Dr, {
+                                  (0, s.jsx)(ec.Dr, {
                                       id: "get-support",
-                                      icon: eu.o,
-                                      leadingAccessory: { type: "icon", icon: eu.o },
+                                      icon: eo.o,
+                                      leadingAccessory: { type: "icon", icon: eo.o },
                                       label: B.intl.string(w.default.bBkeMs),
                                       action: () => {
-                                          (0, ei.h)({ href: i });
+                                          (0, el.h)({ href: i });
                                       },
                                   }),
-                              (0, s.jsx)(eo.Dr, {
+                              (0, s.jsx)(ec.Dr, {
                                   id: "settings",
-                                  icon: em.Z,
-                                  leadingAccessory: { type: "icon", icon: em.Z },
+                                  icon: eu.Z,
+                                  leadingAccessory: { type: "icon", icon: eu.Z },
                                   label: B.intl.string(w.default["feUiM/"]),
                                   action: () => {
-                                      (0, ev.A)({
+                                      (0, eg.A)({
                                           guildId: t,
-                                          stepConfig: eE,
+                                          stepConfig: eh,
                                           initialGameServerInstance: n,
                                           analyticsLocation: R.A.GAME_SERVER_PAGE,
                                       });
@@ -301,32 +300,32 @@ function eN(e) {
               children: (e) =>
                   (0, s.jsx)(H.D, {
                       "aria-label": B.intl.string(B.t["UKOtz+"]),
-                      className: eh.v,
+                      className: ev.v,
                       ...e,
                       innerRef: l,
-                      children: (0, s.jsx)(ex.j, { color: "currentColor", size: "sm" }),
+                      children: (0, s.jsx)(em.j, { color: "currentColor", size: "sm" }),
                   }),
           })
         : null;
 }
-var ep = n(500897),
-    eA = n(225180),
-    eS = n(117265);
-function eC(e, t) {
+var eN = n(500897),
+    ep = n(225180),
+    eA = n(117265);
+function eS(e, t) {
     return (0, S.openModalLazy)(async () => {
         let { default: a } = await Promise.all([n.e("95333"), n.e("5490")]).then(n.bind(n, 826153));
         return (n) => (0, s.jsx)(a, { ...n, guildId: e, instance: t });
     });
 }
-function eI(e) {
+function eC(e) {
     return (0, S.openModalLazy)(async () => {
         let { default: t } = await n.e("49695").then(n.bind(n, 23874));
         return (n) => (0, s.jsx)(t, { ...n, ...e });
     });
 }
-var eb = n(49999),
-    eR = n(615990);
-function eM(e) {
+var eI = n(49999),
+    eb = n(615990);
+function eR(e) {
     let { guildId: t, instance: n } = e,
         [l, i] = a.useState(!1),
         r = a.useCallback(() => {
@@ -343,7 +342,7 @@ function eM(e) {
         onClick: r,
     });
 }
-function ey(e) {
+function eM(e) {
     return (0, s.jsx)(I.$, {
         fullWidth: !0,
         text: B.intl.string(w.default.tkbVdf),
@@ -353,10 +352,10 @@ function ey(e) {
         ...e,
     });
 }
-function e_(e) {
+function ey(e) {
     return (0, s.jsx)(I.$, { fullWidth: !0, text: B.intl.string(w.default["fQCcM/"]), variant: "primary", ...e });
 }
-function eT(e) {
+function e_(e) {
     return (0, s.jsx)(I.$, {
         fullWidth: !0,
         text: B.intl.string(w.default.gWMqnI),
@@ -366,7 +365,7 @@ function eT(e) {
         ...e,
     });
 }
-function eG(e) {
+function eT(e) {
     let { guildId: t } = e,
         [n, l] = a.useState(!1),
         i = a.useCallback(() => {
@@ -383,49 +382,49 @@ function eG(e) {
         onClick: i,
     });
 }
-function ek(e) {
+function eG(e) {
     let { instance: t } = e,
-        n = eg(t.providerType, t.gameServerPanelUrl);
+        n = ej(t.providerType, t.gameServerPanelUrl);
     return (0, s.jsx)(I.$, {
         fullWidth: !0,
         text: B.intl.string(w.default.bBkeMs),
         variant: "secondary",
         onClick: () => {
-            null != n && (0, ei.h)({ href: n });
+            null != n && (0, el.h)({ href: n });
         },
     });
 }
-function eP(e) {
+function ek(e) {
     let { guildId: t, instance: n } = e,
-        l = (0, eS.A)(n),
+        l = (0, eA.A)(n),
         [i, r] = (0, en.kn)([q.M.GAME_SERVER_HOSTING_PORTKEY_TOS]),
         o = i !== q.M.GAME_SERVER_HOSTING_PORTKEY_TOS,
         { data: u } = (0, es.I)(n.gameId),
-        m = eg(n.providerType, n.gameServerPanelUrl),
+        m = ej(n.providerType, n.gameServerPanelUrl),
         x = a.useCallback(() => {
             (0, h.Ai)(t, n.gameId, u?.name ?? "", n.id),
                 o || null == n.providerType
-                    ? eC(t, n)
-                    : eI({
+                    ? eS(t, n)
+                    : eC({
                           provider: n.providerType,
                           onAccept: () => {
-                              r(eb.i.TAKE_ACTION), eC(t, n);
+                              r(eI.i.TAKE_ACTION), eS(t, n);
                           },
                       });
         }, [n, o, r, t, u?.name]),
-        { handleCopyServerIp: f, animateCopyIcon: j } = (0, ep.A)(t, n.id, R.A.GAME_SERVER_GAME, l ?? ""),
-        v = (0, eA.A)(n.gameId, "cover"),
+        { handleCopyServerIp: f, animateCopyIcon: j } = (0, eN.A)(t, n.id, R.A.GAME_SERVER_GAME, l ?? ""),
+        v = (0, ep.A)(n.gameId, "cover"),
         E = (0, g.A)(t),
         N = a.useCallback(() => {
-            (0, h.f7)(t, n.id), (0, ei.h)({ href: n.gameServerPanelUrl ?? "" });
+            (0, h.f7)(t, n.id), (0, el.h)({ href: n.gameServerPanelUrl ?? "" });
         }, [n.gameServerPanelUrl, t, n.id]),
         p = a.useMemo(() => {
             switch (n.status) {
                 case Z.M.SLEEPING:
                     return (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)(eM, { guildId: t, instance: n }),
-                            E && (0, s.jsx)(ey, { onClick: N, disabled: null == n.gameServerPanelUrl }),
+                            (0, s.jsx)(eR, { guildId: t, instance: n }),
+                            E && (0, s.jsx)(eM, { onClick: N, disabled: null == n.gameServerPanelUrl }),
                         ],
                     });
                 case Z.M.OFFLINE:
@@ -433,24 +432,24 @@ function eP(e) {
                 case Z.M.STARTING:
                     return (0, s.jsxs)(s.Fragment, {
                         children: [
-                            (0, s.jsx)(e_, { onClick: x }),
-                            E && (0, s.jsx)(ey, { onClick: N, disabled: null == n.gameServerPanelUrl }),
+                            (0, s.jsx)(ey, { onClick: x }),
+                            E && (0, s.jsx)(eM, { onClick: N, disabled: null == n.gameServerPanelUrl }),
                         ],
                     });
                 case Z.M.STARTUP_FAILED:
                 case Z.M.MISSING_STOCK:
-                    return E ? (0, s.jsx)(eT, { onClick: N }) : (0, s.jsx)(e_, { onClick: x, disabled: !0 });
+                    return E ? (0, s.jsx)(e_, { onClick: N }) : (0, s.jsx)(ey, { onClick: x, disabled: !0 });
                 case Z.M.DELETED:
                     return E
-                        ? (0, s.jsx)(ey, { onClick: N, disabled: null == n.gameServerPanelUrl })
-                        : (0, s.jsx)(e_, { onClick: x, disabled: !0 });
+                        ? (0, s.jsx)(eM, { onClick: N, disabled: null == n.gameServerPanelUrl })
+                        : (0, s.jsx)(ey, { onClick: x, disabled: !0 });
                 case Z.M.PROVIDER_ERRORED:
                     return (0, s.jsxs)(s.Fragment, {
                         children: [
                             E && null != m
-                                ? (0, s.jsx)(ek, { guildId: t, instance: n })
-                                : (0, s.jsx)(e_, { onClick: x, disabled: !0 }),
-                            (0, s.jsx)(eG, { guildId: t, instance: n }),
+                                ? (0, s.jsx)(eG, { guildId: t, instance: n })
+                                : (0, s.jsx)(ey, { onClick: x, disabled: !0 }),
+                            (0, s.jsx)(eT, { guildId: t, instance: n }),
                         ],
                     });
                 default:
@@ -459,7 +458,7 @@ function eP(e) {
         }, [n, x, E, N, t, m]),
         A = a.useMemo(() => {
             if (null == n.gameConfig) return null;
-            let e = [n.gameConfig.type, n.gameConfig.version].filter(el.Vq).join(" ");
+            let e = [n.gameConfig.type, n.gameConfig.version].filter(ea.Vq).join(" ");
             return "" === e ? null : e;
         }, [n.gameConfig]),
         S = a.useMemo(() => {
@@ -481,20 +480,20 @@ function eP(e) {
         actions: p,
         children: [
             (0, s.jsxs)("div", {
-                className: eR.serverDetailsContainer,
+                className: eb.serverDetailsContainer,
                 children: [
                     (0, s.jsxs)("div", {
-                        className: eR.serverHeader,
+                        className: eb.serverHeader,
                         children: [
-                            (0, s.jsx)("img", { src: v ?? "", alt: "", className: eR.gameImage }),
+                            (0, s.jsx)("img", { src: v ?? "", alt: "", className: eb.gameImage }),
                             (0, s.jsxs)("div", {
-                                className: eR.serverInfo,
+                                className: eb.serverInfo,
                                 children: [
                                     (0, s.jsx)(C.D, { variant: "heading-md/medium", children: n.name }),
                                     (0, s.jsx)(d.E, {
                                         variant: "text-sm/medium",
                                         color: "text-muted",
-                                        children: [u?.name, A].filter(el.Vq).join(" \u2022 "),
+                                        children: [u?.name, A].filter(ea.Vq).join(" \u2022 "),
                                     }),
                                 ],
                             }),
@@ -502,10 +501,10 @@ function eP(e) {
                     }),
                     (0, s.jsx)("div", {
                         children: (0, s.jsxs)("div", {
-                            className: eR.detailsGrid,
+                            className: eb.detailsGrid,
                             children: [
                                 (0, s.jsxs)("div", {
-                                    className: eR.detailItem,
+                                    className: eb.detailItem,
                                     children: [
                                         (0, s.jsx)(d.E, {
                                             variant: "text-xs/semibold",
@@ -519,7 +518,7 @@ function eP(e) {
                                     ],
                                 }),
                                 (0, s.jsxs)("div", {
-                                    className: eR.detailItem,
+                                    className: eb.detailItem,
                                     children: [
                                         (0, s.jsx)(d.E, {
                                             variant: "text-xs/semibold",
@@ -527,7 +526,7 @@ function eP(e) {
                                             children: B.intl.string(w.default["7phwMG"]),
                                         }),
                                         (0, s.jsx)("div", {
-                                            className: eR.serverIpContainer,
+                                            className: eb.serverIpContainer,
                                             children:
                                                 null == l
                                                     ? (0, s.jsx)(d.E, { variant: "text-sm/medium", children: "\u2014" })
@@ -539,7 +538,7 @@ function eP(e) {
                                                                     children: l,
                                                                 }),
                                                                 (0, s.jsx)(H.D, {
-                                                                    className: eR.copyButton,
+                                                                    className: eb.copyButton,
                                                                     "aria-label": B.intl.string(B.t.OpuAlK),
                                                                     onClick: f,
                                                                     children: j
@@ -549,12 +548,13 @@ function eP(e) {
                                                             ],
                                                         })
                                                       : null != n.providerType &&
-                                                        (0, s.jsx)(ea.A, {
+                                                        (0, s.jsx)(H.D, {
+                                                            tag: "a",
                                                             onClick: () => {
-                                                                eI({
+                                                                eC({
                                                                     provider: n.providerType,
                                                                     onAccept: () => {
-                                                                        r(eb.i.TAKE_ACTION), f();
+                                                                        r(eI.i.TAKE_ACTION), f();
                                                                     },
                                                                 });
                                                             },
@@ -564,7 +564,7 @@ function eP(e) {
                                     ],
                                 }),
                                 (0, s.jsxs)("div", {
-                                    className: eR.detailItem,
+                                    className: eb.detailItem,
                                     children: [
                                         (0, s.jsx)(d.E, {
                                             variant: "text-xs/semibold",
@@ -572,17 +572,17 @@ function eP(e) {
                                             children: B.intl.string(w.default["n+ZX7y"]),
                                         }),
                                         (0, s.jsxs)("div", {
-                                            className: eR.statusContainer,
+                                            className: eb.statusContainer,
                                             children: [
                                                 n.status === Z.M.STARTING
                                                     ? (0, s.jsx)(c.y, {
                                                           type: c.t.SPINNING_CIRCLE_SIMPLE,
-                                                          className: eR.statusLoading,
+                                                          className: eb.statusLoading,
                                                       })
                                                     : (0, s.jsx)("span", {
                                                           className: Y()(
-                                                              eR.statusIndicator,
-                                                              null != n.status && eR[n.status],
+                                                              eb.statusIndicator,
+                                                              null != n.status && eb[n.status],
                                                           ),
                                                       }),
                                                 (0, s.jsx)(d.E, {
@@ -615,7 +615,7 @@ function eP(e) {
                                                         position: "top",
                                                         text: S,
                                                         children: (0, s.jsx)(et.c, {
-                                                            className: eR.statusTooltipIcon,
+                                                            className: eb.statusTooltipIcon,
                                                             size: "xs",
                                                         }),
                                                     }),
@@ -624,7 +624,7 @@ function eP(e) {
                                     ],
                                 }),
                                 (0, s.jsxs)("div", {
-                                    className: eR.detailItem,
+                                    className: eb.detailItem,
                                     children: [
                                         (0, s.jsx)(d.E, {
                                             variant: "text-xs/semibold",
@@ -644,18 +644,18 @@ function eP(e) {
             }),
             E &&
                 (0, s.jsx)("div", {
-                    className: eR.overflowMenu,
-                    children: (0, s.jsx)(eN, { guildId: t, instance: n }),
+                    className: eb.overflowMenu,
+                    children: (0, s.jsx)(eE, { guildId: t, instance: n }),
                 }),
-            (0, s.jsx)("div", { className: eR.imageBackground, children: (0, s.jsx)(er.T, { imageUrl: v ?? "" }) }),
+            (0, s.jsx)("div", { className: eb.imageBackground, children: (0, s.jsx)(ei.T, { imageUrl: v ?? "" }) }),
         ],
     });
 }
-var eD = n(895770),
-    eL = n(18365),
-    eO = n(452123);
-let eF = { ...$.ZN, initialStep: $.HS.SERVER_SETTINGS };
-function eU(e) {
+var eP = n(895770),
+    eD = n(18365),
+    eL = n(452123);
+let eO = { ...$.ZN, initialStep: $.HS.SERVER_SETTINGS };
+function eF(e) {
     let { guildId: t, isAdmin: n } = e,
         { state: l, shouldFetchCatalog: r } = (0, i.cf)([N.A], () => ({
             state: N.A.getStateForGuild(t),
@@ -671,22 +671,22 @@ function eU(e) {
         m = u.length >= $.ZI;
     return 0 === d.length
         ? (0, s.jsx)("div", {
-              className: eO.kL,
-              children: (0, s.jsx)(c.y, { type: c.t.SPINNING_CIRCLE, className: eO.u1 }),
+              className: eL.kL,
+              children: (0, s.jsx)(c.y, { type: c.t.SPINNING_CIRCLE, className: eL.u1 }),
           })
         : (0, s.jsxs)("div", {
-              className: eO.kL,
+              className: eL.kL,
               children: [
                   (0, s.jsx)(C.D, {
-                      className: eO.R_,
+                      className: eL.R_,
                       variant: "heading-md/semibold",
                       children: B.intl.string(n ? w.default["3vWDMz"] : w.default.Uvf9GK),
                   }),
-                  n && m && (0, s.jsx)("div", { className: eO.Bq, children: (0, s.jsx)(eL.k, {}) }),
+                  n && m && (0, s.jsx)("div", { className: eL.Bq, children: (0, s.jsx)(eD.k, {}) }),
                   (0, s.jsx)(o.Ip, {
-                      className: eO.nd,
+                      className: eL.nd,
                       children: (0, s.jsx)("div", {
-                          className: eO.Y_,
+                          className: eL.Y_,
                           children: d.map((e, a) =>
                               n
                                   ? (0, s.jsx)(
@@ -697,32 +697,32 @@ function eU(e) {
                                                 ? B.intl.formatToPlainString(w.default.uVpJYf, { gameName: e.name })
                                                 : null,
                                             position: "top",
-                                            children: (0, s.jsx)(eD.A, {
+                                            children: (0, s.jsx)(eP.A, {
                                                 guildId: t,
                                                 game: e,
                                                 onClick: () =>
-                                                    (0, ev.A)({
+                                                    (0, eg.A)({
                                                         guildId: t,
-                                                        stepConfig: eF,
+                                                        stepConfig: eO,
                                                         initialGameServerGame: e,
                                                         analyticsLocation: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                                     }),
-                                                imageClassName: eO.Sl,
-                                                titleClassName: eO.DD,
-                                                variant: m || e.disabled ? eD.e.DISABLED : eD.e.CLICKABLE,
+                                                imageClassName: eL.Sl,
+                                                titleClassName: eL.DD,
+                                                variant: m || e.disabled ? eP.e.DISABLED : eP.e.CLICKABLE,
                                                 location: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                             }),
                                         },
                                         `sidebar-game-${a}-${e.id}`,
                                     )
                                   : (0, s.jsx)(
-                                        eD.A,
+                                        eP.A,
                                         {
                                             guildId: t,
                                             game: e,
-                                            variant: eD.e.VIEWABLE,
-                                            imageClassName: eO.Sl,
-                                            titleClassName: eO.DD,
+                                            variant: eP.e.VIEWABLE,
+                                            imageClassName: eL.Sl,
+                                            titleClassName: eL.DD,
                                             location: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                         },
                                         `sidebar-game-${a}-${e.id}`,
@@ -733,12 +733,12 @@ function eU(e) {
               ],
           });
 }
-var eV = n(927813),
-    e$ = n(218394);
-let ez = 30 * eV.A.Millis.SECOND,
-    ew = 5 * eV.A.Millis.SECOND;
-var eB = n(833503);
-function eK(e) {
+var eU = n(927813),
+    eV = n(218394);
+let e$ = 30 * eU.A.Millis.SECOND,
+    ez = 5 * eU.A.Millis.SECOND;
+var ew = n(833503);
+function eB(e) {
     var t;
     let n,
         { guildId: A } = e;
@@ -746,7 +746,7 @@ function eK(e) {
     let S = (0, E.U)("GameServerPage"),
         C = (0, i.bG)([f.A], () => f.A.getGuild(A)?.features.has(z.GuildFeatures.GAME_SERVERS) ?? !1);
     (t = C ? A : null),
-        (n = (0, e$.j)()),
+        (n = (0, eV.j)()),
         a.useEffect(() => {
             if (null == t) return;
             let e = !0,
@@ -764,7 +764,7 @@ function eK(e) {
                                         e && (l = i());
                                     }));
                         },
-                        ez * Math.pow(2, a) + Math.random() * ew,
+                        e$ * Math.pow(2, a) + Math.random() * ez,
                     );
                 })();
             return () => {
@@ -782,19 +782,19 @@ function eK(e) {
             let e = Object.values(R.instances ?? {});
             return 0 === e.length
                 ? null
-                : e.map((e, t) => (0, s.jsx)(eP, { guildId: A, instance: e }, `${e.gameId}-${t}`));
+                : e.map((e, t) => (0, s.jsx)(ek, { guildId: A, instance: e }, `${e.gameId}-${t}`));
         }, [R?.instances, R?.hasFetchedInstances, A]);
     return (0, s.jsxs)("div", {
-        className: eB.kL,
+        className: ew.kL,
         children: [
             (0, s.jsxs)(m.Ay, {
-                className: eB.KE,
+                className: ew.KE,
                 toolbar: (0, s.jsx)("div", {}),
                 children: [
                     (0, s.jsx)(m.Ay.Icon, { icon: l._, "aria-label": "" }),
                     (0, s.jsx)(m.Ay.Title, { children: B.intl.string(w.default.vCzwM7) }),
-                    (0, s.jsx)(r.Lp, { disableColor: !0, text: B.intl.string(B.t.oW0eUd), className: eB.qS }),
-                    (0, s.jsx)(m.Ay.Divider, { className: eB.yF }),
+                    (0, s.jsx)(r.Lp, { disableColor: !0, text: B.intl.string(B.t.oW0eUd), className: ew.qS }),
+                    (0, s.jsx)(m.Ay.Divider, { className: ew.yF }),
                     (0, s.jsx)(d.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
@@ -805,32 +805,32 @@ function eK(e) {
                 ],
             }),
             (0, s.jsxs)("div", {
-                className: eB.hQ,
+                className: ew.hQ,
                 children: [
                     C && !R?.hasFetchedInstances
                         ? (0, s.jsx)("div", {
-                              className: eB.dc,
+                              className: ew.dc,
                               children: (0, s.jsx)(c.y, { type: c.t.SPINNING_CIRCLE }),
                           })
                         : null == M
                           ? (0, s.jsx)(K, { guildId: A })
                           : (0, s.jsxs)("div", {
-                                className: eB.nd,
+                                className: ew.nd,
                                 children: [
                                     S &&
                                         (0, s.jsx)("div", {
-                                            className: eB.MR,
+                                            className: ew.MR,
                                             children: (0, s.jsx)(x.A, {
                                                 look: x.k.WARNING,
                                                 children: B.intl.format(w.default.XzXjK2, {}),
                                             }),
                                         }),
                                     (0, s.jsx)(o.Ip, {
-                                        children: (0, s.jsx)("div", { className: eB.Y_, children: M }),
+                                        children: (0, s.jsx)("div", { className: ew.Y_, children: M }),
                                     }),
                                 ],
                             }),
-                    (I || b) && (0, s.jsx)(eU, { guildId: A, isAdmin: I ?? !1 }),
+                    (I || b) && (0, s.jsx)(eF, { guildId: A, isAdmin: I ?? !1 }),
                 ],
             }),
         ],
