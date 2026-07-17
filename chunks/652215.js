@@ -4155,6 +4155,7 @@ var rv =
         (ew.QUEST_VIDEO_PAUSED = "quest_video_paused"),
         (ew.QUEST_VIDEO_PROGRESSED = "quest_video_progressed"),
         (ew.QUEST_VIDEO_RESUMED = "quest_video_resumed"),
+        (ew.QUEST_VIDEO_SEEKED = "quest_video_seeked"),
         (ew.QUEST_VIDEO_SEGMENT_WATCHED = "quest_video_segment_watched"),
         (ew.QUEST_VIDEO_TIME_TO_FIRST_FRAME = "quest_video_time_to_first_frame"),
         (ew.QUEST_VIDEO_VOLUME_CHANGED = "quest_video_volume_changed"),
