@@ -1,0 +1,113 @@
+.channelHeader__5d903 {
+    align-items: center;
+    background-color: var(--background-surface-higher);
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-12);
+    position: sticky;
+    top: -16px;
+    z-index: 10
+}
+
+.channelHeader__5d903.collapsed__5d903 {
+    border-bottom-width: 0
+}
+
+.icon__5d903 {
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    flex-shrink: 0;
+    height: 32px;
+    width: 32px
+}
+
+.iconClickable__5d903 {
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0
+}
+
+.chevron__5d903 {
+    flex-shrink: 0
+}
+
+.channelNameSection__5d903 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    min-width: 0;
+    overflow: hidden
+}
+
+.channelNameHeading__5d903 {
+    width: 100%
+}
+
+.channelNameClickable__5d903,
+.channelNameHeading__5d903 {
+    align-items: center;
+    display: flex;
+    min-width: 0
+}
+
+.channelNameClickable__5d903 {
+    cursor: pointer;
+    text-align: start
+}
+
+.channelNameClickable__5d903:hover .channelNameSpan__5d903 {
+    text-decoration: underline
+}
+
+.channelNameSpan__5d903 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.guildName__5d903 {
+    cursor: pointer
+}
+
+.guildName__5d903:hover {
+    text-decoration: underline
+}
+
+.badge__5d903 {
+    flex-shrink: 0;
+    margin-inline-start: var(--space-8)
+}
+
+.channelTypeIcon__5d903 {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-4)
+}
+
+.buttonGroup__5d903 {
+    flex-shrink: 0
+}
+
+.status__5d903 {
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    gap: var(--space-4);
+    margin-bottom: var(--space-8);
+    padding: var(--space-8);
+    padding-inline-start: 70px
+}
+
+.error__5d903 {
+    background-color: rgba(255, 0, 0, .05)
+}
+
+.success__5d903 {
+    background-color: rgba(0, 255, 0, .03)
+}
+
+.normal__5d903 {
+    background-color: var(--background-base-low)
+}
