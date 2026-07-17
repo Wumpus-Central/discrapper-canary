@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { pX: () => T, FH: () => I, P4: () => E, pd: () => A, ML: () => d, hw: () => p }), n(321073);
+n.d(t, { iQ: () => h, FH: () => f, P4: () => E, pd: () => A, ML: () => d, pX: () => m, hw: () => T }), n(321073);
 var i = n(284009),
     r = n.n(i),
     a = n(306173),
@@ -118,8 +118,9 @@ let E = new (class extends u {
                 (1 === e || (!(this.emissionsCount >= this.MAX_EMISSIONS_PER_APP_LAUNCH) && Math.random() < e))
             );
         }
-    })("2025-09-libdiscore-telemetry");
-class h extends u {
+    })("2025-09-libdiscore-telemetry"),
+    h = new _("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
+class I extends u {
     label;
     treatmentCount;
     getLabel() {
@@ -132,16 +133,16 @@ class h extends u {
         super(e), (this.label = t), (this.treatmentCount = n);
     }
 }
-let I = new h("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
-new h("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+let f = new I("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
+new I("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
     new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
     new _("2026-06-ios-ota-streaming", "iOS OTA Streaming Download");
-let f = !1;
-function p() {
-    return f;
-}
+let p = !1;
 function T() {
+    return p;
+}
+function m() {
     (0, a.xd)() &&
-        (o.info("Clearing libdiscore experiment cache and disabling sync"), (f = !0), (0, a.Ih)().clearCache());
+        (o.info("Clearing libdiscore experiment cache and disabling sync"), (p = !0), (0, a.Ih)().clearCache());
 }

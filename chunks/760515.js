@@ -1384,7 +1384,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 580612, Version Hash: b522b0e34d797d96bbc142f5e7f0fadb955116b7`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 580749, Version Hash: 6b395fee61f9754089360bd1eabec720f246d0ff`,
 ),
     v.A.setTags({ appContext: F.QCW }),
     em.A.initBasic(),
@@ -18356,7 +18356,7 @@ let gU = "isHideDevBanner",
                     className: td()(gP.Wz, gP.mr),
                     children: [
                         (0, R.jsx)(gM, { className: gP.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "580612" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "580749" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -37250,7 +37250,21 @@ async function P6(e, t, n, i) {
                   })
                 : Promise.resolve([]),
         );
-    P$.A.loadLazyCache.recordStart();
+    e0.iQ.getCachedEnabled()
+        ? Pq.verbose("loadLateLazyCache: not yielding to react")
+        : (Pq.verbose("loadLateLazyCache: yielding to react"),
+          await (function () {
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 4e3;
+              return new Promise((t) => {
+                  let n = setTimeout(() => {
+                      t();
+                  }, e);
+                  (0, ia.t)(() => {
+                      clearTimeout(n), t();
+                  });
+              });
+          })((0, W.isIOS)() ? 0 : void 0)),
+        P$.A.loadLazyCache.recordStart();
     let o = OV.A.getSocket();
     P4(() => {
         let d = performance.now();
@@ -39810,8 +39824,8 @@ let wT = (0, tj.Fe)({
             n.e("10147"),
             n.e("6627"),
             n.e("90213"),
-            n.e("36926"),
             n.e("43256"),
+            n.e("36926"),
             n.e("11802"),
             n.e("60536"),
             n.e("81398"),
