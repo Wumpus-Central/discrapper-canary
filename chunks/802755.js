@@ -14466,7 +14466,7 @@ function S8() {
 }
 var S7 = i(783419),
     S9 = i(534952),
-    Te = i(230451),
+    Te = i(452832),
     Tt = i(781471);
 function Ti(e) {
     let t,
@@ -15082,30 +15082,48 @@ let Tu = (0, a.E2)(u.X.CONNECTIONS_ADD_CONNECTIONS_SETTING, {
 var Tc = i(206828);
 function Tg() {
     let e = (0, g.bG)([SY.A], () => SY.A.getAccounts()),
-        t = SR.A.filter((e) => e.migrationData?.getMigrationExperimentEnabled("RiotDeprecationInlineNotice") === !0)
-            .filter((t) => e.some((e) => e.type === t.type))
-            .pop(),
-        i = (0, ti.h)(t?.migrationData?.replacedBy),
-        { canStartAuthorization: n, hasAlreadyLinked: s, fetched: l } = (0, Tc.RD)(i),
-        r =
-            t?.type === U.fg2.RIOT_GAMES || t?.type === U.fg2.LEAGUE_OF_LEGENDS
+        t = S.useMemo(
+            () =>
+                SR.A.filter(
+                    (e) => e.migrationData?.getMigrationExperimentEnabled("ConnectionDeprecationInlineNotice") === !0,
+                ).filter((t) => e.some((e) => e.type === t.type)),
+            [e],
+        ),
+        [i, n] = S.useState(0),
+        [s, l] = S.useState(t),
+        r = t !== s;
+    r && (l(t), n(0));
+    let a = S.useMemo(() => t[i], [t, i]),
+        o = (0, ti.h)(a?.migrationData?.replacedBy),
+        { canStartAuthorization: u, hasAlreadyLinked: d, fetched: c } = (0, Tc.RD)(o),
+        m =
+            a?.type === U.fg2.RIOT_GAMES || a?.type === U.fg2.LEAGUE_OF_LEGENDS
                 ? j.intl.string(Te.default["1S6oAo"])
-                : i?.name;
-    return S.useMemo(
-        () =>
-            null != t && n && i?.connectionEntrypointUrl != null && !s && l
-                ? {
-                      type: h.lT.INLINE_NOTICE,
-                      noticeType: "info",
-                      useText: () =>
-                          j.intl.format(Te.default.DeOsIl, {
-                              connectionName: t.name,
-                              applicationName: r,
-                              connectionEntrypointUrl: i.connectionEntrypointUrl,
-                          }),
-                  }
-                : null,
-        [t, r, i, n, s, l],
+                : o?.name,
+        A = null != a && c,
+        E = A && !d && u && o?.connectionEntrypointUrl != null;
+    return (
+        r || !A || E || n((e) => e + 1),
+        S.useMemo(
+            () =>
+                E
+                    ? {
+                          type: h.lT.INLINE_NOTICE,
+                          noticeType: "info",
+                          useText: () =>
+                              j.intl.format(Te.default.wUXupS, {
+                                  connectionName: a.name,
+                                  applicationName: m,
+                                  connectionEntrypointUrl: o?.connectionEntrypointUrl,
+                                  helpCenterLink:
+                                      a.migrationData?.helpCenterLinkIntlMessage != null
+                                          ? j.intl.string(a.migrationData.helpCenterLinkIntlMessage)
+                                          : void 0,
+                              }),
+                      }
+                    : null,
+            [a, m, o, E],
+        )
     );
 }
 let Tm = (0, a.zZ)(u.X.CONNECTIONS_CATEGORY, {

@@ -22,7 +22,7 @@ var i = n(627968),
     S = n(281020),
     N = n(206828),
     C = n(49999),
-    O = n(230451),
+    O = n(452832),
     R = n(375708),
     L = n(448759);
 let y = function (e) {
@@ -74,7 +74,7 @@ let y = function (e) {
             (0, i.jsx)("img", {
                 src: "light" === v ? F?.icon.blackSVG : F?.icon.whiteSVG,
                 alt: s,
-                className: c()(L.tV, L._R),
+                className: c()(L.tV, L.Y5),
             }),
             R.intl.format(O.default.DfSSdL, {
                 connectionName: b?.name,
@@ -91,13 +91,13 @@ let y = function (e) {
                 onClick: function () {
                     U({ analyticsLocations: k, onSuccess: V });
                 },
-                className: L.HE,
+                className: L.NS,
                 noticeType: y,
                 children: R.intl.string(O.default.ZeOhh9),
             }),
             (0, i.jsx)(E.zr, {
                 onClick: () => a(C.i.USER_DISMISS),
-                className: L.wX,
+                className: L.go,
                 children: R.intl.string(O.default["MVB/Ab"]),
             }),
         ],
@@ -163,6 +163,8 @@ function $(e) {
             return { cooldownDurationMs: (0, j.e1)(n[0]) };
         case F.kqX.RIOT_MIGRATION:
         case F.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN:
+        case F.kqX.BATTLENET_MIGRATION:
+        case F.kqX.BATTLENET_LINKED_ROLE_DEPRECATION:
             return { cooldownDurationMs: 6048e5 };
         default:
             return { cooldownDurationMs: 1 / 0 };
@@ -205,10 +207,40 @@ function z(e) {
                 platformIconOverride: o.A.get(F.fg2.RIOT_GAMES),
             });
         case l.M.RIOT_CONNECTION_DEPRECATION_ADMIN:
-            return (0, i.jsx)(D.A, {
-                markAsDismissed: () => u(C.i.USER_DISMISS),
+            return (0, i.jsx)(D.Ay, {
+                noticeType: F.kqX.RIOT_CONNECTION_DEPRECATION_ADMIN,
+                markAsDismissed: (e) => {
+                    (0, W.Dr)(l.M.RIOT_CONNECTION_DEPRECATION_ADMIN_DISABLE), u(e);
+                },
+                recurringDismiss: (e) => {
+                    u(e);
+                },
                 deprecationDate: K.af,
                 platformType: F.fg2.RIOT_GAMES,
+            });
+        case l.M.BATTLENET_CONNECTION_DEPRECATION:
+            return (0, i.jsx)(y, {
+                noticeType: F.kqX.BATTLENET_MIGRATION,
+                markAsDismissed: (e) => {
+                    (0, W.Dr)(l.M.BATTLENET_CONNECTION_DEPRECATION_DISABLE), u(e);
+                },
+                recurringDismiss: (e) => {
+                    u(e);
+                },
+                platformTypes: [F.fg2.BATTLENET],
+                platformIconOverride: o.A.get(F.fg2.BATTLENET),
+            });
+        case l.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES:
+            return (0, i.jsx)(D.Ay, {
+                noticeType: F.kqX.BATTLENET_LINKED_ROLE_DEPRECATION,
+                markAsDismissed: (e) => {
+                    (0, W.Dr)(l.M.BATTLENET_CONNECTION_DEPRECATION_LINKED_ROLES_DISABLE), u(e);
+                },
+                recurringDismiss: (e) => {
+                    u(e);
+                },
+                deprecationDate: K.NX,
+                platformType: F.fg2.BATTLENET,
             });
     }
 }

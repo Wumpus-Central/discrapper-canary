@@ -140,19 +140,19 @@
     cursor: pointer
 }
 
-.riotConnectionDeprecationNoticeCTAButton_b68a35 {
+.connectionDeprecationNoticeCTAButton_b68a35 {
     background: var(--background-mod-subtle);
     border: none;
     border-radius: var(--radius-sm)
 }
 
-.riotConnectionDeprecationRemindLaterButton_b68a35 {
+.connectionDeprecationRemindLaterButton_b68a35 {
     border: none;
     border-radius: var(--radius-sm);
     text-decoration: underline
 }
 
-.riotConnectionDeprecationNoticeIcon_b68a35 {
+.connectionDeprecationNoticeIcon_b68a35 {
     background: var(--background-mod-subtle);
     border-radius: var(--radius-xs);
     height: 16px;

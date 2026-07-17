@@ -1,13 +1,14 @@
 "use strict";
-n.d(t, { A: () => E });
-var i = n(735438),
+n.d(t, { A: () => A });
+var i = n(435558),
     r = n.n(i),
     a = n(374994),
     s = n(472636),
     l = n(998218),
     o = n(652215),
-    d = n(534952);
-let c = [
+    d = n(534952),
+    c = n(452832);
+let u = [
         {
             type: o.fg2.TWITCH,
             name: "Twitch",
@@ -57,6 +58,7 @@ let c = [
                 lightSVG: n(794368),
                 darkSVG: n(794368),
                 whiteSVG: n(254592),
+                blackSVG: n(794368),
             },
             enabled: !0,
             migrationData: {
@@ -135,6 +137,7 @@ let c = [
                 replacedBy: d.OW.RIOT_GAMES,
                 getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
+                helpCenterLinkIntlMessage: c.default.LFRm9Y,
             },
         },
         {
@@ -355,6 +358,7 @@ let c = [
                 replacedBy: d.OW.RIOT_GAMES,
                 getMigrationExperimentEnabled: (e) => (0, s.getIsRiotSocialSDKMigrationEnabled)({ location: e }),
                 useMigrationExperimentEnabled: (e) => (0, s.useIsRiotSocialSDKMigrationEnabled)({ location: e }),
+                helpCenterLinkIntlMessage: c.default.LFRm9Y,
             },
         },
         {
@@ -417,7 +421,7 @@ let c = [
                 darkSVG: n(627648),
                 whiteSVG: n(627648),
             },
-            enabled: !0,
+            enabled: !1,
             hasMetadata: !0,
             domains: ["tiktok.com"],
             getPlatformUserUrl: (e) => {
@@ -520,25 +524,25 @@ let c = [
             enabled: !1,
         },
     ],
-    u = r().keyBy(c, "type"),
-    _ = {};
-c.forEach((e) => {
+    _ = r().keyBy(u, "type"),
+    E = {};
+u.forEach((e) => {
     e.domains?.forEach((t) => {
-        _[t] = e;
+        E[t] = e;
     });
 });
-let E = {
-    get: (e) => u[e] ?? null,
+let A = {
+    get: (e) => _[e] ?? null,
     getByUrl(e) {
         let t = l.A.toURLSafe(e);
         if (null == t) return;
         let n = t.hostname;
-        return _[n.startsWith("www.") ? n.slice(4) : n];
+        return E[n.startsWith("www.") ? n.slice(4) : n];
     },
-    isSupported: (e) => Object.prototype.hasOwnProperty.call(u, e),
-    map: (e) => c.map(e),
+    isSupported: (e) => Object.prototype.hasOwnProperty.call(_, e),
+    map: (e) => u.map(e),
     filter(e) {
-        let t = c.filter(e);
+        let t = u.filter(e);
         return (
             t.sort((e, t) => {
                 let { name: n } = e,
@@ -548,5 +552,5 @@ let E = {
             t
         );
     },
-    find: (e) => c.find(e),
+    find: (e) => u.find(e),
 };
