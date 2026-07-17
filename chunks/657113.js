@@ -6,7 +6,7 @@ var s = n(627968),
     a = n(764336),
     u = n(79545),
     l = n(412703),
-    c = n(574677),
+    c = n(573526),
     C = n(590202),
     d = n(792620),
     E = n(814793),
@@ -46,7 +46,7 @@ let O = function (t) {
             N = f(e, o, a, _(n, e)),
             y = C === u.V3.QUEST_HOME_TILE_V2_FOOTER,
             L = y ? (0, T.Q_)(e) : (0, T.Oz)(e),
-            q = y
+            g = y
                 ? (0, r.C0)(e)
                 : (function (t, e) {
                       if ((0, d.K$)(t)) return I.intl.string(I.t["/cXIc6"]);
@@ -62,8 +62,8 @@ let O = function (t) {
                       return I.intl.string(I.t["9KoPyB"]);
                   })(e, O);
         return null == N
-            ? (0, s.jsx)(i.$, { size: l, variant: "secondary", disabled: !0, text: q, fullWidth: !0 })
-            : (0, s.jsx)(i.$, { size: l, variant: (0, u.wX)(C), onClick: N, text: q, icon: L, fullWidth: !0 });
+            ? (0, s.jsx)(i.$, { size: l, variant: "secondary", disabled: !0, text: g, fullWidth: !0 })
+            : (0, s.jsx)(i.$, { size: l, variant: (0, u.wX)(C), onClick: N, text: g, icon: L, fullWidth: !0 });
     },
     N = function (t) {
         let {
@@ -91,8 +91,8 @@ let O = function (t) {
     };
 var y = n(17928),
     L = n(859703),
-    q = n(630037);
-let g = function (t) {
+    g = n(630037);
+let q = function (t) {
     let {
             quest: e,
             analyticsCtxQuestContent: n,
@@ -109,7 +109,7 @@ let g = function (t) {
             [C],
         ),
         E = null != c && (0, u.P0)(c),
-        x = (0, q.D)({
+        x = (0, g.D)({
             quest: e,
             questContent: n,
             sourceQuestContent: o,
@@ -142,9 +142,8 @@ var m = n(64700),
     w = n(862482),
     k = n(663417),
     V = n(775602),
-    X = n(178540),
-    z = n(411060);
-function W(t) {
+    X = n(411060);
+function z(t) {
     let {
             quest: e,
             analyticsCtxQuestContent: n,
@@ -157,12 +156,11 @@ function W(t) {
         E = (0, j.wW)(),
         x = (0, y.bG)([V.Ay], () => V.Ay.useReducedMotion),
         T = (0, a.Xf)({ useReducedMotion: x }),
-        A = (0, X.O)((t) => t.setErrorHints),
-        [_, f] = m.useState(!1),
-        { startingConsoleQuest: O, startConsoleQuest: N } = (0, c.Wj)({
+        [A, _] = m.useState(!1),
+        { startingConsoleQuest: f, startConsoleQuest: O } = (0, c.Wj)({
             questId: e.id,
             beforeRequest: () => {
-                l ? T.startAnimation() : f(!0),
+                l ? T.startAnimation() : _(!0),
                     (0, v.E5)(v.kI.STEP_2_CLICKED_INTERNAL, "quest_primary_cta_enrolled_play_quest")
                         ? (0, S.r)({
                               type: P.F.CLICK_INTERNAL,
@@ -184,37 +182,38 @@ function W(t) {
                               sourceQuestContent: o,
                           });
             },
-            afterRequest: (t) => {
-                l ? T.stopAnimation() : f(!1), A(e.id, t);
+            afterRequest: () => {
+                l ? T.stopAnimation() : _(!1);
             },
         });
     return l
         ? (0, s.jsx)(w.$n, {
               "data-migration-pending": !0,
               color: w.XD.PRIMARY,
-              onClick: N,
-              disabled: O,
-              className: z.x,
-              children: (0, s.jsxs)("div", { className: z.t, children: [T?.render(), I.intl.string(I.t.nPThNb)] }),
+              onClick: O,
+              disabled: f,
+              className: X.x,
+              children: (0, s.jsxs)("div", { className: X.t, children: [T?.render(), I.intl.string(I.t.nPThNb)] }),
           })
         : (0, s.jsx)(i.$, {
               variant: "secondary",
-              onClick: N,
-              disabled: O,
-              loading: _,
+              onClick: O,
+              disabled: f,
+              loading: A,
               fullWidth: !0,
               text: I.intl.string(I.t.cdd1iy),
               icon: k.f,
               iconPosition: "start",
           });
 }
-var F = n(922016),
-    K = n(980707),
-    B = n(477782),
-    Y = n(834730),
-    G = n(820081),
-    H = n(900797),
+var W = n(922016),
+    F = n(980707),
+    K = n(477782),
+    B = n(834730),
+    Y = n(820081),
+    G = n(900797),
     $ = n(847374),
+    H = n(178540),
     J = n(988436),
     Z = n(909445),
     tt = n(661531),
@@ -244,19 +243,18 @@ function tu(t) {
         f = m.useContext(Z.J),
         [O, N] = (0, c.tZ)(e.id),
         [y, L] = m.useState(null),
-        [q, g] = m.useState(!1),
+        [g, q] = m.useState(!1),
         R = m.useRef(null),
         Q = (0, j.go)(),
-        S = (0, X.O)((t) => t.errorHintsByQuestId.get(e.id)),
-        P = m.useMemo(() => (null == y ? [] : (S ?? []).filter((t) => (0, U.$J)(t) === y)), [S, y]),
-        h = m.useCallback(
+        S = (0, H.O)((t) => t.errorHintsByQuestId.get(e.id)),
+        P = m.useCallback(
             (t) => {
                 if (O === A.fO.CONSOLE && y === t && _.has(t))
                     return S?.some((t) => (0, U.$J)(t) === y) ? "error" : "connected";
             },
             [O, y, S, _],
         ),
-        v = m.useCallback(
+        h = m.useCallback(
             (t) => {
                 if (t === A.fO.DESKTOP) {
                     L(null), N(A.fO.DESKTOP);
@@ -280,11 +278,11 @@ function tu(t) {
             },
             [_, N, e, a, d, E, l, Q],
         ),
-        D = m.useCallback(
+        v = m.useCallback(
             (t) => (t === A.fO.DESKTOP ? O === A.fO.DESKTOP : O === A.fO.CONSOLE && y === t && _.has(t)),
             [O, y, _],
         ),
-        p = [
+        D = [
             ...n.map((t) => ({
                 value: t,
                 get label() {
@@ -304,29 +302,29 @@ function tu(t) {
                 },
             },
         ];
-    return (0, s.jsx)(F.Y, {
+    return (0, s.jsx)(W.Y, {
         targetElementRef: R,
         position: "bottom",
         onRequestOpen: () => {
-            f?.onMenuOpen(), g(!0);
+            f?.onMenuOpen(), q(!0);
         },
         onRequestClose: () => {
-            f?.onMenuClose(), g(!1);
+            f?.onMenuClose(), q(!1);
         },
         renderPopout: (t) => {
             let { closePopout: n } = t;
             return (0, s.jsx)("div", {
                 style: { minWidth: R.current?.offsetWidth },
-                children: (0, s.jsxs)(K.W, {
+                children: (0, s.jsxs)(F.W, {
                     "data-menu-migrated": !0,
                     navId: `play-quest-platform-select-${e.id}`,
                     "aria-label": I.intl.string(I.t["TWSB/5"]),
                     onClose: n,
                     onSelect: void 0,
                     children: [
-                        (0, s.jsx)(B.rX, {
-                            children: p.map((t) => {
-                                let e = D(t.value),
+                        (0, s.jsx)(K.rX, {
+                            children: D.map((t) => {
+                                let e = v(t.value),
                                     n = (function (t, e) {
                                         if ("connected" === e)
                                             return { icon: te.Q, color: tt.A.colors.ICON_FEEDBACK_POSITIVE.css };
@@ -342,7 +340,7 @@ function tu(t) {
                                             default:
                                                 return (0, tr.xb)(t);
                                         }
-                                    })(t.value, h(t.value)),
+                                    })(t.value, P(t.value)),
                                     i = (function (t) {
                                         switch (t) {
                                             case A.fO.DESKTOP:
@@ -356,14 +354,14 @@ function tu(t) {
                                         }
                                     })(t.value);
                                 return (0, s.jsx)(
-                                    B.Dr,
+                                    K.Dr,
                                     {
                                         id: i,
-                                        void_label: (0, s.jsx)(Y.E, { variant: "text-md/normal", children: t.label }),
-                                        action: () => v(t.value),
+                                        void_label: (0, s.jsx)(B.E, { variant: "text-md/normal", children: t.label }),
+                                        action: () => h(t.value),
                                         leadingAccessory: { type: "icon", icon: n.icon, color: n.color },
                                         trailingIndicator: e
-                                            ? { type: "icon", icon: G.B, size: "refresh_sm", color: "currentColor" }
+                                            ? { type: "icon", icon: Y.B, size: "refresh_sm", color: "currentColor" }
                                             : void 0,
                                     },
                                     i,
@@ -373,15 +371,15 @@ function tu(t) {
                         O === A.fO.CONSOLE &&
                             null != y &&
                             _.has(y) &&
-                            (0, s.jsx)(B.rX, {
-                                children: (0, s.jsx)(B.Dr, {
+                            (0, s.jsx)(K.rX, {
+                                children: (0, s.jsx)(K.Dr, {
                                     id: "play-quest-platform-select-check-connection",
-                                    void_label: (0, s.jsx)(Y.E, {
+                                    void_label: (0, s.jsx)(B.E, {
                                         variant: "text-md/normal",
                                         children: I.intl.string(I.t.cdd1iy),
                                     }),
                                     action: () => {
-                                        (0, J.i)({ quest: e, errorHints: P, sourceQuestContent: l, refreshOnOpen: !0 });
+                                        (0, J.i)({ quest: e, sourceQuestContent: l, refreshOnOpen: !0 });
                                     },
                                     leadingAccessory: { type: "icon", icon: k.f, color: "currentColor" },
                                 }),
@@ -398,7 +396,7 @@ function tu(t) {
                 fullWidth: !0,
                 variant: (0, u.wX)(o, "primary"),
                 text: I.intl.string(I.t.U7cCLU),
-                icon: q ? H.t : $.a,
+                icon: g ? G.t : $.a,
                 iconPosition: "end",
             }),
     });
@@ -446,7 +444,7 @@ function tl(t) {
                 text: I.intl.string(I.t.Cfye4v),
                 fullWidth: !0,
             })
-          : (0, s.jsx)(W, {
+          : (0, s.jsx)(z, {
                 quest: e,
                 analyticsCtxQuestContent: o,
                 analyticsCtxSourceQuestContent: r,
@@ -731,14 +729,14 @@ let tf = function (t) {
                 analyticsCtxQuestContent: f,
                 analyticsCtxSourceQuestContent: O,
                 analyticsCtxQuestContentPosition: N,
-                analyticsCtxQuestContentRowIndex: q,
+                analyticsCtxQuestContentRowIndex: g,
             } = t,
-            g = {
+            q = {
                 questContent: f,
                 questContentCTA: t_(o),
                 sourceQuestContent: O,
                 questContentPosition: N,
-                questContentRowIndex: q,
+                questContentRowIndex: g,
             },
             m = n.id,
             R = C === u.V3.QUEST_HOME_TILE_V2_FOOTER,
@@ -793,21 +791,21 @@ let tf = function (t) {
                 o === l.n.WATCH_VIDEO
                     ? async () => {
                           await (0, T.e0)(n, {
-                              questContent: g.questContent,
-                              questContentCTA: g.questContentCTA,
-                              sourceQuestContent: g.sourceQuestContent,
+                              questContent: q.questContent,
+                              questContentCTA: q.questContentCTA,
+                              sourceQuestContent: q.sourceQuestContent,
                               sourceQuestContentCTA: t_(o),
-                              questContentPosition: g.questContentPosition,
-                              questContentRowIndex: g.questContentRowIndex,
+                              questContentPosition: q.questContentPosition,
+                              questContentRowIndex: q.questContentRowIndex,
                           });
                       }
                     : async () => {
                           await (0, tI.Oy)(n.id, {
-                              questContent: g.questContent,
-                              questContentCTA: g.questContentCTA,
-                              sourceQuestContent: g.sourceQuestContent,
-                              questContentPosition: g.questContentPosition,
-                              questContentRowIndex: g.questContentRowIndex,
+                              questContent: q.questContent,
+                              questContentCTA: q.questContentCTA,
+                              sourceQuestContent: q.sourceQuestContent,
+                              questContentPosition: q.questContentPosition,
+                              questContentRowIndex: q.questContentRowIndex,
                           }),
                               e?.();
                       });
@@ -877,7 +875,7 @@ let tf = function (t) {
                 });
             case u.UA.EXPIRED_CLAIMABLE:
             case u.UA.COMPLETED:
-                return (0, s.jsx)(g, {
+                return (0, s.jsx)(q, {
                     quest: e,
                     size: C,
                     surface: n,

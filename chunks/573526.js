@@ -191,7 +191,7 @@ var P = n(24001),
             verticalScrollEnabled: !1,
             scrollAffordanceVariant: "none",
             autoScrollLeadMs: 3e3,
-            autoScrollEndCardMs: 5e3,
+            autoScrollEndCardMs: 8e3,
             peekFraction: 0,
             ctaTimerMilliSeconds: 0,
         },
@@ -201,7 +201,7 @@ var P = n(24001),
                 verticalScrollEnabled: !1,
                 scrollAffordanceVariant: "none",
                 autoScrollLeadMs: 3e3,
-                autoScrollEndCardMs: 5e3,
+                autoScrollEndCardMs: 8e3,
                 peekFraction: 0,
                 ctaTimerMilliSeconds: 0,
             },
@@ -210,7 +210,7 @@ var P = n(24001),
                 verticalScrollEnabled: !0,
                 scrollAffordanceVariant: "none",
                 autoScrollLeadMs: 3e3,
-                autoScrollEndCardMs: 5e3,
+                autoScrollEndCardMs: 8e3,
                 peekFraction: 0,
                 ctaTimerMilliSeconds: 0,
             },
@@ -219,7 +219,7 @@ var P = n(24001),
                 verticalScrollEnabled: !0,
                 scrollAffordanceVariant: "indicator",
                 autoScrollLeadMs: 3e3,
-                autoScrollEndCardMs: 5e3,
+                autoScrollEndCardMs: 8e3,
                 peekFraction: 0,
                 ctaTimerMilliSeconds: 0,
             },
@@ -228,7 +228,7 @@ var P = n(24001),
                 verticalScrollEnabled: !0,
                 scrollAffordanceVariant: "auto",
                 autoScrollLeadMs: 3e3,
-                autoScrollEndCardMs: 5e3,
+                autoScrollEndCardMs: 8e3,
                 peekFraction: 0,
                 ctaTimerMilliSeconds: 0,
             },
@@ -237,7 +237,7 @@ var P = n(24001),
                 verticalScrollEnabled: !0,
                 scrollAffordanceVariant: "peek",
                 autoScrollLeadMs: 3e3,
-                autoScrollEndCardMs: 5e3,
+                autoScrollEndCardMs: 8e3,
                 peekFraction: 0.12,
                 ctaTimerMilliSeconds: 0,
             },
@@ -675,27 +675,26 @@ function eb() {
 }
 function eM(e) {
     let { questId: t, preview: n, beforeRequest: i, afterRequest: r } = e,
-        [a, l] = s.useState([]),
-        [o, d] = s.useState(!1),
-        c = (0, A.bG)([N.A], () => N.A.getAccounts()),
-        _ = (0, G.O)((e) => e.clearErrorHintsByType);
+        [a, l] = s.useState(!1),
+        o = (0, A.bG)([N.A], () => N.A.getAccounts()),
+        d = (0, G.O)((e) => e.clearErrorHintsByType),
+        c = s.useCallback((e) => G.O.getState().setErrorHints(t, e), [t]);
     return (
         s.useEffect(() => {
-            l((e) => e.filter((e) => e.type !== u._.EXPIRED_CREDENTIAL)), _(t, u._.EXPIRED_CREDENTIAL);
-        }, [c, _, t]),
+            d(t, u._.EXPIRED_CREDENTIAL);
+        }, [o, d, t]),
         {
             startConsoleQuest: s.useCallback(async () => {
-                if (o) return;
-                i?.(), d(!0);
+                if (a) return;
+                i?.(), l(!0);
                 let e = null;
                 try {
-                    (e = await (0, x.vD)(t, n)), l(e.errorHints);
+                    (e = await (0, x.vD)(t, n)), c(e.errorHints);
                 } finally {
-                    d(!1), r?.(e?.errorHints ?? []);
+                    l(!1), r?.();
                 }
-            }, [o, i, r, n, t]),
-            startingConsoleQuest: o,
-            errorHints: a,
+            }, [a, i, r, n, t, c]),
+            startingConsoleQuest: a,
         }
     );
 }

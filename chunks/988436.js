@@ -20,10 +20,10 @@ var s = n(627968),
     N = n(274670),
     y = n(144779),
     L = n(363195),
-    q = n(178540),
-    g = n(24001),
+    g = n(178540),
+    q = n(24001),
     m = n(104886),
-    R = n(574677),
+    R = n(573526),
     Q = n(46948),
     S = n(18437),
     P = n(590202),
@@ -36,70 +36,69 @@ var s = n(627968),
     b = n(375708),
     M = n(212885);
 function w(t) {
-    let { quest: e, errorHints: n, transitionState: o, onClose: A, sourceQuestContent: I, refreshOnOpen: _ = !1 } = t,
-        [f, j] = (0, i.useState)(n),
-        w = (0, q.O)((t) => t.setErrorHints),
-        V = (0, i.useRef)(!1),
-        X = (0, R.UX)(),
-        z = (0, S.Ut)(),
-        W = (0, h.vU)()?.getId(),
-        F = (0, l.bG)([O.Ay], () => O.Ay.useReducedMotion),
-        K = (0, p.Xf)({ useReducedMotion: F, className: M.Zf }),
-        B = f.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
-        Y = (0, D.YL)(e),
-        G = (0, l.bG)([L.A], () => L.A.getState().theme),
-        H = (0, c.M)(G) ? U.NJ.DARK : U.NJ.LIGHT,
-        { startConsoleQuest: $, startingConsoleQuest: J } = (0, R.Wj)({
+    let { quest: e, transitionState: n, onClose: o, sourceQuestContent: A, refreshOnOpen: I = !1 } = t,
+        _ = (0, g.O)((t) => t.getErrorHints(e.id)),
+        f = (0, i.useRef)(!1),
+        j = (0, R.UX)(),
+        w = (0, S.Ut)(),
+        V = (0, h.vU)()?.getId(),
+        X = (0, l.bG)([O.Ay], () => O.Ay.useReducedMotion),
+        z = (0, p.Xf)({ useReducedMotion: X, className: M.Zf }),
+        W = _.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
+        F = (0, D.YL)(e),
+        K = (0, l.bG)([L.A], () => L.A.getState().theme),
+        B = (0, c.M)(K) ? U.NJ.DARK : U.NJ.LIGHT,
+        { startConsoleQuest: Y, startingConsoleQuest: G } = (0, R.Wj)({
             questId: e.id,
             beforeRequest: () => {
-                K.startAnimation(),
+                z.startAnimation(),
                     (0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "quest_console_connection_errors_modal")
                         ? (0, N.r)({
                               type: y.F.CLICK_INTERNAL,
                               adCreativeType: a.p.QUEST,
                               adCreativeId: e.id,
                               questContentCTA: P.Cy.DEFIBRILLATOR,
-                              surfaceId: g.uF.CONNECTIONS_MODAL,
-                              sourceQuestContent: I,
-                              impressionId: W,
+                              surfaceId: q.uF.CONNECTIONS_MODAL,
+                              sourceQuestContent: A,
+                              impressionId: V,
                           })
-                        : z({
+                        : w({
                               questId: e.id,
-                              questContent: g.uF.CONNECTIONS_MODAL,
+                              questContent: q.uF.CONNECTIONS_MODAL,
                               questContentCTA: P.Cy.DEFIBRILLATOR,
-                              sourceQuestContent: I,
+                              sourceQuestContent: A,
                           });
             },
-            afterRequest: (t) => {
-                K.stopAnimation(), j(t), w(e.id, t);
+            afterRequest: () => {
+                z.stopAnimation();
             },
         });
     return (
         (0, i.useEffect)(() => {
-            _ && !V.current && ($(), (V.current = !0));
-        }, [_, $]),
+            I && !f.current && (Y(), (f.current = !0));
+        }, [I, Y]),
         (0, s.jsx)(u.Modal, {
-            transitionState: o,
-            onClose: A,
+            transitionState: n,
+            onClose: o,
             title: b.intl.string(b.t.W5lmKt),
-            subtitle: X.message,
+            subtitle: j.message,
             actions: [
                 {
                     variant: "secondary",
                     onClick: () =>
-                        void (A(),
+                        void (o(),
                         (0, v.b6)(
                             { quest: e },
                             {
-                                content: g.uF.CONNECTIONS_MODAL,
+                                content: q.uF.CONNECTIONS_MODAL,
                                 ctaContent: P.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                impressionId: W,
-                                sourceQuestContent: I,
+                                impressionId: V,
+                                sourceQuestContent: A,
                             },
                         )),
                     text: b.intl.string(b.t["qiS+xj"]),
                 },
-                { variant: "primary", onClick: () => A(), text: b.intl.string(b.t.cpT0Cq) },
+                { variant: "primary", onClick: () => o(), text: b.intl.string(b.t.cpT0Cq) },
             ],
             children: (0, s.jsxs)(s.Fragment, {
                 children: [
@@ -112,10 +111,10 @@ function w(t) {
                                 children: b.intl.string(b.t["+/hZM/"]),
                             }),
                             (0, s.jsxs)(E.D, {
-                                className: r()(M.Tm, { [M.r9]: J }),
-                                onClick: $,
+                                className: r()(M.Tm, { [M.r9]: G }),
+                                onClick: Y,
                                 children: [
-                                    K.render(),
+                                    z.render(),
                                     (0, s.jsx)(d.E, {
                                         variant: "text-sm/medium",
                                         color: "currentColor",
@@ -133,8 +132,8 @@ function w(t) {
                             (0, s.jsx)(k, {
                                 icon: (0, s.jsx)(T._, { size: "sm" }),
                                 text: b.intl.string(b.t.XF4wuA),
-                                errors: Y ? void 0 : B.map((t) => t.message),
-                                gameTile: Y
+                                errors: F ? void 0 : W.map((t) => t.message),
+                                gameTile: F
                                     ? (0, s.jsx)(C.m, {
                                           "aria-label": e.config.messages.gameTitle,
                                           __unsupportedReactNodeAsText: (0, s.jsxs)("div", {
@@ -154,7 +153,7 @@ function w(t) {
                                           children: (0, s.jsx)("img", {
                                               className: M.rC,
                                               alt: e.config.messages.gameTitle,
-                                              src: (0, Q.tW)(e, Q.fY.GAME_TILE, H).url,
+                                              src: (0, Q.tW)(e, Q.fY.GAME_TILE, B).url,
                                           }),
                                       })
                                     : null,
@@ -222,7 +221,7 @@ function V(t) {
             return (0, s.jsx)(j.R, {
                 overrideVisibility: !0,
                 questOrQuests: t.quest,
-                questContent: g.uF.CONNECTIONS_MODAL,
+                questContent: q.uF.CONNECTIONS_MODAL,
                 sourceQuestContent: t.sourceQuestContent,
                 children: () => (0, s.jsx)(e, { ...n, ...t }),
             });
