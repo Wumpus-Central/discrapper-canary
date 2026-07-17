@@ -5487,25 +5487,6 @@
     }
   },
   {
-    "name": "2026-06-wishlist-pdp-gift-button-priority",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "prioritizeGifting": true,
-        "removeOrbsClaim": false
-      },
-      "2": {
-        "prioritizeGifting": true,
-        "removeOrbsClaim": true
-      }
-    }
-  },
-  {
     "name": "2026-06-wmf-cpu-encode-intel",
     "kind": "user",
     "defaultConfig": {
