@@ -1,20 +1,20 @@
-E.d(e, { Gf: () => o, Yn: () => S, d: () => c, hH: () => T, k9: () => U });
+E.d(e, { Gf: () => o, Yn: () => s, d: () => c, hH: () => S, k9: () => U });
 var n = E(636537),
     _ = E(228366),
     i = E(59318),
-    A = E(495544),
+    A = E(280450),
     l = E(207913),
     a = E(393033),
     r = E(239093),
-    s = E(652215);
-async function S() {
+    T = E(652215);
+async function s() {
     _.h.dispatch({ type: "SAFETY_HUB_FETCH_START" });
     let t = A.default.getSuspendedUserToken(),
-        e = null != t ? s.Rsh.SAFETY_HUB_SUSPENDED : s.Rsh.SAFETY_HUB,
+        e = null != t ? T.Rsh.SAFETY_HUB_SUSPENDED : T.Rsh.SAFETY_HUB,
         E =
             null != t
-                ? n.Bo.post({ url: e, body: { token: t }, rejectWithError: !1 })
-                : n.Bo.get({ url: e, rejectWithError: !1 });
+                ? n.Bo.post({ url: e, body: { token: t }, rejectWithError: (0, n.fT)() })
+                : n.Bo.get({ url: e, rejectWithError: (0, n.fT)() });
     await E.then((t) => {
         let { body: e } = t,
             {
@@ -26,10 +26,10 @@ async function S() {
                 is_appeal_eligible: a,
                 appeal_eligibility: r,
             } = e,
-            s = E.map((t) => (u(t), t));
+            T = E.map((t) => (u(t), t));
         _.h.dispatch({
             type: "SAFETY_HUB_FETCH_SUCCESS",
-            classifications: s.concat(n ?? []),
+            classifications: T.concat(n ?? []),
             accountStanding: i,
             isDsaEligible: A,
             username: l,
@@ -40,14 +40,14 @@ async function S() {
         _.h.dispatch({ type: "SAFETY_HUB_FETCH_FAILURE", error: t?.body?.message ?? "Unknown error" });
     });
 }
-async function T(t) {
+async function S(t) {
     _.h.dispatch({ type: "SAFETY_HUB_FETCH_CLASSIFICATION_START", classificationId: t });
     let e = A.default.getSuspendedUserToken(),
-        E = null != e ? s.Rsh.SAFETY_HUB_SUSPENDED : s.Rsh.SAFETY_HUB,
+        E = null != e ? T.Rsh.SAFETY_HUB_SUSPENDED : T.Rsh.SAFETY_HUB,
         i =
             null != e
-                ? n.Bo.post({ url: E, body: { token: e }, rejectWithError: !1 })
-                : n.Bo.get({ url: E, rejectWithError: !1 });
+                ? n.Bo.post({ url: E, body: { token: e }, rejectWithError: (0, n.fT)() })
+                : n.Bo.get({ url: E, rejectWithError: (0, n.fT)() });
     await i
         .then((e) => {
             let { body: E } = e,
@@ -89,11 +89,11 @@ function u(t) {
 }
 async function o(t, e, E) {
     let i = A.default.getSuspendedUserToken(),
-        l = null != i ? s.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(t) : s.Rsh.SAFETY_HUB_REQUEST_REVIEW(t),
+        l = null != i ? T.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_USER_REVIEW(t) : T.Rsh.SAFETY_HUB_REQUEST_REVIEW(t),
         a =
             null != i
-                ? n.Bo.put({ url: l, body: { signal: e, user_input: E, token: i }, rejectWithError: !1 })
-                : n.Bo.put({ url: l, body: { signal: e, user_input: E }, rejectWithError: !1 });
+                ? n.Bo.put({ url: l, body: { signal: e, user_input: E, token: i }, rejectWithError: (0, n.fT)() })
+                : n.Bo.put({ url: l, body: { signal: e, user_input: E }, rejectWithError: (0, n.fT)() });
     _.h.dispatch({ type: "SAFETY_HUB_REQUEST_REVIEW_START" }),
         await a
             .then(() => {
@@ -112,8 +112,8 @@ async function o(t, e, E) {
 async function U(t) {
     _.h.dispatch({ type: "SAFETY_HUB_REQUEST_AUTOMATED_UNDERAGE_APPEAL_START" });
     let e = A.default.getSuspendedUserToken(),
-        E = s.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
-        i = n.Bo.post({ url: E, body: { token: e, from_classification_id: t }, rejectWithError: !1 });
+        E = T.Rsh.SAFETY_HUB_REQUEST_SUSPENDED_AGE_VERIFICATION,
+        i = n.Bo.post({ url: E, body: { token: e, from_classification_id: t }, rejectWithError: (0, n.fT)() });
     await i
         .then((t) => {
             let { body: e } = t,
@@ -135,8 +135,8 @@ async function c() {
     _.h.dispatch({ type: "SAFETY_HUB_CHECK_AUTOMATED_UNDERAGE_APPEAL_START" });
     let t = A.default.getSuspendedUserToken(),
         e = l.A.getAgeCheckAttempts(),
-        E = s.Rsh.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION,
-        i = n.Bo.post({ url: E, body: { token: t }, rejectWithError: !1 });
+        E = T.Rsh.SAFETY_HUB_CHECK_SUSPENDED_AGE_VERIFICATION,
+        i = n.Bo.post({ url: E, body: { token: t }, rejectWithError: (0, n.fT)() });
     await i
         .then((t) => {
             let { body: E } = t,

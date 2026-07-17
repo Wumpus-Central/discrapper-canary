@@ -1,33 +1,33 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(439372),
     r = n(952818),
-    s = n(760751),
-    a = n(38405),
-    o = n(636537),
-    l = n(913122),
-    u = n(652215);
+    a = n(760751),
+    s = n(38405),
+    l = n(636537),
+    o = n(913122),
+    d = n(652215);
 async function c(e, t) {
     try {
-        await o.Bo.patch({ url: u.Rsh.MY_CONTENT_INVENTORY_APPLICATION(e), body: t, rejectWithError: !1 });
+        await l.Bo.patch({ url: d.Rsh.MY_CONTENT_INVENTORY_APPLICATION(e), body: t, rejectWithError: (0, l.fT)() });
     } catch (e) {
-        throw new l.LG(e);
+        throw new o.LG(e);
     }
 }
-async function d(e, t) {
+async function u(e, t) {
     try {
         await c(e, { is_sharing: t });
     } catch (e) {
-        a.A.captureException(e);
+        s.A.captureException(e);
     }
 }
 function _(e) {
     let { game: t } = e,
         n = r.Ay.isDetectionEnabled(t),
-        i = t.id ?? s.A.findGame(t)?.id;
-    null != i && d(i, n);
+        i = t.id ?? a.A.findGame(t)?.id;
+    null != i && u(i, n);
 }
-class h extends i.A {
+class E extends i.A {
     actions = { RUNNING_GAME_TOGGLE_DETECTION: _, RUNNING_GAME_DELETE_ENTRY: _ };
 }
-let f = new h();
+let A = new E();

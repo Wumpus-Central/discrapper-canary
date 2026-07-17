@@ -25,7 +25,7 @@ async function E() {
         url: s.Rsh.GUILD_DISCOVERY_CATEGORIES,
         query: { locale: t, primary_only: !1 },
         oldFormErrors: !0,
-        rejectWithError: !1,
+        rejectWithError: (0, i.fT)(),
     });
     e.h.dispatch({ type: "GUILD_DISCOVERY_CATEGORY_FETCH_SUCCESS", categories: _.body, locale: t });
 }
@@ -130,7 +130,7 @@ async function y(t) {
                     about: A,
                 },
                 oldFormErrors: !0,
-                rejectWithError: !1,
+                rejectWithError: (0, i.fT)(),
             })
         ).body;
         e.h.dispatch({
@@ -154,7 +154,7 @@ async function y(t) {
     }
 }
 function l(t, _) {
-    i.Bo.put({ url: s.Rsh.GUILD_DISCOVERY_UPDATE_CATEGORY(t, _), oldFormErrors: !0, rejectWithError: !1 })
+    i.Bo.put({ url: s.Rsh.GUILD_DISCOVERY_UPDATE_CATEGORY(t, _), oldFormErrors: !0, rejectWithError: (0, i.fT)() })
         .then(() => {
             e.h.dispatch({ type: "GUILD_DISCOVERY_CATEGORY_ADD", guildId: t, categoryId: _ });
         })
@@ -163,7 +163,7 @@ function l(t, _) {
         });
 }
 function R(t, _) {
-    i.Bo.del({ url: s.Rsh.GUILD_DISCOVERY_UPDATE_CATEGORY(t, _), oldFormErrors: !0, rejectWithError: !1 })
+    i.Bo.del({ url: s.Rsh.GUILD_DISCOVERY_UPDATE_CATEGORY(t, _), oldFormErrors: !0, rejectWithError: (0, i.fT)() })
         .then(() => {
             e.h.dispatch({ type: "GUILD_DISCOVERY_CATEGORY_DELETE", guildId: t, categoryId: _ });
         })

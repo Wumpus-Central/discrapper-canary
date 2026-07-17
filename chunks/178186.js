@@ -12,8 +12,12 @@ function p() {
     n.h.dispatch({ type: "VIBING_WUMPUS_PAUSE_MUSIC" });
 }
 function s(t) {
-    return i.Bo.del({ url: c.Rsh.DELETE_SAFETY_WARNINGS(t), rejectWithError: !1 });
+    return i.Bo.del({ url: c.Rsh.DELETE_SAFETY_WARNINGS(t), rejectWithError: (0, i.fT)() });
 }
 function o(t, r) {
-    return i.Bo.post({ url: c.Rsh.ADD_SAFETY_WARNING(t), body: { safety_warning_type: r }, rejectWithError: !1 });
+    return i.Bo.post({
+        url: c.Rsh.ADD_SAFETY_WARNING(t),
+        body: { safety_warning_type: r },
+        rejectWithError: (0, i.fT)(),
+    });
 }

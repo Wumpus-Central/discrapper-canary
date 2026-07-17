@@ -628,7 +628,7 @@
 .treatmentAContentColumn__101ad .treatmentHeading__101ad,
 .treatmentCContentColumn__101ad .treatmentHeading__101ad,
 .treatmentLeftColumn__101ad .treatmentHeading__101ad {
-    font-size: 2rem;
+    font-size: 32px;
     font-weight: 900;
     letter-spacing: normal;
     line-height: 100%
@@ -784,13 +784,13 @@
     }
 
     .treatmentBContentColumn__101ad .treatmentHeadingB__101ad {
-        font-size: 2.625rem
+        font-size: 42px
     }
 }
 
 @container premium-marketing-page-container (max-width: 960px) {
     .treatmentBContentColumn__101ad .treatmentHeadingB__101ad {
-        font-size: 2.25rem
+        font-size: 36px
     }
 }
 

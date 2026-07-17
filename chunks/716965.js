@@ -11,7 +11,7 @@ function d(e) {
         url: o.Rsh.OAUTH2_WHITELIST_ACCEPT,
         query: { token: e },
         oldFormErrors: !0,
-        rejectWithError: !1,
+        rejectWithError: (0, r.fT)(),
     });
 }
 async function c(e) {
@@ -64,7 +64,7 @@ async function c(e) {
                     }),
             },
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, r.fT)(),
         })
     ).body;
 }
@@ -100,7 +100,7 @@ async function u(e) {
             signal: E,
             retries: 3,
             oldFormErrors: !0,
-            rejectWithError: !1,
+            rejectWithError: (0, r.fT)(),
         })
     ).body;
 }
@@ -109,7 +109,7 @@ async function _(e) {
         url: o.Rsh.OAUTH2_AUTHORIZE_WEBHOOK_CHANNELS,
         query: { guild_id: e },
         oldFormErrors: !0,
-        rejectWithError: !1,
+        rejectWithError: (0, r.fT)(),
     });
     return t;
 }
@@ -117,15 +117,19 @@ function E(e, t) {
     a.A.logout(t, (0, i.T2)(e.pathname + e.search, !1));
 }
 async function A(e) {
-    return await r.Bo.post({ url: o.Rsh.OAUTH2_DEVICE_VERIFY, body: { user_code: e }, rejectWithError: !1 });
+    return await r.Bo.post({ url: o.Rsh.OAUTH2_DEVICE_VERIFY, body: { user_code: e }, rejectWithError: (0, r.fT)() });
 }
 async function h(e, t) {
-    return await r.Bo.post({ url: o.Rsh.OAUTH2_DEVICE_FINISH, body: { user_code: e, result: t }, rejectWithError: !1 });
+    return await r.Bo.post({
+        url: o.Rsh.OAUTH2_DEVICE_FINISH,
+        body: { user_code: e, result: t },
+        rejectWithError: (0, r.fT)(),
+    });
 }
 async function I(e, t, n) {
     return await r.Bo.post({
         url: o.Rsh.OAUTH2_DEVICE_FINISH,
         body: { user_code: e, result: "two_way_link_error", error_code: t, error_source: n },
-        rejectWithError: !1,
+        rejectWithError: (0, r.fT)(),
     });
 }
