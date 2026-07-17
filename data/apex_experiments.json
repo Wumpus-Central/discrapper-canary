@@ -1221,22 +1221,6 @@
     }
   },
   {
-    "name": "2026-02-boost-to-unlock-coachmark",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-02-boosting-refresh-modals",
     "kind": "user",
     "defaultConfig": {
@@ -1941,6 +1925,22 @@
         "variant": 0
       },
       "1": true
+    }
+  },
+  {
+    "name": "2026-03-boost-to-unlock-mobile-coachmark",
+    "kind": "user",
+    "defaultConfig": {
+      "showCoachmark": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showCoachmark": true
+      }
     }
   },
   {
