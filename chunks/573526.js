@@ -80,12 +80,12 @@ var T = n(27620),
 n(323874), n(14289), n(35956), n(636537), n(228366), n(181658);
 var M = n(46948);
 n(107195), n(881615), n(404851), n(544180), n(265704);
-var P = n(24001),
-    U = n(710969),
-    w = n(652215),
-    G = n(178540),
-    x = n(340124),
-    k = n(859703),
+var P = n(710969),
+    U = n(652215),
+    w = n(178540),
+    G = n(340124),
+    x = n(859703),
+    k = n(24001),
     F = n(192444),
     V = n(302654),
     B = n(945810);
@@ -276,11 +276,11 @@ function en() {
                 ? arguments[0]
                 : { fetchPolicy: "cache-only", callerSource: "unknown" },
         [t, n] = s.useState(!1),
-        i = (0, A.yK)([k.A], () => [...k.A.quests.values()]),
-        r = (0, A.yK)([k.A], () => [...k.A.excludedQuests.values()]),
-        { isFetchingCurrentQuests: a, lastFetchedCurrentQuests: l } = (0, A.cf)([k.A], () => ({
-            isFetchingCurrentQuests: k.A.isFetchingCurrentQuests,
-            lastFetchedCurrentQuests: k.A.lastFetchedCurrentQuests,
+        i = (0, A.yK)([x.A], () => [...x.A.quests.values()]),
+        r = (0, A.yK)([x.A], () => [...x.A.excludedQuests.values()]),
+        { isFetchingCurrentQuests: a, lastFetchedCurrentQuests: l } = (0, A.cf)([x.A], () => ({
+            isFetchingCurrentQuests: x.A.isFetchingCurrentQuests,
+            lastFetchedCurrentQuests: x.A.lastFetchedCurrentQuests,
         })),
         o = (0, H.s)();
     return (
@@ -300,10 +300,10 @@ function en() {
                     return;
             }
             if (i && o && !t && !a) {
-                if ((n(!0), (0, x.N1)(), (0, v.isMac)() && "focused" !== f.A.getState())) return;
+                if ((n(!0), (0, G.N1)(), (0, v.isMac)() && "focused" !== f.A.getState())) return;
                 let { enableNewRequestBehavior: t } = V.A.getConfig({ location: "QuestHookUseQuests" });
                 if (t) return;
-                (0, x.r8)(P.p9.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
+                (0, G.r8)(k.p9.DESKTOP_ACCOUNT_PANEL_AREA, `use_quests_${e.callerSource}`);
             }
         }, [e.fetchPolicy, o, t, a, l, e.callerSource]),
         { quests: i, excludedQuests: r, isFetchingCurrentQuests: a, hasFetched: t }
@@ -314,7 +314,7 @@ function ei(e, t, n) {
         r = t.id === J.aJ,
         a = i && e.userStatus?.completedAt == null;
     if (a !== (r && t.userStatus?.completedAt == null)) return a ? -1 : 1;
-    let s = !(0, U.Ic)(e),
+    let s = !(0, P.Ic)(e),
         l = e.userStatus?.claimedAt != null,
         o = t.userStatus?.claimedAt != null,
         d = e.userStatus?.enrolledAt != null,
@@ -430,8 +430,8 @@ function eu(e) {
                 }
             })(r)),
             function (e, n) {
-                let r = !(0, U.Ic)(e);
-                return !(0, U.Ic)(n) !== r ? (r ? -1 : 1) : t(e, n, i);
+                let r = !(0, P.Ic)(e);
+                return !(0, P.Ic)(n) !== r ? (r ? -1 : 1) : t(e, n, i);
             });
     return s.sort(o);
 }
@@ -466,7 +466,7 @@ function eh(e) {
         f =
             ((t = (function () {
                 let e = (0, F.Qj)(),
-                    t = (0, A.bG)([k.A], () => (e ? null : k.A.getQuestHomeHero()), [e]),
+                    t = (0, A.bG)([x.A], () => (e ? null : x.A.getQuestHomeHero()), [e]),
                     { isShelfEnabled: n } = e1(t);
                 return s.useMemo(() => ({ questHomeHero: t, isQuestHomeHeroShelfEnabled: n }), [t, n]);
             })()),
@@ -524,18 +524,18 @@ function eh(e) {
         T = [];
     for (let t of "all" === e ? f : p) {
         let n = I.get(t),
-            i = null != n && "all" === e && c.removeExpiredQuests && (0, U.Ic)(n) && !(0, U.GR)(n.userStatus);
+            i = null != n && "all" === e && c.removeExpiredQuests && (0, P.Ic)(n) && !(0, P.GR)(n.userStatus);
         null == n || i || T.push(n);
     }
     return { quests: T, excludedQuests: _, isFetchingCurrentQuests: E, hasFetched: h };
 }
 function eI() {
     let e = s.useRef(!1),
-        t = (0, A.yK)([k.A], () => Array.from(k.A.claimedQuests.values())),
-        n = (0, A.bG)([k.A], () => k.A.isFetchingClaimedQuests);
+        t = (0, A.yK)([x.A], () => Array.from(x.A.claimedQuests.values())),
+        n = (0, A.bG)([x.A], () => x.A.isFetchingClaimedQuests);
     return (
         s.useEffect(() => {
-            n || e.current || ((e.current = !0), (0, x.HA)());
+            n || e.current || ((e.current = !0), (0, G.HA)());
         }, [n]),
         { claimedQuests: t, isFetchingClaimedQuests: n }
     );
@@ -548,19 +548,19 @@ function ef(e, t) {
     return !n && i && r && a;
 }
 function ep(e) {
-    return (0, A.bG)([k.A], () => {
-        let t = k.A.getQuest(e);
+    return (0, A.bG)([x.A], () => {
+        let t = x.A.getQuest(e);
         return null == t ? null : (0, q.b)(t.config);
     }, [e]);
 }
 function eT(e) {
-    return (0, A.bG)([k.A], () => null != e && k.A.isQuestExpired(e.id), [e]);
+    return (0, A.bG)([x.A], () => null != e && x.A.isQuestExpired(e.id), [e]);
 }
 function em(e, t, n) {
     let i = (0, A.bG)([S.A], () => S.A.getChannel(t?.channelId) ?? null),
-        r = (0, A.bG)([k.A], () => null != k.A.questEnrollmentBlockedUntil, []),
+        r = (0, A.bG)([x.A], () => null != x.A.questEnrollmentBlockedUntil, []),
         a = (0, A.bG)([C.default], () => C.default.getCurrentUser()?.id),
-        s = (0, A.bG)([k.A], () => null != e && k.A.isQuestExpired(e.id), [e]);
+        s = (0, A.bG)([x.A], () => null != e && x.A.isQuestExpired(e.id), [e]);
     if (null == e || r || s || a === n) return !1;
     let l = e.userStatus?.claimedAt != null,
         o = (0, X.Ll)(t, i);
@@ -576,12 +576,12 @@ function eS(e) {
         a = (0, W.wW)();
     return s.useCallback(() => {
         t.id === J.Fw
-            ? window.open(y.A.getArticleURL(w.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
+            ? window.open(y.A.getArticleURL(U.MVz.VIRTUAL_CURRENCY_LEARN_MORE))
             : (0, z.pu)(t, { content: n, ctaContent: i, impressionId: a(), sourceQuestContent: r });
     }, [t, n, i, a, r]);
 }
 function eN(e) {
-    return (0, A.bG)([k.A], () => k.A.isProgressingOnDesktop(e.id));
+    return (0, A.bG)([x.A], () => x.A.isProgressingOnDesktop(e.id));
 }
 function eC(e) {
     return s.useMemo(() => (0, Z.YL)(e), [e]);
@@ -591,7 +591,7 @@ function eO(e) {
         n = eN(e),
         i = eC(e),
         r =
-            ((t = (0, A.bG)([k.A], () => k.A.getOptimisticProgress(e.id, c.n.WATCH_VIDEO))),
+            ((t = (0, A.bG)([x.A], () => x.A.getOptimisticProgress(e.id, c.n.WATCH_VIDEO))),
             s.useMemo(() => (0, Q.J$)(e), [e, t]));
     return n || i || r;
 }
@@ -634,7 +634,7 @@ function ey(e) {
     return (0, p.A)(t);
 }
 function eD(e) {
-    let t = (0, A.bG)([k.A], () => k.A.quests),
+    let t = (0, A.bG)([x.A], () => x.A.quests),
         n = ey(Array.from(t.values())),
         i = s.useMemo(() => {
             let n = (0, X.$e)(t, J.zO);
@@ -645,12 +645,12 @@ function eD(e) {
 function ev(e) {
     return s.useMemo(
         () => ({
-            handleComplete: () => (0, x.Yb)(e),
-            handleProgress: (t) => (0, x.Yb)(e, t),
-            handleResetStatusClick: () => (0, x.UZ)(e),
-            handleResetDismissibilityClick: () => (0, x.Gt)(e),
-            handleOverridePreviewClick: (t) => (0, x.L4)(t, e),
-            handleResetHasBeenSeenClick: () => (0, x.qV)(d.p.QUEST, [e]),
+            handleComplete: () => (0, G.Yb)(e),
+            handleProgress: (t) => (0, G.Yb)(e, t),
+            handleResetStatusClick: () => (0, G.UZ)(e),
+            handleResetDismissibilityClick: () => (0, G.Gt)(e),
+            handleOverridePreviewClick: (t) => (0, G.L4)(t, e),
+            handleResetHasBeenSeenClick: () => (0, G.qV)(d.p.QUEST, [e]),
         }),
         [e],
     );
@@ -666,8 +666,8 @@ function eb() {
             xboxAndPlaystationAccounts: r,
         } = s.useMemo(() => {
             let e = t.filter((e) => !1 === e.revoked),
-                n = e.filter((e) => e.type === w.fg2.XBOX),
-                i = e.filter((e) => e.type === w.fg2.PLAYSTATION),
+                n = e.filter((e) => e.type === U.fg2.XBOX),
+                i = e.filter((e) => e.type === U.fg2.PLAYSTATION),
                 r = n.concat(i);
             return { xboxAccounts: n, playstationAccounts: i, xboxAndPlaystationAccounts: r };
         }, [t]);
@@ -677,8 +677,8 @@ function eM(e) {
     let { questId: t, preview: n, beforeRequest: i, afterRequest: r } = e,
         [a, l] = s.useState(!1),
         o = (0, A.bG)([N.A], () => N.A.getAccounts()),
-        d = (0, G.O)((e) => e.clearErrorHintsByType),
-        c = s.useCallback((e) => G.O.getState().setErrorHints(t, e), [t]);
+        d = (0, w.O)((e) => e.clearErrorHintsByType),
+        c = s.useCallback((e) => w.O.getState().setErrorHints(t, e), [t]);
     return (
         s.useEffect(() => {
             d(t, u._.EXPIRED_CREDENTIAL);
@@ -689,7 +689,7 @@ function eM(e) {
                 i?.(), l(!0);
                 let e = null;
                 try {
-                    (e = await (0, x.vD)(t, n)), c(e.errorHints);
+                    (e = await (0, G.vD)(t, n)), c(e.errorHints);
                 } finally {
                     l(!1), r?.();
                 }
@@ -709,8 +709,8 @@ function eU() {
     let { xboxAccounts: e, playstationAccounts: t } = eb(),
         n = e.length > 0,
         i = t.length > 0,
-        r = y.A.getArticleURL(w.MVz.QUEST_HOW_TO_PLAYSTATION),
-        a = y.A.getArticleURL(w.MVz.QUEST_HOW_TO_XBOX),
+        r = y.A.getArticleURL(U.MVz.QUEST_HOW_TO_PLAYSTATION),
+        a = y.A.getArticleURL(U.MVz.QUEST_HOW_TO_XBOX),
         s = et.intl.format(et.t.beN4DG, { psHelpdeskArticle: r, xboxHelpdeskArticle: a }),
         l = et.intl.format(et.t.HVS7nh, { helpdeskArticle: i ? r : a });
     return { message: (n && !i) || (!n && i) ? l : s, xboxURL: a, playstationURL: r };
@@ -740,7 +740,7 @@ function ex(e) {
     return { completedRatio: a, percentComplete: s, completedRatioDisplay: l };
 }
 function ek(e) {
-    return [(0, A.bG)([k.A], () => k.A.selectedTaskPlatform(e)), s.useCallback((t) => (0, x.lx)(e, t), [e])];
+    return [(0, A.bG)([x.A], () => x.A.selectedTaskPlatform(e)), s.useCallback((t) => (0, G.lx)(e, t), [e])];
 }
 function eF(e, t) {
     let [n, i] = ek(e.id),
@@ -770,17 +770,17 @@ function eF(e, t) {
         s.useMemo(
             () =>
                 (0, o.YW)({ lastPlatformProgress: _, currentProgressingPlatform: E, selectedPlatform: n })
-                    .with({ currentProgressingPlatform: J.fO.CONSOLE }, () => P.X0.CONSOLE)
-                    .with({ currentProgressingPlatform: J.fO.DESKTOP }, () => P.X0.DESKTOP)
-                    .with({ currentProgressingPlatform: null, lastPlatformProgress: J.fO.CONSOLE }, () => P.X0.CONSOLE)
-                    .with({ currentProgressingPlatform: null, lastPlatformProgress: J.fO.DESKTOP }, () => P.X0.DESKTOP)
+                    .with({ currentProgressingPlatform: J.fO.CONSOLE }, () => k.X0.CONSOLE)
+                    .with({ currentProgressingPlatform: J.fO.DESKTOP }, () => k.X0.DESKTOP)
+                    .with({ currentProgressingPlatform: null, lastPlatformProgress: J.fO.CONSOLE }, () => k.X0.CONSOLE)
+                    .with({ currentProgressingPlatform: null, lastPlatformProgress: J.fO.DESKTOP }, () => k.X0.DESKTOP)
                     .with(
                         {
                             currentProgressingPlatform: null,
                             lastPlatformProgress: null,
                             selectedPlatform: J.fO.CONSOLE,
                         },
-                        () => P.X0.CONSOLE,
+                        () => k.X0.CONSOLE,
                     )
                     .with(
                         {
@@ -788,11 +788,11 @@ function eF(e, t) {
                             lastPlatformProgress: null,
                             selectedPlatform: J.fO.DESKTOP,
                         },
-                        () => P.X0.DESKTOP,
+                        () => k.X0.DESKTOP,
                     )
                     .with(
                         { currentProgressingPlatform: null, lastPlatformProgress: null, selectedPlatform: null },
-                        () => (l && a ? P.X0.SELECT : l ? P.X0.CONSOLE : P.X0.DESKTOP),
+                        () => (l && a ? k.X0.SELECT : l ? k.X0.CONSOLE : k.X0.DESKTOP),
                     )
                     .exhaustive(),
             [l, a, _, E, n],
@@ -810,14 +810,14 @@ function eV(e) {
         s = e.userStatus?.completedAt != null,
         l = c.o.DESKTOP.has(n.taskType) && n.percentComplete > 0,
         o = 0 === n.percentComplete,
-        d = a && !s && !r && null == t && (l || (o && i === P.X0.DESKTOP)),
+        d = a && !s && !r && null == t && (l || (o && i === k.X0.DESKTOP)),
         u = (0, v.isWeb)() && d && !(0, z.W1)(e),
         _ = (0, v.isMac)() && n.taskType === c.n.STREAM_ON_DESKTOP && d,
         E = [];
     return _ && E.push(et.intl.string(et.t.MFGxFM)), u && E.push(et.intl.string(et.t.BV6xDm)), E;
 }
 function eB(e) {
-    return (0, A.bG)([k.A], () => k.A.quests).get(e) ?? null;
+    return (0, A.bG)([x.A], () => x.A.quests).get(e) ?? null;
 }
 function eH(e) {
     let { mode: t, questContent: n, sourceQuestContent: i, questId: r } = e,
@@ -836,11 +836,11 @@ function eH(e) {
         }, [r, n, i]);
 }
 function ej(e, t) {
-    let n = (0, A.bG)([k.A], () => k.A.getQuest(e), [e]),
+    let n = (0, A.bG)([x.A], () => x.A.getQuest(e), [e]),
         i = (0, h.Ay)();
     return s.useMemo(() => {
         if (null == n) return null;
-        let e = t ?? ((0, E.M)(i) ? w.NJ8.DARK : w.NJ8.LIGHT);
+        let e = t ?? ((0, E.M)(i) ? U.NJ8.DARK : U.NJ8.LIGHT);
         return (0, M.tW)(n, M.fY.COSPONSOR_LOGO_TYPE, e);
     }, [i, t, n]);
 }
@@ -872,20 +872,20 @@ function eY(e) {
     return { launchInGameActivity: (0, I.A)({ applicationId: t }) };
 }
 function eK() {
-    return (0, A.yK)([k.A], () => [...k.A.quests.values()]).some((e) => e.preview);
+    return (0, A.yK)([x.A], () => [...x.A.quests.values()]).some((e) => e.preview);
 }
 function e$() {
     return eK();
 }
 function ez(e) {
-    let t = e?.userStatus != null && (0, U.gO)(e.userStatus, P.uF.ACTIVITY_PANEL),
+    let t = e?.userStatus != null && (0, P.gO)(e.userStatus, k.uF.ACTIVITY_PANEL),
         n = eT(e ?? null),
         i = e?.userStatus?.claimedAt != null,
-        r = (0, A.bG)([k.A], () => null != k.A.questEnrollmentBlockedUntil, []);
+        r = (0, A.bG)([x.A], () => null != x.A.questEnrollmentBlockedUntil, []);
     return !t && !n && !i && !r;
 }
 function eq() {
-    let e = (0, A.yK)([k.A], () => [...k.A.quests.values()]);
+    let e = (0, A.yK)([x.A], () => [...x.A.quests.values()]);
     return s.useMemo(() => e.filter((e) => e.preview), [e]);
 }
 function eZ() {
@@ -907,12 +907,12 @@ function eQ(e) {
         r = s.useRef(null),
         a = s.useRef(null);
     s.useEffect(() => {
-        O.default.track(w.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: r.current }),
+        O.default.track(U.HAw.QUEST_HOME_SORT_METHOD_CHANGED, { sort_method: t, previous_sort_method: r.current }),
             (r.current = t);
     }, [t]),
         s.useEffect(() => {
             let e = n.map((e) => e.filter);
-            O.default.track(w.HAw.QUEST_HOME_FILTERS_CHANGED, {
+            O.default.track(U.HAw.QUEST_HOME_FILTERS_CHANGED, {
                 filters: e,
                 previous_filters: a.current ?? [],
                 num_quests_visible: i,
@@ -928,14 +928,14 @@ function e0(e, t) {
     return e.userStatus?.enrolledAt != null && !n && Date.now() - new Date(e.userStatus?.enrolledAt).getTime() > t;
 }
 function e1(e) {
-    let t = (0, A.bG)([k.A], () => k.A.quests),
+    let t = (0, A.bG)([x.A], () => x.A.quests),
         n = e?.questIds;
     return s.useMemo(() => {
         if (null == n) return { shelfQuests: [], isShelfEnabled: !1 };
         let e = n
             .map((e) => t.get(e))
             .filter(L.Vq)
-            .filter((e) => !(0, U.Ic)(e));
+            .filter((e) => !(0, P.Ic)(e));
         return e.length <= 1 ? { shelfQuests: [], isShelfEnabled: !1 } : { shelfQuests: e, isShelfEnabled: !0 };
     }, [t, n]);
 }
