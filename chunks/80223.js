@@ -8,4 +8,10 @@ e.exports = {
     qF: "nameplate__73abe",
     Hm: "profileEffect__73abe",
     hH: "profileFrame__73abe",
+    fi: "suggestedFooter__73abe",
+    sp: "opacity20__73abe",
+    p7: "suggestedText__73abe",
+    SW: "longText__73abe",
+    ot: "extraLongText__73abe",
+    F5: "suggestedSkuPreview__73abe",
 };
