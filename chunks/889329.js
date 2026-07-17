@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     ZO: "channelHeader__996b5",
     yZ: "collapsed__996b5",
     Kk: "icon__996b5",
@@ -12,4 +12,8 @@ e.exports = {
     qS: "badge__996b5",
     j1: "channelTypeIcon__996b5",
     GC: "buttonGroup__996b5",
+    h5: "status__996b5",
+    z3: "error__996b5",
+    kX: "success__996b5",
+    qb: "normal__996b5",
 };
