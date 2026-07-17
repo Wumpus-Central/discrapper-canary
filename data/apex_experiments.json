@@ -2320,8 +2320,7 @@
     "name": "2026-03-message-bookmarks",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false,
-      "inInbox": true
+      "enabled": false
     },
     "variations": {
       "0": {
@@ -2329,12 +2328,10 @@
         "variant": 0
       },
       "1": {
-        "enabled": true,
-        "inInbox": true
+        "enabled": true
       },
       "2": {
-        "enabled": true,
-        "inInbox": false
+        "enabled": true
       }
     }
   },

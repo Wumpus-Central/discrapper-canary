@@ -169,8 +169,7 @@ let T = (0, c.Fe)({
             n.e("3515"),
             n.e("77335"),
             n.e("19464"),
-            n.e("32538"),
-            n.e("9352"),
+            n.e("18051"),
             n.e("20469"),
             n.e("83314"),
             n.e("39328"),
@@ -227,9 +226,9 @@ let T = (0, c.Fe)({
             n.e("28367"),
             n.e("81647"),
             n.e("11310"),
+            n.e("91763"),
             n.e("76602"),
             n.e("7170"),
-            n.e("91763"),
             n.e("21921"),
             n.e("36877"),
             n.e("72963"),
@@ -312,6 +311,7 @@ let T = (0, c.Fe)({
             n.e("48330"),
             n.e("40153"),
             n.e("95752"),
+            n.e("35321"),
             n.e("3332"),
             n.e("30788"),
             n.e("8362"),
@@ -328,14 +328,13 @@ let T = (0, c.Fe)({
             n.e("86243"),
             n.e("85794"),
             n.e("67837"),
-            n.e("35321"),
             n.e("73384"),
             n.e("82783"),
             n.e("32209"),
             n.e("9371"),
             n.e("2362"),
-            n.e("87478"),
             n.e("50033"),
+            n.e("87478"),
             n.e("74630"),
             n.e("48948"),
             n.e("63244"),
@@ -344,19 +343,19 @@ let T = (0, c.Fe)({
             n.e("91450"),
             n.e("93438"),
             n.e("36227"),
+            n.e("61156"),
             n.e("44567"),
             n.e("5557"),
             n.e("62718"),
             n.e("1812"),
-            n.e("61156"),
+            n.e("68763"),
+            n.e("16767"),
             n.e("18113"),
             n.e("92295"),
-            n.e("6949"),
-            n.e("68763"),
-            n.e("79548"),
-            n.e("16767"),
-            n.e("99976"),
             n.e("6841"),
+            n.e("6949"),
+            n.e("79548"),
+            n.e("99976"),
             n.e("15109"),
             n.e("94607"),
             n.e("8536"),
@@ -366,26 +365,24 @@ let T = (0, c.Fe)({
             n.e("59466"),
             n.e("93336"),
             n.e("69495"),
-            n.e("75859"),
             n.e("27659"),
+            n.e("75859"),
             n.e("68530"),
             n.e("98972"),
-            n.e("42726"),
-            n.e("63359"),
+            n.e("60283"),
             n.e("65200"),
             n.e("60003"),
-            n.e("59373"),
             n.e("33097"),
+            n.e("59373"),
             n.e("85802"),
             n.e("41348"),
             n.e("86861"),
             n.e("70961"),
             n.e("23685"),
             n.e("42516"),
-            n.e("38951"),
             n.e("70276"),
-        ]).then(n.bind(n, 339928)),
-    webpackId: 339928,
+        ]).then(n.bind(n, 342399)),
+    webpackId: 342399,
     name: "RecentsPopoutRenderer",
     renderLoader: u.hc,
 });
@@ -400,11 +397,11 @@ function m(e) {
             popoutAlign: S,
             targetElementRef: N,
             spacing: C,
-            dialogClassName: R,
+            dialogClassName: O,
         } = e,
-        { analyticsLocations: O } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
-        [L, D] = r.useState(!1),
-        [y, v] = [
+        { analyticsLocations: R } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
+        [L, y] = r.useState(!1),
+        [D, v] = [
             (0, a.bG)([I.A], () => I.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
             r.useCallback((e) => {
                 h.wc.updateAsync(
@@ -428,29 +425,32 @@ function m(e) {
                     h.Sb.INFREQUENT_USER_ACTION,
                 );
             }, [])),
-            { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
+            { showTutorial: !t && D === s.Y2.UNREADS, setSeenTutorial: n }),
         P = r.useCallback(() => {
-            D(!1), L && u?.();
+            y(!1), L && u?.();
         }, [u, L]),
-        U = r.useCallback(() => {
-            D(!L), L ? u?.() : c?.();
-        }, [u, c, L]);
+        U = r.useCallback(
+            (e) => {
+                y(!L), null != e && "number" == typeof e && v(e), L ? u?.() : c?.();
+            },
+            [u, c, L, v],
+        );
     r.useEffect(() => (f._.subscribe(p.jej.TOGGLE_INBOX, U), () => void f._.unsubscribe(p.jej.TOGGLE_INBOX, U)), [U]);
-    let { enabled: w, inInbox: G } = _.A.useConfig({ location: "RecentsPopout" }),
-        x = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w && G;
+    let { enabled: w } = _.A.useConfig({ location: "RecentsPopout" }),
+        G = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w;
     r.useEffect(() => {
-        y !== s.Y2.BOOKMARKS || w || G || v(s.Y2.MENTIONS),
-            (y === s.Y2.GAME_INVITES || y === s.Y2.FOR_YOU) && v(s.Y2.UNREADS);
+        D !== s.Y2.BOOKMARKS || w || v(s.Y2.MENTIONS),
+            (D === s.Y2.GAME_INVITES || D === s.Y2.FOR_YOU) && v(s.Y2.UNREADS);
     });
-    let k = r.useCallback(
+    let x = r.useCallback(
             (e) => {
                 e.shiftKey || P();
             },
             [P],
         ),
-        F = (0, A.Sc)();
+        k = (0, A.Sc)();
     return (0, i.jsx)(d.f5, {
-        value: O,
+        value: R,
         children: (0, i.jsx)(l.Y, {
             targetElementRef: N,
             animation: l.Y.Animation.NONE,
@@ -461,16 +461,15 @@ function m(e) {
             onRequestClose: P,
             renderPopout: function () {
                 return (0, i.jsx)(T, {
-                    dialogClassName: R,
-                    isScheduledMessagesEnabled: F,
-                    tab: y,
+                    dialogClassName: O,
+                    isScheduledMessagesEnabled: k,
+                    tab: D,
                     setTab: v,
                     closePopout: P,
-                    handleMentionsJump: k,
+                    handleMentionsJump: x,
                     showTutorial: b,
                     setSeenTutorial: M,
                     forLaterEnabled: w,
-                    showForLater: G,
                 });
             },
             ignoreModalClicks: !0,
@@ -478,7 +477,7 @@ function m(e) {
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return m(U, n, e, x);
+                return m(U, n, e, G);
             },
         }),
     });
