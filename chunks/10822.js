@@ -5511,42 +5511,47 @@ var rp = n(364522),
 function rv(e) {
     let { channel: t, className: n } = e,
         l = (0, ts._M)(t),
-        i = (0, h.bG)([rI.A], () => rI.A.isInChannel(t.id)),
-        s = (0, h.bG)([rj.Ay], () => rj.Ay.getVoiceStatesForChannel(t), [t]),
-        { needSubscriptionToAccess: o } = (0, rS.A)(t.id),
-        c = (0, h.bG)([r_.A], () => (r_.A.getChannelId() === t.id ? r_.A.getState() : ec.S7L.RTC_DISCONNECTED), [t.id]),
-        d = r.useCallback(() => {
-            rE.A.handleVoiceConnect({ channel: t, connected: i, needSubscriptionToAccess: o, locked: !1 });
-        }, [t, i, o]),
-        u = r.useMemo(() => s.map((e) => e.user.id), [s]),
-        m = (0, rr.$I)(t, u),
-        g = m.length > 0;
-    if (!l && !g) return null;
-    let { connectionStatusText: p } = ry.A.getStatus(c, !1);
+        i = (0, ts.gZ)(t),
+        s = (0, h.bG)([rI.A], () => rI.A.isInChannel(t.id)),
+        o = (0, h.bG)([rj.Ay], () => rj.Ay.getVoiceStatesForChannel(t), [t]),
+        { needSubscriptionToAccess: d } = (0, rS.A)(t.id),
+        u = (0, h.bG)([r_.A], () => (r_.A.getChannelId() === t.id ? r_.A.getState() : ec.S7L.RTC_DISCONNECTED), [t.id]),
+        m = r.useCallback(() => {
+            rE.A.handleVoiceConnect({ channel: t, connected: s, needSubscriptionToAccess: d, locked: !1 });
+        }, [t, s, d]),
+        g = r.useMemo(() => o.map((e) => e.user.id), [o]),
+        p = (0, rr.$I)(t, g),
+        A = p.length > 0,
+        { connectionStatusText: f } = ry.A.getStatus(u, !1);
     return (0, a.jsxs)("div", {
         className: n,
         children: [
-            (0, a.jsxs)(eC.D, {
-                className: rN.Xt,
-                onClick: d,
-                children: [
-                    (0, a.jsx)(rC.H, {
-                        size: "refresh_sm",
-                        color: i ? W.A.colors.STATUS_POSITIVE : W.A.colors.ICON_MUTED,
-                    }),
-                    (0, a.jsx)(e_.E, {
-                        variant: "text-md/medium",
-                        color: "text-strong",
-                        className: rN.Gp,
-                        children: c === ec.S7L.RTC_DISCONNECTED ? eR.intl.string(rb.default.ficpp7) : p,
-                    }),
-                ],
+            (0, a.jsx)(ef.m, {
+                text: i ? (l ? void 0 : eR.intl.string(rb.default.yaoRu1)) : eR.intl.string(rb.default.yBjQ3q),
+                caretConfig: { position: "bottom", align: "start" },
+                align: "left",
+                children: (0, a.jsxs)(eC.D, {
+                    className: c()(rN.Xt, l ? null : rN.tW),
+                    onClick: l ? m : void 0,
+                    children: [
+                        (0, a.jsx)(rC.H, {
+                            size: "refresh_sm",
+                            color: s ? W.A.colors.STATUS_POSITIVE : W.A.colors.ICON_MUTED,
+                        }),
+                        (0, a.jsx)(e_.E, {
+                            variant: "text-md/medium",
+                            color: "text-strong",
+                            className: rN.Gp,
+                            children: u === ec.S7L.RTC_DISCONNECTED ? eR.intl.string(rb.default.ficpp7) : f,
+                        }),
+                    ],
+                }),
             }),
-            g
+            A
                 ? (0, a.jsx)(rx.Ay, {
                       className: rN.L_,
                       guildId: t.guild_id,
-                      users: m,
+                      users: p,
                       size: rx.DN.SIZE_24,
                       showUserPopout: !0,
                   })
