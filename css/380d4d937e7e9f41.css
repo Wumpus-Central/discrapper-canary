@@ -1938,7 +1938,6 @@
 }
 
 .messagesPopoutWrap__432f4 {
-    background-color: var(--background-surface-high);
     border-radius: 8px;
     box-shadow: var(--shadow-border), var(--shadow-high);
     box-sizing: border-box;
@@ -1947,20 +1946,19 @@
     max-height: 80vh !important;
     min-height: 200px;
     overflow: hidden;
-    position: relative;
     width: 420px;
     z-index: 0
 }
 
-.messagesPopoutWrap__432f4 .mention {
-    pointer-events: none
+.header__432f4,
+.messagesPopoutWrap__432f4 {
+    background-color: var(--background-surface-high);
+    position: relative
 }
 
 .header__432f4 {
-    background-color: var(--background-surface-high);
     border-bottom: 1px solid var(--border-subtle);
-    padding: 16px;
-    position: relative
+    padding: 16px
 }
 
 .titleContainer__432f4 {
