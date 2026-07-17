@@ -15,11 +15,14 @@ function _(e) {
 }
 function E(e) {
     let t = e?.daysRemaining;
-    e?.surfaces?.includes(c.x.MODAL) !== !0 ||
-        null == t ||
-        !(t >= 0) ||
-        d.A.hasShownModalToday() ||
-        _(Object.values(l.A.getLinkedUsers())) ||
+    !(
+        e?.surfaces?.includes(c.x.MODAL) === !0 &&
+        null != t &&
+        t >= 0 &&
+        !d.A.hasShownModalToday() &&
+        !_(Object.values(l.A.getLinkedUsers()))
+    ) ||
+        (0, a.hasAnyModalOpen)() ||
         (0, a.openModalLazy)(
             async () => {
                 let { default: e } = await n.e("44947").then(n.bind(n, 145662));
