@@ -6,15 +6,15 @@ var l = n(284009),
     s = n(426398),
     o = n(211083),
     u = n(463376),
-    c = n(21713),
-    d = n(316915),
-    p = n(61299),
-    m = n(174459),
-    h = n(723702),
-    C = n(951305),
-    E = n(166532),
-    f = n(566980),
-    A = n(615310),
+    c = n(883645),
+    d = n(21713),
+    p = n(316915),
+    m = n(61299),
+    h = n(174459),
+    C = n(723702),
+    E = n(951305),
+    f = n(166532),
+    A = n(566980),
     S = n(652215),
     y = n(202541);
 function P(e) {
@@ -36,7 +36,7 @@ function P(e) {
             purchaseError: R,
             setPurchaseError: b,
             activeSubscription: j,
-        } = (0, d.t4)((e) => ({
+        } = (0, p.t4)((e) => ({
             selectedSkuId: e.selectedSkuId,
             setPurchaseState: e.setPurchaseState,
             contextMetadata: e.contextMetadata,
@@ -46,14 +46,14 @@ function P(e) {
             setPurchaseError: e.setPurchaseError,
             activeSubscription: e.activeSubscription,
         })),
-        { purchaseErrorBlockRef: O } = (0, c.Gm)(),
+        { purchaseErrorBlockRef: O } = (0, d.Gm)(),
         { paymentAuthenticationState: L } = (0, o.o)(),
         { enabled: w } = (0, a.Y)({ location: "PaymentModalAddPaymentStep" }),
         { isPremiumGroupPurchase: k, isEligibleForTrial: D } = (0, u.i)(),
-        { step: U, previousStep: G } = (0, A.Ay)(),
-        { isGift: F } = (0, C.Pv)(),
+        { step: U, previousStep: G } = (0, c.Ay)(),
+        { isGift: F } = (0, E.Pv)(),
         H = {
-            ...(0, p._V)(),
+            ...(0, m._V)(),
             paymentSources: T,
             paymentSourceId: N,
             setPaymentSourceId: M,
@@ -67,36 +67,36 @@ function P(e) {
         B =
             I ??
             function () {
-                P(Object.values(T).length < 1 && null == n ? E.pn.PLAN_SELECT : E.pn.REVIEW, {
-                    trackedFromStep: w ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
+                P(Object.values(T).length < 1 && null == n ? f.pn.PLAN_SELECT : f.pn.REVIEW, {
+                    trackedFromStep: w ? f.pn.PAYMENT_ELEMENT : f.pn.PAYMENT_TYPE,
                 });
             };
     i()(U, "Step should be set here");
     let Y = (0, r.A)(() => Date.now(), [U]),
         W = (0, r.A)(
             () =>
-                null != _ && null == G ? (w ? E.pn.PAYMENT_ELEMENT : _) : w ? E.pn.PAYMENT_ELEMENT : E.pn.PAYMENT_TYPE,
+                null != _ && null == G ? (w ? f.pn.PAYMENT_ELEMENT : _) : w ? f.pn.PAYMENT_ELEMENT : f.pn.PAYMENT_TYPE,
             [_, G, w],
         );
-    return (0, p.Y)({
+    return (0, m.Y)({
         paymentModalArgs: H,
         initialStep: W,
-        prependSteps: [E.pn.PROMOTION_INFO],
-        appendSteps: [E.pn.REVIEW, E.pn.CONFIRM],
+        prependSteps: [f.pn.PROMOTION_INFO],
+        appendSteps: [f.pn.REVIEW, f.pn.CONFIRM],
         breadcrumpSteps: l,
         currentBreadcrumpStep: U,
-        usePaymentModalStep: !0,
+        useCheckoutStep: !0,
         analyticsData: t,
         onReturn: k ? void 0 : B,
         onComplete: (e) => {
-            E.l_.has(e)
-                ? (x(f.h.COMPLETED), P(E.pn.CONFIRM, { trackedFromStep: e }))
-                : P(E.pn.REVIEW, { trackedFromStep: e });
+            f.l_.has(e)
+                ? (x(A.h.COMPLETED), P(f.pn.CONFIRM, { trackedFromStep: e }))
+                : P(f.pn.REVIEW, { trackedFromStep: e });
         },
         onStepChange: (e) => {
             let { currentStep: n, toStep: l } = e,
                 i = Date.now();
-            m.default.track(S.HAw.PAYMENT_FLOW_STEP, {
+            h.default.track(S.HAw.PAYMENT_FLOW_STEP, {
                 ...t,
                 from_step: n,
                 to_step: l,
@@ -106,7 +106,7 @@ function P(e) {
         },
         isEligibleForTrial: D,
         allowDesktopRedirectPurchase:
-            (0, h.isDesktop)() && null != g && [y.pe.TIER_0, y.pe.TIER_2].includes(g) && !F && null == j,
+            (0, C.isDesktop)() && null != g && [y.pe.TIER_0, y.pe.TIER_2].includes(g) && !F && null == j,
         continueSessionToInitialStep: _,
         shouldUseManaModal: !0,
     });

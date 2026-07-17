@@ -3,9 +3,9 @@ var l = n(627968),
     i = n(64700),
     r = n(688810),
     a = n(795791),
-    s = n(615310),
-    o = n(669874),
-    u = n(426398),
+    s = n(669874),
+    o = n(426398),
+    u = n(883645),
     c = n(21713),
     d = n(316915),
     p = n(864717),
@@ -17,8 +17,8 @@ function E(e) {
             stepConfigs: t,
             breadcrumbs: n,
             loadId: r,
-            discoverySessionId: o,
-            purchaseType: u = h.VVm.SUBSCRIPTION,
+            discoverySessionId: s,
+            purchaseType: o = h.VVm.SUBSCRIPTION,
             overrideCustomCheckoutFlow: c,
             ...d
         } = e,
@@ -32,7 +32,7 @@ function E(e) {
                 referralTrialOfferId: d.referralTrialOfferId ?? null,
                 activeSubscription: d.activeSubscription ?? null,
                 excludeSubscriptionPlansBySKU: d.excludeSubscriptionPlansBySKU ?? !1,
-                purchaseType: u,
+                purchaseType: o,
                 defaultPlanId: d.defaultPlanId,
                 referralCode: d.referralCode,
                 customCheckoutFlow: c ?? A,
@@ -43,7 +43,7 @@ function E(e) {
             }),
             [
                 E,
-                u,
+                o,
                 d.isGift,
                 d.referralTrialOfferId,
                 d.activeSubscription,
@@ -58,29 +58,29 @@ function E(e) {
                 d.tenantParamsMap,
             ],
         );
-    return (0, l.jsx)(s.mz, {
+    return (0, l.jsx)(u.Gf, {
         stepConfigs: t,
         breadcrumbs: n,
         children: (0, l.jsx)(p.P, {
             loadId: r,
-            discoverySessionId: o,
+            discoverySessionId: s,
             checkoutInitParameters: S,
-            children: (0, l.jsx)(f, { ...d, skuIDs: E, purchaseType: u }),
+            children: (0, l.jsx)(f, { ...d, skuIDs: E, purchaseType: o }),
         }),
     });
 }
 function f(e) {
-    let { errorHandlingBehavior: t = "rethrow", onErrorReported: n, skuIDs: a, children: s } = e,
-        { paymentSources: p } = (0, u.jm)(),
+    let { errorHandlingBehavior: t = "rethrow", onErrorReported: n, skuIDs: a, children: p } = e,
+        { paymentSources: h } = (0, o.jm)(),
         {
-            contextMetadata: h,
-            unifiedCheckoutFlow: C,
-            purchaseType: E,
-            isGift: f,
-            selectedSkuId: A,
-            selectedPlanId: S,
-            paymentSourceId: y,
-            paymentGateway: P,
+            contextMetadata: C,
+            unifiedCheckoutFlow: E,
+            purchaseType: f,
+            isGift: A,
+            selectedSkuId: S,
+            selectedPlanId: y,
+            paymentSourceId: P,
+            paymentGateway: I,
         } = (0, d.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -91,26 +91,28 @@ function f(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        I = null != y && null != p[y] ? p[y]?.type : null,
-        _ = i.useMemo(
-            () => ({ payment_source_id: y, payment_gateway: P, payment_source_type: I, checkout_flow: C }),
-            [y, P, I, C],
+        _ = null != P && null != h[P] ? h[P]?.type : null,
+        T = i.useMemo(
+            () => ({ payment_source_id: P, payment_gateway: I, payment_source_type: _, checkout_flow: E }),
+            [P, I, _, E],
         ),
-        T = (0, r.Db)();
+        g = (0, r.Db)(),
+        x = (0, u.BQ)();
     return (0, l.jsx)(c.yv, {
         children: (0, l.jsx)(m.R, {
-            children: (0, l.jsx)(o.j, {
+            children: (0, l.jsx)(s.j, {
                 errorHandlingBehavior: t,
-                locationStack: T,
+                locationStack: g,
                 onErrorReported: n,
-                loadId: h.loadId,
-                selectedSkuId: A ?? null,
-                selectedPlanId: S ?? null,
-                isGift: f,
+                loadId: C.loadId,
+                selectedSkuId: S ?? null,
+                selectedPlanId: y ?? null,
+                isGift: A,
                 skuIds: a,
-                purchaseType: E,
-                additionalAnalyticsData: _,
-                children: s,
+                purchaseType: f,
+                checkoutStepsHistory: x,
+                additionalAnalyticsData: T,
+                children: p,
             }),
         }),
     });

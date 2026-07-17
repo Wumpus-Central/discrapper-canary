@@ -1,0 +1,9 @@
+.stepBody_a3d32e {
+    display: flex;
+    flex-direction: row;
+    padding-top: 12px
+}
+
+.stepBody_a3d32e>* {
+    width: 50%
+}

@@ -1,9 +1,9 @@
-r.d(t, { j: () => s, v: () => i.v });
-var n = r(260447),
-    u = r(174459),
-    i = r(71804),
-    c = r(652215);
-class s extends n.z {
+n.d(t, { j: () => s, v: () => r.v });
+var l = n(260447),
+    i = n(174459),
+    r = n(71804),
+    a = n(652215);
+class s extends l.z {
     getSentryAppContext() {
         return "billing";
     }
@@ -13,22 +13,24 @@ class s extends n.z {
     getSentryExtras(e) {
         let {
             loadId: t,
-            selectedSkuId: r,
-            selectedPlanId: n,
-            skuIds: u,
-            isGift: c,
+            selectedSkuId: n,
+            selectedPlanId: l,
+            skuIds: i,
+            isGift: a,
             purchaseType: s,
-            locationStack: l,
+            locationStack: o,
+            checkoutStepsHistory: u,
         } = this.props;
         return {
             loadId: t,
-            selectedSkuId: r,
-            selectedPlanId: n,
-            isGift: c,
+            selectedSkuId: n,
+            selectedPlanId: l,
+            isGift: a,
             purchaseType: s,
-            skuIds: u,
-            locationStack: l,
-            ...(e instanceof i.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
+            skuIds: i,
+            locationStack: o,
+            checkoutStepsHistory: u,
+            ...(e instanceof r.v ? { checkoutErrorExtraInformation: e.extraSentryInformation } : {}),
         };
     }
     onErrorCaught(e) {
@@ -36,14 +38,14 @@ class s extends n.z {
     }
     emitPaymentFlowErrorAnalytics(e) {
         let t = this.getCrashedFlag(e),
-            { loadId: r, locationStack: n, additionalAnalyticsData: i } = this.props,
+            { loadId: n, locationStack: l, additionalAnalyticsData: r } = this.props,
             s = "string" == typeof e ? e : e.message;
-        u.default.track(c.HAw.PAYMENT_FLOW_ERROR, {
-            load_id: r,
+        i.default.track(a.HAw.PAYMENT_FLOW_ERROR, {
+            load_id: n,
             crashed: t,
             error_message: s,
-            location_stack: n ?? [],
-            ...i,
+            location_stack: l ?? [],
+            ...r,
         });
     }
 }

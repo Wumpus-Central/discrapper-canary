@@ -8,21 +8,21 @@ var l = n(627968),
     u = n(17928),
     c = n(430690),
     d = n(529427),
-    p = n(21713),
-    m = n(316915),
-    h = n(573359),
-    C = n(166532),
-    E = n(615310),
+    p = n(883645),
+    m = n(21713),
+    h = n(316915),
+    C = n(573359),
+    E = n(166532),
     f = n(370353);
 function A(e) {
     let { header: t, stepProps: n } = (function (e) {
             let { header: t, ...n } = e;
             return { header: t, stepProps: n };
         })(e),
-        { step: r, stepConfigs: s } = (0, E.Ay)(),
-        { setBodyNode: A, setFooterNode: S, setModalOverlayNode: y } = (0, p.Gm)(),
-        P = (0, u.bG)([h.A], () => h.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: I, unifiedCheckoutFlow: _ } = (0, m.t4)((e) => ({
+        { step: r, stepConfigs: s } = (0, p.Ay)(),
+        { setBodyNode: A, setFooterNode: S, setModalOverlayNode: y } = (0, m.Gm)(),
+        P = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: I, unifiedCheckoutFlow: _ } = (0, h.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
@@ -40,7 +40,7 @@ function A(e) {
     let g = T?.options?.hideSlider ?? !1,
         x = T?.options?.hideDefaultModalBody ?? !1,
         v = T?.options?.sliderBodyClassName,
-        N = r === C.pn.REVIEW,
+        N = r === E.pn.REVIEW,
         M = i.useCallback(
             (e, t) => {
                 t === r && A(e);
@@ -97,11 +97,11 @@ function A(e) {
 }
 function S(e) {
     let { children: t } = e,
-        { bodyNode: n } = (0, p.Gm)();
+        { bodyNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);
 }
 function y(e) {
     let { children: t } = e,
-        { footerNode: n } = (0, p.Gm)();
+        { footerNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);
 }
