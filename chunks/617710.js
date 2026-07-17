@@ -22,8 +22,8 @@ var i = n(435558),
     S = n(723702),
     N = n(175306),
     C = n(77729),
-    R = n(183636),
-    O = n(174459),
+    O = n(183636),
+    R = n(174459),
     L = n(209489),
     y = n(655404),
     D = n(812729),
@@ -203,12 +203,12 @@ let V = new d.A("ConnectionStore"),
 (B.handleIdentify = () => {
     let e = E.default.getToken();
     if ((V.verbose("handleIdentify called", { hasToken: null != e }), null == e)) return null;
-    let t = R.A.getState(),
+    let t = O.A.getState(),
         n = E.default.getInstallationForTracking();
     return {
         token: e,
         properties: {
-            ...O.default.getSuperProperties(),
+            ...R.default.getSuperProperties(),
             client_app_state: t,
             is_fast_connect: !1,
             gateway_connect_reasons: F.L7(),
@@ -276,8 +276,8 @@ var en = n(756377),
     eS = n(45773),
     eN = n(937724);
 let eC = null,
-    eR = {};
-function eO(e, t, n) {
+    eO = {};
+function eR(e, t, n) {
     return null == eC || eC.identifyTime !== e || (null != t && t.some((e) => e.id === eC.guild.id))
         ? null
         : n(eC.guild);
@@ -657,14 +657,14 @@ eV(
                 let t = (e = er.A.hydrateReadySupplemental.measure(() =>
                     (function (e, t) {
                         let { guilds: n, merged_members: i, merged_presences: r, ...a } = e,
-                            s = eL(eR, r?.friends),
+                            s = eL(eO, r?.friends),
                             l =
                                 n?.map((e, t) => {
-                                    let n = eL(eR, r?.guilds[t]),
-                                        a = eL(eR, i?.[t]);
+                                    let n = eL(eO, r?.guilds[t]),
+                                        a = eL(eO, i?.[t]);
                                     return { ...e, unavailable: void 0 === e.voice_states, presences: n, members: a };
                                 }) ?? [],
-                            o = eO(t, n, (e) => ({
+                            o = eR(t, n, (e) => ({
                                 id: e.id,
                                 members: e.members,
                                 presences: e.presences,
@@ -672,7 +672,7 @@ eV(
                                 voice_states: e.voice_states,
                                 unavailable: !1,
                             }));
-                        return null != o && l.push(o), (eR = {}), { ...a, presences: s, guilds: l };
+                        return null != o && l.push(o), (eO = {}), { ...a, presences: s, guilds: l };
                     })(e, B.identifyStartTime),
                 )).guilds.filter((e) => !0 !== e.unavailable);
                 t.forEach((e) => {
@@ -752,26 +752,26 @@ eV(
                                       null != ep.A.database() &&
                                           !1 === n.databaseOk &&
                                           eS.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
-                                          (eR = r().keyBy(i, (e) => e.id)),
+                                          (eO = r().keyBy(i, (e) => e.id)),
                                           a?.forEach((e) => {
                                               let t = e.recipient_ids;
                                               null != t &&
                                                   (e.recipients = t.map(
                                                       (e) => (
                                                           ef()(
-                                                              null != eR[e],
+                                                              null != eO[e],
                                                               "Missing user in compressed ready payload",
                                                           ),
-                                                          eR[e]
+                                                          eO[e]
                                                       ),
                                                   )),
                                                   delete e.recipient_ids;
                                           });
                                       let d =
                                               l?.map((e, t) =>
-                                                  !0 === e.unavailable ? e : ((e.members = eL(eR, s?.[t])), ey(e)),
+                                                  !0 === e.unavailable ? e : ((e.members = eL(eO, s?.[t])), ey(e)),
                                               ) ?? [],
-                                          c = eO(t, l, (e) => ey(e));
+                                          c = eR(t, l, (e) => ey(e));
                                       return (
                                           null != c && d.push(c),
                                           { ...o, users: i, presences: [], guilds: d, private_channels: a ?? [] }
@@ -1953,6 +1953,13 @@ eV(
     }),
     eF(["GUILD_OFFICIAL_GAME_APPLICATIONS_UPDATE"], (e, t) => {
         eH({ type: t, gameApplicationIds: e.game_application_ids, guildId: e.guild_id });
+    }),
+    eF(["MESSAGE_REQUEST_NOTIFICATION_SENT"], (e) => {
+        eH({
+            type: "MESSAGE_REQUEST_NOTIFICATION_SENT",
+            triggeringUserId: e.triggering_user_id,
+            numMutualGuilds: e.num_mutual_guilds,
+        });
     });
 var eq = n(355097);
 let eZ = window.DiscordNative;
