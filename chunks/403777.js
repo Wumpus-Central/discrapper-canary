@@ -32,7 +32,7 @@ async function h(e) {
     if (null == N) return;
     let C = l.default.getCurrentUser();
     if (null == C) return;
-    let R = A(t, I);
+    let O = A(t, I);
     E.add(
         await (0, r.openModalLazy)(
             async () => {
@@ -82,15 +82,15 @@ async function h(e) {
                         n.e("97189"),
                         n.e("42791"),
                         n.e("16918"),
-                        n.e("1744"),
+                        n.e("35403"),
                         n.e("71406"),
                         n.e("56985"),
                         n.e("81619"),
-                        n.e("67039"),
+                        n.e("35870"),
                         n.e("72651"),
                         n.e("29363"),
                         n.e("16881"),
-                        n.e("17268"),
+                        n.e("32231"),
                         n.e("69979"),
                         n.e("30593"),
                         n.e("86122"),
@@ -382,7 +382,7 @@ async function h(e) {
                         n.e("36926"),
                         n.e("43256"),
                         n.e("41384"),
-                        n.e("48461"),
+                        n.e("15489"),
                         n.e("19119"),
                         n.e("46004"),
                         n.e("73566"),
@@ -407,7 +407,7 @@ async function h(e) {
                         n.e("8032"),
                         n.e("77970"),
                         n.e("14248"),
-                        n.e("75514"),
+                        n.e("57757"),
                         n.e("10576"),
                         n.e("72163"),
                         n.e("57931"),
@@ -438,13 +438,13 @@ async function h(e) {
                     });
             },
             {
-                modalKey: R,
+                modalKey: O,
                 contextKey: (0, r.modalContextFromAppContext)(T ?? (0, s.zd)() ?? _.BRT.APP),
                 onCloseRequest: () => {
                     let e = !(0, c.E)("UserProfileModalManager");
                     t === C.id && (0, u.b)(e)
                         ? (0, o.VQ)()
-                        : ((0, r.closeModal)(R), E.delete(R), d.A.clearPendingWidgets(), e || (0, o.XQ)());
+                        : ((0, r.closeModal)(O), E.delete(O), d.A.clearPendingWidgets(), e || (0, o.XQ)());
                 },
             },
         ),
