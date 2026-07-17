@@ -165,7 +165,7 @@ let u = {
                         n.e("93159"),
                         n.e("55936"),
                         n.e("89088"),
-                        n.e("42834"),
+                        n.e("69294"),
                         n.e("94723"),
                         n.e("62931"),
                         n.e("45959"),
@@ -214,7 +214,7 @@ let u = {
                         n.e("55654"),
                         n.e("27773"),
                         n.e("50097"),
-                        n.e("23164"),
+                        n.e("80445"),
                         n.e("48900"),
                         n.e("35485"),
                         n.e("82069"),
@@ -294,7 +294,7 @@ let u = {
                         n.e("86454"),
                         n.e("85330"),
                     ]).then(n.bind(n, 797489));
-                    return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: d, ...n, appContext: c });
+                    return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: d, ...n, appContext: c }, t);
                 },
                 { modalKey: o, contextKey: null != c ? (0, s.modalContextFromAppContext)(c) : void 0 },
             );
@@ -444,7 +444,7 @@ let u = {
                         n.e("93159"),
                         n.e("55936"),
                         n.e("89088"),
-                        n.e("42834"),
+                        n.e("69294"),
                         n.e("94723"),
                         n.e("62931"),
                         n.e("45959"),
@@ -493,7 +493,7 @@ let u = {
                         n.e("55654"),
                         n.e("27773"),
                         n.e("50097"),
-                        n.e("23164"),
+                        n.e("80445"),
                         n.e("48900"),
                         n.e("35485"),
                         n.e("82069"),
@@ -573,7 +573,7 @@ let u = {
                         n.e("86454"),
                         n.e("85330"),
                     ]).then(n.bind(n, 797489));
-                    return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, ...n });
+                    return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, ...n }, t);
                 },
                 { modalKey: o },
             );
