@@ -33,18 +33,18 @@ var s = t(627968),
     D = t(58703),
     U = t(713132),
     O = t(59318),
-    k = t(636537),
-    T = t(228366),
+    T = t(636537),
+    k = t(228366),
     z = t(652215);
 async function H(e, l) {
-    T.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES", guildId: e, before: l });
+    k.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES", guildId: e, before: l });
     try {
-        let { body: t } = await k.Bo.get({
+        let { body: t } = await T.Bo.get({
             url: z.Rsh.GUILD_OFFICIAL_MESSAGES(e),
             query: null != l ? { before: l } : void 0,
-            rejectWithError: !1,
+            rejectWithError: (0, T.fT)(),
         });
-        T.h.dispatch({
+        k.h.dispatch({
             type: "LOAD_OFFICIAL_MESSAGES_SUCCESS",
             guildId: e,
             messages: t.messages,
@@ -52,7 +52,7 @@ async function H(e, l) {
             before: l,
         });
     } catch (t) {
-        throw (T.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES_FAILURE", guildId: e, before: l }), t);
+        throw (k.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES_FAILURE", guildId: e, before: l }), t);
     }
 }
 let R = (0, r.UT)(U.A, {
@@ -133,10 +133,10 @@ function es(e) {
         null == j)
     )
         return null;
-    let k = (0, P.y)({ message: c, channel: j, user: c.author, compact: !1, isRepliedMessage: !1 }),
-        T = c.getContentMessage(),
-        H = T.attachments.find((e) => (0, O.tT)(e.content_type) || (0, O.XB)(e.content_type)),
-        R = T.attachments.find((e) => !(0, O.tT)(e.content_type) && !(0, O.XB)(e.content_type)),
+    let T = (0, P.y)({ message: c, channel: j, user: c.author, compact: !1, isRepliedMessage: !1 }),
+        k = c.getContentMessage(),
+        H = k.attachments.find((e) => (0, O.tT)(e.content_type) || (0, O.XB)(e.content_type)),
+        R = k.attachments.find((e) => !(0, O.tT)(e.content_type) && !(0, O.XB)(e.content_type)),
         J =
             (null != H ? (0, E.Rr)(H, c) : null) ??
             (function (e, l) {
@@ -149,10 +149,10 @@ function es(e) {
                     if (null != a) return (0, E.oU)(a, n, "IMAGE");
                 }
                 return null;
-            })(c, T.embeds) ??
-            (0, S.We)(T.components),
+            })(c, k.embeds) ??
+            (0, S.We)(k.components),
         q = (0, E.fj)(J),
-        Y = T.content.length > 0 ? T.content : ((0, S.kC)(T.components) ?? ""),
+        Y = k.content.length > 0 ? k.content : ((0, S.kC)(k.components) ?? ""),
         K = (0, D.mk)(c.timestamp, !0),
         es = c.reactions.reduce((e, l) => e + l.count, 0),
         en = c.author.getAvatarURL(x, (0, d.FT)(d._3.SIZE_40)),
@@ -193,7 +193,7 @@ function es(e) {
                                                         className: Q.fh,
                                                         children: L(_)(_.nick, c.id),
                                                     }),
-                                                    null != k && (0, s.jsx)("span", { className: Q.Ho, children: k }),
+                                                    null != T && (0, s.jsx)("span", { className: Q.Ho, children: T }),
                                                 ],
                                             }),
                                             (0, s.jsx)(h.E, {

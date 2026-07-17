@@ -110,7 +110,7 @@ var ev = n(665260),
     eO = n(521427),
     eN = n(20883),
     eR = n(979766),
-    ew = n(990078),
+    ew = n(866665),
     eU = n(827319);
 let ek = ["slight_smile", "frowning", "smile", "stuck_out_tongue", "wink"];
 function eP(e) {
@@ -162,13 +162,13 @@ var eK = n(110384),
     eQ = n(131607),
     e0 = n(928658),
     e8 = n(400528),
-    e7 = n(892340),
-    e6 = n(715757),
+    e6 = n(892340),
+    e7 = n(715757),
     e2 = n(967198),
     e1 = n(287809),
     e3 = n(628691),
-    e9 = n(49999),
-    e5 = n(221314),
+    e5 = n(49999),
+    e9 = n(221314),
     e4 = n(663417),
     te = n(965407),
     tt = n(249700),
@@ -299,13 +299,13 @@ function tk(e) {
             favoriteableId: tQ,
             favoriteableName: t0,
             itemHref: t8,
-            itemSrc: t7,
-            itemSafeSrc: t6,
+            itemSrc: t6,
+            itemSafeSrc: t7,
             itemTextContent: t2,
             canReport: t1,
             onHeightUpdate: t3,
-            onSelect: t9,
-            onClose: t5,
+            onSelect: t5,
+            onClose: t9,
             navId: t4,
             ariaLabel: ne,
             shouldHideMediaOptions: nt = !1,
@@ -338,8 +338,8 @@ function tk(e) {
                     message_id: tV.id,
                 });
             }
-            t9?.();
-        }, [t9, tW, tV]),
+            t5?.();
+        }, [t5, tW, tV]),
         { tidaWebformEnabled: nl } = m.A.useExperiment({ location: "MessageContextMenu" }, { autoTrackExposure: !1 }),
         na =
             ((i = (0, Y.D6)(tW.guild_id).filter(
@@ -529,7 +529,7 @@ function tk(e) {
                                     let t = await ts.Bo.post({
                                         url: F.Rsh.AI_TRANSLATE,
                                         body: { content: e.content, locale: s },
-                                        rejectWithError: !1,
+                                        rejectWithError: (0, ts.fT)(),
                                     });
                                     t.ok &&
                                         t.body &&
@@ -868,7 +868,7 @@ function tk(e) {
         nv = (0, ey.A)(tV, tW),
         nC =
             ((tP = (0, S.bG)([e2.A], () => e2.A.getGuildId())),
-            (tB = (0, e6.Qo)(tP)),
+            (tB = (0, e7.Qo)(tP)),
             (0, e3.ul)(tV)
                 ? (0, l.jsx)(r.Dr, {
                       id: "report",
@@ -894,18 +894,18 @@ function tk(e) {
                 : null),
         nO = (function (e) {
             let t = (0, S.bG)([e8.A], () => e8.A.hasReportedMessage(e.channel_id, e.id)),
-                n = (0, e7.KB)(e),
+                n = (0, e6.KB)(e),
                 i = n ? [eV.M.REPORT_TO_MOD_NEW_TAG] : [],
                 [a, s] = (0, eQ.kn)(i);
             return ((0, e$.l0)(() => {
-                n && s(e9.i.AUTO_DISMISS);
+                n && s(e5.i.AUTO_DISMISS);
             }),
             n)
                 ? (0, l.jsx)(r.Dr, {
                       id: "report-to-mod",
-                      label: t ? I.intl.string(e5.default["8wsdng"]) : I.intl.string(e5.default["1D+vqy"]),
+                      label: t ? I.intl.string(e9.default["8wsdng"]) : I.intl.string(e9.default["1D+vqy"]),
                       action: () => {
-                          s(e9.i.USER_DISMISS), (0, e0.dy)(e);
+                          s(e5.i.USER_DISMISS), (0, e0.dy)(e);
                       },
                       icon: eZ.i,
                       disabled: t,
@@ -1023,7 +1023,7 @@ function tk(e) {
                 })
             );
         })(t$, tW.getGuildId()),
-        nw = (0, p.A)(t6, tV, {
+        nw = (0, p.A)(t7, tV, {
             shouldHideMediaOptions: nt,
             contentType: tZ?.contentType,
             originalContentType: tZ?.originalContentType,
@@ -1083,7 +1083,7 @@ function tk(e) {
                       action: tJ,
                   })
                 : null),
-        nB = (0, y.A)(t8 ?? t7, t2, tV, { shouldHideMediaOptions: nt }),
+        nB = (0, y.A)(t8 ?? t6, t2, tV, { shouldHideMediaOptions: nt }),
         nX = (0, A.A)({ id: tV.id, label: I.intl.string(I.t.zBoHlf), shiftId: `${tV.channel_id}-${tV.id}` }),
         nF = (function (e) {
             let { messageId: t, itemId: n, type: i, imageSrc: s } = e,
@@ -1146,13 +1146,13 @@ function tk(e) {
                         }),
                 ],
             });
-        })({ messageId: tV.id, itemId: tQ, type: tY, imageSrc: t7 }),
+        })({ messageId: tV.id, itemId: tQ, type: tY, imageSrc: t6 }),
         nH = (0, l.jsx)(r.rX, { children: nF ?? nX }),
         nq = (0, l.jsxs)(r.rX, { children: [nN, nR, nw, nU, nk, nP] });
     return (0, l.jsxs)(o.W, {
         "data-menu-migrated": !0,
         navId: t4,
-        onClose: t5,
+        onClose: t9,
         "aria-label": ne,
         onSelect: ni,
         children: [

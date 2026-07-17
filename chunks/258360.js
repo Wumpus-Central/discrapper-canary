@@ -9,13 +9,13 @@ var a = n(627968),
     u = n(442433),
     d = n(955572),
     m = n(775602),
-    g = n(316254),
-    b = n(885386),
-    f = n(174459),
+    f = n(316254),
+    g = n(885386),
+    b = n(174459),
     p = n(723702),
     S = n(19575),
-    y = n(820066),
-    T = n(636537),
+    T = n(820066),
+    y = n(636537),
     x = n(691540),
     C = n(857250),
     h = n(97483),
@@ -35,7 +35,7 @@ function O(t) {
             (t) => {
                 i.rL.focus(O),
                     setTimeout(() => {
-                        t?.(), y.VW.focus(O);
+                        t?.(), T.VW.focus(O);
                     }, 0);
             },
             [O],
@@ -50,14 +50,14 @@ function O(t) {
                     l.gB.insertText(O, t);
                 });
         }, [L, O]),
-        [F, G] = (0, g.A)({ text: e, target: R, onHeightUpdate: X }),
+        [F, G] = (0, f.A)({ text: e, target: R, onHeightUpdate: X }),
         K = (function (t) {
             let e = (0, k.b)(),
                 l = (0, s.bG)([D.A], () => D.A.getTransforms()),
                 { selection: c } = t,
                 u =
                     null != c
-                        ? (0, M.WO)(y.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
+                        ? (0, M.WO)(T.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
                         : "",
                 d = r.useCallback(
                     (e) => {
@@ -74,10 +74,10 @@ function O(t) {
                             if (!n) {
                                 l(!0), (0, x.P0)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI));
                                 try {
-                                    let n = await T.Bo.post({
+                                    let n = await y.Bo.post({
                                         url: N.Rsh.AI_FIX_GRAMMAR,
                                         body: { content: t },
-                                        rejectWithError: !1,
+                                        rejectWithError: (0, y.fT)(),
                                     });
                                     n.ok &&
                                         n.body &&
@@ -96,7 +96,7 @@ function O(t) {
                         disabled: n,
                     });
                 })(u, d),
-                g = (function (t, e) {
+                f = (function (t, e) {
                     let [l, i] = r.useState(!1),
                         c = (0, s.bG)([E.default], () => E.default.locale),
                         u = r.useCallback(
@@ -109,10 +109,10 @@ function O(t) {
                                     (0, C.o)(P.intl.formatToPlainString(P.t.Znl8Z8, { targetLanguage: s }), h.Ck.AI),
                                 );
                                 try {
-                                    let n = await T.Bo.post({
+                                    let n = await y.Bo.post({
                                         url: N.Rsh.AI_TRANSLATE,
                                         body: { content: t, locale: r },
-                                        rejectWithError: !1,
+                                        rejectWithError: (0, y.fT)(),
                                     });
                                     n.ok &&
                                         n.body &&
@@ -157,7 +157,7 @@ function O(t) {
                         children: d,
                     });
                 })(u, d),
-                b = (function (t, e, n) {
+                g = (function (t, e, n) {
                     let [l, i] = r.useState(null),
                         s = r.useCallback(
                             async (t) => {
@@ -170,10 +170,10 @@ function O(t) {
                                             ),
                                         );
                                     try {
-                                        let a = await T.Bo.post({
+                                        let a = await y.Bo.post({
                                             url: N.Rsh.AI_TEXT_TRANSFORM,
                                             body: { content: e, prompt: t.prompt },
-                                            rejectWithError: !1,
+                                            rejectWithError: (0, y.fT)(),
                                         });
                                         a.ok &&
                                             a.body &&
@@ -210,14 +210,14 @@ function O(t) {
                 ? (0, a.jsxs)(a.Fragment, {
                       children: [
                           m,
-                          g,
+                          f,
                           (0, a.jsxs)(o.Dr, {
                               id: "text-transforms",
                               label: P.intl.string(P.t["6YZezO"]),
                               icon: A.D,
                               children: [
-                                  b,
-                                  b.length > 0 ? (0, a.jsx)(o.bX, {}) : null,
+                                  g,
+                                  g.length > 0 ? (0, a.jsx)(o.bX, {}) : null,
                                   (0, a.jsx)(o.Dr, {
                                       id: "manage-text-transforms",
                                       label: P.intl.string(P.t.IcDoaD),
@@ -237,7 +237,7 @@ function O(t) {
                 : null;
         })(O),
         V = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
-        W = b._3.useSetting();
+        W = g._3.useSetting();
     if (!p.isPlatformEmbedded) return null;
     let Y = O.chatInputType?.commands?.enabled ?? !1,
         B = O.chatInputType?.stickers?.autoSuggest ?? !1,
@@ -275,8 +275,8 @@ function O(t) {
             checked: W,
             action: () => {
                 let t = !W;
-                b._3.updateSetting(t),
-                    f.default.track(N.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                g._3.updateSetting(t),
+                    b.default.track(N.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
                         location: { object: N.ZSU.CONTEXT_MENU },
                     });

@@ -2,15 +2,15 @@
 n.d(t, {
     CX: () => P,
     E7: () => S,
-    Rp: () => O,
+    Rp: () => R,
     dZ: () => v,
     eS: () => L,
     g0: () => b,
     iy: () => M,
     lT: () => N,
-    nh: () => D,
-    qP: () => y,
-    ty: () => R,
+    nh: () => y,
+    qP: () => D,
+    ty: () => O,
     xV: () => C,
 }),
     n(321073);
@@ -34,7 +34,7 @@ var I = n(652215),
 let T = !1;
 async function m() {
     try {
-        let e = (await a.Bo.get({ url: I.Rsh.SOUNDBOARD_DEFAULT_SOUNDS, rejectWithError: !1 })).body.map((e) =>
+        let e = (await a.Bo.get({ url: I.Rsh.SOUNDBOARD_DEFAULT_SOUNDS, rejectWithError: (0, a.fT)() })).body.map((e) =>
             (0, A.N0)(e, "0"),
         );
         s.h.dispatch({ type: "SOUNDBOARD_FETCH_DEFAULT_SOUNDS_SUCCESS", soundboardSounds: e });
@@ -84,7 +84,7 @@ async function N(e) {
         o = await a.Bo.post({
             url: I.Rsh.GUILD_SOUNDBOARD_SOUNDS(t),
             body: { name: n, sound: i, volume: r, emoji_id: s, emoji_name: l },
-            rejectWithError: !1,
+            rejectWithError: (0, a.fT)(),
         });
     return (0, A.N0)(o.body, t);
 }
@@ -93,14 +93,14 @@ async function C(e) {
         o = await a.Bo.patch({
             url: I.Rsh.GUILD_SOUNDBOARD_SOUND(t, n),
             body: { name: i, volume: r, emoji_id: s, emoji_name: l },
-            rejectWithError: !1,
+            rejectWithError: (0, a.fT)(),
         });
     return (0, A.N0)(o.body, t);
 }
-async function R(e, t) {
-    await a.Bo.del({ url: I.Rsh.GUILD_SOUNDBOARD_SOUND(e, t), oldFormErrors: !0, rejectWithError: !1 });
+async function O(e, t) {
+    await a.Bo.del({ url: I.Rsh.GUILD_SOUNDBOARD_SOUND(e, t), oldFormErrors: !0, rejectWithError: (0, a.fT)() });
 }
-function O(e) {
+function R(e) {
     c.bW.updateAsync(
         "favoriteSoundboardSounds",
         (t) =>
@@ -123,15 +123,15 @@ function L(e) {
         f.Sb.INFREQUENT_USER_ACTION,
     );
 }
-async function D(e, t) {
+async function y(e, t) {
     try {
-        let n = await a.Bo.get({ url: I.Rsh.SOUNDBOARD_SOUND_GUILD_DATA(e, t), rejectWithError: !1 });
+        let n = await a.Bo.get({ url: I.Rsh.SOUNDBOARD_SOUND_GUILD_DATA(e, t), rejectWithError: (0, a.fT)() });
         return null != n.body ? (0, _.jE)(n.body) : null;
     } catch (e) {
         throw new o.A(e);
     }
 }
-function y(e, t, n) {
+function D(e, t, n) {
     s.h.dispatch({ type: "GUILD_SOUNDBOARD_SOUND_PLAY_LOCALLY", sound: t, channelId: e, trigger: n });
 }
 function v(e, t) {

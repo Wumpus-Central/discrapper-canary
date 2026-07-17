@@ -76,7 +76,7 @@ async function p(e) {
             })(p),
         },
     };
-    await r.Bo.post({ url: h.Rsh.INTERACTIONS, body: g, timeout: 3e3, rejectWithError: !1 }, (e) => {
+    await r.Bo.post({ url: h.Rsh.INTERACTIONS, body: g, timeout: 3e3, rejectWithError: (0, r.fT)() }, (e) => {
         T(m, e, A, I, f);
     });
 }

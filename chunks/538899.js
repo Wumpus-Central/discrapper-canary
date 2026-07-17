@@ -5,7 +5,7 @@ var l = a(627968),
     r = a(17928),
     s = a(636537),
     d = a(123292),
-    c = a(720149),
+    c = a(493336),
     o = a(608299),
     u = a(395780),
     h = a(390248),
@@ -17,21 +17,21 @@ var l = a(627968),
     b = a(71393),
     y = a(232835),
     M = a(453771),
-    I = a(935208),
-    T = a(292348),
+    T = a(935208),
+    I = a(292348),
     _ = a(518960),
     S = a(382287),
-    k = a(853742),
-    w = a(350527),
-    x = a(218152),
-    f = a(652215),
+    f = a(853742),
+    k = a(350527),
+    w = a(218152),
+    x = a(652215),
     m = a(818348),
     j = a(375708),
     O = a(158482);
 async function v(t) {
     let e,
         { thread: a, attachments: l, setIsUploading: n, guild: i, onClose: r } = t,
-        d = I.default.castChannelIdAsMessageId(a.id),
+        d = T.default.castChannelIdAsMessageId(a.id),
         C = new u.A();
     C.on("progress", (t) => {
         let e = (0, A.R8)({ location: "web.AddMediaToOriginalForumPostModal" }),
@@ -47,7 +47,7 @@ async function v(t) {
         n(!1);
         return;
     }
-    let k = [...b, ...(e.map((t, e) => (0, T.OW)(t, e)) ?? [])];
+    let f = [...b, ...(e.map((t, e) => (0, I.OW)(t, e)) ?? [])];
     try {
         await g.A.unarchiveThreadIfNecessary(a.id);
     } catch {
@@ -55,12 +55,12 @@ async function v(t) {
         return;
     }
     try {
-        await s.Bo.patch({ url: f.Rsh.MESSAGE(a.id, d), body: { attachments: k }, rejectWithError: !1 }),
+        await s.Bo.patch({ url: x.Rsh.MESSAGE(a.id, d), body: { attachments: f }, rejectWithError: (0, s.fT)() }),
             r(),
             o.A.clearAll(a.id, E.C.ChannelMessage);
     } catch (t) {
         n(!1),
-            t.body?.code === f.t02.EXPLICIT_CONTENT &&
+            t.body?.code === x.t02.EXPLICIT_CONTENT &&
                 (r(),
                 c.A.sendExplicitMediaClydeError(
                     a.id,
@@ -82,17 +82,17 @@ function F(t) {
     }, [g]);
     let M =
             null != g && null != E
-                ? { src: E, width: w.T5, height: w.Co, spoiler: a[0].spoiler, alt: a[0].description }
+                ? { src: E, width: k.T5, height: k.Co, spoiler: a[0].spoiler, alt: a[0].description }
                 : null,
-        [I, T] = n.useState(!1),
+        [T, I] = n.useState(!1),
         _ = n.useCallback(() => {
-            (0, k.jh)({ added: !1 }), s(), o();
+            (0, f.jh)({ added: !1 }), s(), o();
         }, [s, o]),
         S = n.useCallback(() => {
             null != u &&
                 null != h &&
-                ((0, k.jh)({ added: !0 }), v({ thread: u, attachments: a, setIsUploading: T, guild: h, onClose: o }));
-        }, [u, a, T, h, o]);
+                ((0, f.jh)({ added: !0 }), v({ thread: u, attachments: a, setIsUploading: I, guild: h, onClose: o }));
+        }, [u, a, I, h, o]);
     return null == A
         ? null
         : (0, l.jsx)(i.Modal, {
@@ -102,17 +102,17 @@ function F(t) {
               onClose: o,
               actionBarInput: (0, l.jsx)(d.Q, {
                   variant: "secondary",
-                  disabled: I,
+                  disabled: T,
                   onClick: o,
                   text: j.intl.string(j.t["ETE/oC"]),
               }),
               actions: [
-                  { variant: "secondary", text: j.intl.string(j.t["8rKVHL"]), disabled: I, onClick: _ },
-                  { variant: "primary", text: j.intl.string(j.t.d611xH), loading: I, onClick: S, autoFocus: !0 },
+                  { variant: "secondary", text: j.intl.string(j.t["8rKVHL"]), disabled: T, onClick: _ },
+                  { variant: "primary", text: j.intl.string(j.t.d611xH), loading: T, onClick: S, autoFocus: !0 },
               ],
-              children: (0, l.jsx)(x.Cp, {
+              children: (0, l.jsx)(w.Cp, {
                   channel: A,
-                  children: (0, l.jsx)(w.Ay, { threadId: e, goToThread: m.tE, overrideMedia: M, className: O.u }),
+                  children: (0, l.jsx)(k.Ay, { threadId: e, goToThread: m.tE, overrideMedia: M, className: O.u }),
               }),
           });
 }

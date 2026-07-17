@@ -8,8 +8,8 @@ n.d(t, {
     b3: () => D,
     b6: () => L,
     e7: () => N,
-    gt: () => O,
-    lL: () => R,
+    gt: () => R,
+    lL: () => O,
 });
 var i = n(284009),
     r = n.n(i),
@@ -38,7 +38,7 @@ function g(e, t) {
         s.Bo.patch({
             url: T.Rsh.UPDATE_VOICE_STATE(n),
             body: { request_to_speak_timestamp: t ? new Date().toISOString() : null, channel_id: e.id },
-            rejectWithError: !1,
+            rejectWithError: (0, s.fT)(),
         })
     );
 }
@@ -49,7 +49,7 @@ function S(e, t) {
         s.Bo.patch({
             url: T.Rsh.UPDATE_VOICE_STATE(n, t),
             body: { suppress: !1, request_to_speak_timestamp: new Date().toISOString(), channel_id: e.id },
-            rejectWithError: !1,
+            rejectWithError: (0, s.fT)(),
         }).catch(
             (e) => (
                 e.code === T.t02.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK && c.A.showFailedToast(m.OB.GENERIC_ERROR), e
@@ -71,7 +71,7 @@ function N(e, t) {
           s.Bo.patch({
               url: T.Rsh.UPDATE_VOICE_STATE(i),
               body: { suppress: t, request_to_speak_timestamp: null, channel_id: e.id, ...(n ? { silent: n } : {}) },
-              rejectWithError: !1,
+              rejectWithError: (0, s.fT)(),
           }));
 }
 function C(e) {
@@ -81,18 +81,18 @@ function C(e) {
         s.Bo.patch({
             url: T.Rsh.UPDATE_VOICE_STATE(t),
             body: { suppress: !0, channel_id: e.id, self_video: !1, self_stream: !1 },
-            rejectWithError: !1,
+            rejectWithError: (0, s.fT)(),
         })
     );
 }
-function R(e, t, n) {
+function O(e, t, n) {
     let i = e.getGuildId();
     return (
         r()(null != i, "This channel cannot be guildless."),
         s.Bo.patch({
             url: T.Rsh.UPDATE_VOICE_STATE(i, t),
             body: { suppress: n, channel_id: e.id },
-            rejectWithError: !1,
+            rejectWithError: (0, s.fT)(),
         }).catch(
             (e) => (
                 e.code === T.t02.STAGE_CHANNEL_USER_NOT_ALLOWED_TO_SPEAK && c.A.showFailedToast(m.OB.GENERIC_ERROR), e
@@ -100,16 +100,16 @@ function R(e, t, n) {
         )
     );
 }
-function O(e, t) {
+function R(e, t) {
     if (null == t || null == e) return;
     let n = t.getGuildId();
     return (
         r()(null != n, "This channel cannot be guildless."),
-        R(t, e.id, !0),
+        O(t, e.id, !0),
         s.Bo.patch({
             url: T.Rsh.UPDATE_VOICE_STATE(n, e.id),
             body: { suppress: !0, channel_id: t.id, self_video: !1, self_stream: !1 },
-            rejectWithError: !1,
+            rejectWithError: (0, s.fT)(),
         })
     );
 }

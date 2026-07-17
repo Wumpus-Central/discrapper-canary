@@ -309,7 +309,7 @@ function es(e) {
                             url: W.Rsh.SEARCH_GUILD(e),
                             query: Y.stringify(ee),
                             oldFormErrors: !0,
-                            rejectWithError: !1,
+                            rejectWithError: (0, y.fT)(),
                         })
                             .then((e) => {
                                 l ||
@@ -408,7 +408,7 @@ let er = (0, t(839214).D)((e, l) => ({
                 y.Bo.get({
                     url: W.Rsh.GUILD_VOICE_HANGOUT_RECENT_IMAGES(t),
                     oldFormErrors: !0,
-                    rejectWithError: !1,
+                    rejectWithError: (0, y.fT)(),
                     signal: s.signal,
                 })
                     .then((n) => {

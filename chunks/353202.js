@@ -38,7 +38,7 @@ function p(e) {
             path: _.BVt.CHANNEL(l.pv.guildId(), l.pv.channelId(), ":messageId"),
             exact: !0,
         }),
-        u = i.Bo.get({ url: _.Rsh.CHANNEL(e), rejectWithError: !1 })
+        u = i.Bo.get({ url: _.Rsh.CHANNEL(e), rejectWithError: (0, i.fT)() })
             .then((t) => {
                 let { body: i } = t;
                 (A[e] = { type: "LOADED" }), d.Le.has(i.type) && f(i, n?.params?.messageId);
@@ -71,7 +71,7 @@ let T = {
             n.push(i);
         }
         if (0 === n.length) return Promise.all(t).then(() => void 0);
-        let r = i.Bo.post({ url: _.Rsh.THREADS_BULK, body: { thread_ids: n }, rejectWithError: !1 })
+        let r = i.Bo.post({ url: _.Rsh.THREADS_BULK, body: { thread_ids: n }, rejectWithError: (0, i.fT)() })
             .then((e) => {
                 let { body: t } = e,
                     i = new Set();
