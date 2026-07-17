@@ -23,8 +23,8 @@ var l,
     j = n(885386),
     y = n(951260),
     b = n(629016),
-    v = n(576705),
-    N = n(461213),
+    N = n(576705),
+    v = n(461213),
     T = n(625494),
     M = n(723702),
     R = n(518960),
@@ -43,8 +43,8 @@ var l,
     K = n(867455),
     z = n(780057),
     W = n(747926),
-    q = n(174459),
-    $ = n(453771),
+    $ = n(174459),
+    q = n(453771),
     J = n(408018);
 n(321073);
 var Z = n(661531),
@@ -102,10 +102,10 @@ function ef(e) {
         (0, W.Tv)(t, void 0, "Plus Button");
     }
     function E() {
-        q.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, J.x7)("/"));
+        $.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), m("/", (0, J.x7)("/"));
     }
     function S() {
-        q.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), F.R(H.s4.TEXT, p, void 0, t.id);
+        $.default.track(eu.HAw.CHANNEL_ATTACH_MENU_USE_APPS_CLICKED), F.R(H.s4.TEXT, p, void 0, t.id);
     }
     function _() {
         g();
@@ -126,13 +126,13 @@ function ef(e) {
             l = "",
             i = h.match(eA);
         null != i && ((l = i[1]), (n = i[2]), (e = i[3]), (l += i[4])),
-            (0, R.R)([(0, $.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
+            (0, R.R)([(0, q.VE)(new Blob([e], { type: "text/plain" }), `message.${n}`, "text/plain")], t, u),
             T._.dispatchToLastSubscribed(eu.jej.CLEAR_TEXT),
             "" !== l && T._.dispatchToLastSubscribed(eu.jej.INSERT_TEXT, { plainText: l });
     }
     return (
         s.useEffect(() => {
-            q.default.track(eu.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
+            $.default.track(eu.HAw.OPEN_POPOUT, { type: "Send Attachment", channel_id: t.id, guild_id: t.guild_id });
         }, [t.guild_id, t.id]),
         (0, i.jsx)(G.W, {
             "data-menu-migrated": !0,
@@ -376,7 +376,7 @@ let eE = s.memo(function (e) {
         w = (0, E.Us)(),
         F = s.useRef(null),
         H = s.useRef(null),
-        B = (0, o.bG)([N.A], () => N.A.getActivities()),
+        B = (0, o.bG)([v.A], () => v.A.getActivities()),
         V = (0, f.Et)(),
         K = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
         z = (0, o.yK)(
@@ -385,17 +385,17 @@ let eE = s.memo(function (e) {
             [B, l],
         ),
         { onShareClick: W } = (0, x.A)(l.id),
-        q = (0, o.bG)([A.Ay], () => A.Ay.hasClips()),
-        [$, J] = s.useState(null),
-        em = (0, p.sw)() && (V || q),
+        $ = (0, o.bG)([A.Ay], () => A.Ay.hasClips()),
+        [q, J] = s.useState(null),
+        em = (0, p.sw)() && (V || $),
         eg = l.isPrivate(),
-        ep = (0, o.bG)([v.A], () => eg || (v.A.can(eu.xBc.ATTACH_FILES, l) && v.A.can(eu.xBc.SEND_MESSAGES, l)));
+        ep = (0, o.bG)([N.A], () => eg || (N.A.can(eu.xBc.ATTACH_FILES, l) && N.A.can(eu.xBc.SEND_MESSAGES, l)));
     function eA() {
         (0, c.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
                     n.e("50884"),
-                    n.e("97782"),
+                    n.e("36453"),
                     n.e("16227"),
                     n.e("93594"),
                     n.e("9064"),
@@ -405,7 +405,7 @@ let eE = s.memo(function (e) {
                     n.e("78898"),
                     n.e("31938"),
                     n.e("72136"),
-                    n.e("57123"),
+                    n.e("63808"),
                     n.e("89418"),
                     n.e("30204"),
                     n.e("83952"),
@@ -417,7 +417,6 @@ let eE = s.memo(function (e) {
                     n.e("37715"),
                     n.e("74049"),
                     n.e("80559"),
-                    n.e("69201"),
                     n.e("95008"),
                     n.e("52566"),
                     n.e("1830"),
@@ -554,14 +553,14 @@ let eE = s.memo(function (e) {
             isAppsButtonEnabled: !G || U,
         });
     if (0 === eb.length) return null;
-    let ev = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: ex.dW }),
-        eN = (0, i.jsx)(u.Y, {
+    let eN = (0, i.jsx)(d.p, { size: "refresh_sm", color: "currentColor", colorClass: ex.dW }),
+        ev = (0, i.jsx)(u.Y, {
             targetElementRef: H,
-            shouldShow: null != $,
+            shouldShow: null != q,
             animation: u.Y.Animation.NONE,
             align: "left",
             position: "top",
-            positionKey: $ ?? "null",
+            positionKey: q ?? "null",
             onRequestOpen: () => {
                 J("attachMenu");
             },
@@ -569,7 +568,7 @@ let eE = s.memo(function (e) {
                 (0, c.hasAnyModalOpen)() || J(null);
             },
             renderPopout: (e) => {
-                if ("attachMenu" === $)
+                if ("attachMenu" === q)
                     return (0, i.jsx)(ef, {
                         ...e,
                         onClose: () => J(null),
@@ -594,7 +593,7 @@ let eE = s.memo(function (e) {
                     onDoubleClick: ep ? () => F.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: ev,
+                    children: eN,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -617,7 +616,7 @@ let eE = s.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: ex.Jd, children: eN }),
+            (0, i.jsx)("div", { className: ex.Jd, children: ev }),
         ],
     });
 });
