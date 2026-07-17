@@ -416,33 +416,35 @@ function eu(e) {
             onCloseModal: l,
             initialSelectedDecoration: o,
             guild: h,
+            returnRef: p,
         } = e,
-        p = (0, a.bG)([x.default], () => x.default.getCurrentUser()),
-        { analyticsLocations: g } = (0, m.Ay)(i, d.A.EDIT_AVATAR_DECORATION_MODAL),
-        { categories: A, purchases: v, isFetchingCategories: j, isFetchingPurchases: S } = (0, f.Ay)(),
-        k = j || (S && 0 === v.size);
+        g = (0, a.bG)([x.default], () => x.default.getCurrentUser()),
+        { analyticsLocations: A } = (0, m.Ay)(i, d.A.EDIT_AVATAR_DECORATION_MODAL),
+        { categories: v, purchases: j, isFetchingCategories: S, isFetchingPurchases: k } = (0, f.Ay)(),
+        C = S || (k && 0 === j.size);
     return (
         n.useEffect(() => {
-            I.default.track(er.HAw.OPEN_MODAL, { type: er.JJy.AVATAR_DECORATION_CUSTOMIZATION, location_stack: g });
-        }, [g]),
-        null == p
+            I.default.track(er.HAw.OPEN_MODAL, { type: er.JJy.AVATAR_DECORATION_CUSTOMIZATION, location_stack: A });
+        }, [A]),
+        null == g
             ? null
             : (0, r.jsx)(m.f5, {
-                  value: g,
+                  value: A,
                   children: (0, r.jsx)(u.EO, {
                       transitionState: t,
                       className: ea.yl,
-                      size: k ? u.rI.DYNAMIC : u.rI.MEDIUM,
+                      size: C ? u.rI.DYNAMIC : u.rI.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
+                      returnRef: p,
                       "data-migration-pending": !0,
-                      children: k
+                      children: C
                           ? (0, r.jsx)(c.y, { className: ea.u1, type: c.y.Type.SPINNING_CIRCLE })
                           : (0, r.jsx)(el, {
-                                user: p,
+                                user: g,
                                 guild: h,
-                                categories: A,
-                                purchases: v,
-                                analyticsLocations: g,
+                                categories: v,
+                                purchases: j,
+                                analyticsLocations: A,
                                 initialSelectedDecoration: o,
                                 onClose: function () {
                                     l(), s?.();

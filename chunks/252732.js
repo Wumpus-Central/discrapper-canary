@@ -1,25 +1,33 @@
 "use strict";
-n.d(t, { XD: () => p, sv: () => m, eh: () => g, sN: () => I, rM: () => A, d3: () => T });
+n.d(t, { XD: () => I, sv: () => f, eh: () => p, sN: () => m, rM: () => T, d3: () => g });
 var i = n(627968);
 n(64700);
 var r = n(317097),
-    s = n(192308);
+    a = n(192308);
 n(494921);
-var a = n(77257),
-    o = n(61310),
-    l = n(101058),
-    u = n(486020),
+var s = n(77257),
+    l = n(61310),
+    o = n(101058),
+    d = n(486020),
     c = n(453771),
-    d = n(427262),
+    u = n(427262),
     _ = n(228366),
-    h = n(478644),
-    f = n(339984),
-    E = n(375708);
-function p(e) {
-    let { uploadType: t, guildId: r, analyticsSource: u, filters: c, isTryItOut: d = !1, stackingBehavior: p } = e,
-        m = (0, o.Y)(t, r),
-        g = null;
-    (0, s.openModalLazy)(
+    E = n(478644),
+    A = n(339984),
+    h = n(375708);
+function I(e) {
+    let {
+            uploadType: t,
+            guildId: r,
+            analyticsSource: d,
+            filters: c,
+            isTryItOut: u = !1,
+            stackingBehavior: I,
+            returnRef: f,
+        } = e,
+        p = (0, l.Y)(t, r),
+        T = null;
+    (0, a.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 n.e("79465"),
@@ -38,25 +46,25 @@ function p(e) {
             return (n) =>
                 (0, i.jsx)(e, {
                     filters: c,
-                    maxFileSizeBytes: h.j,
-                    imageSpecifications: t === f.HL.BANNER ? E.intl.string(E.t.IhzZlo) : void 0,
+                    maxFileSizeBytes: E.j,
+                    imageSpecifications: t === A.HL.BANNER ? h.intl.string(h.t.IhzZlo) : void 0,
                     onFileSelected: (e) => {
-                        g = null != m ? a.A.fromBlob(m, e) : null;
+                        T = null != p ? s.A.fromBlob(p, e) : null;
                     },
                     onComplete: async (e) => {
-                        let { assetOrigin: n, imageUri: i, file: s, originalAsset: o } = e;
-                        null == g && null != m && (g = a.A.fromBlob(m, s));
-                        let c = (await g?.getOriginalMd5()) ?? null,
-                            h = s.name.replace(/\.[^/.]+$/, ""),
-                            f = (0, l.Rh)({ filename: h, assetOrigin: n });
+                        let { assetOrigin: n, imageUri: i, file: a, originalAsset: l } = e;
+                        null == T && null != p && (T = s.A.fromBlob(p, a));
+                        let c = (await T?.getOriginalMd5()) ?? null,
+                            E = a.name.replace(/\.[^/.]+$/, ""),
+                            A = (0, o.Rh)({ filename: E, assetOrigin: n });
                         !(function (e) {
                             let {
                                 image: t,
                                 file: n,
                                 uploadType: i,
                                 guildId: r,
-                                analyticsSource: s,
-                                isTryItOut: a = !1,
+                                analyticsSource: a,
+                                isTryItOut: s = !1,
                             } = e;
                             _.h.dispatch({
                                 type: "PROFILE_CUSTOMIZATION_OPEN_PREVIEW_MODAL",
@@ -64,56 +72,57 @@ function p(e) {
                                 file: n,
                                 uploadType: i,
                                 guildId: r,
-                                analyticsSource: s,
-                                isTryItOut: a,
+                                analyticsSource: a,
+                                isTryItOut: s,
                             });
                         })({
-                            image: (0, l.XB)({
+                            image: (0, o.XB)({
                                 assetOrigin: n,
                                 imageUri: i,
-                                description: f,
-                                originalAsset: o,
+                                description: A,
+                                originalAsset: l,
                                 originalMd5: c,
                             }),
-                            file: s,
+                            file: a,
                             uploadType: t,
                             guildId: r,
-                            analyticsSource: u,
-                            isTryItOut: d,
+                            analyticsSource: d,
+                            isTryItOut: u,
                         });
                     },
                     uploadType: t,
                     showUpsellHeader: !0,
+                    returnRef: f,
                     ...n,
                 });
         },
-        { stackingBehavior: p },
+        { stackingBehavior: I },
     );
 }
-function m(e, t, n) {
+function f(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (null != e) return e;
-    let { size: r = 80, canAnimate: s = !0 } = i,
-        a = null === e;
-    return a && null == t
-        ? u.Ay.getDefaultAvatarURL(n.id, n.discriminator)
-        : a || t?.avatar == null
-          ? n.getAvatarURL(void 0, r, s)
-          : n.getAvatarURL(t?.guildId, r, s);
+    let { size: r = 80, canAnimate: a = !0 } = i,
+        s = null === e;
+    return s && null == t
+        ? d.Ay.getDefaultAvatarURL(n.id, n.discriminator)
+        : s || t?.avatar == null
+          ? n.getAvatarURL(void 0, r, a)
+          : n.getAvatarURL(t?.guildId, r, a);
 }
-function g(e) {
+function p(e) {
     let { pendingNickname: t, pendingGlobalName: n, user: i, guildMember: r } = e,
-        s = "" === t ? null : (t ?? r?.nick),
-        a = "" === n ? i.username : n;
-    return s ?? a ?? d.Ay.getName(i);
+        a = "" === t ? null : (t ?? r?.nick),
+        s = "" === n ? i.username : n;
+    return a ?? s ?? u.Ay.getName(i);
 }
-function A(e, t, n) {
+function T(e, t, n) {
     n(e ?? (null != t ? null : void 0));
 }
-function I(e) {
+function m(e) {
     return (null != e ? (0, r.OK)(e) : 1) > 0.25;
 }
-function T(e) {
+function g(e) {
     return null == e
         ? e
         : e.replace(/[0-9.,]+ ?kb/gi, (e) => {

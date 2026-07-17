@@ -401,35 +401,36 @@ function ea(e) {
     });
 }
 function eu(e) {
-    let { transitionState: t, analyticsLocations: n, initialSelectedEffect: i, guild: a, onClose: c } = e,
-        { categories: m, purchases: g, isFetchingCategories: f, isFetchingPurchases: I } = (0, v.Ay)(),
-        A = f || (I && 0 === g.size),
-        j = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
-        { analyticsLocations: E } = (0, p.Ay)(n, d.A.EDIT_PROFILE_EFFECT_MODAL),
-        k = (0, h.N2)({ user: j, guildId: a?.id });
+    let { transitionState: t, analyticsLocations: n, initialSelectedEffect: i, guild: a, onClose: c, returnRef: m } = e,
+        { categories: g, purchases: f, isFetchingCategories: I, isFetchingPurchases: A } = (0, v.Ay)(),
+        j = I || (A && 0 === f.size),
+        E = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
+        { analyticsLocations: k } = (0, p.Ay)(n, d.A.EDIT_PROFILE_EFFECT_MODAL),
+        y = (0, h.N2)({ user: E, guildId: a?.id });
     return (
         r.useEffect(() => {
-            C.default.track(ei.HAw.OPEN_MODAL, { type: ei.JJy.PROFILE_EFFECT_CUSTOMIZATION, location_stack: E });
-        }, [E]),
+            C.default.track(ei.HAw.OPEN_MODAL, { type: ei.JJy.PROFILE_EFFECT_CUSTOMIZATION, location_stack: k });
+        }, [k]),
         (0, s.jsx)(p.f5, {
-            value: E,
+            value: k,
             children: (0, s.jsx)(u.EO, {
                 transitionState: t,
                 className: er.yl,
-                size: A ? u.rI.DYNAMIC : u.rI.MEDIUM,
+                size: j ? u.rI.DYNAMIC : u.rI.MEDIUM,
                 parentComponent: "ProfileEffectModal",
+                returnRef: m,
                 "data-migration-pending": !0,
-                children: A
+                children: j
                     ? (0, s.jsx)(o.y, { className: er.u1, type: o.y.Type.SPINNING_CIRCLE })
                     : (0, s.jsx)(ea, {
-                          user: j,
+                          user: E,
                           guild: a,
-                          categories: m,
-                          purchases: g,
+                          categories: g,
+                          purchases: f,
                           initialSelectedProfileEffect: i,
-                          currentSavedEffect: k,
+                          currentSavedEffect: y,
                           onClose: c,
-                          analyticsLocations: E,
+                          analyticsLocations: k,
                       }),
             }),
         })

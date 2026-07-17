@@ -386,34 +386,42 @@ function ea(e) {
     });
 }
 function eu(e) {
-    let { transitionState: t, analyticsLocations: n, guild: i, onClose: a, initialSelectedProfileFrame: o } = e,
-        { categories: m, purchases: g, isFetchingCategories: f, isFetchingPurchases: A } = (0, y.Ay)(),
-        C = f || (A && 0 === g.size),
-        j = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
-        { analyticsLocations: k } = (0, p.Ay)(n, d.A.EDIT_PROFILE_FRAME_MODAL),
-        P = (0, h.Xf)({ user: j, guildId: i?.id });
+    let {
+            transitionState: t,
+            analyticsLocations: n,
+            guild: i,
+            onClose: a,
+            initialSelectedProfileFrame: o,
+            returnRef: m,
+        } = e,
+        { categories: g, purchases: f, isFetchingCategories: A, isFetchingPurchases: C } = (0, y.Ay)(),
+        j = A || (C && 0 === f.size),
+        k = (0, l.bG)([x.default], () => x.default.getCurrentUser()),
+        { analyticsLocations: P } = (0, p.Ay)(n, d.A.EDIT_PROFILE_FRAME_MODAL),
+        v = (0, h.Xf)({ user: k, guildId: i?.id });
     return (
         r.useEffect(() => {
-            I.default.track(ei.HAw.OPEN_MODAL, { type: ei.JJy.PROFILE_FRAME_CUSTOMIZATION, location_stack: k });
-        }, [k]),
+            I.default.track(ei.HAw.OPEN_MODAL, { type: ei.JJy.PROFILE_FRAME_CUSTOMIZATION, location_stack: P });
+        }, [P]),
         (0, s.jsx)(p.f5, {
-            value: k,
+            value: P,
             children: (0, s.jsx)(u.EO, {
                 transitionState: t,
                 className: er.yl,
-                size: C ? u.rI.DYNAMIC : u.rI.MEDIUM,
+                size: j ? u.rI.DYNAMIC : u.rI.MEDIUM,
                 parentComponent: "ProfileFrameModal",
+                returnRef: m,
                 "data-migration-pending": !0,
-                children: C
+                children: j
                     ? (0, s.jsx)(c.y, { className: er.u1, type: c.y.Type.SPINNING_CIRCLE })
                     : (0, s.jsx)(ea, {
-                          user: j,
+                          user: k,
                           guild: i,
-                          categories: m,
-                          purchases: g,
-                          currentSavedFrame: P,
+                          categories: g,
+                          purchases: f,
+                          currentSavedFrame: v,
                           onClose: a,
-                          analyticsLocations: k,
+                          analyticsLocations: P,
                           initialSelectedProfileFrame: o,
                       }),
             }),

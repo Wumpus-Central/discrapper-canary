@@ -3,7 +3,7 @@ var i = t(627968);
 t(64700);
 var n = t(192308);
 function l(e) {
-    let { initialSelectedEffect: a, analyticsLocations: l, guild: s, stackingBehavior: c } = e;
+    let { initialSelectedEffect: a, analyticsLocations: l, guild: r, stackingBehavior: s, returnRef: c } = e;
     (0, n.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
@@ -45,14 +45,15 @@ function l(e) {
                 t.e("80239"),
                 t.e("60177"),
                 t.e("76087"),
-                t.e("31018"),
+                t.e("26931"),
                 t.e("20683"),
                 t.e("27462"),
                 t.e("28545"),
                 t.e("60264"),
             ]).then(t.bind(t, 937563));
-            return (t) => (0, i.jsx)(e, { ...t, guild: s, initialSelectedEffect: a, analyticsLocations: l });
+            return (t) =>
+                (0, i.jsx)(e, { ...t, guild: r, initialSelectedEffect: a, analyticsLocations: l, returnRef: c });
         },
-        { stackingBehavior: c },
+        { stackingBehavior: s },
     );
 }

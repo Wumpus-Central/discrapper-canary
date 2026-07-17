@@ -1,17 +1,24 @@
 "use strict";
-n.d(t, { L: () => l, Te: () => o });
+n.d(t, { L: () => o, Te: () => l });
 var i = n(627968);
 n(64700);
 var r = n(778712),
-    s = n(192308);
+    a = n(192308);
 n(515718);
-var a = n(190460);
-function o(e) {
-    return "number" != typeof e ? (0, r.FT)(e) * a.Xq : e * a.Xq;
-}
+var s = n(190460);
 function l(e) {
-    let { analyticsLocations: t, initialSelectedDecoration: r, guild: a, onClose: o, stackingBehavior: l } = e;
-    (0, s.openModalLazy)(
+    return "number" != typeof e ? (0, r.FT)(e) * s.Xq : e * s.Xq;
+}
+function o(e) {
+    let {
+        analyticsLocations: t,
+        initialSelectedDecoration: r,
+        guild: s,
+        onClose: l,
+        stackingBehavior: o,
+        returnRef: d,
+    } = e;
+    (0, a.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
                 n.e("59252"),
@@ -29,12 +36,13 @@ function l(e) {
                 (0, i.jsx)(e, {
                     ...n,
                     onCloseModal: n.onClose,
-                    onClose: o,
+                    onClose: l,
                     analyticsLocations: t,
                     initialSelectedDecoration: r,
-                    guild: a,
+                    guild: s,
+                    returnRef: d,
                 });
         },
-        { stackingBehavior: l },
+        { stackingBehavior: o },
     );
 }

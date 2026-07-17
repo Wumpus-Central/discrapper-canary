@@ -3,7 +3,7 @@ var i = t(627968);
 t(64700);
 var n = t(192308);
 function l(e) {
-    let { analyticsLocations: a, guild: l, initialSelectedProfileFrame: s, stackingBehavior: c } = e;
+    let { analyticsLocations: a, guild: l, initialSelectedProfileFrame: r, stackingBehavior: s, returnRef: c } = e;
     (0, n.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
@@ -27,12 +27,12 @@ function l(e) {
                 t.e("45887"),
                 t.e("15476"),
                 t.e("63232"),
+                t.e("31988"),
                 t.e("33115"),
                 t.e("55936"),
-                t.e("31988"),
                 t.e("71133"),
-                t.e("96137"),
                 t.e("76428"),
+                t.e("96137"),
                 t.e("27773"),
                 t.e("48900"),
                 t.e("82069"),
@@ -45,16 +45,17 @@ function l(e) {
                 t.e("80239"),
                 t.e("60177"),
                 t.e("76087"),
-                t.e("40362"),
-                t.e("30938"),
-                t.e("91254"),
+                t.e("26931"),
+                t.e("80112"),
+                t.e("74016"),
                 t.e("20683"),
                 t.e("27462"),
                 t.e("28545"),
                 t.e("23172"),
             ]).then(t.bind(t, 651247));
-            return (t) => (0, i.jsx)(e, { ...t, guild: l, analyticsLocations: a, initialSelectedProfileFrame: s });
+            return (t) =>
+                (0, i.jsx)(e, { ...t, guild: l, analyticsLocations: a, initialSelectedProfileFrame: r, returnRef: c });
         },
-        { stackingBehavior: c },
+        { stackingBehavior: s },
     );
 }
