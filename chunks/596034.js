@@ -1,161 +1,178 @@
-n.d(t, { I: () => h, _: () => _ });
-var a,
-    r = n(627968);
-n(64700);
-var l = n(834730),
-    i = n(150934),
-    s = n(331329),
-    u = n(403362),
-    o = n(975571),
-    c = n(580630),
-    d = n(652215),
-    m = n(202541),
-    f = n(327105),
-    p = n(375708),
-    b = n(24535);
-function A(e) {
-    let { value: t, onChange: n } = e;
+l.d(t, { I: () => b, _: () => N });
+var n,
+    r = l(627968);
+l(64700);
+var i = l(834730),
+    s = l(150934),
+    a = l(118982),
+    u = l(403362),
+    c = l(975571),
+    o = l(428262),
+    d = l(580630),
+    m = l(652215),
+    x = l(202541),
+    h = l(327105),
+    p = l(375708),
+    v = l(24535);
+function j(e) {
+    let { value: t, onChange: l } = e;
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsx)(l.E, {
+            (0, r.jsx)(i.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: p.intl.string(f.default["5dmUS+"]),
+                children: p.intl.string(h.default["5dmUS+"]),
             }),
-            (0, r.jsx)(i.S, { label: p.intl.string(f.default.XBtSMa), checked: t, onChange: n }),
+            (0, r.jsx)(s.S, { label: p.intl.string(h.default.XBtSMa), checked: t, onChange: l }),
         ],
     });
 }
-let g = { [m.WT.DAY]: f.default.iPorlt, [m.WT.MONTH]: f.default["8CYJ8Y"], [m.WT.YEAR]: f.default.gvaGGA };
-function v(e) {
+let f = { [x.WT.DAY]: h.default.iPorlt, [x.WT.MONTH]: h.default["8CYJ8Y"], [x.WT.YEAR]: h.default.gvaGGA };
+function g(e) {
     let {
             purchaseButtonText: t,
-            totalDue: n,
-            renewalPrice: a,
+            totalDue: l,
+            renewalPrice: n,
             currency: r,
-            interval: l,
-            intervalCount: i,
-            startDate: s,
+            interval: i,
+            intervalCount: s,
+            startDate: a,
             multiPeriodDiscountAttributes: u,
         } = e,
-        m = (0, c.$g)(n, r),
-        f = (0, c.$g)(a, r),
-        b = d.X7G.PAID_TERMS,
-        A = d.qF7.CONTACT_US,
-        v = o.A.getArticleURL(d.MVz.BILLING);
+        x = (0, d.$g)(l, r),
+        h = (0, d.$g)(n, r),
+        v = m.X7G.PAID_TERMS,
+        j = m.qF7.CONTACT_US,
+        g = c.A.getArticleURL(m.MVz.BILLING);
     return {
         purchaseButtonText: t,
-        totalDue: m,
-        renewalPrice: f,
-        interval: p.intl.formatToPlainString(g[l], { intervalCount: i }),
-        startDate: s,
+        totalDue: x,
+        renewalPrice: h,
+        interval: p.intl.formatToPlainString(f[i], { intervalCount: s }),
+        startDate: a,
         multiPeriodDiscountAttributes: (function (e) {
-            let { currency: t, multiPeriodDiscountAttributes: n } = e;
-            if (null != n)
+            let { currency: t, multiPeriodDiscountAttributes: l } = e;
+            if (null != l)
                 return {
-                    discountedRenewalPrice: (0, c.$g)(n.discountedRenewalPrice, t),
-                    discountEndDate: n.discountEndDate,
-                    priceWithoutDiscount: (0, c.$g)(n.priceWithoutDiscount, t),
+                    discountedRenewalPrice: (0, d.$g)(l.discountedRenewalPrice, t),
+                    discountEndDate: l.discountEndDate,
+                    priceWithoutDiscount: (0, d.$g)(l.priceWithoutDiscount, t),
+                    trialDuration: (0, o.re)({ intervalType: l.intervalType, intervalCount: l.intervalCount }),
                 };
         })({ multiPeriodDiscountAttributes: u, currency: r }),
-        paidServicesTermsUrl: b,
-        contactUsUrl: A,
-        subscriptionsFaqUrl: v,
+        paidServicesTermsUrl: v,
+        contactUsUrl: j,
+        subscriptionsFaqUrl: g,
     };
 }
-var h =
-    (((a = {})[(a.Subscription = 0)] = "Subscription"),
-    (a[(a.SubscriptionTrial = 1)] = "SubscriptionTrial"),
-    (a[(a.SubscriptionApplication = 2)] = "SubscriptionApplication"),
-    (a[(a.GuildProductOneTimePurchase = 3)] = "GuildProductOneTimePurchase"),
-    (a[(a.OrbsRedemption = 4)] = "OrbsRedemption"),
-    (a[(a.Shop = 5)] = "Shop"),
-    (a[(a.PremiumAppsOneTimePurchase = 6)] = "PremiumAppsOneTimePurchase"),
-    (a[(a.GiftNitro = 7)] = "GiftNitro"),
-    (a[(a.GiftShop = 8)] = "GiftShop"),
-    (a[(a.GiftGameShop = 9)] = "GiftGameShop"),
-    (a[(a.OrbsGameShop = 10)] = "OrbsGameShop"),
-    a);
-function _(e) {
+var b =
+    (((n = {})[(n.Subscription = 0)] = "Subscription"),
+    (n[(n.SubscriptionTrial = 1)] = "SubscriptionTrial"),
+    (n[(n.SubscriptionApplication = 2)] = "SubscriptionApplication"),
+    (n[(n.GuildProductOneTimePurchase = 3)] = "GuildProductOneTimePurchase"),
+    (n[(n.OrbsRedemption = 4)] = "OrbsRedemption"),
+    (n[(n.Shop = 5)] = "Shop"),
+    (n[(n.PremiumAppsOneTimePurchase = 6)] = "PremiumAppsOneTimePurchase"),
+    (n[(n.GiftNitro = 7)] = "GiftNitro"),
+    (n[(n.GiftShop = 8)] = "GiftShop"),
+    (n[(n.GiftGameShop = 9)] = "GiftGameShop"),
+    (n[(n.OrbsGameShop = 10)] = "OrbsGameShop"),
+    n);
+function N(e) {
     return (0, r.jsxs)("div", {
-        className: b.k,
+        className: v.k,
         children: [
-            null != e.immediateDelivery && (0, r.jsx)(A, { ...e.immediateDelivery }),
-            (0, r.jsx)(l.E, {
+            null != e.immediateDelivery && (0, r.jsx)(j, { ...e.immediateDelivery }),
+            (0, r.jsx)(i.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: (function (e) {
-                    let t = d.X7G.PAID_TERMS,
-                        n = d.X7G.PAID_TERMS_VIRTUAL_GOODS;
+                    let t = m.X7G.PAID_TERMS,
+                        l = m.X7G.PAID_TERMS_VIRTUAL_GOODS;
                     switch (e.type) {
                         case 0:
-                            let a = v(e);
-                            if (null != a.multiPeriodDiscountAttributes) {
-                                let { discountEndDate: e, priceWithoutDiscount: t } = a.multiPeriodDiscountAttributes,
-                                    n = { ...a, startDate: e, renewalPrice: t };
-                                return p.intl.format(f.default["2pNIbI"], n);
+                            let n = g(e);
+                            if (null != n.multiPeriodDiscountAttributes) {
+                                let {
+                                    discountEndDate: e,
+                                    discountedRenewalPrice: t,
+                                    priceWithoutDiscount: l,
+                                    trialDuration: r,
+                                } = n.multiPeriodDiscountAttributes;
+                                return p.intl.format(h.default["A+qfZ+"], {
+                                    purchaseButtonText: n.purchaseButtonText,
+                                    totalDue: n.totalDue,
+                                    trialOrDiscountPrice: t,
+                                    trialDuration: r,
+                                    trialOrDiscountEndDate: e,
+                                    fullRenewalPrice: l,
+                                    interval: n.interval,
+                                    subscriptionsFaqUrl: n.subscriptionsFaqUrl,
+                                    paidServicesTermsUrl: n.paidServicesTermsUrl,
+                                    contactUsUrl: n.contactUsUrl,
+                                });
                             }
-                            return p.intl.format(f.default.OH1Evm, a);
+                            return p.intl.format(h.default.OH1Evm, n);
                         case 1:
-                            return p.intl.format(f.default["2pNIbI"], v(e));
+                            return p.intl.format(h.default["2pNIbI"], g(e));
                         case 2:
-                            return p.intl.format(f.default.bbgJdE, v(e));
+                            return p.intl.format(h.default.bbgJdE, g(e));
                         case 4:
-                            return p.intl.format(f.default.IP93kX, {
+                            return p.intl.format(h.default.IP93kX, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: n,
+                                virtualGoodsTermsUrl: l,
                             });
                         case 5:
-                            return p.intl.format(f.default.ITY3j6, {
+                            return p.intl.format(h.default.ITY3j6, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: n,
+                                virtualGoodsTermsUrl: l,
                             });
                         case 3:
-                            return p.intl.format(f.default.EOOWpo, { ...e, paidServicesTermsUrl: t });
+                            return p.intl.format(h.default.EOOWpo, { ...e, paidServicesTermsUrl: t });
                         case 6:
-                            return p.intl.format(f.default.G0nk6B, { ...e, paidServicesTermsUrl: t });
+                            return p.intl.format(h.default.G0nk6B, { ...e, paidServicesTermsUrl: t });
                         case 7:
-                            return p.intl.format(f.default.P5KfYx, { ...e, paidServicesTermsUrl: t });
+                            return p.intl.format(h.default.P5KfYx, { ...e, paidServicesTermsUrl: t });
                         case 8:
-                            return p.intl.format(f.default.BkYev7, {
+                            return p.intl.format(h.default.BkYev7, {
                                 ...e,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: n,
+                                virtualGoodsTermsUrl: l,
                             });
                         case 9:
                         case 10:
-                            let { applicationId: r, applicationName: l, shouldAppendDisclaimer: i } = e,
-                                o = l ?? "",
-                                c = (0, s.k3)(null != r ? { id: r, name: o } : void 0);
-                            if (i)
-                                return p.intl.format(9 === e.type ? f.default["0Zl+Xt"] : f.default["5fbNBX"], {
+                            let { applicationId: r, applicationName: i, shouldAppendDisclaimer: s } = e,
+                                c = i ?? "",
+                                o = (0, a.k3)(null != r ? { id: r, name: c } : void 0);
+                            if (s)
+                                return p.intl.format(9 === e.type ? h.default["0Zl+Xt"] : h.default["5fbNBX"], {
                                     ...e,
-                                    applicationName: o,
+                                    applicationName: c,
                                     paidServicesTermsUrl: t,
-                                    platformInfo: c,
-                                    virtualGoodsTermsUrl: d.X7G.PAID_TERMS_VIRTUAL_GOODS,
+                                    platformInfo: o,
+                                    virtualGoodsTermsUrl: m.X7G.PAID_TERMS_VIRTUAL_GOODS,
                                 });
-                            return p.intl.format(9 === e.type ? f.default.OVhTE7 : f.default.cwuBkH, {
+                            return p.intl.format(9 === e.type ? h.default.OVhTE7 : h.default.cwuBkH, {
                                 ...e,
-                                applicationName: o,
+                                applicationName: c,
                                 paidServicesTermsUrl: t,
-                                virtualGoodsTermsUrl: d.X7G.PAID_TERMS_VIRTUAL_GOODS,
+                                virtualGoodsTermsUrl: m.X7G.PAID_TERMS_VIRTUAL_GOODS,
                             });
                         default:
                             (0, u.xb)(e);
                     }
                 })(e.variant),
             }),
-            e.paymentSourceType === d.hes.PAYSAFE_CARD &&
-                (0, r.jsx)(l.E, {
+            e.paymentSourceType === m.hes.PAYSAFE_CARD &&
+                (0, r.jsx)(i.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children: p.intl.string(p.t.kj9VLI),
                 }),
-            e.paymentSourceType === d.hes.SOFORT &&
-                (0, r.jsx)(l.E, {
+            e.paymentSourceType === m.hes.SOFORT &&
+                (0, r.jsx)(i.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children: p.intl.string(p.t["UYy1/h"]),
