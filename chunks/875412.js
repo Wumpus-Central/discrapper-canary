@@ -1384,7 +1384,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 580481, Version Hash: 7d6b6c2f563bd493b583218cfdbf91cc80579e18`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 580584, Version Hash: e7cb0b9718b68415bedcc318e1623e51d90a7745`,
 ),
     v.A.setTags({ appContext: F.QCW }),
     em.A.initBasic(),
@@ -18356,7 +18356,7 @@ let gU = "isHideDevBanner",
                     className: td()(gP.Wz, gP.mr),
                     children: [
                         (0, R.jsx)(gM, { className: gP.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "580481" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "580584" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -20902,7 +20902,10 @@ let CS = eh.memo(function () {
                 (0, R.jsx)(g7, {}),
                 (0, R.jsx)(gq, {}),
                 (0, R.jsx)(a4.A, { section: F.JJy.RTC_CONNECTION_PANEL, children: (0, R.jsx)(Cp, {}) }),
-                (0, R.jsx)(a4.A, { section: F.JJy.ACCOUNT_PANEL, children: (0, R.jsx)(St.A, {}) }),
+                (0, R.jsx)(a4.A, {
+                    section: F.JJy.ACCOUNT_PANEL,
+                    children: (0, R.jsx)(aP.A.Provider, { value: void 0, children: (0, R.jsx)(St.A, {}) }),
+                }),
             ],
         }),
     });
