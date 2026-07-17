@@ -444,7 +444,8 @@
 }
 
 .numberBadge__2ea32 {
-    background-color: var(--background-mod-strong)
+    background-color: var(--badge-background-default);
+    color: var(--badge-text-default)
 }
 
 .newBadge__2ea32 {
