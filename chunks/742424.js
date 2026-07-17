@@ -711,7 +711,7 @@ let tW = (0, eQ.Fe)({
                 n.e("93159"),
                 n.e("55936"),
                 n.e("89088"),
-                n.e("42834"),
+                n.e("69294"),
                 n.e("94723"),
                 n.e("62931"),
                 n.e("45959"),
@@ -740,7 +740,7 @@ let tW = (0, eQ.Fe)({
                 n.e("55654"),
                 n.e("27773"),
                 n.e("50097"),
-                n.e("23164"),
+                n.e("80445"),
                 n.e("48900"),
                 n.e("35485"),
                 n.e("82069"),
@@ -901,8 +901,8 @@ function tq(e) {
                                     hasRestrictedOrMutedVCParticipant: h,
                                     children: (0, i.jsxs)(u.D, {
                                         "aria-label": ed.intl.string(ed.t.WIVYqJ),
-                                        onClick: () => {
-                                            eP.A.updateChatOpen(l.id, !0), (0, e8.iN)(l.id), a?.(l);
+                                        onClick: function () {
+                                            null != l && (eP.A.updateChatOpen(l.id, !0), (0, e8.iN)(l.id), a?.(l));
                                         },
                                         className: tj.I3,
                                         children: [
@@ -957,13 +957,14 @@ function tq(e) {
                     : (0, i.jsx)(f, {
                           hasRestrictedOrMutedVCParticipant: h,
                           children: (0, i.jsx)(m.$, {
-                              onClick: () => {
-                                  eZ.A.handleVoiceConnect({
-                                      channel: l,
-                                      connected: A,
-                                      needSubscriptionToAccess: c,
-                                      routeDirectlyToChannel: !0,
-                                  });
+                              onClick: function () {
+                                  null != l &&
+                                      eZ.A.handleVoiceConnect({
+                                          channel: l,
+                                          connected: A,
+                                          needSubscriptionToAccess: c,
+                                          routeDirectlyToChannel: !0,
+                                      });
                               },
                               fullWidth: !0,
                               text: I ? ed.intl.string(ed.t.I6JG46) : ed.intl.string(ed.t.VJlc0S),
@@ -1048,56 +1049,56 @@ function tq(e) {
             null != o && p
                 ? ed.intl.formatToPlainString(ed.t["8lzR/R"], { channel: V })
                 : ed.intl.formatToPlainString(ed.t["4c+CAx"], { channel: `@${F}` }),
-        H = p ? ed.intl.string(ed.t.Z2CUgn) : ed.intl.string(ed.t.XLGiTG),
-        j = async (e) => {
-            let t,
-                { emoji: n } = e;
-            if (null != n) {
-                if (
-                    (tp.default.track(eW.HAw.CONTENT_POPOUT_EMOJI_CLICKED, {
-                        surface_type: tV.UG.GUILD_MEMBER_LIST,
-                        channel_id: o?.id,
-                        guild_id: o?.guild_id,
-                    }),
-                    (0, eJ.Dr)(eA.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
-                    O(!0),
-                    L(!1),
-                    p)
-                )
-                    x()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
-                else {
-                    let e = await eM.A.getOrEnsurePrivateChannel(c.id);
-                    t = tu.A.getChannel(e) ?? null;
-                }
-                return (
-                    x()(null != t, "Send channel must be defined"),
-                    Y({
-                        reply: `:${n.name}:`,
-                        sendToChannel: t,
-                        onComplete: (e, t) => {
-                            L(!0),
-                                setTimeout(() => {
-                                    O(!1), _(e, t);
-                                }, 600);
-                        },
-                        interactionType: tV.PA.REACTION_EMOJI_REACT_SENT,
-                        requiresChannelReadiness: !1,
-                    })
-                );
-            }
-        },
-        W = async (e) => {
-            let t;
-            if (((0, eJ.Dr)(eA.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), p))
+        H = p ? ed.intl.string(ed.t.Z2CUgn) : ed.intl.string(ed.t.XLGiTG);
+    async function j(e) {
+        let t,
+            { emoji: n } = e;
+        if (null != n) {
+            if (
+                (tp.default.track(eW.HAw.CONTENT_POPOUT_EMOJI_CLICKED, {
+                    surface_type: tV.UG.GUILD_MEMBER_LIST,
+                    channel_id: o?.id,
+                    guild_id: o?.guild_id,
+                }),
+                (0, eJ.Dr)(eA.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP),
+                O(!0),
+                L(!1),
+                p)
+            )
                 x()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
             else {
-                let e = await eM.A.openPrivateChannel({ recipientIds: c.id }),
-                    n = tu.A.getChannel(e);
-                x()(null != n, "DM channel must be defined"), (t = n);
+                let e = await eM.A.getOrEnsurePrivateChannel(c.id);
+                t = tu.A.getChannel(e) ?? null;
             }
-            let n = t.type === eW.rbe.DM ? tV.PA.DM_REACTION_MESSAGE_SENT : tV.PA.CHANNEL_REACTION_MESSAGE_SENT;
-            return Y({ reply: e, sendToChannel: t, interactionType: n, onComplete: _, requiresChannelReadiness: !0 });
-        };
+            return (
+                x()(null != t, "Send channel must be defined"),
+                Y({
+                    reply: `:${n.name}:`,
+                    sendToChannel: t,
+                    onComplete: (e, t) => {
+                        L(!0),
+                            setTimeout(() => {
+                                O(!1), _(e, t);
+                            }, 600);
+                    },
+                    interactionType: tV.PA.REACTION_EMOJI_REACT_SENT,
+                    requiresChannelReadiness: !1,
+                })
+            );
+        }
+    }
+    async function W(e) {
+        let t;
+        if (((0, eJ.Dr)(eA.M.CONTENT_INVENTORY_ONE_CLICK_REPLY_COACHTIP), p))
+            x()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o);
+        else {
+            let e = await eM.A.openPrivateChannel({ recipientIds: c.id }),
+                n = tu.A.getChannel(e);
+            x()(null != n, "DM channel must be defined"), (t = n);
+        }
+        let n = t.type === eW.rbe.DM ? tV.PA.DM_REACTION_MESSAGE_SENT : tV.PA.CHANNEL_REACTION_MESSAGE_SENT;
+        return Y({ reply: e, sendToChannel: t, interactionType: n, onComplete: _, requiresChannelReadiness: !0 });
+    }
     async function Y(e) {
         let { reply: t, sendToChannel: n, onComplete: i, interactionType: r, requiresChannelReadiness: a } = e;
         g?.focus(),
@@ -2160,8 +2161,8 @@ function nx(e) {
             artists: h,
             canOpen: null != E.sync_id,
             linkClassName: tj.zA,
-            onOpenSpotifyArtist: (e) => {
-                (0, nN.mN)(E, f.id, e);
+            onOpenSpotifyArtist: function (e) {
+                null != E && null != f && (0, nN.mN)(E, f.id, e);
             },
         })),
         S?.syncDisabled === !1 &&
@@ -2174,8 +2175,8 @@ function nx(e) {
                         fullWidth: !0,
                         text: ed.intl.string(ed.t.eU3inB),
                         icon: nS.J,
-                        onClick: () => {
-                            (0, nL.A)(S, nU.Qp.USER_ACTIVITY_SYNC), o();
+                        onClick: function () {
+                            null != S && ((0, nL.A)(S, nU.Qp.USER_ACTIVITY_SYNC), o());
                         },
                     },
                     "listen-along",

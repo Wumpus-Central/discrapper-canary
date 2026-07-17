@@ -1,4 +1,4 @@
-t.d(n, { A: () => I });
+t.d(n, { A: () => f });
 var l = t(627968),
     i = t(64700),
     s = t(17928),
@@ -14,26 +14,26 @@ var l = t(627968),
     C = t(707592),
     E = t(496092),
     p = t(132860),
-    g = t(508654),
-    x = t(375708);
-function I(e) {
+    x = t(508654),
+    g = t(375708);
+function f(e) {
     let { channelId: n, onClick: t } = e,
-        I = (0, u.Us)(),
-        f = (0, g.Qs)(n),
-        T = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
-        { canManageGuildEvent: v } = (0, d.nr)(T),
-        _ = v(f),
-        j = i.useRef(null);
-    if (null == f) return null;
-    let N = () => {
-            null != T && (0, p.A)(T) ? (0, C.Py)(T, I) : t();
-        },
-        O = () => {
-            E.default.endEvent(f.id, f.guild_id);
-        };
-    return _
+        f = (0, u.Us)(),
+        I = (0, x.Qs)(n),
+        v = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
+        { canManageGuildEvent: T } = (0, d.nr)(v),
+        j = T(I),
+        _ = i.useRef(null);
+    if (null == I) return null;
+    function N() {
+        null != v && (0, p.A)(v) ? (0, C.Py)(v, f) : t();
+    }
+    function O() {
+        null != I && E.default.endEvent(I.id, I.guild_id);
+    }
+    return j
         ? (0, l.jsx)(a.Y, {
-              targetElementRef: j,
+              targetElementRef: _,
               renderPopout: (e) => {
                   let { closePopout: n } = e;
                   return (0, l.jsx)(A.A, {
@@ -41,13 +41,13 @@ function I(e) {
                           "data-menu-migrated": !0,
                           navId: "exit-options",
                           onSelect: () => {},
-                          "aria-label": x.intl.string(x.t["K6/mk3"]),
+                          "aria-label": g.intl.string(g.t["K6/mk3"]),
                           onClose: n,
                           children: (0, l.jsx)(o.Dr, {
                               id: "end-voice-event",
                               color: "danger",
                               action: O,
-                              label: x.intl.string(x.t.qaYzPA),
+                              label: g.intl.string(g.t.qaYzPA),
                               leadingAccessory: { type: "icon", icon: c.a },
                               icon: c.a,
                           }),
@@ -60,12 +60,12 @@ function I(e) {
               children: (e) => {
                   let { onClick: n } = e;
                   return (0, l.jsx)(h.A, {
-                      buttonRef: j,
-                      label: x.intl.string(x.t["6vrfgt"]),
+                      buttonRef: _,
+                      label: g.intl.string(g.t["6vrfgt"]),
                       onClick: N,
                       onPopoutClick: n,
                   });
               },
           })
-        : (0, l.jsx)(h.A, { label: x.intl.string(x.t["6vrfgt"]), onClick: t });
+        : (0, l.jsx)(h.A, { label: g.intl.string(g.t["6vrfgt"]), onClick: t });
 }

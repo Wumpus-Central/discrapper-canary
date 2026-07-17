@@ -55,26 +55,27 @@ let T = function (e) {
             intervalType: m.subscription_trial?.interval,
             intervalCount: m.subscription_trial?.interval_count,
         }),
-        R = u.A.getArticleURL(m.trial_id === I.yo ? f.MVz.NITRO_TRIAL_FOR_ALL : f.MVz.PREMIUM_TRIAL);
+        O = u.A.getArticleURL(m.trial_id === I.yo ? f.MVz.NITRO_TRIAL_FOR_ALL : f.MVz.PREMIUM_TRIAL);
     return (0, i.jsxs)(A.T0, {
         onClick: () => {
             t(), c.default.track(f.HAw.APP_NOTICE_CLOSED, { notice_type: N, trial_id: m.trial_id });
         },
         children: [
-            (0, i.jsx)(A.In, { children: (0, h.GZ)(n, g, C, R) }),
+            (0, i.jsx)(A.In, { children: (0, h.GZ)(n, g, C, O) }),
             (0, i.jsx)(A.fY, {
-                onClick: () => {
-                    (0, d.A)({
-                        trialId: m.trial_id,
-                        subscriptionTier: n,
-                        analyticsLocations: T,
-                        analyticsObject: {
-                            page: f.liQ.IN_APP,
-                            section: f.JJy.NOTIFICATION_BAR,
-                            object: f.ZSU.BUTTON_CTA,
-                        },
-                    }),
-                        c.default.track(f.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: N, trial_id: m.trial_id });
+                onClick: function () {
+                    null != m &&
+                        ((0, d.A)({
+                            trialId: m.trial_id,
+                            subscriptionTier: n,
+                            analyticsLocations: T,
+                            analyticsObject: {
+                                page: f.liQ.IN_APP,
+                                section: f.JJy.NOTIFICATION_BAR,
+                                object: f.ZSU.BUTTON_CTA,
+                            },
+                        }),
+                        c.default.track(f.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: N, trial_id: m.trial_id }));
                 },
                 text: (function (e) {
                     switch (e) {

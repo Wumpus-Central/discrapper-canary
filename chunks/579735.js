@@ -54,8 +54,8 @@ var S = i(503698),
     T = i(696208),
     U = i(939249),
     v = i(834730),
-    y = i(365199),
-    f = i(289873),
+    f = i(365199),
+    y = i(289873),
     G = i(761508),
     p = i(297264),
     _ = i(548118),
@@ -88,7 +88,7 @@ function M(t) {
             (0, l.jsx)(O.A, {
                 entry: s,
                 targetElementRef: a,
-                children: (t) => (0, l.jsx)(y.j, { ref: a, size: "md", color: "currentColor", ...t, className: k.IQ }),
+                children: (t) => (0, l.jsx)(f.j, { ref: a, size: "md", color: "currentColor", ...t, className: k.IQ }),
             }),
         ],
     });
@@ -107,7 +107,7 @@ function B(t) {
         [u, m] = n.useState(0);
     return (
         (e = o
-            ? (0, l.jsx)("div", { className: k.do, children: (0, l.jsx)(f.y, {}) })
+            ? (0, l.jsx)("div", { className: k.do, children: (0, l.jsx)(y.y, {}) })
             : 0 === u
               ? 0 === d.length
                   ? (0, l.jsxs)("div", {
@@ -295,8 +295,8 @@ function K(t) {
                               {
                                   text: b.intl.string(b.t.DymAQt),
                                   variant: "primary",
-                                  onClick: () => {
-                                      (0, J.uh)(i.id), s?.();
+                                  onClick: function () {
+                                      null != i && ((0, J.uh)(i.id), s?.());
                                   },
                               },
                           ],
@@ -390,7 +390,7 @@ function td(t) {
         [A, E] = n.useState(null),
         [N, T] = n.useState(null),
         [U, v] = n.useState(null),
-        [y, f] = n.useState(""),
+        [f, y] = n.useState(""),
         [G, p] = n.useState(g ?? P.mU.UNCATEGORIZED),
         [_, O] = n.useState(!1),
         { availableGuilds: b, addedGuilds: k, loading: D } = C(x, e);
@@ -401,7 +401,7 @@ function td(t) {
             let e = await a.A.createGuildFromTemplate(A, N, S);
             v((t = (0, d.Y1)(e)));
         }
-        null != t && (await c.WD(e, t.id, y, G), h(P.m8.CONFIRMATION));
+        null != t && (await c.WD(e, t.id, f, G), h(P.m8.CONFIRMATION));
     }
     n.useEffect(() => {
         h(o);
@@ -445,8 +445,8 @@ function td(t) {
         case P.m8.CUSTOMIZE_EXISTING_GUILD:
             H = (0, l.jsx)(Z, {
                 directoryChannelId: e,
-                description: y,
-                onDescriptionChange: f,
+                description: f,
+                onDescriptionChange: y,
                 categoryId: G,
                 onCategoryIdChange: p,
                 onSubmit: L,

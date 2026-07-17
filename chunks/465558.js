@@ -422,7 +422,7 @@ let e9 = function (e) {
           });
 };
 var e5 = n(833802);
-let e8 = function () {
+let e7 = function () {
     let e = (0, d.bG)([y.A], () => y.A.getTopUserActivities()),
         t = (0, d.bG)([y.A], () => y.A.getTopGuildActivities());
     return 0 === e.length && 0 === t.length
@@ -495,9 +495,9 @@ let e8 = function () {
               ],
           });
 };
-var e7 = n(990021),
-    e4 = n(453287);
-function e6() {
+var e8 = n(990021),
+    e6 = n(453287);
+function e4() {
     let e = i.useCallback(() => {
         (0, Y.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("3083"), n.e("60106")]).then(n.bind(n, 853809));
@@ -505,9 +505,9 @@ function e6() {
         });
     }, []);
     return (0, l.jsx)(O.D, {
-        className: e7.YL,
+        className: e8.YL,
         onClick: e,
-        children: (0, l.jsx)(q.m, { size: "custom", color: "currentColor", className: e7.Kk, width: 15, height: 15 }),
+        children: (0, l.jsx)(q.m, { size: "custom", color: "currentColor", className: e8.Kk, width: 15, height: 15 }),
     });
 }
 function te(e) {
@@ -594,10 +594,10 @@ function te(e) {
             () =>
                 (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(G.E, { className: e7.bV, variant: "text-md/semibold", children: v }),
+                        (0, l.jsx)(G.E, { className: e8.bV, variant: "text-md/semibold", children: v }),
                         void 0 !== h.sectionDescription
                             ? (0, l.jsx)(G.E, {
-                                  className: e7.yV,
+                                  className: e8.yV,
                                   variant: "text-md/medium",
                                   color: "text-muted",
                                   children: h.sectionDescription(r ?? !1),
@@ -610,24 +610,24 @@ function te(e) {
     if (0 === a.length) return null;
     let N = a.slice(0, f);
     return (0, l.jsxs)("div", {
-        className: e7.A2,
+        className: e8.A2,
         children: [
             E(),
             (0, l.jsx)("div", {
-                className: e7.o1,
+                className: e8.o1,
                 style: { maxHeight: 65 * N.length },
                 children: N.map((e, t) => A({ row: t })),
             }),
             N.length < c
                 ? (0, l.jsx)(O.D, {
-                      className: s()(e7.FQ, { [e7.r9]: m }),
+                      className: s()(e8.FQ, { [e8.r9]: m }),
                       onClick: g,
                       role: "button",
                       "aria-disabled": m,
                       children: m
-                          ? (0, l.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS, className: e7.u1 })
+                          ? (0, l.jsx)(u.y, { type: u.y.Type.PULSING_ELLIPSIS, className: e8.u1 })
                           : (0, l.jsx)(G.E, {
-                                className: e7.UX,
+                                className: e8.UX,
                                 variant: "text-sm/bold",
                                 children: et.intl.format(ee.default["7dMmJY"], {
                                     pageSize: Math.max(1, Math.min(c - N.length, C.PH)),
@@ -651,7 +651,7 @@ function tt() {
         ? (0, l.jsx)(G.E, { variant: "eyebrow", children: r })
         : (0, l.jsxs)(l.Fragment, {
               children: [
-                  e ? null : (0, l.jsx)(X.b, { size: "xs", color: "currentColor", className: e7.Kk }),
+                  e ? null : (0, l.jsx)(X.b, { size: "xs", color: "currentColor", className: e8.Kk }),
                   (0, l.jsx)(G.E, { variant: "eyebrow", children: n }),
               ],
           });
@@ -662,11 +662,11 @@ let tn = i.memo((e) => {
     return void 0 === s
         ? null
         : (0, l.jsxs)("div", {
-              className: e7.iO,
+              className: e8.iO,
               children: [
                   (0, l.jsx)(eW.H, { user: s, avatarSize: i }),
                   (0, l.jsxs)("div", {
-                      className: e7.TK,
+                      className: e8.TK,
                       children: [
                           (0, l.jsx)(eJ.A, { user: s, hideUserTag: r }),
                           void 0 !== n
@@ -684,7 +684,7 @@ function tl() {
         r = e.map((e) => ({ label: e.id, value: e.id })),
         s = i.useCallback((e) => (0, l.jsx)(tn, { userId: e.value, avatarSize: P._3.SIZE_24 }), []);
     return (0, l.jsx)(U.Pw, {
-        className: e7.Lt,
+        className: e8.Lt,
         renderOptionLabel: s,
         renderOptionValue: (e) => {
             let [t] = e;
@@ -714,20 +714,20 @@ let tr = function () {
         n = (0, el.jp)(),
         i = (0, D.v4)(n);
     return (0, l.jsxs)("div", {
-        className: e7.kL,
+        className: e8.kL,
         children: [
-            (0, l.jsxs)("div", { className: e7.vF, children: [(0, l.jsx)(tt, {}), (0, l.jsx)(e6, {})] }),
+            (0, l.jsxs)("div", { className: e8.vF, children: [(0, l.jsx)(tt, {}), (0, l.jsx)(e4, {})] }),
             (0, l.jsxs)("div", {
-                className: e4.a,
+                className: e6.a,
                 children: [
-                    (0, l.jsx)("div", { className: e7.wx, children: (0, l.jsx)(ti, {}) }),
+                    (0, l.jsx)("div", { className: e8.wx, children: (0, l.jsx)(ti, {}) }),
                     (0, l.jsxs)(c.B, {
                         gap: 32,
                         padding: 32,
                         fullWidth: !1,
                         children: [
                             (0, l.jsx)("div", {
-                                className: e7.O2,
+                                className: e8.O2,
                                 children: e
                                     .filter((e) => {
                                         let [t] = e;
@@ -743,15 +743,15 @@ let tr = function () {
                                     }),
                             }),
                             (0, l.jsxs)("div", {
-                                className: e7.RJ,
+                                className: e8.RJ,
                                 children: [
-                                    (0, l.jsx)(e8, {}),
+                                    (0, l.jsx)(e7, {}),
                                     t
                                         ? e.map((e) => {
                                               let [t] = e;
                                               return (0, l.jsx)(te, { displayType: t }, `${t}-list`);
                                           })
-                                        : (0, l.jsx)(e3, { className: e7.RL, text: i ?? "" }),
+                                        : (0, l.jsx)(e3, { className: e8.RL, text: i ?? "" }),
                                 ],
                             }),
                         ],
@@ -964,10 +964,10 @@ function tD() {
             { value: tC.TO.BLOCK, label: et.intl.string(et.t["D/157Y"]) },
         ];
     if (null == t || null == e) return null;
-    let i = (t) => {
-            (0, tk.Jz)(e, t);
-        },
-        { explicitContentFriendDm: r, explicitContentNonFriendDm: s } = t;
+    function i(t) {
+        null != e && (0, tk.Jz)(e, t);
+    }
+    let { explicitContentFriendDm: r, explicitContentNonFriendDm: s } = t;
     return (0, l.jsxs)(tL.E, {
         description: et.intl.string(et.t.Wnojv1),
         children: [
@@ -990,14 +990,14 @@ function tU() {
     let e = (0, ea.k)(),
         t = (0, tg.gr)();
     if (null == t || null == e) return null;
-    let { goreContentFriendDm: n, goreContentNonFriendDm: i } = t,
-        r = (t) => {
-            (0, tk.qY)(e, t);
-        },
-        s = [
-            { value: tC.TO.BLUR, label: et.intl.string(et.t.S49Uad) },
-            { value: tC.TO.BLOCK, label: et.intl.string(et.t["D/157Y"]) },
-        ];
+    let { goreContentFriendDm: n, goreContentNonFriendDm: i } = t;
+    function r(t) {
+        null != e && (0, tk.qY)(e, t);
+    }
+    let s = [
+        { value: tC.TO.BLUR, label: et.intl.string(et.t.S49Uad) },
+        { value: tC.TO.BLOCK, label: et.intl.string(et.t["D/157Y"]) },
+    ];
     return (0, l.jsxs)(tL.E, {
         description: et.intl.string(et.t.XgH9eh),
         children: [
@@ -1170,7 +1170,7 @@ function t$() {
                     n.e("37757"),
                     n.e("91990"),
                     n.e("95429"),
-                    n.e("45488"),
+                    n.e("71997"),
                     n.e("48370"),
                     n.e("89419"),
                     n.e("94570"),
@@ -1241,7 +1241,7 @@ let t2 = function () {
             }),
         );
     return (0, l.jsxs)("div", {
-        className: s()(t0.kL, e4.a),
+        className: s()(t0.kL, e6.a),
         children: [
             (0, l.jsxs)("div", {
                 children: [
@@ -1275,7 +1275,7 @@ var t1 = n(299628),
 let t5 = function (e) {
     let { icon: t, iconClassName: n, header: i, description: r } = e;
     return (0, l.jsxs)("div", {
-        className: s()(t9.kL, e4.a),
+        className: s()(t9.kL, e6.a),
         children: [
             (0, l.jsx)("div", {
                 className: t9.n1,
@@ -1300,18 +1300,18 @@ let t5 = function (e) {
         ],
     });
 };
-var t8 = n(349288),
-    t7 = n(683071),
-    t4 = n(987197),
-    t6 = n(822585);
+var t7 = n(349288),
+    t8 = n(683071),
+    t6 = n(987197),
+    t4 = n(822585);
 function ne() {
     (0, et.useSyncMessages)(ee.messagesLoader);
-    let e = (0, t4.f)(),
-        t = (0, t6.L)()?.daysRemaining ?? null;
+    let e = (0, t6.f)(),
+        t = (0, t4.L)()?.daysRemaining ?? null;
     if (!e || null == t || t < 0) return null;
     function n(e, t) {
         return (0, l.jsx)(
-            t8.Anchor,
+            t7.Anchor,
             {
                 href: "https://support.discord.com/hc/articles/14155060633623",
                 target: "_blank",
@@ -1323,7 +1323,7 @@ function ne() {
     }
     return (0, l.jsx)("div", {
         "data-parental-consent-notice": !0,
-        children: (0, l.jsx)(t7.w, {
+        children: (0, l.jsx)(t8.w, {
             type: "warning",
             children:
                 0 === t
@@ -1676,7 +1676,7 @@ function nR() {
                                 variant: "text-md/medium",
                                 color: "text-muted",
                                 children: et.intl.format(ee.default.X9rW0j, {
-                                    openSettingsHook: (e, t) => (0, l.jsx)(t8.Anchor, { onClick: i, children: e }, t),
+                                    openSettingsHook: (e, t) => (0, l.jsx)(t7.Anchor, { onClick: i, children: e }, t),
                                 }),
                             }),
                         ],
@@ -1978,16 +1978,16 @@ let n5 = function (e) {
             }),
     });
 };
-var n8 = n(327337),
-    n7 = n(19331);
-let n4 = "/assets/922a2ee66ef62b5b.svg";
-function n6(e) {
+var n7 = n(327337),
+    n8 = n(19331);
+let n6 = "/assets/922a2ee66ef62b5b.svg";
+function n4(e) {
     let { header: t, description: n, stepNumber: i } = e;
     return (0, l.jsxs)("div", {
-        className: n7.PM,
+        className: n8.PM,
         children: [
             (0, l.jsx)("div", {
-                className: n7.CD,
+                className: n8.CD,
                 children: (0, l.jsx)(V.D, {
                     variant: "heading-md/semibold",
                     color: "text-brand",
@@ -2005,10 +2005,10 @@ function n6(e) {
 }
 function le() {
     return (0, l.jsxs)("div", {
-        className: s()(n7.aP, e4.a, n7.dO, n7.p2),
+        className: s()(n8.aP, e6.a, n8.dO, n8.p2),
         children: [
             (0, l.jsxs)("div", {
-                className: n7.Np,
+                className: n8.Np,
                 children: [
                     (0, l.jsxs)("div", {
                         children: [
@@ -2025,23 +2025,23 @@ function le() {
                             }),
                         ],
                     }),
-                    (0, l.jsx)("img", { className: n7._u, src: n4, alt: et.intl.string(ee.default["r+PDmu"]) }),
+                    (0, l.jsx)("img", { className: n8._u, src: n6, alt: et.intl.string(ee.default["r+PDmu"]) }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                className: n7.Ci,
+                className: n8.Ci,
                 children: [
-                    (0, l.jsx)(n6, {
+                    (0, l.jsx)(n4, {
                         header: et.intl.string(ee.default["7xxAni"]),
                         description: et.intl.string(ee.default["1M9So2"]),
                         stepNumber: 1,
                     }),
-                    (0, l.jsx)(n6, {
+                    (0, l.jsx)(n4, {
                         header: et.intl.string(ee.default["AXgx+a"]),
                         description: et.intl.string(ee.default.GzMFnb),
                         stepNumber: 2,
                     }),
-                    (0, l.jsx)(n6, {
+                    (0, l.jsx)(n4, {
                         header: et.intl.string(ee.default.MZn1tG),
                         description: et.intl.string(ee.default["8rLBxD"]),
                         stepNumber: 3,
@@ -2054,7 +2054,7 @@ function le() {
 function lt() {
     let e = (0, D.xr)();
     return (0, l.jsxs)("div", {
-        className: s()(n7.aP, e4.a, n7.dO),
+        className: s()(n8.aP, e6.a, n8.dO),
         children: [
             (0, l.jsxs)("div", {
                 children: [
@@ -2074,7 +2074,7 @@ function lt() {
                     e ? null : (0, l.jsx)(tJ, {}),
                 ],
             }),
-            (0, l.jsx)("img", { className: n7._u, src: n4, alt: et.intl.string(ee.default["r+PDmu"]) }),
+            (0, l.jsx)("img", { className: n8._u, src: n6, alt: et.intl.string(ee.default["r+PDmu"]) }),
         ],
     });
 }
@@ -2164,7 +2164,7 @@ function ll() {
               children: [
                   (0, l.jsx)(G.E, { className: e0.QB, variant: "eyebrow", color: "text-default", children: r }),
                   (0, l.jsx)("div", {
-                      className: n7.aP,
+                      className: n8.aP,
                       children: (0, l.jsx)(e3, { text: et.intl.string(ee.default.C4ScLD) }),
                   }),
               ],
@@ -2179,7 +2179,7 @@ function li() {
         );
     return e
         ? (0, l.jsx)("div", {
-              className: n7.rv,
+              className: n8.rv,
               children: (0, l.jsx)(G.E, { variant: "text-xxs/medium", color: "text-muted", children: n }),
           })
         : null;
@@ -2193,14 +2193,14 @@ function lr() {
                     helpLink: "https://support.discord.com/hc/articles/7925648993943-Crisis-Text-Line",
                 }),
             )
-            .with({ throughline: !0 }, () => et.intl.format(ee.default["6tsC8u"], { helpLink: n8.CL }))
+            .with({ throughline: !0 }, () => et.intl.format(ee.default["6tsC8u"], { helpLink: n7.CL }))
             .otherwise(() => null);
     return null == n
         ? null
         : (0, l.jsxs)("div", {
               children: [
                   (0, l.jsx)(V.D, {
-                      className: n7.rH,
+                      className: n8.rH,
                       variant: "heading-sm/semibold",
                       children: (0, l.jsx)(ed.F, { children: et.intl.string(ee.default["7/tVhv"]) }),
                   }),
@@ -2219,7 +2219,7 @@ function ls() {
 let la = function () {
     let e = (0, _.A)();
     return (0, l.jsxs)("div", {
-        className: n7.kL,
+        className: n8.kL,
         children: [
             (0, l.jsx)(ne, {}),
             e ? (0, l.jsx)(le, {}) : (0, l.jsx)(lt, {}),

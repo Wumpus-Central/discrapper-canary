@@ -19,7 +19,7 @@ var l = i(627968),
     k = i(508654),
     G = i(468689),
     T = i(456874),
-    y = i(495544),
+    y = i(280450),
     h = i(71393),
     x = i(576705),
     B = i(375708);
@@ -86,28 +86,28 @@ let O = (t) => {
     )
         return null;
     if (null != _) {
-        let t,
-            e = async () => {
-                await G.A.open(R.id, b.BEX.ONBOARDING), await U();
-            },
-            i = async () => {
-                await G.A.open(R.id, b.BEX.COMMUNITY), await U();
-            };
+        let t;
+        async function Y() {
+            null != R && (await G.A.open(R.id, b.BEX.ONBOARDING), await U());
+        }
+        async function V() {
+            null != R && (await G.A.open(R.id, b.BEX.COMMUNITY), await U());
+        }
         switch (_) {
             case u.K5.DEFAULT:
-                t = B.intl.format(B.t.iWlB6h, { onClick: e });
+                t = B.intl.format(B.t.iWlB6h, { onClick: Y });
                 break;
             case u.K5.TODO:
-                t = B.intl.format(B.t["/rjozD"], { onClick: e });
+                t = B.intl.format(B.t["/rjozD"], { onClick: Y });
                 break;
             case u.K5.RESOURCE:
-                t = B.intl.format(B.t.Nf5ptw, { onClick: e });
+                t = B.intl.format(B.t.Nf5ptw, { onClick: Y });
                 break;
             case u.K5.RULES:
-                t = B.intl.format(B.t["kB1f+3"], { reason: B.intl.string(B.t.yjrZPl), onClick: i });
+                t = B.intl.format(B.t["kB1f+3"], { reason: B.intl.string(B.t.yjrZPl), onClick: V });
                 break;
             case u.K5.UPDATES:
-                t = B.intl.format(B.t["kB1f+3"], { reason: B.intl.string(B.t["1B1/NB"]), onClick: i });
+                t = B.intl.format(B.t["kB1f+3"], { reason: B.intl.string(B.t["1B1/NB"]), onClick: V });
         }
         return (0, l.jsx)(r.Modal, {
             title: B.intl.string(B.t["TY/V+H"]),
@@ -117,7 +117,7 @@ let O = (t) => {
             actions: [{ text: B.intl.string(B.t.BddRzS), onClick: U, variant: "primary" }],
         });
     }
-    let { deleteText: Y, deleteBody: V } =
+    let { deleteText: J, deleteBody: X } =
         O.type === b.rbe.GUILD_CATEGORY
             ? { deleteText: B.intl.string(B.t.ifbXnL), deleteBody: B.intl.format(B.t.a6Gz9J, { channelName: D }) }
             : O.isForumPost()
@@ -148,11 +148,11 @@ let O = (t) => {
         size: "sm",
         onClose: U,
         transitionState: N,
-        title: Y,
-        subtitle: V,
+        title: J,
+        subtitle: X,
         actions: [
             { text: B.intl.string(B.t["ETE/oC"]), onClick: U, variant: "secondary" },
-            { text: Y, onClick: w, variant: "critical-primary" },
+            { text: J, onClick: w, variant: "critical-primary" },
         ],
         children: P
             ? (0, l.jsx)(s.E, {

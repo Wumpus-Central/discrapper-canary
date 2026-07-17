@@ -2,7 +2,7 @@ n.d(t, { A: () => x });
 var l = n(627968);
 n(64700);
 var i = n(17928),
-    s = n(990078),
+    s = n(866665),
     a = n(821609),
     r = n(58736),
     o = n(975732),
@@ -36,7 +36,7 @@ function x(e) {
         }),
         y = (0, i.bG)([c.A], () => (null != I ? c.A.getMemberCount(I) : 0)),
         b = null != j && (y ?? 0) >= j,
-        { approveRequest: v, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
+        { approveRequest: N, rejectRequest: v, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
     return null != S && S.applicationStatus === g.B5.SUBMITTED && _
         ? (0, l.jsxs)("div", {
               className: C.U,
@@ -49,7 +49,7 @@ function x(e) {
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
                           loading: T,
-                          onClick: v,
+                          onClick: N,
                           disabled: b,
                       }),
                   }),
@@ -57,13 +57,13 @@ function x(e) {
                       variant: "critical-primary",
                       size: "sm",
                       text: f.intl.string(f.t.hDtbsz),
-                      onClick: N,
+                      onClick: v,
                       disabled: T,
                   }),
                   n &&
                       (0, l.jsx)(a.$, {
-                          onClick: () => {
-                              (0, o.openUserProfileModal)({ userId: S.userId, guildId: S.guildId });
+                          onClick: function () {
+                              null != S && (0, o.openUserProfileModal)({ userId: S.userId, guildId: S.guildId });
                           },
                           variant: "secondary",
                           size: "sm",

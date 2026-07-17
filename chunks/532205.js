@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(281020),
     N = n(206828),
     C = n(49999),
-    R = n(230451),
-    O = n(375708),
+    O = n(230451),
+    R = n(375708),
     L = n(448759);
 let y = function (e) {
     let {
@@ -50,17 +50,18 @@ let y = function (e) {
         null == P || !w || !x || G)
     )
         return null;
-    let V = () => {
-        (0, g.RI)({
-            applicationId: P.id,
-            onSuccess: () => {
-                (0, _.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(n.bind(n, 494886));
-                    return (t) => (0, i.jsx)(e, { ...t });
-                });
-            },
-        });
-    };
+    function V() {
+        null != P &&
+            (0, g.RI)({
+                applicationId: P.id,
+                onSuccess: () => {
+                    (0, _.openModalLazy)(async () => {
+                        let { default: e } = await Promise.all([n.e("50163"), n.e("89387")]).then(n.bind(n, 494886));
+                        return (t) => (0, i.jsx)(e, { ...t });
+                    });
+                },
+            });
+    }
     return (0, i.jsxs)(E.$T, {
         color: E.Hv.WARNING,
         children: [
@@ -75,7 +76,7 @@ let y = function (e) {
                 alt: s,
                 className: c()(L.tV, L._R),
             }),
-            O.intl.format(R.default.DfSSdL, {
+            R.intl.format(O.default.DfSSdL, {
                 connectionName: b?.name,
                 applicationName: s,
                 orbsIconHook: () =>
@@ -87,17 +88,17 @@ let y = function (e) {
                 orbCount: 200,
             }),
             (0, i.jsx)(E.Z_, {
-                onClick: () => {
+                onClick: function () {
                     U({ analyticsLocations: k, onSuccess: V });
                 },
                 className: L.HE,
                 noticeType: y,
-                children: O.intl.string(R.default.ZeOhh9),
+                children: R.intl.string(O.default.ZeOhh9),
             }),
             (0, i.jsx)(E.zr, {
                 onClick: () => a(C.i.USER_DISMISS),
                 className: L.wX,
-                children: O.intl.string(R.default["MVB/Ab"]),
+                children: R.intl.string(O.default["MVB/Ab"]),
             }),
         ],
     });
@@ -141,7 +142,7 @@ let V = function (e) {
                               },
                           });
                       },
-                      text: O.intl.string(O.t.zLXssK),
+                      text: R.intl.string(R.t.zLXssK),
                   }),
               ],
           });
@@ -199,7 +200,7 @@ function z(e) {
                 recurringDismiss: (e) => {
                     u(e);
                 },
-                applicationName: O.intl.string(R.default["1S6oAo"]),
+                applicationName: R.intl.string(O.default["1S6oAo"]),
                 platformTypes: [F.fg2.LEAGUE_OF_LEGENDS, F.fg2.RIOT_GAMES],
                 platformIconOverride: o.A.get(F.fg2.RIOT_GAMES),
             });

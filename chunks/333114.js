@@ -3,18 +3,18 @@ var i = n(627968),
     l = n(64700),
     s = n(189213),
     r = n(17928),
-    a = n(834730),
-    u = n(287809),
-    d = n(633075),
-    c = n(725386),
-    o = n(527139),
+    u = n(834730),
+    a = n(287809),
+    c = n(633075),
+    d = n(725386),
+    o = n(657855),
     g = n(375708),
     f = n(500681);
 function h(t) {
     let { onClose: e, trackUserProfileEditAction: n, highlightedApplicationIds: h, ...p } = t,
-        k = (0, r.bG)([u.default], () => u.default.getCurrentUser()),
+        k = (0, r.bG)([a.default], () => a.default.getCurrentUser()),
         m = (function (t) {
-            let e = (0, c.A)(),
+            let e = (0, d.A)(),
                 [n, i] = l.useState(e);
             return (
                 l.useEffect(() => {
@@ -22,7 +22,9 @@ function h(t) {
                 }, [e, n]),
                 l.useMemo(() => {
                     if (null == t || 0 === t.length) return n;
-                    let e = (e) => e instanceof d.R && t.includes(e.applicationId);
+                    function e(e) {
+                        return null != t && e instanceof c.R && t.includes(e.applicationId);
+                    }
                     return [...n.filter(e), ...n.filter((t) => !e(t))];
                 }, [n, t])
             );
@@ -53,13 +55,13 @@ function h(t) {
                                     onAddWidget: j,
                                     loading: C,
                                     trackUserProfileEditAction: n,
-                                    isHighlighted: null != h && t instanceof d.R && h.includes(t.applicationId),
+                                    isHighlighted: null != h && t instanceof c.R && h.includes(t.applicationId),
                                 },
                                 t.getUniqueKey(),
                             ),
                         ),
                     })
-                  : (0, i.jsx)(a.E, {
+                  : (0, i.jsx)(u.E, {
                         variant: "text-md/medium",
                         color: "text-subtle",
                         children: g.intl.string(g.t["1nkDOs"]),

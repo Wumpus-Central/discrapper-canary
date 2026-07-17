@@ -9,15 +9,15 @@ var i = r(627968),
     c = r(187322),
     d = r(140735),
     g = r(17928),
-    m = r(990078),
-    h = r(765178),
-    E = r(123292),
+    m = r(765178),
+    h = r(123292),
     f = r(695366),
-    A = r(661531),
-    p = r(834730),
-    x = r(475358),
-    C = r(191023),
-    R = r(106236),
+    E = r(661531),
+    A = r(834730),
+    p = r(475358),
+    x = r(191023),
+    C = r(106236),
+    R = r(866665),
     T = r(939249),
     D = r(831453),
     y = r(775602),
@@ -168,14 +168,14 @@ function K(e) {
             hasImageEdits: eg,
         } = er,
         [em, eh] = n.useState(!1),
-        [eE, ef] = n.useState(!1),
+        [ef, eE] = n.useState(!1),
         [eA, ep] = n.useState(0),
         [ex, eC] = n.useState(!1),
         [eR, eT] = n.useState("x"),
         eD = (0, g.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
         { analyticsLocations: ey } = (0, I.Ay)(w.A.IMAGE_CROPPING_MODAL),
         { isGIF: ew, isCheckingAnimation: eI, isEditableAnimatedImage: e_ } = (0, v._)(t),
-        eb = eE || em || eI,
+        eb = ef || em || eI,
         eG = null != eo && ea.right > 0,
         eN = null != eo && ea.top > 0,
         eS = eG || eN;
@@ -267,7 +267,7 @@ function K(e) {
             var e;
             if (null == W.current || null == eo) return;
             let t = (es + 90) % 360;
-            h.O.announce(k.intl.formatToPlainString(k.t.uYhsHT, { degrees: t }));
+            m.O.announce(k.intl.formatToPlainString(k.t.uYhsHT, { degrees: t }));
             let { x: r, y: i } = ((e = Y.current.x), { x: -Y.current.y, y: e });
             if (eo.width !== eo.height) {
                 let { newImageDimensions: e, newCropDimensions: n, newDragBoundaries: a } = e$(eo, eu);
@@ -303,7 +303,7 @@ function K(e) {
             if (null == eo) return {};
             let e = eo.width / eo.height,
                 t = eY() && e > H.wL ? en.height / eo.height : 1,
-                { width: r, height: i } = ((e, t) => {
+                { width: r, height: i } = (function (e, t) {
                     let { width: r, height: i } = e;
                     return t % 180 != 0 ? { width: i, height: r } : { width: r, height: i };
                 })(eo, es);
@@ -351,7 +351,7 @@ function K(e) {
         e0 = n.useCallback(async () => {
             let e;
             if (null == W.current) return;
-            ef(!0);
+            eE(!0);
             let r = W.current,
                 i = P(K);
             if (e_)
@@ -389,12 +389,12 @@ function K(e) {
                 file: t,
                 originalAsset: a,
             }),
-                ef(!1),
+                eE(!1),
                 await V();
         }, [en, t, eg, es, e_, V, j, a, K]),
         e1 = n.useCallback(async () => {
             if (null != et.current) {
-                et.current(), (et.current = null), ef(!1);
+                et.current(), (et.current = null), eE(!1);
                 return;
             }
             await V();
@@ -422,7 +422,7 @@ function K(e) {
         children: (0, i.jsxs)(u.Modal, {
             title: k.intl.string(k.t.DxAYCF),
             size: "md",
-            actionBarInput: (0, i.jsx)(E.Q, {
+            actionBarInput: (0, i.jsx)(h.Q, {
                 text: k.intl.string(k.t.yBZMsQ),
                 textVariant: "text-md/medium",
                 onClick: eX,
@@ -435,7 +435,7 @@ function K(e) {
                     onClick: e0,
                     variant: "primary",
                     autoFocus: !1,
-                    loading: eE,
+                    loading: ef,
                     disabled: eb,
                 },
             ],
@@ -520,9 +520,9 @@ function K(e) {
                                                       children: [
                                                           (0, i.jsx)(f.E, {
                                                               size: "sm",
-                                                              color: A.A.colors.TEXT_FEEDBACK_CRITICAL,
+                                                              color: E.A.colors.TEXT_FEEDBACK_CRITICAL,
                                                           }),
-                                                          (0, i.jsx)(p.E, {
+                                                          (0, i.jsx)(A.E, {
                                                               variant: "text-md/normal",
                                                               color: "text-feedback-critical",
                                                               children: k.intl.string(k.t["+ITMYX"]),
@@ -539,7 +539,7 @@ function K(e) {
                                                                   transform: `translate3d(${Y.current.x}px, ${Y.current.y}px, 0) rotate(${es}deg)`,
                                                                   ...eW(),
                                                               },
-                                                              className: o()(eE ? B.As : B.nu, B.hh),
+                                                              className: o()(ef ? B.As : B.nu, B.hh),
                                                               src: r,
                                                               crossOrigin: "anonymous",
                                                               alt: "",
@@ -578,7 +578,7 @@ function K(e) {
                                 (0, i.jsx)(d.A, { id: ee, children: eS || em ? null : k.intl.string(k.t.jUze6F) }),
                                 eD &&
                                     !em &&
-                                    (0, i.jsx)(p.E, {
+                                    (0, i.jsx)(A.E, {
                                         variant: "text-xs/normal",
                                         color: "text-muted",
                                         className: o()(B.xi, { [B.p0]: !ex && eS }),
@@ -587,9 +587,9 @@ function K(e) {
                                             ? k.intl.format(k.t.YIfE3a, {
                                                   arrowKeys: "Arrow keys",
                                                   arrowKeysHook: (e, t) =>
-                                                      (0, i.jsx)(x.e, { shortcut: "up+down+left+right" }, t),
+                                                      (0, i.jsx)(p.e, { shortcut: "up+down+left+right" }, t),
                                                   shiftKey: "Shift",
-                                                  shiftKeyHook: (e, t) => (0, i.jsx)(x.e, { shortcut: "shift" }, t),
+                                                  shiftKeyHook: (e, t) => (0, i.jsx)(p.e, { shortcut: "shift" }, t),
                                               })
                                             : k.intl.string(k.t.jUze6F),
                                     }),
@@ -599,13 +599,13 @@ function K(e) {
                                         (0, i.jsxs)("div", {
                                             className: B.mu,
                                             children: [
-                                                (0, i.jsx)(C.x, {
+                                                (0, i.jsx)(x.x, {
                                                     size: "xxs",
                                                     color: "currentColor",
                                                     className: B.HQ,
                                                 }),
                                                 (0, i.jsx)(
-                                                    R.A,
+                                                    C.A,
                                                     {
                                                         className: B.aw,
                                                         initialValue: 1,
@@ -624,10 +624,10 @@ function K(e) {
                                                     },
                                                     eA,
                                                 ),
-                                                (0, i.jsx)(C.x, { size: "md", color: "currentColor", className: B.HQ }),
+                                                (0, i.jsx)(x.x, { size: "md", color: "currentColor", className: B.HQ }),
                                             ],
                                         }),
-                                        (0, i.jsx)(m.m, {
+                                        (0, i.jsx)(R.m, {
                                             text: k.intl.string(k.t.E36Wd4),
                                             ariaHidden: !0,
                                             children: (0, i.jsx)(T.D, {

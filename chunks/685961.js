@@ -1032,13 +1032,14 @@ let td = (e) => {
               buttonText: i ? T.intl.string(T.t["9Ak99h"]) : T.intl.string(T.t.F3qExp),
               buttonDisabled: i,
               buttonVariant: "critical-primary",
-              onButtonPress: () => {
-                  (0, ts.A)({
-                      title: T.intl.formatToPlainString(T.t["1GX6P/"], { name: r.name }),
-                      subtitle: T.intl.format(T.t.ZEXC0r, { name: r.name }),
-                      confirmText: T.intl.string(T.t.J2TBi3),
-                      onConfirm: o,
-                  });
+              onButtonPress: function () {
+                  null != r &&
+                      (0, ts.A)({
+                          title: T.intl.formatToPlainString(T.t["1GX6P/"], { name: r.name }),
+                          subtitle: T.intl.format(T.t.ZEXC0r, { name: r.name }),
+                          confirmText: T.intl.string(T.t.J2TBi3),
+                          onConfirm: o,
+                      });
               },
           });
 };

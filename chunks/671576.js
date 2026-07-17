@@ -1,12 +1,12 @@
-i.d(e, { default: () => N });
+i.d(e, { default: () => C });
 var n = i(627968),
     s = i(64700),
     l = i(189213),
     d = i(17928),
-    a = i(459192),
-    r = i(192308),
-    o = i(691885),
-    c = i(834730),
+    a = i(192308),
+    r = i(691885),
+    o = i(834730),
+    c = i(459192),
     u = i(243721),
     h = i(71393),
     x = i(174459),
@@ -18,39 +18,40 @@ var n = i(627968),
     _ = i(218113),
     p = i(652215),
     E = i(375708),
-    C = i(226143);
-function N(t) {
-    let { guildId: e, transitionState: i, onClose: N, analyticsData: A } = t,
-        I = (0, d.bG)([h.A], () => h.A.getGuild(e), [e]),
-        S = !!I?.features.has(p.GuildFeatures.INVITES_DISABLED),
-        [f] = s.useState(!1),
+    f = i(226143);
+function C(t) {
+    let { guildId: e, transitionState: i, onClose: C, analyticsData: N } = t,
+        A = (0, d.bG)([h.A], () => h.A.getGuild(e), [e]),
+        I = !!A?.features.has(p.GuildFeatures.INVITES_DISABLED),
+        [S] = s.useState(!1),
         k = (0, d.bG)([b.A], () => b.A.getGuildIncident(e)),
         [w, y] = s.useState(() => (0, v.Z7)(k)),
-        G = (0, g.w)(I),
-        L = (0, v.r2)(k) || S,
+        G = (0, g.w)(A),
+        L = (0, v.r2)(k) || I,
         T = (0, v.di)(k),
         [D, z] = s.useState(L),
         [Z, M] = s.useState(T),
         [P, Q] = s.useState(!1),
         R = D !== L || Z !== T || P,
-        U = S && !G;
-    return null == I
-        ? (N(), null)
+        U = I && !G;
+    return null == A
+        ? (C(), null)
         : (0, n.jsx)(l.Modal, {
               transitionState: i,
               title: E.intl.string(E.t.oCYAc7),
               actions: [
-                  { text: E.intl.string(E.t["ETE/oC"]), onClick: N, variant: "secondary", disabled: f },
+                  { text: E.intl.string(E.t["ETE/oC"]), onClick: C, variant: "secondary", disabled: S },
                   {
                       text: E.intl.string(E.t["pwm/z0"]),
-                      onClick: () => {
+                      onClick: function () {
+                          if (null == A) return;
                           (L || T) && !D && !Z
-                              ? ((0, m.tr)(I.id, !1, !1),
-                                (0, r.openModalLazy)(() =>
+                              ? ((0, m.tr)(A.id, !1, !1),
+                                (0, a.openModalLazy)(() =>
                                     Promise.resolve((t) => (0, n.jsx)(j.default, { ...t, guildId: e })),
                                 ))
-                              : (0, m.tr)(I.id, D, Z, w);
-                          let { source: t, alertType: i, messageId: s } = A;
+                              : (0, m.tr)(A.id, D, Z, w);
+                          let { source: t, alertType: i, messageId: s } = N;
                           x.default.track(p.HAw.GUILD_RAID_INTERVENTION_STATE_CHANGE, {
                               guild_id: e,
                               source: t,
@@ -60,17 +61,17 @@ function N(t) {
                               intervention_type_disabled: (0, v.fi)(D, Z),
                               duration: 60 * w,
                           }),
-                              N();
+                              C();
                       },
-                      loading: f,
+                      loading: S,
                       disabled: !R,
                   },
               ],
-              onClose: N,
+              onClose: C,
               children: (0, n.jsxs)("div", {
-                  className: C.rs,
+                  className: f.rs,
                   children: [
-                      (0, n.jsx)(o.l, {
+                      (0, n.jsx)(r.l, {
                           label: E.intl.string(E.t.vKYZzc),
                           hideLabel: !0,
                           placeholder: E.intl.string(E.t.vKYZzc),
@@ -83,30 +84,30 @@ function N(t) {
                           fullWidth: !0,
                       }),
                       (0, n.jsxs)("div", {
-                          className: C.Qb,
+                          className: f.Qb,
                           children: [
                               (0, n.jsxs)("div", {
-                                  className: C.Iy,
+                                  className: f.Iy,
                                   children: [
-                                      (0, n.jsx)(c.E, {
+                                      (0, n.jsx)(o.E, {
                                           variant: "text-md/semibold",
                                           color: "text-strong",
                                           children: E.intl.string(E.t.Uwsjn6),
                                       }),
-                                      (0, n.jsx)(c.E, {
+                                      (0, n.jsx)(o.E, {
                                           variant: "text-sm/normal",
                                           color: "text-muted",
                                           children: E.intl.string(E.t.qPJkZh),
                                       }),
                                   ],
                               }),
-                              (0, n.jsx)(a.u, {
+                              (0, n.jsx)(c.u, {
                                   body: E.intl.string(E.t["9GPbsV"]),
-                                  shouldShow: S,
+                                  shouldShow: I,
                                   asContainer: !0,
                                   element: "div",
                                   children: (0, n.jsx)("div", {
-                                      className: C.L$,
+                                      className: f.L$,
                                       children: (0, n.jsx)(u.d, {
                                           onChange: function () {
                                               z((t) => !t);
@@ -119,17 +120,17 @@ function N(t) {
                           ],
                       }),
                       (0, n.jsxs)("div", {
-                          className: C.Qb,
+                          className: f.Qb,
                           children: [
                               (0, n.jsxs)("div", {
-                                  className: C.Iy,
+                                  className: f.Iy,
                                   children: [
-                                      (0, n.jsx)(c.E, {
+                                      (0, n.jsx)(o.E, {
                                           variant: "text-md/semibold",
                                           color: "text-strong",
                                           children: E.intl.string(E.t["wrDmA/"]),
                                       }),
-                                      (0, n.jsx)(c.E, {
+                                      (0, n.jsx)(o.E, {
                                           variant: "text-sm/normal",
                                           color: "text-muted",
                                           children: E.intl.string(E.t.UQbJW7),
@@ -137,7 +138,7 @@ function N(t) {
                                   ],
                               }),
                               (0, n.jsx)("div", {
-                                  className: C.L$,
+                                  className: f.L$,
                                   children: (0, n.jsx)(u.d, {
                                       onChange: function () {
                                           M((t) => !t);

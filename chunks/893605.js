@@ -1014,7 +1014,8 @@ function eP(e) {
                                     label: X.intl.string(X.t.Ztu2Yo),
                                     options: (0, W.b8)(),
                                     value: r,
-                                    onSelectionChange: (e) => {
+                                    onSelectionChange: function (e) {
+                                        if (null == l) return;
                                         let t = e > 0 ? d()().add(e, "second").toISOString() : null;
                                         C.A.updateGuildNotificationSettings(
                                             l.id,

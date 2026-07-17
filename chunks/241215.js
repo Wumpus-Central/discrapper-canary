@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => f });
 var i = n(627968),
     l = n(17928),
     a = n(939249),
@@ -13,8 +13,8 @@ var i = n(627968),
     m = n(889426),
     A = n(652215),
     x = n(496978);
-let g = function (e) {
-    let { channelId: t, popoutType: n, width: g, height: f } = e,
+let f = function (e) {
+    let { channelId: t, popoutType: n, width: f, height: g } = e,
         C = (0, o.Us)(),
         y = (0, l.bG)([r.A], () => r.A.getSelectedParticipant(t)),
         j = (0, l.bG)([u.A], () => u.A.getChannel(t)),
@@ -33,19 +33,22 @@ let g = function (e) {
         }),
         T = (0, l.yK)([r.A], () => [...r.A.getStreamParticipants(t), ...r.A.getVideoParticipants(t)]);
     if (null == y || null == j) return null;
-    let _ = (e, n) => {
-        n.preventDefault(),
+    function _(e, n) {
+        null != j &&
+            (n.preventDefault(),
             n.stopPropagation(),
             y?.id === e.id
                 ? (s.A.selectParticipant(j.id, null),
                   (0, h.n0)({ interactionType: "call_tile_collapsed", channelId: t }))
-                : s.A.selectParticipant(j.id, e.id);
-    };
+                : s.A.selectParticipant(j.id, e.id));
+    }
     return (0, i.jsx)(a.D, {
-        style: { width: g, height: f },
+        style: { width: f, height: g },
         className: x.L,
-        onClick: () => {
-            s.A.selectParticipant(j.id, null), (0, h.n0)({ interactionType: "call_tile_collapsed", channelId: t });
+        onClick: function () {
+            null != j &&
+                (s.A.selectParticipant(j.id, null),
+                (0, h.n0)({ interactionType: "call_tile_collapsed", channelId: t }));
         },
         children: (0, i.jsx)(d.Ay, {
             timeout: 2e3,
@@ -55,8 +58,8 @@ let g = function (e) {
                     selectedParticipant: y,
                     popoutType: n,
                     channel: j,
-                    width: g,
-                    height: f,
+                    width: f,
+                    height: g,
                     inCall: v,
                     participants: E,
                     layout: N,

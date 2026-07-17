@@ -12,20 +12,20 @@ var l = t(627968),
     d = t(939249),
     C = t(176781),
     x = t(834730),
-    N = t(531142),
-    A = t(191023),
+    A = t(531142),
+    N = t(191023),
     g = t(812282),
     p = t(633018),
     E = t(831544),
     j = t(793574),
     M = t(688810),
     _ = t(427930),
-    S = t(387408),
-    L = t(427209),
+    L = t(387408),
+    S = t(427209),
     I = t(650019),
     v = t(969632),
-    O = t(9842),
-    D = t(68935),
+    D = t(9842),
+    O = t(68935),
     P = t(486020),
     R = t(58703),
     T = t(403362),
@@ -71,24 +71,24 @@ function $(e, s, t, n, a, r) {
         c,
         u,
         h,
-        m = (0, S.A)(e),
+        m = (0, L.A)(e),
         { trailingIconClass: d, leadingIconClass: C, iconSize: x } = r,
-        N = null == s || "" === s || (Array.isArray(s) && 0 === s.length),
-        j = (0, D.o6)(m).length > 0,
+        A = null == s || "" === s || (Array.isArray(s) && 0 === s.length),
+        j = (0, O.o6)(m).length > 0,
         M = null != m.interaction,
         I = m.hasFlag(w.pr7.IS_VOICE_MESSAGE),
-        O = m.isPoll(),
+        D = m.isPoll(),
         P = m.type === w.lAJ.POLL_RESULT;
     return (
-        (0, _.A)(e) && (h = (0, l.jsx)(L.A, { size: "custom", className: C, width: x, height: x })),
+        (0, _.A)(e) && (h = (0, l.jsx)(S.A, { size: "custom", className: C, width: x, height: x })),
         t
             ? (o = b.intl.string(b.t.XAkOo2))
             : n
               ? (o = b.intl.string(b.t["G7p6v/"]))
               : m.type === w.lAJ.CHANNEL_PINNED_MESSAGE
                 ? (o = b.intl.string(b.t.sCfDDl))
-                : N
-                  ? O
+                : A
+                  ? D
                       ? (c = (0, l.jsx)("div", { className: i()(z.Io, G.PT), children: m?.poll?.question?.text }))
                       : P
                         ? (o = (0, v.Il)(m))
@@ -101,7 +101,7 @@ function $(e, s, t, n, a, r) {
                               : m.hasFlag(w.pr7.IS_COMPONENTS_V2)
                                 ? (o = b.intl.string(b.t.Xxat6S))
                                 : ((o = b.intl.string(b.t["6hGo0c"])),
-                                  (u = (0, l.jsx)(A.x, {
+                                  (u = (0, l.jsx)(N.x, {
                                       size: "custom",
                                       color: "currentColor",
                                       className: d,
@@ -123,7 +123,7 @@ function $(e, s, t, n, a, r) {
                   }))
                 : (m.attachments.length > 0 || m.embeds.length > 0) &&
                   !P &&
-                  (u = (0, l.jsx)(A.x, { size: "custom", color: "currentColor", className: d, width: x, height: x })),
+                  (u = (0, l.jsx)(N.x, { size: "custom", color: "currentColor", className: d, width: x, height: x })),
         { contentPlaceholder: o, renderedContent: c, trailingIcon: u, leadingIcon: h }
     );
 }
@@ -133,15 +133,15 @@ function F(e) {
             repliedAuthor: t,
             baseAuthor: a,
             baseMessage: r,
-            referencedMessage: A,
+            referencedMessage: N,
             renderPopout: g,
             isReplySpineClickable: p,
             showReplySpine: E,
         } = e,
-        [_, S] = n.useState(!1),
-        L = n.useMemo(() => (null != g && A.state === O.a.LOADED ? (e) => g(e, A.message) : void 0), [A, g]),
-        v = n.useCallback(() => S((e) => !e), []),
-        D = (function (e, s, t) {
+        [_, L] = n.useState(!1),
+        S = n.useMemo(() => (null != g && N.state === D.a.LOADED ? (e) => g(e, N.message) : void 0), [N, g]),
+        v = n.useCallback(() => L((e) => !e), []),
+        O = (function (e, s, t) {
             let {
                     referencedMessage: a,
                     channel: r,
@@ -149,13 +149,13 @@ function F(e) {
                     isReplyAuthorBlocked: d,
                     repliedAuthor: C,
                     showAvatarPopout: x,
-                    onClickAvatar: N,
-                    onContextMenu: A,
+                    onClickAvatar: A,
+                    onContextMenu: N,
                     onPopoutRequestClose: g,
                 } = e,
                 { analyticsLocations: p } = (0, M.Ay)(j.A.AVATAR),
                 E = n.useRef(null);
-            if (o || a.state !== O.a.LOADED || d)
+            if (o || a.state !== D.a.LOADED || d)
                 return t === w.lAJ.CONTEXT_MENU_COMMAND
                     ? (0, l.jsx)("div", { className: z.Do, children: (0, l.jsx)(c.o, { size: "xs" }) })
                     : (0, l.jsx)("div", { className: z.Cz, children: (0, l.jsx)(V, { className: z.UE }) });
@@ -169,24 +169,24 @@ function F(e) {
                 return (0, l.jsx)(u.q, { size: "md", color: "currentColor", className: z.Cw });
             if (a.message.type === w.lAJ.POLL_RESULT)
                 return (0, l.jsx)(h.Y, { className: z.Vs, width: U.eJ, height: U.eJ, size: "custom" });
-            let _ = () => {
+            function _() {
                 var e, s;
-                return (
-                    (e = a.message.author),
-                    (s = r.guild_id),
-                    (0, l.jsx)("img", {
-                        alt: "",
-                        src:
-                            C?.guildMemberAvatar != null && null != s
-                                ? (0, P.s7)({ guildId: s, userId: e.id, avatar: C.guildMemberAvatar })
-                                : e.getAvatarURL(s, 16),
-                        onClick: N,
-                        onContextMenu: A,
-                        className: i()({ [z.mf]: !0, [z.vk]: null != N }),
-                        ref: E,
-                    })
-                );
-            };
+                return a.state !== D.a.LOADED
+                    ? null
+                    : ((e = a.message.author),
+                      (s = r.guild_id),
+                      (0, l.jsx)("img", {
+                          alt: "",
+                          src:
+                              C?.guildMemberAvatar != null && null != s
+                                  ? (0, P.s7)({ guildId: s, userId: e.id, avatar: C.guildMemberAvatar })
+                                  : e.getAvatarURL(s, 16),
+                          onClick: A,
+                          onContextMenu: N,
+                          className: i()({ [z.mf]: !0, [z.vk]: null != A }),
+                          ref: E,
+                      }));
+            }
             return null != s && null != x
                 ? (0, l.jsx)(M.f5, {
                       value: p,
@@ -200,7 +200,7 @@ function F(e) {
                       }),
                   })
                 : (0, l.jsx)(M.f5, { value: p, children: _() });
-        })(e, L, r.type),
+        })(e, S, r.type),
         y = (function (e, s) {
             let {
                     baseMessage: t,
@@ -211,7 +211,7 @@ function F(e) {
                     onContextMenu: o,
                     onPopoutRequestClose: c,
                 } = e,
-                u = a?.state === O.a.LOADED ? a.message : void 0;
+                u = a?.state === D.a.LOADED ? a.message : void 0;
             return null == u ||
                 u.type === w.lAJ.USER_JOIN ||
                 u.type === w.lAJ.ROLE_SUBSCRIPTION_PURCHASE ||
@@ -231,7 +231,7 @@ function F(e) {
                       onPopoutRequestClose: c,
                       isRepliedMessage: !0,
                   });
-        })(e, L),
+        })(e, S),
         G = (function (e, s, t) {
             let {
                     baseMessage: n,
@@ -241,9 +241,9 @@ function F(e) {
                     isReplyAuthorIgnored: c,
                     onClickReply: u,
                 } = e,
-                h = r.state !== O.a.DELETED ? u : void 0;
+                h = r.state !== D.a.DELETED ? u : void 0;
             switch (r.state) {
-                case O.a.LOADED: {
+                case D.a.LOADED: {
                     let e = (0, I.A)(n.mediaMention, r.message.attachments);
                     if (null != e)
                         return (0, l.jsx)(d.D, {
@@ -272,7 +272,7 @@ function F(e) {
                     let {
                         contentPlaceholder: u,
                         renderedContent: m,
-                        trailingIcon: A,
+                        trailingIcon: N,
                         leadingIcon: g,
                     } = $(r.message, a, o, c, z.Io, {
                         trailingIconClass: z.$4,
@@ -287,21 +287,21 @@ function F(e) {
                                 onClick: h,
                                 onMouseEnter: t,
                                 onMouseLeave: t,
-                                children: (0, l.jsx)(N.R, {
+                                children: (0, l.jsx)(A.R, {
                                     children: m ?? (0, l.jsx)("span", { className: z.MK, children: u }),
                                 }),
                             }),
-                            A,
+                            N,
                         ],
                     });
                 }
-                case O.a.NOT_LOADED:
+                case D.a.NOT_LOADED:
                     return (0, l.jsx)(d.D, {
                         className: i()(z.$y, z.vk),
                         onClick: h,
                         children: (0, l.jsx)("span", { className: z.MK, children: b.intl.string(b.t["1i+hMi"]) }),
                     });
-                case O.a.DELETED:
+                case D.a.DELETED:
                     return (0, l.jsx)("div", {
                         className: z.$y,
                         children: (0, l.jsx)("span", { className: z.MK, children: b.intl.string(b.t.mE3KJN) }),
@@ -328,7 +328,7 @@ function F(e) {
                     onMouseEnter: v,
                     onMouseLeave: v,
                 }),
-            D,
+            O,
             y,
             G,
         ],

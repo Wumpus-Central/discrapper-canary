@@ -7,8 +7,8 @@ var e = l(627968),
     o = l(342952),
     r = l(289873),
     c = l(939249),
-    A = l(834730),
-    u = l(111159),
+    u = l(834730),
+    A = l(111159),
     h = l(778712),
     x = l(140735),
     g = l(707554),
@@ -16,8 +16,8 @@ var e = l(627968),
     p = l(401843),
     j = l(475743),
     C = l(672979),
-    _ = l(717306),
-    N = l(323073),
+    N = l(717306),
+    _ = l(323073),
     v = l(793574),
     f = l(688810),
     O = l(47167),
@@ -60,26 +60,27 @@ function J(i) {
                   })
                 : [],
         ),
-        is = (0, d.bG)([V.A], () => V.A.findActivity(l.id, (i) => (0, C.A)(i) && !(0, _.A)(i))),
+        is = (0, d.bG)([V.A], () => V.A.findActivity(l.id, (i) => (0, C.A)(i) && !(0, N.A)(i))),
         { analyticsLocations: ia } = (0, f.Ay)(v.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         id = (0, T.A)({ display: "live", voiceChannelId: it?.id, user: l, stream: J, analyticsLocations: ia }),
         io = (0, M.A)({ userId: l.id, onAction: id }),
         { previewUrl: ir, isLoading: ic } = (0, I.A)(J?.guildId, J?.channelId, J?.ownerId),
-        [iA, iu] = (0, L.zP)(it),
-        ih = (0, N.a9)() && (0, N.UK)(it?.id),
+        [iu, iA] = (0, L.zP)(it),
+        ih = (0, _.a9)() && (0, _.UK)(it?.id),
         ix = (0, d.bG)([D.A], () => null != it && !ih && D.A.canBasicChannel(z.hVb.CONNECT, it)),
         ig = (0, j.A)(ic ? null : ir),
         im = ic || null == ir ? ig : ir,
         ip = n.useId();
     if (null == ii || null == it || !1 === J.discoverable) return null;
-    let ij = () =>
-            l.id === s.id
-                ? null
-                : (0, e.jsx)("div", {
-                      className: Q.o1,
-                      children: (0, e.jsx)(F.Ay, { channel: it, onAction: id, onClose: Z }),
-                  }),
-        iC = null != is ? B.intl.formatToPlainString(B.t["4CQq9Q"], { name: is.name }) : B.intl.string(B.t["Jpkr/q"]);
+    function ij() {
+        return null == it || l.id === s.id
+            ? null
+            : (0, e.jsx)("div", {
+                  className: Q.o1,
+                  children: (0, e.jsx)(F.Ay, { channel: it, onAction: id, onClose: Z }),
+              });
+    }
+    let iC = null != is ? B.intl.formatToPlainString(B.t["4CQq9Q"], { name: is.name }) : B.intl.string(B.t["Jpkr/q"]);
     return (0, e.jsx)(f.f5, {
         value: ia,
         children: (0, e.jsxs)(w.A, {
@@ -103,7 +104,7 @@ function J(i) {
                             children: [
                                 ((t = (i) => {
                                     i.stopPropagation(),
-                                        iA &&
+                                        iu &&
                                             (id({ action: "PRESS_IMAGE" }),
                                             m.default.selectVoiceChannel(J.channelId),
                                             (0, p.Nl)(J),
@@ -113,23 +114,23 @@ function J(i) {
                                     ? (0, e.jsx)("div", { className: Y.VH, children: (0, e.jsx)(r.y, {}) })
                                     : null == im || ih
                                       ? (0, e.jsxs)(c.D, {
-                                            className: a()(Y.VH, Y.Lw, iA ? Y.vk : Y.r9),
+                                            className: a()(Y.VH, Y.Lw, iu ? Y.vk : Y.r9),
                                             onClick: t,
-                                            "aria-label": (0, L.CQ)(iu),
-                                            "aria-disabled": !iA,
+                                            "aria-label": (0, L.CQ)(iA),
+                                            "aria-disabled": !iu,
                                             children: [
                                                 (0, e.jsx)("img", { alt: "", src: W === z.NJ8.LIGHT ? q : $ }),
                                                 K !== H.d.MODAL &&
                                                     K !== H.d.MODAL_V2 &&
                                                     (0, e.jsxs)(e.Fragment, {
                                                         children: [
-                                                            (0, e.jsx)(A.E, {
+                                                            (0, e.jsx)(u.E, {
                                                                 className: Y.um,
                                                                 variant: "text-sm/medium",
                                                                 color: "text-overlay-light",
-                                                                children: (0, L.CT)(iu),
+                                                                children: (0, L.CT)(iA),
                                                             }),
-                                                            (0, e.jsx)(A.E, {
+                                                            (0, e.jsx)(u.E, {
                                                                 variant: "text-sm/medium",
                                                                 children: ix
                                                                     ? B.intl.string(B.t.uQZTBV)
@@ -140,23 +141,23 @@ function J(i) {
                                             ],
                                         })
                                       : (0, e.jsxs)(c.D, {
-                                            className: a()(Y.VH, Y.Lw, iA ? Y.vk : Y.r9),
+                                            className: a()(Y.VH, Y.Lw, iu ? Y.vk : Y.r9),
                                             onClick: t,
-                                            "aria-label": (0, L.CQ)(iu),
-                                            "aria-disabled": !iA,
+                                            "aria-label": (0, L.CQ)(iA),
+                                            "aria-disabled": !iu,
                                             children: [
                                                 (0, e.jsx)("img", { alt: "", src: im, className: Y.Sl }),
                                                 K !== H.d.MODAL &&
                                                     K !== H.d.MODAL_V2 &&
                                                     (0, e.jsxs)(e.Fragment, {
                                                         children: [
-                                                            (0, e.jsx)(A.E, {
+                                                            (0, e.jsx)(u.E, {
                                                                 className: Y.um,
                                                                 variant: "text-sm/medium",
                                                                 color: "text-overlay-light",
-                                                                children: (0, L.CT)(iu),
+                                                                children: (0, L.CT)(iA),
                                                             }),
-                                                            (0, e.jsx)(u.p, {
+                                                            (0, e.jsx)(A.p, {
                                                                 size: "xs",
                                                                 color: "currentColor",
                                                                 className: Y.wI,
@@ -165,7 +166,7 @@ function J(i) {
                                                     }),
                                             ],
                                         })),
-                                K !== H.d.MODAL && K !== H.d.MODAL_V2
+                                null == ii || null == it || (K !== H.d.MODAL && K !== H.d.MODAL_V2)
                                     ? null
                                     : (0, e.jsxs)("div", {
                                           className: Q.zH,
@@ -192,7 +193,7 @@ function J(i) {
                                 K === H.d.MODAL && ij(),
                             ],
                         }),
-                        K === H.d.MODAL || K === H.d.MODAL_V2
+                        null == ii || null == it || K === H.d.MODAL || K === H.d.MODAL_V2
                             ? null
                             : (0, e.jsx)(k.A, { user: l, guild: ii, channel: it, onAction: id, onClose: Z }),
                     ],

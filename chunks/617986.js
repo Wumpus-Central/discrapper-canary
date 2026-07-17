@@ -283,25 +283,23 @@ function ee(e, t, r) {
                 onCloseCallback: () => {
                     let e = r?.current;
                     if (null == e) return;
-                    let t = 0,
-                        n = () => {
-                            var i;
-                            (t += 1),
-                                document.body.contains(e) &&
-                                    ((null != (i = document.activeElement) &&
-                                        document.body.contains(i) &&
-                                        null !=
-                                            i.closest(
-                                                '[data-mana-component="modal"], [role="dialog"][tabindex="-1"]',
-                                            )) ||
-                                        document.activeElement === e ||
-                                        e.focus(),
-                                    (null != document.querySelector('[data-mana-component="modal"]') ||
-                                        document.activeElement !== e) &&
-                                        t < 90 &&
-                                        requestAnimationFrame(n));
-                        };
-                    requestAnimationFrame(n);
+                    let t = 0;
+                    requestAnimationFrame(function n() {
+                        var i;
+                        null == e ||
+                            ((t += 1),
+                            document.body.contains(e) &&
+                                ((null != (i = document.activeElement) &&
+                                    document.body.contains(i) &&
+                                    null !=
+                                        i.closest('[data-mana-component="modal"], [role="dialog"][tabindex="-1"]')) ||
+                                    document.activeElement === e ||
+                                    e.focus(),
+                                (null != document.querySelector('[data-mana-component="modal"]') ||
+                                    document.activeElement !== e) &&
+                                    t < 90 &&
+                                    requestAnimationFrame(n)));
+                    });
                 },
             },
         );

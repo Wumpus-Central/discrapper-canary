@@ -1,31 +1,31 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => y });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(580929),
+    r = n(372684),
     o = n(621466),
     c = n(982147),
     d = n(922016),
     u = n(821609),
-    h = n(82495),
-    p = n(170924);
+    p = n(82495),
+    h = n(170924);
 let m = { north: 0, east: 90, south: 180, west: 270 },
     A = { tension: 280, friction: 30 },
     x = { tension: 320, friction: 30, clamp: !0 },
-    g = l.createContext(null);
-function f() {
-    let e = l.useContext(g);
+    f = l.createContext(null);
+function g() {
+    let e = l.useContext(f);
     if (null == e) throw Error("GuildRoomRadialMenu compound components must be rendered within <GuildRoomRadialMenu>");
     return e;
 }
 function C(e) {
     let { children: t, onExited: n, ariaLabel: a, dismissable: s = !1 } = e,
-        { isOpen: o, setOpen: d, triggerRef: u, menuId: m, spacing: g, startAngleDeg: C, centerSingleItem: j } = f(),
-        y = l.useCallback(() => {
+        { isOpen: o, setOpen: d, triggerRef: u, menuId: m, spacing: f, startAngleDeg: C, centerSingleItem: y } = g(),
+        j = l.useCallback(() => {
             s && d(!1);
         }, [s, d]),
-        v = (0, h.A)(null, y, u),
+        v = (0, p.A)(null, j, u),
         E = l.useCallback(
             (e) => {
                 s && "Escape" === e.key && d(!1);
@@ -34,28 +34,27 @@ function C(e) {
         ),
         N = l.Children.toArray(t).filter(l.isValidElement),
         I = N.length,
-        T = j && 1 === I,
-        b = l.useRef(o),
-        _ = l.useRef(n);
+        T = y && 1 === I,
+        _ = l.useRef(o),
+        b = l.useRef(n);
     l.useEffect(() => {
-        b.current = o;
+        _.current = o;
     }, [o]),
         l.useEffect(() => {
-            _.current = n;
+            b.current = n;
         }, [n]);
     let S = l.useRef([]),
         [R, P] = l.useState([]);
     l.useLayoutEffect(() => {
-        let e = S.current.slice(0, I),
-            t = () => {
-                P((t) => {
-                    let n = e.map((e) => ({ width: e?.offsetWidth ?? 0, height: e?.offsetHeight ?? 0 }));
-                    return t.length === n.length &&
-                        n.every((e, n) => t[n]?.width === e.width && t[n]?.height === e.height)
-                        ? t
-                        : n;
-                });
-            };
+        let e = S.current.slice(0, I);
+        function t() {
+            P((t) => {
+                let n = e.map((e) => ({ width: e?.offsetWidth ?? 0, height: e?.offsetHeight ?? 0 }));
+                return t.length === n.length && n.every((e, n) => t[n]?.width === e.width && t[n]?.height === e.height)
+                    ? t
+                    : n;
+            });
+        }
         t();
         let n = new ResizeObserver(t);
         for (let t of e) null != t && n.observe(t);
@@ -65,16 +64,17 @@ function C(e) {
     l.useLayoutEffect(() => {
         let e = u.current;
         if (null == e) return;
-        let t = () => {
+        function t() {
+            if (null == e) return;
             let t = Math.max(e.offsetWidth, e.offsetHeight) / 2;
             L((e) => (e === t ? e : t));
-        };
+        }
         t();
         let n = new ResizeObserver(t);
         return n.observe(e), () => n.disconnect();
     }, [u]);
-    let w = O + g,
-        [D] = (0, c.m)(
+    let w = O + f,
+        [M] = (0, c.m)(
             I,
             (e) => {
                 var t, n;
@@ -104,7 +104,7 @@ function C(e) {
                         : { x: 0, y: 0, opacityProgress: 0, scale: 0.5 },
                     config: o ? A : x,
                     onRest: (t) => {
-                        !0 !== t.finished || b.current || 0 !== e || _.current();
+                        !0 !== t.finished || _.current || 0 !== e || b.current();
                     },
                 };
             },
@@ -116,7 +116,7 @@ function C(e) {
             v.current?.focus({ preventScroll: !0 });
         }, [v]),
         l.useEffect(() => {
-            o || 0 !== I || _.current();
+            o || 0 !== I || b.current();
         }, [o, I]),
         (0, i.jsx)("div", {
             ref: v,
@@ -124,17 +124,17 @@ function C(e) {
             role: "menu",
             "aria-label": a,
             tabIndex: -1,
-            className: p.EQ,
+            className: h.EQ,
             onKeyDown: E,
             children: N.map((e, t) => {
-                let n = D[t];
+                let n = M[t];
                 return (0, i.jsx)(
                     r.animated.div,
                     {
                         ref: (e) => {
                             S.current[t] = e;
                         },
-                        className: p.D5,
+                        className: h.D5,
                         style:
                             null == n
                                 ? {}
@@ -153,7 +153,7 @@ function C(e) {
         })
     );
 }
-let j = Object.assign(
+let y = Object.assign(
     function (e) {
         let {
                 isOpen: t,
@@ -166,33 +166,33 @@ let j = Object.assign(
             } = e,
             d = l.useRef(null),
             u = l.useId(),
-            [h, p] = l.useState(a),
+            [p, h] = l.useState(a),
             A = void 0 !== t,
-            x = A ? t : h,
-            f = l.useCallback(
+            x = A ? t : p,
+            g = l.useCallback(
                 (e) => {
-                    A || p(e), n?.(e);
+                    A || h(e), n?.(e);
                 },
                 [A, n],
             ),
             C = l.useMemo(
                 () => ({
                     isOpen: x,
-                    setOpen: f,
+                    setOpen: g,
                     triggerRef: d,
                     menuId: u,
                     spacing: s,
                     startAngleDeg: m[r],
                     centerSingleItem: o,
                 }),
-                [x, f, u, s, r, o],
+                [x, g, u, s, r, o],
             );
-        return (0, i.jsx)(g.Provider, { value: C, children: c });
+        return (0, i.jsx)(f.Provider, { value: C, children: c });
     },
     {
         Trigger: function (e) {
             let { children: t } = e,
-                { isOpen: n, setOpen: i, triggerRef: l, menuId: a } = f();
+                { isOpen: n, setOpen: i, triggerRef: l, menuId: a } = g();
             return t({
                 ref: l,
                 onClick: () => i(!n),
@@ -203,10 +203,10 @@ let j = Object.assign(
         },
         Popup: function (e) {
             let { children: t, elevation: n = "above", "aria-label": a } = e,
-                { isOpen: s, setOpen: r, triggerRef: c } = f(),
-                [u, h] = l.useState(s),
+                { isOpen: s, setOpen: r, triggerRef: c } = g(),
+                [u, p] = l.useState(s),
                 m = l.useRef(s);
-            s && !u && h(!0),
+            s && !u && p(!0),
                 l.useEffect(() => {
                     let e = m.current;
                     if (((m.current = s), e && !s)) {
@@ -214,11 +214,11 @@ let j = Object.assign(
                         (0, o.vq)(e, HTMLElement) && e.focus({ preventScroll: !0 });
                     }
                 }, [s, c]);
-            let A = l.useCallback(() => h(!1), []);
+            let A = l.useCallback(() => p(!1), []);
             return "below" === n
                 ? u
                     ? (0, i.jsx)("div", {
-                          className: p.Fn,
+                          className: h.Fn,
                           children: (0, i.jsx)(C, { onExited: A, ariaLabel: a, dismissable: !0, children: t }),
                       })
                     : null
@@ -237,9 +237,9 @@ let j = Object.assign(
         },
         Item: function (e) {
             let { className: t, closeOnClick: n = !0, selected: l, onClick: a, ...r } = e,
-                { setOpen: o } = f();
+                { setOpen: o } = g();
             return (0, i.jsx)("div", {
-                className: s()([p.AS, t]),
+                className: s()([h.AS, t]),
                 children: (0, i.jsx)(u.$, {
                     variant: l ? "overlay-primary" : "overlay-secondary",
                     size: "sm",

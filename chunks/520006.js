@@ -68,11 +68,11 @@ function S(e) {
             analyticsLocation: S,
             guildScheduledEvent: N,
             shouldPrioritizeGroupPlusIcon: C = !1,
-            isRichPresenceInvite: R = !1,
-            iconClassName: O,
+            isRichPresenceInvite: O = !1,
+            iconClassName: R,
             look: L,
-            size: D,
-            buttonText: y,
+            size: y,
+            buttonText: D,
             color: v,
             ...b
         } = e,
@@ -85,17 +85,17 @@ function S(e) {
         k = m.intl.string(m.t["6F9ivu"]);
     return (null != t && (k = m.intl.string(m.t["OzOM/q"])),
     null != n && (k = m.intl.string(m.t["6VQaqd"])),
-    null != G && R)
+    null != G && O)
         ? (0, i.jsx)(p.A, {
-              onClick: () => {
-                  null != P && (0, E.X)(P, E.O.INVITE), u.qf(G, !1, M);
+              onClick: function () {
+                  null != G && (null != P && (0, E.X)(P, E.O.INVITE), u.qf(G, !1, M));
               },
               iconComponent: x,
               label: k,
-              iconClassName: O,
+              iconClassName: R,
               look: L,
-              size: D,
-              buttonText: y,
+              size: y,
+              buttonText: D,
               color: v ?? void 0,
           })
         : null != w && null != r && f.A.can(T.xBc.CREATE_INSTANT_INVITE, r)
@@ -118,11 +118,11 @@ function S(e) {
                 },
                 iconComponent: x,
                 label: k,
-                iconClassName: O,
+                iconClassName: R,
                 look: L,
-                size: D,
+                size: y,
                 color: v,
-                buttonText: y,
+                buttonText: D,
                 ...b,
             })
           : null;

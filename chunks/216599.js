@@ -629,28 +629,28 @@ let ea = (e) => {
     });
     let U = p !== q.PvD.NONE,
         F = v === q.gh6.ALL_MEMBERS,
-        Y = N === q.orn.ONLY_MENTIONS,
-        H = async () => {
-            if (null == M || !d) return;
-            let e = new Set(n.features);
-            e.add(q.GuildFeatures.COMMUNITY);
-            let t = m ? r.TF(M.permissions, z.e$) : M.permissions,
-                s = { ...M, permissions: t };
-            t !== M.permissions && (await (0, I.JY)(n.id, [s])),
-                S.A.updateGuild({ features: e, rulesChannelId: u, publicUpdatesChannelId: g }),
-                await S.A.saveGuild(n.id, {
-                    features: e,
-                    rulesChannelId: u,
-                    verificationLevel: n.verificationLevel,
-                    explicitContentFilter: n.explicitContentFilter,
-                    publicUpdatesChannelId: g,
-                    defaultMessageNotifications: n.defaultMessageNotifications,
-                }),
-                setTimeout(() => {
-                    i();
-                }, 0);
-        },
-        V = (0, s.jsx)(X, {
+        Y = N === q.orn.ONLY_MENTIONS;
+    async function H() {
+        if (null == n || null == M || !d) return;
+        let e = new Set(n.features);
+        e.add(q.GuildFeatures.COMMUNITY);
+        let t = m ? r.TF(M.permissions, z.e$) : M.permissions,
+            s = { ...M, permissions: t };
+        t !== M.permissions && (await (0, I.JY)(n.id, [s])),
+            S.A.updateGuild({ features: e, rulesChannelId: u, publicUpdatesChannelId: g }),
+            await S.A.saveGuild(n.id, {
+                features: e,
+                rulesChannelId: u,
+                verificationLevel: n.verificationLevel,
+                explicitContentFilter: n.explicitContentFilter,
+                publicUpdatesChannelId: g,
+                defaultMessageNotifications: n.defaultMessageNotifications,
+            }),
+            setTimeout(() => {
+                i();
+            }, 0);
+    }
+    let V = (0, s.jsx)(X, {
             guild: n,
             disableVerificationLevel: U,
             disableContentFilter: F,
@@ -683,7 +683,7 @@ let ea = (e) => {
             ? (0, s.jsx)(en, {
                   guild: n,
                   policyAccepted: d,
-                  onAcceptPolicy: (e) => {
+                  onAcceptPolicy: function (e) {
                       if (e) {
                           o(!0),
                               Y || S.A.updateGuild({ defaultMessageNotifications: q.orn.ONLY_MENTIONS }),

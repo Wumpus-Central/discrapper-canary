@@ -13,7 +13,7 @@ var n = i(627968),
     x = i(347704),
     S = i(47167),
     f = i(468689),
-    m = i(913758),
+    m = i(555337),
     E = i(636042),
     h = i(376092),
     j = i(808728),
@@ -256,8 +256,8 @@ function w(t) {
         R = (0, r.bG)([C.A], () => (null != i ? C.A.getEveryoneRole(i) : void 0)),
         [T, Y] = s.useState(!1);
     if (null == i) return null;
-    let w = async () => {
-        if (null == R || !T) return;
+    async function w() {
+        if (null == i || null == R || !T) return;
         let t = N ? null : l.TF(R.permissions, P.e$);
         if (null != t && t !== R.permissions) {
             let e = { ...R, permissions: t };
@@ -272,7 +272,7 @@ function w(t) {
             ...(!O && { defaultMessageNotifications: M.orn.ONLY_MENTIONS }),
         };
         f.A.updateGuild(e), await f.A.saveGuild(i.id, e, { throwErr: !0 });
-    };
+    }
     async function K() {
         b.default.track(M.HAw.MODAL_DISMISSED, { type: P.bK }), await e.onClose();
     }
@@ -328,8 +328,8 @@ function w(t) {
         numberedSteps: k,
         currentStepKey: a,
         onClose: K,
-        onStepChange: (t, e) => {
-            (0, y.sx)({ fromStep: e, toStep: t, guildId: i.id }), o(t);
+        onStepChange: function (t, e) {
+            null != i && ((0, y.sx)({ fromStep: e, toStep: t, guildId: i.id }), o(t));
         },
         onComplete: w,
     });

@@ -17,7 +17,7 @@ var l = r(627968),
 function E(e) {
     return `var(--space-${e})`;
 }
-let A = (e) => {
+let A = function (e) {
     let {
             children: t,
             gap: r = 24,
@@ -117,11 +117,11 @@ let A = (e) => {
                 }),
                 null != N.current && N.current >= e.childElementCount && (N.current = null);
         });
-        r.observe(e, { childList: !0 });
-        let l = () => {
-            L === m.Uf.ITEM && (j.current = e.scrollLeft), O();
-        };
+        function l() {
+            null != e && (L === m.Uf.ITEM && (j.current = e.scrollLeft), O());
+        }
         return (
+            r.observe(e, { childList: !0 }),
             e.addEventListener("scrollend", l),
             () => {
                 t.disconnect(), r.disconnect(), e.removeEventListener("scrollend", l);

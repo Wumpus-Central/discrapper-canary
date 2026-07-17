@@ -11,8 +11,8 @@ var c = r(702805),
     x = r(47167),
     g = r(517622),
     h = r(86944),
-    A = r(734057),
-    f = r(71393),
+    f = r(734057),
+    A = r(71393),
     m = r(488926),
     p = r(233993),
     v = r(719366),
@@ -23,8 +23,8 @@ function w(e, t) {
 }
 function y(e) {
     let { channelId: t, onClose: r, ...m } = e,
-        y = (0, s.bG)([A.A], () => A.A.getChannel(t)),
-        R = (0, s.bG)([f.A], () => f.A.getGuild(y?.getGuildId())),
+        y = (0, s.bG)([f.A], () => f.A.getChannel(t)),
+        R = (0, s.bG)([A.A], () => A.A.getGuild(y?.getGuildId())),
         S = (0, x.Ay)(y),
         [k, C] = i.useState(""),
         [b, G] = i.useState({}),
@@ -34,26 +34,28 @@ function y(e) {
         { roles: M, members: _, getRichTag: I } = (0, h.K)(R, y, p.QY, k),
         Y = g.A.useSections({ roles: M, members: _ });
     if (null == y || null == R) return null;
-    let P = async () => {
-        H(!0);
-        try {
-            let e;
-            await ((e = Object.values(b)
-                .filter((e) => {
-                    let { row: t } = e;
-                    return null != t.id;
-                })
-                .map((e) => {
-                    let { row: t } = e;
-                    return t.rowType === v.T6.ROLE ? w(t.id, u.r2.ROLE) : w(t.id, u.r2.MEMBER);
-                })),
-            (0, c.R$)(y.id, e, !0)),
-                r();
-        } catch (t) {
-            let e = new d.LG(t);
-            H(!1), O(e);
+    async function P() {
+        if (null != y) {
+            H(!0);
+            try {
+                let e;
+                await ((e = Object.values(b)
+                    .filter((e) => {
+                        let { row: t } = e;
+                        return null != t.id;
+                    })
+                    .map((e) => {
+                        let { row: t } = e;
+                        return t.rowType === v.T6.ROLE ? w(t.id, u.r2.ROLE) : w(t.id, u.r2.MEMBER);
+                    })),
+                (0, c.R$)(y.id, e, !0)),
+                    r();
+            } catch (t) {
+                let e = new d.LG(t);
+                H(!1), O(e);
+            }
         }
-    };
+    }
     return (0, n.jsx)(g.A.Provider, {
         listRef: L,
         query: k,

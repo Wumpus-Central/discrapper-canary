@@ -373,26 +373,28 @@ function eG(e) {
         E = (0, eR.fw)(o?.id ?? ei.dJq),
         h = r.useCallback(() => null != o && (0, eL.aZ)(o.id), [o]);
     if (null == o || null == u || !d) return null;
-    let I = (e) => {
-            e && E && s !== eU.VV.MEMBER_SAFETY && h()
-                ? ee.default.track(ei.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
-                      notice_type: ei.kqX.GUILD_RAID_NOTIFICATION,
-                      guild_id: o.id,
-                  })
-                : (0, f.openModalLazy)(async () => {
-                      let e = { source: eM.Eo.NAGBAR, alertType: (0, eP.$5)(u) },
-                          { default: t } = await Promise.all([
-                              n.e("87960"),
-                              n.e("36518"),
-                              n.e("40258"),
-                              n.e("73669"),
-                              n.e("46313"),
-                              n.e("43233"),
-                          ]).then(n.bind(n, 671576));
-                      return (n) => (0, i.jsx)(t, { ...n, guildId: o.id, analyticsData: e });
-                  });
-        },
-        p = (0, i.jsx)(eO.Ay, { className: ew.$f, guild: o, size: eO.Ay.Sizes.MINI }),
+    function I(e) {
+        if (null != o) {
+            if (e && E && s !== eU.VV.MEMBER_SAFETY && h())
+                return void ee.default.track(ei.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, {
+                    notice_type: ei.kqX.GUILD_RAID_NOTIFICATION,
+                    guild_id: o.id,
+                });
+            (0, f.openModalLazy)(async () => {
+                let e = { source: eM.Eo.NAGBAR, alertType: (0, eP.$5)(u) },
+                    { default: t } = await Promise.all([
+                        n.e("87960"),
+                        n.e("36518"),
+                        n.e("40258"),
+                        n.e("73669"),
+                        n.e("46313"),
+                        n.e("43233"),
+                    ]).then(n.bind(n, 671576));
+                return (n) => (0, i.jsx)(t, { ...n, guildId: o.id, analyticsData: e });
+            });
+        }
+    }
+    let p = (0, i.jsx)(eO.Ay, { className: ew.$f, guild: o, size: eO.Ay.Sizes.MINI }),
         T = (0, eP.ql)(u, o.name);
     if (null != (u.dmsDisabledUntil ?? u.invitesDisabledUntil) && _)
         return (0, i.jsxs)(A.$T, {
@@ -509,32 +511,36 @@ let e7 = function () {
         case e2.B5.SUBMITTED:
             (o = es.intl.string(es.t["5iLvSx"])),
                 (d = es.intl.string(es.t.mqtdmQ)),
-                (u = () => {
-                    (0, eQ.A)({
-                        title: es.intl.string(es.t.aIz1oV),
-                        subtitle: es.intl.string(es.t["13tjTU"]),
-                        variant: "primary",
-                        confirmText: es.intl.string(es.t["cY+Oob"]),
-                        onConfirm: () => e1.A.removeGuildJoinRequest(t.id),
-                    });
+                (u = function () {
+                    null != t &&
+                        (0, eQ.A)({
+                            title: es.intl.string(es.t.aIz1oV),
+                            subtitle: es.intl.string(es.t["13tjTU"]),
+                            variant: "primary",
+                            confirmText: es.intl.string(es.t["cY+Oob"]),
+                            onConfirm: () => e1.A.removeGuildJoinRequest(t.id),
+                        });
                 });
             break;
         case e2.B5.REJECTED:
             (o = es.intl.string(es.t.lk30cY)),
                 (d = es.intl.string(es.t["8RrsHr"])),
-                (u = () => {
-                    (0, f.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("25099"), n.e("14382")]).then(n.bind(n, 463325));
-                        return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
-                    });
+                (u = function () {
+                    null != t &&
+                        (0, f.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([n.e("25099"), n.e("14382")]).then(
+                                n.bind(n, 463325),
+                            );
+                            return (n) => (0, i.jsx)(e, { guildId: t.id, ...n });
+                        });
                 }),
                 E.push(e4.z3);
             break;
         default:
             (o = es.intl.string(es.t.G5YKXP)),
                 (d = es.intl.string(es.t["r8/DT+"])),
-                (u = () => {
-                    (0, e$.Ze)(t.id);
+                (u = function () {
+                    null != t && (0, e$.Ze)(t.id);
                 });
     }
     return (0, i.jsxs)("div", {
@@ -568,14 +574,16 @@ let tl = function () {
         t = (0, c.bG)([ey.A], () => ey.A.getGuild(e), [e]),
         [n, a] = r.useState(!1);
     if (null == t) return null;
-    let s = async () => {
-        a(!0);
-        try {
-            ta.cf(t.id), await tr.A.joinGuild(t.id, { source: ei.Q4z.NOTICE_BAR });
-        } catch {
-            a(!1);
+    async function s() {
+        if (null != t) {
+            a(!0);
+            try {
+                ta.cf(t.id), await tr.A.joinGuild(t.id, { source: ei.Q4z.NOTICE_BAR });
+            } catch {
+                a(!1);
+            }
         }
-    };
+    }
     return (0, i.jsxs)("div", {
         className: eZ()(ts.lm, e5.lm),
         children: [
@@ -1025,8 +1033,8 @@ let nn = r.memo(function () {
                 let { metadata: e } = a,
                     t = eN.A.getUserExperimentDescriptor(e.id);
                 null != t && (0, eS.LQ)(e.id, t),
-                    (async () => {
-                        a.metadata?.id != null && (await (0, D.oX)(a.metadata?.id));
+                    (async function () {
+                        null != a && a.metadata?.id != null && (await (0, D.oX)(a.metadata?.id));
                     })();
             }
         }, [a]),
@@ -1428,7 +1436,7 @@ let nn = r.memo(function () {
                                     n.e("93159"),
                                     n.e("55936"),
                                     n.e("89088"),
-                                    n.e("42834"),
+                                    n.e("69294"),
                                     n.e("94723"),
                                     n.e("62931"),
                                     n.e("45959"),
@@ -1449,7 +1457,7 @@ let nn = r.memo(function () {
                                     n.e("24038"),
                                     n.e("55654"),
                                     n.e("50097"),
-                                    n.e("23164"),
+                                    n.e("80445"),
                                     n.e("91824"),
                                     n.e("62075"),
                                 ]).then(n.bind(n, 4630));
@@ -1766,7 +1774,7 @@ let nn = r.memo(function () {
                                         n.e("93159"),
                                         n.e("55936"),
                                         n.e("89088"),
-                                        n.e("42834"),
+                                        n.e("69294"),
                                         n.e("94723"),
                                         n.e("62931"),
                                         n.e("45959"),
@@ -1786,7 +1794,7 @@ let nn = r.memo(function () {
                                         n.e("24038"),
                                         n.e("55654"),
                                         n.e("50097"),
-                                        n.e("23164"),
+                                        n.e("80445"),
                                         n.e("91824"),
                                         n.e("14794"),
                                     ]).then(n.bind(n, 174705));

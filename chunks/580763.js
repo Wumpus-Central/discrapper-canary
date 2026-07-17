@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(915089),
     N = n(932413),
     C = n(345942),
-    R = n(82149),
-    O = n(92240),
+    O = n(82149),
+    R = n(92240),
     L = n(257367),
     y = n(160376),
     D = n(53257),
@@ -225,13 +225,13 @@ function eS(e) {
 }
 var eN = n(573648),
     eC = n(968309),
-    eR = n(30370);
-function eO(e) {
+    eO = n(30370);
+function eR(e) {
     let { platformType: t, icon: n, onAction: r } = e,
         { newestAnalyticsLocation: a } = (0, I.Ay)(),
         { themeType: s } = (0, b.E)(),
         l = s === ea.d.MODAL_V2;
-    return (0, P.bG)([eR.A], () => null != eR.A.getAccount(null, t))
+    return (0, P.bG)([eO.A], () => null != eO.A.getAccount(null, t))
         ? null
         : (0, i.jsx)(Y.FD, {
               icon: n,
@@ -255,21 +255,23 @@ function eP(e) {
     let { activity: t, onAction: n, onClose: r } = e,
         { themeType: a } = (0, b.E)(),
         s = a === ea.d.MODAL_V2,
-        { channelId: l, guildId: o } = (0, R.UW)(t) ?? {},
+        { channelId: l, guildId: o } = (0, O.UW)(t) ?? {},
         d = (0, P.bG)([eM.A], () => null != l && eM.A.isInChannel(l), [l]),
         c = (0, P.bG)([ev.A], () => (null != l ? ev.A.getChannel(l) : null), [l]),
         u = (0, P.bG)([eb.A], () => null != c && eb.A.can(eD.Gk, c), [c]);
-    return (0, R.Cy)(t) && u && null != o && null != l
+    return (0, O.Cy)(t) && u && null != o && null != l
         ? (0, i.jsx)(Y.FD, {
               text: q.intl.string(q.t.ZYO5OK),
               fullWidth: !s,
               disabled: d,
-              onClick: (e) => {
-                  e.stopPropagation(),
+              onClick: function (e) {
+                  null != o &&
+                      null != l &&
+                      (e.stopPropagation(),
                       n?.({ action: "PRESS_STAGE_CHANNEL_LISTEN_BUTTON" }),
                       ey.CH(o, l),
                       (0, eL.iN)(l),
-                      r?.();
+                      r?.());
               },
           })
         : null;
@@ -301,7 +303,7 @@ function ex(e) {
         S = o === ea.d.MODAL || o === ea.d.MODAL_V2,
         N = o === ea.d.POPOUT,
         C = o === ea.d.MODAL_V2 ? es.g6 : es.Zu,
-        O =
+        R =
             f.length > 0
                 ? (0, i.jsx)(X.A, {
                       distributorCTAConfigs: f,
@@ -320,30 +322,30 @@ function ex(e) {
                     ? (0, i.jsx)(Z, { applicationId: s.id, onAction: r, onClose: a })
                     : null;
             if (n?.buttons != null && n?.buttons.length >= 1)
-                return null != O
+                return null != R
                     ? (0, i.jsxs)("div", {
                           className: C,
-                          children: [(0, i.jsx)(eo, { user: t, activity: n, onAction: r }), O],
+                          children: [(0, i.jsx)(eo, { user: t, activity: n, onAction: r }), R],
                       })
                     : (0, i.jsx)(eo, { user: t, activity: n, onAction: r });
             if (!u && c && null != s && !S) {
                 let e = (0, i.jsx)(eG.A, { application: s, onAction: r, onClose: a, analyticsLocations: E });
-                return null != O ? (0, i.jsxs)("div", { className: C, children: [e, O] }) : e;
+                return null != R ? (0, i.jsxs)("div", { className: C, children: [e, R] }) : e;
             }
             if ((0, _.A)(n) || ((0, G.Ay)(n) && u)) {
                 let e = (0, i.jsx)(ef, { user: t, activity: n, onAction: r, onClose: a });
-                return null != O ? (0, i.jsxs)("div", { className: C, children: [e, O] }) : e;
+                return null != R ? (0, i.jsxs)("div", { className: C, children: [e, R] }) : e;
             }
             if (p && T && !m) {
                 let e = (0, i.jsx)(eT, { startAuthorization: g, onAction: r });
-                return null != O ? (0, i.jsxs)("div", { className: C, children: [e, O] }) : e;
+                return null != R ? (0, i.jsxs)("div", { className: C, children: [e, R] }) : e;
             }
-            if (null != O) return O;
+            if (null != R) return R;
             if (!(0, w.A)(n)) {
                 if ((0, k.A)(n))
-                    return (0, i.jsx)(eO, { platformType: eg.fg2.XBOX, icon: () => (0, i.jsx)(et.A, {}), onAction: r });
+                    return (0, i.jsx)(eR, { platformType: eg.fg2.XBOX, icon: () => (0, i.jsx)(et.A, {}), onAction: r });
                 if ((0, x.A)(n))
-                    return (0, i.jsx)(eO, {
+                    return (0, i.jsx)(eR, {
                         platformType: eg.fg2.PLAYSTATION,
                         icon: () => (0, i.jsx)(ee.A, {}),
                         onAction: r,
@@ -355,7 +357,7 @@ function ex(e) {
                   ? (0, i.jsx)(ef, { user: t, activity: n, onAction: r, onClose: a })
                   : (0, U.A)(n, eg.jUm.INSTANCE)
                     ? (0, i.jsx)(eS, { user: t, activity: n, onAction: r })
-                    : (0, R.Cy)(n)
+                    : (0, O.Cy)(n)
                       ? (0, i.jsx)(eP, { activity: n, onAction: r, onClose: a })
                       : null;
         })();
@@ -390,7 +392,7 @@ function eZ(e) {
         { analyticsLocations: V } = (0, I.Ay)(h.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: B } = (0, b.E)(),
         H = (0, g.A)({ activity: r, user: t }),
-        j = (0, O.A)({ display: "live", user: t, activity: r, entry: H, analyticsLocations: V }),
+        j = (0, R.A)({ display: "live", user: t, activity: r, entry: H, analyticsLocations: V }),
         W = (0, L.A)({ userId: t.id, onAction: j }),
         Y = (0, f.Ay)(U),
         K = (0, y.A)(r),
@@ -431,7 +433,7 @@ function eZ(e) {
                       (0, i.jsx)(eH.Q, { variant: "heading-sm/semibold", text: Y, id: k }),
                   ],
               })
-            : (0, E.A)(r) || (0, R.Cy)(r)
+            : (0, E.A)(r) || (0, O.Cy)(r)
               ? (0, i.jsx)(eH.Q, { variant: "heading-sm/semibold", text: r.name, id: k })
               : null != r.details
                 ? (0, i.jsx)(T.O, {
@@ -456,7 +458,7 @@ function eZ(e) {
                       href: r.details_url,
                       children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.details }),
                   })
-                : (0, R.Cy)(r)
+                : (0, O.Cy)(r)
                   ? (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r?.assets?.small_text })
                   : (0, i.jsx)(T.O, {
                         href: r.state_url,
@@ -509,7 +511,7 @@ function eZ(e) {
                           children: (0, i.jsx)(eH.A, { variant: "text-xs/normal", text: r.state }),
                       })
                     : null;
-        if ((0, R.Cy)(r) && r.party?.size != null && r.party?.size.length >= 2) {
+        if ((0, O.Cy)(r) && r.party?.size != null && r.party?.size.length >= 2) {
             let e = q.intl.formatToPlainString(q.t["JC/3xw"], {
                 numSpeakers: r.party?.size[0],
                 numListeners: r.party?.size[1] - r.party?.size[0],

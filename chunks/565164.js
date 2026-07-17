@@ -15,15 +15,21 @@ function u(e, t, n, i) {
         r.useEffect(() => {
             if (null == n || 0 === n.length || !e) return;
             let i = t.current;
-            if (null == i) return;
-            i.track.mode = "hidden";
-            let r = () => {
-                let e = i.track.cues ?? [],
-                    t = [];
-                for (let n = 0; n < e.length; n++) {
-                    let i = e[n];
-                    if (!(0, l.C)(i)) continue;
-                    let r = (function (e) {
+            if (null != i)
+                return (
+                    (i.track.mode = "hidden"),
+                    i.addEventListener("load", r),
+                    i.readyState === HTMLTrackElement.LOADED && r(),
+                    () => i.removeEventListener("load", r)
+                );
+            function r() {
+                if (null == n || 0 === n.length || !e || null == i) return;
+                let t = i.track.cues ?? [],
+                    r = [];
+                for (let e = 0; e < t.length; e++) {
+                    let n = t[e];
+                    if (!(0, l.C)(n)) continue;
+                    let i = (function (e) {
                         let t = e.match(d);
                         if (null == t) return null;
                         let n = e.split("#")[0];
@@ -36,16 +42,11 @@ function u(e, t, n, i) {
                                   w: parseInt(t[3], 10),
                                   h: parseInt(t[4], 10),
                               };
-                    })(i.text);
-                    null != r && t.push({ startSec: i.startTime, endSec: i.endTime, ...r });
+                    })(n.text);
+                    null != i && r.push({ startSec: n.startTime, endSec: n.endTime, ...i });
                 }
-                t.sort((e, t) => e.startSec - t.startSec), s({ url: n, cues: t });
-            };
-            return (
-                i.addEventListener("load", r),
-                i.readyState === HTMLTrackElement.LOADED && r(),
-                () => i.removeEventListener("load", r)
-            );
+                r.sort((e, t) => e.startSec - t.startSec), s({ url: n, cues: r });
+            }
         }, [n, t, e]),
         r.useEffect(() => {
             if (null == i || 0 === i.length || !e) return;

@@ -523,7 +523,7 @@ let tv = function (e) {
 };
 var tp = n(853742);
 n(321073);
-var tA = n(580929),
+var tA = n(372684),
     tC = n(136722),
     tN = n(192308),
     tb = n(866323),
@@ -2081,13 +2081,14 @@ function lg(e) {
                 (0, i.jsx)(la.A, {
                     className: lo.Fg,
                     ref: o,
-                    onChange: (e) => {
-                        l?.(),
+                    onChange: function (e) {
+                        null != c &&
+                            (l?.(),
                             (0, lr.R)(e.currentTarget.files, c, to.C.FirstThreadMessage, {
                                 requireConfirm: !0,
                                 origin: "file_picker",
                             }),
-                            (e.currentTarget.value = null);
+                            (e.currentTarget.value = null));
                     },
                     multiple: c.rateLimitPerUser <= 0,
                     tabIndex: -1,

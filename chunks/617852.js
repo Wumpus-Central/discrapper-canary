@@ -2,7 +2,7 @@ a.r(t), a.d(t, { videoQuestCollection: () => ee, playgroundConfig: () => et });
 var l = a(782134),
     o = a(627968),
     i = a(64700),
-    n = a(348833),
+    n = a(682176),
     r = a(784018);
 let s = {
     name: "Clips Player",
@@ -21,9 +21,9 @@ let s = {
                 embed: m,
                 fillContainer: x,
                 showTextContent: g,
-                showParticipants: h,
+                showParticipants: f,
             } = e,
-            f = i.useMemo(
+            h = i.useMemo(
                 () => ({
                     id: "playground-clip",
                     url: t,
@@ -41,7 +41,7 @@ let s = {
         return (0, o.jsx)("div", {
             style: x ? { width: "100%", height: "500px" } : { display: "flex", justifyContent: "center" },
             children: (0, o.jsx)(n.A, {
-                attachment: f,
+                attachment: h,
                 src: t,
                 posterUrl: a,
                 active: d,
@@ -54,7 +54,7 @@ let s = {
                 maxWidth: 0 === r ? void 0 : r,
                 maxHeight: 0 === s ? void 0 : s,
                 showTextContent: g,
-                showParticipants: h,
+                showParticipants: f,
             }),
         });
     },
@@ -78,15 +78,15 @@ let s = {
         showParticipants: { label: "Show Participants", type: "boolean", defaultValue: !0 },
     },
 };
-var d = a(580929),
+var d = a(372684),
     u = a(831544),
     p = a(231723),
     c = a(717421),
     m = a(834730),
     x = a(664111),
     g = a(831056);
-let h = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
-function f(e) {
+let f = "https://cdn.discordapp.com/assets/og_img_discord_home.png";
+function h(e) {
     let { orientation: t, thumbnailUrl: a, onReplay: l } = e;
     return (0, o.jsxs)(o.Fragment, {
         children: [
@@ -196,7 +196,7 @@ function b(e) {
                         renderEndScreen: d
                             ? (e) => {
                                   let { replay: a } = e;
-                                  return (0, o.jsx)(f, { orientation: t, thumbnailUrl: h, onReplay: a });
+                                  return (0, o.jsx)(h, { orientation: t, thumbnailUrl: f, onReplay: a });
                               }
                             : void 0,
                     },
@@ -219,7 +219,7 @@ let y = {
         autoplay: { label: "Autoplay", type: "boolean", defaultValue: !1 },
         maxSeekableTimeSec: { label: "Max Seekable Time (sec, 0 = unrestricted)", type: "number", defaultValue: 0 },
         videoUrl: { label: "Video URL", type: "text", defaultValue: r.kz },
-        poster: { label: "Poster URL", type: "text", defaultValue: h },
+        poster: { label: "Poster URL", type: "text", defaultValue: f },
         showEndScreen: { label: "Show End Screen", type: "boolean", defaultValue: !0 },
         initialActive: { label: "Initially Active", type: "boolean", defaultValue: !0 },
         autoHideVolumeSlider: { label: "Auto-hide Volume Slider", type: "boolean", defaultValue: !1 },
@@ -497,10 +497,10 @@ function B(e) {
             transcript: "transcript.txt",
         }),
         g = z(x),
-        h = i.useRef(!1);
-    h.current || ((h.current = !0), P.Kr.getState().clearState()),
+        f = i.useRef(!1);
+    f.current || ((f.current = !0), P.Kr.getState().clearState()),
         n && (g.config.features = [O.Li.FULL_EPISODE_VIDEO_QUEST]);
-    let f = l
+    let h = l
         ? {
               ...g,
               userStatus: F({
@@ -523,7 +523,7 @@ function B(e) {
             "--custom-footer-horizontal-padding": "20px",
         },
         children: (0, o.jsx)(Q, {
-            quest: f,
+            quest: h,
             isPortrait: u,
             isFullscreenEnabled: c,
             setIsFullscreenEnabled: m,
@@ -618,16 +618,16 @@ function Y(e) {
     x.current || ((x.current = !0), P.Kr.getState().clearState()),
         i.useEffect(() => {
             let e = document.querySelector('[data-testid="discord-web-video-player-video"]');
-            if (null == e) return;
-            let t = () => {
-                e.currentTime = 0;
-            };
-            if (!(e.readyState >= 1))
-                return (
-                    e.addEventListener("loadedmetadata", t, { once: !0 }),
-                    () => e.removeEventListener("loadedmetadata", t)
-                );
-            t();
+            if (null != e)
+                if (!(e.readyState >= 1))
+                    return (
+                        e.addEventListener("loadedmetadata", t, { once: !0 }),
+                        () => e.removeEventListener("loadedmetadata", t)
+                    );
+                else t();
+            function t() {
+                null != e && (e.currentTime = 0);
+            }
         }, []),
         n && (m.config.features = [O.Li.FULL_EPISODE_VIDEO_QUEST]);
     let g = l

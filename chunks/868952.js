@@ -7,7 +7,7 @@ var e = n(627968),
     d = n(935462),
     c = n(97808),
     o = n(778712),
-    x = n(534514),
+    x = n(297264),
     m = n(834730),
     u = n(376092),
     j = n(260509),
@@ -157,12 +157,13 @@ function q(s) {
             );
         }, [i]);
     if (null == i) return null;
-    let c = async () => {
+    async function c() {
+        if (null == i) return;
         let s = null != i ? h.A.getEveryoneRole(i) : void 0;
         if (null == s) return;
         let n = l.TF(s.permissions, f.e$);
         await (0, v.JY)(i.id, [{ ...s, permissions: n }]), r();
-    };
+    }
     return (0, e.jsxs)(d.EO, {
         transitionState: n,
         size: d.rI.SMALL,

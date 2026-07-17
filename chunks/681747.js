@@ -1794,14 +1794,15 @@ function tq(e) {
         o = d?.moderatorReport?.reported_user_id;
     return n.isModeratorReportChannel() && null != o
         ? (0, l.jsx)(th.Ay.Icon, {
-              onClick: () => {
-                  (0, tG.iN)(n.id),
+              onClick: function () {
+                  null != o &&
+                      ((0, tG.iN)(n.id),
                       (0, tW.A)(),
                       (0, tB.z)(n.guild_id, o, n.id, {
                           modViewPanel: tz.g.INFO,
                           sourceLocation: location ?? t.location,
                       }),
-                      i.dispatch(er.jej.POPOUT_CLOSE);
+                      i.dispatch(er.jej.POPOUT_CLOSE));
               },
               tooltip: a,
               icon: tF.q,
@@ -4835,11 +4836,14 @@ function rD(e) {
             component: (0, l.jsx)(sH.A, {
                 children: (0, l.jsx)(sF.H, { id: f, children: z.intl.format(z.t.KRe1Fk, { name: I }) }),
             }),
-            children: d
-                ? (0, l.jsx)(ap, { user: i, currentUser: a, onHide: o, isRedesignEnabled: h, ...e })
-                : i.isNonUserBot()
-                  ? (0, l.jsx)(au, { user: i, currentUser: a, isRedesignEnabled: h, ...e })
-                  : (0, l.jsx)(rM, { user: i, currentUser: a, isRedesignEnabled: h, ...e }),
+            children:
+                null == i || null == a
+                    ? null
+                    : d
+                      ? (0, l.jsx)(ap, { user: i, currentUser: a, onHide: o, isRedesignEnabled: h, ...e })
+                      : i.isNonUserBot()
+                        ? (0, l.jsx)(au, { user: i, currentUser: a, isRedesignEnabled: h, ...e })
+                        : (0, l.jsx)(rM, { user: i, currentUser: a, isRedesignEnabled: h, ...e }),
         }),
     });
 }

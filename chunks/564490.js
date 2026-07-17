@@ -5,7 +5,7 @@ var n = l(627968),
     s = l(231723),
     r = l(939249),
     c = l(256905),
-    o = l(372684),
+    o = l(150303),
     u = l(858174),
     d = l(530574),
     m = l(675747),
@@ -20,7 +20,8 @@ function x() {
         a.useEffect(() => {
             let n = l.current;
             if (null == n) return;
-            let a = () => {
+            function a() {
+                if (null == n) return;
                 let l = n.parentElement,
                     a = i.current;
                 if (null == l || null == a) return;
@@ -41,7 +42,7 @@ function x() {
                     (a.style.top = `${m}px`),
                     (a.style.width = `${h}px`),
                     (a.style.height = `${f}px`);
-            };
+            }
             a();
             let s = new ResizeObserver(a);
             s.observe(n.parentElement ?? n);

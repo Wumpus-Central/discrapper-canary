@@ -1408,18 +1408,15 @@ function tk() {
                 u.current = !0;
                 return;
             }
-            u.current &&
-                ((u.current = !1),
-                r(!1),
-                a !== I.oc.NONE ||
-                    null == e ||
-                    (async () => {
-                        try {
-                            await tL(e, null != t), n?.();
-                        } catch (e) {
-                            s(S.h.FAIL), o(e);
-                        }
-                    })());
+            async function l() {
+                if (null != e)
+                    try {
+                        await tL(e, null != t), n?.();
+                    } catch (e) {
+                        s(S.h.FAIL), o(e);
+                    }
+            }
+            u.current && ((u.current = !1), r(!1), a === I.oc.NONE && null != e && l());
         }, [a, e, t, n, r, s, o]),
         null
     );
@@ -2100,7 +2097,8 @@ let nD = function (e) {
                   label: X.intl.string(X.t.xFn72s),
                   placeholder: X.intl.string(X.t.R0vK0N),
                   value: a?.id,
-                  onSelectionChange: (e) => {
+                  onSelectionChange: function (e) {
+                      if (null == t) return;
                       let l = r.find((t) => t.id === e);
                       null != l && (n(l, t), s(l));
                   },

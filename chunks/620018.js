@@ -42,33 +42,34 @@ function I(t) {
     let w = (0, A.G3)(c),
         P = h ? N.XG.CANCELED : N.XG.SCHEDULED;
     w === e && (P = c.status);
-    let X = c?.scheduled_start_time != null ? (0, A.j)(d, v, new Date(c?.scheduled_start_time)) : null,
-        q = (t) => {
-            t.stopPropagation(),
-                null != o &&
-                    (0, x.L3)(t, async () => {
-                        let { default: t } = await Promise.all([
-                            n.e("77371"),
-                            n.e("93103"),
-                            n.e("52229"),
-                            n.e("95340"),
-                            n.e("56753"),
-                            n.e("56373"),
-                            n.e("43267"),
-                            n.e("99990"),
-                            n.e("24067"),
-                        ]).then(n.bind(n, 399893));
-                        return (n) =>
-                            (0, l.jsx)(t, {
-                                guildEventId: c.id,
-                                recurrenceId: e,
-                                channel: m,
-                                guild: o,
-                                isRecurrenceItem: !0,
-                                ...n,
-                            });
-                    });
-        };
+    let X = c?.scheduled_start_time != null ? (0, A.j)(d, v, new Date(c?.scheduled_start_time)) : null;
+    function q(t) {
+        null == c ||
+            (t.stopPropagation(),
+            null != o &&
+                (0, x.L3)(t, async () => {
+                    let { default: t } = await Promise.all([
+                        n.e("77371"),
+                        n.e("93103"),
+                        n.e("52229"),
+                        n.e("95340"),
+                        n.e("56753"),
+                        n.e("56373"),
+                        n.e("43267"),
+                        n.e("99990"),
+                        n.e("24067"),
+                    ]).then(n.bind(n, 399893));
+                    return (n) =>
+                        (0, l.jsx)(t, {
+                            guildEventId: c.id,
+                            recurrenceId: e,
+                            channel: m,
+                            guild: o,
+                            isRecurrenceItem: !0,
+                            ...n,
+                        });
+                }));
+    }
     return (0, l.jsxs)(E.s, {
         className: r()(T.kL, { [T.aD]: h, [T.vk]: null != a, [T.vu]: u }),
         onClick: function (t) {

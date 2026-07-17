@@ -1,6 +1,6 @@
 "use strict";
 n.d(t, { A: () => R }), n(938796), n(321073), n(323874), n(14289), n(35956);
-var i = n(735438),
+var i = n(435558),
     r = n.n(i),
     a = n(132500),
     s = n(665260),
@@ -234,8 +234,11 @@ class O extends l.A {
         return null == e
             ? Promise.resolve(null)
             : new Promise((t) => {
-                  let n = (0, a.A)(),
-                      i = (r) => {
+                  let n = (0, a.A)();
+                  e.addEventListener(
+                      "message",
+                      function i(r) {
+                          if (null == e) return;
                           let a = r.data;
                           if (null != a && "DEBUG_STATE" === a.type && a.uuid === n)
                               try {
@@ -243,8 +246,10 @@ class O extends l.A {
                               } finally {
                                   e.removeEventListener("message", i, !1);
                               }
-                      };
-                  e.addEventListener("message", i, !1), e.postMessage({ type: "REQUEST_DEBUG_STATE", uuid: n });
+                      },
+                      !1,
+                  ),
+                      e.postMessage({ type: "REQUEST_DEBUG_STATE", uuid: n });
               });
     }
     _handleLogout = () => {

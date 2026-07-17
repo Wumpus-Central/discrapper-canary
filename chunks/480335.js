@@ -101,8 +101,8 @@ function S(e) {
 n(323874), n(14289), n(35956);
 var N = n(676279),
     C = n(38405),
-    R = n(839827);
-let O = (e) => {
+    O = n(839827);
+let R = (e) => {
         let {
                 layerConfig: t,
                 animationType: n,
@@ -121,36 +121,37 @@ let O = (e) => {
             T = r.useRef(E?.src ?? t.src),
             [m, g] = r.useState(E?.src ?? t.src),
             S = r.useRef(null),
-            O = (0, N.gm)() && null != t.loopDelay && t.loopDelay > 0 && E?.src != null;
+            R = (0, N.gm)() && null != t.loopDelay && t.loopDelay > 0 && E?.src != null;
         function L(e) {
             (0, N.gm)() && e !== f && p(e);
         }
         if (
             (r.useEffect(() => {
-                if (!O || "layer" === f) return;
+                if (!R || "layer" === f) return;
                 let e = new AbortController();
                 return (
-                    (async () => {
-                        try {
-                            if (null == S.current) {
-                                let t = await fetch(E.src, { signal: e.signal }),
-                                    n = await t.blob();
-                                if (e.signal.aborted) return;
-                                S.current = n;
+                    (async function () {
+                        if (E?.src != null)
+                            try {
+                                if (null == S.current) {
+                                    let t = await fetch(E.src, { signal: e.signal }),
+                                        n = await t.blob();
+                                    if (e.signal.aborted) return;
+                                    S.current = n;
+                                }
+                                T.current !== E?.src && URL.revokeObjectURL(T.current),
+                                    (T.current = URL.createObjectURL(S.current)),
+                                    g(() => T.current);
+                            } catch (e) {
+                                if ("AbortError" === e.name) return null;
+                                C.A.captureException(e);
                             }
-                            T.current !== E?.src && URL.revokeObjectURL(T.current),
-                                (T.current = URL.createObjectURL(S.current)),
-                                g(() => T.current);
-                        } catch (e) {
-                            if ("AbortError" === e.name) return null;
-                            C.A.captureException(e);
-                        }
                     })(),
                     () => {
                         e.abort();
                     }
                 );
-            }, [f, O, g, E?.src]),
+            }, [f, R, g, E?.src]),
             r.useEffect(
                 () => () => {
                     T.current !== E?.src && URL.revokeObjectURL(T.current);
@@ -172,7 +173,7 @@ let O = (e) => {
             ? (L("layer"),
               (0, i.jsx)("img", {
                   src: m,
-                  className: R.QZ,
+                  className: O.QZ,
                   style: { top: (t.position?.y ?? 0) - _, left: t.position?.x ?? 0 },
                   alt: "",
                   "aria-hidden": !0,
@@ -241,11 +242,11 @@ let O = (e) => {
             }, [o, M, g, a, y, D, v, E.animationType, c, _]),
             (0, i.jsx)("div", {
                 ref: f,
-                className: s()(R.yC, { [R.yo]: o && d }),
+                className: s()(O.yC, { [O.yo]: o && d }),
                 "aria-label": m,
                 role: "img",
                 children: (0, i.jsx)("div", {
-                    className: R.vW,
+                    className: O.vW,
                     children: p.map((e, r) => {
                         if (
                             !v.current &&
@@ -258,7 +259,7 @@ let O = (e) => {
                             return (0, i.jsx)(
                                 "img",
                                 {
-                                    className: R.QZ,
+                                    className: O.QZ,
                                     style: { top: e.position?.y ?? 0 - t, left: e.position?.x ?? 0 },
                                     src: n,
                                     alt: "",
@@ -268,7 +269,7 @@ let O = (e) => {
                             );
                         }
                         return (0, i.jsx)(
-                            O,
+                            R,
                             {
                                 layerConfig: e,
                                 animationType: E.animationType,
@@ -298,14 +299,14 @@ function y(e) {
         } = e,
         { reducedMotionSrc: o, thumbnailPreviewSrc: d, accessibilityLabel: c } = t;
     return (0, i.jsx)("div", {
-        className: s()(R.yC, { [R.yo]: a && l }),
+        className: s()(O.yC, { [O.yo]: a && l }),
         "aria-label": c,
         role: "img",
         children: (0, i.jsx)("div", {
-            className: R.vW,
+            className: O.vW,
             children: (0, i.jsx)("img", {
                 src: n && !a ? d : o,
-                className: R.QZ,
+                className: O.QZ,
                 style: { top: 0 - r },
                 alt: "",
                 "aria-hidden": !0,

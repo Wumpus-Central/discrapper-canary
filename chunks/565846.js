@@ -1,42 +1,42 @@
-n.d(e, { A: () => g });
-var i = n(627968);
-n(64700);
-var r = n(17928),
-    a = n(477782),
-    l = n(442433),
-    d = n(565645),
-    s = n(159273),
-    o = n(919577),
-    u = n(691060),
-    c = n(406704),
-    h = n(734057),
-    A = n(690521);
-n(253913);
-var m = n(375708);
+e.d(n, { A: () => g });
+var i = e(627968);
+e(64700);
+var r = e(17928),
+    l = e(477782),
+    a = e(442433),
+    d = e(565645),
+    s = e(159273),
+    o = e(919577),
+    u = e(691060),
+    c = e(406704),
+    h = e(734057),
+    A = e(690521);
+e(253913);
+var m = e(375708);
 function g(t) {
-    let e = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
-        n = (0, c.NI)(e),
-        g = (0, r.bG)([h.A], () => h.A.getChannel(e?.parent_id), [e]),
+    let n = (0, r.bG)([h.A], () => h.A.getChannel(t), [t]),
+        e = (0, c.NI)(n),
+        g = (0, r.bG)([h.A], () => h.A.getChannel(n?.parent_id), [n]),
         b = (0, u.OT)(g),
-        j = (0, u.kt)(e),
+        j = (0, u.kt)(n),
         p = j.length >= 5,
-        v = (0, c.Id)(e),
-        f = (0, r.bG)([s.Ay], () => {
+        f = (0, c.Id)(n),
+        v = (0, r.bG)([s.Ay], () => {
             let t = new Set();
-            for (let e of b ?? [])
-                if (null != e.emojiId) {
-                    let n = s.Ay.getUsableCustomEmojiById(e.emojiId);
-                    n?.animated && t.add(e.emojiId);
+            for (let n of b ?? [])
+                if (null != n.emojiId) {
+                    let e = s.Ay.getUsableCustomEmojiById(n.emojiId);
+                    e?.animated && t.add(n.emojiId);
                 }
             return t;
         }, [b]);
-    if (null == e) return (0, l.Z_)(), null;
-    if (!n || __OVERLAY__ || !e.isForumPost() || b?.length === 0 || !v || e.isModeratorReportChannel()) return null;
+    if (null == n) return (0, a.Z_)(), null;
+    if (!e || __OVERLAY__ || !n.isForumPost() || b?.length === 0 || !f || n.isModeratorReportChannel()) return null;
     let _ = b?.map((t) => {
-        let n = j.includes(t),
+        let e = j.includes(t),
             r = null != t.emojiId || null != t.emojiName;
         return (0, i.jsx)(
-            a.sL,
+            l.sL,
             {
                 id: t.id,
                 label: t.name,
@@ -44,35 +44,36 @@ function g(t) {
                     ? (0, i.jsx)(d.A, {
                           emojiId: t.emojiId,
                           emojiName: t.emojiName,
-                          animated: null != t.emojiId && f.has(t.emojiId),
+                          animated: null != t.emojiId && v.has(t.emojiId),
                       })
                     : void 0,
-                leadingAccessory: (function (t, e) {
-                    let { emojiId: n, emojiName: i } = t;
-                    if (null != n || null != i)
+                leadingAccessory: (function (t, n) {
+                    let { emojiId: e, emojiName: i } = t;
+                    if (null != e || null != i)
                         return {
                             type: "emoji",
-                            emojiId: n,
-                            src: null == n && null != i ? A.Ay.getURL(i) : void 0,
-                            animated: null != n && e.has(n),
+                            emojiId: e,
+                            src: null == e && null != i ? A.Ay.getURL(i) : void 0,
+                            animated: null != e && n.has(e),
                         };
-                })(t, f),
-                disabled: p && !n,
+                })(t, v),
+                disabled: p && !e,
                 action: () =>
-                    ((t) => {
-                        let n = new Set(j);
-                        if (n.has(t)) n.delete(t);
+                    (function (t) {
+                        if (null == n) return;
+                        let e = new Set(j);
+                        if (e.has(t)) e.delete(t);
                         else {
                             if (p) return;
-                            n.add(t);
+                            e.add(t);
                         }
-                        let i = Array.from(n).map((t) => t.id);
-                        o.A.updateForumPostTags(e.id, i);
+                        let i = Array.from(e).map((t) => t.id);
+                        o.A.updateForumPostTags(n.id, i);
                     })(t),
-                checked: n,
+                checked: e,
             },
             t.id,
         );
     });
-    return (0, i.jsx)(a.Dr, { id: "edit-tags", label: m.intl.string(m.t["436ZFw"]), children: _ });
+    return (0, i.jsx)(l.Dr, { id: "edit-tags", label: m.intl.string(m.t["436ZFw"]), children: _ });
 }

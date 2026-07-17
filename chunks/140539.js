@@ -20,8 +20,8 @@ var n = r(627968),
     v = r(734057),
     C = r(31717),
     E = r(164617),
-    x = r(540462),
-    D = r(42182);
+    D = r(540462),
+    x = r(42182);
 let S = [c.L, m.T, p.w, h.z];
 function R(e) {
     let { windowKey: t, channelId: r } = e,
@@ -35,26 +35,27 @@ function R(e) {
         windowKey: t,
         title: s ?? "",
         channelId: i.id,
-        onBeforeUnload: (e) => {
+        onBeforeUnload: function (e) {
             let { e: t, unmountWindow: r } = e;
-            if (null != c) {
-                let e = (0, y.od)(c.applicationId, i.id);
-                t.preventDefault(),
-                    (0, g.A)({
-                        onConfirm: async () => {
-                            await e, r();
-                        },
-                        usesPopoutContext: !0,
-                    });
-            } else r();
+            if (null != i)
+                if (null != c) {
+                    let e = (0, y.od)(c.applicationId, i.id);
+                    t.preventDefault(),
+                        (0, g.A)({
+                            onConfirm: async () => {
+                                await e, r();
+                            },
+                            usesPopoutContext: !0,
+                        });
+                } else r();
         },
         children: (0, n.jsx)("div", {
-            className: a()("root", D.M),
+            className: a()("root", x.M),
             children: (0, n.jsxs)(F.A.Provider, {
                 value: i.guild_id,
                 children: [
                     (0, n.jsx)(u.A, { channel: i, draftType: C.C.ChannelMessage }),
-                    (0, n.jsx)(x.default, { channel: i, popoutType: E.N.VOICE_UI }),
+                    (0, n.jsx)(D.default, { channel: i, popoutType: E.N.VOICE_UI }),
                     (0, n.jsx)(d.A, { popoutWindowKey: t, popoutWindowHasTitleBar: !0 }),
                 ],
             }),

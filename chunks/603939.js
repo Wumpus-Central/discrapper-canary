@@ -1028,7 +1028,7 @@ var tb = n(755172),
     tS = n(325595),
     tj = n(893998),
     t_ = n(110629),
-    tv = n(580929),
+    tv = n(372684),
     tA = n(607399),
     tL = n(946015),
     tI = n(717421),
@@ -2264,16 +2264,16 @@ let nU = function (e) {
         [d, g] = c.useState(!1);
     c.useEffect(() => {
         let e = i.current;
-        if (null == e) return;
-        let t = () => {
-            e.naturalWidth > 0 && e.naturalHeight > 0 && r(1080 * (e.naturalHeight / e.naturalWidth));
-        };
-        return (
-            e.complete ? t() : (e.onload = t),
-            () => {
-                e.onload = null;
-            }
-        );
+        if (null != e)
+            return (
+                e.complete ? t() : (e.onload = t),
+                () => {
+                    e.onload = null;
+                }
+            );
+        function t() {
+            null != e && e.naturalWidth > 0 && e.naturalHeight > 0 && r(1080 * (e.naturalHeight / e.naturalWidth));
+        }
     }, []);
     let m = l?.skuId ?? "",
         { handleCardVisibilityChange: h } = (0, ng.Z)(m, "home", "marketing wide banner"),

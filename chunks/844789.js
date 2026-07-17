@@ -648,10 +648,10 @@ function eK(e) {
                 e.preventDefault(), o(!1), T(Array.from(e.dataTransfer?.files ?? []), "drag_drop");
             },
             [T],
-        ),
-        b = (e) => {
-            eS.A.remove(m, e, eM.C.InteractionModal), C(v.filter((t) => t !== e));
-        };
+        );
+    function b(e) {
+        null == m || (eS.A.remove(m, e, eM.C.InteractionModal), C(v.filter((t) => t !== e)));
+    }
     return (s.useEffect(() => {
         let e = r.current;
         return (

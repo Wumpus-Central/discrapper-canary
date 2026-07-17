@@ -1,15 +1,15 @@
 e.d(n, { A: () => j }), e(323874), e(14289), e(35956), e(321073);
 var i = e(627968);
 e(64700);
-var a = e(691540),
-    l = e(857250),
+var l = e(691540),
+    a = e(857250),
     c = e(97483),
     r = e(477782),
     o = e(173936),
     s = e(93688),
-    d = e(509434),
-    p = e(803316),
-    u = e(207133),
+    u = e(509434),
+    d = e(803316),
+    p = e(207133),
     h = e(885386),
     m = e(155078),
     f = e(174459),
@@ -24,7 +24,7 @@ let _ = /^(tel|sms|mailto):([^?;]+)/,
     E = /\.(png|jpe?g|webp|avif|bmp|svg|gif|mp4|webm|mov)(\?|$)/i,
     N = /^\/emojis\/\d+\./;
 function j(t, n, e, j) {
-    let A = (0, u.A)(e?.getChannelId()),
+    let A = (0, p.A)(e?.getChannelId()),
         I = h.Q_.useSetting();
     if (
         !v.isPlatformEmbedded ||
@@ -40,21 +40,22 @@ function j(t, n, e, j) {
             })(t)) ||
         A ||
         j?.shouldHideMediaOptions === !0 ||
-        !(0, p.fW)(t)
+        !(0, d.fW)(t)
     )
         return null;
     let L = (0, m.E)(t);
     function x(t) {
         f.default.track(w.HAw.CONTEXT_MENU_LINK_COPIED, { hostname: L, ...(0, b.N)() }),
             y.Ay.copy(t),
-            (0, a.P0)((0, l.o)(C.intl.string(C.t["L/PwZf"]), c.Ck.SUCCESS));
+            (0, l.P0)((0, a.o)(C.intl.string(C.t["L/PwZf"]), c.Ck.SUCCESS));
     }
-    let D = (e, i) => {
-            let a = !0 === i ? t.replace("tel:", "sms:") : t;
-            f.default.track(w.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: L, ...(0, b.N)() }),
-                (0, g.h)({ href: a, trusted: (0, g.m)(t, n), shouldConfirm: !0 }, e);
-        },
-        P = [],
+    function D(e, i) {
+        if (null == t) return;
+        let l = !0 === i ? t.replace("tel:", "sms:") : t;
+        f.default.track(w.HAw.CONTEXT_MENU_LINK_OPENED, { hostname: L, ...(0, b.N)() }),
+            (0, g.h)({ href: l, trusted: (0, g.m)(t, n), shouldConfirm: !0 }, e);
+    }
+    let P = [],
         U = t.match(_);
     if (null != U) {
         let t = C.intl.string("mailto" === U[1] ? C.t.ZYLVKo : C.t["3zozoR"]);
@@ -64,8 +65,8 @@ function j(t, n, e, j) {
                 {
                     id: "copy-native-contact",
                     label: t,
-                    action: () => {
-                        x(U[2]);
+                    action: function () {
+                        null != U && x(U[2]);
                     },
                 },
                 "copy-native-contact",
@@ -106,8 +107,8 @@ function j(t, n, e, j) {
                 id: "copy-native-link",
                 label: C.intl.string(R),
                 leadingAccessory: { type: "icon", icon: o.q },
-                action: () => {
-                    x(t);
+                action: function () {
+                    null != t && x(t);
                 },
             },
             "copy-native-link",
@@ -119,7 +120,7 @@ function j(t, n, e, j) {
                 id: "open-native-link",
                 label: C.intl.string(S),
                 leadingAccessory: { type: "icon", icon: s.W },
-                trailingIndicator: { type: "icon", icon: d.I },
+                trailingIndicator: { type: "icon", icon: u.I },
                 action: (t) => D(t),
             },
             "open-native-link",

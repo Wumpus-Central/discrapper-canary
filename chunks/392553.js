@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(735438),
+    l = n(435558),
     o = n.n(l),
     d = n(607399),
     c = n(465532),
@@ -25,11 +25,11 @@ var i = n(627968),
     O = n(568548),
     R = n(531685),
     L = n(365971);
-function D(e) {
+function y(e) {
     let t = O.Ay.getChannelIdsForWindowId(e)[0];
     return null == t ? null : (C.A.getChannel(t) ?? null);
 }
-var y = n(826745),
+var D = n(826745),
     v = n(442433),
     b = n(721768),
     M = n(723702),
@@ -138,7 +138,7 @@ class x extends r.PureComponent {
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(p.EG, { event: U.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
-                (0, i.jsx)(y.y, {
+                (0, i.jsx)(D.y, {
                     ref: this.handleSetRef,
                     className: s()(l, c),
                     id: o,
@@ -417,8 +417,8 @@ let ef = r.forwardRef(function (e, t) {
             textAreaPaddingClassName: O,
             onChange: R,
             onPaste: L,
-            onResize: D,
-            onFocus: y,
+            onResize: y,
+            onFocus: D,
             onBlur: v,
             onKeyDown: b,
             onKeyUp: M,
@@ -440,8 +440,8 @@ let ef = r.forwardRef(function (e, t) {
             "aria-activedescendant": eO,
             "aria-controls": eR,
             "aria-invalid": eL,
-            "aria-describedby": eD,
-            "aria-labelledby": ey,
+            "aria-describedby": ey,
+            "aria-labelledby": eD,
             "aria-autocomplete": ev,
         } = e,
         eb = r.useRef(null),
@@ -698,15 +698,15 @@ let ef = r.forwardRef(function (e, t) {
             let e = a.current;
             if (null == e) return;
             let t = e.offsetHeight;
-            n.current !== t && (null != eb.current && (eb.current.style.height = `${t}px`), (n.current = t), D?.(t));
-        }, [eb, D])),
-        (0, er.g)(a, o, [o, eF, D], es),
+            n.current !== t && (null != eb.current && (eb.current.style.height = `${t}px`), (n.current = t), y?.(t));
+        }, [eb, y])),
+        (0, er.g)(a, o, [o, eF, y], es),
         r.useLayoutEffect(() => {
             let e = X.rL.findDocumentOrShadowRoot(eF).defaultView;
             if (e?.ResizeObserver == null) return;
             let t = el(eF);
-            null != t && ((n.current = t.offsetHeight), D?.(n.current));
-        }, [eb, eF, D]);
+            null != t && ((n.current = t.offsetHeight), y?.(n.current));
+        }, [eb, eF, y]);
     let { handleKeyDown: eH, handleKeyUp: ej } = (function (e) {
             let {
                 editor: t,
@@ -937,7 +937,7 @@ let ef = r.forwardRef(function (e, t) {
                     autoFocus: !eT,
                     canFocus: !m,
                     onChange: e$,
-                    onFocus: y,
+                    onFocus: D,
                     onBlur: v,
                     onClick: eK,
                     onPaste: eW,
@@ -951,8 +951,8 @@ let ef = r.forwardRef(function (e, t) {
                     "aria-expanded": eN,
                     "aria-activedescendant": eO,
                     "aria-controls": eR,
-                    "aria-labelledby": ey,
-                    "aria-describedby": eD,
+                    "aria-labelledby": eD,
+                    "aria-describedby": ey,
                     "aria-invalid": eL,
                     "aria-autocomplete": ev,
                     "aria-required": C,
@@ -1149,18 +1149,18 @@ class em extends r.Component {
                 "aria-describedby": O,
                 "aria-labelledby": R,
                 accessibilityLabel: L,
-                showValueWhenDisabled: D,
+                showValueWhenDisabled: y,
             } = this.props,
-            { submitting: y, popup: v } = this.state,
+            { submitting: D, popup: v } = this.state,
             b = {
                 channel: u,
-                className: s()(f, ep.Tg, { [ep.w5]: E, [ep.Rr]: n || y }),
+                className: s()(f, ep.Tg, { [ep.w5]: E, [ep.Rr]: n || D }),
                 id: T,
                 placeholder: this.getPlaceholder(),
                 required: m,
                 accessibilityLabel: L,
                 disabled: n || !1,
-                submitting: y,
+                submitting: D,
                 isEdit: _ === g.oU.EDIT,
                 onFocus: this.handleFocus,
                 onBlur: this.handleBlur,
@@ -1199,12 +1199,12 @@ class em extends r.Component {
                       ref: this.ref,
                       ...b,
                       type: _,
-                      value: n && !D ? (0, S.x7)("") : t,
+                      value: n && !y ? (0, S.x7)("") : t,
                       canUseCommands: _.commands?.enabled,
                       canOnlyUseTextCommands: I,
                       onSubmitFailure: c,
                   })
-                : (0, i.jsx)(x, { ref: this.ref, ...b, value: n && !D ? "" : e });
+                : (0, i.jsx)(x, { ref: this.ref, ...b, value: n && !y ? "" : e });
         return (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(p.EG, { event: U.jej.INSERT_TEXT, handler: this.handleInsertText }),
@@ -1249,10 +1249,10 @@ class em extends r.Component {
                     ? (function (e) {
                           if (null == e) return null;
                           let t = (0, L.Q2)(e);
-                          return null == t ? null : D(t);
+                          return null == t ? null : y(t);
                       })(n)
                     : null,
-            c = null == (t = R.A.getFocusedWindowId()) ? null : D(t),
+            c = null == (t = R.A.getFocusedWindowId()) ? null : y(t),
             I = !(function (e, t) {
                 if (null == e || null == t) return !1;
                 let n = (0, L.Q2)(e);
@@ -1329,7 +1329,8 @@ class em extends r.Component {
             : (e.preventDefault(),
               e.stopPropagation(),
               this.saveCurrentText(),
-              ((e) => {
+              !(function (e) {
+                  if (null == s) return;
                   let t = h.A.getActiveCommand(I.id);
                   if (null == t) return s(e, I, o.drafts.type, { requireConfirm: !0, origin: "clipboard" });
                   let n = o.drafts.commandType ?? o.drafts.type,

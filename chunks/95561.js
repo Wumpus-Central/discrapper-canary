@@ -34,8 +34,8 @@ var s = n(665260),
     S = n(576705),
     N = n(290863),
     C = n(763827),
-    R = n(568548),
-    O = n(994500),
+    O = n(568548),
+    R = n(994500),
     L = n(309010),
     y = n(967198),
     D = n(543465),
@@ -85,11 +85,11 @@ function F(e) {
     let t = !1,
         n = e.getGuildId();
     if (null != n) {
-        let i = (e) => {
-            if (null == e) return !1;
+        function i(e) {
+            if (null == n || null == e) return !1;
             let t = e.permissionOverwrites[n];
             return null != t && a.zy(t.deny, E.xBc.VIEW_CHANNEL);
-        };
+        }
         t = i(I.Le.has(e.type) && null != e.parent_id ? l.A.getChannel(e.parent_id) : e);
     }
     return {
@@ -157,7 +157,7 @@ function H(e) {
                 : null),
         };
     }
-    let I = R.Ay.getSnapshot(e, 10 * P.A.Millis.SECOND);
+    let I = O.Ay.getSnapshot(e, 10 * P.A.Millis.SECOND);
     return {
         channel_id: e,
         channel_was_unread: I.unread,
@@ -192,7 +192,7 @@ function H(e) {
 }
 function j(e) {
     let t = 0;
-    for (let n of e) O.A.isFriend(n) && t++;
+    for (let n of e) R.A.isFriend(n) && t++;
     return { friendCount: t, nonFriendCount: e.length - t };
 }
 function W(e, t, n) {

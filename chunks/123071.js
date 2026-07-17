@@ -3,7 +3,7 @@ var i = n(627968),
     s = n(64700),
     l = n(503698),
     r = n.n(l),
-    a = n(580929),
+    a = n(372684),
     o = n(17928),
     d = n(866323),
     c = n(297264),
@@ -826,7 +826,8 @@ function ec(e) {
                                   a.animated.div,
                                   {
                                       style: e,
-                                      children: (() => {
+                                      children: (function () {
+                                          if (null == R) return null;
                                           switch (B) {
                                               case "cover":
                                                   return (0, i.jsx)(U.Ay, {

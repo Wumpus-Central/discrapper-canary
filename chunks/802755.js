@@ -11370,7 +11370,7 @@ let A1 = function (e) {
                     });
                 },
             }),
-            l
+            null != n && l
                 ? (0, E.jsxs)("div", {
                       id: c,
                       children: [
@@ -11402,14 +11402,14 @@ let A1 = function (e) {
                                   isCancelled: x,
                                   isResubscribing: o,
                                   shouldHideRoleSubscriptionEntryPoints: A,
-                                  onCancelSubscriptionClick: () => {
-                                      if (null != s) {
+                                  onCancelSubscriptionClick: function () {
+                                      if (null != s && null != n && null != i) {
                                           var e;
                                           (e = { groupListing: n, listing: i, subscription: t }),
                                               (0, K.openModal)((t) => (0, E.jsx)(AW, { ...t, ...e }));
                                       }
                                   },
-                                  onChangePlanClick: () => {
+                                  onChangePlanClick: function () {
                                       null != s &&
                                           ((0, s5.pX)(U.BVt.CHANNEL(s.id, Aq.VV.ROLE_SUBSCRIPTIONS)),
                                           (0, sH.default)(),
@@ -16004,8 +16004,10 @@ function xO() {
                                 ],
                             }),
                             showRemoveAvatarButton: S,
-                            onAvatarChange: (e) =>
-                                (0, Tk.rM)(e, m?.avatar, (e) => (0, TQ.p)({ guildId: i.id, avatar: e })),
+                            onAvatarChange: function (e) {
+                                if (null != i)
+                                    return (0, Tk.rM)(e, m?.avatar, (e) => (0, TQ.p)({ guildId: i.id, avatar: e }));
+                            },
                             errors: u?.avatar,
                             guildId: i.id,
                             disabled: !h,
@@ -16093,8 +16095,10 @@ function xO() {
                         {
                             showRemoveBannerButton: T,
                             errors: u?.banner,
-                            onBannerChange: (e) =>
-                                (0, Tk.rM)(e, A?.banner, (e) => (0, TQ.p)({ guildId: i.id, banner: e })),
+                            onBannerChange: function (e) {
+                                if (null != i)
+                                    return (0, Tk.rM)(e, A?.banner, (e) => (0, TQ.p)({ guildId: i.id, banner: e }));
+                            },
                             guildId: i.id,
                             disabled: !h,
                         },

@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(334295),
     N = n(622142),
     C = n(750506),
-    R = n(267102),
-    O = n(926972),
+    O = n(267102),
+    R = n(926972),
     L = n(333216),
     y = n(256449),
     D = n(750385),
@@ -78,7 +78,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
     eS = [eI, eI, eI, eI],
     eN = (ef + ep) * 2 + eI,
     eC = em + 2 * eg,
-    eR = (e) => {
+    eO = (e) => {
         let { stickersListRef: t, channel: n } = e,
             a = r.useRef(null),
             [l, o] = r.useState(!0),
@@ -282,7 +282,7 @@ let eI = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_CATEGORY_LIST_PADDING),
                 }),
         });
     };
-var eO = n(297264),
+var eR = n(297264),
     eL = n(834730),
     ey = n(422936),
     eD = n(811611),
@@ -347,7 +347,7 @@ function eG(e) {
                   })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(eO.D, {
+                          (0, i.jsx)(eR.D, {
                               className: ew.wx,
                               variant: "heading-xl/semibold",
                               children: eA.intl.string(eA.t.HEm04J),
@@ -419,13 +419,14 @@ let eZ = function (e) {
                       (0, i.jsx)(ej.Q, {
                           variant: "primary",
                           text: eA.intl.string(eA.t["Gb+BJD"]),
-                          onClick: () => {
-                              (0, eW.A)({
-                                  analyticsLocations: c,
-                                  analyticsSourceLocation: d,
-                                  guild: _,
-                                  perks: (0, ez.q5)(),
-                              });
+                          onClick: function () {
+                              null != _ &&
+                                  (0, eW.A)({
+                                      analyticsLocations: c,
+                                      analyticsSourceLocation: d,
+                                      guild: _,
+                                      perks: (0, ez.q5)(),
+                                  });
                           },
                       }),
                   ],
@@ -542,8 +543,8 @@ let te = r.memo(function (e) {
             stickerSize: S,
             ownedStickerPacks: N,
             enlargeOnInteraction: C = !1,
-            channel: R,
-            currentUser: O,
+            channel: O,
+            currentUser: R,
             checkSendability: L = !0,
         } = e,
         { location: y } = (0, w.p)(),
@@ -669,7 +670,7 @@ let te = r.memo(function (e) {
                                                 [e9.ot]:
                                                     C && !d && null != u && -1 !== u.rowIndex && -1 !== u.columnIndex,
                                                 [e9.Q$]: c,
-                                                [e9.No]: L && !(0, Q.G7)(e.sticker, O, R),
+                                                [e9.No]: L && !(0, Q.G7)(e.sticker, R, O),
                                             }),
                                             disableAnimation: !d && !a,
                                             enlargeOnInteraction: C,
@@ -746,8 +747,8 @@ let tm = r.forwardRef(function (e, t) {
         g = r.useRef(null),
         [S, N] = k.bM.useStore((e) => [e.activeCategoryIndex, e.inspectedExpressionPosition], M.x),
         { analyticsLocations: C } = (0, x.Ay)(G.A.STICKER_PICKER),
-        R = (0, F.RQ)((e) => e.searchQuery),
-        O = (0, u.bG)([D.A], () => D.A.getPremiumPacks()),
+        O = (0, F.RQ)((e) => e.searchQuery),
+        R = (0, u.bG)([D.A], () => D.A.getPremiumPacks()),
         {
             renderRow: L,
             renderSection: y,
@@ -813,10 +814,10 @@ let tm = r.forwardRef(function (e, t) {
                     };
                 })({ onSelectSticker: s, channel: p, currentUser: m }),
                 [N, C] = r.useState(!1),
-                R = r.useCallback((e) => {
+                O = r.useCallback((e) => {
                     j.tP.updateSetting(Array.from(e));
                 }, []),
-                O = r.useCallback(
+                R = r.useCallback(
                     (e) => {
                         let t = A[e];
                         return null != t
@@ -862,9 +863,9 @@ let tm = r.forwardRef(function (e, t) {
                                 collapsed: !r,
                                 sticker_pack_id: n ? e : null,
                             }),
-                            R(i);
+                            O(i);
                     },
-                    [T, t, R],
+                    [T, t, O],
                 ),
                 v = r.useCallback(
                     (e) => {
@@ -975,7 +976,7 @@ let tm = r.forwardRef(function (e, t) {
                     [I],
                 );
             return {
-                renderRow: O,
+                renderRow: R,
                 renderSection: L,
                 renderSectionHeader: v,
                 sectionHeaderHeight: b,
@@ -1022,7 +1023,7 @@ let tm = r.forwardRef(function (e, t) {
             gutterWidth: d,
             inspectedStickerPosition: N,
             filteredStickers: s,
-            ownedStickerPacks: r.useMemo(() => new Set(O.map((e) => e.id)), [O]),
+            ownedStickerPacks: r.useMemo(() => new Set(R.map((e) => e.id)), [R]),
             channel: p,
         }),
         B = (0, V.Fk)({
@@ -1031,10 +1032,10 @@ let tm = r.forwardRef(function (e, t) {
             listRef: g,
             onActiveCategoryIndexChange: k.bM.setActiveCategoryIndex,
             scrollOffset: 20,
-            searchQuery: R,
+            searchQuery: O,
         });
     return (
-        (0, V.FV)({ searchQuery: R, activeCategoryIndex: S, listRef: g }),
+        (0, V.FV)({ searchQuery: O, activeCategoryIndex: S, listRef: g }),
         r.useImperativeHandle(
             t,
             () => ({
@@ -1110,8 +1111,8 @@ let tS = (0, tg.mj)({
 });
 var tN = n(602034),
     tC = n(892547),
-    tR = n(337485);
-let tO = r.forwardRef(function (e, t) {
+    tO = n(337485);
+let tR = r.forwardRef(function (e, t) {
     let { onKeyDown: n, stickersListRef: a, channel: s } = e,
         l = (0, y.ZO)(s),
         o = r.useRef(null),
@@ -1140,7 +1141,7 @@ let tO = r.forwardRef(function (e, t) {
             c && o.current?.focus();
         }, [c]),
         (0, i.jsx)("div", {
-            className: tR.i,
+            className: tO.i,
             children: (0, i.jsx)(tC.I, {
                 autoFocus: l,
                 disabled: !l,
@@ -1266,8 +1267,8 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 listPaddingLeft: tx,
                 listScrollbarWidth: 8,
             }),
-            R = j.tP.useSetting(),
-            O = r.useMemo(() => new Set(R), [R]),
+            O = j.tP.useSetting(),
+            R = r.useMemo(() => new Set(O), [O]),
             L = (0, u.bG)([W.default], () => W.default.getCurrentUser()),
             v = r.useMemo(
                 () =>
@@ -1311,7 +1312,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             } = (0, y._c)({
                 filteredStickers: v,
                 stickersCategories: S,
-                collapsedStickersCategories: O,
+                collapsedStickersCategories: R,
                 listWidth: C,
                 listPaddingRight: tk,
                 stickerNodeMargin: ei ? tF : tV,
@@ -1462,7 +1463,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 !(A && N) &&
                     (0, i.jsx)("div", {
                         className: tw.wx,
-                        children: (0, i.jsx)(tO, { ref: f, onKeyDown: eE, stickersListRef: I, channel: s }),
+                        children: (0, i.jsx)(tR, { ref: f, onKeyDown: eE, stickersListRef: I, channel: s }),
                     }),
                 N
                     ? (0, i.jsx)(eG, { className: tw.p$, onClose: o })
@@ -1477,7 +1478,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                       null != C
                                           ? (0, i.jsx)(tm, {
                                                 ref: I,
-                                                collapsedStickersCategories: O,
+                                                collapsedStickersCategories: R,
                                                 filteredStickers: v,
                                                 getStickerItemProps: ed,
                                                 getStickerRowProps: ec,
@@ -1494,7 +1495,7 @@ let tG = (0, K.xI)(P.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                                             })
                                           : null,
                               }),
-                              (0, i.jsx)(eR, { stickersListRef: I, channel: s }),
+                              (0, i.jsx)(eO, { stickersListRef: I, channel: s }),
                           ],
                       }),
                 p && (0, i.jsx)(tU, { onLearnMore: eI }),
@@ -1941,9 +1942,9 @@ let t5 = 498 + tJ.as.MEDIUM,
             }),
             K = (0, F.RQ)((e) => e.activeView),
             $ = (0, y.ZO)(M),
-            { renderWindow: z, windowDispatch: q } = r.useContext(R.Ay),
+            { renderWindow: z, windowDispatch: q } = r.useContext(O.Ay),
             Z = (0, u.bG)([D.A], () => !D.A.hasLoadedStickerPacks),
-            X = (0, O.tj)({ location: "expression_picker" }),
+            X = (0, R.tj)({ location: "expression_picker" }),
             Q = tZ.useConfig({ location: "expression_picker" }).enabled,
             J = (0, u.bG)([tz.A], () => tz.A.isOpen()),
             ee = null != k,

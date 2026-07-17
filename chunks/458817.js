@@ -2,9 +2,9 @@ n.d(t, { A: () => v });
 var r = n(64700),
     l = n(323889),
     i = n(731738),
-    a = n(17928),
+    u = n(17928),
     s = n(274670),
-    u = n(144779),
+    a = n(144779),
     o = n(807393),
     c = n(53200),
     d = n(544180),
@@ -40,7 +40,7 @@ function v(e) {
         L = (0, f.u0)(),
         O = (0, f.Ut)(),
         P = (0, _.go)(),
-        N = (0, a.bG)([d.A], () => d.A.getEffectiveConnectionSpeed()),
+        N = (0, u.bG)([d.A], () => d.A.getEffectiveConnectionSpeed()),
         k = (0, r.useRef)(-1),
         b = r.useCallback(
             (e) => {
@@ -124,7 +124,7 @@ function v(e) {
             },
             [T, t, A, n, L, g, h],
         ),
-        w = r.useCallback(
+        M = r.useCallback(
             (e) => {
                 null != t.current &&
                     null != e &&
@@ -143,7 +143,7 @@ function v(e) {
             },
             [T, t, A, n, L, g, h],
         ),
-        M = r.useCallback(
+        w = r.useCallback(
             (e, n) => {
                 null != t.current &&
                     L({
@@ -200,7 +200,7 @@ function v(e) {
             (e, t) => {
                 (0, E.E5)(E.kI.STEP_2_CLICKED_INTERNAL, "video_quest_analytics")
                     ? (0, s.r)({
-                          type: u.F.CLICK_INTERNAL,
+                          type: a.F.CLICK_INTERNAL,
                           adCreativeType: l.p.QUEST,
                           adCreativeId: T,
                           questContentCTA: t,
@@ -236,9 +236,9 @@ function v(e) {
             (e, r) => {
                 if (null == t.current) return;
                 let l = t.current?.error,
-                    a = t.current?.networkState,
+                    u = t.current?.networkState,
                     s = null != t.current ? (0, m.zh)(t.current.currentTime, t.current.duration) : void 0,
-                    u = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
+                    a = null != r ? { hls_error_subtype: r.errorDetails, hls_error_fatal: r.fatal } : {};
                 L({
                     questId: T,
                     event: S.HAw.QUEST_VIDEO_ERROR,
@@ -250,11 +250,11 @@ function v(e) {
                         video_session_id: A,
                         video_error_code: l?.code,
                         video_error_message: l?.message,
-                        video_network_state: a,
+                        video_network_state: u,
                         is_full_episode_video_quest: R,
                         is_hls_supported: (0, c.Ap)(),
                         ...C(n),
-                        ...u,
+                        ...a,
                     },
                     sourceQuestContent: h,
                 }),
@@ -266,33 +266,35 @@ function v(e) {
     r.useEffect(() => {
         if (!x || null == v) return;
         let e = (0, c.LA)();
-        if (null == e) return;
-        let t = (t, n) => {
+        if (null != e)
+            return (
+                v.on(e.Events.ERROR, t),
+                () => {
+                    v.off(e.Events.ERROR, t);
+                }
+            );
+        function t(t, n) {
             let r;
-            switch ((I.info(`[QV] | HLS Error: type=${n.type}, details=${n.details}, fatal=${n.fatal}`), n.type)) {
-                case e.ErrorTypes.NETWORK_ERROR:
-                    r = p.SB.HLS_NETWORK_ERROR;
-                    break;
-                case e.ErrorTypes.MEDIA_ERROR:
-                    r = p.SB.HLS_MEDIA_ERROR;
-                    break;
-                case e.ErrorTypes.MUX_ERROR:
-                    r = p.SB.HLS_MUX_ERROR;
-                    break;
-                case e.ErrorTypes.KEY_SYSTEM_ERROR:
-                    r = p.SB.HLS_KEY_SYSTEM_ERROR;
-                    break;
-                default:
-                    r = p.SB.HLS_OTHER_ERROR;
+            if (null != e) {
+                switch ((I.info(`[QV] | HLS Error: type=${n.type}, details=${n.details}, fatal=${n.fatal}`), n.type)) {
+                    case e.ErrorTypes.NETWORK_ERROR:
+                        r = p.SB.HLS_NETWORK_ERROR;
+                        break;
+                    case e.ErrorTypes.MEDIA_ERROR:
+                        r = p.SB.HLS_MEDIA_ERROR;
+                        break;
+                    case e.ErrorTypes.MUX_ERROR:
+                        r = p.SB.HLS_MUX_ERROR;
+                        break;
+                    case e.ErrorTypes.KEY_SYSTEM_ERROR:
+                        r = p.SB.HLS_KEY_SYSTEM_ERROR;
+                        break;
+                    default:
+                        r = p.SB.HLS_OTHER_ERROR;
+                }
+                K(r, { errorDetails: n.details, fatal: n.fatal });
             }
-            K(r, { errorDetails: n.details, fatal: n.fatal });
-        };
-        return (
-            v.on(e.Events.ERROR, t),
-            () => {
-                v.off(e.Events.ERROR, t);
-            }
-        );
+        }
     }, [x, v, I, K]);
     let H = r.useCallback(
             (e) => {
@@ -329,8 +331,8 @@ function v(e) {
         trackQuestVideoTimeToFirstFrame: V,
         trackQuestVideoProgressed: U,
         trackQuestVideoResumed: Q,
-        trackQuestVideoPaused: w,
-        trackQuestVideoFocusChange: M,
+        trackQuestVideoPaused: M,
+        trackQuestVideoFocusChange: w,
         trackQuestContentClick: Y,
         trackQuestVideoBufferingStarted: B,
         trackQuestVideoBufferingEnded: F,

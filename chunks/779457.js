@@ -7,8 +7,8 @@ var n = l(627968),
     d = l.n(a),
     c = l(189213),
     o = l(17928),
-    x = l(139033),
-    u = l(821609),
+    u = l(139033),
+    x = l(821609),
     m = l(834730),
     h = l(696986),
     j = l(289873),
@@ -91,7 +91,7 @@ function G(t) {
                           className: P.yO,
                           children: i.map((t) => (0, n.jsx)(E.A, { attachment: t }, t.id)),
                       }),
-                      (0, n.jsx)("div", { children: (0, n.jsx)(u.$, { ...a }) }),
+                      (0, n.jsx)("div", { children: (0, n.jsx)(x.$, { ...a }) }),
                   ],
               }),
           });
@@ -107,8 +107,8 @@ function O(t) {
 }
 function I(t) {
     let { onClose: e, transitionState: l, guildProductListingId: s, guildId: r, invoicePreview: a } = t,
-        u = (0, o.bG)([N.A], () => N.A.getGuildProduct(s));
-    d()(null != u, "guildProductListing cannot be null");
+        x = (0, o.bG)([N.A], () => N.A.getGuildProduct(s));
+    d()(null != x, "guildProductListing cannot be null");
     let [g, f] = i.useState(!1);
     i.useEffect(() => {
         !(async function () {
@@ -116,7 +116,7 @@ function I(t) {
                 f(!0), await (0, A.py)(r, s), f(!1);
             } catch (t) {
                 e(),
-                    (0, x.A)({
+                    (0, u.A)({
                         title: C.intl.string(C.t.OCwKlu),
                         subtitle: C.intl.string(C.t.VQ0lXY),
                         confirmText: C.intl.string(C.t["NX+WJN"]),
@@ -124,44 +124,50 @@ function I(t) {
             }
         })();
     }, [r, s, e]);
-    let p = (u.attachments ?? []).length > 0,
-        b = u.role_id,
+    let p = (x.attachments ?? []).length > 0,
+        b = x.role_id,
         E = (0, o.bG)([v.A], () => (null != b ? v.A.getRole(r, b) : void 0));
     return (0, n.jsx)(c.Modal, {
         title: C.intl.string(C.t.dhAgv3),
-        subtitle: C.intl.format(C.t.X6yvvo, { productName: u.name, emphasisHook: O }),
+        subtitle: C.intl.format(C.t.X6yvvo, { productName: x.name, emphasisHook: O }),
         onClose: e,
         transitionState: l,
         size: "md",
         actions: [],
-        children: g
-            ? (0, n.jsx)(j.y, {})
-            : (0, n.jsxs)(n.Fragment, {
-                  children: [
-                      (0, n.jsxs)(m.E, {
-                          variant: "text-md/normal",
-                          color: "text-default",
-                          children: [
-                              p ? C.intl.string(C.t["A/RnkK"]) + " " : "",
-                              null != E ? C.intl.format(C.t.IeJDKs, { roleName: E.name, emphasisHook: O }) : "",
-                          ],
-                      }),
-                      (0, n.jsx)(h.h, { size: 12 }),
-                      (0, n.jsx)(m.E, {
-                          variant: "text-md/normal",
-                          color: "text-default",
-                          children: C.intl.string(C.t["9S3QHF"]),
-                      }),
-                      (0, n.jsx)(h.h, { size: 24 }),
-                      (0, n.jsx)(w, { guildProductListing: u, guildId: r, invoicePreview: a }),
-                      (0, n.jsx)(h.h, { size: 32 }),
-                      (0, n.jsx)("div", { className: P.yF }),
-                      (0, n.jsx)(h.h, { size: 32 }),
-                      (0, n.jsxs)("ul", {
-                          className: P.iq,
-                          children: [(0, n.jsx)(G, { guildProductListing: u, guildId: r }), (0, n.jsx)(K, { role: E })],
-                      }),
-                  ],
-              }),
+        children:
+            null == x
+                ? null
+                : g
+                  ? (0, n.jsx)(j.y, {})
+                  : (0, n.jsxs)(n.Fragment, {
+                        children: [
+                            (0, n.jsxs)(m.E, {
+                                variant: "text-md/normal",
+                                color: "text-default",
+                                children: [
+                                    p ? C.intl.string(C.t["A/RnkK"]) + " " : "",
+                                    null != E ? C.intl.format(C.t.IeJDKs, { roleName: E.name, emphasisHook: O }) : "",
+                                ],
+                            }),
+                            (0, n.jsx)(h.h, { size: 12 }),
+                            (0, n.jsx)(m.E, {
+                                variant: "text-md/normal",
+                                color: "text-default",
+                                children: C.intl.string(C.t["9S3QHF"]),
+                            }),
+                            (0, n.jsx)(h.h, { size: 24 }),
+                            (0, n.jsx)(w, { guildProductListing: x, guildId: r, invoicePreview: a }),
+                            (0, n.jsx)(h.h, { size: 32 }),
+                            (0, n.jsx)("div", { className: P.yF }),
+                            (0, n.jsx)(h.h, { size: 32 }),
+                            (0, n.jsxs)("ul", {
+                                className: P.iq,
+                                children: [
+                                    (0, n.jsx)(G, { guildProductListing: x, guildId: r }),
+                                    (0, n.jsx)(K, { role: E }),
+                                ],
+                            }),
+                        ],
+                    }),
     });
 }

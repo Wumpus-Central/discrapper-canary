@@ -13,8 +13,8 @@ var i = n(627968),
     h = n(323384),
     g = n(320448),
     f = n(155718),
-    _ = n(811024),
-    A = n(795816),
+    A = n(811024),
+    _ = n(795816),
     E = n(793574),
     C = n(688810),
     p = n(735991),
@@ -29,9 +29,9 @@ var i = n(627968),
     M = n(58703),
     L = n(763754),
     y = n(635071),
-    D = n(834730),
-    U = n(289873),
-    k = n(47167),
+    k = n(834730),
+    D = n(289873),
+    U = n(47167),
     b = n(842209),
     P = n(706727),
     G = n(332173),
@@ -46,7 +46,7 @@ var J = n(375708),
 let Z = { tag: "span", variant: "text-md/normal", color: "text-default" },
     K = { className: a()("mention", z.lE) };
 function X(e) {
-    return (0, i.jsx)(D.E, { ...Z, color: "text-strong", children: e });
+    return (0, i.jsx)(k.E, { ...Z, color: "text-strong", children: e });
 }
 let W = s.memo(function (e) {
     var t;
@@ -72,7 +72,7 @@ let W = s.memo(function (e) {
         }, [r.id, o, c]),
         null == c)
     )
-        a = (0, i.jsx)(U.y, { type: U.y.Type.SPINNING_CIRCLE, className: z.u1 });
+        a = (0, i.jsx)(D.y, { type: D.y.Type.SPINNING_CIRCLE, className: z.u1 });
     else {
         let e = [],
             t = Object.fromEntries((c.application_command?.options ?? []).map((e) => [e.name, e]));
@@ -97,7 +97,7 @@ let W = s.memo(function (e) {
                                     {
                                         children: [
                                             " ",
-                                            (0, i.jsx)(D.E, { ...Z, children: d?.name_localized ?? l.name }),
+                                            (0, i.jsx)(k.E, { ...Z, children: d?.name_localized ?? l.name }),
                                         ],
                                     },
                                     m,
@@ -145,7 +145,7 @@ let W = s.memo(function (e) {
                                 let e = l.value.toString(),
                                     t = w.A.getChannel(e);
                                 null != t &&
-                                    (n = (0, i.jsxs)(G.A, { ...K, children: ["#", (0, k.m1)(t, S.default, B.A)] }));
+                                    (n = (0, i.jsxs)(G.A, { ...K, children: ["#", (0, U.m1)(t, S.default, B.A)] }));
                                 break;
                             }
                             case f.n4.ROLE: {
@@ -191,7 +191,7 @@ let W = s.memo(function (e) {
                                 s.Fragment,
                                 {
                                     children: [
-                                        (0, i.jsxs)(D.E, { ...Z, children: [" ", d?.name_localized ?? l.name, ": "] }),
+                                        (0, i.jsxs)(k.E, { ...Z, children: [" ", d?.name_localized ?? l.name, ": "] }),
                                         n,
                                     ],
                                 },
@@ -210,7 +210,7 @@ let W = s.memo(function (e) {
                 }),
             );
         a = (0, i.jsxs)(i.Fragment, {
-            children: [(0, i.jsxs)(D.E, { ...Z, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
+            children: [(0, i.jsxs)(k.E, { ...Z, children: ["/", c.application_command?.name_localized ?? c.name] }), e],
         });
     }
     return (0, i.jsxs)("div", {
@@ -251,8 +251,8 @@ function ee(e, t, n, s, l, r) {
         showAvatarPopout: h,
         showTargetAvatarPopout: g,
         onClickAvatar: f,
-        onUserContextMenu: _,
-        onClickTargetAvatar: A,
+        onUserContextMenu: A,
+        onClickTargetAvatar: _,
         onTargetUserContextMenu: E,
         onPopoutRequestClose: C,
     } = e;
@@ -281,8 +281,8 @@ function ee(e, t, n, s, l, r) {
             user: t,
             guildId: d.guild_id,
             guildAvatar: p,
-            onClick: 1 === n ? A : f,
-            onContextMenu: 1 === n ? E : _,
+            onClick: 1 === n ? _ : f,
+            onContextMenu: 1 === n ? E : A,
             ref: r,
         });
     }
@@ -334,7 +334,7 @@ function ei(e) {
         g = (0, u.bG)([S.default], () => S.default.getCurrentUser()),
         O = s.useRef(null),
         y = s.useRef(null),
-        D = s.useMemo(
+        k = s.useMemo(
             () => (e, t, s) => (
                 o()(null != t, "ExecutedCommand: user cannot be undefined"),
                 o()(null != g, "ExecutedCommand: currentUser cannot be undefined"),
@@ -351,27 +351,28 @@ function ei(e) {
             ),
             [g, l, n.id],
         ),
-        U = s.useMemo(
+        D = s.useMemo(
             () => (e) => (
                 o()(null != l, "ExecutedCommand: channel cannot be null"),
                 (0, i.jsx)(W, { ...e, channel: l, messageId: n.id, interactionData: n.interactionData })
             ),
             [l, n.id, n.interactionData],
         ),
-        k = (0, N.Am)(n),
-        b = k?.type === f.G4.APPLICATION_COMMAND && null != k.target_user ? new v.A(k.target_user) : null,
-        P = k?.type === f.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
+        U = (0, N.Am)(n),
+        b = U?.type === f.G4.APPLICATION_COMMAND && null != U.target_user ? new v.A(U.target_user) : null,
+        P = U?.type === f.G4.APPLICATION_COMMAND && null != n.messageReference && null != e.renderTargetMessage,
         G = (0, L.d8)(n.interaction?.user, l),
         H = (0, L.d8)(b, l),
         w = s.useMemo(() => (e.compact ? (0, Q.A)((0, M.i$)(d()(), "LT")) : null), [e.compact]),
-        F = (0, _.Gp)(l.id),
+        F = (0, A.Gp)(l.id),
         V = n.interaction;
     if (null == V || null == G) return null;
-    let B = () => {
-        let t = ee(e, V.user, 0, G, (e) => D(e, V.user, [E.A.AVATAR]), O),
-            n = et(e, V.user, 0, G, (e) => D(e, V.user));
+    function B() {
+        if (null == V) return null;
+        let t = ee(e, V.user, 0, G, (e) => k(e, V.user, [E.A.AVATAR]), O),
+            n = et(e, V.user, 0, G, (e) => k(e, V.user));
         return (0, i.jsxs)(s.Fragment, { children: [t, n] }, "user");
-    };
+    }
     if (n?.activityInstance === null || (0, j.V)(n))
         (t = J.intl.format(J.t["rg7U+C"], {
             userHook: B,
@@ -439,7 +440,7 @@ function ei(e) {
                             }
                         },
                     });
-                })(e, U, y);
+                })(e, D, y);
                 return (0, i.jsx)(s.Fragment, { children: t }, "command");
             },
         })),
@@ -450,10 +451,10 @@ function ei(e) {
                       children: [
                           t,
                           (0, i.jsx)(en, {}),
-                          (0, i.jsx)(() => {
+                          (0, i.jsx)(function () {
                               if (null == b) return null;
-                              let t = ee(e, b, 1, H, (e) => D(e, b, [E.A.AVATAR]), O),
-                                  n = et(e, b, 1, H, (e) => D(e, b));
+                              let t = ee(e, b, 1, H, (e) => k(e, b, [E.A.AVATAR]), O),
+                                  n = et(e, b, 1, H, (e) => k(e, b));
                               return (0, i.jsxs)(s.Fragment, { children: [t, n] }, "target");
                           }, {}),
                       ],
@@ -465,7 +466,7 @@ function ei(e) {
                 openInPopout: !1,
                 analyticsLocation: c,
             }),
-                (0, A.LV)({ guildId: l.guild_id });
+                (0, _.LV)({ guildId: l.guild_id });
         }
         t = F
             ? J.intl.format(J.t.kfV8WM, {

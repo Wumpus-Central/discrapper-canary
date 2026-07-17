@@ -81,19 +81,8 @@ function N(e) {
         es = a.useCallback(() => {
             if ((M(void 0), null == L || null == K || "" === V || "" === ee || null == q)) return;
             let e = K.plans.find((e) => e.id === q);
-            (0, b.Jh)({
-                guildId: L.id,
-                productId: K.id,
-                productName: K.name,
-                skuId: q,
-                planName: e?.name ?? "",
-                planCost: e?.cost ?? 0,
-                previousPlanCost: null == F ? 0 : (e?.cost ?? 0) + R,
-                region: ee,
-                type: null == F ? "create" : "edit",
-            });
-            let t = () => {
-                if (ea.current) return;
+            function t() {
+                if (null == L || null == K || null == q || ea.current) return;
                 (ea.current = !0), el(!0);
                 let e = new Promise((e) => {
                     setTimeout(() => e(void 0), p.PH);
@@ -124,25 +113,36 @@ function N(e) {
                     .finally(() => {
                         el(!1);
                     });
-            };
-            w < R
-                ? (0, r.g)({
-                      analyticsLocation: G,
-                      numberOfBoostsToAdd: R - w,
-                      analyticsLocations: _,
-                      guild: L,
-                      intent: j.Pn.PERK,
-                      onLoading: (e) => {
-                          el(e);
-                      },
-                      onSubscribeComplete: () => {
-                          t();
-                      },
-                      handleSubscribeModalClose: (e) => {
-                          e && t();
-                      },
-                  })
-                : t();
+            }
+            (0, b.Jh)({
+                guildId: L.id,
+                productId: K.id,
+                productName: K.name,
+                skuId: q,
+                planName: e?.name ?? "",
+                planCost: e?.cost ?? 0,
+                previousPlanCost: null == F ? 0 : (e?.cost ?? 0) + R,
+                region: ee,
+                type: null == F ? "create" : "edit",
+            }),
+                w < R
+                    ? (0, r.g)({
+                          analyticsLocation: G,
+                          numberOfBoostsToAdd: R - w,
+                          analyticsLocations: _,
+                          guild: L,
+                          intent: j.Pn.PERK,
+                          onLoading: (e) => {
+                              el(e);
+                          },
+                          onSubscribeComplete: () => {
+                              t();
+                          },
+                          handleSubscribeModalClose: (e) => {
+                              e && t();
+                          },
+                      })
+                    : t();
         }, [_, L, w, q, G, K, V, ee, T, R, F]),
         ei = a.useCallback(
             (e) => {

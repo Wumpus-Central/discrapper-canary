@@ -755,14 +755,15 @@ function eB(e) {
                 l = (function i() {
                     return setTimeout(
                         () => {
-                            n &&
-                                ((s = new AbortController()),
-                                (0, v.cq)(t, !1, s.signal)
-                                    .then(() => (a = 0))
-                                    .catch(() => (a = Math.min(a + 1, 4)))
-                                    .finally(() => {
-                                        e && (l = i());
-                                    }));
+                            null == t ||
+                                (n &&
+                                    ((s = new AbortController()),
+                                    (0, v.cq)(t, !1, s.signal)
+                                        .then(() => (a = 0))
+                                        .catch(() => (a = Math.min(a + 1, 4)))
+                                        .finally(() => {
+                                            e && (l = i());
+                                        })));
                         },
                         e$ * Math.pow(2, a) + Math.random() * ez,
                     );

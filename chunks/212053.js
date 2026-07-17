@@ -13,8 +13,8 @@ var i = n(627968),
     m = n(734057),
     A = n(71393),
     x = n(576705),
-    g = n(309010),
-    f = n(977997),
+    f = n(309010),
+    g = n(977997),
     C = n(920639),
     y = n(889426),
     j = n(806931),
@@ -24,12 +24,13 @@ let E = [],
 function I(e) {
     let { channelId: t, participant: n, popoutType: l, maxHeight: E } = e,
         I = (0, p.Us)(),
-        T = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId() === t),
+        T = (0, a.bG)([f.Ay], () => f.Ay.getVoiceChannelId() === t),
         _ = (0, a.bG)([m.A], () => m.A.getChannel(t)),
         b = (0, a.bG)([c.A], () => c.A.getSelectedParticipant(t)),
-        [S, R] = (0, a.yK)([f.A, A.A, x.A, d.default], () => (0, u.eo)(_, f.A, A.A, x.A, d.default));
+        [S, R] = (0, a.yK)([g.A, A.A, x.A, d.default], () => (0, u.eo)(_, g.A, A.A, x.A, d.default));
     if (null == _) return null;
-    let P = async () => {
+    async function P() {
+        if (null == _) return;
         let e = T;
         e || (e = await (0, o.A)({ channelId: t })),
             e &&
@@ -38,7 +39,7 @@ function I(e) {
                     ? s.A.selectParticipant(_.id, null)
                     : (s.A.selectParticipant(_.id, n.id),
                       (0, C.n0)({ interactionType: "call_tile_expanded", channelId: t })));
-    };
+    }
     return (0, i.jsx)(h.Ay, {
         participant: n,
         inCall: !0,
@@ -63,7 +64,7 @@ function T(e) {
     let { channelId: t, popoutType: n, aspectRatio: s } = e,
         r = (0, l.useRef)(null),
         [o, d] = (0, l.useState)({ top: 0, maxHeight: 0 }),
-        u = (0, a.bG)([g.Ay], () => g.Ay.getVoiceChannelId()),
+        u = (0, a.bG)([f.Ay], () => f.Ay.getVoiceChannelId()),
         { streamParticipants: p, videoParticipants: h } = (0, a.cf)([c.A], () => ({
             streamParticipants: c.A.getStreamParticipants(t),
             videoParticipants: u === t ? c.A.getVideoParticipants(t) : E,

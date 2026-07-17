@@ -1384,7 +1384,7 @@ if (
     n.e("94459").then(n.t.bind(n, 868086, 19));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 580312, Version Hash: 0e1624543d75b43297ced5c5741f36fcabad2ee3`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 580392, Version Hash: f3a87d2dd942352d3028baf33a27011cae7e9da4`,
 ),
     v.A.setTags({ appContext: F.QCW }),
     em.A.initBasic(),
@@ -3903,7 +3903,7 @@ let rG = (0, n7.Fe)({
                 n.e("21455"),
                 n.e("60989"),
                 n.e("755"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("71467"),
@@ -17038,11 +17038,12 @@ function my(e) {
         a = (0, T0.q)(n),
         { analyticsLocations: s } = (0, a5.Ay)(ng.A.HOME_PAGE_PREMIUM_TAB);
     if (null == a) return r;
-    let l = async () => {
-        i(id.i.TAKE_ACTION),
+    async function l() {
+        null != a &&
+            (i(id.i.TAKE_ACTION),
             mR.A.hasFetchedPaymentSources || (await (mO.A.paymentSourcesFetchRequest ?? (0, mC.$o)())),
-            (0, ma.A)({ subscription: n, initialPlanId: a.yearlyPlanId, analyticsLocations: s });
-    };
+            (0, ma.A)({ subscription: n, initialPlanId: a.yearlyPlanId, analyticsLocations: s }));
+    }
     return (0, R.jsxs)(R.Fragment, {
         children: [
             (0, R.jsx)("div", { children: r }),
@@ -18355,7 +18356,7 @@ let gU = "isHideDevBanner",
                     className: td()(gP.Wz, gP.mr),
                     children: [
                         (0, R.jsx)(gM, { className: gP.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "580312" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "580392" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -19304,8 +19305,10 @@ function NF(e) {
     }),
         eh.useEffect(() => {
             let e = c.current;
-            if (null == e) return;
-            let t = (t) => {
+            if (null != e)
+                return e.addEventListener("wheel", t, { passive: !1 }), () => e.removeEventListener("wheel", t);
+            function t(t) {
+                if (null == e) return;
                 t.preventDefault();
                 let n = e.getBoundingClientRect(),
                     i = t.clientX - n.left,
@@ -19316,8 +19319,7 @@ function NF(e) {
                         l = s / n;
                     return { zoom: s, pan: { offsetX: i - (i - a.offsetX) * l, offsetY: r - (r - a.offsetY) * l } };
                 });
-            };
-            return e.addEventListener("wheel", t, { passive: !1 }), () => e.removeEventListener("wheel", t);
+            }
         }, [l]),
         eh.useEffect(() => {
             let e = u.current;
@@ -22010,7 +22012,7 @@ let Cy = (0, tj.Fe)({
                 n.e("34546"),
                 n.e("41701"),
                 n.e("21455"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("71467"),
@@ -22874,7 +22876,7 @@ let Cy = (0, tj.Fe)({
                 n.e("41701"),
                 n.e("21455"),
                 n.e("60989"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("71467"),
@@ -24200,7 +24202,7 @@ let Cy = (0, tj.Fe)({
                 n.e("34546"),
                 n.e("41701"),
                 n.e("21455"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("71467"),
@@ -24689,7 +24691,7 @@ let Cy = (0, tj.Fe)({
                 n.e("34546"),
                 n.e("41701"),
                 n.e("21455"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("65200"),
@@ -29467,7 +29469,7 @@ let yW = (0, n7.Fe)({
                 n.e("4098"),
                 n.e("21455"),
                 n.e("755"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("71467"),
@@ -30120,7 +30122,7 @@ let yW = (0, n7.Fe)({
                 n.e("4098"),
                 n.e("21455"),
                 n.e("755"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("71467"),
@@ -30631,7 +30633,7 @@ let yW = (0, n7.Fe)({
                 n.e("4098"),
                 n.e("21455"),
                 n.e("755"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("71467"),
@@ -33096,19 +33098,20 @@ let vq = {
                     }
                     if (null == n) throw new Dv.A({ errorCode: F.Lw6.UNKNOWN_ERROR }, "No valid window found");
                     let i = n.document.createElement("input");
-                    (i.style.display = "none"),
-                        (i.type = "file"),
-                        (i.accept = "image/jpeg, image/jpg, image/png, image/gif");
-                    let r = () => {
-                        (null == i.files || 0 === i.files.length) && t(),
+                    function r() {
+                        null != n &&
+                            ((null == i.files || 0 === i.files.length) && t(),
                             n.document.body.removeEventListener("focus", r, !0),
                             setTimeout(() => {
                                 n.document.body.removeChild(i);
-                            }, 1e3);
-                    };
-                    i.addEventListener("change", () => {
-                        (0, le.Vq)(i.files) && e(i.files[0]), r();
-                    }),
+                            }, 1e3));
+                    }
+                    (i.style.display = "none"),
+                        (i.type = "file"),
+                        (i.accept = "image/jpeg, image/jpg, image/png, image/gif"),
+                        i.addEventListener("change", () => {
+                            (0, le.Vq)(i.files) && e(i.files[0]), r();
+                        }),
                         i.addEventListener("cancel", () => {
                             r();
                         }),
@@ -39723,7 +39726,7 @@ let wL = (0, tj.Fe)({
             n.e("60989"),
             n.e("755"),
             n.e("99011"),
-            n.e("60283"),
+            n.e("63359"),
             n.e("42191"),
             n.e("25612"),
             n.e("68083"),
@@ -41589,7 +41592,7 @@ let GM = (0, n7.Fe)({
                 n.e("41701"),
                 n.e("21455"),
                 n.e("60989"),
-                n.e("60283"),
+                n.e("63359"),
                 n.e("68083"),
                 n.e("48730"),
                 n.e("65200"),

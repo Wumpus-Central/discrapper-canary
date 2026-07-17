@@ -877,8 +877,8 @@ function tn(e) {
                     (0, i.jsx)(e9.I, {
                         value: m,
                         autoFocus: !1,
-                        onCopy: (e) => {
-                            if (h) return;
+                        onCopy: function (e) {
+                            if (null == n || h) return;
                             (0, e5.C)(e);
                             let t = (0, P.dy)(n.entity_type);
                             e2.default.track(eu.HAw.COPY_INSTANT_INVITE, {

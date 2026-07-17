@@ -8,8 +8,8 @@ var t = l(627968),
     o = l(312640),
     d = l(798618),
     u = l(916845),
-    h = l(990078),
-    x = l(834730),
+    h = l(834730),
+    x = l(866665),
     m = l(140735),
     A = l(939249),
     g = l(672979),
@@ -57,7 +57,7 @@ function Z(e) {
             className: Y.hl,
             children: [
                 l,
-                (0, t.jsxs)(x.E, {
+                (0, t.jsxs)(h.E, {
                     className: Y.iO,
                     variant: "text-sm/medium",
                     color: "text-strong",
@@ -81,12 +81,12 @@ function Z(e) {
                           (0, t.jsxs)("div", {
                               className: Y.lE,
                               children: [
-                                  (0, t.jsx)(x.E, {
+                                  (0, t.jsx)(h.E, {
                                       variant: "text-md/semibold",
                                       color: "text-strong",
                                       children: Q.intl.string(Q.t.YIVr4B),
                                   }),
-                                  (0, t.jsx)(x.E, {
+                                  (0, t.jsx)(h.E, {
                                       variant: "text-sm/medium",
                                       color: "text-default",
                                       children: Q.intl.format(Q.t.w8VWRT, {
@@ -100,7 +100,7 @@ function Z(e) {
                   }),
               ],
           })
-        : (0, t.jsx)(h.m, { position: "bottom", align: "left", text: Q.intl.string(Q.t["XJVlf/"]), children: j });
+        : (0, t.jsx)(x.m, { position: "bottom", align: "left", text: Q.intl.string(Q.t["XJVlf/"]), children: j });
 }
 function q(e) {
     let {
@@ -278,7 +278,7 @@ function K(e) {
         ]),
         { voiceChannel: d } = (0, E.Ay)({ userId: s }),
         u = (0, j.A)({ activities: c, status: o, applicationStream: null, voiceChannel: d }),
-        h = i.useMemo(
+        x = i.useMemo(
             () =>
                 c?.filter((e) => {
                     let { type: n } = e;
@@ -294,9 +294,9 @@ function K(e) {
                 }) ?? [],
             [c],
         ),
-        f = h[0] ?? null,
+        f = x[0] ?? null,
         C = m.length > 0,
-        p = h.length > 0 || null != d,
+        p = x.length > 0 || null != d,
         b = null != f && (0, g.A)(f) ? f.application_id : void 0,
         T = (0, I.A)({
             applicationId: b,
@@ -320,13 +320,13 @@ function K(e) {
                     onClick: D,
                     children: (0, t.jsx)(N.A, {
                         user: r,
-                        activities: h,
+                        activities: x,
                         applicationStream: null,
                         voiceChannel: d,
                         textSize: "sm",
                     }),
                 }),
-                p && (0, t.jsx)(x.E, { variant: "text-sm/normal", color: "text-muted", children: "\u2022" }),
+                p && (0, t.jsx)(h.E, { variant: "text-sm/normal", color: "text-muted", children: "\u2022" }),
                 (0, t.jsx)(N.A, {
                     user: r,
                     activities: m,
@@ -377,14 +377,14 @@ function en(e) {
         c = (0, D.lI)(),
         o = i.useRef(null);
     return (r === w.YYv || c) && null != n
-        ? (0, t.jsx)(h.m, {
+        ? (0, t.jsx)(x.m, {
               asContainer: !0,
               text: n.name,
               targetElementRef: o,
               position: "bottom",
               children: (0, t.jsxs)(A.D, {
-                  onClick: () => {
-                      (0, M.uh)(n.id, l.id);
+                  onClick: function () {
+                      null != n && (0, M.uh)(n.id, l.id);
                   },
                   className: Y.ED,
                   children: [

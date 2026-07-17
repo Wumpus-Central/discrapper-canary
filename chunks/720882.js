@@ -5,8 +5,8 @@ var i,
     s = n(621466),
     r = n(477782),
     o = n(980707),
-    d = n(442433),
-    c = n(155718),
+    c = n(442433),
+    d = n(155718),
     u = n(793574),
     g = n(688810),
     A = n(50268),
@@ -72,7 +72,7 @@ var K = n(880457),
     es = n(690521),
     er = n(307731),
     eo = n(666833);
-function ed(e) {
+function ec(e) {
     let { emoji: t, reducedMotionEnabled: n, className: i = "", isFocused: a = !1 } = e;
     return (0, l.jsx)("img", {
         className: V()(i, eo.Z),
@@ -83,7 +83,7 @@ function ed(e) {
         alt: "",
     });
 }
-var ec = n(290136),
+var ed = n(290136),
     eu = n(519222),
     eg = n(345254),
     eA = n(624479),
@@ -179,8 +179,8 @@ var eK = n(110384),
     ts = n(636537),
     tr = n(37646),
     to = n(228366),
-    td = n(147087),
-    tc = n(773669),
+    tc = n(147087),
+    td = n(773669),
     tu = n(535456);
 let tg = new Map();
 var tA = n(534890),
@@ -215,17 +215,17 @@ function tU(e) {
         {
             channel: r,
             message: o,
-            target: c,
+            target: d,
             mediaItem: A,
             shouldHideMediaOptions: m,
             onSelect: f,
             onHeightUpdate: p,
         } = e,
         { analyticsLocations: y } = (0, g.Ay)([u.A.MESSAGE_CONTEXT_MENU]),
-        h = c,
-        E = c.getAttribute("data-type"),
-        _ = c.getAttribute("data-id"),
-        S = c.getAttribute("data-name");
+        h = d,
+        E = d.getAttribute("data-type"),
+        _ = d.getAttribute("data-id"),
+        S = d.getAttribute("data-name");
     if (null != A) n = t = i = A.url;
     else
         for (; (0, s.vq)(h); )
@@ -259,7 +259,7 @@ function tU(e) {
             canReport: !0,
             onHeightUpdate: p,
             onSelect: f,
-            onClose: d.Z_,
+            onClose: c.Z_,
             navId: "message",
             ariaLabel: I.intl.string(I.t.ChPNkN),
             shouldHideMediaOptions: m,
@@ -385,7 +385,7 @@ function tk(e) {
                 ),
                 o = (0, Y.D6)(t.getGuildId());
             if (!en.jW.getSetting() || !s) return null;
-            let d = o
+            let c = o
                 .filter(
                     (e) =>
                         !es.Ay.isEmojiFilteredOrLocked({ emoji: e, channel: t, intention: er.EmojiIntention.REACTION }),
@@ -398,7 +398,7 @@ function tk(e) {
                             color: "default",
                             id: i.id ?? i.optionallyDiverseSequence ?? i.name,
                             label: `:${i.name}:`,
-                            icon: (e) => (0, l.jsx)(ed, { ...e, reducedMotionEnabled: n.enabled, emoji: i }),
+                            icon: (e) => (0, l.jsx)(ec, { ...e, reducedMotionEnabled: n.enabled, emoji: i }),
                             leadingAccessory: {
                                 type: "emoji",
                                 emojiId: i.id,
@@ -423,7 +423,7 @@ function tk(e) {
                 color: "default",
                 children: (0, l.jsxs)(l.Fragment, {
                     children: [
-                        d,
+                        c,
                         (0, l.jsx)(r.bX, {}),
                         (0, l.jsx)(r.Dr, {
                             color: "default",
@@ -439,7 +439,7 @@ function tk(e) {
                 }),
             });
         })(tV, tW),
-        nd =
+        nc =
             ((E = (0, S.bG)([x.default], () => x.default.getId())),
             (_ = (0, et.Id)(tW)),
             (b = (0, et.s5)(tW)),
@@ -452,7 +452,7 @@ function tk(e) {
                       icon: ej.R,
                   })
                 : null),
-        nc = (0, eJ.u)(tW, tV)
+        nd = (0, eJ.u)(tW, tV)
             ? (0, l.jsx)(r.Dr, {
                   id: "reply",
                   label: I.intl.string(I.t["5IEsGx"]),
@@ -507,10 +507,10 @@ function tk(e) {
                     handleTranslate: i,
                     handleRevertTranslation: s,
                     isTranslating: o,
-                    isTranslated: d,
+                    isTranslated: c,
                 } = (function (e) {
                     let [t, n] = a.useState(!1),
-                        i = (0, S.bG)([tc.default], () => tc.default.locale);
+                        i = (0, S.bG)([td.default], () => td.default.locale);
                     return {
                         handleTranslate: a.useCallback(
                             async (l, a) => {
@@ -562,7 +562,7 @@ function tk(e) {
                         isTranslated: tg.has(e.id),
                     };
                 })(e),
-                c =
+                d =
                     ((t = (0, I.getAvailableLocales)()),
                     a.useMemo(
                         () =>
@@ -588,9 +588,9 @@ function tk(e) {
                             }),
                         [i, o, t],
                     )),
-                u = (0, td.b)();
+                u = (0, tc.b)();
             return null != e.content && "" !== e.content.trim() && u
-                ? d
+                ? c
                     ? (0, l.jsx)(r.Dr, {
                           id: "revert-translation",
                           label: I.intl.string(I.t.JC9BXn),
@@ -605,7 +605,7 @@ function tk(e) {
                           action: () => i(),
                           leadingAccessory: { type: "icon", icon: tr.U },
                           disabled: o,
-                          children: c,
+                          children: d,
                       })
                 : null;
         })(tV),
@@ -631,7 +631,7 @@ function tk(e) {
             : null,
         ny = (0, K.A)(tV, tW),
         nh = (0, D.A)({
-            commandType: c.kc.MESSAGE,
+            commandType: d.kc.MESSAGE,
             commandTargetId: tV.id,
             channel: tW,
             guildId: void 0,
@@ -655,8 +655,8 @@ function tk(e) {
                 ? (0, l.jsx)(r.Dr, {
                       id: "configure",
                       label: I.intl.string(I.t.NpHUi1),
-                      leadingAccessory: { type: "icon", icon: ec.c },
-                      icon: ec.c,
+                      leadingAccessory: { type: "icon", icon: ed.c },
+                      icon: ed.c,
                       action: () => (0, eu.vc)(tW),
                   })
                 : null,
@@ -721,9 +721,9 @@ function tk(e) {
                 i = e.interactionMetadata?.authorizing_integration_owners[th.b.GUILD_INSTALL],
                 s = e.interactionMetadata?.user.id,
                 o = (0, S.bG)([e1.default], () => e1.default.getUser(n)),
-                d = (0, S.bG)([tT.A], () => tT.A.getGuild(i)),
-                c = tD.A.getChannel(e.channel_id),
-                u = c?.getGuildId(),
+                c = (0, S.bG)([tT.A], () => tT.A.getGuild(i)),
+                d = tD.A.getChannel(e.channel_id),
+                u = d?.getGuildId(),
                 A = (0, S.bG)([e1.default], () => e1.default.getUser(s));
             if (
                 (a.useEffect(() => {
@@ -734,14 +734,14 @@ function tk(e) {
                 return null;
             null == A && (A = new tM.A(e.interactionMetadata?.user));
             let m = null;
-            if (null != d) {
-                let t = (0, tI.Iv)(d, 18, !0);
+            if (null != c) {
+                let t = (0, tI.Iv)(c, 18, !0);
                 m = (0, l.jsx)(r.Dr, {
                     disabled: !0,
-                    iconLeft: () => (0, l.jsx)(tb.Ay, { guild: d, size: tb.Ay.Sizes.MINI }),
+                    iconLeft: () => (0, l.jsx)(tb.Ay, { guild: c, size: tb.Ay.Sizes.MINI }),
                     leadingAccessory: null != t ? { type: "image", src: t } : void 0,
                     id: "integration-owner",
-                    label: d.name,
+                    label: c.name,
                     subtext: I.intl.formatToPlainString(I.t.ShLXXB, { application: e.author.username }),
                 });
             } else
@@ -919,7 +919,7 @@ function tk(e) {
         nR = (function (e, t) {
             let { perGuildMaxCount: n } = w.i$[z],
                 { isLoading: i, saveRule: s, errorMessage: o } = (0, k.S)(),
-                { createNewEditingRule: c } = (0, k.U)(),
+                { createNewEditingRule: d } = (0, k.U)(),
                 [u, g] = a.useState(!1),
                 [A, m] = (0, R.H6)(t),
                 { rulesByTriggerType: f, updateRule: p } = (0, R.wP)(t),
@@ -934,30 +934,31 @@ function tk(e) {
             } catch (e) {
                 return null;
             }
-            let x = () => {
-                    null != t &&
-                        ((0, d.Z_)(),
+            function x() {
+                null == e ||
+                    (null != t &&
+                        ((0, c.Z_)(),
                         X.A.open(t, F.BEX.GUILD_AUTOMOD),
                         setTimeout(() => {
-                            c(t, z, { triggerMetadata: { keywordFilter: [e], regexPatterns: [], allowList: [] } });
-                        }, 400));
-                },
-                b = async (t) => {
-                    if (((0, d.Z_)(), !(await (0, B.Zy)(t.name, e)))) return;
-                    let n = {
-                        ...t,
-                        triggerMetadata: {
-                            ...t.triggerMetadata,
-                            keywordFilter: [...(t.triggerMetadata?.keywordFilter ?? []), e],
-                        },
-                    };
-                    await s(n, y),
-                        p(n),
-                        null != o
-                            ? (0, G.P0)((0, v.o)(I.intl.string(I.t.wH6L0r), C.Ck.FAILURE))
-                            : (0, G.P0)((0, v.o)(I.intl.string(I.t["0rdYm2"]), C.Ck.SUCCESS));
-                },
-                j = (0, l.jsx)(r.Dr, { id: "automod-rules-loading", label: I.intl.string(I.t.ZTNur7) });
+                            d(t, z, { triggerMetadata: { keywordFilter: [e], regexPatterns: [], allowList: [] } });
+                        }, 400)));
+            }
+            async function b(t) {
+                if (null == e || ((0, c.Z_)(), !(await (0, B.Zy)(t.name, e)))) return;
+                let n = {
+                    ...t,
+                    triggerMetadata: {
+                        ...t.triggerMetadata,
+                        keywordFilter: [...(t.triggerMetadata?.keywordFilter ?? []), e],
+                    },
+                };
+                await s(n, y),
+                    p(n),
+                    null != o
+                        ? (0, G.P0)((0, v.o)(I.intl.string(I.t.wH6L0r), C.Ck.FAILURE))
+                        : (0, G.P0)((0, v.o)(I.intl.string(I.t["0rdYm2"]), C.Ck.SUCCESS));
+            }
+            let j = (0, l.jsx)(r.Dr, { id: "automod-rules-loading", label: I.intl.string(I.t.ZTNur7) });
             return (
                 A ||
                     (j = (0, l.jsxs)(l.Fragment, {
@@ -1037,17 +1038,18 @@ function tk(e) {
                       {
                           id: "report-image-false-positive",
                           label: I.intl.string(I.t.ZH7P2h),
-                          action: () => {
-                              (0, eB.openModalLazy)(async () => {
-                                  let { default: e } = await n(679276);
-                                  return (t) =>
-                                      (0, l.jsx)(e, {
-                                          channelId: tV.channel_id,
-                                          messageId: tV.id,
-                                          mediaItemUrl: tZ.url,
-                                          ...t,
-                                      });
-                              });
+                          action: function () {
+                              null != tZ &&
+                                  (0, eB.openModalLazy)(async () => {
+                                      let { default: e } = await n(679276);
+                                      return (t) =>
+                                          (0, l.jsx)(e, {
+                                              channelId: tV.channel_id,
+                                              messageId: tV.id,
+                                              mediaItemUrl: tZ.url,
+                                              ...t,
+                                          });
+                                  });
                           },
                           leadingAccessory: { type: "icon", icon: tG.D },
                           icon: tG.D,
@@ -1088,11 +1090,11 @@ function tk(e) {
         nF = (function (e) {
             let { messageId: t, itemId: n, type: i, imageSrc: s } = e,
                 o = en.Q_.useSetting(),
-                { tidaWebformEnabled: d } = m.A.useExperiment(
+                { tidaWebformEnabled: c } = m.A.useExperiment(
                     { location: "useMessageDetailsItem" },
                     { autoTrackExposure: !1 },
                 ),
-                c = a.useCallback(() => {
+                d = a.useCallback(() => {
                     (0, ep.C)(t);
                 }, [t]),
                 u = a.useCallback(() => {
@@ -1105,7 +1107,7 @@ function tk(e) {
                     null != s && (0, eb.A)(s);
                 }, [s]),
                 f = "sticker" === i;
-            if (!o || !ep.p5 || !d || ("emoji" !== i && !f) || null == n) return null;
+            if (!o || !ep.p5 || !c || ("emoji" !== i && !f) || null == n) return null;
             let p = f ? I.intl.string(I.t.SJ3249) : I.intl.string(I.t.Ap2oVy),
                 y = f ? I.intl.string(I.t.B1ubHx) : I.intl.string(I.t.cIoudn),
                 h = f ? I.intl.string(I.t["qAEi+C"]) : I.intl.string(I.t.gDAM2n);
@@ -1117,7 +1119,7 @@ function tk(e) {
                     (0, l.jsx)(r.Dr, {
                         id: "copy-message-id",
                         label: I.intl.string(I.t.zBoHlf),
-                        action: c,
+                        action: d,
                         leadingAccessory: { type: "icon", icon: eE.L },
                     }),
                     (0, l.jsx)(r.Dr, {
@@ -1159,7 +1161,7 @@ function tk(e) {
             (0, l.jsx)(r.rX, { children: ns }),
             (0, l.jsx)(r.rX, { children: nr }),
             (0, l.jsxs)(r.rX, { children: ["" === t$ ? na : null, no, nI] }),
-            (0, l.jsxs)(r.rX, { children: [nd, nc, nu, ng] }),
+            (0, l.jsxs)(r.rX, { children: [nc, nd, nu, ng] }),
             (0, l.jsxs)(r.rX, { children: [nA, nm, nf, np, ny, nh, nE, n_, nS, nx, nb, nj, nM, nD] }),
             (0, l.jsxs)(r.rX, { children: [nT, nG, nv, t1 && nC, t1 && nL, nO] }),
             nl

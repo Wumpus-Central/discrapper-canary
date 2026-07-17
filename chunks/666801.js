@@ -4,8 +4,8 @@ l(64700);
 var i = l(980707),
     r = l(477782),
     a = l(442433),
-    s = l(793574),
-    u = l(688810),
+    u = l(793574),
+    s = l(688810),
     o = l(964355),
     c = l(824744),
     d = l(796774),
@@ -14,26 +14,26 @@ var i = l(980707),
     A = l(17928),
     h = l(468689),
     x = l(931991),
-    g = l(71393),
-    f = l(652215);
+    f = l(71393),
+    g = l(652215);
 function j(n) {
-    let { guildId: t, onSelect: l, onPickerClose: s, onInteraction: j } = n,
+    let { guildId: t, onSelect: l, onPickerClose: u, onInteraction: j } = n,
         D = (function (n, t) {
-            let l = (0, A.bG)([g.A], () => (null != n ? g.A.getGuild(n) : null)),
+            let l = (0, A.bG)([f.A], () => (null != n ? f.A.getGuild(n) : null)),
                 { canCreateExpressions: i, canManageAllExpressions: a } = (0, x.nr)(l);
             return null != n && i && a
                 ? (0, e.jsx)(r.Dr, {
                       id: p.intl.string(p.t["154/bL"]),
                       label: p.intl.string(p.t["154/bL"]),
-                      action: () => {
-                          h.A.open(n, f.BEX.SOUNDBOARD), t?.();
+                      action: function () {
+                          null != n && (h.A.open(n, g.BEX.SOUNDBOARD), t?.());
                       },
                   })
                 : null;
-        })(t, s),
+        })(t, u),
         k = (function () {
             let n = (0, b.wH)(),
-                { analyticsLocations: t } = (0, u.Ay)();
+                { analyticsLocations: t } = (0, s.Ay)();
             return (0, e.jsx)(r.aK, {
                 id: "user-volume",
                 "aria-haspopup": !0,
@@ -60,6 +60,6 @@ function j(n) {
     });
 }
 function D(n) {
-    let { analyticsLocations: t } = (0, u.Ay)(n.sourceAnalyticsLocations, s.A.SOUNDBOARD_CONTEXT_MENU);
-    return (0, e.jsx)(u.f5, { value: t, children: (0, e.jsx)(j, { ...n }) });
+    let { analyticsLocations: t } = (0, s.Ay)(n.sourceAnalyticsLocations, u.A.SOUNDBOARD_CONTEXT_MENU);
+    return (0, e.jsx)(s.f5, { value: t, children: (0, e.jsx)(j, { ...n }) });
 }

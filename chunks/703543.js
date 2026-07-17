@@ -25,23 +25,28 @@ function p(e) {
           : {
                 variant: "primary",
                 text: g.intl.string(g.t.xUi3BL),
-                onClick: () =>
-                    (function (e) {
-                        let { guildProductListing: t, guildId: n, sourceAnalyticsLocations: i } = e,
-                            l = t.id;
-                        return m.UnifiedCheckoutFlowManagerSingletons[u.C.GUILD_PRODUCT_CHECKOUT]
-                            .get()
-                            .openCheckoutModal({
-                                checkoutConfiguration: { skuId: l, applicationId: t.application_id },
-                                tenantParams: { guildId: n },
-                                unifiedCheckoutProviderProps: { analyticsLocations: Array.isArray(i) ? i : [i] },
-                                modalAPIOptions: {
-                                    modalKey: "guild-product-purchase-modal",
-                                    onCloseCallback() {
-                                        (0, d.ET)(), (0, c.z)();
+                onClick: function () {
+                    return (
+                        l()(null != A, "guild cannot be null"),
+                        l()(null != p, "guildProductListing cannot be null"),
+                        (function (e) {
+                            let { guildProductListing: t, guildId: n, sourceAnalyticsLocations: i } = e,
+                                l = t.id;
+                            return m.UnifiedCheckoutFlowManagerSingletons[u.C.GUILD_PRODUCT_CHECKOUT]
+                                .get()
+                                .openCheckoutModal({
+                                    checkoutConfiguration: { skuId: l, applicationId: t.application_id },
+                                    tenantParams: { guildId: n },
+                                    unifiedCheckoutProviderProps: { analyticsLocations: Array.isArray(i) ? i : [i] },
+                                    modalAPIOptions: {
+                                        modalKey: "guild-product-purchase-modal",
+                                        onCloseCallback() {
+                                            (0, d.ET)(), (0, c.z)();
+                                        },
                                     },
-                                },
-                            });
-                    })({ guildProductListing: p, guildId: A.id, sourceAnalyticsLocations: i }),
+                                });
+                        })({ guildProductListing: p, guildId: A.id, sourceAnalyticsLocations: i })
+                    );
+                },
             };
 }

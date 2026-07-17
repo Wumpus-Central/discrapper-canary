@@ -122,8 +122,9 @@ let eI = l.memo(function (e) {
             g = (0, er.gn)(t.guild_id, p?.userId, p?.colorStrings ?? null),
             m = l.useMemo(() => ({ [u]: [s.user.id] }), [u, s.user.id]);
         (0, es.Eq)(m, "RequestToSpeakSidebar");
-        let f = s.rtsState === eg.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK,
-            E = (e) => {
+        let f = s.rtsState === eg.zF.REQUESTED_TO_SPEAK_AND_AWAITING_USER_ACK;
+        function E(e) {
+            null != u &&
                 (0, ei.L3)(e, async () => {
                     let { default: e } = await Promise.all([
                         n.e("94881"),
@@ -156,7 +157,7 @@ let eI = l.memo(function (e) {
                     ]).then(n.bind(n, 107632));
                     return (n) => (0, i.jsx)(e, { ...n, user: s.user, guildId: u, channel: t, showMediaItems: !0 });
                 });
-            };
+        }
         return (0, i.jsxs)("div", {
             className: e_.fn,
             children: [
@@ -1062,101 +1063,102 @@ let tQ = l.memo(function (e) {
             properties: { location: "StageTile", is_tile_owner: h.id === u, tile_type: e },
         });
     }
-    let E = (e, t, s, a) => {
-        switch (e.type) {
-            case tg.lp.HIDDEN_STREAM:
-            case tg.lp.STREAM:
-                f(tg.qs.STREAM),
+    function E(e, t, s, a) {
+        if (null != d)
+            switch (e.type) {
+                case tg.lp.HIDDEN_STREAM:
+                case tg.lp.STREAM:
+                    f(tg.qs.STREAM),
+                        (0, ei.L3)(
+                            t,
+                            async () => {
+                                let { default: t } = await Promise.all([
+                                    n.e("89673"),
+                                    n.e("45996"),
+                                    n.e("29422"),
+                                    n.e("58315"),
+                                    n.e("66692"),
+                                ]).then(n.bind(n, 796175));
+                                return (n) =>
+                                    (0, i.jsx)(t, {
+                                        ...n,
+                                        stream: e.stream,
+                                        appContext: c,
+                                        exitFullscreen: () => {},
+                                        onInteraction: (0, tx.s)("StreamContextMenu", r, {
+                                            entrypoint: a,
+                                            targetUserId: h.id,
+                                            tileType: tg.qs.STREAM,
+                                        }),
+                                    });
+                            },
+                            { context: c },
+                        );
+                    return;
+                case tg.lp.USER:
+                default:
+                    if ((f(tg.qs.USER), s))
+                        return (0, tU.r)(t, h, l, { context: c }, (e, t) =>
+                            (0, tx.Y)({
+                                menuName: e,
+                                menuItemProps: t,
+                                entrypoint: tg.GK.THREE_DOT,
+                                targetUserId: h.id,
+                                location: r,
+                                tileType: tg.qs.USER,
+                            }),
+                        );
                     (0, ei.L3)(
                         t,
                         async () => {
-                            let { default: t } = await Promise.all([
+                            let { default: e } = await Promise.all([
+                                n.e("94881"),
+                                n.e("26132"),
+                                n.e("46652"),
+                                n.e("93190"),
+                                n.e("8757"),
+                                n.e("85968"),
                                 n.e("89673"),
+                                n.e("29787"),
+                                n.e("82073"),
+                                n.e("97558"),
+                                n.e("91994"),
+                                n.e("76665"),
+                                n.e("24198"),
                                 n.e("45996"),
+                                n.e("23427"),
+                                n.e("49145"),
                                 n.e("29422"),
-                                n.e("58315"),
-                                n.e("66692"),
-                            ]).then(n.bind(n, 796175));
-                            return (n) =>
-                                (0, i.jsx)(t, {
-                                    ...n,
-                                    stream: e.stream,
-                                    appContext: c,
-                                    exitFullscreen: () => {},
-                                    onInteraction: (0, tx.s)("StreamContextMenu", r, {
-                                        entrypoint: a,
+                                n.e("7059"),
+                                n.e("43116"),
+                                n.e("39103"),
+                                n.e("70314"),
+                                n.e("70515"),
+                                n.e("4524"),
+                                n.e("54148"),
+                                n.e("66939"),
+                                n.e("17334"),
+                                n.e("84841"),
+                            ]).then(n.bind(n, 107632));
+                            return (t) =>
+                                (0, i.jsx)(e, {
+                                    ...t,
+                                    user: h,
+                                    guildId: d,
+                                    channel: l,
+                                    showMediaItems: !0,
+                                    showStageChannelItems: !0,
+                                    showChatItems: !1,
+                                    onInteraction: (0, tx.s)("GuildChannelUserContextMenu", r, {
                                         targetUserId: h.id,
-                                        tileType: tg.qs.STREAM,
+                                        tileType: tg.qs.USER,
                                     }),
                                 });
                         },
                         { context: c },
                     );
-                return;
-            case tg.lp.USER:
-            default:
-                if ((f(tg.qs.USER), s))
-                    return (0, tU.r)(t, h, l, { context: c }, (e, t) =>
-                        (0, tx.Y)({
-                            menuName: e,
-                            menuItemProps: t,
-                            entrypoint: tg.GK.THREE_DOT,
-                            targetUserId: h.id,
-                            location: r,
-                            tileType: tg.qs.USER,
-                        }),
-                    );
-                (0, ei.L3)(
-                    t,
-                    async () => {
-                        let { default: e } = await Promise.all([
-                            n.e("94881"),
-                            n.e("26132"),
-                            n.e("46652"),
-                            n.e("93190"),
-                            n.e("8757"),
-                            n.e("85968"),
-                            n.e("89673"),
-                            n.e("29787"),
-                            n.e("82073"),
-                            n.e("97558"),
-                            n.e("91994"),
-                            n.e("76665"),
-                            n.e("24198"),
-                            n.e("45996"),
-                            n.e("23427"),
-                            n.e("49145"),
-                            n.e("29422"),
-                            n.e("7059"),
-                            n.e("43116"),
-                            n.e("39103"),
-                            n.e("70314"),
-                            n.e("70515"),
-                            n.e("4524"),
-                            n.e("54148"),
-                            n.e("66939"),
-                            n.e("17334"),
-                            n.e("84841"),
-                        ]).then(n.bind(n, 107632));
-                        return (t) =>
-                            (0, i.jsx)(e, {
-                                ...t,
-                                user: h,
-                                guildId: d,
-                                channel: l,
-                                showMediaItems: !0,
-                                showStageChannelItems: !0,
-                                showChatItems: !1,
-                                onInteraction: (0, tx.s)("GuildChannelUserContextMenu", r, {
-                                    targetUserId: h.id,
-                                    tileType: tg.qs.USER,
-                                }),
-                            });
-                    },
-                    { context: c },
-                );
-        }
-    };
+            }
+    }
     return A.type !== tg.lp.USER || A.voiceState?.selfVideo
         ? (0, i.jsx)(tW, {
               stageParticipant: t,

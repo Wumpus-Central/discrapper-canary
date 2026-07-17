@@ -96,23 +96,24 @@ let E = r.forwardRef((e, t) => {
         r.useEffect(() => {
             let e = I?.current;
             if (null == e || T || null == E) return;
-            let t = null,
-                n = () => {
-                    if (e.paused || e.ended) {
-                        (t = null), E(0);
-                        return;
-                    }
-                    let i = h.editMetadata?.start ?? 0,
-                        r = h.editMetadata?.end ?? e.duration,
-                        a = ((e.currentTime - i) / (r - i)) * 100;
-                    E(isNaN(a) ? 0 : Math.max(0, Math.min(100, a))), (t = requestAnimationFrame(n));
-                };
+            let t = null;
+            function n() {
+                if (null == e || null == E) return;
+                if (e.paused || e.ended) {
+                    (t = null), E(0);
+                    return;
+                }
+                let i = h.editMetadata?.start ?? 0,
+                    r = h.editMetadata?.end ?? e.duration,
+                    a = ((e.currentTime - i) / (r - i)) * 100;
+                E(isNaN(a) ? 0 : Math.max(0, Math.min(100, a))), (t = requestAnimationFrame(n));
+            }
             function i() {
                 null == t && (t = requestAnimationFrame(n));
             }
-            let r = () => {
-                null != t && (cancelAnimationFrame(t), (t = null), E(0));
-            };
+            function r() {
+                null != E && null != t && (cancelAnimationFrame(t), (t = null), E(0));
+            }
             return (
                 e.addEventListener("play", i),
                 e.addEventListener("pause", r),

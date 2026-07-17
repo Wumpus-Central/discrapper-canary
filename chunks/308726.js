@@ -7,11 +7,11 @@ var n = i(627968),
     o = i(681154),
     u = i(974690),
     c = i(17928),
-    d = i(990078),
-    A = i(534890),
-    f = i(820081),
-    p = i(241541),
-    y = i(559647),
+    d = i(534890),
+    A = i(820081),
+    f = i(241541),
+    p = i(559647),
+    y = i(866665),
     g = i(408278),
     m = i(297152),
     I = i(834730),
@@ -97,68 +97,66 @@ function ts(t) {
         }
     }, [m]);
     let T = (0, ti.JH)(a?.application_id ?? i.extra.application_id),
-        h = null != T,
-        v = async (t) => {
-            if (null != u && "unsent" === m) {
-                t.stopPropagation();
-                try {
-                    if ((I("sending"), h && null != T))
-                        await _.A.sendActivityInviteUser({
-                            type: tn.xL.JOIN,
-                            userId: u.id,
-                            activity: T,
-                            location: tn.ThZ.UNLOCKED_OVERLAY,
-                        });
-                    else {
-                        let t = await S.A.getOrEnsurePrivateChannel(u.id),
-                            e = $.A.getChannel(t) ?? null;
-                        r()(null != e, "Send channel must be defined"),
-                            (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
-                            (0, F.A)(tn.BRT.OVERLAY, !0),
-                            !0 === i.extra.fake_inventory_item
-                                ? await (0, D.J)({
-                                      channel: e,
-                                      content: ta.intl.formatToPlainString(ta.t.UVBA9g, {
-                                          gameName: i.extra.game_name,
-                                      }),
-                                      whenReady: !0,
-                                      doNotNotifyOnError: !1,
-                                      location: tl.Hx.OVERLAY,
-                                  })
-                                : await (0, D.d)({
-                                      channel: e,
-                                      content: ta.intl.string(ta.t.DwAcMz),
-                                      entry: i,
-                                      whenReady: !0,
-                                      doNotNotifyOnError: !1,
-                                      location: tl.Hx.OVERLAY,
-                                  });
-                    }
-                    C.A.track(tn.HAw.OVERLAY_GAME_INVITE_SENT, {
-                        target_user_id: u.id,
-                        target_content_entry_id: i.id,
-                        target_index: s,
-                    }),
-                        (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.INVITE_SENT, userId: u.id }),
-                        I("sent");
-                } catch (t) {
-                    I("unsent");
+        h = null != T;
+    async function v(t) {
+        if (null != u && "unsent" === m) {
+            t.stopPropagation();
+            try {
+                if ((I("sending"), h && null != T))
+                    await _.A.sendActivityInviteUser({
+                        type: tn.xL.JOIN,
+                        userId: u.id,
+                        activity: T,
+                        location: tn.ThZ.UNLOCKED_OVERLAY,
+                    });
+                else {
+                    let t = await S.A.getOrEnsurePrivateChannel(u.id),
+                        e = $.A.getChannel(t) ?? null;
+                    r()(null != e, "Send channel must be defined"),
+                        (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
+                        (0, F.A)(tn.BRT.OVERLAY, !0),
+                        !0 === i.extra.fake_inventory_item
+                            ? await (0, D.J)({
+                                  channel: e,
+                                  content: ta.intl.formatToPlainString(ta.t.UVBA9g, { gameName: i.extra.game_name }),
+                                  whenReady: !0,
+                                  doNotNotifyOnError: !1,
+                                  location: tl.Hx.OVERLAY,
+                              })
+                            : await (0, D.d)({
+                                  channel: e,
+                                  content: ta.intl.string(ta.t.DwAcMz),
+                                  entry: i,
+                                  whenReady: !0,
+                                  doNotNotifyOnError: !1,
+                                  location: tl.Hx.OVERLAY,
+                              });
                 }
+                C.A.track(tn.HAw.OVERLAY_GAME_INVITE_SENT, {
+                    target_user_id: u.id,
+                    target_content_entry_id: i.id,
+                    target_index: s,
+                }),
+                    (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.INVITE_SENT, userId: u.id }),
+                    I("sent");
+            } catch (t) {
+                I("unsent");
             }
-        },
-        O = async () => {
-            if (null == u) return;
-            let t = await S.A.getOrEnsurePrivateChannel(u.id),
-                e = $.A.getChannel(t) ?? null;
-            r()(null != e, "Send channel must be defined"),
-                (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
-                (0, F.A)(tn.BRT.OVERLAY, !0),
-                (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.REDIRECT, value: te.IP.CHAT, userId: u.id });
-        },
-        b = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
+        }
+    }
+    async function O() {
+        if (null == u) return;
+        let t = await S.A.getOrEnsurePrivateChannel(u.id),
+            e = $.A.getChannel(t) ?? null;
+        r()(null != e, "Send channel must be defined"),
+            (0, H.pX)(tn.BVt.CHANNEL(e.guild_id, e.id)),
+            (0, F.A)(tn.BRT.OVERLAY, !0),
+            (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.REDIRECT, value: te.IP.CHAT, userId: u.id });
+    }
+    let b = h ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === m ? (E ? A.o : f.B) : h ? p.D : y.l),
-        (0, n.jsx)(d.m, {
+        (e = "sent" === m ? (E ? d.o : A.B) : h ? f.D : p.l),
+        (0, n.jsx)(y.m, {
             text: b,
             "aria-label": b,
             children: (0, n.jsx)(g.K, {
@@ -177,39 +175,35 @@ function to(t) {
         r = (0, c.bG)([q.default], () => q.default.getUser(e.author_id)),
         s = i?.application_id ?? e.extra.application_id,
         o = (0, c.bG)([X.A], () => (null != r ? X.A.getApplicationActivity(r.id, s) : null), [s, r]),
-        [u, A] = l.useState("unsent");
+        [u, d] = l.useState("unsent");
     if (!(null != o && (0, v.A)(o, tn.jUm.JOIN))) return null;
-    let p = async (t) => {
-            if (null != r && "unsent" === u) {
-                t.stopPropagation();
-                try {
-                    A("sending"),
-                        await _.A.sendActivityInviteUser({
-                            type: tn.xL.JOIN_REQUEST,
-                            userId: r.id,
-                            activity: o,
-                            location: tn.ThZ.UNLOCKED_OVERLAY,
-                        }),
-                        (0, te.YX)(tn.uss.ACTIVITY, {
-                            type: te.Z5.INVITE,
-                            value: te.IP.JOIN_REQUEST_SENT,
-                            userId: r.id,
-                        }),
-                        A("sent");
-                } catch (t) {
-                    A("unsent");
-                }
+    async function f(t) {
+        if (null != o && null != r && "unsent" === u) {
+            t.stopPropagation();
+            try {
+                d("sending"),
+                    await _.A.sendActivityInviteUser({
+                        type: tn.xL.JOIN_REQUEST,
+                        userId: r.id,
+                        activity: o,
+                        location: tn.ThZ.UNLOCKED_OVERLAY,
+                    }),
+                    (0, te.YX)(tn.uss.ACTIVITY, { type: te.Z5.INVITE, value: te.IP.JOIN_REQUEST_SENT, userId: r.id }),
+                    d("sent");
+            } catch (t) {
+                d("unsent");
             }
-        },
-        y = ta.intl.string(ta.t.OKsSCR);
-    return (0, n.jsx)(d.m, {
-        text: y,
-        "aria-label": y,
+        }
+    }
+    let p = ta.intl.string(ta.t.OKsSCR);
+    return (0, n.jsx)(y.m, {
+        text: p,
+        "aria-label": p,
         children: (0, n.jsx)(g.K, {
-            icon: "sent" === u ? f.B : m.E,
-            "aria-label": y,
+            icon: "sent" === u ? A.B : m.E,
+            "aria-label": p,
             loading: "sending" === u,
-            onClick: p,
+            onClick: f,
             variant: "subtle" === a ? "icon-only" : "secondary",
             size: "sm",
         }),

@@ -86,9 +86,10 @@ function c(e) {
         (0, r.useEffect)(() => {
             if (null == n) return;
             let e = 0,
-                i = 0,
-                r = (a) => {
-                    if (((e = requestAnimationFrame(r)), a - i < o)) return;
+                i = 0;
+            return (
+                (e = requestAnimationFrame(function r(a) {
+                    if (null == n || ((e = requestAnimationFrame(r)), a - i < o)) return;
                     (i = a), n.updateEndDate(), n.repaint();
                     let s = I.current,
                         l = s.markers,
@@ -133,19 +134,20 @@ function c(e) {
                                 n.restore();
                         }
                     }
-                };
-            return (e = requestAnimationFrame(r)), () => cancelAnimationFrame(e);
+                })),
+                () => cancelAnimationFrame(e)
+            );
         }, [n, _]);
     let f = { width: e.width, height: e.height },
-        { onHoverTime: p, onHoverClick: T } = e,
-        m = (e) => {
-            if (null == h) return null;
-            let t = e.currentTarget.getBoundingClientRect();
-            if (t.width <= 0) return null;
-            let n = Math.max(0, Math.min(1, (e.clientX - t.left) / t.width));
-            return Date.now() - (1 - n) * h;
-        },
-        g =
+        { onHoverTime: p, onHoverClick: T } = e;
+    function m(e) {
+        if (null == h) return null;
+        let t = e.currentTarget.getBoundingClientRect();
+        if (t.width <= 0) return null;
+        let n = Math.max(0, Math.min(1, (e.clientX - t.left) / t.width));
+        return Date.now() - (1 - n) * h;
+    }
+    let g =
             null != p && null != h
                 ? (e) => {
                       let t = m(e);

@@ -569,7 +569,7 @@ var eF = n(284009),
     eY = n(877062);
 g.Ay.initialize();
 var e$ = n(842241),
-    eZ = n(580929),
+    eZ = n(372684),
     eJ = n(280513),
     e0 = n(717421),
     e1 = n(661531),
@@ -5488,12 +5488,13 @@ let s2 = nK(iq),
             let e = (0, eg.A)(t);
             null == e
                 ? s("failed")
-                : (async () => {
-                      try {
-                          await f.A.authorizeIPAddress(e), s("succeeded");
-                      } catch (e) {
-                          s("failed");
-                      }
+                : (async function () {
+                      if (null != e)
+                          try {
+                              await f.A.authorizeIPAddress(e), s("succeeded");
+                          } catch (e) {
+                              s("failed");
+                          }
                   })();
         }),
         "failed" === l)
@@ -5526,12 +5527,13 @@ let s2 = nK(iq),
             let e = (0, eg.A)(t);
             null == e
                 ? l("failed")
-                : (async () => {
-                      try {
-                          await f.A.authorizePayment(e), l("succeeded");
-                      } catch (e) {
-                          l("failed");
-                      }
+                : (async function () {
+                      if (null != e)
+                          try {
+                              await f.A.authorizePayment(e), l("succeeded");
+                          } catch (e) {
+                              l("failed");
+                          }
                   })();
         }, [t]),
         "failed" === i)
@@ -5563,13 +5565,14 @@ let s2 = nK(iq),
             let e = (0, eg.A)(t);
             null == e
                 ? l("failed")
-                : (async () => {
-                      try {
-                          let t = await f.A.verify(e);
-                          l("succeeded"), (s.current = t);
-                      } catch (e) {
-                          l("failed");
-                      }
+                : (async function () {
+                      if (null != e)
+                          try {
+                              let t = await f.A.verify(e);
+                              l("succeeded"), (s.current = t);
+                          } catch (e) {
+                              l("failed");
+                          }
                   })();
         });
         let r = c.useCallback(() => {

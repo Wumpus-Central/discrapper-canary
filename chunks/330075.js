@@ -31,15 +31,15 @@ function I(e) {
             descriptionTextVariant: S = "text-sm/normal",
             showOpaqueBackground: b = !1,
         } = e,
-        L = (0, l.bG)([c.A], () => c.A.getGuild(I), [I]),
-        k = (0, l.bG)([d.A], () => d.A.getRole(I, t?.role_id ?? E.dJq)),
+        k = (0, l.bG)([c.A], () => c.A.getGuild(I), [I]),
+        L = (0, l.bG)([d.A], () => d.A.getRole(I, t?.role_id ?? E.dJq)),
         R = (0, r.R)(t, 600),
         P = (0, A.z)(t),
-        M = (0, m.BB)(L),
+        M = (0, m.BB)(k),
         { shouldHideGuildPurchaseEntryPoints: D } = (0, o.MH)(I),
         O = (0, A.X)(t),
         U = (0, f.A)({ guildId: I, guildProductListingId: t.id, sourceAnalyticsLocations: C });
-    if (null == L || D) return null;
+    if (null == k || D) return null;
     function G() {
         var e;
         return (
@@ -66,8 +66,8 @@ function I(e) {
         showDeleteProduct: !1,
         showReportProduct: !0,
         onEditProduct: M
-            ? () => {
-                  g.q(L.id, t.id);
+            ? function () {
+                  null != k && g.q(k.id, t.id);
               }
             : () => {},
         onUnpublishProduct: () => {},
@@ -93,7 +93,7 @@ function I(e) {
             name: t.name,
             description: t.description,
             formattedPrice: O,
-            role: k,
+            role: L,
             ctaComponent: (0, i.jsx)(s.$, { ...U }),
             productType: P,
             shouldShowFullDescriptionButton: v,

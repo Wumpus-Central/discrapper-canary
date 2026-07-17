@@ -29,11 +29,11 @@ let N = function () {
     });
 };
 var C = n(112107),
-    R = n(930101),
-    O = n(976860),
+    O = n(930101),
+    R = n(976860),
     L = n(302031),
-    D = n(157941),
-    y = n(696451),
+    y = n(157941),
+    D = n(696451),
     v = n(317525),
     b = n(71393),
     M = n(957565),
@@ -151,8 +151,11 @@ function eh(e) {
                             fullWidth: !0,
                             variant: p ? "critical-primary" : "primary",
                             text: p ? `Clear Treatment ${I.value}` : `Apply Treatment ${I.value}`,
-                            onClick: () => {
-                                null != I && (p ? (0, el.t$)(c.system, n, null) : (0, el.t$)(c.system, n, I.value));
+                            onClick: function () {
+                                null == n ||
+                                    null == c ||
+                                    (null != I &&
+                                        (p ? (0, el.t$)(c.system, n, null) : (0, el.t$)(c.system, n, I.value)));
                             },
                         })
                       : (0, i.jsx)("div", {
@@ -180,17 +183,17 @@ var em = n(266645),
     eS = n(746080),
     eN = n(992595),
     eC = n(429128);
-let eR = { display: "inline" };
-function eO(e) {
+let eO = { display: "inline" };
+function eR(e) {
     return e.stopPropagation();
 }
 function eL(e) {
     return {
         ...e,
-        react: (t, n, r) => (0, i.jsx)("span", { style: eR, onClick: eO, children: e.react(t, n, r) }, r.key),
+        react: (t, n, r) => (0, i.jsx)("span", { style: eO, onClick: eR, children: e.react(t, n, r) }, r.key),
     };
 }
-function eD(e) {
+function ey(e) {
     let { text: t } = e,
         [n, a] = r.useState(!1);
     return (0, i.jsx)(o.D, {
@@ -206,7 +209,7 @@ function eD(e) {
             : (0, i.jsx)(c.T, { size: "xs", color: "currentColor" }),
     });
 }
-let ey = {
+let eD = {
     blockQuote: {
         react: (e, t, n) =>
             (0, i.jsxs)(
@@ -237,9 +240,9 @@ let ey = {
                         className: eN.Hy,
                         children: [
                             M.p5
-                                ? (0, i.jsx)("div", { className: eN.lB, children: (0, i.jsx)(eD, { text: e.content }) })
+                                ? (0, i.jsx)("div", { className: eN.lB, children: (0, i.jsx)(ey, { text: e.content }) })
                                 : null,
-                            (0, i.jsx)(D.l, {
+                            (0, i.jsx)(y.l, {
                                 location: "MarkupReactRules",
                                 code: e.content,
                                 lang: e.lang,
@@ -310,38 +313,44 @@ let ey = {
                           onClick: function () {
                               !(function (e, t, n) {
                                   let i = b.A.getGuild(e);
-                                  if (null == e || null == i) return;
-                                  let r = (t) => {
-                                      i.features.has(B.GuildFeatures.COMMUNITY) && (0, O.pX)(B.BVt.CHANNEL(e, t));
-                                  };
-                                  switch (t) {
-                                      case "home":
-                                      case "guide":
-                                          r(eS.VV.GUILD_HOME);
-                                          break;
-                                      case "browse":
-                                          r(eS.VV.CHANNEL_BROWSER);
-                                          break;
-                                      case "customize":
-                                          r(eS.VV.CUSTOMIZE_COMMUNITY);
-                                          break;
-                                      case "linked-roles":
-                                          if (null != n) {
-                                              let t = y.Ay.getSelfMember(e);
-                                              if (null == t) return;
-                                              let i = v.A.getRole(e, n);
-                                              null == i || t.roles.includes(i.id)
-                                                  ? _.h.dispatch({
-                                                        type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
-                                                        guildId: e,
-                                                    })
-                                                  : _.h.dispatch({
-                                                        type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
-                                                        guildId: e,
-                                                        role: i,
-                                                    });
-                                          } else
-                                              _.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e });
+                                  if (null != e && null != i)
+                                      switch (t) {
+                                          case "home":
+                                          case "guide":
+                                              r(eS.VV.GUILD_HOME);
+                                              break;
+                                          case "browse":
+                                              r(eS.VV.CHANNEL_BROWSER);
+                                              break;
+                                          case "customize":
+                                              r(eS.VV.CUSTOMIZE_COMMUNITY);
+                                              break;
+                                          case "linked-roles":
+                                              if (null != n) {
+                                                  let t = D.Ay.getSelfMember(e);
+                                                  if (null == t) return;
+                                                  let i = v.A.getRole(e, n);
+                                                  null == i || t.roles.includes(i.id)
+                                                      ? _.h.dispatch({
+                                                            type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
+                                                            guildId: e,
+                                                        })
+                                                      : _.h.dispatch({
+                                                            type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
+                                                            guildId: e,
+                                                            role: i,
+                                                        });
+                                              } else
+                                                  _.h.dispatch({
+                                                      type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW",
+                                                      guildId: e,
+                                                  });
+                                      }
+                                  function r(t) {
+                                      null != e &&
+                                          null != i &&
+                                          i.features.has(B.GuildFeatures.COMMUNITY) &&
+                                          (0, R.pX)(B.BVt.CHANNEL(e, t));
                                   }
                               })(e.guildId, e.id, e.itemId);
                           },
@@ -414,7 +423,7 @@ function ev(e) {
         return !0 === t ? eL(e) : e;
     }
     return {
-        ...ey,
+        ...eD,
         link: (0, eg.A)(e),
         devLink: {
             match: (e, t) => (t.allowLinks && t.allowDevLinks ? eT.exec(e) : null),
@@ -467,7 +476,7 @@ function ev(e) {
                         let { key: s, channelId: l, messageId: o } = a;
                         return e.src
                             ? (0, i.jsx)(
-                                  R.H,
+                                  O.H,
                                   { node: e, tooltipPosition: t, enableClick: n, channelId: l, messageId: o },
                                   s,
                               )
@@ -488,7 +497,7 @@ function ev(e) {
                             e = { ...e, name: t ? `:${c.name}:` : c.name };
                         }
                         return (0, i.jsx)(
-                            R.X,
+                            O.X,
                             { node: e, tooltipPosition: t, enableClick: n, channelId: o, messageId: d },
                             s,
                         );
@@ -539,7 +548,7 @@ function ev(e) {
                 );
             },
         },
-        soundboard: a(ey.soundboard),
+        soundboard: a(eD.soundboard),
         gameMention: {
             react(e, t, n) {
                 let { gameId: r, channelId: a, gameName: s, gameIcon: l } = e;

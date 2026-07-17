@@ -3781,9 +3781,15 @@ function iR(e) {
                 r.useEffect(() => {
                     if (null == t.current || null == s) return;
                     let e = n.ref.current?.getScrollerNode();
-                    if (null == e) return;
-                    let i = () => {
-                        if (null == t.current) return;
+                    if (null != e)
+                        return (
+                            e.addEventListener("scroll", i, { passive: !0 }),
+                            () => {
+                                e.removeEventListener("scroll", i), (s.current = null), (d.current = !1), c(!1);
+                            }
+                        );
+                    function i() {
+                        if (null == e || null == t.current) return;
                         let n = t.current.getBoundingClientRect().top - e.getBoundingClientRect().top;
                         s.current = n;
                         let i = e.clientHeight / 2,
@@ -3792,13 +3798,7 @@ function iR(e) {
                         let o = e.getBoundingClientRect(),
                             u = t.current.getBoundingClientRect();
                         (u.bottom < o.top || u.top > o.bottom) && (0, G.P7)(l);
-                    };
-                    return (
-                        e.addEventListener("scroll", i, { passive: !0 }),
-                        () => {
-                            e.removeEventListener("scroll", i), (s.current = null), (d.current = !1), c(!1);
-                        }
-                    );
+                    }
                 }, [s, t, n, c, l, a]),
                 { isShifted: o }
             );
@@ -5356,12 +5356,13 @@ function rg(e) {
         null == S)
     )
         return null;
-    let k = null != _ && _.reactions.length > 0,
-        P = () => {
-            (0, rc.jC)({ postId: S.id, location: { section: ec.JJy.CHANNEL_HEADER } }),
-                (0, tu.C)((0, ak.af)(S, M), () => E(!0));
-        },
-        O = j ? aj.A : ay.X;
+    let k = null != _ && _.reactions.length > 0;
+    function P() {
+        null != S &&
+            ((0, rc.jC)({ postId: S.id, location: { section: ec.JJy.CHANNEL_HEADER } }),
+            (0, tu.C)((0, ak.af)(S, M), () => E(!0)));
+    }
+    let O = j ? aj.A : ay.X;
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsxs)("div", {
@@ -5440,10 +5441,11 @@ function rg(e) {
                                           size: "sm",
                                           variant: "secondary",
                                           text: j ? eR.intl.string(eR.t["7OkUzs"]) : eR.intl.string(eR.t["3aOv+h"]),
-                                          onClick: () => {
-                                              j
-                                                  ? ra.A.leaveThread(S, "Forum Toolbar")
-                                                  : ra.A.joinThread(S, "Forum Toolbar");
+                                          onClick: function () {
+                                              null != S &&
+                                                  (j
+                                                      ? ra.A.leaveThread(S, "Forum Toolbar")
+                                                      : ra.A.joinThread(S, "Forum Toolbar"));
                                           },
                                       }),
                                   }),
@@ -5472,13 +5474,14 @@ function rg(e) {
                                         icon: aN.D,
                                         size: "sm",
                                         variant: "secondary",
-                                        onClick: () => {
-                                            I.A.jumpToMessage({
-                                                channelId: S.id,
-                                                messageId: S.id,
-                                                flash: !0,
-                                                jumpType: av.vx.INSTANT,
-                                            });
+                                        onClick: function () {
+                                            null != S &&
+                                                I.A.jumpToMessage({
+                                                    channelId: S.id,
+                                                    messageId: S.id,
+                                                    flash: !0,
+                                                    jumpType: av.vx.INSTANT,
+                                                });
                                         },
                                         "aria-label": eR.intl.string(eR.t.nFP4oa),
                                     }),

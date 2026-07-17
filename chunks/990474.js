@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => O, Oh: () => R, gn: () => C });
+n.d(t, { Ay: () => R, Oh: () => O, gn: () => C });
 var i = n(627968),
     r = n(64700),
     a = n(17928),
@@ -22,8 +22,20 @@ var i = n(627968),
 n(827669);
 var S = n(375708);
 function N(e, t, n, i, r) {
-    if (null == e) return;
-    let a = () => {
+    null != e &&
+        ("" !== I.A.getDraft(e, I.C.ChannelMessage)
+            ? (0, s.A)({
+                  title: S.intl.string(S.t.pe26Cj),
+                  subtitle: S.intl.string(S.t["+awCIy"]),
+                  confirmText: S.intl.string(S.t.VkKicb),
+                  onConfirm: () => a(),
+                  onCloseCallback: () => {
+                      T._.dispatch(m.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
+                  },
+              })
+            : a());
+    function a() {
+        if (null == e) return;
         let a = h.A.getChannel(e);
         if (null == a) return;
         let { command: s, application: l } = c.EW({ channel: a, type: "channel" }, n, r);
@@ -42,18 +54,7 @@ function N(e, t, n, i, r) {
             d.Gf({ channelId: e, command: null, section: null }),
                 d.Gf({ channelId: e, command: s, section: t, location: i });
         }
-    };
-    "" !== I.A.getDraft(e, I.C.ChannelMessage)
-        ? (0, s.A)({
-              title: S.intl.string(S.t.pe26Cj),
-              subtitle: S.intl.string(S.t["+awCIy"]),
-              confirmText: S.intl.string(S.t.VkKicb),
-              onConfirm: () => a(),
-              onCloseCallback: () => {
-                  T._.dispatch(m.jej.FOCUS_CHANNEL_TEXT_AREA, { channelId: e });
-              },
-          })
-        : a();
+    }
 }
 function C(e) {
     let { node: t, stateKey: n, children: s } = e,
@@ -72,7 +73,7 @@ function C(e) {
             let n = T?.applicationId === g.Ik.BUILT_IN;
             return !!e || !!n || !!d;
         }, [l, T, o, d, t.commandName, S]),
-        R = r.useCallback(
+        O = r.useCallback(
             (e) => {
                 e?.stopPropagation(),
                     null != l &&
@@ -83,10 +84,10 @@ function C(e) {
             [l, t.commandKey, t.commandName],
         );
     return C
-        ? (0, i.jsxs)(_.A, { role: "link", onClick: R, children: ["/", s] }, n)
+        ? (0, i.jsxs)(_.A, { role: "link", onClick: O, children: ["/", s] }, n)
         : (0, i.jsxs)("span", { children: ["/", s] });
 }
-function R(e) {
+function O(e) {
     let { commandId: t, commandName: n, commandDescription: r, applicationId: s, onClick: d } = e,
         c = (0, a.bG)([p.Ay], () => p.Ay.getChannelId());
     return (0, i.jsx)(l.m, {
@@ -102,6 +103,6 @@ function R(e) {
         }),
     });
 }
-function O(e) {
+function R(e) {
     return { react: (e, t, n) => (0, i.jsx)(C, { node: e, stateKey: n.key, children: t(e.content, n) }) };
 }

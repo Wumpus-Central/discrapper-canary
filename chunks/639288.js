@@ -373,12 +373,13 @@ let eI = function (e) {
                               size: "sm",
                               text: en.intl.format(en.t["+xsVS6"], { username: l.author.username }),
                               fullWidth: !0,
-                              onClick: () => {
-                                  k.Ay.trackWithMetadata(Q.HAw.NEW_MEMBER_MENTION_CTA_CLICKED, {
-                                      target_user_id: l.author.id,
-                                  }),
+                              onClick: function () {
+                                  null != a &&
+                                      (k.Ay.trackWithMetadata(Q.HAw.NEW_MEMBER_MENTION_CTA_CLICKED, {
+                                          target_user_id: l.author.id,
+                                      }),
                                       i(),
-                                      (0, ej.C)(l.author, a.id);
+                                      (0, ej.C)(l.author, a.id));
                               },
                           }),
                       }),

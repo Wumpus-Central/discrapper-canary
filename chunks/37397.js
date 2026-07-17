@@ -28,8 +28,8 @@ var n = i(627968),
     j = i(975571),
     O = i(428262),
     R = i(83617),
-    D = i(543767),
-    L = i(526292),
+    L = i(543767),
+    D = i(526292),
     P = i(155984),
     G = i(131168),
     M = i(331322),
@@ -37,8 +37,8 @@ var n = i(627968),
     V = i(192308),
     k = i(315629),
     w = i(821609),
-    B = i(158032),
-    F = i(580630),
+    F = i(158032),
+    B = i(580630),
     z = i(427262),
     X = i(795269),
     Y = i(59784),
@@ -219,7 +219,8 @@ function eh(e) {
     let o = s.subscriptionId,
         u = s.currentPeriodEnd,
         { primary: d, members: c } = r,
-        { title: g, description: A } = (() => {
+        { title: g, description: A } = (function () {
+            if (null == s) return { title: "", description: "" };
             switch (s.subscriptionStatus) {
                 case ec.Dmq.CANCELED:
                     return {
@@ -359,8 +360,8 @@ function eS(e) {
         })),
         [g, m] = s.useState(!1),
         { status: A } = t,
-        h = (0, L.nf)(),
-        E = (0, L.k5)() && h?.discountId === eu.xH,
+        h = (0, D.nf)(),
+        E = (0, D.k5)() && h?.discountId === eu.xH,
         S = s.useCallback(() => {
             (0, V.openModalLazy)(async () => {
                 let { PremiumBrandRefreshSubscriptionCancellationModal: e } = await Promise.all([
@@ -377,7 +378,7 @@ function eS(e) {
             });
         }, [t, l]),
         T = s.useCallback(async () => {
-            m(!0), await (0, B.Ir)(t, l), m(!1);
+            m(!0), await (0, F.Ir)(t, l), m(!1);
         }, [t, l]);
     function x() {
         v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
@@ -397,7 +398,7 @@ function eS(e) {
             title: f,
             description: N,
             discountDescription: _,
-        } = (() => {
+        } = (function () {
             switch (A) {
                 case ec.Dmq.CANCELED:
                     return {
@@ -432,7 +433,7 @@ function eS(e) {
                         e = et.intl.format(ee.default.FwjZzr, {
                             percent: h?.percentage ?? 0,
                             discountEndDate: new Date(t.metadata.active_discount_expires_at),
-                            regularPrice: (0, F.$g)(i.amount, i.currency),
+                            regularPrice: (0, B.$g)(i.amount, i.currency),
                         });
                     }
                     return {
@@ -552,9 +553,9 @@ function ev(e) {
         return t === a.id;
     });
     if (null == o) return null;
-    let u = (0, F.$g)(o.amount, s.currency),
+    let u = (0, B.$g)(o.amount, s.currency),
         d = (0, O.y8)(eu.gD.PREMIUM_MONTH_TIER_2, !1, !1, { currency: t.currency, paymentSourceId: t.paymentSourceId }),
-        c = (0, F.$g)(d.amount, d.currency);
+        c = (0, B.$g)(d.amount, d.currency);
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsx)(m.D, {
@@ -744,8 +745,8 @@ let eO = function (e) {
           });
 };
 var eR = i(284009),
-    eD = i.n(eR),
-    eL = i(607399),
+    eL = i.n(eR),
+    eD = i(607399),
     eP = i(189213),
     eG = i(683071),
     eM = i(701273),
@@ -753,8 +754,8 @@ var eR = i(284009),
     eV = i(780964),
     ek = i(766075),
     ew = i(327479),
-    eB = i(601107),
-    eF = i(428797);
+    eF = i(601107),
+    eB = i(428797);
 let ez = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
     eX = (e) => {
         let { transitionState: t, onClose: i, subscription: l, analyticsLocations: r, analyticsLocation: a } = e,
@@ -811,39 +812,39 @@ function eY(e) {
         } = e,
         d = (0, u.bG)([y.default], () => {
             let e = y.default.getCurrentUser();
-            return eD()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e;
+            return eL()(null != e, "GuildBoostingHeader: currentUser cannot be undefined"), e;
         }),
         { analyticsLocations: c } = (0, f.Ay)(p.A.GUILD_BOOSTING_SUBSCRIPTION_HEADER);
     if (0 === (0, O.bx)(i.additionalPlans)) return null;
     let { status: m } = i,
         A = (0, O.$k)(i),
         h = !A && i.isBoostOnly && ez.includes(i.status);
-    if (A) t = eF.v2;
+    if (A) t = eB.v2;
     else
         switch (m) {
             case ec.Dmq.PAST_DUE:
             case ec.Dmq.ACCOUNT_HOLD:
             case ec.Dmq.BILLING_RETRY:
-                t = eF.P7;
+                t = eB.P7;
                 break;
             case ec.Dmq.PAUSE_PENDING:
             case ec.Dmq.PAUSED:
-                t = i.pauseReason !== eB.qf.FRACTIONAL_PREMIUM ? eF.C7 : eF.wG;
+                t = i.pauseReason !== eF.qf.FRACTIONAL_PREMIUM ? eB.C7 : eB.wG;
                 break;
             default:
-                t = eF.wG;
+                t = eB.wG;
         }
     return (0, n.jsxs)(n.Fragment, {
         children: [
             (0, n.jsxs)("div", {
-                className: r()(t, eF.Qn),
+                className: r()(t, eB.Qn),
                 children: [
-                    (0, n.jsx)("div", { className: eF.Kq }),
-                    (0, n.jsx)("div", { className: eF.OL }),
+                    (0, n.jsx)("div", { className: eB.Kq }),
+                    (0, n.jsx)("div", { className: eB.OL }),
                     (0, n.jsxs)("div", {
-                        className: eF.eC,
+                        className: eB.eC,
                         children: [
-                            (0, n.jsx)("div", { className: r()(eF.Ab, { [eF.aD]: A }) }),
+                            (0, n.jsx)("div", { className: r()(eB.Ab, { [eB.aD]: A }) }),
                             (0, n.jsx)("div", {
                                 children: (0, O.Uf)({
                                     subscription: i,
@@ -856,11 +857,11 @@ function eY(e) {
                     }),
                     a &&
                         (0, n.jsxs)("div", {
-                            className: eF.BQ,
+                            className: eB.BQ,
                             children: [
                                 h &&
                                     (0, n.jsx)("div", {
-                                        className: eF.x7,
+                                        className: eB.x7,
                                         children: (0, n.jsx)(Q.Q, {
                                             variant: "always-white",
                                             onClick: function () {
@@ -889,9 +890,9 @@ function eY(e) {
             }),
             !a &&
                 (0, n.jsx)(g.E, {
-                    className: eF.yW,
+                    className: eB.yW,
                     variant: "text-sm/normal",
-                    children: et.intl.format(eL.Fr ? et.t.uxYBEa : et.t.k6haR9, {
+                    children: et.intl.format(eD.Fr ? et.t.uxYBEa : et.t.k6haR9, {
                         openAppHook: () => (0, eM.A)("app"),
                     }),
                 }),
@@ -1075,7 +1076,7 @@ function e3(e) {
         } = e,
         { analyticsLocations: A } = (0, f.Ay)(p.A.SUBSCRIPTION_DETAILS),
         T = null != d ? {} : { subscriptionId: t.id, renewal: !0, analyticsLocations: A, analyticsLocation: i },
-        [x] = (0, D.YV)(T);
+        [x] = (0, L.YV)(T);
     x = d ?? x;
     let _ =
             null != c
@@ -1087,11 +1088,11 @@ function e3(e) {
                       analyticsLocations: A,
                       analyticsLocation: i,
                   },
-        [I] = (0, D.YV)(_);
+        [I] = (0, L.YV)(_);
     I = c ?? I;
     let C = (0, N.A)(),
         b = (0, G.p)(),
-        y = (0, L.nf)(),
+        y = (0, D.nf)(),
         v = O.Ay.isBaseSubscriptionCanceled(t),
         j = (function (e, t) {
             let i = eT.A.get(e.premiumPlanIdFromItems ?? "");
@@ -1103,7 +1104,7 @@ function e3(e) {
             return !1;
         })(t, s);
     if (null == x || null == I) return (0, n.jsx)(h.y, {});
-    let P = j ? (0, L.Bv)(I) : null,
+    let P = j ? (0, D.Bv)(I) : null,
         M = null != P || (null != y && (y.discountId === eu.q || y.discountId === eu.EG)),
         U =
             j && ((v && null != b) || (!v && M))
@@ -1237,14 +1238,14 @@ function e5(e) {
                 }
             );
         });
-    let [v] = (0, D.YV)({
+    let [v] = (0, L.YV)({
             subscriptionId: i.id,
             renewal: !0,
             analyticsLocations: S,
             analyticsLocation: c,
             fetchKey: I,
         }),
-        [j] = (0, D.YV)({
+        [j] = (0, L.YV)({
             subscriptionId: i.id,
             renewal: !0,
             applyEntitlements: !0,
@@ -1255,23 +1256,23 @@ function e5(e) {
         }),
         O = r?.invalid,
         R = (0, u.bG)([y.default], () => y.default.getCurrentUser()?.hasFreePremium()),
-        L = o()(i.currentPeriodEnd),
+        D = o()(i.currentPeriodEnd),
         M = null != i.paymentSourceId,
         U = j?.total ?? 0,
         V =
             !M &&
             U > 0 &&
-            (7 >= L.diff(o()(), "days") || i.status === ec.Dmq.PAST_DUE) &&
+            (7 >= D.diff(o()(), "days") || i.status === ec.Dmq.PAST_DUE) &&
             !R &&
             !i.isPurchasedExternally,
         k = O && i.status === ec.Dmq.PAST_DUE && !R && !i.isPurchasedExternally,
         w = (0, P.l)(),
-        B = !R && w,
-        F = i?.status === ec.Dmq.PAST_DUE,
-        z = F ? o()().diff(o()(i.currentPeriodStart), "days") : 0,
+        F = !R && w,
+        B = i?.status === ec.Dmq.PAST_DUE,
+        z = B ? o()().diff(o()(i.currentPeriodStart), "days") : 0,
         X = null != A && A.isPremiumGroupPrimary(),
         Y = i.hasAnyPremiumGroup,
-        [H] = (0, D.C8)({ subscriptionId: i.id, preventFetch: !(B || F) });
+        [H] = (0, L.C8)({ subscriptionId: i.id, preventFetch: !(F || B) });
     return null == v || null == j
         ? (0, n.jsx)(h.y, {})
         : (null != i.renewalMutations &&
@@ -1289,7 +1290,7 @@ function e5(e) {
               children: [
                   V ? (0, n.jsx)(eJ, {}) : null,
                   k ? (0, n.jsx)(e$, {}) : null,
-                  B && null != H ? (0, n.jsx)(e0, { daysPastDue: z, subscription: i, openInvoiceId: H.id }) : null,
+                  F && null != H ? (0, n.jsx)(e0, { daysPastDue: z, subscription: i, openInvoiceId: H.id }) : null,
                   X && Y && (0, n.jsx)(eS, { subscription: i, analyticsLocations: S }),
                   t,
                   (0, n.jsxs)("div", {
