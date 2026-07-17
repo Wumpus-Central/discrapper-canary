@@ -172,11 +172,38 @@
 .incodeElement__07ac3 {
     display: block;
     height: 100%;
+    min-height: 100%;
+    position: relative;
     width: 100%
 }
 
+.incodeElement__07ac3 .IncodeComponent,
+.incodeElement__07ac3 .IncodeConsentPage,
 .incodeElement__07ac3 .IncodeSpinnerFullScreen {
-    min-height: 600px
+    height: 100%;
+    min-height: 100%
+}
+
+.incodeElement__07ac3 .IncodePageContainer {
+    align-items: center;
+    justify-content: stretch
+}
+
+.incodeElement__07ac3 .IncodePageInner {
+    height: 100%;
+    margin: 0;
+    max-height: none
+}
+
+.incodeElement__07ac3 .IncodeConsentContent {
+    height: 100%;
+    min-height: 0
+}
+
+.incodeElement__07ac3 .IncodeConsentBody {
+    flex: 1 1 auto;
+    min-height: 0;
+    overflow-y: auto
 }
 
 .dataAssurance__2a048 {

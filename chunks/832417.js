@@ -1,32 +1,33 @@
-n.d(t, { default: () => W });
+n.d(t, { default: () => K });
 var r = n(627968),
     i = n(64700),
     a = n(503698),
-    s = n.n(a),
-    l = n(772707),
+    l = n.n(a),
+    s = n(772707),
     o = n(462887),
     c = n(192308),
     u = n(821609),
     d = n(663417),
-    I = n(123292),
-    _ = n(331322),
-    f = n(834730),
-    p = n(289873);
+    f = n(123292),
+    p = n(331322),
+    _ = n(834730),
+    I = n(289873);
 n(238819), n(743601), n(107439), n(740737);
-var A = n(736653),
-    E = n(632738),
+var E = n(736653),
+    A = n(632738),
     C = n(295972),
     g = n(36149),
-    F = n(448026),
-    h = n(651386),
-    v = n(277262),
-    T = n(731738),
-    R = n(807393),
-    y = n(40449),
-    m = n(898638);
-let w = { showTutorial: !0, autoCaptureTimeout: 10, captureAttempts: 3 },
-    k = {
-        ...w,
+    R = n(448026),
+    y = n(354331),
+    F = n(651386),
+    T = n(277262),
+    v = n(731738),
+    h = n(807393),
+    b = n(40449),
+    k = n(898638);
+let m = { showTutorial: !0, autoCaptureTimeout: 10, captureAttempts: 3 },
+    w = {
+        ...m,
         showPreview: !1,
         assistedOnboarding: !1,
         enableFaceRecording: !1,
@@ -38,8 +39,8 @@ let w = { showTutorial: !0, autoCaptureTimeout: 10, captureAttempts: 3 },
         deepsightLiveness: "SINGLE_FRAME",
         onDeviceFaceResultsSubmissionEnabled: !0,
     },
-    b = {
-        ...w,
+    L = {
+        ...m,
         enableId: !0,
         enablePassport: !0,
         deviceWallet: !1,
@@ -57,7 +58,7 @@ let w = { showTutorial: !0, autoCaptureTimeout: 10, captureAttempts: 3 },
         usSmartCapture: !1,
         perCountryPerDocOverrides: {},
     };
-function L(e, t) {
+function D(e, t) {
     switch (t.type) {
         case "CAPTURE_COMPLETED":
             return "waiting_for_result";
@@ -73,347 +74,418 @@ function L(e, t) {
 }
 function N() {
     try {
-        (0, F.cL)();
+        (0, R.cL)();
     } catch {}
 }
-function D(e) {
+function S(e) {
     return e.aborted;
 }
 function P(e) {
-    R.A.increment({ name: T.K.INCODE_VERIFICATION_FAILED, tags: [`reason:${e}`] });
+    h.A.increment({ name: v.K.INCODE_VERIFICATION_FAILED, tags: [`reason:${e}`] });
 }
-async function x(e) {
+async function O(e) {
     try {
         return await (0, C.Zo)(e), !0;
     } catch {
         return !1;
     }
 }
-function S(e, t) {
-    let { container: n, config: r, signal: i, onFinish: a, onError: s } = t,
-        l = document.createElement(e);
-    l.className = m.x;
+function x(e, t) {
+    let { container: n, config: r, signal: i, onFinish: a, onError: l } = t,
+        s = document.createElement(e);
+    s.className = k.x;
     let o = !1,
         c = (e) => {
-            D(i) || o || ((o = !0), e());
+            S(i) || o || ((o = !0), e());
         };
-    return (l.onFinish = () => c(a)), (l.onError = () => c(s)), (l.config = r), n.appendChild(l), l;
+    return (s.onFinish = () => c(a)), (s.onError = () => c(l)), (s.config = r), n.appendChild(s), s;
 }
 function V(e, t) {
-    return e !== y.VF.ID_VERIFICATION ? ["selfie", "onDeviceSelfie"] : t ? ["idCapture"] : [];
+    return e !== b.VF.ID_VERIFICATION
+        ? !0 === w.onDeviceFaceResultsSubmissionEnabled
+            ? ["selfie", "onDeviceSelfie"]
+            : ["selfie"]
+        : t
+          ? ["idCapture"]
+          : [];
 }
-let O = function (e) {
+let M = function (e) {
     let {
             apiUrl: t,
             sessionToken: n,
             consentId: r,
             interviewId: a,
-            flow: s = y.VF.FACIAL_AGE_ESTIMATION,
-            onDeviceIdCapture: l = !1,
+            flow: l = b.VF.FACIAL_AGE_ESTIMATION,
+            onDeviceIdCapture: s = !1,
             enabled: o = !0,
+            webviewHost: c,
         } = e,
-        c = i.useRef(null),
         u = i.useRef(null),
-        d = i.useRef(!1),
-        [I, _] = i.useReducer(L, "capturing"),
-        [f, p] = i.useState(!1),
-        [A, E] = i.useState({ sessionToken: n, interviewId: a });
+        d = i.useRef(null),
+        f = i.useRef(!1),
+        [p, _] = i.useReducer(D, "capturing"),
+        [I, E] = i.useState(!1),
+        [A, g] = i.useState(!1),
+        [v, h] = i.useState({ sessionToken: n, interviewId: a });
     i.useEffect(() => {
-        let e = V(s, l);
-        0 !== e.length && (0, v.ZU)((0, v.Dz)({ pipelines: e })).catch(() => {});
+        let e = V(l, s);
+        0 !== e.length && (0, T.ZU)((0, T.Dz)({ pipelines: e })).catch(() => {});
     }, []),
         i.useEffect(() => {
-            E((e) =>
+            h((e) =>
                 e.sessionToken === n && e.interviewId === a
                     ? e
-                    : ((d.current = !1), { sessionToken: n, interviewId: a }),
+                    : ((f.current = !1), { sessionToken: n, interviewId: a }),
             );
-        }, [n, a]);
-    let g = "waiting_for_result" === I,
-        T = "error" === I,
-        R = "waiting_for_result" === I || "bootstrapping_fallback" === I,
-        m = i.useCallback(async () => {
-            if (d.current) {
+        }, [n, a]),
+        i.useEffect(() => {
+            g(!1);
+        }, [v.sessionToken, v.interviewId]);
+    let k = "waiting_for_result" === p,
+        m = "error" === p,
+        M = "bootstrapping_fallback" === p,
+        j = "waiting_for_result" === p || "bootstrapping_fallback" === p,
+        U = i.useCallback(
+            (e) => {
+                if ("bootstrapping_fallback" === p) {
+                    if ("error" in e) {
+                        P("fallback_bootstrap_failed"), (f.current = !1), _({ type: "CAPTURE_FAILED" });
+                        return;
+                    }
+                    h({ sessionToken: e.sessionToken, interviewId: e.interviewId }), _({ type: "FALLBACK_READY" });
+                }
+            },
+            [p],
+        ),
+        q = i.useCallback(async () => {
+            if (f.current) {
                 P("secondary_flow_failed"), _({ type: "CAPTURE_FAILED" });
                 return;
             }
-            (d.current = !0), _({ type: "FALLBACK_STARTED" });
+            if (((f.current = !0), _({ type: "FALLBACK_STARTED" }), null != c))
+                return void c.onFallbackRequest(v.interviewId);
             try {
-                let e = (await (0, C.eb)({ previousInterviewId: A.interviewId })).incode_parameters;
+                let e = (await (0, C.eb)({ previousInterviewId: v.interviewId })).incode_parameters;
                 if (e?.session_token == null || null == e.interview_id) {
                     P("fallback_bootstrap_incomplete"), _({ type: "CAPTURE_FAILED" });
                     return;
                 }
-                E({ sessionToken: e.session_token, interviewId: e.interview_id }), _({ type: "FALLBACK_READY" });
+                h({ sessionToken: e.session_token, interviewId: e.interview_id }), _({ type: "FALLBACK_READY" });
             } catch (e) {
-                P("fallback_bootstrap_failed"), (d.current = !1), _({ type: "CAPTURE_FAILED" });
+                P("fallback_bootstrap_failed"), (f.current = !1), _({ type: "CAPTURE_FAILED" });
             }
-        }, [A.interviewId]),
-        w = i.useCallback(() => {
-            (d.current = !1), E({ sessionToken: n, interviewId: a }), _({ type: "RETRY_CAPTURE" });
+        }, [v.interviewId, c]),
+        B = i.useCallback(() => {
+            (f.current = !1), g(!1), h({ sessionToken: n, interviewId: a }), _({ type: "RETRY_CAPTURE" });
         }, [n, a]);
     return (
         i.useEffect(() => {
-            if (!g) return;
+            if (!k) return;
             let e = new AbortController(),
                 { signal: t } = e;
             return (
                 (async () => {
-                    let e = A.interviewId;
+                    let e = v.interviewId;
                     if (0 === e.length) {
-                        P("missing_interview_id"), D(t) || _({ type: "VERIFICATION_FAILED" });
+                        P("missing_interview_id"), S(t) || _({ type: "VERIFICATION_FAILED" });
                         return;
                     }
-                    let n = await x(e);
-                    !D(t) && (n || (P("registration_failed"), _({ type: "VERIFICATION_FAILED" })));
+                    if (null != c) return c.onCaptureComplete(e);
+                    let n = await O(e);
+                    !S(t) && (n || (P("registration_failed"), _({ type: "VERIFICATION_FAILED" })));
                 })(),
                 () => {
                     e.abort();
                 }
             );
-        }, [g, A.interviewId]),
+        }, [k, v.interviewId, c]),
+        i.useEffect(() => {
+            if ("bootstrapping_fallback" === p) {
+                let e = setTimeout(() => {
+                    P("fallback_bootstrap_failed"), (f.current = !1), _({ type: "CAPTURE_FAILED" });
+                }, 3e4);
+                return () => {
+                    clearTimeout(e);
+                };
+            }
+            if (("waiting_for_result" !== p && !A) || (null != c && "waiting_for_result" === p)) return;
+            let e = setTimeout(() => {
+                g(!1), P("result_wait_timeout"), _({ type: "VERIFICATION_FAILED" });
+            }, 3e4);
+            return () => {
+                clearTimeout(e);
+            };
+        }, [p, A, c]),
         i.useEffect(() => {
             var e, n;
-            let i;
-            if (!o || "capturing" !== I) return;
-            let a = new AbortController(),
-                { signal: f } = a,
-                E = d.current,
+            let i, a;
+            if (!o || "capturing" !== p) return;
+            let c = new AbortController(),
+                { signal: I } = c,
+                A = f.current,
                 C =
-                    ((e = E ? y.VF.ID_VERIFICATION : s),
-                    (n = A.sessionToken),
-                    (i = V(e, l)),
-                    e !== y.VF.ID_VERIFICATION
+                    ((e = A ? b.VF.ID_VERIFICATION : l),
+                    (n = v.sessionToken),
+                    (a = V(e, s)),
+                    e !== b.VF.ID_VERIFICATION
                         ? {
                               tag: "incode-selfie",
-                              config: k,
-                              wasmPipelines: i,
+                              config: w,
+                              wasmPipelines: a,
                               captureFailureReason: "selfie_capture_error",
                               requiresManualFinish: !0,
                           }
-                        : l
+                        : s
                           ? {
                                 tag: "incode-id",
-                                config: b,
-                                wasmPipelines: i,
+                                config: L,
+                                wasmPipelines: a,
                                 captureFailureReason: "id_capture_error",
                                 requiresManualFinish: !0,
                             }
                           : {
                                 tag: "incode-flow",
                                 config: { token: n },
-                                wasmPipelines: i,
+                                wasmPipelines: a,
                                 captureFailureReason: "id_capture_error",
                                 requiresManualFinish: !1,
-                            });
+                            }),
+                T = !1,
+                h = (e) => {
+                    f.current || P(e), q();
+                };
             return (
                 (async () => {
                     try {
                         let e;
                         if (
                             (N(),
-                            await (0, F.mj)({
+                            await (0, R.mj)({
                                 apiURL: (e = t.endsWith("/") ? t.slice(0, -1) : t).endsWith("/0") ? e : `${e}/0`,
                                 encryption: { mgf1: "sha256" },
                                 wasm: { pipelines: C.wasmPipelines },
                             }),
-                            D(f) || (await (0, h.T7)({ token: A.sessionToken }), D(f)))
+                            S(I) || (await (0, F.T7)({ token: v.sessionToken }), S(I)))
                         )
                             return;
-                        let n = c.current;
+                        let n = u.current;
                         if (null == n) throw Error("Incode capture failed to initialize.");
-                        let i = () => {
-                            (u.current = S(C.tag, {
-                                container: n,
-                                config: C.config,
-                                signal: f,
-                                onFinish: () => {
-                                    C.requiresManualFinish
-                                        ? (async () => {
-                                              try {
-                                                  let e = await (0, h.uR)(void 0, f);
-                                                  if (D(f)) return;
-                                                  (e?.action !== "rejected" &&
-                                                      e?.scoreStatus !== "FAIL" &&
-                                                      e?.scoreStatus !== "MANUAL_FAIL") ||
-                                                  "incode-selfie" !== C.tag ||
-                                                  d.current
-                                                      ? _({ type: "CAPTURE_COMPLETED" })
-                                                      : (P("result_gate_triggered_fallback"), m());
-                                              } catch {
-                                                  D(f) ||
-                                                      (P("finish_status_error"), _({ type: "VERIFICATION_FAILED" }));
-                                              }
-                                          })()
-                                        : _({ type: "CAPTURE_COMPLETED" });
-                                },
-                                onError: () => {
-                                    "incode-selfie" === C.tag && A.interviewId.length > 0
-                                        ? (d.current || P("selfie_error_triggered_fallback"), m())
-                                        : (P(C.captureFailureReason), _({ type: "CAPTURE_FAILED" }));
-                                },
-                            })),
-                                p(!0);
+                        let a = () => {
+                            "incode-selfie" === C.tag &&
+                                (i = (0, y.Ns)((e) => {
+                                    "screenOpened" === e.code && e.screen?.endsWith("Exhausted") && (T = !0);
+                                })),
+                                (d.current = x(C.tag, {
+                                    container: n,
+                                    config: C.config,
+                                    signal: I,
+                                    onFinish: () => {
+                                        "incode-selfie" === C.tag && T && !f.current
+                                            ? h("selfie_error_triggered_fallback")
+                                            : C.requiresManualFinish
+                                              ? (g(!0),
+                                                (async () => {
+                                                    try {
+                                                        let e = await (0, F.uR)(void 0, I);
+                                                        if (S(I)) return;
+                                                        g(!1);
+                                                        let t =
+                                                            e?.action === "rejected" ||
+                                                            e?.scoreStatus === "FAIL" ||
+                                                            e?.scoreStatus === "MANUAL_FAIL";
+                                                        if ("incode-selfie" === C.tag && !f.current && t)
+                                                            return void h("result_gate_triggered_fallback");
+                                                        _({ type: "CAPTURE_COMPLETED" });
+                                                    } catch {
+                                                        if (S(I)) return;
+                                                        g(!1),
+                                                            P("finish_status_error"),
+                                                            _({ type: "VERIFICATION_FAILED" });
+                                                    }
+                                                })())
+                                              : _({ type: "CAPTURE_COMPLETED" });
+                                    },
+                                    onError: () => {
+                                        "incode-selfie" === C.tag && v.interviewId.length > 0
+                                            ? h("selfie_error_triggered_fallback")
+                                            : (P(C.captureFailureReason), _({ type: "CAPTURE_FAILED" }));
+                                    },
+                                })),
+                                E(!0);
                         };
-                        if (E) i();
+                        if (A) a();
                         else {
-                            let e = S("incode-consent", {
+                            let e = x("incode-consent", {
                                 container: n,
                                 config: { consentId: r },
-                                signal: f,
+                                signal: I,
                                 onFinish: () => {
-                                    e.parentNode?.removeChild(e), i();
+                                    e.parentNode?.removeChild(e), a();
                                 },
                                 onError: () => {
                                     P("consent_error"), _({ type: "CAPTURE_FAILED" });
                                 },
                             });
-                            (u.current = e), p(!0);
+                            (d.current = e), E(!0);
                         }
                     } catch (e) {
-                        if (D(f)) return;
+                        if (S(I)) return;
                         P("sdk_init_error"), _({ type: "CAPTURE_FAILED" });
                     }
                 })(),
                 () => {
-                    a.abort(), p(!1);
-                    let e = u.current;
-                    e?.parentNode != null && e.parentNode.removeChild(e), (u.current = null), N();
+                    c.abort(), i?.(), E(!1);
+                    let e = d.current;
+                    e?.parentNode != null && e.parentNode.removeChild(e), (d.current = null), N();
                 }
             );
-        }, [t, A, I, m, r, s, l, o]),
-        { containerRef: c, error: T, waitingForResult: R, incodeElementMounted: f, retryCapture: w }
+        }, [t, v, p, q, r, l, s, o]),
+        {
+            containerRef: u,
+            error: m,
+            waitingForResult: j,
+            awaitingFinishStatus: A,
+            incodeElementMounted: I,
+            retryCapture: B,
+            applyFallbackSession: U,
+            isAwaitingFallbackSession: M,
+        }
     );
 };
 var j = n(793163),
-    M = n(516761),
-    U = n(375708),
-    B = n(768971),
-    q = n(700129);
-let W = function (e) {
-    let {
-            apiUrl: t,
-            sessionToken: n,
-            consentId: a,
-            interviewId: F,
-            initialMethod: h,
-            onClose: v,
-            onComplete: T,
-            onCancel: R,
-            hideFooter: m,
-            onDeviceIdCapture: w,
-            transitionState: k,
-        } = e,
-        b = i.useRef(!1),
-        L = h === y.VF.FACIAL_AGE_ESTIMATION || h === y.VF.ID_VERIFICATION ? h : null,
-        [N, D] = i.useState(L),
-        [P, x] = i.useState(null != L ? { sessionToken: n, consentId: a, interviewId: F } : null),
-        [S, V] = i.useState(!1),
-        W = i.useCallback(async (e) => {
-            D(e), V(!1), x(null);
+    U = n(610402),
+    q = n(516761),
+    B = n(375708),
+    W = n(768971),
+    G = n(700129);
+let K = function (e) {
+    let { onClose: t, onComplete: n, onCancel: a, hideFooter: R, onDeviceIdCapture: y, transitionState: F } = e,
+        T = !0 === e.pickerMode ? null : e.initialSession,
+        v = !0 === e.pickerMode ? null : e.initialMethod,
+        h = i.useRef(!1),
+        [k, m] = i.useState(v),
+        [w, L] = i.useState(T),
+        [D, N] = i.useState(!1),
+        S = i.useCallback(async (e) => {
+            m(e), N(!1), L(null);
             try {
-                let {
-                    session_token: t,
-                    consent_id: n,
-                    interview_id: r,
-                } = (await (0, C.uf)({ method: e, vendor: y.XM.INCODE })).incode_parameters ?? {};
-                null == t || null == n || null == r ? V(!0) : x({ sessionToken: t, consentId: n, interviewId: r });
+                let t = await (0, C.D0)(e);
+                null == t ? N(!0) : L(t);
             } catch {
-                V(!0);
+                N(!0);
             }
         }, []),
-        G = i.useCallback(() => {
-            b.current || ((b.current = !0), T(), v());
-        }, [T, v]),
-        K = (0, o.M)((0, A.Ay)()),
+        P = i.useCallback(() => {
+            h.current || ((h.current = !0), n(), t());
+        }, [n, t]),
+        O = (0, o.M)((0, E.Ay)()),
+        x = !0 === R,
+        V = i.useMemo(() => (x ? { onCaptureComplete: U.Qk, onFallbackRequest: U.qm } : void 0), [x]),
         {
-            containerRef: Y,
+            containerRef: K,
             error: Q,
-            waitingForResult: X,
+            waitingForResult: Y,
+            awaitingFinishStatus: J,
             incodeElementMounted: Z,
-            retryCapture: $,
-        } = O({
-            apiUrl: t,
-            sessionToken: P?.sessionToken ?? n,
-            consentId: P?.consentId ?? a,
-            interviewId: P?.interviewId ?? F,
-            flow: N ?? void 0,
-            onDeviceIdCapture: w,
-            enabled: null != N && null != P,
-        }),
-        z = Q || S,
-        J = i.useCallback(() => {
-            S && null != N ? W(N) : $();
-        }, [S, N, W, $]),
-        H = i.useCallback(() => {
-            (0, c.hasModalOpen)(y.SW) && G();
-        }, [G]);
-    (0, g.dZ)(H);
-    let ee = z
-        ? (0, r.jsx)(u.$, { variant: "secondary", icon: d.f, text: U.intl.string(U.t["/nicWo"]), onClick: J })
-        : null != R
-          ? (0, r.jsx)(I.Q, { variant: "secondary", text: U.intl.string(U.t["4gTnU0"]), onClick: R })
-          : null;
-    return null == N
-        ? (0, r.jsx)(l.k, {
-              transitionState: k,
-              onClose: v,
+            retryCapture: X,
+            applyFallbackSession: $,
+            isAwaitingFallbackSession: z,
+        } = M({
+            apiUrl: w?.apiUrl ?? "",
+            sessionToken: w?.sessionToken ?? "",
+            consentId: w?.consentId ?? "",
+            interviewId: w?.interviewId ?? "",
+            flow: k ?? void 0,
+            onDeviceIdCapture: y,
+            enabled: null != k && null != w,
+            webviewHost: V,
+        });
+    i.useEffect(() => {
+        if (!x || !z) return;
+        let e = window;
+        return (
+            (e[U.fl] = $),
+            () => {
+                e[U.fl] === $ && delete e[U.fl];
+            }
+        );
+    }, [x, z, $]);
+    let H = Q || D,
+        ee = i.useCallback(() => {
+            D && null != k ? S(k) : X();
+        }, [D, k, S, X]),
+        et = i.useCallback(() => {
+            !R && (0, c.hasModalOpen)(b.SW) && (0, g.Q9)() && P();
+        }, [P, R]);
+    (0, g.dZ)(et);
+    let en = i.useCallback(() => {
+            a?.(), t();
+        }, [a, t]),
+        er = H
+            ? (0, r.jsx)(u.$, { variant: "secondary", icon: d.f, text: B.intl.string(B.t["/nicWo"]), onClick: ee })
+            : null != a
+              ? (0, r.jsx)(f.Q, { variant: "secondary", text: B.intl.string(B.t["4gTnU0"]), onClick: en })
+              : null;
+    return null == k
+        ? (0, r.jsx)(s.k, {
+              transitionState: F,
+              onClose: t,
               gradientColor: "blue",
-              graphic: { type: "image", src: q.A },
-              title: U.intl.string(M.default.eZvwAe),
-              subtitle: U.intl.string(M.default["5yWXmT"]),
-              actionBarInput: (0, r.jsx)(I.Q, { variant: "secondary", text: U.intl.string(U.t.fjKFae), onClick: v }),
-              children: (0, r.jsxs)(_.B, {
+              graphic: { type: "image", src: G.A },
+              title: B.intl.string(q.default.eZvwAe),
+              subtitle: B.intl.string(q.default["5yWXmT"]),
+              actionBarInput: (0, r.jsx)(f.Q, { variant: "secondary", text: B.intl.string(B.t.fjKFae), onClick: t }),
+              children: (0, r.jsxs)(p.B, {
                   direction: "vertical",
                   gap: 8,
                   children: [
-                      (0, r.jsx)(E.PQ, {
+                      (0, r.jsx)(A.PQ, {
                           variant: "clickable",
-                          title: U.intl.string(M.default.rgXXcW),
-                          description: U.intl.string(M.default.fm7qBC),
-                          onButtonPress: () => void W(y.VF.FACIAL_AGE_ESTIMATION),
+                          title: B.intl.string(q.default.rgXXcW),
+                          description: B.intl.string(q.default.fm7qBC),
+                          onButtonPress: () => void S(b.VF.FACIAL_AGE_ESTIMATION),
                       }),
-                      (0, r.jsx)(E.PQ, {
+                      (0, r.jsx)(A.PQ, {
                           variant: "clickable",
-                          title: U.intl.string(M.default["NeVlw/"]),
-                          description: U.intl.string(M.default.ARmJ0M),
-                          onButtonPress: () => void W(y.VF.ID_VERIFICATION),
+                          title: B.intl.string(q.default["NeVlw/"]),
+                          description: B.intl.string(q.default.ARmJ0M),
+                          onButtonPress: () => void S(b.VF.ID_VERIFICATION),
                       }),
                   ],
               }),
           })
         : (0, r.jsx)(j.A, {
               parentComponent: "IncodeAgeVerificationModal",
-              transitionState: k,
-              onBackToStart: v,
-              footerRightSlot: ee,
-              hideFooter: m,
-              children: z
+              transitionState: F,
+              onBackToStart: t,
+              footerRightSlot: er,
+              hideFooter: R,
+              children: H
                   ? (0, r.jsx)(
                         "div",
                         {
-                            className: s()(B.qV, B.eg),
-                            children: (0, r.jsx)(f.E, {
+                            className: l()(W.qV, W.eg),
+                            children: (0, r.jsx)(_.E, {
                                 variant: "text-sm/medium",
                                 color: "text-muted",
-                                className: B.h5,
-                                children: U.intl.string(U.t.c6kn6F),
+                                className: W.h5,
+                                children: B.intl.string(B.t.c6kn6F),
                             }),
                         },
                         "status",
                     )
-                  : X
+                  : Y
                     ? (0, r.jsxs)(
                           "div",
                           {
-                              className: s()(B.qV, B.eg),
+                              className: l()(W.qV, W.eg),
                               children: [
-                                  (0, r.jsx)(p.y, { type: p.y.Type.SPINNING_CIRCLE }),
-                                  (0, r.jsx)(f.E, {
+                                  (0, r.jsx)(I.y, { type: I.y.Type.SPINNING_CIRCLE }),
+                                  (0, r.jsx)(_.E, {
                                       variant: "text-sm/medium",
                                       color: "text-muted",
-                                      className: B.h5,
-                                      children: U.intl.string(U.t.wJVyYR),
+                                      className: W.h5,
+                                      children: B.intl.string(B.t.wJVyYR),
                                   }),
                               ],
                           },
@@ -422,19 +494,19 @@ let W = function (e) {
                     : (0, r.jsxs)(
                           "div",
                           {
-                              className: B.yq,
+                              className: l()(W.yq, { [W.GS]: R }),
                               children: [
                                   (0, r.jsx)("div", {
-                                      ref: Y,
-                                      "data-incode-theme": K ? "dark" : "light",
-                                      className: B.qV,
+                                      ref: K,
+                                      "data-incode-theme": O ? "dark" : "light",
+                                      className: l()(W.qV, { [W.GS]: R }),
                                   }),
-                                  Z
-                                      ? null
-                                      : (0, r.jsx)("div", {
-                                            className: B.BT,
-                                            children: (0, r.jsx)(p.y, { type: p.y.Type.SPINNING_CIRCLE }),
-                                        }),
+                                  !Z || J
+                                      ? (0, r.jsx)("div", {
+                                            className: W.BT,
+                                            children: (0, r.jsx)(I.y, { type: I.y.Type.SPINNING_CIRCLE }),
+                                        })
+                                      : null,
                               ],
                           },
                           "capture",

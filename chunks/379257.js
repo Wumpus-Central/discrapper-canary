@@ -1,107 +1,141 @@
 "use strict";
-n.d(t, { A: () => h });
+n.d(t, { A: () => T });
 var i = n(627968);
 n(64700);
 var r = n(892491),
     a = n(192308),
-    s = n(80556),
-    l = n(207560),
-    o = n(945810);
-let d = (0, o.mj)({
+    s = n(228366),
+    l = n(80556),
+    o = n(207560),
+    d = n(287809),
+    c = n(945810);
+let u = (0, c.mj)({
     kind: "user",
     name: "2025-11-age-verification-expressive-everywhere",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function c(e) {
-    return d.getConfig({ location: e }).enabled;
+function _(e) {
+    return u.getConfig({ location: e }).enabled;
 }
-let u = (0, o.mj)({
+let E = (0, c.mj)({
     kind: "user",
     name: "2026-06-age-verification-incode",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var _ = n(36149),
-    E = n(40449);
 function A(e) {
-    if (null != e) return (0, _.Sr)(e) ? r.F.LIGHTBOX : void 0;
+    return E.getConfig({ location: e }).enabled;
 }
-let h = {
+var h = n(36149),
+    I = n(40449);
+function f(e) {
+    if (null != e) return (0, h.Sr)(e) ? r.F.LIGHTBOX : void 0;
+}
+function p(e) {
+    var t;
+    let { entryPoint: r, onClose: s, onComplete: o, onCancel: d, incodeParameters: c } = e,
+        u = (t = c?.method) === I.VF.FACIAL_AGE_ESTIMATION || t === I.VF.ID_VERIFICATION ? c.method : null,
+        _ =
+            null != c && null != u
+                ? {
+                      apiUrl: c.api_url,
+                      sessionToken: c.session_token,
+                      consentId: c.consent_id,
+                      interviewId: c.interview_id,
+                  }
+                : null;
+    (0, a.openModalLazy)(
+        async () => {
+            let { default: e } = await Promise.all([
+                n.e("44031"),
+                n.e("95205"),
+                n.e("25097"),
+                n.e("61727"),
+                n.e("85185"),
+                n.e("70843"),
+                n.e("33136"),
+                n.e("73283"),
+                n.e("607"),
+                n.e("84794"),
+                n.e("69464"),
+                n.e("8169"),
+            ]).then(n.bind(n, 832417));
+            return (t) =>
+                null != _ && null != u
+                    ? (0, i.jsx)(e, {
+                          initialSession: _,
+                          initialMethod: u,
+                          entryPoint: r,
+                          onComplete: o,
+                          onCancel: d,
+                          ...t,
+                      })
+                    : (0, i.jsx)(e, { pickerMode: !0, entryPoint: r, onComplete: o, onCancel: d, ...t });
+        },
+        { modalKey: I.SW, onCloseCallback: s, backdropStyle: f(r), Layer: l.Ay },
+    );
+}
+let T = {
     showAgeVerification: function (e) {
         let {
                 onClose: t,
                 entryPoint: r,
-                shouldShowExpressiveModal: l = !1,
+                shouldShowExpressiveModal: s = !1,
                 webviewUrl: o,
                 verificationVendorName: d,
-                incodeParameters: _,
-                ...h
+                incodeParameters: c,
+                ...u
             } = e,
-            I = { modalKey: E.SW, onCloseCallback: t, backdropStyle: A(r), Layer: s.Ay };
-        if (d === E.XM.INCODE && u.getConfig({ location: r }).enabled) {
-            if (
-                !(
-                    null != _ &&
-                    ["api_url", "session_token", "interview_id", "consent_id"].every(
-                        (e) => "string" == typeof _[e] && _[e].length > 0,
-                    )
-                )
-            )
-                return !1;
-            let { api_url: e, session_token: t, interview_id: s, consent_id: l, method: o } = _;
+            E = { modalKey: I.SW, onCloseCallback: t, backdropStyle: f(r), Layer: l.Ay };
+        if (d === I.XM.INCODE && A(r))
             return (
-                (0, a.openModalLazy)(async () => {
-                    let { default: a } = await Promise.all([
-                        n.e("44031"),
-                        n.e("95205"),
-                        n.e("25097"),
-                        n.e("61727"),
-                        n.e("85185"),
-                        n.e("70843"),
-                        n.e("33136"),
-                        n.e("73283"),
-                        n.e("607"),
-                        n.e("84794"),
-                        n.e("69464"),
-                        n.e("8169"),
-                    ]).then(n.bind(n, 832417));
-                    return (n) =>
-                        (0, i.jsx)(a, {
-                            apiUrl: e,
-                            sessionToken: t,
-                            consentId: l,
-                            interviewId: s,
-                            initialMethod: o,
-                            entryPoint: r,
-                            ...h,
-                            ...n,
-                        });
-                }, I),
-                !0
+                !!(
+                    null != c &&
+                    ["api_url", "session_token", "interview_id", "consent_id"].every(
+                        (e) => "string" == typeof c[e] && c[e].length > 0,
+                    )
+                ) &&
+                (p({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }),
+                !0)
             );
-        }
         return (
             null != o &&
-            (l || c(r)
+            (s || _(r)
                 ? (0, a.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e("33136"), n.e("18024"), n.e("24947")]).then(
                           n.bind(n, 662558),
                       );
-                      return (t) => (0, i.jsx)(e, { webviewUrl: o, ...h, ...t });
-                  }, I)
+                      return (t) => (0, i.jsx)(e, { webviewUrl: o, ...u, ...t });
+                  }, E)
                 : (0, a.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([n.e("33136"), n.e("69464"), n.e("23425")]).then(
                           n.bind(n, 745336),
                       );
-                      return (t) => (0, i.jsx)(e, { webviewUrl: o, ...h, ...t });
-                  }, I),
+                      return (t) => (0, i.jsx)(e, { webviewUrl: o, ...u, ...t });
+                  }, E),
             !0)
         );
     },
     showAgeVerificationGetStartedModal: function (e) {
         let { onClose: t, entryPoint: r } = e;
-        (0, _.Q9)() && (0, l.u0)()
+        if (A(r)) {
+            let e = d.default.getCurrentUser()?.ageVerificationStatus,
+                n = () => {
+                    s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
+                };
+            s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
+                p({
+                    entryPoint: r,
+                    onClose: () => {
+                        n(), t?.();
+                    },
+                    onComplete: () => {},
+                    onCancel: n,
+                });
+            return;
+        }
+        (0, h.Q9)() && (0, o.u0)()
             ? (0, a.openModalLazy)(
                   async () => {
                       let { default: e } = await Promise.all([
@@ -114,9 +148,9 @@ let h = {
                       ]).then(n.bind(n, 297102));
                       return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                   },
-                  { modalKey: E.NC, backdropStyle: A(r), Layer: s.Ay, onCloseCallback: t },
+                  { modalKey: I.NC, backdropStyle: f(r), Layer: l.Ay, onCloseCallback: t },
               )
-            : c(r)
+            : _(r)
               ? (0, a.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
@@ -127,7 +161,7 @@ let h = {
                         ]).then(n.bind(n, 595746));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
-                    { modalKey: E.NC, backdropStyle: A(r), Layer: s.Ay, onCloseCallback: t },
+                    { modalKey: I.NC, backdropStyle: f(r), Layer: l.Ay, onCloseCallback: t },
                 )
               : (0, a.openModalLazy)(
                     async () => {
@@ -142,7 +176,7 @@ let h = {
                         ]).then(n.bind(n, 654041));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
-                    { modalKey: E.NC, backdropStyle: A(r), Layer: s.Ay, onCloseCallback: t },
+                    { modalKey: I.NC, backdropStyle: f(r), Layer: l.Ay, onCloseCallback: t },
                 );
     },
     openUrl: function (e) {

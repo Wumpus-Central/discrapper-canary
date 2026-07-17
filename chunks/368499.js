@@ -2,14 +2,15 @@ d.d(t, {
     C: () => c,
     S: () => e,
     _: () => m,
-    a: () => z,
-    g: () => u,
-    h: () => h,
-    n: () => L,
-    o: () => V,
-    p: () => W,
-    r: () => I,
-    s: () => T,
+    a: () => w,
+    b: () => u,
+    g: () => h,
+    h: () => W,
+    n: () => I,
+    o: () => L,
+    p: () => G,
+    r: () => z,
+    s: () => V,
     v: () => o,
     x: () => a,
     y: () => b,
@@ -61,6 +62,9 @@ function o() {
     n?.dispose(), (n = null), (Z.length = 0);
 }
 function u(l) {
+    return s.subscribe(l);
+}
+function h(l) {
     s.emit(l);
     let t = {
         code: l.code,
@@ -79,7 +83,7 @@ function u(l) {
     };
     n ? n.enqueue(t) : Z.push(t);
 }
-function h(l) {
+function W(l) {
     let {
             endpoint: t,
             authToken: d,
@@ -164,28 +168,28 @@ function h(l) {
         },
     };
 }
-function W(l) {
-    u({ code: l.code, module: l.module, screen: l.screen, clientTimestamp: e(), payload: l.payload });
-}
-function G(l, t, d) {
-    W({ module: l, screen: t, code: "moduleOpened", payload: d });
+function G(l) {
+    h({ code: l.code, module: l.module, screen: l.screen, clientTimestamp: e(), payload: l.payload });
 }
 function p(l, t, d) {
-    W({ module: l, screen: t, code: "moduleClosed", payload: d });
+    G({ module: l, screen: t, code: "moduleOpened", payload: d });
 }
 function N(l, t, d) {
-    W({ module: l, screen: t, code: "background", payload: d });
+    G({ module: l, screen: t, code: "moduleClosed", payload: d });
 }
 function M(l, t, d) {
-    W({ module: l, screen: t, code: "foreground", payload: d });
+    G({ module: l, screen: t, code: "background", payload: d });
 }
 function X(l, t, d) {
-    W({ module: l, screen: t, code: "screenOpened", payload: d });
+    G({ module: l, screen: t, code: "foreground", payload: d });
 }
 function r(l, t, d) {
-    W({ module: l, screen: t, code: "screenClosed", payload: d });
+    G({ module: l, screen: t, code: "screenOpened", payload: d });
 }
-function y(l) {
+function y(l, t, d) {
+    G({ module: l, screen: t, code: "screenClosed", payload: d });
+}
+function Y(l) {
     if ("string" == typeof l || "number" == typeof l) {
         let t = String(l).trim();
         return t.length > 0 ? t : void 0;
@@ -196,37 +200,37 @@ function y(l) {
     let d = t
         .map(([l, t]) => {
             let d = l.trim(),
-                i = y(t);
+                i = Y(t);
             return 0 === d.length ? i : void 0 === i ? d : `${d}.${i}`;
         })
         .filter((l) => void 0 !== l && l.length > 0);
     if (0 !== d.length) return d.join("+");
 }
-function Y(l, t) {
+function T(l, t) {
     let d = "string" == typeof l ? l.trim() : "",
         i = t.trim();
     return 0 === d.length ? i : 0 === i.length ? d : `${d}.${i}`;
 }
-function T(l, t) {
+function V(l, t) {
     let d = t?.visibilityObserver;
     return {
         moduleName: l,
-        onModuleOpened: G,
-        onModuleClosed: p,
-        onScreenOpened: X,
-        onScreenClosed: r,
+        onModuleOpened: p,
+        onModuleClosed: N,
+        onScreenOpened: r,
+        onScreenClosed: y,
         onErrorTriggered: (l, t, d, i) => {
-            W({ module: l, screen: d, code: "errorTriggered", payload: { errorName: t, ...i } });
+            G({ module: l, screen: d, code: "errorTriggered", payload: { errorName: t, ...i } });
         },
         subscribeVisibility: d ? (l) => d.onVisibilityChange(l) : void 0,
         getInitialVisibility: d ? () => d.isVisible() : void 0,
-        onBackground: d ? N : void 0,
-        onForeground: d ? M : void 0,
+        onBackground: d ? M : void 0,
+        onForeground: d ? X : void 0,
         onElementClicked: (l, t, d) => {
-            W({ module: l, screen: t, code: "elementClicked", payload: d });
+            G({ module: l, screen: t, code: "elementClicked", payload: d });
         },
         onCaptureAttemptFinished: (l, t, d) => {
-            W({ module: l, screen: t, code: "captureAttemptFinished", payload: d });
+            G({ module: l, screen: t, code: "captureAttemptFinished", payload: d });
         },
         getScreenName: (d) =>
             (function (l, t, d) {
@@ -235,15 +239,15 @@ function T(l, t) {
                     let l = i.trim();
                     return l.length > 0 ? l : void 0;
                 }
-                let e = d?.getScreenName?.(t) ?? y(t.value);
-                if (void 0 !== e) return Y(l, e);
+                let e = d?.getScreenName?.(t) ?? Y(t.value);
+                if (void 0 !== e) return T(l, e);
             })(l, d, { getEventScreenName: t?.getEventScreenName, getScreenName: t?.getScreenName }),
         getErrorName: (d) => {
             let i =
                 t?.getErrorName?.(d) ??
                 (function (l) {
                     let t,
-                        d = y(l.value);
+                        d = Y(l.value);
                     if (void 0 === d) return;
                     let i = d.trim();
                     if (0 !== i.length) {
@@ -257,12 +261,12 @@ function T(l, t) {
                             return `error.${i}`;
                     }
                 })(d);
-            if (void 0 !== i) return Y(l, i);
+            if (void 0 !== i) return T(l, i);
         },
         getErrorPayload: (l) => t?.getErrorPayload?.(l),
     };
 }
-function V(l) {
+function L(l) {
     if ("string" == typeof l) return l;
     if ("object" == typeof l && null !== l) {
         let t = Object.keys(l);
@@ -272,7 +276,7 @@ function V(l) {
         }
     }
 }
-let L = {
+let I = {
         selfie: "SELFIE",
         faceCapture: "faceCapture",
         authentication: "AUTHENTICATION",
@@ -324,7 +328,7 @@ let L = {
         workflow: "workflow",
         fiscalQr: "FISCAL_QR",
     },
-    I = {
+    z = {
         faceMatch: "FACE_MATCH",
         faceCaptureTutorial: "SELFIE_CAPTURE_TUTORIAL",
         faceCaptureCamera: "SELFIE_CAMERA_CAPTURE",
@@ -421,7 +425,7 @@ let L = {
         digitalIdVerificationFailed: "DIGITAL_ID_VERIFICATION_FAILED",
         ekybForm: "EKYB_FORM",
     },
-    z = {
+    w = {
         imageTooBlurry: "imageTooBlurry",
         fillFrame: "fillFrame",
         checkCameraOrLighting: "checkCameraOrLighting",
@@ -443,4 +447,4 @@ let L = {
         videoSelfieReconnecting: "videoSelfieReconnecting",
         videoSelfieReconnected: "videoSelfieReconnected",
     };
-I.passportTutorial, I.frontTutorial, I.backTutorial, I.faceCaptureTutorial;
+z.passportTutorial, z.frontTutorial, z.backTutorial, z.faceCaptureTutorial;
