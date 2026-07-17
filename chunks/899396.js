@@ -50,7 +50,7 @@ class f {
         for (; this.timeline.length > 0 && this.timeline[0].timestamp < e; ) this.timeline.shift();
     }
 }
-var p = n(372684),
+var p = n(150303),
     T = n(439818),
     m = n(572164);
 function g() {
@@ -99,7 +99,7 @@ class C {
                     }
                 }
                 for (let n of [...e].sort((e, t) => e.timestamp_ms - t.timestamp_ms)) {
-                    switch ((s(n.timestamp_ms), O(n.name))) {
+                    switch ((s(n.timestamp_ms), R(n.name))) {
                         case "round":
                             a(
                                 { in_proper_game: !0, in_game_guess: !0, bomb_planted: !1, spectating: !1 },
@@ -152,12 +152,12 @@ class C {
         return null != e.name ? N.hz[e.name]?.scoreBoost : void 0;
     }
     canAnchorReaction(e) {
-        let t = O(e.name);
+        let t = R(e.name);
         return "kill" === t || "death" === t || "bomb_end" === t;
     }
 }
-let R = { applicationIds: ["1158877933042143272", "356875057940791296"], create: (e) => new C(e) };
-function O(e) {
+let O = { applicationIds: ["1158877933042143272", "356875057940791296"], create: (e) => new C(e) };
+function R(e) {
     return null == e
         ? "other"
         : (0, N.MK)(e)
@@ -353,7 +353,7 @@ function V(e, t, n) {
         };
     });
 }
-let B = [R, b];
+let B = [O, b];
 function H(e) {
     r()(null != e.decision, "clip missing .decision");
     let t = e.decision.timestamp - e.length;
@@ -384,12 +384,12 @@ function j(e, t, n, i) {
             reactionWeight: 0.4,
             coOccurrenceWeight: 0.6,
             normalizeComponents: !0,
-            sMainMedian: 0.891,
-            sMainIqr: 0.739,
-            sReactionMedian: 0.825,
-            sReactionIqr: 0.426,
-            sCoMedianPerPair: 1.2,
-            sCoIqrPerPair: 1.2,
+            sMainMedian: 0.386,
+            sMainIqr: 0.695,
+            sReactionMedian: 0.535,
+            sReactionIqr: 0.475,
+            sCoMedianPerPair: 1,
+            sCoIqrPerPair: 1.5,
             soloReactionWeight: 0,
             soloCoOccurrenceWeight: 0,
             gameSquashScale: 1.5,
@@ -512,14 +512,14 @@ function j(e, t, n, i) {
             };
         }
         let { startMs: s, endMs: l } = H(i),
-            { userIds: E, pLaughter: A, pShouting: I, rms: f, gridStartMs: C, chunkCount: R } = N(s, l),
-            O = E.indexOf(n),
+            { userIds: E, pLaughter: A, pShouting: I, rms: f, gridStartMs: C, chunkCount: O } = N(s, l),
+            R = E.indexOf(n),
             L = S(h, s, l),
             y = L.filter(g);
         null != C &&
-            R > 0 &&
+            O > 0 &&
             y.length > 0 &&
-            (e = y.map((e) => Math.max(0, Math.min(R - 1, Math.round((e.timestamp_ms - C) / 1e3)))));
+            (e = y.map((e) => Math.max(0, Math.min(O - 1, Math.round((e.timestamp_ms - C) / 1e3)))));
         let D = (function (e, t) {
                 let n,
                     { pLaughter: i, pShouting: r, rms: a, main: s, gameEventChunks: l } = e,
@@ -628,7 +628,7 @@ function j(e, t, n, i) {
                         return Math.max(0, ...l);
                     })(m, h, I, s, t),
                     { laughter: S, shouting: N } = G(d, c, a, t),
-                    { coOccurrenceScore: C, coContribPerChunk: R } = (function (e, t, n) {
+                    { coOccurrenceScore: C, coContribPerChunk: O } = (function (e, t, n) {
                         let i = e.length,
                             r = i > 0 ? e[0].length : 0,
                             a = Array(r).fill(0),
@@ -642,10 +642,10 @@ function j(e, t, n, i) {
                         }
                         return { coOccurrenceScore: s, coContribPerChunk: a };
                     })(S, N, t),
-                    O = f,
+                    R = f,
                     L = g;
                 if (t.normalizeComponents) {
-                    (O = (f - t.sMainMedian) / t.sMainIqr), (L = (g - t.sReactionMedian) / t.sReactionIqr);
+                    (R = (f - t.sMainMedian) / t.sMainIqr), (L = (g - t.sReactionMedian) / t.sReactionIqr);
                     let e = Math.max(1, o - 1);
                     n = (C - t.sCoMedianPerPair * e) / (t.sCoIqrPerPair * e);
                 } else n = Math.log1p(C);
@@ -653,9 +653,9 @@ function j(e, t, n, i) {
                     D = y ? t.soloReactionWeight : t.reactionWeight,
                     v = y ? t.soloCoOccurrenceWeight : t.coOccurrenceWeight;
                 return {
-                    audioScore: t.mainWeight * O + D * L + v * n,
+                    audioScore: t.mainWeight * R + D * L + v * n,
                     components: t.normalizeComponents
-                        ? { mainEventScore: O, reactionScore: L, coOccurrenceScore: n }
+                        ? { mainEventScore: R, reactionScore: L, coOccurrenceScore: n }
                         : { mainEventScore: f, reactionScore: g, coOccurrenceScore: C },
                     debug: {
                         pGatedLaughter: _,
@@ -665,10 +665,10 @@ function j(e, t, n, i) {
                         rmsWeighted: A,
                         mainEvents: T,
                         reactionAnchors: m,
-                        coContribPerChunk: R,
+                        coContribPerChunk: O,
                     },
                 };
-            })({ pLaughter: A, pShouting: I, rms: f, main: O, gameEventChunks: e, participantCount: _ }, c),
+            })({ pLaughter: A, pShouting: I, rms: f, main: R, gameEventChunks: e, participantCount: _ }, c),
             v = (function (e, t, n) {
                 let i = 0;
                 for (let r of e) {
@@ -740,7 +740,7 @@ function j(e, t, n, i) {
             K.debug = {
                 ...D.debug,
                 userIds: E,
-                tsSec: Array.from({ length: R }, (t, n) => e + n),
+                tsSec: Array.from({ length: O }, (t, n) => e + n),
                 pLaughter: A,
                 pShouting: I,
                 rms: f,
@@ -1030,7 +1030,7 @@ class q extends l.A {
         if (null != A.Ay.getVoiceChannelId()) return !0;
         let n = h.default.getCurrentUser(),
             i = n?.isStaff() === !0 || n?.isStaffPersonal() === !0,
-            r = null != t.gameId && R.applicationIds.includes(t.gameId);
+            r = null != t.gameId && O.applicationIds.includes(t.gameId);
         return e.type === p.Gy.GAME_EVENT && i && r;
     }
     scheduleClip(e, t) {
