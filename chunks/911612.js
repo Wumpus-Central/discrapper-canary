@@ -18,7 +18,7 @@ function u(e) {
                 label: o.intl.string(o.t["ISN+NM"]),
                 action: () =>
                     (0, r.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([t.e("40175"), t.e("28020")]).then(t.bind(t, 395199));
+                        let { default: e } = await t.e("28020").then(t.bind(t, 395199));
                         return (a) => (0, n.jsx)(e, { ...a });
                     }),
             })
@@ -38,7 +38,7 @@ function u(e) {
                                       t.e("11585"),
                                       t.e("3589"),
                                       t.e("92513"),
-                                      t.e("89916"),
+                                      t.e("67535"),
                                       t.e("60773"),
                                       t.e("8018"),
                                       t.e("20379"),
@@ -68,7 +68,7 @@ function u(e) {
                                       t.e("11585"),
                                       t.e("3589"),
                                       t.e("92513"),
-                                      t.e("89916"),
+                                      t.e("67535"),
                                       t.e("60773"),
                                       t.e("8018"),
                                       t.e("20379"),

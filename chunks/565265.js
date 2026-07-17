@@ -1,17 +1,17 @@
-n.d(t, { A: () => N });
-var l = n(627968),
-    i = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    r = n(621466),
-    c = n(192308),
-    o = n(939249),
-    d = n(442433),
-    u = n(46054),
-    h = n(742589),
-    m = n(375708),
-    x = n(221308),
-    A = n(992595);
+l.d(n, { A: () => E });
+var t = l(627968),
+    i = l(64700),
+    s = l(503698),
+    r = l.n(s),
+    a = l(621466),
+    c = l(192308),
+    o = l(939249),
+    d = l(442433),
+    u = l(46054),
+    h = l(742589),
+    x = l(375708),
+    m = l(221308),
+    A = l(992595);
 function g(e) {
     return (
         e.matches("a") ||
@@ -23,67 +23,66 @@ function g(e) {
 }
 class j extends i.Component {
     handleOpenTopic = (e) => {
-        let t = e.target;
-        if ((0, r.vq)(t)) {
-            if (g(t)) return;
-            let n = t.parentNode;
-            if (((0, r.vq)(n) && g(n)) || !e.currentTarget.contains(t)) return;
+        let n = e.target;
+        if ((0, a.vq)(n)) {
+            if (g(n)) return;
+            let l = n.parentNode;
+            if (((0, a.vq)(l) && g(l)) || !e.currentTarget.contains(n)) return;
         }
         (0, c.openModalLazy)(async () => {
-            let { default: e } = await Promise.all([n.e("45988"), n.e("8939")]).then(n.bind(n, 181094));
-            return (t) => (0, l.jsx)(e, { ...t, ...this.props });
+            let { default: e } = await Promise.all([l.e("45988"), l.e("8939")]).then(l.bind(l, 181094));
+            return (n) => (0, t.jsx)(e, { ...n, ...this.props });
         });
     };
     handleContextMenu = (e) => {
-        let { channel: t, guild: i } = this.props;
+        let { channel: n, guild: i } = this.props;
         (0, d.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                n.e("26132"),
-                n.e("91763"),
-                n.e("35321"),
-                n.e("50033"),
-                n.e("34971"),
-                n.e("43266"),
-                n.e("9004"),
-                n.e("30997"),
-                n.e("12255"),
-                n.e("40959"),
-                n.e("79995"),
-                n.e("44058"),
-                n.e("91377"),
-                n.e("21106"),
-                n.e("40175"),
-                n.e("43746"),
-                n.e("35723"),
-                n.e("90554"),
-                n.e("66540"),
-                n.e("29542"),
-                n.e("59545"),
-            ]).then(n.bind(n, 22496));
-            return (n) => (0, l.jsx)(e, { ...n, channel: t, guild: i, includeTopic: !0 });
+                l.e("26132"),
+                l.e("91763"),
+                l.e("35321"),
+                l.e("50033"),
+                l.e("34971"),
+                l.e("43266"),
+                l.e("9004"),
+                l.e("30997"),
+                l.e("12255"),
+                l.e("40959"),
+                l.e("79995"),
+                l.e("21106"),
+                l.e("44058"),
+                l.e("91377"),
+                l.e("43746"),
+                l.e("90554"),
+                l.e("35723"),
+                l.e("66540"),
+                l.e("29542"),
+                l.e("59545"),
+            ]).then(l.bind(l, 22496));
+            return (l) => (0, t.jsx)(e, { ...l, channel: n, guild: i, includeTopic: !0 });
         });
     };
     render() {
         let { channel: e } = this.props;
         if (e.isMultiUserDM()) return null;
-        let t = null != e.topic && e.topic.length > 0;
-        return null != e.linkedLobby || t
-            ? (0, l.jsxs)(i.Fragment, {
+        let n = null != e.topic && e.topic.length > 0;
+        return null != e.linkedLobby || n
+            ? (0, t.jsxs)(i.Fragment, {
                   children: [
-                      (0, l.jsx)(h.A.Divider, {}),
-                      (0, l.jsxs)("div", {
-                          className: a()(x.At, x.lu, A.PT),
+                      (0, t.jsx)(h.A.Divider, {}),
+                      (0, t.jsxs)("div", {
+                          className: r()(m.At, m.lu, A.PT),
                           onContextMenu: this.handleContextMenu,
                           onClick: this.handleOpenTopic,
                           children: [
-                              (0, l.jsx)(o.D, {
+                              (0, t.jsx)(o.D, {
                                   onClick: this.handleOpenTopic,
-                                  "aria-label": m.intl.string(m.t.mKwsSp),
-                                  className: x.h8,
+                                  "aria-label": x.intl.string(x.t.mKwsSp),
+                                  className: m.h8,
                               }),
-                              null == e.linkedLobby || t
+                              null == e.linkedLobby || n
                                   ? u.A.parseTopic(e.topic, !0, { channelId: e.id })
-                                  : m.intl.string(m.t["XJVlf/"]),
+                                  : x.intl.string(x.t["XJVlf/"]),
                           ],
                       }),
                   ],
@@ -91,4 +90,4 @@ class j extends i.Component {
             : null;
     }
 }
-let N = j;
+let E = j;

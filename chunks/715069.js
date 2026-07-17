@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(821609),
     N = n(366605),
     C = n(952270),
-    R = n(428678),
-    O = n(661531),
+    O = n(428678),
+    R = n(661531),
     L = n(549254),
     y = n(445529),
     D = n(778712),
@@ -79,8 +79,8 @@ var ef = n(824994),
     eS = n(954376),
     eN = n(534400),
     eC = n(854627),
-    eR = n(616356),
-    eO = n(290863),
+    eO = n(616356),
+    eR = n(290863),
     eL = n(568548),
     ey = n(741961),
     eD = n(543465),
@@ -130,7 +130,7 @@ function ek() {
     return (0, i.jsx)(C.G, { size: "xs", color: "currentColor", className: eM.wB });
 }
 function eF() {
-    return (0, i.jsx)(R.K, { size: "xs", color: "currentColor", className: eM.wB });
+    return (0, i.jsx)(O.K, { size: "xs", color: "currentColor", className: eM.wB });
 }
 function eV(e) {
     let {
@@ -146,21 +146,21 @@ function eV(e) {
                 null != s && null != l && null != o
                     ? {
                           Color_GradientCenter: s,
-                          Color_InnerRing: l ?? O.A.colors.NITRO_TAB_GRADIENT_INNER_RING ?? l,
+                          Color_InnerRing: l ?? R.A.colors.NITRO_TAB_GRADIENT_INNER_RING ?? l,
                           Color_OuterRing: o,
                           NitroVFX: !1,
                       }
                     : n
                       ? {
-                            Color_GradientCenter: O.A.colors.NITRO_TAB_GRADIENT_CENTER,
-                            Color_InnerRing: O.A.colors.NITRO_TAB_GRADIENT_INNER_RING,
-                            Color_OuterRing: O.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,
+                            Color_GradientCenter: R.A.colors.NITRO_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: R.A.colors.NITRO_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: R.A.colors.NITRO_TAB_GRADIENT_OUTER_RING,
                             NitroVFX: !0,
                         }
                       : {
-                            Color_GradientCenter: O.A.colors.STANDARD_TAB_GRADIENT_CENTER,
-                            Color_InnerRing: O.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,
-                            Color_OuterRing: O.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,
+                            Color_GradientCenter: R.A.colors.STANDARD_TAB_GRADIENT_CENTER,
+                            Color_InnerRing: R.A.colors.STANDARD_TAB_GRADIENT_INNER_RING,
+                            Color_OuterRing: R.A.colors.STANDARD_TAB_GRADIENT_OUTER_RING,
                             NitroVFX: !1,
                         },
             [n, s, l, o],
@@ -187,8 +187,8 @@ function eB(e) {
             nitroHoverGradient: S = !1,
             hoverGradientStart: N,
             hoverGradientMiddle: C,
-            hoverGradientEnd: R,
-            ...O
+            hoverGradientEnd: O,
+            ...R
         } = e,
         { width: L, ref: D } = (0, w.Ay)(),
         v = r.useRef(null),
@@ -214,13 +214,13 @@ function eB(e) {
                         contentWidth: L,
                         hoverGradientStart: N,
                         hoverGradientMiddle: C,
-                        hoverGradientEnd: R,
+                        hoverGradientEnd: O,
                     }),
                 (0, i.jsxs)(d.N_, {
                     to: { pathname: t, state: _ },
                     className: eM.nf,
                     innerRef: b,
-                    ...O,
+                    ...R,
                     children: [
                         (0, i.jsx)(B.A, {
                             ref: g ? D : void 0,
@@ -252,28 +252,28 @@ function eH(e) {
             status: S,
             isMobile: N,
             isVR: C,
-            nameplate: R,
-            ref: O,
+            nameplate: O,
+            ref: R,
             "aria-posinset": L,
             "aria-setsize": w,
         } = e,
         [k, J] = r.useState(!1),
         [ec, eu] = r.useState(!1),
         [eA, eh] = r.useState(!1),
-        eR = r.useRef(null),
-        [eO, ey] = r.useState(!1),
+        eO = r.useRef(null),
+        [eR, ey] = r.useState(!1),
         ev = (0, _.K)(
             r.useCallback((e) => {
                 ey(e);
             }, []),
         ),
         eb = r.useRef(null),
-        eV = O ?? eb,
+        eV = R ?? eb,
         eB = (0, E.A)(eV, ev),
         { showMenuItemPopover: eH, markMenuItemPopoverAsDismissed: ej } = (0, eg.z)({
             location: "PrivateChannel",
             isChannelSelected: !0 === a,
-            isTargetInViewport: eO,
+            isTargetInViewport: eR,
             channelType: t.type,
         }),
         {
@@ -299,7 +299,7 @@ function eH(e) {
         e7 = (0, f.bG)([eL.Ay], () => eL.Ay.getMentionCount(t.id) > 0),
         e8 = (0, K.Ay)(t),
         e9 = r.useRef(null),
-        te = null != R && (a || k || eA);
+        te = null != O && (a || k || eA);
     function tt() {
         J(!0);
     }
@@ -323,7 +323,7 @@ function eH(e) {
         e.stopPropagation();
     }
     function to(e) {
-        e.target === e.currentTarget && eR.current?.click();
+        e.target === e.currentTarget && eO.current?.click();
     }
     function td(e) {
         let r =
@@ -346,7 +346,6 @@ function eH(e) {
                               n.e("14461"),
                               n.e("42339"),
                               n.e("21106"),
-                              n.e("40175"),
                               n.e("36150"),
                               n.e("99011"),
                               n.e("12520"),
@@ -417,7 +416,6 @@ function eH(e) {
                               n.e("78195"),
                               n.e("42339"),
                               n.e("21106"),
-                              n.e("40175"),
                               n.e("36150"),
                               n.e("42204"),
                               n.e("99011"),
@@ -544,7 +542,7 @@ function eH(e) {
                 return (0, i.jsxs)(eI, {
                     className: s()(eM.Ix, eM.dm),
                     role: n,
-                    focusProps: { ...eU, focusTarget: eR, ringTarget: eV },
+                    focusProps: { ...eU, focusTarget: eO, ringTarget: eV },
                     ref: eB,
                     onMouseEnter: tt,
                     onMouseLeave: tn,
@@ -564,7 +562,7 @@ function eH(e) {
                             selected: a,
                             children: [
                                 (0, i.jsx)(eE.A, {
-                                    nameplate: te ? R : void 0,
+                                    nameplate: te ? O : void 0,
                                     selected: a,
                                     hovered: k,
                                     content: tE,
@@ -573,7 +571,7 @@ function eH(e) {
                                 (0, i.jsx)("div", { className: eM.lU, ref: eq, children: t_ }),
                                 (0, i.jsx)(d.N_, {
                                     style: e$,
-                                    innerRef: eR,
+                                    innerRef: eO,
                                     to: el.BVt.CHANNEL(el.ME, t.id),
                                     className: eM.nf,
                                     "aria-label": tf,
@@ -690,7 +688,7 @@ function eH(e) {
                                                       : ed.intl.string(ed.t.jsvgc3),
                                                   onClick: eZ ? tc : ta,
                                                   onMouseDown: tl,
-                                                  nameplate: R,
+                                                  nameplate: O,
                                                   reducedClickTarget: !0,
                                                   visibleElementRef: e9,
                                               }),
@@ -709,18 +707,18 @@ let ej = function (e) {
     let { channel: t, selected: n, ...r } = e,
         a = (0, f.bG)([ev.default], () => ev.default.getUser(t.getRecipientId())),
         s = a?.id,
-        l = (0, f.cf)([eO.A, eR.A], () => {
+        l = (0, f.cf)([eR.A, eO.A], () => {
             let e;
             if (t.isMultiUserDM()) {
-                let n = eO.A.getState().statuses;
+                let n = eR.A.getState().statuses;
                 t.recipients.some((e) => n[e] === el.clD.ONLINE) && (e = el.clD.ONLINE);
-            } else null != s && (e = eO.A.getStatus(s));
+            } else null != s && (e = eR.A.getStatus(s));
             return {
                 status: e,
-                activities: null != s ? eO.A.getActivities(s) : null,
-                applicationStream: null != s ? eR.A.getAnyStreamForUser(s) : null,
-                isMobile: null != s && eO.A.isMobileOnline(s),
-                isVR: null != s && eO.A.isVROnline(s),
+                activities: null != s ? eR.A.getActivities(s) : null,
+                applicationStream: null != s ? eO.A.getAnyStreamForUser(s) : null,
+                isMobile: null != s && eR.A.isMobileOnline(s),
+                isVR: null != s && eR.A.isVROnline(s),
             };
         }, [t, s]),
         { voiceChannel: o } = (0, k.Ay)({ userId: s }),

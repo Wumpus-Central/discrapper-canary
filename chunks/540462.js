@@ -13,8 +13,8 @@ var i = n(627968),
     m = n(825860),
     A = n(43990),
     x = n(691540),
-    g = n(857250),
-    f = n(97483),
+    f = n(857250),
+    g = n(97483),
     C = n(38021),
     y = n(228366),
     j = n(367513),
@@ -67,8 +67,8 @@ var i = n(627968),
     em = n(821747),
     eA = n(125248),
     ex = n(616356),
-    eg = n(280450),
-    ef = n(249288),
+    ef = n(280450),
+    eg = n(249288),
     eC = n(696451),
     ey = n(71393),
     ej = n(576705),
@@ -369,7 +369,6 @@ class eX extends l.PureComponent {
                                         n.e("72883"),
                                         n.e("42339"),
                                         n.e("21106"),
-                                        n.e("40175"),
                                         n.e("43746"),
                                         n.e("90554"),
                                         n.e("17244"),
@@ -685,8 +684,8 @@ class eX extends l.PureComponent {
                 forceShowControls: m,
                 awaitingRemoteSessionInfo: A,
                 currentChannelActivities: x,
-                callContainerDimensions: g,
-                guildRoomVisible: f,
+                callContainerDimensions: f,
+                guildRoomVisible: g,
             } = this.props,
             C = h === eG.DUB.MINIMUM,
             y = C || h === eG.DUB.NORMAL,
@@ -694,7 +693,7 @@ class eX extends l.PureComponent {
             v = (x?.length ?? 0) > 0 && u.isPrivate();
         this._lastIdleProps = e;
         let E = !l || !(this.popoutOpen && !this.inPopout),
-            N = f
+            N = g
                 ? (0, i.jsx)(K.A, { channelId: u.id, popoutType: t })
                 : (0, i.jsx)(ei.A, {
                       ref: this._contentRef,
@@ -714,7 +713,7 @@ class eX extends l.PureComponent {
                       showParticipants: r && (!y || v),
                       popoutType: t,
                       awaitingRemoteSessionInfo: A,
-                      callContainerDimensions: g,
+                      callContainerDimensions: f,
                   });
         return (0, i.jsx)(eo.A, {
             renderHeader: this.renderHeader,
@@ -836,13 +835,13 @@ let eZ = function (e) {
             [V],
         ),
         z = (0, d.bG)([ey.A], () => ey.A.getGuild(t.getGuildId())),
-        K = (0, d.bG)([eg.default], () => eg.default.getId()),
+        K = (0, d.bG)([ef.default], () => ef.default.getId()),
         { popoutWindow: X, popoutWindowAlwaysOnTop: $ } = (0, d.cf)([Q.A], () => ({
             popoutWindow: Q.A.getWindow(eG.MLl.CHANNEL_CALL_POPOUT),
             popoutWindowAlwaysOnTop: Q.A.getIsAlwaysOnTop(eG.MLl.CHANNEL_CALL_POPOUT),
         })),
         J = (0, d.bG)([ej.A], () => ej.A.can(eG.xBc.CONNECT, t)),
-        ee = (0, d.bG)([ef.A], () => ef.A.getToastsEnabled(t.id)),
+        ee = (0, d.bG)([eg.A], () => eg.A.getToastsEnabled(t.id)),
         en = (0, d.bG)([G.default], () => G.default.getAwaitingRemoteSessionInfo()),
         ei = (0, d.bG)([et.Ay], () => et.Ay.callHeaderHeight),
         el = l.useCallback((e) => {
@@ -851,7 +850,7 @@ let eZ = function (e) {
         ea = (0, d.bG)([R.A], () => R.A.getFetchState(), []),
         es = (0, b.A)(ea);
     l.useEffect(() => {
-        ea === R.$.ERROR && es !== R.$.ERROR && (0, x.P0)((0, g.o)(eH.intl.string(eH.t["AlJyI+"]), f.Ck.FAILURE));
+        ea === R.$.ERROR && es !== R.$.ERROR && (0, x.P0)((0, f.o)(eH.intl.string(eH.t["AlJyI+"]), g.Ck.FAILURE));
     }, [ea, es]);
     let er = (0, d.bG)([O.Ay], () => O.Ay.getSelfEmbeddedActivityForChannel(t.id), [t]);
     l.useEffect(() => {

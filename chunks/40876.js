@@ -507,6 +507,16 @@ let r = {
         inlineRequire: () => n(77584).A,
         neverLoadBeforeConnectionOpen: !0,
     },
+    FavoriteManager: {
+        actions: [
+            "CHANNEL_DELETE",
+            "CATEGORY_COLLAPSE",
+            "CATEGORY_EXPAND",
+            "CATEGORY_COLLAPSE_ALL",
+            "CATEGORY_EXPAND_ALL",
+        ],
+        inlineRequire: () => n(789105).A,
+    },
     UserGuildSettingsManager: {
         actions: [
             "CATEGORY_COLLAPSE",
@@ -613,7 +623,7 @@ let r = {
             "VOICE_CHANNEL_SELECT",
             "RUNNING_GAMES_CHANGE",
         ],
-        inlineRequire: () => n(452082).A,
+        inlineRequire: () => n(899396).A,
     },
     ClipsSignalManager: {
         actions: ["RUNNING_GAMES_CHANGE", "CLIPS_SETTINGS_UPDATE", "VOICE_CHANNEL_SELECT", "VOICE_STATE_UPDATES"],
@@ -756,7 +766,7 @@ let r = {
             "GUILD_POWERUP_ENTITLEMENTS_DELETE",
             "GUILD_APPLIED_BOOSTS_UPDATE",
         ],
-        inlineRequire: () => n(681637).A,
+        inlineRequire: () => n(384046).A,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
