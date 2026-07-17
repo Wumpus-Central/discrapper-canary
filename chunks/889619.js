@@ -59,10 +59,12 @@ function O(e) {
                   type: "image",
                   src: "https://cdn.discordapp.com/assets/content/53479e419144f256349c4d0ed3e3835a2085325c222c536614fa96097e660afe.svg",
               },
-              title: _.intl.string(_.t.xNdRDO),
+              title: _.intl.string(_.t.TrOccu),
               body: _.intl.string(_.t["Eh5+1F"]),
               position: "right",
-              caretConfig: { align: "center" },
+              alignmentStrategy: "edge",
+              align: "top",
+              caretConfig: { align: "start" },
               targetElementRef: r,
               onRequestClose: () => c(b.i.USER_DISMISS),
               actions: [
@@ -77,19 +79,19 @@ function O(e) {
           })
         : null;
 }
-var C =
+var S =
         (((i = {})[(i.SHOP = 1)] = "SHOP"),
         (i[(i.QUEST = 2)] = "QUEST"),
         (i[(i.PREMIUM_PROMOTION = 3)] = "PREMIUM_PROMOTION"),
         (i[(i.REWARD = 4)] = "REWARD"),
         (i[(i.INTERNAL = 5)] = "INTERNAL"),
         i),
-    S = n(821925),
+    C = n(821925),
     T = n(722258),
     P = n(503698),
     k = n.n(P),
-    M = n(575593),
-    y = n(834730),
+    y = n(575593),
+    M = n(834730),
     U = n(642160),
     G = n(623373),
     L = n(536572),
@@ -112,9 +114,9 @@ function q(e) {
     let { skuId: t, disabled: n = !1 } = e,
         { product: i, state: s } = (0, U.I)(t, { needsCategory: !1, shouldFetchProduct: !1 }),
         r = (0, m.bG)(
-            [S.A],
+            [C.A],
             () =>
-                S.A.getProductsForSku(t)
+                C.A.getProductsForSku(t)
                     ?.flatMap((e) => e.skus)
                     .find((e) => e.id === t),
             [t],
@@ -126,13 +128,13 @@ function q(e) {
             null != a
                 ? (function (e) {
                       switch (e) {
-                          case M.R.AVATAR_DECORATION:
+                          case y.R.AVATAR_DECORATION:
                               return _.intl.string(_.t["7v0T9P"]);
-                          case M.R.PROFILE_EFFECT:
+                          case y.R.PROFILE_EFFECT:
                               return _.intl.string(_.t.wR5wOo);
-                          case M.R.NAMEPLATE:
+                          case y.R.NAMEPLATE:
                               return _.intl.string(_.t.x5CoXR);
-                          case M.R.PROFILE_FRAME:
+                          case y.R.PROFILE_FRAME:
                               return _.intl.string(_.t.GWrZOd);
                           default:
                               return;
@@ -146,8 +148,8 @@ function q(e) {
             (0, l.jsxs)("div", {
                 className: F.Qq,
                 children: [
-                    (0, l.jsx)(y.E, { variant: "text-sm/medium", color: "text-default", children: (0, L.VG)(i) }),
-                    null != o && (0, l.jsx)(y.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
+                    (0, l.jsx)(M.E, { variant: "text-sm/medium", color: "text-default", children: (0, L.VG)(i) }),
+                    null != o && (0, l.jsx)(M.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
         ],
@@ -200,14 +202,14 @@ function ec(e) {
             children: O,
         } = e,
         { trackUserProfileAction: P } = (0, ei.NJ)(),
-        { analyticsLocations: k, newestAnalyticsLocation: M } = (0, d.Ay)(u.A.USER_PROFILE_OVERFLOW_MENU);
+        { analyticsLocations: k, newestAnalyticsLocation: y } = (0, d.Ay)(u.A.USER_PROFILE_OVERFLOW_MENU);
     (t = g.id),
         (n = h("useMaybeFetchEquippedCollectibleProducts")),
         (i = A(t, p)),
         s.useEffect(() => {
             n && 0 !== i.length && (0, x.tu)({ skuIds: i });
         }, [n, i]);
-    let y = {
+    let M = {
             action: er.pt.PRESS_OPTIONS,
             icon: r.j,
             tooltipText: _.intl.string(_.t["UKOtz+"]),
@@ -221,7 +223,7 @@ function ec(e) {
         G = (0, Q.A)({
             user: g,
             guildId: p,
-            location: M,
+            location: y,
             appContext: N,
             onBlock: () => P({ action: "BLOCK", analyticsLocations: k }),
             onIgnore: () => P({ action: "IGNORE", analyticsLocations: k }),
@@ -230,7 +232,7 @@ function ec(e) {
         L = (0, H.A)({
             user: g,
             guildId: p,
-            location: M,
+            location: y,
             appContext: N,
             onBlock: () => P({ action: "BLOCK", analyticsLocations: k }),
             onIgnore: () => P({ action: "IGNORE", analyticsLocations: k }),
@@ -251,7 +253,7 @@ function ec(e) {
         })({
             user: g,
             guildId: p,
-            location: M,
+            location: y,
             appContext: N,
             color: "danger",
             onAction: () => P({ action: "REPORT", analyticsLocations: k }),
@@ -271,7 +273,7 @@ function ec(e) {
         })({
             user: g,
             guildId: p,
-            location: M,
+            location: y,
             appContext: N,
             color: "danger",
             onAction: () => P({ action: "REPORT", analyticsLocations: k }),
@@ -328,10 +330,10 @@ function ec(e) {
                         i = A(e.id, t),
                         { analyticsLocations: s } = (0, d.Ay)(u.A.USER_PROFILE_OVERFLOW_MENU),
                         r = (0, m.bG)(
-                            [S.A],
+                            [C.A],
                             () =>
                                 i.map((e) => {
-                                    let t = S.A.getProductsForSku(e)
+                                    let t = C.A.getProductsForSku(e)
                                         ?.flatMap((e) => e.skus)
                                         .find((t) => t.id === e);
                                     return {
@@ -339,7 +341,7 @@ function ec(e) {
                                         isShoppableItem:
                                             null != t &&
                                             t.isAvailable() &&
-                                            t.tenantMetadata?.collectibles?.sourceType === C.SHOP,
+                                            t.tenantMetadata?.collectibles?.sourceType === S.SHOP,
                                     };
                                 }),
                             [i],
@@ -403,7 +405,7 @@ function ec(e) {
                           children: B.map((e, t) => (0, l.jsx)(c.rX, { children: e.map((e) => e) }, t)),
                       });
                   },
-                  children: (e) => O({ ...e, ...y }),
+                  children: (e) => O({ ...e, ...M }),
               }),
           });
 }
