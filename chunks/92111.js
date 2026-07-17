@@ -1,50 +1,56 @@
-i.d(n, { HW: () => M, Om: () => S, hJ: () => L, sC: () => o, wM: () => I });
+i.d(n, { HW: () => g, Om: () => G, hJ: () => L, sC: () => O, wM: () => M });
 var e = i(70283),
-    r = i(696292),
-    c = i(975807),
-    E = i(216934),
-    a = i(976860),
-    s = i(780964),
-    A = i(766075),
-    l = i(652215),
-    T = i(758836),
-    _ = i(375708);
-function I(t) {
+    c = i(696292),
+    r = i(975807),
+    E = i(990820),
+    a = i(216934),
+    s = i(976860),
+    A = i(780964),
+    l = i(766075),
+    T = i(652215),
+    I = i(758836),
+    _ = i(202541),
+    o = i(375708);
+function M(t) {
     return t === e.$.GAME_VARIETY || t === e.$.GAME_TIME;
 }
-let o = new Set([e.$.ACCOUNT_AGE, e.$.STREAMING, e.$.GAME_TIME, e.$.GAME_VARIETY]);
-function M(t) {
-    return o.has(t);
+let O = new Set([e.$.ACCOUNT_AGE, e.$.STREAMING, e.$.GAME_TIME, e.$.GAME_VARIETY]);
+function g(t) {
+    return O.has(t);
 }
 let u = {
     [e.$.STAFF]: {
-        ctaLabel: () => _.intl.string(_.t.q7A8hP),
-        ctaAction: () => (0, c.A)("https://discord.com/careers"),
+        ctaLabel: () => o.intl.string(o.t.q7A8hP),
+        ctaAction: () => (0, r.A)("https://discord.com/careers"),
     },
     [e.$.PREMIUM_TENURE]: {
         ctaLabel: (t) => {
             let { owned: n, isViewerOnUpgradeableNitro: i } = t;
-            return !0 === i ? _.intl.string(_.t.uKFeS1) : n ? _.intl.string(_.t.xGjjkd) : _.intl.string(_.t.BTxm69);
+            return !0 === i ? o.intl.string(o.t.uKFeS1) : n ? o.intl.string(o.t.xGjjkd) : o.intl.string(o.t.BTxm69);
         },
-        ctaAction: () => (0, a.pX)(l.BVt.NITRO_HOME),
+        ctaAction: () => (0, s.pX)(T.BVt.NITRO_HOME),
     },
     [e.$.GUILD_BOOSTER]: {
         ctaLabel: (t) => {
             let { owned: n } = t;
-            return n ? _.intl.string(_.t.VMvz3m) : _.intl.string(_.t.xFVZeU);
+            return n ? o.intl.string(o.t.VMvz3m) : o.intl.string(o.t.xFVZeU);
         },
-        ctaAction: () => (0, A.openUserSettings)(s.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
+        ctaAction: () => (0, l.openUserSettings)(A.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
     },
     [e.$.ORB_PROFILE]: {
-        ctaLabel: () => _.intl.string(_.t.EBYkzk),
-        ctaAction: () => (0, a.pX)(l.BVt.COLLECTIBLES_SHOP_WITH_TAB(T.G2.ORBS)),
+        ctaLabel: () => o.intl.string(o.t.EBYkzk),
+        ctaAction: () => (0, s.pX)(T.BVt.COLLECTIBLES_SHOP_WITH_TAB(I.G2.ORBS)),
     },
     [e.$.QUEST_COMPLETED]: {
-        ctaLabel: () => _.intl.string(_.t.swICIT),
-        ctaAction: () => (0, E.m)({ fromContent: r.u.QUEST_BADGE }),
+        ctaLabel: () => o.intl.string(o.t.swICIT),
+        ctaAction: () => (0, a.m)({ fromContent: c.u.QUEST_BADGE }),
+    },
+    [e.$.GIFTING]: {
+        ctaLabel: () => o.intl.string(o.t["nUA/JW"]),
+        ctaAction: () => (0, E.A)({ giftingOrigin: _.vQ.BADGE_DIRECTORY }),
     },
 };
-function S(t) {
+function G(t) {
     return u[t];
 }
 let L = "badge-details";
