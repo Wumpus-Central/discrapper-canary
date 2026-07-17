@@ -5541,6 +5541,28 @@
     }
   },
   {
+    "name": "2026-06-wysiwyg-user-profile-premium-try-it-out",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "showPresetName": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "showPresetName": true
+      },
+      "2": {
+        "enabled": true,
+        "showPresetName": false
+      }
+    }
+  },
+  {
     "name": "2026-07-activity-entrypoint-ui",
     "kind": "user",
     "defaultConfig": {

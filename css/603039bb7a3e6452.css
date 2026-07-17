@@ -1,0 +1,58 @@
+.bannerImage__282ea,
+.colorSwatch__282ea {
+    height: 100%;
+    width: 100%
+}
+
+.bannerImage__282ea {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.displayNamePreview__2818b {
+    display: flex;
+    justify-content: center;
+    min-width: 0;
+    padding: 0 var(--space-8);
+    width: 100%
+}
+
+.displayNamePreview__2818b>* {
+    min-width: 0
+}
+
+.previewText__2818b {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.group__96e81 {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 1fr 1fr
+}
+
+.errorMessage__96e81,
+.label__96e81 {
+    grid-column: 1/-1
+}
+
+.errorMessage__96e81 {
+    align-items: start;
+    display: grid;
+    gap: var(--space-4);
+    grid-template-columns: auto 1fr
+}
+
+.labelHeading__96e81 {
+    display: inline
+}
+
+.labelBadge__96e81,
+.labelIcon__96e81 {
+    display: inline-flex;
+    margin-inline-start: var(--space-4);
+    vertical-align: middle
+}
