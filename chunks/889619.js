@@ -54,7 +54,7 @@ function O(e) {
     }, [o, c]),
     o)
         ? (0, l.jsx)(N.A, {
-              badge: "new",
+              badge: "beta",
               graphic: {
                   type: "image",
                   src: "https://cdn.discordapp.com/assets/content/53479e419144f256349c4d0ed3e3835a2085325c222c536614fa96097e660afe.svg",
@@ -97,7 +97,7 @@ var S =
     L = n(536572),
     D = n(14702),
     F = n(848051);
-function w() {
+function q() {
     return (0, l.jsxs)("div", {
         className: F.nM,
         "aria-hidden": !0,
@@ -110,7 +110,7 @@ function w() {
         ],
     });
 }
-function q(e) {
+function w(e) {
     let { skuId: t, disabled: n = !1 } = e,
         { product: i, state: s } = (0, U.I)(t, { needsCategory: !1, shouldFetchProduct: !1 }),
         r = (0, m.bG)(
@@ -121,7 +121,7 @@ function q(e) {
                     .find((e) => e.id === t),
             [t],
         );
-    if ("loading" === s) return (0, l.jsx)(w, {});
+    if ("loading" === s) return (0, l.jsx)(q, {});
     if (null == i) return null;
     let a = (0, G.YW)(i),
         o =
@@ -278,7 +278,7 @@ function ec(e) {
             color: "danger",
             onAction: () => P({ action: "REPORT", analyticsLocations: k }),
         }),
-        w = (function (e) {
+        q = (function (e) {
             let { user: t, guildId: n, onSuccess: i } = e,
                 r = (0, f.Ay)(t.id, n ?? void 0),
                 a = z.Q_.useSetting(),
@@ -363,7 +363,7 @@ function ec(e) {
                                           keepItemStyles: n,
                                           render: (e) => {
                                               let { disabled: n } = e;
-                                              return (0, l.jsx)(q, { skuId: t, disabled: n });
+                                              return (0, l.jsx)(w, { skuId: t, disabled: n });
                                           },
                                           action: n
                                               ? () =>
@@ -383,7 +383,7 @@ function ec(e) {
                 U,
             ],
             [L, G, D, F],
-            [w],
+            [q],
         ];
     return B.every((e) => e.every((e) => null == e))
         ? null
