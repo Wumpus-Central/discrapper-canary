@@ -5,19 +5,19 @@ var n = l(627968),
     a = l.n(s),
     r = l(284009),
     o = l.n(r),
-    c = l(735438),
+    c = l(435558),
     u = l.n(c),
     d = l(485845),
     m = l(189213),
     x = l(17928),
     h = l(661531),
-    A = l(990078),
-    p = l(462887),
-    f = l(534514),
-    j = l(834730),
-    g = l(933832),
-    v = l(939249),
-    y = l(602853),
+    A = l(462887),
+    p = l(297264),
+    f = l(834730),
+    j = l(933832),
+    g = l(939249),
+    v = l(602853),
+    y = l(866665),
     N = l(885574),
     E = l(243721),
     b = l(192308),
@@ -38,13 +38,13 @@ var n = l(627968),
     O = l(920268),
     U = l(47167),
     D = l(713654),
-    z = l(46937),
-    X = l(773669),
-    F = l(780964),
-    $ = l(766075),
-    B = l(889227),
-    Y = l(280450),
-    Q = l(546183),
+    z = l(733110),
+    X = l(46937),
+    F = l(773669),
+    $ = l(780964),
+    B = l(766075),
+    Y = l(889227),
+    Q = l(280450),
     W = l(734057),
     Z = l(30370),
     K = l(696451),
@@ -66,7 +66,7 @@ function ed(e) {
         i = (0, G.Ay)(),
         s = I.A.get(t);
     return (0, n.jsx)("img", {
-        src: (0, p.q)(i) ? s.icon.lightSVG : s.icon.darkSVG,
+        src: (0, A.q)(i) ? s.icon.lightSVG : s.icon.darkSVG,
         alt: "",
         className: a()(eu.tV, l),
     });
@@ -79,7 +79,7 @@ function em(e) {
         className: a()(eu.HA, l),
         children: [
             null != i ? (0, n.jsx)(i, { className: eu.er }) : null,
-            (0, n.jsx)(f.D, { variant: "heading-lg/semibold", color: "text-default", className: eu.Kw, children: s }),
+            (0, n.jsx)(p.D, { variant: "heading-lg/semibold", color: "text-default", className: eu.Kw, children: s }),
         ],
     });
 }
@@ -126,7 +126,7 @@ function ex(e) {
     }
     return (
         (t = r ? "text-default" : "text-feedback-critical"),
-        (0, n.jsx)(j.E, { variant: "text-xs/normal", color: t, className: eu.E6, children: c })
+        (0, n.jsx)(f.E, { variant: "text-xs/normal", color: t, className: eu.E6, children: c })
     );
 }
 function eh(e) {
@@ -143,14 +143,14 @@ function eh(e) {
         null != e && e.enabled && (x = !0);
     }
     let p = r.application,
-        f = i.useMemo(() => (p?.bot != null ? new B.A(p.bot) : null), [p]),
+        v = i.useMemo(() => (p?.bot != null ? new Y.A(p.bot) : null), [p]),
         y = r.result;
-    null != f && (t = (0, n.jsx)(H.A, { className: eu.AO, verified: f.isVerifiedBot() })),
+    null != v && (t = (0, n.jsx)(H.A, { className: eu.AO, verified: v.isVerifiedBot() })),
         (s = y
-            ? (0, n.jsx)(g.A, { size: "md", color: "currentColor", className: eu.rA })
+            ? (0, n.jsx)(j.A, { size: "md", color: "currentColor", className: eu.rA })
             : x
               ? (0, n.jsx)(J.A, { direction: J.A.Directions.RIGHT, className: eu.t4 })
-              : (0, n.jsx)(j.E, {
+              : (0, n.jsx)(f.E, {
                     variant: "text-md/medium",
                     color: "text-muted",
                     children: ec.intl.string(ec.t.cEts68),
@@ -178,18 +178,18 @@ function eh(e) {
     }, [y, x, u, m, o, p, r.connection_type, r.application_id, h, A]);
     return el.iC.includes(p?.id ?? "")
         ? null
-        : (0, n.jsxs)(v.D, {
+        : (0, n.jsxs)(g.D, {
               className: a()(eu.UY, y ? eu.o6 : null, x ? null : eu.pC),
               onClick: !y && x ? N : void 0,
               children: [
-                  null != f ? (0, n.jsx)(w.A, { user: f }) : null,
+                  null != v ? (0, n.jsx)(w.A, { user: v }) : null,
                   (0, n.jsxs)("div", {
                       className: eu.EZ,
                       children: [
                           (0, n.jsxs)("div", {
                               className: eu.Pf,
                               children: [
-                                  (0, n.jsx)(j.E, {
+                                  (0, n.jsx)(f.E, {
                                       variant: "text-md/medium",
                                       color: "text-strong",
                                       children: p?.name,
@@ -200,7 +200,7 @@ function eh(e) {
                           p?.name != null ? (0, n.jsx)(ex, { connectionType: er.UX, result: y }) : null,
                           x || y
                               ? null
-                              : (0, n.jsx)(j.E, {
+                              : (0, n.jsx)(f.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: ec.intl.string(ec.t["+z5dYe"]),
@@ -215,8 +215,8 @@ function eA(e) {
     let { eligibilityStatesGroups: t, onPlatformConnect: l, onPlatformConnected: s } = e,
         [r, c] = i.useState({}),
         [d, m] = i.useState(0),
-        [x, p] = i.useState(null),
-        [f, E] = i.useState(null),
+        [x, A] = i.useState(null),
+        [p, E] = i.useState(null),
         b = i.useMemo(() => u().flatten(t), [t]),
         S = i.useMemo(
             () =>
@@ -226,10 +226,10 @@ function eA(e) {
     i.useEffect(() => m(Date.now()), [b]),
         i.useEffect(() => {
             if (null == x) return;
-            let e = S[`${x}${null != f ? `:${f.id}` : ""}`];
-            null == e || (e.every((e) => e.result) && s(e[0]?.identity_connected_account_type ?? x, f));
-        }, [S, x, f, s]);
-    let C = (0, y.r)(h.A.unsafe_rawColors.GREEN_330).hex();
+            let e = S[`${x}${null != p ? `:${p.id}` : ""}`];
+            null == e || (e.every((e) => e.result) && s(e[0]?.identity_connected_account_type ?? x, p));
+        }, [S, x, p, s]);
+    let C = (0, v.r)(h.A.unsafe_rawColors.GREEN_330).hex();
     return (0, n.jsx)(n.Fragment, {
         children: Object.keys(S)
             .sort((e, t) => {
@@ -248,7 +248,7 @@ function eA(e) {
                         {
                             eligibilityState: u[0],
                             onAttempted: (e, t) => {
-                                p(e), E(t), l();
+                                A(e), E(t), l();
                             },
                         },
                         e,
@@ -256,42 +256,42 @@ function eA(e) {
                 let m = u.find((e) => null == e.operator),
                     x = u.filter((e) => null != e.operator),
                     h = (null == m || m.result) && x.every((e) => e.result),
-                    f = u.find((e) => null != e.application),
-                    y = I.A.get(e),
-                    b = null == y || y.enabled,
+                    p = u.find((e) => null != e.application),
+                    v = I.A.get(e),
+                    b = null == v || v.enabled,
                     _ =
-                        null != y &&
-                        y.migrationData?.getMigrationExperimentEnabled("GuildRoleConnectionsConnectAccountsModal"),
+                        null != v &&
+                        v.migrationData?.getMigrationExperimentEnabled("GuildRoleConnectionsConnectAccountsModal"),
                     k = _ || !b,
-                    P = f?.application,
-                    T = P?.bot != null ? new B.A(P.bot) : null;
+                    P = p?.application,
+                    T = P?.bot != null ? new Y.A(P.bot) : null;
                 el.iC.includes(P?.id ?? "")
                     ? (t = (0, n.jsx)(ei.A, { className: eu.AO, color: C, size: 16 }))
                     : null != T && (t = (0, n.jsx)(H.A, { className: eu.AO, verified: T.isVerifiedBot() }));
-                let R = r[y?.type ?? er.zR],
+                let R = r[v?.type ?? er.zR],
                     G = !h && null != R && R <= d;
                 return (
                     (i = h
-                        ? (0, n.jsx)(g.A, { size: "md", color: "currentColor", className: eu.rA })
+                        ? (0, n.jsx)(j.A, { size: "md", color: "currentColor", className: eu.rA })
                         : G
-                          ? (0, n.jsx)(j.E, {
+                          ? (0, n.jsx)(f.E, {
                                 variant: "text-md/medium",
                                 color: "text-link",
                                 className: eu.dj,
                                 children: ec.intl.string(ec.t["5911Lb"]),
                             })
                           : k
-                            ? (0, n.jsx)(j.E, {
+                            ? (0, n.jsx)(f.E, {
                                   variant: "text-md/medium",
                                   color: "text-muted",
                                   children: ec.intl.string(ec.t.cEts68),
                               })
                             : (0, n.jsx)(J.A, { direction: J.A.Directions.RIGHT, className: eu.t4 })),
                     _
-                        ? (s = ec.intl.format(ec.t.Rzz1Xs, { platformName: y?.name }))
-                        : y?.type === eo.fg2.STEAM && (s = ec.intl.string(ec.t.NcZh6K)),
+                        ? (s = ec.intl.format(ec.t.Rzz1Xs, { platformName: v?.name }))
+                        : v?.type === eo.fg2.STEAM && (s = ec.intl.string(ec.t.NcZh6K)),
                     (0, n.jsxs)(
-                        v.D,
+                        g.D,
                         {
                             className: a()(eu.UY, h ? eu.o6 : null, k ? eu.pC : null),
                             onClick:
@@ -300,14 +300,14 @@ function eA(e) {
                                     : () => {
                                           var e;
                                           return (
-                                              (e = y?.type ?? er.zR),
+                                              (e = v?.type ?? er.zR),
                                               void ((0, en.A)({
                                                   platformType: e,
                                                   location: "Verified Roles Connect Accounts Modal",
                                                   overrideUrl: P?.role_connections_verification_url,
                                               }),
                                               c({ ...r, [e]: Date.now() }),
-                                              p(e),
+                                              A(e),
                                               E(P ?? null),
                                               l())
                                           );
@@ -316,14 +316,14 @@ function eA(e) {
                                 !h && G
                                     ? (0, n.jsx)("div", {
                                           className: eu.Z1,
-                                          children: (0, n.jsx)(j.E, {
+                                          children: (0, n.jsx)(f.E, {
                                               variant: "text-xs/normal",
                                               color: "text-overlay-light",
                                               children: ec.intl.string(ec.t.UB3hKo),
                                           }),
                                       })
                                     : null,
-                                null != y ? (0, n.jsx)(ed, { platformType: y.type }) : null,
+                                null != v ? (0, n.jsx)(ed, { platformType: v.type }) : null,
                                 null != T ? (0, n.jsx)(w.A, { user: T }) : null,
                                 (0, n.jsxs)("div", {
                                     className: eu.EZ,
@@ -331,14 +331,14 @@ function eA(e) {
                                         (0, n.jsxs)("div", {
                                             className: eu.Pf,
                                             children: [
-                                                (0, n.jsx)(j.E, {
+                                                (0, n.jsx)(f.E, {
                                                     variant: "text-md/medium",
                                                     color: "text-strong",
-                                                    children: y?.name ?? P?.name,
+                                                    children: v?.name ?? P?.name,
                                                 }),
                                                 t,
                                                 null != s
-                                                    ? (0, n.jsx)(A.m, {
+                                                    ? (0, n.jsx)(y.m, {
                                                           text: s,
                                                           children: (0, n.jsx)(N.m, {
                                                               size: "xs",
@@ -450,21 +450,21 @@ function ef(e) {
         a,
         r,
         { transitionState: c, onClose: u, guildId: d, role: h } = e,
-        [p, f] = i.useState(0),
-        [g, v] = i.useState(null),
-        [y, E] = i.useState(!1),
+        [A, p] = i.useState(0),
+        [j, g] = i.useState(null),
+        [v, E] = i.useState(!1),
         [P, w] = i.useState(!0),
         [R, M] = i.useState(!1),
         [V, H] = i.useState(!0),
         [U, D] = i.useState(!1),
-        B = (0, x.bG)([Z.A], () => Z.A.getAccounts()),
-        J = (0, x.bG)([Q.default], () => Q.default.getNewestTokens()),
-        el = (0, x.bG)([Y.default], () => Y.default.getId()),
+        Y = (0, x.bG)([Z.A], () => Z.A.getAccounts()),
+        J = (0, x.bG)([z.default], () => z.default.getNewestTokens()),
+        el = (0, x.bG)([Q.default], () => Q.default.getId()),
         [en, ei] = i.useState(null),
         [er, ed] = i.useState(null),
         [ex, eh] = i.useState(null),
         ef = (0, G.Ay)(),
-        ej = (0, x.bG)([X.default], () => X.default.locale),
+        ej = (0, x.bG)([F.default], () => F.default.locale),
         eg = (0, x.bG)([K.Ay], () => K.Ay.getMember(d, el)),
         ev = Object.values((0, x.bG)([W.A], () => W.A.getMutableGuildChannelsForGuild(d))).filter(
             (e) => q.A.can(eo.xBc.VIEW_CHANNEL, e) && q.A.can(eo.xBc.SEND_MESSAGES, e) && (0, O.A)(e).includes(h),
@@ -474,19 +474,19 @@ function ef(e) {
         u?.(), e && (0, b.closeModal)(ea.CB, S.SY);
     }
     function eN() {
-        ey(!0), (0, $.openUserSettings)(F.X.AUTHORIZED_APPS_PANEL);
+        ey(!0), (0, B.openUserSettings)($.X.AUTHORIZED_APPS_PANEL);
     }
     function eE() {
-        ey(!0), (0, $.openUserSettings)(F.X.CONNECTIONS_PANEL);
+        ey(!0), (0, B.openUserSettings)($.X.CONNECTIONS_PANEL);
     }
     async function eb() {
         M(!0), await T.A.assignGuildRoleConnection(d, h.id);
     }
     i.useEffect(() => {
         T.A.fetchGuildRoleConnectionsEligibility(d, h.id).then((e) => {
-            v(e), E(e.some((e) => e.every((e) => e.result))), w(!1);
+            g(e), E(e.some((e) => e.every((e) => e.result))), w(!1);
         });
-    }, [d, h.id, B, J]),
+    }, [d, h.id, Y, J]),
         i.useEffect(() => {
             ee.default.track(eo.HAw.PASSPORT_CHALLENGE_VIEWED, { role_id: h.id, ...(0, L.H$)(d) });
         }, [d, h.id]),
@@ -495,21 +495,21 @@ function ef(e) {
                 null != eg &&
                 eg.roles.includes(h.id) &&
                 (M(!1),
-                ev.length > 0 ? f(2) : u?.(),
+                ev.length > 0 ? p(2) : u?.(),
                 ee.default.track(eo.HAw.PASSPORT_CHALLENGE_FINISHED, { role_id: h.id, ...(0, L.H$)(d) }));
         }, [R, ev.length, eg, d, h.id, u]);
-    let eS = g?.flat().some((e) => null == e.application_id) ?? !1;
-    switch (p) {
+    let eS = j?.flat().some((e) => null == e.application_id) ?? !1;
+    switch (A) {
         case 0: {
-            let e = null != g && g.length > 1,
-                i = null != g && 1 === g.length && 1 === g[0].length;
+            let e = null != j && j.length > 1,
+                i = null != j && 1 === j.length && 1 === j[0].length;
             (t = ec.intl.string(ec.t.zOZh3R)),
                 (l =
-                    P || null == g
+                    P || null == j
                         ? (0, n.jsx)(C.y, { className: eu.NL })
                         : (0, n.jsxs)(n.Fragment, {
                               children: [
-                                  (0, n.jsx)(j.E, {
+                                  (0, n.jsx)(f.E, {
                                       variant: "text-md/medium",
                                       color: "text-default",
                                       children: ec.intl.format(i ? ec.t.jHfRvZ : e ? ec.t["mOQ8k+"] : ec.t.U0olLg, {
@@ -519,7 +519,7 @@ function ef(e) {
                                   (0, n.jsx)(_.Ip, {
                                       className: eu.NL,
                                       children: (0, n.jsx)(eA, {
-                                          eligibilityStatesGroups: g,
+                                          eligibilityStatesGroups: j,
                                           onPlatformConnect: function () {
                                               ee.default.track(eo.HAw.PASSPORT_CHALLENGE_STARTED, {
                                                   role_id: h.id,
@@ -531,7 +531,7 @@ function ef(e) {
                                                   arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
                                               ei(e),
                                                   ed(t),
-                                                  f(1),
+                                                  p(1),
                                                   null != t &&
                                                       (0, et.XC)()
                                                           .then((e) => {
@@ -541,7 +541,7 @@ function ef(e) {
                                           },
                                       }),
                                   }),
-                                  (0, n.jsx)(j.E, {
+                                  (0, n.jsx)(f.E, {
                                       variant: "text-xs/normal",
                                       className: eu.PJ,
                                       color: "text-default",
@@ -558,7 +558,7 @@ function ef(e) {
                         variant: "primary",
                         text: ec.intl.string(ec.t["8SuVoE"]),
                         onClick: () => eb(),
-                        disabled: P || !y || R,
+                        disabled: P || !v || R,
                     },
                 ]),
                 (a = eS
@@ -570,7 +570,7 @@ function ef(e) {
         case 1: {
             o()(null != en, "lastPlatformConnected is null");
             let e = I.A.get(en)?.name ?? er?.name,
-                i = B.find((e) => {
+                i = Y.find((e) => {
                     let { type: t } = e;
                     return en === t;
                 }),
@@ -581,7 +581,7 @@ function ef(e) {
             (t = ec.intl.formatToPlainString(ec.t.yQvgBO, { platformName: e })),
                 (l = (0, n.jsxs)(n.Fragment, {
                     children: [
-                        (0, n.jsx)(j.E, {
+                        (0, n.jsx)(f.E, {
                             variant: "text-md/normal",
                             color: "text-default",
                             children: ec.intl.format(ec.t.gsgvxh, {
@@ -603,12 +603,12 @@ function ef(e) {
                                                             (0, n.jsxs)("div", {
                                                                 className: eu.yk,
                                                                 children: [
-                                                                    (0, n.jsx)(j.E, {
+                                                                    (0, n.jsx)(f.E, {
                                                                         variant: "eyebrow",
                                                                         color: "text-default",
                                                                         children: ec.intl.string(ec.t.TOjkEg),
                                                                     }),
-                                                                    (0, n.jsx)(z.wQ, {
+                                                                    (0, n.jsx)(X.wQ, {
                                                                         connectedAccount: i,
                                                                         userId: el,
                                                                         theme: ef,
@@ -622,7 +622,7 @@ function ef(e) {
                                                             (0, n.jsxs)("div", {
                                                                 className: eu.yk,
                                                                 children: [
-                                                                    (0, n.jsx)(j.E, {
+                                                                    (0, n.jsx)(f.E, {
                                                                         variant: "eyebrow",
                                                                         color: "text-default",
                                                                         children: ec.intl.string(ec.t.jndPhX),
@@ -644,12 +644,12 @@ function ef(e) {
                                                             (0, n.jsxs)("div", {
                                                                 className: eu.a5,
                                                                 children: [
-                                                                    (0, n.jsx)(j.E, {
+                                                                    (0, n.jsx)(f.E, {
                                                                         variant: "eyebrow",
                                                                         color: "text-default",
                                                                         children: ec.intl.string(ec.t.TOjkEg),
                                                                     }),
-                                                                    (0, n.jsx)(A.m, {
+                                                                    (0, n.jsx)(y.m, {
                                                                         text: ec.intl.string(ec.t.x3svVc),
                                                                         children: (0, n.jsx)(N.m, {
                                                                             size: "xs",
@@ -658,7 +658,7 @@ function ef(e) {
                                                                     }),
                                                                 ],
                                                             }),
-                                                            (0, n.jsx)(z.Wc, {
+                                                            (0, n.jsx)(X.Wc, {
                                                                 applicationRoleConnection: c,
                                                                 className: eu.eT,
                                                                 locale: ej,
@@ -671,7 +671,7 @@ function ef(e) {
                         }),
                     ],
                 })),
-                (s = [{ variant: "primary", text: ec.intl.string(ec.t.i4jeWR), onClick: () => f(0) }]),
+                (s = [{ variant: "primary", text: ec.intl.string(ec.t.i4jeWR), onClick: () => p(0) }]),
                 (a = void 0),
                 (r = () => (ey(), Promise.resolve()));
             break;
@@ -684,7 +684,7 @@ function ef(e) {
                             className: eu.kf,
                             children: [
                                 (0, n.jsx)(es.A, { guildId: d, className: eu.w$, role: h, size: 24 }),
-                                (0, n.jsx)(j.E, {
+                                (0, n.jsx)(f.E, {
                                     variant: "text-lg/semibold",
                                     color: "text-strong",
                                     className: eu.jm,

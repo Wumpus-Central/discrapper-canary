@@ -606,14 +606,14 @@ function eJ(e) {
                                                         n.e("22995"),
                                                         n.e("59096"),
                                                         n.e("55953"),
-                                                        n.e("56386"),
-                                                        n.e("38759"),
-                                                        n.e("51943"),
+                                                        n.e("18698"),
                                                         n.e("77083"),
                                                         n.e("46461"),
                                                         n.e("47944"),
                                                         n.e("64509"),
-                                                        n.e("49868"),
+                                                        n.e("55507"),
+                                                        n.e("38759"),
+                                                        n.e("17480"),
                                                         n.e("90072"),
                                                         n.e("72651"),
                                                         n.e("29363"),
@@ -632,9 +632,9 @@ function eJ(e) {
                                                         n.e("70990"),
                                                         n.e("15130"),
                                                         n.e("80816"),
-                                                        n.e("57578"),
+                                                        n.e("73021"),
                                                         n.e("57016"),
-                                                        n.e("45826"),
+                                                        n.e("50541"),
                                                         n.e("60654"),
                                                         n.e("24007"),
                                                         n.e("42205"),
@@ -668,7 +668,7 @@ function eJ(e) {
                                                         n.e("93159"),
                                                         n.e("55936"),
                                                         n.e("89088"),
-                                                        n.e("42834"),
+                                                        n.e("69294"),
                                                         n.e("94723"),
                                                         n.e("62931"),
                                                         n.e("45959"),
@@ -676,7 +676,7 @@ function eJ(e) {
                                                         n.e("58038"),
                                                         n.e("71202"),
                                                         n.e("62531"),
-                                                        n.e("52846"),
+                                                        n.e("44230"),
                                                         n.e("6174"),
                                                         n.e("46070"),
                                                         n.e("90365"),
@@ -695,7 +695,7 @@ function eJ(e) {
                                                         n.e("24038"),
                                                         n.e("55654"),
                                                         n.e("50097"),
-                                                        n.e("23164"),
+                                                        n.e("80445"),
                                                         n.e("48900"),
                                                         n.e("35485"),
                                                         n.e("82069"),
@@ -1486,17 +1486,16 @@ var tQ = n(111042),
     tJ = n(111162),
     t0 = n(403362),
     t1 = n(179771),
-    t8 = n(824552),
-    t2 = n(168186),
-    t7 = n(594061),
-    t3 = n(935208),
-    t4 = n(630248),
-    t5 = n(355097);
-function t6(e, t) {
+    t8 = n(168186),
+    t2 = n(594061),
+    t7 = n(935208),
+    t3 = n(630248),
+    t4 = n(355097);
+function t5(e, t) {
     o.useEffect(() => {
-        t7.bW.loadIfUncached(t5.oD.FRECENCY_AND_FAVORITES_SETTINGS);
+        t2.bW.loadIfUncached(t4.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
-    let n = (0, A.bG)([t4.A], () => t4.A.getApplicationFrecencyWithoutLoadingLatest()),
+    let n = (0, A.bG)([t3.A], () => t3.A.getApplicationFrecencyWithoutLoadingLatest()),
         l = o.useMemo(
             () =>
                 null == t || 0 === t.length
@@ -1507,11 +1506,11 @@ function t6(e, t) {
         i = o.useMemo(() => t?.filter((t) => !e.some((e) => e.id === t.application.id)), [e, t]),
         s = o.useMemo(() => {
             i?.forEach((e) => {
-                let t = t3.default.extractTimestamp(e.id);
+                let t = t7.default.extractTimestamp(e.id);
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute();
-            let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t8.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -1525,7 +1524,7 @@ function t6(e, t) {
     return o.useMemo(() => {
         let e, i;
         t?.forEach((t) => {
-            let n = t3.default.extractTimestamp(t.id);
+            let n = t7.default.extractTimestamp(t.id);
             (null == i || n > i) && ((e = t), (i = n));
         }),
             l.forEach((t) => {
@@ -1536,8 +1535,9 @@ function t6(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t9 = n(457408),
-    ne = n(546183),
+var t6 = n(457408),
+    t9 = n(712440),
+    ne = n(733110),
     nt = n(228366);
 let nn = 10 * X.A.Millis.MINUTE,
     nl = { lastUsedCommandId: null, lastUsedTimeMs: null };
@@ -1928,7 +1928,7 @@ function nV(e) {
                 o.useEffect(() => {
                     let e = eE().sortBy(Object.entries(n), (e) => {
                         let [t, n] = e;
-                        return -t3.default.extractTimestamp(n);
+                        return -t7.default.extractTimestamp(n);
                     });
                     i(
                         eE()
@@ -2201,8 +2201,8 @@ function n3(e, t) {
     ).slice(0, i);
 }
 function n4(e, t) {
-    let n = t4.A.getScoreWithoutLoadingLatest(e.id);
-    return t4.A.getScoreWithoutLoadingLatest(t.id) - n;
+    let n = t3.A.getScoreWithoutLoadingLatest(e.id);
+    return t3.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
 function n5(e, t) {
     let n = (0, I.lq)(e),
@@ -3121,7 +3121,7 @@ function lv(e) {
                         } = e,
                         s = (0, A.bG)([ne.default], () => ne.default.getFetchState());
                     o.useEffect(() => {
-                        i && s === ne.FetchState.NOT_FETCHED && t8.A.fetch();
+                        i && s === ne.FetchState.NOT_FETCHED && t9.A.fetch();
                     }, [i, s]);
                     let a = (0, A.yK)([ne.default], () =>
                             i
@@ -3136,11 +3136,11 @@ function lv(e) {
                             let e = [];
                             return c && e.push(ns.gq), e;
                         }, [c]),
-                        u = t6(r, a),
+                        u = t5(r, a),
                         m = (0, A.bG)([eF.default], () => eF.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t9.A)(e.id));
+                            return !(!1 === m && (0, t6.A)(e.id));
                         }
                         return l
                             ? u
@@ -3315,7 +3315,7 @@ function lS(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t6(
+                c = t5(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
@@ -3337,7 +3337,7 @@ function lS(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t9.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t6.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

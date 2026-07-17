@@ -30,17 +30,17 @@ var n = l(627968),
     R = l(289873),
     D = l(331322),
     U = l(993077),
-    L = l(824552),
-    k = l(933958),
-    F = l(869003),
-    G = l(224750),
-    O = l(875444),
-    z = l(62447),
-    M = l(235986),
-    w = l(713804),
-    X = l(647053),
-    B = l(395671),
-    V = l(546183),
+    L = l(933958),
+    k = l(869003),
+    F = l(224750),
+    G = l(875444),
+    O = l(62447),
+    z = l(235986),
+    M = l(713804),
+    w = l(712440),
+    X = l(733110),
+    B = l(647053),
+    V = l(395671),
     Y = l(734057),
     K = l(309010),
     W = l(486020),
@@ -163,7 +163,7 @@ function eI(e, t, l) {
         s = eu.intl.formatToPlainString(eu.t.QWGvxA, { applicationName: e.name }),
         r = null;
     return (
-        (0, O.O)(e, t) &&
+        (0, G.O)(e, t) &&
             ((i = eu.intl.formatToPlainString(eu.t["paC+US"], { applicationName: e.name })),
             (s = eu.intl.formatToPlainString(eu.t.inM1Yt, { applicationName: e.name })),
             (r = (0, n.jsx)(et.A, { look: et.k.WARNING, children: eu.intl.string(eu.t.LY35Zy) }))),
@@ -259,7 +259,7 @@ function eT(e) {
             locale: N,
             id: A,
         } = e,
-        g = i.useMemo(() => B.Ay.createFromServer(u), [u]),
+        g = i.useMemo(() => V.Ay.createFromServer(u), [u]),
         [v, f] = i.useState(!1),
         [P, R] = i.useState(!1),
         D = i.useMemo(() => {
@@ -268,18 +268,18 @@ function eT(e) {
                     className: eN.PT,
                     variant: "text-sm/normal",
                     color: "text-default",
-                    children: (0, w.parseBioReact)(u.description),
+                    children: (0, M.parseBioReact)(u.description),
                 });
         }, [u.description]),
         U = en(u.id),
-        L = (0, z.A)(u);
+        L = (0, O.A)(u);
     return (0, n.jsx)("div", {
         className: ej.Zy,
         children: (0, n.jsx)(S.F, {
             component:
                 ((l =
                     null != (t = W.Ay.getApplicationIconURL({ id: u.id, icon: u.icon }))
-                        ? (0, n.jsx)(M.A.Child, {
+                        ? (0, n.jsx)(z.A.Child, {
                               className: ej.zN,
                               grow: 0,
                               children: (0, n.jsx)("img", { src: t, alt: "" }),
@@ -351,7 +351,7 @@ function eT(e) {
                     (function () {
                         let e = [];
                         for (let t of c)
-                            e.push(...(0, X.rY)(t, c)),
+                            e.push(...(0, B.rY)(t, c)),
                                 t === d.F.APPLICATIONS_COMMANDS && e.push(eu.intl.string(eu.t.Ls2XRq));
                         if (e.length > 0 || (null != h && h.length > 0))
                             return (0, n.jsx)(I.N, {
@@ -374,7 +374,7 @@ function eT(e) {
                                             ),
                                         ),
                                         h?.map((t, l) => {
-                                            let i = (0, G.wI)(t);
+                                            let i = (0, F.wI)(t);
                                             return null != i
                                                 ? (0, n.jsxs)(
                                                       "li",
@@ -468,12 +468,12 @@ function eT(e) {
 let e_ = (0, c.v)(() => ({ searchQuery: "" })),
     eE = function () {
         let e = (0, J.SV)("AuthorizedAppsList"),
-            { fetchState: t, appAuthTokens: l } = (0, m.cf)([V.default], () => ({
-                fetchState: V.default.getFetchState(),
-                appAuthTokens: V.default.getNewestTokensForNonChildrenApplications(),
+            { fetchState: t, appAuthTokens: l } = (0, m.cf)([X.default], () => ({
+                fetchState: X.default.getFetchState(),
+                appAuthTokens: X.default.getNewestTokensForNonChildrenApplications(),
             })),
             s = (0, m.bG)([Z.default], () => Z.default.locale),
-            r = (0, m.bG)([k.Ay], () => k.Ay.getSelfEmbeddedActivities()),
+            r = (0, m.bG)([L.Ay], () => L.Ay.getSelfEmbeddedActivities()),
             a = (0, m.bG)([Y.A, K.Ay], () => Y.A.getChannel(K.Ay.getChannelId())),
             c = a?.getGuildId(),
             d = e_((e) => e.searchQuery);
@@ -525,7 +525,7 @@ let e_ = (0, c.v)(() => ({ searchQuery: "" })),
                           ],
                       }),
                 children:
-                    null == l || null == g || t !== V.FetchState.FETCHED
+                    null == l || null == g || t !== X.FetchState.FETCHED
                         ? (0, n.jsx)(R.y, { className: e ? ej.p$ : eA.QX, type: R.y.Type.SPINNING_CIRCLE })
                         : 0 === l.length
                           ? A(eu.intl.string(eu.t.CpPv5l), eu.intl.string(eu.t["E+SM6T"]))
@@ -544,10 +544,10 @@ let e_ = (0, c.v)(() => ({ searchQuery: "" })),
                                                       onDelete: () =>
                                                           (function (e) {
                                                               let { id: t, application: l } = e;
-                                                              L.A.delete(t);
+                                                              w.A.delete(t);
                                                               let n = r.get(l.id);
                                                               null != n &&
-                                                                  F.A.leaveActivity({
+                                                                  k.A.leaveActivity({
                                                                       location: n.location,
                                                                       applicationId: l.id,
                                                                       showFeedback: !1,
