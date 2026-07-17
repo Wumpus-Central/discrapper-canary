@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { y0: () => S, Ni: () => N, t4: () => R, Q9: () => C, y$: () => L });
+n.d(t, { y0: () => S, Ni: () => N, t4: () => O, Q9: () => C, y$: () => L });
 var i = n(942381),
     r = n(265690),
     a = n(315069),
@@ -207,11 +207,11 @@ var m = n(504275),
     g = n(219538);
 let S = 1,
     [N, C] = (0, I.A)();
-function R(e) {
+function O(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
     return C()(e, t);
 }
-function O(e, t) {
+function R(e, t) {
     if (null == e) return null;
     if ("premium_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
@@ -259,6 +259,9 @@ function L(e) {
                 captureStartingFractionalPremiumEndsAt: (t) => {
                     null == i().startingFractionalPremiumEndsAt && e({ startingFractionalPremiumEndsAt: t });
                 },
+                captureStartingPaymentFlowWithPaymentSources: (t) => {
+                    null == i().startedPaymentFlowWithPaymentSources && e({ startedPaymentFlowWithPaymentSources: t });
+                },
                 startingIsInPastDueCheckout: null,
                 setStartingIsInPastDueCheckout: (t) => {
                     null == i().startingIsInPastDueCheckout && e({ startingIsInPastDueCheckout: t });
@@ -290,6 +293,14 @@ function L(e) {
                 },
             },
             get: (e) => (null != r[e] ? r[e]() : null),
+            getIsInOneStepSubscriptionCheckout: (e) => {
+                let { isTrial: t, selectedSkuId: n } = e,
+                    { isGift: r, selectedSkuId: a, startedPaymentFlowWithPaymentSources: s } = i();
+                return (function (e) {
+                    let { isTrial: t, isGift: n, selectedSkuId: i, startedPaymentFlowWithPaymentSources: r } = e;
+                    return !t && !n && null != i && p.oz.includes(i) && !!r;
+                })({ isTrial: t, isGift: r, selectedSkuId: n ?? a, startedPaymentFlowWithPaymentSources: s });
+            },
             contextMetadata: a,
             order: s,
             orderRecord: null != s ? _.createFromServer(s) : null,
@@ -305,7 +316,7 @@ function L(e) {
             quantity: S,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: O(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: R(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -315,7 +326,7 @@ function L(e) {
                     pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: O(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: R(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),

@@ -26,8 +26,8 @@ function S(e) {
             onClose: S,
             onComplete: N,
             onSubscriptionConfirmation: C,
-            analyticsLocations: R,
-            analyticsObject: O,
+            analyticsLocations: O,
+            analyticsObject: R,
             analyticsLocation: L,
             analyticsSourceLocation: y,
             confirmationFooter: D,
@@ -164,13 +164,12 @@ function S(e) {
         n.e("27962"),
         n.e("36167"),
         n.e("64827"),
-        n.e("10471"),
         n.e("63232"),
         n.e("7167"),
+        n.e("10471"),
         n.e("84569"),
         n.e("61060"),
         n.e("54484"),
-        n.e("36850"),
         n.e("60235"),
         n.e("77333"),
         n.e("6338"),
@@ -274,7 +273,7 @@ function S(e) {
             return n[c.C.PREMIUM_CHECKOUT].get().openCheckoutModal({
                 checkoutConfiguration: { applicationId: k, skuId: Y ?? null },
                 forwardedPaymentModalProps: {
-                    analyticsObject: O,
+                    analyticsObject: R,
                     initialPlanId: t,
                     analyticsLocation: L,
                     followupSKUInfo: i,
@@ -307,7 +306,7 @@ function S(e) {
                                     null != e &&
                                         (0, E.A)({
                                             product: e,
-                                            analyticsLocations: R ?? [],
+                                            analyticsLocations: O ?? [],
                                             purchaseType: m.gs.PROMOTIONAL,
                                             overrideGradientColor: "nitro-pink",
                                         });
@@ -315,7 +314,7 @@ function S(e) {
                             }
                         })(e, X),
                 },
-                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: R },
+                unifiedCheckoutProviderProps: { analyticsSourceLocation: y, analyticsLocations: O },
                 checkoutHandlers: { onClose: S, onComplete: N },
                 giftContextProps: { isGift: v, giftMessage: b, giftStyle: M, giftingOrigin: P, giftRecipient: V },
                 tenantParams: {

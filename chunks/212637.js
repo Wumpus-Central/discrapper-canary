@@ -25,9 +25,9 @@ function A(e) {
             onSubscriptionConfirmation: S,
             inPopout: N,
             applicationId: C,
-            intent: R,
+            intent: O,
         } = e,
-        O = N ? i.KX : i.SY,
+        R = N ? i.KX : i.SY,
         L = o.A.getPremiumTypeSubscription();
     if (null != L && L.isPurchasedExternally && null != L.paymentGateway) {
         null != f && f(),
@@ -40,7 +40,7 @@ function A(e) {
             });
         return;
     }
-    function D() {
+    function y() {
         d.default.track(u.HAw.MODAL_DISMISSED, { type: u.JJy.PREMIUM_GUILD_PURCHASE_MODAL, location: A });
     }
     return (
@@ -142,13 +142,12 @@ function A(e) {
             n.e("27962"),
             n.e("36167"),
             n.e("64827"),
-            n.e("10471"),
             n.e("63232"),
             n.e("7167"),
+            n.e("10471"),
             n.e("84569"),
             n.e("61060"),
             n.e("54484"),
-            n.e("36850"),
             n.e("60235"),
             n.e("77333"),
             n.e("6338"),
@@ -258,11 +257,11 @@ function A(e) {
                         },
                     },
                     unifiedCheckoutProviderProps: { analyticsLocations: t, analyticsSourceLocation: h ?? A },
-                    modalAPIOptions: { modalKey: "guild-boost-purchase-modal", contextKey: O, onCloseCallback: D },
+                    modalAPIOptions: { modalKey: "guild-boost-purchase-modal", contextKey: R, onCloseCallback: y },
                     tenantParams: {
                         guildId: I,
                         totalNumberOfSlotsToAssign: T,
-                        intent: R,
+                        intent: O,
                         disablePremiumUpsell: m,
                         onSubscribeComplete: g,
                         closeGuildPerksModal: f,

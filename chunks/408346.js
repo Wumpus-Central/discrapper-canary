@@ -24,7 +24,7 @@ function N(e) {
     S.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
 }
 var C = n(912851);
-let R = {
+let O = {
     clearRemoteDisconnectVoiceChannelId() {
         S.h.dispatch({ type: "CLEAR_REMOTE_DISCONNECT_VOICE_CHANNEL_ID" });
     },
@@ -32,7 +32,7 @@ let R = {
         S.h.dispatch({ type: "CLEAR_LAST_SESSION_VOICE_CHANNEL_ID" });
     },
 };
-var O = n(730852),
+var R = n(730852),
     L = n(785796),
     y = n(55619),
     D = n(246605),
@@ -352,8 +352,8 @@ var em = n(532205),
     eS = n(102609),
     eN = n(736056),
     eC = n(194261),
-    eR = n(548118),
-    eO = n(134413),
+    eO = n(548118),
+    eR = n(134413),
     eL = n(221950),
     ey = n(71393),
     eD = n(309010),
@@ -370,7 +370,7 @@ function eG(e) {
         l = a ?? null,
         o = (0, c.bG)([ey.A], () => (null != l ? ey.A.getGuild(l) : null), [l]),
         { shouldShowIncidentActions: d, incidentData: u, isUnderLockdown: _ } = (0, eb.Li)(l),
-        E = (0, eO.fw)(o?.id ?? ei.dJq),
+        E = (0, eR.fw)(o?.id ?? ei.dJq),
         h = r.useCallback(() => null != o && (0, eL.aZ)(o.id), [o]);
     if (null == o || null == u || !d) return null;
     let I = (e) => {
@@ -392,7 +392,7 @@ function eG(e) {
                       return (n) => (0, i.jsx)(t, { ...n, guildId: o.id, analyticsData: e });
                   });
         },
-        p = (0, i.jsx)(eR.Ay, { className: ew.$f, guild: o, size: eR.Ay.Sizes.MINI }),
+        p = (0, i.jsx)(eO.Ay, { className: ew.$f, guild: o, size: eO.Ay.Sizes.MINI }),
         T = (0, eP.ql)(u, o.name);
     if (null != (u.dmsDisabledUntil ?? u.invitesDisabledUntil) && _)
         return (0, i.jsxs)(A.$T, {
@@ -703,8 +703,8 @@ function tN(e) {
     });
 }
 var tC = n(754804),
-    tR = n(378974),
-    tO = n(340124),
+    tO = n(378974),
+    tR = n(340124),
     tL = n(14594);
 function ty() {
     let [e, t] = (0, eu.Wl)(V.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tL.aH });
@@ -1146,7 +1146,7 @@ let nn = r.memo(function () {
                 children: [
                     (0, i.jsx)(A.PM, {
                         onClick: () => {
-                            R.clearRemoteDisconnectVoiceChannelId(), nt();
+                            O.clearRemoteDisconnectVoiceChannelId(), nt();
                         },
                         noticeType: a.type,
                     }),
@@ -1154,7 +1154,7 @@ let nn = r.memo(function () {
                     (0, i.jsx)(A.Z_, {
                         onClick: () => {
                             let e = tZ.A.getRemoteDisconnectVoiceChannelId();
-                            null != e && null != tM.A.getChannel(e) && O.default.selectVoiceChannel(e);
+                            null != e && null != tM.A.getChannel(e) && R.default.selectVoiceChannel(e);
                         },
                         noticeType: a.type,
                         children: es.intl.string(es.t.vD60Pv),
@@ -1167,7 +1167,7 @@ let nn = r.memo(function () {
                 children: [
                     (0, i.jsx)(A.PM, {
                         onClick: () => {
-                            R.clearLastSessionVoiceChannelId(), nt();
+                            O.clearLastSessionVoiceChannelId(), nt();
                         },
                         noticeType: a.type,
                     }),
@@ -1175,7 +1175,7 @@ let nn = r.memo(function () {
                     (0, i.jsx)(A.Z_, {
                         onClick: () => {
                             let e = tZ.A.getLastSessionVoiceChannelId();
-                            null != e && null != tM.A.getChannel(e) && O.default.selectVoiceChannel(e);
+                            null != e && null != tM.A.getChannel(e) && R.default.selectVoiceChannel(e);
                         },
                         noticeType: a.type,
                         children: es.intl.string(es.t.vD60Pv),
@@ -1401,13 +1401,12 @@ let nn = r.memo(function () {
                                     n.e("55675"),
                                     n.e("27962"),
                                     n.e("64827"),
-                                    n.e("10471"),
                                     n.e("63232"),
                                     n.e("7167"),
+                                    n.e("10471"),
                                     n.e("84569"),
                                     n.e("61060"),
                                     n.e("54484"),
-                                    n.e("36850"),
                                     n.e("60235"),
                                     n.e("77333"),
                                     n.e("6338"),
@@ -1523,7 +1522,7 @@ let nn = r.memo(function () {
                     (0, i.jsx)(A.Z_, {
                         noticeType: ei.kqX.SURVEY,
                         onClick: () => {
-                            l ? (0, tR.K)(o) : window.open(s, "_blank"), (0, D.pX)(t, !1);
+                            l ? (0, tO.K)(o) : window.open(s, "_blank"), (0, D.pX)(t, !1);
                         },
                         children: r,
                     }),
@@ -1740,13 +1739,12 @@ let nn = r.memo(function () {
                                         n.e("55675"),
                                         n.e("27962"),
                                         n.e("64827"),
-                                        n.e("10471"),
                                         n.e("63232"),
                                         n.e("7167"),
+                                        n.e("10471"),
                                         n.e("84569"),
                                         n.e("61060"),
                                         n.e("54484"),
-                                        n.e("36850"),
                                         n.e("60235"),
                                         n.e("77333"),
                                         n.e("6338"),
@@ -1970,7 +1968,7 @@ let nn = r.memo(function () {
                     (0, i.jsx)(A.PM, {
                         noticeType: ei.kqX.QUESTS_PROGRESS_INTERRUPTION,
                         onClick: () => {
-                            a.metadata?.streamKey != null && (0, tO.lk)(a.metadata.streamKey);
+                            a.metadata?.streamKey != null && (0, tR.lk)(a.metadata.streamKey);
                         },
                     }),
                     es.intl.string(es.t.rOx44m),

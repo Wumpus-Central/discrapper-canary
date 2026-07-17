@@ -1,48 +1,49 @@
-r.d(t, { M: () => m });
-var n = r(627968),
-    u = r(64700),
-    i = r(688810),
-    c = r(795791),
-    s = r(615310),
-    l = r(669874),
-    a = r(426398),
-    o = r(21713),
-    d = r(6938),
-    f = r(864717),
-    p = r(783327),
-    h = r(652215),
-    I = r(202541);
-function m(e) {
+n.d(t, { M: () => E });
+var l = n(627968),
+    i = n(64700),
+    r = n(688810),
+    a = n(795791),
+    s = n(615310),
+    o = n(669874),
+    u = n(426398),
+    c = n(21713),
+    d = n(6938),
+    p = n(864717),
+    m = n(783327),
+    C = n(652215),
+    h = n(202541);
+function E(e) {
     let {
             stepConfigs: t,
-            breadcrumbs: r,
-            loadId: i,
-            discoverySessionId: l,
-            purchaseType: a = h.VVm.SUBSCRIPTION,
-            overrideCustomCheckoutFlow: o,
+            breadcrumbs: n,
+            loadId: r,
+            discoverySessionId: o,
+            purchaseType: u = C.VVm.SUBSCRIPTION,
+            overrideCustomCheckoutFlow: c,
             ...d
         } = e,
-        p = JSON.stringify(d.skuIDs),
-        m = u.useMemo(() => d.skuIDs, [p]),
-        S = (0, c.$w)(),
-        P = u.useMemo(
+        m = JSON.stringify(d.skuIDs),
+        E = i.useMemo(() => d.skuIDs, [m]),
+        A = (0, a.$w)(),
+        S = i.useMemo(
             () => ({
-                skuIds: m,
+                skuIds: E,
                 isGift: d.isGift ?? !1,
                 referralTrialOfferId: d.referralTrialOfferId ?? null,
                 activeSubscription: d.activeSubscription ?? null,
                 excludeSubscriptionPlansBySKU: d.excludeSubscriptionPlansBySKU ?? !1,
-                purchaseType: a,
+                purchaseType: u,
                 defaultPlanId: d.defaultPlanId,
                 referralCode: d.referralCode,
-                customCheckoutFlow: o ?? S,
+                customCheckoutFlow: c ?? A,
                 unifiedCheckoutFlow: d.unifiedCheckoutFlow,
                 paymentGateway: d.paymentGateway,
-                applicationId: d.applicationId ?? I.tv,
+                applicationId: d.applicationId ?? h.tv,
+                tenantParamsMap: d.tenantParamsMap ?? {},
             }),
             [
-                m,
-                a,
+                E,
+                u,
                 d.isGift,
                 d.referralTrialOfferId,
                 d.activeSubscription,
@@ -50,35 +51,36 @@ function m(e) {
                 d.applicationId,
                 d.defaultPlanId,
                 d.referralCode,
-                o,
-                S,
+                c,
+                A,
                 d.unifiedCheckoutFlow,
                 d.paymentGateway,
+                d.tenantParamsMap,
             ],
         );
-    return (0, n.jsx)(s.mz, {
+    return (0, l.jsx)(s.mz, {
         stepConfigs: t,
-        breadcrumbs: r,
-        children: (0, n.jsx)(f.P, {
-            loadId: i,
-            discoverySessionId: l,
-            checkoutInitParameters: P,
-            children: (0, n.jsx)(y, { ...d, skuIDs: m, purchaseType: a }),
+        breadcrumbs: n,
+        children: (0, l.jsx)(p.P, {
+            loadId: r,
+            discoverySessionId: o,
+            checkoutInitParameters: S,
+            children: (0, l.jsx)(f, { ...d, skuIDs: E, purchaseType: u }),
         }),
     });
 }
-function y(e) {
-    let { errorHandlingBehavior: t = "rethrow", onErrorReported: r, skuIDs: c, children: s } = e,
-        { paymentSources: f } = (0, a.jm)(),
+function f(e) {
+    let { errorHandlingBehavior: t = "rethrow", onErrorReported: n, skuIDs: a, children: s } = e,
+        { paymentSources: p } = (0, u.jm)(),
         {
-            contextMetadata: h,
-            unifiedCheckoutFlow: I,
-            purchaseType: m,
-            isGift: y,
-            selectedSkuId: S,
-            selectedPlanId: P,
-            paymentSourceId: E,
-            paymentGateway: v,
+            contextMetadata: C,
+            unifiedCheckoutFlow: h,
+            purchaseType: E,
+            isGift: f,
+            selectedSkuId: A,
+            selectedPlanId: S,
+            paymentSourceId: y,
+            paymentGateway: P,
         } = (0, d.t4)((e) => ({
             contextMetadata: e.contextMetadata,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -89,24 +91,24 @@ function y(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        C = null != E && null != f[E] ? f[E]?.type : null,
-        _ = u.useMemo(
-            () => ({ payment_source_id: E, payment_gateway: v, payment_source_type: C, checkout_flow: I }),
-            [E, v, C, I],
+        I = null != y && null != p[y] ? p[y]?.type : null,
+        _ = i.useMemo(
+            () => ({ payment_source_id: y, payment_gateway: P, payment_source_type: I, checkout_flow: h }),
+            [y, P, I, h],
         ),
-        k = (0, i.Db)();
-    return (0, n.jsx)(o.yv, {
-        children: (0, n.jsx)(p.R, {
-            children: (0, n.jsx)(l.j, {
+        T = (0, r.Db)();
+    return (0, l.jsx)(c.yv, {
+        children: (0, l.jsx)(m.R, {
+            children: (0, l.jsx)(o.j, {
                 errorHandlingBehavior: t,
-                locationStack: k,
-                onErrorReported: r,
-                loadId: h.loadId,
-                selectedSkuId: S ?? null,
-                selectedPlanId: P ?? null,
-                isGift: y,
-                skuIds: c,
-                purchaseType: m,
+                locationStack: T,
+                onErrorReported: n,
+                loadId: C.loadId,
+                selectedSkuId: A ?? null,
+                selectedPlanId: S ?? null,
+                isGift: f,
+                skuIds: a,
+                purchaseType: E,
                 additionalAnalyticsData: _,
                 children: s,
             }),

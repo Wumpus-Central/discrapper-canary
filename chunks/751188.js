@@ -124,13 +124,12 @@ function o(e) {
                 n.e("27962"),
                 n.e("36167"),
                 n.e("64827"),
-                n.e("10471"),
                 n.e("63232"),
                 n.e("7167"),
+                n.e("10471"),
                 n.e("84569"),
                 n.e("61060"),
                 n.e("54484"),
-                n.e("36850"),
                 n.e("60235"),
                 n.e("77333"),
                 n.e("6338"),
@@ -390,13 +389,12 @@ function E(e) {
                 n.e("27962"),
                 n.e("36167"),
                 n.e("64827"),
-                n.e("10471"),
                 n.e("63232"),
                 n.e("7167"),
+                n.e("10471"),
                 n.e("84569"),
                 n.e("61060"),
                 n.e("54484"),
-                n.e("36850"),
                 n.e("60235"),
                 n.e("77333"),
                 n.e("6338"),
@@ -542,8 +540,8 @@ function h(e) {
         S = (0, a.tA)({ isGift: !0, giftRecipient: t }),
         N = T && null != t,
         C = m && null == t,
-        R = N || C,
-        O = S && null != t;
+        O = N || C,
+        R = S && null != t;
     return {
         openGiftModal: i.useCallback(() => {
             null != f
@@ -558,7 +556,7 @@ function h(e) {
                       giftMessage: I,
                   })
                 : g
-                  ? O
+                  ? R
                       ? o({
                             giftRecipient: t,
                             analyticsLocations: n,
@@ -589,7 +587,7 @@ function h(e) {
                             giftMessage: I,
                             giftingOrigin: A.vQ.GUILD_CHANNEL,
                         })
-                      : O && null != t
+                      : R && null != t
                         ? o({
                               giftRecipient: t,
                               analyticsLocations: n,
@@ -606,8 +604,8 @@ function h(e) {
                               analyticsObject: c ?? s,
                               giftMessage: I,
                           });
-        }, [g, N, C, O, t, n, h, s, l, c, I, f]),
-        shouldShowWishlistModal: O,
-        shouldShowGiftSelectionModal: R,
+        }, [g, N, C, R, t, n, h, s, l, c, I, f]),
+        shouldShowWishlistModal: R,
+        shouldShowGiftSelectionModal: O,
     };
 }
