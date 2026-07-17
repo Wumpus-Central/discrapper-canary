@@ -68,7 +68,7 @@ function b(e) {
         ),
         f = (0, h.bG)([y.Ay], () => y.Ay.useReducedMotion),
         p = r.useCallback(() => {
-            null != o && C.Ay.isCatalogStaleFor(o) && (0, S.R)(o);
+            null != o && C.Ay.isCatalogStaleFor(o) && (0, S.RS)(o);
         }, [o]),
         T = E?.badge_id === L.$.PREMIUM_TENURE,
         m = _ === L.$.LEGACY_USERNAME,
@@ -335,7 +335,7 @@ function em(e) {
             return R.useConfig({ location: t }).enabled;
         })({ location: "UserProfileBadgeList" });
     r.useEffect(() => {
-        (k || F) && s?.userId != null && !C.Ay.hasCatalogFor(s.userId) && (0, S.R)(s.userId);
+        (k || F) && s?.userId != null && !C.Ay.hasCatalogFor(s.userId) && (0, S.RS)(s.userId);
     }, [k, F, s?.userId]);
     let V = s?.userId,
         B = (0, h.bG)([C.Ay], () => {

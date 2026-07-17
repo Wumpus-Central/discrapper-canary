@@ -13,6 +13,7 @@ e.exports = {
     yq: "badgeGrid__6db38",
     oL: "badgeSlot__6db38",
     xO: "badgeSlotSelected__6db38",
+    Dn: "badgeIndicator__6db38",
     pW: "badgeSlotIcon__6db38",
     SV: "detailPanel__6db38",
     C9: "detailScroller__6db38",

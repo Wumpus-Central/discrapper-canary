@@ -1407,7 +1407,7 @@ eV(
         eH({ type: "WISHLIST_ITEM_PURCHASED", recipientId: e.recipient_id, skuId: e.sku_id });
     }),
     eF(["USER_BADGE_STATE_UPDATE"], (e) => {
-        n(682618).o(e.badge_id);
+        n(682618).o0(e.badge_id);
     }),
     eF(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
         eH({

@@ -1,9 +1,9 @@
-i.d(n, { HW: () => g, Om: () => G, hJ: () => L, sC: () => O, wM: () => M });
+i.d(n, { Ce: () => g, HW: () => O, Om: () => L, hJ: () => R, sC: () => M, wM: () => u });
 var e = i(70283),
-    c = i(696292),
-    r = i(975807),
-    E = i(990820),
-    a = i(216934),
+    r = i(696292),
+    c = i(975807),
+    a = i(990820),
+    E = i(216934),
     s = i(976860),
     A = i(780964),
     l = i(766075),
@@ -11,17 +11,20 @@ var e = i(70283),
     I = i(758836),
     _ = i(202541),
     o = i(375708);
-function M(t) {
+function u(t) {
     return t === e.$.GAME_VARIETY || t === e.$.GAME_TIME;
 }
-let O = new Set([e.$.ACCOUNT_AGE, e.$.STREAMING, e.$.GAME_TIME, e.$.GAME_VARIETY]);
-function g(t) {
-    return O.has(t);
+let M = new Set([e.$.ACCOUNT_AGE, e.$.STREAMING, e.$.GAME_TIME, e.$.GAME_VARIETY]);
+function O(t) {
+    return M.has(t);
 }
-let u = {
+function g(t) {
+    return M.has(t);
+}
+let G = {
     [e.$.STAFF]: {
         ctaLabel: () => o.intl.string(o.t.q7A8hP),
-        ctaAction: () => (0, r.A)("https://discord.com/careers"),
+        ctaAction: () => (0, c.A)("https://discord.com/careers"),
     },
     [e.$.PREMIUM_TENURE]: {
         ctaLabel: (t) => {
@@ -43,14 +46,14 @@ let u = {
     },
     [e.$.QUEST_COMPLETED]: {
         ctaLabel: () => o.intl.string(o.t.swICIT),
-        ctaAction: () => (0, a.m)({ fromContent: c.u.QUEST_BADGE }),
+        ctaAction: () => (0, E.m)({ fromContent: r.u.QUEST_BADGE }),
     },
     [e.$.GIFTING]: {
         ctaLabel: () => o.intl.string(o.t["nUA/JW"]),
-        ctaAction: () => (0, E.A)({ giftingOrigin: _.vQ.BADGE_DIRECTORY }),
+        ctaAction: () => (0, a.A)({ giftingOrigin: _.vQ.BADGE_DIRECTORY }),
     },
 };
-function G(t) {
-    return u[t];
+function L(t) {
+    return G[t];
 }
-let L = "badge-details";
+let R = "badge-details";

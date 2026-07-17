@@ -32,9 +32,9 @@ function _() {
         Component: l,
     };
 }
-var E = n(990078),
-    A = n(604121),
-    h = n(597770),
+var E = n(604121),
+    A = n(597770),
+    h = n(866665),
     I = n(942857),
     f = n(775602),
     p = n(793574),
@@ -44,11 +44,11 @@ var E = n(990078),
     S = n(70283),
     N = n(682618),
     C = n(982240),
-    R = n(611881),
-    O = n(751188),
+    O = n(611881),
+    R = n(788833),
     L = n(40493),
-    D = n(43105),
-    y = n(975732),
+    y = n(43105),
+    D = n(975732),
     v = n(287809),
     b = n(427262),
     M = n(652215),
@@ -62,7 +62,7 @@ function G(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: d, children: l }),
-            (0, i.jsx)(D.A, {
+            (0, i.jsx)(y.A, {
                 targetElementRef: d,
                 shouldShow: !0,
                 position: "top",
@@ -73,7 +73,7 @@ function G(e) {
                     {
                         text: w.intl.string(w.t.RzWDqY),
                         onClick: () => {
-                            null != c && (0, y.openUserProfileModal)({ userId: c.id }), a?.(), s(P.i.TAKE_ACTION);
+                            null != c && (0, D.openUserProfileModal)({ userId: c.id }), a?.(), s(P.i.TAKE_ACTION);
                         },
                     },
                 ],
@@ -90,7 +90,7 @@ function x(e) {
         l = r.useRef(null),
         { analyticsLocations: o } = (0, T.Ay)(p.A.GIFTING_BADGE_COACHMARK),
         d = (0, b.R1)(t),
-        { openGiftModal: c } = (0, O.$)({
+        { openGiftModal: c } = (0, R.$)({
             giftRecipient: d,
             analyticsLocations: o,
             analyticsObject: { object: M.ZSU.BUTTON_CTA, objectType: M.AnalyticsObjectTypes.GIFT },
@@ -99,7 +99,7 @@ function x(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)("div", { ref: l, children: s }),
-            (0, i.jsx)(D.A, {
+            (0, i.jsx)(y.A, {
                 targetElementRef: l,
                 shouldShow: !0,
                 position: "top",
@@ -112,7 +112,7 @@ function x(e) {
                 actions: [
                     {
                         text: w.intl.string(U.default.DZnomS),
-                        icon: h.o,
+                        icon: A.o,
                         onClick: () => {
                             c(), n?.(), a(P.i.TAKE_ACTION);
                         },
@@ -136,7 +136,7 @@ function k(e) {
         ? (0, i.jsx)(G, { currentTier: s, giftCount: l, onComplete: n, markAsDismissed: r, children: a })
         : (0, i.jsx)(x, { channel: t, onComplete: n, markAsDismissed: r, children: a });
 }
-var F = n(374200),
+var F = n(412260),
     V = n(927813),
     B = n(935208),
     H = n(240248),
@@ -155,7 +155,7 @@ function $(e) {
         onClick: a,
         children: (0, i.jsx)("div", {
             className: W.zc,
-            children: n ? (0, i.jsx)(A.a, { className: W.Hl, importData: s }) : (0, i.jsx)(h.o, {}),
+            children: n ? (0, i.jsx)(E.a, { className: W.Hl, importData: s }) : (0, i.jsx)(A.o, {}),
         }),
     });
 }
@@ -185,7 +185,7 @@ function q(e) {
     if (!(0, H.uJ)(d)) return (0, i.jsx)($, { boxAnimationUrl: d, hovered: n, onClick: a });
     let c = t?.trinketAnimationUrl;
     return (0, H.uJ)(c)
-        ? (0, i.jsx)(E.m, {
+        ? (0, i.jsx)(h.m, {
               ariaHidden: r,
               text: w.intl.string(r ? w.t.TW4JV0 : w.t.sWtWDX),
               children: (0, i.jsx)(j.A, {
@@ -216,31 +216,31 @@ let Z = r.memo(function (e) {
                 ? null
                 : e.properties.properties.giftIcon;
         }),
-        D = (0, o.bG)([F.A], () => {
+        y = (0, o.bG)([F.A], () => {
             let e = F.A.getMarketingComponentByType(l.C.GIFT_ICON_COACHMARK);
             return null == e || "giftIconCoachmark" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftIconCoachmark;
         }),
-        y = f?.gradient,
+        D = f?.gradient,
         U =
-            null != y && null != y.colors && y.colors.length >= 2
-                ? (0, g.K5)({ gradient: y.colors, angle: y.angle ?? void 0 }, { defaultAngle: 180 })
+            null != D && null != D.colors && D.colors.length >= 2
+                ? (0, g.K5)({ gradient: D.colors, angle: D.angle ?? void 0 }, { defaultAngle: 180 })
                 : void 0,
         w = r.useMemo(() => {
             if (U?.background != null) return { "--custom-promotion-gradient": U.background };
         }, [U]),
         G = !(0, H.uJ)(f?.boxAnimationUrl) || !(0, H.uJ)(f?.trinketAnimationUrl),
         x = (0, o.bG)([F.A], () => F.A.getGiftPromotion()?.id),
-        V = null != D && !t && !_ && A >= K && null != x,
+        V = null != y && !t && !_ && A >= K && null != x,
         [j, Y] = (0, m.Cc)(V ? d.M.GIFTING_PROMOTION_DESKTOP_FIRST_TIME_COACHMARK : null, x ?? ""),
         $ = null != j,
         { showGiftingBadgeCoachmark: z, markGiftingBadgeCoachmarkAsDismissed: Z } = (function (e) {
             let { location: t, enabled: n } = e,
                 i = (0, I.A)(),
-                a = (0, R.Ls)({ platform: "web", location: t }) && n;
+                a = (0, O.Ls)({ platform: "web", location: t }) && n;
             r.useEffect(() => {
-                a && (0, N.o)(S.$.GIFTING);
+                a && (0, N.o0)(S.$.GIFTING);
             }, [a]);
             let s = (0, o.bG)([C.Ay], () => null != C.Ay.getBadgeById(S.$.GIFTING)),
                 l = a && s && !i,
@@ -252,7 +252,7 @@ let Z = r.memo(function (e) {
             openGiftModal: Q,
             shouldShowWishlistModal: J,
             shouldShowGiftSelectionModal: ee,
-        } = (0, O.$)({
+        } = (0, R.$)({
             giftRecipient: h,
             analyticsLocations: a,
             analyticsObject: {
@@ -294,7 +294,7 @@ let Z = r.memo(function (e) {
                   onComplete: () => u(!1),
                   onCheckItOutClick: Q,
                   markAsDismissed: Y,
-                  coachmarkConfig: D,
+                  coachmarkConfig: y,
                   children: et,
               })
             : z
