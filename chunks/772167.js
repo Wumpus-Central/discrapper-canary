@@ -15,15 +15,15 @@ var i = n(627968),
     h = n(17928),
     I = n(661531),
     f = n(144165),
-    p = n(31502),
+    p = n(325499),
     T = n(914410),
     m = n(363195),
     g = n(174459),
     S = n(58703),
     N = n(975571),
     C = n(38405),
-    R = n(149995),
-    O = n(398523),
+    O = n(149995),
+    R = n(398523),
     L = n(881373),
     y = n(264779),
     D = n(852218);
@@ -198,7 +198,7 @@ var U = n(652215),
     G = n(375708),
     x = n(75662);
 function k() {
-    let e = (0, p.Q)("getRecurringPromotionPartnerAttributes");
+    let e = (0, p.i)("getRecurringPromotionPartnerAttributes");
     return {
         [D.XY]: {
             title: e ? w.default.PF1aT5 : w.default.LsJ9hj,
@@ -214,7 +214,7 @@ function k() {
         },
         [D.KS]: {
             title: G.t.p7BkHh,
-            titleParams: { discountPercentage: (0, R.LR)("getRecurringPromotionPartnerAttributes") ? O.zG : O.H7 },
+            titleParams: { discountPercentage: (0, O.LR)("getRecurringPromotionPartnerAttributes") ? R.zG : R.H7 },
             body: e ? G.t.nmvvaN : G.t.igiSKe,
             bodyWithExpiration: G.t.w8CXUl,
             redemptionURL: "https://steelseries.com/",
@@ -223,10 +223,10 @@ function k() {
         },
         [D.Cs]: {
             title: e ? G.t.QEJnti : G.t["9N8obd"],
-            titleParams: e ? { discountPercentage: O.F0 } : void 0,
+            titleParams: e ? { discountPercentage: R.F0 } : void 0,
             body: e ? G.t.eT5vm0 : G.t["34g+Z3"],
             bodyWithExpiration: G.t.rqmpXc,
-            bodyNote: (0, R.Se)("getRecurringPromotionPartnerAttributes") ? G.t.vblnHk : void 0,
+            bodyNote: (0, O.Se)("getRecurringPromotionPartnerAttributes") ? G.t.vblnHk : void 0,
             redemptionURL: "https://www.kontrolfreek.com/",
             logos: { dark: (0, i.jsx)(M, {}), light: (0, i.jsx)(P, {}) },
             asset: "https://cdn.discordapp.com/assets/content/6706fc54c35e86999d3537dcc3ef8bfe91f25db6a141b4b6e5b451ebc5cae86b.png",
@@ -383,7 +383,7 @@ function j(e) {
             ((t = l.partnerId),
             (n = (0, h.bG)([m.A], () => (0, s.M)(m.A.theme))),
             null == (a = k()[t]) ? null : n ? a.logos.dark : a.logos.light),
-        R = null == p;
+        O = null == p;
     return (0, i.jsxs)("div", {
         className: x.lA,
         children: [
@@ -413,7 +413,7 @@ function j(e) {
                                                     ? G.intl.format(G.t.i2EuFO, {
                                                           helpdeskArticle: N.A.getArticleURL(U.MVz.RECURRING_PROMOTION),
                                                       })
-                                                    : R
+                                                    : O
                                                       ? l.body
                                                       : null != l.bodyWithExpiration
                                                         ? G.intl.format(l.bodyWithExpiration, { date: l.endDate })
@@ -435,7 +435,7 @@ function j(e) {
                             !_ &&
                                 (0, i.jsx)(H, {
                                     recurrence: l,
-                                    canBeClaimed: R,
+                                    canBeClaimed: O,
                                     hasClaimError: g,
                                     setCode: T,
                                     setHasClaimError: S,
@@ -464,7 +464,7 @@ function j(e) {
                 (0, i.jsx)(V, {
                     children: (0, i.jsx)(H, {
                         recurrence: l,
-                        canBeClaimed: R,
+                        canBeClaimed: O,
                         hasClaimError: g,
                         setCode: T,
                         setHasClaimError: S,

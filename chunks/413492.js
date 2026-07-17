@@ -33,8 +33,8 @@ var E = n(503698),
     S = n(682618),
     N = n(992526),
     C = n(982240),
-    R = n(609782);
-let O = (0, n(945810).mj)({
+    O = n(609782);
+let R = (0, n(945810).mj)({
     name: "2026-06-use-new-badge-image-source",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -49,7 +49,7 @@ function b(e) {
         n,
         a,
         { children: s, legacyBadgeId: l, userId: o, fallbackTitle: d, fallbackIconSrc: u } = e,
-        _ = (0, R.w0)(l),
+        _ = (0, O.w0)(l),
         {
             badgeData: E,
             currentTier: A,
@@ -75,9 +75,9 @@ function b(e) {
         g = A?.name,
         N = T ? c.intl.string(c.t.Ipxkog) : (E?.name ?? d);
     T ? (a = n = null != g ? `${N} ${g}` : N) : null != g ? ((t = N), (n = g), (a = `${N} ${g}`)) : ((n = N), (a = N));
-    let O = f ? void 0 : E?.complex_icon_animated_url,
-        v = O ?? E?.complex_icon_static_url ?? E?.simple_icon_url ?? u,
-        b = null != O && v === O;
+    let R = f ? void 0 : E?.complex_icon_animated_url,
+        v = R ?? E?.complex_icon_static_url ?? E?.simple_icon_url ?? u,
+        b = null != R && v === R;
     if (m) return (0, i.jsx)(M, { userId: o, title: n, badgeImage: v, children: s });
     let P = E?.info_label ?? (null != I ? c.intl.formatToPlainString(c.t["0aEh2a"], { date: new Date(I) }) : void 0);
     return (0, i.jsx)(D.A, {
@@ -332,7 +332,7 @@ function em(e) {
         k = (0, N.J9)({ location: "UserProfileBadgeList" }),
         F = (function (e) {
             let { location: t } = e;
-            return O.useConfig({ location: t }).enabled;
+            return R.useConfig({ location: t }).enabled;
         })({ location: "UserProfileBadgeList" });
     r.useEffect(() => {
         (k || F) && s?.userId != null && !C.Ay.hasCatalogFor(s.userId) && (0, S.R)(s.userId);
@@ -342,7 +342,7 @@ function em(e) {
             if (!F || null == V) return null;
             let e = {};
             for (let n of t) {
-                let t = (0, R.w0)(n.id);
+                let t = (0, O.w0)(n.id);
                 if (null == t) continue;
                 let i = C.Ay.getBadgeById(t, V)?.simple_icon_url;
                 null != i && (e[n.id] = i);
@@ -369,24 +369,23 @@ function em(e) {
                     className: A()(eT.qS, null != S && eT.Do, a),
                 }),
                 C = null != o && o(e.id),
-                O = {
+                R = {
                     onClick: (i) => {
                         M({ action: "PRESS_BADGE" }),
                             (0, eA.vP)({
-                                badgeId: (0, R.w0)(e.id),
+                                badgeId: (0, O.w0)(e.id),
                                 badgeAction: "PRESS_BADGE",
                                 position: t,
                                 analyticsLocations: D,
                                 ...v,
                             });
-                        let r = e.id.startsWith("staff") && !_,
-                            a = s?.userId != null ? d.default.getUser(s.userId) : null;
-                        if (k && !r && a?.bot !== !0) {
+                        let r = s?.userId != null ? d.default.getUser(s.userId) : null;
+                        if (k && r?.bot !== !0) {
                             i.preventDefault(),
                                 (0, P._)({
-                                    initialBadgeId: (0, R.w0)(e.id),
+                                    initialBadgeId: (0, O.w0)(e.id),
                                     targetUserId: s?.userId,
-                                    targetUsername: a?.globalName ?? a?.username,
+                                    targetUsername: r?.globalName ?? r?.username,
                                 });
                             return;
                         }
@@ -423,8 +422,8 @@ function em(e) {
                             }
                             return (0, J.D)({ analyticsLocations: D, displayProfile: s }), void l?.();
                         }
-                        let o = null != e.link ? (0, T.default)(e.link, { analyticsLocations: D }) : null;
-                        if (null != o) return l?.(), (0, I.closeAllModals)(), o(i);
+                        let a = null != e.link ? (0, T.default)(e.link, { analyticsLocations: D }) : null;
+                        if (null != a) return l?.(), (0, I.closeAllModals)(), a(i);
                     },
                     onMouseEnter: () => {
                         "quest_completed" === e.id &&
@@ -434,7 +433,7 @@ function em(e) {
                             }),
                             M({ action: "HOVER_BADGE" }),
                             (0, eA.vP)({
-                                badgeId: (0, R.w0)(e.id),
+                                badgeId: (0, O.w0)(e.id),
                                 badgeAction: "HOVER_BADGE",
                                 position: t,
                                 analyticsLocations: D,
@@ -453,12 +452,12 @@ function em(e) {
                         userId: s?.userId,
                         fallbackTitle: e.description,
                         fallbackIconSrc: e.iconSrc ?? e.simple_icon_url ?? (0, W.L7)(e.icon),
-                        children: (0, i.jsx)(f.Anchor, { ...O, children: N }),
+                        children: (0, i.jsx)(f.Anchor, { ...R, children: N }),
                     },
                     `${e.id}-${t}`,
                 );
             if (g) {
-                let n = (0, i.jsx)(f.Anchor, { ...O, ref: E, children: N });
+                let n = (0, i.jsx)(f.Anchor, { ...R, ref: E, children: N });
                 return (0, i.jsx)(
                     "div",
                     {
@@ -480,7 +479,7 @@ function em(e) {
                 );
             }
             if (n) {
-                let n = (0, i.jsx)(f.Anchor, { ...O, ref: L, children: N });
+                let n = (0, i.jsx)(f.Anchor, { ...R, ref: L, children: N });
                 return (0, i.jsx)(
                     eo,
                     {
@@ -494,14 +493,14 @@ function em(e) {
                 );
             }
             if (h) {
-                let n = (0, i.jsx)(f.Anchor, { ...O, ref: y, children: N });
+                let n = (0, i.jsx)(f.Anchor, { ...R, ref: y, children: N });
                 return (0, i.jsx)(
                     G,
                     { targetElementRef: y, delay: W.In, forceOpen: C, badgeDescription: e.description, children: n },
                     `${e.id}-${t}`,
                 );
             }
-            let F = (0, i.jsx)(f.Anchor, { ...O, children: N }),
+            let F = (0, i.jsx)(f.Anchor, { ...R, children: N }),
                 V = (function (e) {
                     let { badge: t, tieredTenureBadge: n } = e;
                     return void 0 !== n && t.id !== ep

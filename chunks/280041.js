@@ -11,8 +11,8 @@ var i,
     u = n(793574),
     _ = n(688810),
     E = n(793943),
-    A = n(31502),
-    h = n(259065),
+    A = n(259065),
+    h = n(325499),
     I = n(532794),
     f = n(206835),
     p = n(192444),
@@ -22,8 +22,8 @@ var i,
     S = n(780964),
     N = n(766075),
     C = n(676279),
-    R = n(975571),
-    O = n(769623),
+    O = n(975571),
+    R = n(769623),
     L = n(707922),
     y = n(852218),
     D = n(161319),
@@ -101,17 +101,17 @@ let ed = function () {
         a = (0, f.A)({ scrollPosition: W._F.TRY_IT_OUT, analyticsLocations: t }),
         v = (0, l.useCallback)(() => {
             (0, N.openUserSettings)(S.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
-                (0, h.L)({ analyticsLocations: t }),
+                (0, A.L)({ analyticsLocations: t }),
             );
         }, [t]),
         b = (0, l.useCallback)(() => {
             (0, I.A)({ subscriptionTier: V.pe.TIER_2, initialPlanId: V.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
         M = (0, C.TM)(),
-        P = R.A.getArticleURL(H.MVz.REFERRAL_PROGRAM),
+        P = O.A.getArticleURL(H.MVz.REFERRAL_PROGRAM),
         { shouldShowBonusOrbsUX: es, multiplier: el } = (0, p.lk)(j.rE.NITRO_HOME_MARKETING),
         ed = l.useRef(null),
-        ec = (0, A.l)("bento_box"),
+        ec = (0, h.b)("bento_box"),
         eu = {
             premiumGroup: { thumbnail: X, assetUrl: X },
             serverProfiles: {
@@ -173,7 +173,7 @@ let ed = function () {
             combinedOrbs: { thumbnail: et, assetUrl: M ? J : ee },
             threePPromotions: { thumbnail: ec ? (0, s.jsx)(U, { ref: ed }) : Q, assetUrl: ec ? void 0 : Q },
         },
-        e_ = (0, O.Y)({ location: "bento_box" }),
+        e_ = (0, R.Y)({ location: "bento_box" }),
         eE = (0, L.A)(!e_),
         eA = {
             serverProfiles: {
@@ -308,7 +308,7 @@ let ed = function () {
                 description: z.intl.string($.default.wMi514),
                 descriptionCta: z.intl.string(z.t.hvVgAZ),
                 onClick: () => {
-                    window.open(R.A.getArticleURL(H.MVz.ORBS_REWARDS_FAQ), "_blank");
+                    window.open(O.A.getArticleURL(H.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
                 previewImage: eu.orbRewards.thumbnail,
                 previewImageStyle: "overlay",

@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(772167),
     N = n(294219),
     C = n(202541),
-    R = n(652215),
-    O = n(375708),
+    O = n(652215),
+    R = n(375708),
     L = n(75662);
 let y = "recurring-3p-progress-label",
     D = (e) => {
@@ -57,7 +57,7 @@ let y = "recurring-3p-progress-label",
                             children: (0, i.jsx)(s.E, {
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: O.intl.string(O.t.rjjZxV),
+                                children: R.intl.string(R.t.rjjZxV),
                             }),
                         }),
                 ],
@@ -97,9 +97,9 @@ function b(e) {
                         endDate: e.endDate,
                         code: n[e.id] ?? null,
                         ...a,
-                        title: O.intl.formatToPlainString(a.title, a.titleParams ?? {}),
+                        title: R.intl.formatToPlainString(a.title, a.titleParams ?? {}),
                         outboundTitle: e.outboundTitle,
-                        body: O.intl.formatToPlainString(a.body, a.bodyParams ?? {}),
+                        body: R.intl.formatToPlainString(a.body, a.bodyParams ?? {}),
                     };
                     r[t].push(s);
                 }),
@@ -107,8 +107,8 @@ function b(e) {
         );
     })({ promotions: M, codesByPromotion: b, partnerIds: P });
     return (0, i.jsx)(o.Modal, {
-        title: O.intl.string(O.t["7ioAjs"]),
-        subtitle: O.intl.format(O.t.LOYRxB, { helpCenterLink: h.A.getArticleURL(R.MVz.RECURRING_PROMOTION) }),
+        title: R.intl.string(R.t["7ioAjs"]),
+        subtitle: R.intl.format(R.t.LOYRxB, { helpCenterLink: h.A.getArticleURL(O.MVz.RECURRING_PROMOTION) }),
         actions: [],
         preview: (function () {
             if (!0 === u)
@@ -139,7 +139,7 @@ function b(e) {
                                   id: y,
                                   variant: "text-md/medium",
                                   color: "text-subtle",
-                                  children: O.intl.format(O.t["43kZKL"], { days: n }),
+                                  children: R.intl.format(R.t["43kZKL"], { days: n }),
                               }),
                           }),
                           (0, i.jsx)("div", {
@@ -175,11 +175,11 @@ function b(e) {
 }
 function M(e) {
     let { analyticsLocations: t, partnerIds: r, isLocked: a } = e;
-    E.default.track(R.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { location_stack: t, partner_ids: r }),
+    E.default.track(O.HAw.THIRD_PARTY_PROMOTION_MODAL_OPENED, { location_stack: t, partner_ids: r }),
         p.Ay.fetchActivePromotions(),
         (0, c.openModalLazy)(async () => {
-            let { Premium3PRewardsModalEntry: e } = await Promise.all([n.e("967"), n.e("91900")]).then(
-                n.bind(n, 92375),
+            let { Premium3PRewardsModalEntry: e } = await Promise.all([n.e("93004"), n.e("85347")]).then(
+                n.bind(n, 355150),
             );
             return (t) => (0, i.jsx)(e, { ...t, partnerIds: r, isLocked: a });
         });

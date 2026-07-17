@@ -48,8 +48,8 @@ var o = n(192308),
     S = n(711014),
     N = n(174459),
     C = n(998218),
-    R = n(877062),
-    O = n(340124),
+    O = n(877062),
+    R = n(340124),
     L = n(859703),
     y = n(405670),
     D = n(192444),
@@ -120,7 +120,7 @@ function z(e) {
             n.e("73"),
             n.e("62875"),
             n.e("71217"),
-            n.e("967"),
+            n.e("93004"),
             n.e("12466"),
             n.e("7865"),
             n.e("36037"),
@@ -154,7 +154,7 @@ function q(e) {
             n.e("72877"),
             n.e("62875"),
             n.e("89393"),
-            n.e("967"),
+            n.e("93004"),
             n.e("6286"),
             n.e("12466"),
             n.e("94704"),
@@ -180,7 +180,7 @@ function Z(e, t, r) {
             n.e("85350"),
             n.e("73"),
             n.e("71217"),
-            n.e("967"),
+            n.e("93004"),
             n.e("12466"),
             n.e("7865"),
             n.e("26747"),
@@ -209,7 +209,7 @@ function X(e, t, r) {
             n.e("73"),
             n.e("71217"),
             n.e("54103"),
-            n.e("967"),
+            n.e("93004"),
             n.e("12466"),
             n.e("77298"),
             n.e("7865"),
@@ -237,7 +237,7 @@ function Q(e, t, r, a) {
             n.e("85350"),
             n.e("73"),
             n.e("71217"),
-            n.e("967"),
+            n.e("93004"),
             n.e("12466"),
             n.e("7865"),
             n.e("90948"),
@@ -371,11 +371,11 @@ function ei(e) {
     let u = (0, r.A)();
     if (!c && t.userStatus?.enrolledAt == null && !(0, F.Ic)(t)) {
         L.A.isEnrolling(t.id) ||
-            (0, O.Oy)(t.id, { questContent: n, questContentCTA: P.Cy.ACCEPT_QUEST, sourceQuestContent: a });
+            (0, R.Oy)(t.id, { questContent: n, questContentCTA: P.Cy.ACCEPT_QUEST, sourceQuestContent: a });
         let e = y.Ay.getState().getVideoProgress(t.id);
         null != e &&
             e.timestampSec > 1 &&
-            ((0, O.QG)(t.id),
+            ((0, R.QG)(t.id),
             N.default.track(W.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: t.id,
                 source_quest_content: (0, P.jO)(a),
@@ -430,7 +430,7 @@ function er(e) {
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        R.A.launch(t, (t) => {
+        O.A.launch(t, (t) => {
             t || (0, T.bG)({ pathname: W.BVt.QUEST_HOME, hash: e });
         });
 }
@@ -452,7 +452,7 @@ function ea(e) {
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        R.A.launch(t, (t) => {
+        O.A.launch(t, (t) => {
             t || (0, T.bG)({ pathname: W.BVt.QUEST_HOME, hash: e });
         });
 }
@@ -474,15 +474,15 @@ function es(e) {
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
-        R.A.launch(t, (e) => {
+        O.A.launch(t, (e) => {
             e || (0, T.bG)({ pathname: W.BVt.QUEST_HOME });
         });
 }
 function el(e, t) {
     (0, o.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
-            n.e("36861"),
-            n.e("16328"),
+            n.e("36646"),
+            n.e("24967"),
             n.e("8304"),
             n.e("47018"),
             n.e("83774"),
@@ -498,7 +498,7 @@ function eo(e) {
             n.e("37757"),
             n.e("75222"),
             n.e("95429"),
-            n.e("45488"),
+            n.e("71997"),
             n.e("48370"),
             n.e("46485"),
         ]).then(n.bind(n, 518420));
@@ -506,7 +506,7 @@ function eo(e) {
     });
 }
 async function ed(e, t) {
-    let { type: n } = await (0, O.Oy)(e.id, {
+    let { type: n } = await (0, R.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
         sourceQuestContent: t.sourceQuestContent,
@@ -514,7 +514,7 @@ async function ed(e, t) {
         questContentRowIndex: t.questContentRowIndex,
     });
     switch (n) {
-        case O.WM.SUCCESS:
+        case R.WM.SUCCESS:
             ei({
                 quest: e,
                 questContent: t.questContent,
@@ -522,12 +522,12 @@ async function ed(e, t) {
                 sourceQuestContentCTA: t.sourceQuestContentCTA,
             });
             break;
-        case O.WM.CAPTCHA_FAILED:
+        case R.WM.CAPTCHA_FAILED:
             E.A.show({ title: k.intl.string(k.t["/CidxO"]), body: k.intl.string(k.t.HQdHg6) });
             break;
-        case O.WM.UNKNOWN_ERROR:
+        case R.WM.UNKNOWN_ERROR:
             E.A.show({ title: k.intl.string(k.t.R0RpRX), body: k.intl.string(k.t.OXD41D) });
-        case O.WM.PREVIOUS_IN_FLIGHT_REQUEST:
+        case R.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
 function ec(e) {
