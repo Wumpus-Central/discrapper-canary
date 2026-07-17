@@ -294,7 +294,7 @@ function eO(e) {
     return (0, r.jsx)("div", {
         className: ej.nJ,
         role: "img",
-        "aria-label": F.intl.string(F.t.SZeUdR),
+        "aria-label": F.intl.formatToPlainString(F.t["95pCSf"], { a11y_text: n.label }),
         children: (0, r.jsxs)(em.M, {
             children: [
                 (0, r.jsx)(ek, { user: s.mallow, innerClassName: ej.ab }),
@@ -628,9 +628,9 @@ var eq = n(462887),
     e2 = n(736653),
     e4 = n(44120),
     e6 = n(465794),
-    e3 = n(757036),
-    e5 = n(761705),
-    e9 = n(449410),
+    e5 = n(757036),
+    e9 = n(761705),
+    e3 = n(449410),
     e7 = n(580630),
     e8 = n(4227),
     te = n(940980),
@@ -879,7 +879,7 @@ var tb = n(525723),
 function tB(e) {
     let t = (0, ty.X)(e.selectedProduct),
         n = t && null != e.giftRecipient;
-    return (0, r.jsx)(e9.$, {
+    return (0, r.jsx)(e3.$, {
         isGifting: n,
         location: "CollectiblesShopProductDetailsModal",
         children: (0, r.jsx)(tU, { ...e, canGiftProduct: t }),
@@ -902,7 +902,7 @@ function tU(e) {
             canGiftProduct: E,
         } = e,
         { cardId: p, sessionId: g, tilePosition: N } = (0, A.uM)() ?? {},
-        C = (0, e3.L)(tN.PremiumTypes.TIER_2),
+        C = (0, e5.L)(tN.PremiumTypes.TIER_2),
         _ = (0, I.xM)(t),
         k = (0, eK.Do)("CollectiblesShopProductDetailsModal") && i.type === L.R.PROFILE_FRAME,
         O = eC.Ay.canUseShopDiscounts(t) || k,
@@ -916,7 +916,7 @@ function tU(e) {
         G = (0, I.G0)(i),
         V = (0, I.yt)(i, j.lid.DEFAULT),
         z = V?.amount === 0,
-        { prioritizeGifting: K, removeOrbsClaim: W } = (0, e9.q)(),
+        { prioritizeGifting: K, removeOrbsClaim: W } = (0, e3.q)(),
         Y = (0, tb.V_)(n),
         $ = null != Y,
         X = (0, te.W)("CollectiblesShopProductDetailsModal"),
@@ -930,7 +930,7 @@ function tU(e) {
         Q = K && W ? Z.filter((e) => e.currency !== tk.Yr.DISCORD_ORB) : Z,
         ee = (0, tn.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
         et = s.useMemo(() => Z.some((e) => e.currency === tk.Yr.DISCORD_ORB), [Z]);
-    (0, e5.W)({ disableFetch: !et });
+    (0, e9.W)({ disableFetch: !et });
     let en = s.useCallback(() => {
         h(w.sH.BUY_WITH_FIAT),
             (0, e4.A)({
@@ -1303,9 +1303,9 @@ function t1(e) {
 var t2 = n(139146),
     t4 = n(60465),
     t6 = n(976860),
-    t3 = n(975732),
-    t5 = n(50920),
-    t9 = n(23161),
+    t5 = n(975732),
+    t9 = n(50920),
+    t3 = n(23161),
     t7 = n(668953),
     t8 = n(881636),
     ne = n(428445);
@@ -1360,9 +1360,9 @@ function ni(e) {
         N = v ? l.items.length : 0,
         C = tz.useConfig({ location: "CollectiblesShopProductDetailsModal" }).showCollectionButton,
         _ = (function () {
-            let e = (0, t5.a)("CollectiblesPdpNavigateToCollection"),
+            let e = (0, t9.a)("CollectiblesPdpNavigateToCollection"),
                 { sessionId: t } = (0, A.uM)() ?? {},
-                n = (0, t9.v)((e) => e.reset);
+                n = (0, t3.v)((e) => e.reset);
             return s.useCallback(
                 (i, r) => {
                     if (
@@ -1371,7 +1371,7 @@ function ni(e) {
                             sku_id: i.skuId,
                             cta_name: r,
                         }),
-                        (0, t3.closeUserProfileModal)(),
+                        (0, t5.closeUserProfileModal)(),
                         (0, t4.p)(),
                         e && !0 !== i.isOrbsExclusive)
                     )
