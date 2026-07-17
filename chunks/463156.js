@@ -1,17 +1,15 @@
-n.d(l, { A: () => o });
+n.d(l, { A: () => s });
 var t = n(627968);
 n(64700);
 var i = n(408278),
     r = n(789645),
-    a = n(23722),
-    s = n(375708);
-function o(e) {
-    let { isCurrentUser: l, onClose: n } = e,
-        o = (0, a.A)(n, l);
+    a = n(375708);
+function s(e) {
+    let { onClose: l } = e;
     return (0, t.jsx)(i.K, {
-        "aria-label": s.intl.string(s.t.cpT0Cq),
+        "aria-label": a.intl.string(a.t.cpT0Cq),
         icon: r.P,
-        onClick: o,
+        onClick: l,
         variant: "secondary",
         size: "sm",
     });

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => p, n: () => A });
+n.d(t, { A: () => p, n: () => E });
 var i = n(627968);
 n(64700);
 var r = n(192308),
@@ -7,33 +7,36 @@ var r = n(192308),
     s = n(267102),
     l = n(287809),
     o = n(207803),
-    d = n(958805),
-    c = n(591179),
-    u = n(485745),
-    _ = n(652215);
-let E = new Set();
-function A(e, t) {
+    d = n(591179),
+    c = n(485745),
+    u = n(652215);
+let _ = new Set();
+function E(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
+}
+function A() {
+    let e = !(0, d.E)("UserProfileModalManager");
+    return (0, c.b)(e);
 }
 async function h(e) {
     let {
             userId: t,
             tabSection: a,
-            scrollTarget: h,
-            guildId: I,
-            originGuildId: f,
-            channelId: p,
-            appContext: T,
-            customStatusPrompt: m,
-            onModalOpen: g,
-            ...S
+            scrollTarget: d,
+            guildId: c,
+            originGuildId: h,
+            channelId: I,
+            appContext: f,
+            customStatusPrompt: p,
+            onModalOpen: T,
+            ...m
         } = e,
-        N = l.default.getUser(t);
-    if (null == N) return;
-    let C = l.default.getCurrentUser();
-    if (null == C) return;
-    let O = A(t, I);
-    E.add(
+        g = l.default.getUser(t);
+    if (null == g) return;
+    let S = l.default.getCurrentUser();
+    if (null == S) return;
+    let N = E(t, c);
+    _.add(
         await (0, r.openModalLazy)(
             async () => {
                 let e = (
@@ -407,7 +410,7 @@ async function h(e) {
                         n.e("8032"),
                         n.e("77970"),
                         n.e("14248"),
-                        n.e("57757"),
+                        n.e("2454"),
                         n.e("10576"),
                         n.e("72163"),
                         n.e("57931"),
@@ -425,36 +428,46 @@ async function h(e) {
                 ).default;
                 return (t) =>
                     (0, i.jsx)(e, {
-                        user: N,
-                        currentUser: C,
-                        guildId: I,
-                        originGuildId: f ?? I,
+                        user: g,
+                        currentUser: S,
+                        guildId: c,
+                        originGuildId: h ?? c,
                         initialTabSection: a,
-                        initialScrollTarget: h,
-                        channelId: p,
-                        customStatusPrompt: m,
+                        initialScrollTarget: d,
+                        channelId: I,
+                        customStatusPrompt: p,
                         ...t,
-                        ...S,
+                        ...m,
                     });
             },
             {
-                modalKey: O,
-                contextKey: (0, r.modalContextFromAppContext)(T ?? (0, s.zd)() ?? _.BRT.APP),
+                modalKey: N,
+                contextKey: (0, r.modalContextFromAppContext)(f ?? (0, s.zd)() ?? u.BRT.APP),
                 onCloseRequest: () => {
-                    let e = !(0, c.E)("UserProfileModalManager");
-                    t === C.id && (0, u.b)(e)
-                        ? (0, o.VQ)()
-                        : ((0, r.closeModal)(O), E.delete(O), d.A.clearPendingWidgets(), e || (0, o.XQ)());
+                    t === S.id && A() ? (0, o.VQ)() : ((0, r.closeModal)(N), _.delete(N));
                 },
+                onCloseCallback: () => _.delete(N),
             },
         ),
     ),
-        g?.();
+        T?.();
 }
 function I() {
-    if (0 !== E.size) {
-        for (let e of E) (0, r.closeModal)(e);
-        E.clear(), d.A.clearPendingWidgets(), (0, c.E)("UserProfileModalManager") && (0, o.XQ)();
+    if (0 === _.size) return;
+    let e = l.default.getCurrentUser();
+    for (let t of _) {
+        if (
+            null != e &&
+            (function (e) {
+                let t = e.indexOf(":", 23);
+                return -1 !== t ? e.slice(23, t) : e.slice(23);
+            })(t) === String(e.id) &&
+            A()
+        ) {
+            A() && (0, o.VQ)();
+            continue;
+        }
+        (0, r.closeModal)(t), _.delete(t);
     }
 }
 class f extends a.A {

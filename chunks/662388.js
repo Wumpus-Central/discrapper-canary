@@ -63,7 +63,7 @@ class N {
     }
 }
 var C = n(488430);
-class R {
+class O {
     dismissibleContent;
     version;
     refTargetBackground;
@@ -80,7 +80,7 @@ class R {
             (this.showHoverGradient = e.showHoverGradient);
     }
     static fromServer(e) {
-        return new R({
+        return new O({
             ...e,
             dismissibleContent: e.dismissible_content,
             refTargetBackground: e.ref_target_background,
@@ -90,7 +90,7 @@ class R {
         });
     }
 }
-class O {
+class R {
     title;
     body;
     asset;
@@ -107,7 +107,7 @@ class O {
             (this.revertTextColor = e.revert_text_color);
     }
     static fromServer(e) {
-        return new O(e);
+        return new R(e);
     }
 }
 class L {
@@ -144,7 +144,7 @@ class L {
         });
     }
 }
-class D {
+class y {
     title;
     body;
     asset;
@@ -167,7 +167,7 @@ class D {
             (this.showHoverGradient = e.showHoverGradient);
     }
     static fromServer(e) {
-        return new D({
+        return new y({
             ...e,
             dismissibleContent: e.dismissible_content,
             refTargetBackground: e.ref_target_background,
@@ -177,25 +177,25 @@ class D {
         });
     }
 }
-class y {
+class D {
     marketingsBySurfaces;
     constructor(e) {
         this.marketingsBySurfaces = e;
     }
     static fromServer(e) {
-        return new y(
+        return new D(
             Object.fromEntries(
                 Object.entries(e?.marketings ?? {}).map((e) => {
                     let [t, n] = e;
                     switch (n?.type) {
                         case C.G.BADGE:
-                            return [t, R.fromServer(n)];
-                        case C.G.BANNER:
                             return [t, O.fromServer(n)];
+                        case C.G.BANNER:
+                            return [t, R.fromServer(n)];
                         case C.G.COACHMARK:
                             return [t, L.fromServer(n)];
                         case C.G.TAB_TOOLTIP:
-                            return [t, D.fromServer(n)];
+                            return [t, y.fromServer(n)];
                         default:
                             return [t, void 0];
                     }
@@ -595,8 +595,9 @@ function ee(e) {
     let { tab: t, ...i } = e;
     {
         let { default: e } = n(830543),
-            { default: r } = n(408166);
-        et(i), e(), r(), (0, _.pX)(null != t ? w.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : w.BVt.COLLECTIBLES_SHOP);
+            { default: r } = n(408166),
+            { closeUserProfileModal: a } = n(975732);
+        et(i), e(), a(), r(), (0, _.pX)(null != t ? w.BVt.COLLECTIBLES_SHOP_WITH_TAB(t) : w.BVt.COLLECTIBLES_SHOP);
     }
 }
 function et(e) {
@@ -734,7 +735,7 @@ async function eu(e) {
     t !== a.P.PROD && (n.release = t);
     try {
         let e = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_MARKETING, query: n, rejectWithError: !0 });
-        o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: y.fromServer(e.body) });
+        o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_SUCCESS", marketings: D.fromServer(e.body) });
     } catch (e) {
         (0, u.o)(new d.LG(e)), o.h.dispatch({ type: "COLLECTIBLES_MARKETING_FETCH_FAILURE" });
     }
