@@ -1,4 +1,4 @@
-n.d(t, { A: () => X });
+n.d(t, { A: () => Y });
 var s,
     r = n(627968),
     a = n(64700),
@@ -13,8 +13,8 @@ var s,
     m = n(331322),
     N = n(778712),
     E = n(707554),
-    g = n(685094),
-    f = n(830215),
+    f = n(685094),
+    g = n(830215),
     y = n(730134);
 function A() {
     return "u" < typeof document || "visible" === document.visibilityState;
@@ -31,8 +31,8 @@ var x = n(414121),
     C = n(636537),
     v = n(765548),
     S = n(626584),
-    _ = n(751124),
-    j = n(625494);
+    j = n(751124),
+    _ = n(625494);
 n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300);
 var b = n(284009),
     T = n.n(b),
@@ -95,15 +95,16 @@ var F = n(652215);
 let M = new S.A("useAuthWebsocket");
 var K = n(293731),
     W = n(280450),
+    B = n(403362),
     U = n(723702),
-    B = n(427262),
-    $ = n(19575),
-    H = n(818348),
-    z = n(375708),
-    V = n(611008),
-    Z = n(818050);
+    $ = n(427262),
+    H = n(19575),
+    z = n(818348),
+    V = n(375708),
+    Z = n(611008),
+    J = n(818050);
 let Q = n(906118);
-function J(e) {
+function q(e) {
     let { text: t = "" } = e,
         [n, s] = a.useState(!1);
     a.useEffect(() => {
@@ -111,34 +112,37 @@ function J(e) {
         (e.src = Q), (e.onload = () => s(!0)), (e.onerror = () => s(!0));
     }, [Q]),
         a.useEffect(() => {
-            n && c.O.announce(z.intl.string(z.t.j2p125));
+            n && c.O.announce(V.intl.string(V.t.j2p125));
         }, [n]);
-    let i = "" !== t && n;
+    let i = "" !== t && n,
+        l = (0, B.m6)() && !i;
     return (0, r.jsx)("div", {
-        className: V.Ac,
+        className: Z.Ac,
         role: i ? "img" : void 0,
-        "aria-label": i ? z.intl.string(z.t.SzYj9v) : void 0,
+        "aria-label": i ? V.intl.string(V.t.SzYj9v) : void 0,
         tabIndex: i ? 0 : void 0,
         children: i
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      (0, r.jsx)(x.Ay, { className: V.JB, size: 160, text: t }),
+                      (0, r.jsx)(x.Ay, { className: Z.JB, size: 160, text: t }),
                       (0, r.jsx)("div", {
-                          className: V.R6,
+                          className: Z.R6,
                           "aria-hidden": !0,
                           children: (0, r.jsx)("img", { src: Q, alt: "" }),
                       }),
                   ],
               })
-            : (0, r.jsx)("div", {
-                  className: V.R6,
-                  "aria-label": z.intl.string(z.t.BUGkVF),
-                  "aria-busy": !0,
-                  children: (0, r.jsx)(d.y, { className: V.JB, type: d.y.Type.WANDERING_CUBES, "aria-hidden": !0 }),
-              }),
+            : l
+              ? (0, r.jsx)(x.Ay, { className: Z.JB, size: 160, text: "placeholder", fgColor: "#ffffff" })
+              : (0, r.jsx)("div", {
+                    className: Z.R6,
+                    "aria-label": V.intl.string(V.t.BUGkVF),
+                    "aria-busy": !0,
+                    children: (0, r.jsx)(d.y, { className: Z.JB, type: d.y.Type.WANDERING_CUBES, "aria-hidden": !0 }),
+                }),
     });
 }
-function q(e) {
+function X(e) {
     let {
         state: t,
         cancel: n,
@@ -151,7 +155,7 @@ function q(e) {
     switch (t.step) {
         case w.INITIALIZING:
         case w.PENDING_REMOTE_INIT: {
-            let e = (0, r.jsx)(J, {
+            let e = (0, r.jsx)(q, {
                     text: t.step === w.PENDING_REMOTE_INIT ? `https://discord.com/ra/${t.fingerprint}` : "",
                 }),
                 n = o
@@ -174,27 +178,27 @@ function q(e) {
                         (0, r.jsx)(u.D, {
                             variant: n.heading,
                             color: n.headingColor,
-                            className: Z.QB,
-                            children: z.intl.string(z.t.UPiHaL),
+                            className: J.QB,
+                            children: V.intl.string(V.t.UPiHaL),
                         }),
                         (0, r.jsx)(h.E, {
                             variant: n.text,
                             color: null != s ? "text-feedback-critical" : n.descriptionColor,
-                            children: null != s ? s : z.intl.format(z.t["Qq+A6i"], {}),
+                            children: null != s ? s : V.intl.format(V.t["Qq+A6i"], {}),
                         }),
                     ],
                 }),
                 d = (0, r.jsx)(p.Q, {
-                    text: z.intl.string(z.t["/kpMDt"]),
+                    text: V.intl.string(V.t["/kpMDt"]),
                     textVariant: n.button,
                     onClick: () =>
                         (function (e) {
                             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                                 n =
-                                    U.isPlatformEmbedded && $.Ay.supportsFeature(F.BYE.WEBAUTHN)
-                                        ? $.Ay.webAuthnAuthenticate
+                                    U.isPlatformEmbedded && H.Ay.supportsFeature(F.BYE.WEBAUTHN)
+                                        ? H.Ay.webAuthnAuthenticate
                                         : K.J;
-                            f.A.authenticatePasswordless({
+                            g.A.authenticatePasswordless({
                                 authenticateFunc: n,
                                 conditionalMediationAbortController: e,
                                 isMultiAccount: t,
@@ -204,8 +208,8 @@ function q(e) {
                 });
             return o
                 ? (0, r.jsxs)("div", {
-                      className: V.vG,
-                      children: [e, (0, r.jsxs)(m.B, { align: "start", className: V.KY, children: [c, d] })],
+                      className: Z.vG,
+                      children: [e, (0, r.jsxs)(m.B, { align: "start", className: Z.KY, children: [c, d] })],
                   })
                 : (0, r.jsxs)(r.Fragment, {
                       children: [e, c, (0, r.jsx)(m.B, { padding: 8, align: "center", children: d })],
@@ -216,27 +220,27 @@ function q(e) {
             return (0, r.jsxs)(r.Fragment, {
                 children: [
                     (0, r.jsx)(y.A, {
-                        className: V.b4,
+                        className: Z.b4,
                         user: e,
                         size: N._3.SIZE_120,
                         isMobile: !0,
-                        status: H.cl.ONLINE,
+                        status: z.cl.ONLINE,
                     }),
                     (0, r.jsx)(u.D, {
                         variant: "heading-xl/semibold",
                         color: "text-strong",
-                        className: Z.QB,
-                        children: z.intl.string(z.t.apGCUT),
+                        className: J.QB,
+                        children: V.intl.string(V.t.apGCUT),
                     }),
                     (0, r.jsx)(h.E, {
                         variant: "text-md/normal",
                         color: "text-default",
-                        children: z.intl.format(z.t.Cbl5JK, { username: `${B.Ay.getUserTag(e)}` }),
+                        children: V.intl.format(V.t.Cbl5JK, { username: `${$.Ay.getUserTag(e)}` }),
                     }),
                     (0, r.jsx)("div", {
-                        className: V.Z,
+                        className: Z.Z,
                         children: (0, r.jsx)(p.Q, {
-                            text: z.intl.string(z.t.nOOhwo),
+                            text: V.intl.string(V.t.nOOhwo),
                             textVariant: "text-sm/normal",
                             onClick: n,
                         }),
@@ -249,7 +253,7 @@ function q(e) {
             return (0, r.jsx)(d.y, { type: d.y.Type.WANDERING_CUBES });
     }
 }
-function X(e) {
+function Y(e) {
     let {
             onAuthenticateSuccess: t,
             conditionalMediationAbortController: n,
@@ -295,14 +299,14 @@ function X(e) {
                     }
                     let a = `${window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT}/?v=2`;
                     a.startsWith("//") && (a = `wss:${a}`);
-                    let i = (0, _.A)(a);
+                    let i = (0, j.A)(a);
                     M.info(`[0ms] connecting to ${a}`);
                     let l = null,
                         o = null,
                         m = null,
                         N = null,
                         E = !0;
-                    function g() {
+                    function f() {
                         if (null != l) return l;
                         throw Error("No key pair set");
                     }
@@ -317,13 +321,13 @@ function X(e) {
                         switch (l.op) {
                             case "nonce_proof": {
                                 let e = l.encrypted_nonce,
-                                    t = await D.decryptNonce(g(), e);
+                                    t = await D.decryptNonce(f(), e);
                                 r("computed nonce proof"), i.send(JSON.stringify({ op: "nonce_proof", nonce: t }));
                                 return;
                             }
                             case "pending_remote_init": {
-                                u.succeed(), j._.dispatch(F.jej.WAVE_EMPHASIZE);
-                                let e = await D.publicKeyFingerprint(g());
+                                u.succeed(), _._.dispatch(F.jej.WAVE_EMPHASIZE);
+                                let e = await D.publicKeyFingerprint(f());
                                 if (e !== l.fingerprint) throw Error(`bad fingerprint ${e} !== ${l.fingerprint}`);
                                 r("handshake complete awaiting remote auth."),
                                     c({ step: w.PENDING_REMOTE_INIT, fingerprint: e });
@@ -343,16 +347,16 @@ function X(e) {
                                             if (null == d.current) return void p();
                                             let s = await D.decryptEncodedCiphertext(d.current, t.body.encrypted_token),
                                                 r = await D.publicKeyFingerprint(d.current);
-                                            n ? await f.A.switchAccountToken(s) : await f.A.loginToken(s, !1), e(r);
+                                            n ? await g.A.switchAccountToken(s) : await g.A.loginToken(s, !1), e(r);
                                         })
                                         .catch(() => p());
                                 return;
                             }
                             case "pending_ticket": {
-                                j._.dispatch(F.jej.WAVE_EMPHASIZE),
+                                _._.dispatch(F.jej.WAVE_EMPHASIZE),
                                     r("remote auth handshake started, awaiting ticket/cancel.");
                                 let e = l.encrypted_user_payload,
-                                    t = await P(g(), e);
+                                    t = await P(f(), e);
                                 c({ step: w.PENDING_TICKET, user: t });
                                 return;
                             }
@@ -444,14 +448,14 @@ function X(e) {
             }
         })(d.step);
     return (0, r.jsx)(E.F, {
-        children: (0, r.jsx)(g.Y, {
+        children: (0, r.jsx)(f.Y, {
             fillParent: !0,
-            className: l()(V.ZF, { [V.dV]: i }),
+            className: l()(Z.ZF, { [Z.dV]: i }),
             step: h,
             steps: [0, 1],
             children: (0, r.jsx)("div", {
-                className: V.vP,
-                children: (0, r.jsx)(q, {
+                className: Z.vP,
+                children: (0, r.jsx)(X, {
                     state: d,
                     cancel: u,
                     conditionalMediationAbortController: n,
