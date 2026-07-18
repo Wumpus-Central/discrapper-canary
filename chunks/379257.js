@@ -120,18 +120,18 @@ let T = {
     showAgeVerificationGetStartedModal: function (e) {
         let { onClose: t, entryPoint: r } = e;
         if (A(r)) {
-            let e = d.default.getCurrentUser()?.ageVerificationStatus,
-                n = () => {
-                    s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
-                };
+            let e = d.default.getCurrentUser()?.ageVerificationStatus;
+            function c() {
+                s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
+            }
             s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
                 p({
                     entryPoint: r,
                     onClose: () => {
-                        n(), t?.();
+                        c(), t?.();
                     },
                     onComplete: () => {},
-                    onCancel: n,
+                    onCancel: c,
                 });
             return;
         }
