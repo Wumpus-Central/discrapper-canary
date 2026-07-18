@@ -1,0 +1,178 @@
+.emptyContainer__4a7f0 {
+    box-sizing: border-box;
+    height: 480px;
+    padding: 16px
+}
+
+.emptyContainer__4a7f0,
+.emptyInner__4a7f0 {
+    display: flex;
+    flex-direction: column
+}
+
+.emptyInner__4a7f0 {
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 0 40px;
+    pointer-events: none;
+    text-align: center
+}
+
+.image__4a7f0 {
+    margin-bottom: 24px;
+    width: 140px
+}
+
+.header__4a7f0 {
+    margin-bottom: 8px
+}
+
+.upsellButton__4a7f0 {
+    background: var(--custom-premium-colors-premium-gradient-tier-2-tri-color);
+    background-clip: padding-box;
+    border-radius: 3px;
+    flex-shrink: 0;
+    margin-inline-start: auto
+}
+
+.upsellContainer__4a7f0 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: 4px;
+    display: flex;
+    padding: 12px
+}
+
+.upsellText__4a7f0 {
+    margin-inline-start: 8px
+}
+
+.deletedMessage__4ad69 {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px
+}
+
+.left__4ad69 {
+    gap: 6px
+}
+
+.deletedIcon__4ad69,
+.left__4ad69 {
+    align-items: center;
+    display: flex
+}
+
+.deletedIcon__4ad69 {
+    background: var(--background-base-lowest);
+    border-radius: 6px;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.box__376cb {
+    background: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--space-16);
+    overflow: clip;
+    transition: box-shadow .1s ease-in-out
+}
+
+.loading__376cb {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: var(--space-48)
+}
+
+.singleMessage__376cb {
+    margin: var(--space-12) 0;
+    overflow: hidden
+}
+
+.scroller__376cb {
+    padding: var(--space-16) var(--space-16) 0
+}
+
+.friendRequestsButton_c7a32c {
+    align-items: center;
+    background-color: var(--control-secondary-background-default);
+    border: 1px solid var(--control-secondary-border-default);
+    border-radius: 8px;
+    color: var(--control-secondary-text-default);
+    cursor: pointer;
+    display: flex;
+    gap: 8px;
+    height: 32px;
+    padding: 0 8px
+}
+
+.friendRequestsButton_c7a32c:hover {
+    background-color: var(--control-secondary-background-hover);
+    color: var(--interactive-text-active)
+}
+
+.container__319e1 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 360px;
+    padding: 0 16px;
+    text-align: center
+}
+
+.iconContainer__319e1 {
+    margin-bottom: 16px;
+    position: relative
+}
+
+.icon__319e1 {
+    background-color: var(--background-base-low);
+    border-radius: 80px;
+    color: var(--text-muted);
+    padding: 22px
+}
+
+.stars__319e1 {
+    inset-inline-start: -10px;
+    position: absolute
+}
+
+.header__319e1 {
+    margin-bottom: 8px
+}
+
+.protip__319e1 {
+    text-transform: uppercase
+}
+
+.button__52d59 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center;
+    padding: var(--space-4)
+}
+
+.chevron__52d59 {
+    transform: rotate(0deg)
+}
+
+.full-motion .chevron__52d59 {
+    transition: transform .2s ease
+}
+
+.chevron__52d59.collapsed__52d59 {
+    transform: rotate(-90deg)
+}
+
+.collapsible__5c0bc {
+    overflow: hidden
+}
