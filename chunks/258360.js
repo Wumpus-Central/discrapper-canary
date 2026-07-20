@@ -30,8 +30,8 @@ var a = n(627968),
     P = n(375708),
     I = n(27013);
 function O(t) {
-    let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U } = t,
-        L = r.useCallback(
+    let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U, clipboardHasMixedContent: L } = t,
+        v = r.useCallback(
             (t) => {
                 i.rL.focus(O),
                     setTimeout(() => {
@@ -40,18 +40,18 @@ function O(t) {
             },
             [O],
         ),
-        v = r.useCallback(() => {
-            (0, u.Z_)(L);
-        }, [L]),
         w = r.useCallback(() => {
+            (0, u.Z_)(v);
+        }, [v]),
+        F = r.useCallback(() => {
             let t = S.Ay.readClipboard();
             0 !== t.length &&
-                L(() => {
+                v(() => {
                     l.gB.insertText(O, t);
                 });
-        }, [L, O]),
-        [F, G] = (0, f.A)({ text: e, target: R, onHeightUpdate: X }),
-        K = (function (t) {
+        }, [v, O]),
+        [G, K] = (0, f.A)({ text: e, target: R, onHeightUpdate: X }),
+        V = (function (t) {
             let e = (0, k.b)(),
                 l = (0, s.bG)([D.A], () => D.A.getTransforms()),
                 { selection: c } = t,
@@ -236,14 +236,13 @@ function O(t) {
                   })
                 : null;
         })(O),
-        V = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
-        W = g._3.useSetting();
+        W = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
+        Y = g._3.useSetting();
     if (!p.isPlatformEmbedded) return null;
-    let Y = O.chatInputType?.commands?.enabled ?? !1,
-        B = O.chatInputType?.stickers?.autoSuggest ?? !1,
-        Z = O.chatInputType?.submit?.button ?? !1,
-        z = Y || B,
-        H = S.Ay.clipboardHasMixedContent(),
+    let B = O.chatInputType?.commands?.enabled ?? !1,
+        Z = O.chatInputType?.stickers?.autoSuggest ?? !1,
+        z = O.chatInputType?.submit?.button ?? !1,
+        H = B || Z,
         Q =
             "" !== e
                 ? [
@@ -272,9 +271,9 @@ function O(t) {
         $ = (0, a.jsx)(o.sL, {
             id: "command-suggestions",
             label: P.intl.string(P.t["9rJKF7"]),
-            checked: W,
+            checked: Y,
             action: () => {
-                let t = !W;
+                let t = !Y;
                 g._3.updateSetting(t),
                     b.default.track(N.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
@@ -285,22 +284,22 @@ function O(t) {
     return (0, a.jsxs)(c.W, {
         "data-menu-migrated": !0,
         navId: "textarea-context",
-        onClose: v,
+        onClose: w,
         "aria-label": P.intl.string(P.t.NWlDSI),
         onSelect: U,
         children: [
-            z && (0, a.jsx)(o.Dr, { id: "suggestions", label: P.intl.string(P.t.zgxg7v), children: Y && $ }),
-            Z &&
+            H && (0, a.jsx)(o.Dr, { id: "suggestions", label: P.intl.string(P.t.zgxg7v), children: B && $ }),
+            z &&
                 (0, a.jsx)(o.sL, {
                     id: "submit-button",
                     label: P.intl.string(P.t.G8XDyj),
-                    checked: V,
+                    checked: W,
                     action: () => {
                         (0, d.Xt)();
                     },
                 }),
-            (0, a.jsx)(o.rX, { children: F }),
-            (0, a.jsxs)(o.rX, { children: [G, K] }),
+            (0, a.jsx)(o.rX, { children: G }),
+            (0, a.jsxs)(o.rX, { children: [K, V] }),
             (0, a.jsxs)(o.rX, {
                 children: [
                     Q,
@@ -310,7 +309,7 @@ function O(t) {
                         shortcut: (0, p.isMac)() ? "\u2318V" : "Ctrl+V",
                         action: () => S.Ay.paste(),
                     }),
-                    H && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: P.intl.string(P.t.X92Qnr), action: w }),
+                    L && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: P.intl.string(P.t.X92Qnr), action: F }),
                 ],
             }),
         ],

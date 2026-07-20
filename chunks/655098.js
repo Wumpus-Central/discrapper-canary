@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => eA });
+n.d(t, { A: () => eh });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -9,112 +9,113 @@ var i = n(627968),
     d = n(267102),
     c = n(723702),
     u = n(38405),
-    _ = n(408018),
-    E = n(186306),
-    A = n(654821),
-    h = n(35277),
-    I = n(820066),
-    f = n(112107),
-    p = n(17928),
-    T = n(866665),
-    m = n(778712),
-    g = n(939249),
-    S = n(545442),
-    N = n(922016),
-    C = n(565645),
-    O = n(730134),
-    R = n(775602),
-    L = n(47167),
-    y = n(106191),
-    D = n(545868),
-    v = n(376943),
-    b = n(465365),
-    M = n(78390),
-    P = n(785562),
-    U = n(332173),
-    w = n(37632),
-    G = n(679621),
-    x = n(593284),
-    k = n(967144);
+    _ = n(19575),
+    E = n(408018),
+    A = n(186306),
+    h = n(654821),
+    I = n(35277),
+    f = n(820066),
+    p = n(112107),
+    T = n(17928),
+    m = n(866665),
+    g = n(778712),
+    S = n(939249),
+    N = n(545442),
+    C = n(922016),
+    O = n(565645),
+    R = n(730134),
+    L = n(775602),
+    y = n(47167),
+    D = n(106191),
+    v = n(545868),
+    b = n(376943),
+    M = n(465365),
+    P = n(78390),
+    U = n(785562),
+    w = n(332173),
+    G = n(37632),
+    x = n(679621),
+    k = n(593284),
+    F = n(967144);
 n(209932);
-var F = n(734057),
-    V = n(317525),
-    B = n(994500),
-    H = n(351906),
-    j = n(287809),
-    W = n(871237),
-    Y = n(562153),
-    K = n(427262),
-    $ = n(375708),
-    z = n(178259);
-function q(e) {
-    let { emoji: t } = e;
-    return (0, i.jsx)(T.m, {
-        text: t.name,
-        delay: 750,
-        position: "top",
-        children: (0, i.jsx)(C.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
-    });
-}
+var V = n(734057),
+    B = n(317525),
+    H = n(994500),
+    j = n(351906),
+    W = n(287809),
+    Y = n(871237),
+    K = n(562153),
+    $ = n(427262),
+    z = n(375708),
+    q = n(178259);
 function Z(e) {
     let { emoji: t } = e;
-    return (0, i.jsx)(T.m, {
+    return (0, i.jsx)(m.m, {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, i.jsx)(C.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
+        children: (0, i.jsx)(O.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
     });
 }
 function X(e) {
-    let { text: t } = e;
-    return (0, i.jsx)(U.A, { children: t });
+    let { emoji: t } = e;
+    return (0, i.jsx)(m.m, {
+        text: t.name,
+        delay: 750,
+        position: "top",
+        children: (0, i.jsx)(O.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
+    });
 }
 function Q(e) {
+    let { text: t } = e;
+    return (0, i.jsx)(w.A, { children: t });
+}
+function J(e) {
     let { id: t, guildId: n, channelId: r } = e,
-        a = (0, p.bG)([j.default], () => j.default.getUser(t)),
-        s = (0, p.bG)([H.A], () => H.A.hidePersonalInformation),
-        l = Y.Ay.useName(n, r, a),
-        o = (0, i.jsx)(U.A, { children: null == l ? `<@${t}>` : `@${l}` });
+        a = (0, T.bG)([W.default], () => W.default.getUser(t)),
+        s = (0, T.bG)([j.A], () => j.A.hidePersonalInformation),
+        l = K.Ay.useName(n, r, a),
+        o = (0, i.jsx)(w.A, { children: null == l ? `<@${t}>` : `@${l}` });
     if (null != a) {
         let e = s || a.hasUniqueUsername() ? null : `#${a.discriminator}`;
-        return (0, i.jsx)(T.m, {
+        return (0, i.jsx)(m.m, {
             __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
-                className: z.fX,
+                className: q.fX,
                 children: [
-                    (0, i.jsx)(O.A, { user: a, animate: !0, size: m._3.SIZE_16, className: z.my }),
-                    K.Ay.getUserTag(a, { mode: "username", identifiable: s ? "never" : "always" }),
-                    (0, i.jsx)("span", { className: z.D2, children: e }),
+                    (0, i.jsx)(R.A, { user: a, animate: !0, size: g._3.SIZE_16, className: q.my }),
+                    $.Ay.getUserTag(a, { mode: "username", identifiable: s ? "never" : "always" }),
+                    (0, i.jsx)("span", { className: q.D2, children: e }),
                 ],
             }),
             delay: 750,
             position: "top",
-            "aria-label": K.Ay.getUserTag(a, { decoration: "never" }),
+            "aria-label": $.Ay.getUserTag(a, { decoration: "never" }),
             asContainer: !0,
-            children: (0, i.jsx)(g.D, { tag: "span", children: o }),
+            children: (0, i.jsx)(S.D, { tag: "span", children: o }),
         });
     }
     return o;
 }
-function J(e) {
+function ee(e) {
     let { id: t, guildId: n, channelId: a } = e,
-        s = (0, p.bG)([V.A], () => (null != n ? V.A.getRole(n, t) : void 0)),
-        l = (0, p.bG)([R.Ay], () => R.Ay.roleStyle),
-        o = (0, k.X_)(n, s, s?.colorStrings),
+        s = (0, T.bG)([B.A], () => (null != n ? B.A.getRole(n, t) : void 0)),
+        l = (0, T.bG)([L.Ay], () => L.Ay.roleStyle),
+        o = (0, F.X_)(n, s, s?.colorStrings),
         d = r.useRef(null);
-    if (null == s) return (0, i.jsxs)("span", { children: ["@", $.intl.string($.t["YV4F/n"])] });
+    if (null == s) return (0, i.jsxs)("span", { children: ["@", z.intl.string(z.t["YV4F/n"])] });
     let c = null != s.color && 0 !== s.color,
         u = "dot" === l,
         _ = "username" === l && c;
     function E(e) {
         return null == s
             ? null
-            : (0, i.jsxs)(U.A, {
+            : (0, i.jsxs)(w.A, {
                   ref: d,
                   color: _ ? s.color : null,
                   roleColors: _ ? o : null,
                   ...e,
                   children: [
-                      u && (0, i.jsx)(S.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
+                      u && (0, i.jsx)(N.W, { color: s.colorString, colors: o, background: !1, tooltip: !1 }),
                       "@",
                       s.name,
                   ],
@@ -122,82 +123,82 @@ function J(e) {
     }
     return null == n || null == a
         ? E()
-        : (0, i.jsx)(N.Y, {
+        : (0, i.jsx)(C.Y, {
               targetElementRef: d,
               preload: async () => {
-                  await (0, D.a)(n, t);
+                  await (0, v.a)(n, t);
               },
-              renderPopout: (e) => (0, i.jsx)(x.Y, { guildId: n, channelId: a, roleId: t, popoutProps: e }),
+              renderPopout: (e) => (0, i.jsx)(k.Y, { guildId: n, channelId: a, roleId: t, popoutProps: e }),
               position: "top",
               children: E,
           });
 }
-function ee(e) {
+function et(e) {
     let { id: t } = e,
-        n = (0, p.bG)([F.A], () => F.A.getChannel(t)),
-        r = $.intl.string($.t.zLZPmk).toLowerCase(),
+        n = (0, T.bG)([V.A], () => V.A.getChannel(t)),
+        r = z.intl.string(z.t.zLZPmk).toLowerCase(),
         a = "text",
         s = !0;
     return (null != n &&
-        ((r = (0, v.nc)(n) ? (0, L.m1)(n, j.default, B.A) : $.intl.string($.t["/YzI63"])),
-        (a = (0, v.nc)(n) ? ((0, W.QG)(n) ?? "text") : "locked"),
-        (s = (0, b.Y)(n.type))),
+        ((r = (0, b.nc)(n) ? (0, y.m1)(n, W.default, H.A) : z.intl.string(z.t["/YzI63"])),
+        (a = (0, b.nc)(n) ? ((0, Y.QG)(n) ?? "text") : "locked"),
+        (s = (0, M.Y)(n.type))),
     s)
-        ? (0, i.jsx)(U.A, { iconType: a, children: r })
+        ? (0, i.jsx)(w.A, { iconType: a, children: r })
         : (0, i.jsx)("span", { children: "#" + r });
 }
-function et(e) {
-    let { id: t, itemId: n, guildId: r } = e,
-        a = (0, M.Q)(t),
-        s = (0, M.f)(t, n, r);
-    return (0, i.jsxs)(U.A, { iconType: t, children: [a, null != s && (0, i.jsx)(w.A, {}), s] });
-}
 function en(e) {
-    let { text: t, id: n } = e;
-    return (0, i.jsxs)(U.A, { children: [t, "(", n, ")"] });
+    let { id: t, itemId: n, guildId: r } = e,
+        a = (0, P.Q)(t),
+        s = (0, P.f)(t, n, r);
+    return (0, i.jsxs)(w.A, { iconType: t, children: [a, null != s && (0, i.jsx)(G.A, {}), s] });
 }
 function ei(e) {
-    let { timestamp: t } = e;
-    return (0, i.jsx)(P.A, { node: t, className: "R" === t.format ? z.gS : null });
+    let { text: t, id: n } = e;
+    return (0, i.jsxs)(w.A, { children: [t, "(", n, ")"] });
 }
 function er(e) {
-    let { id: t, gameName: n, gameIcon: r } = e,
-        { name: a, hasName: s } = (0, G.V)({ gameName: n, gameId: t });
-    return s
-        ? (0, i.jsxs)(U.A, { children: [(0, i.jsx)(y.A, { game: { id: t, icon: r }, iconClassName: z.Kk }), a] })
-        : (0, i.jsxs)("span", { children: ["@", $.intl.string($.t["11pdXZ"])] });
+    let { timestamp: t } = e;
+    return (0, i.jsx)(U.A, { node: t, className: "R" === t.format ? q.gS : null });
 }
-var ea = n(571898),
-    es = n(494715),
-    el = n(766184);
-let eo = {
-    strong: ea.bold,
-    em: ea.italics,
-    u: ea.underline,
-    s: ea.strikethrough,
-    inlineCode: ea.inlineCode,
-    link: ea.fakeLink,
-    url: ea.fakeLink,
-    autolink: ea.fakeLink,
-    silentPrefix: ea.fakeLink,
-    spoiler: s()(el.ur, el.F0, el.kx, ea.spoiler),
-    staticRouteLink: ea.fakeLink,
-    syntaxBefore: ea.syntaxBefore,
-    syntaxAfter: ea.syntaxAfter,
-    codeBlockText: ea.codeBlockText,
-    codeBlockSyntax: ea.codeBlockSyntax,
-    codeBlockLang: ea.codeBlockLang,
-    subtext: ea.subtext,
+function ea(e) {
+    let { id: t, gameName: n, gameIcon: r } = e,
+        { name: a, hasName: s } = (0, x.V)({ gameName: n, gameId: t });
+    return s
+        ? (0, i.jsxs)(w.A, { children: [(0, i.jsx)(D.A, { game: { id: t, icon: r }, iconClassName: q.Kk }), a] })
+        : (0, i.jsxs)("span", { children: ["@", z.intl.string(z.t["11pdXZ"])] });
+}
+var es = n(571898),
+    el = n(494715),
+    eo = n(766184);
+let ed = {
+    strong: es.bold,
+    em: es.italics,
+    u: es.underline,
+    s: es.strikethrough,
+    inlineCode: es.inlineCode,
+    link: es.fakeLink,
+    url: es.fakeLink,
+    autolink: es.fakeLink,
+    silentPrefix: es.fakeLink,
+    spoiler: s()(eo.ur, eo.F0, eo.kx, es.spoiler),
+    staticRouteLink: es.fakeLink,
+    syntaxBefore: es.syntaxBefore,
+    syntaxAfter: es.syntaxAfter,
+    codeBlockText: es.codeBlockText,
+    codeBlockSyntax: es.codeBlockSyntax,
+    codeBlockLang: es.codeBlockLang,
+    subtext: es.subtext,
 };
-var ed = n(992595);
-function ec(e) {
+var ec = n(992595);
+function eu(e) {
     let { className: t, attributes: n, children: r } = e,
-        a = s()(es.S0, es.Cj, t);
+        a = s()(el.S0, el.Cj, t);
     return (0, i.jsx)("span", { ...n, className: a, contentEditable: !1, children: r });
 }
-var eu = n(652215),
-    e_ = n(422404);
-class eE extends r.PureComponent {
+var e_ = n(652215),
+    eE = n(422404);
+class eA extends r.PureComponent {
     containerRef = r.createRef();
     state;
     constructor(e) {
@@ -214,9 +215,9 @@ class eE extends r.PureComponent {
             (this.handleBlurCapture = this.handleBlurCapture.bind(this)),
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
-            I.VW.isEditorEmpty(e.editor)
-                ? (this.state = { initialValue: (0, _.N3)().richValue, showPlaceholder: !0 })
-                : (this.state = { initialValue: I.VW.richValue(e.editor), showPlaceholder: !1 });
+            f.VW.isEditorEmpty(e.editor)
+                ? (this.state = { initialValue: (0, E.N3)().richValue, showPlaceholder: !0 })
+                : (this.state = { initialValue: f.VW.richValue(e.editor), showPlaceholder: !1 });
     }
     componentDidMount() {
         this.props.editor.events.addListener("onChange", this.handleOnChange);
@@ -247,7 +248,7 @@ class eE extends r.PureComponent {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return !0 === n && t in eo ? eo[t] : null;
+                            return !0 === n && t in ed ? ed[t] : null;
                         })
                         .filter((e) => null != e)
                         .join(" ");
@@ -255,88 +256,88 @@ class eE extends r.PureComponent {
                     case "line":
                         if (l.codeBlockState?.isInCodeBlock)
                             return (0, i.jsx)("div", {
-                                className: ea.codeLine,
+                                className: es.codeLine,
                                 spellCheck: null == l.codeBlockState || null == l.codeBlockState.lang,
                                 ...r,
                                 children: a,
                             });
                         return (0, i.jsx)("div", { ...r, children: a });
                     case "blockQuote": {
-                        let e = s()(ed.h, ed.MN);
+                        let e = s()(ec.h, ec.MN);
                         return (0, i.jsxs)("div", {
                             ...r,
                             className: e,
                             children: [
-                                (0, i.jsx)("span", { contentEditable: !1, className: ed.r }),
+                                (0, i.jsx)("span", { contentEditable: !1, className: ec.r }),
                                 (0, i.jsx)("blockquote", { children: a }),
                             ],
                         });
                     }
                     case "emoji":
-                        return (0, i.jsxs)(ec, {
-                            attributes: r,
-                            className: d,
-                            children: [(0, i.jsx)(q, { emoji: l.emoji }), a],
-                        });
-                    case "customEmoji":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
                             children: [(0, i.jsx)(Z, { emoji: l.emoji }), a],
                         });
-                    case "textMention":
-                        return (0, i.jsxs)(ec, {
+                    case "customEmoji":
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(X, { text: l.name }), a],
+                            children: [(0, i.jsx)(X, { emoji: l.emoji }), a],
+                        });
+                    case "textMention":
+                        return (0, i.jsxs)(eu, {
+                            attributes: r,
+                            className: d,
+                            children: [(0, i.jsx)(Q, { text: l.name }), a],
                         });
                     case "userMention":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(Q, { id: l.userId, channelId: n, guildId: t }), a],
+                            children: [(0, i.jsx)(J, { id: l.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(J, { id: l.roleId, guildId: t, channelId: n }), a],
+                            children: [(0, i.jsx)(ee, { id: l.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(ee, { id: l.channelId }), a],
+                            children: [(0, i.jsx)(et, { id: l.channelId }), a],
                         });
                     case "staticRouteLink":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(et, { id: l.id, itemId: l.itemId, guildId: t }), a],
+                            children: [(0, i.jsx)(en, { id: l.id, itemId: l.itemId, guildId: t }), a],
                         });
                     case "soundboard":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(f.LF, { soundId: l.soundId }), a],
+                            children: [(0, i.jsx)(p.LF, { soundId: l.soundId }), a],
                         });
                     case "commandMention":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(en, { text: l.commandName, id: l.commandId }), a],
+                            children: [(0, i.jsx)(ei, { text: l.commandName, id: l.commandId }), a],
                         });
                     case "timestamp":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(ei, { timestamp: l.parsed }), a],
+                            children: [(0, i.jsx)(er, { timestamp: l.parsed }), a],
                         });
                     case "gameMention":
-                        return (0, i.jsxs)(ec, {
+                        return (0, i.jsxs)(eu, {
                             attributes: r,
                             className: d,
-                            children: [(0, i.jsx)(er, { id: l.gameId, gameName: l.gameName, gameIcon: l.gameIcon }), a],
+                            children: [(0, i.jsx)(ea, { id: l.gameId, gameName: l.gameName, gameIcon: l.gameIcon }), a],
                         });
                     default:
                         return null;
@@ -353,8 +354,8 @@ class eE extends r.PureComponent {
                     let n,
                         { attributes: r, children: a, leaf: l, text: o } = t,
                         d = !1,
-                        [c] = I.VW.node(e, I.PW.parent(I.VW.findPath(e, o)));
-                    switch (I.VW.isEditor(c) ? "editor" : c.type) {
+                        [c] = f.VW.node(e, f.PW.parent(f.VW.findPath(e, o)));
+                    switch (f.VW.isEditor(c) ? "editor" : c.type) {
                         case "line":
                         case "blockQuote": {
                             d = void 0;
@@ -371,18 +372,18 @@ class eE extends r.PureComponent {
                                             (("codeBlockLang" === t || "codeBlockSyntax" === t) && (d = !1),
                                             t.startsWith("before_") || t.startsWith("after_"))
                                         )
-                                            return [ea[t]];
-                                        if (t in eo) return [eo[t]];
+                                            return [es[t]];
+                                        if (t in ed) return [ed[t]];
                                         throw Error(`Slate: Unknown decoration attribute: ${t}`);
                                     }
                                 })
                                 .filter((e) => null != e)
                                 .join(" ");
-                            n = s()(e, { [ea.syntaxOverride]: "||" === l.text || "\\" === l.text });
+                            n = s()(e, { [es.syntaxOverride]: "||" === l.text || "\\" === l.text });
                         }
                     }
                     return (
-                        (n = s()(n, { [es.BI]: "" === o.text })),
+                        (n = s()(n, { [el.BI]: "" === o.text })),
                         (0, i.jsx)("span", { ...r, className: n, spellCheck: d, children: a })
                     );
                 })(t, e);
@@ -390,10 +391,10 @@ class eE extends r.PureComponent {
     }
     handleOnChange() {
         let { editor: e } = this.props,
-            t = I.VW.isEditorEmpty(e) && null == e.composition;
+            t = f.VW.isEditorEmpty(e) && null == e.composition;
         if (
             (t !== this.state.showPlaceholder && this.setState({ showPlaceholder: t }),
-            this.props.onChange?.(I.VW.richValue(e)),
+            this.props.onChange?.(f.VW.richValue(e)),
             !1 === this.props.canFocus)
         ) {
             let t = l.rL.findDocumentOrShadowRoot(e).getSelection();
@@ -424,19 +425,19 @@ class eE extends r.PureComponent {
                 ("insertText" === e.inputType || "insertReplacementText" === e.inputType) &&
                 (null == r && (r = i), null != r)
             ) {
-                let n = I.VW.toSlateRange(t, r, { exactMatch: !1, suppressThrow: !0 });
+                let n = f.VW.toSlateRange(t, r, { exactMatch: !1, suppressThrow: !0 });
                 null != n &&
                     null != e.data &&
-                    (I.ZF.isExpanded(n)
-                        ? E.o.withSingleEntry(t, () => {
+                    (f.ZF.isExpanded(n)
+                        ? A.o.withSingleEntry(t, () => {
                               (t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault();
                           })
                         : (t.insertText(e.data), e.preventDefault()));
             }
             if (e.inputType.startsWith("deleteContent") && null != i && !i.collapsed) {
-                let n = I.VW.toSlateRange(t, i, { exactMatch: !0, suppressThrow: !0 });
+                let n = f.VW.toSlateRange(t, i, { exactMatch: !0, suppressThrow: !0 });
                 null != n &&
-                    I.ZF.isExpanded(n) &&
+                    f.ZF.isExpanded(n) &&
                     ((t.selection = n),
                     t.deleteFragment(e.inputType.endsWith("Backward") ? "backward" : "forward"),
                     e.preventDefault());
@@ -447,26 +448,26 @@ class eE extends r.PureComponent {
         let { editor: e } = this.props,
             t = { insertedPrefix: !1, startedInsideInline: !1 };
         this.state.showPlaceholder && this.setState({ showPlaceholder: !1 });
-        let n = null != e.selection && I.ZF.isCollapsed(e.selection) ? I.VW.leaf(e, e.selection.anchor.path) : null;
+        let n = null != e.selection && f.ZF.isCollapsed(e.selection) ? f.VW.leaf(e, e.selection.anchor.path) : null;
         if (null == n) {
             e.composition = t;
             return;
         }
         if (
             (null !=
-                (null != e.selection && I.ZF.isCollapsed(e.selection)
-                    ? I.VW.above(e, { at: n[1], match: (t) => I.VW.isInline(e, t), mode: "lowest" })
+                (null != e.selection && f.ZF.isCollapsed(e.selection)
+                    ? f.VW.above(e, { at: n[1], match: (t) => f.VW.isInline(e, t), mode: "lowest" })
                     : null) && (t.startedInsideInline = !0),
-            I.VW.isEditorEmpty(e))
+            f.VW.isEditorEmpty(e))
         ) {
-            h.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t);
+            I.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t);
             return;
         }
         let i = l.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),
             r = (i?.rangeCount ?? 0) > 0 ? i?.getRangeAt(0) : null;
-        if (null == (null != r ? I.VW.toSlateRange(e, r, { exactMatch: !0, suppressThrow: !0 }) : null) && null != r) {
-            let t = I.VW.toSlateRange(e, r, { exactMatch: !1, suppressThrow: !0 });
-            (e.selection = null), null != t ? h.b.select(e, t) : h.b.select(e, I.VW.end(e, []));
+        if (null == (null != r ? f.VW.toSlateRange(e, r, { exactMatch: !0, suppressThrow: !0 }) : null) && null != r) {
+            let t = f.VW.toSlateRange(e, r, { exactMatch: !1, suppressThrow: !0 });
+            (e.selection = null), null != t ? I.b.select(e, t) : I.b.select(e, f.VW.end(e, []));
         }
         e.composition = t;
     }
@@ -474,12 +475,12 @@ class eE extends r.PureComponent {
         let { editor: t } = this.props;
         if (null == t.composition) return;
         let { insertedPrefix: n } = t.composition;
-        if (n && null != t.selection && I.ZF.isCollapsed(t.selection)) {
+        if (n && null != t.selection && f.ZF.isCollapsed(t.selection)) {
             let e = t.selection.anchor.path,
-                n = I.AS.leaf(t, e);
-            I.VW.withoutNormalizing(t, () => {
+                n = f.AS.leaf(t, e);
+            f.VW.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, "");
-                h.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), I.VW.insertText(t, e);
+                I.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), f.VW.insertText(t, e);
             });
         }
         t.composition = null;
@@ -494,7 +495,7 @@ class eE extends r.PureComponent {
             r = l.rL.findDocumentOrShadowRoot(this.props.editor),
             a = r.getElementById("textarea-context"),
             s = r.getElementById("slate-toolbar");
-        if (null != i && !(0, A.hasDomParent)(i, a) && !(0, A.hasDomParent)(i, s)) {
+        if (null != i && !(0, h.hasDomParent)(i, a) && !(0, h.hasDomParent)(i, s)) {
             let e = l.rL.findDocumentOrShadowRoot(t).getSelection();
             null != e && this.isSelectionEscaping(e) && e.removeAllRanges();
         }
@@ -509,7 +510,7 @@ class eE extends r.PureComponent {
                     a = i.endContainer,
                     s = i.startOffset,
                     l = i.endOffset;
-                if ((0, A.hasDomParent)(r, t) || (!(0, A.isDOMRangeCollapsed)(r, s, a, l) && (0, A.hasDomParent)(a, t)))
+                if ((0, h.hasDomParent)(r, t) || (!(0, h.isDOMRangeCollapsed)(r, s, a, l) && (0, h.hasDomParent)(a, t)))
                     return !0;
             }
         return !1;
@@ -525,15 +526,15 @@ class eE extends r.PureComponent {
                     l = a.endContainer,
                     o = a.startOffset,
                     d = a.endOffset;
-                if ((0, A.hasDomParent)(s, t)) {
+                if ((0, h.hasDomParent)(s, t)) {
                     if (i) return !0;
                     n = !0;
                 } else {
                     if (n) return !0;
                     i = !0;
                 }
-                if (!(0, A.isDOMRangeCollapsed)(s, o, l, d))
-                    if ((0, A.hasDomParent)(s, t)) {
+                if (!(0, h.isDOMRangeCollapsed)(s, o, l, d))
+                    if ((0, h.hasDomParent)(s, t)) {
                         if (i) return !0;
                         n = !0;
                     } else {
@@ -553,18 +554,25 @@ class eE extends r.PureComponent {
                 e,
                 async () => {
                     let { default: e } = await Promise.all([
-                        n.e("10310"),
-                        n.e("58273"),
-                        n.e("14591"),
-                        n.e("96804"),
-                        n.e("30803"),
-                        n.e("22401"),
-                    ]).then(n.bind(n, 258360));
-                    return (n) => (0, i.jsx)(e, { ...n, editor: t, text: I.VW.getSelectedText(t, !0) });
+                            n.e("10310"),
+                            n.e("58273"),
+                            n.e("14591"),
+                            n.e("96804"),
+                            n.e("30803"),
+                            n.e("22401"),
+                        ]).then(n.bind(n, 258360)),
+                        r = _.Ay.clipboardHasMixedContent();
+                    return (n) =>
+                        (0, i.jsx)(e, {
+                            ...n,
+                            editor: t,
+                            text: f.VW.getSelectedText(t, !0),
+                            clipboardHasMixedContent: r,
+                        });
                 },
                 {
                     align: null != r && null != a && r < a / 2 ? "top" : "bottom",
-                    enableSpellCheck: s === eu.BRT.APP,
+                    enableSpellCheck: s === e_.BRT.APP,
                     repositionOnContentChange: !0,
                 },
             );
@@ -604,7 +612,7 @@ class eE extends r.PureComponent {
             children: [
                 this.state.showPlaceholder
                     ? (0, i.jsx)("div", {
-                          className: s()(e_.q, t),
+                          className: s()(eE.q, t),
                           "aria-hidden": !0,
                           "data-slate-placeholder": "true",
                           children: o,
@@ -615,7 +623,7 @@ class eE extends r.PureComponent {
                     value: [...this.state.initialValue],
                     children: (0, i.jsx)(l.Fo, {
                         ...T,
-                        className: s()(ed.PT, e_.E, t),
+                        className: s()(ec.PT, eE.E, t),
                         decorate: d,
                         renderElement: this.renderElement,
                         renderLeaf: this.renderLeaf,
@@ -639,4 +647,4 @@ class eE extends r.PureComponent {
         });
     }
 }
-let eA = eE;
+let eh = eA;
