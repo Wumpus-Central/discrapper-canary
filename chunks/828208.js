@@ -915,18 +915,19 @@ let tL = function (e) {
                     buttonVisibilityRef: a,
                     shouldShowReferralProgressBar: n,
                     marketingBanner: l,
+                    heroButtons: r,
                 } = e,
-                { visibilityPercentageRef: r, visibilityPercentage: c } = eH(
+                { visibilityPercentageRef: c, visibilityPercentage: d } = eH(
                     !(0, x.bG)([eT.Ay], () => eT.Ay.useReducedMotion),
                 ),
-                d = tM(),
-                u = l ?? (n ? (0, o.jsx)(tf, {}) : null);
+                u = tM(),
+                g = l ?? (n ? (0, o.jsx)(tf, {}) : null);
             return (0, o.jsx)("div", {
                 className: m()(tD.kL, tD.Eg, t),
                 ref: a,
                 children: (0, o.jsxs)("div", {
                     className: m()(tD.W2, tD.HQ),
-                    ref: r,
+                    ref: c,
                     children: [
                         (0, o.jsxs)(el.B, {
                             align: "start",
@@ -936,23 +937,30 @@ let tL = function (e) {
                                 i && s,
                                 (0, o.jsxs)(el.B, {
                                     align: "start",
-                                    gap: 12,
+                                    gap: "lg",
                                     children: [
-                                        (0, o.jsx)(tx, {
-                                            className: tD.z_,
-                                            color: "text-default",
-                                            responsive: !1,
-                                            children: d,
+                                        (0, o.jsxs)(el.B, {
+                                            align: "start",
+                                            gap: 12,
+                                            children: [
+                                                (0, o.jsx)(tx, {
+                                                    className: tD.z_,
+                                                    color: "text-default",
+                                                    responsive: !1,
+                                                    children: u,
+                                                }),
+                                                (0, o.jsx)(tu, {}),
+                                            ],
                                         }),
-                                        (0, o.jsx)(tu, {}),
+                                        r,
                                     ],
                                 }),
-                                u,
+                                g,
                             ],
                         }),
                         (0, o.jsx)("div", {
                             className: tD.y3,
-                            children: (0, o.jsx)(tP, { containerVisibilityPercentage: c, compact: null == u }),
+                            children: (0, o.jsx)(tP, { containerVisibilityPercentage: d, compact: null == g }),
                         }),
                     ],
                 }),
@@ -1196,145 +1204,161 @@ function tW(e) {
         y = (0, eS.A)(),
         M = y.isFractionalPremiumActive && !P && null == v && !c,
         { visibilityPercentageRef: D, visibilityPercentage: O } = eH(!(0, x.bG)([eT.Ay], () => eT.Ay.useReducedMotion));
-    return i
-        ? (0, o.jsx)(tz, { fpEndsAt: y.currentEntitlementEndsAt, className: t, buttonVisibilityRef: p })
-        : R
-          ? (0, o.jsx)(tU, {
-                treatment: f,
-                className: t,
-                headingTop: l,
-                showPill: r,
-                buttonVisibilityRef: p,
-                shouldShowReferralProgressBar: a,
-                marketingBanner: _,
-            })
-          : (0, o.jsx)("div", {
-                className: m()(tD.kL, t),
-                "data-testid": "subscriber-nitro-home-hero-header",
-                ref: p,
-                children: (0, o.jsxs)("div", {
-                    className: tD.Qs,
-                    ref: D,
+    if (i) return (0, o.jsx)(tz, { fpEndsAt: y.currentEntitlementEndsAt, className: t, buttonVisibilityRef: p });
+    if (R) {
+        let e = M
+            ? (0, o.jsxs)("div", {
+                  className: tD.UJ,
+                  children: [
+                      (0, o.jsx)(tt.A, {
+                          size: "md",
+                          hasActivePromotion: !!E,
+                          subscriptionTier: T?.subscription_trial?.sku_id ?? S,
+                      }),
+                      (0, o.jsx)(eA.A, {
+                          variant: "secondary",
+                          size: "md",
+                          buttonTextOverride: ex.intl.string(ex.t["3KomGa"]),
+                      }),
+                  ],
+              })
+            : null;
+        return (0, o.jsx)(tU, {
+            treatment: f,
+            className: t,
+            headingTop: l,
+            showPill: r,
+            buttonVisibilityRef: p,
+            shouldShowReferralProgressBar: a,
+            marketingBanner: _,
+            heroButtons: e,
+        });
+    }
+    return (0, o.jsx)("div", {
+        className: m()(tD.kL, t),
+        "data-testid": "subscriber-nitro-home-hero-header",
+        ref: p,
+        children: (0, o.jsxs)("div", {
+            className: tD.Qs,
+            ref: D,
+            children: [
+                r && l,
+                (0, o.jsxs)("div", {
+                    className: tD.N1,
                     children: [
-                        r && l,
-                        (0, o.jsxs)("div", {
-                            className: tD.N1,
-                            children: [
-                                (0, o.jsx)(tB, { containerVisibilityPercentage: O }),
-                                c &&
-                                    u?.expiresAt != null &&
-                                    (0, o.jsx)(tl, { expiresAt: u.expiresAt.toISOString(), className: tD.IZ }),
-                                (0, o.jsx)(tx, {
-                                    children:
-                                        c && null != u
-                                            ? ex.intl.format(ex.t["3yZP0G"], { percent: u.discount.amount })
-                                            : n,
-                                }),
-                                c &&
-                                    null != u &&
-                                    null != g &&
-                                    (0, o.jsx)(ec.E, {
-                                        className: tD.jG,
-                                        variant: "text-sm/medium",
-                                        color: "text-strong",
-                                        children: ex.intl.format(ex.t["3Q4wCy"], {
-                                            discountedPrice: g,
-                                            billingPeriod: (0, eO.Ke)(u.discount.userUsageLimitInterval),
-                                            numMonths: u.discount.userUsageLimit,
-                                        }),
-                                    }),
-                            ],
+                        (0, o.jsx)(tB, { containerVisibilityPercentage: O }),
+                        c &&
+                            u?.expiresAt != null &&
+                            (0, o.jsx)(tl, { expiresAt: u.expiresAt.toISOString(), className: tD.IZ }),
+                        (0, o.jsx)(tx, {
+                            children:
+                                c && null != u ? ex.intl.format(ex.t["3yZP0G"], { percent: u.discount.amount }) : n,
                         }),
-                        (0, o.jsxs)("div", {
-                            className: M || c ? tD.UJ : void 0,
-                            children: [
-                                M &&
-                                    (0, o.jsx)(tt.A, {
-                                        size: "md",
-                                        hasActivePromotion: !!E,
-                                        subscriptionTier: T?.subscription_trial?.sku_id ?? S,
-                                    }),
-                                c &&
-                                    null != d &&
-                                    (0, o.jsx)(eo.$, {
-                                        variant: "expressive",
-                                        icon: ed.t,
-                                        size: "md",
-                                        text: ex.intl.string(ex.t.zrCzVB),
-                                        onClick: () => {
-                                            var e;
-                                            return (
-                                                (e = tr.g.CONFIRM_DISCOUNT),
-                                                void (0, ev.openModalLazy)(async () => {
-                                                    let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
-                                                        await Promise.all([
-                                                            s.e("23866"),
-                                                            s.e("33730"),
-                                                            s.e("90862"),
-                                                            s.e("97189"),
-                                                            s.e("16918"),
-                                                            s.e("24059"),
-                                                            s.e("42306"),
-                                                            s.e("11291"),
-                                                            s.e("38838"),
-                                                            s.e("83893"),
-                                                            s.e("83133"),
-                                                            s.e("63051"),
-                                                            s.e("84873"),
-                                                            s.e("61783"),
-                                                            s.e("82781"),
-                                                            s.e("77083"),
-                                                            s.e("47944"),
-                                                            s.e("56372"),
-                                                            s.e("64509"),
-                                                            s.e("39932"),
-                                                            s.e("69425"),
-                                                            s.e("16581"),
-                                                            s.e("42205"),
-                                                            s.e("55675"),
-                                                            s.e("27962"),
-                                                            s.e("64827"),
-                                                            s.e("7167"),
-                                                            s.e("61060"),
-                                                            s.e("54484"),
-                                                            s.e("6338"),
-                                                            s.e("47834"),
-                                                            s.e("78157"),
-                                                            s.e("53782"),
-                                                            s.e("44571"),
-                                                            s.e("40291"),
-                                                            s.e("29963"),
-                                                            s.e("38513"),
-                                                            s.e("52557"),
-                                                            s.e("63123"),
-                                                            s.e("50097"),
-                                                            s.e("94161"),
-                                                            s.e("13051"),
-                                                            s.e("80347"),
-                                                            s.e("80166"),
-                                                        ]).then(s.bind(s, 293061));
-                                                    return (s) =>
-                                                        (0, o.jsx)(t, {
-                                                            ...s,
-                                                            analyticsLocations: N,
-                                                            initialStep: e,
-                                                            premiumSubscription: d,
-                                                        });
-                                                })
-                                            );
-                                        },
-                                    }),
-                                (0, o.jsx)(eA.A, {
-                                    variant: M || c ? "secondary" : "expressive",
-                                    size: "md",
-                                    buttonTextOverride: ex.intl.string(ex.t["3KomGa"]),
+                        c &&
+                            null != u &&
+                            null != g &&
+                            (0, o.jsx)(ec.E, {
+                                className: tD.jG,
+                                variant: "text-sm/medium",
+                                color: "text-strong",
+                                children: ex.intl.format(ex.t["3Q4wCy"], {
+                                    discountedPrice: g,
+                                    billingPeriod: (0, eO.Ke)(u.discount.userUsageLimitInterval),
+                                    numMonths: u.discount.userUsageLimit,
                                 }),
-                            ],
-                        }),
-                        v,
+                            }),
                     ],
                 }),
-            });
+                (0, o.jsxs)("div", {
+                    className: M || c ? tD.UJ : void 0,
+                    children: [
+                        M &&
+                            (0, o.jsx)(tt.A, {
+                                size: "md",
+                                hasActivePromotion: !!E,
+                                subscriptionTier: T?.subscription_trial?.sku_id ?? S,
+                            }),
+                        c &&
+                            null != d &&
+                            (0, o.jsx)(eo.$, {
+                                variant: "expressive",
+                                icon: ed.t,
+                                size: "md",
+                                text: ex.intl.string(ex.t.zrCzVB),
+                                onClick: () => {
+                                    var e;
+                                    return (
+                                        (e = tr.g.CONFIRM_DISCOUNT),
+                                        void (0, ev.openModalLazy)(async () => {
+                                            let { PremiumBrandRefreshSubscriptionCancellationModal: t } =
+                                                await Promise.all([
+                                                    s.e("23866"),
+                                                    s.e("33730"),
+                                                    s.e("90862"),
+                                                    s.e("97189"),
+                                                    s.e("16918"),
+                                                    s.e("24059"),
+                                                    s.e("42306"),
+                                                    s.e("11291"),
+                                                    s.e("38838"),
+                                                    s.e("83893"),
+                                                    s.e("83133"),
+                                                    s.e("63051"),
+                                                    s.e("84873"),
+                                                    s.e("61783"),
+                                                    s.e("82781"),
+                                                    s.e("77083"),
+                                                    s.e("47944"),
+                                                    s.e("56372"),
+                                                    s.e("64509"),
+                                                    s.e("39932"),
+                                                    s.e("69425"),
+                                                    s.e("16581"),
+                                                    s.e("42205"),
+                                                    s.e("55675"),
+                                                    s.e("27962"),
+                                                    s.e("64827"),
+                                                    s.e("7167"),
+                                                    s.e("61060"),
+                                                    s.e("54484"),
+                                                    s.e("6338"),
+                                                    s.e("47834"),
+                                                    s.e("78157"),
+                                                    s.e("53782"),
+                                                    s.e("44571"),
+                                                    s.e("40291"),
+                                                    s.e("29963"),
+                                                    s.e("38513"),
+                                                    s.e("52557"),
+                                                    s.e("63123"),
+                                                    s.e("50097"),
+                                                    s.e("94161"),
+                                                    s.e("13051"),
+                                                    s.e("80347"),
+                                                    s.e("80166"),
+                                                ]).then(s.bind(s, 293061));
+                                            return (s) =>
+                                                (0, o.jsx)(t, {
+                                                    ...s,
+                                                    analyticsLocations: N,
+                                                    initialStep: e,
+                                                    premiumSubscription: d,
+                                                });
+                                        })
+                                    );
+                                },
+                            }),
+                        (0, o.jsx)(eA.A, {
+                            variant: M || c ? "secondary" : "expressive",
+                            size: "md",
+                            buttonTextOverride: ex.intl.string(ex.t["3KomGa"]),
+                        }),
+                    ],
+                }),
+                v,
+            ],
+        }),
+    });
 }
 let [tK, tY] = (0, eM.A)(),
     tX = function (e) {
