@@ -938,11 +938,12 @@ class e7 extends s.PureComponent {
                     s.push(I.intl.format(e, { planName: u.name })), (o = u.skuId);
                 }
             } else
-                g.type,
-                    null != u && (o = u.skuId),
-                    null != r
-                        ? s.push(I.intl.formatToPlainString(I.t["0wL/VI"], { tier: c?.name }))
-                        : s.push(I.intl.string(I.t["9czSYu"]));
+                g.type === M.rzx.APPLICATION
+                    ? (null != u && (o = u.skuId),
+                      null != r
+                          ? s.push(I.intl.formatToPlainString(I.t["0wL/VI"], { tier: c?.name }))
+                          : s.push(I.intl.string(I.t["9czSYu"])))
+                    : g.type;
             (t = 0 !== s.length ? s.join(", ") : l.description),
                 null == e &&
                     (e = (0, n.jsx)(ep.A, {
