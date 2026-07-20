@@ -2973,22 +2973,6 @@
     }
   },
   {
-    "name": "2026-04-game-account-linking-post-game-close",
-    "kind": "user",
-    "defaultConfig": {
-      "allowAccountLinkingUpsellPostGameClose": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "allowAccountLinkingUpsellPostGameClose": true
-      }
-    }
-  },
-  {
     "name": "2026-04-gift-promotion-reminder",
     "kind": "user",
     "defaultConfig": {
