@@ -1,13 +1,14 @@
 "use strict";
 n.d(t, {
     Xh: () => m,
-    z5: () => O,
-    HW: () => N,
+    Dr: () => N,
+    z5: () => L,
+    HW: () => C,
+    zK: () => O,
     x2: () => h,
-    zK: () => C,
-    Ix: () => S,
     zD: () => p,
-    tB: () => L,
+    WT: () => S,
+    tB: () => y,
     yF: () => R,
     AQ: () => D,
     TJ: () => f,
@@ -122,13 +123,17 @@ async function m(e, t, n, i) {
 async function g(e, t, n, i) {
     return await r.Bo.del({ url: _.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
 }
-function S(e, t) {
-    a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_CREATE", roomId: e, note: t });
+function S(e) {
+    a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_START", roomId: e });
 }
-function N(e) {
+function N(e, t) {
+    a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_PLACE", roomId: e, position: t });
+}
+function C(e) {
     a.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_DELETE", roomId: e });
 }
-async function C(e, t, n, i) {
+async function O(e, t, n, i) {
+    C(t);
     try {
         await T(e, t, { object_type: c.N.NOTE, content: n, position: i }),
             t !== e && (0, o.Ql)({ interactionType: "note_created", guildId: e, channelId: t }),
@@ -141,12 +146,12 @@ async function R(e, t, n) {
     await g(e, t, n, { object_type: c.N.NOTE }),
         t !== e && (0, o.Ql)({ interactionType: "note_deleted", guildId: e, channelId: t });
 }
-async function O(e, t) {
+async function L(e, t) {
     let n = await r.Bo.get({ url: _.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
         i = (0, u.S)(n.body);
     a.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
 }
-async function L(e, t, n) {
+async function y(e, t, n) {
     try {
         await A(e, t, n);
     } catch (e) {}

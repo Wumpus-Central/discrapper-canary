@@ -5,5 +5,4 @@ var l,
         (l.SOUNDBOARD = "SOUNDBOARD"),
         (l.EMOJI = "EMOJI"),
         (l.GIFTING = "GIFTING"),
-        (l.GUILD_ROOM_NOTE = "GUILD_ROOM_NOTE"),
         l);

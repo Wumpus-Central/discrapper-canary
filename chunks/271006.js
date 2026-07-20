@@ -1,9 +1,9 @@
-n.d(t, { A: () => L }), n(321073);
+n.d(t, { A: () => w }), n(321073);
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(580929),
+    r = n(523939),
     o = n(939249),
     c = n(17928),
     d = n(866323),
@@ -13,40 +13,41 @@ var i = n(627968),
     m = n(927813),
     A = n(935208),
     x = n(446243),
+    f = n(558076),
     g = n(872772),
-    f = n(360729),
-    C = n(884863),
-    y = n(662731),
-    j = n(375708),
-    v = n(755873),
-    E = n(880872),
-    N = n(849351),
-    I = n(572316),
-    T = n(192063);
+    C = n(360729),
+    y = n(884863),
+    j = n(189090),
+    v = n(375708),
+    E = n(568865),
+    N = n(880872),
+    I = n(849351),
+    T = n(572316),
+    b = n(192063);
 let _ = {
-        0: { src: I.A, alt: y.default.IrukuA },
-        1: { src: N.A, alt: y.default.yITFQ7 },
-        2: { src: E.A, alt: y.default.uUhyVw },
+        0: { src: T.A, alt: j.default.IrukuA },
+        1: { src: I.A, alt: j.default.yITFQ7 },
+        2: { src: N.A, alt: j.default.uUhyVw },
     },
-    b = 30 * m.A.Millis.MINUTE,
+    R = 30 * m.A.Millis.MINUTE,
     S = m.A.Millis.HOUR;
-function R(e) {
+function P(e) {
     let t = (function (e) {
         if (null != e) return null != e.updatedAt ? e.updatedAt.getTime() : A.default.extractTimestamp(e.objectId);
     })(e);
     if (null == t) return { stage: 0, timeUntilNextStage: null };
     let n = Date.now() - t;
-    return n < b
-        ? { stage: 0, timeUntilNextStage: b - n }
+    return n < R
+        ? { stage: 0, timeUntilNextStage: R - n }
         : n < S
           ? { stage: 1, timeUntilNextStage: S - n }
           : { stage: 2, timeUntilNextStage: null };
 }
-function P(e) {
+function L(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: p, plantWidth: h } = e,
-        [m, A] = l.useState(R(a).stage),
+        [m, A] = l.useState(P(a).stage),
         f = l.useRef([]),
-        E = l.useCallback(
+        C = l.useCallback(
             (e) => {
                 if (f.current.length > 0 || e === m) return;
                 let [t, ...n] = (function (e, t) {
@@ -75,27 +76,27 @@ function P(e) {
             "respect-motion-settings",
         ),
         I = l.useCallback(() => {
-            let { stage: e } = R(a);
-            E(e);
-        }, [a, E]);
+            let { stage: e } = P(a);
+            C(e);
+        }, [a, C]);
     l.useEffect(() => {
-        let { stage: e, timeUntilNextStage: t } = R(a),
+        let { stage: e, timeUntilNextStage: t } = P(a),
             n = setTimeout(() => I(), (null != a && m > e) || null == t ? 0 : t);
         return () => {
             clearTimeout(n);
         };
     }, [a, m, I]);
-    let b = l.useCallback(() => {
+    let T = l.useCallback(() => {
         a?.objectId != null && (0, x.Xh)(t, n, a.objectId, { object_type: g.N.PLANT });
     }, [a, t, n]);
-    return (0, i.jsxs)(C.T, {
+    return (0, i.jsxs)(y.T, {
         centerSingleItem: !0,
         children: [
-            (0, i.jsx)(C.T.Trigger, {
+            (0, i.jsx)(y.T.Trigger, {
                 children: (e) => {
                     let { ref: t, onClick: n, ...l } = e;
                     return (0, i.jsxs)(o.D, {
-                        className: s()(v.CV, v.AA, p && v.r9),
+                        className: s()(E.CV, E.AA, p && E.r9),
                         style: { left: `${c.x}%`, bottom: `${c.y}%`, width: `${h}px` },
                         innerRef: (e) => {
                             t.current = e;
@@ -108,30 +109,30 @@ function P(e) {
                                 let { src: n, alt: l } = _[t],
                                     a = t === m;
                                 return (0, i.jsx)(r.animated.img, {
-                                    className: s()(v.zs, { [v.tB]: !a }),
+                                    className: s()(E.zs, { [E.tB]: !a }),
                                     style: { opacity: e.opacity },
                                     src: n,
-                                    alt: j.intl.string(l),
+                                    alt: v.intl.string(l),
                                     draggable: !1,
                                 });
                             }),
                             (0, i.jsx)("img", {
-                                className: v.tB,
-                                src: T.A,
-                                alt: j.intl.string(y.default.cPQCeg),
+                                className: E.tB,
+                                src: b.A,
+                                alt: v.intl.string(j.default.cPQCeg),
                                 draggable: !1,
                             }),
                         ],
                     });
                 },
             }),
-            (0, i.jsx)(C.T.Popup, {
-                "aria-label": j.intl.string(y.default.B0gnKP),
-                children: (0, i.jsx)(C.T.Item, {
+            (0, i.jsx)(y.T.Popup, {
+                "aria-label": v.intl.string(j.default.B0gnKP),
+                children: (0, i.jsx)(y.T.Item, {
                     icon: u.B,
-                    text: j.intl.string(y.default.aduS3B),
+                    text: v.intl.string(j.default.aduS3B),
                     selected: !1,
-                    onClick: b,
+                    onClick: T,
                 }),
             }),
         ],
@@ -140,21 +141,22 @@ function P(e) {
 function O(e) {
     let { plantPosition: t, plantWidth: n } = e;
     return (0, i.jsxs)("div", {
-        className: v.CV,
+        className: E.CV,
         style: { left: `${t.x}%`, bottom: `${t.y}%`, width: `${n}px` },
         children: [
-            (0, i.jsx)("img", { className: v.zs, src: I.A, alt: j.intl.string(y.default.IrukuA), draggable: !1 }),
-            (0, i.jsx)("img", { className: v.tB, src: T.A, alt: j.intl.string(y.default.cPQCeg), draggable: !1 }),
+            (0, i.jsx)("img", { className: E.zs, src: T.A, alt: v.intl.string(j.default.IrukuA), draggable: !1 }),
+            (0, i.jsx)("img", { className: E.tB, src: b.A, alt: v.intl.string(j.default.cPQCeg), draggable: !1 }),
         ],
     });
 }
-function L(e) {
+function w(e) {
     let { channelId: t, plants: n, plantConfig: a, roomWidth: s, roomHeight: r, aspectRatio: o } = e,
         d = (0, c.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
         u = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
-        { experimental: m } = f.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
+        { experimental: m } = C.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
         A = (0, c.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === t),
-        x = (s / r > o ? r * o : s) * 0.0625;
+        x = (0, c.bG)([f.A], () => null != f.A.getPendingNote(t)),
+        g = (s / r > o ? r * o : s) * 0.0625;
     return (l.useEffect(() => {
         m &&
             Object.values(_).forEach((e) => {
@@ -169,11 +171,11 @@ function L(e) {
                   let { plant: l, plantPosition: a } = e;
                   return m
                       ? (0, i.jsx)(
-                            P,
-                            { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !A, plantWidth: x },
+                            L,
+                            { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !A || x, plantWidth: g },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(O, { plantPosition: a, plantWidth: x }, n);
+                      : (0, i.jsx)(O, { plantPosition: a, plantWidth: g }, n);
               }),
           });
 }

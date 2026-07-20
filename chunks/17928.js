@@ -405,7 +405,7 @@ class O {
 }
 let R = { _state: void 0, _version: void 0 },
     L = null;
-class D extends O {
+class y extends O {
     static allPersistKeys = new Set();
     static userAgnosticPersistKeys = new Set();
     static _writePromises = new Map();
@@ -423,26 +423,26 @@ class D extends O {
     static clearAll(e) {
         return (
             (L = e),
-            null == D._clearAllPromise &&
-                (D._clearAllPromise = new Promise((t) => {
+            null == y._clearAllPromise &&
+                (y._clearAllPromise = new Promise((t) => {
                     requestIdleCallback(
                         () => {
-                            D.clearPersistQueue(e),
-                                D.allPersistKeys.forEach((t) => {
-                                    D.shouldClear(e, t) && m.w.remove(t);
+                            y.clearPersistQueue(e),
+                                y.allPersistKeys.forEach((t) => {
+                                    y.shouldClear(e, t) && m.w.remove(t);
                                 }),
                                 O.getAll().forEach((t) => {
-                                    t instanceof D &&
-                                        D.shouldClear(e, t.getClass().persistKey) &&
+                                    t instanceof y &&
+                                        y.shouldClear(e, t.getClass().persistKey) &&
                                         ((t._isInitialized = !1), t.initializeIfNeeded());
                                 }),
-                                (D._clearAllPromise = null),
+                                (y._clearAllPromise = null),
                                 t();
                         },
                         { timeout: 500 },
                     );
                 })),
-            D._clearAllPromise
+            y._clearAllPromise
         );
     }
     static shouldClear(e, t) {
@@ -451,25 +451,25 @@ class D extends O {
             case "all":
                 return !0;
             case "user-data-only":
-                return !D.userAgnosticPersistKeys.has(t);
+                return !y.userAgnosticPersistKeys.has(t);
             default:
                 return e.type, !1;
         }
     }
     static clearPersistQueue(e) {
-        D._writeResolvers.forEach((t, n) => {
+        y._writeResolvers.forEach((t, n) => {
             let [i, r] = t;
-            D.shouldClear(e, n) &&
-                (D._writePromises.delete(n), D._writeResolvers.delete(n), cancelIdleCallback(r), i(!1));
+            y.shouldClear(e, n) &&
+                (y._writePromises.delete(n), y._writeResolvers.delete(n), cancelIdleCallback(r), i(!1));
         }),
-            D._writePromises.clear(),
-            D._writeResolvers.clear();
+            y._writePromises.clear(),
+            y._writeResolvers.clear();
     }
     static getAllStates() {
-        return Promise.all(Array.from(D._writePromises.values())).then(() => {
+        return Promise.all(Array.from(y._writePromises.values())).then(() => {
             let e = {};
             return (
-                D.allPersistKeys.forEach((t) => {
+                y.allPersistKeys.forEach((t) => {
                     e[t] = (m.w.get(t) ?? R)._state;
                 }),
                 e
@@ -478,7 +478,7 @@ class D extends O {
     }
     static initializeAll(e) {
         O.getAll().forEach((t) => {
-            if (t instanceof D) {
+            if (t instanceof y) {
                 let n = t.getClass().persistKey;
                 e.hasOwnProperty(n) && t.initializeFromState(e[n]);
             }
@@ -488,14 +488,14 @@ class D extends O {
         this.initialize(e) && this.asyncPersist(),
             this._isInitialized
                 ? this.emitChange()
-                : (D.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
+                : (y.allPersistKeys.add(this.getClass().persistKey), (this._isInitialized = !0));
     }
     static destroy() {
         (L = null),
             O.destroy(),
-            D.clearPersistQueue({ type: "all" }),
-            D.allPersistKeys.clear(),
-            D.userAgnosticPersistKeys.clear();
+            y.clearPersistQueue({ type: "all" }),
+            y.allPersistKeys.clear(),
+            y.userAgnosticPersistKeys.clear();
     }
     constructor(e, t, n) {
         if ((super(e, t, n), "string" != typeof this.getClass().persistKey))
@@ -515,8 +515,8 @@ class D extends O {
     initializeIfNeeded() {
         if (!this._isInitialized) {
             let e = Date.now();
-            D.allPersistKeys.add(this.getClass().persistKey);
-            let { state: t, requiresPersist: n } = D.migrateAndReadStoreState(
+            y.allPersistKeys.add(this.getClass().persistKey);
+            let { state: t, requiresPersist: n } = y.migrateAndReadStoreState(
                 this.getClass().persistKey,
                 this.getClass().migrations,
             );
@@ -526,8 +526,8 @@ class D extends O {
         }
     }
     static migrateAndReadStoreState(e, t) {
-        if (null != L && D.shouldClear(L, e)) return m.w.remove(e), { state: void 0, requiresPersist: !1 };
-        let { _state: n, _version: i, ...r } = (null != D._clearAllPromise ? null : m.w.get(e)) ?? R,
+        if (null != L && y.shouldClear(L, e)) return m.w.remove(e), { state: void 0, requiresPersist: !1 };
+        let { _state: n, _version: i, ...r } = (null != y._clearAllPromise ? null : m.w.get(e)) ?? R,
             a = null == t ? 0 : t.length;
         if (0 !== a && i !== a && null != t) {
             let e = i ?? 0,
@@ -539,20 +539,20 @@ class D extends O {
     }
     callback = (e) => {
         let { persistKey: t } = this.getClass();
-        this.persist(), D._writePromises.delete(t), D._writeResolvers.delete(t), e();
+        this.persist(), y._writePromises.delete(t), y._writeResolvers.delete(t), e();
     };
     throttledCallback = T()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
     asyncPersist() {
         let { persistKey: e, disableWrite: t, throttleDelay: n } = this.getClass();
-        if (D.disableWrites || t) return Promise.resolve(!1);
-        let i = D._writePromises.get(e);
+        if (y.disableWrites || t) return Promise.resolve(!1);
+        let i = y._writePromises.get(e);
         return (
             null != i ||
                 ((i = new Promise((t) => {
                     let i = n > 0 ? () => this.throttledCallback(t) : () => this.callback(t);
-                    D._writeResolvers.set(e, [t, requestIdleCallback(i, { timeout: 500 })]);
+                    y._writeResolvers.set(e, [t, requestIdleCallback(i, { timeout: 500 })]);
                 })),
-                D._writePromises.set(e, i)),
+                y._writePromises.set(e, i)),
             i
         );
     }
@@ -567,12 +567,12 @@ class D extends O {
         m.w.remove(e);
     }
 }
-class y extends D {
+class D extends y {
     initializeFromState(e) {
-        return D.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeFromState(e);
+        return y.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeFromState(e);
     }
     initializeIfNeeded() {
-        return D.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeIfNeeded();
+        return y.userAgnosticPersistKeys.add(this.getClass().persistKey), super.initializeIfNeeded();
     }
     getState() {
         return this.getUserAgnosticState();
@@ -586,17 +586,18 @@ function P(e) {
 }
 function U(e) {
     let t = null,
-        n = null,
-        i = (e) =>
-            null != t && null != n && (0, M.A)(t, e)
-                ? n
-                : null != t && null != n && (0, M.A)(t, e)
-                  ? ((t = e), n)
-                  : null,
-        r = (r) => {
-            let a = i(r);
-            return null != a ? a : (n = e((t = r)));
-        };
+        n = null;
+    function i(e) {
+        return null != t && null != n && (0, M.A)(t, e)
+            ? n
+            : null != t && null != n && (0, M.A)(t, e)
+              ? ((t = e), n)
+              : null;
+    }
+    function r(r) {
+        let a = i(r);
+        return null != a ? a : (n = e((t = r)));
+    }
     return (
         (r.getCachedResult = i),
         (r.clear = () => {
@@ -794,9 +795,9 @@ function Y(e, t) {
 let K = {
     Emitter: c.A,
     Store: O,
-    PersistedStore: D,
-    DeviceSettingsStore: class extends y {},
-    OfflineCacheStore: class extends y {},
+    PersistedStore: y,
+    DeviceSettingsStore: class extends D {},
+    OfflineCacheStore: class extends D {},
     connectStores: function (e, t, n) {
         return null != n && n.forwardRef
             ? (function (e, t) {

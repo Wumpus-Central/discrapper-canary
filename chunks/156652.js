@@ -8,7 +8,7 @@ var l,
     c = t(765671),
     u = t(401685),
     d = t(919706),
-    A = t(499997),
+    A = t(248221),
     h = (((l = {})[(l.TOP = 0)] = "TOP"), (l[(l.BOTTOM = 1)] = "BOTTOM"), l);
 function m(e) {
     let {
@@ -59,7 +59,8 @@ function C(e) {
         renderChatToasts: c,
         renderVoiceChannelEffects: u,
         style: h,
-        ...C
+        hideControls: C = !1,
+        ...E
     } = e;
     return (0, i.jsxs)("div", {
         className: r()(A.zr, { [A.N7]: a }),
@@ -69,7 +70,7 @@ function C(e) {
         onMouseLeave: s,
         onDoubleClick: t,
         children: [
-            (0, i.jsx)(m, { ...C }),
+            !C && (0, i.jsx)(m, { ...E }),
             o,
             null != n ? (0, i.jsx)(d.A, { size: "large", ...n }) : null,
             c?.(),

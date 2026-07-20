@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { My: () => E, yK: () => A, bG: () => m, cf: () => g });
+n.d(t, { My: () => h, yK: () => p, bG: () => I, cf: () => f });
 var i = n(64700),
     r = n(52133),
-    s = n(968441),
-    a = n(941426);
+    a = n(968441),
+    s = n(941426);
 n(506774);
-let o = new a.Vy("useStateFromStores"),
-    l = (function () {
+let l = new s.Vy("useStateFromStores"),
+    o = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 6e4;
         return e;
     })(),
-    u = (function () {
+    d = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 10;
         return e;
     })(),
@@ -18,7 +18,7 @@ let o = new a.Vy("useStateFromStores"),
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1e3;
         return e;
     })(),
-    d = (function () {
+    u = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
         return e;
     })();
@@ -28,72 +28,71 @@ let o = new a.Vy("useStateFromStores"),
 })() &&
     setInterval(function () {
         for (let [e, t] of ((function () {
-            for (let [e, t] of _) if (h(t)) return !0;
+            for (let [e, t] of _) if (E(t)) return !0;
             return !1;
-        })() || "" !== d
-            ? f()
-            : o.log("No violators found"),
+        })() || "" !== u
+            ? (function () {
+                  let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 34,
+                      t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
+                      n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20,
+                      i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e + t + n + 6;
+                  for (let [r, a] of (l.log("|".padEnd(i, "-") + "|"),
+                  l.log("| Consumers of `useStateFromStores` exceeding warning thresholds:".padEnd(i, " ") + "|"),
+                  l.log("|".padEnd(i, "-") + "|"),
+                  l.log(
+                      `| ${"Function/Component Name".padEnd(e, " ")}| ${"Total Exec Time".padEnd(t, " ")}| ${"Total Exec Count".padEnd(n, " ")}|`,
+                  ),
+                  l.log("|".padEnd(i, "-") + "|"),
+                  _))
+                      (("" !== u && r === u) || E(a)) &&
+                          l.log(
+                              `| ${r.padEnd(e, " ")}| ${(a.execTime.toFixed(2) + "ms").padEnd(t, " ")}| ${a.execCount.toString().padEnd(n, " ")}|`,
+                          );
+                  l.log("|".padEnd(i, "-") + "|");
+              })()
+            : l.log("No violators found"),
         _))
             (t.warned = !1), (t.execTime = 0), (t.execCount = 0);
-    }, l);
+    }, o);
 let _ = new Map();
-function h(e) {
-    return "anonymous" !== e.name && ("" === d || e.name === d) && (e.execCount > c || e.execTime > u);
+function E(e) {
+    return "anonymous" !== e.name && ("" === u || e.name === u) && (e.execCount > c || e.execTime > d);
 }
-let f = function () {
-    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 34,
-        t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 20,
-        n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : 20,
-        i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : e + t + n + 6;
-    for (let [r, s] of (o.log("|".padEnd(i, "-") + "|"),
-    o.log("| Consumers of `useStateFromStores` exceeding warning thresholds:".padEnd(i, " ") + "|"),
-    o.log("|".padEnd(i, "-") + "|"),
-    o.log(
-        `| ${"Function/Component Name".padEnd(e, " ")}| ${"Total Exec Time".padEnd(t, " ")}| ${"Total Exec Count".padEnd(n, " ")}|`,
-    ),
-    o.log("|".padEnd(i, "-") + "|"),
-    _))
-        (("" !== d && r === d) || h(s)) &&
-            o.log(
-                `| ${r.padEnd(e, " ")}| ${(s.execTime.toFixed(2) + "ms").padEnd(t, " ")}| ${s.execCount.toString().padEnd(n, " ")}|`,
-            );
-    o.log("|".padEnd(i, "-") + "|");
-};
-function p(e, t) {
+function A(e, t) {
     return e === t;
 }
-function E(e, t) {
+function h(e, t) {
     return !1;
 }
-function m(e, t, n) {
-    let a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : p,
-        o = (0, i.useRef)(null);
-    null == o.current &&
-        (o.current = { stores: e, areStatesEqual: a, getStateFromStores: t, prevDeps: void 0, state: void 0 });
-    let l = o.current,
-        u = l.state;
-    if (null == n || !(0, r.v)(n, l.prevDeps)) {
+function I(e, t, n) {
+    let s = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : A,
+        l = (0, i.useRef)(null);
+    null == l.current &&
+        (l.current = { stores: e, areStatesEqual: s, getStateFromStores: t, prevDeps: void 0, state: void 0 });
+    let o = l.current,
+        d = o.state;
+    if (null == n || !(0, r.v)(n, o.prevDeps)) {
         let e;
-        (e = t()), (null != u && a(u, e)) || (u = e);
+        (e = t()), (null != d && s(d, e)) || (d = e);
     }
     (0, i.useInsertionEffect)(() => {
-        (l.getStateFromStores = t), (l.prevDeps = n), (l.state = u);
+        (o.getStateFromStores = t), (o.prevDeps = n), (o.state = d);
     });
     let [, c] = (0, i.useState)(null);
     return (
         (0, i.useInsertionEffect)(() => {
-            let t = new s.r(e, () => {
+            let t = new a.r(e, function () {
                 let e;
-                (e = l.getStateFromStores()), a(l.state, e) || ((l.state = e), c({}));
+                (e = o.getStateFromStores()), s(o.state, e) || ((o.state = e), c({}));
             });
             return t.attach("useStateFromStores"), () => t.detach();
         }, []),
-        u
+        d
     );
 }
-function g(e, t, n) {
-    return m(e, t, n, r.A);
+function f(e, t, n) {
+    return I(e, t, n, r.A);
 }
-function A(e, t, n) {
-    return m(e, t, n, r.v);
+function p(e, t, n) {
+    return I(e, t, n, r.v);
 }

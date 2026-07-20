@@ -1,75 +1,60 @@
-t.d(n, { A: () => x });
-var l = t(627968),
-    i = t(64700),
-    s = t(305866),
-    a = t(849516),
-    r = t(834730),
-    o = t(939249),
-    c = t(972213),
-    u = t(355622),
-    d = t(408018),
-    A = t(138617),
-    h = t(7584),
-    m = t(446243),
-    C = t(662731),
-    E = t(375708),
-    p = t(691053);
+n.d(t, { A: () => x });
+var i = n(627968),
+    l = n(64700),
+    a = n(17928),
+    s = n(305866),
+    r = n(775602),
+    o = n(355622),
+    c = n(408018),
+    d = n(138617),
+    u = n(7584),
+    p = n(446243),
+    h = n(189090),
+    m = n(375708),
+    A = n(927066);
 function x(e) {
-    let { channel: n, onClose: t } = e,
-        [x, g] = (0, i.useState)(""),
-        [f, I] = (0, i.useState)(""),
-        [v, T] = (0, i.useState)((0, d.x7)("")),
-        [j, _] = (0, i.useState)(!1);
-    return (0, l.jsxs)(s.l, {
-        className: p.kL,
-        children: [
-            (0, l.jsxs)("div", {
-                className: p.wx,
-                children: [
-                    (0, l.jsxs)("div", {
-                        className: p.DD,
-                        children: [
-                            (0, l.jsx)(a.u, { size: "sm" }),
-                            (0, l.jsx)(r.E, { variant: "text-sm/semibold", children: E.intl.string(E.t.PbMNh2) }),
-                        ],
-                    }),
-                    (0, l.jsx)(o.D, { onClick: t, className: p.vk, children: (0, l.jsx)(c.d, { size: "sm" }) }),
-                ],
-            }),
-            (0, l.jsx)("hr", { className: p.me }),
-            (0, l.jsx)(A.Ay, {
-                className: p.Kf,
-                innerClassName: p.Kf,
-                maxCharacterCount: 512,
-                showRemainingCharsAfterCount: 10,
-                onChange: function (e, n, t) {
-                    I(n), T(t), g(h.Ay.translateInlineEmojiToSurrogates(n));
-                },
-                placeholder: E.intl.string(C.default.IAcEEn),
-                channel: n,
-                textValue: f,
-                richValue: v,
-                type: u.oU.GUILD_ROOM,
-                onFocus: () => {
-                    _(!0);
-                },
-                onBlur: () => {
-                    _(!1);
-                },
-                focused: j,
-                onSubmit: function () {
-                    return 0 === x.trim().length
-                        ? new Promise((e) => {
-                              e({ shouldClear: !1, shouldRefocus: !0 });
-                          })
-                        : ((0, m.Ix)(n.id, x),
-                          new Promise((e) => {
-                              e({ shouldClear: !0, shouldRefocus: !1 }), t();
-                          }));
-                },
-                disableThemedBackground: !0,
-                showValueWhenDisabled: !0,
-            }),
-        ],
+    let { channel: t, position: n, setEditorRef: x } = e,
+        f = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
+        [g, C] = (0, l.useState)(""),
+        [y, j] = (0, l.useState)(""),
+        [v, E] = (0, l.useState)((0, c.x7)("")),
+        [N, I] = (0, l.useState)(f),
+        T = (0, l.useRef)(!1);
+    return (0, i.jsx)(s.l, {
+        className: A.kL,
+        children: (0, i.jsx)(d.Ay, {
+            className: A.Kf,
+            innerClassName: A.Kf,
+            maxCharacterCount: 512,
+            showRemainingCharsAfterCount: 10,
+            onChange: function (e, t, n) {
+                j(t), E(n), C(u.Ay.translateInlineEmojiToSurrogates(t));
+            },
+            placeholder: m.intl.string(h.default.IAcEEn),
+            channel: t,
+            textValue: y,
+            richValue: v,
+            type: o.oU.GUILD_ROOM,
+            onFocus: () => {
+                I(!0);
+            },
+            onBlur: () => {
+                I(!1);
+            },
+            focused: N,
+            onSubmit: () => {
+                let e = t.guild_id;
+                return 0 === g.trim().length || null == e
+                    ? Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })
+                    : T.current
+                      ? Promise.resolve({ shouldClear: !1, shouldRefocus: !1 })
+                      : ((T.current = !0),
+                        (0, p.zK)(e, t.id, g, n),
+                        Promise.resolve({ shouldClear: !0, shouldRefocus: !1 }));
+            },
+            setEditorRef: x,
+            disableThemedBackground: !0,
+            showValueWhenDisabled: !0,
+        }),
     });
 }

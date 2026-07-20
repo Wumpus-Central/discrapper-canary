@@ -128,9 +128,15 @@ let C = new N(r.h, {
             t = s.A.getMediaSessionId();
         null != e && null != t && p.set(e, t);
     },
-    GUILD_ROOM_PENDING_NOTE_CREATE: function (e) {
-        let { roomId: t, note: n } = e;
-        m[t] = n;
+    GUILD_ROOM_PENDING_NOTE_START: function (e) {
+        let { roomId: t } = e;
+        m[t] = { position: null };
+    },
+    GUILD_ROOM_PENDING_NOTE_PLACE: function (e) {
+        let { roomId: t, position: n } = e,
+            i = m[t];
+        if (null == i) return !1;
+        m[t] = { ...i, position: n };
     },
     GUILD_ROOM_PENDING_NOTE_DELETE: S,
     GUILD_ROOM_NOTE_CREATE_COMPLETE: S,
