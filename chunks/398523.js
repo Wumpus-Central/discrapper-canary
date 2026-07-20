@@ -1,10 +1,9 @@
-"use strict";
-n.d(t, { Ay: () => l, F0: () => s, H7: () => r, zG: () => a });
-var i = n(945810);
+i.d(t, { Ay: () => l, F0: () => a, H7: () => r, zG: () => n });
+var s = i(945810);
 let r = 15,
+    n = 20,
     a = 20,
-    s = 20,
-    l = (0, i.mj)({
+    l = (0, s.mj)({
         name: "2026-03-steelseries-3p-recurring",
         kind: "user",
         defaultConfig: { enabled: !1 },

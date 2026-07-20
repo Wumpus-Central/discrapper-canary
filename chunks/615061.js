@@ -51,16 +51,16 @@ var h = n(64700),
     S = n(904986),
     N = n(459838),
     C = n(70909);
-let R = {},
-    O = null;
+let O = {},
+    R = null;
 function L(e) {
-    let t = R[e] ?? 0;
-    0 === t && O?.(e, !0), (R[e] = t + 1);
+    let t = O[e] ?? 0;
+    0 === t && R?.(e, !0), (O[e] = t + 1);
 }
-function D(e) {
-    R[e]--, 0 === R[e] && O?.(e, !1);
+function y(e) {
+    O[e]--, 0 === O[e] && R?.(e, !1);
 }
-var y = n(143236),
+var D = n(143236),
     v = n(737005),
     b = n.n(v),
     M = n(731854);
@@ -175,7 +175,7 @@ class W {
 var Y = n(818348);
 let K = new g.Vy("Output"),
     $ = new j();
-class z extends y.EventEmitter {
+class z extends D.EventEmitter {
     stream;
     context;
     sourceId;
@@ -378,7 +378,7 @@ var q = n(434933),
     Q = n.n(X),
     J = n(201327);
 let ee = new j();
-class et extends y.EventEmitter {
+class et extends D.EventEmitter {
     stream = new MediaStream();
     sourceId = M.qe;
     streamId = null;
@@ -1256,7 +1256,7 @@ var eN =
     (o.INACTIVE = "inactive"),
     o);
 let eC = "UDP/TLS/RTP/SAVPF";
-function eR(e) {
+function eO(e) {
     switch (e) {
         case "recvonly":
             return "sendonly";
@@ -1268,7 +1268,7 @@ function eR(e) {
             return "inactive";
     }
 }
-function eO(e, t, n) {
+function eR(e, t, n) {
     let i = `${e}-${t}`,
         r = `${n}${i}`;
     return [
@@ -1304,7 +1304,7 @@ function eL(e) {
         media: e,
     });
 }
-function eD(e) {
+function ey(e) {
     let {
         mid: t,
         type: n,
@@ -1407,7 +1407,7 @@ function eD(e) {
     }
     return h;
 }
-function ey(e, t, n, i, r) {
+function eD(e, t, n, i, r) {
     let a = e.find((e) => e.codec === i);
     if (null == a) return null;
     let s = t.find((e) => RegExp(`^apt=${a.payload}`).test(e.config)),
@@ -1426,7 +1426,7 @@ function ev(e, t) {
             switch ((e.outboundStreams.push({ type: r, direction: o, mid: d }), r)) {
                 case "audio":
                     [M.UK.OPUS].forEach((t, n) => {
-                        let i = ey(a, l, r, t, n);
+                        let i = eD(a, l, r, t, n);
                         null != i && e.codecs.push(i);
                     }),
                         "sendrecv" === o &&
@@ -1436,7 +1436,7 @@ function ev(e, t) {
                 case "video":
                     (t ? [M.UK.H265, M.UK.H264, M.UK.VP8, M.UK.VP9] : [M.UK.H264, M.UK.VP8, M.UK.VP9]).forEach(
                         (t, n) => {
-                            let i = ey(a, l, r, t, n);
+                            let i = eD(a, l, r, t, n);
                             null != i && e.codecs.push(i);
                         },
                     ),
@@ -1477,7 +1477,7 @@ function eP(e) {
         return { value: parseInt(t[0].split("/")[0].substr(9), 10), uri: t[1] };
     });
 }
-class eU extends y.EventEmitter {
+class eU extends D.EventEmitter {
     audioCodec = null;
     audioPayloadType = null;
     videoCodec = null;
@@ -1553,7 +1553,7 @@ class eU extends y.EventEmitter {
             return [i, n, r, a === i || s === i ? this.direction : eN.INACTIVE, l];
         });
         if ("Firefox" !== A().name) return this.connected ? t : [];
-        let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eR(e.direction), `${e.type}_outbound_${t}`]);
+        let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eO(e.direction), `${e.type}_outbound_${t}`]);
         if ("answer" !== e) return n.concat(t);
         {
             let e = n.length - t.length;
@@ -1563,7 +1563,7 @@ class eU extends y.EventEmitter {
                 .slice(0, n.length)
                 .map((e, t) => {
                     let [n, i, r, a, s] = e;
-                    return [n, i, r, eR(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
+                    return [n, i, r, eO(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
                 });
         }
     }
@@ -1600,7 +1600,7 @@ class eU extends y.EventEmitter {
                     let [i, u, A, h, I] = t;
                     ("video" === A && (0 === o || 0 === c)) ||
                         E.push(
-                            eD({
+                            ey({
                                 mid: I,
                                 type: A,
                                 setup: e,
@@ -1609,7 +1609,7 @@ class eU extends y.EventEmitter {
                                 codec: "audio" === A ? r : l,
                                 payload: "audio" === A ? a : o,
                                 bitrate: "audio" === A ? s : d,
-                                ssrcs: eO(u, i, "audio" === A ? "a" : "v"),
+                                ssrcs: eR(u, i, "audio" === A ? "a" : "v"),
                                 extensions: _,
                             }),
                         );
@@ -1623,11 +1623,11 @@ class eU extends y.EventEmitter {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return eO(n, t, "a");
+                            return eR(n, t, "a");
                         });
                 if (
                     (E.push(
-                        eD({
+                        ey({
                             mid: "audio",
                             type: "audio",
                             setup: e,
@@ -1649,10 +1649,10 @@ class eU extends y.EventEmitter {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return eO(n, t, "v");
+                            return eR(n, t, "v");
                         });
                     E.push(
-                        eD({
+                        ey({
                             mid: "video",
                             type: "video",
                             setup: e,
@@ -1687,7 +1687,7 @@ class eU extends y.EventEmitter {
     }
 }
 let ew = new g.Vy("PeerConnection");
-class eG extends y.EventEmitter {
+class eG extends D.EventEmitter {
     bitrate;
     pc;
     stream = null;
@@ -2319,7 +2319,7 @@ class e0 extends eI {
                         -1 !== c &&
                         ((l = o.pop()), d.splice(c, 1), this.assignedStreams.set(r, l)),
                     null == l && (l = { ssrc: -1, cname: "" }),
-                    { ssrc: l.ssrc, cname: l.cname, type: a, direction: eR(s), mid: r }
+                    { ssrc: l.ssrc, cname: l.cname, type: a, direction: eO(s), mid: r }
                 );
             }),
             remainingAudioStreams: t,
@@ -2369,10 +2369,10 @@ class e0 extends eI {
                         let t,
                             { ssrc: u, cname: I, type: f, direction: p, mid: T } = e;
                         "" !== I
-                            ? (t = eO(I, u, "audio" === f ? "a" : "v"))
+                            ? (t = eR(I, u, "audio" === f ? "a" : "v"))
                             : ((t = []), "sendonly" === p ? (p = "inactive") : "sendrecv" === p && (p = "recvonly")),
                             A.push(
-                                eD({
+                                ey({
                                     mid: T,
                                     type: f,
                                     setup: h,
@@ -2656,7 +2656,7 @@ class e2 extends eI {
 }
 let e3 = n.p + "worklet.8d84a64a97f8451a.js",
     e6 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e4 extends y.EventEmitter {
+class e4 extends D.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2716,7 +2716,7 @@ class e4 extends y.EventEmitter {
         this.pc1.createOffer(e6).then((e) => {
             this.pc1
                 .setLocalDescription(
-                    ((e) => {
+                    (function (e) {
                         let t = e.sdp.split("\n");
                         for (let e = 0; e < t.length; e++) {
                             let n = t[e];
@@ -2751,7 +2751,7 @@ class e4 extends y.EventEmitter {
         });
     };
 }
-class e5 extends y.EventEmitter {
+class e5 extends D.EventEmitter {
     id;
     stream;
     pool;
@@ -2825,13 +2825,13 @@ function tt(e) {
                 L(t),
                 (e.srcObject = (0, J.yL)(t)),
                 () => {
-                    D(t), (e.srcObject = null), e.load();
+                    y(t), (e.srcObject = null), e.load();
                 }
             );
     }, [t]),
         h.useEffect(
             () => (
-                n ? (l.current?.pause(), D(t)) : l.current?.play().catch(() => {}),
+                n ? (l.current?.pause(), y(t)) : l.current?.play().catch(() => {}),
                 () => {
                     n && L(t);
                 }
@@ -2926,7 +2926,7 @@ class tr extends p.A {
             this.on("newListener", this.handleNewListener),
             this.on("removeListener", this.handleRemoveListener),
             (function (e) {
-                O = e ?? null;
+                R = e ?? null;
             })(this.handleActiveSinksChange),
             (0, C.A)(this);
     }
