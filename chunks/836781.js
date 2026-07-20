@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => W, Z: () => j });
+n.d(t, { A: () => Y, Z: () => W });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -17,38 +17,40 @@ var i = n(627968),
     f = n(700331),
     p = n(454290),
     T = n(536763),
-    m = n(452282),
-    g = n(967758),
-    S = n(358731),
-    N = n(158816);
-let C = r.memo(function (e) {
+    m = n(267102),
+    g = n(452282),
+    S = n(967758),
+    N = n(358731),
+    C = n(158816);
+let O = r.memo(function (e) {
     let { items: t, currentIndex: n, children: a } = e,
         l = t[n],
         o = t.length > 1,
-        d = (0, g.A)(o, { width: l.width, height: l.height }),
-        [c, u] = r.useState(0);
+        d = (0, m._o)(),
+        c = (0, S.A)(o, { width: l.width, height: l.height }, d),
+        [u, _] = r.useState(0);
     return (
         r.useEffect(() => {
             function e() {
-                return u((e) => e + 1);
+                return _((e) => e + 1);
             }
-            return window.addEventListener("resize", e), () => window.removeEventListener("resize", e);
-        }),
+            return d.addEventListener("resize", e), () => d.removeEventListener("resize", e);
+        }, [d]),
         r.useEffect(() => {
             if (t.length > 1) {
-                let e = t[(0, m.U3)(n - 1, t.length)],
-                    i = t[(0, m.U3)(n + 1, t.length)];
-                j(e, !0), t.length > 2 && j(i, !0);
+                let e = t[(0, g.U3)(n - 1, t.length)],
+                    i = t[(0, g.U3)(n + 1, t.length)];
+                W(e, !0), t.length > 2 && W(i, !0);
             }
         }, [n, t]),
-        (0, i.jsx)(S.Ay, {
-            mode: S.nY.PINNED,
+        (0, i.jsx)(N.Ay, {
+            mode: N.nY.PINNED,
             children: (e) =>
                 (0, i.jsx)("div", {
-                    className: s()(N.k4, e),
+                    className: s()(C.k4, e),
                     children: (0, i.jsx)(
                         "div",
-                        { children: d.width > 0 && d.height > 0 && a(d.width, d.height) },
+                        { children: c.width > 0 && c.height > 0 && a(c.width, c.height) },
                         l.url,
                     ),
                 }),
@@ -56,31 +58,31 @@ let C = r.memo(function (e) {
     );
 });
 var R = n(331322),
-    O = n(87221),
-    L = n(689175),
-    y = n(939249),
-    D = n(775602),
-    v = n(607470),
-    b = n(619517),
-    M = n(154872),
-    P = n(838541),
-    U = n(375708),
-    w = n(656633);
-function G(e) {
+    L = n(87221),
+    y = n(689175),
+    D = n(939249),
+    v = n(775602),
+    b = n(607470),
+    M = n(619517),
+    P = n(154872),
+    U = n(838541),
+    w = n(375708),
+    G = n(656633);
+function x(e) {
     return `media-view-scroll-thumbnail-${e}`;
 }
-let x = r.memo(function (e) {
+let k = r.memo(function (e) {
     let { item: t, enabledContentHarmTypeFlags: n = 0 } = e,
         r = (function (e) {
             if ("IMAGE" === e.type) return (0, A.E)({ proxyURL: e.proxyUrl, url: e.url });
             if ("VIDEO" === e.type) {
                 if (null != e.poster) return e.poster;
-                if (null != e.proxyUrl) return (0, M.VZ)(e.proxyUrl);
+                if (null != e.proxyUrl) return (0, P.VZ)(e.proxyUrl);
             }
             return null;
         })(t);
     return null == r && "VIDEO" === t.type
-        ? (0, i.jsx)(v.A, {
+        ? (0, i.jsx)(b.A, {
               src: `${t.url}#t=1`,
               preload: "metadata",
               muted: !0,
@@ -92,11 +94,11 @@ let x = r.memo(function (e) {
             ? (0, i.jsx)(R.B, {
                   align: "center",
                   justify: "center",
-                  className: w.cd,
+                  className: G.cd,
                   style: { width: 40, height: 40 },
-                  children: (0, i.jsx)(O.D, { size: "sm", color: "white" }),
+                  children: (0, i.jsx)(L.D, { size: "sm", color: "white" }),
               })
-            : (0, i.jsx)(b.Ay, {
+            : (0, i.jsx)(M.Ay, {
                   width: t.width ?? 40,
                   height: t.height ?? 40,
                   maxWidth: 40,
@@ -107,37 +109,37 @@ let x = r.memo(function (e) {
                   shouldRenderAccessory: !1,
                   srcIsAnimated: t.srcIsAnimated,
                   alt: t.alt,
-                  mediaLayoutType: P.dG.MOSAIC,
+                  mediaLayoutType: U.dG.MOSAIC,
               });
 });
-function k(e) {
+function F(e) {
     let { items: t, currentIndex: n, onGalleryItemClick: a, className: l, enabledContentHarmTypeFlags: o } = e,
         d = r.useRef(null);
     return (
         r.useLayoutEffect(() => {
-            let e = document.getElementById(G(n));
+            let e = document.getElementById(x(n));
             null != d.current &&
                 null != e &&
-                d.current.scrollIntoViewNode({ node: e, animate: !D.Ay.useReducedMotion, padding: 20 });
+                d.current.scrollIntoViewNode({ node: e, animate: !v.Ay.useReducedMotion, padding: 20 });
         }, [n]),
         (0, i.jsx)("div", {
-            className: s()(w.IL, l),
-            children: (0, i.jsx)(L.Ch, {
+            className: s()(G.IL, l),
+            children: (0, i.jsx)(y.Ch, {
                 orientation: "horizontal",
-                className: s()(w.nV, l),
+                className: s()(G.nV, l),
                 ref: d,
                 onClick: (e) => e.stopPropagation(),
                 children: t.map((e, r) => {
                     let l = r === n,
-                        d = l ? U.t["qv/U5V"] : U.t.zviMAG;
+                        d = l ? w.t["qv/U5V"] : w.t.zviMAG;
                     return (0, i.jsx)(
-                        y.D,
+                        D.D,
                         {
-                            id: G(r),
-                            className: s()(w.Qq, { [w.AD]: !l, [w.$1]: 0 === r, [w.HV]: r === t.length - 1 }),
-                            "aria-label": U.intl.formatToPlainString(d, { pageNumber: r + 1, totalPages: t.length }),
+                            id: x(r),
+                            className: s()(G.Qq, { [G.AD]: !l, [G.$1]: 0 === r, [G.HV]: r === t.length - 1 }),
+                            "aria-label": w.intl.formatToPlainString(d, { pageNumber: r + 1, totalPages: t.length }),
                             onClick: () => a(r),
-                            children: (0, i.jsx)(x, { item: e, enabledContentHarmTypeFlags: o }),
+                            children: (0, i.jsx)(k, { item: e, enabledContentHarmTypeFlags: o }),
                         },
                         r,
                     );
@@ -146,10 +148,10 @@ function k(e) {
         })
     );
 }
-var F = n(597351),
-    V = n(652215),
-    B = n(420165);
-function H(e) {
+var V = n(597351),
+    B = n(652215),
+    H = n(420165);
+function j(e) {
     let { children: t, isObscured: n, src: a } = e,
         [l, o] = r.useState(!1),
         d = r.useCallback(() => {
@@ -166,20 +168,20 @@ function H(e) {
                       obscured: !0,
                       isSingleMosaicItem: !0,
                       onToggleObscurity: d,
-                      children: (e) => (0, i.jsx)("div", { className: s()(B.JT, { [B.Qr]: e }), children: t(e) }),
+                      children: (e) => (0, i.jsx)("div", { className: s()(H.JT, { [H.Qr]: e }), children: t(e) }),
                   },
                   a,
               ),
           })
         : (0, i.jsx)(i.Fragment, { children: t(!1) });
 }
-function j(e, t) {
+function W(e, t) {
     if ("IMAGE" !== e.type) return;
     if (!(0, I.eJ)(e)) return void (0, _.yt)(e.url);
     let n = (0, A.E)({ proxyURL: e.proxyUrl, url: e.url });
     (0, T.A)({ src: n, width: e.width, height: e.height, hasMultiple: t, options: e });
 }
-function W(e) {
+function Y(e) {
     let {
             items: t,
             onIndexChange: n,
@@ -205,16 +207,16 @@ function W(e) {
             return g(I.current - 1);
         }
         return (
-            h._.subscribe(V.jej.MODAL_CAROUSEL_NEXT, e),
-            h._.subscribe(V.jej.MODAL_CAROUSEL_PREV, t),
+            h._.subscribe(B.jej.MODAL_CAROUSEL_NEXT, e),
+            h._.subscribe(B.jej.MODAL_CAROUSEL_PREV, t),
             () => {
-                h._.unsubscribe(V.jej.MODAL_CAROUSEL_NEXT, e), h._.unsubscribe(V.jej.MODAL_CAROUSEL_PREV, t);
+                h._.unsubscribe(B.jej.MODAL_CAROUSEL_NEXT, e), h._.unsubscribe(B.jej.MODAL_CAROUSEL_PREV, t);
             }
         );
     }, [g, m]);
-    let N = t[E],
-        R = (0, u.qo)({ type: d.D.GenericMedia, media: N }, c),
-        O = _
+    let S = t[E],
+        C = (0, u.qo)({ type: d.D.GenericMedia, media: S }, c),
+        R = _
             ? (e) => {
                   e.stopPropagation(), e.preventDefault();
               }
@@ -222,46 +224,46 @@ function W(e) {
         L = t.length > 1;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(S.Ay, {
+            (0, i.jsx)(N.Ay, {
                 children: (e) =>
                     L
                         ? (0, i.jsxs)(i.Fragment, {
                               children: [
-                                  (0, i.jsx)(F.A, {
+                                  (0, i.jsx)(V.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h._.dispatch(V.jej.MODAL_CAROUSEL_PREV);
+                                          e.stopPropagation(), h._.dispatch(B.jej.MODAL_CAROUSEL_PREV);
                                       },
                                       icon: l.Z,
-                                      tooltip: U.intl.string(U.t.vgfxaA),
-                                      className: s()(B.vi, e),
+                                      tooltip: w.intl.string(w.t.vgfxaA),
+                                      className: s()(H.vi, e),
                                   }),
-                                  (0, i.jsx)(F.A, {
+                                  (0, i.jsx)(V.A, {
                                       onClick: (e) => {
-                                          e.stopPropagation(), h._.dispatch(V.jej.MODAL_CAROUSEL_NEXT);
+                                          e.stopPropagation(), h._.dispatch(B.jej.MODAL_CAROUSEL_NEXT);
                                       },
                                       icon: o.K,
-                                      tooltip: U.intl.string(U.t.XiOHRX),
-                                      className: s()(B.f8, e),
+                                      tooltip: w.intl.string(w.t.XiOHRX),
+                                      className: s()(H.f8, e),
                                   }),
                               ],
                           })
                         : void 0,
             }),
-            (0, i.jsx)(C, {
+            (0, i.jsx)(O, {
                 items: t,
                 currentIndex: E,
                 children: (e, t) =>
-                    (0, i.jsx)(H, {
-                        isObscured: !T && R,
-                        src: N.url,
+                    (0, i.jsx)(j, {
+                        isObscured: !T && C,
+                        src: S.url,
                         children: (n) =>
-                            (0, i.jsx)(M.Ay, { media: N, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: O }),
+                            (0, i.jsx)(P.Ay, { media: S, maxWidth: e, maxHeight: t, obscured: n, onContextMenu: R }),
                     }),
             }),
             L &&
-                (0, i.jsx)(S.Ay, {
+                (0, i.jsx)(N.Ay, {
                     children: (e) =>
-                        (0, i.jsx)(k, {
+                        (0, i.jsx)(F, {
                             items: t,
                             currentIndex: E,
                             onGalleryItemClick: g,
