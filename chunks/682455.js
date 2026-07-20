@@ -10472,6 +10472,7 @@ let c_ = (e) => {
                                     infoHook: () =>
                                         (0, p.jsx)(tV.m, {
                                             text: el.intl.string(el.t.kPJlTh),
+                                            ariaHidden: !0,
                                             children: (0, p.jsx)("span", {
                                                 tabIndex: 0,
                                                 role: "img",
