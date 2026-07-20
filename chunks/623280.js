@@ -16,11 +16,11 @@ var m = n(633075),
     f = n(716804),
     j = n(688807),
     p = n(17928),
-    I = n(990078),
-    E = n(939249),
-    C = n(772838),
-    v = n(140735),
-    b = n(834730),
+    I = n(939249),
+    E = n(772838),
+    C = n(140735),
+    v = n(834730),
+    b = n(866665),
     D = n(192308),
     N = n(922016),
     A = n(980707),
@@ -43,7 +43,7 @@ function O(e) {
         additionalMenuItems: a,
         children: (e) =>
             (0, i.jsx)(G, {
-                children: (0, i.jsxs)(E.D, {
+                children: (0, i.jsxs)(I.D, {
                     innerRef: l,
                     className: r()(W.x6, n),
                     "data-dnd-name": s,
@@ -52,8 +52,8 @@ function O(e) {
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
                     children: [
-                        (0, i.jsx)(C.W, { size: "sm" }),
-                        (0, i.jsx)(v.A, { id: d, children: S.intl.string(S.t.bsuqFn) }),
+                        (0, i.jsx)(E.W, { size: "sm" }),
+                        (0, i.jsx)(C.A, { id: d, children: S.intl.string(S.t.bsuqFn) }),
                     ],
                 }),
             }),
@@ -63,18 +63,18 @@ function G(e) {
     let { children: t } = e,
         n = (0, p.bG)([T.Ay], () => T.Ay.keyboardModeEnabled),
         { isDragging: l } = (0, j.V)((e) => ({ isDragging: e.isDragging() }));
-    return (0, i.jsx)(I.m, {
+    return (0, i.jsx)(b.m, {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
             className: W.HE,
             children: [
-                (0, i.jsx)(b.E, {
+                (0, i.jsx)(v.E, {
                     variant: "text-sm/normal",
                     color: "none",
                     children: S.intl.format(n ? S.t["zvln/l"] : S.t["7cdwhg"], {
                         emphasizeHook: (e) => (0, i.jsx)("strong", { children: e }),
                     }),
                 }),
-                (0, i.jsx)(b.E, {
+                (0, i.jsx)(v.E, {
                     variant: "text-sm/normal",
                     color: "none",
                     children: S.intl.format(S.t["4e0rM4"], {
@@ -105,7 +105,7 @@ function M(e) {
                     n.e("25781"),
                     n.e("62646"),
                     n.e("21377"),
-                    n.e("53702"),
+                    n.e("5406"),
                     n.e("69979"),
                     n.e("81483"),
                     n.e("36252"),
@@ -151,7 +151,7 @@ function M(e) {
                     n.e("36637"),
                     n.e("84050"),
                     n.e("78"),
-                    n.e("62285"),
+                    n.e("10576"),
                     n.e("9856"),
                     n.e("53600"),
                 ]).then(n.bind(n, 380035));
@@ -241,7 +241,7 @@ function Y(e) {
             });
         },
         children: (e) =>
-            (0, i.jsx)(E.D, {
+            (0, i.jsx)(I.D, {
                 ...e,
                 innerRef: o,
                 "aria-label": S.intl.string(S.t.xpSHSk),
@@ -269,7 +269,7 @@ function K(e) {
                 className: B.DD,
                 children: [
                     (0, i.jsx)(L.D, { variant: "heading-sm/medium", color: "text-default", id: n, children: s }),
-                    null != o && (0, i.jsx)(b.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
+                    null != o && (0, i.jsx)(v.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
                 ],
             }),
             (0, i.jsx)(q, { widget: l, actionButtons: d, disabledInteraction: a, userId: t }),

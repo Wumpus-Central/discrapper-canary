@@ -18,7 +18,7 @@ var n = i(627968),
     A = i(569926),
     j = i(958805),
     E = i(61881),
-    S = i(735438),
+    S = i(435558),
     T = i(353640),
     v = i(540185),
     N = i(282435);
@@ -119,8 +119,8 @@ function w(e) {
     return { applicationIds: l, games: d, onAddGame: r };
 }
 var R = i(600761),
-    k = i(667049),
-    O = i(579950),
+    O = i(667049),
+    k = i(579950),
     y = i(605694),
     _ = i(192308),
     G = i(821609),
@@ -162,7 +162,7 @@ var F = i(192),
     V = i(385113),
     X = i(334074),
     z = i(287809),
-    Y = i(990078),
+    Y = i(866665),
     K = i(657718),
     q = i(789645),
     Q = i(478016),
@@ -236,7 +236,7 @@ function ei() {
         let t = (0, a.bG)([z.default], () => z.default.getCurrentUser()),
             i = (0, u.A)(e),
             { tokens: n, fetched: l } = (0, H.j)(e),
-            r = (0, k.A)(t?.id),
+            r = (0, O.A)(t?.id),
             o = null == t || null == e || null == n || !l,
             d = s.useMemo(
                 () =>
@@ -464,12 +464,12 @@ function eR(e) {
               }),
           });
 }
-var ek = i(635694);
-function eO(e) {
+var eO = i(635694);
+function ek(e) {
     let { onClick: t, expanded: i } = e;
     return (0, n.jsx)(em.D, {
         onClick: t,
-        className: ek.x,
+        className: eO.x,
         "aria-expanded": i,
         children: (0, n.jsx)(d.E, {
             variant: "text-sm/medium",
@@ -514,7 +514,7 @@ function eL(e) {
         g = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(eG, { ...e, games: c }),
-                u && (0, n.jsx)(eO, { expanded: o, onClick: () => d((e) => !e) }),
+                u && (0, n.jsx)(ek, { expanded: o, onClick: () => d((e) => !e) }),
             ],
         });
     return i && !s
@@ -640,7 +640,6 @@ function eK(e) {
                         game: t,
                         widgetType: s,
                         className: ez.vS,
-                        iconSize: "xs",
                         onRemove: () => o?.(t.applicationId),
                     }),
             ],
@@ -680,7 +679,7 @@ function eQ(e) {
         g = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsx)(eq, { ...e, games: c }),
-                u && (0, n.jsx)(eO, { expanded: o, onClick: () => d((e) => !e) }),
+                u && (0, n.jsx)(ek, { expanded: o, onClick: () => d((e) => !e) }),
             ],
         });
     return i && !s
@@ -822,8 +821,8 @@ function e5(e) {
         );
     return (0, n.jsx)(e7, { games: l, onClick: d, ...i });
 }
-var e3 = i(465380);
-function e6(e) {
+var e6 = i(465380);
+function e3(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
         case v.x.FAVORITE_GAMES:
@@ -864,7 +863,7 @@ function e9(e) {
         x = (0, J.FM)(t, { showEditingControls: g }),
         h = (0, J.uA)(t),
         I = 1 === (0, J.cv)(t.type);
-    return (0, n.jsx)(e6, {
+    return (0, n.jsx)(e3, {
         widget: t,
         user: i,
         allowEditing: l,
@@ -881,7 +880,7 @@ function e9(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: m && (0, n.jsx)(e5, { userId: i.id, widgetType: t.type, onDismiss: u, className: e3.r }),
+        trailingContent: m && (0, n.jsx)(e5, { userId: i.id, widgetType: t.type, onDismiss: u, className: e6.r }),
         ...o,
     });
 }
@@ -969,8 +968,8 @@ function to() {
 }
 function td(e) {
     let { user: t, guildId: i, channelId: l } = e,
-        r = (0, k.A)(t.id),
-        o = (0, O.A)(t.id),
+        r = (0, O.A)(t.id),
+        o = (0, k.A)(t.id),
         d = (function () {
             let [e, t] = (0, a.yK)([x.A], () => [x.A.ipCountryCode, x.A.ipCountryCodeRequest]),
                 i = (0, m.Z)();
