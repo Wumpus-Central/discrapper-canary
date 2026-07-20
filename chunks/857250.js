@@ -1,80 +1,81 @@
 "use strict";
-n.d(t, { o: () => I, y: () => T });
+n.d(t, { o: () => m, y: () => g });
 var i = n(627968),
     r = n(64700),
-    s = n(835245),
-    a = n(834730),
-    o = n(933832),
-    l = n(661531),
-    u = n(972213),
+    a = n(132500),
+    s = n(834730),
+    l = n(933832),
+    o = n(661531),
+    d = n(972213),
     c = n(176781),
-    d = n(173936),
+    u = n(173936),
     _ = n(849516),
-    h = n(606096),
-    f = n(406810),
-    p = n(152367),
-    E = n(27232),
-    m = n(427209),
-    g = n(97483),
-    A = n(861173);
-function I(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.jg,
+    E = n(606096),
+    A = n(406810),
+    h = n(152367),
+    I = n(27232),
+    f = n(427209),
+    p = n(97483),
+    T = n(839029);
+function m(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.jg,
         {
-            position: i = g.jg.position,
-            component: r = g.jg.component,
-            duration: a = g.jg.duration,
-            appContext: o = g.jg.appContext,
+            position: i = p.jg.position,
+            component: r = p.jg.component,
+            duration: s = p.jg.duration,
+            appContext: l = p.jg.appContext,
         } = n;
-    return { message: e, id: (0, s.A)(), type: t, options: { position: i, component: r, duration: a, appContext: o } };
+    return { message: e, id: (0, a.A)(), type: t, options: { position: i, component: r, duration: s, appContext: l } };
 }
-let T = r.memo(function (e) {
-    let { message: t, type: n, id: r, options: { component: s = g.jg.component } = g.jg } = e;
-    return null != s
-        ? s
+let g = r.memo(function (e) {
+    let { message: t, type: n, id: r, options: { component: a = p.jg.component } = p.jg } = e;
+    return null != a
+        ? a
         : (0, i.jsxs)("div", {
               id: r,
-              className: A.oR,
+              className: T.oR,
               "data-type": n,
+              role: "status",
               children: [
                   (function (e) {
                       switch (e) {
-                          case g.Ck.SUCCESS:
-                              return (0, i.jsx)(o.A, {
+                          case p.Ck.SUCCESS:
+                              return (0, i.jsx)(l.A, {
                                   size: "md",
-                                  className: A.Kk,
-                                  color: l.A.colors.STATUS_POSITIVE.css,
+                                  className: T.Kk,
+                                  color: o.A.colors.STATUS_POSITIVE.css,
                               });
-                          case g.Ck.FAILURE:
-                              return (0, i.jsx)(u.d, {
+                          case p.Ck.FAILURE:
+                              return (0, i.jsx)(d.d, {
                                   size: "md",
-                                  className: A.Kk,
-                                  color: l.A.colors.ICON_FEEDBACK_CRITICAL.css,
+                                  className: T.Kk,
+                                  color: o.A.colors.ICON_FEEDBACK_CRITICAL.css,
                               });
-                          case g.Ck.CLIP:
+                          case p.Ck.CLIP:
                               return (0, i.jsx)(c.x, {
                                   size: "xs",
-                                  className: A.gS,
-                                  color: l.A.colors.TEXT_STRONG.css,
+                                  className: T.gS,
+                                  color: o.A.colors.TEXT_STRONG.css,
                               });
-                          case g.Ck.LINK:
-                              return (0, i.jsx)(d.q, { className: A.Kk, color: l.A.colors.TEXT_STRONG.css });
-                          case g.Ck.FORWARD:
-                              return (0, i.jsx)(m.A, { className: A.Kk, color: l.A.colors.STATUS_POSITIVE.css });
-                          case g.Ck.INVITE:
-                              return (0, i.jsx)(_.u, { className: A.Kk, color: l.A.colors.TEXT_BRAND.css });
-                          case g.Ck.BOOKMARK:
-                              return (0, i.jsx)(h.c, { className: A.Kk, color: l.A.colors.TEXT_STRONG.css });
-                          case g.Ck.CLOCK:
-                              return (0, i.jsx)(f.O, { className: A.Kk, color: l.A.colors.TEXT_STRONG.css });
-                          case g.Ck.AI:
-                              return (0, i.jsx)(p.D, { className: A.Kk, color: l.A.colors.TEXT_STRONG.css });
-                          case g.Ck.FAVORITE:
-                              return (0, i.jsx)(E.G, { className: A.Kk, color: l.A.colors.TEXT_STRONG.css });
+                          case p.Ck.LINK:
+                              return (0, i.jsx)(u.q, { className: T.Kk, color: o.A.colors.TEXT_STRONG.css });
+                          case p.Ck.FORWARD:
+                              return (0, i.jsx)(f.A, { className: T.Kk, color: o.A.colors.STATUS_POSITIVE.css });
+                          case p.Ck.INVITE:
+                              return (0, i.jsx)(_.u, { className: T.Kk, color: o.A.colors.TEXT_BRAND.css });
+                          case p.Ck.BOOKMARK:
+                              return (0, i.jsx)(E.c, { className: T.Kk, color: o.A.colors.TEXT_STRONG.css });
+                          case p.Ck.CLOCK:
+                              return (0, i.jsx)(A.O, { className: T.Kk, color: o.A.colors.TEXT_STRONG.css });
+                          case p.Ck.AI:
+                              return (0, i.jsx)(h.D, { className: T.Kk, color: o.A.colors.TEXT_STRONG.css });
+                          case p.Ck.FAVORITE:
+                              return (0, i.jsx)(I.G, { className: T.Kk, color: o.A.colors.TEXT_STRONG.css });
                           default:
                               return null;
                       }
                   })(n),
-                  (0, i.jsx)(a.E, { className: A.Qs, variant: "text-md/normal", children: t }),
+                  (0, i.jsx)(s.E, { className: T.Qs, variant: "text-md/normal", children: t }),
               ],
           });
 });
