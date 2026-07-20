@@ -18,7 +18,7 @@ n.d(t, {
 var i = n(627968),
     r = n(64700),
     a = n(873263),
-    s = n(580929),
+    s = n(372684),
     l = n(323889),
     o = n(17928),
     d = n(717421),
@@ -38,12 +38,12 @@ var f = n(87719),
     S = n(38405),
     N = n(340124),
     C = n(859703),
-    R = n(24001),
-    O = n(192444),
+    O = n(24001),
+    R = n(192444),
     L = n(104886),
     y = n(302654),
-    D = n(574677),
-    v = n(46948),
+    D = n(573526),
+    v = n(291749),
     b = n(971276),
     M = n(18437),
     P = n(590202),
@@ -339,11 +339,11 @@ function er() {
             null == i || (0, k.Ic)(i))
                 ? null
                 : i;
-        })(R.p9.DESKTOP_ACCOUNT_PANEL_AREA),
-        n = (0, o.bG)([C.A], () => C.A.getQuestPreviewOverride(R.uF.QUEST_BAR_V2), []),
+        })(O.p9.DESKTOP_ACCOUNT_PANEL_AREA),
+        n = (0, o.bG)([C.A], () => C.A.getQuestPreviewOverride(O.uF.QUEST_BAR_V2), []),
         i = (0, o.bG)(
             [C.A],
-            () => (0, k.t6)(C.A.quests, C.A.questToDeliverForPlacement, R.p9.DESKTOP_ACCOUNT_PANEL_AREA) ?? null,
+            () => (0, k.t6)(C.A.quests, C.A.questToDeliverForPlacement, O.p9.DESKTOP_ACCOUNT_PANEL_AREA) ?? null,
         );
     return n ?? (e ? t : i);
 }
@@ -352,13 +352,13 @@ function ea(e) {
         n = (0, b.s)(),
         i = (0, D.LS)(t),
         { premiumSubscription: r } = (0, o.cf)([T.A], () => ({ premiumSubscription: T.A.getPremiumSubscription() })),
-        a = (0, o.bG)([C.A], () => null != C.A.getQuestPreviewOverride(R.uF.QUEST_BAR_V2), []);
+        a = (0, o.bG)([C.A], () => null != C.A.getQuestPreviewOverride(O.uF.QUEST_BAR_V2), []);
     if (null == t) return { isQuestBarVisible: !1, reason: "quest_is_null" };
     let s = t.userStatus?.claimedAt != null;
     if (a && !s) return { isQuestBarVisible: !0, reason: "quest_bar_visible" };
     if ((0, W.K9)(t.config) && r?.isPurchasedExternally)
         return { isQuestBarVisible: !1, reason: "premium_subscription_is_purchased_externally" };
-    let l = null != t.userStatus && (0, k.gO)(t.userStatus, R.uF.QUEST_BAR);
+    let l = null != t.userStatus && (0, k.gO)(t.userStatus, O.uF.QUEST_BAR);
     return s
         ? { isQuestBarVisible: !1, reason: "quest_claimed" }
         : i
@@ -390,7 +390,7 @@ function eo(e) {
     );
 }
 function ed() {
-    let e = (0, O.Qj)(),
+    let e = (0, R.Qj)(),
         { search: t } = (0, a.zy)(),
         n = r.useMemo(() => new URLSearchParams(t).getAll(D.L1.AD_CREATIVE_IDS).length > 0, [t]),
         i = (0, o.bG)([C.A], () => C.A.getQuestHomeHero()),

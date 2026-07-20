@@ -28,7 +28,7 @@ var r = n(627968),
     O = n(340124),
     P = n(24001),
     N = n(405670),
-    k = n(46948),
+    k = n(291749),
     b = n(590202),
     y = n(851936),
     V = n(792620),
@@ -206,9 +206,9 @@ function er(e) {
         e7 = (0, N.Kr)((e) => e.setVolume),
         e4 = (0, o.bG)([h.Ay], () => h.Ay.useReducedMotion),
         e2 = (0, l.useRef)(null),
+        e9 = (0, l.useRef)(null),
         e8 = (0, l.useRef)(null),
-        e3 = (0, l.useRef)(null),
-        e9 = l.useRef(!0),
+        e3 = l.useRef(!0),
         e5 = el.userStatus?.completedAt != null,
         te = l.useMemo(() => el.config.features.includes(Z.Li.FULL_EPISODE_VIDEO_QUEST), [el.config.features]),
         tt = l.useRef(!1),
@@ -222,8 +222,8 @@ function er(e) {
         [tE, tf] = l.useState(B.oA.MD),
         t_ = { [B.oA.MD]: eo ? 56 : 50, [B.oA.LG]: eo ? 64 : 58 };
     (0, g.u5)(() => {
-        e9.current &&
-            ((e9.current = !1),
+        e3.current &&
+            ((e3.current = !1),
             eM(R.A.getEffectiveConnectionSpeed()),
             e5 && eZ.timestampSec >= eZ.duration && eJ(el.id, 0, eZ.duration));
     });
@@ -393,7 +393,7 @@ function er(e) {
     }, [tX]),
         l.useEffect(() => {
             function e(e) {
-                return e3.current?.(e);
+                return e8.current?.(e);
             }
             return window.addEventListener("keydown", e), () => window.removeEventListener("keydown", e);
         }, []);
@@ -490,16 +490,16 @@ function er(e) {
             }
     }, [e2, tc]);
     l.useEffect(() => {
-        if (null == e8.current) return;
-        let e = e8.current;
+        if (null == e9.current) return;
+        let e = e9.current;
         return (
             e.addEventListener("load", t2),
             () => {
                 null != e && e.removeEventListener("load", t2);
             }
         );
-    }, [e8, t2]);
-    let t8 = l.useCallback(
+    }, [e9, t2]);
+    let t9 = l.useCallback(
             (e) => {
                 tc.info(
                     `[QV] | logVideoError: errorType: ${e}, videoProgress: ${e2.current?.currentTime}, videoAssetId: ${tp}, connectionSpeed: ${eQ}`,
@@ -508,8 +508,8 @@ function er(e) {
             },
             [eQ, tk, e2, tp, tc],
         ),
-        t3 = l.useRef(!1);
-    function t9(e) {
+        t8 = l.useRef(!1);
+    function t3(e) {
         tc.info(`[QV] | handleCanPlay: playerState: ${ev}`),
             null != e2.current &&
                 ev === B.Q6.PLAYING &&
@@ -523,8 +523,8 @@ function er(e) {
                 tY(B.Q6.PLAYING));
     }
     l.useEffect(() => {
-        null != tm || t3.current || ((t3.current = !0), tk(B.SB.NO_VALID_SOURCE));
-    }, [tm, tk, t3]),
+        null != tm || t8.current || ((t8.current = !0), tk(B.SB.NO_VALID_SOURCE));
+    }, [tm, tk, t8]),
         l.useEffect(() => {
             if (!eO) return;
             let e = setTimeout(() => {
@@ -667,22 +667,22 @@ function er(e) {
                         }
                         eU(t);
                     },
-                    onCanPlay: t9,
-                    onCanPlayThrough: t9,
+                    onCanPlay: t3,
+                    onCanPlayThrough: t3,
                     onSeeked: function () {
                         tc.info("[QV] | handleSeeked"), t7.current || ((t7.current = !0), tw(0));
                     },
                     onAbort: function () {
-                        return t8(B.SB.ABORT);
+                        return t9(B.SB.ABORT);
                     },
                     onError: function () {
-                        return t8(B.SB.ERROR);
+                        return t9(B.SB.ERROR);
                     },
                     onEmptied: function () {
-                        return t8(B.SB.EMPTIED);
+                        return t9(B.SB.EMPTIED);
                     },
                     onStalled: function () {
-                        return t8(B.SB.STALLED);
+                        return t9(B.SB.STALLED);
                     },
                     onClick: function () {
                         tc.info("[QV] | handleVideoClick"), t4();
@@ -691,7 +691,7 @@ function er(e) {
                     children: [
                         null != nu &&
                             (0, r.jsx)("track", {
-                                ref: e8,
+                                ref: e9,
                                 src: nu.url,
                                 label: "English",
                                 kind: "captions",
@@ -703,7 +703,7 @@ function er(e) {
                             null != tm.mimetype &&
                             (0, r.jsx)("source", {
                                 onError: function () {
-                                    return t8(B.SB.SOURCE_ERROR);
+                                    return t9(B.SB.SOURCE_ERROR);
                                 },
                                 src: tm.url,
                                 type: tm.mimetype,
@@ -847,7 +847,7 @@ function er(e) {
                             },
                             children: (0, r.jsx)(G, {
                                 percent: null != e$ ? e$ : eR,
-                                animate: !0 !== e9.current && !eO,
+                                animate: !0 !== e3.current && !eO,
                                 interactionEnabled: nd,
                                 playerState: ev,
                                 preloadedBuffers: tz ? eV : void 0,
@@ -898,7 +898,7 @@ function er(e) {
                                 hidePlaybackSpeedBtn: !0,
                                 size: tE,
                                 autoFocus: K,
-                                keyDownHandlerRef: e3,
+                                keyDownHandlerRef: e8,
                                 volume: e6,
                                 muted: e0,
                                 transcriptEnabled: ec,

@@ -3,9 +3,9 @@ var s = i(627968),
     a = i(64700),
     n = i(189213),
     l = i(815021),
-    r = i(834730),
-    c = i(192308),
-    o = i(935462),
+    r = i(935462),
+    c = i(834730),
+    o = i(192308),
     d = i(289873),
     m = i(24001),
     u = i(73473),
@@ -13,15 +13,15 @@ var s = i(627968),
     f = i(323889),
     h = i(731355),
     g = i(366010),
-    j = i(534514),
+    j = i(297264),
     v = i(825484),
     N = i(408278),
     C = i(173936),
     p = i(821609),
     A = i(743368),
-    y = i(990078),
+    y = i(866665),
     E = i(736653),
-    M = i(46948),
+    M = i(291749),
     _ = i(590202),
     k = i(971649),
     T = i(651892),
@@ -29,7 +29,7 @@ var s = i(627968),
     w = i(814793),
     I = i(557637),
     W = i(918338),
-    b = i(371912),
+    b = i(764336),
     D = i(491145),
     P = i(190107),
     R = i(818348),
@@ -37,8 +37,8 @@ var s = i(627968),
     S = i(970197);
 function q(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: n, preCtaClick: l } = t,
-        c = (0, E.Ay)(),
-        o = (0, g.M)(c) ? R.NJ.DARK : R.NJ.LIGHT,
+        r = (0, E.Ay)(),
+        o = (0, g.M)(r) ? R.NJ.DARK : R.NJ.LIGHT,
         d = (0, k.wW)(),
         u = (0, k.go)(),
         x = (0, w.E0)(e.config);
@@ -125,7 +125,7 @@ function q(t) {
                                 className: S.fx,
                                 children: z.title,
                             }),
-                            (0, s.jsx)(r.E, { variant: "text-sm/medium", color: "text-subtle", children: z.subtitle }),
+                            (0, s.jsx)(c.E, { variant: "text-sm/medium", color: "text-subtle", children: z.subtitle }),
                         ],
                     }),
                     (0, s.jsx)(I._M, {
@@ -191,7 +191,7 @@ function Y(t) {
         actions: [{ variant: "primary", text: O.intl.string(O.t.cpT0Cq), onClick: e }],
         onClose: e,
         transitionState: i,
-        children: (0, s.jsx)(r.E, {
+        children: (0, s.jsx)(c.E, {
             variant: "text-md/medium",
             color: "text-subtle",
             children: O.intl.string(O.t.Ij97SL),
@@ -203,7 +203,7 @@ function K(t) {
             quest: e,
             sourceQuestContent: i,
             transitionState: n,
-            onClose: r,
+            onClose: c,
             rewardContent: f,
             isRewardContentLoading: h,
             rewardContentHasError: g,
@@ -214,29 +214,29 @@ function K(t) {
         p = e.config.features.some((t) => P.Tz.has(t)),
         A = a.useCallback(async () => {
             if (p) {
-                r(), (0, c.closeAllModals)();
+                c(), (0, o.closeAllModals)();
                 return;
             }
-            (await (0, x.f7)(e.config.ctaConfig?.link)) && (r(), (0, c.closeAllModals)());
-        }, [e.config.ctaConfig?.link, r, p]);
-    if (g) return (0, s.jsx)(Y, { onClose: r, transitionState: n });
+            (await (0, x.f7)(e.config.ctaConfig?.link)) && (c(), (0, o.closeAllModals)());
+        }, [e.config.ctaConfig?.link, c, p]);
+    if (g) return (0, s.jsx)(Y, { onClose: c, transitionState: n });
     let y = h || N;
     return (0, s.jsx)(u.R, {
         questOrQuests: e,
         questContent: v,
         sourceQuestContent: i,
         children: (t) =>
-            (0, s.jsxs)(o.EO, {
+            (0, s.jsxs)(r.EO, {
                 "data-migration-pending": !0,
                 transitionState: n,
-                size: o.rI.DYNAMIC,
+                size: r.rI.DYNAMIC,
                 className: G.yl,
                 "aria-label": y ? O.intl.string(O.t.ZTNur7) : void 0,
                 parentComponent: "QuestRewardModalBase",
                 children: [
                     (0, s.jsx)("div", {
                         className: G.b,
-                        children: (0, s.jsx)(l.J, { size: "xs", variant: "overlay-secondary", onClick: r }),
+                        children: (0, s.jsx)(l.J, { size: "xs", variant: "overlay-secondary", onClick: c }),
                     }),
                     y ? (0, s.jsx)(d.y, { className: G.u1, type: d.y.Type.WANDERING_CUBES }) : null,
                     (0, s.jsx)("div", {

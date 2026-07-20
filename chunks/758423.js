@@ -2,9 +2,9 @@ n.d(t, { A: () => f });
 var r = n(64700),
     l = n(412703),
     i = n(902173),
-    a = n(53200),
+    u = n(53200),
     s = n(718499),
-    u = n(46948),
+    a = n(291749),
     o = n(795068),
     c = n(652215);
 function d() {}
@@ -22,13 +22,13 @@ function f(e, t, n, c) {
         T = r.useMemo(
             () =>
                 null != h
-                    ? !A && (0, a.Ap)() && null != h.videoHls
-                        ? u.fY.VIDEO_PLAYER_VIDEO_HLS
+                    ? !A && (0, u.Ap)() && null != h.videoHls
+                        ? a.fY.VIDEO_PLAYER_VIDEO_HLS
                         : I
                           ? null
                           : E.has(t) || null == h.videoLowRes
-                            ? u.fY.VIDEO_PLAYER_VIDEO
-                            : u.fY.VIDEO_PLAYER_VIDEO_LOW_RES
+                            ? a.fY.VIDEO_PLAYER_VIDEO
+                            : a.fY.VIDEO_PLAYER_VIDEO_LOW_RES
                     : null,
             [h, t, I, A],
         ),
@@ -37,7 +37,7 @@ function f(e, t, n, c) {
                 null != c
                     ? { url: c, mimetype: "video/mp4", isAnimated: !0 }
                     : null != T
-                      ? (0, u.tW)(_, T, void 0, !1)
+                      ? (0, a.tW)(_, T, void 0, !1)
                       : null,
             [_, T, c],
         );
@@ -49,11 +49,11 @@ function f(e, t, n, c) {
     }, []);
     return (
         r.useEffect(() => {
-            if (!f || T !== u.fY.VIDEO_PLAYER_VIDEO_HLS || null == D || null == e.current || p.current) return;
+            if (!f || T !== a.fY.VIDEO_PLAYER_VIDEO_HLS || null == D || null == e.current || p.current) return;
             let t = !1,
                 r = null;
             return (
-                (0, a.E)().then((l) => {
+                (0, u.E)().then((l) => {
                     if (!t && null != e.current && !p.current) {
                         if (!l.isSupported()) return void g(!0);
                         (r = new l({
@@ -72,7 +72,7 @@ function f(e, t, n, c) {
                 }),
                 () => {
                     t = !0;
-                    let e = (0, a.LA)();
+                    let e = (0, u.LA)();
                     null != r && null != e && r.off(e.Events.FRAG_LOADING, R);
                 }
             );

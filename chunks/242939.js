@@ -864,7 +864,7 @@ var eV = n(889137),
     ez = n(192444),
     eK = n(112142),
     eX = n(646917),
-    eZ = n(46948),
+    eZ = n(291749),
     eY = n(576761),
     eJ = n(895253),
     e0 = n(976019),
@@ -875,8 +875,8 @@ var eV = n(889137),
     e6 = n(274670),
     e9 = n(144779),
     e4 = n(30370),
-    e8 = n(178540),
-    e5 = n(104886),
+    e5 = n(178540),
+    e8 = n(104886),
     te = n(18437),
     tt = n(780964),
     tn = n(766075),
@@ -889,7 +889,7 @@ function tl(e) {
     return (0, s.jsx)(v.D, {
         className: tr.Z0,
         onClick: () => {
-            (0, e5.E5)(e5.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
+            (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "console_connection_step")
                 ? (0, e6.r)({
                       type: e9.F.CLICK_INTERNAL,
                       adCreativeType: o.p.QUEST,
@@ -931,11 +931,11 @@ function tc(e) {
         a = (0, R.Xf)({ useReducedMotion: n }),
         u = (0, te.Ut)(),
         c = (0, B.go)(),
-        d = (0, e8.O)((e) => e.getErrorHints(t.id)),
+        d = (0, e5.O)((e) => e.getErrorHints(t.id)),
         { startingConsoleQuest: x, startConsoleQuest: m } = (0, E.Wj)({
             questId: t.id,
             beforeRequest: () => {
-                (0, e5.E5)(e5.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
+                (0, e8.E5)(e8.kI.STEP_2_CLICKED_INTERNAL, "quest_bar_console_task_checklist")
                     ? (0, e6.r)({
                           type: e9.F.CLICK_INTERNAL,
                           adCreativeType: o.p.QUEST,

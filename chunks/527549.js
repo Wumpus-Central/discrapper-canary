@@ -6,7 +6,7 @@ var n = s(627968),
     r = s(323889),
     a = s(17928),
     o = s(462887),
-    E = s(534514),
+    E = s(297264),
     c = s(939249),
     d = s(365199),
     A = s(834730),
@@ -21,8 +21,8 @@ var n = s(627968),
     R = s(409626),
     L = s(834757),
     I = s(363195),
-    g = s(461782),
-    f = s(290863),
+    f = s(461782),
+    g = s(290863),
     v = s(287809),
     N = s(340124),
     U = s(859703),
@@ -36,8 +36,8 @@ let p = (0, s(945810).mj)({
 });
 var b = s(112142),
     F = s(3738),
-    y = s(347135),
-    q = s(46948),
+    q = s(573526),
+    y = s(291749),
     V = s(18437),
     D = s(590202),
     O = s(971649),
@@ -50,7 +50,7 @@ var b = s(112142),
     z = s(442444),
     K = s(73473),
     $ = s(270045),
-    B = s(368715),
+    B = s(657113),
     Y = s(79545);
 s(134528), s(947204);
 var X = s(885574),
@@ -80,8 +80,8 @@ let Z = l.forwardRef(function (e, t) {
 var ee = s(431540);
 let et = function (e) {
     let { className: t, color: s = _.A.colors.WHITE, quest: l, isInventory: i } = e,
-        r = (0, y.aC)(e.quest),
-        { percentComplete: a, completedRatioDisplay: o } = (0, y.O9)(l);
+        r = (0, q.aC)(e.quest),
+        { percentComplete: a, completedRatioDisplay: o } = (0, q.O9)(l);
     return !i && r.length > 0
         ? (0, n.jsx)(Z, { children: r.at(0) })
         : (0, n.jsxs)("div", {
@@ -122,7 +122,7 @@ var es = s(847641),
     ec = s(347562);
 function ed(e) {
     var t;
-    let { channelId: s, quest: i, previewQuest: g, isParticipatingOverride: K } = e,
+    let { channelId: s, quest: i, previewQuest: f, isParticipatingOverride: K } = e,
         X = (0, V.Ut)(),
         J = (0, O.go)(),
         [Z, ee] = l.useState(!1),
@@ -137,13 +137,13 @@ function ed(e) {
             () => (0, w.t6)(U.A.quests, U.A.questToDeliverForPlacement, j.p9.DESKTOP_ACCOUNT_PANEL_AREA),
             [],
         ),
-        { isCurrentUserStreamingQuestApplication: ex, isQuestInQuestBar: eQ } = (0, a.cf)([f.A], () => {
+        { isCurrentUserStreamingQuestApplication: ex, isQuestInQuestBar: eQ } = (0, a.cf)([g.A], () => {
             var e;
             return {
                 isCurrentUserStreamingQuestApplication:
                     null != i &&
                     null != eS &&
-                    ((e = f.A),
+                    ((e = g.A),
                     eC.some((t) => {
                         if (t.type !== eo.lp.STREAM || t.user.id !== eS.id) return !1;
                         let s = (0, L.nr)(t.stream, e);
@@ -153,18 +153,18 @@ function ed(e) {
             };
         }, [eS, i, eC, em]),
         eh = (0, H.pU)(i)?.[0],
-        eR = (0, a.bG)([h.Ay, f.A], () => {
+        eR = (0, a.bG)([h.Ay, g.A], () => {
             let e = h.Ay.getRunningGames().map((e) => e.id);
             if ((0, H.xZ)(i) && null !== eh && e.includes(eh)) return !0;
-            let t = null != eS ? f.A.findActivity(eS.id, (e) => e.type !== ea.$pd.CUSTOM_STATUS) : null;
+            let t = null != eS ? g.A.findActivity(eS.id, (e) => e.type !== ea.$pd.CUSTOM_STATUS) : null;
             return !!(null != t && (0, H.g5)(i) && (0, G.zS)(t, i));
         }, [i, eS, eh]),
         eL = !0 === K || ex || eR,
         eI = (0, a.bG)([U.A], () => null != i && U.A.isEnrolling(i.id), [i]),
-        eg = (0, a.bG)([Q.A], () => (eS?.id == null ? null : Q.A.getParticipant(s, eS.id)) != null, [s, eS]),
-        { launchInGameActivity: ef } = (0, y.zW)(i),
-        ev = (0, y.S5)(i?.config.expiresAt),
-        eN = (0, y.S5)(i?.config.rewardsConfig.rewardsExpireAt),
+        ef = (0, a.bG)([Q.A], () => (eS?.id == null ? null : Q.A.getParticipant(s, eS.id)) != null, [s, eS]),
+        { launchInGameActivity: eg } = (0, q.zW)(i),
+        ev = (0, q.S5)(i?.config.expiresAt),
+        eN = (0, q.S5)(i?.config.rewardsConfig.rewardsExpireAt),
         eU = ((t = er.rE.QUEST_CHANNEL_CALL_HEADER), p.useConfig({ location: t })),
         [ej, eM] = l.useState(!1),
         ep = l.useCallback(async () => {
@@ -175,7 +175,7 @@ function ed(e) {
             });
             switch (e) {
                 case N.WM.SUCCESS:
-                    (0, W.vA)(i) && ef();
+                    (0, W.vA)(i) && eg();
                     break;
                 case N.WM.CAPTCHA_FAILED:
                     C.A.show({ title: eE.intl.string(eE.t["/CidxO"]), body: eE.intl.string(eE.t.HQdHg6) });
@@ -183,7 +183,7 @@ function ed(e) {
                 case N.WM.UNKNOWN_ERROR:
                     C.A.show({ title: eE.intl.string(eE.t.R0RpRX), body: eE.intl.string(eE.t.OXD41D) });
             }
-        }, [i, ef]),
+        }, [i, eg]),
         eb = l.useCallback(async () => {
             eM(!0);
             let { type: e } = await (0, N.Oy)(i.id, {
@@ -223,7 +223,7 @@ function ed(e) {
                   }),
                 (0, ei.mA)({ fromContent: j.uF.QUEST_LIVE_STREAM, questId: i.id });
         }, [i, X, J]),
-        ey = l.useCallback(() => {
+        eq = l.useCallback(() => {
             (0, M.E5)(M.kI.STEP_2_CLICKED_INTERNAL, "quest_channel_call_header")
                 ? (0, m.r)({
                       type: x.F.CLICK_INTERNAL,
@@ -242,14 +242,14 @@ function ed(e) {
                   }),
                 (0, ei.mA)({ fromContent: j.uF.QUEST_LIVE_STREAM, questId: i.id });
         }, [i, X, J]),
-        eq = (0, eu.D)({ quest: i, questContent: j.uF.QUEST_LIVE_STREAM, sourceQuestContent: j.uF.QUEST_LIVE_STREAM }),
+        ey = (0, eu.D)({ quest: i, questContent: j.uF.QUEST_LIVE_STREAM, sourceQuestContent: j.uF.QUEST_LIVE_STREAM }),
         eV = l.useMemo(() => (0, P.L)({ quest: i, location: er.rE.QUEST_CHANNEL_CALL_HEADER }), [i]),
         eD = (0, F.NA)({ quest: i }),
         eO = (0, W.vA)(i),
-        eP = (0, y.LS)(i),
+        eP = (0, q.LS)(i),
         ek = i.userStatus?.enrolledAt != null,
         ew = i.userStatus?.completedAt != null,
-        eG = null != g && i.userStatus?.claimedAt == null,
+        eG = null != f && i.userStatus?.claimedAt == null,
         eH = ej && (ek || eG);
     l.useEffect(() => {
         eM(!1);
@@ -264,9 +264,9 @@ function ed(e) {
             isQuestCallHeaderDismissed: eW,
             isQuestExpired: eP,
             isQuestBarShowing: eK,
-            isCurrentUserCallParticipant: eg,
+            isCurrentUserCallParticipant: ef,
         }),
-        (!eG && !eU.enabled && (eW || eP || eK)) || (!eG && eU.enabled && (eW || eP)) || (!eG && !eg))
+        (!eG && !eU.enabled && (eW || eP || eK)) || (!eG && eU.enabled && (eW || eP)) || (!eG && !ef))
     )
         return null;
     if (eU.enabled)
@@ -311,7 +311,7 @@ function ed(e) {
                                 : (0, n.jsx)("img", {
                                       className: ec.rC,
                                       alt: i.config.messages.gameTitle,
-                                      src: (0, q.tW)(i, q.fY.GAME_TILE, e_).url,
+                                      src: (0, y.tW)(i, y.fY.GAME_TILE, e_).url,
                                   }),
                             (0, n.jsxs)("div", {
                                 children: [
@@ -382,7 +382,7 @@ function ed(e) {
                                             size: "sm",
                                             variant: "secondary",
                                             text: eE.intl.string(eE.t.LLLLPD),
-                                            onClick: ey,
+                                            onClick: eq,
                                             fullWidth: !eO || i.config.features.includes(er.Li.CLOUD_GAMING_ACTIVITY),
                                         }),
                                         e$.enabled &&
@@ -423,7 +423,7 @@ function ed(e) {
                                     size: "sm",
                                     fullWidth: !0,
                                     text: eE.intl.string(eE.t.cfY4PE),
-                                    onClick: eq,
+                                    onClick: ey,
                                 }),
                         ],
                     }),
@@ -433,14 +433,14 @@ function ed(e) {
     });
 }
 function eA(e) {
-    let t = l.useContext(g.vG),
+    let t = l.useContext(f.vG),
         s = (0, a.bG)([U.A], () => null != U.A.questEnrollmentBlockedUntil, []),
         i = (0, a.bG)([U.A], () => U.A.quests),
-        u = (0, y.oH)(Array.from(i.values())),
+        u = (0, q.oH)(Array.from(i.values())),
         r = l.useMemo(() => (0, W.$e)(i, er.Ls), [i]),
         o = (0, a.bG)([Q.A], () => Q.A.getParticipants(e.channelId), [e.channelId]),
         E = (0, a.bG)(
-            [f.A],
+            [g.A],
             () =>
                 null != e.previewQuest
                     ? e.previewQuest
@@ -459,7 +459,7 @@ function eA(e) {
                                       }
                           }
                           return null;
-                      })(o, r, f.A),
+                      })(o, r, g.A),
             [o, r, u, e.previewQuest],
         ),
         c = E?.id ?? null;

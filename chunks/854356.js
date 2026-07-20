@@ -4,16 +4,16 @@ var r = n(64700),
 n(531443);
 var i = n(941426);
 n(141711), n(497329), new i.Vy("MobileCustomMuxIntegration"), new i.Vy("MobileMuxWrapper"), n(740644);
-var a = n(829097),
+var u = n(829097),
     s = n(613373),
-    u = n(46948),
+    a = n(291749),
     o = n(795068),
     c = n(190107);
 function d(e) {
     let { videoAssetUrl: t, videoRef: n, hls: i, videoAssetType: d } = e,
         { questConfig: E } = r.useContext(o.l),
-        f = (0, a._)({ location: c.rE.VIDEO_MODAL }).externalAnalyticsEnabled && null != t,
-        _ = d === u.fY.VIDEO_PLAYER_VIDEO_HLS,
+        f = (0, u._)({ location: c.rE.VIDEO_MODAL }).externalAnalyticsEnabled && null != t,
+        _ = d === a.fY.VIDEO_PLAYER_VIDEO_HLS,
         m = r.useMemo(
             () =>
                 f && null != t

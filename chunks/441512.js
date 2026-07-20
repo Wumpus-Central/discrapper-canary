@@ -2,8 +2,8 @@ n.d(t, { A: () => k });
 var r = n(627968),
     l = n(64700),
     i = n(942381),
-    s = n(876230),
-    u = n(645577),
+    u = n(876230),
+    s = n(645577),
     a = n(408278),
     o = n(789645),
     c = n(613373),
@@ -13,7 +13,7 @@ var r = n(627968),
     _ = n(340124),
     m = n(24001),
     p = n(405670),
-    S = n(46948),
+    S = n(291749),
     C = n(851936),
     v = n(792620),
     A = n(753386),
@@ -58,23 +58,23 @@ function k(e) {
         Z = (0, p.Kr)((e) => e.muted),
         J = (0, p.Kr)((e) => e.setVolume),
         ee = (0, p.Kr)((e) => e.setMuted),
-        et = (0, u.g)(G, W, H.progressSeconds),
+        et = (0, s.g)(G, W, H.progressSeconds),
         [en] = l.useState(() => E.A.getEffectiveConnectionSpeed()),
         er = Math.max(W.maxTimestampSec, H.progressSeconds),
         el = G ? void 0 : (0, A.vd)(er, W.duration),
-        { videoAsset: ei, videoAssetType: es } = (0, T.A)(K, en, et, M, !1),
-        eu = l.useCallback(
+        { videoAsset: ei, videoAssetType: eu } = (0, T.A)(K, en, et, M, !1),
+        es = l.useCallback(
             (e) => {
                 let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
-                return t || null != es
-                    ? n === s.Q6.PAUSED && (r === s.KB.FOCUS || r === s.KB.PICTURE_IN_PICTURE)
+                return t || null != eu
+                    ? n === u.Q6.PAUSED && (r === u.KB.FOCUS || r === u.KB.PICTURE_IN_PICTURE)
                         ? O.intl.string(O.t.w6PeBF)
                         : (0, d.u)({ hasVideoAsset: t, playerState: n, pauseReason: r })
                     : (0, f.isWeb)()
                       ? O.intl.string(O.t["E1du/q"])
                       : O.intl.string(O.t["rStN/7"]);
             },
-            [es],
+            [eu],
         ),
         ea = (0, l.useRef)(null),
         [eo, ec] = l.useState(null),
@@ -105,13 +105,13 @@ function k(e) {
             videoRef: K,
             hlsRef: ea,
             videoSessionId: F,
-            videoAssetId: es,
+            videoAssetId: eu,
             sourceQuestContent: w,
             logger: eE,
             isFullEpisodeVideoQuest: q,
             listenForHlsErrors: !1,
         });
-    (0, R.A)({ videoAssetUrl: ei?.url, videoRef: K, hls: eo, videoAssetType: es });
+    (0, R.A)({ videoAssetUrl: ei?.url, videoRef: K, hls: eo, videoAssetType: eu });
     let eO =
             ((t = (0, p.Kr)((e) => e.transcript)),
             (l.useEffect(() => {
@@ -137,19 +137,19 @@ function k(e) {
         eQ = l.useCallback(
             (e, t) => {
                 switch ((ek(e, t), e)) {
-                    case s.Q6.PLAYING:
+                    case u.Q6.PLAYING:
                         K.current?.paused === !0 && eS(eU.current), (eU.current = null);
                         break;
-                    case s.Q6.PAUSED: {
+                    case u.Q6.PAUSED: {
                         let e = (function (e) {
                             switch (e) {
-                                case s.KB.USER:
+                                case u.KB.USER:
                                     return m.Yg.PAUSE_BUTTON;
-                                case s.KB.FOCUS:
+                                case u.KB.FOCUS:
                                     return m.Yg.LOST_FOCUS;
-                                case s.KB.VISIBILITY:
+                                case u.KB.VISIBILITY:
                                     return m.Yg.MODAL_CLOSED;
-                                case s.KB.PICTURE_IN_PICTURE:
+                                case u.KB.PICTURE_IN_PICTURE:
                                     return m.Yg.PICTURE_IN_PICTURE;
                                 default:
                                     return null;
@@ -157,7 +157,7 @@ function k(e) {
                         })(t);
                         null != e && ((eU.current = e), eC(e));
                     }
-                    case s.Q6.ENDED:
+                    case u.Q6.ENDED:
                 }
             },
             [ek, eS, eC],
@@ -254,7 +254,7 @@ function k(e) {
         persistPlayhead: !1,
         pauseOnLostVisibility: !G,
         autoFocus: y,
-        getPlaybackBlockedMessage: eu,
+        getPlaybackBlockedMessage: es,
         orientation: Q,
         videoUrlOverride: M,
         src: ei?.url,
