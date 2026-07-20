@@ -1,0 +1,52 @@
+.assetRow_f3e80c,
+.progressAssetRow_f3e80c {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.assetRow_f3e80c {
+    gap: var(--space-12);
+    height: 50px;
+    width: 154px
+}
+
+.progressAssetRow_f3e80c {
+    gap: var(--space-8);
+    height: 60px;
+    width: 160px
+}
+
+.badgeAssetRow_f3e80c {
+    align-items: center;
+    display: grid;
+    height: 60px;
+    justify-content: center;
+    width: 160px
+}
+
+.singleAssetRow_f3e80c {
+    grid-template-columns: 60px
+}
+
+.pairAssetRow_f3e80c {
+    grid-template-columns: 48px 48px
+}
+
+.pairAssetRow_f3e80c,
+.trioAssetRow_f3e80c {
+    -moz-column-gap: var(--space-8);
+    column-gap: var(--space-8)
+}
+
+.trioAssetRow_f3e80c {
+    grid-template-columns: 42px 60px 42px
+}
+
+.badgeIcon_f3e80c {
+    aspect-ratio: 1;
+    display: block;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%
+}
