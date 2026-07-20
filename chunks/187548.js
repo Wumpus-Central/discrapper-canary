@@ -27,7 +27,11 @@ class _ extends a.A {
                 if (e.channelId !== n) return;
                 let t = o.A.getStreamForUser(e.userId, e.guildId),
                     a = o.A.getActiveStreamForUser(e.userId, e.guildId);
-                if (null != t && null == a) return void (0, r.A9)(t, { forceMultiple: !0, forceFocus: !0 });
+                if (null != t && null == a) {
+                    if (o.A.isStreamMarkedFull((0, l._z)(t))) return;
+                    (0, r.A9)(t, { forceMultiple: !0, forceFocus: !0 });
+                    return;
+                }
                 if (null == t && null != a) {
                     let e = s.A.getSelectedParticipant(n),
                         t = e?.type === u.lp.STREAM && e?.id === (0, l._z)(a);
@@ -41,7 +45,7 @@ class _ extends a.A {
     findAndWatchStream() {
         let e = d.Ay.getVoiceChannelId();
         if (null == e) return;
-        let t = o.A.getAllApplicationStreamsForChannel(e)[0];
+        let t = o.A.getAllApplicationStreamsForChannel(e).find((e) => !o.A.isStreamMarkedFull((0, l._z)(e)));
         null != t && (0, r.A9)(t);
     }
 }

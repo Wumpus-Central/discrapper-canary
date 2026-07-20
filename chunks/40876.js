@@ -812,6 +812,8 @@ let r = {
             "CHANNEL_UPDATES",
             "VOICE_CHANNEL_SELECT",
             "VOICE_STATE_UPDATES",
+            "CONNECTION_CLOSED",
+            "LOGOUT",
         ],
         inlineRequire: () => n(130553).A,
         neverLoadBeforeConnectionOpen: !0,
