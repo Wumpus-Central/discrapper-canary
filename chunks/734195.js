@@ -48,16 +48,16 @@ var T = t(945096),
     w = t(652215),
     F = t(836602),
     O = t(696451),
-    R = t(427262),
-    P = t(403581),
+    P = t(427262),
+    R = t(403581),
     Y = t(661531),
-    B = t(48736),
-    G = t(887129),
+    G = t(48736),
+    B = t(887129),
     U = t(837381),
     z = t(741918),
     H = t(317097),
-    K = t(990078),
-    W = t(922016),
+    K = t(922016),
+    W = t(866665),
     J = t(939249),
     $ = t(22231),
     X = t(933832),
@@ -164,7 +164,7 @@ function ed(e) {
         E = s.length > 0 ? s : (0, T.cf)(c),
         h = en.intl.string(el.default["6OxgN7"]),
         N = en.intl.string(en.t["FHBa/1"]),
-        S = (0, G.Ay)({
+        S = (0, B.Ay)({
             id: "gummy-color-picker",
             isEnabled: !0,
             orientation: z.Gl.HORIZONTAL,
@@ -198,7 +198,7 @@ function ed(e) {
                                 }),
                                 (0, a.jsx)("div", {
                                     className: ei.fX,
-                                    children: (0, a.jsx)(W.Y, {
+                                    children: (0, a.jsx)(K.Y, {
                                         targetElementRef: o,
                                         position: "top",
                                         align: "left",
@@ -214,7 +214,7 @@ function ed(e) {
                                                 "aria-label": N,
                                             }),
                                         children: (e) =>
-                                            (0, a.jsx)(K.m, {
+                                            (0, a.jsx)(W.m, {
                                                 text: N,
                                                 position: "top",
                                                 ariaHidden: !0,
@@ -290,12 +290,12 @@ function em(e) {
                 className: ec.sU,
                 children: [
                     en.intl.string(el.default.JOpi7z),
-                    (0, a.jsx)(P.t, { size: "xs", color: Y.A.colors.TEXT_DEFAULT }),
+                    (0, a.jsx)(R.t, { size: "xs", color: Y.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             i === d.z.GUMMY
                 ? (0, a.jsx)(ed, { selectedColors: s, setSelectedColors: x })
-                : (0, a.jsx)(B.default, {
+                : (0, a.jsx)(G.default, {
                       className: eo.Ei,
                       colorContainerClassName: eo.rx,
                       defaultColor: n,
@@ -394,7 +394,7 @@ function eA(e) {
                 className: ec.sU,
                 children: [
                     en.intl.string(el.default["1wilM1"]),
-                    (0, a.jsx)(P.t, { size: "xs", color: Y.A.colors.TEXT_DEFAULT }),
+                    (0, a.jsx)(R.t, { size: "xs", color: Y.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             (0, a.jsx)("div", {
@@ -474,7 +474,7 @@ function ej(e) {
                 className: ec.sU,
                 children: [
                     en.intl.string(el.default.nP0ngb),
-                    (0, a.jsx)(P.t, { size: "xs", color: Y.A.colors.TEXT_DEFAULT }),
+                    (0, a.jsx)(R.t, { size: "xs", color: Y.A.colors.TEXT_DEFAULT }),
                 ],
             }),
             (0, a.jsx)("div", {
@@ -487,7 +487,7 @@ function ej(e) {
                         d = I._k.includes(e),
                         o = en.intl.string(s.name);
                     return (0, a.jsx)(
-                        K.m,
+                        W.m,
                         {
                             text: o,
                             asContainer: !0,
@@ -556,7 +556,7 @@ function ek(e) {
             className: eM.k0,
             children: [
                 r,
-                (0, a.jsx)(K.m, {
+                (0, a.jsx)(W.m, {
                     text: en.intl.string(el.default.cVTpnj),
                     shouldShow: !n,
                     children: (0, a.jsx)(ev.$, {
@@ -576,9 +576,9 @@ function ek(e) {
                 (0, a.jsxs)("div", {
                     className: eM.iQ,
                     children: [
-                        (0, a.jsx)(K.m, {
+                        (0, a.jsx)(W.m, {
                             text: en.intl.string(en.t["5AFxuK"]),
-                            children: (0, a.jsx)(P.t, { size: "md", color: Y.A.colors.ICON_STRONG }),
+                            children: (0, a.jsx)(R.t, { size: "md", color: Y.A.colors.ICON_STRONG }),
                         }),
                         (0, a.jsx)(eu.E, {
                             variant: "text-md/medium",
@@ -612,11 +612,11 @@ function ek(e) {
 var ew = t(366010),
     eF = t(43990),
     eO = t(629584),
-    eR = t(943255),
-    eP = t(575181),
+    eP = t(943255),
+    eR = t(575181),
     eY = t(736653),
-    eB = t(780898),
-    eG = t(344346),
+    eG = t(780898),
+    eB = t(344346),
     eU = t(320095),
     ez = t(963852),
     eH = t(763754),
@@ -647,7 +647,7 @@ function e0(e) {
         p = (0, c.cf)([F.A], () => F.A.getPendingChanges(t?.id)),
         _ = (0, eJ.V7)({ userId: s.id, image: p.pendingAvatar }),
         { userNameplate: I, guildNameplate: D, pendingNameplate: j } = (0, N.rv)(s, t?.id),
-        v = (0, eB.WK)(D);
+        v = (0, eG.WK)(D);
     E && !x ? (f = w.NJ8.DARK) : !E && x && (f = w.NJ8.LIGHT);
     let C = (0, l.useCallback)(() => {
             A.default.track(w.HAw.DISPLAY_NAME_STYLES_CLOSED), m();
@@ -715,13 +715,14 @@ function e0(e) {
                                 avatarDecorationOverride: p.pendingAvatarDecoration,
                                 avatarOverride: _,
                             }),
-                            (0, a.jsx)(eG.A, {
+                            (0, a.jsx)(eB.A, {
                                 user: s,
                                 guildId: t?.id,
                                 nameplate: j,
                                 nameplateData: null == j ? (v ?? I) : void 0,
                                 pendingGlobalName: n,
                                 pendingAvatarDecoration: p.pendingAvatarDecoration,
+                                pendingPrimaryGuildId: p.pendingPrimaryGuildId,
                                 pendingDisplayNameStyles: T.displayNameStyles,
                                 isHighlighted: !0,
                                 className: eQ.qF,
@@ -756,14 +757,14 @@ function e1(e) {
                 name: "",
                 tooltip: en.intl.string(en.t.b8Cei3),
                 value: w.NJ8.DARK,
-                icon: eR.Z,
+                icon: eP.Z,
                 className: l === w.NJ8.DARK ? eQ.iB : void 0,
             },
             {
                 name: "",
                 tooltip: en.intl.string(en.t.K2sFfo),
                 value: w.NJ8.LIGHT,
-                icon: eP.F,
+                icon: eR.F,
                 className: l === w.NJ8.LIGHT ? eQ.iB : void 0,
             },
         ],
@@ -780,8 +781,8 @@ function e9(e) {
     let s,
         { transitionState: t, analyticsLocations: n, guildId: I, onClose: D, returnRef: v } = e,
         C = (0, c.bG)([g.default], () => g.default.getCurrentUser()),
-        P =
-            ((s = R.Ay.useName(C)),
+        R =
+            ((s = P.Ay.useName(C)),
             (0, c.bG)([F.A, O.Ay], () => {
                 let e = F.A.getPendingChanges(I);
                 return null != I ? (e.pendingNickname ?? O.Ay.getNick(I, C?.id)) : e.pendingGlobalName;
@@ -789,8 +790,8 @@ function e9(e) {
                 s ??
                 ""),
         Y = (0, c.bG)([S.A], () => S.A.getGuild(I)),
-        { userDisplayNameStyles: B, guildDisplayNameStyles: G, pendingDisplayNameStyles: U } = (0, N.B0)(C, I),
-        z = void 0 !== U ? U : (G ?? B),
+        { userDisplayNameStyles: G, guildDisplayNameStyles: B, pendingDisplayNameStyles: U } = (0, N.B0)(C, I),
+        z = void 0 !== U ? U : (B ?? G),
         [H, K] = l.useState(z?.fontId ?? o.x.DEFAULT),
         [W, J] = l.useState(z?.effectId ?? d.z.SOLID),
         $ = (0, T.as)(W) > 1,
@@ -891,7 +892,7 @@ function e9(e) {
                                           (0, a.jsx)(ej, {
                                               selectedFontId: H,
                                               setSelectedFontId: K,
-                                              displayName: P,
+                                              displayName: R,
                                               className: e8._,
                                           }),
                                           (0, a.jsx)(eA, {
@@ -911,7 +912,7 @@ function e9(e) {
                                   (0, a.jsx)(e0, {
                                       user: C,
                                       guild: Y,
-                                      displayName: P,
+                                      displayName: R,
                                       selectedFontId: H,
                                       selectedEffectId: W,
                                       selectedColors: W === d.z.SOLID && (0, m.v)(ei, X.defaultColors) ? [] : ei,
