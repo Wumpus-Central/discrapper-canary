@@ -5216,34 +5216,39 @@ let s2 = nK(iq),
             u = (0, g.bG)([eh.A], () => eh.A.defaultRoute),
             h = (0, g.bG)([i1], () => i1.isUnderageAnonymous()),
             m = (function (e) {
-                let [t, n] = c.useState(!1),
-                    [i, l] = c.useState(!1);
+                let [t, n] = c.useState(!1);
                 return (
-                    c.useEffect(() => {
-                        let e = setTimeout(() => n(!0), 500);
-                        return () => clearTimeout(e);
-                    }, []),
                     c.useEffect(() => {
                         let e = !1;
                         return (
                             eI().then((t) => {
-                                e || "denied" !== t || l(!0);
+                                e || "denied" !== t || n(!0);
                             }),
                             () => {
                                 e = !0;
                             }
                         );
                     }, []),
-                    !i && e !== R.fAW.OPEN_FAIL && !t
+                    t || e === R.fAW.OPEN_FAIL
                 );
             })(a),
-            [f, p] = c.useState(!1);
+            f = (function (e) {
+                let [t, n] = c.useState(!1);
+                return (
+                    c.useEffect(() => {
+                        let e = setTimeout(() => n(!0), 500);
+                        return () => clearTimeout(e);
+                    }, []),
+                    !e && !t
+                );
+            })(m),
+            [p, E] = c.useState(!1);
         c.useLayoutEffect(() => {
-            (a === R.fAW.OPEN || r?.state === R.elq.APP_OPENED) && p(!0);
+            (a === R.fAW.OPEN || r?.state === R.elq.APP_OPENED) && E(!0);
         }, [r?.state, a]);
-        let E = l ? sF : sM,
-            _ = c.useCallback((e) => A.Ay.getInviteContext(e, r), [r]),
-            j = c.useCallback(
+        let _ = l ? sF : sM,
+            j = c.useCallback((e) => A.Ay.getInviteContext(e, r), [r]),
+            v = c.useCallback(
                 (e) => {
                     null != r &&
                         (null != r.channel || e?.channel != null) &&
@@ -5253,7 +5258,7 @@ let s2 = nK(iq),
                 },
                 [r, i],
             ),
-            v = c.useCallback(() => {
+            N = c.useCallback(() => {
                 S.default.track(R.HAw.INVITE_CTA_CLICKED, {
                     action: "accept_invite",
                     invite_code: r?.code,
@@ -5261,14 +5266,14 @@ let s2 = nK(iq),
                 }),
                     A.Ay.acceptInvite({
                         inviteKey: t,
-                        context: _(R.S3d.INVITE),
+                        context: j(R.S3d.INVITE),
                         skipOnboarding: !0,
                         callback: (e) => {
-                            el(e), null != e.channel && A.Ay.openApp(t, e.channel.id);
+                            el(e), null != e.channel && (m ? v(e) : A.Ay.openApp(t, e.channel.id));
                         },
                     }).catch(() => {});
-            }, [t, _, r?.code, r?.guild?.id]),
-            N = c.useCallback(() => {
+            }, [t, j, r?.code, r?.guild?.id, m, v]),
+            I = c.useCallback(() => {
                 i(u);
             }, [u, i]);
         if (
@@ -5287,8 +5292,8 @@ let s2 = nK(iq),
                 }
             }),
             c.useEffect(() => {
-                r?.state === R.elq.APP_NOT_OPENED && j();
-            }, [r?.state, j]),
+                r?.state === R.elq.APP_NOT_OPENED && v();
+            }, [r?.state, v]),
             (function (e) {
                 let {
                         invite: t,
@@ -5371,37 +5376,37 @@ let s2 = nK(iq),
                 inviteKey: t,
                 authenticated: d,
                 nativeAppState: a,
-                mode: E,
-                getAcceptInviteContext: _,
-                handleContinue: j,
+                mode: _,
+                getAcceptInviteContext: j,
+                handleContinue: v,
                 transitionTo: i,
             }),
             null == r)
         )
             return null;
-        let I = a === R.fAW.OPEN;
-        if (f || I || r.state === R.elq.APP_OPENED)
-            return (0, o.jsx)(sK, { invite: r, inviteKey: t, rpcConnected: I, onContinue: j });
-        let { state: C } = r;
-        if (C === R.elq.APP_NOT_OPENED) return (0, o.jsx)(sY, { handleDefaultTransition: N });
-        if ([R.elq.RESOLVING, R.elq.ACCEPTING, R.elq.APP_OPENING].includes(C)) {
+        let C = a === R.fAW.OPEN;
+        if (p || C || r.state === R.elq.APP_OPENED)
+            return (0, o.jsx)(sK, { invite: r, inviteKey: t, rpcConnected: C, onContinue: v });
+        let { state: y } = r;
+        if (y === R.elq.APP_NOT_OPENED) return (0, o.jsx)(sY, { handleDefaultTransition: I });
+        if ([R.elq.RESOLVING, R.elq.ACCEPTING, R.elq.APP_OPENING].includes(y)) {
             let e =
-                C === R.elq.ACCEPTING ? z.intl.string(z.t["6wsY16"]) : (R.elq.RESOLVING, z.intl.string(z.t["Z+hCVU"]));
+                y === R.elq.ACCEPTING ? z.intl.string(z.t["6wsY16"]) : (R.elq.RESOLVING, z.intl.string(z.t["Z+hCVU"]));
             return (0, o.jsx)(sX, { title: e });
         }
-        if (C === R.elq.EXPIRED) return (0, o.jsx)(sq, { banned: !1, handleDefaultTransition: N });
-        if (C === R.elq.BANNED) return (0, o.jsx)(sq, { banned: !0, handleDefaultTransition: N });
-        if (C === R.elq.RESOLVED) {
+        if (y === R.elq.EXPIRED) return (0, o.jsx)(sq, { banned: !1, handleDefaultTransition: I });
+        if (y === R.elq.BANNED) return (0, o.jsx)(sq, { banned: !0, handleDefaultTransition: I });
+        if (y === R.elq.RESOLVED) {
             if (d && (0, lZ.Lt)(r.flags ?? 0, l$.Q.IS_GUEST_INVITE))
                 return (
                     A.Ay.openApp(t),
                     lJ.u.set(sU.B, t),
-                    (0, o.jsx)(sK, { invite: r, inviteKey: t, rpcConnected: I, onContinue: () => i(R.BVt.APP) })
+                    (0, o.jsx)(sK, { invite: r, inviteKey: t, rpcConnected: C, onContinue: () => i(R.BVt.APP) })
                 );
-            if (null != r.type && to.uR.has(r.type) && m)
+            if (null != r.type && to.uR.has(r.type) && f)
                 return (0, o.jsx)(sX, { title: z.intl.string(z.t["Z+hCVU"]) });
             if (!d && lQ.VP)
-                return E === sF
+                return _ === sF
                     ? (0, o.jsx)(sH, { invite: r, transitionTo: i, location: n })
                     : (0, o.jsx)(sQ, {
                           invite: r,
@@ -5417,8 +5422,8 @@ let s2 = nK(iq),
                           transitionTo: i,
                       });
         }
-        return C === R.elq.RESOLVED || C === R.elq.ERROR
-            ? (0, o.jsx)(sz, { invite: r, inviteKey: t, handleAccept: v, handleDefaultTransition: N })
+        return y === R.elq.RESOLVED || y === R.elq.ERROR
+            ? (0, o.jsx)(sz, { invite: r, inviteKey: t, handleAccept: N, handleDefaultTransition: I })
             : null;
     }),
     s3 = nK(function (e) {
