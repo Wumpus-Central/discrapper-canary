@@ -1234,10 +1234,10 @@ function tf(e) {
     );
 }
 var tA = n(364840),
-    tS = n(460905),
-    ty = n(183623),
-    tP = n(95635),
-    tI = n(935462),
+    tS = n(935462),
+    ty = n(460905),
+    tP = n(183623),
+    tI = n(95635),
     t_ = n(331322),
     tT = n(532794),
     tg = n(811611),
@@ -1261,9 +1261,9 @@ function tN(e) {
                 description: J.intl.formatToPlainString(J.t["1A6vXi"], { percent: (0, eZ.l9)(n, z.oX / 100) }),
                 color: ef.A.unsafe_rawColors.GUILD_BOOSTING_PINK.css,
             }),
-            t ? (0, l.jsx)(tx.A, { icon: tS.n, iconClassName: tv.zO, description: J.intl.string(J.t.Z9b2x2) }) : null,
-            (0, l.jsx)(tx.A, { icon: ty.F, iconClassName: tv.Kg, description: J.intl.string(J.t["8dqG5E"]) }),
-            (0, l.jsx)(tx.A, { icon: tP.J, iconClassName: tv.$z, description: J.intl.string(J.t.cBorIy) }),
+            t ? (0, l.jsx)(tx.A, { icon: ty.n, iconClassName: tv.zO, description: J.intl.string(J.t.Z9b2x2) }) : null,
+            (0, l.jsx)(tx.A, { icon: tP.F, iconClassName: tv.Kg, description: J.intl.string(J.t["8dqG5E"]) }),
+            (0, l.jsx)(tx.A, { icon: tI.J, iconClassName: tv.$z, description: J.intl.string(J.t.cBorIy) }),
         ],
     });
 }
@@ -1291,7 +1291,7 @@ function tM(e) {
         }, [m]),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(tI.s_, { "data-migration-pending": !0, onClick: n, className: tv.b }),
+                (0, l.jsx)(tS.s_, { "data-migration-pending": !0, onClick: n, className: tv.b }),
                 (0, l.jsxs)(b.c, {
                     children: [
                         S && (0, l.jsx)(tg.Vq, { className: tv.Fg }),
@@ -1778,7 +1778,7 @@ function tQ(e) {
 }
 function t$(e) {
     let { guildProductListing: t, onClose: n, className: i } = e;
-    return (0, l.jsxs)(tI.rQ, {
+    return (0, l.jsxs)(tS.rQ, {
         className: eE()(tq.wx, tz.G, i),
         separator: !1,
         "data-migration-pending": !0,
