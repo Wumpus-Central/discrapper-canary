@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { k: () => s, r: () => r });
+n.d(t, { k: () => a, r: () => r });
 var i,
     r =
         (((i = {})[(i.DM = 1)] = "DM"),
@@ -19,21 +19,22 @@ var i,
         (i[(i.LOBBY = 17)] = "LOBBY"),
         (i[(i.DM_SDK = 18)] = "DM_SDK"),
         (i[(i.MEDIA_THREAD = 19)] = "MEDIA_THREAD"),
+        (i[(i.GUILD_SPACE = 20)] = "GUILD_SPACE"),
         (i[(i.UNKNOWN = 1e4)] = "UNKNOWN"),
         i);
-let s = {
+let a = {
     CALLABLE: new Set([1, 3]),
     TEXTUAL: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18, 19]),
     GUILD_THREADS_ONLY: new Set([15, 16]),
     STICKERS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 15, 16, 17, 18, 19]),
     READABLE: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]),
-    GUILD: new Set([0, 2, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 19]),
-    GUILD_CHANNEL: new Set([0, 2, 4, 5, 6, 13, 14, 15, 16]),
+    GUILD: new Set([0, 2, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 19, 20]),
+    GUILD_CHANNEL: new Set([0, 2, 4, 5, 6, 13, 14, 15, 16, 20]),
     THREADS: new Set([10, 11, 12, 19]),
     PRIVATE_CHANNEL: new Set([1, 3]),
     PUBLIC_THREADS: new Set([10, 11]),
     GUILD_THREADED: new Set([0, 5, 15, 16]),
-    GUILD_STORED: new Set([0, 2, 4, 5, 6, 13, 14, 15, 16]),
+    GUILD_STORED: new Set([0, 2, 4, 5, 6, 13, 14, 15, 16, 20]),
     GUILD_TEXTUAL: new Set([0, 2, 5, 10, 11, 12, 13, 19]),
     GUILD_VOCAL: new Set([2, 11, 12, 13]),
     GUILD_VOCAL_PRIMARY: new Set([2, 13]),
@@ -61,6 +62,6 @@ let s = {
     SUMMARIZEABLE: new Set([0]),
     CONTENT_ENTRY_EMBEDS: new Set([0, 1, 5]),
     POLLS: new Set([0, 1, 2, 3, 5, 10, 11, 12, 13, 17, 18, 19]),
-    ACTIVITY_LAUNCHABLE: new Set([0, 1, 2, 3]),
-    ALL: new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19]),
+    ACTIVITY_LAUNCHABLE: new Set([0, 1, 2, 3, 20]),
+    ALL: new Set([0, 1, 2, 3, 4, 5, 6, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]),
 };
