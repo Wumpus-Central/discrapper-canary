@@ -1,5 +1,5 @@
 "use strict";
-let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, R, O, L, D, y, v, b, M;
+let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, O, R, L, y, D, v, b, M;
 n.d(t, { A: () => eE });
 var P = n(435558),
     U = n(158390),
@@ -50,14 +50,14 @@ function er() {
         (N = new Map()),
         (C = new Map()),
         (T = new Set()),
-        (R = new Map()),
         (O = new Map()),
+        (R = new Map()),
         (L = new Map()),
         ec(),
-        (D = null),
+        (y = null),
         (M = new Map()),
         (ei = new Map()),
-        (y = new Map()),
+        (D = new Map()),
         (v = new Map()),
         (b = new Map()),
         (ee = null),
@@ -145,13 +145,13 @@ class eu extends x.Ay.Store {
         return null == t ? void 0 : d.get(t);
     }
     get questToDeliverForPlacement() {
-        return R;
+        return O;
     }
     get questEnrollmentBlockedUntil() {
-        return D;
+        return y;
     }
     get questAdDecisionByPlacement() {
-        return y;
+        return D;
     }
     getFetchQuestPreviewError(e) {
         return ei.get(e);
@@ -217,7 +217,7 @@ class eu extends x.Ay.Store {
         return o?.get(e) ?? !1;
     }
     get earnedQuestForPlacement() {
-        return O;
+        return R;
     }
 }
 let e_ = new eu(k.h, {
@@ -269,7 +269,7 @@ let e_ = new eu(k.h, {
                             e();
                         }, r));
                 })(),
-                (D = null != r ? new Date(r) : null);
+                (y = null != r ? new Date(r) : null);
         },
         QUESTS_FETCH_CURRENT_QUESTS_FAILURE: function () {
             (_ = 0), (i = !1);
@@ -298,11 +298,10 @@ let e_ = new eu(k.h, {
                 metadataSealed: o,
                 trafficMetadataSealed: d,
                 fetchedAt: c,
-                fromExpirationClear: u = !1,
             } = e;
-            (E = Date.now()), (r = !1), (a = new Map(a)).set(n, !1), u || (v.get(n)?.succeed(), b.delete(n));
-            let { enableNewRequestBehavior: _ } = Y.A.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
-            if (_) {
+            (E = Date.now()), (r = !1), (a = new Map(a)).set(n, !1), v.get(n)?.succeed(), b.delete(n);
+            let { enableNewRequestBehavior: u } = Y.A.getConfig({ location: "handleFetchQuestToDeliverSuccess" });
+            if (u) {
                 let e = {
                     questId: t?.id ?? null,
                     adCreativeId: t?.id ?? null,
@@ -313,11 +312,11 @@ let e_ = new eu(k.h, {
                     metadataSealed: o,
                     trafficMetadataSealed: d,
                 };
-                (y = new Map(y)).set(n, e);
+                (D = new Map(D)).set(n, e);
             } else
                 null == t
-                    ? R.delete(n)
-                    : R.set(n, {
+                    ? O.delete(n)
+                    : O.set(n, {
                           quest: t,
                           adDecisionData: i,
                           adContext: s,
@@ -327,9 +326,17 @@ let e_ = new eu(k.h, {
         },
         QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
             let { placement: t } = e;
-            R.delete(t), (E = Date.now()), (r = !1), (a = new Map(a)).set(t, !1);
+            O.delete(t), (E = Date.now()), (r = !1), (a = new Map(a)).set(t, !1);
             let n = v.get(t);
             null == n && ((n = new U.A(Q, J)), v.set(t, n)), b.set(t, Date.now() + n.fail());
+        },
+        QUESTS_CLEAR_EXPIRED_QUEST_TO_DELIVER: function (e) {
+            let { placement: t, responseTtlSeconds: n, fetchedAt: i } = e,
+                { enableNewRequestBehavior: s } = Y.A.getConfig({ location: "handleClearExpiredQuestToDeliver" });
+            if (!s) return !1;
+            (r = !1), (a = new Map(a)).set(t, !1);
+            let l = { questId: null, adCreativeId: null, fetchedAt: i, ttlMillis: (0, F.Ce)(n) };
+            (D = new Map(D)).set(t, l);
         },
         QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_BEGIN: function (e) {
             let { content: t } = e;
@@ -339,7 +346,7 @@ let e_ = new eu(k.h, {
             let { serverQuests: t, content: n, fetchedAt: i, responseTtlSeconds: r } = e;
             (l = !1), (o = new Map(o)).set(n, !1);
             let a = (0, F.Ce)(r),
-                s = O.get(n),
+                s = R.get(n),
                 c = new Map(s?.earnedDecisionByQuestId);
             for (let [e, n] of t)
                 if ((c.set(e, { fetchedAt: i, ttlMillis: a, shouldDeliver: null != n }), null != n)) {
@@ -347,7 +354,7 @@ let e_ = new eu(k.h, {
                         i = (0, z.rO)(n);
                     null != t ? ea(e, i) : ((d = new Map(d)).set(e, i), (L = new Map(L)).set(e, (0, $.Ic)(i)));
                 }
-            O.set(n, { earnedDecisionByQuestId: c });
+            R.set(n, { earnedDecisionByQuestId: c });
         },
         QUESTS_FETCH_EARNED_QUEST_TO_DELIVER_FAILURE: function (e) {
             let { content: t } = e;
@@ -513,7 +520,7 @@ let e_ = new eu(k.h, {
         },
         QUESTS_USER_COMPLETION_UPDATE: function (e) {
             let { quest_enrollment_blocked_until: t } = e;
-            D = null != t ? new Date(t) : null;
+            y = null != t ? new Date(t) : null;
         },
         QUESTS_FETCH_QUEST_HOME_HERO_BEGIN: function (e) {
             let { placement: t } = e;
@@ -531,7 +538,7 @@ let e_ = new eu(k.h, {
                 metadataSealed: e.metadataSealed,
                 trafficMetadataSealed: e.trafficMetadataSealed,
             };
-            (y = new Map(y)).set(e.placement, t);
+            (D = new Map(D)).set(e.placement, t);
         },
         QUESTS_FETCH_QUEST_HOME_HERO_FAILURE: function (e) {
             let { placement: t } = e;
