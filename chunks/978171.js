@@ -22,19 +22,19 @@ var i = n(627968),
     S = n(77138),
     N = n(229659),
     C = n(885386),
-    R = n(186295),
-    O = n(174459),
+    O = n(186295),
+    R = n(174459),
     L = n(975571),
     y = n(917592),
     D = n(652215),
     v = n(731854),
     b = n(375708),
-    M = n(394952),
-    P = n(291614);
+    M = n(207944),
+    P = n(689630);
 let U = function (e) {
     let [t, n] = (0, r.useState)("idle");
     (0, r.useEffect)(() => {
-        O.default.track(D.HAw.OPEN_POPOUT, { type: "RTC Connection" });
+        R.default.track(D.HAw.OPEN_POPOUT, { type: "RTC Connection" });
     }, []);
     let a = (0, r.useCallback)(() => {
             let { closePopout: t } = e;
@@ -44,7 +44,7 @@ let U = function (e) {
             "idle" === t &&
                 (n("uploading"),
                 (0, S.a)(D.Umv.RTC),
-                O.default.track(D.HAw.DEBUG_LOG_UPLOADED, {
+                R.default.track(D.HAw.DEBUG_LOG_UPLOADED, {
                     media_session_id: o.A.getMediaSessionId() ?? null,
                     rtc_connection_id: o.A.getRTCConnectionId() ?? null,
                 }),
@@ -141,7 +141,7 @@ let U = function (e) {
                             className: M.Uo,
                             children: [
                                 U &&
-                                    R.Ay.supports(v.O5.DIAGNOSTICS) &&
+                                    O.Ay.supports(v.O5.DIAGNOSTICS) &&
                                     (0, i.jsx)(A.$, {
                                         icon: h.Q,
                                         text: b.intl.string(b.t.KBoWg9),
@@ -183,7 +183,7 @@ var w = n(297264),
     V = n(998759),
     B = n(75811),
     H = n(603266),
-    j = n(209426);
+    j = n(582418);
 function W(e) {
     let { channelId: t } = e,
         n = (0, a.bG)([o.A], () => o.A.getSecureFramesState()?.epochAuthenticator),
@@ -253,7 +253,7 @@ function W(e) {
         ],
     });
 }
-var Y = n(9934);
+var Y = n(115918);
 function K(e) {
     let { lobbyId: t, connectionTypeText: n, closePopout: r } = e,
         s = (0, a.cf)([d.A], () => ({

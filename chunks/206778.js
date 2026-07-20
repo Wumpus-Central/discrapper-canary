@@ -98,8 +98,8 @@ var ee = t(123393),
     ea = t(427262),
     ed = t(652215),
     ec = t(743981),
-    eo = t(982186),
-    eu = t(637498);
+    eo = t(193962),
+    eu = t(579258);
 function ex(e) {
     let { icon: l, label: t, onClick: s, disabled: i } = e;
     return (0, n.jsxs)(D.D, {
@@ -511,10 +511,10 @@ var eb = t(989349),
     ep = t(442433),
     e_ = t(966327),
     eD = t(532197),
-    eG = t(831084),
-    ey = t(494213),
-    eL = t(301050),
-    eP = t(62255);
+    eG = t(477228),
+    ey = t(780165),
+    eL = t(358522),
+    eP = t(239023);
 function eB(e) {
     let l,
         t,
@@ -789,7 +789,7 @@ var eF = t(465917),
     eY = t(770178),
     eQ = t(765548),
     eZ = t(736653),
-    e0 = t(256177);
+    e0 = t(521329);
 function e7(e) {
     let { tabs: l, selectedTab: t, onTabSelect: s, onClose: i } = e;
     return (0, n.jsx)(eW.W, {
@@ -821,7 +821,7 @@ function e7(e) {
         ),
     });
 }
-function e6(e) {
+function e2(e) {
     let { onTabSelect: l, tabs: t, selectedTab: s } = e,
         r = i.useRef(null),
         d = (0, eZ.Ay)(),
@@ -862,7 +862,7 @@ function e6(e) {
         },
     });
 }
-function e4(e) {
+function e5(e) {
     var l;
     let { guildId: t, currentTab: s, onTabSelect: r } = e,
         [a, c] = i.useState(0),
@@ -923,7 +923,7 @@ function e4(e) {
                                 ),
                                 (0, n.jsx)("div", {
                                     ref: h,
-                                    children: (0, n.jsx)(e6, { tabs: S, onTabSelect: r, selectedTab: s }),
+                                    children: (0, n.jsx)(e2, { tabs: S, onTabSelect: r, selectedTab: s }),
                                 }),
                             ],
                         }),
@@ -936,7 +936,7 @@ function e4(e) {
                                 f.map((e) =>
                                     (0, n.jsx)(eJ.V.Item, { id: e.id, "aria-label": e.label, children: e.label }, e.id),
                                 ),
-                                0 !== S.length ? (0, n.jsx)(e6, { tabs: S, onTabSelect: r, selectedTab: s }) : null,
+                                0 !== S.length ? (0, n.jsx)(e2, { tabs: S, onTabSelect: r, selectedTab: s }) : null,
                             ],
                         }),
                     ],
@@ -945,9 +945,9 @@ function e4(e) {
         })
     );
 }
-var e2 = t(754744),
+var e6 = t(754744),
     e8 = t(138298);
-function e5(e) {
+function e3(e) {
     let { guildId: l } = e,
         t = (0, d.bG)([C.A], () => C.A.getGuild(l)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
@@ -962,7 +962,7 @@ function e5(e) {
               children: (0, n.jsx)("div", {
                   className: e0.__invalid_sidebarContainer,
                   style: { width: ed.da6 },
-                  children: (0, n.jsx)(e2.default, {
+                  children: (0, n.jsx)(e6.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -971,9 +971,9 @@ function e5(e) {
           })
         : null;
 }
-var e3 = t(856768),
-    e1 = t(372684),
-    e9 = t(702841),
+var e4 = t(856768),
+    e9 = t(523939),
+    e1 = t(702841),
     le = t(717421),
     ll = t(144073),
     lt = t(151781),
@@ -984,16 +984,16 @@ var e3 = t(856768),
 function la(e) {
     let { guild: l } = e,
         t = (0, ll.Ms)(l.id),
-        s = (0, le.z)({ height: 3 * !!t, config: e1.config.stiff });
+        s = (0, le.z)({ height: 3 * !!t, config: e9.config.stiff });
     return (0, n.jsx)("div", {
         className: ey.NQ,
-        children: (0, n.jsx)(e1.animated.div, { className: ey.b0, style: s }),
+        children: (0, n.jsx)(e9.animated.div, { className: ey.b0, style: s }),
     });
 }
 function ld(e) {
     let { guild: l, className: t, onPageChange: s, onMemberSelect: r } = e,
         d = l.id,
-        c = (0, e9.bG)([lt.A], () => lt.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
+        c = (0, e1.bG)([lt.A], () => lt.A.getEstimatedMemberSearchCountByGuildId(d), [d]),
         u = (0, ll.Ms)(d),
         x = (0, ll.Wl)(d),
         m = i.useCallback(
@@ -1024,7 +1024,7 @@ function ld(e) {
     });
 }
 var lc = t(746080),
-    lo = t(964623);
+    lo = t(362556);
 function lu(e) {
     let { guild: l, currentTab: t, onTabSelect: s } = e,
         i = (0, E.W)(l.id),
@@ -1041,7 +1041,7 @@ function lu(e) {
             children: [
                 (0, n.jsx)(b.A.Icon, { icon: c.n, "aria-hidden": !0 }),
                 (0, n.jsx)(b.A.Title, { children: a }),
-                i && (0, n.jsx)(e4, { guildId: l.id, currentTab: t, onTabSelect: s }),
+                i && (0, n.jsx)(e5, { guildId: l.id, currentTab: t, onTabSelect: s }),
             ],
         })
     );
@@ -1119,14 +1119,14 @@ function lx(e) {
                                             : (0, n.jsx)(eO, { guildId: c.id, currentTab: s }),
                               }),
                           }),
-                          (0, n.jsx)(e3.A, { guildId: c.id }),
+                          (0, n.jsx)(e4.A, { guildId: c.id }),
                       ],
                   }),
                   D &&
                       (null == c
                           ? null
                           : B
-                            ? (0, n.jsx)(e5, { guildId: c.id })
+                            ? (0, n.jsx)(e3, { guildId: c.id })
                             : s === M.ALL_MEMBERS
                               ? null
                               : (0, n.jsx)(eN, { guildId: c.id })),

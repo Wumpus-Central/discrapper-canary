@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(272812),
     N = n(461782),
     C = n(334463),
-    R = n(309010),
-    O = n(287809),
+    O = n(309010),
+    R = n(287809),
     L = n(795816),
     y = n(933958),
     D = n(851907),
@@ -36,9 +36,9 @@ var i = n(627968),
     G = n(5867),
     x = n(652215),
     k = n(806931),
-    F = n(970682),
-    V = n(27600),
-    B = n(604949);
+    F = n(157690),
+    V = n(429904),
+    B = n(794005);
 function H(e) {
     let { channel: t, isLoading: n } = e,
         [a, E] = r.useState(!1),
@@ -48,7 +48,7 @@ function H(e) {
         j = (0, l.bG)([y.Ay], () => y.Ay.getActivityPanelMode()),
         W = (0, h.h)(v),
         Y = A?.launchId,
-        K = (0, l.bG)([R.Ay], () => R.Ay.getChannelId() === t?.id),
+        K = (0, l.bG)([O.Ay], () => O.Ay.getChannelId() === t?.id),
         { dockedRect: $, isHidden: z } = (0, l.cf)([C.A], () => {
             let e = C.A.pipWindow;
             return { dockedRect: null != e ? C.A.getDockedRect(e.id) : null, isHidden: C.A.isEmbeddedActivityHidden() };
@@ -107,7 +107,7 @@ function H(e) {
     )
         return null;
     let e_ = Array.from(A.userIds)
-            .map((e) => O.default.getUser(e))
+            .map((e) => R.default.getUser(e))
             .filter((e) => null != e),
         eE = {
             instance_id: A.compositeInstanceId ?? A.launchId ?? "",

@@ -35,15 +35,15 @@ function C(e) {
         }),
     });
 }
-var R = n(174459),
-    O = n(927813),
+var O = n(174459),
+    R = n(927813),
     L = n(824744),
     y = n(475815),
     D = n(953584),
     v = n(122641),
     b = n(692051),
     M = n(375708),
-    P = n(83699);
+    P = n(233651);
 function U(e) {
     let { onPlay: t, className: n, inactive: a } = e,
         l = r.useRef(null),
@@ -391,7 +391,7 @@ var B = n(834730),
     j = n(624479),
     W = n(789645),
     Y = n(957565),
-    K = n(239957);
+    K = n(345941);
 let $ = "Close",
     z = "Copy to JSON",
     q = "Copied!";
@@ -641,8 +641,8 @@ var X = n(20504),
     Q = n(652215),
     J = n(838541),
     ee = n(650583),
-    et = n(277446),
-    en = n(653307);
+    et = n(354182),
+    en = n(489979);
 let ei = "-:--",
     er = { friction: 14, tension: 200 },
     ea = { VIDEO: "VIDEO", AUDIO: "AUDIO" },
@@ -881,7 +881,7 @@ class eE {
                 !1 === this.metadata.hasValidFrame &&
                 ((this.errorCode = 4),
                 (this.errorMessage = "No valid video frames detected - codec may be unsupported")),
-            R.default.track(Q.HAw.MEDIA_PLAY_FINISHED, {
+            O.default.track(Q.HAw.MEDIA_PLAY_FINISHED, {
                 play_time_sec: this.playTimeSec,
                 play_wall_time_ms: this.playWallTimeMs,
                 first_play_waiting_ms: this.firstPlayWaitingMs,
@@ -1171,7 +1171,7 @@ class eA extends r.PureComponent {
                 let e = i();
                 e !== this.state.muted && ((r.muted = e), (a.muted = e));
             }
-            this.setState(a), r.play(), t?.(e, r.currentTime * O.A.Millis.SECOND, r.duration * O.A.Millis.SECOND);
+            this.setState(a), r.play(), t?.(e, r.currentTime * R.A.Millis.SECOND, r.duration * R.A.Millis.SECOND);
         }
     }
     getWidth() {

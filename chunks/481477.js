@@ -6,7 +6,7 @@ var l = t(627968),
     r = t(64700),
     o = t(536246),
     c = t(395678),
-    u = t(667080);
+    u = t(773e3);
 function d(e) {
     let { application: n, queryParams: t, url: i } = e;
     return (0, l.jsx)(c.o, {
@@ -28,8 +28,8 @@ var p = t(289873),
     f = t(503698),
     j = t.n(f),
     v = t(3026),
-    C = t(990078),
-    P = t(862482),
+    C = t(862482),
+    P = t(866665),
     T = t(43990),
     b = t(834730),
     g = t(922016),
@@ -74,7 +74,7 @@ var D = t(423562),
     Q = t(728033),
     ee = t(652215),
     en = t(16961),
-    et = t(316561);
+    et = t(504977);
 let el = Z.DN.SIZE_24;
 function ei(e) {
     let n,
@@ -111,7 +111,7 @@ function ei(e) {
                 let t = f.get(e.id),
                     i = t?.nick ?? B.Ay.getName(e);
                 return (0, l.jsx)(
-                    C.m,
+                    P.m,
                     {
                         asContainer: !0,
                         text: i,
@@ -192,7 +192,7 @@ function ei(e) {
     if (null == m || !a) return null;
     let eo = (0, l.jsx)(k.A, { application: m, size: 24, className: et.Z2 });
     return (
-        h && null != c && (eo = (0, l.jsx)(C.m, { asContainer: !0, text: c, position: "bottom", children: eo })),
+        h && null != c && (eo = (0, l.jsx)(P.m, { asContainer: !0, text: c, position: "bottom", children: eo })),
         (0, l.jsx)(T.N, {
             theme: ee.NJ8.DARK,
             children: (e) =>
@@ -246,10 +246,10 @@ function ei(e) {
                                             shouldPrioritizeGroupPlusIcon: !0,
                                             isRichPresenceInvite: d,
                                             iconClassName: et.NS,
-                                            size: P.$n.Sizes.TINY,
-                                            look: P.$n.Looks.FILLED,
+                                            size: C.$n.Sizes.TINY,
+                                            look: C.$n.Looks.FILLED,
                                             buttonText: G.intl.string(G.t["6F9ivu"]),
-                                            color: P.$n.Colors.TRANSPARENT,
+                                            color: C.$n.Colors.TRANSPARENT,
                                         }),
                                         R
                                             ? (0, l.jsx)(W.A, { popoutWindowAlwaysOnTop: U, onToggleStayOnTop: $ })
@@ -317,7 +317,7 @@ function ea(e) {
         onConfirmClosePopout: s,
     });
 }
-var es = t(376554);
+var es = t(124778);
 function er(e) {
     let { activity: n, renderHeader: t, renderActivityIFrameWithLoadedData: a, isLoading: s = !1 } = e,
         o = r.useRef(null),

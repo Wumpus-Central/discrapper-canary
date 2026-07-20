@@ -4,11 +4,11 @@ var s = l(627968),
     a = l(503698),
     n = l.n(a),
     r = l(462887),
-    o = l(534514),
+    o = l(297264),
     c = l(834730),
     d = l(736653),
     u = l(611371),
-    h = l(408291);
+    h = l(45923);
 function m(e) {
     let { title: t, betaTag: l, color: i = "text-strong" } = e;
     return (0, s.jsxs)(o.D, {

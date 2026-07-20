@@ -26,11 +26,11 @@ async function I(e) {
             onSubscriptionConfirmation: S,
             onSubscribeComplete: N,
             guild: C,
-            handleSubscribeModalClose: R,
-            disablePremiumUpsell: O,
+            handleSubscribeModalClose: O,
+            disablePremiumUpsell: R,
             inPopout: L,
-            applicationId: D,
-            intent: y,
+            applicationId: y,
+            intent: D,
         } = e,
         v = L ? r.KX : r.SY,
         b = d.default.getCurrentUser();
@@ -38,7 +38,7 @@ async function I(e) {
     if (!b.verified)
         return void (0, a.openModalLazy)(
             async () => {
-                let { default: e } = await Promise.all([n.e("54681"), n.e("74913"), n.e("12206"), n.e("90406")]).then(
+                let { default: e } = await Promise.all([n.e("87181"), n.e("74913"), n.e("12206"), n.e("90406")]).then(
                     n.bind(n, 661925),
                 );
                 return (t) => {
@@ -55,7 +55,7 @@ async function I(e) {
     let P = (0, _.D$)(c.A.boostSlots),
         U = P.length;
     function w(e) {
-        T?.(), R?.(e);
+        T?.(), O?.(e);
     }
     if (U > 0 && (null == p || U >= p)) {
         let e;
@@ -63,18 +63,18 @@ async function I(e) {
             await (0, a.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
-                        n.e("41625"),
-                        n.e("26142"),
-                        n.e("64339"),
-                        n.e("39421"),
-                        n.e("76342"),
-                        n.e("60988"),
-                        n.e("20950"),
-                        n.e("56372"),
-                        n.e("65327"),
-                        n.e("22957"),
-                        n.e("71441"),
-                        n.e("79606"),
+                        n.e("19353"),
+                        n.e("79070"),
+                        n.e("17011"),
+                        n.e("12413"),
+                        n.e("10198"),
+                        n.e("9212"),
+                        n.e("3414"),
+                        n.e("29364"),
+                        n.e("67831"),
+                        n.e("58293"),
+                        n.e("32473"),
+                        n.e("21906"),
                         n.e("54484"),
                         n.e("89088"),
                         n.e("23532"),
@@ -100,7 +100,7 @@ async function I(e) {
                             selectedGuild: C,
                             locationSection: A.liQ.PREMIUM_GUILD_USER_MODAL,
                             guildBoostSlots: e,
-                            intent: y,
+                            intent: D,
                         });
                     };
                 },
@@ -123,11 +123,11 @@ async function I(e) {
             },
             totalNumberOfSlotsToAssign: p ?? 1,
             onCloseModal: w,
-            disablePremiumUpsell: O,
+            disablePremiumUpsell: R,
             onSubscriptionConfirmation: S,
             onSubscribeComplete: N,
             inPopout: L,
-            applicationId: D,
-            intent: y,
+            applicationId: y,
+            intent: D,
         });
 }

@@ -13,7 +13,7 @@ var r = n(503698),
     _ = n(332837),
     E = n(998445),
     A = n(834730),
-    h = n(781696),
+    h = n(900002),
     I = n(939249),
     f = n(404374),
     p = n(63152),
@@ -23,7 +23,7 @@ var r = n(503698),
     S = n(287809),
     N = n(816166),
     C = n(953727);
-function R(e) {
+function O(e) {
     let { width: t = 10, height: n = 10, color: r = "currentColor", ...a } = e;
     return (0, i.jsxs)("svg", {
         ...(0, C.A)(a),
@@ -92,52 +92,52 @@ function R(e) {
         ],
     });
 }
-var O = n(473145),
+var R = n(473145),
     L = n(426983),
-    D = n(176128),
-    y = n(375708);
+    y = n(176128),
+    D = n(375708);
 function v(e, t) {
     let n =
-        t === D.qo.PUBLIC
-            ? y.intl.string(y.t.op2cJ6)
-            : t === D.qo.APPLY_TO_JOIN
-              ? y.intl.string(y.t.YwZfbt)
-              : y.intl.string(y.t.TME4LJ);
+        t === y.qo.PUBLIC
+            ? D.intl.string(D.t.op2cJ6)
+            : t === y.qo.APPLY_TO_JOIN
+              ? D.intl.string(D.t.YwZfbt)
+              : D.intl.string(D.t.TME4LJ);
     switch (e) {
         case L._.STAFF:
             return {
-                tooltipTitle: y.intl.string(y.t.lMrv96),
-                tooltipSubtitle: y.intl.string(y.t.lMrv96),
-                tooltipDescription: y.intl.string(y.t.lMrv96),
+                tooltipTitle: D.intl.string(D.t.lMrv96),
+                tooltipSubtitle: D.intl.string(D.t.lMrv96),
+                tooltipDescription: D.intl.string(D.t.lMrv96),
             };
         case L._.VERIFIED:
             return {
-                tooltipTitle: y.intl.string(y.t.K7iRig),
-                tooltipSubtitle: y.intl.string(y.t.iCehw9),
+                tooltipTitle: D.intl.string(D.t.K7iRig),
+                tooltipSubtitle: D.intl.string(D.t.iCehw9),
                 tooltipDescription: n,
             };
         case L._.PARTNERED:
             return {
-                tooltipTitle: y.intl.string(y.t.K7iRig),
-                tooltipSubtitle: y.intl.string(y.t.hfYfEE),
+                tooltipTitle: D.intl.string(D.t.K7iRig),
+                tooltipSubtitle: D.intl.string(D.t.hfYfEE),
                 tooltipDescription: n,
             };
         case L._.VERIFIED_AND_PARTNERED:
             return {
-                tooltipTitle: y.intl.string(y.t.K7iRig),
-                tooltipSubtitle: y.intl.string(y.t["TX+iFC"]),
+                tooltipTitle: D.intl.string(D.t.K7iRig),
+                tooltipSubtitle: D.intl.string(D.t["TX+iFC"]),
                 tooltipDescription: n,
             };
         case L._.COMMUNITY:
-            return { tooltipTitle: y.intl.string(y.t.K7iRig), tooltipDescription: n };
+            return { tooltipTitle: D.intl.string(D.t.K7iRig), tooltipDescription: n };
         case L._.DISCOVERABLE:
-            return { tooltipTitle: y.intl.string(y.t.K7iRig), tooltipDescription: y.intl.string(y.t.op2cJ6) };
+            return { tooltipTitle: D.intl.string(D.t.K7iRig), tooltipDescription: D.intl.string(D.t.op2cJ6) };
         default:
-            return { tooltipTitle: y.intl.string(y.t["iZRkC/"]) };
+            return { tooltipTitle: D.intl.string(D.t["iZRkC/"]) };
     }
 }
 var b = n(652215),
-    M = n(40544);
+    M = n(628192);
 let P = {
     [L._.STAFF]: {
         IconComponent: d.V,
@@ -197,11 +197,11 @@ function U(e) {
             (0, i.jsxs)("div", {
                 className: a()(M.f, M.N5),
                 children: [
-                    (0, i.jsx)(R, { width: 18, height: 18, className: M.F8 }),
+                    (0, i.jsx)(O, { width: 18, height: 18, className: M.F8 }),
                     (0, i.jsx)(A.E, {
                         variant: "text-xs/semibold",
                         color: "text-overlay-light",
-                        children: O.gb(t.premiumTier),
+                        children: R.gb(t.premiumTier),
                     }),
                 ],
             }),
@@ -210,7 +210,7 @@ function U(e) {
                 children: (0, i.jsx)(A.E, {
                     variant: "text-xs/semibold",
                     color: "text-overlay-light",
-                    children: y.intl.format(y.t["dR/SVH"], { count: t.premiumSubscriberCount }),
+                    children: D.intl.format(D.t["dR/SVH"], { count: t.premiumSubscriberCount }),
                 }),
             }),
         ],
@@ -250,14 +250,14 @@ function G(e) {
             ...N
         } = e,
         C = N.size ?? 18,
-        R = (0, s.bG)([S.default, g.Ay], () => {
+        O = (0, s.bG)([S.default, g.Ay], () => {
             let e = S.default.getCurrentUser();
             return g.Ay.isMember(r?.id, e?.id);
         }),
-        O = (0, s.bG)([m.A], () => m.A.theme),
-        y = (0, D.Jp)(r),
-        U = (0, L.K)(y),
-        G = y.premium && R && !A;
+        R = (0, s.bG)([m.A], () => m.A.theme),
+        D = (0, y.Jp)(r),
+        U = (0, L.K)(D),
+        G = D.premium && O && !A;
     function x(e) {
         G &&
             (e.stopPropagation(),
@@ -276,18 +276,18 @@ function G(e) {
         sizeAdjustment: Y,
     } = P[U];
     if (null == k) return null;
-    y.premium && ((t = W), (n = j));
-    let K = (0, o.M)(O) ? B : H,
-        $ = (0, o.M)(O) ? F : V;
+    D.premium && ((t = W), (n = j));
+    let K = (0, o.M)(R) ? B : H,
+        $ = (0, o.M)(R) ? F : V;
     (t = t ?? K), (n = n ?? $);
     let z = Math.floor(0.75 * C) - (Y ?? 0),
-        { tooltipTitle: q, tooltipSubtitle: Z } = v(U, y.visibility),
+        { tooltipTitle: q, tooltipSubtitle: Z } = v(U, D.visibility),
         X = f ?? (null != Z ? Z : q);
     return (0, i.jsx)(h.ST, {
         color: a,
         position: l,
         "aria-label": !1,
-        text: (0, i.jsx)(w, { badgeType: U, guildTraits: y }),
+        text: (0, i.jsx)(w, { badgeType: U, guildTraits: D }),
         tooltipContentClassName: M.Hj,
         children: (e) =>
             (0, i.jsx)(I.D, {

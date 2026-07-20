@@ -2,9 +2,9 @@ n.d(e, { W: () => te, default: () => tn });
 var s,
     i = n(627968),
     l = n(64700),
-    r = n(123292),
-    a = n(935462),
-    o = n(534514),
+    r = n(935462),
+    a = n(123292),
+    o = n(297264),
     T = n(364522),
     c = n(430690),
     S = n(235986),
@@ -23,14 +23,14 @@ var s,
     C = n(633387),
     L = n(503698),
     R = n.n(L),
-    p = n(169636);
+    p = n(290276);
 let I = function (t) {
     let { children: e, style: n } = t;
-    return (0, i.jsx)(a.$m, { "data-migration-pending": !0, className: R()(p.j, n), children: e });
+    return (0, i.jsx)(r.$m, { "data-migration-pending": !0, className: R()(p.j, n), children: e });
 };
 var F = n(652215),
     U = n(375708),
-    N = n(425020);
+    N = n(726076);
 let k = function (t) {
     let { onClose: e, channelId: n } = t,
         [s, r] = l.useState(!1),
@@ -87,7 +87,7 @@ var y = n(17928),
     K = n(674272),
     G = n(327337),
     V = n(431804),
-    q = n(94013);
+    q = n(106749);
 function X(t) {
     let { children: e } = t;
     return (0, i.jsx)("div", { className: q.mH, children: e });
@@ -294,7 +294,7 @@ let Q = function () {
     let t = (0, G.RU)();
     return (0, i.jsx)(I, { children: (0, i.jsx)($.A, { tips: t, headerText: U.intl.string(U.t["0QSL1C"]) }) });
 };
-var tt = n(837248),
+var tt = n(726592),
     te =
         (((s = {}).ACTIONS = "ACTIONS"),
         (s.SAFETY_TIPS = "SAFETY_TIPS"),
@@ -312,7 +312,7 @@ let tn = (t) => {
         ),
         h = l.useCallback((t) => {
             let { text: e, onClick: n } = t;
-            return (0, i.jsx)(r.Q, { onClick: n, text: e, variant: "secondary", textVariant: "text-sm/normal" });
+            return (0, i.jsx)(a.Q, { onClick: n, text: e, variant: "secondary", textVariant: "text-sm/normal" });
         }, []),
         b = l.useCallback(() => {
             switch (O) {
@@ -339,14 +339,14 @@ let tn = (t) => {
             },
             [g],
         );
-    return (0, i.jsxs)(a.EO, {
+    return (0, i.jsxs)(r.EO, {
         "data-migration-pending": !0,
         transitionState: E,
         "aria-label": U.intl.string(U.t.eXlt01),
-        size: a.rI.SMALL,
+        size: r.rI.SMALL,
         parentComponent: "SafetyToolsModal",
         children: [
-            (0, i.jsx)(a.rQ, {
+            (0, i.jsx)(r.rQ, {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: tt.H,
@@ -381,7 +381,7 @@ let tn = (t) => {
                     ],
                 }),
             }),
-            (0, i.jsxs)(a.jl, {
+            (0, i.jsxs)(r.jl, {
                 "data-migration-pending": !0,
                 justify: S.A.Justify.BETWEEN,
                 children: [

@@ -95,7 +95,7 @@ var tu = i(387755),
     tE = i(41984),
     t_ = i(222506),
     tN = i(145567),
-    tS = i(774610),
+    tS = i(658194),
     tC = i(308368),
     tT = i(334738),
     th = i(481484),
@@ -103,7 +103,7 @@ var tu = i(387755),
     tO = i(560595),
     tb = i(929921),
     tL = i(753070),
-    tx = i(783198),
+    tx = i(244957),
     tD = i(941971),
     tR = i(521981),
     tk = i(976860),
@@ -120,7 +120,7 @@ var tu = i(387755),
     tH = i(451909),
     tJ = i(135621),
     tB = i(381941),
-    tz = i(267475);
+    tz = i(42387);
 function t$(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
         a = (0, tJ.A)(),
@@ -186,7 +186,7 @@ function t$(t) {
     });
 }
 var tX = i(119191),
-    tW = i(499214);
+    tW = i(21197);
 function tq(t) {
     t && (0, tU.Ak)(R.cH, R.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
@@ -195,15 +195,15 @@ var tQ = i(554146),
     t0 = i(429913),
     t1 = i(263577),
     t2 = i(826673),
-    t7 = i(308726),
-    t8 = i(46282),
-    t9 = i(360469),
-    t5 = i(70617),
-    t6 = i(881732);
+    t8 = i(308726),
+    t9 = i(46282),
+    t7 = i(360469),
+    t5 = i(12377),
+    t6 = i(167684);
 function t3(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
-    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t9.iu.LARGE), size: 40 });
+    return null == i ? null : (0, $.jsx)(t1.V, { src: i.getIconURL(t7.iu.LARGE), size: 40 });
 }
 let t4 = 5 * k.A.Millis.SECOND,
     et = 8 * k.A.Millis.SECOND,
@@ -612,7 +612,7 @@ let e_ = new eE(s.h, {
                                     l("one-click-go-live");
                                 }
                                 o.A.updateNotificationStatus(e),
-                                    (0, t8.H)({
+                                    (0, t9.H)({
                                         pid: w.A.getTargetPID(),
                                         analyticsLocation: z.ThZ.OVERLAY_NUDGE,
                                         allowOneClickGoLive: !0,
@@ -630,7 +630,7 @@ let e_ = new eE(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, $.jsx)(t7.ru, {
+                                (0, $.jsx)(t8.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",

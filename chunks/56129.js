@@ -23,8 +23,8 @@ var r = n(503698),
     S = n(271195),
     N = n(204651),
     C = n(383831),
-    R = n(128286),
-    O = n(80051),
+    O = n(128286),
+    R = n(80051),
     L = n(970636),
     y = n(186295),
     D = n(646865),
@@ -34,8 +34,8 @@ var r = n(503698),
     P = n(652215),
     U = n(818348),
     w = n(375708),
-    G = n(196436),
-    x = n(27600);
+    G = n(114964),
+    x = n(429904);
 function k(e) {
     let { onClick: t, isExpanded: n } = e;
     return (0, i.jsx)(N.A, {
@@ -55,7 +55,7 @@ function F(e) {
             onJumpToChannel: o,
             idle: d,
             selectedParticipant: N,
-            embeddedActivity: O,
+            embeddedActivity: R,
         } = e,
         b = (0, f.Us)() === P.BRT.POPOUT,
         w = (0, s.bG)([y.Ay], () => y.Ay.isVideoEnabled()),
@@ -123,7 +123,7 @@ function F(e) {
                         children: [
                             b || (0, D.f)()
                                 ? null
-                                : (0, i.jsx)(R.A, {
+                                : (0, i.jsx)(O.A, {
                                       className: G.BD,
                                       popoutOpen: !1,
                                       onOpenPopout: function () {
@@ -137,7 +137,7 @@ function F(e) {
                                       },
                                       onClosePopout: U.FX,
                                   }),
-                            (0, i.jsx)(C.A, { applicationId: n, location: O.location, className: G.BD }),
+                            (0, i.jsx)(C.A, { applicationId: n, location: R.location, className: G.BD }),
                         ],
                     }),
                 ],
@@ -193,7 +193,7 @@ function V(e) {
 }
 function B(e) {
     let { channelId: t, participantsOpen: n, showToggleParticipants: r } = e;
-    return r ? (0, i.jsx)(O.A, { channelId: t, isParticipantsOpen: n, className: G.N9 }) : null;
+    return r ? (0, i.jsx)(R.A, { channelId: t, isParticipantsOpen: n, className: G.N9 }) : null;
 }
 function H(e) {
     let {

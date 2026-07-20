@@ -25,36 +25,36 @@ function h(e, t, n) {
                 customTheme: S = !1,
                 paddingFix: N = !0,
                 style: C,
-                gap: R,
-                experimental_useStack: O,
+                gap: O,
+                experimental_useStack: R,
                 disableFocusRingScope: L = !1,
-                ...D
+                ...y
             } = l,
-            { scrollerRef: y, getScrollerState: v } = (0, c.A)(),
-            b = (0, u.A)(y, T);
+            { scrollerRef: D, getScrollerState: v } = (0, c.A)(),
+            b = (0, u.A)(D, T);
         r.useImperativeHandle(
             d,
-            () => ({ getScrollerNode: () => y.current, getScrollerState: v, ...(0, _.A)(y, v, b, T) }),
-            [y, v, T, b],
+            () => ({ getScrollerNode: () => D.current, getScrollerState: v, ...(0, _.A)(D, v, b, T) }),
+            [D, v, T, b],
         );
-        let M = (0, E.A)({ paddingFix: N, orientation: T, dir: p, className: f, scrollerRef: y, specs: a });
-        return O
+        let M = (0, E.A)({ paddingFix: N, orientation: T, dir: p, className: f, scrollerRef: D, specs: a });
+        return R
             ? (0, i.jsx)(o.B, {
-                  gap: R,
-                  ref: y,
+                  gap: O,
+                  ref: D,
                   className: s()(f, { [e]: !0, [t]: g, [n]: S }),
                   style: (0, A.Ay)(C, T, m),
                   dir: p,
-                  ...D,
-                  children: (0, i.jsxs)(I, { disableFocusRingScope: L, containerRef: y, children: [h, M] }),
+                  ...y,
+                  children: (0, i.jsxs)(I, { disableFocusRingScope: L, containerRef: D, children: [h, M] }),
               })
             : (0, i.jsx)("div", {
-                  ref: y,
+                  ref: D,
                   className: s()(f, { [e]: !0, [t]: g, [n]: S }),
                   style: (0, A.Ay)(C, T, m),
                   dir: p,
-                  ...D,
-                  children: (0, i.jsxs)(I, { disableFocusRingScope: L, containerRef: y, children: [h, M] }),
+                  ...y,
+                  children: (0, i.jsxs)(I, { disableFocusRingScope: L, containerRef: D, children: [h, M] }),
               });
     });
 }
@@ -62,7 +62,7 @@ function I(e) {
     let { disableFocusRingScope: t, containerRef: n, children: r } = e;
     return t ? r : (0, i.jsx)(l.xp, { containerRef: n, children: r });
 }
-var f = n(45596);
+var f = n(340380);
 let p = h(f.dv, f.Rv, f.D8),
     T = h(f.yL, f.Rv, f.D8),
     m = h(f.qZ, f.Rv, f.D8);

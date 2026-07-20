@@ -5,11 +5,11 @@ var l = t(627968),
     a = t.n(s),
     r = t(815021),
     o = t(939249),
-    c = t(534514),
+    c = t(297264),
     u = t(834730),
     d = t(320448),
     A = t(375708),
-    h = t(11699);
+    h = t(291552);
 function m(e) {
     let {
             className: n,
@@ -22,7 +22,7 @@ function m(e) {
             highlight: x,
             onDismiss: g,
         } = e,
-        I = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 e.stopPropagation(), g?.();
             },
@@ -59,7 +59,7 @@ function m(e) {
                 ],
             }),
             null != g
-                ? (0, l.jsx)("div", { className: h.r, children: (0, l.jsx)(r.J, { size: "xs", onClick: I }) })
+                ? (0, l.jsx)("div", { className: h.r, children: (0, l.jsx)(r.J, { size: "xs", onClick: f }) })
                 : (0, l.jsx)(d._, { size: "xs", color: "currentColor", className: h.OW }),
         ],
     });

@@ -3,13 +3,13 @@ var s = n(627968),
     i = n(64700),
     a = n(503698),
     l = n.n(a),
-    r = n(580929),
+    r = n(523939),
     o = n(17928),
     c = n(661531),
-    d = n(990078),
-    u = n(707554),
-    h = n(834730),
-    g = n(143838),
+    d = n(707554),
+    u = n(834730),
+    h = n(143838),
+    g = n(866665),
     m = n(939249),
     x = n(625903),
     p = n(228366),
@@ -40,7 +40,7 @@ let k = (0, _.v)((e, t) => ({
 }));
 var w = n(331322),
     D = n(775602),
-    B = n(826733);
+    B = n(656557);
 function G(e) {
     let { withHeader: t = !0, size: n = 15 } = e,
         i = (0, o.bG)([D.Ay], () => D.Ay.useReducedMotion);
@@ -85,7 +85,7 @@ var X = n(873263),
     H = n(276293),
     $ = n(778712),
     W = n(187322),
-    F = n(534514),
+    F = n(297264),
     V = n(812993),
     Z = n(191023),
     J = n(477262),
@@ -141,7 +141,7 @@ var ef = n(922016),
     eM = n(849077),
     eC = n(652215),
     eR = n(375708),
-    eL = n(285618);
+    eL = n(655794);
 let e_ = {
     [eM.Th.MENTION]: [eM.kR.SETTINGS],
     [eM.Th.REPLY]: [eM.kR.SETTINGS],
@@ -152,7 +152,7 @@ let e_ = {
 function ek(e) {
     let { label: t, onClick: n, message: i, Icon: a, interactionType: l } = e,
         r = (0, M.op)();
-    return (0, s.jsx)(d.m, {
+    return (0, s.jsx)(g.m, {
         text: t,
         position: "top",
         spacing: 4,
@@ -168,19 +168,19 @@ function ek(e) {
 }
 function ew(e) {
     let { channel: t, message: n, label: a, Icon: l, Menu: r, interactionType: o, actionType: c } = e,
-        u = (0, M.op)(),
-        [h, g] = (0, i.useState)(!1),
+        d = (0, M.op)(),
+        [u, h] = (0, i.useState)(!1),
         x = (0, i.useRef)(null),
         { openMenu: p, closeMenu: A } = eA();
     return (0, s.jsx)(ef.Y, {
-        shouldShow: h,
+        shouldShow: u,
         animation: ef.Y.Animation.NONE,
         position: "right",
         align: "top",
         autoInvert: !1,
         targetElementRef: x,
         onRequestClose: function () {
-            g(!1), A(n.id, c);
+            h(!1), A(n.id, c);
         },
         renderPopout: (e) =>
             (0, s.jsx)(eN.l, {
@@ -189,7 +189,7 @@ function ew(e) {
                 children: (0, s.jsx)(r, { "data-menu-migrated": !0, renderPopoutProps: e, channel: t, message: n }),
             }),
         children: (e) =>
-            (0, s.jsx)(d.m, {
+            (0, s.jsx)(g.m, {
                 text: a,
                 position: "top",
                 spacing: 4,
@@ -199,9 +199,9 @@ function ew(e) {
                     className: eL.XI,
                     onClick: (e) => {
                         let t;
-                        (0, M.Ml)({ message: n, interactionType: o, viewId: u }),
+                        (0, M.Ml)({ message: n, interactionType: o, viewId: d }),
                             e.stopPropagation(),
-                            g((t = !h)),
+                            h((t = !u)),
                             t ? p(n.id, c) : A(n.id, c);
                     },
                     children: (0, s.jsx)(l, {
@@ -329,7 +329,7 @@ function eB(e) {
 var eG = n(97808),
     eK = n(573435),
     ez = n(190460),
-    eX = n(282291);
+    eX = n(388275);
 function eY(e) {
     let {
             children: t,
@@ -587,7 +587,7 @@ function eW(e, t, n) {
 }
 function eF(e) {
     let { message: t, channel: n, focusProps: a, isSelected: r, isUnread: c, messageCount: d } = e,
-        u = n.type === eC.rbe.UNKNOWN ? H.N : (0, es.gU)(n, null),
+        h = n.type === eC.rbe.UNKNOWN ? H.N : (0, es.gU)(n, null),
         g = (0, en.Ay)(n, !1),
         m = (0, o.bG)([S.A], () => S.A.getGuild(n.getGuildId())),
         { nick: x, colorString: p } = (0, el.Ay)(t),
@@ -695,8 +695,8 @@ function eF(e) {
                                 inert: !0,
                                 className: l()(eL.HA, { [eL.gy]: c, [eL.wH]: r }),
                                 children: [
-                                    null !== u && (0, s.jsx)(u, { size: "xxs", className: eL.p4 }),
-                                    (0, s.jsxs)(h.E, {
+                                    null !== h && (0, s.jsx)(h, { size: "xxs", className: eL.p4 }),
+                                    (0, s.jsxs)(u.E, {
                                         variant: "text-sm/medium",
                                         lineClamp: 1,
                                         className: l()(eL.HA, { [eL.gy]: c, [eL.wH]: r }),
@@ -805,7 +805,7 @@ function eZ(e) {
         inert: !0,
         children: [
             null != c && (0, s.jsx)(c, { size: "xxs", className: eL.p4 }),
-            (0, s.jsx)(h.E, { variant: "text-sm/normal", lineClamp: 1, className: eL.iU, children: o }),
+            (0, s.jsx)(u.E, { variant: "text-sm/normal", lineClamp: 1, className: eL.iU, children: o }),
         ],
     });
 }
@@ -853,7 +853,7 @@ let eJ = (0, i.memo)(
                               async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("93336"),
-                                      n.e("26250"),
+                                      n.e("3869"),
                                       n.e("48118"),
                                   ]).then(n.bind(n, 594005));
                                   return (t) => (0, s.jsx)(e, { ...t, channel: h, message: c, isUnread: a });
@@ -872,7 +872,7 @@ let eJ = (0, i.memo)(
     },
     (e, t) => e.isUnread === t.isUnread && e.message.id === t.message.id && e.messageCount === t.messageCount,
 );
-var eq = n(735438),
+var eq = n(435558),
     eQ = n.n(eq),
     e0 = n(837381),
     e1 = n(847374),
@@ -880,11 +880,11 @@ var eq = n(735438),
     e2 = n(821609),
     e4 = n(475825),
     e8 = n(928039),
-    e7 = n(625494);
+    e6 = n(625494);
 let e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
-    e6 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
+    e7 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e5 = (0, _.v)((e, t) => ({
-        messageCategoryOpenStates: e6,
+        messageCategoryOpenStates: e7,
         lastInitializedWithUnreads: null,
         hasUserToggledSection: !1,
         getOpenState: (e) => t().messageCategoryOpenStates[e],
@@ -898,11 +898,11 @@ let e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.
             let s = t();
             s.hasUserToggledSection ||
                 (s.lastInitializedWithUnreads !== n &&
-                    e({ lastInitializedWithUnreads: n, messageCategoryOpenStates: n ? e6 : e9 }));
+                    e({ lastInitializedWithUnreads: n, messageCategoryOpenStates: n ? e7 : e9 }));
         },
     }));
-var te = n(756195),
-    tt = n(645875);
+var te = n(405198),
+    tt = n(16051);
 function tn(e) {
     e.stopPropagation();
 }
@@ -947,7 +947,7 @@ function ta() {
                             width: 40,
                             color: c.A.colors.BACKGROUND_MOD_STRONG,
                         }),
-                        (0, s.jsx)(h.E, {
+                        (0, s.jsx)(u.E, {
                             variant: "text-sm/medium",
                             color: "text-muted",
                             style: { textAlign: "center" },
@@ -1010,10 +1010,10 @@ function tl(e) {
             p.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            e7._.subscribe(eC.jej.SCROLL_PAGE_DOWN, t),
-            e7._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
+            e6._.subscribe(eC.jej.SCROLL_PAGE_DOWN, t),
+            e6._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
             () => {
-                e7._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, t), e7._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
+                e6._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, t), e6._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -1160,7 +1160,7 @@ function tl(e) {
         })
     );
 }
-var tr = n(873111);
+var tr = n(756695);
 let to = [],
     tc = {
         controller: new r.Controller({ value: 1, immediate: !0 }),
@@ -1193,7 +1193,7 @@ function td(e) {
                     : (b.default.compare(i.id, t) >= 0 || i.kind === eM.yL.MENTION) && n.push(i);
             return { readMessages: n, unreadMessages: s };
         }),
-        d = i.useCallback(
+        u = i.useCallback(
             (e) => {
                 a !== eM.Io.BOOKMARKS && a !== eM.Io.MENTIONS && v.A.loadMoreInbox({ viewId: n, loadingTrigger: e });
             },
@@ -1204,8 +1204,8 @@ function td(e) {
             canLoadMore: R.A.canLoadMore({}),
         }));
     i.useEffect(() => {
-        g && !h && d(eM.VA.ON_OPEN);
-    }, [g, h, d]),
+        g && !h && u(eM.VA.ON_OPEN);
+    }, [g, h, u]),
         (function (e) {
             let { unreadChannelIds: t } = (0, L.U4)();
             i.useEffect(() => {
@@ -1287,7 +1287,7 @@ function td(e) {
     let _ = (0, eM.Yw)(a);
     return (0, s.jsx)("nav", {
         className: l()(tr.kL, { [tr.Yu]: t }),
-        children: (0, s.jsxs)(u.F, {
+        children: (0, s.jsxs)(d.F, {
             forceLevel: 1,
             component: (0, s.jsx)(I.Ay, { hasSubheader: !0, guild: _, ...tc }),
             children: [
@@ -1300,7 +1300,7 @@ function td(e) {
                     listName: "notifications-inbox",
                     renderLoadingState: tg,
                     ignoreGrouping: a === eM.Io.BOOKMARKS,
-                    loadMore: d,
+                    loadMore: u,
                 }),
             ],
         }),
@@ -1345,13 +1345,13 @@ function tx(e) {
               children: (0, s.jsxs)("div", {
                   className: tr.XD,
                   children: [
-                      (0, s.jsx)(h.E, {
+                      (0, s.jsx)(u.E, {
                           variant: "text-sm/medium",
                           color: "text-feedback-positive",
                           className: tr.vi,
                           children: eR.intl.string(eR.t["6XMM+D"]),
                       }),
-                      (0, s.jsx)(g.i, { size: "sm", color: c.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                      (0, s.jsx)(h.i, { size: "sm", color: c.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                   ],
               }),
           });
@@ -1359,7 +1359,7 @@ function tx(e) {
 function tp() {
     let [e, t] = (0, i.useState)(!1),
         { analyticsLocations: n } = (0, j.Ay)(N.A.NOTIFICATIONS_INBOX);
-    return (0, s.jsx)(d.m, {
+    return (0, s.jsx)(g.m, {
         asContainer: !0,
         position: "bottom",
         text: eR.intl.string(eR.t.h850Ss),

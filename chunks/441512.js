@@ -1,9 +1,9 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => b });
 var r = n(627968),
     l = n(64700),
     i = n(942381),
-    u = n(876230),
-    s = n(645577),
+    s = n(876230),
+    u = n(645577),
     a = n(408278),
     o = n(789645),
     c = n(613373),
@@ -26,14 +26,14 @@ var r = n(627968),
     x = n(979204),
     L = n(190107),
     O = n(375708),
-    P = n(924838),
-    N = n(25920);
-function k(e) {
+    P = n(111846),
+    N = n(311872);
+function b(e) {
     let t,
         {
             targetTimeSec: n,
-            onOptimisticProgressUpdate: k,
-            autoplay: b,
+            onOptimisticProgressUpdate: b,
+            autoplay: k,
             autoFocus: y = !0,
             parentTransitionState: V,
             openedAtMs: U,
@@ -44,8 +44,8 @@ function k(e) {
             sourceQuestContent: w,
             quest: B,
             videoSessionId: F,
-            setIsFullscreenEnabled: Y,
-            onClose: j,
+            setIsFullscreenEnabled: j,
+            onClose: Y,
         } = l.useContext(g.a),
         K = (0, l.useRef)(null),
         H = (0, v.Yh)(B),
@@ -58,23 +58,23 @@ function k(e) {
         Z = (0, p.Kr)((e) => e.muted),
         J = (0, p.Kr)((e) => e.setVolume),
         ee = (0, p.Kr)((e) => e.setMuted),
-        et = (0, s.g)(G, W, H.progressSeconds),
+        et = (0, u.g)(G, W, H.progressSeconds),
         [en] = l.useState(() => E.A.getEffectiveConnectionSpeed()),
         er = Math.max(W.maxTimestampSec, H.progressSeconds),
         el = G ? void 0 : (0, A.vd)(er, W.duration),
-        { videoAsset: ei, videoAssetType: eu } = (0, T.A)(K, en, et, M, !1),
-        es = l.useCallback(
+        { videoAsset: ei, videoAssetType: es } = (0, T.A)(K, en, et, M, !1),
+        eu = l.useCallback(
             (e) => {
                 let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;
-                return t || null != eu
-                    ? n === u.Q6.PAUSED && (r === u.KB.FOCUS || r === u.KB.PICTURE_IN_PICTURE)
+                return t || null != es
+                    ? n === s.Q6.PAUSED && (r === s.KB.FOCUS || r === s.KB.PICTURE_IN_PICTURE)
                         ? O.intl.string(O.t.w6PeBF)
                         : (0, d.u)({ hasVideoAsset: t, playerState: n, pauseReason: r })
                     : (0, f.isWeb)()
                       ? O.intl.string(O.t["E1du/q"])
                       : O.intl.string(O.t["rStN/7"]);
             },
-            [eu],
+            [es],
         ),
         ea = (0, l.useRef)(null),
         [eo, ec] = l.useState(null),
@@ -105,13 +105,13 @@ function k(e) {
             videoRef: K,
             hlsRef: ea,
             videoSessionId: F,
-            videoAssetId: eu,
+            videoAssetId: es,
             sourceQuestContent: w,
             logger: eE,
             isFullEpisodeVideoQuest: q,
             listenForHlsErrors: !1,
         });
-    (0, R.A)({ videoAssetUrl: ei?.url, videoRef: K, hls: eo, videoAssetType: eu });
+    (0, R.A)({ videoAssetUrl: ei?.url, videoRef: K, hls: eo, videoAssetType: es });
     let eO =
             ((t = (0, p.Kr)((e) => e.transcript)),
             (l.useEffect(() => {
@@ -128,28 +128,28 @@ function k(e) {
         eP = (0, x.A)({ targetSec: n, quest: B, sourceQuestContent: w, questConfig: B.config, clickable: G }),
         eN = l.useCallback(() => K.current?.currentTime ?? null, []),
         {
-            handlePlayerStateChange: ek,
-            handleLoadEnd: eb,
+            handlePlayerStateChange: eb,
+            handleLoadEnd: ek,
             handleFirstFrame: ey,
             handleSeek: eV,
         } = (0, c.Yr)({ getCurrentVideoTime: eN, onAnalytics: eL, emitIntervalMs: c.KI, minSegmentDurationMs: c._4 }),
         eU = (0, l.useRef)(null),
         eQ = l.useCallback(
             (e, t) => {
-                switch ((ek(e, t), e)) {
-                    case u.Q6.PLAYING:
+                switch ((eb(e, t), e)) {
+                    case s.Q6.PLAYING:
                         K.current?.paused === !0 && eS(eU.current), (eU.current = null);
                         break;
-                    case u.Q6.PAUSED: {
+                    case s.Q6.PAUSED: {
                         let e = (function (e) {
                             switch (e) {
-                                case u.KB.USER:
+                                case s.KB.USER:
                                     return m.Yg.PAUSE_BUTTON;
-                                case u.KB.FOCUS:
+                                case s.KB.FOCUS:
                                     return m.Yg.LOST_FOCUS;
-                                case u.KB.VISIBILITY:
+                                case s.KB.VISIBILITY:
                                     return m.Yg.MODAL_CLOSED;
-                                case u.KB.PICTURE_IN_PICTURE:
+                                case s.KB.PICTURE_IN_PICTURE:
                                     return m.Yg.PICTURE_IN_PICTURE;
                                 default:
                                     return null;
@@ -157,19 +157,19 @@ function k(e) {
                         })(t);
                         null != e && ((eU.current = e), eC(e));
                     }
-                    case u.Q6.ENDED:
+                    case s.Q6.ENDED:
                 }
             },
-            [ek, eS, eC],
+            [eb, eS, eC],
         ),
         eM = l.useCallback(() => {
             em(en);
         }, [em, en]),
         ew = l.useCallback(
             (e) => {
-                eb(e), ep(e);
+                ek(e), ep(e);
             },
-            [eb, ep],
+            [ek, ep],
         ),
         eB = l.useCallback(
             (e) => {
@@ -180,19 +180,19 @@ function k(e) {
         ),
         eF = l.useCallback(
             (e) => {
-                Y(e), eI(e);
+                j(e), eI(e);
             },
-            [Y, eI],
+            [j, eI],
         ),
-        eY = l.useCallback(
+        ej = l.useCallback(
             (e) => {
                 J(e), eD(e);
             },
             [J, eD],
         ),
-        ej = l.useCallback(
+        eY = l.useCallback(
             (e, t) => {
-                z(B.id, e, t), (0, _.Gn)(B.id, H.taskType, e), k(e);
+                z(B.id, e, t), (0, _.Gn)(B.id, H.taskType, e), b(e);
                 let r = q && e >= n && !e_.current;
                 (e >= ef.current || r) &&
                     (r && (e_.current = !0),
@@ -200,7 +200,7 @@ function k(e) {
                     G || B.userStatus?.enrolledAt == null || (0, A.zv)(B, e),
                     ex());
             },
-            [B, H.taskType, n, G, q, ex, z, k],
+            [B, H.taskType, n, G, q, ex, z, b],
         ),
         eK = l.useCallback(
             (e, t) => {
@@ -235,11 +235,11 @@ function k(e) {
                             variant: "overlay-secondary",
                             icon: o.P,
                             "aria-label": O.intl.string(O.t.cpT0Cq),
-                            onClick: j,
+                            onClick: Y,
                         }),
                     ],
                 }),
-            [j],
+            [Y],
         ),
         eW = l.useCallback(
             () => (0, r.jsx)(h.A, { videoRef: K, onTrackQuestContentClick: eR, orientation: Q }),
@@ -248,13 +248,13 @@ function k(e) {
     return (0, r.jsx)(c.Ft, {
         ref: K,
         parentTransitionState: V,
-        autoplay: b,
+        autoplay: k,
         progressClassName: $ ? P.q : P.c,
         persistTimeline: !0,
         persistPlayhead: !1,
         pauseOnLostVisibility: !G,
         autoFocus: y,
-        getPlaybackBlockedMessage: es,
+        getPlaybackBlockedMessage: eu,
         orientation: Q,
         videoUrlOverride: M,
         src: ei?.url,
@@ -272,11 +272,11 @@ function k(e) {
         onFullscreenChange: eF,
         initialVolume: X,
         initialMuted: Z,
-        onVolumeChange: eY,
+        onVolumeChange: ej,
         onMutedChange: function (e) {
             ee(e);
         },
-        onProgressUpdate: ej,
+        onProgressUpdate: eY,
         onSeek: eK,
         onEnded: eH,
         onError: eG,

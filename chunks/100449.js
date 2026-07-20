@@ -8,25 +8,25 @@ var i = n(627968),
     c = n(97808),
     d = n(834730),
     u = n(717558),
-    h = n(287809),
-    p = n(562153),
+    p = n(287809),
+    h = n(562153),
     m = n(732777),
     A = n(806931),
     x = n(731854),
-    f = n(82410);
+    f = n(203050);
 let g = l.memo(function (e) {
     let { channel: t, participant: n } = e,
-        a = (0, r.bG)([h.default], () => h.default.getUser(n.user.id), [n.user.id]),
-        m = l.useMemo(() => p.Ay.getNickname(t.guild_id, t.id, a) ?? a?.globalName ?? n.userNick, [t, a, n.userNick]),
+        a = (0, r.bG)([p.default], () => p.default.getUser(n.user.id), [n.user.id]),
+        m = l.useMemo(() => h.Ay.getNickname(t.guild_id, t.id, a) ?? a?.globalName ?? n.userNick, [t, a, n.userNick]),
         A = (0, u.A)({ userId: n.user.id, context: x.x.DEFAULT });
     if (null == a) return null;
     let g = o._3.SIZE_32,
         C = o.vC[g].size,
-        j = a.getAvatarURL(t.guild_id, C);
+        y = a.getAvatarURL(t.guild_id, C);
     return (0, i.jsxs)("div", {
         className: s()(f.vB, { [f.zY]: A }),
         children: [
-            (0, i.jsx)(c.eu, { className: f.my, size: g, src: j, "aria-hidden": !0 }),
+            (0, i.jsx)(c.eu, { className: f.my, size: g, src: y, "aria-hidden": !0 }),
             (0, i.jsx)("div", {
                 className: f.Xh,
                 children: (0, i.jsx)(d.E, { variant: "text-xs/medium", color: "text-default", children: m }),

@@ -17,7 +17,7 @@ var i = n(627968),
     f = n(113325),
     p = n(815021),
     T = n(375708),
-    m = n(96867);
+    m = n(110499);
 function g(e) {
     let { onClick: t, "aria-label": n = T.intl.string(T.t.cpT0Cq) } = e,
         { firstFocusableItemProps: a } = r.useContext(f.MV);
@@ -27,7 +27,7 @@ function g(e) {
     });
 }
 var S = n(818348),
-    N = n(571247);
+    N = n(458206);
 function C(e) {
     let {
             title: t,
@@ -35,11 +35,11 @@ function C(e) {
             assetUrl: f,
             previewUrl: p = f,
             disableMediaViewer: C = !1,
-            action: R,
-            caretConfig: O = { align: "center" },
+            action: O,
+            caretConfig: R = { align: "center" },
             badge: L,
-            textLink: D,
-            onWatchVideo: y,
+            textLink: y,
+            onWatchVideo: D,
             onRequestClose: v,
             popoverRef: b,
             position: M,
@@ -69,8 +69,8 @@ function C(e) {
             let e = V();
             (0, _.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
                 v?.(),
-                y?.();
-        }, [V, y, v]),
+                D?.();
+        }, [V, D, v]),
         W = (0, i.jsxs)(i.Fragment, {
             children: [
                 k || F
@@ -106,7 +106,7 @@ function C(e) {
             position: M,
             onRequestClose: B,
             hasVideo: !0,
-            caretConfig: O,
+            caretConfig: R,
             ...("edge" === P.alignmentStrategy
                 ? { alignmentStrategy: "edge", align: P.align }
                 : { alignmentStrategy: "trigger-center" }),
@@ -119,8 +119,8 @@ function C(e) {
                 (0, i.jsx)(g, { onClick: H }),
                 (0, i.jsx)(h.F, {}),
                 (0, i.jsx)("div", { className: m.s, children: W }),
-                (0, i.jsx)(I.D, { title: t, body: n, badge: L, textLink: D }),
-                null != R ? (0, i.jsx)(A.Z, { actions: [R] }) : null,
+                (0, i.jsx)(I.D, { title: t, body: n, badge: L, textLink: y }),
+                null != O ? (0, i.jsx)(A.Z, { actions: [O] }) : null,
             ],
         }),
     });

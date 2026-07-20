@@ -34,12 +34,12 @@ var s = i(627968),
     w = i(975571),
     R = i(488926),
     O = i(455207),
-    T = i(862482),
-    U = i(935462),
+    T = i(935462),
+    U = i(862482),
     F = i(685094),
     Y = i(821609),
     B = i(375708),
-    H = i(821406);
+    H = i(8414);
 function V(e) {
     let { index: t, title: i, selected: l } = e;
     return (0, s.jsxs)("li", {
@@ -83,8 +83,8 @@ let W = (e) => {
         P = l.useCallback(() => {
             x?.(), S(I - 1);
         }, [x, I, S]);
-    return (0, s.jsxs)(U.EO, {
-        size: U.rI.MEDIUM,
+    return (0, s.jsxs)(T.EO, {
+        size: T.rI.MEDIUM,
         className: a()(H.kL, t),
         transitionState: r,
         "aria-labelledby": A,
@@ -106,9 +106,9 @@ let W = (e) => {
             (0, s.jsxs)("div", {
                 className: H.yl,
                 children: [
-                    (0, s.jsxs)(U.$m, {
+                    (0, s.jsxs)(T.$m, {
                         children: [
-                            (0, s.jsx)(U.s_, {
+                            (0, s.jsx)(T.s_, {
                                 focusProps: { offset: { top: 4, right: 4, left: 4 } },
                                 onClick: c,
                                 className: H.b,
@@ -124,7 +124,7 @@ let W = (e) => {
                             }),
                         ],
                     }),
-                    (0, s.jsxs)(U.jl, {
+                    (0, s.jsxs)(T.jl, {
                         className: H.qr,
                         children: [
                             (0, s.jsx)(Y.$, {
@@ -139,10 +139,10 @@ let W = (e) => {
                             }),
                             L
                                 ? null
-                                : (0, s.jsx)(T.$n, {
-                                      look: T.$n.Looks.LINK,
-                                      color: T.$n.Colors.PRIMARY,
-                                      size: T.$n.Sizes.MIN,
+                                : (0, s.jsx)(U.$n, {
+                                      look: U.$n.Looks.LINK,
+                                      color: U.$n.Colors.PRIMARY,
+                                      size: U.$n.Sizes.MIN,
                                       onClick: P,
                                       children: B.intl.string(B.t["13/7kX"]),
                                   }),
@@ -155,7 +155,7 @@ let W = (e) => {
 };
 var z = i(124759),
     q = i(652215),
-    K = i(934195);
+    K = i(235251);
 let Z = "/assets/30c9caf58319d0f5.svg",
     Q = "/assets/401d9d1a3feb1e26.svg";
 var J = i(628287);

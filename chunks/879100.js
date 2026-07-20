@@ -1,144 +1,144 @@
-n.d(t, { W: () => S, _: () => g });
-var a = n(627968),
-    i = n(64700),
-    c = n(284009),
-    r = n.n(c),
-    l = n(364840),
-    s = n(331322),
-    o = n(123292),
-    d = n(38021),
-    u = n(834730),
-    b = n(821609),
-    p = n(169797),
-    f = n(166532),
-    m = n(796012),
-    y = n(659746),
-    E = n(975571),
-    h = n(652215),
-    v = n(26279),
-    x = n(202541),
-    R = n(818348),
-    j = n(375708),
-    I = n(7921);
-function g(e) {
+t.d(e, { W: () => I, _: () => M });
+var l = t(627968),
+    n = t(64700),
+    i = t(284009),
+    r = t.n(i),
+    s = t(364840),
+    c = t(331322),
+    o = t(123292),
+    h = t(38021),
+    d = t(834730),
+    u = t(821609),
+    m = t(169797),
+    p = t(166532),
+    x = t(796012),
+    E = t(659746),
+    j = t(975571),
+    C = t(652215),
+    v = t(26279),
+    A = t(202541),
+    g = t(818348),
+    f = t(375708),
+    b = t(703345);
+function M(a) {
     let {
-        currentStep: t,
-        isRefreshEnabled: n,
-        backStep: i,
-        handleStepChange: c,
-        primaryButtonProps: d,
-        secondaryButton: u,
-        legacySubmitButton: b,
-    } = e;
-    return t === f.pn.CONFIRM
+        currentStep: e,
+        isRefreshEnabled: t,
+        backStep: n,
+        handleStepChange: i,
+        primaryButtonProps: h,
+        secondaryButton: d,
+        legacySubmitButton: u,
+    } = a;
+    return e === p.pn.CONFIRM
         ? null
-        : t === f.pn.REVIEW
-          ? (r()(null != d, "Missing primaryButtonProps for review step"),
-            (0, a.jsx)(p.lo, { onBackClick: null != i ? () => c(i) : void 0, primaryButtonProps: d }))
-          : (0, a.jsx)(l.j, {
-                children: (0, a.jsxs)(s.B, {
+        : e === p.pn.REVIEW
+          ? (r()(null != h, "Missing primaryButtonProps for review step"),
+            (0, l.jsx)(m.lo, { onBackClick: null != n ? () => i(n) : void 0, primaryButtonProps: h }))
+          : (0, l.jsx)(s.j, {
+                children: (0, l.jsxs)(c.B, {
                     direction: "horizontal",
                     align: "center",
-                    justify: null != i ? "space-between" : "end",
+                    justify: null != n ? "space-between" : "end",
                     fullWidth: !0,
                     children: [
-                        null != i
-                            ? (0, a.jsx)(o.Q, {
-                                  text: j.intl.string(j.t["13/7kX"]),
-                                  onClick: () => c(i),
+                        null != n
+                            ? (0, l.jsx)(o.Q, {
+                                  text: f.intl.string(f.t["13/7kX"]),
+                                  onClick: () => i(n),
                                   variant: "secondary",
                               })
                             : null,
-                        (0, a.jsxs)(s.B, {
+                        (0, l.jsxs)(c.B, {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
-                            ...(n && t === f.pn.PLAN_SELECT ? { gap: 8 } : {}),
+                            ...(t && e === p.pn.PLAN_SELECT ? { gap: 8 } : {}),
                             fullWidth: !1,
-                            children: [u, b],
+                            children: [d, u],
                         }),
                     ],
                 }),
             });
 }
-function S(e) {
-    let t,
+function I(a) {
+    let e,
         {
-            onClose: n,
-            guild: c,
+            onClose: t,
+            guild: i,
             guildBoostQuantity: r,
-            isTransfer: l = !1,
-            withAnimation: s = !0,
+            isTransfer: s = !1,
+            withAnimation: c = !0,
             paymentSourceType: o,
-            didPurchaseOnFractionalPremium: p = !1,
-            fallbackGuildName: f,
-            customCheckoutFlow: g,
-        } = e,
-        { theme: S } = (0, d.wR)(),
-        [w, U] = i.useState(m.V1.Scenes.ENTRY),
-        [L, N] = i.useState(!1),
-        T = c?.name ?? f;
+            didPurchaseOnFractionalPremium: m = !1,
+            fallbackGuildName: p,
+            customCheckoutFlow: M,
+        } = a,
+        { theme: I } = (0, h.wR)(),
+        [R, L] = n.useState(x.V1.Scenes.ENTRY),
+        [T, y] = n.useState(!1),
+        P = i?.name ?? p;
     return (
-        (t = l
-            ? null == T
-                ? j.intl.format(j.t.P52e1r, {})
-                : j.intl.format(j.t["4UnIk9"], { guildName: T })
-            : p
-              ? j.intl.format(j.t.gFaKd1, { helpCenterLink: E.A.getArticleURL(h.MVz.FRACTIONAL_PREMIUM_ABOUT) })
-              : null == T
-                ? j.intl.format(j.t.SZ5ohR, { guildSubscriptionQuantity: r })
-                : j.intl.format(j.t.GxK3Mv, { guildName: T, guildSubscriptionQuantity: r })),
-        (0, a.jsxs)("div", {
-            className: I.RP,
+        (e = s
+            ? null == P
+                ? f.intl.format(f.t.P52e1r, {})
+                : f.intl.format(f.t["4UnIk9"], { guildName: P })
+            : m
+              ? f.intl.format(f.t.gFaKd1, { helpCenterLink: j.A.getArticleURL(C.MVz.FRACTIONAL_PREMIUM_ABOUT) })
+              : null == P
+                ? f.intl.format(f.t.SZ5ohR, { guildSubscriptionQuantity: r })
+                : f.intl.format(f.t.GxK3Mv, { guildName: P, guildSubscriptionQuantity: r })),
+        (0, l.jsxs)("div", {
+            className: b.RP,
             children: [
-                s
-                    ? (0, a.jsx)(m.V1, {
-                          className: I.ud,
-                          nextScene: w,
-                          onScenePlay: (e) => {
-                              if (!L)
-                                  switch (e) {
-                                      case m.V1.Scenes.ENTRY:
-                                          return U(m.V1.Scenes.IDLE);
-                                      case m.V1.Scenes.IDLE:
-                                          return U(m.V1.Scenes.SUCCESS);
-                                      case m.V1.Scenes.SUCCESS:
-                                          return N(!0), U(m.V1.Scenes.IDLE);
+                c
+                    ? (0, l.jsx)(x.V1, {
+                          className: b.ud,
+                          nextScene: R,
+                          onScenePlay: (a) => {
+                              if (!T)
+                                  switch (a) {
+                                      case x.V1.Scenes.ENTRY:
+                                          return L(x.V1.Scenes.IDLE);
+                                      case x.V1.Scenes.IDLE:
+                                          return L(x.V1.Scenes.SUCCESS);
+                                      case x.V1.Scenes.SUCCESS:
+                                          return y(!0), L(x.V1.Scenes.IDLE);
                                   }
                           },
                           pauseWhileUnfocused: !1,
                       })
                     : null,
-                (0, a.jsx)(y.Ay, {
-                    className: I.E,
-                    theme: S,
-                    premiumType: x.PremiumTypes.TIER_2,
-                    type: R.Nc.has(o ?? R.he.UNKNOWN)
-                        ? y.Ay.Types.PREMIUM_PAYMENT_STARTED
-                        : y.Ay.Types.GUILD_BOOST_APPLIED,
+                (0, l.jsx)(E.Ay, {
+                    className: b.E,
+                    theme: I,
+                    premiumType: A.PremiumTypes.TIER_2,
+                    type: g.Nc.has(o ?? g.he.UNKNOWN)
+                        ? E.Ay.Types.PREMIUM_PAYMENT_STARTED
+                        : E.Ay.Types.GUILD_BOOST_APPLIED,
                 }),
-                (0, a.jsx)(u.E, {
+                (0, l.jsx)(d.E, {
                     variant: "text-md/medium",
                     color: "interactive-text-default",
-                    className: I.xR,
-                    children: t,
+                    className: b.xR,
+                    children: e,
                 }),
-                g === v.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
-                    ? (0, a.jsx)(u.E, {
+                M === v.uH.META_QUEST_WEB_REDIRECT_CHECKOUT
+                    ? (0, l.jsx)(d.E, {
                           variant: "text-md/medium",
                           color: "interactive-text-default",
-                          className: I.xR,
-                          children: (0, a.jsxs)("p", {
-                              children: [j.intl.string(j.t.bIVRSQ), " ", j.intl.string(j.t["0UJqOy"])],
+                          className: b.xR,
+                          children: (0, l.jsxs)("p", {
+                              children: [f.intl.string(f.t.bIVRSQ), " ", f.intl.string(f.t["0UJqOy"])],
                           }),
                       })
-                    : (0, a.jsx)(b.$, {
+                    : (0, l.jsx)(u.$, {
                           variant: "primary",
                           text:
-                              g === v.uH.MOBILE_WEB_REDIRECT_CHECKOUT
-                                  ? j.intl.string(j.t.sRApon)
-                                  : j.intl.string(j.t["/iTxgz"]),
-                          onClick: n,
+                              M === v.uH.MOBILE_WEB_REDIRECT_CHECKOUT
+                                  ? f.intl.string(f.t.sRApon)
+                                  : f.intl.string(f.t["/iTxgz"]),
+                          onClick: t,
                       }),
             ],
         })

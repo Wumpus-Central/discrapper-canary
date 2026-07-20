@@ -44,9 +44,9 @@ var i,
     W = n(922016),
     Y = n(827827),
     K = n(481045),
-    $ = n(395277),
+    $ = n(900640),
     z = n(375708),
-    q = n(982375);
+    q = n(159143);
 function Z(e) {
     let { closePopout: t } = e;
     return (0, r.jsx)("div", {
@@ -488,7 +488,7 @@ var eV = n(769015),
     eq = n(929921),
     eZ = n(650338),
     eX = n(753070),
-    eQ = n(194368);
+    eQ = n(521920);
 function eJ(e) {
     let { className: t, color: n, ...i } = e;
     return (0, r.jsx)(x.E, { className: l()({ [eQ.Q]: null == n }, t), color: n, ...i });
@@ -573,7 +573,7 @@ let tM = (0, eM.mj)({
 });
 var tP = n(823748),
     tU = n(522055),
-    tw = n(576709);
+    tw = n(76660);
 function tG(e) {
     let { title: t, body: n, ctaText: i, runningGameId: a, targetElementRef: s, onClick: l, onClose: o } = e,
         d = (0, _.bG)([tU.A], () => null != a && tU.A.getGlobalCatalogGame(a)?.can_market === !0, [a]);
@@ -623,7 +623,7 @@ var tF = n(453774),
     tV = n(44724),
     tB = n(153488),
     tH = n(942370),
-    tj = n(610861);
+    tj = n(215917);
 function tW(e, t, n) {
     return (
         null != e &&
@@ -701,15 +701,15 @@ let tY = a.memo(function (e) {
             Y = a.useCallback(() => {
                 (0, td.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("64379"),
-                        n.e("17918"),
+                        n.e("4615"),
+                        n.e("81218"),
                         n.e("76171"),
                         n.e("86672"),
                         n.e("38601"),
                         n.e("36946"),
                         n.e("44727"),
-                        n.e("6565"),
-                        n.e("14304"),
+                        n.e("28724"),
+                        n.e("82013"),
                         n.e("76229"),
                     ]).then(n.bind(n, 477156));
                     return (t) =>
@@ -725,7 +725,7 @@ let tY = a.memo(function (e) {
             $ = a.useCallback(() => {
                 (0, tv.pK)({ gameApplicationId: u?.id, buttonVariant: "admin" }),
                     (0, td.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("42209"), n.e("37084"), n.e("74132")]).then(
+                        let { default: e } = await Promise.all([n.e("99681"), n.e("37084"), n.e("74132")]).then(
                             n.bind(n, 279871),
                         );
                         return (t) => (0, r.jsx)(e, { gameName: K, gameApplicationId: u?.id, ...t });
@@ -945,7 +945,7 @@ let tQ = (0, eM.mj)({
     variations: { 1: { improvedGameCard: !0 } },
 });
 var tJ = n(475358),
-    t0 = n(673294);
+    t0 = n(686926);
 function t1(e) {
     let { onClick: t } = e;
     return (0, r.jsx)(I.D, {
@@ -961,8 +961,8 @@ function t1(e) {
 }
 var t2 = n(532624),
     t3 = n(350535),
-    t6 = n(16590),
-    t4 = n(118902);
+    t6 = n(788077),
+    t4 = n(559753);
 function t5(e) {
     let { isStreaming: t, isCurrentlyRunningGame: n, onClickNotSharing: i } = e,
         a = (0, _.bG)([t2.Ay], () => t2.Ay.getKeybindForAction(G.hCu.SAVE_CLIP)),
@@ -990,7 +990,7 @@ function t5(e) {
               : null
         : (0, r.jsx)(x.E, { variant: "text-xs/medium", color: "text-subtle", children: z.intl.string(z.t.W4N1ru) });
 }
-var t7 = n(379414);
+var t7 = n(984470);
 function t8(e) {
     let { name: t, applicationId: n } = e,
         i = (0, tX.A)({
@@ -1109,8 +1109,8 @@ let nr = {
     "1402418594532298837": "560127830160048128",
 };
 var na = n(534952),
-    ns = n(911070),
-    nl = n(490696),
+    ns = n(41959),
+    nl = n(503432),
     no = n(268920),
     nd = n(633217);
 function nc(e) {

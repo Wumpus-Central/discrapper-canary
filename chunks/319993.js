@@ -22,11 +22,11 @@ var i,
     S = n(824744),
     N = n(428262),
     C = n(926972),
-    R = n(885386),
-    O = n(862482),
+    O = n(885386),
+    R = n(862482),
     L = n(821609),
-    D = n(66834),
-    y = n(624793),
+    y = n(66834),
+    D = n(624793),
     v = n(639245),
     b = n(34337),
     M = n(796774),
@@ -45,13 +45,13 @@ var k = n(375708),
         i),
     V = n(202541),
     B = n(652215),
-    H = n(532340);
+    H = n(589812);
 function j(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: i } = e,
         s = a.useCallback(async () => {
             if ((n(), null != t))
                 try {
-                    await D.A.joinGuild(t), D.A.transitionToGuildSync(t);
+                    await y.A.joinGuild(t), y.A.transitionToGuildSync(t);
                 } catch {}
         }, [n, t]);
     return i === F.GET_NITRO
@@ -60,8 +60,8 @@ function j(e) {
               showGradient: !0,
               premiumModalAnalyticsLocation: { section: B.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
               subscriptionTier: V.pe.TIER_2,
-              size: O.$n.Sizes.SMALL,
-              color: O.$n.Colors.CUSTOM,
+              size: R.$n.Sizes.SMALL,
+              color: R.$n.Colors.CUSTOM,
               onClick: n,
               textOptions: { textOverride: k.intl.string(k.t.pj0XBN) },
           })
@@ -87,19 +87,19 @@ function W(e) {
         [p, T] = a.useState(),
         m = (0, C.tj)({ location: "SoundmojiGuildInfo" }),
         S = h || f || null != p || !m,
-        [R, O] = a.useState(!S);
+        [O, R] = a.useState(!S);
     a.useEffect(() => {
         S ||
-            (O(!0),
+            (R(!0),
             (0, M.nh)(l.soundId, l.guildId)
                 .then((e) => {
                     T(e);
                 })
                 .finally(() => {
-                    O(!1), A();
+                    R(!1), A();
                 }));
     }, [A, S, l.guildId, l.soundId]);
-    let { buttonType: L, description: D } =
+    let { buttonType: L, description: y } =
             ((t = "0" === l.guildId),
             (n = (0, o.bG)([g.default], () => N.Ay.canUseSoundboardEverywhere(g.default.getCurrentUser()))),
             (i = (0, C.tj)({ location: "useSoundmojiGuildInfoData" })),
@@ -147,9 +147,9 @@ function W(e) {
                 }, [t, p, n, f, s, i]),
             }),
         G = L === F.JOIN_GUILD,
-        V = !h && R,
+        V = !h && O,
         B = a.useMemo(
-            () => (f ? y.GO.createFromGuildRecord(I) : null != p ? y.GO.createFromDiscoverableGuild(p) : void 0),
+            () => (f ? D.GO.createFromGuildRecord(I) : null != p ? D.GO.createFromDiscoverableGuild(p) : void 0),
             [I, f, p],
         );
     return V
@@ -169,7 +169,7 @@ function W(e) {
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, r.jsx)(u.E, { variant: "text-sm/normal", children: D }),
+                                  (0, r.jsx)(u.E, { variant: "text-sm/normal", children: y }),
                               ],
                           }),
                           null != B &&
@@ -200,15 +200,15 @@ function W(e) {
               ],
           });
 }
-var Y = n(757718);
+var Y = n(14870);
 function K() {
     let { volume: e, onVolumeChange: t } = (function () {
-        let [e, t] = a.useState(R.HO.getSetting());
+        let [e, t] = a.useState(O.HO.getSetting());
         return {
             volume: e,
             onVolumeChange: a.useCallback((e) => {
                 let n = (0, S.w)(e);
-                t(n), R.HO.updateSetting(n);
+                t(n), O.HO.updateSetting(n);
             }, []),
         };
     })();

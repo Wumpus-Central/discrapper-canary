@@ -2,25 +2,25 @@ t.d(s, { A: () => f });
 var a = t(627968),
     l = t(64700),
     i = t(172218),
-    n = t(534514),
+    n = t(297264),
     d = t(834730),
     r = t(364522),
     c = t(289873),
     o = t(503698),
     x = t.n(o),
-    h = t(990078),
-    m = t(778712),
+    h = t(778712),
+    m = t(866665),
     u = t(939249),
     j = t(97808),
     v = t(658675),
     b = t(854627),
-    p = t(3161);
+    p = t(191577);
 function k(e) {
     let { user: s, checked: t, onChange: i, disabled: n, tooltipConfig: r } = e,
         c = l.useRef(null),
-        { avatarSrc: o, eventHandlers: k } = (0, b.A)({ userId: s?.id, size: m._3.SIZE_32 }),
+        { avatarSrc: o, eventHandlers: k } = (0, b.A)({ userId: s?.id, size: h._3.SIZE_32 }),
         N = s.globalName ?? s.username;
-    return (0, a.jsx)(h.m, {
+    return (0, a.jsx)(m.m, {
         text: r?.isActive(s, n) ? r.text(s) : null,
         position: "top",
         anchorRef: c,
@@ -37,7 +37,7 @@ function k(e) {
                         className: x()({ [p.SU]: n }),
                         src: o,
                         "aria-label": N,
-                        size: m._3.SIZE_32,
+                        size: h._3.SIZE_32,
                         ...k,
                     }),
                 }),
@@ -63,7 +63,7 @@ function k(e) {
         }),
     });
 }
-var N = t(661829);
+var N = t(841413);
 function f(e) {
     let {
             users: s,

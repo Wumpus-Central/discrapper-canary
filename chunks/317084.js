@@ -25,8 +25,8 @@ function S(e, t, n, i) {
     return g(e, n, i) !== g(t, n, i) && g(e, t, n) !== g(e, t, i);
 }
 var N = n(375708),
-    C = n(740371);
-function R(e) {
+    C = n(890323);
+function O(e) {
     let { className: t } = e;
     return (0, i.jsxs)("svg", {
         className: t,
@@ -72,7 +72,7 @@ function R(e) {
         ],
     });
 }
-let O = [
+let R = [
         { x: 0.5, y: 0.05 },
         { x: 0.95, y: 0.2 },
         { x: 1, y: 0.5 },
@@ -82,7 +82,7 @@ let O = [
         { x: 0, y: 0.5 },
         { x: 0.05, y: 0.2 },
     ],
-    L = O.length;
+    L = R.length;
 function y(e, t, n) {
     let i = e * t;
     return e > 0.5 ? i - n : e < 0.5 ? i : i - n / 2;
@@ -202,8 +202,8 @@ let D = r.memo(function (e) {
         H = r.useMemo(
             () =>
                 P[g].map((e, r) => {
-                    let l = O[r];
-                    if (null == l) throw Error(`Too many items supplied ${E.length} expected max of ${O.length}`);
+                    let l = R[r];
+                    if (null == l) throw Error(`Too many items supplied ${E.length} expected max of ${R.length}`);
                     let o = y(l.x, t, a),
                         d = y(l.y, n, s);
                     return (0, i.jsx)(
@@ -304,7 +304,7 @@ let D = r.memo(function (e) {
                             (0, i.jsx)(m.D, {
                                 className: C.$2,
                                 onClick: _,
-                                children: (0, i.jsx)(R, { className: C.$2 }),
+                                children: (0, i.jsx)(O, { className: C.$2 }),
                             }),
                         u && P.length > 1
                             ? (0, i.jsx)("div", { className: C.YB, children: N.intl.string(N.t["Xy+S02"]) })
@@ -318,7 +318,7 @@ let D = r.memo(function (e) {
 });
 var v = n(805945);
 n(980504);
-var b = n(1986);
+var b = n(254914);
 function M(e) {
     let {
             guildId: t,
@@ -344,8 +344,8 @@ function M(e) {
                 return r.forEach((e) => a(e, !0)), r.forEach((e) => a(e, !1)), i;
             }, [t, n, e]);
         })((0, f.Y)(n, !0)),
-        R = (0, I.T)(),
-        O = r.useRef(null),
+        O = (0, I.T)(),
+        R = r.useRef(null),
         [L, y] = r.useState(void 0),
         M = (0, s.bG)([u.A], () => u.A.getMediaSessionId()),
         { analyticsLocations: P } = (0, o.Ay)(l.A.SOUNDBOARD_WHEEL),
@@ -359,11 +359,11 @@ function M(e) {
         E.E7(), c.bW.loadIfNecessary();
     }, []),
         r.useEffect(() => {
-            0 === C.length && 0 === R.length && N();
-        }, [C.length, R, N]),
+            0 === C.length && 0 === O.length && N();
+        }, [C.length, O, N]),
         r.useEffect(
             () => () => {
-                let e = O.current;
+                let e = R.current;
                 m || null == e || U(e);
             },
             [m, U],
@@ -377,7 +377,7 @@ function M(e) {
             { disableTrack: !g },
         );
     let w = r.useCallback((e) => {
-            (O.current = e), y(e?.soundId);
+            (R.current = e), y(e?.soundId);
         }, []),
         G = r.useCallback(
             (e) => {

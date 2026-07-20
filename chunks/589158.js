@@ -6,8 +6,8 @@ var i,
     s = n(503698),
     l = n.n(s),
     o = n(17928),
-    d = n(990078),
-    c = n(319060),
+    d = n(319060),
+    c = n(866665),
     u = n(329177),
     _ = n(939249),
     E = n(104510),
@@ -22,43 +22,43 @@ var i,
     S = n(394871),
     N = n(709066),
     C = n(235986),
-    R = n(310887),
-    O = (((i = O || {}).SINGLE_AVATAR = "1"), (i.MULTIPLE_AVATAR = "2"), i);
-let L = { [f._3.SIZE_32]: R.dT, [f._3.SIZE_40]: R.Jb };
-class D extends a.Component {
+    O = n(974119),
+    R = (((i = R || {}).SINGLE_AVATAR = "1"), (i.MULTIPLE_AVATAR = "2"), i);
+let L = { [f._3.SIZE_32]: O.dT, [f._3.SIZE_40]: O.Jb };
+class y extends a.Component {
     placeholderMaxWidth = `${Math.floor(40 * Math.random()) + 40}%`;
     static defaultProps = { type: "1" };
-    static Types = O;
+    static Types = R;
     render() {
         let { type: e, avatarSize: t, className: n, childrenClassName: i, doNotAnimate: a } = this.props;
         return "2" === e
             ? (0, r.jsxs)("div", {
-                  className: l()(R.ce, R.jO, n),
+                  className: l()(O.ce, O.jO, n),
                   children: [
                       (0, r.jsxs)(C.A, {
                           children: [
-                              (0, r.jsx)("div", { className: l()(R.RH, L[t], R.hC) }),
-                              (0, r.jsx)("div", { className: l()(R.RH, L[t], R.hC) }),
-                              (0, r.jsx)("div", { className: l()(R.RH, L[t]) }),
+                              (0, r.jsx)("div", { className: l()(O.RH, L[t], O.hC) }),
+                              (0, r.jsx)("div", { className: l()(O.RH, L[t], O.hC) }),
+                              (0, r.jsx)("div", { className: l()(O.RH, L[t]) }),
                           ],
                       }),
-                      (0, r.jsx)(C.A, { grow: 1, className: R.eC, style: { maxWidth: this.placeholderMaxWidth } }),
+                      (0, r.jsx)(C.A, { grow: 1, className: O.eC, style: { maxWidth: this.placeholderMaxWidth } }),
                   ],
               })
             : (0, r.jsxs)(C.A, {
-                  className: l()(R.qf, !a && R.lN, n),
+                  className: l()(O.qf, !a && O.lN, n),
                   children: [
-                      (0, r.jsx)("div", { className: l()(R.RH, L[t], i) }),
+                      (0, r.jsx)("div", { className: l()(O.RH, L[t], i) }),
                       (0, r.jsx)(C.A, {
                           grow: 1,
-                          className: l()(R.gM, i),
+                          className: l()(O.gM, i),
                           style: { maxWidth: this.placeholderMaxWidth },
                       }),
                   ],
               });
     }
 }
-var y = n(268218),
+var D = n(268218),
     v = n(193663),
     b = n(490427),
     M = n(609425),
@@ -88,7 +88,7 @@ function H(e) {
 var j = n(967144),
     W = n(859703),
     Y = n(24001),
-    K = n(574677),
+    K = n(573526),
     $ = n(854627),
     z = n(240248),
     q = n(427262),
@@ -96,20 +96,20 @@ var j = n(967144),
     X = n(705751),
     Q = n(31408),
     J = n(375708),
-    ee = n(28371);
-let et = (0, y.Fe)({
+    ee = n(661971);
+let et = (0, D.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("31591"),
-            n.e("69487"),
-            n.e("58846"),
-            n.e("41060"),
-            n.e("87550"),
-            n.e("79664"),
-            n.e("85497"),
+            n.e("87751"),
+            n.e("20083"),
+            n.e("46494"),
+            n.e("28708"),
+            n.e("93534"),
+            n.e("27224"),
+            n.e("12633"),
             n.e("60955"),
             n.e("11310"),
-            n.e("53930"),
+            n.e("31549"),
             n.e("13823"),
             n.e("92583"),
             n.e("32191"),
@@ -123,7 +123,7 @@ let et = (0, y.Fe)({
             n.e("8563"),
             n.e("73"),
             n.e("24265"),
-            n.e("62875"),
+            n.e("56048"),
             n.e("55602"),
             n.e("67160"),
         ]).then(n.bind(n, 198525)),
@@ -131,11 +131,11 @@ let et = (0, y.Fe)({
     name: "QuestMembersListPopout",
     renderLoader: () => null,
 });
-(0, z.xI)(c.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
+(0, z.xI)(d.A.MEMBER_LIST_ITEM_AVATAR_DECORATION_PADDING);
 let en = a.memo(function (e) {
         let { isOwner: t, lostPermissionTooltipText: n, ownerTooltipText: i } = e;
         return null != t && t && null == n
-            ? (0, r.jsx)(d.m, {
+            ? (0, r.jsx)(c.m, {
                   __unsupportedReactNodeAsText: i ?? J.intl.string(J.t.pclUFJ),
                   children: (0, r.jsx)(u.p, {
                       size: "md",
@@ -150,7 +150,7 @@ let en = a.memo(function (e) {
         let { premiumSince: t, onClickPremiumGuildIcon: n } = e;
         return null == t
             ? null
-            : (0, r.jsx)(d.m, {
+            : (0, r.jsx)(c.m, {
                   text: J.intl.formatToPlainString(J.t.IWkAq7, { date: t }),
                   asContainer: !0,
                   children: (0, r.jsx)(_.D, {
@@ -319,7 +319,7 @@ let en = a.memo(function (e) {
                 colorString: n,
                 colorStrings: i,
                 colorRoleName: s,
-                isOwner: c,
+                isOwner: d,
                 ownerTooltipText: u,
                 lostPermissionTooltipText: _,
                 isTyping: E = !1,
@@ -331,10 +331,10 @@ let en = a.memo(function (e) {
                 status: S,
                 shouldAnimateStatus: N = !1,
                 isMobile: C,
-                isVR: R,
-                premiumSince: O,
+                isVR: O,
+                premiumSince: R,
                 channel: L,
-                guildId: y,
+                guildId: D,
                 className: b,
                 nameplate: M,
                 hideClanTag: P = !1,
@@ -361,24 +361,24 @@ let en = a.memo(function (e) {
             [e_, eE] = a.useState(!1),
             [eA, eh] = a.useState(!1),
             [eI, ef] = a.useState(null),
-            { voiceChannel: ep } = (0, g.Ay)({ userId: er, guildId: y }),
+            { voiceChannel: ep } = (0, g.Ay)({ userId: er, guildId: D }),
             {
                 avatarDecorationSrc: eT,
                 avatarSrc: em,
                 eventHandlers: eg,
-            } = (0, $.A)({ userId: er, size: f._3.SIZE_32, animateOnHover: !(t || e_), guildId: y }),
+            } = (0, $.A)({ userId: er, size: f._3.SIZE_32, animateOnHover: !(t || e_), guildId: D }),
             { onFocus: eS, ...eN } = en ?? {},
-            eC = (0, j.gn)(y, er, i ?? null),
-            [eR, eO] = a.useState(!1);
+            eC = (0, j.gn)(D, er, i ?? null),
+            [eO, eR] = a.useState(!1);
         a.useEffect(() => {
-            t && eO(!1);
+            t && eR(!1);
         }, [t]);
         let eL = (0, K.YW)(T),
-            eD = (0, o.bG)([W.A], () => W.A.getQuestPreviewOverride(Y.uF.MEMBERS_LIST), []),
-            ey = null != eD,
-            ev = ey ? eD : eL,
+            ey = (0, o.bG)([W.A], () => W.A.getQuestPreviewOverride(Y.uF.MEMBERS_LIST), []),
+            eD = null != ey,
+            ev = eD ? ey : eL,
             eb = (0, K.Yl)(eL, m, er),
-            eM = (ey || eb) && t && !eR,
+            eM = (eD || eb) && t && !eO,
             eP = a.useCallback(() => {
                 eE(!0);
             }, []),
@@ -404,12 +404,12 @@ let en = a.memo(function (e) {
                               memberListItemRef: eu,
                               applicationStream: m,
                               ...e,
-                              closePopout: () => eO(!0),
+                              closePopout: () => eR(!0),
                           }),
                 [ev, eu, m, A, ed],
             );
         return null == h
-            ? (0, r.jsx)(D, { avatarSize: f._3.SIZE_32, className: ee.qf })
+            ? (0, r.jsx)(y, { avatarSize: f._3.SIZE_32, className: ee.qf })
             : (0, r.jsx)(p.Y, {
                   targetElementRef: eu,
                   renderPopout: ek,
@@ -444,11 +444,11 @@ let en = a.memo(function (e) {
                                             colorStrings: eC,
                                             hideClanTag: P,
                                             user: h,
-                                            guildId: y,
+                                            guildId: D,
                                             isHovering: e_,
                                         }),
                                     })
-                                  : (0, r.jsx)(d.m, {
+                                  : (0, r.jsx)(c.m, {
                                         text: _,
                                         children: (0, r.jsx)("span", {
                                             className: l()(ee.Xh, ee.oj),
@@ -459,7 +459,7 @@ let en = a.memo(function (e) {
                                                 colorStrings: eC,
                                                 hideClanTag: P,
                                                 user: h,
-                                                guildId: y,
+                                                guildId: D,
                                                 isHovering: e_,
                                             }),
                                         }),
@@ -472,7 +472,7 @@ let en = a.memo(function (e) {
                               eventHandlers: eg,
                               avatarSrc: em,
                               isMobile: C,
-                              isVR: R,
+                              isVR: O,
                               isTyping: E,
                               avatarDecorationSrc: eT,
                               handleSetTypingRef: ex,
@@ -494,10 +494,10 @@ let en = a.memo(function (e) {
                           }),
                           decorators: (0, r.jsx)(ea, {
                               user: h,
-                              isOwner: c,
+                              isOwner: d,
                               lostPermissionTooltipText: _,
                               ownerTooltipText: u,
-                              premiumSince: O,
+                              premiumSince: R,
                               onClickPremiumGuildIcon: V,
                           }),
                           "aria-controls": B,

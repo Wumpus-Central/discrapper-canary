@@ -1,13 +1,13 @@
 t.d(n, { default: () => et });
 var i = t(627968),
     a = t(64700),
-    l = t(735438),
+    l = t(435558),
     r = t.n(l),
     s = t(17928),
-    d = t(192308),
-    c = t(935462),
+    d = t(935462),
+    c = t(192308),
     u = t(81466),
-    o = t(534514),
+    o = t(297264),
     g = t(821609),
     A = t(939249),
     m = t(789645),
@@ -123,7 +123,7 @@ var H = t(834730),
     J = t(468689),
     Q = t(710358),
     $ = t(375708),
-    W = t(553434);
+    W = t(740442);
 function X(e) {
     let { guildId: n, onClose: t } = e,
         a = (0, s.bG)([v.A, D.A], () => {
@@ -175,7 +175,7 @@ function X(e) {
 var Y = t(823508),
     Z = t(988794),
     ee = t(790782),
-    en = t(420183);
+    en = t(432919);
 function et(e) {
     let { transitionState: n, onClose: l, guildId: y } = e,
         I = (0, x.GV)(),
@@ -203,14 +203,14 @@ function et(e) {
         a.useEffect(() => {
             null != y && (0, h.hK)(y, ee.P.GUILD_EVENT);
         }, [y]),
-        (0, i.jsxs)(c.EO, {
-            size: c.rI.MEDIUM,
+        (0, i.jsxs)(d.EO, {
+            size: d.rI.MEDIUM,
             transitionState: n,
             "aria-labelledby": I,
             parentComponent: "GuildEventsModal",
             "data-migration-pending": !0,
             children: [
-                (0, i.jsxs)(c.rQ, {
+                (0, i.jsxs)(d.rQ, {
                     className: en.wx,
                     "data-migration-pending": !0,
                     children: [
@@ -231,20 +231,20 @@ function et(e) {
                                         variant: "primary",
                                         size: "sm",
                                         onClick: function () {
-                                            (0, d.openModalLazy)(async () => {
+                                            (0, c.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
-                                                    t.e("85948"),
-                                                    t.e("36510"),
-                                                    t.e("6212"),
-                                                    t.e("79465"),
-                                                    t.e("8886"),
-                                                    t.e("8676"),
-                                                    t.e("73515"),
-                                                    t.e("6129"),
-                                                    t.e("84769"),
-                                                    t.e("30694"),
-                                                    t.e("54453"),
-                                                    t.e("78704"),
+                                                    t.e("53176"),
+                                                    t.e("61726"),
+                                                    t.e("19204"),
+                                                    t.e("27565"),
+                                                    t.e("88950"),
+                                                    t.e("40548"),
+                                                    t.e("69431"),
+                                                    t.e("8574"),
+                                                    t.e("87073"),
+                                                    t.e("51302"),
+                                                    t.e("52757"),
+                                                    t.e("66000"),
                                                     t.e("61156"),
                                                     t.e("16767"),
                                                     t.e("6841"),
@@ -273,7 +273,7 @@ function et(e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(c.$m, {
+                (0, i.jsx)(d.$m, {
                     className: en.Qs,
                     "data-migration-pending": !0,
                     children:

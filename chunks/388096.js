@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => S });
 var a = n(627968),
     i = n(64700),
     s = n(989349),
@@ -7,14 +7,14 @@ var a = n(627968),
     o = n(582306),
     d = n(666944),
     u = n(375708),
-    c = n(936197);
-function m(e) {
+    c = n(42117);
+function S(e) {
     let { defaultValue: t, onChange: n } = e,
-        [s, m] = i.useState(t),
-        S = l()(),
-        E = l()().add(365, "days");
+        [s, S] = i.useState(t),
+        E = l()(),
+        m = l()().add(365, "days");
     function h(e) {
-        e.isValid() && m(e);
+        e.isValid() && S(e);
     }
     return (
         i.useEffect(() => {
@@ -32,8 +32,8 @@ function m(e) {
                         label: u.intl.string(u.t.pSZKvM),
                         value: s,
                         onSelect: h,
-                        minDate: S,
-                        maxDate: E,
+                        minDate: E,
+                        maxDate: m,
                         disabled: !1,
                     }),
                 }),

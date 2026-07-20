@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(101928),
     u = n(920601),
     _ = n(939496),
-    E = n(41551);
+    E = n(342607);
 let A = Object.assign(
     r.forwardRef(function (e, t) {
         let {
@@ -30,14 +30,14 @@ let A = Object.assign(
             } = e,
             {
                 theme: C,
-                primaryColor: R,
-                secondaryColor: O,
+                primaryColor: O,
+                secondaryColor: R,
             } = (0, c.A)({ user: n, displayProfile: r, pendingThemeColors: p, isPreview: S, forceUserTheme: N }),
             { profileThemeStyle: L, profileThemeClassName: y } = (0, u.A)({
                 theme: T ?? C,
                 themeType: a,
-                primaryColor: R,
-                secondaryColor: O,
+                primaryColor: O,
+                secondaryColor: R,
                 forceUserTheme: N,
             }),
             { profileFrameStyle: D, profileFrameClassName: v } = (0, o.A)(void 0 !== A ? A : r?.profileFrame?.skuId),
@@ -53,8 +53,8 @@ let A = Object.assign(
                     children: (0, i.jsx)(_.U, {
                         themeType: a,
                         theme: T ?? C,
-                        primaryColor: R,
-                        secondaryColor: O,
+                        primaryColor: O,
+                        secondaryColor: R,
                         userId: n.id,
                         children: m,
                     }),

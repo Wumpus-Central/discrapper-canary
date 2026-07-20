@@ -10,13 +10,13 @@ var l = n(627968),
     d = n(821609),
     p = n(862482),
     m = n(109802),
-    C = n(452027),
-    h = n(778712),
+    h = n(452027),
+    C = n(778712),
     E = n(297264),
     f = n(289873),
     A = n(783878),
-    y = n(398590),
-    S = n(717398),
+    S = n(398590),
+    y = n(717398),
     P = n(966327),
     I = n(769015),
     _ = n(242874),
@@ -36,7 +36,7 @@ var l = n(627968),
     D = n(652215),
     U = n(202541),
     G = n(375708),
-    F = n(340188);
+    F = n(44956);
 function H(e) {
     let {
             giftCode: t,
@@ -45,14 +45,14 @@ function H(e) {
             subscriptionPlan: s,
             selectedGiftStyle: o,
             onClose: A,
-            hasSentMessage: S,
+            hasSentMessage: y,
             giftRecipient: _,
             giftMessageError: g,
             isSendingMessage: x,
         } = e,
         [N, R] = i.useState(m.e.Modes.DEFAULT),
         H = (0, u.bG)([M.A], () => M.A.enabled),
-        Y = S || (null != o && null != _),
+        Y = y || (null != o && null != _),
         W = r?.productLine === D.EZt.COLLECTIBLES,
         {
             selectedGiftingPromotionReward: V,
@@ -95,19 +95,19 @@ function H(e) {
                               variant: "heading-lg/semibold",
                               className: a()({ [F.wx]: null == o && !W, [F.$A]: null != o && !W }),
                               children:
-                                  null != _ || (S && null == g)
+                                  null != _ || (y && null == g)
                                       ? G.intl.string(G.t.zOmK9N)
                                       : null != g
                                         ? G.intl.string(G.t.d1lrmU)
                                         : G.intl.string(G.t["/s1xR7"]),
                           }),
-                          (S && null != _ && null == g) || Y
+                          (y && null != _ && null == g) || Y
                               ? (0, l.jsxs)(l.Fragment, {
                                     children: [
                                         (0, l.jsxs)("div", {
                                             className: F.jx,
                                             children: [
-                                                (0, l.jsx)(P.A, { user: _, size: h._3.SIZE_40 }),
+                                                (0, l.jsx)(P.A, { user: _, size: C._3.SIZE_40 }),
                                                 (0, l.jsxs)("div", {
                                                     className: F.gn,
                                                     children: [
@@ -133,7 +133,7 @@ function H(e) {
                                             (0, l.jsx)(B, {
                                                 giftCode: t,
                                                 onClose: () => {
-                                                    A(), (0, y.bz)(), z && K();
+                                                    A(), (0, S.bz)(), z && K();
                                                 },
                                             }),
                                         (0, l.jsx)("div", { className: F.yF }),
@@ -154,7 +154,7 @@ function H(e) {
                                                 className: F.PN,
                                                 children: [
                                                     null != t &&
-                                                        (0, l.jsx)(C.D, {
+                                                        (0, l.jsx)(h.D, {
                                                             label: G.intl.string(G.t["/dG4NA"]),
                                                             children: (0, l.jsx)(m.e, {
                                                                 hideMessage: H ? G.intl.string(G.t["0RLn47"]) : null,
@@ -212,18 +212,18 @@ function H(e) {
 function B(e) {
     let { giftCode: t, onClose: n } = e;
     i.useEffect(() => {
-        S.A.fetchRelationships(), (0, g.u)();
+        y.A.fetchRelationships(), (0, g.u)();
     }, []);
     let [r, a] = i.useState(),
         [s, c] = i.useState(!1),
         [p, m] = i.useState(!1),
-        { userAffinities: C, isLoading: E } = (0, u.cf)([x.A], () => ({
+        { userAffinities: h, isLoading: E } = (0, u.cf)([x.A], () => ({
             userAffinities: x.A.getUserAffinitiesMap(),
             isLoading: x.A.isFetching(),
         })),
-        f = Array.from(C.keys()).sort((e, t) => x.A.compare(e, t)),
-        y = (0, u.bG)([N.A], () => N.A.getFriendIDs()),
-        I = o().difference(y, f),
+        f = Array.from(h.keys()).sort((e, t) => x.A.compare(e, t)),
+        S = (0, u.bG)([N.A], () => N.A.getFriendIDs()),
+        I = o().difference(S, f),
         T = [...f, ...I],
         v = (0, u.bG)([R.default], () => R.default.filter((e) => T.includes(e.id) && !e.bot), [T]);
     if (null == v || 0 === v.length) return null;
@@ -247,7 +247,7 @@ function B(e) {
                             id: e.id,
                             value: e,
                             label: `${L.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(P.A, { user: e, size: h._3.SIZE_20 }),
+                            leading: (0, l.jsx)(P.A, { user: e, size: C._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {

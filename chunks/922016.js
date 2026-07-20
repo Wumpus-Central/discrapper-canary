@@ -11,7 +11,7 @@ var i,
     u = n.n(c),
     _ = n(844222),
     E = n(451988),
-    A = n(10185),
+    A = n(242057),
     h = (((i = h || {})[(i.TRANSLATE = 1)] = "TRANSLATE"), (i[(i.SCALE = 2)] = "SCALE"), (i[(i.FADE = 3)] = "FADE"), i);
 let I = Object.freeze({ 1: A.Tl, 2: A.hs, 3: A.Rv }),
     f = Object.freeze({ top: A.ZR, bottom: A.XI, left: A.Hn, right: A.sS, center: A.pm, window_center: A.pm });
@@ -44,7 +44,7 @@ function p(e) {
     );
 }
 p.Types = h;
-var T = n(677771),
+var T = n(783755),
     m = (((r = m || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
 let g = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
 class S extends s.Component {
@@ -75,7 +75,7 @@ class S extends s.Component {
             nudgeAlignIntoViewport: S = !0,
             avoidancePadding: N,
             spacing: C = 8,
-            clickTrap: R = !1,
+            clickTrap: O = !1,
         } = this.props;
         return (0, a.jsx)(d.$, {
             ref: this.ref,
@@ -118,7 +118,7 @@ class S extends s.Component {
             scrollBehavior: I,
             useMouseEnter: f,
             layerContext: T,
-            clickTrap: R,
+            clickTrap: O,
             children: e,
         });
     }

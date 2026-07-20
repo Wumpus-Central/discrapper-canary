@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(580929),
+    l = n(523939),
     o = n(17928),
     d = n(451988),
     c = n(192308),
@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(410540),
     N = n(7584),
     C = n(208971),
-    R = n(280450),
-    O = n(183555),
+    O = n(280450),
+    R = n(183555),
     L = n(679492),
     y = n(922016),
     D = n(403777),
@@ -40,7 +40,7 @@ var i = n(627968),
     V = n(818348),
     B = n(650583),
     H = n(375708),
-    j = n(435693);
+    j = n(541613);
 function W(e) {
     let {
             user: t,
@@ -141,7 +141,7 @@ var Y = n(478437),
     q = n(138617),
     Z = n(95701),
     X = n(562153),
-    Q = n(450262);
+    Q = n(556182);
 let J = (0, Z.createChannelRecord)({ id: "1", type: Y.r.DM });
 function ee(e) {
     let {
@@ -220,12 +220,12 @@ ${t}`;
     r.useEffect(() => {
         d?.(S?.current);
     }, [S, d]);
-    let R = { [Q.h5]: l === k.dS.STATUS, [Q.my]: l === k.dS.AVATAR, [Q.Eb]: l === k.dS.ACTIVITY };
+    let O = { [Q.h5]: l === k.dS.STATUS, [Q.my]: l === k.dS.AVATAR, [Q.Eb]: l === k.dS.ACTIVITY };
     return (0, i.jsx)(K.l, {
         ref: S,
         onKeyDown: N,
         children: (0, i.jsx)("div", {
-            className: s()(Q.kL, R, { [Q.GE]: null != I }),
+            className: s()(Q.kL, O, { [Q.GE]: null != I }),
             children: (0, i.jsx)(q.Ay, {
                 parentModalKey: c,
                 emojiPickerCloseOnModalOuterClick: !0,
@@ -321,11 +321,11 @@ var ei = n(866665),
     ea = n(241326),
     es = n(101555),
     el = n(885386),
-    eo = n(242744);
+    eo = n(843192);
 function ed(e) {
     let { isVisible: t, isExpandable: a, onCloseProfile: l } = e,
         { analyticsLocations: d } = (0, m.Ay)(),
-        { trackUserProfileAction: u } = (0, O.NJ)(),
+        { trackUserProfileAction: u } = (0, R.NJ)(),
         _ = r.useRef(null),
         E = r.useRef(null),
         [A, h] = (0, o.yK)([f.Ay], () => [f.Ay.useReducedMotion, f.Ay.keyboardModeEnabled]),
@@ -352,11 +352,11 @@ function ed(e) {
                                 (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("12410"),
-                                            n.e("57328"),
-                                            n.e("59252"),
-                                            n.e("4803"),
-                                            n.e("67251"),
+                                            n.e("71906"),
+                                            n.e("72648"),
+                                            n.e("68004"),
+                                            n.e("74923"),
+                                            n.e("63839"),
                                             n.e("28367"),
                                             n.e("48900"),
                                             n.e("20287"),
@@ -393,7 +393,7 @@ function ed(e) {
         ],
     });
 }
-var ec = n(713305);
+var ec = n(629465);
 function eu(e) {
     let { children: t, className: n } = e;
     return (0, i.jsx)("div", {
@@ -408,7 +408,7 @@ let e_ = r.forwardRef(function (e, t) {
         let { onCloseProfile: r, prompt: a } = e,
             l = (0, g.GV)(),
             { analyticsLocations: o } = (0, m.Ay)(),
-            { trackUserProfileAction: d } = (0, O.NJ)(),
+            { trackUserProfileAction: d } = (0, R.NJ)(),
             { themeType: h } = (0, x.E)(),
             I = null != a ? a.label() : H.intl.string(H.t.evw0oz),
             f = (0, i.jsxs)("div", {
@@ -438,11 +438,11 @@ let e_ = r.forwardRef(function (e, t) {
                                 (0, c.openModalLazy)(
                                     async () => {
                                         let { default: e } = await Promise.all([
-                                            n.e("12410"),
-                                            n.e("57328"),
-                                            n.e("59252"),
-                                            n.e("4803"),
-                                            n.e("67251"),
+                                            n.e("71906"),
+                                            n.e("72648"),
+                                            n.e("68004"),
+                                            n.e("74923"),
+                                            n.e("63839"),
                                             n.e("28367"),
                                             n.e("48900"),
                                             n.e("20287"),
@@ -487,15 +487,15 @@ let e_ = r.forwardRef(function (e, t) {
                 hasEntered: m = !0,
             } = e,
             g = (0, L.NR)(),
-            { trackUserProfileAction: S } = (0, O.NJ)(),
+            { trackUserProfileAction: S } = (0, R.NJ)(),
             N = 1.25 * (null != n),
             C = 36 + N,
-            R = 144 + N,
+            O = 144 + N,
             y = r.useRef(null),
             D = r.useRef(null),
             v = r.useRef(null),
             b = r.useRef(C),
-            M = r.useRef(R),
+            M = r.useRef(O),
             P = null != n && null == a,
             [U, w] = r.useState(!1),
             [G, x] = r.useState(!0),
@@ -512,7 +512,7 @@ let e_ = r.forwardRef(function (e, t) {
             F &&
                 (e
                     ? K({
-                          maxHeight: `${Math.min(M.current, R)}px`,
+                          maxHeight: `${Math.min(M.current, O)}px`,
                           delay: 300 * !j,
                           config: { clamp: !0, duration: 150 * !j },
                       })
@@ -526,8 +526,8 @@ let e_ = r.forwardRef(function (e, t) {
             V(t > e),
                 (b.current = e),
                 (M.current = t),
-                K({ maxHeight: `${Math.min(G ? b.current : M.current, G ? C : R)}px` });
-        }, [B, a, n, K, G, C, R]);
+                K({ maxHeight: `${Math.min(G ? b.current : M.current, G ? C : O)}px` });
+        }, [B, a, n, K, G, C, O]);
         let z =
                 null != n
                     ? (0, i.jsx)(p.A, { emoji: n, animate: c, hideTooltip: !1, tooltipDelay: k.In, className: ec.H0 })
@@ -645,7 +645,7 @@ let e_ = r.forwardRef(function (e, t) {
 function eh(e) {
     let t,
         { emoji: n, text: a, user: s, guildId: l, channelId: o, themeType: d, ...c } = e,
-        { trackUserProfileAction: u } = (0, O.NJ)(),
+        { trackUserProfileAction: u } = (0, R.NJ)(),
         { interactionType: _, interactionSource: E, resetInteraction: A } = (0, L.Pq)(),
         h = E === k.dS.STATUS && _ === k.AQ.REACT,
         I = E === k.dS.STATUS && _ === k.AQ.REPLY,
@@ -710,7 +710,7 @@ let eI = r.forwardRef(function (e, t) {
         { analyticsLocations: E } = (0, m.Ay)(T.A.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
         A = null != a || null != s,
         h = (0, C.G)(A ? a : _?.state),
-        I = (0, o.bG)([R.default], () => R.default.getId() === n.id),
+        I = (0, o.bG)([O.default], () => O.default.getId() === n.id),
         f = I && !c,
         p = !I && !n.bot && !c;
     if (A) {

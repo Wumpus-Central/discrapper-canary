@@ -3,14 +3,14 @@ var s = a(627968),
     l = a(64700),
     r = a(503698),
     i = a.n(r),
-    n = a(580929),
+    n = a(523939),
     c = a(23339),
     o = a(17928),
     p = a(661531),
-    u = a(990078),
-    d = a(319060),
-    _ = a(192308),
-    m = a(403581),
+    u = a(319060),
+    d = a(192308),
+    _ = a(403581),
+    m = a(866665),
     E = a(939249),
     A = a(812993),
     y = a(844222),
@@ -27,8 +27,8 @@ var s = a(627968),
     D = a(652215),
     U = a(202541),
     C = a(375708),
-    b = a(18238);
-let j = (0, c.xI)(d.A.LIVE_INDICATOR_BORDER_RADIUS),
+    b = a(298302);
+let j = (0, c.xI)(u.A.LIVE_INDICATOR_BORDER_RADIUS),
     P = { opacity: 0, transform: "translate3d(100%, 0, 0)" },
     k = { opacity: 1, transform: "translate3d(0%, 0, 0)" },
     M = { opacity: 0 },
@@ -42,7 +42,7 @@ function H(e) {
         {
             participant: n,
             isUpsellEnabled: c,
-            shape: d,
+            shape: u,
             size: y,
             didTrackUpsellViewed: I,
             setDidTrackUpsellViewed: R,
@@ -69,7 +69,7 @@ function H(e) {
         G = l.useCallback(() => {
             H &&
                 V &&
-                (0, _.openModalLazy)(async () => {
+                (0, d.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([a.e("93475"), a.e("18630")]).then(a.bind(a, 826789));
                     return (t) => (0, s.jsx)(e, { ...t, analyticsSource: g });
                 });
@@ -90,15 +90,15 @@ function H(e) {
     )
         return null;
     let W = H && V,
-        Y = i()(b.t5, y, L.u1[d], v ? b.Y5 : b.Lc, { [b.vk]: W }),
+        Y = i()(b.t5, y, L.u1[u], v ? b.Y5 : b.Lc, { [b.vk]: W }),
         F = (0, s.jsxs)(s.Fragment, {
             children: [
-                V ? (0, s.jsx)(m.t, { size: "md", color: "currentColor", className: b.fY }) : null,
+                V ? (0, s.jsx)(_.t, { size: "md", color: "currentColor", className: b.fY }) : null,
                 (0, s.jsx)("span", { className: b.UD, children: (0, N.ME)(k.maxResolution) }),
                 (0, s.jsx)("span", { children: (0, N.Bs)(k.maxFrameRate) }),
             ],
         }),
-        $ = (0, s.jsx)(u.m, {
+        $ = (0, s.jsx)(m.m, {
             text: v ? C.intl.string(C.t.q8TiVt) : V ? C.intl.string(C.t.IHgpEn) : C.intl.string(C.t.vLb0VW),
             position: "bottom",
             children: W
@@ -109,7 +109,7 @@ function H(e) {
         text: $,
         className: i()(j, b.AA, { [b.Dc]: V && P }),
         color: p.A.unsafe_rawColors.PRIMARY_500.css,
-        shape: L.u1[d],
+        shape: L.u1[u],
     });
 }
 let G = (e) => {

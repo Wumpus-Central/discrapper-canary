@@ -41,15 +41,15 @@ function S() {
     if (null == e) throw Error("useSafetyFlowTask must be used within a SafetyFlowTaskContext Provider");
     return e;
 }
-var N = n(837451),
+var N = n(931642),
     C = n(375708),
-    R =
+    O =
         (((i = {})[(i.REFRESH_APP = -1)] = "REFRESH_APP"),
         (i[(i.EMAIL_VERIFICATION = 3)] = "EMAIL_VERIFICATION"),
         (i[(i.AGE_VERIFICATION = 9)] = "AGE_VERIFICATION"),
         (i[(i.PARENTAL_CONSENT_CONNECTION = 10)] = "PARENTAL_CONSENT_CONNECTION"),
         i);
-let O = {
+let R = {
         EMAIL_VERIFICATION: "email_verification",
         PHONE_VERIFICATION: "phone_verification",
         GENERIC_CALL_TO_ACTION: "generic_call_to_action",
@@ -57,7 +57,7 @@ let O = {
         AGE_VERIFICATION: "age_verification",
         PARENTAL_CONSENT_CONNECTION: "parental_consent_connection",
     },
-    L = new Set(Object.values(O)),
+    L = new Set(Object.values(R)),
     y = new Set([10]);
 C.intl.string(N.default["Qm6K/s"]), C.intl.string(N.default["dSkE/A"]), C.intl.string(N.default.dMMSA0);
 var D = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"), r),
@@ -68,7 +68,7 @@ var D = (((r = {}).Empty = "empty"), (r.VerificationCode = "verification_code"),
     U = n(287809),
     w = n(430993),
     G = n(825484),
-    x = n(214437);
+    x = n(818725);
 function k(e) {
     let { actions: t, footerInput: n } = e;
     return 0 === t.length && null == n
@@ -86,7 +86,7 @@ function k(e) {
           });
 }
 let F = { bottom: 40, left: 32, right: 32, top: 32 };
-var V = n(831067);
+var V = n(18075);
 function B(e) {
     let { children: t, actions: n, footerInput: i, title: r } = e;
     return (0, a.jsxs)(o.B, {
@@ -115,7 +115,7 @@ var H = n(224640),
     Q = n(453322),
     J = n(834981),
     ee = n(22071),
-    et = n(336862);
+    et = n(709854);
 function en() {
     return (0, a.jsx)(c.E, {
         variant: "text-md/normal",
@@ -146,8 +146,8 @@ let eE = () => ({
     days: N.default.tVHevX,
     date: N.default.q6jzya,
 });
-var eA = n(602339),
-    eh = n(402008);
+var eA = n(477480),
+    eh = n(343768);
 function eI(e) {
     var t;
     let {
@@ -354,9 +354,9 @@ function ef(e) {
 }
 var ep = n(231723),
     eT = n(818348),
-    em = n(42076);
+    em = n(925660);
 let eg = "https://support.discord.com/hc/articles/14155060633623";
-var eS = n(242235);
+var eS = n(430651);
 let eN = {
         refresh_app: (e) => {
             let { onSubmit: t, disabled: n } = e,
@@ -469,10 +469,10 @@ let eN = {
                     }, [T, n, i, t])),
                 g = T ? Object.values(p).some((e) => null != e) : h.pending_requests.length > 0,
                 S = T ? I : h.pending_requests.length,
-                R = (0, b.bG)([q.A], () => q.A.getLinkCode()),
-                O = (0, b.bG)([q.A], () => q.A.getLinkCodeExpiresAt()),
-                L = R ?? h.link_code,
-                y = O ?? Date.parse(h.link_code_expires_at),
+                O = (0, b.bG)([q.A], () => q.A.getLinkCode()),
+                R = (0, b.bG)([q.A], () => q.A.getLinkCodeExpiresAt()),
+                L = O ?? h.link_code,
+                y = R ?? Date.parse(h.link_code_expires_at),
                 M = s.useCallback(async () => {
                     try {
                         await l({ type: D.Empty });
@@ -575,13 +575,13 @@ let eN = {
                   transitionState: i,
               });
     };
-var eR = n(754302),
-    eO = n(721940);
+var eO = n(754302),
+    eR = n(910356);
 let eL = {
-        [R.EMAIL_VERIFICATION]: C.intl.string(N.default.HC4IiR),
-        [R.REFRESH_APP]: C.intl.string(N.default.SzfxQ3),
-        [R.AGE_VERIFICATION]: C.intl.string(N.default["dSkE/A"]),
-        [R.PARENTAL_CONSENT_CONNECTION]: C.intl.string(N.default.dMMSA0),
+        [O.EMAIL_VERIFICATION]: C.intl.string(N.default.HC4IiR),
+        [O.REFRESH_APP]: C.intl.string(N.default.SzfxQ3),
+        [O.AGE_VERIFICATION]: C.intl.string(N.default["dSkE/A"]),
+        [O.PARENTAL_CONSENT_CONNECTION]: C.intl.string(N.default.dMMSA0),
     },
     ey = function () {
         let { task: e } = S(),
@@ -590,7 +590,7 @@ let eL = {
             direction: "vertical",
             justify: "space-between",
             padding: F,
-            className: eO.k,
+            className: eR.k,
             children: [
                 (0, a.jsxs)(o.B, {
                     direction: "vertical",
@@ -598,7 +598,7 @@ let eL = {
                     children: [
                         (0, a.jsx)(d.D, {
                             variant: "display-md",
-                            className: eO.D,
+                            className: eR.D,
                             children: C.intl.string(N.default["/OpRAP"]),
                         }),
                         (0, a.jsx)(o.B, {
@@ -607,7 +607,7 @@ let eL = {
                             gap: 0,
                             children: e.flow_context.tasks.map((e, n) =>
                                 (0, a.jsx)(
-                                    eR.B,
+                                    eO.B,
                                     {
                                         title: eL[e.task_type] ?? "",
                                         listType: "numbered",
@@ -631,7 +631,7 @@ let eL = {
             ],
         });
     };
-var eD = n(561452);
+var eD = n(818604);
 let ev = n(843020);
 function eb(e) {
     let { task: t, handleSubmit: n, disabled: i, transitionState: r } = e,
@@ -661,9 +661,9 @@ let eM = function (e) {
                     ? r(e)
                     : r({
                           task_id: e.task_id,
-                          task_type: R.REFRESH_APP,
+                          task_type: O.REFRESH_APP,
                           assignment_id: e.assignment_id,
-                          ui_component: { component: { type: O.REFRESH_APP, data: {} } },
+                          ui_component: { component: { type: R.REFRESH_APP, data: {} } },
                           flow_context: { tasks: [], flow_id: e.flow_context.flow_id },
                       });
             } catch {
@@ -692,7 +692,7 @@ let eM = function (e) {
     (0, _.Ay)(() => {
         M();
     });
-    let U = s.useMemo(() => i?.task_type === R.AGE_VERIFICATION, [i]),
+    let U = s.useMemo(() => i?.task_type === O.AGE_VERIFICATION, [i]),
         w = null != i && null === p && y.has(i.task_type);
     return (0, a.jsxs)("div", {
         className: eD.Tp,

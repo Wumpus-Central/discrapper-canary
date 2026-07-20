@@ -3,15 +3,15 @@ var n = t(627968),
     l = t(64700),
     s = t(503698),
     a = t.n(s),
-    r = t(580929),
+    r = t(523939),
     d = t(562708),
     u = t(17928),
-    o = t(990078),
-    c = t(192308),
-    A = t(717421),
-    m = t(922016),
-    g = t(939249),
-    h = t(283973),
+    o = t(192308),
+    c = t(717421),
+    A = t(922016),
+    m = t(939249),
+    g = t(283973),
+    h = t(866665),
     p = t(834730),
     f = t(789645),
     I = t(320448),
@@ -27,8 +27,8 @@ var n = t(627968),
     j = t(652215);
 t(281405);
 var T = t(375708),
-    G = t(89682),
-    O = t(80442);
+    G = t(793042),
+    O = t(58298);
 function P(e) {
     return 1 - Math.pow(1 - e, 4);
 }
@@ -49,11 +49,11 @@ function k(e) {
         z = (0, u.bG)([v.Ay], () => v.Ay.useReducedMotion),
         [K, B] = l.useState(!1),
         Y = l.useRef(null),
-        q = (0, E.M)(L ? k : Y),
-        [$, H] = l.useState(!1),
+        $ = (0, E.M)(L ? k : Y),
+        [q, H] = l.useState(!1),
         { isFocusing: W } = (0, E.A)(V),
         [Z, J] = l.useState(!1),
-        X = q || $ || Z,
+        X = $ || q || Z,
         Q = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
@@ -70,10 +70,10 @@ function k(e) {
         ),
         ee = l.useCallback(() => {
             null != F &&
-                (0, c.openModalLazy)(async () => {
+                (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("92430"),
-                        t.e("54453"),
+                        t.e("70158"),
+                        t.e("52757"),
                         t.e("59957"),
                         t.e("28136"),
                         t.e("16084"),
@@ -82,7 +82,7 @@ function k(e) {
                     return (t) => (0, n.jsx)(e, { ...t, guild: F, channel: i, source: j.PE1.VOICE_INVITE_SUGGESTIONS });
                 });
         }, [F, i]),
-        [ei, et] = (0, A.z)(() => ({
+        [ei, et] = (0, c.z)(() => ({
             from: { height: "0px" },
             to: { height: "32px" },
             config: { duration: 200, easing: P, clamp: !0 },
@@ -126,7 +126,7 @@ function k(e) {
             D(!1), H(!1), Z && (J(!1), k.current?.focus());
         }, [Z]);
     return L
-        ? (0, n.jsx)(m.Y, {
+        ? (0, n.jsx)(A.Y, {
               targetElementRef: k,
               shouldShow: w,
               position: "right",
@@ -141,9 +141,9 @@ function k(e) {
                   return (0, n.jsx)(r.animated.div, {
                       className: G.lY,
                       style: ei,
-                      children: (0, n.jsx)(g.D, {
+                      children: (0, n.jsx)(m.D, {
                           innerRef: k,
-                          className: a()({ [G.vk]: !K }, O.q7, O.L9, O.vk),
+                          className: a()({ [G.vk]: !K }, O.ZJ, O.L9, O.vk),
                           focusProps: { offset: { right: 4 } },
                           "aria-disabled": K,
                           "aria-label": T.intl.string(T.t.F3qiJr),
@@ -174,7 +174,7 @@ function k(e) {
                                                     },
                                                     `voice-invite-suggestions-timer-${R}`,
                                                 ),
-                                          (0, n.jsx)(h.R, {
+                                          (0, n.jsx)(g.R, {
                                               size: "custom",
                                               width: 14,
                                               height: 14,
@@ -183,7 +183,7 @@ function k(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, n.jsx)(o.m, {
+                                  (0, n.jsx)(h.m, {
                                       text: T.intl.string(T.t["EE+P0H"]),
                                       overflowOnly: !0,
                                       children: (0, n.jsx)(p.E, {
@@ -195,8 +195,8 @@ function k(e) {
                                   }),
                                   (0, n.jsx)("div", {
                                       ref: V,
-                                      children: q
-                                          ? (0, n.jsx)(g.D, {
+                                      children: $
+                                          ? (0, n.jsx)(m.D, {
                                                 className: G.VN,
                                                 onClick: (e) => {
                                                     e.stopPropagation(), en("user_explicit");
@@ -208,7 +208,7 @@ function k(e) {
                                                     className: G.Kk,
                                                 }),
                                             })
-                                          : (0, n.jsx)(g.D, {
+                                          : (0, n.jsx)(m.D, {
                                                 onClick: (e) => {
                                                     e.stopPropagation(), J(!0);
                                                 },

@@ -1,10 +1,10 @@
 s.d(t, { A: () => y, D: () => A });
 var a = s(627968),
     n = s(64700),
-    i = s(821609),
-    r = s(123292),
-    l = s(935462),
-    c = s(534514),
+    i = s(935462),
+    r = s(821609),
+    l = s(123292),
+    c = s(297264),
     d = s(834730),
     o = s(331322),
     u = s(292666),
@@ -18,7 +18,7 @@ var a = s(627968),
     v = s(943457),
     b = s(652215),
     N = s(375708),
-    k = s(907891);
+    k = s(94899);
 function A(e) {
     let {
             guildTemplate: t,
@@ -61,20 +61,20 @@ function A(e) {
         ),
         H = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsx)(i.$, {
+                (0, a.jsx)(r.$, {
                     variant: "primary",
                     text: null != y ? N.intl.string(N.t.PDTjLN) : N.intl.string(N.t.CumH4u),
                     onClick: B,
                     disabled: 0 === D.length,
                     loading: F,
                 }),
-                (0, a.jsx)(r.Q, { size: "sm", variant: "secondary", text: N.intl.string(N.t["13/7kX"]), onClick: A }),
+                (0, a.jsx)(l.Q, { size: "sm", variant: "secondary", text: N.intl.string(N.t["13/7kX"]), onClick: A }),
             ],
         });
     return {
         content: (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsxs)(l.rQ, {
+                (0, a.jsxs)(i.rQ, {
                     "data-migration-pending": !0,
                     direction: h.A.Direction.VERTICAL,
                     className: k.wx,
@@ -91,10 +91,10 @@ function A(e) {
                             variant: "text-md/normal",
                             children: N.intl.string(N.t.AAfVqR),
                         }),
-                        null != s && (0, a.jsx)(l.s_, { "data-migration-pending": !0, className: k.b, onClick: s }),
+                        null != s && (0, a.jsx)(i.s_, { "data-migration-pending": !0, className: k.b, onClick: s }),
                     ],
                 }),
-                (0, a.jsxs)(l.$m, {
+                (0, a.jsxs)(i.$m, {
                     "data-migration-pending": !0,
                     className: k.iW,
                     children: [
@@ -139,7 +139,7 @@ function A(e) {
                               }),
                     ],
                 }),
-                _ && (0, a.jsx)(l.jl, { "data-migration-pending": !0, className: k.qr, children: H }),
+                _ && (0, a.jsx)(i.jl, { "data-migration-pending": !0, className: k.qr, children: H }),
             ],
         }),
         footer: H,

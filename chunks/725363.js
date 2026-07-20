@@ -14,12 +14,12 @@ var s = t(627968),
     j = t.n(h),
     g = t(17928),
     N = t(843282),
-    f = t(990078),
-    v = t(104510),
-    p = t(661531),
-    E = t(834730),
-    S = t(289873),
-    b = t(534514),
+    f = t(104510),
+    v = t(661531),
+    p = t(834730),
+    E = t(289873),
+    S = t(297264),
+    b = t(866665),
     I = t(290136),
     R = t(292666),
     G = t(939249),
@@ -61,7 +61,7 @@ var y = t(165655),
     L = t(752975),
     P = t(509790),
     K = t(225180),
-    z = t(740950);
+    z = t(35030);
 function D() {
     let { currentGame: e, planId: l } = (0, P.bv)(),
         t = (0, K.A)(e?.gameId, "cover");
@@ -80,12 +80,12 @@ function D() {
                             (0, s.jsxs)("div", {
                                 className: z.wx,
                                 children: [
-                                    (0, s.jsx)(b.D, {
+                                    (0, s.jsx)(S.D, {
                                         variant: "heading-lg/semibold",
                                         color: "text-strong",
                                         children: e.name,
                                     }),
-                                    (0, s.jsx)(E.E, {
+                                    (0, s.jsx)(p.E, {
                                         variant: "text-md/medium",
                                         color: "text-subtle",
                                         children: r?.name,
@@ -105,12 +105,12 @@ function D() {
                                             (0, s.jsxs)("div", {
                                                 className: z._Y,
                                                 children: [
-                                                    (0, s.jsx)(b.D, {
+                                                    (0, s.jsx)(S.D, {
                                                         variant: "heading-sm/semibold",
                                                         color: "text-strong",
                                                         children: e.title,
                                                     }),
-                                                    (0, s.jsx)(E.E, {
+                                                    (0, s.jsx)(p.E, {
                                                         variant: "text-sm/medium",
                                                         color: "text-muted",
                                                         children: e.description,
@@ -133,11 +133,11 @@ function D() {
     });
 }
 var F = t(548392),
-    H = t(576709),
+    H = t(76660),
     W = t(375708);
 let Q = ["/", "\\\\"];
 t(321073);
-var X = t(919481),
+var X = t(624249),
     J = t(390544);
 let Y = new Set([J.M.SLEEPING, J.M.OFFLINE, J.M.ONLINE]);
 var Z = t(285286),
@@ -156,8 +156,8 @@ function $(e) {
                           (0, s.jsxs)("div", {
                               className: X._A,
                               children: [
-                                  (0, s.jsx)(v._, { size: "xs", color: p.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
-                                  (0, s.jsx)(E.E, {
+                                  (0, s.jsx)(f._, { size: "xs", color: v.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                                  (0, s.jsx)(p.E, {
                                       variant: "text-xs/medium",
                                       children: W.intl.format(H.default.kOMlHs, { boostCount: l.cost }),
                                   }),
@@ -283,7 +283,7 @@ function ee(e) {
                                     ? (0, s.jsxs)(s.Fragment, {
                                           children: [
                                               (0, s.jsx)("div", { className: j()(X.Jg, x) }),
-                                              (0, s.jsx)(E.E, { variant: "text-xs/medium", children: m }),
+                                              (0, s.jsx)(p.E, { variant: "text-xs/medium", children: m }),
                                           ],
                                       })
                                     : null,
@@ -308,8 +308,8 @@ function el() {
             setPlanId: x,
             planCost: h,
             stepLoading: j,
-            error: v,
-            gameProvider: p,
+            error: f,
+            gameProvider: v,
         } = (0, P.bv)();
     (0, u.SX)(l, i?.id, null == i ? "create" : "edit"),
         n.useEffect(() => {
@@ -358,10 +358,10 @@ function el() {
         },
         z = null != i,
         J = null == i || (null != i.status && Y.has(i.status)),
-        el = (0, Z.A)(p),
-        et = null != p && null != q.eh[p] ? q.eh[p] : "";
+        el = (0, Z.A)(v),
+        et = null != v && null != q.eh[v] ? q.eh[v] : "";
     return null == t
-        ? (0, s.jsx)("div", { className: X.dc, children: (0, s.jsx)(S.y, { type: S.t.SPINNING_CIRCLE }) })
+        ? (0, s.jsx)("div", { className: X.dc, children: (0, s.jsx)(E.y, { type: E.t.SPINNING_CIRCLE }) })
         : (0, s.jsxs)("div", {
               className: X.kL,
               children: [
@@ -377,13 +377,13 @@ function el() {
                                           (0, s.jsxs)("div", {
                                               className: X.bV,
                                               children: [
-                                                  (0, s.jsx)(b.D, {
+                                                  (0, s.jsx)(S.D, {
                                                       className: X.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
                                                       children: W.intl.string(H.default.rOMEZd),
                                                   }),
-                                                  (0, s.jsx)(f.m, {
+                                                  (0, s.jsx)(b.m, {
                                                       position: "top",
                                                       text: W.intl.string(H.default.THJY1n),
                                                       children: (0, s.jsx)("span", {
@@ -410,13 +410,13 @@ function el() {
                                           (0, s.jsxs)("div", {
                                               className: X.bV,
                                               children: [
-                                                  (0, s.jsx)(b.D, {
+                                                  (0, s.jsx)(S.D, {
                                                       className: X.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
                                                       children: W.intl.string(H.default.nB5OZ4),
                                                   }),
-                                                  (0, s.jsx)(f.m, {
+                                                  (0, s.jsx)(b.m, {
                                                       position: "top",
                                                       text: W.intl.string(
                                                           null != i ? H.default["7mX0gE"] : H.default["61N+P6"],
@@ -431,7 +431,7 @@ function el() {
                                                       O &&
                                                       (0, s.jsx)("div", {
                                                           className: X.Ow,
-                                                          children: (0, s.jsx)(f.m, {
+                                                          children: (0, s.jsx)(b.m, {
                                                               asContainer: !0,
                                                               position: "top",
                                                               text: W.intl.string(H.default.kGkE7a),
@@ -483,13 +483,13 @@ function el() {
                                           (0, s.jsxs)("div", {
                                               className: X.bV,
                                               children: [
-                                                  (0, s.jsx)(b.D, {
+                                                  (0, s.jsx)(S.D, {
                                                       className: X.TK,
                                                       variant: "heading-sm/semibold",
                                                       color: "text-subtle",
                                                       children: W.intl.string(H.default["K+zMYp"]),
                                                   }),
-                                                  (0, s.jsx)(f.m, {
+                                                  (0, s.jsx)(b.m, {
                                                       position: "top",
                                                       text: W.intl.string(H.default["/wD5IM"]),
                                                       children: (0, s.jsx)("span", {
@@ -530,7 +530,7 @@ function el() {
                       i.planId !== m &&
                       (0, s.jsx)(o.A, {
                           className: X.et,
-                          children: (0, s.jsx)(E.E, {
+                          children: (0, s.jsx)(p.E, {
                               variant: "text-xs/medium",
                               children:
                                   h < 0
@@ -542,7 +542,7 @@ function el() {
                       (0, s.jsx)(o.A, {
                           className: X.et,
                           look: o.k.WARNING,
-                          children: (0, s.jsx)(E.E, {
+                          children: (0, s.jsx)(p.E, {
                               variant: "text-xs/medium",
                               children: W.intl.string(H.default["/JNPWb"]),
                           }),
@@ -552,24 +552,24 @@ function el() {
                       (0, s.jsx)(o.A, {
                           className: X.et,
                           look: o.k.INFO,
-                          children: (0, s.jsx)(E.E, {
+                          children: (0, s.jsx)(p.E, {
                               variant: "text-xs/medium",
                               children: W.intl.format(H.default.TnoBGX, { gameName: t.name }),
                           }),
                       }),
-                  (0, s.jsx)(E.E, {
+                  (0, s.jsx)(p.E, {
                       variant: "text-xs/medium",
                       color: "text-muted",
                       children:
-                          null != p &&
+                          null != v &&
                           W.intl.format(z ? H.default.num0a6 : H.default.p5KZDr, {
                               provider: el,
                               termsOfServiceUrl: () => (0, A.h)({ href: et }),
                               helpCenterUrl: _.A.getArticleURL(B.MVz.GAME_SERVER_HOSTING),
                           }),
                   }),
-                  null != v &&
-                      (0, s.jsx)(E.E, { variant: "text-xs/medium", color: "text-feedback-critical", children: v }),
+                  null != f &&
+                      (0, s.jsx)(p.E, { variant: "text-xs/medium", color: "text-feedback-critical", children: f }),
                   (0, s.jsxs)(F.N4, {
                       step: q.HS.SERVER_SETTINGS,
                       className: X.xQ,
@@ -578,7 +578,7 @@ function el() {
               ],
           });
 }
-var et = t(460790);
+var et = t(65078);
 function es(e) {
     let { step: l, setFooterNode: t } = (0, P.bv)(),
         n = (0, m.U)("GameServerSetupModal"),

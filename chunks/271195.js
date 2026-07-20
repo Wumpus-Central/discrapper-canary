@@ -8,14 +8,14 @@ var r = n(503698),
     l = n(868285),
     o = n(939249),
     d = n(477155),
-    c = n(534514),
+    c = n(297264),
     u = n(235986),
     _ = n(282413),
     E = n(763827),
     A = n(6155),
     h = n(919706),
     I = n(375708),
-    f = n(27600);
+    f = n(429904);
 function p(e) {
     let { title: t, onJumpToChannel: n, idle: r, preventIdleComponent: a } = e,
         l = (0, s.bG)([E.A], () => E.A.getChannelId()),

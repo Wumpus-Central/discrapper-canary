@@ -8,9 +8,9 @@ var a = i(627968),
     d = i(284009),
     u = i.n(d),
     m = i(562708),
-    I = i(602853),
-    p = i(661531),
-    C = i(935462),
+    I = i(935462),
+    p = i(602853),
+    C = i(661531),
     N = i(430690),
     S = i(475743),
     D = i(362311),
@@ -19,7 +19,7 @@ var a = i(627968),
     L = i(360475),
     T = i(862482),
     A = i(939249),
-    h = i(534514),
+    h = i(297264),
     x = i(834730),
     G = i(292666),
     f = i(821609),
@@ -30,7 +30,7 @@ var a = i(627968),
     k = i(4274),
     M = i(652215),
     v = i(375708),
-    y = i(250310),
+    y = i(955078),
     R = i(906471),
     w = i(168482);
 let b = "hTKzmak",
@@ -73,7 +73,7 @@ function H(e) {
         [r, c] = l.useState(!1),
         [d, u] = l.useState(null),
         m = l.useRef(null);
-    async function I(e) {
+    async function p(e) {
         e.preventDefault();
         let t = s.trim();
         if ("" === t) return void u(v.intl.string(v.t.IRq5ah));
@@ -113,7 +113,7 @@ function H(e) {
         }, [n]),
         (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, a.jsxs)(C.rQ, {
+                (0, a.jsxs)(I.rQ, {
                     "data-migration-pending": !0,
                     className: y.wx,
                     direction: g.A.Direction.VERTICAL,
@@ -129,15 +129,15 @@ function H(e) {
                             variant: "text-sm/normal",
                             children: v.intl.string(v.t["7jub2t"]),
                         }),
-                        (0, a.jsx)(C.s_, { "data-migration-pending": !0, className: y.b, onClick: i }),
+                        (0, a.jsx)(I.s_, { "data-migration-pending": !0, className: y.b, onClick: i }),
                     ],
                 }),
-                (0, a.jsxs)(C.$m, {
+                (0, a.jsxs)(I.$m, {
                     "data-migration-pending": !0,
                     className: y.__invalid_content,
                     children: [
                         (0, a.jsx)("form", {
-                            onSubmit: I,
+                            onSubmit: p,
                             className: y.$j,
                             children: (0, a.jsx)(G.k, {
                                 label: v.intl.string(v.t.qreV25),
@@ -163,7 +163,7 @@ function H(e) {
                         (0, a.jsx)(q, { onClick: i }),
                     ],
                 }),
-                (0, a.jsxs)(C.jl, {
+                (0, a.jsxs)(I.jl, {
                     "data-migration-pending": !0,
                     className: y.qr,
                     children: [
@@ -171,7 +171,7 @@ function H(e) {
                             variant: "primary",
                             text: v.intl.string(v.t["Ts/9Ac"]),
                             loading: r,
-                            onClick: I,
+                            onClick: p,
                         }),
                         (0, a.jsx)(T.$n, {
                             "data-migration-pending": !0,
@@ -188,7 +188,7 @@ function H(e) {
     );
 }
 var J = i(819638),
-    B = i(70082);
+    B = i(674370);
 function V(e) {
     let {
             transitionState: t,
@@ -232,8 +232,8 @@ function V(e) {
             u()(null != j, "handleSuccess called before onGuildCreated"), n(j);
         }, [n, j]),
         P = { impression_group: m.ImpressionGroups.GUILD_ADD_FLOW },
-        $ = (0, I.r)(p.A.modules.modal.WIDTH_SMALL);
-    return (0, a.jsx)(C.EO, {
+        $ = (0, p.r)(C.A.modules.modal.WIDTH_SMALL);
+    return (0, a.jsx)(I.EO, {
         "data-migration-pending": !0,
         transitionState: t,
         disableTrack: !0,

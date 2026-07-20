@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(792831),
     N = n(147925),
     C = n(723702),
-    R = n(529942),
-    O = n(164956);
+    O = n(529942),
+    R = n(164956);
 n(321073);
 var L = n(136722),
     y = n(44482),
@@ -40,16 +40,16 @@ var L = n(136722),
     F = n(209700),
     V = n(652215),
     B = n(375708),
-    H = n(59742);
+    H = n(239326);
 function j(e) {
     let { guildId: t } = e,
         n = (0, l.bG)([G.default], () => G.default.getCurrentUser()),
         a = (0, l.bG)([w.A], () => w.A.getGuild(t)),
         s = (0, l.bG)([U.A], () => U.A.getRolesSnapshot(t)),
         o = (0, l.bG)([U.A], () => U.A.getSortedRoles(t)),
-        { impersonateType: d, viewingRoles: c } = (0, l.cf)([O.A], () => ({
-            impersonateType: O.A.getImpersonateType(t),
-            viewingRoles: O.A.getViewingRoles(t),
+        { impersonateType: d, viewingRoles: c } = (0, l.cf)([R.A], () => ({
+            impersonateType: R.A.getImpersonateType(t),
+            viewingRoles: R.A.getViewingRoles(t),
         })),
         u = d === F._.SERVER_SHOP,
         _ = (0, l.bG)([P.Ay], () => (null != n ? P.Ay.getTrueMember(t, n.id) : null)),
@@ -67,7 +67,7 @@ function j(e) {
                 let n = s[t];
                 null != n && (e[t] = n);
             }
-            (0, R.IA)(t.id, { type: d, roles: e });
+            (0, O.IA)(t.id, { type: d, roles: e });
         }
     }, [A, d, s]);
     let f = null != a && null != n && null != _ ? o.find((e) => _.roles.includes(e.id)) : void 0,
@@ -134,7 +134,7 @@ function W(e) {
 var Y = n(746080);
 n(500208);
 var K = n(2242),
-    $ = n(595156);
+    $ = n(875220);
 function z(e) {
     let { className: t, onClick: n, children: r, buttonRef: a } = e;
     return (0, i.jsx)(d.$n, {
@@ -161,11 +161,11 @@ function Z() {
             backNavigationSection: s,
             isFullServerPreview: d,
             isServerShopPreview: C,
-        } = (0, l.cf)([O.A], () => ({
-            viewingRoles: null != t ? O.A.getViewingRoles(t) : null,
-            backNavigationSection: O.A.getBackNavigationSection(t),
-            isFullServerPreview: null != t && O.A.isFullServerPreview(t),
-            isServerShopPreview: null != t && O.A.isViewingServerShop(t),
+        } = (0, l.cf)([R.A], () => ({
+            viewingRoles: null != t ? R.A.getViewingRoles(t) : null,
+            backNavigationSection: R.A.getBackNavigationSection(t),
+            isFullServerPreview: null != t && R.A.isFullServerPreview(t),
+            isServerShopPreview: null != t && R.A.isViewingServerShop(t),
         }));
     if (null == a || null == t) return null;
     let L = (function (e) {
@@ -185,9 +185,9 @@ function Z() {
     function v(e) {
         let { backToSettings: n } = e;
         null != t &&
-            (O.A.isFullServerPreview(t) && (0, T.pX)(V.BVt.CHANNEL(t)),
+            (R.A.isFullServerPreview(t) && (0, T.pX)(V.BVt.CHANNEL(t)),
             h.Ay.shouldShowOnboarding(t) && (A.A.finishOnboarding(t), (0, I.Jg)(t)),
-            (0, R.rf)(t),
+            (0, O.rf)(t),
             n && p.A.open(t, s),
             s === V.BEX.ROLE_SUBSCRIPTIONS && (0, f.Fx)(t));
     }
@@ -260,7 +260,7 @@ function Z() {
 }
 function X(e) {
     let { guildId: t } = e;
-    return (0, l.bG)([O.A], () => O.A.isViewingRoles(t))
+    return (0, l.bG)([R.A], () => R.A.isViewingRoles(t))
         ? (0, i.jsx)("div", {
               className: s()($.xd, { [$.KF]: (0, C.isWindows)(), [$.Xz]: (0, C.isMac)(), [$.pS]: (0, C.isLinux)() }),
               children: (0, i.jsx)(Z, {}),

@@ -10,14 +10,14 @@ var n = e(627968),
     u = e(868285),
     g = e(36525),
     q = e(314116),
-    c = e(834730),
-    m = e(696986),
-    C = e(243721),
-    p = e(783878),
-    f = e(871682),
-    h = e(628284),
-    U = e(192308),
-    V = e(935462),
+    c = e(935462),
+    m = e(834730),
+    C = e(696986),
+    p = e(243721),
+    f = e(783878),
+    h = e(871682),
+    U = e(628284),
+    V = e(192308),
     v = e(297264),
     x = e(364522),
     b = e(292666),
@@ -36,8 +36,8 @@ var n = e(627968),
     L = e(31717),
     S = e(652215),
     G = e(375708),
-    O = e(107261),
-    R = e(792034);
+    O = e(408317),
+    R = e(397090);
 let B = (0, T.A)(),
     y = (0, Z.createChannelRecord)({ id: "1", type: S.rbe.DM });
 function k() {
@@ -359,7 +359,7 @@ var AU = e(500770),
     AI = e(703007),
     AN = e(698638);
 e(634654);
-var AX = e(847761);
+var AX = e(766289);
 let AT = (0, N.Ld)();
 function AW(A) {
     let { upload: t, progress: e = 0, onDeleteAttachment: l } = A,
@@ -378,8 +378,8 @@ function AW(A) {
             className: a()(AX.hC, { [AX.t]: o, [AX.ik]: !u }),
             children: [
                 (0, n.jsx)(Av.D, { size: "xs", color: d.A.colors.ICON_MUTED.css }),
-                (0, n.jsx)(m.h, { size: 10, horizontal: !0 }),
-                (0, n.jsx)(c.E, { variant: "text-sm/normal", children: g }),
+                (0, n.jsx)(C.h, { size: 10, horizontal: !0 }),
+                (0, n.jsx)(m.E, { variant: "text-sm/normal", children: g }),
                 !u && (0, n.jsx)(Ax.y, { className: AX.eD, type: Ax.y.Type.SPINNING_CIRCLE }),
                 u &&
                     null != l &&
@@ -441,15 +441,15 @@ function AP(A) {
                     },
                     children: [
                         (0, n.jsx)(AF.k, { size: "xs", color: "currentColor", className: AX.T8, "aria-hidden": !0 }),
-                        (0, n.jsx)(c.E, {
+                        (0, n.jsx)(m.E, {
                             variant: "text-sm/medium",
                             color: "text-overlay-light",
                             children: G.intl.string(G.t["23LeCD"]),
                         }),
                     ],
                 }),
-                (0, n.jsx)(m.h, { size: 12 }),
-                (0, n.jsx)(c.E, {
+                (0, n.jsx)(C.h, { size: 12 }),
+                (0, n.jsx)(m.E, {
                     id: AT,
                     color: "text-muted",
                     variant: "text-xs/normal",
@@ -485,7 +485,7 @@ function AP(A) {
     );
 }
 function AQ(A) {
-    (0, U.openModalLazy)(async () => {
+    (0, V.openModalLazy)(async () => {
         let { default: t } = await e.e("44252").then(e.bind(e, 790743));
         return (e) => (0, n.jsx)(t, { ...A, ...e });
     });
@@ -499,7 +499,7 @@ function Az(A, t) {
                 ? t
                 : G.intl.format(t, {
                       highlightHook: (A) =>
-                          (0, n.jsx)(c.E, {
+                          (0, n.jsx)(m.E, {
                               variant: "text-md/normal",
                               color: "text-default",
                               style: { display: "inline" },
@@ -517,7 +517,7 @@ var AZ = e(785007),
     AG = e(22231),
     AO = e(241326),
     AR = e(946274),
-    AB = e(700070);
+    AB = e(70246);
 let Ay = "custom-image",
     Ak = r.forwardRef(function (A, t) {
         let { selectedImageName: e, onChange: r, disabled: l = !1, name: i, alt: s, data: o } = A,
@@ -549,12 +549,12 @@ function AY(A) {
             disabled: u = !1,
         } = A,
         g = l === Ay,
-        [q, m] = r.useState(g ? e : null),
+        [q, c] = r.useState(g ? e : null),
         [C, p] = r.useState(null),
         f = r.useRef(null),
         h = r.useRef(null);
     r.useEffect(() => {
-        i !== Ay && (m(null), p(null));
+        i !== Ay && (c(null), p(null));
     }, [i]);
     let U = null != C ? G.intl.formatToPlainString(G.t["Kw+5YX"], { filename: C }) : G.intl.string(G.t.SNPvSv),
         { ref: V, ...v } = (0, AZ._u)({ orientation: "horizontal", isDisabled: u });
@@ -572,7 +572,7 @@ function AY(A) {
                         "aria-disabled": u,
                         children: [
                             (0, n.jsx)(AS.X, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
-                            (0, n.jsx)(c.E, {
+                            (0, n.jsx)(m.E, {
                                 variant: "text-xxs/normal",
                                 color: "text-muted",
                                 "aria-hidden": !0,
@@ -582,7 +582,7 @@ function AY(A) {
                                 ref: f,
                                 tabIndex: 0,
                                 onChange: function (A, t) {
-                                    null != t && (p(t.name), m(A), s(A, Ay));
+                                    null != t && (p(t.name), c(A), s(A, Ay));
                                 },
                                 "aria-label": o,
                             }),
@@ -611,7 +611,7 @@ function AY(A) {
                                 children: (0, n.jsx)(Ab.D, {
                                     className: AB.xA,
                                     onClick: function () {
-                                        l === Ay && s(t[0].data, t[0].name), m(null), p(null);
+                                        l === Ay && s(t[0].data, t[0].name), c(null), p(null);
                                     },
                                     "aria-label": G.intl.formatToPlainString(G.t.Z43V9S, { filename: C }),
                                     children: (0, n.jsx)(AO.u, { size: "md", color: "currentColor", className: AB.fy }),
@@ -644,7 +644,7 @@ function AY(A) {
 }
 var AE = e(952270),
     AD = e(175841),
-    AH = e(467585);
+    AH = e(383489);
 function Aw(A) {
     let { disabled: t = !1, disabledTooltip: e, published: l, submitting: i = !1, onClick: s } = A,
         o = (0, N.GV)(),
@@ -667,7 +667,7 @@ function Aw(A) {
                                     color: "text-strong",
                                     children: l ? G.intl.string(G.t.Vaaagc) : G.intl.string(G.t.oI8aQf),
                                 }),
-                                (0, n.jsx)(c.E, {
+                                (0, n.jsx)(m.E, {
                                     id: o,
                                     variant: "text-sm/normal",
                                     color: "text-default",
@@ -688,7 +688,7 @@ function Aw(A) {
                         }),
                     ],
                 }),
-                t && (0, n.jsx)(c.E, { variant: "text-sm/normal", color: "text-muted", children: e }),
+                t && (0, n.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: e }),
             ],
         })
     );
@@ -704,7 +704,7 @@ var AM = e(317097),
     A3 = e(408278),
     A7 = e(714385),
     A2 = e(411342),
-    A5 = e(22305);
+    A5 = e(977057);
 let A8 = (0, N.Ld)();
 function A4(A) {
     let { newRoleParams: t, setNewRoleParams: e } = A,
@@ -748,7 +748,7 @@ function A4(A) {
         ],
     });
 }
-var tA = e(955894);
+var tA = e(432054);
 function tt(A) {
     let t,
         { onRemove: e, role: r } = A;
@@ -767,13 +767,13 @@ function tn(A) {
     let { roleName: t } = A;
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, n.jsx)(c.E, {
+            (0, n.jsx)(m.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 children: G.intl.format(G.t.i2x5aY, {
                     roleName: t,
                     emphasisHook: function (A) {
-                        return (0, n.jsx)(c.E, {
+                        return (0, n.jsx)(m.E, {
                             tag: "span",
                             variant: "text-md/semibold",
                             color: "text-default",
@@ -788,22 +788,22 @@ function tn(A) {
                 color: "text-default",
                 children: [
                     (0, n.jsx)(A$.N, { size: "sm", color: "currentColor" }),
-                    (0, n.jsx)(m.h, { horizontal: !0, size: 8 }),
+                    (0, n.jsx)(C.h, { horizontal: !0, size: 8 }),
                     G.intl.string(G.t.KWx4HY),
                 ],
             }),
-            (0, n.jsx)(c.E, { variant: "text-md/normal", color: "text-muted", children: G.intl.string(G.t.hNHNph) }),
+            (0, n.jsx)(m.E, { variant: "text-md/normal", color: "text-muted", children: G.intl.string(G.t.hNHNph) }),
             (0, n.jsxs)(v.D, {
                 className: tA.wV,
                 variant: "text-md/medium",
                 color: "text-default",
                 children: [
                     (0, n.jsx)(AO.u, { size: "sm", color: "currentColor" }),
-                    (0, n.jsx)(m.h, { horizontal: !0, size: 8 }),
+                    (0, n.jsx)(C.h, { horizontal: !0, size: 8 }),
                     G.intl.string(G.t.WIPKAb),
                 ],
             }),
-            (0, n.jsx)(c.E, { variant: "text-md/normal", color: "text-muted", children: G.intl.string(G.t["40shJX"]) }),
+            (0, n.jsx)(m.E, { variant: "text-md/normal", color: "text-muted", children: G.intl.string(G.t["40shJX"]) }),
         ],
     });
 }
@@ -841,7 +841,7 @@ function tr(A) {
                             s()(null != u, "no role attached"),
                             (function (A) {
                                 let { onConfirm: t, roleName: r } = A;
-                                (0, U.openModalLazy)(async () => {
+                                (0, V.openModalLazy)(async () => {
                                     let { default: A } = await e.e("44252").then(e.bind(e, 790743));
                                     return (e) =>
                                         (0, n.jsx)(A, {
@@ -867,7 +867,7 @@ function tr(A) {
 }
 var tl = e(500208),
     ta = e(705751),
-    ti = e(350138);
+    ti = e(785018);
 let ts = (0, N.Ld)(),
     to = (0, N.Ld)(),
     td = (0, N.Ld)();
@@ -879,9 +879,9 @@ function tu(A) {
         className: a()(ti.$4, { [ti.r9]: l }),
         htmlFor: s,
         children: [
-            (0, n.jsx)(c.E, { variant: "text-sm/medium", color: o, children: t }),
-            null != i && (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(m.h, { size: 4, horizontal: !0 }), i] }),
-            (0, n.jsx)(C.d, { onChange: e, checked: r, disabled: l, id: s }),
+            (0, n.jsx)(m.E, { variant: "text-sm/medium", color: o, children: t }),
+            null != i && (0, n.jsxs)(n.Fragment, { children: [(0, n.jsx)(C.h, { size: 4, horizontal: !0 }), i] }),
+            (0, n.jsx)(p.d, { onChange: e, checked: r, disabled: l, id: s }),
         ],
     });
 }
@@ -903,7 +903,7 @@ function tq(A) {
                 })),
             [s, e],
         );
-    return (0, n.jsx)(p.Z, {
+    return (0, n.jsx)(f.Z, {
         selectionMode: "single",
         label: a,
         errorMessage: i,
@@ -918,8 +918,8 @@ function tq(A) {
 }
 function tc(A) {
     let { guildId: t, productId: l, transitionState: a, onClose: i } = A,
-        [C, p] = r.useState(l),
-        N = (0, o.bG)([Ag.A], () => (null == C ? null : Ag.A.getGuildProduct(C)), [C]),
+        [p, f] = r.useState(l),
+        N = (0, o.bG)([Ag.A], () => (null == p ? null : Ag.A.getGuildProduct(p)), [p]),
         X = (0, o.bG)([Ag.A], () => Ag.A.getGuildProductsForGuild(t, { publishedOnly: !0 }).length, [t]),
         T = N?.published === !0,
         { application: W } = (0, I.A)(t, ta.S7.GUILD_ROLE_SUBSCRIPTIONS),
@@ -997,18 +997,18 @@ function tc(A) {
             () =>
                 AL || null == AT || "publish" === AT || null != AV
                     ? null
-                    : (0, n.jsx)(f.F, {
+                    : (0, n.jsx)(h.F, {
                           className: ti.Er,
                           children: (0, n.jsx)(g.A, {
                               message: (0, n.jsxs)("div", {
                                   className: ti.Lk,
                                   children: [
-                                      (0, n.jsx)(h.y, {
+                                      (0, n.jsx)(U.y, {
                                           size: "md",
                                           color: d.A.colors.CONTROL_CONNECTED_BACKGROUND_DEFAULT.css,
                                           secondaryColor: d.A.colors.WHITE.css,
                                       }),
-                                      (0, n.jsx)(c.E, {
+                                      (0, n.jsx)(m.E, {
                                           variant: "text-md/medium",
                                           children:
                                               "draft" === AT
@@ -1047,12 +1047,12 @@ function tc(A) {
                 let A = n.role_id;
                 s()(null != A, "Cannot update role without role ID"), await j.A.updateRole(t, A, AK);
             }
-            AF(void 0), p(n.id), "published" in A && !0 === A.published && i();
+            AF(void 0), f(n.id), "published" in A && !0 === A.published && i();
         }
     }
     r.useEffect(() => {
-        (0, U.updateModal)(tl.DG, (A) => (0, n.jsx)(tm, { guildId: t, productId: C, ...A }), AB);
-    }, [t, AB, C]),
+        (0, V.updateModal)(tl.DG, (A) => (0, n.jsx)(tm, { guildId: t, productId: p, ...A }), AB);
+    }, [t, AB, p]),
         r.useEffect(() => {
             null != AV &&
                 (function (A, t, r) {
@@ -1067,9 +1067,9 @@ function tc(A) {
                             Az(G.intl.string(G.t.MeXDxg), G.t["5q146K"]);
                             break;
                         case S.t02.MONETIZATION_TERMS_NOT_ACCEPTED:
-                            (0, U.openModalLazy)(async () => {
+                            (0, V.openModalLazy)(async () => {
                                 let { default: A } = await Promise.all([
-                                    e.e("79086"),
+                                    e.e("13250"),
                                     e.e("92513"),
                                     e.e("12390"),
                                     e.e("91826"),
@@ -1099,15 +1099,15 @@ function tc(A) {
             AL && AW(void 0);
         }, [AL]);
     let Ak = r.useRef(null);
-    return (0, n.jsxs)(V.EO, {
+    return (0, n.jsxs)(c.EO, {
         transitionState: a,
-        size: V.rI.DYNAMIC,
+        size: c.rI.DYNAMIC,
         className: ti.CR,
         "aria-labelledby": ts,
         parentComponent: "GuildProductEditModal",
         "data-migration-pending": !0,
         children: [
-            (0, n.jsxs)(V.rQ, {
+            (0, n.jsxs)(c.rQ, {
                 className: ti.Hc,
                 separator: !1,
                 "data-migration-pending": !0,
@@ -1121,21 +1121,21 @@ function tc(A) {
                                 color: "text-strong",
                                 children: G.intl.string(G.t.DnNl1T),
                             }),
-                            (0, n.jsx)(c.E, {
+                            (0, n.jsx)(m.E, {
                                 variant: "text-sm/normal",
                                 color: "text-default",
                                 children: G.intl.string(G.t["Tu7f+f"]),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(V.s_, {
+                    (0, n.jsx)(c.s_, {
                         onClick: AB,
                         className: ti.__invalid_modalCloseButton,
                         "data-migration-pending": !0,
                     }),
                 ],
             }),
-            (0, n.jsxs)(V.$m, {
+            (0, n.jsxs)(c.$m, {
                 className: ti.jE,
                 scrollbarType: "none",
                 "data-migration-pending": !0,
@@ -1211,7 +1211,7 @@ function tc(A) {
                                           setNewRoleParams: AF,
                                           guildId: t,
                                           listingRoleId: Ab,
-                                          productId: C,
+                                          productId: p,
                                       })
                                     : null,
                             ],
@@ -1244,13 +1244,13 @@ function tc(A) {
                                     className: ti.B9,
                                     children: G.intl.string(G.t["6I7nQT"]),
                                 }),
-                                (0, n.jsx)(m.h, { size: 4 }),
-                                (0, n.jsx)(c.E, {
+                                (0, n.jsx)(C.h, { size: 4 }),
+                                (0, n.jsx)(m.E, {
                                     variant: "text-xs/normal",
                                     color: "text-muted",
                                     children: G.intl.string(G.t.Oq4dfU),
                                 }),
-                                (0, n.jsx)(m.h, { size: 16 }),
+                                (0, n.jsx)(C.h, { size: 16 }),
                                 (0, n.jsx)(AU.A, {
                                     imageUrl: H,
                                     name: "" === O ? G.intl.string(G.t.EmqIwl) : O,
@@ -1267,7 +1267,7 @@ function tc(A) {
                     }),
                 ],
             }),
-            (0, n.jsx)(V.jl, {
+            (0, n.jsx)(c.jl, {
                 "data-migration-pending": !0,
                 children: (0, n.jsxs)("div", {
                     className: ti.jj,

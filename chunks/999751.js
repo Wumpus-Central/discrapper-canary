@@ -18,7 +18,7 @@ var i = n(627968),
     p = n(834730),
     T = n(29160),
     m = n(375708),
-    g = n(60062);
+    g = n(873054);
 let S = function (e) {
     let { className: t, hasVideo: n, text: r, hasConnectedChannel: a, textVariant: l = "text-md/medium" } = e,
         o = n ? m.intl.string(m.t.IlHdW8) : m.intl.string(m.t.WsOisp);
@@ -29,9 +29,9 @@ let S = function (e) {
     });
 };
 var N = n(652215),
-    C = n(648881);
-let R = { [N.vkP.CONNECTED]: C.nf, [N.vkP.CONNECTING]: C._6, [N.vkP.ERROR]: C.Il },
-    O = { [N.bFR.FINE]: C.LP, [N.bFR.AVERAGE]: C.mq, [N.bFR.BAD]: C.yA, [N.bFR.UNKNOWN]: null },
+    C = n(754865);
+let O = { [N.vkP.CONNECTED]: C.nf, [N.vkP.CONNECTING]: C._6, [N.vkP.ERROR]: C.Il },
+    R = { [N.bFR.FINE]: C.LP, [N.bFR.AVERAGE]: C.mq, [N.bFR.BAD]: C.yA, [N.bFR.UNKNOWN]: null },
     L = { [N.bFR.FINE]: l.Q, [N.bFR.AVERAGE]: o.j, [N.bFR.BAD]: d.R, [N.bFR.UNKNOWN]: c.e };
 function y(e) {
     let { quality: t, largePing: n, ...r } = e,
@@ -58,7 +58,7 @@ function D(e) {
         className: C.pe,
         children: [
             (0, i.jsx)("div", {
-                className: s()(C.yH, O[t], l),
+                className: s()(C.yH, R[t], l),
                 ref: m,
                 children: (0, i.jsx)(u.Y, {
                     targetElementRef: m,
@@ -90,7 +90,7 @@ function D(e) {
                                                 text: v,
                                                 textVariant: p,
                                                 hasVideo: T,
-                                                className: R[D],
+                                                className: O[D],
                                                 hasConnectedChannel: null != d,
                                             }),
                                         }),

@@ -4,8 +4,8 @@ var l = n(627968),
     s = n(503698),
     r = n.n(s),
     a = n(17928),
-    o = n(990078),
-    u = n(778712),
+    o = n(778712),
+    u = n(866665),
     c = n(695366),
     d = n(661531),
     m = n(367513),
@@ -13,8 +13,8 @@ var l = n(627968),
     g = n(313961),
     h = n(520698),
     f = n(164617),
-    x = n(958713),
-    A = n(525505),
+    A = n(958713),
+    x = n(525505),
     E = n(550946),
     v = n(766761),
     C = n(51092),
@@ -23,7 +23,7 @@ var l = n(627968),
     j = n(912630),
     _ = n(530804),
     N = n(280450),
-    b = n(451409),
+    b = n(186295),
     y = n(531685),
     T = n(562153),
     D = n(51082),
@@ -32,16 +32,16 @@ var l = n(627968),
     w = n(652215),
     O = n(731854),
     L = n(375708),
-    M = n(391308);
-let F = u._3.SIZE_80,
-    V = u._3.SIZE_40;
+    M = n(24908);
+let F = o._3.SIZE_80,
+    V = o._3.SIZE_40;
 function G(e) {
     let { channelId: t, participant: n } = e,
         i = (0, _.uy)(t, n.id),
         s = (0, a.bG)([N.default], () => N.default.getId()),
         r = (0, a.bG)([j.A], () => j.A.videoBackgroundUnavailable);
     return i
-        ? (0, l.jsx)(o.m, {
+        ? (0, l.jsx)(u.m, {
               text: L.intl.string(L.t.HFwRpk),
               position: "bottom",
               children: (0, l.jsx)("div", {
@@ -50,7 +50,7 @@ function G(e) {
               }),
           })
         : n.user.id === s && r
-          ? (0, l.jsx)(o.m, {
+          ? (0, l.jsx)(u.m, {
                 text: L.intl.string(L.t["8n9gj5"]),
                 position: "bottom",
                 children: (0, l.jsx)("div", {
@@ -95,8 +95,8 @@ function P(e) {
             animateOnHover: !ee,
         }),
         ei = (0, a.bG)([g.A], () => g.A.getSelectedParticipant(n.id)),
-        es = (0, A.A)(O.x.DEFAULT, t.user.id),
-        er = (0, x.A)(t.user.id),
+        es = (0, x.A)(O.x.DEFAULT, t.user.id),
+        er = (0, A.A)(t.user.id),
         ea = { channel: n, selectedParticipant: ei, user: W },
         eo = i.useRef(ea);
     return (i.useEffect(() => {

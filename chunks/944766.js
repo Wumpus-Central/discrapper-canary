@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(572808),
     _ = n(9045),
     E = n(806931),
-    A = n(840275);
+    A = n(93203);
 let h = (e) => {
     let {
             seats: t,
@@ -29,12 +29,12 @@ let h = (e) => {
         {
             setAsset: N,
             sampleAsset: C,
-            animationState: R,
-            updateAnimationState: O,
+            animationState: O,
+            updateAnimationState: R,
             characterAssets: L,
         } = (0, c.u)(S?.name),
-        D = r.useMemo(() => Object.values(L ?? {}).flat(), [L]),
-        y = h.find((e) => e.type === E.lp.USER && e.user.id === a.userId),
+        y = r.useMemo(() => Object.values(L ?? {}).flat(), [L]),
+        D = h.find((e) => e.type === E.lp.USER && e.user.id === a.userId),
         v = r.useMemo(
             () =>
                 h.filter((e) => {
@@ -57,7 +57,7 @@ let h = (e) => {
     return (
         r.useEffect(() => {
             P(!1);
-        }, [S, D]),
+        }, [S, y]),
         r.useEffect(() => {
             let e = g.current;
             return () => {
@@ -69,16 +69,16 @@ let h = (e) => {
             let e = m.current;
             if (null == e || !0 === M) return;
             let t = C(),
-                n = D.findIndex((e) => e === t);
+                n = y.findIndex((e) => e === t);
             N(t),
                 x(n),
                 [...e.children].forEach((e, t) => {
                     "VIDEO" !== e.nodeName || ((e.currentTime = 0), t === n && (e.play(), P(!0)));
                 });
-        }, [M, D, C, N, T]),
+        }, [M, y, C, N, T]),
         r.useEffect(() => {
-            T && (y?.speaking ? O(c.f.TALKING) : R === c.f.TALKING && O(c.f.IDLE));
-        }, [y, R, O, T]),
+            T && (D?.speaking ? R(c.f.TALKING) : O === c.f.TALKING && R(c.f.IDLE));
+        }, [D, O, R, T]),
         r.useEffect(() => {
             !T ||
                 (b.some((e) => {
@@ -96,8 +96,8 @@ let h = (e) => {
                     }
                 }) &&
                     U + 13e3 < Date.now() &&
-                    (O(c.f.HEAD_TURN), w(Date.now())));
-        }, [b, n, U, O, T]),
+                    (R(c.f.HEAD_TURN), w(Date.now())));
+        }, [b, n, U, R, T]),
         (0, i.jsxs)(l.D, {
             className: A.iE,
             style: { width: S.width, top: S.offset.top, left: f ? -S.offset.left : S.offset.left },
@@ -120,7 +120,7 @@ let h = (e) => {
                     }),
                 (0, i.jsx)("div", {
                     ref: m,
-                    children: D.map((e, t) =>
+                    children: y.map((e, t) =>
                         (0, i.jsx)(
                             o.A,
                             {
@@ -128,14 +128,14 @@ let h = (e) => {
                                 src: e,
                                 className: s()(A.GG, { [A.UU]: f }),
                                 onEnded: () => {
-                                    if (R === c.f.HEAD_TURN && L?.headTurn?.includes(e)) {
-                                        O(c.f.HEAD_TURN_BACK);
+                                    if (O === c.f.HEAD_TURN && L?.headTurn?.includes(e)) {
+                                        R(c.f.HEAD_TURN_BACK);
                                         let e = setTimeout(() => {
                                             P(!1), g.current.delete(e);
                                         }, 2e3);
                                         g.current.add(e);
                                     } else
-                                        R === c.f.HEAD_TURN_BACK && L?.headTurnBack?.includes(e) && O(c.f.IDLE), P(!1);
+                                        O === c.f.HEAD_TURN_BACK && L?.headTurnBack?.includes(e) && R(c.f.IDLE), P(!1);
                                 },
                                 autoPlay: !1,
                                 loop: !1,

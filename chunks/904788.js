@@ -6,7 +6,7 @@ var i = n(503698),
     s = n(812993),
     a = n(953727),
     o = n(771104),
-    c = n(910372);
+    c = n(167524);
 function u(e) {
     let { className: t, children: n, forceUseColor: i = !1, hideStars: s } = e;
     return (0, r.jsxs)("span", {
@@ -25,8 +25,8 @@ function u(e) {
         ],
     });
 }
-var m = n(375708),
-    d = n(988460);
+var d = n(375708),
+    m = n(59756);
 function g(e) {
     return (0, r.jsx)("svg", {
         ...(0, a.A)({ ...e }),
@@ -53,8 +53,8 @@ function x(e) {
         forceUseColor: n,
         children: (0, r.jsx)(s.Lp, {
             disableColor: !0,
-            className: l()(d.Tc, { [d.YO]: i, [d.ju]: a }),
-            text: m.intl.string(m.t.y2b7CA),
+            className: l()(m.Tc, { [m.YO]: i, [m.ju]: a }),
+            text: d.intl.string(d.t.y2b7CA),
         }),
     });
 }

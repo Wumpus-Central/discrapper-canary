@@ -22,11 +22,11 @@ var i = n(627968),
     S = n(316770),
     N = n(435558),
     C = n(3026),
-    R = n(834730),
-    O = n(778712),
+    O = n(834730),
+    R = n(778712),
     L = n(562153),
     y = n(996988),
-    D = n(242697);
+    D = n(17545);
 let v = [
         [{ top: 15, left: 15, width: 28, height: 28 }],
         [
@@ -85,7 +85,7 @@ function M(e) {
                               s && r === d
                                   ? (0, i.jsx)("div", {
                                         className: D.mB,
-                                        children: (0, i.jsx)(R.E, {
+                                        children: (0, i.jsx)(O.E, {
                                             variant: "text-xxs/semibold",
                                             lineClamp: 1,
                                             children: (0, i.jsx)(C.A, { children: l > 99 ? ">99" : `+${l}` }),
@@ -95,7 +95,7 @@ function M(e) {
                                         text: L.Ay.getName(n.guild_id, n.id, a),
                                         children: (0, i.jsx)("img", {
                                             className: D.my,
-                                            src: a.getAvatarURL(n.guild_id, (0, O.FT)(O._3.SIZE_80)),
+                                            src: a.getAvatarURL(n.guild_id, (0, R.FT)(R._3.SIZE_80)),
                                             alt: "",
                                         }),
                                     }),
@@ -117,7 +117,7 @@ var P = n(939249),
     H = n(531648),
     j = n(652215),
     W = n(375708),
-    Y = n(237770);
+    Y = n(380170);
 function K(e) {
     let { voiceChannel: t, onAction: n, onClose: a } = e,
         { themeType: l } = (0, T.E)(),
@@ -167,17 +167,17 @@ function K(e) {
 }
 var $ = n(70963),
     z = n(269587),
-    q = n(514566);
+    q = n(726342);
 function Z(e) {
     let { user: t, currentUser: n, voiceChannel: a, className: N, onClose: C } = e,
-        { themeType: R } = (0, T.E)(),
-        { analyticsLocations: O } = (0, E.Ay)(_.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
+        { themeType: O } = (0, T.E)(),
+        { analyticsLocations: R } = (0, E.Ay)(_.A.USER_PROFILE_VOICE_ACTIVITY_CARD),
         L = (0, f.A)({
             display: "voice",
             activity: { type: "VOICE" },
             voiceChannelId: a.id,
             user: t,
-            analyticsLocations: O,
+            analyticsLocations: R,
         }),
         D = (0, p.A)({ userId: t.id, onAction: L }),
         v = (0, l.bG)([h.A], () => h.A.getGuild(a.guild_id)),
@@ -197,7 +197,7 @@ function Z(e) {
               ? W.intl.string(W.t.QygGCN)
               : W.intl.string(W.t.msxteM);
     return (0, i.jsx)(E.f5, {
-        value: O,
+        value: R,
         children: (0, i.jsxs)(m.A, {
             ref: D,
             className: s()(q.Nr, N),
@@ -226,14 +226,14 @@ function Z(e) {
                                 children: [
                                     (0, i.jsx)(S.A, { channel: a, guild: v, onAction: L, onClose: C }),
                                     a.isGuildVoice() && (0, i.jsx)(K, { voiceChannel: a, onAction: L, onClose: C }),
-                                    R === y.d.MODAL_V2 && w(),
+                                    O === y.d.MODAL_V2 && w(),
                                 ],
                             }),
-                            R === y.d.MODAL && w(),
+                            O === y.d.MODAL && w(),
                         ],
                     }),
                 }),
-                R !== y.d.MODAL && R !== y.d.MODAL_V2 && w(),
+                O !== y.d.MODAL && O !== y.d.MODAL_V2 && w(),
             ],
         }),
     });

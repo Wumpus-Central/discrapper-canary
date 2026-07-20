@@ -14,12 +14,12 @@ var n = s(627968),
     A = s(952572),
     g = s(503698),
     j = s.n(g),
-    f = s(990078),
-    N = s(939249),
-    _ = s(834730),
-    h = s(782134),
-    E = s(812993),
-    v = s(403581),
+    f = s(939249),
+    N = s(834730),
+    _ = s(782134),
+    h = s(812993),
+    E = s(403581),
+    v = s(866665),
     O = s(750943),
     I = s(638495),
     C = s(428678),
@@ -42,7 +42,7 @@ var n = s(627968),
     F = s(339984),
     K = s(202541),
     W = s(375708),
-    z = s(941531);
+    z = s(545819);
 function J(e) {
     let {
         icon: t,
@@ -55,7 +55,7 @@ function J(e) {
         onMouseLeave: c,
         onBlur: d,
     } = e;
-    return (0, n.jsxs)(N.D, {
+    return (0, n.jsxs)(f.D, {
         className: j()(a, z.gf, { [z.JI]: o, [z.A7]: r }),
         onMouseLeave: c,
         onBlur: d,
@@ -76,7 +76,7 @@ function J(e) {
                                 width: 18,
                                 height: 18,
                             }),
-                            (0, n.jsx)(_.E, { className: z.V7, color: "none", variant: "text-sm/normal", children: l }),
+                            (0, n.jsx)(N.E, { className: z.V7, color: "none", variant: "text-sm/normal", children: l }),
                         ],
                     }),
                 ],
@@ -116,16 +116,16 @@ function Y(e) {
         } = e,
         A = (0, r.p)(),
         { analyticsLocations: g } = (0, k.Ay)(T.A.VIDEO_BACKGROUND_IMAGE_OPTION),
-        f = (0, i.bG)([B.A], () => null != m && B.A.hasHotspot(m)),
-        _ = l.useCallback((e) => {
+        N = (0, i.bG)([B.A], () => null != m && B.A.hasHotspot(m)),
+        E = l.useCallback((e) => {
             if (!(0, L.u)(e)) throw e;
         }, []),
         v = u
-            ? (0, n.jsx)(D.A, { className: z.PQ, src: a, loop: !0, playOnHover: !0, muted: !0, onPlayError: _ })
+            ? (0, n.jsx)(D.A, { className: z.PQ, src: a, loop: !0, playOnHover: !0, muted: !0, onPlayError: E })
             : (0, n.jsx)(Q, { isAnimated: d, option: (0, x.d1)(t) ? t : void 0, source: a });
     function O() {
         null != m &&
-            f &&
+            N &&
             (U.sF(m),
             P.default.track(V.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: K.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
@@ -133,7 +133,7 @@ function Y(e) {
                 location_stack: g,
             }));
     }
-    return (0, n.jsxs)(N.D, {
+    return (0, n.jsxs)(f.D, {
         className: j()(z.gf, { [z.JI]: o }),
         "aria-label": p,
         onClick: () => c(t),
@@ -148,10 +148,10 @@ function Y(e) {
             u || d
                 ? (0, n.jsx)("div", {
                       className: z.uZ,
-                      children: (0, n.jsx)(h.u, { size: "xxs", color: "currentColor" }),
+                      children: (0, n.jsx)(_.u, { size: "xxs", color: "currentColor" }),
                   })
                 : null,
-            f && (0, n.jsx)(E.Lp, { text: W.intl.string(W.t.y2b7CA), className: z.$5 }),
+            N && (0, n.jsx)(h.Lp, { text: W.intl.string(W.t.y2b7CA), className: z.$5 }),
         ],
     });
 }
@@ -159,8 +159,8 @@ function Z() {
     return (0, n.jsxs)("div", {
         className: z.j1,
         children: [
-            (0, n.jsx)(v.t, { size: "md", color: "currentColor", className: z.eo }),
-            (0, n.jsx)(_.E, { variant: "text-sm/normal", children: W.intl.string(W.t["T+yRY3"]) }),
+            (0, n.jsx)(E.t, { size: "md", color: "currentColor", className: z.eo }),
+            (0, n.jsx)(N.E, { variant: "text-sm/normal", children: W.intl.string(W.t["T+yRY3"]) }),
         ],
     });
 }
@@ -171,7 +171,7 @@ function $(e) {
         U.sF(H._.ANIMATED_VIDEO_BG_CUSTOM_TOOLTIP_NEW);
     }
     let r = a ? W.intl.string(W.t["5TUJOv"]) : s;
-    return (0, n.jsx)(f.m, {
+    return (0, n.jsx)(v.m, {
         text: r,
         children: (0, n.jsxs)("div", {
             className: z.$g,
@@ -186,13 +186,13 @@ function $(e) {
                     text: (0, n.jsxs)("div", {
                         className: z.Us,
                         children: [
-                            (0, n.jsx)(v.t, { size: "md", color: "currentColor", className: z.PK }),
+                            (0, n.jsx)(E.t, { size: "md", color: "currentColor", className: z.PK }),
                             (0, n.jsx)("div", { className: z.kr, children: W.intl.string(W.t["1t7U8W"]) }),
                         ],
                     }),
                     children: [(0, n.jsx)("div", { className: z.eD }), (0, n.jsx)("div", { className: z.G5 })],
                 }),
-                a && (0, n.jsx)(E.Lp, { text: W.intl.string(W.t.y2b7CA), className: z.$5 }),
+                a && (0, n.jsx)(h.Lp, { text: W.intl.string(W.t.y2b7CA), className: z.$5 }),
             ],
         }),
     });
@@ -223,9 +223,9 @@ function X(e) {
             (0, a.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([
-                        s.e("79465"),
-                        s.e("21866"),
-                        s.e("50985"),
+                        s.e("27565"),
+                        s.e("36698"),
+                        s.e("56989"),
                         s.e("63232"),
                         s.e("29666"),
                         s.e("93513"),
@@ -302,7 +302,7 @@ function ee(e) {
                     return null == t
                         ? null
                         : (0, n.jsx)(
-                              f.m,
+                              v.m,
                               {
                                   __unsupportedReactNodeAsText: (0, n.jsx)(Z, {}),
                                   "aria-label": W.intl.string(W.t["T+yRY3"]),
@@ -327,7 +327,7 @@ function ee(e) {
                 m.map((e) => {
                     let t = !0 === e.isVideo;
                     return (0, n.jsx)(
-                        f.m,
+                        v.m,
                         {
                             text: e.name,
                             "aria-label": e.name,
@@ -405,7 +405,7 @@ function es(e) {
                           onUpsellClick: function () {
                               (0, a.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      s.e("2125"),
+                                      s.e("85029"),
                                       s.e("66901"),
                                       s.e("40716"),
                                   ]).then(s.bind(s, 629959));

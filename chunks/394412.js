@@ -15,18 +15,18 @@ var i = t(17928),
     C = t(974930),
     E = t(47868),
     p = t(375708),
-    x = t(282741);
+    x = t(908725);
 function g(e) {
     let { channelId: n, showDismiss: g = !0 } = e,
-        I = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
-        f = (0, m.RO)(n),
-        T = null != (0, m.Qs)(n),
-        { canManageGuildEvent: v } = (0, o.nr)(I),
-        j = (0, i.bG)([u.A], () => f.filter((e) => !u.A.isEventDismissed(e.id)), [f]),
+        f = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
+        I = (0, m.RO)(n),
+        v = null != (0, m.Qs)(n),
+        { canManageGuildEvent: T } = (0, o.nr)(f),
+        j = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
         _ = (0, i.cf)([A.Ay], () => j.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
             j,
         ]);
-    return j.length < 1 || T
+    return j.length < 1 || v
         ? null
         : (0, l.jsx)(l.Fragment, {
               children: j.map((e) =>
@@ -35,16 +35,16 @@ function g(e) {
                       {
                           icon: (0, l.jsx)(r.C, { size: "custom", color: "currentColor", height: 20, width: 20 }),
                           color: s.A.unsafe_rawColors.GREEN_360.css,
-                          title: p.intl.formatToPlainString(v(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
+                          title: p.intl.formatToPlainString(T(e) ? p.t["1vGXqM"] : p.t.xMJyla, { eventName: e.name }),
                           description: p.intl.formatToPlainString(p.t.PTebCR, {
                               startTime: (0, C.CC)(e.scheduled_start_time).startDateTimeString,
                           }),
                           onClick: () => {
-                              v(e)
+                              T(e)
                                   ? (0, a.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([
-                                            t.e("4278"),
-                                            t.e("40296"),
+                                            t.e("38314"),
+                                            t.e("53032"),
                                             t.e("70644"),
                                             t.e("1922"),
                                             t.e("49347"),

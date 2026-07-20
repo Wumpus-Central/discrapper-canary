@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(284009),
     s = n.n(a),
-    l = n(735438),
+    l = n(435558),
     o = n.n(l),
     d = n(17928),
     c = n(459838),
@@ -22,11 +22,11 @@ var i = n(627968),
     S = n(525788),
     N = n(384059),
     C = n(47167),
-    R = n(958713),
-    O = n(525505),
+    O = n(958713),
+    R = n(525505),
     L = n(899e3),
-    D = n(652896),
-    y = n(880144),
+    y = n(652896),
+    D = n(880144),
     v = n(638480),
     b = n(338771),
     M = n(766761),
@@ -41,7 +41,7 @@ var i = n(627968),
     B = n(352018),
     H = n(616356),
     j = n(280450),
-    W = n(451409),
+    W = n(186295),
     Y = n(994500),
     K = n(287809),
     $ = n(803301),
@@ -58,8 +58,8 @@ var i = n(627968),
     er = n(222692),
     ea = n(652215),
     es = n(806931),
-    el = n(82850),
-    eo = n(604949);
+    el = n(687906),
+    eo = n(794005);
 class ed extends r.PureComponent {
     state = { screensharePopoutOpen: !1 };
     _ref = r.createRef();
@@ -79,11 +79,11 @@ class ed extends r.PureComponent {
     }
     get streamerPaused() {
         let { isMainWindowFocused: e, activeSelfStream: t, participantOnScreen: n } = this.props;
-        return null != t && n?.id === (0, D._z)(t) && !e;
+        return null != t && n?.id === (0, y._z)(t) && !e;
     }
     get activeStreamForSelectedParticipant() {
         let { participantOnScreen: e, activeStreams: t } = this.props;
-        return (0, es.Ay)(e) ? t.find((t) => (0, D._z)(t) === e.id) : null;
+        return (0, es.Ay)(e) ? t.find((t) => (0, y._z)(t) === e.id) : null;
     }
     getScreenMessage() {
         let { participantOnScreen: e, currentUserId: t } = this.props;
@@ -112,7 +112,7 @@ class ed extends r.PureComponent {
         let t = e.getGuildId() ?? ea.ME;
         (0, U.uh)(t, e.id), h.A.channelListScrollTo(t, e.id);
         let n = this.activeStreamForSelectedParticipant;
-        null != n && A.A.selectParticipant(n.channelId, (0, D._z)(n));
+        null != n && A.A.selectParticipant(n.channelId, (0, y._z)(n));
     };
     handleStopStream = () => {
         let { participantOnScreen: e } = this.props;
@@ -180,7 +180,7 @@ class ed extends r.PureComponent {
     renderSettingsIcon = () => {
         let { participantOnScreen: e, activeStreams: t } = this.props;
         s()((0, es.Ay)(e), "Cannot render settings for non stream participant");
-        let n = t.find((t) => (0, D._z)(t) === e.id);
+        let n = t.find((t) => (0, y._z)(t) === e.id);
         return null == n || n.state === ea.XYD.ENDED
             ? null
             : (0, i.jsx)(B.A, { stream: n, className: el.iq, appContext: ea.BRT.APP, location: f.A.VIDEO_PIP });
@@ -286,15 +286,15 @@ function ec(e) {
         u = null == s || s.disabled,
         _ = !u,
         E = (0, d.bG)([W.Ay], () => !u && W.Ay.isVideoEnabled(), [u]),
-        A = (0, d.bG)([W.Ay], () => (0, y.A)(W.Ay)),
+        A = (0, d.bG)([W.Ay], () => (0, D.A)(W.Ay)),
         h = (0, d.bG)([j.default], () => j.default.getId()),
         I = (0, d.bG)([H.A], () => H.A.getCurrentUserActiveStream()),
         f = null != a && "user" in a ? a.user.id : "",
-        p = (0, O.A)(a?.type === es.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, f),
-        S = (0, R.A)(f),
+        p = (0, R.A)(a?.type === es.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, f),
+        S = (0, O.A)(f),
         N = (0, d.yK)([H.A], () => H.A.getAllActiveStreams()),
         C = (0, d.bG)([z.A], () => z.A.isFocused()),
-        D = (0, L.Qu)();
+        y = (0, L.Qu)();
     return (0, i.jsx)(ed, {
         channel: t,
         streamId: l,
@@ -305,7 +305,7 @@ function ec(e) {
         currentUserId: h,
         activeStreams: N,
         activeSelfStream: I,
-        isMainWindowFocused: C || D,
+        isMainWindowFocused: C || y,
         width: n,
         isOverlayRenderingVideo: !1,
         videoStreamError: p,

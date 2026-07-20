@@ -16,7 +16,7 @@ var n = t(627968),
     j = t(381941),
     h = t(650583),
     v = t(375708),
-    b = t(910162);
+    b = t(58450);
 function I(e) {
     return (0, n.jsx)("img", { src: e.src ?? void 0, className: b.imageFilePreviewImg, "aria-hidden": !0, alt: "" });
 }

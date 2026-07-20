@@ -22,11 +22,11 @@ var i = n(627968),
     S = n(565150),
     N = n(424170),
     C = n(31717),
-    R = n(914905),
-    O = n(650583),
+    O = n(914905),
+    R = n(650583),
     L = n(375708),
-    D = n(402913);
-function y(e) {
+    y = n(53089);
+function D(e) {
     let { channelId: t, option: n, keyboardModeEnabled: a } = e,
         l = r.useRef(null),
         [o, d] = r.useState(!1),
@@ -36,7 +36,7 @@ function y(e) {
         {
             allowedExtensions: h,
             typesFormattedString: f,
-            validateFilenames: y,
+            validateFilenames: D,
             showInvalidFileTypeAlert: v,
         } = (0, N.M1)(A),
         b = r.useCallback(() => {
@@ -47,11 +47,11 @@ function y(e) {
         }, []),
         P = r.useCallback(
             (e, i) => {
-                if (h.length > 0 && !y([e.name])) return v();
+                if (h.length > 0 && !D([e.name])) return v();
                 let r = { id: n.name, file: e, platform: S.xz.WEB, origin: i };
                 u.A.setFile({ channelId: t, id: n.name, file: r, draftType: C.C.SlashCommand, allowOptimization: !1 });
             },
-            [h.length, y, n.name, t, v],
+            [h.length, D, n.name, t, v],
         ),
         U = r.useCallback(
             (e) => {
@@ -76,7 +76,7 @@ function y(e) {
         );
     }, [c, b, M, U]),
     null != c)
-        ? (0, i.jsx)(R.A, {
+        ? (0, i.jsx)(O.A, {
               channelId: t,
               upload: c,
               keyboardModeEnabled: a,
@@ -99,22 +99,22 @@ function y(e) {
               channelId: t,
               keyboardModeEnabled: a,
               onKeyDown: function (e) {
-                  e.key === O.dh.ENTER && (e.preventDefault(), l.current?.activateUploadDialogue());
+                  e.key === R.dh.ENTER && (e.preventDefault(), l.current?.activateUploadDialogue());
               },
-              className: s()(D.xd, { [D.LB]: o }),
+              className: s()(y.xd, { [y.LB]: o }),
               draftType: C.C.SlashCommand,
               ref: E,
               children: [
-                  (0, i.jsx)("span", { className: s()(D.fS, { [D.Vg]: o }), children: n.displayName }),
+                  (0, i.jsx)("span", { className: s()(y.fS, { [y.Vg]: o }), children: n.displayName }),
                   (0, i.jsx)(m.D, {
-                      className: D.uN,
+                      className: y.uN,
                       onClick: () => l.current?.activateUploadDialogue(),
                       children: (0, i.jsxs)("div", {
-                          className: D.wi,
+                          className: y.wi,
                           children: [
-                              (0, i.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: D.H9, alt: "" }),
+                              (0, i.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: y.H9, alt: "" }),
                               (0, i.jsx)(T.E, {
-                                  className: D.L,
+                                  className: y.L,
                                   variant: "text-sm/normal",
                                   children:
                                       null != f ? L.intl.format(L.t.JJzx48, { types: f }) : L.intl.string(L.t.IJyOUf),
@@ -129,7 +129,7 @@ function y(e) {
                                   filters: h.length > 0 ? [{ name: "", extensions: h }] : void 0,
                                   tabIndex: -1,
                                   "aria-hidden": !0,
-                                  className: D.Fg,
+                                  className: y.Fg,
                               }),
                           ],
                       }),
@@ -138,8 +138,8 @@ function y(e) {
           });
 }
 var v = n(652215),
-    b = n(386016),
-    M = n(429128);
+    b = n(820896),
+    M = n(134536);
 let P = [];
 function U(e) {
     let { channelId: t, type: n, ignoreFile: a, smallAttachments: T = !1 } = e,
@@ -149,15 +149,15 @@ function U(e) {
         {
             isApplicationCommand: N,
             commandOptions: C,
-            commandOptionStates: O,
+            commandOptionStates: R,
         } = (0, d.cf)([h.A], () => {
             let e = h.A.getActiveCommand(t);
             if (null == e) return { isApplicationCommand: !1, commandOptions: P, commandOptionStates: null };
             let n = h.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        L = r.useMemo(() => C?.filter((e) => e.type === _.n4.ATTACHMENT && O?.[e.name]?.hasValue) ?? [], [C, O]),
-        [D, U] = r.useState([]);
+        L = r.useMemo(() => C?.filter((e) => e.type === _.n4.ATTACHMENT && R?.[e.name]?.hasValue) ?? [], [C, R]),
+        [y, U] = r.useState([]);
     r.useEffect(() => {
         function e() {
             u.A.clearAll(t, n.drafts.type);
@@ -171,7 +171,7 @@ function U(e) {
         g.focusFirstVisibleItem();
     }, [g]);
     (0, f.Vo)({ event: v.jej.FOCUS_ATTACHMENT_AREA, handler: w });
-    let G = { isApplicationCommand: N, previousUploadOptions: D, uploadOptions: L },
+    let G = { isApplicationCommand: N, previousUploadOptions: y, uploadOptions: L },
         x = r.useRef(G);
     r.useEffect(() => {
         x.current = G;
@@ -202,10 +202,10 @@ function U(e) {
                           ...a,
                           className: s()(b.I, M.KK),
                           children: N
-                              ? L.map((e) => (0, i.jsx)(y, { channelId: t, keyboardModeEnabled: m, option: e }, e.name))
+                              ? L.map((e) => (0, i.jsx)(D, { channelId: t, keyboardModeEnabled: m, option: e }, e.name))
                               : k.map((e) =>
                                     (0, i.jsx)(
-                                        R.A,
+                                        O.A,
                                         {
                                             channelId: t,
                                             draftType: n.drafts.type,

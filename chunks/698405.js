@@ -5,22 +5,22 @@ var i,
     r = n(17928),
     o = n(862482),
     s = n(305866),
-    u = n(534514),
+    u = n(297264),
     c = n(834730),
     d = n(821609),
     m = n(66834),
     h = n(915089),
-    g = n(403362),
-    p = n(857071),
+    p = n(403362),
+    g = n(857071),
     f = n(652215),
     A = n(375708),
-    E = n(35787),
+    E = n(292939),
     N = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
 let v = function (e) {
     let { type: t, guild: i, closePopout: N, ctaRef: v } = e,
         x = (0, h.GV)(),
         [j, I] = a.useState(!1),
-        T = (0, r.bG)([p.A], () => p.A.isLurking(i.id), [i.id]);
+        T = (0, r.bG)([g.A], () => g.A.isLurking(i.id), [i.id]);
     a.useEffect(() => {
         j && !T && N();
     }, [j, T, N]);
@@ -34,7 +34,7 @@ let v = function (e) {
             R = A.intl.string(A.t.GXvlU9);
             break;
         default:
-            return (0, g.xb)(t);
+            return (0, p.xb)(t);
     }
     if (null == R) return null;
     async function S() {

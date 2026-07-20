@@ -1,23 +1,23 @@
-i.d(t, { e: () => o });
-var n = i(627968);
-i(64700);
-var l = i(503698),
-    s = i.n(l),
-    r = i(935462),
-    a = i(375708),
-    c = i(76488),
-    u = i(889277);
-function o(e) {
-    let { children: t, footer: i, className: l } = e;
-    return (0, n.jsx)("div", {
-        className: s()(u.zr, u.Gg, u.EX, u.vl, c.yl, l),
-        "aria-label": a.intl.string(a.t.eQ2bLp),
-        children: (0, n.jsxs)("form", {
-            className: c.Zd,
+n.d(t, { e: () => d });
+var s = n(627968);
+n(64700);
+var a = n(503698),
+    r = n.n(a),
+    o = n(935462),
+    l = n(375708),
+    i = n(779848),
+    u = n(867133);
+function d(e) {
+    let { children: t, footer: n, className: a } = e;
+    return (0, s.jsx)("div", {
+        className: r()(u.zr, u.Gg, u.EX, u.vl, i.yl, a),
+        "aria-label": l.intl.string(l.t.eQ2bLp),
+        children: (0, s.jsxs)("form", {
+            className: i.Zd,
             onSubmit: (e) => {
                 e.preventDefault();
             },
-            children: [(0, n.jsx)(r.$m, { "data-migration-pending": !0, className: c.gT, children: t }), i],
+            children: [(0, s.jsx)(o.$m, { "data-migration-pending": !0, className: i.gT, children: t }), n],
         }),
     });
 }

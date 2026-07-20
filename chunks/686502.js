@@ -1,38 +1,38 @@
-n.d(t, { y: () => M });
+n.d(t, { y: () => D });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
     r = n(554146),
     o = n(661531),
-    c = n(990078),
+    c = n(866665),
     d = n(939249),
     u = n(323384),
-    h = n(43990),
-    p = n(285796),
+    p = n(43990),
+    h = n(285796),
     m = n(192308),
     A = n(231723),
     x = n(825484),
-    g = n(821609),
-    f = n(283973),
+    f = n(821609),
+    g = n(283973),
     C = n(834730),
-    j = n(789645),
-    y = n(964486),
+    y = n(789645),
+    j = n(964486),
     v = n(648027),
     E = n(855446),
     N = n(793574),
     I = n(688810),
     T = n(975412),
-    b = n(392054),
-    _ = n(826673),
+    _ = n(392054),
+    b = n(826673),
     S = n(757293),
     R = n(174459),
     P = n(272812),
     O = n(652215),
     L = n(375708),
-    w = n(17795),
-    D = n(867010);
-function M(e) {
+    w = n(766019),
+    M = n(867010);
+function D(e) {
     let {
         channel: t,
         guild: n,
@@ -74,13 +74,13 @@ function U(e) {
                         }),
                     }),
                 }),
-                (0, i.jsx)(h.N, {
+                (0, i.jsx)(p.N, {
                     theme: O.NJ8.DARK,
                     children: (e) =>
                         (0, i.jsx)(d.D, {
                             onClick: l,
                             className: s()(e, w.lg),
-                            children: (0, i.jsx)(p.a, {
+                            children: (0, i.jsx)(h.a, {
                                 size: "md",
                                 color: "currentColor",
                                 className: w.yP,
@@ -101,12 +101,12 @@ function V(e) {
         });
     }, []);
     let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_INVITE);
-    function p() {
+    function h() {
         (0, m.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("92430"),
-                    n.e("54453"),
+                    n.e("70158"),
+                    n.e("52757"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
@@ -126,26 +126,26 @@ function V(e) {
     }
     return (0, i.jsx)(I.f5, {
         value: c,
-        children: (0, i.jsx)(h.N, {
+        children: (0, i.jsx)(p.N, {
             disableAdaptiveTheme: !0,
             theme: O.NJ8.MIDNIGHT,
             children: (e) =>
                 (0, i.jsxs)(P.A, {
                     className: s()(w.zr, w.co, e),
                     children: [
-                        (0, i.jsx)("img", { src: D, className: w.Qw, alt: "" }),
+                        (0, i.jsx)("img", { src: M, className: w.Qw, alt: "" }),
                         (0, i.jsxs)(x.e, {
                             justify: "center",
                             align: "center",
                             children: [
-                                (0, i.jsx)(g.$, {
+                                (0, i.jsx)(f.$, {
                                     variant: "secondary",
-                                    icon: f.R,
+                                    icon: g.R,
                                     text: L.intl.string(L.t["EE+P0H"]),
-                                    onClick: p,
+                                    onClick: h,
                                 }),
                                 o &&
-                                    (0, i.jsx)(g.$, {
+                                    (0, i.jsx)(f.$, {
                                         variant: "secondary",
                                         icon: u.k,
                                         text: L.intl.string(L.t.qnFavR),
@@ -160,17 +160,17 @@ function V(e) {
 }
 function k(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
-    (0, y.Ay)(() => {
+    (0, j.Ay)(() => {
         R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
         });
     });
     let u = (0, v.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
-        p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
+        { analyticsLocations: p } = (0, I.Ay)(N.A.VC_TILE_ACTIVITY_SUGGESTION),
+        h = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
     return (0, i.jsx)(I.f5, {
-        value: h,
+        value: p,
         children: (0, i.jsxs)(P.A, {
             className: w.zr,
             children: [
@@ -187,11 +187,11 @@ function k(e) {
                         (0, i.jsx)(
                             E.C,
                             {
-                                context: p,
+                                context: h,
                                 activityItem: e,
                                 aspectRatio: E.C.AspectRatio.SIXTEEN_BY_NINE,
                                 animatedDivClass: w.KU,
-                                commandOrigin: b.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
+                                commandOrigin: _.iw.VOICE_TILE_ACTIVITY_SUGGESTIONS,
                             },
                             e.application.id,
                         ),
@@ -205,7 +205,7 @@ function k(e) {
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, _.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
+                            (0, b.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT);
                     },
                     children: [
                         (0, i.jsx)(S.A, {}),
@@ -222,7 +222,7 @@ function k(e) {
                         }),
                             a();
                     },
-                    children: (0, i.jsx)(j.P, { size: "md", color: "currentColor", className: w.b }),
+                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: w.b }),
                 }),
             ],
         }),

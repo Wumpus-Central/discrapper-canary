@@ -9,7 +9,7 @@ var i = n(392054),
     d = n(573435),
     c = n(696451),
     u = n(486020),
-    _ = n(32178),
+    _ = n(678322),
     E = n(532406);
 function A(e) {
     let {
@@ -27,18 +27,18 @@ function A(e) {
             onMouseLeave: S,
             ...N
         } = e,
-        [C, R] = a.useState(!1),
-        O = a.useCallback(() => {
-            R(!0), T?.();
+        [C, O] = a.useState(!1),
+        R = a.useCallback(() => {
+            O(!0), T?.();
         }, [T]),
         L = a.useCallback(() => {
-            R(!1), m?.();
+            O(!1), m?.();
         }, [m]),
-        D = a.useCallback(() => {
-            R(!0), g?.();
-        }, [g]),
         y = a.useCallback(() => {
-            R(!1), S?.();
+            O(!0), g?.();
+        }, [g]),
+        D = a.useCallback(() => {
+            O(!1), S?.();
         }, [S]),
         v = (0, o.bG)([c.Ay], () =>
             t.application?.bot?.id != null ? c.Ay.getMember(n, t.application?.bot?.id) : null,
@@ -60,10 +60,10 @@ function A(e) {
     return (0, r.jsx)("div", {
         ...N,
         className: l()(_.iE, I, { [_.rb]: f, [_.wH]: f && s }),
-        onFocus: O,
+        onFocus: R,
         onBlur: L,
-        onMouseOver: D,
-        onMouseLeave: y,
+        onMouseOver: y,
+        onMouseLeave: D,
         children: (0, r.jsx)(d.Ay, {
             className: _.dK,
             mask: p || (f && (s || C)) ? d.hW.SQUIRCLE : d.hW.AVATAR_DEFAULT,
@@ -76,7 +76,7 @@ function A(e) {
 var h = n(633018),
     I = n(406810),
     f = n(73510),
-    p = n(824527);
+    p = n(958351);
 function T(e) {
     let { section: t, className: n, width: i, height: a, padding: s, isSelected: o, selectable: d = !1, ...c } = e,
         u = (function (e) {

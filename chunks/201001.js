@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(656470),
+    l = n(515029),
     o = n.n(l),
     d = n(187322),
     c = n(936005),
@@ -18,7 +18,7 @@ let f = Object.freeze({ spacerTop: 0, totalHeight: 0, items: [], isSidebarVisibl
 var p = n(789279),
     T = n(584648),
     m = n(751591),
-    g = n(45596);
+    g = n(340380);
 function S(e, t, n, a) {
     let l = (0, c.A)(e),
         S = new Map(),
@@ -37,8 +37,8 @@ function S(e, t, n, a) {
             {
                 className: R,
                 onScroll: L,
-                onResize: D = null,
-                onContentResize: y = null,
+                onResize: y = null,
+                onContentResize: D = null,
                 dir: v = "ltr",
                 sections: b,
                 sectionHeight: M,
@@ -121,7 +121,7 @@ function S(e, t, n, a) {
                         let e = Math.max(0, g * o);
                         return null != s && e < s;
                     }, [o, g, s]),
-                    D = (0, r.useMemo)(
+                    y = (0, r.useMemo)(
                         () =>
                             m > 0
                                 ? p.current
@@ -139,8 +139,8 @@ function S(e, t, n, a) {
                         [m, g, S, n, i, a, l, c, d, t, T, o, _],
                     );
                 return (
-                    (0, r.useLayoutEffect)(() => void (p.current = D)),
-                    { ...D, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
+                    (0, r.useLayoutEffect)(() => void (p.current = y)),
+                    { ...y, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
                 );
             })({
                 sections: b,
@@ -156,10 +156,10 @@ function S(e, t, n, a) {
                 getAnchorId: W,
             }),
             eT = (0, p.A)(ed),
-            em = r.useRef(D),
-            eg = r.useRef(y);
+            em = r.useRef(y),
+            eg = r.useRef(D);
         r.useLayoutEffect(() => {
-            (em.current = D), (eg.current = y);
+            (em.current = y), (eg.current = D);
         });
         let eS = r.useCallback(
                 function () {

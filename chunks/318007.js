@@ -1,4 +1,4 @@
-n.d(t, { t: () => C });
+n.d(t, { t: () => h });
 var l = n(627968);
 n(64700);
 var i = n(503698),
@@ -10,23 +10,23 @@ var i = n(503698),
     c = n(242874),
     d = n(75825),
     p = n(238017),
-    m = n(92814);
-function C(e) {
+    m = n(796174);
+function h(e) {
     let { isShopGift: t } = e,
         {
             giftRecipient: n,
             selectedGiftStyle: i,
-            emojiConfetti: C,
-            soundEffect: h,
+            emojiConfetti: h,
+            soundEffect: C,
             setEmojiConfetti: E,
             setSoundEffect: f,
         } = (0, s.Pv)(),
         A = (0, u.lo)(n, t),
-        y = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        S = A !== u.tB.DEFAULT;
+        S = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        y = A !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            S &&
+            y &&
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [
@@ -44,17 +44,17 @@ function C(e) {
                                       })
                                     : (0, l.jsx)(a.y, { className: m.u1 }),
                         }),
-                        y &&
+                        S &&
                             (0, l.jsxs)("div", {
                                 className: r()(m.b7, m.Ow),
                                 children: [
                                     (0, l.jsx)(o.A, {
-                                        sound: h,
+                                        sound: C,
                                         onSelect: function (e) {
                                             null != f && f(null == e ? void 0 : e);
                                         },
                                     }),
-                                    (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == C ? void 0 : C }),
+                                    (0, l.jsx)(p.A, { setEmojiConfetti: E, emojiConfetti: null == h ? void 0 : h }),
                                 ],
                             }),
                     ],

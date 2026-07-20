@@ -5,8 +5,8 @@ var l = n(627968),
     a = n(452027),
     r = n(243721),
     o = n(17928),
-    c = n(990078),
-    d = n(192308),
+    c = n(192308),
+    d = n(866665),
     u = n(454292),
     m = n(793574),
     h = n(355622),
@@ -26,9 +26,9 @@ var l = n(627968),
     T = n(359800),
     I = n(206828),
     _ = n(769015),
-    R = n(774418),
-    k = n(375708),
-    M = n(27549);
+    M = n(559965),
+    R = n(375708),
+    k = n(215965);
 function w(e) {
     let t,
         { application: n, size: i = "md", analyticsLocation: s = m.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
@@ -39,18 +39,18 @@ function w(e) {
     let h = !1;
     return (
         "sm" === i
-            ? (t = k.intl.format(R.default.vznMVa, { onClick: () => u({ analyticsLocations: a }) }))
-            : ((t = k.intl.string(R.default.UHF2Zn)), (h = !0)),
+            ? (t = R.intl.format(M.default.vznMVa, { onClick: () => u({ analyticsLocations: a }) }))
+            : ((t = R.intl.string(M.default.UHF2Zn)), (h = !0)),
         (0, l.jsxs)("div", {
-            className: M._,
+            className: k._,
             children: [
                 (0, l.jsx)(_.A, { game: n, size: _.M.MEDIUM }),
-                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: M.d, children: t }),
+                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: k.d, children: t }),
                 h
                     ? (0, l.jsx)(E.Q, {
                           variant: "primary",
                           size: "sm",
-                          text: k.intl.string(R.default.EBSaL4),
+                          text: R.intl.string(M.default.EBSaL4),
                           onClick: () => u({ analyticsLocations: a }),
                       })
                     : null,
@@ -60,11 +60,11 @@ function w(e) {
 }
 var L = n(652215);
 n(253913);
-var D = n(939422);
+var D = n(45342);
 let P = h.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
     O = "create-game-invite-post";
 function F(e) {
-    (0, d.openModalLazy)(
+    (0, c.openModalLazy)(
         async () => {
             let { default: t } = await Promise.resolve().then(n.bind(n, 515408));
             return (n) => (0, l.jsx)(t, { ...n, parentChannel: e });
@@ -75,12 +75,12 @@ function F(e) {
 let G = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function z(e) {
     let t,
-        { parentChannel: n, transitionState: d, onClose: h } = e,
+        { parentChannel: n, transitionState: c, onClose: h } = e,
         E = i.useMemo(() => n.availableTags ?? [], [n.availableTags]),
         { application: S } = (0, b._k)(n.guild_id),
         y = (0, o.bG)([C.A, N.A], () => (0, u.A)(C.A, N.A, S?.id), [S]),
         [{ textValue: T, richValue: I }, _] = i.useState(() => (0, x.N3)()),
-        [M, F] = i.useState(!1),
+        [k, F] = i.useState(!1),
         [z, U] = i.useState(() => new Set()),
         [H, B] = i.useState(!1),
         V = i.useMemo(() => E.find((e) => e.name === b.Dg), [E]),
@@ -131,26 +131,26 @@ function z(e) {
             }
         }, [Z, J, h, T]);
     return (0, l.jsx)(s.Modal, {
-        title: k.intl.string(R.default.tOsHsu),
-        transitionState: d,
+        title: R.intl.string(M.default.tOsHsu),
+        transitionState: c,
         onClose: h,
         actions: [
-            { variant: "secondary", text: k.intl.string(k.t["ETE/oC"]), onClick: h, disabled: H },
-            { variant: "primary", text: k.intl.string(k.t.CumH4u), onClick: ee, disabled: !Z, loading: H },
+            { variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: h, disabled: H },
+            { variant: "primary", text: R.intl.string(R.t.CumH4u), onClick: ee, disabled: !Z, loading: H },
         ],
         children: (0, l.jsxs)("div", {
             className: D.rf,
             children: [
                 (0, l.jsx)(a.D, {
                     required: !0,
-                    label: k.intl.string(R.default["/mEbGf"]),
+                    label: R.intl.string(M.default["/mEbGf"]),
                     children: (0, l.jsx)(g.Ay, {
                         type: P,
                         channel: n,
-                        placeholder: k.intl.string(R.default["SU/IAE"]),
+                        placeholder: R.intl.string(M.default["SU/IAE"]),
                         textValue: T,
                         richValue: I,
-                        focused: M,
+                        focused: k,
                         onChange: q,
                         onFocus: () => F(!0),
                         onBlur: () => F(!1),
@@ -164,8 +164,8 @@ function z(e) {
                 }),
                 E.length > 0
                     ? (0, l.jsx)(a.D, {
-                          label: k.intl.string(k.t.KM6lRG),
-                          description: k.intl.formatToPlainString(R.default["yoIAe/"], { tagsMax: 5 }),
+                          label: R.intl.string(R.t.KM6lRG),
+                          description: R.intl.formatToPlainString(M.default["yoIAe/"], { tagsMax: 5 }),
                           children: (0, l.jsx)("div", {
                               className: D.GA,
                               children: E.map((e) =>
@@ -186,10 +186,10 @@ function z(e) {
                     : null,
                 (0, l.jsx)(a.D, {
                     layout: "horizontal",
-                    label: k.intl.string(R.default.Xd2NFi),
-                    description: k.intl.string(R.default.G91SYQ),
-                    children: (0, l.jsx)(c.m, {
-                        text: k.intl.formatToPlainString(R.default["0s2ICk"], { noMicTagName: b.Dg }),
+                    label: R.intl.string(M.default.Xd2NFi),
+                    description: R.intl.string(M.default.G91SYQ),
+                    children: (0, l.jsx)(d.m, {
+                        text: R.intl.formatToPlainString(M.default["0s2ICk"], { noMicTagName: b.Dg }),
                         shouldShow: null == V,
                         asContainer: !0,
                         children: (0, l.jsx)(r.d, {

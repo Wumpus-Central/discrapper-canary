@@ -2,13 +2,13 @@ n.d(t, { A: () => v });
 var l = n(627968),
     i = n(64700),
     r = n(843282),
-    s = n(990078),
-    a = n(834730),
+    s = n(834730),
+    a = n(866665),
     d = n(191023),
     c = n(428678),
     u = n(39623),
     o = n(873298),
-    x = n(26692);
+    x = n(321476);
 function m(e) {
     let { redactionType: t, label: n } = e,
         r = i.useMemo(() => {
@@ -27,7 +27,7 @@ function m(e) {
         className: x.q,
         children: [
             null != r && (0, l.jsx)(r, { size: "xs", color: "currentColor" }),
-            (0, l.jsx)(a.E, { variant: "text-md/normal", color: "text-default", children: n }),
+            (0, l.jsx)(s.E, { variant: "text-md/normal", color: "text-default", children: n }),
         ],
     });
 }
@@ -35,22 +35,22 @@ let h = i.memo(function (e) {
     let { option: t } = e;
     return (0, l.jsx)(m, { redactionType: t.value, label: t.label });
 });
-var j = n(731142);
-function f(e) {
-    let { title: t, value: n, onChange: i, options: s, isDisabled: d = !1 } = e;
+var f = n(685894);
+function j(e) {
+    let { title: t, value: n, onChange: i, options: a, isDisabled: d = !1 } = e;
     return (0, l.jsxs)("div", {
-        className: j.ar,
+        className: f.ar,
         children: [
-            (0, l.jsx)(a.E, {
+            (0, l.jsx)(s.E, {
                 variant: "text-md/medium",
                 color: d ? "text-muted" : "text-strong",
-                className: j.DD,
+                className: f.DD,
                 children: t,
             }),
             (0, l.jsx)(r.Te, {
                 variant: "text-only",
-                className: j.Lt,
-                options: s,
+                className: f.Lt,
+                options: a,
                 value: n,
                 onChange: (e) => i(e),
                 renderOptionValue: (e) => {
@@ -66,8 +66,8 @@ function f(e) {
 }
 function g(e) {
     let { tooltipText: t, ...n } = e;
-    return (0, l.jsx)(s.m, { text: t, asContainer: !0, children: (0, l.jsx)(f, { ...n }) });
+    return (0, l.jsx)(a.m, { text: t, asContainer: !0, children: (0, l.jsx)(j, { ...n }) });
 }
 function v(e) {
-    return "tooltipText" in e && null != e.tooltipText ? (0, l.jsx)(g, { ...e }) : (0, l.jsx)(f, { ...e });
+    return "tooltipText" in e && null != e.tooltipText ? (0, l.jsx)(g, { ...e }) : (0, l.jsx)(j, { ...e });
 }

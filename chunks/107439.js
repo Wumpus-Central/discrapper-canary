@@ -235,7 +235,7 @@ function w(l) {
                                 .then((l) => l.idCaptureMachine)
                       : "ID_OCR" === l
                         ? () =>
-                              Promise.all([d.e("97925"), d.e("4641")])
+                              Promise.all([d.e("97925"), d.e("27022")])
                                   .then(d.bind(d, 803581))
                                   .then((l) => l.idOcrStateMachine)
                         : "CPF_OCR" === l
@@ -465,11 +465,11 @@ var R = {
             .then(d.bind(d, 121856))
             .then((l) => l.MandatoryConsent),
     SIGNATURE: () =>
-        Promise.all([d.e("17294"), d.e("54457")])
+        Promise.all([d.e("17294"), d.e("76838")])
             .then(d.bind(d, 704325))
             .then((l) => l.Signature),
     ID_OCR: () =>
-        Promise.all([d.e("97925"), d.e("4641"), d.e("31907")])
+        Promise.all([d.e("97925"), d.e("27022"), d.e("31907")])
             .then(d.bind(d, 758350))
             .then((l) => l.IdOcr),
     CPF_OCR: () =>

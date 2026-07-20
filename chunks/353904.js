@@ -2,9 +2,9 @@ s.d(e, { default: () => q });
 var l = s(627968),
     a = s(64700),
     i = s(17928),
-    n = s(821609),
-    r = s(935462),
-    h = s(534514),
+    n = s(935462),
+    r = s(821609),
+    h = s(297264),
     o = s(228366),
     c = s(356645),
     d = s(636537),
@@ -38,7 +38,7 @@ var m = s(92077),
     S = s(975571),
     b = s(428262),
     T = s(375708),
-    L = s(470330);
+    L = s(103930);
 class j extends a.Component {
     state = {
         hasAcceptedEULA: !this.props.forceShow && this.props.hasPreviouslyAcceptedEULA,
@@ -93,8 +93,8 @@ class j extends a.Component {
                                     onClick: (e) => {
                                         (0, v.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
-                                                s.e("5096"),
-                                                s.e("71568"),
+                                                s.e("38028"),
+                                                s.e("60464"),
                                                 s.e("92064"),
                                                 s.e("87297"),
                                             ]).then(s.bind(s, 294264));
@@ -181,7 +181,7 @@ s(321073);
 var O = s(691885),
     k = s(466472),
     R = s(19575),
-    w = s(139189);
+    w = s(245109);
 let F = "select";
 class W extends a.PureComponent {
     state = { newInstallationPath: null };
@@ -302,7 +302,7 @@ let K = i.Ay.connectStores([B.A], () => ({
     installationPaths: B.A.installationPaths,
     installationPathsMetadata: B.A.installationPathsMetadata,
 }))(W);
-var V = s(442348);
+var V = s(548268);
 class Z extends a.Component {
     state = {
         selectedInstallationPath: this.props.defaultInstallationPath,
@@ -367,7 +367,7 @@ class Z extends a.Component {
     renderButton() {
         let { buildId: t } = this.props,
             { hasError: e, hasAcceptedNeccessaryTerms: s } = this.state;
-        return (0, l.jsx)(n.$, {
+        return (0, l.jsx)(r.$, {
             variant: "active",
             text: T.intl.string(T.t.nL0WvC),
             disabled: e || null == t || !s,
@@ -377,15 +377,15 @@ class Z extends a.Component {
     render() {
         let { application: t, buildSizeKB: e, transitionState: s } = this.props,
             { selectedInstallationPath: a, isInstalling: i } = this.state,
-            n = null != t && t.getSplashURL(440);
-        return (0, l.jsxs)(r.EO, {
+            r = null != t && t.getSplashURL(440);
+        return (0, l.jsxs)(n.EO, {
             transitionState: s,
-            size: r.rI.SMALL,
+            size: n.rI.SMALL,
             "aria-label": T.intl.string(T.t.PphjtJ),
             parentComponent: "ApplicationInstallationModal",
             children: [
-                null != n ? (0, l.jsx)("div", { className: V.Yi, style: { backgroundImage: `url(${n})` } }) : null,
-                (0, l.jsxs)(r.rQ, {
+                null != r ? (0, l.jsx)("div", { className: V.Yi, style: { backgroundImage: `url(${r})` } }) : null,
+                (0, l.jsxs)(n.rQ, {
                     justify: D.A.Justify.BETWEEN,
                     children: [
                         (0, l.jsx)(D.A.Child, {
@@ -395,10 +395,10 @@ class Z extends a.Component {
                                 children: T.intl.string(T.t.PphjtJ),
                             }),
                         }),
-                        (0, l.jsx)(D.A.Child, { grow: 0, children: (0, l.jsx)(r.s_, { onClick: this.close }) }),
+                        (0, l.jsx)(D.A.Child, { grow: 0, children: (0, l.jsx)(n.s_, { onClick: this.close }) }),
                     ],
                 }),
-                (0, l.jsxs)(r.$m, {
+                (0, l.jsxs)(n.$m, {
                     children: [
                         (0, l.jsxs)(D.A, {
                             align: D.A.Align.CENTER,
@@ -430,7 +430,7 @@ class Z extends a.Component {
                         }),
                     ],
                 }),
-                (0, l.jsx)(r.jl, { children: this.renderButton() }),
+                (0, l.jsx)(n.jl, { children: this.renderButton() }),
             ],
         });
     }

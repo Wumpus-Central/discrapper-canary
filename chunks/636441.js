@@ -1,29 +1,29 @@
-n.d(t, { A: () => s });
-var a = n(627968);
-n(64700);
-var i = n(772707),
-    c = n(834730),
-    r = n(375708),
-    l = n(561920);
-function s(e) {
-    let t,
-        { transitionState: n, guild: s, guildBoostQuantity: o, isTransfer: d, graphic: u, onClose: b } = e,
-        p = s?.name;
-    t = d
-        ? null == p
+t.d(e, { A: () => c });
+var l = t(627968);
+t(64700);
+var n = t(772707),
+    i = t(834730),
+    r = t(375708),
+    s = t(856e3);
+function c(a) {
+    let e,
+        { transitionState: t, guild: c, guildBoostQuantity: o, isTransfer: h, graphic: d, onClose: u } = a,
+        m = c?.name;
+    e = h
+        ? null == m
             ? r.intl.format(r.t.mYRfYx, {})
-            : r.intl.format(r.t["Ps/5bb"], { guildName: p })
-        : null == p
+            : r.intl.format(r.t["Ps/5bb"], { guildName: m })
+        : null == m
           ? r.intl.format(r.t["4fw/T2"], { guildSubscriptionQuantity: o })
-          : r.intl.format(r.t.IeFTQu, { guildName: p, guildSubscriptionQuantity: o });
-    let f = d ? r.intl.string(r.t["5uYZHN"]) : r.intl.string(r.t.mpb7t3),
-        m = [{ variant: "primary", text: r.intl.string(r.t["/iTxgz"]), onClick: b }];
-    return (0, a.jsx)(i.k, {
-        transitionState: n,
-        onClose: b,
-        graphic: u,
-        title: f,
-        actions: m,
-        children: (0, a.jsx)(c.E, { variant: "text-md/normal", className: l.x, children: t }),
+          : r.intl.format(r.t.IeFTQu, { guildName: m, guildSubscriptionQuantity: o });
+    let p = h ? r.intl.string(r.t["5uYZHN"]) : r.intl.string(r.t.mpb7t3),
+        x = [{ variant: "primary", text: r.intl.string(r.t["/iTxgz"]), onClick: u }];
+    return (0, l.jsx)(n.k, {
+        transitionState: t,
+        onClose: u,
+        graphic: d,
+        title: p,
+        actions: x,
+        children: (0, l.jsx)(i.E, { variant: "text-md/normal", className: s.x, children: e }),
     });
 }

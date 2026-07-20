@@ -7,13 +7,13 @@ var l = n(627968),
     s = n(834730),
     c = n(565645),
     u = n(375708),
-    d = n(65242);
+    d = n(847194);
 function m(e) {
     return null != e && (null != e.id || null != e.name);
 }
 function h(e) {
-    let { options: t, value: n, onChange: h, canBeNew: p, memberCounts: x } = e,
-        g = i.useMemo(() => {
+    let { options: t, value: n, onChange: h, canBeNew: p, memberCounts: g } = e,
+        x = i.useMemo(() => {
             let e = new Map();
             return (
                 t.forEach((t) => {
@@ -22,7 +22,7 @@ function h(e) {
                 e
             );
         }, [t]),
-        A = i.useMemo(() => {
+        f = i.useMemo(() => {
             let e = [];
             return (
                 t.forEach((t) => {
@@ -31,10 +31,10 @@ function h(e) {
                 e
             );
         }, [t]),
-        f = i.useCallback(
+        A = i.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = g.get(e.value);
+                let t = x.get(e.value);
                 if (null != t && m(t.emoji))
                     return (0, l.jsx)(c.A, {
                         emojiId: t.emoji?.id,
@@ -42,15 +42,15 @@ function h(e) {
                         animated: t.emoji?.animated ?? !1,
                     });
             },
-            [g],
+            [x],
         ),
         C = i.useCallback(
             (e, t) => {
                 if (null == e || t.inPill) return;
-                let n = g.get(e.value);
+                let n = x.get(e.value);
                 if (null == n || !m(n.emoji)) return;
-                let i = null == x || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => x[e])),
-                    r = null != x && i > 0;
+                let i = null == g || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => g[e])),
+                    r = null != g && i > 0;
                 return (0, l.jsxs)("div", {
                     className: d.ei,
                     children: [
@@ -74,27 +74,27 @@ function h(e) {
                     ],
                 });
             },
-            [p, x, g],
+            [p, g, x],
         ),
         j = i.useCallback(
             (e) => {
                 let t = [];
                 e.forEach((e) => {
-                    let n = g.get(e);
+                    let n = x.get(e);
                     null != n && t.push(n);
                 }),
                     h(t);
             },
-            [h, g],
+            [h, x],
         );
     return (0, l.jsx)(r.p, {
         multi: !0,
-        options: A,
+        options: f,
         onChange: j,
         value: n,
         closeOnSelect: !1,
         renderOptionSuffix: C,
-        renderOptionPrefix: f,
+        renderOptionPrefix: A,
         "data-migration-pending": !0,
     });
 }

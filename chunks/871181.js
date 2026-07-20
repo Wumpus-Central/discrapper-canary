@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => y });
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -10,27 +10,27 @@ var l = n(627968),
     d = n(138617),
     p = n(915089),
     m = n(95701),
-    C = n(202541),
-    h = n(652215),
+    h = n(202541),
+    C = n(652215),
     E = n(375708),
-    A = n(905126);
-let f = (0, m.createChannelRecord)({ id: "1", type: h.rbe.DM }),
-    y = (0, p.Ld)();
-function S(e) {
+    f = n(25766);
+let A = (0, m.createChannelRecord)({ id: "1", type: C.rbe.DM }),
+    S = (0, p.Ld)();
+function y(e) {
     let {
             label: t = E.intl.string(E.t.B3miE8),
             onTextChange: n,
             pendingText: r,
             currentText: p,
             className: m,
-            innerClassName: h,
-            disableThemedBackground: S = !1,
+            innerClassName: C,
+            disableThemedBackground: y = !1,
         } = e,
-        [P, T] = i.useState(r ?? p),
-        [I, _] = i.useState((0, c.x7)(P)),
+        [P, I] = i.useState(r ?? p),
+        [_, T] = i.useState((0, c.x7)(P)),
         g = i.useRef(!1);
     function x(e, t, l) {
-        t !== P && (T(t), _(l), n(t));
+        t !== P && (I(t), T(l), n(t));
     }
     function v() {
         return new Promise((e) => {
@@ -44,26 +44,26 @@ function S(e) {
         i.useEffect(() => {
             if (void 0 === r) {
                 let e = (0, c.x7)(p);
-                T(p), _(e);
+                I(p), T(e);
             }
         }, [r, p]),
         (0, l.jsx)("div", {
-            className: a()(A.rf, m),
+            className: a()(f.rf, m),
             children: (0, l.jsx)(s.D, {
                 label: t,
                 children: (e) =>
                     (0, l.jsxs)(l.Fragment, {
                         children: [
                             (0, l.jsx)(d.Ay, {
-                                "aria-describedby": `${e.describedById} ${y}`,
+                                "aria-describedby": `${e.describedById} ${S}`,
                                 "aria-labelledby": e.labelId,
-                                innerClassName: a()(A.Tg, h),
-                                editorClassName: A.OT,
-                                maxCharacterCount: C.Jo,
+                                innerClassName: a()(f.Tg, C),
+                                editorClassName: f.OT,
+                                maxCharacterCount: h.Jo,
                                 onChange: x,
-                                channel: f,
+                                channel: A,
                                 textValue: P,
-                                richValue: I,
+                                richValue: _,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
                                     g.current = !1;
@@ -73,9 +73,9 @@ function S(e) {
                                 },
                                 focused: g.current,
                                 onSubmit: v,
-                                disableThemedBackground: S,
+                                disableThemedBackground: y,
                             }),
-                            (0, l.jsx)(o.A, { id: y, children: E.intl.format(E.t["+DFxLc"], { maxLength: C.Jo }) }),
+                            (0, l.jsx)(o.A, { id: S, children: E.intl.format(E.t["+DFxLc"], { maxLength: h.Jo }) }),
                         ],
                     }),
             }),

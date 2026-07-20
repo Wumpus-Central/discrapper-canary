@@ -21,20 +21,20 @@ var r = n(503698),
     m = n(165610),
     g = n(652215),
     S = n(360469),
-    N = n(970682),
-    C = n(27600),
-    R = n(604949);
-function O(e) {
+    N = n(157690),
+    C = n(429904),
+    O = n(794005);
+function R(e) {
     let { isLoading: t } = e,
         n = (0, s.bG)([p.A], () => p.A.getConnectedFrame()),
         r = (0, s.bG)([p.A], () => p.A.getFrameLayoutMode()),
         c = (0, _.h)(n?.applicationId),
         u = (0, s.bG)([p.A], () => null != c && p.A.isProxyTicketRefreshing(c.id), [c]),
-        O = (0, s.bG)([E.A], () => E.A.getWindowOpen(g.MLl.ACTIVITY_POPOUT)),
+        R = (0, s.bG)([E.A], () => E.A.getWindowOpen(g.MLl.ACTIVITY_POPOUT)),
         L = (0, s.bG)([I.A], () => I.A.isFrameHidden()),
-        D = r === m.y.PIP && !L && !O,
-        y = D && null != I.A.pipVideoWindow && null != I.A.pipFrameWindow;
-    if (null == n || null == c || O) return null;
+        y = r === m.y.PIP && !L && !R,
+        D = y && null != I.A.pipVideoWindow && null != I.A.pipFrameWindow;
+    if (null == n || null == c || R) return null;
     let v = { instance_id: "example-cl-instance", platform: S.vu.DESKTOP };
     return (
         null != n.proxyTicket && (v.discord_proxy_ticket = n.proxyTicket),
@@ -43,14 +43,14 @@ function O(e) {
             children: (e) => {
                 let { idle: r, onActive: s, onForceIdle: _ } = e;
                 return (0, i.jsxs)(A.A, {
-                    className: a()(N.zr, { [N.NW]: D, [R.a8]: D, [C.N7]: r, [N.p0]: D, [N.R]: L, [N.Gq]: y }),
-                    noBorder: !D,
+                    className: a()(N.zr, { [N.NW]: y, [O.a8]: y, [C.N7]: r, [N.p0]: y, [N.R]: L, [N.Gq]: D }),
+                    noBorder: !y,
                     children: [
                         (0, i.jsx)("div", {
                             className: "theme-dark",
                             children: (function (e) {
                                 let { onActive: t, onForceIdle: r, idle: a } = e;
-                                return D && null != n
+                                return y && null != n
                                     ? (0, i.jsxs)(i.Fragment, {
                                           children: [
                                               (0, i.jsx)("div", {
@@ -78,14 +78,14 @@ function O(e) {
                             })({ onActive: s, onForceIdle: _, idle: r }),
                         }),
                         t || u
-                            ? (0, i.jsx)(l.y, { className: a()(N.pU, { [N.p0]: D }) })
+                            ? (0, i.jsx)(l.y, { className: a()(N.pU, { [N.p0]: y }) })
                             : (0, i.jsx)(d.o, {
                                   allowPopups: (0, o.b)(c),
                                   referrerPolicy: "origin",
                                   url: n.url,
                                   queryParams: v,
-                                  className: a()(N.pU, { [N.p0]: D, [N.v8]: D }),
-                                  shouldRefocus: !D,
+                                  className: a()(N.pU, { [N.p0]: y, [N.v8]: y }),
+                                  shouldRefocus: !y,
                               }),
                     ],
                 });
@@ -96,5 +96,5 @@ function O(e) {
 let L = () => {
     let { analyticsLocations: e } = (0, u.Ay)(c.A.FRAME_PIP),
         t = (0, s.bG)([p.A], () => p.A.isFrameActive());
-    return (0, i.jsx)(u.f5, { value: e, children: (0, i.jsx)(O, { isLoading: !t }) });
+    return (0, i.jsx)(u.f5, { value: e, children: (0, i.jsx)(R, { isLoading: !t }) });
 };

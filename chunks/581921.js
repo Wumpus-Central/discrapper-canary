@@ -25,9 +25,9 @@ function h(e) {
     });
 }
 var N = s(652215),
-    A = s(962995),
+    A = s(778414),
     j = s(375708),
-    C = s(75662);
+    C = s(738894);
 let E = {
         "Logitech G": { title: A.default.jkdhZq, titleParams: { discountPercent: f.aW }, body: A.default.mH30Yx },
         "Logitech 5%": {

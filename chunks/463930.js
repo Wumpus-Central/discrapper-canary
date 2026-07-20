@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(775602),
     _ = n(36075),
     E = n(545442),
-    A = n(791347);
+    A = n(71411);
 function h(e) {
     let {
             roleStyle: t,
@@ -32,19 +32,19 @@ function h(e) {
         C = r.useCallback(() => {
             N(!0);
         }, []),
-        R = r.useCallback(() => {
+        O = r.useCallback(() => {
             N(!1);
         }, []),
-        O = "username" === t,
+        R = "username" === t,
         L = null != d && null != d.primaryColor && null != d.secondaryColor,
-        D = O && L,
+        y = R && L,
         {
-            gradientStyle: y,
+            gradientStyle: D,
             gradientClassname: v,
             gradientGlowClassname: b,
         } = (0, _.v5)({ colorStrings: d, roleStyle: "username", animateGradient: f || S || g?.animate }),
         M = (0, _.CR)(n),
-        P = { className: s()(A.UU, I, T, { [A.Xh]: O, [v]: D }), children: M },
+        P = { className: s()(A.UU, I, T, { [A.Xh]: R, [v]: y }), children: M },
         U = { className: s()(A.lD, b, T), children: n },
         w =
             "dot" === t
@@ -59,17 +59,17 @@ function h(e) {
     return (0, i.jsxs)("span", {
         className: s()(h, A.kL, { [A.mO]: m }),
         onMouseEnter: C,
-        onMouseLeave: R,
+        onMouseLeave: O,
         children: [
             "left" === u && w,
             (0, i.jsxs)("span", {
                 className: s()(A.VW, { [A.mO]: m }),
-                style: { color: O && !L && null != a ? a : void 0, ...(D ? y : {}) },
+                style: { color: R && !L && null != a ? a : void 0, ...(y ? D : {}) },
                 children: [
                     null != p
                         ? (0, i.jsx)(l.E, { tag: "span", color: "currentColor", variant: p, ...P })
                         : (0, i.jsx)("span", { ...P }),
-                    D &&
+                    y &&
                         (null != p
                             ? (0, i.jsx)(l.E, {
                                   tag: "span",

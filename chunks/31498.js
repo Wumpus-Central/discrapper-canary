@@ -120,7 +120,7 @@ class _ extends i.EventEmitter {
                 findCommandOptionAutocompleteType: o,
                 findMatchingAutocompleteType: u,
                 getOptions: _,
-            } = await Promise.all([n.e("84253"), n.e("73220"), n.e("84806")]).then(n.bind(n, 961349));
+            } = await Promise.all([n.e("3325"), n.e("50839"), n.e("84806")]).then(n.bind(n, 961349));
         if (null == this.props.editorRef.current) return;
         let E = _(this.props),
             A = this.props.editorRef.current.getSlateEditor();
@@ -150,18 +150,18 @@ class _ extends i.EventEmitter {
         let S = l.eK.getSetting();
         E.allowSoundmoji = E.allowSoundmoji ? S : E.allowSoundmoji;
         let { results: N, metadata: C } = p.queryResults(this.props.channel, this.props.guild, T, E, m),
-            R = 0;
-        for (let e of Object.values(N)) Array.isArray(e) && (R += e.length);
+            O = 0;
+        for (let e of Object.values(N)) Array.isArray(e) && (O += e.length);
         i && T.length > 0 && T !== this.state.query?.queryText && (0, a.AR)(f, E);
-        let O = !0 === N.isLoading,
-            L = this.shouldShow(R, O, p),
-            D = this.state.selectedIndex;
-        !L || O ? (D = null) : null != D && D >= R && (D = R - 1),
+        let R = !0 === N.isLoading,
+            L = this.shouldShow(O, R, p),
+            y = this.state.selectedIndex;
+        !L || R ? (y = null) : null != y && y >= O && (y = O - 1),
             L && !this.state.isVisible && (0, a.uA)(f, this.props.channel, C),
             this.setState({
-                query: { type: f, typeInfo: p, queryText: T, results: N, resultCount: R, options: E, isLoading: O },
+                query: { type: f, typeInfo: p, queryText: T, results: N, resultCount: O, options: E, isLoading: R },
                 isVisible: L,
-                selectedIndex: D,
+                selectedIndex: y,
                 hadInitialResults: !0,
                 isInitialAfterError: !0 !== this.state.hadInitialResults && (e?.[0].error ?? !1),
             });

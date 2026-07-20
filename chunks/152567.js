@@ -44,11 +44,11 @@ function g(e) {
         ],
     });
 }
-var S = n(75753),
+var S = n(53609),
     N = (((i = {}).BLACK = "BLACK"), (i.GRAY = "GRAY"), i);
 let C = { BLACK: S.Ql, GRAY: S.wm },
-    R = { sm: 20, md: 28 };
-function O(e) {
+    O = { sm: 20, md: 28 };
+function R(e) {
     return 8 * Math.round(e / 8);
 }
 function L(e) {
@@ -62,11 +62,11 @@ function L(e) {
             notchClassName: c,
             children: u,
         } = e,
-        _ = R[i],
+        _ = O[i],
         { ref: E, width: A } = (0, p.Ay)(),
-        h = a.useMemo(() => (null != A ? O(A) : 0), [A]),
+        h = a.useMemo(() => (null != A ? R(A) : 0), [A]),
         I = a.useMemo(() => {
-            let e = Math.abs(O((h * (100 - Math.max(0, Math.min(100, n)))) / 100) - h);
+            let e = Math.abs(R((h * (100 - Math.max(0, Math.min(100, n)))) / 100) - h);
             return { transform: `translateX(${e}px)` };
         }, [n, h]),
         f = a.useMemo(
@@ -95,7 +95,7 @@ var y = n(186295),
     v = n(174459),
     b = n(652215),
     M = n(375708),
-    P = n(32854);
+    P = n(692054);
 class U extends a.PureComponent {
     _initTimeout = new _.Ep();
     _silenceTimeout = new _.Ep();

@@ -5,9 +5,9 @@ var i = n(627968),
     a = n.n(r),
     s = n(508770),
     l = n(349288),
-    o = n(534514),
+    o = n(297264),
     d = n(834730),
-    c = n(824078);
+    c = n(77006);
 function u(e) {
     let { title: t, body: n, badge: r, className: s, textLink: u } = e,
         A = u?.external ?? !0;

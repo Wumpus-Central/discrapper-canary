@@ -5,7 +5,7 @@ var s = n(627968),
     r = n.n(a),
     l = n(889137),
     o = n(744593),
-    c = n(534514),
+    c = n(297264),
     d = n(123292),
     u = n(834730),
     h = n(821609),
@@ -15,7 +15,7 @@ var s = n(627968),
     p = n(438437),
     g = n(306417),
     A = n(375708),
-    f = n(233271);
+    f = n(996983);
 function j(e) {
     let { didSelfVote: t, label: n, percentage: i } = e;
     return (0, s.jsxs)("div", {
@@ -70,14 +70,14 @@ function y(e) {
 }
 var v = n(290794),
     C = n(789646),
-    b = n(580929),
+    b = n(523939),
     N = n(615300),
-    E = n(990078),
+    E = n(866665),
     I = n(717421),
     T = n(915089),
     _ = n(956703),
     V = n(969632),
-    k = n(140957);
+    k = n(746013);
 function L(e) {
     let { percentage: t, label: n, canShowVoterDetails: a, answerId: r } = e,
         l = (0, T.GV)(),
@@ -245,7 +245,7 @@ function O(e) {
         ...r,
     });
 }
-var U = n(2445);
+var U = n(815437);
 function B(e) {
     let { media: t } = e;
     return (0, s.jsx)(c.D, {

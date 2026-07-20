@@ -4,35 +4,35 @@ var i = n(627968),
     a = n(503698),
     s = n.n(a),
     r = n(17928),
-    o = n(990078),
-    c = n(778712),
-    d = n(834730),
-    u = n(548411),
-    h = n(939249),
-    p = n(22231),
+    o = n(778712),
+    c = n(834730),
+    d = n(548411),
+    u = n(866665),
+    p = n(939249),
+    h = n(22231),
     m = n(192308),
     A = n(254138),
     x = n(661531),
-    g = n(730134),
-    f = n(440594),
+    f = n(730134),
+    g = n(440594),
     C = n(793574),
-    j = n(429913),
-    y = n(47167),
+    y = n(429913),
+    j = n(47167),
     v = n(882840),
     E = n(713654),
     N = n(611371),
     I = n(769015),
     T = n(208971),
-    b = n(446243),
-    _ = n(920639),
+    _ = n(446243),
+    b = n(920639),
     S = n(360729),
     R = n(508654),
     P = n(974930),
     O = n(961314),
     L = n(58736),
     w = n(742589),
-    D = n(376352),
-    M = n(353428),
+    M = n(376352),
+    D = n(353428),
     U = n(46054),
     V = n(527549),
     k = n(665691),
@@ -43,22 +43,22 @@ var i = n(627968),
     z = n(136523),
     W = n(806931),
     Y = n(375708),
-    K = n(662731),
-    X = n(82644),
-    Z = n(992595);
-function $(e) {
+    K = n(189090),
+    X = n(188628),
+    Z = n(168147);
+function q(e) {
     let { user: t, channel: n, stream: l, color: a } = e,
         s = (0, B.A)(n, t, l);
     return null == t || null == l
         ? null
         : (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(g.A, { className: X.my, size: c._3.SIZE_24, user: t, animate: !1 }),
-                  (0, i.jsx)(d.E, { variant: "text-md/medium", color: a, lineClamp: 1, children: s }),
+                  (0, i.jsx)(f.A, { className: X.my, size: o._3.SIZE_24, user: t, animate: !1 }),
+                  (0, i.jsx)(c.E, { variant: "text-md/medium", color: a, lineClamp: 1, children: s }),
               ],
           });
 }
-function q(e) {
+function $(e) {
     let t,
         { focusedApplication: n, focusedParticipant: l, channel: a } = e,
         s = (0, R.Qs)(a.id),
@@ -70,11 +70,11 @@ function q(e) {
                 children: [
                     (0, i.jsx)(L.Ay.Divider, { className: X.yF }),
                     (0, i.jsx)(I.A, { game: n, className: X.RI }),
-                    (0, i.jsx)(d.E, {
+                    (0, i.jsx)(c.E, {
                         className: X.W$,
                         variant: "text-md/normal",
                         color: "none",
-                        children: (0, f.A)(n.name),
+                        children: (0, g.A)(n.name),
                     }),
                 ],
             }));
@@ -84,15 +84,15 @@ function q(e) {
         t = (0, i.jsxs)(i.Fragment, {
             children: [
                 (0, i.jsx)(L.Ay.Divider, { className: X.yF }),
-                (0, i.jsx)($, { user: e, channel: a, stream: n, color: "text-strong" }),
-                (0, i.jsx)(D.F, { user: e, stream: n, channel: a }),
+                (0, i.jsx)(q, { user: e, channel: a, stream: n, color: "text-strong" }),
+                (0, i.jsx)(M.F, { user: e, stream: n, channel: a }),
             ],
         });
     } else o && (t = (0, i.jsx)(O.A, { guildEvent: s, recurrenceId: r }));
     return (0, i.jsx)("div", { className: X.kL, children: t });
 }
 function Q(e) {
-    let { channel: t, guild: a, appContext: c, inCall: g, isChatOpen: f, exitFullScreen: I, guildRoomVisible: R } = e,
+    let { channel: t, guild: a, appContext: o, inCall: f, isChatOpen: g, exitFullScreen: I, guildRoomVisible: R } = e,
         { focusedParticipant: P } = (0, r.cf)(
             [G.A],
             () => ({
@@ -102,26 +102,26 @@ function Q(e) {
             [t.id],
         ),
         { enabled: O } = S.A.useExperiment({ guildId: a?.id, location: "ChannelCallHeader" }),
-        D = O && !R,
-        B = (0, y.Ay)(t),
-        $ = D ? Y.intl.string(K.default.f7g0DK) : R ? `${B} \xb7 ${Y.intl.string(K.default.wRLmM0)}` : B,
-        Q = D ? u.Z : (0, E.gU)(t),
-        [J] = (0, j.A)(P?.type === W.lp.ACTIVITY ? [P.applicationId] : []),
+        M = O && !R,
+        B = (0, j.Ay)(t),
+        q = M ? Y.intl.string(K.default.f7g0DK) : R ? `${B} \xb7 ${Y.intl.string(K.default.wRLmM0)}` : B,
+        Q = M ? d.Z : (0, E.gU)(t),
+        [J] = (0, y.A)(P?.type === W.lp.ACTIVITY ? [P.applicationId] : []),
         ee = Y.intl.string(Y.t.BVZqJl);
     t.isDM() ? (ee = Y.intl.string(Y.t.jN2DfZ)) : t.isGroupDM() && (ee = Y.intl.string(Y.t["e5y+gm"]));
     let et = (0, T.G)((0, v.l)(t)),
-        en = t.isGuildVoice() && g && null != et && et.length > 0,
+        en = t.isGuildVoice() && f && null != et && et.length > 0,
         ei = (0, H.Ay)(t),
         el = en
             ? (0, i.jsx)("div", {
                   className: X.Ke,
-                  children: (0, i.jsx)(o.m, {
+                  children: (0, i.jsx)(u.m, {
                       asContainer: !0,
                       text: Y.intl.string(Y.t.Mgpxiw),
                       delay: 500,
                       position: "bottom",
                       shouldShow: ei,
-                      children: (0, i.jsxs)(h.D, {
+                      children: (0, i.jsxs)(p.D, {
                           className: s()(X.WH, { [X.BI]: ei }),
                           onClick: ei
                               ? function () {
@@ -135,13 +135,13 @@ function Q(e) {
                                 }
                               : void 0,
                           children: [
-                              (0, i.jsx)(d.E, {
+                              (0, i.jsx)(c.E, {
                                   variant: "text-xs/normal",
                                   className: s()(X.Gh, Z.PT, { [X.BI]: ei }),
                                   children: U.A.parseVoiceChannelStatus(et, !0, { channelId: t.id }),
                               }),
                               ei &&
-                                  (0, i.jsx)(p.R, {
+                                  (0, i.jsx)(h.R, {
                                       size: "custom",
                                       color: "currentColor",
                                       className: s()(X.rD, X.BI),
@@ -155,10 +155,10 @@ function Q(e) {
             : null,
         ea = (0, k.bG)({ channelId: t.id }),
         es = l.useCallback(() => {
-            D &&
-                ((0, b.zD)(t.id),
-                (0, _.yt)({ channelId: t.id, guildId: t.guild_id, location: C.A.CHANNEL_CALL, guildRoomOpen: !0 }));
-        }, [D, t.id, t.guild_id]);
+            M &&
+                ((0, _.zD)(t.id),
+                (0, b.yt)({ channelId: t.id, guildId: t.guild_id, location: C.A.CHANNEL_CALL, guildRoomOpen: !0 }));
+        }, [M, t.id, t.guild_id]);
     return (0, i.jsxs)("div", {
         className: X.SC,
         children: [
@@ -171,9 +171,9 @@ function Q(e) {
                 childrenBottom: el,
                 toolbar: (0, i.jsx)(F.A, {
                     channel: t,
-                    appContext: c,
-                    inCall: g,
-                    isChatOpen: f,
+                    appContext: o,
+                    inCall: f,
+                    isChatOpen: g,
                     exitFullScreen: I,
                     focusedApplication: J,
                     shouldShowHeaderParticipants: !0,
@@ -182,20 +182,20 @@ function Q(e) {
                 children: [
                     (0, i.jsx)(L.Ay.Title, {
                         wrapperClassName: X.DD,
-                        onClick: D ? es : void 0,
+                        onClick: M ? es : void 0,
                         children: (0, i.jsxs)(i.Fragment, {
                             children: [
                                 null != Q
                                     ? (0, i.jsx)(L.Ay.ChannelIcon, {
                                           icon: Q,
                                           "aria-label": ee,
-                                          color: D ? "white" : void 0,
+                                          color: M ? "white" : void 0,
                                       })
                                     : null,
-                                $,
+                                q,
                                 O && (0, i.jsx)(N.A, { className: X.vW }),
                                 ea &&
-                                    (0, i.jsx)(o.m, {
+                                    (0, i.jsx)(u.m, {
                                         text: Y.intl.string(Y.t.QyZ4Td),
                                         children: (0, i.jsx)(A.m, {
                                             size: "xs",
@@ -207,8 +207,8 @@ function Q(e) {
                             ],
                         }),
                     }),
-                    (0, i.jsx)(M.i$, { channel: t, guild: a }),
-                    (0, i.jsx)(q, { focusedApplication: J, focusedParticipant: P, channel: t }),
+                    (0, i.jsx)(D.i$, { channel: t, guild: a }),
+                    (0, i.jsx)($, { focusedApplication: J, focusedParticipant: P, channel: t }),
                 ],
             }),
             (0, i.jsx)(V.A, { channelId: t.id }),

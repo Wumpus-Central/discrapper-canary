@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(580929),
+    l = n(523939),
     o = n(113325),
     d = n(315629),
     c = n(17928),
@@ -17,7 +17,7 @@ var i = n(627968),
 let f = { mass: 1, tension: 800, friction: 32 },
     p = { mass: 1, tension: 1200, friction: 48 };
 var T = n(818348),
-    m = n(824078);
+    m = n(77006);
 let g = r.createContext(null),
     S = T.FX;
 function N(e) {
@@ -28,8 +28,8 @@ function N(e) {
             onRequestClose: T,
             position: N = "top",
             align: C,
-            alignmentStrategy: R = "trigger-center",
-            caretConfig: O,
+            alignmentStrategy: O = "trigger-center",
+            caretConfig: R,
             hasVideo: L = !1,
             gradientColor: y,
             gradientOffsetBottom: D = 0.4,
@@ -117,7 +117,7 @@ function N(e) {
             },
         }),
         Q = r.useMemo(() => {
-            if ("edge" === R && null != C) {
+            if ("edge" === O && null != C) {
                 let e = "top" === F || "bottom" === F,
                     t = "left" === F || "right" === F;
                 if (e) {
@@ -125,9 +125,9 @@ function N(e) {
                 } else if (t && ("top" === C || "center" === C || "bottom" === C)) return C;
             }
             return "center";
-        }, [R, C, F]),
+        }, [O, C, F]),
         J = r.useMemo(() => {
-            if ("edge" !== R)
+            if ("edge" !== O)
                 return (function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "center",
                         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "top",
@@ -146,9 +146,9 @@ function N(e) {
                         default:
                             return 0;
                     }
-                })(O?.align ?? "center", F, W, Y);
-        }, [R, O, F, W, Y]),
-        ee = r.useMemo(() => ({ position: F, caretConfig: O ?? { align: "center" } }), [F, O]);
+                })(R?.align ?? "center", F, W, Y);
+        }, [O, R, F, W, Y]),
+        ee = r.useMemo(() => ({ position: F, caretConfig: R ?? { align: "center" } }), [F, R]);
     return (0, i.jsx)(u.$, {
         targetElementRef: n,
         shouldShow: x,

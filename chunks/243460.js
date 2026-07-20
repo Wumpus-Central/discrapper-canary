@@ -3,7 +3,7 @@ var i = e(627968);
 e(64700);
 var a = e(862482),
     r = e(935462),
-    l = e(534514),
+    l = e(297264),
     s = e(834730);
 let d = "/assets/7f384b2c31f586cd.svg",
     p = "/assets/2f0ebe181e1cce00.svg";
@@ -13,7 +13,7 @@ var c = e(235986),
     g = e(819638),
     o = e(652215),
     E = e(375708),
-    C = e(394272);
+    C = e(97632);
 let T = 0.5 > Math.random();
 function I(t) {
     let { onClose: n, onBack: e, onCreationIntentChosen: I, hasFooter: G = !0 } = t,

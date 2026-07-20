@@ -22,18 +22,18 @@ var i = n(627968),
     S = n(211401),
     N = n(989837),
     C = n(500049),
-    R = n(598071),
-    O = n(60809),
+    O = n(598071),
+    R = n(60809),
     L = n(375708),
-    D = n(224840);
-let y = r.forwardRef(function (e, t) {
+    y = n(477768);
+let D = r.forwardRef(function (e, t) {
         let { type: n, channelId: a } = e,
             l = (0, s.bG)(
                 [N.A],
                 () => N.A.shouldShowPopup() && N.A.activeViewType() === n && N.A.activeChannelId() === a,
             ),
             { Component: o, events: d, play: c } = (0, m.c)(),
-            u = r.useContext(R.Ay);
+            u = r.useContext(O.Ay);
         r.useEffect(() => {
             function e() {
                 d.onMouseEnter();
@@ -50,11 +50,11 @@ let y = r.forwardRef(function (e, t) {
             }, [l, n, a, c]),
             E = (0, i.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, i.jsx)("div", {
-            className: p()(D.UD, O.KG),
+            className: p()(y.UD, R.KG),
             ref: t,
             children: (0, i.jsx)(T.D, {
                 tabIndex: 0,
-                className: p()(D.x6, { [D.rK]: l }),
+                className: p()(y.x6, { [y.rK]: l }),
                 onClick: _,
                 "aria-label": L.intl.string(L.t.erHFxI),
                 "aria-expanded": l,
@@ -67,7 +67,7 @@ let y = r.forwardRef(function (e, t) {
     }),
     v = r.memo(function (e) {
         let { type: t, channelId: n } = e;
-        return (0, i.jsx)(y, { type: t, channelId: n });
+        return (0, i.jsx)(D, { type: t, channelId: n });
     });
 var b = n(931664),
     M = n(951260),
@@ -78,7 +78,7 @@ var b = n(931664),
     x = n(151271),
     k = n(355622),
     F = n(698279),
-    V = n(266599);
+    V = n(871655);
 let B = r.memo(
     r.forwardRef(function (e, t) {
         let { disabled: n, type: a, channelId: s } = e,
@@ -106,7 +106,7 @@ let B = r.memo(
 );
 var H = n(530134),
     j = n(3203),
-    W = n(990078),
+    W = n(866665),
     Y = n(617617),
     K = n(234320),
     $ = n(767089);
@@ -162,7 +162,7 @@ let z = r.memo(
 );
 var q = n(365990),
     Z = n(559647),
-    X = n(10388);
+    X = n(896340);
 let Q = r.memo(function (e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, i.jsxs)(i.Fragment, {
@@ -267,18 +267,18 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 expressionButtonsHidden: N,
             } = e,
             C = (0, M.n)("ChannelTextAreaButtons"),
-            R = (0, s.cf)([o.Ay], () => ({
+            O = (0, s.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
                 isEmojiButtonEnabled: o.Ay.isEmojiButtonEnabled,
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            O = R.isSubmitButtonEnabled,
-            L = !C || R.isAppsButtonEnabled,
-            D = !C || R.isEmojiButtonEnabled,
-            y = !C || R.isGifButtonEnabled,
-            w = !C || R.isStickerButtonEnabled,
+            R = O.isSubmitButtonEnabled,
+            L = !C || O.isAppsButtonEnabled,
+            y = !C || O.isEmojiButtonEnabled,
+            D = !C || O.isGifButtonEnabled,
+            w = !C || O.isStickerButtonEnabled,
             G =
                 ((t = T.id),
                 (n = f),
@@ -319,7 +319,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     }));
                 return i && r && null == a;
             })({ channel: T, chatInputType: f }),
-            $ = f.submit?.button != null && (f.submit?.ignorePreference || O),
+            $ = f.submit?.button != null && (f.submit?.ignorePreference || R),
             Z = null == x || (null != k && k.type !== l.n4.ATTACHMENT);
         return (!a.Fr &&
             (f.gifts?.button != null &&
@@ -330,7 +330,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             f.gifs?.button != null &&
                 null == x &&
                 S &&
-                y &&
+                D &&
                 !N &&
                 j.push((0, i.jsx)(z, { disabled: p, type: f, channel: T }, "gif")),
             f.stickers?.button != null &&
@@ -343,7 +343,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             !N &&
             Z &&
             (S || N
-                ? D && j.push((0, i.jsx)(B, { disabled: p, type: f, channelId: T.id }, "emoji"))
+                ? y && j.push((0, i.jsx)(B, { disabled: p, type: f, channelId: T.id }, "emoji"))
                 : j.push((0, i.jsx)(H.A, { disabled: p, type: f, channel: T }, "expression"))),
         K && L && j.push((0, i.jsx)(v, { channelId: T.id, type: f }, "appLauncher")),
         $ && j.push((0, i.jsx)(Q, { onClick: m, disabled: p || G }, "submit")),

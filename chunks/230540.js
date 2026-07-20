@@ -40,7 +40,7 @@ var P = n(212407),
     H = n(14702),
     w = n(758836),
     F = n(375708),
-    G = n(701180);
+    G = n(774588);
 function V(e) {
     let { name: t, typeLabel: n } = e;
     return (0, s.jsxs)(U.E, {
@@ -77,7 +77,7 @@ var W = n(442759),
     X = n(139136),
     Y = n(395744),
     q = n(929283),
-    Z = n(719201);
+    Z = n(693985);
 function J(e) {
     let { item: t, user: n, bundleFirstAvatarDecoration: i, isBundle: r } = e;
     switch (t.type) {
@@ -157,7 +157,7 @@ function ei(e) {
 n(321073);
 var es = n(740076),
     er = n(661847),
-    el = n(630709);
+    el = n(326133);
 function ea(e) {
     let { skuId: t } = e;
     return (0, w.EZ)(t)
@@ -271,7 +271,7 @@ var eo =
     eI = n(836602),
     e_ = n(428262),
     eC = n(780898),
-    ej = n(180129);
+    ej = n(925217);
 function ek(e) {
     let { user: t, innerClassName: n } = e;
     return (0, s.jsx)("div", {
@@ -418,7 +418,7 @@ function eb(e) {
 var eP = n(478016),
     ey = n(661531),
     eS = n(224016),
-    eB = n(913521);
+    eB = n(606641);
 function eD() {
     let e = [F.t.E1NP2x, F.t.kpMomJ, F.t.xT1Vfn, F.t.myyAEr, F.t.zTk8Ul];
     return (0, s.jsxs)("div", {
@@ -455,7 +455,7 @@ function eD() {
 }
 var eU = n(17928),
     eM = n(132198),
-    eH = n(83554);
+    eH = n(508962);
 function ew(e) {
     let { user: t } = e,
         n = e_.Ay.canUsePremiumProfileCustomization(t),
@@ -474,7 +474,7 @@ function ew(e) {
         }),
     });
 }
-var eF = n(197952);
+var eF = n(290899);
 function eG(e) {
     let { user: t, productRecord: n, isClosing: i, isOrbCheckoutModalOpen: r } = e;
     return n.skuId === w.Dp.ORB_PROFILE_BADGE
@@ -599,7 +599,7 @@ function ez(e) {
 var eK = n(13875),
     eW = n(110629),
     e$ = n(268959),
-    eX = n(958942);
+    eX = n(609118);
 function eY(e) {
     let t,
         { productRecord: n, selectedProduct: i, selectedBundleSlide: r } = e,
@@ -627,16 +627,16 @@ var eq = n(462887),
     e1 = n(331322),
     e2 = n(736653),
     e6 = n(44120),
-    e4 = n(465794),
-    e5 = n(757036),
-    e3 = n(761705),
+    e5 = n(465794),
+    e3 = n(757036),
+    e7 = n(761705),
     e9 = n(580630),
-    e7 = n(4227),
-    e8 = n(940980),
+    e8 = n(4227),
+    e4 = n(940980),
     te = n(466459),
     tt = n(395068),
     tn = n(885574),
-    ti = n(401231);
+    ti = n(181903);
 function ts(e) {
     let { className: t, isPartiallyPurchased: n } = e;
     return n
@@ -684,7 +684,7 @@ let to = function (e) {
               fullWidth: !0,
           });
 };
-var tu = n(226236);
+var tu = n(484796);
 let td = function (e) {
     let { analyticsLocations: t, children: n } = e;
     return (0, s.jsx)(x.f5, {
@@ -706,7 +706,7 @@ let td = function (e) {
 };
 var tm = n(561769),
     tE = n(140735),
-    tx = n(252955);
+    tx = n(373595);
 function th(e) {
     let {
             price: { amount: t, currency: n },
@@ -724,7 +724,7 @@ function th(e) {
     });
 }
 var tf = n(219103),
-    tR = n(469215);
+    tR = n(172575);
 function tp(e) {
     let {
             product: t,
@@ -764,7 +764,7 @@ function tp(e) {
 var tv = n(403581),
     tA = n(532794),
     tN = n(202541),
-    tg = n(447806);
+    tg = n(228478);
 function tI(e) {
     let { text: t, onTrackClick: n } = e,
         { analyticsLocations: i } = (0, x.Ay)(),
@@ -778,7 +778,7 @@ function tI(e) {
         children: t,
     });
 }
-var t_ = n(805961);
+var t_ = n(587465);
 function tC(e) {
     let { product: t, onTrackClick: n } = e,
         i = (0, I.yt)(t, j.lid.PREMIUM_TIER_2);
@@ -803,7 +803,7 @@ function tC(e) {
     });
 }
 var tj = n(818348),
-    tk = n(752274);
+    tk = n(872914);
 function tT(e) {
     let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: i, discount: r } = e,
         l = n ? F.intl.string(F.t.wu4gyV) : F.intl.string(F.t.eFNRzU),
@@ -874,7 +874,7 @@ var tL = n(525723),
     tb = n(347722),
     tP = n(57020),
     ty = n(61750),
-    tS = n(237309);
+    tS = n(153213);
 function tB(e) {
     let {
             user: t,
@@ -891,7 +891,7 @@ function tB(e) {
             onTrackClick: h,
         } = e,
         { cardId: f, sessionId: p, tilePosition: v } = (0, N.uM)() ?? {},
-        g = (0, e5.L)(tN.PremiumTypes.TIER_2),
+        g = (0, e3.L)(tN.PremiumTypes.TIER_2),
         _ = (0, I.xM)(t),
         C = (0, eK.Do)("CollectiblesShopProductDetailsModal") && i.type === L.R.PROFILE_FRAME,
         k = e_.Ay.canUseShopDiscounts(t) || C,
@@ -899,7 +899,7 @@ function tB(e) {
         { isPurchased: O, isPartiallyOwnedBundle: b } = (0, te.h)(i),
         { isDisabled: P } = (0, es.I)(i.skuId),
         y = (0, I.Zu)({ product: i, isPartiallyOwnedBundle: b, isPurchased: O }),
-        S = (0, u.bG)([e7.A], () => e7.A.isClaiming === i?.skuId),
+        S = (0, u.bG)([e8.A], () => e8.A.isClaiming === i?.skuId),
         D = (0, e2.Ay)(),
         M = (0, eq.M)(D),
         H = (0, I.G0)(i),
@@ -908,7 +908,7 @@ function tB(e) {
         z = (0, tb.X)(i),
         K = (0, tL.V_)(n),
         W = null != K,
-        $ = (0, e8.W)("CollectiblesShopProductDetailsModal"),
+        $ = (0, e4.W)("CollectiblesShopProductDetailsModal"),
         X = c === w.G2.ORBS && a ? tm.Hi.ORBS : $ ? tm.Hi.FIAT : void 0,
         { checkoutEligiblePrices: Y, hasSufficientOrbs: q } = (0, tP.F)({
             product: i,
@@ -919,7 +919,7 @@ function tB(e) {
         Z = r.useMemo(() => (0, I.fT)(i, k, Y[0]?.currency), [i, k, Y]),
         J = (0, tt.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
         Q = r.useMemo(() => Y.some((e) => e.currency === tj.Yr.DISCORD_ORB), [Y]);
-    (0, e3.W)({ disableFetch: !Q });
+    (0, e7.W)({ disableFetch: !Q });
     let ee = r.useCallback(() => {
         h(w.sH.BUY_WITH_FIAT),
             (0, e6.A)({
@@ -931,7 +931,7 @@ function tB(e) {
     }, [m, x, i.skuId, h, p]);
     function et(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            i = (0, s.jsx)(e4.A, {
+            i = (0, s.jsx)(e5.A, {
                 subscriptionTier: tN.pe.TIER_2,
                 fullWidth: !0,
                 buttonTextOverride: e,
@@ -1135,7 +1135,7 @@ function tB(e) {
         ],
     });
 }
-var tD = n(18967);
+var tD = n(313751);
 function tU(e) {
     let { productRecord: t, selectedProduct: n, previewingProduct: i, user: r, selectedBundleSlide: l } = e,
         a = ez(t);
@@ -1206,11 +1206,11 @@ function tQ(e) {
                     (0, tZ.openModalLazy)(
                         async () => {
                             let { default: e } = await Promise.all([
-                                n.e("8073"),
-                                n.e("16747"),
-                                n.e("94635"),
-                                n.e("43880"),
-                                n.e("89084"),
+                                n.e("16237"),
+                                n.e("12815"),
+                                n.e("78775"),
+                                n.e("41160"),
+                                n.e("95004"),
                                 n.e("44780"),
                                 n.e("65617"),
                                 n.e("36946"),
@@ -1246,27 +1246,27 @@ var t0 = n(139146),
     t1 = n(60465),
     t2 = n(976860),
     t6 = n(975732),
-    t4 = n(50920),
-    t5 = n(23161),
-    t3 = n(668953),
+    t5 = n(50920),
+    t3 = n(23161),
+    t7 = n(668953),
     t9 = n(881636),
-    t7 = n(428445);
-function t8(e) {
+    t8 = n(570845);
+function t4(e) {
     let { goPrev: t, goNext: n } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("div", {
-                className: t7.Y,
+                className: t8.Y,
                 children: (0, s.jsx)(tH.K, {
                     "aria-label": F.intl.string(F.t["3NdvMK"]),
                     onClick: t,
-                    icon: t3.f,
+                    icon: t7.f,
                     variant: "overlay-secondary",
                     size: "sm",
                 }),
             }),
             (0, s.jsx)("div", {
-                className: t7.K,
+                className: t8.K,
                 children: (0, s.jsx)(tH.K, {
                     "aria-label": F.intl.string(F.t.RYIeOX),
                     onClick: n,
@@ -1278,7 +1278,7 @@ function t8(e) {
         ],
     });
 }
-var ne = n(742441);
+var ne = n(596265);
 function nt(e) {
     let {
             user: t,
@@ -1302,9 +1302,9 @@ function nt(e) {
         g = A ? l.items.length : 0,
         _ = tG.useConfig({ location: "CollectiblesShopProductDetailsModal" }).showCollectionButton,
         C = (function () {
-            let e = (0, t4.a)("CollectiblesPdpNavigateToCollection"),
+            let e = (0, t5.a)("CollectiblesPdpNavigateToCollection"),
                 { sessionId: t } = (0, N.uM)() ?? {},
-                n = (0, t5.v)((e) => e.reset);
+                n = (0, t3.v)((e) => e.reset);
             return r.useCallback(
                 (i, s) => {
                     if (
@@ -1393,7 +1393,7 @@ function nt(e) {
                         isOrbCheckoutModalOpen: d,
                     }),
                 }),
-                A && g > 1 && (0, s.jsx)(t8, { goPrev: O, goNext: b }),
+                A && g > 1 && (0, s.jsx)(t4, { goPrev: O, goNext: b }),
                 (0, s.jsxs)("div", {
                     className: ne.VG,
                     children: [
@@ -1426,7 +1426,7 @@ function nt(e) {
         })
     );
 }
-var nn = n(460510);
+var nn = n(271646);
 let ni = function (e) {
     let {
             transitionState: t,

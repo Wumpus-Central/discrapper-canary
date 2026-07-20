@@ -5,7 +5,7 @@ var l = n(627968),
     a = n(891197),
     s = n(69494),
     o = n(482132),
-    u = n(293035);
+    u = n(520171);
 function c() {
     return (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(s.A, {}), (0, l.jsx)(o.dZ, { children: (0, l.jsx)(a.N, { className: u.D }) })],
@@ -17,7 +17,7 @@ var d = n(830382),
     h = n(834730),
     C = n(349288),
     E = n(375708),
-    f = n(94204);
+    f = n(236540);
 function A(e) {
     let { className: t, isEmailResent: n, resendEmail: i } = e;
     return (0, l.jsx)("div", {
@@ -52,7 +52,7 @@ function S() {
     let e = i.useMemo(() => [{ variant: "primary", text: E.intl.string(E.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(p.H, { actions: e });
 }
-var y = n(599961);
+var y = n(411097);
 function P() {
     let [e, t] = i.useState(!1);
     async function n() {

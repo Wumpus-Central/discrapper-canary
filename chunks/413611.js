@@ -7,15 +7,15 @@ var i = n(627968),
     o = n(150934),
     d = n(696986),
     c = n(683071),
-    u = n(534514),
+    u = n(297264),
     m = n(834730),
     g = n(17928),
     x = n(181658),
     h = n(260509),
     E = n(71393),
     j = n(287809),
-    N = n(493540),
-    f = n(469993),
+    f = n(493540),
+    N = n(469993),
     p = n(512950),
     A = n(375708);
 function I(e) {
@@ -45,17 +45,17 @@ function I(e) {
             : null
     );
 }
-var S = n(99895);
+var S = n(499703);
 let C = "role_subscriptions_eligibility_modal";
-function v(e) {
+function _(e) {
     let { guild: t, eligibility: l, eligibilityLoading: o, eligibilityError: d, refreshEligibility: c } = e;
     return (0, i.jsx)(r.$, {
         variant: "expressive",
         onClick: function () {
             (0, s.openModalLazy)(
                 async () => {
-                    let { default: e } = await Promise.all([n.e("79480"), n.e("19631"), n.e("18266")]).then(
-                        n.bind(n, 258118),
+                    let { default: e } = await Promise.all([n.e("50360"), n.e("19631"), n.e("18266")]).then(
+                        n.bind(n, 35737),
                     );
                     return (n) =>
                         (0, i.jsx)(e, {
@@ -75,7 +75,7 @@ function v(e) {
         icon: a.E,
     });
 }
-function _(e) {
+function v(e) {
     let { guild: t, checkboxText: n } = e,
         {
             canSubmitAcceptance: s,
@@ -86,7 +86,7 @@ function _(e) {
             let t = (0, g.bG)([E.A], () => E.A.getGuild(e)),
                 [n, i] = l.useState(),
                 [s, r] = l.useState(!1),
-                a = (0, f.ME)(t);
+                a = (0, N.ME)(t);
             return {
                 canSubmitAcceptance: (0, g.bG)([j.default], () => {
                     let e = j.default.getCurrentUser();
@@ -98,7 +98,7 @@ function _(e) {
                     if (null != e && a) {
                         r(!0), i(void 0);
                         try {
-                            await N.Bo(e);
+                            await f.Bo(e);
                         } catch (e) {
                             i(new x.A(e));
                         } finally {
@@ -150,8 +150,8 @@ function T(e) {
     return o
         ? c
             ? (0, i.jsx)(I, { ...n })
-            : (0, i.jsx)(_, { guild: t, checkboxText: d })
-        : (0, i.jsx)(v, {
+            : (0, i.jsx)(v, { guild: t, checkboxText: d })
+        : (0, i.jsx)(_, {
               guild: t,
               eligibility: a,
               eligibilityLoading: l,

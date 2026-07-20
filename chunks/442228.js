@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(308244),
     _ = n(900179),
     E = n(375708),
-    A = n(851929);
+    A = n(63705);
 let h = r.memo(function (e) {
     let {
             userId: t,
@@ -27,7 +27,7 @@ let h = r.memo(function (e) {
         { context: g } = (0, d.NJ)(),
         { analyticsLocations: S } = (0, o.Ay)(),
         [N, C] = r.useState(!1),
-        [R, O] = r.useState(!1),
+        [O, R] = r.useState(!1),
         L = r.useRef(null);
     return p || null == n || "" === n
         ? null
@@ -38,10 +38,10 @@ let h = r.memo(function (e) {
                       ref: (e) => {
                           (L.current = e),
                               null == e ||
-                                  (C(!R && e.scrollHeight - e.clientHeight > 1),
-                                  e.getBoundingClientRect().height > 57.75 && O(!0));
+                                  (C(!O && e.scrollHeight - e.clientHeight > 1),
+                                  e.getBoundingClientRect().height > 57.75 && R(!0));
                       },
-                      className: s()(A.mA, R && A.Em),
+                      className: s()(A.mA, O && A.Em),
                       onBlur: function (e) {
                           null == L.current || L.current.contains(e.relatedTarget) || (L.current.scrollTop = 0);
                       },
@@ -54,7 +54,7 @@ let h = r.memo(function (e) {
                           isHoveringOrFocusing: f,
                       }),
                   }),
-                  (N || R) &&
+                  (N || O) &&
                       (0, i.jsx)("div", {
                           className: A.HV,
                           children: (0, i.jsx)(l.Q, {

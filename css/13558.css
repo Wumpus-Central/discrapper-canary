@@ -1,0 +1,78 @@
+.header__6e500 {
+    align-items: flex-start;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 8px;
+    margin-top: 8px;
+    padding: 0 16px;
+    width: 100%
+}
+
+.members__6e500 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 8px
+}
+
+.memberCount__6e500 {
+    align-items: center;
+    display: flex;
+    gap: 4px
+}
+
+.dot__6e500 {
+    background: var(--text-status-offline)
+}
+
+.dot__6e500,
+.dotOnline__6e500 {
+    border-radius: 50%;
+    height: 8px;
+    width: 8px
+}
+
+.dotOnline__6e500 {
+    background: var(--text-status-online)
+}
+
+.dotHighContrast__6e500 {
+    background: var(--text-default)
+}
+
+.established__6e500 {
+    display: flex
+}
+
+.nameContainer__6e500 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    width: 100%
+}
+
+.guildNameContainer__6e500 {
+    overflow: hidden
+}
+
+.guildNameContainer__6e500:hover {
+    cursor: pointer
+}
+
+.guildNameContainer__6e500:hover .guildName__6e500 {
+    text-decoration: underline
+}
+
+.guildName__6e500 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.guildBadge__6e500 {
+    cursor: pointer;
+    flex-shrink: 0;
+    height: 16px;
+    width: 16px
+}

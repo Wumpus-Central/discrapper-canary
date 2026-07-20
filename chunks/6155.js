@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => R }), n(321073);
+n.d(t, { A: () => O }), n(321073);
 var i = n(627968),
     r = n(64700),
     a = n(17928),
@@ -20,7 +20,7 @@ var i = n(627968),
     m = n(652215),
     g = n(806931),
     S = n(375708),
-    N = n(27600);
+    N = n(429904);
 function C(e) {
     let t,
         n,
@@ -29,7 +29,7 @@ function C(e) {
     let T = (0, a.bG)([A.Ay], () => A.Ay.getCurrentEmbeddedActivity()),
         N = (0, a.bG)([p.A], () => p.A.pipWindow),
         C = (0, a.bG)([I.A], () => I.A.getSelectedParticipant(c)),
-        R = (0, a.bG)([I.A], () => I.A.getStreamParticipants(c));
+        O = (0, a.bG)([I.A], () => I.A.getStreamParticipants(c));
     return (0, i.jsx)(o.W, {
         "data-menu-migrated": !0,
         navId: "pip-menu",
@@ -38,7 +38,7 @@ function C(e) {
         onSelect: u,
         children: ((t = []),
         null != (n = d.find((e) => e.component === m.o1q.VIDEO)) &&
-            R.forEach((e) => {
+            O.forEach((e) => {
                 let i = f.A.getActiveStreamForApplicationStream(e.stream),
                     r = e.id === C?.id && N?.id === n.id;
                 null == i || r || t.push({ pipWindow: n, participant: e, stream: i });
@@ -80,7 +80,7 @@ function C(e) {
         }),
     });
 }
-let R = function (e) {
+let O = function (e) {
     let { voiceChannelId: t, idle: n } = e,
         l = r.useRef(null),
         o = Array.from((0, a.bG)([p.A], () => p.A.pipWindows).values()).filter((e) => e.component !== m.o1q.ACTIVITY),

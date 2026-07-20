@@ -6,7 +6,7 @@ var i = n(627968),
     s = n(778712),
     l = n(97808),
     o = n(652215),
-    d = n(124882);
+    d = n(43410);
 function c(e) {
     let { showStatus: t, width: n, opacity: r, size: c = "default" } = e,
         u = "small" === c ? s._3.SIZE_24 : s._3.SIZE_32;

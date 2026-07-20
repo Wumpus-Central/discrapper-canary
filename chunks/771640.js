@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { eW: () => R, em: () => N, oi: () => C, wN: () => S });
+n.d(t, { eW: () => O, em: () => N, oi: () => C, wN: () => S });
 var i = n(627968);
 n(64700);
 var r = n(503698),
@@ -19,7 +19,7 @@ var r = n(503698),
     p = n(323384),
     T = n(513461),
     m = n(791606),
-    g = n(266062);
+    g = n(29774);
 function S(e, t, n) {
     return (0, i.jsx)(u.hV, { count: e, color: t, "aria-hidden": n });
 }
@@ -46,9 +46,9 @@ function C(e) {
         if (!o) return null;
         t = p.k;
     }
-    return O({ icon: t, isCurrentUserConnected: a });
+    return R({ icon: t, isCurrentUserConnected: a });
 }
-function R(e) {
+function O(e) {
     let { guildJoinRequestStatus: t } = e,
         [n, i] = (function (e) {
             switch (e) {
@@ -62,9 +62,9 @@ function R(e) {
                     return [void 0, c.R];
             }
         })(t);
-    return O({ icon: i, color: n });
+    return R({ icon: i, color: n });
 }
-function O(e) {
+function R(e) {
     let { icon: t, color: n, isCurrentUserConnected: r } = e;
     return (0, i.jsx)(u.fk, {
         icon: t,

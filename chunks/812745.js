@@ -1,45 +1,45 @@
-n.d(t, { Ay: () => A, Be: () => m, Nj: () => f, y3: () => p });
-var a,
-    r = n(627968),
-    l = n(64700),
+n.d(t, { Ay: () => x, Be: () => m, Nj: () => f, y3: () => p });
+var r,
+    a = n(627968),
+    s = n(64700),
     i = n(503698),
-    s = n.n(i),
+    l = n.n(i),
     u = n(355522),
     o = n(37766),
     c = n(637956),
-    d = n(34382),
+    d = n(287310),
     m =
-        (((a = {}).UNKNOWN = "unknown"),
-        (a.VISA = "visa"),
-        (a.DISCOVER = "discover"),
-        (a.MASTERCARD = "mastercard"),
-        (a.AMEX = "amex"),
-        (a.PAYPAL = "paypal"),
-        (a.PAYMENT_REQUEST = "paymentRequest"),
-        (a.G_PAY = "gPay"),
-        (a.DINERS = "diners"),
-        (a.JCB = "jcb"),
-        (a.UNIONPAY = "unionpay"),
-        (a.SOFORT = "sofort"),
-        (a.PRZELEWY24 = "przelewy24"),
-        (a.GIROPAY = "giropay"),
-        (a.PAYSAFECARD = "paysafecard"),
-        (a.GCASH = "gcash"),
-        (a.GRABPAY = "grabpay"),
-        (a.MOMO_WALLET = "momo_wallet"),
-        (a.VENMO = "venmo"),
-        (a.KAKAOPAY = "kakaopay"),
-        (a.GOPAY_WALLET = "gopay_wallet"),
-        (a.BANCONTACT = "bancontact"),
-        (a.EPS = "eps"),
-        (a.IDEAL = "ideal"),
-        (a.CASH_APP = "cash_app"),
-        (a.APPLE = "apple"),
-        (a.APPLE_LIGHT = "apple_light"),
-        (a.BANK = "bank"),
-        (a.GIFT_CARD = "gift_card"),
-        (a.PIX = "pix"),
-        a);
+        (((r = {}).UNKNOWN = "unknown"),
+        (r.VISA = "visa"),
+        (r.DISCOVER = "discover"),
+        (r.MASTERCARD = "mastercard"),
+        (r.AMEX = "amex"),
+        (r.PAYPAL = "paypal"),
+        (r.PAYMENT_REQUEST = "paymentRequest"),
+        (r.G_PAY = "gPay"),
+        (r.DINERS = "diners"),
+        (r.JCB = "jcb"),
+        (r.UNIONPAY = "unionpay"),
+        (r.SOFORT = "sofort"),
+        (r.PRZELEWY24 = "przelewy24"),
+        (r.GIROPAY = "giropay"),
+        (r.PAYSAFECARD = "paysafecard"),
+        (r.GCASH = "gcash"),
+        (r.GRABPAY = "grabpay"),
+        (r.MOMO_WALLET = "momo_wallet"),
+        (r.VENMO = "venmo"),
+        (r.KAKAOPAY = "kakaopay"),
+        (r.GOPAY_WALLET = "gopay_wallet"),
+        (r.BANCONTACT = "bancontact"),
+        (r.EPS = "eps"),
+        (r.IDEAL = "ideal"),
+        (r.CASH_APP = "cash_app"),
+        (r.APPLE = "apple"),
+        (r.APPLE_LIGHT = "apple_light"),
+        (r.BANK = "bank"),
+        (r.GIFT_CARD = "gift_card"),
+        (r.PIX = "pix"),
+        r);
 function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
@@ -98,7 +98,7 @@ function f(e) {
     }
 }
 let p = { SMALL: d.cardIconSmall, MEDIUM: d.cardIconMedium, LARGE: d.cardIconLarge, XLARGE: d.cardIconXLarge };
-class b extends l.PureComponent {
+class g extends s.PureComponent {
     static Types = m;
     static Sizes = p;
     static getType(e) {
@@ -106,14 +106,14 @@ class b extends l.PureComponent {
     }
     static defaultProps = { size: p.SMALL, flipped: !1 };
     render() {
-        let { flipped: e, type: t, className: n, size: a } = this.props;
+        let { flipped: e, type: t, className: n, size: r } = this.props;
         return "bank" === t
-            ? (0, r.jsx)(u.M, { className: n })
+            ? (0, a.jsx)(u.M, { className: n })
             : "gift_card" === t
-              ? (0, r.jsx)(o._, { className: n, size: "lg" })
+              ? (0, a.jsx)(o._, { className: n, size: "lg" })
               : "pix" === t
-                ? (0, r.jsx)(c.W, { className: n, size: "lg" })
-                : (0, r.jsx)("div", { "aria-hidden": !0, className: s()(a, d[t], n, { [d.flipped]: e }), children: t });
+                ? (0, a.jsx)(c.W, { className: n, size: "lg" })
+                : (0, a.jsx)("div", { "aria-hidden": !0, className: l()(r, d[t], n, { [d.flipped]: e }), children: t });
     }
 }
-let A = b;
+let x = g;

@@ -11,7 +11,7 @@ var i = n(627968),
     u = n(133171),
     _ = n(573435);
 n(883392);
-var E = n(989822);
+var E = n(95806);
 let A = {},
     h = 1 / 4;
 function I(e) {
@@ -120,8 +120,8 @@ let T = {
             {
                 statusCoords: N,
                 frontAvatarOffsetPx: C,
-                frontAvatarSizePx: R,
-                backAvatarSizePx: O,
+                frontAvatarSizePx: O,
+                backAvatarSizePx: R,
             } = r.useMemo(() => {
                 let e,
                     t,
@@ -161,11 +161,11 @@ let T = {
                             mask: y,
                             height: S,
                             width: S,
-                            children: (0, i.jsx)("img", { src: n, alt: "", width: O, height: O }),
+                            children: (0, i.jsx)("img", { src: n, alt: "", width: R, height: R }),
                         }),
                         (0, i.jsx)("div", {
                             style: { position: "absolute", top: C, left: C },
-                            children: (0, i.jsx)(p, { src: a, size: R, isTyping: u, status: h }),
+                            children: (0, i.jsx)(p, { src: a, size: O, isTyping: u, status: h }),
                         }),
                     ],
                 }),

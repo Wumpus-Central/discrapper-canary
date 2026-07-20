@@ -3,12 +3,12 @@ var i = n(627968),
     l = n(64700),
     s = n(503698),
     r = n.n(s),
-    a = n(111956),
+    a = n(649852),
     o = n.n(a),
     d = n(665260),
     c = n(305866),
-    u = n(990078),
-    m = n(922016),
+    u = n(922016),
+    m = n(866665),
     h = n(939249),
     g = n(460905),
     p = n(189551),
@@ -18,8 +18,8 @@ var i = n(627968),
     E = n(652215),
     I = n(307731),
     C = n(375708),
-    v = n(347353),
-    _ = n(866661);
+    v = n(10585),
+    _ = n(471717);
 class j extends l.Component {
     state = { isReactionPickerActive: !1 };
     ref = l.createRef();
@@ -60,7 +60,7 @@ class j extends l.Component {
         if (e.state === E.cmJ.SENDING || (0, d.Lt)(e.flags, E.pr7.EPHEMERAL)) return null;
         let o = l ? _ : v,
             c = { size: "sm", color: "currentColor", className: o.icon };
-        return (0, i.jsx)(m.Y, {
+        return (0, i.jsx)(u.Y, {
             targetElementRef: this.ref,
             shouldShow: a,
             onRequestClose: this.handleReactionPickerToggle,
@@ -68,7 +68,7 @@ class j extends l.Component {
             position: "right",
             children: (e, l) => {
                 let { isShown: a } = l;
-                return (0, i.jsx)(u.m, {
+                return (0, i.jsx)(m.m, {
                     asContainer: !0,
                     text: C.intl.string(C.t.lfIHs4),
                     children: (0, i.jsxs)(h.D, {

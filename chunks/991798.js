@@ -2,7 +2,7 @@
 Object.defineProperty(t, "__esModule", { value: !0 }), (t.flattenNames = void 0);
 var n = u(r(565102)),
     o = u(r(43646)),
-    a = u(r(862711)),
+    a = u(r(85092)),
     i = u(r(363093));
 function u(e) {
     return e && e.__esModule ? e : { default: e };

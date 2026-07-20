@@ -10,7 +10,7 @@ var i = n(627968),
     c = n(798618),
     u = n(916845),
     _ = n(627330),
-    E = n(824078);
+    E = n(77006);
 function A(e) {
     let {
             title: t,
@@ -28,13 +28,13 @@ function A(e) {
             scrollBehavior: N,
             ...C
         } = e,
-        R = r.useCallback(
+        O = r.useCallback(
             (e, t) => {
                 T?.(t);
             },
             [T],
         ),
-        O = r.useCallback(() => {
+        R = r.useCallback(() => {
             T?.("user:explicit");
         }, [T]),
         L = {
@@ -43,7 +43,7 @@ function A(e) {
             hasVideo: C.hasVideo,
             position: g,
             caretConfig: S,
-            onRequestClose: R,
+            onRequestClose: O,
             gradientColor: p,
             scrollBehavior: N,
             ...("edge" === C.alignmentStrategy
@@ -56,7 +56,7 @@ function A(e) {
             ref: m,
             "data-mana-component": "popover",
             children: [
-                (0, i.jsx)(u.q, { onClick: O, variant: null != p ? "color-mix" : void 0 }),
+                (0, i.jsx)(u.q, { onClick: R, variant: null != p ? "color-mix" : void 0 }),
                 null != A &&
                     (0, i.jsx)("div", {
                         className: s()(E.graphic, { [E[`graphic--${h}`]]: null != h }),

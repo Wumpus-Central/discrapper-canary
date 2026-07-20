@@ -22,13 +22,13 @@ var i = n(627968),
     S = n(607399),
     N = n(821609),
     C = n(331322),
-    R = n(297264),
-    O = n(834730),
+    O = n(297264),
+    R = n(834730),
     L = n(700525),
     y = n(975571),
     D = n(652215),
     v = n(375708),
-    b = n(72828);
+    b = n(854780);
 let M = y.A.getArticleURL(D.MVz.VERIFICATION_FAQ);
 class P extends r.PureComponent {
     static defaultProps = { types: [D.Fz7.CAPTCHA], onCaptchaVerify: D.tEg, onLogout: D.tEg };
@@ -72,11 +72,11 @@ class P extends r.PureComponent {
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(R.D, {
+                                        (0, i.jsx)(O.D, {
                                             variant: "heading-xl/normal",
                                             children: v.intl.string(v.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(O.E, {
+                                        (0, i.jsx)(R.E, {
                                             variant: "text-md/normal",
                                             children: v.intl.format(v.t["0rqMV5"], { helpCenterURL: M }),
                                         }),
@@ -99,7 +99,7 @@ class P extends r.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(O.E, {
+                        (0, i.jsx)(R.E, {
                             variant: "text-sm/normal",
                             className: b.qr,
                             children: v.intl.string(v.t.qqYun3),
@@ -110,13 +110,13 @@ class P extends r.PureComponent {
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(O.E, {
+                                (0, i.jsx)(R.E, {
                                     variant: "text-sm/semibold",
                                     className: b.qr,
                                     children: v.intl.format(v.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: g()(b.qr, b.mf), children: "\u2022" }),
-                                (0, i.jsx)(O.E, {
+                                (0, i.jsx)(R.E, {
                                     variant: "text-sm/semibold",
                                     className: b.qr,
                                     children: v.intl.format(v.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -176,7 +176,7 @@ function G() {
                 m?.[0] === D.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("31910"), n.e("10919")]).then(n.bind(n, 556506));
+                        let { default: e } = await Promise.all([n.e("80198"), n.e("10919")]).then(n.bind(n, 556506));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -208,9 +208,9 @@ function G() {
                     : (0, o.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("56643"),
-                                  n.e("65264"),
-                                  n.e("86380"),
+                                  n.e("11183"),
+                                  n.e("15080"),
+                                  n.e("84684"),
                                   n.e("89545"),
                                   n.e("91531"),
                                   n.e("11493"),

@@ -3,8 +3,8 @@ n.d(t, { A: () => C });
 var i = n(627968),
     r = n(64700),
     a = n(17928),
-    s = n(990078),
-    l = n(192308),
+    s = n(192308),
+    l = n(866665),
     o = n(442433),
     d = n(60465),
     c = n(409626),
@@ -108,12 +108,12 @@ function g(e) {
     }
 }
 var S = n(679621),
-    N = n(412460);
+    N = n(46060);
 let C = function (e) {
     let { gameId: t, channelId: h, authorId: f, gameName: p, gameIcon: T } = e,
         m = (0, a.bG)([_.A], () => _.A.getChannel(h)),
         C = null != m ? m.getGuildId() : null,
-        { name: R, hasName: O } = (0, S.V)({ gameName: p, gameId: t });
+        { name: O, hasName: R } = (0, S.V)({ gameName: p, gameId: t });
     r.useEffect(
         () => (
             1 === (I += 1) && document.addEventListener("copy", g),
@@ -125,37 +125,37 @@ let C = function (e) {
     );
     let L = r.useCallback(
             (e) => {
-                O &&
+                R &&
                     (0, o.L3)(e, async () => {
                         let { default: e } = await Promise.all([n.e("26132"), n.e("46652"), n.e("38392")]).then(
                             n.bind(n, 55947),
                         );
-                        return (n) => (0, i.jsx)(e, { ...n, gameId: t, gameName: R, guildId: C, authorId: f });
+                        return (n) => (0, i.jsx)(e, { ...n, gameId: t, gameName: O, guildId: C, authorId: f });
                     });
             },
-            [O, t, R, C, f],
+            [R, t, O, C, f],
         ),
-        D = r.useCallback(() => {
-            (0, l.openModalLazy)(async () => {
+        y = r.useCallback(() => {
+            (0, s.openModalLazy)(async () => {
                 let { default: e } = await n.e("56466").then(n.bind(n, 188841));
                 return (t) => (0, i.jsx)(e, { ...t });
             });
         }, []),
-        y = r.useCallback(
+        D = r.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), O)
+                (e.stopPropagation(), e.preventDefault(), R)
                     ? d.default.openGameProfileModal({
                           gameId: t,
                           gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: t },
                           source: c.GameProfileSources.GameMention,
                           sourceUserId: f,
                       })
-                    : D();
+                    : y();
             },
-            [t, O, D, f],
+            [t, R, y, f],
         ),
-        v = O ? `@game ${R}` : void 0;
-    return (0, i.jsx)(s.m, {
+        v = R ? `@game ${O}` : void 0;
+    return (0, i.jsx)(l.m, {
         asContainer: !0,
         tag: "span",
         text: v,
@@ -164,7 +164,7 @@ let C = function (e) {
         children: (0, i.jsxs)(E.A, {
             "data-mention-game-id": t,
             onContextMenu: L,
-            onClick: y,
+            onClick: D,
             children: [
                 (0, i.jsx)(A.A, {
                     children: (0, i.jsx)("span", {
@@ -173,7 +173,7 @@ let C = function (e) {
                         children: (0, i.jsx)(u.A, { game: { id: t, icon: T }, iconClassName: N.Kk }),
                     }),
                 }),
-                (0, i.jsx)("span", { className: N.UU, children: R }),
+                (0, i.jsx)("span", { className: N.UU, children: O }),
             ],
         }),
     });

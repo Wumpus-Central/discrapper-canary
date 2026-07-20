@@ -1,12 +1,12 @@
 a.d(e, { default: () => p });
 var s = a(627968),
-    l = a(64700),
-    n = a(189213),
+    n = a(64700),
+    l = a(189213),
     o = a(993077),
     r = a(834730),
     i = a(292666),
     d = a(375708),
-    c = a(786055);
+    c = a(43207);
 function u(t) {
     let {
             title: e,
@@ -20,14 +20,14 @@ function u(t) {
             onPasswordChange: x,
             variant: C = "primary",
         } = t,
-        [f, k] = l.useState(""),
-        [v, w] = l.useState(null),
-        [g, j] = l.useState(!1),
-        N = l.useCallback(async () => {
+        [f, k] = n.useState(""),
+        [v, w] = n.useState(null),
+        [g, j] = n.useState(!1),
+        N = n.useCallback(async () => {
             await b();
         }, [b]),
         S =
-            l.Children.count(u) > 0
+            n.Children.count(u) > 0
                 ? (0, s.jsx)(o.Z, {
                       type: o.Z.Types.WARNING,
                       className: c.Nr,
@@ -42,7 +42,7 @@ function u(t) {
                     .then(
                         (t) => b(t ?? void 0),
                         (t) => {
-                            let e;
+                            var e;
                             null != t.body &&
                                 (m?.(t.body),
                                 (e = t.body),
@@ -54,7 +54,7 @@ function u(t) {
                     )
                     .finally(() => j(!1));
         },
-        children: (0, s.jsxs)(n.Modal, {
+        children: (0, s.jsxs)(l.Modal, {
             title: e,
             actions: [
                 { text: d.intl.string(d.t["ETE/oC"]), onClick: N, variant: "secondary" },
