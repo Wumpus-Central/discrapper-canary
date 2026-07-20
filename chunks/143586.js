@@ -1384,7 +1384,7 @@ if (
     n.e("7451").then(n.t.bind(n, 121014, 19));
 let e5 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eY.A().log(
-    `[BUILD INFO] Release Channel: ${e5}, Build Number: 581303, Version Hash: c613a43d033746bb94b281f82a057e54c3b6db4e`,
+    `[BUILD INFO] Release Channel: ${e5}, Build Number: 581317, Version Hash: 68910c52fd42bf594f93f2b0fc4de1deec427aeb`,
 ),
     v.A.setTags({ appContext: F.QCW }),
     em.A.initBasic(),
@@ -18348,7 +18348,7 @@ let gG = "isHideDevBanner",
                     className: td()(gw.Wz, gw.mr),
                     children: [
                         (0, R.jsx)(gU, { className: gw.Kk }),
-                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "581303" }),
+                        tN.intl.format(tN.t.uyrfYF, { buildNumber: "581317" }),
                         (0, R.jsx)(r, {}),
                     ],
                 })
@@ -19113,26 +19113,29 @@ function Nt(e) {
             });
     }
     let {
-            Component: p,
-            play: T,
-            events: { onMouseEnter: m, onMouseLeave: g },
-        } = (0, S6.E)(),
-        S = eh.useCallback(() => {
-            o || c(!d);
-        }, [o, d]);
+        Component: p,
+        play: T,
+        events: { onMouseEnter: m, onMouseLeave: g },
+    } = (0, S6.E)();
+    function S() {
+        return a
+            ? tN.intl.string(tN.t["Ox4/zU"])
+            : s
+              ? tN.intl.string(tN.t["+YBKYI"])
+              : l
+                ? tN.intl.string(tN.t.X1lQli)
+                : tN.intl.string(tN.t["6EJvHt"]);
+    }
+    let N = eh.useCallback(() => {
+        o || c(!d);
+    }, [o, d]);
     return (
-        (0, S5.Vo)({ event: F.jej.TOGGLE_SOUNDBOARD, handler: S }),
+        (0, S5.Vo)({ event: F.jej.TOGGLE_SOUNDBOARD, handler: N }),
         (0, R.jsx)(a5.f5, {
             value: h,
             children: (0, R.jsx)(iy.m, {
                 targetElementRef: r,
-                text: a
-                    ? tN.intl.string(tN.t["Ox4/zU"])
-                    : s
-                      ? tN.intl.string(tN.t["+YBKYI"])
-                      : l
-                        ? tN.intl.string(tN.t.X1lQli)
-                        : tN.intl.string(tN.t["6EJvHt"]),
+                text: S(),
                 asContainer: !0,
                 shouldShow: !d,
                 children: (0, R.jsx)(iK.Y, {
@@ -19158,6 +19161,7 @@ function Nt(e) {
                             ref: r,
                             children: (0, R.jsx)(rW.$n, {
                                 "data-migration-pending": !0,
+                                "aria-label": S(),
                                 ...e,
                                 className: td()(Ne.x6, Ne.Sq, { [Ne.W4]: d, [Ne.r9]: o }),
                                 wrapperClassName: Ne.x6,
