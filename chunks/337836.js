@@ -1,13 +1,24 @@
 "use strict";
-n.d(t, { P: () => a, sM: () => o });
+n.d(t, { Jh: () => o, P: () => d, sM: () => c });
 var i = n(627968),
-    r = n(716263);
-let s = "popover-portal";
-function a() {
-    return (0, i.jsx)("div", { id: s });
-}
+    r = n(64700),
+    a = n(745113);
+let s = "popover-portal",
+    l = r.createContext(null);
 function o(e) {
+    let { children: t, enabled: n = !0 } = e,
+        [a, s] = r.useState(null),
+        o = r.useMemo(() => ({ enabled: n, target: a, registerTarget: s }), [n, a]);
+    return (0, i.jsx)(l.Provider, { value: o, children: t });
+}
+function d() {
+    let e = r.useContext(l);
+    return (0, i.jsx)("div", { id: null == e ? s : void 0, ref: e?.registerTarget });
+}
+function c(e) {
     let { ownerDocument: t = document, ...n } = e,
-        a = t.getElementById(s);
-    return (0, i.jsx)(r.XF, { ...n, root: a });
+        o = r.useContext(l);
+    if (o?.enabled === !0 && null == o.target) return null;
+    let d = o?.enabled === !0 ? o.target : t.getElementById(s);
+    return (0, i.jsx)(a.XF, { ...n, root: d });
 }
