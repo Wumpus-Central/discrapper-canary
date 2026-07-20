@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => b }), n(321073);
+n.d(t, { A: () => M }), n(321073);
 var i = n(635377),
     r = n.n(i),
     a = n(17928),
@@ -91,7 +91,7 @@ function p(e) {
           };
 }
 var T = n(575279);
-let m = new (r())({ max: 10, dispose: y }),
+let m = new (r())({ max: 10, dispose: D }),
     g = new Map();
 function S(e, t) {
     let n = g.get(e);
@@ -102,7 +102,7 @@ function C(e, t) {
     let n = N.get(e);
     null != n && (n.delete(t), 0 === n.size && N.delete(e));
 }
-function R(e, t, n, i) {
+function O(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : [],
         a = m.peek(e);
     if (null == a) return;
@@ -125,7 +125,16 @@ function R(e, t, n, i) {
                 message: (0, l.rh)(e),
             });
 }
-function O(e) {
+function R(e, t, n, i) {
+    t.message = i;
+    let r = null != t.conversationId ? e.conversationMetadataById.get(t.conversationId) : null;
+    if (r?.hydratedMessages == null) return;
+    let a = r.hydratedMessages.findIndex((e) => e.id === n);
+    if (-1 === a) return;
+    let s = r.hydratedMessages.slice();
+    (s[a] = i), (r.hydratedMessages = s);
+}
+function L(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = m.peek(n);
     if (null == l) return !1;
@@ -133,15 +142,9 @@ function O(e) {
     if (c?.message == null || !(0, o.vp)(e)) return !1;
     let u = d.default.getId() === r,
         _ = "MESSAGE_REACTION_ADD" === t ? c.message.addReaction(a, u, e.colors, s) : c.message.removeReaction(a, u, s);
-    c.message = _;
-    let E = null != c.conversationId ? l.conversationMetadataById.get(c.conversationId) : null;
-    if (E?.hydratedMessages != null) {
-        let e = E.hydratedMessages.findIndex((e) => e.id === i);
-        -1 !== e && (E.hydratedMessages[e] = _);
-    }
-    return !0;
+    return R(l, c, i, _), !0;
 }
-function L(e, t) {
+function y(e, t) {
     let n = m.peek(e);
     if (null == n) return !1;
     let i = n.messageMetadataByMessageId.get(t);
@@ -151,16 +154,16 @@ function L(e, t) {
     }
     return n.messageMetadataByMessageId.delete(t);
 }
-function y(e) {
+function D(e) {
     return g.delete(e);
 }
-function D(e) {
+function v(e) {
     let t = m.has(e);
     m.del(e);
-    let n = y(e);
+    let n = D(e);
     return t || n;
 }
-class v extends a.Ay.Store {
+class b extends a.Ay.Store {
     static displayName = "ConversationsStore";
     initialize() {
         this.waitFor(d.default, c.A, I.A, u.A, _.Ay, E.default);
@@ -220,7 +223,7 @@ class v extends a.Ay.Store {
         return m.peek(e)?.recentFeedbackRatingsByConversationId.get(t) ?? null;
     }
 }
-let b = new v(s.h, {
+let M = new b(s.h, {
     CONVERSATION_FETCH_START: function (e) {
         var t;
         let n,
@@ -229,7 +232,7 @@ let b = new v(s.h, {
     },
     CONVERSATION_FETCH_SUCCESS: function (e) {
         let { channelId: t, conversationId: n, messages: i, messageReferences: r, fullyHydrated: a } = e;
-        C(n, a ? "full" : "preview"), R(t, n, i, a, r);
+        C(n, a ? "full" : "preview"), O(t, n, i, a, r);
     },
     CONVERSATION_FETCH_FAILURE: function (e) {
         let { conversationId: t, full: n } = e;
@@ -350,7 +353,7 @@ let b = new v(s.h, {
             };
         })(n, u, _);
         for (let e of ((g.reachedOldest = E), (g.reachedNewest = I), null != _ ? Object.assign(_, g) : m.set(n, g), i))
-            null != e.messages && R(n, e.id, e.messages, d);
+            null != e.messages && O(n, e.id, e.messages, d);
         return !0;
     },
     CONVERSATIONS_FETCH_FAILURE: function (e) {
@@ -363,13 +366,13 @@ let b = new v(s.h, {
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return D(t.id);
+        return v(t.id);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
         if ("unavailable" in t && !0 === t.unavailable) return !1;
         let n = !1;
-        for (let e of m.keys()) m.peek(e)?.guildId === t.id && D(e) && (n = !0);
+        for (let e of m.keys()) m.peek(e)?.guildId === t.id && v(e) && (n = !0);
         return n;
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
@@ -401,20 +404,15 @@ let b = new v(s.h, {
             n = t.channel_id,
             i = t.id;
         if (null == n || null == i) return !1;
-        let r = m.peek(n),
-            a = r?.messageMetadataByMessageId.get(i);
+        let r = m.peek(n);
+        if (null == r) return !1;
+        let a = r.messageMetadataByMessageId.get(i);
         if (a?.message == null) return !1;
         let s = (0, l.IU)(a.message, t);
-        a.message = s;
-        let o = null != a.conversationId ? r?.conversationMetadataById.get(a.conversationId) : null;
-        if (o?.hydratedMessages != null) {
-            let e = o.hydratedMessages.findIndex((e) => e.id === i);
-            -1 !== e && (o.hydratedMessages[e] = s);
-        }
-        return !0;
+        return R(r, a, i, s), !0;
     },
-    MESSAGE_REACTION_ADD: O,
-    MESSAGE_REACTION_REMOVE: O,
+    MESSAGE_REACTION_ADD: L,
+    MESSAGE_REACTION_REMOVE: L,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { channelId: t, messageId: n, reactions: i } = e,
             r = m.peek(t);
@@ -422,13 +420,7 @@ let b = new v(s.h, {
         let a = r.messageMetadataByMessageId.get(n);
         if (a?.message == null) return !1;
         let s = a.message.addReactionBatch(i, d.default.getId());
-        a.message = s;
-        let l = null != a.conversationId ? r.conversationMetadataById.get(a.conversationId) : null;
-        if (l?.hydratedMessages != null) {
-            let e = l.hydratedMessages.findIndex((e) => e.id === n);
-            -1 !== e && (l.hydratedMessages[e] = s);
-        }
-        return !0;
+        return R(r, a, n, s), !0;
     },
     MESSAGE_REACTION_REMOVE_ALL: function (e) {
         let { channelId: t, messageId: n } = e,
@@ -437,13 +429,7 @@ let b = new v(s.h, {
         let r = i.messageMetadataByMessageId.get(n);
         if (r?.message == null) return !1;
         let a = r.message.set("reactions", []);
-        r.message = a;
-        let s = null != r.conversationId ? i.conversationMetadataById.get(r.conversationId) : null;
-        if (s?.hydratedMessages != null) {
-            let e = s.hydratedMessages.findIndex((e) => e.id === n);
-            -1 !== e && (s.hydratedMessages[e] = a);
-        }
-        return !0;
+        return R(i, r, n, a), !0;
     },
     MESSAGE_REACTION_REMOVE_EMOJI: function (e) {
         let { channelId: t, messageId: n, emoji: i } = e,
@@ -452,22 +438,16 @@ let b = new v(s.h, {
         let a = r.messageMetadataByMessageId.get(n);
         if (a?.message == null) return !1;
         let s = a.message.removeReactionsForEmoji(i);
-        a.message = s;
-        let l = null != a.conversationId ? r.conversationMetadataById.get(a.conversationId) : null;
-        if (l?.hydratedMessages != null) {
-            let e = l.hydratedMessages.findIndex((e) => e.id === n);
-            -1 !== e && (l.hydratedMessages[e] = s);
-        }
-        return !0;
+        return R(r, a, n, s), !0;
     },
     MESSAGE_DELETE: function (e) {
         let { channelId: t, id: n } = e;
-        return L(t, n);
+        return y(t, n);
     },
     MESSAGE_DELETE_BULK: function (e) {
         let { channelId: t, ids: n } = e,
             i = !1;
-        for (let e of n) L(t, e) && (i = !0);
+        for (let e of n) y(t, e) && (i = !0);
         return i;
     },
     LOGOUT: function () {
