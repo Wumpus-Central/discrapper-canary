@@ -1,12 +1,12 @@
 "use strict";
-n.d(t, { A: () => M });
+n.d(t, { A: () => P });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
     l = n(17928),
     o = n(876230),
-    d = n(990078),
+    d = n(866665),
     c = n(176781),
     u = n(834730),
     _ = n(939249),
@@ -15,37 +15,39 @@ var i = n(627968),
     h = n(409626),
     I = n(692969),
     f = n(569926),
-    p = n(287809),
-    T = n(58703),
-    m = n(403362),
-    g = n(922016),
-    S = n(433781);
-let N = r.lazy(() =>
+    p = n(683574),
+    T = n(287809),
+    m = n(58703),
+    g = n(403362),
+    S = n(922016),
+    N = n(433781);
+let C = r.lazy(() =>
     Promise.all([n.e("17179"), n.e("46054")])
         .then(n.bind(n, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
-function C(e) {
-    let { participants: t, maxVisibleParticipants: n, guildId: a } = e,
-        s = r.useRef(null),
-        l = (0, r.useCallback)(
-            () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(N, { users: t, guildId: a }) }),
+function O(e) {
+    let { participants: t, maxVisibleParticipants: n, guildId: a, layerContext: s } = e,
+        l = r.useRef(null),
+        o = (0, r.useCallback)(
+            () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(C, { users: t, guildId: a }) }),
             [t, a],
         );
-    return (0, i.jsx)(g.Y, {
-        renderPopout: l,
-        targetElementRef: s,
+    return (0, i.jsx)(S.Y, {
+        renderPopout: o,
+        layerContext: s,
+        targetElementRef: l,
         position: "right",
         children: (e) =>
             (0, i.jsx)(_.D, {
                 ...e,
-                innerRef: s,
-                className: S.x,
+                innerRef: l,
+                className: N.x,
                 onClick: (t) => {
                     t.stopPropagation(), e.onClick?.(t);
                 },
                 children: (0, i.jsxs)(u.E, {
-                    className: S.s,
+                    className: N.s,
                     variant: "text-xs/medium",
                     color: "interactive-text-default",
                     children: ["+", t.length - n],
@@ -54,33 +56,34 @@ function C(e) {
     });
 }
 var R = n(97808),
-    O = n(778712),
-    L = n(342296),
+    L = n(778712),
+    y = n(342296),
     D = n(812924);
-function y(e) {
-    let { user: t, guildId: n } = e,
-        a = r.useRef(null);
-    return (0, i.jsx)(L.A, {
-        targetElementRef: a,
+function v(e) {
+    let { user: t, guildId: n, layerContext: a } = e,
+        s = r.useRef(null);
+    return (0, i.jsx)(y.A, {
+        targetElementRef: s,
         shouldPreload: !0,
         user: t,
         guildId: n,
         position: "bottom",
+        layerContext: a,
         children: (e) =>
             (0, i.jsx)(_.D, {
                 ...e,
-                innerRef: a,
+                innerRef: s,
                 className: D.RB,
                 onClick: (t) => {
                     e.onClick(t), t.stopPropagation();
                 },
                 "aria-label": t.username,
-                children: (0, i.jsx)(R.eu, { src: t.getAvatarURL(n, 24), size: O._3.SIZE_24, "aria-hidden": !0 }),
+                children: (0, i.jsx)(R.eu, { src: t.getAvatarURL(n, 24), size: L._3.SIZE_24, "aria-hidden": !0 }),
             }),
     });
 }
-var v = n(375708);
-function b(e) {
+var b = n(375708);
+function M(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
         r = (0, E.h)(t),
         { data: a } = (0, f.I)(t),
@@ -109,7 +112,7 @@ function b(e) {
         ],
     });
 }
-let M = function (e) {
+let P = function (e) {
     let {
             createdAt: t,
             participantIds: n,
@@ -122,8 +125,9 @@ let M = function (e) {
             isFullScreen: I = !1,
             showTextContent: f = !0,
         } = e,
-        g = (0, l.yK)([p.default], () => n.map((e) => p.default.getUser(e)).filter(m.Vq) ?? []),
-        S = null != t ? (0, T.Fe)(new Date(t)) : null;
+        S = (0, l.yK)([T.default], () => n.map((e) => T.default.getUser(e)).filter(g.Vq) ?? []),
+        N = null != t ? (0, m.Fe)(new Date(t)) : null,
+        { activeLayer: C } = (0, p.X$)();
     return (0, i.jsxs)("div", {
         className: s()(D.oK, { [D.pd]: A === o.Q6.PLAYING && !h, [D.aS]: I }, E),
         children: [
@@ -139,7 +143,7 @@ let M = function (e) {
                                 children: [
                                     (0, i.jsx)(d.m, {
                                         asContainer: !0,
-                                        text: v.intl.string(v.t["/fgfWh"]),
+                                        text: b.intl.string(b.t["/fgfWh"]),
                                         children: (0, i.jsx)(c.x, { className: D.gr, size: "xs", color: "white" }),
                                     }),
                                     f &&
@@ -147,36 +151,41 @@ let M = function (e) {
                                             className: D.DD,
                                             variant: "text-md/semibold",
                                             color: "text-overlay-light",
-                                            children: null != a && a.length > 0 ? a : v.intl.string(v.t.Cyxddp),
+                                            children: null != a && a.length > 0 ? a : b.intl.string(b.t.Cyxddp),
                                         }),
                                 ],
                             }),
                             f &&
-                                (null != r || null != S) &&
+                                (null != r || null != N) &&
                                 (0, i.jsxs)("div", {
                                     className: D.yu,
                                     children: [
-                                        (0, i.jsx)(b, { applicationId: r, hasTrailingDate: null != S }),
-                                        null != S &&
+                                        (0, i.jsx)(M, { applicationId: r, hasTrailingDate: null != N }),
+                                        null != N &&
                                             (0, i.jsx)(u.E, {
                                                 className: D.BR,
                                                 variant: "text-sm/normal",
                                                 color: "text-overlay-light",
-                                                children: S,
+                                                children: N,
                                             }),
                                     ],
                                 }),
                         ],
                     }),
-                    g.length > 0 &&
+                    S.length > 0 &&
                         (0, i.jsxs)("div", {
                             className: D.HD,
                             role: "group",
-                            "aria-label": v.intl.string(v.t.WTozwe),
+                            "aria-label": b.intl.string(b.t.WTozwe),
                             children: [
-                                g.slice(0, 4).map((e) => (0, i.jsx)(y, { user: e, guildId: _ }, e.id)),
-                                g.length > 4 &&
-                                    (0, i.jsx)(C, { participants: g, maxVisibleParticipants: 4, guildId: _ }),
+                                S.slice(0, 4).map((e) => (0, i.jsx)(v, { layerContext: C, user: e, guildId: _ }, e.id)),
+                                S.length > 4 &&
+                                    (0, i.jsx)(O, {
+                                        layerContext: C,
+                                        participants: S,
+                                        maxVisibleParticipants: 4,
+                                        guildId: _,
+                                    }),
                             ],
                         }),
                 ],
