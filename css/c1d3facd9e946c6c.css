@@ -254,9 +254,9 @@
     border-radius: var(--radius-sm);
     display: flex;
     gap: var(--space-12);
+    grid-column: 1/-1;
     margin-top: var(--space-12);
-    padding: var(--space-12);
-    width: 280px
+    padding: var(--space-12)
 }
 
 .footer__57c71 {

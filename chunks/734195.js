@@ -477,61 +477,63 @@ function ej(e) {
                     (0, a.jsx)(R.t, { size: "xs", color: Y.A.colors.TEXT_DEFAULT }),
                 ],
             }),
-            (0, a.jsx)("div", {
+            (0, a.jsxs)("div", {
                 className: i()(ec.fh, { [eD.qW]: N }),
                 style: { "--custom-dns-tile-columns": S },
-                children: m.map((e) => {
-                    let s = (0, eI.p)(e),
-                        l = e === t,
-                        r = u.has(e),
-                        d = I._k.includes(e),
-                        o = en.intl.string(s.name);
-                    return (0, a.jsx)(
-                        W.m,
-                        {
-                            text: o,
-                            asContainer: !0,
-                            children: (0, a.jsxs)(J.D, {
-                                className: i()(eD.SO, { [eD.wH]: l, [eD.j4]: N }),
-                                onClick: () => {
-                                    n(e), r && x(e);
-                                },
-                                "aria-label": d ? `${o}, ${en.intl.string(en.t.oW0eUd)}` : o,
-                                children: [
-                                    (0, a.jsx)(eu.E, {
-                                        variant: "text-lg/semibold",
-                                        color: l ? "text-strong" : "text-default",
-                                        className: i()(eD.FH, s.className),
-                                        children: "Gg",
-                                    }),
-                                    r && (0, a.jsx)("div", { className: ec.s1, "aria-hidden": !0 }),
-                                    d &&
+                children: [
+                    m.map((e) => {
+                        let s = (0, eI.p)(e),
+                            l = e === t,
+                            r = u.has(e),
+                            d = I._k.includes(e),
+                            o = en.intl.string(s.name);
+                        return (0, a.jsx)(
+                            W.m,
+                            {
+                                text: o,
+                                asContainer: !0,
+                                children: (0, a.jsxs)(J.D, {
+                                    className: i()(eD.SO, { [eD.wH]: l, [eD.j4]: N }),
+                                    onClick: () => {
+                                        n(e), r && x(e);
+                                    },
+                                    "aria-label": d ? `${o}, ${en.intl.string(en.t.oW0eUd)}` : o,
+                                    children: [
                                         (0, a.jsx)(eu.E, {
-                                            variant: "text-xxs/normal",
-                                            color: "text-subtle",
-                                            className: ec.hn,
-                                            children: en.intl.string(en.t.oW0eUd),
+                                            variant: "text-lg/semibold",
+                                            color: l ? "text-strong" : "text-default",
+                                            className: i()(eD.FH, s.className),
+                                            children: "Gg",
                                         }),
-                                ],
-                            }),
-                        },
-                        e,
-                    );
-                }),
-            }),
-            E &&
-                h &&
-                (0, a.jsxs)("div", {
-                    className: eD.Lb,
-                    children: [
-                        (0, a.jsx)(e_.m, { size: "lg" }),
-                        (0, a.jsx)(eu.E, {
-                            variant: "text-sm/normal",
-                            color: "text-subtle",
-                            children: en.intl.string(el.default["+O1xL2"]),
+                                        r && (0, a.jsx)("div", { className: ec.s1, "aria-hidden": !0 }),
+                                        d &&
+                                            (0, a.jsx)(eu.E, {
+                                                variant: "text-xxs/normal",
+                                                color: "text-subtle",
+                                                className: ec.hn,
+                                                children: en.intl.string(en.t.oW0eUd),
+                                            }),
+                                    ],
+                                }),
+                            },
+                            e,
+                        );
+                    }),
+                    E &&
+                        h &&
+                        (0, a.jsxs)("div", {
+                            className: eD.Lb,
+                            children: [
+                                (0, a.jsx)(e_.m, { size: "lg" }),
+                                (0, a.jsx)(eu.E, {
+                                    variant: "text-sm/normal",
+                                    color: "text-subtle",
+                                    children: en.intl.string(el.default["+O1xL2"]),
+                                }),
+                            ],
                         }),
-                    ],
-                }),
+                ],
+            }),
         ],
     });
 }
