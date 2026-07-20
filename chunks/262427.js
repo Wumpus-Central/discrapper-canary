@@ -20,7 +20,9 @@ function u(e) {
         children: [
             null != c
                 ? (0, l.jsx)("div", { className: o.B4, children: c })
-                : (0, l.jsx)(s, { size: u, color: "currentColor" }),
+                : null != s
+                  ? (0, l.jsx)(s, { size: u, color: "currentColor" })
+                  : null,
             i,
         ],
     });

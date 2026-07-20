@@ -72,14 +72,13 @@ function m(e, t) {
             case "pdp":
             case "card":
             case "gift_customization": {
-                if (null == m) return null;
                 let l = "gift_customization" === e ? p.checkout : p.pdp,
-                    i = _(l?.label ?? null, m.amount);
+                    i = _(l?.label ?? null, m?.amount ?? null);
                 if ((0, c.uJ)(i)) return null;
                 return {
                     Icon: S(l?.icon ?? null),
                     text: i,
-                    tooltip: _(l?.tooltip ?? null, m.amount),
+                    tooltip: _(l?.tooltip ?? null, m?.amount ?? null),
                     endsAt: t,
                     flavor: p.flavor,
                     reward: m,

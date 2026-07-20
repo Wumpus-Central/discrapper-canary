@@ -1,0 +1,115 @@
+.container_f627e4 {
+    overflow: hidden
+}
+
+.container_f627e4,
+.imageWrapper_f627e4 {
+    height: 100%;
+    position: relative;
+    width: 100%
+}
+
+.imageWrapper_f627e4 {
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+@keyframes fadeIn_f627e4 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeOut_f627e4 {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.image_f627e4 {
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    width: 100%
+}
+
+.full-motion .image_f627e4 {
+    animation: fadeIn_f627e4 .15s ease-out
+}
+
+.prevImage_f627e4 {
+    display: block;
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    -o-object-position: center;
+    object-position: center;
+    pointer-events: none;
+    position: absolute;
+    width: 100%;
+    z-index: 1
+}
+
+.full-motion .prevImage_f627e4 {
+    animation: fadeOut_f627e4 .15s ease-in forwards
+}
+
+.full-motion .videoFadeIn_f627e4 {
+    animation: fadeIn_f627e4 .15s ease-out
+}
+
+.video_f627e4 {
+    background: transparent;
+    container-type: size;
+    display: flex;
+    height: 100% !important;
+    overflow: hidden;
+    position: relative;
+    width: 100% !important
+}
+
+.video_f627e4 video {
+    border-radius: 0
+}
+
+.container_f627e4 .videoWrapper_f627e4 {
+    border-radius: 0;
+    height: 100% !important;
+    width: 100% !important
+}
+
+.mediaPlayer_f627e4 {
+    background: transparent;
+    flex: 1;
+    height: 100% !important;
+    inset-inline-start: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100% !important;
+
+    @container (min-aspect-ratio: 16/9) {
+        height: 56.25cqw !important
+    }
+
+    @container (max-aspect-ratio: 16/9) {
+        width: 177.78cqh !important
+    }
+}
+
+.mediaPlayer_f627e4 div {
+    display: none
+}
