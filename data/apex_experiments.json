@@ -5598,7 +5598,7 @@
       "verticalScrollEnabled": false,
       "scrollAffordanceVariant": "none",
       "autoScrollLeadMs": 3000,
-      "autoScrollEndCardMs": 8000,
+      "autoScrollEndCardMs": 3000,
       "peekFraction": 0,
       "ctaTimerMilliSeconds": 0
     },
@@ -5612,7 +5612,7 @@
         "verticalScrollEnabled": false,
         "scrollAffordanceVariant": "none",
         "autoScrollLeadMs": 3000,
-        "autoScrollEndCardMs": 8000,
+        "autoScrollEndCardMs": 3000,
         "peekFraction": 0,
         "ctaTimerMilliSeconds": 0
       },
@@ -5621,7 +5621,7 @@
         "verticalScrollEnabled": true,
         "scrollAffordanceVariant": "none",
         "autoScrollLeadMs": 3000,
-        "autoScrollEndCardMs": 8000,
+        "autoScrollEndCardMs": 3000,
         "peekFraction": 0,
         "ctaTimerMilliSeconds": 0
       },
@@ -5630,7 +5630,7 @@
         "verticalScrollEnabled": true,
         "scrollAffordanceVariant": "indicator",
         "autoScrollLeadMs": 3000,
-        "autoScrollEndCardMs": 8000,
+        "autoScrollEndCardMs": 3000,
         "peekFraction": 0,
         "ctaTimerMilliSeconds": 0
       },
@@ -5639,7 +5639,7 @@
         "verticalScrollEnabled": true,
         "scrollAffordanceVariant": "auto",
         "autoScrollLeadMs": 3000,
-        "autoScrollEndCardMs": 8000,
+        "autoScrollEndCardMs": 3000,
         "peekFraction": 0,
         "ctaTimerMilliSeconds": 0
       },
@@ -5648,7 +5648,7 @@
         "verticalScrollEnabled": true,
         "scrollAffordanceVariant": "peek",
         "autoScrollLeadMs": 3000,
-        "autoScrollEndCardMs": 8000,
+        "autoScrollEndCardMs": 3000,
         "peekFraction": 0.12,
         "ctaTimerMilliSeconds": 0
       }
