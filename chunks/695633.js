@@ -23,6 +23,7 @@ function f(e) {
             let t = u.Ay.lastMessageId(e.id) ?? e.id;
             return Math.max(
                 E.default.extractTimestamp(t),
+                null != e.lastNonMessageActivityTimestamp ? new Date(e.lastNonMessageActivityTimestamp).getTime() : 0,
                 null != e.threadMetadata.archiveTimestamp ? new Date(e.threadMetadata.archiveTimestamp).getTime() : 0,
             );
         })(e) + t
@@ -35,11 +36,11 @@ let T = {},
     S = {},
     N = {},
     C = {},
-    R = null,
-    O = {};
+    O = null,
+    R = {};
 function L() {
-    for (let e in ((T = {}), (N = {}), (m = {}), (g = {}), (S = {}), (R = _.Ay.getChannelId()), O)) clearTimeout(O[e]);
-    (O = {}),
+    for (let e in ((T = {}), (N = {}), (m = {}), (g = {}), (S = {}), (O = _.Ay.getChannelId()), R)) clearTimeout(R[e]);
+    (R = {}),
         A.A.forEachGuild((e) => {
             D(e);
         }),
@@ -94,7 +95,7 @@ function M(e, t) {
             (r = E.default.fromTimestamp(e));
     }
     for (let n in g[e][t])
-        t === R
+        t === O
             ? u.Ay.isNewForumThread(n, t, i) && C[e][t]++
             : E.default.compare(n, r) > 0 && !u.Ay.hasOpenedThread(n) && C[e][t]++;
 }
@@ -170,9 +171,9 @@ function x() {
     v();
 }
 function k() {
-    let e = R;
-    if ((R = _.Ay.getChannelId()) === e) return !1;
-    b(e), b(R);
+    let e = O;
+    if ((O = _.Ay.getChannelId()) === e) return !1;
+    b(e), b(O);
 }
 function F(e) {
     let t = u.Ay.getMentionCount(e.id) > 0,
@@ -187,7 +188,7 @@ function V(e, t) {
     var n;
     B(e.id),
         t &&
-            (O[(n = e).id] = setTimeout(
+            (R[(n = e).id] = setTimeout(
                 () => {
                     let e = d.A.getChannel(n.id);
                     null != e && s.h.dispatch({ type: "THREAD_UPDATE", channel: e });
@@ -196,7 +197,7 @@ function V(e, t) {
             ));
 }
 function B(e) {
-    e in O && (clearTimeout(O[e]), delete O[e]);
+    e in R && (clearTimeout(R[e]), delete R[e]);
 }
 function H(e, t, n, i) {
     let { guild_id: a, parent_id: s, id: l } = t;
