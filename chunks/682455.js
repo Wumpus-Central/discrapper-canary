@@ -804,24 +804,25 @@ function ta(e) {
 function to(e) {
     let { guild: t } = e,
         n = (0, L.bG)([J.A], () => null != t && J.A.can(ei.xBc.MANAGE_GUILD, t), [t]),
-        i = t.features.has(ei.GuildFeatures.COMMUNITY),
-        l = t.features.has(ei.GuildFeatures.PRUNE_REQUIRES_ADMIN),
-        [s, r] = R.useState(l);
+        i = (0, L.bG)([Z.default], () => (0, q.bM)(t, Z.default.getCurrentUser()), [t]),
+        l = t.features.has(ei.GuildFeatures.COMMUNITY),
+        s = t.features.has(ei.GuildFeatures.PRUNE_REQUIRES_ADMIN),
+        [r, a] = R.useState(s);
     R.useEffect(() => {
-        r(l);
-    }, [l]);
-    let a = R.useCallback(
+        a(s);
+    }, [s]);
+    let o = R.useCallback(
         async (e) => {
-            r(e);
+            a(e);
             try {
                 await eH(t, e);
             } catch (e) {
-                (0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), r(l);
+                (0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), a(s);
             }
         },
-        [t, l],
+        [t, s],
     );
-    return i
+    return l || !n
         ? null
         : (0, p.jsxs)(p.Fragment, {
               children: [
@@ -831,9 +832,9 @@ function to(e) {
                       children: (0, p.jsx)(V.d, {
                           label: el.intl.string(el.t.VWu9RV),
                           description: el.intl.string(el.t.lkpZYr),
-                          checked: s,
-                          onChange: a,
-                          disabled: !n,
+                          checked: r,
+                          onChange: o,
+                          disabled: !i,
                       }),
                   }),
               ],
@@ -12388,43 +12389,46 @@ function up(e) {
 function uA(e) {
     let { guild: t } = e,
         n = (0, L.bG)([J.A], () => null != t && J.A.can(ei.xBc.MANAGE_GUILD, t), [t]),
-        i = t.features.has(ei.GuildFeatures.PRUNE_REQUIRES_ADMIN),
-        [l, s] = R.useState(i);
+        i = (0, L.bG)([Z.default], () => (0, q.bM)(t, Z.default.getCurrentUser()), [t]),
+        l = t.features.has(ei.GuildFeatures.PRUNE_REQUIRES_ADMIN),
+        [s, r] = R.useState(l);
     R.useEffect(() => {
-        s(i);
-    }, [i]);
-    let r = R.useCallback(
+        r(l);
+    }, [l]);
+    let a = R.useCallback(
         async (e) => {
-            s(e);
+            r(e);
             try {
                 await eH(t, e);
             } catch (e) {
-                (0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), s(i);
+                (0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), r(l);
             }
         },
-        [t, i],
+        [t, l],
     );
-    return (0, p.jsxs)("div", {
-        className: e7.ph,
-        children: [
-            (0, p.jsxs)("div", {
-                className: e7.Ly,
-                children: [
-                    (0, p.jsx)(D.D, {
-                        variant: "text-md/semibold",
-                        color: "text-strong",
-                        children: el.intl.string(el.t.VWu9RV),
-                    }),
-                    (0, p.jsx)(G.E, {
-                        variant: "text-sm/medium",
-                        color: "text-default",
-                        children: el.intl.string(el.t.lkpZYr),
-                    }),
-                ],
-            }),
-            (0, p.jsx)(e8, { checked: l, onChange: r, disabled: !n }),
-        ],
-    });
+    return n
+        ? (0, p.jsxs)("div", {
+              className: e7.ph,
+              children: [
+                  (0, p.jsxs)("div", {
+                      className: e7.Ly,
+                      children: [
+                          (0, p.jsx)(D.D, {
+                              variant: "text-md/semibold",
+                              color: "text-strong",
+                              children: el.intl.string(el.t.VWu9RV),
+                          }),
+                          (0, p.jsx)(G.E, {
+                              variant: "text-sm/medium",
+                              color: "text-default",
+                              children: el.intl.string(el.t.lkpZYr),
+                          }),
+                      ],
+                  }),
+                  (0, p.jsx)(e8, { checked: s, onChange: a, disabled: !i }),
+              ],
+          })
+        : null;
 }
 var uI = n(5180),
     uS = n(124759);
