@@ -100,7 +100,6 @@
 }
 
 .previewContainer_ebb2cf {
-    --custom-user-profile-theme-padding: 0;
     background-color: var(--background-mod-subtle);
     border-radius: inherit;
     box-shadow: inset 0 0 0 1px var(--border-muted);
