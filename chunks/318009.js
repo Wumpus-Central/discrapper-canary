@@ -1,125 +1,85 @@
 "use strict";
-n.d(t, { A: () => S });
+n.d(t, { A: () => T });
 var i = n(627968),
     r = n(64700),
     a = n(562708),
     s = n(508382),
     l = n(17928),
-    o = n(502939),
-    d = n(623646),
-    c = n(980707),
-    u = n(442433),
-    _ = n(139286),
-    E = n(750506),
-    A = n(267102),
-    h = n(363195),
-    I = n(712687),
-    f = n(625494),
-    p = n(652215);
-function T() {
+    o = n(980707),
+    d = n(442433),
+    c = n(139286),
+    u = n(267102),
+    _ = n(363195),
+    E = n(712687),
+    A = n(625494),
+    h = n(652215);
+function I() {
     window.getSelection().removeAllRanges();
 }
-let m = (e) => {
+let f = (e) => {
     let {
             children: t,
             close: n,
             onUnmount: l,
-            target: c,
-            rect: u,
-            position: h,
-            align: I,
-            impressionName: f,
-            impressionProperties: m,
-            disableClickTrap: g = !1,
-            repositionOnContentChange: S = !1,
+            target: o,
+            rect: d,
+            position: _,
+            align: E,
+            impressionName: A,
+            impressionProperties: f,
+            disableClickTrap: p = !1,
+            repositionOnContentChange: T = !1,
         } = e,
-        N = r.useRef(null),
-        C = r.useMemo(() => ({ current: c }), [c]),
-        R = r.useRef(n);
+        m = r.useRef(n);
     r.useEffect(() => {
-        R.current = n;
-    }),
-        r.useEffect(() => {
-            let e = N.current?.elementRef.current;
-            if (null == e) return;
-            let t = (e) => {
-                let t = e.target,
-                    n = N.current?.elementRef.current;
-                (null != n && (0, d.H)(n, t)) || (T(), R.current());
-            };
-            return (
-                e.ownerDocument?.addEventListener("click", t, !0),
-                e.ownerDocument?.addEventListener("contextmenu", t, !0),
-                () => {
-                    e.ownerDocument?.removeEventListener("click", t, !0),
-                        e.ownerDocument?.removeEventListener("contextmenu", t, !0);
-                }
-            );
-        }, []);
-    let O = r.useRef(l);
+        m.current = n;
+    });
+    let g = r.useRef(l);
     r.useEffect(() => {
-        O.current = l;
+        g.current = l;
     }),
-        r.useEffect(() => () => O.current?.(), []),
-        r.useLayoutEffect(() => {
-            N.current?.updatePosition();
-        }),
-        (0, _.A)({ type: a.ImpressionTypes.MENU, name: f, properties: m });
-    let L = (0, A.aL)(),
-        y = r.useCallback(() => {
-            L.dispatch(p.jej.POPOUT_SHOW);
-        }, [L]),
-        D = r.useCallback(() => {
-            L.dispatch(p.jej.POPOUT_HIDE);
-        }, [L]),
-        v = (0, o.D)("ContextMenu"),
-        b = c.ownerDocument;
-    return v
-        ? (0, i.jsx)(s.Ow, {
-              focus: "modal",
-              returnFocusElement: c,
-              spacing: 0,
-              open: !0,
-              ownerDocument: b,
-              onOpenChange: (e, t, n) => {
-                  e ? y() : (D(), "outside-press" === n && setTimeout(T, 0), R.current());
-              },
-              overrideTargetRect: u,
-              placement: (0, s.Pv)(h ?? "right", I ?? "top"),
-              blockPointerEvents: !g,
-              crossAccessFlip: !1,
-              autoUpdate: S,
-              renderLayer: (e) => {
-                  let { update: n } = e;
-                  return t({ position: h }, n);
-              },
-              children: () => null,
-          })
-        : (0, i.jsx)(E.nE, {
-              onMount: y,
-              onUnmount: D,
-              targetRef: C,
-              overrideTargetRect: u,
-              position: h ?? "right",
-              align: I ?? "top",
-              autoInvert: !0,
-              ref: N,
-              nudgeAlignIntoViewport: !0,
-              clickTrap: !g,
-              children: t,
-          });
+        r.useEffect(() => () => g.current?.(), []),
+        (0, c.A)({ type: a.ImpressionTypes.MENU, name: A, properties: f });
+    let S = (0, u.aL)(),
+        N = r.useCallback(() => {
+            S.dispatch(h.jej.POPOUT_SHOW);
+        }, [S]),
+        C = r.useCallback(() => {
+            S.dispatch(h.jej.POPOUT_HIDE);
+        }, [S]),
+        O = o.ownerDocument;
+    return (0, i.jsx)(s.Ow, {
+        focus: "modal",
+        returnFocusElement: o,
+        spacing: 0,
+        open: !0,
+        ownerDocument: O,
+        onOpenChange: (e, t, n) => {
+            e ? N() : (C(), "outside-press" === n && setTimeout(I, 0), m.current());
+        },
+        overrideTargetRect: d,
+        placement: (0, s.Pv)(_ ?? "right", E ?? "top"),
+        blockPointerEvents: !p,
+        crossAccessFlip: !1,
+        autoUpdate: T,
+        renderLayer: (e) => {
+            let { update: n } = e;
+            return t({ position: _ }, n);
+        },
+        children: () => null,
+    });
 };
-class g extends r.PureComponent {
+class p extends r.PureComponent {
     state = { render: void 0 };
     componentDidMount() {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
             (t.addEventListener("resize", this.closeResize, !0),
-            f._.subscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
+            A._.subscribe(h.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
             null != e)
         ) {
             let t = setTimeout(() => {
-                this.setState({ render: () => (0, i.jsx)(c.X, {}) });
+                this.setState({ render: () => (0, i.jsx)(o.X, {}) });
             }, 300);
             e().then((e) => {
                 this.setState({ render: e }), clearTimeout(t);
@@ -133,7 +93,7 @@ class g extends r.PureComponent {
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
         e.removeEventListener("resize", this.closeResize, !0),
-            f._.unsubscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
+            A._.unsubscribe(h.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu);
     }
     closeResize = (e) => {
         let { renderWindow: t } = this.props;
@@ -162,7 +122,7 @@ class g extends r.PureComponent {
             null != d &&
             a.context === e &&
             t.ownerDocument?.defaultView === l
-            ? (0, i.jsx)(m, {
+            ? (0, i.jsx)(f, {
                   target: t,
                   rect: s,
                   close: this.close,
@@ -181,13 +141,13 @@ class g extends r.PureComponent {
             : null;
     }
 }
-function S() {
+function T() {
     let {
             contextMenu: e,
             version: t,
             isOpen: n,
-        } = (0, l.cf)([I.A], () => ({ contextMenu: I.A.getContextMenu(), version: I.A.version, isOpen: I.A.isOpen() })),
-        a = (0, l.bG)([h.A], () => h.A.theme),
-        { appContext: s, renderWindow: o } = r.useContext(A.Ay);
-    return (0, i.jsx)(g, { appContext: s, renderWindow: o, ...e, isOpen: n, theme: a, closeContextMenu: u.Z_ }, t);
+        } = (0, l.cf)([E.A], () => ({ contextMenu: E.A.getContextMenu(), version: E.A.version, isOpen: E.A.isOpen() })),
+        a = (0, l.bG)([_.A], () => _.A.theme),
+        { appContext: s, renderWindow: o } = r.useContext(u.Ay);
+    return (0, i.jsx)(p, { appContext: s, renderWindow: o, ...e, isOpen: n, theme: a, closeContextMenu: d.Z_ }, t);
 }

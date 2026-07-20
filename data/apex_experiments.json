@@ -453,22 +453,6 @@
     }
   },
   {
-    "name": "2025-10-layer-system-v2",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2025-10-low-latency-rate-control",
     "defaultConfig": {

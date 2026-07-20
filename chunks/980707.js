@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { W: () => eA, X: () => eh }), n(321073);
+n.d(t, { W: () => e_, X: () => eE }), n(321073);
 var i,
     r = n(627968),
     a = n(64700),
@@ -328,133 +328,92 @@ function q(e) {
         })
     );
 }
-var Z = n(502939),
-    X = n(623646),
-    Q = n(962125);
-function J(e) {
+var Z = n(962125);
+function X(e) {
     let { parentItem: t, isFocused: n, menuSubmenuProps: i, rows: s, rowHeight: l, onScroll: o, listClassName: d } = e,
         c = a.useRef(null),
         u = a.useRef(null),
-        _ = a.useRef(null),
-        E = a.useRef(null),
-        { isUsingKeyboardNavigation: A, focusIndex: h, ...I } = i;
+        { isUsingKeyboardNavigation: _, focusIndex: E, ...A } = i;
     a.useLayoutEffect(() => {
-        n && (k(c), _.current?.focus());
+        n && c.current?.focus();
     }, [n]),
         a.useEffect(() => {
-            n && h >= 0 && A && E.current?.scrollRowIntoView(h);
-        }, [n, A, h]);
-    let f = a.useCallback((e) => s[e], [s]);
-    function p() {
-        return (
-            s.length > 0 &&
-            (0, r.jsx)("div", {
-                className: D.submenuPaddingContainer,
-                children: (0, r.jsx)("div", {
-                    className: D.submenu,
-                    ...I,
-                    ref: _,
-                    children: (0, r.jsx)(Q.A, {
-                        ref: E,
-                        className: d,
-                        listPadding: [6, 0, 6, 8],
-                        onScroll: o,
-                        renderRow: f,
-                        rowCount: s.length,
-                        rowHeight: l,
-                    }),
-                }),
-            })
-        );
-    }
-    if ((0, Z.D)("MenuSubmenuListItem"))
-        return (0, r.jsx)(T.Ow, {
-            spacing: 4,
-            placement: "right-start",
-            autoFlip: !0,
-            portal: !1,
-            viewportPadding: 48,
-            maxHeight: 360,
-            renderLayer: p,
-            children: (e) => {
-                let { ref: n, props: i } = e;
-                return (0, r.jsx)("div", { ref: n, ...i, children: t });
-            },
-        });
-    let m = (0, r.jsx)(X.Q, {
-        targetRef: u,
-        autoInvert: !0,
-        nudgeAlignIntoViewport: !0,
-        fixed: !0,
+            n && E >= 0 && _ && u.current?.scrollRowIntoView(E);
+        }, [n, _, E]);
+    let h = a.useCallback((e) => s[e], [s]);
+    return (0, r.jsx)(T.Ow, {
         spacing: 4,
-        position: "right",
-        align: "top",
-        className: D.submenuLayer,
-        children: p,
+        placement: "right-start",
+        autoFlip: !0,
+        portal: !1,
+        viewportPadding: 48,
+        maxHeight: 360,
+        renderLayer: function () {
+            return (
+                s.length > 0 &&
+                (0, r.jsx)("div", {
+                    className: D.submenuPaddingContainer,
+                    children: (0, r.jsx)("div", {
+                        className: D.submenu,
+                        ...A,
+                        ref: c,
+                        children: (0, r.jsx)(Z.A, {
+                            ref: u,
+                            className: d,
+                            listPadding: [6, 0, 6, 8],
+                            onScroll: o,
+                            renderRow: h,
+                            rowCount: s.length,
+                            rowHeight: l,
+                        }),
+                    }),
+                })
+            );
+        },
+        children: (e) => {
+            let { ref: n, props: i } = e;
+            return (0, r.jsx)("div", { ref: n, ...i, children: t });
+        },
     });
-    return (0, r.jsxs)("div", { ref: c, children: [(0, r.jsx)("div", { ref: u }), t, n ? m : null] });
 }
-let ee = a.createContext("right-start");
-function et(e) {
-    let t = a.useContext(ee),
+let Q = a.createContext("right-start");
+function J(e) {
+    let t = a.useContext(Q),
         { subMenuClassName: n, parentItem: i, isFocused: s, menuSubmenuProps: o, renderSubmenu: d } = e,
         { focusIndex: c, isUsingKeyboardNavigation: u, ..._ } = o,
         E = a.useRef(null),
-        A = a.useRef(null),
-        h = a.useRef(null),
-        [I, f] = a.useState(!1);
-    a.useLayoutEffect(() => {
-        f(!0);
-    }, []),
-        a.useLayoutEffect(() => {
-            s && k(E);
-        }, [s]);
-    let p = (0, r.jsx)("div", {
+        A = (0, r.jsx)("div", {
             className: D.submenuPaddingContainer,
             children: (0, r.jsx)("div", {
                 className: l()(D.submenu, n),
                 ..._,
-                ref: h,
+                ref: E,
                 children: (0, r.jsx)(g.Ip, { className: D.scroller, children: d() }),
             }),
         }),
-        m = (0, Z.D)("MenuSubmenuItem"),
-        S = R("MenuSubmenuItem"),
-        [N, C] = a.useState(!1);
-    if (m)
-        return (0, r.jsx)(T.Ow, {
-            open: N || s,
-            viewportPadding: 48,
-            maxHeight: 360,
-            onOpenChange: C,
-            spacing: S ? -4 : 4,
-            placement: t,
-            portal: !1,
-            crossAccessFlip: !1,
-            trigger: "hover",
-            renderLayer: (e) => {
-                let { placement: t } = e;
-                return (0, r.jsx)(ee.Provider, { value: t, children: p });
-            },
-            children: (e) => {
-                let { ref: t, props: n } = e;
-                return (0, r.jsx)("div", { ref: t, ...n, children: i });
-            },
-        });
-    let O = (0, r.jsx)(X.Q, {
-        targetRef: A,
-        autoInvert: !0,
-        nudgeAlignIntoViewport: !0,
-        fixed: !0,
-        spacing: 4,
-        position: "right",
-        align: "top",
-        className: D.submenuLayer,
-        children: () => p,
+        h = R("MenuSubmenuItem"),
+        [I, f] = a.useState(!1);
+    return (0, r.jsx)(T.Ow, {
+        open: I || s,
+        viewportPadding: 48,
+        maxHeight: 360,
+        onOpenChange: f,
+        spacing: h ? -4 : 4,
+        placement: t,
+        portal: !1,
+        crossAccessFlip: !1,
+        trigger: "hover",
+        renderLayer: (e) => {
+            let { placement: t } = e;
+            return (0, r.jsx)(Q.Provider, { value: t, children: A });
+        },
+        children: (e) => {
+            let { ref: t, props: n } = e;
+            return (0, r.jsx)("div", { ref: t, ...n, children: i });
+        },
     });
-    return (0, r.jsxs)("div", { ref: E, children: [(0, r.jsx)("div", { ref: A }), i, s && I ? O : null] });
 }
-function en(e) {
+function ee(e) {
     let {
             children: t,
             color: n = "default",
@@ -488,8 +447,8 @@ function en(e) {
         children: t({ color: n, disabled: s, isFocused: i }),
     });
 }
-var ei = n(658675);
-function er(e) {
+var et = n(658675);
+function en(e) {
     let {
             color: t = "default",
             label: n,
@@ -552,12 +511,12 @@ function er(e) {
                         }),
                 ],
             }),
-            (0, r.jsx)("div", { className: D.iconContainer, children: (0, r.jsx)(ei.P, { checked: s, disabled: _ }) }),
+            (0, r.jsx)("div", { className: D.iconContainer, children: (0, r.jsx)(et.P, { checked: s, disabled: _ }) }),
         ],
     });
 }
-var ea = n(144228);
-function es(e) {
+var ei = n(144228);
+function er(e) {
     let {
             color: t = "default",
             label: n,
@@ -614,12 +573,12 @@ function es(e) {
                         }),
                 ],
             }),
-            (0, r.jsx)("div", { className: D.iconContainer, children: (0, r.jsx)(ea.T, { checked: s, disabled: _ }) }),
+            (0, r.jsx)("div", { className: D.iconContainer, children: (0, r.jsx)(ei.T, { checked: s, disabled: _ }) }),
         ],
     });
 }
-var el = n(243721);
-function eo(e) {
+var ea = n(243721);
+function es(e) {
     let {
             color: t = "default",
             label: n,
@@ -669,14 +628,14 @@ function eo(e) {
             (0, r.jsx)("div", {
                 className: D.switchContainer,
                 "aria-hidden": !0,
-                children: (0, r.jsx)(el.d, { checked: o, disabled: d, displayOnly: !0 }),
+                children: (0, r.jsx)(ea.d, { checked: o, disabled: d, displayOnly: !0 }),
             }),
         ],
     });
 }
-var ed = n(292666);
-let ec = { position: "absolute", visibility: "hidden", pointerEvents: "none", whiteSpace: "nowrap" };
-function eu(e) {
+var el = n(292666);
+let eo = { position: "absolute", visibility: "hidden", pointerEvents: "none", whiteSpace: "nowrap" };
+function ed(e) {
     let {
             color: t = "default",
             label: n,
@@ -729,8 +688,8 @@ function eu(e) {
                 className: D.textInputWrapper,
                 style: null != p ? { minWidth: p } : void 0,
                 children: [
-                    (0, r.jsx)("span", { ref: f, "aria-hidden": !0, style: ec, children: o }),
-                    (0, r.jsx)(ed.k, {
+                    (0, r.jsx)("span", { ref: f, "aria-hidden": !0, style: eo, children: o }),
+                    (0, r.jsx)(el.k, {
                         inputRef: I,
                         value: i,
                         onChange: m,
@@ -744,7 +703,7 @@ function eu(e) {
         ],
     });
 }
-function e_(e) {
+function ec(e) {
     let {
             color: t = "default",
             label: n,
@@ -801,7 +760,7 @@ function e_(e) {
         ],
     });
 }
-function eE(e) {
+function eu(e) {
     let {
             color: t = "default",
             disabled: n,
@@ -829,7 +788,7 @@ function eE(e) {
         })
     );
 }
-function eA(e) {
+function e_(e) {
     let {
             navId: t,
             variant: n = "flexible",
@@ -1117,7 +1076,7 @@ function eA(e) {
                     0 === h.length &&
                         (0, r.jsx)(q, {
                             disabled: !0,
-                            void_label: () => (0, r.jsx)(eI, {}),
+                            void_label: () => (0, r.jsx)(eA, {}),
                             menuItemProps: P.getItemProps({ path: ["empty"] }),
                             isFocused: !1,
                             onFocus: () => {},
@@ -1173,7 +1132,7 @@ function eA(e) {
                                             ? null != l
                                                 ? c.push(
                                                       (0, r.jsx)(
-                                                          J,
+                                                          X,
                                                           {
                                                               ...o.props,
                                                               parentItem: I,
@@ -1189,7 +1148,7 @@ function eA(e) {
                                                   )
                                                 : c.push(
                                                       (0, r.jsx)(
-                                                          et,
+                                                          J,
                                                           {
                                                               ...o.props,
                                                               subMenuClassName: _,
@@ -1209,7 +1168,7 @@ function eA(e) {
                                         let e = [...i, o.key];
                                         c.push(
                                             (0, r.jsx)(
-                                                en,
+                                                ee,
                                                 {
                                                     ...o.props,
                                                     isFocused: n.isFocused(e),
@@ -1227,7 +1186,7 @@ function eA(e) {
                                         let e = [...i, o.key];
                                         c.push(
                                             (0, r.jsx)(
-                                                er,
+                                                en,
                                                 {
                                                     ...o.props,
                                                     isFocused: n.isFocused(e),
@@ -1246,7 +1205,7 @@ function eA(e) {
                                         let e = [...i, o.key];
                                         c.push(
                                             (0, r.jsx)(
-                                                es,
+                                                er,
                                                 {
                                                     ...o.props,
                                                     isFocused: n.isFocused(e),
@@ -1262,7 +1221,7 @@ function eA(e) {
                                         let e = [...i, o.key];
                                         c.push(
                                             (0, r.jsx)(
-                                                eo,
+                                                es,
                                                 {
                                                     ...o.props,
                                                     isFocused: n.isFocused(e),
@@ -1281,7 +1240,7 @@ function eA(e) {
                                         let e = [...i, o.key];
                                         c.push(
                                             (0, r.jsx)(
-                                                eu,
+                                                ed,
                                                 {
                                                     ...o.props,
                                                     isFocused: n.isFocused(e),
@@ -1297,7 +1256,7 @@ function eA(e) {
                                         let e = [...i, o.key];
                                         c.push(
                                             (0, r.jsx)(
-                                                e_,
+                                                ec,
                                                 {
                                                     ...o.props,
                                                     isFocused: n.isFocused(e),
@@ -1315,7 +1274,7 @@ function eA(e) {
                                         let e = [...i, o.key];
                                         c.push(
                                             (0, r.jsx)(
-                                                eE,
+                                                eu,
                                                 {
                                                     ...o.props,
                                                     isFocused: n.isFocused(e),
@@ -1337,10 +1296,10 @@ function eA(e) {
         }),
     });
 }
-function eh() {
+function eE() {
     return (0, r.jsx)("div", { className: l()(D.menu, D.loader, D.flexible), children: (0, r.jsx)(S.y, {}) });
 }
-function eI() {
+function eA() {
     let e = "\u266B (\u3064\uFF61\u25D5\u203F\u203F\u25D5\uFF61)\u3064 \u266A",
         [t, n] = a.useState(e);
     return (
