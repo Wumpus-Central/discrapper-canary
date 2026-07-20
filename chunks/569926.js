@@ -1,43 +1,45 @@
 "use strict";
-n.d(t, { x: () => E, I: () => p });
+n.d(t, { x: () => f, I: () => I });
 var i = n(64700),
     r = n(17928),
-    s = n(735438),
-    a = n.n(s),
+    a = n(927813),
+    s = n(435558),
+    l = n.n(s),
     o = n(636537),
-    l = n(451988),
-    u = n(228366),
-    c = n(311043),
-    d = n(652215);
-async function _(e) {
+    d = n(451988),
+    c = n(228366),
+    u = n(311043),
+    _ = n(652215);
+async function E(e) {
     try {
-        let t = (await o.Bo.get({ url: d.Rsh.GAMES, query: { game_ids: e }, rejectWithError: !0 })).body;
-        u.h.dispatch({ type: "GAME_FETCH_SUCCESS", gameIds: e, games: t });
+        let t = (await o.Bo.get({ url: _.Rsh.GAMES, query: { game_ids: e }, rejectWithError: !0 })).body;
+        c.h.dispatch({ type: "GAME_FETCH_SUCCESS", gameIds: e, games: t });
     } catch {
-        u.h.dispatch({ type: "GAME_FETCH_FAILURE", gameIds: e });
+        c.h.dispatch({ type: "GAME_FETCH_FAILURE", gameIds: e });
     }
 }
-let h = new l.OC(
+let A = new d.OC(
     async (e) => {
-        u.h.dispatch({ type: "GAME_FETCH", gameIds: e }), await Promise.all(a().chunk(e, 20).map(_));
+        c.h.dispatch({ type: "GAME_FETCH", gameIds: e }), await Promise.all(l().chunk(e, 20).map(E));
     },
-    (e) => !c.A.hasNoData(e),
+    (e) => !u.A.hasNoData(e),
 );
-async function f(e) {
-    0 !== e.length && (await h.queue(e));
+async function h(e) {
+    0 !== e.length && (await A.queue(e));
 }
-let p = (0, r.UT)(c.A, {
-    getQueryId: d.fic.GAME,
-    get: (e) => (null == e ? null : c.A.hasNoData(e) ? r.V5 : (c.A.getGame(e) ?? null)),
+let I = (0, r.UT)(u.A, {
+    getQueryId: _.fic.GAME,
+    failureStaleAfter: 15 * a.A.Seconds.SECOND,
+    get: (e) => (null == e ? null : u.A.hasNoData(e) ? r.V5 : (u.A.getGame(e) ?? null)),
     load: async (e) => {
-        null != e && (await f([e]));
+        null != e && (await h([e]));
     },
-    getIsLoading: (e) => null != e && c.A.isFetching(e),
-    getError: (e) => (null != e && c.A.didFetchingFail(e) ? Error("Failed to fetch game data") : null),
+    getIsLoading: (e) => null != e && u.A.isFetching(e),
+    getError: (e) => (null != e && u.A.didFetchingFail(e) ? Error("Failed to fetch game data") : null),
 });
-function E(e) {
+function f(e) {
     i.useEffect(() => {
         let t = e.map((e) => [e]);
-        p.fetchMany(...t);
+        I.fetchMany(...t);
     }, [e]);
 }

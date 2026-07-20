@@ -462,7 +462,7 @@ let r = {
         inlineRequire: () => n(415202).A,
     },
     RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(908816).A },
-    RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(335560).A },
+    RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(113179).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(199543).A,
@@ -639,7 +639,7 @@ let r = {
         neverLoadBeforeConnectionOpen: !0,
     },
     DetectableGamesManager: {
-        actions: ["POST_CONNECTION_OPEN"],
+        actions: ["POST_CONNECTION_OPEN", "RUNNING_GAMES_CHANGE"],
         inlineRequire: () => n(296797).A,
         neverLoadBeforeConnectionOpen: !0,
     },

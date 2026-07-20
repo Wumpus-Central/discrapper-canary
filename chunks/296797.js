@@ -1,17 +1,26 @@
 "use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => A });
 var i = n(780907),
     r = n(110782),
-    s = n(439372),
-    a = n(760751),
+    a = n(439372),
+    s = n(569926),
+    l = n(760751),
     o = n(189081),
-    l = n(927813),
+    d = n(927813),
+    c = n(403362),
     u = n(723702),
-    c = n(953384);
-class d extends s.A {
+    _ = n(953384);
+class E extends a.A {
     intervalId;
     nonGameIntervalId;
-    actions = { POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen() };
+    actions = {
+        POST_CONNECTION_OPEN: () => this.handlePostConnectionOpen(),
+        RUNNING_GAMES_CHANGE: (e) => this.fetchRunningGameRecords(e),
+    };
+    fetchRunningGameRecords(e) {
+        let t = e.games.map((e) => e.id).filter(c.Vq);
+        0 !== t.length && s.I.fetchMany(...t.map((e) => [e]));
+    }
     handlePostConnectionOpen() {
         (0, u.isDesktop)() && !o.A.fetched && (0, r.Yq)(),
             i.Ay.getDetectableGames(),
@@ -20,12 +29,12 @@ class d extends s.A {
                 () => {
                     i.Ay.getDetectableGames(), i.Ay.getDetectableBlocklist();
                 },
-                a.A.detectableGamesTtl + Math.random() * l.A.Millis.HOUR,
+                l.A.detectableGamesTtl + Math.random() * d.A.Millis.HOUR,
             )),
             i.Ay.getDetectableNonGames(),
             (this.nonGameIntervalId = setInterval(
                 i.Ay.getDetectableNonGames,
-                c.A.ttl + Math.random() * l.A.Millis.HOUR,
+                _.A.ttl + Math.random() * d.A.Millis.HOUR,
             ));
     }
     _terminate() {
@@ -34,4 +43,4 @@ class d extends s.A {
                 (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0));
     }
 }
-let _ = new d();
+let A = new E();
