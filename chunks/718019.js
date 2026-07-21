@@ -25,7 +25,7 @@ var i = n(627968),
     O = n(202541),
     R = n(985253),
     L = n(375708),
-    y = n(106106);
+    y = n(145762);
 let D = f.Ay.getEnableHardwareAcceleration() ? o.Js : o.eu;
 function v(e) {
     let {
@@ -95,7 +95,7 @@ function b(e) {
         : (0, i.jsx)(c.s, {
               "aria-label": L.intl.string(null != n ? L.t.xB7MI3 : L.t["+Xp3hq"]),
               ...u,
-              onMouseEnter: () => {
+              onMouseEnter: function () {
                   u.onMouseEnter(), null != n && (0, S.V)({ user: a.user, guildId: h });
               },
               className: s()(A, y.vk),

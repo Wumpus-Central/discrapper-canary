@@ -10,7 +10,7 @@ var i = n(627968),
     u = n(446243),
     p = n(781137),
     h = n(495095),
-    m = n(599459);
+    m = n(904043);
 function A(e, t) {
     return null != e.activeView && e.activeViewType === o.oU.GUILD_ROOM && e.activeChannelId === t;
 }
@@ -23,16 +23,16 @@ function x(e) {
         y = (0, l.useRef)(!1);
     return ((0, l.useEffect)(() => {
         let e = x.current?.ownerDocument;
-        if (null == e) return;
-        let n = () => {
+        if (null != e)
+            return (
+                e.addEventListener("mousedown", n, !0),
+                () => {
+                    e.removeEventListener("mousedown", n, !0);
+                }
+            );
+        function n() {
             y.current = A(c.RQ.getState(), t);
-        };
-        return (
-            e.addEventListener("mousedown", n, !0),
-            () => {
-                e.removeEventListener("mousedown", n, !0);
-            }
-        );
+        }
     }, [t]),
     null == f)
         ? null
@@ -42,7 +42,7 @@ function x(e) {
               align: "center",
               spacing: 16,
               shouldShow: !0,
-              onRequestClose: (e, n) => {
+              onRequestClose: function (e, n) {
                   if ("system:click_outside" === n ? y.current : g) return C.current?.focus(), s.o;
                   (0, u.HW)(t);
               },

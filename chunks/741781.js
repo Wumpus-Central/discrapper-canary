@@ -7,7 +7,7 @@ var i = t(849516),
     r = t(558076),
     o = t(204651),
     c = t(375708),
-    u = t(189090);
+    u = t(662731);
 function d(e) {
     let { channel: n, themeable: t } = e,
         d = (0, s.bG)([r.A], () => null != r.A.getPendingNote(n.id)),
@@ -17,7 +17,7 @@ function d(e) {
         themeable: t,
         label: A ? c.intl.string(u.default.k4cbsb) : c.intl.string(u.default["lL1Y+d"]),
         iconComponent: i.u,
-        onClick: () => {
+        onClick: function () {
             (0, a.WT)(n.id);
         },
         disabled: d || A,

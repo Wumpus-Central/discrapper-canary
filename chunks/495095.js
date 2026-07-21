@@ -9,9 +9,9 @@ var i = n(627968),
     d = n(138617),
     u = n(7584),
     p = n(446243),
-    h = n(189090),
+    h = n(662731),
     m = n(375708),
-    A = n(927066);
+    A = n(696034);
 function x(e) {
     let { channel: t, position: n, setEditorRef: x } = e,
         f = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
@@ -42,7 +42,7 @@ function x(e) {
                 I(!1);
             },
             focused: N,
-            onSubmit: () => {
+            onSubmit: function () {
                 let e = t.guild_id;
                 return 0 === g.trim().length || null == e
                     ? Promise.resolve({ shouldClear: !1, shouldRefocus: !0 })

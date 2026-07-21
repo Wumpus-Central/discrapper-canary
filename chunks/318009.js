@@ -16,7 +16,7 @@ var i = n(627968),
 function I() {
     window.getSelection().removeAllRanges();
 }
-let f = (e) => {
+function f(e) {
     let {
             children: t,
             close: n,
@@ -68,7 +68,7 @@ let f = (e) => {
         },
         children: () => null,
     });
-};
+}
 class p extends r.PureComponent {
     state = { render: void 0 };
     componentDidMount() {

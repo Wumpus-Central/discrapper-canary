@@ -1,7 +1,7 @@
 n.d(t, { A: () => E });
 var i = n(627968),
     l = n(64700),
-    a = n(523939),
+    a = n(617498),
     s = n(17928),
     r = n(717421),
     o = n(775602),
@@ -11,9 +11,9 @@ var i = n(627968),
     p = n(781137),
     h = n(950075),
     m = n(996752),
-    A = n(189090),
+    A = n(662731),
     x = n(375708),
-    f = n(211178);
+    f = n(241986);
 let g = { x: 50, y: 50 };
 function C(e) {
     return Math.min(100, Math.max(0, e));
@@ -23,43 +23,45 @@ function y(e) {
         o = (0, l.useRef)(null),
         d = (0, l.useRef)(g),
         [u, h] = (0, r.z)(() => ({ x: g.x, y: g.y, config: { clamp: !0, tension: 300 } }));
-    (0, l.useEffect)(() => {
-        o.current?.focus();
-    }, []);
-    let m = (e, t) => {
+    function m(e, t) {
         let n = { x: C(d.current.x + e), y: C(d.current.y + t) };
         (d.current = n), h({ x: n.x, y: n.y });
-    };
-    return (0, i.jsx)(a.animated.div, {
-        ref: o,
-        role: "application",
-        tabIndex: -1,
-        "aria-label": x.intl.string(A.default.xyO7AD),
-        className: f.GZ,
-        style: { left: u.x.to((e) => `${e}%`), top: u.y.to((e) => `${e}%`) },
-        onKeyDown: (e) => {
-            switch (e.key) {
-                case "ArrowUp":
-                    e.preventDefault(), m(0, -2);
-                    break;
-                case "ArrowDown":
-                    e.preventDefault(), m(0, 2);
-                    break;
-                case "ArrowLeft":
-                    e.preventDefault(), m(-2, 0);
-                    break;
-                case "ArrowRight":
-                    e.preventDefault(), m(2, 0);
-                    break;
-                case "Enter":
-                    e.preventDefault(), s(d.current);
-                    break;
-                case "Escape":
-                    e.preventDefault(), (0, c.HW)(t);
-            }
-        },
-        children: (0, i.jsx)(p.A, { roomWidth: n }),
-    });
+    }
+    return (
+        (0, l.useEffect)(() => {
+            o.current?.focus();
+        }, []),
+        (0, i.jsx)(a.animated.div, {
+            ref: o,
+            role: "application",
+            tabIndex: -1,
+            "aria-label": x.intl.string(A.default.xyO7AD),
+            className: f.GZ,
+            style: { left: u.x.to((e) => `${e}%`), top: u.y.to((e) => `${e}%`) },
+            onKeyDown: function (e) {
+                switch (e.key) {
+                    case "ArrowUp":
+                        e.preventDefault(), m(0, -2);
+                        break;
+                    case "ArrowDown":
+                        e.preventDefault(), m(0, 2);
+                        break;
+                    case "ArrowLeft":
+                        e.preventDefault(), m(-2, 0);
+                        break;
+                    case "ArrowRight":
+                        e.preventDefault(), m(2, 0);
+                        break;
+                    case "Enter":
+                        e.preventDefault(), s(d.current);
+                        break;
+                    case "Escape":
+                        e.preventDefault(), (0, c.HW)(t);
+                }
+            },
+            children: (0, i.jsx)(p.A, { roomWidth: n }),
+        })
+    );
 }
 function j(e) {
     let { channelId: t, roomWidth: n, containerRef: s, pointerRef: o, onPlace: d } = e,
@@ -73,16 +75,13 @@ function j(e) {
                 let t = e.getBoundingClientRect();
                 A({ x: o.current.x - t.left, y: o.current.y - t.top, immediate: !0 }), (x.current = !0);
             }
-            let n = (e) => {
-                    A({ x: e.offsetX, y: e.offsetY, immediate: !x.current }), (x.current = !0);
-                },
-                i = (t) => {
-                    t.stopPropagation(),
-                        d({
-                            x: (100 * t.offsetX) / (e?.clientWidth ?? 1),
-                            y: (100 * t.offsetY) / (e?.clientHeight ?? 1),
-                        });
-                };
+            function n(e) {
+                A({ x: e.offsetX, y: e.offsetY, immediate: !x.current }), (x.current = !0);
+            }
+            function i(t) {
+                t.stopPropagation(),
+                    d({ x: (100 * t.offsetX) / (e?.clientWidth ?? 1), y: (100 * t.offsetY) / (e?.clientHeight ?? 1) });
+            }
             function l(e) {
                 "Escape" === e.key && (e.preventDefault(), e.stopPropagation(), (0, c.HW)(t));
             }
@@ -126,9 +125,9 @@ function E(e) {
         c = (0, s.bG)([d.A], () => d.A.getNotes(t));
     if (
         ((0, l.useEffect)(() => {
-            let e = (e) => {
+            function e(e) {
                 r.current = { x: e.clientX, y: e.clientY, hasValue: !0 };
-            };
+            }
             return (
                 document.addEventListener("mousemove", e, { passive: !0 }),
                 () => document.removeEventListener("mousemove", e)

@@ -9,9 +9,9 @@ var n = i(627968),
     u = i(976860),
     c = i(734057),
     h = i(652215),
-    m = i(559965),
+    m = i(774418),
     p = i(375708),
-    A = i(785415);
+    A = i(458495);
 let g = "legacyGameInviteChannelChatBannerDismissed",
     I = new Set([
         "1433122113031639161",
@@ -37,10 +37,10 @@ function C(e) {
 }
 function x() {
     let e = (0, r.bG)([c.A], () => c.A.getChannel(f)),
-        t = (0, o.Ay)(e),
-        i = () => {
-            v.getState().dismissChannel(f);
-        };
+        t = (0, o.Ay)(e);
+    function i() {
+        v.getState().dismissChannel(f);
+    }
     return null == e || null == t
         ? null
         : (0, n.jsx)(s.E, {
