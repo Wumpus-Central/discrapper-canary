@@ -1,34 +1,54 @@
-n.d(e, { startComposedHighlight: () => i });
-let l = "mana-composed-highlight",
-    a = "mana-type-consolidation",
-    o = /\.((?:\\.|[\w-])+)/g;
+r.d(e, { startComposedHighlight: () => i });
+var o = r(621466);
+let l = "data-mana-composed",
+    n = "mana-type-consolidation",
+    s = /\.((?:\\.|[\w-])+)/g;
 function i() {
-    let t = document.getElementById(l);
-    if (null != t) return () => t.remove();
-    let e = (function () {
+    let t = (function () {
         let t = new Set();
         for (let e of document.styleSheets)
             try {
-                !(function e(n) {
-                    for (let l of n) {
-                        let n = l.selectorText;
-                        if (null != n && n.includes(a)) for (let e of n.matchAll(o)) t.add(e[1].replace(/\\/g, ""));
-                        let i = l.cssRules;
-                        null != i && e(i);
+                !(function e(r) {
+                    for (let o of r) {
+                        let r = o.selectorText;
+                        if (null != r && r.includes(n)) for (let e of r.matchAll(s)) t.add(e[1].replace(/\\/g, ""));
+                        let l = o.cssRules;
+                        null != l && e(l);
                     }
                 })(e.cssRules);
             } catch {}
-        return t.delete(a), [...t];
+        return t.delete(n), t;
     })();
-    if (0 === e.length) return () => {};
-    let n = e.map((t) => `[class~="${t}"]`).join(","),
-        i = `.highlight-mana-text :is(${n}):not([data-text-variant])`,
-        s = "box-shadow:inset 0 0 0 1px var(--yellow-300)",
-        d = document.createElement("style");
+    if (0 === t.size) return () => {};
+    function e(e) {
+        if (e.hasAttribute("data-text-variant")) return !1;
+        let { classList: r } = e;
+        for (let e = 0; e < r.length; e++) if (t.has(r[e])) return !0;
+        return !1;
+    }
+    function r(t) {
+        for (let r of t.querySelectorAll("[class]")) e(r) && r.setAttribute(l, "");
+    }
+    r(document);
+    let i = new MutationObserver((t) => {
+        for (let s of t) {
+            if ("attributes" === s.type) {
+                var n;
+                (0, o.vq)(s.target, Element) && (e((n = s.target)) ? n.setAttribute(l, "") : n.removeAttribute(l));
+                continue;
+            }
+            for (let t of s.addedNodes) (0, o.vq)(t, Element) && (e(t) && t.setAttribute(l, ""), r(t));
+        }
+    });
     return (
-        (d.id = l),
-        (d.textContent = `${i}{${s}}${i} *:not(:has(*)):not(:empty):not([data-text-variant]):not([data-text-variant] *){${s}}`),
-        document.head.appendChild(d),
-        () => d.remove()
+        i.observe(document.body, {
+            childList: !0,
+            subtree: !0,
+            attributes: !0,
+            attributeFilter: ["class", "data-text-variant"],
+        }),
+        () => {
+            for (let t of (i.disconnect(), document.querySelectorAll(`[${l}]`))) t.removeAttribute(l);
+        }
     );
 }
