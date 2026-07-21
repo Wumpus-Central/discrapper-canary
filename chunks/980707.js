@@ -113,7 +113,7 @@ function R(e) {
 }
 var L = n(477782),
     y = n(900283),
-    D = n(359823);
+    D = n(979383);
 function v() {
     let e = R("MenuSeparator");
     return (0, r.jsx)("div", {
@@ -219,7 +219,7 @@ function $(e) {
         children: (0, r.jsx)(i, { "aria-hidden": !0, color: a, ...o, className: l()(D.icon, s) }),
     });
 }
-var z = n(767216);
+var z = n(537624);
 function q(e) {
     let {
             color: t = "default",
@@ -347,6 +347,7 @@ function X(e) {
         autoFlip: !0,
         portal: !1,
         viewportPadding: 48,
+        shiftPadding: 8,
         maxHeight: 360,
         renderLayer: function () {
             return (
@@ -396,6 +397,7 @@ function J(e) {
     return (0, r.jsx)(T.Ow, {
         open: I || s,
         viewportPadding: 48,
+        shiftPadding: 8,
         maxHeight: 360,
         onOpenChange: f,
         spacing: h ? -4 : 4,
