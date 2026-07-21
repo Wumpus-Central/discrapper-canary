@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => P });
+n.d(t, { A: () => M });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -15,25 +15,24 @@ var i = n(627968),
     h = n(409626),
     I = n(692969),
     f = n(569926),
-    p = n(683574),
-    T = n(287809),
-    m = n(58703),
-    g = n(403362),
-    S = n(922016),
-    N = n(860685);
-let C = r.lazy(() =>
+    p = n(287809),
+    T = n(58703),
+    m = n(403362),
+    g = n(922016),
+    S = n(860685);
+let N = r.lazy(() =>
     Promise.all([n.e("32931"), n.e("46054")])
         .then(n.bind(n, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
-function O(e) {
+function C(e) {
     let { participants: t, maxVisibleParticipants: n, guildId: a, layerContext: s } = e,
         l = r.useRef(null),
         o = (0, r.useCallback)(
-            () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(C, { users: t, guildId: a }) }),
+            () => (0, i.jsx)(r.Suspense, { fallback: null, children: (0, i.jsx)(N, { users: t, guildId: a }) }),
             [t, a],
         );
-    return (0, i.jsx)(S.Y, {
+    return (0, i.jsx)(g.Y, {
         renderPopout: o,
         layerContext: s,
         targetElementRef: l,
@@ -42,12 +41,12 @@ function O(e) {
             (0, i.jsx)(_.D, {
                 ...e,
                 innerRef: l,
-                className: N.x,
+                className: S.x,
                 onClick: (t) => {
                     t.stopPropagation(), e.onClick?.(t);
                 },
                 children: (0, i.jsxs)(u.E, {
-                    className: N.s,
+                    className: S.s,
                     variant: "text-xs/medium",
                     color: "interactive-text-default",
                     children: ["+", t.length - n],
@@ -55,14 +54,14 @@ function O(e) {
             }),
     });
 }
-var R = n(97808),
-    L = n(778712),
-    y = n(342296),
-    D = n(156980);
-function v(e) {
+var O = n(97808),
+    R = n(778712),
+    L = n(342296),
+    y = n(156980);
+function D(e) {
     let { user: t, guildId: n, layerContext: a } = e,
         s = r.useRef(null);
-    return (0, i.jsx)(y.A, {
+    return (0, i.jsx)(L.A, {
         targetElementRef: s,
         shouldPreload: !0,
         user: t,
@@ -73,17 +72,17 @@ function v(e) {
             (0, i.jsx)(_.D, {
                 ...e,
                 innerRef: s,
-                className: D.RB,
+                className: y.RB,
                 onClick: (t) => {
                     e.onClick(t), t.stopPropagation();
                 },
                 "aria-label": t.username,
-                children: (0, i.jsx)(R.eu, { src: t.getAvatarURL(n, 24), size: L._3.SIZE_24, "aria-hidden": !0 }),
+                children: (0, i.jsx)(O.eu, { src: t.getAvatarURL(n, 24), size: R._3.SIZE_24, "aria-hidden": !0 }),
             }),
     });
 }
-var b = n(375708);
-function M(e) {
+var v = n(375708);
+function b(e) {
     let { applicationId: t, hasTrailingDate: n } = e,
         r = (0, E.h)(t),
         { data: a } = (0, f.I)(t),
@@ -92,9 +91,9 @@ function M(e) {
     if (null == o) return null;
     let d = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(A.A, { game: a ?? r, size: A.M.XXSMALL, className: D.Gt, allowUnknownGameIcon: !1 }),
+                (0, i.jsx)(A.A, { game: a ?? r, size: A.M.XXSMALL, className: y.Gt, allowUnknownGameIcon: !1 }),
                 (0, i.jsx)(u.E, {
-                    className: D.mO,
+                    className: y.mO,
                     variant: "text-sm/normal",
                     color: "text-overlay-light",
                     children: o,
@@ -103,8 +102,8 @@ function M(e) {
         }),
         c =
             null != l
-                ? (0, i.jsx)(_.D, { className: s()(D.Nn, D.On), onClick: l, children: d })
-                : (0, i.jsx)("span", { className: D.Nn, children: d });
+                ? (0, i.jsx)(_.D, { className: s()(y.Nn, y.On), onClick: l, children: d })
+                : (0, i.jsx)("span", { className: y.Nn, children: d });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             c,
@@ -112,7 +111,7 @@ function M(e) {
         ],
     });
 }
-let P = function (e) {
+let M = function (e) {
     let {
             createdAt: t,
             participantIds: n,
@@ -120,50 +119,50 @@ let P = function (e) {
             title: a,
             guildId: _,
             className: E,
-            playerState: A = o.Q6.PAUSED,
-            isControlBarExpanded: h = !0,
-            isFullScreen: I = !1,
-            showTextContent: f = !0,
+            activeLayer: A,
+            playerState: h = o.Q6.PAUSED,
+            isControlBarExpanded: I = !0,
+            isFullScreen: f = !1,
+            showTextContent: g = !0,
         } = e,
-        S = (0, l.yK)([T.default], () => n.map((e) => T.default.getUser(e)).filter(g.Vq) ?? []),
-        N = null != t ? (0, m.Fe)(new Date(t)) : null,
-        { activeLayer: C } = (0, p.X$)();
+        S = (0, l.yK)([p.default], () => n.map((e) => p.default.getUser(e)).filter(m.Vq) ?? []),
+        N = null != t ? (0, T.Fe)(new Date(t)) : null;
     return (0, i.jsxs)("div", {
-        className: s()(D.oK, { [D.pd]: A === o.Q6.PLAYING && !h, [D.aS]: I }, E),
+        className: s()(y.oK, { [y.pd]: h === o.Q6.PLAYING && !I, [y.aS]: f }, E),
         children: [
-            (0, i.jsx)("div", { className: D.Lu }),
+            (0, i.jsx)("div", { className: y.Lu }),
             (0, i.jsxs)("div", {
-                className: D.s$,
+                className: y.s$,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: D.yR,
+                        className: y.yR,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: D.$,
+                                className: y.$,
                                 children: [
                                     (0, i.jsx)(d.m, {
                                         asContainer: !0,
-                                        text: b.intl.string(b.t["/fgfWh"]),
-                                        children: (0, i.jsx)(c.x, { className: D.gr, size: "xs", color: "white" }),
+                                        text: v.intl.string(v.t["/fgfWh"]),
+                                        children: (0, i.jsx)(c.x, { className: y.gr, size: "xs", color: "white" }),
                                     }),
-                                    f &&
+                                    g &&
                                         (0, i.jsx)(u.E, {
-                                            className: D.DD,
+                                            className: y.DD,
                                             variant: "text-md/semibold",
                                             color: "text-overlay-light",
-                                            children: null != a && a.length > 0 ? a : b.intl.string(b.t.Cyxddp),
+                                            children: null != a && a.length > 0 ? a : v.intl.string(v.t.Cyxddp),
                                         }),
                                 ],
                             }),
-                            f &&
+                            g &&
                                 (null != r || null != N) &&
                                 (0, i.jsxs)("div", {
-                                    className: D.yu,
+                                    className: y.yu,
                                     children: [
-                                        (0, i.jsx)(M, { applicationId: r, hasTrailingDate: null != N }),
+                                        (0, i.jsx)(b, { applicationId: r, hasTrailingDate: null != N }),
                                         null != N &&
                                             (0, i.jsx)(u.E, {
-                                                className: D.BR,
+                                                className: y.BR,
                                                 variant: "text-sm/normal",
                                                 color: "text-overlay-light",
                                                 children: N,
@@ -174,14 +173,14 @@ let P = function (e) {
                     }),
                     S.length > 0 &&
                         (0, i.jsxs)("div", {
-                            className: D.HD,
+                            className: y.HD,
                             role: "group",
-                            "aria-label": b.intl.string(b.t.WTozwe),
+                            "aria-label": v.intl.string(v.t.WTozwe),
                             children: [
-                                S.slice(0, 4).map((e) => (0, i.jsx)(v, { layerContext: C, user: e, guildId: _ }, e.id)),
+                                S.slice(0, 4).map((e) => (0, i.jsx)(D, { layerContext: A, user: e, guildId: _ }, e.id)),
                                 S.length > 4 &&
-                                    (0, i.jsx)(O, {
-                                        layerContext: C,
+                                    (0, i.jsx)(C, {
+                                        layerContext: A,
                                         participants: S,
                                         maxVisibleParticipants: 4,
                                         guildId: _,
