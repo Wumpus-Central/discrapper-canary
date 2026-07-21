@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { r: () => i });
+n.d(t, { o: () => r, r: () => i });
 let i = (0, n(945810).mj)({
     name: "2026-05-game-mentions-v2",
     kind: "user",
@@ -11,3 +11,6 @@ let i = (0, n(945810).mj)({
         3: { enabled: !0, showNewTag: !1, combineMentionAutocomplete: !0 },
     },
 });
+function r(e) {
+    return i.useConfig({ location: e }).enabled;
+}

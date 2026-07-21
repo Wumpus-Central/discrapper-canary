@@ -31,15 +31,15 @@ function h(e, t) {
 }
 var I = n(626584),
     f = n(159273),
-    p = n(352505),
+    p = n(892462),
     T = n(202776),
     m = n(473529),
     g = n(69945),
     S = n(796774),
     N = n(209932),
     C = n(147472),
-    R = n(361670),
-    O = n(931959),
+    O = n(361670),
+    R = n(931959),
     L = n(750385),
     y = n(194004),
     D = n(695633),
@@ -266,7 +266,7 @@ function eC(e) {
         E
     );
 }
-function eR(e, t, n) {
+function eO(e, t, n) {
     let i = 0,
         r = null;
     for (let a of t) {
@@ -275,7 +275,7 @@ function eR(e, t, n) {
     }
     return null != r && (r.isFullMatch ? (t.length = 0) : t.splice(t.indexOf(r), 1)), i;
 }
-function eO(e, t) {
+function eR(e, t) {
     let n = _.A.getChannel(e);
     return null == e || null == n
         ? []
@@ -360,7 +360,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 null != e && t.push({ userId: e.id, nick: null });
             } else {
                 if (0 === i.length && s) {
-                    let e = eO(o.id, r);
+                    let e = eR(o.id, r);
                     if (e.length > 0) return e;
                 }
                 (t = x.Ay.getMembers(d.guild_id).filter(eS)), a && X.A.requestMembers(d.guild_id, i, r);
@@ -385,7 +385,7 @@ let eL = (0, z.L_)((e, t, n) => {
             } = e;
             if (null == F.A.getGuild(t)) return [];
             if (0 === n.length && a) {
-                let e = eO(W.Ay.getChannelId(t), i);
+                let e = eR(W.Ay.getChannelId(t), i);
                 if (e.length > 0) return e;
             }
             let o = x.Ay.getMembers(t).filter(eS);
@@ -466,7 +466,7 @@ let eL = (0, z.L_)((e, t, n) => {
                           .value();
             let N = {},
                 C = [],
-                R = w.A.getMaxScore();
+                O = w.A.getMaxScore();
             for (let e of r) {
                 if (
                     ((t = e.type),
@@ -483,7 +483,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 let r = [...g],
                     l = (0, u.m1)(e, K.default, j.A).toLocaleLowerCase(),
                     o = T && a === e.id,
-                    c = o ? 10 : eR(l, r, d);
+                    c = o ? 10 : eO(l, r, d);
                 if (0 !== c) {
                     if (r.length > 0) {
                         for (let t of [
@@ -507,7 +507,7 @@ let eL = (0, z.L_)((e, t, n) => {
                             })(e, N),
                         ]) {
                             if (null == t || "" === t) continue;
-                            let e = eR(t, r, !1);
+                            let e = eO(t, r, !1);
                             0 !== e && (c += 0.5 * e);
                         }
                         c = Math.min(6, c);
@@ -519,7 +519,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         h === G.I6 && (0, M.ay)(i) && (c = Math.max(c - 1, 0.5)),
                         e.isThread() && (e.isActiveThread() || (c -= 3), v.A.hasJoined(e.id) || (c -= 5)),
                         (c = Math.min(
-                            c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / R, 1),
+                            c + 3 * Math.min(w.A.getScoreWithoutFetchingLatest(e.id) ?? 0 / O, 1),
                             c >= 7 ? 10 : 7,
                         )),
                         C.push({
@@ -697,7 +697,7 @@ let eL = (0, z.L_)((e, t, n) => {
                 }
             return d.sort(c.A), d.length > n && (d.length = n), d;
         },
-        getRecentlyTalked: eO,
+        getRecentlyTalked: eR,
         queryMentionResults(e) {
             let {
                     query: t,
@@ -774,9 +774,9 @@ let eL = (0, z.L_)((e, t, n) => {
                 d &&
                 (m < h && a()(g, ec().test) && (N.push(ec()), (m += 1)),
                 r && m < h && a()(g, eu().test) && (N.push(eu()), (m += 1)));
-            let R = p.r.getConfig({ location: "mention autocomplete" });
+            let O = (0, p._)("mention autocomplete");
             return (
-                R.enabled && !R.combineMentionAutocomplete && C(e_?.()), C(eE?.()), { users: T, globals: N, roles: S }
+                O.enabled && !O.combineMentionAutocomplete && C(e_?.()), C(eE?.()), { users: T, globals: N, roles: S }
             );
         },
         queryGuildMentionResults(e) {
@@ -942,7 +942,7 @@ let eL = (0, z.L_)((e, t, n) => {
                         let u = 0,
                             _ = null,
                             E = L.A.getStickerById(o);
-                        if (null == E || !i(E, (0, R.W$)(E, r, n))) return;
+                        if (null == E || !i(E, (0, O.W$)(E, r, n))) return;
                         for (let n of l) {
                             let { type: i, value: r } = n,
                                 a = (function (e) {
@@ -972,7 +972,7 @@ let eL = (0, z.L_)((e, t, n) => {
                                 : r === e && ((s = 10 * a), (_ = r)),
                                 s > u && ((u = s), (_ = r));
                         }
-                        let A = O.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
+                        let A = R.A.stickerFrecencyWithoutFetchingLatest.getScore(o);
                         null != A && (u *= A / 100),
                             u > 0 &&
                                 null != _ &&

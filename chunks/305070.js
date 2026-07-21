@@ -2,170 +2,170 @@
 n.d(t, { A: () => B });
 var i = n(627968),
     r = n(64700),
-    s = n(503698),
-    a = n.n(s),
-    o = n(837381),
-    l = n(17928),
-    u = n(689175),
+    a = n(503698),
+    s = n.n(a),
+    l = n(837381),
+    o = n(17928),
+    d = n(689175),
     c = n(623646),
-    d = n(811024),
+    u = n(811024),
     _ = n(933958),
-    h = n(969151),
-    f = n(659280),
-    p = n(579940),
-    E = n(915089),
-    m = n(352505),
-    g = n(750506),
-    A = n(513609),
-    I = n(71393),
-    T = n(597184),
+    E = n(969151),
+    A = n(659280),
+    h = n(579940),
+    I = n(915089),
+    f = n(892462),
+    p = n(750506),
+    T = n(513609),
+    m = n(71393),
+    g = n(597184),
     S = n(105330),
-    y = n(27867),
+    N = n(27867),
     C = n(459016),
-    N = n(861382),
-    v = n(355622),
-    R = n(820066),
-    O = n(696451),
-    b = n(576705),
-    D = n(351906),
-    L = n(287809),
-    w = n(31498),
-    M = n(887129),
-    P = n(741918),
-    x = n(267102),
-    k = n(652215),
-    U = n(307731);
-let G = new Map([["thread", new Set(["name"])]]);
+    O = n(861382),
+    R = n(355622),
+    L = n(820066),
+    y = n(696451),
+    D = n(576705),
+    v = n(351906),
+    b = n(287809),
+    M = n(31498),
+    P = n(887129),
+    U = n(741918),
+    w = n(267102),
+    G = n(652215),
+    x = n(307731);
+let k = new Map([["thread", new Set(["name"])]]);
 var F = n(5867),
-    V = n(122484);
+    V = n(175916);
 let B = r.forwardRef(function (e, t) {
-    let { channel: n, type: s, editorHeight: B, onVisibilityChange: j, editorScrollerRef: H, barsHeight: Y } = e,
-        W = (0, E.GV)(),
-        K = (0, l.bG)([I.A], () => I.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
+    let { channel: n, type: a, editorHeight: B, onVisibilityChange: H, editorScrollerRef: j, barsHeight: W } = e,
+        Y = (0, I.GV)(),
+        K = (0, o.bG)([m.A], () => m.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
         $ = r.useRef(null),
         [z, q, Z] = (function (e, t, n) {
-            let { channel: i, type: s } = e,
-                [a, o] = r.useState(() => (0, w.Ur)()),
-                u = (0, y.A)(),
-                c = (0, l.bG)([O.Ay, L.default], () => {
-                    let e = L.default.getCurrentUser();
-                    return (null != i.guild_id && null != e ? O.Ay.getMember(i.guild_id, e.id)?.isPending : null) ?? !1;
+            let { channel: i, type: a } = e,
+                [s, l] = r.useState(() => (0, M.Ur)()),
+                d = (0, N.A)(),
+                c = (0, o.bG)([y.Ay, b.default], () => {
+                    let e = b.default.getCurrentUser();
+                    return (null != i.guild_id && null != e ? y.Ay.getMember(i.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
-                { canMentionEveryone: d, hidePersonalInformation: _ } = (0, l.cf)(
-                    [b.A, D.A],
+                { canMentionEveryone: u, hidePersonalInformation: _ } = (0, o.cf)(
+                    [D.A, v.A],
                     () => ({
                         canMentionEveryone:
-                            i.isPrivate() || c || s === v.oU.RULES_INPUT || b.A.can(k.xBc.MENTION_EVERYONE, i),
-                        hidePersonalInformation: D.A.hidePersonalInformation,
+                            i.isPrivate() || c || a === R.oU.RULES_INPUT || D.A.can(G.xBc.MENTION_EVERYONE, i),
+                        hidePersonalInformation: v.A.hidePersonalInformation,
                     }),
-                    [i, s, c],
+                    [i, a, c],
                 ),
-                { activeCommand: h, activeCommandOption: f } = (0, l.cf)([N.A], () => ({
-                    activeCommand: N.A.getActiveCommand(i.id),
-                    activeCommandOption: N.A.getActiveOption(i.id),
+                { activeCommand: E, activeCommandOption: A } = (0, o.cf)([O.A], () => ({
+                    activeCommand: O.A.getActiveCommand(i.id),
+                    activeCommandOption: O.A.getActiveOption(i.id),
                 })),
-                p = r.useMemo(
+                h = r.useMemo(
                     () =>
-                        h?.untranslatedName != null &&
-                        f?.name != null &&
-                        (G.get(h.untranslatedName)?.has(f.name) ?? !1),
-                    [h?.untranslatedName, f?.name],
+                        E?.untranslatedName != null &&
+                        A?.name != null &&
+                        (k.get(E.untranslatedName)?.has(A.name) ?? !1),
+                    [E?.untranslatedName, A?.name],
                 ),
-                E = (function (e) {
-                    let { navId: t, scrollerRef: n, state: i, onFocus: s } = e,
-                        { renderWindow: a } = r.useContext(x.Ay);
-                    function o(e, t, r) {
+                I = (function (e) {
+                    let { navId: t, scrollerRef: n, state: i, onFocus: a } = e,
+                        { renderWindow: s } = r.useContext(w.Ay);
+                    function l(e, t, r) {
                         if ((n.current?.scrollToTop(), e && null != i.query)) {
                             let e = i.query.typeInfo.focusMode,
                                 n =
-                                    e !== T.e.MANUAL &&
-                                    (e !== T.e.AUTO_WHEN_FILTERED || 0 !== i.query.queryText.length);
+                                    e !== g.e.MANUAL &&
+                                    (e !== g.e.AUTO_WHEN_FILTERED || 0 !== i.query.queryText.length);
                             i.isVisible && (!0 !== t || !1 !== n) && !0 !== r
-                                ? (u.setFocus("0"), s?.(0))
-                                : (u.setFocus(null), s?.(null));
+                                ? (d.setFocus("0"), a?.(0))
+                                : (d.setFocus(null), a?.(null));
                         }
                     }
-                    function l(e) {
+                    function o(e) {
                         if ((n.current?.scrollToBottom(), e && null != i.query && i.query.resultCount > 0)) {
                             let e = i.query.resultCount - 1;
-                            u.setFocus(e.toString()), s?.(e);
+                            d.setFocus(e.toString()), a?.(e);
                         }
                     }
-                    let u = (0, M.Ay)({
+                    let d = (0, P.Ay)({
                             id: t,
                             isEnabled: i.isVisible,
-                            orientation: P.Gl.VERTICAL,
+                            orientation: U.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
-                                let i = a.document.querySelector(e);
-                                null != i && n.current?.scrollIntoViewNode({ node: i }), s?.(+t);
+                                let i = s.document.querySelector(e);
+                                null != i && n.current?.scrollIntoViewNode({ node: i }), a?.(+t);
                             },
-                            onNavigateNextAtEnd: () => o(!0),
-                            onNavigatePreviousAtStart: () => l(!0),
-                            scrollToStart: () => (o(!1, !1), Promise.resolve()),
-                            scrollToEnd: () => (l(!1), Promise.resolve()),
+                            onNavigateNextAtEnd: () => l(!0),
+                            onNavigatePreviousAtStart: () => o(!0),
+                            scrollToStart: () => (l(!1, !1), Promise.resolve()),
+                            scrollToEnd: () => (o(!1), Promise.resolve()),
                         }),
-                        c = r.useRef(o);
+                        c = r.useRef(l);
                     return (
                         r.useEffect(() => {
-                            c.current = o;
+                            c.current = l;
                         }),
                         r.useEffect(() => {
                             c.current(!0, !0, i.isInitialAfterError);
                         }, [i.query?.type, i.query?.queryText, i.query?.isLoading, i.isVisible, i.isInitialAfterError]),
-                        u
+                        d
                     );
-                })({ navId: "channel-autocomplete", scrollerRef: n, state: a, onFocus: (e) => S.setSelectedIndex(e) }),
-                m = e.editorRef.current?.getCurrentWord(),
-                g = e.editorRef.current?.getSlateEditor(),
-                A = null;
-            null != g && (A = R.VW.getSelectedParentOfType(g, w.mk)?.[0] ?? null);
-            let I = {
+                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => S.setSelectedIndex(e) }),
+                f = e.editorRef.current?.getCurrentWord(),
+                p = e.editorRef.current?.getSlateEditor(),
+                T = null;
+            null != p && (T = L.VW.getSelectedParentOfType(p, M.mk)?.[0] ?? null);
+            let m = {
                     ...e,
-                    navigator: E,
-                    activeCommand: h,
-                    activeCommandOption: f,
-                    activeInlineAutocompleteInput: A,
-                    canMentionUsers: s.users?.allowMentioning ?? !1,
-                    canMentionEveryone: d,
+                    navigator: I,
+                    activeCommand: E,
+                    activeCommandOption: A,
+                    activeInlineAutocompleteInput: T,
+                    canMentionUsers: a.users?.allowMentioning ?? !1,
+                    canMentionEveryone: u,
                     hidePersonalInformation: _,
-                    hideMentionDescription: s === v.oU.RULES_INPUT,
+                    hideMentionDescription: a === R.oU.RULES_INPUT,
                     emojiIntention:
-                        s === v.oU.RULES_INPUT
-                            ? U.EmojiIntention.COMMUNITY_CONTENT
-                            : p
-                              ? U.EmojiIntention.NO_CUSTOM_EMOJI
-                              : U.EmojiIntention.CHAT,
-                    currentWord: m?.word ?? "",
-                    currentWordIsAtStart: m?.isAtStart === !0,
+                        a === R.oU.RULES_INPUT
+                            ? x.EmojiIntention.COMMUNITY_CONTENT
+                            : h
+                              ? x.EmojiIntention.NO_CUSTOM_EMOJI
+                              : x.EmojiIntention.CHAT,
+                    currentWord: f?.word ?? "",
+                    currentWordIsAtStart: f?.isAtStart === !0,
                     optionText:
-                        null != f
+                        null != A
                             ? (0, C.getString)(
-                                  { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
-                                  f.name,
+                                  { [A.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
+                                  A.name,
                               )
                             : "",
                 },
-                [S] = r.useState(() => new w.Ay(I));
+                [S] = r.useState(() => new M.Ay(m));
             return (
                 r.useEffect(() => {
-                    S.updateProps(I);
+                    S.updateProps(m);
                 }),
                 r.useImperativeHandle(t, () => S, [S]),
                 r.useEffect(() => {
                     function e(e) {
-                        return o(e);
+                        return l(e);
                     }
                     return (
                         S.on("change", e),
-                        S.on("update", u),
+                        S.on("update", d),
                         () => {
-                            S.off("change", e), S.off("update", u);
+                            S.off("change", e), S.off("update", d);
                         }
                     );
-                }, [u, S]),
+                }, [d, S]),
                 r.useEffect(() => {
-                    let e = a.query?.typeInfo.stores;
+                    let e = s.query?.typeInfo.stores;
                     if (null != e) {
                         function t() {
                             return S.queryResults();
@@ -175,18 +175,18 @@ let B = r.forwardRef(function (e, t) {
                             for (let n of e) n.removeChangeListener(t);
                         };
                     }
-                }, [S, a.query?.typeInfo]),
-                [a, S, E]
+                }, [S, s.query?.typeInfo]),
+                [s, S, I]
             );
         })({ ...e, guild: K }, t, $),
-        X = s.autocomplete?.forceChatLayer ? A.Ay : g.Ay,
-        Q = (0, f.aI)(z.selectedIndex);
-    (0, p.gf)(W, z.isVisible, Q);
-    let J = (0, S.l)({ editorHeight: B, type: s, state: z }),
-        ee = (0, l.bG)([_.Ay], () => {
+        X = a.autocomplete?.forceChatLayer ? T.Ay : p.Ay,
+        Q = (0, A.aI)(z.selectedIndex);
+    (0, h.gf)(Y, z.isVisible, Q);
+    let J = (0, S.l)({ editorHeight: B, type: a, state: z }),
+        ee = (0, o.bG)([_.Ay], () => {
             let e = _.Ay.getSelfEmbeddedActivityForChannel(n.id),
                 t = _.Ay.getActivityPanelMode();
-            return (0, d.AX)(n) && null != e && (0, h.H)(e.location) === n.id && t === F.Gd.PANEL;
+            return (0, u.AX)(n) && null != e && (0, E.H)(e.location) === n.id && t === F.Gd.PANEL;
         }, [n]),
         et = r.useMemo(
             () =>
@@ -195,8 +195,8 @@ let B = r.forwardRef(function (e, t) {
         );
     if (
         (r.useEffect(() => {
-            j(z.isVisible);
-        }, [j, z.isVisible]),
+            H(z.isVisible);
+        }, [H, z.isVisible]),
         !z.isVisible || null == z.query || void 0 === J)
     )
         return null;
@@ -213,25 +213,25 @@ let B = r.forwardRef(function (e, t) {
         }) ?? null;
     if (null == en) return null;
     let ei = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === e.position, [V.mO]: ee },
-        er = m.r.getConfig({ location: "channel autocomplete" }),
-        es = z.query?.type === T.DB.MENTIONS,
-        ea = er.combineMentionAutocomplete && es ? 670 : 490;
-    null != J && (ea = s.autocomplete?.small ? 200 : z.query?.type === T.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let eo = Math.max(B, H?.current?.clientHeight ?? 0),
-        el = Math.min(0.5 * window.innerHeight, eo);
-    ea = Math.min(window.innerHeight - 120 - el - (Y ?? 0), ea);
-    let eu = (0, i.jsx)(f.Ay, {
-        id: W,
-        className: a()(V.nx, ei),
+        er = (0, f._)("channel autocomplete"),
+        ea = z.query?.type === g.DB.MENTIONS,
+        es = er.enabled && er.combineMentionAutocomplete && ea ? 670 : 490;
+    null != J && (es = a.autocomplete?.small ? 200 : z.query?.type === g.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    let el = Math.max(B, j?.current?.clientHeight ?? 0),
+        eo = Math.min(0.5 * window.innerHeight, el);
+    es = Math.min(window.innerHeight - 120 - eo - (W ?? 0), es);
+    let ed = (0, i.jsx)(A.Ay, {
+        id: Y,
+        className: s()(V.nx, ei),
         innerClassName: V.Fv,
         onMouseDown: (e) => e.preventDefault(),
-        children: (0, i.jsx)(o.hD, {
+        children: (0, i.jsx)(l.hD, {
             navigator: Z,
-            children: (0, i.jsx)(o.PR, {
+            children: (0, i.jsx)(l.PR, {
                 children: (e) => {
                     let { ref: t, ...n } = e;
-                    return (0, i.jsx)(u.Ch, {
-                        id: W,
+                    return (0, i.jsx)(d.Ch, {
+                        id: Y,
                         ref: (e) => {
                             (t.current = e?.getScrollerNode() ?? null), ($.current = e);
                         },
@@ -239,9 +239,9 @@ let B = r.forwardRef(function (e, t) {
                         overflow: "auto",
                         ...n,
                         className: V.XG,
-                        style: { maxHeight: ea },
+                        style: { maxHeight: es },
                         role: "listbox",
-                        "aria-labelledby": (0, f.Sz)(W),
+                        "aria-labelledby": (0, A.Sz)(Y),
                         children: en,
                     });
                 },
@@ -259,8 +259,8 @@ let B = r.forwardRef(function (e, t) {
                   spacing: 8,
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
-                  children: () => eu,
+                  children: () => ed,
               }),
           })
-        : eu;
+        : ed;
 });
