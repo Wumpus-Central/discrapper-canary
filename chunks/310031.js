@@ -1,40 +1,41 @@
 "use strict";
-n.d(t, { A: () => en }), n(938796), n(321073), n(839272);
+n.d(t, { A: () => ei }), n(938796), n(321073), n(839272);
 var i = n(284009),
     r = n.n(i),
-    s = n(17928),
-    a = n(228366),
-    o = n(323073),
-    l = n(320095),
-    u = n(135978),
-    c = n(695633),
-    d = n(152007),
-    _ = n(607508),
-    h = n(95701),
-    f = n(383233),
-    p = n(734057),
-    E = n(808728),
-    m = n(232835),
-    g = n(568548),
-    A = n(994500),
-    I = n(711014),
-    T = n(543465),
-    S = n(287809),
-    y = n(645959),
-    C = n(935208),
-    N = n(851109),
-    v = n(394953),
-    R = n(735438),
-    O = n.n(R),
-    b = n(849077);
-class D {
+    a = n(17928),
+    s = n(228366),
+    l = n(323073),
+    o = n(710195),
+    d = n(409686),
+    c = n(320095),
+    u = n(695633),
+    _ = n(152007),
+    E = n(607508),
+    A = n(95701),
+    h = n(383233),
+    I = n(734057),
+    f = n(808728),
+    p = n(232835),
+    T = n(568548),
+    m = n(994500),
+    g = n(711014),
+    S = n(543465),
+    N = n(287809),
+    C = n(645959),
+    O = n(935208),
+    R = n(851109),
+    L = n(394953),
+    y = n(435558),
+    D = n.n(y),
+    v = n(849077);
+class b {
     _messages = [];
     _isSorted = !0;
     _channelIds = new Set();
     updateChannelIds(e) {
         (this._channelIds = new Set(e)),
             (this._messages = this._messages.filter(
-                (e) => e.kind !== b.yL.ALL_MESSAGES_CHANNEL || this._channelIds.has(e.channelId),
+                (e) => e.kind !== v.yL.ALL_MESSAGES_CHANNEL || this._channelIds.has(e.channelId),
             ));
     }
     addMessage(e) {
@@ -45,12 +46,12 @@ class D {
         (this._messages = [
             ...this._messages,
             ...n
-                .filter((e) => e.author.id !== i && C.default.age(e.id) < b.V$)
+                .filter((e) => e.author.id !== i && O.default.age(e.id) < v.V$)
                 .map((e) => ({
                     id: e.id,
                     channelId: e.channel_id,
                     guildId: t?.guild_id,
-                    kind: e.mentioned ? b.yL.MENTION : b.yL.ALL_MESSAGES_CHANNEL,
+                    kind: e.mentioned ? v.yL.MENTION : v.yL.ALL_MESSAGES_CHANNEL,
                     message: e,
                 })),
         ]),
@@ -71,30 +72,30 @@ class D {
     }
     sortMessages() {
         this._isSorted ||
-            ((this._messages = O().sortedUniqBy(
+            ((this._messages = D().sortedUniqBy(
                 this._messages.toSorted((e, t) => {
-                    let n = C.default.compare(e.id, t.id);
+                    let n = O.default.compare(e.id, t.id);
                     return 0 !== n
                         ? n
-                        : e.kind === b.yL.MENTION && t.kind !== b.yL.MENTION
+                        : e.kind === v.yL.MENTION && t.kind !== v.yL.MENTION
                           ? -1
-                          : +(e.kind !== b.yL.MENTION && t.kind === b.yL.MENTION);
+                          : +(e.kind !== v.yL.MENTION && t.kind === v.yL.MENTION);
                 }),
                 "id",
             )),
             (this._isSorted = !0));
     }
     maybeTruncate() {
-        let e = b.EM * (this._channelIds.size + 1) * 1.5;
+        let e = v.EM * (this._channelIds.size + 1) * 1.5;
         if (this._messages.length <= e) return;
         let t = {};
         for (let e of this._messages)
-            C.default.age(e.id) > b.V$ ||
+            O.default.age(e.id) > v.V$ ||
                 (null == t[e.channelId] && (t[e.channelId] = { mentions: [], messages: [] }),
-                e.kind === b.yL.MENTION ? t[e.channelId].mentions.push(e) : t[e.channelId].messages.push(e));
+                e.kind === v.yL.MENTION ? t[e.channelId].mentions.push(e) : t[e.channelId].messages.push(e));
         let n = [];
         Object.values(t).forEach((e) => {
-            let t = [...e.mentions, ...e.messages].sort((e, t) => C.default.compare(e.id, t.id)).slice(-b.EM),
+            let t = [...e.mentions, ...e.messages].sort((e, t) => O.default.compare(e.id, t.id)).slice(-v.EM),
                 i = new Set(),
                 r = [];
             for (let e of t) i.add(e.id), r.push(e);
@@ -105,107 +106,107 @@ class D {
             (this._isSorted = !1);
     }
 }
-var L = n(652215),
-    w = n(790782),
-    M = n(37411);
-let P = {},
-    x = null,
-    k = [],
-    U = new D(),
-    G = !1,
+var M = n(652215),
+    P = n(790782),
+    U = n(37411);
+let w = {},
+    G = null,
+    x = [],
+    k = new b(),
     F = !1,
     V = !1,
     B = !1,
-    j = C.default.fromTimestamp(Date.now()),
-    H = !0,
+    H = !1,
+    j = O.default.fromTimestamp(Date.now()),
+    W = !0,
     Y = null,
-    W = null,
-    K = !0;
-function $(e) {
-    if (!m.A.isReady(e)) return;
-    let t = p.A.getBasicChannel(e),
-        n = m.A.getMessages(e);
+    K = null,
+    $ = !0;
+function z(e) {
+    if (!p.A.isReady(e)) return;
+    let t = I.A.getBasicChannel(e),
+        n = p.A.getMessages(e);
     if (n.hasPresent() && 0 !== n.length)
-        return U.addChannelMessages({ channel: t, channelMessages: n, userId: S.default.getCurrentUser()?.id }), n;
+        return k.addChannelMessages({ channel: t, channelMessages: n, userId: N.default.getCurrentUser()?.id }), n;
 }
-function z() {
-    if (null == x) {
-        j = C.default.fromTimestamp(Date.now());
+function q() {
+    if (null == G) {
+        j = O.default.fromTimestamp(Date.now());
         return;
     }
-    for (let e of x.toSorted((e, t) => C.default.compare(g.Ay.lastMessageId(t), g.Ay.lastMessageId(e)))) {
-        let t = P[e];
-        if (t.loadState === b.Ve.UNLOADED && null != t.mostRecentMessageId) {
+    for (let e of G.toSorted((e, t) => O.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e)))) {
+        let t = w[e];
+        if (t.loadState === v.Ve.UNLOADED && null != t.mostRecentMessageId) {
             j = t.mostRecentMessageId;
             return;
         }
     }
     j = "0";
 }
-function q() {
+function Z() {
     let { notifyingChannelIds: e, staleChannelIds: t } = (function () {
-        let e = I.Ay.getFlattenedGuildIds().flatMap((e) => E.Ay.getSelectableChannelIds(e)),
-            t = c.A.getAllActiveJoinedThreads();
+        let e = g.Ay.getFlattenedGuildIds().flatMap((e) => f.Ay.getSelectableChannelIds(e)),
+            t = u.A.getAllActiveJoinedThreads();
         function n(e) {
-            if (L.kvI.ALL_DMS.has(e.type)) {
-                if (T.Ay.isGuildOrCategoryOrChannelMuted(null, e.id)) return !1;
-                if (e.type === L.rbe.DM) {
-                    let t = p.A.getChannel(e.id),
+            if (M.kvI.ALL_DMS.has(e.type)) {
+                if (S.Ay.isGuildOrCategoryOrChannelMuted(null, e.id)) return !1;
+                if (e.type === M.rbe.DM) {
+                    let t = I.A.getChannel(e.id),
                         n = t?.isDM() === !0 ? t.getRecipientId() : void 0;
-                    if (null != n && A.A.isBlocked(n)) return !1;
+                    if (null != n && m.A.isBlocked(n)) return !1;
                 }
                 return !0;
             }
             if (
-                !L.kvI.GUILD_TEXTUAL.has(e.type) ||
-                (0, o.UK)(e.id) ||
-                T.Ay.resolveUnreadSetting(e) === w.e.ONLY_MENTIONS
+                !M.kvI.GUILD_TEXTUAL.has(e.type) ||
+                (0, l.UK)(e.id) ||
+                S.Ay.resolveUnreadSetting(e) === P.e.ONLY_MENTIONS
             )
                 return !1;
-            if ((0, h.fT)(e.type)) {
-                let t = (0, _.l)(e);
-                if (t === M.CP.NO_MESSAGES || t === M.CP.ONLY_MENTIONS) return !1;
-                let n = d.A.flags(e.id);
-                if (null == n || (n & M.CP.ALL_MESSAGES) == 0) {
-                    let t = p.A.getBasicChannel(e.parent_id);
-                    if (null != t && T.Ay.resolveUnreadSetting(t) === w.e.ONLY_MENTIONS) return !1;
+            if ((0, A.fT)(e.type)) {
+                let t = (0, E.l)(e);
+                if (t === U.CP.NO_MESSAGES || t === U.CP.ONLY_MENTIONS) return !1;
+                let n = _.A.flags(e.id);
+                if (null == n || (n & U.CP.ALL_MESSAGES) == 0) {
+                    let t = I.A.getBasicChannel(e.parent_id);
+                    if (null != t && S.Ay.resolveUnreadSetting(t) === P.e.ONLY_MENTIONS) return !1;
                 }
-                return !d.A.isMuted(e.id);
+                return !_.A.isMuted(e.id);
             }
-            return T.Ay.useNewNotifications
-                ? !T.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) &&
-                      T.Ay.resolvedMessageNotifications(e) !== L.orn.NO_MESSAGES &&
-                      (!T.Ay.isOptInEnabled(e.guild_id) || T.Ay.isChannelRecordOrParentOptedIn(e))
-                : T.Ay.allowAllMessages(e);
+            return S.Ay.useNewNotifications
+                ? !S.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id) &&
+                      S.Ay.resolvedMessageNotifications(e) !== M.orn.NO_MESSAGES &&
+                      (!S.Ay.isOptInEnabled(e.guild_id) || S.Ay.isChannelRecordOrParentOptedIn(e))
+                : S.Ay.allowAllMessages(e);
         }
         let i = [];
         for (let t of e) {
-            let e = p.A.getBasicChannel(t);
+            let e = I.A.getBasicChannel(t);
             null != e && n(e) && i.push(e);
         }
         for (let e in t)
             for (let r in t[e])
-                for (let s in t[e][r]) {
-                    let e = p.A.getBasicChannel(s);
+                for (let a in t[e][r]) {
+                    let e = I.A.getBasicChannel(a);
                     null != e && n(e) && i.push(e);
                 }
-        for (let e of y.A.getPrivateChannelIds()) {
-            let t = p.A.getBasicChannel(e);
+        for (let e of C.A.getPrivateChannelIds()) {
+            let t = I.A.getBasicChannel(e);
             null != t && n(t) && i.push(t);
         }
         return i
             .map((e) => e.id)
             .sort((e, t) => {
-                let n = g.Ay.hasUnread(e);
-                return n !== g.Ay.hasUnread(t)
+                let n = T.Ay.hasUnread(e);
+                return n !== T.Ay.hasUnread(t)
                     ? n
                         ? -1
                         : 1
-                    : C.default.compare(g.Ay.lastMessageId(t), g.Ay.lastMessageId(e));
+                    : O.default.compare(T.Ay.lastMessageId(t), T.Ay.lastMessageId(e));
             })
             .reduce(
                 (e, t) => (
-                    g.Ay.lastMessageTimestamp(t) > Date.now() - b.V$
+                    T.Ay.lastMessageTimestamp(t) > Date.now() - v.V$
                         ? e.notifyingChannelIds.push(t)
                         : e.staleChannelIds.push(t),
                     e
@@ -213,257 +214,259 @@ function q() {
                 { notifyingChannelIds: [], staleChannelIds: [] },
             );
     })();
-    (x = e), (k = t), r()(null != x, "notifyingChannelIds should not be null");
-    let n = x.filter((e) => null == P[e]),
-        i = Object.keys(P).filter((e) => !x?.includes(e));
-    if (0 !== x.length && 0 === n.length && 0 === i.length) return !1;
-    for (let e of i) delete P[e];
+    (G = e), (x = t), r()(null != G, "notifyingChannelIds should not be null");
+    let n = G.filter((e) => null == w[e]),
+        i = Object.keys(w).filter((e) => !G?.includes(e));
+    if (0 !== G.length && 0 === n.length && 0 === i.length) return !1;
+    for (let e of i) delete w[e];
     for (let e of n)
-        if (((P[e] = { loadState: b.Ve.UNLOADED, mostRecentMessageId: g.Ay.lastMessageId(e) }), m.A.isReady(e))) {
-            let t = $(e);
+        if (((w[e] = { loadState: v.Ve.UNLOADED, mostRecentMessageId: T.Ay.lastMessageId(e) }), p.A.isReady(e))) {
+            let t = z(e);
             null != t &&
-                ((P[e].loadState = b.Ve.LOADED), (P[e].mostRecentMessageId = t.last()?.id ?? P[e].mostRecentMessageId));
+                ((w[e].loadState = v.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? w[e].mostRecentMessageId));
         }
-    U.updateChannelIds(x), z();
-}
-function Z() {
-    (P = {}),
-        (x = null),
-        (k = []),
-        (U = new D()),
-        (G = !1),
-        (F = !1),
-        (V = !1),
-        (j = C.default.fromTimestamp(Date.now())),
-        (H = !0),
-        (B = !1),
-        (W = null),
-        (Y = null);
+    k.updateChannelIds(G), q();
 }
 function X() {
-    for (let e of (Z(), q(), x ?? [])) {
-        let t = $(e);
-        null != t && ((P[e].loadState = b.Ve.LOADED), (P[e].mostRecentMessageId = t.last()?.id ?? null));
+    (w = {}),
+        (G = null),
+        (x = []),
+        (k = new b()),
+        (F = !1),
+        (V = !1),
+        (B = !1),
+        (j = O.default.fromTimestamp(Date.now())),
+        (W = !0),
+        (H = !1),
+        (K = null),
+        (Y = null);
+}
+function Q() {
+    if (null == (0, R.GE)({ location: "NotificationsInboxStore.reinitializeInbox" })?.notificationCenterVariant)
+        return !1;
+    for (let e of (X(), Z(), G ?? [])) {
+        let t = z(e);
+        null != t && ((w[e].loadState = v.Ve.LOADED), (w[e].mostRecentMessageId = t.last()?.id ?? null));
     }
-    z();
-    let e = u.Ay.getSettingsFilteredMentions() ?? [];
-    U.addMessages(
+    q();
+    let e = d.Ay.getSettingsFilteredMentions() ?? [];
+    k.addMessages(
         e.map((e) => ({
             id: e.id,
             channelId: e.channel_id,
-            guildId: p.A.getBasicChannel(e.channel_id)?.guild_id,
-            kind: b.yL.MENTION,
+            guildId: I.A.getBasicChannel(e.channel_id)?.guild_id,
+            kind: v.yL.MENTION,
             message: e,
         })),
     );
 }
-function Q() {
-    let e = q(),
+function J() {
+    let e = Z(),
         t = (function () {
-            let e = u.Ay.getSettingsFilteredMentions();
+            let e = d.Ay.getSettingsFilteredMentions();
             if (null == e) return !1;
             let t = new Set(e.map((e) => e.id)),
-                n = new Set((u.Ay.getMentions() ?? []).map((e) => e.id)),
+                n = new Set((d.Ay.getMentions() ?? []).map((e) => e.id)),
                 i = new Set(),
                 r = [];
-            for (let e of U.getMessages())
-                e.kind === b.yL.MENTION && (i.add(e.id), n.has(e.id) && !t.has(e.id) && r.push(e.id));
-            let s = e
+            for (let e of k.getMessages())
+                e.kind === v.yL.MENTION && (i.add(e.id), n.has(e.id) && !t.has(e.id) && r.push(e.id));
+            let a = e
                     .filter((e) => !i.has(e.id))
                     .map((e) => ({
                         id: e.id,
                         channelId: e.channel_id,
-                        guildId: p.A.getBasicChannel(e.channel_id)?.guild_id,
-                        kind: b.yL.MENTION,
+                        guildId: I.A.getBasicChannel(e.channel_id)?.guild_id,
+                        kind: v.yL.MENTION,
                         message: e,
                     })),
-                a = U.deleteMessages(r);
-            return s.length > 0 ? (U.addMessages(s), !0) : a;
+                s = k.deleteMessages(r);
+            return a.length > 0 ? (k.addMessages(a), !0) : s;
         })();
     if (!1 === e && !t) return !1;
 }
-function J(e) {
-    let { id: t } = e;
-    return U.deleteMessages([t]);
-}
 function ee(e) {
-    let { channel: t } = e;
-    if (!U.getMessages().some((e) => e.channelId === t.id)) return !1;
-    X();
+    let { id: t } = e;
+    return k.deleteMessages([t]);
 }
-class et extends s.Ay.Store {
+function et(e) {
+    let { channel: t } = e;
+    if (!k.getMessages().some((e) => e.channelId === t.id)) return !1;
+    Q();
+}
+class en extends a.Ay.Store {
     static displayName = "NotificationsInboxStore";
     initialize() {
-        this.waitFor(c.A, p.A, E.Ay, d.A, m.A, y.A, g.Ay, u.Ay, A.A, I.Ay, T.Ay, S.default);
+        this.waitFor(o.A, u.A, I.A, f.Ay, _.A, p.A, C.A, T.Ay, d.Ay, m.A, g.Ay, S.Ay, N.default);
     }
     canLoadMore(e) {
         let { preload: t } = e;
         return (function (e) {
             let { preload: t } = e;
             return (
-                null != (0, N.GE)({ location: "NotificationsInboxStore.canLoadMore" })?.notificationCenterVariant &&
-                null != x &&
-                !G &&
+                null != (0, R.GE)({ location: "NotificationsInboxStore.canLoadMore" })?.notificationCenterVariant &&
+                null != G &&
                 !F &&
-                (!t || !B) &&
-                H
+                !V &&
+                (!t || !H) &&
+                W
             );
         })({ preload: t });
     }
     getInboxMessages() {
-        return U.getMessages();
+        return k.getMessages();
     }
     getNotifyingChannelIds() {
-        return x;
+        return G;
     }
     getChannelInfoMap() {
-        return P;
+        return w;
     }
     get oldestDisplayedMessageId() {
         return j;
     }
     get hasMoreToLoad() {
-        return H;
+        return W;
     }
     get isLoading() {
-        return G;
+        return F;
     }
     get hasLoadedEver() {
-        return V;
-    }
-    get hasPreloaded() {
         return B;
     }
+    get hasPreloaded() {
+        return H;
+    }
     get isLoadingComplete() {
-        return !G && !H;
+        return !F && !W;
     }
     get selectedItemInfo() {
         return Y;
     }
     get currentRequestAnalyticsPayload() {
-        return W;
+        return K;
     }
     getDevOverrides() {
-        return { navOnClick: K };
+        return { navOnClick: $ };
     }
 }
-let en = new et(a.h, {
+let ei = new en(s.h, {
     LOAD_RECENT_MENTIONS_SUCCESS: function (e) {
         let { messages: t } = e;
         if (0 === t.length) return !1;
-        let n = u.Ay.getSettingsFilteredMentions();
+        let n = d.Ay.getSettingsFilteredMentions();
         if (null == n || 0 === n.length) return !1;
-        U.addMessages(
+        k.addMessages(
             n.map((e) => ({
                 id: e.id,
                 channelId: e.channel_id,
-                guildId: p.A.getBasicChannel(e.channel_id)?.guild_id,
-                kind: b.yL.MENTION,
+                guildId: I.A.getBasicChannel(e.channel_id)?.guild_id,
+                kind: v.yL.MENTION,
                 message: e,
             })),
         );
     },
     LOAD_MESSAGES_SUCCESS: function (e) {
         let { channelId: t } = e;
-        if (!x?.includes(t)) return !1;
-        let n = $(t);
+        if (!G?.includes(t)) return !1;
+        let n = z(t);
         if (null == n) return !1;
-        let i = n.length >= b.EM || (n.hasFetched && !n.hasMoreBefore);
-        P[t].loadState !== b.Ve.LOADED && (P[t].loadState = i ? b.Ve.LOADED : b.Ve.LOADED_UNREAD);
+        let i = n.length >= v.EM || (n.hasFetched && !n.hasMoreBefore);
+        w[t].loadState !== v.Ve.LOADED && (w[t].loadState = i ? v.Ve.LOADED : v.Ve.LOADED_UNREAD);
     },
     MESSAGE_CREATE: function (e) {
         let { channelId: t, message: n } = e;
-        if (null == x || n.author?.id === S.default.getCurrentUser()?.id) return !1;
-        let i = x.includes(t);
-        if ((0, o.UK)(t)) return !1;
+        if (null == G || n.author?.id === N.default.getCurrentUser()?.id) return !1;
+        let i = G.includes(t);
+        if ((0, l.UK)(t)) return !1;
         let r = (function (e) {
-                if (e instanceof f.Ay) return e;
-                let t = m.A.getMessage(e.channel_id, e.id);
-                return null != t ? t : (0, l.rh)(e);
+                if (e instanceof h.Ay) return e;
+                let t = p.A.getMessage(e.channel_id, e.id);
+                return null != t ? t : (0, c.rh)(e);
             })(n),
-            s = r.mentioned;
+            a = r.mentioned;
         if (!i) {
-            if (k.includes(t)) q();
-            else if (!s) return !1;
-            else if (!(0, u.pK)(r)) return !1;
+            if (x.includes(t)) Z();
+            else if (!a) return !1;
+            else if (!(0, d.pK)(r)) return !1;
         }
-        U.addMessage({
+        k.addMessage({
             id: n.id,
             channelId: n.channel_id,
-            guildId: p.A.getBasicChannel(n.channel_id)?.guild_id,
-            kind: s ? b.yL.MENTION : b.yL.ALL_MESSAGES_CHANNEL,
+            guildId: I.A.getBasicChannel(n.channel_id)?.guild_id,
+            kind: a ? v.yL.MENTION : v.yL.ALL_MESSAGES_CHANNEL,
             message: r,
         });
     },
-    MESSAGE_DELETE: J,
-    RECENT_MENTION_DELETE: J,
+    MESSAGE_DELETE: ee,
+    RECENT_MENTION_DELETE: ee,
     MESSAGE_DELETE_BULK: function (e) {
         let { ids: t } = e;
-        return U.deleteMessages(t);
+        return k.deleteMessages(t);
     },
-    CONNECTION_OPEN: X,
+    CONNECTION_OPEN: Q,
     LOGOUT: function () {
-        Z();
+        X();
     },
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: Q,
-    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: Q,
-    USER_GUILD_SETTINGS_GUILD_UPDATE: Q,
-    USER_GUILD_SETTINGS_CHANNEL_UPDATE: Q,
-    GUILD_CREATE: X,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: J,
+    USER_GUILD_SETTINGS_GUILD_AND_CHANNELS_UPDATE: J,
+    USER_GUILD_SETTINGS_GUILD_UPDATE: J,
+    USER_GUILD_SETTINGS_CHANNEL_UPDATE: J,
+    GUILD_CREATE: Q,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (T.Ay.allowNoMessages(t)) return !1;
-        X();
+        if (S.Ay.allowNoMessages(t)) return !1;
+        Q();
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        if (!U.getMessages().some((e) => e.guildId === t.id)) return !1;
-        X();
+        if (!k.getMessages().some((e) => e.guildId === t.id)) return !1;
+        Q();
     },
-    THREAD_DELETE: ee,
-    CHANNEL_DELETE: ee,
+    THREAD_DELETE: et,
+    CHANNEL_DELETE: et,
     THREAD_MEMBER_UPDATE: function (e) {
         let { userId: t } = e;
-        if (t !== S.default.getCurrentUser()?.id) return !1;
-        X();
+        if (t !== N.default.getCurrentUser()?.id) return !1;
+        Q();
     },
     THREAD_MEMBERS_UPDATE: function (e) {
         let { id: t, addedMembers: n, removedMemberIds: i } = e,
-            r = S.default.getCurrentUser()?.id;
+            r = N.default.getCurrentUser()?.id;
         if (null == r) return !1;
         if (n?.some((e) => e.userId === r)) {
-            let e = p.A.getBasicChannel(t);
-            return !(null == e || d.A.isMuted(t)) && (0, _.l)(e) !== M.CP.NO_MESSAGES && void X();
+            let e = I.A.getBasicChannel(t);
+            return !(null == e || _.A.isMuted(t)) && (0, E.l)(e) !== U.CP.NO_MESSAGES && void Q();
         }
-        return !!i?.includes(r) && void X();
+        return !!i?.includes(r) && void Q();
     },
     NOTIFICATIONS_INBOX_OPEN: function () {
-        F = !1;
+        V = !1;
     },
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START: function () {
-        G = !0;
+        F = !0;
     },
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_SUCCESS: function (e) {
         let { preload: t, hasMoreToLoad: n, analyticsPayload: i } = e;
-        (G = !1), t && (B = !0), null != n && (H = n), t || (V = !0), z(), (W = i ?? null);
+        (F = !1), t && (H = !0), null != n && (W = n), t || (B = !0), q(), (K = i ?? null);
     },
     NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_FAILURE: function () {
-        (G = !1), (W = null), (F = !0);
+        (F = !1), (K = null), (V = !0);
     },
     NOTIFICATIONS_INBOX_ITEM_CLICK: function (e) {
         let { messageId: t, channelId: n, isUnread: i } = e,
-            r = (0, N.GE)({ location: "handleInboxItemClick" }).notificationCenterVariant;
-        Y = i && r === N.U5.SIDEBAR ? { channelId: n, messageId: t } : null;
+            r = (0, R.GE)({ location: "handleInboxItemClick" }).notificationCenterVariant;
+        Y = i && r === R.U5.SIDEBAR ? { channelId: n, messageId: t } : null;
     },
     NOTIFICATIONS_INBOX_ITEM_ACK: function (e) {
         let { channelId: t, messageId: n } = e;
-        (0, v.zo)({ channelId: t, id: n }, Y) && (Y = null);
+        (0, L.zo)({ channelId: t, id: n }, Y) && (Y = null);
     },
     NOTIFICATIONS_INBOX_CLOSE: function () {
         Y = null;
     },
     NOTIFICATIONS_INBOX_SET_DEV_OVERRIDES: function (e) {
         let { navOnClick: t } = e;
-        K = t ?? !0;
+        $ = t ?? !0;
     },
 });
