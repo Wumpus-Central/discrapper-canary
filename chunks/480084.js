@@ -374,7 +374,7 @@ let eD = {
             return (0, l.reactElement)(r, `${n.key}`, {
                 start: e.start,
                 className: n.formatInline ? eN.tZ : null,
-                style: { "--totalCharacters": a },
+                style: { "--totalCharacters": a, "--olCounterStart": null == e.start ? void 0 : e.start - 1 },
                 children: e.items.map((e, r) => {
                     let a = (0, l.reactElement)("span", `${n.key}-${r}-innerSpan`, { children: t(e, n) });
                     return (0, l.reactElement)("li", `${n.key}-${r}` + r, {

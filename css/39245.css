@@ -1176,7 +1176,7 @@
 }
 
 .markup__75297 ol.inlineFormat__75297 {
-    counter-reset: inline-ol-counter
+    counter-reset: inline-ol-counter var(--olCounterStart, 0)
 }
 
 .markup__75297 ol.inlineFormat__75297>li {
