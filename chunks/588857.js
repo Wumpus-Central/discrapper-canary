@@ -1209,7 +1209,7 @@ function tT(e) {
                             checked: n === i.resolution,
                             action: () => {
                                 let { clipsQuality: e } = tS.Ay.getSettings();
-                                (0, tf.GS)({ resolution: n, frameRate: e.frameRate });
+                                (0, tf.GS)({ ...e, resolution: n });
                             },
                         },
                         t,
@@ -1231,7 +1231,7 @@ function tT(e) {
                             checked: n === i.frameRate,
                             action: () => {
                                 let { clipsQuality: e } = tS.Ay.getSettings();
-                                (0, tf.GS)({ resolution: e.resolution, frameRate: n });
+                                (0, tf.GS)({ ...e, frameRate: n });
                             },
                         },
                         t,
