@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { hs: () => _, Ay: () => h });
+n.d(t, { hs: () => _, Ay: () => E });
 let i = {
     nitro_unsubbed: 100,
     checkpoint_completed: 10,
@@ -11,39 +11,39 @@ let i = {
     bounty_abandoned: 25,
     hangout_window_set: 100,
     populated_clip_gallery_closed: 100,
-    topical_navigation_multiple_impressions: 10,
+    topical_navigation_multiple_impressions: 100,
     guild_room_joined: 100,
 };
 var r = n(636537),
-    s = n(228366),
-    a = n(274184),
-    o = n(38405),
-    l = n(668131),
-    u = n(797632),
+    a = n(228366),
+    s = n(274184),
+    l = n(38405),
+    o = n(668131),
+    d = n(797632),
     c = n(880652),
-    d = n(652215);
+    u = n(652215);
 async function _(e, t) {
-    if (!(a.Ay.shouldAllowSurveyAction() && i[e] >= 100 * Math.random())) return;
+    if (!(s.Ay.shouldAllowSurveyAction() && i[e] >= 100 * Math.random())) return;
     let n = { action_type: e };
     null != t && (n.metadata = t);
     try {
-        let e = await r.Bo.post({ url: d.Rsh.EMBEDDED_SURVEY_ACTION, body: n, rejectWithError: !0 });
-        s.h.dispatch({ type: "SURVEY_FETCHED", survey: e?.body?.survey, isActionTriggered: !0 });
+        let e = await r.Bo.post({ url: u.Rsh.EMBEDDED_SURVEY_ACTION, body: n, rejectWithError: !0 });
+        a.h.dispatch({ type: "SURVEY_FETCHED", survey: e?.body?.survey, isActionTriggered: !0 });
     } catch {}
 }
-let h = {
+let E = {
     fetchSurveyDetails: async function e(e) {
         try {
-            let t = (await r.Bo.get({ url: d.Rsh.EMBEDDED_SURVEY(e), rejectWithError: !0 })).body;
-            return s.h.dispatch({ type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: e, surveyDetails: t }), t;
+            let t = (await r.Bo.get({ url: u.Rsh.EMBEDDED_SURVEY(e), rejectWithError: !0 })).body;
+            return a.h.dispatch({ type: "QUALTRICS_SURVEY_FETCH_SUCCESS", surveyId: e, surveyDetails: t }), t;
         } catch (e) {
-            return o.A.captureException(e), null;
+            return l.A.captureException(e), null;
         }
     },
     submitSurveyResponse: async function e(e, t) {
-        let n = l.i.getState().getDisplayedQuestions(e),
+        let n = o.i.getState().getDisplayedQuestions(e),
             i = (function (e, t, n) {
-                let i = u.A.getSurvey(e);
+                let i = d.A.getSurvey(e);
                 if (null == i) return null;
                 let r = {};
                 for (let [e, n] of Object.entries(t)) {
@@ -60,10 +60,10 @@ let h = {
                             null != t.ChoiceOrder && (r[`${e}_DO`] = t.ChoiceOrder);
                         } else t.QuestionType === c.SQ.TEXT_ENTRY ? (r[`${e}_TEXT`] = n) : (r[e] = n);
                 }
-                let s = Object.keys(t);
+                let a = Object.keys(t);
                 return (
                     n.forEach((e) => {
-                        if (!s.includes(e)) {
+                        if (!a.includes(e)) {
                             let t = i.Questions[e];
                             null != t &&
                                 null != t.ChoiceOrder &&
@@ -79,14 +79,14 @@ let h = {
             return {
                 responseId: (
                     await r.Bo.post({
-                        url: d.Rsh.EMBEDDED_SURVEY_RESPONSE(e),
+                        url: u.Rsh.EMBEDDED_SURVEY_RESPONSE(e),
                         body: { values_json: JSON.stringify(i) },
                         rejectWithError: !0,
                     })
                 ).body.responseId,
             };
         } catch (e) {
-            return o.A.captureException(e), { responseId: "null" };
+            return l.A.captureException(e), { responseId: "null" };
         }
     },
     fireSurveyAction: _,

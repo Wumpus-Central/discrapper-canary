@@ -17,7 +17,7 @@ class E extends u.Ay.DeviceSettingsStore {
         _ = e?.channelsExposedCount ?? 0;
     }
     shouldTriggerOnNextExposure() {
-        return 2 === _;
+        return _ >= 2;
     }
     getState() {
         return { channelsExposedCount: _ };
@@ -118,13 +118,8 @@ async function g(e, t, n, i) {
         }
     }
 }
-function S(e, t, n) {
-    d.X.trackEntrypointImpression({ channelId: e.id, conversationCount: n }),
+function S(e, t) {
+    d.X.trackEntrypointImpression({ channelId: e, conversationCount: t }),
         A.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
-        a.h.dispatch({
-            type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION",
-            channel: e,
-            guildId: t,
-            conversationCount: n,
-        });
+        a.h.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" });
 }

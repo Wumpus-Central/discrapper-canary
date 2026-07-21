@@ -2826,7 +2826,7 @@ function lH(e) {
         [b, N] = r.useState(null),
         v = null != b && b !== i ? b : null;
     r.useEffect(() => {
-        (0, G.p7)(t, t.guild_id, _.length);
+        (0, G.p7)(t.id, _.length);
     }, [t.id]);
     let T = r.useCallback(
             (e) => {
