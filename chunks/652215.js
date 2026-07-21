@@ -2000,6 +2000,11 @@ let nM = "",
         HAVEN_DISCONNECT: (e) => `/haven/${e}/disconnect`,
         HAVEN_UPDATE: (e) => `/haven/${e}/update`,
         HAVEN_GET_ASSETS: "/haven/assets",
+        VIBEGRATIONS_PROJECTS: "/vibegrations/projects",
+        VIBEGRATIONS_PROJECT: (e) => `/vibegrations/projects/${e}`,
+        VIBEGRATIONS_PROJECT_WS_TICKET: (e) => `/vibegrations/projects/${e}/ws-ticket`,
+        VIBEGRATIONS_PROJECT_PUBLISH: (e) => `/vibegrations/projects/${e}/publish`,
+        VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW: (e) => `/vibegrations/projects/${e}/publish-preview`,
     }),
     nk = (0, tV.dN)(nx);
 var nF =

@@ -837,5 +837,10 @@
   "HAVEN_CONNECT": "/haven/:param/connect",
   "HAVEN_DISCONNECT": "/haven/:param/disconnect",
   "HAVEN_UPDATE": "/haven/:param/update",
-  "HAVEN_GET_ASSETS": "/haven/assets"
+  "HAVEN_GET_ASSETS": "/haven/assets",
+  "VIBEGRATIONS_PROJECTS": "/vibegrations/projects",
+  "VIBEGRATIONS_PROJECT": "/vibegrations/projects/:param",
+  "VIBEGRATIONS_PROJECT_WS_TICKET": "/vibegrations/projects/:param/ws-ticket",
+  "VIBEGRATIONS_PROJECT_PUBLISH": "/vibegrations/projects/:param/publish",
+  "VIBEGRATIONS_PROJECT_PUBLISH_PREVIEW": "/vibegrations/projects/:param/publish-preview"
 }
