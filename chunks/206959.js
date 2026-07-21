@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => er });
+n.d(t, { A: () => ea });
 var i,
     r,
     a,
@@ -1850,7 +1850,10 @@ var en = n(264572).Buffer;
 function ei(e) {
     return (e ?? N.Hz) / N.Hz;
 }
-class er extends o.A {
+function er(e) {
+    if (null != e) return Math.round((6e3 * Math.min(100, Math.max(10, e))) / 100);
+}
+class ea extends o.A {
     Video = ee;
     Camera = et;
     audioInputDeviceId = N.qe;
@@ -2184,6 +2187,7 @@ class er extends o.A {
                 frameRate: n,
                 width: i <= 480 ? (i / 3) * 4 : (i / 9) * 16,
                 height: i,
+                bitrateKbps: er(e.bitratePercent),
                 videoEncoderExperiments: e.videoEncoderExperiments,
                 minCaptureWidth: A,
                 minCaptureHeight: h,
@@ -2191,9 +2195,12 @@ class er extends o.A {
         let [I, f] = null != r ? r.split(":") : ["", ""];
         t.setClipsSource({ id: f, soundshareId: null != a ? a : 0 });
     }
-    setClipsQualitySettings(e, t, n) {
-        let i = (0, D.lE)();
-        return null != i.applyClipsQualitySettings && (i.applyClipsQualitySettings(e, t, n), !0);
+    setClipsQualitySettings(e, t, n, i) {
+        let r = (0, D.lE)();
+        if (null == r.applyClipsQualitySettings) return !1;
+        r.applyClipsQualitySettings(e, t, n);
+        let a = er(i);
+        return null != a && null != r.applyClipsSettings && r.applyClipsSettings({ bitrateKbps: a }), !0;
     }
     setSoundshareSource(e, t, n) {
         this.eachConnection((i) => {

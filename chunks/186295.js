@@ -2462,6 +2462,7 @@ let nW = (i = new nH(b.h, {
                 minCaptureHeight: A,
             },
             quality: r,
+            bitratePercent: r.bitratePercent,
             applicationName: n,
             videoEncoderExperiments: i.getVideoEncoderExperiments(eJ.x.STREAM, "streamer"),
         });

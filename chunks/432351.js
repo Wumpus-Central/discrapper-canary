@@ -62,7 +62,7 @@ class o extends i.A {
     }
     setGoLiveSource(e, t) {}
     setClipsSource(e) {}
-    setClipsQualitySettings(e, t, n) {
+    setClipsQualitySettings(e, t, n, i) {
         return !1;
     }
     setDesktopSource(e) {

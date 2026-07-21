@@ -27,11 +27,11 @@ let m = "default",
     S = {},
     N = {},
     C = {},
-    R = [],
-    O = 0,
+    O = [],
+    R = 0,
     L = null,
-    D = null,
     y = null,
+    D = null,
     v = {},
     b = {},
     M = null,
@@ -41,7 +41,7 @@ let m = "default",
     G = {
         clipsEnabled: !1,
         storageLocation: m,
-        clipsQuality: { resolution: T.on.RESOLUTION_1080, frameRate: T.kn.FPS_30 },
+        clipsQuality: { resolution: T.on.RESOLUTION_1080, frameRate: T.kn.FPS_30, bitratePercent: f.Y2 },
         clipsLength: f.LX.SECONDS_30,
         remindersEnabled: !0,
         decoupledClipsEnabled: !1,
@@ -166,6 +166,16 @@ class V extends s.Ay.DeviceSettingsStore {
                 showPovClipsInGallery: e.clipsSettings.showPovClipsInGallery ?? G.showPovClipsInGallery,
             },
         }),
+        (e) => ({
+            ...e,
+            clipsSettings: {
+                ...e.clipsSettings,
+                clipsQuality: {
+                    ...e.clipsSettings.clipsQuality,
+                    bitratePercent: e.clipsSettings.clipsQuality.bitratePercent ?? G.clipsQuality.bitratePercent,
+                },
+            },
+        }),
     ];
     initialize(e) {
         null != e && (x = e), k(), this.waitFor(d.Ay);
@@ -181,7 +191,7 @@ class V extends s.Ay.DeviceSettingsStore {
         if (null != t) return S[t];
     }
     getClipCandidates() {
-        return R;
+        return O;
     }
     getClipCandidateById(e) {
         return N[e];
@@ -199,16 +209,16 @@ class V extends s.Ay.DeviceSettingsStore {
         return null != x.clipsSettings.enableAutoclipping;
     }
     getLastClipsSession() {
-        return D;
+        return y;
     }
     getCurrentClipsSession() {
-        return y;
+        return D;
     }
     getHistoricalClipsSessionById(e) {
         return v[e];
     }
     devSetLastClipsSession(e) {
-        (D = e), this.emitChange();
+        (y = e), this.emitChange();
     }
     getClipsWarningShown(e) {
         return L === e;
@@ -223,7 +233,7 @@ class V extends s.Ay.DeviceSettingsStore {
         return x.hardwareClassificationVersion;
     }
     getIsAtMaxSaveClipOperations() {
-        return O >= f.VP;
+        return R >= f.VP;
     }
     getLastClipsError() {
         return M;
@@ -270,20 +280,20 @@ let B = new V(l.h, {
         },
         CLIPS_SAVE_CLIP: function (e) {
             let { clip: t } = e;
-            (O = Math.max(O - 1, 0)),
-                t.isCandidate && ((R = [t, ...R]), (N[t.id] = t)),
-                null != y &&
-                    (y = {
-                        ...y,
-                        manualClipsSaved: y.manualClipsSaved + +("manual" === t.clipMethod),
-                        candidateClipsSaved: y.candidateClipsSaved + +!!t.isCandidate,
+            (R = Math.max(R - 1, 0)),
+                t.isCandidate && ((O = [t, ...O]), (N[t.id] = t)),
+                null != D &&
+                    (D = {
+                        ...D,
+                        manualClipsSaved: D.manualClipsSaved + +("manual" === t.clipMethod),
+                        candidateClipsSaved: D.candidateClipsSaved + +!!t.isCandidate,
                     }),
                 t.isCandidate ||
-                    ((D = {
+                    ((y = {
                         applicationName: t.applicationName,
                         ended: !1,
-                        ...D,
-                        newClipIds: [...(D?.newClipIds ?? []), t.id],
+                        ...y,
+                        newClipIds: [...(y?.newClipIds ?? []), t.id],
                     }),
                     (x = { ...x, newClipIds: [...(x.newClipIds ?? []), t.id] }),
                     (S[t.id] = t),
@@ -292,14 +302,14 @@ let B = new V(l.h, {
         },
         CLIPS_PROMOTE_CLIP_CANDIDATE: function (e) {
             let { clip: t } = e;
-            (D = { applicationName: t.applicationName, ...D, ended: !0, newClipIds: [...(D?.newClipIds ?? []), t.id] }),
+            (y = { applicationName: t.applicationName, ...y, ended: !0, newClipIds: [...(y?.newClipIds ?? []), t.id] }),
                 r()(
-                    null != y && y.id === t.gameSessionId,
+                    null != D && D.id === t.gameSessionId,
                     "Promoting clip candidates that do not match current autoclip session",
                 ),
-                (y = { ...y, candidateClipsPromoted: y.candidateClipsPromoted + 1 }),
+                (D = { ...D, candidateClipsPromoted: D.candidateClipsPromoted + 1 }),
                 (x = { ...x, newClipIds: [...(x.newClipIds ?? []), t.id] }),
-                (R = R.filter((e) => {
+                (O = O.filter((e) => {
                     let { id: n } = e;
                     return n !== t.id;
                 })),
@@ -309,14 +319,14 @@ let B = new V(l.h, {
         },
         CLIPS_SAVE_CLIP_START: function (e) {
             let { clipType: t } = e;
-            (O += 1), (x.hasTakenDecoupledClip = x.hasTakenDecoupledClip || t === f.Fv.DECOUPLED);
+            (R += 1), (x.hasTakenDecoupledClip = x.hasTakenDecoupledClip || t === f.Fv.DECOUPLED);
         },
         CLIPS_SAVE_CLIP_ERROR: function () {
-            O = Math.max(O - 1, 0);
+            R = Math.max(R - 1, 0);
         },
         CLIPS_SAVE_CLIP_NO_OP: function (e) {
             let { reason: t } = e;
-            (t === A.RC.BUFFER_WARMING_UP || t === A.RC.BRIDGE_SHUTDOWN) && (O = Math.max(O - 1, 0));
+            (t === A.RC.BUFFER_WARMING_UP || t === A.RC.BRIDGE_SHUTDOWN) && (R = Math.max(R - 1, 0));
         },
         STREAM_START: function (e) {
             let { sourceName: t, pid: n } = e;
@@ -327,25 +337,25 @@ let B = new V(l.h, {
                 i = e?.name ?? i;
             }
             if (null == i || "" === i) return !1;
-            D = { applicationName: i, newClipIds: [], ended: !1 };
+            y = { applicationName: i, newClipIds: [], ended: !1 };
         },
         STREAM_STOP: function (e) {
             let { streamKey: t } = e;
-            if (null == D || (0, c.Iy)(t).ownerId !== u.default.getId()) return !1;
-            D = 0 === D.newClipIds.length ? null : { ...D, ended: !0 };
+            if (null == y || (0, c.Iy)(t).ownerId !== u.default.getId()) return !1;
+            y = 0 === y.newClipIds.length ? null : { ...y, ended: !0 };
         },
         CLIPS_CLEAR_LAST_CLIPS_SESSION: function () {
-            if (null == D) return !1;
-            D = null;
+            if (null == y) return !1;
+            y = null;
         },
         CLIPS_SESSION_START: function (e) {
             let { sessionId: t, gameId: n } = e;
-            null != y && (v[y.id] = y),
-                (y = { id: t, gameId: n, manualClipsSaved: 0, candidateClipsSaved: 0, candidateClipsPromoted: 0 });
+            null != D && (v[D.id] = D),
+                (D = { id: t, gameId: n, manualClipsSaved: 0, candidateClipsSaved: 0, candidateClipsPromoted: 0 });
         },
         CLIPS_SESSION_STOP: function () {
-            if (null == y) return !1;
-            (v[y.id] = y), (y = null);
+            if (null == D) return !1;
+            (v[D.id] = D), (D = null);
         },
         CLIPS_CLEAR_NEW_CLIP_IDS: function () {
             x.newClipIds = [];
@@ -355,15 +365,15 @@ let B = new V(l.h, {
             x.newClipIds = x.newClipIds.filter((e) => e !== t);
         },
         CLIPS_LOAD_DIRECTORY_SUCCESS: function (e) {
-            for (let t of ((S = {}), (R = []), e.clips))
+            for (let t of ((S = {}), (O = []), e.clips))
                 t.isCandidate
-                    ? ((N[t.id] = t), R.push(t))
+                    ? ((N[t.id] = t), O.push(t))
                     : ((S[t.id] = t), null != t.remoteClipId && (C[t.remoteClipId] = t.id));
             x.hasClips = Object.keys(S).length > 0;
         },
         CLIPS_DELETE_CLIP: function (e) {
             let t = S[e.id];
-            (R = R.filter((t) => {
+            (O = O.filter((t) => {
                 let { id: n } = t;
                 return e.id !== n;
             })),
@@ -409,7 +419,7 @@ let B = new V(l.h, {
         CLIPS_INIT: function (e) {
             let { applicationName: t } = e;
             if (((M = null), !(0, I.TD)())) return !1;
-            D = { applicationName: t, newClipIds: [], ended: !1 };
+            y = { applicationName: t, newClipIds: [], ended: !1 };
         },
         CLIPS_INIT_FAILURE: function (e) {
             let { errMsg: t } = e;
@@ -449,7 +459,7 @@ let B = new V(l.h, {
             return t;
         },
         LOGOUT: function () {
-            w.clear(), (D = null), (L = null), (b = {});
+            w.clear(), (y = null), (L = null), (b = {});
         },
     }),
     H = B;

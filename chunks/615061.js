@@ -3169,7 +3169,7 @@ class tr extends p.A {
         }
     }
     setClipsSource(e) {}
-    setClipsQualitySettings(e, t, n) {
+    setClipsQualitySettings(e, t, n, i) {
         return !1;
     }
     setSoundshareSource(e, t, n) {}
