@@ -142,7 +142,7 @@
 
     .locale_dda9b4 {
         display: flex;
-        font-size: 14px;
+        font-size: .875rem;
         opacity: .8;
         padding: 10px;
         position: relative
@@ -181,7 +181,7 @@
     background: var(--white);
     border-radius: 4px;
     box-shadow: 0 1px 3px var(--opacity-black-10);
-    font-size: 13px;
+    font-size: .8125rem;
     left: 0;
     min-width: 122px;
     overflow: hidden;

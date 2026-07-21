@@ -693,6 +693,8 @@ var ew =
         (g.CREATOR_STORE_PAGE_CTA_CLICKED = "creator_store_page_cta_clicked"),
         (g.SEO_PAGE_CWV_MEASURED = "seo_page_cwv_measured"),
         (g.ADS_MANAGER_PAGE_VIEWED = "ads_manager_page_viewed"),
+        (g.ADS_MANAGER_CTA_CLICKED = "ads_manager_cta_clicked"),
+        (g.ADS_MANAGER_NO_AD_ACCOUNTS_VIEWED = "ads_manager_no_ad_accounts_viewed"),
         g),
     eG = (((S = {}).CLIENT_TELEMETRY = "client_telemetry"), S),
     ex = (((N = {}).CLIENT_TELEMETRY = "/beaker"), N),
