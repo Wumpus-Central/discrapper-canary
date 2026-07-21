@@ -769,22 +769,6 @@
     width: 12px
 }
 
-.typingMaskWrapper_df7f81 {
-    overflow: visible;
-    position: relative
-}
-
-.typingMaskSvg_df7f81 {
-    inset: 0;
-    overflow: visible;
-    position: absolute
-}
-
-.typingIndicator_df7f81 {
-    pointer-events: none;
-    position: absolute
-}
-
 .channelTypingStatusFill_df7f81 {
     align-items: center;
     display: flex;
