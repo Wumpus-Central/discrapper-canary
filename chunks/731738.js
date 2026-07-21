@@ -54,4 +54,5 @@ var i,
         (i.BADGE_DIRECTORY_ERROR_STATE_VIEWED = "badge_directory_error_state_viewed"),
         (i.INCODE_VERIFICATION_FAILED = "incode_verification_failed"),
         (i.SLAYER_STOREFRONT_CARD_IMPRESSION = "slayer_storefront_card_impression"),
+        (i.PRICE_DRIFT_IN_CHECKOUT = "price_drift_in_checkout"),
         i);
