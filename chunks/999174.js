@@ -319,9 +319,7 @@ function eo(e) {
                         c = (function (e) {
                             let { tier: t, isUnlocked: n, isViewingOtherUser: i, isViewerOnUpgradeableNitro: l } = e;
                             return n
-                                ? i
-                                    ? K.intl.string(K.t.sTFApF)
-                                    : (t.milestone_text ?? "")
+                                ? (t.milestone_text ?? K.intl.string(K.t.sTFApF))
                                 : l && !i
                                   ? K.intl.string(K.t.VPu695)
                                   : (t.milestone_text ?? "");
