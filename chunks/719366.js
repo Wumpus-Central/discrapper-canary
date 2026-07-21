@@ -405,7 +405,7 @@ function p(e, t, i) {
                     onClick: () => {
                         {
                             let { openUserSettings: e } = n(766075);
-                            e(u.X.KEYBINDS_PANEL);
+                            e(u.X.SYSTEM_CUSTOM_KEYBINDS_CATEGORY);
                         }
                     },
                 };

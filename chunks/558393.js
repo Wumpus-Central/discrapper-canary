@@ -10,11 +10,11 @@ var n = E(936555),
     l = E(96566),
     o = E(284738),
     N = E(406704),
-    x = E(780964),
-    T = E(95701),
+    T = E(780964),
+    x = E(95701),
     g = E(71393),
-    I = E(975571),
-    M = E(652215),
+    M = E(975571),
+    I = E(652215),
     R = E(719366),
     a = E(375708);
 function O(t) {
@@ -29,11 +29,11 @@ function O(t) {
             onClick: () => {
                 {
                     let { openUserSettings: t } = E(766075);
-                    t(x.X.KEYBINDS_PANEL);
+                    t(T.X.SYSTEM_CUSTOM_KEYBINDS_CATEGORY);
                 }
             },
         }),
-        SOUNDBOARD_DESCRIPTION: a.intl.format(a.t.fVE8y8, { helpCenterArticle: I.A.getArticleURL(M.MVz.SOUNDBOARD) }),
+        SOUNDBOARD_DESCRIPTION: a.intl.format(a.t.fVE8y8, { helpCenterArticle: M.A.getArticleURL(I.MVz.SOUNDBOARD) }),
         showStageChannelPermissions: i,
         showExperimental: !0,
         showMembershipManualApprovalPermissions: !0,
@@ -49,23 +49,23 @@ function D(t, i) {
 }
 let C = {
     generateChannelPermissionSpec: function (t, i, E, n) {
-        var e, B, o, x;
-        let I,
+        var e, B, o, T;
+        let M,
             C = O(t),
             p = (0, R.mW)(i, E, { ...n, enableHangoutWindow: C.enableHangoutWindow }),
-            G = N.io.getCurrentConfig({ guildId: t, location: "3ad37d_1" }).enabled && T.p6.has(i.type),
+            G = N.io.getCurrentConfig({ guildId: t, location: "3ad37d_1" }).enabled && x.p6.has(i.type),
             L = (0, l.Bw)(t),
             c = (0, r.i_)(t),
             d = i.isMediaChannel(),
             U = new Set(),
             f = g.A.getGuild(t);
-        (f?.features.has(M.GuildFeatures.VERIFIED) &&
+        (f?.features.has(I.GuildFeatures.VERIFIED) &&
             _.A.getCurrentConfig({ guildId: t, location: "generateChannelPermissionSpec" }).enabled) ||
-            U.add(M.xBc.MANAGE_OFFICIAL_MESSAGES.toString());
+            U.add(I.xBc.MANAGE_OFFICIAL_MESSAGES.toString());
         let { inSoundmojiExperiment: u } = C;
         switch (i.type) {
-            case M.rbe.GUILD_CATEGORY:
-                I = [
+            case I.rbe.GUILD_CATEGORY:
+                M = [
                     s.mL(p, a.intl.string(a.t["AkPxc+"])),
                     s.m6(p, a.intl.string(a.t.Ny49TN)),
                     s.BK(p, a.intl.string(a.t.cKobO5), {
@@ -81,8 +81,8 @@ let C = {
                     s.xd(p, a.intl.string(a.t.b8lplT)),
                 ];
                 break;
-            case M.rbe.GUILD_VOICE:
-                I = [
+            case I.rbe.GUILD_VOICE:
+                M = [
                     s.mL(p, a.intl.string(a.t.ouHggI), { showManageWebhooks: !0 }),
                     s.m6(p, a.intl.string(a.t.Ny49TN)),
                     s.iG(p, a.intl.string(a.t["46Ra1b"])),
@@ -90,7 +90,7 @@ let C = {
                         sectionDescription: c
                             ? a.intl.format(a.t["4Z9Fbb"], {
                                   setUpAutomod: () => {
-                                      A.A.open(t, M.BEX.GUILD_AUTOMOD);
+                                      A.A.open(t, I.BEX.GUILD_AUTOMOD);
                                   },
                               })
                             : void 0,
@@ -100,8 +100,8 @@ let C = {
                     s.Si(p, a.intl.string(a.t["rrh/W6"])),
                 ];
                 break;
-            case M.rbe.GUILD_STAGE_VOICE:
-                I = [
+            case I.rbe.GUILD_STAGE_VOICE:
+                M = [
                     s.mL(p, a.intl.string(a.t.ouHggI), { showManageWebhooks: !1 }),
                     s.m6(p, a.intl.string(a.t.Ny49TN)),
                     s.od(p, a.intl.string(a.t["46Ra1b"]), L),
@@ -111,7 +111,7 @@ let C = {
                         sectionDescription: c
                             ? a.intl.format(a.t["4Z9Fbb"], {
                                   setUpAutomod: () => {
-                                      A.A.open(t, M.BEX.GUILD_AUTOMOD);
+                                      A.A.open(t, I.BEX.GUILD_AUTOMOD);
                                   },
                               })
                             : void 0,
@@ -120,11 +120,11 @@ let C = {
                     s.Si(p, a.intl.string(a.t["rrh/W6"]), { showActivities: !1 }),
                 ];
                 break;
-            case M.rbe.GUILD_FORUM:
-            case M.rbe.GUILD_MEDIA: {
+            case I.rbe.GUILD_FORUM:
+            case I.rbe.GUILD_MEDIA: {
                 let i = d ? a.intl.string(a.t.aSjPgw) : a.intl.string(a.t.TS7Cnb),
                     E = d ? a.t.YjJTtH : a.t["1MTnqY"];
-                I = [
+                M = [
                     s.mL(p, a.intl.string(a.t.ouHggI)),
                     s.m6(p, a.intl.string(a.t.Ny49TN)),
                     s.BK(p, i, {
@@ -133,7 +133,7 @@ let C = {
                         sectionDescription: c
                             ? a.intl.format(E, {
                                   setUpAutomod: () => {
-                                      d || (0, S.El)(), A.A.open(t, M.BEX.GUILD_AUTOMOD);
+                                      d || (0, S.El)(), A.A.open(t, I.BEX.GUILD_AUTOMOD);
                                   },
                               })
                             : void 0,
@@ -145,27 +145,27 @@ let C = {
                 break;
             }
             default:
-                I = [
+                M = [
                     s.mL(p, a.intl.string(a.t.ouHggI)),
                     s.m6(p, a.intl.string(a.t.Ny49TN)),
                     s.BK(p, a.intl.string(a.t.cKobO5), {
-                        showPrivateThreads: i.type !== M.rbe.GUILD_ANNOUNCEMENT,
+                        showPrivateThreads: i.type !== I.rbe.GUILD_ANNOUNCEMENT,
                         showCreateThreads: !0,
                         inSoundmojiExperiment: u,
                     }),
                     s.Si(p, a.intl.string(a.t["rrh/W6"])),
-                    ...((x = () => s.iG(p, a.intl.string(a.t["46Ra1b"]))), G ? [x()] : []),
+                    ...((T = () => s.iG(p, a.intl.string(a.t["46Ra1b"]))), G ? [T()] : []),
                 ];
         }
-        return D(I, U);
+        return D(M, U);
     },
     generateGuildPermissionSpec: function (t) {
         let i = new Set();
         return (
-            t.features.has(M.GuildFeatures.COMMUNITY) || i.add(M.xBc.VIEW_GUILD_ANALYTICS.toString()),
-            (t.features.has(M.GuildFeatures.VERIFIED) &&
+            t.features.has(I.GuildFeatures.COMMUNITY) || i.add(I.xBc.VIEW_GUILD_ANALYTICS.toString()),
+            (t.features.has(I.GuildFeatures.VERIFIED) &&
                 _.A.getCurrentConfig({ guildId: t.id, location: "generateGuildPermissionSpec" }).enabled) ||
-                i.add(M.xBc.MANAGE_OFFICIAL_MESSAGES.toString()),
+                i.add(I.xBc.MANAGE_OFFICIAL_MESSAGES.toString()),
             D(s.LZ(O(t.id)), i)
         );
     },

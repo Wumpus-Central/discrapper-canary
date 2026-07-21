@@ -1,83 +1,84 @@
 "use strict";
-n.r(t), n.d(t, { parseSettingsUrl: () => f, settingsPathToRoute: () => c, trackParseSettingsUrl: () => h });
+n.r(t), n.d(t, { parseSettingsUrl: () => A, settingsPathToRoute: () => c, trackParseSettingsUrl: () => E });
 var i = n(492462),
     r = n(174459),
-    s = n(780964),
-    a = n(358776),
-    o = n(355097),
-    l = n(652215);
-let u = /[_\s]|%20/g;
+    a = n(780964),
+    s = n(358776),
+    l = n(355097),
+    o = n(652215);
+let d = /[_\s]|%20/g;
 function c(e) {
     let t = e.split("/");
-    return l.BVt.SETTINGS(t[0], t[1]);
+    return o.BVt.SETTINGS(t[0], t[1]);
 }
-function d(e) {
-    return null == e ? "" : e.toLowerCase().replace(u, "-");
+function u(e) {
+    return null == e ? "" : e.toLowerCase().replace(d, "-");
 }
 function _(e) {
-    return Object.values(o.od).includes(e);
+    return Object.values(l.od).includes(e);
 }
-function h(e, t) {
+function E(e, t) {
     let { target: n, path: i } = e;
     null == n
-        ? r.default.track(l.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
+        ? r.default.track(o.HAw.USER_SETTINGS_URL_PARSING_FAILED, {
               user_settings_url_origin: t,
               user_settings_url_path: i,
           })
-        : r.default.track(l.HAw.USER_SETTINGS_URL_PARSED, { user_settings_url_path: i, user_settings_url_origin: t });
+        : r.default.track(o.HAw.USER_SETTINGS_URL_PARSED, { user_settings_url_path: i, user_settings_url_origin: t });
 }
-function f(e) {
+function A(e) {
     let t,
         { path: n, search: r } = e,
-        [, , l, u] = n.split("?")[0].split("/"),
-        c = d(l),
-        h = [c, d(u)].filter(Boolean).join("/"),
-        f =
-            ((t = (0, a.Bv)("UserSection")),
+        [, , o, d] = n.split("?")[0].split("/"),
+        c = u(o),
+        E = [c, u(d)].filter(Boolean).join("/"),
+        A =
+            ((t = (0, s.Bv)("UserSection")),
             {
-                [o.od.ACCOUNT]: s.X.ACCOUNT_PANEL,
-                [o.od.ACCOUNT_STANDING]: s.X.ACCOUNT_STANDING_CATEGORY,
-                [o.od.ACCOUNT_ACCOUNT_STANDING]: s.X.ACCOUNT_STANDING_CATEGORY,
-                [o.od.PROFILE_CUSTOMIZATION]: s.X.PROFILE_PANEL,
-                [o.od.CONTENT_AND_SOCIAL]: t ? s.X.MESSAGING_PERMISSIONS_PANEL : s.X.CONTENT_AND_SOCIAL_PANEL,
-                [o.od.CONNECTED_GAMES]: s.X.CONNECTED_GAMES_CATEGORY,
-                [o.od.CONTENT_AND_SOCIAL_CONNECTED_GAMES]: s.X.CONNECTED_GAMES_CATEGORY,
-                [o.od.DATA_AND_PRIVACY]: s.X.DATA_AND_PRIVACY_PANEL,
-                [o.od.PRIVACY_AND_SAFETY]: s.X.DATA_AND_PRIVACY_PANEL,
-                [o.od.FAMILY_CENTER]: s.X.FAMILY_CENTER_PANEL,
-                [o.od.SESSIONS]: s.X.SESSIONS_PANEL,
-                [o.od.AUTHORIZED_APPS]: t ? s.X.AUTHORIZED_APPS_CATEGORY : s.X.AUTHORIZED_APPS_PANEL,
-                [o.od.CONNECTIONS]: t ? s.X.CONNECTIONS_CATEGORY : s.X.CONNECTIONS_PANEL,
-                [o.od.CLIPS]: s.X.CLIPS_PANEL,
-                [o.od.PREMIUM]: s.X.NITRO_PANEL,
-                [o.od.GUILD_BOOSTING]: s.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL,
-                [o.od.SUBSCRIPTIONS]: s.X.SUBSCRIPTIONS_PANEL,
-                [o.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS]: s.X.SUBSCRIPTIONS_PANEL,
-                [o.od.INVENTORY]: s.X.GIFT_PANEL,
-                [o.od.BILLING]: s.X.BILLING_PANEL,
-                [o.od.APPEARANCE]: s.X.APPEARANCE_PANEL,
-                [o.od.ACCESSIBILITY]: s.X.ACCESSIBILITY_PANEL,
-                [o.od.VOICE]: s.X.VOICE_AND_VIDEO_PANEL,
-                [o.od.POGGERMODE]: s.X.POGGERMODE_PANEL,
-                [o.od.TEXT]: s.X.APPEARANCE_MESSAGES_CATEGORY,
-                [o.od.NOTIFICATIONS]: s.X.NOTIFICATIONS_PANEL,
-                [o.od.EMAILS]: s.X.NOTIFICATIONS_EMAIL_CATEGORY,
-                [o.od.NOTIFICATIONS_EMAILS]: s.X.NOTIFICATIONS_EMAIL_CATEGORY,
-                [o.od.KEYBINDS]: s.X.KEYBINDS_PANEL,
-                [o.od.LANGUAGE]: s.X.LANGUAGE_AND_TIME_PANEL,
-                [o.od.WINDOWS]: s.X.WINDOWS_PANEL,
-                [o.od.LINUX]: s.X.LINUX_PANEL,
-                [o.od.STREAMER_MODE]: s.X.STREAMER_MODE_CATEGORY,
-                [o.od.ADVANCED]: s.X.DEVELOPER_PANEL,
-                [o.od.ACTIVITY_PRIVACY]: s.X.ACTIVITY_PRIVACY_PANEL,
-                [o.od.REGISTERED_GAMES]: s.X.REGISTERED_GAMES_PANEL,
-                [o.od.OVERLAY]: s.X.OVERLAY_PANEL,
-                [o.od.EXPERIMENTS]: s.X.EXPERIMENTS_PANEL,
-                [o.od.DEVELOPER_OPTIONS]: s.X.DEVELOPER_OPTIONS_PANEL,
+                [l.od.ACCOUNT]: a.X.ACCOUNT_PANEL,
+                [l.od.ACCOUNT_STANDING]: a.X.ACCOUNT_STANDING_CATEGORY,
+                [l.od.ACCOUNT_ACCOUNT_STANDING]: a.X.ACCOUNT_STANDING_CATEGORY,
+                [l.od.PROFILE_CUSTOMIZATION]: a.X.PROFILE_PANEL,
+                [l.od.CONTENT_AND_SOCIAL]: t ? a.X.MESSAGING_PERMISSIONS_PANEL : a.X.CONTENT_AND_SOCIAL_PANEL,
+                [l.od.CONNECTED_GAMES]: a.X.CONNECTED_GAMES_CATEGORY,
+                [l.od.CONTENT_AND_SOCIAL_CONNECTED_GAMES]: a.X.CONNECTED_GAMES_CATEGORY,
+                [l.od.DATA_AND_PRIVACY]: a.X.DATA_AND_PRIVACY_PANEL,
+                [l.od.PRIVACY_AND_SAFETY]: a.X.DATA_AND_PRIVACY_PANEL,
+                [l.od.FAMILY_CENTER]: a.X.FAMILY_CENTER_PANEL,
+                [l.od.SESSIONS]: a.X.SESSIONS_PANEL,
+                [l.od.AUTHORIZED_APPS]: t ? a.X.AUTHORIZED_APPS_CATEGORY : a.X.AUTHORIZED_APPS_PANEL,
+                [l.od.CONNECTIONS]: t ? a.X.CONNECTIONS_CATEGORY : a.X.CONNECTIONS_PANEL,
+                [l.od.CLIPS]: a.X.CLIPS_PANEL,
+                [l.od.PREMIUM]: a.X.NITRO_PANEL,
+                [l.od.GUILD_BOOSTING]: a.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL,
+                [l.od.SUBSCRIPTIONS]: a.X.SUBSCRIPTIONS_PANEL,
+                [l.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS]: a.X.SUBSCRIPTIONS_PANEL,
+                [l.od.INVENTORY]: a.X.GIFT_PANEL,
+                [l.od.BILLING]: a.X.BILLING_PANEL,
+                [l.od.APPEARANCE]: a.X.APPEARANCE_PANEL,
+                [l.od.ACCESSIBILITY]: a.X.ACCESSIBILITY_PANEL,
+                [l.od.VOICE]: a.X.VOICE_AND_VIDEO_PANEL,
+                [l.od.POGGERMODE]: a.X.POGGERMODE_PANEL,
+                [l.od.TEXT]: a.X.APPEARANCE_MESSAGES_CATEGORY,
+                [l.od.NOTIFICATIONS]: a.X.NOTIFICATIONS_PANEL,
+                [l.od.EMAILS]: a.X.NOTIFICATIONS_EMAIL_CATEGORY,
+                [l.od.NOTIFICATIONS_EMAILS]: a.X.NOTIFICATIONS_EMAIL_CATEGORY,
+                [l.od.KEYBINDS]: a.X.SYSTEM_CUSTOM_KEYBINDS_CATEGORY,
+                [l.od.SYSTEM]: a.X.SYSTEM_PANEL,
+                [l.od.LANGUAGE]: a.X.LANGUAGE_AND_TIME_PANEL,
+                [l.od.WINDOWS]: a.X.SYSTEM_PANEL,
+                [l.od.LINUX]: a.X.SYSTEM_PANEL,
+                [l.od.STREAMER_MODE]: a.X.STREAMER_MODE_CATEGORY,
+                [l.od.ADVANCED]: a.X.DEVELOPER_PANEL,
+                [l.od.ACTIVITY_PRIVACY]: a.X.ACTIVITY_PRIVACY_PANEL,
+                [l.od.REGISTERED_GAMES]: a.X.REGISTERED_GAMES_PANEL,
+                [l.od.OVERLAY]: a.X.OVERLAY_PANEL,
+                [l.od.EXPERIMENTS]: a.X.EXPERIMENTS_PANEL,
+                [l.od.DEVELOPER_OPTIONS]: a.X.DEVELOPER_OPTIONS_PANEL,
             });
     return {
-        target: (_(h) ? f[h] : void 0) ?? (_(c) ? f[c] : void 0),
-        path: h,
+        target: (_(E) ? A[E] : void 0) ?? (_(c) ? A[c] : void 0),
+        path: E,
         params: (0, i.parse)(r ?? location.search),
     };
 }

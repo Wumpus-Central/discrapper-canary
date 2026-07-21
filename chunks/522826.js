@@ -1,4 +1,4 @@
-o.exports = {
+e.exports = {
     Gf: "marginReset_fd297e",
     a5: "marginTop4_fd297e",
     Q5: "marginBottom4_fd297e",
@@ -10,7 +10,6 @@ o.exports = {
     eT: "marginTop40_fd297e",
     C2: "marginBottom40_fd297e",
     o9: "marginTop60_fd297e",
-    IE: "marginBottom60_fd297e",
     F1: "marginCenterHorz_fd297e",
     oY: "marginLeft8_fd297e",
 };
