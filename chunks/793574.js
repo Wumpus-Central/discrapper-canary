@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => s });
+n.d(t, { A: () => a });
 var i,
     r =
         (((i = r || {}).QUICK_SWITCHER = "quick switcher"),
@@ -373,6 +373,7 @@ var i,
         (i.COLLECTIBLES_SHOP_NAMEPLATES_TAB = "collectibles shop nameplates tab"),
         (i.COLLECTIBLES_SHOP_PROFILE_FRAMES_TAB = "collectibles shop profile frames tab"),
         (i.COLLECTIBLES_SHOP_BUNDLES_TAB = "collectibles shop bundles tab"),
+        (i.COLLECTIBLES_SHOP_GAME_SERVERS_TAB = "collectibles shop game servers tab"),
         (i.COLLECTIBLES_SHOP_INDEX_PAGE = "collectibles shop index page"),
         (i.COLLECTIBLES_SHOP_CARD = "collectibles shop card"),
         (i.COLLECTIBLES_SHOP_CARD_PREVIEW_BUTTON = "collectibles shop card preview button"),
@@ -617,4 +618,4 @@ var i,
         (i.XBOX_PERKS_CONNECTION_FOOTER = "xbox perks connection footer"),
         (i.XBOX_PERKS_MODAL = "xbox perks modal"),
         i);
-let s = r;
+let a = r;

@@ -16,7 +16,7 @@ var i,
     p = n(652165),
     R = n(287809),
     v = n(174459),
-    A = n(662388),
+    A = n(34332),
     N = n(440938),
     g = n(298072),
     I = n(993408),
@@ -637,11 +637,11 @@ function e0(e) {
 var e1 = n(462887),
     e2 = n(821609),
     e7 = n(318254),
-    e6 = n(825484),
-    e3 = n(331322),
+    e3 = n(825484),
+    e6 = n(331322),
     e9 = n(736653),
-    e8 = n(44120),
-    e4 = n(465794),
+    e4 = n(44120),
+    e8 = n(465794),
     e5 = n(757036),
     te = n(761705),
     tt = n(580630),
@@ -936,7 +936,7 @@ function tH(e) {
     (0, te.W)({ disableFetch: !Q });
     let ee = s.useCallback(() => {
         h(w.sH.BUY_WITH_FIAT),
-            (0, e8.A)({
+            (0, e4.A)({
                 skuId: i.skuId,
                 analyticsLocations: m,
                 discoverySessionId: R,
@@ -945,7 +945,7 @@ function tH(e) {
     }, [m, E, i.skuId, h, R]);
     function et(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            i = (0, r.jsx)(e4.A, {
+            i = (0, r.jsx)(e8.A, {
                 subscriptionTier: tC.pe.TIER_2,
                 fullWidth: !0,
                 buttonTextOverride: e,
@@ -999,7 +999,7 @@ function tH(e) {
                         discountOfferAmount: K,
                         onTrackClick: h,
                     }),
-            (0, r.jsx)(e3.B, {
+            (0, r.jsx)(e6.B, {
                 direction: "vertical",
                 gap: 8,
                 children:
@@ -1007,7 +1007,7 @@ function tH(e) {
                         ? y
                             ? O
                                 ? z
-                                    ? (0, r.jsxs)(e6.e, {
+                                    ? (0, r.jsxs)(e3.e, {
                                           wrap: !1,
                                           fullWidth: !0,
                                           children: [
@@ -1109,7 +1109,7 @@ function tH(e) {
                                                                 : F.intl.formatToPlainString(F.t["cNSL/j"], {
                                                                       price: (0, tt.$g)(e.amount, e.currency),
                                                                   })),
-                                                            (0, r.jsxs)(e6.e, {
+                                                            (0, r.jsxs)(e3.e, {
                                                                 wrap: !1,
                                                                 fullWidth: !0,
                                                                 children: [
@@ -1256,11 +1256,11 @@ function t7(e) {
         }),
     });
 }
-var t6 = n(139146),
-    t3 = n(60465),
+var t3 = n(139146),
+    t6 = n(60465),
     t9 = n(976860),
-    t8 = n(975732),
-    t4 = n(50920),
+    t4 = n(975732),
+    t8 = n(50920),
     t5 = n(23161),
     ne = n(668953),
     nt = n(881636),
@@ -1316,7 +1316,7 @@ function ns(e) {
         g = A ? l.items.length : 0,
         _ = tW.useConfig({ location: "CollectiblesShopProductDetailsModal" }).showCollectionButton,
         C = (function () {
-            let e = (0, t4.a)("CollectiblesPdpNavigateToCollection"),
+            let e = (0, t8.a)("CollectiblesPdpNavigateToCollection"),
                 { sessionId: t } = (0, N.uM)() ?? {},
                 n = (0, t5.v)((e) => e.reset);
             return s.useCallback(
@@ -1327,8 +1327,8 @@ function ns(e) {
                             sku_id: i.skuId,
                             cta_name: r,
                         }),
-                        (0, t8.closeUserProfileModal)(),
-                        (0, t3.p)(),
+                        (0, t4.closeUserProfileModal)(),
+                        (0, t6.p)(),
                         e && !0 !== i.isOrbsExclusive)
                     )
                         return void (0, t9.pX)(j.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(i.skuId));
@@ -1411,7 +1411,7 @@ function ns(e) {
                 (0, r.jsxs)("div", {
                     className: nr.VG,
                     children: [
-                        (0, r.jsx)(t6.R, {
+                        (0, r.jsx)(t3.R, {
                             product: n,
                             selectedVariantIndex: a,
                             variant: "overlay-secondary",

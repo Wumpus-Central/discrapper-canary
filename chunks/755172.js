@@ -1,28 +1,28 @@
 "use strict";
-n.d(t, { y: () => h });
+n.d(t, { y: () => E });
 var i = n(64700),
     r = n(635358),
-    s = n(17928),
-    a = n(736056),
-    o = n(564064),
-    l = n(590180),
-    u = n(295811),
+    a = n(17928),
+    s = n(736056),
+    l = n(34332),
+    o = n(590180),
+    d = n(295811),
     c = n(651162),
-    d = n(652215),
+    u = n(652215),
     _ = n(758836);
-function h(e, t, n) {
-    let h = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
-        f = (0, s.bG)([a.A], () => a.A.hasLoadedExperiments),
-        p = (0, s.bG)([l.A], () => l.A.skipNumCategories),
-        [E, m, g, A, I, T, S, y] = (0, s.yK)([u.A], () => [
-            u.A.getShopBlocks(e),
-            u.A.getLastSuccessfulFetch(e) ?? 0,
-            u.A.getLastErrorTimestamp(e) ?? 0,
-            u.A.getLastFetchOptions(e),
-            u.A.getFetchShopHomeError(e),
-            u.A.getIsFetchingShopHome(e),
-            u.A.getHasKnownStaleData(e),
-            u.A.getShopHomeConfigOverride(),
+function E(e, t, n) {
+    let E = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+        A = (0, a.bG)([s.A], () => s.A.hasLoadedExperiments),
+        h = (0, a.bG)([o.A], () => o.A.skipNumCategories),
+        [I, f, p, T, m, g, S, N] = (0, a.yK)([d.A], () => [
+            d.A.getShopBlocks(e),
+            d.A.getLastSuccessfulFetch(e) ?? 0,
+            d.A.getLastErrorTimestamp(e) ?? 0,
+            d.A.getLastFetchOptions(e),
+            d.A.getFetchShopHomeError(e),
+            d.A.getIsFetchingShopHome(e),
+            d.A.getHasKnownStaleData(e),
+            d.A.getShopHomeConfigOverride(),
         ]),
         C = (0, i.useMemo)(
             () => ({
@@ -30,14 +30,14 @@ function h(e, t, n) {
                 variantsReturnStyle: r.g.VARIANTS_GROUP,
                 includeBundles: !0,
                 includeDynamicBlocks: !0,
-                shopHomeConfig: y,
-                skipNumCategories: p,
+                shopHomeConfig: N,
+                skipNumCategories: h,
             }),
-            [t, y, p],
+            [t, N, h],
         ),
-        N = (0, i.useMemo)(() => !(0, o.gn)(A, C), [A, C]),
-        v = ((e, t, n) => {
-            let [r, s] = (0, i.useState)(!1);
+        O = (0, i.useMemo)(() => !(0, l.gn)(T, C), [T, C]),
+        R = ((e, t, n) => {
+            let [r, a] = (0, i.useState)(!1);
             return (
                 (0, i.useEffect)(() => {
                     let i,
@@ -51,34 +51,34 @@ function h(e, t, n) {
                                     (null == i || (null != t && t < i)) && (i = t);
                             }),
                             i);
-                    if (t || n || null == r) return void s(!1);
-                    let a = r - Date.now();
-                    if (a <= 0) return void s(!0);
-                    s(!1);
-                    let o = setTimeout(
+                    if (t || n || null == r) return void a(!1);
+                    let s = r - Date.now();
+                    if (s <= 0) return void a(!0);
+                    a(!1);
+                    let l = setTimeout(
                         () => {
-                            s(!0);
+                            a(!0);
                         },
-                        Math.min(d.mnr, a),
+                        Math.min(u.mnr, s),
                     );
-                    return () => clearTimeout(o);
+                    return () => clearTimeout(l);
                 }, [t, n, e]),
                 r
             );
-        })(E, T ?? !1, h),
-        R = (0, i.useMemo)(() => !v && Date.now() - m < _.i0, [m, v]);
+        })(I, g ?? !1, E),
+        L = (0, i.useMemo)(() => !R && Date.now() - f < _.i0, [f, R]);
     return (
         (0, i.useEffect)(() => {
-            if (!f || T) return;
-            let t = Date.now() - g < _.Zq;
-            (null != I && t) || ((N || !R || S) && (0, o.h$)(e, C, n));
-        }, [f, T, I, g, R, S, N, C, e, n]),
+            if (!A || g) return;
+            let t = Date.now() - p < _.Zq;
+            (null != m && t) || ((O || !L || S) && (0, l.h$)(e, C, n));
+        }, [A, g, m, p, L, S, O, C, e, n]),
         {
-            isFetchingShopHome: T,
-            fetchShopHomeError: I,
-            shopBlocks: E,
+            isFetchingShopHome: g,
+            fetchShopHomeError: m,
+            shopBlocks: I,
             refreshShopHome: (0, i.useCallback)(() => {
-                (0, o.h$)(e, C, n);
+                (0, l.h$)(e, C, n);
             }, [e, C, n]),
         }
     );

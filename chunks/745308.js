@@ -5,7 +5,7 @@ var r = n(627968),
     s = n(575593),
     i = n(702841),
     c = n(67480),
-    o = n(662388),
+    o = n(34332),
     u = n(590180),
     d = n(652215),
     h = n(217109);
@@ -18,8 +18,8 @@ function m(e) {
             skuIds: f = [],
             skuBlock: g = "ShopProductCard",
             skuBlockProps: E,
-            sortPurchased: A = !1,
-            showSkeleton: v = !1,
+            sortPurchased: v = !1,
+            showSkeleton: A = !1,
             componentMap: x,
             pagedSkuIds: T,
             page: S,
@@ -47,15 +47,15 @@ function m(e) {
             n.some((e, t) => m[t]?.state === "fetching" || (null == e && m[t]?.state !== "error"))),
         { purchases: C, isFetching: L } = (0, a.b5)(),
         b = (0, l.useMemo)(() => {
-            if (!A) return T;
+            if (!v) return T;
             let e = [...f].sort((e, t) => (null != C.get(e)) - (null != C.get(t)));
             return (0, h.oP)(e, S, y, j);
-        }, [f, T, A, C, S, y, j]),
+        }, [f, T, v, C, S, y, j]),
         k = x[g],
         I = x.Skeleton;
     return null == k
         ? null
-        : (_ || (A && L)) && v
+        : (_ || (v && L)) && A
           ? b.map((e, t) =>
                 null != I
                     ? (0, r.jsx)(I, { children: (0, r.jsx)(k, { ...E, skuId: e, productId: e }) }, `${e}-${t}`)
@@ -80,16 +80,16 @@ let p = function (e) {
         {
             page: g,
             pages: E,
-            paginate: A,
-            showPagination: v,
+            paginate: v,
+            showPagination: A,
             paginationPosition: x,
             truncate: T,
             perPage: S,
             setPage: y,
         } = (0, h.Wk)(t.length, p, f),
-        j = (0, l.useMemo)(() => (0, h.oP)(t, A ? g : void 0, S, T), [t, A, g, S, T]),
-        _ = v && "top" === x,
-        C = v && "bottom" === x,
+        j = (0, l.useMemo)(() => (0, h.oP)(t, v ? g : void 0, S, T), [t, v, g, S, T]),
+        _ = A && "top" === x,
+        C = A && "bottom" === x,
         L =
             null != p
                 ? (0, r.jsx)("div", {
@@ -111,8 +111,8 @@ let p = function (e) {
                     showSkeleton: c,
                     componentMap: o,
                     pagedSkuIds: j,
-                    page: A ? g : void 0,
-                    perPage: A ? S : void 0,
+                    page: v ? g : void 0,
+                    perPage: v ? S : void 0,
                     truncate: T,
                 }),
                 C && (0, r.jsx)(h.hi, { page: g, pages: E, setPage: y }),

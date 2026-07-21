@@ -1,8 +1,8 @@
 i.d(s, { default: () => C });
 var e = i(627968),
-    n = i(64700),
-    c = i(935399),
-    a = i(554146),
+    a = i(64700),
+    n = i(935399),
+    c = i(554146),
     r = i(815021),
     l = i(297264),
     d = i(834730),
@@ -11,82 +11,82 @@ var e = i(627968),
     g = i(793574),
     h = i(826673),
     E = i(367727),
-    N = i(662388),
+    N = i(34332),
     x = i(892035),
     u = i(49999),
-    b = i(375708),
-    j = i(321513);
+    f = i(375708),
+    j = i(726209);
 function C(t) {
     let { onClose: s, ...i } = t,
         C = (0, x.z$)("CollectiblesAnnouncementModal"),
         {
-            leftTitle: f,
-            leftBody: p,
-            rightTitle: v,
-            rightBody: M,
+            leftTitle: p,
+            leftBody: v,
+            rightTitle: M,
+            rightBody: L,
         } = (function (t) {
             let { showGiftingMarketing: s, showEaPremiumMarketing: i, showEaNonPremiumMarketing: e } = t,
-                n = b.intl.string(b.t.zOtryQ),
-                c = b.intl.string(b.t.azn85l);
+                a = f.intl.string(f.t.zOtryQ),
+                n = f.intl.string(f.t.azn85l);
             return i
                 ? {
-                      leftTitle: n,
-                      leftBody: c,
-                      rightTitle: b.intl.string(b.t.oSP2mU),
-                      rightBody: b.intl.string(b.t["wEIT/w"]),
+                      leftTitle: a,
+                      leftBody: n,
+                      rightTitle: f.intl.string(f.t.oSP2mU),
+                      rightBody: f.intl.string(f.t["wEIT/w"]),
                   }
                 : e
                   ? {
-                        leftTitle: n,
-                        leftBody: c,
-                        rightTitle: b.intl.string(b.t["y/uSeV"]),
-                        rightBody: b.intl.string(b.t.in6xhQ),
+                        leftTitle: a,
+                        leftBody: n,
+                        rightTitle: f.intl.string(f.t["y/uSeV"]),
+                        rightBody: f.intl.string(f.t.in6xhQ),
                     }
                   : s
                     ? {
-                          leftTitle: n,
-                          leftBody: c,
-                          rightTitle: b.intl.string(b.t.Ky01Mq),
-                          rightBody: b.intl.string(b.t.VgVDbe),
+                          leftTitle: a,
+                          leftBody: n,
+                          rightTitle: f.intl.string(f.t.Ky01Mq),
+                          rightBody: f.intl.string(f.t.VgVDbe),
                       }
                     : {
-                          leftTitle: n,
-                          leftBody: c,
-                          rightTitle: b.intl.string(b.t["47kRjL"]),
-                          rightBody: b.intl.string(b.t.GcXi4M),
+                          leftTitle: a,
+                          leftBody: n,
+                          rightTitle: f.intl.string(f.t["47kRjL"]),
+                          rightBody: f.intl.string(f.t.GcXi4M),
                       };
         })(C),
-        L = b.intl.string(b.t.W3MtdV),
-        T = C.showEaPremiumMarketing
-            ? b.intl.string(b.t.RlBdFl)
+        T = f.intl.string(f.t.W3MtdV),
+        S = C.showEaPremiumMarketing
+            ? f.intl.string(f.t.RlBdFl)
             : C.showEaNonPremiumMarketing
-              ? b.intl.string(b.t.NZe65e)
-              : b.intl.string(b.t["v72/pr"]),
-        S = n.useRef(!1);
-    (0, c.Ay)(() => {
-        (0, E.Wx)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT);
+              ? f.intl.string(f.t.NZe65e)
+              : f.intl.string(f.t["v72/pr"]),
+        b = a.useRef(!1);
+    (0, n.Ay)(() => {
+        (0, E.Wx)(c.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT);
     }),
-        n.useEffect(
+        a.useEffect(
             () => () => {
-                S.current ||
-                    (0, h.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
+                b.current ||
+                    (0, h.Dr)(c.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
                         dismissAction: u.i.AUTO_DISMISS,
                         forceTrack: !0,
                     });
             },
             [],
         );
-    let y = n.useCallback(async () => {
-            (S.current = !0),
-                (0, h.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
+    let y = a.useCallback(async () => {
+            (b.current = !0),
+                (0, h.Dr)(c.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
                     dismissAction: u.i.USER_DISMISS,
                     forceTrack: !0,
                 }),
                 await s();
         }, [s]),
-        _ = n.useCallback(async () => {
-            (S.current = !0),
-                (0, h.Dr)(a.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
+        _ = a.useCallback(async () => {
+            (b.current = !0),
+                (0, h.Dr)(c.M.COLLECTIBLES_PROFILE_FRAMES_ANNOUNCEMENT, {
                     dismissAction: u.i.TAKE_ACTION,
                     forceTrack: !0,
                 }),
@@ -104,7 +104,7 @@ function C(t) {
                     className: j.Tp,
                     style: {
                         backgroundImage:
-                            "url(https://cdn.discordapp.com/assets/content/2b8d1bb8d5327e224dfc61673a13dd19c15d10b259957967f99e218b2fa327dc.jpg)",
+                            "url(https://cdn.discordapp.com/assets/content/1a3e6059912682527c3fdd25719dbee27c89e23c2c3aba2acc9348e951e5acad.jpg)",
                     },
                 }),
                 (0, e.jsx)("div", {
@@ -121,9 +121,9 @@ function C(t) {
                                     variant: "display-md",
                                     color: "text-strong",
                                     className: j.DD,
-                                    children: L,
+                                    children: T,
                                 }),
-                                (0, e.jsx)(d.E, { variant: "text-sm/medium", color: "text-muted", children: T }),
+                                (0, e.jsx)(d.E, { variant: "text-sm/medium", color: "text-muted", children: S }),
                             ],
                         }),
                         (0, e.jsxs)("div", {
@@ -133,7 +133,7 @@ function C(t) {
                                     className: j.Nr,
                                     children: [
                                         (0, e.jsx)("img", {
-                                            src: "https://cdn.discordapp.com/assets/content/9686f15252ecb5680ebf6ec2bbadb6b0bfc0930ce66ac6c32806a5b03b06239c.png",
+                                            src: "https://cdn.discordapp.com/assets/content/ff11bf0b8a3268f05729829ced60caef13c95f175a53980f543212059e5af3f7.png",
                                             alt: "",
                                             className: j.wP,
                                         }),
@@ -143,12 +143,12 @@ function C(t) {
                                                 (0, e.jsx)(l.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
-                                                    children: f,
+                                                    children: p,
                                                 }),
                                                 (0, e.jsx)(d.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
-                                                    children: p,
+                                                    children: v,
                                                 }),
                                             ],
                                         }),
@@ -168,12 +168,12 @@ function C(t) {
                                                 (0, e.jsx)(l.D, {
                                                     variant: "heading-md/bold",
                                                     color: "text-strong",
-                                                    children: v,
+                                                    children: M,
                                                 }),
                                                 (0, e.jsx)(d.E, {
                                                     variant: "text-sm/medium",
                                                     color: "text-muted",
-                                                    children: M,
+                                                    children: L,
                                                 }),
                                             ],
                                         }),
@@ -185,7 +185,7 @@ function C(t) {
                             className: j.UD,
                             children: (0, e.jsx)(o.$, {
                                 variant: "primary",
-                                text: b.intl.string(b.t.c7U9yf),
+                                text: f.intl.string(f.t.c7U9yf),
                                 onClick: _,
                                 fullWidth: !0,
                             }),

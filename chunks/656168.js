@@ -11,8 +11,8 @@ var A,
     C,
     d,
     D = E(214958),
-    p = E.n(D);
-function P() {
+    g = E.n(D);
+function p() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -24,7 +24,7 @@ function P() {
         null != e.VencordNative
     );
 }
-function g() {
+function P() {
     return (
         ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
@@ -47,7 +47,7 @@ if (null != U) {
         r = U.os.arch,
         _ = U.os.appArch,
         o = U.app.getReleaseChannel(),
-        I = g();
+        I = P();
     switch (E) {
         case "win32":
             e = "Windows";
@@ -71,11 +71,11 @@ if (null != U) {
             os_arch: r,
             app_arch: _,
             system_locale: I,
-            has_client_mods: P(),
+            has_client_mods: p(),
             client_launch_id: M,
         }),
-        p().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = p().ua || ""), (i.browser_version = p().version || "")),
+        g().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = g().ua || ""), (i.browser_version = g().version || "")),
         "linux" === E)
     ) {
         let e = U.crashReporter.getMetadata();
@@ -183,8 +183,8 @@ if (null == i)
                         if (/iPad/.test(e)) return "iPad";
                         else return "";
                     })()),
-                    (t.system_locale = g()),
-                    (t.has_client_mods = P()),
+                    (t.system_locale = P()),
+                    (t.has_client_mods = p()),
                     (e = t),
                     n.set(f, e);
             }
@@ -199,8 +199,8 @@ if (null == i)
             return {
                 ...e,
                 ...{
-                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: p().version || "" },
-                    os_version: p()?.os?.version ?? "",
+                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: g().version || "" },
+                    os_version: g()?.os?.version ?? "",
                 },
                 ...t,
                 ...E,
@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("574859", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("581854", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -221,7 +221,7 @@ if (null == i)
         } catch (e) {}
         return null;
     })()),
-    (I.has_client_mods = P()),
+    (I.has_client_mods = p()),
     (I.client_launch_id = M),
     (function (e) {
         try {
@@ -682,7 +682,7 @@ var er =
         (S[(S.UPDATE_TIME_SPENT_SESSION_ID = 41)] = "UPDATE_TIME_SPENT_SESSION_ID"),
         (S[(S.REQUEST_CHANNEL_INFO = 43)] = "REQUEST_CHANNEL_INFO"),
         S),
-    ei = E(418781),
+    ei = E(377941),
     e_ = E.n(ei),
     eo =
         (((T = {}).ALL = "ALL"),
@@ -717,6 +717,7 @@ var er =
         (c.LAYOUT = "layout"),
         (c.COLLECTION_INDEX = "collection-index"),
         (c.GAME_SHOPS = "game-shops"),
+        (c.GAME_SERVERS = "game-servers"),
         c);
 Object.values({
     ORB_PROFILE_BADGE: "1342211853484429445",

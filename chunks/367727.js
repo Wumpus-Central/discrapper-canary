@@ -1,32 +1,33 @@
 "use strict";
 n.d(t, {
-    $l: () => W,
+    $l: () => Y,
     D4: () => x,
     D8: () => G,
     En: () => b,
     FZ: () => M,
-    G4: () => y,
-    J8: () => j,
-    R2: () => O,
-    Sx: () => H,
+    G4: () => D,
+    J8: () => W,
+    R2: () => R,
+    Sx: () => j,
     Tg: () => g,
     Uu: () => C,
     Vh: () => F,
-    Wx: () => $,
+    Wx: () => z,
     X0: () => B,
     YV: () => V,
     bQ: () => S,
     cN: () => w,
+    d6: () => H,
     fb: () => v,
     gG: () => L,
     iC: () => U,
     j6: () => P,
-    qr: () => Y,
-    rZ: () => D,
+    qr: () => K,
+    rZ: () => y,
     rw: () => m,
     ss: () => N,
-    uh: () => K,
-    wH: () => R,
+    uh: () => $,
+    wH: () => O,
 });
 var i = n(17928),
     r = n(554146),
@@ -79,7 +80,7 @@ function C(e, t, n) {
         numTimesDismissed: n,
     });
 }
-function R(e, t, n) {
+function O(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !0,
         lastDismissedVersion: 0,
@@ -88,7 +89,7 @@ function R(e, t, n) {
         numTimesDismissed: n,
     });
 }
-function O(e, t, n) {
+function R(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !1,
         lastDismissedVersion: 0,
@@ -106,7 +107,7 @@ function L(e, t, n) {
         numTimesDismissed: n,
     });
 }
-function D(e, t, n) {
+function y(e, t, n) {
     return (0, s.xs)(e, t, {
         dismissed: !1,
         lastDismissedVersion: 0,
@@ -115,7 +116,7 @@ function D(e, t, n) {
         numTimesDismissed: n,
     });
 }
-function y(e, t, n, i) {
+function D(e, t, n, i) {
     return (0, s.xs)(e, n, {
         dismissed: !1,
         lastDismissedVersion: 0,
@@ -196,7 +197,7 @@ function F(e, t, n, i) {
             content: e,
             groupName: t?.groupName,
             onAdded: () => {
-                (0, _.rF)(e, t?.guildId), $(e, t), t?.onShown?.();
+                (0, _.rF)(e, t?.guildId), z(e, t), t?.onShown?.();
             },
         }));
 }
@@ -207,7 +208,7 @@ function V(e, t) {
                 i = E.A.getRenderedAtTimestamp(e),
                 a = new Date(),
                 s = null == i ? null : a.getTime() - i,
-                l = t?.guildId != null ? H(e, t.guildId) : j(e, t ?? {});
+                l = t?.guildId != null ? j(e, t.guildId) : W(e, t ?? {});
             o.default.track(T.HAw.DISMISSIBLE_CONTENT_DISMISSED, {
                 type: r.M[e],
                 action: t?.dismissAction ?? p.i.UNKNOWN,
@@ -227,28 +228,32 @@ function B(e, t) {
     let n = !E.A.hasUserHitDCCap();
     (0, A.pd)({ content: e, groupName: t?.groupName }, n);
 }
-function H(e, t) {
+async function H(e, t) {
+    let n = (0, f.c)(e);
+    await Y(e, n, t);
+}
+function j(e, t) {
     let n = l.A.getGuildDismissedContentState(t)?.[e];
     return (n?.numTimesDismissed ?? 0) + 1;
 }
-function j(e, t) {
+function W(e, t) {
     if (null != t.numTimesDismissed) return t.numTimesDismissed;
     let n = l.A.settings.userContent?.recurringDismissibleContentStates[e];
     return (n?.numTimesDismissed ?? 0) + 1;
 }
-async function W(e, t, n) {
-    let i = j(e, n);
+async function Y(e, t, n) {
+    let i = W(e, n);
     V(e, n), await S(e, t, i), B(e, n);
 }
-async function Y(e, t, n) {
-    let i = j(e, n);
+async function K(e, t, n) {
+    let i = W(e, n);
     V(e, { ...n, snowflakeId: t }), await C(e, t, i), B(e, n);
 }
-async function K(e, t) {
-    let n = j(e, t);
+async function $(e, t) {
+    let n = W(e, t);
     V(e, t), await N(e, n), B(e, t);
 }
-function $(e, t) {
+function z(e, t) {
     let [n, i] = (0, A.oF)();
     o.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN, {
         type: r.M[e],

@@ -107,7 +107,7 @@ function M(e) {
     return (0, i.jsx)(D.A, { title: r, body: s, badgeImage: a, badgeName: r, children: t });
 }
 var P = n(470739),
-    U = n(662388),
+    U = n(34332),
     w = n(459192);
 function G(e) {
     let { targetElementRef: t, delay: n, forceOpen: r, badgeDescription: a, children: s } = e;
@@ -210,13 +210,13 @@ let Y = function (e) {
 };
 var K = n(297264),
     $ = n(834730),
-    z = n(775549);
+    z = n(214981);
 let q = function (e) {
     let { assetComponent: t, tooltipWordmarkComponent: n, children: r } = e;
     return (0, i.jsxs)("div", { className: z.R, children: [t, (0, i.jsx)("div", { className: z.A, children: n }), r] });
 };
 var Z = n(224016),
-    X = n(852443);
+    X = n(632707);
 let Q = function (e) {
     let { profileBadge: t, tenureBadge: n } = e,
         r = (0, F.I)(n.id).standard;
@@ -242,7 +242,7 @@ var J = n(30084),
     er = n(312640),
     ea = n(798618),
     es = n(752079),
-    el = n(414690);
+    el = n(641066);
 function eo(e) {
     let { children: t, targetElementRef: n, delay: a, showSubtext: s, forceOpen: l } = e,
         [o, d] = r.useState(!1),
@@ -311,7 +311,7 @@ var ec = n(174459),
     eI = n(652215),
     ef = n(758836);
 let ep = "premium";
-var eT = n(992028);
+var eT = n(892724);
 function em(e) {
     let {
             badges: t,

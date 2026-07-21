@@ -11,7 +11,7 @@ var i = n(192308),
     u = n(793574),
     _ = n(115718),
     E = n(329308),
-    A = n(662388),
+    A = n(34332),
     h = n(790271),
     I = n(60465),
     f = n(409626),
@@ -22,8 +22,8 @@ var i = n(192308),
     S = n(95701),
     N = n(734057),
     C = n(189081),
-    R = n(309010),
-    O = n(967198),
+    O = n(309010),
+    R = n(967198),
     L = n(174459),
     y = n(988102),
     D = n(363738),
@@ -52,8 +52,8 @@ function F(e) {
 }
 function V(e, t) {
     let { results: n, queryMode: i, query: r, maxQueryLength: a } = v.A.getProps(),
-        s = O.A.getGuildId(),
-        l = R.Ay.getChannelId(s),
+        s = R.A.getGuildId(),
+        l = O.Ay.getChannelId(s),
         o = n[(0, _.Vv)(_.vB.DOWN, -1, n)],
         d = y.A.isEmail(r),
         c = y.A.isPhoneNumber(r),
@@ -115,8 +115,8 @@ function H() {
     !(function (e) {
         let t;
         if (v.A.isOpen()) return;
-        let n = O.A.getGuildId(),
-            i = R.Ay.getChannelId(n);
+        let n = R.A.getGuildId(),
+            i = O.Ay.getChannelId(n);
         if (null != i) {
             let e = N.A.getChannel(i);
             t = null != e ? e.type : null;
@@ -143,41 +143,41 @@ function K(e) {
     let t,
         o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     B(), (0, i.closeAllModals)(), V(b.HAw.QUICKSWITCHER_RESULT_SELECTED, e);
-    let { type: S, record: R } = e,
-        O = { page: b.liQ.QUICK_SWITCHER };
+    let { type: S, record: O } = e,
+        R = { page: b.liQ.QUICK_SWITCHER };
     switch (S) {
         case _.rD.GUILD:
-            (0, m.u)(R.id, { navigationReplace: !0 });
+            (0, m.u)(O.id, { navigationReplace: !0 });
             break;
         case _.rD.TEXT_CHANNEL:
-            null != (t = N.A.getChannel(R.id)) &&
-                (0, T.iN)(t.id, { state: { analyticsSource: O }, navigationReplace: !0 });
+            null != (t = N.A.getChannel(O.id)) &&
+                (0, T.iN)(t.id, { state: { analyticsSource: R }, navigationReplace: !0 });
             break;
         case _.rD.VOICE_CHANNEL:
-            null != (t = N.A.getChannel(R.id)) &&
-                (o ? s.A.updateChatOpen(R.id, !0) : c.default.selectVoiceChannel(R.id),
-                (0, T.iN)(t.id, { state: { analyticsSource: O }, navigationReplace: !0 }));
+            null != (t = N.A.getChannel(O.id)) &&
+                (o ? s.A.updateChatOpen(O.id, !0) : c.default.selectVoiceChannel(O.id),
+                (0, T.iN)(t.id, { state: { analyticsSource: R }, navigationReplace: !0 }));
             break;
         case _.rD.USER:
-            a.A.openPrivateChannel({ recipientIds: [R.id], location: "Quickswitcher" }),
-                l.A.channelListScrollTo(b.ME, N.A.getDMFromUserId(R.id));
+            a.A.openPrivateChannel({ recipientIds: [O.id], location: "Quickswitcher" }),
+                l.A.channelListScrollTo(b.ME, N.A.getDMFromUserId(O.id));
             break;
         case _.rD.GROUP_DM:
-            (0, T.iN)(R.id, { navigationReplace: !0 }), l.A.channelListScrollTo(b.ME, R.id);
+            (0, T.iN)(O.id, { navigationReplace: !0 }), l.A.channelListScrollTo(b.ME, O.id);
             break;
         case _.rD.APPLICATION:
-            let L = C.A.getActiveLibraryApplication(R.id);
-            U(R.id, L, { analyticsParams: { source: b.ThZ.QUICK_SWITCHER, location: b.ThZ.QUICK_SWITCHER } });
+            let L = C.A.getActiveLibraryApplication(O.id);
+            U(O.id, L, { analyticsParams: { source: b.ThZ.QUICK_SWITCHER, location: b.ThZ.QUICK_SWITCHER } });
             break;
         case _.rD.GAME_PROFILE:
             I.default.openGameProfileModal({
-                gameId: R.id,
-                gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: R.id },
+                gameId: O.id,
+                gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: O.id },
                 source: f.GameProfileSources.QuickSwitcher,
             });
             break;
         case _.rD.LINK:
-            null != R.inviteCode ? $(R.inviteCode) : (0, p.A)(R.path, { navigationReplace: !0 });
+            null != O.inviteCode ? $(O.inviteCode) : (0, p.A)(O.path, { navigationReplace: !0 });
             break;
         case _.rD.IN_APP_NAVIGATION:
             if (e.record.type === E.t1.SETTINGS) {
@@ -198,7 +198,7 @@ function K(e) {
                           analyticsLocations: [u.A.QUICK_SWITCHER],
                           analyticsSource: u.A.QUICK_SWITCHER,
                       })
-                    : (0, p.A)(R.path, { navigationReplace: !0 });
+                    : (0, p.A)(O.path, { navigationReplace: !0 });
     }
     r.h.dispatch({ type: "QUICKSWITCHER_SWITCH_TO", result: e });
 }

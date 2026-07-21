@@ -1,44 +1,44 @@
 "use strict";
-n.d(t, { A: () => d });
+n.d(t, { A: () => u });
 var i = n(354328),
     r = n(64700),
-    s = n(635358),
-    a = n(17928),
-    o = n(736056),
-    l = n(662388),
-    u = n(590180),
+    a = n(635358),
+    s = n(17928),
+    l = n(736056),
+    o = n(34332),
+    d = n(590180),
     c = n(758836);
-function d(e, t) {
+function u(e, t) {
     let n = e?.paymentGateway;
     return (function (e, t, n) {
-        let i = (0, a.bG)([o.A], () => o.A.hasLoadedExperiments),
-            [d, _, h, f, p, E, m] = (0, a.yK)([u.A], () => [
-                u.A.isFetchingCategories,
-                u.A.lastFetchOptions,
-                u.A.error,
-                u.A.lastErrorTimestamp ?? 0,
-                u.A.lastSuccessfulFetch ?? 0,
-                u.A.categories,
-                u.A.skipNumCategories,
+        let i = (0, s.bG)([l.A], () => l.A.hasLoadedExperiments),
+            [u, _, E, A, h, I, f] = (0, s.yK)([d.A], () => [
+                d.A.isFetchingCategories,
+                d.A.lastFetchOptions,
+                d.A.error,
+                d.A.lastErrorTimestamp ?? 0,
+                d.A.lastSuccessfulFetch ?? 0,
+                d.A.categories,
+                d.A.skipNumCategories,
             ]);
         return (
             (0, r.useEffect)(() => {
-                if (!i || u.A.isFetchingCategories) return;
-                let r = Date.now() - f < c.Zq;
-                if (h && r) return;
-                let a = { ...e, variantsReturnStyle: s.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: m },
-                    o = !(0, l.gn)(_, a),
-                    d = Date.now() - p < c.i0;
-                (o || !d) && (0, l.CK)(a, t, n);
-            }, [i, _, p, e, h, f, t, n, m]),
+                if (!i || d.A.isFetchingCategories) return;
+                let r = Date.now() - A < c.Zq;
+                if (E && r) return;
+                let s = { ...e, variantsReturnStyle: a.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: f },
+                    l = !(0, o.gn)(_, s),
+                    u = Date.now() - h < c.i0;
+                (l || !u) && (0, o.CK)(s, t, n);
+            }, [i, _, h, e, E, A, t, n, f]),
             {
-                isFetching: d,
-                categories: E,
-                fetchCategoriesError: h,
+                isFetching: u,
+                categories: I,
+                fetchCategoriesError: E,
                 refreshCategories: (0, r.useCallback)(() => {
-                    let t = { ...e, variantsReturnStyle: s.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: m };
-                    (0, l.CK)(t, void 0, n);
-                }, [e, n, m]),
+                    let t = { ...e, variantsReturnStyle: a.g.VARIANTS_GROUP, includeBundles: !0, skipNumCategories: f };
+                    (0, o.CK)(t, void 0, n);
+                }, [e, n, f]),
             }
         );
     })(

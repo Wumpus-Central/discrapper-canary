@@ -3,8 +3,8 @@ var s,
     r = i(627968),
     n = i(64700),
     a = i(17928),
-    l = i(821609),
-    u = i(935462),
+    l = i(935462),
+    u = i(821609),
     o = i(297264),
     c = i(289873),
     d = i(793574),
@@ -17,7 +17,7 @@ var s,
     x = i(287809),
     I = i(174459),
     j = i(428262),
-    S = i(662388),
+    S = i(34332),
     k = i(993408),
     C = i(821701),
     f = i(841702),
@@ -29,7 +29,7 @@ var s,
     b = i(448429),
     T = i(162232),
     O = i(375708),
-    R = i(304452);
+    R = i(290748);
 let w = [
         { avatarSize: E._3.SIZE_40, showStatus: !1 },
         { avatarSize: E._3.SIZE_32, showStatus: !1 },
@@ -136,7 +136,7 @@ let F = { skuId: "None" },
         }, [t, i, e]);
     };
 var Y = i(963977),
-    Q = i(510245);
+    Q = i(723629);
 let ee = () => 80;
 function et(e) {
     let { children: t, className: i, onSelect: s, isSelected: n, ...a } = e;
@@ -283,7 +283,7 @@ let es = function (e) {
 };
 var er = i(652215),
     en = i(202541),
-    ea = i(556826);
+    ea = i(158642);
 function el(e) {
     let {
             user: t,
@@ -337,16 +337,16 @@ function el(e) {
         );
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            (0, r.jsxs)(u.rQ, {
+            (0, r.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: ea.Hc,
                 children: [
                     (0, r.jsx)(o.D, { variant: "heading-lg/semibold", children: O.intl.string(O.t.HykynS) }),
-                    (0, r.jsx)(u.s_, { "data-migration-pending": !0, className: ea.iT, onClick: m }),
+                    (0, r.jsx)(l.s_, { "data-migration-pending": !0, className: ea.iT, onClick: m }),
                 ],
             }),
-            (0, r.jsxs)(u.$m, {
+            (0, r.jsxs)(l.$m, {
                 "data-migration-pending": !0,
                 className: ea.jE,
                 scrollbarType: "none",
@@ -370,12 +370,12 @@ function el(e) {
                     }),
                 ],
             }),
-            (0, r.jsxs)(u.jl, {
+            (0, r.jsxs)(l.jl, {
                 "data-migration-pending": !0,
                 className: ea.Hx,
                 children: [
                     (null != w && (z || !M)) || null === D
-                        ? (0, r.jsx)(l.$, {
+                        ? (0, r.jsx)(u.$, {
                               variant: "primary",
                               text: O.intl.string(O.t.Jh8fJz),
                               onClick: function () {
@@ -384,7 +384,7 @@ function el(e) {
                               disabled: G,
                           })
                         : null == w && (z || !M)
-                          ? (0, r.jsx)(l.$, {
+                          ? (0, r.jsx)(u.$, {
                                 variant: "primary",
                                 onClick: () => V(R?.skuId),
                                 text: O.intl.string(O.t.fYfGgK),
@@ -402,7 +402,7 @@ function el(e) {
                             }),
                     !z && M
                         ? (0, r.jsx)(h.A, { itemType: w?.type ?? R?.type, onClose: m })
-                        : (0, r.jsx)(l.$, { variant: "secondary", text: O.intl.string(O.t["ETE/oC"]), onClick: m }),
+                        : (0, r.jsx)(u.$, { variant: "secondary", text: O.intl.string(O.t["ETE/oC"]), onClick: m }),
                 ],
             }),
         ],
@@ -413,7 +413,7 @@ function eu(e) {
             transitionState: t,
             analyticsLocations: i,
             onClose: s,
-            onCloseModal: l,
+            onCloseModal: u,
             initialSelectedDecoration: o,
             guild: h,
             returnRef: p,
@@ -430,10 +430,10 @@ function eu(e) {
             ? null
             : (0, r.jsx)(m.f5, {
                   value: A,
-                  children: (0, r.jsx)(u.EO, {
+                  children: (0, r.jsx)(l.EO, {
                       transitionState: t,
                       className: ea.yl,
-                      size: C ? u.rI.DYNAMIC : u.rI.MEDIUM,
+                      size: C ? l.rI.DYNAMIC : l.rI.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       returnRef: p,
                       "data-migration-pending": !0,
@@ -447,7 +447,7 @@ function eu(e) {
                                 analyticsLocations: A,
                                 initialSelectedDecoration: o,
                                 onClose: function () {
-                                    l(), s?.();
+                                    u(), s?.();
                                 },
                             }),
                   }),

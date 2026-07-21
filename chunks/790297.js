@@ -1,4 +1,4 @@
-n.d(t, { N0: () => m, lC: () => E, uS: () => _ });
+n.d(t, { N0: () => A, lC: () => E, uS: () => _ });
 var s = n(64700),
     l = n(17928),
     r = n(793574),
@@ -8,7 +8,7 @@ var s = n(64700),
     u = n(870216),
     c = n(758836),
     d = n(652215),
-    g = n(788868);
+    g = n(202541);
 function E(e) {
     let { analyticsSource: t, analyticsLocations: n } = (0, l.cf)([u.A], () => u.A.getAnalytics()),
         s = (function (e) {
@@ -34,6 +34,8 @@ function E(e) {
                     return r.A.COLLECTIBLES_SHOP;
                 case c.G2.GAME_SHOPS:
                     return r.A.SLAYER_STOREFRONT_SHOP_TAB;
+                case c.G2.GAME_SERVERS:
+                    return r.A.COLLECTIBLES_SHOP_GAME_SERVERS_TAB;
             }
         })(e),
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...n, r.A.COLLECTIBLES_SHOP, s]);
@@ -53,7 +55,7 @@ function _(e, t, n, l, r) {
         });
     }, [a, e, t, n, u, l, r, o, g]);
 }
-function m(e, t) {
+function A(e, t) {
     let { analyticsLocations: n } = E(e);
     s.useEffect(() => {
         null == t ||

@@ -4,7 +4,7 @@ var n = i(627968),
     s = i(192308),
     o = i(772707),
     e = i(793574),
-    l = i(564064),
+    l = i(34332),
     r = i(408166),
     d = i(976860),
     p = i(830543),
@@ -32,7 +32,7 @@ function k(t) {
         onClose: i,
         transitionState: a,
         actions: [
-            { text: f.intl.string(f.t.CvXwDY), variant: "secondary", onClick: C },
+            { text: f.intl.string(f.t.AnlV9W), variant: "secondary", onClick: C },
             { text: f.intl.string(f.t.OhOWfI), variant: "primary", onClick: h },
         ],
     });

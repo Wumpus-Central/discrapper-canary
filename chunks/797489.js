@@ -712,8 +712,8 @@ function e8(e) {
           });
 }
 var e2 = n(998445),
-    e6 = n(274997),
-    e4 = n(80500),
+    e4 = n(274997),
+    e6 = n(80500),
     e3 = n(319745),
     e5 = n(488225),
     e7 = n(967492),
@@ -739,14 +739,14 @@ function ti(e) {
                     };
                 case U.V.TWITTER:
                     return {
-                        icon: (0, i.jsx)(e6.p, { ...t }),
+                        icon: (0, i.jsx)(e4.p, { ...t }),
                         action: O.GameProfileTrackActionActions.XLink,
                         title: eh.intl.string(eh.t.INic4y),
                     };
                 case U.V.YOUTUBE:
                     return {
                         action: O.GameProfileTrackActionActions.YouTubeLink,
-                        icon: (0, i.jsx)(e4.C, { ...t }),
+                        icon: (0, i.jsx)(e6.C, { ...t }),
                         title: eh.intl.string(eh.t.lNmxbE),
                     };
                 case U.V.FACEBOOK:
@@ -1443,21 +1443,21 @@ function t2(e) {
         ],
     });
 }
-var t6 = n(708072);
-function t4(e) {
+var t4 = n(708072);
+function t6(e) {
     let { game: t, show: n, trackAction: l } = e,
         a = t.name,
         r = t.getIconURL(80);
     return (0, i.jsxs)("div", {
-        className: t6.y5,
+        className: t4.y5,
         children: [
-            (0, i.jsx)("div", { className: s()(t6.nI, n && t6.hD) }),
+            (0, i.jsx)("div", { className: s()(t4.nI, n && t4.hD) }),
             (0, i.jsxs)("div", {
-                className: s()(t6.A1, n && t6.g8),
+                className: s()(t4.A1, n && t4.g8),
                 children: [
-                    null != r && (0, i.jsx)("img", { src: r, alt: "", className: t6.V$, draggable: !1 }),
+                    null != r && (0, i.jsx)("img", { src: r, alt: "", className: t4.V$, draggable: !1 }),
                     (0, i.jsxs)("div", {
-                        className: t6.hm,
+                        className: t4.hm,
                         children: [
                             (0, i.jsx)(en.D, { variant: "heading-md/semibold", lineClamp: 1, children: a }),
                             null != t.l30Rank && (0, i.jsx)(t9, { rank: t.l30Rank }),
@@ -1465,13 +1465,13 @@ function t4(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(t2, { game: t, className: t6.HK, trackAction: l }),
+            (0, i.jsx)(t2, { game: t, className: t4.HK, trackAction: l }),
         ],
     });
 }
 function t3(e) {
     let { show: t } = e;
-    return (0, i.jsx)("div", { className: s()(t6.nI, t6.Jn, t && t6.hD) });
+    return (0, i.jsx)("div", { className: s()(t4.nI, t4.Jn, t && t4.hD) });
 }
 let t5 = a.forwardRef(function (e, t) {
     let { game: n } = e,
@@ -1490,8 +1490,8 @@ let t5 = a.forwardRef(function (e, t) {
         : (0, i.jsxs)("div", {
               ref: t,
               children: [
-                  (0, i.jsx)("div", { className: t6.y1, style: { backgroundImage: `url("${r}")` } }),
-                  (0, i.jsx)("div", { className: t6.N4 }),
+                  (0, i.jsx)("div", { className: t4.y1, style: { backgroundImage: `url("${r}")` } }),
+                  (0, i.jsx)("div", { className: t4.N4 }),
               ],
           });
 });
@@ -1503,7 +1503,7 @@ function t7(e) {
 function t9(e) {
     let { rank: t } = e;
     return (0, i.jsxs)("div", {
-        className: t6.Qc,
+        className: t4.Qc,
         children: [
             (0, i.jsx)(tv.O, { size: "xxs", color: "currentColor", "aria-hidden": "true" }),
             (0, i.jsx)(et.E, {
@@ -1517,8 +1517,8 @@ function t9(e) {
 function ne(e) {
     let { game: t, isTwoColumn: n } = e;
     return (0, i.jsx)("div", {
-        className: n ? t6.n8 : t6.FS,
-        children: (0, i.jsx)(tE.A, { game: t, className: t6.xe, size: tE.w.LARGE }),
+        className: n ? t4.n8 : t4.FS,
+        children: (0, i.jsx)(tE.A, { game: t, className: t4.xe, size: tE.w.LARGE }),
     });
 }
 let nt = function (e) {
@@ -1541,16 +1541,16 @@ let nt = function (e) {
     let u = t.name;
     return (0, i.jsxs)("div", {
         ref: c,
-        className: s()(t6.ap, l && t6.Gh),
+        className: s()(t4.ap, l && t4.Gh),
         children: [
             r &&
                 null != t &&
                 (0, i.jsx)("div", {
-                    className: t6.Tf,
-                    children: (0, i.jsx)(tE.A, { game: t, className: t6.w$, size: tE.w.LARGE }),
+                    className: t4.Tf,
+                    children: (0, i.jsx)(tE.A, { game: t, className: t4.w$, size: tE.w.LARGE }),
                 }),
             (0, i.jsxs)("div", {
-                className: t6.lu,
+                className: t4.lu,
                 children: [
                     null != t.l30Rank && (0, i.jsx)(t9, { rank: t.l30Rank }),
                     (0, i.jsx)(en.D, { ref: o, variant: "heading-xxl/semibold", children: u }),
@@ -2202,7 +2202,7 @@ let ny = function (e) {
           })
         : null;
 };
-var nL = n(662388),
+var nL = n(34332),
     nG = n(674658),
     nP = n(722258),
     nO = n(828614),
@@ -2402,7 +2402,7 @@ function n2(e) {
               ),
           });
 }
-function n6(e) {
+function n4(e) {
     let { trackAction: t } = e,
         { socialLayerStorefrontRecommendationsData: n, closeModal: l } = q(),
         { analyticsLocations: r } = (0, N.Ay)([I.A.GAME_PROFILE]),
@@ -2439,7 +2439,7 @@ function n6(e) {
     });
 }
 n(667532);
-var n4 = n(853022);
+var n6 = n(853022);
 let n3 = new Set(["1402418703554842694", "356877880938070016"]),
     n5 = [U.V.EPICGAMES, U.V.STEAM, U.V.ROBLOX, U.V.BATTLENET, U.V.RIOT, U.V.MINECRAFT];
 var n7 = n(349361),
@@ -2523,7 +2523,7 @@ function lr(e) {
             (n = (function (e) {
                 if (null == e) return null;
                 let t = e.thirdPartySkus.find((e) => e.distributor === eb.d3x.XBOX_GAME_PASS && !(0, eJ.uJ)(e.id));
-                return t?.id == null ? null : (0, n4.jA)(t.id);
+                return t?.id == null ? null : (0, n6.jA)(t.id);
             })(e)),
             (l = e?.id),
             (i = e?.websites),
@@ -2641,7 +2641,7 @@ function ld(e) {
                 children: [(0, i.jsx)(nf, { game: t, trackAction: n }), (0, i.jsx)(lu, { game: t, trackAction: n })],
             }),
             (0, i.jsx)(eX, { gameId: t.id, trackAction: n }),
-            (0, i.jsx)(n6, { trackAction: n }),
+            (0, i.jsx)(n4, { trackAction: n }),
             (0, i.jsx)(nY, { game: t, trackAction: n }),
             (0, i.jsx)(nQ, { gameId: t.id, trackAction: n }),
         ],
@@ -2670,7 +2670,7 @@ function lm(e) {
             (0, i.jsx)(na, { analyticsLocations: l, trackAction: n }),
             (0, i.jsx)(tj, { trackAction: n }),
             (0, i.jsx)(eX, { gameId: t.id, trackAction: n }),
-            (0, i.jsx)(n6, { trackAction: n }),
+            (0, i.jsx)(n4, { trackAction: n }),
             (0, i.jsx)(nY, { game: t, trackAction: n }),
             (0, i.jsx)(nQ, { gameId: t.id, trackAction: n }),
             a && (0, i.jsx)(ny, { game: t, trackAction: n }),
@@ -2899,7 +2899,7 @@ let lf = function (e) {
                               onClose: em,
                               children: [
                                   (0, i.jsx)(t5, { game: F, ref: ev }),
-                                  (0, i.jsx)(t4, { game: F, show: ef, trackAction: ec }),
+                                  (0, i.jsx)(t6, { game: F, show: ef, trackAction: ec }),
                                   (0, i.jsx)(t3, { show: ef }),
                                   (0, i.jsxs)(A.Ch, {
                                       ref: ex,

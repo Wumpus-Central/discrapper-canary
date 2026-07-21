@@ -2,21 +2,21 @@
 n.d(t, { q: () => c });
 var i = n(64700),
     r = n(575593),
-    s = n(702841),
-    a = n(67480),
-    o = n(662388),
-    l = n(590180),
-    u = n(652215);
+    a = n(702841),
+    s = n(67480),
+    l = n(34332),
+    o = n(590180),
+    d = n(652215);
 function c(e, t) {
-    let n = (0, s.bG)([a.A], () => (null != e ? a.A.get(e) : null)),
-        c = null != n && n.productLine !== u.EZt.COLLECTIBLES,
-        [d, _] = (0, s.yK)([l.A], () => [l.A.getProduct(e), l.A.getProductFetch(e)]),
-        h = (0, s.bG)([l.A], () => l.A.isProductFetchBackedOff(e)),
-        f = !0 === t && d?.type === r.R.BUNDLE && 0 === d.items.length;
+    let n = (0, a.bG)([s.A], () => (null != e ? s.A.get(e) : null)),
+        c = null != n && n.productLine !== d.EZt.COLLECTIBLES,
+        [u, _] = (0, a.yK)([o.A], () => [o.A.getProduct(e), o.A.getProductFetch(e)]),
+        E = (0, a.bG)([o.A], () => o.A.isProductFetchBackedOff(e)),
+        A = !0 === t && u?.type === r.R.BUNDLE && 0 === u.items.length;
     return (
         (0, i.useEffect)(() => {
-            null == e || (null != d && !f) || c || _?.state === "fetching" || h || (0, o.Jp)(e, { includeBundles: t });
-        }, [e, d, c, _, t, f, h]),
-        { product: d, isFetching: _?.state === "fetching" }
+            null == e || (null != u && !A) || c || _?.state === "fetching" || E || (0, l.Jp)(e, { includeBundles: t });
+        }, [e, u, c, _, t, A, E]),
+        { product: u, isFetching: _?.state === "fetching" }
     );
 }

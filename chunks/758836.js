@@ -12,13 +12,13 @@ n.d(t, {
     Tq: () => _,
     Zq: () => A,
     _6: () => U,
-    ck: () => R,
+    ck: () => O,
     cw: () => N,
     dF: () => S,
-    gs: () => y,
+    gs: () => D,
     i0: () => E,
-    l5: () => D,
-    md: () => O,
+    l5: () => y,
+    md: () => R,
     pQ: () => P,
     rr: () => f,
     sH: () => x,
@@ -63,6 +63,7 @@ var m =
     (a.LAYOUT = "layout"),
     (a.COLLECTION_INDEX = "collection-index"),
     (a.GAME_SHOPS = "game-shops"),
+    (a.GAME_SERVERS = "game-servers"),
     a);
 let g = ["avatar-decorations", "profile-effects", "nameplates", "profile-frames", "bundles"];
 function S(e) {
@@ -72,7 +73,7 @@ function N(e) {
     return null != e && "home" !== e && "catalog" !== e && "game-shops" !== e;
 }
 let C = 800,
-    R = [
+    O = [
         "1212569433839636530",
         "1144308439720394944",
         "1314020996201713685",
@@ -408,10 +409,10 @@ let C = 800,
         "1285465421167988758",
         "1277733174797008931",
     ],
-    O = 12,
+    R = 12,
     L = 60,
-    D = 5;
-var y =
+    y = 5;
+var D =
     (((s = {})[(s.FIAT = 0)] = "FIAT"),
     (s[(s.ORB = 1)] = "ORB"),
     (s[(s.PREMIUM_PURCHASE = 2)] = "PREMIUM_PURCHASE"),

@@ -3,8 +3,8 @@ var i,
     l = s(627968),
     n = s(64700),
     r = s(17928),
-    a = s(821609),
-    c = s(935462),
+    a = s(935462),
+    c = s(821609),
     u = s(297264),
     d = s(289873),
     o = s(793574),
@@ -17,7 +17,7 @@ var i,
     A = s(287809),
     C = s(174459),
     I = s(428262),
-    k = s(662388),
+    k = s(34332),
     v = s(993408),
     y = s(821701),
     N = s(841702),
@@ -26,7 +26,7 @@ var i,
     _ = s(130147),
     b = s(344346),
     w = s(375708),
-    P = s(383171);
+    P = s(795419);
 let S = function (e) {
     let { user: t, guildId: s, nameplate: i } = e,
         n = (0, r.cf)([f.A], () => f.A.getPendingChanges(s)),
@@ -106,7 +106,7 @@ let $ = { skuId: "None" },
             });
         }, [t, e, s]);
     };
-var Q = s(551881);
+var Q = s(652465);
 function Y(e) {
     let { currentUser: t, nameplate: s, section: i, canUsePremiumCollectibles: r, isSelected: a, onClick: c } = e,
         u = (0, n.useRef)(null),
@@ -200,7 +200,7 @@ let Z = function (e) {
 };
 var q = s(652215),
     ee = s(202541),
-    et = s(762279);
+    et = s(389247);
 function es(e) {
     let {
             currentUser: t,
@@ -249,16 +249,16 @@ function es(e) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsxs)(c.rQ, {
+            (0, l.jsxs)(a.rQ, {
                 "data-migration-pending": !0,
                 separator: !1,
                 className: et.wx,
                 children: [
                     (0, l.jsx)(u.D, { variant: "heading-lg/semibold", children: w.intl.string(w.t.BwdeM1) }),
-                    (0, l.jsx)(c.s_, { "data-migration-pending": !0, className: et.b, onClick: p }),
+                    (0, l.jsx)(a.s_, { "data-migration-pending": !0, className: et.b, onClick: p }),
                 ],
             }),
-            (0, l.jsxs)(c.$m, {
+            (0, l.jsxs)(a.$m, {
                 "data-migration-pending": !0,
                 className: et.Qs,
                 scrollbarType: "none",
@@ -267,12 +267,12 @@ function es(e) {
                     (0, l.jsx)(S, { user: t, guildId: A, nameplate: P }),
                 ],
             }),
-            (0, l.jsxs)(c.jl, {
+            (0, l.jsxs)(a.jl, {
                 "data-migration-pending": !0,
                 className: et.Hx,
                 children: [
                     (null != M && (!T || H)) || null === _
-                        ? (0, l.jsx)(a.$, {
+                        ? (0, l.jsx)(c.$, {
                               variant: "primary",
                               text: w.intl.string(w.t.Jh8fJz),
                               onClick: function () {
@@ -281,7 +281,7 @@ function es(e) {
                               disabled: R,
                           })
                         : null == M && (H || !T)
-                          ? (0, l.jsx)(a.$, {
+                          ? (0, l.jsx)(c.$, {
                                 variant: "primary",
                                 onClick: () => D(U?.skuId),
                                 text: w.intl.string(w.t.fYfGgK),
@@ -299,14 +299,14 @@ function es(e) {
                             }),
                     !H && T
                         ? (0, l.jsx)(m.A, { itemType: M?.type ?? U?.type, onClose: p })
-                        : (0, l.jsx)(a.$, { variant: "secondary", text: w.intl.string(w.t["ETE/oC"]), onClick: p }),
+                        : (0, l.jsx)(c.$, { variant: "secondary", text: w.intl.string(w.t["ETE/oC"]), onClick: p }),
                 ],
             }),
         ],
     });
 }
 function ei(e) {
-    let { transitionState: t, analyticsLocations: s, onClose: i, guildId: a, initialSelectedNameplate: u } = e,
+    let { transitionState: t, analyticsLocations: s, onClose: i, guildId: c, initialSelectedNameplate: u } = e,
         m = (0, r.bG)([A.default], () => A.default.getCurrentUser()),
         { analyticsLocations: h } = (0, p.Ay)(s, o.A.EDIT_NAMEPLATE_MODAL),
         { categories: g, purchases: x, isFetchingCategories: j, isFetchingPurchases: I } = (0, N.Ay)(),
@@ -318,9 +318,9 @@ function ei(e) {
         ? null
         : (0, l.jsx)(p.f5, {
               value: h,
-              children: (0, l.jsx)(c.EO, {
+              children: (0, l.jsx)(a.EO, {
                   transitionState: t,
-                  size: k ? c.rI.DYNAMIC : c.rI.MEDIUM,
+                  size: k ? a.rI.DYNAMIC : a.rI.MEDIUM,
                   parentComponent: "NameplateModal",
                   "data-migration-pending": !0,
                   children: k
@@ -330,7 +330,7 @@ function ei(e) {
                             categories: g,
                             purchases: x,
                             analyticsLocations: h,
-                            guildId: a,
+                            guildId: c,
                             initialSelectedNameplate: u,
                             onClose: i,
                         }),

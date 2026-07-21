@@ -1,54 +1,54 @@
-r.d(t, { o: () => d }), r(321073);
-var l = r(64700),
-    n = r(873263),
-    s = r(641150),
-    a = r(23161),
-    o = r(856686),
-    i = r(758836),
-    c = r(652215);
+l.d(t, { o: () => d }), l(321073);
+var n = l(64700),
+    s = l(873263),
+    a = l(641150),
+    r = l(23161),
+    o = l(856686),
+    i = l(758836),
+    c = l(652215);
 let u = {
-        [i.G2.AVATAR_DECORATIONS]: s.q.AVATAR_DECORATION,
-        [i.G2.PROFILE_EFFECTS]: s.q.PROFILE_EFFECT,
-        [i.G2.NAMEPLATES]: s.q.NAMEPLATE,
-        [i.G2.PROFILE_FRAMES]: s.q.PROFILE_FRAME,
-        [i.G2.BUNDLES]: s.q.BUNDLE,
+        [i.G2.AVATAR_DECORATIONS]: a.q.AVATAR_DECORATION,
+        [i.G2.PROFILE_EFFECTS]: a.q.PROFILE_EFFECT,
+        [i.G2.NAMEPLATES]: a.q.NAMEPLATE,
+        [i.G2.PROFILE_FRAMES]: a.q.PROFILE_FRAME,
+        [i.G2.BUNDLES]: a.q.BUNDLE,
     },
     d = (e) => {
-        let { setItemTypeFilter: t, reset: r, setCurrentTab: s } = (0, a.v)(),
-            d = l.useMemo(() => ((0, i.dF)(e) ? i.G2.CATALOG : e), [e]),
-            [b, m] = l.useState(d),
-            [p, S] = l.useState(i.Pf.VISIBLE);
-        l.useEffect(() => {
-            s(b);
-        }, [b, s]),
-            l.useEffect(() => {
-                if ((m(d), e === i.G2.CATALOG)) r();
+        let { setItemTypeFilter: t, reset: l, setCurrentTab: a } = (0, r.v)(),
+            d = n.useMemo(() => ((0, i.dF)(e) ? i.G2.CATALOG : e), [e]),
+            [b, m] = n.useState(d),
+            [p, E] = n.useState(i.Pf.VISIBLE);
+        n.useEffect(() => {
+            a(b);
+        }, [b, a]),
+            n.useEffect(() => {
+                if ((m(d), e === i.G2.CATALOG)) l();
                 else if ((0, i.dF)(e)) {
-                    let l = u[e];
-                    null != l ? t(l) : r();
+                    let n = u[e];
+                    null != n ? t(n) : l();
                 }
-            }, [d, e, t, r]);
-        let { clearError: E } = (0, o.S)(),
-            h = (0, n.W6)(),
-            f = l.useCallback(
-                async (e, l) => {
-                    if ((E(), e === i.G2.CATALOG)) r();
+            }, [d, e, t, l]);
+        let { clearError: C } = (0, o.S)(),
+            A = (0, s.W6)(),
+            h = n.useCallback(
+                async (e, n) => {
+                    if ((C(), e === i.G2.CATALOG)) l();
                     else if ((0, i.dF)(e) && e !== b) {
-                        let l = u[e];
-                        null != l ? t(l) : r();
+                        let n = u[e];
+                        null != n ? t(n) : l();
                     }
                     if (b !== e) {
-                        if (l) {
-                            let e;
-                            S(i.Pf.OUT), await ((e = 1.1 * i.H1), new Promise((t) => setTimeout(t, e)));
+                        if (n) {
+                            var s;
+                            E(i.Pf.OUT), await ((s = 1.1 * i.H1), new Promise((e) => setTimeout(e, s)));
                         }
-                        m(e === i.G2.HOME || e === i.G2.ORBS ? e : i.G2.CATALOG),
-                            l && S(i.Pf.IN),
-                            h.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            S(i.Pf.VISIBLE);
+                        m(e === i.G2.HOME || e === i.G2.ORBS || e === i.G2.GAME_SERVERS ? e : i.G2.CATALOG),
+                            n && E(i.Pf.IN),
+                            A.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            E(i.Pf.VISIBLE);
                     }
                 },
-                [h, t, r, b, E],
+                [A, t, l, b, C],
             );
-        return { selectedTab: b, transitionState: p, transitionToTab: f };
+        return { selectedTab: b, transitionState: p, transitionToTab: h };
     };
