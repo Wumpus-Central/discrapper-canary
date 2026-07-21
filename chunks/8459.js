@@ -18,8 +18,8 @@ var n = l(627968),
     A = l(696451),
     S = l(71393),
     j = l(67480),
-    k = l(385648),
-    v = l(871123),
+    v = l(385648),
+    k = l(871123),
     E = l(733391),
     _ = l(439303),
     b = l(353281),
@@ -216,7 +216,7 @@ function ea(e) {
 var er = l(768286);
 function eo(e) {
     let { applicationId: t, backgroundImageAssetId: l } = e,
-        i = null != l ? (0, W.YE)(t, l, 1024, v.pV) : null;
+        i = null != l ? (0, W.YE)(t, l, 1024, k.pV) : null;
     return (0, n.jsx)("div", {
         className: er._,
         children: null != i ? (0, n.jsx)("div", { className: er.i, style: { backgroundImage: `url(${i})` } }) : null,
@@ -267,8 +267,8 @@ var eg = l(508770),
     eA = l(69236),
     eS = l(647474),
     ej = l(202541),
-    ek = l(430825),
-    ev = l(926915);
+    ev = l(430825),
+    ek = l(926915);
 function eE(e) {
     let { applicationId: t, analyticsLocations: l } = e,
         s = (0, eA.W8)(),
@@ -284,14 +284,17 @@ function eE(e) {
                   )
                 : "",
         f = (0, n.jsxs)("div", {
-            className: ev.F,
+            className: ek.FS,
             children: [
-                (0, n.jsx)(eg.E, { type: "beta", variant: "expressive" }),
+                (0, n.jsx)("div", {
+                    className: ek.fC,
+                    children: (0, n.jsx)(eg.E, { type: "beta", variant: "expressive" }),
+                }),
                 (0, n.jsxs)(d.E, {
                     variant: "text-sm/normal",
                     color: "currentColor",
                     children: [
-                        z.intl.format(ek.default.iFXcjn, { applicationName: a?.name, endDate: u }),
+                        z.intl.format(ev.default.iFXcjn, { applicationName: a?.name, endDate: u }),
                         " ",
                         z.intl.format(z.t.BPDKoA, {
                             helpdeskArticle: B.A.getArticleURL(Z.MVz.SOCIAL_LAYER_SPEND_ORBS_LEARN_MORE),
@@ -306,7 +309,7 @@ function eE(e) {
               color: "nitro-pink",
               sticky: !0,
               children: (0, n.jsxs)("div", {
-                  className: ev.k,
+                  className: ek.kL,
                   children: [
                       f,
                       (0, n.jsx)(em.$, {
@@ -468,7 +471,7 @@ function ew(e) {
     let { entries: t, selectedStorefrontId: l, liveStorefrontId: i, onSelect: s, onClose: a } = e;
     return (0, n.jsx)(eT.W, {
         navId: "social-layer-storefront-entry",
-        "aria-label": z.intl.string(ek.default.c2I5Ti),
+        "aria-label": z.intl.string(ev.default.c2I5Ti),
         onClose: a,
         onSelect: a,
         children: (0, n.jsx)(eM.rX, {
@@ -486,11 +489,11 @@ function ew(e) {
                         },
                         label:
                             ((t = e.id === i),
-                            (r = "" !== e.title ? e.title : z.intl.string(ek.default.OvBwPV)),
+                            (r = "" !== e.title ? e.title : z.intl.string(ev.default.OvBwPV)),
                             t
-                                ? z.intl.formatToPlainString(ek.default.eF1VJh, { title: r })
+                                ? z.intl.formatToPlainString(ev.default.eF1VJh, { title: r })
                                 : null == e.publishedAt
-                                  ? z.intl.formatToPlainString(ek.default.dX2mQt, { title: r })
+                                  ? z.intl.formatToPlainString(ev.default.dX2mQt, { title: r })
                                   : r),
                     },
                     e.id,
@@ -547,12 +550,12 @@ function eH(e) {
         [c] = i.useState(() => Date.now());
     t =
         null == a
-            ? z.intl.string(ek.default.Id33AH)
+            ? z.intl.string(ev.default.Id33AH)
             : a.getTime() > c
-              ? z.intl.format(ek.default.WOZod0, { timestamp: eF(a) })
+              ? z.intl.format(ev.default.WOZod0, { timestamp: eF(a) })
               : s
-                ? z.intl.format(ek.default.QsHYzr, { timestamp: eF(a) })
-                : z.intl.format(ek.default["3x/M9Z"], { timestamp: eF(a) });
+                ? z.intl.format(ev.default.QsHYzr, { timestamp: eF(a) })
+                : z.intl.format(ev.default["3x/M9Z"], { timestamp: eF(a) });
     let u = (0, n.jsx)(d.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: t });
     return (0, n.jsx)("div", {
         className: eY.v,
@@ -585,7 +588,7 @@ function e$(e) {
                         analyticsContext: f.current,
                         onClose: () => {
                             let { pathname: e, search: n } = (0, m.JK)().location;
-                            (0, v.rG)(e, n, t.applicationId, l) && null != u && (0, m.bG)(u(s));
+                            (0, k.rG)(e, n, t.applicationId, l) && null != u && (0, m.bG)(u(s));
                         },
                     }),
                     () => {
@@ -608,11 +611,11 @@ function eB(e) {
         { guildId: l, gameShopPageIndex: s, gameShopSkuId: a } = t.params,
         r = (0, o.bG)([I.default], () => I.default.getSessionId(), []),
         c = i.useCallback((e, t, n) => Z.BVt.CHANNELS_GAME_SHOP(l, e ?? 0, t, n), [l]),
-        d = (0, v.nY)(l),
+        d = (0, k.nY)(l),
         u = i.useCallback((e, t) => (0, n.jsx)(Q, { storefront: t, selectedPageIndex: e }), []);
     return (
         i.useEffect(() => {
-            null == l || null == r || (null == S.A.getGuild(l) && (0, k.Z2)(l, {}, { shouldNavigate: !1 }));
+            null == l || null == r || (null == S.A.getGuild(l) && (0, v.Z2)(l, {}, { shouldNavigate: !1 }));
         }, [l, r]),
         (0, n.jsx)(eW, {
             applicationId: d,
@@ -631,9 +634,9 @@ function eW(e) {
             skuId: s,
             pageIndex: m = 0,
             renderHeader: S,
-            getSocialLayerStorefrontLink: k,
+            getSocialLayerStorefrontLink: v,
         } = e,
-        { analyticsLocations: v } = (0, g.Ay)(p.A.SOCIAL_LAYER_STOREFRONT),
+        { analyticsLocations: k } = (0, g.Ay)(p.A.SOCIAL_LAYER_STOREFRONT),
         C = (0, L.A)({ applicationId: t }),
         y = C?.storefront ?? null,
         T = (function (e) {
@@ -686,21 +689,21 @@ function eW(e) {
                       (0, n.jsx)(c.D, {
                           variant: "heading-lg/semibold",
                           color: "text-strong",
-                          children: z.intl.string(ek.default.OvBwPV),
+                          children: z.intl.string(ev.default.OvBwPV),
                       }),
                       (0, n.jsx)(d.E, {
                           variant: "text-md/normal",
                           color: "text-subtle",
-                          children: z.intl.string(ek.default["Sy7D+/"]),
+                          children: z.intl.string(ev.default["Sy7D+/"]),
                       }),
                   ],
               })
             : (0, n.jsx)("div", { className: a()(eV.u1, eV.kL), children: (0, n.jsx)(u.y, {}) })
         : (0, n.jsx)(g.f5, {
-              value: v,
+              value: k,
               children: (0, n.jsx)(b.J, {
                   renderHeader: S,
-                  getSocialLayerStorefrontLink: k,
+                  getSocialLayerStorefrontLink: v,
                   children: (0, n.jsx)(_.E9, {
                       newValue: H,
                       children: (0, n.jsx)(e$, {
