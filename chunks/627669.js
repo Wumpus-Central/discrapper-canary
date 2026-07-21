@@ -3710,7 +3710,7 @@ function i5(e) {
                             children: eJ.intl.string(eJ.t.mE3KJN),
                         }),
                     null != f ? (0, i.jsx)(i4, { message: f, channel: n, containerWidth: a.width }) : null,
-                    I ? (0, i.jsx)("div", { className: i2.GA, children: (0, i.jsx)(eE.Ay, { channel: n }) }) : null,
+                    I ? (0, i.jsx)(eE.Ay, { channel: n, className: i2.GA }) : null,
                     n.isArchivedThread()
                         ? null
                         : (0, i.jsx)("div", {
