@@ -1,4 +1,4 @@
-n.d(t, { A: () => _ });
+n.d(t, { A: () => j });
 var s = n(627968),
     r = n(64700),
     a = n(503698),
@@ -13,15 +13,15 @@ var s = n(627968),
     m = n(396681),
     N = n(15552),
     E = n(854378),
-    g = n(701273),
-    f = n(572469),
+    f = n(701273),
+    g = n(572469),
     y = n(976860),
     A = n(210714),
     x = n(280450),
     w = n(625494),
     I = n(652215),
     C = n(375708),
-    v = n(818050);
+    v = n(522826);
 c.Ay.initialize();
 class S extends r.PureComponent {
     static defaultProps = { transitionTo: y.pX, replaceWith: y.bG };
@@ -101,7 +101,7 @@ class S extends r.PureComponent {
         p.A.loginReset(), e(I.BVt.LOGIN, { source: "reset_password" });
     };
     handleOpenApp = () => {
-        (0, g.A)("password_reset");
+        (0, f.A)("password_reset");
     };
     hasError = (e) => null != this.state.apiErrors[e] || null != this.state.error;
     renderError = (e) => {
@@ -158,8 +158,8 @@ class S extends r.PureComponent {
         });
     }
     renderMFA() {
-        let { mfaTicket: e, mfaMethods: t, theme: n, authBoxClassName: r, width: a } = this.props,
-            i = (e) => {
+        let { mfaTicket: e, mfaMethods: t, theme: n, authBoxClassName: r } = this.props,
+            a = (e) => {
                 let { mfaType: t, data: n } = e;
                 return this.handleTokenSubmitMFAv2(t, n);
             };
@@ -167,13 +167,12 @@ class S extends r.PureComponent {
             style: { padding: 0 },
             theme: n,
             className: r,
-            children: (0, s.jsx)(f.t, {
-                mfaFinish: i,
+            children: (0, s.jsx)(g.t, {
+                mfaFinish: a,
                 mfaChallenge: { ticket: e, methods: t },
                 onEarlyClose: () => {
                     h.h.dispatch({ type: "LOGIN_RESET" });
                 },
-                width: a ?? 480,
             }),
         });
     }
@@ -197,7 +196,7 @@ class S extends r.PureComponent {
               : this.renderPasswordReset();
     }
 }
-let _ = function (e) {
+let j = function (e) {
     let t = (0, c.cf)([x.default], () => ({
         mfaTicket: x.default.getMFATicket(),
         mfaMethods: x.default.getMFAMethods(),

@@ -1,8 +1,8 @@
 s.d(e, { default: () => B });
 var r = s(627968),
     n = s(64700),
-    i = s(562708),
-    o = s(511815),
+    o = s(562708),
+    i = s(511815),
     a = s(189213),
     l = s(20742),
     d = s(430993),
@@ -34,8 +34,8 @@ var r = s(627968),
     N = s(625494),
     v = s(652215),
     I = s(375708),
-    O = s(416646),
-    U = s(373378);
+    O = s(916030),
+    U = s(522826);
 class G extends n.PureComponent {
     static defaultProps = { transitionTo: (t) => s.g.location.assign(t), replaceWith: (t) => s.g.location.replace(t) };
     loginRef;
@@ -132,7 +132,7 @@ class G extends n.PureComponent {
             N._.dispatch(v.jej.WAVE_EMPHASIZE);
             let t = await m.A.forgotPassword(e);
             if (!1 === t) return;
-            t === o.D.ONE_TIME_LOGIN
+            t === i.D.ONE_TIME_LOGIN
                 ? (0, f.openModal)((t) => {
                       let e = [
                           { variant: "primary", text: I.intl.string(I.t.BddRzS), onClick: t.onClose, fullWidth: !0 },
@@ -245,7 +245,6 @@ class G extends n.PureComponent {
             onEarlyClose: () => {
                 this.handleReset();
             },
-            width: "100%",
         });
     }
     renderDisabledAccount() {
@@ -273,7 +272,6 @@ class G extends n.PureComponent {
             onLoginSuccess: (t) => {
                 this.setState({ errors: {} }), m.A.switchAccountToken(t);
             },
-            width: "100%",
             ...this.props,
         });
     }
@@ -354,7 +352,7 @@ class G extends n.PureComponent {
     };
 }
 let B = function (t) {
-    let { onClose: e, transitionState: s, onBackPressed: o, ...a } = t,
+    let { onClose: e, transitionState: s, onBackPressed: i, ...a } = t,
         l = (0, g.cf)([L.A, F.default, _.A, T.A], () => ({
             authenticated: F.default.isAuthenticated(),
             loginStatus: F.default.getLoginStatus(),
@@ -364,10 +362,10 @@ let B = function (t) {
             country: _.A.getCountryCode(),
             theme: T.A.theme,
         }));
-    (0, R.A)({ type: i.ImpressionTypes.MODAL, name: i.ImpressionNames.USER_LOGIN });
+    (0, R.A)({ type: o.ImpressionTypes.MODAL, name: o.ImpressionNames.USER_LOGIN });
     let d = n.useCallback(() => {
-        e(), o();
-    }, [e, o]);
+        e(), i();
+    }, [e, i]);
     return (0, r.jsx)(u.d, {
         size: "lg",
         onClose: e,

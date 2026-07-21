@@ -2632,7 +2632,6 @@ function iU(e) {
             onEarlyClose: () => {
                 x.h.dispatch({ type: "LOGIN_RESET" });
             },
-            width: i ? "100%" : 480,
             embedded: i,
         }),
     });

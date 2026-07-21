@@ -1,11 +1,8 @@
 .header__7c901 {
     flex-grow: 0;
     overflow: hidden;
-    padding: 24px 16px 0
-}
-
-.subtitle__7c901 {
-    margin-top: 8px
+    padding: 24px 24px 0;
+    position: relative
 }
 
 .closeButton__7c901 {
@@ -29,7 +26,6 @@
 
 .embeddedContent__7c901 {
     margin-top: var(--space-20);
-    padding: 0;
     text-align: start
 }
 
@@ -43,22 +39,13 @@
     margin-top: var(--space-12)
 }
 
-.smsInputContainer__7c901 {
-    display: grid;
-    gap: 8px;
-    grid-template-columns: 1fr auto
-}
-
-.smsInput__7c901 {
-    flex-grow: 1
-}
-
 .error__7c901 {
     margin-top: 8px
 }
 
 .footer__7c901 {
-    justify-content: space-between
+    padding-inline: 24px;
+    padding-bottom: 24px
 }
 
 .listItemContainer__7c901 {
@@ -66,6 +53,7 @@
     background-color: var(--background-base-low);
     border: 1px solid var(--border-subtle);
     border-radius: 8px;
+    box-sizing: border-box;
     cursor: pointer;
     display: flex;
     margin-bottom: 8px;
@@ -84,12 +72,6 @@
 
 .listItemContainer__7c901:active {
     background-color: var(--interactive-background-active)
-}
-
-.listItemIcon__7c901 {
-    filter: saturate(var(--saturation-factor, 1));
-    margin-block: 8px;
-    margin-inline: 16px 8px
 }
 
 .listItemText__7c901 {

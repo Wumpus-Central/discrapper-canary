@@ -1,122 +1,119 @@
-n.d(t, { a: () => z, t: () => $, MFAModal: () => q });
-var s = n(627968),
-    l = n(64700),
-    a = n(430690),
-    i = n(123292),
-    r = n(935462),
-    o = n(192308),
-    d = n(834730),
-    c = n(825484),
-    u = n(821609),
-    h = n(297264),
-    m = n(235986),
-    g = n(375708),
-    x = n(902626);
-let f = l.createContext(!1),
+s.d(t, { a: () => $, t: () => X, MFAModal: () => P });
+var n = s(627968),
+    l = s(64700),
+    i = s(224640),
+    a = s(430690),
+    r = s(123292),
+    o = s(192308),
+    c = s(331322),
+    d = s(815021),
+    u = s(834730),
+    h = s(825484),
+    m = s(821609),
+    x = s(297264),
+    f = s(375708),
+    g = s(304346);
+let j = l.createContext(!1),
     p = function (e) {
-        let { children: t, scrollbarType: n } = e,
-            a = l.useContext(f);
-        return (0, s.jsx)(r.$m, {
-            "data-migration-pending": !0,
-            className: a ? x.m6 : x.Qs,
-            scrollbarType: n,
-            children: t,
-        });
+        let { children: t } = e,
+            s = l.useContext(j);
+        return (0, n.jsx)("div", { className: s ? g.m6 : g.Qs, children: t });
     },
-    j = function (e) {
+    b = function (e) {
         let { error: t } = e;
         return null == t
             ? null
-            : (0, s.jsx)(d.E, {
-                  className: x.z3,
+            : (0, n.jsx)(u.E, {
+                  className: g.z3,
                   variant: "text-sm/normal",
                   color: "text-feedback-critical",
                   children: t,
               });
     },
-    b = function (e) {
-        let { mfaChallenge: t, setSlide: n, trailingButton: a, showConfirm: i = !1, disabled: o, submitting: d } = e,
-            h = l.useContext(f),
-            m = t.methods.length > 1;
-        if (null == a && !m && !i) return null;
-        let p = (0, s.jsxs)(c.e, {
+    y = function (e) {
+        let { mfaChallenge: t, setSlide: s, trailingButton: i, showConfirm: a = !1, disabled: r, submitting: o } = e,
+            c = l.useContext(j),
+            d = t.methods.length > 1;
+        if (null == i && !d && !a) return null;
+        let u = (0, n.jsxs)(h.e, {
             fullWidth: !0,
             children: [
-                m &&
-                    (0, s.jsx)(u.$, {
+                d &&
+                    (0, n.jsx)(m.$, {
                         variant: "secondary",
-                        text: g.intl.string(g.t.Tot4EC),
-                        onClick: () => n("select"),
+                        text: f.intl.string(f.t.Tot4EC),
+                        onClick: () => s("select"),
                     }),
-                i &&
-                    (0, s.jsx)(u.$, {
+                a &&
+                    (0, n.jsx)(m.$, {
                         type: "submit",
                         variant: "primary",
-                        text: g.intl.string(g.t["cY+Oob"]),
-                        disabled: o,
-                        loading: d,
+                        text: f.intl.string(f.t["cY+Oob"]),
+                        disabled: r,
+                        loading: o,
                     }),
-                a,
+                i,
             ],
         });
-        return h
-            ? (0, s.jsx)("div", { className: x.cZ, children: p })
-            : (0, s.jsx)(r.jl, { "data-migration-pending": !0, children: p });
+        return (0, n.jsx)("div", { className: c ? g.cZ : g.qr, children: u });
     },
-    y = function (e) {
-        let { subtitle: t, onClose: n, headerAlignStart: a } = e;
-        return l.useContext(f)
+    C = function (e) {
+        let { subtitle: t, onClose: s } = e;
+        return l.useContext(j)
             ? null
-            : (0, s.jsxs)(r.rQ, {
-                  "data-migration-pending": !0,
-                  direction: m.A.Direction.VERTICAL,
-                  className: x.wx,
-                  separator: !1,
-                  align: a ? m.A.Align.START : void 0,
+            : (0, n.jsxs)("div", {
+                  className: g.wx,
                   children: [
-                      (0, s.jsx)(h.D, {
-                          variant: "heading-xl/semibold",
-                          color: "text-strong",
-                          children: g.intl.string(g.t.saHocI),
+                      (0, n.jsxs)(c.B, {
+                          direction: "vertical",
+                          align: "start",
+                          gap: 8,
+                          children: [
+                              (0, n.jsx)(x.D, {
+                                  variant: "heading-xl/semibold",
+                                  color: "text-strong",
+                                  children: f.intl.string(f.t.saHocI),
+                              }),
+                              null != t && (0, n.jsx)(x.D, { variant: "heading-lg/semibold", children: t }),
+                          ],
                       }),
-                      null != t && (0, s.jsx)(h.D, { variant: "heading-lg/semibold", className: x.VA, children: t }),
-                      (0, s.jsx)(r.s_, { className: x.b, onClick: n }),
+                      (0, n.jsx)("div", { className: g.b, children: (0, n.jsx)(d.J, { onClick: s }) }),
                   ],
               });
     };
-function C(e) {
+function S(e) {
     let { setSlide: t } = e,
-        [n, a] = l.useState(10);
+        [s, i] = l.useState(10);
     return (
         l.useEffect(() => {
-            if (n > 0) {
+            if (s > 0) {
                 let e = setTimeout(() => {
-                    a((e) => e - 1);
+                    i((e) => e - 1);
                 }, 1e3);
                 return () => clearTimeout(e);
             }
-        }, [n]),
-        (0, s.jsxs)(s.Fragment, {
+        }, [s]),
+        (0, n.jsxs)(n.Fragment, {
             children: [
-                (0, s.jsx)(y, { ...e, subtitle: g.intl.string(g.t.c5J7O0) }),
-                (0, s.jsxs)(p, {
+                (0, n.jsx)(C, { ...e, subtitle: f.intl.string(f.t.c5J7O0) }),
+                (0, n.jsxs)(p, {
                     children: [
-                        (0, s.jsx)(d.E, { variant: "text-md/normal", children: g.intl.format(g.t.Nixbli, {}) }),
-                        (0, s.jsx)(d.E, {
+                        (0, n.jsx)(u.E, { variant: "text-md/normal", children: f.intl.format(f.t.Nixbli, {}) }),
+                        (0, n.jsx)(u.E, {
                             variant: "text-md/normal",
                             children:
-                                n > 0 ? g.intl.format(g.t.tsWkAE, { countdown: n }) : g.intl.string(g.t["GK/Qfd"]),
+                                s > 0 ? f.intl.format(f.t.tsWkAE, { countdown: s }) : f.intl.string(f.t["GK/Qfd"]),
                         }),
                     ],
                 }),
-                (0, s.jsx)(b, {
+                (0, n.jsx)(y, {
                     ...e,
-                    trailingButton: (0, s.jsx)(u.$, {
+                    trailingButton: (0, n.jsx)(m.$, {
                         variant: "primary",
-                        text: g.intl.string(g.t.oyjspn),
+                        text: f.intl.string(f.t.oyjspn),
                         onClick: () => t("backup_ack"),
-                        disabled: n > 0,
-                        loading: n > 0,
+                        disabled: s > 0,
+                        loading: s > 0,
                         fullWidth: !0,
                     }),
                 }),
@@ -124,140 +121,140 @@ function C(e) {
         })
     );
 }
-var S = n(533925),
-    k = n(292666);
-function v(e) {
-    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
-        [d, c] = l.useState(!1),
-        [u, h] = l.useState(null),
-        [m, x] = l.useState(""),
-        f = l.useRef(null),
-        C = g.intl.string(g.t["C/ZAw/"]),
-        v = g.intl.string(g.t.fZSi1D),
-        w = l.useCallback(
+var k = s(533925),
+    v = s(292666);
+function w(e) {
+    let { mfaChallenge: t, finish: s, setSlide: i, onClose: a, isSlideReady: r } = e,
+        [o, c] = l.useState(!1),
+        [d, u] = l.useState(null),
+        [h, m] = l.useState(""),
+        x = l.useRef(null),
+        g = f.intl.string(f.t["C/ZAw/"]),
+        j = f.intl.string(f.t.fZSi1D),
+        S = l.useCallback(
             (e) => {
-                x(e), h(null);
+                m(e), u(null);
             },
-            [x, h],
+            [m, u],
         );
     return (
         l.useEffect(() => {
-            r && f.current?.focus();
+            r && x.current?.focus();
         }, [r]),
-        (0, s.jsxs)("form", {
+        (0, n.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     c(!0),
-                    n({ mfaType: "backup", data: m.replace(/-/g, "") })
+                    s({ mfaType: "backup", data: h.replace(/-/g, "") })
                         .catch((e) => {
-                            h(e.body?.message ?? e.message);
+                            u(e.body?.message ?? e.message);
                         })
                         .finally(() => {
                             c(!1);
                         });
             },
             children: [
-                (0, s.jsx)(y, { onClose: i, headerAlignStart: o }),
-                (0, s.jsxs)(p, {
+                (0, n.jsx)(C, { onClose: a }),
+                (0, n.jsxs)(p, {
                     children: [
-                        (0, s.jsx)(k.k, {
-                            label: C,
-                            inputRef: f,
-                            onChange: w,
-                            placeholder: v,
-                            maxLength: S.pu,
-                            minLength: S.Zp,
-                            value: m,
+                        (0, n.jsx)(v.k, {
+                            label: g,
+                            inputRef: x,
+                            onChange: S,
+                            placeholder: j,
+                            maxLength: k.pu,
+                            minLength: k.Zp,
+                            value: h,
                             spellCheck: "false",
-                            disabled: d,
+                            disabled: o,
                         }),
-                        (0, s.jsx)(j, { error: u }),
+                        (0, n.jsx)(b, { error: d }),
                     ],
                 }),
-                (0, s.jsx)(b, { mfaChallenge: t, setSlide: a, showConfirm: !0, disabled: m.length < 8, submitting: d }),
+                (0, n.jsx)(y, { mfaChallenge: t, setSlide: i, showConfirm: !0, disabled: h.length < 8, submitting: o }),
             ],
         })
     );
 }
-function w(e) {
-    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
-        [d, c] = l.useState(!1),
-        [u, h] = l.useState(null),
-        [m, x] = l.useState(""),
-        f = l.useRef(null);
+function E(e) {
+    let { mfaChallenge: t, finish: s, setSlide: i, onClose: a, isSlideReady: r } = e,
+        [o, c] = l.useState(!1),
+        [d, u] = l.useState(null),
+        [h, m] = l.useState(""),
+        x = l.useRef(null);
     return (
         l.useEffect(() => {
-            r && f.current?.focus();
+            r && x.current?.focus();
         }, [r]),
-        (0, s.jsxs)("form", {
+        (0, n.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     c(!0),
-                    n({ mfaType: "password", data: m })
+                    s({ mfaType: "password", data: h })
                         .catch((e) => {
-                            h(e.body?.message ?? e.message);
+                            u(e.body?.message ?? e.message);
                         })
                         .finally(() => {
                             c(!1);
                         });
             },
             children: [
-                (0, s.jsx)(y, { onClose: i, headerAlignStart: o }),
-                (0, s.jsxs)(p, {
+                (0, n.jsx)(C, { onClose: a }),
+                (0, n.jsxs)(p, {
                     children: [
-                        (0, s.jsx)(k.k, {
-                            label: g.intl.string(g.t["CIGa+7"]),
-                            inputRef: f,
-                            onChange: x,
-                            value: m,
+                        (0, n.jsx)(v.k, {
+                            label: f.intl.string(f.t["CIGa+7"]),
+                            inputRef: x,
+                            onChange: m,
+                            value: h,
                             type: "password",
                             autoComplete: "password",
                             spellCheck: "false",
-                            disabled: d,
+                            disabled: o,
                         }),
-                        (0, s.jsx)(j, { error: u }),
+                        (0, n.jsx)(b, { error: d }),
                     ],
                 }),
-                (0, s.jsx)(b, {
+                (0, n.jsx)(y, {
                     mfaChallenge: t,
-                    setSlide: a,
+                    setSlide: i,
                     showConfirm: !0,
-                    disabled: 0 === m.length,
-                    submitting: d,
+                    disabled: 0 === h.length,
+                    submitting: o,
                 }),
             ],
         })
     );
 }
-var E = n(939249),
-    A = n(320448),
-    R = n(611248);
-function N(e) {
-    let { mfaChallenge: t, setSlide: n, onClose: l, headerAlignStart: a } = e;
-    return (0, s.jsxs)(s.Fragment, {
+var R = s(939249),
+    N = s(320448),
+    A = s(611248);
+function Z(e) {
+    let { mfaChallenge: t, setSlide: s, onClose: l } = e;
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, s.jsx)(y, { subtitle: g.intl.string(g.t["XQaT+8"]), onClose: l, headerAlignStart: a }),
-            (0, s.jsx)(p, {
+            (0, n.jsx)(C, { subtitle: f.intl.string(f.t["XQaT+8"]), onClose: l }),
+            (0, n.jsx)(p, {
                 children: t.methods.map((e) =>
-                    (0, s.jsxs)(
-                        E.D,
+                    (0, n.jsxs)(
+                        R.D,
                         {
-                            className: x.Ry,
+                            className: g.Ry,
                             onClick: () => {
-                                n(e.type);
+                                s(e.type);
                             },
                             children: [
-                                (0, s.jsx)(d.E, {
-                                    className: x.zx,
+                                (0, n.jsx)(u.E, {
+                                    className: g.zx,
                                     variant: "text-md/semibold",
-                                    children: R.e[e.type],
+                                    children: A.e[e.type],
                                 }),
-                                (0, s.jsx)(A._, {
+                                (0, n.jsx)(N._, {
                                     size: "custom",
                                     color: "currentColor",
                                     width: 20,
                                     height: 20,
-                                    className: x.td,
+                                    className: g.td,
                                 }),
                             ],
                         },
@@ -268,265 +265,255 @@ function N(e) {
         ],
     });
 }
-var T = n(636537),
-    _ = n(532446),
-    Z = n(652215);
-function D(e) {
-    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
-        [d, c] = l.useState(!1),
-        [h, m] = l.useState(null),
-        [x, f] = l.useState(!1),
-        [C, v] = l.useState(null),
-        [w, E] = l.useState(""),
-        A = l.useRef(null);
+var _ = s(636537),
+    B = s(532446),
+    D = s(652215);
+function T(e) {
+    let { mfaChallenge: t, finish: s, setSlide: i, onClose: a, isSlideReady: r } = e,
+        [o, c] = l.useState(!1),
+        [d, u] = l.useState(null),
+        [h, x] = l.useState(!1),
+        [g, j] = l.useState(null),
+        [S, w] = l.useState(""),
+        E = l.useRef(null);
     l.useEffect(() => {
         c(!0),
-            T.Bo.post({ url: Z.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
+            _.Bo.post({ url: D.Rsh.LOGIN_SMS_SEND, body: { ticket: t.ticket }, oldFormErrors: !0, rejectWithError: !1 })
                 .then((e) => {
-                    m(e.body.phone);
+                    u(e.body.phone);
                 })
                 .catch((e) => {
-                    v(e.body?.message ?? e.message);
+                    j(e.body?.message ?? e.message);
                 })
                 .finally(() => {
                     c(!1);
                 });
     }, [t.ticket]),
         l.useEffect(() => {
-            r && A.current?.focus();
+            r && E.current?.focus();
         }, [r]);
-    let R = null == h ? g.intl.string(g.t.LQdCQE) : g.intl.formatToPlainString(g.t["8r6h7+"], { phoneNumber: h });
-    return (0, s.jsxs)("form", {
+    let R = null == d ? f.intl.string(f.t.LQdCQE) : f.intl.formatToPlainString(f.t["8r6h7+"], { phoneNumber: d });
+    return (0, n.jsxs)("form", {
         onSubmit: (e) => {
             e.preventDefault(),
-                f(!0),
-                n({ mfaType: "sms", data: w })
+                x(!0),
+                s({ mfaType: "sms", data: S })
                     .catch((e) => {
-                        v(e.message ?? e.body?.message);
+                        j(e.message ?? e.body?.message);
                     })
                     .finally(() => {
-                        f(!1);
+                        x(!1);
                     });
         },
         children: [
-            (0, s.jsx)(y, { subtitle: R, onClose: i, headerAlignStart: o }),
-            (0, s.jsxs)(p, {
+            (0, n.jsx)(C, { subtitle: R, onClose: a }),
+            (0, n.jsxs)(p, {
                 children: [
-                    (0, s.jsxs)(_.M, {
+                    (0, n.jsxs)(B.M, {
                         children: [
-                            (0, s.jsx)(k.k, {
-                                label: g.intl.string(g.t.HZPBOd),
-                                inputRef: A,
-                                onChange: E,
-                                placeholder: g.intl.string(g.t.tARzgo),
+                            (0, n.jsx)(v.k, {
+                                label: f.intl.string(f.t.HZPBOd),
+                                inputRef: E,
+                                onChange: w,
+                                placeholder: f.intl.string(f.t.tARzgo),
                                 maxLength: 10,
-                                value: w,
+                                value: S,
                                 autoComplete: "one-time-code",
                                 spellCheck: "false",
-                                disabled: x,
+                                disabled: h,
                             }),
-                            (0, s.jsx)(u.$, {
+                            (0, n.jsx)(m.$, {
                                 variant: "secondary",
-                                text: g.intl.string(g.t.ZF29L6),
-                                loading: d,
+                                text: f.intl.string(f.t.ZF29L6),
+                                loading: o,
                                 onClick: () => {
-                                    T.Bo.post({
-                                        url: Z.Rsh.LOGIN_SMS_SEND,
+                                    _.Bo.post({
+                                        url: D.Rsh.LOGIN_SMS_SEND,
                                         body: { ticket: t.ticket },
                                         oldFormErrors: !0,
                                         rejectWithError: !1,
                                     })
                                         .then((e) => {
-                                            m(e.body.phone);
+                                            u(e.body.phone);
                                         })
                                         .catch((e) => {
-                                            v(e.message || e.body?.message);
+                                            j(e.message || e.body?.message);
                                         });
                                 },
                             }),
                         ],
                     }),
-                    (0, s.jsx)(j, { error: C }),
+                    (0, n.jsx)(b, { error: g }),
                 ],
             }),
-            (0, s.jsx)(b, {
+            (0, n.jsx)(y, {
                 mfaChallenge: t,
-                setSlide: a,
+                setSlide: i,
                 showConfirm: !0,
-                disabled: w.length !== S.$A,
-                submitting: x,
+                disabled: S.length !== k.$A,
+                submitting: h,
             }),
         ],
     });
 }
 function F(e) {
-    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, isSlideReady: r, headerAlignStart: o } = e,
-        [d, c] = l.useState(!1),
-        [u, h] = l.useState(null),
-        [m, x] = l.useState(""),
-        f = l.useRef(null);
+    let { mfaChallenge: t, finish: s, setSlide: i, onClose: a, isSlideReady: r } = e,
+        [o, c] = l.useState(!1),
+        [d, u] = l.useState(null),
+        [h, m] = l.useState(""),
+        x = l.useRef(null);
     return (
         l.useEffect(() => {
-            r && f.current?.focus();
+            r && x.current?.focus();
         }, [r]),
-        (0, s.jsxs)("form", {
+        (0, n.jsxs)("form", {
             onSubmit: (e) => {
                 e.preventDefault(),
                     c(!0),
-                    h(null),
-                    n({ mfaType: "totp", data: m })
+                    u(null),
+                    s({ mfaType: "totp", data: h })
                         .catch((e) => {
-                            h(e.body?.message ?? e.message);
+                            u(e.body?.message ?? e.message);
                         })
                         .finally(() => {
                             c(!1);
                         });
             },
             children: [
-                (0, s.jsx)(y, { onClose: i, headerAlignStart: o }),
-                (0, s.jsxs)(p, {
-                    scrollbarType: "none",
+                (0, n.jsx)(C, { onClose: a }),
+                (0, n.jsxs)(p, {
                     children: [
-                        (0, s.jsx)(k.k, {
-                            label: g.intl.string(g.t.HZPBOd),
-                            inputRef: f,
-                            onChange: x,
-                            placeholder: g.intl.string(g.t.tARzgo),
-                            maxLength: S.XZ,
-                            minLength: S.XZ,
-                            value: m,
+                        (0, n.jsx)(v.k, {
+                            label: f.intl.string(f.t.HZPBOd),
+                            inputRef: x,
+                            onChange: m,
+                            placeholder: f.intl.string(f.t.tARzgo),
+                            maxLength: k.XZ,
+                            minLength: k.XZ,
+                            value: h,
                             autoComplete: "one-time-code",
                             spellCheck: "false",
-                            disabled: d,
+                            disabled: o,
                         }),
-                        (0, s.jsx)(j, { error: u }),
+                        (0, n.jsx)(b, { error: d }),
                     ],
                 }),
-                (0, s.jsx)(b, {
+                (0, n.jsx)(y, {
                     mfaChallenge: t,
-                    setSlide: a,
+                    setSlide: i,
                     showConfirm: !0,
-                    disabled: m.length !== S.XZ,
-                    submitting: d,
+                    disabled: h.length !== k.XZ,
+                    submitting: o,
                 }),
             ],
         })
     );
 }
-var L = n(84948),
-    B = n(293731),
-    M = n(464477),
-    O = n(723702),
-    W = n(19575);
-function X(e) {
-    let { mfaChallenge: t, finish: n, setSlide: a, onClose: i, headerAlignStart: r } = e,
-        [o, d] = l.useState(!1),
-        [c, h] = l.useState(null),
-        { challenge: m } = t.methods.find((e) => "webauthn" === e.type),
-        x = l.useCallback(async () => {
-            d(!0), h(null);
-            let e = O.isPlatformEmbedded && W.Ay.supportsFeature(Z.BYE.WEBAUTHN) ? W.Ay.webAuthnAuthenticate : B.J;
+var L = s(84948),
+    W = s(293731),
+    O = s(464477),
+    q = s(723702),
+    z = s(19575);
+function M(e) {
+    let { mfaChallenge: t, finish: s, setSlide: i, onClose: a } = e,
+        [r, o] = l.useState(!1),
+        [c, d] = l.useState(null),
+        { challenge: u } = t.methods.find((e) => "webauthn" === e.type),
+        h = l.useCallback(async () => {
+            o(!0), d(null);
+            let e = q.isPlatformEmbedded && z.Ay.supportsFeature(D.BYE.WEBAUTHN) ? z.Ay.webAuthnAuthenticate : W.J;
             try {
-                let t = await e(m);
+                let t = await e(u);
                 try {
-                    await n({ mfaType: "webauthn", data: t });
+                    await s({ mfaType: "webauthn", data: t });
                 } catch (e) {
-                    e instanceof T.oh
+                    e instanceof _.oh
                         ? (e.status >= 400 && e.status < 500 && (await L.A.signalUnknownCredential(t)),
-                          h(g.intl.string(g.t.xSCvBf)))
-                        : ((0, M.Os)(e, {}), h(e.message));
+                          d(f.intl.string(f.t.xSCvBf)))
+                        : ((0, O.Os)(e, {}), d(e.message));
                 }
             } catch (e) {
-                (0, M.Os)(e, { extra: { error_type: "webauthn_api_error" } }), h(g.intl.string(g.t.xSCvBf));
+                (0, O.Os)(e, { extra: { error_type: "webauthn_api_error" } }), d(f.intl.string(f.t.xSCvBf));
             } finally {
-                d(!1);
+                o(!1);
             }
-        }, [m, n]);
-    return (0, s.jsxs)(s.Fragment, {
+        }, [u, s]);
+    return (0, n.jsxs)(n.Fragment, {
         children: [
-            (0, s.jsx)(y, { onClose: i, headerAlignStart: r }),
-            null != c && (0, s.jsx)(p, { children: (0, s.jsx)(j, { error: c }) }),
-            (0, s.jsx)(b, {
+            (0, n.jsx)(C, { onClose: a }),
+            null != c && (0, n.jsx)(p, { children: (0, n.jsx)(b, { error: c }) }),
+            (0, n.jsx)(y, {
                 mfaChallenge: t,
-                setSlide: a,
-                trailingButton: (0, s.jsx)(u.$, {
+                setSlide: i,
+                trailingButton: (0, n.jsx)(m.$, {
                     variant: "primary",
-                    text: g.intl.string(g.t.Xr3Eks),
-                    loading: o,
-                    onClick: x,
+                    text: f.intl.string(f.t.Xr3Eks),
+                    loading: r,
+                    onClick: h,
                     fullWidth: !0,
                 }),
             }),
         ],
     });
 }
-function $(e) {
-    let {
-            mfaChallenge: t,
-            mfaFinish: n,
-            onEarlyClose: r,
-            onClose: o,
-            headerAlignStart: d,
-            width: c = 440,
-            embedded: u = !1,
-        } = e,
-        [h, m] = l.useState(t.methods[0]?.type ?? "select"),
-        [p, j] = l.useState(h);
-    async function b(e) {
-        let { mfaType: s, data: l } = e;
-        await n({ mfaType: s, data: l, ticket: t.ticket }), null != o && o();
+function X(e) {
+    let { mfaChallenge: t, mfaFinish: s, onEarlyClose: i, onClose: o, embedded: c = !1 } = e,
+        [d, u] = l.useState(t.methods[0]?.type ?? "select"),
+        [h, m] = l.useState(d);
+    async function x(e) {
+        let { mfaType: n, data: l } = e;
+        await s({ mfaType: n, data: l, ticket: t.ticket }), null != o && o();
     }
-    let y = { mfaChallenge: t, finish: b, setSlide: m, onClose: r, headerAlignStart: d };
-    return (0, s.jsxs)(f.Provider, {
-        value: u,
+    let p = { mfaChallenge: t, finish: x, setSlide: u, onClose: i };
+    return (0, n.jsxs)(j.Provider, {
+        value: c,
         children: [
-            (0, s.jsxs)(a.t, {
-                activeSlide: h,
-                width: c,
-                onSlideReady: j,
+            (0, n.jsxs)(a.t, {
+                activeSlide: d,
+                width: "100%",
+                onSlideReady: m,
                 children: [
-                    (0, s.jsx)(a.q, { id: "select", children: (0, s.jsx)(N, { ...y }) }),
-                    (0, s.jsx)(a.q, { id: "webauthn", children: (0, s.jsx)(X, { ...y }) }),
-                    (0, s.jsx)(a.q, { id: "totp", children: (0, s.jsx)(F, { ...y, isSlideReady: "totp" === p }) }),
-                    (0, s.jsx)(a.q, { id: "sms", children: (0, s.jsx)(D, { ...y, isSlideReady: "sms" === p }) }),
-                    (0, s.jsx)(a.q, { id: "backup", children: (0, s.jsx)(C, { ...y }) }),
-                    (0, s.jsx)(a.q, {
+                    (0, n.jsx)(a.q, { id: "select", children: (0, n.jsx)(Z, { ...p }) }),
+                    (0, n.jsx)(a.q, { id: "webauthn", children: (0, n.jsx)(M, { ...p }) }),
+                    (0, n.jsx)(a.q, { id: "totp", children: (0, n.jsx)(F, { ...p, isSlideReady: "totp" === h }) }),
+                    (0, n.jsx)(a.q, { id: "sms", children: (0, n.jsx)(T, { ...p, isSlideReady: "sms" === h }) }),
+                    (0, n.jsx)(a.q, { id: "backup", children: (0, n.jsx)(S, { ...p }) }),
+                    (0, n.jsx)(a.q, {
                         id: "backup_ack",
-                        children: (0, s.jsx)(v, { ...y, isSlideReady: "backup_ack" === p }),
+                        children: (0, n.jsx)(w, { ...p, isSlideReady: "backup_ack" === h }),
                     }),
-                    (0, s.jsx)(a.q, {
+                    (0, n.jsx)(a.q, {
                         id: "password",
-                        children: (0, s.jsx)(w, { ...y, isSlideReady: "password" === p }),
+                        children: (0, n.jsx)(E, { ...p, isSlideReady: "password" === h }),
                     }),
                 ],
             }),
-            u &&
-                (0, s.jsx)("div", {
-                    className: x.c5,
-                    children: (0, s.jsx)(i.Q, {
-                        text: g.intl.string(g.t["1MrpWO"]),
+            c &&
+                (0, n.jsx)("div", {
+                    className: g.c5,
+                    children: (0, n.jsx)(r.Q, {
+                        text: f.intl.string(f.t["1MrpWO"]),
                         textVariant: "text-sm/medium",
-                        onClick: r,
+                        onClick: i,
                     }),
                 }),
         ],
     });
 }
-function q(e) {
-    let { mfaChallenge: t, finish: n, transitionState: l, onClose: a } = e;
-    return (0, s.jsx)(r.EO, {
-        "data-migration-pending": !0,
+function P(e) {
+    let { mfaChallenge: t, finish: s, transitionState: l, onClose: a } = e;
+    return (0, n.jsx)(i.d, {
         transitionState: l,
-        size: r.rI.SMALL,
-        "aria-label": g.intl.string(g.t.saHocI),
-        parentComponent: "MFAModal",
-        children: (0, s.jsx)($, { mfaChallenge: t, mfaFinish: n, onClose: a, onEarlyClose: a }),
+        onClose: a,
+        size: "sm",
+        "aria-label": f.intl.string(f.t.saHocI),
+        children: (0, n.jsx)(X, { mfaChallenge: t, mfaFinish: s, onClose: a, onEarlyClose: a }),
     });
 }
-function z(e, t, n) {
-    (0, o.openModal)((n) => (0, s.jsx)(q, { finish: t, mfaChallenge: e, ...n }), {
+function $(e, t, s) {
+    (0, o.openModalLazy)(() => Promise.resolve((s) => (0, n.jsx)(P, { finish: t, mfaChallenge: e, ...s })), {
         onCloseCallback: () => {
-            n(Error(g.intl.string(g.t.N2yb9a)));
+            s(Error(f.intl.string(f.t.N2yb9a)));
         },
     });
 }
