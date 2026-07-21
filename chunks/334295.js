@@ -694,46 +694,47 @@ var tC = n(866665),
     ty = n(267102),
     tD = n(487487);
 function tv(e) {
-    let { channel: t } = e,
-        n = s.useRef(null),
-        i = s.useRef(0),
-        [r, l] = s.useState(!1),
-        [o, d] = s.useState(!1),
-        c = (0, ty.Us)() === J.BRT.OVERLAY,
-        u = o || r,
-        _ = s.useCallback(
-            async (e, n, r) => {
-                d(!0),
+    let { channel: t, closePopout: n } = e,
+        i = s.useRef(null),
+        r = s.useRef(0),
+        [l, o] = s.useState(!1),
+        [d, c] = s.useState(!1),
+        u = (0, ty.Us)() === J.BRT.OVERLAY,
+        _ = d || l,
+        E = s.useCallback(
+            async (e, i, a) => {
+                c(!0),
+                    n(),
                     await (0, tR.f)({
-                        userImage: { data: e, file: n, image: r },
+                        userImage: { data: e, file: i, image: a },
                         guildId: t?.guild_id ?? null,
                         analyticsLocation: {
                             section: J.JJy.EXPRESSION_PICKER,
                             page: t?.guild_id != null ? J.liQ.GUILD_CHANNEL : J.liQ.DM_CHANNEL,
                         },
                     }),
-                    (i.current += 1),
-                    d(!1);
+                    (r.current += 1),
+                    c(!1);
             },
-            [t],
+            [t, n],
         );
     return (0, a.jsxs)(a.Fragment, {
         children: [
             (0, a.jsx)(tC.m, {
                 asContainer: !0,
-                text: c ? et.intl.string(et.t.RMbedC) : null,
+                text: u ? et.intl.string(et.t.RMbedC) : null,
                 children: (0, a.jsx)(tO.$, {
                     text: et.intl.string(et.t.iMJO37),
                     variant: "secondary",
                     onClick: function () {
-                        n.current?.activateUploadDialogue();
+                        i.current?.activateUploadDialogue();
                     },
-                    disabled: u || c,
+                    disabled: _ || u,
                 }),
             }),
             (0, a.jsx)("div", {
                 className: tD.F,
-                children: (0, a.jsx)(tL.Ay, { ref: n, onChange: _, setLoading: l, disabled: u }, i.current),
+                children: (0, a.jsx)(tL.Ay, { ref: i, onChange: E, setLoading: o, disabled: _ }, r.current),
             }),
         ],
     });
@@ -936,8 +937,9 @@ let tZ = function (e) {
             onBurstReactionToggle: A,
             renderHeader: h,
             showAddEmojiButton: I = !0,
+            closePopout: f,
         } = e,
-        f = (0, a.jsxs)(a.Fragment, {
+        p = (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsx)(tz, {
                     emojiListRef: s,
@@ -950,10 +952,10 @@ let tZ = function (e) {
                 }),
                 i === ef.EmojiIntention.REACTION ? (0, a.jsx)(tN, { checked: E, onClick: A }) : null,
                 n ?? (0, a.jsx)(tj, { searchBarRef: u, className: tq.fx, selectedSurrogate: _ }),
-                i !== ef.EmojiIntention.NO_CUSTOM_EMOJI && I ? (0, a.jsx)(tv, { channel: t }) : null,
+                i !== ef.EmojiIntention.NO_CUSTOM_EMOJI && I ? (0, a.jsx)(tv, { channel: t, closePopout: f }) : null,
             ],
         });
-    return (0, a.jsx)("div", { className: o()(tq.wx, r), children: null != h ? h(f) : f });
+    return (0, a.jsx)("div", { className: o()(tq.wx, r), children: null != h ? h(p) : p });
 };
 var tX = n(182922),
     tQ = n(363195),
@@ -2614,6 +2616,7 @@ let n6 = c()(eu.bo, 200),
                     },
                     renderHeader: W,
                     showAddEmojiButton: q,
+                    closePopout: c,
                 }),
                 td = [];
             r === ef.EmojiIntention.REACTION && td.push(E.M.SUPER_REACTIONS_NITRO_MARKETING),
