@@ -1,19 +1,18 @@
 "use strict";
 n.d(t, {
-    Bm: () => v,
+    Bm: () => D,
     m8: () => h,
     n6: () => m,
     Ig: () => f,
     OO: () => A,
     jS: () => E,
-    ev: () => g,
-    aD: () => S,
+    aD: () => g,
+    Qj: () => R,
     uK: () => _,
-    Qj: () => L,
     lk: () => T,
     Mk: () => y,
+    d: () => L,
     sy: () => I,
-    d: () => D,
 });
 var i,
     r,
@@ -102,51 +101,45 @@ let m = (0, o.mj)({
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
 let g = (0, o.mj)({
-        name: "2026-04-quest-heartbeat-executable-fingerprint",
-        kind: "user",
-        defaultConfig: { enabled: !1 },
-        variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
-    }),
-    S = (0, o.mj)({
-        name: "2026-05-quest-home-tile-redesign",
-        kind: "user",
-        defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
-        variations: {
-            0: { useNewLayoutWithSearch: !1, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
-            1: { useNewLayoutWithSearch: !0, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
-            2: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !0 },
-            3: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !1, ctaOnHover: !0 },
-            4: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !1 },
-        },
-    });
+    name: "2026-05-quest-home-tile-redesign",
+    kind: "user",
+    defaultConfig: { useNewLayoutWithSearch: !1, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
+    variations: {
+        0: { useNewLayoutWithSearch: !1, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
+        1: { useNewLayoutWithSearch: !0, useNewTile: !1, useLargeFeaturedTiles: !1, ctaOnHover: !1 },
+        2: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !0 },
+        3: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !1, ctaOnHover: !0 },
+        4: { useNewLayoutWithSearch: !0, useNewTile: !0, useLargeFeaturedTiles: !0, ctaOnHover: !1 },
+    },
+});
 (0, o.mj)({
     name: "2026-05-bounty-stale-refresh-quest-home",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-let N = (0, o.mj)({
+let S = (0, o.mj)({
         name: "2026-06-remove-quest-home-hero",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     }),
-    C = new Date("2026-06-20T10:00:00-07:00"),
-    O = new Date("2026-06-23T10:00:00-07:00"),
-    R = 5 * d.A.Millis.MINUTE;
-function L() {
+    N = new Date("2026-07-31T10:00:00-07:00"),
+    C = new Date("2026-08-07T10:00:00-07:00"),
+    O = 5 * d.A.Millis.MINUTE;
+function R() {
     let [e, t] = s.useState(() => new Date());
     s.useEffect(() => {
-        let e = setInterval(() => t(new Date()), R);
+        let e = setInterval(() => t(new Date()), O);
         return () => clearInterval(e);
     }, []);
-    let n = e >= C && e < O,
-        { enabled: i } = N.useConfig({
+    let n = e >= N && e < C,
+        { enabled: i } = S.useConfig({
             location: n ? "remove-quest-home-hero-eligible" : "remove-quest-home-hero-ineligible",
         });
     return !!n && i;
 }
-var D =
+var L =
     (((a = {})[(a.CONTROL = 0)] = "CONTROL"),
     (a[(a.NEW_LAYOUT_WITH_SEARCH = 1)] = "NEW_LAYOUT_WITH_SEARCH"),
     (a[(a.LARGE_MASK_MARGIN = 2)] = "LARGE_MASK_MARGIN"),
@@ -165,7 +158,7 @@ let y = (0, o.mj)({
             4: { enabled: !0, variant: 4 },
         },
     }),
-    v = (0, o.mj)({
+    D = (0, o.mj)({
         name: "2026-07-quest-bar-secondary-cta",
         kind: "user",
         defaultConfig: { enabled: !1, showPlayInstantlyLabel: !1 },
