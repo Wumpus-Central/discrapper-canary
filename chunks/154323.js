@@ -1,11 +1,12 @@
 "use strict";
-n.d(t, { A: () => l });
+n.d(t, { A: () => o });
 var i = n(17928),
     r = n(228366);
-let s = {
+let a = {
         highlight_mana_buttons: "Highlight mana buttons",
         highlight_mana_components: "Highlight mana components",
         highlight_mana_text: "Mana Text Migration Highlighter",
+        highlight_mana_text_overrides: "Mana Text Migration Highlighter \u2014 audit overridden Text (dashed red)",
         highlight_void_toggleables: "Highlight toggleable components (Checkbox, VoidRadioGroup, Switch)",
         highlight_void_buttons: "Highlight void buttons",
         use_topic_dividers_in_chat: "Use summary topics as divider content in chat instead of string formatted dates.",
@@ -20,34 +21,34 @@ let s = {
         ss03: "Italic - full height forms (W,M)",
         ss04: "Italic - alternate figures (3,4,5,6,7,8,9)",
     },
-    a = {};
-class o extends i.Ay.DeviceSettingsStore {
+    s = {};
+class l extends i.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDesignTogglesStore";
     static persistKey = "DevToolsDesignTogglesStore";
     getUserAgnosticState() {
-        return { toggleStates: a };
+        return { toggleStates: s };
     }
     initialize(e) {
-        for (var t in s) {
+        for (var t in a) {
             let n = e?.toggleStates?.[t] ?? !1;
-            n && (a[t] = n);
+            n && (s[t] = n);
         }
     }
     get(e) {
-        return a[e] ?? !1;
+        return s[e] ?? !1;
     }
     enabled() {
-        return a;
+        return s;
     }
     allWithDescriptions() {
-        return Object.entries(s).map((e) => {
+        return Object.entries(a).map((e) => {
             let [t, n] = e;
-            return [t, a[t] ?? !1, n];
+            return [t, s[t] ?? !1, n];
         });
     }
 }
-let l = new o(r.h, {
+let o = new l(r.h, {
     DEV_TOOLS_DESIGN_TOGGLE_WEB_SET: function (e) {
-        !1 === e.value ? delete a[e.toggle] : (a[e.toggle] = e.value);
+        !1 === e.value ? delete s[e.toggle] : (s[e.toggle] = e.value);
     },
 });

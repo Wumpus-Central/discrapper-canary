@@ -31,8 +31,8 @@ function p(e) {
             fontScaleClass: S,
             mouseMode: N,
             keyboardModeEnabled: C,
-            saturation: R,
-            desaturateUserColors: O,
+            saturation: O,
+            desaturateUserColors: R,
             useForcedColors: L,
             systemForcedColors: y,
             useReducedMotion: D,
@@ -49,7 +49,8 @@ function p(e) {
         F = (0, E.A)("highlight_mana_components"),
         V = (0, E.A)("highlight_mana_text"),
         B = (0, E.A)("highlight_void_toggleables"),
-        H = (0, E.A)("highlight_void_buttons");
+        H = (0, E.A)("highlight_void_buttons"),
+        j = (0, E.A)("highlight_mana_text_overrides");
     r.useEffect(() => {
         if (!V) return;
         let e = () => {},
@@ -65,10 +66,26 @@ function p(e) {
                 (t = !0), e();
             }
         );
-    }, [V]);
-    let j = (0, o.bG)([A.Ay], () => A.Ay.hdrDynamicRange),
-        W = `font-size: ${g}%; --saturation-factor: ${R}; dynamic-range-limit: ${j}; ${x}`,
-        Y = s()(
+    }, [V]),
+        r.useEffect(() => {
+            if (!j) return;
+            let e = () => {},
+                t = !1;
+            return (
+                n
+                    .e("89064")
+                    .then(n.bind(n, 977691))
+                    .then((n) => {
+                        t || (e = n.startOverrideAudit());
+                    }),
+                () => {
+                    (t = !0), e();
+                }
+            );
+        }, [j]);
+    let W = (0, o.bG)([A.Ay], () => A.Ay.hdrDynamicRange),
+        Y = `font-size: ${g}%; --saturation-factor: ${O}; dynamic-range-limit: ${W}; ${x}`,
+        K = s()(
             ((t = ""),
             (0, _.isWindows)()
                 ? (t = "platform-win")
@@ -82,7 +99,7 @@ function p(e) {
             `density-${T}`,
             S,
             {
-                "low-saturation": R <= 0.4,
+                "low-saturation": O <= 0.4,
                 "keyboard-mode": C,
                 "decorate-links": v,
                 "no-webkit-scrollbar": !w,
@@ -92,7 +109,7 @@ function p(e) {
                 "full-motion": !D,
                 "is-mobile": l.Fr,
                 "app-focused": m,
-                "desaturate-user-colors": O,
+                "desaturate-user-colors": R,
                 "disable-forced-colors": !L && "active" === y,
                 "enable-forced-colors": L,
                 "visual-refresh": !0,
@@ -101,17 +118,18 @@ function p(e) {
                 "highlight-mana-buttons": k,
                 "highlight-mana-components": F,
                 "highlight-mana-text": V,
+                "highlight-mana-text-overrides": j,
                 "highlight-void-toggleables": B,
                 "highlight-void-buttons": H,
                 "high-contrast-mode": M,
             },
             a,
         ),
-        K = r.useMemo(() => ({ lang: f, style: W, className: Y, focused: m }), [f, W, Y, m]);
+        $ = r.useMemo(() => ({ lang: f, style: Y, className: K, focused: m }), [f, Y, K, m]);
     return (
         (0, c.Ay)(() => {
             h.Ay.setTrafficLightPosition({ x: 9, y: 9 });
         }),
-        (0, i.jsx)(I.Provider, { value: K, children: U })
+        (0, i.jsx)(I.Provider, { value: $, children: U })
     );
 }

@@ -29,6 +29,11 @@
     }
 }
 
+.highlight-mana-text-overrides [data-mana-overridden] {
+    outline: 1px dashed var(--red-400);
+    outline-offset: -1px
+}
+
 .highlight-mana-buttons [data-mana-component=button] {
     box-shadow: 0 0 6px 2px var(--pink-51), 0 0 8px 4px var(--opacity-blurple-80)
 }
