@@ -5792,6 +5792,7 @@ var rQ =
         (eX[(eX.N = 78)] = "N"),
         (eX[(eX.P = 80)] = "P"),
         (eX[(eX.S = 83)] = "S"),
+        (eX[(eX.T = 84)] = "T"),
         (eX[(eX.U = 85)] = "U"),
         (eX[(eX.COMMA = 188)] = "COMMA"),
         eX),
