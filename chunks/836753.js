@@ -29,7 +29,7 @@ class E extends s.A {
                 async () => {
                     let { default: e } = await Promise.all([
                         n.e("8822"),
-                        n.e("88427"),
+                        n.e("55"),
                         n.e("35285"),
                         n.e("65420"),
                         n.e("3056"),

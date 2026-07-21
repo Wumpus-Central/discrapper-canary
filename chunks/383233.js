@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { Ay: () => h, _c: () => _, go: () => c, vF: () => d }), n(938796), n(321073);
+n.d(t, { Ay: () => E, _c: () => _, go: () => c, vF: () => u }), n(938796), n(321073);
 var i = n(485845),
     r = n(665260),
-    s = n(315069),
-    a = n(427930),
-    o = n(505527),
-    l = n(815807),
-    u = n(652215);
-class c extends s.A {
+    a = n(315069),
+    s = n(427930),
+    l = n(505527),
+    o = n(815807),
+    d = n(652215);
+class c extends a.A {
     type;
     content;
     attachments;
@@ -22,7 +22,7 @@ class c extends s.A {
     soundboardSounds;
     constructor(e) {
         super(),
-            (this.type = e.type ?? u.lAJ.DEFAULT),
+            (this.type = e.type ?? d.lAJ.DEFAULT),
             (this.content = e.content ?? ""),
             (this.attachments = e.attachments ?? []),
             (this.embeds = e.embeds ?? []),
@@ -39,7 +39,7 @@ class c extends s.A {
         return (0, r.Lt)(this.flags, e);
     }
 }
-class d extends s.A {
+class u extends a.A {
     message;
     moderatorReport;
     constructor(e) {
@@ -47,9 +47,9 @@ class d extends s.A {
     }
 }
 function _(e) {
-    return (0, r.Lt)(e.flags, u.pr7.IS_COMPONENTS_V2);
+    return (0, r.Lt)(e.flags, d.pr7.IS_COMPONENTS_V2);
 }
-let h = class extends c {
+let E = class extends c {
     id;
     channel_id;
     author;
@@ -95,6 +95,7 @@ let h = class extends c {
     isUnsupported;
     changelogId;
     mediaMention;
+    additionalName;
     colorString;
     nick;
     constructor(e) {
@@ -113,7 +114,7 @@ let h = class extends c {
             (this.mentionEveryone = e.mentionEveryone || !1),
             (this.tts = e.tts || !1),
             (this.giftCodes = e.giftCodes || []),
-            (this.state = e.state || u.cmJ.SENT),
+            (this.state = e.state || d.cmJ.SENT),
             (this.nonce = e.nonce ?? void 0),
             (this.blocked = e.blocked || !1),
             (this.ignored = e.ignored || !1),
@@ -146,7 +147,8 @@ let h = class extends c {
             (this.messageSnapshots = e.messageSnapshots || []),
             (this.isUnsupported = e.isUnsupported || !1),
             (this.changelogId = e.changelog_id ?? (e.changelogId || null)),
-            (this.mediaMention = e.media_mention ?? e.mediaMention ?? null);
+            (this.mediaMention = e.media_mention ?? e.mediaMention ?? null),
+            (this.additionalName = e.lobby_member?.additional_name ?? e.additionalName ?? null);
     }
     isEdited() {
         return null != this.editedTimestamp;
@@ -155,49 +157,49 @@ let h = class extends c {
         return this.channel_id;
     }
     getReaction(e) {
-        return this.reactions.find((t) => (0, l.i6)(t.emoji, e));
+        return this.reactions.find((t) => (0, o.i6)(t.emoji, e));
     }
     getContentMessage() {
-        return (0, a.A)(this) ? this.messageSnapshots[0].message : this;
+        return (0, s.A)(this) ? this.messageSnapshots[0].message : this;
     }
     userHasReactedWithEmoji(e, t) {
         return this.reactions.some((n) => {
-            if ((0, l.i6)(n.emoji, e)) return (t && n.me) || (!t && n.me_burst);
+            if ((0, o.i6)(n.emoji, e)) return (t && n.me) || (!t && n.me_burst);
         });
     }
     addReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
-            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : o.v.NORMAL,
+            i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : l.v.NORMAL,
             r = -1,
-            s = this.reactions.map((s, a) => {
-                if ((0, l.i6)(s.emoji, e))
-                    if (((r = a), i === o.v.BURST)) {
-                        if (t && s.me_burst) return s;
-                        let e = s.burst_count + 1,
-                            i = null != s.burst_colors && s.burst_colors.length > 0 ? s.burst_colors : n;
-                        s = {
-                            ...s,
-                            me_burst: !!t || s.me_burst,
+            a = this.reactions.map((a, s) => {
+                if ((0, o.i6)(a.emoji, e))
+                    if (((r = s), i === l.v.BURST)) {
+                        if (t && a.me_burst) return a;
+                        let e = a.burst_count + 1,
+                            i = null != a.burst_colors && a.burst_colors.length > 0 ? a.burst_colors : n;
+                        a = {
+                            ...a,
+                            me_burst: !!t || a.me_burst,
                             burst_count: e,
-                            count_details: { ...s.count_details, burst: e },
+                            count_details: { ...a.count_details, burst: e },
                             burst_colors: i,
                         };
-                    } else if (i === o.v.VOTE) {
-                        let e = s.count_details?.vote ?? 0,
-                            n = t && s.me_vote ? e : e + 1;
-                        s = { ...s, count_details: { ...s.count_details, vote: n }, me_vote: !!t || s.me_vote };
+                    } else if (i === l.v.VOTE) {
+                        let e = a.count_details?.vote ?? 0,
+                            n = t && a.me_vote ? e : e + 1;
+                        a = { ...a, count_details: { ...a.count_details, vote: n }, me_vote: !!t || a.me_vote };
                     } else {
-                        if (t && s.me) return s;
-                        let e = s.count + 1;
-                        s = { ...s, count: e, count_details: { ...s.count_details, normal: e }, me: !!t || s.me };
+                        if (t && a.me) return a;
+                        let e = a.count + 1;
+                        a = { ...a, count: e, count_details: { ...a.count_details, normal: e }, me: !!t || a.me };
                     }
-                return s;
+                return a;
             });
         return (
             -1 === r &&
-                (i === o.v.BURST
-                    ? s.push({
+                (i === l.v.BURST
+                    ? a.push({
                           emoji: e,
                           me: !1,
                           me_burst: t,
@@ -206,8 +208,8 @@ let h = class extends c {
                           burst_count: 1,
                           burst_colors: n,
                       })
-                    : i === o.v.VOTE
-                      ? s.push({
+                    : i === l.v.VOTE
+                      ? a.push({
                             emoji: e,
                             me: !1,
                             me_burst: !1,
@@ -217,7 +219,7 @@ let h = class extends c {
                             burst_count: 0,
                             burst_colors: [],
                         })
-                      : s.push({
+                      : a.push({
                             emoji: e,
                             me: t,
                             me_burst: !1,
@@ -226,22 +228,22 @@ let h = class extends c {
                             burst_count: 0,
                             burst_colors: [],
                         })),
-            this.set("reactions", s)
+            this.set("reactions", a)
         );
     }
     addReactionBatch(e, t) {
         return e.reduce((e, n) => {
-            let { users: i, emoji: r, reactionType: s } = n;
-            return i.reduce((e, n) => e.addReaction(r, n === t, [], s), e);
+            let { users: i, emoji: r, reactionType: a } = n;
+            return i.reduce((e, n) => e.addReaction(r, n === t, [], a), e);
         }, this);
     }
     removeReaction(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.v.NORMAL,
+            n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : l.v.NORMAL,
             i = -1,
-            r = this.reactions.map((r, s) => {
-                if ((0, l.i6)(r.emoji, e)) {
-                    if (n === o.v.BURST) {
+            r = this.reactions.map((r, a) => {
+                if ((0, o.i6)(r.emoji, e)) {
+                    if (n === l.v.BURST) {
                         let e = t && !r.me_burst ? r.burst_count : r.burst_count - 1;
                         r = {
                             ...r,
@@ -249,7 +251,7 @@ let h = class extends c {
                             me_burst: !t && r.me_burst,
                             count_details: { ...r.count_details, burst: e },
                         };
-                    } else if (n === o.v.VOTE) {
+                    } else if (n === l.v.VOTE) {
                         let e = r.count_details?.vote ?? 0,
                             n = t && !r.me_vote ? e : e - 1;
                         r = { ...r, count_details: { ...r.count_details, vote: n }, me_vote: !t && r.me_vote };
@@ -257,27 +259,27 @@ let h = class extends c {
                         let e = t && !r.me ? r.count : r.count - 1;
                         r = { ...r, count: e, me: !t && r.me, count_details: { ...r.count_details, normal: e } };
                     }
-                    i = s;
+                    i = a;
                 }
                 return r;
             }),
-            { count: s, burst_count: a, count_details: u } = r[i] ?? {},
-            c = u?.normal ?? 0,
-            d = u?.burst ?? 0,
-            _ = u?.vote ?? 0;
-        return -1 !== i && s <= 0 && a <= 0 && c <= 0 && d <= 0 && _ <= 0 && r.splice(i, 1), this.set("reactions", r);
+            { count: a, burst_count: s, count_details: d } = r[i] ?? {},
+            c = d?.normal ?? 0,
+            u = d?.burst ?? 0,
+            _ = d?.vote ?? 0;
+        return -1 !== i && a <= 0 && s <= 0 && c <= 0 && u <= 0 && _ <= 0 && r.splice(i, 1), this.set("reactions", r);
     }
     removeReactionsForEmoji(e) {
         return this.set(
             "reactions",
-            this.reactions.filter((t) => !(0, l.i6)(t.emoji, e)),
+            this.reactions.filter((t) => !(0, o.i6)(t.emoji, e)),
         );
     }
     isSystemDM() {
         return this.author.isSystemUser();
     }
     isCommandType() {
-        return this.type === u.lAJ.CHAT_INPUT_COMMAND || this.type === u.lAJ.CONTEXT_MENU_COMMAND;
+        return this.type === d.lAJ.CHAT_INPUT_COMMAND || this.type === d.lAJ.CONTEXT_MENU_COMMAND;
     }
     isPoll() {
         return null != this.poll;

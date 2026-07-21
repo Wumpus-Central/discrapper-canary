@@ -1,0 +1,116 @@
+.actionButtons_cc1819 {
+    background-color: var(--background-surface-highest);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex: 0 1 auto;
+    gap: 4px;
+    justify-content: space-between;
+    margin-inline-start: auto;
+    min-width: 0;
+    padding: 3px;
+    z-index: 1
+}
+
+.actionButton_cc1819 {
+    border-radius: 4px;
+    color: var(--interactive-text-default);
+    height: 32px;
+    transition: background-color .2s ease-in-out, color .2s ease-in-out;
+    width: 32px
+}
+
+.actionButton_cc1819:hover {
+    background-color: var(--background-mod-muted);
+    color: var(--interactive-text-hover)
+}
+
+.actionButton_cc1819.selected_cc1819,
+.actionButton_cc1819:active {
+    background-color: var(--background-mod-subtle);
+    color: var(--interactive-text-active)
+}
+
+.actionButtonWrapper_cc1819 {
+    padding: 0
+}
+
+.actionButtonInner_cc1819 {
+    align-items: center;
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    width: 24px
+}
+
+.topBar__6088c {
+    align-items: center;
+    gap: 12px;
+    grid-column: 1/span 5;
+    grid-row: 1;
+    padding-inline-end: 52px
+}
+
+.author__6088c,
+.topBar__6088c {
+    display: flex;
+    min-width: 0
+}
+
+.author__6088c {
+    flex: 0 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline-end: auto;
+    max-width: 184px;
+    pointer-events: none;
+    z-index: 1
+}
+
+.authorNameWrapper__6088c {
+    align-items: baseline;
+    display: flex;
+    white-space: nowrap
+}
+
+.authorName__6088c {
+    flex-shrink: 1;
+    overflow: hidden;
+    text-overflow: ellipsis
+}
+
+.authorAvatar__6088c {
+    flex: 0 0 auto
+}
+
+.timestamp__6088c {
+    color: var(--text-muted);
+    display: inline-block;
+    font-size: 12px;
+    height: auto;
+    line-height: 16px;
+    margin: 0;
+    vertical-align: middle
+}
+
+.closeButton__6088c {
+    inset-block-start: 0;
+    inset-inline-end: 0;
+    position: absolute;
+    z-index: 2
+}
+
+.carouselModal_d3a6f0 {
+    background: transparent !important;
+    border: none !important;
+    bottom: 0;
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 40px minmax(0, 184px) minmax(0, 1fr) minmax(0, 184px) 40px;
+    grid-template-rows: 40px 1fr 40px;
+    position: absolute;
+    top: 0;
+    inset-inline: 0;
+    margin: 36px 24px;
+    width: auto
+}
