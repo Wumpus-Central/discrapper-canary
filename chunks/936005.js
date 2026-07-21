@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { A: () => a });
+n.d(t, { A: () => s });
 let i = [
         ["position", "absolute"],
         ["top", "-100px"],
@@ -11,15 +11,18 @@ let i = [
     r = [
         ["width", "200px"],
         ["height", "200px"],
-    ];
-function a() {
+    ],
+    a = new Map();
+function s() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "";
     if ("u" < typeof document) return { width: 0, height: 0 };
-    let t = document.createElement("div"),
-        n = document.createElement("div");
-    for (let [e, n] of i) t.style[e] = n;
-    for (let [e, t] of r) n.style[e] = t;
-    t.appendChild(n), document.body.appendChild(t), (t.className = e);
-    let a = { width: t.offsetWidth - t.clientWidth, height: t.offsetHeight - t.clientHeight };
-    return document.body.removeChild(t), a;
+    let t = a.get(e);
+    if (null != t) return t;
+    let n = document.createElement("div"),
+        s = document.createElement("div");
+    for (let [e, t] of i) n.style[e] = t;
+    for (let [e, t] of r) s.style[e] = t;
+    n.appendChild(s), document.body.appendChild(n), (n.className = e);
+    let l = { width: n.offsetWidth - n.clientWidth, height: n.offsetHeight - n.clientHeight };
+    return document.body.removeChild(n), a.set(e, l), l;
 }
