@@ -12,13 +12,13 @@ var i,
     m = n.n(h),
     g = n(812729),
     p = n.n(g),
-    f = n(523939),
+    f = n(617498),
     x = n(866323),
     A = n(939249),
     E = n(834730),
     S = n(259788),
     I = n(302614),
-    v = n(652830);
+    v = n(767078);
 let j = { mass: 1, tension: 600, friction: 60, clamp: !0 };
 function T(e) {
     let { locked: t, pinned: n } = e,
@@ -142,7 +142,7 @@ var C = n(149741),
     eh = n(761661),
     em = n(652215),
     eg = n(375708),
-    ep = n(592571);
+    ep = n(931139);
 function ef(e) {
     let { participant: t } = e,
         n = t.user.id,
@@ -464,7 +464,7 @@ let eG = (e) => {
         { maxWidth: 0.75 * d.maxX, maxHeight: 0.75 * d.maxY },
     );
 };
-var eU = n(198815);
+var eU = n(598039);
 let eF = { mass: 1, tension: 250, friction: 18, clamp: !0 },
     eH = c.memo(function (e) {
         let {
@@ -562,7 +562,7 @@ let eF = { mass: 1, tension: 250, friction: 18, clamp: !0 },
         );
     });
 var eZ = n(392164),
-    eY = n(780227);
+    eY = n(4891);
 function eX(e) {
     var t, n;
     let i,
@@ -893,7 +893,7 @@ var eW = n(243721),
     eq = n(706712),
     eK = n(617710),
     eQ = n(321090),
-    eJ = n(670342);
+    eJ = n(552254);
 function e$(e) {
     let { locked: t, pinned: n, anchorLeft: i } = e,
         s = (0, y.bG)([eK.A], () => eK.A.getSocket()),
@@ -1127,8 +1127,8 @@ var e0 = n(417098),
     e5 = n(377802),
     e4 = n(348858),
     e8 = n(523875),
-    e7 = n(416696),
-    e9 = n(621956),
+    e9 = n(416696),
+    e7 = n(621956),
     te = n(446080),
     tt = n(922016),
     tn = n(615675),
@@ -1152,7 +1152,7 @@ var e0 = n(417098),
     tS = n(915725),
     tI = n(226640),
     tv = n(753070),
-    tj = n(788077);
+    tj = n(16590);
 function tT(e) {
     let { onClose: t } = e,
         n = (0, tp.Et)(),
@@ -1261,7 +1261,7 @@ var tC = n(414405),
     tF = n(46282),
     tH = n(489277),
     tZ = n(243612),
-    tY = n(78793);
+    tY = n(527217);
 function tX(e) {
     let t = c.useRef(null);
     return (
@@ -1553,7 +1553,7 @@ function tQ(e) {
         Component: x,
         events: { onMouseEnter: A, onMouseLeave: E },
         play: S,
-    } = (0, e7.c)(g ? "disable" : "enable");
+    } = (0, e9.c)(g ? "disable" : "enable");
     c.useEffect(() => () => S(), [g, S]);
     let I = tX(i);
     return (0, r.jsx)(tt.Y, {
@@ -1616,7 +1616,7 @@ function tJ(e) {
     let {
             Component: p,
             events: { onClick: f, onMouseEnter: x, onMouseLeave: A },
-        } = (0, e9.E)(),
+        } = (0, e7.E)(),
         E = tX(i),
         S = (0, y.bG)([t_.A, k.default], () => t_.A.isUserPlayingSounds(k.default.getId()), []) ? "green" : void 0;
     return (0, r.jsx)(tt.Y, {
@@ -1854,7 +1854,7 @@ function t3(e) {
         })
     );
 }
-var t6 = n(721309);
+var t6 = n(145973);
 let t5 = c.memo(function () {
     let e = (0, y.bG)([e6.A], () => e6.A.enabled),
         t = (0, d.Mn)("StreamerModeNotice");
@@ -1920,8 +1920,8 @@ function t4(e) {
     });
 }
 var t8 = n(534890),
-    t7 = n(364522),
-    t9 = n(994500),
+    t9 = n(364522),
+    t7 = n(994500),
     ne = n(996439);
 function nt(e, t) {
     return null == e ? null : e.isDM() ? (t.getUser(e.getRecipientId()) ?? null) : null;
@@ -2010,8 +2010,8 @@ function n_(e) {
 }
 var nR = n(429913),
     nO = n(34307),
-    nM = n(21197),
-    nk = n(321188);
+    nM = n(499214),
+    nk = n(16044);
 function nD(e) {
     return null != e && (e.isDM() || e.isMultiUserDM());
 }
@@ -2212,7 +2212,7 @@ function nG(e) {
         I = f === n?.id,
         v = eg.intl.string(nM.default.tYPfF2),
         j = (0, y.bG)([D.A], () => (n?.isThread() && null != n.parent_id ? D.A.getChannel(n.parent_id) : null), [n]),
-        T = (0, y.bG)([eu.default, t9.A], () => (null != j ? (0, tm.m1)(j, eu.default, t9.A) : null), [j]),
+        T = (0, y.bG)([eu.default, t7.A], () => (null != j ? (0, tm.m1)(j, eu.default, t7.A) : null), [j]),
         C = c.useMemo(() => {
             var e, t;
             return (
@@ -2221,7 +2221,7 @@ function nG(e) {
                 null == e
                     ? null
                     : e.isDM() && null != t
-                      ? t9.A.isFriend(t.id)
+                      ? t7.A.isFriend(t.id)
                           ? { tab: nE.x.FRIENDS, targetId: t.id }
                           : null
                       : (0, nx.ke)(e.type)
@@ -2434,7 +2434,7 @@ async function nq(e) {
         } catch {}
     }
 }
-var nK = n(870143),
+var nK = n(353911),
     nQ = (((s = {}).DEFAULT = "DEFAULT"), (s.CHANNEL_TYPE = "CHANNEL_TYPE"), s);
 let nJ = c.memo(function (e) {
     let { channelId: t, selectedVoiceChannelId: i, iconVariant: s = "DEFAULT" } = e,
@@ -2460,10 +2460,10 @@ let nJ = c.memo(function (e) {
             user: I,
             guild: v,
             channel: j,
-        } = (0, y.cf)([D.A, tG.A, eu.default, t9.A], () => {
+        } = (0, y.cf)([D.A, tG.A, eu.default, t7.A], () => {
             let e = D.A.getChannel(t) ?? null;
             if (null == e) return { label: eg.intl.string(eg.t.zLZPmk), user: null, guild: null, channel: null };
-            let n = (0, tm.m1)(e, eu.default, t9.A);
+            let n = (0, tm.m1)(e, eu.default, t7.A);
             return { label: n, user: nt(e, eu.default), guild: nn(e, tG.A), channel: e };
         }, [t]);
     c.useEffect(() => {
@@ -2537,8 +2537,8 @@ let nJ = c.memo(function (e) {
                         if (t.isDM() && null != s)
                             return void (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("10570"),
-                                    n.e("98273"),
+                                    n.e("97422"),
+                                    n.e("97705"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -2546,7 +2546,7 @@ let nJ = c.memo(function (e) {
                                     n.e("85968"),
                                     n.e("38730"),
                                     n.e("89673"),
-                                    n.e("52168"),
+                                    n.e("29787"),
                                     n.e("82073"),
                                     n.e("97558"),
                                     n.e("91994"),
@@ -2559,7 +2559,7 @@ let nJ = c.memo(function (e) {
                                     n.e("29422"),
                                     n.e("9291"),
                                     n.e("7059"),
-                                    n.e("95264"),
+                                    n.e("72883"),
                                     n.e("81609"),
                                     n.e("98199"),
                                     n.e("41175"),
@@ -2592,7 +2592,7 @@ let nJ = c.memo(function (e) {
                             if (null == i) return;
                             (0, l.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("41443"),
+                                    n.e("147"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("38730"),
@@ -2679,7 +2679,7 @@ var n$ = n(493336),
     n2 = n(232835),
     n3 = n(576705),
     n6 = n(625494),
-    n5 = n(933200);
+    n5 = n(905816);
 function n4(e) {
     let t,
         n,
@@ -2726,8 +2726,8 @@ function n4(e) {
           })
         : null;
 }
-var n8 = n(662562);
-function n7(e) {
+var n8 = n(173738);
+function n9(e) {
     let { dragStart: t, dragging: n } = e,
         [i, s] = (0, y.bG)([o.A], () => o.A.getSessionEntries(), [], ne.D),
         l = (0, y.bG)([o.A], () => o.A.getSelectedChannelId()),
@@ -2781,8 +2781,8 @@ function n7(e) {
     }, [A, E]);
     let S = (0, y.bG)([eu.default], () => nt(u, eu.default)),
         I = (0, y.bG)(
-            [eu.default, t9.A],
-            () => (null == u ? eg.intl.string(nM.default.uhJexs) : (0, tm.m1)(u, eu.default, t9.A)),
+            [eu.default, t7.A],
+            () => (null == u ? eg.intl.string(nM.default.uhJexs) : (0, tm.m1)(u, eu.default, t7.A)),
             [u],
         ),
         v = (0, y.bG)([D.A], () => {
@@ -2802,7 +2802,7 @@ function n7(e) {
                       onMouseDown: (e) => {
                           0 === e.button && t(eT.P.MOVE, e.clientX, e.clientY);
                       },
-                      children: (0, r.jsxs)(t7.d_, {
+                      children: (0, r.jsxs)(t9.d_, {
                           children: [
                               null != m
                                   ? (0, r.jsxs)(r.Fragment, {
@@ -2839,16 +2839,16 @@ function n7(e) {
           })
         : (0, r.jsx)(V.g, { emptyText: eg.intl.string(nM.default["xpv/t5"]), icon: t8.o });
 }
-let n9 = c.memo(function (e) {
+let n7 = c.memo(function (e) {
     let { locked: t, dragStart: n, dragging: i } = e;
-    return t ? null : (0, r.jsx)(n7, { dragStart: n, dragging: i });
+    return t ? null : (0, r.jsx)(n9, { dragStart: n, dragging: i });
 });
 var ie = n(428689),
     it = n(175203),
     ii = n(163432),
     is = n(799808),
     ir = n(731854),
-    il = n(669668);
+    il = n(477660);
 let ia = c.memo(function (e) {
         let { participant: t, channel: n, context: i } = e,
             s = t.user?.id;
@@ -2877,7 +2877,7 @@ let ia = c.memo(function (e) {
                     (0, F.YX)(em.uss.VIDEO, { type: F.Z5.CAMERA, value: F.IP.SETTINGS_OPENED, userId: s?.id }),
                         (0, l.L3)(i, async () => {
                             let { default: e } = await Promise.all([
-                                n.e("98273"),
+                                n.e("97705"),
                                 n.e("26132"),
                                 n.e("46652"),
                                 n.e("93190"),
@@ -3089,7 +3089,7 @@ var ig = n(518009),
     iA = n(57019),
     iE = n(191701),
     iS = n(672396),
-    iI = n(373960);
+    iI = n(113216);
 let iv = [];
 function ij(e) {
     return e.notification.id;
@@ -3342,7 +3342,7 @@ let iy = c.memo(function (e) {
             streamerModeLabel: () => eg.intl.string(eg.t["/VQax8"]),
             renderWidget(e) {
                 let { locked: t, dragStart: n, dragging: i } = e;
-                return (0, r.jsx)(n9, { locked: t, dragStart: n, dragging: i });
+                return (0, r.jsx)(n7, { locked: t, dragStart: n, dragging: i });
             },
             renderTitle: () => (0, r.jsx)(im.Pl, { children: eg.intl.string(eg.t["/VQax8"]) }),
             renderButtons: () => null,

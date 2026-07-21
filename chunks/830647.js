@@ -13,8 +13,8 @@ var l = n(627968),
     g = n(509434);
 if (/^(14256|21552)$/.test(n.j)) var h = n(141628);
 if (/^(14256|21552)$/.test(n.j)) var f = n(815021);
-var x = n(289873),
-    A = n(17928),
+var A = n(289873),
+    x = n(17928),
     E = n(689175),
     v = n(793574),
     C = n(688810),
@@ -61,7 +61,7 @@ var x = n(289873),
     eo = n(652215),
     eu = n(202541),
     ec = n(375708),
-    ed = n(789901);
+    ed = n(326085);
 let em = Object.freeze({
         size: 0,
         iconSize: 20,
@@ -85,14 +85,14 @@ function ef(e) {
             channelId: g,
             analyticsLocations: h,
             onCardClick: f,
-            onButtonClick: x,
+            onButtonClick: A,
         } = e,
         E = i.useRef(null),
-        v = (0, A.bG)([en.A], () => (0, Y.M)(en.A.theme)),
-        C = (0, A.bG)([q.Ay], () => q.Ay.useReducedMotion),
+        v = (0, x.bG)([en.A], () => (0, Y.M)(en.A.theme)),
+        C = (0, x.bG)([q.Ay], () => q.Ay.useReducedMotion),
         { isHoveringOrFocusing: I } = (0, ee.A)(E),
         { guildId: S } = (0, P.nG)(s.applicationId),
-        j = (0, A.bG)([J.A], () => J.A.getApplication(s.applicationId)),
+        j = (0, x.bG)([J.A], () => J.A.getApplication(s.applicationId)),
         { primaryIconAsset: _, primaryIconLabel: N } = i.useMemo(() => (0, P.Cv)(s, s.applicationId), [s]),
         {
             priceComponent: b,
@@ -195,14 +195,14 @@ function ef(e) {
         R = i.useCallback(
             (e) => {
                 e.stopPropagation(),
-                    x?.(),
+                    A?.(),
                     (0, er.a)(
                         s,
                         { isGift: !o, giftRecipient: a, giftingOrigin: eu.vQ.GUILD_CHANNEL },
                         { analyticsLocations: h, guildId: S },
                     );
             },
-            [s, a, o, h, S, x],
+            [s, a, o, h, S, A],
         );
     return (0, l.jsx)(Z.vN, {
         children: (0, l.jsxs)(X.s, {
@@ -268,8 +268,8 @@ function ef(e) {
         }),
     });
 }
-var ex = n(661492),
-    eA = n(212387),
+var eA = n(661492),
+    ex = n(212387),
     eE = n(662349);
 let ev = n(699976).Z.SIZE_90;
 function eC(e) {
@@ -298,7 +298,7 @@ function eC(e) {
                     analyticsLocations: c,
                 });
         }, [t.id, t.applicationId, n, c, d]),
-        x = i.useCallback(() => {
+        A = i.useCallback(() => {
             m?.(),
                 (0, er.a)(
                     t,
@@ -306,16 +306,16 @@ function eC(e) {
                     { analyticsLocations: c, guildId: h },
                 );
         }, [t, n, s, c, h, m]),
-        { label: A, icon: E } = (0, eE.h)({ wishlistOwner: n, isOwned: !1, shortText: !0 });
-    return (0, l.jsxs)(eA.A, {
+        { label: x, icon: E } = (0, eE.h)({ wishlistOwner: n, isOwned: !1, shortText: !0 });
+    return (0, l.jsxs)(ex.A, {
         sku: t,
         user: n,
         spec: ev,
         onClick: f,
-        "aria-label": ec.intl.formatToPlainString(ec.t.ZBB4Ty, { productName: (0, ex.T)(t) }),
+        "aria-label": ec.intl.formatToPlainString(ec.t.ZBB4Ty, { productName: (0, eA.T)(t) }),
         onHoverOrFocusChange: g,
         children: [
-            (0, l.jsx)(eE.A, { spec: ev, onClick: x, isHoveringOrFocusing: p, label: A, icon: E }),
+            (0, l.jsx)(eE.A, { spec: ev, onClick: A, isHoveringOrFocusing: p, label: x, icon: E }),
             a && !s && r === w.uS.WISHLIST
                 ? (0, l.jsx)(ei.n, { spec: ev, user: n, guildId: o ?? void 0, channelId: u ?? void 0 })
                 : null,
@@ -325,7 +325,7 @@ function eC(e) {
 var eI = n(910200),
     eS = n(360469),
     ej = n(518477),
-    e_ = n(932231);
+    e_ = n(95935);
 let eN = `vc-gifting-${(0, a.A)()}`,
     eb = Object.freeze([]);
 function ey(e) {
@@ -468,10 +468,10 @@ function eL(e) {
     let { className: t, userId: n, applicationId: s, channel: r, onClose: a, canShowCTA: o, onDismissCTA: u } = e;
     (0, j.P)(n);
     let { analyticsLocations: d } = (0, C.Ay)(v.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-        m = (0, A.bG)([F.default], () => F.default.getUser(n)),
+        m = (0, x.bG)([F.default], () => F.default.getUser(n)),
         p = i.useMemo(() => new N.R({ applicationId: s }), [s]),
-        g = (0, A.bG)([b.A], () => b.A.getWidgets(n)?.find((e) => e instanceof N.R && e.applicationId === s)),
-        h = (0, A.bG)([M.default], () => M.default.getId()),
+        g = (0, x.bG)([b.A], () => b.A.getWidgets(n)?.find((e) => e instanceof N.R && e.applicationId === s)),
+        h = (0, x.bG)([M.default], () => M.default.getId()),
         f = n === h,
         E = (function (e) {
             let {
@@ -494,21 +494,21 @@ function eL(e) {
                     canStartAuthorization: h,
                     startAuthorization: f,
                 } = (0, I.RD)(r ? c : void 0),
-                { analyticsLocations: x } = (0, C.Ay)(v.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-                A = i.useCallback(() => {
-                    h && f({ analyticsLocations: x });
-                }, [x, h, f]),
+                { analyticsLocations: A } = (0, C.Ay)(v.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
+                x = i.useCallback(() => {
+                    h && f({ analyticsLocations: A });
+                }, [A, h, f]),
                 E = i.useCallback(() => {
-                    s(), (0, T.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: x });
+                    s(), (0, T.openUserProfileModal)({ userId: t, sourceAnalyticsLocations: A });
                     let e = new N.R({ applicationId: n });
                     (0, y.Y5)(e),
                         (0, _.un)({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
                         setTimeout(() => (0, D.XA)(ej.jM.WIDGET_ADDED), 700);
-                }, [x, n, t, s]);
+                }, [A, n, t, s]);
             return r && !u && p && null != d
                 ? !g && h
                     ? (0, l.jsx)(eO, {
-                          text: ec.intl.format(o ? ec.t.YWa8L2 : ec.t.xxPgmT, { onClick: A }),
+                          text: ec.intl.format(o ? ec.t.YWa8L2 : ec.t.xxPgmT, { onClick: x }),
                           onDismiss: a,
                       })
                     : g && null == m && null != c
@@ -595,7 +595,7 @@ function eL(e) {
                 gap: 12,
                 children: [
                     null != $ && (0, l.jsx)(eI.O0, { Icon: $.Icon, text: $.text, endDatetime: $.endsAt }),
-                    z ? (0, l.jsx)(x.y, { className: e_.Zp }) : (0, l.jsx)("div", { className: e_.HV, children: W }),
+                    z ? (0, l.jsx)(A.y, { className: e_.Zp }) : (0, l.jsx)("div", { className: e_.HV, children: W }),
                 ],
             }),
             (0, l.jsx)(eR, { application: k, onClose: a }),
@@ -605,8 +605,8 @@ function eL(e) {
 function eM(e) {
     let { className: t, userId: n, applicationId: s, channel: r, onClose: a } = e,
         { analyticsLocations: o } = (0, C.Ay)(v.A.SLAYER_STOREFRONT_VC_GIFTING_PANEL),
-        u = (0, A.bG)([F.default], () => F.default.getUser(n)),
-        d = n === (0, A.bG)([M.default], () => M.default.getId()),
+        u = (0, x.bG)([F.default], () => F.default.getUser(n)),
+        d = n === (0, x.bG)([M.default], () => M.default.getId()),
         m = (0, H.A)(s),
         {
             status: p,
@@ -665,7 +665,7 @@ function eM(e) {
                 children: [(0, l.jsx)(eT, { application: m }), (0, l.jsx)(eD, { user: u, isGift: !d })],
             }),
             E
-                ? (0, l.jsx)(x.y, { className: e_.kc })
+                ? (0, l.jsx)(A.y, { className: e_.kc })
                 : (0, l.jsxs)(c.B, {
                       direction: "vertical",
                       gap: 12,

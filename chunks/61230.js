@@ -25,7 +25,7 @@ var t = l(627968),
     E = l(262763),
     M = l(402216),
     _ = l(375708),
-    R = l(255201);
+    R = l(775737);
 let S = function (e) {
     let { channel: n } = e,
         l = (0, a.bG)([C.A], () => C.A.isInChannel(n.id)),
@@ -110,7 +110,7 @@ let S = function (e) {
     });
 };
 var T = l(652215),
-    w = l(129728);
+    w = l(58552);
 function O(e) {
     let { channel: n, children: l, childWrapperClassName: a } = e,
         o = i.useRef(null),

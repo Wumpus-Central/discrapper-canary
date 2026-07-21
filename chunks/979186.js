@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(14214),
     N = n(775602),
     C = n(697138),
-    R = n(933958),
-    O = n(793574),
+    O = n(933958),
+    R = n(793574),
     L = n(688810),
     y = n(590703),
     D = n(681582),
@@ -36,7 +36,7 @@ var i = n(627968),
     G = n(267102),
     x = n(435558),
     k = n.n(x),
-    F = n(580929),
+    F = n(617498),
     V = n(258873),
     B = n(622242),
     H = n(731738),
@@ -57,7 +57,7 @@ var i = n(627968),
     ei = n(672396),
     er = n(652215),
     ea = n(375708),
-    es = n(481234);
+    es = n(519834);
 let el = k().throttle(
         () => {
             $.A.increment(
@@ -225,7 +225,7 @@ var eu = n(97469),
     ef = n(346142),
     ep = n(869146),
     eT = n(392164),
-    em = n(612802);
+    em = n(40666);
 function eg(e) {
     let { withTitleBar: t, isFullScreen: n } = e;
     return t && eA.isPlatformEmbedded && !n;
@@ -409,12 +409,12 @@ let eN = r.forwardRef(function (e, t) {
             isFullScreen: ep.A.isWindowFullScreen(e.windowKey),
         }));
         o()(null != n, "Missing guestWindow reference");
-        let { forcedColors: a, connectedEmbeddedActivity: s } = (0, A.cf)([N.Ay, R.Ay], () => ({
+        let { forcedColors: a, connectedEmbeddedActivity: s } = (0, A.cf)([N.Ay, O.Ay], () => ({
             forcedColors: N.Ay.useForcedColors ? "yes" : "no",
-            connectedEmbeddedActivity: R.Ay.getCurrentEmbeddedActivity(),
+            connectedEmbeddedActivity: O.Ay.getCurrentEmbeddedActivity(),
         }));
         (0, M.A)(n, !1);
-        let { analyticsLocations: l } = (0, L.Ay)(O.A.POPOUT_WINDOW),
+        let { analyticsLocations: l } = (0, L.Ay)(R.A.POPOUT_WINDOW),
             { clientThemesClassName: d, clientThemesCSS: c } = (0, y.Ay)(),
             u = (0, eu.NC)(),
             _ = e.themeOverride ?? u;

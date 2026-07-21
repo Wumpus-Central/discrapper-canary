@@ -1,3 +1,20 @@
-e.exports = JSON.parse(
-    '{"nBRtt/":["Essaie d\'entrer un mot-cl\xe9 diff\xe9rent pour trouver un salon vocal dans lequel streamer."],"sWGfr9":["Aucun salon vocal n\'est disponible"],"e72JFB":["S\xe9lectionner"],"agwSGA":["\xc0 l\'avenir, tu pourras utiliser cet onglet pour partager ton stream depuis des appareils sp\xe9cifiques comme ta cam\xe9ra."],"/z3YaZ":["Tu n\'as aucun dispositif de capture disponible."],"xpVzr3":[[8,"$link",["En savoir plus"],[[1,"helpdeskURL"]]]],"/ssDMU":["Images par seconde"],"H3QjqX":["Masquer l\'aper\xe7u du stream"],"eYyK1v":["Avanc\xe9s"],"FZ9Fl7":["Salons r\xe9cents"],"CmJX8M":["Images par seconde\xa0: ",[1,"frameRate"],"\xa0fps"],"+f+cqk":["Obtenir Nitro"],"YSdHVw":["Dispositif audio"],"P2pjmy":["Mode de streaming"],"VQ3gwU":["Automatique"],"m4jtlc":["Ajuster au contenu"],"G+k1q2":["Gaming"],"G5O1Mz":["Vid\xe9o plus fluide (",[1,"resolution"],", ",[1,"frameRate"],"\xa0fps)"],"MuHUFe":["Vid\xe9o plus fluide"],"8tcFL5":["Texte plus clair (",[1,"resolution"],", ",[1,"frameRate"],"\xa0fps)"],"y0JuYR":["Texte plus clair"],"7A4ZyI":["R\xe9solution\xa0: ",[1,"resolution"]],"hJMA+x":["S\xe9lectionne une Source"],"IG5n0X":["R\xe9solution de l\'\xe9cran"],"5AyH/p":["Streamer"],"SiHtXy":["Notifier mes amis dans le serveur"],"7eHfri":["Pr\xe9r\xe9glages"],"PYBXFU":["R\xe9solution"],"FzMGWR":["Stream muet"],"n9/rUq":["Audio du syst\xe8me"],"b0+Irf":["Couper l\'audio du stream"]}',
+t.r(
+    (a.exports = {
+        tile: "tile__4e9aa",
+        square: "square__4e9aa",
+        bar: "bar__4e9aa",
+        "full-height-bar": "full-height-bar__4e9aa",
+        tileButton: "tileButton__4e9aa",
+        disabled: "disabled__4e9aa",
+        content: "content__4e9aa",
+        hasError: "hasError__4e9aa",
+        overlay: "overlay__4e9aa",
+        isInteracting: "isInteracting__4e9aa",
+        iconContainer: "iconContainer__4e9aa",
+        iconAlignCenter: "iconAlignCenter__4e9aa",
+        iconAlignRight: "iconAlignRight__4e9aa",
+        deleteButtonWrapper: "deleteButtonWrapper__4e9aa",
+        resetButton: "resetButton__4e9aa",
+        overlayIcon: "overlayIcon__4e9aa",
+    }),
 );

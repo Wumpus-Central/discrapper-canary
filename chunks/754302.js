@@ -7,7 +7,7 @@ var r = n(503698),
     s = n(947641),
     l = n(297264),
     o = n(834730),
-    d = n(430345);
+    d = n(67313);
 function c(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", { className: d.MD, children: (0, i.jsx)("div", { className: d.Qs, children: t }) });

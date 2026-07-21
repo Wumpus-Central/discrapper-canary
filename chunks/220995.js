@@ -3,7 +3,7 @@ var n = t(627968),
     l = t(64700),
     s = t(503698),
     a = t.n(s),
-    r = t(523939),
+    r = t(617498),
     d = t(562708),
     u = t(17928),
     o = t(192308),
@@ -23,12 +23,12 @@ var n = t(627968),
     N = t(71393),
     y = t(576705),
     C = t(174459),
-    b = t(778768),
+    b = t(556387),
     j = t(652215);
 t(281405);
 var T = t(375708),
-    G = t(793042),
-    O = t(58298);
+    G = t(797210),
+    O = t(79362);
 function P(e) {
     return 1 - Math.pow(1 - e, 4);
 }
@@ -72,13 +72,13 @@ function k(e) {
             null != F &&
                 (0, o.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        t.e("70158"),
-                        t.e("52757"),
+                        t.e("27574"),
+                        t.e("21149"),
                         t.e("59957"),
                         t.e("28136"),
                         t.e("16084"),
                         t.e("22547"),
-                    ]).then(t.bind(t, 778929));
+                    ]).then(t.bind(t, 1310));
                     return (t) => (0, n.jsx)(e, { ...t, guild: F, channel: i, source: j.PE1.VOICE_INVITE_SUGGESTIONS });
                 });
         }, [F, i]),

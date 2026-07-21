@@ -78,7 +78,7 @@ var w = n(172218),
     eS = n(562153),
     ep = n(193663),
     eN = n(576420),
-    ex = n(540695);
+    ex = n(565679);
 function eT(e) {
     let {
             listItemId: t,
@@ -367,7 +367,7 @@ function e4(e) {
 }
 let e6 = F._3.SIZE_32,
     e5 = [ee.iq, ee.tR, ee.K7, ee.sp, ee.MK];
-function e9(e) {
+function e7(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
         d = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
@@ -447,7 +447,7 @@ function e9(e) {
         ],
     });
 }
-function e7(e) {
+function e9(e) {
     let {
             user: t,
             activities: n,
@@ -522,7 +522,7 @@ function e7(e) {
                     let { type: t } = e;
                     return t === ez.$pd.PLAYING;
                 }) == null && null != S
-                    ? (0, i.jsx)(e9, {
+                    ? (0, i.jsx)(e7, {
                           channel: S,
                           textVariant: "text-xs/medium",
                           activities: n ?? [],
@@ -594,7 +594,7 @@ let te = r.memo((e) => {
             currentUserPlayingActivities: C,
             renderSubtext: R,
             renderUserContextMenu: D,
-        } = e7({
+        } = e9({
             user: t,
             activities: n,
             relationshipType: E,
@@ -729,7 +729,7 @@ let tt = r.memo((e) => {
             status: x,
             renderSubtext: T,
             renderUserContextMenu: _,
-        } = e7({
+        } = e9({
             user: t,
             activities: n,
             relationshipType: l,
@@ -916,7 +916,7 @@ let tr = (0, tl.v)()(
         partialize: (e) => ({ showSuggestions: e.showSuggestions }),
     }),
 );
-var ts = n(188644);
+var ts = n(848460);
 function ta(e) {
     let { title: t, count: n, isCollapsed: l, canCollapse: r, onToggle: s, rightAccessory: a } = e,
         u = l && null != n ? `${t} (${n})` : t,
@@ -1063,8 +1063,8 @@ function tk(e, t) {
         i = r.useCallback(() => l(t), [t]);
     return (0, t_.RT)(e, t, l, tj), [n, i];
 }
-var tM = n(21197),
-    tO = n(39389);
+var tM = n(499214),
+    tO = n(266165);
 function tw(e) {
     let {
             groupId: t,
@@ -1736,7 +1736,7 @@ var tP = n(687966),
     tQ = n(427262),
     tq = n(589051),
     tJ = n(545807),
-    t0 = n(528697);
+    t0 = n(472177);
 let t1 = r.memo(function (e) {
     let { startTimestampMs: t } = e,
         n = (0, tJ.A)(),
@@ -2017,8 +2017,8 @@ function t6(e) {
 }
 t3.displayName = "OverlayVoiceCallElapsedTime";
 var t5 = n(141157),
-    t9 = n(645959),
-    t7 = n(812993),
+    t7 = n(645959),
+    t9 = n(812993),
     t8 = n(602853),
     ne = n(713654),
     nt = n(636537),
@@ -2245,7 +2245,7 @@ var ng = n(172491),
     nk = n(861464),
     nM = n(521981),
     nO = n(427358),
-    nw = n(7434);
+    nw = n(669682);
 function nF(e) {
     let { icon: t, ...n } = e;
     switch (t) {
@@ -2626,7 +2626,7 @@ function nK(e) {
     }, [e]);
 }
 function nz(e) {
-    return (0, i.jsx)(t7.hV, { count: e });
+    return (0, i.jsx)(t9.hV, { count: e });
 }
 function nX(e) {
     let { channelId: t, listItemId: n, mentionCount: l, unread: r } = e,
@@ -2906,9 +2906,9 @@ function n0() {
         d = l.trim().toLowerCase(),
         c =
             ((e = (0, t5.Dz)()),
-            (0, s.yK)([t9.A, em.A], () => {
+            (0, s.yK)([t7.A, em.A], () => {
                 let t = [];
-                for (let e of t9.A.getPrivateChannelIds()) {
+                for (let e of t7.A.getPrivateChannelIds()) {
                     let n = em.A.getChannel(e);
                     null != n && t.push({ channel: n, voiceStates: [] });
                 }
@@ -3194,8 +3194,8 @@ var n1 = n(776096),
     n4 = n(342952),
     n6 = n(676923),
     n5 = n(342296),
-    n9 = n(481947),
-    n7 = n(260466);
+    n7 = n(481947),
+    n9 = n(717066);
 let n8 = r.memo(function (e) {
     let { channelId: t, guildId: n, userId: l, onDoubleClick: u, onContextMenu: o } = e,
         d = r.useRef(null),
@@ -3235,14 +3235,14 @@ let n8 = r.memo(function (e) {
                   (0, i.jsx)(E.D, {
                       ...e,
                       innerRef: d,
-                      className: n7.gD,
+                      className: n9.gD,
                       onDoubleClick: u,
                       onContextMenu: x,
                       onClick: (e) => {
                           e.preventDefault(), e.stopPropagation(), h(!0);
                       },
                       children: (0, i.jsxs)("div", {
-                          className: n7.h6,
+                          className: n9.h6,
                           children: [
                               (0, i.jsx)(G.eu, {
                                   src: g.getAvatarURL(n ?? void 0, 24),
@@ -3250,7 +3250,7 @@ let n8 = r.memo(function (e) {
                                   "aria-label": N,
                               }),
                               (0, i.jsxs)(p.E, {
-                                  className: n7.rg,
+                                  className: n9.rg,
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
                                   children: [
@@ -3258,21 +3258,21 @@ let n8 = r.memo(function (e) {
                                           userName: N,
                                           displayNameStyles: I,
                                           effectDisplayType: ei.G.STATIC,
-                                          textClassName: n7.m2,
+                                          textClassName: n9.m2,
                                       }),
                                       (0, i.jsx)(eo.Ay, { userId: l, disableGuildProfile: !0 }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: n7.ZA,
+                                  className: n9.ZA,
                                   onDoubleClick: u,
-                                  children: (0, i.jsx)(n9.Kc, {
+                                  children: (0, i.jsx)(n7.Kc, {
                                       guildId: n ?? void 0,
                                       user: g,
                                       video: m.selfVideo,
                                       isStreaming: A,
-                                      className: n7.ZA,
-                                      iconClassName: n7.Ow,
+                                      className: n9.ZA,
+                                      iconClassName: n9.Ow,
                                       isWatching: !1,
                                       localMute: !1,
                                       localVideoDisabled: !1,
@@ -3283,7 +3283,7 @@ let n8 = r.memo(function (e) {
                                       disabled: !1,
                                   }),
                               }),
-                              null != S ? (0, i.jsx)(es.A, { game: S, size: es.M.XSMALL, className: n7.IV }) : null,
+                              null != S ? (0, i.jsx)(es.A, { game: S, size: es.M.XSMALL, className: n9.IV }) : null,
                           ],
                       }),
                   }),
@@ -3321,7 +3321,7 @@ function ln(e) {
     return 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: n7.X0,
+              className: n9.X0,
               children: (0, i.jsx)(n4.A, {
                   users: l,
                   guildId: n ?? void 0,
@@ -3473,9 +3473,9 @@ function ll(e) {
                 secondaryText:
                     null != T
                         ? (0, i.jsxs)("div", {
-                              className: n7.z2,
+                              className: n9.z2,
                               children: [
-                                  (0, i.jsx)(tP._, { size: "xxs", color: "currentColor", className: n7.AE }),
+                                  (0, i.jsx)(tP._, { size: "xxs", color: "currentColor", className: n9.AE }),
                                   (0, i.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: T }),
                               ],
                           })
@@ -3487,7 +3487,7 @@ function ll(e) {
                         case !x:
                             return e
                                 ? (0, i.jsxs)("div", {
-                                      className: n7.YT,
+                                      className: n9.YT,
                                       onDoubleClick: lt,
                                       children: [z(), (0, i.jsx)(e_.j, { tab: o.x.VOICE, targetId: n })],
                                   })
@@ -3497,7 +3497,7 @@ function ll(e) {
                                 children: [
                                     d
                                         ? (0, i.jsxs)("div", {
-                                              className: n7.YT,
+                                              className: n9.YT,
                                               onDoubleClick: lt,
                                               children: [z(), (0, i.jsx)(e_.j, { tab: o.x.VOICE, targetId: n })],
                                           })
@@ -3512,7 +3512,7 @@ function ll(e) {
             }),
             d && N.length > 0
                 ? (0, i.jsx)("div", {
-                      className: n7.Nz,
+                      className: n9.Nz,
                       children: N.slice(0, 25).map((e) =>
                           (0, i.jsx)(
                               n8,
@@ -3895,7 +3895,7 @@ var lo = n(308368),
     lS = n(34307),
     lp = n(381941),
     lN = n(731854),
-    lx = n(540514);
+    lx = n(855418);
 function lT() {
     let { onPrimaryAction: e, onContextMenu: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         n = (0, d.b4)(),
@@ -4190,8 +4190,8 @@ let l_ = r.memo(function (e) {
                             e.event,
                             async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("10570"),
-                                    n.e("98273"),
+                                    n.e("97422"),
+                                    n.e("97705"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),
@@ -4200,13 +4200,13 @@ let l_ = r.memo(function (e) {
                                     n.e("85968"),
                                     n.e("89673"),
                                     n.e("68403"),
-                                    n.e("52168"),
+                                    n.e("29787"),
                                     n.e("82073"),
                                     n.e("97558"),
                                     n.e("91994"),
                                     n.e("76665"),
                                     n.e("76273"),
-                                    n.e("95264"),
+                                    n.e("72883"),
                                     n.e("81609"),
                                     n.e("96443"),
                                     n.e("23490"),
@@ -4257,11 +4257,11 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("10570"),
-                                    n.e("52760"),
-                                    n.e("59739"),
-                                    n.e("93909"),
-                                    n.e("98273"),
+                                    n.e("97422"),
+                                    n.e("40351"),
+                                    n.e("38427"),
+                                    n.e("45309"),
+                                    n.e("97705"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93103"),
@@ -4275,7 +4275,7 @@ let l_ = r.memo(function (e) {
                                     n.e("89673"),
                                     n.e("68403"),
                                     n.e("88342"),
-                                    n.e("52168"),
+                                    n.e("29787"),
                                     n.e("89421"),
                                     n.e("98965"),
                                     n.e("82073"),
@@ -4295,7 +4295,7 @@ let l_ = r.memo(function (e) {
                                     n.e("9291"),
                                     n.e("7059"),
                                     n.e("8829"),
-                                    n.e("95264"),
+                                    n.e("72883"),
                                     n.e("81609"),
                                     n.e("98199"),
                                     n.e("41175"),
@@ -4397,7 +4397,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("41443"),
+                                    n.e("147"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93103"),
@@ -4430,7 +4430,7 @@ let l_ = r.memo(function (e) {
                         }),
                             (0, lc.L3)(e.event, async () => {
                                 let { default: l } = await Promise.all([
-                                    n.e("98273"),
+                                    n.e("97705"),
                                     n.e("26132"),
                                     n.e("46652"),
                                     n.e("93190"),

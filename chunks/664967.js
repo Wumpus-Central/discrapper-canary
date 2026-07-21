@@ -17,12 +17,12 @@ function v(e) {
             let n = { source: d.Eo.CONTEXT_MENU, alertType: (0, u.$5)(b) };
             (0, o.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    i.e("10581"),
-                    i.e("36518"),
+                    i.e("80352"),
+                    i.e("102"),
                     i.e("40258"),
                     i.e("73669"),
                     i.e("46313"),
-                    i.e("87995"),
+                    i.e("43233"),
                 ]).then(i.bind(i, 671576));
                 return (i) => (0, l.jsx)(t, { ...i, guildId: e.id, analyticsData: n });
             });

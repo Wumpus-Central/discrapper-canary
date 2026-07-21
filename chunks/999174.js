@@ -69,7 +69,7 @@ function Y(e, t, n) {
 }
 var q = n(778712),
     K = n(375708),
-    Q = n(490308);
+    Q = n(396);
 function W(e) {
     return `badge-tab-${e}`;
 }
@@ -275,7 +275,7 @@ var el = n(911608),
     es = n(770178),
     er = n(194261),
     ed = n(140735),
-    ec = n(899696);
+    ec = n(519736);
 function eo(e) {
     let {
             badge: t,
@@ -366,7 +366,7 @@ function eo(e) {
         ],
     });
 }
-var eu = n(335140);
+var eu = n(619004);
 function eg(e) {
     let { badge: t, viewerBadge: n, isViewingOtherUser: a, targetUsername: s, isViewerOnUpgradeableNitro: r } = e,
         [d, c] = l.useState(!1),

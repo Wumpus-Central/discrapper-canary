@@ -1,23 +1,23 @@
 "use strict";
-n.d(t, { A: () => I });
+n.d(t, { A: () => m });
 var i = n(627968);
 n(64700);
 var r = n(192308),
-    s = n(231723),
-    a = n(969151),
-    o = n(587895),
-    l = n(652896),
-    u = n(834757),
+    a = n(231723),
+    s = n(969151),
+    l = n(587895),
+    o = n(652896),
+    d = n(834757),
     c = n(869146),
-    d = n(495544),
+    u = n(280450),
     _ = n(734057),
-    h = n(290863),
-    f = n(763827),
-    p = n(116956),
-    E = n(37962),
-    m = n(670455),
-    g = n(652215);
-class A extends E.A {
+    E = n(290863),
+    A = n(763827),
+    h = n(116956),
+    I = n(37962),
+    f = n(670455),
+    p = n(652215);
+class T extends I.A {
     actions = {
         VOICE_CHANNEL_SHOW_FEEDBACK: (e) => this.handleVoiceChannelFeedback(e),
         STREAM_CLOSE: (e) => this.handleStreamClose(e),
@@ -27,46 +27,46 @@ class A extends E.A {
     };
     handleVoiceChannelFeedback = (e) => {
         let { analyticsData: t } = e;
-        this.possiblyShowFeedbackModal(m.MW.VOICE, () => {
+        this.possiblyShowFeedbackModal(f.MW.VOICE, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("79877"),
-                    n.e("91203"),
+                    n.e("95921"),
+                    n.e("4079"),
                     n.e("8891"),
-                    n.e("59172"),
+                    n.e("22255"),
                     n.e("55925"),
-                    n.e("18413"),
+                    n.e("40794"),
                     n.e("37381"),
                     n.e("59375"),
-                    n.e("53770"),
+                    n.e("31389"),
                 ]).then(n.bind(n, 492));
                 return (n) => (0, i.jsx)(e, { ...n, analyticsData: t });
             });
         });
     };
     handleStreamClose = (e) => {
-        let { streamKey: t, canShowFeedback: s } = e,
-            a = (0, l.Iy)(t),
-            o = (0, u.Ee)(a, h.A),
-            c = p.A.getVideoStats(t) ?? {},
+        let { streamKey: t, canShowFeedback: a } = e,
+            s = (0, o.Iy)(t),
+            l = (0, d.Ee)(s, E.A),
+            c = h.A.getVideoStats(t) ?? {},
             _ = {
-                media_session_id: p.A.getMediaSessionId(t),
-                rtc_connection_id: p.A.getRtcConnectionId(t),
-                stream_region: p.A.getRegion(t),
-                max_viewers: p.A.getMaxViewers(t),
-                parent_media_session_id: p.A.getRTCConnection(t)?.parentMediaSessionId,
+                media_session_id: h.A.getMediaSessionId(t),
+                rtc_connection_id: h.A.getRtcConnectionId(t),
+                stream_region: h.A.getRegion(t),
+                max_viewers: h.A.getMaxViewers(t),
+                parent_media_session_id: h.A.getRTCConnection(t)?.parentMediaSessionId,
                 ...c,
             };
-        s &&
-            this.possiblyShowFeedbackModal(m.MW.STREAM, () => {
+        a &&
+            this.possiblyShowFeedbackModal(f.MW.STREAM, () => {
                 (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("79877"),
-                        n.e("91203"),
+                        n.e("95921"),
+                        n.e("4079"),
                         n.e("8891"),
-                        n.e("59172"),
+                        n.e("22255"),
                         n.e("55925"),
-                        n.e("18413"),
+                        n.e("40794"),
                         n.e("37381"),
                         n.e("59375"),
                         n.e("17171"),
@@ -74,9 +74,9 @@ class A extends E.A {
                     ]).then(n.bind(n, 218738));
                     return (t) =>
                         (0, i.jsx)(e, {
-                            stream: a,
-                            streamApplication: o,
-                            isStreamer: a.ownerId === d.default.getId(),
+                            stream: s,
+                            streamApplication: l,
+                            isStreamer: s.ownerId === u.default.getId(),
                             ...t,
                             analyticsData: _,
                         });
@@ -85,15 +85,15 @@ class A extends E.A {
     };
     handleVideoBackgroundShowFeedback = (e) => {
         let { analyticsData: t } = e;
-        this.possiblyShowFeedbackModal(m.MW.VIDEO_BACKGROUND, () => {
+        this.possiblyShowFeedbackModal(f.MW.VIDEO_BACKGROUND, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("79877"),
-                    n.e("91203"),
+                    n.e("95921"),
+                    n.e("4079"),
                     n.e("8891"),
-                    n.e("59172"),
+                    n.e("22255"),
                     n.e("55925"),
-                    n.e("18413"),
+                    n.e("40794"),
                     n.e("37381"),
                     n.e("26484"),
                     n.e("19197"),
@@ -103,24 +103,24 @@ class A extends E.A {
         });
     };
     handleActivityClose = (e) => {
-        let { applicationId: t, location: l, showFeedback: u } = e,
-            d = o.A.getApplication(t),
-            h = (0, a.H)(l),
-            p = _.A.getChannel(h),
-            E = { rtc_connection_id: f.A.getRTCConnectionId(), media_session_id: f.A.getMediaSessionId() },
-            A = c.A.getWindowOpen(g.MLl.CHANNEL_CALL_POPOUT) ? s.KX : s.SY;
-        null != d &&
-            u &&
-            this.possiblyShowFeedbackModal(m.MW.ACTIVITY, () => {
+        let { applicationId: t, location: o, showFeedback: d } = e,
+            u = l.A.getApplication(t),
+            E = (0, s.H)(o),
+            h = _.A.getChannel(E),
+            I = { rtc_connection_id: A.A.getRTCConnectionId(), media_session_id: A.A.getMediaSessionId() },
+            T = c.A.getWindowOpen(p.MLl.CHANNEL_CALL_POPOUT) ? a.KX : a.SY;
+        null != u &&
+            d &&
+            this.possiblyShowFeedbackModal(f.MW.ACTIVITY, () => {
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("79877"),
-                            n.e("91203"),
+                            n.e("95921"),
+                            n.e("4079"),
                             n.e("8891"),
-                            n.e("59172"),
+                            n.e("22255"),
                             n.e("55925"),
-                            n.e("18413"),
+                            n.e("40794"),
                             n.e("37381"),
                             n.e("26484"),
                             n.e("43822"),
@@ -128,34 +128,34 @@ class A extends E.A {
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
-                                activityApplication: d,
-                                channel: p,
-                                embeddedActivityLocation: l,
-                                analyticsData: E,
+                                activityApplication: u,
+                                channel: h,
+                                embeddedActivityLocation: o,
+                                analyticsData: I,
                             });
                     },
-                    { contextKey: A },
+                    { contextKey: T },
                 );
             });
     };
     handleInAppReportsFeedback = (e) => {
-        let { reportId: t, reportType: s } = e;
-        this.possiblyShowFeedbackModal(m.MW.IN_APP_REPORTS, () => {
+        let { reportId: t, reportType: a } = e;
+        this.possiblyShowFeedbackModal(f.MW.IN_APP_REPORTS, () => {
             (0, r.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("79877"),
-                    n.e("91203"),
+                    n.e("95921"),
+                    n.e("4079"),
                     n.e("8891"),
-                    n.e("59172"),
+                    n.e("22255"),
                     n.e("55925"),
-                    n.e("18413"),
+                    n.e("40794"),
                     n.e("37381"),
                     n.e("26484"),
                     n.e("66897"),
                 ]).then(n.bind(n, 707688));
-                return (n) => (0, i.jsx)(e, { ...n, reportId: t, reportType: s });
+                return (n) => (0, i.jsx)(e, { ...n, reportId: t, reportType: a });
             });
         });
     };
 }
-let I = new A();
+let m = new T();

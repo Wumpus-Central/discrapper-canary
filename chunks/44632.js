@@ -23,7 +23,7 @@ var l = i(627968),
     j = i(652215),
     P = i(381941),
     _ = i(375708),
-    g = i(628983);
+    g = i(41295);
 let y = (t) => t.type === C.rD.USER || t.type === C.rD.GROUP_DM;
 function A(t) {
     let e,

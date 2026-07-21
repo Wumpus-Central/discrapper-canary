@@ -4,7 +4,7 @@ var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
-    l = n(284513),
+    l = n(281411),
     o = n(598748),
     d = n(17928),
     c = n(939249),
@@ -15,7 +15,7 @@ var i = n(627968),
     h = n(321191),
     I = n(903209),
     f = n(375708),
-    p = n(532786);
+    p = n(3242);
 function T(e) {
     let t = (0, _.g)(e.activityApplication);
     return null == t ? null : (0, i.jsx)(m, { ...e, widgetApplication: t });

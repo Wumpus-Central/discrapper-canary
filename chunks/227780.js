@@ -38,8 +38,8 @@ var c = l(17928),
     F = l(565645),
     Z = l(927813),
     H = l(375708),
-    V = l(544711),
-    B = l(839029);
+    V = l(492687),
+    B = l(871645);
 let J = 6 * Z.A.Millis.SECOND;
 function K(e) {
     let { emoji: t, guildId: l } = e,
@@ -261,7 +261,7 @@ var eo = l(830917),
     ev = l(424632),
     eE = l(902916),
     eN = l(818348),
-    eb = l(70038);
+    eb = l(362830);
 let eI = new M.A("ImageEditor"),
     eA = { width: 288, height: 288 },
     eS = i.forwardRef(function (e, t) {
@@ -589,7 +589,7 @@ function ep(e, t, l) {
         ? { top: 0, bottom: 0, left: 0, right: 0 }
         : { top: a, bottom: -a, left: -r, right: r };
 }
-var eO = l(976998);
+var eO = l(43934);
 let e_ = new M.A("EmojiStudio"),
     eC = (e) => {
         var t;
@@ -911,7 +911,7 @@ function ey(e) {
     let { src: t, alt: l } = e;
     return null == t || "" === t ? (0, n.jsx)("div", { className: eO.A3 }) : (0, n.jsx)("img", { src: t, alt: l });
 }
-var ew = l(387259);
+var ew = l(138467);
 function ek(e) {
     let { transitionState: t, guildId: l } = e,
         i = "userImage" in e ? e.userImage : void 0,

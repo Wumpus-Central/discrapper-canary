@@ -5,7 +5,7 @@ var d = e(503698),
     c = e.n(d),
     l = e(297264),
     n = e(834730),
-    r = e(74958);
+    r = e(134838);
 function t(s) {
     let { tips: a, className: e, headerText: d } = s;
     return (0, i.jsxs)("div", {

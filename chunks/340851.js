@@ -3,13 +3,13 @@ var n = t(627968),
     l = t(64700),
     s = t(503698),
     a = t.n(s),
-    r = t(990078),
-    d = t(834730),
-    o = t(597601),
-    u = t(922016),
+    r = t(834730),
+    d = t(597601),
+    u = t(866665),
+    o = t(922016),
     c = t(367513),
-    m = t(442433),
-    A = t(730852),
+    A = t(442433),
+    m = t(730852),
     g = t(401843),
     h = t(296216),
     p = t(793574),
@@ -22,7 +22,7 @@ var n = t(627968),
     E = t(346846),
     N = t(342296),
     y = t(481947),
-    C = t(495544),
+    C = t(280450),
     b = t(71393),
     j = t(576705),
     T = t(287809),
@@ -32,12 +32,12 @@ t(281405);
 var P = t(544105),
     k = t(325278),
     V = t(375708),
-    w = t(976358);
+    w = t(55678);
 function D(e) {
     let { numUsers: i } = e;
     return (0, n.jsx)("div", {
         className: w.BN,
-        children: (0, n.jsxs)(d.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", i] }),
+        children: (0, n.jsxs)(r.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", i] }),
     });
 }
 function R(e) {
@@ -48,9 +48,9 @@ function R(e) {
         children: [
             (0, n.jsx)("div", {
                 className: w.$L,
-                children: (0, n.jsx)(o.L, { size: "md", color: "currentColor", className: w.wG }),
+                children: (0, n.jsx)(d.L, { size: "md", color: "currentColor", className: w.wG }),
             }),
-            (0, n.jsx)(d.E, { color: "text-muted", variant: "text-sm/medium", children: l }),
+            (0, n.jsx)(r.E, { color: "text-muted", variant: "text-sm/medium", children: l }),
         ],
     });
 }
@@ -58,8 +58,8 @@ let U = (0, h.J)(function (e) {
     let {
             collapsed: i,
             user: s,
-            channel: d,
-            mute: o,
+            channel: r,
+            mute: d,
             localMute: h,
             localVideoDisabled: D,
             deaf: R,
@@ -71,8 +71,8 @@ let U = (0, h.J)(function (e) {
             ringing: K,
             speaking: B,
             disconnected: Y,
-            connectUserDragSource: q,
-            canDrag: $,
+            connectUserDragSource: $,
+            canDrag: q,
             isStreaming: H,
             isWatching: W,
             isGuest: Z,
@@ -88,20 +88,20 @@ let U = (0, h.J)(function (e) {
             application: ea,
             game: er,
         } = e,
-        ed = (0, I.Ay)(d),
-        eo = l.useRef(null),
-        [eu, ec] = l.useState(!1),
-        em = l.useRef(null);
-    function eA() {
-        ec(!eu);
+        ed = (0, I.Ay)(r),
+        eu = l.useRef(null),
+        [eo, ec] = l.useState(!1),
+        eA = l.useRef(null);
+    function em() {
+        ec(!eo);
     }
     function eg(e) {
         eh();
     }
     function eh() {
-        clearTimeout(em.current), Q?.(s.id);
+        clearTimeout(eA.current), Q?.(s.id);
     }
-    let ep = $
+    let ep = q
         ? null
         : {
               draggable: !0,
@@ -110,19 +110,19 @@ let U = (0, h.J)(function (e) {
               },
           };
     function ef() {
-        if (!H || !(0, _.eo)(d, G.A, b.A, j.A, v.default)[0]) return;
-        let e = { streamType: k.U4.GUILD, ownerId: s.id, channelId: d.id, guildId: d.guild_id };
-        C.default.getId() !== s.id && A.default.selectVoiceChannel(d.id),
+        if (!H || !(0, _.eo)(r, G.A, b.A, j.A, v.default)[0]) return;
+        let e = { streamType: k.U4.GUILD, ownerId: s.id, channelId: r.id, guildId: r.guild_id };
+        C.default.getId() !== s.id && m.default.selectVoiceChannel(r.id),
             W ? ((0, E.A)(e), c.A.selectParticipant(e.channelId, (0, S._z)(e))) : (0, g.Nl)(e),
             Q?.(s.id);
     }
     function eI(e) {
-        (0, m.L3)(e, async () => {
+        (0, A.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                t.e("89982"),
-                t.e("76900"),
-                t.e("88429"),
-                t.e("94881"),
+                t.e("40351"),
+                t.e("38427"),
+                t.e("45309"),
+                t.e("97705"),
                 t.e("26132"),
                 t.e("46652"),
                 t.e("93103"),
@@ -131,23 +131,23 @@ let U = (0, h.J)(function (e) {
                 t.e("21921"),
                 t.e("8757"),
                 t.e("76418"),
+                t.e("71210"),
                 t.e("85968"),
                 t.e("89673"),
                 t.e("66495"),
-                t.e("71210"),
                 t.e("68403"),
-                t.e("29787"),
                 t.e("88342"),
-                t.e("82073"),
-                t.e("97558"),
+                t.e("29787"),
                 t.e("89421"),
                 t.e("98965"),
+                t.e("82073"),
+                t.e("97558"),
                 t.e("91994"),
                 t.e("76665"),
                 t.e("35313"),
-                t.e("24198"),
                 t.e("39171"),
                 t.e("36564"),
+                t.e("24198"),
                 t.e("52229"),
                 t.e("45996"),
                 t.e("792"),
@@ -170,17 +170,17 @@ let U = (0, h.J)(function (e) {
                 (0, n.jsx)(e, {
                     ...i,
                     user: s,
-                    guildId: d.guild_id,
-                    channel: d,
+                    guildId: r.guild_id,
+                    channel: r,
                     showMediaItems: !0,
-                    showStageChannelItems: d.isGuildStageVoice(),
+                    showStageChannelItems: r.isGuildStageVoice(),
                     onInteraction: (0, f.s)("GuildChannelUserContextMenu", p.A.VOICE_USER, { targetUserId: s.id }),
                 });
         });
     }
     l.useEffect(
         () => () => {
-            clearTimeout(em.current);
+            clearTimeout(eA.current);
         },
         [],
     );
@@ -191,17 +191,17 @@ let U = (0, h.J)(function (e) {
         onMouseEnter: en
             ? void 0
             : function () {
-                  eu || (em.current = setTimeout(() => X?.(s.id), 100));
+                  eo || (eA.current = setTimeout(() => X?.(s.id), 100));
               },
         onMouseLeave: en ? void 0 : eh,
         children: (0, n.jsx)(N.A, {
-            clickTrap: s?.id === T.default.getCurrentUser()?.id && eu,
-            targetElementRef: eo,
+            clickTrap: s?.id === T.default.getCurrentUser()?.id && eo,
+            targetElementRef: eu,
             user: s,
-            guildId: d.guild_id,
-            channelId: d.id,
+            guildId: r.guild_id,
+            channelId: r.id,
             newAnalyticsLocations: [p.A.VOICE_USER],
-            shouldShow: eu,
+            shouldShow: eo,
             onRequestClose: () => ec(!1),
             children: (e) => {
                 let t, l;
@@ -211,7 +211,7 @@ let U = (0, h.J)(function (e) {
                         user: s,
                         speaking: B,
                         disconnected: Y,
-                        mute: o,
+                        mute: d,
                         localMute: h,
                         localVideoDisabled: D,
                         isStreaming: H,
@@ -231,38 +231,38 @@ let U = (0, h.J)(function (e) {
                         embeddedApplication: M,
                         avatarContainerClass: a()({ [w.dj]: !0 }),
                         disabled: en && !t,
-                        selected: eu,
-                        onClick: t ? void 0 : eA,
+                        selected: eo,
+                        onClick: t ? void 0 : em,
                         onDoubleClick: ef,
                         onContextMenu: eI,
-                        guildId: d.guild_id,
+                        guildId: r.guild_id,
                         isSelf: es,
                         application: ea,
                         game: er,
-                        channelId: d.id,
+                        channelId: r.id,
                     }),
                     en
-                        ? (0, n.jsx)(r.m, {
+                        ? (0, n.jsx)(u.m, {
                               text: (0, x.A)(ei) ?? V.intl.string(V.t.IyYqqY),
-                              children: (0, n.jsx)(y.Ay, { ref: eo, ...l }),
+                              children: (0, n.jsx)(y.Ay, { ref: eu, ...l }),
                           })
-                        : (0, n.jsx)(u.Y, {
-                              targetElementRef: eo,
+                        : (0, n.jsx)(o.Y, {
+                              targetElementRef: eu,
                               position: "right",
                               renderPopout: () =>
                                   (0, n.jsx)(O.A, {
-                                      channel: d,
+                                      channel: r,
                                       user: s,
                                       onAction: eh,
                                       onWatchStream: H ? ef : void 0,
                                   }),
-                              shouldShow: ee && !eu,
+                              shouldShow: ee && !eo,
                               onRequestClose: eg,
                               spacing: 17,
                               children: () =>
                                   (0, n.jsx)(y.Ay, {
                                       ...l,
-                                      ref: eo,
+                                      ref: eu,
                                       onMouseDown: e.onMouseDown,
                                       onKeyDown: e.onKeyDown,
                                   }),
@@ -271,5 +271,5 @@ let U = (0, h.J)(function (e) {
             },
         }),
     });
-    return $ ? q(ev) : ev;
+    return q ? $(ev) : ev;
 });

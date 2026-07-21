@@ -8,7 +8,7 @@ var i = n(627968),
     o = n.n(l),
     d = n(654107),
     c = n(871123),
-    u = n(705452);
+    u = n(94436);
 function _(e) {
     let {
             cardImage: t,

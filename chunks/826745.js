@@ -1,14 +1,14 @@
 "use strict";
 let i;
-n.d(t, { y: () => h });
+n.d(t, { y: () => E });
 var r = n(627968),
-    s = n(64700),
-    a = n(503698),
-    o = n.n(a),
-    l = n(745262),
-    u = n(187322),
-    c = n(429128);
-let d = `
+    a = n(64700),
+    s = n(503698),
+    l = n.n(s),
+    o = n(745262),
+    d = n(187322),
+    c = n(15328);
+let u = `
   visibility:hidden;
   overflow:hidden;
   position:absolute;
@@ -31,7 +31,7 @@ let d = `
         "border-width",
         "box-sizing",
     ];
-class h extends s.PureComponent {
+class E extends a.PureComponent {
     static defaultProps = { autoFocus: !1, disabled: !1, autoCorrect: "off" };
     _textArea;
     constructor(e) {
@@ -55,16 +55,16 @@ class h extends s.PureComponent {
         if (null != t && -1 === r.indexOf("\n") && r.length * t < 0.8 * e.offsetWidth)
             return void this.setState({ height: void 0 });
         null == i && null != document.body && ((i = document.createElement("textarea")), document.body.appendChild(i));
-        let { paddingSize: s, borderSize: a, boxSizing: o, sizingStyle: l } = this.calculateNodeStyling(e);
-        i.setAttribute("style", l + ";" + d),
+        let { paddingSize: a, borderSize: s, boxSizing: l, sizingStyle: o } = this.calculateNodeStyling(e);
+        i.setAttribute("style", o + ";" + u),
             (i.value = r),
             null != n ? i.setAttribute("rows", `${n}`) : i.removeAttribute("rows");
-        let u = i.scrollHeight;
-        "border-box" === o ? (u += a) : "content-box" === o && (u -= s), this.setState({ height: u });
+        let d = i.scrollHeight;
+        "border-box" === l ? (d += s) : "content-box" === l && (d -= a), this.setState({ height: d });
     }
     calculateNodeStyling(e) {
         let t = window.getComputedStyle(e),
-            n = (0, l.G)(
+            n = (0, o.G)(
                 t.getPropertyValue("box-sizing"),
                 t.getPropertyValue("-moz-box-sizing"),
                 t.getPropertyValue("-webkit-box-sizing"),
@@ -106,13 +106,13 @@ class h extends s.PureComponent {
     render() {
         let { style: e, className: t, onResize: n, ...i } = this.props;
         delete i.fontWidthEstimate;
-        let s = { ...this.state, ...e };
-        return (0, r.jsx)(u.vN, {
+        let a = { ...this.state, ...e };
+        return (0, r.jsx)(d.vN, {
             children: (0, r.jsx)("textarea", {
                 ...i,
-                className: o()(t, c.kw),
+                className: l()(t, c.kw),
                 ref: this.handleSetRef,
-                style: s,
+                style: a,
                 onChange: this.handleChange,
             }),
         });

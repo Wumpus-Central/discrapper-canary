@@ -1,0 +1,9 @@
+.cashAppPayContainer__283e5 {
+    pointer-events: auto;
+    z-index: 10000
+}
+
+.cashAppPayContainer__283e5 .adyen-checkout__spinner,
+.cashAppPayContainer__283e5 .adyen-checkout__spinner-container {
+    display: none
+}

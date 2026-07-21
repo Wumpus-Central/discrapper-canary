@@ -3,10 +3,10 @@ var i = e(627968),
     a = e(64700),
     r = e(17928),
     l = e(862482),
-    s = e(821609),
-    d = e(935462),
+    s = e(935462),
+    d = e(821609),
     p = e(834730),
-    c = e(534514),
+    c = e(297264),
     m = e(292666),
     _ = e(308528),
     g = e(913122),
@@ -16,7 +16,7 @@ var i = e(627968),
     T = e(808728),
     I = e(71393),
     G = e(375708),
-    b = e(940480);
+    b = e(90200);
 function D(t) {
     let { createdGuildId: n, hasFooter: e = !0, onClose: D, onChannelPromptCompleted: L, isSlideReady: u } = t,
         [U, A] = a.useState(""),
@@ -45,7 +45,7 @@ function D(t) {
         ),
         j = (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsx)(s.$, {
+                (0, i.jsx)(d.$, {
                     variant: "primary",
                     text: G.intl.string(G.t.i4jeWR),
                     onClick: R,
@@ -65,7 +65,7 @@ function D(t) {
     return {
         content: (0, i.jsxs)(i.Fragment, {
             children: [
-                (0, i.jsxs)(d.rQ, {
+                (0, i.jsxs)(s.rQ, {
                     "data-migration-pending": !0,
                     className: b.wx,
                     direction: o.A.Direction.VERTICAL,
@@ -89,10 +89,10 @@ function D(t) {
                             variant: "text-md/normal",
                             children: G.intl.string(G.t["+855Pm"]),
                         }),
-                        null != D && (0, i.jsx)(d.s_, { "data-migration-pending": !0, className: b.b, onClick: D }),
+                        null != D && (0, i.jsx)(s.s_, { "data-migration-pending": !0, className: b.b, onClick: D }),
                     ],
                 }),
-                (0, i.jsxs)(d.$m, {
+                (0, i.jsxs)(s.$m, {
                     "data-migration-pending": !0,
                     className: b.Q6,
                     children: [
@@ -118,7 +118,7 @@ function D(t) {
                             }),
                     ],
                 }),
-                e && (0, i.jsx)(d.jl, { "data-migration-pending": !0, children: j }),
+                e && (0, i.jsx)(s.jl, { "data-migration-pending": !0, children: j }),
             ],
         }),
         footer: j,

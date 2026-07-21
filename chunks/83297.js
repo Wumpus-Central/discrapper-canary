@@ -3,10 +3,10 @@ var s = n(627968),
     i = n(64700),
     a = n(503698),
     r = n.n(a),
-    l = n(580929),
+    l = n(617498),
     o = n(607399),
     c = n(17928),
-    d = n(990078),
+    d = n(866665),
     u = n(998445),
     x = n(834730),
     m = n(27232),
@@ -82,8 +82,8 @@ var D = n(454938),
     B = n(855687),
     F = n(187322),
     O = n(657718),
-    V = n(518229),
-    z = n(993429);
+    V = n(85277),
+    z = n(48525);
 function P(e) {
     let {
             role: t = "button",
@@ -211,7 +211,7 @@ var J = n(363195),
     en = n(885631),
     es = n(986268),
     ei = n(349828),
-    ea = n(765529);
+    ea = n(368193);
 function er(e) {
     let { guild: t, controller: n, guildBanner: i, animate: a } = e,
         { value: c } = n.springs;
@@ -284,14 +284,14 @@ function eu(e) {
             h
                 ? (0, j.openModalLazy)(async () => {
                       let { default: e } = await Promise.all([
-                          n.e("92430"),
-                          n.e("54453"),
+                          n.e("27574"),
+                          n.e("21149"),
                           n.e("59957"),
                           n.e("28136"),
                           n.e("16084"),
                           n.e("36624"),
                           n.e("22547"),
-                      ]).then(n.bind(n, 778929));
+                      ]).then(n.bind(n, 1310));
                       return (t) => (0, s.jsx)(e, { ...t, guild: a, source: M.PE1.GUILD_HEADER_INVITE_BUTTON });
                   })
                 : (0, j.openModalLazy)(async () => {

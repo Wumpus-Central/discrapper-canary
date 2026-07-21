@@ -4,7 +4,7 @@ t(64700);
 var n = t(772707),
     i = t(834730),
     r = t(375708),
-    s = t(856e3);
+    s = t(822264);
 function c(a) {
     let e,
         { transitionState: t, guild: c, guildBoostQuantity: o, isTransfer: h, graphic: d, onClose: u } = a,

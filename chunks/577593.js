@@ -42,9 +42,9 @@ var l = i(627968),
     w = i(687966),
     Y = i(177953),
     H = i(203363),
-    W = i(543572),
+    W = i(321191),
     X = i(375708),
-    K = i(585235);
+    K = i(874971);
 function J(e) {
     let { icon: s, title: i, description: n } = e;
     return (0, l.jsxs)("div", {
@@ -96,7 +96,7 @@ var Z = i(734057),
     es = i(194261),
     ei = i(9578),
     el = i(900179),
-    en = i(199428);
+    en = i(103228);
 function et(e) {
     let { termsOfServiceUrl: s, privacyPolicyUrl: i } = e;
     return null == s && null == i
@@ -130,7 +130,7 @@ var er = i(308244),
     ec = i(280645),
     eo = i(347805),
     eu = i(518477),
-    ex = i(354724);
+    ex = i(663036);
 function eA(e) {
     let { userId: s } = e,
         i = (0, v.g)(),
@@ -146,7 +146,7 @@ function eA(e) {
         }),
     });
 }
-var eh = i(26988);
+var eh = i(9060);
 function ej(e) {
     let { user: s, displayProfile: i, guildId: n, onClose: t } = e,
         d = (0, M.bG)([W.A], () => W.A.getUserProfile(s.id)?.application),
@@ -188,8 +188,8 @@ var em = i(652215),
     eT = i(353394),
     eS = i(64622),
     eC = i(986712),
-    eP = i(862997),
-    eL = i(2074);
+    eP = i(984621),
+    eL = i(330114);
 function e_(e) {
     let { user: s, currentUser: i, guildId: n, onClose: t } = e,
         { live: d, recent: r, stream: a } = (0, eE.A)(s.id),
@@ -450,7 +450,7 @@ function eq(e) {
                     }),
     });
 }
-var e$ = i(837604);
+var e$ = i(763084);
 function e0(e) {
     let { section: s, user: i, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return s === eu.RP.ACTIVITY
@@ -465,7 +465,7 @@ function e0(e) {
                 ? (0, l.jsx)(ej, { user: i, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(ez, { user: i, displayProfile: t, onClose: a });
 }
-function e5(e) {
+function e3(e) {
     let {
             user: s,
             currentUser: i,
@@ -538,10 +538,10 @@ function e5(e) {
               ],
           });
 }
-var e3 = i(186272),
+var e5 = i(186272),
     e9 = i(996988),
-    e7 = i(978036);
-function e2(e) {
+    e1 = i(134492);
+function e7(e) {
     let {
             user: s,
             currentUser: i,
@@ -581,7 +581,7 @@ function e2(e) {
                 i = s?.length;
             return [
                 { section: eu.RP.BOT_INFO, text: X.intl.string(X.t.ZzAR2Y) },
-                { section: eu.RP.MUTUAL_GUILDS, text: (0, e3.A)(i) },
+                { section: eu.RP.MUTUAL_GUILDS, text: (0, e5.A)(i) },
                 { section: eu.RP.BOT_DATA_ACCESS, text: X.intl.string(X.t.WstFb0) },
             ];
         })(s),
@@ -599,7 +599,7 @@ function e2(e) {
                 children: (0, l.jsx)(o.EO, {
                     "data-migration-pending": !0,
                     transitionState: G,
-                    className: e7.zr,
+                    className: e1.zr,
                     hideShadow: !0,
                     "aria-labelledby": J,
                     parentComponent: "BotUserProfileModal",
@@ -619,7 +619,7 @@ function e2(e) {
                                     children: [
                                         (0, l.jsx)(O.A, { user: s, displayProfile: Y, themeType: e9.d.MODAL }),
                                         (0, l.jsxs)("div", {
-                                            className: e7.El,
+                                            className: e1.El,
                                             children: [
                                                 (0, l.jsx)(E.A, {
                                                     user: s,
@@ -637,10 +637,10 @@ function e2(e) {
                                                     disableToolbar: !0,
                                                 }),
                                                 (0, l.jsxs)("div", {
-                                                    className: e7.Pz,
+                                                    className: e1.Pz,
                                                     children: [
                                                         (0, l.jsx)("div", {
-                                                            className: e7.jS,
+                                                            className: e1.jS,
                                                             children: (0, l.jsx)(R.e, {
                                                                 variant: "secondary",
                                                                 userId: s.id,
@@ -648,7 +648,7 @@ function e2(e) {
                                                             }),
                                                         }),
                                                         (0, l.jsx)("div", {
-                                                            className: e7.pg,
+                                                            className: e1.pg,
                                                             children: (0, l.jsx)(R.l, {
                                                                 variant: "secondary",
                                                                 userId: s.id,
@@ -663,12 +663,12 @@ function e2(e) {
                                         }),
                                     ],
                                 }),
-                                (0, l.jsx)(T.A, { userId: s.id, className: e7.Fd }),
+                                (0, l.jsx)(T.A, { userId: s.id, className: e1.Fd }),
                                 (0, l.jsxs)("div", {
-                                    className: e7.rf,
+                                    className: e1.rf,
                                     children: [
                                         (0, l.jsx)(C.Ay, {
-                                            className: e7.eF,
+                                            className: e1.eF,
                                             user: s,
                                             guildId: w,
                                             displayName: H,
@@ -680,7 +680,7 @@ function e2(e) {
                                                 onClose: V,
                                             }),
                                         }),
-                                        (0, l.jsx)(e5, {
+                                        (0, l.jsx)(e3, {
                                             user: s,
                                             currentUser: i,
                                             displayProfile: Y,
@@ -699,10 +699,10 @@ function e2(e) {
         }),
     });
 }
-var e8 = i(480335),
-    e1 = i(713517),
-    e4 = i(35241);
-function e6(e) {
+var e2 = i(480335),
+    e6 = i(713517),
+    e8 = i(35241);
+function e4(e) {
     let {
             user: s,
             guildId: i,
@@ -734,7 +734,7 @@ function e6(e) {
             roleId: r,
         }),
         G = n.useRef(null),
-        V = (0, e1.M)(G);
+        V = (0, e6.M)(G);
     return (0, l.jsx)(m.f5, {
         value: U,
         children: (0, l.jsx)(g.of, {
@@ -746,7 +746,7 @@ function e6(e) {
             children: (0, l.jsxs)(o.EO, {
                 "data-migration-pending": !0,
                 transitionState: c,
-                className: e7.zr,
+                className: e1.zr,
                 hideShadow: !0,
                 "aria-labelledby": R,
                 parentComponent: "NonUserBotProfileModal",
@@ -761,12 +761,12 @@ function e6(e) {
                             themeType: e9.d.MODAL,
                             ref: T?.profileEffect != null ? G : void 0,
                             children: [
-                                (0, l.jsx)(b.A, { children: (0, l.jsx)(e4.A, { user: s }) }),
+                                (0, l.jsx)(b.A, { children: (0, l.jsx)(e8.A, { user: s }) }),
                                 (0, l.jsxs)("div", {
                                     children: [
                                         (0, l.jsx)(O.A, { user: s, displayProfile: T, themeType: e9.d.MODAL }),
                                         (0, l.jsx)("div", {
-                                            className: e7.El,
+                                            className: e1.El,
                                             children: (0, l.jsx)(E.A, {
                                                 user: s,
                                                 displayProfile: T,
@@ -779,10 +779,10 @@ function e6(e) {
                                     ],
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: e7.rf,
+                                    className: e1.rf,
                                     children: [
                                         (0, l.jsx)(C.Ay, {
-                                            className: e7.eF,
+                                            className: e1.eF,
                                             user: s,
                                             guildId: v,
                                             displayName: P,
@@ -842,7 +842,7 @@ function e6(e) {
                             ],
                         }),
                     }),
-                    T?.profileEffect != null && (0, l.jsx)(e8.A, { skuId: T?.profileEffect?.skuId, isHovering: V }),
+                    T?.profileEffect != null && (0, l.jsx)(e2.A, { skuId: T?.profileEffect?.skuId, isHovering: V }),
                 ],
             }),
         }),
@@ -859,8 +859,8 @@ var se = i(503698),
     sa = i(254828),
     sc = i(783123),
     so = i(463156),
-    su = i(864823),
-    sx = i(707972);
+    su = i(677660),
+    sx = i(128604);
 function sA(e) {
     let {
             user: s,
@@ -994,8 +994,8 @@ function sj(e) {
     u && !s)
         ? (0, l.jsx)(sA, { onHide: x, ...i })
         : o.isNonUserBot()
-          ? (0, l.jsx)(e6, { ...i })
+          ? (0, l.jsx)(e4, { ...i })
           : o.bot
-            ? (0, l.jsx)(e2, { ...i })
+            ? (0, l.jsx)(e7, { ...i })
             : (0, l.jsx)(sh.A, { ...i });
 }

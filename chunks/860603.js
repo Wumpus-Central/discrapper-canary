@@ -1,4 +1,4 @@
-n.d(t, { A: () => t6 }), n(321073);
+n.d(t, { A: () => t1 }), n(321073);
 var i,
     l = n(627968),
     s = n(64700),
@@ -33,7 +33,7 @@ var i,
     M = n(633018),
     _ = n(503698),
     P = n.n(_),
-    G = n(807377);
+    G = n(689113);
 function W(e) {
     let { children: t, icon: n, title: i } = e;
     return (0, l.jsxs)("header", {
@@ -66,7 +66,7 @@ var Y = n(261958),
     Z = n(442433),
     J = n(200662),
     X = n(375708),
-    $ = n(305687);
+    $ = n(804959);
 function ee(e) {
     let { applicationIcon: t, applicationName: i, canNavigate: a, command: r, guildId: o } = e,
         c = s.useMemo(() => 0 !== Object.keys(r.permissions ?? {}).length, [r.permissions]),
@@ -125,7 +125,7 @@ function ee(e) {
     });
 }
 var et = n(636547),
-    en = n(32475);
+    en = n(368307);
 function ei(e) {
     let { applicationIcon: t, applicationName: n, canNavigate: i, guildId: a } = e,
         {
@@ -198,7 +198,7 @@ function ei(e) {
           });
 }
 var el = n(534148),
-    es = n(468294);
+    es = n(227470);
 function ea(e) {
     let { application: t, canNavigate: n, guildId: i } = e,
         a = (0, o.bG)([U.A], () => U.A.isUnavailable());
@@ -246,7 +246,7 @@ var eo = n(308244),
     em = n(331322),
     eg = n(866665),
     eh = n(638916),
-    ex = n(641131);
+    ex = n(660499);
 function eA(e) {
     let {
         name: t,
@@ -349,7 +349,7 @@ var ep = n(136722),
     ev = n(889227),
     eT = n(696451),
     eI = n(317525),
-    eS = n(341046);
+    eS = n(672574);
 function ey(e) {
     let { guild: t, applicationIntegration: n } = e,
         { application: i } = n,
@@ -428,7 +428,7 @@ var eO = n(47167),
     eG = n(824953),
     eW = n(147925),
     eD = n(652215),
-    eU = n(776048);
+    eU = n(485800);
 function eB(e) {
     let { webhook: t, editedWebhook: n, channelOptions: i, isExpanded: a, errors: r, onToggleExpand: o } = e,
         c = s.useMemo(() => {
@@ -544,7 +544,7 @@ var eH = n(935399),
     eF = n(765178),
     eY = n(342298),
     eq = n(957565),
-    eQ = n(956322);
+    eQ = n(724474);
 function eZ(e, t) {
     return null != t && /^data:/.test(t) ? t : (0, ec.ku)({ id: e.id, avatar: t, discriminator: eD.h3J });
 }
@@ -745,7 +745,7 @@ function eJ(e) {
         })
     );
 }
-var eX = n(803002);
+var eX = n(512370);
 function e$(e) {
     let {
             webhooks: t,
@@ -849,8 +849,8 @@ function e$(e) {
         }),
     });
 }
-var e0 = n(693354);
-function e3(e) {
+var e0 = n(354322);
+function e2(e) {
     let { application: t, guild: n, integration: i, ...s } = e;
     return (0, l.jsx)(E.ConfirmModal, {
         ...s,
@@ -864,7 +864,7 @@ function e3(e) {
         },
     });
 }
-function e2(e) {
+function e3(e) {
     let {
             guild: t,
             applicationIntegration: n,
@@ -884,7 +884,7 @@ function e2(e) {
         ),
         A = (0, o.bG)([f.A], () => f.A.can(eD.xBc.MANAGE_WEBHOOKS, t), [t]),
         p = s.useCallback(() => {
-            c() && (0, C.openModal)((e) => (0, l.jsx)(e3, { guild: t, application: d, integration: u, ...e }));
+            c() && (0, C.openModal)((e) => (0, l.jsx)(e2, { guild: t, application: d, integration: u, ...e }));
         }, [d, c, t, u]),
         b = s.useMemo(() => {
             let e = [
@@ -993,10 +993,10 @@ function e2(e) {
         ],
     });
 }
-var e1 = n(573648);
+var e7 = n(573648);
 n(323874), n(14289), n(35956);
-var e7 = n(989349),
-    e6 = n.n(e7),
+var e6 = n(989349),
+    e1 = n.n(e6),
     e8 = n(788373),
     e5 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
@@ -1013,8 +1013,8 @@ var e7 = n(989349),
     ti = n(349288),
     tl = n(159273),
     ts = n(351906),
-    ta = n(159512),
-    tr = n(373378);
+    ta = n(316560),
+    tr = n(522826);
 function to(e) {
     let t,
         {
@@ -1065,7 +1065,7 @@ function to(e) {
             syncLabel: w,
             subscribersText: M,
         } = s.useMemo(() => {
-            let e = e1.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
+            let e = e7.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
             switch (i.type) {
                 case e4.s.YOUTUBE:
                     return {
@@ -1094,13 +1094,13 @@ function to(e) {
         { roleLink: G, syncDescriptionText: W } = s.useMemo(() => {
             let e;
             e = null != _ ? (0, l.jsx)(ti.Anchor, { onClick: C, children: _.name }) : X.intl.string(X.t.PoWNfe);
-            let t = e1.A.get(i.type);
+            let t = e7.A.get(i.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
                     i.revoked && null != t
                         ? X.intl.formatToPlainString(X.t.G16Wji, { user: i.user, platformName: t.name })
-                        : X.intl.formatToPlainString(X.t.unl3AP, { datetime: e6()(i.synced_at).calendar() }),
+                        : X.intl.formatToPlainString(X.t.unl3AP, { datetime: e1()(i.synced_at).calendar() }),
             };
         }, [_, C, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eI.A], () => eI.A.getSortedRoles(n.id)),
@@ -1412,7 +1412,7 @@ function to(e) {
         })
     );
 }
-var tc = n(441091);
+var tc = n(53051);
 function td(e) {
     let {
             integrations: t,
@@ -1425,7 +1425,7 @@ function td(e) {
             errors: d,
             canNavigate: m,
         } = e,
-        g = e1.A.get(a),
+        g = e7.A.get(a),
         h = s.useCallback(
             async (e) => {
                 m() && (await R.A.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
@@ -1483,7 +1483,7 @@ function td(e) {
 }
 var tu = n(462887),
     tm = n(736653),
-    tg = n(237312);
+    tg = n(169608);
 let th = "/assets/a29cabf3e1357986.svg",
     tx = "/assets/c733a28e6fcba3ef.svg";
 function tA(e) {
@@ -1543,7 +1543,7 @@ var tp = n(22231),
     tS = n(264322),
     ty = n(174459),
     tO = n(320426),
-    tk = n(351388);
+    tk = n(744612);
 function tL(e) {
     let {
             name: t,
@@ -1683,7 +1683,7 @@ function tw(e) {
         c = s.useCallback(
             () =>
                 (0, C.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([n.e("35743"), n.e("73380")]).then(n.bind(n, 106895));
+                    let { default: e } = await Promise.all([n.e("68327"), n.e("73380")]).then(n.bind(n, 106895));
                     return (n) => (0, l.jsx)(e, { ...n, channel: t, application: i });
                 }),
             [i, t],
@@ -1691,7 +1691,7 @@ function tw(e) {
         d = a ? (i.getIconURL(48) ?? ec.vI["0"]) : void 0;
     return (0, l.jsx)(tL, { imageSrc: d, onButtonClick: c, details: null != o ? [{ text: o }] : void 0, ...r });
 }
-var tR = n(214225);
+var tR = n(688038);
 function tM(e) {
     let { applicationId: t, channels: n } = e,
         i = (0, tf.h)(t);
@@ -1760,7 +1760,7 @@ var tP = n(91871),
     tK = n(30370),
     tF = n(381616),
     tY = n(488995),
-    tq = n(326669),
+    tq = n(587413),
     tQ = n(854766),
     tZ = n(237070);
 function tJ(e, t) {
@@ -2054,7 +2054,7 @@ function t$(e) {
         ),
         el &&
             eE.push(
-                ((x = e1.A.get(eD.fg2.TWITCH)),
+                ((x = e7.A.get(eD.fg2.TWITCH)),
                 ee > 0
                     ? ((m = (0, l.jsx)(tW.u, { size: "xs" })),
                       (d = X.intl.formatToPlainString(X.t.FFpnT8, { count: en })),
@@ -2080,7 +2080,7 @@ function t$(e) {
             ),
         es &&
             eE.push(
-                ((E = e1.A.get(eD.fg2.YOUTUBE)),
+                ((E = e7.A.get(eD.fg2.YOUTUBE)),
                 et > 0
                     ? ((N = (0, l.jsx)(tW.u, { size: "xs" })),
                       (p = X.intl.formatToPlainString(X.t.b2g5vC, { count: ei })),
@@ -2156,8 +2156,8 @@ function t$(e) {
     });
 }
 var t0 = n(964486),
-    t3 = n(468980);
-function t2(e) {
+    t2 = n(420860);
+function t3(e) {
     let t,
         n,
         {
@@ -2196,13 +2196,13 @@ function t2(e) {
                     developersArticle: eD.X7G.API_DOCS_WEBHOOKS,
                 }),
             }),
-            (0, l.jsx)(y.c, { className: t3.zN }),
+            (0, l.jsx)(y.c, { className: t2.zN }),
             r.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: t3.Tf,
+                              className: t2.Tf,
                               children: (0, l.jsx)(L.$, {
                                   variant: "primary",
                                   size: "sm",
@@ -2226,11 +2226,11 @@ function t2(e) {
                       direction: h.A.Direction.VERTICAL,
                       align: h.A.Align.CENTER,
                       children: [
-                          (0, l.jsx)("img", { alt: "", src: t, className: t3.QT }),
+                          (0, l.jsx)("img", { alt: "", src: t, className: t2.QT }),
                           (0, l.jsx)(c.D, { variant: "heading-md/semibold", children: X.intl.string(X.t.LzmsWl) }),
                           (0, l.jsx)("div", {
                               "data-button-hoisted-classname-wrapper": !0,
-                              className: t3.nM,
+                              className: t2.nM,
                               children: (0, l.jsx)(L.$, {
                                   variant: "primary",
                                   text: X.intl.string(X.t.lOQqJK),
@@ -2243,8 +2243,8 @@ function t2(e) {
         ],
     });
 }
-var t1 = n(235931);
-function t7(e, t) {
+var t7 = n(176547);
+function t6(e, t) {
     switch (e) {
         case eD.wLn.APPLICATION:
             return t?.application.name ?? "";
@@ -2264,7 +2264,7 @@ function t7(e, t) {
             return "";
     }
 }
-let t6 = s.memo(function (e) {
+let t1 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,
@@ -2403,7 +2403,7 @@ let t6 = s.memo(function (e) {
         case eD.wLn.APPLICATION:
             let K = null != M ? (D[U[M]] ?? D[M]) : null;
             null != K &&
-                (V = (0, l.jsx)(e2, {
+                (V = (0, l.jsx)(e3, {
                     guild: i,
                     applicationIntegration: K,
                     editedWebhook: v,
@@ -2422,7 +2422,7 @@ let t6 = s.memo(function (e) {
             });
             break;
         case eD.wLn.WEBHOOKS:
-            V = (0, l.jsx)(t2, {
+            V = (0, l.jsx)(t3, {
                 guild: i,
                 channel: a,
                 customWebhooks: H,
@@ -2473,20 +2473,20 @@ let t6 = s.memo(function (e) {
         children: [
             (0, l.jsx)(h.A, {
                 align: h.A.Align.CENTER,
-                className: t1.jD,
+                className: t7.jD,
                 children:
                     t === eD.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eD.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t6(eD.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, D[M]) })),
+                              breadcrumbs: [eD.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t6(e, D[M]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && W(parseInt(e.id));
                               },
                               renderCustomBreadcrumb: (e, t) =>
                                   (0, l.jsx)(c.D, {
                                       variant: "heading-lg/semibold",
-                                      className: t ? t1.q3 : t1.fd,
+                                      className: t ? t7.q3 : t7.fd,
                                       children: e.label,
                                   }),
                           }),

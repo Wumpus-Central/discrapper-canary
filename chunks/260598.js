@@ -12,8 +12,8 @@ var i = n(627968),
     _ = n(823607),
     E = n(511274),
     A = n(189812),
-    h = n(264451),
-    I = n(429128);
+    h = n(14219),
+    I = n(15328);
 function f(e) {
     let {
             value: t,
@@ -30,8 +30,8 @@ function f(e) {
             inputRef: N,
             ...C
         } = e,
-        { fieldProps: R, props: O } = (0, l.n)(C),
-        { disabled: L } = R,
+        { fieldProps: O, props: R } = (0, l.n)(C),
+        { disabled: L } = O,
         y = (0, E.Y)({ validateOn: "change", error: f, value: t, minLength: u, maxLength: A, defaultDirty: T }),
         D = r.useMemo(() => {
             if (null == A) return 10;
@@ -40,7 +40,7 @@ function f(e) {
         }, [A]),
         v = m ? (0, i.jsx)(_.n, { value: t, maxLength: g && null != A ? A : void 0 }) : null;
     return (0, i.jsx)(l.D, {
-        ...R,
+        ...O,
         trailingAuxiliaryContent: v,
         errorMessage: y.hasError ? (y.errorMessage ?? void 0) : void 0,
         children: (0, i.jsx)(o.F, {
@@ -59,9 +59,9 @@ function f(e) {
                     rows: S,
                     disabled: L,
                     "data-mana-component": "text-area",
-                    ...O,
+                    ...R,
                     onChange: (e) => {
-                        let { onChange: t } = O;
+                        let { onChange: t } = R;
                         t?.(e.currentTarget.value), y.setShouldValidate(!0);
                     },
                     ref: N,

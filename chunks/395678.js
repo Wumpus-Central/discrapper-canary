@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { o: () => O }), n(323874), n(14289), n(35956);
+n.d(t, { o: () => R }), n(323874), n(14289), n(35956);
 var i = n(627968),
     r = n(64700),
     a = n(503698),
@@ -25,8 +25,8 @@ let g = (0, E.debounce)((e) => {
     }, 50),
     S = ["allow-pointer-lock", "allow-scripts", "allow-same-origin", "allow-forms"];
 var N = n(360469),
-    C = n(457771);
-function R(e) {
+    C = n(2771);
+function O(e) {
     let {
             url: t,
             className: n,
@@ -34,8 +34,8 @@ function R(e) {
             onLoad: s,
             shouldRefocus: E,
             queryParams: C,
-            allowPopups: R = !1,
-            referrerPolicy: O = "origin",
+            allowPopups: O = !1,
+            referrerPolicy: R = "origin",
         } = e,
         L = (0, _.xi)({}),
         y = (0, l.useMemoOne)(() => (0, o.A)(), [t]),
@@ -136,7 +136,7 @@ function R(e) {
             ? (0, i.jsx)("iframe", {
                   style: w,
                   allow: "autoplay; encrypted-media",
-                  referrerPolicy: O,
+                  referrerPolicy: R,
                   onLoad: function (e) {
                       s?.(e.target),
                           (D.current = e.target),
@@ -147,14 +147,14 @@ function R(e) {
                       let { allowPopups: t } = e,
                           n = S;
                       return t && (n = [...S, "allow-popups", "allow-popups-to-escape-sandbox"]), n.join(" ");
-                  })({ allowPopups: R }),
+                  })({ allowPopups: O }),
                   className: n,
                   src: `${t}?${new URLSearchParams(b)}`,
               })
             : null
     );
 }
-function O(e) {
+function R(e) {
     let { onLoad: t } = e,
         [n, a] = r.useState(!1),
         l = r.useCallback(
@@ -169,7 +169,7 @@ function O(e) {
             !n && (0, i.jsx)("div", { className: s()(C.Qf, C.SL) }),
             (0, i.jsx)("div", {
                 className: s()(C.Qf, n ? void 0 : C.Ar),
-                children: (0, i.jsx)(R, { ...e, onLoad: l }),
+                children: (0, i.jsx)(O, { ...e, onLoad: l }),
             }),
         ],
     });

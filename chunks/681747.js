@@ -59,8 +59,8 @@ var q = t(342296),
     es = t(19575),
     ea = t(589158),
     er = t(652215),
-    ed = t(473399),
-    eo = t(689096);
+    ed = t(843311),
+    eo = t(998448);
 let ec = es.Ay.getEnableHardwareAcceleration(),
     eu = s.memo(function (e) {
         let { channel: n, sectionId: i, userId: a, guildOwnerId: r } = e,
@@ -87,7 +87,7 @@ let ec = es.Ay.getEnableHardwareAcceleration(),
                     null != h &&
                         (0, I.L3)(e, async () => {
                             let { default: e } = await Promise.all([
-                                t.e("98273"),
+                                t.e("97705"),
                                 t.e("26132"),
                                 t.e("46652"),
                                 t.e("93190"),
@@ -436,7 +436,7 @@ var ex = t(738876),
     eQ = t(568548),
     e$ = t(234320),
     eZ = t(5867),
-    eJ = t(515313);
+    eJ = t(47513);
 function e0(e) {
     let { channelId: n, className: t, ...i } = e,
         a = s.useRef(null),
@@ -484,10 +484,10 @@ function e0(e) {
         ],
     });
 }
-var e1 = t(435240);
+var e1 = t(221424);
 let e2 = eV.DN.SIZE_32,
-    e3 = { [eZ.E8.NO_CHAT]: e1.Oo, [eZ.E8.RESIZABLE]: e1.Ig };
-function e7(e) {
+    e7 = { [eZ.E8.NO_CHAT]: e1.Oo, [eZ.E8.RESIZABLE]: e1.Ig };
+function e3(e) {
     let { maxHeight: n, connectedLocation: t, renderExternalHeader: i } = e,
         a = (0, eH.A)(),
         d = (0, A.yK)([eI.Ay], () => eI.Ay.getEmbeddedActivitiesForLocationIncludingHidden(t), [t]),
@@ -592,7 +592,7 @@ function e7(e) {
             theme: er.NJ8.DARK,
             children: (e) =>
                 (0, l.jsxs)("div", {
-                    className: r()(e1.iE, e3[x], e),
+                    className: r()(e1.iE, e7[x], e),
                     ref: g,
                     style: D,
                     children: [
@@ -716,7 +716,7 @@ function e9(e) {
     let d = s?.applicationId;
     return a !== eZ.Gd.PANEL || null == d || r || null == i || null == s || (0, ev.A)(i)
         ? null
-        : (0, l.jsx)(e7, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
+        : (0, l.jsx)(e3, { maxHeight: n, connectedLocation: s.location, renderExternalHeader: t });
 }
 var e5 = t(90804),
     e4 = t(748975),
@@ -744,7 +744,7 @@ var e5 = t(90804),
     nj = t(256331),
     nI = t(623562),
     nb = t(619065),
-    nC = t(349745);
+    nC = t(87177);
 let nE = ["high", "medium", "low"],
     ny = s.memo(function (e) {
         let { moderation: n } = e,
@@ -1119,20 +1119,20 @@ var nT = t(268218),
     nM = t(519480),
     nP = t(352123),
     nD = t(328857),
-    nk = t(182287);
+    nk = t(83703);
 let nw = function (e) {
     let { guild: n, onAddGuild: i } = e,
         a = s.useCallback(() => {
             (0, g.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    t.e("70158"),
-                    t.e("52757"),
+                    t.e("27574"),
+                    t.e("21149"),
                     t.e("59957"),
                     t.e("28136"),
                     t.e("16084"),
                     t.e("36624"),
                     t.e("22547"),
-                ]).then(t.bind(t, 778929));
+                ]).then(t.bind(t, 1310));
                 return (t) =>
                     (0, l.jsx)(e, {
                         ...t,
@@ -1188,7 +1188,7 @@ var nU = t(892547),
     nZ = t(486020),
     nJ = t(860689),
     n0 = t(682557),
-    n1 = t(655911);
+    n1 = t(599487);
 let n2 = s.memo(function (e) {
     let { onClick: n } = e;
     return (0, l.jsxs)(ns.D, {
@@ -1205,7 +1205,7 @@ let n2 = s.memo(function (e) {
         ],
     });
 });
-function n3(e) {
+function n7(e) {
     let { entry: n } = e,
         [i, a] = s.useState(!1),
         d = s.useRef(null),
@@ -1220,7 +1220,7 @@ function n3(e) {
                           children: (0, l.jsx)(nY.$n, {
                               onClick: () => {
                                   (0, g.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([t.e("97742"), t.e("88869")]).then(
+                                      let { default: e } = await Promise.all([t.e("2666"), t.e("88869")]).then(
                                           t.bind(t, 201700),
                                       );
                                       return (t) => (0, l.jsx)(e, { ...t, entry: n });
@@ -1257,7 +1257,7 @@ function n3(e) {
         }),
     });
 }
-let n7 = s.memo(function (e) {
+let n3 = s.memo(function (e) {
     let { entry: n } = e,
         [i, a] = s.useState(!1),
         r = null != (0, A.bG)([n$.A], () => n$.A.getGuild(n.guildId));
@@ -1376,14 +1376,14 @@ let n7 = s.memo(function (e) {
                         }),
                     ],
                 }),
-                (0, l.jsx)(n3, { entry: n }),
+                (0, l.jsx)(n7, { entry: n }),
             ],
         })
     );
 });
 var n9 = t(946116),
-    n5 = t(167901),
-    n4 = t(123382);
+    n5 = t(935397),
+    n4 = t(564014);
 function n6(e) {
     let { searchQuery: n, setSearchQuery: t, handleClearSearch: i, handleSearchKeyPress: s } = e,
         { ref: a, width: d } = (0, nH.Ay)(),
@@ -1498,7 +1498,7 @@ let n8 = function (e) {
                                       (0, l.jsxs)("div", {
                                           className: n5.vY,
                                           children: [
-                                              e.entries.map((e) => (0, l.jsx)(n7, { entry: e }, e.guildId)),
+                                              e.entries.map((e) => (0, l.jsx)(n3, { entry: e }, e.guildId)),
                                               e.appendEndCard && null != i ? (0, l.jsx)(n2, { onClick: i }) : null,
                                           ],
                                       }),
@@ -1515,7 +1515,7 @@ var te = t(370876),
     tn = t(349288),
     tt = t(364522),
     ti = t(792831),
-    tl = t(22735);
+    tl = t(591623);
 let ts = function (e) {
     let n,
         {
@@ -1551,7 +1551,7 @@ let ts = function (e) {
                 (0, l.jsx)(y.E, { variant: "text-md/normal", color: "text-default", className: tl.av, children: e }),
             ],
         });
-    } else n = (0, l.jsx)("div", { className: n5.vY, children: o.map((e) => (0, l.jsx)(n7, { entry: e }, e.guildId)) });
+    } else n = (0, l.jsx)("div", { className: n5.vY, children: o.map((e) => (0, l.jsx)(n3, { entry: e }, e.guildId)) });
     return (0, l.jsx)("div", {
         className: n5.$$,
         children: (0, l.jsxs)(tt.Ar, {
@@ -1682,12 +1682,12 @@ let tr = function (e) {
                     ? () => {
                           (0, g.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  t.e("56697"),
-                                  t.e("97742"),
-                                  t.e("1611"),
-                                  t.e("43220"),
+                                  t.e("21009"),
+                                  t.e("2666"),
+                                  t.e("88147"),
+                                  t.e("97556"),
                                   t.e("19580"),
-                                  t.e("75423"),
+                                  t.e("97804"),
                                   t.e("56856"),
                                   t.e("96349"),
                               ]).then(t.bind(t, 579735));
@@ -1783,7 +1783,7 @@ var td = t(826673),
     tV = t(267102),
     tW = t(474397),
     tz = t(486974),
-    tY = t(297897);
+    tY = t(221314);
 function tq(e) {
     let { channel: n } = e,
         t = s.useContext(en.AnalyticsContext),
@@ -1880,7 +1880,7 @@ function t2(e) {
         autoInvert: !1,
         onRequestClose: () => i(!1),
         renderPopout: function (e) {
-            return (0, l.jsx)(t3, { ...e, channel: n });
+            return (0, l.jsx)(t7, { ...e, channel: n });
         },
         children: (e, n) => {
             let { isShown: t } = n;
@@ -1896,7 +1896,7 @@ function t2(e) {
         },
     });
 }
-function t3(e) {
+function t7(e) {
     let { channel: n, closePopout: t, onSelect: i } = e,
         s = (0, t_.A)(n, "Sidebar Overflow"),
         a = (0, tR.A)(n),
@@ -1972,7 +1972,7 @@ function t3(e) {
         ],
     });
 }
-function t7(e) {
+function t3(e) {
     let { channel: n, baseChannelId: t } = e,
         i = (0, l.jsx)(th.Ay.Icon, {
             icon: tE.P,
@@ -1992,7 +1992,7 @@ function t7(e) {
 }
 var t9 = t(31717),
     t5 = t(853742),
-    t4 = t(37509);
+    t4 = t(671373);
 function t6(e) {
     let { channelId: n } = e,
         i = (0, A.bG)([ek.A], () => ek.A.getChannel(n)),
@@ -2009,7 +2009,7 @@ function t6(e) {
     )
         return null;
     if (null != o) return (0, l.jsx)(tx.A, { guild: r, channelId: o });
-    let u = (0, l.jsx)(t7, { channel: i });
+    let u = (0, l.jsx)(t3, { channel: i });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(ex.A, { channel: i, draftType: t9.C.ChannelMessage }),
@@ -2059,7 +2059,7 @@ var il = t(561446),
     ir = t(468689),
     id = t(529942),
     io = t(739455),
-    ic = t(238475);
+    ic = t(400656);
 function iu(e) {
     let { guildId: n } = e;
     return (0, l.jsx)("div", {
@@ -2101,7 +2101,7 @@ var ih = t(599941),
     im = t(950344),
     ig = t(217530),
     ix = t(162093),
-    ip = t(238731);
+    ip = t(548547);
 function ij(e) {
     let { guildId: n, channelId: t } = e,
         i = (0, iA.e)({ guildId: n, channelId: t }),
@@ -2161,7 +2161,7 @@ function ij(e) {
 }
 var iI = t(604681),
     ib = t(761640),
-    iC = t(620719);
+    iC = t(700695);
 function iE(e) {
     let { channelId: n } = e,
         t = (0, A.bG)([ib.Ay], () => ib.Ay.getSection(n), [n]) === er.YvQ.CONVERSATIONS,
@@ -2315,7 +2315,7 @@ function iV(e) {
 }
 var iW = t(290136),
     iz = t(975571),
-    iY = t(559965);
+    iY = t(774418);
 function iq() {
     let e = z.intl.string(iY.default.pdipXI);
     return (0, l.jsx)(th.In, {
@@ -2335,8 +2335,8 @@ var iK = t(742589),
     i0 = t(641703),
     i1 = t(379848),
     i2 = t(753727),
-    i3 = t(222692),
-    i7 = t(442353),
+    i7 = t(222692),
+    i3 = t(442353),
     i9 = t(470710),
     i5 = t(186111),
     i4 = t(186295),
@@ -2449,7 +2449,7 @@ class li extends s.PureComponent {
         function a() {
             return iZ.A.call(t.id, n, !i && !t.isManaged() && !e?.shiftKey, s);
         }
-        n ? (0, i7.A)(a, l) : a();
+        n ? (0, i3.A)(a, l) : a();
     };
     handleJoinCall = (e) => {
         iJ.default.selectVoiceChannel(this.props.channel.id, e);
@@ -2470,10 +2470,10 @@ class li extends s.PureComponent {
     handleJoinVideoCall = () => {
         let { appContext: e } = this.props,
             n = () => this.handleJoinCall(!0);
-        (0, i7.A)(n, e);
+        (0, i3.A)(n, e);
     };
     handleBrowserNotSupported = () => {
-        (0, i3.A)();
+        (0, i7.A)();
     };
 }
 function ll(e) {
@@ -2576,7 +2576,7 @@ let lm = s.memo(function (e) {
                 ((0, g.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            t.e("73220"),
+                            t.e("79340"),
                             t.e("6627"),
                             t.e("70940"),
                             t.e("2033"),
@@ -2733,7 +2733,7 @@ function lw(e) {
     function g(e) {
         (0, I.L3)(e, async () => {
             let { default: e } = await Promise.all([
-                t.e("98273"),
+                t.e("97705"),
                 t.e("26132"),
                 t.e("46652"),
                 t.e("93190"),
@@ -2902,8 +2902,8 @@ function lG(e) {
     });
 }
 var lF = t(527549),
-    lH = t(616991),
-    lB = t(583222);
+    lH = t(248791),
+    lB = t(73502);
 function lV() {
     return (0, l.jsx)("div", {
         className: lB.zt,
@@ -2944,8 +2944,8 @@ var lW = t(138298),
     l0 = t(465532),
     l1 = t(579872),
     l2 = t(119031),
-    l3 = t(408018),
-    l7 = t(138617),
+    l7 = t(408018),
+    l3 = t(138617),
     l9 = t(822610),
     l5 = t(915089),
     l4 = t(314307),
@@ -2983,8 +2983,8 @@ async function sm(e) {
     }
 }
 var sg = t(55294),
-    sx = t(603150),
-    sp = t(592064);
+    sx = t(236726),
+    sp = t(726088);
 let sf = nt.oU.THREAD_CREATION;
 function sj(e) {
     let { parentChannelId: n, parentMessageId: t, location: i } = e,
@@ -3059,12 +3059,12 @@ function sb(e) {
             return { threadSettings: i, setThreadSettings: l, updateThreadSettings: a };
         })(t, i),
         { textAreaState: m, setTextAreaState: g } = (function (e, n) {
-            let [t, i] = s.useState((0, l3.N3)());
+            let [t, i] = s.useState((0, l7.N3)());
             return (
                 s.useEffect(() => {
                     function t(t) {
                         let l = t9.A.getDraft(e.id, t9.C.FirstThreadMessage);
-                        (0 === l.length || !0 === t) && i((0, l3.ur)(l)), n(t9.A.getThreadSettings(e.id) ?? {});
+                        (0 === l.length || !0 === t) && i((0, l7.ur)(l)), n(t9.A.getThreadSettings(e.id) ?? {});
                     }
                     return (
                         t(!0),
@@ -3409,7 +3409,7 @@ function sy(e) {
         children: [
             (0, l.jsx)(l9.A, { channelId: n.id, type: sf, canAttachFiles: p }),
             (0, l.jsx)("div", { className: sx.xN, children: (0, l.jsx)(lJ.U, { error: f }) }),
-            (0, l.jsx)(l7.Ay, {
+            (0, l.jsx)(l3.Ay, {
                 type: sf,
                 channel: n,
                 placeholder: z.intl.string(z.t.taZfIC),
@@ -3448,7 +3448,7 @@ function sv(e) {
 var sN = t(305866),
     sT = t(707539),
     s_ = t(702513),
-    sS = t(427871);
+    sS = t(111847);
 function sR(e) {
     let { channel: n } = e,
         [t, i] = s.useState(!1),
@@ -3572,7 +3572,7 @@ function sM(e) {
 }
 var sP = t(332456),
     sD = t(973854),
-    sk = t(545561);
+    sk = t(73137);
 function sw(e) {
     var n;
     let i,
@@ -3602,7 +3602,7 @@ function sw(e) {
     )
         return null;
     if (null != m) return (0, l.jsx)(tx.A, { guild: c, channelId: m });
-    let x = (0, l.jsx)(t7, { channel: o, baseChannelId: r });
+    let x = (0, l.jsx)(t3, { channel: o, baseChannelId: r });
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsx)(ex.A, { channel: o, draftType: t9.C.ChannelMessage }),
@@ -3663,8 +3663,8 @@ var sX = t(215530),
     s0 = t(713517),
     s1 = t(183555),
     s2 = t(718019),
-    s3 = t(413492),
-    s7 = t(915614),
+    s7 = t(413492),
+    s3 = t(915614),
     s9 = t(308244),
     s5 = t(743987),
     s4 = t(900179),
@@ -3680,7 +3680,7 @@ let al = (0, sY.mj)({
     defaultConfig: { showButton: !0 },
     variations: { 1: { showButton: !1 } },
 });
-var as = t(489905);
+var as = t(444793);
 function aa(e) {
     let { type: n, anchor: t } = e;
     return "staple" === n && "bottom" !== t;
@@ -3722,8 +3722,8 @@ function ar(e) {
         : o;
 }
 var ad = t(996988),
-    ao = t(842770),
-    ac = t(432666);
+    ao = t(357786),
+    ac = t(86434);
 function au(e) {
     let { user: n, channel: t, isRedesignEnabled: i } = e,
         a = __OVERLAY__ || !(0, sZ.A)(n.id),
@@ -3760,7 +3760,7 @@ function au(e) {
                             (0, l.jsxs)("div", {
                                 className: ao.wx,
                                 children: [
-                                    (0, l.jsx)(s7.A, {
+                                    (0, l.jsx)(s3.A, {
                                         user: n,
                                         displayProfile: d,
                                         themeType: ad.d.SIDEBAR,
@@ -3787,7 +3787,7 @@ function au(e) {
                                         displayName: sz.Ay.getName(null, t.id, n),
                                         onClickName: a ? void 0 : x,
                                         pronouns: d?.pronouns,
-                                        trailing: (0, l.jsx)(s3.A, {
+                                        trailing: (0, l.jsx)(s7.A, {
                                             displayProfile: d,
                                             themeType: ad.d.SIDEBAR,
                                             isRedesignEnabled: i,
@@ -3853,7 +3853,7 @@ var ah = t(331322),
     aA = t(249790),
     am = t(254828),
     ag = t(783123),
-    ax = t(651007);
+    ax = t(898711);
 function ap(e) {
     let { user: n, channel: t, isRedesignEnabled: i, onHide: a } = e,
         r = (0, lb.Ay)(n.id),
@@ -3941,12 +3941,12 @@ function ap(e) {
         }),
     });
 }
-var af = t(523939),
+var af = t(617498),
     aj = t(717421),
     aI = t(31956),
     ab = t(673843),
     aC = t(561794),
-    aE = t(543572),
+    aE = t(321191),
     ay = t(679492),
     av = t(439053),
     aN = t(312381),
@@ -3985,8 +3985,8 @@ var aQ = t(711690),
     a0 = t(44120),
     a1 = t(532794),
     a2 = t(31969),
-    a3 = t(317560),
-    a7 = t(99161),
+    a7 = t(317560),
+    a3 = t(99161),
     a9 = t(661492);
 let a5 = (0, sY.mj)({
     name: "2026-06-remove-wishlist-dm-sidebar-side-copy",
@@ -3997,7 +3997,7 @@ let a5 = (0, sY.mj)({
 var a4 = t(212387),
     a6 = t(74135),
     a8 = t(662349),
-    re = t(654957);
+    re = t(155653);
 function rn(e) {
     let { title: n, description: t, onClick: i } = e;
     return (0, l.jsxs)("div", {
@@ -4021,8 +4021,8 @@ var rt = t(479026),
     ri = t(699976),
     rl = t(202541),
     rs = t(518477),
-    ra = t(505631),
-    rr = t(657190);
+    ra = t(356727),
+    rr = t(134222);
 function rd(e) {
     let {
             sku: n,
@@ -4109,14 +4109,14 @@ function ro(e) {
         c = ri.Z[o],
         u = (0, a2.F)("sku_gift_badge", { applicationId: n.applicationId, skuId: n.id }),
         h = s.useCallback(() => {
-            (0, a7.a)(
+            (0, a3.a)(
                 n,
                 { isGift: !0, giftRecipient: t, giftingOrigin: rl.vQ.USER_PROFILE_WISHLIST },
                 { analyticsLocations: d },
             );
         }, [n, t, d]),
         A = s.useCallback(() => {
-            (0, a3.R)({
+            (0, a7.R)({
                 skuId: n.id,
                 applicationId: n.applicationId,
                 isStorefront: !1,
@@ -4250,7 +4250,7 @@ function rh(e) {
 }
 var rA = t(428262),
     rm = t(535089),
-    rg = t(75780);
+    rg = t(448476);
 function rx(e) {
     let {
             unownedWishlistItems: n,
@@ -4413,7 +4413,7 @@ function rj(e) {
                             ? null
                             : (0, l.jsx)(aW.A, { userId: n.id, isVisible: r, onOpenProfile: o }),
                         pronouns: i?.pronouns,
-                        trailing: (0, l.jsx)(s3.A, {
+                        trailing: (0, l.jsx)(s7.A, {
                             displayProfile: i,
                             themeType: ad.d.SIDEBAR,
                             isRedesignEnabled: d,
@@ -4555,7 +4555,7 @@ var rI = t(114212),
     rv = t(51943),
     rN = t(847374),
     rT = t(320448),
-    r_ = t(318023);
+    r_ = t(882255);
 function rS(e) {
     let { section: n, header: t, items: i, listClassName: a, onExpand: d } = e,
         { trackUserProfileAction: o } = (0, s1.NJ)(),
@@ -4585,7 +4585,7 @@ function rS(e) {
         ],
     });
 }
-var rR = t(424733);
+var rR = t(185301);
 function rL(e) {
     let { user: n, channelId: t } = e,
         { analyticsLocations: i } = (0, M.Ay)(),
@@ -4716,7 +4716,7 @@ function rO(e) {
                                 (0, l.jsxs)("div", {
                                     className: ao.wx,
                                     children: [
-                                        (0, l.jsx)(s7.A, {
+                                        (0, l.jsx)(s3.A, {
                                             user: n,
                                             displayProfile: o,
                                             themeType: ad.d.SIDEBAR,
@@ -4793,7 +4793,7 @@ function rO(e) {
         }),
     });
 }
-var rM = t(444021);
+var rM = t(219277);
 function rP(e) {
     let { channel: n } = e,
         [t] = n.recipients,
@@ -4856,7 +4856,7 @@ var rD = t(522556),
     rB = t(946228),
     rV = t(462887),
     rW = t(276293),
-    rz = t(349289),
+    rz = t(844913),
     rY = t(745652);
 let rq = () => {
     let e = (0, s$.Ay)();
@@ -4899,22 +4899,22 @@ var rK = t(943712),
     r$ = t(806931),
     rZ = t(165610),
     rJ = t(516607),
-    r0 = t(362556);
+    r0 = t(354919);
 function r1() {
     return (0, l.jsx)("div", { className: r0.wG, children: (0, l.jsx)(x.y, {}) });
 }
 let r2 = (0, nT.Fe)({
     createPromise: () =>
         Promise.all([
-            t.e("28802"),
-            t.e("44794"),
-            t.e("95726"),
-            t.e("97300"),
-            t.e("95463"),
-            t.e("54514"),
-            t.e("58681"),
-            t.e("94768"),
-            t.e("50909"),
+            t.e("78250"),
+            t.e("41838"),
+            t.e("45438"),
+            t.e("64488"),
+            t.e("56007"),
+            t.e("65482"),
+            t.e("35941"),
+            t.e("37944"),
+            t.e("99945"),
             t.e("49681"),
             t.e("66140"),
             t.e("33097"),
@@ -4929,39 +4929,39 @@ let r2 = (0, nT.Fe)({
     renderLoader: r1,
     name: "ForumChannel",
 });
-function r3() {
+function r7() {
     return Promise.all([
-        t.e("67538"),
-        t.e("77784"),
-        t.e("7965"),
-        t.e("79440"),
-        t.e("4020"),
-        t.e("72980"),
-        t.e("72926"),
-        t.e("93868"),
-        t.e("59581"),
-        t.e("51830"),
-        t.e("84807"),
-        t.e("33470"),
-        t.e("95352"),
-        t.e("97309"),
-        t.e("87773"),
-        t.e("47570"),
-        t.e("76683"),
-        t.e("43001"),
-        t.e("56844"),
-        t.e("4913"),
-        t.e("99975"),
-        t.e("11681"),
-        t.e("78319"),
-        t.e("53826"),
-        t.e("80960"),
-        t.e("39664"),
-        t.e("48627"),
-        t.e("78093"),
-        t.e("37099"),
-        t.e("41443"),
-        t.e("40647"),
+        t.e("97950"),
+        t.e("36736"),
+        t.e("6229"),
+        t.e("21792"),
+        t.e("57504"),
+        t.e("64636"),
+        t.e("56486"),
+        t.e("67732"),
+        t.e("55045"),
+        t.e("67902"),
+        t.e("17791"),
+        t.e("45726"),
+        t.e("76880"),
+        t.e("83393"),
+        t.e("25621"),
+        t.e("48570"),
+        t.e("80427"),
+        t.e("69785"),
+        t.e("24092"),
+        t.e("13221"),
+        t.e("48019"),
+        t.e("76739"),
+        t.e("78931"),
+        t.e("20230"),
+        t.e("42704"),
+        t.e("88872"),
+        t.e("39411"),
+        t.e("17909"),
+        t.e("75899"),
+        t.e("147"),
+        t.e("58983"),
         t.e("68201"),
         t.e("60730"),
         t.e("792"),
@@ -4976,7 +4976,7 @@ function r3() {
         t.e("36624"),
         t.e("15275"),
         t.e("22644"),
-        t.e("73611"),
+        t.e("95992"),
         t.e("4374"),
         t.e("74821"),
         t.e("43710"),
@@ -4992,34 +4992,34 @@ function r3() {
         t.e("15980"),
         t.e("42492"),
         t.e("30761"),
-        t.e("74925"),
+        t.e("97306"),
         t.e("36793"),
         t.e("14842"),
     ]).then(t.bind(t, 540462));
 }
-let r7 = (0, nT.Fe)({ createPromise: r3, webpackId: 540462, name: "ChannelCall", renderLoader: r1 });
+let r3 = (0, nT.Fe)({ createPromise: r7, webpackId: 540462, name: "ChannelCall", renderLoader: r1 });
 function r9() {
     return Promise.all([
-        t.e("99975"),
-        t.e("85709"),
-        t.e("77784"),
-        t.e("7965"),
-        t.e("79440"),
-        t.e("4020"),
-        t.e("72980"),
-        t.e("72926"),
-        t.e("93868"),
-        t.e("59581"),
-        t.e("51830"),
-        t.e("84807"),
-        t.e("4913"),
-        t.e("80960"),
-        t.e("81118"),
-        t.e("87773"),
-        t.e("47570"),
-        t.e("76683"),
-        t.e("43001"),
-        t.e("32118"),
+        t.e("48019"),
+        t.e("15462"),
+        t.e("36736"),
+        t.e("6229"),
+        t.e("21792"),
+        t.e("57504"),
+        t.e("64636"),
+        t.e("56486"),
+        t.e("67732"),
+        t.e("55045"),
+        t.e("67902"),
+        t.e("17791"),
+        t.e("13221"),
+        t.e("42704"),
+        t.e("50350"),
+        t.e("25621"),
+        t.e("48570"),
+        t.e("80427"),
+        t.e("69785"),
+        t.e("31282"),
         t.e("68201"),
         t.e("792"),
         t.e("92822"),
@@ -5048,7 +5048,7 @@ function r9() {
         t.e("15980"),
         t.e("42492"),
         t.e("30761"),
-        t.e("74925"),
+        t.e("97306"),
         t.e("78827"),
         t.e("28732"),
     ]).then(t.bind(t, 67319));
@@ -5057,15 +5057,15 @@ let r5 = (0, nT.Fe)({ createPromise: r9, webpackId: 67319, name: "StageChannelCa
     r4 = (0, nT.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("64437"),
-                t.e("54514"),
-                t.e("8642"),
-                t.e("33702"),
-                t.e("34221"),
-                t.e("1637"),
-                t.e("40063"),
-                t.e("78181"),
-                t.e("14158"),
+                t.e("58797"),
+                t.e("65482"),
+                t.e("10714"),
+                t.e("762"),
+                t.e("48149"),
+                t.e("63933"),
+                t.e("65831"),
+                t.e("59729"),
+                t.e("86422"),
                 t.e("49681"),
                 t.e("27786"),
                 t.e("60241"),
@@ -5088,16 +5088,16 @@ let r5 = (0, nT.Fe)({ createPromise: r9, webpackId: 67319, name: "StageChannelCa
     r6 = (0, nT.Fe)({
         createPromise: () =>
             Promise.all([
-                t.e("88583"),
-                t.e("92333"),
-                t.e("24333"),
-                t.e("68206"),
-                t.e("1637"),
-                t.e("40063"),
-                t.e("78181"),
-                t.e("69328"),
-                t.e("42119"),
-                t.e("65007"),
+                t.e("83647"),
+                t.e("91109"),
+                t.e("87085"),
+                t.e("72118"),
+                t.e("63933"),
+                t.e("65831"),
+                t.e("59729"),
+                t.e("3240"),
+                t.e("72767"),
+                t.e("38647"),
                 t.e("49681"),
                 t.e("28136"),
                 t.e("7775"),
@@ -5129,7 +5129,7 @@ class r8 extends s.PureComponent {
     }
     maybePreloadChannelCall() {
         let e = this.props.channel?.type;
-        e === er.rbe.GUILD_VOICE ? r3() : e === er.rbe.GUILD_STAGE_VOICE && r9();
+        e === er.rbe.GUILD_VOICE ? r7() : e === er.rbe.GUILD_STAGE_VOICE && r9();
     }
     handleTitleParentClick = () => {
         let { parentChannel: e } = this.props;
@@ -5210,7 +5210,7 @@ class r8 extends s.PureComponent {
         o()(null != i, "Missing user in Channel.openDMContextMenu"),
             (0, I.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    t.e("98273"),
+                    t.e("97705"),
                     t.e("26132"),
                     t.e("46652"),
                     t.e("93190"),
@@ -5365,7 +5365,7 @@ class r8 extends s.PureComponent {
                       text: z.intl.string(z.t["3aOv+h"]),
                       onClick: () =>
                           (0, g.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([t.e("1379"), t.e("70774")]).then(
+                              let { default: e } = await Promise.all([t.e("87915"), t.e("70774")]).then(
                                   t.bind(t, 464035),
                               );
                               return (t) => (0, l.jsx)(e, { channel: n, ...t });
@@ -5463,7 +5463,7 @@ class r8 extends s.PureComponent {
             case er.rbe.PRIVATE_THREAD:
                 let n = this.props.height - 200;
                 return (0, l.jsx)(
-                    r7,
+                    r3,
                     {
                         channel: e,
                         renderExternalHeader: this.renderHeaderBar,
@@ -5582,7 +5582,9 @@ class r8 extends s.PureComponent {
                 s &&
                     (0, g.openModalLazy)(
                         async () => {
-                            let { default: e } = await Promise.all([t.e("3770"), t.e("10585")]).then(t.bind(t, 954784));
+                            let { default: e } = await Promise.all([t.e("31874"), t.e("10585")]).then(
+                                t.bind(t, 954784),
+                            );
                             return (t) => (0, l.jsx)(e, { ...t, guildId: n });
                         },
                         { onCloseCallback: () => (0, rk.ry)(n, a), modalKey: "Guild Welcome Screen Modal" },

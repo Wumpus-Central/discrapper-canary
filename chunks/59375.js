@@ -4,7 +4,7 @@ e(64700);
 var t = e(529689),
     i = e(696986),
     o = e(834730),
-    l = e(305924);
+    l = e(7324);
 function n(s) {
     let { attachment: a } = s,
         e = Math.round(((a.size ?? 0) / 1024 / 1024) * 100) / 100;

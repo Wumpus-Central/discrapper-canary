@@ -1,18 +1,18 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    s = n.n(r),
-    a = n(34879);
-let o = function (e) {
-    let { message: t, className: n, noResultsImageURL: r, forceLightTheme: o, suggestions: l } = e,
-        u = null != r ? { backgroundImage: `url(${r})` } : {};
+    a = n.n(r),
+    s = n(166743);
+let l = function (e) {
+    let { message: t, className: n, noResultsImageURL: r, forceLightTheme: l, suggestions: o } = e,
+        d = null != r ? { backgroundImage: `url(${r})` } : {};
     return (0, i.jsx)("div", {
-        className: s()({ [a.VC]: o }, n),
+        className: a()({ [s.VC]: l }, n),
         children: (0, i.jsxs)("div", {
-            className: a.iE,
-            children: [(0, i.jsx)("div", { className: a.Gg, style: u }), (0, i.jsx)("div", { children: t }), l],
+            className: s.iE,
+            children: [(0, i.jsx)("div", { className: s.Gg, style: d }), (0, i.jsx)("div", { children: t }), o],
         }),
     });
 };

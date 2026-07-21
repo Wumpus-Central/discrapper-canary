@@ -98,8 +98,8 @@ var ee = t(123393),
     ea = t(427262),
     ed = t(652215),
     ec = t(743981),
-    eo = t(193962),
-    eu = t(579258);
+    eo = t(590466),
+    eu = t(77378);
 function ex(e) {
     let { icon: l, label: t, onClick: s, disabled: i } = e;
     return (0, n.jsxs)(D.D, {
@@ -511,10 +511,10 @@ var eb = t(989349),
     ep = t(442433),
     e_ = t(966327),
     eD = t(532197),
-    eG = t(477228),
-    ey = t(780165),
-    eL = t(358522),
-    eP = t(239023);
+    eG = t(525476),
+    ey = t(82061),
+    eL = t(818258),
+    eP = t(998711);
 function eB(e) {
     let l,
         t,
@@ -789,7 +789,7 @@ var eF = t(465917),
     eY = t(770178),
     eQ = t(765548),
     eZ = t(736653),
-    e0 = t(521329);
+    e0 = t(495865);
 function e7(e) {
     let { tabs: l, selectedTab: t, onTabSelect: s, onClose: i } = e;
     return (0, n.jsx)(eW.W, {
@@ -821,7 +821,7 @@ function e7(e) {
         ),
     });
 }
-function e2(e) {
+function e6(e) {
     let { onTabSelect: l, tabs: t, selectedTab: s } = e,
         r = i.useRef(null),
         d = (0, eZ.Ay)(),
@@ -923,7 +923,7 @@ function e5(e) {
                                 ),
                                 (0, n.jsx)("div", {
                                     ref: h,
-                                    children: (0, n.jsx)(e2, { tabs: S, onTabSelect: r, selectedTab: s }),
+                                    children: (0, n.jsx)(e6, { tabs: S, onTabSelect: r, selectedTab: s }),
                                 }),
                             ],
                         }),
@@ -936,7 +936,7 @@ function e5(e) {
                                 f.map((e) =>
                                     (0, n.jsx)(eJ.V.Item, { id: e.id, "aria-label": e.label, children: e.label }, e.id),
                                 ),
-                                0 !== S.length ? (0, n.jsx)(e2, { tabs: S, onTabSelect: r, selectedTab: s }) : null,
+                                0 !== S.length ? (0, n.jsx)(e6, { tabs: S, onTabSelect: r, selectedTab: s }) : null,
                             ],
                         }),
                     ],
@@ -945,15 +945,15 @@ function e5(e) {
         })
     );
 }
-var e6 = t(754744),
-    e8 = t(138298);
-function e3(e) {
+var e8 = t(754744),
+    e4 = t(138298);
+function e2(e) {
     let { guildId: l } = e,
         t = (0, d.bG)([C.A], () => C.A.getGuild(l)),
         { analyticsLocations: s } = (0, x.Ay)(u.A.MEMBER_SAFETY_PAGE),
         r = (0, d.bG)([I.Ay], () => I.Ay.getGuildSidebarState(l), [l]),
         a = i.useCallback(() => {
-            e8.A.closeGuildSidebar(l);
+            e4.A.closeGuildSidebar(l);
         }, [l]),
         c = null != r;
     return null != t && c && null != r
@@ -962,7 +962,7 @@ function e3(e) {
               children: (0, n.jsx)("div", {
                   className: e0.__invalid_sidebarContainer,
                   style: { width: ed.da6 },
-                  children: (0, n.jsx)(e6.default, {
+                  children: (0, n.jsx)(e8.default, {
                       userId: r.details.userId,
                       guildId: r.details.guildId,
                       onClose: a,
@@ -971,8 +971,8 @@ function e3(e) {
           })
         : null;
 }
-var e4 = t(856768),
-    e9 = t(523939),
+var e3 = t(856768),
+    e9 = t(617498),
     e1 = t(702841),
     le = t(717421),
     ll = t(144073),
@@ -1024,7 +1024,7 @@ function ld(e) {
     });
 }
 var lc = t(746080),
-    lo = t(362556);
+    lo = t(354919);
 function lu(e) {
     let { guild: l, currentTab: t, onTabSelect: s } = e,
         i = (0, E.W)(l.id),
@@ -1119,14 +1119,14 @@ function lx(e) {
                                             : (0, n.jsx)(eO, { guildId: c.id, currentTab: s }),
                               }),
                           }),
-                          (0, n.jsx)(e4.A, { guildId: c.id }),
+                          (0, n.jsx)(e3.A, { guildId: c.id }),
                       ],
                   }),
                   D &&
                       (null == c
                           ? null
                           : B
-                            ? (0, n.jsx)(e3, { guildId: c.id })
+                            ? (0, n.jsx)(e2, { guildId: c.id })
                             : s === M.ALL_MEMBERS
                               ? null
                               : (0, n.jsx)(eN, { guildId: c.id })),

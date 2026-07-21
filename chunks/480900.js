@@ -22,20 +22,20 @@ var i = n(627968),
     S = n(280450),
     N = n(696451),
     C = n(317525),
-    R = n(174459),
-    O = n(975571),
+    O = n(174459),
+    R = n(975571),
     L = n(967740),
     y = n(652215),
     D = n(375708),
-    v = n(967671),
-    b = n(227568);
+    v = n(374687),
+    b = n(250296);
 function M(e, t) {
     (0, c.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
-            n.e("29205"),
-            n.e("10931"),
-            n.e("73435"),
-            n.e("79816"),
+            n.e("57533"),
+            n.e("74059"),
+            n.e("6915"),
+            n.e("23072"),
             n.e("53984"),
             n.e("38042"),
             n.e("17460"),
@@ -58,7 +58,7 @@ let P = function (e) {
     if (
         (r.useEffect(() => {
             0 !== G.length &&
-                R.default.track(y.HAw.PASSPORT_ENTRY_VIEWED, {
+                O.default.track(y.HAw.PASSPORT_ENTRY_VIEWED, {
                     role_ids: G.map((e) => {
                         let { role_id: t } = e;
                         return t;
@@ -77,7 +77,7 @@ let P = function (e) {
         transitionState: a,
         title: D.intl.string(D.t.ghtnss),
         onClose: c,
-        subtitle: D.intl.format(D.t["Y+TsEV"], { helpdeskArticleUrl: O.A.getArticleURL(y.MVz.CONNECTION_DETAILS) }),
+        subtitle: D.intl.format(D.t["Y+TsEV"], { helpdeskArticleUrl: R.A.getArticleURL(y.MVz.CONNECTION_DETAILS) }),
         actions: [],
         children: (0, i.jsx)(u.B, {
             padding: { top: 8 },

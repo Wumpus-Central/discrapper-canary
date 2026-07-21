@@ -49,7 +49,7 @@ var g = n(312138),
     W = n(636922),
     B = n(486020),
     K = n(375708),
-    z = n(972135);
+    z = n(189279);
 function J(e) {
     let { message: t } = e,
         n = B.Ay.getUserAvatarURL({ avatar: t.author.avatar, id: t.author.id, discriminator: t.author.discriminator }),
@@ -82,8 +82,8 @@ class H extends s.PureComponent {
             (e.stopPropagation(),
             (0, $.L3)(e, async () => {
                 let { default: e } = await Promise.all([
-                    n.e("97935"),
-                    n.e("96308"),
+                    n.e("47143"),
+                    n.e("988"),
                     n.e("93103"),
                     n.e("52229"),
                     n.e("91671"),
@@ -183,7 +183,7 @@ class H extends s.PureComponent {
     }
 }
 var q = n(652215),
-    Q = n(242563);
+    Q = n(769691);
 function Z(e) {
     let { parentChannel: t, onSelectChannel: n } = e,
         r = (0, _.Ay)(t);

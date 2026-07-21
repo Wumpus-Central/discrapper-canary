@@ -1,65 +1,65 @@
 "use strict";
-n.d(t, { Z: () => u });
+n.d(t, { Z: () => d });
 var i = n(627968),
     r = n(641668),
-    s = n(44482),
-    a = n(452027),
-    o = n(732771),
-    l = n(930856);
-function u(e) {
-    let { hideTags: t, wrapTags: n, maxOptionsVisible: u = 5, ...c } = e,
-        { fieldProps: d } = (0, a.n)(c),
+    a = n(44482),
+    s = n(452027),
+    l = n(732771),
+    o = n(37712);
+function d(e) {
+    let { hideTags: t, wrapTags: n, maxOptionsVisible: d = 5, ...c } = e,
+        { fieldProps: u } = (0, s.n)(c),
         {
             disabled: _,
-            required: h,
-            onQueryChange: f,
-            onKeyDown: p,
-            onFocus: E,
-            onBlur: m,
-            placeholder: g,
-            closeOnSelect: A,
-            selectionMode: I,
+            required: E,
+            onQueryChange: A,
+            onKeyDown: h,
+            onFocus: I,
+            onBlur: f,
+            placeholder: p,
+            closeOnSelect: T,
+            selectionMode: m,
         } = c,
         {
-            isOpen: T,
+            isOpen: g,
             setIsOpen: S,
-            refs: y,
+            refs: N,
             floatingStyles: C,
-            getFloatingProps: N,
-            getReferenceProps: v,
-            transitionStyles: R,
+            getFloatingProps: O,
+            getReferenceProps: R,
+            transitionStyles: L,
         } = (0, r.G)();
-    return (0, i.jsxs)(o.iS, {
+    return (0, i.jsxs)(l.iS, {
         ...c,
         isCollapsible: !0,
-        isOpen: T,
+        isOpen: g,
         setIsOpen: S,
-        closeOnSelect: A ?? "single" === I,
+        closeOnSelect: T ?? "single" === m,
         children: [
-            (0, i.jsx)(o.a3, {
+            (0, i.jsx)(l.a3, {
                 hideTags: t,
-                required: h,
+                required: E,
                 disabled: _,
                 wrapTags: n,
                 showChevronButton: !0,
-                ref: y.setReference,
-                placeholder: g,
-                ...d,
-                ...v(),
-                onKeyDown: p,
-                onBlur: m,
-                onQueryChange: f,
-                onFocus: E,
+                ref: N.setReference,
+                placeholder: p,
+                ...u,
+                ...R(),
+                onKeyDown: h,
+                onBlur: f,
+                onQueryChange: A,
+                onFocus: I,
             }),
-            T &&
+            g &&
                 (0, i.jsx)("div", {
-                    ref: y.setFloating,
-                    className: l.S_,
-                    style: { ...C, ...R },
-                    ...N(),
-                    children: (0, i.jsx)(o.X2, {
-                        renderListItem: (e) => (0, i.jsx)(s.c, { ...e }),
-                        maxVisibleItems: u,
+                    ref: N.setFloating,
+                    className: o.S_,
+                    style: { ...C, ...L },
+                    ...O(),
+                    children: (0, i.jsx)(l.X2, {
+                        renderListItem: (e) => (0, i.jsx)(a.c, { ...e }),
+                        maxVisibleItems: d,
                     }),
                 }),
         ],

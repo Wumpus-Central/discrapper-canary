@@ -14,7 +14,7 @@ var l = n(627968),
     _ = n(241440),
     S = n(157432),
     m = n(982291),
-    I = n(291767),
+    I = n(852607),
     f = n(331611),
     p = n(169797),
     A = n(652215);
@@ -34,7 +34,7 @@ let T = {
         [C.C.GUILD_ROLE_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
     },
     y = (0, r.lazy)(() =>
-        Promise.all([n.e("11005"), n.e("93438"), n.e("54791"), n.e("25246"), n.e("14648"), n.e("8430")])
+        Promise.all([n.e("797"), n.e("93438"), n.e("54791"), n.e("25246"), n.e("14648"), n.e("8430")])
             .then(n.bind(n, 427325))
             .then((e) => {
                 let { UnifiedCheckoutInstance: t } = e;
@@ -238,7 +238,7 @@ class P {
             return (0, o.openModalLazy)(
                 async () => {
                     let { UnifiedCheckoutInstance: e } = await Promise.all([
-                        n.e("11005"),
+                        n.e("797"),
                         n.e("93438"),
                         n.e("54791"),
                         n.e("25246"),

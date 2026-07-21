@@ -30,7 +30,7 @@ function _(e) {
                   E?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
                       (0, l.$R)(c) &&
                           (0, a.openModalLazy)(async () => {
-                              let { default: e } = await Promise.all([n.e("77791"), n.e("19119"), n.e("14565")]).then(
+                              let { default: e } = await Promise.all([n.e("5879"), n.e("19119"), n.e("14565")]).then(
                                   n.bind(n, 839785),
                               );
                               return (n) =>

@@ -35,14 +35,14 @@ function g(e) {
         (0, l.openModalLazy)(
             async () => {
                 let { default: e } = await Promise.all([
-                    n.e("92430"),
-                    n.e("54453"),
+                    n.e("27574"),
+                    n.e("21149"),
                     n.e("59957"),
                     n.e("28136"),
                     n.e("16084"),
                     n.e("36624"),
                     n.e("22547"),
-                ]).then(n.bind(n, 778929));
+                ]).then(n.bind(n, 1310));
                 return (n) =>
                     (0, i.jsx)(e, {
                         ...n,

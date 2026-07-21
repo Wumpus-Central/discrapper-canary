@@ -1,13 +1,13 @@
-n.d(t, { CS: () => M, GQ: () => k, O0: () => D, Pl: () => w, RE: () => N, X1: () => b, we: () => O });
+n.d(t, { CS: () => M, GQ: () => k, O0: () => D, Pl: () => b, RE: () => N, X1: () => w, we: () => O });
 var i = n(627968),
     s = n(64700),
     r = n(503698),
     l = n.n(r),
     a = n(17928),
     o = n(661531),
-    d = n(990078),
-    u = n(834730),
-    c = n(939249),
+    d = n(834730),
+    u = n(939249),
+    c = n(866665),
     h = n(625903),
     m = n(31300),
     g = n(788120),
@@ -19,18 +19,18 @@ var i = n(627968),
     S = n(302614),
     I = n(489277),
     v = n(119191),
-    T = n(581730),
-    j = n(481484),
+    j = n(581730),
+    T = n(481484),
     C = n(375708),
-    y = n(882387);
-function w(e) {
+    y = n(67579);
+function b(e) {
     let { children: t } = e;
     return (0, i.jsx)("div", {
         className: y.oB,
-        children: (0, i.jsx)(u.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
+        children: (0, i.jsx)(d.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
     });
 }
-let b = 7e3;
+let w = 7e3;
 function N(e, t) {
     return _(
         (0, a.bG)([A.A], () => A.A.getWidget(e), [e]),
@@ -40,7 +40,7 @@ function N(e, t) {
 function _(e, t) {
     let n = s.useRef(e?.showExtrasHintTimestamp),
         [i, r] = s.useState(!1),
-        l = (0, j.A)(),
+        l = (0, T.A)(),
         a = s.useRef(void 0);
     return (
         s.useEffect(() => {
@@ -78,17 +78,17 @@ function O(e) {
               children: [
                   (0, i.jsx)(S.A, {
                       className: y.Z,
-                      children: (0, i.jsx)(c.D, {
+                      children: (0, i.jsx)(u.D, {
                           className: y.SM,
                           onClick: () => {
                               null != s &&
                                   (f.A.setInputLocked(!1, I.A.getTargetPID()),
                                   (0, E.YX)(s.type, { type: E.Z5.KEYBIND_HINT, value: E.IP.OVERLAY_UNLOCKED }));
                           },
-                          children: (0, i.jsx)(u.E, {
+                          children: (0, i.jsx)(d.E, {
                               variant: "text-xs/semibold",
                               color: "text-strong",
-                              children: (0, v.sI)((0, T.Jn)(), C.t["1XA04X"], {
+                              children: (0, v.sI)((0, j.Jn)(), C.t["1XA04X"], {
                                   useFlexboxLayout: !0,
                                   highlightAdminWarningIfElevated: !1,
                                   keybindClassName: y.P,
@@ -101,17 +101,17 @@ function O(e) {
           })
         : (0, i.jsx)("div", {
               className: y.oB,
-              children: (0, i.jsx)(u.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
+              children: (0, i.jsx)(d.E, { variant: "text-xs/semibold", color: "text-strong", children: t }),
           });
 }
 function M(e) {
     let { onClick: t } = e;
-    if ((0, j.A)()) return null;
+    if ((0, T.A)()) return null;
     let n = C.intl.string(C.t["3D5yo/"]);
-    return (0, i.jsx)(d.m, {
+    return (0, i.jsx)(c.m, {
         text: n,
         "aria-label": n,
-        children: (0, i.jsx)(c.D, {
+        children: (0, i.jsx)(u.D, {
             className: y.x6,
             onClick: t,
             children: (0, i.jsx)(h.Z, { size: "xxs", color: o.A.colors.INTERACTIVE_TEXT_ACTIVE }),
@@ -121,12 +121,12 @@ function M(e) {
 function k(e) {
     let { widgetId: t, showAllStreams: n } = e,
         s = n ? C.intl.string(C.t.q2B3rh) : C.intl.string(C.t.JKGi6o);
-    return (0, j.A)()
+    return (0, T.A)()
         ? null
-        : (0, i.jsx)(d.m, {
+        : (0, i.jsx)(c.m, {
               text: s,
               "aria-label": s,
-              children: (0, i.jsx)(c.D, {
+              children: (0, i.jsx)(u.D, {
                   className: l()(y.x6, n && y.vu),
                   onClick: function () {
                       (0, p.cC)(t, { showAllStreams: !n });
@@ -141,12 +141,12 @@ function k(e) {
 function D(e) {
     let { id: t, pinned: n } = e,
         s = n ? C.intl.string(C.t.cSu80j) : C.intl.string(C.t.cM8Vnm),
-        r = (0, j.A)();
-    return (0, i.jsx)(d.m, {
+        r = (0, T.A)();
+    return (0, i.jsx)(c.m, {
         text: s,
         "aria-label": s,
         asContainer: !0,
-        children: (0, i.jsx)(c.D, {
+        children: (0, i.jsx)(u.D, {
             className: l()(y.x6, n && y.vu),
             onClick: () => {
                 r || (0, p.v0)(t);

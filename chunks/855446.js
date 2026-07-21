@@ -4,7 +4,7 @@ var l,
     s = t(64700),
     a = t(503698),
     r = t.n(a),
-    o = t(580929),
+    o = t(617498),
     c = t(696292),
     u = t(834730),
     d = t(939249),
@@ -16,10 +16,10 @@ var l,
     p = t(697675),
     g = t(869003),
     x = t(652215),
-    I = t(375708),
-    f = t(186349);
-let v = ["embedded_cover"],
-    T = { tension: 800, friction: 24 };
+    f = t(375708),
+    I = t(38293);
+let T = ["embedded_cover"],
+    v = { tension: 800, friction: 24 };
 var _ =
     (((l = _ || {})[(l.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
     (l[(l.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
@@ -38,7 +38,7 @@ function j(e) {
             locationObject: {},
             onActivityItemSelected: l,
             embeddedActivitiesManager: g.A,
-            assetNames: v,
+            assetNames: T,
             commandOrigin: j,
         }),
         [y, R] = s.useState(!1),
@@ -51,8 +51,8 @@ function j(e) {
         D = s.useMemo(
             () =>
                 (0, i.jsx)("div", {
-                    className: f.Gz,
-                    children: (0, i.jsx)("div", { className: f.fC, children: (0, i.jsx)(p.A, { labelType: b }) }),
+                    className: I.Gz,
+                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(p.A, { labelType: b }) }),
                 }),
             [b],
         ),
@@ -60,25 +60,25 @@ function j(e) {
             switch (S) {
                 case C.o6.JOIN:
                     return (0, i.jsx)("div", {
-                        className: f.m9,
+                        className: I.m9,
                         children: (0, i.jsx)("div", {
-                            className: f.aF,
+                            className: I.aF,
                             children: (0, i.jsx)(u.E, {
                                 variant: "text-sm/medium",
                                 color: "text-overlay-light",
-                                children: I.intl.string(I.t.VJlc0S),
+                                children: f.intl.string(f.t.VJlc0S),
                             }),
                         }),
                     });
                 case C.o6.LEAVE:
                     return (0, i.jsx)("div", {
-                        className: f.m9,
+                        className: I.m9,
                         children: (0, i.jsx)("div", {
-                            className: r()(f.aF, f.pS),
+                            className: r()(I.aF, I.pS),
                             children: (0, i.jsx)(u.E, {
                                 variant: "text-sm/medium",
                                 color: "text-overlay-light",
-                                children: I.intl.string(I.t["wH/wDO"]),
+                                children: f.intl.string(f.t["wH/wDO"]),
                             }),
                         }),
                     });
@@ -93,9 +93,9 @@ function j(e) {
         onBlur: M,
         onMouseEnter: L,
         onMouseLeave: M,
-        className: f.XA,
+        className: I.XA,
         children: (0, i.jsx)(A.c, {
-            config: T,
+            config: v,
             from: { value: 0 },
             to: { value: +!!y },
             children: (e) => {
@@ -109,14 +109,14 @@ function j(e) {
                             children: (l) =>
                                 (0, i.jsxs)(o.animated.div, {
                                     ref: l,
-                                    className: r()(e, f.LM, _, { [f.$g]: 0 === a, [f.J3]: 1 === a }),
+                                    className: r()(e, I.LM, _, { [I.$g]: 0 === a, [I.J3]: 1 === a }),
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
                                         (0, i.jsx)(E.A, {
                                             imageBackground: O,
                                             applicationName: t.application.name,
-                                            imageClassName: f.jj,
-                                            imageNotFoundClassName: f.v_,
+                                            imageClassName: I.jj,
+                                            imageNotFoundClassName: I.v_,
                                         }),
                                         D,
                                         P,

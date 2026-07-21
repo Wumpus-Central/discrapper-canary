@@ -12,19 +12,19 @@ var l = n(627968),
     m = n(174459),
     g = n(652215),
     p = n(375708),
-    A = n(636801),
-    f = n(992595);
+    A = n(49353),
+    f = n(742715);
 function C(e) {
-    let { onClose: t, onConfirm: C, onCancel: E, channel: x, analyticsType: S, popoutText: _, animation: I } = e;
+    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: _, animation: I } = e;
     i.useEffect(() => {
-        m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(x) });
-    }, [S, x]);
+        m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
+    }, [S, E]);
     let j = i.useCallback(() => {
             C?.(), t();
         }, [C, t]),
         y = i.useCallback(() => {
-            E?.(), t();
-        }, [E, t]),
+            x?.(), t();
+        }, [x, t]),
         b = i.useRef(null);
     return (
         i.useEffect(() => {

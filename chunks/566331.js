@@ -14,7 +14,7 @@ var r = n(503698),
     E = n(734057),
     A = n(818348),
     h = n(375708),
-    I = n(454642);
+    I = n(10778);
 function f(e) {
     let { stream: t, width: n } = e,
         r = (0, s.bG)([E.A], () => E.A.getChannel(t.channelId));

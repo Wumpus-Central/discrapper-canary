@@ -4,15 +4,15 @@ var i = n(627968),
     r = n(503698),
     l = n.n(r),
     a = n(17928);
-if (88245 != n.j) var o = n(990078);
-if (88245 != n.j) var d = n(834730);
+if (88245 != n.j) var o = n(834730);
+if (88245 != n.j) var d = n(866665);
 if (88245 != n.j) var u = n(821609);
 if (88245 != n.j) var c = n(150934);
 if (88245 != n.j) var h = n(364522);
 var m = n(964486),
     g = n(617710),
-    p = n(127819),
-    f = n(505206);
+    p = n(29203),
+    f = n(221694);
 let x = 1e3 / 60,
     A = 1e3 / 30,
     E = 5e3,
@@ -180,13 +180,13 @@ function y(e) {
     return (0, i.jsxs)("div", {
         className: p.st,
         children: [
-            (0, i.jsxs)(d.E, {
+            (0, i.jsxs)(o.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 children: [
                     "FPS (~3sec):",
                     " ",
-                    (0, i.jsx)(d.E, {
+                    (0, i.jsx)(o.E, {
                         tag: "span",
                         variant: "text-md/bold",
                         color: a < 30 ? "text-feedback-critical" : a < 45 ? "text-feedback-warning" : "text-strong",
@@ -194,19 +194,19 @@ function y(e) {
                     }),
                 ],
             }),
-            (0, i.jsxs)(d.E, {
+            (0, i.jsxs)(o.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 children: [
                     "Dropped Frames:",
                     " ",
-                    (0, i.jsx)(d.E, {
+                    (0, i.jsx)(o.E, {
                         tag: "span",
                         variant: "text-md/bold",
                         color: h < 2 ? "text-feedback-critical" : h < 5 ? "text-feedback-warning" : "text-strong",
                         children: f.current,
                     }),
-                    (0, i.jsxs)(d.E, {
+                    (0, i.jsxs)(o.E, {
                         tag: "span",
                         variant: "text-sm/normal",
                         color: "text-muted",
@@ -214,11 +214,11 @@ function y(e) {
                         children: ["(Dropped: ", ((f.current / A.current) * 100).toFixed(4), "%)"],
                     }),
                     R &&
-                        (0, i.jsx)(o.m, {
+                        (0, i.jsx)(d.m, {
                             position: "left",
                             text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                             asContainer: !0,
-                            children: (0, i.jsx)(d.E, {
+                            children: (0, i.jsx)(o.E, {
                                 tag: "span",
                                 variant: "text-xs/bold",
                                 color: "text-feedback-critical",
@@ -228,13 +228,13 @@ function y(e) {
                         }),
                 ],
             }),
-            (0, i.jsxs)(d.E, {
+            (0, i.jsxs)(o.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 children: [
                     "Rendered Frames:",
                     " ",
-                    (0, i.jsx)(d.E, {
+                    (0, i.jsx)(o.E, {
                         tag: "span",
                         variant: "text-md/semibold",
                         color: "text-subtle",
@@ -242,13 +242,13 @@ function y(e) {
                     }),
                 ],
             }),
-            (0, i.jsxs)(d.E, {
+            (0, i.jsxs)(o.E, {
                 variant: "text-md/normal",
                 color: "text-muted",
                 children: [
                     "Frame Times (~3sec):",
                     " ",
-                    (0, i.jsxs)(d.E, {
+                    (0, i.jsxs)(o.E, {
                         tag: "span",
                         variant: "text-md/semibold",
                         color: c > 1.1 * x ? "text-feedback-warning" : "text-subtle",
@@ -256,28 +256,28 @@ function y(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(o.m, {
+            (0, i.jsx)(d.m, {
                 position: "left",
                 text: "The average amount of 'lag' between us rendering a frame and being able to process background tasks. Values constantly above 1-2ms means our main thread is being burried by work and is taking all of its time in animation frames, most likely producing user interaciton blocking jank. (This doesn't work when the app is backgrounded though)",
                 asContainer: !0,
-                children: (0, i.jsxs)(d.E, {
+                children: (0, i.jsxs)(o.E, {
                     variant: "text-md/normal",
                     color: "text-muted",
                     children: [
                         "Idle Frame Delta (~3sec):",
                         " ",
-                        (0, i.jsxs)(d.E, {
+                        (0, i.jsxs)(o.E, {
                             tag: "span",
                             variant: "text-md/semibold",
                             color: O > 1 ? "text-feedback-critical" : "text-subtle",
                             children: [O.toFixed(2), "ms"],
                         }),
                         R &&
-                            (0, i.jsx)(o.m, {
+                            (0, i.jsx)(d.m, {
                                 position: "left",
                                 text: "We don't track frames while the app is in the background, because requestAnimationFrame doesn't fire in the background",
                                 asContainer: !0,
-                                children: (0, i.jsx)(d.E, {
+                                children: (0, i.jsx)(o.E, {
                                     tag: "span",
                                     variant: "text-xs/bold",
                                     color: "text-feedback-critical",
@@ -298,15 +298,15 @@ function y(e) {
 function b(e) {
     let { socket: t, isAverageFrameTime: n, onToggleAverageFrameTime: r } = e,
         [l, a] = s.useState(t.dispatcher.getIsRequestIdleCallbackEnabled()),
-        d = s.useRef(null);
+        o = s.useRef(null);
     return (
         s.useEffect(
             () => (
-                (d.current = setInterval(() => {
+                (o.current = setInterval(() => {
                     a(t.dispatcher.getIsRequestIdleCallbackEnabled());
                 }, A)),
                 () => {
-                    null != d.current && clearInterval(d.current);
+                    null != o.current && clearInterval(o.current);
                 }
             ),
             [t.dispatcher],
@@ -314,7 +314,7 @@ function b(e) {
         (0, i.jsxs)("div", {
             className: p.st,
             children: [
-                (0, i.jsx)(o.m, {
+                (0, i.jsx)(d.m, {
                     position: "left",
                     text: "Instead of using 60fps to calculate the number of dropped frames, we use the average framerate to more accurately determine the number of actual dropped frames. Turn this off when benchmarking to get better comparsion between two different runtimes, where higher FPS might result in a higher dropped frame count.",
                     asContainer: !0,
@@ -346,7 +346,7 @@ function w(e) {
             r
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(d.E, {
+                          (0, i.jsx)(o.E, {
                               variant: "text-md/medium",
                               color: "text-muted",
                               children: "Gateway Dispatch Timings:",
@@ -360,14 +360,14 @@ function w(e) {
                                       {
                                           children: [
                                               (0, i.jsx)("td", {
-                                                  children: (0, i.jsx)(d.E, {
+                                                  children: (0, i.jsx)(o.E, {
                                                       variant: "text-xs/normal",
                                                       color: "text-default",
                                                       children: t,
                                                   }),
                                               }),
                                               (0, i.jsx)("td", {
-                                                  children: (0, i.jsxs)(d.E, {
+                                                  children: (0, i.jsxs)(o.E, {
                                                       tag: "span",
                                                       variant: "text-xs/bold",
                                                       color: "text-default",
@@ -375,7 +375,7 @@ function w(e) {
                                                   }),
                                               }),
                                               (0, i.jsx)("td", {
-                                                  children: (0, i.jsxs)(d.E, {
+                                                  children: (0, i.jsxs)(o.E, {
                                                       tag: "span",
                                                       variant: "text-xs/normal",
                                                       color: "text-muted",
@@ -398,14 +398,14 @@ function N(e) {
     let { socket: t } = e,
         n = t.dispatcher.getSchedulerTelemetry(),
         [r, a] = s.useState(n.isTelemetryEnabled),
-        [o, h] = s.useState(n.isTelemetryEnabled);
+        [d, h] = s.useState(n.isTelemetryEnabled);
     function m(e) {
         h(e), n.toggleTelemetry(e);
     }
     return (0, i.jsxs)("div", {
         className: p.st,
         children: [
-            (0, i.jsx)(c.S, { label: "Enable Dispatch Telemetry", checked: o, onChange: () => m(!o) }),
+            (0, i.jsx)(c.S, { label: "Enable Dispatch Telemetry", checked: d, onChange: () => m(!d) }),
             (0, i.jsx)("div", {
                 className: l()(r && p.Mq),
                 children: (0, i.jsx)(c.S, {
@@ -422,7 +422,7 @@ function N(e) {
             r
                 ? (0, i.jsxs)(i.Fragment, {
                       children: [
-                          (0, i.jsx)(d.E, {
+                          (0, i.jsx)(o.E, {
                               variant: "text-md/medium",
                               color: "text-muted",
                               children: "Dispatch Scheduler Telemetry:",
@@ -436,14 +436,14 @@ function N(e) {
                                       {
                                           children: [
                                               (0, i.jsx)("td", {
-                                                  children: (0, i.jsx)(d.E, {
+                                                  children: (0, i.jsx)(o.E, {
                                                       variant: "text-xs/normal",
                                                       color: "text-default",
                                                       children: t,
                                                   }),
                                               }),
                                               (0, i.jsx)("td", {
-                                                  children: (0, i.jsx)(d.E, {
+                                                  children: (0, i.jsx)(o.E, {
                                                       tag: "span",
                                                       variant: "text-xs/bold",
                                                       color: "text-default",

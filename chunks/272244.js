@@ -1,4 +1,4 @@
-n.d(t, { default: () => e8 });
+n.d(t, { default: () => e4 });
 var i = n(627968),
     s = n(64700),
     r = n(562708),
@@ -37,7 +37,7 @@ var j = n(503698),
     O = n(939249),
     B = n(215566),
     K = n(375708),
-    G = n(213659);
+    G = n(455091);
 function F(e) {
     let { node: t, isLast: n } = e,
         s = t.useTitle(),
@@ -91,7 +91,7 @@ function U(e) {
         }),
     });
 }
-var W = n(454298);
+var W = n(548946);
 function H(e) {
     let { icon: t, label: n, onClick: s } = e;
     return (0, i.jsx)(E.K, { onClick: s, icon: t, size: "sm", variant: "icon-only", "aria-label": n });
@@ -181,12 +181,12 @@ let es = function (e) {
 };
 var er = n(284009),
     el = n.n(er),
-    ea = n(523939),
+    ea = n(617498),
     ec = n(935399),
     eo = n(319354),
     eu = n(717421),
     ed = n(885386),
-    em = n(571902);
+    em = n(150310);
 function eh(e) {
     let { category: t, onClick: n, active: r, dismissibleBadge: l } = e,
         { useTitle: a, useSubnavLabel: c, key: o, usePersistentBadge: u } = t,
@@ -436,7 +436,7 @@ function ex(e) {
         })
     );
 }
-var ef = n(598371);
+var ef = n(786539);
 let ep = "refresh_sm";
 function eA(e) {
     let { onClick: t, active: n, node: r, dismissibleBadge: l, panelKey: c, listItemProps: o, children: u } = e,
@@ -567,7 +567,7 @@ function ey(e) {
 }
 var eb = n(826673),
     ev = n(49999),
-    eS = n(455999);
+    eS = n(798295);
 function ej(e) {
     let { currentPanelKey: t, root: n, onClose: r, footer: l, emptyState: a, searchBar: c } = e,
         o = _.A.useField("showNavigationMobile"),
@@ -794,7 +794,7 @@ function eN(e) {
 }
 var eE = n(823092),
     eC = n(581298),
-    eT = n(16756);
+    eT = n(725660);
 function eP(e) {
     let {
             partialRoot: t,
@@ -941,12 +941,12 @@ var eM = n(280450),
     eZ = n(915089),
     eq = n(206845),
     e$ = n(19575),
-    eQ = n(775960);
+    eQ = n(397296);
 function eJ() {
     let e = (0, eZ.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "581303",
-        s = "c613a43d033746bb94b281f82a057e54c3b6db4e".substring(0, 7),
+        n = "581523",
+        s = "2825b616efbc809b117ded4ba943bcc258f7eafe".substring(0, 7),
         r = eX.A?.app.getVersion(),
         l = eX.A?.app.getBuildNumber(),
         c = eX.A?.app.getAppArch(),
@@ -1031,7 +1031,7 @@ function eJ() {
         })
     );
 }
-var e0 = n(792537);
+var e0 = n(840577);
 function e1(e) {
     let { onClose: t } = e;
     return (0, i.jsx)(eB.W, {
@@ -1115,15 +1115,15 @@ function e2() {
     });
 }
 var e5 = n(402651),
-    e9 = n(669067),
-    e7 = n(830543),
-    e3 = n(725305);
-let e6 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
-    e4 = new Map([
+    e7 = n(669067),
+    e9 = n(830543),
+    e6 = n(376513);
+let e3 = new Set([eD.X.PROFILE_PANEL, eD.X.SUBSCRIPTIONS_PANEL, eD.X.FAMILY_CENTER_PANEL, eD.X.POGGERMODE_PANEL]),
+    e8 = new Map([
         [eD.X.CONNECTIONS_PANEL, r.ImpressionNames.USER_SETTINGS_CONNECTIONS],
         [eD.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS],
     ]);
-function e8(e) {
+function e4(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1132,7 +1132,7 @@ function e8(e) {
         [h, g] = s.useState(!1);
     return (s.useLayoutEffect(() => {
         function e() {
-            null == e_.default.getCurrentUser() && (g(!0), (0, e7.default)());
+            null == e_.default.getCurrentUser() && (g(!0), (0, e9.default)());
         }
         return (
             eM.default.addChangeListener(e),
@@ -1149,8 +1149,8 @@ function e8(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e6.has(e) || (0, e9._)(e);
-                  let t = e4.get(e);
+                  e3.has(e) || (0, e7._)(e);
+                  let t = e8.get(e);
                   null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
@@ -1188,14 +1188,14 @@ function te() {
             [],
         ),
         (0, i.jsx)("div", {
-            className: e3.P,
+            className: e6.P,
             children: (0, i.jsx)(l.I, { size: "md", query: e, onFocus: n, onBlur: r, onChange: t, onClear: a }),
         })
     );
 }
 function tt() {
     return (0, i.jsxs)("div", {
-        className: e3.t,
+        className: e6.t,
         children: [
             (0, i.jsx)(a.E, { variant: "text-sm/semibold", color: "text-strong", children: K.intl.string(K.t.zihbmv) }),
             (0, i.jsx)(a.E, { variant: "text-sm/normal", color: "text-subtle", children: K.intl.string(K.t.XclvsB) }),

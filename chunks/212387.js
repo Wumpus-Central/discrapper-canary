@@ -22,12 +22,12 @@ var i = n(627968),
     S = n(474012),
     N = n(929283),
     C = n(245068),
-    R = n(761365),
-    O = n(366523),
+    O = n(761365),
+    R = n(366523),
     L = n(403362),
     y = n(652215),
     D = n(778712),
-    v = n(997990);
+    v = n(134222);
 function b(e) {
     let { sku: t, isFocused: n, user: a, guildId: s } = e,
         l = r.useMemo(() => (0, S.T)(t), [t]);
@@ -57,7 +57,7 @@ function b(e) {
                 className: v.M4,
                 children: (0, i.jsx)("div", {
                     className: v.N1,
-                    children: (0, i.jsx)(R.A, {
+                    children: (0, i.jsx)(O.A, {
                         user: a,
                         guildId: s,
                         nameplate: l.item,
@@ -77,7 +77,7 @@ function b(e) {
 }
 function M(e) {
     let { sku: t, isFocused: n } = e;
-    return (0, i.jsx)(O.e, {
+    return (0, i.jsx)(R.e, {
         shape: "custom",
         containerClassName: s()(v.JS, n && v.P3),
         backgroundImageClassName: v.m1,
@@ -123,7 +123,7 @@ function U(e) {
 var w = n(661492),
     G = n(627001),
     x = n(375708),
-    k = n(213494),
+    k = n(29566),
     F = n(476324);
 function V(e) {
     return { width: e.size, height: e.size };
@@ -157,14 +157,14 @@ function H(e) {
         } = e,
         N = r.useRef(null),
         { isHoveringOrFocusing: C } = (0, E.A)(N),
-        R = r.useRef(m),
-        O = (0, c.bG)([_.A], () => _.A.getApplication(t.applicationId));
+        O = r.useRef(m),
+        R = (0, c.bG)([_.A], () => _.A.getApplication(t.applicationId));
     return (
         r.useEffect(() => {
-            R.current = m;
+            O.current = m;
         }, [m]),
         r.useEffect(() => {
-            R.current?.(C);
+            O.current?.(C);
         }, [C]),
         (0, i.jsxs)(l.s, {
             ref: N,
@@ -186,7 +186,7 @@ function H(e) {
                         disableHover: T,
                     }),
                 }),
-                (0, i.jsx)(G.P, { spec: u, application: O }),
+                (0, i.jsx)(G.P, { spec: u, application: R }),
                 A,
             ],
         })

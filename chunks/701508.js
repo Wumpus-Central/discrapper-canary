@@ -8,7 +8,7 @@ var s = l(627968),
     c = l(834730),
     d = l(736653),
     u = l(611371),
-    h = l(45923);
+    h = l(935435);
 function m(e) {
     let { title: t, betaTag: l, color: i = "text-strong" } = e;
     return (0, s.jsxs)(o.D, {

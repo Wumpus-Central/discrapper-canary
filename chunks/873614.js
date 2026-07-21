@@ -14,15 +14,15 @@ var n = t(627968),
     h = t(847599),
     x = t(47167),
     N = t(713654),
-    j = t(46054),
-    E = t(506164),
-    f = t(734057),
+    f = t(46054),
+    j = t(506164),
+    E = t(734057),
     C = t(375708),
-    p = t(240389),
-    _ = t(311177);
+    p = t(54093),
+    _ = t(790801);
 function I(e) {
     let { guild: l, channelId: s } = e,
-        a = (0, r.bG)([f.A], () => f.A.getChannel(s)),
+        a = (0, r.bG)([E.A], () => E.A.getChannel(s)),
         [A, _] = i.useState(!1),
         I = i.useCallback(() => {
             g.A.nsfwReturnToSafety(l?.id);
@@ -56,7 +56,7 @@ function I(e) {
             null != a &&
                 null != l &&
                 (0, d.openModalLazy)(async () => {
-                    let { default: e } = await Promise.all([t.e("45988"), t.e("8939")]).then(t.bind(t, 181094));
+                    let { default: e } = await Promise.all([t.e("93388"), t.e("8939")]).then(t.bind(t, 181094));
                     return (t) => (0, n.jsx)(e, { ...t, channel: a, guild: l });
                 });
         }, [a, l]),
@@ -70,7 +70,7 @@ function I(e) {
                               color: "text-muted",
                               className: p.VA,
                               lineClamp: 3,
-                              children: j.A.parseTopic(a.topic, !0, { channelId: s }),
+                              children: f.A.parseTopic(a.topic, !0, { channelId: s }),
                           }),
                           A &&
                               (0, n.jsx)(m.D, {
@@ -87,7 +87,7 @@ function I(e) {
                       ],
                   })
                 : null;
-    return (0, n.jsx)(E.A, {
+    return (0, n.jsx)(j.A, {
         onAgree: T,
         onDisagree: I,
         modalType: h.A5.SPOILER_CHANNEL,

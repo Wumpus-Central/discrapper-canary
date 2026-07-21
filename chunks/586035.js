@@ -34,7 +34,7 @@ var s = i(627968),
     P = i(190107),
     R = i(818348),
     O = i(375708),
-    S = i(27669);
+    S = i(871517);
 function q(t) {
     let { quest: e, sourceQuestContent: i, onLoadComplete: n, preCtaClick: l } = t,
         r = (0, E.Ay)(),
@@ -182,7 +182,7 @@ function z(t) {
         children: (0, s.jsx)(q, { ...t }),
     });
 }
-var G = i(592727);
+var G = i(317551);
 function Y(t) {
     let { onClose: e, transitionState: i } = t;
     return (0, s.jsx)(n.Modal, {

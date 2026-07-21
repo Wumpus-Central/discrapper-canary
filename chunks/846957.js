@@ -2,8 +2,8 @@ r.d(e, { B: () => c });
 var s = r(627968),
     d = r(503698),
     l = r.n(d),
-    u = r(576052),
-    a = r(68644);
+    u = r(132198),
+    a = r(690524);
 function c(n) {
     let { product: e, animationState: r, className: d } = n,
         c = u.m[e.skuId];

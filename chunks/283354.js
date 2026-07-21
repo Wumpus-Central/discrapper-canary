@@ -15,13 +15,13 @@ var r = n(627968),
     C = n(352123),
     I = n(375708);
 function D(t) {
-    let { entry: e, onSelect: D, closePopout: A, hideEditButton: y = !1 } = t,
-        { isEntryAdmin: T, canEdit: p, canRemove: S } = (0, C.A)(e),
+    let { entry: e, onSelect: D, closePopout: A, hideEditButton: T = !1 } = t,
+        { isEntryAdmin: y, canEdit: p, canRemove: S } = (0, C.A)(e),
         Y = (0, d.A)({ id: e.guildId, label: I.intl.string(I.t["94lLD7"]), onSuccess: A });
     function g() {
         h.ZM(e.channelId, e.guildId);
     }
-    function N() {
+    function f() {
         (0, _.Z_)(), A?.();
     }
     return (
@@ -31,24 +31,24 @@ function D(t) {
         (0, r.jsxs)(l.W, {
             "data-menu-migrated": !0,
             navId: "guild-entry-context",
-            onClose: N,
+            onClose: f,
             "aria-label": I.intl.string(I.t.HpQykc),
             onSelect: D,
             children: [
                 (0, r.jsxs)(o.rX, {
                     children: [
-                        p && !y
+                        p && !T
                             ? (0, r.jsx)(o.Dr, {
                                   id: "update-entry",
                                   label: I.intl.string(I.t.XnuOvN),
                                   action: function () {
                                       (0, a.openModalLazy)(async () => {
-                                          let { default: t } = await Promise.all([n.e("66234"), n.e("88869")]).then(
+                                          let { default: t } = await Promise.all([n.e("2666"), n.e("88869")]).then(
                                               n.bind(n, 201700),
                                           );
                                           return (n) => (0, r.jsx)(t, { ...n, entry: e });
                                       }),
-                                          N();
+                                          f();
                                   },
                                   leadingAccessory: { type: "icon", icon: E.R },
                               })
@@ -64,19 +64,19 @@ function D(t) {
                                           confirmText: I.intl.string(I.t.N86XcP),
                                           onConfirm: g,
                                       }),
-                                          N();
+                                          f();
                                   },
                                   color: "danger",
                                   leadingAccessory: { type: "icon", icon: R.u },
                               })
                             : null,
-                        T
+                        y
                             ? null
                             : (0, r.jsx)(o.Dr, {
                                   id: "report-server-listing",
                                   label: I.intl.string(I.t.Aen9eh),
                                   action: function () {
-                                      null != e && ((0, u.sJ)(e), N());
+                                      null != e && ((0, u.sJ)(e), f());
                                   },
                                   icon: s.i,
                                   leadingAccessory: { type: "icon", icon: s.i },

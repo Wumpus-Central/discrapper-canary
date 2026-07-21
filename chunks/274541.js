@@ -29,7 +29,7 @@ var i = l(627968),
     m = l(928078),
     T = l(652215),
     v = l(375708),
-    S = l(906462);
+    S = l(12390);
 function q(e) {
     let { channelId: n, baseChannelId: q, channelViewSource: B = "Split View", isResourceChannelView: F } = e,
         H = (0, u.bG)([w.A], () => w.A.getChannel(n)),

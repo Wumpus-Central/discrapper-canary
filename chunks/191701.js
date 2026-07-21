@@ -95,7 +95,7 @@ var tu = i(387755),
     tE = i(41984),
     t_ = i(222506),
     tN = i(145567),
-    tS = i(658194),
+    tS = i(194602),
     tC = i(308368),
     tT = i(334738),
     th = i(481484),
@@ -103,7 +103,7 @@ var tu = i(387755),
     tO = i(560595),
     tb = i(929921),
     tL = i(753070),
-    tx = i(244957),
+    tx = i(783198),
     tD = i(941971),
     tR = i(521981),
     tk = i(976860),
@@ -120,7 +120,7 @@ var tu = i(387755),
     tH = i(451909),
     tJ = i(135621),
     tB = i(381941),
-    tz = i(42387);
+    tz = i(633099);
 function t$(t) {
     let { id: e, replyToMessageId: i, channel: n, onSend: l } = t,
         a = (0, tJ.A)(),
@@ -186,7 +186,7 @@ function t$(t) {
     });
 }
 var tX = i(119191),
-    tW = i(21197);
+    tW = i(499214);
 function tq(t) {
     t && (0, tU.Ak)(R.cH, R.pD, void 0, void 0, { trackNotificationFailure: !0 });
 }
@@ -195,11 +195,11 @@ var tQ = i(554146),
     t0 = i(429913),
     t1 = i(263577),
     t2 = i(826673),
-    t8 = i(308726),
-    t9 = i(46282),
+    t9 = i(308726),
+    t8 = i(46282),
     t7 = i(360469),
-    t5 = i(12377),
-    t6 = i(167684);
+    t6 = i(615297),
+    t5 = i(808476);
 function t3(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
@@ -612,7 +612,7 @@ let e_ = new eE(s.h, {
                                     l("one-click-go-live");
                                 }
                                 o.A.updateNotificationStatus(e),
-                                    (0, t9.H)({
+                                    (0, t8.H)({
                                         pid: w.A.getTargetPID(),
                                         analyticsLocation: z.ThZ.OVERLAY_NUDGE,
                                         allowOneClickGoLive: !0,
@@ -630,11 +630,11 @@ let e_ = new eE(s.h, {
                             });
                         }),
                             (a.renderFooter = () =>
-                                (0, $.jsx)(t8.ru, {
+                                (0, $.jsx)(t9.ru, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: t6.kL,
+                                    className: t5.kL,
                                 }));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
@@ -643,7 +643,7 @@ let e_ = new eE(s.h, {
                 icon:
                     null != t
                         ? (0, $.jsx)(t3, { game: t })
-                        : (0, $.jsx)("img", { src: i(513653), className: t5.Kk, alt: "" }),
+                        : (0, $.jsx)("img", { src: i(513653), className: t6.Kk, alt: "" }),
                 title: s,
                 hint: function () {
                     return (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });

@@ -2,15 +2,15 @@ n.d(t, { A: () => ef });
 var i,
     l = n(627968),
     s = n(64700),
-    a = n(735438),
+    a = n(435558),
     r = n.n(a),
     o = n(136722),
     c = n(17928),
-    d = n(990078),
-    u = n(192308),
-    m = n(512950),
-    g = n(885574),
-    h = n(821609),
+    d = n(192308),
+    u = n(512950),
+    m = n(885574),
+    g = n(821609),
+    h = n(866665),
     x = n(392054),
     A = n(168186),
     p = n(495273),
@@ -51,7 +51,7 @@ var W = n(43105),
     z = n(95561),
     V = n(320426),
     K = n(381616),
-    F = n(495544),
+    F = n(280450),
     Y = n(174459),
     q = n(562153),
     Q = n(935208),
@@ -63,7 +63,7 @@ var W = n(43105),
     et = n(785007),
     en = n(933832),
     ei = n(789645),
-    el = n(135840);
+    el = n(63816);
 let es = [!1, !0];
 function ea(e) {
     let { isDisabled: t, currentValue: n, onChange: i } = e,
@@ -96,7 +96,7 @@ function er(e) {
         children: (0, l.jsx)(a, { size: "xs", color: "currentColor" }),
     });
 }
-var eo = n(925836);
+var eo = n(777268);
 function ec(e) {
     let {
             commandId: t,
@@ -199,20 +199,20 @@ function ed(e) {
             onRemove: r,
             overwrite: o,
             integration: c,
-            canShowMigrationTooltip: u,
-            hasAccessToMutatePermissions: m,
+            canShowMigrationTooltip: d,
+            hasAccessToMutatePermissions: u,
         } = e,
-        g = o.id === n.id || o.id === (0, A.Ap)(n.id),
-        h = c?.application?.bot?.username,
-        p = !o.canWrite || !m,
+        m = o.id === n.id || o.id === (0, A.Ap)(n.id),
+        g = c?.application?.bot?.username,
+        p = !o.canWrite || !u,
         f = F.default.getId();
-    m
+    u
         ? o.canWrite ||
           (o.type === x.RA.USER
               ? (t = o.id === f ? k.intl.string(k.t["1VF/0x"]) : k.intl.string(k.t.P1GnEd))
               : o.type === x.RA.ROLE && (t = k.intl.string(k.t.mcAijf)))
         : (t = null != i ? k.intl.string(k.t.tybdas) : k.intl.string(k.t["z2hjk/"]));
-    let b = u && null != c && o.id === n.id && void 0 !== h && !o.permission;
+    let b = d && null != c && o.id === n.id && void 0 !== g && !o.permission;
     s.useEffect(() => {
         b &&
             Y.default.track(O.HAw.COMMANDS_MIGRATION_TOOLTIP_VIEWED, {
@@ -222,7 +222,7 @@ function ed(e) {
             });
     }, [n.id, c?.application?.id, b]);
     let j = s.useRef(null),
-        N = (0, l.jsx)(d.m, {
+        N = (0, l.jsx)(h.m, {
             text: t,
             shouldShow: p,
             position: "left",
@@ -243,7 +243,7 @@ function ed(e) {
             targetElementRef: j,
             title: k.intl.string(k.t.ufFDiC),
             body: k.intl.format(k.t.pW4Crz, {
-                botName: h,
+                botName: g,
                 link: "https://discord.com/blog/welcome-to-the-new-era-of-discord-apps/",
             }),
             position: "bottom",
@@ -263,7 +263,7 @@ function ed(e) {
                 }),
                 (0, l.jsxs)("div", {
                     className: eo.ev,
-                    children: [(0, l.jsx)(eu, { commandId: i, isSentinel: g, isDisabled: !m, onRemove: r }), N, b && E],
+                    children: [(0, l.jsx)(eu, { commandId: i, isSentinel: m, isDisabled: !u, onRemove: r }), N, b && E],
                 }),
             ],
         },
@@ -295,7 +295,7 @@ var em = n(157559),
         i),
     ex = n(636547),
     eA = n(73510),
-    ep = n(996024);
+    ep = n(273392);
 function ef(e) {
     let {
             applicationId: t,
@@ -409,8 +409,8 @@ function ef(e) {
         ),
         U = s.useCallback(() => {
             let e = Object.keys(_);
-            return (0, u.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("79086"), n.e("15149"), n.e("92513"), n.e("52532")]).then(
+            return (0, d.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([n.e("98574"), n.e("99925"), n.e("92513"), n.e("52532")]).then(
                     n.bind(n, 192991),
                 );
                 return (n) =>
@@ -429,8 +429,8 @@ function ef(e) {
         }, [D, _, a, y]),
         B = s.useCallback(() => {
             let e = Object.keys(P);
-            return (0, u.openModalLazy)(async () => {
-                let { default: t } = await Promise.all([n.e("79086"), n.e("15149"), n.e("92513"), n.e("52532")]).then(
+            return (0, d.openModalLazy)(async () => {
+                let { default: t } = await Promise.all([n.e("98574"), n.e("99925"), n.e("92513"), n.e("52532")]).then(
                     n.bind(n, 192991),
                 );
                 return (n) =>
@@ -449,7 +449,7 @@ function ef(e) {
         }, [D, a, P, y]),
         H = s.useCallback(
             () =>
-                (0, u.openModalLazy)(async () => {
+                (0, d.openModalLazy)(async () => {
                     let { default: e } = await n.e("29384").then(n.bind(n, 519387)),
                         t = L.defaultMemberPermissions;
                     return (
@@ -480,8 +480,8 @@ function ef(e) {
     return (0, l.jsxs)(s.Fragment, {
         children: [
             z > 0
-                ? (0, l.jsx)(m.p, {
-                      messageType: m.Y.WARNING,
+                ? (0, l.jsx)(u.p, {
+                      messageType: u.Y.WARNING,
                       children: k.intl.format(k.t["B/dFBH"], { removeCount: z }),
                   })
                 : null,
@@ -489,9 +489,9 @@ function ef(e) {
                 ? (0, l.jsxs)("div", {
                       className: ep.Yg,
                       children: [
-                          (0, l.jsx)(g.m, { size: "sm", color: "currentColor", className: ep.Kk }),
+                          (0, l.jsx)(m.m, { size: "sm", color: "currentColor", className: ep.Kk }),
                           (0, l.jsx)("span", { className: ep.iU, children: k.intl.format(k.t["2889Gq"], {}) }),
-                          (0, l.jsx)(h.$, {
+                          (0, l.jsx)(g.$, {
                               variant: "secondary",
                               size: "sm",
                               onClick: H,
@@ -509,11 +509,11 @@ function ef(e) {
                     (0, l.jsx)(
                         ex.A,
                         {
-                            bar: (0, l.jsx)(d.m, {
+                            bar: (0, l.jsx)(h.m, {
                                 text: n,
                                 shouldShow: null != n,
                                 asContainer: !0,
-                                children: (0, l.jsx)(h.$, {
+                                children: (0, l.jsx)(g.$, {
                                     variant: "secondary",
                                     disabled: V || !R,
                                     onClick: e.buttonClick,

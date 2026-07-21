@@ -4,15 +4,15 @@ var n = l(627968),
     a = l(503698),
     i = l.n(a),
     r = l(17928),
-    d = l(192308),
-    o = l(825484),
-    h = l(821609),
-    c = l(331322),
-    u = l(783878),
-    g = l(834730),
-    m = l(297264),
-    p = l(778492),
-    x = l(935462),
+    d = l(935462),
+    o = l(192308),
+    h = l(825484),
+    c = l(821609),
+    u = l(331322),
+    g = l(783878),
+    m = l(834730),
+    p = l(297264),
+    x = l(778492),
     A = l(228366),
     C = l(857182),
     b = l(47167),
@@ -30,7 +30,7 @@ var n = l(627968),
     O = l(935208),
     M = l(652215),
     L = l(375708),
-    _ = l(199214);
+    _ = l(49350);
 class D extends s.PureComponent {
     constructor(e) {
         super(e);
@@ -79,8 +79,8 @@ class D extends s.PureComponent {
                 .then(() => {
                     A.h.dispatch({ type: "CHANNEL_FOLLOWER_CREATED", channelId: s, guildId: a }),
                         t(),
-                        (0, d.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([l.e("27952"), l.e("28907")]).then(
+                        (0, o.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([l.e("70824"), l.e("28907")]).then(
                                 l.bind(l, 209674),
                             );
                             return (t) => (0, n.jsx)(e, { ...t });
@@ -95,17 +95,17 @@ class D extends s.PureComponent {
     renderFooter() {
         let { selectedGuildId: e, selectedChannelId: t, submitting: l } = this.state,
             { onClose: s } = this.props;
-        return (0, n.jsxs)(o.e, {
+        return (0, n.jsxs)(h.e, {
             direction: "horizontal-reverse",
             children: [
-                (0, n.jsx)(h.$, {
+                (0, n.jsx)(c.$, {
                     variant: "primary",
                     text: L.intl.string(L.t["3aOv+h"]),
                     loading: l,
                     onClick: this.handleFollow,
                     disabled: null == e || null == t,
                 }),
-                (0, n.jsx)(h.$, { variant: "secondary", text: L.intl.string(L.t["ETE/oC"]), onClick: s }),
+                (0, n.jsx)(c.$, { variant: "secondary", text: L.intl.string(L.t["ETE/oC"]), onClick: s }),
             ],
         });
     }
@@ -136,10 +136,10 @@ class D extends s.PureComponent {
             }),
             d = 0 === i.length,
             o = d ? L.intl.string(L.t["6b6QoF"]) : L.intl.string(L.t.Z0quyN);
-        return (0, n.jsxs)(c.B, {
+        return (0, n.jsxs)(u.B, {
             gap: 16,
             children: [
-                (0, n.jsx)(u.Z, {
+                (0, n.jsx)(g.Z, {
                     selectionMode: "single",
                     label: L.intl.string(L.t.xFn72s),
                     value: l,
@@ -147,7 +147,7 @@ class D extends s.PureComponent {
                     disabled: d,
                     onSelectionChange: (e) => this.handleGuildSelect(e),
                 }),
-                (0, n.jsx)(u.Z, {
+                (0, n.jsx)(g.Z, {
                     selectionMode: "single",
                     label: L.intl.string(L.t.PDn2fR),
                     value: s,
@@ -155,7 +155,7 @@ class D extends s.PureComponent {
                     disabled: 0 === r.length,
                     onSelectionChange: (e) => this.handleChannelSelect(e),
                 }),
-                (0, n.jsx)(g.E, {
+                (0, n.jsx)(m.E, {
                     variant: "text-sm/normal",
                     color: d || null != a ? "text-feedback-critical" : "text-muted",
                     className: _.ML,
@@ -171,19 +171,19 @@ class D extends s.PureComponent {
         return (0, n.jsxs)("div", {
             className: _.rf,
             children: [
-                (0, n.jsx)(m.D, {
+                (0, n.jsx)(p.D, {
                     variant: "heading-lg/semibold",
                     id: this.state.headerId,
                     children: L.intl.string(L.t.mvPFbA),
                 }),
-                (0, n.jsx)(g.E, {
+                (0, n.jsx)(m.E, {
                     color: "text-muted",
                     className: i()(_.O1, { [_.lK]: !e }),
                     variant: "text-sm/normal",
                     children: L.intl.string(L.t.kbpkxJ),
                 }),
                 e
-                    ? (0, n.jsx)(g.E, {
+                    ? (0, n.jsx)(m.E, {
                           className: i()(_.lK, _.O1),
                           color: "text-feedback-critical",
                           variant: "text-sm/normal",
@@ -195,8 +195,8 @@ class D extends s.PureComponent {
     }
     renderHeader() {
         let { guildToFollow: e, channelNameToFollow: t, channel: l } = this.props,
-            s = (0, j.gU)(l) ?? p.k;
-        return (0, n.jsxs)(x.rQ, {
+            s = (0, j.gU)(l) ?? x.k;
+        return (0, n.jsxs)(d.rQ, {
             className: _.wx,
             children: [
                 (0, n.jsx)(f.Ay, { guild: e, size: f.Ay.Sizes.LARGE }),
@@ -212,7 +212,7 @@ class D extends s.PureComponent {
                                 height: 20,
                                 className: _.p,
                             }),
-                            (0, n.jsx)(g.E, { variant: "text-md/medium", className: _.HA, children: t }),
+                            (0, n.jsx)(m.E, { variant: "text-md/medium", className: _.HA, children: t }),
                         ],
                     }),
                 }),
@@ -221,14 +221,14 @@ class D extends s.PureComponent {
     }
     render() {
         let { transitionState: e } = this.props;
-        return (0, n.jsxs)(x.EO, {
+        return (0, n.jsxs)(d.EO, {
             transitionState: e,
             "aria-labelledby": this.state.headerId,
             parentComponent: "FollowModal",
             children: [
                 this.renderHeader(),
-                (0, n.jsxs)(x.$m, { className: _.Qs, children: [this.renderBody(), this.renderForm()] }),
-                (0, n.jsx)(x.jl, { children: this.renderFooter() }),
+                (0, n.jsxs)(d.$m, { className: _.Qs, children: [this.renderBody(), this.renderForm()] }),
+                (0, n.jsx)(d.jl, { children: this.renderFooter() }),
             ],
         });
     }

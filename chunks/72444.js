@@ -41,14 +41,14 @@ function T(e) {
         return 0 === e.length ? [] : (0, P.k)(e);
     }, [t?.entitlements]);
 }
-var G = l(645704),
+var G = l(853513),
     k = l(375708),
     D = l(843095),
     O = l(568065),
     U = l(800007),
-    V = l(76660),
-    M = l(594233),
-    W = l(607204);
+    V = l(576709),
+    M = l(800785),
+    W = l(95932);
 function F(e) {
     let t,
         l,
@@ -250,7 +250,7 @@ function eg(e) {
 var ef = l(867060),
     ex = l(652215),
     eA = l(508155),
-    eh = l(736591);
+    eh = l(748951);
 function eE(e) {
     let t,
         { active: l, nextActive: i, position: s } = e;
@@ -379,7 +379,7 @@ function ew(e, t) {
                                   let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                                   (0, f.openModalLazy)(
                                       async () => {
-                                          let { default: s } = await Promise.all([l.e("53803"), l.e("75295")]).then(
+                                          let { default: s } = await Promise.all([l.e("85223"), l.e("75295")]).then(
                                               l.bind(l, 289634),
                                           );
                                           return (l) =>
@@ -422,7 +422,7 @@ function ew(e, t) {
         return i;
     }, [e, t, s, o, a]);
 }
-var eC = l(804300);
+var eC = l(158004);
 function eR(e) {
     let { guildId: t, group: l, powerups: s } = e,
         [o, a] = i.useState(!1),
@@ -512,7 +512,7 @@ var eN = l(403362),
     eL = l(639060),
     eP = l(408278),
     eT = l(789645),
-    eG = l(760665);
+    eG = l(248449);
 function ek(e) {
     let { markAsDismissed: t } = e;
     return (0, n.jsxs)("div", {
@@ -546,7 +546,7 @@ function ek(e) {
 }
 var eD = l(972213),
     eO = l(695366),
-    eU = l(990624);
+    eU = l(926920);
 function eV(e) {
     let { notificationConfig: t, markAsDismissed: l } = e;
     return (0, n.jsxs)("div", {
@@ -572,7 +572,7 @@ function eV(e) {
 }
 var eM = l(859241),
     eW = l(864310),
-    eF = l(102316);
+    eF = l(698196);
 function eB(e) {
     let { guildId: t, powerupNames: l, warnings: s } = e,
         {
@@ -627,7 +627,7 @@ function eB(e) {
           })
         : null;
 }
-var eK = l(758437);
+var eK = l(877309);
 function ez(e) {
     let { text: t } = e;
     return (0, n.jsx)("div", {
@@ -741,7 +741,7 @@ function eX(e) {
 var eH = l(862482),
     eQ = l(944304),
     eZ = l(975571),
-    eq = l(710047);
+    eq = l(274279);
 function eY(e) {
     let { count: t, type: l } = e,
         i = (function (e, t) {
@@ -778,8 +778,8 @@ function eY(e) {
         ],
     });
 }
-var e0 = l(568877);
-function e6(e) {
+var e0 = l(353477);
+function e1(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
         { available: i, spent: s, total: o } = (0, eW.A)(t);
@@ -830,34 +830,34 @@ function e6(e) {
             ],
         });
 }
-var e1 = l(97808),
-    e4 = l(778712),
+var e4 = l(97808),
+    e9 = l(778712),
     e3 = l(463930),
-    e9 = l(730134),
-    e7 = l(63152),
-    e5 = l(319756),
-    e8 = l(854627),
-    e2 = l(696451),
+    e6 = l(730134),
+    e5 = l(63152),
+    e8 = l(319756),
+    e2 = l(854627),
+    e7 = l(696451),
     te = l(317525),
     tt = l(287809),
     tl = l(562153),
     tn = l(19575),
-    ti = l(941610);
-let ts = tn.Ay.getEnableHardwareAcceleration() ? e1.Js : e9.A;
+    ti = l(174338);
+let ts = tn.Ay.getEnableHardwareAcceleration() ? e4.Js : e6.A;
 function tr(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
         i = (0, r.bG)([te.A], () => te.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
         s = (0, r.bG)([tt.default], () => tt.default.getCurrentUser()),
         o = s?.id,
-        a = (0, r.bG)([e2.Ay], () => (null != o ? e2.Ay.getMember(t, o) : void 0), [o, t]),
+        a = (0, r.bG)([e7.Ay], () => (null != o ? e7.Ay.getMember(t, o) : void 0), [o, t]),
         u = a?.premiumSince != null,
         d = (0, r.bG)([eb.Ay], () => eb.Ay.useReducedMotion),
         {
             avatarDecorationSrc: m,
             avatarSrc: p,
             eventHandlers: f,
-        } = (0, e8.A)({ userId: s?.id, guildId: t, size: e4._3.SIZE_40, animateOnHover: !d });
+        } = (0, e2.A)({ userId: s?.id, guildId: t, size: e9._3.SIZE_40, animateOnHover: !d });
     return null == l || null == a || null == s
         ? null
         : (0, n.jsxs)("div", {
@@ -874,7 +874,7 @@ function tr(e) {
                               variant: "text-sm/medium",
                               children: k.intl.format(u ? G.default["7fWTg4"] : G.default["7PXeeQ"], {
                                   onClick: () => {
-                                      (0, e7.K4)({
+                                      (0, e5.K4)({
                                           guildId: t,
                                           location: {
                                               section: ex.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -888,13 +888,13 @@ function tr(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(e5.V, {
+                      (0, n.jsx)(e8.V, {
                           avatar: (0, n.jsx)(ts, {
                               ...f,
                               user: s,
                               src: p,
                               avatarDecoration: m,
-                              size: e4._3.SIZE_40,
+                              size: e9._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
@@ -937,7 +937,7 @@ let tm = (0, l(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var tp = l(451469);
+var tp = l(848245);
 function tg(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t), [t]),
@@ -978,8 +978,8 @@ var tf = l(820739),
     tv = l(606049),
     tI = l(58703),
     tj = l(967144),
-    tb = l(226114),
-    t_ = l(788724);
+    tb = l(900170),
+    t_ = l(343932);
 function tS(e) {
     let t,
         { boost: l, phase: i, sortKey: s } = e,
@@ -993,11 +993,11 @@ function tS(e) {
                     username: l,
                     roleColor: n,
                     roleColorStrings: i,
-                } = (0, r.cf)([e2.Ay], () => {
-                    let t = e2.Ay.getMember(e.guildId, e.userId);
+                } = (0, r.cf)([e7.Ay], () => {
+                    let t = e7.Ay.getMember(e.guildId, e.userId);
                     return {
                         username:
-                            e2.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? k.intl.string(k.t["30mdIx"]),
+                            e7.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? k.intl.string(k.t["30mdIx"]),
                         roleColor: t?.colorString ?? null,
                         roleColorStrings: t?.colorStrings ?? null,
                     };
@@ -1075,7 +1075,7 @@ function tS(e) {
         ],
     });
 }
-var ty = l(816564);
+var ty = l(804668);
 function tw(e) {
     let { guildId: t } = e,
         l = (function (e) {
@@ -1111,12 +1111,12 @@ function tw(e) {
                             .slice(0, void 0),
                     [l, void 0, n, t],
                 ),
-                o = (0, r.yK)([e2.Ay], () => {
+                o = (0, r.yK)([e7.Ay], () => {
                     let t = new Set();
                     return (
                         s.forEach((l) => {
                             let { boost: n } = l;
-                            null == e2.Ay.getMember(e, n.userId) && t.add(n.userId);
+                            null == e7.Ay.getMember(e, n.userId) && t.add(n.userId);
                         }),
                         Array.from(t)
                     );
@@ -1152,7 +1152,7 @@ function tw(e) {
               ],
           });
 }
-var tC = l(207293);
+var tC = l(898277);
 function tR(e) {
     let t,
         s,
@@ -1315,7 +1315,7 @@ function tR(e) {
                 modalKey: `dismissible_content_${ei}`,
             };
             (0, f.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([l.e("24628"), l.e("86618")]).then(l.bind(l, 442241));
+                let { default: e } = await Promise.all([l.e("58159"), l.e("86618")]).then(l.bind(l, 442241));
                 return (t) => (0, n.jsx)(e, { modalConfig: W, markAsDismissed: es, ...t });
             }, e);
         }
@@ -1426,7 +1426,7 @@ function tR(e) {
                                   T
                                       ? (0, n.jsxs)(n.Fragment, {
                                             children: [
-                                                (0, n.jsx)(e6, { guildId: R }),
+                                                (0, n.jsx)(e1, { guildId: R }),
                                                 (0, n.jsx)(tg, { guildId: R }),
                                                 (0, n.jsx)(e$, { guildId: R }),
                                             ],

@@ -11,7 +11,7 @@ var l = t(17928),
     o = t(145567),
     A = t(34307),
     E = t(652215),
-    I = t(21197),
+    I = t(499214),
     v = t(375708);
 function f(e, n) {
     let { hasChat: t } = (0, c.M8)("useOverlayTextChatToggleMenuItem"),

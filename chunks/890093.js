@@ -127,7 +127,7 @@ var R = i(600761),
     L = i(307301),
     D = i(183555),
     P = i(375708),
-    M = i(392756);
+    M = i(964828);
 function U(e) {
     let { className: t } = e,
         { trackUserProfileEditAction: l } = (0, D.NJ)(),
@@ -135,7 +135,7 @@ function U(e) {
             l({ action: "PRESS_ADD_WIDGET" }),
                 (0, _.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([i.e("4402"), i.e("87591")]).then(i.bind(i, 333114));
+                        let { default: e } = await Promise.all([i.e("30794"), i.e("87591")]).then(i.bind(i, 333114));
                         return (t) => (0, n.jsx)(e, { ...t, trackUserProfileEditAction: l });
                     },
                     { stackingBehavior: "stack" },
@@ -265,7 +265,7 @@ function ei() {
 }
 var en = i(128988),
     es = i(280450),
-    el = i(543572),
+    el = i(321191),
     er = i(896170),
     ea = i(765178),
     eo = i(922016),
@@ -276,7 +276,7 @@ var en = i(128988),
     em = i(939249),
     ef = i(663341),
     ex = i(383329),
-    eh = i(106037);
+    eh = i(250573);
 function eI(e) {
     let { widgetType: t, widget: i, onAddGame: l, children: r, ...a } = e,
         o = s.useMemo(() => new Set(i.games.map((e) => e.applicationId)), [i.games]),
@@ -432,7 +432,7 @@ function eS() {
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
 }
-var eT = i(946661);
+var eT = i(308685);
 function ev(e) {
     let { widget: t } = e,
         i = (0, J.cv)(t.type),
@@ -449,7 +449,7 @@ function ev(e) {
 var eN = i(623280),
     eb = i(823016),
     eC = i(683071),
-    ew = i(824307);
+    ew = i(116363);
 function eR(e) {
     let { widgetType: t, gameCount: i } = e,
         s = (0, J.cv)(t);
@@ -464,7 +464,7 @@ function eR(e) {
               }),
           });
 }
-var eO = i(551598);
+var eO = i(17110);
 function ek(e) {
     let { onClick: t, expanded: i } = e;
     return (0, n.jsx)(em.D, {
@@ -479,7 +479,7 @@ function ek(e) {
     });
 }
 var ey = i(249264),
-    e_ = i(522173);
+    e_ = i(462037);
 function eG(e) {
     let { games: t, user: i, widgetType: s, ...l } = e,
         { registerItemRef: r, manageFocusOnDelete: a } = (0, eb.r)();
@@ -571,7 +571,7 @@ function eP(e) {
                 : (0, n.jsx)(ev, { widget: i }),
     });
 }
-var eM = i(199578);
+var eM = i(768754);
 function eU(e) {
     let { games: t, renderGame: i } = e;
     return (0, n.jsx)("ul", {
@@ -584,8 +584,8 @@ var eF = i(688807),
     eH = i(451395),
     eB = i(788593),
     eV = i(858808),
-    eX = i(220084),
-    ez = i(476863);
+    eX = i(350956),
+    ez = i(466215);
 function eY(e) {
     let { index: t, widgetType: i, game: l, coverImageUrl: r, gameName: a, children: o } = e,
         { manageFocusOnReorder: d } = (0, eb.r)(),
@@ -738,7 +738,7 @@ function eZ(e) {
 var e$ = i(661531),
     e0 = i(297264),
     e1 = i(915089),
-    e8 = i(914341);
+    e8 = i(30061);
 function e2(e) {
     let { applicationId: t, userId: i, onClick: s } = e,
         { coverImageUrl: l, gameName: r, isLoading: o } = (0, eW.A)(t),
@@ -767,7 +767,7 @@ function e2(e) {
               }),
           });
 }
-function e7(e) {
+function e6(e) {
     let { userId: t, games: i, onDismiss: s, onClick: l, className: a } = e,
         o = (0, e1.GV)();
     return (0, n.jsxs)("aside", {
@@ -805,7 +805,7 @@ function e7(e) {
         ],
     });
 }
-function e6(e) {
+function e7(e) {
     let { widgetType: t, ...i } = e,
         { games: l, onAddGame: r } = w(t),
         { setExpanded: a } = eS(),
@@ -819,9 +819,9 @@ function e6(e) {
             },
             [r, t, o, a],
         );
-    return (0, n.jsx)(e7, { games: l, onClick: d, ...i });
+    return (0, n.jsx)(e6, { games: l, onClick: d, ...i });
 }
-var e5 = i(890596);
+var e5 = i(344287);
 function e3(e) {
     let { widget: t, ...i } = e;
     switch (t.type) {
@@ -880,7 +880,7 @@ function e9(e) {
                       ),
                   ]
                 : void 0,
-        trailingContent: m && (0, n.jsx)(e6, { userId: i.id, widgetType: t.type, onDismiss: u, className: e5.r }),
+        trailingContent: m && (0, n.jsx)(e7, { userId: i.id, widgetType: t.type, onDismiss: u, className: e5.r }),
         ...o,
     });
 }
@@ -892,7 +892,7 @@ var te = i(576260),
     tt = i(841417),
     ti = i(725386),
     tn = i(657855),
-    ts = i(190322);
+    ts = i(902394);
 function tl(e) {
     let { userId: t } = e,
         { trackUserProfileAction: i, trackUserProfileEditAction: l } = (0, D.NJ)(),
@@ -943,7 +943,7 @@ function tl(e) {
         })
     );
 }
-var tr = i(812868);
+var tr = i(456620);
 function ta(e) {
     let { widget: t, ...i } = e;
     return t instanceof h.R

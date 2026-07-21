@@ -75,7 +75,7 @@ var es = t(297264),
     ec = t(174998),
     eo = t(395504),
     eu = t(49999),
-    eh = t(176771);
+    eh = t(601883);
 function ex(e) {
     let { guild: n } = e,
         t = (0, eo.Xn)(n.id),
@@ -160,8 +160,8 @@ function ex(e) {
 }
 var em = t(746080),
     eC = t(650583),
-    eA = t(540864),
-    eg = t(992595);
+    eA = t(79368),
+    eg = t(742715);
 let eN = new Set([ee.rbe.GUILD_FORUM, ee.rbe.GUILD_MEDIA]),
     ef = new Set([ee.rbe.GUILD_VOICE, ee.rbe.GUILD_STAGE_VOICE]);
 function ep(e) {
@@ -498,7 +498,7 @@ function eI(e) {
         "channel-browser-list",
     );
 }
-var e_ = t(551348);
+var e_ = t(577308);
 function eb(e) {
     let { channelId: n } = e;
     return (0, l.jsx)(j.A, {
@@ -520,7 +520,7 @@ function eS(e) {
         C = i.useCallback(() => a(""), [a]),
         j = i.useCallback(() => {
             (0, g.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([t.e("11585"), t.e("7775"), t.e("58608"), t.e("28034")]).then(
+                let { default: e } = await Promise.all([t.e("36865"), t.e("7775"), t.e("58608"), t.e("28034")]).then(
                     t.bind(t, 333369),
                 );
                 return (t) => (0, l.jsx)(e, { ...t, channelType: null, guildId: n });
@@ -594,14 +594,14 @@ var ey = t(202776),
     e9 = t.n(e5),
     e2 = t(665260),
     e7 = t(355097);
-function e8(e) {
+function e3(e) {
     X.h.dispatch({ type: "CLEAR_PENDING_CHANNEL_AND_ROLE_UPDATES", guildId: e });
 }
-let e3 = {};
+let e8 = {};
 function ne(e) {
-    let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e3, [e]);
+    let n = (0, r.bG)([e4.A], () => e4.A.getPendingResponseOptions(e) ?? e8, [e]);
     return (
-        i.useEffect(() => (e8(e), () => e8(e)), [e]),
+        i.useEffect(() => (e3(e), () => e3(e)), [e]),
         i.useEffect(() => {
             null != n && 0 !== Object.keys(n).length && e0.A.updateOnboardingResponses(e);
         }, [e, n]),
@@ -725,8 +725,8 @@ var na = t(164048),
     nr = t(839447),
     nd = t(539916),
     nc = t(790782),
-    no = t(275196),
-    nu = t(964623);
+    no = t(361044),
+    nu = t(354919);
 let nh = eR._3.SIZE_80,
     nx = "required";
 function nm(e) {
@@ -1122,7 +1122,7 @@ function nN(e) {
         ],
     });
 }
-var nf = t(397882);
+var nf = t(33685);
 function np(e) {
     let { guild: n } = e,
         t = (0, ey.A)(n);

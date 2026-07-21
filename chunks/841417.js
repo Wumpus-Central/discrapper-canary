@@ -37,7 +37,7 @@ var n = i(627968),
     M = i(562153),
     U = i(993401),
     F = i(375708),
-    W = i(562130);
+    W = i(244650);
 let H = [
         () => F.intl.string(F.t.madJdE),
         () => F.intl.string(F.t.NYmfoP),
@@ -165,7 +165,7 @@ function J(e) {
 }
 var Z = i(83013),
     $ = i(518477),
-    ee = i(390796);
+    ee = i(186468);
 function et(e) {
     let { user: t, currentUser: i, displayProfile: s, guildId: l, channelId: r, onClose: a } = e,
         { live: o, recent: d, stream: c } = (0, S.A)(t.id),
@@ -285,7 +285,7 @@ var ei = i(163126),
     el = i(229187),
     er = i(975732),
     ea = i(503062),
-    eo = i(63060);
+    eo = i(933260);
 function ed(e) {
     let { user: t, guildId: i, channelId: l, onClose: r } = e,
         { analyticsLocations: a } = (0, en.Ay)(),
@@ -414,7 +414,7 @@ var ey = i(721932),
     eF = i(561794),
     eW = i(855052),
     eH = i(287809),
-    eB = i(543572),
+    eB = i(321191),
     eV = i(600761),
     eX = i(579950),
     ez = i(535089),
@@ -429,8 +429,8 @@ var ey = i(721932),
     e1 = i(428262),
     e8 = i(451395),
     e2 = i(823016),
-    e7 = i(999346);
-function e6(e) {
+    e6 = i(18698);
+function e7(e) {
     let { item: t, index: i, wishlistId: s, onReorder: l, children: r } = e,
         { manageFocusOnReorder: a } = (0, e2.r)();
     return (0, n.jsx)(e8.mG, {
@@ -442,11 +442,11 @@ function e6(e) {
         "aria-label": F.intl.formatToPlainString(F.t["7SnyMA"], { positionNumber: i + 1 }),
         onReorder: l,
         onEnd: () => a(String(t.skuId)),
-        className: e7.C,
-        dropBeforeClassName: e7.A,
-        dropAfterClassName: e7.Ze,
-        draggingClassName: e7.Id,
-        children: (0, n.jsx)("div", { className: e7.An, children: r }),
+        className: e6.C,
+        dropBeforeClassName: e6.A,
+        dropAfterClassName: e6.Ze,
+        draggingClassName: e6.Id,
+        children: (0, n.jsx)("div", { className: e6.An, children: r }),
     });
 }
 let e5 = s.memo(function (e) {
@@ -466,7 +466,7 @@ let e5 = s.memo(function (e) {
                 a
                     ? (0, n.jsx)(e8.jV, {
                           buttonRef: u(String(t.skuId)),
-                          className: e7.BU,
+                          className: e6.BU,
                           onFocus: (e) => e.stopPropagation(),
                       })
                     : void 0,
@@ -486,7 +486,7 @@ let e5 = s.memo(function (e) {
         );
     return a
         ? (0, n.jsx)("li", {
-              children: (0, n.jsx)(e6, { item: t, index: i, wishlistId: o, onReorder: c, children: m }),
+              children: (0, n.jsx)(e7, { item: t, index: i, wishlistId: o, onReorder: c, children: m }),
           })
         : (0, n.jsx)("li", { children: m });
 });
@@ -514,7 +514,7 @@ function e3(e) {
         );
     if (null == o || null == d) return null;
     let h = (0, n.jsx)("ul", {
-        className: e7.Vg,
+        className: e6.Vg,
         children: g.map((e, t) =>
             (0, n.jsx)(
                 e5,
@@ -561,7 +561,7 @@ let td = 90 * ta.A.Millis.DAY,
         defaultConfig: { minItemsToDismiss: 1 },
         variations: { 0: { minItemsToDismiss: 1 }, 1: { minItemsToDismiss: 3 }, 2: { minItemsToDismiss: 10 } },
     });
-var tg = i(894533);
+var tg = i(588605);
 function tm(e) {
     let {
             user: t,
@@ -679,7 +679,7 @@ var tx = i(477782),
     tA = i(789645),
     tj = i(847374),
     tE = i(486020),
-    tS = i(790817);
+    tS = i(291641);
 function tT(e) {
     let {
             title: t,
@@ -830,7 +830,7 @@ function tC(e) {
           });
 }
 var tw = i(202541),
-    tR = i(614526);
+    tR = i(678790);
 function tO(e) {
     let { socialLayerStorefrontApplicationIds: t, handleOpenShop: i, handleOpenGameShop: s } = e;
     return t.length > 0
@@ -1152,7 +1152,7 @@ function tL(e) {
         ],
     });
 }
-var tD = i(275365);
+var tD = i(844621);
 function tP(e) {
     let { children: t, className: i, scrollerRef: s, ...l } = e;
     return (0, n.jsx)(a.Ip, { ref: s, className: r()(tD.gN, i), fade: !0, ...l, children: t });

@@ -32,7 +32,7 @@ var i = s(627968),
     I = s(202541),
     P = s(933287),
     y = s(375708),
-    z = s(660478);
+    z = s(35158);
 let M = [
     { icon: d.B, message: P.default.bpksos },
     { icon: o.h, message: P.default["5rbQbD"] },

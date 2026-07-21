@@ -1,4 +1,4 @@
-n.d(t, { F: () => O });
+n.d(t, { F: () => L });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -23,50 +23,50 @@ var i = n(627968),
     N = n(832163),
     I = n(830647),
     T = n(280450),
-    _ = n(49999),
-    b = n(818348),
-    S = n(375708),
-    R = n(474143);
+    b = n(49999),
+    _ = n(818348),
+    R = n(375708),
+    S = n(1991);
 function P(e) {
     let [t, n] = (0, j.RF)(e, (0, y.c)(e), void 0, !0);
     return [t === e, n];
 }
-function O(e) {
+function L(e) {
     let t,
         { user: n, stream: a, channel: y } = e,
-        [j, O] = l.useState(!1),
-        L = (0, v.AO)(a),
+        [j, L] = l.useState(!1),
+        O = (0, v.AO)(a),
         w = (0, r.bG)([N.A], () => N.A.getDetectableIdsToApplicationIds()),
-        M = L?.id,
-        D = null != M ? w[M] : null,
-        U = (0, C.h)(D),
+        D = O?.id,
+        M = null != D ? w[D] : null,
+        U = (0, C.h)(M),
         {
             isLoading: V,
             applicationWidgetConfig: k,
-            profileApplicationWidget: B,
-            userApplicationIdentity: G,
-        } = (0, g.A)(n.id, D),
+            profileApplicationWidget: G,
+            userApplicationIdentity: B,
+        } = (0, g.A)(n.id, M),
         H = (0, r.bG)([T.default], () => T.default.getId()),
         F = l.useRef(null),
         [z, W] = P(o.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE),
         [Y, K] = P(o.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA),
-        { hasAlreadyLinked: X, canStartAuthorization: Z, fetched: q } = (0, f.RD)(H === n.id ? U : null),
-        $ = H === n.id && Z && !q,
+        { hasAlreadyLinked: X, canStartAuthorization: $, fetched: Z } = (0, f.RD)(H === n.id ? U : null),
+        q = H === n.id && $ && !Z,
         Q = l.useCallback(() => {
-            O(!1);
+            L(!1);
         }, []),
         J = l.useCallback(() => {
-            K(_.i.USER_DISMISS);
+            K(b.i.USER_DISMISS);
         }, [K]),
-        ee = null != B,
-        et = Y && null != k && (X || Z),
+        ee = null != G,
+        et = Y && null != k && (X || $),
         { rankIconUrl: en, rankText: ei } =
-            ((t = G?.profile),
+            ((t = B?.profile),
             l.useMemo(() => {
-                if (null == t || "1346069614634864772" !== D) return {};
+                if (null == t || "1346069614634864772" !== M) return {};
                 let e = t.data?.primary?.rank_name;
                 return { rankIconUrl: t.data?.primary?.rank_image?.proxy_url, rankText: e };
-            }, [D, t])),
+            }, [M, t])),
         {
             isAppIcon: el,
             icon: ea,
@@ -74,26 +74,26 @@ function O(e) {
             renderPopout: er,
             positionKey: eo,
         } = l.useMemo(() => {
-            if (null == U || null == D) return { isAppIcon: !1 };
+            if (null == U || null == M) return { isAppIcon: !1 };
             if (ee || et) {
                 let e = en ?? U.getIconURL(E.iu.SMALL),
                     t = null != e && null == en,
                     l =
                         null != e
-                            ? (0, i.jsx)("img", { className: R.Kk, src: e, alt: "", "aria-hidden": !0 })
-                            : (0, i.jsx)(c._, { className: R.Kk });
+                            ? (0, i.jsx)("img", { className: S.Kk, src: e, alt: "", "aria-hidden": !0 })
+                            : (0, i.jsx)(c._, { className: S.Kk });
                 return {
                     isAppIcon: t,
                     icon: l,
-                    text: ei ?? S.intl.string(S.t["9njbm2"]),
+                    text: ei ?? R.intl.string(R.t["9njbm2"]),
                     renderPopout: function (e) {
-                        return null == D
+                        return null == M
                             ? null
                             : (0, i.jsx)(I.V, {
                                   className: e,
                                   userId: n.id,
                                   channel: y,
-                                  applicationId: D,
+                                  applicationId: M,
                                   onClose: Q,
                                   canShowCTA: Y,
                                   onDismissCTA: J,
@@ -104,24 +104,24 @@ function O(e) {
             }
             let { icon: e, text: t } =
                 H === n.id
-                    ? { icon: (0, i.jsx)(d.U, { className: R.Kk }), text: S.intl.string(S.t.e6S76Q) }
-                    : { icon: (0, i.jsx)(u.o, { className: R.Kk }), text: S.intl.string(S.t["8ZzYIv"]) };
+                    ? { icon: (0, i.jsx)(d.U, { className: S.Kk }), text: R.intl.string(R.t.e6S76Q) }
+                    : { icon: (0, i.jsx)(u.o, { className: S.Kk }), text: R.intl.string(R.t["8ZzYIv"]) };
             return {
                 isAppIcon: !1,
                 icon: e,
                 text: t,
                 renderPopout: function (e) {
-                    return null == D
+                    return null == M
                         ? null
-                        : (0, i.jsx)(I.Z, { className: e, userId: n.id, channel: y, applicationId: D, onClose: Q });
+                        : (0, i.jsx)(I.Z, { className: e, userId: n.id, channel: y, applicationId: M, onClose: Q });
                 },
                 positionKey: "feature-card-version",
             };
-        }, [U, D, ee, et, H, n.id, y, Q, Y, J, en, ei]);
-    return V || $ || null == er
+        }, [U, M, ee, et, H, n.id, y, Q, Y, J, en, ei]);
+    return V || q || null == er
         ? null
         : (0, i.jsx)(p.N, {
-              theme: b.NJ.DARKER,
+              theme: _.NJ.DARKER,
               children: (e) =>
                   (0, i.jsx)(h.Y, {
                       targetElementRef: F,
@@ -135,19 +135,19 @@ function O(e) {
                       renderPopout: () => er(e),
                       children: () =>
                           (0, i.jsxs)("div", {
-                              className: s()(e, R.kL),
+                              className: s()(e, S.kL),
                               ref: F,
                               children: [
                                   (0, i.jsxs)(m.D, {
-                                      className: R.BQ,
+                                      className: S.BQ,
                                       onClick: () => {
-                                          W(_.i.TAKE_ACTION), O((e) => !e);
+                                          W(b.i.TAKE_ACTION), L((e) => !e);
                                       },
                                       "aria-expanded": j,
                                       "aria-haspopup": "dialog",
                                       children: [
                                           null != ea &&
-                                              (0, i.jsx)("div", { className: s()(R.zc, { [R.RT]: el }), children: ea }),
+                                              (0, i.jsx)("div", { className: s()(S.zc, { [S.RT]: el }), children: ea }),
                                           (0, i.jsx)(A.E, {
                                               variant: "text-sm/normal",
                                               color: "text-strong",

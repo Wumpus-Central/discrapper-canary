@@ -3,7 +3,7 @@ var r = n(627968),
     l = n(364801),
     a = n(498381),
     s = n(891167),
-    i = n(891396);
+    i = n(59196);
 let c = function (e) {
     let { bannerSrc: t, logoSrc: n, backgroundColor: c, href: o, children: u } = e;
     return (0, r.jsx)("div", {

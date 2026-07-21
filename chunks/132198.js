@@ -6,13 +6,13 @@ var l = n(627968),
     s = n(149282),
     u = n(305003),
     o = n(752079),
-    d = n(521e3),
-    c = n(758836),
-    m = n(68644),
+    c = n(521e3),
+    d = n(758836),
+    m = n(690524),
     x = n(455156);
 function f(e) {
     let { alt: t, className: n, artboard: a } = e,
-        u = r.useContext(d.vf);
+        u = r.useContext(c.vf);
     return (0, l.jsx)("div", {
         role: "img",
         "aria-label": t,
@@ -24,19 +24,19 @@ function f(e) {
     });
 }
 let p = {
-    [c.Dp.FRACTIONAL_PREMIUM]: {
+    [d.Dp.FRACTIONAL_PREMIUM]: {
         render: (e) => {
             let { alt: t, className: n } = e;
             return (0, l.jsx)(f, { alt: t, className: n, artboard: "STACKED COINS" });
         },
     },
-    [c.Dp.FRACTIONAL_PREMIUM_1_DAY]: {
+    [d.Dp.FRACTIONAL_PREMIUM_1_DAY]: {
         render: (e) => {
             let { alt: t, className: n } = e;
             return (0, l.jsx)(f, { alt: t, className: n, artboard: "SINGLE COIN" });
         },
     },
-    [c.Dp.ORB_PROFILE_BADGE]: {
+    [d.Dp.ORB_PROFILE_BADGE]: {
         render: (e) => {
             let { animationState: t = "on", className: n } = e;
             return (0, l.jsx)(o.A, { animationState: t, className: i()(m.oy, n) });
