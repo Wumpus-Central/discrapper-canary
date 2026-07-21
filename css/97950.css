@@ -4,7 +4,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    transform: scale(.8) translate(-50%, -50%)
+    transform: translate(-50%, -50%) scale(.8)
 }
 
 .full-motion .container__52fde {
@@ -12,7 +12,7 @@
 }
 
 .container__52fde:hover {
-    transform: scale(1) translate(-50%, -50%)
+    transform: translate(-50%, -50%) scale(1)
 }
 
 .note__52fde {
