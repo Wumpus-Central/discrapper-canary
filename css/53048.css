@@ -483,6 +483,24 @@
     contain: style
 }
 
+.decoration_cc5dd2 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.decorationImage_cc5dd2 {
+    display: block;
+    height: calc(var(--decoration-to-avatar-ratio)*100%);
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: calc(var(--decoration-to-avatar-ratio)*100%)
+}
+
 .lowerBadge_cc5dd2 {
     bottom: 0;
     inset-inline-end: 0;
@@ -500,7 +518,8 @@
     inset-inline-end: 0;
     pointer-events: none;
     position: absolute;
-    top: 0
+    top: 0;
+    z-index: 2
 }
 
 .focusStroke_cc5dd2 {
