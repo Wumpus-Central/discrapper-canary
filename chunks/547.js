@@ -7,8 +7,9 @@ var r = n(506774),
     l = n(493336),
     o = n(56562),
     d = n(439372),
-    c = n(292446),
-    u = n(343328),
+    c = n(292446);
+n(313961);
+var u = n(343328),
     _ = n(626584),
     E = n(617710),
     A = n(334465),
@@ -22,8 +23,8 @@ var r = n(506774),
     S = n(309010),
     N = n(967198),
     C = n(927813),
-    R = n(202803),
-    O = n(326337),
+    O = n(202803),
+    R = n(326337),
     L = n(652215),
     y = n(746080),
     D = n(375708);
@@ -45,7 +46,7 @@ function M(e) {
     let f = T.A.getChannel(n);
     if (f?.type === L.rbe.GUILD_STORE || (f?.type != null && L.kvI.GUILD_THREADS_ONLY.has(f.type))) return;
     let p = c.A.getOrCreate(n);
-    p.some(R.$r) && (b.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
+    p.some(O.$r) && (b.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
         null != p.jumpTargetId &&
             null == a &&
             ((p = p.mutate({ jumpTargetId: null, jumped: !1, jumpType: o.vx.ANIMATED })), c.A.commit(p)),
@@ -85,7 +86,7 @@ function M(e) {
                     b.log(`Jumping to start of thread ${f.id}`),
                     l.A.fetchMessages({
                         channelId: n,
-                        limit: (0, O.h)("MessageManager.threadStart"),
+                        limit: (0, R.h)("MessageManager.threadStart"),
                         jump: { messageId: n, flash: !1 },
                         isPreload: d,
                         skipLocalFetch: A,
@@ -96,7 +97,7 @@ function M(e) {
             if (!(f?.isThread() && g.Ay.hasTrackedUnread(f.id)) || p.ready)
                 return l.A.fetchMessages({
                     channelId: n,
-                    limit: (0, O.h)("MessageManager.initialFetch"),
+                    limit: (0, R.h)("MessageManager.initialFetch"),
                     isPreload: d,
                     skipLocalFetch: A,
                     jump: { jumpType: o.vx.ANIMATED },
@@ -108,7 +109,7 @@ function M(e) {
                 b.log(`Jumping to most recent message in thread ${f.id} - ${e}`),
                 l.A.fetchMessages({
                     channelId: n,
-                    limit: (0, O.h)("MessageManager.threadUnread"),
+                    limit: (0, R.h)("MessageManager.threadUnread"),
                     jump: { messageId: e, flash: !1, offset: 1 },
                     isPreload: d,
                     skipLocalFetch: A,
@@ -204,7 +205,7 @@ function K(e) {
     i &&
         E.A.isConnected() &&
         d &&
-        l.A.fetchMessages({ channelId: t, limit: (0, O.h)("MessageManager.staleFetch"), jump: n });
+        l.A.fetchMessages({ channelId: t, limit: (0, R.h)("MessageManager.staleFetch"), jump: n });
 }
 function $(e) {
     let { channelId: t, messageId: n, reason: i, noSendFailed: r, shouldSendNotification: s } = e;
