@@ -5934,5 +5934,24 @@
         "checkPermissionsEnabled": true
       }
     }
+  },
+  {
+    "name": "2026-07-wishlist-direct-to-gifting",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "clickRoutesToGift": true,
+        "showGiftButton": true
+      },
+      "2": {
+        "clickRoutesToGift": true,
+        "showGiftButton": false
+      }
+    }
   }
 ]
