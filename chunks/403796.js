@@ -28,7 +28,7 @@ _.exports = {
     G$: "decorator__972a0",
     dm: "dm__972a0",
     xx: "avatarWithText__972a0",
+    Zi: "channelNameFade__972a0",
     KQ: "waveButton__972a0",
-    lU: "channelNameMeasurement__972a0",
     a1: "tabHoverGradient__972a0",
 };

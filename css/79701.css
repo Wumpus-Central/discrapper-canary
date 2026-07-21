@@ -280,15 +280,23 @@
     color: HighlightText
 }
 
+.enable-forced-colors .channelNameFade__972a0 {
+    -webkit-mask-image: none;
+    mask-image: none
+}
+
 .waveButton__972a0 {
     margin-inline-end: 5px
 }
 
-.channelNameMeasurement__972a0 {
-    height: 0;
-    overflow: hidden;
-    position: absolute;
-    visibility: hidden
+.channelNameFade__972a0 {
+    -webkit-mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 16px), transparent);
+    mask-image: linear-gradient(90deg, #000 0, #000 calc(100% - 16px), transparent)
+}
+
+.channelNameFade__972a0:dir(rtl) {
+    -webkit-mask-image: linear-gradient(270deg, #000 0, #000 calc(100% - 16px), transparent);
+    mask-image: linear-gradient(270deg, #000 0, #000 calc(100% - 16px), transparent)
 }
 
 .tabHoverGradient__972a0 {
