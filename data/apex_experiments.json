@@ -4726,6 +4726,22 @@
     }
   },
   {
+    "name": "2026-06-guild-profile-server-tag",
+    "kind": "user",
+    "defaultConfig": {
+      "showServerTag": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showServerTag": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-06-gummy-bears",
     "defaultConfig": {
