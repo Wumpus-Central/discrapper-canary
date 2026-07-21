@@ -1173,22 +1173,6 @@
     }
   },
   {
-    "name": "2026-02-android-app-upsell-banner",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-02-announcement-composer",
     "defaultConfig": {
