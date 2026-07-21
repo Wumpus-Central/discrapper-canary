@@ -42,4 +42,5 @@ var i,
         (i[(i.NITRO_2_POINT_0_CTA = 40)] = "NITRO_2_POINT_0_CTA"),
         (i[(i.ORBS_MULTIPLIER_QUEST = 41)] = "ORBS_MULTIPLIER_QUEST"),
         (i[(i.XBOX_GAME_PASS_QUEST = 42)] = "XBOX_GAME_PASS_QUEST"),
+        (i[(i.CLOUD_GAMING_PROVIDER_NVIDIA = 43)] = "CLOUD_GAMING_PROVIDER_NVIDIA"),
         i);
