@@ -1,81 +1,82 @@
 "use strict";
-n.d(t, { A: () => f });
+n.d(t, { A: () => A });
 var i = n(17928),
     r = n(228366),
-    s = n(956518),
-    a = n(165610),
-    o = n(5867);
-let l = null,
-    u = new Map(),
-    c = new Map(),
+    a = n(956518),
+    s = n(165610),
+    l = n(5867);
+let o = null,
     d = new Map(),
+    c = new Map(),
+    u = new Map(),
     _ = new Map();
-class h extends i.Ay.Store {
+class E extends i.Ay.Store {
     static displayName = "FramesStore";
     getConnectedFrame() {
-        return l;
+        return o;
     }
     getFrameLayoutMode() {
-        return l?.layoutMode;
+        return o?.layoutMode;
     }
     getActivityPanelMode() {
-        return l?.activityPanelMode ?? o.Gd.DISCONNECTED;
+        return o?.activityPanelMode ?? l.Gd.DISCONNECTED;
     }
     isFrameActive() {
-        return null != l;
+        return null != o;
     }
     isLaunchingFrame(e) {
-        return null != e ? (u.get(e) ?? !1) : u.size > 0;
+        return null != e ? (d.get(e) ?? !1) : d.size > 0;
     }
     isProxyTicketRefreshing(e) {
         return c.has(e);
     }
     getOrientationLockStateForApp(e) {
-        return d.get(e);
+        return u.get(e);
     }
     getPipOrientationLockStateForApp(e) {
         return _.get(e) ?? this.getOrientationLockStateForApp(e);
     }
 }
-let f = new h(r.h, {
+let A = new E(r.h, {
     FRAME_LAUNCH_START: function (e) {
         let { applicationId: t } = e;
-        u.set(t, !0);
+        d.set(t, !0);
     },
     FRAME_LAUNCH: function (e) {
-        let { applicationId: t, proxyTicket: n } = e,
-            i = (0, s.Ay)(t);
-        null == i
-            ? u.delete(t)
-            : (u.delete(t),
-              (l = {
+        let { applicationId: t, proxyTicket: n, channelId: i } = e,
+            r = (0, a.Ay)(t);
+        null == r
+            ? d.delete(t)
+            : (d.delete(t),
+              (o = {
                   applicationId: t,
-                  url: i,
+                  url: r,
                   connectedSince: Date.now(),
-                  layoutMode: a.y.FOCUSED,
-                  activityPanelMode: o.Gd.PANEL,
+                  layoutMode: s.y.FOCUSED,
+                  activityPanelMode: l.Gd.PANEL,
                   proxyTicket: n,
+                  channelId: i,
               }));
     },
     FRAME_LAUNCH_FAIL: function (e) {
         let { applicationId: t } = e;
-        u.delete(t);
+        d.delete(t);
     },
     FRAME_STOP: function (e) {
         let { applicationId: t } = e;
-        l?.applicationId === t && (l = null);
+        o?.applicationId === t && (o = null);
     },
     FRAME_UPDATE_LAYOUT_MODE: function (e) {
         let { applicationId: t, layoutMode: n } = e;
-        l?.applicationId === t && (l = { ...l, layoutMode: n });
+        o?.applicationId === t && (o = { ...o, layoutMode: n });
     },
     FRAME_SET_PANEL_MODE: function (e) {
         let { activityPanelMode: t } = e;
-        null != l && (l = { ...l, activityPanelMode: t });
+        null != o && (o = { ...o, activityPanelMode: t });
     },
     FRAME_SET_ORIENTATION_LOCK_STATE: function (e) {
         let { applicationId: t, lockState: n, pictureInPictureLockState: i } = e;
-        null == n ? d.delete(t) : d.set(t, n), null === i ? _.delete(t) : void 0 !== i && _.set(t, i);
+        null == n ? u.delete(t) : u.set(t, n), null === i ? _.delete(t) : void 0 !== i && _.set(t, i);
     },
     FRAME_SET_PROXY_TICKET_REFRESHING: function (e) {
         let { applicationId: t, refreshing: n } = e;
@@ -83,9 +84,9 @@ let f = new h(r.h, {
     },
     FRAME_UPDATE_PROXY_TICKET: function (e) {
         let { applicationId: t, proxyTicket: n } = e;
-        l?.applicationId === t && (l = { ...l, proxyTicket: n });
+        o?.applicationId === t && (o = { ...o, proxyTicket: n });
     },
     CHANNEL_SELECT: function (e) {
-        return null != l && l.layoutMode !== a.y.PIP && ((l = { ...l, layoutMode: a.y.PIP }), !0);
+        return null != o && o.layoutMode !== s.y.PIP && ((o = { ...o, layoutMode: s.y.PIP }), !0);
     },
 });
