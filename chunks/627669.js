@@ -3967,7 +3967,12 @@ function sr(e) {
                                               className: st.r$,
                                               children: (0, i.jsx)(er.n, { themed: !0, dotRadius: 2 }),
                                           }),
-                                          (0, i.jsx)(ed.Ay, { channel: t, className: st.mD, renderDots: !1 }),
+                                          (0, i.jsx)(ed.Ay, {
+                                              channel: t,
+                                              className: st.mD,
+                                              renderDots: !1,
+                                              renderSlowmode: !1,
+                                          }),
                                       ],
                                   }),
                               ],

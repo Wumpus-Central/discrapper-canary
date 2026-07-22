@@ -32,7 +32,7 @@ var I = i(770178),
     b = i(101392),
     y = i(625494),
     T = i(960850),
-    _ = i(891874);
+    _ = i(634266);
 function j(e) {
     let { isEnabled: t, rateLimitPerUser: i, isBypassSlowmode: s, slowmodeCooldownGuess: a } = e,
         [r, d] = l.useState(!1);
@@ -101,7 +101,7 @@ var G = i(629016),
     B = i(403362),
     V = i(562153),
     F = i(375708),
-    W = i(874410);
+    W = i(379285);
 let H = [];
 class q extends l.PureComponent {
     state = { fadeIn: !1 };
@@ -153,64 +153,65 @@ function Z(e) {
             channel: d,
             isThreadCreation: o,
             renderDots: u,
-            isInTextChannel: h = !1,
-            shouldShowLegacyGameInviteCreationBanner: m = !1,
+            renderSlowmode: h,
+            isInTextChannel: m = !1,
+            shouldShowLegacyGameInviteCreationBanner: p = !1,
         } = e,
-        { rateLimitPerUser: p } = d,
-        A = l.useRef(null),
+        { rateLimitPerUser: A } = d,
         g = l.useRef(null),
-        [f, v] = l.useState(!1),
-        C = l.useCallback(() => {
-            if (null == A.current || null == g.current) return;
-            let e = A.current.getBoundingClientRect();
-            g.current.scrollWidth + 48 > e.width ? v(!0) : v(!1);
+        f = l.useRef(null),
+        [v, C] = l.useState(!1),
+        x = l.useCallback(() => {
+            if (null == g.current || null == f.current) return;
+            let e = g.current.getBoundingClientRect();
+            f.current.scrollWidth + 48 > e.width ? C(!0) : C(!1);
         }, []);
-    (0, I.g)(A, C, [], { enabled: h }), (0, I.g)(g, C, [], { enabled: h });
-    let [x, E, S] = s,
-        b = "";
+    (0, I.g)(g, x, [], { enabled: m }), (0, I.g)(f, x, [], { enabled: m });
+    let [E, S, b] = s,
+        y = "";
     1 === s.length
-        ? (b = F.intl.format(F.t.lJ9sZX, { a: x }))
+        ? (y = F.intl.format(F.t.lJ9sZX, { a: E }))
         : 2 === s.length
-          ? (b = F.intl.format(F.t.rB0CUa, { a: x, b: E }))
+          ? (y = F.intl.format(F.t.rB0CUa, { a: E, b: S }))
           : 3 === s.length
-            ? (b = F.intl.format(F.t.StKThj, { a: x, b: E, c: S }))
-            : s.length > 3 && (b = F.intl.format(F.t.Q8lUnE, {}));
-    let y = f && s.length > 0 && s.length <= 3 ? F.intl.format(F.t["qD/0qZ"], {}) : b,
-        T = s.length > 0 || p > 0 || m,
-        _ = !T && null != t,
-        j = null;
+            ? (y = F.intl.format(F.t.StKThj, { a: E, b: S, c: b }))
+            : s.length > 3 && (y = F.intl.format(F.t.Q8lUnE, {}));
+    let T = v && s.length > 0 && s.length <= 3 ? F.intl.format(F.t["qD/0qZ"], {}) : y,
+        _ = s.length > 0 || A > 0 || p,
+        j = !_ && null != t,
+        D = null;
     return (
-        T
-            ? (j = (0, n.jsxs)("div", {
-                  className: a()(W.IW, { "stop-animation": !i, [W.Il]: h }, r),
+        _
+            ? (D = (0, n.jsxs)("div", {
+                  className: a()(W.IW, { "stop-animation": !i, [W.Il]: m }, r),
                   children: [
-                      0 === s.length && m
+                      0 === s.length && p
                           ? (0, n.jsx)(O.A, {})
                           : (0, n.jsxs)("div", {
                                 className: W.y5,
-                                ref: A,
+                                ref: g,
                                 children: [
                                     s.length > 0 &&
                                         !1 !== u &&
                                         (0, n.jsx)(c.n, { className: W.gO, dotRadius: 3.5, themed: !0 }),
-                                    (0, n.jsx)("span", { className: W.Qq, "aria-hidden": !0, children: y }),
+                                    (0, n.jsx)("span", { className: W.Qq, "aria-hidden": !0, children: T }),
                                     (0, n.jsx)("span", {
                                         className: W.Qq,
                                         style: { position: "absolute", visibility: "hidden" },
                                         "aria-hidden": !0,
-                                        ref: g,
-                                        children: b,
+                                        ref: f,
+                                        children: y,
                                     }),
                                 ],
                             }),
-                      (0, n.jsx)(N, { channel: d, isThreadCreation: o }),
+                      !1 !== h && (0, n.jsx)(N, { channel: d, isThreadCreation: o }),
                   ],
               }))
-            : _ && null != t && (j = (0, n.jsx)(q, { activity: t, isFocused: i })),
+            : j && null != t && (D = (0, n.jsx)(q, { activity: t, isFocused: i })),
         (0, n.jsxs)(n.Fragment, {
             children: [
-                j,
-                (0, n.jsx)("span", { className: W.y4, "aria-live": "polite", "aria-atomic": !0, children: b }),
+                D,
+                (0, n.jsx)("span", { className: W.y4, "aria-live": "polite", "aria-atomic": !0, children: y }),
             ],
         })
     );
