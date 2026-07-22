@@ -3431,6 +3431,8 @@
     --app-frame-border: hsla(240, 4%, 61%, .12);
     --app-message-embed-secondary-text: hsla(0, 0%, 100%, .7);
     --background-accent: #40424a;
+    --background-app-launcher-card-default: #383b40;
+    --background-app-launcher-row-default: #383b40;
     --background-base-low: #36383d;
     --background-base-lower: #333338;
     --background-base-lowest: #2b2e33;
@@ -4090,6 +4092,8 @@
     --app-frame-border: hsla(240, 4%, 61%, .28);
     --app-message-embed-secondary-text: hsla(0, 0%, 100%, .7);
     --background-accent: #6e7078;
+    --background-app-launcher-card-default: #fff;
+    --background-app-launcher-row-default: #fff;
     --background-base-low: #fafafa;
     --background-base-lower: #fafafa;
     --background-base-lowest: #f2f2f5;
@@ -4749,6 +4753,8 @@
     --app-frame-border: hsla(240, 4%, 61%, .2);
     --app-message-embed-secondary-text: hsla(0, 0%, 100%, .7);
     --background-accent: #2b2e36;
+    --background-app-launcher-card-default: #131416;
+    --background-app-launcher-row-default: #131416;
     --background-base-low: #0c0c0e;
     --background-base-lower: #070709;
     --background-base-lowest: #000;
@@ -5408,6 +5414,8 @@
     --app-frame-border: hsla(240, 4%, 61%, .12);
     --app-message-embed-secondary-text: hsla(0, 0%, 100%, .7);
     --background-accent: #383b42;
+    --background-app-launcher-card-default: #242429;
+    --background-app-launcher-row-default: #242429;
     --background-base-low: #212124;
     --background-base-lower: #1a1a1f;
     --background-base-lowest: #121214;
