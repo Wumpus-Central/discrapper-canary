@@ -1,4 +1,4 @@
-l.d(n, { A: () => D });
+l.d(n, { A: () => _ });
 var t = l(627968),
     i = l(64700),
     s = l(702841),
@@ -17,136 +17,134 @@ var t = l(627968),
     E = l(665691),
     N = l(696451),
     f = l(290863),
-    C = l(994500),
-    p = l(287809),
-    b = l(427262),
-    T = l(477554),
-    v = l(742589),
-    I = l(375708),
-    _ = l(964623);
-function D(e) {
+    p = l(994500),
+    C = l(287809),
+    T = l(427262),
+    b = l(742589),
+    v = l(375708),
+    I = l(354919);
+function _(e) {
     let n = e.channel.getRecipientId(),
         l = e.channel.isSystemDM(),
-        D = (0, s.bG)([p.default], () => p.default.getUser(n)),
-        M = (0, s.bG)([f.A], () => f.A.getStatus(n)),
-        U = (0, s.bG)([f.A], () => f.A.isMobileOnline(n)),
-        L = (0, s.bG)([f.A], () => f.A.isVROnline(n)),
-        S = (0, s.bG)([C.A], () => C.A.getNickname(n)),
-        R = b.Ay.useUserTag(D),
-        y = (0, j.a)({ displayNameStyles: D?.displayNameStyles }),
+        _ = (0, s.bG)([C.default], () => C.default.getUser(n)),
+        D = (0, s.bG)([f.A], () => f.A.getStatus(n)),
+        M = (0, s.bG)([f.A], () => f.A.isMobileOnline(n)),
+        U = (0, s.bG)([f.A], () => f.A.isVROnline(n)),
+        L = (0, s.bG)([p.A], () => p.A.getNickname(n)),
+        S = T.Ay.useUserTag(_),
+        R = (0, j.a)({ displayNameStyles: _?.displayNameStyles }),
         G = (0, E.bG)({ channelId: e.channel.id }),
-        { enabled: k } = T.A.useConfig({ location: "DM Header AKA Popover" }),
-        O = i.useRef(null),
-        [F, P] = i.useState(!1),
-        V = i.useRef(void 0),
-        H = i.useCallback(() => {
-            clearTimeout(V.current), P(!0);
+        y = i.useRef(null),
+        [k, O] = i.useState(!1),
+        F = i.useRef(void 0),
+        P = i.useCallback(() => {
+            clearTimeout(F.current), O(!0);
         }, []),
-        z = i.useCallback(() => {
-            V.current = setTimeout(() => {
-                P(!1);
+        V = i.useCallback(() => {
+            F.current = setTimeout(() => {
+                O(!1);
             }, 250);
         }, []);
-    i.useEffect(() => () => clearTimeout(V.current), []);
-    let B = (0, s.cf)([N.Ay], () => N.Ay.getNicknameGuildsMapping(n), [n]),
-        w = i.useMemo(
+    i.useEffect(() => () => clearTimeout(F.current), []);
+    let z = (0, s.cf)([N.Ay], () => N.Ay.getNicknameGuildsMapping(n), [n]),
+        B = i.useMemo(
             () =>
-                Object.entries(B)
+                Object.entries(z)
                     .filter((e) => {
                         let [n] = e;
-                        return n !== D?.globalName;
+                        return n !== _?.globalName;
                     })
                     .map((e) => {
                         let [n, l] = e;
                         return { nickname: n, guildIds: l };
                     }),
-            [B, D?.globalName],
+            [z, _?.globalName],
         ),
-        X = k && w.length > 0,
-        Q = X && null != D && !l,
-        Y = S ?? b.Ay.getName(D),
-        Z =
-            null != D &&
+        H = B.length > 0,
+        w = H && null != _ && !l,
+        X = L ?? T.Ay.getName(_),
+        Q =
+            null != _ &&
             (0, t.jsx)(c.eu, {
-                status: M,
-                isMobile: U,
-                isVR: L,
+                status: D,
+                isMobile: M,
+                isVR: U,
                 size: o._3.SIZE_20,
-                "aria-label": b.Ay.getName(D),
-                src: D.getAvatarURL(void 0, 20),
+                "aria-label": T.Ay.getName(_),
+                src: _.getAvatarURL(void 0, 20),
             });
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(d.A, { children: I.intl.string(I.t.EJRzg7) }),
-            null != D &&
+            (0, t.jsx)(d.A, { children: v.intl.string(v.t.EJRzg7) }),
+            null != _ &&
                 !l &&
                 (0, t.jsxs)("div", {
-                    className: _.my,
+                    className: I.my,
                     children: [
                         (0, t.jsx)("div", {
-                            ref: O,
+                            ref: y,
                             children:
                                 null != e.handleClick
                                     ? (0, t.jsx)(u.D, {
                                           tag: "div",
                                           onClick: e.handleClick,
                                           onContextMenu: e.handleContextMenu,
-                                          onMouseEnter: Q ? H : void 0,
-                                          onMouseLeave: Q ? z : void 0,
-                                          className: _.or,
+                                          onMouseEnter: w ? P : void 0,
+                                          onMouseLeave: w ? V : void 0,
+                                          className: I.or,
                                           "aria-hidden": !0,
                                           tabIndex: -1,
-                                          children: Z,
+                                          children: Q,
                                       })
-                                    : Z,
+                                    : Q,
                         }),
-                        Q &&
+                        w &&
                             (0, t.jsxs)(r.x, {
-                                targetElementRef: O,
-                                shouldShow: F,
-                                onRequestClose: () => P(!1),
+                                targetElementRef: y,
+                                shouldShow: k,
+                                onRequestClose: () => O(!1),
                                 position: "bottom",
                                 caretConfig: { align: "start" },
                                 children: [
                                     (0, t.jsxs)("div", {
-                                        className: _.y$,
-                                        onMouseEnter: H,
-                                        onMouseLeave: z,
+                                        className: I.y$,
+                                        onMouseEnter: P,
+                                        onMouseLeave: V,
                                         children: [
                                             (0, t.jsxs)("div", {
-                                                className: _.qc,
+                                                className: I.qc,
                                                 children: [
                                                     (0, t.jsx)(h.E, {
                                                         variant: "text-md/semibold",
                                                         color: "text-strong",
-                                                        className: _.rX,
-                                                        children: R,
+                                                        className: I.rX,
+                                                        children: S,
                                                     }),
                                                     (0, t.jsx)(h.E, {
                                                         variant: "text-xs/semibold",
                                                         color: "text-muted",
-                                                        className: _.FQ,
-                                                        children: I.intl.string(I.t.l1QVfj),
+                                                        className: I.FQ,
+                                                        children: v.intl.string(v.t.l1QVfj),
                                                     }),
                                                 ],
                                             }),
-                                            (0, t.jsx)("div", { className: _.sA }),
+                                            (0, t.jsx)("div", { className: I.sA }),
                                             (0, t.jsx)("div", {
-                                                className: _.cC,
-                                                children: w.map((e) => {
+                                                className: I.cC,
+                                                children: B.map((e) => {
                                                     let { nickname: n, guildIds: l } = e;
                                                     return (0, t.jsxs)(
                                                         "div",
                                                         {
-                                                            className: _.BZ,
+                                                            className: I.BZ,
                                                             children: [
                                                                 (0, t.jsx)(h.E, {
                                                                     variant: "text-sm/medium",
-                                                                    className: _.Vk,
+                                                                    className: I.Vk,
                                                                     children: n,
                                                                 }),
                                                                 (0, t.jsx)("div", {
-                                                                    className: _.Js,
+                                                                    className: I.Js,
                                                                     children: (0, t.jsx)(g.l, { guildIds: l }),
                                                                 }),
                                                             ],
@@ -162,32 +160,32 @@ function D(e) {
                             }),
                     ],
                 }),
-            (0, t.jsx)(v.A.Title, {
+            (0, t.jsx)(b.A.Title, {
                 level: e.level,
                 onClick: e.handleClick,
                 onContextMenu: e.handleContextMenu,
-                onMouseEnter: Q ? H : void 0,
-                onMouseLeave: Q ? z : void 0,
-                onFocus: Q ? H : void 0,
-                onBlur: Q ? z : void 0,
-                className: null != e.handleClick ? _.or : null,
+                onMouseEnter: w ? P : void 0,
+                onMouseLeave: w ? V : void 0,
+                onFocus: w ? P : void 0,
+                onBlur: w ? V : void 0,
+                className: null != e.handleClick ? I.or : null,
                 children: (0, t.jsxs)(t.Fragment, {
                     children: [
-                        X
-                            ? (0, t.jsx)("span", { className: y, children: Y })
+                        H
+                            ? (0, t.jsx)("span", { className: R, children: X })
                             : (0, t.jsx)(x.m, {
-                                  text: R,
+                                  text: S,
                                   position: "bottom",
-                                  children: (0, t.jsx)("span", { className: y, children: Y }),
+                                  children: (0, t.jsx)("span", { className: R, children: X }),
                               }),
                         G &&
                             (0, t.jsx)(x.m, {
-                                text: I.intl.string(I.t.QyZ4Td),
+                                text: v.intl.string(v.t.QyZ4Td),
                                 children: (0, t.jsx)(m.m, {
                                     size: "xs",
-                                    "aria-label": I.intl.string(I.t.VHXh8a),
+                                    "aria-label": v.intl.string(v.t.VHXh8a),
                                     color: A.A.colors.INTERACTIVE_TEXT_DEFAULT,
-                                    className: _.vW,
+                                    className: I.vW,
                                 }),
                             }),
                     ],

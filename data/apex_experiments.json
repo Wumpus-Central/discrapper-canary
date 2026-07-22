@@ -3747,22 +3747,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-05-dm-header-activity",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-dvp-for-attachments",
     "kind": "user",
     "defaultConfig": {
