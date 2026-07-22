@@ -13,8 +13,8 @@ var s = n(627968),
     _ = n(821609),
     A = n(793574),
     S = n(688810),
-    m = n(617986),
-    L = n(318346),
+    L = n(617986),
+    m = n(318346),
     p = n(287809),
     C = n(174459),
     h = n(440938),
@@ -28,11 +28,11 @@ var s = n(627968),
     T = n(511265),
     b = n(313276),
     B = n(206077),
-    j = n(828614),
-    N = n(561769),
-    R = n(484469),
+    R = n(828614),
+    j = n(561769),
+    N = n(484469),
     P = n(375708),
-    H = n(941734);
+    H = n(459550);
 function G(e) {
     return (0, s.jsx)("div", { className: H.hm, children: (0, s.jsx)(M, { ...e }) });
 }
@@ -41,10 +41,10 @@ function D(e) {
 }
 function M(e) {
     let { isLoading: t, products: n, tab: l, totalCards: r } = e,
-        a = (0, N.Mk)(l, "HeroBlockCards");
-    if (t) return (0, s.jsx)(s.Fragment, { children: [...Array(r ?? 4)].map((e, t) => (0, s.jsx)(R.A, {}, t)) });
+        a = (0, j.Mk)(l);
+    if (t) return (0, s.jsx)(s.Fragment, { children: [...Array(r ?? 4)].map((e, t) => (0, s.jsx)(N.A, {}, t)) });
     let i = null != r ? n.slice(0, r) : n;
-    return (0, s.jsx)(N.v3.Provider, {
+    return (0, s.jsx)(j.v3.Provider, {
         value: { flattenProductVariants: !1 },
         children: i.map((e, t) => {
             let n = v.A.getCategoryForProduct(e.skuId);
@@ -54,7 +54,7 @@ function M(e) {
                       h.R9,
                       {
                           newValue: { tilePosition: t, pageSection: "top 4", categoryPosition: 0 },
-                          children: (0, s.jsx)(j.A, { skuId: e.skuId, prioritizedCurrency: a }),
+                          children: (0, s.jsx)(R.A, { skuId: e.skuId, prioritizedCurrency: a }),
                       },
                       e.skuId,
                   );
@@ -108,16 +108,16 @@ let V = {
                 onVisibilityChange: T,
                 badge: b,
                 hideButton: B = !1,
-                hideCards: j = !1,
+                hideCards: R = !1,
             } = e,
-            N = (0, i.K)(
+            j = (0, i.K)(
                 (e) => {
                     T?.(e);
                 },
                 0.1,
                 null != T,
             ),
-            R = l.useRef(null),
+            N = l.useRef(null),
             G = (0, k.yB)("HeroBlock"),
             D = (0, c.bG)([p.default], () => p.default.getCurrentUser()),
             M = (0, h.uM)(),
@@ -160,12 +160,12 @@ let V = {
             es = et ? P.intl.string(P.t["1CdL8d"]) : P.intl.string(P.t.xYKa1T);
         function el() {
             et
-                ? ((0, L.Y)({
+                ? ((0, m.Y)({
                       pageType: w.liQ.SHOP_ORBS_TAB,
                       sectionType: w.JJy.ORBS_SHOP_HERO_BLOCK,
                       ctaObject: w.ZSU.CTA_TO_QUEST_HOME,
                   }),
-                  (0, m.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
+                  (0, L.mA)({ fromContent: o.u.ORBS_SHOP_HERO_CTA }))
                 : (n?.({
                       sourceButton: "shop latest category hero",
                       categorySkuId: W.categorySkuId,
@@ -188,10 +188,10 @@ let V = {
         return (0, s.jsx)(S.f5, {
             value: K,
             children: (0, s.jsxs)("div", {
-                ref: N,
+                ref: j,
                 className: H.os,
                 children: [
-                    ee ? (0, I.VA)({ isCustomCursorEnabled: G, className: H.Xt, riveEventTargetRef: R }) : null,
+                    ee ? (0, I.VA)({ isCustomCursorEnabled: G, className: H.Xt, riveEventTargetRef: N }) : null,
                     (0, s.jsx)("div", {
                         className: a()(H.vK, { [H.cN]: ee, [H.no]: Q }),
                         style: null != Z ? { background: Z } : void 0,
@@ -202,7 +202,7 @@ let V = {
                                 bannerAnimated: q,
                                 bannerRive: J,
                                 isResponsive: Q,
-                                eventTargetRef: R,
+                                eventTargetRef: N,
                             }),
                     }),
                     (0, s.jsxs)("div", {
@@ -261,7 +261,7 @@ let V = {
                                           !B && !t && (0, s.jsx)("div", { className: H.IS, children: er() }),
                                       ],
                                   }),
-                            !j &&
+                            !R &&
                                 (0, s.jsx)(F, {
                                     heroBlockRecord: W,
                                     tab: v,
