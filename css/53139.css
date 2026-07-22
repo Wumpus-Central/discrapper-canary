@@ -3464,7 +3464,7 @@ html .tabBadge_e6b769 {
 
 .heading-sm\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -3475,7 +3475,7 @@ html .tabBadge_e6b769 {
 
 .heading-sm\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -3486,7 +3486,7 @@ html .tabBadge_e6b769 {
 
 .heading-sm\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -3497,7 +3497,7 @@ html .tabBadge_e6b769 {
 
 .heading-sm\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -3508,7 +3508,7 @@ html .tabBadge_e6b769 {
 
 .heading-sm\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 800;
     line-height: 1.2857142857142858
 }
@@ -3519,7 +3519,7 @@ html .tabBadge_e6b769 {
 
 .heading-md\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -3530,7 +3530,7 @@ html .tabBadge_e6b769 {
 
 .heading-md\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -3541,7 +3541,7 @@ html .tabBadge_e6b769 {
 
 .heading-md\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3552,7 +3552,7 @@ html .tabBadge_e6b769 {
 
 .heading-md\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3563,7 +3563,7 @@ html .tabBadge_e6b769 {
 
 .heading-md\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 800;
     line-height: 1.25
 }
@@ -3574,7 +3574,7 @@ html .tabBadge_e6b769 {
 
 .heading-lg\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2
 }
@@ -3585,7 +3585,7 @@ html .tabBadge_e6b769 {
 
 .heading-lg\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.2
 }
@@ -3596,7 +3596,7 @@ html .tabBadge_e6b769 {
 
 .heading-lg\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
@@ -3607,7 +3607,7 @@ html .tabBadge_e6b769 {
 
 .heading-lg\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2
 }
@@ -3618,7 +3618,7 @@ html .tabBadge_e6b769 {
 
 .heading-lg\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 800;
     line-height: 1.2
 }
@@ -3629,7 +3629,7 @@ html .tabBadge_e6b769 {
 
 .heading-xl\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -3640,7 +3640,7 @@ html .tabBadge_e6b769 {
 
 .heading-xl\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -3651,7 +3651,7 @@ html .tabBadge_e6b769 {
 
 .heading-xl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3662,7 +3662,7 @@ html .tabBadge_e6b769 {
 
 .heading-xl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3673,7 +3673,7 @@ html .tabBadge_e6b769 {
 
 .heading-xl\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.25
 }
@@ -3684,7 +3684,7 @@ html .tabBadge_e6b769 {
 
 .heading-xxl\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -3695,7 +3695,7 @@ html .tabBadge_e6b769 {
 
 .heading-xxl\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -3706,7 +3706,7 @@ html .tabBadge_e6b769 {
 
 .heading-xxl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3717,7 +3717,7 @@ html .tabBadge_e6b769 {
 
 .heading-xxl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3728,7 +3728,7 @@ html .tabBadge_e6b769 {
 
 .heading-xxl\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1.25
 }
@@ -3739,7 +3739,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-xs\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -3750,7 +3750,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-xs\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -3761,7 +3761,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-sm\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3772,7 +3772,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-sm\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3783,7 +3783,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-md\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.2222222222222223
 }
@@ -3794,7 +3794,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-md\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.2222222222222223
 }
@@ -3805,7 +3805,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-lg\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
@@ -3816,7 +3816,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-lg\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2
 }
@@ -3827,7 +3827,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-xl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3838,7 +3838,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-xl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3849,7 +3849,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-xxl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -3860,7 +3860,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/heading-xxl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -3871,20 +3871,20 @@ html .tabBadge_e6b769 {
 
 .eyebrow__13533 {
     font-family: var(--font-display);
-    font-size: 12px;
     font-weight: 700;
     letter-spacing: .02em;
     line-height: 1.3333333333333333;
     text-transform: uppercase
 }
 
+.eyebrow__13533,
 .eyebrow__13533.fontScaling__13533 {
     font-size: .75rem
 }
 
 .heading-deprecated-12\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -3895,7 +3895,7 @@ html .tabBadge_e6b769 {
 
 .heading-deprecated-12\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -3906,7 +3906,7 @@ html .tabBadge_e6b769 {
 
 .heading-deprecated-12\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -3917,7 +3917,7 @@ html .tabBadge_e6b769 {
 
 .heading-deprecated-12\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -3928,7 +3928,7 @@ html .tabBadge_e6b769 {
 
 .heading-deprecated-12\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 800;
     line-height: 1.3333333333333333
 }
@@ -3939,7 +3939,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/heading-18\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -3950,7 +3950,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/heading-18\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -3961,7 +3961,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/heading-18\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -3972,7 +3972,7 @@ html .tabBadge_e6b769 {
 
 .text-xxs\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 400;
     line-height: 1.2
 }
@@ -3983,7 +3983,7 @@ html .tabBadge_e6b769 {
 
 .text-xxs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 500;
     line-height: 1.2
 }
@@ -3994,18 +3994,18 @@ html .tabBadge_e6b769 {
 
 .text-xxs\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 600;
     line-height: 1.2
 }
 
+.text-xxs\/bold__13533,
 .text-xxs\/semibold__13533.fontScaling__13533 {
     font-size: .625rem
 }
 
 .text-xxs\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 10px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -4016,7 +4016,7 @@ html .tabBadge_e6b769 {
 
 .text-xs\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -4027,7 +4027,7 @@ html .tabBadge_e6b769 {
 
 .text-xs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -4038,18 +4038,18 @@ html .tabBadge_e6b769 {
 
 .text-xs\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
 
+.text-xs\/bold__13533,
 .text-xs\/semibold__13533.fontScaling__13533 {
     font-size: .75rem
 }
 
 .text-xs\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -4060,18 +4060,18 @@ html .tabBadge_e6b769 {
 
 .text-sm\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
 
+.text-sm\/medium__13533,
+.text-sm\/normal__13533,
 .text-sm\/normal__13533.fontScaling__13533 {
     font-size: .875rem
 }
 
 .text-sm\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -4082,18 +4082,18 @@ html .tabBadge_e6b769 {
 
 .text-sm\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
 
+.text-sm\/bold__13533,
 .text-sm\/semibold__13533.fontScaling__13533 {
     font-size: .875rem
 }
 
 .text-sm\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -4104,7 +4104,7 @@ html .tabBadge_e6b769 {
 
 .text-md\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -4115,7 +4115,7 @@ html .tabBadge_e6b769 {
 
 .text-md\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -4126,7 +4126,7 @@ html .tabBadge_e6b769 {
 
 .text-md\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4137,7 +4137,7 @@ html .tabBadge_e6b769 {
 
 .text-md\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -4148,18 +4148,18 @@ html .tabBadge_e6b769 {
 
 .text-lg\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
     font-weight: 400;
     line-height: 1.2
 }
 
+.text-lg\/medium__13533,
+.text-lg\/normal__13533,
 .text-lg\/normal__13533.fontScaling__13533 {
     font-size: 1.25rem
 }
 
 .text-lg\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
     font-weight: 500;
     line-height: 1.2
 }
@@ -4170,18 +4170,18 @@ html .tabBadge_e6b769 {
 
 .text-lg\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
 
+.text-lg\/bold__13533,
 .text-lg\/semibold__13533.fontScaling__13533 {
     font-size: 1.25rem
 }
 
 .text-lg\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
     font-weight: 700;
     line-height: 1.2
 }
@@ -4192,7 +4192,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/message-preview\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -4203,7 +4203,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/message-preview\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -4214,7 +4214,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/message-preview\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 600;
     line-height: 1.3333333333333333
 }
@@ -4225,7 +4225,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/message-preview\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 15px;
+    font-size: .9375rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -4236,7 +4236,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/channel-title\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.375
 }
@@ -4247,7 +4247,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/channel-title\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.375
 }
@@ -4258,7 +4258,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/channel-title\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.375
 }
@@ -4269,7 +4269,7 @@ html .tabBadge_e6b769 {
 
 .redesign\/channel-title\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.375
 }
@@ -4280,7 +4280,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-xs\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -4291,7 +4291,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-xs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -4302,7 +4302,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-sm\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -4313,7 +4313,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-sm\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -4324,7 +4324,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-md\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -4335,7 +4335,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-md\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -4346,7 +4346,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-lg\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2
 }
@@ -4357,7 +4357,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/body-lg\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.2
 }
@@ -4368,7 +4368,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/meta\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -4379,7 +4379,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/meta\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -4390,40 +4390,40 @@ html .tabBadge_e6b769 {
 
 .display-sm__13533 {
     font-family: var(--font-headline);
-    font-size: 20px;
     font-weight: 800;
     line-height: 1
 }
 
+.display-sm__13533,
 .display-sm__13533.fontScaling__13533 {
     font-size: 1.25rem
 }
 
 .display-md__13533 {
     font-family: var(--font-headline);
-    font-size: 34px;
     font-weight: 800;
     line-height: 1.0588235294117647
 }
 
+.display-md__13533,
 .display-md__13533.fontScaling__13533 {
     font-size: 2.125rem
 }
 
 .display-lg__13533 {
     font-family: var(--font-headline);
-    font-size: 44px;
     font-weight: 800;
     line-height: .9545454545454546
 }
 
+.display-lg__13533,
 .display-lg__13533.fontScaling__13533 {
     font-size: 2.75rem
 }
 
 .experimental\/display-xs__13533 {
     font-family: var(--font-headline);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 800;
     line-height: 1.125
 }
@@ -4434,7 +4434,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/display-sm__13533 {
     font-family: var(--font-headline);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.0833333333333333
 }
@@ -4445,7 +4445,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/display-md__13533 {
     font-family: var(--font-headline);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1.0625
 }
@@ -4456,7 +4456,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/display-lg__13533 {
     font-family: var(--font-headline);
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: 800;
     line-height: 1
 }
@@ -4467,7 +4467,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-xs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333;
     text-transform: uppercase
@@ -4479,7 +4479,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-xs\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333;
     text-transform: uppercase
@@ -4491,7 +4491,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-sm\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -4502,7 +4502,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-sm\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -4513,7 +4513,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-md\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -4524,7 +4524,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-md\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4535,7 +4535,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-lg\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 500;
     line-height: 1.2222222222222223
 }
@@ -4546,7 +4546,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/label-lg\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.2222222222222223
 }
@@ -4557,18 +4557,18 @@ html .tabBadge_e6b769 {
 
 .code__13533 {
     font-family: var(--font-code);
-    font-size: 12px;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
 
+.code__13533,
 .code__13533.fontScaling__13533 {
     font-size: .75rem
 }
 
 .experimental\/mono-md\/normal__13533 {
     font-family: var(--font-code);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -4579,7 +4579,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/mono-md\/bold__13533 {
     font-family: var(--font-code);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -4590,7 +4590,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/mono-sm\/normal__13533 {
     font-family: var(--font-code);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 400;
     line-height: 1.2
 }
@@ -4601,7 +4601,7 @@ html .tabBadge_e6b769 {
 
 .experimental\/mono-sm\/bold__13533 {
     font-family: var(--font-code);
-    font-size: 10px;
+    font-size: .625rem;
     font-weight: 700;
     line-height: 1.2
 }
@@ -4612,7 +4612,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-sm\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -4623,7 +4623,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-sm\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -4634,7 +4634,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-sm\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -4645,7 +4645,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-sm\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -4656,7 +4656,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-sm\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 700;
     line-height: 1.2857142857142858
 }
@@ -4667,7 +4667,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-md\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4678,7 +4678,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-md\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4689,7 +4689,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-md\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4700,7 +4700,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-md\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.2222222222222223
 }
@@ -4711,7 +4711,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-md\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.2222222222222223
 }
@@ -4722,7 +4722,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-lg\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
@@ -4733,7 +4733,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-lg\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
@@ -4744,7 +4744,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-lg\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
@@ -4755,7 +4755,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-lg\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2
 }
@@ -4766,7 +4766,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-lg\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2
 }
@@ -4777,7 +4777,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xl\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4788,7 +4788,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xl\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4799,7 +4799,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4810,7 +4810,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -4821,7 +4821,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xl\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -4832,7 +4832,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xxl\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4843,7 +4843,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xxl\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4854,7 +4854,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xxl\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -4865,7 +4865,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xxl\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -4876,7 +4876,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-xxl\/extrabold__13533 {
     font-family: var(--font-display);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -4887,7 +4887,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .eyebrow__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     letter-spacing: normal;
     line-height: 1.3333333333333333;
@@ -4900,7 +4900,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -4911,7 +4911,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -4922,7 +4922,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333;
     text-transform: uppercase
@@ -4934,7 +4934,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333;
     text-transform: uppercase
@@ -4946,7 +4946,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .heading-deprecated-12\/extrabold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333;
     text-transform: uppercase
@@ -4958,7 +4958,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.2222222222222223
 }
@@ -4969,7 +4969,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     line-height: 1.2222222222222223
 }
@@ -4980,7 +4980,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/heading-18\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
     line-height: 1.2222222222222223
 }
@@ -4991,7 +4991,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xxs\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -5002,7 +5002,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xxs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -5013,7 +5013,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xxs\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -5024,7 +5024,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xxs\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -5035,7 +5035,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xs\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 400;
     line-height: 1.3333333333333333
 }
@@ -5046,7 +5046,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xs\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 500;
     line-height: 1.3333333333333333
 }
@@ -5057,7 +5057,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xs\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333;
     text-transform: uppercase
@@ -5069,7 +5069,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-xs\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 600;
     line-height: 1.3333333333333333;
     text-transform: uppercase
@@ -5081,7 +5081,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-sm\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 400;
     line-height: 1.2857142857142858
 }
@@ -5092,7 +5092,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-sm\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 500;
     line-height: 1.2857142857142858
 }
@@ -5103,7 +5103,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-sm\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -5114,7 +5114,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-sm\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: 600;
     line-height: 1.2857142857142858
 }
@@ -5125,7 +5125,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-md\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400;
     line-height: 1.25
 }
@@ -5136,7 +5136,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-md\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 500;
     line-height: 1.25
 }
@@ -5147,7 +5147,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-md\/semibold__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5158,7 +5158,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-md\/bold__13533 {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5169,7 +5169,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-lg\/normal__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 400;
     line-height: 1.2
 }
@@ -5180,7 +5180,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-lg\/medium__13533 {
     font-family: var(--font-primary);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 500;
     line-height: 1.2
 }
@@ -5191,7 +5191,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-lg\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
     line-height: 1.2
 }
@@ -5202,7 +5202,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .text-lg\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 700;
     line-height: 1.2
 }
@@ -5213,7 +5213,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5224,7 +5224,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5235,7 +5235,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5246,7 +5246,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/message-preview\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -5257,7 +5257,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/normal__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5268,7 +5268,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/medium__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5279,7 +5279,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/semibold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
     line-height: 1.25
 }
@@ -5290,7 +5290,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .redesign\/channel-title\/bold__13533 {
     font-family: var(--font-display);
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 700;
     line-height: 1.25
 }
@@ -5301,7 +5301,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .display-sm__13533 {
     font-family: var(--font-headline);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 800;
     line-height: 1.0833333333333333
 }
@@ -5312,7 +5312,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .display-md__13533 {
     font-family: var(--font-headline);
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 800;
     line-height: 1.0625
 }
@@ -5323,7 +5323,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .display-lg__13533 {
     font-family: var(--font-headline);
-    font-size: 44px;
+    font-size: 2.75rem;
     font-weight: 800;
     line-height: 1
 }
@@ -5334,7 +5334,7 @@ html .tabBadge_e6b769 {
 
 :where(.mana-type-consolidation) .code__13533 {
     font-family: var(--font-code);
-    font-size: 12px;
+    font-size: .75rem;
     font-weight: 700;
     line-height: 1.3333333333333333
 }
@@ -5357,9 +5357,9 @@ html .tabBadge_e6b769 {
 }
 
 .autocompleteRow__13533 {
-    font-size: 14px;
+    font-size: .875rem;
     font-weight: var(--font-weight-medium);
-    line-height: 16px;
+    line-height: 1rem;
     padding: 0 8px
 }
 
@@ -5484,7 +5484,7 @@ html .tabBadge_e6b769 {
 
 .emojiRaw__13533 {
     display: block;
-    font-size: 20px
+    font-size: 1.25rem
 }
 
 .descriptionDiscriminator__13533 {
@@ -6092,94 +6092,4 @@ html .tabBadge_e6b769 {
 
 .upsellImage__52c9d {
     width: 124px
-}
-
-.banner__97f37 {
-    border-radius: 8px;
-    max-width: 304px;
-    width: 100%
-}
-
-.banner__97f37.hasTrialOffer__97f37 {
-    margin-bottom: 16px;
-    margin-top: 16px;
-    max-height: 172px
-}
-
-.wrapper__97f37 {
-    align-items: center;
-    background-color: var(--modal-background);
-    border-radius: 8px;
-    display: flex;
-    height: 100%;
-    inset-inline-start: 0;
-    justify-content: center;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 101
-}
-
-.closeButton__97f37 {
-    color: var(--interactive-text-default);
-    cursor: pointer;
-    inset-inline-end: 16px;
-    position: absolute;
-    top: 16px
-}
-
-.contentFill__97f37 {
-    background: var(--gradients-nitro-classic-diagonal, linear-gradient(45deg, var(--premium-tier-1-blue) 0, var(--premium-tier-1-purple) 75.25%));
-    border-radius: 8px;
-    margin-top: 24px;
-    padding: 36px 84px
-}
-
-.nitroWheel__97f37 {
-    color: var(--premium-tier-1-purple);
-    padding-inline-end: 4px
-}
-
-.content__97f37 {
-    box-sizing: border-box;
-    color: var(--text-default);
-    flex-direction: column;
-    text-align: center
-}
-
-.content__97f37,
-.header__97f37 {
-    align-items: center;
-    display: flex
-}
-
-.header__97f37 {
-    justify-content: center;
-    margin: 16px 0 8px
-}
-
-.headerText__97f37 {
-    margin-inline-start: 4px
-}
-
-.subheaderText__97f37 {
-    color: var(--text-default);
-    max-width: 350px;
-    padding: 0 32px;
-    white-space: pre-line
-}
-
-.subheaderText__97f37 a {
-    color: var(--text-default);
-    text-decoration: underline
-}
-
-.ctaActionWrapper__97f37 {
-    align-items: center;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    margin-top: 24px;
-    padding: 0 48px;
-    width: 100%
 }
