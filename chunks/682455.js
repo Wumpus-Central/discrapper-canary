@@ -11633,7 +11633,7 @@ let c3 = function (e) {
         instagram: { presentation: "Instagram", baseUrl: "https://instagram.com/" },
         twitter: { presentation: "Twitter", baseUrl: "https://twitter.com/" },
         tiktok: { presentation: "TikTok", baseUrl: "https://tiktok.com/" },
-        twitch: { presentation: "Twitch", baseUrl: "https://twitch.tv" },
+        twitch: { presentation: "Twitch", baseUrl: "https://twitch.tv/" },
         patreon: { presentation: "Patreon", baseUrl: "https://patreon.com/" },
         reddit: { presentation: "Reddit", baseUrl: "https://reddit.com/r/" },
         youtube: { presentation: "YouTube", baseUrl: "https://youtube.com/" },
@@ -12161,13 +12161,6 @@ function c7() {
                                                                           "social-container-" + n,
                                                                       );
                                                                   }),
-                                                                  j?.social_links != null
-                                                                      ? (0, p.jsx)(G.E, {
-                                                                            color: "text-feedback-critical",
-                                                                            variant: "text-sm/normal",
-                                                                            children: j.social_links,
-                                                                        })
-                                                                      : null,
                                                                   (0, p.jsx)(eg.$, {
                                                                       variant: "secondary",
                                                                       size: "sm",
