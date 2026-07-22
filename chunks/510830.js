@@ -749,7 +749,6 @@ function tQ(e) {
                 children: [
                     (0, r.jsx)(eH.E, {
                         variant: "text-sm/medium",
-                        color: "currentColor",
                         className: tM.$K,
                         children: t.config.cosponsorMetadata?.name ?? t.config.messages.gamePublisher,
                     }),
@@ -813,7 +812,6 @@ function ty(e) {
                         children: [
                             (0, r.jsx)(eH.E, {
                                 variant: "text-sm/normal",
-                                color: "currentColor",
                                 className: tL.I4,
                                 children: ea.intl.string(ea.t.o6FLcF),
                             }),
