@@ -8,4 +8,5 @@ e.exports = {
     XV: "descriptionClamped__44846",
     Hz: "descriptionClampedHidden__44846",
     Gv: "footerPromotedRow__44846",
+    I4: "promotedText__44846",
 };
