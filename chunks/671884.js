@@ -2373,7 +2373,7 @@ function lo(e) {
                           (0, n.jsx)(
                               li,
                               {
-                                  icon: (0, n.jsx)(P.A, { game: h.get(e.key), size: P.M.XSMALL }),
+                                  icon: (0, n.jsx)(P.A, { game: h.get(e.key), size: P.M.XSMALL, className: ln.Gt }),
                                   label: e.name,
                                   trailer: (0, n.jsx)(lr, { count: e.newCount }),
                                   isSelected: c === e.key,

@@ -9,6 +9,7 @@ a.exports = {
     fC: "facetSection_abf2f9",
     _A: "facetList_abf2f9",
     nM: "row_abf2f9",
+    Gt: "gameIcon_abf2f9",
     CZ: "rowSelected_abf2f9",
     aL: "rowIcon_abf2f9",
     lr: "rowDisabled_abf2f9",
