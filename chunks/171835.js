@@ -8,7 +8,7 @@ var l = n(627968),
     u = n(883645),
     c = n(601194),
     d = n(316915),
-    p = n(864717),
+    p = n(44672),
     m = n(783327),
     h = n(652215),
     C = n(202541);
@@ -25,7 +25,7 @@ function E(e) {
         m = JSON.stringify(d.skuIDs),
         E = i.useMemo(() => d.skuIDs, [m]),
         A = (0, a.$w)(),
-        y = i.useMemo(
+        S = i.useMemo(
             () => ({
                 skuIds: E,
                 isGift: d.isGift ?? !1,
@@ -64,7 +64,7 @@ function E(e) {
         children: (0, l.jsx)(p.P, {
             loadId: r,
             discoverySessionId: s,
-            checkoutInitParameters: y,
+            checkoutInitParameters: S,
             children: (0, l.jsx)(f, { ...d, skuIDs: E, purchaseType: o }),
         }),
     });
@@ -77,8 +77,8 @@ function f(e) {
             unifiedCheckoutFlow: E,
             purchaseType: f,
             isGift: A,
-            selectedSkuId: y,
-            selectedPlanId: S,
+            selectedSkuId: S,
+            selectedPlanId: y,
             paymentSourceId: P,
             paymentGateway: I,
         } = (0, d.t4)((e) => ({
@@ -105,8 +105,8 @@ function f(e) {
                 locationStack: g,
                 onErrorReported: n,
                 loadId: C.loadId,
-                selectedSkuId: y ?? null,
-                selectedPlanId: S ?? null,
+                selectedSkuId: S ?? null,
+                selectedPlanId: y ?? null,
                 isGift: A,
                 skuIds: a,
                 purchaseType: f,

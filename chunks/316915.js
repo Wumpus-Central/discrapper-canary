@@ -214,7 +214,7 @@ function R(e) {
 }
 function L(e, t) {
     if (null == e) return null;
-    if ("premium_checkout_invoice_get_request" === e.type) return e;
+    if ("subscription_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
@@ -247,6 +247,7 @@ function y(e) {
                     t = null == i().checkoutInvoicePreview && null == i().checkoutInvoiceError;
                 return null != e && t;
             },
+            primaryInvoicesError: () => i().checkoutInvoiceError ?? i().renewalInvoiceError,
         };
         return {
             ...(0, m.p)(e, i, t),
