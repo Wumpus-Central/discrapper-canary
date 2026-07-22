@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => T });
 var i = n(627968),
     l = n(64700),
     a = n(503698),
@@ -12,21 +12,23 @@ var i = n(627968),
     h = n(446243),
     m = n(920639),
     A = n(558076),
-    x = n(913481),
-    g = n(711478),
-    f = n(232571),
-    C = n(212053),
+    f = n(913481),
+    x = n(711478),
+    g = n(232571),
+    C = n(109591),
+    y = n(212053),
     j = n(519342),
-    y = n(241215),
-    v = n(207274),
-    E = n(971954),
-    N = n(937591);
-function I(e) {
-    let { channelId: t, popoutType: n } = e,
-        { background: a, seats: I, aspectRatio: T, plants: _ } = E.iX[c.I.DEFAULT],
-        { width: b = 0, height: S = 0, ref: R } = (0, o.Ay)(),
-        P = b / S > T,
-        O = (0, d.bG)([u.A], () => null != u.A.getSelectedParticipant(t));
+    v = n(241215),
+    E = n(207274),
+    N = n(971954),
+    I = n(886943);
+function T(e) {
+    let { channelId: t, popoutType: n, controlsIdle: a } = e,
+        { background: T, seats: b, aspectRatio: _, plants: R } = N.iX[c.I.DEFAULT],
+        { width: S = 0, height: P = 0, ref: L } = (0, o.Ay)(),
+        O = S / P > _,
+        w = (0, d.bG)([u.A], () => null != u.A.getSelectedParticipant(t)),
+        M = l.useRef(null);
     return (
         l.useEffect(() => {
             (0, m.zR)({ channelId: t });
@@ -37,25 +39,27 @@ function I(e) {
             e || null == n || (0, h.z5)(n, t);
         }, [t]),
         (0, i.jsxs)("div", {
-            className: N.kL,
-            ref: R,
+            className: I.kL,
+            ref: L,
             children: [
                 (0, i.jsxs)("div", {
-                    className: s()(N.hk, { [N.Nb]: P }),
-                    style: { aspectRatio: T },
+                    className: s()(I.hk, { [I.Nb]: O }),
+                    style: { aspectRatio: _ },
+                    ref: M,
                     children: [
-                        (0, i.jsx)("img", { className: N.Sl, src: a, alt: "" }),
-                        (0, i.jsx)(g.A, { channelId: t, plantConfig: _, roomWidth: b, roomHeight: S, aspectRatio: T }),
-                        I.map((e, n) =>
-                            (0, i.jsx)(f.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: b }, n),
+                        (0, i.jsx)("img", { className: I.Sl, src: T, alt: "" }),
+                        (0, i.jsx)(x.A, { channelId: t, plantConfig: R, roomWidth: S, roomHeight: P, aspectRatio: _ }),
+                        b.map((e, n) =>
+                            (0, i.jsx)(g.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: S }, n),
                         ),
-                        (0, i.jsx)(j.A, { channelId: t, roomWidth: b }),
-                        (0, i.jsx)(v.A, { channelId: t }),
-                        (0, i.jsx)(x.A, { channelId: t, roomWidth: b }),
-                        !O && (0, i.jsx)(C.A, { channelId: t, popoutType: n, aspectRatio: T }),
+                        (0, i.jsx)(j.A, { channelId: t, roomWidth: S }),
+                        (0, i.jsx)(E.A, { channelId: t }),
+                        (0, i.jsx)(f.A, { channelId: t, roomWidth: S }),
+                        !w && (0, i.jsx)(y.A, { channelId: t, popoutType: n, aspectRatio: _ }),
+                        (0, i.jsx)(C.A, { channelId: t, popoutType: n, seatsRef: M, controlsIdle: a, height: P }),
                     ],
                 }),
-                O && (0, i.jsx)(y.A, { channelId: t, popoutType: n, width: b, height: S }),
+                w && (0, i.jsx)(v.A, { channelId: t, popoutType: n, width: S, height: P }),
             ],
         })
     );
