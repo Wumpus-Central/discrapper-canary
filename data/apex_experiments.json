@@ -997,6 +997,11 @@
       "2": {
         "enabled": true,
         "hasHigherPrivileges": false
+      },
+      "3": {
+        "enabled": true,
+        "hasHigherPrivileges": true,
+        "isFreemium": true
       }
     }
   },

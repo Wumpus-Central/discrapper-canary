@@ -3156,7 +3156,7 @@ var s3 = i(379587),
     s7 = i(181079),
     s8 = i(422258),
     s9 = i(668267),
-    le = i(313281),
+    le = i(298358),
     lt = i(335993);
 let li = tI.A.getArticleURL(U.MVz.FAVORITES_GUILD);
 function ln() {
@@ -3187,7 +3187,7 @@ function ln() {
     });
 }
 let ls = (0, a.E2)(u.X.CHAT_FAVORITES_TOGGLE, {
-        usePredicate: () => (0, s3.m)({ location: "FavoritesGuildToggle" }).enabled,
+        usePredicate: () => (0, s3.mN)({ location: "FavoritesGuildToggle" }).enabled,
         useSearchTerms: () => [j.intl.string(lt.default.OT1NK5)],
         Component: function () {
             let e = (0, g.bG)([s7.A], () => s7.A.favoriteGuildEnabled),

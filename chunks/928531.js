@@ -19,7 +19,7 @@ var i = n(435558),
 let T = r().throttle(function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 1,
             t = A.Ay.getFlattenedGuildIds(),
-            { enabled: n } = d.o.getConfig({ location: "navigateToServer" }),
+            { enabled: n } = d.oS.getConfig({ location: "navigateToServer" }),
             i = (0, s.dD)(a.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM),
             r = (0, l.k8)(a.M.FAVORITES_SERVER_ONBOARDING_INTRO),
             T = (function (e) {

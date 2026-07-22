@@ -1383,7 +1383,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 582744, Version Hash: ddc06cba6dd6cfc0db4f1d9e37d0cc125a626c66`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 582792, Version Hash: f4cacf34e160f5c10d617a8cd44556e79c5ae9e3`,
 ),
     D.A.setTags({ appContext: k.QCW }),
     eT.A.initBasic(),
@@ -3133,7 +3133,7 @@ var ra = n(782603),
     rE = n(177953),
     rA = n(577473),
     rh = n(834730),
-    rI = n(313281),
+    rI = n(298358),
     rf = n(5180),
     rp = n(91242),
     rT = n(548118),
@@ -18082,7 +18082,7 @@ let gS = "isHideDevBanner",
                     className: to()(gg.Wz, gg.mr),
                     children: [
                         (0, O.jsx)(gm, { className: gg.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "582744" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "582792" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -25745,7 +25745,7 @@ function OR() {
                             (0, C4.k)(k.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: l }),
                             (0, rf.ai)(l))
                         ) {
-                            let e = On.o.getConfig({ location: "ChatAutoAnalytics" }).enabled,
+                            let e = On.oS.getConfig({ location: "ChatAutoAnalytics" }).enabled,
                                 t = Og.Ay.isPremiumExactly(eG.default.getCurrentUser(), de.PremiumTypes.TIER_2),
                                 n = (0, Ot.Kg)();
                             (0, Ot.U5)(n, Oe.A.getFavoritesCount(), e, t);
@@ -38921,7 +38921,6 @@ let Uq = (0, tH.Fe)({
             n.e("25612"),
             n.e("68083"),
             n.e("74021"),
-            n.e("90554"),
             n.e("63333"),
             n.e("48730"),
             n.e("13708"),
