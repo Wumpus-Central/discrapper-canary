@@ -20,8 +20,8 @@ var n = i(284009),
     N = i(803224),
     S = i(783592),
     C = i(290863),
-    T = i(763827),
-    h = i(994500),
+    h = i(763827),
+    T = i(994500),
     v = i(309010),
     O = i(461213),
     b = i(351906),
@@ -97,8 +97,8 @@ var tu = i(387755),
     tN = i(145567),
     tS = i(194602),
     tC = i(308368),
-    tT = i(334738),
-    th = i(481484),
+    th = i(334738),
+    tT = i(481484),
     tv = i(258585),
     tO = i(560595),
     tb = i(929921),
@@ -131,7 +131,7 @@ function t$(t) {
         y = X.useCallback(() => p(!0), []),
         g = X.useCallback(() => p(!1), []);
     (0, tw.Ay)(() => {
-        (0, tT.ack)(
+        (0, th.ack)(
             n.id,
             {
                 section: z.JJy.OVERLAY,
@@ -198,8 +198,8 @@ var tQ = i(554146),
     t9 = i(308726),
     t8 = i(46282),
     t7 = i(360469),
-    t6 = i(615297),
-    t5 = i(808476);
+    t5 = i(615297),
+    t6 = i(808476);
 function t3(t) {
     let { game: e } = t,
         i = (0, t0.h)(e.id);
@@ -316,7 +316,7 @@ function em() {
             n ||
             (function (t, e) {
                 let i, n, l;
-                if (!h.A.isFriend(t)) return !1;
+                if (!T.A.isFriend(t)) return !1;
                 let a = e.gameId;
                 if (null == a) return !1;
                 let r = (function (t) {
@@ -482,7 +482,7 @@ function eI(t) {
     null != a && ep(a.id),
         eg(
             (function (t) {
-                let e = (0, tA.m1)(t, L.default, h.A),
+                let e = (0, tA.m1)(t, L.default, T.A),
                     i = J.intl.string(J.t.ssrVzG),
                     n = (0, td.Y)(t),
                     l = (0, tf.A)(t),
@@ -545,8 +545,8 @@ class eE extends r.Ay.Store {
             P.A,
             w.A,
             C.A,
-            T.A,
             h.A,
+            T.A,
             A.Ay,
             v.Ay,
             O.A,
@@ -634,7 +634,7 @@ let e_ = new eE(s.h, {
                                     gamingId: t?.altId ?? t?.id,
                                     maxUserShowCount: 5,
                                     variant: "default",
-                                    className: t5.kL,
+                                    className: t6.kL,
                                 }));
                 }
             let r = (0, t2.k8)(tQ.M.OVERLAY_OOP_WELCOME_NUX),
@@ -643,7 +643,7 @@ let e_ = new eE(s.h, {
                 icon:
                     null != t
                         ? (0, $.jsx)(t3, { game: t })
-                        : (0, $.jsx)("img", { src: i(513653), className: t6.Kk, alt: "" }),
+                        : (0, $.jsx)("img", { src: i(513653), className: t5.Kk, alt: "" }),
                 title: s,
                 hint: function () {
                     return (0, tX.sI)((0, Y.Jn)(), J.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
@@ -791,13 +791,13 @@ let e_ = new eE(s.h, {
                                         channelId: t.id,
                                         type: z.xL.JOIN,
                                         activity: n,
-                                        location: (0, th.y)() ? z.ThZ.LOCKED_OVERLAY : z.ThZ.UNLOCKED_OVERLAY,
+                                        location: (0, tT.y)() ? z.ThZ.LOCKED_OVERLAY : z.ThZ.UNLOCKED_OVERLAY,
                                     }),
                                         u("join"),
                                         o.A.updateNotificationStatus(i);
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, tT.ack)(
+                                    (0, th.ack)(
                                         t.id,
                                         {
                                             section: z.JJy.OVERLAY,
@@ -854,7 +854,7 @@ let e_ = new eE(s.h, {
                                         o.A.updateNotificationStatus(e);
                                 },
                                 onCancelClick: (e, i) => {
-                                    (0, tT.ack)(
+                                    (0, th.ack)(
                                         t.id,
                                         {
                                             section: z.JJy.OVERLAY,
@@ -926,7 +926,7 @@ let e_ = new eE(s.h, {
                     onNotificationClick: (i, n) => {
                         let a = w.A.getTargetPID();
                         if (
-                            ((0, tT.ack)(
+                            ((0, th.ack)(
                                 t.id,
                                 {
                                     section: z.JJy.OVERLAY,
@@ -1084,19 +1084,21 @@ let e_ = new eE(s.h, {
         }
     },
     CLIPS_SAVE_CLIP_ERROR: function (t) {
-        var e, i;
-        let n;
-        eg(to(J.intl.string(J.t["1ZbZuh"]))),
-            ta() &&
-                null != t.errorMessage &&
-                eg(
-                    ((e = t.errorMessage),
-                    (i = t.errorAt),
-                    (n = (() => {
-                        if (null != e) return null != i ? `[${i}] ${e}` : e;
-                    })()),
-                    { ...tn(H.KS.ClipsDebugSaveError), title: "Clip save failed", body: n, maxBodyLines: 4 }),
-                );
+        if ("manual" === t.clipMethod) {
+            var e, i;
+            let n;
+            eg(to(J.intl.string(J.t["1ZbZuh"]))),
+                ta() &&
+                    null != t.errorMessage &&
+                    eg(
+                        ((e = t.errorMessage),
+                        (i = t.errorAt),
+                        (n = (() => {
+                            if (null != e) return null != i ? `[${i}] ${e}` : e;
+                        })()),
+                        { ...tn(H.KS.ClipsDebugSaveError), title: "Clip save failed", body: n, maxBodyLines: 4 }),
+                    );
+        }
     },
     CLIPS_SAVE_CLIP_NO_OP: function (t) {
         if ("manual" === t.clipMethod && ta()) {
