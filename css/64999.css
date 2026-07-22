@@ -113,6 +113,11 @@
     outline-offset: -1px
 }
 
+.tag_cfee8f [slot=remove][data-disabled] {
+    cursor: not-allowed;
+    opacity: .5
+}
+
 .tagGroup_cfee8f[data-layout=inline] {
     display: contents
 }
