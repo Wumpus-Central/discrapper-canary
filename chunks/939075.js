@@ -1,50 +1,49 @@
-"use strict";
-n.d(t, { A: () => m, y: () => T });
-var i = n(627968);
-n(64700);
-var r = n(17928),
-    a = n(477782),
-    s = n(541806),
-    l = n(765379),
-    o = n(672979),
-    d = n(90644),
-    c = n(717306),
-    u = n(20805),
-    _ = n(474397),
-    E = n(780964),
-    A = n(766075),
-    h = n(287809),
-    I = n(301736),
-    f = n(375708);
-function p() {
-    return (0, A.openUserSettings)(E.X.CONNECTIONS_PANEL);
+e.d(n, { A: () => N, y: () => E });
+var i = e(627968);
+e(64700);
+var l = e(17928),
+    a = e(477782),
+    r = e(541806),
+    s = e(765379),
+    o = e(672979),
+    c = e(90644),
+    u = e(717306),
+    d = e(20805),
+    A = e(474397),
+    x = e(780964),
+    p = e(766075),
+    f = e(287809),
+    _ = e(301736),
+    m = e(375708);
+function T() {
+    return (0, p.openUserSettings)(x.X.CONNECTIONS_PANEL);
 }
-function T(e) {
-    let { entry: t, onOpenGameSettings: n } = e;
-    return (0, u.aj)(t) || (0, u.Lf)(t) || (0, u.Tq)(t) ? p : (0, u.zD)(t) ? n : null;
+function E(t) {
+    let { entry: n, onOpenGameSettings: e } = t;
+    return (0, d.aj)(n) || (0, d.Lf)(n) || (0, d.Tq)(n) ? T : (0, d.zD)(n) ? e : null;
 }
-function m(e) {
-    let { user: t, activity: n, entry: u, onAction: E, onClose: A, appContext: m } = e,
-        g = (0, I.A)();
-    if (!(0, r.bG)([h.default], () => h.default.getCurrentUser()?.id === t.id)) return null;
-    let S = (function (e) {
-        let { activity: t, entry: n, onOpenGameSettings: i } = e;
-        return null != n
-            ? T({ entry: n, onOpenGameSettings: i })
-            : null != t
-              ? (function (e) {
-                    let { activity: t, onOpenGameSettings: n } = e;
-                    return (0, c.A)(t) || (0, d.A)(t) || (0, s.A)(t) ? p : (0, o.A)(t) && !(0, l.A)(t) ? n : null;
-                })({ activity: t, onOpenGameSettings: i })
+function N(t) {
+    let { user: n, activity: e, entry: d, onAction: x, onClose: p, appContext: N } = t,
+        g = (0, _.A)();
+    if (!(0, l.bG)([f.default], () => f.default.getCurrentUser()?.id === n.id)) return null;
+    let C = (function (t) {
+        let { activity: n, entry: e, onOpenGameSettings: i } = t;
+        return null != e
+            ? E({ entry: e, onOpenGameSettings: i })
+            : null != n
+              ? (function (t) {
+                    let { activity: n, onOpenGameSettings: e } = t;
+                    return (0, u.A)(n) || (0, c.A)(n) || (0, r.A)(n) ? T : (0, o.A)(n) && !(0, s.A)(n) ? e : null;
+                })({ activity: n, onOpenGameSettings: i })
               : null;
-    })({ activity: n, entry: u, onOpenGameSettings: g });
-    return null == S
+    })({ activity: e, entry: d, onOpenGameSettings: g });
+    return null == C
         ? null
         : (0, i.jsx)(a.Dr, {
               id: "manage-privacy",
-              label: f.intl.string(f.t.anfNPV),
+              label: m.intl.string(m.t.anfNPV),
               action: () => {
-                  E?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), S(), (0, _.A)(m), A?.();
+                  x?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), C(), (0, A.A)(N), p?.();
               },
           });
 }
