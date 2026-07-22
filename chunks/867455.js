@@ -71,7 +71,12 @@ let O = {
                               title: i ? S.intl.string(S.t.kwyWNX) : S.intl.string(S.t["PeIE/r"]),
                               body: S.intl.string(S.t.Whhv4w),
                           })
-                        : s.A.show({ title: S.intl.string(S.t.j2d6Km), body: S.intl.string(S.t.fEptJP) }),
+                        : 403 === e.status
+                          ? s.A.show({
+                                title: i ? S.intl.string(S.t.kwyWNX) : S.intl.string(S.t["PeIE/r"]),
+                                body: i ? S.intl.string(S.t.hIXtcT) : S.intl.string(S.t["96UEzi"]),
+                            })
+                          : s.A.show({ title: S.intl.string(S.t.j2d6Km), body: S.intl.string(S.t.fEptJP) }),
                 e)
             );
         }
