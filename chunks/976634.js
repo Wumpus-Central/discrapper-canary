@@ -1,17 +1,18 @@
-t.d(e, { A: () => c });
-var n = t(64700);
-let u = [];
-function c(r, e) {
-    let t = (0, n.useRef)(),
-        c = (0, n.useRef)(u);
+"use strict";
+r.d(t, { A: () => o });
+var n = r(64700);
+let i = [];
+function o(e, t) {
+    let r = (0, n.useRef)(),
+        o = (0, n.useRef)(i);
     return (
-        c.current === u
-            ? ((t.current = r()), (c.current = e))
-            : !(function (r, e) {
-                  if (r.length !== e.length) return !1;
-                  for (let t = 0; t < e.length && t < r.length; t++) if (!Object.is(r[t], e[t])) return !1;
+        o.current === i
+            ? ((r.current = e()), (o.current = t))
+            : !(function (e, t) {
+                  if (e.length !== t.length) return !1;
+                  for (let r = 0; r < t.length && r < e.length; r++) if (!Object.is(e[r], t[r])) return !1;
                   return !0;
-              })(e, c.current) && ((t.current = r()), (c.current = e)),
-        t.current
+              })(t, o.current) && ((r.current = e()), (o.current = t)),
+        r.current
     );
 }
