@@ -1,9 +1,9 @@
 "use strict";
-n.d(t, { Ay: () => c, xW: () => a });
+n.d(t, { Ay: () => c, xW: () => s });
 var i,
     r = n(17928),
-    s = n(228366),
-    a =
+    a = n(228366),
+    s =
         (((i = {})[(i.MESSAGING = 0)] = "MESSAGING"),
         (i[(i.OVERLAYS = 1)] = "OVERLAYS"),
         (i[(i.PREMIUM = 2)] = "PREMIUM"),
@@ -12,7 +12,7 @@ var i,
         (i[(i.SHOP = 5)] = "SHOP"),
         (i[(i.LIBDISCORE = 6)] = "LIBDISCORE"),
         i);
-let o = {
+let l = {
         visual_effect_view_overrides: { label: "Blur view overrides for designers to test with", category: 1 },
         obscure_blur_effect_explicit_content_enabled: {
             label: "Force explicit content obscure blur effect on for message media and embeds",
@@ -29,6 +29,10 @@ let o = {
         explicit_media_redaction_ignore_pending_scan: { label: "Ignore pending scan on explicit media", category: 1 },
         analytics_debugger: { label: "Enable analytics debugger view", category: 1 },
         idle_status_indicator: { label: "Enable idle status indicator", category: 1 },
+        highlight_mana_text: {
+            label: "Mana Text Migration Highlighter. Green: migrated Text/Heading. Dashed red: migrated but a caller style overrides the variant, so it will not move with the experiment. Solid red: unmigrated LegacyText. Yellow: TextStyleSheet read directly (experiment-reachable, not migrated); requires an app restart to take effect.",
+            category: 1,
+        },
         upload_fail_50: { label: "Uploads: Fail 50% of uploads with 500 status after a 1 second delay", category: 0 },
         send_fail_100: { label: "Send: Fail with 500 status", category: 0 },
         premium_roadblocks: { label: "Enable all new premium roadblocks", category: 2 },
@@ -53,39 +57,39 @@ let o = {
         bypass_google_sku_sync: { label: "[Android] Bypass Google SKU sync in collectibles shop", category: 5 },
         libdiscore_verbose_telemetry_logging: { label: "Enable verbose telemetry logging for libdiscore", category: 6 },
     },
-    l = {};
-class u extends r.Ay.DeviceSettingsStore {
+    o = {};
+class d extends r.Ay.DeviceSettingsStore {
     static displayName = "DevToolsDevSettingsStore";
     static persistKey = "DevToolsDevSettingsStore";
     getUserAgnosticState() {
-        return { toggleStates: l };
+        return { toggleStates: o };
     }
     initialize(e) {
-        for (var t in o) {
+        for (var t in l) {
             let n = e?.toggleStates?.[t] ?? !1;
-            n && (l[t] = n);
+            n && (o[t] = n);
         }
     }
     get(e) {
-        return l[e] ?? !1;
+        return o[e] ?? !1;
     }
     enabled() {
-        return l;
+        return o;
     }
     allByCategory(e) {
-        return Object.entries(o)
+        return Object.entries(l)
             .filter((t) => {
                 let [n, i] = t;
                 return i.category === e;
             })
             .map((e) => {
                 let [t, n] = e;
-                return [t, l[t] ?? !1, n];
+                return [t, o[t] ?? !1, n];
             });
     }
 }
-let c = new u(s.h, {
+let c = new d(a.h, {
     DEV_TOOLS_DEV_SETTING_SET: function (e) {
-        !1 === e.value ? delete l[e.toggle] : (l[e.toggle] = e.value);
+        !1 === e.value ? delete o[e.toggle] : (o[e.toggle] = e.value);
     },
 });
