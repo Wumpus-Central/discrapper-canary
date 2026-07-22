@@ -1105,25 +1105,6 @@
     }
   },
   {
-    "name": "2026-01-valentines-day-drop",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      },
-      "2": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-01-voice-dares-v0",
     "kind": "user",
     "defaultConfig": {
