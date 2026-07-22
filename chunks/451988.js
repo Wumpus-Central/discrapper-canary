@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { BK: () => a, Ep: () => i, IX: () => s, J_: () => r, OC: () => o });
+n.d(t, { BK: () => s, Ep: () => i, IX: () => a, J_: () => r, OC: () => o, bY: () => l }), n(321073);
 class i {
     _ref;
     start(e, t) {
@@ -38,7 +38,7 @@ class r {
         return this._timeout.isStarted();
     }
 }
-class s {
+class a {
     _ref;
     start(e, t) {
         this.stop(), (this._ref = window.setInterval(t, e));
@@ -50,38 +50,45 @@ class s {
         return null != this._ref;
     }
 }
-function a(e) {
+function s(e) {
     return new Promise((t) => {
         setTimeout(() => t(), e);
     });
 }
+class l extends Error {
+    name = "BatchInvocationManagerResetError";
+}
 class o {
     invoke;
-    predicate;
-    delay;
+    options;
     _promises = new Set();
     _pending = new Set();
     _flushHandler;
-    constructor(e, t = () => !0, n = 32) {
+    constructor(e, t = {}) {
         (this.invoke = e),
-            (this.predicate = t),
-            (this.delay = n),
-            (this._flushHandler = new r(this.delay, () => this._flush()));
+            (this.options = t),
+            (this._flushHandler = new r(this.options.delay ?? 32, () => this._flush()));
     }
     queue(e) {
-        for (let t of Array.isArray(e) ? e : [e]) this.predicate(t) && this._pending.add(t);
-        return 0 === this._pending.size
+        let t = Array.isArray(e) ? e : [e],
+            n = [];
+        for (let e of t)
+            (this.options.predicate?.(e) ?? !0) && !this._pending.has(e) && (this._pending.add(e), n.push(e));
+        return (n.length > 0 && this.options.onQueued?.(n), 0 === this._pending.size)
             ? Promise.resolve()
             : new Promise((e, t) => {
                   this._promises.add({ resolve: e, reject: t }), this._flushHandler.delay(!1);
               });
     }
     reset() {
-        let e = Error("BatchInvocationManager was reset");
-        this._promises.forEach((t) => t.reject(e)),
-            this._pending.clear(),
+        let e = [...this._pending],
+            t = [...this._promises],
+            n = new l("BatchInvocationManager was reset");
+        this._pending.clear(),
             this._promises.clear(),
-            this._flushHandler.cancel();
+            this._flushHandler.cancel(),
+            e.length > 0 && this.options.onCancelled?.(e),
+            t.forEach((e) => e.reject(n));
     }
     async _flush() {
         let e = [...this._pending];

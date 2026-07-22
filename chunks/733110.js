@@ -55,6 +55,11 @@ let m = new T(a.h, {
     USER_AUTHORIZED_APPS_REQUEST: function (e) {
         "full" === e.request.type ? p("FETCHING") : p("FETCHING", e.request.applicationIds);
     },
+    USER_AUTHORIZED_APPS_REQUEST_CANCELLED: function (e) {
+        let t = !1;
+        for (let n of e.applicationIds) "FETCHING" === h.get(n) && (h.delete(n), (t = !0));
+        t && (I += 1);
+    },
     USER_AUTHORIZED_APPS_REQUEST_FAILED: function (e) {
         "full" === e.request.type ? p("FETCHED") : p("FETCHED", e.request.applicationIds);
     },

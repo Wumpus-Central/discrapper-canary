@@ -20,9 +20,13 @@ async function E(e) {
 }
 let A = new d.OC(
     async (e) => {
-        c.h.dispatch({ type: "GAME_FETCH", gameIds: e }), await Promise.all(l().chunk(e, 20).map(E));
+        await Promise.all(l().chunk(e, 20).map(E));
     },
-    (e) => !u.A.hasNoData(e),
+    {
+        predicate: (e) => !u.A.hasNoData(e),
+        onQueued: (e) => c.h.dispatch({ type: "GAME_FETCH", gameIds: e }),
+        onCancelled: (e) => c.h.dispatch({ type: "GAME_FETCH_CANCELLED", gameIds: e }),
+    },
 );
 async function h(e) {
     0 !== e.length && (await A.queue(e));
