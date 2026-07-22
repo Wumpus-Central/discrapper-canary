@@ -846,7 +846,6 @@
     --custom-quest-hover-bezier: cubic-bezier(0.4, 0, 0.2, 1);
     border-radius: var(--radius-lg);
     clip-path: inset(0 round var(--radius-lg));
-    cursor: pointer;
     height: 260px;
     isolation: isolate;
     overflow: hidden;
@@ -861,6 +860,10 @@
 
 .containerHovered__6d3d8 {
     transform: translateY(-8px) translateZ(0)
+}
+
+.clickableTile__6d3d8 {
+    cursor: pointer
 }
 
 .contentColumn__6d3d8 {

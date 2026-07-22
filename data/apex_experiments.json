@@ -3973,7 +3973,8 @@
       "useNewLayoutWithSearch": false,
       "useNewTile": false,
       "useLargeFeaturedTiles": false,
-      "ctaOnHover": false
+      "ctaOnHover": false,
+      "clickableTile": false
     },
     "variations": {
       "0": {
@@ -3984,25 +3985,36 @@
         "useNewLayoutWithSearch": true,
         "useNewTile": false,
         "useLargeFeaturedTiles": false,
-        "ctaOnHover": false
+        "ctaOnHover": false,
+        "clickableTile": false
       },
       "2": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
         "useLargeFeaturedTiles": true,
-        "ctaOnHover": true
+        "ctaOnHover": true,
+        "clickableTile": false
       },
       "3": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
         "useLargeFeaturedTiles": false,
-        "ctaOnHover": true
+        "ctaOnHover": true,
+        "clickableTile": false
       },
       "4": {
         "useNewLayoutWithSearch": true,
         "useNewTile": true,
         "useLargeFeaturedTiles": true,
-        "ctaOnHover": false
+        "ctaOnHover": false,
+        "clickableTile": false
+      },
+      "5": {
+        "useNewLayoutWithSearch": true,
+        "useNewTile": true,
+        "useLargeFeaturedTiles": true,
+        "ctaOnHover": true,
+        "clickableTile": true
       }
     }
   },
