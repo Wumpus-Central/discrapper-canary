@@ -1,4 +1,4 @@
-t.d(i, { Ay: () => U, LR: () => D, aI: () => R });
+t.d(i, { Ay: () => U, LR: () => w, aI: () => D });
 var n = t(627968),
     l = t(64700),
     s = t(503698),
@@ -32,23 +32,23 @@ t(281405);
 var P = t(544105),
     k = t(325278),
     V = t(375708),
-    w = t(55678);
-function D(e) {
+    R = t(55678);
+function w(e) {
     let { numUsers: i } = e;
     return (0, n.jsx)("div", {
-        className: w.BN,
+        className: R.BN,
         children: (0, n.jsxs)(r.E, { color: "text-muted", variant: "text-sm/medium", children: ["+", i] }),
     });
 }
-function R(e) {
+function D(e) {
     let { numAudience: i, collapsed: t } = e,
         l = t ? i : V.intl.formatToPlainString(V.t["+v2pN2"], { count: i });
     return (0, n.jsxs)("div", {
-        className: a()(w.yJ, { [w.Nr]: t }),
+        className: a()(R.yJ, { [R.Nr]: t }),
         children: [
             (0, n.jsx)("div", {
-                className: w.$L,
-                children: (0, n.jsx)(d.L, { size: "md", color: "currentColor", className: w.wG }),
+                className: R.$L,
+                children: (0, n.jsx)(d.L, { size: "md", color: "currentColor", className: R.wG }),
             }),
             (0, n.jsx)(r.E, { color: "text-muted", variant: "text-sm/medium", children: l }),
         ],
@@ -61,8 +61,8 @@ let U = (0, h.J)(function (e) {
             channel: r,
             mute: d,
             localMute: h,
-            localVideoDisabled: D,
-            deaf: R,
+            localVideoDisabled: w,
+            deaf: D,
             video: U,
             embeddedApplication: M,
             serverMute: L,
@@ -120,7 +120,7 @@ let U = (0, h.J)(function (e) {
         (0, A.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 t.e("40351"),
-                t.e("38427"),
+                t.e("76279"),
                 t.e("45309"),
                 t.e("97705"),
                 t.e("26132"),
@@ -185,7 +185,7 @@ let U = (0, h.J)(function (e) {
         [],
     );
     let ev = (0, n.jsx)("div", {
-        className: w.kZ,
+        className: R.kZ,
         "data-dnd-name": ed,
         ...ep,
         onMouseEnter: en
@@ -213,13 +213,13 @@ let U = (0, h.J)(function (e) {
                         disconnected: Y,
                         mute: d,
                         localMute: h,
-                        localVideoDisabled: D,
+                        localVideoDisabled: w,
                         isStreaming: H,
                         isGuest: Z,
                         video: U,
                         priority: J,
                         ringing: K,
-                        deaf: R,
+                        deaf: D,
                         nick: z,
                         collapsed: i,
                         overlap: i,
@@ -229,7 +229,7 @@ let U = (0, h.J)(function (e) {
                         otherClientSessionType: ei,
                         voicePlatform: et,
                         embeddedApplication: M,
-                        avatarContainerClass: a()({ [w.dj]: !0 }),
+                        avatarContainerClass: a()({ [R.dj]: !0 }),
                         disabled: en && !t,
                         selected: eo,
                         onClick: t ? void 0 : em,
@@ -249,13 +249,16 @@ let U = (0, h.J)(function (e) {
                         : (0, n.jsx)(o.Y, {
                               targetElementRef: eu,
                               position: "right",
-                              renderPopout: () =>
-                                  (0, n.jsx)(O.A, {
+                              renderPopout: (e) => {
+                                  let { setPopoutRef: i } = e;
+                                  return (0, n.jsx)(O.A, {
                                       channel: r,
                                       user: s,
                                       onAction: eh,
                                       onWatchStream: H ? ef : void 0,
-                                  }),
+                                      setPopoutRef: i,
+                                  });
+                              },
                               shouldShow: ee && !eo,
                               onRequestClose: eg,
                               spacing: 17,
