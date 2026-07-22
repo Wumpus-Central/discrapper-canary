@@ -31,19 +31,15 @@ async function p(e) {
         } = e,
         m = c.default.fromTimestamp(Date.now());
     if (!_.Ay.canQueueInteraction(n, m)) return;
-    try {
-        await o.A.unarchiveThreadIfNecessary(I);
-    } catch {
-        return;
-    }
-    (0, u.tU)(m, {
-        messageId: n,
-        data: { interactionType: l.G4.MESSAGE_COMPONENT, applicationId: A, customId: a, componentId: E },
-        onFailure: (e, t) => {
-            var n, i;
-            return (n = I), (i = e), void (null == t && null != i && s.A.sendClydeError(n, i));
-        },
-    }),
+    await o.A.unarchiveThreadIfNecessary(I),
+        (0, u.tU)(m, {
+            messageId: n,
+            data: { interactionType: l.G4.MESSAGE_COMPONENT, applicationId: A, customId: a, componentId: E },
+            onFailure: (e, t) => {
+                var n, i;
+                return (n = I), (i = e), void (null == t && null != i && s.A.sendClydeError(n, i));
+            },
+        }),
         null != p && (0, u.Sw)(n, m, p, E);
     let g = {
         type: l.G4.MESSAGE_COMPONENT,

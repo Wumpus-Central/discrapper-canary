@@ -41,7 +41,7 @@ function D(e) {
 }
 function M(e) {
     let { isLoading: t, products: n, tab: l, totalCards: r } = e,
-        a = (0, j.Mk)(l);
+        a = (0, j.Mk)(l, "HeroBlockCards");
     if (t) return (0, s.jsx)(s.Fragment, { children: [...Array(r ?? 4)].map((e, t) => (0, s.jsx)(N.A, {}, t)) });
     let i = null != r ? n.slice(0, r) : n;
     return (0, s.jsx)(j.v3.Provider, {

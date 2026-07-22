@@ -2494,6 +2494,22 @@
     }
   },
   {
+    "name": "2026-03-shop-fiat-prioritization",
+    "kind": "user",
+    "defaultConfig": {
+      "prioritizeFiat": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "prioritizeFiat": true
+      }
+    }
+  },
+  {
     "name": "2026-03-soundmoji-rendering",
     "kind": "user",
     "defaultConfig": {
