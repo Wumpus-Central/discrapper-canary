@@ -4425,9 +4425,8 @@ class ag extends s.Component {
             ? i
                 ? s()
                 : (0, l.jsx)(rI.Wb, { isHorizontal: r })
-            : e.productLine === W.EZt.COLLECTIBLES
-              ? (0, l.jsx)(rG.A, { section: W.JJy.APPLICATION_EMBED, children: this.renderApplicationTile(e, t) })
-              : (0, l.jsx)(rG.A, {
+            : e.productLine === W.EZt.PREMIUM
+              ? (0, l.jsx)(rG.A, {
                     section: W.JJy.APPLICATION_EMBED,
                     children: (0, l.jsx)(rU.N_, {
                         onClick: this.handleLinkClick,
@@ -4436,7 +4435,8 @@ class ag extends s.Component {
                         onMouseLeave: this.handleMouseLeave,
                         children: this.renderApplicationTile(e, t),
                     }),
-                });
+                })
+              : (0, l.jsx)(rG.A, { section: W.JJy.APPLICATION_EMBED, children: this.renderApplicationTile(e, t) });
     }
 }
 let ap = [ew.A, rR.A, eB.A];
