@@ -8,6 +8,7 @@ _.exports = {
     tV: "platformIcon__9bfb9",
     sN: "applicationConnectionIcon__9bfb9",
     vi: "accountName__9bfb9",
+    wP: "linkIcon__9bfb9",
     GW: "accountNameText__9bfb9",
     Y2: "platformUrlAnchor__9bfb9",
     yu: "metadata__9bfb9",

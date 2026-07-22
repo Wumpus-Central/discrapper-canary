@@ -741,7 +741,7 @@ function l_(e) {
                                       children: l.name,
                                   }),
                               }),
-                              (0, t.jsx)(lb.I, { size: "xs", color: "currentColor" }),
+                              (0, t.jsx)(lb.I, { size: "xs", color: "currentColor", className: eX.wP }),
                           ],
                       }),
                   });
