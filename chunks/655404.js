@@ -22,11 +22,11 @@ var i,
     S = n(807393),
     N = n(464578),
     C = n(111162),
-    R = n(174459),
-    O = n(353835),
+    O = n(174459),
+    R = n(353835),
     L = n(927813),
-    D = n(723702),
-    y = n(38405),
+    y = n(723702),
+    D = n(38405),
     v = n(506774),
     b = n(686719);
 let M = window.GLOBAL_ENV.GATEWAY_ALT_ENDPOINT,
@@ -235,10 +235,10 @@ H.push(
                 this.close(),
                     (this._socketId = e._socketId),
                     F()
-                        ? (0, D.isAndroid)()
+                        ? (0, y.isAndroid)()
                             ? B?.enableZstdStreamSupport(this._socketId)
                             : V.DCDCompressionManager.enableZstdStreamSupport(this._socketId, 0)
-                        : (0, D.isAndroid)()
+                        : (0, y.isAndroid)()
                           ? B?.enableZlibStreamSupport(this._socketId)
                           : V.DCDCompressionManager.enableZlibStreamSupport(this._socketId);
             }
@@ -256,7 +256,7 @@ H.push(
                 let e = this._socketId;
                 (this._socketId = null),
                     null !== e &&
-                        ((0, D.isAndroid)()
+                        ((0, y.isAndroid)()
                             ? B?.disableZlibStreamSupport(e)
                             : V.DCDCompressionManager.disableZlibStreamSupport(e));
             }
@@ -1048,7 +1048,7 @@ let eh = new (class {
     }),
     ef = (function () {
         let e;
-        if (D.isPlatformEmbedded) {
+        if (y.isPlatformEmbedded) {
             try {
                 e = x.Ay.requireModule("discord_erlpack");
             } catch {
@@ -1076,7 +1076,7 @@ let eh = new (class {
                                 return eI.unpack(e);
                             } catch (n) {
                                 throw (
-                                    (y.A.captureException(n, { tags: { app_context: "WetfParser" } }),
+                                    (D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
                                     new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
@@ -1164,16 +1164,16 @@ function eC(e) {
     };
 }
 n(667532);
-var eR = n(877166),
-    eO = n(365971),
+var eO = n(877166),
+    eR = n(365971),
     eL = n(435558),
-    eD =
+    ey =
         (((i = {}).LONGER_DISPATCH = "longer_dispatch"),
         (i.EXCEEDED_MAX_CONSECUTIVE_FLUSHES = "exceeded_max_consecutive_flushes"),
         (i.FIRED_DUE_TO_MAX_TIMEOUT = "fired_due_to_max_timeout"),
         (i.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED = "skip_idle_callback_due_to_backgrounded"),
         i),
-    ey =
+    eD =
         (((r = {}).TIME_TO_FIRE_IDLE_CALLBACK = "time_to_fire_idle_callback"),
         (r.TIME_TO_QUEUE_EMPTY = "time_to_flush_all_work"),
         (r.TIME_OVER_DEADLINE = "time_over_deadline"),
@@ -1322,7 +1322,7 @@ class eH {
             ((this._isBackgrounded = e),
             this._isBackgrounded &&
                 this.hasWorkScheduled &&
-                (this.telemetry.track(eD.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
+                (this.telemetry.track(ey.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback()));
     }
     _queueIdleCallback() {
         throw Error("Not implemented");
@@ -1340,7 +1340,7 @@ class eH {
                 this._workCallbackFn(),
                 this.clearWorkTimeout(),
                 this.telemetry.measure(ev.COUNT_FLUSH_BEFORE_QUEUE_EMPTY, this._consecutiveFlushesBeforeQueueEmpty),
-                this.telemetry.track(eD.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
+                this.telemetry.track(ey.EXCEEDED_MAX_CONSECUTIVE_FLUSHES),
                 (this._consecutiveFlushesBeforeQueueEmpty = 0),
                 (this._nextDispatchTimeout = eF);
             return;
@@ -1388,14 +1388,14 @@ class eH {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (((this._workCallbackFn = e), !this.hasWorkScheduled)) {
             if (
-                (this.telemetry.time(ey.TIME_TO_QUEUE_EMPTY),
-                this._nextDispatchTimeout === eF && this.telemetry.track(eD.LONGER_DISPATCH),
+                (this.telemetry.time(eD.TIME_TO_QUEUE_EMPTY),
+                this._nextDispatchTimeout === eF && this.telemetry.track(ey.LONGER_DISPATCH),
                 t)
             )
                 return void this._queueIdleCallback();
             this._flushTimeoutHandler = setTimeout(() => {
                 if ((o()(null != this._workCallbackFn, "Work callback should be set"), this._isBackgrounded))
-                    return this.telemetry.track(eD.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
+                    return this.telemetry.track(ey.SKIP_IDLE_CALLBACK_DUE_TO_BACKGROUNDED), this._processWorkCallback();
                 this._queueIdleCallback();
             }, this._nextDispatchTimeout);
         }
@@ -1419,37 +1419,37 @@ class eK extends eH {
         super(),
             I.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
-                n === (0, eO.Xg)() && this._trackAppBackgrounded(!t);
+                n === (0, eR.Xg)() && this._trackAppBackgrounded(!t);
             });
     }
     _queueIdleCallback() {
         if (!this._enableRequestIdleCallback || this._criticalWorkScheduled) return this._processWorkCallback();
-        this.telemetry.time(ey.TIME_TO_FIRE_IDLE_CALLBACK),
+        this.telemetry.time(eD.TIME_TO_FIRE_IDLE_CALLBACK),
             this._scheduleRequestIdleCallback(
                 (e) => {
                     if (e?.didTimeout) {
-                        this.telemetry.track(eD.FIRED_DUE_TO_MAX_TIMEOUT),
-                            this.telemetry.clearTime(ey.TIME_TO_FIRE_IDLE_CALLBACK),
+                        this.telemetry.track(ey.FIRED_DUE_TO_MAX_TIMEOUT),
+                            this.telemetry.clearTime(eD.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._processWorkCallback();
                         return;
                     }
-                    if ((this.telemetry.timeEnd(ey.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? ek) < ek))
-                        this.telemetry.time(ey.TIME_TO_FIRE_IDLE_CALLBACK),
+                    if ((this.telemetry.timeEnd(eD.TIME_TO_FIRE_IDLE_CALLBACK), (e?.timeRemaining() ?? ek) < ek))
+                        this.telemetry.time(eD.TIME_TO_FIRE_IDLE_CALLBACK),
                             this._scheduleRequestIdleCallback(
                                 (e) => {
-                                    this.telemetry.timeEnd(ey.TIME_TO_FIRE_IDLE_CALLBACK);
+                                    this.telemetry.timeEnd(eD.TIME_TO_FIRE_IDLE_CALLBACK);
                                     let t = eY(e),
                                         n = t?.timeRemaining();
-                                    null != n && this.telemetry.timeTrack(ey.DEADLINE_INITIAL_TIME_REMAINING, n),
+                                    null != n && this.telemetry.timeTrack(eD.DEADLINE_INITIAL_TIME_REMAINING, n),
                                         this._processWorkCallback(t);
                                 },
                                 { timeout: 200 },
                             );
                     else {
-                        this.telemetry.timeEnd(ey.TIME_TO_FIRE_IDLE_CALLBACK);
+                        this.telemetry.timeEnd(eD.TIME_TO_FIRE_IDLE_CALLBACK);
                         let t = eY(e),
                             n = t?.timeRemaining();
-                        null != n && this.telemetry.timeTrack(ey.DEADLINE_INITIAL_TIME_REMAINING, n),
+                        null != n && this.telemetry.timeTrack(eD.DEADLINE_INITIAL_TIME_REMAINING, n),
                             this._processWorkCallback(t);
                     }
                 },
@@ -1558,7 +1558,7 @@ class eJ {
         if (0 === n) return !0;
         let i = this.queue.splice(0, n),
             r = this.dispatchMultiple(i, e);
-        r && this.scheduler.telemetry.timeEnd(ey.TIME_TO_QUEUE_EMPTY);
+        r && this.scheduler.telemetry.timeEnd(eD.TIME_TO_QUEUE_EMPTY);
         let a = performance.now() - t;
         return a > ex && !r && e$.log(`Dispatched ${i.length} messages in ${a}ms`), r;
     };
@@ -1613,11 +1613,11 @@ class eJ {
                             (r = e.slice(s + 1)),
                                 null != t &&
                                     0 >= t.timeRemaining() &&
-                                    this.scheduler.telemetry.timeTrack(ey.TIME_OVER_DEADLINE, t.timeSinceExpiration);
+                                    this.scheduler.telemetry.timeTrack(eD.TIME_OVER_DEADLINE, t.timeSinceExpiration);
                             break;
                         }
                     }
-                    eR.A.flush();
+                    eO.A.flush();
                 }),
                 i && A.Ay.Emitter.resume(),
                 r.length > 0)
@@ -1646,7 +1646,7 @@ class eJ {
                 (this.resumeAnalytics.lastUpdateTime = l),
                 (this.resumeAnalytics.numEvents += 1);
         }
-        if ((eR.A.flush(r, i), "READY" === r)) {
+        if ((eO.A.flush(r, i), "READY" === r)) {
             let e,
                 n,
                 o = (function (e) {
@@ -1775,13 +1775,13 @@ class eJ {
                     used_cache_at_startup: t.analytics.usedCacheAtStartup ?? !1,
                 }),
                 N.A.attachReadyPayloadProperties(n),
-                R.default.track(eS.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
+                O.default.track(eS.HAw.READY_PAYLOAD_RECEIVED, n, { logEventProperties: !0 });
         } else
             "RESUMED" === r
                 ? (this.getDispatchHandler(r)?.dispatch(i, r, s),
                   (n = this.resumeAnalytics),
                   (!eg.default.getCurrentUser()?.isStaff() && 0.5 > Math.random()) ||
-                      R.default.track(
+                      O.default.track(
                           eS.HAw.CONNECTION_RESUMED,
                           {
                               connect_time_ms: n.connectTime,
@@ -1975,6 +1975,7 @@ class to extends e6 {
     lastHeartbeatAckTime;
     heartbeatAck;
     connectionStartTime;
+    firstConnectAttemptStartTime;
     identifyStartTime;
     nextReconnectIsImmediate;
     compressionHandler;
@@ -2016,6 +2017,7 @@ class to extends e6 {
             (this.heartbeater = null),
             (this.heartbeatAck = !0),
             (this.connectionStartTime = 0),
+            (this.firstConnectAttemptStartTime = 0),
             (this.identifyStartTime = 0),
             (this.nextReconnectIsImmediate = !1),
             (this.compressionHandler = Y(e9)),
@@ -2069,6 +2071,7 @@ class to extends e6 {
             null !== this.webSocket &&
                 (e8.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
             (this.connectionStartTime = Date.now()),
+            0 === this.firstConnectAttemptStartTime && (this.firstConnectAttemptStartTime = this.connectionStartTime),
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
@@ -2217,7 +2220,7 @@ class to extends e6 {
                     }),
                 onError: () => {
                     this.setResumeUrl(null),
-                        O.A.flushDNSCache(),
+                        R.A.flushDNSCache(),
                         this._handleClose(!1, 0, "An error with the websocket occurred");
                 },
                 onClose: (e) => {
@@ -2227,26 +2230,30 @@ class to extends e6 {
             });
     }
     _handleHello(e) {
-        var t, n;
-        let i = (this.heartbeatInterval = e.heartbeat_interval),
-            r = Date.now() - this.connectionStartTime;
-        e8.verbose(`[HELLO] via ${eN(e)}, heartbeat interval: ${i}, took ${r} ms`),
-            (t = this.altGateway),
-            (n = this._getGatewayUrl()),
-            R.default.track(
-                eS.HAw.GATEWAY_CONNECTED,
-                {
-                    num_failed_connect_attempts: this.failedConnectAttempts,
-                    gateway_url: n,
-                    assigned_to_alt_gateway: t.isAssignedToAltGateway(),
-                    did_fall_back_from_alt_gateway: t.getDidFallBack(),
-                    is_reconnect: this.hasConnectedOnce,
-                    is_fast_connect: this.isFastConnect,
-                },
-                { logEventProperties: !0 },
-            ),
+        let t = (this.heartbeatInterval = e.heartbeat_interval),
+            n = Date.now(),
+            i = n - this.connectionStartTime;
+        e8.verbose(`[HELLO] via ${eN(e)}, heartbeat interval: ${t}, took ${i} ms`),
+            (function (e) {
+                let { socket: t, altGateway: n, gatewayUrl: i, now: r } = e;
+                O.default.track(
+                    eS.HAw.GATEWAY_CONNECTED,
+                    {
+                        num_failed_connect_attempts: t.failedConnectAttempts,
+                        gateway_url: i,
+                        assigned_to_alt_gateway: n.isAssignedToAltGateway(),
+                        did_fall_back_from_alt_gateway: n.getDidFallBack(),
+                        is_reconnect: t.hasConnectedOnce,
+                        is_fast_connect: t.isFastConnect,
+                        duration_ms_since_first_connect_attempt: r - t.firstConnectAttemptStartTime,
+                        duration_ms_since_connect_attempt_start: r - t.connectionStartTime,
+                    },
+                    { logEventProperties: !0 },
+                );
+            })({ socket: this, altGateway: this.altGateway, gatewayUrl: this._getGatewayUrl(), now: n }),
             (this.receivedHelloThisAttempt = !0),
             (this.failedConnectAttempts = 0),
+            (this.firstConnectAttemptStartTime = 0),
             this._startHeartbeater();
     }
     _handleReconnect() {
@@ -2351,7 +2358,7 @@ class to extends e6 {
         }
     }
     _tryDetectInvalidIOSToken(e, t, n) {
-        (0, D.isIOS)() &&
+        (0, y.isIOS)() &&
             null != this.token &&
             1001 === e &&
             "Stream end encountered" === t &&
@@ -2360,7 +2367,7 @@ class to extends e6 {
                 h.Bo.get({ url: eS.Rsh.ME, headers: { authorization: this.token }, rejectWithError: !1 }).then(
                     (e) => {
                         let { status: t } = e;
-                        R.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                        O.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                     (e) => {
                         let { status: t } = e;
@@ -2368,7 +2375,7 @@ class to extends e6 {
                             ((this.connectionState = w.A.CLOSED),
                             e8.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
-                            R.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
+                            O.default.track(eS.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t });
                     },
                 ));
     }
@@ -2472,7 +2479,7 @@ class to extends e6 {
             (this.identifyCompressedByteSize = d.deflate(u).length),
             (this.identifyCount += 1),
             this.send(e3.IDENTIFY, c, !1),
-            R.default.track(eS.HAw.SESSION_START_CLIENT, {});
+            O.default.track(eS.HAw.SESSION_START_CLIENT, {});
     }
     _doFastConnectIdentify() {
         (this.seq = 0), (this.sessionId = null);
@@ -2533,6 +2540,7 @@ class to extends e6 {
             ? (this.altGateway.reset(),
               e8.verbose(".connect() called, new state is WILL_RECONNECT"),
               (this.connectionState = w.A.WILL_RECONNECT),
+              (this.firstConnectAttemptStartTime = 0),
               this._connect(),
               !0)
             : (e8.error("Cannot start a new connection, connection state is not closed"), !1);
@@ -2542,8 +2550,8 @@ class to extends e6 {
         e8.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
         let r = (0, E.b)();
         S.A.increment({ name: _.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
-            !1 !== e.sentry && y.A.captureException(n, { tags: { socketCrashedAction: t } }),
-            R.default.track(eS.HAw.GATEWAY_SOCKET_RESET, {
+            !1 !== e.sentry && D.A.captureException(n, { tags: { socketCrashedAction: t } }),
+            O.default.track(eS.HAw.GATEWAY_SOCKET_RESET, {
                 error_message: n.message,
                 error_stack: n.stack,
                 has_client_mods: r,
