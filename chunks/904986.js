@@ -1,16 +1,16 @@
 "use strict";
-n.d(t, { A: () => _, y: () => l.y });
-var i = n(415955),
+n.d(t, { A: () => _, y: () => o.y });
+var i = n(480664),
     r = n.n(i),
-    s = n(241899),
-    a = n.n(s),
-    o = n(972347),
-    l = n(935172),
-    u = n(466376),
+    a = n(656742),
+    s = n.n(a),
+    l = n(972347),
+    o = n(935172),
+    d = n(466376),
     c = n(731854);
-let d = 0;
-class _ extends o.A {
-    mediaEngineConnectionId = `WebRTC-${d++}`;
+let u = 0;
+class _ extends l.A {
+    mediaEngineConnectionId = `WebRTC-${u++}`;
     context;
     userId;
     streamUserId;
@@ -43,7 +43,7 @@ class _ extends o.A {
     calcMaxBitrateFunc = (e) => null;
     framerateReducer;
     constructor(e, t) {
-        super(), (this.context = e), (this.userId = t), (this.videoQualityManager = new u.k7(e, this));
+        super(), (this.context = e), (this.userId = t), (this.videoQualityManager = new d.k7(e, this));
         const i = n(429430).A;
         this.framerateReducer = new i(this, this.videoQualityManager);
     }
@@ -51,7 +51,7 @@ class _ extends o.A {
         (this.destroyed = !0),
             this.framerateReducer.destroy(),
             this.setConnectionState(c.$I.DISCONNECTED),
-            this.emit(l.y.Destroy, this),
+            this.emit(o.y.Destroy, this),
             this.removeAllListeners();
     }
     getLocalMute(e) {
@@ -61,7 +61,7 @@ class _ extends o.A {
         return this.disabledLocalVideos[e] ?? !1;
     }
     setLocalVideoDisabled(e, t) {
-        (this.disabledLocalVideos[e] = t), this.emit(l.y.LocalVideoDisabled, e, t);
+        (this.disabledLocalVideos[e] = t), this.emit(o.y.LocalVideoDisabled, e, t);
     }
     getHasActiveVideoOutputSink(e) {
         return this.activeOutputSinks.has(e) && this.activeOutputSinks.get(e).size > 0;
@@ -70,8 +70,8 @@ class _ extends o.A {
         let i = this.getHasActiveVideoOutputSink(e),
             r = this.activeOutputSinks.get(e) ?? new Set();
         t ? r.add(n) : r.delete(n), this.activeOutputSinks.set(e, r);
-        let s = this.getHasActiveVideoOutputSink(e);
-        (this.isActiveOutputSinksEnabled = !0), i !== s && this.emit(l.y.ActiveSinksChange, e, s);
+        let a = this.getHasActiveVideoOutputSink(e);
+        (this.isActiveOutputSinksEnabled = !0), i !== a && this.emit(o.y.ActiveSinksChange, e, a);
     }
     getActiveOutputSinkTrackingEnabled() {
         return this.isActiveOutputSinksEnabled;
@@ -94,22 +94,22 @@ class _ extends o.A {
     setConnectionState(e) {
         this.logger.info(`Connection state change: ${this.connectionState} => ${e}`),
             (this.connectionState = e),
-            this.emit(l.y.ConnectionStateChange, this.connectionState);
+            this.emit(o.y.ConnectionStateChange, this.connectionState);
     }
     updateVideoQuality(e) {
         let t = this.videoStreamParameters.findIndex((e) => 100 === e.quality);
         -1 === t && (t = 0);
         let { quality: n, constraints: i } = this.applyQualityConstraints({}, this.videoStreamParameters[t].ssrc),
-            s = r()(this.videoStreamParameters);
+            a = r()(this.videoStreamParameters);
         null != n &&
-            ((s[t].maxBitrate = n.bitrateMax),
-            (s[t].minBitrate = n.bitrateMin),
-            (s[t].targetBitrate = n.bitrateTarget ?? 0),
-            null != n.encode && ((s[t].maxPixelCount = n.encode.pixelCount), (s[t].maxFrameRate = n.encode.framerate))),
-            (this.videoStreamParameters = s);
+            ((a[t].maxBitrate = n.bitrateMax),
+            (a[t].minBitrate = n.bitrateMin),
+            (a[t].targetBitrate = n.bitrateTarget ?? 0),
+            null != n.encode && ((a[t].maxPixelCount = n.encode.pixelCount), (a[t].maxFrameRate = n.encode.framerate))),
+            (this.videoStreamParameters = a);
         for (let e = 0; e < this.videoStreamParameters.length; e++) {
             if (e === t) continue;
-            let { quality: r, constraints: s } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
+            let { quality: r, constraints: a } = this.applyQualityConstraints({}, this.videoStreamParameters[e].ssrc);
             null != r &&
                 ((this.videoStreamParameters[e].maxBitrate = r.bitrateMax),
                 (this.videoStreamParameters[e].minBitrate = r.bitrateMin),
@@ -117,16 +117,16 @@ class _ extends o.A {
                 null != r.encode &&
                     ((this.videoStreamParameters[e].maxPixelCount = r.encode.pixelCount),
                     (this.videoStreamParameters[e].maxFrameRate = r.encode.framerate))),
-                100 === this.videoStreamParameters[e].quality && ((i = s), (n = r));
+                100 === this.videoStreamParameters[e].quality && ((i = a), (n = r));
         }
         (i.streamParameters = r()(this.videoStreamParameters)),
             (i.remoteSinkWantsPixelCount = Math.max(...this.videoStreamParameters.map((e) => e.maxPixelCount ?? 0)));
-        let o = null != e ? a()(i, e) : { ...i };
-        this.logger.verbose(`updateVideoQuality: ${JSON.stringify(o)}`), this.updateVideoQualityCore(o, n);
+        let l = null != e ? s()(i, e) : { ...i };
+        this.logger.verbose(`updateVideoQuality: ${JSON.stringify(l)}`), this.updateVideoQualityCore(l, n);
     }
     applyVideoQualityMode(e) {
         if (this.context !== c.x.DEFAULT) return;
-        let t = u.Cx[e];
+        let t = d.Cx[e];
         this.videoQualityManager.setQualityOverwrite(t), this.updateVideoQuality();
     }
     overwriteQualityForTesting(e) {
@@ -171,13 +171,13 @@ class _ extends o.A {
     }
     async emitStats() {
         let e = await this.getStats();
-        return null != e && this.emit(l.y.Stats, e), e;
+        return null != e && this.emit(o.y.Stats, e), e;
     }
     getSpatialAudioEnabled() {
-        return this.context === c.x.DEFAULT && this.spatialAudioEnabled;
+        return this.spatialAudioEnabled;
     }
     setSpatialAudioEnabled(e) {
-        this.spatialAudioEnabled = e;
+        this.spatialAudioEnabled = e && this.context === c.x.DEFAULT;
     }
     setCalcMaxBitrateFunc(e) {
         this.calcMaxBitrateFunc = e;

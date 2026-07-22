@@ -11,39 +11,39 @@ var i,
     f = n(789645),
     m = n(192308),
     g = n(866665),
-    E = n(922016),
-    A = n(775602),
+    A = n(922016),
+    E = n(775602),
     C = n(274670),
     _ = n(144779),
-    p = n(429913),
-    S = n(409626),
-    I = n(344005),
+    I = n(429913),
+    p = n(409626),
+    S = n(344005),
     T = n(459746),
     h = n(311043),
-    R = n(569926),
-    L = n(363195),
-    N = n(760751),
+    N = n(569926),
+    R = n(363195),
+    L = n(760751),
     v = n(174459),
-    x = n(486020),
-    G = n(24001),
-    P = n(104886),
-    O = n(291749),
+    G = n(486020),
+    x = n(24001),
+    O = n(104886),
+    P = n(291749),
     M = n(18437),
-    y = n(590202),
-    k = n(971649),
-    D = n(73473),
+    D = n(590202),
+    y = n(971649),
+    k = n(73473),
     w = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
-    q = n(190107),
-    b = n(652215),
-    U = n(375708),
+    U = n(190107),
+    q = n(652215),
+    b = n(375708),
     j = n(664418);
 function Q(e) {
     let t,
         n,
         i,
         { quest: l, onClose: a } = e,
-        o = (0, s.bG)([L.A], () => L.A.getState().theme),
-        m = (0, u.M)(o) ? b.NJ8.DARK : b.NJ8.LIGHT;
+        o = (0, s.bG)([R.A], () => R.A.getState().theme),
+        m = (0, u.M)(o) ? q.NJ8.DARK : q.NJ8.LIGHT;
     return (0, r.jsxs)("div", {
         className: j.N1,
         children: [
@@ -53,7 +53,7 @@ function Q(e) {
                     (0, r.jsx)("img", {
                         className: j.rC,
                         alt: l.config.messages.gameTitle,
-                        src: (0, O.tW)(l, O.fY.GAME_TILE, m).url,
+                        src: (0, P.tW)(l, P.fY.GAME_TILE, m).url,
                     }),
                     (0, r.jsxs)("div", {
                         className: j.if,
@@ -63,23 +63,23 @@ function Q(e) {
                                 color: "text-strong",
                                 children:
                                     ((t = {
-                                        [q.Li.PACKAGE_ACTION_ADVENTURE]: U.t.PYFVdf,
-                                        [q.Li.PACKAGE_RPG_MMO]: U.t.rFQo2F,
-                                        [q.Li.PACKAGE_RACING_SPORTS]: U.t.zDRa6g,
-                                        [q.Li.PACKAGE_SANDBOX_CREATIVE]: U.t.vz9U2Q,
-                                        [q.Li.PACKAGE_FAMILY_FRIENDLY]: U.t.IOiAE0,
-                                        [q.Li.PACKAGE_HOLIDAY_SEASON]: U.t.cJPqvD,
-                                        [q.Li.PACKAGE_NEW_YEARS]: U.t.S0w2mv,
+                                        [U.Li.PACKAGE_ACTION_ADVENTURE]: b.t.PYFVdf,
+                                        [U.Li.PACKAGE_RPG_MMO]: b.t.rFQo2F,
+                                        [U.Li.PACKAGE_RACING_SPORTS]: b.t.zDRa6g,
+                                        [U.Li.PACKAGE_SANDBOX_CREATIVE]: b.t.vz9U2Q,
+                                        [U.Li.PACKAGE_FAMILY_FRIENDLY]: b.t.IOiAE0,
+                                        [U.Li.PACKAGE_HOLIDAY_SEASON]: b.t.cJPqvD,
+                                        [U.Li.PACKAGE_NEW_YEARS]: b.t.S0w2mv,
                                     }),
                                     (i =
                                         (null != (n = l.config.features.find((e) => e in t)) ? t[n] : null) ??
-                                        U.t["D+DkEH"]),
-                                    U.intl.string(i)),
+                                        b.t["D+DkEH"]),
+                                    b.intl.string(i)),
                             }),
                             (0, r.jsx)(c.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: U.intl.string(U.t.VgN1Bn),
+                                children: b.intl.string(b.t.VgN1Bn),
                             }),
                         ],
                     }),
@@ -87,7 +87,7 @@ function Q(e) {
             }),
             (0, r.jsx)(d.D, {
                 className: j.b,
-                "aria-label": U.intl.string(U.t.cpT0Cq),
+                "aria-label": b.intl.string(b.t.cpT0Cq),
                 onClick: a,
                 children: (0, r.jsx)(f.P, { size: "md", color: "currentColor" }),
             }),
@@ -97,43 +97,43 @@ function Q(e) {
 function F(e) {
     let { quest: t, game: i, sourceQuestContent: o, onGameProfileModalOpen: u, onGameProfileModalClose: c } = e,
         f = (0, M.Ut)(),
-        E = (0, k.go)(),
-        p = (0, s.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        I = l.useRef(null),
+        A = (0, y.go)(),
+        I = (0, s.bG)([E.Ay], () => E.Ay.useReducedMotion),
+        S = l.useRef(null),
         h = null != i.gameRecord;
-    function R() {
-        (0, P.E5)(P.kI.STEP_3_CLICKED_EXTERNAL, "game_sheet_external")
+    function N() {
+        (0, O.E5)(O.kI.STEP_3_CLICKED_EXTERNAL, "game_sheet_external")
             ? (0, C.r)({
                   type: _.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                   adCreativeType: a.p.QUEST,
                   adCreativeId: t.id,
-                  questContentCTA: y.Cy.GAME_STORE_OPEN_GAME_LINK,
-                  surfaceId: G.uF.SPONSORED_QUEST_SHEET,
+                  questContentCTA: D.Cy.GAME_STORE_OPEN_GAME_LINK,
+                  surfaceId: x.uF.SPONSORED_QUEST_SHEET,
                   sourceQuestContent: o,
               })
             : f({
                   questId: t.id,
-                  questContent: G.uF.SPONSORED_QUEST_SHEET,
-                  questContentCTA: y.Cy.GAME_STORE_OPEN_GAME_LINK,
+                  questContent: x.uF.SPONSORED_QUEST_SHEET,
+                  questContentCTA: D.Cy.GAME_STORE_OPEN_GAME_LINK,
                   sourceQuestContent: o,
               });
     }
-    async function L() {
+    async function R() {
         h &&
-            ((0, P.E5)(P.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_application")
+            ((0, O.E5)(O.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_application")
                 ? (0, C.r)({
                       type: _.F.CLICK_INTERNAL,
                       adCreativeType: a.p.QUEST,
                       adCreativeId: t.id,
-                      questContentCTA: y.Cy.GAME_PROFILE_OPEN,
-                      surfaceId: G.uF.SPONSORED_QUEST_SHEET,
+                      questContentCTA: D.Cy.GAME_PROFILE_OPEN,
+                      surfaceId: x.uF.SPONSORED_QUEST_SHEET,
                       sourceQuestContent: o,
-                      impressionId: E,
+                      impressionId: A,
                   })
                 : f({
                       questId: t.id,
-                      questContent: G.uF.SPONSORED_QUEST_SHEET,
-                      questContentCTA: y.Cy.GAME_PROFILE_OPEN,
+                      questContent: x.uF.SPONSORED_QUEST_SHEET,
+                      questContentCTA: D.Cy.GAME_PROFILE_OPEN,
                       sourceQuestContent: o,
                   }),
             await (0, m.openModalLazy)(
@@ -234,9 +234,7 @@ function F(e) {
                         n.e("80197"),
                         n.e("48132"),
                         n.e("61686"),
-                        n.e("91778"),
-                        n.e("92728"),
-                        n.e("94757"),
+                        n.e("77873"),
                         n.e("97312"),
                         n.e("38469"),
                         n.e("9"),
@@ -283,6 +281,7 @@ function F(e) {
                         n.e("62931"),
                         n.e("45959"),
                         n.e("58529"),
+                        n.e("81987"),
                         n.e("58038"),
                         n.e("71202"),
                         n.e("62531"),
@@ -366,7 +365,6 @@ function F(e) {
                         n.e("9729"),
                         n.e("74016"),
                         n.e("60658"),
-                        n.e("81987"),
                         n.e("21856"),
                         n.e("5563"),
                         n.e("74907"),
@@ -405,8 +403,8 @@ function F(e) {
                     return (t) =>
                         (0, r.jsx)(e, {
                             gameId: i.applicationId,
-                            source: S.GameProfileSources.GameSheet,
-                            trackExternalAction: R,
+                            source: p.GameProfileSources.GameSheet,
+                            trackExternalAction: N,
                             ...t,
                         });
                 },
@@ -414,30 +412,30 @@ function F(e) {
             ),
             u());
     }
-    let N = l.useCallback(
+    let L = l.useCallback(
             (e) => {
-                if (null == I.current || p) return;
-                let t = I.current.getBoundingClientRect(),
+                if (null == S.current || I) return;
+                let t = S.current.getBoundingClientRect(),
                     n = e.clientX - t.left,
                     i = e.clientY - t.top,
                     r = t.width / 2,
                     l = t.height / 2;
-                I.current.style.transform = `rotateX(${-(((i - l) / l) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
+                S.current.style.transform = `rotateX(${-(((i - l) / l) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
             },
-            [p],
+            [I],
         ),
         v = l.useCallback(() => {
-            null == I.current || p || (I.current.style.transform = "rotateX(0deg) rotateY(0deg)");
-        }, [p]);
+            null == S.current || I || (S.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+        }, [I]);
     return (0, r.jsx)(g.m, {
         text: i.name,
         children: (0, r.jsx)(d.D, {
             className: j.zR,
-            onClick: L,
-            onMouseMove: N,
+            onClick: R,
+            onMouseMove: L,
             onMouseLeave: v,
             children: (0, r.jsx)("div", {
-                ref: I,
+                ref: S,
                 className: j._M,
                 children:
                     null != i.gameRecord
@@ -478,7 +476,7 @@ function X() {
         ],
     });
 }
-function K(e) {
+function V(e) {
     let {
         quest: t,
         applications: i,
@@ -488,25 +486,25 @@ function K(e) {
         onGameProfileModalOpen: c,
         onGameProfileModalClose: d,
     } = e;
-    (0, p.A)(i), (0, R.x)(i);
+    (0, I.A)(i), (0, N.x)(i);
     let f = (0, s.bG)([h.A], () => i.some((e) => h.A.isFetching(e))),
         g = (0, s.bG)([h.A], () => i.some((e) => h.A.didFetchingFail(e))),
-        E = (0, s.yK)([h.A], () =>
+        A = (0, s.yK)([h.A], () =>
             i
                 .map((e) => h.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, I.oS)(e.applicationId))
+                .filter((e) => (0, S.oS)(e.applicationId))
                 .slice(0, 10),
         ),
-        A = (0, s.bG)([N.A, h.A], () => {
-            let e = new Set(E.map((e) => e.applicationId));
+        E = (0, s.bG)([L.A, h.A], () => {
+            let e = new Set(A.map((e) => e.applicationId));
             return i
                 .filter((t) => !e.has(t))
                 .filter((e) => null == h.A.getGame(e))
                 .map((e) => {
-                    let t = N.A.getDetectableGame(e);
+                    let t = L.A.getDetectableGame(e);
                     if (t?.cover_image_hash == null) return null;
-                    let n = x.Ay.getApplicationIconURL({
+                    let n = G.Ay.getApplicationIconURL({
                         id: e,
                         icon: t.cover_image_hash,
                         size: 256,
@@ -520,32 +518,32 @@ function K(e) {
         C = l.useMemo(
             () =>
                 [
-                    ...E.map((e) => ({
+                    ...A.map((e) => ({
                         applicationId: e.applicationId,
                         name: e.name,
                         gameRecord: e,
                         fallbackCoverImageUrl: null,
                     })),
-                    ...A.map((e) => ({
+                    ...E.map((e) => ({
                         applicationId: e.applicationId,
                         name: e.name,
                         gameRecord: null,
                         fallbackCoverImageUrl: e.coverImageUrl,
                     })),
                 ].slice(0, 10),
-            [E, A],
+            [A, E],
         ),
         _ = l.useMemo(() => {
             let e = C.length;
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
         }, [C.length]),
-        S = !f && 0 === C.length,
-        T = g || S;
+        p = !f && 0 === C.length,
+        T = g || p;
     if (
         (l.useEffect(() => {
             if (T) {
                 let e = g ? w.FETCH_FAILED : w.NO_GAMES_AVAILABLE;
-                v.default.track(b.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
+                v.default.track(q.HAw.QUEST_GAME_SHEET_ERROR, { quest_id: t.id, error_type: e }),
                     a(),
                     (0, m.openModalLazy)(async () => {
                         let { default: e } = await n.e("91646").then(n.bind(n, 659309));
@@ -598,7 +596,7 @@ function K(e) {
               ],
           });
 }
-function H(e) {
+function K(e) {
     let {
             targetElementRef: t,
             applications: n,
@@ -610,48 +608,48 @@ function H(e) {
             impressionRef: f,
         } = e,
         [m, g] = l.useState(!1),
-        A = (0, M.Ut)(),
-        p = (0, k.go)(),
-        S = l.useRef(null),
-        I = t?.current != null,
-        T = I ? t : S;
+        E = (0, M.Ut)(),
+        I = (0, y.go)(),
+        p = l.useRef(null),
+        S = t?.current != null,
+        T = S ? t : p;
     function h() {
         g(!0);
     }
-    function R() {
+    function N() {
         g(!1);
     }
-    return (0, r.jsx)(E.Y, {
+    return (0, r.jsx)(A.Y, {
         targetElementRef: T,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, r.jsx)(K, {
+            return (0, r.jsx)(V, {
                 quest: c,
                 applications: n,
                 onClose: t,
                 sourceQuestContent: d,
                 impressionRef: f,
                 onGameProfileModalOpen: h,
-                onGameProfileModalClose: R,
+                onGameProfileModalClose: N,
             });
         },
         onRequestOpen: function () {
             s?.(),
-                (0, P.E5)(P.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_popout")
+                (0, O.E5)(O.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_popout")
                     ? (0, C.r)({
                           type: _.F.CLICK_INTERNAL,
                           adCreativeType: a.p.QUEST,
                           adCreativeId: c.id,
-                          questContentCTA: y.Cy.SPONSORED_QUEST_SHEET,
+                          questContentCTA: D.Cy.SPONSORED_QUEST_SHEET,
                           surfaceId: d,
                           sourceQuestContent: d,
-                          impressionId: p,
+                          impressionId: I,
                       })
-                    : A({
+                    : E({
                           questId: c.id,
                           questContent: d,
-                          questContentCTA: y.Cy.SPONSORED_QUEST_SHEET,
+                          questContentCTA: D.Cy.SPONSORED_QUEST_SHEET,
                           sourceQuestContent: d,
                       });
         },
@@ -659,21 +657,21 @@ function H(e) {
             if (m) return o.o;
             u?.();
         },
-        position: I ? "right" : "top",
-        align: I ? "bottom" : void 0,
+        position: S ? "right" : "top",
+        align: S ? "bottom" : void 0,
         spacing: 20,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
-        children: (e) => i(e, S),
+        children: (e) => i(e, p),
     });
 }
 let Y = function (e) {
     return null == e.quest || e.applications.length <= 1
         ? null
-        : (0, r.jsx)(D.R, {
+        : (0, r.jsx)(k.R, {
               questOrQuests: e.quest,
-              questContent: G.uF.SPONSORED_QUEST_SHEET,
+              questContent: x.uF.SPONSORED_QUEST_SHEET,
               sourceQuestContent: e.sourceQuestContent,
-              children: (t) => (0, r.jsx)(H, { ...e, impressionRef: t }),
+              children: (t) => (0, r.jsx)(K, { ...e, impressionRef: t }),
           });
 };

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { iX: () => l, ls: () => s, sg: () => a });
+n.d(t, { iX: () => s, ls: () => a });
 let i = {
     0: [
         { x: 13.6, y: 56.8 },
@@ -26,12 +26,11 @@ let i = {
     ],
 };
 var r = n(821578);
-let a = "guild-room";
-function s(e, t) {
-    let n = l[r.I.DEFAULT].seats.find((n) => n.position.x === e && n.position.y === t);
+function a(e, t) {
+    let n = s[r.I.DEFAULT].seats.find((n) => n.position.x === e && n.position.y === t);
     return n?.name ?? "";
 }
-let l = {
+let s = {
     [r.I.DEFAULT]: {
         background:
             "https://cdn.discordapp.com/assets/content/953fe0f3c32fb58ba28de77c49726e4cf1c7d4b34d3f6e6c17b95195469a58cb.jpg",
