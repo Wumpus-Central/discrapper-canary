@@ -1,5 +1,6 @@
 "use strict";
 n.d(t, {
+    $Z: () => G,
     JX: () => v,
     Kh: () => P,
     Pp: () => S,
@@ -226,38 +227,39 @@ async function U() {
                 let n = new Date(e.promotion_end_datetime);
                 Number.isNaN(n.getTime()) || (t = n);
             }
-            a.h.dispatch({
-                type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
-                config: {
-                    promotionalSkuIds: e.promotional_sku_ids,
-                    promotionEndDatetime: t,
-                    storefronts:
-                        e.storefronts?.map((e) => {
-                            let t = null,
-                                n = null != e.promotion_end_datetime ? new Date(e.promotion_end_datetime) : null;
-                            return (
-                                null == n || Number.isNaN(n.getTime()) || (t = n),
-                                {
-                                    guildId: e.guild_id,
-                                    applicationId: e.application_id,
-                                    gameId: e.game_id,
-                                    collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
-                                    excludedPlatforms: e.excluded_platforms ?? [],
-                                    disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
-                                    promotionEndDatetime: t,
-                                    allowOrbsSpending: !0 === e.allow_orbs_spending,
-                                }
-                            );
-                        }) ?? [],
-                    announcementModalConfig:
-                        null != e.announcement_modal_config
-                            ? {
-                                  version: e.announcement_modal_config.version,
-                                  applicationId: e.announcement_modal_config.application_id,
-                              }
-                            : null,
-                },
-            });
+            let n =
+                    e.storefronts?.map((e) => {
+                        let t = null,
+                            n = null != e.promotion_end_datetime ? new Date(e.promotion_end_datetime) : null;
+                        return (
+                            null == n || Number.isNaN(n.getTime()) || (t = n),
+                            {
+                                guildId: e.guild_id,
+                                applicationId: e.application_id,
+                                gameId: e.game_id,
+                                collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
+                                excludedPlatforms: e.excluded_platforms ?? [],
+                                disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
+                                promotionEndDatetime: t,
+                                allowOrbsSpending: !0 === e.allow_orbs_spending,
+                            }
+                        );
+                    }) ?? [],
+                i = null;
+            null != e.announcement_modal_config &&
+                (i = {
+                    version: e.announcement_modal_config.version,
+                    applicationId: e.announcement_modal_config.application_id,
+                }),
+                a.h.dispatch({
+                    type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
+                    config: {
+                        promotionalSkuIds: e.promotional_sku_ids,
+                        promotionEndDatetime: t,
+                        storefronts: n,
+                        announcementModalConfig: i,
+                    },
+                });
         } catch {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
         }
@@ -291,4 +293,27 @@ function w(e, t) {
                     httpStatus: e?.status,
                 });
             }));
+}
+async function G() {
+    try {
+        let e =
+                (await r.Bo.get({ url: _.Rsh.SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT, rejectWithError: !0 }))
+                    .body ?? null,
+            t = null;
+        null != e &&
+            (t = {
+                applicationId: e.application_id,
+                lightThemeLogoUrl: e.light_theme_logo_url ?? null,
+                darkThemeLogoUrl: e.dark_theme_logo_url ?? null,
+                backgroundUrl: e.background_url ?? null,
+                titles: e.titles ?? null,
+                subtitle: e.subtitle ?? null,
+                features:
+                    e.features?.map((e) => ({ assetUrl: e.asset_url, title: e.title, subtitle: e.subtitle })) ?? null,
+                buttonText: e.button_text ?? null,
+            }),
+            a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS", config: t });
+    } catch (e) {
+        a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_FAILURE" });
+    }
 }

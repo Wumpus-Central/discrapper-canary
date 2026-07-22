@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => A, UX: () => y, dZ: () => S });
+n.d(t, { Ay: () => A, UX: () => S, dZ: () => y });
 var l = n(627968),
     i = n(64700),
     r = n(503698),
@@ -9,18 +9,18 @@ var l = n(627968),
     c = n(430690),
     d = n(529427),
     p = n(883645),
-    m = n(21713),
+    m = n(601194),
     h = n(316915),
     C = n(573359),
     E = n(166532),
-    f = n(370353);
+    f = n(239945);
 function A(e) {
     let { header: t, stepProps: n } = (function (e) {
             let { header: t, ...n } = e;
             return { header: t, stepProps: n };
         })(e),
         { step: r, stepConfigs: s } = (0, p.Ay)(),
-        { setBodyNode: A, setFooterNode: S, setModalOverlayNode: y } = (0, m.Gm)(),
+        { setBodyNode: A, setFooterNode: y, setModalOverlayNode: S } = (0, m.Gm)(),
         P = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
         { setReadySlideId: I, unifiedCheckoutFlow: _ } = (0, h.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
@@ -29,8 +29,8 @@ function A(e) {
         T = s.find((e) => e.key === r);
     if (
         (i.useEffect(() => {
-            y(null);
-        }, [r, y]),
+            S(null);
+        }, [r, S]),
         null == T)
     )
         throw new d.vd({
@@ -41,7 +41,7 @@ function A(e) {
         x = T?.options?.hideDefaultModalBody ?? !1,
         v = T?.options?.sliderBodyClassName,
         N = r === E.pn.REVIEW,
-        M = i.useCallback(
+        R = i.useCallback(
             (e, t) => {
                 t === r && A(e);
             },
@@ -75,7 +75,7 @@ function A(e) {
                                                         id: e.key,
                                                         children: (0, l.jsx)("form", {
                                                             className: a()(f.OO, { [f.Wq]: N }, v),
-                                                            ref: (t) => M(t, e.key),
+                                                            ref: (t) => R(t, e.key),
                                                             onSubmit: (e) => e.preventDefault(),
                                                         }),
                                                     },
@@ -84,10 +84,10 @@ function A(e) {
                                             ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => S(e) }),
+                          (0, l.jsx)("div", { ref: (e) => y(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
-                                  y(e);
+                                  S(e);
                               },
                           }),
                       ],
@@ -95,12 +95,12 @@ function A(e) {
         ],
     });
 }
-function S(e) {
+function y(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);
 }
-function y(e) {
+function S(e) {
     let { children: t } = e,
         { footerNode: n } = (0, m.Gm)();
     return null == n ? null : s.createPortal(t, n);

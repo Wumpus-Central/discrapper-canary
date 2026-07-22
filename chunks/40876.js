@@ -215,7 +215,7 @@ let r = {
             "GUILD_ROOM_LOCAL_UPDATE",
             "GUILD_ROOM_DISCONNECT",
         ],
-        inlineRequire: () => n(475868).A,
+        inlineRequire: () => n(214787).A,
         neverLoadBeforeConnectionOpen: !0,
         hasStoreChangeListeners: !0,
     },
@@ -462,7 +462,7 @@ let r = {
         inlineRequire: () => n(415202).A,
     },
     RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(908816).A },
-    RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(113179).A },
+    RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(335560).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(199543).A,
@@ -877,6 +877,16 @@ let r = {
     WebAuthnSignalManager: {
         actions: ["AUTHENTICATOR_DELETE", "CURRENT_USER_UPDATE", "MFA_WEBAUTHN_CREDENTIALS_LOADED"],
         inlineRequire: () => n(915968).A,
+    },
+    SocialLayerStorefrontAnnouncementManager: {
+        actions: [
+            "LOGOUT",
+            "POST_CONNECTION_OPEN",
+            "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
+            "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT_FETCH_SUCCESS",
+        ],
+        inlineRequire: () => n(889979).A,
+        neverLoadBeforeConnectionOpen: !0,
     },
     HavenManager: { actions: ["HAVEN_DISCONNECT"], inlineRequire: () => n(63446).A },
     RestrictedHoursManager: {

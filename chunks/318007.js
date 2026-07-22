@@ -8,9 +8,9 @@ var i = n(503698),
     o = n(650588),
     u = n(45938),
     c = n(242874),
-    d = n(75825),
+    d = n(165191),
     p = n(238017),
-    m = n(796174);
+    m = n(860262);
 function h(e) {
     let { isShopGift: t } = e,
         {
@@ -22,11 +22,11 @@ function h(e) {
             setSoundEffect: f,
         } = (0, s.Pv)(),
         A = (0, u.lo)(n, t),
-        S = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        y = A !== u.tB.DEFAULT;
+        y = A === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
+        S = A !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            y &&
+            S &&
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [
@@ -44,7 +44,7 @@ function h(e) {
                                       })
                                     : (0, l.jsx)(a.y, { className: m.u1 }),
                         }),
-                        S &&
+                        y &&
                             (0, l.jsxs)("div", {
                                 className: r()(m.b7, m.Ow),
                                 children: [

@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { c: () => A });
+n.d(t, { c: () => E });
 var i = n(379197),
     r = n(554146),
     a = n(933681),
@@ -9,9 +9,8 @@ var i = n(379197),
     d = n(457421),
     c = n(651162),
     u = n(295811),
-    _ = n(758836),
-    E = n(188275);
-function A(e) {
+    _ = n(758836);
+function E(e) {
     switch (e) {
         case r.M.COLLECTIBLES_SHOP_ENTRY_MARKETING:
             return d.A.getMarketingBySurface(i.R.DESKTOP_SHOP_BUTTON)?.version ?? 0;
@@ -27,7 +26,6 @@ function A(e) {
             }
             return 0;
         case r.M.GAME_SHOP_ANNOUNCEMENT_MODAL:
-            return E.Lo;
         case r.M.SLAYER_STOREFRONT_VC_GIFTING_STREAM_HEADER_NEW_BADGE:
         case r.M.SLAYER_STOREFRONT_VC_GIFTING_PANEL_APP_WIDGET_CTA:
         case r.M.COLLECTIBLES_SHOP_SLAYER_STOREFRONT_PROMOTIONAL_BANNER:

@@ -479,7 +479,7 @@
   "SOCIAL_LAYER_APPLICATION_STOREFRONT_SKU_ELIGIBILITY": "/partner-sdk/applications/:param/storefront/skus/:param/eligibility",
   "SOCIAL_LAYER_STOREFRONT_ANNOUNCEMENT": "/partner-sdk/guilds/:param/application-storefront/announcement",
   "SOCIAL_LAYER_STOREFRONT_CONFIG": "/partner-sdk/storefront-config",
-  "SOCIAL_LAYER_STOREFRONT_ELIGIBILITY": "/partner-sdk/storefront-eligibility",
+  "SOCIAL_LAYER_STOREFRONT_LAUNCH_ANNOUNCEMENT": "/partner-sdk/storefront-launch-announcement",
   "ORDER_GET": "/billing/orders/:param",
   "ORDER_CREATE": "/billing/orders",
   "ORDER_LIST": "/billing/orders",
