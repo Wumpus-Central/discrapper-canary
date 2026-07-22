@@ -5,7 +5,7 @@ n(64700);
 var r = n(503698),
     a = n.n(r),
     s = n(17928),
-    l = n(990078),
+    l = n(866665),
     o = n(709066),
     d = n(824994),
     c = n(922301),
@@ -15,7 +15,7 @@ var r = n(503698),
     A = n(351906),
     h = n(427262),
     I = n(375708),
-    f = n(375930);
+    f = n(250658);
 function p(e) {
     let {
             primary: t,
@@ -31,20 +31,15 @@ function p(e) {
             displayNameStyles: T,
             displayNameStylesType: m,
         } = e,
-        g = (0, d.W)({ location: "DiscordTag" });
+        g = (0, d.W)({ location: "DiscordTag" }),
+        S = (0, i.jsx)("span", {
+            className: a()(f.__invalid_username, A),
+            children: null != T ? (0, i.jsx)(u.A, { userName: t, displayNameStyles: T, effectDisplayType: m }) : t,
+        });
     return (0, i.jsxs)("div", {
         className: a()(f.pq, { [f.e8]: g && null != T }, E),
         children: [
-            (0, i.jsx)(l.m, {
-                text: I.intl.string(I.t.Br1ls3),
-                shouldShow: p,
-                ariaHidden: !p,
-                children: (0, i.jsx)("span", {
-                    className: a()(f.__invalid_username, A),
-                    children:
-                        null != T ? (0, i.jsx)(u.A, { userName: t, displayNameStyles: T, effectDisplayType: m }) : t,
-                }),
-            }),
+            p ? (0, i.jsx)(l.m, { text: I.intl.string(I.t.Br1ls3), children: S }) : S,
             r,
             null != n ? (0, i.jsx)("span", { className: a()(f.ok, _), children: n }) : void 0,
             null != s && (0, i.jsx)(o.A, { type: s, className: a()(f.ok, h), verified: c }),
@@ -72,11 +67,11 @@ let T = function (e) {
         O = h.Ay.getName(t),
         R = r ? S : (n ?? O),
         L = t.hasUniqueUsername(),
-        D = a
+        y = a
             ? (0, i.jsx)(_.Ay, {
                   primaryGuild: t.primaryGuild,
                   userId: t.id,
-                  inline: !0,
+                  inline: !1,
                   disableGuildProfile: !0,
                   className: f.Mp,
               })
@@ -87,7 +82,7 @@ let T = function (e) {
         return (0, i.jsx)(p, {
             primary: e,
             secondary: n,
-            guildTag: D,
+            guildTag: y,
             botType: N,
             botVerified: C,
             showStreamerModeTooltip: m && h.Ay.isNameConcealed(e),
@@ -98,7 +93,7 @@ let T = function (e) {
     }
     return (0, i.jsx)(E.A, {
         name: R,
-        guildTag: D,
+        guildTag: y,
         botType: N,
         botVerified: C,
         discriminator: g || R !== S ? null : (o ?? t.discriminator),
