@@ -3852,22 +3852,6 @@
     }
   },
   {
-    "name": "2026-05-gdop-v2-upsell",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-global-soundboard-wheel-popout",
     "kind": "user",
     "defaultConfig": {
@@ -4309,22 +4293,6 @@
       "2": 2,
       "3": 3,
       "4": 4
-    }
-  },
-  {
-    "name": "2026-06-application-widget-profile-popout-preload",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
     }
   },
   {
