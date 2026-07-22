@@ -4831,6 +4831,7 @@ var rv =
         (ew.PREMIUM_MARKETING_SURFACE_VIEWED = "premium_marketing_surface_viewed"),
         (ew.PREMIUM_MARKETING_SURFACE_EXITED = "premium_marketing_surface_exited"),
         (ew.PREMIUM_MARKETING_SURFACE_REACHED_BOTTOM = "premium_marketing_surface_reached_bottom"),
+        (ew.PREMIUM_MARKETING_COMPONENT_BOTTOM_VIEWED = "premium_marketing_component_bottom_viewed"),
         (ew.PREMIUM_MARKETING_GUILD_SIDEBAR_ENTRYPOINT_VIEWED = "premium_marketing_guild_sidebar_entrypoint_viewed"),
         (ew.PREMIUM_AGGREGATE_UPSELL_MODAL_INTERACTION = "premium_aggregate_upsell_modal_interaction"),
         (ew.PREMIUM_SETTINGS_INTERACTED = "premium_settings_interacted"),
