@@ -1,96 +1,113 @@
 "use strict";
-n.d(t, { T: () => p });
+n.d(t, { T: () => N });
 var i = n(627968),
     r = n(64700),
-    a = n(617498),
-    s = n(866665),
-    l = n(717421),
-    o = n(713608),
-    d = n(918715),
-    c = n(271520),
-    u = n(762555),
-    _ = n(16590),
-    E = n(375708),
-    A = n(111524);
-function h(e) {
+    a = n(503698),
+    s = n.n(a),
+    l = n(617498),
+    o = n(505124),
+    d = n(866665),
+    c = n(43990),
+    u = n(717421),
+    _ = n(713608),
+    E = n(918715),
+    A = n(661531),
+    h = n(271520),
+    I = n(762555),
+    f = n(16590),
+    p = n(375708),
+    T = n(111524);
+function m(e) {
     let {
         leftPx: t,
         rightPx: n,
         setHoveredIndex: r,
-        isAnimated: l,
-        index: o,
-        expansionSpring: d,
-        icon: c,
-        tooltip: u,
+        isAnimated: a,
+        index: u,
+        activated: _,
+        expansionSpring: E,
+        icon: h,
+        tooltip: I,
     } = e;
-    return (0, i.jsx)(s.m, {
+    return (0, i.jsx)(d.m, {
         delay: 300,
-        text: u,
-        children: (0, i.jsx)(a.animated.div, {
-            className: A.z,
-            onMouseEnter: () => r(o),
-            onMouseLeave: () => r(null),
-            style: {
-                left: l ? d.to((e) => t - e) : t,
-                right: n,
-                width: l ? d.to((e) => `${I + 2 * e}px`) : I,
-                height: l ? d.to((e) => `${I + 2 * e}px`) : I,
-            },
-            children: (0, i.jsx)(c, { size: "custom", width: "100%", height: "100%" }),
+        text: I,
+        children: (0, i.jsx)(c.N, {
+            theme: o.NJ.MIDNIGHT,
+            children: (e) =>
+                (0, i.jsx)(l.animated.div, {
+                    className: s()(T.z, e),
+                    onMouseEnter: () => r(u),
+                    onMouseLeave: () => r(null),
+                    style: {
+                        left: a ? E.to((e) => t - e) : t,
+                        right: n,
+                        width: a ? E.to((e) => `${g + 2 * e}px`) : g,
+                        height: a ? E.to((e) => `${g + 2 * e}px`) : g,
+                    },
+                    children: (0, i.jsx)(h, {
+                        size: "custom",
+                        width: "100%",
+                        height: "100%",
+                        color: _ ? A.A.colors.INTERACTIVE_ICON_ACTIVE : A.A.colors.INTERACTIVE_ICON_DEFAULT,
+                    }),
+                }),
         }),
     });
 }
-let I = 12,
-    f = { tension: 500, friction: 30, clamp: !0 };
-function p(e) {
+let g = 12,
+    S = { tension: 500, friction: 30, clamp: !0 };
+function N(e) {
     let [t, n] = r.useState(null),
         a = r.useRef(null),
-        [{ expansion: s }, A] = (0, l.z)(() => ({
+        [{ expansion: s }, l] = (0, u.z)(() => ({
             expansion: 0,
-            config: f,
+            config: S,
             onRest: () => {
                 null == a.current && n(null);
             },
         })),
-        p = r.useCallback(
+        o = r.useCallback(
             (e) => {
-                (a.current = e), null != e ? (n(e), A({ expansion: 4 })) : A({ expansion: 0 });
+                (a.current = e), null != e ? (n(e), l({ expansion: 4 })) : l({ expansion: 0 });
             },
-            [A],
+            [l],
         ),
-        T = c.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
-        m = r.useMemo(() => (T ? e.filter((e) => null != e.game) : []), [e, T]),
-        g = r.useMemo(() => m.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: I, gapPx: 4 })), [m]),
-        S = r.useCallback(
-            (e) => {
-                let n,
-                    r,
-                    a = t === e.index,
-                    l = m[e.index];
-                if (null == l) return null;
-                switch (l.game.type) {
-                    case u.Q_.MULTIKILL:
-                        (r = E.intl.string(_.default.PMLPER)), (n = o.q);
+        d = h.A.useConfig({ location: "useClipTimelineIndicators" }).enableGameEventsOnPlayer,
+        c = r.useMemo(() => (d ? e.filter((e) => null != e.game) : []), [e, d]),
+        A = r.useMemo(() => c.map((e, t) => ({ index: t, timeSec: e.timestamp_ms / 1e3, widthPx: g, gapPx: 4 })), [c]),
+        T = r.useCallback(
+            (e, n) => {
+                let r,
+                    a,
+                    l = t === e.index,
+                    d = c[e.index];
+                if (null == d) return null;
+                let u = n > e.leftPx;
+                switch (d.game.type) {
+                    case I.Q_.MULTIKILL:
+                        (a = p.intl.string(f.default.PMLPER)), (r = _.q);
                         break;
-                    case u.Q_.KILL:
-                        (n = o.q), (r = E.intl.string(_.default.fYdqnM));
+                    case I.Q_.KILL:
+                        (r = _.q), (a = p.intl.string(f.default.fYdqnM));
                         break;
-                    case u.Q_.DEATH:
-                        (n = d.V), (r = E.intl.string(_.default.MhIx41));
+                    case I.Q_.DEATH:
+                        (r = E.V), (a = p.intl.string(f.default.MhIx41));
                 }
-                return null == n || null == r
+                return null == r || null == a
                     ? null
-                    : (0, i.jsx)(h, {
+                    : (0, i.jsx)(m, {
                           ...e,
+                          activated: u,
                           gapPx: 4,
-                          tooltip: r,
+                          tooltip: a,
                           expansionSpring: s,
-                          setHoveredIndex: p,
-                          isAnimated: a,
-                          icon: n,
+                          setHoveredIndex: o,
+                          isAnimated: l,
+                          icon: r,
                       });
             },
-            [t, m, p, s],
+            [t, c, o, s],
         );
-    return { indicators: g, animatingIndex: t, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: S };
+    return { indicators: A, animatingIndex: t, expansionSpring: s, hoverExpansionPx: 4, renderIndicator: T };
 }
