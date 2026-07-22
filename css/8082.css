@@ -4,7 +4,7 @@
     background-color: linear-gradient(0deg, hsl(var(--black-hsl)/.2) 0, hsl(var(--black-hsl)/.2) 100%), var(--background-mod-normal);
     border: 1px solid var(--border-subtle);
     border-radius: 62px;
-    bottom: var(--space-10);
+    bottom: var(--space-6);
     box-sizing: border-box;
     gap: var(--space-8);
     height: 36px;
