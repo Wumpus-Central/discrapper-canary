@@ -421,7 +421,6 @@ function eg(e) {
                                           value: I?.current ?? 0,
                                           maxValue: E,
                                           size: "md",
-                                          valueLabel: I?.progress_helper_text,
                                           className: eu.hr,
                                           ...F,
                                       })
