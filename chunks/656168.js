@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("581854", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("582418", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -953,6 +953,7 @@ let eT = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
             (C.GAME_SERVERS = "game-servers"),
             (C.REPORT_TO_MOD = "report-to-mod"),
             (C.GUILD_OFFICIAL_MESSAGES = "official-messages"),
+            (C.GUILD_SPACE = "guild-space"),
             C),
         ),
     );

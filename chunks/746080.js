@@ -1,8 +1,8 @@
 "use strict";
-n.d(t, { Gr: () => l, T4: () => d, VV: () => s, aQ: () => _, jq: () => o, lx: () => c, mP: () => u, qW: () => a });
+n.d(t, { Gr: () => o, T4: () => u, VV: () => a, aQ: () => _, jq: () => l, lx: () => c, mP: () => d, qW: () => s });
 var i,
     r,
-    s =
+    a =
         (((i = {}).ROLE_SUBSCRIPTIONS = "role-subscriptions"),
         (i.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
         (i.GAME_SHOP = "game-shop"),
@@ -17,15 +17,16 @@ var i,
         (i.GAME_SERVERS = "game-servers"),
         (i.REPORT_TO_MOD = "report-to-mod"),
         (i.GUILD_OFFICIAL_MESSAGES = "official-messages"),
+        (i.GUILD_SPACE = "guild-space"),
         i);
-let a = new Set(Object.values(s));
-function o(e) {
-    return a.has(e);
+let s = new Set(Object.values(a));
+function l(e) {
+    return s.has(e);
 }
-function l(e, t) {
+function o(e, t) {
     return `${e}-${t}`;
 }
-function u(e) {
+function d(e) {
     return !!e?.includes("@home");
 }
 let c = Object.freeze({
@@ -49,11 +50,11 @@ let c = Object.freeze({
     IS_GAME_INVITES_CHANNEL: 4194304,
     HAS_ONLY_SYSTEM_MESSAGES: 8388608,
 });
-var d =
+var u =
     (((r = {}).GUILD_HOME = "home"),
     (r.SERVER_GUIDE = "guide"),
     (r.CHANNEL_BROWSER = "browse"),
     (r.CUSTOMIZE_COMMUNITY = "customize"),
     (r.LINKED_ROLES = "linked-roles"),
     r);
-let _ = new Set(Object.values(d));
+let _ = new Set(Object.values(u));

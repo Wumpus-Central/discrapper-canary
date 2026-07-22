@@ -776,5 +776,22 @@
         }
       }
     ]
+  },
+  {
+    "kind": "guild",
+    "id": "2026-06_guild_spaces",
+    "label": "Guild Space",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "treatments": [
+      {
+        "id": 1,
+        "label": "Enable Guild Space",
+        "config": {
+          "enabled": true
+        }
+      }
+    ]
   }
 ]
