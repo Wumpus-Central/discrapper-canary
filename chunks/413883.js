@@ -201,7 +201,7 @@ var eC = n(503698),
     eS = n(868652),
     eI = n(379229),
     eb = n(482487),
-    eG = n(381724),
+    eG = n(914732),
     eR = n(828162),
     ev = n(853513),
     ej = n(689599);
@@ -1981,14 +1981,20 @@ function lj(e) {
     return (0, s.jsxs)("div", {
         className: lv.iE,
         children: [
-            (0, s.jsxs)("span", {
+            (0, s.jsxs)(N.E, {
+                tag: "span",
+                color: "text-subtle",
+                variant: "text-xs/medium",
                 className: eE()(lv.VV, { [lv.Ki]: l, [lv.$G]: n >= 100 }),
                 children: [
                     l ? (0, s.jsx)(lR.n, { size: "md", color: "currentColor", className: lv.LB }) : null,
                     n.toString().padStart(2, "0"),
                 ],
             }),
-            (0, s.jsx)("span", {
+            (0, s.jsx)(N.E, {
+                tag: "span",
+                color: "text-subtle",
+                variant: "text-xs/medium",
                 className: eE()(lv.X5, { [lv.$G]: t >= 100 }),
                 children: t.toString().padStart(2, "0"),
             }),
@@ -2149,16 +2155,16 @@ let lP = r.memo(function (e) {
                 [t.id],
             ),
             x = null == c ? 0 : c.length,
-            { role: N, ..._ } = (0, d.rm)(t.id),
-            S = r.useRef(null),
-            I =
+            { role: _, ...S } = (0, d.rm)(t.id),
+            I = r.useRef(null),
+            b =
                 g > 0
                     ? K.intl.formatToPlainString(K.t["ZL7+I6"], { channelName: t.name, mentionCount: g })
                     : A
                       ? K.intl.formatToPlainString(K.t.YlVvmc, { channelName: t.name })
                       : K.intl.formatToPlainString(K.t["0nZpiF"], { channelName: t.name });
         return (0, s.jsxs)("li", {
-            role: N,
+            role: _,
             className: eE()(eu.fx, { [eu.wH]: l }),
             children: [
                 (0, s.jsx)(lO, { withGuildIcon: o }),
@@ -2170,8 +2176,8 @@ let lP = r.memo(function (e) {
                           style: { transform: "rotateX(180deg) translateY(-9px)" },
                       }),
                 (0, s.jsx)(tG.vN, {
-                    focusTarget: S,
-                    ringTarget: S,
+                    focusTarget: I,
+                    ringTarget: I,
                     offset: { top: 2, bottom: 2, right: 4 },
                     children: (0, s.jsxs)("div", {
                         className: eE()(eu.Ki, nW.iE, nW.ZS, {
@@ -2185,16 +2191,24 @@ let lP = r.memo(function (e) {
                         children: [
                             !A || f || l ? null : (0, s.jsx)("div", { className: eE()(nW.gy, nW.WS) }),
                             (0, s.jsx)(ei.D, {
-                                ..._,
-                                innerRef: S,
+                                ...S,
+                                innerRef: I,
                                 className: nW.nf,
                                 onClick: p,
-                                "aria-label": I,
+                                "aria-label": b,
                                 focusProps: { enabled: !1 },
                                 children: (0, s.jsxs)("div", {
                                     className: eE()(nW.Y5, nW.__invalid_threadMainContent),
                                     children: [
-                                        (0, s.jsx)(tI.A, { className: nW.UU, "aria-hidden": !0, children: t.name }),
+                                        (0, s.jsx)(tI.A, {
+                                            className: nW.UU,
+                                            "aria-hidden": !0,
+                                            children: (0, s.jsx)(N.E, {
+                                                variant: "text-sm/medium",
+                                                color: "none",
+                                                children: t.name,
+                                            }),
+                                        }),
                                         (0, s.jsxs)("div", {
                                             className: nW.Y_,
                                             onClick: nR.dG,
@@ -2207,7 +2221,7 @@ let lP = r.memo(function (e) {
                                                     mentionCount: g,
                                                     isMentionLowImportance: m,
                                                 }),
-                                                (0, s.jsx)(l_, { thread: t, tabIndex: _.tabIndex }),
+                                                (0, s.jsx)(l_, { thread: t, tabIndex: S.tabIndex }),
                                             ],
                                         }),
                                     ],
@@ -3921,7 +3935,7 @@ function sv(e) {
                 n.e("55513"),
                 n.e("47626"),
                 n.e("56373"),
-                n.e("70644"),
+                n.e("48263"),
                 n.e("49347"),
                 n.e("64287"),
                 n.e("53934"),

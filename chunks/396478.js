@@ -1,57 +1,71 @@
 "use strict";
-n.d(t, { G8: () => h, SG: () => I, pp: () => f });
+n.d(t, { G8: () => I, SG: () => f, pp: () => p });
 var i = n(627968),
     r = n(64700),
     a = n(503698),
     s = n.n(a),
     l = n(462887),
-    o = n(707554),
-    d = n(235986),
-    c = n(652215),
-    u = n(333549),
-    _ = n(522826);
-let { Provider: E, Consumer: A } = r.createContext(c.NJ8.DARK);
-class h extends r.PureComponent {
+    o = n(297264),
+    d = n(834730),
+    c = n(235986),
+    u = n(652215),
+    _ = n(333549),
+    E = n(522826);
+let { Provider: A, Consumer: h } = r.createContext(u.NJ8.DARK);
+class I extends r.PureComponent {
     render() {
-        let { lightSrc: e, darkSrc: t, width: n, height: r, offsetX: a, offsetY: o, style: c } = this.props;
-        return (0, i.jsx)(A, {
-            children: (E) =>
-                (0, i.jsx)(d.A.Child, {
+        let { lightSrc: e, darkSrc: t, width: n, height: r, offsetX: a, offsetY: o, style: d } = this.props;
+        return (0, i.jsx)(h, {
+            children: (u) =>
+                (0, i.jsx)(c.A.Child, {
                     grow: 0,
-                    className: s()(u.Sl, _.C2),
+                    className: s()(_.Sl, E.C2),
                     style: {
-                        ...c,
+                        ...d,
                         width: n,
                         height: r,
                         marginLeft: a,
                         marginTop: o,
-                        backgroundImage: `url(${((0, l.M))(E) ? t : e})`,
+                        backgroundImage: `url(${((0, l.M))(u) ? t : e})`,
                     },
                 }),
         });
     }
 }
-let I = (e) => {
+let f = (e) => {
     let { children: t, className: n, noteClassName: r, note: a, style: l } = e;
-    return (0, i.jsxs)(d.A.Child, {
+    return (0, i.jsxs)(c.A.Child, {
         grow: 0,
-        direction: d.A.Direction.VERTICAL,
+        direction: c.A.Direction.VERTICAL,
         style: l,
         children: [
-            null != t && (0, i.jsx)(o.H, { className: s()(n, u.DD), children: t }),
-            null != a ? (0, i.jsx)("div", { className: s()(r, u.Qq, _.Ot), children: a }) : null,
+            null != t &&
+                (0, i.jsx)(o.D, {
+                    color: "none",
+                    variant: "heading-lg/semibold",
+                    className: s()(n, _.DD),
+                    children: t,
+                }),
+            null != a
+                ? (0, i.jsx)(d.E, {
+                      color: "text-muted",
+                      variant: "text-md/normal",
+                      className: s()(r, _.Qq, E.Ot),
+                      children: a,
+                  })
+                : null,
         ],
     });
 };
-function f(e) {
+function p(e) {
     let { children: t, theme: n, className: r, style: a } = e;
-    return (0, i.jsx)(E, {
+    return (0, i.jsx)(A, {
         value: n,
-        children: (0, i.jsx)(d.A, {
-            direction: d.A.Direction.VERTICAL,
-            align: d.A.Align.CENTER,
-            justify: d.A.Justify.CENTER,
-            className: s()(u.iE, r),
+        children: (0, i.jsx)(c.A, {
+            direction: c.A.Direction.VERTICAL,
+            align: c.A.Align.CENTER,
+            justify: c.A.Justify.CENTER,
+            className: s()(_.iE, r),
             style: a,
             children: t,
         }),

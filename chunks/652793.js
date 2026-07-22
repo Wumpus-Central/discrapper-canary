@@ -1,4 +1,4 @@
-n.d(t, { G: () => u });
+n.d(t, { G: () => h });
 var l = n(627968);
 n(64700);
 var i = n(503698),
@@ -6,45 +6,56 @@ var i = n(503698),
     r = n(837381),
     a = n(614820),
     o = n(890856),
-    d = n(907305),
-    c = n(645591);
-function u(e) {
+    d = n(834730),
+    c = n(180961),
+    u = n(601551);
+function h(e) {
     let {
             id: t,
             className: n,
             innerClassName: i,
-            renderIcon: u,
-            text: h,
-            selected: A,
-            trailing: g,
-            background: m,
-            showUnread: f = !1,
-            ref: p,
-            ...C
+            renderIcon: h,
+            text: A,
+            selected: g,
+            trailing: m,
+            background: f,
+            showUnread: p = !1,
+            ref: C,
+            ...E
         } = e,
-        E = (0, r.rm)(t),
-        x = (0, a.O)(h) ?? "";
+        x = (0, r.rm)(t),
+        N = (0, a.O)(A) ?? "";
     return (0, l.jsx)("li", {
-        ref: p,
+        ref: C,
         children: (0, l.jsxs)(o.s, {
-            ...C,
-            buttonProps: { ...E, id: t, role: "button" },
+            ...E,
+            buttonProps: { ...x, id: t, role: "button" },
             tag: "div",
-            "aria-label": x,
+            "aria-label": N,
             focusProps: { offset: { top: 1, bottom: 1, right: 4 } },
             onContextMenu:
-                null != C.onContextMenu
-                    ? C.onContextMenu
+                null != E.onContextMenu
+                    ? E.onContextMenu
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: s()(d.fx, c.iE, { [c.J1]: A }, n),
+            className: s()(c.fx, u.iE, { [u.J1]: g }, n),
             children: [
-                m,
-                f ? (0, l.jsx)("div", { className: s()(c.gy, c.WS) }) : null,
+                f,
+                p ? (0, l.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
                 (0, l.jsxs)("div", {
-                    className: s()([c.nf, c.ae, i]),
-                    children: [u(c.Kk), (0, l.jsx)("div", { className: c.UU, "aria-hidden": !0, children: h }), g],
+                    className: s()([u.nf, u.ae, i]),
+                    children: [
+                        h(u.Kk),
+                        (0, l.jsx)(d.E, {
+                            color: "none",
+                            variant: "text-md/medium",
+                            className: u.UU,
+                            "aria-hidden": !0,
+                            children: A,
+                        }),
+                        m,
+                    ],
                 }),
             ],
         }),

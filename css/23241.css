@@ -287,15 +287,11 @@
     border: 1px solid var(--border-normal);
     border-radius: var(--radius-md);
     box-sizing: border-box;
-    color: var(--text-subtle);
     display: grid;
     flex: 0 0 auto;
-    font-size: 12px;
-    font-weight: var(--font-weight-medium);
     grid-template-columns: 1fr auto;
     height: 20px;
     justify-content: center;
-    line-height: 18px;
     overflow: hidden
 }
 
@@ -328,8 +324,10 @@
 }
 
 .total__260e1 {
+    align-items: center;
     background-color: var(--background-mod-strong);
     box-sizing: border-box;
+    display: flex;
     font-variant-numeric: tabular-nums;
     padding-block: 0;
     padding-inline: 2px 4px;

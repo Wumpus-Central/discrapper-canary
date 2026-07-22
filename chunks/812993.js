@@ -1,72 +1,79 @@
 "use strict";
-n.d(t, { EG: () => l, Gu: () => c, JI: () => h, Lp: () => _, fk: () => f, hV: () => d, o6: () => u });
+n.d(t, { EG: () => d, Gu: () => u, JI: () => A, Lp: () => E, fk: () => h, hV: () => _, o6: () => c });
 var i = n(627968);
 n(64700);
 var r = n(503698),
-    s = n.n(r),
-    a = n(661531),
-    o = n(235520);
-let l = { ROUND: o.rS, ROUND_LEFT: o.Q2, ROUND_RIGHT: o.Hg, SQUARE: "" };
-function u(e) {
+    a = n.n(r),
+    s = n(661531),
+    l = n(834730),
+    o = n(188872);
+let d = { ROUND: o.rS, ROUND_LEFT: o.Q2, ROUND_RIGHT: o.Hg, SQUARE: "" };
+function c(e) {
     return e < 10 ? 16 : e < 100 ? 22 : 30;
 }
-function c(e) {
+function u(e) {
     return e < 1e3 ? `${e}` : `${Math.min(Math.floor(e / 1e3), 9)}k+`;
 }
-let d = (e) => {
-        let {
-            count: t,
-            color: n = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            disableColor: r = !1,
-            shape: d = l.ROUND,
-            className: _,
-            style: h,
-            renderBadgeCount: f = c,
-            ...p
-        } = e;
-        return (0, i.jsx)("div", {
-            className: s()(_, o.Do, d),
-            style: { backgroundColor: r ? void 0 : n, width: u(t), ...h },
-            ...p,
-            children: f(t),
-        });
-    },
-    _ = (e) => {
-        let {
-            text: t,
-            className: n,
-            color: r = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            shape: u = l.ROUND,
-            disableColor: c = !1,
-            style: d,
-            ..._
-        } = e;
-        return (0, i.jsx)("div", {
-            className: s()(n, o.U1, u),
-            style: { backgroundColor: c ? void 0 : r, ...d },
-            ..._,
-            children: t,
-        });
-    },
-    h = (e) => {
-        let { text: t, className: n, ...r } = e;
-        return (0, i.jsx)(_, { className: s()(o.BE, n), text: t, ...r });
-    },
-    f = (e) => {
-        let {
-            icon: t,
-            className: n,
-            color: r = a.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
-            shape: u = l.ROUND,
-            disableColor: c = !1,
-            style: d,
-            "aria-label": _,
-        } = e;
-        return (0, i.jsx)("div", {
-            className: s()(n, o.u3, u),
-            style: { backgroundColor: c ? void 0 : r, ...d },
-            role: null != _ ? "img" : void 0,
-            "aria-label": _,
-            children: (0, i.jsx)(t, { className: o.Kk, color: "currentColor" }),
-        });
-    };
+function _(e) {
+    let {
+        count: t,
+        color: n = s.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+        disableColor: r = !1,
+        shape: _ = d.ROUND,
+        className: E,
+        style: A,
+        renderBadgeCount: h = u,
+        ...I
+    } = e;
+    return (0, i.jsx)(l.E, {
+        variant: "eyebrow",
+        color: "none",
+        className: a()(E, o.Do, _),
+        style: { backgroundColor: r ? void 0 : n, width: c(t), ...A },
+        ...I,
+        children: h(t),
+    });
+}
+function E(e) {
+    let {
+        text: t,
+        className: n,
+        color: r = s.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+        shape: c = d.ROUND,
+        disableColor: u = !1,
+        style: _,
+        ...E
+    } = e;
+    return (0, i.jsx)(l.E, {
+        variant: "eyebrow",
+        color: "none",
+        className: a()(n, o.U1, c),
+        style: { backgroundColor: u ? void 0 : r, ..._ },
+        ...E,
+        children: t,
+    });
+}
+function A(e) {
+    let { text: t, className: n, ...r } = e;
+    return (0, i.jsx)(E, { className: a()(o.BE, n), text: t, ...r });
+}
+function h(e) {
+    let {
+        icon: t,
+        className: n,
+        color: r = s.A.colors.BADGE_NOTIFICATION_BACKGROUND.css,
+        shape: c = d.ROUND,
+        disableColor: u = !1,
+        style: _,
+        "aria-label": E,
+    } = e;
+    return (0, i.jsx)(l.E, {
+        variant: "eyebrow",
+        color: "none",
+        className: a()(n, o.u3, c),
+        style: { backgroundColor: u ? void 0 : r, ..._ },
+        role: null != E ? "img" : void 0,
+        "aria-label": E,
+        children: (0, i.jsx)(t, { className: o.Kk, color: "currentColor" }),
+    });
+}

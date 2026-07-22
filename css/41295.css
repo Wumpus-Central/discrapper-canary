@@ -91,21 +91,13 @@
 }
 
 .title__33d12 {
-    font-size: 17px;
-    font-weight: var(--font-weight-semibold);
-    line-height: 22px;
+    color: var(--text-muted);
     text-transform: uppercase
 }
 
 .text__33d12,
 .title__33d12 {
-    color: var(--text-muted);
     text-align: center
-}
-
-.text__33d12 {
-    font-size: 16px;
-    line-height: 20px
 }
 
 .container__4f074 {

@@ -213,8 +213,8 @@
     margin-inline-start: calc(28px + var(--space-xs) + var(--space-xs) - var(--space-xs))
 }
 
-.typeThread__2ea32 .name__2ea32 {
-    font-size: 14px
+.typeThread__2ea32 .name__2ea32>div {
+    line-height: var(--channels-name-line-height)
 }
 
 .typeThread__2ea32 .link__2ea32 {
@@ -321,8 +321,6 @@
 
 .name__2ea32 {
     flex: 1 1 auto;
-    font-size: 16px;
-    font-weight: var(--font-weight-medium);
     line-height: var(--channels-name-line-height)
 }
 

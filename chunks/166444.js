@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => $, IC: () => B, Pk: () => V, dG: () => O, gm: () => F });
+n.d(t, { Ay: () => $, IC: () => P, Pk: () => B, dG: () => O, gm: () => F });
 var i = n(627968),
     a = n(64700),
     l = n(503698),
@@ -13,8 +13,8 @@ if (21552 == n.j) var h = n(834730);
 if (21552 == n.j) var f = n(187322);
 var m = n(25639),
     A = n(186369),
-    N = n(148719),
-    x = n(47167),
+    x = n(148719),
+    N = n(47167),
     E = n(970812),
     v = n(713654),
     S = n(945096),
@@ -32,8 +32,8 @@ var m = n(25639),
     I = n(66933),
     L = n(652215),
     G = n(790782),
-    U = n(907305),
-    k = n(645591);
+    U = n(180961),
+    k = n(601551);
 let H = {
     SELECTED: k.J1,
     CONNECTED: k.d4,
@@ -45,12 +45,12 @@ let H = {
 function O(e) {
     e.preventDefault(), e.stopPropagation();
 }
-let P = _.Ay.getEnableHardwareAcceleration() ? c.Js : c.eu;
-function B(e) {
+let V = _.Ay.getEnableHardwareAcceleration() ? c.Js : c.eu;
+function P(e) {
     let { channel: t, size: n = d._3.SIZE_20, className: a } = e;
     return (0, i.jsx)(y.A, { className: a, channel: t, "aria-hidden": !0, size: n });
 }
-function V(e) {
+function B(e) {
     let { channel: t, size: n = d._3.SIZE_20, className: a } = e,
         l = (0, u.bG)([C.default], () => C.default.getUser(t?.recipients[0])),
         r = (0, u.bG)(
@@ -66,7 +66,7 @@ function V(e) {
                 ? { status: null, isMobile: !1, isVR: !1 }
                 : { status: p.A.getStatus(l.id), isMobile: p.A.isMobileOnline(l.id), isVR: p.A.isVROnline(l.id) },
         );
-    return (0, i.jsx)(P, {
+    return (0, i.jsx)(V, {
         className: a,
         size: n,
         src: l?.getAvatarURL(void 0, 40),
@@ -91,13 +91,13 @@ let F = a.memo(function (e) {
             { enableWaveformIcon: d } = (0, A.b)(a.guild_id, "ChannelItemIcon"),
             h = (0, u.bG)([m.A], () => m.A.getAnimationStyle(a.id), [a.id]),
             f = a.type === L.rbe.GUILD_VOICE,
-            x = null;
+            N = null;
         if (d && f && !l && o)
-            x = (0, i.jsx)(E.A, {
+            N = (0, i.jsx)(E.A, {
                 color: "currentColor",
                 className: r()(k.Kk, t),
                 animationStyle: h,
-                locked: (0, N.A)(a),
+                locked: (0, x.A)(a),
             });
         else {
             let e = (function (e, t, n) {
@@ -105,26 +105,26 @@ let F = a.memo(function (e) {
                     case L.rbe.DM:
                         return function (t) {
                             let { className: n } = t;
-                            return (0, i.jsx)(V, { channel: e, className: n });
+                            return (0, i.jsx)(B, { channel: e, className: n });
                         };
                     case L.rbe.GROUP_DM:
                         return function (t) {
                             let { className: n } = t;
-                            return (0, i.jsx)(B, { channel: e, className: n });
+                            return (0, i.jsx)(P, { channel: e, className: n });
                         };
                     default:
                         return (0, v.gU)(e, t, n);
                 }
             })(a, c, { locked: l, hasActiveThreads: s });
             if (null == e) return null;
-            x = (0, i.jsx)(e, { color: "currentColor", className: r()(k.Kk, t) });
+            N = (0, i.jsx)(e, { color: "currentColor", className: r()(k.Kk, t) });
         }
         let S = (0, v.Bq)(a, c, l, s),
             D = `${S} icon`;
         return (0, i.jsx)(g.m, {
             text: S,
             delay: 500,
-            children: (0, i.jsx)("div", { role: "img", "aria-label": D, className: r()(k.zc, n), children: x }),
+            children: (0, i.jsx)("div", { role: "img", "aria-label": D, className: r()(k.zc, n), children: N }),
         });
     }),
     $ =
@@ -138,7 +138,7 @@ let F = a.memo(function (e) {
                           connected: g,
                           unread: m,
                           locked: A,
-                          hasActiveThreads: N,
+                          hasActiveThreads: x,
                           onClick: E,
                           onMouseDown: v,
                           onMouseUp: S,
@@ -150,9 +150,9 @@ let F = a.memo(function (e) {
                           subtitleColor: R,
                           channel: { type: C },
                           onMouseEnter: _,
-                          onMouseLeave: P,
-                          "aria-label": B,
-                          children: V,
+                          onMouseLeave: V,
+                          "aria-label": P,
+                          children: B,
                           guild: $,
                           channelTypeOverride: z,
                           forceInteractable: K,
@@ -170,7 +170,7 @@ let F = a.memo(function (e) {
                       el = (0, T.A)(n);
                   null != el && I.A.getConfig({ guildId: el, location: "channel_item" });
                   let er = L.BVt.CHANNEL(el, n.id),
-                      es = (0, x.Ay)(n),
+                      es = (0, N.Ay)(n),
                       eu = n.isGuildVocal(),
                       eo = null != E || null != S || null != v || K,
                       ec = (0, i.jsx)("div", {
@@ -185,7 +185,7 @@ let F = a.memo(function (e) {
                               onClick: () => E?.(n),
                               transitionExtras: X,
                               ...en,
-                              "aria-label": B,
+                              "aria-label": P,
                               "aria-current": d ? "page" : void 0,
                               focusProps: { enabled: !1 },
                               children: [
@@ -197,20 +197,24 @@ let F = a.memo(function (e) {
                                               channel: n,
                                               guild: $,
                                               hasUsersInVoiceChannel: ee,
-                                              hasActiveThreads: N,
+                                              hasActiveThreads: x,
                                               locked: A,
                                           }),
                                           (0, i.jsx)(o.A, {
                                               className: r()(k.UU, { [k.NW]: J }),
                                               "aria-hidden": !0,
-                                              children: (0, i.jsx)(q, { channel: n, name: null != l ? l : es }),
+                                              children: (0, i.jsx)(q, {
+                                                  textVariant: "text-md/medium",
+                                                  channel: n,
+                                                  name: null != l ? l : es,
+                                              }),
                                           }),
-                                          a.Children.count(V) > 0
+                                          a.Children.count(B) > 0
                                               ? (0, i.jsx)("div", {
                                                     onClick: O,
                                                     onKeyPress: O,
                                                     className: k.Y_,
-                                                    children: V,
+                                                    children: B,
                                                 })
                                               : null,
                                       ],
@@ -271,7 +275,7 @@ let F = a.memo(function (e) {
                           onMouseDown: (e) => v?.(e, n),
                           onContextMenu: (e) => D?.(e, n),
                           onMouseEnter: _,
-                          onMouseLeave: P,
+                          onMouseLeave: V,
                           children: [
                               c || !m ? null : (0, i.jsx)("div", { className: r()(k.gy, Q ? k.WS : void 0) }),
                               b?.(ec) ?? ec,
@@ -281,11 +285,17 @@ let F = a.memo(function (e) {
               })
             : null;
 function q(e) {
-    let { channel: t, name: n } = e,
-        l = t.isPrivate() && 1 === (t.rawRecipients ?? []).length,
-        r = t.rawRecipients?.[0]?.display_name_styles,
-        s = a.useMemo(() => (l ? (0, S.mT)(r) : null), [l, r]);
-    return null != s
-        ? (0, i.jsx)(b.A, { userName: n, displayNameStyles: s, effectDisplayType: D.G.PLAIN, boldFontOpacity: 0.9 })
-        : n;
+    let { channel: t, name: n, textVariant: l } = e,
+        r = t.isPrivate() && 1 === (t.rawRecipients ?? []).length,
+        s = t.rawRecipients?.[0]?.display_name_styles,
+        u = a.useMemo(() => (r ? (0, S.mT)(s) : null), [r, s]);
+    return null != u
+        ? (0, i.jsx)(b.A, {
+              userName: n,
+              displayNameStyles: u,
+              effectDisplayType: D.G.PLAIN,
+              boldFontOpacity: 0.9,
+              textVariant: l,
+          })
+        : (0, i.jsx)(h.E, { variant: l, tag: "span", color: "none", children: n });
 }

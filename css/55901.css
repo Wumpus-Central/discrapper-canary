@@ -219,11 +219,8 @@
     border-radius: 12px;
     color: var(--text-default);
     display: flex;
-    font-size: 14px;
-    font-weight: var(--font-weight-semibold);
     height: var(--custom-party-avatars-avatar-diameter);
     justify-content: center;
-    line-height: 16px;
     margin-inline-start: -2px;
     min-width: var(--custom-party-avatars-avatar-diameter);
     padding: 0 4px
