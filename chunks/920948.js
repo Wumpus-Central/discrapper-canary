@@ -1,20 +1,36 @@
-n.d(t, { U: () => d }), n(64700);
-var l = n(435558),
-    i = n.n(l),
-    r = n(29814),
-    a = n(46054),
-    s = n(551965);
-let o = ["heading", "list", "blockQuote"],
-    u = i().once(() =>
-        i().omit(
-            (0, s.A)([
-                r.Ay.EMBED_TITLE_RULES,
-                a.A.createReactRules({ enableBuildOverrides: !1, enableEmojiClick: !0 }),
+n.d(t, { U: () => h });
+var l = n(64700),
+    i = n(435558),
+    r = n.n(i),
+    a = n(29814),
+    s = n(46054),
+    o = n(551965);
+let u = ["heading", "list", "blockQuote"],
+    c = r().once(() =>
+        r().omit(
+            (0, o.A)([
+                a.Ay.EMBED_TITLE_RULES,
+                s.A.createReactRules({ enableBuildOverrides: !1, enableEmojiClick: !0 }),
             ]),
-            o,
+            u,
         ),
     ),
-    c = i().once(() => a.A.reactParserFor(u()));
-function d(e) {
-    return c()(e, !0);
+    d = r().once(() => s.A.reactParserFor(c())),
+    p = r().once(() =>
+        (0, o.A)([
+            c(),
+            {
+                br: {
+                    ...a.Ay.RULES.br,
+                    requiredFirstCharacters: ["\n"],
+                    match: (e) => /^\n/.exec(e),
+                    react: (e, t, n) => l.createElement("br", { key: n.key }),
+                },
+            },
+        ]),
+    ),
+    m = r().once(() => s.A.reactParserFor(p()));
+function h(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return (t.enableNewlines ? m() : d())(e, !0);
 }

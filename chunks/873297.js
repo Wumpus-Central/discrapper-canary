@@ -23,12 +23,12 @@ var t = l(627968),
     E = l(920948),
     b = l(435658),
     y = l(67480),
-    I = l(174459),
-    N = l(371794),
+    N = l(174459),
+    I = l(371794),
     S = l(440938),
     L = l(652215),
-    R = l(188275),
-    w = l(440524);
+    w = l(188275),
+    R = l(440524);
 let M = function (e) {
     let s,
         l,
@@ -52,7 +52,7 @@ let M = function (e) {
     }, [T]);
     let U = (0, h.bG)([j.A], () => {
             let e = j.A.getStorefrontMetadata(T);
-            return e?.logoAssetId != null ? (0, N.YE)(T, e.logoAssetId, 256) : void 0;
+            return e?.logoAssetId != null ? (0, I.YE)(T, e.logoAssetId, 256) : void 0;
         }, [T]),
         V = K ?? U,
         Y =
@@ -94,7 +94,7 @@ let M = function (e) {
         ee = n.useMemo(() => ({ pageSection: H }), [H]),
         es = n.useCallback(
             (e, s) => {
-                I.default.track(L.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                N.default.track(L.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: q?.sessionId,
                     page_type: D,
                     page_category: q?.pageCategory,
@@ -131,7 +131,7 @@ let M = function (e) {
                         ? (Z.current = setTimeout(() => {
                               (X.current = !0),
                                   (Z.current = null),
-                                  I.default.track(L.HAw.COLLECTIBLES_TILE_IMPRESSION, {
+                                  N.default.track(L.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                                       collectibles_shop_session_id: q?.sessionId,
                                       page_type: D,
                                       page_category: q?.pageCategory,
@@ -160,34 +160,34 @@ let M = function (e) {
                       threshold: 0,
                       children: (0, t.jsx)("div", {
                           ref: W,
-                          className: i()(w.YB, e),
+                          className: i()(R.YB, e),
                           children: (0, t.jsxs)("div", {
-                              className: w.kL,
+                              className: R.kL,
                               children: [
-                                  null != J && (0, t.jsx)("div", { className: w.D7, style: { background: J } }),
+                                  null != J && (0, t.jsx)("div", { className: R.D7, style: { background: J } }),
                                   null != M &&
                                       (0, t.jsx)("div", {
-                                          className: w.b,
+                                          className: R.b,
                                           children: (0, t.jsx)(c.J, { size: "sm", variant: "icon-only", onClick: er }),
                                       }),
-                                  null != V && (0, t.jsx)("img", { className: w.wm, src: V, alt: "" }),
+                                  null != V && (0, t.jsx)("img", { className: R.wm, src: V, alt: "" }),
                                   (0, t.jsx)("div", {
-                                      className: w.xf,
+                                      className: R.xf,
                                       children: (0, t.jsxs)("div", {
-                                          className: w.B5,
+                                          className: R.B5,
                                           children: [
                                               (0, t.jsx)(o.D, {
-                                                  className: w.R_,
+                                                  className: R.R_,
                                                   variant: "heading-lg/normal",
                                                   color: "text-overlay-light",
-                                                  children: (0, E.U)(F),
+                                                  children: (0, E.U)(F, { enableNewlines: !0 }),
                                               }),
                                               (0, t.jsxs)("div", {
-                                                  className: w.U9,
+                                                  className: R.U9,
                                                   children: [
                                                       null != z &&
                                                           (0, t.jsxs)("div", {
-                                                              className: w.f$,
+                                                              className: R.f$,
                                                               children: [
                                                                   (0, t.jsx)(u.O, {
                                                                       size: "xs",
@@ -223,7 +223,7 @@ let M = function (e) {
                                                   (0, t.jsx)(
                                                       "div",
                                                       {
-                                                          className: w.Ko,
+                                                          className: R.Ko,
                                                           children: (0, t.jsx)(v.A, {
                                                               skuId: e,
                                                               positionInSection: s,
@@ -235,9 +235,9 @@ let M = function (e) {
                                                   ),
                                               ),
                                           }),
-                                          T === R.FK &&
+                                          T === w.FK &&
                                               (0, t.jsx)("div", {
-                                                  className: w.Ok,
+                                                  className: R.Ok,
                                                   children: (0, t.jsx)(d.E, {
                                                       variant: "text-xs/medium",
                                                       color: "text-muted",
