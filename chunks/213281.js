@@ -617,7 +617,7 @@ function e0(e) {
     let t,
         { productRecord: n, selectedProduct: i, selectedBundleSlide: s } = e,
         l = (0, eK.Do)("CollectiblesShopProductDetailsModal") && i.type === L.R.PROFILE_FRAME,
-        a = (0, eW.S)(i),
+        a = (0, eW.SV)(i),
         c = n.type === L.R.BUNDLE ? (n.items[s] ?? n.items[0]) : void 0,
         o =
             null != c &&
@@ -908,7 +908,7 @@ function tH(e) {
         _ = (0, I.xM)(t),
         C = (0, eK.Do)("CollectiblesShopProductDetailsModal") && i.type === L.R.PROFILE_FRAME,
         k = e_.Ay.canUseShopDiscounts(t) || C,
-        T = (0, eW.V)(i),
+        T = (0, eW.VZ)(i),
         O = (0, tr.h)(n),
         { isPurchased: b, isPartiallyOwnedBundle: P } = (0, tr.h)(i),
         { isDisabled: y } = (0, er.I)(i.skuId),

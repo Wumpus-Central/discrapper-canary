@@ -1,4 +1,4 @@
-n.d(t, { S: () => u, V: () => c });
+n.d(t, { SV: () => u, VZ: () => c });
 var r = n(288106),
     i = n(223311),
     s = n(993408),
@@ -6,8 +6,12 @@ var r = n(288106),
     a = n(652215),
     o = n(375708);
 function u(e) {
-    let t = (0, i.A)(a.FYj);
-    return null == t || (0, s.G0)(e) || (0, l.Ab)(e) || !e.isFirstParty ? null : t;
+    let t = (0, i.A)(a.FYj),
+        n = t?.rewardConfig?.discount;
+    if (null == n || (0, s.G0)(e) || !e.isFirstParty) return null;
+    let r = n.fiatEnabled && (0, l.go)(e),
+        o = n.orbsEnabled && (0, l.Vx)(e);
+    return r || o ? t : null;
 }
 function c(e) {
     let t = u(e),

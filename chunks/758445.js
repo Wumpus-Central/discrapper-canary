@@ -33,7 +33,13 @@ class _ extends u.A {
                         : {
                               discount:
                                   null != t.discount
-                                      ? { id: t.discount.id, type: t.discount.type, amount: t.discount.amount }
+                                      ? {
+                                            id: t.discount.id,
+                                            type: t.discount.type,
+                                            amount: t.discount.amount,
+                                            fiatEnabled: t.discount.fiat_enabled,
+                                            orbsEnabled: t.discount.orbs_enabled,
+                                        }
                                       : null,
                           }
                     : null,
