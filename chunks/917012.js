@@ -714,7 +714,7 @@ let G = {
         },
     ],
     k = x.filter((e) =>
-        ["gif", "tenor", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.untranslatedName),
+        ["gif", "tts", "me", "tableflip", "unflip", "shrug", "spoiler", "nick"].includes(e.untranslatedName),
     );
 function F(e, t, n) {
     let i = t ? x : k,

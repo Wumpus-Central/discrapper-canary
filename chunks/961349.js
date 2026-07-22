@@ -654,7 +654,7 @@ let eH = {
     matches: (e, t, n, l, i) =>
         i.commands !== a.Ze.DISABLED &&
         (i.commands === a.Ze.OLD_BUILT_INS
-            ? n.startsWith("/gif") || n.startsWith("/tenor")
+            ? n.startsWith("/gif")
             : I.A.getActiveCommand(e.id)?.integrationType === eM.p_j.GIF && I.A.getOptionStates(e.id).query.hasValue),
     queryResults(e, t, n, l, i) {
         let { command: r, query: s } = eU(e, n, l);

@@ -5811,10 +5811,7 @@ var rQ =
         eQ),
     r1 = (((eJ = {}).VIDEO = "VIDEO"), (eJ.ACTIVITY = "ACTIVITY"), (eJ.FRAME = "FRAME"), (eJ.HAVEN = "HAVEN"), eJ),
     r2 = (((e0 = {}).GIF = "GIF"), (e0.STICKER = "STICKER"), e0);
-let r3 = Object.freeze({
-    GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" },
-    TENOR: { type: "GIF", command: "tenor", title: "Tenor", commandId: "-9" },
-});
+let r3 = Object.freeze({ GIF: { type: "GIF", command: "gif", title: "Gif", commandId: "-16" } });
 var r6 =
         (((e1 = {}).ENABLE_MIC_FIREFOX = "204392448"),
         (e1.PUSH_TO_TALK_ADMINISTRATOR_MODE = "205082178"),

@@ -1,55 +1,49 @@
 "use strict";
-n.d(t, { A: () => m });
-var i = n(735438),
+n.d(t, { A: () => f });
+var i = n(435558),
     r = n.n(i),
-    s = n(314116),
-    a = n(308528),
-    o = n(720149),
-    l = n(155718),
-    u = n(47167),
+    a = n(314116),
+    s = n(308528),
+    l = n(493336),
+    o = n(155718),
+    d = n(47167),
     c = n(994500),
-    d = n(287809),
+    u = n(287809),
     _ = n(392054),
-    h = n(73510),
-    f = n(652215),
-    p = n(375708);
-function E(e) {
-    switch (e) {
-        case f.Z86.GIF.title:
-        case f.Z86.TENOR.title:
-            return p.intl.string(p.t["0vrCgJ"]);
-        default:
-            return "";
-    }
+    E = n(73510),
+    A = n(652215),
+    h = n(375708);
+function I(e) {
+    return e === A.Z86.GIF.title ? h.intl.string(h.t["0vrCgJ"]) : "";
 }
-let m = [
-    ...r()(f.Z86)
+let f = [
+    ...r()(A.Z86)
         .values()
         .map((e) => ({
             id: e.commandId,
             untranslatedName: e.command,
             displayName: e.command,
-            type: l.kc.CHAT,
+            type: o.kc.CHAT,
             inputType: _.y$.BUILT_IN_INTEGRATION,
-            applicationId: h.Ik.BUILT_IN,
+            applicationId: E.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return E(e.title);
+                return I(e.title);
             },
             get displayDescription() {
-                return E(e.title);
+                return I(e.title);
             },
             options:
-                e.type === f.p_j.GIF
+                e.type === A.p_j.GIF
                     ? [
                           {
                               name: "query",
                               displayName: "query",
-                              type: l.n4.STRING,
+                              type: o.n4.STRING,
                               get description() {
-                                  return p.intl.string(p.t["+9g3Du"]);
+                                  return h.intl.string(h.t["+9g3Du"]);
                               },
                               get displayDescription() {
-                                  return p.intl.string(p.t["+9g3Du"]);
+                                  return h.intl.string(h.t["+9g3Du"]);
                               },
                               required: !0,
                           },
@@ -63,25 +57,25 @@ let m = [
         id: "-15",
         untranslatedName: "leave",
         displayName: "leave",
-        type: l.kc.CHAT,
+        type: o.kc.CHAT,
         inputType: _.y$.BUILT_IN,
-        applicationId: h.Ik.BUILT_IN,
+        applicationId: E.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return p.intl.string(p.t["26C4oi"]);
+            return h.intl.string(h.t["26C4oi"]);
         },
         get displayDescription() {
-            return p.intl.string(p.t["26C4oi"]);
+            return h.intl.string(h.t["26C4oi"]);
         },
         options: [
             {
                 name: "silent",
                 displayName: "silent",
-                type: l.n4.BOOLEAN,
+                type: o.n4.BOOLEAN,
                 get description() {
-                    return p.intl.string(p.t.YH7PkD);
+                    return h.intl.string(h.t.YH7PkD);
                 },
                 get displayDescription() {
-                    return p.intl.string(p.t.bq3JXs);
+                    return h.intl.string(h.t.bq3JXs);
                 },
                 required: !1,
             },
@@ -93,52 +87,52 @@ let m = [
         execute: (e, t) => {
             let { channel: n } = t;
             if (null == n) return;
-            let i = (0, u.m1)(n, d.default, c.A),
-                r = p.intl.formatToPlainString(p.t.hJ5Ap4, { name: i }),
-                l = p.intl.format(p.t.SSIVOu, { name: i }),
+            let i = (0, d.m1)(n, u.default, c.A),
+                r = h.intl.formatToPlainString(h.t.hJ5Ap4, { name: i }),
+                o = h.intl.format(h.t.SSIVOu, { name: i }),
                 _ = e.find((e) => "silent" === e.name)?.value ?? !1;
-            async function h() {
+            async function E() {
                 if (null != n)
                     try {
-                        await a.A.closePrivateChannel(n.id, void 0, _);
+                        await s.A.closePrivateChannel(n.id, void 0, _);
                     } catch (e) {
-                        o.A.sendBotMessage(n.id, p.intl.string(p.t["YOsuT/"]));
+                        l.A.sendBotMessage(n.id, h.intl.string(h.t["YOsuT/"]));
                     }
             }
             n.isManaged() &&
-                ((r = p.intl.formatToPlainString(p.t.hVGjEW, { name: i })),
-                (l = p.intl.format(p.t.IK1Qvs, { name: i }))),
-                (0, s.A)({ title: r, subtitle: l, confirmText: p.intl.string(p.t["26C4oi"]), onConfirm: h });
+                ((r = h.intl.formatToPlainString(h.t.hVGjEW, { name: i })),
+                (o = h.intl.format(h.t.IK1Qvs, { name: i }))),
+                (0, a.A)({ title: r, subtitle: o, confirmText: h.intl.string(h.t["26C4oi"]), onConfirm: E });
         },
     },
     {
         id: "-17",
         untranslatedName: "sticker",
         displayName: "sticker",
-        type: l.kc.CHAT,
+        type: o.kc.CHAT,
         inputType: _.y$.BUILT_IN_INTEGRATION,
-        applicationId: h.Ik.BUILT_IN,
+        applicationId: E.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return p.intl.string(p.t.GUH9II);
+            return h.intl.string(h.t.GUH9II);
         },
         get displayDescription() {
-            return p.intl.string(p.t.GUH9II);
+            return h.intl.string(h.t.GUH9II);
         },
         options: [
             {
                 name: "query",
                 displayName: "query",
-                type: l.n4.STRING,
+                type: o.n4.STRING,
                 get description() {
-                    return p.intl.string(p.t.hIbHm1);
+                    return h.intl.string(h.t.hIbHm1);
                 },
                 get displayDescription() {
-                    return p.intl.string(p.t.hIbHm1);
+                    return h.intl.string(h.t.hIbHm1);
                 },
                 required: !0,
             },
         ],
-        integrationType: f.p_j.STICKER,
+        integrationType: A.p_j.STICKER,
         integrationTitle: "sticker",
     },
 ];
