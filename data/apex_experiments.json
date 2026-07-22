@@ -5790,6 +5790,22 @@
     }
   },
   {
+    "name": "2026-07-past-due-checkout",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-07-powerups-coachmark-scroll-close",
     "kind": "user",
     "defaultConfig": {

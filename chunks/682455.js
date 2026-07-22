@@ -24318,8 +24318,8 @@ function pp(e) {
     let { option: t } = e,
         { label: n, channel: i, category: l } = t,
         s = R.useMemo(() => (0, ry.gU)(i), [i]),
-        r = (0, eq.Ay)(i);
-    return (0, p.jsx)(pE.X, { title: n, icon: s, subtitle: null != l ? r : null });
+        r = (0, eq.Ay)(l);
+    return (0, p.jsx)(pE.X, { title: n, icon: s, subtitle: r });
 }
 function pA(e) {
     let { canManageGuild: t, guildId: n, afkChannelId: i, label: l } = e,
