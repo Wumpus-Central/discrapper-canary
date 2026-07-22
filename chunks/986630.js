@@ -1,13 +1,13 @@
 "use strict";
-n.d(t, { A: () => c, x: () => d });
+n.d(t, { A: () => c, x: () => u });
 var i = n(575593),
     r = n(384726),
-    s = n(696444),
-    a = n(474012),
-    o = n(931772),
-    l = n(758836),
-    u = n(652215);
-class c extends o.A {
+    a = n(696444),
+    s = n(474012),
+    l = n(931772),
+    o = n(758836),
+    d = n(652215);
+class c extends l.A {
     prices;
     type;
     premiumType;
@@ -22,6 +22,7 @@ class c extends o.A {
     eligibleOffers;
     badgeOverride;
     hideBadge;
+    isFirstParty;
     constructor(e) {
         super(e),
             (this.summary = e.summary),
@@ -37,47 +38,50 @@ class c extends o.A {
             (this.variants = e.variants),
             (this.eligibleOffers = e.eligibleOffers),
             (this.badgeOverride = e.badgeOverride),
-            (this.hideBadge = e.hideBadge);
+            (this.hideBadge = e.hideBadge),
+            (this.isFirstParty = e.isFirstParty);
     }
     static fromServer(e) {
         let {
             type: t,
             premium_type: n,
             category_sku_id: i,
-            prices: o,
+            prices: l,
             bundled_products: _,
-            preview_assets: h,
-            variants: f,
-            badge_override: p,
-            hide_badge: E,
-            ...m
+            preview_assets: E,
+            variants: A,
+            badge_override: h,
+            hide_badge: I,
+            is_first_party: f,
+            ...p
         } = e;
         return new c({
-            ...super.fromServer(m),
+            ...super.fromServer(p),
             type: t,
-            premiumType: n === u.oA2 ? null : n,
+            premiumType: n === d.oA2 ? null : n,
             categorySkuId: i,
-            isCategoryReward: l.MS.some((e) => {
+            isCategoryReward: o.MS.some((e) => {
                 let { rewardSkuId: t } = e;
-                return t === m.sku_id;
+                return t === p.sku_id;
             }),
-            prices: (0, r.A)(o),
-            items: (0, a.K)(m.items),
-            bundledProducts: _?.map(s.A.fromServer),
+            prices: (0, r.A)(l),
+            items: (0, s.K)(p.items),
+            bundledProducts: _?.map(a.A.fromServer),
             previewAssets:
-                null != h
+                null != E
                     ? {
-                          fgStatic: h.fg_static,
-                          fgAnimated: h.fg_animated,
-                          bgStatic: h.bg_static,
-                          bgAnimated: h.bg_animated,
+                          fgStatic: E.fg_static,
+                          fgAnimated: E.fg_animated,
+                          bgStatic: E.bg_static,
+                          bgAnimated: E.bg_animated,
                       }
                     : void 0,
-            variants: f?.map(d.fromServer),
-            googleSkuIds: m.google_sku_ids,
-            eligibleOffers: m.eligible_offers,
-            badgeOverride: p,
-            hideBadge: E,
+            variants: A?.map(u.fromServer),
+            googleSkuIds: p.google_sku_ids,
+            eligibleOffers: p.eligible_offers,
+            badgeOverride: h,
+            hideBadge: I,
+            isFirstParty: f,
         });
     }
     static fromStorefrontProductRecord(e) {
@@ -86,7 +90,7 @@ class c extends o.A {
         let n = t.tenantMetadata?.collectibles;
         if (null == n) return;
         let r = e.skus.length > 1 ? i.R.VARIANTS_GROUP : n.type,
-            { items: o, item: _ } = (0, a.T)(t) ?? {};
+            { items: l, item: _ } = (0, s.T)(t) ?? {};
         return new c({
             storeListingId: t.id,
             skuId: t.id,
@@ -94,10 +98,10 @@ class c extends o.A {
             summary: e.summary,
             styles: e.primaryCollectionStyles,
             type: r,
-            premiumType: n.premiumType === u.oA2 ? null : n.premiumType,
-            items: o ?? [_].filter((e) => null != e),
+            premiumType: n.premiumType === d.oA2 ? null : n.premiumType,
+            items: l ?? [_].filter((e) => null != e),
             categorySkuId: e.primaryCollectionId ?? n.categorySkuId ?? "",
-            isCategoryReward: l.MS.some((e) => {
+            isCategoryReward: o.MS.some((e) => {
                 let { rewardSkuId: n } = e;
                 return n === t.id;
             }),
@@ -109,12 +113,12 @@ class c extends o.A {
                           .map((n) => {
                               let i = n.tenantMetadata?.collectibles;
                               if (null == i) return null;
-                              let { items: r, item: s } = (0, a.T)(n) ?? {},
-                                  [o] = n.selectedOptions;
-                              return new d({
+                              let { items: r, item: a } = (0, s.T)(n) ?? {},
+                                  [l] = n.selectedOptions;
+                              return new u({
                                   baseVariantName: e.name,
                                   baseVariantSkuId: t.id,
-                                  variantLabel: o?.optionValue ?? "",
+                                  variantLabel: l?.optionValue ?? "",
                                   variantValue: i.optionSelectorDisplayValue ?? "",
                                   storeListingId: n.id,
                                   skuId: n.id,
@@ -122,36 +126,38 @@ class c extends o.A {
                                   summary: n.summary,
                                   styles: void 0,
                                   type: i.type,
-                                  premiumType: i.premiumType === u.oA2 ? null : i.premiumType,
-                                  items: r ?? [s].filter((e) => null != e),
+                                  premiumType: i.premiumType === d.oA2 ? null : i.premiumType,
+                                  items: r ?? [a].filter((e) => null != e),
                                   categorySkuId: e.primaryCollectionId ?? i.categorySkuId ?? "",
-                                  isCategoryReward: l.MS.some((e) => {
+                                  isCategoryReward: o.MS.some((e) => {
                                       let { rewardSkuId: t } = e;
                                       return t === n.id;
                                   }),
                                   prices: n.prices,
                                   previewAssets: n.previewAssetPaths ?? void 0,
                                   googleSkuIds: n.googleSkuIds ?? {
-                                      [u.lid.MOBILE]: "",
-                                      [u.lid.MOBILE_PREMIUM_TIER_2]: "",
+                                      [d.lid.MOBILE]: "",
+                                      [d.lid.MOBILE_PREMIUM_TIER_2]: "",
                                   },
                                   eligibleOffers: void 0,
                                   variants: void 0,
                                   bundledProducts: void 0,
+                                  isFirstParty: i.isFirstParty,
                               });
                           })
                           .filter((e) => null != e)
                     : void 0,
-            googleSkuIds: t.googleSkuIds ?? { [u.lid.MOBILE]: "", [u.lid.MOBILE_PREMIUM_TIER_2]: "" },
+            googleSkuIds: t.googleSkuIds ?? { [d.lid.MOBILE]: "", [d.lid.MOBILE_PREMIUM_TIER_2]: "" },
             eligibleOffers: void 0,
+            isFirstParty: n.isFirstParty,
             bundledProducts: t.bundledSkus
                 ?.map((e) => {
                     let t = e.tenantMetadata?.collectibles;
                     return null == t
                         ? null
-                        : new s.A({
+                        : new a.A({
                               type: t.type,
-                              premiumType: t.premiumType === u.oA2 ? null : t.premiumType,
+                              premiumType: t.premiumType === d.oA2 ? null : t.premiumType,
                               name: e.name,
                               skuId: e.id,
                               summary: e.summary,
@@ -162,7 +168,7 @@ class c extends o.A {
         });
     }
 }
-class d extends c {
+class u extends c {
     baseVariantName;
     baseVariantSkuId;
     variantLabel;
@@ -175,9 +181,9 @@ class d extends c {
             (this.variantValue = e.variantValue);
     }
     static fromServer(e) {
-        let { base_variant_name: t, base_variant_sku_id: n, variant_label: i, variant_value: r, ...s } = e;
-        return new d({
-            ...super.fromServer(s),
+        let { base_variant_name: t, base_variant_sku_id: n, variant_label: i, variant_value: r, ...a } = e;
+        return new u({
+            ...super.fromServer(a),
             baseVariantName: t,
             baseVariantSkuId: n,
             variantLabel: i,

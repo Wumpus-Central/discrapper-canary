@@ -216,6 +216,7 @@ class A extends s.A {
                                     })(e.variant),
                                     optionSelectorDisplayValue: e.option_selector_display_value,
                                     sourceType: e.source_type,
+                                    isFirstParty: e.is_first_party,
                                 };
                         })(e.collectibles),
                     };
