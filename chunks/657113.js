@@ -143,7 +143,7 @@ var m = n(64700),
     k = n(663417),
     V = n(775602),
     X = n(85964);
-function z(t) {
+function W(t) {
     let {
             quest: e,
             analyticsCtxQuestContent: n,
@@ -206,14 +206,14 @@ function z(t) {
               iconPosition: "start",
           });
 }
-var W = n(922016),
+var z = n(922016),
     F = n(980707),
     K = n(477782),
     B = n(834730),
     Y = n(820081),
     G = n(900797),
-    $ = n(847374),
-    H = n(178540),
+    H = n(847374),
+    $ = n(178540),
     J = n(988436),
     Z = n(909445),
     tt = n(661531),
@@ -246,7 +246,7 @@ function tu(t) {
         [g, q] = m.useState(!1),
         R = m.useRef(null),
         Q = (0, j.go)(),
-        S = (0, H.O)((t) => t.errorHintsByQuestId.get(e.id)),
+        S = (0, $.O)((t) => t.errorHintsByQuestId.get(e.id)),
         P = m.useCallback(
             (t) => {
                 if (O === A.fO.CONSOLE && y === t && _.has(t))
@@ -302,7 +302,7 @@ function tu(t) {
                 },
             },
         ];
-    return (0, s.jsx)(W.Y, {
+    return (0, s.jsx)(z.Y, {
         targetElementRef: R,
         position: "bottom",
         onRequestOpen: () => {
@@ -396,7 +396,7 @@ function tu(t) {
                 fullWidth: !0,
                 variant: (0, u.wX)(o, "primary"),
                 text: I.intl.string(I.t.U7cCLU),
-                icon: g ? G.t : $.a,
+                icon: g ? G.t : H.a,
                 iconPosition: "end",
             }),
     });
@@ -444,7 +444,7 @@ function tl(t) {
                 text: I.intl.string(I.t.Cfye4v),
                 fullWidth: !0,
             })
-          : (0, s.jsx)(z, {
+          : (0, s.jsx)(W, {
                 quest: e,
                 analyticsCtxQuestContent: o,
                 analyticsCtxSourceQuestContent: r,
@@ -775,6 +775,7 @@ let tf = function (t) {
                           { features: s } = e.config;
                       switch (t) {
                           case l.n.WATCH_VIDEO:
+                          case l.n.WATCH_VIDEO_ON_MOBILE:
                               return (0, x.WM)((0, d.Yh)(e));
                           case l.n.ACHIEVEMENT_IN_ACTIVITY:
                               return I.intl.string(I.t.CkUzLd);
