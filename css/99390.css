@@ -9454,6 +9454,7 @@
     --mobile-channel-drawer-corner-radius: 8px;
     --mobile-channel-drawer-divider-width: 0px;
     --mobile-channel-drawer-spacing: 8px;
+    --mobile-channel-header-icon-size: md;
     --mobile-channel-item-radius: 12px;
     --mobile-channel-list-subtitle-text-style: text-xs/medium;
     --mobile-channel-list-title-text-style: redesign/heading-18/bold;
@@ -9618,6 +9619,7 @@
     --mobile-channel-details-nav-buttons-gap: 0px;
     --mobile-channel-details-nav-icon-button-size: lg;
     --mobile-channel-details-nav-icon-button-variant: icon-only;
+    --mobile-channel-header-icon-size: xs;
     --mobile-channel-item-radius: 8px;
     --mobile-channel-list-subtitle-text-style: text-sm/medium;
     --mobile-channel-list-title-text-style: heading-lg/semibold;
