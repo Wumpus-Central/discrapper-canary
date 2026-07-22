@@ -14,4 +14,5 @@ e.exports = {
     sl: "messageContentTrailingIcon__6764b",
     aG: "messageContentLeadingIcon__6764b",
     xE: "bullet__6764b",
+    Iy: "spoilerPlaceholder__6764b",
 };
