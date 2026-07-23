@@ -7,7 +7,7 @@ var l = n(627968),
     o = n(262427),
     u = n(319668),
     c = n(38785),
-    d = n(270537),
+    d = n(848584),
     p = n(241989),
     m = n(993408),
     h = n(287809),
@@ -22,17 +22,17 @@ var l = n(627968),
     _ = n(206828),
     T = n(20015),
     g = n(120700),
-    x = n(364995),
-    v = n(31823),
-    N = n(426398),
-    M = n(427675),
-    R = n(316915),
+    x = n(202475),
+    v = n(364995),
+    N = n(31823),
+    R = n(427675),
+    M = n(316915),
     b = n(977445),
     j = n(218075),
     O = n(118982),
     L = n(45938),
-    w = n(951305),
-    k = n(566980),
+    k = n(951305),
+    w = n(566980),
     D = n(52635),
     U = n(652215),
     G = n(375708),
@@ -100,7 +100,7 @@ function K(e) {
             [n, r],
         ),
         N = i.useMemo(() => (null != x ? (0, l.jsx)(d.Vm, { ...x }) : null), [x]),
-        M = i.useMemo(
+        R = i.useMemo(
             () =>
                 (function (e) {
                     let { sku: t, product: n, application: i, isSocialLayerGameItem: r, giftRecipient: o } = e,
@@ -145,7 +145,7 @@ function K(e) {
                 })({ sku: n, product: T, application: t, isSocialLayerGameItem: g, giftRecipient: y }),
             [n, T, t, g, y],
         ),
-        [R, b] = i.useMemo(
+        [M, b] = i.useMemo(
             () => [G.intl.string(H.default.Zxav97), null != r ? (0, f.$g)(r.total, r.currency) : void 0],
             [r],
         ),
@@ -169,14 +169,14 @@ function K(e) {
     return (0, l.jsx)(c.T_, {
         shouldShowGlobalNotices: !0,
         headerBadgeConfig: O,
-        purchaseItemContent: (0, l.jsx)(p.f7, { ...M, price: v }),
+        purchaseItemContent: (0, l.jsx)(p.f7, { ...R, price: v }),
         invoiceSummaryContent: N,
         paymentMethodContent: u,
         legalContent: A,
         promotionalNoticeContent: j,
         upperInlineNoticeProps: I,
         footerInlineNoticeProps: _,
-        invoiceTotalDueLabel: R,
+        invoiceTotalDueLabel: M,
         invoiceTotalDueValue: b,
     });
 }
@@ -201,7 +201,7 @@ function Z(e) {
                     paymentSourceId: r,
                     purchasePreviewError: a,
                     unifiedCheckoutFlow: s,
-                } = (0, R.t4)((e) => ({
+                } = (0, M.t4)((e) => ({
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                     checkoutInvoicePreview: e.checkoutInvoicePreview,
@@ -209,12 +209,12 @@ function Z(e) {
                     purchasePreviewError: e.purchasePreviewError,
                     unifiedCheckoutFlow: e.unifiedCheckoutFlow,
                 })),
-                { hasPaymentSources: o } = (0, N.jm)(),
-                { application: u, isEmbeddedIAP: c } = (0, v.V)(),
+                { hasPaymentSources: o } = (0, x.jm)(),
+                { application: u, isEmbeddedIAP: c } = (0, N.V)(),
                 d = (0, y.bG)([I.A], () => I.A.getFetchState()),
-                { checkoutPaymentSources: p, hasInvoiceOrderContextLoaded: m } = (0, x.t)(),
-                h = (0, M.gU)(),
-                { isGift: C, giftRecipient: E } = (0, w.Pv)(),
+                { checkoutPaymentSources: p, hasInvoiceOrderContextLoaded: m } = (0, v.t)(),
+                h = (0, R.gU)(),
+                { isGift: C, giftRecipient: E } = (0, k.Pv)(),
                 f = C && (0, L.Ik)(E),
                 { fetched: A, hasAlreadyLinked: P } = (0, _.RD)(u);
             S()(null != e, "Expected selectedSkuId");
@@ -222,7 +222,7 @@ function Z(e) {
                 H = F?.eligiblePaymentGateways;
             S()(null != F, "SKU must exist and be fetched."), S()(null != u, "Application must exist.");
             let B = (0, b.uS)(u.id),
-                Y = t === k.h.PURCHASING || t === k.h.COMPLETED,
+                Y = t === w.h.PURCHASING || t === w.h.COMPLETED,
                 W = p.find((e) => e.id === r) ?? null,
                 V = null != W ? W.type : null,
                 K = null != H && H.length > 0 && (null == r || null === V) && o ? j.fU.SELECT_PAYMENT_METHOD : void 0,

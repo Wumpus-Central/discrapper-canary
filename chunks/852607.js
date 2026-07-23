@@ -5,7 +5,7 @@ var l = n(627968),
     a = n(891197),
     s = n(69494),
     o = n(482132),
-    u = n(520171);
+    u = n(647091);
 function c() {
     return (0, l.jsxs)(l.Fragment, {
         children: [(0, l.jsx)(s.A, {}), (0, l.jsx)(o.dZ, { children: (0, l.jsx)(a.N, { className: u.D }) })],
@@ -17,7 +17,7 @@ var d = n(830382),
     h = n(834730),
     C = n(349288),
     E = n(375708),
-    f = n(236540);
+    f = n(811252);
 function A(e) {
     let { className: t, isEmailResent: n, resendEmail: i } = e;
     return (0, l.jsx)("div", {
@@ -52,7 +52,7 @@ function S() {
     let e = i.useMemo(() => [{ variant: "primary", text: E.intl.string(E.t.g8vPzy), disabled: !0 }], []);
     return (0, l.jsx)(p.H, { actions: e });
 }
-var y = n(411097);
+var y = n(781409);
 function P() {
     let [e, t] = i.useState(!1);
     async function n() {
@@ -70,29 +70,29 @@ var I = n(702841),
     _ = n(339048),
     T = n(428644),
     g = n(86379),
-    x = n(682174),
+    x = n(545075),
     v = n(590180),
     N = n(951305),
-    M = n(20742),
-    R = n(430993),
+    R = n(20742),
+    M = n(430993),
     b = n(579151),
     j = n(599062);
 function O() {
     let { refreshCategories: e } = (0, b.A)();
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(M.rQ, { title: E.intl.string(E.t["p8+qtU"]) }),
-            (0, l.jsx)(R.c, { children: (0, l.jsx)(j.h, { onRetry: e, errorOrigin: j.A.GIFT_MODAL }) }),
+            (0, l.jsx)(R.rQ, { title: E.intl.string(E.t["p8+qtU"]) }),
+            (0, l.jsx)(M.c, { children: (0, l.jsx)(j.h, { onRetry: e, errorOrigin: j.A.GIFT_MODAL }) }),
         ],
     });
 }
 var L = n(534479),
-    w = n(121005),
-    k = n(800471),
+    k = n(121005),
+    w = n(800471),
     D = n(169801),
     U = n(469778),
-    G = n(31823),
-    F = n(426398),
+    G = n(202475),
+    F = n(31823),
     H = n(655857),
     B = n(427675),
     Y = n(316915),
@@ -101,8 +101,8 @@ var L = n(534479),
 function K(e) {
     let { handleStepChange: t } = e,
         n = (0, Y.t4)((e) => e.selectedSkuId),
-        { paymentSources: a, hasFetchedPaymentSources: s } = (0, F.jm)(),
-        { application: o } = (0, G.V)(),
+        { paymentSources: a, hasFetchedPaymentSources: s } = (0, G.jm)(),
+        { application: o } = (0, F.V)(),
         u = (0, g.Hp)(),
         c = (0, B.gU)(),
         d = (0, B.Hu)(),
@@ -135,7 +135,7 @@ function K(e) {
 }
 function Z(e) {
     let { subscriptionTier: t, initialPlanId: n, handleStepChange: a, continueSessionToInitialStep: s } = e,
-        { hasPaymentSources: o, hasFetchedPaymentSources: u } = (0, F.jm)({ shouldAllowFetchPaymentSources: !0 }),
+        { hasPaymentSources: o, hasFetchedPaymentSources: u } = (0, G.jm)({ shouldAllowFetchPaymentSources: !0 }),
         {
             selectedSkuId: c,
             setSelectedPlanId: d,
@@ -148,7 +148,7 @@ function Z(e) {
             defaultPlanId: e.defaultPlanId,
         })),
         h = (0, g.Hp)(),
-        C = (0, w.A)(),
+        C = (0, k.A)(),
         { hasFetchedRelatedSubscriptionPlans: E, subscriptionPriceOptionsLoading: f } = (0, H.Jn)(),
         { isGift: A } = (0, N.Pv)(),
         S = (0, D.A)({ isGift: A, skuId: c }),
@@ -178,7 +178,7 @@ function Z(e) {
                           ? a(r.pn.REVIEW)
                           : a(r.pn.ADD_PAYMENT_STEPS)
                       : v
-                        ? (d((0, k.x)(c, p, m)), a(r.pn.REVIEW))
+                        ? (d((0, w.x)(c, p, m)), a(r.pn.REVIEW))
                         : null != t
                           ? a(r.pn.PLAN_SELECT)
                           : a(r.pn.SKU_SELECT));
