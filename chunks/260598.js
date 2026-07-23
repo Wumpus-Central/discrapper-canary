@@ -34,10 +34,10 @@ function f(e) {
         { disabled: L } = O,
         y = (0, E.Y)({ validateOn: "change", error: f, value: t, minLength: u, maxLength: A, defaultDirty: T }),
         D = r.useMemo(() => {
-            if (null == A) return 10;
+            if (!m || null == A) return 10;
             let e = `${A}`.length;
             return 7.23 * (e += `${A} / `.length) + 10;
-        }, [A]),
+        }, [A, m]),
         v = m ? (0, i.jsx)(_.n, { value: t, maxLength: g && null != A ? A : void 0 }) : null;
     return (0, i.jsx)(l.D, {
         ...O,
