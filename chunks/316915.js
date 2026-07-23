@@ -1,18 +1,23 @@
 "use strict";
-n.d(t, { y0: () => N, Ni: () => C, t4: () => R, Q9: () => O, y$: () => y });
+n.d(t, { y0: () => R, Ni: () => L, t4: () => D, Q9: () => y, y$: () => b });
 var i = n(942381),
     r = n(265690),
     a = n(315069),
     s = n(570221),
-    l = n(580630);
-class o extends a.A {
+    l = n(737291),
+    o = n.n(l),
+    d = n(580630);
+function c(e) {
+    return new (o())(e.amount).dividedBy(10 ** e.exponent).toNumber();
+}
+class u extends a.A {
     id;
     quantity;
     price;
     total;
     addOnPlans;
     static createFromServer(e) {
-        return new o({
+        return new u({
             id: e.id,
             quantity: e.quantity,
             price: e.price,
@@ -46,14 +51,22 @@ class o extends a.A {
     }
     getPriceString() {
         var e;
-        let t;
-        return (
-            (t = (e = this.total).amount / Math.pow(10, e.exponent)),
-            (0, l.$g)(t, e.currency, { convertToMajorUnits: !1 })
-        );
+        return (e = this.total), (0, d.$g)(c(e), e.currency, { convertToMajorUnits: !1 });
+    }
+    getAddOnPrice() {
+        if (0 === this.addOnPlans.length) return null;
+        let { currency: e, exponent: t } = this.addOnPlans[0].price;
+        return {
+            majorUnits: c({
+                currency: e,
+                exponent: t,
+                amount: this.addOnPlans.reduce((e, t) => e + t.price.amount * t.quantity, 0),
+            }),
+            currency: e,
+        };
     }
 }
-class d extends a.A {
+class _ extends a.A {
     paymentSources;
     storeCountry;
     allowedCurrencies;
@@ -62,11 +75,11 @@ class d extends a.A {
         let t = e?.checkout_context;
         return null == t
             ? null
-            : new d({
+            : new _({
                   paymentSources: t.payment_sources ?? [],
                   storeCountry: null != t.store_country ? t.store_country.country : null,
                   allowedCurrencies: t.allowed_currencies ?? [],
-                  availablePlans: (t.available_plans ?? []).map(o.createFromServer),
+                  availablePlans: (t.available_plans ?? []).map(u.createFromServer),
               });
     }
     constructor(e) {
@@ -80,7 +93,7 @@ class d extends a.A {
         return this.availablePlans.find((t) => t.matchesItems(e)) ?? null;
     }
 }
-class c extends a.A {
+class E extends a.A {
     subscriptionId;
     subscriptionPreview;
     updateType;
@@ -89,7 +102,7 @@ class c extends a.A {
         var t, n;
         return null == e
             ? null
-            : new c({
+            : new E({
                   subscriptionId: e.subscription_id ?? null,
                   subscriptionPreview:
                       null == (t = e.subscription_preview)
@@ -123,7 +136,7 @@ class c extends a.A {
             (this.resetBillingCycle = e.resetBillingCycle ?? !1);
     }
 }
-class u extends a.A {
+class A extends a.A {
     paymentGateway;
     paymentSourceId;
     invoicePreview;
@@ -131,7 +144,7 @@ class u extends a.A {
         let t = e.billing_facet;
         return null == t
             ? null
-            : new u({
+            : new A({
                   paymentGateway: t.payment_gateway,
                   paymentSourceId: t.payment_source_id ?? null,
                   invoicePreview: s.Y.createInvoiceFromOrder(e),
@@ -144,7 +157,7 @@ class u extends a.A {
             (this.invoicePreview = e.invoicePreview ?? null);
     }
 }
-class _ extends a.A {
+class h extends a.A {
     id;
     status;
     revision;
@@ -157,18 +170,18 @@ class _ extends a.A {
     createdAt;
     unsatisfiedConstraints;
     static createFromServer(e) {
-        return new _({
+        return new h({
             id: e.id,
             status: e.status,
             revision: e.revision,
             orderLineItems: e.order_line_items,
-            billingFacetRecord: u.createFromOrder(e),
+            billingFacetRecord: A.createFromOrder(e),
             externalGatewayFacet: e.external_gateway_facet ?? null,
             giftingFacet: e.gifting_facet ?? null,
-            checkoutContextRecord: d.createFromOrder(e),
+            checkoutContextRecord: _.createFromOrder(e),
             createdAt: e.created_at,
             unsatisfiedConstraints: e.unsatisfied_constraints ?? [],
-            subscriptionFacet: c.createFromServer(e.subscription_facet),
+            subscriptionFacet: E.createFromServer(e.subscription_facet),
         });
     }
     constructor(e) {
@@ -192,33 +205,33 @@ class _ extends a.A {
         return this.unsatisfiedConstraints.length > 0 ? this.unsatisfiedConstraints[0].reason_code : null;
     }
 }
-var E = n(566980),
-    A = n(410516),
-    h = n(815545),
-    I = n(786300),
-    f = n(428262),
-    p = n(202541);
-function T(e) {
+var I = n(566980),
+    f = n(410516),
+    p = n(815545),
+    T = n(786300),
+    m = n(428262),
+    g = n(202541);
+function S(e) {
     return null == e
         ? { isPremiumPurchase: !0, isPremiumGroupPurchase: !1 }
-        : { isPremiumPurchase: (0, f.ys)(e), isPremiumGroupPurchase: e === p.gD.PREMIUM_GROUP_MONTH };
+        : { isPremiumPurchase: (0, m.ys)(e), isPremiumGroupPurchase: e === g.gD.PREMIUM_GROUP_MONTH };
 }
-var m = n(504275),
-    g = n(219538),
-    S = n(75304);
-let N = 1,
-    [C, O] = (0, I.A)();
-function R(e) {
+var N = n(504275),
+    C = n(219538),
+    O = n(75304);
+let R = 1,
+    [L, y] = (0, T.A)();
+function D(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return O()(e, t);
+    return y()(e, t);
 }
-function L(e, t) {
+function v(e, t) {
     if (null == e) return null;
     if ("subscription_checkout_invoice_get_request" === e.type) return e;
     let n = t().contextMetadata.loadId;
     return e.params.loadId !== n ? { ...e, params: { loadId: n, ...e.params } } : e;
 }
-function y(e) {
+function b(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -229,9 +242,9 @@ function y(e) {
     } = e;
     return (0, r.h)((e, i) => {
         let r = {
-            isPremiumPurchase: () => T(i().selectedPlanId).isPremiumPurchase,
-            isPremiumGroupPurchase: () => T(i().selectedPlanId).isPremiumGroupPurchase,
-            selectedPlanAttributes: () => T(i().selectedPlanId),
+            isPremiumPurchase: () => S(i().selectedPlanId).isPremiumPurchase,
+            isPremiumGroupPurchase: () => S(i().selectedPlanId).isPremiumGroupPurchase,
+            selectedPlanAttributes: () => S(i().selectedPlanId),
             premiumDiscountOffer: () => i().premiumDiscountInfo.discountOffer ?? null,
             premiumDiscountPercent: () => {
                 let e = i().premiumDiscountInfo.discountOffer;
@@ -240,7 +253,7 @@ function y(e) {
             isPremiumDiscountAppliedToCheckoutInvoice: () => {
                 let { discountOffer: e } = i().premiumDiscountInfo,
                     t = i().checkoutInvoicePreview;
-                return null != e && null != e.discount && null != t && (0, h.Ro)(t, e.discount.id);
+                return null != e && null != e.discount && null != t && (0, p.Ro)(t, e.discount.id);
             },
             isCheckoutInvoicePreviewLoading: () => {
                 let e = i().fetchCheckoutInvoicePreviewRequest,
@@ -250,7 +263,7 @@ function y(e) {
             primaryInvoicesError: () => i().checkoutInvoiceError ?? i().renewalInvoiceError,
         };
         return {
-            ...(0, m.p)(e, i, t),
+            ...(0, N.p)(e, i, t),
             ...{
                 startedPaymentFlowWithPaymentSources: n.startedPaymentFlowWithPaymentSources,
                 startingPremiumSubscriptionPlanId: n.startingPremiumSubscriptionPlanId,
@@ -277,7 +290,7 @@ function y(e) {
                         r = JSON.stringify(t),
                         { fetchSetupIntentRequestKey: a, fetchSetupIntentPromise: s, clearFetchSetupIntent: l } = i();
                     if (!n && null != s && a === r) return s;
-                    let o = (0, g.w)({ body: t });
+                    let o = (0, C.w)({ body: t });
                     return (
                         e({ fetchSetupIntentRequestKey: r, fetchSetupIntentPromise: o }),
                         o.catch(() => {
@@ -296,7 +309,7 @@ function y(e) {
             },
             ...{
                 getShouldDisallowPlanSelection: () => {
-                    let e = i().getTenantParams(S.C.PREMIUM_CHECKOUT);
+                    let e = i().getTenantParams(O.C.PREMIUM_CHECKOUT);
                     return null != e && (e.shouldDisallowPlanSelection ?? !1);
                 },
                 getIsInOneStepSubscriptionCheckout: (e) => {
@@ -316,7 +329,7 @@ function y(e) {
                                 selectedSkuId: i,
                                 startedPaymentFlowWithPaymentSources: r,
                             } = e;
-                            return !t && !n && null != i && p.oz.includes(i) && !!r;
+                            return !t && !n && null != i && g.oz.includes(i) && !!r;
                         })({ isTrial: t, isGift: r, selectedSkuId: n ?? a, startedPaymentFlowWithPaymentSources: s })
                     );
                 },
@@ -324,20 +337,20 @@ function y(e) {
             get: (e) => (null != r[e] ? r[e]() : null),
             contextMetadata: a,
             order: s,
-            orderRecord: null != s ? _.createFromServer(s) : null,
-            setOrder: (t) => e({ order: t, orderRecord: _.createFromServer(t) }),
+            orderRecord: null != s ? h.createFromServer(s) : null,
+            setOrder: (t) => e({ order: t, orderRecord: h.createFromServer(t) }),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
-            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: N }),
+            setSelectedSkuId: (t) => e({ selectedSkuId: t ?? void 0, quantity: R }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: N }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: R }) : e({ selectedPlanId: i });
             },
-            quantity: N,
+            quantity: R,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
-            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: L(t, i) }),
+            setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: v(t, i) }),
             checkoutInvoicePreview: null,
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
@@ -347,11 +360,11 @@ function y(e) {
                     pendingPaymentSourceId: null != t ? null : e.pendingPaymentSourceId,
                 })),
             fetchRenewalInvoicePreviewRequest: null,
-            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: L(t, i) }),
+            setFetchRenewalInvoicePreviewRequest: (t) => e({ fetchRenewalInvoicePreviewRequest: v(t, i) }),
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
-            premiumDiscountInfo: A.TI,
+            premiumDiscountInfo: f.TI,
             setPremiumDiscountInfo: (t) => e({ premiumDiscountInfo: t }),
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),
@@ -371,7 +384,7 @@ function y(e) {
             setCheckoutPriceOptions: (t) => e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, ...t } })),
             setCheckoutCurrency: (t) =>
                 e((e) => ({ checkoutPriceOptions: { ...e.checkoutPriceOptions, currency: t } })),
-            purchaseState: E.h.WAITING,
+            purchaseState: I.h.WAITING,
             setPurchaseState: (t) => e({ purchaseState: t }),
             appliedUserDiscounts: [],
             setAppliedUserDiscounts: (t) => e({ appliedUserDiscounts: t }),
