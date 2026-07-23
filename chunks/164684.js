@@ -44,16 +44,16 @@ async function m(t) {
     }
 }
 async function C(t) {
-    let { displayToast: n = !1, ...e } = t;
+    let { displayToast: n = !1, isReminder: e, ...i } = t;
     if (
         null !=
-            (await (0, o.cf)(e).catch(
+            (await (0, o.cf)(i).catch(
                 (t) => ((0, s.P0)((0, r.o)(t?.body?.message ?? O.intl.string(O.t.R0RpRX), d.Ck.FAILURE)), null),
             )) &&
         n
     ) {
-        let t = null != e.dueAt ? O.intl.string(O.t.D0tS02) : O.intl.string(O.t["5KOMiV"]),
-            n = null != e.dueAt ? d.Ck.CLOCK : d.Ck.BOOKMARK;
+        let t = null != i.dueAt || e ? O.intl.string(O.t.D0tS02) : O.intl.string(O.t["5KOMiV"]),
+            n = null != i.dueAt || e ? d.Ck.CLOCK : d.Ck.BOOKMARK;
         (0, s.P0)((0, r.o)(t, n));
     }
 }

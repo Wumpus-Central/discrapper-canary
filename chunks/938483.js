@@ -149,7 +149,7 @@ let T = (0, c.Fe)({
             n.e("94373"),
             n.e("35238"),
             n.e("58818"),
-            n.e("66763"),
+            n.e("61833"),
             n.e("11689"),
             n.e("14520"),
             n.e("4142"),
@@ -165,7 +165,7 @@ let T = (0, c.Fe)({
             n.e("65420"),
             n.e("3056"),
             n.e("84710"),
-            n.e("45726"),
+            n.e("80263"),
             n.e("97106"),
             n.e("78015"),
             n.e("22570"),
@@ -445,7 +445,7 @@ function m(e) {
     let { enabled: w } = _.A.useConfig({ location: "RecentsPopout" }),
         G = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w;
     r.useEffect(() => {
-        D !== s.Y2.BOOKMARKS || w || v(s.Y2.MENTIONS),
+        (D !== s.Y2.BOOKMARKS && D !== s.Y2.REMINDERS) || w || v(s.Y2.MENTIONS),
             (D === s.Y2.GAME_INVITES || D === s.Y2.FOR_YOU) && v(s.Y2.UNREADS);
     });
     let x = r.useCallback(

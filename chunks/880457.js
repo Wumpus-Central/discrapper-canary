@@ -1,106 +1,92 @@
-a.d(n, { A: () => D, P: () => m });
-var i = a(627968),
-    l = a(64700),
-    t = a(17928),
-    s = a(477782),
-    c = a(403581),
-    d = a(606096),
-    o = a(997146),
-    r = a(478016),
-    u = a(404374),
-    h = a(966597),
-    p = a(164684),
-    g = a(704456),
-    A = a(85109),
-    I = a(226017),
-    y = a(195404),
-    _ = a(576705),
-    b = a(927813),
-    v = a(652215),
-    x = a(375708);
-function D(e, n) {
-    let { enabled: a } = h.A.useConfig({ location: "LongPressMessageActionSheet" }),
-        l = (0, t.bG)([A.A], () => A.A.getSavedMessage(e.channel_id, e.id)),
-        r = m({ message: e, savedMessage: l });
-    return a && (null != l || n.isPrivate() || _.A.can(v.xBc.READ_MESSAGE_HISTORY, n))
-        ? null != l || (0, I.A)()
-            ? (0, i.jsxs)(s.Dr, {
-                  id: "save-for-later",
-                  label: x.intl.string(x.t.tpxJto),
-                  leadingAccessory: { type: "icon", icon: null != l ? d.c : o.c },
-                  action: () =>
-                      null == l
-                          ? (0, p.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 })
-                          : (0, p.x)({
-                                channelId: e.channel_id,
-                                messageId: e.id,
-                                dueAt: l.saveData.dueAt,
-                                displayToast: !0,
-                            }),
-                  children: [
-                      null != l
-                          ? (0, i.jsx)(s.Dr, {
-                                id: "remove-from-for-later",
-                                label: x.intl.string(x.t.SvXS1Z),
-                                leadingAccessory: { type: "icon", icon: d.c },
-                                icon: d.c,
-                                action: () =>
-                                    (0, p.x)({
-                                        channelId: e.channel_id,
-                                        messageId: e.id,
-                                        dueAt: l.saveData.dueAt,
-                                        displayToast: !0,
-                                    }),
-                            })
-                          : (0, i.jsx)(s.Dr, {
-                                id: "create-bookmark",
-                                label: x.intl.string(x.t["9p3D9p"]),
-                                leadingAccessory: { type: "icon", icon: o.c },
-                                icon: o.c,
-                                action: () => (0, p.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
-                            }),
-                      (0, i.jsx)(s.bX, {}),
-                      r,
-                  ],
-              })
-            : (0, i.jsx)(s.Dr, {
-                  id: "save-for-later-upsell",
-                  label: x.intl.string(x.t.tpxJto),
-                  leadingAccessory: { type: "icon", icon: c.t, color: u.k0.PREMIUM_TIER_2 },
-                  icon: c.t,
-                  iconProps: { color: u.k0.PREMIUM_TIER_2 },
-                  action: () => (0, p.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
-              })
-        : null;
+t.d(n, { A: () => k, P: () => D });
+var l = t(627968),
+    i = t(64700),
+    a = t(17928),
+    s = t(477782),
+    c = t(403581),
+    d = t(606096),
+    r = t(997146),
+    o = t(406810),
+    u = t(478016),
+    h = t(404374),
+    g = t(966597),
+    p = t(164684),
+    A = t(704456),
+    I = t(85109),
+    b = t(226017),
+    y = t(195404),
+    _ = t(576705),
+    v = t(927813),
+    x = t(652215),
+    m = t(375708);
+function k(e, n) {
+    let { enabled: t } = g.A.useConfig({ location: "LongPressMessageActionSheet" }),
+        i = (0, a.bG)([I.A], () => I.A.getSavedMessage(e.channel_id, e.id)),
+        u = D({ message: e, savedMessage: i });
+    if (!t || (null == i && !n.isPrivate() && !_.A.can(x.xBc.READ_MESSAGE_HISTORY, n))) return null;
+    if (null == i && !(0, b.A)())
+        return (0, l.jsx)(s.Dr, {
+            id: "save-for-later-upsell",
+            label: m.intl.string(m.t.tpxJto),
+            leadingAccessory: { type: "icon", icon: c.t, color: h.k0.PREMIUM_TIER_2 },
+            icon: c.t,
+            iconProps: { color: h.k0.PREMIUM_TIER_2 },
+            action: () => (0, p.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 }),
+        });
+    let A = null != i && null == i.saveData.dueAt,
+        y = null != i && null != i.saveData.dueAt;
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            (0, l.jsx)(s.Dr, {
+                id: "bookmark",
+                label: A ? m.intl.string(m.t.SvXS1Z) : m.intl.string(m.t.tpxJto),
+                leadingAccessory: { type: "icon", icon: A ? d.c : r.c },
+                action: () =>
+                    A
+                        ? (0, p.x)({ channelId: e.channel_id, messageId: e.id, displayToast: !0 })
+                        : (0, p.Y)({ channelId: e.channel_id, messageId: e.id, displayToast: !0, dueAt: void 0 }),
+            }),
+            (0, l.jsx)(s.Dr, {
+                id: "reminder",
+                label: y ? m.intl.string(m.t.vrbqs1) : m.intl.string(m.t.mJ3P0N),
+                leadingAccessory: { type: "icon", icon: o.O },
+                icon: o.O,
+                children: u,
+            }),
+        ],
+    });
 }
-function m(e) {
-    let { message: n, savedMessage: a } = e,
-        [t, c] = l.useState(new Date());
-    l.useEffect(() => {
-        let e = setInterval(() => c(new Date()), b.A.Millis.MINUTE);
+function D(e) {
+    let { message: n, savedMessage: t } = e,
+        [a, c] = i.useState(new Date());
+    i.useEffect(() => {
+        let e = setInterval(() => c(new Date()), v.A.Millis.MINUTE);
         return () => {
             clearInterval(e);
         };
     }, []);
-    let d = l.useCallback(
+    let d = i.useCallback(
             (e) => (0, p.Y)({ channelId: n.channel_id, messageId: n.id, dueAt: e, displayToast: !0 }),
             [n.channel_id, n.id],
         ),
-        o = (0, y.S)({ createReminder: d }),
-        { dueInText: u } = (0, g.Ce)({ dueAt: a?.saveData.dueAt, now: t, type: g.kh.LONG });
-    return a?.saveData.dueAt == null
-        ? (0, i.jsx)(s.rX, { label: x.intl.string(x.t.roMu1H), children: o })
-        : (0, i.jsxs)(s.rX, {
-              label: u,
+        r = (0, y.S)({ createReminder: d }),
+        { dueInText: o } = (0, A.Ce)({ dueAt: t?.saveData.dueAt, now: a, type: A.kh.LONG });
+    return t?.saveData.dueAt == null
+        ? (0, l.jsx)(s.rX, { label: m.intl.string(m.t.roMu1H), children: r })
+        : (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, i.jsx)(s.Dr, {
-                      id: "mark-complete",
-                      label: x.intl.string(x.t.yjGtdJ),
-                      leadingAccessory: { type: "icon", icon: r.U },
-                      icon: r.U,
-                      action: () => (0, p.Y)({ channelId: n.channel_id, messageId: n.id, dueAt: void 0 }),
+                  (0, l.jsx)(s.rX, {
+                      label: o,
+                      children: (0, l.jsx)(s.Dr, {
+                          id: "mark-complete",
+                          label: m.intl.string(m.t.yjGtdJ),
+                          leadingAccessory: { type: "icon", icon: u.U },
+                          icon: u.U,
+                          action: () =>
+                              (0, p.x)({ channelId: n.channel_id, messageId: n.id, displayToast: !0, isReminder: !0 }),
+                      }),
                   }),
-                  (0, i.jsx)(s.Dr, { id: "edit-reminder", label: x.intl.string(x.t.vrbqs1), children: o }),
+                  (0, l.jsx)(s.rX, { label: m.intl.string(m.t.vrbqs1), children: r }),
               ],
           });
 }

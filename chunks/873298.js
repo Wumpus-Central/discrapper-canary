@@ -85,6 +85,7 @@ var i,
         (i[(i.GAME_INVITES = 5)] = "GAME_INVITES"),
         (i[(i.BOOKMARKS = 6)] = "BOOKMARKS"),
         (i[(i.SCHEDULED = 7)] = "SCHEDULED"),
+        (i[(i.REMINDERS = 8)] = "REMINDERS"),
         i),
     w =
         (((r = {})[(r.NO_GUILD_ONBOARDING = 0)] = "NO_GUILD_ONBOARDING"),

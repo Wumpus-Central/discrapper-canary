@@ -2508,6 +2508,10 @@
     padding: 0 8px 16px
 }
 
+.tabBar__06f80 .tab__06f80+.tab__06f80 {
+    margin-inline-start: var(--space-xs)
+}
+
 .tabLabel__06f80 {
     line-height: 1.4;
     min-width: 0;
