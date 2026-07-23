@@ -46,9 +46,10 @@ class I extends r.A {
         let e = c.A.getChannelId();
         if (null == e || !this.isLivingRoomAvailable() || o.A.getChannel(e)?.isGuildStageVoice()) return;
         let t = (function (e) {
-            let { users: t, currentUserId: n } = e,
-                i = t.get(n)?.position ?? null,
-                { aspectRatio: r } = A.iX[u.I.DEFAULT];
+            let { users: t, currentUserId: n, channelId: i } = e,
+                r = t.get(n)?.position ?? null,
+                a = _.A.getRoom(i)?.background ?? u.I.DEFAULT,
+                { aspectRatio: s } = A.iX[a];
             return Object.fromEntries(
                 [...t.values()]
                     .filter((e) => {
@@ -67,11 +68,11 @@ class I extends r.A {
                                     worldY: 0,
                                     worldZ: ((e.y - r.y) / 100) * 8,
                                 };
-                            })(n, i, { aspectRatio: r }),
+                            })(n, r, { aspectRatio: s }),
                         ];
                     }),
             );
-        })({ users: _.A.getRoomUsers(e), currentUserId: l.default.getId() });
+        })({ users: _.A.getRoomUsers(e), currentUserId: l.default.getId(), channelId: e });
         d.Ay.getMediaEngine().eachConnection((e) => {
             for (let [n, i] of Object.entries(t))
                 e.setUserPosition(

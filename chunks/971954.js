@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { iX: () => s, ls: () => a });
+n.d(t, { iX: () => o, ls: () => l });
 let i = {
     0: [
         { x: 13.6, y: 56.8 },
@@ -25,16 +25,19 @@ let i = {
         { x: 60, y: 7 },
     ],
 };
-var r = n(821578);
-function a(e, t) {
-    let n = s[r.I.DEFAULT].seats.find((n) => n.position.x === e && n.position.y === t);
+var r = n(821578),
+    a = n(662731),
+    s = n(375708);
+function l(e, t) {
+    let n = o[r.I.DEFAULT].seats.find((n) => n.position.x === e && n.position.y === t);
     return n?.name ?? "";
 }
-let s = {
+let o = {
     [r.I.DEFAULT]: {
         background:
             "https://cdn.discordapp.com/assets/content/953fe0f3c32fb58ba28de77c49726e4cf1c7d4b34d3f6e6c17b95195469a58cb.jpg",
         aspectRatio: 1337 / 972,
+        getName: () => s.intl.string(a.default["4KcB5R"]),
         seats: [
             { name: "PC_SEAT_1", position: i[r.I.DEFAULT][0] },
             { name: "PC_SEAT_2", position: i[r.I.DEFAULT][1] },

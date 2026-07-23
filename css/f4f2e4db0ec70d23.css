@@ -1,0 +1,32 @@
+.content__60f16 {
+    align-items: center;
+    flex-wrap: wrap
+}
+
+.content__60f16,
+.room__60f16 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.room__60f16 {
+    background-color: var(--background-mod-muted);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    cursor: pointer;
+    flex-direction: column;
+    padding: var(--space-8)
+}
+
+.room__60f16:hover {
+    background-color: var(--background-mod-normal)
+}
+
+.room__60f16.selected__60f16 {
+    border: 2px solid var(--background-brand)
+}
+
+.image__60f16 {
+    height: 132px
+}

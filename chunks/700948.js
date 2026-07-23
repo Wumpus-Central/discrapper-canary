@@ -24,11 +24,12 @@ var i = n(627968),
     I = n(886943);
 function T(e) {
     let { channelId: t, popoutType: n, controlsIdle: a } = e,
-        { background: T, seats: b, aspectRatio: _, plants: R } = N.iX[c.I.DEFAULT],
-        { width: S = 0, height: P = 0, ref: L } = (0, o.Ay)(),
-        O = S / P > _,
-        w = (0, d.bG)([u.A], () => null != u.A.getSelectedParticipant(t)),
-        M = l.useRef(null);
+        T = (0, d.bG)([A.A], () => A.A.getRoom(t)?.background ?? c.I.DEFAULT),
+        { background: b, seats: _, aspectRatio: R, plants: S } = N.iX[T],
+        { width: P = 0, height: L = 0, ref: O } = (0, o.Ay)(),
+        w = P / L > R,
+        M = (0, d.bG)([u.A], () => null != u.A.getSelectedParticipant(t)),
+        D = l.useRef(null);
     return (
         l.useEffect(() => {
             (0, m.zR)({ channelId: t });
@@ -40,26 +41,26 @@ function T(e) {
         }, [t]),
         (0, i.jsxs)("div", {
             className: I.kL,
-            ref: L,
+            ref: O,
             children: [
                 (0, i.jsxs)("div", {
-                    className: s()(I.hk, { [I.Nb]: O }),
-                    style: { aspectRatio: _ },
-                    ref: M,
+                    className: s()(I.hk, { [I.Nb]: w }),
+                    style: { aspectRatio: R },
+                    ref: D,
                     children: [
-                        (0, i.jsx)("img", { className: I.Sl, src: T, alt: "" }),
-                        (0, i.jsx)(x.A, { channelId: t, plantConfig: R, roomWidth: S, roomHeight: P, aspectRatio: _ }),
-                        b.map((e, n) =>
-                            (0, i.jsx)(g.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: S }, n),
+                        (0, i.jsx)("img", { className: I.Sl, src: b, alt: "" }),
+                        (0, i.jsx)(x.A, { channelId: t, plantConfig: S, roomWidth: P, roomHeight: L, aspectRatio: R }),
+                        _.map((e, n) =>
+                            (0, i.jsx)(g.A, { channelId: t, x: e.position.x, y: e.position.y, roomWidth: P }, n),
                         ),
-                        (0, i.jsx)(j.A, { channelId: t, roomWidth: S }),
+                        (0, i.jsx)(j.A, { channelId: t, roomWidth: P }),
                         (0, i.jsx)(E.A, { channelId: t }),
-                        (0, i.jsx)(f.A, { channelId: t, roomWidth: S }),
-                        !w && (0, i.jsx)(y.A, { channelId: t, popoutType: n, aspectRatio: _ }),
-                        (0, i.jsx)(C.A, { channelId: t, popoutType: n, seatsRef: M, controlsIdle: a, height: P }),
+                        (0, i.jsx)(f.A, { channelId: t, roomWidth: P }),
+                        !M && (0, i.jsx)(y.A, { channelId: t, popoutType: n, aspectRatio: R }),
+                        (0, i.jsx)(C.A, { channelId: t, popoutType: n, seatsRef: D, controlsIdle: a, height: L }),
                     ],
                 }),
-                w && (0, i.jsx)(v.A, { channelId: t, popoutType: n, width: S, height: P }),
+                M && (0, i.jsx)(v.A, { channelId: t, popoutType: n, width: P, height: L }),
             ],
         })
     );

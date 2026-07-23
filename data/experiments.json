@@ -757,7 +757,8 @@
     "defaultConfig": {
       "enabled": false,
       "experimental": false,
-      "interactionsEnabled": false
+      "interactionsEnabled": false,
+      "multipleRoomsEnabled": false
     },
     "treatments": [
       {
@@ -766,7 +767,8 @@
         "config": {
           "enabled": true,
           "experimental": false,
-          "interactionsEnabled": true
+          "interactionsEnabled": true,
+          "multipleRoomsEnabled": false
         }
       },
       {
@@ -775,7 +777,8 @@
         "config": {
           "enabled": true,
           "experimental": true,
-          "interactionsEnabled": true
+          "interactionsEnabled": true,
+          "multipleRoomsEnabled": false
         }
       },
       {
@@ -784,7 +787,18 @@
         "config": {
           "enabled": true,
           "experimental": true,
-          "interactionsEnabled": false
+          "interactionsEnabled": false,
+          "multipleRoomsEnabled": false
+        }
+      },
+      {
+        "id": 4,
+        "label": "Enable Guild Rooms with Room Variants",
+        "config": {
+          "enabled": true,
+          "experimental": true,
+          "interactionsEnabled": true,
+          "multipleRoomsEnabled": true
         }
       }
     ]
