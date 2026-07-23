@@ -4267,25 +4267,6 @@
     }
   },
   {
-    "name": "2026-06-bounty-use-video-modal-mobile-placement-experiment",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": false
-      },
-      "2": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-06-bulk-nitro-gifting",
     "kind": "user",
     "defaultConfig": false,
