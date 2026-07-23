@@ -33,7 +33,7 @@ function d(e) {
                     n.e("35062"),
                     n.e("97509"),
                     n.e("95429"),
-                    n.e("47978"),
+                    n.e("16059"),
                     n.e("32191"),
                     n.e("98965"),
                     n.e("93014"),
@@ -68,7 +68,8 @@ function d(e) {
             : _ === o.fg2.DOMAIN
               ? (0, r.openModalLazy)(async () => {
                     let { default: e } = await Promise.all([
-                        n.e("51869"),
+                        n.e("18330"),
+                        n.e("4093"),
                         n.e("37687"),
                         n.e("82721"),
                         n.e("94048"),

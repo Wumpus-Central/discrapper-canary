@@ -3917,34 +3917,6 @@
     }
   },
   {
-    "name": "2026-05-orbs-purchase-upsell-banner",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-05-orbs-shop-upsell-banner",
-    "kind": "user",
-    "defaultConfig": false,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": true
-    }
-  },
-  {
     "name": "2026-05-quest-home-tile-redesign",
     "kind": "user",
     "defaultConfig": {
