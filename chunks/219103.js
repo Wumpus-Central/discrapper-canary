@@ -14,30 +14,28 @@ var i = n(503698),
     C = n(818348),
     h = n(375708),
     E = n(594387),
-    f = n(751070);
+    f = n(958214);
 function A(e) {
     let {
         priceAmount: t,
         priceCurrency: n,
         discountIconConfig: i,
         className: r,
-        discountOfferAmount: a,
-        discount: s = m.rr,
-        variant: o = "text-md/semibold",
+        discount: a = m.rr,
+        variant: s = "text-md/semibold",
     } = e;
     return n === C.Yr.DISCORD_ORB
-        ? (0, l.jsx)(P, { orbAmount: t, className: r, discount: s, variant: o })
-        : (0, l.jsx)(S, {
+        ? (0, l.jsx)(P, { orbAmount: t, className: r, discount: a, variant: s })
+        : (0, l.jsx)(y, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
               className: r,
-              discountOfferAmount: a,
-              discount: s,
-              variant: o,
+              discount: a,
+              variant: s,
           });
 }
-function y(e) {
+function S(e) {
     let { config: t } = e,
         n = t.size ?? "md";
     switch (t.source) {
@@ -61,60 +59,45 @@ function y(e) {
             return t.source, null;
     }
 }
-function S(e) {
+function y(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
             discountIconConfig: i,
             className: a,
-            discountOfferAmount: s,
-            discount: o = m.rr,
-            variant: d = "heading-md/semibold",
+            discount: s = m.rr,
+            variant: o = "heading-md/semibold",
         } = e,
-        C = null != s,
-        E = (0, p.RS)(t, n),
-        A =
-            o !== m.rr && o.discountPercentage >= m.es && !C
+        d = (0, p.RS)(t, n),
+        C =
+            s !== m.rr && s.discountPercentage >= m.es
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(u.A, {
                               children: h.intl.format(h.t.niC6DK, {
-                                  price: E,
-                                  discountPercentage: o.discountPercentage,
+                                  price: d,
+                                  discountPercentage: s.discountPercentage,
                               }),
                           }),
-                          (0, l.jsx)("span", { "aria-hidden": !0, children: E }),
+                          (0, l.jsx)("span", { "aria-hidden": !0, children: d }),
                           (0, l.jsx)("span", {
                               className: f.id,
                               "aria-hidden": !0,
-                              children: ` (-${o.discountPercentage}%)`,
+                              children: ` (-${s.discountPercentage}%)`,
                           }),
                       ],
                   })
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, l.jsx)(u.A, { children: h.intl.format(h.t["6C36MF"], { price: E }) }),
-                          (0, l.jsx)("span", { "aria-hidden": !0, className: r()({ [f.rN]: C }, a), children: E }),
+                          (0, l.jsx)(u.A, { children: h.intl.format(h.t["6C36MF"], { price: d }) }),
+                          (0, l.jsx)("span", { "aria-hidden": !0, className: a, children: d }),
                       ],
                   });
     return (0, l.jsxs)("div", {
-        className: r()({ [f.nn]: C }, f.kL, a),
+        className: r()(f.kL, a),
         children: [
-            null != i ? (0, l.jsx)(y, { config: i }) : null,
-            (0, l.jsx)(c.E, { variant: d, color: "currentColor", lineClamp: 1, children: A }),
-            C &&
-                (0, l.jsxs)(c.E, {
-                    variant: d,
-                    className: f.NM,
-                    lineClamp: 1,
-                    children: [
-                        (0, l.jsx)(u.A, { children: h.intl.format(h.t.rItDbx, { discountOfferAmount: s }) }),
-                        (0, l.jsx)("span", {
-                            "aria-hidden": !0,
-                            children: h.intl.formatToPlainString(h.t.AYcXGW, { discountOfferAmount: s }),
-                        }),
-                    ],
-                }),
+            null != i ? (0, l.jsx)(S, { config: i }) : null,
+            (0, l.jsx)(c.E, { variant: o, color: "currentColor", lineClamp: 1, children: C }),
         ],
     });
 }
