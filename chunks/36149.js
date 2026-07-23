@@ -153,23 +153,23 @@ function q(e) {
             o.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: u });
         }, [u]),
         E = a.useCallback(
-            async (e) => {
+            async (e, a) => {
                 d(!0);
                 try {
                     o.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
-                    let a = await (0, S.uf)({ method: e, classificationId: r ?? void 0 }),
-                        s = T.A.showAgeVerification({
-                            webviewUrl: a.verification_webview_url,
-                            verificationRequestId: a.verification_request_id,
-                            verificationVendorName: a.verification_vendor_name,
-                            incodeParameters: a.incode_parameters,
+                    let s = await (0, S.uf)({ method: e, classificationId: r ?? void 0, vendor: a }),
+                        l = T.A.showAgeVerification({
+                            webviewUrl: s.verification_webview_url,
+                            verificationRequestId: s.verification_request_id,
+                            verificationVendorName: s.verification_vendor_name,
+                            incodeParameters: s.incode_parameters,
                             onComplete: t,
                             onClose: _,
                             onCancel: _,
                             entryPoint: n,
                             shouldShowExpressiveModal: i,
                         });
-                    !1 === s && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _());
+                    !1 === l && (h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _());
                 } catch (e) {
                     h.A.showFailedToast(L.OB.TIGGER_PAWTECT_ERROR), _();
                 } finally {
