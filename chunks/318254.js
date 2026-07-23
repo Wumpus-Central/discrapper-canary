@@ -1,41 +1,40 @@
-"use strict";
-n.d(t, { C: () => l });
-var i = n(627968);
-n(64700);
-var r = n(661531),
-    a = n(996682),
-    s = n(27989);
-let l = (e) => {
+c.d(s, { C: () => d });
+var e = c(627968);
+c(64700);
+var t = c(661531),
+    i = c(996682),
+    a = c(27989);
+let d = (l) => {
     let {
-            size: t = "md",
-            width: n,
-            height: l,
-            color: o = r.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: d = "",
-            ...c
-        } = e,
-        u = (0, s.J)(t),
-        _ = u?.width ?? n,
-        E = u?.height ?? l;
-    return (0, i.jsxs)("svg", {
-        ...(0, a.A)(c),
+            size: s = "md",
+            width: c,
+            height: d,
+            color: h = t.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: p = "",
+            ...r
+        } = l,
+        n = (0, a.J)(s),
+        o = n?.width ?? c,
+        w = n?.height ?? d;
+    return (0, e.jsxs)("svg", {
+        ...(0, i.A)(r),
         xmlns: "http://www.w3.org/2000/svg",
-        width: _,
-        height: E,
+        width: o,
+        height: w,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [
-            (0, i.jsx)("path", {
+            (0, e.jsx)("path", {
                 d: "M11.75 7.57a5.12 5.12 0 0 1-3.86 3.87.42.42 0 0 0 0 .82 5.1 5.1 0 0 1 3.86 3.86.42.42 0 0 0 .81 0 5.12 5.12 0 0 1 3.87-3.86.42.42 0 0 0 0-.82 5.15 5.15 0 0 1-3.87-3.86.42.42 0 0 0-.81-.01Z",
-                fill: "string" == typeof o ? o : o.css,
-                className: d,
+                fill: "string" == typeof h ? h : h.css,
+                className: p,
             }),
-            (0, i.jsx)("path", {
+            (0, e.jsx)("path", {
                 fillRule: "evenodd",
                 d: "M11.64.22c.3-.12.62-.12.91 0l7.49 3.1c.29.12.52.35.64.64l3.1 7.49c.12.29.12.62 0 .9l-3.1 7.5c-.12.28-.35.51-.64.63l-7.49 3.1c-.29.13-.62.13-.9 0l-7.5-3.1c-.28-.12-.52-.35-.64-.64l-3.1-7.48c-.12-.3-.12-.62 0-.91l3.1-7.49c.12-.29.36-.52.65-.64l7.48-3.1ZM20.6 11.5 12.5 3.4a.56.56 0 0 0-.8 0l-8.1 8.1a.56.56 0 0 0 0 .8l8.1 8.1c.22.22.57.22.8 0l8.1-8.1a.56.56 0 0 0 0-.8Zm-8.85-3.94a5.12 5.12 0 0 1-3.86 3.87.42.42 0 0 0 0 .82 5.1 5.1 0 0 1 3.86 3.86.42.42 0 0 0 .81 0 5.12 5.12 0 0 1 3.87-3.86.42.42 0 0 0 0-.82 5.15 5.15 0 0 1-3.87-3.86.42.42 0 0 0-.81-.01Z",
                 clipRule: "evenodd",
-                fill: "string" == typeof o ? o : o.css,
-                className: d,
+                fill: "string" == typeof h ? h : h.css,
+                className: p,
             }),
         ],
     });

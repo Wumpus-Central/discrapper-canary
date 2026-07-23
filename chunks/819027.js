@@ -1,25 +1,24 @@
-"use strict";
-n.d(t, { A: () => _ });
+n.d(t, { A: () => h });
 var i = n(627968);
 n(64700);
-var r = n(477782),
-    a = n(625903),
-    s = n(688810),
-    l = n(474397),
+var l = n(477782),
+    s = n(625903),
+    r = n(688810),
+    a = n(474397),
     o = n(780964),
-    d = n(766075),
-    c = n(652215),
-    u = n(375708);
-function _(e) {
-    let { analyticsLocations: t } = (0, s.Ay)();
-    return (0, i.jsx)(r.Dr, {
+    u = n(766075),
+    d = n(652215),
+    c = n(375708);
+function h(e) {
+    let { analyticsLocations: t } = (0, r.Ay)();
+    return (0, i.jsx)(l.Dr, {
         id: "voice-settings",
-        label: u.intl.string(u.t.NiTd0e),
+        label: c.intl.string(c.t.NiTd0e),
         action: () => {
-            (0, d.openUserSettings)(o.X.VOICE_CATEGORY, { analyticsLocations: t, appContext: e }),
-                (0, l.A)(e, e === c.BRT.POPOUT);
+            (0, u.openUserSettings)(o.X.VOICE_CATEGORY, { analyticsLocations: t, appContext: e }),
+                (0, a.A)(e, e === d.BRT.POPOUT);
         },
-        icon: a.Z,
-        leadingAccessory: { type: "icon", icon: a.Z },
+        icon: s.Z,
+        leadingAccessory: { type: "icon", icon: s.Z },
     });
 }

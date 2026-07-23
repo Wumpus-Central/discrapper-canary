@@ -4370,24 +4370,24 @@ function rb(e) {
     var n;
     let t,
         i,
-        { isLoading: s, unownedWishlistItems: a, ...r } = e,
-        d =
+        { isLoading: s, unownedWishlistItems: a, canSeeWishlist: r = !1, ...d } = e,
+        o =
             ((n = "UserProfileSidebarWishlistBreadcrumb"),
             (t = (0, aX.Gh)(n)),
             (i = aQ.useConfig({ location: n }).isEnabled),
-            t && i);
-    if (s || r.profileOwner.bot || ((null == a || 0 === a.length) && !d)) return null;
-    let o = J.default.getCurrentUser()?.id,
-        c = null != o && o !== r.profileOwner.id,
-        u = a?.some((e) => rx.Ay.isPremiumSku(e.skuId)) ?? !1,
-        h = d && (a ?? []).length < 3;
+            t && i && r);
+    if (s || d.profileOwner.bot || ((null == a || 0 === a.length) && !o)) return null;
+    let c = J.default.getCurrentUser()?.id,
+        u = null != c && c !== d.profileOwner.id,
+        h = a?.some((e) => rx.Ay.isPremiumSku(e.skuId)) ?? !1,
+        m = o && (a ?? []).length < 3;
     return (0, l.jsx)(a$.h, {
-        isGifting: c,
+        isGifting: u,
         location: "UserProfileSidebarWishlistBreadcrumb",
         children:
-            c && (u || h)
-                ? (0, l.jsx)(rj, { ...r, unownedWishlistItems: a, isNitroRecEnabled: d })
-                : (0, l.jsx)(rI, { ...r, unownedWishlistItems: a, isNitroRecEnabled: d, isSortingNitroToFront: !1 }),
+            u && (h || m)
+                ? (0, l.jsx)(rj, { ...d, unownedWishlistItems: a, isNitroRecEnabled: o })
+                : (0, l.jsx)(rI, { ...d, unownedWishlistItems: a, isNitroRecEnabled: o, isSortingNitroToFront: !1 }),
     });
 }
 function rC(e) {
@@ -4557,6 +4557,7 @@ function rC(e) {
                             onClick: () => {
                                 o?.({ tabSection: rd.RP.WISHLIST });
                             },
+                            canSeeWishlist: null != I,
                         }),
                 ],
             }),
@@ -4788,6 +4789,7 @@ function rD(e) {
                                             onClick: () => {
                                                 C?.({ tabSection: rd.RP.WISHLIST });
                                             },
+                                            canSeeWishlist: null != v,
                                         }),
                                     }),
                                 !a && (0, l.jsx)(rP, { user: n, channelId: i.id }),
