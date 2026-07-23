@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => M, Bs: () => y });
+n.d(t, { Ay: () => M, Bs: () => D });
 var i,
     r = n(627968),
     a = n(64700),
@@ -12,7 +12,7 @@ var i,
     _ = n(952270),
     E = n(39623),
     A = n(459192),
-    h = n(379257),
+    h = n(31720),
     I = n(847599),
     f = n(787301),
     p = n(36149),
@@ -20,13 +20,13 @@ var i,
     m = n(338717),
     g = n(403362),
     S = n(375708),
-    N = n(766184),
+    N = n(275504),
     C = (((i = C || {}).TEXT = "text"), (i.ATTACHMENT = "attachment"), (i.EMBED = "embed"), i);
-function R(e) {
+function O(e) {
     let { className: t } = e;
     return (0, r.jsx)("div", { className: l()(N.pR, t), children: S.intl.string(S.t["F+x38C"]) });
 }
-function O(e) {
+function R(e) {
     let { className: t, isSingleMosaicItem: n, obscureOnly: i } = e;
     return (0, r.jsx)("div", {
         className: l()(N.W5, t),
@@ -50,18 +50,18 @@ function L(e) {
     let { reason: t = m.Oc.SPOILER, className: n, isSingleMosaicItem: i = !1 } = e;
     switch (t) {
         case m.Oc.SPOILER:
-            return (0, r.jsx)(R, { className: n });
+            return (0, r.jsx)(O, { className: n });
         case m.Oc.EXPLICIT_CONTENT:
         case m.Oc.GORE_CONTENT:
         case m.Oc.SELF_HARM_CONTENT:
-            return (0, r.jsx)(O, { isSingleMosaicItem: i, className: n });
+            return (0, r.jsx)(R, { isSingleMosaicItem: i, className: n });
         case m.Oc.POTENTIAL_EXPLICIT_CONTENT:
-            return (0, r.jsx)(O, { isSingleMosaicItem: i, className: n, obscureOnly: !0 });
+            return (0, r.jsx)(R, { isSingleMosaicItem: i, className: n, obscureOnly: !0 });
         default:
             return (0, g.xb)(t);
     }
 }
-function D(e) {
+function y(e) {
     let { obscureReason: t, isVisible: n, handleToggleObscurity: i, obscurityControlClassName: a } = e;
     return t !== m.Oc.EXPLICIT_CONTENT && t !== m.Oc.GORE_CONTENT && t !== m.Oc.SELF_HARM_CONTENT
         ? null
@@ -77,7 +77,7 @@ function D(e) {
               }),
           });
 }
-let y = a.createContext(!1);
+let D = a.createContext(!1);
 class v extends a.PureComponent {
     state = { visible: !1 };
     removeObscurity = (e) => {
@@ -121,7 +121,7 @@ class v extends a.PureComponent {
                 isVerifiedTeen: c,
             } = this.props,
             { visible: _ } = this.state,
-            E = (0, r.jsx)(y.Consumer, {
+            E = (0, r.jsx)(D.Consumer, {
                 children: (E) => {
                     let A = E || _ || !a;
                     return m._K.has(s) && !t
@@ -137,7 +137,7 @@ class v extends a.PureComponent {
                                   (0, r.jsx)("div", { "aria-hidden": !A, className: N.Qu, children: e(!A) }),
                                   c
                                       ? null
-                                      : (0, r.jsx)(D, {
+                                      : (0, r.jsx)(y, {
                                             obscureReason: s,
                                             isVisible: _,
                                             handleToggleObscurity: this.handleToggleObscurity,
@@ -173,7 +173,7 @@ class v extends a.PureComponent {
                 isVerifiedTeen: o,
             } = this.props,
             { visible: d } = this.state;
-        return (0, r.jsx)(y.Consumer, {
+        return (0, r.jsx)(D.Consumer, {
             children: (c) => {
                 let _ = c || d;
                 return m._K.has(s)
@@ -189,7 +189,7 @@ class v extends a.PureComponent {
                               (0, r.jsx)("div", { "aria-hidden": !_, className: N.Qu, children: e(!_) }),
                               o
                                   ? null
-                                  : (0, r.jsx)(D, {
+                                  : (0, r.jsx)(y, {
                                         obscureReason: s,
                                         isVisible: d,
                                         handleToggleObscurity: this.handleToggleObscurity,
@@ -216,7 +216,7 @@ class v extends a.PureComponent {
     renderObscuredText() {
         let { children: e, renderTextElement: t, className: n } = this.props,
             { visible: i } = this.state,
-            s = (0, r.jsx)(y.Consumer, {
+            s = (0, r.jsx)(D.Consumer, {
                 children: (s) => {
                     let o = s || i,
                         d = a.Children.toArray(e(o)),

@@ -3532,7 +3532,7 @@ function nr() {
         );
     return 0 === i.length ? null : (0, r.jsx)(tW, { className: tV.nd, columns: c, rowClassName: ni.nM, data: s });
 }
-var no = a(379257),
+var no = a(31720),
     nd = a(847599),
     nc = a(27621);
 function nu() {
