@@ -3,8 +3,6 @@ e.exports = {
     JW: "svg_cc5dd2",
     Pm: "shiftSVG_cc5dd2",
     Qq: "noContain_cc5dd2",
-    H8: "decoration_cc5dd2",
-    O4: "decorationImage_cc5dd2",
     H7: "lowerBadge_cc5dd2",
     OV: "isHighlighted_cc5dd2",
     A8: "upperBadge_cc5dd2",

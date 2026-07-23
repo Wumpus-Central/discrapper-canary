@@ -49,24 +49,23 @@ function _(e) {
             badgeMaskSize: h,
             upperBadge: I,
             lowerBadge: f,
-            decorationSrc: p,
-            rounded: T = !1,
-            "aria-hidden": m,
+            rounded: p = !1,
+            "aria-hidden": T,
         } = e,
-        [g, S] = r.useState(!1),
-        N = null != I,
-        C = null != f,
-        O = r.useId(),
-        R = `${O}-upper_badge_masks`,
-        L = `${O}-lower_badge_masks`,
-        y = `${O}-blob_mask`,
-        D = `${O}-stroke_mask`,
-        v = `${O}-highlight_mask`,
-        b = _?.width != null ? _.width : 16,
-        M = _?.height != null ? _.height : 16,
-        P = { width: u ? n : n + 8, height: u ? n : n + 8, x: u ? 0 : -4, y: u ? 0 : -4 },
-        U = u ? 20 : h,
-        w = T
+        [m, g] = r.useState(!1),
+        S = null != I,
+        N = null != f,
+        C = r.useId(),
+        O = `${C}-upper_badge_masks`,
+        R = `${C}-lower_badge_masks`,
+        L = `${C}-blob_mask`,
+        y = `${C}-stroke_mask`,
+        D = `${C}-highlight_mask`,
+        v = _?.width != null ? _.width : 16,
+        b = _?.height != null ? _.height : 16,
+        M = { width: u ? n : n + 8, height: u ? n : n + 8, x: u ? 0 : -4, y: u ? 0 : -4 },
+        P = u ? 20 : h,
+        U = p
             ? (function (e) {
                   switch (e) {
                       case 48:
@@ -99,45 +98,45 @@ function _(e) {
             className: s()(a, c.iE),
             style: l,
             onFocus: function () {
-                S(!0);
+                g(!0);
             },
             onBlur: function () {
-                S(!1);
+                g(!1);
             },
-            "aria-hidden": m,
+            "aria-hidden": T,
             children: [
                 (0, i.jsxs)(
                     "svg",
                     {
-                        width: P.width,
-                        height: P.height,
-                        viewBox: `${P.x} ${P.y} ${P.width} ${P.height}`,
+                        width: M.width,
+                        height: M.height,
+                        viewBox: `${M.x} ${M.y} ${M.width} ${M.height}`,
                         className: s()(c.JW, { [c.Qq]: E, [c.Pm]: !u }),
                         overflow: "visible",
                         role: "none",
                         children: [
                             (0, i.jsxs)("defs", {
                                 children: [
-                                    E && (0, i.jsx)("path", { d: w, id: v }),
-                                    (0, i.jsx)("path", { d: w, id: y }),
+                                    E && (0, i.jsx)("path", { d: U, id: D }),
+                                    (0, i.jsx)("path", { d: U, id: L }),
                                     null != I
                                         ? (0, i.jsx)("rect", {
-                                              id: R,
-                                              x: n - U + A,
+                                              id: O,
+                                              x: n - P + A,
                                               y: -A,
-                                              width: U,
-                                              height: U,
-                                              rx: U / 2,
-                                              ry: U / 2,
+                                              width: P,
+                                              height: P,
+                                              rx: P / 2,
+                                              ry: P / 2,
                                           })
                                         : null,
                                     null != f
                                         ? (0, i.jsx)("rect", {
-                                              id: L,
-                                              x: n - (b + 2 * A) + A,
-                                              y: n - (M + 2 * A) + A,
-                                              width: b + 2 * A,
-                                              height: M + 2 * A,
+                                              id: R,
+                                              x: n - (v + 2 * A) + A,
+                                              y: n - (b + 2 * A) + A,
+                                              width: v + 2 * A,
+                                              height: b + 2 * A,
                                               rx: h / 2,
                                               ry: h / 2,
                                           })
@@ -145,22 +144,22 @@ function _(e) {
                                 ],
                             }),
                             (0, i.jsxs)("mask", {
-                                id: O,
+                                id: C,
                                 fill: "black",
                                 x: 0,
                                 y: 0,
                                 width: n,
                                 height: n,
                                 children: [
-                                    E && (0, i.jsx)("use", { href: `#${v}`, fill: "black" }),
-                                    (0, i.jsx)("use", { href: `#${y}`, fill: "white", className: s()({ [c.OV]: E }) }),
+                                    E && (0, i.jsx)("use", { href: `#${D}`, fill: "black" }),
+                                    (0, i.jsx)("use", { href: `#${L}`, fill: "white", className: s()({ [c.OV]: E }) }),
+                                    S ? (0, i.jsx)("use", { href: `#${O}`, fill: "black" }) : null,
                                     N ? (0, i.jsx)("use", { href: `#${R}`, fill: "black" }) : null,
-                                    C ? (0, i.jsx)("use", { href: `#${L}`, fill: "black" }) : null,
                                 ],
                             }),
-                            N || C
+                            S || N
                                 ? (0, i.jsxs)("mask", {
-                                      id: D,
+                                      id: y,
                                       children: [
                                           (0, i.jsx)("rect", {
                                               width: "150%",
@@ -169,24 +168,24 @@ function _(e) {
                                               y: "-25%",
                                               fill: "white",
                                           }),
+                                          S ? (0, i.jsx)("use", { href: `#${O}`, fill: "black" }) : null,
                                           N ? (0, i.jsx)("use", { href: `#${R}`, fill: "black" }) : null,
-                                          C ? (0, i.jsx)("use", { href: `#${L}`, fill: "black" }) : null,
                                       ],
                                   })
                                 : null,
-                            g
+                            m
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)("g", {
                                               className: c.ZD,
-                                              mask: `url(#${D})`,
-                                              children: (0, i.jsx)("use", { href: `#${y}` }),
+                                              mask: `url(#${y})`,
+                                              children: (0, i.jsx)("use", { href: `#${L}` }),
                                           }),
                                           (0, i.jsxs)("g", {
                                               className: c.e7,
                                               children: [
-                                                  null != I ? (0, i.jsx)("use", { href: `#${R}` }) : null,
-                                                  null != f ? (0, i.jsx)("use", { href: `#${L}` }) : null,
+                                                  null != I ? (0, i.jsx)("use", { href: `#${O}` }) : null,
+                                                  null != f ? (0, i.jsx)("use", { href: `#${R}` }) : null,
                                               ],
                                           }),
                                       ],
@@ -194,32 +193,25 @@ function _(e) {
                                 : null,
                             E &&
                                 (0, i.jsx)("path", {
-                                    d: w,
+                                    d: U,
                                     stroke: o.A.unsafe_rawColors.BRAND_500.css,
                                     strokeWidth: 2,
                                     className: c.Zt,
-                                    mask: `url(#${D})`,
+                                    mask: `url(#${y})`,
                                 }),
                             (0, i.jsx)(
                                 "foreignObject",
-                                { mask: `url(#${O})`, x: 0, y: 0, className: d, width: n, height: n, children: t },
+                                { mask: `url(#${C})`, x: 0, y: 0, className: d, width: n, height: n, children: t },
                                 "foreign-object",
                             ),
                         ],
                     },
                     "svg",
                 ),
-                null != p
-                    ? (0, i.jsx)("div", {
-                          className: c.H8,
-                          "aria-hidden": !0,
-                          children: (0, i.jsx)("img", { className: c.O4, src: p, alt: "" }),
-                      })
-                    : null,
                 null != f ? (0, i.jsx)("div", { className: c.H7, children: f }) : null,
                 null != I ? (0, i.jsx)("div", { className: c.A8, children: I }) : null,
             ],
         },
-        `${C}-${N}`,
+        `${N}-${S}`,
     );
 }
