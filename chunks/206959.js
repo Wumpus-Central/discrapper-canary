@@ -6,7 +6,7 @@ var i,
     s = n(214958),
     l = n.n(s),
     o = n(972347),
-    d = n(941426),
+    d = n(118356),
     c = n(459838),
     u = n(70909);
 n(321073);
@@ -173,6 +173,9 @@ function U(e, t) {
         consecutiveStaticColorFrames: n.encoderQualityStats?.consecutiveStaticColorFrames,
         minResolutionWidth: n.encoderQualityStats?.minResolutionWidth,
         minResolutionHeight: n.encoderQualityStats?.minResolutionHeight,
+        reconFramesRequested: n.encoderQualityStats?.reconFramesRequested,
+        reconFramesSuccessful: n.encoderQualityStats?.reconFramesSuccessful,
+        reconFramesFailed: n.encoderQualityStats?.reconFramesFailed,
     };
 }
 function w(e, t, n, i) {

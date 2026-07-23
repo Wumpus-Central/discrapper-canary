@@ -5684,6 +5684,22 @@
   },
   {
     "kind": "user",
+    "name": "2026-07-nvenc-reconstructed-frames",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
+    "kind": "user",
     "name": "2026-07-parental-consent-warning-fetch",
     "defaultConfig": {
       "enabled": false
