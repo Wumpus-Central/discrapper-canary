@@ -4441,6 +4441,44 @@
     }
   },
   {
+    "name": "2026-06-emoji-frecent-test",
+    "kind": "user",
+    "defaultConfig": {
+      "maxFrequentEmojis": null
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "maxFrequentEmojis": 9
+      },
+      "2": {
+        "maxFrequentEmojis": 18
+      }
+    }
+  },
+  {
+    "name": "2026-06-expressive-button-test",
+    "kind": "user",
+    "defaultConfig": {
+      "buttonStyle": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "buttonStyle": 1
+      },
+      "2": {
+        "buttonStyle": 2
+      }
+    }
+  },
+  {
     "name": "2026-06-family-center-connection-prereq",
     "kind": "user",
     "defaultConfig": {
