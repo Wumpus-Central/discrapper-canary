@@ -429,7 +429,7 @@ function eZ(e) {
     );
 }
 var e$ = n(615550),
-    e0 = n(617498),
+    e0 = n(183812),
     e1 = n(717421),
     e2 = n(765671),
     e3 = n(743284);
@@ -17563,23 +17563,25 @@ function xT(e) {
             );
         }),
         x = (0, L.bG)([d3.default], () => d3.default.locale),
-        h = (0, L.bG)([g0.A], () => g0.A.roles),
-        E = xS.af.toLocaleDateString(x, { month: "long", day: "numeric", year: "numeric" });
+        h = R.useMemo(() => new Intl.NumberFormat(x, { notation: "compact", compactDisplay: "short" }), [x]),
+        E = null != c && c >= 1e4 ? h.format(c) : String(c),
+        j = (0, L.bG)([g0.A], () => g0.A.roles),
+        f = xS.af.toLocaleDateString(x, { month: "long", day: "numeric", year: "numeric" });
     R.useEffect(() => {
         u && a(c0.T$.PERMISSIONS);
     }, [u, a]);
-    let j = R.useCallback(
+    let N = R.useCallback(
             async (e) => {
                 try {
-                    let t = await xA(l, e, h);
+                    let t = await xA(l, e, j);
                     o(t.id), a(c0.T$.DISPLAY), et.A.selectRole(t.id);
                 } catch {
                     (0, w.P0)((0, F.o)(el.intl.string(el.t.F8FvUy), B.Ck.FAILURE));
                 }
             },
-            [l, h, o, a],
+            [l, j, o, a],
         ),
-        f = (0, xN.x)(l, s, j);
+        A = (0, xN.x)(l, s, N);
     return (0, p.jsxs)(p.Fragment, {
         children: [
             (0, p.jsxs)("div", {
@@ -17591,13 +17593,13 @@ function xT(e) {
                         variant: "text-md/semibold",
                         children: el.intl.format(el.t.BUdGkE, { roleName: s.name }),
                     }),
-                    f
+                    A
                         ? (0, p.jsx)(eM.D, {
                               className: x_.MK,
                               onClick: function (e) {
                                   (0, nX.L3)(e, async () => {
                                       let { default: e } = await Promise.resolve().then(n.bind(n, 316710));
-                                      return (t) => (0, p.jsx)(e, { ...t, guild: l, role: s, onDuplicateRole: j });
+                                      return (t) => (0, p.jsx)(e, { ...t, guild: l, role: s, onDuplicateRole: N });
                                   });
                               },
                               "aria-label": el.intl.string(el.t.PdRCRg),
@@ -17613,7 +17615,7 @@ function xT(e) {
                     g
                         ? (0, p.jsx)(z.p, {
                               messageType: z.Y.WARNING,
-                              children: el.intl.format(xC.default.jdcrDs, { date: E }),
+                              children: el.intl.format(xC.default.jdcrDs, { date: f }),
                           })
                         : null,
                 ],
@@ -17650,7 +17652,7 @@ function xT(e) {
                         disabled: u,
                         children: u
                             ? el.intl.string(el.t["kg//+7"])
-                            : el.intl.formatToPlainString(el.t.bHnZWW, { numMembers: String(c) }),
+                            : el.intl.formatToPlainString(el.t.bHnZWW, { numMembers: E }),
                     }),
                 ],
             }),
