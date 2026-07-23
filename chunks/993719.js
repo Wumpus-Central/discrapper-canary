@@ -1,9 +1,8 @@
-"use strict";
-n.d(t, { N: () => a, O: () => r });
-var i = n(228366);
-function r(e) {
-    i.h.dispatch({ type: "CALL_FEEDBACK_TUTORIAL_SHOW", tutorialKey: e });
+i.d(p, { N: () => h, O: () => c });
+var a = i(228366);
+function c(t) {
+    a.h.dispatch({ type: "CALL_FEEDBACK_TUTORIAL_SHOW", tutorialKey: t });
 }
-function a(e) {
-    i.h.dispatch({ type: "CALL_FEEDBACK_TUTORIAL_DISMISS", tutorialKey: e });
+function h(t) {
+    a.h.dispatch({ type: "CALL_FEEDBACK_TUTORIAL_DISMISS", tutorialKey: t });
 }
