@@ -1,109 +1,110 @@
-a.d(t, { A: () => R });
-var i = a(627968),
-    l = a(64700),
-    n = a(503698),
-    o = a.n(n),
-    r = a(17928),
-    s = a(876230),
-    d = a(26137),
-    c = a(268218),
-    h = a(597098),
-    p = a(614269),
-    u = a(829097),
-    m = a(734057),
-    v = a(102174),
-    g = a(664708),
-    C = a(349897),
-    A = a(215655),
-    w = a(696016),
-    _ = a(16590),
-    k = a(375708),
-    I = a(237610);
-let M = (0, c.Fe)({
-    createPromise: () => Promise.resolve().then(a.bind(a, 664111)),
+"use strict";
+n.d(t, { A: () => C });
+var i = n(627968),
+    r = n(64700),
+    a = n(503698),
+    s = n.n(a),
+    l = n(17928),
+    o = n(876230),
+    d = n(26137),
+    c = n(268218),
+    u = n(597098),
+    _ = n(614269),
+    E = n(829097),
+    A = n(734057),
+    h = n(102174),
+    I = n(664708),
+    f = n(349897),
+    p = n(215655),
+    T = n(696016),
+    m = n(16590),
+    g = n(375708),
+    S = n(237610);
+let N = (0, c.Fe)({
+    createPromise: () => Promise.resolve().then(n.bind(n, 664111)),
     webpackId: 664111,
     name: "DiscordVideoPlayer",
-    renderLoader: () => (0, i.jsx)("div", { className: I.Lq }),
+    renderLoader: () => (0, i.jsx)("div", { className: S.Lq }),
 });
-function R(e) {
+function C(e) {
     let {
             attachment: t,
-            posterUrl: a,
-            className: n,
+            posterUrl: n,
+            className: a,
             autoPlay: c,
-            src: R,
-            fillContainer: y = !1,
-            minWidth: S = 500,
-            maxWidth: P = 1 / 0,
-            maxHeight: b = 1 / 0,
-            channelId: x,
-            messageId: f,
-            showTextContent: E = P >= 250,
-            showParticipants: T = !0,
-            volume: B,
-            autoMute: V,
-            onVolumeChange: N,
-            onMutedChange: D,
-            onClick: F,
-            onContextMenu: H,
-            onPlay: U,
-            allowFullScreen: j = !0,
+            src: C,
+            fillContainer: O = !1,
+            minWidth: R = 500,
+            maxWidth: L = 1 / 0,
+            maxHeight: y = 1 / 0,
+            channelId: D,
+            messageId: v,
+            showTextContent: b = L >= 250,
+            showParticipants: M = !0,
+            volume: P,
+            autoMute: U,
+            onVolumeChange: w,
+            onMutedChange: G,
+            onClick: x,
+            onContextMenu: k,
+            onPlay: F,
+            allowFullScreen: V = !0,
         } = e,
-        K = t.width ?? 0,
-        L = t.height ?? 0,
-        G = (0, r.bG)([m.A], () => m.A.getBasicChannel(x)?.guild_id, [x]),
-        Z = K > 0 && L > 0 ? K / L : 16 / 9;
-    (Z > 2 || Z < 1) && (Z = 16 / 9);
-    let O = l.useRef(null);
-    (0, A.A)(t.id, O);
-    let J = Math.min(K > 0 ? K : S, P),
-        Q = J / Z;
-    Q > b && (J = (Q = b) * Z), J < S && (Q = (J = S) / Z);
-    let W = Math.round(Math.min(J, P)),
-        Y = Math.round(Math.min(Q, b)),
-        q = K > 0 && L > 0 ? Math.min(W / K, Y / L, 1) : 1,
-        z = (0, h.AE)({ src: a, width: Math.round(K * q), height: Math.round(L * q) }),
-        [X, $] = l.useState(!1),
-        [ee, et] = l.useState(!0),
-        [ea, ei] = l.useState(0),
-        el = l.useRef(0),
-        en = l.useCallback(
+        B = t.width ?? 0,
+        H = t.height ?? 0,
+        j = (0, l.bG)([A.A], () => A.A.getBasicChannel(D)?.guild_id, [D]),
+        W = B > 0 && H > 0 ? B / H : 16 / 9;
+    (W > 2 || W < 1) && (W = 16 / 9);
+    let Y = r.useRef(null);
+    (0, p.A)(t.id, Y);
+    let K = Math.min(B > 0 ? B : R, L),
+        $ = K / W;
+    $ > y && (K = ($ = y) * W), K < R && ($ = (K = R) / W);
+    let z = Math.round(Math.min(K, L)),
+        q = Math.round(Math.min($, y)),
+        Z = B > 0 && H > 0 ? Math.min(z / B, q / H, 1) : 1,
+        X = (0, u.AE)({ src: n, width: Math.round(B * Z), height: Math.round(H * Z) }),
+        [Q, J] = r.useState(!1),
+        [ee, et] = r.useState(!0),
+        [en, ei] = r.useState(0),
+        er = r.useRef(0),
+        ea = r.useCallback(
             (e, t) => {
-                t !== s.KB.BUFFERING_RECOVERY && e === s.Q6.PLAYING && U?.(t !== s.KB.USER, 1e3 * el.current, 1e3 * ea);
+                t !== o.KB.BUFFERING_RECOVERY && e === o.Q6.PLAYING && F?.(t !== o.KB.USER, 1e3 * er.current, 1e3 * en);
             },
-            [ea, U],
+            [en, F],
         ),
-        eo = l.useCallback((e, t) => {
-            (el.current = e), Number.isFinite(t) && t > 0 && ei((e) => (e === t ? e : t));
+        es = r.useCallback((e, t) => {
+            (er.current = e), Number.isFinite(t) && t > 0 && ei((e) => (e === t ? e : t));
         }, []),
-        er = l.useMemo(() => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [t.clip_events_timeline]),
-        es = l.useMemo(() => {
-            if (er)
+        el = r.useMemo(() => t.clip_events_timeline?.some((e) => null != e.speaking) ?? !1, [t.clip_events_timeline]),
+        eo = r.useMemo(() => {
+            if (el)
                 return [
                     {
                         id: "speaking-indicators",
                         iconComponent: d.r,
-                        label: k.intl.string(_.default.hFWVZQ),
+                        label: g.intl.string(m.default.hFWVZQ),
                         active: ee,
                         onClick: () => et((e) => !e),
                         "data-testid": "clips-player-speaking-indicators-toggle",
                     },
                 ];
-        }, [er, ee]),
-        ed = (0, u._)({ location: w.Mu }).externalAnalyticsEnabled,
-        ec = l.useMemo(
+        }, [el, ee]),
+        ed = (0, E._)({ location: T.Mu }).externalAnalyticsEnabled,
+        ec = r.useMemo(
             () =>
                 ed
                     ? {
-                          contentId: R.split("?")[0],
-                          videoStreamType: p.u.isHlsUrl(R) ? "hls" : "mp4",
+                          contentId: C.split("?")[0],
+                          videoStreamType: _.u.isHlsUrl(C) ? "hls" : "mp4",
                           contentType: "clips",
                           title: t.title,
                       }
                     : void 0,
-            [ed, R, t.title],
+            [ed, C, t.title],
         ),
-        eh = l.useMemo(
+        eu = r.useMemo(
             () =>
                 t.clip_participants?.map((e) => {
                     let { id: t } = e;
@@ -111,80 +112,80 @@ function R(e) {
                 }) ?? [],
             [t.clip_participants],
         ),
-        { enableScrubPreview: ep } = v.B.useConfig({ location: "ClipsPlayer" }),
-        eu = l.useCallback(
+        { enableScrubPreview: e_ } = h.B.useConfig({ location: "ClipsPlayer" }),
+        eE = r.useCallback(
             (e) => {
                 let {
-                    playerState: a,
-                    isControlBarExpanded: l,
-                    videoRef: n,
-                    isActive: o,
-                    isVolumeExpanded: r,
-                    controlBarAnimationSpring: s,
+                    playerState: n,
+                    isControlBarExpanded: r,
+                    videoRef: a,
+                    isActive: s,
+                    isVolumeExpanded: l,
+                    controlBarAnimationSpring: o,
                 } = e;
-                return (0, i.jsx)(g.A, {
+                return (0, i.jsx)(I.A, {
                     attachment: t,
-                    controlBarAnimationSpring: s,
-                    guildId: G,
-                    isFullScreen: X,
-                    showParticipants: T,
-                    showTextContent: E,
-                    channelId: x,
-                    messageId: f,
+                    controlBarAnimationSpring: o,
+                    guildId: j,
+                    isFullScreen: Q,
+                    showParticipants: M,
+                    showTextContent: b,
+                    channelId: D,
+                    messageId: v,
                     showSpeakingIndicators: ee,
-                    clipUserIds: eh,
-                    durationSeconds: ea,
-                    playerState: a,
-                    isControlBarExpanded: l,
-                    videoRef: n,
-                    isActive: o,
-                    isVolumeExpanded: r,
+                    clipUserIds: eu,
+                    durationSeconds: en,
+                    playerState: n,
+                    isControlBarExpanded: r,
+                    videoRef: a,
+                    isActive: s,
+                    isVolumeExpanded: l,
                 });
             },
-            [t, G, X, T, E, x, f, ee, eh, ea],
+            [t, j, Q, M, b, D, v, ee, eu, en],
         ),
-        em = (0, C.T)(t.clip_events_timeline ?? []);
+        eA = (0, f.T)(t.clip_events_timeline ?? []);
     return (0, i.jsx)("div", {
-        className: o()(I.kL, { [I.HA]: y }, n),
+        className: s()(S.kL, { [S.HA]: O }, a),
         onClick: (e) => e.stopPropagation(),
-        onContextMenu: H,
-        style: y ? void 0 : { width: W, height: Y },
-        children: (0, i.jsx)(M, {
-            src: R,
+        onContextMenu: k,
+        style: O ? void 0 : { width: z, height: q },
+        children: (0, i.jsx)(N, {
+            src: C,
             downloadUrl: t.url,
             downloadContentType: t.content_type,
-            extraButtons: es,
-            poster: z,
+            extraButtons: eo,
+            poster: X,
             posterPlaceholder: t.placeholder,
             posterPlaceholderVersion: t.placeholder_version,
             autoplay: c,
             initialActive: !1,
-            initialVolume: B,
-            initialMuted: V,
-            onVolumeChange: N,
-            onMutedChange: D,
-            onProgressUpdate: eo,
+            initialVolume: P,
+            initialMuted: U,
+            onVolumeChange: w,
+            onMutedChange: G,
+            onProgressUpdate: es,
             orientation: "landscape",
-            timelineIndicatorConfig: em,
+            timelineIndicatorConfig: eA,
             minWidth: 0,
             minHeight: 0,
             loadingSpinnerPosition: "center",
-            renderPersistentOverlay: eu,
+            renderPersistentOverlay: eE,
             parentTransitionState: null,
-            onFullscreenChange: $,
-            onClick: F,
-            onPlayerStateChange: en,
+            onFullscreenChange: J,
+            onClick: x,
+            onPlayerStateChange: ea,
             withVideoHalo: !0,
-            objectFit: y ? "cover" : void 0,
+            objectFit: O ? "cover" : void 0,
             muxContentMetadata: ec,
-            hideFullScreenBtn: !j,
+            hideFullScreenBtn: !V,
             hideSkipButtons: !0,
             compactTimeDisplay: !0,
             autoHideVolumeSlider: !0,
             hidePlaybackSpeedBtn: !0,
-            playerRef: O,
-            scrubPreviewVttUrl: ep ? t.spritesheet_vtt_url : void 0,
-            scrubPreviewImageUrl: ep ? t.spritesheet_image_url : void 0,
+            playerRef: Y,
+            scrubPreviewVttUrl: e_ ? t.spritesheet_vtt_url : void 0,
+            scrubPreviewImageUrl: e_ ? t.spritesheet_image_url : void 0,
         }),
     });
 }
