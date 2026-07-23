@@ -6,7 +6,7 @@ var i = n(827343),
     s = n(710195),
     l = n(280450),
     o = n(734057),
-    d = n(954035),
+    d = n(283540),
     c = n(763827),
     u = n(821578);
 n(17928);
@@ -38,7 +38,7 @@ class I extends r.A {
         return (
             null != e &&
             E.A.getCurrentConfig({ guildId: e, location: "GuildRoomSpatialAudioManager" }, { autoTrackExposure: !1 })
-                .experimental
+                .interactionsEnabled
         );
     }
     apply() {

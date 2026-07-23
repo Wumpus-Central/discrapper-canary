@@ -54,7 +54,7 @@ var l = t(627968),
     en = t(970636),
     et = t(616356),
     el = t(470710),
-    ei = t(954035),
+    ei = t(283540),
     es = t(309010),
     ea = t(287809),
     er = t(151476),
@@ -381,10 +381,7 @@ let eS = function (e) {
         ee = i.useRef(null),
         et = (0, B.Us)(),
         el = (0, u.bG)([P.A], () => P.A.isVisible(n.id)),
-        { experimental: ed, interactionsEnabled: eh } = G.A.useExperiment({
-            guildId: n.guild_id,
-            location: "CenterControlTray",
-        });
+        { interactionsEnabled: ed } = G.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
     return H
         ? (0, l.jsx)(T.f5, {
               value: J,
@@ -504,7 +501,7 @@ let eS = function (e) {
                                                     whichPopoutIsOpen: m,
                                                     setWhichPopoutIsOpen: C,
                                                 }),
-                                            el && ed && eh && (0, l.jsx)(W.A, { channel: n, themeable: !0 }),
+                                            el && ed && (0, l.jsx)(W.A, { channel: n, themeable: !0 }),
                                             (0, l.jsx)(eA.A, {
                                                 channel: n,
                                                 whichPopoutIsOpen: m,

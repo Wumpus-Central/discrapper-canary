@@ -8,8 +8,8 @@ var i = n(627968),
     c = n(17928),
     d = n(866323),
     u = n(175841),
-    p = n(734057),
-    h = n(309010),
+    h = n(734057),
+    p = n(309010),
     m = n(927813),
     A = n(935208),
     f = n(446243),
@@ -44,7 +44,7 @@ function P(e) {
           : { stage: 2, timeUntilNextStage: null };
 }
 function L(e) {
-    let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: p, plantWidth: h } = e,
+    let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: h, plantWidth: p } = e,
         [m, A] = l.useState(P(a).stage),
         x = l.useRef([]),
         C = l.useCallback(
@@ -96,13 +96,13 @@ function L(e) {
                 children: (e) => {
                     let { ref: t, onClick: n, ...l } = e;
                     return (0, i.jsxs)(o.D, {
-                        className: s()(E.CV, E.AA, p && E.r9),
-                        style: { left: `${c.x}%`, bottom: `${c.y}%`, width: `${h}px` },
+                        className: s()(E.CV, E.AA, h && E.r9),
+                        style: { left: `${c.x}%`, bottom: `${c.y}%`, width: `${p}px` },
                         innerRef: (e) => {
                             t.current = e;
                         },
-                        onClick: p ? void 0 : n,
-                        "aria-disabled": p,
+                        onClick: h ? void 0 : n,
+                        "aria-disabled": h,
                         ...l,
                         children: [
                             N((e, t) => {
@@ -151,32 +151,31 @@ function O(e) {
 }
 function w(e) {
     let { channelId: t, plants: n, plantConfig: a, roomWidth: s, roomHeight: r, aspectRatio: o } = e,
-        d = (0, c.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
+        d = (0, c.bG)([h.A], () => h.A.getChannel(t)?.guild_id),
         u = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
-        { experimental: m, interactionsEnabled: A } = C.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
-        f = (0, c.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === t),
-        g = (0, c.bG)([x.A], () => null != x.A.getPendingNote(t)),
-        y = (s / r > o ? r * o : s) * 0.0625;
+        { interactionsEnabled: m } = C.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
+        A = (0, c.bG)([p.Ay], () => p.Ay.getVoiceChannelId() === t),
+        f = (0, c.bG)([x.A], () => null != x.A.getPendingNote(t)),
+        g = (s / r > o ? r * o : s) * 0.0625;
     return (l.useEffect(() => {
         m &&
-            A &&
             Object.values(_).forEach((e) => {
                 let { src: t } = e;
                 new Image().src = t;
             });
-    }, [m, A]),
+    }, [m]),
     null == d)
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: u.map((e, n) => {
                   let { plant: l, plantPosition: a } = e;
-                  return m && A
+                  return m
                       ? (0, i.jsx)(
                             L,
-                            { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !f || g, plantWidth: y },
+                            { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !A || f, plantWidth: g },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(O, { plantPosition: a, plantWidth: y }, n);
+                      : (0, i.jsx)(O, { plantPosition: a, plantWidth: g }, n);
               }),
           });
 }

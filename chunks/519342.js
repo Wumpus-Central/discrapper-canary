@@ -8,8 +8,8 @@ var i = n(627968),
     c = n(17928),
     d = n(717421),
     u = n(939249),
-    p = n(22231),
-    h = n(442433),
+    h = n(22231),
+    p = n(442433),
     m = n(717558),
     A = n(85448),
     f = n(734057),
@@ -30,7 +30,16 @@ var i = n(627968),
     P = n(375708),
     L = n(820447);
 function O(e) {
-    let { userId: t, channelId: a, x: N, y: I, statusId: O, numericAvatarSize: w, avatarSize: M, experimental: D } = e,
+    let {
+            userId: t,
+            channelId: a,
+            x: N,
+            y: I,
+            statusId: O,
+            numericAvatarSize: w,
+            avatarSize: M,
+            posturesEnabled: D,
+        } = e,
         U = (0, c.bG)([x.default], () => x.default.getUser(t)),
         k = (0, c.bG)([x.default], () => x.default.getCurrentUser()?.id === t),
         [V, G] = l.useState(!1),
@@ -50,7 +59,7 @@ function O(e) {
             (e) => {
                 let t = f.A.getChannel(a);
                 if (null != B && null != U && null != t)
-                    return (0, h.L3)(e, async () => {
+                    return (0, p.L3)(e, async () => {
                         let { default: e } = await Promise.all([
                             n.e("97705"),
                             n.e("26132"),
@@ -131,7 +140,7 @@ function O(e) {
                 k &&
                     (0, i.jsx)("div", {
                         className: s()(L.qS, L.Gk),
-                        children: (0, i.jsx)(p.R, { size: "xxs", color: "currentColor" }),
+                        children: (0, i.jsx)(h.R, { size: "xxs", color: "currentColor" }),
                     }),
             ],
         });
@@ -200,7 +209,7 @@ function O(e) {
 }
 function w(e) {
     let { channelId: t, guildId: n, users: l, numericAvatarSize: a, avatarSize: s } = e,
-        { experimental: r } = N.A.useExperiment({ guildId: n, location: "GuildRoomUserList" });
+        { posturesEnabled: r } = N.A.useExperiment({ guildId: n, location: "GuildRoomUserList" });
     return (0, i.jsx)(i.Fragment, {
         children: l.entries().map((e) => {
             let [n, l] = e;
@@ -214,7 +223,7 @@ function w(e) {
                     statusId: l.statusId,
                     numericAvatarSize: a,
                     avatarSize: s,
-                    experimental: r,
+                    posturesEnabled: r,
                 },
                 `${n}`,
             );

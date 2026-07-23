@@ -756,9 +756,9 @@
     "label": "Guild Rooms",
     "defaultConfig": {
       "enabled": false,
-      "experimental": false,
       "interactionsEnabled": false,
-      "multipleRoomsEnabled": false
+      "multipleRoomsEnabled": false,
+      "posturesEnabled": false
     },
     "treatments": [
       {
@@ -766,39 +766,39 @@
         "label": "Enable Guild Rooms in this guild",
         "config": {
           "enabled": true,
-          "experimental": false,
           "interactionsEnabled": true,
-          "multipleRoomsEnabled": false
+          "multipleRoomsEnabled": false,
+          "posturesEnabled": true
         }
       },
       {
         "id": 2,
-        "label": "Enable Guild Rooms in this guild",
+        "label": "Enable Guild Rooms without Interactions",
         "config": {
           "enabled": true,
-          "experimental": true,
-          "interactionsEnabled": true,
-          "multipleRoomsEnabled": false
+          "interactionsEnabled": false,
+          "multipleRoomsEnabled": false,
+          "posturesEnabled": true
         }
       },
       {
         "id": 3,
-        "label": "Enable Guild Rooms without Interactions",
+        "label": "Enable Guild Rooms with Room Variants",
         "config": {
           "enabled": true,
-          "experimental": true,
-          "interactionsEnabled": false,
-          "multipleRoomsEnabled": false
+          "interactionsEnabled": true,
+          "multipleRoomsEnabled": true,
+          "posturesEnabled": true
         }
       },
       {
         "id": 4,
-        "label": "Enable Guild Rooms with Room Variants",
+        "label": "Enable Guild Rooms without Postures",
         "config": {
           "enabled": true,
-          "experimental": true,
           "interactionsEnabled": true,
-          "multipleRoomsEnabled": true
+          "multipleRoomsEnabled": false,
+          "posturesEnabled": false
         }
       }
     ]
