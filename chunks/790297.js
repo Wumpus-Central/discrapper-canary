@@ -29,6 +29,7 @@ function E(e) {
                     return r.A.COLLECTIBLES_SHOP_PROFILE_FRAMES_TAB;
                 case c.G2.COLLECTION_INDEX:
                     return r.A.COLLECTIBLES_SHOP_INDEX_PAGE;
+                case c.G2.COLLABS:
                 case c.G2.CATALOG:
                 case c.G2.LAYOUT:
                     return r.A.COLLECTIBLES_SHOP;

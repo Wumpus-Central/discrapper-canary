@@ -8,7 +8,7 @@ var s = r(64700),
     u = r(319400),
     c = r(39418),
     f = r(652215);
-async function g(e) {
+async function y(e) {
     let { timeout: t } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     try {
         return (await a.Bo.get({ url: f.Rsh.COLLECTIBLES_SEARCH, query: e, rejectWithError: !0, timeout: t })).body;
@@ -17,15 +17,15 @@ async function g(e) {
         throw ((0, c.o)(e), e);
     }
 }
-var y = r(856686);
+var g = r(856686);
 function S(e, t) {
     let r = new Set(e);
     return r.has(t) ? r.delete(t) : r.add(t), r;
 }
 let h = { sortType: n.$.RECENCY, sortDirection: l.A.DESC },
     d = { sortType: n.$.POPULARITY, sortDirection: l.A.DESC },
-    p = { sortType: n.$.RELEVANCE, sortDirection: l.A.DESC },
-    b = {
+    b = { sortType: n.$.RELEVANCE, sortDirection: l.A.DESC },
+    p = {
         itemTypeFilters: new Set(),
         colorFilters: new Set(),
         themeFilters: new Set(),
@@ -42,11 +42,11 @@ let h = { sortType: n.$.RECENCY, sortDirection: l.A.DESC },
     };
 function E(e) {
     let { colorFilters: t, themeFilters: r, searchQuery: s, itemTypeFilters: i } = e;
-    return t.size > 0 || r.size > 0 || "" !== s.trim() ? p : i.size > 0 ? d : h;
+    return t.size > 0 || r.size > 0 || "" !== s.trim() ? b : i.size > 0 ? d : h;
 }
 let m = (0, i.v)(
     (0, o.eh)((e, t) => ({
-        ...b,
+        ...p,
         hasDefaultFilters: () =>
             !t().hasFilters() && t().sort.sortType === h.sortType && t().sort.sortDirection === h.sortDirection,
         hasFilters: () => {
@@ -115,7 +115,7 @@ let m = (0, i.v)(
                 let r = { ...e, searchQuery: t, queryPageOffset: 0 };
                 return (
                     "" !== t.trim()
-                        ? ((r.sort = p), (r.userHasSelectedSort = !1))
+                        ? ((r.sort = b), (r.userHasSelectedSort = !1))
                         : e.userHasSelectedSort || (r.sort = E(r)),
                     r
                 );
@@ -143,6 +143,20 @@ let m = (0, i.v)(
                 return e.userHasSelectedSort || (s.sort = E(s)), s;
             });
         },
+        setThirdPartyOnlyFilter: () => {
+            e((e) => {
+                let t = {
+                    ...e,
+                    colorFilters: new Set(),
+                    themeFilters: new Set(),
+                    orbEligible: !1,
+                    thirdPartyOnly: !0,
+                    itemTypeFilters: new Set(),
+                    queryPageOffset: 0,
+                };
+                return e.userHasSelectedSort || (t.sort = E(t)), t;
+            });
+        },
         clearFilters: () => {
             e({
                 colorFilters: new Set(),
@@ -155,7 +169,7 @@ let m = (0, i.v)(
         },
         reset: () => {
             let { queryPageSize: r, queryPageOffset: s } = t();
-            e({ ...b, queryPageSize: r, queryPageOffset: s });
+            e({ ...p, queryPageSize: r, queryPageOffset: s });
         },
         setCurrentTab: (t) => {
             e({ currentTab: t });
@@ -163,7 +177,7 @@ let m = (0, i.v)(
     })),
 );
 function O(e) {
-    let { onSetResponse: t, setSearchError: r, setIsFetchingResults: i } = (0, y.S)();
+    let { onSetResponse: t, setSearchError: r, setIsFetchingResults: i } = (0, g.S)();
     s.useEffect(() => {
         function s(e) {
             async function s() {
@@ -173,7 +187,7 @@ function O(e) {
                         s,
                         i,
                         o,
-                        l = await g(e);
+                        l = await y(e);
                     t(
                         ((r = l.skus),
                         (s = l.pagination.total),

@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("583267", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("583366", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -714,6 +714,7 @@ var er =
         (c.NAMEPLATES = "nameplates"),
         (c.PROFILE_FRAMES = "profile-frames"),
         (c.BUNDLES = "bundles"),
+        (c.COLLABS = "collabs"),
         (c.LAYOUT = "layout"),
         (c.COLLECTION_INDEX = "collection-index"),
         (c.GAME_SHOPS = "game-shops"),

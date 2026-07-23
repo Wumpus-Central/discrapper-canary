@@ -60,6 +60,7 @@ var m =
     (a.NAMEPLATES = "nameplates"),
     (a.PROFILE_FRAMES = "profile-frames"),
     (a.BUNDLES = "bundles"),
+    (a.COLLABS = "collabs"),
     (a.LAYOUT = "layout"),
     (a.COLLECTION_INDEX = "collection-index"),
     (a.GAME_SHOPS = "game-shops"),
