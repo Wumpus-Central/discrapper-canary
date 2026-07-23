@@ -756,7 +756,8 @@
     "label": "Guild Rooms",
     "defaultConfig": {
       "enabled": false,
-      "experimental": false
+      "experimental": false,
+      "interactionsEnabled": false
     },
     "treatments": [
       {
@@ -764,7 +765,8 @@
         "label": "Enable Guild Rooms in this guild",
         "config": {
           "enabled": true,
-          "experimental": false
+          "experimental": false,
+          "interactionsEnabled": true
         }
       },
       {
@@ -772,7 +774,17 @@
         "label": "Enable Guild Rooms in this guild",
         "config": {
           "enabled": true,
-          "experimental": true
+          "experimental": true,
+          "interactionsEnabled": true
+        }
+      },
+      {
+        "id": 3,
+        "label": "Enable Guild Rooms without Interactions",
+        "config": {
+          "enabled": true,
+          "experimental": true,
+          "interactionsEnabled": false
         }
       }
     ]

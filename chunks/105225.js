@@ -381,7 +381,10 @@ let eS = function (e) {
         ee = i.useRef(null),
         et = (0, B.Us)(),
         el = (0, u.bG)([P.A], () => P.A.isVisible(n.id)),
-        { experimental: ed } = G.A.useExperiment({ guildId: n.guild_id, location: "CenterControlTray" });
+        { experimental: ed, interactionsEnabled: eh } = G.A.useExperiment({
+            guildId: n.guild_id,
+            location: "CenterControlTray",
+        });
     return H
         ? (0, l.jsx)(T.f5, {
               value: J,
@@ -501,7 +504,7 @@ let eS = function (e) {
                                                     whichPopoutIsOpen: m,
                                                     setWhichPopoutIsOpen: C,
                                                 }),
-                                            el && ed && (0, l.jsx)(W.A, { channel: n, themeable: !0 }),
+                                            el && ed && eh && (0, l.jsx)(W.A, { channel: n, themeable: !0 }),
                                             (0, l.jsx)(eA.A, {
                                                 channel: n,
                                                 whichPopoutIsOpen: m,

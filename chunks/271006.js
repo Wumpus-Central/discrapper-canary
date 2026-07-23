@@ -3,7 +3,7 @@ var i = n(627968),
     l = n(64700),
     a = n(503698),
     s = n.n(a),
-    r = n(523939),
+    r = n(617498),
     o = n(939249),
     c = n(17928),
     d = n(866323),
@@ -12,14 +12,14 @@ var i = n(627968),
     h = n(309010),
     m = n(927813),
     A = n(935208),
-    x = n(446243),
-    f = n(558076),
+    f = n(446243),
+    x = n(558076),
     g = n(872772),
     C = n(360729),
     y = n(884863),
-    j = n(189090),
+    j = n(662731),
     v = n(375708),
-    E = n(568865),
+    E = n(564009),
     N = n(880872),
     I = n(849351),
     T = n(572316),
@@ -46,17 +46,17 @@ function P(e) {
 function L(e) {
     let { guildId: t, channelId: n, plant: a, plantPosition: c, disabled: p, plantWidth: h } = e,
         [m, A] = l.useState(P(a).stage),
-        f = l.useRef([]),
+        x = l.useRef([]),
         C = l.useCallback(
             (e) => {
-                if (f.current.length > 0 || e === m) return;
+                if (x.current.length > 0 || e === m) return;
                 let [t, ...n] = (function (e, t) {
                     let n = t > e ? 1 : -1,
                         i = [];
                     for (let l = e + n; l !== t + n; l += n) i.push(l);
                     return i;
                 })(m, e);
-                (f.current = n), A(t);
+                (x.current = n), A(t);
             },
             [m],
         ),
@@ -69,7 +69,7 @@ function L(e) {
                 leave: { opacity: 0 },
                 config: { duration: 1e3 },
                 onRest: () => {
-                    let e = f.current.shift();
+                    let e = x.current.shift();
                     null != e && A(e);
                 },
             },
@@ -87,7 +87,7 @@ function L(e) {
         };
     }, [a, m, I]);
     let T = l.useCallback(() => {
-        a?.objectId != null && (0, x.Xh)(t, n, a.objectId, { object_type: g.N.PLANT });
+        a?.objectId != null && (0, f.Xh)(t, n, a.objectId, { object_type: g.N.PLANT });
     }, [a, t, n]);
     return (0, i.jsxs)(y.T, {
         centerSingleItem: !0,
@@ -153,29 +153,30 @@ function w(e) {
     let { channelId: t, plants: n, plantConfig: a, roomWidth: s, roomHeight: r, aspectRatio: o } = e,
         d = (0, c.bG)([p.A], () => p.A.getChannel(t)?.guild_id),
         u = a.map((e, t) => ({ plantPosition: e, plant: n[t] })),
-        { experimental: m } = C.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
-        A = (0, c.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === t),
-        x = (0, c.bG)([f.A], () => null != f.A.getPendingNote(t)),
-        g = (s / r > o ? r * o : s) * 0.0625;
+        { experimental: m, interactionsEnabled: A } = C.A.useExperiment({ guildId: d, location: "GuildRoomPlants" }),
+        f = (0, c.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === t),
+        g = (0, c.bG)([x.A], () => null != x.A.getPendingNote(t)),
+        y = (s / r > o ? r * o : s) * 0.0625;
     return (l.useEffect(() => {
         m &&
+            A &&
             Object.values(_).forEach((e) => {
                 let { src: t } = e;
                 new Image().src = t;
             });
-    }, [m]),
+    }, [m, A]),
     null == d)
         ? null
         : (0, i.jsx)(i.Fragment, {
               children: u.map((e, n) => {
                   let { plant: l, plantPosition: a } = e;
-                  return m
+                  return m && A
                       ? (0, i.jsx)(
                             L,
-                            { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !A || x, plantWidth: g },
+                            { guildId: d, channelId: t, plant: l, plantPosition: a, disabled: !f || g, plantWidth: y },
                             `${l?.objectId}-${n}`,
                         )
-                      : (0, i.jsx)(O, { plantPosition: a, plantWidth: g }, n);
+                      : (0, i.jsx)(O, { plantPosition: a, plantWidth: y }, n);
               }),
           });
 }
