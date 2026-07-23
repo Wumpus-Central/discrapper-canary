@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => eC }), n(321073);
+n.d(t, { Ay: () => eO }), n(321073);
 var i = n(435558),
     r = n.n(i),
     a = n(791332),
@@ -37,11 +37,11 @@ let m =
 var S = n(717125),
     N = n(47167),
     C = n(499211),
-    R = n(376943),
-    O = n(576705),
+    O = n(376943),
+    R = n(576705),
     L = n(994500),
-    D = n(871237),
-    y = n(240248),
+    y = n(871237),
+    D = n(240248),
     v = n(465365),
     b = n(704726),
     M = n(652215),
@@ -54,12 +54,12 @@ function w(e) {
     return {
         type: "guild",
         guildId: e.id,
-        content: (0, y.EJ)(e.name, 32),
+        content: (0, D.EJ)(e.name, 32),
         icon: f.Ay.getGuildIconURL({ id: e.id, icon: e.icon, size: 40 }),
     };
 }
 function G(e, t) {
-    let n = V((0, y.EJ)(e.name, 32));
+    let n = V((0, D.EJ)(e.name, 32));
     return {
         type: "channel",
         content: ["italics" === t ? { type: "em", content: [n] } : n],
@@ -72,8 +72,8 @@ function x(e) {
 }
 function k(e, t) {
     let n = _.A.getChannel(e),
-        i = (0, C.p)(e, _.A, S.A, O.A).isSubscriptionGated,
-        r = (0, D.QG)(n) ?? "text";
+        i = (0, C.p)(e, _.A, S.A, R.A).isSubscriptionGated,
+        r = (0, y.QG)(n) ?? "text";
     if (null != t) {
         let a = t.find((t) => t.id === e);
         if (null != a)
@@ -100,7 +100,7 @@ function k(e, t) {
               isDm: n.isPrivate(),
               isForumPost: n.isForumPost(),
               isMentionable: (0, v.Y)(n.type),
-              canViewChannel: (0, R.nc)(n),
+              canViewChannel: (0, O.nc)(n),
               roleSubscriptionGated: i,
               iconType: r,
               parentId: n.parent_id,
@@ -163,7 +163,7 @@ function H(e, t, n, i) {
                                 G({
                                     name: (0, N.m1)(e, I.default, L.A),
                                     type: e.type,
-                                    iconType: (0, D.QG)(e) ?? "forum",
+                                    iconType: (0, y.QG)(e) ?? "forum",
                                 }),
                             ],
                             content: [a],
@@ -196,7 +196,7 @@ let j = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
         match(e) {
-            let t = R.Ju.exec(e);
+            let t = O.Ju.exec(e);
             return null != t && ((null != t[2] && /\D/.test(t[2])) || (null != t[3] && /\D/.test(t[3]))) ? null : t;
         },
         parse(e, t, n) {
@@ -212,7 +212,7 @@ let j = {
     Y = {
         order: s().defaultRules.url.order - 0.5,
         requiredFirstCharacters: ["h"],
-        match: (e) => R.En.exec(e),
+        match: (e) => O.En.exec(e),
         parse(e, t, n) {
             let i = e[0],
                 r = e[1],
@@ -704,7 +704,11 @@ let e_ = {
 function eS(e, t) {
     return 0 === e.length || 0 === t || "" === e.charAt(t - 1).trim();
 }
-let eN = (0, et.A)([
+function eN(e, t, n) {
+    let i = t + n;
+    return i === e.length || "" === e.charAt(i).trim();
+}
+let eC = (0, et.A)([
         {
             highlightWord: {
                 order: -1,
@@ -717,9 +721,11 @@ let eN = (0, et.A)([
                         return null;
                     let n = e.indexOf(t.highlightWord);
                     if (-1 === n) return null;
-                    let i = !eS(e, n);
+                    let i = !eS(e, n) || !eN(e, n, t.highlightWord.length);
                     if (i)
-                        do (n = e.indexOf(t.highlightWord, n + 1)), (i = !eS(e, n));
+                        do
+                            (n = e.indexOf(t.highlightWord, n + 1)),
+                                (i = !eS(e, n) || !eN(e, n, t.highlightWord.length));
                         while (i && -1 !== n);
                     if (-1 === n) return null;
                     let r = e.substring(0, n),
@@ -737,7 +743,7 @@ let eN = (0, et.A)([
         },
         r().omit(eE, ["url"]),
     ]),
-    eC = {
+    eO = {
         RULES: eE,
         CHANNEL_TOPIC_RULES: eA,
         VOICE_CHANNEL_STATUS_RULES: eh,
@@ -746,6 +752,6 @@ let eN = (0, et.A)([
         GUILD_VERIFICATION_FORM_RULES: ep,
         GUILD_EVENT_RULES: em,
         PROFILE_BIO_RULES: eT,
-        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eN,
+        AUTO_MODERATION_SYSTEM_MESSAGE_RULES: eC,
         NATIVE_SEARCH_RESULT_LINK_RULES: eg,
     };
