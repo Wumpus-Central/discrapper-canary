@@ -23,7 +23,7 @@ var i = s(627968),
     E = s(688810),
     _ = s(952818),
     w = s(885386),
-    N = s(186295),
+    N = s(954035),
     I = s(763827),
     O = s(287809),
     R = s(157257),
@@ -31,8 +31,8 @@ var i = s(627968),
     T = s(428262),
     L = s(997630),
     U = s(725792),
-    G = s(905552),
-    b = s(560595);
+    b = s(905552),
+    G = s(560595);
 s(321073), s(839272);
 var D = s(342952),
     P = s(939249),
@@ -375,16 +375,16 @@ function eU(e, t) {
             return e;
     }
 }
-function eG(e) {
+function eb(e) {
     let { dispatch: t, state: s, children: l } = e;
     return (0, i.jsx)(eL.Provider, { value: t, children: (0, i.jsx)(eT.Provider, { value: s, children: l }) });
 }
-function eb() {
+function eG() {
     return [l.useContext(eT), l.useContext(eL)];
 }
 var eD = s(90548);
 function eP() {
-    let [{ selectedSource: e }] = eb(),
+    let [{ selectedSource: e }] = eG(),
         [t, s] = l.useState(null),
         [r, n] = l.useState(!0);
     return (
@@ -1347,7 +1347,7 @@ function eq(e) {
                         : (null == s || s === U.JA.Present) && n(!0);
                 }, [r, s, a, c]);
         })(t, eQ.FX);
-    let [{ nativeSourceType: s }, r] = eb(),
+    let [{ nativeSourceType: s }, r] = eG(),
         n = (0, M.isMac)() && c().satisfies(C.A?.os.release, eV.WZ),
         a = N.Ay.getUseGamescopeCapture(),
         o = a ? "gamescope" : "screen";
@@ -1407,7 +1407,7 @@ var eX = s(843402),
     e1 = s(639214),
     e0 = s(499395);
 function e2(e, t, s, i) {
-    let l = (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A) : null,
+    let l = (0, M.isWindows)() ? (0, b.A)(_.Ay, R.A) : null,
         r = _.Ay.getRunningGames(),
         n = s?.split(":")[1],
         a = e.id.split(":")[1];
@@ -1480,7 +1480,7 @@ function e4(e) {
                 discordSourceId: p,
                 hasPermission: m,
             },
-        ] = eb(),
+        ] = eG(),
         j = (0, u.bG)([_.Ay], () => _.Ay.getRunningGames()),
         v = (0, u.cf)([_.Ay], () => {
             let e = _.Ay.getCandidateGames(),
@@ -1672,7 +1672,7 @@ function tS(e) {
                 sourceType: h,
             },
             x,
-        ] = eb(),
+        ] = eG(),
         p = (0, u.bG)([tr.Ay], () => tr.Ay.getVoiceChannelId()),
         m = (0, u.bG)([$.A, tl.A], () => {
             if (null == p) return !0;
@@ -1894,14 +1894,14 @@ var tE = s(862482),
     t_ = s(194261),
     tw = s(404374),
     tN = s(422936),
-    tI = s(234419),
+    tI = s(732280),
     tO = s(725807),
     tR = s(410516),
     tM = s(400669),
     tT = s(909536),
     tL = s(202541),
     tU = s(39184);
-function tG(e) {
+function tb(e) {
     let { onClose: t } = e,
         { analyticsLocations: s } = (0, E.Ay)(y.A.GO_LIVE_MODAL_V2),
         l = (0, tT.St)("hd_streaming_upsell_ribbon"),
@@ -1961,7 +1961,7 @@ function tG(e) {
         })
     );
 }
-var tb = s(183623),
+var tG = s(183623),
     tD = s(625903),
     tP = s(358618),
     tF = s(627363),
@@ -1978,16 +1978,16 @@ function tQ(e) {
     let { source: t } = e,
         { data: s } = (0, tF.YY)(null != t && tH(t) ? t.id : void 0);
     return null == t
-        ? (0, i.jsx)(tb.F, { className: tB.Jd, size: "md", color: "currentColor" })
+        ? (0, i.jsx)(tG.F, { className: tB.Jd, size: "md", color: "currentColor" })
         : tH(t)
           ? (0, i.jsx)(tk.A, { game: s, pid: t.pid })
           : null == t.icon || "" === t.icon
-            ? (0, i.jsx)(tb.F, { className: tB.Jd, size: "md", color: "currentColor" })
+            ? (0, i.jsx)(tG.F, { className: tB.Jd, size: "md", color: "currentColor" })
             : (0, i.jsx)("img", { src: t.icon, alt: "", className: tB.pI });
 }
 function tW() {
     let [{ preset: e, resolution: t, fps: s, muteStreamAudio: l, selectedSource: r, sourceType: a, audioSourceId: c }] =
-            eb(),
+            eG(),
         o = (0, tZ.tR)(tx.oh.AUDIO_INPUT),
         [f, h] = th(e) ?? [t, s],
         x = ta(e),
@@ -2186,7 +2186,7 @@ function t$(e) {
         ee = l.useCallback(
             async (e) => {
                 w.wv.updateSetting(B.notifyFriends), w.uh.updateSetting(B.hidePreview);
-                let [s, i] = await (0, b.A)(e.hasOwnProperty("pid") ? e.pid : e, {
+                let [s, i] = await (0, G.A)(e.hasOwnProperty("pid") ? e.pid : e, {
                     preset: B.preset,
                     fps: B.fps,
                     resolution: B.resolution,
@@ -2213,7 +2213,7 @@ function t$(e) {
             url: "",
         });
     }, [ee, B.nativeSourceType]);
-    return (0, i.jsx)(eG, {
+    return (0, i.jsx)(eb, {
         state: B,
         dispatch: V,
         children: (0, i.jsx)(m.d, {
@@ -2225,7 +2225,7 @@ function t$(e) {
                     impressionName: o.ImpressionNames.GO_LIVE_MODAL,
                     impressionProperties: {
                         location_stack: Z,
-                        application_id: (0, M.isWindows)() ? (0, G.A)(_.Ay, R.A)?.id : void 0,
+                        application_id: (0, M.isWindows)() ? (0, b.A)(_.Ay, R.A)?.id : void 0,
                         parent_media_session_id: I.A.getMediaSessionId(),
                     },
                 },
@@ -2242,6 +2242,7 @@ function t$(e) {
                                     (0, i.jsx)("div", {
                                         className: tY.wx,
                                         children: (0, i.jsx)(j.I, {
+                                            role: "tablist",
                                             className: tY.q0,
                                             value: K,
                                             look: "pill",
@@ -2306,7 +2307,7 @@ function t$(e) {
                                     }),
                                 ],
                             }),
-                            W && (0, i.jsx)("div", { className: tY.rO, children: (0, i.jsx)(tG, { onClose: t }) }),
+                            W && (0, i.jsx)("div", { className: tY.rO, children: (0, i.jsx)(tb, { onClose: t }) }),
                         ],
                     }),
                 ],

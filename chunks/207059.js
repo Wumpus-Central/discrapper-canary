@@ -1,4 +1,6 @@
 e.exports = {
+    xp: "tabListItem__9e06a",
+    iK: "tabListItemPill__9e06a",
     V3: "tabItem__9e06a",
     v_: "tabContainer__9e06a",
     V_: "pillContainer__9e06a",
