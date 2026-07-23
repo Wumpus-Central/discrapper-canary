@@ -20,23 +20,24 @@ function A(e) {
             isHighlighted: s = !1,
             avatarSize: o = l._3.SIZE_152,
             avatarPlaceholderSrc: A,
-            className: h,
+            avatarSrcOverride: h,
+            className: I,
         } = e,
-        I = (0, d.Te)(o),
+        f = (0, d.Te)(o),
         {
-            avatarDecorationSrc: f,
-            eventHandlers: p,
-            avatarPlaceholderSrc: T,
-        } = (0, c.A)({ user: n, guildId: r, avatarDecorationOverride: t, size: I, onlyAnimateOnHoverOrFocus: !s }),
-        m = u.intl.formatToPlainString(u.t.Do2lxE, { a11y_text: t.label }),
-        g = (0, l.FT)(l._3.SIZE_152);
+            avatarDecorationSrc: p,
+            eventHandlers: T,
+            avatarPlaceholderSrc: m,
+        } = (0, c.A)({ user: n, guildId: r, avatarDecorationOverride: t, size: f, onlyAnimateOnHoverOrFocus: !s }),
+        g = u.intl.formatToPlainString(u.t.Do2lxE, { a11y_text: t.label }),
+        S = (0, l.FT)(l._3.SIZE_152);
     return (0, i.jsx)(E, {
-        ...p,
-        avatarDecoration: f,
-        src: s ? n?.getAvatarURL(r, g, !0) : (A ?? T),
+        ...T,
+        avatarDecoration: p,
+        src: s ? (h ?? n?.getAvatarURL(r, S, !0)) : (A ?? m),
         imageClassName: s ? _.WG : void 0,
-        className: a()(h, _.my),
+        className: a()(I, _.my),
         size: o,
-        "aria-label": m,
+        "aria-label": g,
     });
 }
