@@ -3641,7 +3641,7 @@ var rL =
         (eP.STICKER = "STICKER"),
         (eP.CHOICE_LOADING = "CHOICE_LOADING"),
         (eP.LABEL = "LABEL"),
-        (eP.GAME = "GAME"),
+        (eP.GAME_MENTION = "GAME_MENTION"),
         eP);
 let rD = Object.freeze({
     FONT_SIZE_DEFAULT: 16,

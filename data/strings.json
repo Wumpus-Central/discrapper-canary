@@ -3540,6 +3540,8 @@
   "VPu695": "Locked",
   "jY5xAL": "You've maxed out this badge. Sit back, relax, and enjoy the view from the top.",
   "PEjP4L": "Badge Directory",
+  "rDjKru": "New badge: {badge_name}",
+  "qbzGwh": "New badge: {badge_name}, {tier_name}",
   "2Rb7tE": "Check out the latest additions to the Badge Directory and start collecting.",
   "5GD53o": "New Badges Just Dropped",
   "Mk5nzZ": "New badges just dropped, and {count, plural,one {# of them is already yours}other {# of them are already yours}. Check out what you unlocked.",

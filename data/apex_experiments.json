@@ -5634,36 +5634,6 @@
     }
   },
   {
-    "name": "2026-07-game-mentions-v2-mobile",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "showNewTag": false,
-      "combineMentionAutocomplete": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "showNewTag": true,
-        "combineMentionAutocomplete": false
-      },
-      "2": {
-        "enabled": true,
-        "showNewTag": false,
-        "combineMentionAutocomplete": false
-      },
-      "3": {
-        "enabled": true,
-        "showNewTag": false,
-        "combineMentionAutocomplete": true
-      }
-    }
-  },
-  {
     "name": "2026-07-hotwheels-clickable-game-icon",
     "kind": "user",
     "defaultConfig": {
