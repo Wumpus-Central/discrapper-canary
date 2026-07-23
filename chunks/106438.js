@@ -7,8 +7,6 @@ e.exports = {
     vE: "timestamp_a2d698",
     rf: "body_a2d698",
     BK: "messageContent_a2d698",
-    tq: "deletedMessage_a2d698",
-    o9: "messageContentContainer_a2d698",
     oO: "bodyBottom_a2d698",
     GA: "tagsRow_a2d698",
     qr: "footer_a2d698",

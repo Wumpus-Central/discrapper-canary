@@ -3639,12 +3639,7 @@ function i4(e) {
         s = si({ message: t, channel: n, containerWidth: l - 32, hideTags: !0 }),
         { hasUnreads: a } = (0, ev.X5)(n),
         { content: r } = (0, ev.gk)({ firstMessage: t, formatInline: !1, noStyleAndInteraction: !0, hasUnreads: a });
-    return null != s
-        ? s
-        : (0, i.jsx)("div", {
-              className: i2.o9,
-              children: (0, i.jsx)(iq.Ay, { message: t, content: r, className: i2.BK, compact: !1 }),
-          });
+    return null != s ? s : (0, i.jsx)(iq.Ay, { message: t, content: r, className: i2.BK, compact: !1 });
 }
 function i5(e) {
     let {
@@ -3706,7 +3701,6 @@ function i5(e) {
                         (0, i.jsx)(b.E, {
                             variant: "text-sm/normal",
                             color: "text-muted",
-                            className: i2.tq,
                             children: eJ.intl.string(eJ.t.mE3KJN),
                         }),
                     null != f ? (0, i.jsx)(i4, { message: f, channel: n, containerWidth: a.width }) : null,
