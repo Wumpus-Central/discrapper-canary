@@ -112,3 +112,72 @@
     background-color: var(--control-icon-only-background-active);
     border-color: var(--control-icon-only-border-active)
 }
+
+.workspaceBody_d044e8 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    min-height: 0;
+    padding: var(--space-16)
+}
+
+.modalRoot__8531e {
+    background: var(--background-base-low);
+    cursor: auto;
+    display: flex;
+    height: 100%;
+    position: relative;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text;
+    width: 100%
+}
+
+.content__8531e {
+    min-height: 0;
+    min-width: 0
+}
+
+.content__8531e,
+.modalEmptyState__8531e {
+    display: flex;
+    flex: 1;
+    flex-direction: column
+}
+
+.modalEmptyState__8531e {
+    align-items: center;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+.modalEmptyStateText__8531e {
+    max-width: 420px
+}
+
+.createView__8531e {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-16);
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+.createPanel__8531e {
+    margin-top: var(--space-8);
+    max-width: 360px;
+    width: 100%
+}
+
+.workspaceLoading__8531e {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: var(--space-24)
+}

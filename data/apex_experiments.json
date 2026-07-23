@@ -5951,6 +5951,22 @@
     }
   },
   {
+    "name": "2026-07-vibegrations-guild",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-07-windows-camera-mic-permissions",
     "kind": "user",
     "defaultConfig": {

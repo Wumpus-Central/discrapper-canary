@@ -24,6 +24,11 @@
     max-height: 100%
 }
 
+.wrapper_a62174.vibegrationsChannel_a62174 {
+    height: calc(100% - var(--custom-channel-header-height));
+    top: var(--custom-channel-header-height)
+}
+
 .activityPanelContainer_a62174 {
     display: flex;
     flex: 1;

@@ -1,0 +1,31 @@
+@keyframes vibegrations-channel-dot-pulse__82d93 {
+
+    0%,
+    to {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .3
+    }
+}
+
+.channelStatusDot__82d93 {
+    border-radius: 50%;
+    flex: 0 0 auto;
+    height: 8px;
+    width: 8px
+}
+
+.channelStatusDotBuilding__82d93 {
+    animation: vibegrations-channel-dot-pulse__82d93 1.2s ease-in-out infinite;
+    background-color: var(--status-warning)
+}
+
+.channelStatusDotDone__82d93 {
+    background-color: var(--status-positive)
+}
+
+.reduce-motion .channelStatusDotBuilding__82d93 {
+    animation: none
+}
