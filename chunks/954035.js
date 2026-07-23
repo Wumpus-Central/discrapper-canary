@@ -133,7 +133,7 @@ let en = (0, et.Ay)({
         variations: { 1: { enabled: !0 } },
     });
 var ea = n(574381),
-    es = n(941426),
+    es = n(118356),
     el = n(325278);
 let eo = new es.Vy("InputWatcher");
 class ed {
@@ -294,11 +294,11 @@ async function eP(e, t, n) {
             ev.default.track(eb.HAw.AUDIO_EFFECTS_PROBE_COMPLETED, { succeeded: !1 });
     }
 }
-var eU = n(800396),
-    ew = n(967347),
-    eG = n(617617),
-    ex = n(125325),
-    ek = n(499156),
+var eU = n(967347),
+    ew = n(617617),
+    eG = n(125325),
+    ex = n(499156),
+    ek = n(738566),
     eF = n(353835),
     eV = n(927813),
     eB = n(38405),
@@ -312,7 +312,7 @@ var eU = n(800396),
     eq = n(117549),
     eZ = n(765682);
 let eX = {
-    enabled: !1,
+    enabled: !0,
     spatialBlend: 1,
     reflectionsEnabled: !1,
     roomSize: 25,
@@ -543,7 +543,7 @@ function nr(e) {
     let t = ni(e.context),
         n = t.mode;
     e.context === e0.x.DEFAULT && (0, eu.N)(!1, !1);
-    let { showPTTSpeakingIndicator: i } = ek.A.getConfig({ location: "setInputMode" }),
+    let { showPTTSpeakingIndicator: i } = ex.A.getConfig({ location: "setInputMode" }),
         r = i && n === eb.TBI.PUSH_TO_TALK;
     e.setInputMode(n, {
         vadThreshold: t.modeOptions.threshold,
@@ -886,14 +886,14 @@ function nb(e) {
 }
 function nM() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        t = eG.A.settings.audioContextSettings ?? { user: {}, stream: {} };
+        t = ew.A.settings.audioContextSettings ?? { user: {}, stream: {} };
     for (let n of Object.keys(t)) {
         let i = n === eQ.W.USER ? e0.x.DEFAULT : e0.x.STREAM,
             r = i === e0.x.STREAM ? e0.Cn : e0.Hz,
             a = t[n] ?? {},
             { localMutes: s, localVolumes: l } = ni(i);
         for (let [e, t] of Object.entries(a))
-            null == (0, ex.tM)(i, e) &&
+            null == (0, eG.tM)(i, e) &&
                 (t.muted ? (s[e] = !0) : delete s[e],
                 t.volume !== r ? (l[e] = t.volume) : delete l[e],
                 ta.eachConnection((n) => {
@@ -951,7 +951,8 @@ function nU() {
     nm({ videoToggleStateMap: t }, e, !1);
 }
 function nw(e) {
-    return !0 === e.enabled && (0, eU.E)("MediaEngineStore");
+    let { enabled: t } = ek.A.getConfig({ location: "MediaEngineStore" });
+    return !0 === e.enabled && t && ta.supports(e0.O5.SPATIAL_AUDIO);
 }
 function nG(e) {
     (tW = nw(e)), ta.setAudioMixerOptions({ ...e, enabled: tW });
@@ -1365,7 +1366,7 @@ class nK extends L.Ay.Store {
             }),
             nF(),
             l.reset(),
-            (0, ew.w)().then((e) => {
+            (0, eU.w)().then((e) => {
                 null != e && ((tJ = e.gpu_brand), (t0 = e.has_intel_hybrid_igpu), (t1 = e.gpu_count));
             }),
             ta.on(y.bg.SystemMicrophoneModeChange, (e) => {
@@ -1388,8 +1389,8 @@ class nK extends L.Ay.Store {
                     ta.supports(e0.O5.SIDECHAIN_COMPRESSION) &&
                         e.sidechainCompressionSettingVersion < 1 &&
                         ((e.sidechainCompressionSettingVersion = 1), (e.sidechainCompression = !0)),
-                    e.audioMixerSettingsVersion < 2 &&
-                        ((e.audioMixerSettingsVersion = 2), (e.audioMixerSettings = { ...eX })),
+                    e.audioMixerSettingsVersion < 3 &&
+                        ((e.audioMixerSettingsVersion = 3), (e.audioMixerSettings = { ...eX })),
                     (0, f.isWeb)()
                         ? 1 !== e.ncUseKrispjsSettingVersion &&
                           ((e.ncUseKrispjsSettingVersion = 1), (e.noiseSuppression = !1), (e.noiseCancellation = !0))
@@ -1444,7 +1445,7 @@ class nK extends L.Ay.Store {
                 [e0.O5.DESKTOP_CAPTURE]: ta.supports(e0.O5.DESKTOP_CAPTURE),
                 [e0.O5.HYBRID_VIDEO]: ta.supports(e0.O5.HYBRID_VIDEO),
             }),
-            this.waitFor(ej.default, eW.A, eY.A, eK.A, G.Ay, B.A, e$.A, j.Ay, eG.A, ez.default, eq.A);
+            this.waitFor(ej.default, eW.A, eY.A, eK.A, G.Ay, B.A, e$.A, j.Ay, ew.A, ez.default, eq.A);
     }
     supports(e) {
         return ta.supports(e);
