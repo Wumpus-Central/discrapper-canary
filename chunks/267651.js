@@ -3043,7 +3043,7 @@ let sM = (0, a.zD)(u.X.CHAT_EMOJI_CONVERT_EMOTICONS, {
 var sU = i(352505);
 let sV = (0, a.zD)(u.X.CHAT_GAME_MENTIONS_AUTOCOMPLETE, {
         useTitle: () => j.intl.string(j.t.c0oFDw),
-        usePredicate: () => (0, sU.o)("GameMentionsInAutocomplete"),
+        usePredicate: () => (0, sU.o4)("GameMentionsInAutocomplete"),
         useValue: L.BQ.useSetting,
         setValue: L.BQ.updateSetting,
     }),

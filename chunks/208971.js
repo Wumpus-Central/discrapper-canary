@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { G: () => E });
+n.d(t, { G: () => _ });
 var i = n(64700),
     r = n(17928),
     a = n(49491),
@@ -9,13 +9,8 @@ var i = n(64700),
     d = n(240248),
     c = n(827669),
     u = n(375708);
-let _ = [];
-function E(e) {
-    let t = i.useMemo(() => {
-        if (null == e || "" === e) return _;
-        let t = [...e.matchAll(c.Dx)].map((e) => e[1]);
-        return t.length > 0 ? t : _;
-    }, [e]);
+function _(e) {
+    let t = i.useMemo(() => (0, c.EZ)(e ?? ""), [e]);
     return (
         (0, l.x)(t),
         (0, r.bG)([s.A, o.default], () => {

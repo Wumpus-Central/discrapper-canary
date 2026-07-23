@@ -586,7 +586,7 @@ let eE = {
 };
 var eS = n(289873),
     ef = n(228366),
-    eC = n(636537),
+    eC = n(562465),
     eT = n(703244),
     eD = n(773669),
     eO = n(17928);
@@ -863,7 +863,7 @@ var eV = n(812993),
     ew = n(352505);
 function eF(e) {
     let { onClick: t, onHover: n, selected: l, index: i, text: r, description: s } = e,
-        { showNewTag: u } = ew.r.useConfig({ location: "GameMentionGlobalRow" }),
+        { showNewTag: u } = ew.rY.useConfig({ location: "GameMentionGlobalRow" }),
         o = u ? (0, m.jsx)(eV.Lp, { text: D.intl.string(D.t.y2b7CA), color: e$.A.colors.BACKGROUND_BRAND.css }) : null;
     return (0, m.jsx)(S.Ay.Generic, {
         onClick: t,
@@ -1166,8 +1166,8 @@ var e2 = n(59892),
     e8 = n(262234),
     e6 = n(717470),
     e7 = n(977936),
-    e3 = n(849455),
-    e5 = n(288116),
+    e5 = n(849455),
+    e3 = n(288116),
     e9 = n(406002),
     te = n(381349),
     tt = n(860323),
@@ -1391,8 +1391,8 @@ let to = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                         if ("fr" === e) return e8;
                         if ("ja" === e) return e6;
                         else if ("nl" === e) return e7;
-                        else if ("ru" === e) return e3;
-                        else if ("it" === e) return e5;
+                        else if ("ru" === e) return e5;
+                        else if ("it" === e) return e3;
                         else if ("uk" === e) return e9;
                         else if ("zh-CN" === e) return te;
                         else if ("zh-TW" === e) return tt;
