@@ -37,7 +37,7 @@ var l = n(627968),
     U = n(355622),
     w = n(408018);
 n(321073), n(323874), n(14289), n(35956);
-var F = n(617498),
+var F = n(183812),
     H = n(132500),
     B = n(661531),
     V = n(717421),
@@ -178,24 +178,31 @@ let eO = i.memo(
                         return e.shouldClear && (eo(A.id, { title: "", heroFile: null }), el.current?.blur()), e;
                     }
                     let n = [],
-                        l = (J.length > 0 ? J : e.value.length > 0 ? e.value : eD.intl.string(eD.t["7Xm5QI"])).slice(
+                        l = `${
+                            J.length > 0
+                                ? `# ${J}
+`
+                                : ""
+                        }${e.value}`,
+                        i = (J.length > 0 ? J : e.value.length > 0 ? e.value : eD.intl.string(eD.t["7Xm5QI"])).slice(
                             0,
                             eM.Ign,
                         );
                     if (null == Z)
                         return b({
                             ...e,
-                            announcementSendOptions: { createThread: ez && X, threadName: l, publish: Y },
+                            value: l,
+                            announcementSendOptions: { createThread: ez && X, threadName: i, publish: Y },
                         }).then(t);
                     n.push({ type: en.I5.MEDIA_GALLERY, items: [eP(`attachment://${Z.name}`, null, !1)], id: "82733" }),
-                        e.value.length > 0 && n.push({ type: en.I5.TEXT_DISPLAY, content: e.value, id: "82744" });
-                    let i = eE.A.getUploads(A.id, eC.C.ChannelMessage),
-                        s = i.filter((e) => (e.isImage || e.isVideo) && e.filename !== Z?.name),
-                        a = i.filter((e) => !e.isImage && !e.isVideo && e.filename !== Z?.name),
-                        r = s.map((e) => eP(`attachment://${e.filename}`, e.description, e.spoiler));
+                        l.length > 0 && n.push({ type: en.I5.TEXT_DISPLAY, content: l, id: "82744" });
+                    let s = eE.A.getUploads(A.id, eC.C.ChannelMessage),
+                        a = s.filter((e) => (e.isImage || e.isVideo) && e.filename !== Z?.name),
+                        r = s.filter((e) => !e.isImage && !e.isVideo && e.filename !== Z?.name),
+                        o = a.map((e) => eP(`attachment://${e.filename}`, e.description, e.spoiler));
                     return (
-                        r.length > 0 && n.push({ type: en.I5.MEDIA_GALLERY, items: r, id: "82755" }),
-                        a.forEach((e, t) => {
+                        o.length > 0 && n.push({ type: en.I5.MEDIA_GALLERY, items: o, id: "82755" }),
+                        r.forEach((e, t) => {
                             n.push({
                                 type: en.I5.FILE,
                                 file: eP(`attachment://${e.filename}`, e.description, e.spoiler).media,
@@ -207,8 +214,9 @@ let eO = i.memo(
                         }),
                         b({
                             ...e,
+                            value: l,
                             components: n,
-                            announcementSendOptions: { createThread: ez && X, threadName: l, publish: Y },
+                            announcementSendOptions: { createThread: ez && X, threadName: i, publish: Y },
                         }).then(t)
                     );
                 },
@@ -429,14 +437,7 @@ let eO = i.memo(
                                                     (0, l.jsx)(z.$, {
                                                         ...e,
                                                         onClick: () => {
-                                                            eJ(
-                                                                `${
-                                                                    J.length > 0
-                                                                        ? `# ${J}
-`
-                                                                        : ""
-                                                                }${s}`,
-                                                            );
+                                                            eJ(s);
                                                         },
                                                         disabled: 0 === s.length && 0 === J.length,
                                                         size: "sm",
