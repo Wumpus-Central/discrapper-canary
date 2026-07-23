@@ -19,8 +19,12 @@ class u extends i.A {
     async handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         for (let e of t) {
-            let { userId: t, guildId: n, channelId: i, sessionId: a } = e;
-            if (t === r.default.getId() && a === r.default.getSessionId() && i !== d) {
+            let { userId: t, guildId: n, channelId: i, sessionId: a, oldChannelId: o } = e;
+            if (t !== r.default.getId()) {
+                null != o && o !== i && (0, s.WQ)(t, o);
+                continue;
+            }
+            if (a === r.default.getSessionId() && i !== d) {
                 if (
                     (null != d &&
                         null != c &&
