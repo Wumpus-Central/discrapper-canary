@@ -14,12 +14,12 @@ let o = "collectibles shop product details modal",
             analyticsSource: d,
             analyticsLocations: C,
             returnRef: p,
-            tab: f,
-            giftRecipient: I,
+            tab: I,
+            giftRecipient: f,
             giftingOrigin: g,
             cardId: x,
             sessionId: A,
-            tilePosition: m,
+            tilePosition: k,
         } = e;
         if (t.isCategoryReward) {
             let { isPurchased: e } = (0, a.o)(l.A, t);
@@ -177,6 +177,7 @@ let o = "collectibles shop product details modal",
                     n.e("65437"),
                     n.e("80830"),
                     n.e("79745"),
+                    n.e("61268"),
                     n.e("80854"),
                     n.e("35395"),
                     n.e("45413"),
@@ -304,7 +305,7 @@ let o = "collectibles shop product details modal",
                 ]).then(n.bind(n, 213281));
                 return (n) =>
                     (0, r.jsx)(s.R9, {
-                        newValue: { cardId: x, sessionId: A, tilePosition: m },
+                        newValue: { cardId: x, sessionId: A, tilePosition: k },
                         children: (0, r.jsx)(e, {
                             ...n,
                             product: t,
@@ -313,8 +314,8 @@ let o = "collectibles shop product details modal",
                             analyticsSource: d,
                             analyticsLocations: C,
                             returnRef: p,
-                            tab: f,
-                            giftRecipient: I,
+                            tab: I,
+                            giftRecipient: f,
                             giftingOrigin: g,
                         }),
                     });

@@ -22,8 +22,8 @@ var i = n(627968),
     S = n(775602),
     N = n(793574),
     C = n(95561),
-    R = n(688810),
-    O = n(941726),
+    O = n(688810),
+    R = n(941726),
     L = n(449582),
     y = n(900797),
     D = n(847374),
@@ -36,8 +36,8 @@ var i = n(627968),
 let G = "content-inventory-feed";
 var x = n(652215),
     k = n(375708),
-    F = n(933928),
-    V = n(540808);
+    F = n(227296),
+    V = n(998448);
 let B = r.memo(function (e) {
         let t,
             { title: a, onToggleExpand: s, expanded: l, expandedCount: o } = e,
@@ -141,8 +141,8 @@ var eA = n(915089),
     eS = n(994500),
     eN = n(309010),
     eC = n(741961),
-    eR = n(287809),
-    eO = n(977997),
+    eO = n(287809),
+    eR = n(977997),
     eL = n(625494),
     ey = n(403362),
     eD = n(427262),
@@ -169,8 +169,8 @@ let eM = ev.Ay.getEnableHardwareAcceleration(),
                 isMobileOnline: S,
                 isVROnline: N,
                 premiumSince: C,
-                nameplate: R,
-                ...O
+                nameplate: O,
+                ...R
             } = e,
             L = r.useRef(null),
             [y, D] = r.useState(!1),
@@ -179,12 +179,12 @@ let eM = ev.Ay.getEnableHardwareAcceleration(),
                 (e) => {
                     (0, p.L3)(e, async () => {
                         let { default: e } = await Promise.all([
-                                n.e("31463"),
-                                n.e("41831"),
-                                n.e("65264"),
-                                n.e("62323"),
-                                n.e("88429"),
-                                n.e("94881"),
+                                n.e("41295"),
+                                n.e("40351"),
+                                n.e("72712"),
+                                n.e("76279"),
+                                n.e("45309"),
+                                n.e("97705"),
                                 n.e("26692"),
                                 n.e("26132"),
                                 n.e("46652"),
@@ -194,23 +194,24 @@ let eM = ev.Ay.getEnableHardwareAcceleration(),
                                 n.e("21921"),
                                 n.e("8757"),
                                 n.e("76418"),
-                                n.e("66495"),
                                 n.e("71210"),
                                 n.e("85968"),
                                 n.e("89673"),
+                                n.e("66495"),
                                 n.e("68403"),
                                 n.e("88342"),
                                 n.e("29787"),
                                 n.e("89421"),
-                                n.e("35027"),
                                 n.e("98965"),
                                 n.e("82073"),
                                 n.e("97558"),
                                 n.e("54625"),
-                                n.e("91994"),
+                                n.e("35027"),
                                 n.e("71133"),
                                 n.e("28662"),
+                                n.e("91994"),
                                 n.e("76665"),
+                                n.e("61268"),
                                 n.e("35313"),
                                 n.e("39171"),
                                 n.e("36564"),
@@ -222,7 +223,6 @@ let eM = ev.Ay.getEnableHardwareAcceleration(),
                                 n.e("23427"),
                                 n.e("49145"),
                                 n.e("29422"),
-                                n.e("61268"),
                                 n.e("9291"),
                                 n.e("56753"),
                                 n.e("65826"),
@@ -250,7 +250,7 @@ let eM = ev.Ay.getEnableHardwareAcceleration(),
                                 n.e("17334"),
                                 n.e("84841"),
                             ]).then(n.bind(n, 107632)),
-                            t = eO.A.isInChannel(eN.Ay.getVoiceChannelId(), c.id);
+                            t = eR.A.isInChannel(eN.Ay.getVoiceChannelId(), c.id);
                         return (n) => (0, i.jsx)(e, { ...n, user: c, guildId: f, channel: I, showMediaItems: t });
                     });
                 },
@@ -312,8 +312,8 @@ let eM = ev.Ay.getEnableHardwareAcceleration(),
                     isVR: N,
                     onClickPremiumGuildIcon: P,
                     selected: y,
-                    itemProps: O,
-                    nameplate: R,
+                    itemProps: R,
+                    nameplate: O,
                     onClick: (e) => {
                         e.shiftKey ? M?.() : D((e) => !e);
                     },
@@ -330,7 +330,7 @@ let eM = ev.Ay.getEnableHardwareAcceleration(),
             { channel: r, user: a, index: s } = e,
             l = (0, d.rm)(`${s}`),
             o = (0, _.bG)([eC.A], () => eC.A.isTyping(r.id, a.id)),
-            c = (0, _.bG)([eR.default], () => eR.default.getCurrentUser()),
+            c = (0, _.bG)([eO.default], () => eO.default.getCurrentUser()),
             u = (0, _.bG)([eg.A], () => (null != t ? eg.A.getRole(r.guild_id, t)?.name : void 0), [r, t]),
             E = (0, L.r)({ user: a, guildId: r.guild_id });
         return (0, i.jsx)(eU, { ...n, ...l, isTyping: o, currentUser: c, colorRoleName: u, nameplate: E });
@@ -614,7 +614,7 @@ class ek extends r.Component {
                                     children: (0, i.jsx)(h.H, {
                                         id: l,
                                         children: k.intl.format(k.t.JBQxV6, {
-                                            channel: (0, eb.m1)(n, eR.default, eS.A),
+                                            channel: (0, eb.m1)(n, eO.default, eS.A),
                                         }),
                                     }),
                                 }),
@@ -655,7 +655,7 @@ class ek extends r.Component {
 }
 function eF(e) {
     let { channel: t, className: n } = e,
-        { analyticsLocations: a } = (0, R.Ay)(N.A.MEMBER_LIST),
+        { analyticsLocations: a } = (0, O.Ay)(N.A.MEMBER_LIST),
         l = (0, _.bG)([S.Ay], () => S.Ay.keyboardModeEnabled),
         o = (0, _.cf)([Y.Ay], () => Y.Ay.getProps(t.guild_id, t.id)),
         {
@@ -730,7 +730,7 @@ function eF(e) {
                         (i = a),
                         {
                             requestId: (0, _.bG)([ee.A], () => ee.A.getFeedRequestId(e_.X1.GLOBAL_FEED)),
-                            entries: (i = (0, O.Ay)(i)),
+                            entries: (i = (0, R.Ay)(i)),
                             impressionCappedEntryIds: s,
                         }
                     );
@@ -777,7 +777,7 @@ function eF(e) {
                 S = r.useRef(0),
                 N = r.useRef(c),
                 C = r.useRef(void 0),
-                R = r.useRef({ impressionCappedEntryIds: u }),
+                O = r.useRef({ impressionCappedEntryIds: u }),
                 L = r.useCallback(
                     (e) => {
                         let t = Math.floor(e / j.bG),
@@ -791,7 +791,7 @@ function eF(e) {
                     N.current = c;
                 }, [c]),
                 r.useEffect(() => {
-                    R.current = { impressionCappedEntryIds: u };
+                    O.current = { impressionCappedEntryIds: u };
                 }, [u]),
                 r.useEffect(
                     () => (
@@ -812,7 +812,7 @@ function eF(e) {
                                     channel_id: a,
                                     guild_id: s,
                                     all_item_ids: e,
-                                    impression_capped_item_ids: [...R.current.impressionCappedEntryIds],
+                                    impression_capped_item_ids: [...O.current.impressionCappedEntryIds],
                                 }),
                                 (0, Z.sE)("useInjectContentInventoryFeed") &&
                                     W.h.dispatch({ type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS", itemIds: t }));
@@ -872,7 +872,7 @@ function eF(e) {
             [],
         ),
         L = (0, c.Ay)({ id: `members-${t.id}`, setFocus: m, isEnabled: l, scrollToStart: g, scrollToEnd: C });
-    return (0, i.jsx)(R.f5, {
+    return (0, i.jsx)(O.f5, {
         value: a,
         children: (0, i.jsx)("div", {
             ref: p,
@@ -898,5 +898,5 @@ function eF(e) {
 function eV(e) {
     let { channel: t, className: n } = e,
         a = r.useDeferredValue(t);
-    return r.useMemo(() => (0, i.jsx)(O.r$, { children: (0, i.jsx)(eF, { channel: a, className: n }) }), [a, n]);
+    return r.useMemo(() => (0, i.jsx)(R.r$, { children: (0, i.jsx)(eF, { channel: a, className: n }) }), [a, n]);
 }

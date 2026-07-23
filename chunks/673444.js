@@ -1383,7 +1383,7 @@ if (
     n.e("99875").then(n.t.bind(n, 641678, 19));
 let e4 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e4}, Build Number: 583341, Version Hash: aca54d864721af56908f71524355286891c72540`,
+    `[BUILD INFO] Release Channel: ${e4}, Build Number: 583394, Version Hash: 588f0620be0252d961324dc7e41b7e33b582f756`,
 ),
     D.A.setTags({ appContext: k.QCW }),
     eT.A.initBasic(),
@@ -2633,8 +2633,8 @@ let iE = (0, n5.Fe)({
                 n.e("828"),
                 n.e("63176"),
                 n.e("59275"),
-            ]).then(n.bind(n, 682681)),
-        webpackId: 682681,
+            ]).then(n.bind(n, 502849)),
+        webpackId: 502849,
     }),
     ih = (0, n5.Fe)({
         createPromise: () =>
@@ -18080,7 +18080,7 @@ let gL = "isHideDevBanner",
                     className: to()(gR.Wz, gR.mr),
                     children: [
                         (0, O.jsx)(gO, { className: gR.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "583341" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "583394" }),
                         (0, O.jsx)(r, {}),
                     ],
                 })
@@ -26083,8 +26083,8 @@ let OF = (0, n5.Fe)({
                 n.e("828"),
                 n.e("63176"),
                 n.e("59275"),
-            ]).then(n.bind(n, 682681)),
-        webpackId: 682681,
+            ]).then(n.bind(n, 502849)),
+        webpackId: 502849,
         name: "CollectiblesShop",
     }),
     OH = (0, n5.Fe)({
@@ -38743,6 +38743,7 @@ let U2 = (0, tH.Fe)({
             n.e("80830"),
             n.e("79745"),
             n.e("29963"),
+            n.e("61268"),
             n.e("80854"),
             n.e("35395"),
             n.e("35313"),
@@ -38865,7 +38866,6 @@ let U2 = (0, tH.Fe)({
             n.e("16767"),
             n.e("24761"),
             n.e("18024"),
-            n.e("61268"),
             n.e("58273"),
             n.e("92295"),
             n.e("6841"),
@@ -40262,13 +40262,13 @@ let w7 = (0, n5.Fe)({
                 n.e("9640"),
                 n.e("28662"),
                 n.e("47626"),
+                n.e("61268"),
                 n.e("39075"),
                 n.e("63235"),
                 n.e("32756"),
                 n.e("48330"),
                 n.e("72401"),
                 n.e("10575"),
-                n.e("61268"),
                 n.e("74610"),
                 n.e("58164"),
                 n.e("71470"),
