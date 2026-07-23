@@ -1,4 +1,4 @@
-n.r(t), n.d(t, { marketingCollection: () => e5, playgroundConfig: () => te });
+n.r(t), n.d(t, { marketingCollection: () => e9, playgroundConfig: () => te });
 var o,
     l,
     a,
@@ -269,7 +269,7 @@ function B(e) {
     });
 }
 var x = n(65412),
-    G = n(934661);
+    G = n(25204);
 function D(e, t) {
     return G.m.create({ contentIdentifier: e, properties: t });
 }
@@ -350,9 +350,9 @@ let j = "playground-announcement-modal",
                                     n.e("3131"),
                                     n.e("47177"),
                                     n.e("69201"),
+                                    n.e("51778"),
                                     n.e("36149"),
                                     n.e("69985"),
-                                    n.e("51778"),
                                     n.e("40492"),
                                     n.e("27272"),
                                     n.e("24914"),
@@ -882,7 +882,7 @@ let e0 = "playground-premium-tab-tooltip";
 n(321073);
 var e2 = n(896170),
     e1 = n(783878),
-    e6 = n(636537);
+    e6 = n(562465);
 async function e3() {
     return (await e6.Bo.get({ url: "/premium-marketing/promotions", rejectWithError: !0 })).body.map((e) => {
         let { id: t, name: n, type: o, source: l, end_date: a } = e;
@@ -922,14 +922,14 @@ function e4(e) {
     }
     return t;
 }
-function e9(e, t) {
+function e5(e, t) {
     return { title: e, stories: [...t].sort((e, t) => e.name.localeCompare(t.name)) };
 }
-let e5 = {
+let e9 = {
         id: "marketing",
         name: "Marketing",
         groups: [
-            e9("Premium Surfaces", [
+            e5("Premium Surfaces", [
                 w,
                 $,
                 eR,
@@ -1205,7 +1205,7 @@ let e5 = {
                     },
                 },
             ]),
-            e9("Gifting Surfaces", [
+            e5("Gifting Surfaces", [
                 {
                     name: "Billing Settings Gift Banner",
                     id: "billing-settings-nitro-gift-banner",
@@ -1765,4 +1765,4 @@ let e5 = {
                   });
         },
     },
-    te = { playgroundBaseUrl: "marketing", collections: [e5] };
+    te = { playgroundBaseUrl: "marketing", collections: [e9] };

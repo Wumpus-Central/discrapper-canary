@@ -19,4 +19,5 @@ var i,
         (i[(i.NAGBAR = 14)] = "NAGBAR"),
         (i[(i.PLAN_SELECT_CARD_BANNER = 15)] = "PLAN_SELECT_CARD_BANNER"),
         (i[(i.BILLING_SETTINGS_BANNER = 16)] = "BILLING_SETTINGS_BANNER"),
+        (i[(i.SHOP_NAGBAR = 17)] = "SHOP_NAGBAR"),
         i);
