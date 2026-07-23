@@ -22,12 +22,12 @@ var i = n(811315),
 let S = null,
     N = [],
     C = new Map(),
-    R = new Map(),
-    O = new Set([m.LWr.FILTER_FROM, m.LWr.FILTER_IN, m.LWr.FILTER_MENTIONS]);
+    O = new Map(),
+    R = new Set([m.LWr.FILTER_FROM, m.LWr.FILTER_IN, m.LWr.FILTER_MENTIONS]);
 function L(e) {
     let t = (0, f.bS)(e),
-        n = R.get(t) ?? { results: [], context: l.A.getUserSearchContext(b.bind(null, e)) };
-    return R.set(t, n), n;
+        n = O.get(t) ?? { results: [], context: l.A.getUserSearchContext(b.bind(null, e)) };
+    return O.set(t, n), n;
 }
 function y(e) {
     let { searchContext: t, query: n, mode: i, tokens: r, cursorScope: a, autocompletes: s } = e;
@@ -43,7 +43,7 @@ function v(e) {
 function b(e, t) {
     let { results: n } = t,
         i = (0, f.bS)(e),
-        r = R.get(i),
+        r = O.get(i),
         a = C.get(i);
     if (null == r || null == a || !v(a.mode)) return;
     r.results = (function (e) {
@@ -99,7 +99,7 @@ function U(e, t, n) {
             let s = [];
             return (
                 (0, p.u_)(e, [_.A])
-                    .filter((e) => O.has(e))
+                    .filter((e) => R.has(e))
                     .forEach((t) => {
                         if (null == t) return;
                         let i = P({ filter: t, currentToken: r, searchContext: e, maxResults: 3, tokens: n });
@@ -176,16 +176,16 @@ let k = new x(s.h, {
                         (d = !1);
                 } else e.context.clearQuery(), (t = U(n, s, i));
             } else {
-                let e = R.get(l);
+                let e = O.get(l);
                 null != e && (e.context.clearQuery(), (e.results = [])), (t = U(n, s, i));
             }
             let c = y({ searchContext: n, query: a, mode: s, tokens: i, cursorScope: r, autocompletes: t });
             return C.set(l, c), d;
         },
-        SEARCH_EDITOR_STATE_CLEAR: function (e) {
+        SEARCH_QUERY_TEXT_CLEAR: function (e) {
             let { id: t } = e,
-                n = R.get(t);
-            null != n && (n.context.destroy(), (n.results = []), R.delete(t)), C.delete(t), (S = null);
+                n = O.get(t);
+            null != n && (n.context.destroy(), (n.results = []), O.delete(t)), C.delete(t), (S = null);
         },
         CHANNEL_CREATE: w,
         CHANNEL_DELETE: w,

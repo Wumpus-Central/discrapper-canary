@@ -1,161 +1,139 @@
-s.d(t, { A: () => N });
-var n = s(627968),
-    r = s(271830),
-    i = s(192308),
-    a = s(988665),
-    c = s(138298),
-    o = s(734057),
-    l = s(625494),
-    u = s(504531),
-    _ = s(77277),
-    h = s(256796),
-    S = s(822382),
-    d = s(23667),
-    E = s(956467),
-    A = s(443390),
-    f = s(304578),
-    g = s(616252),
-    y = s(65600),
-    p = s(145331),
-    R = s(768570),
-    T = s(921242),
-    I = s(652215);
-function C(e) {
-    let t = (0, S.bS)(e);
-    g.A.clearSearchEditorState(e), h.A.clearSearchMessages(t), d.A.cleanUp(t), E.A.cleanUp(t);
+s.d(t, { A: () => L });
+var r = s(627968),
+    n = s(192308),
+    i = s(138298),
+    a = s(734057),
+    _ = s(625494),
+    c = s(256796),
+    u = s(822382),
+    l = s(23667),
+    h = s(956467),
+    o = s(408730),
+    d = s(616252),
+    S = s(65600),
+    A = s(145331),
+    E = s(768570),
+    y = s(921242),
+    p = s(652215);
+function g(e) {
+    let t = (0, u.bS)(e);
+    d.A.clearSearchQueryText(e), c.A.clearSearchMessages(t), l.A.cleanUp(t), h.A.cleanUp(t);
 }
-function H(e) {
-    let { searchContext: t, searchQueryString: s, searchQuery: n, offset: r } = e,
-        i = (0, S.bS)(t);
-    h.A.clearSearchMessages(i),
-        g.A.setShowNoResultsAlt(t),
-        g.A.setShowBlockedResults(t, !1),
-        g.A.updateSearchResultsQuery(t, s, n, r),
-        g.A.addSearchHistoryItem(t, s);
+function R(e) {
+    let { searchContext: t, searchQueryString: s, searchQuery: r, offset: n } = e,
+        i = (0, u.bS)(t);
+    c.A.clearSearchMessages(i),
+        d.A.setShowNoResultsAlt(t),
+        d.A.setShowBlockedResults(t, !1),
+        d.A.updateSearchResultsQuery(t, s, r, n),
+        d.A.addSearchHistoryItem(t, s);
 }
-function L(e) {
-    let { searchContext: t, searchQueryString: s, searchEverywhere: n, offset: r } = e,
-        i = (0, S.bS)(t),
-        a = y.A.getSearchMode(i) ?? T.z,
-        c = { offset: r };
-    t.type === I.I4_.DMS
-        ? h.A.fetchTabMessages({
+function T(e) {
+    let { searchContext: t, searchQueryString: s, searchEverywhere: r, offset: n } = e,
+        i = (0, u.bS)(t),
+        a = S.A.getSearchMode(i) ?? y.z,
+        _ = { offset: n };
+    t.type === p.I4_.DMS
+        ? c.A.fetchTabMessages({
               searchContext: t,
-              searchTabs: [R.$H.MESSAGES],
+              searchTabs: [E.$H.MESSAGES],
               searchQueryString: s,
               searchMode: a,
               getId: () => i,
-              getLimit: () => I.T_y,
-              pagination: c,
+              getLimit: () => p.T_y,
+              pagination: _,
               trackExactTotalHits: !0,
               onFetchStart: (e) => {
-                  let { searchQueryString: s, searchQuery: n } = e;
-                  H({ searchContext: t, searchQueryString: s, searchQuery: n, offset: r });
+                  let { searchQueryString: s, searchQuery: r } = e;
+                  R({ searchContext: t, searchQueryString: s, searchQuery: r, offset: n });
               },
           })
-        : h.A.fetchMessages({
+        : c.A.fetchMessages({
               searchContext: t,
               searchQueryString: s,
-              pagination: c,
+              pagination: _,
               searchMode: a,
-              searchEverywhere: n,
+              searchEverywhere: r,
               onFetchStart: (e) => {
-                  let { searchQueryString: s, searchQuery: n } = e;
-                  H({ searchContext: t, searchQueryString: s, searchQuery: n, offset: r });
+                  let { searchQueryString: s, searchQuery: r } = e;
+                  R({ searchContext: t, searchQueryString: s, searchQuery: r, offset: n });
               },
           });
 }
-function M(e) {
-    let t = (0, S.bS)(e),
-        s = y.A.getEditorState(t);
-    return null != s ? u.pe(s) : null;
+function f(e) {
+    let t = (0, u.bS)(e);
+    return S.A.getQueryText(t) ?? null;
 }
-function O(e, t) {
-    let s = (0, S.bS)(e),
-        n = y.A.getEditorState(s) ?? u.e_(_.ys(f.Ay)),
-        r = u.t7(t, n);
-    r = u.a4(r, 512);
-    let i = (0, S._o)(t).filter((e) => e.type !== a.Ay.NON_TOKEN_TYPE);
-    (r = u.uD(i, r, f.Ay)), (r = u.UO(0 + t.length, r)), g.A.updateSearchEditorState(e, r);
+function I(e, t) {
+    d.A.updateSearchQueryText(e, t.slice(0, 512));
 }
-function w(e) {
-    l._.dispatch(I.jej.SET_SEARCH_QUERY, e);
+function H(e) {
+    _._.dispatch(p.jej.SET_SEARCH_QUERY, e);
 }
-let N = {
-    cleanUpSearchState: C,
-    fetchMessages: L,
-    setSearchInputText: O,
+let L = {
+    cleanUpSearchState: g,
+    fetchMessages: T,
+    setSearchInputText: I,
     appendToSearchInputText: function (e, t) {
-        let s = M(e);
+        let s = f(e);
         if (null == s) return;
-        let n = s.endsWith(" ") ? s + t : s + " " + t;
-        O(e, n), L({ searchContext: e, searchQueryString: n, offset: 0 });
+        let r = s.endsWith(" ") ? s + t : s + " " + t;
+        I(e, r), T({ searchContext: e, searchQueryString: r, offset: 0 });
     },
-    getSearchInputText: M,
-    ensureSearchInputDecorators: function (e) {
-        let t,
-            s = (0, S.bS)(e),
-            n = y.A.getEditorState(s),
-            i = n?.getCurrentContent(),
-            a = n?.getSelection();
-        null != i && null != a
-            ? ((t = u.Rg(_.ys(f.Ay), i)), (t = r.EditorState.forceSelection(t, a)))
-            : (t = u.e_(_.ys(f.Ay))),
-            g.A.updateSearchEditorState(e, t);
-    },
+    getSearchInputText: f,
     setSearchQuery: function (e) {
-        let { query: t, performSearch: s, replace: n, resultsState: r, searchQuerySource: i } = e,
-            { mode: a, cursorScope: c } = r,
-            o = 0;
-        null != a.token ? (o = a.token.start) : c?.currentToken != null && (o = c.currentToken.end);
-        let l = null != a.token ? a.token.end : o;
-        w({ query: t, anchor: o, focus: l, performSearch: s, replace: n, searchQuerySource: i });
+        let { query: t, performSearch: s, replace: r, resultsState: n, searchQuerySource: i } = e,
+            { mode: a, cursorScope: _ } = n,
+            c = 0;
+        null != a.token ? (c = a.token.start) : _?.currentToken != null && (c = _.currentToken.end);
+        let u = null != a.token ? a.token.end : c;
+        H({ query: t, anchor: c, focus: u, performSearch: s, replace: r, searchQuerySource: i });
     },
-    dispatchSetSearchQuery: w,
+    dispatchSetSearchQuery: H,
     transitionStateToSearchContext: function (e, t, s) {
-        let n = (0, S.bS)(e),
-            r = y.A.getEditorState(n);
-        if (null == r) return;
-        let i = u.pe(r),
-            a = t.type === I.I4_.CHANNEL ? (0, S.EH)(i) : i;
-        O(t, (a = a.trim()));
-        let o = y.A.getSearchMode(n);
-        g.A.updateSearchMode(t, o ?? T.z), A.A.transferSession(e, t);
-        let l = (0, S._o)(a),
-            _ = (0, S.Zf)(l);
-        A.A.refreshQueryId(t),
-            (0, p.fd)({ searchContext: t, query: _, queryString: a, searchQuerySource: R.Q_.SEARCH_XDM_SETTINGS }),
-            L({ searchContext: t, searchQueryString: a, offset: 0 });
-        let d = (0, S.bS)(t);
-        c.A.setSelectedSearchContext(d), g.A.clearSearchEditorState(e), h.A.clearSearchMessages(n), s?.();
+        let r = (0, u.bS)(e),
+            n = S.A.getQueryText(r);
+        if (null == n) return;
+        let a = t.type === p.I4_.CHANNEL ? (0, u.EH)(n) : n;
+        I(t, (a = a.trim()));
+        let _ = S.A.getSearchMode(r);
+        d.A.updateSearchMode(t, _ ?? y.z), o.A.transferSession(e, t);
+        let l = (0, u._o)(a),
+            h = (0, u.Zf)(l);
+        o.A.refreshQueryId(t),
+            (0, A.fd)({ searchContext: t, query: h, queryString: a, searchQuerySource: E.Q_.SEARCH_XDM_SETTINGS }),
+            T({ searchContext: t, searchQueryString: a, offset: 0 });
+        let g = (0, u.bS)(t);
+        i.A.setSelectedSearchContext(g), d.A.clearSearchQueryText(e), c.A.clearSearchMessages(r), s?.();
     },
     cleanUpPrivateChannelSearchState: function () {
-        y.A.getSearchStateIds().forEach((e) => {
-            let t = o.A.getChannel(e);
-            null != t && t.isPrivate() && C({ type: I.I4_.CHANNEL, channelId: t.id });
+        S.A.getSearchStateIds().forEach((e) => {
+            let t = a.A.getChannel(e);
+            null != t && t.isPrivate() && g({ type: p.I4_.CHANNEL, channelId: t.id });
         });
     },
     openSearchFiltersModal: function (e) {
-        (0, p.TJ)({ searchContext: e }),
-            (0, i.openModalLazy)(
+        (0, A.TJ)({ searchContext: e }),
+            (0, n.openModalLazy)(
                 async () => {
                     let { default: t } = await Promise.all([
                         s.e("15990"),
+                        s.e("87524"),
                         s.e("65482"),
-                        s.e("10714"),
-                        s.e("762"),
+                        s.e("36893"),
                         s.e("93691"),
                         s.e("16767"),
                         s.e("66016"),
                         s.e("81202"),
                         s.e("21225"),
                         s.e("71367"),
-                        s.e("83752"),
+                        s.e("79171"),
+                        s.e("98567"),
                         s.e("47230"),
                     ]).then(s.bind(s, 561965));
-                    return (s) => (0, n.jsx)(t, { ...s, searchContext: e });
+                    return (s) => (0, r.jsx)(t, { ...s, searchContext: e });
                 },
-                { modalKey: T.b },
+                { modalKey: y.b },
             );
     },
 };

@@ -41,8 +41,8 @@ function g() {
 var S = n(777334),
     N = n(211753),
     C = n(41984),
-    R = n(158390),
-    O = n(296027),
+    O = n(158390),
+    R = n(296027),
     L = n(515183),
     y = n(489277),
     D = n(222506),
@@ -216,8 +216,8 @@ let J = new Q(),
         "NOTICE_SHOW",
         "NOTICE_DISMISS",
         "NOTICE_DISABLE",
-        "SEARCH_EDITOR_STATE_CHANGE",
-        "SEARCH_EDITOR_STATE_CLEAR",
+        "SEARCH_QUERY_TEXT_CHANGE",
+        "SEARCH_QUERY_TEXT_CLEAR",
         "SEARCH_MESSAGES_SUCCESS",
         "MOD_VIEW_SEARCH_MESSAGES_SUCCESS",
         "SEARCH_ENSURE_SEARCH_STATE",
@@ -436,7 +436,7 @@ async function eE(e) {
         en.verbose(`updateIntendedOverlayPIDs: retrying failed overlay pid ${i}`), await t(i), (n = !0);
     }
     for (let t of e.added ?? []) {
-        let i = O.default.getTrackedGameByPid(t);
+        let i = R.default.getTrackedGameByPid(t);
         if (null == i) {
             en.error(`updateIntendedOverlayPIDs: Tracked game not found for pid=${t}`);
             continue;
@@ -565,9 +565,9 @@ function eS(e) {
             (0, c.Vz)(k.OVERLAY_LAYOUT_ID, U.A.getDefaultLayout(k.OVERLAY_LAYOUT_ID), 0),
                 Promise.all([
                     (function (e, t) {
-                        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new R.A();
+                        let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : new O.A();
                         return n
-                            .e("67946")
+                            .e("45565")
                             .then(n.bind(n, 33164))
                             .then((n) => {
                                 let { default: r } = n;
@@ -621,8 +621,8 @@ async function eN(e, t) {
 function eC(e, t) {
     e ? setTimeout(() => eN(e, t), 200) : eN(e, t);
 }
-let eR = null;
-function eO() {
+let eO = null;
+function eR() {
     f.A.hasLoadedExperiments && !j && ((j = !0), ef(N.x.legacyEnabled));
 }
 class eL extends a.Ay.Store {
@@ -630,8 +630,8 @@ class eL extends a.Ay.Store {
     initialize() {
         !(0, k.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(M.default, f.A, P.A, U.A, O.default, D.A, v.A, y.A, p.Ay),
-            this.syncWith([f.A], eO),
+            (this.waitFor(M.default, f.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
+            this.syncWith([f.A], eR),
             h.Le(eS, eg),
             M.default.addChangeListener(em),
             l.h.addInterceptor(J.queueDispatch));
@@ -641,7 +641,7 @@ class eL extends a.Ay.Store {
         return null != e && this.isInputLocked(e);
     }
     isInputLocked(e) {
-        return O.default.isOverlayOOPEnabledForPid(e) ? D.A.isInputLocked(e) : !X.has(e);
+        return R.default.isOverlayOOPEnabledForPid(e) ? D.A.isInputLocked(e) : !X.has(e);
     }
     DEV_isInputLockedV3(e) {
         return D.A.isInputLocked(e);
@@ -657,7 +657,7 @@ class eL extends a.Ay.Store {
         return null != e ? (y.A.isOverlayV3EnabledForPID(e) ? v.A.isOverlayEnabled : K) : v.A.isOverlayEnabled || K;
     }
     getAnyGlobalEnabledOverlay() {
-        return O.default.getAnyGlobalEnabledOverlay();
+        return R.default.getAnyGlobalEnabledOverlay();
     }
     getFocusedPID() {
         let e = y.A.getFocusedPID();
@@ -665,10 +665,10 @@ class eL extends a.Ay.Store {
     }
     isFocusedPidOutOfProcess() {
         let e = this.getFocusedPID();
-        return null != e && O.default.isOverlayOOPEnabledForPid(e);
+        return null != e && R.default.isOverlayOOPEnabledForPid(e);
     }
     isCurrentPidOutOfProcess() {
-        return O.default.isOverlayOOPEnabledForPid((0, k.getPID)());
+        return R.default.isOverlayOOPEnabledForPid((0, k.getPID)());
     }
     isReady(e) {
         return y.A.isOverlayV3EnabledForPID(e) ? y.A.isReady(e) : "READY" === W.get(e);
@@ -702,7 +702,7 @@ let ey = new eL(
                       j = !1;
                   },
                   CONNECTION_OPEN: function () {
-                      ($ = !0), (j = !1), eO();
+                      ($ = !0), (j = !1), eR();
                   },
                   CONNECTION_CLOSED: function () {
                       ($ = !1),
@@ -735,13 +735,13 @@ let ey = new eL(
                           (t || "READY" === i || "CRASHED" === i)
                       ) {
                           if (
-                              (t ? X.delete(n) : X.add(n), et.clear(), null != eR && (clearTimeout(eR), (eR = null), t))
+                              (t ? X.delete(n) : X.add(n), et.clear(), null != eO && (clearTimeout(eO), (eO = null), t))
                           )
                               return;
                           t
                               ? eC(t, n)
-                              : (eR = setTimeout(() => {
-                                    eC(t, n), (eR = null);
+                              : (eO = setTimeout(() => {
+                                    eC(t, n), (eO = null);
                                 }, 100));
                       }
                   },
@@ -756,7 +756,7 @@ let ey = new eL(
                       let { port: t } = e;
                       Z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      n.append("build_id", "e7cef2ea462b5cc6ddecfda90199f7b97ebd946f"),
+                      n.append("build_id", "b1217107683a719198ffce1017527d8c08ef8678"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", Z),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`);

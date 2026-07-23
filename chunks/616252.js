@@ -1,41 +1,41 @@
-s.d(t, { A: () => i });
-var n = s(228366),
-    r = s(822382);
-let i = {
-    addSearchHistoryItem: function (e, t) {
-        let s = (0, r.Jl)(e);
-        null != s && n.h.dispatch({ type: "SEARCH_HISTORY_WEB_ADD_ITEM", id: s, query: t });
+t.d(s, { A: () => S });
+var i = t(228366),
+    n = t(822382);
+let S = {
+    addSearchHistoryItem: function (e, s) {
+        let t = (0, n.Jl)(e);
+        null != t && i.h.dispatch({ type: "SEARCH_HISTORY_WEB_ADD_ITEM", id: t, query: s });
     },
-    removeSearchHistoryItem: function (e, t) {
-        let s = (0, r.Jl)(e);
-        null != s && n.h.dispatch({ type: "SEARCH_HISTORY_WEB_REMOVE_ITEM", id: s, query: t });
+    removeSearchHistoryItem: function (e, s) {
+        let t = (0, n.Jl)(e);
+        null != t && i.h.dispatch({ type: "SEARCH_HISTORY_WEB_REMOVE_ITEM", id: t, query: s });
     },
     clearSearchHistory: function (e) {
-        let t = (0, r.Jl)(e);
-        null != t && n.h.dispatch({ type: "SEARCH_HISTORY_WEB_CLEAR_ITEMS", id: t });
+        let s = (0, n.Jl)(e);
+        null != s && i.h.dispatch({ type: "SEARCH_HISTORY_WEB_CLEAR_ITEMS", id: s });
     },
-    updateSearchEditorState: function (e, t) {
-        let s = (0, r.bS)(e);
-        n.h.dispatch({ type: "SEARCH_EDITOR_STATE_CHANGE", id: s, editorState: t });
+    updateSearchQueryText: function (e, s) {
+        let t = (0, n.bS)(e);
+        i.h.dispatch({ type: "SEARCH_QUERY_TEXT_CHANGE", id: t, queryText: s });
     },
-    clearSearchEditorState: function (e) {
-        let t = (0, r.bS)(e);
-        n.h.wait(() => n.h.dispatch({ type: "SEARCH_EDITOR_STATE_CLEAR", id: t }));
+    clearSearchQueryText: function (e) {
+        let s = (0, n.bS)(e);
+        i.h.wait(() => i.h.dispatch({ type: "SEARCH_QUERY_TEXT_CLEAR", id: s }));
     },
-    setShowBlockedResults: function (e, t) {
-        let s = (0, r.bS)(e);
-        n.h.dispatch({ type: "SEARCH_SET_SHOW_BLOCKED_RESULTS", id: s, showBlocked: t });
+    setShowBlockedResults: function (e, s) {
+        let t = (0, n.bS)(e);
+        i.h.dispatch({ type: "SEARCH_SET_SHOW_BLOCKED_RESULTS", id: t, showBlocked: s });
     },
     setShowNoResultsAlt: function (e) {
-        let t = (0, r.bS)(e);
-        n.h.dispatch({ type: "SEARCH_SET_SHOW_NO_RESULTS_ALT", id: t });
+        let s = (0, n.bS)(e);
+        i.h.dispatch({ type: "SEARCH_SET_SHOW_NO_RESULTS_ALT", id: s });
     },
-    updateSearchResultsQuery: function (e, t, s, i) {
-        let a = (0, r.bS)(e);
-        n.h.dispatch({ type: "SEARCH_RESULTS_QUERY_UPDATE", id: a, queryString: t, query: s, offset: i });
+    updateSearchResultsQuery: function (e, s, t, S) {
+        let h = (0, n.bS)(e);
+        i.h.dispatch({ type: "SEARCH_RESULTS_QUERY_UPDATE", id: h, queryString: s, query: t, offset: S });
     },
-    updateSearchMode: function (e, t) {
-        let s = (0, r.bS)(e);
-        n.h.dispatch({ type: "SEARCH_SEARCH_MODE_UPDATE", id: s, searchMode: t });
+    updateSearchMode: function (e, s) {
+        let t = (0, n.bS)(e);
+        i.h.dispatch({ type: "SEARCH_SEARCH_MODE_UPDATE", id: t, searchMode: s });
     },
 };

@@ -1,12 +1,12 @@
-s.d(t, { A: () => _ });
-var n = s(17928),
-    r = s(228366),
+s.d(t, { A: () => h });
+var r = s(17928),
+    n = s(228366),
     i = s(921242);
 let a = new Map(),
-    c = !1;
-function o(e) {
+    _ = !1;
+function c(e) {
     let t = a.get(e) ?? {
-        editorState: null,
+        queryText: null,
         showBlockedResults: !1,
         showNoResultsAlt: !1,
         searchResultsQueryString: null,
@@ -16,71 +16,71 @@ function o(e) {
     };
     return a.set(e, t), t;
 }
-function l(e, t) {
+function u(e, t) {
     let s = a.get(e);
     return null == s ? null : t(s);
 }
-class u extends n.Ay.Store {
+class l extends r.Ay.Store {
     static displayName = "SearchQueryStore";
-    getEditorState(e) {
-        return l(e, (e) => e.editorState);
+    getQueryText(e) {
+        return u(e, (e) => e.queryText);
     }
     shouldShowBlockedResults(e) {
-        return l(e, (e) => e.showBlockedResults) ?? !1;
+        return u(e, (e) => e.showBlockedResults) ?? !1;
     }
     shouldShowNoResultsAlt(e) {
-        return l(e, (e) => e.showNoResultsAlt) ?? !1;
+        return u(e, (e) => e.showNoResultsAlt) ?? !1;
     }
     getSearchResultsQueryString(e) {
-        return l(e, (e) => e.searchResultsQueryString);
+        return u(e, (e) => e.searchResultsQueryString);
     }
     getSearchResultsQuery(e) {
-        return l(e, (e) => e.searchResultsQuery);
+        return u(e, (e) => e.searchResultsQuery);
     }
     getSearchMode(e) {
-        return l(e, (e) => e.searchMode);
+        return u(e, (e) => e.searchMode);
     }
     getSearchResultsOffset(e) {
-        return l(e, (e) => e.searchResultsOffset);
+        return u(e, (e) => e.searchResultsOffset);
     }
     getIsSearchTokensInitialized() {
-        return c;
+        return _;
     }
     getSearchStateIds() {
         return Array.from(a.keys());
     }
 }
-let _ = new u(r.h, {
+let h = new l(n.h, {
     SEARCH_RESULTS_QUERY_UPDATE: function (e) {
-        let { id: t, queryString: s, query: n, offset: r } = e,
-            i = o(t);
-        (i.searchResultsQueryString = s), (i.searchResultsQuery = n), (i.searchResultsOffset = r ?? 0);
+        let { id: t, queryString: s, query: r, offset: n } = e,
+            i = c(t);
+        (i.searchResultsQueryString = s), (i.searchResultsQuery = r), (i.searchResultsOffset = n ?? 0);
     },
-    SEARCH_EDITOR_STATE_CLEAR: function (e) {
+    SEARCH_QUERY_TEXT_CLEAR: function (e) {
         let { id: t } = e;
         return a.delete(t);
     },
     SEARCH_ENSURE_SEARCH_STATE: function (e) {
         let { id: t } = e;
-        o(t);
+        c(t);
     },
-    SEARCH_EDITOR_STATE_CHANGE: function (e) {
-        let { id: t, editorState: s } = e;
-        o(t).editorState = s;
+    SEARCH_QUERY_TEXT_CHANGE: function (e) {
+        let { id: t, queryText: s } = e;
+        c(t).queryText = s;
     },
     SEARCH_SET_SHOW_BLOCKED_RESULTS: function (e) {
         let { id: t, showBlocked: s } = e;
-        o(t).showBlockedResults = s;
+        c(t).showBlockedResults = s;
     },
     SEARCH_SET_SHOW_NO_RESULTS_ALT: function (e) {
         let { id: t } = e;
-        o(t).showNoResultsAlt = 0.05 > Math.random();
+        c(t).showNoResultsAlt = 0.05 > Math.random();
     },
     SEARCH_SEARCH_MODE_UPDATE: function (e) {
         let { id: t, searchMode: s } = e;
-        o(t).searchMode = s;
+        c(t).searchMode = s;
     },
     SEARCH_TOKENS_REFRESHED: function () {
-        c = !0;
+        _ = !0;
     },
 });

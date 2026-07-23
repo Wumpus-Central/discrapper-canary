@@ -1,91 +1,35 @@
-"use strict";
-var n = r(414501),
-    i = r(387739),
-    o = r(743595),
-    a = r(954055),
-    s = r(284819),
-    u = r(869639),
-    c = r(770933),
-    l = r(197576),
-    f = r(809206),
-    p = r(4323),
-    h = r(101813);
-function d(t, e, r) {
-    var n = a.replaceWithFragment(t.getCurrentContent(), t.getSelection(), e);
-    return u.push(t, n.set("entityMap", r), "insert-fragment");
+t.d(n, { e: () => h });
+var i = t(17928),
+    l = t(164956),
+    s = t(34457),
+    a = t(734057),
+    r = t(317525),
+    d = t(71393),
+    o = t(599941),
+    c = t(855918),
+    u = t(652215);
+function h(e) {
+    let { guildId: n, channelId: t } = e,
+        h = (0, o.uP)(n);
+    return (0, i.yK)([a.A, d.A, l.A], () => {
+        let e = a.A.getChannel(t),
+            i = d.A.getGuild(n),
+            o = l.A.isViewingServerShop(n);
+        return null != i && null != e
+            ? h.filter((n) =>
+                  (function (e, n, t) {
+                      let { isPreviewingRoles: i = !1 } =
+                          arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+                      if (!(i || e.published)) return !1;
+                      let l = t.permissionOverwrites[e.role_id];
+                      if ((0, c.Uj)(t, l)) return !0;
+                      let a = r.A.getEveryoneRole(n),
+                          d = null != a && !(0, s._m)(a, u.xBc.VIEW_CHANNEL),
+                          o = (0, c.AN)(t, t.permissionOverwrites[n.id]),
+                          h = r.A.getRole(n.id, e.role_id);
+                      return d && !o && null != h && (0, c.iR)(h) && !(0, c.AN)(t, l);
+                  })(n, i, e, { isPreviewingRoles: o }),
+              )
+            : [];
+    }, [n, t, h]);
 }
-t.exports = function (t, e) {
-    e.preventDefault();
-    var r = new o(e.clipboardData);
-    if (!r.isRichText()) {
-        var g = r.getFiles(),
-            y = r.getText();
-        if (g.length > 0) {
-            if (t.props.handlePastedFiles && p(t.props.handlePastedFiles(g))) return;
-            f(g, function (e) {
-                if ((e = e || y)) {
-                    var r = t._latestEditorState,
-                        o = h(e),
-                        f = i.create({
-                            style: r.getCurrentInlineStyle(),
-                            entity: l(r.getCurrentContent(), r.getSelection()),
-                        }),
-                        p = c.getCurrentBlockType(r),
-                        d = s.processText(o, f, p),
-                        g = n.createFromArray(d),
-                        v = a.replaceWithFragment(r.getCurrentContent(), r.getSelection(), g);
-                    t.update(u.push(r, v, "insert-fragment"));
-                }
-            });
-            return;
-        }
-    }
-    var v = [],
-        m = r.getText(),
-        _ = r.getHTML(),
-        b = t._latestEditorState;
-    if (!(t.props.handlePastedText && p(t.props.handlePastedText(m, _, b)))) {
-        if ((m && (v = h(m)), !t.props.stripPastedStyles)) {
-            var S,
-                w,
-                k = t.getClipboard();
-            if (r.isRichText() && k) {
-                if (-1 !== _.indexOf(t.getEditorKey()) || (1 === v.length && 1 === k.size && k.first().getText() === m))
-                    return void t.update(d(t._latestEditorState, k));
-            } else {
-                if (
-                    k &&
-                    r.types.includes("com.apple.webarchive") &&
-                    !r.types.includes("text/html") &&
-                    ((S = v),
-                    (w = k),
-                    S.length === w.size &&
-                        w.valueSeq().every(function (t, e) {
-                            return t.getText() === S[e];
-                        }))
-                )
-                    return void t.update(d(t._latestEditorState, k));
-            }
-            if (_) {
-                var x = s.processHTML(_, t.props.blockRenderMap);
-                if (x) {
-                    var C = x.contentBlocks,
-                        E = x.entityMap;
-                    if (C) {
-                        var O = n.createFromArray(C);
-                        t.update(d(t._latestEditorState, O, E));
-                        return;
-                    }
-                }
-            }
-            t.setClipboard(null);
-        }
-        if (v.length) {
-            var D = i.create({ style: b.getCurrentInlineStyle(), entity: l(b.getCurrentContent(), b.getSelection()) }),
-                K = c.getCurrentBlockType(b),
-                T = s.processText(v, D, K),
-                M = n.createFromArray(T);
-            t.update(d(t._latestEditorState, M));
-        }
-    }
-};
