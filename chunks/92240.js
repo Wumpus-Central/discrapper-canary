@@ -1,33 +1,32 @@
-"use strict";
-n.d(t, { A: () => d });
-var i = n(64700),
-    r = n(17928),
-    a = n(688810),
-    s = n(517164),
-    l = n(183555),
-    o = n(47675);
-function d(e) {
-    let { user: t, display: n, activity: d, entry: c, stream: u, voiceChannelId: _, analyticsLocations: E } = e,
-        { context: A, trackUserProfileAction: h } = (0, l.NJ)(),
-        { analyticsLocations: I } = (0, a.Ay)(),
-        f = E ?? I,
-        p = (0, r.bG)([s.A], () => s.A.getUserOutbox(t.id));
+e.d(n, { A: () => c });
+var i = e(64700),
+    l = e(17928),
+    a = e(688810),
+    r = e(517164),
+    s = e(183555),
+    o = e(47675);
+function c(t) {
+    let { user: n, display: e, activity: c, entry: u, stream: d, voiceChannelId: A, analyticsLocations: x } = t,
+        { context: p, trackUserProfileAction: f } = (0, s.NJ)(),
+        { analyticsLocations: _ } = (0, a.Ay)(),
+        m = x ?? _,
+        T = (0, l.bG)([r.A], () => r.A.getUserOutbox(n.id));
     return (0, i.useCallback)(
-        (e) => {
-            let { action: t } = e;
-            h({ action: t, analyticsLocations: f }),
+        (t) => {
+            let { action: n } = t;
+            f({ action: n, analyticsLocations: m }),
                 (0, o.Tu)({
-                    action: t,
-                    display: n,
-                    activity: d,
-                    entry: c,
-                    stream: u,
-                    outbox: p,
-                    voiceChannelId: _,
-                    analyticsLocations: f,
-                    ...A,
+                    action: n,
+                    display: e,
+                    activity: c,
+                    entry: u,
+                    stream: d,
+                    outbox: T,
+                    voiceChannelId: A,
+                    analyticsLocations: m,
+                    ...p,
                 });
         },
-        [h, A, n, d, u, c, p, _, f],
+        [f, p, e, c, d, u, T, A, m],
     );
 }

@@ -1,60 +1,59 @@
-"use strict";
-n.d(t, { Ce: () => p, HW: () => f, Om: () => m, hJ: () => g, sC: () => I, wM: () => h });
-var i = n(70283),
-    r = n(696292),
-    a = n(975807),
-    s = n(990820),
-    l = n(216934),
-    o = n(976860),
-    d = n(780964),
-    c = n(766075),
-    u = n(652215),
-    _ = n(758836),
-    E = n(202541),
-    A = n(375708);
-function h(e) {
-    return e === i.$.GAME_VARIETY || e === i.$.GAME_TIME;
+i.d(n, { Ce: () => g, HW: () => O, Om: () => L, hJ: () => R, sC: () => M, wM: () => u });
+var e = i(70283),
+    r = i(696292),
+    c = i(975807),
+    a = i(990820),
+    E = i(216934),
+    s = i(976860),
+    A = i(780964),
+    l = i(766075),
+    T = i(652215),
+    I = i(758836),
+    _ = i(202541),
+    o = i(375708);
+function u(t) {
+    return t === e.$.GAME_VARIETY || t === e.$.GAME_TIME;
 }
-let I = new Set([i.$.ACCOUNT_AGE, i.$.STREAMING, i.$.GAME_TIME, i.$.GAME_VARIETY]);
-function f(e) {
-    return I.has(e);
+let M = new Set([e.$.ACCOUNT_AGE, e.$.STREAMING, e.$.GAME_TIME, e.$.GAME_VARIETY]);
+function O(t) {
+    return M.has(t);
 }
-function p(e) {
-    return I.has(e);
+function g(t) {
+    return M.has(t);
 }
-let T = {
-    [i.$.STAFF]: {
-        ctaLabel: () => A.intl.string(A.t.q7A8hP),
-        ctaAction: () => (0, a.A)("https://discord.com/careers"),
+let G = {
+    [e.$.STAFF]: {
+        ctaLabel: () => o.intl.string(o.t.q7A8hP),
+        ctaAction: () => (0, c.A)("https://discord.com/careers"),
     },
-    [i.$.PREMIUM_TENURE]: {
-        ctaLabel: (e) => {
-            let { owned: t, isViewerOnUpgradeableNitro: n } = e;
-            return !0 === n ? A.intl.string(A.t.uKFeS1) : t ? A.intl.string(A.t.xGjjkd) : A.intl.string(A.t.BTxm69);
+    [e.$.PREMIUM_TENURE]: {
+        ctaLabel: (t) => {
+            let { owned: n, isViewerOnUpgradeableNitro: i } = t;
+            return !0 === i ? o.intl.string(o.t.uKFeS1) : n ? o.intl.string(o.t.xGjjkd) : o.intl.string(o.t.BTxm69);
         },
-        ctaAction: () => (0, o.pX)(u.BVt.NITRO_HOME),
+        ctaAction: () => (0, s.pX)(T.BVt.NITRO_HOME),
     },
-    [i.$.GUILD_BOOSTER]: {
-        ctaLabel: (e) => {
-            let { owned: t } = e;
-            return t ? A.intl.string(A.t.VMvz3m) : A.intl.string(A.t.xFVZeU);
+    [e.$.GUILD_BOOSTER]: {
+        ctaLabel: (t) => {
+            let { owned: n } = t;
+            return n ? o.intl.string(o.t.VMvz3m) : o.intl.string(o.t.xFVZeU);
         },
-        ctaAction: () => (0, c.openUserSettings)(d.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
+        ctaAction: () => (0, l.openUserSettings)(A.X.PREMIUM_GUILD_SUBSCRIPTIONS_PANEL),
     },
-    [i.$.ORB_PROFILE]: {
-        ctaLabel: () => A.intl.string(A.t.EBYkzk),
-        ctaAction: () => (0, o.pX)(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(_.G2.ORBS)),
+    [e.$.ORB_PROFILE]: {
+        ctaLabel: () => o.intl.string(o.t.EBYkzk),
+        ctaAction: () => (0, s.pX)(T.BVt.COLLECTIBLES_SHOP_WITH_TAB(I.G2.ORBS)),
     },
-    [i.$.QUEST_COMPLETED]: {
-        ctaLabel: () => A.intl.string(A.t.swICIT),
-        ctaAction: () => (0, l.m)({ fromContent: r.u.QUEST_BADGE }),
+    [e.$.QUEST_COMPLETED]: {
+        ctaLabel: () => o.intl.string(o.t.swICIT),
+        ctaAction: () => (0, E.m)({ fromContent: r.u.QUEST_BADGE }),
     },
-    [i.$.GIFTING]: {
-        ctaLabel: () => A.intl.string(A.t["nUA/JW"]),
-        ctaAction: () => (0, s.A)({ giftingOrigin: E.vQ.BADGE_DIRECTORY }),
+    [e.$.GIFTING]: {
+        ctaLabel: () => o.intl.string(o.t["nUA/JW"]),
+        ctaAction: () => (0, a.A)({ giftingOrigin: _.vQ.BADGE_DIRECTORY }),
     },
 };
-function m(e) {
-    return T[e];
+function L(t) {
+    return G[t];
 }
-let g = "badge-details";
+let R = "badge-details";
