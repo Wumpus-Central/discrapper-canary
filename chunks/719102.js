@@ -153,15 +153,16 @@ function W(i) {
             routesToGift: X,
             label: ii,
             icon: it,
-        } = (0, j.P)({ wishlistOwner: f, isOwned: !1, onDetailsClick: V, onPurchaseClick: $ });
+        } = (0, j.P)({ wishlistOwner: f, isOwned: !1, onDetailsClick: V, onPurchaseClick: $ }),
+        ie = F && Q;
     return (0, s.jsx)("div", {
         ref: Y,
         children: (0, s.jsxs)(E.A, {
             sku: u,
             user: f,
             spec: y,
-            skuPreviewStyle: r()(H.e, A, F && Q ? M : void 0),
-            skuAssetClassName: F && Q ? v : void 0,
+            skuPreviewStyle: r()(H.e, A, ie ? M : void 0),
+            skuAssetClassName: ie ? v : void 0,
             onClick: z ? V : q,
             "aria-label": z
                 ? b.intl.formatToPlainString(b.t["8uYD+I"], { username: f.username })
@@ -175,7 +176,7 @@ function W(i) {
                     : null,
                 !z && Q && (0, s.jsx)(O.A, { spec: y, onClick: J, label: ii, icon: it, isHoveringOrFocusing: F }),
                 z && (0, s.jsx)(x.Yb, { count: G }),
-                !F && !z && W,
+                !ie && !z && W,
             ],
         }),
     });

@@ -297,7 +297,8 @@ function es(e) {
             routesToGift: M,
             label: U,
             icon: F,
-        } = (0, J.P)({ wishlistOwner: i, isOwned: T, onDetailsClick: k, onPurchaseClick: O });
+        } = (0, J.P)({ wishlistOwner: i, isOwned: T, onDetailsClick: k, onPurchaseClick: O }),
+        W = x && D;
     return (0, n.jsxs)("div", {
         className: et.kL,
         children: [
@@ -307,8 +308,8 @@ function es(e) {
                 guildId: l,
                 spec: en,
                 cardStyle: r()(et.Nr, d),
-                skuPreviewStyle: r()(et.ev, { [et.go]: T && !x }, g, x && D ? m : void 0),
-                skuAssetClassName: x && D ? f : void 0,
+                skuPreviewStyle: r()(et.ev, { [et.go]: T && !x }, g, W ? m : void 0),
+                skuAssetClassName: W ? f : void 0,
                 disableHoverOrFocus: c,
                 onHoverOrFocusChange: h,
                 onClick: G,
@@ -318,7 +319,7 @@ function es(e) {
                 children: [
                     v,
                     D && (0, n.jsx)(q.A, { spec: en, onClick: L, isHoveringOrFocusing: x, label: U, icon: F }),
-                    !x && !T && N,
+                    !W && !T && N,
                     T && (0, n.jsx)(K.gS, { isHoveringOrFocusing: x }),
                     i.id === a.id &&
                         null != E &&
