@@ -17,7 +17,7 @@ var s = n(627968),
     f = n(964486),
     N = n(793574),
     j = n(688810),
-    I = n(420344),
+    I = n(83297),
     E = n(85109),
     y = n(734057),
     S = n(71393),
@@ -877,10 +877,10 @@ var eq = n(435558),
     e0 = n(837381),
     e1 = n(847374),
     e3 = n(912592),
-    e4 = n(821609),
-    e2 = n(475825),
-    e6 = n(928039),
-    e8 = n(625494);
+    e2 = n(821609),
+    e4 = n(475825),
+    e8 = n(928039),
+    e6 = n(625494);
 let e7 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !0, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e9 = { [eM.Ur.UNREAD]: !0, [eM.Ur.TODAY]: !1, [eM.Ur.YESTERDAY]: !1, [eM.Ur.OLDER]: !1 },
     e5 = (0, _.v)((e, t) => ({
@@ -955,7 +955,7 @@ function ta() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e4.$, {
+                (0, s.jsx)(e2.$, {
                     variant: "secondary",
                     onClick: () => (0, L.tZ)(e),
                     text: eR.intl.string(te.default.klSpfs),
@@ -980,7 +980,7 @@ function tl(e) {
         x = (0, M.op)(),
         p = i.useRef(null),
         A = i.useRef(0),
-        f = (0, e6.A)(g, p),
+        f = (0, e8.A)(g, p),
         { entrypoint: N, notificationCenterVariant: j } = (0, U.X8)({ location: "NotificationsInboxSidebarList" }),
         {
             isLoading: I,
@@ -1010,10 +1010,10 @@ function tl(e) {
             p.current?.scrollPageDown({ animate: !0 });
         }
         return (
-            e8._.subscribe(eC.jej.SCROLL_PAGE_DOWN, t),
-            e8._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
+            e6._.subscribe(eC.jej.SCROLL_PAGE_DOWN, t),
+            e6._.subscribe(eC.jej.SCROLL_PAGE_UP, e),
             () => {
-                e8._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, t), e8._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
+                e6._.unsubscribe(eC.jej.SCROLL_PAGE_DOWN, t), e6._.unsubscribe(eC.jej.SCROLL_PAGE_UP, e);
             }
         );
     }, []);
@@ -1141,7 +1141,7 @@ function tl(e) {
                         children: (0, s.jsx)(e0.PR, {
                             children: (e) => {
                                 let { ref: t, ...n } = e;
-                                return (0, s.jsx)(e2.OZ, {
+                                return (0, s.jsx)(e4.OZ, {
                                     ref: (e) => {
                                         (p.current = e), (t.current = e?.getScrollerNode() ?? null);
                                     },

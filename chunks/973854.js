@@ -1,26 +1,27 @@
 "use strict";
-n.d(t, { A: () => o });
+n.d(t, { A: () => l });
 var i = n(734057),
-    r = n(837152),
-    s = n(652215),
-    a = n(746080);
-function o(e) {
+    r = n(311964),
+    a = n(652215),
+    s = n(746080);
+function l(e) {
     let { channelId: t } = e;
     switch (t) {
-        case a.VV.CHANNEL_BROWSER:
-        case a.VV.GUILD_HOME:
-        case a.VV.GUILD_SHOP:
-        case a.VV.GAME_SHOP:
-        case a.VV.MEMBER_APPLICATIONS:
-        case a.VV.ROLE_SUBSCRIPTIONS:
-        case a.VV.CUSTOMIZE_COMMUNITY:
-        case a.VV.MEMBER_SAFETY:
-        case a.VV.GUILD_ONBOARDING:
-        case a.VV.GUILD_BOOSTS:
+        case s.VV.VIBEGRATIONS:
+        case s.VV.CHANNEL_BROWSER:
+        case s.VV.GUILD_HOME:
+        case s.VV.GUILD_SHOP:
+        case s.VV.GAME_SHOP:
+        case s.VV.MEMBER_APPLICATIONS:
+        case s.VV.ROLE_SUBSCRIPTIONS:
+        case s.VV.CUSTOMIZE_COMMUNITY:
+        case s.VV.MEMBER_SAFETY:
+        case s.VV.GUILD_ONBOARDING:
+        case s.VV.GUILD_BOOSTS:
             return;
     }
-    (0, r.k)(s.HAw.CHANNEL_OPENED_CLICKSTREAM, {
+    (0, r.k)(a.HAw.CHANNEL_OPENED_CLICKSTREAM, {
         channel_id: t,
-        channel_type: i.A.getChannel(t)?.type ?? s.rbe.UNKNOWN,
+        channel_type: i.A.getChannel(t)?.type ?? a.rbe.UNKNOWN,
     });
 }
