@@ -1,4 +1,4 @@
-n.d(t, { SV: () => u, VZ: () => c });
+n.d(t, { Nc: () => d, SV: () => u, VZ: () => c });
 var r = n(288106),
     i = n(223311),
     s = n(993408),
@@ -21,4 +21,13 @@ function c(e) {
         : t.rewardConfig?.discount?.type === r.RP.PERCENT && 100 === t.rewardConfig.discount.amount
           ? o.intl.string(o.t["302tKP"])
           : o.intl.string(o.t["7EGhnE"]);
+}
+function d(e) {
+    let t = u(e);
+    return (
+        null != t &&
+        t.rewardConfig?.discount != null &&
+        t.rewardConfig.discount.fiatEnabled &&
+        !t.rewardConfig.discount.orbsEnabled
+    );
 }

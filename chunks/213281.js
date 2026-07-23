@@ -965,28 +965,29 @@ function tG(e) {
         R = (0, e$.Do)("CollectiblesShopProductDetailsModal") && i.type === S.R.PROFILE_FRAME,
         I = ej.Ay.canUseShopDiscounts(t) || R,
         j = (0, eX.VZ)(i),
-        T = (0, ts.h)(n),
-        { isPurchased: O, isPartiallyOwnedBundle: y } = (0, ts.h)(i),
-        { isDisabled: b } = (0, eo.I)(i.skuId),
-        P = (0, k.Zu)({ product: i, isPartiallyOwnedBundle: y, isPurchased: O }),
-        D = (0, d.bG)([tr.A], () => tr.A.isClaiming === i?.skuId),
-        B = (0, e8.Ay)(),
-        U = (0, e7.M)(B),
-        M = (0, k.G0)(i),
-        H = (0, k.yt)(i, L.lid.DEFAULT),
-        F = H?.amount === 0,
-        V = (0, tD.X)(i),
-        W = o === z.G2.ORBS && a ? th.Hi.ORBS : void 0,
-        { checkoutEligiblePrices: $, hasSufficientOrbs: X } = (0, tB.F)({
+        T = (0, eX.Nc)(i),
+        O = (0, ts.h)(n),
+        { isPurchased: y, isPartiallyOwnedBundle: b } = (0, ts.h)(i),
+        { isDisabled: P } = (0, eo.I)(i.skuId),
+        D = (0, k.Zu)({ product: i, isPartiallyOwnedBundle: b, isPurchased: y }),
+        B = (0, d.bG)([tr.A], () => tr.A.isClaiming === i?.skuId),
+        U = (0, e8.Ay)(),
+        M = (0, e7.M)(U),
+        H = (0, k.G0)(i),
+        F = (0, k.yt)(i, L.lid.DEFAULT),
+        V = F?.amount === 0,
+        W = (0, tD.X)(i),
+        $ = T ? th.Hi.FIAT : o === z.G2.ORBS && a ? th.Hi.ORBS : void 0,
+        { checkoutEligiblePrices: X, hasSufficientOrbs: Y } = (0, tB.F)({
             product: i,
             hasShopDiscount: I,
-            prioritizedCurrency: W,
+            prioritizedCurrency: $,
         }),
-        Y = s.useMemo(() => (0, k.fT)(i, I, $[0]?.currency), [i, I, $]),
-        q = (0, tl.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
-        Z = s.useMemo(() => $.some((e) => e.currency === ty.Yr.DISCORD_ORB), [$]);
-    (0, tn.W)({ disableFetch: !Z });
-    let J = s.useCallback(() => {
+        q = s.useMemo(() => (0, k.fT)(i, I, X[0]?.currency), [i, I, X]),
+        Z = (0, tl.A)({ location: "CollectiblesShopProductDetailsModal", product: i }),
+        J = s.useMemo(() => X.some((e) => e.currency === ty.Yr.DISCORD_ORB), [X]);
+    (0, tn.W)({ disableFetch: !J });
+    let Q = s.useCallback(() => {
         E(z.sH.BUY_WITH_FIAT),
             (0, e5.A)({
                 skuId: i.skuId,
@@ -995,7 +996,7 @@ function tG(e) {
                 onClose: (e) => (e ? x() : (0, ty.tE)()),
             });
     }, [m, x, i.skuId, E, h]);
-    function Q(e) {
+    function ee(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             i = (0, r.jsx)(te.A, {
                 subscriptionTier: tj.pe.TIER_2,
@@ -1025,39 +1026,39 @@ function tG(e) {
     return (0, r.jsxs)("div", {
         className: tM.iw,
         children: [
-            T.isPurchased || T.isPartiallyOwnedBundle
-                ? (0, r.jsx)(tc, { className: tM.On, isPartiallyPurchased: y })
-                : M
+            O.isPurchased || O.isPartiallyOwnedBundle
+                ? (0, r.jsx)(tc, { className: tM.On, isPartiallyPurchased: b })
+                : H
                   ? (0, r.jsxs)("div", {
                         className: tM.pq,
                         children: [
                             (0, r.jsx)(w.E, { variant: "text-md/semibold", children: K.intl.string(K.t.rt69oo) }),
-                            !O &&
+                            !y &&
                                 (0, r.jsx)(w.E, {
-                                    className: G()(tM.ed, !U && tM.un),
+                                    className: G()(tM.ed, !M && tM.un),
                                     variant: "text-xxs/normal",
                                     children: K.intl.string(K.t.nKdAlO),
                                 }),
                         ],
                     })
                   : (0, r.jsx)(tS, {
-                        prices: $,
+                        prices: X,
                         product: i,
                         hasShopDiscount: I,
                         discountSource: f,
-                        discount: Y,
-                        hasSufficientOrbs: X,
-                        isProductDisabled: b,
+                        discount: q,
+                        hasSufficientOrbs: Y,
+                        isProductDisabled: P,
                         onTrackClick: E,
                     }),
             (0, r.jsx)(e9.B, {
                 direction: "vertical",
                 gap: 8,
                 children:
-                    !M || N || F
-                        ? P
-                            ? O
-                                ? V
+                    !H || N || V
+                        ? D
+                            ? y
+                                ? W
                                     ? (0, r.jsxs)(e4.e, {
                                           wrap: !1,
                                           fullWidth: !0,
@@ -1074,11 +1075,11 @@ function tG(e) {
                                           ],
                                       })
                                     : (0, r.jsx)(tx, { product: i, onSuccess: x, onTrackClick: E })
-                                : q
-                                  ? Q(K.intl.string(K.t["9wfL34"]), !0)
-                                  : M
+                                : Z
+                                  ? ee(K.intl.string(K.t["9wfL34"]), !0)
+                                  : H
                                     ? (0, r.jsx)(e3.$, {
-                                          loading: D,
+                                          loading: B,
                                           loadingStartedLabel: K.intl.string(K.t["TYw+9s"]),
                                           loadingFinishedLabel: K.intl.string(K.t.Pg1UP5),
                                           onClick: async () => {
@@ -1095,7 +1096,7 @@ function tG(e) {
                                           fullWidth: !0,
                                       })
                                     : (0, r.jsx)(r.Fragment, {
-                                          children: $.map((e, t) => {
+                                          children: X.map((e, t) => {
                                               let n,
                                                   l,
                                                   a,
@@ -1104,10 +1105,10 @@ function tG(e) {
                                                   p = 0 === t,
                                                   g =
                                                       e.currency === ty.Yr.DISCORD_ORB
-                                                          ? ((n = b
+                                                          ? ((n = P
                                                                 ? K.intl.string(K.t.cTdr3x)
                                                                 : K.intl.string(K.t.zqh7ZM)),
-                                                            (l = !X || b),
+                                                            (l = !Y || P),
                                                             (a = K.intl.formatToPlainString(K.t.yi41qQ, {
                                                                 orbPrice: e.amount,
                                                             })),
@@ -1164,11 +1165,11 @@ function tG(e) {
                                                                 children: [
                                                                     (0, r.jsx)(e3.$, {
                                                                         variant: p ? "primary" : "secondary",
-                                                                        onClick: J,
+                                                                        onClick: Q,
                                                                         text: d,
                                                                         fullWidth: !0,
                                                                     }),
-                                                                    V &&
+                                                                    W &&
                                                                         (0, r.jsx)(td.A, {
                                                                             primary: p,
                                                                             product: i,
@@ -1182,7 +1183,7 @@ function tG(e) {
                                               return (0, r.jsx)(s.Fragment, { children: g }, e.currency);
                                           }),
                                       })
-                            : V
+                            : W
                               ? (0, r.jsx)(td.A, {
                                     primary: !0,
                                     product: i,
@@ -1193,7 +1194,7 @@ function tG(e) {
                                     onTrackClick: E,
                                 })
                               : null
-                        : Q(K.intl.string(K.t.sEAnVH)),
+                        : ee(K.intl.string(K.t.sEAnVH)),
             }),
         ],
     });
