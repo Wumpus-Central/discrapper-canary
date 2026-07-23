@@ -4885,22 +4885,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-06-notify-friends-on-profile-update",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-06-orbs-holdout",
     "kind": "user",
     "defaultConfig": {
