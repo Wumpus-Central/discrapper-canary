@@ -1,23 +1,23 @@
 "use strict";
 let i, r, a, s, l, o, d, c, u, _;
 n.d(t, { A: () => em }), n(321073), n(938796);
-var E = n(735438),
+var E = n(435558),
     A = n.n(E),
     h = n(989349),
     I = n.n(h),
     f = n(17928),
-    p = n(636537),
+    p = n(562465),
     T = n(506774),
     m = n(228366),
     g = n(867051),
     S = n(837011),
     N = n(95701),
     C = n(260509),
-    R = n(671759),
-    O = n(889227),
+    O = n(671759),
+    R = n(889227),
     L = n(71393),
-    D = n(287809),
-    y = n(860689),
+    y = n(287809),
+    D = n(860689),
     v = n(935208),
     b = n(794967),
     M = n(557193),
@@ -171,13 +171,13 @@ function eA(e) {
                 });
 }
 function eh(e) {
-    return new R.A({
+    return new O.A({
         code: e.code,
         temporary: e.temporary,
         revoked: e.revoked,
-        inviter: null != e.inviter ? new O.A(e.inviter) : null,
+        inviter: null != e.inviter ? new R.A(e.inviter) : null,
         channel: (0, N.OY)(e.channel),
-        guild: null != e.guild ? (0, y.DY)(e.guild) : null,
+        guild: null != e.guild ? (0, D.DY)(e.guild) : null,
         uses: e.uses,
         maxUses: e.max_uses,
         maxAge: e.max_age,
@@ -203,7 +203,7 @@ function ep(e) {
 class eT extends f.Ay.Store {
     static displayName = "GuildSettingsStore";
     initialize() {
-        this.waitFor(L.A, S.A, D.default);
+        this.waitFor(L.A, S.A, y.default);
     }
     getMetadata() {
         return ea;
@@ -343,8 +343,10 @@ let em = new eT(
               GUILD_SETTINGS_SUBMIT: function () {
                   (j = w.XlH.SUBMITTING), (W = {});
               },
-              GUILD_SETTINGS_SUBMIT_SUCCESS: function () {
-                  (j = w.XlH.OPEN), (X = {});
+              GUILD_SETTINGS_SUBMIT_SUCCESS: function (e) {
+                  (j = w.XlH.OPEN),
+                      (X = {}),
+                      null != e.guild && null != l && l.id === e.guild.id && (s = l = (0, D.Y1)(e.guild, s));
               },
               GUILD_SETTINGS_SUBMIT_FAILURE: function (e) {
                   (j = w.XlH.OPEN), (i = i ?? (0, U.x)()), (r = null), (W = e.errors ?? {});
