@@ -1,95 +1,103 @@
 "use strict";
-n.d(t, { Bh: () => E, MW: () => m, ud: () => I, wz: () => T });
+n.d(t, { Bh: () => p, MW: () => T, ud: () => S, wz: () => N });
 var i = n(64700),
     r = n(136722),
-    s = n(17928),
-    a = n(155718),
-    o = n(164956),
-    l = n(386171),
-    u = n(95701),
-    c = n(495544),
-    d = n(734057),
-    _ = n(696451),
+    a = n(17928),
+    s = n(155718),
+    l = n(164956),
+    o = n(386171),
+    d = n(95701),
+    c = n(260509),
+    u = n(280450),
+    _ = n(734057),
+    E = n(696451),
+    A = n(71393),
     h = n(576705),
-    f = n(287809),
-    p = n(652215);
-function E(e, t) {
+    I = n(287809),
+    f = n(652215);
+function p(e, t) {
     let n,
-        i = null != (n = e instanceof u.YB && e.isThread() ? (d.A.getChannel(e.parent_id) ?? e) : e) ? T(n) : void 0,
-        r = (0, l.S9)(),
-        s = c.default.getId(),
-        a = f.default.getCurrentUser()?.nsfwAllowed ?? !1,
-        h = null != i ? (_.Ay.getMember(i, s)?.roles ?? []) : [],
-        p = o.A.isViewingRoles(i),
+        i = null != (n = e instanceof d.YB && e.isThread() ? (_.A.getChannel(e.parent_id) ?? e) : e) ? N(n) : void 0,
+        r = (0, o.S9)(),
+        a = u.default.getId(),
+        s = I.default.getCurrentUser()?.nsfwAllowed ?? !1,
+        h = null != i ? (E.Ay.getMember(i, a)?.roles ?? []) : [],
+        f = l.A.isViewingRoles(i),
         {
-            computedPermissions: E,
-            hasBaseAccessPermissions: m,
-            hasSendMessagesPermission: I,
-        } = A(n, e instanceof u.YB && e.isThread());
+            computedPermissions: p,
+            hasBaseAccessPermissions: T,
+            hasSendMessagesPermission: S,
+        } = g(n, e instanceof d.YB && e.isThread());
     return {
         context: n,
-        userId: s,
+        userId: a,
         roleIds: h,
-        isImpersonating: p,
+        isImpersonating: f,
         commandTypes: t,
-        computedPermissions: E,
-        hasBaseAccessPermissions: m,
-        hasSendMessagesPermission: I,
-        allowNsfw: g(n, a, r),
+        computedPermissions: p,
+        hasBaseAccessPermissions: T,
+        hasSendMessagesPermission: S,
+        allowNsfw: m(n, s, r, (0, c.wh)(A.A.getGuild(i))),
     };
 }
-function m(e, t) {
-    let n = i.useMemo(() => (e instanceof u.YB && e.isThread() ? (d.A.getChannel(e.parent_id) ?? e) : e), [e]),
-        r = null != n ? T(n) : void 0,
-        a = (0, l.hT)(),
-        h = (0, s.bG)([c.default], () => c.default.getId()),
-        p = (0, s.bG)([f.default], () => f.default.getCurrentUser()?.nsfwAllowed ?? !1),
-        E = (0, s.yK)([_.Ay], () => (null != r ? (_.Ay.getMember(r, h)?.roles ?? []) : [])),
-        m = (0, s.bG)([o.A], () => o.A.isViewingRoles(r));
+function T(e, t) {
+    let n = i.useMemo(() => (e instanceof d.YB && e.isThread() ? (_.A.getChannel(e.parent_id) ?? e) : e), [e]),
+        r = null != n ? N(n) : void 0,
+        s = (0, o.hT)(),
+        h = (0, a.bG)([u.default], () => u.default.getId()),
+        f = (0, a.bG)([I.default], () => I.default.getCurrentUser()?.nsfwAllowed ?? !1),
+        p = (0, a.yK)([E.Ay], () => (null != r ? (E.Ay.getMember(r, h)?.roles ?? []) : [])),
+        T = (0, a.bG)([l.A], () => l.A.isViewingRoles(r)),
+        S = m(
+            n,
+            f,
+            s,
+            (0, a.bG)([A.A], () => (0, c.wh)(A.A.getGuild(r)), [r]),
+        );
     return i.useMemo(() => {
         let {
             computedPermissions: i,
             hasBaseAccessPermissions: r,
-            hasSendMessagesPermission: s,
-        } = A(n, e instanceof u.YB && e.isThread());
+            hasSendMessagesPermission: a,
+        } = g(n, e instanceof d.YB && e.isThread());
         return {
             context: n,
             userId: h,
-            roleIds: E,
+            roleIds: p,
             commandTypes: t,
-            isImpersonating: m,
+            isImpersonating: T,
             computedPermissions: i,
             hasBaseAccessPermissions: r,
-            hasSendMessagesPermission: s,
-            allowNsfw: g(n, p, a),
+            hasSendMessagesPermission: a,
+            allowNsfw: S,
         };
-    }, [t, n, m, E, h, p, a, e]);
+    }, [t, n, T, p, h, S, e]);
 }
-function g(e, t, n) {
-    return !!t && (!(e instanceof u.YB) || (null != e.guild_id ? e.nsfw : n));
+function m(e, t, n, i) {
+    return !!t && (!(e instanceof d.YB) || (null != e.guild_id ? e.isNSFW() || i : n));
 }
-function A(e, t) {
+function g(e, t) {
     let n, i;
-    if ((e instanceof u.YB && e.isPrivate()) || null == e)
+    if ((e instanceof d.YB && e.isPrivate()) || null == e)
         return { computedPermissions: r.iu(0), hasBaseAccessPermissions: !0, hasSendMessagesPermission: !0 };
-    let s = h.A.computePermissions(e);
+    let a = h.A.computePermissions(e);
     return (
-        r.zy(s, p.xBc.ADMINISTRATOR)
+        r.zy(a, f.xBc.ADMINISTRATOR)
             ? ((n = !0), (i = !0))
-            : e instanceof u.YB
-              ? ((n = r.zy(s, p.xBc.VIEW_CHANNEL) && r.zy(s, p.xBc.USE_APPLICATION_COMMANDS)),
-                (i = t ? r.zy(s, p.xBc.SEND_MESSAGES_IN_THREADS) : r.zy(s, p.xBc.SEND_MESSAGES)))
-              : ((n = r.zy(s, p.xBc.VIEW_CHANNEL)), (i = !0)),
-        { computedPermissions: s, hasBaseAccessPermissions: n, hasSendMessagesPermission: i }
+            : e instanceof d.YB
+              ? ((n = r.zy(a, f.xBc.VIEW_CHANNEL) && r.zy(a, f.xBc.USE_APPLICATION_COMMANDS)),
+                (i = t ? r.zy(a, f.xBc.SEND_MESSAGES_IN_THREADS) : r.zy(a, f.xBc.SEND_MESSAGES)))
+              : ((n = r.zy(a, f.xBc.VIEW_CHANNEL)), (i = !0)),
+        { computedPermissions: a, hasBaseAccessPermissions: n, hasSendMessagesPermission: i }
     );
 }
-function I(e, t) {
-    return e instanceof u.YB && e?.guild_id == null
-        ? e?.type === p.rbe.DM && e?.getRecipientId() === t
-            ? a.OL.BOT_DM
-            : a.OL.PRIVATE_CHANNEL
-        : a.OL.GUILD;
+function S(e, t) {
+    return e instanceof d.YB && e?.guild_id == null
+        ? e?.type === f.rbe.DM && e?.getRecipientId() === t
+            ? s.OL.BOT_DM
+            : s.OL.PRIVATE_CHANNEL
+        : s.OL.GUILD;
 }
-function T(e) {
-    return e instanceof u.YB ? e.guild_id : e.id;
+function N(e) {
+    return e instanceof d.YB ? e.guild_id : e.id;
 }
