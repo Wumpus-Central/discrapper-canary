@@ -8,4 +8,5 @@ e.exports = {
     AS: "item__133bf",
     GU: "addFriend__133bf",
     MJ: "tabBody__133bf",
+    Lq: "loading__133bf",
 };

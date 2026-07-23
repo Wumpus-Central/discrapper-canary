@@ -1,5 +1,5 @@
 "use strict";
-n.d(t, { Ay: () => k }), n(321073);
+n.d(t, { Ay: () => F }), n(321073);
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -216,50 +216,54 @@ let L = !0,
     D = m.m3P.ONLINE,
     v = new R(),
     b = !0,
-    M = !1;
-function P() {
+    M = !1,
+    P = !1;
+function U() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
     L && (e || (D !== m.m3P.ONLINE && D !== m.m3P.ADD_FRIEND)) && !y && ((L = !1), (y = !0), l.A.fetchRelationships());
 }
-function U() {
-    if (((L = !0), b ? (y = !1) : P(), (v = v.reset()), M)) return;
+function w() {
+    if (((L = !0), b ? (y = !1) : U(), (v = v.reset()), M)) return;
     let e = v.getRelationshipCounts();
     D = 0 === e[m.eA$.FRIEND] ? (0 !== e[m.eA$.PENDING_INCOMING] ? m.m3P.PENDING : m.m3P.ADD_FRIEND) : m.m3P.ONLINE;
 }
-function w() {
+function G() {
     v = b ? new R() : v.reset();
 }
-function G(e) {
+function x(e) {
     return function () {
         return !b && !!v.update(e) && ((v = v.clone()), !0);
     };
 }
-class x extends a.Ay.Store {
+class k extends a.Ay.Store {
     static displayName = "FriendsStore";
     initialize() {
         this.waitFor(c.A, A.A, d.A, u.A, _.A, h.Ay, I.A, E.Ay, f.A, p.A, T.default),
-            this.syncWith([p.A], w),
-            this.syncWith([_.A], w),
-            this.syncWith([u.A], w),
-            this.syncWith([E.Ay], w),
-            this.syncWith([T.default], G(S)),
-            this.syncWith([f.A, A.A], G(N)),
-            U();
+            this.syncWith([p.A], G),
+            this.syncWith([_.A], G),
+            this.syncWith([u.A], G),
+            this.syncWith([E.Ay], G),
+            this.syncWith([T.default], x(S)),
+            this.syncWith([f.A, A.A], x(N)),
+            w();
     }
     getState() {
         return { fetching: y, section: D, rows: v };
     }
+    isInitialized() {
+        return P;
+    }
 }
-let k = new x(s.h, {
+let F = new k(s.h, {
     CONNECTION_OPEN: function () {
-        U();
+        w(), (P = !0);
     },
     FRIENDS_SET_SECTION: function (e) {
-        (D = e.section), P();
+        (D = e.section), U();
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return (b = null != t), w(), !b;
+        return (b = null != t), G(), !b;
     },
     LOAD_RELATIONSHIPS_SUCCESS: function () {
         y = !1;
