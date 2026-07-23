@@ -1,0 +1,143 @@
+.wrapper__43da9 {
+    container-name: wrapper;
+    container-type: inline-size
+}
+
+.contentWrapper__43da9 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-xl);
+    box-sizing: border-box;
+    display: flex;
+    isolation: isolate;
+    min-height: 500px;
+    overflow: hidden;
+    padding: var(--space-32);
+    position: relative
+}
+
+@container wrapper (width < 725px) {
+    .contentWrapper__43da9 {
+        min-height: 580px
+    }
+}
+
+.contentWrapperLoading__43da9 {
+    align-items: center;
+    background-color: var(--background-mod-subtle);
+    border: none;
+    justify-content: center
+}
+
+.content__43da9 {
+    position: relative;
+    z-index: 2
+}
+
+.contentBody__43da9 {
+    max-width: 540px
+}
+
+.title__43da9 {
+    text-transform: uppercase;
+    white-space: pre-wrap
+}
+
+.title__43da9 p {
+    margin: 0
+}
+
+.subtitle__43da9 {
+    opacity: .8;
+    text-wrap: balance
+}
+
+.scrollerWrapper__8dd17 {
+    position: relative
+}
+
+@property --custom-scroller-mask-width-left {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0
+}
+
+@property --custom-scroller-mask-width-right {
+    syntax: "<length>";
+    inherits: false;
+    initial-value: 0
+}
+
+.maskLeft__8dd17,
+.maskRight__8dd17 {
+    --custom-scroller-mask-width-left: 0;
+    --custom-scroller-mask-width-right: 0;
+    -webkit-mask-image: linear-gradient(90deg, transparent, #fff var(--custom-scroller-mask-width-left), #fff calc(100% - var(--custom-scroller-mask-width-right)), transparent);
+    mask-image: linear-gradient(90deg, transparent, #fff var(--custom-scroller-mask-width-left), #fff calc(100% - var(--custom-scroller-mask-width-right)), transparent)
+}
+
+.full-motion .maskLeft__8dd17,
+.full-motion .maskRight__8dd17 {
+    transition: --custom-scroller-mask-width-left .1s ease-out, --custom-scroller-mask-width-right .1s ease-out
+}
+
+.maskLeft__8dd17 {
+    --custom-scroller-mask-width-left: var(--custom-scroller-mask-width)
+}
+
+.maskRight__8dd17 {
+    --custom-scroller-mask-width-right: var(--custom-scroller-mask-width)
+}
+
+.scroller__8dd17 {
+    scroll-behavior: var(--custom-scroller-scroll-behavior);
+    scroll-padding-inline: calc(var(--custom-scroller-mask-width) + var(--custom-scroller-overflow-amount));
+    scroll-snap-type: x proximity
+}
+
+.pageSnapAnchor__8dd17 {
+    height: 1px;
+    pointer-events: none;
+    position: absolute;
+    scroll-snap-align: center;
+    top: 0;
+    visibility: hidden;
+    width: 0
+}
+
+.scrollerOverflow__8dd17 {
+    margin: calc(var(--custom-scroller-overflow-amount)*-1);
+    padding: var(--custom-scroller-overflow-amount)
+}
+
+.maskOverflowStart__8dd17 {
+    margin-inline-start: calc(var(--custom-scroller-overflow-amount)*-1);
+    padding-inline-start: var(--custom-scroller-overflow-amount)
+}
+
+.maskOverflowEnd__8dd17 {
+    margin-inline-end: calc(var(--custom-scroller-overflow-amount)*-1);
+    padding-inline-end: var(--custom-scroller-overflow-amount)
+}
+
+.scrollButton__8dd17 {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: opacity .1s linear;
+    z-index: 3
+}
+
+.scrollButtonVisible__8dd17 {
+    opacity: 1;
+    pointer-events: all
+}
+
+.scrollButtonLeft__8dd17 {
+    inset-inline-start: var(--space-8)
+}
+
+.scrollButtonRight__8dd17 {
+    inset-inline-end: var(--space-8)
+}
