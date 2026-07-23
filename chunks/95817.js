@@ -1,25 +1,24 @@
-"use strict";
 n.d(t, { G: () => l });
-var i = n(64700),
-    r = n(174459),
-    a = n(299679),
-    s = n(652215);
+var r = n(64700),
+    i = n(174459),
+    s = n(299679),
+    c = n(652215);
 function l(e) {
-    let t = (0, a.Ar)(),
-        n = i.useRef(null),
-        l = i.useRef(!1),
-        o = i.useRef(t);
-    i.useEffect(() => {
+    let t = (0, s.Ar)(),
+        n = r.useRef(null),
+        l = r.useRef(!1),
+        o = r.useRef(t);
+    r.useEffect(() => {
         o.current = t;
     }, [t]);
-    let d = i.useCallback(
+    let u = r.useCallback(
         (t) => {
             t
                 ? l.current ||
                   (null === n.current &&
                       (n.current = setTimeout(() => {
                           let t = o.current;
-                          r.default.track(s.HAw.IMPRESSION_WISHLIST_ITEM, {
+                          i.default.track(c.HAw.IMPRESSION_WISHLIST_ITEM, {
                               sku_id: t?.skuId,
                               wishlist_id: t?.wishlistId,
                               wishlist_owner_id: t?.wishlistOwnerId,
@@ -39,12 +38,12 @@ function l(e) {
         [e],
     );
     return (
-        i.useEffect(
+        r.useEffect(
             () => () => {
                 null !== n.current && (clearTimeout(n.current), (n.current = null));
             },
             [],
         ),
-        { handleVisibilityChange: d }
+        { handleVisibilityChange: u }
     );
 }
