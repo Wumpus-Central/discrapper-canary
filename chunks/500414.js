@@ -7096,6 +7096,7 @@ class dn extends s.Component {
         e.type === W.Auw.RICH
             ? iY.A.parse(t, !0, {
                   channelId: this.props.channel.id,
+                  allowGameMentions: !0,
                   allowLinks: !0,
                   allowEmojiLinks: !0,
                   allowList: this.props.showListsAndHeaders,

@@ -22,7 +22,7 @@ var l,
     A = n(565645);
 n(938796);
 var E = n(17928),
-    y = n(636537),
+    y = n(562465),
     S = n(192308),
     T = n(228366),
     L = n(163437),
@@ -1433,7 +1433,7 @@ function t4(e) {
         }, [n, l, r, a]);
     return (0, i.jsx)(t1.Provider, { value: o, children: t });
 }
-let t2 = { allowList: !0, allowHeading: !0, allowLinks: !0, previewLinkTarget: !0 };
+let t2 = { allowList: !0, allowHeading: !0, allowLinks: !0, allowGameMentions: !0, previewLinkTarget: !0 };
 var t8 = n(258381),
     t3 = n(742715);
 function t6(e) {
