@@ -1,4 +1,4 @@
-l.r(s), l.d(s, { default: () => P });
+l.r(s), l.d(s, { default: () => v });
 var n = l(627968),
     t = l(64700),
     r = l(503698),
@@ -11,47 +11,46 @@ var n = l(627968),
     h = l(356118),
     j = l(790219),
     p = l(561794),
-    x = l(621653),
-    f = l(983545),
-    b = l(599062),
-    y = l(956123),
-    g = l(146919),
+    x = l(983545),
+    f = l(599062),
+    b = l(956123),
+    y = l(146919),
     A = l(758836),
-    k = l(652215),
-    v = l(647685);
-let P = function (e) {
+    g = l(652215),
+    k = l(195261);
+let v = function (e) {
     let { layoutId: s } = e;
-    (0, d.P)(i.a), (0, x.g)(), (0, p.pE)();
+    (0, d.P)(i.a), (0, p.pE)();
     let l = t.useRef(null);
     t.useEffect(() => {
         l.current?.focus();
     }, []);
-    let r = (0, g.yB)("CollectiblesShopLayout");
-    (0, g.gB)();
-    let { selectedTab: P, transitionToTab: m } = (0, f.o)(A.G2.LAYOUT),
-        { layout: C, loading: E, error: G } = (0, j.A)(k.FYj, s);
+    let r = (0, y.yB)("CollectiblesShopLayout");
+    (0, y.gB)();
+    let { selectedTab: v, transitionToTab: P } = (0, x.o)(A.G2.LAYOUT),
+        { layout: m, loading: C, error: E } = (0, j.A)(g.FYj, s);
     return (0, n.jsxs)("div", {
-        className: a()(v.bx, { [g.jP]: r }),
+        className: a()(k.bx, { [y.jP]: r }),
         ref: l,
         tabIndex: -1,
         children: [
-            (0, n.jsx)(y.G, { handleTransition: m, selectedTab: P }),
+            (0, n.jsx)(b.G, { handleTransition: P, selectedTab: v }),
             (0, n.jsx)(c.Ip, {
                 children: (0, n.jsx)("div", {
-                    className: v.Qs,
+                    className: k.Qs,
                     children:
-                        E || null == s
+                        C || null == s
                             ? (0, n.jsx)(u.y, {})
-                            : null != G
-                              ? (0, n.jsx)(b.h, {
-                                    errorMessage: G.message,
-                                    errorOrigin: b.A.SHOP_PAGE,
+                            : null != E
+                              ? (0, n.jsx)(f.h, {
+                                    errorMessage: E.message,
+                                    errorOrigin: f.A.SHOP_PAGE,
                                     onRetry: () => {
-                                        (0, o.v)({ tenantId: k.FYj, layoutId: s });
+                                        (0, o.v)({ tenantId: g.FYj, layoutId: s });
                                     },
                                 })
-                              : null != C
-                                ? (0, n.jsx)(h.Ay, { layout: C })
+                              : null != m
+                                ? (0, n.jsx)(h.Ay, { layout: m })
                                 : null,
                 }),
             }),

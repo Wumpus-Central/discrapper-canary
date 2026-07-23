@@ -3,11 +3,10 @@ n.d(t, {
     $W: () => K,
     $b: () => ee,
     Br: () => y,
-    Bs: () => eu,
-    CE: () => e_,
+    CE: () => eu,
     D0: () => S,
     Dm: () => H,
-    G0: () => O,
+    G0: () => R,
     HF: () => en,
     MG: () => Q,
     P_: () => F,
@@ -37,7 +36,7 @@ n.d(t, {
     tt: () => x,
     wo: () => Z,
     x9: () => W,
-    xM: () => R,
+    xM: () => O,
     yt: () => M,
     zd: () => $,
 }),
@@ -66,7 +65,7 @@ let N = { nitro: "nitro", thirdparty: "xbox" };
 function C(e) {
     return null != e ? N[e] : null;
 }
-function R(e) {
+function O(e) {
     if (!c.Ay.canUseShopDiscounts(e)) return null;
     if (c.Ay.canUseCollectibles(e)) return "nitro";
     let t = (0, o.kQ)(e?.perks, s.bb.SHOP_DISCOUNTS);
@@ -76,7 +75,7 @@ function R(e) {
           ? "thirdparty"
           : null;
 }
-function O(e) {
+function R(e) {
     return e?.premiumType != null;
 }
 function L(e) {
@@ -323,15 +322,7 @@ function ec(e, t, n) {
         return (r?.amount ?? 0) - (a?.amount ?? 0);
     });
 }
-function eu(e, t) {
-    if (0 === t.length || 0 === e.length) return e;
-    let n = t.map((e) => e.discountId);
-    return e.sort((e, t) => {
-        let i = e.eligibleOffers?.some((e) => n.includes(e)) ?? !1;
-        return (t.eligibleOffers?.some((e) => n.includes(e)) ?? !1) - i;
-    });
-}
-function e_(e) {
+function eu(e) {
     return e.filter((e) => !e.isCategoryReward);
 }
 m.Yr.KZT, m.Yr.NGN, m.Yr.EGP;

@@ -153,7 +153,6 @@ async function N(e, t, n) {
                 libraryApplications:
                     null != s.body.library_applications ? s.body.library_applications.filter(A.Vq) : [],
                 entitlements: s.body.entitlements,
-                appliedUserDiscounts: s.body.applied_user_discounts,
                 giftCode: s.body.gift_code,
             }),
             { ...s.body, appliedUserDiscounts: s.body.applied_user_discounts, redirectConfirmation: !1 }
