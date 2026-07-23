@@ -2239,22 +2239,6 @@
     }
   },
   {
-    "name": "2026-03-mac-new-updater",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-03-media-play-metrics",
     "kind": "user",
     "defaultConfig": {
