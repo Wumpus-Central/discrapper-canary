@@ -52,7 +52,7 @@ function C(e, t) {
     v.default.track(O.HAw.SHOP_THIS_LOOK_MENU_ACTION, { action: e, source: t ?? void 0 });
 }
 function T(e) {
-    let { action: t, skuId: n, productType: i, source: l } = e;
+    let { action: t, skuId: n, productType: i, isDisabled: l, source: r } = e;
     v.default.track(O.HAw.SHOP_THIS_LOOK_ROW_ACTION, {
         action: t,
         sku_id: n,
@@ -70,34 +70,35 @@ function T(e) {
                     return;
             }
         })(i),
-        source: l ?? void 0,
+        is_disabled: l,
+        source: r ?? void 0,
     });
 }
 var S = n(43105),
     M = n(554146),
     P = n(131607);
-function k(e, t, n) {
+function D(e, t, n) {
     let i = I("UserProfileMarketing"),
         l = h(e, t),
         r = n && i && l.length > 0,
         [s, a] = (0, P.kn)(r ? [M.M.SHOP_THIS_LOOK_WEB_MARKETING] : [], void 0, !0);
     return { isVisible: null != s, markAsDismissed: a };
 }
-var D = n(49999),
+var k = n(49999),
     y = n(996988),
     U = n(375708),
     L = n(227143);
 function G(e) {
     let { user: t, guildId: n, shouldShow: i, isMenuOpen: l, targetElementRef: r, onClick: o } = e,
-        { isVisible: c, markAsDismissed: u } = k(t.id, n, i);
+        { isVisible: c, markAsDismissed: u } = D(t.id, n, i);
     return (a.useEffect(() => {
-        if (c) return () => u(D.i.AUTO_DISMISS);
+        if (c) return () => u(k.i.AUTO_DISMISS);
     }, [c, u]),
     a.useEffect(() => {
         i && c && C(b.COACHMARK_VIEWED, y.d.POPOUT);
     }, [i, c]),
     a.useEffect(() => {
-        i && c && l && u(D.i.TAKE_ACTION);
+        i && c && l && u(k.i.TAKE_ACTION);
     }, [i, c, l, u]),
     c)
         ? (0, s.jsx)(S.A, {
@@ -111,14 +112,14 @@ function G(e) {
               caretConfig: { align: "start" },
               targetElementRef: r,
               onRequestClose: () => {
-                  C(b.COACHMARK_DISMISSED, y.d.POPOUT), u(D.i.USER_DISMISS);
+                  C(b.COACHMARK_DISMISSED, y.d.POPOUT), u(k.i.USER_DISMISS);
               },
               actions: [
                   {
                       text: U.intl.string(U.t["bqZVd/"]),
                       variant: "primary",
                       onClick: () => {
-                          C(b.COACHMARK_CTA_CLICKED, y.d.POPOUT), u(D.i.TAKE_ACTION), o();
+                          C(b.COACHMARK_CTA_CLICKED, y.d.POPOUT), u(k.i.TAKE_ACTION), o();
                       },
                   },
               ],
@@ -172,8 +173,8 @@ function z(e) {
             null == l ||
                 c.current ||
                 ((c.current = !0),
-                T({ action: j.ROW_VIEWED, skuId: t, productType: (0, Q.YW)(l) ?? void 0, source: i }));
-        }, [l, t, i]),
+                T({ action: j.ROW_VIEWED, skuId: t, productType: (0, Q.YW)(l) ?? void 0, isDisabled: n, source: i }));
+        }, [l, t, n, i]),
         "loading" === r)
     )
         return (0, s.jsx)($, {});
@@ -261,8 +262,8 @@ function ep(e) {
             children: M,
         } = e,
         { themeType: P } = (0, em.E)(),
-        { trackUserProfileAction: k } = (0, eE.NJ)(),
-        { analyticsLocations: D, newestAnalyticsLocation: y } = (0, m.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU);
+        { trackUserProfileAction: D } = (0, eE.NJ)(),
+        { analyticsLocations: k, newestAnalyticsLocation: y } = (0, m.Ay)(E.A.USER_PROFILE_OVERFLOW_MENU);
     (t = l.id),
         (n = I("useMaybeFetchEquippedCollectibleProducts")),
         (i = h(t, r)),
@@ -278,25 +279,25 @@ function ep(e) {
         G = (0, ea.A)({
             user: l,
             guildId: r,
-            onAction: () => k({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: D }),
+            onAction: () => D({ action: "PRESS_INVITE_TO_SERVER", analyticsLocations: k }),
         }),
         W = (0, J.A)({
             user: l,
             guildId: r,
             location: y,
             appContext: A,
-            onBlock: () => k({ action: "BLOCK", analyticsLocations: D }),
-            onIgnore: () => k({ action: "IGNORE", analyticsLocations: D }),
-            onUnblock: () => k({ action: "UNBLOCK", analyticsLocations: D }),
+            onBlock: () => D({ action: "BLOCK", analyticsLocations: k }),
+            onIgnore: () => D({ action: "IGNORE", analyticsLocations: k }),
+            onUnblock: () => D({ action: "UNBLOCK", analyticsLocations: k }),
         }),
         K = (0, es.A)({
             user: l,
             guildId: r,
             location: y,
             appContext: A,
-            onBlock: () => k({ action: "BLOCK", analyticsLocations: D }),
-            onIgnore: () => k({ action: "IGNORE", analyticsLocations: D }),
-            onUnignore: () => k({ action: "UNIGNORE", analyticsLocations: D }),
+            onBlock: () => D({ action: "BLOCK", analyticsLocations: k }),
+            onIgnore: () => D({ action: "IGNORE", analyticsLocations: k }),
+            onUnignore: () => D({ action: "UNIGNORE", analyticsLocations: k }),
         }),
         q = (function (e) {
             let { user: t, guildId: n, color: i, onAction: l, location: r = E.A.CONTEXT_MENU, appContext: a } = e,
@@ -316,7 +317,7 @@ function ep(e) {
             location: y,
             appContext: A,
             color: "danger",
-            onAction: () => k({ action: "REPORT", analyticsLocations: D }),
+            onAction: () => D({ action: "REPORT", analyticsLocations: k }),
         }),
         H = (function (e) {
             let { user: t, guildId: n, color: i, onAction: l, appContext: r } = e,
@@ -336,7 +337,7 @@ function ep(e) {
             location: y,
             appContext: A,
             color: "danger",
-            onAction: () => k({ action: "REPORT", analyticsLocations: D }),
+            onAction: () => D({ action: "REPORT", analyticsLocations: k }),
         }),
         Q = (function (e) {
             let { user: t, guildId: n, onSuccess: i } = e,
@@ -381,7 +382,7 @@ function ep(e) {
                       })
                     : c
                 : null;
-        })({ user: l, guildId: r, onSuccess: () => k({ action: "COPY_USER_ID", analyticsLocations: D }) }),
+        })({ user: l, guildId: r, onSuccess: () => D({ action: "COPY_USER_ID", analyticsLocations: k }) }),
         B = (function (e, t, n) {
             let i = I("UserProfileOverflowMenu"),
                 l = h(e.id, t),
@@ -425,7 +426,13 @@ function ep(e) {
                                   },
                                   action: i
                                       ? () => {
-                                            T({ action: j.ROW_CLICKED, skuId: t, productType: l, source: n }),
+                                            T({
+                                                action: j.ROW_CLICKED,
+                                                skuId: t,
+                                                productType: l,
+                                                isDisabled: !1,
+                                                source: n,
+                                            }),
                                                 (0, w.B)({
                                                     skuId: t,
                                                     analyticsLocations: r,
@@ -444,7 +451,7 @@ function ep(e) {
     return X.every((e) => e.every((e) => null == e))
         ? null
         : (0, s.jsx)(m.f5, {
-              value: D,
+              value: k,
               children: (0, s.jsx)(c.Y, {
                   targetElementRef: _,
                   shouldShow: N,
@@ -476,13 +483,13 @@ function eA(e) {
         { themeType: n } = (0, em.E)(),
         i = n === y.d.POPOUT,
         l = n === y.d.SIDEBAR,
-        { isVisible: r, markAsDismissed: o } = k(e.user.id, e.guildId, l);
+        { isVisible: r, markAsDismissed: o } = D(e.user.id, e.guildId, l);
     a.useEffect(() => {
         r && C(b.RED_DOT_VIEWED, n);
     }, [r, n]);
     let [c, u] = a.useState(!1),
         d = a.useCallback(() => {
-            u(!0), r && (C(b.RED_DOT_DISMISSED, n), o(D.i.TAKE_ACTION));
+            u(!0), r && (C(b.RED_DOT_DISMISSED, n), o(k.i.TAKE_ACTION));
         }, [r, o, n]);
     return (0, s.jsxs)("div", {
         className: eR.g2,
