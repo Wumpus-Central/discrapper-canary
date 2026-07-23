@@ -522,10 +522,9 @@
 .nextLevelArt_e54946 {
     border-radius: var(--radius-sm);
     flex-shrink: 0;
-    height: 40px;
+    height: 35px;
     -o-object-fit: contain;
-    object-fit: contain;
-    width: 40px
+    object-fit: contain
 }
 
 .nextLevelContent_e54946 {
